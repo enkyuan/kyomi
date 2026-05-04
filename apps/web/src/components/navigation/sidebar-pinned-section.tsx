@@ -8,9 +8,9 @@ import { FeedFavicon } from "@components/navigation/feed-favicon";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import { listFollowedFeeds, type FollowedFeed } from "@modules/feeds/api";
 import { isInboxPathname } from "@lib/routes/inbox-path";
-import { usePinnedFeedIds } from "@modules/feeds/use-pins";
+import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
 import { QUERY_TIMES } from "@lib/query-policies";
-import { prefetchInboxFlow } from "@modules/inbox/prefetch";
+import { prefetchInboxFlow } from "@modules/inbox/lib/prefetch";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -18,6 +18,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@components/ui/sidebar";
+import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-text";
 import { cn } from "@lib/utils";
 
 function isFollowedFeed(value: FollowedFeed | undefined): value is FollowedFeed {
@@ -47,7 +48,7 @@ export function SidebarPinnedSection() {
       <Collapsible onOpenChange={setPinnedOpen} open={pinnedOpen}>
         <CollapsibleTrigger className="w-full">
           <SidebarGroupLabel className="w-full cursor-pointer justify-between">
-            <span>Pinned</span>
+            <SidebarModeAnimatedText>Pinned</SidebarModeAnimatedText>
             <DownFill
               className={cn(
                 "size-4 transition-transform duration-200",
@@ -60,8 +61,12 @@ export function SidebarPinnedSection() {
           <SidebarMenu>
             {pinnedFeeds.length === 0 ? (
               <SidebarMenuItem className="list-none">
-                <p className="flex h-8 items-center px-2 text-sm text-muted-foreground/75">
-                  <span className="truncate">No pinned feeds yet</span>
+                <p className="flex h-8 items-center px-2 text-sm text-muted-foreground/75 transition-[height,padding,font-size,line-height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-9 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6">
+                  <span className="min-w-0 flex-1">
+                    <SidebarModeAnimatedText className="truncate">
+                      No pinned feeds yet
+                    </SidebarModeAnimatedText>
+                  </span>
                 </p>
               </SidebarMenuItem>
             ) : (
@@ -72,14 +77,14 @@ export function SidebarPinnedSection() {
                     isActive={isInbox && location.search.feedId === feed.feedId}
                     onFocus={() => {
                       void prefetchInboxFlow(router, queryClient, {
-                        filter: "today",
+                        filter: "inbox",
                         feedId: feed.feedId,
                       });
                     }}
                     onPointerEnter={(event) => {
                       if (event.pointerType === "mouse" || event.pointerType === "pen") {
                         void prefetchInboxFlow(router, queryClient, {
-                          filter: "today",
+                          filter: "inbox",
                           feedId: feed.feedId,
                         });
                       }
@@ -88,7 +93,7 @@ export function SidebarPinnedSection() {
                       <Link
                         to="/inbox"
                         search={() => ({
-                          filter: "today" as const,
+                          filter: "inbox" as const,
                           search: undefined,
                           feedId: feed.feedId,
                           folderId: undefined,
@@ -98,13 +103,17 @@ export function SidebarPinnedSection() {
                     }
                   >
                     <FeedFavicon
-                      className="size-4 shrink-0 rounded-[3px]"
+                      className="size-4 shrink-0 rounded-[3px] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:size-4.5"
                       faviconUrl={feed.faviconUrl}
                       feedUrl={feed.url}
                       siteUrl={feed.link}
                       title={feed.title || feed.url}
                     />
-                    <span className="min-w-0 flex-1 truncate">{feed.title || feed.url}</span>
+                    <span className="min-w-0 flex-1">
+                      <SidebarModeAnimatedText className="truncate">
+                        {feed.title || feed.url}
+                      </SidebarModeAnimatedText>
+                    </span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))

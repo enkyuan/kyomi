@@ -12,7 +12,7 @@ import {
 } from "@lib/api-schemas";
 import { z } from "zod";
 
-export type InboxFilter = "today" | "unread" | "saved";
+export type InboxFilter = "inbox" | "today" | "unread" | "saved" | "recent";
 const INBOX_PAGE_LIMIT = 100;
 
 export type InboxItem = {
@@ -32,6 +32,7 @@ type CursorListResponse = z.infer<typeof cursorListResponseSchema>;
 type ArticleCountsResponse = z.infer<typeof articleCountsSchema>;
 
 type SidebarInboxCounts = {
+  all: number;
   today: number;
   unread: number;
   saved: number;
@@ -106,6 +107,20 @@ async function fetchInboxList(
   cursor: string | undefined,
   headers: Headers,
 ): Promise<CursorListResponse> {
+  if (filter === "recent" && !search?.trim() && !cursor?.trim()) {
+    return apiJsonValidated(cursorListResponseSchema, () =>
+      apiJson<CursorListResponse>("/api/v1/articles/views/recently-read", {
+        headers: buildForwardHeaders(headers),
+      }),
+    );
+  }
+  if (filter === "saved" && !search?.trim() && !cursor?.trim()) {
+    return apiJsonValidated(cursorListResponseSchema, () =>
+      apiJson<CursorListResponse>("/api/v1/articles/views/read-later", {
+        headers: buildForwardHeaders(headers),
+      }),
+    );
+  }
   return apiJsonValidated(cursorListResponseSchema, () =>
     apiJson<CursorListResponse>(
       buildArticlesUrl(
@@ -140,6 +155,8 @@ function buildArticlesUrl(
     params.set("published_before", end);
   } else if (filter === "unread" && !includeRead) {
     params.set("is_read", "false");
+  } else if (filter === "recent") {
+    params.set("is_read", "true");
   } else if (filter === "saved") {
     params.set("is_saved", "true");
   }
@@ -163,7 +180,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
   .inputValidator((input: GetInboxItemsInput) => input)
   .handler(async ({ data }): Promise<InboxResponse> => {
     const headers = getRequestHeaders();
-    const filter = data.filter ?? "today";
+    const filter = data.filter ?? "inbox";
     const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
       ? Number(data.timezoneOffsetMinutes)
       : 0;
@@ -290,6 +307,7 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
     );
 
     return {
+      all: counts.all ?? 0,
       today: counts.today ?? 0,
       unread: counts.unread,
       saved: counts.saved,
@@ -336,6 +354,9 @@ export const getInboxViewCount = createServerFn({ method: "GET" })
       }),
     );
 
+    if (data.filter === "inbox") {
+      return { count: counts.all ?? 0 };
+    }
     if (data.filter === "today") {
       return { count: counts.today ?? 0 };
     }

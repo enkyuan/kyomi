@@ -18,6 +18,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@components/ui/sidebar";
+import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-text";
 import { cn } from "@lib/utils";
 import {
   type FollowedFeed,
@@ -25,7 +26,7 @@ import {
   listFollowedFeeds,
   unfollowFeed,
 } from "@modules/feeds/api";
-import { prefetchInboxFlow } from "@modules/inbox/prefetch";
+import { prefetchInboxFlow } from "@modules/inbox/lib/prefetch";
 import { QUERY_TIMES } from "@lib/query-policies";
 import { isInboxPathname } from "@lib/routes/inbox-path";
 
@@ -58,7 +59,7 @@ export function SidebarFollowedFeeds() {
       <Collapsible open={feedsOpen} onOpenChange={setFeedsOpen}>
         <CollapsibleTrigger className="w-full" render={<div />}>
           <SidebarGroupLabel className="w-full cursor-pointer justify-between">
-            <span>Feeds</span>
+            <SidebarModeAnimatedText>Feeds</SidebarModeAnimatedText>
             <span className="flex items-center gap-2">
               <CreateFolderDialog />
               <DownFill
@@ -77,7 +78,7 @@ export function SidebarFollowedFeeds() {
                 <SidebarMenuItem>
                   <SidebarMenuButton disabled>
                     <NewsFill />
-                    <span>Loading feeds...</span>
+                    <SidebarModeAnimatedText>Loading feeds...</SidebarModeAnimatedText>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ) : null}
@@ -85,7 +86,7 @@ export function SidebarFollowedFeeds() {
                 <SidebarMenuItem>
                   <SidebarMenuButton disabled>
                     <NewsFill />
-                    <span>Unable to load feeds</span>
+                    <SidebarModeAnimatedText>Unable to load feeds</SidebarModeAnimatedText>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ) : null}
@@ -95,7 +96,7 @@ export function SidebarFollowedFeeds() {
                 <SidebarMenuItem>
                   <SidebarMenuButton disabled>
                     <NewsFill />
-                    <span>No followed feeds</span>
+                    <SidebarModeAnimatedText>No followed feeds</SidebarModeAnimatedText>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ) : null}
@@ -179,11 +180,11 @@ function FollowedFeedMenuItem({
       <SidebarMenuButton
         className={unreadCount > 0 ? "pe-10" : undefined}
         onFocus={() => {
-          void prefetchInboxFlow(router, queryClient, { filter: "today", feedId: item.feedId });
+          void prefetchInboxFlow(router, queryClient, { filter: "inbox", feedId: item.feedId });
         }}
         onPointerEnter={(event) => {
           if (event.pointerType === "mouse" || event.pointerType === "pen") {
-            void prefetchInboxFlow(router, queryClient, { filter: "today", feedId: item.feedId });
+            void prefetchInboxFlow(router, queryClient, { filter: "inbox", feedId: item.feedId });
           }
         }}
         onContextMenu={(event) => {
@@ -197,7 +198,7 @@ function FollowedFeedMenuItem({
           <Link
             to="/inbox"
             search={() => ({
-              filter: "today" as const,
+              filter: "inbox" as const,
               search: undefined,
               feedId: item.feedId,
               folderId: undefined,
@@ -213,11 +214,13 @@ function FollowedFeedMenuItem({
           siteUrl={item.link}
           title={feedLabel}
         />
-        <span className="min-w-0 flex-1 truncate">{feedLabel}</span>
+        <span className="min-w-0 flex-1">
+          <SidebarModeAnimatedText className="truncate">{feedLabel}</SidebarModeAnimatedText>
+        </span>
       </SidebarMenuButton>
       {unreadCount > 0 ? (
-        <SidebarMenuBadge className="right-2 rounded-full bg-sidebar-foreground/10 px-1.5 text-[11px] font-semibold">
-          {unreadCount}
+        <SidebarMenuBadge>
+          <span>{unreadCount}</span>
         </SidebarMenuBadge>
       ) : null}
       {menuOpen ? (

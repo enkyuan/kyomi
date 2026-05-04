@@ -22,8 +22,8 @@ import {
   updateFeedSubscriptionSettings,
 } from "./service";
 import * as dto from "./dto";
-import { feeds } from "@cronos/db";
-import { eq } from "drizzle-orm";
+import { feeds, feedSubscriptions } from "@cronos/db";
+import { and, eq } from "drizzle-orm";
 
 const createFeedRateLimit = {
   name: "feeds.create_by_url",
@@ -319,5 +319,70 @@ export function registerFeedRoutes(app: Elysia) {
         }
       },
       { params: t.Object({ feedId: uuidParam }) },
+    )
+    .post(
+      "/feeds/refresh",
+      async (context) => {
+        const { db, logger, set, userId, body } = v1HandlerContext<{ folderId?: string }>(context);
+        const { folderId } = body || {};
+
+        let feedIdsToRefresh: string[] = [];
+        if (folderId) {
+          const rows = await db
+            .select({ id: feeds.id })
+            .from(feedSubscriptions)
+            .innerJoin(feeds, eq(feedSubscriptions.feedId, feeds.id))
+            .where(
+              and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.folderId, folderId)),
+            );
+          feedIdsToRefresh = rows.map((r) => r.id);
+        } else {
+          const rows = await db
+            .select({ id: feeds.id })
+            .from(feedSubscriptions)
+            .innerJoin(feeds, eq(feedSubscriptions.feedId, feeds.id))
+            .where(eq(feedSubscriptions.userId, userId));
+          feedIdsToRefresh = rows.map((r) => r.id);
+        }
+
+        if (feedIdsToRefresh.length === 0) {
+          set.status = 200;
+          return { accepted: true as const, count: 0 };
+        }
+
+        try {
+          const redis = getRedis();
+          for (const feedId of feedIdsToRefresh) {
+            await publishJob(redis, {
+              type: "feed.refresh",
+              payload: { feedId, userId, reason: "manual" },
+            });
+            await db
+              .update(feeds)
+              .set({ refreshStatus: "queued", lastRefreshError: null })
+              .where(eq(feeds.id, feedId));
+          }
+
+          logger.info("queue.job.enqueued.batch", {
+            count: feedIdsToRefresh.length,
+            userId,
+            folderId,
+          });
+          set.status = 202;
+          return { accepted: true as const, count: feedIdsToRefresh.length };
+        } catch (error) {
+          logger.error("queue.job.enqueue.batch.failed", {
+            userId,
+            error: error instanceof Error ? error.message : String(error),
+          });
+          throw new AppError("Failed to enqueue batch feed refresh", {
+            status: 503,
+            code: "QUEUE_UNAVAILABLE",
+          });
+        }
+      },
+      {
+        body: t.Optional(t.Object({ folderId: t.Optional(uuidParam) })),
+      },
     );
 }

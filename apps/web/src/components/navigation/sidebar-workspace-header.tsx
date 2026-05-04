@@ -39,6 +39,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@components/ui/sidebar";
+import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-text";
 import { SidebarFeedSearchTrigger } from "@components/navigation/sidebar-feed-search";
 import { SidebarPretextLabel } from "@components/navigation/sidebar-pretext-label";
 import { listFollowedFeeds } from "@modules/feeds/api";
@@ -48,14 +49,21 @@ import { QUERY_TIMES } from "@lib/query-policies";
 import { cn } from "@lib/utils";
 
 const WORKSPACE_SCOPE_FONT = '500 14px "Inter Variable"';
+const WORKSPACE_SCOPE_FONT_READER_FOCUS = '500 16px "Inter Variable"';
 const WORKSPACE_SCOPE_LINE_HEIGHT = 20;
+const WORKSPACE_SCOPE_LINE_HEIGHT_READER_FOCUS = 24;
 
 type SidebarWorkspaceHeaderProps = {
   isMac?: boolean;
   isMacPlatform?: boolean;
+  isReaderFocusSidebar?: boolean;
 };
 
-export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspaceHeaderProps) {
+export function SidebarWorkspaceHeader({
+  isMac,
+  isMacPlatform,
+  isReaderFocusSidebar = false,
+}: SidebarWorkspaceHeaderProps) {
   const isMacKeyboard = isMacPlatform ?? isMac ?? false;
   const navigate = useNavigate();
   const location = useLocation();
@@ -142,7 +150,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
     ? {
         icon: (
           <FeedFavicon
-            className="size-4 shrink-0 rounded-sm"
+            className="size-4 shrink-0 rounded-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:size-4.5"
             faviconUrl={currentFeed.faviconUrl}
             feedUrl={currentFeed.url}
             siteUrl={currentFeed.link}
@@ -153,7 +161,9 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
       }
     : currentFolder
       ? {
-          icon: <Folder2Fill className="size-4 shrink-0" />,
+          icon: (
+            <Folder2Fill className="size-4 shrink-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:size-4.5" />
+          ),
           label: currentFolder.name,
         }
       : null;
@@ -176,12 +186,22 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                   <SidebarMenuButton className="h-auto py-2" isActive={Boolean(currentScope)}>
                     <span className="min-w-0 flex flex-1 items-center gap-2">
                       {currentScope ? currentScope.icon : null}
-                      <SidebarPretextLabel
-                        className="font-medium text-sm"
-                        font={WORKSPACE_SCOPE_FONT}
-                        label={workspaceLabel}
-                        lineHeight={WORKSPACE_SCOPE_LINE_HEIGHT}
-                      />
+                      <SidebarModeAnimatedText className="min-w-0 flex-1">
+                        <SidebarPretextLabel
+                          className="font-medium text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6"
+                          font={
+                            isReaderFocusSidebar
+                              ? WORKSPACE_SCOPE_FONT_READER_FOCUS
+                              : WORKSPACE_SCOPE_FONT
+                          }
+                          label={workspaceLabel}
+                          lineHeight={
+                            isReaderFocusSidebar
+                              ? WORKSPACE_SCOPE_LINE_HEIGHT_READER_FOCUS
+                              : WORKSPACE_SCOPE_LINE_HEIGHT
+                          }
+                        />
+                      </SidebarModeAnimatedText>
                     </span>
                     <SelectorVerticalLine className="-me-1 size-6 shrink-0" />
                   </SidebarMenuButton>
@@ -244,7 +264,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                               void navigate({
                                 to: "/inbox",
                                 search: () => ({
-                                  filter: "unread" as const,
+                                  filter: "today" as const,
                                   search: undefined,
                                   folderId: folder.id,
                                   feedId: undefined,
@@ -298,7 +318,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                               void navigate({
                                 to: "/inbox",
                                 search: () => ({
-                                  filter: "today" as const,
+                                  filter: "inbox" as const,
                                   search: undefined,
                                   feedId: item.feedId,
                                   folderId: undefined,

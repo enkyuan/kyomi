@@ -2,18 +2,31 @@
 
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
+import { cn } from "@lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation } from "@tanstack/react-router";
 import { SidebarFooterActions } from "@components/navigation/sidebar-footer-actions";
 import { SidebarInboxNav } from "@components/navigation/sidebar-inbox-nav";
 import { SidebarPinnedSection } from "@components/navigation/sidebar-pinned-section";
 import { SidebarWorkspaceHeader } from "@components/navigation/sidebar-workspace-header";
+import { SidebarReaderFocusProvider } from "@components/ui/sidebar-reader-focus";
 import { SettingsDialog } from "@modules/settings/dialog";
 import { Sidebar, SidebarContent } from "@components/ui/sidebar";
 import { getSidebarInboxCounts } from "@modules/inbox/api";
 import { isInboxPathname } from "@lib/routes/inbox-path";
 
-export function AppSidebar() {
+export const APP_SIDEBAR_WIDTH = "12rem";
+export const APP_SIDEBAR_WIDTH_READER_FOCUS = "16rem";
+
+export function AppSidebar({
+  className,
+  style,
+  readerFocusSidebar = false,
+}: {
+  className?: string;
+  style?: CSSProperties;
+  readerFocusSidebar?: boolean;
+}) {
   const location = useLocation();
   const [isMacPlatform, setIsMacPlatform] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -31,7 +44,7 @@ export function AppSidebar() {
     staleTime: 30_000,
     refetchOnWindowFocus: true,
   });
-  const counts = inboxSummaryQuery.data ?? { today: 0, unread: 0, saved: 0 };
+  const counts = inboxSummaryQuery.data ?? { all: 0, today: 0, unread: 0, saved: 0 };
 
   useEffect(() => {
     if (typeof navigator === "undefined") {
@@ -43,26 +56,34 @@ export function AppSidebar() {
   }, []);
 
   return (
-    <Sidebar
-      side="left"
-      variant="inset"
-      collapsible="icon"
-      className="p-0 px-0 py-2 group-data-[collapsible=icon]:**:data-[sidebar=menu-item]:flex group-data-[collapsible=icon]:**:data-[sidebar=menu-item]:justify-start group-data-[collapsible=icon]:**:data-[sidebar=menu-button]:justify-start group-data-[collapsible=icon]:**:data-[sidebar=menu-button]:px-2"
-      style={{ "--sidebar-width": "12rem" } as CSSProperties}
-    >
-      <SidebarWorkspaceHeader isMacPlatform={isMacPlatform} />
+    <SidebarReaderFocusProvider value={readerFocusSidebar}>
+      <Sidebar
+        side="left"
+        variant="inset"
+        collapsible="icon"
+        className={cn(
+          "p-0 px-0 py-2 group-data-[collapsible=icon]:**:data-[sidebar=menu-item]:flex group-data-[collapsible=icon]:**:data-[sidebar=menu-item]:justify-start group-data-[collapsible=icon]:**:data-[sidebar=menu-button]:justify-start group-data-[collapsible=icon]:**:data-[sidebar=menu-button]:px-2",
+          className,
+        )}
+        style={{ "--sidebar-width": APP_SIDEBAR_WIDTH, ...style } as CSSProperties}
+      >
+        <SidebarWorkspaceHeader
+          isMacPlatform={isMacPlatform}
+          isReaderFocusSidebar={readerFocusSidebar}
+        />
 
-      <SidebarContent>
-        <SidebarInboxNav counts={counts} />
-        <SidebarPinnedSection />
-      </SidebarContent>
+        <SidebarContent>
+          <SidebarInboxNav counts={counts} />
+          <SidebarPinnedSection />
+        </SidebarContent>
 
-      <SidebarFooterActions
-        onOpenSettings={() => {
-          setSettingsOpen(true);
-        }}
-      />
-      <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
-    </Sidebar>
+        <SidebarFooterActions
+          onOpenSettings={() => {
+            setSettingsOpen(true);
+          }}
+        />
+        <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
+      </Sidebar>
+    </SidebarReaderFocusProvider>
   );
 }

@@ -1,0 +1,144 @@
+@import "katex/dist/katex.min.css";
+@import "highlight.js/styles/github-dark.css";
+
+.reader-content {
+  font-family: var(--font-reader);
+}
+
+.reader-content :is(p, span, a) {
+  font-family: var(--font-reader);
+}
+
+.reader-content .article-body {
+  font-size: var(--reader-font-size, 1rem);
+  color: color-mix(in srgb, var(--foreground) 92%, transparent);
+}
+
+.reader-content .article-body :is(h1, h2, h3, h4, h5, h6) {
+  margin: 1.75rem 0 0.75rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--foreground);
+}
+
+.reader-content .article-body :is(code, pre) {
+  font-family: var(--font-mono);
+}
+
+.reader-content .article-body pre {
+  overflow-x: auto;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--foreground) 7%, transparent);
+  padding: 1rem;
+}
+
+.reader-content .article-body [data-reader-code-block] {
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
+  background: var(--card);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.4rem 0.875rem 0.25rem;
+  background: transparent;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-lang-label {
+  color: color-mix(in srgb, var(--foreground) 62%, transparent);
+  font-family: var(--font-sans);
+  font-size: 0.8125em;
+  font-weight: 500;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button {
+  display: inline-grid;
+  place-items: center;
+  width: var(--rcb-button-size, 30px);
+  height: var(--rcb-button-size, 30px);
+  border: none;
+  border-radius: calc(var(--radius) - 2px);
+  background: color-mix(in srgb, var(--background) 88%, transparent);
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon {
+  grid-area: 1 / 1;
+  width: var(--rcb-icon-size, 16px);
+  height: var(--rcb-icon-size, 16px);
+  transition: opacity 300ms ease, transform 300ms ease, filter 300ms ease;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon-copy {
+  opacity: 1;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon-check {
+  opacity: 0;
+  transform: scale(0.25);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button.is-copied .rcb-icon-copy {
+  opacity: 0;
+  transform: scale(0.25);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button.is-copied .rcb-icon-check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.reader-content.reader-hide-images .article-body :is(img, [data-reader-img-frame], figure) {
+  display: none !important;
+}
+
+.reader-content .article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.reader-content .article-body [data-reader-img-frame] {
+  display: block;
+  width: min(100%, 56rem);
+  margin-inline: auto;
+}
+
+.reader-content .article-body [data-reader-img-frame] > img {
+  display: block;
+  width: 100%;
+}
+
+.reader-content .article-body [data-reader-media-aside] {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.reader-content .article-body [data-reader-figure-caption] {
+  color: color-mix(in srgb, var(--foreground) 68%, transparent);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.reader-content .article-body [data-reader-figure-credit] {
+  color: color-mix(in srgb, var(--foreground) 55%, transparent);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.3;
+  text-align: center;
+}

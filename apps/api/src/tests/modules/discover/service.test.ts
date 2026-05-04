@@ -77,7 +77,7 @@ describe("discover.service", () => {
     expect(result).toEqual([]);
   });
 
-  test("searchFeeds falls back to Postgres when Meili returns no hits", async () => {
+  test("searchFeeds returns empty array and does not fall back to Postgres when Meili returns no hits", async () => {
     const searchFeeds = await loadSearchFeeds({
       MEILI_URL: "http://meili.local",
     });
@@ -130,15 +130,7 @@ describe("discover.service", () => {
 
     const result = await searchFeeds(fakeDb, "user_1", "example", 10);
 
-    expect(result).toEqual([
-      {
-        id: "feed_1",
-        url: "https://example.com/feed.xml",
-        title: "Example Feed",
-        description: "Latest updates",
-        link: "https://example.com",
-        isSubscribed: false,
-      },
-    ]);
+    expect(result).toEqual([]);
+    expect(select).not.toHaveBeenCalled();
   });
 });

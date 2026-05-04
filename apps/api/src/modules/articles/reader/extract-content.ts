@@ -71,7 +71,12 @@ export async function extractArticleContentFromUrl(
     };
   }
 
-  const contentHtml = sanitizeArticleHtml(article.content, { baseUrl: fetched.finalUrl });
+  const contentHtml = sanitizeArticleHtml(article.content, {
+    baseUrl: fetched.finalUrl,
+    title: article.title?.trim() || null,
+    byline: article.byline?.trim() || null,
+    excerpt: article.excerpt?.trim() || null,
+  });
   const contentText = htmlToText(contentHtml);
 
   if (wordCount(contentText) < 60 || paragraphCount(contentText) < 2) {

@@ -19,7 +19,8 @@ import {
   CommandPanel,
 } from "@components/ui/command";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@components/ui/input-group";
-import { Kbd } from "@components/ui/kbd";
+import { Kbd, KbdGroup } from "@components/ui/kbd";
+import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-text";
 import { SidebarMenuButton } from "@components/ui/sidebar";
 import { toastManager } from "@components/ui/toast";
 import { followFeed, searchFeeds } from "@modules/feeds/api";
@@ -42,7 +43,6 @@ export function SidebarFeedSearchTrigger({
   hideTrigger = false,
   enableGlobalShortcut = true,
 }: SidebarFeedSearchTriggerProps) {
-  const shortcutLabel = isMacPlatform ? "⌘K" : "Ctrl K";
   const queryClient = useQueryClient();
   const [internalOpen, setInternalOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -153,12 +153,12 @@ export function SidebarFeedSearchTrigger({
       {!hideTrigger ? (
         <CommandDialogTrigger
           render={
-            <SidebarMenuButton className="mt-1 h-auto rounded-2xl p-0 shadow-none hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent focus-visible:ring-0">
-              <InputGroup className="h-9 w-full rounded-2xl bg-sidebar-accent/48 shadow-none before:shadow-none transition-colors hover:bg-sidebar-accent/72">
+            <SidebarMenuButton className="mt-1 h-auto rounded-2xl p-0 shadow-none hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent focus-visible:ring-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-0">
+              <InputGroup className="h-9 w-full rounded-2xl border-sidebar-border/70 bg-sidebar-accent/40 shadow-none before:hidden transition-colors hover:bg-sidebar-accent/56">
                 <InputGroupInput
                   aria-label="Discover"
                   size="sm"
-                  className="cursor-text text-sm text-sidebar-foreground placeholder:text-sidebar-foreground/56"
+                  className="cursor-text text-sm text-sidebar-foreground placeholder:text-sidebar-foreground/56 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6"
                   placeholder="Follow sources"
                   readOnly
                   type="search"
@@ -167,9 +167,16 @@ export function SidebarFeedSearchTrigger({
                   align="inline-end"
                   className="ms-auto h-full items-center self-stretch has-[>kbd:last-child]:me-0"
                 >
-                  <Kbd className="min-w-0 whitespace-nowrap px-1.5 text-[10px] leading-none">
-                    {shortcutLabel}
-                  </Kbd>
+                  <KbdGroup className="-me-1">
+                    <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
+                      <SidebarModeAnimatedText>
+                        {isMacPlatform ? "\u2318" : "\u2303"}
+                      </SidebarModeAnimatedText>
+                    </Kbd>
+                    <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
+                      <SidebarModeAnimatedText>K</SidebarModeAnimatedText>
+                    </Kbd>
+                  </KbdGroup>
                 </InputGroupAddon>
               </InputGroup>
             </SidebarMenuButton>

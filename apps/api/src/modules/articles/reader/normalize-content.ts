@@ -138,7 +138,12 @@ function contentFromLegacy(input: ReaderArticleInput) {
 
   const baseUrl = safeHttpBaseUrl(input.contentBaseUrl);
   if (looksLikeHtml(legacy)) {
-    const html = sanitizeArticleHtml(legacy, { baseUrl });
+    const html = sanitizeArticleHtml(legacy, {
+      baseUrl,
+      title: input.title,
+      byline: null,
+      excerpt: input.summary,
+    });
     if (!html) {
       const text = htmlToText(legacy).trim();
       if (!text) {
@@ -203,7 +208,12 @@ function buildStoredBody(input: ReaderArticleInput) {
   // Canonical body-kind inference lives on the server. Clients render this result as-is.
   const baseUrl = safeHttpBaseUrl(input.contentBaseUrl);
   if (input.contentHtml?.trim()) {
-    const html = sanitizeArticleHtml(input.contentHtml, { baseUrl });
+    const html = sanitizeArticleHtml(input.contentHtml, {
+      baseUrl,
+      title: input.title,
+      byline: null,
+      excerpt: input.summary,
+    });
     if (!html) {
       const rawCandidate = input.contentText?.trim() ?? htmlToText(input.contentHtml).trim();
       if (rawCandidate) {
@@ -502,6 +512,9 @@ export function buildExtractedReaderViewFromDb(input: {
   }
   const sanitized = sanitizeArticleHtml(rawHtml, {
     baseUrl: safeHttpBaseUrl(input.contentBaseUrl),
+    title: input.title,
+    byline: null,
+    excerpt: input.summary,
   });
   const text = input.extractedContentText?.trim() || (sanitized ? htmlToText(sanitized) : null);
   return buildReadabilityReaderContent(
@@ -537,6 +550,12 @@ export function buildReadabilityReaderContent(
   extracted: ArticleExtractionCandidate,
 ): ArticleReaderContentDto {
   if (extracted.contentHtml?.trim()) {
+    const sanitizedHtml = sanitizeArticleHtml(extracted.contentHtml, {
+      baseUrl: safeHttpBaseUrl(input.contentBaseUrl),
+      title: extracted.title ?? input.title,
+      byline: extracted.byline,
+      excerpt: extracted.excerpt ?? input.summary,
+    });
     return {
       contentStatus: "ready",
       contentSource: "extracted_html",
@@ -545,9 +564,9 @@ export function buildReadabilityReaderContent(
       title: extracted.title ?? input.title,
       byline: extracted.byline,
       excerpt: extracted.excerpt ?? input.summary,
-      contentHtml: extracted.contentHtml,
+      contentHtml: sanitizedHtml,
       contentMarkdown: null,
-      contentText: extracted.contentText,
+      contentText: extracted.contentText?.trim() || htmlToText(sanitizedHtml) || null,
       fallbackSummary: null,
       fallbackReason: null,
       siteName: extracted.siteName,

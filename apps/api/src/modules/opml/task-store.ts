@@ -43,11 +43,10 @@ export type OpmlTaskListItem = {
   taskId: string;
   status: OpmlTaskPayload["status"];
   createdAt: string;
-  completedAt: string;
-  summary: Pick<
-    OpmlTaskPayload["summary"],
-    "subscribed" | "alreadySubscribed" | "failed" | "totalUrls"
-  >;
+  completedAt: string | null;
+  summary:
+    | Pick<NonNullable<OpmlTaskPayload["summary"]>, "subscribed" | "alreadySubscribed" | "failed" | "totalUrls">
+    | null;
 };
 
 export async function listOpmlTasksForUser(userId: string): Promise<OpmlTaskListItem[]> {
@@ -67,12 +66,14 @@ export async function listOpmlTasksForUser(userId: string): Promise<OpmlTaskList
       status: record.status,
       createdAt: record.createdAt,
       completedAt: record.completedAt,
-      summary: {
-        subscribed: record.summary.subscribed,
-        alreadySubscribed: record.summary.alreadySubscribed,
-        failed: record.summary.failed,
-        totalUrls: record.summary.totalUrls,
-      },
+      summary: record.summary
+        ? {
+            subscribed: record.summary.subscribed,
+            alreadySubscribed: record.summary.alreadySubscribed,
+            failed: record.summary.failed,
+            totalUrls: record.summary.totalUrls,
+          }
+        : null,
     });
   }
 

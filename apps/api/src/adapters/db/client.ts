@@ -2,6 +2,7 @@ import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool, type PoolConfig } from "pg";
 import * as schema from "@cronos/db";
 import { env } from "@config/env";
+import { normalizeLoopbackUrl } from "@shared/net/normalize-loopback-url";
 
 declare global {
   var __cronosApiDbPool: Pool | undefined;
@@ -11,7 +12,7 @@ declare global {
 export const pool =
   globalThis.__cronosApiDbPool ??
   new Pool({
-    connectionString: env.DATABASE_URL,
+    connectionString: normalizeLoopbackUrl(env.DATABASE_URL),
     max: env.DATABASE_POOL_MAX,
     idleTimeoutMillis: env.DATABASE_POOL_IDLE_TIMEOUT_MS,
     connectionTimeoutMillis: env.DATABASE_POOL_CONNECTION_TIMEOUT_MS,

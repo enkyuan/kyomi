@@ -2,6 +2,7 @@
 
 import { ArrowUpCircleFill, Chat3Fill, Settings3Fill } from "@mingcute/react";
 import { FeedbackDialog } from "@components/ui/feedback-dialog";
+import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-text";
 import {
   SidebarFooter,
   SidebarMenu,
@@ -30,7 +31,7 @@ export function SidebarFooterActions({ onOpenSettings }: { onOpenSettings: () =>
                   trigger={
                     <SidebarMenuButton tooltip={item.label} className="opacity-72">
                       <item.icon />
-                      <span>{item.label}</span>
+                      <SidebarModeAnimatedText>{item.label}</SidebarModeAnimatedText>
                     </SidebarMenuButton>
                   }
                 />
@@ -42,7 +43,7 @@ export function SidebarFooterActions({ onOpenSettings }: { onOpenSettings: () =>
                   onClick={isSettings ? onOpenSettings : undefined}
                 >
                   <item.icon />
-                  <span>{item.label}</span>
+                  <SidebarModeAnimatedText>{item.label}</SidebarModeAnimatedText>
                 </SidebarMenuButton>
               )}
             </SidebarMenuItem>

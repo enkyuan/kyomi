@@ -27,13 +27,11 @@ import { Separator } from "@components/ui/separator";
 import { toastManager } from "@components/ui/toast";
 import { AccountPageNav, AccountPagePanel, accountSection } from "./account";
 import { AdvancedPageNav, AdvancedPagePanel, advancedSection } from "./advanced";
-import { InboxPageNav, InboxPagePanel, inboxSection } from "./inbox";
-import { ReaderPageNav, ReaderPagePanel, readerSection } from "./reader";
+import { AppearancePageNav, AppearancePagePanel, appearanceSection } from "./appearance";
 
 const SETTINGS_NAV = [
   accountSection,
-  readerSection,
-  inboxSection,
+  appearanceSection,
   advancedSection,
   { name: "Import OPML" },
 ] as const;
@@ -102,16 +100,10 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                         setActiveSectionName(accountSection.name);
                       }}
                     />
-                    <ReaderPageNav
-                      isActive={activeSectionName === readerSection.name}
+                    <AppearancePageNav
+                      isActive={activeSectionName === appearanceSection.name}
                       onSelect={() => {
-                        setActiveSectionName(readerSection.name);
-                      }}
-                    />
-                    <InboxPageNav
-                      isActive={activeSectionName === inboxSection.name}
-                      onSelect={() => {
-                        setActiveSectionName(inboxSection.name);
+                        setActiveSectionName(appearanceSection.name);
                       }}
                     />
                     <AdvancedPageNav
@@ -155,8 +147,7 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
               {activeSectionName === accountSection.name ? (
                 <AccountPagePanel onLogout={handleLogout} />
               ) : null}
-              {activeSectionName === readerSection.name ? <ReaderPagePanel /> : null}
-              {activeSectionName === inboxSection.name ? <InboxPagePanel /> : null}
+              {activeSectionName === appearanceSection.name ? <AppearancePagePanel /> : null}
               {activeSectionName === advancedSection.name ? <AdvancedPagePanel /> : null}
               {activeSectionName === "Import OPML" ? (
                 <section className="space-y-1">

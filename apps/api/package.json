@@ -5,9 +5,9 @@
   "module": "src/index.ts",
   "scripts": {
     "test": "bun test src",
-    "dev": "bun --env-file=../../docker/.env --env-file=.env --watch src/app/dev.ts",
-    "start": "bun --env-file=../../docker/.env --env-file=.env src/app/entry.ts",
-    "worker": "bun --env-file=../../docker/.env --env-file=.env src/app/worker.ts",
+    "dev": "bun --env-file=../../docker/.env --env-file=.env --watch src/app/boot/dev.ts",
+    "start": "bun --env-file=../../docker/.env --env-file=.env src/app/boot/entry.ts",
+    "worker": "bun --env-file=../../docker/.env --env-file=.env src/app/boot/worker.ts",
     "catalog:import": "bun --env-file=../../docker/.env --env-file=.env src/scripts/import-catalog-feeds.ts --input ../../packages/catalog/processing/exports/catalog-feeds.jsonl",
     "catalog:smoke": "bun --env-file=../../docker/.env --env-file=.env src/scripts/smoke-discover-catalog.ts --query \"hacker news\" --expect \"hacker news\"",
     "fmt": "bunx oxfmt src",
