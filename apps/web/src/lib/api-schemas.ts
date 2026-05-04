@@ -212,6 +212,9 @@ export const followFeedResultSchema = z.object({
   newSubscription: z.boolean(),
 });
 
+/** Matches API `feeds.refresh_status` text column (not a closed enum in DB). */
+export const feedRefreshStatusSchema = z.string();
+
 export const followedFeedSchema = z.object({
   subscriptionId: z.string(),
   feedId: z.string(),
@@ -232,9 +235,6 @@ export const followedFeedSchema = z.object({
 export const followedFeedsListSchema = z.object({
   items: z.array(followedFeedSchema),
 });
-
-/** Matches API `feeds.refresh_status` text column (not a closed enum in DB). */
-export const feedRefreshStatusSchema = z.string();
 
 export const feedDetailSchema = z.object({
   id: z.string(),

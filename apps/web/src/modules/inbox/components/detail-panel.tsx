@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { InboxSourceRow } from "@modules/inbox/components/source-row";
 import { ReaderToolbar } from "@modules/inbox/components/reader-toolbar";
@@ -50,6 +51,9 @@ export function ItemDetail({
   const { preferences, setPreferences, limits } = useReaderPreferences();
   const extractMutation = useArticleExtraction(item.id);
   const requestedExtractionForItemRef = useRef<string | null>(null);
+  const inlineToolbarRef = useRef<HTMLDivElement | null>(null);
+  const [showFloatingToolbar, setShowFloatingToolbar] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const updateItemMutation = useMutation({
     mutationFn: (patch: InboxItemPatch) =>
       updateInboxItemState({
@@ -74,16 +78,9 @@ export function ItemDetail({
   const effectiveReaderMode =
     preferences.defaultMode === "smart" ? item.reader.activeMode : preferences.defaultMode;
   const isViewingExtracted = effectiveReaderMode === "extracted";
-  const displayReader = useMemo(
-    () => readerContentForMode(item, effectiveReaderMode),
-    [effectiveReaderMode, item.reader],
-  );
-
-  const displayContent = useMemo(
-    () =>
-      displayReader.contentHtml ?? displayReader.contentMarkdown ?? displayReader.contentText ?? "",
-    [displayReader],
-  );
+  const displayReader = readerContentForMode(item, effectiveReaderMode);
+  const displayContent =
+    displayReader.contentHtml ?? displayReader.contentMarkdown ?? displayReader.contentText ?? "";
   const readTime = displayContent ? estimateReadingTime(displayContent) : null;
 
   const canRequestExtraction = item.link.startsWith("http");
@@ -146,54 +143,45 @@ export function ItemDetail({
     [extractMutation],
   );
 
-  const updateItem = useCallback(
-    (patch: InboxItemPatch) => {
-      updateItemMutation.mutate(patch);
-    },
-    [updateItemMutation],
-  );
+  const updateItem = (patch: InboxItemPatch) => {
+    updateItemMutation.mutate(patch);
+  };
 
-  const cycleContentWidth = useCallback(() => {
+  const cycleContentWidth = () => {
     const nextWidth = effectiveContentWidth === "narrow" ? "wide" : "narrow";
     setPreferences({ contentWidth: nextWidth });
-  }, [effectiveContentWidth, setPreferences]);
+  };
 
-  const adjustFontSize = useCallback(
-    (delta: number) => {
-      const nextFontSize = Math.max(
-        limits.minFontSizePx,
-        Math.min(limits.maxFontSizePx, preferences.fontSizePx + delta),
-      );
-      setPreferences({ fontSizePx: nextFontSize });
-    },
-    [limits.maxFontSizePx, limits.minFontSizePx, preferences.fontSizePx, setPreferences],
-  );
+  const adjustFontSize = (delta: number) => {
+    const nextFontSize = Math.max(
+      limits.minFontSizePx,
+      Math.min(limits.maxFontSizePx, preferences.fontSizePx + delta),
+    );
+    setPreferences({ fontSizePx: nextFontSize });
+  };
 
-  const handleModeChange = useCallback(
-    (mode: "original" | "extracted") => {
-      if (mode === "extracted" && !item.reader.extracted.available) {
-        return;
-      }
-      setPreferences({ defaultMode: mode });
-    },
-    [item.reader.extracted.available, setPreferences],
-  );
+  const handleModeChange = (mode: "original" | "extracted") => {
+    if (mode === "extracted" && !item.reader.extracted.available) {
+      return;
+    }
+    setPreferences({ defaultMode: mode });
+  };
 
-  const handleOpenOriginal = useCallback(() => {
+  const handleOpenOriginal = () => {
     window.open(
       item.link,
       preferences.openLinksInNewTab ? "_blank" : "_self",
       preferences.openLinksInNewTab ? "noopener,noreferrer" : undefined,
     );
-  }, [item.link, preferences.openLinksInNewTab]);
+  };
 
-  const handleOpenAi = useCallback(() => {
+  const handleOpenAi = () => {
     toastManager.add({
       title: "AI tools coming next",
       description: "This button is reserved for article-side LLM actions.",
       type: "info",
     });
-  }, []);
+  };
 
   useEffect(() => {
     if (!shouldAutoExtract || extractMutation.isPending) {
@@ -207,6 +195,56 @@ export function ItemDetail({
     runExtract("auto");
   }, [extractMutation.isPending, item.id, runExtract, shouldAutoExtract]);
 
+  useEffect(() => {
+    const inlineToolbarNode = inlineToolbarRef.current;
+    if (!inlineToolbarNode || typeof window === "undefined") {
+      return;
+    }
+
+    const viewport = inlineToolbarNode.closest<HTMLElement>("[data-reader-detail-viewport]");
+    if (!viewport) {
+      return;
+    }
+
+    const revealOffsetPx = readerFocusMode ? 88 : 28;
+    if (typeof IntersectionObserver === "undefined") {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const rootTop = entry.rootBounds?.top ?? 0;
+        const shouldShow = entry.boundingClientRect.bottom <= rootTop;
+        setShowFloatingToolbar((current) => (current === shouldShow ? current : shouldShow));
+      },
+      {
+        root: viewport,
+        rootMargin: `-${revealOffsetPx}px 0px 0px 0px`,
+        threshold: 0,
+      },
+    );
+
+    observer.observe(inlineToolbarNode);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [readerFocusMode]);
+
+  const toolbarProps = {
+    activeMode: effectiveReaderMode,
+    extractedAvailable: item.reader.extracted.available,
+    isSaved: item.isSaved,
+    limits,
+    preferences,
+    onAdjustFontSize: adjustFontSize,
+    onCycleContentWidth: cycleContentWidth,
+    onModeChange: handleModeChange,
+    onOpenAi: handleOpenAi,
+    onOpenOriginal: handleOpenOriginal,
+    onToggleSaved: () => updateItem({ isSaved: !item.isSaved }),
+  } as const;
+
   return (
     <article
       className={cn(
@@ -217,6 +255,45 @@ export function ItemDetail({
       )}
       style={{ "--reader-font-size": `${preferences.fontSizePx}px` } as Record<string, string>}
     >
+      <div className="pointer-events-none sticky top-2 z-30 flex h-0 justify-center overflow-visible">
+        <AnimatePresence initial={false}>
+          {showFloatingToolbar ? (
+            <motion.div
+              key="floating-reader-toolbar"
+              animate={{
+                filter: "blur(0px)",
+                opacity: 1,
+                scale: 1,
+                y: 0,
+              }}
+              className="pointer-events-auto origin-top will-change-transform"
+              exit={{
+                filter: "blur(4px)",
+                opacity: 0,
+                scale: 0.98,
+                y: -12,
+              }}
+              initial={
+                prefersReducedMotion
+                  ? false
+                  : {
+                      filter: "blur(4px)",
+                      opacity: 0,
+                      scale: 0.98,
+                      y: -12,
+                    }
+              }
+              transition={
+                prefersReducedMotion
+                  ? { duration: 0 }
+                  : { type: "spring", duration: 0.28, bounce: 0 }
+              }
+            >
+              <ReaderToolbar {...toolbarProps} variant="floating" />
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+      </div>
       <div className="not-prose mb-6 flex flex-col gap-3">
         <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs uppercase tracking-wide text-muted-foreground">
           <div className="flex min-w-0 flex-wrap items-center gap-2">
@@ -230,19 +307,9 @@ export function ItemDetail({
               </>
             ) : null}
           </div>
-          <ReaderToolbar
-            activeMode={effectiveReaderMode}
-            extractedAvailable={item.reader.extracted.available}
-            isSaved={item.isSaved}
-            limits={limits}
-            preferences={preferences}
-            onAdjustFontSize={adjustFontSize}
-            onCycleContentWidth={cycleContentWidth}
-            onModeChange={handleModeChange}
-            onOpenAi={handleOpenAi}
-            onOpenOriginal={handleOpenOriginal}
-            onToggleSaved={() => updateItem({ isSaved: !item.isSaved })}
-          />
+          <div ref={inlineToolbarRef}>
+            <ReaderToolbar {...toolbarProps} />
+          </div>
         </div>
         <div className="flex flex-wrap items-start justify-between gap-3">
           <p className="min-w-0 flex-1 text-xl font-semibold text-foreground">{item.title}</p>
