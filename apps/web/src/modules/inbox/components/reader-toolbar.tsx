@@ -66,7 +66,9 @@ export function ReaderToolbar({
       aria-label="Reader tools"
       className={cn(
         "min-w-0 border-0 p-0 text-muted-foreground shadow-none",
-        variant === "inline" ? "bg-transparent" : "reader-floating-toolbar rounded-xl px-1.5 py-1",
+        variant === "inline"
+          ? "bg-transparent"
+          : "reader-floating-toolbar bg-background rounded-xl px-1.5 py-1",
       )}
     >
       <ToolbarGroup className="min-w-0 gap-0.5">
@@ -163,7 +165,7 @@ function ReaderToolbarButton({
             render={
               <Button
                 className={cn(
-                  "size-7 rounded-md text-muted-foreground transition-[color,background-color,transform] hover:text-foreground data-[pressed]:text-foreground",
+                  "size-7 rounded-md text-muted-foreground transition-[color,background-color,transform] hover:text-foreground data-pressed:text-foreground",
                   active && "bg-accent/50 text-foreground",
                   className,
                 )}

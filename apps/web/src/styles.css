@@ -337,6 +337,24 @@ body {
   color: color-mix(in srgb, var(--foreground) 78%, transparent);
 }
 
+.reader-floating-toolbar {
+  border: 1px solid color-mix(in srgb, var(--foreground) 8%, transparent);
+  background: var(--background);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--foreground) 7%, transparent) inset,
+    0 10px 24px color-mix(in srgb, black 10%, transparent),
+    0 2px 6px color-mix(in srgb, black 6%, transparent);
+}
+
+.dark .reader-floating-toolbar {
+  border-color: color-mix(in srgb, white 9%, transparent);
+  background: var(--background);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, white 7%, transparent) inset,
+    0 12px 28px color-mix(in srgb, black 28%, transparent),
+    0 2px 8px color-mix(in srgb, black 14%, transparent);
+}
+
 .reader-content .article-body :is(code, pre) {
   font-family: var(--font-mono);
 }
