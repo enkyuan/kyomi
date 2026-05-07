@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
+import { useEffect, useState } from "react";
 import type { ReactNode, RefObject } from "react";
 import {
   INBOX_DETAIL_PANEL_OUTER_SPACING_STYLE,
@@ -14,19 +15,22 @@ export function InboxReaderFocusDetailLayout({ children }: { children: ReactNode
     ? { duration: 0 }
     : { type: "spring" as const, duration: 0.34, bounce: 0 };
 
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => setIsMounted(true), []);
+
   return (
     <motion.div
       initial={false}
       data-reader-focus-list
       className="flex h-full max-h-full min-h-0 w-full min-w-0 items-stretch justify-center overflow-hidden"
       style={INBOX_PANEL_VERTICAL_PADDING_STYLE}
-      layout
+      layout={isMounted ? true : undefined}
       transition={transition}
     >
       <motion.div
         initial={false}
         className="h-full min-h-0 w-full min-w-0"
-        layout
+        layout={isMounted ? true : undefined}
         layoutId="inbox-detail-panel"
         transition={transition}
       >
@@ -42,19 +46,22 @@ export function InboxReaderFocusListLayout({ children }: { children: ReactNode }
     ? { duration: 0 }
     : { type: "spring" as const, duration: 0.34, bounce: 0 };
 
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => setIsMounted(true), []);
+
   return (
     <motion.div
       initial={false}
       data-reader-focus-list
       className="flex h-full max-h-full min-h-0 w-full min-w-0 items-stretch justify-center overflow-hidden"
       style={INBOX_PANEL_VERTICAL_PADDING_STYLE}
-      layout
+      layout={isMounted ? true : undefined}
       transition={transition}
     >
       <motion.div
         initial={false}
         className="h-full min-h-0 w-full min-w-0"
-        layout
+        layout={isMounted ? true : undefined}
         layoutId="inbox-list-panel"
         transition={transition}
       >
@@ -86,6 +93,9 @@ export function InboxSplitLayout({
     ? { duration: 0 }
     : { type: "spring" as const, duration: 0.34, bounce: 0 };
 
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => setIsMounted(true), []);
+
   return (
     <motion.div
       ref={splitContainerRef}
@@ -93,15 +103,15 @@ export function InboxSplitLayout({
       className="grid h-full max-h-full min-h-0 min-w-0 flex-1 gap-0 overflow-hidden"
       style={{
         ...INBOX_PANEL_VERTICAL_PADDING_STYLE,
-        gridTemplateColumns: `${leftPanelPercent}% ${INBOX_PANEL_SPACING_PX}px minmax(0, 1fr)`,
+        gridTemplateColumns: `var(--inbox-left-panel-percent, ${leftPanelPercent}%) ${INBOX_PANEL_SPACING_PX}px minmax(0, 1fr)`,
       }}
-      layout={!isResizing}
+      layout={isMounted && !isResizing ? true : undefined}
       transition={transition}
     >
       <motion.div
         initial={false}
         className="h-full min-h-0 min-w-0"
-        layout={!isResizing}
+        layout={isMounted && !isResizing ? true : undefined}
         layoutId="inbox-list-panel"
         transition={transition}
       >
@@ -125,7 +135,7 @@ export function InboxSplitLayout({
         initial={false}
         className="h-full min-h-0 min-w-0"
         style={INBOX_DETAIL_PANEL_OUTER_SPACING_STYLE}
-        layout={!isResizing}
+        layout={isMounted && !isResizing ? true : undefined}
         layoutId="inbox-detail-panel"
         transition={transition}
       >

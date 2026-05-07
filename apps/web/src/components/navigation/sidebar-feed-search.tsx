@@ -1,6 +1,6 @@
 "use client";
 
-import { startTransition, useDeferredValue, useEffect, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { RssFill } from "@mingcute/react";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
@@ -28,6 +28,7 @@ import { invalidateFeedAndInboxQueries } from "@modules/inbox/lib/query-options"
 
 /** Cap list rows so opening the dialog never mounts thousands of command items in one commit. */
 const DISCOVER_RESULTS_UI_CAP = 200;
+const DISCOVER_QUERY_DEBOUNCE_MS = 260;
 
 type SidebarFeedSearchTriggerProps = {
   isMacPlatform: boolean;
@@ -47,13 +48,23 @@ export function SidebarFeedSearchTrigger({
   const queryClient = useQueryClient();
   const [internalOpen, setInternalOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
   const dialogOpen = open ?? internalOpen;
-  const deferredQuery = useDeferredValue(query.trim());
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setDebouncedQuery(query.trim());
+    }, DISCOVER_QUERY_DEBOUNCE_MS);
+    return () => window.clearTimeout(timer);
+  }, [query]);
+
   const discoverResultsQuery = useQuery({
-    queryKey: ["discover", "feeds", deferredQuery],
-    queryFn: () => searchFeeds({ data: { query: deferredQuery } }),
-    enabled: dialogOpen && deferredQuery.length > 0,
+    queryKey: ["discover", "feeds", debouncedQuery],
+    queryFn: () => searchFeeds({ data: { query: debouncedQuery } }),
+    enabled: dialogOpen && debouncedQuery.length > 0,
     placeholderData: (previousData) => previousData,
+    retry: 0,
+    refetchOnWindowFocus: false,
   });
   const searchResults = discoverResultsQuery.data ?? [];
   const cappedSearchResults =
@@ -63,7 +74,7 @@ export function SidebarFeedSearchTrigger({
   const discoverResultsTruncated = searchResults.length > DISCOVER_RESULTS_UI_CAP;
   const shouldShowLoading = discoverResultsQuery.isFetching && searchResults.length === 0;
   const shouldShowEmpty =
-    !shouldShowLoading && (deferredQuery.length === 0 || searchResults.length === 0);
+    !shouldShowLoading && (debouncedQuery.length === 0 || searchResults.length === 0);
 
   const setDialogOpen = (nextOpen: boolean) => {
     const commit = () => {
@@ -84,6 +95,7 @@ export function SidebarFeedSearchTrigger({
   useEffect(() => {
     if (!dialogOpen) {
       setQuery("");
+      setDebouncedQuery("");
     }
   }, [dialogOpen]);
 
@@ -153,7 +165,7 @@ export function SidebarFeedSearchTrigger({
         <CommandDialogTrigger
           render={
             <SidebarMenuButton className="mt-1 items-stretch overflow-visible rounded-xl p-0 shadow-none transition-shadow duration-150 ease-out hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent focus-visible:ring-0 focus-within:shadow-[0_0_0_2px_var(--sidebar-ring)] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-0">
-              <InputGroup className="h-full min-h-0 w-full rounded-xl border-sidebar-border/70 bg-sidebar-accent/40 shadow-none outline-none ring-0 ring-transparent ring-offset-0 before:hidden transition-[background-color,border-color] hover:bg-sidebar-accent/56 has-[input:focus-visible]:border-sidebar-border/70 has-[input:focus-visible]:shadow-none has-[input:focus-visible]:ring-0 has-[input:focus-visible]:ring-transparent dark:has-[input:focus-visible]:ring-0">
+              <InputGroup className="h-full min-h-0 w-full rounded-xl border-sidebar-border/70 bg-sidebar-accent/40 shadow-none outline-none ring-0 ring-transparent ring-offset-0 before:hidden transition-[background-color,border-color] hover:bg-sidebar-accent/56 has-[input:focus-visible,textarea:focus-visible]:border-sidebar-border/70 has-[input:focus-visible,textarea:focus-visible]:shadow-none has-[input:focus-visible,textarea:focus-visible]:!ring-0 has-[input:focus-visible,textarea:focus-visible]:!ring-transparent dark:has-[input:focus-visible,textarea:focus-visible]:!ring-0">
                 <InputGroupInput
                   aria-label="Discover"
                   size="sm"
@@ -195,7 +207,7 @@ export function SidebarFeedSearchTrigger({
             <CommandList>
               {shouldShowEmpty ? (
                 <CommandEmpty>
-                  {deferredQuery
+                  {debouncedQuery
                     ? "No feeds found yet. Try a broader topic or paste a feed URL."
                     : "Search by topic or paste an RSS, Atom, or site feed URL."}
                 </CommandEmpty>

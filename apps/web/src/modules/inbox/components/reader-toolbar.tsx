@@ -16,28 +16,9 @@ import {
 import { Button } from "@components/ui/button";
 import { Toolbar, ToolbarButton, ToolbarGroup, ToolbarSeparator } from "@components/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@components/ui/tooltip";
-import type { ReaderContentWidth, ReaderPreferences } from "@lib/reader-preferences";
+import type { ReaderContentWidth } from "@lib/reader-preferences";
 import { cn } from "@lib/utils";
-
-type ReaderToolbarProps = {
-  isSaved: boolean;
-  activeMode: "original" | "extracted";
-  extractedAvailable: boolean;
-  /** When true (reader-focused article layout), content width is layout-driven; hide the toggle. */
-  readerFocusMode?: boolean;
-  preferences: ReaderPreferences;
-  limits: {
-    minFontSizePx: number;
-    maxFontSizePx: number;
-  };
-  onToggleSaved: () => void;
-  onModeChange: (mode: "original" | "extracted") => void;
-  onCycleContentWidth: () => void;
-  onAdjustFontSize: (delta: number) => void;
-  onOpenOriginal: () => void;
-  onOpenAi: () => void;
-  variant?: "inline" | "floating";
-};
+import type { ReaderToolbarProps } from "./reader-toolbar-model";
 
 const CONTENT_WIDTH_LABELS: Record<ReaderContentWidth, string> = {
   narrow: "Narrow",
@@ -48,20 +29,19 @@ export function ReaderToolbar({
   isSaved,
   activeMode,
   extractedAvailable,
+  contentWidth,
+  canDecreaseFont,
+  canIncreaseFont,
   readerFocusMode = false,
-  preferences,
-  limits,
   onToggleSaved,
-  onModeChange,
+  onToggleMode,
   onCycleContentWidth,
-  onAdjustFontSize,
+  onDecreaseFontSize,
+  onIncreaseFontSize,
   onOpenOriginal,
   onOpenAi,
   variant = "inline",
 }: ReaderToolbarProps) {
-  const canDecreaseFont = preferences.fontSizePx > limits.minFontSizePx;
-  const canIncreaseFont = preferences.fontSizePx < limits.maxFontSizePx;
-  const effectiveContentWidth = preferences.contentWidth === "narrow" ? "narrow" : "wide";
   const tooltipSideOffset = variant === "floating" ? 10 : 8;
 
   return (
@@ -85,18 +65,18 @@ export function ReaderToolbar({
           label={activeMode === "original" ? "Showing original source" : "Showing extracted source"}
           active={activeMode === "extracted"}
           disabled={!extractedAvailable}
-          onClick={() => onModeChange(activeMode === "original" ? "extracted" : "original")}
+          onClick={onToggleMode}
           tooltipSideOffset={tooltipSideOffset}
         >
           {activeMode === "extracted" ? <TextFill /> : <TextLine />}
         </ReaderToolbarButton>
         {!readerFocusMode ? (
           <ReaderToolbarButton
-            label={`Content width: ${CONTENT_WIDTH_LABELS[effectiveContentWidth]}`}
+            label={`Content width: ${CONTENT_WIDTH_LABELS[contentWidth]}`}
             onClick={onCycleContentWidth}
             tooltipSideOffset={tooltipSideOffset}
           >
-            {effectiveContentWidth === "narrow" ? <SquareLine /> : <RectangleLine />}
+            {contentWidth === "narrow" ? <SquareLine /> : <RectangleLine />}
           </ReaderToolbarButton>
         ) : null}
       </ToolbarGroup>
@@ -104,7 +84,7 @@ export function ReaderToolbar({
         <ReaderToolbarButton
           label="Decrease font size"
           disabled={!canDecreaseFont}
-          onClick={() => onAdjustFontSize(-1)}
+          onClick={onDecreaseFontSize}
           tooltipSideOffset={tooltipSideOffset}
         >
           <MinimizeLine />
@@ -112,7 +92,7 @@ export function ReaderToolbar({
         <ReaderToolbarButton
           label="Increase font size"
           disabled={!canIncreaseFont}
-          onClick={() => onAdjustFontSize(1)}
+          onClick={onIncreaseFontSize}
           tooltipSideOffset={tooltipSideOffset}
         >
           <AddLine />

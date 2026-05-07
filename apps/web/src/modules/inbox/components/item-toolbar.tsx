@@ -1,6 +1,7 @@
 "use client";
 
 import type React from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   ExternalLinkLine,
   EyeLine,
@@ -12,16 +13,25 @@ import {
 import { Button } from "@components/ui/button";
 import { Toolbar, ToolbarButton, ToolbarGroup } from "@components/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@components/ui/tooltip";
+import type { InboxFilter, InboxItem } from "@modules/inbox/api";
+import { updateInboxItemState } from "@modules/inbox/api";
+import { updateInboxItemCaches } from "@modules/inbox/lib/cache";
 import { cn } from "@lib/utils";
 
+type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
+
 type InboxItemToolbarProps = {
-  filter: "inbox" | "today" | "unread" | "saved" | "recent";
+  filter: InboxFilter;
   isRead: boolean;
   isSaved: boolean;
   onHide: () => void;
   onMarkRead: () => void;
   onOpenSource: () => void;
   onToggleSaved: () => void;
+};
+
+export type InboxItemToolbarModel = {
+  toolbarProps: InboxItemToolbarProps;
 };
 
 export function InboxItemToolbar({
@@ -68,6 +78,52 @@ export function InboxItemToolbar({
       </ToolbarGroup>
     </Toolbar>
   );
+}
+
+export function useInboxItemToolbarModel({
+  filter,
+  item,
+}: {
+  filter: InboxFilter;
+  item: InboxItem;
+}): InboxItemToolbarModel {
+  const queryClient = useQueryClient();
+  const updateItemMutation = useMutation({
+    mutationFn: (input: { patch: InboxItemPatch; removeFromList?: boolean }) =>
+      updateInboxItemState({
+        data: {
+          itemId: item.id,
+          ...input.patch,
+        },
+      }),
+    onMutate: async ({ patch, removeFromList }) => {
+      await queryClient.cancelQueries({ queryKey: ["inbox"] });
+      updateInboxItemCaches(queryClient, item.id, patch, Boolean(removeFromList));
+    },
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "view-count"] });
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "item-detail", item.id] });
+      void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
+    },
+  });
+
+  const updateItem = (patch: InboxItemPatch, removeFromList = false) => {
+    updateItemMutation.mutate({ patch, removeFromList });
+  };
+
+  return {
+    toolbarProps: {
+      filter,
+      isRead: item.isRead,
+      isSaved: item.isSaved,
+      onHide: () => updateItem({ isRead: true }, true),
+      onMarkRead: () =>
+        filter === "recent" ? updateItem({ isRead: false }, true) : updateItem({ isRead: true }),
+      onOpenSource: () => window.open(item.link, "_blank", "noopener,noreferrer"),
+      onToggleSaved: () => updateItem({ isSaved: !item.isSaved }),
+    },
+  };
 }
 
 function ReadStateIcon({ isRead }: { isRead: boolean }) {

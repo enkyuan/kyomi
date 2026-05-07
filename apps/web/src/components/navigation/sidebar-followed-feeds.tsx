@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { Link, useLocation, useRouter } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { DownFill, NewsFill } from "@mingcute/react";
@@ -116,7 +114,7 @@ export function SidebarFollowedFeeds() {
   );
 }
 
-function FollowedFeedMenuItem({
+const FollowedFeedMenuItem = memo(function FollowedFeedMenuItem({
   item,
   unreadCount,
   isActive,
@@ -294,4 +292,4 @@ function FollowedFeedMenuItem({
       </Menu>
     </SidebarMenuItem>
   );
-}
+});

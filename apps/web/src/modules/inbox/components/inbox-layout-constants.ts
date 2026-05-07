@@ -1,5 +1,5 @@
-export const MIN_INBOX_LEFT_PERCENT = 26;
-export const MIN_INBOX_RIGHT_PERCENT = 64;
+export const MIN_INBOX_LEFT_PERCENT = 28;
+export const MIN_INBOX_RIGHT_PERCENT = 60;
 export const INBOX_PANEL_SPACING_PX = 4;
 
 export const INBOX_PANEL_VERTICAL_PADDING_STYLE = {

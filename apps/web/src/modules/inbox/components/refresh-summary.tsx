@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFeedRefresh } from "@hooks/use-feed-refresh";
 import { cn } from "@lib/utils";
 import {
@@ -12,7 +12,12 @@ import {
 export function FeedRefreshSummary({ feedId }: { feedId: string }) {
   const { refreshStatus, lastRefreshStartedAt, lastRefreshCompletedAt, lastRefreshFailedAt } =
     useFeedRefresh(feedId);
-  const [phase, setPhase] = useState<"visible" | "fading" | "hidden">("visible");
+
+  const shouldPersist = refreshStatus === "running" || refreshStatus === "queued";
+  const [phase, setPhase] = useState<"visible" | "fading" | "hidden">(
+    shouldPersist ? "visible" : "hidden",
+  );
+  const previousStatusRef = useRef(refreshStatus);
 
   const summaryLabel = getRefreshSummaryLabel({
     refreshStatus,
@@ -21,28 +26,31 @@ export function FeedRefreshSummary({ feedId }: { feedId: string }) {
     lastRefreshFailedAt,
   });
 
-  const shouldPersist = refreshStatus === "running" || refreshStatus === "queued";
-
   useEffect(() => {
-    setPhase("visible");
+    const prev = previousStatusRef.current;
+    previousStatusRef.current = refreshStatus;
 
     if (shouldPersist) {
+      setPhase("visible");
       return;
     }
 
-    const fadeTimer = window.setTimeout(() => {
-      setPhase("fading");
-    }, SUMMARY_HOLD_MS);
+    if (prev === "running" || prev === "queued") {
+      setPhase("visible");
+      const fadeTimer = window.setTimeout(() => {
+        setPhase("fading");
+      }, SUMMARY_HOLD_MS);
 
-    const hideTimer = window.setTimeout(() => {
-      setPhase("hidden");
-    }, SUMMARY_HOLD_MS + SUMMARY_FADE_MS);
+      const hideTimer = window.setTimeout(() => {
+        setPhase("hidden");
+      }, SUMMARY_HOLD_MS + SUMMARY_FADE_MS);
 
-    return () => {
-      window.clearTimeout(fadeTimer);
-      window.clearTimeout(hideTimer);
-    };
-  }, [shouldPersist, summaryLabel]);
+      return () => {
+        window.clearTimeout(fadeTimer);
+        window.clearTimeout(hideTimer);
+      };
+    }
+  }, [refreshStatus, shouldPersist]);
 
   if (phase === "hidden") {
     return null;

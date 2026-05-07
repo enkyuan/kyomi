@@ -129,11 +129,13 @@ export async function getArticleDetailForUser(
   userId: string,
   articleId: string,
 ): Promise<ArticleDetailDto> {
-  const feed = await getFeedArticleDetailForUser(database, userId, articleId);
+  const [feed, clip] = await Promise.all([
+    getFeedArticleDetailForUser(database, userId, articleId),
+    getClipDetailForUser(database, userId, articleId),
+  ]);
   if (feed) {
     return feed;
   }
-  const clip = await getClipDetailForUser(database, userId, articleId);
   if (clip) {
     return clip;
   }

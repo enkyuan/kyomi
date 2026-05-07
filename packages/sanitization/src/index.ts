@@ -382,6 +382,18 @@ const removeEmptyElements: NodeHook = function (currentNode) {
   }
 };
 
+const optimizeImages: NodeHook = function (currentNode) {
+  if (currentNode.nodeType === 1 && (currentNode as Element).tagName.toLowerCase() === "img") {
+    const el = currentNode as Element;
+    if (!el.hasAttribute("loading")) {
+      el.setAttribute("loading", "lazy");
+    }
+    if (!el.hasAttribute("decoding")) {
+      el.setAttribute("decoding", "async");
+    }
+  }
+};
+
 export function registerArticleHtmlSanitizeHooks(purify: ArticleHtmlPurifyInstance): void {
   if (registeredPurify.has(purify as object)) {
     return;
@@ -390,6 +402,7 @@ export function registerArticleHtmlSanitizeHooks(purify: ArticleHtmlPurifyInstan
 
   purify.addHook("uponSanitizeAttribute", uponSanitizeArticleAttributes);
   purify.addHook("afterSanitizeElements", removeEmptyElements);
+  purify.addHook("afterSanitizeAttributes", optimizeImages);
 }
 
 export const ARTICLE_HTML_PURIFY_CONFIG: Config = {

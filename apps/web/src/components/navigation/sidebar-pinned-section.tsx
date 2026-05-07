@@ -6,6 +6,7 @@ import { Link, useLocation, useRouter } from "@tanstack/react-router";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
+import { ScrollArea } from "@components/ui/scroll-area";
 import { listFollowedFeeds, type FollowedFeed } from "@modules/feeds/api";
 import { isInboxPathname } from "@lib/routes/inbox-path";
 import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
@@ -20,6 +21,9 @@ import {
 } from "@components/ui/sidebar";
 import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-text";
 import { cn } from "@lib/utils";
+
+const PINNED_LIST_SCROLL_CLASS =
+  "h-auto min-h-0 max-h-72 rounded-lg **:data-[slot=scroll-area-scrollbar]:hidden";
 
 function isFollowedFeed(value: FollowedFeed | undefined): value is FollowedFeed {
   return Boolean(value);
@@ -58,67 +62,69 @@ export function SidebarPinnedSection() {
           </SidebarGroupLabel>
         </CollapsibleTrigger>
         <CollapsiblePanel>
-          <SidebarMenu>
-            {pinnedFeeds.length === 0 ? (
-              <SidebarMenuItem className="list-none">
-                <p className="flex h-8 items-center px-2 text-sm text-muted-foreground/75 transition-[height,padding,font-size,line-height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-9 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6">
-                  <span className="min-w-0 flex-1">
-                    <SidebarModeAnimatedText className="truncate">
-                      No pinned feeds yet
-                    </SidebarModeAnimatedText>
-                  </span>
-                </p>
-              </SidebarMenuItem>
-            ) : (
-              pinnedFeeds.map((feed) => (
-                <SidebarMenuItem key={feed.feedId}>
-                  <SidebarMenuButton
-                    tooltip={feed.title || feed.url}
-                    isActive={isInbox && location.search.feedId === feed.feedId}
-                    onFocus={() => {
-                      void prefetchInboxFlow(router, queryClient, {
-                        filter: "inbox",
-                        feedId: feed.feedId,
-                      });
-                    }}
-                    onPointerEnter={(event) => {
-                      if (event.pointerType === "mouse" || event.pointerType === "pen") {
+          <ScrollArea className={PINNED_LIST_SCROLL_CLASS} scrollFade>
+            <SidebarMenu>
+              {pinnedFeeds.length === 0 ? (
+                <SidebarMenuItem className="list-none">
+                  <p className="flex h-8 items-center px-2 text-sm text-muted-foreground/75 transition-[height,padding,font-size,line-height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-9 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6">
+                    <span className="min-w-0 flex-1">
+                      <SidebarModeAnimatedText className="truncate">
+                        No pinned feeds yet
+                      </SidebarModeAnimatedText>
+                    </span>
+                  </p>
+                </SidebarMenuItem>
+              ) : (
+                pinnedFeeds.map((feed) => (
+                  <SidebarMenuItem key={feed.feedId}>
+                    <SidebarMenuButton
+                      tooltip={feed.title || feed.url}
+                      isActive={isInbox && location.search.feedId === feed.feedId}
+                      onFocus={() => {
                         void prefetchInboxFlow(router, queryClient, {
                           filter: "inbox",
                           feedId: feed.feedId,
                         });
+                      }}
+                      onPointerEnter={(event) => {
+                        if (event.pointerType === "mouse" || event.pointerType === "pen") {
+                          void prefetchInboxFlow(router, queryClient, {
+                            filter: "inbox",
+                            feedId: feed.feedId,
+                          });
+                        }
+                      }}
+                      render={
+                        <Link
+                          to="/inbox"
+                          search={() => ({
+                            filter: "inbox" as const,
+                            search: undefined,
+                            feedId: feed.feedId,
+                            folderId: undefined,
+                            itemId: undefined,
+                          })}
+                        />
                       }
-                    }}
-                    render={
-                      <Link
-                        to="/inbox"
-                        search={() => ({
-                          filter: "inbox" as const,
-                          search: undefined,
-                          feedId: feed.feedId,
-                          folderId: undefined,
-                          itemId: undefined,
-                        })}
+                    >
+                      <FeedFavicon
+                        className="size-4 shrink-0 rounded-[3px] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:size-4.5"
+                        faviconUrl={feed.faviconUrl}
+                        feedUrl={feed.url}
+                        siteUrl={feed.link}
+                        title={feed.title || feed.url}
                       />
-                    }
-                  >
-                    <FeedFavicon
-                      className="size-4 shrink-0 rounded-[3px] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:size-4.5"
-                      faviconUrl={feed.faviconUrl}
-                      feedUrl={feed.url}
-                      siteUrl={feed.link}
-                      title={feed.title || feed.url}
-                    />
-                    <span className="min-w-0 flex-1">
-                      <SidebarModeAnimatedText className="truncate">
-                        {feed.title || feed.url}
-                      </SidebarModeAnimatedText>
-                    </span>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))
-            )}
-          </SidebarMenu>
+                      <span className="min-w-0 flex-1">
+                        <SidebarModeAnimatedText className="truncate">
+                          {feed.title || feed.url}
+                        </SidebarModeAnimatedText>
+                      </span>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))
+              )}
+            </SidebarMenu>
+          </ScrollArea>
         </CollapsiblePanel>
       </Collapsible>
     </SidebarGroup>

@@ -1,10 +1,19 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import {
+  createContext,
+  createElement,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  type ReactNode,
+} from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/auth-provider";
 import { inboxPreferencesSchema, type InboxPreferencesDto } from "@lib/api-schemas";
 import { getInboxPreferences, updateInboxPreferences } from "@lib/inbox-preferences-functions";
+import { writeInboxArticleOpenBehaviorCookie } from "@modules/inbox/lib/layout-persistence";
 
 export type InboxPreferences = InboxPreferencesDto;
 
@@ -23,6 +32,8 @@ const DEFAULT_INBOX_PREFERENCES: InboxPreferences = {
   inboxShowRecents: false,
   inboxShowFavicons: true,
 };
+
+const InboxPreferencesBootstrapContext = createContext<InboxPreferences | undefined>(undefined);
 
 function inboxPreferencesQueryKey(userId?: string) {
   return ["me", "preferences", "inbox", userId ?? "anonymous"] as const;
@@ -94,6 +105,21 @@ function writeCachedInboxPreferences(next: InboxPreferences, userId?: string) {
   }
 }
 
+export function InboxPreferencesBootstrapProvider({
+  children,
+  initialPreferences,
+}: {
+  children: ReactNode;
+  initialPreferences?: InboxPreferences;
+}) {
+  const value = useMemo(
+    () => (initialPreferences ? sanitizeInboxPreferences(initialPreferences) : undefined),
+    [initialPreferences],
+  );
+
+  return createElement(InboxPreferencesBootstrapContext.Provider, { value }, children);
+}
+
 export function resolveInitialInboxPreferences(
   queryClient: ReturnType<typeof useQueryClient>,
   queryKey: ReturnType<typeof inboxPreferencesQueryKey>,
@@ -119,10 +145,12 @@ export function resolveInitialInboxPreferences(
 export function useInboxPreferences(initialPreferences?: InboxPreferences) {
   const { user } = useAuth();
   const queryClient = useQueryClient();
+  const bootstrapPreferences = useContext(InboxPreferencesBootstrapContext);
   const queryKey = inboxPreferencesQueryKey(user?.id);
   const latestRequestIdRef = useRef(0);
   const mutationDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const mutationRollbackRef = useRef<InboxPreferences | null>(null);
+  const preferredInitialPreferences = initialPreferences ?? bootstrapPreferences;
 
   const preferencesQuery = useQuery({
     queryKey,
@@ -132,13 +160,14 @@ export function useInboxPreferences(initialPreferences?: InboxPreferences) {
     // Loader-provided preferences are the authoritative server state for this route. Prefer them
     // over local cache so a stale client value cannot hide the inbox list by forcing reader focus.
     initialData: () =>
-      resolveInitialInboxPreferences(queryClient, queryKey, initialPreferences, user?.id),
+      resolveInitialInboxPreferences(queryClient, queryKey, preferredInitialPreferences, user?.id),
     refetchOnWindowFocus: false,
   });
 
   useEffect(() => {
     if (preferencesQuery.data) {
       writeCachedInboxPreferences(preferencesQuery.data, user?.id);
+      writeInboxArticleOpenBehaviorCookie(preferencesQuery.data.articleOpenBehavior);
     }
   }, [preferencesQuery.data, user?.id]);
 
@@ -202,6 +231,7 @@ export function useInboxPreferences(initialPreferences?: InboxPreferences) {
 
       queryClient.setQueryData(queryKey, optimistic);
       writeCachedInboxPreferences(optimistic, user?.id);
+      writeInboxArticleOpenBehaviorCookie(optimistic.articleOpenBehavior);
 
       void queryClient.cancelQueries({ queryKey });
 
@@ -239,6 +269,7 @@ export function useInboxPreferences(initialPreferences?: InboxPreferences) {
 
       queryClient.setQueryData(queryKey, DEFAULT_INBOX_PREFERENCES);
       writeCachedInboxPreferences(DEFAULT_INBOX_PREFERENCES, user?.id);
+      writeInboxArticleOpenBehaviorCookie(DEFAULT_INBOX_PREFERENCES.articleOpenBehavior);
 
       void queryClient.cancelQueries({ queryKey });
 

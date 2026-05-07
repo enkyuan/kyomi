@@ -26,6 +26,9 @@ type FollowedFeedsResponse = {
   items: FollowedFeedDto[];
 };
 
+const DISCOVER_PREVIEW_REQUEST_TIMEOUT_MS = 8_000;
+const DISCOVER_SEARCH_REQUEST_TIMEOUT_MS = 5_000;
+
 function looksLikeFeedUrl(value: string) {
   return Boolean(normalizeUrlCandidate(value));
 }
@@ -73,7 +76,10 @@ export const searchFeeds = createServerFn({ method: "GET" })
         const preview = await apiJsonValidated(discoverFeedResultSchema, () =>
           apiJson<DiscoverFeedResult>(
             `/api/v1/discover/preview?url=${encodeURIComponent(normalizedUrl)}`,
-            { headers },
+            {
+              headers,
+              signal: AbortSignal.timeout(DISCOVER_PREVIEW_REQUEST_TIMEOUT_MS),
+            },
           ),
         );
 
@@ -97,12 +103,19 @@ export const searchFeeds = createServerFn({ method: "GET" })
       return [];
     }
 
-    return apiJsonValidated(z.array(discoverFeedResultSchema), () =>
-      apiJson<DiscoverFeedResult[]>(
-        `/api/v1/discover/search?q=${encodeURIComponent(query)}&limit=8`,
-        { headers },
-      ),
-    );
+    try {
+      return await apiJsonValidated(z.array(discoverFeedResultSchema), () =>
+        apiJson<DiscoverFeedResult[]>(
+          `/api/v1/discover/search?q=${encodeURIComponent(query)}&limit=8`,
+          {
+            headers,
+            signal: AbortSignal.timeout(DISCOVER_SEARCH_REQUEST_TIMEOUT_MS),
+          },
+        ),
+      );
+    } catch {
+      return [];
+    }
   });
 
 export const followFeed = createServerFn({ method: "POST" })

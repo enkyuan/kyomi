@@ -16,7 +16,8 @@ import {
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getInboxViewCount, updateInboxItemState, type InboxItem } from "@modules/inbox/api";
 import { QUERY_TIMES } from "@lib/query-policies";
-import { useInboxPreferences } from "@lib/inbox-preferences";
+import { InboxPreferencesBootstrapProvider, useInboxPreferences } from "@lib/inbox-preferences";
+import { getTimezoneOffsetMinutes } from "@lib/query-policies";
 import { updateInboxItemCaches } from "@modules/inbox/lib/cache";
 import { deriveInboxListHeaderCount } from "@modules/inbox/lib/count-display";
 import { inboxViewCountQueryKey } from "@modules/inbox/lib/query-options";
@@ -24,17 +25,36 @@ import { dedupePagedInboxItemsById, useInboxQueries } from "@hooks/use-inbox-que
 import { useInboxRouteState } from "@modules/inbox/use-route-state";
 import { useMarkReadBehavior } from "@modules/inbox/use-mark-read-behavior";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo } from "react";
 import type { InboxPreferences } from "@lib/inbox-preferences";
 
 export function InboxPage({
   initialInboxPreferences,
+  initialSplitPanePercent,
 }: {
   initialInboxPreferences?: InboxPreferences;
+  initialSplitPanePercent?: number;
+}) {
+  return (
+    <InboxPreferencesBootstrapProvider initialPreferences={initialInboxPreferences}>
+      <InboxPageContent
+        initialInboxPreferences={initialInboxPreferences}
+        initialSplitPanePercent={initialSplitPanePercent}
+      />
+    </InboxPreferencesBootstrapProvider>
+  );
+}
+
+function InboxPageContent({
+  initialInboxPreferences,
+  initialSplitPanePercent,
+}: {
+  initialInboxPreferences?: InboxPreferences;
+  initialSplitPanePercent?: number;
 }) {
   const { preferences } = useInboxPreferences(initialInboxPreferences);
   const queryClient = useQueryClient();
-  const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
+  const timezoneOffsetMinutes = getTimezoneOffsetMinutes();
 
   const route = useInboxRouteState(preferences);
   const {
@@ -51,10 +71,6 @@ export function InboxPage({
     activeScopeLabel,
   } = route;
 
-  useEffect(() => {
-    setTimezoneOffsetMinutes(new Date().getTimezoneOffset());
-  }, []);
-
   const {
     containerRef: splitContainerRef,
     leftPanelPercent,
@@ -63,7 +79,10 @@ export function InboxPage({
   } = useSplitPane({
     minLeftPercent: MIN_INBOX_LEFT_PERCENT,
     minRightPercent: MIN_INBOX_RIGHT_PERCENT,
-    initialPercent: 32,
+    initialPercent:
+      initialSplitPanePercent && Number.isFinite(initialSplitPanePercent)
+        ? initialSplitPanePercent
+        : 32,
   });
 
   const { inboxQuery, detailQuery } = useInboxQueries({
@@ -77,7 +96,7 @@ export function InboxPage({
   });
 
   const rawInboxItems = useMemo(
-    () => dedupePagedInboxItemsById(inboxQuery.data?.pages.flatMap((page) => page.items) ?? []),
+    () => dedupePagedInboxItemsById(inboxQuery.data?.pages),
     [inboxQuery.data?.pages],
   );
 
@@ -213,6 +232,7 @@ export function InboxPage({
       folderId,
       showHidden: showHiddenItems,
       showRead: showReadItems,
+      disableVirtualization: isResizing,
       isLoading: inboxQuery.isPending,
       hasNextPage: !!inboxQuery.hasNextPage,
       isFetchingNextPage: inboxQuery.isFetchingNextPage,

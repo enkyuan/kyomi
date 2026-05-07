@@ -26,22 +26,24 @@ export function hydrateHotQueryCache(queryClient: QueryClient) {
   }
   hasHydrated = true;
 
-  try {
-    const raw = window.localStorage.getItem(HOT_CACHE_KEY);
-    if (!raw) {
-      return;
-    }
+  window.setTimeout(() => {
+    try {
+      const raw = window.localStorage.getItem(HOT_CACHE_KEY);
+      if (!raw) {
+        return;
+      }
 
-    const parsed = JSON.parse(raw) as PersistedHotCache;
-    if (!parsed.savedAt || Date.now() - parsed.savedAt > HOT_CACHE_MAX_AGE_MS) {
+      const parsed = JSON.parse(raw) as PersistedHotCache;
+      if (!parsed.savedAt || Date.now() - parsed.savedAt > HOT_CACHE_MAX_AGE_MS) {
+        window.localStorage.removeItem(HOT_CACHE_KEY);
+        return;
+      }
+
+      hydrate(queryClient, parsed.state);
+    } catch {
       window.localStorage.removeItem(HOT_CACHE_KEY);
-      return;
     }
-
-    hydrate(queryClient, parsed.state);
-  } catch {
-    window.localStorage.removeItem(HOT_CACHE_KEY);
-  }
+  }, 0);
 }
 
 export function subscribeHotQueryCachePersistence(queryClient: QueryClient) {

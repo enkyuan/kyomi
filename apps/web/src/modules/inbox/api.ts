@@ -386,11 +386,14 @@ export const getScopedUnreadCount = createServerFn({ method: "GET" })
       return { count: counts[feedId] ?? 0 };
     }
 
-    // Folder-scoped unread: no dedicated count endpoint yet, fall back to
-    // the list query. TODO: add a folder-scoped count endpoint on the API.
-    const response = await apiJson<CursorListResponse>(
-      buildArticlesUrl("unread", 0, false, undefined, undefined, data.folderId),
-      { headers: buildForwardHeaders(headers) },
-    );
-    return { count: response.items.length };
+    // Folder-scoped unread: use the existing counts endpoint with folder_id scope.
+    if (data.folderId?.trim()) {
+      const counts = await apiJson<ArticleCountsResponse>(
+        `/api/v1/articles/counts?folder_id=${encodeURIComponent(data.folderId.trim())}`,
+        { headers: buildForwardHeaders(headers) },
+      );
+      return { count: counts.unread ?? 0 };
+    }
+
+    return { count: 0 };
   });

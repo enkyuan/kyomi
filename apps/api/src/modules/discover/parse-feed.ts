@@ -200,3 +200,71 @@ export function parseFeedMetadata(body: string, resolvedUrl: string): ParsedFeed
 
   throw new Error("Unsupported feed format (expected RSS, Atom, or JSON Feed)");
 }
+
+export function parseHtmlMetadataFallback(body: string, resolvedUrl: string): ParsedFeedMetadata {
+  const headMatch = body.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
+  const headHtml = headMatch ? headMatch[1] : body.slice(0, 32768);
+
+  const titleMatch = headHtml.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  let title = titleMatch ? decodeHtmlEntities(titleMatch[1]).trim() : "Untitled";
+
+  if (title === "Untitled") {
+    const ogTitleMatch =
+      headHtml.match(
+        /<meta[^>]+property\s*=\s*["']og:title["'][^>]*content\s*=\s*["']([^"']+)["']/i,
+      ) ||
+      headHtml.match(
+        /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+property\s*=\s*["']og:title["']/i,
+      );
+    title = ogTitleMatch ? decodeHtmlEntities(ogTitleMatch[1]).trim() : "Untitled";
+  }
+
+  const descMatch =
+    headHtml.match(
+      /<meta[^>]+name\s*=\s*["']description["'][^>]*content\s*=\s*["']([^"']+)["']/i,
+    ) ||
+    headHtml.match(/<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+name\s*=\s*["']description["']/i);
+  let description = descMatch ? decodeHtmlEntities(descMatch[1]).trim() : "";
+
+  if (!description) {
+    const ogDescMatch =
+      headHtml.match(
+        /<meta[^>]+property\s*=\s*["']og:description["'][^>]*content\s*=\s*["']([^"']+)["']/i,
+      ) ||
+      headHtml.match(
+        /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+property\s*=\s*["']og:description["']/i,
+      );
+    description = ogDescMatch
+      ? decodeHtmlEntities(ogDescMatch[1]).trim()
+      : "Follow recent articles from this feed";
+  }
+
+  let iconUrl: string | null = null;
+  const linkRegex = /<link[^>]*>/gi;
+  let match;
+  while ((match = linkRegex.exec(headHtml)) !== null) {
+    const tag = match[0];
+    const relMatch = tag.match(/\brel\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+    if (relMatch) {
+      const rel = (relMatch[1] || relMatch[2] || relMatch[3]).toLowerCase();
+      if (rel.split(/\s+/).includes("icon")) {
+        const hrefMatch = tag.match(/\bhref\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+        if (hrefMatch) {
+          iconUrl = hrefMatch[1] || hrefMatch[2] || hrefMatch[3];
+          break;
+        }
+      }
+    }
+  }
+
+  if (iconUrl) {
+    iconUrl = absoluteUrl(iconUrl, resolvedUrl);
+  }
+
+  return {
+    title,
+    description,
+    link: resolvedUrl,
+    iconUrl,
+  };
+}

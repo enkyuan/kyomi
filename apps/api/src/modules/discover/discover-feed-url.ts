@@ -1,5 +1,3 @@
-import { parseHTML } from "linkedom";
-
 type FeedLinkCandidate = {
   href: string;
   score: number;
@@ -46,25 +44,41 @@ function resolveCandidateHref(href: string | null, baseUrl: string): string | nu
 /**
  * Extract a feed URL from HTML autodiscovery tags such as:
  * `<link rel="alternate" type="application/rss+xml" href="/feed.xml">`.
+ *
+ * Uses fast regex scanning over the <head> tag to prevent blocking the event loop on huge documents.
  */
 export function discoverFeedUrlFromHtml(body: string, baseUrl: string): string | null {
-  const { document } = parseHTML(body);
-  const links = Array.from(document.querySelectorAll("link[href]"));
-  const candidates: FeedLinkCandidate[] = [];
+  const headMatch = body.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
+  const headHtml = headMatch ? headMatch[1] : body.slice(0, 32768);
 
-  for (const link of links) {
-    const relTokens = normalizeRel(link.getAttribute("rel"));
+  const linkRegex = /<link[^>]*>/gi;
+  const candidates: FeedLinkCandidate[] = [];
+  let match;
+
+  while ((match = linkRegex.exec(headHtml)) !== null) {
+    const tag = match[0];
+
+    // Extract attributes using simple regex
+    const relMatch = tag.match(/\brel\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+    const typeMatch = tag.match(/\btype\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+    const hrefMatch = tag.match(/\bhref\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+
+    const rel = relMatch ? relMatch[1] || relMatch[2] || relMatch[3] : null;
+    const type = typeMatch ? typeMatch[1] || typeMatch[2] || typeMatch[3] : null;
+    const rawHref = hrefMatch ? hrefMatch[1] || hrefMatch[2] || hrefMatch[3] : null;
+
+    const relTokens = normalizeRel(rel);
     if (!relTokens.includes("alternate")) {
       continue;
     }
 
-    const type = normalizeType(link.getAttribute("type"));
-    const score = FEED_CONTENT_TYPE_SCORES.get(type);
+    const normalizedType = normalizeType(type);
+    const score = FEED_CONTENT_TYPE_SCORES.get(normalizedType);
     if (score === undefined) {
       continue;
     }
 
-    const href = resolveCandidateHref(link.getAttribute("href"), baseUrl);
+    const href = resolveCandidateHref(rawHref, baseUrl);
     if (!href) {
       continue;
     }

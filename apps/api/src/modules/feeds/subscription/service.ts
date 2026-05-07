@@ -17,6 +17,45 @@ import {
 
 type DB = typeof db;
 
+function resolveImmediateFavicon(
+  resolved: Awaited<ReturnType<typeof resolveRemoteFeed>>,
+): FaviconEnrichment {
+  const embeddedIconUrl = resolved.iconUrl?.trim();
+  if (!embeddedIconUrl) {
+    return null;
+  }
+  return { url: embeddedIconUrl, source: "feed_icon" };
+}
+
+async function enrichFaviconInBackground(
+  database: DB,
+  resolved: Awaited<ReturnType<typeof resolveRemoteFeed>>,
+): Promise<void> {
+  try {
+    const enriched = await resolveRemoteFeedFavicon(resolved, logger);
+    if (!enriched) {
+      return;
+    }
+
+    const persisted = await database.transaction(async (tx) =>
+      upsertFeedRecord(tx, resolved, enriched),
+    );
+    await indexFeedForSearch({
+      id: persisted.feedId,
+      url: resolved.canonicalUrl,
+      title: decodeText(resolved.title),
+      description: decodeText(resolved.description),
+      link: resolved.link,
+      faviconUrl: persisted.faviconUrl,
+    });
+  } catch (error) {
+    logger.warn("feeds.favicon.enrich_background_failed", {
+      url: resolved.canonicalUrl,
+      error: error instanceof Error ? error.message : String(error),
+    });
+  }
+}
+
 /**
  * Fetch feed document, upsert `feeds` by canonical URL, ensure
  * `feed_subscriptions` row for user, and index for search.
@@ -28,7 +67,8 @@ export async function createOrSubscribeToFeed(
 ): Promise<FeedSubscribeResultDto> {
   const resolved = await resolveRemoteFeed(rawUrl);
 
-  const favicon: FaviconEnrichment = await resolveRemoteFeedFavicon(resolved, logger);
+  // Never block subscription flow on remote favicon probing.
+  const favicon: FaviconEnrichment = resolveImmediateFavicon(resolved);
 
   const result = await database.transaction(async (tx) => {
     const { feedId, newFeed, faviconUrl, faviconSource } = await upsertFeedRecord(
@@ -58,6 +98,10 @@ export async function createOrSubscribeToFeed(
     link: result.link,
     faviconUrl: result.faviconUrl,
   });
+
+  if (!result.faviconUrl || result.faviconSource === "feed_icon") {
+    void enrichFaviconInBackground(database, resolved);
+  }
 
   return result;
 }

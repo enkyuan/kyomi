@@ -1,6 +1,7 @@
 "use client";
 
 import { useVirtualizer } from "@tanstack/react-virtual";
+import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { FeedItem } from "@modules/inbox/components/item";
 import { InboxListFilterMenu } from "@modules/inbox/components/list-filter-menu";
 import {
@@ -10,24 +11,40 @@ import {
 } from "@modules/inbox/components/refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
-import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { useEffect, useRef, useState, type RefObject } from "react";
 import type { InboxFilter, InboxItem } from "@modules/inbox/api";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
 import type { InboxListHeaderCount } from "@modules/inbox/lib/count-display";
 
 const FEED_ITEM_ROW_ESTIMATE = {
-  comfortable: 176,
-  compact: 136,
-  comfortableReaderFocus: 212,
-  compactReaderFocus: 164,
+  comfortable: 232,
+  compact: 180,
+  comfortableReaderFocus: 248,
+  compactReaderFocus: 196,
 } as const;
+
+function getFeedItemRowEstimate({
+  density,
+  readerFocusMode,
+}: {
+  density: InboxDensityDto;
+  readerFocusMode: boolean;
+}) {
+  return FEED_ITEM_ROW_ESTIMATE[
+    readerFocusMode
+      ? density === "compact"
+        ? "compactReaderFocus"
+        : "comfortableReaderFocus"
+      : density
+  ];
+}
 
 interface InboxListProps {
   inboxItems: InboxItem[];
   headerCount: InboxListHeaderCount;
   filter: InboxFilter;
   readerFocusMode?: boolean;
+  disableVirtualization?: boolean;
   density: InboxDensityDto;
   fontSizePx: number;
   showFavicons: boolean;
@@ -106,14 +123,64 @@ function InboxListSkeletonRows({
   );
 }
 
-function InboxListVirtualized({
-  listScrollRef,
-  allowFirstRowOverlay,
+function InboxListStatic({
   filter,
   readerFocusMode,
   density,
   fontSizePx,
   showFavicons,
+  listContainerWidth,
+  timestampDisplay,
+  timestampHourCycle,
+  inboxItems,
+  selectedItemId,
+  onSelectItem,
+}: {
+  filter: InboxFilter;
+  readerFocusMode: boolean;
+  density: InboxDensityDto;
+  fontSizePx: number;
+  showFavicons: boolean;
+  listContainerWidth?: number;
+  timestampDisplay: InboxTimestampDisplayDto;
+  timestampHourCycle: "12h" | "24h";
+  inboxItems: InboxItem[];
+  selectedItemId?: string | null;
+  onSelectItem: (item: InboxItem) => void;
+}) {
+  return (
+    <div className="relative w-full pb-4">
+      {inboxItems.map((item, index) => (
+        <div key={item.id} className="group/inbox-row relative w-full">
+          <FeedItem
+            filter={filter}
+            item={item}
+            isSelected={selectedItemId === item.id}
+            isFirst={index === 0}
+            containerWidth={listContainerWidth || undefined}
+            readerFocusMode={readerFocusMode}
+            showBottomSeparator={index === inboxItems.length - 1}
+            density={density}
+            fontSizePx={fontSizePx}
+            showFavicons={showFavicons}
+            timestampDisplay={timestampDisplay}
+            timestampHourCycle={timestampHourCycle}
+            onSelect={onSelectItem}
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function InboxListVirtualized({
+  listScrollRef,
+  filter,
+  readerFocusMode,
+  density,
+  fontSizePx,
+  showFavicons,
+  listContainerWidth,
   timestampDisplay,
   timestampHourCycle,
   inboxItems,
@@ -125,12 +192,12 @@ function InboxListVirtualized({
   onSelectItem,
 }: {
   listScrollRef: RefObject<HTMLDivElement | null>;
-  allowFirstRowOverlay: boolean;
   filter: InboxFilter;
   readerFocusMode: boolean;
   density: InboxDensityDto;
   fontSizePx: number;
   showFavicons: boolean;
+  listContainerWidth?: number;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
   inboxItems: InboxItem[];
@@ -145,15 +212,9 @@ function InboxListVirtualized({
     count: inboxItems.length,
     getItemKey: (index) => inboxItems[index]?.id ?? index,
     getScrollElement: () => listScrollRef.current,
-    estimateSize: () =>
-      FEED_ITEM_ROW_ESTIMATE[
-        readerFocusMode
-          ? density === "compact"
-            ? "compactReaderFocus"
-            : "comfortableReaderFocus"
-          : density
-      ],
+    estimateSize: () => getFeedItemRowEstimate({ density, readerFocusMode }),
     overscan: 6,
+    useAnimationFrameWithResizeObserver: true,
   });
 
   const virtualItems = virtualizer.getVirtualItems();
@@ -171,12 +232,6 @@ function InboxListVirtualized({
   }, [lastVirtualItem?.index, inboxItems.length, hasNextPage, isFetchingNextPage, fetchNextPage]);
 
   const listContentHeight = virtualizer.getTotalSize();
-
-  const { viewportHeight: listViewportHeight, containerWidth: listContainerWidth } =
-    useViewportMetrics(listScrollRef, [isLoading, inboxItems.length]);
-
-  const showBottomSeparatorOnLastItem =
-    inboxItems.length > 0 && listContentHeight < listViewportHeight;
 
   if (isLoading && inboxItems.length === 0) {
     return <InboxListSkeletonRows density={density} showFavicons={showFavicons} />;
@@ -202,7 +257,7 @@ function InboxListVirtualized({
           <div
             key={virtualRow.key}
             ref={virtualizer.measureElement}
-            className={`group/inbox-row absolute left-0 top-0 z-0 w-full${virtualRow.index === 0 && allowFirstRowOverlay ? " hover:z-40 focus-within:z-40" : ""}`}
+            className="group/inbox-row absolute left-0 top-0 w-full"
             data-index={virtualRow.index}
             style={{
               transform: `translateY(${virtualRow.start}px)`,
@@ -215,9 +270,7 @@ function InboxListVirtualized({
               isFirst={virtualRow.index === 0}
               containerWidth={listContainerWidth || undefined}
               readerFocusMode={readerFocusMode}
-              showBottomSeparator={
-                showBottomSeparatorOnLastItem && virtualRow.index === inboxItems.length - 1
-              }
+              showBottomSeparator={virtualRow.index === inboxItems.length - 1}
               density={density}
               fontSizePx={fontSizePx}
               showFavicons={showFavicons}
@@ -237,6 +290,7 @@ export function InboxList({
   headerCount,
   filter,
   readerFocusMode = false,
+  disableVirtualization = false,
   density,
   fontSizePx,
   showFavicons,
@@ -254,26 +308,18 @@ export function InboxList({
   onSelectItem,
 }: InboxListProps) {
   const [isVirtualizerHostMounted, setIsVirtualizerHostMounted] = useState(false);
-  const [allowFirstRowOverlay, setAllowFirstRowOverlay] = useState(true);
   const listScrollRef = useRef<HTMLDivElement | null>(null);
+  const { containerWidth: listContainerWidth } = useViewportMetrics(listScrollRef, [
+    inboxItems.length,
+    isLoading,
+    density,
+    fontSizePx,
+    readerFocusMode,
+  ]);
+  const shouldUseStaticList = disableVirtualization && inboxItems.length <= 250;
 
   useEffect(() => {
     setIsVirtualizerHostMounted(true);
-  }, []);
-
-  useEffect(() => {
-    const node = listScrollRef.current;
-    if (!node) {
-      return;
-    }
-
-    const syncOverlayState = () => {
-      setAllowFirstRowOverlay(node.scrollTop <= 1);
-    };
-
-    syncOverlayState();
-    node.addEventListener("scroll", syncOverlayState, { passive: true });
-    return () => node.removeEventListener("scroll", syncOverlayState);
   }, []);
 
   return (
@@ -311,15 +357,29 @@ export function InboxList({
                   readerFocusMode={readerFocusMode}
                 />
               )
-            ) : (
-              <InboxListVirtualized
-                listScrollRef={listScrollRef}
-                allowFirstRowOverlay={allowFirstRowOverlay}
+            ) : shouldUseStaticList ? (
+              <InboxListStatic
                 filter={filter}
                 readerFocusMode={readerFocusMode}
                 density={density}
                 fontSizePx={fontSizePx}
                 showFavicons={showFavicons}
+                listContainerWidth={listContainerWidth}
+                timestampDisplay={timestampDisplay}
+                timestampHourCycle={timestampHourCycle}
+                inboxItems={inboxItems}
+                selectedItemId={selectedItemId}
+                onSelectItem={onSelectItem}
+              />
+            ) : (
+              <InboxListVirtualized
+                listScrollRef={listScrollRef}
+                filter={filter}
+                readerFocusMode={readerFocusMode}
+                density={density}
+                fontSizePx={fontSizePx}
+                showFavicons={showFavicons}
+                listContainerWidth={listContainerWidth}
                 timestampDisplay={timestampDisplay}
                 timestampHourCycle={timestampHourCycle}
                 inboxItems={inboxItems}

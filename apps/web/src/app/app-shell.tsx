@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import type { CSSProperties, ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import {
@@ -27,11 +28,16 @@ export function AppShell({
     ? { duration: 0 }
     : { type: "spring" as const, duration: 0.38, bounce: 0 };
 
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <SidebarProvider data-reader-focus-sidebar={readerFocusList ? "true" : undefined} defaultOpen>
       <motion.div
         initial={false}
-        layout
+        layout={isMounted ? true : undefined}
         className="grid h-dvh max-h-dvh min-h-0 w-full overflow-hidden"
         style={
           {
@@ -46,7 +52,7 @@ export function AppShell({
       >
         <motion.div
           initial={false}
-          layout
+          layout={isMounted ? true : undefined}
           layoutId="app-sidebar-shell"
           className="min-h-0"
           style={readerFocusList ? { gridColumn: "2" } : { gridColumn: "1" }}
@@ -65,7 +71,7 @@ export function AppShell({
         </motion.div>
         <motion.div
           initial={false}
-          layout
+          layout={isMounted ? true : undefined}
           layoutId="app-main-shell"
           className="min-h-0 min-w-0"
           style={readerFocusList ? { gridColumn: "3" } : { gridColumn: "2" }}
