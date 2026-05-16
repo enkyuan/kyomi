@@ -1,4 +1,4 @@
-import { findIconFromHtml, findIconsFromHtml, linkRelDeclaresSiteIcon } from "@cronos/favicon";
+import { findIconFromHtml, findIconsFromHtml, linkRelDeclaresSiteIcon } from "@vols.rss/favicon";
 import { afterEach, describe, expect, test, vi } from "vitest";
 
 describe("linkRelDeclaresSiteIcon", () => {

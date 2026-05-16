@@ -2,10 +2,10 @@ import { env } from "@config/env";
 import { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { closeRedis, getRedis } from "@adapters/redis";
-import { runFeedRefresh } from "@cronos/ingestion";
-import { consumeJobs } from "@cronos/worker";
+import { runFeedRefresh } from "@vols.rss/ingestion";
+import { consumeJobs } from "@vols.rss/worker";
 import { publishJob } from "@adapters/queue/publish-job";
-import { feedSubscriptions, feeds } from "@cronos/db";
+import { feedSubscriptions, feeds } from "@vols.rss/db";
 import { lte, and, ne, eq, or, isNull, sql } from "drizzle-orm";
 
 function sleep(ms: number, signal?: AbortSignal): Promise<void> {

@@ -7,7 +7,7 @@ function liveness() {
 }
 
 export const healthPlugin = new Elysia({
-  name: "cronos.health",
+  name: "vols.rss.health",
 })
   .use(requestObservationPlugin)
   .get("/health", liveness)

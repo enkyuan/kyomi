@@ -1,10 +1,10 @@
 {
-  "name": "@cronos/catalog",
+  "name": "@vols.rss/catalog",
   "private": true,
   "scripts": {
     "setup": "poetry install",
-    "export:catalog": "poetry run python processing/export_catalog_for_cronos.py --output processing/exports/catalog-feeds.jsonl",
-    "export:catalog:sample": "poetry run python processing/export_catalog_for_cronos.py --output processing/exports/catalog-feeds.sample.jsonl --limit 1000",
+    "export:catalog": "poetry run python processing/export_catalog_for_vols_rss.py --output processing/exports/catalog-feeds.jsonl",
+    "export:catalog:sample": "poetry run python processing/export_catalog_for_vols_rss.py --output processing/exports/catalog-feeds.sample.jsonl --limit 1000",
     "sync": "bash scripts/sync.sh"
   }
 }

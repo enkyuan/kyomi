@@ -2,7 +2,7 @@ import createDOMPurify from "dompurify";
 import {
   getArticleHtmlSanitizeOptions,
   registerArticleHtmlSanitizeHooks,
-} from "@cronos/sanitization";
+} from "@vols.rss/sanitization";
 
 type PurifyInstance = ReturnType<typeof createDOMPurify>;
 
@@ -14,9 +14,9 @@ function getPurify(): PurifyInstance {
   }
   if (typeof window === "undefined") {
     throw new Error(
-      "@cronos/reader: sanitizeReaderArticleHtml requires a browser DOM. " +
-        "Use `@cronos/reader/web` from client components (or a Vitest jsdom environment). " +
-        "For Node-only sanitization, use `@cronos/sanitization` with your own JSDOM window.",
+      "@vols.rss/reader: sanitizeReaderArticleHtml requires a browser DOM. " +
+        "Use `@vols.rss/reader/web` from client components (or a Vitest jsdom environment). " +
+        "For Node-only sanitization, use `@vols.rss/sanitization` with your own JSDOM window.",
     );
   }
   cached = createDOMPurify(window);

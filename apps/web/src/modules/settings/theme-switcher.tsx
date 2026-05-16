@@ -85,7 +85,7 @@ export function ThemeSwitcher() {
     >
       <div className="space-y-1">
         <FieldsetLegend className="font-medium text-sm">Theme</FieldsetLegend>
-        <p className="text-xs text-muted-foreground">Choose how Cronos appears across the app.</p>
+        <p className="text-xs text-muted-foreground">Choose how vols.rss appears across the app.</p>
       </div>
       <RadioGroup
         className="flex-row gap-4"

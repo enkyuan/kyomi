@@ -1,4 +1,4 @@
-import { decodeHtmlEntities } from "@cronos/ingestion";
+import { decodeHtmlEntities } from "@vols.rss/ingestion";
 
 export function decodeText(value: string): string {
   return decodeHtmlEntities(value).trim();

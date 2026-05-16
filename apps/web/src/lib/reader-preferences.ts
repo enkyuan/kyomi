@@ -14,7 +14,7 @@ export type ReaderDefaultMode = ReaderDefaultModeDto;
 export type ReaderContentWidth = ReaderContentWidthDto;
 export type ReaderPreferences = ReaderPreferencesDto;
 
-const READER_PREFERENCES_STORAGE_KEY = "cronos:reader-preferences:v1";
+const READER_PREFERENCES_STORAGE_KEY = "vols.rss:reader-preferences:v1";
 const MIN_FONT_SIZE_PX = 14;
 const MAX_FONT_SIZE_PX = 22;
 

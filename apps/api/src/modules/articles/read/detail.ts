@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@cronos/db";
+import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@vols.rss/db";
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";
 import { decodeNullableText, decodeText } from "@shared/text/html-entities";

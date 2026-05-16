@@ -1,12 +1,12 @@
 {
-  "name": "@cronos/worker",
+  "name": "@vols.rss/worker",
   "private": true,
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@cronos/ingestion": "workspace:*",
+    "@vols.rss/ingestion": "workspace:*",
     "ioredis": "^5.6.0"
   },
   "scripts": {

@@ -6,6 +6,11 @@ export const INBOX_PANEL_VERTICAL_PADDING_STYLE = {
   paddingBlock: `${INBOX_PANEL_SPACING_PX}px`,
 } as const;
 
+/** Uniform gutter around reader-focus panels (matches vertical split spacing). */
+export const INBOX_PANEL_OUTER_PADDING_STYLE = {
+  padding: `${INBOX_PANEL_SPACING_PX}px`,
+} as const;
+
 export const INBOX_DETAIL_PANEL_OUTER_SPACING_STYLE = {
   paddingInlineEnd: `${INBOX_PANEL_SPACING_PX}px`,
 } as const;

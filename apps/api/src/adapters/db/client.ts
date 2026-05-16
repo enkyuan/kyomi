@@ -1,16 +1,16 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool, type PoolConfig } from "pg";
-import * as schema from "@cronos/db";
+import * as schema from "@vols.rss/db";
 import { env } from "@config/env";
 import { normalizeLoopbackUrl } from "@shared/net/normalize-loopback-url";
 
 declare global {
-  var __cronosApiDbPool: Pool | undefined;
-  var __cronosApiDb: ReturnType<typeof drizzle<typeof schema>> | undefined;
+  var __volsRssApiDbPool: Pool | undefined;
+  var __volsRssApiDb: ReturnType<typeof drizzle<typeof schema>> | undefined;
 }
 
 export const pool =
-  globalThis.__cronosApiDbPool ??
+  globalThis.__volsRssApiDbPool ??
   new Pool({
     connectionString: normalizeLoopbackUrl(env.DATABASE_URL),
     max: env.DATABASE_POOL_MAX,
@@ -21,14 +21,14 @@ export const pool =
   });
 
 export const db =
-  globalThis.__cronosApiDb ??
+  globalThis.__volsRssApiDb ??
   drizzle(pool, {
     schema,
   });
 
 if (env.NODE_ENV !== "production") {
-  globalThis.__cronosApiDbPool = pool;
-  globalThis.__cronosApiDb = db;
+  globalThis.__volsRssApiDbPool = pool;
+  globalThis.__volsRssApiDb = db;
 }
 
 function resolveSslConfig(): PoolConfig["ssl"] | undefined {

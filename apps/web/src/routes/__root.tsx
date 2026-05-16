@@ -14,7 +14,7 @@ interface MyRouterContext {
 }
 
 const THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getItem('theme');var mode=(stored==='light'||stored==='dark'||stored==='auto')?stored:'dark';var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var resolved=mode==='auto'?(prefersDark?'dark':'light'):mode;var root=document.documentElement;root.classList.remove('light','dark');root.classList.add(resolved);if(mode==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',mode)}root.style.colorScheme=resolved;}catch(e){console.warn('theme init failed',e);}})();`;
-const REACT_SCAN_STORAGE_KEY = "cronos:dev:react-scan";
+const REACT_SCAN_STORAGE_KEY = "vols.rss:dev:react-scan";
 const REACT_SCAN_QUERY_PARAM = "react-scan";
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
@@ -33,11 +33,11 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "Cronos",
+        title: "vols.rss",
       },
       {
         name: "apple-mobile-web-app-title",
-        content: "Cronos",
+        content: "vols.rss",
       },
     ],
     links: [
@@ -103,7 +103,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     }
 
     const existingScript = document.querySelector<HTMLScriptElement>(
-      'script[data-cronos-react-scan="true"]',
+      'script[data-vols-rss-react-scan="true"]',
     );
     if (existingScript) {
       return;
@@ -111,7 +111,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 
     const script = document.createElement("script");
     script.crossOrigin = "anonymous";
-    script.dataset.cronosReactScan = "true";
+    script.dataset.volsRssReactScan = "true";
     script.src = "https://unpkg.com/react-scan/dist/auto.global.js";
     document.head.appendChild(script);
 

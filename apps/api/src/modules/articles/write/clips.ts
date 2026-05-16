@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { articleClips } from "@cronos/db";
+import { articleClips } from "@vols.rss/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/normalize-feed-url";
 import { and, desc, eq, gte, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";

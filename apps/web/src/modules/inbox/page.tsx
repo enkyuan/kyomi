@@ -10,7 +10,6 @@ import {
 } from "@modules/inbox/components/inbox-layout-constants";
 import {
   InboxReaderFocusDetailLayout,
-  InboxReaderFocusListLayout,
   InboxSplitLayout,
 } from "@modules/inbox/components/inbox-layouts";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
@@ -24,9 +23,16 @@ import { inboxViewCountQueryKey } from "@modules/inbox/lib/query-options";
 import { dedupePagedInboxItemsById, useInboxQueries } from "@hooks/use-inbox-queries";
 import { useInboxRouteState } from "@modules/inbox/use-route-state";
 import { useMarkReadBehavior } from "@modules/inbox/use-mark-read-behavior";
+import { useMediaQuery } from "@hooks/use-media-query";
 
-import { useCallback, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { InboxPreferences } from "@lib/inbox-preferences";
+
+type InboxLayoutMode = "split" | "reader-detail";
+
+function resolveInboxLayoutMode(isTabletViewport: boolean): InboxLayoutMode {
+  return isTabletViewport ? "reader-detail" : "split";
+}
 
 export function InboxPage({
   initialInboxPreferences,
@@ -53,6 +59,7 @@ function InboxPageContent({
   initialSplitPanePercent?: number;
 }) {
   const { preferences } = useInboxPreferences(initialInboxPreferences);
+  const isTabletViewport = useMediaQuery({ min: "md", max: "lg" });
   const queryClient = useQueryClient();
   const timezoneOffsetMinutes = getTimezoneOffsetMinutes();
 
@@ -176,7 +183,10 @@ function InboxPageContent({
     },
   });
 
+  const userDismissedTabletSelectionRef = useRef(false);
+
   const clearSelectedItem = useCallback(() => {
+    userDismissedTabletSelectionRef.current = true;
     void navigate({
       search: (prev) => ({
         ...prev,
@@ -211,11 +221,41 @@ function InboxPageContent({
     },
   });
 
-  const isReaderFocusMode = preferences.articleOpenBehavior === "reader";
-  const isReaderFocus = isReaderFocusMode && Boolean(itemId);
-  const isReaderFocusList = isReaderFocusMode && !itemId;
-  const showReaderFocusEmptyState =
-    isReaderFocusList && !inboxQuery.isPending && inboxItems.length === 0;
+  const layoutMode = resolveInboxLayoutMode(isTabletViewport);
+  const isReaderFocusMode = layoutMode === "reader-detail";
+
+  useEffect(() => {
+    userDismissedTabletSelectionRef.current = false;
+  }, [effectiveFilter, feedId, folderId]);
+
+  useEffect(() => {
+    if (
+      !isTabletViewport ||
+      itemId ||
+      inboxQuery.isPending ||
+      inboxItems.length === 0 ||
+      userDismissedTabletSelectionRef.current
+    ) {
+      return;
+    }
+
+    void navigate({
+      search: (prev) => ({
+        ...prev,
+        itemId: inboxItems[0]?.id,
+      }),
+      replace: true,
+    });
+  }, [
+    effectiveFilter,
+    feedId,
+    folderId,
+    inboxItems,
+    inboxQuery.isPending,
+    isTabletViewport,
+    itemId,
+    navigate,
+  ]);
 
   const listProps = useMemo(
     () => ({
@@ -283,19 +323,11 @@ function InboxPageContent({
   );
 
   return (
-    <AppShell readerFocusList={isReaderFocusMode}>
-      {isReaderFocus ? (
+    <AppShell readerFocusMode={isReaderFocusMode}>
+      {isReaderFocusMode ? (
         <InboxReaderFocusDetailLayout>
           <InboxDetailView {...detailProps} showBackToList onBackToList={clearSelectedItem} />
         </InboxReaderFocusDetailLayout>
-      ) : isReaderFocusList ? (
-        <InboxReaderFocusListLayout>
-          {showReaderFocusEmptyState ? (
-            <InboxDetailView {...detailProps} />
-          ) : (
-            <InboxList {...listProps} readerFocusMode />
-          )}
-        </InboxReaderFocusListLayout>
       ) : (
         <InboxSplitLayout
           splitContainerRef={splitContainerRef}

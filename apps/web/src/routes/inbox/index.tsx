@@ -20,6 +20,7 @@ const inboxSearchSchema = z.object({
 });
 
 export const Route = createFileRoute("/inbox/")({
+  validateSearch: (search) => inboxSearchSchema.parse(search),
   loader: async () => {
     await requireAuth();
     const headers = getRequestHeaders();
@@ -37,7 +38,6 @@ export const Route = createFileRoute("/inbox/")({
       initialSplitPanePercent,
     };
   },
-  validateSearch: (search) => inboxSearchSchema.parse(search),
   component: InboxRouteComponent,
 });
 

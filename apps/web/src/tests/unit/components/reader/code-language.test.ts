@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { detectCodeLanguage } from "@cronos/reader/core";
+import { detectCodeLanguage } from "@vols.rss/reader/core";
 
 describe("detectCodeLanguage", () => {
   test("uses explicit language when present", () => {
@@ -20,7 +20,7 @@ describe("detectCodeLanguage", () => {
   });
 
   test("detects valid JSON deterministically", () => {
-    const result = detectCodeLanguage('{"name":"cronos","enabled":true}');
+    const result = detectCodeLanguage('{"name":"vols.rss","enabled":true}');
     expect(result.language).toBe("json");
     expect(result.confidence).toBe("deterministic");
   });

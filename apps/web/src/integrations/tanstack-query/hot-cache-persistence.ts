@@ -1,7 +1,7 @@
 import type { QueryClient, QueryKey } from "@tanstack/react-query";
 import { dehydrate, hydrate } from "@tanstack/react-query";
 
-const HOT_CACHE_KEY = "cronos:hot-query-cache:v1";
+const HOT_CACHE_KEY = "vols.rss:hot-query-cache:v1";
 const HOT_CACHE_MAX_AGE_MS = 10 * 60_000;
 const PERSIST_THROTTLE_MS = 1_000;
 

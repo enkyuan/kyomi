@@ -17,7 +17,7 @@ import { writeInboxArticleOpenBehaviorCookie } from "@modules/inbox/lib/layout-p
 
 export type InboxPreferences = InboxPreferencesDto;
 
-const INBOX_PREFERENCES_STORAGE_KEY = "cronos:inbox-preferences:v2";
+const INBOX_PREFERENCES_STORAGE_KEY = "vols.rss:inbox-preferences:v2";
 const MIN_INBOX_FONT_SIZE_PX = 14;
 const MAX_INBOX_FONT_SIZE_PX = 20;
 

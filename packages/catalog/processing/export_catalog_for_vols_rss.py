@@ -88,7 +88,7 @@ def export_catalog(project_root: Path, output_path: Path, limit: int | None) -> 
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Export RSS catalog feeds for Cronos import")
+    parser = argparse.ArgumentParser(description="Export RSS catalog feeds for vols.rss import")
     parser.add_argument(
         "--output",
         required=True,

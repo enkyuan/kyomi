@@ -55,7 +55,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "cronos:inbox-preferences:v2:user_1",
+      "vols.rss:inbox-preferences:v2:user_1",
       JSON.stringify(SPLIT_PREFERENCES),
     );
 
@@ -75,7 +75,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "cronos:inbox-preferences:v2:user_1",
+      "vols.rss:inbox-preferences:v2:user_1",
       JSON.stringify(READER_PREFERENCES),
     );
 
@@ -95,7 +95,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "cronos:inbox-preferences:v2:user_1",
+      "vols.rss:inbox-preferences:v2:user_1",
       JSON.stringify(READER_PREFERENCES),
     );
 

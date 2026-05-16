@@ -1,5 +1,5 @@
 import { and, eq, ne } from "drizzle-orm";
-import { userPreferences, users } from "@cronos/db";
+import { userPreferences, users } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app-error";
 import type {

@@ -32,7 +32,7 @@ function applyDomainRoutes(app: Elysia): Elysia {
  * Route order matches stable URL semantics (discovery → identity → content → feeds → imports).
  */
 export const apiV1Router = new Elysia({
-  name: "cronos.api.v1",
+  name: "vols.rss.api.v1",
 })
   .use(apiV1AdapterPlugin)
   .group("/api/v1", (group) => {

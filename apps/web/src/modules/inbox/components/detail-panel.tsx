@@ -3,8 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { InboxSourceRow } from "@modules/inbox/components/source-row";
 import { ReaderToolbar } from "@modules/inbox/components/reader-toolbar";
-import { useReaderToolbarModel } from "@modules/inbox/components/reader-toolbar-model";
-import { ReaderContent } from "@cronos/reader/web";
+import { ReaderContent } from "@vols.rss/reader/web";
 import { Button } from "@components/ui/button";
 import { Spinner } from "@components/ui/spinner";
 import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
@@ -45,9 +44,188 @@ export function ItemDetail({
     "";
   const readTime = displayContent ? estimateReadingTime(displayContent) : null;
 
+  const canRequestExtraction = item.link.startsWith("http");
+  const shouldAutoExtract =
+    canRequestExtraction &&
+    item.reader.extracted.status === "pending" &&
+    item.reader.extracted.content === null;
+  const showFailedBanner =
+    isViewingExtracted &&
+    item.reader.extracted.status === "failed" &&
+    item.reader.extracted.content === null &&
+    Boolean(item.reader.extracted.error);
+  const effectiveContentWidth = preferences.contentWidth === "narrow" ? "narrow" : "wide";
+  const maxWidthClassName =
+    effectiveContentWidth === "narrow" ? "max-w-2xl" : readerFocusMode ? "max-w-none" : "max-w-5xl";
+
+  const runExtract = useCallback(
+    (reason: "auto" | "manual") => {
+      if (extractMutation.isPending) {
+        return;
+      }
+
+      const extractionPromise = extractMutation
+        .mutateAsync()
+        .then((result: ExtractFullTextResponseDto) => {
+          if (!result.ok) {
+            const detail = [result.errorMessage, result.errorCode].filter(Boolean).join(" ");
+            throw new Error(detail || "Extraction failed");
+          }
+          return result;
+        });
+
+      if (reason === "auto") {
+        void extractionPromise.catch(() => {
+          requestedExtractionForItemRef.current = null;
+        });
+        return;
+      }
+
+      void toastManager.promise(extractionPromise, {
+        loading: {
+          title: "Extracting full text...",
+          description: "Fetching full article text.",
+          type: "loading",
+          timeout: 0,
+        },
+        success: {
+          title: "Full text ready",
+          description: "Article content has been refreshed.",
+          type: "success",
+        },
+        error: (error) => ({
+          title: "Extraction failed",
+          description:
+            error instanceof Error ? error.message : "Could not fetch extracted article content.",
+          type: "error",
+        }),
+      });
+    },
+    [extractMutation],
+  );
+
+  const updateItem = (patch: InboxItemPatch) => {
+    updateItemMutation.mutate(patch);
+  };
+
+  const cycleContentWidth = () => {
+    const nextWidth = effectiveContentWidth === "narrow" ? "wide" : "narrow";
+    setPreferences({ contentWidth: nextWidth });
+  };
+
+  const adjustFontSize = (delta: number) => {
+    const nextFontSize = Math.max(
+      limits.minFontSizePx,
+      Math.min(limits.maxFontSizePx, preferences.fontSizePx + delta),
+    );
+    setPreferences({ fontSizePx: nextFontSize });
+  };
+
+  const handleModeChange = (mode: "original" | "extracted") => {
+    if (mode === "extracted" && !item.reader.extracted.available) {
+      return;
+    }
+    setPreferences({ defaultMode: mode });
+  };
+
+  const handleOpenOriginal = () => {
+    window.open(
+      item.link,
+      preferences.openLinksInNewTab ? "_blank" : "_self",
+      preferences.openLinksInNewTab ? "noopener,noreferrer" : undefined,
+    );
+  };
+
+  const handleOpenAi = () => {
+    toastManager.add({
+      title: "AI tools coming next",
+      description: "This button is reserved for article-side LLM actions.",
+      type: "info",
+    });
+  };
+
+  useEffect(() => {
+    if (!shouldAutoExtract || extractMutation.isPending) {
+      return;
+    }
+    if (requestedExtractionForItemRef.current === item.id) {
+      return;
+    }
+
+    requestedExtractionForItemRef.current = item.id;
+    runExtract("auto");
+  }, [extractMutation.isPending, item.id, runExtract, shouldAutoExtract]);
+
+  useEffect(() => {
+    const inlineToolbarNode = inlineToolbarRef.current;
+    if (!inlineToolbarNode || typeof window === "undefined") {
+      return;
+    }
+
+    const viewport = inlineToolbarNode.closest<HTMLElement>("[data-reader-detail-viewport]");
+    if (!viewport || typeof IntersectionObserver === "undefined") {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowFloatingToolbar(false);
+          return;
+        }
+
+        const rootTop = entry.rootBounds?.top ?? 0;
+        const isRendered = entry.boundingClientRect.height > 0;
+        const isScrolledPast = entry.boundingClientRect.bottom <= rootTop;
+
+        setShowFloatingToolbar(isRendered && isScrolledPast);
+      },
+      {
+        root: viewport,
+        rootMargin: "0px",
+        threshold: 0,
+      },
+    );
+
+    observer.observe(inlineToolbarNode);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [readerFocusMode]);
+
+  const toolbarProps = {
+    activeMode: effectiveReaderMode,
+    extractedAvailable: item.reader.extracted.available,
+    isSaved: item.isSaved,
+    limits,
+    preferences,
+    readerFocusMode,
+    onAdjustFontSize: adjustFontSize,
+    onCycleContentWidth: cycleContentWidth,
+    onModeChange: handleModeChange,
+    onOpenAi: handleOpenAi,
+    onOpenOriginal: handleOpenOriginal,
+    onToggleSaved: () => updateItem({ isSaved: !item.isSaved }),
+  } as const;
+
   return (
-    <article className={toolbar.articleClassName} style={toolbar.articleStyle}>
-      <div className="pointer-events-none sticky top-2 z-30 flex h-0 justify-center overflow-visible">
+    <article
+      className={cn(
+        "reader-content prose prose-neutral dark:prose-invert relative px-2 pb-10",
+        readerFocusMode ? "w-full" : "mx-auto",
+        readerFocusMode ? "pt-5" : "pt-10",
+        maxWidthClassName,
+        !preferences.showImages && "reader-hide-images",
+      )}
+      style={{ "--reader-font-size": `${preferences.fontSizePx}px` } as Record<string, string>}
+    >
+      <div
+        className={cn(
+          "pointer-events-none sticky z-30 flex h-0 justify-center overflow-visible",
+          readerFocusMode ? "top-[-0.5rem] md:top-[-1.25rem]" : "top-0",
+        )}
+      >
         <AnimatePresence initial={false}>
           {toolbar.showFloatingToolbar ? (
             <motion.div

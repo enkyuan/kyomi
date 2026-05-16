@@ -1,4 +1,4 @@
-import { feeds } from "@cronos/db";
+import { feeds } from "@vols.rss/db";
 import { eq, inArray } from "drizzle-orm";
 import { publishJob } from "@adapters/queue/publish-job";
 import { getRedis } from "@adapters/redis";

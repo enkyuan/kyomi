@@ -1,9 +1,9 @@
-name: cronos
+name: vols.rss
 
 services:
   postgres:
     image: postgres:18-alpine
-    container_name: cronos-postgres
+    container_name: vols.rss-postgres
     restart: unless-stopped
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
@@ -12,7 +12,8 @@ services:
     ports:
       - "${POSTGRES_PORT}:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      # PG 18+ stores data under /var/lib/postgresql/<major>/ (not .../data).
+      - postgres_data:/var/lib/postgresql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
       interval: 10s
@@ -20,11 +21,11 @@ services:
       retries: 5
       start_period: 10s
     networks:
-      - cronos-network
+      - vols.rss-network
 
   redis:
     image: redis:8-alpine
-    container_name: cronos-redis
+    container_name: vols.rss-redis
     restart: unless-stopped
     command: redis-server --appendonly yes
     ports:
@@ -38,11 +39,11 @@ services:
       retries: 5
       start_period: 5s
     networks:
-      - cronos-network
+      - vols.rss-network
 
   garage:
     image: dxflrs/garage:v2.2.0
-    container_name: cronos-garage
+    container_name: vols.rss-garage
     restart: unless-stopped
     volumes:
       - ./garage.toml:/etc/garage.toml
@@ -53,11 +54,11 @@ services:
       - "${GARAGE_RPC_PORT}:3901"
       - "${GARAGE_WEB_PORT}:3902"
     networks:
-      - cronos-network
+      - vols.rss-network
 
   meilisearch:
     image: getmeili/meilisearch:v1.15
-    container_name: cronos-meilisearch
+    container_name: vols.rss-meilisearch
     restart: unless-stopped
     environment:
       MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
@@ -73,11 +74,11 @@ services:
       retries: 5
       start_period: 10s
     networks:
-      - cronos-network
+      - vols.rss-network
 
   api:
     image: oven/bun:1.3
-    container_name: cronos-api
+    container_name: vols.rss-api
     restart: unless-stopped
     working_dir: /app/apps/api
     command:
@@ -110,11 +111,11 @@ services:
       meilisearch:
         condition: service_healthy
     networks:
-      - cronos-network
+      - vols.rss-network
 
   worker:
     image: oven/bun:1.3
-    container_name: cronos-worker
+    container_name: vols.rss-worker
     restart: unless-stopped
     working_dir: /app/apps/api
     command:
@@ -145,16 +146,21 @@ services:
       meilisearch:
         condition: service_healthy
     networks:
-      - cronos-network
+      - vols.rss-network
 
 volumes:
   postgres_data:
+    name: vols_rss_postgres_data
   redis_data:
+    name: vols_rss_redis_data
   garage_data:
+    name: vols_rss_garage_data
   garage_meta:
+    name: vols_rss_garage_meta
   meili_data:
+    name: vols_rss_meili_data
 
 networks:
-  cronos-network:
-    name: cronos-network
+  vols.rss-network:
+    name: vols.rss-network
     driver: bridge

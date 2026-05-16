@@ -1,5 +1,5 @@
 {
-  "name": "cronos",
+  "name": "vols.rss",
   "private": true,
   "packageManager": "bun@1.1.0",
   "workspaces": [
@@ -11,7 +11,7 @@
     "bootstrap": "bun run setup:app",
     "bootstrap:full": "bun run setup:app && bun run setup:catalog",
     "dev": "turbo run dev",
-    "dev:app": "turbo run dev --filter=@cronos/api --filter=@cronos/web",
+    "dev:app": "turbo run dev --filter=@vols.rss/api --filter=@vols.rss/web",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "fmt": "turbo run fmt",

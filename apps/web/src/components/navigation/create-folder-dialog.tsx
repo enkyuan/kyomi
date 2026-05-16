@@ -123,7 +123,6 @@ export function CreateFolderDialog({
           <DialogPanel className="grid gap-4">
             <Field>
               <Input
-                autoFocus
                 aria-label="Folder name"
                 className="min-w-0"
                 placeholder="Folder name"

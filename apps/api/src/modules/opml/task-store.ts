@@ -2,7 +2,7 @@ import { getRedis } from "@adapters/redis";
 import { OPML_TASK_TTL_SEC } from "./constants";
 import type { OpmlTaskPayload } from "./types";
 
-const PREFIX = "cronos:opml:";
+const PREFIX = "vols.rss:opml:";
 
 export function opmlTaskKey(taskId: string): string {
   return `${PREFIX}task:${taskId}`;
@@ -44,9 +44,10 @@ export type OpmlTaskListItem = {
   status: OpmlTaskPayload["status"];
   createdAt: string;
   completedAt: string | null;
-  summary:
-    | Pick<NonNullable<OpmlTaskPayload["summary"]>, "subscribed" | "alreadySubscribed" | "failed" | "totalUrls">
-    | null;
+  summary: Pick<
+    NonNullable<OpmlTaskPayload["summary"]>,
+    "subscribed" | "alreadySubscribed" | "failed" | "totalUrls"
+  > | null;
 };
 
 export async function listOpmlTasksForUser(userId: string): Promise<OpmlTaskListItem[]> {

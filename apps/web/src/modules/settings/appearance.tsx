@@ -12,7 +12,7 @@ import { useReaderPreferences } from "@lib/reader-preferences";
 import { ThemeSwitcher } from "./theme-switcher";
 
 export const appearanceSection = {
-  description: "Adjust theme, inbox presentation, and reader display behavior.",
+  description: "Adjust theme, inbox presentation, and reader display.",
   icon: BrushFill,
   name: "Appearance",
 } as const;
@@ -83,8 +83,7 @@ export function AppearancePagePanel() {
         <div className="space-y-1">
           <h3 className="text-sm font-semibold">Inbox</h3>
           <p className="text-xs text-muted-foreground">
-            Adjust how the inbox opens, how dense it feels, and what metadata stays visible while
-            scanning.
+            Adjust inbox density and what metadata stays visible while scanning.
           </p>
         </div>
         <div className="space-y-3 py-1">
@@ -160,33 +159,6 @@ export function AppearancePagePanel() {
               setInboxPreferences({ inboxFontSizePx: value });
             }}
           />
-        </div>
-
-        <div className="space-y-3 py-1">
-          <SettingHeading
-            description="Split keeps the current list and detail layout. Reader opens a dedicated reading view."
-            title="Article view"
-          />
-          <Select
-            items={[
-              { label: "Split view", value: "split" },
-              { label: "Reader focus", value: "reader" },
-            ]}
-            value={inboxPreferences.articleOpenBehavior}
-            onValueChange={(value) => {
-              if (value === "split" || value === "reader") {
-                setInboxPreferences({ articleOpenBehavior: value });
-              }
-            }}
-          >
-            <SelectTrigger className="w-fit min-w-52" size="sm">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectPopup>
-              <SelectItem value="split">Split view</SelectItem>
-              <SelectItem value="reader">Reader focus</SelectItem>
-            </SelectPopup>
-          </Select>
         </div>
 
         <div className="space-y-3 py-1">

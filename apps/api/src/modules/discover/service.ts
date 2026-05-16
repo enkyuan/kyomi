@@ -1,5 +1,5 @@
 import { and, asc, eq, ilike, inArray, or, sql } from "drizzle-orm";
-import { feedSubscriptions, feeds } from "@cronos/db";
+import { feedSubscriptions, feeds } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
 import { isMeiliConfigured, searchFeedSearchDocuments } from "@adapters/search/meili";
 import type { AppLogger } from "@adapters/logger";

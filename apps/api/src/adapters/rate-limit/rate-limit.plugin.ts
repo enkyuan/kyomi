@@ -14,7 +14,7 @@ type RateLimitState = {
   ttlMs: number;
 };
 
-const RATE_LIMIT_KEY_PREFIX = "cronos:rate-limit";
+const RATE_LIMIT_KEY_PREFIX = "vols.rss:rate-limit";
 const rateLimitEvalScript = `
 local current = redis.call("INCR", KEYS[1])
 if current == 1 then

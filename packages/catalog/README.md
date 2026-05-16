@@ -2,12 +2,12 @@
 
 This directory is the absorbed Python pipeline from the former `rss-r-us` repository.
 
-This package is intentionally optional/offline for Cronos app runtime: normal app setup/dev does not require Poetry or catalog sync.
+This package is intentionally optional/offline for vols.rss app runtime: normal app setup/dev does not require Poetry or catalog sync.
 
 ## Purpose
 
 - Build a broad RSS feed catalog from multiple datasets.
-- Export a canonical feed list for Cronos API import.
+- Export a canonical feed list for vols.rss API import.
 - Feed discovery search with pre-seeded feeds (for example, "Hacker News").
 
 ## Commands (from monorepo root)

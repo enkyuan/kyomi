@@ -3,8 +3,8 @@ import { detectCodeLanguage } from "../../core";
 
 const WRAPPER = "data-reader-code-block";
 const COPY_MOUNTED = "data-reader-copy-mounted";
-const BUTTON_ICON_SIZE = 16;
-const BUTTON_ICON_PADDING = 14;
+const BUTTON_ICON_SIZE = 12;
+const BUTTON_ICON_PADDING = 16;
 
 // SVG paths (Mingcute-style), viewBox 0 0 24 24.
 const COPY_ICON_PATH =

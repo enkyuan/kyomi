@@ -1,4 +1,4 @@
-# @cronos/worker
+# @vols.rss/worker
 
 Owns queue contracts and Redis stream consumption.
 
@@ -13,6 +13,6 @@ Not responsibilities:
 - HTTP routes or API service modules.
 - Database-backed ingestion decisions.
 
-Business execution belongs in packages like `@cronos/ingestion`; API adapters
+Business execution belongs in packages like `@vols.rss/ingestion`; API adapters
 publish typed jobs without knowing how workers execute them.
 
