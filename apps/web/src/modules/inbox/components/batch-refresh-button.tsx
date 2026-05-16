@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { listFeedRefreshStatuses, refreshBatchFeeds } from "@modules/feeds/api";
 import {
@@ -17,7 +17,7 @@ import { Button } from "@components/ui/button";
 
 export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
   const queryClient = useQueryClient();
-  const [isWatching, setIsWatching] = useState(false);
+  const isWatchingRef = useRef(false);
   const pollStartRef = useRef<number | null>(null);
   const wasRefreshingRef = useRef(false);
 
@@ -28,8 +28,10 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
   const refreshStatusQuery = useQuery({
     queryKey: feedRefreshStatusQueryKey(folderId),
     queryFn: () => listFeedRefreshStatuses({ data: { folderId } }),
-    enabled: isWatching,
     refetchInterval: (query) => {
+      if (!isWatchingRef.current) {
+        return false;
+      }
       const items = query.state?.data ?? [];
       const active = hasActiveRefreshStatus(items);
       if (active) {
@@ -59,13 +61,14 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
       if (result.count > 0) {
         pollStartRef.current = Date.now();
         wasRefreshingRef.current = false;
-        setIsWatching(true);
+        isWatchingRef.current = true;
+        void refreshStatusQuery.refetch();
       }
     },
   });
 
   useEffect(() => {
-    if (!isWatching) {
+    if (!isWatchingRef.current) {
       pollStartRef.current = null;
       wasRefreshingRef.current = false;
       return;
@@ -82,15 +85,15 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
 
     if (wasRefreshingRef.current) {
       invalidateRefreshQueries();
-      setIsWatching(false);
+      isWatchingRef.current = false;
       return;
     }
 
     const startedAt = pollStartRef.current;
     if (startedAt && Date.now() - startedAt >= BATCH_REFRESH_GRACE_MS) {
-      setIsWatching(false);
+      isWatchingRef.current = false;
     }
-  }, [hasActiveRefresh, invalidateRefreshQueries, isWatching]);
+  }, [hasActiveRefresh, invalidateRefreshQueries]);
 
   const batchTitle =
     mutation.isError && mutation.error instanceof Error

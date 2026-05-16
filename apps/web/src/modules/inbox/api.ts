@@ -215,8 +215,8 @@ export const getInboxItems = createServerFn({ method: "GET" })
     return {
       items,
       total: items.length,
-      nextCursor: response.next_cursor,
-      hasMore: response.has_more,
+      nextCursor: response.next_cursor ?? null,
+      hasMore: response.has_more ?? false,
     };
   });
 

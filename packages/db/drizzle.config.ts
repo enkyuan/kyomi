@@ -13,12 +13,12 @@ config({
   ],
 });
 
-function resolveDatabaseUrl(): string {
+function readExplicitDatabaseUrl(): string | undefined {
   const explicit = process.env.DATABASE_URL?.trim();
-  if (explicit) {
-    return explicit;
-  }
+  return explicit || undefined;
+}
 
+function readPostgresEnv(): { user: string; password: string; database: string } {
   const user = process.env.POSTGRES_USER?.trim();
   const password = process.env.POSTGRES_PASSWORD;
   const database = process.env.POSTGRES_DB?.trim();
@@ -27,13 +27,27 @@ function resolveDatabaseUrl(): string {
       "Missing DATABASE_URL for Drizzle config. Set DATABASE_URL or POSTGRES_USER, POSTGRES_PASSWORD, and POSTGRES_DB in docker/.env (or apps/api/.env).",
     );
   }
+  return { user, password, database };
+}
 
+function buildPostgresDatabaseUrl(credentials: {
+  user: string;
+  password: string;
+  database: string;
+}): string {
   const port = process.env.POSTGRES_PORT?.trim() || "5432";
   const host = process.env.POSTGRES_HOST?.trim() || "localhost";
-  const encodedUser = encodeURIComponent(user);
-  const encodedPassword = encodeURIComponent(password);
+  const encodedUser = encodeURIComponent(credentials.user);
+  const encodedPassword = encodeURIComponent(credentials.password);
+  return `postgresql://${encodedUser}:${encodedPassword}@${host}:${port}/${credentials.database}`;
+}
 
-  return `postgresql://${encodedUser}:${encodedPassword}@${host}:${port}/${database}`;
+function resolveDatabaseUrl(): string {
+  const explicit = readExplicitDatabaseUrl();
+  if (explicit) {
+    return explicit;
+  }
+  return buildPostgresDatabaseUrl(readPostgresEnv());
 }
 
 const databaseUrl = resolveDatabaseUrl();

@@ -28,6 +28,9 @@ export function dedupePagedInboxItemsById(
   if (!pages) return [];
   const unique = new Map<string, Awaited<ReturnType<typeof getInboxItems>>["items"][number]>();
   for (const page of pages) {
+    if (!page?.items) {
+      continue;
+    }
     for (const item of page.items) {
       if (!unique.has(item.id)) {
         unique.set(item.id, item);

@@ -12,6 +12,8 @@ const FEED_CONTENT_TYPE_SCORES = new Map<string, number>([
   ["text/xml", 5],
 ]);
 
+const ALTERNATE_REL = "alternate";
+
 function normalizeType(value: string | null): string {
   if (!value) {
     return "";
@@ -41,6 +43,53 @@ function resolveCandidateHref(href: string | null, baseUrl: string): string | nu
   }
 }
 
+function extractLinkAttribute(tag: string, name: string): string | null {
+  const match = tag.match(new RegExp(`\\b${name}\\s*=\\s*(?:"([^"]+)"|'([^']+)'|([^\\s>]+))`, "i"));
+  if (!match) {
+    return null;
+  }
+  return match[1] || match[2] || match[3] || null;
+}
+
+function parseFeedLinkCandidate(tag: string, baseUrl: string): FeedLinkCandidate | null {
+  const rel = extractLinkAttribute(tag, "rel");
+  const type = extractLinkAttribute(tag, "type");
+  const rawHref = extractLinkAttribute(tag, "href");
+
+  const relTokens = normalizeRel(rel);
+  if (!relTokens.includes(ALTERNATE_REL)) {
+    return null;
+  }
+
+  const normalizedType = normalizeType(type);
+  const score = FEED_CONTENT_TYPE_SCORES.get(normalizedType);
+  if (score === undefined) {
+    return null;
+  }
+
+  const href = resolveCandidateHref(rawHref, baseUrl);
+  if (!href) {
+    return null;
+  }
+
+  return { href, score };
+}
+
+function collectFeedLinkCandidates(headHtml: string, baseUrl: string): FeedLinkCandidate[] {
+  const linkRegex = /<link[^>]*>/gi;
+  const candidates: FeedLinkCandidate[] = [];
+  let match: RegExpExecArray | null;
+
+  while ((match = linkRegex.exec(headHtml)) !== null) {
+    const candidate = parseFeedLinkCandidate(match[0], baseUrl);
+    if (candidate) {
+      candidates.push(candidate);
+    }
+  }
+
+  return candidates;
+}
+
 /**
  * Extract a feed URL from HTML autodiscovery tags such as:
  * `<link rel="alternate" type="application/rss+xml" href="/feed.xml">`.
@@ -50,41 +99,7 @@ function resolveCandidateHref(href: string | null, baseUrl: string): string | nu
 export function discoverFeedUrlFromHtml(body: string, baseUrl: string): string | null {
   const headMatch = body.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
   const headHtml = headMatch ? headMatch[1] : body.slice(0, 32768);
-
-  const linkRegex = /<link[^>]*>/gi;
-  const candidates: FeedLinkCandidate[] = [];
-  let match;
-
-  while ((match = linkRegex.exec(headHtml)) !== null) {
-    const tag = match[0];
-
-    // Extract attributes using simple regex
-    const relMatch = tag.match(/\brel\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
-    const typeMatch = tag.match(/\btype\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
-    const hrefMatch = tag.match(/\bhref\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
-
-    const rel = relMatch ? relMatch[1] || relMatch[2] || relMatch[3] : null;
-    const type = typeMatch ? typeMatch[1] || typeMatch[2] || typeMatch[3] : null;
-    const rawHref = hrefMatch ? hrefMatch[1] || hrefMatch[2] || hrefMatch[3] : null;
-
-    const relTokens = normalizeRel(rel);
-    if (!relTokens.includes("alternate")) {
-      continue;
-    }
-
-    const normalizedType = normalizeType(type);
-    const score = FEED_CONTENT_TYPE_SCORES.get(normalizedType);
-    if (score === undefined) {
-      continue;
-    }
-
-    const href = resolveCandidateHref(rawHref, baseUrl);
-    if (!href) {
-      continue;
-    }
-
-    candidates.push({ href, score });
-  }
+  const candidates = collectFeedLinkCandidates(headHtml, baseUrl);
 
   if (candidates.length === 0) {
     return null;

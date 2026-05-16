@@ -15,12 +15,12 @@ function parseCookieHeader(cookieHeader?: string | null) {
     if (!trimmed) {
       continue;
     }
-    const separatorIndex = trimmed.indexOf("=");
-    if (separatorIndex <= 0) {
+    const segments = trimmed.split("=", 2);
+    if (segments.length < 2) {
       continue;
     }
-    const key = trimmed.slice(0, separatorIndex).trim();
-    const value = trimmed.slice(separatorIndex + 1).trim();
+    const key = segments[0]?.trim();
+    const value = segments[1]?.trim();
     if (!key) {
       continue;
     }

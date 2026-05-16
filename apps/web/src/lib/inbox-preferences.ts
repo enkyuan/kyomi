@@ -3,7 +3,7 @@
 import {
   createContext,
   createElement,
-  useContext,
+  use,
   useEffect,
   useMemo,
   useRef,
@@ -145,7 +145,7 @@ export function resolveInitialInboxPreferences(
 export function useInboxPreferences(initialPreferences?: InboxPreferences) {
   const { user } = useAuth();
   const queryClient = useQueryClient();
-  const bootstrapPreferences = useContext(InboxPreferencesBootstrapContext);
+  const bootstrapPreferences = use(InboxPreferencesBootstrapContext);
   const queryKey = inboxPreferencesQueryKey(user?.id);
   const latestRequestIdRef = useRef(0);
   const mutationDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);

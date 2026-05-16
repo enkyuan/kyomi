@@ -1,5 +1,6 @@
-import type { QueryClient, QueryKey } from "@tanstack/react-query";
+import type { InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
 import { dehydrate, hydrate } from "@tanstack/react-query";
+import type { InboxListPage } from "@modules/inbox/lib/query-options";
 
 const HOT_CACHE_KEY = "vols.rss:hot-query-cache:v1";
 const HOT_CACHE_MAX_AGE_MS = 10 * 60_000;
@@ -18,6 +19,26 @@ function isHotQueryKey(queryKey: QueryKey) {
   return (
     (family === "inbox" && scope === "items") || (family === "sidebar" && scope === "inbox-summary")
   );
+}
+
+function isValidInboxListPage(page: unknown): page is InboxListPage {
+  if (!page || typeof page !== "object") {
+    return false;
+  }
+  const candidate = page as Partial<InboxListPage>;
+  return Array.isArray(candidate.items);
+}
+
+function dropCorruptInboxItemQueries(queryClient: QueryClient) {
+  for (const query of queryClient.getQueryCache().findAll({ queryKey: ["inbox", "items"] })) {
+    const data = query.state.data as InfiniteData<InboxListPage> | undefined;
+    if (!data?.pages?.length) {
+      continue;
+    }
+    if (data.pages.some((page) => !isValidInboxListPage(page))) {
+      queryClient.removeQueries({ queryKey: query.queryKey, exact: true });
+    }
+  }
 }
 
 export function hydrateHotQueryCache(queryClient: QueryClient) {
@@ -40,6 +61,7 @@ export function hydrateHotQueryCache(queryClient: QueryClient) {
       }
 
       hydrate(queryClient, parsed.state);
+      dropCorruptInboxItemQueries(queryClient);
     } catch {
       window.localStorage.removeItem(HOT_CACHE_KEY);
     }
