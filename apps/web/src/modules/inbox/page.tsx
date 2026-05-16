@@ -25,7 +25,7 @@ import { useInboxRouteState } from "@modules/inbox/use-route-state";
 import { useMarkReadBehavior } from "@modules/inbox/use-mark-read-behavior";
 import { useMediaQuery } from "@hooks/use-media-query";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import type { InboxPreferences } from "@lib/inbox-preferences";
 
 type InboxLayoutMode = "split" | "reader-detail";

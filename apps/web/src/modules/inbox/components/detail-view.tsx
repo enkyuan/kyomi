@@ -8,6 +8,7 @@ import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/api-schema
 import { Button } from "@components/ui/button";
 import { LeftFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
+import type { CSSProperties } from "react";
 
 const EMPTY_STATE_BODY_COPY =
   "Stories from your feeds appear here so you can preview them before opening the original source.";
@@ -74,6 +75,8 @@ export function InboxDetailView({
   showBackToList = false,
   onBackToList,
 }: InboxDetailViewProps) {
+  const blurTopOffset = showBackToList ? DETAIL_BACK_BUTTON_BLUR_OFFSET : 0;
+
   return (
     <section className="flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground md:min-h-0">
       <ScrollAreaPrimitive.Root className="relative min-h-0 flex-1 overflow-hidden">

@@ -94,6 +94,9 @@ export function InboxSplitLayout({
     ? { duration: 0 }
     : { type: "spring" as const, duration: 0.34, bounce: 0 };
 
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => setIsMounted(true), []);
+
   const panelTransition = isResizing ? { duration: 0 } : transition;
 
   return (

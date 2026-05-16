@@ -93,7 +93,7 @@ export function useReaderToolbarModel({
   const canDecreaseFont = preferences.fontSizePx > limits.minFontSizePx;
   const canIncreaseFont = preferences.fontSizePx < limits.maxFontSizePx;
   const maxWidthClassName =
-    contentWidth === "narrow" ? "max-w-2xl" : readerFocusMode ? "max-w-6xl" : "max-w-5xl";
+    contentWidth === "narrow" ? "max-w-2xl" : readerFocusMode ? "max-w-none" : "max-w-5xl";
 
   const canRequestExtraction = item.link.startsWith("http");
   const shouldAutoExtract =
