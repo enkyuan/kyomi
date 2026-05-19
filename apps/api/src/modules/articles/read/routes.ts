@@ -83,17 +83,22 @@ export function registerArticleReadRoutes(app: Elysia) {
             feedId: typeof query.feed_id === "string" ? query.feed_id : undefined,
             folderId: typeof query.folder_id === "string" ? query.folder_id : undefined,
           };
-          const base = await getArticleCountsForUser(db, userId, scope);
           const publishedAfter = parseOptionalIsoDate(query.published_after);
           const publishedBefore = parseOptionalIsoDate(query.published_before);
-          if (publishedAfter && publishedBefore) {
-            const today = await countFeedArticlesPublishedInRange(
-              db,
-              userId,
-              publishedAfter,
-              publishedBefore,
-              scope,
-            );
+          const wantsTodayRange = Boolean(publishedAfter && publishedBefore);
+          const [base, today] = await Promise.all([
+            getArticleCountsForUser(db, userId, scope),
+            wantsTodayRange
+              ? countFeedArticlesPublishedInRange(
+                  db,
+                  userId,
+                  publishedAfter!,
+                  publishedBefore!,
+                  scope,
+                )
+              : Promise.resolve<number | null>(null),
+          ]);
+          if (today !== null) {
             return { ...base, today };
           }
           return base;

@@ -2,16 +2,12 @@
 
 import type { InfiniteData, QueryClient } from "@tanstack/react-query";
 import type { ArticleDetailDto } from "@lib/api-schemas";
-import type { InboxItem } from "@modules/inbox/api";
+import type { InboxItem } from "../services/api";
+import type { InboxListPage } from "./query-options";
 
 type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
 
-type InboxItemsInfiniteData = InfiniteData<{
-  items: InboxItem[];
-  total: number;
-  nextCursor: string | null;
-  hasMore: boolean;
-}>;
+type InboxItemsInfiniteData = InfiniteData<InboxListPage>;
 
 export function updateInboxItemCaches(
   queryClient: QueryClient,
@@ -26,16 +22,23 @@ export function updateInboxItemCaches(
 
     return {
       ...data,
-      pages: data.pages.map((page) => {
+      pages: data.pages.flatMap((page) => {
+        if (!page?.items) {
+          return [];
+        }
         const items = removeFromList
           ? page.items.filter((item) => item.id !== itemId)
           : page.items.map((item) => (item.id === itemId ? { ...item, ...patch } : item));
 
-        return {
-          ...page,
-          items,
-          total: items.length,
-        };
+        return [
+          {
+            ...page,
+            items,
+            total: items.length,
+            hasMore: Boolean(page.hasMore),
+            nextCursor: page.nextCursor ?? null,
+          },
+        ];
       }),
     };
   });

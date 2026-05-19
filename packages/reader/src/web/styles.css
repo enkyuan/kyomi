@@ -34,9 +34,12 @@
 }
 
 .reader-content .article-body [data-reader-code-block] {
+  --reader-code-outer-radius: 0.5rem;
+  --reader-code-chrome-pad-start: 0.4rem;
+  --reader-code-button-radius: max(0px, calc(var(--reader-code-outer-radius) - var(--reader-code-chrome-pad-start)));
   margin: 1rem 0;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: var(--reader-code-outer-radius);
   border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
   background: var(--card);
 }
@@ -46,7 +49,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  padding: 0.4rem 0.875rem 0.25rem;
+  padding: var(--reader-code-chrome-pad-start) 0.875rem 0.25rem;
   background: transparent;
 }
 
@@ -69,10 +72,26 @@
   width: var(--rcb-button-size, 30px);
   height: var(--rcb-button-size, 30px);
   border: none;
-  border-radius: calc(var(--radius) - 2px);
-  background: color-mix(in srgb, var(--background) 88%, transparent);
+  border-radius: var(--reader-code-button-radius);
+  background: transparent;
   color: var(--foreground);
   cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  transition: background-color 180ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button:hover {
+  background: color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--ring) 72%, transparent);
+  outline-offset: 2px;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button:active {
+  background: color-mix(in srgb, var(--accent) 80%, transparent);
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon {

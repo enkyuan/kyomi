@@ -4,6 +4,7 @@ import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
 import { LayoutLeftFill } from "@mingcute/react";
+import { use } from "react";
 import * as React from "react";
 import { useMediaQuery } from "@hooks/use-media-query";
 import { cn } from "@lib/utils";
@@ -17,6 +18,19 @@ import { Tooltip, TooltipPopup, TooltipTrigger } from "@components/ui/tooltip";
 
 const SIDEBAR_COOKIE_NAME: string = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE: number = 60 * 60 * 24 * 7;
+
+function readSidebarOpenCookie(): boolean | undefined {
+  if (typeof document === "undefined") {
+    return undefined;
+  }
+  const entry = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith(`${SIDEBAR_COOKIE_NAME}=`));
+  if (!entry) {
+    return undefined;
+  }
+  return entry.slice(`${SIDEBAR_COOKIE_NAME}=`.length) === "true";
+}
 const SIDEBAR_WIDTH: string = "16rem";
 const SIDEBAR_WIDTH_MOBILE: string = "18rem";
 const SIDEBAR_WIDTH_ICON: string = "3rem";
@@ -58,7 +72,7 @@ export const SidebarContext: React.Context<SidebarContextProps | null> =
   React.createContext<SidebarContextProps | null>(null);
 
 export function useSidebar(): SidebarContextProps {
-  const context = React.useContext(SidebarContext);
+  const context = use(SidebarContext);
   if (!context) {
     throw new Error("useSidebar must be used within a SidebarProvider.");
   }
@@ -82,9 +96,8 @@ export function SidebarProvider({
   const isMobile = useMediaQuery("max-md");
   const [openMobile, setOpenMobile] = React.useState(false);
 
-  // This is the internal state of the sidebar.
-  // We use openProp and setOpenProp for control from outside the component.
-  const [_open, _setOpen] = React.useState(defaultOpen);
+  // Uncontrolled open state: lazy-init from cookie, then defaultOpen (not `useState(defaultOpen)`).
+  const [_open, _setOpen] = React.useState(() => readSidebarOpenCookie() ?? defaultOpen);
   const open = openProp ?? _open;
   const setOpen = React.useCallback(
     (value: boolean | ((value: boolean) => boolean)) => {
@@ -228,7 +241,7 @@ export function Sidebar({
       {/* This is what handles the sidebar gap on desktop */}
       <div
         className={cn(
-          "relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear",
+          "relative w-(--sidebar-width) bg-transparent md:transition-none lg:transition-[width] lg:duration-200 lg:ease-linear",
           "group-data-[collapsible=offcanvas]:w-0",
           "group-data-[side=right]:rotate-180",
           variant === "floating" || variant === "inset"
@@ -239,7 +252,7 @@ export function Sidebar({
       />
       <div
         className={cn(
-          "absolute inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear md:flex",
+          "absolute inset-y-0 z-10 hidden h-svh w-(--sidebar-width) md:flex md:transition-none lg:transition-[left,right,width] lg:duration-200 lg:ease-linear",
           side === "left"
             ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
             : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
@@ -326,7 +339,7 @@ export function SidebarInset({
   return (
     <main
       className={cn(
-        "relative flex w-full flex-1 flex-col bg-background",
+        "relative flex w-full flex-1 flex-col bg-background transition-none",
         "md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ms-2 md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:ms-0 md:peer-data-[variant=inset]:rounded-2xl md:peer-data-[variant=inset]:supports-[-webkit-touch-callout:none]:rounded-[1.75rem] md:peer-data-[variant=inset]:shadow-sm/5",
         className,
       )}
@@ -668,9 +681,7 @@ export function SidebarMenuSkeleton({
   showIcon?: boolean;
 }): React.ReactElement {
   // Random width between 50 to 90%.
-  const width = React.useMemo(() => {
-    return `${Math.floor(Math.random() * 40) + 50}%`;
-  }, []);
+  const [width] = React.useState(() => `${Math.floor(Math.random() * 40) + 50}%`);
 
   return (
     <div

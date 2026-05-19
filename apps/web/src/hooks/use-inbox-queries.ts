@@ -1,11 +1,11 @@
 "use client";
 
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import { getInboxItems, type InboxFilter } from "@modules/inbox/api";
+import { getInboxItems, type InboxFilter } from "../modules/inbox/services/api";
 import {
   inboxDetailQueryOptions,
   inboxItemsInfiniteQueryOptions,
-} from "@modules/inbox/lib/query-options";
+} from "../modules/inbox/lib/query-options";
 
 type UseInboxQueriesInput = {
   filter: InboxFilter;
@@ -18,24 +18,27 @@ type UseInboxQueriesInput = {
 };
 
 /**
- * De-duplicates by id when flattening infinite-query pages (React Query can briefly overlap pages).
- * The API also collapses same-feed canonical URL duplicates server-side — this is only a client
+ * De-duplicates by id across infinite-query pages.
+ * The API also collapses same-feed canonical URL duplicates server-side - this is only a client
  * idempotency guard.
  */
 export function dedupePagedInboxItemsById(
-  items: Awaited<ReturnType<typeof getInboxItems>>["items"],
+  pages: Array<{ items: Awaited<ReturnType<typeof getInboxItems>>["items"] }> | undefined,
 ) {
-  const unique = new Map<string, (typeof items)[number]>();
-  for (const item of items) {
-    if (!unique.has(item.id)) {
-      unique.set(item.id, item);
+  if (!pages) return [];
+  const unique = new Map<string, Awaited<ReturnType<typeof getInboxItems>>["items"][number]>();
+  for (const page of pages) {
+    if (!page?.items) {
+      continue;
+    }
+    for (const item of page.items) {
+      if (!unique.has(item.id)) {
+        unique.set(item.id, item);
+      }
     }
   }
-  return [...unique.values()];
+  return Array.from(unique.values());
 }
-
-/** @deprecated Prefer `dedupePagedInboxItemsById` (same implementation). */
-export const dedupeInboxItems = dedupePagedInboxItemsById;
 
 export function useInboxQueries({
   filter,

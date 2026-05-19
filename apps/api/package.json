@@ -1,5 +1,5 @@
 {
-  "name": "@cronos/api",
+  "name": "@vols.rss/api",
   "version": "1.0.50",
   "private": true,
   "module": "src/index.ts",
@@ -17,11 +17,11 @@
     "typecheck": "bunx tsgo -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@cronos/sanitization": "workspace:*",
-    "@cronos/db": "workspace:*",
-    "@cronos/favicon": "workspace:*",
-    "@cronos/ingestion": "workspace:*",
-    "@cronos/worker": "workspace:*",
+    "@vols.rss/sanitization": "workspace:*",
+    "@vols.rss/db": "workspace:*",
+    "@vols.rss/favicon": "workspace:*",
+    "@vols.rss/ingestion": "workspace:*",
+    "@vols.rss/worker": "workspace:*",
     "@elysiajs/cors": "^1.4.0",
     "@elysiajs/swagger": "^1.3.1",
     "@mozilla/readability": "^0.6.0",

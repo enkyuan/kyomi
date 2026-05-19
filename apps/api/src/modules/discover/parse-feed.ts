@@ -1,5 +1,5 @@
 import { XMLParser } from "fast-xml-parser";
-import { decodeHtmlEntities } from "@cronos/ingestion";
+import { decodeHtmlEntities } from "@vols.rss/ingestion";
 
 export type ParsedFeedMetadata = {
   title: string;
@@ -199,4 +199,99 @@ export function parseFeedMetadata(body: string, resolvedUrl: string): ParsedFeed
   }
 
   throw new Error("Unsupported feed format (expected RSS, Atom, or JSON Feed)");
+}
+
+const ICON_REL_TOKEN = "icon";
+
+function extractHeadHtml(body: string): string {
+  const headMatch = body.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
+  return headMatch ? headMatch[1] : body.slice(0, 32768);
+}
+
+function firstMetaContent(headHtml: string, patterns: RegExp[]): string | null {
+  for (const pattern of patterns) {
+    const match = headHtml.match(pattern);
+    if (match?.[1]) {
+      return decodeHtmlEntities(match[1]).trim();
+    }
+  }
+  return null;
+}
+
+function parseHtmlTitle(headHtml: string): string {
+  const titleMatch = headHtml.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  const documentTitle = titleMatch ? decodeHtmlEntities(titleMatch[1]).trim() : "Untitled";
+  if (documentTitle !== "Untitled") {
+    return documentTitle;
+  }
+
+  return (
+    firstMetaContent(headHtml, [
+      /<meta[^>]+property\s*=\s*["']og:title["'][^>]*content\s*=\s*["']([^"']+)["']/i,
+      /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+property\s*=\s*["']og:title["']/i,
+    ]) ?? "Untitled"
+  );
+}
+
+function parseHtmlDescription(headHtml: string): string {
+  const description =
+    firstMetaContent(headHtml, [
+      /<meta[^>]+name\s*=\s*["']description["'][^>]*content\s*=\s*["']([^"']+)["']/i,
+      /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+name\s*=\s*["']description["']/i,
+    ]) ?? "";
+
+  if (description) {
+    return description;
+  }
+
+  return (
+    firstMetaContent(headHtml, [
+      /<meta[^>]+property\s*=\s*["']og:description["'][^>]*content\s*=\s*["']([^"']+)["']/i,
+      /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+property\s*=\s*["']og:description["']/i,
+    ]) ?? "Follow recent articles from this feed"
+  );
+}
+
+function extractLinkHref(tag: string): string | null {
+  const hrefMatch = tag.match(/\bhref\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+  if (!hrefMatch) {
+    return null;
+  }
+  return hrefMatch[1] || hrefMatch[2] || hrefMatch[3] || null;
+}
+
+function linkTagHasIconRel(tag: string): boolean {
+  const relMatch = tag.match(/\brel\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+  if (!relMatch) {
+    return false;
+  }
+  const rel = (relMatch[1] || relMatch[2] || relMatch[3]).toLowerCase();
+  const relTokens = new Set(rel.split(/\s+/).filter(Boolean));
+  return relTokens.has(ICON_REL_TOKEN);
+}
+
+function parseHtmlIconUrl(headHtml: string, resolvedUrl: string): string | null {
+  const linkRegex = /<link[^>]*>/gi;
+  let match: RegExpExecArray | null;
+  while ((match = linkRegex.exec(headHtml)) !== null) {
+    const tag = match[0];
+    if (!linkTagHasIconRel(tag)) {
+      continue;
+    }
+    const href = extractLinkHref(tag);
+    if (href) {
+      return absoluteUrl(href, resolvedUrl);
+    }
+  }
+  return null;
+}
+
+export function parseHtmlMetadataFallback(body: string, resolvedUrl: string): ParsedFeedMetadata {
+  const headHtml = extractHeadHtml(body);
+  return {
+    title: parseHtmlTitle(headHtml),
+    description: parseHtmlDescription(headHtml),
+    link: resolvedUrl,
+    iconUrl: parseHtmlIconUrl(headHtml, resolvedUrl),
+  };
 }

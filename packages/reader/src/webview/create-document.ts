@@ -26,15 +26,13 @@ function escapeBodyText(value: string) {
 
 function renderReaderBody(reader: ReaderContent): string {
   if (reader.bodyKind === "html") {
-    return stripDangerousMarkupForWebViewFragment(reader.contentHtml ?? "");
+    return reader.contentHtml ?? "";
   }
   if (reader.bodyKind === "markdown") {
-    return stripDangerousMarkupForWebViewFragment(
-      readerMarkdownToHtml(reader.contentMarkdown ?? "", {
-        baseUrl: reader.contentBaseUrl,
-        openLinksInNewTab: true,
-      }),
-    );
+    return readerMarkdownToHtml(reader.contentMarkdown ?? "", {
+      baseUrl: reader.contentBaseUrl,
+      openLinksInNewTab: true,
+    });
   }
   if (reader.bodyKind === "text") {
     return `<div>${escapeBodyText(reader.contentText ?? "")}</div>`;
@@ -65,7 +63,7 @@ export function createReaderDocument({
 }) {
   const fontSizePx = preferences?.fontSizePx ?? 17;
   const hideImages = preferences?.showImages === false;
-  const body = renderReaderBody(reader);
+  const body = stripDangerousMarkupForWebViewFragment(renderReaderBody(reader));
 
   return `<!doctype html>
 <html>

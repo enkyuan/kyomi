@@ -1,6 +1,8 @@
 "use client";
 
 import type React from "react";
+import { useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   ExternalLinkLine,
   EyeLine,
@@ -12,10 +14,27 @@ import {
 import { Button } from "@components/ui/button";
 import { Toolbar, ToolbarButton, ToolbarGroup } from "@components/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@components/ui/tooltip";
+import {
+  useInboxItemStateMutation,
+  type InboxItemPatch,
+} from "../hooks/use-inbox-item-state-mutation";
+import { type InboxFilter, type InboxItem } from "../services/api";
 import { cn } from "@lib/utils";
 
+const INBOX_ITEM_TOOLBAR_BASE_CLASS =
+  "gap-0 rounded-lg border border-border/80 bg-popover/95 p-0.5 text-popover-foreground shadow-md/10 transition-opacity duration-150";
+const TOOLBAR_OVERLAY_TRANSFORM = "translateX(-100%)";
+const TOOLBAR_POSITION_SYNC_FRAMES = 8;
+const TOOLBAR_RIGHT_INSET_PX = 12;
+const TOOLBAR_TOP_OFFSET_PX = -8;
+const TOOLBAR_ABOVE_HEADER_LAYER_CLASS = "z-[60]";
+
 type InboxItemToolbarProps = {
-  filter: "inbox" | "today" | "unread" | "saved" | "recent";
+  filter: InboxFilter;
+  toolbarRef?: React.RefObject<HTMLDivElement | null>;
+  onToolbarPointerLeave?: (event: React.PointerEvent<HTMLDivElement>) => void;
+  className?: string;
+  style?: React.CSSProperties;
   isRead: boolean;
   isSaved: boolean;
   onHide: () => void;
@@ -24,8 +43,125 @@ type InboxItemToolbarProps = {
   onToggleSaved: () => void;
 };
 
+export type InboxItemToolbarModel = {
+  toolbarProps: InboxItemToolbarProps;
+};
+
+export type ActiveInboxItemToolbar = {
+  item: InboxItem;
+  anchorElement: HTMLElement;
+};
+
+type ToolbarOverlayPosition = {
+  top: number;
+  left: number;
+  isVisible: boolean;
+};
+
+function readToolbarOverlayPosition(
+  anchor: HTMLElement,
+  header: HTMLElement | null,
+): ToolbarOverlayPosition {
+  const rect = anchor.getBoundingClientRect();
+  const headerBottom = header?.getBoundingClientRect().bottom ?? null;
+  const top = rect.top + TOOLBAR_TOP_OFFSET_PX;
+  const isVisible = headerBottom === null || rect.top >= headerBottom;
+
+  return {
+    top,
+    left: rect.right - TOOLBAR_RIGHT_INSET_PX,
+    isVisible,
+  };
+}
+
+function areToolbarPositionsEqual(
+  previous: ToolbarOverlayPosition | null,
+  next: ToolbarOverlayPosition,
+) {
+  return (
+    previous?.top === next.top &&
+    previous.left === next.left &&
+    previous.isVisible === next.isVisible
+  );
+}
+
+function useToolbarOverlayPosition({
+  anchorElement,
+  headerElement,
+  viewportElement,
+  syncWhileVisible,
+}: {
+  anchorElement: HTMLElement;
+  headerElement: HTMLElement | null;
+  viewportElement: HTMLElement | null;
+  syncWhileVisible: boolean;
+}) {
+  const [position, setPosition] = useState<ToolbarOverlayPosition | null>(null);
+  const updatePositionRef = useRef<() => void>(() => {});
+
+  useLayoutEffect(() => {
+    const updatePosition = () => {
+      if (!anchorElement.isConnected) {
+        setPosition(null);
+        return;
+      }
+
+      const nextPosition = readToolbarOverlayPosition(anchorElement, headerElement);
+      setPosition((previous) =>
+        areToolbarPositionsEqual(previous, nextPosition) ? previous : nextPosition,
+      );
+    };
+
+    updatePositionRef.current = updatePosition;
+    updatePosition();
+
+    const resizeObserver = new ResizeObserver(updatePosition);
+    resizeObserver.observe(anchorElement);
+    headerElement && resizeObserver.observe(headerElement);
+    viewportElement?.addEventListener("scroll", updatePosition, { passive: true });
+    window.addEventListener("resize", updatePosition);
+
+    return () => {
+      resizeObserver.disconnect();
+      viewportElement?.removeEventListener("scroll", updatePosition);
+      window.removeEventListener("resize", updatePosition);
+    };
+  }, [anchorElement, headerElement, viewportElement]);
+
+  useLayoutEffect(() => {
+    if (!syncWhileVisible) {
+      return;
+    }
+
+    let frame = 0;
+    let frameId: number | null = null;
+
+    const syncPosition = () => {
+      updatePositionRef.current();
+      frame += 1;
+      if (frame < TOOLBAR_POSITION_SYNC_FRAMES) {
+        frameId = window.requestAnimationFrame(syncPosition);
+      }
+    };
+
+    frameId = window.requestAnimationFrame(syncPosition);
+
+    return () => {
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
+  }, [syncWhileVisible]);
+
+  return position;
+}
+
 export function InboxItemToolbar({
   filter,
+  toolbarRef,
+  onToolbarPointerLeave,
+  className,
+  style,
   isRead,
   isSaved,
   onHide,
@@ -38,10 +174,10 @@ export function InboxItemToolbar({
 
   return (
     <Toolbar
-      className={cn(
-        "pointer-events-auto absolute right-3 z-50 gap-0 rounded-lg border-border/80 bg-popover/95 p-0.5 text-popover-foreground opacity-0 shadow-md/10 transition-opacity duration-150 group-hover/inbox-item:opacity-100 group-focus-within/inbox-item:opacity-100",
-        "-top-2",
-      )}
+      ref={toolbarRef}
+      onPointerLeave={onToolbarPointerLeave}
+      className={cn(INBOX_ITEM_TOOLBAR_BASE_CLASS, className)}
+      style={style}
     >
       <ToolbarGroup className="gap-0">
         <InboxItemToolbarButton
@@ -68,6 +204,111 @@ export function InboxItemToolbar({
       </ToolbarGroup>
     </Toolbar>
   );
+}
+
+function ActiveInboxItemToolbarOverlay({
+  activeToolbar,
+  filter,
+  headerElement,
+  viewportElement,
+  toolbarRef,
+  onToolbarPointerLeave,
+}: {
+  activeToolbar: ActiveInboxItemToolbar;
+  filter: InboxFilter;
+  headerElement: HTMLElement | null;
+  viewportElement: HTMLElement | null;
+  toolbarRef: React.RefObject<HTMLDivElement | null>;
+  onToolbarPointerLeave: (event: React.PointerEvent<HTMLDivElement>) => void;
+}) {
+  const toolbar = useInboxItemToolbarModel({ filter, item: activeToolbar.item });
+  const position = useToolbarOverlayPosition({
+    anchorElement: activeToolbar.anchorElement,
+    headerElement,
+    viewportElement,
+    syncWhileVisible: true,
+  });
+
+  if (!position?.isVisible || typeof document === "undefined") {
+    return null;
+  }
+
+  return createPortal(
+    <InboxItemToolbar
+      {...toolbar.toolbarProps}
+      toolbarRef={toolbarRef}
+      onToolbarPointerLeave={onToolbarPointerLeave}
+      className={cn(
+        "!fixed !border !border-border/80",
+        TOOLBAR_ABOVE_HEADER_LAYER_CLASS,
+        "pointer-events-auto opacity-100",
+      )}
+      style={{
+        top: position.top,
+        left: position.left,
+        transform: TOOLBAR_OVERLAY_TRANSFORM,
+      }}
+    />,
+    document.body,
+  );
+}
+
+export function InboxItemToolbarOverlay({
+  activeToolbar,
+  filter,
+  headerElement,
+  viewportElement,
+  toolbarRef,
+  onToolbarPointerLeave,
+}: {
+  activeToolbar: ActiveInboxItemToolbar | null;
+  filter: InboxFilter;
+  headerElement: HTMLElement | null;
+  viewportElement: HTMLElement | null;
+  toolbarRef: React.RefObject<HTMLDivElement | null>;
+  onToolbarPointerLeave: (event: React.PointerEvent<HTMLDivElement>) => void;
+}) {
+  if (!activeToolbar) {
+    return null;
+  }
+
+  return (
+    <ActiveInboxItemToolbarOverlay
+      activeToolbar={activeToolbar}
+      filter={filter}
+      headerElement={headerElement}
+      viewportElement={viewportElement}
+      toolbarRef={toolbarRef}
+      onToolbarPointerLeave={onToolbarPointerLeave}
+    />
+  );
+}
+
+export function useInboxItemToolbarModel({
+  filter,
+  item,
+}: {
+  filter: InboxFilter;
+  item: InboxItem;
+}): InboxItemToolbarModel {
+  const updateItemMutation = useInboxItemStateMutation();
+
+  const updateItem = (patch: InboxItemPatch, removeFromList = false) => {
+    updateItemMutation.mutate({ itemId: item.id, patch, removeFromList });
+  };
+
+  return {
+    toolbarProps: {
+      filter,
+      isRead: item.isRead,
+      isSaved: item.isSaved,
+      onHide: () => updateItem({ isRead: true }, true),
+      onMarkRead: () =>
+        filter === "recent" ? updateItem({ isRead: false }, true) : updateItem({ isRead: true }),
+      onOpenSource: () => window.open(item.link, "_blank", "noopener,noreferrer"),
+      onToggleSaved: () => updateItem({ isSaved: !item.isSaved }),
+    },
+  };
 }
 
 function ReadStateIcon({ isRead }: { isRead: boolean }) {

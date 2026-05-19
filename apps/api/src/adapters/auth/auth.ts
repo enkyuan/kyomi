@@ -5,7 +5,7 @@ import {
   resolveBetterAuthBaseUrl,
   resolveBetterAuthTrustedOrigins,
   shouldUseSecureCookies,
-} from "@cronos/db";
+} from "@vols.rss/db";
 import { db } from "@adapters/db/client";
 import { env } from "@config/env";
 

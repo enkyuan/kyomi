@@ -6,7 +6,7 @@
  * unique(feed_id, canonical_url) migration are verified in production. This layer
  * is now only a defensive guard for the list API cursor pagination window.
  */
-import { normalizeArticleUrl } from "@cronos/ingestion";
+import { normalizeArticleUrl } from "@vols.rss/ingestion";
 
 export type ArticleListRawRow = {
   id: string;

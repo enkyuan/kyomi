@@ -1,18 +1,46 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useFeedRefresh } from "@hooks/use-feed-refresh";
+import { useEffect, useReducer, useRef } from "react";
+import { useFeedRefresh } from "@modules/feeds/hooks/use-feed-refresh";
 import { cn } from "@lib/utils";
 import {
   getRefreshSummaryLabel,
   SUMMARY_FADE_MS,
   SUMMARY_HOLD_MS,
-} from "@modules/inbox/lib/feed-refresh-formatting";
+} from "../lib/feed-refresh-formatting";
+
+type SummaryPhase = "visible" | "fading" | "hidden";
+
+type SummaryPhaseAction =
+  | { type: "persist" }
+  | { type: "show_completion" }
+  | { type: "fade" }
+  | { type: "hide" };
+
+function summaryPhaseReducer(phase: SummaryPhase, action: SummaryPhaseAction): SummaryPhase {
+  switch (action.type) {
+    case "persist":
+    case "show_completion":
+      return "visible";
+    case "fade":
+      return "fading";
+    case "hide":
+      return "hidden";
+    default:
+      return phase;
+  }
+}
 
 export function FeedRefreshSummary({ feedId }: { feedId: string }) {
   const { refreshStatus, lastRefreshStartedAt, lastRefreshCompletedAt, lastRefreshFailedAt } =
     useFeedRefresh(feedId);
-  const [phase, setPhase] = useState<"visible" | "fading" | "hidden">("visible");
+
+  const shouldPersist = refreshStatus === "running" || refreshStatus === "queued";
+  const [phase, dispatchPhase] = useReducer(
+    summaryPhaseReducer,
+    shouldPersist ? "visible" : "hidden",
+  );
+  const previousStatusRef = useRef(refreshStatus);
 
   const summaryLabel = getRefreshSummaryLabel({
     refreshStatus,
@@ -21,28 +49,31 @@ export function FeedRefreshSummary({ feedId }: { feedId: string }) {
     lastRefreshFailedAt,
   });
 
-  const shouldPersist = refreshStatus === "running" || refreshStatus === "queued";
-
   useEffect(() => {
-    setPhase("visible");
+    const prev = previousStatusRef.current;
+    previousStatusRef.current = refreshStatus;
 
     if (shouldPersist) {
+      dispatchPhase({ type: "persist" });
       return;
     }
 
-    const fadeTimer = window.setTimeout(() => {
-      setPhase("fading");
-    }, SUMMARY_HOLD_MS);
+    if (prev === "running" || prev === "queued") {
+      dispatchPhase({ type: "show_completion" });
+      const fadeTimer = window.setTimeout(() => {
+        dispatchPhase({ type: "fade" });
+      }, SUMMARY_HOLD_MS);
 
-    const hideTimer = window.setTimeout(() => {
-      setPhase("hidden");
-    }, SUMMARY_HOLD_MS + SUMMARY_FADE_MS);
+      const hideTimer = window.setTimeout(() => {
+        dispatchPhase({ type: "hide" });
+      }, SUMMARY_HOLD_MS + SUMMARY_FADE_MS);
 
-    return () => {
-      window.clearTimeout(fadeTimer);
-      window.clearTimeout(hideTimer);
-    };
-  }, [shouldPersist, summaryLabel]);
+      return () => {
+        window.clearTimeout(fadeTimer);
+        window.clearTimeout(hideTimer);
+      };
+    }
+  }, [refreshStatus, shouldPersist]);
 
   if (phase === "hidden") {
     return null;

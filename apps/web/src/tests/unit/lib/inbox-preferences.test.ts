@@ -1,8 +1,7 @@
 // @vitest-environment jsdom
 
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import type { InboxPreferences } from "@lib/inbox-preferences";
-import { resolveInitialInboxPreferences } from "@lib/inbox-preferences";
+import { resolveInitialInboxPreferences, type InboxPreferences } from "@modules/inbox";
 
 const QUERY_KEY = ["me", "preferences", "inbox", "user_1"] as const;
 
@@ -55,7 +54,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "cronos:inbox-preferences:v2:user_1",
+      "vols.rss:inbox-preferences:v2:user_1",
       JSON.stringify(SPLIT_PREFERENCES),
     );
 
@@ -75,7 +74,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "cronos:inbox-preferences:v2:user_1",
+      "vols.rss:inbox-preferences:v2:user_1",
       JSON.stringify(READER_PREFERENCES),
     );
 
@@ -95,7 +94,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "cronos:inbox-preferences:v2:user_1",
+      "vols.rss:inbox-preferences:v2:user_1",
       JSON.stringify(READER_PREFERENCES),
     );
 

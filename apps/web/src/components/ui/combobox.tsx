@@ -2,6 +2,7 @@
 
 import { Combobox as ComboboxPrimitive } from "@base-ui/react/combobox";
 import { CloseFill, SelectorVerticalFill } from "@mingcute/react";
+import { use } from "react";
 import * as React from "react";
 import { cn } from "@lib/utils";
 import { Input } from "@components/ui/input";
@@ -157,7 +158,7 @@ export function ComboboxPopup({
   side?: ComboboxPrimitive.Positioner.Props["side"];
   anchor?: ComboboxPrimitive.Positioner.Props["anchor"];
 }): React.ReactElement {
-  const { chipsRef } = React.useContext(ComboboxContext);
+  const { chipsRef } = use(ComboboxContext);
   const anchor = anchorProp ?? chipsRef;
 
   return (
@@ -344,7 +345,7 @@ export function ComboboxChips({
 }: ComboboxPrimitive.Chips.Props & {
   startAddon?: React.ReactNode;
 }): React.ReactElement {
-  const { chipsRef } = React.useContext(ComboboxContext);
+  const { chipsRef } = use(ComboboxContext);
 
   return (
     <ComboboxPrimitive.Chips

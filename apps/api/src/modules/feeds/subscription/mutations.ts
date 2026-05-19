@@ -1,5 +1,5 @@
 import { and, eq, inArray } from "drizzle-orm";
-import { feedSubscriptions, folders } from "@cronos/db";
+import { feedSubscriptions, folders } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app-error";
 import type {

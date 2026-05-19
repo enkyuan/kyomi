@@ -12,6 +12,41 @@ interface EmptyStateBaseProps extends EmptyStateSVGProps {
   isDarkTheme?: boolean;
 }
 
+const EMPTY_STATE_THEMES = {
+  dark: {
+    viewBox: "0 0 192 192",
+    bgFill: "#141414",
+    bgOpacity: "0.25",
+    borderColor: "white",
+    borderOpacity: "0.15",
+    borderWidth: "1",
+    rssIconFill: "white",
+    rssIconOpacity: "0.3",
+    lineColors: ["white", "white", "white", "white"],
+    lineOpacities: ["0.1", "0.075", "0.05", "0.025"],
+    paint0Stop0Opacity: "0.1",
+    paint0Stop1Opacity: "0.05",
+    paint2Stop0Opacity: "0.1",
+    paint2Stop1Opacity: "0.05",
+  },
+  light: {
+    viewBox: "0 0 192 198",
+    bgFill: "#FAFAFA",
+    bgOpacity: "1",
+    borderColor: "#DBDBDB",
+    borderOpacity: "1",
+    borderWidth: "0.5",
+    rssIconFill: "#09244B",
+    rssIconOpacity: "1",
+    lineColors: ["#E7E7E7", "#F0F0F0", "#F6F6F6", "#FAFAFA"],
+    lineOpacities: ["1", "1", "1", "1"],
+    paint0Stop0Opacity: "1",
+    paint0Stop1Opacity: "1",
+    paint2Stop0Opacity: "1",
+    paint2Stop1Opacity: "1",
+  },
+} as const;
+
 function useResolvedTheme() {
   const [resolvedTheme, setResolvedTheme] = useState<"dark" | "light">(() => {
     if (typeof document === "undefined") {
@@ -71,13 +106,7 @@ const EmptyStateBase = ({
   isDarkTheme = true,
 }: EmptyStateBaseProps) => {
   const id = useId().replace(/:/g, "");
-
-  const viewBox = isDarkTheme ? "0 0 192 192" : "0 0 192 198";
-  const bgFill = isDarkTheme ? "#141414" : "#FAFAFA";
-  const bgOpacity = isDarkTheme ? "0.25" : "1";
-  const borderColor = isDarkTheme ? "white" : "#DBDBDB";
-  const borderOpacity = isDarkTheme ? "0.15" : "1";
-  const borderWidth = isDarkTheme ? "1" : "0.5";
+  const theme = EMPTY_STATE_THEMES[isDarkTheme ? "dark" : "light"];
 
   const filter0Id = `filter0_dd_${id}`;
   const filter1Id = `filter1_dd_${id}`;
@@ -92,7 +121,7 @@ const EmptyStateBase = ({
     <>
       <filter
         id={filter0Id}
-        x="22.2402"
+        x="22.24"
         y="17"
         width="146.548"
         height="157.455"
@@ -140,7 +169,7 @@ const EmptyStateBase = ({
       </filter>
       <filter
         id={filter1Id}
-        x="14.2393"
+        x="14.24"
         y="17"
         width="162.547"
         height="181.455"
@@ -190,17 +219,9 @@ const EmptyStateBase = ({
   ) : null;
 
   const clipFill = "white";
-  const rssIconFill = isDarkTheme ? "white" : "#09244B";
-  const rssIconOpacity = isDarkTheme ? "0.3" : "1";
-  const lineColors = !isDarkTheme
-    ? ["#E7E7E7", "#F0F0F0", "#F6F6F6", "#FAFAFA"]
-    : ["white", "white", "white", "white"];
-  const lineOpacities = isDarkTheme ? ["0.1", "0.075", "0.05", "0.025"] : ["1", "1", "1", "1"];
 
   const paint0Stop0Color = "white";
-  const paint0Stop0Opacity = isDarkTheme ? "0.1" : "1";
   const paint0Stop1Color = "white";
-  const paint0Stop1Opacity = isDarkTheme ? "0.05" : "1";
 
   const paint1Stop0Color = "white";
   const paint1Stop0Opacity = "0.1";
@@ -208,23 +229,21 @@ const EmptyStateBase = ({
   const paint1Stop1Opacity = "0";
 
   const paint2Stop0Color = "white";
-  const paint2Stop0Opacity = isDarkTheme ? "0.1" : "1";
   const paint2Stop1Color = "white";
-  const paint2Stop1Opacity = isDarkTheme ? "0.05" : "1";
 
   return (
     <svg
       width={width}
       height={height}
-      viewBox={viewBox}
+      viewBox={theme.viewBox}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
       {isDarkTheme ? (
-        <rect width="192" height="192" rx="96" fill={bgFill} fillOpacity={bgOpacity} />
+        <rect width="192" height="192" rx="96" fill={theme.bgFill} fillOpacity={theme.bgOpacity} />
       ) : (
-        <rect x="0.25" y="0.25" width="191.5" height="191.5" rx="95.75" fill={bgFill} />
+        <rect x="0.25" y="0.25" width="191.5" height="191.5" rx="95.75" fill={theme.bgFill} />
       )}
 
       {isDarkTheme ? (
@@ -234,8 +253,8 @@ const EmptyStateBase = ({
           width="191"
           height="191"
           rx="95.5"
-          stroke={borderColor}
-          strokeOpacity={borderOpacity}
+          stroke={theme.borderColor}
+          strokeOpacity={theme.borderOpacity}
           strokeLinecap="round"
           strokeDasharray="10 10"
         />
@@ -246,8 +265,8 @@ const EmptyStateBase = ({
           width="191.5"
           height="191.5"
           rx="95.75"
-          stroke={borderColor}
-          strokeWidth={borderWidth}
+          stroke={theme.borderColor}
+          strokeWidth={theme.borderWidth}
           strokeLinecap="round"
           strokeDasharray="10 10"
         />
@@ -255,11 +274,11 @@ const EmptyStateBase = ({
 
       <g opacity="0.5" filter={!isDarkTheme ? `url(#${filter0Id})` : undefined}>
         <path
-          d="M47.4356 56.7697C47.0746 52.6434 50.127 49.0056 54.2534 48.6446L127.972 42.1951C132.098 41.8341 135.736 44.8865 136.097 49.0129L143.592 134.686C143.953 138.812 140.901 142.45 136.775 142.811L63.0561 149.26C58.9297 149.621 55.292 146.569 54.931 142.442L47.4356 56.7697Z"
+          d="M47.44 56.77C47.07 52.64 50.13 49.01 54.25 48.64L127.97 42.2C132.1 41.83 135.74 44.89 136.1 49.01L143.59 134.69C143.95 138.81 140.9 142.45 136.78 142.81L63.06 149.26C58.93 149.62 55.29 146.57 54.93 142.44L47.44 56.77Z"
           fill={`url(#${paint0Id})`}
         />
         <path
-          d="M47.4356 56.7697C47.0746 52.6434 50.127 49.0056 54.2534 48.6446L127.972 42.1951C132.098 41.8341 135.736 44.8865 136.097 49.0129L143.592 134.686C143.953 138.812 140.901 142.45 136.775 142.811L63.0561 149.26C58.9297 149.621 55.292 146.569 54.931 142.442L47.4356 56.7697Z"
+          d="M47.44 56.77C47.07 52.64 50.13 49.01 54.25 48.64L127.97 42.2C132.1 41.83 135.74 44.89 136.1 49.01L143.59 134.69C143.95 138.81 140.9 142.45 136.78 142.81L63.06 149.26C58.93 149.62 55.29 146.57 54.93 142.44L47.44 56.77Z"
           stroke={`url(#${paint1Id})`}
           strokeLinecap="round"
         />
@@ -268,44 +287,44 @@ const EmptyStateBase = ({
       <g filter={!isDarkTheme ? `url(#${filter1Id})` : undefined}>
         <g clipPath={`url(#${clip0Id})`}>
           <path
-            d="M54.4317 48.9696C54.8167 44.5681 58.697 41.3122 63.0985 41.6972L136.817 48.1468C141.218 48.5318 144.474 52.4121 144.089 56.8136L136.594 142.486C136.209 146.888 132.328 150.144 127.927 149.759L54.2086 143.309C49.8071 142.924 46.5512 139.044 46.9363 134.642L54.4317 48.9696Z"
+            d="M54.43 48.97C54.82 44.57 58.7 41.31 63.1 41.7L136.82 48.15C141.22 48.53 144.47 52.41 144.09 56.81L136.59 142.49C136.21 146.89 132.33 150.14 127.93 149.76L54.21 143.31C49.81 142.92 46.55 139.04 46.94 134.64L54.43 48.97Z"
             fill={`url(#${paint2Id})`}
           />
 
           <g clipPath={`url(#${clip1Id})`}>
-            <g transform="translate(62.4014 49.666) rotate(5) scale(0.6666667)">
+            <g transform="translate(62.4 49.67) rotate(5) scale(0.67)">
               <path
                 d="M18 3a3 3 0 0 1 2.995 2.824L21 6v12a3 3 0 0 1-2.824 2.995L18 21H6a3 3 0 0 1-2.995-2.824L3 18V6a3 3 0 0 1 2.824-2.995L6 3zM8.5 14a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M8 10.5a1 1 0 1 0 0 2 3.5 3.5 0 0 1 3.5 3.5 1 1 0 1 0 2 0A5.5 5.5 0 0 0 8 10.5M8.5 7c-.19 0-.379.006-.566.019a1 1 0 0 0 .132 1.995 6.5 6.5 0 0 1 6.92 6.92 1 1 0 1 0 1.995.132A8.5 8.5 0 0 0 8.5 7"
-                fill={rssIconFill}
-                fillOpacity={rssIconOpacity}
+                fill={theme.rssIconFill}
+                fillOpacity={theme.rssIconOpacity}
               />
             </g>
           </g>
 
           <path
-            d="M59.2855 85.2807C59.466 83.2175 61.2848 81.6913 63.348 81.8718L113.158 86.2295C115.221 86.41 116.747 88.2289 116.567 90.2921C116.386 92.3553 114.567 93.8815 112.504 93.701L62.6944 89.3432C60.6312 89.1627 59.105 87.3438 59.2855 85.2807Z"
-            fill={lineColors[0]}
-            fillOpacity={lineOpacities[0]}
+            d="M59.29 85.28C59.47 83.22 61.28 81.69 63.35 81.87L113.16 86.23C115.22 86.41 116.75 88.23 116.57 90.29C116.39 92.36 114.57 93.88 112.5 93.7L62.69 89.34C60.63 89.16 59.11 87.34 59.29 85.28Z"
+            fill={theme.lineColors[0]}
+            fillOpacity={theme.lineOpacities[0]}
           />
           <path
-            d="M57.9349 100.722C58.1154 98.6589 59.9343 97.1327 61.9974 97.3132L128.244 103.109C130.308 103.29 131.834 105.108 131.653 107.172C131.473 109.235 129.654 110.761 127.591 110.58L61.3438 104.785C59.2806 104.604 57.7544 102.785 57.9349 100.722Z"
-            fill={lineColors[1]}
-            fillOpacity={lineOpacities[1]}
+            d="M57.93 100.72C58.12 98.66 59.93 97.13 62 97.31L128.24 103.11C130.31 103.29 131.83 105.11 131.65 107.17C131.47 109.24 129.65 110.76 127.59 110.58L61.34 104.79C59.28 104.6 57.75 102.79 57.93 100.72Z"
+            fill={theme.lineColors[1]}
+            fillOpacity={theme.lineOpacities[1]}
           />
           <path
-            d="M56.5833 116.163C56.7638 114.1 58.5827 112.574 60.6459 112.755L120.218 117.966C122.281 118.147 123.807 119.966 123.627 122.029C123.446 124.092 121.627 125.618 119.564 125.438L59.9922 120.226C57.929 120.046 56.4028 118.227 56.5833 116.163Z"
-            fill={lineColors[2]}
-            fillOpacity={lineOpacities[2]}
+            d="M56.58 116.16C56.76 114.1 58.58 112.57 60.65 112.76L120.22 117.97C122.28 118.15 123.81 119.97 123.63 122.03C123.45 124.09 121.63 125.62 119.56 125.44L59.99 120.23C57.93 120.05 56.4 118.23 56.58 116.16Z"
+            fill={theme.lineColors[2]}
+            fillOpacity={theme.lineOpacities[2]}
           />
           <path
-            d="M55.2327 131.603C55.4132 129.54 57.2321 128.014 59.2953 128.194L96.6526 131.462C98.7158 131.643 100.242 133.462 100.061 135.525C99.881 137.588 98.0621 139.114 95.9989 138.934L58.6416 135.665C56.5784 135.485 55.0522 133.666 55.2327 131.603Z"
-            fill={lineColors[3]}
-            fillOpacity={lineOpacities[3]}
+            d="M55.23 131.6C55.41 129.54 57.23 128.01 59.3 128.19L96.65 131.46C98.72 131.64 100.24 133.46 100.06 135.53C99.88 137.59 98.06 139.11 96 138.93L58.64 135.67C56.58 135.49 55.05 133.67 55.23 131.6Z"
+            fill={theme.lineColors[3]}
+            fillOpacity={theme.lineOpacities[3]}
           />
         </g>
 
         <path
-          d="M54.9298 49.0131C55.2908 44.8868 58.9285 41.8343 63.0549 42.1953L136.773 48.6449C140.9 49.0059 143.952 52.6436 143.591 56.77L136.096 142.443C135.735 146.569 132.097 149.622 127.971 149.261L54.2522 142.811C50.1258 142.45 47.0734 138.812 47.4344 134.686L54.9298 49.0131Z"
+          d="M54.93 49.01C55.29 44.89 58.93 41.83 63.05 42.2L136.77 48.64C140.9 49.01 143.95 52.64 143.59 56.77L136.1 142.44C135.74 146.57 132.1 149.62 127.97 149.26L54.25 142.81C50.13 142.45 47.07 138.81 47.43 134.69L54.93 49.01Z"
           stroke={`url(#${paint3Id})`}
           strokeLinecap="round"
         />
@@ -316,20 +335,20 @@ const EmptyStateBase = ({
 
         <linearGradient
           id={paint0Id}
-          x1="91.069"
-          y1="44.9217"
-          x2="99.9589"
+          x1="91.07"
+          y1="44.92"
+          x2="99.96"
           y2="146.534"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor={paint0Stop0Color} stopOpacity={paint0Stop0Opacity} />
-          <stop offset="1" stopColor={paint0Stop1Color} stopOpacity={paint0Stop1Opacity} />
+          <stop stopColor={paint0Stop0Color} stopOpacity={theme.paint0Stop0Opacity} />
+          <stop offset="1" stopColor={paint0Stop1Color} stopOpacity={theme.paint0Stop1Opacity} />
         </linearGradient>
         <linearGradient
           id={paint1Id}
-          x1="91.069"
-          y1="44.9217"
-          x2="99.9589"
+          x1="91.07"
+          y1="44.92"
+          x2="99.96"
           y2="146.534"
           gradientUnits="userSpaceOnUse"
         >
@@ -338,20 +357,20 @@ const EmptyStateBase = ({
         </linearGradient>
         <linearGradient
           id={paint2Id}
-          x1="99.9577"
+          x1="99.96"
           y1="44.922"
-          x2="91.0678"
+          x2="91.07"
           y2="146.534"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor={paint2Stop0Color} stopOpacity={paint2Stop0Opacity} />
-          <stop offset="1" stopColor={paint2Stop1Color} stopOpacity={paint2Stop1Opacity} />
+          <stop stopColor={paint2Stop0Color} stopOpacity={theme.paint2Stop0Opacity} />
+          <stop offset="1" stopColor={paint2Stop1Color} stopOpacity={theme.paint2Stop1Opacity} />
         </linearGradient>
         <linearGradient
           id={paint3Id}
-          x1="99.9577"
+          x1="99.96"
           y1="44.922"
-          x2="91.0678"
+          x2="91.07"
           y2="146.534"
           gradientUnits="userSpaceOnUse"
         >
@@ -361,7 +380,7 @@ const EmptyStateBase = ({
 
         <clipPath id={clip0Id}>
           <path
-            d="M54.4317 48.9696C54.8167 44.5681 58.697 41.3122 63.0985 41.6972L136.817 48.1468C141.218 48.5318 144.474 52.4121 144.089 56.8136L136.594 142.486C136.209 146.888 132.328 150.144 127.927 149.759L54.2086 143.309C49.8071 142.924 46.5512 139.044 46.9363 134.642L54.4317 48.9696Z"
+            d="M54.43 48.97C54.82 44.57 58.7 41.31 63.1 41.7L136.82 48.15C141.22 48.53 144.47 52.41 144.09 56.81L136.59 142.49C136.21 146.89 132.33 150.14 127.93 149.76L54.21 143.31C49.81 142.92 46.55 139.04 46.94 134.64L54.43 48.97Z"
             fill={clipFill}
           />
         </clipPath>
@@ -370,7 +389,7 @@ const EmptyStateBase = ({
             width="16"
             height="16"
             fill={clipFill}
-            transform="translate(62.4014 49.666) rotate(5)"
+            transform="translate(62.4 49.67) rotate(5)"
           />
         </clipPath>
       </defs>

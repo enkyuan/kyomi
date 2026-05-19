@@ -1,2 +1,2 @@
-export { LoginPage } from "./login-page";
-export { RegisterPage } from "./register-page";
+export { LoginPage } from "./components/login-page";
+export { RegisterPage } from "./components/register-page";

@@ -1,11 +1,10 @@
 import { and, asc, eq, ilike, inArray, or, sql } from "drizzle-orm";
-import { feedSubscriptions, feeds } from "@cronos/db";
+import { feedSubscriptions, feeds } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
 import { isMeiliConfigured, searchFeedSearchDocuments } from "@adapters/search/meili";
 import type { AppLogger } from "@adapters/logger";
 import { AppError } from "@shared/errors/app-error";
 import { decodeNullableText, decodeText } from "@shared/text/html-entities";
-import { resolveRemoteFeedFavicon } from "./resolve-feed-favicon";
 import { resolveRemoteFeed } from "./resolve-remote-feed";
 import type { FeedPreviewDto, FeedSearchResultDto } from "./types";
 
@@ -35,8 +34,8 @@ export async function previewFeedFromUrl(
     isSubscribed = subRows.length > 0;
   }
 
-  const favicon =
-    existing?.faviconUrl ?? (await resolveRemoteFeedFavicon(resolved, undefined))?.url ?? null;
+  // Keep preview snappy: avoid blocking on remote favicon probing.
+  const favicon = existing?.faviconUrl ?? resolved.iconUrl ?? null;
 
   return {
     id: existing?.id ?? null,
@@ -65,23 +64,24 @@ export async function searchFeeds(
   if (isMeiliConfigured()) {
     try {
       const hits = await searchFeedSearchDocuments(query, safeLimit);
-      if (hits.length > 0) {
-        const hitIds = hits.map((hit) => hit.id);
-        const subscriptionRows = await database
-          .select({ feedId: feedSubscriptions.feedId })
-          .from(feedSubscriptions)
-          .where(
-            and(eq(feedSubscriptions.userId, userId), inArray(feedSubscriptions.feedId, hitIds)),
-          );
-        const subscribedIds = new Set(subscriptionRows.map((row) => row.feedId));
-        return hits.map((hit) => ({
-          ...hit,
-          title: decodeText(hit.title),
-          description: decodeNullableText(hit.description),
-          faviconUrl: hit.faviconUrl ?? null,
-          isSubscribed: subscribedIds.has(hit.id),
-        }));
+      if (hits.length === 0) {
+        return [];
       }
+      const hitIds = hits.map((hit) => hit.id);
+      const subscriptionRows = await database
+        .select({ feedId: feedSubscriptions.feedId })
+        .from(feedSubscriptions)
+        .where(
+          and(eq(feedSubscriptions.userId, userId), inArray(feedSubscriptions.feedId, hitIds)),
+        );
+      const subscribedIds = new Set(subscriptionRows.map((row) => row.feedId));
+      return hits.map((hit) => ({
+        ...hit,
+        title: decodeText(hit.title),
+        description: decodeNullableText(hit.description),
+        faviconUrl: hit.faviconUrl ?? null,
+        isSubscribed: subscribedIds.has(hit.id),
+      }));
     } catch (error) {
       logger?.warn("discover.search.meili_fallback", {
         userId,
@@ -90,6 +90,7 @@ export async function searchFeeds(
         error: error instanceof Error ? error.message : String(error),
         errorCode: error instanceof AppError ? error.code : undefined,
       });
+      return [];
     }
   }
 
@@ -120,14 +121,7 @@ export async function searchFeeds(
     })
     .from(feeds)
     .leftJoin(feedSubscriptions, subscriptionJoin)
-    .where(
-      or(
-        ilike(feeds.title, pattern),
-        ilike(feeds.url, pattern),
-        ilike(feeds.description, pattern),
-        ilike(feeds.link, pattern),
-      ),
-    )
+    .where(or(ilike(feeds.title, pattern), ilike(feeds.url, pattern)))
     .orderBy(sql`score`, asc(feeds.title))
     .limit(safeLimit);
 

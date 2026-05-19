@@ -20,7 +20,7 @@ describe("detectCodeLanguage", () => {
   });
 
   test("detects valid JSON deterministically", () => {
-    const result = detectCodeLanguage('{"name":"cronos","enabled":true}');
+    const result = detectCodeLanguage('{"name":"vols.rss","enabled":true}');
     expect(result.language).toBe("json");
     expect(result.confidence).toBe("deterministic");
   });

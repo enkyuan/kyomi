@@ -1,5 +1,3 @@
-import { parseHTML } from "linkedom";
-
 type FeedLinkCandidate = {
   href: string;
   score: number;
@@ -13,6 +11,8 @@ const FEED_CONTENT_TYPE_SCORES = new Map<string, number>([
   ["application/xml", 4],
   ["text/xml", 5],
 ]);
+
+const ALTERNATE_REL = "alternate";
 
 function normalizeType(value: string | null): string {
   if (!value) {
@@ -43,34 +43,63 @@ function resolveCandidateHref(href: string | null, baseUrl: string): string | nu
   }
 }
 
+function extractLinkAttribute(tag: string, name: string): string | null {
+  const match = tag.match(new RegExp(`\\b${name}\\s*=\\s*(?:"([^"]+)"|'([^']+)'|([^\\s>]+))`, "i"));
+  if (!match) {
+    return null;
+  }
+  return match[1] || match[2] || match[3] || null;
+}
+
+function parseFeedLinkCandidate(tag: string, baseUrl: string): FeedLinkCandidate | null {
+  const rel = extractLinkAttribute(tag, "rel");
+  const type = extractLinkAttribute(tag, "type");
+  const rawHref = extractLinkAttribute(tag, "href");
+
+  const relTokens = normalizeRel(rel);
+  if (!relTokens.includes(ALTERNATE_REL)) {
+    return null;
+  }
+
+  const normalizedType = normalizeType(type);
+  const score = FEED_CONTENT_TYPE_SCORES.get(normalizedType);
+  if (score === undefined) {
+    return null;
+  }
+
+  const href = resolveCandidateHref(rawHref, baseUrl);
+  if (!href) {
+    return null;
+  }
+
+  return { href, score };
+}
+
+function collectFeedLinkCandidates(headHtml: string, baseUrl: string): FeedLinkCandidate[] {
+  const linkRegex = /<link[^>]*>/gi;
+  const candidates: FeedLinkCandidate[] = [];
+  let match: RegExpExecArray | null;
+
+  while ((match = linkRegex.exec(headHtml)) !== null) {
+    const candidate = parseFeedLinkCandidate(match[0], baseUrl);
+    if (candidate) {
+      candidates.push(candidate);
+    }
+  }
+
+  return candidates;
+}
+
 /**
  * Extract a feed URL from HTML autodiscovery tags such as:
  * `<link rel="alternate" type="application/rss+xml" href="/feed.xml">`.
+ *
+ * Uses fast regex scanning over the <head> tag to prevent blocking the event loop on huge documents.
  */
 export function discoverFeedUrlFromHtml(body: string, baseUrl: string): string | null {
-  const { document } = parseHTML(body);
-  const links = Array.from(document.querySelectorAll("link[href]"));
-  const candidates: FeedLinkCandidate[] = [];
-
-  for (const link of links) {
-    const relTokens = normalizeRel(link.getAttribute("rel"));
-    if (!relTokens.includes("alternate")) {
-      continue;
-    }
-
-    const type = normalizeType(link.getAttribute("type"));
-    const score = FEED_CONTENT_TYPE_SCORES.get(type);
-    if (score === undefined) {
-      continue;
-    }
-
-    const href = resolveCandidateHref(link.getAttribute("href"), baseUrl);
-    if (!href) {
-      continue;
-    }
-
-    candidates.push({ href, score });
-  }
+  const headMatch = body.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
+  const headHtml = headMatch ? headMatch[1] : body.slice(0, 32768);
+  const candidates = collectFeedLinkCandidates(headHtml, baseUrl);
 
   if (candidates.length === 0) {
     return null;

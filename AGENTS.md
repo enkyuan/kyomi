@@ -1,27 +1,27 @@
 ## Learned User Preferences
-- Follow attached implementation plans exactly and do not edit the plan file.
-- Reuse existing plan to-dos; do not recreate them, and move statuses in order while executing.
+- Follow attached implementation plans exactly (do not edit the plan file); reuse existing plan to-dos and advance statuses in order—do not recreate them.
 - Prioritize deep root-cause diagnosis and clean, standards-based fixes over quick/hacky workarounds; when refactoring, preserve behavior and avoid runtime regressions.
-- Apply UI feedback literally and iteratively with precise visual adjustments; prefer Tailwind utility classes over inline styles for small layout and typography tweaks in `apps/web` when both are viable.
+- Apply UI feedback literally and iteratively with precise visual adjustments; prefer Tailwind utility classes over inline styles for small layout and typography tweaks in `apps/web` when both are viable. Keep the app navigation sidebar on the left at every breakpoint—tablet reader layouts change main-column content only, not sidebar placement.
 - For form UX, show validation errors per-field (not all at once) and only when relevant.
 - Keep `AGENTS.md` updates minimal: only high-signal, durable bullets—avoid verbose dumps.
 - For reader/article HTML in `apps/web`, prefer conservative DOM inspection and explicit enhancement in `render-html.tsx` (`data-*` markers) over broad structural CSS (`:has(...)`) that can match whole-article wrappers.
 - In reader code blocks, trust explicit fence or `language-*` / `lang-*` hints for highlight.js; avoid aggressive auto-detection when the language is unknown so snippets are not mislabeled.
 - For reader font-size controls with live preview, keep preview and persisted preferences on one synchronized value path to avoid flicker and px snap near close (no competing updates or races).
+- Reader code-block copy buttons: vanilla DOM in `packages/reader/src/web/lib/code-blocks.tsx` with class `reader-code-copy-button`; ghost (no border), concentric border-radius (`outer − chrome padding`) in `packages/reader/src/web/styles.css` and `apps/web/src/styles.css`—not shadcn `Button`.
 - Prefer `bunx` over `npx` for one-off CLI tooling in this repo.
 - Inbox list row toolbars (Mingcute): use line icons by default and filled icons when the persisted state is active (read, read later); give each action a tooltip; omit redundant vertical separators between primary actions unless grouping is intentional.
 - Sidebar discover / “Follow sources” field (`sidebar-feed-search.tsx`): size the inner `InputGroup` to the parent `SidebarMenuButton` (`items-stretch`, `h-full min-h-0`) instead of a second hard-coded height; for an outside-only focus halo, use `overflow-visible` on the button with `focus-within` + ring-like `box-shadow` and suppress the inner input-group focus ring—`SidebarMenuButton` defaults to `overflow-hidden`, which clips outside rings.
 
 ## Learned Workspace Facts
-- This workspace is a monorepo centered on `apps/web`, `apps/api`, and `packages/catalog`.
-- `packages/catalog` is an optional offline Python enrichment island; normal app runtime/setup (`bootstrap`, `dev:app`, routine TS checks) must not require Poetry or catalog sync.
-- Feed discovery/follow and inbox filtering work spans both `apps/web` and `apps/api`.
-- Local catalog sync: script at `packages/catalog/scripts/sync.sh`; root exposes `catalog:sync:local`.
-- Catalog’s shared Python feed/catalog helpers live under `packages/catalog/feed` (import as `feed`; formerly `readspace`). `feed/favicon.py` imports PyPI `extract-favicon`—keep it declared in `packages/catalog/pyproject.toml` and installed in the Poetry env so analysis tools resolve imports.
-- Shared article HTML sanitization package: `packages/sanitization` (`@cronos/sanitization`), replacing the older `article-html-sanitize` layout.
-- Article/datetime handling: APIs expose instants as UTC ISO strings; inbox day-scoped filters use the client’s `timezoneOffsetMinutes` to derive UTC `published_after` / `published_before` bounds, so calendar-day semantics are not enforced only inside the API layer.
-- Database schema is split into domain modules under `packages/db/src/schema/` (for example auth, feeds, articles, preferences, organizations, misc) and composed for `@cronos/db` consumers instead of one monolithic schema file.
-- Reader and article presentation should follow one explicit contract between API article normalization/detail and `apps/web` reader components—avoid duplicating normalization, render-mode choice, or ad hoc fallbacks across layers.
-- `packages/reader` code bundled for the web client must stay browser-safe (no `node:module` or other Node-only APIs in those entry paths); keep Node-dependent logic on the server or webview-only builds.
-- Feed refresh enqueue and related orchestration for `apps/api` live under `apps/api/src/modules/feeds/refresh/` (e.g. `service.ts`, `enqueue.ts`); keep `feeds/routes.ts` as a thin delegator for those flows.
-- Shared inbox query helpers (deduping / infinite inbox queries) live in `apps/web/src/hooks/use-inbox-queries.ts`; keep them there unless the user explicitly asks to relocate them.
+- Monorepo: `apps/web`, `apps/api`, `packages/*`; rebranded from cronos — npm scope `@vols.rss/*`, root package `vols.rss`.
+- `packages/catalog` is optional offline Python enrichment; normal app runtime/setup (`bootstrap`, `dev:app`, routine TS checks) must not require Poetry or catalog sync.
+- Inbox tablet landscape (`md`–`lg` + `orientation: landscape`): reader-focused (article fills main, no list column, auto-select first item). Tablet portrait and phones use stacked single-column list↔detail (`InboxMobileSingleColumnLayout`). Desktop split at `lg+` landscape. Layout in `use-responsive-reader-mode.ts`. Reader toolbar logic lives in `reader-toolbar-model.ts` (`useReaderToolbarModel`); `detail-panel.tsx` is presentation-only.
+- Catalog sync: `packages/catalog/scripts/sync.sh` (root `catalog:sync:local`); export script `processing/export_catalog_for_vols_rss.py` (underscores in filename, not `vols.rss`; keep `packages/catalog/package.json` export scripts on that path).
+- Catalog Python helpers live under `packages/catalog/feed` (import as `feed`; formerly `readspace`). `feed/favicon.py` imports PyPI `extract-favicon`—keep it in `packages/catalog/pyproject.toml` and the Poetry env.
+- Shared article HTML sanitization: `packages/sanitization` (`@vols.rss/sanitization`), replacing the older `article-html-sanitize` layout.
+- Article/datetime handling: APIs expose instants as UTC ISO strings; inbox day-scoped filters use the client’s `timezoneOffsetMinutes` to derive UTC `published_after` / `published_before` bounds.
+- Database schema is split into domain modules under `packages/db/src/schema/` and composed for `@vols.rss/db` consumers instead of one monolithic schema file.
+- Reader and article presentation follow one explicit contract between API article normalization/detail and `apps/web` reader components; `packages/reader` code for the web client must stay browser-safe (no `node:module` or other Node-only APIs in those entry paths). Inbox detail scroll padding belongs on the `ScrollArea` viewport in `detail-view.tsx` (`p-3 md:p-8`) with the custom scrollbar inset inside that gutter (`end-3 md:end-8`)—not on inner content wrappers.
+- Docker (`docker/docker-compose.yml`): compose project `vols.rss`, containers `vols.rss-*`; set explicit volume `name: vols_rss_*` (default prefixed names drop the dot → `volsrss_*`). Postgres DB name `vols_rss` (not `vols.rss`—dots invalid unquoted). Postgres 18+ mount data at `/var/lib/postgresql` (not `.../data`).
+- Env: shared infra in `docker/.env`; host-side API in `apps/api/.env` (`apps/api/.env.example`). `packages/db/drizzle.config.ts` loads `docker/.env` and `apps/api/.env`, derives `DATABASE_URL` from `POSTGRES_*` when unset.
+- Feed refresh enqueue lives under `apps/api/src/modules/feeds/refresh/`; keep `feeds/routes.ts` a thin delegator. Shared inbox query helpers live in `apps/web/src/hooks/use-inbox-queries.ts`. Feed discovery/ingestion HTTP uses a Mozilla `user-agent` with `(VolsRssFeedFetcher/1.0)` (`apps/api/src/modules/discover/fetch-feed.ts`, `packages/ingestion`).

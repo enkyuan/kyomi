@@ -1,8 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { getRequestHeaders } from "@tanstack/react-start/server";
 import { z } from "zod";
 import { requireAuth } from "@/routes/-guards";
+import {
+  getInboxPreferences,
+  readInboxArticleOpenBehaviorCookie,
+  readInboxSplitPanePercentCookie,
+} from "@modules/inbox";
 import { InboxPage } from "@modules/inbox/page";
-import { getInboxPreferences } from "@lib/inbox-preferences-functions";
 
 const inboxSearchSchema = z.object({
   filter: z.enum(["inbox", "today", "unread", "saved", "recent"]).optional(),
@@ -15,16 +20,32 @@ const inboxSearchSchema = z.object({
 });
 
 export const Route = createFileRoute("/inbox/")({
-  loader: async () => {
-    await requireAuth();
-    const initialInboxPreferences = await getInboxPreferences();
-    return { initialInboxPreferences };
-  },
   validateSearch: (search) => inboxSearchSchema.parse(search),
+  loader: async () => {
+    const headers = getRequestHeaders();
+    const [, initialInboxPreferences] = await Promise.all([requireAuth(), getInboxPreferences()]);
+    const cookieArticleOpenBehavior = readInboxArticleOpenBehaviorCookie(headers.get("cookie"));
+    const initialSplitPanePercent = readInboxSplitPanePercentCookie(headers.get("cookie"));
+
+    return {
+      initialInboxPreferences: cookieArticleOpenBehavior
+        ? {
+            ...initialInboxPreferences,
+            articleOpenBehavior: cookieArticleOpenBehavior,
+          }
+        : initialInboxPreferences,
+      initialSplitPanePercent,
+    };
+  },
   component: InboxRouteComponent,
 });
 
 function InboxRouteComponent() {
-  const { initialInboxPreferences } = Route.useLoaderData();
-  return <InboxPage initialInboxPreferences={initialInboxPreferences} />;
+  const { initialInboxPreferences, initialSplitPanePercent } = Route.useLoaderData();
+  return (
+    <InboxPage
+      initialInboxPreferences={initialInboxPreferences}
+      initialSplitPanePercent={initialSplitPanePercent}
+    />
+  );
 }

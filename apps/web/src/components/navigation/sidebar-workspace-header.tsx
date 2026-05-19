@@ -13,9 +13,7 @@ import {
   SelectorVerticalLine,
   StarFill,
 } from "@mingcute/react";
-import { CreateFolderDialog } from "@components/navigation/create-folder-dialog";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
-import { ManageFeedsDialog } from "@components/navigation/manage-feeds-dialog";
 import { Badge } from "@components/ui/badge";
 import {
   Command,
@@ -40,11 +38,10 @@ import {
   SidebarMenuItem,
 } from "@components/ui/sidebar";
 import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-text";
-import { SidebarFeedSearchTrigger } from "@components/navigation/sidebar-feed-search";
 import { SidebarPretextLabel } from "@components/navigation/sidebar-pretext-label";
-import { listFollowedFeeds } from "@modules/feeds/api";
-import { listFolders } from "@modules/folders/api";
-import { isInboxPathname } from "@lib/routes/inbox-path";
+import { CreateFolderDialog, listFolders } from "@modules/folders";
+import { listFollowedFeeds, ManageFeedsDialog, SidebarFeedSearchTrigger } from "@modules/feeds";
+import { isInboxPathname } from "@modules/inbox";
 import { QUERY_TIMES } from "@lib/query-policies";
 import { cn } from "@lib/utils";
 
@@ -58,6 +55,49 @@ type SidebarWorkspaceHeaderProps = {
   isMacPlatform?: boolean;
   isReaderFocusSidebar?: boolean;
 };
+
+type InboxFilter = "inbox" | "saved" | "today" | "unread";
+
+function navigateToInbox(
+  navigate: ReturnType<typeof useNavigate>,
+  filter: InboxFilter,
+  feedId?: string,
+  folderId?: string,
+) {
+  return navigate({
+    to: "/inbox",
+    search: () => ({
+      filter,
+      search: undefined,
+      feedId,
+      folderId,
+      itemId: undefined,
+    }),
+  });
+}
+
+function getInboxItems(navigate: ReturnType<typeof useNavigate>) {
+  return [
+    {
+      label: "Today",
+      shortcut: "G I",
+      icon: Calendar3Fill,
+      action: () => navigateToInbox(navigate, "today"),
+    },
+    {
+      label: "All Unread",
+      shortcut: "G U",
+      icon: NewsFill,
+      action: () => navigateToInbox(navigate, "unread"),
+    },
+    {
+      label: "Read Later",
+      shortcut: "G S",
+      icon: StarFill,
+      action: () => navigateToInbox(navigate, "saved"),
+    },
+  ];
+}
 
 export function SidebarWorkspaceHeader({
   isMac,
@@ -85,58 +125,7 @@ export function SidebarWorkspaceHeader({
     staleTime: QUERY_TIMES.staticMetadataStale,
     gcTime: QUERY_TIMES.staticMetadataGc,
   });
-
-  /** Inbox quick switches from the command palette always return to full-workspace views. */
-  const inboxItems = [
-    {
-      label: "Today",
-      shortcut: "G I",
-      icon: Calendar3Fill,
-      action: () =>
-        navigate({
-          to: "/inbox",
-          search: () => ({
-            filter: "today" as const,
-            search: undefined,
-            feedId: undefined,
-            folderId: undefined,
-            itemId: undefined,
-          }),
-        }),
-    },
-    {
-      label: "All Unread",
-      shortcut: "G U",
-      icon: NewsFill,
-      action: () =>
-        navigate({
-          to: "/inbox",
-          search: () => ({
-            filter: "unread" as const,
-            search: undefined,
-            feedId: undefined,
-            folderId: undefined,
-            itemId: undefined,
-          }),
-        }),
-    },
-    {
-      label: "Read Later",
-      shortcut: "G S",
-      icon: StarFill,
-      action: () =>
-        navigate({
-          to: "/inbox",
-          search: () => ({
-            filter: "saved" as const,
-            search: undefined,
-            feedId: undefined,
-            folderId: undefined,
-            itemId: undefined,
-          }),
-        }),
-    },
-  ];
+  const inboxItems = getInboxItems(navigate);
 
   const folderItems = foldersQuery.data ?? [];
   const feedItems = followedFeedsQuery.data ?? [];
@@ -207,182 +196,25 @@ export function SidebarWorkspaceHeader({
                   </SidebarMenuButton>
                 }
               />
-              <CommandDialogPopup>
-                <Command>
-                  <CommandInput placeholder="Switch feeds..." />
-                  <CommandPanel>
-                    <CommandList>
-                      <CommandEmpty>No matching folders, feeds, or actions.</CommandEmpty>
-                      <CommandGroup>
-                        <CommandGroupLabel>Inbox</CommandGroupLabel>
-                        {inboxItems.map((item) => (
-                          <CommandItem
-                            key={item.label}
-                            value={item.label}
-                            onClick={() => {
-                              void item.action();
-                              setCommandOpen(false);
-                            }}
-                          >
-                            <item.icon className="me-2 size-4" />
-                            <span>{item.label}</span>
-                            <CommandShortcut>{item.shortcut}</CommandShortcut>
-                          </CommandItem>
-                        ))}
-                      </CommandGroup>
-                      <CommandSeparator />
-                      <CommandGroup>
-                        <CommandGroupLabel>Folders</CommandGroupLabel>
-                        {foldersQuery.isLoading ? (
-                          <CommandItem disabled value="loading-folders">
-                            <FolderInfoFill className="me-2 size-4" />
-                            <span>Loading folders...</span>
-                          </CommandItem>
-                        ) : null}
-                        {foldersQuery.isError ? (
-                          <CommandItem disabled value="folders-error">
-                            <FolderWarningFill className="me-2 size-4" />
-                            <span>Unable to load folders</span>
-                          </CommandItem>
-                        ) : null}
-                        {!foldersQuery.isLoading &&
-                        !foldersQuery.isError &&
-                        folderItems.length === 0 ? (
-                          <CommandItem disabled value="no-folders">
-                            <FolderForbidFill className="me-2 size-4" />
-                            <span>No folders yet</span>
-                          </CommandItem>
-                        ) : null}
-                        {folderItems.map((folder) => (
-                          <CommandItem
-                            key={folder.id}
-                            value={`${folder.name} folder`}
-                            className={cn(
-                              scopedFolderId === folder.id && "bg-accent/72 text-accent-foreground",
-                            )}
-                            onClick={() => {
-                              void navigate({
-                                to: "/inbox",
-                                search: () => ({
-                                  filter: "today" as const,
-                                  search: undefined,
-                                  folderId: folder.id,
-                                  feedId: undefined,
-                                  itemId: undefined,
-                                }),
-                              });
-                              setCommandOpen(false);
-                            }}
-                          >
-                            <Folder2Fill className="me-2 size-4" />
-                            <span>{folder.name}</span>
-                            {scopedFolderId === folder.id ? (
-                              <Badge className="ms-auto" size="sm" variant="secondary">
-                                Current
-                              </Badge>
-                            ) : null}
-                          </CommandItem>
-                        ))}
-                      </CommandGroup>
-                      <CommandSeparator />
-                      <CommandGroup>
-                        <CommandGroupLabel>Feeds</CommandGroupLabel>
-                        {followedFeedsQuery.isLoading ? (
-                          <CommandItem disabled value="loading-feeds">
-                            <NewsFill className="me-2 size-4" />
-                            <span>Loading feeds...</span>
-                          </CommandItem>
-                        ) : null}
-                        {followedFeedsQuery.isError ? (
-                          <CommandItem disabled value="feeds-error">
-                            <NewsFill className="me-2 size-4" />
-                            <span>Unable to load feeds</span>
-                          </CommandItem>
-                        ) : null}
-                        {!followedFeedsQuery.isLoading &&
-                        !followedFeedsQuery.isError &&
-                        feedItems.length === 0 ? (
-                          <CommandItem disabled value="no-feeds">
-                            <NewsFill className="me-2 size-4" />
-                            <span>No followed feeds</span>
-                          </CommandItem>
-                        ) : null}
-                        {feedItems.map((item) => (
-                          <CommandItem
-                            key={item.feedId}
-                            value={`${item.title} ${item.url} ${item.folderName ?? ""}`}
-                            className={cn(
-                              scopedFeedId === item.feedId && "bg-accent/72 text-accent-foreground",
-                            )}
-                            onClick={() => {
-                              void navigate({
-                                to: "/inbox",
-                                search: () => ({
-                                  filter: "inbox" as const,
-                                  search: undefined,
-                                  feedId: item.feedId,
-                                  folderId: undefined,
-                                  itemId: undefined,
-                                }),
-                              });
-                              setCommandOpen(false);
-                            }}
-                          >
-                            <FeedFavicon
-                              className="ms-0.5 me-2 size-4 shrink-0 rounded-sm"
-                              faviconUrl={item.faviconUrl}
-                              feedUrl={item.url}
-                              siteUrl={item.link}
-                              title={item.title || item.url}
-                            />
-                            <span className="min-w-0 flex-1 truncate">{item.title}</span>
-                            {item.folderName ? (
-                              <span
-                                className={cn(
-                                  "truncate text-xs",
-                                  scopedFeedId === item.feedId
-                                    ? "text-accent-foreground/72"
-                                    : "text-muted-foreground",
-                                )}
-                              >
-                                {item.folderName}
-                              </span>
-                            ) : null}
-                            {scopedFeedId === item.feedId ? (
-                              <Badge className="ms-2" size="sm" variant="secondary">
-                                Current
-                              </Badge>
-                            ) : null}
-                          </CommandItem>
-                        ))}
-                      </CommandGroup>
-                      <CommandSeparator />
-                      <CommandGroup>
-                        <CommandGroupLabel>Actions</CommandGroupLabel>
-                        <CommandItem
-                          value="Create folder new folder"
-                          onClick={() => {
-                            openNestedDialog(setCreateFolderOpen);
-                          }}
-                        >
-                          <span>Create folder</span>
-                        </CommandItem>
-                        <CommandItem
-                          value="Manage feeds feed sources"
-                          onClick={() => {
-                            openNestedDialog(setManageFeedsOpen);
-                          }}
-                        >
-                          <span>Manage feeds</span>
-                        </CommandItem>
-                      </CommandGroup>
-                    </CommandList>
-                  </CommandPanel>
-                  <CommandFooter>
-                    <span>Open inbox views, folders, feeds, or organization actions.</span>
-                  </CommandFooter>
-                </Command>
-              </CommandDialogPopup>
+              <WorkspaceHeaderCommandContent
+                feedItems={feedItems}
+                folderItems={folderItems}
+                followedFeedsQuery={followedFeedsQuery}
+                foldersQuery={foldersQuery}
+                inboxItems={inboxItems}
+                navigate={navigate}
+                onClose={() => {
+                  setCommandOpen(false);
+                }}
+                onCreateFolder={() => {
+                  openNestedDialog(setCreateFolderOpen);
+                }}
+                onManageFeeds={() => {
+                  openNestedDialog(setManageFeedsOpen);
+                }}
+                scopedFeedId={scopedFeedId}
+                scopedFolderId={scopedFolderId}
+              />
             </CommandDialog>
           </SidebarMenuItem>
           <SidebarMenuItem>
@@ -393,5 +225,189 @@ export function SidebarWorkspaceHeader({
       <CreateFolderDialog hideTrigger open={createFolderOpen} onOpenChange={setCreateFolderOpen} />
       <ManageFeedsDialog open={manageFeedsOpen} onOpenChange={setManageFeedsOpen} />
     </>
+  );
+}
+
+type WorkspaceHeaderCommandContentProps = {
+  feedItems: Array<{
+    faviconUrl: string | null;
+    feedId: string;
+    folderName: string | null;
+    link: string | null;
+    title: string;
+    url: string;
+  }>;
+  folderItems: Array<{ id: string; name: string }>;
+  followedFeedsQuery: { isError: boolean; isLoading: boolean };
+  foldersQuery: { isError: boolean; isLoading: boolean };
+  inboxItems: ReturnType<typeof getInboxItems>;
+  navigate: ReturnType<typeof useNavigate>;
+  onClose: () => void;
+  onCreateFolder: () => void;
+  onManageFeeds: () => void;
+  scopedFeedId?: string;
+  scopedFolderId?: string;
+};
+
+function WorkspaceHeaderCommandContent({
+  feedItems,
+  folderItems,
+  followedFeedsQuery,
+  foldersQuery,
+  inboxItems,
+  navigate,
+  onClose,
+  onCreateFolder,
+  onManageFeeds,
+  scopedFeedId,
+  scopedFolderId,
+}: WorkspaceHeaderCommandContentProps) {
+  return (
+    <CommandDialogPopup>
+      <Command>
+        <CommandInput placeholder="Switch feeds…" />
+        <CommandPanel>
+          <CommandList>
+            <CommandEmpty>No matching folders, feeds, or actions.</CommandEmpty>
+            <CommandGroup>
+              <CommandGroupLabel>Inbox</CommandGroupLabel>
+              {inboxItems.map((item) => (
+                <CommandItem
+                  key={item.label}
+                  value={item.label}
+                  onClick={() => {
+                    void item.action();
+                    onClose();
+                  }}
+                >
+                  <item.icon className="me-2 size-4" />
+                  <span>{item.label}</span>
+                  <CommandShortcut>{item.shortcut}</CommandShortcut>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+            <CommandSeparator />
+            <CommandGroup>
+              <CommandGroupLabel>Folders</CommandGroupLabel>
+              {foldersQuery.isLoading ? (
+                <CommandItem disabled value="loading-folders">
+                  <FolderInfoFill className="me-2 size-4" />
+                  <span>Loading folders…</span>
+                </CommandItem>
+              ) : null}
+              {foldersQuery.isError ? (
+                <CommandItem disabled value="folders-error">
+                  <FolderWarningFill className="me-2 size-4" />
+                  <span>Unable to load folders</span>
+                </CommandItem>
+              ) : null}
+              {!foldersQuery.isLoading && !foldersQuery.isError && folderItems.length === 0 ? (
+                <CommandItem disabled value="no-folders">
+                  <FolderForbidFill className="me-2 size-4" />
+                  <span>No folders yet</span>
+                </CommandItem>
+              ) : null}
+              {folderItems.map((folder) => (
+                <CommandItem
+                  key={folder.id}
+                  value={`${folder.name} folder`}
+                  className={cn(
+                    scopedFolderId === folder.id && "bg-accent/72 text-accent-foreground",
+                  )}
+                  onClick={() => {
+                    void navigateToInbox(navigate, "today", undefined, folder.id);
+                    onClose();
+                  }}
+                >
+                  <Folder2Fill className="me-2 size-4" />
+                  <span>{folder.name}</span>
+                  {scopedFolderId === folder.id ? (
+                    <Badge className="ms-auto" size="sm" variant="secondary">
+                      Current
+                    </Badge>
+                  ) : null}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+            <CommandSeparator />
+            <CommandGroup>
+              <CommandGroupLabel>Feeds</CommandGroupLabel>
+              {followedFeedsQuery.isLoading ? (
+                <CommandItem disabled value="loading-feeds">
+                  <NewsFill className="me-2 size-4" />
+                  <span>Loading feeds…</span>
+                </CommandItem>
+              ) : null}
+              {followedFeedsQuery.isError ? (
+                <CommandItem disabled value="feeds-error">
+                  <NewsFill className="me-2 size-4" />
+                  <span>Unable to load feeds</span>
+                </CommandItem>
+              ) : null}
+              {!followedFeedsQuery.isLoading &&
+              !followedFeedsQuery.isError &&
+              feedItems.length === 0 ? (
+                <CommandItem disabled value="no-feeds">
+                  <NewsFill className="me-2 size-4" />
+                  <span>No followed feeds</span>
+                </CommandItem>
+              ) : null}
+              {feedItems.map((item) => (
+                <CommandItem
+                  key={item.feedId}
+                  value={`${item.title} ${item.url} ${item.folderName ?? ""}`}
+                  className={cn(
+                    scopedFeedId === item.feedId && "bg-accent/72 text-accent-foreground",
+                  )}
+                  onClick={() => {
+                    void navigateToInbox(navigate, "inbox", item.feedId);
+                    onClose();
+                  }}
+                >
+                  <FeedFavicon
+                    className="ms-0.5 me-2 size-4 shrink-0 rounded-sm"
+                    faviconUrl={item.faviconUrl}
+                    feedUrl={item.url}
+                    siteUrl={item.link}
+                    title={item.title || item.url}
+                  />
+                  <span className="min-w-0 flex-1 truncate">{item.title}</span>
+                  {item.folderName ? (
+                    <span
+                      className={cn(
+                        "truncate text-xs",
+                        scopedFeedId === item.feedId
+                          ? "text-accent-foreground/72"
+                          : "text-muted-foreground",
+                      )}
+                    >
+                      {item.folderName}
+                    </span>
+                  ) : null}
+                  {scopedFeedId === item.feedId ? (
+                    <Badge className="ms-2" size="sm" variant="secondary">
+                      Current
+                    </Badge>
+                  ) : null}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+            <CommandSeparator />
+            <CommandGroup>
+              <CommandGroupLabel>Actions</CommandGroupLabel>
+              <CommandItem value="Create folder new folder" onClick={onCreateFolder}>
+                <span>Create folder</span>
+              </CommandItem>
+              <CommandItem value="Manage feeds feed sources" onClick={onManageFeeds}>
+                <span>Manage feeds</span>
+              </CommandItem>
+            </CommandGroup>
+          </CommandList>
+        </CommandPanel>
+        <CommandFooter>
+          <span>Open inbox views, folders, feeds, or organization actions.</span>
+        </CommandFooter>
+      </Command>
+    </CommandDialogPopup>
   );
 }

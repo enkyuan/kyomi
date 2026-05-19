@@ -5,7 +5,7 @@ import type { ReaderLayoutMode } from "../core";
 import { mountReaderLinkPreviewCards } from "./components/link-preview-card";
 import { prepareArticleHtml } from "./html/string-prep";
 import { runReaderDomEnhancements } from "./html/dom-enhancements";
-import { enhanceArticleCodeBlocks } from "./lib/code-blocks";
+import { enhanceCodeBlocks } from "./lib/code-block";
 
 function updateReaderLinkTargets(node: HTMLElement, openLinksInNewTab: boolean) {
   const anchors = node.querySelectorAll("a[href]");
@@ -46,7 +46,7 @@ export function RenderHtml({
   };
 
   const runAllEnhancements = (node: HTMLElement) => {
-    enhanceArticleCodeBlocks(node);
+    enhanceCodeBlocks(node);
     runReaderDomEnhancements(node, { layoutMode });
     updateReaderLinkTargets(node, openLinksInNewTab);
     if (showLinkPreviews) {

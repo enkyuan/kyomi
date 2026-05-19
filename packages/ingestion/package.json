@@ -1,5 +1,5 @@
 {
-  "name": "@cronos/ingestion",
+  "name": "@vols.rss/ingestion",
   "private": true,
   "type": "module",
   "exports": {
@@ -9,8 +9,8 @@
     "test": "bun test src"
   },
   "dependencies": {
-    "@cronos/db": "workspace:*",
-    "@cronos/favicon": "workspace:*",
+    "@vols.rss/db": "workspace:*",
+    "@vols.rss/favicon": "workspace:*",
     "drizzle-orm": "^0.45.2",
     "fast-xml-parser": "^5.5.10",
     "pg": "^8.16.3"

@@ -2,6 +2,7 @@ import { assertSafeFaviconHost, ALLOWED_SCHEMES } from "./host-safety";
 
 const MAX_REDIRECT_HOPS = 5;
 const HTML_ICON_SCAN_MAX_CHARS = 128 * 1024;
+const FAVICON_REQUEST_TIMEOUT_MS = 1_200;
 
 /**
  * Follows redirects manually, re-validating each Location URL's hostname with
@@ -117,7 +118,7 @@ function isImageResponse(response: Response, requestUrl: string): boolean {
 export async function tryFetchImage(imageUrl: string): Promise<Response | null> {
   const response = await fetchWithRedirectGuard(
     imageUrl,
-    { headers: { Accept: "image/*,*/*" }, signal: AbortSignal.timeout(2500) },
+    { headers: { Accept: "image/*,*/*" }, signal: AbortSignal.timeout(FAVICON_REQUEST_TIMEOUT_MS) },
     false,
   );
   if (!response || !isImageResponse(response, imageUrl)) {
@@ -148,7 +149,7 @@ export async function tryFetchImageIfHostSafe(imageUrl: string): Promise<Respons
   // bypass the SSRF guard by pointing to a private/internal address.
   const response = await fetchWithRedirectGuard(
     imageUrl,
-    { headers: { Accept: "image/*,*/*" }, signal: AbortSignal.timeout(2500) },
+    { headers: { Accept: "image/*,*/*" }, signal: AbortSignal.timeout(FAVICON_REQUEST_TIMEOUT_MS) },
     true,
   );
   if (!response || !isImageResponse(response, imageUrl)) {
@@ -163,7 +164,7 @@ export async function findIconsFromHtml(origin: string): Promise<string[]> {
   try {
     const response = await fetchWithRedirectGuard(
       origin,
-      { headers: { Accept: "text/html" }, signal: AbortSignal.timeout(2500) },
+      { headers: { Accept: "text/html" }, signal: AbortSignal.timeout(FAVICON_REQUEST_TIMEOUT_MS) },
       true,
     );
     if (!response?.ok) return [];
@@ -247,34 +248,56 @@ export async function resolveFeedFaviconUrl(
     return null;
   }
 
-  const iconHrefs = await findIconsFromHtml(origin);
-  for (const iconHref of iconHrefs) {
-    const htmlIconResult = await tryFetchImageIfHostSafe(iconHref);
-    if (htmlIconResult) {
-      htmlIconResult.body?.cancel().catch(() => {});
-      return { url: iconHref, source: "html_link" };
-    }
-  }
+  const runners: Array<Promise<ResolveFeedFaviconUrlResult>> = [];
 
-  const directResult = await tryFetchImage(`${origin}/favicon.ico`);
-  if (directResult) {
-    directResult.body?.cancel().catch(() => {});
-    return { url: `${origin}/favicon.ico`, source: "favicon_ico" };
-  }
+  runners.push(
+    findIconsFromHtml(origin).then(async (iconHrefs) => {
+      for (const iconHref of iconHrefs) {
+        const htmlIconResult = await tryFetchImageIfHostSafe(iconHref);
+        if (htmlIconResult) {
+          htmlIconResult.body?.cancel().catch(() => {});
+          return { url: iconHref, source: "html_link" as FaviconResolutionSource };
+        }
+      }
+      throw new Error("No HTML icon found");
+    }),
+  );
+
+  runners.push(
+    tryFetchImage(`${origin}/favicon.ico`).then((result) => {
+      if (result) {
+        result.body?.cancel().catch(() => {});
+        return { url: `${origin}/favicon.ico`, source: "favicon_ico" as FaviconResolutionSource };
+      }
+      throw new Error("No direct favicon found");
+    }),
+  );
 
   const googleUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=32`;
-  const googleResult = await tryFetchImage(googleUrl);
-  if (googleResult) {
-    googleResult.body?.cancel().catch(() => {});
-    return { url: googleUrl, source: "google_s2" };
-  }
+  runners.push(
+    tryFetchImage(googleUrl).then((result) => {
+      if (result) {
+        result.body?.cancel().catch(() => {});
+        return { url: googleUrl, source: "google_s2" as FaviconResolutionSource };
+      }
+      throw new Error("No Google favicon found");
+    }),
+  );
 
   const duckUrl = `https://icons.duckduckgo.com/ip3/${hostname}.ico`;
-  const duckDuckGoResult = await tryFetchImage(duckUrl);
-  if (duckDuckGoResult) {
-    duckDuckGoResult.body?.cancel().catch(() => {});
-    return { url: duckUrl, source: "duckduckgo" };
-  }
+  runners.push(
+    tryFetchImage(duckUrl).then((result) => {
+      if (result) {
+        result.body?.cancel().catch(() => {});
+        return { url: duckUrl, source: "duckduckgo" as FaviconResolutionSource };
+      }
+      throw new Error("No DuckDuckGo favicon found");
+    }),
+  );
 
-  return null;
+  try {
+    return await Promise.any(runners);
+  } catch {
+    return null;
+  }
 }

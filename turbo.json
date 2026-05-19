@@ -1,5 +1,6 @@
 {
-  "$schema": "https://v2-9-8.turborepo.dev/schema.json",
+  "$schema": "https://v2-9-14.turborepo.dev/schema.json",
+  "globalDependencies": ["bun.lock", "package.json"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
@@ -49,6 +50,37 @@
       "cache": false
     },
     "catalog:sync": {
+      "cache": false
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:migrate": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    },
+    "db:pull": {
+      "cache": false
+    },
+    "db:studio": {
+      "cache": false
+    },
+    "docker:up": {
+      "cache": false
+    },
+    "docker:down": {
+      "cache": false
+    },
+    "docker:restart": {
+      "cache": false
+    },
+    "docker:logs": {
+      "cache": false,
+      "persistent": true
+    },
+    "docker:ps": {
       "cache": false
     }
   }

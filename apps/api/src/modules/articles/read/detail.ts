@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@cronos/db";
+import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@vols.rss/db";
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";
 import { decodeNullableText, decodeText } from "@shared/text/html-entities";
@@ -129,11 +129,13 @@ export async function getArticleDetailForUser(
   userId: string,
   articleId: string,
 ): Promise<ArticleDetailDto> {
-  const feed = await getFeedArticleDetailForUser(database, userId, articleId);
+  const [feed, clip] = await Promise.all([
+    getFeedArticleDetailForUser(database, userId, articleId),
+    getClipDetailForUser(database, userId, articleId),
+  ]);
   if (feed) {
     return feed;
   }
-  const clip = await getClipDetailForUser(database, userId, articleId);
   if (clip) {
     return clip;
   }

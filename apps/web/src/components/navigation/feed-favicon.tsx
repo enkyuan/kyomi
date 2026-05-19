@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { RssFill } from "@mingcute/react";
-import { buildClientFaviconUrl } from "@cronos/favicon/browser";
+import { buildClientFaviconUrl } from "@vols.rss/favicon/browser";
 
 const FAVICON_ERROR_TTL_MS = 60 * 1000;
 
@@ -43,7 +43,7 @@ function parseOrigin(raw: string | null | undefined): string | null {
 /**
  * Returns the URL to use for a feed favicon:
  * - Stored favicon URL from feed metadata when available.
- * - Falls back to the /api/favicon proxy, which uses @cronos/favicon server-side.
+ * - Falls back to the /api/favicon proxy, which uses @vols.rss/favicon server-side.
  */
 export function buildFaviconUrl(
   storedFaviconUrl: string | null | undefined,

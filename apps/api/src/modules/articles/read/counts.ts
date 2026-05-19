@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { articleClips, feedItemUserState, feedItems, feedSubscriptions, feeds } from "@cronos/db";
+import { articleClips, feedItemUserState, feedItems, feedSubscriptions, feeds } from "@vols.rss/db";
 import { and, eq, gte, inArray, lt, sql } from "drizzle-orm";
 import { articleIsReadSql } from "./sql";
 import type { ArticleCountScope, ArticleCountsDto } from "../types";

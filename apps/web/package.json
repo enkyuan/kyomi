@@ -1,5 +1,5 @@
 {
-  "name": "@cronos/web",
+  "name": "@vols.rss/web",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,12 +10,12 @@
     "test": "bunx vitest run"
   },
   "dependencies": {
-    "@cronos/sanitization": "workspace:*",
-    "@cronos/reader": "workspace:*",
+    "@vols.rss/sanitization": "workspace:*",
+    "@vols.rss/reader": "workspace:*",
     "@base-ui/react": "^1.3.0",
     "@chenglou/pretext": "^0.0.4",
-    "@cronos/db": "workspace:*",
-    "@cronos/favicon": "workspace:*",
+    "@vols.rss/db": "workspace:*",
+    "@vols.rss/favicon": "workspace:*",
     "@fontsource-variable/inter": "^5.2.8",
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@fontsource/dm-sans": "^5.2.8",
@@ -88,7 +88,7 @@
     "@vitejs/plugin-react": "^5.1.4",
     "agentation": "^3.0.2",
     "dotenv": "^17.3.1",
-    "react-grab": "^0.1.32",
+    "react-grab": "^0.1.34",
     "react-scan": "^0.5.3",
     "tsx": "^4.21.0",
     "tw-animate-css": "^1.4.0",

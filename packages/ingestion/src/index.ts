@@ -1,9 +1,9 @@
-import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "@cronos/favicon";
+import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "@vols.rss/favicon";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { eq, sql } from "drizzle-orm";
 import { XMLParser } from "fast-xml-parser";
-import { feedItems, feeds } from "@cronos/db";
-import * as schema from "@cronos/db";
+import { feedItems, feeds } from "@vols.rss/db";
+import * as schema from "@vols.rss/db";
 import { normalizeArticleUrl } from "./article-identity";
 
 export { buildArticleIdentity, normalizeArticleUrl } from "./article-identity";
@@ -574,8 +574,9 @@ async function fetchFeedDocument(
   try {
     const headers: Record<string, string> = {
       accept:
-        "application/rss+xml, application/atom+xml, application/xml, application/json, text/xml;q=0.9, */*;q=0.8",
-      "user-agent": "CronosFeedFetcher/1.0",
+        "text/html,application/xhtml+xml,application/xml;q=0.9,application/rss+xml,application/atom+xml,application/json,*/*;q=0.8",
+      "user-agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 (VolsRssFeedFetcher/1.0)",
     };
     if (etag) headers["if-none-match"] = etag;
     if (lastModified) headers["if-modified-since"] = lastModified;
@@ -914,6 +915,22 @@ export function parseFeedDocument(
   const trimmed = body.trim();
   if (trimmed.startsWith("{")) {
     return parseJsonFeedDocument(trimmed, feedId, finalUrl);
+  }
+
+  const lower = trimmed.toLowerCase();
+  if (lower.startsWith("<html") || lower.startsWith("<!doctype html")) {
+    const titleMatch = trimmed.match(/<title[^>]*>([^<]+)<\/title>/i);
+    const title = titleMatch ? decodeHtmlEntities(titleMatch[1]).trim() : "Untitled";
+    return {
+      metadata: {
+        title,
+        description: "Website followed via link",
+        link: finalUrl,
+        iconUrl: null,
+        canonicalUrl: normalizeFeedUrl(finalUrl),
+      },
+      items: [],
+    };
   }
 
   const parser = new XMLParser({

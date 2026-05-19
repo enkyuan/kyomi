@@ -1,4 +1,4 @@
-# @cronos/sanitization
+# @vols.rss/sanitization
 
 Owns shared HTML sanitization configuration.
 

@@ -1,7 +1,6 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
-import { uuidParam } from "@shared/http/v1-stub";
 import {
   createFolder,
   deleteFolder,
@@ -9,18 +8,13 @@ import {
   markFolderReadStatus,
   updateFolder,
 } from "./service";
-
-const folderResponse = t.Object({
-  id: t.String(),
-  name: t.String(),
-  createdAt: t.String(),
-});
-
-const folderReadStatusResponse = t.Object({
-  message: t.String(),
-  folderId: t.String(),
-  updatedSubscriptions: t.Number(),
-});
+import {
+  createFolderBody,
+  folderIdParams,
+  folderReadStatusResponse,
+  folderResponse,
+  updateFolderBody,
+} from "./schemas";
 
 export function registerFolderRoutes(app: Elysia) {
   return app
@@ -34,7 +28,7 @@ export function registerFolderRoutes(app: Elysia) {
         return created;
       },
       {
-        body: t.Object({ name: t.String({ minLength: 1 }) }),
+        body: createFolderBody,
         response: { 201: folderResponse },
       },
     )
@@ -61,8 +55,8 @@ export function registerFolderRoutes(app: Elysia) {
         return updated;
       },
       {
-        params: t.Object({ folderId: uuidParam }),
-        body: t.Object({ name: t.String({ minLength: 1 }) }),
+        params: folderIdParams,
+        body: updateFolderBody,
         response: { 200: folderResponse },
       },
     )
@@ -76,7 +70,7 @@ export function registerFolderRoutes(app: Elysia) {
         return;
       },
       {
-        params: t.Object({ folderId: uuidParam }),
+        params: folderIdParams,
         response: { 204: t.Void() },
       },
     )
@@ -89,7 +83,7 @@ export function registerFolderRoutes(app: Elysia) {
         return result;
       },
       {
-        params: t.Object({ folderId: uuidParam }),
+        params: folderIdParams,
         response: { 200: folderReadStatusResponse },
       },
     );

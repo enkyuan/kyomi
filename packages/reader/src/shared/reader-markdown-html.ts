@@ -2,12 +2,16 @@ import { Marked, Renderer } from "marked";
 import markedKatex from "marked-katex-extension";
 import { normalizeSafeHttpUrl } from "../core";
 
-function escapeAttr(value: string): string {
+function escapeHtml(value: string): string {
   return value
     .replace(/&/g, "&amp;")
     .replace(/"/g, "&quot;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
+}
+
+function escapeAttr(value: string): string {
+  return escapeHtml(value);
 }
 
 function createMarked(baseUrl?: string | null, openLinksInNewTab = true): Marked {
@@ -37,13 +41,13 @@ function createMarked(baseUrl?: string | null, openLinksInNewTab = true): Marked
   renderer.code = function ({ text, lang }) {
     const language = (lang ?? "").trim();
     const classAttr = language ? ` class="language-${escapeAttr(language)}"` : "";
-    return `<pre><code${classAttr}>${escapeAttr(text)}</code></pre>`;
+    return `<pre><code${classAttr}>${escapeHtml(text)}</code></pre>`;
   };
 
   // Escape raw HTML blocks/inline HTML instead of passing them through, so
   // untrusted markdown (e.g. user clips) cannot inject arbitrary tags/attributes.
   renderer.html = function ({ text }) {
-    return escapeAttr(text);
+    return escapeHtml(text);
   };
 
   const marked = new Marked();

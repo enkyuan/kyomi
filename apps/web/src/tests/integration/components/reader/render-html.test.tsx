@@ -2,7 +2,7 @@
 
 import { act, render, waitFor } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
-import { RenderHtml } from "@cronos/reader/web";
+import { RenderHtml } from "@vols.rss/reader/web";
 
 describe("RenderHtml", () => {
   test("keeps div structure and filtered classes aligned with server sanitizer", () => {
@@ -491,7 +491,7 @@ describe("RenderHtml – code block normalization", () => {
 
   test("treats explicit fence language as authoritative", async () => {
     const html = `
-      <pre><code class="language-foo">{"name":"cronos","enabled":true}</code></pre>
+      <pre><code class="language-foo">{"name":"vols.rss","enabled":true}</code></pre>
     `;
     const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
     const root = container.querySelector(".article-body");

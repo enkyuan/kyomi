@@ -1,5 +1,5 @@
 {
-  "name": "cronos",
+  "name": "vols.rss",
   "private": true,
   "packageManager": "bun@1.1.0",
   "workspaces": [
@@ -8,10 +8,9 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "bootstrap": "bun run setup:app",
-    "bootstrap:full": "bun run setup:app && bun run setup:catalog",
+    "bootstrap": "bun run setup:app && bun run setup:catalog",
     "dev": "turbo run dev",
-    "dev:app": "turbo run dev --filter=@cronos/api --filter=@cronos/web",
+    "dev:app": "turbo run dev --filter=@vols.rss/api --filter=@vols.rss/web",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "fmt": "turbo run fmt",
@@ -48,7 +47,7 @@
     "drizzle-kit": "^0.31.10",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "turbo": "^2.9.8"
+    "turbo": "^2.9.14"
   },
   "dependencies": {
     "@radix-ui/react-slider": "^1.3.6",

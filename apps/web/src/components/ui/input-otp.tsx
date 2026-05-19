@@ -2,14 +2,12 @@
 
 import { OTPInput, OTPInputContext } from "input-otp";
 import type * as React from "react";
-import { useContext } from "react";
+import { use } from "react";
 import { cn } from "@lib/utils";
 import { Separator } from "@components/ui/separator";
 
 type InputOTPSize = "default" | "lg";
-type DistributiveOmit<T, K extends PropertyKey> = T extends unknown
-  ? Omit<T, K>
-  : never;
+type DistributiveOmit<T, K extends PropertyKey> = T extends unknown ? Omit<T, K> : never;
 
 export type InputOTPProps = DistributiveOmit<
   React.ComponentProps<typeof OTPInput>,
@@ -61,7 +59,7 @@ export function InputOTPSlot({
 }: React.ComponentProps<"div"> & {
   index: number;
 }): React.ReactElement {
-  const inputOTPContext = useContext(OTPInputContext);
+  const inputOTPContext = use(OTPInputContext);
   const slot = inputOTPContext?.slots[index];
   const { char, hasFakeCaret, isActive } = slot ?? {};
 

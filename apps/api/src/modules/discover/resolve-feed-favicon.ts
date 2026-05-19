@@ -1,4 +1,4 @@
-import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "@cronos/favicon";
+import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "@vols.rss/favicon";
 import type { AppLogger } from "@adapters/logger";
 import type { ResolvedRemoteFeed } from "./resolve-remote-feed";
 

@@ -65,9 +65,8 @@ export function FeedbackDialog({ trigger }: FeedbackDialogProps) {
           <DialogPanel>
             <Field>
               <Textarea
-                autoFocus
                 onChange={(event) => setValue(event.target.value)}
-                placeholder="Write your feedback..."
+                placeholder="Write your feedback…"
                 value={value}
               />
             </Field>

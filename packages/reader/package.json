@@ -1,5 +1,5 @@
 {
-  "name": "@cronos/reader",
+  "name": "@vols.rss/reader",
   "private": true,
   "type": "module",
   "exports": {
@@ -25,7 +25,7 @@
     "react-dom": { "optional": true }
   },
   "dependencies": {
-    "@cronos/sanitization": "workspace:*",
+    "@vols.rss/sanitization": "workspace:*",
     "dompurify": "^3.4.0",
     "highlight.js": "^11.11.1",
     "katex": "^0.16.45",

@@ -14,10 +14,7 @@ const BREAKPOINTS = {
 
 type Breakpoint = keyof typeof BREAKPOINTS;
 
-type BreakpointQuery =
-  | Breakpoint
-  | `max-${Breakpoint}`
-  | `${Breakpoint}:max-${Breakpoint}`;
+type BreakpointQuery = Breakpoint | `max-${Breakpoint}` | `${Breakpoint}:max-${Breakpoint}`;
 
 function resolveMin(value: Breakpoint | number): string {
   const px = typeof value === "number" ? value : BREAKPOINTS[value];
@@ -29,15 +26,15 @@ function resolveMax(value: Breakpoint | number): string {
   return `(max-width: ${px - 1}px)`;
 }
 
-function parseQuery(
-  query: BreakpointQuery | MediaQueryInput | (string & {}),
-): string {
+function parseQuery(query: BreakpointQuery | MediaQueryInput | (string & {})): string {
   if (typeof query !== "string") {
     const parts: string[] = [];
     if (query.min != null) parts.push(resolveMin(query.min));
     if (query.max != null) parts.push(resolveMax(query.max));
     if (query.pointer === "coarse") parts.push("(pointer: coarse)");
     if (query.pointer === "fine") parts.push("(pointer: fine)");
+    if (query.orientation === "landscape") parts.push("(orientation: landscape)");
+    if (query.orientation === "portrait") parts.push("(orientation: portrait)");
     if (parts.length === 0) return "(min-width: 0px)";
     return parts.join(" and ");
   }
@@ -57,21 +54,19 @@ function parseQuery(
   return parts.length > 0 ? parts.join(" and ") : query;
 }
 
-function getServerSnapshot(): boolean {
-  return false;
-}
-
 export type MediaQueryInput = {
   min?: Breakpoint | number;
   max?: Breakpoint | number;
+  defaultMatches?: boolean;
   /** Touch-like input (finger). Use "fine" for mouse/trackpad. */
   pointer?: "coarse" | "fine";
+  orientation?: "portrait" | "landscape";
 };
 
-export function useMediaQuery(
-  query: BreakpointQuery | MediaQueryInput | (string & {}),
-): boolean {
+export function useMediaQuery(query: BreakpointQuery | MediaQueryInput | (string & {})): boolean {
   const mediaQuery = parseQuery(query);
+  const defaultMatches = typeof query === "string" ? false : (query.defaultMatches ?? false);
+  const getDefaultSnapshot = useCallback(() => defaultMatches, [defaultMatches]);
 
   const subscribe = useCallback(
     (callback: () => void) => {
@@ -88,7 +83,7 @@ export function useMediaQuery(
     return window.matchMedia(mediaQuery).matches;
   }, [mediaQuery]);
 
-  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  return useSyncExternalStore(subscribe, getSnapshot, getDefaultSnapshot);
 }
 
 export function useIsMobile(): boolean {

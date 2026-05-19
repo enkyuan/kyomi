@@ -1,40 +1,69 @@
 "use client";
 
 import { AppShell } from "@/app/app-shell";
-import { useSplitPane } from "@hooks/use-split-pane";
-import { InboxDetailView } from "@modules/inbox/components/detail-view";
-import { InboxList } from "@modules/inbox/components/list";
+import { ReaderDetailView } from "@modules/reader";
 import {
   MIN_INBOX_LEFT_PERCENT,
   MIN_INBOX_RIGHT_PERCENT,
-} from "@modules/inbox/components/inbox-layout-constants";
+} from "./components/inbox-layout-constants";
 import {
+  InboxMobileSingleColumnLayout,
   InboxReaderFocusDetailLayout,
-  InboxReaderFocusListLayout,
   InboxSplitLayout,
-} from "@modules/inbox/components/inbox-layouts";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { getInboxViewCount, updateInboxItemState, type InboxItem } from "@modules/inbox/api";
+} from "./components/inbox-layouts";
+import { useQuery } from "@tanstack/react-query";
+import { InboxList } from "./components/list";
+import {
+  InboxPreferencesBootstrapProvider,
+  useInboxPreferences,
+  type InboxPreferences,
+} from "./hooks/use-inbox-preferences";
+import { dedupePagedInboxItemsById, useInboxQueries } from "./hooks/use-inbox-queries";
+import { useInboxItemStateMutation } from "./hooks/use-inbox-item-state-mutation";
+import { useInboxRouteState } from "./hooks/use-route-state";
+import { useMarkReadBehavior } from "./hooks/use-mark-read-behavior";
+import { useResponsiveReaderMode } from "./hooks/use-responsive-reader-mode";
+import { useSplitPane } from "./hooks/use-split-pane";
+import { getInboxViewCount, type InboxItem } from "./services/api";
+import { useClientTimezoneOffsetMinutes } from "@hooks/use-client-timezone-offset";
+import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { QUERY_TIMES } from "@lib/query-policies";
-import { useInboxPreferences } from "@lib/inbox-preferences";
-import { updateInboxItemCaches } from "@modules/inbox/lib/cache";
-import { deriveInboxListHeaderCount } from "@modules/inbox/lib/count-display";
-import { inboxViewCountQueryKey } from "@modules/inbox/lib/query-options";
-import { dedupePagedInboxItemsById, useInboxQueries } from "@hooks/use-inbox-queries";
-import { useInboxRouteState } from "@modules/inbox/use-route-state";
-import { useMarkReadBehavior } from "@modules/inbox/use-mark-read-behavior";
+import { deriveInboxListHeaderCount } from "./lib/count-display";
+import { inboxViewCountQueryKey } from "./lib/query-options";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
-import type { InboxPreferences } from "@lib/inbox-preferences";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 export function InboxPage({
   initialInboxPreferences,
+  initialSplitPanePercent,
 }: {
   initialInboxPreferences?: InboxPreferences;
+  initialSplitPanePercent?: number;
+}) {
+  return (
+    <InboxPreferencesBootstrapProvider initialPreferences={initialInboxPreferences}>
+      <InboxPageContent
+        initialInboxPreferences={initialInboxPreferences}
+        initialSplitPanePercent={initialSplitPanePercent}
+      />
+    </InboxPreferencesBootstrapProvider>
+  );
+}
+
+function InboxPageContent({
+  initialInboxPreferences,
+  initialSplitPanePercent,
+}: {
+  initialInboxPreferences?: InboxPreferences;
+  initialSplitPanePercent?: number;
 }) {
   const { preferences } = useInboxPreferences(initialInboxPreferences);
-  const queryClient = useQueryClient();
-  const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
+  const layoutContainerRef = useRef<HTMLDivElement | null>(null);
+  const { containerWidth: layoutContainerWidth } = useViewportMetrics(layoutContainerRef);
+  const layoutVariant = useResponsiveReaderMode(layoutContainerWidth);
+  const isReaderFocusedLayout = layoutVariant === "reader-focused";
+  const [mobileTransitionDirection, setMobileTransitionDirection] = useState<1 | -1>(1);
+  const timezoneOffsetMinutes = useClientTimezoneOffsetMinutes();
 
   const route = useInboxRouteState(preferences);
   const {
@@ -51,10 +80,6 @@ export function InboxPage({
     activeScopeLabel,
   } = route;
 
-  useEffect(() => {
-    setTimezoneOffsetMinutes(new Date().getTimezoneOffset());
-  }, []);
-
   const {
     containerRef: splitContainerRef,
     leftPanelPercent,
@@ -63,7 +88,10 @@ export function InboxPage({
   } = useSplitPane({
     minLeftPercent: MIN_INBOX_LEFT_PERCENT,
     minRightPercent: MIN_INBOX_RIGHT_PERCENT,
-    initialPercent: 32,
+    initialPercent:
+      initialSplitPanePercent && Number.isFinite(initialSplitPanePercent)
+        ? initialSplitPanePercent
+        : 32,
   });
 
   const { inboxQuery, detailQuery } = useInboxQueries({
@@ -77,7 +105,7 @@ export function InboxPage({
   });
 
   const rawInboxItems = useMemo(
-    () => dedupePagedInboxItemsById(inboxQuery.data?.pages.flatMap((page) => page.items) ?? []),
+    () => dedupePagedInboxItemsById(inboxQuery.data?.pages),
     [inboxQuery.data?.pages],
   );
 
@@ -135,29 +163,13 @@ export function InboxPage({
   const isDetailLoading = detailQuery.isFetching;
   const isDetailError = detailQuery.isError;
 
-  const markReadMutation = useMutation({
-    mutationFn: (selectedInboxItemId: string) =>
-      updateInboxItemState({
-        data: {
-          itemId: selectedInboxItemId,
-          isRead: true,
-        },
-      }),
-    onMutate: async (selectedInboxItemId) => {
-      await queryClient.cancelQueries({ queryKey: ["inbox"] });
-      updateInboxItemCaches(queryClient, selectedInboxItemId, { isRead: true }, false);
-    },
-    onSettled: (_data, _error, selectedInboxItemId) => {
-      void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
-      void queryClient.invalidateQueries({ queryKey: ["inbox", "view-count"] });
-      void queryClient.invalidateQueries({
-        queryKey: ["inbox", "item-detail", selectedInboxItemId],
-      });
-      void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
-    },
-  });
+  const markReadMutation = useInboxItemStateMutation();
+
+  const userDismissedTabletSelectionRef = useRef(false);
 
   const clearSelectedItem = useCallback(() => {
+    setMobileTransitionDirection(-1);
+    userDismissedTabletSelectionRef.current = true;
     void navigate({
       search: (prev) => ({
         ...prev,
@@ -168,6 +180,7 @@ export function InboxPage({
 
   const selectItem = useCallback(
     (item: InboxItem) => {
+      setMobileTransitionDirection(1);
       void navigate({
         search: (prev) => ({
           ...prev,
@@ -180,7 +193,7 @@ export function InboxPage({
 
   const fetchNextInboxPage = useCallback(() => {
     void inboxQuery.fetchNextPage();
-  }, [inboxQuery]);
+  }, [inboxQuery.fetchNextPage]);
 
   useMarkReadBehavior({
     itemId,
@@ -188,35 +201,69 @@ export function InboxPage({
     effectiveFilter,
     markReadBehavior: preferences.inboxMarkReadBehavior,
     onMarkRead: (id) => {
-      markReadMutation.mutate(id);
+      markReadMutation.mutate({ itemId: id, patch: { isRead: true } });
     },
   });
 
-  const isReaderFocusMode = preferences.articleOpenBehavior === "reader";
-  const isReaderFocus = isReaderFocusMode && Boolean(itemId);
-  const isReaderFocusList = isReaderFocusMode && !itemId;
-  const showReaderFocusEmptyState =
-    isReaderFocusList && !inboxQuery.isPending && inboxItems.length === 0;
+  useEffect(() => {
+    userDismissedTabletSelectionRef.current = false;
+  }, [effectiveFilter, feedId, folderId]);
+
+  useEffect(() => {
+    if (
+      !isReaderFocusedLayout ||
+      itemId ||
+      inboxQuery.isPending ||
+      inboxItems.length === 0 ||
+      userDismissedTabletSelectionRef.current
+    ) {
+      return;
+    }
+
+    void navigate({
+      search: (prev) => ({
+        ...prev,
+        itemId: inboxItems[0]?.id,
+      }),
+      replace: true,
+    });
+  }, [
+    effectiveFilter,
+    feedId,
+    folderId,
+    inboxItems,
+    inboxQuery.isPending,
+    isReaderFocusedLayout,
+    itemId,
+    navigate,
+  ]);
 
   const listProps = useMemo(
     () => ({
       inboxItems,
       headerCount,
       filter: effectiveFilter,
+      display: {
+        showFavicons: preferences.inboxShowFavicons,
+        disableVirtualization: isResizing,
+      },
+      filterVisibility: {
+        showHidden: showHiddenItems,
+        showRead: showReadItems,
+      },
       density: preferences.inboxDensity,
       fontSizePx: preferences.inboxFontSizePx,
-      showFavicons: preferences.inboxShowFavicons,
       timestampDisplay: preferences.inboxTimestampDisplay,
       timestampHourCycle: preferences.inboxTimestampHourCycle,
       selectedItemId: itemId,
       feedId,
       folderId,
-      showHidden: showHiddenItems,
-      showRead: showReadItems,
-      isLoading: inboxQuery.isPending,
-      hasNextPage: !!inboxQuery.hasNextPage,
-      isFetchingNextPage: inboxQuery.isFetchingNextPage,
-      fetchNextPage: fetchNextInboxPage,
+      pagination: {
+        isLoading: inboxQuery.isPending,
+        hasNextPage: !!inboxQuery.hasNextPage,
+        isFetchingNextPage: inboxQuery.isFetchingNextPage,
+        fetchNextPage: fetchNextInboxPage,
+      },
       onSelectItem: selectItem,
     }),
     [
@@ -229,6 +276,7 @@ export function InboxPage({
       inboxQuery.isFetchingNextPage,
       inboxQuery.hasNextPage,
       inboxQuery.isPending,
+      isResizing,
       preferences.inboxDensity,
       preferences.inboxFontSizePx,
       preferences.inboxShowFavicons,
@@ -243,10 +291,13 @@ export function InboxPage({
 
   const detailProps = useMemo(
     () => ({
-      selectedItem,
-      isDetailLoading,
-      isDetailError,
-      detailError: detailQuery.error,
+      detailState: selectedItem
+        ? ({ status: "selected", item: selectedItem } as const)
+        : isDetailLoading
+          ? ({ status: "loading" } as const)
+          : isDetailError
+            ? ({ status: "error", error: detailQuery.error } as const)
+            : ({ status: "empty" } as const),
       showFavicons: preferences.inboxShowFavicons,
       timestampDisplay: preferences.inboxTimestampDisplay,
       timestampHourCycle: preferences.inboxTimestampHourCycle,
@@ -263,29 +314,42 @@ export function InboxPage({
   );
 
   return (
-    <AppShell readerFocusList={isReaderFocusMode}>
-      {isReaderFocus ? (
-        <InboxReaderFocusDetailLayout>
-          <InboxDetailView {...detailProps} showBackToList onBackToList={clearSelectedItem} />
-        </InboxReaderFocusDetailLayout>
-      ) : isReaderFocusList ? (
-        <InboxReaderFocusListLayout>
-          {showReaderFocusEmptyState ? (
-            <InboxDetailView {...detailProps} />
-          ) : (
-            <InboxList {...listProps} readerFocusMode />
-          )}
-        </InboxReaderFocusListLayout>
-      ) : (
-        <InboxSplitLayout
-          splitContainerRef={splitContainerRef}
-          leftPanelPercent={leftPanelPercent}
-          isResizing={isResizing}
-          setIsResizing={setIsResizing}
-          list={<InboxList {...listProps} readerFocusMode={false} />}
-          detail={<InboxDetailView {...detailProps} />}
-        />
-      )}
+    <AppShell readerFocusMode={isReaderFocusedLayout}>
+      <div ref={layoutContainerRef} className="h-full max-h-full min-h-0 min-w-0">
+        {layoutVariant === "reader-focused" ? (
+          <InboxReaderFocusDetailLayout>
+            <ReaderDetailView {...detailProps} showBackToList onBackToList={clearSelectedItem} />
+          </InboxReaderFocusDetailLayout>
+        ) : layoutVariant === "stacked" ? (
+          <InboxMobileSingleColumnLayout
+            showDetail={Boolean(itemId)}
+            direction={mobileTransitionDirection}
+            list={
+              <InboxList
+                {...listProps}
+                display={{ ...listProps.display, readerFocusMode: false }}
+              />
+            }
+            detail={
+              <ReaderDetailView {...detailProps} showBackToList onBackToList={clearSelectedItem} />
+            }
+          />
+        ) : (
+          <InboxSplitLayout
+            splitContainerRef={splitContainerRef}
+            leftPanelPercent={leftPanelPercent}
+            isResizing={isResizing}
+            setIsResizing={setIsResizing}
+            list={
+              <InboxList
+                {...listProps}
+                display={{ ...listProps.display, readerFocusMode: false }}
+              />
+            }
+            detail={<ReaderDetailView {...detailProps} />}
+          />
+        )}
+      </div>
     </AppShell>
   );
 }

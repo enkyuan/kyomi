@@ -1,23 +1,20 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { listFeedRefreshStatuses, refreshBatchFeeds } from "@modules/feeds/api";
+import { listFeedRefreshStatuses, refreshBatchFeeds } from "@modules/feeds/services/api";
 import {
   BATCH_REFRESH_GRACE_MS,
   BATCH_REFRESH_POLL_MS,
   hasActiveRefreshStatus,
-} from "@modules/inbox/lib/feed-refresh-formatting";
-import {
-  feedRefreshStatusQueryKey,
-  invalidateFeedAndInboxQueries,
-} from "@modules/inbox/lib/query-options";
+} from "../lib/feed-refresh-formatting";
+import { feedRefreshStatusQueryKey, invalidateFeedAndInboxQueries } from "../lib/query-options";
 import { Refresh2Fill } from "@mingcute/react";
 import { Button } from "@components/ui/button";
 
 export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
   const queryClient = useQueryClient();
-  const [isWatching, setIsWatching] = useState(false);
+  const isWatchingRef = useRef(false);
   const pollStartRef = useRef<number | null>(null);
   const wasRefreshingRef = useRef(false);
 
@@ -27,9 +24,11 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
 
   const refreshStatusQuery = useQuery({
     queryKey: feedRefreshStatusQueryKey(folderId),
-    queryFn: () => listFeedRefreshStatuses({ data: { folderId } }),
-    enabled: isWatching,
+    queryFn: async () => (await listFeedRefreshStatuses({ data: { folderId } })) ?? [],
     refetchInterval: (query) => {
+      if (!isWatchingRef.current) {
+        return false;
+      }
       const items = query.state?.data ?? [];
       const active = hasActiveRefreshStatus(items);
       if (active) {
@@ -48,6 +47,7 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
   const mutation = useMutation({
     mutationFn: async () => refreshBatchFeeds({ data: { folderId } }),
     onSuccess: (result) => {
+      void queryClient.invalidateQueries({ queryKey: feedRefreshStatusQueryKey(folderId) });
       invalidateRefreshQueries();
       if (result.failedCount && result.failedCount > 0) {
         console.warn("feeds.refresh.batch.partial_failure", {
@@ -59,13 +59,14 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
       if (result.count > 0) {
         pollStartRef.current = Date.now();
         wasRefreshingRef.current = false;
-        setIsWatching(true);
+        isWatchingRef.current = true;
+        void refreshStatusQuery.refetch();
       }
     },
   });
 
   useEffect(() => {
-    if (!isWatching) {
+    if (!isWatchingRef.current) {
       pollStartRef.current = null;
       wasRefreshingRef.current = false;
       return;
@@ -82,15 +83,15 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
 
     if (wasRefreshingRef.current) {
       invalidateRefreshQueries();
-      setIsWatching(false);
+      isWatchingRef.current = false;
       return;
     }
 
     const startedAt = pollStartRef.current;
     if (startedAt && Date.now() - startedAt >= BATCH_REFRESH_GRACE_MS) {
-      setIsWatching(false);
+      isWatchingRef.current = false;
     }
-  }, [hasActiveRefresh, invalidateRefreshQueries, isWatching]);
+  }, [hasActiveRefresh, invalidateRefreshQueries]);
 
   const batchTitle =
     mutation.isError && mutation.error instanceof Error

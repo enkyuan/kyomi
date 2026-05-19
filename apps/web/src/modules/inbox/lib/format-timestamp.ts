@@ -1,22 +1,19 @@
 import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@lib/api-schemas";
 
-const absoluteFormatterCache = new Map<string, Intl.DateTimeFormat>();
+const absoluteFormatter12h = new Intl.DateTimeFormat("en", {
+  dateStyle: "medium",
+  timeStyle: "short",
+  hour12: true,
+});
+const absoluteFormatter24h = new Intl.DateTimeFormat("en", {
+  dateStyle: "medium",
+  timeStyle: "short",
+  hour12: false,
+});
 const relativeFormatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 function getAbsoluteFormatter(hourCycle: InboxTimestampHourCycleDto) {
-  const key = hourCycle;
-  const cached = absoluteFormatterCache.get(key);
-  if (cached) {
-    return cached;
-  }
-
-  const formatter = new Intl.DateTimeFormat("en", {
-    dateStyle: "medium",
-    timeStyle: "short",
-    hour12: hourCycle === "12h",
-  });
-  absoluteFormatterCache.set(key, formatter);
-  return formatter;
+  return hourCycle === "12h" ? absoluteFormatter12h : absoluteFormatter24h;
 }
 
 function formatRelative(date: Date) {
