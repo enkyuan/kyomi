@@ -1,6 +1,6 @@
 "use client";
 
-import { PhoneFill, SwitchFill } from "@mingcute/react";
+import { SwitchFill } from "@mingcute/react";
 import { SidebarMenuButton, SidebarMenuItem } from "@components/ui/sidebar";
 
 export const advancedSection = {
