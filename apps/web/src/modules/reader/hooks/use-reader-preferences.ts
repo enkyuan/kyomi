@@ -7,7 +7,7 @@ import type {
   ReaderDefaultModeDto,
   ReaderPreferencesDto,
 } from "@lib/api-schemas";
-import { getReaderPreferences, updateReaderPreferences } from "../services/reader-preferences";
+import { getReaderPreferences, updateReaderPreferences } from "../reader-preferences";
 import { useUserPreferences } from "@modules/preferences";
 
 export type ReaderDefaultMode = ReaderDefaultModeDto;

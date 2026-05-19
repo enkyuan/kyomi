@@ -11,7 +11,7 @@ import {
   parseApiErrorMessage,
   parseSessionsResponse,
   type SessionRow,
-} from "../lib/account-helpers";
+} from "../account-helpers";
 
 type UseAccountPanelArgs = {
   session:

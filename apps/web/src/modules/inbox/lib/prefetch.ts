@@ -1,6 +1,6 @@
 import type { QueryClient } from "@tanstack/react-query";
 import type { AnyRouter } from "@tanstack/react-router";
-import { prefetchInboxHotQueries, type InboxQueryScope } from "./query-options";
+import { prefetchInboxHotQueries, type InboxQueryScope } from "../queries/options";
 
 type InboxPreloadRouter = Pick<AnyRouter, "preloadRoute">;
 

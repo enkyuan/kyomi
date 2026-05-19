@@ -2,7 +2,7 @@
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateInboxItemState, type InboxItem } from "../services/api";
-import { updateInboxItemCaches } from "../lib/cache";
+import { updateInboxItemCaches } from "../queries/cache";
 
 export type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
 

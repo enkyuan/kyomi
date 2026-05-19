@@ -8,7 +8,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/auth-provider";
-import { listFollowedFeeds, type FollowedFeed, updateFeedSubscription } from "../services/api";
+import { listFollowedFeeds, type FollowedFeed, updateFeedSubscription } from "../api";
 
 const FOLLOWED_FEEDS_QUERY_KEY = ["feeds", "followed"] as const;
 const PINNED_FEED_IDS_STORAGE_KEY = "vols.rss:pinned-feed-ids";

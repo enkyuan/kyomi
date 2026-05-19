@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { deriveInboxListHeaderCount } from "../../../../modules/inbox/lib/count-display";
+import { deriveInboxListHeaderCount } from "../../../../modules/inbox/utils/count-display";
 
 describe("deriveInboxListHeaderCount", () => {
   test("uses API total when view-count succeeded and not read-scoped", () => {

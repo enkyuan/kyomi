@@ -39,8 +39,8 @@ import {
 } from "@components/ui/sidebar";
 import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-text";
 import { SidebarPretextLabel } from "@components/navigation/sidebar-pretext-label";
-import { CreateFolderDialog, listFolders } from "@modules/folders";
-import { listFollowedFeeds, ManageFeedsDialog, SidebarFeedSearchTrigger } from "@modules/feeds";
+import { Dialog as CreateFolderDialog, listFolders } from "@modules/folders";
+import { Dialog as ManageFeedsDialog, listFollowedFeeds, Sidebar } from "@modules/feeds";
 import { isInboxPathname } from "@modules/inbox";
 import { QUERY_TIMES } from "@lib/query-policies";
 import { cn } from "@lib/utils";
@@ -218,7 +218,7 @@ export function SidebarWorkspaceHeader({
             </CommandDialog>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarFeedSearchTrigger isMacPlatform={isMacKeyboard} />
+            <Sidebar isMacPlatform={isMacKeyboard} />
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>

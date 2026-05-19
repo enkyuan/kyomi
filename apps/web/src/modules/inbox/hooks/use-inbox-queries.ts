@@ -2,7 +2,7 @@
 
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { getInboxItems, type InboxFilter } from "../services/api";
-import { inboxDetailQueryOptions, inboxItemsInfiniteQueryOptions } from "../lib/query-options";
+import { inboxDetailQueryOptions, inboxItemsInfiniteQueryOptions } from "../queries/options";
 
 type UseInboxQueriesInput = {
   filter: InboxFilter;

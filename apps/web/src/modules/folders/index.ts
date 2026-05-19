@@ -1,2 +1,2 @@
-export * from "./services/api";
-export * from "./components/create-folder-dialog";
+export * from "./api";
+export { Dialog } from "./components/create/dialog";

@@ -6,7 +6,7 @@ import { toastManager } from "@components/ui/toast";
 import { useInboxItemStateMutation } from "@modules/inbox";
 import { useMediaQuery } from "@hooks/use-media-query";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/api-schemas";
-import { readerContentForMode } from "../lib/reader-display";
+import { readerContentForMode } from "../reader-display";
 import { useArticleExtraction } from "./use-article-extraction";
 import { useReaderPreferences, type ReaderContentWidth } from "./use-reader-preferences";
 import { cn } from "@lib/utils";
