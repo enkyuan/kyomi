@@ -1,13 +1,14 @@
 import z from "zod";
+import { authEmailSchema } from "@lib/email";
 
 export const loginFormSchema = z.object({
-  email: z.email("Please enter a valid email address"),
+  email: authEmailSchema,
   password: z.string().min(1, "Password is required"),
 });
 
 export const registerFormSchema = z
   .object({
-    email: z.email("Please enter a valid email address"),
+    email: authEmailSchema,
     password: z.string().min(8, "Password must be at least 8 characters long"),
     confirmPassword: z.string().min(1, "Please confirm your password"),
   })

@@ -5,7 +5,7 @@ import { useForm } from "@tanstack/react-form";
 import { Link, useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth-client";
 import { useAuth } from "@integrations/better-auth/auth-provider";
-import { Button } from "@components/ui/button";
+import { Button } from "@vols.rss/ui/button";
 import {
   Card,
   CardAction,
@@ -13,13 +13,13 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@components/ui/card";
-import { Form } from "@components/ui/form";
-import { Field, FieldError, FieldLabel } from "@components/ui/field";
-import { Input } from "@components/ui/input";
-import { PasswordInput } from "@components/ui/password-input";
-import { Spinner } from "@components/ui/spinner";
-import { toastManager } from "@components/ui/toast";
+} from "@vols.rss/ui/card";
+import { Form } from "@vols.rss/ui/form";
+import { Field, FieldError, FieldLabel } from "@vols.rss/ui/field";
+import { Input } from "@vols.rss/ui/input";
+import { PasswordInput } from "@vols.rss/ui/password-input";
+import { Spinner } from "@vols.rss/ui/spinner";
+import { toastManager } from "@vols.rss/ui/toast";
 import {
   getFieldErrorMessage,
   registerDefaultValues,

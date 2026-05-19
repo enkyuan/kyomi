@@ -1,4 +1,4 @@
-import type { ArticleOpenBehaviorDto } from "@lib/api-schemas";
+import type { ArticleOpenBehaviorDto } from "src/lib/schemas";
 
 export const INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME = "cronos_inbox_article_open_behavior";
 export const INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME = "cronos_inbox_split_pane_percent";

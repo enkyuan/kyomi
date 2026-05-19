@@ -15,6 +15,11 @@ This repository follows a monorepo shape modeled after larger production repos:
 3. Reusable logic should be promoted into `packages/*` once consumed by multiple app modules.
 4. Workspace-wide TypeScript baselines live in `packages/tsconfig`.
 
+## Shared UI (`packages/ui`)
+
+- `src/*.tsx`: shadcn-style primitives (import `@vols.rss/ui/button`, etc.).
+- `src/icons/`: product illustrations and empty-state artwork (`@vols.rss/ui/icons/…`). See `src/icons/README.md` before adding new icons.
+
 ## Current Shared Baselines
 
 - `packages/tsconfig/base.json`: default strict TS compiler baseline.

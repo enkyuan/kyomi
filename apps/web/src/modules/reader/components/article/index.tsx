@@ -1,16 +1,16 @@
 "use client";
 
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
-import { formatInboxTimestamp } from "@modules/inbox";
-import { SourceRow } from "@modules/feeds";
+import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
+import { SourceRow } from "@modules/feeds/components/item/source-row";
 import { Toolbar } from "../toolbar";
 import { useReaderToolbarModel } from "@modules/reader/hooks/use-reader-toolbar-model";
 import { ReaderContent } from "@vols.rss/reader/web";
-import { Button } from "@components/ui/button";
-import { Spinner } from "@components/ui/spinner";
-import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
+import { Button } from "@vols.rss/ui/button";
+import { Spinner } from "@vols.rss/ui/spinner";
+import type { ArticleDetailDto, InboxTimestampDisplayDto } from "src/lib/schemas";
 import { cn } from "@lib/utils";
-import { useRelativeTimestampRefresh } from "@hooks/use-relative-timestamp-refresh";
+import { useTimestamp } from "@hooks/use-timestamp";
 import { useLayoutEffect, useRef, useState } from "react";
 import type { RefObject } from "react";
 
@@ -234,7 +234,7 @@ export function Article({
     toolbar.showFloatingToolbar && toolbar.floatingToolbarEdge === "top",
   );
 
-  useRelativeTimestampRefresh(timestampDisplay);
+  useTimestamp(timestampDisplay);
   const displayContent =
     toolbar.displayReader.contentHtml ??
     toolbar.displayReader.contentMarkdown ??

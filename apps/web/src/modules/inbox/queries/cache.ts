@@ -1,7 +1,7 @@
 "use client";
 
 import type { InfiniteData, QueryClient } from "@tanstack/react-query";
-import type { ArticleDetailDto } from "@lib/api-schemas";
+import type { ArticleDetailDto } from "src/lib/schemas";
 import type { InboxItem } from "../services/api";
 import type { InboxListPage } from "./options";
 

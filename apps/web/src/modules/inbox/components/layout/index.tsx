@@ -8,7 +8,7 @@ import {
   INBOX_PANEL_OUTER_PADDING_STYLE,
   INBOX_PANEL_SPACING_PX,
   INBOX_PANEL_VERTICAL_PADDING_STYLE,
-} from "./constants";
+} from "../../lib/constants";
 
 function subscribeNoop() {
   return () => {};

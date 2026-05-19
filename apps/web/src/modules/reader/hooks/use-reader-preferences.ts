@@ -6,7 +6,7 @@ import type {
   ReaderContentWidthDto,
   ReaderDefaultModeDto,
   ReaderPreferencesDto,
-} from "@lib/api-schemas";
+} from "src/lib/schemas";
 import { getReaderPreferences, updateReaderPreferences } from "../reader-preferences";
 import { useUserPreferences } from "@modules/preferences";
 

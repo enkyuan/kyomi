@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Field, FieldItem, FieldLabel } from "@components/ui/field";
-import { Fieldset, FieldsetLegend } from "@components/ui/fieldset";
-import { Radio, RadioGroup } from "@components/ui/radio-group";
+import { Field, FieldItem, FieldLabel } from "@vols.rss/ui/field";
+import { Fieldset, FieldsetLegend } from "@vols.rss/ui/fieldset";
+import { Radio, RadioGroup } from "@vols.rss/ui/radio-group";
 
 const THEME_STORAGE_KEY = "theme";
 

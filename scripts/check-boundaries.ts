@@ -2,13 +2,7 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 
 const ROOT = process.cwd();
-const SOURCE_ROOTS = [
-  "apps/api/src",
-  "apps/web/src",
-  "packages/ingestion/src",
-  "packages/worker/src",
-  "packages/sanitization/src",
-];
+const SOURCE_ROOTS = ["apps/api/src", "apps/web/src", "packages/worker/src", "packages/ui/src"];
 const IMPORT_RE = /\bfrom\s+["']([^"']+)["']|import\s*\(\s*["']([^"']+)["']\s*\)/g;
 
 type Violation = {

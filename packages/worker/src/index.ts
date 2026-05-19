@@ -12,4 +12,15 @@ export {
   type FeedRefreshJob,
   type Job,
   type JobMessage,
-} from "./job-queue";
+} from "./services/queue/job";
+
+export {
+  runFeedRefresh,
+  parseFeedDocument,
+  type FeedIngestDatabase,
+  type FeedRefreshResult,
+  type SearchSyncConfig,
+} from "./services/feed";
+
+export { buildArticleIdentity, normalizeArticleUrl } from "./lib/article-identity";
+export { decodeHtmlEntities } from "./lib/html-entities";

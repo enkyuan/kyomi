@@ -1,4 +1,4 @@
-import type { ArticleDetailDto, ReaderContentDto } from "@lib/api-schemas";
+import type { ArticleDetailDto, ReaderContentDto } from "src/lib/schemas";
 import type { ReaderMode } from "./reader-mode";
 
 /**

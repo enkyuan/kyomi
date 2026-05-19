@@ -1,10 +1,10 @@
 "use client";
 
 import { FontSizeLine } from "@mingcute/react";
-import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@components/ui/select";
-import { SliderComfortable } from "@components/ui/slider";
-import { Switch } from "@components/ui/switch";
-import type { ReaderPreferences } from "@modules/reader";
+import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vols.rss/ui/select";
+import { SliderComfortable } from "@vols.rss/ui/slider";
+import { Switch } from "@vols.rss/ui/switch";
+import type { ReaderPreferences } from "@modules/reader/hooks/use-reader-preferences";
 import { SettingHeading } from "./shared";
 
 const OPEN_LINKS_SWITCH_ID = "reader-open-links-new-tab";

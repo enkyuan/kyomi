@@ -1,8 +1,8 @@
 "use client";
 
 import { Bill2Fill } from "@mingcute/react";
-import { Button } from "@components/ui/button";
-import { SidebarMenuButton, SidebarMenuItem } from "@components/ui/sidebar";
+import { Button } from "@vols.rss/ui/button";
+import { SidebarMenuButton, SidebarMenuItem } from "@vols.rss/ui/sidebar";
 
 export const billingSection = {
   description: "Review your workspace plan, payment method, and billing history.",

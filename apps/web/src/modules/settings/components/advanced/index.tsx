@@ -1,7 +1,7 @@
 "use client";
 
 import { SwitchFill } from "@mingcute/react";
-import { SidebarMenuButton, SidebarMenuItem } from "@components/ui/sidebar";
+import { SidebarMenuButton, SidebarMenuItem } from "@vols.rss/ui/sidebar";
 
 export const advancedSection = {
   description: "Update advanced preferences and account-level controls.",

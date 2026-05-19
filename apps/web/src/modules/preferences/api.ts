@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders } from "@lib/api";
-import { apiJsonValidated, type UserPreferencesDto, userPreferencesSchema } from "@lib/api-schemas";
+import { apiJsonValidated, type UserPreferencesDto, userPreferencesSchema } from "src/lib/schemas";
 
 export const getUserPreferences = createServerFn({ method: "GET" }).handler(
   async (): Promise<UserPreferencesDto> => {

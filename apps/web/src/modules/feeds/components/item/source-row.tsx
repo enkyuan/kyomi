@@ -1,8 +1,8 @@
 "use client";
 
-import { FeedFavicon } from "@components/navigation/feed-favicon";
-import { PreviewCard, PreviewCardPopup, PreviewCardTrigger } from "@components/ui/preview-card";
-import { getFeedSourceLabel } from "@modules/inbox/utils/feed-source-label";
+import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
+import { PreviewCard, PreviewCardPopup, PreviewCardTrigger } from "@vols.rss/ui/preview-card";
+import { getFeedSourceLabel } from "src/modules/inbox/utils/source-label";
 import { cn } from "@lib/utils";
 import type { CSSProperties } from "react";
 

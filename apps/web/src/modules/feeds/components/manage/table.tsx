@@ -1,17 +1,17 @@
 "use client";
 
 import { type ColumnDef, flexRender, type Table as ReactTable } from "@tanstack/react-table";
-import { Checkbox } from "@components/ui/checkbox";
-import { Button } from "@components/ui/button";
-import { Frame } from "@components/ui/frame";
+import { Checkbox } from "@vols.rss/ui/checkbox";
+import { Button } from "@vols.rss/ui/button";
+import { Frame } from "@vols.rss/ui/frame";
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationNext,
   PaginationPrevious,
-} from "@components/ui/pagination";
-import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@components/ui/select";
+} from "@vols.rss/ui/pagination";
+import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vols.rss/ui/select";
 import {
   Table,
   TableBody,
@@ -20,7 +20,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@components/ui/table";
+} from "@vols.rss/ui/table";
 import { PinFill, PinLine } from "@mingcute/react";
 
 export type FeedRow = {

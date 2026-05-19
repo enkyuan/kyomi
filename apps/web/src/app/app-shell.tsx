@@ -3,12 +3,9 @@
 import { useSyncExternalStore } from "react";
 import type { CSSProperties, ReactNode } from "react";
 import { LazyMotion, domMax, m, useReducedMotion } from "motion/react";
-import {
-  APP_SIDEBAR_WIDTH,
-  APP_SIDEBAR_WIDTH_READER_FOCUS,
-  AppSidebar,
-} from "@components/navigation/app-sidebar";
-import { SidebarInset, SidebarProvider } from "@components/ui/sidebar";
+import { AppSidebar } from "@modules/sidebar/components/app-sidebar";
+import { APP_SIDEBAR_WIDTH, APP_SIDEBAR_WIDTH_READER_FOCUS } from "@modules/sidebar/lib/constants";
+import { SidebarInset, SidebarProvider } from "@vols.rss/ui/sidebar";
 
 const GRID_TEMPLATE_COLUMNS = "auto minmax(0, 1fr)";
 

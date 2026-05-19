@@ -4,7 +4,7 @@ import {
   findIconsFromHtml,
   tryFetchImage,
   tryFetchImageIfHostSafe,
-} from "@vols.rss/favicon";
+} from "@vols.rss/worker/favicon";
 import { createFileRoute } from "@tanstack/react-router";
 
 const FAVICON_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7;

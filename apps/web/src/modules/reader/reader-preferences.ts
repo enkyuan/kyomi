@@ -1,4 +1,4 @@
-import { readerPreferencesSchema, type ReaderPreferencesDto } from "@lib/api-schemas";
+import { readerPreferencesSchema, type ReaderPreferencesDto } from "src/lib/schemas";
 import { getUserPreferences, updateUserPreferences } from "@modules/preferences/api";
 
 export async function getReaderPreferences(): Promise<ReaderPreferencesDto> {

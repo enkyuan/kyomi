@@ -1,11 +1,11 @@
 "use client";
 
 import { Article } from "../article";
-import { EmptyStateIcon } from "@components/icons/empty-state-svg";
-import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
-import { Skeleton } from "@components/ui/skeleton";
-import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
-import { Button } from "@components/ui/button";
+import { EmptyStateIcon } from "@vols.rss/ui/icons/empty-state";
+import { ScrollAreaPrimitive, ScrollBar } from "@vols.rss/ui/scroll-area";
+import { Skeleton } from "@vols.rss/ui/skeleton";
+import type { ArticleDetailDto, InboxTimestampDisplayDto } from "src/lib/schemas";
+import { Button } from "@vols.rss/ui/button";
 import { LeftFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
 import type { CSSProperties } from "react";

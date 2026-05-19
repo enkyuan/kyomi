@@ -1,11 +1,11 @@
 "use client";
 
 import { FontSizeLine } from "@mingcute/react";
-import { Group, GroupSeparator } from "@components/ui/group";
-import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@components/ui/select";
-import { SliderComfortable } from "@components/ui/slider";
-import { Switch } from "@components/ui/switch";
-import type { InboxPreferences } from "@modules/inbox";
+import { Group, GroupSeparator } from "@vols.rss/ui/group";
+import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vols.rss/ui/select";
+import { SliderComfortable } from "@vols.rss/ui/slider";
+import { Switch } from "@vols.rss/ui/switch";
+import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-preferences";
 import { SettingHeading } from "./shared";
 
 type InboxAppearanceSettingsProps = {

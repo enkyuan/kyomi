@@ -11,9 +11,9 @@ import {
   StarFill,
   StarLine,
 } from "@mingcute/react";
-import { Button } from "@components/ui/button";
-import { Toolbar as ToolbarRoot, ToolbarButton, ToolbarGroup } from "@components/ui/toolbar";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@components/ui/tooltip";
+import { Button } from "@vols.rss/ui/button";
+import { Toolbar as ToolbarRoot, ToolbarButton, ToolbarGroup } from "@vols.rss/ui/toolbar";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@vols.rss/ui/tooltip";
 import {
   useInboxItemStateMutation,
   type InboxItemPatch,

@@ -1,4 +1,4 @@
-import type { InboxDensityDto } from "@lib/api-schemas";
+import type { InboxDensityDto } from "src/lib/schemas";
 
 export function getTypography({
   density,

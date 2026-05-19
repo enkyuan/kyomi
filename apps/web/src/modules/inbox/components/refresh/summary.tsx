@@ -7,7 +7,7 @@ import {
   getRefreshSummaryLabel,
   SUMMARY_FADE_MS,
   SUMMARY_HOLD_MS,
-} from "@modules/inbox/utils/feed-refresh-formatting";
+} from "src/modules/inbox/utils/refresh-formatting";
 
 type SummaryPhase = "visible" | "fading" | "hidden";
 

@@ -3,9 +3,9 @@
 import { memo } from "react";
 import { cn } from "@lib/utils";
 import { SourceRow } from "./source-row";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@vols.rss/ui/card";
 import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
-import { useRelativeTimestampRefresh } from "@hooks/use-relative-timestamp-refresh";
+import { useTimestamp } from "@hooks/use-timestamp";
 import { Pretext } from "./pretext";
 import { getSectionClassNames, getTypography } from "@modules/feeds/layout";
 import { arePropsEqual, type Props } from "@modules/feeds/props";
@@ -27,7 +27,7 @@ export const Item = memo(function Item({
   onToolbarEnter,
   onToolbarLeave,
 }: Props) {
-  useRelativeTimestampRefresh(timestampDisplay);
+  useTimestamp(timestampDisplay);
   const isReadDimmed = item.isRead && filter !== "recent";
   const typography = getTypography({ density, fontSizePx, readerFocusMode });
   const sectionClassNames = getSectionClassNames({
@@ -144,24 +144,23 @@ export const Item = memo(function Item({
       >
         <span
           className={cn(
-            "line-clamp-1 max-w-full min-w-0 overflow-hidden text-ellipsis font-medium tracking-[0.01em] text-muted-foreground/85 tabular-nums",
+            "flex min-w-0 max-w-full items-center gap-1.5 overflow-hidden font-medium tracking-[0.01em] text-muted-foreground/85",
             isReadDimmed && "text-muted-foreground/65",
           )}
           style={{ fontSize: `${metaFontSizePx}px` }}
         >
-          {formatInboxTimestamp(item.publishedAt, timestampDisplay, timestampHourCycle)}
-        </span>
-        {item.isSaved ? (
-          <span
-            className={cn(
-              "line-clamp-1 max-w-full min-w-0 overflow-hidden text-ellipsis font-medium tracking-[0.01em] text-muted-foreground/85",
-              isReadDimmed && "text-muted-foreground/65",
-            )}
-            style={{ fontSize: `${metaFontSizePx}px` }}
-          >
-            Saved
+          <span className="line-clamp-1 min-w-0 overflow-hidden text-ellipsis tabular-nums">
+            {formatInboxTimestamp(item.publishedAt, timestampDisplay, timestampHourCycle)}
           </span>
-        ) : null}
+          {item.isSaved ? (
+            <>
+              <span aria-hidden="true" className="shrink-0 text-muted-foreground/50">
+                ·
+              </span>
+              <span className="line-clamp-1 min-w-0 overflow-hidden text-ellipsis">Saved</span>
+            </>
+          ) : null}
+        </span>
       </CardFooter>
     </Card>
   );

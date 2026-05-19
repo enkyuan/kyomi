@@ -90,6 +90,4 @@ export function parseApiErrorMessage(error: unknown): string {
   return "Unable to update email.";
 }
 
-export function isValidEmail(email: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
-}
+export { isValidEmail } from "@lib/email";

@@ -14,7 +14,7 @@ import {
   type FeedDetailDto,
   type FollowFeedResultDto,
   type FollowedFeedDto,
-} from "@lib/api-schemas";
+} from "src/lib/schemas";
 import { z } from "zod";
 
 export type DiscoverFeedResult = DiscoverFeedResultDto;

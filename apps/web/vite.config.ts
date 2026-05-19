@@ -36,10 +36,6 @@ const config = defineConfig(() => {
     resolve: {
       dedupe: ["react", "react-dom"],
     },
-    test: {
-      environment: "jsdom",
-      globals: true,
-    },
   };
 });
 

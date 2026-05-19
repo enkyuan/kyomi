@@ -13,14 +13,14 @@ import {
   TextFill,
   TextLine,
 } from "@mingcute/react";
-import { Button } from "@components/ui/button";
+import { Button } from "@vols.rss/ui/button";
 import {
   Toolbar as ToolbarRoot,
   ToolbarButton,
   ToolbarGroup,
   ToolbarSeparator,
-} from "@components/ui/toolbar";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@components/ui/tooltip";
+} from "@vols.rss/ui/toolbar";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@vols.rss/ui/tooltip";
 import { useMediaQuery } from "@hooks/use-media-query";
 import type { ReaderToolbarProps } from "@modules/reader/hooks/use-reader-toolbar-model";
 import type { ReaderContentWidth } from "@modules/reader/hooks/use-reader-preferences";

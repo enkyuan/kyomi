@@ -2,10 +2,11 @@
 
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { ToolbarOverlay, type ActiveToolbar } from "@modules/feeds/components/item/toolbar";
-import { InboxListSkeletonRows, InboxListStatic, InboxListVirtualized } from "./inbox-list-rows";
+import { SkeletonRows, StaticRows, VirtualizedRows } from "./feed-item-rows";
 import { FilterMenu } from "./filter-menu";
-import { Summary, Update } from "../refresh";
-import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
+import { Summary } from "../refresh/summary";
+import { Update } from "../refresh/update";
+import { ScrollAreaPrimitive, ScrollBar } from "@vols.rss/ui/scroll-area";
 import {
   useCallback,
   useEffect,
@@ -17,10 +18,10 @@ import {
   type PointerEvent,
 } from "react";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
-import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
+import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import type { InboxListHeaderCount } from "@modules/inbox/utils/count-display";
-import { STATIC_LIST_ITEM_LIMIT } from "@modules/inbox/lib/inbox-list-layout";
-import type { InboxListPaginationState } from "./inbox-list-rows";
+import { STATIC_LIST_ITEM_LIMIT } from "@modules/inbox/lib/list-layout";
+import type { RowsPaginationState } from "./feed-item-rows";
 
 export type ListDisplayOptions = {
   readerFocusMode?: boolean;
@@ -46,7 +47,7 @@ interface ListProps {
   selectedItemId?: string | null;
   feedId?: string | null;
   folderId?: string | null;
-  pagination: InboxListPaginationState;
+  pagination: RowsPaginationState;
   onSelectItem: (item: InboxItem) => void;
 }
 
@@ -150,14 +151,14 @@ export function List({
           <div className="pt-(--inbox-header-height)">
             {!isVirtualizerHostMounted ? (
               isLoading && inboxItems.length === 0 ? (
-                <InboxListSkeletonRows
+                <SkeletonRows
                   density={density}
                   showFavicons={showFavicons}
                   readerFocusMode={readerFocusMode}
                   viewportHeight={viewportHeight}
                 />
               ) : inboxItems.length === 0 ? null : (
-                <InboxListSkeletonRows
+                <SkeletonRows
                   density={density}
                   showFavicons={showFavicons}
                   readerFocusMode={readerFocusMode}
@@ -165,7 +166,7 @@ export function List({
                 />
               )
             ) : shouldUseStaticList ? (
-              <InboxListStatic
+              <StaticRows
                 filter={filter}
                 readerFocusMode={readerFocusMode}
                 density={density}
@@ -181,7 +182,7 @@ export function List({
                 onToolbarLeave={hideToolbar}
               />
             ) : (
-              <InboxListVirtualized
+              <VirtualizedRows
                 listScrollRef={listScrollRef}
                 filter={filter}
                 readerFocusMode={readerFocusMode}

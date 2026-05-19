@@ -1,4 +1,4 @@
-import { config } from "dotenv";
+import { config } from "@dotenvx/dotenvx";
 import { defineConfig } from "drizzle-kit";
 
 config({
@@ -11,6 +11,8 @@ config({
     ".env.local",
     ".env",
   ],
+  quiet: true,
+  ignore: ["MISSING_ENV_FILE"],
 });
 
 function readExplicitDatabaseUrl(): string | undefined {

@@ -9,7 +9,7 @@ import {
 import { useMemo, useState } from "react";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { Button } from "@components/ui/button";
+import { Button } from "@vols.rss/ui/button";
 import {
   Dialog as UiDialog,
   DialogClose,
@@ -19,9 +19,9 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@components/ui/dialog";
+} from "@vols.rss/ui/dialog";
 import { getColumns, TableFrame, type FeedRow, type FolderOption } from "./table";
-import { toastManager } from "@components/ui/toast";
+import { toastManager } from "@vols.rss/ui/toast";
 import {
   listFollowedFeeds,
   moveFeedsToFolder,

@@ -3,7 +3,7 @@ export { Item } from "./components/item";
 export { ToolbarOverlay, type ActiveToolbar } from "./components/item/toolbar";
 export { SourceRow } from "./components/item/source-row";
 export { Dialog } from "./components/manage/dialog";
-export { Sidebar } from "./components/search/sidebar";
+export { SourcesDialog } from "./components/follow/sources-dialog";
 export { useFeedRefresh } from "./hooks/use-feed-refresh";
 export {
   applyPinnedState,

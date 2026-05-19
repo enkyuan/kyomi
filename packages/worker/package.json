@@ -3,13 +3,21 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./queue": "./src/services/queue/index.ts",
+    "./sanitization": "./src/sanitization/index.ts",
+    "./ingestion": "./src/services/feed/index.ts",
+    "./favicon": "./src/services/favicon/index.ts",
+    "./favicon/browser": "./src/services/favicon/proxy-url.ts",
+    "./lib/article-identity": "./src/lib/article-identity.ts",
+    "./lib/html-entities": "./src/lib/html-entities.ts"
   },
   "dependencies": {
-    "@vols.rss/ingestion": "workspace:*",
-    "ioredis": "^5.6.0"
-  },
-  "scripts": {
-    "test": "bun test src"
+    "@vols.rss/db": "workspace:*",
+    "dompurify": "^3.4.0",
+    "drizzle-orm": "^0.45.2",
+    "fast-xml-parser": "^5.5.10",
+    "ioredis": "^5.6.0",
+    "pg": "^8.16.3"
   }
 }

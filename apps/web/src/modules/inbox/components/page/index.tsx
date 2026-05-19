@@ -1,8 +1,8 @@
 "use client";
 
 import { AppShell } from "@/app/app-shell";
-import { Detail } from "@modules/reader";
-import { MIN_INBOX_LEFT_PERCENT, MIN_INBOX_RIGHT_PERCENT } from "../layout/constants";
+import { Detail } from "@modules/reader/components/detail";
+import { MIN_INBOX_LEFT_PERCENT, MIN_INBOX_RIGHT_PERCENT } from "../../lib/constants";
 import { MobileSingleColumnLayout, ReaderFocusDetailLayout, SplitLayout } from "../layout";
 import { useQuery } from "@tanstack/react-query";
 import { List } from "../list";
@@ -18,7 +18,7 @@ import { useMarkReadBehavior } from "@modules/inbox/hooks/use-mark-read-behavior
 import { useResponsiveReaderMode } from "@modules/inbox/hooks/use-responsive-reader-mode";
 import { useSplitPane } from "@modules/inbox/hooks/use-split-pane";
 import { getInboxViewCount, type InboxItem } from "@modules/inbox/services/api";
-import { useClientTimezoneOffsetMinutes } from "@hooks/use-client-timezone-offset";
+import { useTimezone } from "@hooks/use-timezone";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { QUERY_TIMES } from "@lib/query-policies";
 import { deriveInboxListHeaderCount } from "@modules/inbox/utils/count-display";
@@ -56,7 +56,7 @@ function InboxPageContent({
   const layoutVariant = useResponsiveReaderMode(layoutContainerWidth);
   const isReaderFocusedLayout = layoutVariant === "reader-focused";
   const [mobileTransitionDirection, setMobileTransitionDirection] = useState<1 | -1>(1);
-  const timezoneOffsetMinutes = useClientTimezoneOffsetMinutes();
+  const timezoneOffsetMinutes = useTimezone();
 
   const route = useInboxRouteState(preferences);
   const {

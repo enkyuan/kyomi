@@ -2,11 +2,11 @@
 
 import { CheckFill, CloseFill, Edit2Fill, User3Fill } from "@mingcute/react";
 import { useAuth } from "@integrations/better-auth/auth-provider";
-import { Button } from "@components/ui/button";
-import { Frame } from "@components/ui/frame";
-import { Group } from "@components/ui/group";
-import { Input } from "@components/ui/input";
-import { SidebarMenuButton, SidebarMenuItem } from "@components/ui/sidebar";
+import { Button } from "@vols.rss/ui/button";
+import { Frame } from "@vols.rss/ui/frame";
+import { Group } from "@vols.rss/ui/group";
+import { Input } from "@vols.rss/ui/input";
+import { SidebarMenuButton, SidebarMenuItem } from "@vols.rss/ui/sidebar";
 import {
   Table,
   TableBody,
@@ -15,7 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@components/ui/table";
+} from "@vols.rss/ui/table";
 import { useAccountPanel } from "@modules/settings/hooks/use-account-panel";
 import { formatTimestamp, shortenUserAgent } from "@modules/settings/account-helpers";
 

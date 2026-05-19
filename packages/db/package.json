@@ -14,10 +14,10 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@dotenvx/dotenvx": "^1.66.0",
     "drizzle-orm": "^0.45.2"
   },
   "devDependencies": {
-    "dotenv": "^17.3.1",
     "drizzle-kit": "^0.31.10",
     "pg": "^8.16.3"
   }

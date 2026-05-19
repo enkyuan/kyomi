@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import type { QueryClient } from "@tanstack/react-query";
 import AuthProvider from "@integrations/better-auth/auth-provider";
 import TanstackQueryProvider from "@integrations/tanstack-query/root-provider";
-import { AnchoredToastProvider, ToastProvider } from "@components/ui/toast";
+import { AnchoredToastProvider, ToastProvider } from "@vols.rss/ui/toast";
 import PostHogProvider from "@integrations/posthog/provider";
 import { getSession } from "@lib/auth-functions";
 import appCss from "../styles.css?url";

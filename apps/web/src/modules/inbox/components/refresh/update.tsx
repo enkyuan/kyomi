@@ -8,13 +8,13 @@ import {
   BATCH_REFRESH_GRACE_MS,
   BATCH_REFRESH_POLL_MS,
   hasActiveRefreshStatus,
-} from "@modules/inbox/utils/feed-refresh-formatting";
+} from "src/modules/inbox/utils/refresh-formatting";
 import {
   feedRefreshStatusQueryKey,
   invalidateFeedAndInboxQueries,
 } from "@modules/inbox/queries/options";
 import { Refresh2Fill } from "@mingcute/react";
-import { Button } from "@components/ui/button";
+import { Button } from "@vols.rss/ui/button";
 
 type UpdateProps = { feedId: string; folderId?: never } | { feedId?: never; folderId?: string };
 

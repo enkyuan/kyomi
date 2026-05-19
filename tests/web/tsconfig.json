@@ -1,0 +1,24 @@
+{
+  "extends": "../../packages/tsconfig/web.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["../../apps/web/*"],
+      "@/*": ["../../apps/web/src/*"],
+      "src/*": ["../../apps/web/src/*"],
+      "@modules/*": ["../../apps/web/src/modules/*"],
+      "@hooks/*": ["../../apps/web/src/hooks/*"],
+      "@integrations/*": ["../../apps/web/src/integrations/*"],
+      "@lib/*": ["../../apps/web/src/lib/*"],
+      "@utils/*": ["../../apps/web/src/utils/*"],
+      "@vols.rss/ui": ["../../packages/ui/src/index.ts"],
+      "@vols.rss/ui/*": ["../../packages/ui/src/*"],
+      "@vols.rss/reader": ["../../packages/reader/src/core/index.ts"],
+      "@vols.rss/reader/core": ["../../packages/reader/src/core/index.ts"],
+      "@vols.rss/reader/web": ["../../packages/reader/src/web/index.ts"],
+      "@vols.rss/reader/webview": ["../../packages/reader/src/webview/index.ts"]
+    },
+    "types": ["vite/client"]
+  },
+  "include": ["integration/**/*.ts", "integration/**/*.tsx", "e2e/**/*.ts", "e2e/**/*.tsx"]
+}

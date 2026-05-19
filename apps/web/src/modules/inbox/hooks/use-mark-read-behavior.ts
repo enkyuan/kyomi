@@ -1,7 +1,7 @@
 "use client";
 
 import type { InboxFilter } from "../services/api";
-import type { InboxMarkReadBehaviorDto } from "@lib/api-schemas";
+import type { InboxMarkReadBehaviorDto } from "src/lib/schemas";
 import { useEffect, useRef } from "react";
 
 type InboxItemLike = { id: string; isRead: boolean } | null;

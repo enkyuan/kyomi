@@ -1,5 +1,5 @@
 import type { FocusEvent, PointerEvent } from "react";
-import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
+import type { InboxDensityDto, InboxTimestampDisplayDto } from "src/lib/schemas";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
 
 export type Props = {

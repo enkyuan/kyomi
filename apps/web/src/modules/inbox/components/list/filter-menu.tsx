@@ -3,7 +3,7 @@
 import { Filter2Fill } from "@mingcute/react";
 import type React from "react";
 import { useNavigate } from "@tanstack/react-router";
-import { Button } from "@components/ui/button";
+import { Button } from "@vols.rss/ui/button";
 import {
   Menu,
   MenuCheckboxItem,
@@ -11,7 +11,7 @@ import {
   MenuGroupLabel,
   MenuPopup,
   MenuTrigger,
-} from "@components/ui/menu";
+} from "@vols.rss/ui/menu";
 import type { InboxFilter } from "@modules/inbox/services/api";
 
 type FilterMenuProps = {
