@@ -5,7 +5,6 @@ import { SidebarMenuButton, SidebarMenuItem } from "@components/ui/sidebar";
 
 export const advancedSection = {
   description: "Update advanced preferences and account-level controls.",
-  icon: SwitchFill,
   name: "Advanced",
 } as const;
 

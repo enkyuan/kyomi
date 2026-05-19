@@ -40,9 +40,6 @@ export function dedupePagedInboxItemsById(
   return Array.from(unique.values());
 }
 
-/** @deprecated Prefer `dedupePagedInboxItemsById` (same implementation). */
-export const dedupeInboxItems = dedupePagedInboxItemsById;
-
 export function useInboxQueries({
   filter,
   search,

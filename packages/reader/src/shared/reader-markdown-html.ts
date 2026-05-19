@@ -41,7 +41,7 @@ function createMarked(baseUrl?: string | null, openLinksInNewTab = true): Marked
   renderer.code = function ({ text, lang }) {
     const language = (lang ?? "").trim();
     const classAttr = language ? ` class="language-${escapeAttr(language)}"` : "";
-    return `<pre><code${classAttr}>${escapeAttr(text)}</code></pre>`;
+    return `<pre><code${classAttr}>${escapeHtml(text)}</code></pre>`;
   };
 
   // Escape raw HTML blocks/inline HTML instead of passing them through, so
