@@ -9,7 +9,7 @@ import {
   extractFullTextResponseSchema,
   type ArticleDetailDto,
   type ExtractFullTextResponseDto,
-} from "@lib/api-schemas";
+} from "src/lib/schemas";
 import { z } from "zod";
 import {
   buildArticlesUrl,

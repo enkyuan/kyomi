@@ -290,7 +290,7 @@ export function registerFeedRoutes(app: Elysia) {
           logger,
         );
 
-        set.status = result.count > 0 ? 202 : 200;
+        set.status = 202;
         return result;
       },
       {

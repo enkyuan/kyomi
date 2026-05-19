@@ -6,11 +6,12 @@
       "*": ["./*"],
       "@/*": ["./src/*"],
       "@modules/*": ["./src/modules/*"],
-      "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@integrations/*": ["./src/integrations/*"],
       "@lib/*": ["./src/lib/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@utils/*": ["./src/utils/*"],
+      "@vols.rss/ui": ["../../packages/ui/src/index.ts"],
+      "@vols.rss/ui/*": ["../../packages/ui/src/*"]
     },
     "types": ["vite/client"]
   }

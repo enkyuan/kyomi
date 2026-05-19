@@ -3,7 +3,7 @@
 import { createContext, createElement, use, useMemo, type ReactNode } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/auth-provider";
-import { inboxPreferencesSchema, type InboxPreferencesDto } from "@lib/api-schemas";
+import { inboxPreferencesSchema, type InboxPreferencesDto } from "src/lib/schemas";
 import { getInboxPreferences, updateInboxPreferences } from "../services/preferences";
 import { writeInboxArticleOpenBehaviorCookie } from "../lib/layout-persistence";
 import { useUserPreferences } from "@modules/preferences";

@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useRef } from "react";
-import { invalidateFeedAndInboxQueries } from "@modules/inbox/lib/query-options";
-import { getFeedDetail, refreshFeed } from "../services/api";
+import { invalidateFeedAndInboxQueries } from "@modules/inbox/queries/options";
+import { getFeedDetail, refreshFeed } from "../api";
 
 export function useFeedRefresh(feedId: string) {
   const queryClient = useQueryClient();

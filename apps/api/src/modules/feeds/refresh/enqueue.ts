@@ -72,19 +72,7 @@ export async function enqueueBatchFeedRefresh(
     return { accepted: true, count: 0, failedCount: 0 };
   }
 
-  let redis: ReturnType<typeof getRedis>;
-  try {
-    redis = getRedis();
-  } catch (error) {
-    logger.error("queue.redis.unavailable", {
-      userId,
-      error: error instanceof Error ? error.message : String(error),
-    });
-    throw new AppError("Failed to enqueue batch feed refresh", {
-      status: 503,
-      code: "QUEUE_UNAVAILABLE",
-    });
-  }
+  const redis = getRedis();
   const results = await Promise.allSettled(
     feedIds.map((feedId) =>
       publishJob(redis, {

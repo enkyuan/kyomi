@@ -1,6 +1,7 @@
 import { logger } from "@adapters/logger";
 import { env } from "@config/env";
 import { createApp } from "../http/create-app";
+import { listenWithRetry } from "../http/listen-with-retry";
 import { runWorkerLoop } from "../jobs/run-worker";
 
 const controller = new AbortController();
@@ -14,7 +15,12 @@ for (const signalName of ["SIGINT", "SIGTERM"] as const) {
 
 const app = createApp();
 
-app.listen(env.PORT);
+await listenWithRetry(app, {
+  port: env.PORT,
+  retries: 20,
+  retryDelayMs: 250,
+  signal: controller.signal,
+});
 
 logger.info("server.listening", {
   host: app.server?.hostname ?? "unknown",

@@ -1,0 +1,70 @@
+import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "src/lib/schemas";
+
+const absoluteFormatter12h = new Intl.DateTimeFormat("en", {
+  dateStyle: "medium",
+  timeStyle: "short",
+  hour12: true,
+});
+const absoluteFormatter24h = new Intl.DateTimeFormat("en", {
+  dateStyle: "medium",
+  timeStyle: "short",
+  hour12: false,
+});
+const relativeFormatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+
+function getAbsoluteFormatter(hourCycle: InboxTimestampHourCycleDto) {
+  return hourCycle === "12h" ? absoluteFormatter12h : absoluteFormatter24h;
+}
+
+function formatRelative(date: Date) {
+  const diffMs = date.getTime() - Date.now();
+  const diffMinutes = Math.round(diffMs / 60_000);
+  const absMinutes = Math.abs(diffMinutes);
+
+  if (absMinutes < 60) {
+    return relativeFormatter.format(diffMinutes, "minute");
+  }
+
+  const diffHours = Math.round(diffMinutes / 60);
+  const absHours = Math.abs(diffHours);
+  if (absHours < 24) {
+    return relativeFormatter.format(diffHours, "hour");
+  }
+
+  const diffDays = Math.round(diffHours / 24);
+  const absDays = Math.abs(diffDays);
+  if (absDays < 7) {
+    return relativeFormatter.format(diffDays, "day");
+  }
+
+  const diffWeeks = Math.round(diffDays / 7);
+  if (Math.abs(diffWeeks) < 5) {
+    return relativeFormatter.format(diffWeeks, "week");
+  }
+
+  const diffMonths = Math.round(diffDays / 30);
+  if (Math.abs(diffMonths) < 12) {
+    return relativeFormatter.format(diffMonths, "month");
+  }
+
+  const diffYears = Math.round(diffDays / 365);
+  return relativeFormatter.format(diffYears, "year");
+}
+
+export function formatInboxTimestamp(
+  value: string,
+  display: InboxTimestampDisplayDto,
+  hourCycle: InboxTimestampHourCycleDto,
+) {
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  if (display === "relative") {
+    return formatRelative(date);
+  }
+
+  return getAbsoluteFormatter(hourCycle).format(date);
+}

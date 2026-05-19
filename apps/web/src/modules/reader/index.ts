@@ -1,6 +1,6 @@
-export { ReaderArticleDetail } from "./components/article-detail";
-export { ReaderDetailView, type ReaderDetailViewProps } from "./components/detail-view";
-export { ReaderToolbar } from "./components/reader-toolbar";
+export { Article } from "./components/article";
+export { Detail, type DetailViewProps } from "./components/detail";
+export { Toolbar } from "./components/toolbar";
 export {
   useReaderToolbarModel,
   type ReaderToolbarMode,
@@ -14,6 +14,6 @@ export {
   type ReaderDefaultMode,
   type ReaderPreferences,
 } from "./hooks/use-reader-preferences";
-export { readerContentForMode } from "./lib/reader-display";
-export type { ReaderMode } from "./lib/reader-mode";
-export { getReaderPreferences, updateReaderPreferences } from "./services/reader-preferences";
+export { readerContentForMode } from "./reader-display";
+export type { ReaderMode } from "./reader-mode";
+export { getReaderPreferences, updateReaderPreferences } from "./reader-preferences";

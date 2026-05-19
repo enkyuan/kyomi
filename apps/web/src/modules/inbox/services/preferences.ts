@@ -1,5 +1,5 @@
-import { inboxPreferencesSchema, type InboxPreferencesDto } from "@lib/api-schemas";
-import { getUserPreferences, updateUserPreferences } from "@modules/preferences/services/api";
+import { inboxPreferencesSchema, type InboxPreferencesDto } from "src/lib/schemas";
+import { getUserPreferences, updateUserPreferences } from "@modules/preferences/api";
 
 export async function getInboxPreferences(): Promise<InboxPreferencesDto> {
   return inboxPreferencesSchema.parse(await getUserPreferences());

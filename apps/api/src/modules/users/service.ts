@@ -1,5 +1,6 @@
 import { and, eq, ne } from "drizzle-orm";
 import { userPreferences, users } from "@vols.rss/db";
+import { normalizeEmail } from "@/lib/email";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app-error";
 import type {
@@ -298,15 +299,14 @@ export async function updateUserEmailById(
   userId: string,
   emailInput: string,
 ): Promise<UserProfileDto> {
-  const email = emailInput.trim().toLowerCase();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!email || !emailPattern.test(email)) {
+  const normalizedEmail = normalizeEmail(emailInput);
+  if (!normalizedEmail) {
     throw new AppError("Enter a valid email address.", {
       status: 400,
       code: "USER_EMAIL_INVALID",
     });
   }
+  const email = normalizedEmail;
 
   const conflictingUser = await database.query.users.findFirst({
     where: and(eq(users.email, email), ne(users.id, userId)),

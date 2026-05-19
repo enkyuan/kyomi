@@ -1,0 +1,16 @@
+{
+  "extends": "../../packages/tsconfig/node.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../../apps/api/src/*"],
+      "@app/*": ["../../apps/api/src/app/*"],
+      "@config/*": ["../../apps/api/src/config/*"],
+      "@adapters/*": ["../../apps/api/src/adapters/*"],
+      "@shared/*": ["../../apps/api/src/shared/*"],
+      "@modules/*": ["../../apps/api/src/modules/*"]
+    },
+    "types": ["bun-types"]
+  },
+  "include": ["integration/**/*.ts", "e2e/**/*.ts"]
+}

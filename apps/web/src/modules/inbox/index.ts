@@ -1,6 +1,7 @@
 export * from "./services/api";
-export { InboxList } from "./components/list";
-export { InboxSourceRow } from "./components/source-row";
+export { List, type ListDisplayOptions, type ListFilterVisibility } from "./components/list";
+export { Page } from "./components/page";
+export { formatInboxTimestamp } from "./utils/format-timestamp";
 export { useInboxRouteState } from "./hooks/use-route-state";
 export {
   useInboxItemStateMutation,
@@ -19,7 +20,6 @@ export {
   type InboxLayoutVariant,
 } from "./hooks/use-responsive-reader-mode";
 export { useSplitPane } from "./hooks/use-split-pane";
-export { formatInboxTimestamp } from "./lib/format-timestamp";
 export { isInboxPathname } from "./lib/is-inbox-path";
 export {
   readInboxArticleOpenBehaviorCookie,
@@ -28,5 +28,5 @@ export {
   writeInboxSplitPanePercentCookie,
 } from "./lib/layout-persistence";
 export { prefetchInboxFlow } from "./lib/prefetch";
-export { invalidateFeedAndInboxQueries, type InboxListPage } from "./lib/query-options";
+export { invalidateFeedAndInboxQueries, type InboxListPage } from "./queries/options";
 export { getInboxPreferences, updateInboxPreferences } from "./services/preferences";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { extractInboxItemFullText } from "@modules/inbox";
+import { extractInboxItemFullText } from "@modules/inbox/services/api";
 
 export function useArticleExtraction(itemId: string | undefined) {
   const queryClient = useQueryClient();

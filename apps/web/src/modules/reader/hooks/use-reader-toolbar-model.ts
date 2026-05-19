@@ -2,11 +2,11 @@
 
 import type React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { toastManager } from "@components/ui/toast";
-import { useInboxItemStateMutation } from "@modules/inbox";
+import { toastManager } from "@vols.rss/ui/toast";
+import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-item-state-mutation";
 import { useMediaQuery } from "@hooks/use-media-query";
-import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/api-schemas";
-import { readerContentForMode } from "../lib/reader-display";
+import type { ArticleDetailDto, ExtractFullTextResponseDto } from "src/lib/schemas";
+import { readerContentForMode } from "../reader-display";
 import { useArticleExtraction } from "./use-article-extraction";
 import { useReaderPreferences, type ReaderContentWidth } from "./use-reader-preferences";
 import { cn } from "@lib/utils";

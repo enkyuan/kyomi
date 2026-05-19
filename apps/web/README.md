@@ -1,294 +1,129 @@
-Welcome to your new TanStack Start app! 
+# @vols.rss/web
 
-# Getting Started
+TanStack Start frontend for Vols.rss: RSS inbox, reader, feed management, and account settings.
 
-To run this application:
+## Prerequisites
+
+Run from the [monorepo root](../../) unless noted otherwise.
+
+- [Bun](https://bun.sh) (repo `packageManager`)
+- Docker (Postgres and shared infra via `docker/`)
+- `apps/api` running for authenticated feed and inbox API calls
+
+Typical first-time setup:
 
 ```bash
 bun install
-bun --bun run dev
+bun run bootstrap    # docker + migrations (see root package.json)
 ```
 
-# Building For Production
+Copy `apps/web/.env.example` to `apps/web/.env` (or `.env.local`) and set `API_ORIGIN` to your API base URL (for example `http://localhost:8000`).
 
-To build this application for production:
+## Development
+
+From the repo root:
 
 ```bash
-bun --bun run build
+bun run dev:web
 ```
 
-## Testing
-
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+Or from this directory:
 
 ```bash
-bun --bun run test
+bun run dev
 ```
 
-## Styling
+The dev server listens on port **3000**. Env files are loaded with [dotenvx](https://dotenvx.com) from `docker/.env` and `apps/web/.env`.
 
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
+| Script | Description |
+|--------|-------------|
+| `bun run dev` | Vite dev server |
+| `bun run build` | Production build |
+| `bun run preview` | Preview production build |
+| `bun run typecheck` | TypeScript (`tsgo`) |
+| `bun run test` | Vitest unit tests |
 
-### Removing Tailwind CSS
+## Environment
 
-If you prefer not to use Tailwind CSS:
+| Variable | Scope | Purpose |
+|----------|-------|---------|
+| `SERVER_URL` | Server | Public origin of this app (no trailing slash) |
+| `API_ORIGIN` | Server | Backend API used for auth and data |
+| `VITE_POSTHOG_KEY` | Client | Optional PostHog analytics |
+| `VITE_POSTHOG_HOST` | Client | PostHog ingest host (defaults in provider if unset) |
 
-1. Remove the demo pages in `src/routes/demo/`
-2. Replace the Tailwind import in `src/styles.css` with your own styles
-3. Remove `tailwindcss()` from the plugins array in `vite.config.ts`
-4. Uninstall the packages: `bun install @tailwindcss/vite tailwindcss -D`
+Typed client env is defined in `src/env.ts` ([T3 Env](https://env.t3.gg)). Add new `VITE_*` variables there when introducing client-side config.
 
+Auth is handled with [Better Auth](https://www.better-auth.com) (`src/integrations/better-auth/`, `src/lib/auth-client.ts`). Session and API routes proxy through TanStack Start server handlers under `src/routes/api/`.
 
-# TanStack Chat Application
+## Source layout
 
-Am example chat application built with TanStack Start, TanStack Store, and Claude AI.
-
-## .env Updates
-
-```env
-ANTHROPIC_API_KEY=your_anthropic_api_key
+```
+src/
+  app/           App shell (sidebar + main layout)
+  routes/        File-based TanStack Router routes
+  modules/       Feature modules (primary place for product code)
+  hooks/         Cross-cutting React hooks
+  integrations/  Auth, TanStack Query, PostHog wiring
+  lib/           App-local utilities and auth helpers
+  tests/         Vitest unit and integration tests
 ```
 
-## ✨ Features
+### Feature modules (`src/modules/`)
 
-### AI Capabilities
-- 🤖 Powered by Claude 3.5 Sonnet 
-- 📝 Rich markdown formatting with syntax highlighting
-- 🎯 Customizable system prompts for tailored AI behavior
-- 🔄 Real-time message updates and streaming responses (coming soon)
+Each module groups UI, hooks, and client services for one area of the product:
 
-### User Experience
-- 🎨 Modern UI with Tailwind CSS and Lucide icons
-- 🔍 Conversation management and history
-- 🔐 Secure API key management
-- 📋 Markdown rendering with code highlighting
+| Module | Responsibility |
+|--------|----------------|
+| `auth` | Login and registration |
+| `inbox` | Item list, filters, layouts, preferences |
+| `reader` | Article detail and reader toolbar |
+| `feeds` | Follow sources, manage feeds, list rows |
+| `folders` | Folder creation and organization |
+| `sidebar` | Navigation, pinned feeds, workspace header |
+| `settings` | Account, appearance, billing dialogs |
+| `preferences` | Shared user preference queries |
 
-### Technical Features
-- 📦 Centralized state management with TanStack Store
-- 🔌 Extensible architecture for multiple AI providers
-- 🛠️ TypeScript for type safety
+Import from a module’s public API (`@modules/inbox`, etc.) or a concrete path when avoiding barrel cycles. Prefer direct paths over `@modules/*/index` when a hook only needs one file (see `docs/repo-layout.md`).
 
-## Architecture
+### Shared UI
 
-### Tech Stack
-- **Frontend Framework**: TanStack Start
-- **Routing**: TanStack Router
-- **State Management**: TanStack Store
-- **Styling**: Tailwind CSS
-- **AI Integration**: Anthropic's Claude API
+Primitives and icons live in [`packages/ui`](../../packages/ui/). Import components as `@vols.rss/ui/button`, icons as `@vols.rss/ui/icons/empty-state`. Tailwind scans `packages/ui/src` via `src/styles.css` `@source`.
 
-## T3Env
+### Path aliases
 
-- You can use T3Env to add type safety to your environment variables.
-- Add Environment variables to the `src/env.mjs` file.
-- Use the environment variables in your code.
-
-### Usage
-
-```ts
-import { env } from "@env";
-
-console.log(env.VITE_APP_TITLE);
-```
-
-
-
-
-
-## Setting up Better Auth
-
-1. Generate and set the `BETTER_AUTH_SECRET` environment variable in your `.env.local`:
-
-   ```bash
-   bunx --bun @better-auth/cli secret
-   ```
-
-2. Visit the [Better Auth documentation](https://www.better-auth.com) to unlock the full potential of authentication in your app.
-
-### Adding a Database (Optional)
-
-Better Auth can work in stateless mode, but to persist user data, add a database:
-
-```typescript
-// src/lib/auth.ts
-import { betterAuth } from "better-auth";
-import { Pool } from "pg";
-
-export const auth = betterAuth({
-  database: new Pool({
-    connectionString: process.env.DATABASE_URL,
-  }),
-  // ... rest of config
-});
-```
-
-Then run migrations:
-
-```bash
-bunx --bun @better-auth/cli migrate
-```
-
-
-## Setting up PostHog
-
-1. Create a PostHog account at [posthog.com](https://posthog.com)
-2. Get your Project API Key from [Project Settings](https://app.posthog.com/project/settings)
-3. Set `VITE_POSTHOG_KEY` in your `.env.local`
-
-### Optional Configuration
-
-- `VITE_POSTHOG_HOST` - Set this if you're using PostHog Cloud EU (`https://eu.i.posthog.com`) or self-hosting
-
-
+| Alias | Maps to |
+|-------|---------|
+| `@/*` | `src/*` |
+| `@modules/*` | `src/modules/*` |
+| `@hooks/*` | `src/hooks/*` |
+| `@lib/*` | `src/lib/*` |
+| `@vols.rss/ui/*` | `packages/ui/src/*` |
 
 ## Routing
 
-This project uses [TanStack Router](https://tanstack.com/router) with file-based routing. Routes are managed as files in `src/routes`.
+Routes are file-based under `src/routes/`. The generated route tree is `src/routeTree.gen.ts` (do not edit by hand).
 
-### Adding A Route
+| Route | Purpose |
+|-------|---------|
+| `/` | Landing / redirect |
+| `/inbox` | Main reading experience |
+| `/login`, `/register` | Auth |
+| `/api/auth/*` | Better Auth handler |
+| `/api/favicon` | Favicon proxy |
 
-To add a new route to your application just add a new file in the `./src/routes` directory.
+Layouts and providers are composed in `src/routes/__root.tsx` and `src/app/app-shell.tsx`.
 
-TanStack will automatically generate the content of the route file for you.
+## Testing
 
-Now that you have two routes you can use a `Link` component to navigate between them.
-
-### Adding Links
-
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
-
-```tsx
-import { Link } from "@tanstack/react-router";
+```bash
+bun run test
 ```
 
-Then anywhere in your JSX you can use it like so:
+Tests live in the monorepo root at [`tests/`](../../tests/README.md): `tests/web/integration` (Vitest + jsdom) and `tests/api/integration` (bun). E2E folders are reserved for future Playwright/API flow tests.
 
-```tsx
-<Link to="/about">About</Link>
-```
+## Related docs
 
-This will create a link that will navigate to the `/about` route.
-
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
-
-### Using A Layout
-
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you render `{children}` in the `shellComponent`.
-
-Here is an example layout that includes a header:
-
-```tsx
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-
-export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'My App' },
-    ],
-  }),
-  shellComponent: ({ children }) => (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <header>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-          </nav>
-        </header>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  ),
-})
-```
-
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-## Server Functions
-
-TanStack Start provides server functions that allow you to write server-side code that seamlessly integrates with your client components.
-
-```tsx
-import { createServerFn } from '@tanstack/react-start'
-
-const getServerTime = createServerFn({
-  method: 'GET',
-}).handler(async () => {
-  return new Date().toISOString()
-})
-
-// Use in a component
-function MyComponent() {
-  const [time, setTime] = useState('')
-  
-  useEffect(() => {
-    getServerTime().then(setTime)
-  }, [])
-  
-  return <div>Server time: {time}</div>
-}
-```
-
-## API Routes
-
-You can create API routes by using the `server` property in your route definitions:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-import { json } from '@tanstack/react-start'
-
-export const Route = createFileRoute('/api/hello')({
-  server: {
-    handlers: {
-      GET: () => json({ message: 'Hello, World!' }),
-    },
-  },
-})
-```
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/people')({
-  loader: async () => {
-    const response = await fetch('https://swapi.dev/api/people')
-    return response.json()
-  },
-  component: PeopleComponent,
-})
-
-function PeopleComponent() {
-  const data = Route.useLoaderData()
-  return (
-    <ul>
-      {data.results.map((person) => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ul>
-  )
-}
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-# Demo files
-
-Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
-
-# Learn More
-
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
-
-For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).
+- [Monorepo layout](../../docs/repo-layout.md)
+- [API app](../api/) (companion backend)
+- [packages/ui icons](../../packages/ui/src/icons/README.md)

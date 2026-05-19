@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { updateUserEmail } from "@lib/auth-functions";
-import { toastManager } from "@components/ui/toast";
+import { toastManager } from "@vols.rss/ui/toast";
 import {
   isValidEmail,
   normalizeTimestamp,
   parseApiErrorMessage,
   parseSessionsResponse,
   type SessionRow,
-} from "../lib/account-helpers";
+} from "../account-helpers";
 
 type UseAccountPanelArgs = {
   session:

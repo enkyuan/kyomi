@@ -4,10 +4,10 @@ import { z } from "zod";
 import { requireAuth } from "@/routes/-guards";
 import {
   getInboxPreferences,
+  Page,
   readInboxArticleOpenBehaviorCookie,
   readInboxSplitPanePercentCookie,
 } from "@modules/inbox";
-import { InboxPage } from "@modules/inbox/page";
 
 const inboxSearchSchema = z.object({
   filter: z.enum(["inbox", "today", "unread", "saved", "recent"]).optional(),
@@ -43,7 +43,7 @@ export const Route = createFileRoute("/inbox/")({
 function InboxRouteComponent() {
   const { initialInboxPreferences, initialSplitPanePercent } = Route.useLoaderData();
   return (
-    <InboxPage
+    <Page
       initialInboxPreferences={initialInboxPreferences}
       initialSplitPanePercent={initialSplitPanePercent}
     />
