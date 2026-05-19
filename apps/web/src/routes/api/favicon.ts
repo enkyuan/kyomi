@@ -82,28 +82,11 @@ async function cacheAndBuildFaviconResponse(
   upstream: Response,
 ): Promise<Response> {
   const contentType = upstream.headers.get("content-type") ?? "image/x-icon";
-  const reader = upstream.body?.getReader();
-  if (!reader) {
+  const buffer = await upstream.arrayBuffer();
+  if (buffer.byteLength > FAVICON_MAX_RESPONSE_BYTES) {
     return new Response(null, { status: 404 });
   }
-  const chunks: Uint8Array[] = [];
-  let totalBytes = 0;
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    totalBytes += value.byteLength;
-    if (totalBytes > FAVICON_MAX_RESPONSE_BYTES) {
-      reader.cancel();
-      return new Response(null, { status: 404 });
-    }
-    chunks.push(value);
-  }
-  const bodyBytes = new Uint8Array(totalBytes);
-  let offset = 0;
-  for (const chunk of chunks) {
-    bodyBytes.set(chunk, offset);
-    offset += chunk.byteLength;
-  }
+  const bodyBytes = new Uint8Array(buffer);
   setCachedFavicon(getFaviconCacheKey(hostname), {
     kind: "hit",
     body: bodyBytes,
@@ -156,11 +139,12 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
   }
 
   const iconHrefs = await findIconsFromHtml(origin);
-  for (const iconHref of iconHrefs) {
-    const htmlIconResult = await tryFetchImageIfHostSafe(iconHref);
-    if (htmlIconResult) {
-      return cacheAndBuildFaviconResponse(hostname, htmlIconResult);
-    }
+  const htmlIconResults = await Promise.all(
+    iconHrefs.map((iconHref) => tryFetchImageIfHostSafe(iconHref)),
+  );
+  const htmlIconResult = htmlIconResults.find((result) => result != null);
+  if (htmlIconResult) {
+    return cacheAndBuildFaviconResponse(hostname, htmlIconResult);
   }
 
   const directResult = await tryFetchImage(`${origin}/favicon.ico`);

@@ -66,7 +66,7 @@ export function FeedbackDialog({ trigger }: FeedbackDialogProps) {
             <Field>
               <Textarea
                 onChange={(event) => setValue(event.target.value)}
-                placeholder="Write your feedback..."
+                placeholder="Write your feedback…"
                 value={value}
               />
             </Field>

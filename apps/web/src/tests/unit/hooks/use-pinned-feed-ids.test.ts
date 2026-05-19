@@ -4,7 +4,7 @@ import {
   buildMigrationKey,
   buildMigrationStartedKey,
   sortPinnedFeeds,
-} from "@hooks/use-pinned-feed-ids";
+} from "@modules/feeds";
 
 describe("usePinnedFeedIds helpers", () => {
   test("builds stable migration keys scoped by user", () => {

@@ -2,8 +2,8 @@
 
 import type { InfiniteData, QueryClient } from "@tanstack/react-query";
 import type { ArticleDetailDto } from "@lib/api-schemas";
-import type { InboxItem } from "@modules/inbox/api";
-import type { InboxListPage } from "@modules/inbox/lib/query-options";
+import type { InboxItem } from "../services/api";
+import type { InboxListPage } from "./query-options";
 
 type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
 

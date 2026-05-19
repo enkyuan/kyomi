@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, LazyMotion, domMax, m, useReducedMotion } from "motion/react";
 import { cn } from "@lib/utils";
 import { useSidebarReaderFocus } from "@components/ui/sidebar-reader-focus";
 
@@ -60,20 +60,22 @@ export function SidebarModeAnimatedText({
   }
 
   return (
-    <span className="inline-grid min-w-0 overflow-hidden align-middle [grid-template-areas:'stack']">
-      <AnimatePresence initial={false} mode="sync">
-        <motion.span
-          key={readerFocusSidebar ? "reader-focus" : "split-view"}
-          animate="animate"
-          className={cn("[grid-area:stack] min-w-0", className)}
-          exit="exit"
-          initial="initial"
-          style={{ transformOrigin: "0 50%" }}
-          variants={variants}
-        >
-          {children}
-        </motion.span>
-      </AnimatePresence>
-    </span>
+    <LazyMotion features={domMax}>
+      <span className="inline-grid min-w-0 overflow-hidden align-middle [grid-template-areas:'stack']">
+        <AnimatePresence initial={false} mode="sync">
+          <m.span
+            key={readerFocusSidebar ? "reader-focus" : "split-view"}
+            animate="animate"
+            className={cn("[grid-area:stack] min-w-0", className)}
+            exit="exit"
+            initial="initial"
+            style={{ transformOrigin: "0 50%" }}
+            variants={variants}
+          >
+            {children}
+          </m.span>
+        </AnimatePresence>
+      </span>
+    </LazyMotion>
   );
 }

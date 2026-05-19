@@ -2,7 +2,7 @@
 
 import { FeedFavicon } from "@components/navigation/feed-favicon";
 import { PreviewCard, PreviewCardPopup, PreviewCardTrigger } from "@components/ui/preview-card";
-import { getFeedSourceLabel } from "@lib/feed-source-label";
+import { getFeedSourceLabel } from "../lib/feed-source-label";
 import { cn } from "@lib/utils";
 import type { CSSProperties } from "react";
 

@@ -12,7 +12,7 @@ import {
   MenuPopup,
   MenuTrigger,
 } from "@components/ui/menu";
-import type { InboxFilter } from "@modules/inbox/api";
+import type { InboxFilter } from "../services/api";
 
 type InboxListFilterMenuProps = {
   filter: InboxFilter;

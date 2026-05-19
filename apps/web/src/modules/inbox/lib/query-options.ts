@@ -1,6 +1,11 @@
 import type { QueryClient } from "@tanstack/react-query";
-import { getInboxItemDetail, getInboxItems, getSidebarInboxCounts, type InboxItem } from "../api";
-import type { InboxFilter } from "../api";
+import {
+  getInboxItemDetail,
+  getInboxItems,
+  getSidebarInboxCounts,
+  type InboxFilter,
+  type InboxItem,
+} from "../services/api";
 import { getTimezoneOffsetMinutes, QUERY_TIMES } from "@lib/query-policies";
 
 export type InboxListPage = {
@@ -77,7 +82,7 @@ export function inboxItemsQueryKey({
   feedId,
   folderId,
   includeRead,
-  timezoneOffsetMinutes = getTimezoneOffsetMinutes(),
+  timezoneOffsetMinutes,
 }: InboxQueryScope = {}) {
   return [
     "inbox",
@@ -101,12 +106,16 @@ export function sidebarInboxSummaryQueryKey(timezoneOffsetMinutes = getTimezoneO
 
 export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
   const filter = scope.filter ?? "inbox";
-  const timezoneOffsetMinutes = scope.timezoneOffsetMinutes ?? getTimezoneOffsetMinutes();
+  const timezoneOffsetMinutes = scope.timezoneOffsetMinutes;
 
   return {
     queryKey: inboxItemsQueryKey({ ...scope, filter, timezoneOffsetMinutes }),
+    enabled: timezoneOffsetMinutes !== undefined,
     initialPageParam: undefined as string | undefined,
     queryFn: async ({ pageParam }: { pageParam: string | undefined }) => {
+      if (timezoneOffsetMinutes === undefined) {
+        throw new Error("Inbox list query requires a client timezone offset.");
+      }
       const page = await getInboxItems({
         data: {
           filter,
@@ -170,8 +179,10 @@ export function sidebarInboxSummaryQueryOptions(
 }
 
 export function invalidateFeedAndInboxQueries(queryClient: QueryClient) {
+  void queryClient.invalidateQueries({ queryKey: ["feeds"] });
   void queryClient.invalidateQueries({ queryKey: followedFeedsQueryKey() });
   void queryClient.invalidateQueries({ queryKey: followedFeedsUnreadCountsQueryKey() });
+  void queryClient.invalidateQueries({ queryKey: ["feed-detail"] });
   void queryClient.invalidateQueries({ queryKey: ["feeds", "refresh-status"] });
   void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
   void queryClient.invalidateQueries({ queryKey: ["inbox", "view-count"] });

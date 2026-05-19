@@ -7,11 +7,9 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import { ScrollArea } from "@components/ui/scroll-area";
-import { listFollowedFeeds, type FollowedFeed } from "@modules/feeds/api";
-import { isInboxPathname } from "@lib/routes/inbox-path";
-import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
+import { listFollowedFeeds, usePinnedFeedIds, type FollowedFeed } from "@modules/feeds";
+import { isInboxPathname, prefetchInboxFlow } from "@modules/inbox";
 import { QUERY_TIMES } from "@lib/query-policies";
-import { prefetchInboxFlow } from "@modules/inbox/lib/prefetch";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -24,10 +22,6 @@ import { cn } from "@lib/utils";
 
 const PINNED_LIST_SCROLL_CLASS =
   "h-auto min-h-0 max-h-72 rounded-lg **:data-[slot=scroll-area-scrollbar]:hidden";
-
-function isFollowedFeed(value: FollowedFeed | undefined): value is FollowedFeed {
-  return Boolean(value);
-}
 
 export function SidebarPinnedSection() {
   const location = useLocation();
@@ -43,9 +37,13 @@ export function SidebarPinnedSection() {
   });
   const { pinnedFeedIds } = usePinnedFeedIds();
   const feedItems = followedFeedsQuery.data ?? [];
-  const pinnedFeeds = pinnedFeedIds
-    .map((feedId) => feedItems.find((feed) => feed.feedId === feedId))
-    .filter(isFollowedFeed);
+  const pinnedFeeds = pinnedFeedIds.reduce<FollowedFeed[]>((feeds, feedId) => {
+    const feed = feedItems.find((item) => item.feedId === feedId);
+    if (feed) {
+      feeds.push(feed);
+    }
+    return feeds;
+  }, []);
 
   return (
     <SidebarGroup className="gap-1">

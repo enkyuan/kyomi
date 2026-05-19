@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useMemo } from "react";
+import { createContext, use, useMemo } from "react";
 import { authClient } from "@lib/auth-client";
 import type { AuthSession } from "@lib/auth-functions";
 
@@ -72,5 +72,5 @@ export default function AuthProvider({
 }
 
 export function useAuth() {
-  return useContext(AuthContext);
+  return use(AuthContext);
 }

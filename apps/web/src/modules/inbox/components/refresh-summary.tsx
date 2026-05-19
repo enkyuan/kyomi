@@ -1,20 +1,43 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useFeedRefresh } from "@hooks/use-feed-refresh";
+import { useEffect, useReducer, useRef } from "react";
+import { useFeedRefresh } from "@modules/feeds/hooks/use-feed-refresh";
 import { cn } from "@lib/utils";
 import {
   getRefreshSummaryLabel,
   SUMMARY_FADE_MS,
   SUMMARY_HOLD_MS,
-} from "@modules/inbox/lib/feed-refresh-formatting";
+} from "../lib/feed-refresh-formatting";
+
+type SummaryPhase = "visible" | "fading" | "hidden";
+
+type SummaryPhaseAction =
+  | { type: "persist" }
+  | { type: "show_completion" }
+  | { type: "fade" }
+  | { type: "hide" };
+
+function summaryPhaseReducer(phase: SummaryPhase, action: SummaryPhaseAction): SummaryPhase {
+  switch (action.type) {
+    case "persist":
+    case "show_completion":
+      return "visible";
+    case "fade":
+      return "fading";
+    case "hide":
+      return "hidden";
+    default:
+      return phase;
+  }
+}
 
 export function FeedRefreshSummary({ feedId }: { feedId: string }) {
   const { refreshStatus, lastRefreshStartedAt, lastRefreshCompletedAt, lastRefreshFailedAt } =
     useFeedRefresh(feedId);
 
   const shouldPersist = refreshStatus === "running" || refreshStatus === "queued";
-  const [phase, setPhase] = useState<"visible" | "fading" | "hidden">(
+  const [phase, dispatchPhase] = useReducer(
+    summaryPhaseReducer,
     shouldPersist ? "visible" : "hidden",
   );
   const previousStatusRef = useRef(refreshStatus);
@@ -31,18 +54,18 @@ export function FeedRefreshSummary({ feedId }: { feedId: string }) {
     previousStatusRef.current = refreshStatus;
 
     if (shouldPersist) {
-      setPhase("visible");
+      dispatchPhase({ type: "persist" });
       return;
     }
 
     if (prev === "running" || prev === "queued") {
-      setPhase("visible");
+      dispatchPhase({ type: "show_completion" });
       const fadeTimer = window.setTimeout(() => {
-        setPhase("fading");
+        dispatchPhase({ type: "fade" });
       }, SUMMARY_HOLD_MS);
 
       const hideTimer = window.setTimeout(() => {
-        setPhase("hidden");
+        dispatchPhase({ type: "hide" });
       }, SUMMARY_HOLD_MS + SUMMARY_FADE_MS);
 
       return () => {

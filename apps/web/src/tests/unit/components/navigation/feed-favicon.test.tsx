@@ -1,5 +1,8 @@
-import { buildFaviconUrl, buildFaviconUrlCandidates } from "@components/navigation/feed-favicon";
-import { FeedFavicon } from "@components/navigation/feed-favicon";
+import {
+  buildFaviconUrl,
+  buildFaviconUrlCandidates,
+  FeedFavicon,
+} from "@components/navigation/feed-favicon";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 

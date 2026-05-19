@@ -2,39 +2,15 @@ import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { enforceRateLimitForContext } from "@adapters/rate-limit/rate-limit.plugin";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
+import {
+  discoverPreviewQuery,
+  discoverPreviewRateLimit,
+  discoverSearchQuery,
+  discoverSearchRateLimit,
+  feedPreviewResponse,
+  feedSearchItem,
+} from "./schemas";
 import { previewFeedFromUrl, searchFeeds } from "./service";
-
-const discoverSearchRateLimit = {
-  name: "discover.search",
-  max: 60,
-  windowMs: 60_000,
-} as const;
-
-const discoverPreviewRateLimit = {
-  name: "discover.preview",
-  max: 20,
-  windowMs: 5 * 60_000,
-} as const;
-
-const feedPreviewResponse = t.Object({
-  id: t.Union([t.String(), t.Null()]),
-  url: t.String(),
-  title: t.String(),
-  description: t.String(),
-  link: t.Union([t.String(), t.Null()]),
-  faviconUrl: t.Union([t.String(), t.Null()]),
-  isSubscribed: t.Boolean(),
-});
-
-const feedSearchItem = t.Object({
-  id: t.String(),
-  url: t.String(),
-  title: t.String(),
-  description: t.Union([t.String(), t.Null()]),
-  link: t.Union([t.String(), t.Null()]),
-  faviconUrl: t.Union([t.String(), t.Null()]),
-  isSubscribed: t.Boolean(),
-});
 
 export function registerDiscoverRoutes(app: Elysia) {
   return app
@@ -56,10 +32,7 @@ export function registerDiscoverRoutes(app: Elysia) {
         return items;
       },
       {
-        query: t.Object({
-          q: t.String({ minLength: 1 }),
-          limit: t.Optional(t.Numeric()),
-        }),
+        query: discoverSearchQuery,
         response: {
           200: t.Array(feedSearchItem),
         },
@@ -79,9 +52,7 @@ export function registerDiscoverRoutes(app: Elysia) {
         return preview;
       },
       {
-        query: t.Object({
-          url: t.String({ minLength: 1 }),
-        }),
+        query: discoverPreviewQuery,
         response: {
           200: feedPreviewResponse,
         },

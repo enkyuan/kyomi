@@ -2,12 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { z } from "zod";
 import { requireAuth } from "@/routes/-guards";
-import { InboxPage } from "@modules/inbox/page";
-import { getInboxPreferences } from "@lib/inbox-preferences-functions";
 import {
+  getInboxPreferences,
   readInboxArticleOpenBehaviorCookie,
   readInboxSplitPanePercentCookie,
-} from "@modules/inbox/lib/layout-persistence";
+} from "@modules/inbox";
+import { InboxPage } from "@modules/inbox/page";
 
 const inboxSearchSchema = z.object({
   filter: z.enum(["inbox", "today", "unread", "saved", "recent"]).optional(),
@@ -22,9 +22,8 @@ const inboxSearchSchema = z.object({
 export const Route = createFileRoute("/inbox/")({
   validateSearch: (search) => inboxSearchSchema.parse(search),
   loader: async () => {
-    await requireAuth();
     const headers = getRequestHeaders();
-    const initialInboxPreferences = await getInboxPreferences();
+    const [, initialInboxPreferences] = await Promise.all([requireAuth(), getInboxPreferences()]);
     const cookieArticleOpenBehavior = readInboxArticleOpenBehaviorCookie(headers.get("cookie"));
     const initialSplitPanePercent = readInboxSplitPanePercentCookie(headers.get("cookie"));
 

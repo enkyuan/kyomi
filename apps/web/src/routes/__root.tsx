@@ -126,6 +126,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         {/* Inline theme init must be its own script: if `src` is set, browsers ignore inline body. */}
+        {/* oxlint-disable-next-line react/no-danger -- static first-paint theme bootstrap; not user HTML */}
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <HeadContent />
       </head>

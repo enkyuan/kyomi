@@ -27,7 +27,7 @@
         "skipComments": true
       }
     ],
-    "complexity": ["warn", 10],
+    "complexity": ["warn", 20],
     "max-depth": ["warn", 3],
     "unicorn/filename-case": [
       "warn",

@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 import type { ArticleDetailDto, ReaderContentDto } from "@lib/api-schemas";
-import { readerContentForMode } from "@lib/reader-display";
+import { readerContentForMode } from "@modules/reader";
 
 function readerContent(overrides: Partial<ReaderContentDto> = {}): ReaderContentDto {
   return {

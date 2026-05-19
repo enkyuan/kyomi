@@ -3,14 +3,28 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import { AppearancePagePanel } from "@modules/settings/appearance";
+import { AppearancePagePanel } from "@modules/settings";
 
 const setInboxPreferencesMock = vi.fn();
 const resetInboxPreferencesMock = vi.fn();
 const setReaderPreferencesMock = vi.fn();
 const resetReaderPreferencesMock = vi.fn();
 
-vi.mock("@lib/inbox-preferences", () => ({
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: vi.fn().mockImplementation((query: string) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    addListener: vi.fn(),
+    removeListener: vi.fn(),
+    dispatchEvent: vi.fn(),
+  })),
+});
+
+vi.mock("@modules/inbox", () => ({
   useInboxPreferences: () => ({
     limits: { minFontSizePx: 14, maxFontSizePx: 20 },
     defaults: {
@@ -40,7 +54,7 @@ vi.mock("@lib/inbox-preferences", () => ({
   }),
 }));
 
-vi.mock("@lib/reader-preferences", () => ({
+vi.mock("@modules/reader", () => ({
   useReaderPreferences: () => ({
     limits: { minFontSizePx: 14, maxFontSizePx: 22 },
     defaults: {
@@ -107,12 +121,14 @@ vi.mock("@components/ui/select", () => ({
 vi.mock("@components/ui/switch", () => ({
   Switch: ({
     checked,
+    id,
     onCheckedChange,
   }: {
     checked?: boolean;
+    id?: string;
     onCheckedChange?: (checked: boolean) => void;
   }) => (
-    <button onClick={() => onCheckedChange?.(!checked)} type="button">
+    <button aria-label={id} onClick={() => onCheckedChange?.(!checked)} type="button">
       toggle
     </button>
   ),
@@ -131,9 +147,13 @@ vi.mock("@components/ui/group", () => ({
   GroupSeparator: () => <div />,
 }));
 
-vi.mock("@modules/settings/theme-switcher", () => ({
-  ThemeSwitcher: () => <div>theme-switcher</div>,
-}));
+vi.mock("@modules/settings", async () => {
+  const actual = await vi.importActual<typeof import("@modules/settings")>("@modules/settings");
+  return {
+    ...actual,
+    ThemeSwitcher: () => <div>theme-switcher</div>,
+  };
+});
 
 describe("AppearancePagePanel", () => {
   beforeEach(() => {
@@ -162,7 +182,7 @@ describe("AppearancePagePanel", () => {
   test("toggles reader link previews from the merged page", () => {
     render(<AppearancePagePanel />);
 
-    fireEvent.click(screen.getByRole("button", { name: /link previews on hover/i }));
+    fireEvent.click(screen.getByRole("button", { name: "reader-link-previews" }));
 
     expect(setReaderPreferencesMock).toHaveBeenCalledWith({ showLinkPreviews: false });
   });

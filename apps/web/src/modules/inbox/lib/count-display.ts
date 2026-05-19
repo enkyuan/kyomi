@@ -1,4 +1,4 @@
-import type { InboxFilter } from "@modules/inbox/api";
+import type { InboxFilter } from "../services/api";
 
 export type InboxListHeaderCount = {
   /** Shown before the unit label (may include a trailing "+" when more pages exist). */

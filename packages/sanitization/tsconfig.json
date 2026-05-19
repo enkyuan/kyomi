@@ -1,12 +1,9 @@
 {
+  "extends": "../../packages/tsconfig/web.json",
   "compilerOptions": {
-    "target": "ES2022",
     "module": "ES2022",
-    "moduleResolution": "bundler",
-    "strict": true,
-    "skipLibCheck": true,
-    "noEmit": true,
-    "lib": ["ES2022", "DOM"]
+    "lib": ["ES2022", "DOM"],
+    "allowImportingTsExtensions": false
   },
   "include": ["src/**/*.ts"]
 }

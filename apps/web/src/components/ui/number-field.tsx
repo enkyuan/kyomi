@@ -2,6 +2,7 @@
 
 import { NumberField as NumberFieldPrimitive } from "@base-ui/react/number-field";
 import { AddFill, MinusCircleFill } from "@mingcute/react";
+import { use } from "react";
 import * as React from "react";
 import { cn } from "@lib/utils";
 import { Label } from "@components/ui/label";
@@ -111,7 +112,7 @@ export function NumberFieldScrubArea({
 }: NumberFieldPrimitive.ScrubArea.Props & {
   label: string;
 }): React.ReactElement {
-  const context = React.useContext(NumberFieldContext);
+  const context = use(NumberFieldContext);
 
   if (!context) {
     throw new Error(
@@ -147,7 +148,7 @@ export function CursorGrowIcon(props: React.ComponentProps<"svg">): React.ReactE
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M19.5 5.5L6.49737 5.51844V2L1 6.9999L6.5 12L6.49737 8.5L19.5 8.5V12L25 6.9999L19.5 2V5.5Z" />
+      <path d="M19.5 5.5L6.5 5.5V2L1 7L6.5 12L6.5 8.5H19.5V12L25 7L19.5 2V5.5Z" />
     </svg>
   );
 }

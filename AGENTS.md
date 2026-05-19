@@ -15,7 +15,7 @@
 ## Learned Workspace Facts
 - Monorepo: `apps/web`, `apps/api`, `packages/*`; rebranded from cronos — npm scope `@vols.rss/*`, root package `vols.rss`.
 - `packages/catalog` is optional offline Python enrichment; normal app runtime/setup (`bootstrap`, `dev:app`, routine TS checks) must not require Poetry or catalog sync.
-- Inbox tablet viewport (`md`–`lg`, 800–1023px in `use-media-query.ts`): `page.tsx` uses `reader-detail` (article fills main, no list column, auto-select first item); desktop `split` at `lg+`. Reader toolbar logic lives in `reader-toolbar-model.ts` (`useReaderToolbarModel`); `detail-panel.tsx` is presentation-only.
+- Inbox tablet landscape (`md`–`lg` + `orientation: landscape`): reader-focused (article fills main, no list column, auto-select first item). Tablet portrait and phones use stacked single-column list↔detail (`InboxMobileSingleColumnLayout`). Desktop split at `lg+` landscape. Layout in `use-responsive-reader-mode.ts`. Reader toolbar logic lives in `reader-toolbar-model.ts` (`useReaderToolbarModel`); `detail-panel.tsx` is presentation-only.
 - Catalog sync: `packages/catalog/scripts/sync.sh` (root `catalog:sync:local`); export script `processing/export_catalog_for_vols_rss.py` (underscores in filename, not `vols.rss`; keep `packages/catalog/package.json` export scripts on that path).
 - Catalog Python helpers live under `packages/catalog/feed` (import as `feed`; formerly `readspace`). `feed/favicon.py` imports PyPI `extract-favicon`—keep it in `packages/catalog/pyproject.toml` and the Poetry env.
 - Shared article HTML sanitization: `packages/sanitization` (`@vols.rss/sanitization`), replacing the older `article-html-sanitize` layout.

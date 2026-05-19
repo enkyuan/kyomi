@@ -1,6 +1,6 @@
 "use client";
 
-import { useFeedRefresh } from "@hooks/use-feed-refresh";
+import { useFeedRefresh } from "@modules/feeds/hooks/use-feed-refresh";
 import { Refresh2Fill } from "@mingcute/react";
 import { Button } from "@components/ui/button";
 

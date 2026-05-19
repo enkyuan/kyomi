@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { createContext, use } from "react";
 
 const SidebarReaderFocusContext = createContext(false);
 
@@ -19,5 +19,5 @@ export function SidebarReaderFocusProvider({
 }
 
 export function useSidebarReaderFocus() {
-  return useContext(SidebarReaderFocusContext);
+  return use(SidebarReaderFocusContext);
 }

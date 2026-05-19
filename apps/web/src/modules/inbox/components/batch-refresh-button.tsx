@@ -2,16 +2,13 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { listFeedRefreshStatuses, refreshBatchFeeds } from "@modules/feeds/api";
+import { listFeedRefreshStatuses, refreshBatchFeeds } from "@modules/feeds/services/api";
 import {
   BATCH_REFRESH_GRACE_MS,
   BATCH_REFRESH_POLL_MS,
   hasActiveRefreshStatus,
-} from "@modules/inbox/lib/feed-refresh-formatting";
-import {
-  feedRefreshStatusQueryKey,
-  invalidateFeedAndInboxQueries,
-} from "@modules/inbox/lib/query-options";
+} from "../lib/feed-refresh-formatting";
+import { feedRefreshStatusQueryKey, invalidateFeedAndInboxQueries } from "../lib/query-options";
 import { Refresh2Fill } from "@mingcute/react";
 import { Button } from "@components/ui/button";
 
@@ -27,7 +24,7 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
 
   const refreshStatusQuery = useQuery({
     queryKey: feedRefreshStatusQueryKey(folderId),
-    queryFn: () => listFeedRefreshStatuses({ data: { folderId } }),
+    queryFn: async () => (await listFeedRefreshStatuses({ data: { folderId } })) ?? [],
     refetchInterval: (query) => {
       if (!isWatchingRef.current) {
         return false;
@@ -50,6 +47,7 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
   const mutation = useMutation({
     mutationFn: async () => refreshBatchFeeds({ data: { folderId } }),
     onSuccess: (result) => {
+      void queryClient.invalidateQueries({ queryKey: feedRefreshStatusQueryKey(folderId) });
       invalidateRefreshQueries();
       if (result.failedCount && result.failedCount > 0) {
         console.warn("feeds.refresh.batch.partial_failure", {

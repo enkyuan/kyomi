@@ -221,6 +221,10 @@
         "dompurify": "^3.4.0",
       },
     },
+    "packages/tsconfig": {
+      "name": "@vols.rss/tsconfig",
+      "version": "0.0.0",
+    },
     "packages/worker": {
       "name": "@vols.rss/worker",
       "dependencies": {
@@ -1347,6 +1351,8 @@
     "@vols.rss/reader": ["@vols.rss/reader@workspace:packages/reader"],
 
     "@vols.rss/sanitization": ["@vols.rss/sanitization@workspace:packages/sanitization"],
+
+    "@vols.rss/tsconfig": ["@vols.rss/tsconfig@workspace:packages/tsconfig"],
 
     "@vols.rss/web": ["@vols.rss/web@workspace:apps/web"],
 

@@ -32,7 +32,7 @@ describe("reader-preferences server functions", () => {
       readerPreferencesSchema: {},
     }));
 
-    await import("@lib/reader-preferences-functions");
+    await import("@modules/reader/services/reader-preferences");
 
     expect(createServerFnCalls[0]).toEqual({ method: "GET" });
     expect(createServerFnCalls[1]).toEqual({ method: "POST" });

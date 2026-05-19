@@ -1,6 +1,6 @@
 import type { InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
 import { dehydrate, hydrate } from "@tanstack/react-query";
-import type { InboxListPage } from "@modules/inbox/lib/query-options";
+import type { InboxListPage } from "@modules/inbox";
 
 const HOT_CACHE_KEY = "vols.rss:hot-query-cache:v1";
 const HOT_CACHE_MAX_AGE_MS = 10 * 60_000;

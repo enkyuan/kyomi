@@ -4,8 +4,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useLocation, Link, useRouter } from "@tanstack/react-router";
 import { Calendar3Fill, NewsFill, StarFill, TimeDurationFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
-import { useInboxPreferences } from "@lib/inbox-preferences";
-import { prefetchInboxFlow } from "@modules/inbox/lib/prefetch";
+import { isInboxPathname, prefetchInboxFlow, useInboxPreferences } from "@modules/inbox";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -15,7 +14,6 @@ import {
   SidebarMenuItem,
 } from "@components/ui/sidebar";
 import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-text";
-import { isInboxPathname } from "@lib/routes/inbox-path";
 
 type InboxNavSearch = {
   filter?: "today" | "unread" | "saved" | "recent";

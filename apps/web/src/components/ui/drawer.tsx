@@ -8,7 +8,7 @@ import { RadioGroup as RadioGroupPrimitive } from "@base-ui/react/radio-group";
 import { useRender } from "@base-ui/react/use-render";
 import { CloseFill, RightFill } from "@mingcute/react";
 import type React from "react";
-import { createContext, useContext } from "react";
+import { createContext, use } from "react";
 import { cn } from "@lib/utils";
 import { Button } from "@components/ui/button";
 import { ScrollArea } from "@components/ui/scroll-area";
@@ -61,7 +61,7 @@ export function DrawerSwipeArea({
 }: DrawerPrimitive.SwipeArea.Props & {
   position?: DrawerPosition;
 }): React.ReactElement {
-  const { position: contextPosition } = useContext(DrawerContext);
+  const { position: contextPosition } = use(DrawerContext);
   const position = positionProp ?? contextPosition;
 
   return (
@@ -139,7 +139,7 @@ export function DrawerPopup({
   variant?: "default" | "straight" | "inset";
   showBar?: boolean;
 }): React.ReactElement {
-  const { position: contextPosition } = useContext(DrawerContext);
+  const { position: contextPosition } = use(DrawerContext);
   const position = positionProp ?? contextPosition;
 
   return (
@@ -336,7 +336,7 @@ export function DrawerBar({
 }: useRender.ComponentProps<"div"> & {
   position?: DrawerPosition;
 }): React.ReactElement {
-  const { position: contextPosition } = useContext(DrawerContext);
+  const { position: contextPosition } = use(DrawerContext);
   const position = positionProp ?? contextPosition;
   const horizontal = position === "left" || position === "right";
   const defaultProps = {
