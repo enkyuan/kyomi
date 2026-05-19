@@ -238,7 +238,7 @@ export const unreadCountsQuerySchema = t.Object({
   feed_ids: t.Optional(t.String()),
 });
 
-/** Merged feed+clip list views accept `limit`; `cursor` is parsed for forward compatibility (not applied yet). */
+/** Merged feed+clip list views accept `limit` and `cursor` for keyset pagination. */
 export const mergedArticleViewsQuerySchema = t.Object({
   limit: t.Optional(t.String()),
   cursor: t.Optional(t.String()),
