@@ -1,8 +1,5 @@
 import createDOMPurify from "dompurify";
-import {
-  getArticleHtmlSanitizeOptions,
-  registerArticleHtmlSanitizeHooks,
-} from "@vols.rss/worker/sanitization";
+import { getArticleHtmlSanitizeOptions, registerArticleHtmlSanitizeHooks } from "./sanitization";
 
 type PurifyInstance = ReturnType<typeof createDOMPurify>;
 

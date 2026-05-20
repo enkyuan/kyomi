@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "bootstrap": "bun run setup:app && bun run setup:catalog",
+    "bootstrap": "bun run setup:app",
+    "bootstrap:full": "bun run setup:app && bun run setup:catalog",
     "dev": "turbo run dev --filter=@vols.rss/web",
     "dev:app": "turbo run dev --filter=@vols.rss/web",
     "dev:web": "turbo run dev --filter=@vols.rss/web",

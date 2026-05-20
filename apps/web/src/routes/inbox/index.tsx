@@ -1,12 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import { requireAuth } from "@/routes/-guards";
-import {
-  getInboxPreferences,
-  Page,
-  readInboxArticleOpenBehaviorCookie,
-  readInboxSplitPanePercentCookie,
-} from "@modules/inbox";
+import { Page } from "@modules/inbox";
+import { getInboxLoaderData } from "@modules/inbox/services/route-loader";
 
 const inboxSearchSchema = z.object({
   filter: z.enum(["inbox", "today", "unread", "saved", "recent"]).optional(),

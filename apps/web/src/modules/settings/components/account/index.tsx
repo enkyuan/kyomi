@@ -17,7 +17,6 @@ import {
   TableRow,
 } from "@vols.rss/ui/table";
 import { useAccountPanel } from "@modules/settings/hooks/use-account-panel";
-import { formatTimestamp, shortenUserAgent } from "@modules/settings/account-helpers";
 
 export const accountSection = {
   description: "Manage your account details, connected accounts, and security settings.",
@@ -58,9 +57,11 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
   const {
     emailDraft,
     emailError,
+    formatTimestamp,
     isEditingEmail,
     sessions,
     sessionsQuery,
+    shortenUserAgent,
     updateEmailMutation,
     handleCancelEditEmail,
     handleEmailDraftChange,

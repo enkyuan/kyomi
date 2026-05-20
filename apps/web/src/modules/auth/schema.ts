@@ -1,5 +1,17 @@
 import z from "zod";
-import { authEmailSchema } from "@lib/email";
+
+const _emailFormatSchema = z.email({ error: "Enter a valid email address" });
+
+/** Trimmed, non-empty email for auth and account forms. */
+export const authEmailSchema = z
+  .string()
+  .trim()
+  .min(1, "Email is required")
+  .pipe(_emailFormatSchema);
+
+export function isValidEmail(value: string): boolean {
+  return authEmailSchema.safeParse(value).success;
+}
 
 export const loginFormSchema = z.object({
   email: authEmailSchema,

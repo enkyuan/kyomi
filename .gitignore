@@ -8,6 +8,7 @@ dist
 build
 coverage
 .cursor/*
+.antigravitycli
 
 # Python pipeline artifacts
 packages/catalog/.venv
