@@ -2,10 +2,10 @@
 
 import { AppShell } from "@/app/app-shell";
 import { Detail } from "@modules/reader/components/detail";
-import { MIN_INBOX_LEFT_PERCENT, MIN_INBOX_RIGHT_PERCENT } from "../../lib/constants";
-import { MobileSingleColumnLayout, ReaderFocusDetailLayout, SplitLayout } from "../layout";
+import { MIN_INBOX_LEFT_PERCENT, MIN_INBOX_RIGHT_PERCENT } from "./lib/constants";
+import { MobileSingleColumnLayout, ReaderFocusDetailLayout, SplitLayout } from "./layout";
 import { useQuery } from "@tanstack/react-query";
-import { List } from "../list";
+import { List } from "./components/list";
 import {
   InboxPreferencesBootstrapProvider,
   useInboxPreferences,
@@ -77,7 +77,7 @@ function InboxPageContent({
     containerRef: splitContainerRef,
     leftPanelPercent,
     isResizing,
-    setIsResizing,
+    resizeHandleProps,
   } = useSplitPane({
     minLeftPercent: MIN_INBOX_LEFT_PERCENT,
     minRightPercent: MIN_INBOX_RIGHT_PERCENT,
@@ -327,7 +327,7 @@ function InboxPageContent({
             splitContainerRef={splitContainerRef}
             leftPanelPercent={leftPanelPercent}
             isResizing={isResizing}
-            setIsResizing={setIsResizing}
+            resizeHandleProps={resizeHandleProps}
             list={
               <List {...listProps} display={{ ...listProps.display, readerFocusMode: false }} />
             }

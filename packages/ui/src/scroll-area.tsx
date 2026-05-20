@@ -4,6 +4,10 @@ import { ScrollArea as ScrollAreaPrimitive } from "@base-ui/react/scroll-area";
 import type React from "react";
 import { cn } from "./lib/utils";
 
+/** Thin scrollbar track that widens while hovering or actively scrolling. */
+export const scrollbarThinExpandClass =
+  "opacity-100 transition-[width,height] delay-300 duration-300 data-hovering:delay-0 data-scrolling:delay-0 data-hovering:duration-150 data-scrolling:duration-150 data-[orientation=vertical]:w-0.5 data-[orientation=vertical]:data-hovering:w-1.5 data-[orientation=vertical]:data-scrolling:w-1.5 data-[orientation=horizontal]:h-0.5 data-[orientation=horizontal]:data-hovering:h-1.5 data-[orientation=horizontal]:data-scrolling:h-1.5";
+
 export function ScrollArea({
   className,
   children,
@@ -42,7 +46,8 @@ export function ScrollBar({
   return (
     <ScrollAreaPrimitive.Scrollbar
       className={cn(
-        "m-0.5 flex opacity-0 transition-opacity delay-300 data-[orientation=horizontal]:h-1 data-[orientation=vertical]:w-1 data-[orientation=horizontal]:flex-col data-hovering:opacity-100 data-scrolling:opacity-100 data-hovering:delay-0 data-scrolling:delay-0 data-hovering:duration-100 data-scrolling:duration-100",
+        "m-0.5 flex data-[orientation=horizontal]:flex-col",
+        scrollbarThinExpandClass,
         className,
       )}
       data-slot="scroll-area-scrollbar"

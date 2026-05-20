@@ -3,12 +3,13 @@
 import { AnimatePresence, LazyMotion, domMax, m, useReducedMotion } from "motion/react";
 import { useSyncExternalStore } from "react";
 import type { CSSProperties, ReactNode, RefObject } from "react";
+import type { ResizeHandleProps } from "./hooks/use-split-pane";
 import {
   INBOX_DETAIL_PANEL_OUTER_SPACING_STYLE,
   INBOX_PANEL_OUTER_PADDING_STYLE,
   INBOX_PANEL_SPACING_PX,
   INBOX_PANEL_VERTICAL_PADDING_STYLE,
-} from "../../lib/constants";
+} from "./lib/constants";
 
 function subscribeNoop() {
   return () => {};
@@ -122,7 +123,7 @@ type SplitLayoutProps = {
   splitContainerRef: RefObject<HTMLDivElement | null>;
   leftPanelPercent: number;
   isResizing: boolean;
-  setIsResizing: (value: boolean) => void;
+  resizeHandleProps: ResizeHandleProps;
   list: ReactNode;
   detail: ReactNode;
 };
@@ -131,7 +132,7 @@ export function SplitLayout({
   splitContainerRef,
   leftPanelPercent,
   isResizing,
-  setIsResizing,
+  resizeHandleProps,
   list,
   detail,
 }: SplitLayoutProps) {
@@ -171,10 +172,7 @@ export function SplitLayout({
         aria-orientation="vertical"
         aria-label="Resize panels"
         className="group -mx-1 flex h-full w-2 cursor-col-resize touch-none items-stretch justify-center"
-        onPointerDown={(event) => {
-          event.preventDefault();
-          setIsResizing(true);
-        }}
+        {...resizeHandleProps}
       >
         <div className="h-full w-px bg-transparent opacity-0" />
       </div>

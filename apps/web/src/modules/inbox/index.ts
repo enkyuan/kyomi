@@ -1,6 +1,7 @@
 export * from "./services/api";
 export { List, type ListDisplayOptions, type ListFilterVisibility } from "./components/list";
-export { Page } from "./components/page";
+export { Page } from "./page";
+
 export { formatInboxTimestamp } from "./utils/format-timestamp";
 export { useInboxRouteState } from "./hooks/use-route-state";
 export {

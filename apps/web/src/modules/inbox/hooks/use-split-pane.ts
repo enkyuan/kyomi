@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useReducer, useRef } from "react";
+import { useEffect, useMemo, useReducer, useRef } from "react";
+import type { PointerEvent as ReactPointerEvent } from "react";
 import { writeInboxSplitPanePercentCookie } from "../lib/layout-persistence";
 
 const SPLIT_PANE_PERCENT_CSS_VAR = "--inbox-left-panel-percent";
@@ -47,6 +48,13 @@ function splitPaneReducer(state: SplitPaneState, action: SplitPaneAction): Split
   }
 }
 
+export type ResizeHandleProps = {
+  onPointerDown: (event: ReactPointerEvent<HTMLDivElement>) => void;
+  onPointerMove: (event: ReactPointerEvent<HTMLDivElement>) => void;
+  onPointerUp: (event: ReactPointerEvent<HTMLDivElement>) => void;
+  onPointerCancel: (event: ReactPointerEvent<HTMLDivElement>) => void;
+};
+
 export function useSplitPane({
   minLeftPercent = 24,
   minRightPercent = 60,
@@ -84,11 +92,13 @@ export function useSplitPane({
     };
   }, []);
 
-  useEffect(() => {
-    const endResize = () => {
+  // Stable — all mutable state accessed via refs; no state deps.
+  const resizeHandleProps = useMemo((): ResizeHandleProps => {
+    const finishResize = (event: ReactPointerEvent<HTMLDivElement>) => {
       if (!isResizingRef.current) {
         return;
       }
+      event.currentTarget.releasePointerCapture(event.pointerId);
 
       if (rafIdRef.current !== null) {
         window.cancelAnimationFrame(rafIdRef.current);
@@ -104,58 +114,53 @@ export function useSplitPane({
       writeInboxSplitPanePercentCookie(percent);
     };
 
-    const handlePointerMove = (event: PointerEvent) => {
-      if (!isResizingRef.current) {
-        return;
-      }
+    return {
+      onPointerDown: (event) => {
+        if (isResizingRef.current) {
+          return;
+        }
+        event.preventDefault();
+        event.currentTarget.setPointerCapture(event.pointerId);
+        isResizingRef.current = true;
+        dispatch({ type: "start_resize" });
+        setBodyResizeStyles(true);
+      },
 
-      const container = containerRef.current;
-      if (!container) {
-        return;
-      }
+      onPointerMove: (event) => {
+        if (!isResizingRef.current) {
+          return;
+        }
+        const container = containerRef.current;
+        if (!container) {
+          return;
+        }
+        const rect = container.getBoundingClientRect();
+        if (rect.width <= 0) {
+          return;
+        }
 
-      const rect = container.getBoundingClientRect();
-      if (rect.width <= 0) {
-        return;
-      }
+        const { minLeftPercent: minLeft, minRightPercent: minRight } = boundsRef.current;
+        const next = ((event.clientX - rect.left) / rect.width) * 100;
+        dragPercentRef.current = clampSplitPanePercent(next, minLeft, minRight);
 
-      const { minLeftPercent: minLeft, minRightPercent: minRight } = boundsRef.current;
-      const next = ((event.clientX - rect.left) / rect.width) * 100;
-      const clamped = clampSplitPanePercent(next, minLeft, minRight);
-      dragPercentRef.current = clamped;
+        if (rafIdRef.current !== null) {
+          return;
+        }
+        rafIdRef.current = window.requestAnimationFrame(() => {
+          rafIdRef.current = null;
+          writeSplitPanePercentToContainer(containerRef.current, dragPercentRef.current);
+        });
+      },
 
-      if (rafIdRef.current !== null) {
-        return;
-      }
-
-      rafIdRef.current = window.requestAnimationFrame(() => {
-        rafIdRef.current = null;
-        writeSplitPanePercentToContainer(containerRef.current, dragPercentRef.current);
-      });
+      onPointerUp: finishResize,
+      onPointerCancel: finishResize,
     };
-
-    window.addEventListener("pointermove", handlePointerMove);
-    window.addEventListener("pointerup", endResize);
-    window.addEventListener("pointercancel", endResize);
-
-    return () => {
-      window.removeEventListener("pointermove", handlePointerMove);
-      window.removeEventListener("pointerup", endResize);
-      window.removeEventListener("pointercancel", endResize);
-    };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return {
     containerRef,
     leftPanelPercent,
     isResizing,
-    setIsResizing: (next: boolean) => {
-      if (!next || isResizingRef.current) {
-        return;
-      }
-      isResizingRef.current = true;
-      dispatch({ type: "start_resize" });
-      setBodyResizeStyles(true);
-    },
+    resizeHandleProps,
   };
 }

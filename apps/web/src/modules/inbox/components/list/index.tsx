@@ -1,12 +1,13 @@
 "use client";
 
+import { cn } from "@lib/utils";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { ToolbarOverlay, type ActiveToolbar } from "@modules/feeds/components/item/toolbar";
 import { SkeletonRows, StaticRows, VirtualizedRows } from "./feed-item-rows";
 import { FilterMenu } from "./filter-menu";
 import { Summary } from "../refresh/summary";
 import { Update } from "../refresh/update";
-import { ScrollAreaPrimitive, ScrollBar } from "@vols.rss/ui/scroll-area";
+import { ScrollAreaPrimitive, ScrollBar, scrollbarThinExpandClass } from "@vols.rss/ui/scroll-area";
 import {
   useCallback,
   useEffect,
@@ -204,7 +205,10 @@ export function List({
           </div>
         </ScrollAreaPrimitive.Viewport>
         <ScrollBar
-          className="z-50 mt-(--inbox-header-height) h-[calc(100%-var(--inbox-header-height))]"
+          className={cn(
+            "z-50 mt-(--inbox-header-height) h-[calc(100%-var(--inbox-header-height))]",
+            scrollbarThinExpandClass,
+          )}
           orientation="vertical"
         />
       </ScrollAreaPrimitive.Root>

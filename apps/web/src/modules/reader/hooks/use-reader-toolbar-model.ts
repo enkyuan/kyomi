@@ -9,6 +9,7 @@ import type { ArticleDetailDto, ExtractFullTextResponseDto } from "src/lib/schem
 import { readerContentForMode } from "../reader-display";
 import { useArticleExtraction } from "./use-article-extraction";
 import { useReaderPreferences, type ReaderContentWidth } from "./use-reader-preferences";
+import { readerArticleTopInsetClass } from "../lib/detail-inset";
 import { cn } from "@lib/utils";
 
 export type ReaderToolbarMode = "original" | "extracted";
@@ -197,8 +198,8 @@ export function useReaderToolbarModel({
 
   return {
     articleClassName: cn(
-      "reader-content prose prose-neutral dark:prose-invert relative mx-auto px-2 pb-10",
-      readerFocusMode ? "pt-5" : "pt-10",
+      "reader-content prose prose-neutral dark:prose-invert relative mx-auto max-w-none px-1 pb-10",
+      readerArticleTopInsetClass(readerFocusMode),
       maxWidthClassName,
       !preferences.showImages && "reader-hide-images",
     ),
@@ -234,7 +235,7 @@ export function useReaderToolbarModel({
       },
       onOpenAi: () => {
         toastManager.add({
-          title: "AI tools coming next",
+          title: "AI tools coming soon",
           description: "This button is reserved for article-side LLM actions.",
           type: "info",
         });

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMemo, useSyncExternalStore } from "react";
 
 export type ClientPlatform = "mac" | "windows" | "linux" | "other";
 
@@ -21,14 +21,13 @@ export type PlatformState = {
   usesMetaModifier: boolean;
 };
 
-const DEFAULT_PLATFORM: PlatformState = {
-  platform: "other",
-  isMac: false,
-  isWindows: false,
-  isLinux: false,
-  modifierKeyLabel: MODIFIER_KEY_SYMBOL.ctrl,
-  usesMetaModifier: false,
-};
+function subscribePlatform() {
+  return () => {};
+}
+
+function getServerPlatform(): ClientPlatform {
+  return "other";
+}
 
 export function detectClientPlatform(): ClientPlatform {
   if (typeof navigator === "undefined") {
@@ -77,11 +76,7 @@ export function isPlatformModifierShortcut(
 }
 
 export function usePlatform(): PlatformState {
-  const [platform, setPlatform] = useState<PlatformState>(DEFAULT_PLATFORM);
+  const platform = useSyncExternalStore(subscribePlatform, detectClientPlatform, getServerPlatform);
 
-  useEffect(() => {
-    setPlatform(platformStateFromClient(detectClientPlatform()));
-  }, []);
-
-  return platform;
+  return useMemo(() => platformStateFromClient(platform), [platform]);
 }

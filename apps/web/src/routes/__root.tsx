@@ -76,7 +76,10 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
-  const { initialSession } = Route.useLoaderData();
+  const loaderData = Route.useLoaderData() as
+    | { initialSession?: Awaited<ReturnType<typeof getSession>> }
+    | undefined;
+  const initialSession = loaderData?.initialSession ?? null;
 
   useEffect(() => {
     if (import.meta.env.DEV) {
