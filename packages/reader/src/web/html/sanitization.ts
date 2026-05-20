@@ -325,10 +325,15 @@ export function isAllowedArticleClassToken(token: string): boolean {
 function filterClassAttr(tag: string, value: string): string | null {
   const lowerTag = tag.toLowerCase();
   if (lowerTag === "code") {
-    const kept = value
-      .split(/\s+/)
-      .map((t) => t.trim())
-      .filter((t) => /^language-[\w-]+$/.test(t));
+    const kept = value.split(/\s+/).reduce((acc, t) => {
+      const trimmed = t.trim();
+
+      if (/^language-[\w-]+$/.test(trimmed)) {
+        acc.push(trimmed);
+      }
+
+      return acc;
+    }, []);
     return kept.length > 0 ? kept.join(" ") : null;
   }
   if (!CLASS_CAPABLE_TAGS.has(lowerTag)) {
