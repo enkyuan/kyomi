@@ -339,10 +339,15 @@ function filterClassAttr(tag: string, value: string): string | null {
   if (!CLASS_CAPABLE_TAGS.has(lowerTag)) {
     return null;
   }
-  const kept = value
-    .split(/\s+/)
-    .map((t) => t.trim())
-    .filter((t) => t && isAllowedArticleClassToken(t));
+  const kept = value.split(/\s+/).reduce((acc, t) => {
+    const trimmed = t.trim();
+
+    if (trimmed && isAllowedArticleClassToken(trimmed)) {
+      acc.push(trimmed);
+    }
+
+    return acc;
+  }, []);
   return kept.length > 0 ? kept.join(" ") : null;
 }
 
