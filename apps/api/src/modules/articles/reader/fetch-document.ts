@@ -1,39 +1,15 @@
 import type { FetchArticleDocumentResult } from "./content.types";
+import { assertHttpOrHttpsUrl } from "@shared/net/http-url";
+import {
+  BlockedOutboundUrlError,
+  TooManyRedirectsError,
+  fetchWithSafeRedirects,
+  readResponseBodyWithByteLimit,
+} from "@shared/net/safe-fetch";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_HTML_BYTES = 3 * 1024 * 1024;
 const MAX_REDIRECT_HOPS = 5;
-
-const PRIVATE_IP_PATTERNS = [
-  /^127\./,
-  /^10\./,
-  /^172\.(1[6-9]|2\d|3[01])\./,
-  /^192\.168\./,
-  /^169\.254\./,
-  /^0\.0\.0\.0$/,
-  /^::1$/,
-  /^::$/,
-  /^::ffff:/i,
-  /^fc00:/i,
-  /^fe80:/i,
-  /^localhost$/i,
-];
-
-function isSafeArticleUrl(raw: string): boolean {
-  let url: URL;
-  try {
-    url = new URL(raw);
-  } catch {
-    return false;
-  }
-
-  if (url.protocol !== "http:" && url.protocol !== "https:") {
-    return false;
-  }
-
-  const hostname = url.hostname.replace(/^\[/, "").replace(/\]$/, "");
-  return !PRIVATE_IP_PATTERNS.some((pattern) => pattern.test(hostname));
-}
 
 function isReadableDocumentContentType(contentType: string): boolean {
   return (
@@ -43,37 +19,11 @@ function isReadableDocumentContentType(contentType: string): boolean {
   );
 }
 
-async function fetchWithSafeRedirects(inputUrl: string, init: RequestInit): Promise<Response> {
-  let nextUrl = inputUrl;
-
-  for (let hop = 0; hop <= MAX_REDIRECT_HOPS; hop += 1) {
-    const response = await fetch(nextUrl, {
-      ...init,
-      redirect: "manual",
-    });
-
-    if (response.status < 300 || response.status >= 400) {
-      return response;
-    }
-
-    const location = response.headers.get("location");
-    if (!location) {
-      return response;
-    }
-
-    const redirectedUrl = new URL(location, nextUrl).toString();
-    if (!isSafeArticleUrl(redirectedUrl)) {
-      throw new Error("Unsafe redirect target blocked.");
-    }
-
-    nextUrl = redirectedUrl;
-  }
-
-  throw new Error("Too many redirects.");
-}
-
 export async function fetchArticleDocument(url: string): Promise<FetchArticleDocumentResult> {
-  if (!isSafeArticleUrl(url)) {
+  let initialUrl: URL;
+  try {
+    initialUrl = assertHttpOrHttpsUrl(url);
+  } catch {
     return {
       ok: false,
       errorCode: "BLOCKED_URL",
@@ -85,17 +35,22 @@ export async function fetchArticleDocument(url: string): Promise<FetchArticleDoc
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 
   try {
-    const response = await fetchWithSafeRedirects(url, {
-      signal: controller.signal,
-      headers: {
-        "user-agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        accept: "text/html,application/xhtml+xml;q=0.9,text/plain;q=0.8,*/*;q=0.5",
-        "accept-language": "en-US,en;q=0.9",
+    const { response, finalUrl } = await fetchWithSafeRedirects(
+      initialUrl,
+      {
+        signal: controller.signal,
+        headers: {
+          "user-agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          accept: "text/html,application/xhtml+xml;q=0.9,text/plain;q=0.8,*/*;q=0.5",
+          "accept-language": "en-US,en;q=0.9",
+        },
       },
-    });
+      { maxRedirects: MAX_REDIRECT_HOPS },
+    );
 
     if (!response.ok) {
+      response.body?.cancel().catch(() => undefined);
       return {
         ok: false,
         errorCode: "FETCH_FAILED",
@@ -112,8 +67,8 @@ export async function fetchArticleDocument(url: string): Promise<FetchArticleDoc
       };
     }
 
-    const body = await response.text();
-    if (body.length > MAX_HTML_BYTES) {
+    const body = await readResponseBodyWithByteLimit(response, MAX_HTML_BYTES);
+    if (!body.ok) {
       return {
         ok: false,
         errorCode: "TOO_LARGE",
@@ -123,11 +78,19 @@ export async function fetchArticleDocument(url: string): Promise<FetchArticleDoc
 
     return {
       ok: true,
-      finalUrl: response.url,
-      body,
+      finalUrl: finalUrl.href,
+      body: body.body,
       contentType,
     };
   } catch (error) {
+    if (error instanceof BlockedOutboundUrlError) {
+      return {
+        ok: false,
+        errorCode: "BLOCKED_URL",
+        errorMessage: "Invalid or unsafe URL provided.",
+      };
+    }
+
     if (error instanceof Error && error.name === "AbortError") {
       return {
         ok: false,
@@ -140,7 +103,11 @@ export async function fetchArticleDocument(url: string): Promise<FetchArticleDoc
       ok: false,
       errorCode: "FETCH_FAILED",
       errorMessage:
-        error instanceof Error ? `Extraction failed: ${error.message}` : "Extraction failed.",
+        error instanceof TooManyRedirectsError
+          ? "Extraction failed: Too many redirects."
+          : error instanceof Error
+            ? `Extraction failed: ${error.message}`
+            : "Extraction failed.",
     };
   } finally {
     clearTimeout(timer);

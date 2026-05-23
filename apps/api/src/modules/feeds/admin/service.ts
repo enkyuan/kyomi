@@ -2,8 +2,8 @@ import { and, eq, ne } from "drizzle-orm";
 import { feeds } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
 import { deleteFeedSearchDocument, upsertFeedSearchDocument } from "@adapters/search/meili";
-import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/normalize-feed-url";
-import { AppError } from "@shared/errors/app-error";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize-url";
+import { AppError } from "@shared/errors/app";
 import type { AdminGlobalFeedDetailDto, AdminUpdateGlobalFeedBody } from "../types";
 
 type DB = typeof db;

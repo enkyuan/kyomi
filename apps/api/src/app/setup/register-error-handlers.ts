@@ -2,8 +2,8 @@ import type { Elysia } from "elysia";
 import { ValidationError } from "elysia";
 import { env } from "@config/env";
 import { logger } from "@adapters/logger";
-import { AppError } from "@shared/errors/app-error";
-import { shapeErrorResponse } from "@shared/http/error-shape.middleware";
+import { AppError } from "@shared/errors/app";
+import { shapeErrorResponse } from "@shared/http/error/shape";
 import { getRequestIdFromHeaders } from "@shared/utils/request-id";
 
 function resolveErrorRequestId(

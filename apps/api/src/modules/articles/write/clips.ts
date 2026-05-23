@@ -1,8 +1,8 @@
 import type { db } from "@adapters/db/client";
 import { articleClips } from "@vols.rss/db";
-import { assertHttpOrHttpsUrl } from "@modules/discover/normalize-feed-url";
+import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
 import { and, desc, eq, gte, lt, or, type SQL } from "drizzle-orm";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import { extractFullTextFromUrl } from "../reader/enrichment";
 import type { ExtractedContentStatus } from "../reader/content.types";
 import {

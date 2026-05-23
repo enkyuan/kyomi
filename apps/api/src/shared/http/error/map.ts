@@ -1,5 +1,5 @@
-import type { AppError } from "@shared/errors/app-error";
-import type { ErrorResponseDto } from "@shared/http/error-response.dto";
+import type { AppError } from "@shared/errors/app";
+import type { ErrorResponseDto } from "./response";
 
 export function mapError(error: AppError, requestId?: string): ErrorResponseDto {
   return {

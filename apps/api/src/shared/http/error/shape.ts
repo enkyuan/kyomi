@@ -1,5 +1,5 @@
-import { AppError } from "@shared/errors/app-error";
-import { mapErrorToResponse } from "@shared/http/error.mapper";
+import { AppError } from "@shared/errors/app";
+import { mapErrorToResponse } from "./map";
 
 export function shapeErrorResponse(error: unknown, requestId?: string) {
   if (error instanceof Response) {

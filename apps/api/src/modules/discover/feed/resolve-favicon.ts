@@ -1,6 +1,6 @@
 import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "@vols.rss/worker/favicon";
 import type { AppLogger } from "@adapters/logger";
-import type { ResolvedRemoteFeed } from "./resolve-remote-feed";
+import type { ResolvedRemoteFeed } from "./resolve-remote";
 
 export type FeedFaviconEnrichment = { url: string; source: string } | null;
 

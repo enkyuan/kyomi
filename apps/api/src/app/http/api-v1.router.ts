@@ -7,7 +7,7 @@ import { registerOpmlRoutes } from "@modules/opml/routes";
 import { registerQueueRoutes } from "@modules/queue/routes";
 import { registerUserRoutes } from "@modules/users/routes";
 import { apiV1AdapterPlugin } from "@shared/http/stacks";
-import { resolveSessionContext } from "@shared/http/session-context.middleware";
+import { resolveSessionContext } from "@shared/http/session/context";
 
 const domainRouteRegistrars = [
   registerDiscoverRoutes,

@@ -1,6 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { createOrSubscribeToFeed } from "@modules/feeds/service";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import type { OpmlImportSummary, OpmlUrlFailure } from "./types";
 
 type DB = typeof db;

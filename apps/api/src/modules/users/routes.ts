@@ -1,14 +1,10 @@
 import type { Elysia } from "elysia";
-import { AppError } from "@shared/errors/app-error";
-import { v1HandlerContext } from "@shared/http/v1-handler-context";
-import { listMembershipsForUser } from "./organizations.service";
-import {
-  updateEmailBody,
-  updateUserPreferencesBody,
-  userMembershipsResponse,
-  userPreferencesResponse,
-  userProfileResponse,
-} from "./schemas";
+import { AppError } from "@shared/errors/app";
+import { v1HandlerContext } from "@shared/http/v1/context";
+import { listMembershipsForUser } from "./organizations/service";
+import { userMembershipsResponse } from "./organizations/schemas";
+import { updateEmailBody, userProfileResponse } from "./profile/schemas";
+import { updateUserPreferencesBody, userPreferencesResponse } from "./preferences/schemas";
 import {
   getUserPreferences,
   getUserProfileById,

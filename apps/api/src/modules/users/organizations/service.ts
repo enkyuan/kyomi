@@ -1,7 +1,7 @@
 import { eq } from "drizzle-orm";
 import { memberships, organizations } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
-import type { OrganizationMembershipDto } from "./organizations.types";
+import type { OrganizationMembershipDto } from "./types";
 
 type DB = typeof db;
 

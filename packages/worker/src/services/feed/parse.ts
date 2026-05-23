@@ -1,7 +1,5 @@
 import { XMLParser } from "fast-xml-parser";
 import { normalizeArticleUrl } from "../../lib/article-identity";
-import { normalizeFeedUrl } from "../../lib/feed-url";
-import { computeFeedItemId } from "../../lib/stable-id";
 import { decodeHtmlEntities } from "../../lib/html-entities";
 import {
   buildStoredFeedContent,
@@ -9,20 +7,162 @@ import {
   stripTags,
   summarizeText,
 } from "../../lib/feed-text";
-import {
-  parsePublishedAt,
-  pickAtomLink,
-  pickRssLink,
-  rawText,
-  toArray,
-  xmlText,
-} from "../../lib/feed-xml";
-import {
-  embeddedAtomFeedIconUrl,
-  embeddedJsonFeedIconUrl,
-  embeddedRssFeedIconUrl,
-} from "./parse-icons";
 import type { ParsedFeedDocument } from "./types";
+
+function stableUuid(seed: string): string {
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < seed.length; i += 1) {
+    hash ^= seed.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193);
+  }
+
+  const bytes = new Uint8Array(16);
+  let state = hash >>> 0;
+  for (let i = 0; i < bytes.length; i += 1) {
+    state ^= state << 13;
+    state ^= state >>> 17;
+    state ^= state << 5;
+    bytes[i] = state & 0xff;
+  }
+
+  bytes[6] = (bytes[6] & 0x0f) | 0x50;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+
+  const hex = Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("");
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20, 32)}`;
+}
+
+function computeFeedItemId(feedId: string, stableIdentity: string): string {
+  return stableUuid(`${feedId}|${stableIdentity}`);
+}
+
+function normalizeFeedUrl(raw: string): string {
+  const trimmed = raw.trim();
+  const url = new URL(trimmed);
+  url.hash = "";
+  url.hostname = url.hostname.toLowerCase();
+  if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+    url.pathname = url.pathname.slice(0, -1);
+  }
+  return url.href;
+}
+
+function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
+  if (!candidate) {
+    return null;
+  }
+  try {
+    return new URL(candidate, baseUrl).href;
+  } catch {
+    return null;
+  }
+}
+
+function xmlText(value: unknown): string {
+  if (typeof value === "string") {
+    return stripTags(value).trim();
+  }
+  if (value && typeof value === "object" && "#text" in value) {
+    return stripTags(String((value as { "#text": unknown })["#text"])).trim();
+  }
+  return "";
+}
+
+function rawText(value: unknown): string | null {
+  if (typeof value === "string") {
+    return value.trim() || null;
+  }
+  if (value && typeof value === "object" && "#text" in value) {
+    const raw = String((value as { "#text": unknown })["#text"]).trim();
+    return raw || null;
+  }
+  return null;
+}
+
+function toArray<T>(value: T | T[] | null | undefined): T[] {
+  if (Array.isArray(value)) {
+    return value;
+  }
+  return value == null ? [] : [value];
+}
+
+function pickRssLink(link: unknown, fallback: string): string {
+  if (typeof link === "string" && link.trim()) {
+    return link.trim();
+  }
+  for (const candidate of toArray(link)) {
+    if (typeof candidate === "string" && candidate.trim()) {
+      return candidate.trim();
+    }
+    if (candidate && typeof candidate === "object" && "#text" in candidate) {
+      const text = String((candidate as { "#text": unknown })["#text"]).trim();
+      if (text) {
+        return text;
+      }
+    }
+  }
+  return fallback;
+}
+
+function pickAtomLink(link: unknown, fallback: string): string {
+  const candidates = toArray(link);
+  for (const candidate of candidates) {
+    if (!candidate || typeof candidate !== "object") {
+      continue;
+    }
+    const record = candidate as Record<string, unknown>;
+    const rel = record["@_rel"];
+    const href = record["@_href"];
+    if (typeof href === "string" && href.trim()) {
+      if (rel === "alternate" || rel === undefined || rel === "self") {
+        return href.trim();
+      }
+    }
+  }
+  for (const candidate of candidates) {
+    if (!candidate || typeof candidate !== "object") {
+      continue;
+    }
+    const href = (candidate as Record<string, unknown>)["@_href"];
+    if (typeof href === "string" && href.trim()) {
+      return href.trim();
+    }
+  }
+  return fallback;
+}
+
+function parsePublishedAt(value: unknown, fallback: Date): Date {
+  if (typeof value === "string" && value.trim()) {
+    const parsed = new Date(value);
+    if (!Number.isNaN(parsed.getTime())) {
+      return parsed;
+    }
+  }
+  return fallback;
+}
+
+function embeddedJsonFeedIconUrl(feed: Record<string, unknown>, baseUrl: string): string | null {
+  return (
+    absoluteUrl(typeof feed.icon === "string" ? feed.icon : null, baseUrl) ??
+    absoluteUrl(typeof feed.favicon === "string" ? feed.favicon : null, baseUrl)
+  );
+}
+
+function embeddedRssFeedIconUrl(channel: Record<string, unknown>, baseUrl: string): string | null {
+  const image = channel.image;
+  if (typeof image === "string") {
+    return absoluteUrl(image.trim() || null, baseUrl);
+  }
+  if (!image || typeof image !== "object") {
+    return null;
+  }
+  const rec = image as Record<string, unknown>;
+  return absoluteUrl(rawText(rec.url) ?? rawText(rec["@_href"]), baseUrl);
+}
+
+function embeddedAtomFeedIconUrl(feed: Record<string, unknown>, baseUrl: string): string | null {
+  return absoluteUrl(rawText(feed.icon) ?? rawText(feed.logo), baseUrl);
+}
 
 function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): ParsedFeedDocument {
   const now = new Date();

@@ -1,7 +1,7 @@
 [project]
 name = "catalog-pipeline"
 version = "0.1.0"
-description = "The RSS dataset powering Cronos"
+description = "The RSS dataset powering vols."
 authors = [
     {name = "enkyuan",email = "yuan.enkng@gmail.com"}
 ]

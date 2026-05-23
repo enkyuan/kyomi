@@ -1,4 +1,4 @@
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 
 export type AuthContext = {
   userId: string;

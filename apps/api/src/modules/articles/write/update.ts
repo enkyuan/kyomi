@@ -1,7 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { articleClips, feedItemUserState, feedItems, feedSubscriptions } from "@vols.rss/db";
 import { and, eq } from "drizzle-orm";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import { type ClipUpdateBody, updateArticleClipForUser } from "./clips";
 import type { ArticleUpdateBody } from "../types";
 

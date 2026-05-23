@@ -1,8 +1,8 @@
 import type { db } from "@adapters/db/client";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@vols.rss/db";
 import { and, eq, sql } from "drizzle-orm";
-import { AppError } from "@shared/errors/app-error";
-import { decodeNullableText, decodeText } from "@shared/text/html-entities";
+import { AppError } from "@shared/errors/app";
+import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { getClipDetailForUser } from "../write/clips";
 import {
   buildExtractedReaderViewFromDb,

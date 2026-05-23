@@ -2,7 +2,7 @@ import { feeds } from "@vols.rss/db";
 import { db, pool } from "@adapters/db/client";
 import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";
-import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/normalize-feed-url";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize-url";
 
 type CatalogFeedRecord = {
   feed_url: string;

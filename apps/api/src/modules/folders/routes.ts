@@ -1,6 +1,6 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
-import { v1HandlerContext } from "@shared/http/v1-handler-context";
+import { v1HandlerContext } from "@shared/http/v1/context";
 import {
   createFolder,
   deleteFolder,

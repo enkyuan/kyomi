@@ -1,10 +1,8 @@
 import { eq, sql } from "drizzle-orm";
 import { feedItems, feeds } from "@vols.rss/db";
-import { ENRICHMENT_CONCURRENCY, MAX_ENRICHMENTS_PER_REFRESH } from "./constants";
-import { computeFailureBackoffMs, shouldResolveFavicon } from "./backoff";
+import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "../favicon";
 import { fetchArticleEnrichment } from "./enrich";
 import { fetchFeedDocument } from "./fetch";
-import { tryResolveFaviconMetadata } from "./favicon";
 import { parseFeedDocument } from "./parse";
 import { syncFeedToSearch } from "./search";
 import { summarizeText } from "../../lib/feed-text";
@@ -14,6 +12,87 @@ import type {
   ParsedFeedItem,
   SearchSyncConfig,
 } from "./types";
+
+const MAX_ENRICHMENTS_PER_REFRESH = 5;
+const ENRICHMENT_CONCURRENCY = 3;
+
+function computeFailureBackoffMs(snapshot: {
+  lastRefreshSucceededAt: Date | null;
+  lastRefreshFailedAt: Date | null;
+}): number {
+  const hasConsecutiveFailure =
+    Boolean(snapshot.lastRefreshFailedAt) &&
+    (!snapshot.lastRefreshSucceededAt ||
+      snapshot.lastRefreshFailedAt!.getTime() >= snapshot.lastRefreshSucceededAt.getTime());
+  return hasConsecutiveFailure ? 60 * 60 * 1000 : 15 * 60 * 1000;
+}
+
+function faviconSourceRank(source: string | null): number {
+  switch (source) {
+    case "html_link":
+    case "feed_icon":
+      return 3;
+    case "google_s2":
+    case "duckduckgo":
+      return 2;
+    case "favicon_ico":
+      return 1;
+    default:
+      return 0;
+  }
+}
+
+function shouldResolveFavicon({
+  currentUrl,
+  currentSource,
+  linkChanged,
+}: {
+  currentUrl: string | null;
+  currentSource: string | null;
+  linkChanged: boolean;
+}): boolean {
+  return (
+    !currentUrl || linkChanged || faviconSourceRank(currentSource) < faviconSourceRank("html_link")
+  );
+}
+
+async function tryResolveFaviconMetadata(
+  seedUrl: string,
+  embeddedIconUrl?: string | null,
+): Promise<{
+  url: string;
+  source: string;
+} | null> {
+  try {
+    const websiteIcon = await resolveFeedFaviconUrl(seedUrl);
+    if (websiteIcon) {
+      return websiteIcon;
+    }
+  } catch (error) {
+    console.warn("[ingestion] favicon resolution failed", {
+      seedUrl,
+      error: error instanceof Error ? error.message : String(error),
+    });
+  }
+
+  if (!embeddedIconUrl) {
+    return null;
+  }
+  try {
+    const response = await tryFetchImageIfHostSafe(embeddedIconUrl);
+    if (!response) {
+      return null;
+    }
+    response.body?.cancel().catch(() => {});
+    return { url: embeddedIconUrl, source: "feed_icon" };
+  } catch (error) {
+    console.warn("[ingestion] embedded favicon resolution failed", {
+      iconUrl: embeddedIconUrl,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return null;
+  }
+}
 
 export async function runFeedRefresh(
   database: FeedIngestDatabase,

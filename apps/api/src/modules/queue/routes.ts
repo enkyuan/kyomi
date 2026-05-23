@@ -8,7 +8,7 @@ import {
   parseJobMessageFields,
   toRedisStreamFieldList,
 } from "@vols.rss/worker";
-import { v1HandlerContext } from "@shared/http/v1-handler-context";
+import { v1HandlerContext } from "@shared/http/v1/context";
 import { assertFeedAdminUser } from "@modules/feeds/admin/guard";
 
 const deadLetterItem = t.Object({

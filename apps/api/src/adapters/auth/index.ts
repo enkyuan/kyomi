@@ -9,5 +9,5 @@
  * ```
  */
 export { dbPlugin } from "../db/plugin";
-export { loggingMiddleware } from "@shared/http/logging.middleware";
-export { resolveSessionContext } from "@shared/http/session-context.middleware";
+export { loggingMiddleware } from "@shared/http/logging/middleware";
+export { resolveSessionContext } from "@shared/http/session/context";

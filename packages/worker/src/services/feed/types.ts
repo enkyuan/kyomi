@@ -73,8 +73,3 @@ export type SearchSyncConfig = {
   masterKey?: string;
   indexUid?: string;
 };
-
-export type RefreshTimingSnapshot = {
-  lastRefreshSucceededAt: Date | null;
-  lastRefreshFailedAt: Date | null;
-};

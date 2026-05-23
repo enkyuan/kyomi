@@ -1,3 +1,5 @@
+import { assertHttpOrHttpsUrl as assertSharedHttpOrHttpsUrl } from "@shared/net/http-url";
+
 /**
  * Canonical feed URL for deduplication (lowercase host, strip hash, trim trailing slash on path).
  */
@@ -13,9 +15,5 @@ export function normalizeFeedUrl(raw: string): string {
 }
 
 export function assertHttpOrHttpsUrl(raw: string): URL {
-  const u = new URL(raw.trim());
-  if (u.protocol !== "http:" && u.protocol !== "https:") {
-    throw new Error("Only http(s) feed URLs are supported");
-  }
-  return u;
+  return assertSharedHttpOrHttpsUrl(raw, "Only http(s) feed URLs are supported");
 }

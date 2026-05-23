@@ -1,6 +1,6 @@
 import { timingSafeEqual } from "node:crypto";
 import { env } from "@config/env";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import { parseFeedAdminUserIds } from "./allowlist";
 
 function sharedSecretMatches(headers: Headers | undefined): boolean {

@@ -1,9 +1,9 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { enforceRateLimitForContext } from "@adapters/rate-limit/rate-limit.plugin";
-import { AppError } from "@shared/errors/app-error";
-import { v1HandlerContext } from "@shared/http/v1-handler-context";
-import { taskIdParam, uuidParam } from "@shared/http/v1-stub";
+import { AppError } from "@shared/errors/app";
+import { v1HandlerContext } from "@shared/http/v1/context";
+import { taskIdParam, uuidParam } from "@shared/http/v1/stub";
 import { importOpmlFeedUrls } from "./import-feeds";
 import { parseOpmlFeeds } from "./parse";
 import { deleteOpmlTask, getOpmlTask, listOpmlTasksForUser, saveOpmlTask } from "./task-store";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { useEffect, type FocusEvent, type PointerEvent, type RefObject } from "react";
+import { useEffect, useRef, type FocusEvent, type PointerEvent, type RefObject } from "react";
 import { Skeleton } from "@vols.rss/ui/skeleton";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { Item } from "@modules/feeds/components/item";
@@ -127,11 +127,22 @@ export function StaticRows({
   inboxItems: InboxItem[];
   selectedItemId?: string | null;
   onSelectItem: (item: InboxItem) => void;
-  onToolbarEnter: (item: InboxItem, anchorElement: HTMLElement) => void;
+  onToolbarEnter: (
+    item: InboxItem,
+    anchorElement: HTMLElement,
+    toolbarHostElement: HTMLElement,
+  ) => void;
   onToolbarLeave: (event: FocusEvent<HTMLElement> | PointerEvent<HTMLElement>) => void;
 }) {
+  const toolbarHostRef = useRef<HTMLDivElement | null>(null);
+  const showToolbar = (item: InboxItem, anchorElement: HTMLElement) => {
+    if (toolbarHostRef.current) {
+      onToolbarEnter(item, anchorElement, toolbarHostRef.current);
+    }
+  };
+
   return (
-    <div className="relative w-full pb-4">
+    <div ref={toolbarHostRef} className="relative w-full pb-4">
       {inboxItems.map((item, index) => (
         <div key={item.id} className="group/inbox-row relative w-full">
           <Item
@@ -148,7 +159,7 @@ export function StaticRows({
             timestampDisplay={timestampDisplay}
             timestampHourCycle={timestampHourCycle}
             onSelect={onSelectItem}
-            onToolbarEnter={onToolbarEnter}
+            onToolbarEnter={showToolbar}
             onToolbarLeave={onToolbarLeave}
           />
         </div>
@@ -187,10 +198,20 @@ export function VirtualizedRows({
   selectedItemId?: string | null;
   pagination: RowsPaginationState;
   onSelectItem: (item: InboxItem) => void;
-  onToolbarEnter: (item: InboxItem, anchorElement: HTMLElement) => void;
+  onToolbarEnter: (
+    item: InboxItem,
+    anchorElement: HTMLElement,
+    toolbarHostElement: HTMLElement,
+  ) => void;
   onToolbarLeave: (event: FocusEvent<HTMLElement> | PointerEvent<HTMLElement>) => void;
   viewportHeight?: number;
 }) {
+  const toolbarHostRef = useRef<HTMLDivElement | null>(null);
+  const showToolbar = (item: InboxItem, anchorElement: HTMLElement) => {
+    if (toolbarHostRef.current) {
+      onToolbarEnter(item, anchorElement, toolbarHostRef.current);
+    }
+  };
   const { isLoading, hasNextPage, isFetchingNextPage, fetchNextPage } = pagination;
   const virtualizer = useVirtualizer({
     count: inboxItems.length,
@@ -234,6 +255,7 @@ export function VirtualizedRows({
 
   return (
     <div
+      ref={toolbarHostRef}
       className="relative w-full pb-4"
       style={{
         height: `${listContentHeight}px`,
@@ -268,7 +290,7 @@ export function VirtualizedRows({
               timestampDisplay={timestampDisplay}
               timestampHourCycle={timestampHourCycle}
               onSelect={onSelectItem}
-              onToolbarEnter={onToolbarEnter}
+              onToolbarEnter={showToolbar}
               onToolbarLeave={onToolbarLeave}
             />
           </div>

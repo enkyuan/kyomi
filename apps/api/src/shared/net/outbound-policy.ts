@@ -70,15 +70,15 @@ async function resolveHostnameAddresses(hostname: string): Promise<string[]> {
 export async function assertSafeOutboundUrl(url: URL): Promise<void> {
   const hostname = canonicalHostname(url.hostname);
   if (!hostname) {
-    throw new BlockedOutboundUrlError("Feed URL must include a hostname");
+    throw new BlockedOutboundUrlError("URL must include a hostname");
   }
 
   if (isBlockedHostname(hostname)) {
-    throw new BlockedOutboundUrlError("Private network feed URLs are not allowed");
+    throw new BlockedOutboundUrlError("Private network URLs are not allowed");
   }
 
   const resolvedAddresses = await resolveHostnameAddresses(hostname);
   if (resolvedAddresses.some((address) => isBlockedIpAddress(address))) {
-    throw new BlockedOutboundUrlError("Private network feed URLs are not allowed");
+    throw new BlockedOutboundUrlError("Private network URLs are not allowed");
   }
 }

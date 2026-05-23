@@ -94,6 +94,7 @@ export function Detail({
             className={cn(
               "min-w-0",
               viewportContentInset,
+              detailState.status !== "selected" && "h-full",
               detailState.status === "selected" && !isNarrowContent && "min-h-full",
             )}
           >

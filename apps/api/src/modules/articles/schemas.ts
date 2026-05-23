@@ -1,5 +1,5 @@
 import { t } from "elysia";
-import { uuidParam } from "@shared/http/v1-stub";
+import { uuidParam } from "@shared/http/v1/stub";
 
 export const extractedContentStatusSchema = t.Union([
   t.Literal("pending"),

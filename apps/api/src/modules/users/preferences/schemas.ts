@@ -1,31 +1,5 @@
 import { t } from "elysia";
 
-export const userProfileResponse = t.Object({
-  id: t.String(),
-  name: t.String(),
-  email: t.String(),
-  emailVerified: t.Boolean(),
-  image: t.Union([t.String(), t.Null()]),
-  createdAt: t.String(),
-  updatedAt: t.String(),
-});
-
-const membershipItem = t.Object({
-  membershipId: t.String(),
-  organizationId: t.String(),
-  organizationName: t.String(),
-  plan: t.String(),
-  role: t.String(),
-});
-
-export const userMembershipsResponse = t.Object({
-  items: t.Array(membershipItem),
-});
-
-export const updateEmailBody = t.Object({
-  email: t.String(),
-});
-
 export const userPreferencesResponse = t.Object({
   defaultMode: t.Union([t.Literal("smart"), t.Literal("original"), t.Literal("extracted")]),
   fontSizePx: t.Number(),

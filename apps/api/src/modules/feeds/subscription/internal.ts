@@ -3,7 +3,7 @@ import { feedSubscriptions, feeds } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";
-import { resolveRemoteFeed } from "@modules/discover/resolve-remote-feed";
+import { resolveRemoteFeed } from "@modules/discover/feed/resolve-remote";
 import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/service";
 
 type DB = typeof db;
