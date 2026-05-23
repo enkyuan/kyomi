@@ -2,7 +2,7 @@
 
 import { AnimatePresence, LazyMotion, domMax, m, useReducedMotion } from "motion/react";
 import type { CSSProperties, ReactNode } from "react";
-import { INBOX_PANEL_SPACING_PX } from "./lib/constants";
+import { INBOX_PANEL_SPACING_PX } from "../lib/constants";
 
 export type MobileLayoutProps = {
   showDetail: boolean;
