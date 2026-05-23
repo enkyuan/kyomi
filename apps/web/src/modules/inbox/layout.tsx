@@ -59,19 +59,14 @@ export function ReaderFocusDetailLayout({ children }: { children: ReactNode }) {
   );
 }
 
-type MobileSingleColumnLayoutProps = {
+type MobileLayoutProps = {
   showDetail: boolean;
   direction: 1 | -1;
   list: ReactNode;
   detail: ReactNode;
 };
 
-export function MobileSingleColumnLayout({
-  showDetail,
-  direction,
-  list,
-  detail,
-}: MobileSingleColumnLayoutProps) {
+export function MobileLayout({ showDetail, direction, list, detail }: MobileLayoutProps) {
   const prefersReducedMotion = useReducedMotion();
   const transition = prefersReducedMotion
     ? { duration: 0 }
