@@ -4,19 +4,14 @@ import { AnimatePresence, LazyMotion, domMax, m, useReducedMotion } from "motion
 import type { CSSProperties, ReactNode } from "react";
 import { INBOX_PANEL_SPACING_PX } from "./lib/constants";
 
-export type MobileSingleColumnLayoutProps = {
+export type MobileLayoutProps = {
   showDetail: boolean;
   direction: 1 | -1;
   list: ReactNode;
   detail: ReactNode;
 };
 
-export function MobileSingleColumnLayout({
-  showDetail,
-  direction,
-  list,
-  detail,
-}: MobileSingleColumnLayoutProps) {
+export function MobileLayout({ showDetail, direction, list, detail }: MobileLayoutProps) {
   const prefersReducedMotion = useReducedMotion();
   const transition = prefersReducedMotion
     ? { duration: 0 }

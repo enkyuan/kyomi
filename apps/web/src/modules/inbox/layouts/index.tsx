@@ -53,7 +53,7 @@ export function ReaderFocusDetailLayout({ children }: { children: ReactNode }) {
   );
 }
 
-export type { MobileSingleColumnLayoutProps } from "./mobile";
-export { MobileSingleColumnLayout } from "./mobile";
+export type { MobileLayoutProps } from "./mobile";
+export { MobileLayout } from "./mobile";
 export type { SplitLayoutProps } from "./split";
 export { SplitLayout } from "./split";
