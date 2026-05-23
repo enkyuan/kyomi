@@ -1,6 +1,16 @@
 import { decodeHtmlEntities } from "./html-entities";
-import { absoluteUrl } from "./feed-url";
 import type { ParsedFeedItem } from "../services/feed/types";
+
+function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
+  if (!candidate) {
+    return null;
+  }
+  try {
+    return new URL(candidate, baseUrl).href;
+  } catch {
+    return null;
+  }
+}
 
 function stripTags(html: string): string {
   return decodeHtmlEntities(

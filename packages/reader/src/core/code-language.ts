@@ -64,11 +64,14 @@ function toLanguageLabel(language: string): string {
   if (LANGUAGE_LABELS[normalized]) {
     return LANGUAGE_LABELS[normalized];
   }
-  return normalized
-    .split(/[-_]/)
-    .filter(Boolean)
-    .map((chunk) => chunk.charAt(0).toUpperCase() + chunk.slice(1))
-    .join(" ");
+  const parts: string[] = [];
+  for (const chunk of normalized.split(/[-_]/)) {
+    if (!chunk) {
+      continue;
+    }
+    parts.push(chunk.charAt(0).toUpperCase() + chunk.slice(1));
+  }
+  return parts.join(" ");
 }
 
 function asPlain(reason: string): CodeLanguageDetection {
@@ -86,10 +89,13 @@ function looksLikePlainText(text: string): boolean {
     return true;
   }
 
-  const lines = text
-    .split(/\r?\n/)
-    .map((line) => line.trim())
-    .filter(Boolean);
+  const lines: string[] = [];
+  for (const line of text.split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (trimmed) {
+      lines.push(trimmed);
+    }
+  }
   const words = normalized.split(/\s+/).filter(Boolean);
   const wordCount = words.length;
   const hasSentenceEnding = /[.!?](?:\s|$)/.test(normalized);

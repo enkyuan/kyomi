@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
 import { dbPlugin } from "@adapters/db/plugin";
-import { loggingMiddleware } from "@shared/http/logging.middleware";
-import { requestIdMiddleware } from "@shared/http/request-id.middleware";
+import { loggingMiddleware } from "@shared/http/logging/middleware";
+import { requestIdMiddleware } from "@shared/http/request-id/middleware";
 
 /** Request correlation id + structured access logging (no persistence adapters). */
 export const requestObservationPlugin = new Elysia({ name: "vols.rss.http.observation" })

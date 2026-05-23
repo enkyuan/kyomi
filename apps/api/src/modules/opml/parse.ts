@@ -1,5 +1,5 @@
 import { XMLParser } from "fast-xml-parser";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import { OPML_MAX_BYTES, OPML_MAX_OUTLINES } from "./constants";
 import type { OpmlOutlineEntry } from "./types";
 

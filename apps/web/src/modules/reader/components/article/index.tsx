@@ -231,7 +231,7 @@ export function Article({
   const articleRef = useRef<HTMLElement>(null);
   const floatingToolbarBounds = useFloatingToolbarBounds(
     articleRef,
-    toolbar.showFloatingToolbar && toolbar.floatingToolbarEdge === "top",
+    toolbar.floatingToolbarEdge === "top",
   );
 
   useTimestamp(timestampDisplay);

@@ -9,9 +9,9 @@ function requestPathname(request: Request): string {
   return new URL(request.url).pathname;
 }
 
-/** Structured request start / complete logging (pairs with `request-id.middleware` on the same stack). */
+/** Structured request start / complete logging (pairs with request id middleware on the same stack). */
 export const loggingMiddleware = new Elysia({
-  name: "logging.middleware",
+  name: "logging",
 })
   .decorate("logger", logger)
   .onRequest(({ request, logger: log }) => {

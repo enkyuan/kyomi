@@ -98,11 +98,14 @@ export function List({
     activeToolbarRef.current = activeToolbar;
   }, [activeToolbar]);
 
-  const showToolbar = useCallback((item: InboxItem, anchorElement: HTMLElement) => {
-    const nextToolbar = { item, anchorElement };
-    activeToolbarRef.current = nextToolbar;
-    setActiveToolbar(nextToolbar);
-  }, []);
+  const showToolbar = useCallback(
+    (item: InboxItem, anchorElement: HTMLElement, toolbarHostElement: HTMLElement) => {
+      const nextToolbar = { item, anchorElement, toolbarHostElement };
+      activeToolbarRef.current = nextToolbar;
+      setActiveToolbar(nextToolbar);
+    },
+    [],
+  );
 
   const hideToolbar = useCallback((event: FocusEvent<HTMLElement> | PointerEvent<HTMLElement>) => {
     const relatedTarget = event.relatedTarget;

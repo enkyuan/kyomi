@@ -1,8 +1,8 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { enforceRateLimitForContext } from "@adapters/rate-limit/rate-limit.plugin";
-import { v1HandlerContext } from "@shared/http/v1-handler-context";
-import { uuidParam } from "@shared/http/v1-stub";
+import { v1HandlerContext } from "@shared/http/v1/context";
+import { uuidParam } from "@shared/http/v1/stub";
 import {
   assertUserSubscribedToFeed,
   bulkMoveFeedsToFolder,

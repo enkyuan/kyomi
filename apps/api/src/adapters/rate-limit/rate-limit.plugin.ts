@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
 import { logger } from "@adapters/logger";
 import { getRedis } from "@adapters/redis";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 
 export type RateLimitRule = {
   name: string;

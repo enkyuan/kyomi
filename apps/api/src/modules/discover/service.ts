@@ -3,9 +3,9 @@ import { feedSubscriptions, feeds } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
 import { isMeiliConfigured, searchFeedSearchDocuments } from "@adapters/search/meili";
 import type { AppLogger } from "@adapters/logger";
-import { AppError } from "@shared/errors/app-error";
-import { decodeNullableText, decodeText } from "@shared/text/html-entities";
-import { resolveRemoteFeed } from "./resolve-remote-feed";
+import { AppError } from "@shared/errors/app";
+import { decodeNullableText, decodeText } from "@shared/text/entities";
+import { resolveRemoteFeed } from "./feed/resolve-remote";
 import type { FeedPreviewDto, FeedSearchResultDto } from "./types";
 
 type DB = typeof db;

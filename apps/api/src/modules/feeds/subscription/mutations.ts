@@ -1,7 +1,7 @@
 import { and, eq, inArray } from "drizzle-orm";
 import { feedSubscriptions, folders } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import type {
   BulkMoveFeedsResponseDto,
   BulkUnsubscribeResponseDto,

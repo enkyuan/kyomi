@@ -1,4 +1,4 @@
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import type { ArticleDetailDto } from "../types";
 import { extractArticleContentFromUrl } from "./extract-content";
 

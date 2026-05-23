@@ -1,7 +1,7 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
-import { v1HandlerContext } from "@shared/http/v1-handler-context";
-import { uuidParam } from "@shared/http/v1-stub";
+import { v1HandlerContext } from "@shared/http/v1/context";
+import { uuidParam } from "@shared/http/v1/stub";
 import { assertUserSubscribedToFeed, listFeedRefreshStatusesForUser } from "../service";
 import * as dto from "../dto";
 import {

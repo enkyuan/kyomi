@@ -126,8 +126,9 @@ function pruneRedundantLazyImages(container: HTMLElement): void {
     if (realImages.length === 0) {
       continue;
     }
+    const realImageSet = new Set(realImages);
     for (const img of imgs) {
-      if (realImages.includes(img)) {
+      if (realImageSet.has(img)) {
         continue;
       }
       img.remove();
@@ -185,6 +186,37 @@ function removeLikelyAuthorCards(container: HTMLElement): void {
   }
 }
 
+function captionTextOverlapsCaption(cap: string, value: string, capExact: Set<string>): boolean {
+  if (!value) {
+    return false;
+  }
+  if (capExact.has(value)) {
+    return true;
+  }
+  return cap.indexOf(value) !== -1 || value.indexOf(cap) !== -1;
+}
+
+function removeCaptionNoiseChild(child: ChildNode, cap: string, capExact: Set<string>): void {
+  if (child.nodeType === Node.TEXT_NODE) {
+    const value = normalizeCaptionText(child.textContent ?? "");
+    if (captionTextOverlapsCaption(cap, value, capExact)) {
+      child.remove();
+    }
+    return;
+  }
+  if (child.nodeType !== Node.ELEMENT_NODE) {
+    return;
+  }
+  const el = child as HTMLElement;
+  if (el.tagName === "IMG" || el.querySelector("img")) {
+    return;
+  }
+  const value = normalizeCaptionText(el.textContent ?? "");
+  if (captionTextOverlapsCaption(cap, value, capExact)) {
+    el.remove();
+  }
+}
+
 function dedupeFigureInlineCaptionNoise(container: HTMLElement): void {
   for (const figure of container.querySelectorAll("figure")) {
     const figcaption = figure.querySelector("figcaption");
@@ -195,29 +227,13 @@ function dedupeFigureInlineCaptionNoise(container: HTMLElement): void {
     if (!cap) {
       continue;
     }
+    const capExact = new Set([cap]);
     for (const p of figure.querySelectorAll("p")) {
       if (!p.querySelector("img")) {
         continue;
       }
       for (const child of Array.from(p.childNodes)) {
-        if (child.nodeType === Node.TEXT_NODE) {
-          const value = normalizeCaptionText(child.textContent ?? "");
-          if (value && (cap.includes(value) || value.includes(cap))) {
-            child.remove();
-          }
-          continue;
-        }
-        if (child.nodeType !== Node.ELEMENT_NODE) {
-          continue;
-        }
-        const el = child as HTMLElement;
-        if (el.tagName === "IMG" || el.querySelector("img")) {
-          continue;
-        }
-        const value = normalizeCaptionText(el.textContent ?? "");
-        if (value && (cap.includes(value) || value.includes(cap))) {
-          el.remove();
-        }
+        removeCaptionNoiseChild(child, cap, capExact);
       }
     }
   }
@@ -375,72 +391,101 @@ function markReaderProfileThumbs(container: HTMLElement): void {
   }
 }
 
+function shouldSkipOrphanProfileWrap(frame: HTMLElement): boolean {
+  return (
+    frame.closest(`[${READER_MEDIA_ASIDE}]`) !== null || frame.hasAttribute(READER_PROFILE_THUMB)
+  );
+}
+
+function resolveOrphanProfileWrapAnchor(
+  frame: HTMLElement,
+): { anchor: HTMLElement; host: HTMLElement } | null {
+  let anchor: HTMLElement = frame;
+  const frameParent = frame.parentElement;
+  if (
+    frameParent &&
+    frameParent.tagName === "P" &&
+    hasOnlyElementOrWhitespace(frameParent, frame)
+  ) {
+    anchor = frameParent;
+  } else if (
+    frameParent?.tagName === "A" &&
+    frameParent.parentElement?.tagName === "P" &&
+    hasOnlyElementOrWhitespace(frameParent, frame)
+  ) {
+    anchor = frameParent.parentElement!;
+  }
+
+  const host = anchor.parentElement;
+  if (!host) {
+    return null;
+  }
+  return { anchor, host };
+}
+
+function collectOrphanProfileTextSiblings(anchor: HTMLElement): HTMLElement[] {
+  const textSiblings: HTMLElement[] = [];
+  let cursor = anchor.nextElementSibling as HTMLElement | null;
+  while (cursor && textSiblings.length < 2) {
+    if (cursor.tagName !== "P") {
+      break;
+    }
+    if (!isLikelyTextOrLinkParagraph(cursor)) {
+      break;
+    }
+    textSiblings.push(cursor);
+    cursor = cursor.nextElementSibling as HTMLElement | null;
+  }
+  return textSiblings;
+}
+
+function hasOrphanProfileAuthorSignals(frame: HTMLElement, textSiblings: HTMLElement[]): boolean {
+  const img = frame.querySelector("img");
+  if (PROFILE_IMG_CLASS_RE.test(img?.className ?? "") || isLikelyAuthorBlockHost(frame)) {
+    return true;
+  }
+  return textSiblings.some((sib) => AUTHOR_TEXT_RE.test((sib.textContent ?? "").trim()));
+}
+
+function wrapOrphanProfileBlock(
+  host: HTMLElement,
+  anchor: HTMLElement,
+  textSiblings: HTMLElement[],
+  frame: HTMLElement,
+): void {
+  const wrapper = document.createElement("div");
+  wrapper.setAttribute(READER_MEDIA_ASIDE, "");
+  host.insertBefore(wrapper, anchor);
+  wrapper.appendChild(anchor);
+  for (const sib of textSiblings) {
+    wrapper.appendChild(sib);
+  }
+  frame.setAttribute(READER_PROFILE_THUMB, "");
+}
+
+function tryWrapOrphanedProfileImageParagraph(frame: HTMLElement): void {
+  if (shouldSkipOrphanProfileWrap(frame)) {
+    return;
+  }
+
+  const resolved = resolveOrphanProfileWrapAnchor(frame);
+  if (!resolved) {
+    return;
+  }
+
+  const { anchor, host } = resolved;
+  const textSiblings = collectOrphanProfileTextSiblings(anchor);
+  if (textSiblings.length === 0 || !hasOrphanProfileAuthorSignals(frame, textSiblings)) {
+    return;
+  }
+
+  wrapOrphanProfileBlock(host, anchor, textSiblings, frame);
+}
+
 function wrapOrphanedProfileImageParagraphs(container: HTMLElement): void {
   const frames = [...container.querySelectorAll<HTMLElement>(`[${READER_IMG_FRAME}]`)];
-
   for (const frame of frames) {
-    if (frame.closest(`[${READER_MEDIA_ASIDE}]`) || frame.hasAttribute(READER_PROFILE_THUMB)) {
-      continue;
-    }
-
-    let anchor: HTMLElement = frame;
-    const frameParent = frame.parentElement;
-    if (
-      frameParent &&
-      frameParent.tagName === "P" &&
-      hasOnlyElementOrWhitespace(frameParent, frame)
-    ) {
-      anchor = frameParent;
-    } else if (
-      frameParent?.tagName === "A" &&
-      frameParent.parentElement?.tagName === "P" &&
-      hasOnlyElementOrWhitespace(frameParent, frame)
-    ) {
-      anchor = frameParent.parentElement!;
-    }
-
-    const host = anchor.parentElement;
-    if (!host) {
-      continue;
-    }
-
-    const textSiblings: HTMLElement[] = [];
-    let cursor = anchor.nextElementSibling as HTMLElement | null;
-    while (cursor && textSiblings.length < 2) {
-      if (cursor.tagName !== "P") {
-        break;
-      }
-      if (!isLikelyTextOrLinkParagraph(cursor)) {
-        break;
-      }
-      textSiblings.push(cursor);
-      cursor = cursor.nextElementSibling as HTMLElement | null;
-    }
-
-    if (textSiblings.length === 0) {
-      continue;
-    }
-
-    const img = frame.querySelector("img");
-    const hasAuthorClassSignal =
-      PROFILE_IMG_CLASS_RE.test(img?.className ?? "") || isLikelyAuthorBlockHost(frame);
-    const hasAuthorTextSignal = textSiblings.some((sib) =>
-      AUTHOR_TEXT_RE.test((sib.textContent ?? "").trim()),
-    );
-
-    if (!hasAuthorClassSignal && !hasAuthorTextSignal) {
-      continue;
-    }
-
-    const wrapper = document.createElement("div");
-    wrapper.setAttribute(READER_MEDIA_ASIDE, "");
-    host.insertBefore(wrapper, anchor);
-    wrapper.appendChild(anchor);
-    for (const sib of textSiblings) {
-      wrapper.appendChild(sib);
-    }
-
-    frame.setAttribute(READER_PROFILE_THUMB, "");
+    tryWrapOrphanedProfileImageParagraph(frame);
   }
 }
 
@@ -633,74 +678,132 @@ function looksLikeBareCreditLabel(text: string): boolean {
   return true;
 }
 
-function classifyImageAdjacentText(container: HTMLElement): void {
-  const frames = [...container.querySelectorAll<HTMLElement>(`[${READER_IMG_FRAME}]`)];
+function shouldSkipAdjacentTextFrame(frame: HTMLElement): boolean {
+  if (frame.closest("figure")) {
+    return true;
+  }
+  return (
+    frame.closest(`[${READER_MEDIA_ASIDE}]`) !== null || frame.hasAttribute(READER_PROFILE_THUMB)
+  );
+}
 
-  for (const frame of frames) {
-    if (frame.closest("figure")) continue;
-    if (frame.closest(`[${READER_MEDIA_ASIDE}]`) || frame.hasAttribute(READER_PROFILE_THUMB))
-      continue;
+function adjacentTextAnchor(frame: HTMLElement): HTMLElement {
+  const parent = frame.parentElement;
+  if (parent?.tagName === "A") {
+    return parent;
+  }
+  return frame;
+}
 
-    let anchor: HTMLElement = frame;
-    const parent = frame.parentElement;
-    if (parent?.tagName === "A") anchor = parent;
+function isClassifiableAdjacentParagraph(cursor: HTMLElement): boolean {
+  if (cursor.tagName !== "P") {
+    return false;
+  }
+  if (
+    cursor.hasAttribute(READER_FIGURE_CAPTION) ||
+    cursor.hasAttribute(READER_FIGURE_CREDIT) ||
+    cursor.hasAttribute(READER_MEDIA_ASIDE)
+  ) {
+    return false;
+  }
+  return !cursor.querySelector("img, figure");
+}
 
-    let cursor = anchor.nextElementSibling as HTMLElement | null;
-    let classified = 0;
-    let hasCaption = false;
+function countWords(text: string): number {
+  return text.split(/\s+/).filter(Boolean).length;
+}
 
-    while (cursor && classified < 2) {
-      if (cursor.tagName !== "P") break;
-      if (
-        cursor.hasAttribute(READER_FIGURE_CAPTION) ||
-        cursor.hasAttribute(READER_FIGURE_CREDIT) ||
-        cursor.hasAttribute(READER_MEDIA_ASIDE)
-      )
-        break;
-      if (cursor.querySelector("img, figure")) break;
+function nextParagraphWordCount(cursor: HTMLElement): number {
+  const next = cursor.nextElementSibling;
+  if (next?.tagName !== "P") {
+    return 0;
+  }
+  const nextText = (next.textContent ?? "").trim();
+  return nextText ? countWords(nextText) : 0;
+}
 
-      const text = (cursor.textContent ?? "").trim();
-      if (!text) {
-        cursor = cursor.nextElementSibling as HTMLElement | null;
-        continue;
-      }
+function tryMarkAdjacentCredit(
+  cursor: HTMLElement,
+  text: string,
+  wordCount: number,
+  classified: number,
+): boolean {
+  const nextWordCount = nextParagraphWordCount(cursor);
+  const isCredit =
+    (wordCount <= 20 && CREDIT_RE.test(text)) ||
+    (classified === 0 &&
+      wordCount <= 5 &&
+      looksLikeBareCreditLabel(text) &&
+      nextWordCount > 0 &&
+      nextWordCount <= 30);
+  if (!isCredit) {
+    return false;
+  }
+  cursor.setAttribute(READER_FIGURE_CREDIT, "");
+  return true;
+}
 
-      const wordCount = text.split(/\s+/).filter(Boolean).length;
-      const nextText =
-        cursor.nextElementSibling?.tagName === "P"
-          ? (cursor.nextElementSibling.textContent ?? "").trim()
-          : "";
-      const nextWordCount = nextText ? nextText.split(/\s+/).filter(Boolean).length : 0;
+function tryMarkAdjacentCaption(
+  cursor: HTMLElement,
+  text: string,
+  wordCount: number,
+  hasCaption: boolean,
+): boolean {
+  if (hasCaption || wordCount > 30) {
+    return false;
+  }
+  const sentenceCount = (text.match(/[.!?](?=\s|$)/g) ?? []).length;
+  const isStrongCaption = wordCount <= 15;
+  const isWeakCaption = wordCount <= 30 && sentenceCount <= 1;
+  if (!isStrongCaption && !isWeakCaption) {
+    return false;
+  }
+  cursor.setAttribute(READER_FIGURE_CAPTION, "");
+  return true;
+}
 
-      if (
-        (wordCount <= 20 && CREDIT_RE.test(text)) ||
-        (classified === 0 &&
-          wordCount <= 5 &&
-          looksLikeBareCreditLabel(text) &&
-          nextWordCount > 0 &&
-          nextWordCount <= 30)
-      ) {
-        cursor.setAttribute(READER_FIGURE_CREDIT, "");
-        classified++;
-        cursor = cursor.nextElementSibling as HTMLElement | null;
-        continue;
-      }
+function classifyAdjacentTextForFrame(frame: HTMLElement): void {
+  let cursor = adjacentTextAnchor(frame).nextElementSibling as HTMLElement | null;
+  let classified = 0;
+  let hasCaption = false;
 
-      if (!hasCaption && wordCount <= 30) {
-        const sentenceCount = (text.match(/[.!?](?=\s|$)/g) ?? []).length;
-        const isStrongCaption = wordCount <= 15;
-        const isWeakCaption = wordCount <= 30 && sentenceCount <= 1;
-        if (isStrongCaption || isWeakCaption) {
-          cursor.setAttribute(READER_FIGURE_CAPTION, "");
-          classified++;
-          hasCaption = true;
-          cursor = cursor.nextElementSibling as HTMLElement | null;
-          continue;
-        }
-      }
-
+  while (cursor && classified < 2) {
+    if (!isClassifiableAdjacentParagraph(cursor)) {
       break;
     }
+
+    const text = (cursor.textContent ?? "").trim();
+    if (!text) {
+      cursor = cursor.nextElementSibling as HTMLElement | null;
+      continue;
+    }
+
+    const wordCount = countWords(text);
+
+    if (tryMarkAdjacentCredit(cursor, text, wordCount, classified)) {
+      classified++;
+      cursor = cursor.nextElementSibling as HTMLElement | null;
+      continue;
+    }
+
+    if (tryMarkAdjacentCaption(cursor, text, wordCount, hasCaption)) {
+      classified++;
+      hasCaption = true;
+      cursor = cursor.nextElementSibling as HTMLElement | null;
+      continue;
+    }
+
+    break;
+  }
+}
+
+function classifyImageAdjacentText(container: HTMLElement): void {
+  const frames = [...container.querySelectorAll<HTMLElement>(`[${READER_IMG_FRAME}]`)];
+  for (const frame of frames) {
+    if (shouldSkipAdjacentTextFrame(frame)) {
+      continue;
+    }
+    classifyAdjacentTextForFrame(frame);
   }
 }
 

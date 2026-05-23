@@ -1,12 +1,11 @@
-import { and, eq } from "drizzle-orm";
-import { feedSubscriptions, feeds } from "@vols.rss/db";
+import { eq } from "drizzle-orm";
+import { feeds } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
-import { AppError } from "@shared/errors/app-error";
-import { resolveRemoteFeed } from "@modules/discover/resolve-remote-feed";
-import { resolveRemoteFeedFavicon } from "@modules/discover/resolve-feed-favicon";
+import { AppError } from "@shared/errors/app";
+import { resolveRemoteFeed } from "@modules/discover/feed/resolve-remote";
+import { resolveRemoteFeedFavicon } from "@modules/discover/feed/resolve-favicon";
 import { logger } from "@adapters/logger";
-import { decodeText } from "@shared/text/html-entities";
-import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/service";
+import { decodeText } from "@shared/text/entities";
 import type { FeedSubscribeResultDto } from "../types";
 import {
   indexFeedForSearch,
@@ -113,8 +112,6 @@ export async function subscribeToExistingFeed(
   feedId: string,
 ): Promise<FeedSubscribeResultDto> {
   return await database.transaction(async (tx) => {
-    const now = new Date();
-
     const feedRow = await tx
       .select({
         id: feeds.id,
@@ -133,35 +130,7 @@ export async function subscribeToExistingFeed(
       throw new AppError("Feed not found", { status: 404, code: "FEED_NOT_FOUND" });
     }
 
-    const existingSub = await tx
-      .select({ id: feedSubscriptions.id })
-      .from(feedSubscriptions)
-      .where(and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.feedId, feedId)))
-      .limit(1);
-
-    if (existingSub[0]) {
-      return {
-        feedId: feed.id,
-        subscriptionId: existingSub[0].id,
-        url: feed.url,
-        title: decodeText(feed.title),
-        link: feed.link,
-        faviconUrl: feed.faviconUrl,
-        faviconSource: feed.faviconSource,
-        newFeed: false,
-        newSubscription: false,
-      };
-    }
-
-    const subscriptionId = crypto.randomUUID();
-    const defaultFolder = await getOrCreateFolderByName(tx, userId, DEFAULT_FOLDER_NAME);
-    await tx.insert(feedSubscriptions).values({
-      id: subscriptionId,
-      userId,
-      feedId,
-      folderId: defaultFolder.id,
-      createdAt: now,
-    });
+    const { subscriptionId, newSubscription } = await subscribeUserToFeed(tx, userId, feed.id);
 
     return {
       feedId: feed.id,

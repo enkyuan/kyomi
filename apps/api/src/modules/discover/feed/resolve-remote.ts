@@ -1,9 +1,9 @@
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import { logger } from "@adapters/logger";
-import { discoverFeedUrlFromHtml } from "./discover-feed-url";
-import { fetchFeedDocument, type FetchFeedDocumentResult } from "./fetch-feed";
-import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "./normalize-feed-url";
-import { parseFeedMetadata, parseHtmlMetadataFallback } from "./parse-feed";
+import { discoverFeedUrlFromHtml } from "./discover-url";
+import { fetchFeedDocument, type FetchFeedDocumentResult } from "./fetch";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "./normalize-url";
+import { parseFeedMetadata, parseHtmlMetadataFallback } from "./parse";
 
 export type ResolvedRemoteFeed = {
   canonicalUrl: string;

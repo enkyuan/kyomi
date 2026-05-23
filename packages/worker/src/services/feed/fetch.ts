@@ -1,5 +1,7 @@
-import { FETCH_TIMEOUT_MS, MAX_BYTES } from "./constants";
 import type { FetchFeedDocumentResult } from "./types";
+
+const FETCH_TIMEOUT_MS = 12_000;
+const MAX_BYTES = 2 * 1024 * 1024;
 
 export async function fetchFeedDocument(
   url: string,

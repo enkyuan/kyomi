@@ -1,7 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { feedSubscriptions, folders } from "@vols.rss/db";
 import { and, eq, sql } from "drizzle-orm";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import type { FolderDto, FolderReadStatusResponseDto } from "./types";
 
 type DB = typeof db;

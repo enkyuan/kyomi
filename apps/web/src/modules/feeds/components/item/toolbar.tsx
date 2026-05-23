@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import {
   ExternalLinkLine,
@@ -23,11 +23,8 @@ import { cn } from "@lib/utils";
 
 const INBOX_ITEM_TOOLBAR_BASE_CLASS =
   "gap-0 rounded-lg border border-border/80 bg-popover/95 p-0.5 text-popover-foreground shadow-md/10 transition-opacity duration-150";
-const TOOLBAR_OVERLAY_TRANSFORM = "translateX(-100%)";
-const TOOLBAR_POSITION_SYNC_FRAMES = 8;
 const TOOLBAR_RIGHT_INSET_PX = 12;
 const TOOLBAR_TOP_OFFSET_PX = -8;
-const TOOLBAR_ABOVE_HEADER_LAYER_CLASS = "z-[60]";
 
 type ToolbarProps = {
   filter: InboxFilter;
@@ -50,111 +47,8 @@ export type ToolbarModel = {
 export type ActiveToolbar = {
   item: InboxItem;
   anchorElement: HTMLElement;
+  toolbarHostElement: HTMLElement;
 };
-
-type ToolbarOverlayPosition = {
-  top: number;
-  left: number;
-  isVisible: boolean;
-};
-
-function readToolbarOverlayPosition(
-  anchor: HTMLElement,
-  header: HTMLElement | null,
-): ToolbarOverlayPosition {
-  const rect = anchor.getBoundingClientRect();
-  const headerBottom = header?.getBoundingClientRect().bottom ?? null;
-  const top = rect.top + TOOLBAR_TOP_OFFSET_PX;
-  const isVisible = headerBottom === null || rect.top >= headerBottom;
-
-  return {
-    top,
-    left: rect.right - TOOLBAR_RIGHT_INSET_PX,
-    isVisible,
-  };
-}
-
-function areToolbarPositionsEqual(
-  previous: ToolbarOverlayPosition | null,
-  next: ToolbarOverlayPosition,
-) {
-  return (
-    previous?.top === next.top &&
-    previous.left === next.left &&
-    previous.isVisible === next.isVisible
-  );
-}
-
-function useToolbarOverlayPosition({
-  anchorElement,
-  headerElement,
-  viewportElement,
-  syncWhileVisible,
-}: {
-  anchorElement: HTMLElement;
-  headerElement: HTMLElement | null;
-  viewportElement: HTMLElement | null;
-  syncWhileVisible: boolean;
-}) {
-  const [position, setPosition] = useState<ToolbarOverlayPosition | null>(null);
-  const updatePositionRef = useRef<() => void>(() => {});
-
-  useLayoutEffect(() => {
-    const updatePosition = () => {
-      if (!anchorElement.isConnected) {
-        setPosition(null);
-        return;
-      }
-
-      const nextPosition = readToolbarOverlayPosition(anchorElement, headerElement);
-      setPosition((previous) =>
-        areToolbarPositionsEqual(previous, nextPosition) ? previous : nextPosition,
-      );
-    };
-
-    updatePositionRef.current = updatePosition;
-    updatePosition();
-
-    const resizeObserver = new ResizeObserver(updatePosition);
-    resizeObserver.observe(anchorElement);
-    headerElement && resizeObserver.observe(headerElement);
-    viewportElement?.addEventListener("scroll", updatePosition, { passive: true });
-    window.addEventListener("resize", updatePosition);
-
-    return () => {
-      resizeObserver.disconnect();
-      viewportElement?.removeEventListener("scroll", updatePosition);
-      window.removeEventListener("resize", updatePosition);
-    };
-  }, [anchorElement, headerElement, viewportElement]);
-
-  useLayoutEffect(() => {
-    if (!syncWhileVisible) {
-      return;
-    }
-
-    let frame = 0;
-    let frameId: number | null = null;
-
-    const syncPosition = () => {
-      updatePositionRef.current();
-      frame += 1;
-      if (frame < TOOLBAR_POSITION_SYNC_FRAMES) {
-        frameId = window.requestAnimationFrame(syncPosition);
-      }
-    };
-
-    frameId = window.requestAnimationFrame(syncPosition);
-
-    return () => {
-      if (frameId !== null) {
-        window.cancelAnimationFrame(frameId);
-      }
-    };
-  }, [syncWhileVisible]);
-
-  return position;
-}
 
 export function Toolbar({
   filter,
@@ -222,16 +116,23 @@ function ActiveToolbarOverlay({
   onToolbarPointerLeave: (event: React.PointerEvent<HTMLDivElement>) => void;
 }) {
   const toolbar = useToolbarModel({ filter, item: activeToolbar.item });
-  const position = useToolbarOverlayPosition({
+  const isUnderHeader = useToolbarUnderHeader({
     anchorElement: activeToolbar.anchorElement,
     headerElement,
     viewportElement,
-    syncWhileVisible: true,
   });
 
-  if (!position?.isVisible || typeof document === "undefined") {
+  if (
+    !activeToolbar.anchorElement.isConnected ||
+    !activeToolbar.toolbarHostElement.isConnected ||
+    typeof document === "undefined"
+  ) {
     return null;
   }
+
+  const anchorRect = activeToolbar.anchorElement.getBoundingClientRect();
+  const hostRect = activeToolbar.toolbarHostElement.getBoundingClientRect();
+  const top = anchorRect.top - hostRect.top + TOOLBAR_TOP_OFFSET_PX;
 
   return createPortal(
     <Toolbar
@@ -239,17 +140,16 @@ function ActiveToolbarOverlay({
       toolbarRef={toolbarRef}
       onToolbarPointerLeave={onToolbarPointerLeave}
       className={cn(
-        "!fixed !border !border-border/80",
-        TOOLBAR_ABOVE_HEADER_LAYER_CLASS,
+        "absolute! border! border-border/80!",
+        isUnderHeader ? "z-20" : "z-60",
         "pointer-events-auto opacity-100",
       )}
       style={{
-        top: position.top,
-        left: position.left,
-        transform: TOOLBAR_OVERLAY_TRANSFORM,
+        top: `${top}px`,
+        right: `${TOOLBAR_RIGHT_INSET_PX}px`,
       }}
     />,
-    document.body,
+    activeToolbar.toolbarHostElement,
   );
 }
 
@@ -282,6 +182,57 @@ export function ToolbarOverlay({
       onToolbarPointerLeave={onToolbarPointerLeave}
     />
   );
+}
+
+function readIsToolbarUnderHeader(
+  anchor: HTMLElement,
+  header: HTMLElement | null,
+  viewport: HTMLElement | null,
+) {
+  if (!header || !viewport || viewport.scrollTop <= 0) {
+    return false;
+  }
+
+  return anchor.getBoundingClientRect().top <= header.getBoundingClientRect().bottom;
+}
+
+function useToolbarUnderHeader({
+  anchorElement,
+  headerElement,
+  viewportElement,
+}: {
+  anchorElement: HTMLElement;
+  headerElement: HTMLElement | null;
+  viewportElement: HTMLElement | null;
+}) {
+  const [isUnderHeader, setIsUnderHeader] = useState(() =>
+    readIsToolbarUnderHeader(anchorElement, headerElement, viewportElement),
+  );
+
+  useLayoutEffect(() => {
+    const update = () => {
+      if (!anchorElement.isConnected) {
+        return;
+      }
+
+      setIsUnderHeader((previous) => {
+        const next = readIsToolbarUnderHeader(anchorElement, headerElement, viewportElement);
+        return previous === next ? previous : next;
+      });
+    };
+
+    update();
+
+    viewportElement?.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+
+    return () => {
+      viewportElement?.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, [anchorElement, headerElement, viewportElement]);
+
+  return isUnderHeader;
 }
 
 export function useToolbarModel({
@@ -317,7 +268,7 @@ function ReadStateIcon({ isRead }: { isRead: boolean }) {
       <span
         className={cn(
           "absolute inset-0 flex items-center justify-center transition-[opacity,transform,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)] will-change-[opacity,transform,filter]",
-          isRead ? "scale-25 opacity-0 blur-[4px]" : "scale-100 opacity-100 blur-0",
+          isRead ? "scale-25 opacity-0 blur-xs" : "scale-100 opacity-100 blur-0",
         )}
       >
         <MailOpenLine />
@@ -325,7 +276,7 @@ function ReadStateIcon({ isRead }: { isRead: boolean }) {
       <span
         className={cn(
           "absolute inset-0 flex items-center justify-center transition-[opacity,transform,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)] will-change-[opacity,transform,filter]",
-          isRead ? "scale-100 opacity-100 blur-0" : "scale-25 opacity-0 blur-[4px]",
+          isRead ? "scale-100 opacity-100 blur-0" : "scale-25 opacity-0 blur-xs",
         )}
       >
         <MailFill />

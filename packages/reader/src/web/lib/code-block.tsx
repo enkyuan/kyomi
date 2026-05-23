@@ -28,6 +28,15 @@ function extractFenceLanguage(pre: HTMLPreElement, code: HTMLElement): string | 
   return classListFenceLanguage(code.classList) ?? classListFenceLanguage(pre.classList);
 }
 
+function languageClassFromClassName(className: string): string | undefined {
+  for (const token of className.trim().split(/\s+/)) {
+    if (token.startsWith("language-") || token.startsWith("lang-")) {
+      return token;
+    }
+  }
+  return undefined;
+}
+
 const HIGHLIGHT_LANGUAGE_ALIASES: Record<string, string> = {
   html: "xml",
   htm: "xml",
@@ -100,10 +109,7 @@ function normalizeStandaloneCodeElements(container: HTMLElement): void {
       continue;
     }
     const pre = document.createElement("pre");
-    const className = code.className.trim();
-    const languageClass = className
-      .split(/\s+/)
-      .find((token) => token.startsWith("language-") || token.startsWith("lang-"));
+    const languageClass = languageClassFromClassName(code.className);
     if (languageClass) {
       pre.classList.add(languageClass);
     }

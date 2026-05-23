@@ -3,7 +3,7 @@ import { eq, inArray } from "drizzle-orm";
 import { publishJob } from "@adapters/queue/publish-job";
 import { getRedis } from "@adapters/redis";
 import type { db } from "@adapters/db/client";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 
 type DB = typeof db;
 type Logger = {

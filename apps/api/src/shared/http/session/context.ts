@@ -1,5 +1,5 @@
 import { propagateOrMintRequestId, type MutableResponseHeaders } from "@shared/utils/request-id";
-import { requireAuth } from "./auth.middleware";
+import { requireAuth } from "../auth/require";
 
 /** Better Auth session: authenticated `userId` + propagated `requestId` (no org scope). */
 export async function resolveSessionContext(

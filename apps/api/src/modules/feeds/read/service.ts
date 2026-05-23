@@ -1,8 +1,8 @@
 import { and, eq } from "drizzle-orm";
 import { feedSubscriptions, feeds, folders } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
-import { AppError } from "@shared/errors/app-error";
-import { decodeNullableText, decodeText } from "@shared/text/html-entities";
+import { AppError } from "@shared/errors/app";
+import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { displayFeedTitle } from "./display-title";
 import type { FeedDetailDto, SubscribedFeedListItemDto } from "../types";
 

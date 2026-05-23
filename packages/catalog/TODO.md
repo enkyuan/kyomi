@@ -68,8 +68,8 @@
 
 ## Enrichment Pipeline
 
-### Carry Over Readspace Processing Pipeline
-- [ ] Port feed enrichment logic from Readspace feed modules.
+### Carry Over vols Processing Pipeline
+- [ ] Port feed enrichment logic from vols feed modules.
 - [ ] Switch network fetching to `aiohttp`.
 - [ ] Switch AI enrichment to Vertex AI.
 - [ ] Define enrichment task types:

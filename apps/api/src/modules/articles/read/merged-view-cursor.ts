@@ -1,4 +1,4 @@
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import type { ArticleListItemDto } from "../types";
 
 const PREFIX = "m1.";

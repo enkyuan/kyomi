@@ -1,5 +1,5 @@
 import type { Elysia } from "elysia";
-import { v1HandlerContext } from "@shared/http/v1-handler-context";
+import { v1HandlerContext } from "@shared/http/v1/context";
 import { getArticleDetailForUser } from "../read/detail";
 import { resolveEnhancementContent, summarizeContent, translateContent } from "./enrichment";
 import { extractFullTextForUser } from "./extract-full-text";
