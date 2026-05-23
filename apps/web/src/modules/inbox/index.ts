@@ -11,7 +11,6 @@ export {
 export {
   useInboxPreferences,
   InboxPreferencesBootstrapProvider,
-  resolveInitialInboxPreferences,
   type InboxPreferences,
 } from "./hooks/use-inbox-preferences";
 export { dedupePagedInboxItemsById, useInboxQueries } from "./hooks/use-inbox-queries";

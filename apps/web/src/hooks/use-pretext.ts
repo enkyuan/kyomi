@@ -22,7 +22,7 @@ function rememberCacheValue<T>(cache: Map<string, T>, key: string, value: T) {
   return value;
 }
 
-export function preparePretextText(text: string, font: string) {
+function preparePretextText(text: string, font: string) {
   if (import.meta.env.SSR) {
     return null;
   }
@@ -30,7 +30,7 @@ export function preparePretextText(text: string, font: string) {
   return prepareCache.get(key) ?? rememberCacheValue(prepareCache, key, prepare(text, font));
 }
 
-export function fitPretextLabelToSingleLine(
+function fitPretextLabelToSingleLine(
   label: string,
   font: string,
   availableWidth: number,
@@ -64,7 +64,7 @@ export function fitPretextLabelToSingleLine(
   return best;
 }
 
-export function fitPretextContentWidth({
+function fitPretextContentWidth({
   text,
   font,
   lineHeight,

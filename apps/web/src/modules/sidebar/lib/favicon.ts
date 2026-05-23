@@ -20,7 +20,7 @@ function parseOrigin(raw: string | null | undefined): string | null {
   }
 }
 
-export function hasFaviconFailed(url: string): boolean {
+function hasFaviconFailed(url: string): boolean {
   const expiresAt = failedFaviconUrls.get(url);
   if (expiresAt === undefined) {
     return false;
@@ -38,14 +38,6 @@ export function markFaviconFailed(url: string): void {
 
 export function clearFaviconFailed(url: string): void {
   failedFaviconUrls.delete(url);
-}
-
-export function buildFaviconUrl(
-  storedFaviconUrl: string | null | undefined,
-  siteUrl: string | null,
-  feedUrl: string,
-): string | null {
-  return buildClientFaviconUrl(storedFaviconUrl, siteUrl, feedUrl);
 }
 
 export function buildFaviconUrlCandidates(

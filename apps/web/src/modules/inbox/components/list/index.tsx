@@ -3,7 +3,9 @@
 import { cn } from "@lib/utils";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { ToolbarOverlay, type ActiveToolbar } from "@modules/feeds/components/item/toolbar";
-import { SkeletonRows, StaticRows, VirtualizedRows } from "./feed-item-rows";
+import { SkeletonRows } from "./feed-item-rows";
+import { StaticRows } from "./static-rows";
+import { VirtualizedRows } from "./virtualized-rows";
 import { FilterMenu } from "./filter-menu";
 import { Summary } from "../refresh/summary";
 import { Update } from "../refresh/update";

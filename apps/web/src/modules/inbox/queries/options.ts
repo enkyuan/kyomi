@@ -50,7 +50,7 @@ export function followedFeedsQueryKey() {
   return ["feeds", "followed"] as const;
 }
 
-export function followedFeedsUnreadCountsQueryKey() {
+function followedFeedsUnreadCountsQueryKey() {
   return ["feeds", "followed", "unread-counts"] as const;
 }
 
@@ -76,7 +76,7 @@ export function inboxViewCountQueryKey(scope: {
   ] as const;
 }
 
-export function inboxItemsQueryKey({
+function inboxItemsQueryKey({
   filter = "inbox",
   search,
   feedId,
@@ -96,11 +96,11 @@ export function inboxItemsQueryKey({
   ] as const;
 }
 
-export function inboxDetailQueryKey(itemId: string | undefined) {
+function inboxDetailQueryKey(itemId: string | undefined) {
   return ["inbox", "item-detail", itemId] as const;
 }
 
-export function sidebarInboxSummaryQueryKey(timezoneOffsetMinutes = getTimezoneOffsetMinutes()) {
+function sidebarInboxSummaryQueryKey(timezoneOffsetMinutes = getTimezoneOffsetMinutes()) {
   return ["sidebar", "inbox-summary", "global", timezoneOffsetMinutes] as const;
 }
 
@@ -162,7 +162,7 @@ export function inboxDetailQueryOptions(itemId: string | undefined) {
   };
 }
 
-export function sidebarInboxSummaryQueryOptions(
+function sidebarInboxSummaryQueryOptions(
   timezoneOffsetMinutes: number | undefined = getTimezoneOffsetMinutes(),
 ) {
   return {

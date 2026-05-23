@@ -118,7 +118,7 @@ export function InboxPreferencesBootstrapProvider({
   return createElement(InboxPreferencesBootstrapContext.Provider, { value }, children);
 }
 
-export function resolveInitialInboxPreferences(
+function resolveInitialInboxPreferences(
   queryClient: ReturnType<typeof useQueryClient>,
   queryKey: ReturnType<typeof inboxPreferencesQueryKey>,
   initialPreferences?: InboxPreferences,

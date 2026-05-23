@@ -14,7 +14,7 @@ import type { Config, DOMPurify, NodeHook, UponSanitizeAttributeHook } from "dom
  * - Restrict inline `style` to MathML + spans (KaTeX); rely on tags/classes elsewhere
  */
 
-export const ARTICLE_HTML_ALLOWED_TAGS = [
+const ARTICLE_HTML_ALLOWED_TAGS = [
   "a",
   "article",
   "blockquote",
@@ -70,7 +70,7 @@ export const ARTICLE_HTML_ALLOWED_TAGS = [
   "annotation",
 ] as const;
 
-export const ARTICLE_HTML_ALLOWED_ATTR = [
+const ARTICLE_HTML_ALLOWED_ATTR = [
   "href",
   "rel",
   "target",
@@ -93,7 +93,7 @@ export const ARTICLE_HTML_ALLOWED_ATTR = [
 ] as const;
 
 /** Removed entirely with children (interactive / chrome / active content). */
-export const ARTICLE_HTML_FORBID_TAGS = [
+const ARTICLE_HTML_FORBID_TAGS = [
   "aside",
   "button",
   "footer",
@@ -325,7 +325,7 @@ export function isAllowedArticleClassToken(token: string): boolean {
 function filterClassAttr(tag: string, value: string): string | null {
   const lowerTag = tag.toLowerCase();
   if (lowerTag === "code") {
-    const kept = value.split(/\s+/).reduce((acc, t) => {
+    const kept = value.split(/\s+/).reduce<string[]>((acc, t) => {
       const trimmed = t.trim();
 
       if (/^language-[\w-]+$/.test(trimmed)) {
@@ -339,7 +339,7 @@ function filterClassAttr(tag: string, value: string): string | null {
   if (!CLASS_CAPABLE_TAGS.has(lowerTag)) {
     return null;
   }
-  const kept = value.split(/\s+/).reduce((acc, t) => {
+  const kept = value.split(/\s+/).reduce<string[]>((acc, t) => {
     const trimmed = t.trim();
 
     if (trimmed && isAllowedArticleClassToken(trimmed)) {
@@ -419,7 +419,7 @@ export function registerArticleHtmlSanitizeHooks(purify: ArticleHtmlPurifyInstan
   purify.addHook("afterSanitizeAttributes", optimizeImages);
 }
 
-export const ARTICLE_HTML_PURIFY_CONFIG: Config = {
+const ARTICLE_HTML_PURIFY_CONFIG: Config = {
   ALLOWED_TAGS: [...ARTICLE_HTML_ALLOWED_TAGS],
   ALLOWED_ATTR: [...ARTICLE_HTML_ALLOWED_ATTR],
   FORBID_TAGS: [...ARTICLE_HTML_FORBID_TAGS],

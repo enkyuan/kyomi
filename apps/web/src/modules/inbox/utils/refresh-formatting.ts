@@ -4,13 +4,13 @@ export const SUMMARY_HOLD_MS = 2200;
 export const SUMMARY_FADE_MS = 420;
 export const BATCH_REFRESH_POLL_MS = 2000;
 export const BATCH_REFRESH_GRACE_MS = 12_000;
-export const ACTIVE_REFRESH_STATUSES = new Set(["queued", "running"]);
+const ACTIVE_REFRESH_STATUSES = new Set(["queued", "running"]);
 
 export function hasActiveRefreshStatus(items: Array<{ refreshStatus: string }>) {
   return items.some((item) => ACTIVE_REFRESH_STATUSES.has(item.refreshStatus));
 }
 
-export function formatRelativeRefreshTimestamp(value: string) {
+function formatRelativeRefreshTimestamp(value: string) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) {
     return null;

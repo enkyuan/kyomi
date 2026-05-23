@@ -2,7 +2,7 @@ import type { ReaderContentWidth } from "../hooks/use-reader-preferences";
 import { cn } from "@lib/utils";
 
 /** Horizontal gutter on `[data-reader-detail-content]` inside the scroll viewport. */
-export function readerViewportHorizontalInsetClass(contentWidth: ReaderContentWidth): string {
+function readerViewportHorizontalInsetClass(contentWidth: ReaderContentWidth): string {
   return contentWidth === "narrow" ? "px-2 md:px-3" : "px-22";
 }
 

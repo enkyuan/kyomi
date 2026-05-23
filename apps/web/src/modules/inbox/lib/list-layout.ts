@@ -1,6 +1,6 @@
 import type { InboxDensityDto } from "src/lib/schemas";
 
-export const FEED_ITEM_ROW_ESTIMATE = {
+const FEED_ITEM_ROW_ESTIMATE = {
   comfortable: 232,
   compact: 180,
   comfortableReaderFocus: 248,

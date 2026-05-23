@@ -20,7 +20,7 @@ const AuthContext = createContext<AuthState>({
   isAuthenticated: false,
 });
 
-export function normalizeInitialSession(initialSession?: AuthSession | null): SessionData | null {
+function normalizeInitialSession(initialSession?: AuthSession | null): SessionData | null {
   if (!initialSession?.session || !initialSession.user) {
     return null;
   }

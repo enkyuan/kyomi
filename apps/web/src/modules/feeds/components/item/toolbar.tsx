@@ -50,7 +50,7 @@ export type ActiveToolbar = {
   toolbarHostElement: HTMLElement;
 };
 
-export function Toolbar({
+function Toolbar({
   filter,
   toolbarRef,
   onToolbarPointerLeave,

@@ -18,7 +18,7 @@ function normalizeFigureCaptionSpacing(value: string): string {
  * When both match, clear `alt` so the caption is the single visible description
  * and screen readers are not given duplicate announcements.
  */
-export function normalizeFigureContent(html: string): string {
+function normalizeFigureContent(html: string): string {
   if (typeof document === "undefined") {
     return html;
   }

@@ -24,7 +24,7 @@ export type AuthSession = {
   } | null;
 } | null;
 
-export async function fetchSessionFromHeaders(headers: Headers): Promise<AuthSession> {
+async function fetchSessionFromHeaders(headers: Headers): Promise<AuthSession> {
   const response = await fetch(resolveApiUrl("/api/auth/get-session"), {
     method: "GET",
     headers: buildForwardHeaders(headers),
@@ -45,32 +45,6 @@ export async function fetchSessionFromHeaders(headers: Headers): Promise<AuthSes
 export const getSession = createServerFn({ method: "POST" }).handler(async () => {
   const headers = getRequestHeaders();
   return fetchSessionFromHeaders(headers);
-});
-
-export const ensureSession = createServerFn({ method: "POST" }).handler(async () => {
-  const session = await getSession();
-
-  if (!session?.user) {
-    throw new Error("Unauthorized");
-  }
-
-  return session;
-});
-
-export const getUserProfile = createServerFn({ method: "GET" }).handler(async () => {
-  const headers = getRequestHeaders();
-
-  return apiJson<{
-    id: string;
-    name: string;
-    email: string;
-    emailVerified: boolean;
-    image: string | null;
-    createdAt: string;
-    updatedAt: string;
-  }>("/api/v1/users/profile", {
-    headers: buildForwardHeaders(headers),
-  });
 });
 
 export const updateUserEmail = createServerFn({ method: "POST" })
