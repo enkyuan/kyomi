@@ -4,7 +4,7 @@ import { getSidebarInboxCounts } from "@modules/inbox/services/api";
 import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
 import { QUERY_TIMES } from "@lib/query-policies";
 
-export function foldersQueryKey() {
+function foldersQueryKey() {
   return ["folders"] as const;
 }
 
@@ -26,7 +26,7 @@ export function followedFeedsQueryOptions() {
   } as const;
 }
 
-export function sidebarInboxCountsQueryKey(
+function sidebarInboxCountsQueryKey(
   timezoneOffsetMinutes: number | undefined,
   feedId?: string,
   folderId?: string,

@@ -17,9 +17,9 @@ const BASE_INBOX_NAV: InboxNavItem[] = [
   { label: "Read Later", search: { filter: "saved" }, icon: StarFill },
 ];
 
-export const INBOX_NAV_FILTER_KEYS = ["filter"] as const;
+const INBOX_NAV_FILTER_KEYS = ["filter"] as const;
 
-export function buildInboxNavItems(showRecents: boolean): InboxNavItem[] {
+function buildInboxNavItems(showRecents: boolean): InboxNavItem[] {
   if (!showRecents) {
     return BASE_INBOX_NAV;
   }
@@ -29,7 +29,7 @@ export function buildInboxNavItems(showRecents: boolean): InboxNavItem[] {
   ];
 }
 
-export function inboxNavBadgeValues(counts: {
+function inboxNavBadgeValues(counts: {
   today: number;
   unread: number;
   saved: number;

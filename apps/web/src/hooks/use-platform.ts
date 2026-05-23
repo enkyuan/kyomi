@@ -5,7 +5,7 @@ import { useMemo, useSyncExternalStore } from "react";
 export type ClientPlatform = "mac" | "windows" | "linux" | "other";
 
 /** Unicode symbols shown in shortcut hints (not the literal key names). */
-export const MODIFIER_KEY_SYMBOL = {
+const MODIFIER_KEY_SYMBOL = {
   meta: "\u2318",
   ctrl: "\u2303",
 } as const;
@@ -29,7 +29,7 @@ function getServerPlatform(): ClientPlatform {
   return "other";
 }
 
-export function detectClientPlatform(): ClientPlatform {
+function detectClientPlatform(): ClientPlatform {
   if (typeof navigator === "undefined") {
     return "other";
   }
@@ -49,7 +49,7 @@ export function detectClientPlatform(): ClientPlatform {
   return "other";
 }
 
-export function platformStateFromClient(platform: ClientPlatform): PlatformState {
+function platformStateFromClient(platform: ClientPlatform): PlatformState {
   const isMac = platform === "mac";
   const isWindows = platform === "windows";
   const isLinux = platform === "linux";

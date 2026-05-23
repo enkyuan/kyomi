@@ -184,28 +184,6 @@ export const unfollowFeed = createServerFn({ method: "POST" })
     });
   });
 
-export const getFollowedFeedUnreadCounts = createServerFn({ method: "POST" })
-  .inputValidator((input: { feedIds: string[] }) => input)
-  .handler(async ({ data }): Promise<Record<string, number>> => {
-    const headers = buildForwardHeaders(getRequestHeaders());
-    const uniqueIds = [
-      ...new Set(
-        data.feedIds.flatMap((id) => {
-          const trimmed = id.trim();
-          return trimmed ? [trimmed] : [];
-        }),
-      ),
-    ];
-    if (uniqueIds.length === 0) {
-      return {};
-    }
-
-    return apiJson<Record<string, number>>(
-      `/api/v1/articles/unread-counts?feed_ids=${encodeURIComponent(uniqueIds.join(","))}`,
-      { headers },
-    );
-  });
-
 export const moveFeedsToFolder = createServerFn({ method: "POST" })
   .inputValidator((input: { feedIds: string[]; folderId: string }) => input)
   .handler(async ({ data }): Promise<{ updatedCount: number }> => {

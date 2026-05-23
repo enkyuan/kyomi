@@ -78,6 +78,10 @@ export function SourcesDialog({
     !shouldShowLoading && (debouncedQuery.length === 0 || searchResults.length === 0);
 
   const setDialogOpen = (nextOpen: boolean) => {
+    if (!nextOpen) {
+      setQuery("");
+      setDebouncedQuery("");
+    }
     const commit = () => {
       if (open === undefined) {
         setInternalOpen(nextOpen);
@@ -92,13 +96,6 @@ export function SourcesDialog({
       commit();
     }
   };
-
-  useEffect(() => {
-    if (!dialogOpen) {
-      setQuery("");
-      setDebouncedQuery("");
-    }
-  }, [dialogOpen]);
 
   const followFeedMutation = useMutation({
     mutationFn: ({ url }: { url: string }) => followFeed({ data: { url } }),

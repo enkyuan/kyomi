@@ -3,7 +3,7 @@
 import { AppShell } from "@/app/app-shell";
 import { Detail } from "@modules/reader/components/detail";
 import { MIN_INBOX_LEFT_PERCENT, MIN_INBOX_RIGHT_PERCENT } from "./lib/constants";
-import { MobileSingleColumnLayout, ReaderFocusDetailLayout, SplitLayout } from "./layout";
+import { MobileLayout, ReaderFocusDetailLayout, SplitLayout } from "./layouts";
 import { useQuery } from "@tanstack/react-query";
 import { List } from "./components/list";
 import {
@@ -314,7 +314,7 @@ function InboxPageContent({
             <Detail {...detailProps} showBackToList onBackToList={clearSelectedItem} />
           </ReaderFocusDetailLayout>
         ) : layoutVariant === "stacked" ? (
-          <MobileSingleColumnLayout
+          <MobileLayout
             showDetail={Boolean(itemId)}
             direction={mobileTransitionDirection}
             list={

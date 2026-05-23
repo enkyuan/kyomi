@@ -11,7 +11,7 @@ import { z } from "zod";
 // Shared enums
 // ---------------------------------------------------------------------------
 
-export const contentStatusSchema = z.enum(["ready", "partial", "failed", "pending"]);
+const contentStatusSchema = z.enum(["ready", "partial", "failed", "pending"]);
 
 export const contentSourceSchema = z.enum([
   "feed_html",
@@ -24,11 +24,7 @@ export const contentSourceSchema = z.enum([
 
 export const bodyKindSchema = z.enum(["html", "markdown", "text", "fallback"]);
 
-export const articleTypeSchema = z.enum(["feed", "clip"]);
-
-export const fallbackReasonSchema = z
-  .enum(["extraction_failed", "timeout", "missing_content"])
-  .nullable();
+const articleTypeSchema = z.enum(["feed", "clip"]);
 
 // ---------------------------------------------------------------------------
 // Reader content
@@ -87,7 +83,7 @@ const readerFallbackSchema = readerContentCommonSchema.extend({
   fallbackReason: z.enum(["extraction_failed", "timeout", "missing_content"]),
 });
 
-export const readerContentSchema = z.discriminatedUnion("bodyKind", [
+const readerContentSchema = z.discriminatedUnion("bodyKind", [
   readerHtmlSchema,
   readerMarkdownSchema,
   readerTextSchema,
@@ -98,7 +94,7 @@ export const readerContentSchema = z.discriminatedUnion("bodyKind", [
 // Article list items
 // ---------------------------------------------------------------------------
 
-export const articleListItemSchema = z.object({
+const articleListItemSchema = z.object({
   id: z.string(),
   title: z.string(),
   link: z.string(),
@@ -127,7 +123,7 @@ export const cursorListResponseSchema = z.object({
 // Article detail
 // ---------------------------------------------------------------------------
 
-export const extractedContentStatusSchema = z.enum(["pending", "ready", "failed"]);
+const extractedContentStatusSchema = z.enum(["pending", "ready", "failed"]);
 
 export const articleDetailSchema = articleListItemSchema.extend({
   contentHtml: z.string().nullable(),
@@ -213,9 +209,9 @@ export const followFeedResultSchema = z.object({
 });
 
 /** Matches API `feeds.refresh_status` text column (not a closed enum in DB). */
-export const feedRefreshStatusSchema = z.string();
+const feedRefreshStatusSchema = z.string();
 
-export const followedFeedSchema = z.object({
+const followedFeedSchema = z.object({
   subscriptionId: z.string(),
   feedId: z.string(),
   url: z.string(),
@@ -280,14 +276,14 @@ export const messageResponseSchema = z.object({
 // User preferences
 // ---------------------------------------------------------------------------
 
-export const readerDefaultModeSchema = z.enum(["smart", "original", "extracted"]);
-export const readerContentWidthSchema = z.enum(["narrow", "wide"]);
-export const inboxDefaultViewSchema = z.enum(["inbox", "today", "unread", "saved"]);
-export const inboxDensitySchema = z.enum(["comfortable", "compact"]);
-export const articleOpenBehaviorSchema = z.enum(["split", "reader"]);
-export const inboxMarkReadBehaviorSchema = z.enum(["on-open", "after-delay", "manual"]);
-export const inboxTimestampDisplaySchema = z.enum(["absolute", "relative"]);
-export const inboxTimestampHourCycleSchema = z.enum(["12h", "24h"]);
+const readerDefaultModeSchema = z.enum(["smart", "original", "extracted"]);
+const readerContentWidthSchema = z.enum(["narrow", "wide"]);
+const inboxDefaultViewSchema = z.enum(["inbox", "today", "unread", "saved"]);
+const inboxDensitySchema = z.enum(["comfortable", "compact"]);
+const articleOpenBehaviorSchema = z.enum(["split", "reader"]);
+const inboxMarkReadBehaviorSchema = z.enum(["on-open", "after-delay", "manual"]);
+const inboxTimestampDisplaySchema = z.enum(["absolute", "relative"]);
+const inboxTimestampHourCycleSchema = z.enum(["12h", "24h"]);
 
 export const readerPreferencesSchema = z.object({
   defaultMode: readerDefaultModeSchema,

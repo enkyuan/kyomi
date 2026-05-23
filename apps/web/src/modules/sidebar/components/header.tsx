@@ -51,7 +51,7 @@ import type { PlatformState } from "@hooks/use-platform";
 import { usePretext } from "@hooks/use-pretext";
 import { useWorkspaceHeader } from "../hooks/use-workspace-header";
 
-export function PretextLabel({
+function PretextLabel({
   className,
   font = SIDEBAR_LABEL_FONT,
   label,

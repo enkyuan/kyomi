@@ -194,15 +194,6 @@ export const updateInboxItemState = createServerFn({ method: "POST" })
     });
   });
 
-export const getInboxCounts = createServerFn({ method: "GET" }).handler(async () => {
-  const headers = getRequestHeaders();
-  return apiJsonValidated(articleCountsSchema, () =>
-    apiJson<ArticleCountsResponse>("/api/v1/articles/counts", {
-      headers: buildForwardHeaders(headers),
-    }),
-  );
-});
-
 export const extractInboxItemFullText = createServerFn({ method: "POST" })
   .inputValidator((input: { itemId: string }) => input)
   .handler(async ({ data }): Promise<ExtractFullTextResponseDto> => {
@@ -288,36 +279,4 @@ export const getInboxViewCount = createServerFn({ method: "GET" })
       return { count: counts.saved };
     }
     return { count: counts.unread };
-  });
-
-export const getScopedUnreadCount = createServerFn({ method: "GET" })
-  .inputValidator((input: { feedId?: string; folderId?: string }) => input)
-  .handler(async ({ data }): Promise<ScopedUnreadCountResponse> => {
-    const headers = getRequestHeaders();
-
-    const feedId = data.feedId?.trim();
-    if (!feedId && !data.folderId?.trim()) {
-      return { count: 0 };
-    }
-
-    // Use the per-feed COUNT(*) endpoint instead of fetching a full list
-    // and counting .length (which was capped at the query limit).
-    if (feedId) {
-      const counts = await apiJson<Record<string, number>>(
-        `/api/v1/articles/unread-counts?feed_ids=${encodeURIComponent(feedId)}`,
-        { headers: buildForwardHeaders(headers) },
-      );
-      return { count: counts[feedId] ?? 0 };
-    }
-
-    // Folder-scoped unread: use the existing counts endpoint with folder_id scope.
-    if (data.folderId?.trim()) {
-      const counts = await apiJson<ArticleCountsResponse>(
-        buildCountsUrl(buildCountsSearchParams({ folderId: data.folderId })),
-        { headers: buildForwardHeaders(headers) },
-      );
-      return { count: counts.unread ?? 0 };
-    }
-
-    return { count: 0 };
   });

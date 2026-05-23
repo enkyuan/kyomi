@@ -16,7 +16,7 @@ const PINNED_FEED_IDS_MIGRATION_KEY_PREFIX = "vols.rss:pinned-feed-ids:migrated:
 const PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX =
   "vols.rss:pinned-feed-ids:migration-started:v1";
 
-export function readLegacyPinnedFeedIds() {
+function readLegacyPinnedFeedIds() {
   if (typeof window === "undefined") {
     return [] as string[];
   }
@@ -43,11 +43,11 @@ export function readLegacyPinnedFeedIds() {
   }
 }
 
-export function buildMigrationKey(userId: string) {
+function buildMigrationKey(userId: string) {
   return `${PINNED_FEED_IDS_MIGRATION_KEY_PREFIX}:${userId}`;
 }
 
-export function buildMigrationStartedKey(userId: string) {
+function buildMigrationStartedKey(userId: string) {
   return `${PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX}:${userId}`;
 }
 
@@ -97,11 +97,7 @@ function logPinnedMigration(event: "attempted" | "succeeded" | "failed" | "skipp
   console.info("[pinned-feed-migration]", { event, ...context });
 }
 
-export function applyPinnedState(
-  current: FollowedFeed[] | undefined,
-  feedId: string,
-  pinned: boolean,
-) {
+function applyPinnedState(current: FollowedFeed[] | undefined, feedId: string, pinned: boolean) {
   if (!current) {
     return current;
   }
@@ -113,7 +109,7 @@ export function applyPinnedState(
   );
 }
 
-export function sortPinnedFeeds(feeds: FollowedFeed[]) {
+function sortPinnedFeeds(feeds: FollowedFeed[]) {
   return feeds
     .filter((feed) => feed.isPinned)
     .sort((a, b) => {
