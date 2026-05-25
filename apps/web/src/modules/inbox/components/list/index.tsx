@@ -6,7 +6,7 @@ import { StaticRows, VirtualizedRows, SkeletonRows, type RowsPaginationState } f
 import { FilterMenu } from "./filter-menu";
 import { Update } from "../refresh/update";
 import { ScrollAreaPrimitive, ScrollBar } from "@vols.rss/ui/scroll-area";
-import { AnimatePresence, LazyMotion, domAnimation, m, type Variants } from "motion/react";
+import { RefreshStatus } from "./refresh-status";
 import {
   useCallback,
   useEffect,
@@ -21,8 +21,6 @@ import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import type { InboxListHeaderCount } from "@modules/inbox/utils/count-display";
 import { STATIC_LIST_ITEM_LIMIT } from "@modules/inbox/lib/layout";
-
-const RELATIVE_TIME_FORMATTER = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 export type ListDisplayOptions = {
   readerFocusMode?: boolean;
@@ -50,176 +48,6 @@ interface ListProps {
   folderId?: string | null;
   pagination: RowsPaginationState;
   onSelectItem: (item: InboxItem) => void;
-}
-
-function RefreshStatus({
-  isRefreshing,
-  dataUpdatedAt,
-}: {
-  isRefreshing: boolean;
-  dataUpdatedAt?: number;
-}) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState<number | null>(dataUpdatedAt ?? null);
-  const [tick, setTick] = useState(0);
-  const hideTimeoutRef = useRef<number | null>(null);
-  const wasRefreshingRef = useRef(isRefreshing);
-
-  // Keep track of dataUpdatedAt updates from the query
-  useEffect(() => {
-    if (dataUpdatedAt) {
-      setLastUpdated(dataUpdatedAt);
-
-      // If we got a fresh update (and we weren't just mounting with old data),
-      // or if it was refreshed, make it visible and start the 6s fade-out timer.
-      if (!isRefreshing && wasRefreshingRef.current) {
-        setIsVisible(true);
-        if (hideTimeoutRef.current) window.clearTimeout(hideTimeoutRef.current);
-        hideTimeoutRef.current = window.setTimeout(() => {
-          setIsVisible(false);
-        }, 6000);
-      }
-    }
-  }, [dataUpdatedAt, isRefreshing]);
-
-  // Handle active refreshing state transitions
-  useEffect(() => {
-    if (isRefreshing) {
-      setIsVisible(true);
-      if (hideTimeoutRef.current) {
-        window.clearTimeout(hideTimeoutRef.current);
-        hideTimeoutRef.current = null;
-      }
-    } else if (wasRefreshingRef.current) {
-      // Transition from refreshing -> idle
-      setLastUpdated(Date.now());
-      setIsVisible(true);
-      if (hideTimeoutRef.current) window.clearTimeout(hideTimeoutRef.current);
-      hideTimeoutRef.current = window.setTimeout(() => {
-        setIsVisible(false);
-      }, 6000);
-    }
-    wasRefreshingRef.current = isRefreshing;
-  }, [isRefreshing]);
-
-  // If it mounts and has a recent update, show it briefly
-  useEffect(() => {
-    if (dataUpdatedAt && Date.now() - dataUpdatedAt < 30000) {
-      setIsVisible(true);
-      hideTimeoutRef.current = window.setTimeout(() => {
-        setIsVisible(false);
-      }, 6000);
-    }
-    return () => {
-      if (hideTimeoutRef.current) window.clearTimeout(hideTimeoutRef.current);
-    };
-  }, []);
-
-  // Update relative time description every 15 seconds while visible
-  useEffect(() => {
-    if (!isVisible || isRefreshing || !lastUpdated) return;
-    const interval = setInterval(() => {
-      setTick((t) => t + 1);
-    }, 15000);
-    return () => clearInterval(interval);
-  }, [isVisible, isRefreshing, lastUpdated]);
-
-  const relativeText = useMemo(() => {
-    if (!lastUpdated) return "Updated now";
-    const diffMs = Date.now() - lastUpdated;
-    const diffMinutes = Math.floor(diffMs / 60000);
-    if (diffMinutes <= 0) {
-      return "Updated now";
-    }
-    return `Updated ${RELATIVE_TIME_FORMATTER.format(-diffMinutes, "minute")}`;
-  }, [lastUpdated, tick]);
-
-  const ENTER_EASE = [0.32, 0.72, 0, 1] as const;
-  const EXIT_EASE = [0.7, 0, 0.84, 0] as const;
-
-  const variants: Variants = {
-    initial: { opacity: 0, scale: 0.96 },
-    animate: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        opacity: { duration: 0.4, ease: ENTER_EASE },
-        scale: { duration: 0.4, ease: ENTER_EASE },
-      },
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.96,
-      transition: {
-        opacity: { duration: 0.3, ease: EXIT_EASE },
-        scale: { duration: 0.3, ease: EXIT_EASE },
-      },
-    },
-  };
-
-  const pulseVariants: Variants = {
-    initial: { opacity: 0.6 },
-    animate: {
-      opacity: [0.6, 1, 0.6],
-      transition: {
-        repeat: Infinity,
-        duration: 1.5,
-        ease: "easeInOut",
-      },
-    },
-  };
-
-  return (
-    <LazyMotion features={domAnimation}>
-      <AnimatePresence>
-        {isVisible && (
-          <m.span
-            key="refresh-status-root"
-            variants={variants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="inline-flex items-center"
-          >
-            {/* Dot Separator: completely static once mounted */}
-            <span
-              aria-hidden="true"
-              className="shrink-0 text-muted-foreground/50 mx-1.5 select-none"
-            >
-              ·
-            </span>
-            {/* Status Container: has same styling as inbox list item saved text */}
-            <span className="font-medium tracking-[0.01em] text-muted-foreground/85 text-xs select-none">
-              <AnimatePresence mode="wait">
-                {isRefreshing ? (
-                  <m.span
-                    key="updating"
-                    variants={pulseVariants}
-                    initial="initial"
-                    animate="animate"
-                    className="inline-flex font-medium text-muted-foreground text-sm tabular-nums"
-                  >
-                    Updating
-                  </m.span>
-                ) : (
-                  <m.span
-                    key="updated"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="inline-flex font-medium text-muted-foreground text-sm tabular-nums"
-                  >
-                    {relativeText}
-                  </m.span>
-                )}
-              </AnimatePresence>
-            </span>
-          </m.span>
-        )}
-      </AnimatePresence>
-    </LazyMotion>
-  );
 }
 
 function ListHeader({
