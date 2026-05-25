@@ -20,7 +20,8 @@ import {
   DialogPopup,
   DialogTitle,
 } from "@vols.rss/ui/dialog";
-import { getColumns, TableFrame, type FeedRow, type FolderOption } from "./table";
+import { TableFrame } from "./table";
+import { getColumns, type FeedRow, type FolderOption } from "./table-config";
 import { toastManager } from "@vols.rss/ui/toast";
 import {
   listFollowedFeeds,

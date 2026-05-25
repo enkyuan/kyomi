@@ -59,18 +59,13 @@ export const Item = memo(function Item({
         isSelected || item.isRead ? "bg-background" : "hover:bg-background/70",
       )}
       render={
-        <div
-          role="button"
-          tabIndex={0}
+        <button
+          type="button"
+          aria-label={item.title || "Untitled article"}
+          className="text-left"
           onBlurCapture={onToolbarLeave}
           onClick={selectItem}
           onFocusCapture={(event) => onToolbarEnter(item, event.currentTarget)}
-          onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              selectItem();
-            }
-          }}
           onPointerEnter={(event) => onToolbarEnter(item, event.currentTarget)}
           onPointerLeave={onToolbarLeave}
         />

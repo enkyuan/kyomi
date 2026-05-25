@@ -20,7 +20,19 @@ export function useFeedRefresh(feedId: string) {
 
   const detailQuery = useQuery({
     queryKey: ["feed-detail", feedId],
-    queryFn: () => getFeedDetail({ data: { feedId } }),
+    queryFn: async () => {
+      const data = await getFeedDetail({ data: { feedId } });
+      const now = data.refreshStatus;
+      const prev = previousStatusRef.current;
+      if ((prev === "queued" || prev === "running") && (now === "idle" || now === "failed")) {
+        setTimeout(() => {
+          invalidateFeedAndInboxQueries(queryClient);
+          void queryClient.invalidateQueries({ queryKey: ["feed-detail", feedId] });
+        }, 0);
+      }
+      previousStatusRef.current = now;
+      return data;
+    },
     enabled: Boolean(feedId),
     refetchInterval: (query) => {
       const status = query.state?.data?.refreshStatus;
@@ -33,23 +45,6 @@ export function useFeedRefresh(feedId: string) {
 
   const status = detailQuery.data?.refreshStatus ?? "idle";
   const isRefreshing = mutation.isPending || status === "queued" || status === "running";
-
-  // Reset status tracking when the monitored feed changes so a stale previous status from
-  // one feed cannot trigger invalidations for a different feed.
-  useEffect(() => {
-    previousStatusRef.current = "idle";
-  }, [feedId]);
-
-  useEffect(() => {
-    const prev = previousStatusRef.current;
-    const now = status;
-    if ((prev === "queued" || prev === "running") && (now === "idle" || now === "failed")) {
-      // Worker transitioned to a terminal state; refetch read models now.
-      invalidateFeedAndInboxQueries(queryClient);
-      void queryClient.invalidateQueries({ queryKey: ["feed-detail", feedId] });
-    }
-    previousStatusRef.current = now;
-  }, [status, feedId, queryClient]);
 
   const triggerRefresh = () => {
     if (mutation.isPending || isRefreshing) {

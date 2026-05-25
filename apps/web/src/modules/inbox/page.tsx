@@ -306,21 +306,29 @@ function InboxPageContent({
     ],
   );
 
+  const listElement = useMemo(
+    () => <List {...listProps} display={{ ...listProps.display, readerFocusMode: false }} />,
+    [listProps],
+  );
+
+  const detailElementWithBack = useMemo(
+    () => <Detail {...detailProps} showBackToList onBackToList={clearSelectedItem} />,
+    [detailProps, clearSelectedItem],
+  );
+
+  const detailElement = useMemo(() => <Detail {...detailProps} />, [detailProps]);
+
   return (
     <AppShell readerFocusMode={isReaderFocusedLayout}>
       <div ref={layoutContainerRef} className="h-full max-h-full min-h-0 min-w-0">
         {layoutVariant === "reader-focused" ? (
-          <ReaderFocusDetailLayout>
-            <Detail {...detailProps} showBackToList onBackToList={clearSelectedItem} />
-          </ReaderFocusDetailLayout>
+          <ReaderFocusDetailLayout>{detailElementWithBack}</ReaderFocusDetailLayout>
         ) : layoutVariant === "stacked" ? (
           <MobileLayout
             showDetail={Boolean(itemId)}
             direction={mobileTransitionDirection}
-            list={
-              <List {...listProps} display={{ ...listProps.display, readerFocusMode: false }} />
-            }
-            detail={<Detail {...detailProps} showBackToList onBackToList={clearSelectedItem} />}
+            list={listElement}
+            detail={detailElementWithBack}
           />
         ) : (
           <SplitLayout
@@ -328,10 +336,8 @@ function InboxPageContent({
             leftPanelPercent={leftPanelPercent}
             isResizing={isResizing}
             resizeHandleProps={resizeHandleProps}
-            list={
-              <List {...listProps} display={{ ...listProps.display, readerFocusMode: false }} />
-            }
-            detail={<Detail {...detailProps} />}
+            list={listElement}
+            detail={detailElement}
           />
         )}
       </div>

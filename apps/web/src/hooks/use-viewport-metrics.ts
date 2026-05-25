@@ -68,8 +68,9 @@ export function useViewportMetrics(
     observer.observe(viewport);
 
     return () => {
-      if (rafIdRef.current !== null) {
-        window.cancelAnimationFrame(rafIdRef.current);
+      const rafId = rafIdRef.current;
+      if (rafId !== null) {
+        window.cancelAnimationFrame(rafId);
         rafIdRef.current = null;
       }
       observer.disconnect();

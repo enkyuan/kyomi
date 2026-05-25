@@ -131,16 +131,8 @@
   --sidebar-accent-foreground: var(--foreground);
   --sidebar-border: --alpha(var(--color-black) / 6%);
   --sidebar-ring: var(--color-neutral-400);
-  --scrollbar-thumb: color-mix(
-    in srgb,
-    var(--foreground) 18%,
-    transparent
-  );
-  --scrollbar-thumb-hover: color-mix(
-    in srgb,
-    var(--foreground) 28%,
-    transparent
-  );
+  --scrollbar-thumb: var(--color-neutral-300);
+  --scrollbar-thumb-hover: var(--color-neutral-400);
   color-scheme: dark;
 }
 
@@ -198,12 +190,14 @@
   --sidebar-accent-foreground: var(--color-neutral-100);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--color-neutral-400);
+  --scrollbar-thumb: var(--color-neutral-600);
+  --scrollbar-thumb-hover: var(--color-neutral-500);
 }
 
 * {
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) transparent;
+  scrollbar-color: var(--scrollbar-thumb);
 }
 
 *::-webkit-scrollbar {
@@ -224,6 +218,36 @@
 
 *::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-thumb-hover);
+}
+
+/* Base UI scroll-area scrollbars — thin and hidden at rest, expand on hover over the scrollbar */
+[data-slot="scroll-area-scrollbar"] {
+  opacity: 1;
+  transition:
+    width 300ms 300ms,
+    height 300ms 300ms;
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="vertical"] {
+  width: 2px;
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"] {
+  height: 2px;
+}
+
+[data-slot="scroll-area-scrollbar"]:hover {
+  transition:
+    width 150ms 0ms,
+    height 150ms 0ms;
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="vertical"]:hover {
+  width: 6px;
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"]:hover {
+  height: 6px;
 }
 
 html,

@@ -39,7 +39,11 @@ export function useUserPreferences<TPreferences extends object>({
 
   const preferencesQuery = useQuery({
     queryKey,
-    queryFn,
+    queryFn: async () => {
+      const data = await queryFn();
+      onCacheWrite?.(data, user?.id);
+      return data;
+    },
     enabled: Boolean(user?.id),
     staleTime: 5 * 60 * 1000,
     initialData,
@@ -49,13 +53,10 @@ export function useUserPreferences<TPreferences extends object>({
   const preferences = preferencesQuery.data ?? defaults;
 
   useEffect(() => {
-    onCacheWrite?.(preferences, user?.id);
-  }, [onCacheWrite, preferences, user?.id]);
-
-  useEffect(() => {
     return () => {
-      if (mutationDebounceRef.current) {
-        clearTimeout(mutationDebounceRef.current);
+      const timer = mutationDebounceRef.current;
+      if (timer) {
+        clearTimeout(timer);
         mutationDebounceRef.current = null;
         mutationRollbackRef.current = null;
       }

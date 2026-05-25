@@ -121,6 +121,12 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
   const [isEditingEmail, setIsEditingEmail] = useState(false);
   const [emailDraft, setEmailDraft] = useState(user?.email ?? "");
   const [emailError, setEmailError] = useState<string | null>(null);
+  const [prevUserEmail, setPrevUserEmail] = useState(user?.email);
+
+  if (!isEditingEmail && user?.email !== prevUserEmail) {
+    setPrevUserEmail(user?.email);
+    setEmailDraft(user?.email ?? "");
+  }
 
   const sessionsQuery = useQuery({
     queryKey: ["auth", "sessions"],
@@ -164,13 +170,6 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
       });
     },
   });
-
-  useEffect(() => {
-    if (!isEditingEmail) {
-      setEmailDraft(user?.email ?? "");
-      setEmailError(null);
-    }
-  }, [isEditingEmail, user?.email]);
 
   const fallbackSession: SessionRow[] = session?.session
     ? [

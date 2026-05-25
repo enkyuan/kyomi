@@ -19,12 +19,16 @@ export function useFeedFavicon({
   siteUrl: string | null;
 }) {
   const faviconUrls = buildFaviconUrlCandidates(storedFaviconUrl, siteUrl, feedUrl);
+  const faviconUrlsKey = faviconUrls.join("\n");
+  const [prevKey, setPrevKey] = useState(faviconUrlsKey);
   const [faviconIndex, setFaviconIndex] = useState(() => firstUsableFaviconIndex(faviconUrls));
-  const faviconUrl = faviconIndex >= 0 ? faviconUrls[faviconIndex] : null;
 
-  useEffect(() => {
+  if (faviconUrlsKey !== prevKey) {
+    setPrevKey(faviconUrlsKey);
     setFaviconIndex(firstUsableFaviconIndex(faviconUrls));
-  }, [faviconUrls.join("\n")]);
+  }
+
+  const faviconUrl = faviconIndex >= 0 ? faviconUrls[faviconIndex] : null;
 
   const failCurrentFavicon = () => {
     if (!faviconUrl) {
