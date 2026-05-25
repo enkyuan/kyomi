@@ -6,15 +6,15 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { LayoutLeftFill } from "@mingcute/react";
 import { use } from "react";
 import * as React from "react";
-import { useMediaQuery } from "./hooks/use-media-query";
-import { cn } from "./lib/utils";
-import { Button } from "./button";
-import { Input } from "./input";
-import { ScrollArea } from "./scroll-area";
-import { Separator } from "./separator";
-import { Sheet, SheetDescription, SheetHeader, SheetPopup, SheetTitle } from "./sheet";
-import { Skeleton } from "./skeleton";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "./tooltip";
+import { useMediaQuery } from "../hooks/use-media-query";
+import { cn } from "../lib/utils";
+import { Button } from "../button";
+import { Input } from "../input";
+import { ScrollArea } from "../scroll-area";
+import { Separator } from "../separator";
+import { Sheet, SheetDescription, SheetHeader, SheetPopup, SheetTitle } from "../sheet";
+import { Skeleton } from "../skeleton";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "../tooltip";
 
 const SIDEBAR_COOKIE_NAME: string = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE: number = 60 * 60 * 24 * 7;
@@ -420,10 +420,7 @@ export function SidebarContent({
   ...props
 }: React.ComponentProps<"div">): React.ReactElement {
   return (
-    <ScrollArea
-      className="h-auto min-h-0 flex-1 **:data-[slot=scroll-area-scrollbar]:hidden"
-      scrollFade
-    >
+    <ScrollArea className="h-auto min-h-0 flex-1 **:data-[slot=scroll-area-scrollbar]:hidden">
       <div
         className={cn(
           "flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-2.5 group-data-[collapsible=icon]:overflow-hidden",

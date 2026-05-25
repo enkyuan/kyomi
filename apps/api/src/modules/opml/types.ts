@@ -1,26 +1,60 @@
+export type OpmlImportStatus = "pending" | "in_progress" | "completed" | "failed" | "cancelled";
+
 export type OpmlUrlFailure = {
   url: string;
   code: string;
   message: string;
 };
 
-export type OpmlImportSummary = {
+export type OpmlImportCounters = {
+  totalUrls: number;
+  completed: number;
   subscribed: number;
   alreadySubscribed: number;
   failed: number;
-  failures: OpmlUrlFailure[];
-  totalUrls: number;
+  cancelled: number;
 };
 
-export type OpmlTaskPayload = {
+export type OpmlImportSummary = OpmlImportCounters & {
+  failures: OpmlUrlFailure[];
+};
+
+export type OpmlTaskMeta = {
+  taskId: string;
   userId: string;
-  status: "pending" | "completed" | "failed";
+  filename: string;
+  opmlTitle: string | null;
+  opmlAuthor: string | null;
+  status: OpmlImportStatus;
   createdAt: string;
   completedAt: string | null;
-  summary: OpmlImportSummary | null;
+  message: string | null;
 };
 
-export type OpmlOutlineEntry = {
+export type OpmlTaskState = OpmlTaskMeta & {
+  counters: OpmlImportCounters;
+  failures: OpmlUrlFailure[];
+};
+
+export type OpmlTaskListItem = {
+  taskId: string;
+  status: OpmlImportStatus;
+  createdAt: string;
+  completedAt: string | null;
+  summary: Pick<
+    OpmlImportSummary,
+    "subscribed" | "alreadySubscribed" | "failed" | "totalUrls"
+  > | null;
+};
+
+export type ParsedOpmlFeed = {
   xmlUrl: string;
-  title?: string;
+  title: string | null;
+  folderName: string;
+};
+
+export type ParsedOpmlDocument = {
+  opmlTitle: string | null;
+  opmlAuthor: string | null;
+  feeds: ParsedOpmlFeed[];
 };

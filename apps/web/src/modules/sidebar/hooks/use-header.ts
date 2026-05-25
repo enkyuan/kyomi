@@ -12,7 +12,7 @@ import { followedFeedsQueryOptions, foldersQueryOptions } from "../queries/optio
 import type { PlatformState } from "@hooks/use-platform";
 import { useInboxScope } from "@hooks/use-inbox-scope";
 
-export function useWorkspaceHeader({ platform }: { platform: PlatformState }) {
+export function useHeader({ platform }: { platform: PlatformState }) {
   const navigate = useNavigate();
   const { scopedFeedId, scopedFolderId } = useInboxScope();
   const [commandOpen, setCommandOpen] = useState(false);

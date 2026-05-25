@@ -2,13 +2,11 @@
 
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { ToolbarOverlay, type ActiveToolbar } from "@modules/feeds/components/item/toolbar";
-import { SkeletonRows } from "./feed-item-rows";
-import { StaticRows } from "./static-rows";
-import { VirtualizedRows } from "./virtualized-rows";
+import { StaticRows, VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
 import { FilterMenu } from "./filter-menu";
 import { Update } from "../refresh/update";
 import { ScrollAreaPrimitive, ScrollBar } from "@vols.rss/ui/scroll-area";
-import { AnimatePresence, m } from "motion/react";
+import { AnimatePresence, LazyMotion, domAnimation, m, type Variants } from "motion/react";
 import {
   useCallback,
   useEffect,
@@ -23,7 +21,6 @@ import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import type { InboxListHeaderCount } from "@modules/inbox/utils/count-display";
 import { STATIC_LIST_ITEM_LIMIT } from "@modules/inbox/lib/layout";
-import type { RowsPaginationState } from "./feed-item-rows";
 
 const RELATIVE_TIME_FORMATTER = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
@@ -55,86 +52,180 @@ interface ListProps {
   onSelectItem: (item: InboxItem) => void;
 }
 
-function RefreshStatus({ isRefreshing }: { isRefreshing: boolean }) {
-  const [refreshState, setRefreshState] = useState({
-    wasRefreshing: isRefreshing,
-    lastUpdated: null as number | null,
-  });
+function RefreshStatus({
+  isRefreshing,
+  dataUpdatedAt,
+}: {
+  isRefreshing: boolean;
+  dataUpdatedAt?: number;
+}) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState<number | null>(dataUpdatedAt ?? null);
+  const [tick, setTick] = useState(0);
   const hideTimeoutRef = useRef<number | null>(null);
+  const wasRefreshingRef = useRef(isRefreshing);
 
-  if (refreshState.wasRefreshing !== isRefreshing) {
-    setRefreshState({
-      wasRefreshing: isRefreshing,
-      lastUpdated: refreshState.wasRefreshing && !isRefreshing ? Date.now() : null,
-    });
-  }
-
+  // Keep track of dataUpdatedAt updates from the query
   useEffect(() => {
-    if (!refreshState.lastUpdated) {
-      return;
+    if (dataUpdatedAt) {
+      setLastUpdated(dataUpdatedAt);
+
+      // If we got a fresh update (and we weren't just mounting with old data),
+      // or if it was refreshed, make it visible and start the 6s fade-out timer.
+      if (!isRefreshing && wasRefreshingRef.current) {
+        setIsVisible(true);
+        if (hideTimeoutRef.current) window.clearTimeout(hideTimeoutRef.current);
+        hideTimeoutRef.current = window.setTimeout(() => {
+          setIsVisible(false);
+        }, 6000);
+      }
     }
+  }, [dataUpdatedAt, isRefreshing]);
 
-    hideTimeoutRef.current = window.setTimeout(() => {
-      setRefreshState((current) =>
-        current.lastUpdated === refreshState.lastUpdated
-          ? { ...current, lastUpdated: null }
-          : current,
-      );
-    }, 6000);
-
-    return () => {
+  // Handle active refreshing state transitions
+  useEffect(() => {
+    if (isRefreshing) {
+      setIsVisible(true);
       if (hideTimeoutRef.current) {
         window.clearTimeout(hideTimeoutRef.current);
         hideTimeoutRef.current = null;
       }
-    };
-  }, [refreshState.lastUpdated]);
-
-  let relativeText = "Updated now";
-  if (refreshState.lastUpdated) {
-    const now = Date.now();
-    const diffMs = now - refreshState.lastUpdated;
-    const diffMinutes = Math.floor(diffMs / 60000);
-    if (diffMinutes > 0) {
-      const formatted = RELATIVE_TIME_FORMATTER.format(-diffMinutes, "minute");
-      relativeText = `Updated ${formatted}`;
+    } else if (wasRefreshingRef.current) {
+      // Transition from refreshing -> idle
+      setLastUpdated(Date.now());
+      setIsVisible(true);
+      if (hideTimeoutRef.current) window.clearTimeout(hideTimeoutRef.current);
+      hideTimeoutRef.current = window.setTimeout(() => {
+        setIsVisible(false);
+      }, 6000);
     }
-  }
+    wasRefreshingRef.current = isRefreshing;
+  }, [isRefreshing]);
+
+  // If it mounts and has a recent update, show it briefly
+  useEffect(() => {
+    if (dataUpdatedAt && Date.now() - dataUpdatedAt < 30000) {
+      setIsVisible(true);
+      hideTimeoutRef.current = window.setTimeout(() => {
+        setIsVisible(false);
+      }, 6000);
+    }
+    return () => {
+      if (hideTimeoutRef.current) window.clearTimeout(hideTimeoutRef.current);
+    };
+  }, []);
+
+  // Update relative time description every 15 seconds while visible
+  useEffect(() => {
+    if (!isVisible || isRefreshing || !lastUpdated) return;
+    const interval = setInterval(() => {
+      setTick((t) => t + 1);
+    }, 15000);
+    return () => clearInterval(interval);
+  }, [isVisible, isRefreshing, lastUpdated]);
+
+  const relativeText = useMemo(() => {
+    if (!lastUpdated) return "Updated now";
+    const diffMs = Date.now() - lastUpdated;
+    const diffMinutes = Math.floor(diffMs / 60000);
+    if (diffMinutes <= 0) {
+      return "Updated now";
+    }
+    return `Updated ${RELATIVE_TIME_FORMATTER.format(-diffMinutes, "minute")}`;
+  }, [lastUpdated, tick]);
+
+  const ENTER_EASE = [0.32, 0.72, 0, 1] as const;
+  const EXIT_EASE = [0.7, 0, 0.84, 0] as const;
+
+  const variants: Variants = {
+    initial: { opacity: 0, scale: 0.96 },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        opacity: { duration: 0.4, ease: ENTER_EASE },
+        scale: { duration: 0.4, ease: ENTER_EASE },
+      },
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.96,
+      transition: {
+        opacity: { duration: 0.3, ease: EXIT_EASE },
+        scale: { duration: 0.3, ease: EXIT_EASE },
+      },
+    },
+  };
+
+  const pulseVariants: Variants = {
+    initial: { opacity: 0.6 },
+    animate: {
+      opacity: [0.6, 1, 0.6],
+      transition: {
+        repeat: Infinity,
+        duration: 1.5,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   return (
-    <AnimatePresence mode="wait">
-      {isRefreshing ? (
-        <m.span
-          key="updating"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.15 }}
-          className="ms-2 inline-flex items-center gap-1.5"
-        >
-          <span aria-hidden>·</span>
-          <span className="animate-pulse">Updating</span>
-        </m.span>
-      ) : refreshState.lastUpdated ? (
-        <m.span
-          key="updated"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.15 }}
-          className="ms-2 inline-flex items-center gap-1.5"
-        >
-          <span aria-hidden>·</span>
-          <span>{relativeText}</span>
-        </m.span>
-      ) : null}
-    </AnimatePresence>
+    <LazyMotion features={domAnimation}>
+      <AnimatePresence>
+        {isVisible && (
+          <m.span
+            key="refresh-status-root"
+            variants={variants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="inline-flex items-center"
+          >
+            {/* Dot Separator: completely static once mounted */}
+            <span
+              aria-hidden="true"
+              className="shrink-0 text-muted-foreground/50 mx-1.5 select-none"
+            >
+              ·
+            </span>
+            {/* Status Container: has same styling as inbox list item saved text */}
+            <span className="font-medium tracking-[0.01em] text-muted-foreground/85 text-xs select-none">
+              <AnimatePresence mode="wait">
+                {isRefreshing ? (
+                  <m.span
+                    key="updating"
+                    variants={pulseVariants}
+                    initial="initial"
+                    animate="animate"
+                    className="inline-flex font-medium text-muted-foreground text-sm tabular-nums"
+                  >
+                    Updating
+                  </m.span>
+                ) : (
+                  <m.span
+                    key="updated"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="inline-flex font-medium text-muted-foreground text-sm tabular-nums"
+                  >
+                    {relativeText}
+                  </m.span>
+                )}
+              </AnimatePresence>
+            </span>
+          </m.span>
+        )}
+      </AnimatePresence>
+    </LazyMotion>
   );
 }
 
 function ListHeader({
   headerCount,
   isRefreshing,
+  dataUpdatedAt,
   inboxItemsLength,
   feedId,
   folderId,
@@ -144,6 +235,7 @@ function ListHeader({
 }: {
   headerCount: InboxListHeaderCount;
   isRefreshing: boolean;
+  dataUpdatedAt?: number;
   inboxItemsLength: number;
   feedId?: string | null;
   folderId?: string | null;
@@ -158,7 +250,11 @@ function ListHeader({
       <span className="inline-flex items-center whitespace-nowrap ps-1.5 font-medium text-muted-foreground text-sm tabular-nums">
         {headerCount.numberPart} {headerCount.unitPart}
         {inboxItemsLength > 0 ? (
-          <RefreshStatus key={contextKey} isRefreshing={isRefreshing} />
+          <RefreshStatus
+            key={contextKey}
+            isRefreshing={isRefreshing}
+            dataUpdatedAt={dataUpdatedAt}
+          />
         ) : null}
       </span>
       <div className="flex items-center gap-0.5">
@@ -187,7 +283,7 @@ export function List({
 }: ListProps) {
   const { readerFocusMode = false, disableVirtualization = false, showFavicons } = display;
   const { showHidden = false, showRead = false } = filterVisibility ?? {};
-  const { isLoading, isRefreshing } = pagination;
+  const { isLoading, isRefreshing, dataUpdatedAt } = pagination;
   const [activeToolbar, setActiveToolbar] = useState<ActiveToolbar | null>(null);
   const activeToolbarRef = useRef<ActiveToolbar | null>(null);
   const listScrollRef = useRef<HTMLDivElement | null>(null);
@@ -252,7 +348,7 @@ export function List({
       aria-busy={isRefreshing || undefined}
       data-slot="inbox-list-root"
     >
-      <ScrollAreaPrimitive.Root className="relative min-h-0 flex-1 overflow-hidden scroll-mask-b-from-[88%]">
+      <ScrollAreaPrimitive.Root className="relative min-h-0 flex-1 overflow-hidden">
         <div
           ref={listHeaderRef}
           className="pointer-events-none absolute inset-x-0 top-0 z-30 h-(--inbox-header-height) border-b border-border bg-card"
@@ -261,6 +357,7 @@ export function List({
           <ListHeader
             headerCount={headerCount}
             isRefreshing={isRefreshing}
+            dataUpdatedAt={dataUpdatedAt}
             inboxItemsLength={inboxItems.length}
             feedId={feedId}
             folderId={folderId}

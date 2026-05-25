@@ -20,7 +20,7 @@ import {
 } from "@vols.rss/ui/command";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@vols.rss/ui/input-group";
 import { Kbd, KbdGroup } from "@vols.rss/ui/kbd";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar-mode-animated-text";
+import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
 import { SidebarMenuButton } from "@vols.rss/ui/sidebar";
 import { toastManager } from "@vols.rss/ui/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";

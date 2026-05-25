@@ -3,7 +3,7 @@
 import type { CSSProperties } from "react";
 import { Suspense, useEffect, useState } from "react";
 import { cn } from "@lib/utils";
-import { SidebarReaderFocusProvider } from "@vols.rss/ui/sidebar-reader-focus";
+import { SidebarReaderFocusProvider } from "@vols.rss/ui/sidebar/reader-focus";
 import { Sidebar, SidebarContent } from "@vols.rss/ui/sidebar";
 import { APP_SIDEBAR_WIDTH } from "../lib/constants";
 import { useAppSidebar } from "../hooks/use-app-sidebar";

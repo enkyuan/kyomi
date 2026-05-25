@@ -361,6 +361,7 @@ function InboxListSection({
         hasNextPage: !!inboxQuery.hasNextPage,
         isFetchingNextPage: inboxQuery.isFetchingNextPage,
         fetchNextPage: fetchNextInboxPage,
+        dataUpdatedAt: inboxQuery.dataUpdatedAt,
       },
       onSelectItem: selectItem,
     }),

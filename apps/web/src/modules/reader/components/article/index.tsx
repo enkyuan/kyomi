@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
-import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
+import { TimestampText } from "@modules/inbox/components/timestamp-text";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
 import { Toolbar } from "../toolbar";
 import { useReaderToolbarModel } from "@modules/reader/hooks/use-reader-toolbar-model";
@@ -150,9 +150,11 @@ function ReaderArticleHeader({
     <div className="not-prose mb-6 flex flex-col gap-3">
       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs uppercase tracking-wide text-muted-foreground">
         <div className="flex min-w-0 flex-wrap items-center gap-2">
-          <span>
-            {formatInboxTimestamp(item.publishedAt, timestampDisplay, timestampHourCycle)}
-          </span>
+          <TimestampText
+            value={item.publishedAt}
+            display={timestampDisplay}
+            hourCycle={timestampHourCycle}
+          />
           {readTime ? (
             <>
               <span>·</span>

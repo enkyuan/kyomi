@@ -12,7 +12,7 @@ import {
   type MotionValue,
 } from "motion/react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
-import { cn } from "./lib/utils";
+import { cn } from "../lib/utils";
 import {
   PIP_SIZE,
   fontWeights,
@@ -21,11 +21,11 @@ import {
   type SliderProps,
   type SliderValue,
   type ValuePosition,
-} from "./slider-shared";
-import { ValueDisplay } from "./slider-value-display";
-import { hoverTooltipReducer } from "./slider-primary-state";
-import { usePrimarySlider } from "./use-primary-slider";
-import { SliderPrimaryTrack } from "./slider-primary-track";
+} from "./shared";
+import { ValueDisplay } from "./value-display";
+import { hoverTooltipReducer } from "./primary-state";
+import { usePrimarySlider } from "../hooks/use-primary-slider";
+import { PrimaryTrack } from "./primary-track";
 
 function Slider({
   ref,
@@ -95,7 +95,7 @@ function Slider({
         {...props}
       >
         {(valuePosition === "top" || valuePosition === "left") && valueDisplay}
-        <SliderPrimaryTrack
+        <PrimaryTrack
           valuePosition={valuePosition}
           showValue={showValue}
           formatValue={formatValue}

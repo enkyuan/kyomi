@@ -3,9 +3,9 @@
 import type { CSSProperties, PointerEvent, RefObject } from "react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import { AnimatePresence, m, type MotionValue } from "motion/react";
-import { cn } from "./lib/utils";
-import { TooltipValue } from "./slider-value-display";
-import { SliderVisualThumb } from "./slider-visual-thumb";
+import { cn } from "../lib/utils";
+import { TooltipValue } from "./value-display";
+import { VisualThumb } from "./visual-thumb";
 import {
   DOT_SIZE,
   fontWeights,
@@ -14,10 +14,10 @@ import {
   TRACK_BG_HEIGHT,
   TRACK_INSET,
   type ValuePosition,
-} from "./slider-shared";
-import type { PrimarySliderUiAction, PrimarySliderUiState } from "./slider-primary-state";
+} from "./shared";
+import type { PrimarySliderUiAction, PrimarySliderUiState } from "./primary-state";
 
-export type SliderPrimaryTrackProps = {
+export type PrimaryTrackProps = {
   valuePosition: ValuePosition;
   showValue: boolean;
   formatValue: (v: number) => string;
@@ -53,7 +53,7 @@ export type SliderPrimaryTrackProps = {
   isInteracting: boolean;
 };
 
-export function SliderPrimaryTrack({
+export function PrimaryTrack({
   valuePosition,
   showValue,
   formatValue,
@@ -87,7 +87,7 @@ export function SliderPrimaryTrack({
   handleRadixChange,
   stepDots,
   isInteracting,
-}: SliderPrimaryTrackProps) {
+}: PrimaryTrackProps) {
   const { isHovered, isPressed, hoverPreview, focusedThumb, showHoverTooltip, ready } = ui;
 
   return (
@@ -284,7 +284,7 @@ export function SliderPrimaryTrack({
             ))}
           </m.div>
         ) : null}
-        <SliderVisualThumb
+        <VisualThumb
           index={0}
           motionX={motionX0}
           focusedThumb={focusedThumb}
@@ -292,7 +292,7 @@ export function SliderPrimaryTrack({
           thumbBorderColor={thumbBorderColor}
         />
         {isRange ? (
-          <SliderVisualThumb
+          <VisualThumb
             index={1}
             motionX={motionX1}
             focusedThumb={focusedThumb}

@@ -39,6 +39,17 @@ function SingleFeedUpdate({ feedId }: { feedId: string }) {
   const { refresh, isRefreshing, refreshStatus, error, lastRefreshCompletedAt } =
     useFeedRefresh(feedId);
 
+  // Auto-refresh feed every 10 minutes
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (!isRefreshing) {
+        refresh();
+      }
+    }, 600000);
+
+    return () => clearInterval(intervalId);
+  }, [refresh, isRefreshing]);
+
   const title =
     refreshStatus === "failed"
       ? `Refresh failed${error ? `: ${error}` : ""}`
@@ -145,6 +156,17 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
       }
     },
   });
+
+  // Auto-refresh all feeds in this scope every 10 minutes
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (!mutation.isPending) {
+        mutation.mutate();
+      }
+    }, 600000);
+
+    return () => clearInterval(intervalId);
+  }, [mutation]);
 
   useEffect(() => {
     if (!isWatchingRef.current) {

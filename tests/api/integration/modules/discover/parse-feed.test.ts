@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { parseFeedMetadata } from "@modules/discover/parse-feed";
+import { parseFeedMetadata } from "@modules/discover/feed/parse";
 
 describe("parseFeedMetadata", () => {
   test("parses minimal RSS 2.0", () => {

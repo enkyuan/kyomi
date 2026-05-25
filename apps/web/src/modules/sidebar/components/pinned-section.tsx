@@ -11,7 +11,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@vols.rss/ui/sidebar";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar-mode-animated-text";
+import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
 import { cn } from "@lib/utils";
 import { FeedFavicon } from "./feed-favicon";
 import { PINNED_LIST_SCROLL_CLASS } from "../lib/constants";
@@ -37,7 +37,12 @@ export function PinnedSection() {
           </SidebarGroupLabel>
         </CollapsibleTrigger>
         <CollapsiblePanel>
-          <ScrollArea className={PINNED_LIST_SCROLL_CLASS} scrollFade>
+          <ScrollArea
+            className={cn(
+              PINNED_LIST_SCROLL_CLASS,
+              "data-has-overflow-y:scroll-mask-y-from-6 data-has-overflow-x:scroll-mask-x-from-6",
+            )}
+          >
             <SidebarMenu>
               {pinnedFeeds.length === 0 ? (
                 <SidebarMenuItem className="list-none">

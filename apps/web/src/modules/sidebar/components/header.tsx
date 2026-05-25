@@ -8,7 +8,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@vols.rss/ui/sidebar";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar-mode-animated-text";
+import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
 import { cn } from "@lib/utils";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@vols.rss/ui/input-group";
 import { Kbd, KbdGroup } from "@vols.rss/ui/kbd";
@@ -25,7 +25,7 @@ import {
 import type { PlatformState } from "@hooks/use-platform";
 import { isPlatformModifierShortcut } from "@hooks/use-platform";
 import { usePretext } from "@hooks/use-pretext";
-import { useWorkspaceHeader } from "../hooks/use-workspace-header";
+import { useHeader } from "../hooks/use-header";
 
 function PretextLabel({
   className,
@@ -81,7 +81,7 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
     scopedFeedId,
     scopedFolderId,
     workspaceLabel,
-  } = useWorkspaceHeader({ platform });
+  } = useHeader({ platform });
   const [sourcesOpen, setSourcesOpen] = useState(false);
   const [sourcesDialogLoaded, setSourcesDialogLoaded] = useState(false);
   const [workspaceDialogLoaded, setWorkspaceDialogLoaded] = useState(false);
@@ -112,19 +112,44 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (
-        event.key.toLowerCase() !== "k" ||
-        !isPlatformModifierShortcut(event, platform) ||
-        event.shiftKey ||
-        event.altKey
-      ) {
+      const activeEl = document.activeElement;
+      const isInput =
+        activeEl &&
+        (activeEl.tagName === "INPUT" ||
+          activeEl.tagName === "TEXTAREA" ||
+          activeEl.getAttribute("contenteditable") === "true");
+
+      if (isInput) {
         return;
       }
 
-      event.preventDefault();
-      setSourcesDialogLoaded(true);
-      void SourcesDialog.preload();
-      setSourcesOpen(true);
+      const key = event.key.toLowerCase();
+
+      // modifier + K opens Workspace Switcher
+      if (
+        key === "k" &&
+        isPlatformModifierShortcut(event, platform) &&
+        !event.shiftKey &&
+        !event.altKey
+      ) {
+        event.preventDefault();
+        setWorkspaceDialogLoaded(true);
+        void WorkspaceCommandDialog.preload();
+        setWorkspaceOpen(true);
+      }
+
+      // single / opens Follow Sources (no modifiers)
+      if (
+        event.key === "/" &&
+        !isPlatformModifierShortcut(event, platform) &&
+        !event.shiftKey &&
+        !event.altKey
+      ) {
+        event.preventDefault();
+        setSourcesDialogLoaded(true);
+        void SourcesDialog.preload();
+        setSourcesOpen(true);
+      }
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -158,7 +183,8 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
               onFocus={preloadWorkspaceDialog}
               onPointerEnter={preloadWorkspaceDialog}
             >
-              <span className="min-w-0 flex flex-1 items-center gap-2">
+              <SelectorVerticalLine className="size-6 shrink-0 -ms-1 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:-ms-0.75" />
+              <span className="min-w-0 flex flex-1 items-center gap-2 -ms-1 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:-ms-0.75">
                 {scopeIcon}
                 <SidebarModeAnimatedText className="min-w-0 flex-1">
                   <PretextLabel
@@ -177,7 +203,14 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
                   />
                 </SidebarModeAnimatedText>
               </span>
-              <SelectorVerticalLine className="-me-1 size-6 shrink-0" />
+              <KbdGroup className="max-sm:hidden opacity-60">
+                <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
+                  <SidebarModeAnimatedText>{platform.modifierKeyLabel}</SidebarModeAnimatedText>
+                </Kbd>
+                <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
+                  <SidebarModeAnimatedText>K</SidebarModeAnimatedText>
+                </Kbd>
+              </KbdGroup>
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>
@@ -205,10 +238,7 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
                 >
                   <KbdGroup className="-me-0.5">
                     <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
-                      <SidebarModeAnimatedText>{platform.modifierKeyLabel}</SidebarModeAnimatedText>
-                    </Kbd>
-                    <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
-                      <SidebarModeAnimatedText>K</SidebarModeAnimatedText>
+                      <SidebarModeAnimatedText>{"\u002F"}</SidebarModeAnimatedText>
                     </Kbd>
                   </KbdGroup>
                 </InputGroupAddon>

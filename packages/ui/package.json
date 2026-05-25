@@ -8,6 +8,10 @@
     "./hooks/use-media-query": "./src/hooks/use-media-query.ts",
     "./icons": "./src/icons/index.ts",
     "./icons/*": "./src/icons/*.tsx",
+    "./slider": "./src/slider/index.tsx",
+    "./sidebar": "./src/sidebar/index.tsx",
+    "./sidebar/mode-animated-text": "./src/sidebar/mode-animated-text.tsx",
+    "./sidebar/reader-focus": "./src/sidebar/reader-focus.tsx",
     "./*": "./src/*.tsx",
     "./*.ts": "./src/*.ts"
   },

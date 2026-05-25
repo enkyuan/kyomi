@@ -111,6 +111,19 @@ const config = defineConfig(({ command }) => {
         },
       },
     },
+    optimizeDeps: {
+      include: [
+        "react",
+        "react-dom",
+        "@mingcute/react",
+        "@tanstack/react-query",
+        "@tanstack/react-router",
+        "@tanstack/react-virtual",
+        "motion/react",
+        "clsx",
+        "tailwind-merge",
+      ],
+    },
     plugins: isTest
       ? [tsconfigPaths({ projects: ["./tsconfig.json"] }), viteReact()]
       : [

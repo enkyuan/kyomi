@@ -1,43 +1,69 @@
 import { XMLParser } from "fast-xml-parser";
 import { AppError } from "@shared/errors/app";
+import { decodeText } from "@shared/text/entities";
 import { OPML_MAX_BYTES, OPML_MAX_OUTLINES } from "./constants";
-import type { OpmlOutlineEntry } from "./types";
+import type { ParsedOpmlDocument, ParsedOpmlFeed } from "./types";
 
-function asOutlineArray(outline: unknown): Record<string, unknown>[] {
+type OutlineNode = Record<string, unknown>;
+
+function asOutlineArray(outline: unknown): OutlineNode[] {
   if (outline === undefined || outline === null) {
     return [];
   }
-  return (Array.isArray(outline) ? outline : [outline]) as Record<string, unknown>[];
+  return (Array.isArray(outline) ? outline : [outline]).filter(
+    (item): item is OutlineNode => typeof item === "object" && item !== null,
+  );
 }
 
-function collectFromOutline(outline: Record<string, unknown>, out: OpmlOutlineEntry[]): void {
-  const xmlUrl = outline.xmlUrl;
-  if (typeof xmlUrl === "string" && xmlUrl.trim().length > 0) {
+function readString(value: unknown): string | null {
+  if (typeof value !== "string") {
+    return null;
+  }
+  const trimmed = decodeText(value).trim();
+  return trimmed.length > 0 ? trimmed : null;
+}
+
+function readOutlineLabel(outline: OutlineNode): string | null {
+  return readString(outline.text) ?? readString(outline.title);
+}
+
+function collectFeeds(
+  outline: OutlineNode,
+  ancestors: string[],
+  fallbackFolderName: string,
+  out: ParsedOpmlFeed[],
+): void {
+  const xmlUrl = readString(outline.xmlUrl);
+  const title = readOutlineLabel(outline);
+
+  if (xmlUrl) {
     out.push({
-      xmlUrl: xmlUrl.trim(),
-      title: typeof outline.text === "string" ? outline.text : undefined,
+      xmlUrl,
+      title,
+      folderName: ancestors[ancestors.length - 1] ?? fallbackFolderName,
     });
   }
-  const nested = outline.outline;
-  for (const child of asOutlineArray(nested)) {
-    if (typeof child === "object" && child !== null) {
-      collectFromOutline(child as Record<string, unknown>, out);
-    }
+
+  const nextAncestors = title ? [...ancestors, title] : ancestors;
+  for (const child of asOutlineArray(outline.outline)) {
+    collectFeeds(child, nextAncestors, fallbackFolderName, out);
   }
 }
 
-function dedupeXmlUrls(entries: OpmlOutlineEntry[]): string[] {
+function dedupeFeeds(feeds: ParsedOpmlFeed[]): ParsedOpmlFeed[] {
   const seen = new Set<string>();
-  const urls: string[] = [];
-  for (const e of entries) {
-    const key = e.xmlUrl.toLowerCase();
+  const deduped: ParsedOpmlFeed[] = [];
+
+  for (const feed of feeds) {
+    const key = feed.xmlUrl.toLowerCase();
     if (seen.has(key)) {
       continue;
     }
     seen.add(key);
-    urls.push(e.xmlUrl);
+    deduped.push(feed);
   }
-  return urls;
+
+  return deduped;
 }
 
 function assertWithinSizeLimit(xml: string): void {
@@ -51,10 +77,22 @@ function assertWithinSizeLimit(xml: string): void {
   });
 }
 
+function assertNoDangerousDeclarations(xml: string): void {
+  if (!/(<!DOCTYPE|<!ENTITY)/i.test(xml)) {
+    return;
+  }
+  throw new AppError("OPML document contains unsupported XML declarations", {
+    status: 400,
+    code: "OPML_UNSAFE_XML",
+  });
+}
+
 function parseOpmlXml(xml: string): unknown {
   const parser = new XMLParser({
     ignoreAttributes: false,
     attributeNamePrefix: "",
+    trimValues: true,
+    processEntities: true,
   });
   try {
     return parser.parse(xml);
@@ -63,7 +101,7 @@ function parseOpmlXml(xml: string): unknown {
   }
 }
 
-function getOpmlBody(parsed: unknown): Record<string, unknown> {
+function getOpmlRoot(parsed: unknown): Record<string, unknown> {
   if (typeof parsed !== "object" || parsed === null) {
     throw new AppError("Invalid OPML document", { status: 400, code: "OPML_INVALID" });
   }
@@ -71,11 +109,12 @@ function getOpmlBody(parsed: unknown): Record<string, unknown> {
   if (typeof root !== "object" || root === null) {
     throw new AppError("Invalid OPML document", { status: 400, code: "OPML_INVALID" });
   }
-  const body = (root as Record<string, unknown>).body;
-  if (body === undefined || body === null) {
-    throw new AppError("Invalid OPML document", { status: 400, code: "OPML_INVALID" });
-  }
-  if (body === "") {
+  return root as Record<string, unknown>;
+}
+
+function getOpmlBody(root: Record<string, unknown>): Record<string, unknown> {
+  const body = root.body;
+  if (body === undefined || body === null || body === "") {
     throw new AppError("No feed URLs found in OPML", { status: 400, code: "OPML_NO_FEEDS" });
   }
   if (typeof body !== "object") {
@@ -84,35 +123,51 @@ function getOpmlBody(parsed: unknown): Record<string, unknown> {
   return body as Record<string, unknown>;
 }
 
-function assertOutlineCountLimit(urls: string[]): void {
-  if (urls.length <= OPML_MAX_OUTLINES) {
+function assertOutlineCountLimit(count: number): void {
+  if (count <= OPML_MAX_OUTLINES) {
     return;
   }
   throw new AppError("Too many feeds in OPML", {
     status: 400,
     code: "OPML_TOO_MANY",
-    details: { max: OPML_MAX_OUTLINES, found: urls.length },
+    details: { max: OPML_MAX_OUTLINES, found: count },
   });
 }
 
-/**
- * Parse OPML 1.x/2.x body outlines and return deduped feed URLs (order preserved).
- */
-export function parseOpmlFeeds(xml: string): string[] {
+export function parseOpmlDocument(
+  xml: string,
+  fallbackFolderName = "Unsorted",
+): ParsedOpmlDocument {
   assertWithinSizeLimit(xml);
-  const parsed = parseOpmlXml(xml);
-  const body = getOpmlBody(parsed);
+  assertNoDangerousDeclarations(xml);
 
-  const collected: OpmlOutlineEntry[] = [];
-  for (const o of asOutlineArray(body.outline)) {
-    collectFromOutline(o, collected);
+  const parsed = parseOpmlXml(xml);
+  const root = getOpmlRoot(parsed);
+  const body = getOpmlBody(root);
+  const head =
+    typeof root.head === "object" && root.head !== null ? (root.head as OutlineNode) : null;
+
+  const collected: ParsedOpmlFeed[] = [];
+  for (const outline of asOutlineArray(body.outline)) {
+    collectFeeds(outline, [], fallbackFolderName, collected);
   }
 
-  const urls = dedupeXmlUrls(collected);
-  if (urls.length === 0) {
+  const feeds = dedupeFeeds(collected);
+  if (feeds.length === 0) {
     throw new AppError("No feed URLs found in OPML", { status: 400, code: "OPML_NO_FEEDS" });
   }
-  assertOutlineCountLimit(urls);
+  assertOutlineCountLimit(feeds.length);
 
-  return urls;
+  return {
+    opmlTitle: head ? readString(head.title) : null,
+    opmlAuthor: head ? (readString(head.ownerName) ?? readString(head.ownerEmail)) : null,
+    feeds,
+  };
+}
+
+/**
+ * Backwards-compatible helper used by existing tests and any URL-only callers.
+ */
+export function parseOpmlFeeds(xml: string): string[] {
+  return parseOpmlDocument(xml).feeds.map((feed) => feed.xmlUrl);
 }

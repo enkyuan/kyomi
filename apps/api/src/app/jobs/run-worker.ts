@@ -4,6 +4,7 @@ import { logger } from "@adapters/logger";
 import { closeRedis, getRedis } from "@adapters/redis";
 import { consumeJobs, runFeedRefresh, type JobMessage } from "@vols.rss/worker";
 import { publishJob } from "@adapters/queue/publish-job";
+import { runOpmlImportFeedJob, runOpmlImportJob } from "@modules/opml/service";
 import { feedSubscriptions, feeds } from "@vols.rss/db";
 import { lte, and, ne, eq, or, isNull, sql } from "drizzle-orm";
 import type Redis from "ioredis";
@@ -24,43 +25,68 @@ function sleep(ms: number, signal?: AbortSignal): Promise<void> {
 
 async function handleFeedRefreshJob(message: JobMessage): Promise<void> {
   const { id, job, attempts } = message;
-  if (job.type !== "feed.refresh") {
-    return;
-  }
-
-  // Canonical refresh execution path: queued job -> worker -> ingestion.
-  // API/read paths should only enqueue or read status, never run refresh inline.
   const startTime = Date.now();
-  const result = await runFeedRefresh(
-    db,
-    job.payload.feedId,
-    {
-      url: env.MEILI_URL ?? "",
-      masterKey: env.MEILI_MASTER_KEY,
-      indexUid: env.MEILI_INDEX_FEEDS,
-    },
-    {
-      // Prioritize quick first-item availability immediately after follow.
-      enrichArticles: job.payload.reason !== "subscription_created",
-    },
-  );
-  const durationMs = Date.now() - startTime;
 
-  if (!result.ok) {
-    throw new Error(result.error ?? "Feed refresh failed");
+  switch (job.type) {
+    case "feed.refresh": {
+      // Canonical refresh execution path: queued job -> worker -> ingestion.
+      // API/read paths should only enqueue or read status, never run refresh inline.
+      const result = await runFeedRefresh(
+        db,
+        job.payload.feedId,
+        {
+          url: env.MEILI_URL ?? "",
+          masterKey: env.MEILI_MASTER_KEY,
+          indexUid: env.MEILI_INDEX_FEEDS,
+        },
+        {
+          // Prioritize quick first-item availability immediately after follow.
+          enrichArticles: job.payload.reason !== "subscription_created",
+        },
+      );
+      const durationMs = Date.now() - startTime;
+
+      if (!result.ok) {
+        throw new Error(result.error ?? "Feed refresh failed");
+      }
+      logger.info("worker.job.feed_refresh.completed", {
+        streamId: id,
+        feedId: job.payload.feedId,
+        userId: job.payload.userId,
+        ok: result.ok,
+        notModified: result.notModified ?? false,
+        itemCount: result.itemCount,
+        insertedCount: result.insertedCount,
+        updatedCount: result.updatedCount,
+        attempts,
+        durationMs,
+      });
+      return;
+    }
+    case "opml.import": {
+      await runOpmlImportJob(db, job.payload, logger);
+      logger.info("worker.job.opml_import.completed", {
+        streamId: id,
+        taskId: job.payload.taskId,
+        userId: job.payload.userId,
+        attempts,
+        durationMs: Date.now() - startTime,
+      });
+      return;
+    }
+    case "opml.import.feed": {
+      await runOpmlImportFeedJob(db, job.payload, logger);
+      logger.info("worker.job.opml_import_feed.completed", {
+        streamId: id,
+        taskId: job.payload.taskId,
+        userId: job.payload.userId,
+        url: job.payload.url,
+        attempts,
+        durationMs: Date.now() - startTime,
+      });
+      return;
+    }
   }
-  logger.info("worker.job.feed_refresh.completed", {
-    streamId: id,
-    feedId: job.payload.feedId,
-    userId: job.payload.userId,
-    ok: result.ok,
-    notModified: result.notModified ?? false,
-    itemCount: result.itemCount,
-    insertedCount: result.insertedCount,
-    updatedCount: result.updatedCount,
-    attempts,
-    durationMs,
-  });
 }
 
 async function logWorkerJobError(error: unknown, message: JobMessage | null): Promise<void> {

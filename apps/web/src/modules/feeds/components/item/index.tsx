@@ -4,7 +4,7 @@ import { memo } from "react";
 import { cn } from "@lib/utils";
 import { SourceRow } from "./source-row";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@vols.rss/ui/card";
-import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
+import { TimestampText } from "@modules/inbox/components/timestamp-text";
 import { useTimestamp } from "@hooks/use-timestamp";
 import { Pretext } from "./pretext";
 import { getSectionClassNames, getTypography } from "@modules/feeds/layout";
@@ -145,7 +145,11 @@ export const Item = memo(function Item({
           style={{ fontSize: `${metaFontSizePx}px` }}
         >
           <span className="line-clamp-1 min-w-0 overflow-hidden text-ellipsis tabular-nums">
-            {formatInboxTimestamp(item.publishedAt, timestampDisplay, timestampHourCycle)}
+            <TimestampText
+              value={item.publishedAt}
+              display={timestampDisplay}
+              hourCycle={timestampHourCycle}
+            />
           </span>
           {item.isSaved ? (
             <>

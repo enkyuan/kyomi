@@ -2,8 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState, type RefObject } from "react";
 import { m, useTransform, type MotionValue } from "motion/react";
-import { cn } from "./lib/utils";
-import { fontWeights, springs, THUMB_SIZE } from "./slider-shared";
+import { cn } from "../lib/utils";
+import { fontWeights, springs, THUMB_SIZE } from "./shared";
 
 interface ValueDisplayProps {
   values: number[];
@@ -20,7 +20,7 @@ interface ValueDisplayProps {
   isInteracting: boolean;
 }
 
-interface EditableSliderValueProps {
+interface EditableValueProps {
   index: number;
   value: number;
   editingIndex: number | null;
@@ -38,7 +38,7 @@ interface EditableSliderValueProps {
   onCancelEdit: () => void;
 }
 
-function EditableSliderValue({
+function EditableValue({
   index,
   value,
   editingIndex,
@@ -54,7 +54,7 @@ function EditableSliderValue({
   onStartEdit,
   onCommitEdit,
   onCancelEdit,
-}: EditableSliderValueProps) {
+}: EditableValueProps) {
   if (editingIndex === index) {
     return (
       <span className="inline-grid text-[13px]">
@@ -168,7 +168,7 @@ export function ValueDisplay({
         {label && editingIndex === null && <span className="text-muted-foreground">{label}: </span>}
         {isRange ? (
           <>
-            <EditableSliderValue
+            <EditableValue
               index={0}
               value={values[0]}
               editingIndex={editingIndex}
@@ -186,7 +186,7 @@ export function ValueDisplay({
               onCancelEdit={onCancelEdit}
             />
             <span className="mx-1 text-muted-foreground/50">to</span>
-            <EditableSliderValue
+            <EditableValue
               index={1}
               value={values[1]}
               editingIndex={editingIndex}
@@ -205,7 +205,7 @@ export function ValueDisplay({
             />
           </>
         ) : (
-          <EditableSliderValue
+          <EditableValue
             index={0}
             value={values[0]}
             editingIndex={editingIndex}

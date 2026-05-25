@@ -2,7 +2,7 @@
 
 import { Suspense, useState } from "react";
 import { ArrowUpCircleFill, Chat3Fill, Settings3Fill } from "@mingcute/react";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar-mode-animated-text";
+import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
 import {
   SidebarFooter,
   SidebarMenu,

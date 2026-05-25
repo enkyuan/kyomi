@@ -2,8 +2,8 @@
 
 import type { ReactNode } from "react";
 import { AnimatePresence, LazyMotion, domMax, m, useReducedMotion } from "motion/react";
-import { cn } from "./lib/utils";
-import { useSidebarReaderFocus } from "./sidebar-reader-focus";
+import { cn } from "../lib/utils";
+import { useSidebarReaderFocus } from "./reader-focus";
 
 const ENTER_EASE = [0.32, 0.72, 0, 1] as const;
 const EXIT_EASE = [0.7, 0, 0.84, 0] as const;

@@ -1,5 +1,5 @@
 import { describe, expect, mock, test } from "bun:test";
-import { listMembershipsForUser } from "@modules/users/organizations.service";
+import { listMembershipsForUser } from "@modules/users/organizations/service";
 
 describe("users.organizations.service", () => {
   test("listMembershipsForUser returns joined rows", async () => {

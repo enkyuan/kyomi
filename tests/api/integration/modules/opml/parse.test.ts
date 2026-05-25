@@ -1,27 +1,55 @@
 import { describe, expect, test } from "bun:test";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import { OPML_MAX_OUTLINES } from "@modules/opml/constants";
-import { parseOpmlFeeds } from "@modules/opml/parse";
+import { parseOpmlDocument, parseOpmlFeeds } from "@modules/opml/parse";
 
 const sampleOpml = `<?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">
-  <head><title>Test</title></head>
+  <head>
+    <title>Test Imports</title>
+    <ownerName>Feed Curator</ownerName>
+  </head>
   <body>
-    <outline text="Folder">
-      <outline text="A" xmlUrl="https://a.example/feed"/>
-      <outline text="B" xmlUrl="HTTPS://b.example/rss"/>
+    <outline text="News">
+      <outline text="Tech">
+        <outline text="A" xmlUrl="https://a.example/feed"/>
+        <outline text="B" xmlUrl="HTTPS://b.example/rss"/>
+      </outline>
     </outline>
     <outline xmlUrl="https://c.example/atom"/>
   </body>
 </opml>`;
 
-describe("parseOpmlFeeds", () => {
+describe("parseOpmlDocument", () => {
   test("collects nested xmlUrl values and dedupes case-insensitively", () => {
     const urls = parseOpmlFeeds(sampleOpml);
     expect(urls).toEqual([
       "https://a.example/feed",
       "HTTPS://b.example/rss",
       "https://c.example/atom",
+    ]);
+  });
+
+  test("extracts metadata and assigns feeds to the innermost folder", () => {
+    const parsed = parseOpmlDocument(sampleOpml, "Unsorted");
+    expect(parsed.opmlTitle).toBe("Test Imports");
+    expect(parsed.opmlAuthor).toBe("Feed Curator");
+    expect(parsed.feeds).toEqual([
+      {
+        xmlUrl: "https://a.example/feed",
+        title: "A",
+        folderName: "Tech",
+      },
+      {
+        xmlUrl: "HTTPS://b.example/rss",
+        title: "B",
+        folderName: "Tech",
+      },
+      {
+        xmlUrl: "https://c.example/atom",
+        title: null,
+        folderName: "Unsorted",
+      },
     ]);
   });
 
@@ -49,6 +77,17 @@ describe("parseOpmlFeeds", () => {
       parseOpmlFeeds("<opml></opml>");
     } catch (e) {
       expect((e as AppError).code).toBe("OPML_INVALID");
+    }
+  });
+
+  test("rejects OPML with doctype/entity declarations", () => {
+    const xml = `<!DOCTYPE opml [<!ENTITY xxe SYSTEM "file:///etc/passwd">]>
+      <opml><body><outline xmlUrl="https://a.example/feed"/></body></opml>`;
+    expect(() => parseOpmlFeeds(xml)).toThrow(AppError);
+    try {
+      parseOpmlFeeds(xml);
+    } catch (e) {
+      expect((e as AppError).code).toBe("OPML_UNSAFE_XML");
     }
   });
 
