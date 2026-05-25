@@ -7,8 +7,13 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useAuth } from "@integrations/better-auth/auth-provider";
+import { useAuth } from "@integrations/better-auth/provider";
 import { listFollowedFeeds, type FollowedFeed, updateFeedSubscription } from "../api";
+import {
+  applyPinnedFeedState,
+  getFollowedFeedsSnapshot,
+  restoreFeedCacheSnapshot,
+} from "../queries/cache";
 
 const FOLLOWED_FEEDS_QUERY_KEY = ["feeds", "followed"] as const;
 const PINNED_FEED_IDS_STORAGE_KEY = "vols.rss:pinned-feed-ids";
@@ -97,18 +102,6 @@ function logPinnedMigration(event: "attempted" | "succeeded" | "failed" | "skipp
   console.info("[pinned-feed-migration]", { event, ...context });
 }
 
-function applyPinnedState(current: FollowedFeed[] | undefined, feedId: string, pinned: boolean) {
-  if (!current) {
-    return current;
-  }
-
-  return current.map((feed) =>
-    feed.feedId === feedId
-      ? { ...feed, isPinned: pinned, pinnedAt: pinned ? new Date().toISOString() : null }
-      : feed,
-  );
-}
-
 function sortPinnedFeeds(feeds: FollowedFeed[]) {
   return feeds
     .filter((feed) => feed.isPinned)
@@ -133,16 +126,12 @@ export function usePinnedFeedIds() {
       updateFeedSubscription({ data: { feedId, isPinned: pinned } }),
     onMutate: async ({ feedId, pinned }) => {
       await queryClient.cancelQueries({ queryKey: FOLLOWED_FEEDS_QUERY_KEY });
-      const previous = queryClient.getQueryData<FollowedFeed[]>(FOLLOWED_FEEDS_QUERY_KEY);
-      queryClient.setQueryData<FollowedFeed[] | undefined>(FOLLOWED_FEEDS_QUERY_KEY, (current) =>
-        applyPinnedState(current, feedId, pinned),
-      );
-      return { previous };
+      const snapshot = getFollowedFeedsSnapshot(queryClient);
+      applyPinnedFeedState(queryClient, feedId, pinned);
+      return { snapshot };
     },
     onError: (_error, _variables, context) => {
-      if (context?.previous) {
-        queryClient.setQueryData(FOLLOWED_FEEDS_QUERY_KEY, context.previous);
-      }
+      restoreFeedCacheSnapshot(queryClient, context?.snapshot);
     },
     onSettled: () => {
       void queryClient.invalidateQueries({ queryKey: FOLLOWED_FEEDS_QUERY_KEY });

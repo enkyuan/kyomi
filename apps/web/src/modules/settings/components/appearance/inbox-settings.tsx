@@ -5,7 +5,7 @@ import { Group, GroupSeparator } from "@vols.rss/ui/group";
 import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vols.rss/ui/select";
 import { SliderComfortable } from "@vols.rss/ui/slider";
 import { Switch } from "@vols.rss/ui/switch";
-import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-preferences";
+import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
 import { SettingHeading } from "./shared";
 
 type InboxAppearanceSettingsProps = {

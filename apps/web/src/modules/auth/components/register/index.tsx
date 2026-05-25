@@ -2,9 +2,11 @@
 
 import { useEffect } from "react";
 import { useForm } from "@tanstack/react-form";
+import { useQueryClient } from "@tanstack/react-query";
 import { Link, useRouter } from "@tanstack/react-router";
-import { authClient } from "@lib/auth-client";
-import { useAuth } from "@integrations/better-auth/auth-provider";
+import { authClient } from "@lib/auth/client";
+import { prefetchInboxFlow } from "@modules/inbox";
+import { useAuth } from "@integrations/better-auth/provider";
 import { Button } from "@vols.rss/ui/button";
 import {
   Card,
@@ -23,17 +25,18 @@ import { toastManager } from "@vols.rss/ui/toast";
 import {
   getFieldErrorMessage,
   registerDefaultValues,
-  registerFormSchema,
+  registerFormValidator,
 } from "@modules/auth/schema";
 
 export function Register() {
   const router = useRouter();
+  const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
   const form = useForm({
     defaultValues: registerDefaultValues,
     validators: {
-      onChange: registerFormSchema,
-      onSubmit: registerFormSchema,
+      onChange: registerFormValidator,
+      onSubmit: registerFormValidator,
     },
     onSubmit: async ({ value }) => {
       await toastManager.promise(
@@ -49,8 +52,8 @@ export function Register() {
             throw new Error(result.error.message?.trim() || "An error occurred during sign up");
           }
 
-          await router.invalidate();
-          await router.navigate({ to: "/inbox" });
+          await Promise.all([router.invalidate(), prefetchInboxFlow(router, queryClient)]);
+          await router.navigate({ to: "/inbox", search: {} });
         })(),
         {
           error: (error) => ({
@@ -77,9 +80,11 @@ export function Register() {
 
   useEffect(() => {
     if (!isPending && isAuthenticated) {
-      void router.navigate({ to: "/inbox" });
+      void prefetchInboxFlow(router, queryClient).finally(() => {
+        void router.navigate({ to: "/inbox", search: {} });
+      });
     }
-  }, [isAuthenticated, isPending, router]);
+  }, [isAuthenticated, isPending, queryClient, router]);
 
   if (isPending) {
     return (

@@ -53,6 +53,14 @@ export function useViewportMetrics(
     });
   }, []);
 
+  const cancelScheduledUpdate = useCallback(() => {
+    const rafId = rafIdRef.current;
+    rafIdRef.current = null;
+    if (rafId !== null) {
+      window.cancelAnimationFrame(rafId);
+    }
+  }, []);
+
   useEffect(() => {
     const viewport = viewportRef.current;
     if (!viewport) {
@@ -68,17 +76,14 @@ export function useViewportMetrics(
     observer.observe(viewport);
 
     return () => {
-      const rafId = rafIdRef.current;
-      if (rafId !== null) {
-        window.cancelAnimationFrame(rafId);
-        rafIdRef.current = null;
-      }
+      cancelScheduledUpdate();
       observer.disconnect();
     };
-  }, [viewportRef, scheduleUpdate]);
+  }, [cancelScheduledUpdate, viewportRef, scheduleUpdate]);
 
   useEffect(() => {
     scheduleUpdate();
+    // oxlint-disable-next-line
   }, [scheduleUpdate, ...dependencies]);
 
   return metrics;

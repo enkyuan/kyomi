@@ -1,6 +1,6 @@
 import type { ReaderContent, ReaderLayoutMode, ReaderPreferences } from "../core";
 import { normalizeSafeHttpUrl } from "../core";
-import { readerMarkdownToHtml } from "../shared/reader-markdown-html";
+import { readerMarkdownToHtmlWithKatex } from "../shared/reader-markdown-html-katex";
 import { getReaderWebViewBridgeScript } from "./bridge-script";
 import { stripDangerousMarkupForWebViewFragment } from "./strip-dangerous-html";
 import { getReaderWebViewStyles } from "./styles";
@@ -29,7 +29,7 @@ function renderReaderBody(reader: ReaderContent): string {
     return reader.contentHtml ?? "";
   }
   if (reader.bodyKind === "markdown") {
-    return readerMarkdownToHtml(reader.contentMarkdown ?? "", {
+    return readerMarkdownToHtmlWithKatex(reader.contentMarkdown ?? "", {
       baseUrl: reader.contentBaseUrl,
       openLinksInNewTab: true,
     });

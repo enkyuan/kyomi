@@ -20,7 +20,7 @@ export function ScrollArea({
         className={cn(
           "h-full rounded-[inherit] outline-none transition-shadows focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background data-has-overflow-y:overscroll-y-contain data-has-overflow-x:overscroll-x-contain",
           scrollFade &&
-            "mask-t-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-y-start)))] mask-b-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-y-end)))] mask-l-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-x-start)))] mask-r-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-x-end)))] [--fade-size:1.5rem]",
+            "data-has-overflow-y:scroll-mask-y-from-[1.5rem] data-has-overflow-x:scroll-mask-x-from-[1.5rem]",
           scrollbarGutter && "data-has-overflow-y:pe-2.5 data-has-overflow-x:pb-2.5",
         )}
         data-slot="scroll-area-viewport"
@@ -41,7 +41,11 @@ export function ScrollBar({
 }: ScrollAreaPrimitive.Scrollbar.Props): React.ReactElement {
   return (
     <ScrollAreaPrimitive.Scrollbar
-      className={cn("m-0.5 flex data-[orientation=horizontal]:flex-col", className)}
+      className={cn(
+        "m-0.5 hidden data-[orientation=horizontal]:flex-col",
+        orientation === "vertical" ? "data-has-overflow-y:flex" : "data-has-overflow-x:flex",
+        className,
+      )}
       data-slot="scroll-area-scrollbar"
       orientation={orientation}
       {...props}

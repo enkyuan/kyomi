@@ -7,6 +7,18 @@
       "output": "static"
     },
     "name": "mobile",
-    "slug": "mobile"
+    "slug": "mobile",
+    "experiments": {
+      "reactCompiler": true
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "android": {
+      "package": "com.anonymous.mobile"
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.mobile"
+    }
   }
 }

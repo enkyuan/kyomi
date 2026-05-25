@@ -2,13 +2,22 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { listFeedRefreshStatuses, refreshBatchFeeds } from "@modules/feeds/api";
+import {
+  listFeedRefreshStatuses,
+  refreshBatchFeeds,
+  type FeedRefreshStatusRow,
+} from "@modules/feeds/api";
+import {
+  applyBatchRefreshQueued,
+  getFollowedFeedsSnapshot,
+  restoreFeedCacheSnapshot,
+} from "@modules/feeds/queries/cache";
 import { useFeedRefresh } from "@modules/feeds/hooks/use-feed-refresh";
 import {
   BATCH_REFRESH_GRACE_MS,
   BATCH_REFRESH_POLL_MS,
   hasActiveRefreshStatus,
-} from "src/modules/inbox/utils/refresh-formatting";
+} from "@modules/inbox/utils/refresh-formatting";
 import {
   feedRefreshStatusQueryKey,
   invalidateFeedAndInboxQueries,
@@ -29,6 +38,17 @@ export function Update(props: UpdateProps) {
 function SingleFeedUpdate({ feedId }: { feedId: string }) {
   const { refresh, isRefreshing, refreshStatus, error, lastRefreshCompletedAt } =
     useFeedRefresh(feedId);
+
+  // Auto-refresh feed every 10 minutes
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (!isRefreshing) {
+        refresh();
+      }
+    }, 600000);
+
+    return () => clearInterval(intervalId);
+  }, [refresh, isRefreshing]);
 
   const title =
     refreshStatus === "failed"
@@ -97,6 +117,27 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
 
   const mutation = useMutation({
     mutationFn: async () => refreshBatchFeeds({ data: { folderId } }),
+    onMutate: async () => {
+      await Promise.all([
+        queryClient.cancelQueries({ queryKey: feedRefreshStatusQueryKey(folderId) }),
+        queryClient.cancelQueries({ queryKey: ["feeds", "followed"] }),
+      ]);
+      const previousStatuses = queryClient.getQueryData<FeedRefreshStatusRow[]>(
+        feedRefreshStatusQueryKey(folderId),
+      );
+      const followedFeedsSnapshot = getFollowedFeedsSnapshot(queryClient);
+      pollStartRef.current = Date.now();
+      wasRefreshingRef.current = false;
+      isWatchingRef.current = true;
+      applyBatchRefreshQueued(queryClient, folderId);
+      return { followedFeedsSnapshot, previousStatuses };
+    },
+    onError: (_error, _variables, context) => {
+      if (context?.previousStatuses) {
+        queryClient.setQueryData(feedRefreshStatusQueryKey(folderId), context.previousStatuses);
+      }
+      restoreFeedCacheSnapshot(queryClient, context?.followedFeedsSnapshot);
+    },
     onSuccess: (result) => {
       void queryClient.invalidateQueries({ queryKey: feedRefreshStatusQueryKey(folderId) });
       invalidateRefreshQueries();
@@ -115,6 +156,17 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
       }
     },
   });
+
+  // Auto-refresh all feeds in this scope every 10 minutes
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (!mutation.isPending) {
+        mutation.mutate();
+      }
+    }, 600000);
+
+    return () => clearInterval(intervalId);
+  }, [mutation]);
 
   useEffect(() => {
     if (!isWatchingRef.current) {

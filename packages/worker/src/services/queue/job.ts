@@ -13,7 +13,28 @@ export type FeedRefreshJob = {
   };
 };
 
-export type Job = FeedRefreshJob;
+export type OpmlImportJob = {
+  type: "opml.import";
+  payload: {
+    taskId: string;
+    userId: string;
+    xml: string;
+    filename: string;
+  };
+};
+
+export type OpmlImportFeedJob = {
+  type: "opml.import.feed";
+  payload: {
+    taskId: string;
+    userId: string;
+    url: string;
+    title?: string;
+    folderId?: string | null;
+  };
+};
+
+export type Job = FeedRefreshJob | OpmlImportJob | OpmlImportFeedJob;
 
 export type JobMessage = {
   id: string;
@@ -51,17 +72,8 @@ export function toRedisStreamFieldList(
   return entries as [string, string, ...string[]];
 }
 
-export function parseJob(fields: Record<string, string>): Job {
-  if (fields.type !== "feed.refresh") {
-    throw new Error(`Unsupported job type: ${fields.type ?? "unknown"}`);
-  }
-
-  const parsedPayload = JSON.parse(fields.payload ?? "null") as Record<string, unknown> | null;
-  if (
-    !parsedPayload ||
-    typeof parsedPayload.feedId !== "string" ||
-    typeof parsedPayload.userId !== "string"
-  ) {
+function parseFeedRefreshJob(parsedPayload: Record<string, unknown>): FeedRefreshJob {
+  if (typeof parsedPayload.feedId !== "string" || typeof parsedPayload.userId !== "string") {
     throw new Error("Invalid feed.refresh payload");
   }
 
@@ -73,6 +85,71 @@ export function parseJob(fields: Record<string, string>): Job {
       reason: typeof parsedPayload.reason === "string" ? parsedPayload.reason : undefined,
     },
   };
+}
+
+function parseOpmlImportJob(parsedPayload: Record<string, unknown>): OpmlImportJob {
+  if (
+    typeof parsedPayload.taskId !== "string" ||
+    typeof parsedPayload.userId !== "string" ||
+    typeof parsedPayload.xml !== "string" ||
+    typeof parsedPayload.filename !== "string"
+  ) {
+    throw new Error("Invalid opml.import payload");
+  }
+
+  return {
+    type: "opml.import",
+    payload: {
+      taskId: parsedPayload.taskId,
+      userId: parsedPayload.userId,
+      xml: parsedPayload.xml,
+      filename: parsedPayload.filename,
+    },
+  };
+}
+
+function parseOpmlImportFeedJob(parsedPayload: Record<string, unknown>): OpmlImportFeedJob {
+  if (
+    typeof parsedPayload.taskId !== "string" ||
+    typeof parsedPayload.userId !== "string" ||
+    typeof parsedPayload.url !== "string"
+  ) {
+    throw new Error("Invalid opml.import.feed payload");
+  }
+
+  return {
+    type: "opml.import.feed",
+    payload: {
+      taskId: parsedPayload.taskId,
+      userId: parsedPayload.userId,
+      url: parsedPayload.url,
+      title: typeof parsedPayload.title === "string" ? parsedPayload.title : undefined,
+      folderId:
+        typeof parsedPayload.folderId === "string"
+          ? parsedPayload.folderId
+          : parsedPayload.folderId === null
+            ? null
+            : undefined,
+    },
+  };
+}
+
+export function parseJob(fields: Record<string, string>): Job {
+  const parsedPayload = JSON.parse(fields.payload ?? "null") as Record<string, unknown> | null;
+  if (!parsedPayload) {
+    throw new Error(`Invalid ${fields.type ?? "unknown"} payload`);
+  }
+
+  switch (fields.type) {
+    case "feed.refresh":
+      return parseFeedRefreshJob(parsedPayload);
+    case "opml.import":
+      return parseOpmlImportJob(parsedPayload);
+    case "opml.import.feed":
+      return parseOpmlImportFeedJob(parsedPayload);
+    default:
+      throw new Error(`Unsupported job type: ${fields.type ?? "unknown"}`);
+  }
 }
 
 export function parseJobMessageFields(id: string, fields: Record<string, string>): JobMessage {
@@ -218,23 +295,10 @@ function resolveConsumeJobsConfig(options: ConsumeJobsOptions): ResolvedConsumeJ
     count: options.count ?? 1,
     maxAttempts: options.maxAttempts ?? 3,
     retryDelayMs: options.retryDelayMs ?? 0,
-    pendingMinIdleMs: options.pendingMinIdleMs ?? 30_000,
+    pendingMinIdleMs: options.pendingMinIdleMs ?? 10_000,
     deadLetterStreamKey: options.deadLetterStreamKey ?? JOBS_DEAD_LETTER_STREAM_KEY,
     group: options.group ?? JOBS_CONSUMER_GROUP,
     streamKey: options.streamKey ?? JOBS_STREAM_KEY,
-  };
-}
-
-function toProcessMessageOptions(config: ResolvedConsumeJobsConfig): ProcessMessageOptions {
-  return {
-    streamKey: config.streamKey,
-    group: config.group,
-    deadLetterStreamKey: config.deadLetterStreamKey,
-    maxAttempts: config.maxAttempts,
-    retryDelayMs: config.retryDelayMs,
-    signal: config.signal,
-    onJob: config.onJob,
-    onError: config.onError,
   };
 }
 
@@ -242,68 +306,44 @@ async function retryOrDeadLetterJob(
   redis: Redis,
   options: {
     streamKey: string;
-    group: string;
     deadLetterStreamKey: string;
+    group: string;
     message: JobMessage;
-    error: unknown;
     maxAttempts: number;
     retryDelayMs: number;
-    signal?: AbortSignal;
   },
 ): Promise<void> {
-  const {
-    streamKey,
-    group,
-    deadLetterStreamKey,
-    message,
-    error,
-    maxAttempts,
-    retryDelayMs,
-    signal,
-  } = options;
-  const nextAttempts = message.attempts + 1;
-  const errorMessage = error instanceof Error ? error.message : String(error);
-
-  if (nextAttempts <= maxAttempts) {
-    if (retryDelayMs > 0 && !signal?.aborted) {
-      await new Promise<void>((resolve) => {
-        const timer = setTimeout(resolve, retryDelayMs);
-        signal?.addEventListener(
-          "abort",
-          () => {
-            clearTimeout(timer);
-            resolve();
-          },
-          { once: true },
-        );
-      });
-    }
+  if (options.message.attempts + 1 < options.maxAttempts) {
     await xaddAndAck(redis, {
-      destinationStream: streamKey,
-      destinationFields: fieldsForJob(message.job, {
-        attempts: nextAttempts,
-        lastError: errorMessage,
+      destinationStream: options.streamKey,
+      destinationFields: fieldsForJob(options.message.job, {
+        attempts: options.message.attempts + 1,
+        lastError: options.message.rawFields.last_error,
       }),
-      sourceStream: streamKey,
-      group,
-      id: message.id,
+      sourceStream: options.streamKey,
+      group: options.group,
+      id: options.message.id,
     });
-  } else {
-    const deadLetterFields = {
-      ...message.rawFields,
-      attempts: String(nextAttempts),
-      error: errorMessage,
-      failed_at: new Date().toISOString(),
-      original_stream_id: message.id,
-    };
-    await xaddAndAck(redis, {
-      destinationStream: deadLetterStreamKey,
-      destinationFields: deadLetterFields,
-      sourceStream: streamKey,
-      group,
-      id: message.id,
-    });
+    if (options.retryDelayMs > 0) {
+      await new Promise((resolve) => setTimeout(resolve, options.retryDelayMs));
+    }
+    return;
   }
+
+  await xaddAndAck(redis, {
+    destinationStream: options.deadLetterStreamKey,
+    destinationFields: {
+      ...fieldsForJob(options.message.job, {
+        attempts: options.message.attempts + 1,
+        lastError: options.message.rawFields.last_error,
+      }),
+      failed_at: new Date().toISOString(),
+      original_stream_id: options.message.id,
+    },
+    sourceStream: options.streamKey,
+    group: options.group,
+    id: options.message.id,
+  });
 }
 
 async function claimPendingJobs(
@@ -312,7 +352,7 @@ async function claimPendingJobs(
     streamKey: string;
     group: string;
     consumer: string;
-    pendingMinIdleMs: number;
+    minIdleMs: number;
     count: number;
   },
 ): Promise<[string, string[]][]> {
@@ -321,31 +361,25 @@ async function claimPendingJobs(
     options.streamKey,
     options.group,
     options.consumer,
-    options.pendingMinIdleMs,
+    String(options.minIdleMs),
     "0-0",
     "COUNT",
-    options.count,
+    String(options.count),
   )) as [string, [string, string[]][]];
 
-  return Array.isArray(response?.[1]) ? response[1] : [];
+  return response[1] ?? [];
 }
 
 async function claimPendingMessagesSafe(
   redis: Redis,
   config: ResolvedConsumeJobsConfig,
-): Promise<[string, string[]][] | null> {
+): Promise<[string, string[]][]> {
   return claimPendingJobs(redis, {
     streamKey: config.streamKey,
     group: config.group,
     consumer: config.consumer,
-    pendingMinIdleMs: config.pendingMinIdleMs,
+    minIdleMs: config.pendingMinIdleMs,
     count: config.count,
-  }).catch(async (error) => {
-    if (config.signal?.aborted || isRedisConnectionClosedError(error)) {
-      return null;
-    }
-    await config.onError?.(error, null);
-    return [];
   });
 }
 
@@ -356,42 +390,46 @@ async function processMessage(
   fields: string[],
 ): Promise<void> {
   let message: JobMessage | null = null;
+
   try {
     message = parseJobMessageFields(id, streamFieldsToRecord(fields));
     await options.onJob(message);
     await redis.xack(options.streamKey, options.group, id);
   } catch (error) {
+    await options.onError?.(error, message);
+
     if (message) {
       await retryOrDeadLetterJob(redis, {
         streamKey: options.streamKey,
-        group: options.group,
         deadLetterStreamKey: options.deadLetterStreamKey,
+        group: options.group,
         message,
-        error,
         maxAttempts: options.maxAttempts,
         retryDelayMs: options.retryDelayMs,
-        signal: options.signal,
       });
-    } else {
-      await xaddAndAck(redis, {
-        destinationStream: options.deadLetterStreamKey,
-        destinationFields: deadLetterFieldsFromRawInput(fields, id, error),
-        sourceStream: options.streamKey,
-        group: options.group,
-        id,
-      });
+      return;
     }
-    await options.onError?.(error, message);
+
+    await xaddAndAck(redis, {
+      destinationStream: options.deadLetterStreamKey,
+      destinationFields: deadLetterFieldsFromRawInput(fields, id, error),
+      sourceStream: options.streamKey,
+      group: options.group,
+      id,
+    });
   }
 }
 
 async function processJobMessages(
   redis: Redis,
-  processOptions: ProcessMessageOptions,
+  options: ProcessMessageOptions,
   messages: [string, string[]][],
 ): Promise<void> {
   for (const [id, fields] of messages) {
-    await processMessage(redis, processOptions, id, fields);
+    if (options.signal?.aborted) {
+      return;
+    }
+    await processMessage(redis, options, id, fields);
   }
 }
 
@@ -399,10 +437,8 @@ async function readNewGroupMessages(
   redis: Redis,
   config: ResolvedConsumeJobsConfig,
 ): Promise<ReadGroupMessagesResult> {
-  let response: [[string, [string, string[]][]]] | null;
-
   try {
-    response = (await redis.xreadgroup(
+    const response = (await redis.xreadgroup(
       "GROUP",
       config.group,
       config.consumer,
@@ -414,38 +450,43 @@ async function readNewGroupMessages(
       config.streamKey,
       ">",
     )) as [[string, [string, string[]][]]] | null;
-  } catch (error) {
-    if (config.signal?.aborted || isRedisConnectionClosedError(error)) {
+
+    if (config.signal?.aborted) {
       return { kind: "break" };
     }
-    await config.onError?.(error, null);
-    return { kind: "continue" };
-  }
+    if (!response || !response[0]?.[1]?.length) {
+      return { kind: "continue" };
+    }
 
-  if (!response) {
-    return { kind: "continue" };
+    return {
+      kind: "messages",
+      messages: response[0][1],
+    };
+  } catch (error) {
+    if (config.signal?.aborted && isRedisConnectionClosedError(error)) {
+      return { kind: "break" };
+    }
+    throw error;
   }
-
-  const [, messages] = response[0] ?? [];
-  if (!messages) {
-    return { kind: "continue" };
-  }
-
-  return { kind: "messages", messages };
 }
 
 export async function consumeJobs(redis: Redis, options: ConsumeJobsOptions): Promise<void> {
   const config = resolveConsumeJobsConfig(options);
-  const processOptions = toProcessMessageOptions(config);
-
   await ensureConsumerGroup(redis, config.group, config.streamKey);
+
+  const processOptions: ProcessMessageOptions = {
+    streamKey: config.streamKey,
+    group: config.group,
+    deadLetterStreamKey: config.deadLetterStreamKey,
+    maxAttempts: config.maxAttempts,
+    retryDelayMs: config.retryDelayMs,
+    signal: config.signal,
+    onJob: config.onJob,
+    onError: config.onError,
+  };
 
   while (!config.signal?.aborted) {
     const pendingMessages = await claimPendingMessagesSafe(redis, config);
-    if (pendingMessages === null) {
-      break;
-    }
-
     if (pendingMessages.length > 0) {
       await processJobMessages(redis, processOptions, pendingMessages);
       continue;

@@ -4,7 +4,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { useTimezone } from "@hooks/use-timezone";
 import { useInboxScope } from "@hooks/use-inbox-scope";
-import { prefetchInboxFlow } from "@modules/inbox/lib/prefetch";
+import { prefetchInboxFlow } from "@modules/inbox/lib/navigation";
 import type { SidebarInboxCounts } from "../lib/navigation";
 import { sidebarInboxCountsQueryOptions } from "../queries/options";
 

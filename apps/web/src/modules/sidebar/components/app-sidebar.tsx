@@ -1,9 +1,9 @@
 "use client";
 
 import type { CSSProperties } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { cn } from "@lib/utils";
-import { SidebarReaderFocusProvider } from "@vols.rss/ui/sidebar-reader-focus";
-import { SettingsDialog } from "@modules/settings/components/dialog";
+import { SidebarReaderFocusProvider } from "@vols.rss/ui/sidebar/reader-focus";
 import { Sidebar, SidebarContent } from "@vols.rss/ui/sidebar";
 import { APP_SIDEBAR_WIDTH } from "../lib/constants";
 import { useAppSidebar } from "../hooks/use-app-sidebar";
@@ -11,6 +11,12 @@ import { FooterActions } from "./footer-actions";
 import { Header } from "./header";
 import { InboxNav } from "./inbox-nav";
 import { PinnedSection } from "./pinned-section";
+import { lazyNamed } from "@lib/lazy-named";
+
+const SettingsDialog = lazyNamed(
+  () => import("@modules/settings/components/dialog"),
+  "SettingsDialog",
+);
 
 export function AppSidebar({
   className,
@@ -22,6 +28,14 @@ export function AppSidebar({
   readerFocusSidebar?: boolean;
 }) {
   const { counts, platform, settingsOpen, setSettingsOpen } = useAppSidebar();
+  const [settingsDialogLoaded, setSettingsDialogLoaded] = useState(false);
+
+  useEffect(() => {
+    if (settingsOpen) {
+      setSettingsDialogLoaded(true);
+      void SettingsDialog.preload();
+    }
+  }, [settingsOpen]);
 
   return (
     <SidebarReaderFocusProvider value={readerFocusSidebar}>
@@ -44,10 +58,16 @@ export function AppSidebar({
 
         <FooterActions
           onOpenSettings={() => {
+            setSettingsDialogLoaded(true);
+            void SettingsDialog.preload();
             setSettingsOpen(true);
           }}
         />
-        <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
+        <Suspense fallback={null}>
+          {settingsDialogLoaded ? (
+            <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
+          ) : null}
+        </Suspense>
       </Sidebar>
     </SidebarReaderFocusProvider>
   );

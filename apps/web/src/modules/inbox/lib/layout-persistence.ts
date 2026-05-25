@@ -1,7 +1,7 @@
-import type { ArticleOpenBehaviorDto } from "src/lib/schemas";
+import type { ArticleOpenBehaviorDto } from "@lib/schemas";
 
-const INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME = "cronos_inbox_article_open_behavior";
-const INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME = "cronos_inbox_split_pane_percent";
+export const INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME = "cronos_inbox_article_open_behavior";
+export const INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME = "cronos_inbox_split_pane_percent";
 const INBOX_LAYOUT_COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
 
 function parseCookieHeader(cookieHeader?: string | null) {

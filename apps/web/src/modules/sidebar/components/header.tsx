@@ -1,43 +1,19 @@
 "use client";
 
-import {
-  Folder2Fill,
-  FolderForbidFill,
-  FolderInfoFill,
-  FolderWarningFill,
-  NewsFill,
-  SelectorVerticalLine,
-} from "@mingcute/react";
-import type { useNavigate } from "@tanstack/react-router";
-import { Badge } from "@vols.rss/ui/badge";
-import {
-  Command,
-  CommandDialog,
-  CommandDialogPopup,
-  CommandDialogTrigger,
-  CommandEmpty,
-  CommandFooter,
-  CommandGroup,
-  CommandGroupLabel,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandPanel,
-  CommandSeparator,
-  CommandShortcut,
-} from "@vols.rss/ui/command";
+import { Folder2Fill, SelectorVerticalLine } from "@mingcute/react";
+import { Suspense, useEffect, useState } from "react";
 import {
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@vols.rss/ui/sidebar";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar-mode-animated-text";
+import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
 import { cn } from "@lib/utils";
-import { Dialog as CreateFolderDialog } from "@modules/folders/components/create/dialog";
-import { Dialog as ManageFeedsDialog } from "@modules/feeds/components/manage/dialog";
-import { SourcesDialog } from "@modules/feeds/components/follow/sources-dialog";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@vols.rss/ui/input-group";
+import { Kbd, KbdGroup } from "@vols.rss/ui/kbd";
 import { FeedFavicon } from "./feed-favicon";
+import { lazyNamed } from "@lib/lazy-named";
 import {
   SIDEBAR_LABEL_FONT,
   SIDEBAR_LABEL_LINE_HEIGHT,
@@ -46,10 +22,10 @@ import {
   WORKSPACE_SCOPE_LINE_HEIGHT,
   WORKSPACE_SCOPE_LINE_HEIGHT_READER_FOCUS,
 } from "../lib/constants";
-import { navigateToInbox, type WorkspaceInboxCommandItem } from "../lib/navigation";
 import type { PlatformState } from "@hooks/use-platform";
+import { isPlatformModifierShortcut } from "@hooks/use-platform";
 import { usePretext } from "@hooks/use-pretext";
-import { useWorkspaceHeader } from "../hooks/use-workspace-header";
+import { useHeader } from "../hooks/use-header";
 
 function PretextLabel({
   className,
@@ -71,189 +47,14 @@ function PretextLabel({
   );
 }
 
-type WorkspaceHeaderCommandContentProps = {
-  feedItems: Array<{
-    faviconUrl: string | null;
-    feedId: string;
-    folderName: string | null;
-    link: string | null;
-    title: string;
-    url: string;
-  }>;
-  folderItems: Array<{ id: string; name: string }>;
-  followedFeedsQuery: { isError: boolean; isLoading: boolean };
-  foldersQuery: { isError: boolean; isLoading: boolean };
-  inboxItems: WorkspaceInboxCommandItem[];
-  navigate: ReturnType<typeof useNavigate>;
-  onClose: () => void;
-  onCreateFolder: () => void;
-  onManageFeeds: () => void;
-  scopedFeedId?: string;
-  scopedFolderId?: string;
-};
-
-function WorkspaceHeaderCommandContent({
-  feedItems,
-  folderItems,
-  followedFeedsQuery,
-  foldersQuery,
-  inboxItems,
-  navigate,
-  onClose,
-  onCreateFolder,
-  onManageFeeds,
-  scopedFeedId,
-  scopedFolderId,
-}: WorkspaceHeaderCommandContentProps) {
-  return (
-    <CommandDialogPopup>
-      <Command>
-        <CommandInput placeholder="Switch feeds…" />
-        <CommandPanel>
-          <CommandList>
-            <CommandEmpty>No matching folders, feeds, or actions.</CommandEmpty>
-            <CommandGroup>
-              <CommandGroupLabel>Inbox</CommandGroupLabel>
-              {inboxItems.map((item) => (
-                <CommandItem
-                  key={item.label}
-                  value={item.label}
-                  onClick={() => {
-                    void item.action();
-                    onClose();
-                  }}
-                >
-                  <item.icon className="me-2 size-4" />
-                  <span>{item.label}</span>
-                  <CommandShortcut>{item.shortcut}</CommandShortcut>
-                </CommandItem>
-              ))}
-            </CommandGroup>
-            <CommandSeparator />
-            <CommandGroup>
-              <CommandGroupLabel>Folders</CommandGroupLabel>
-              {foldersQuery.isLoading ? (
-                <CommandItem disabled value="loading-folders">
-                  <FolderInfoFill className="me-2 size-4" />
-                  <span>Loading folders…</span>
-                </CommandItem>
-              ) : null}
-              {foldersQuery.isError ? (
-                <CommandItem disabled value="folders-error">
-                  <FolderWarningFill className="me-2 size-4" />
-                  <span>Unable to load folders</span>
-                </CommandItem>
-              ) : null}
-              {!foldersQuery.isLoading && !foldersQuery.isError && folderItems.length === 0 ? (
-                <CommandItem disabled value="no-folders">
-                  <FolderForbidFill className="me-2 size-4" />
-                  <span>No folders yet</span>
-                </CommandItem>
-              ) : null}
-              {folderItems.map((folder) => (
-                <CommandItem
-                  key={folder.id}
-                  value={`${folder.name} folder`}
-                  className={cn(
-                    scopedFolderId === folder.id && "bg-accent/72 text-accent-foreground",
-                  )}
-                  onClick={() => {
-                    void navigateToInbox(navigate, "today", undefined, folder.id);
-                    onClose();
-                  }}
-                >
-                  <Folder2Fill className="me-2 size-4" />
-                  <span>{folder.name}</span>
-                  {scopedFolderId === folder.id ? (
-                    <Badge className="ms-auto" size="sm" variant="secondary">
-                      Current
-                    </Badge>
-                  ) : null}
-                </CommandItem>
-              ))}
-            </CommandGroup>
-            <CommandSeparator />
-            <CommandGroup>
-              <CommandGroupLabel>Feeds</CommandGroupLabel>
-              {followedFeedsQuery.isLoading ? (
-                <CommandItem disabled value="loading-feeds">
-                  <NewsFill className="me-2 size-4" />
-                  <span>Loading feeds…</span>
-                </CommandItem>
-              ) : null}
-              {followedFeedsQuery.isError ? (
-                <CommandItem disabled value="feeds-error">
-                  <NewsFill className="me-2 size-4" />
-                  <span>Unable to load feeds</span>
-                </CommandItem>
-              ) : null}
-              {!followedFeedsQuery.isLoading &&
-              !followedFeedsQuery.isError &&
-              feedItems.length === 0 ? (
-                <CommandItem disabled value="no-feeds">
-                  <NewsFill className="me-2 size-4" />
-                  <span>No followed feeds</span>
-                </CommandItem>
-              ) : null}
-              {feedItems.map((item) => (
-                <CommandItem
-                  key={item.feedId}
-                  value={`${item.title} ${item.url} ${item.folderName ?? ""}`}
-                  className={cn(
-                    scopedFeedId === item.feedId && "bg-accent/72 text-accent-foreground",
-                  )}
-                  onClick={() => {
-                    void navigateToInbox(navigate, "inbox", item.feedId);
-                    onClose();
-                  }}
-                >
-                  <FeedFavicon
-                    className="ms-0.5 me-2 size-4 shrink-0 rounded-sm"
-                    faviconUrl={item.faviconUrl}
-                    feedUrl={item.url}
-                    siteUrl={item.link}
-                    title={item.title || item.url}
-                  />
-                  <span className="min-w-0 flex-1 truncate">{item.title}</span>
-                  {item.folderName ? (
-                    <span
-                      className={cn(
-                        "truncate text-xs",
-                        scopedFeedId === item.feedId
-                          ? "text-accent-foreground/72"
-                          : "text-muted-foreground",
-                      )}
-                    >
-                      {item.folderName}
-                    </span>
-                  ) : null}
-                  {scopedFeedId === item.feedId ? (
-                    <Badge className="ms-2" size="sm" variant="secondary">
-                      Current
-                    </Badge>
-                  ) : null}
-                </CommandItem>
-              ))}
-            </CommandGroup>
-            <CommandSeparator />
-            <CommandGroup>
-              <CommandGroupLabel>Actions</CommandGroupLabel>
-              <CommandItem value="Create folder new folder" onClick={onCreateFolder}>
-                <span>Create folder</span>
-              </CommandItem>
-              <CommandItem value="Manage feeds feed sources" onClick={onManageFeeds}>
-                <span>Manage feeds</span>
-              </CommandItem>
-            </CommandGroup>
-          </CommandList>
-        </CommandPanel>
-        <CommandFooter>
-          <span>Open inbox views, folders, feeds, or organization actions.</span>
-        </CommandFooter>
-      </Command>
-    </CommandDialogPopup>
-  );
-}
+const SourcesDialog = lazyNamed(
+  () => import("@modules/feeds/components/follow/sources-dialog"),
+  "SourcesDialog",
+);
+const WorkspaceCommandDialog = lazyNamed(
+  () => import("./workspace-command-dialog"),
+  "WorkspaceCommandDialog",
+);
 
 type HeaderProps = {
   platform: PlatformState;
@@ -280,7 +81,80 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
     scopedFeedId,
     scopedFolderId,
     workspaceLabel,
-  } = useWorkspaceHeader({ platform });
+  } = useHeader({ platform });
+  const [sourcesOpen, setSourcesOpen] = useState(false);
+  const [sourcesDialogLoaded, setSourcesDialogLoaded] = useState(false);
+  const [workspaceDialogLoaded, setWorkspaceDialogLoaded] = useState(false);
+
+  const preloadSourcesDialog = () => {
+    setSourcesDialogLoaded(true);
+    void SourcesDialog.preload();
+  };
+
+  const preloadWorkspaceDialog = () => {
+    setWorkspaceDialogLoaded(true);
+    void WorkspaceCommandDialog.preload();
+  };
+
+  const setWorkspaceOpen = (open: boolean) => {
+    if (open) {
+      preloadWorkspaceDialog();
+    }
+    setCommandOpen(open);
+  };
+
+  const setSourcesDialogOpen = (open: boolean) => {
+    if (open) {
+      preloadSourcesDialog();
+    }
+    setSourcesOpen(open);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const activeEl = document.activeElement;
+      const isInput =
+        activeEl &&
+        (activeEl.tagName === "INPUT" ||
+          activeEl.tagName === "TEXTAREA" ||
+          activeEl.getAttribute("contenteditable") === "true");
+
+      if (isInput) {
+        return;
+      }
+
+      const key = event.key.toLowerCase();
+
+      // modifier + K opens Workspace Switcher
+      if (
+        key === "k" &&
+        isPlatformModifierShortcut(event, platform) &&
+        !event.shiftKey &&
+        !event.altKey
+      ) {
+        event.preventDefault();
+        setWorkspaceDialogLoaded(true);
+        void WorkspaceCommandDialog.preload();
+        setWorkspaceOpen(true);
+      }
+
+      // single / opens Follow Sources (no modifiers)
+      if (
+        event.key === "/" &&
+        !isPlatformModifierShortcut(event, platform) &&
+        !event.shiftKey &&
+        !event.altKey
+      ) {
+        event.preventDefault();
+        setSourcesDialogLoaded(true);
+        void SourcesDialog.preload();
+        setSourcesOpen(true);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [platform]);
 
   const scopeIcon =
     scope?.kind === "feed" ? (
@@ -300,57 +174,113 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
       <SidebarHeader className="gap-2 px-2 pb-4">
         <SidebarMenu>
           <SidebarMenuItem>
-            <CommandDialog open={commandOpen} onOpenChange={setCommandOpen}>
-              <CommandDialogTrigger
-                render={
-                  <SidebarMenuButton className="h-auto py-2" isActive={Boolean(scope)}>
-                    <span className="min-w-0 flex flex-1 items-center gap-2">
-                      {scopeIcon}
-                      <SidebarModeAnimatedText className="min-w-0 flex-1">
-                        <PretextLabel
-                          className="font-medium text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6"
-                          font={
-                            isReaderFocusSidebar
-                              ? WORKSPACE_SCOPE_FONT_READER_FOCUS
-                              : WORKSPACE_SCOPE_FONT
-                          }
-                          label={workspaceLabel}
-                          lineHeight={
-                            isReaderFocusSidebar
-                              ? WORKSPACE_SCOPE_LINE_HEIGHT_READER_FOCUS
-                              : WORKSPACE_SCOPE_LINE_HEIGHT
-                          }
-                        />
-                      </SidebarModeAnimatedText>
-                    </span>
-                    <SelectorVerticalLine className="-me-1 size-6 shrink-0" />
-                  </SidebarMenuButton>
-                }
-              />
-              <WorkspaceHeaderCommandContent
-                feedItems={feedItems}
-                folderItems={folderItems}
-                followedFeedsQuery={followedFeedsQuery}
-                foldersQuery={foldersQuery}
-                inboxItems={inboxItems}
-                navigate={navigate}
-                onClose={() => {
-                  setCommandOpen(false);
-                }}
-                onCreateFolder={onCreateFolder}
-                onManageFeeds={onManageFeeds}
-                scopedFeedId={scopedFeedId}
-                scopedFolderId={scopedFolderId}
-              />
-            </CommandDialog>
+            <SidebarMenuButton
+              className="h-auto py-2"
+              isActive={Boolean(scope)}
+              onClick={() => {
+                setWorkspaceOpen(true);
+              }}
+              onFocus={preloadWorkspaceDialog}
+              onPointerEnter={preloadWorkspaceDialog}
+            >
+              <SelectorVerticalLine className="size-6 shrink-0 -ms-1 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:-ms-0.75" />
+              <span className="min-w-0 flex flex-1 items-center gap-2 -ms-1 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:-ms-0.75">
+                {scopeIcon}
+                <SidebarModeAnimatedText className="min-w-0 flex-1">
+                  <PretextLabel
+                    className="font-medium text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6"
+                    font={
+                      isReaderFocusSidebar
+                        ? WORKSPACE_SCOPE_FONT_READER_FOCUS
+                        : WORKSPACE_SCOPE_FONT
+                    }
+                    label={workspaceLabel}
+                    lineHeight={
+                      isReaderFocusSidebar
+                        ? WORKSPACE_SCOPE_LINE_HEIGHT_READER_FOCUS
+                        : WORKSPACE_SCOPE_LINE_HEIGHT
+                    }
+                  />
+                </SidebarModeAnimatedText>
+              </span>
+              <KbdGroup className="max-sm:hidden opacity-60">
+                <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
+                  <SidebarModeAnimatedText>{platform.modifierKeyLabel}</SidebarModeAnimatedText>
+                </Kbd>
+                <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
+                  <SidebarModeAnimatedText>K</SidebarModeAnimatedText>
+                </Kbd>
+              </KbdGroup>
+            </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SourcesDialog platform={platform} />
+            <SidebarMenuButton
+              className="mt-1 items-stretch overflow-visible rounded-xl p-0 shadow-none transition-shadow duration-150 ease-out hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent focus-visible:ring-0 focus-within:shadow-[0_0_0_2px_var(--sidebar-ring)] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-0"
+              onClick={() => {
+                preloadSourcesDialog();
+                setSourcesOpen(true);
+              }}
+              onFocus={preloadSourcesDialog}
+              onPointerEnter={preloadSourcesDialog}
+            >
+              <InputGroup className="h-full min-h-0 w-full rounded-xl border-sidebar-border/70 bg-sidebar-accent/40 shadow-none outline-none ring-0 ring-transparent ring-offset-0 before:hidden transition-[background-color,border-color] hover:bg-sidebar-accent/56 has-[input:focus-visible,textarea:focus-visible]:border-sidebar-border/70 has-[input:focus-visible,textarea:focus-visible]:shadow-none has-[input:focus-visible,textarea:focus-visible]:ring-0! has-[input:focus-visible,textarea:focus-visible]:ring-transparent! dark:has-[input:focus-visible,textarea:focus-visible]:ring-0!">
+                <InputGroupInput
+                  aria-label="Discover"
+                  size="sm"
+                  className="cursor-text text-sm text-sidebar-foreground placeholder:text-sidebar-foreground/56 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6"
+                  placeholder="Follow sources"
+                  readOnly
+                  type="search"
+                />
+                <InputGroupAddon
+                  align="inline-end"
+                  className="ms-auto h-full items-center self-stretch has-[>kbd:last-child]:me-0"
+                >
+                  <KbdGroup className="-me-0.5">
+                    <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
+                      <SidebarModeAnimatedText>{"\u002F"}</SidebarModeAnimatedText>
+                    </Kbd>
+                  </KbdGroup>
+                </InputGroupAddon>
+              </InputGroup>
+            </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <CreateFolderDialog hideTrigger open={createFolderOpen} onOpenChange={setCreateFolderOpen} />
-      <ManageFeedsDialog open={manageFeedsOpen} onOpenChange={setManageFeedsOpen} />
+      <Suspense fallback={null}>
+        {workspaceDialogLoaded ? (
+          <WorkspaceCommandDialog
+            commandOpen={commandOpen}
+            createFolderOpen={createFolderOpen}
+            feedItems={feedItems}
+            followedFeedsQuery={followedFeedsQuery}
+            folderItems={folderItems}
+            foldersQuery={foldersQuery}
+            inboxItems={inboxItems}
+            manageFeedsOpen={manageFeedsOpen}
+            navigate={navigate}
+            onClose={() => {
+              setCommandOpen(false);
+            }}
+            onCommandOpenChange={setWorkspaceOpen}
+            onCreateFolder={onCreateFolder}
+            onCreateFolderOpenChange={setCreateFolderOpen}
+            onManageFeeds={onManageFeeds}
+            onManageFeedsOpenChange={setManageFeedsOpen}
+            scopedFeedId={scopedFeedId}
+            scopedFolderId={scopedFolderId}
+          />
+        ) : null}
+        {sourcesDialogLoaded ? (
+          <SourcesDialog
+            enableGlobalShortcut={false}
+            hideTrigger
+            open={sourcesOpen}
+            onOpenChange={setSourcesDialogOpen}
+            platform={platform}
+          />
+        ) : null}
+      </Suspense>
     </>
   );
 }

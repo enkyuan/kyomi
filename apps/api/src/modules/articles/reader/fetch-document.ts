@@ -1,4 +1,4 @@
-import type { FetchArticleDocumentResult } from "./content.types";
+import type { FetchArticleDocumentResult } from "./content-types";
 import { assertHttpOrHttpsUrl } from "@shared/net/http-url";
 import {
   BlockedOutboundUrlError,

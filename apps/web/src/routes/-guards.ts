@@ -1,5 +1,5 @@
 import { redirect } from "@tanstack/react-router";
-import { getSession } from "@lib/auth-functions";
+import { getSession } from "@lib/auth/functions";
 
 export async function requireAuth() {
   // Route truth is server-grounded; client auth cache only hydrates UI.

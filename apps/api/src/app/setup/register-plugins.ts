@@ -1,7 +1,7 @@
 import type { Elysia } from "elysia";
-import { corsPlugin } from "@adapters/cors/cors.plugin";
-import { openapiPlugin } from "@adapters/openapi/openapi.plugin";
-import { rateLimitPlugin } from "@adapters/rate-limit/rate-limit.plugin";
+import { corsPlugin } from "@adapters/cors/plugin";
+import { openapiPlugin } from "@adapters/openapi/plugin";
+import { rateLimitPlugin } from "@adapters/rate-limit/plugin";
 import { env } from "@config/env";
 
 /**

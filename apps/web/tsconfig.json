@@ -13,6 +13,6 @@
       "@vols.rss/ui": ["../../packages/ui/src/index.ts"],
       "@vols.rss/ui/*": ["../../packages/ui/src/*"]
     },
-    "types": ["vite/client"]
+    "types": ["vite/client", "bun"]
   }
 }

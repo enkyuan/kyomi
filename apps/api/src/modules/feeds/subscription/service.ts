@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { feeds } from "@vols.rss/db";
+import { feedSubscriptions, feeds } from "@vols.rss/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
 import { resolveRemoteFeed } from "@modules/discover/feed/resolve-remote";
@@ -63,6 +63,7 @@ export async function createOrSubscribeToFeed(
   database: DB,
   userId: string,
   rawUrl: string,
+  options?: { folderId?: string | null; customTitle?: string | null },
 ): Promise<FeedSubscribeResultDto> {
   const resolved = await resolveRemoteFeed(rawUrl);
 
@@ -76,6 +77,19 @@ export async function createOrSubscribeToFeed(
       favicon,
     );
     const { subscriptionId, newSubscription } = await subscribeUserToFeed(tx, userId, feedId);
+
+    if (newSubscription && (options?.folderId || options?.customTitle !== undefined)) {
+      const customTitle = options?.customTitle?.trim() || null;
+      await tx
+        .update(feedSubscriptions)
+        .set({
+          ...(options?.folderId ? { folderId: options.folderId } : {}),
+          ...(options?.customTitle !== undefined ? { customTitle } : {}),
+          updatedAt: new Date(),
+        })
+        .where(eq(feedSubscriptions.id, subscriptionId));
+    }
+
     return {
       feedId,
       subscriptionId,

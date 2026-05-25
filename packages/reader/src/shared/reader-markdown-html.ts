@@ -1,71 +1,45 @@
-import { Marked, Renderer } from "marked";
-import markedKatex from "marked-katex-extension";
-import { normalizeSafeHttpUrl } from "../core";
+import { createReaderMarked, type ReaderMarkdownRenderOptions } from "./reader-markdown-html-core";
 
-function escapeAttr(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/"/g, "&quot;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-}
+const markedByBaseUrl = new Map<string, ReturnType<typeof createReaderMarked>>();
 
-function createMarked(baseUrl?: string | null, openLinksInNewTab = true): Marked {
-  const renderer = new Renderer();
-
-  renderer.link = function ({ href, title, text }) {
-    const resolvedHref = href ? normalizeSafeHttpUrl(href, baseUrl) : null;
-    if (!resolvedHref) {
-      return text;
-    }
-    const titleAttr = title ? ` title="${escapeAttr(title)}"` : "";
-    if (!openLinksInNewTab) {
-      return `<a href="${escapeAttr(resolvedHref)}"${titleAttr}>${text}</a>`;
-    }
-    return `<a href="${escapeAttr(resolvedHref)}"${titleAttr} rel="noopener noreferrer" target="_blank">${text}</a>`;
-  };
-
-  renderer.image = function ({ href, title, text }) {
-    const resolvedSrc = href ? normalizeSafeHttpUrl(href, baseUrl) : null;
-    if (!resolvedSrc) {
-      return text;
-    }
-    const titleAttr = title ? ` title="${escapeAttr(title)}"` : "";
-    return `<img src="${escapeAttr(resolvedSrc)}" alt="${escapeAttr(text)}"${titleAttr}>`;
-  };
-
-  renderer.code = function ({ text, lang }) {
-    const language = (lang ?? "").trim();
-    const classAttr = language ? ` class="language-${escapeAttr(language)}"` : "";
-    return `<pre><code${classAttr}>${escapeAttr(text)}</code></pre>`;
-  };
-
-  const marked = new Marked();
-  marked.use(markedKatex({ throwOnError: false }));
-  marked.use({
-    gfm: true,
-    breaks: false,
-    renderer,
-  });
-  return marked;
-}
-
-const markedByBaseUrl = new Map<string, Marked>();
-
-function getMarkedForBaseUrl(baseUrl?: string | null, openLinksInNewTab = true): Marked {
+function getMarkedForBaseUrl(baseUrl?: string | null, openLinksInNewTab = true) {
   const key = `${baseUrl ?? ""}|${openLinksInNewTab ? "blank" : "same"}`;
   let parser = markedByBaseUrl.get(key);
   if (!parser) {
-    parser = createMarked(baseUrl, openLinksInNewTab);
+    parser = createReaderMarked(baseUrl, openLinksInNewTab);
     markedByBaseUrl.set(key, parser);
   }
   return parser;
 }
 
-/** Markdown → HTML using the same rules as the web reader (KaTeX, GFM, safe links). */
+function hasInlineMathDelimiter(markdown: string) {
+  const matches = markdown.matchAll(/(^|[^\\])\$([^$\n]+?)\$/g);
+  for (const match of matches) {
+    const candidate = match[2]?.trim();
+    if (!candidate) {
+      continue;
+    }
+    if (/[\\^_=]/.test(candidate) || /\d\s*[-+*/=]\s*\d/.test(candidate)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+export function hasLikelyMarkdownMath(markdown: string) {
+  return (
+    /(^|[^\\])\$\$[\s\S]+?(^|[^\\])\$\$/m.test(markdown) ||
+    /\\\([\s\S]+?\\\)/.test(markdown) ||
+    /\\\[[\s\S]+?\\\]/.test(markdown) ||
+    /\\begin\{[a-zA-Z*]+\}/.test(markdown) ||
+    hasInlineMathDelimiter(markdown)
+  );
+}
+
+/** Markdown -> HTML using the same non-math rules as the web reader. */
 export function readerMarkdownToHtml(
   markdown: string,
-  options?: { baseUrl?: string | null; openLinksInNewTab?: boolean },
+  options?: ReaderMarkdownRenderOptions,
 ): string {
   const parser = getMarkedForBaseUrl(options?.baseUrl, options?.openLinksInNewTab ?? true);
   return parser.parse(markdown, { async: false }) as string;

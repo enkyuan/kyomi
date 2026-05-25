@@ -39,6 +39,7 @@ export function Group({
       className={cn(groupVariants({ orientation }), className)}
       data-orientation={orientation}
       data-slot="group"
+      // eslint-disable-next-line jsx-a11y/prefer-tag-over-role -- role="group" on div is correct ARIA; <address> is semantically contact info, not a grouping widget
       role="group"
       {...props}
     >

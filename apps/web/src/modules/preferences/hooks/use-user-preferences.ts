@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useAuth } from "@integrations/better-auth/auth-provider";
+import { useAuth } from "@integrations/better-auth/provider";
 
 type PreferenceUpdate<TPreferences extends object> = {
   patch: Partial<TPreferences>;
@@ -54,6 +54,7 @@ export function useUserPreferences<TPreferences extends object>({
 
   useEffect(() => {
     return () => {
+      // oxlint-disable-next-line react-hooks/exhaustive-deps
       const timer = mutationDebounceRef.current;
       if (timer) {
         clearTimeout(timer);
@@ -61,6 +62,7 @@ export function useUserPreferences<TPreferences extends object>({
         mutationRollbackRef.current = null;
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const updateMutation = useMutation({

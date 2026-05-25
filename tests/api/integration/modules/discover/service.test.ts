@@ -34,25 +34,50 @@ describe("discover.service", () => {
     globalThis.fetch = originalFetch;
   });
 
-  test("searchFeeds trims input and maps rows", async () => {
+  test("searchFeeds trims input and maps meili hits when configured", async () => {
     const searchFeeds = await loadSearchFeeds();
-    const limit = mock(() =>
-      Promise.resolve([
-        {
-          id: "feed_1",
-          url: "https://example.com/feed.xml",
-          title: "Example &#8216;Feed&#8217;",
-          description: "Latest &amp; updates",
-          link: "https://example.com",
-          isSubscribed: true,
-          score: 0,
-        },
-      ]),
-    );
-    const orderBy = mock(() => ({ limit }));
-    const where = mock(() => ({ orderBy }));
-    const leftJoin = mock(() => ({ where }));
-    const from = mock(() => ({ leftJoin }));
+    globalThis.fetch = mock((input: unknown) => {
+      const href =
+        typeof input === "string"
+          ? input
+          : input instanceof URL
+            ? input.href
+            : typeof input === "object" && input !== null && "url" in input
+              ? String((input as { url: unknown }).url)
+              : "";
+      if (href.endsWith("/indexes")) {
+        return Promise.resolve(new Response(null, { status: 409 }));
+      }
+      if (href.includes("/settings/searchable-attributes")) {
+        return Promise.resolve(new Response(null, { status: 202 }));
+      }
+      if (href.endsWith("/search")) {
+        return Promise.resolve(
+          new Response(
+            JSON.stringify({
+              hits: [
+                {
+                  id: "feed_1",
+                  url: "https://example.com/feed.xml",
+                  title: "Example &#8216;Feed&#8217;",
+                  description: "Latest &amp; updates",
+                  link: "https://example.com",
+                  faviconUrl: null,
+                },
+              ],
+            }),
+            {
+              status: 200,
+              headers: { "content-type": "application/json" },
+            },
+          ),
+        );
+      }
+      return Promise.resolve(new Response(null, { status: 404 }));
+    }) as unknown as typeof fetch;
+
+    const where = mock(() => Promise.resolve([{ feedId: "feed_1" }]));
+    const from = mock(() => ({ where }));
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof searchFeeds>[0];
 
@@ -65,6 +90,7 @@ describe("discover.service", () => {
         title: "Example ‘Feed’",
         description: "Latest & updates",
         link: "https://example.com",
+        faviconUrl: null,
         isSubscribed: true,
       },
     ]);

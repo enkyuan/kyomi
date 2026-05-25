@@ -4,14 +4,14 @@ import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
 import { and, desc, eq, gte, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { extractFullTextFromUrl } from "../reader/enrichment";
-import type { ExtractedContentStatus } from "../reader/content.types";
+import type { ExtractedContentStatus } from "../reader/content-types";
 import {
   buildExtractedReaderViewFromDb,
   buildStoredContentRecord,
   buildStoredReaderContent,
 } from "../reader/normalize-content";
 import { buildArticleReaderDto } from "../reader/reader-mode";
-import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./clips.constants";
+import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./clips-constants";
 import type { ArticleDetailDto, ArticleListItemDto, ArticlesCursorListResponseDto } from "../types";
 
 type DB = typeof db;

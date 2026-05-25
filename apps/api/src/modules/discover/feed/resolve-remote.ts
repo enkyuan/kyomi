@@ -181,9 +181,12 @@ async function resolveRemoteFeedFromUrl(
 ): Promise<ResolvedRemoteFeed> {
   const normalizedInputUrl = normalizeFeedUrl(url);
   if (visitedUrls.has(normalizedInputUrl)) {
-    throw new AppError("Failed to parse feed", { status: 500, code: "FEED_PARSE_FAILED" });
+    if (!ignoreTlsError) {
+      throw new AppError("Failed to parse feed", { status: 500, code: "FEED_PARSE_FAILED" });
+    }
+  } else {
+    visitedUrls.add(normalizedInputUrl);
   }
-  visitedUrls.add(normalizedInputUrl);
 
   const fetched = await fetchFeedDocument(url, { ignoreTlsError });
   if (!fetched.ok) {

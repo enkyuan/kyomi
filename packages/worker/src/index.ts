@@ -12,6 +12,8 @@ export {
   type FeedRefreshJob,
   type Job,
   type JobMessage,
+  type OpmlImportFeedJob,
+  type OpmlImportJob,
 } from "./services/queue/job";
 
 export {

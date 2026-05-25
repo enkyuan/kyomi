@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocation } from "@tanstack/react-router";
-import { isInboxPathname } from "@modules/inbox/lib/is-inbox-path";
+import { isInboxPathname } from "@modules/inbox/lib/navigation";
 
 export function useInboxScope() {
   const location = useLocation();

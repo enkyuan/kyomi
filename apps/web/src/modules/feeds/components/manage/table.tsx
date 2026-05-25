@@ -1,7 +1,6 @@
 "use client";
 
-import { type ColumnDef, flexRender, type Table as ReactTable } from "@tanstack/react-table";
-import { Checkbox } from "@vols.rss/ui/checkbox";
+import { flexRender, type Table as ReactTable } from "@tanstack/react-table";
 import { Button } from "@vols.rss/ui/button";
 import { Frame } from "@vols.rss/ui/frame";
 import {

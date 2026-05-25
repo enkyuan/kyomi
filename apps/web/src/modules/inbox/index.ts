@@ -3,30 +3,28 @@ export { List, type ListDisplayOptions, type ListFilterVisibility } from "./comp
 export { Page } from "./page";
 
 export { formatInboxTimestamp } from "./utils/format-timestamp";
-export { useInboxRouteState } from "./hooks/use-route-state";
 export {
-  useInboxItemStateMutation,
-  type InboxItemPatch,
-} from "./hooks/use-inbox-item-state-mutation";
-export {
-  useInboxPreferences,
+  dedupePagedInboxItemsById,
   InboxPreferencesBootstrapProvider,
+  useInboxItemStateMutation,
+  useInboxPreferences,
+  useInboxQueries,
+  type InboxItemPatch,
   type InboxPreferences,
-} from "./hooks/use-inbox-preferences";
-export { dedupePagedInboxItemsById, useInboxQueries } from "./hooks/use-inbox-queries";
-export { useMarkReadBehavior } from "./hooks/use-mark-read-behavior";
+} from "./hooks/use-inbox-data";
 export {
+  useInboxRouteState,
+  useMarkReadBehavior,
   useResponsiveReaderMode,
+  useSplitPane,
   type InboxLayoutVariant,
-} from "./hooks/use-responsive-reader-mode";
-export { useSplitPane } from "./hooks/use-split-pane";
-export { isInboxPathname } from "./lib/is-inbox-path";
+} from "./hooks/use-inbox-layout";
+export { isInboxPathname, prefetchInboxFlow } from "./lib/navigation";
 export {
   readInboxArticleOpenBehaviorCookie,
   readInboxSplitPanePercentCookie,
   writeInboxArticleOpenBehaviorCookie,
   writeInboxSplitPanePercentCookie,
 } from "./lib/layout-persistence";
-export { prefetchInboxFlow } from "./lib/prefetch";
 export { invalidateFeedAndInboxQueries, type InboxListPage } from "./queries/options";
 export { getInboxPreferences, updateInboxPreferences } from "./services/preferences";

@@ -1,4 +1,4 @@
-import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "src/lib/schemas";
+import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@lib/schemas";
 
 const absoluteFormatter12h = new Intl.DateTimeFormat("en", {
   dateStyle: "medium",
@@ -10,10 +10,26 @@ const absoluteFormatter24h = new Intl.DateTimeFormat("en", {
   timeStyle: "short",
   hour12: false,
 });
+const absoluteUtcFormatter12h = new Intl.DateTimeFormat("en", {
+  dateStyle: "medium",
+  timeStyle: "short",
+  hour12: true,
+  timeZone: "UTC",
+});
+const absoluteUtcFormatter24h = new Intl.DateTimeFormat("en", {
+  dateStyle: "medium",
+  timeStyle: "short",
+  hour12: false,
+  timeZone: "UTC",
+});
 const relativeFormatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 function getAbsoluteFormatter(hourCycle: InboxTimestampHourCycleDto) {
   return hourCycle === "12h" ? absoluteFormatter12h : absoluteFormatter24h;
+}
+
+function getAbsoluteUtcFormatter(hourCycle: InboxTimestampHourCycleDto) {
+  return hourCycle === "12h" ? absoluteUtcFormatter12h : absoluteUtcFormatter24h;
 }
 
 function formatRelative(date: Date) {
@@ -67,4 +83,17 @@ export function formatInboxTimestamp(
   }
 
   return getAbsoluteFormatter(hourCycle).format(date);
+}
+
+export function formatInboxTimestampSsrFallback(
+  value: string,
+  hourCycle: InboxTimestampHourCycleDto,
+) {
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return getAbsoluteUtcFormatter(hourCycle).format(date);
 }

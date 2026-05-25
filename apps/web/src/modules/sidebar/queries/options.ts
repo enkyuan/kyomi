@@ -2,7 +2,7 @@ import { listFolders } from "@modules/folders/api";
 import { listFollowedFeeds } from "@modules/feeds/api";
 import { getSidebarInboxCounts } from "@modules/inbox/services/api";
 import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
-import { QUERY_TIMES } from "@lib/query-policies";
+import { QUERY_TIMES } from "@lib/query/policies";
 
 function foldersQueryKey() {
   return ["folders"] as const;

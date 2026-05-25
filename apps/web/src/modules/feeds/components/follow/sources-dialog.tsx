@@ -20,11 +20,16 @@ import {
 } from "@vols.rss/ui/command";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@vols.rss/ui/input-group";
 import { Kbd, KbdGroup } from "@vols.rss/ui/kbd";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar-mode-animated-text";
+import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
 import { SidebarMenuButton } from "@vols.rss/ui/sidebar";
 import { toastManager } from "@vols.rss/ui/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";
 import { followFeed, searchFeeds } from "@modules/feeds/api";
+import {
+  getDiscoverFeedsSnapshot,
+  markDiscoverFeedSubscribed,
+  restoreDiscoverFeedsSnapshot,
+} from "@modules/feeds/queries/cache";
 import { invalidateFeedAndInboxQueries } from "@modules/inbox/queries/options";
 
 /** Cap list rows so opening the dialog never mounts thousands of command items in one commit. */
@@ -102,16 +107,14 @@ export function SourcesDialog({
 
   const followFeedMutation = useMutation({
     mutationFn: ({ url }: { url: string }) => followFeed({ data: { url } }),
+    onMutate: async ({ url }) => {
+      await queryClient.cancelQueries({ queryKey: ["discover", "feeds"] });
+      const snapshot = getDiscoverFeedsSnapshot(queryClient);
+      markDiscoverFeedSubscribed(queryClient, { url });
+      return { snapshot };
+    },
     onSuccess: async (result) => {
-      queryClient.setQueriesData(
-        { queryKey: ["discover", "feeds"] },
-        (current: Awaited<ReturnType<typeof searchFeeds>> | undefined) =>
-          current?.map((item) =>
-            item.url === result.url
-              ? { ...item, isSubscribed: true, id: item.id ?? result.feedId }
-              : item,
-          ),
-      );
+      markDiscoverFeedSubscribed(queryClient, { url: result.url, feedId: result.feedId });
       invalidateFeedAndInboxQueries(queryClient);
       await queryClient.invalidateQueries({
         queryKey: ["folders"],
@@ -124,7 +127,8 @@ export function SourcesDialog({
         type: "success",
       });
     },
-    onError: (error) => {
+    onError: (error, _variables, context) => {
+      restoreDiscoverFeedsSnapshot(queryClient, context?.snapshot);
       toastManager.add({
         title: "Unable to follow feed",
         description: error instanceof Error ? error.message : "Try another topic or feed URL.",
@@ -154,6 +158,7 @@ export function SourcesDialog({
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
+    // eslint-disable-next-line react-doctor/prefer-use-effect-event
   }, [enableGlobalShortcut, platform, setDialogOpen]);
 
   return (

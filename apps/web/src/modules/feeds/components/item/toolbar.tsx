@@ -17,7 +17,7 @@ import { Tooltip, TooltipPopup, TooltipTrigger } from "@vols.rss/ui/tooltip";
 import {
   useInboxItemStateMutation,
   type InboxItemPatch,
-} from "@modules/inbox/hooks/use-inbox-item-state-mutation";
+} from "@modules/inbox/hooks/use-inbox-data";
 import { type InboxFilter, type InboxItem } from "@modules/inbox/services/api";
 import { cn } from "@lib/utils";
 
@@ -140,13 +140,13 @@ function ActiveToolbarOverlay({
       toolbarRef={toolbarRef}
       onToolbarPointerLeave={onToolbarPointerLeave}
       className={cn(
-        "absolute! border! border-border/80!",
+        "absolute! border! border-border/80! pointer-events-auto opacity-100 will-change-transform",
         isUnderHeader ? "z-20" : "z-60",
-        "pointer-events-auto opacity-100",
       )}
       style={{
-        top: `${top}px`,
+        top: 0,
         right: `${TOOLBAR_RIGHT_INSET_PX}px`,
+        transform: `translate3d(0, ${top}px, 0)`,
       }}
     />,
     activeToolbar.toolbarHostElement,
@@ -184,16 +184,20 @@ export function ToolbarOverlay({
   );
 }
 
-function readIsToolbarUnderHeader(
-  anchor: HTMLElement,
-  header: HTMLElement | null,
-  viewport: HTMLElement | null,
-) {
-  if (!header || !viewport || viewport.scrollTop <= 0) {
+function readIsToolbarUnderHeader({
+  anchorElement,
+  headerElement,
+  viewportElement,
+}: {
+  anchorElement: HTMLElement;
+  headerElement: HTMLElement | null;
+  viewportElement: HTMLElement | null;
+}) {
+  if (!headerElement || !viewportElement || viewportElement.scrollTop <= 0) {
     return false;
   }
 
-  return anchor.getBoundingClientRect().top <= header.getBoundingClientRect().bottom;
+  return anchorElement.getBoundingClientRect().top <= headerElement.getBoundingClientRect().bottom;
 }
 
 function useToolbarUnderHeader({
@@ -206,29 +210,41 @@ function useToolbarUnderHeader({
   viewportElement: HTMLElement | null;
 }) {
   const [isUnderHeader, setIsUnderHeader] = useState(() =>
-    readIsToolbarUnderHeader(anchorElement, headerElement, viewportElement),
+    readIsToolbarUnderHeader({ anchorElement, headerElement, viewportElement }),
   );
 
   useLayoutEffect(() => {
-    const update = () => {
-      if (!anchorElement.isConnected) {
-        return;
-      }
+    let frame = 0;
 
+    const update = () => {
+      frame = 0;
       setIsUnderHeader((previous) => {
-        const next = readIsToolbarUnderHeader(anchorElement, headerElement, viewportElement);
+        const next = readIsToolbarUnderHeader({
+          anchorElement,
+          headerElement,
+          viewportElement,
+        });
         return previous === next ? previous : next;
       });
     };
 
-    update();
+    const scheduleUpdate = () => {
+      if (frame) {
+        return;
+      }
+      frame = window.requestAnimationFrame(update);
+    };
 
-    viewportElement?.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
+    update();
+    viewportElement?.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
 
     return () => {
-      viewportElement?.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+      viewportElement?.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
     };
   }, [anchorElement, headerElement, viewportElement]);
 
@@ -267,16 +283,16 @@ function ReadStateIcon({ isRead }: { isRead: boolean }) {
     <span className="relative block size-4.5 sm:size-4" aria-hidden>
       <span
         className={cn(
-          "absolute inset-0 flex items-center justify-center transition-[opacity,transform,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)] will-change-[opacity,transform,filter]",
-          isRead ? "scale-25 opacity-0 blur-xs" : "scale-100 opacity-100 blur-0",
+          "absolute inset-0 flex items-center justify-center transition-[opacity,transform] duration-150 ease-[cubic-bezier(0.2,0,0,1)] will-change-[opacity,transform]",
+          isRead ? "scale-75 opacity-0" : "scale-100 opacity-100",
         )}
       >
         <MailOpenLine />
       </span>
       <span
         className={cn(
-          "absolute inset-0 flex items-center justify-center transition-[opacity,transform,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)] will-change-[opacity,transform,filter]",
-          isRead ? "scale-100 opacity-100 blur-0" : "scale-25 opacity-0 blur-xs",
+          "absolute inset-0 flex items-center justify-center transition-[opacity,transform] duration-150 ease-[cubic-bezier(0.2,0,0,1)] will-change-[opacity,transform]",
+          isRead ? "scale-100 opacity-100" : "scale-75 opacity-0",
         )}
       >
         <MailFill />

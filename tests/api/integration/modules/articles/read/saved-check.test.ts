@@ -1,5 +1,5 @@
 import { describe, expect, mock, test } from "bun:test";
-import { AppError } from "@shared/errors/app-error";
+import { AppError } from "@shared/errors/app";
 import { checkSavedArticleForUser } from "@modules/articles/read/saved-check";
 
 describe("checkSavedArticleForUser", () => {

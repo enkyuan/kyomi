@@ -1,7 +1,7 @@
 import { Calendar3Fill, NewsFill, StarFill, TimeDurationFill } from "@mingcute/react";
 import type { ComponentType } from "react";
 import type { useNavigate } from "@tanstack/react-router";
-import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-preferences";
+import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
 
 export type InboxNavFilter = "today" | "unread" | "saved" | "recent";
 

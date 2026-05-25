@@ -1,8 +1,8 @@
 "use client";
 
-import { AnimatePresence, LazyMotion, domMax, m, useReducedMotion } from "motion/react";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import type { CSSProperties, ReactNode } from "react";
-import { INBOX_PANEL_SPACING_PX } from "../lib/constants";
+import { INBOX_PANEL_SPACING_PX } from "../lib/layout";
 
 export type MobileLayoutProps = {
   showDetail: boolean;
@@ -15,11 +15,11 @@ export function MobileLayout({ showDetail, direction, list, detail }: MobileLayo
   const prefersReducedMotion = useReducedMotion();
   const transition = prefersReducedMotion
     ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.34, bounce: 0 };
+    : { type: "spring" as const, duration: 0.28, bounce: 0 };
   const slideOffset = direction * 28;
 
   return (
-    <LazyMotion features={domMax}>
+    <LazyMotion features={domAnimation}>
       <m.div
         initial={false}
         className="relative h-full max-h-full min-h-0 w-full min-w-0 overflow-hidden [--inbox-stacked-left-inset:var(--inbox-stacked-panel-inset)] md:[--inbox-stacked-left-inset:0px]"

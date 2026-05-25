@@ -1,7 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import type { InboxTimestampDisplayDto } from "src/lib/schemas";
+import type { InboxTimestampDisplayDto } from "@lib/schemas";
 
 let timestampTick = 0;
 let timestampIntervalId: ReturnType<typeof setInterval> | null = null;

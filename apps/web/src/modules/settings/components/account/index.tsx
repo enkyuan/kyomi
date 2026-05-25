@@ -1,7 +1,7 @@
 "use client";
 
 import { CheckFill, CloseFill, Edit2Fill, User3Fill } from "@mingcute/react";
-import { useAuth } from "@integrations/better-auth/auth-provider";
+import { useAuth } from "@integrations/better-auth/provider";
 import { Button } from "@vols.rss/ui/button";
 import { Frame } from "@vols.rss/ui/frame";
 import { Group } from "@vols.rss/ui/group";
@@ -165,7 +165,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
                     <TableCell className="max-w-80 truncate">
                       {shortenUserAgent(sessionItem.userAgent)}
                     </TableCell>
-                    <TableCell>{sessionItem.ipAddress ?? "Unknown"}</TableCell>
+                    <TableCell>{sessionItem.ipAddress || "Unknown"}</TableCell>
                     <TableCell>{formatTimestamp(sessionItem.updatedAt)}</TableCell>
                     <TableCell>{formatTimestamp(sessionItem.expiresAt)}</TableCell>
                     <TableCell className="text-right">

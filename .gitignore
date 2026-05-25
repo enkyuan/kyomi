@@ -9,6 +9,7 @@ build
 coverage
 .cursor/*
 .antigravitycli
+.agents
 
 # Python pipeline artifacts
 packages/catalog/.venv

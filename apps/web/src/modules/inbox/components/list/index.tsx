@@ -2,13 +2,11 @@
 
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { ToolbarOverlay, type ActiveToolbar } from "@modules/feeds/components/item/toolbar";
-import { SkeletonRows } from "./feed-item-rows";
-import { StaticRows } from "./static-rows";
-import { VirtualizedRows } from "./virtualized-rows";
+import { StaticRows, VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
 import { FilterMenu } from "./filter-menu";
-import { Summary } from "../refresh/summary";
 import { Update } from "../refresh/update";
 import { ScrollAreaPrimitive, ScrollBar } from "@vols.rss/ui/scroll-area";
+import { RefreshStatus } from "./refresh-status";
 import {
   useCallback,
   useEffect,
@@ -22,8 +20,7 @@ import {
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import type { InboxListHeaderCount } from "@modules/inbox/utils/count-display";
-import { STATIC_LIST_ITEM_LIMIT } from "@modules/inbox/lib/list-layout";
-import type { RowsPaginationState } from "./feed-item-rows";
+import { STATIC_LIST_ITEM_LIMIT } from "@modules/inbox/lib/layout";
 
 export type ListDisplayOptions = {
   readerFocusMode?: boolean;
@@ -53,6 +50,49 @@ interface ListProps {
   onSelectItem: (item: InboxItem) => void;
 }
 
+function ListHeader({
+  headerCount,
+  isRefreshing,
+  dataUpdatedAt,
+  inboxItemsLength,
+  feedId,
+  folderId,
+  filter,
+  showHidden,
+  showRead,
+}: {
+  headerCount: InboxListHeaderCount;
+  isRefreshing: boolean;
+  dataUpdatedAt?: number;
+  inboxItemsLength: number;
+  feedId?: string | null;
+  folderId?: string | null;
+  filter: InboxFilter;
+  showHidden: boolean;
+  showRead: boolean;
+}) {
+  const contextKey = feedId ?? folderId ?? "all";
+
+  return (
+    <div className="pointer-events-auto flex h-full items-center justify-between gap-3 pl-2.5 pr-2">
+      <span className="inline-flex items-center whitespace-nowrap ps-1.5 font-medium text-muted-foreground text-sm tabular-nums">
+        {headerCount.numberPart} {headerCount.unitPart}
+        {inboxItemsLength > 0 ? (
+          <RefreshStatus
+            key={contextKey}
+            isRefreshing={isRefreshing}
+            dataUpdatedAt={dataUpdatedAt}
+          />
+        ) : null}
+      </span>
+      <div className="flex items-center gap-0.5">
+        {feedId ? <Update feedId={feedId} /> : <Update folderId={folderId ?? undefined} />}
+        <FilterMenu filter={filter} showHidden={showHidden} showRead={showRead} />
+      </div>
+    </div>
+  );
+}
+
 export function List({
   inboxItems,
   headerCount,
@@ -71,7 +111,7 @@ export function List({
 }: ListProps) {
   const { readerFocusMode = false, disableVirtualization = false, showFavicons } = display;
   const { showHidden = false, showRead = false } = filterVisibility ?? {};
-  const { isLoading } = pagination;
+  const { isLoading, isRefreshing, dataUpdatedAt } = pagination;
   const [activeToolbar, setActiveToolbar] = useState<ActiveToolbar | null>(null);
   const activeToolbarRef = useRef<ActiveToolbar | null>(null);
   const listScrollRef = useRef<HTMLDivElement | null>(null);
@@ -101,7 +141,11 @@ export function List({
 
   const showToolbar = useCallback(
     (item: InboxItem, anchorElement: HTMLElement, toolbarHostElement: HTMLElement) => {
-      const nextToolbar = { item, anchorElement, toolbarHostElement };
+      const nextToolbar = {
+        item,
+        anchorElement,
+        toolbarHostElement,
+      };
       activeToolbarRef.current = nextToolbar;
       setActiveToolbar(nextToolbar);
     },
@@ -129,25 +173,27 @@ export function List({
   return (
     <section
       className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground [--inbox-header-height:3rem] md:min-h-0"
+      aria-busy={isRefreshing || undefined}
       data-slot="inbox-list-root"
     >
-      <div
-        ref={listHeaderRef}
-        className="pointer-events-none absolute inset-x-0 top-0 z-30 h-(--inbox-header-height) border-b border-border bg-card"
-        data-slot="inbox-list-header"
-      >
-        <div className="pointer-events-auto flex h-full items-center justify-between gap-3 pl-2.5 pr-2">
-          <span className="inline-flex items-center whitespace-nowrap ps-1.5 font-medium text-muted-foreground text-sm tabular-nums">
-            {headerCount.numberPart} {headerCount.unitPart}
-            {feedId ? <Summary feedId={feedId} /> : null}
-          </span>
-          <div className="flex items-center gap-0.5">
-            {feedId ? <Update feedId={feedId} /> : <Update folderId={folderId ?? undefined} />}
-            <FilterMenu filter={filter} showHidden={showHidden} showRead={showRead} />
-          </div>
+      <ScrollAreaPrimitive.Root className="relative min-h-0 flex-1 overflow-hidden">
+        <div
+          ref={listHeaderRef}
+          className="pointer-events-none absolute inset-x-0 top-0 z-30 h-(--inbox-header-height) border-b border-border bg-card"
+          data-slot="inbox-list-header"
+        >
+          <ListHeader
+            headerCount={headerCount}
+            isRefreshing={isRefreshing}
+            dataUpdatedAt={dataUpdatedAt}
+            inboxItemsLength={inboxItems.length}
+            feedId={feedId}
+            folderId={folderId}
+            filter={filter}
+            showHidden={showHidden}
+            showRead={showRead}
+          />
         </div>
-      </div>
-      <ScrollAreaPrimitive.Root className="min-h-0 flex-1 overflow-hidden">
         <ScrollAreaPrimitive.Viewport
           ref={listScrollRef}
           className="h-full overflow-x-hidden outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain"
@@ -155,14 +201,7 @@ export function List({
         >
           <div className="pt-(--inbox-header-height)">
             {!isVirtualizerHostMounted ? (
-              isLoading && inboxItems.length === 0 ? (
-                <SkeletonRows
-                  density={density}
-                  showFavicons={showFavicons}
-                  readerFocusMode={readerFocusMode}
-                  viewportHeight={viewportHeight}
-                />
-              ) : inboxItems.length === 0 ? null : (
+              inboxItems.length === 0 && !isLoading ? null : (
                 <SkeletonRows
                   density={density}
                   showFavicons={showFavicons}
@@ -208,10 +247,12 @@ export function List({
             )}
           </div>
         </ScrollAreaPrimitive.Viewport>
-        <ScrollBar
-          className="z-50 mt-(--inbox-header-height) h-[calc(100%-var(--inbox-header-height))]"
-          orientation="vertical"
-        />
+        {inboxItems.length > 0 || isLoading ? (
+          <ScrollBar
+            className="z-50 mt-(--inbox-header-height) h-[calc(100%-var(--inbox-header-height))]"
+            orientation="vertical"
+          />
+        ) : null}
       </ScrollAreaPrimitive.Root>
       <ToolbarOverlay
         activeToolbar={visibleActiveToolbar}
