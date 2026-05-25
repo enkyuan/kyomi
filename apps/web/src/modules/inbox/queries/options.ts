@@ -1,4 +1,4 @@
-import type { QueryClient } from "@tanstack/react-query";
+import type { InfiniteData, QueryClient } from "@tanstack/react-query";
 import {
   getInboxItemDetail,
   getInboxItems,
@@ -6,7 +6,7 @@ import {
   type InboxFilter,
   type InboxItem,
 } from "../services/api";
-import { getTimezoneOffsetMinutes, QUERY_TIMES } from "@lib/query-policies";
+import { getTimezoneOffsetMinutes, QUERY_TIMES } from "@lib/query/policies";
 
 export type InboxListPage = {
   items: InboxItem[];
@@ -137,6 +137,8 @@ export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
       const page = normalizeInboxListPage(lastPage);
       return page?.hasMore ? (page.nextCursor ?? undefined) : undefined;
     },
+    placeholderData: (previousData: InfiniteData<InboxListPage, string | undefined> | undefined) =>
+      previousData,
     staleTime: QUERY_TIMES.listStale,
     gcTime: QUERY_TIMES.listGc,
   };

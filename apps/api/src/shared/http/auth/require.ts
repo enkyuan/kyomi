@@ -14,7 +14,7 @@ export async function requireAuth(
   headers: Headers,
   sessionResolver?: SessionResolver,
 ): Promise<AuthContext> {
-  const resolver = sessionResolver ?? (await import("@adapters/auth/auth")).auth.api;
+  const resolver = sessionResolver ?? (await import("@adapters/auth")).auth.api;
 
   const session = await resolver.getSession({ headers });
   if (!session?.user?.id) {

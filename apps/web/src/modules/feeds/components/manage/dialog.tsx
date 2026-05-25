@@ -29,6 +29,12 @@ import {
   type FollowedFeed,
   unfollowFeed,
 } from "@modules/feeds/api";
+import {
+  applyFeedFolder,
+  getFollowedFeedsSnapshot,
+  removeFollowedFeeds,
+  restoreFeedCacheSnapshot,
+} from "@modules/feeds/queries/cache";
 import { listFolders } from "@modules/folders";
 import { usePinnedFeedIds } from "@modules/feeds/hooks/use-pinned-feed-ids";
 
@@ -93,18 +99,18 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
   const moveFeedFolderMutation = useMutation({
     mutationFn: ({ feedId, folderId }: { feedId: string; folderId: string }) =>
       moveFeedsToFolder({ data: { feedIds: [feedId], folderId } }),
-    onMutate: ({ feedId }) => {
+    onMutate: async ({ feedId, folderId }) => {
+      await queryClient.cancelQueries({ queryKey: ["feeds", "followed"] });
+      const snapshot = getFollowedFeedsSnapshot(queryClient);
       setMovingFeedId(feedId);
-    },
-    onSuccess: (_, { feedId, folderId }) => {
       const targetFolder = folderOptions.find((option) => option.value === folderId);
-      queryClient.setQueryData(["feeds", "followed"], (current: FollowedFeed[] | undefined) =>
-        current?.map((feed) =>
-          feed.feedId === feedId
-            ? { ...feed, folderId, folderName: targetFolder?.label ?? feed.folderName }
-            : feed,
-        ),
-      );
+      applyFeedFolder(queryClient, feedId, { id: folderId, name: targetFolder?.label });
+      return { snapshot };
+    },
+    onError: (_error, _variables, context) => {
+      restoreFeedCacheSnapshot(queryClient, context?.snapshot);
+    },
+    onSuccess: () => {
       void queryClient.invalidateQueries({ queryKey: ["feeds", "followed"] });
     },
     onSettled: () => {
@@ -116,12 +122,14 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
       await Promise.all(feedIds.map((feedId) => unfollowFeed({ data: { feedId } })));
       return { feedIds };
     },
-    onSuccess: async ({ feedIds }) => {
-      const deletedFeedIdSet = new Set(feedIds);
-      queryClient.setQueryData(["feeds", "followed"], (current: FollowedFeed[] | undefined) =>
-        current?.filter((feed) => !deletedFeedIdSet.has(feed.feedId)),
-      );
+    onMutate: async ({ feedIds }) => {
+      await queryClient.cancelQueries({ queryKey: ["feeds", "followed"] });
+      const snapshot = getFollowedFeedsSnapshot(queryClient);
+      removeFollowedFeeds(queryClient, feedIds);
       setRowSelection({});
+      return { snapshot };
+    },
+    onSuccess: async ({ feedIds }) => {
       await Promise.all([
         queryClient.invalidateQueries({ queryKey: ["feeds", "followed"] }),
         queryClient.invalidateQueries({ queryKey: ["feeds", "followed", "unread-counts"] }),
@@ -137,7 +145,8 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
         type: "success",
       });
     },
-    onError: (error) => {
+    onError: (error, _variables, context) => {
+      restoreFeedCacheSnapshot(queryClient, context?.snapshot);
       toastManager.add({
         title: "Unable to remove selected feeds",
         description: error instanceof Error ? error.message : "Try again in a moment.",

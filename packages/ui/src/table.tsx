@@ -1,5 +1,7 @@
 import type * as React from "react";
+import { ScrollArea as ScrollAreaPrimitive } from "@base-ui/react/scroll-area";
 import { cn } from "./lib/utils";
+import { ScrollBar } from "./scroll-area";
 
 export type TableVariant = "default" | "card";
 
@@ -11,20 +13,23 @@ export function Table({
   variant?: TableVariant;
 }): React.ReactElement {
   return (
-    <div
-      className="relative w-full overflow-x-auto"
+    <ScrollAreaPrimitive.Root
+      className="relative w-full"
       data-slot="table-container"
       data-variant={variant}
     >
-      <table
-        className={cn(
-          "w-full caption-bottom in-data-[variant=card]:border-separate in-data-[variant=card]:border-spacing-0 text-sm",
-          className,
-        )}
-        data-slot="table"
-        {...props}
-      />
-    </div>
+      <ScrollAreaPrimitive.Viewport className="w-full rounded-[inherit] outline-none data-has-overflow-x:overscroll-x-contain">
+        <table
+          className={cn(
+            "w-full caption-bottom in-data-[variant=card]:border-separate in-data-[variant=card]:border-spacing-0 text-sm",
+            className,
+          )}
+          data-slot="table"
+          {...props}
+        />
+      </ScrollAreaPrimitive.Viewport>
+      <ScrollBar orientation="horizontal" />
+    </ScrollAreaPrimitive.Root>
   );
 }
 

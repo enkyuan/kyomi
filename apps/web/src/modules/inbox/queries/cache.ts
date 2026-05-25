@@ -1,13 +1,44 @@
 "use client";
 
-import type { InfiniteData, QueryClient } from "@tanstack/react-query";
-import type { ArticleDetailDto } from "src/lib/schemas";
+import type { InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
+import type { ArticleDetailDto } from "@lib/schemas";
 import type { InboxItem } from "../services/api";
 import type { InboxListPage } from "./options";
 
 type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
 
 type InboxItemsInfiniteData = InfiniteData<InboxListPage>;
+type InboxDetailData = { item: ArticleDetailDto | null };
+
+export type InboxItemCacheSnapshot = {
+  detail?: InboxDetailData;
+  items: Array<readonly [QueryKey, InboxItemsInfiniteData | undefined]>;
+};
+
+export function getInboxItemCacheSnapshot(
+  queryClient: QueryClient,
+  itemId: string,
+): InboxItemCacheSnapshot {
+  return {
+    detail: queryClient.getQueryData<InboxDetailData>(["inbox", "item-detail", itemId]),
+    items: queryClient.getQueriesData<InboxItemsInfiniteData>({ queryKey: ["inbox", "items"] }),
+  };
+}
+
+export function restoreInboxItemCacheSnapshot(
+  queryClient: QueryClient,
+  itemId: string,
+  snapshot?: InboxItemCacheSnapshot,
+) {
+  if (!snapshot) {
+    return;
+  }
+
+  for (const [queryKey, data] of snapshot.items) {
+    queryClient.setQueryData(queryKey, data);
+  }
+  queryClient.setQueryData(["inbox", "item-detail", itemId], snapshot.detail);
+}
 
 export function updateInboxItemCaches(
   queryClient: QueryClient,

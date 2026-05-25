@@ -94,20 +94,13 @@ function EditableSliderValue({
   }
 
   return (
-    <span
-      className="cursor-text select-none"
-      role="button"
-      tabIndex={0}
+    <button
+      type="button"
+      className="cursor-text select-none appearance-none border-0 bg-transparent p-0 font-[inherit] text-[inherit]"
       onClick={() => onStartEdit(index)}
-      onKeyDown={(event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          onStartEdit(index);
-        }
-      }}
     >
       {formatValue(value)}
-    </span>
+    </button>
   );
 }
 

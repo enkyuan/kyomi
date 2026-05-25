@@ -1,21 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { z } from "zod";
 import { requireAuth } from "@/routes/-guards";
 import { Page } from "@modules/inbox";
 import { getInboxLoaderData } from "@modules/inbox/services/route-loader";
 
-const inboxSearchSchema = z.object({
-  filter: z.enum(["inbox", "today", "unread", "saved", "recent"]).optional(),
-  search: z.string().optional(),
-  feedId: z.string().optional(),
-  folderId: z.string().optional(),
-  itemId: z.string().optional(),
-  showHidden: z.literal("1").optional(),
-  showRead: z.literal("1").optional(),
-});
+type InboxSearch = {
+  filter?: "inbox" | "today" | "unread" | "saved" | "recent";
+  search?: string;
+  feedId?: string;
+  folderId?: string;
+  itemId?: string;
+  showHidden?: "1";
+  showRead?: "1";
+};
+
+function parseOptionalString(value: unknown) {
+  return typeof value === "string" && value.length > 0 ? value : undefined;
+}
+
+function validateInboxSearch(search: Record<string, unknown>): InboxSearch {
+  const filter =
+    search.filter === "inbox" ||
+    search.filter === "today" ||
+    search.filter === "unread" ||
+    search.filter === "saved" ||
+    search.filter === "recent"
+      ? search.filter
+      : undefined;
+
+  return {
+    filter,
+    search: parseOptionalString(search.search),
+    feedId: parseOptionalString(search.feedId),
+    folderId: parseOptionalString(search.folderId),
+    itemId: parseOptionalString(search.itemId),
+    showHidden: search.showHidden === "1" ? "1" : undefined,
+    showRead: search.showRead === "1" ? "1" : undefined,
+  };
+}
 
 export const Route = createFileRoute("/inbox/")({
-  validateSearch: (search) => inboxSearchSchema.parse(search),
+  validateSearch: validateInboxSearch,
   loader: async () => {
     const [, loaderData] = await Promise.all([requireAuth(), getInboxLoaderData()]);
     return loaderData;

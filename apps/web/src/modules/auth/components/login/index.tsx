@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import { useForm } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
 import { Link, useRouter } from "@tanstack/react-router";
-import { authClient } from "@lib/auth-client";
+import { authClient } from "@lib/auth/client";
 import { prefetchInboxFlow } from "@modules/inbox";
-import { useAuth } from "@integrations/better-auth/auth-provider";
+import { useAuth } from "@integrations/better-auth/provider";
 import { Button } from "@vols.rss/ui/button";
 import {
   Card,
@@ -22,7 +22,7 @@ import { Input } from "@vols.rss/ui/input";
 import { PasswordInput } from "@vols.rss/ui/password-input";
 import { Spinner } from "@vols.rss/ui/spinner";
 import { toastManager } from "@vols.rss/ui/toast";
-import { getFieldErrorMessage, loginDefaultValues, loginFormSchema } from "@modules/auth/schema";
+import { getFieldErrorMessage, loginDefaultValues, loginFormValidator } from "@modules/auth/schema";
 
 export function Login() {
   const router = useRouter();
@@ -31,8 +31,8 @@ export function Login() {
   const form = useForm({
     defaultValues: loginDefaultValues,
     validators: {
-      onChange: loginFormSchema,
-      onSubmit: loginFormSchema,
+      onChange: loginFormValidator,
+      onSubmit: loginFormValidator,
     },
     onSubmit: async ({ value }) => {
       await toastManager.promise(
@@ -48,7 +48,7 @@ export function Login() {
           }
 
           await Promise.all([router.invalidate(), prefetchInboxFlow(router, queryClient)]);
-          await router.navigate({ to: "/inbox" });
+          await router.navigate({ to: "/inbox", search: {} });
         })(),
         {
           error: (error) => ({
@@ -75,7 +75,7 @@ export function Login() {
   useEffect(() => {
     if (!isPending && isAuthenticated) {
       void prefetchInboxFlow(router, queryClient).finally(() => {
-        void router.navigate({ to: "/inbox" });
+        void router.navigate({ to: "/inbox", search: {} });
       });
     }
   }, [isAuthenticated, isPending, queryClient, router]);

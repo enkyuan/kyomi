@@ -4,7 +4,7 @@ import { Article } from "../article";
 import { EmptyStateIcon } from "@vols.rss/ui/icons/empty-state";
 import { ScrollAreaPrimitive, ScrollBar } from "@vols.rss/ui/scroll-area";
 import { Skeleton } from "@vols.rss/ui/skeleton";
-import type { ArticleDetailDto, InboxTimestampDisplayDto } from "src/lib/schemas";
+import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { Button } from "@vols.rss/ui/button";
 import { LeftFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
@@ -49,7 +49,7 @@ function createDetailBlurMask(start: number, end: number): string {
 }
 
 export type ReaderDetailState =
-  | { status: "selected"; item: ArticleDetailDto }
+  | { status: "selected"; item: ArticleDetailDto; isRefreshing?: boolean }
   | { status: "loading" }
   | { status: "error"; error: unknown }
   | { status: "empty" };
@@ -85,7 +85,7 @@ export function Detail({
     <section className="flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground md:min-h-0">
       <ScrollAreaPrimitive.Root className="relative min-h-0 flex-1 overflow-hidden">
         <ScrollAreaPrimitive.Viewport
-          className="h-full overflow-x-hidden outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain mask-t-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-y-start)))] mask-b-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-y-end)))] mask-l-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-x-start)))] mask-r-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-x-end)))] [--fade-size:1rem]"
+          className="h-full overflow-x-hidden outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain scroll-mask-y"
           data-reader-detail-viewport=""
           data-slot="scroll-area-viewport"
         >
@@ -112,6 +112,12 @@ export function Detail({
                     <LeftFill className="size-4" />
                     <span className="hidden md:inline">Back to feed</span>
                   </Button>
+                ) : null}
+                {detailState.isRefreshing ? (
+                  <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-background/70 px-2.5 py-1 text-muted-foreground text-xs">
+                    <span className="size-1.5 rounded-full bg-muted-foreground/45" />
+                    Updating article
+                  </div>
                 ) : null}
                 <Article
                   item={detailState.item}

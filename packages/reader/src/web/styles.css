@@ -1,4 +1,3 @@
-@import "katex/dist/katex.min.css";
 @import "highlight.js/styles/github-dark.css";
 
 .reader-content {
@@ -36,7 +35,10 @@
 .reader-content .article-body [data-reader-code-block] {
   --reader-code-outer-radius: 0.5rem;
   --reader-code-chrome-pad-start: 0.4rem;
-  --reader-code-button-radius: max(0px, calc(var(--reader-code-outer-radius) - var(--reader-code-chrome-pad-start)));
+  --reader-code-button-radius: max(
+    0px,
+    calc(var(--reader-code-outer-radius) - var(--reader-code-chrome-pad-start))
+  );
   margin: 1rem 0;
   overflow: hidden;
   border-radius: var(--reader-code-outer-radius);
@@ -98,7 +100,10 @@
   grid-area: 1 / 1;
   width: var(--rcb-icon-size, 16px);
   height: var(--rcb-icon-size, 16px);
-  transition: opacity 300ms ease, transform 300ms ease, filter 300ms ease;
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease,
+    filter 300ms ease;
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon-copy {
@@ -110,12 +115,20 @@
   transform: scale(0.25);
 }
 
-.reader-content .article-body [data-reader-code-block] .reader-code-copy-button.is-copied .rcb-icon-copy {
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  .reader-code-copy-button.is-copied
+  .rcb-icon-copy {
   opacity: 0;
   transform: scale(0.25);
 }
 
-.reader-content .article-body [data-reader-code-block] .reader-code-copy-button.is-copied .rcb-icon-check {
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  .reader-code-copy-button.is-copied
+  .rcb-icon-check {
   opacity: 1;
   transform: scale(1);
 }

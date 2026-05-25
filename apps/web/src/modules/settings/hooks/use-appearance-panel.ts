@@ -1,6 +1,6 @@
 "use client";
 
-import { useInboxPreferences } from "@modules/inbox/hooks/use-inbox-preferences";
+import { useInboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
 import { useReaderPreferences } from "@modules/reader/hooks/use-reader-preferences";
 
 export function useAppearancePanel() {

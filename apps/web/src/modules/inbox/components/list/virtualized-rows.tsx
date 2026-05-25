@@ -5,7 +5,7 @@ import { useRef, type FocusEvent, type PointerEvent, type RefObject } from "reac
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
-import { getFeedItemRowEstimate } from "@modules/inbox/lib/list-layout";
+import { getFeedItemRowEstimate } from "@modules/inbox/lib/layout";
 import { SkeletonRows, type RowsPaginationState } from "./feed-item-rows";
 
 export type VirtualizedRowsProps = {
@@ -97,7 +97,6 @@ export function VirtualizedRows({
 
   return (
     <div
-      ref={toolbarHostRef}
       className="relative w-full pb-4"
       style={{
         height: `${listContentHeight}px`,
@@ -138,6 +137,7 @@ export function VirtualizedRows({
           </div>
         );
       })}
+      <div ref={toolbarHostRef} className="pointer-events-none absolute inset-0" />
     </div>
   );
 }

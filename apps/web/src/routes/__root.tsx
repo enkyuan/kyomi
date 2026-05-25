@@ -5,18 +5,30 @@ import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanst
 import { Agentation } from "agentation";
 import { useEffect } from "react";
 import type { QueryClient } from "@tanstack/react-query";
-import AuthProvider from "@integrations/better-auth/auth-provider";
-import TanstackQueryProvider from "@integrations/tanstack-query/root-provider";
+import interLatinWoff2Url from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import AuthProvider from "@integrations/better-auth/provider";
+import TanstackQueryProvider from "@integrations/tanstack-query/provider";
+import { AppRuntimeEffects } from "@/app/runtime-effects";
 import { AnchoredToastProvider, ToastProvider } from "@vols.rss/ui/toast";
 import PostHogProvider from "@integrations/posthog/provider";
-import { getSession } from "@lib/auth-functions";
+import { getSession } from "@lib/auth/functions";
+import {
+  INBOX_PREFERENCES_STORAGE_KEY,
+  READER_PREFERENCES_STORAGE_KEY,
+  SHELL_STATE_STORAGE_KEY,
+  THEME_STORAGE_KEY,
+} from "@lib/shell/storage-keys";
+import {
+  INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME,
+  INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME,
+} from "@modules/inbox/lib/layout-persistence";
 import appCss from "../styles.css?url";
 
 interface MyRouterContext {
   queryClient: QueryClient;
 }
 
-const THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getItem('theme');var mode=(stored==='light'||stored==='dark'||stored==='auto')?stored:'dark';var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var resolved=mode==='auto'?(prefersDark?'dark':'light'):mode;var root=document.documentElement;root.classList.remove('light','dark');root.classList.add(resolved);if(mode==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',mode)}root.style.colorScheme=resolved;}catch(e){console.warn('theme init failed',e);}})();`;
+const SHELL_INIT_SCRIPT = `(function(){try{var root=document.documentElement;function readJson(key){try{var raw=window.localStorage.getItem(key);return raw?JSON.parse(raw):null}catch(e){return null}}function readCookie(name){var prefix=name+'=';var parts=document.cookie?document.cookie.split(';'):[];for(var i=0;i<parts.length;i++){var part=parts[i].trim();if(part.indexOf(prefix)===0)return decodeURIComponent(part.slice(prefix.length))}return null}var stored=window.localStorage.getItem(${JSON.stringify(THEME_STORAGE_KEY)});var mode=(stored==='light'||stored==='dark'||stored==='auto')?stored:'dark';var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var resolved=mode==='auto'?(prefersDark?'dark':'light'):mode;root.classList.remove('light','dark');root.classList.add(resolved);if(mode==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',mode)}root.style.colorScheme=resolved;var reader=readJson(${JSON.stringify(READER_PREFERENCES_STORAGE_KEY)})||{};if(typeof reader.fontSizePx==='number')root.style.setProperty('--reader-font-size',Math.round(reader.fontSizePx)+'px');if(reader.contentWidth==='narrow'||reader.contentWidth==='wide')root.dataset.readerContentWidth=reader.contentWidth;var inbox=readJson(${JSON.stringify(INBOX_PREFERENCES_STORAGE_KEY)})||{};if(typeof inbox.inboxFontSizePx==='number')root.style.setProperty('--inbox-font-size',Math.round(inbox.inboxFontSizePx)+'px');if(inbox.inboxDensity==='compact'||inbox.inboxDensity==='comfortable')root.dataset.inboxDensity=inbox.inboxDensity;if(inbox.articleOpenBehavior==='split'||inbox.articleOpenBehavior==='reader')root.dataset.inboxArticleOpenBehavior=inbox.articleOpenBehavior;var split=Number.parseFloat(readCookie(${JSON.stringify(INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME)})||'');if(Number.isFinite(split))root.style.setProperty('--inbox-left-panel-percent',split.toFixed(3)+'%');var articleOpenBehavior=readCookie(${JSON.stringify(INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME)});if(articleOpenBehavior==='split'||articleOpenBehavior==='reader')root.dataset.inboxArticleOpenBehavior=articleOpenBehavior;var sidebarOpen=readCookie('sidebar_state');if(sidebarOpen==='true'||sidebarOpen==='false')root.dataset.sidebarState=sidebarOpen==='true'?'expanded':'collapsed';var shell=readJson(${JSON.stringify(SHELL_STATE_STORAGE_KEY)})||{};if(typeof shell.inboxFilter==='string')root.dataset.inboxFilter=shell.inboxFilter;if(typeof shell.inboxLayout==='string')root.dataset.inboxLayout=shell.inboxLayout;if(typeof shell.selectedItemId==='string')root.dataset.selectedItemId=shell.selectedItemId;}catch(e){console.warn('shell init failed',e);}})();`;
 const REACT_SCAN_STORAGE_KEY = "vols.rss:dev:react-scan";
 const REACT_SCAN_QUERY_PARAM = "react-scan";
 
@@ -47,6 +59,13 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "preload",
+        href: interLatinWoff2Url,
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
       },
       {
         rel: "icon",
@@ -131,10 +150,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
-        {/* Inline theme init must be its own script: if `src` is set, browsers ignore inline body. */}
+        {/* Inline shell init must be its own script: if `src` is set, browsers ignore inline body. */}
         {/* eslint-disable-next-line react-doctor/no-danger */}
-        {/* oxlint-disable-next-line react/no-danger -- static first-paint theme bootstrap; not user HTML */}
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        {/* oxlint-disable-next-line react/no-danger -- static first-paint shell bootstrap; not user HTML */}
+        <script dangerouslySetInnerHTML={{ __html: SHELL_INIT_SCRIPT }} />
         <HeadContent />
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased wrap-anywhere selection:bg-[rgba(79,184,178,0.24)]">
@@ -142,7 +161,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           <ToastProvider>
             <AnchoredToastProvider>
               <TanstackQueryProvider>
-                <AuthProvider initialSession={initialSession}>{children}</AuthProvider>
+                <AuthProvider initialSession={initialSession}>
+                  <AppRuntimeEffects />
+                  {children}
+                </AuthProvider>
               </TanstackQueryProvider>
             </AnchoredToastProvider>
           </ToastProvider>

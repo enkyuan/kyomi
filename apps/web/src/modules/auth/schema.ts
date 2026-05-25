@@ -1,43 +1,98 @@
-import z from "zod";
+type ValidationErrorLike = {
+  message?: string;
+};
 
-const _emailFormatSchema = z.email({ error: "Enter a valid email address" });
+export type LoginFormValues = {
+  email: string;
+  password: string;
+};
 
-/** Trimmed, non-empty email for auth and account forms. */
-const authEmailSchema = z.string().trim().min(1, "Email is required").pipe(_emailFormatSchema);
+export type RegisterFormValues = LoginFormValues & {
+  confirmPassword: string;
+};
 
-export function isValidEmail(value: string): boolean {
-  return authEmailSchema.safeParse(value).success;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function normalizeEmail(value: string) {
+  return value.trim();
 }
 
-export const loginFormSchema = z.object({
-  email: authEmailSchema,
-  password: z.string().min(1, "Password is required"),
-});
+function getEmailError(value: string) {
+  const normalized = normalizeEmail(value);
+  if (!normalized) {
+    return "Email is required";
+  }
+  if (!EMAIL_PATTERN.test(normalized)) {
+    return "Enter a valid email address";
+  }
+  return null;
+}
 
-export const registerFormSchema = z
-  .object({
-    email: authEmailSchema,
-    password: z.string().min(8, "Password must be at least 8 characters long"),
-    confirmPassword: z.string().min(1, "Please confirm your password"),
-  })
-  .refine((value) => value.password === value.confirmPassword, {
-    path: ["confirmPassword"],
-    message: "Passwords don't match",
-  });
+export function isValidEmail(value: string): boolean {
+  return getEmailError(value) === null;
+}
 
-export const loginDefaultValues = {
+function getPasswordError(value: string) {
+  return value.length > 0 ? null : "Password is required";
+}
+
+function getRegisterPasswordError(value: string) {
+  return value.length >= 8 ? null : "Password must be at least 8 characters long";
+}
+
+function getConfirmPasswordError(password: string, confirmPassword: string) {
+  if (!confirmPassword.length) {
+    return "Please confirm your password";
+  }
+  if (password !== confirmPassword) {
+    return "Passwords don't match";
+  }
+  return null;
+}
+
+export function loginFormValidator({ value }: { value: LoginFormValues }) {
+  const errors: Partial<Record<keyof LoginFormValues, string>> = {};
+  const emailError = getEmailError(value.email);
+  const passwordError = getPasswordError(value.password);
+
+  if (emailError) {
+    errors.email = emailError;
+  }
+  if (passwordError) {
+    errors.password = passwordError;
+  }
+
+  return Object.keys(errors).length ? { fields: errors } : undefined;
+}
+
+export function registerFormValidator({ value }: { value: RegisterFormValues }) {
+  const errors: Partial<Record<keyof RegisterFormValues, string>> = {};
+  const emailError = getEmailError(value.email);
+  const passwordError = getRegisterPasswordError(value.password);
+  const confirmPasswordError = getConfirmPasswordError(value.password, value.confirmPassword);
+
+  if (emailError) {
+    errors.email = emailError;
+  }
+  if (passwordError) {
+    errors.password = passwordError;
+  }
+  if (confirmPasswordError) {
+    errors.confirmPassword = confirmPasswordError;
+  }
+
+  return Object.keys(errors).length ? { fields: errors } : undefined;
+}
+
+export const loginDefaultValues: LoginFormValues = {
   email: "",
   password: "",
-} satisfies z.input<typeof loginFormSchema>;
+};
 
-export const registerDefaultValues = {
+export const registerDefaultValues: RegisterFormValues = {
   email: "",
   password: "",
   confirmPassword: "",
-} satisfies z.input<typeof registerFormSchema>;
-
-type ValidationErrorLike = {
-  message?: string;
 };
 
 export function getFieldErrorMessage(errors: readonly unknown[], canShow: boolean) {

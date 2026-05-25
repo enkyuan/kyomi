@@ -1,7 +1,12 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { invalidateFeedAndInboxQueries } from "@modules/inbox/queries/options";
-import { getFeedDetail, refreshFeed } from "../api";
+import { getFeedDetail, refreshFeed, type FeedDetail } from "../api";
+import {
+  applyFeedRefreshQueued,
+  getFollowedFeedsSnapshot,
+  restoreFeedCacheSnapshot,
+} from "../queries/cache";
 
 export function useFeedRefresh(feedId: string) {
   const queryClient = useQueryClient();
@@ -11,6 +16,22 @@ export function useFeedRefresh(feedId: string) {
     mutationFn: async () => {
       // Explicit refresh action: only this mutation enqueues refresh work.
       return refreshFeed({ data: { feedId } });
+    },
+    onMutate: async () => {
+      await Promise.all([
+        queryClient.cancelQueries({ queryKey: ["feed-detail", feedId] }),
+        queryClient.cancelQueries({ queryKey: ["feeds", "followed"] }),
+      ]);
+      const previousDetail = queryClient.getQueryData<FeedDetail>(["feed-detail", feedId]);
+      const followedFeedsSnapshot = getFollowedFeedsSnapshot(queryClient);
+      applyFeedRefreshQueued(queryClient, feedId);
+      return { followedFeedsSnapshot, previousDetail };
+    },
+    onError: (_error, _variables, context) => {
+      if (context?.previousDetail) {
+        queryClient.setQueryData(["feed-detail", feedId], context.previousDetail);
+      }
+      restoreFeedCacheSnapshot(queryClient, context?.followedFeedsSnapshot);
     },
     onSuccess: () => {
       invalidateFeedAndInboxQueries(queryClient);

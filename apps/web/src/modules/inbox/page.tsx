@@ -1,26 +1,31 @@
+/* oxlint-disable max-lines */
 "use client";
 
 import { AppShell } from "@/app/app-shell";
 import { Detail } from "@modules/reader/components/detail";
-import { MIN_INBOX_LEFT_PERCENT, MIN_INBOX_RIGHT_PERCENT } from "./lib/constants";
+import { MIN_INBOX_LEFT_PERCENT, MIN_INBOX_RIGHT_PERCENT } from "./lib/layout";
 import { MobileLayout, ReaderFocusDetailLayout, SplitLayout } from "./layouts";
 import { useQuery } from "@tanstack/react-query";
 import { List } from "./components/list";
 import {
   InboxPreferencesBootstrapProvider,
-  useInboxPreferences,
   type InboxPreferences,
-} from "@modules/inbox/hooks/use-inbox-preferences";
-import { dedupePagedInboxItemsById, useInboxQueries } from "@modules/inbox/hooks/use-inbox-queries";
-import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-item-state-mutation";
-import { useInboxRouteState } from "@modules/inbox/hooks/use-route-state";
-import { useMarkReadBehavior } from "@modules/inbox/hooks/use-mark-read-behavior";
-import { useResponsiveReaderMode } from "@modules/inbox/hooks/use-responsive-reader-mode";
-import { useSplitPane } from "@modules/inbox/hooks/use-split-pane";
+  dedupePagedInboxItemsById,
+  useInboxItemStateMutation,
+  useInboxPreferences,
+  useInboxQueries,
+} from "@modules/inbox/hooks/use-inbox-data";
+import {
+  useInboxRouteState,
+  useMarkReadBehavior,
+  useResponsiveReaderMode,
+  useSplitPane,
+} from "@modules/inbox/hooks/use-inbox-layout";
 import { getInboxViewCount, type InboxItem } from "@modules/inbox/services/api";
 import { useTimezone } from "@hooks/use-timezone";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
-import { QUERY_TIMES } from "@lib/query-policies";
+import { QUERY_TIMES } from "@lib/query/policies";
+import { writeShellStateSnapshot } from "@lib/shell/state";
 import { deriveInboxListHeaderCount } from "@modules/inbox/utils/count-display";
 import { inboxViewCountQueryKey } from "@modules/inbox/queries/options";
 
@@ -153,8 +158,6 @@ function InboxPageContent({
   );
 
   const selectedItem = detailQuery.data?.item ?? null;
-  const isDetailLoading = detailQuery.isFetching;
-  const isDetailError = detailQuery.isError;
 
   const markReadMutation = useInboxItemStateMutation();
 
@@ -203,6 +206,14 @@ function InboxPageContent({
   }, [effectiveFilter, feedId, folderId]);
 
   useEffect(() => {
+    writeShellStateSnapshot({
+      inboxFilter: effectiveFilter,
+      inboxLayout: layoutVariant,
+      selectedItemId: itemId ?? null,
+    });
+  }, [effectiveFilter, itemId, layoutVariant]);
+
+  useEffect(() => {
     if (
       !isReaderFocusedLayout ||
       itemId ||
@@ -231,92 +242,41 @@ function InboxPageContent({
     navigate,
   ]);
 
-  const listProps = useMemo(
-    () => ({
-      inboxItems,
-      headerCount,
-      filter: effectiveFilter,
-      display: {
-        showFavicons: preferences.inboxShowFavicons,
-        disableVirtualization: isResizing,
-      },
-      filterVisibility: {
-        showHidden: showHiddenItems,
-        showRead: showReadItems,
-      },
-      density: preferences.inboxDensity,
-      fontSizePx: preferences.inboxFontSizePx,
-      timestampDisplay: preferences.inboxTimestampDisplay,
-      timestampHourCycle: preferences.inboxTimestampHourCycle,
-      selectedItemId: itemId,
-      feedId,
-      folderId,
-      pagination: {
-        isLoading: inboxQuery.isPending,
-        hasNextPage: !!inboxQuery.hasNextPage,
-        isFetchingNextPage: inboxQuery.isFetchingNextPage,
-        fetchNextPage: fetchNextInboxPage,
-      },
-      onSelectItem: selectItem,
-    }),
-    [
-      effectiveFilter,
-      feedId,
-      folderId,
-      fetchNextInboxPage,
-      headerCount,
-      inboxItems,
-      inboxQuery.isFetchingNextPage,
-      inboxQuery.hasNextPage,
-      inboxQuery.isPending,
-      isResizing,
-      preferences.inboxDensity,
-      preferences.inboxFontSizePx,
-      preferences.inboxShowFavicons,
-      preferences.inboxTimestampDisplay,
-      preferences.inboxTimestampHourCycle,
-      itemId,
-      selectItem,
-      showHiddenItems,
-      showReadItems,
-    ],
+  const listElement = (
+    <InboxListSection
+      effectiveFilter={effectiveFilter}
+      feedId={feedId}
+      folderId={folderId}
+      itemId={itemId}
+      showHiddenItems={showHiddenItems}
+      showReadItems={showReadItems}
+      preferences={preferences}
+      inboxItems={inboxItems}
+      headerCount={headerCount}
+      inboxQuery={inboxQuery}
+      isResizing={isResizing}
+      fetchNextInboxPage={fetchNextInboxPage}
+      selectItem={selectItem}
+    />
   );
 
-  const detailProps = useMemo(
-    () => ({
-      detailState: selectedItem
-        ? ({ status: "selected", item: selectedItem } as const)
-        : isDetailLoading
-          ? ({ status: "loading" } as const)
-          : isDetailError
-            ? ({ status: "error", error: detailQuery.error } as const)
-            : ({ status: "empty" } as const),
-      showFavicons: preferences.inboxShowFavicons,
-      timestampDisplay: preferences.inboxTimestampDisplay,
-      timestampHourCycle: preferences.inboxTimestampHourCycle,
-    }),
-    [
-      detailQuery.error,
-      isDetailError,
-      isDetailLoading,
-      preferences.inboxShowFavicons,
-      preferences.inboxTimestampDisplay,
-      preferences.inboxTimestampHourCycle,
-      selectedItem,
-    ],
+  const detailElementWithBack = (
+    <InboxDetailSection
+      preferences={preferences}
+      detailQuery={detailQuery}
+      selectedItem={selectedItem}
+      showBackToList
+      clearSelectedItem={clearSelectedItem}
+    />
   );
 
-  const listElement = useMemo(
-    () => <List {...listProps} display={{ ...listProps.display, readerFocusMode: false }} />,
-    [listProps],
+  const detailElement = (
+    <InboxDetailSection
+      preferences={preferences}
+      detailQuery={detailQuery}
+      selectedItem={selectedItem}
+    />
   );
-
-  const detailElementWithBack = useMemo(
-    () => <Detail {...detailProps} showBackToList onBackToList={clearSelectedItem} />,
-    [detailProps, clearSelectedItem],
-  );
-
-  const detailElement = useMemo(() => <Detail {...detailProps} />, [detailProps]);
 
   return (
     <AppShell readerFocusMode={isReaderFocusedLayout}>
@@ -342,5 +302,140 @@ function InboxPageContent({
         )}
       </div>
     </AppShell>
+  );
+}
+
+function InboxListSection({
+  effectiveFilter,
+  feedId,
+  folderId,
+  itemId,
+  showHiddenItems,
+  showReadItems,
+  preferences,
+  inboxItems,
+  headerCount,
+  inboxQuery,
+  isResizing,
+  fetchNextInboxPage,
+  selectItem,
+}: {
+  effectiveFilter: ReturnType<typeof useInboxRouteState>["effectiveFilter"];
+  feedId: string | undefined;
+  folderId: string | undefined;
+  itemId: string | undefined;
+  showHiddenItems: boolean;
+  showReadItems: boolean;
+  preferences: InboxPreferences;
+  inboxItems: InboxItem[];
+  headerCount: ReturnType<typeof deriveInboxListHeaderCount>;
+  inboxQuery: ReturnType<typeof useInboxQueries>["inboxQuery"];
+  isResizing: boolean;
+  fetchNextInboxPage: () => void;
+  selectItem: (item: InboxItem) => void;
+}) {
+  const listProps = useMemo(
+    () => ({
+      inboxItems,
+      headerCount,
+      filter: effectiveFilter,
+      display: {
+        showFavicons: preferences.inboxShowFavicons,
+        disableVirtualization: isResizing,
+      },
+      filterVisibility: {
+        showHidden: showHiddenItems,
+        showRead: showReadItems,
+      },
+      density: preferences.inboxDensity,
+      fontSizePx: preferences.inboxFontSizePx,
+      timestampDisplay: preferences.inboxTimestampDisplay,
+      timestampHourCycle: preferences.inboxTimestampHourCycle,
+      selectedItemId: itemId,
+      feedId,
+      folderId,
+      pagination: {
+        isLoading: inboxQuery.isPending && inboxItems.length === 0,
+        isRefreshing:
+          inboxQuery.isFetching && !inboxQuery.isFetchingNextPage && inboxItems.length > 0,
+        hasNextPage: !!inboxQuery.hasNextPage,
+        isFetchingNextPage: inboxQuery.isFetchingNextPage,
+        fetchNextPage: fetchNextInboxPage,
+      },
+      onSelectItem: selectItem,
+    }),
+    [
+      effectiveFilter,
+      feedId,
+      folderId,
+      fetchNextInboxPage,
+      headerCount,
+      inboxItems,
+      inboxQuery.isFetchingNextPage,
+      inboxQuery.isFetching,
+      inboxQuery.hasNextPage,
+      inboxQuery.isPending,
+      isResizing,
+      preferences.inboxDensity,
+      preferences.inboxFontSizePx,
+      preferences.inboxShowFavicons,
+      preferences.inboxTimestampDisplay,
+      preferences.inboxTimestampHourCycle,
+      itemId,
+      selectItem,
+      showHiddenItems,
+      showReadItems,
+    ],
+  );
+
+  return <List {...listProps} display={{ ...listProps.display, readerFocusMode: false }} />;
+}
+
+function InboxDetailSection({
+  preferences,
+  detailQuery,
+  selectedItem,
+  clearSelectedItem,
+  showBackToList,
+}: {
+  preferences: InboxPreferences;
+  detailQuery: ReturnType<typeof useInboxQueries>["detailQuery"];
+  selectedItem:
+    | NonNullable<ReturnType<typeof useInboxQueries>["detailQuery"]["data"]>["item"]
+    | null;
+  clearSelectedItem?: () => void;
+  showBackToList?: boolean;
+}) {
+  const isDetailRefreshing = detailQuery.isFetching && Boolean(selectedItem);
+  const isDetailLoading = detailQuery.isFetching && !selectedItem;
+  const isDetailError = detailQuery.isError;
+
+  const detailProps = useMemo(
+    () => ({
+      detailState: selectedItem
+        ? ({ status: "selected", item: selectedItem, isRefreshing: isDetailRefreshing } as const)
+        : isDetailLoading
+          ? ({ status: "loading" } as const)
+          : isDetailError
+            ? ({ status: "error", error: detailQuery.error } as const)
+            : ({ status: "empty" } as const),
+      showFavicons: preferences.inboxShowFavicons,
+      timestampDisplay: preferences.inboxTimestampDisplay,
+      timestampHourCycle: preferences.inboxTimestampHourCycle,
+    }),
+    [
+      detailQuery.error,
+      isDetailError,
+      isDetailLoading,
+      isDetailRefreshing,
+      preferences.inboxShowFavicons,
+      preferences.inboxTimestampDisplay,
+      preferences.inboxTimestampHourCycle,
+      selectedItem,
+    ],
+  );
+
+  return (
+    <Detail {...detailProps} showBackToList={showBackToList} onBackToList={clearSelectedItem} />
   );
 }

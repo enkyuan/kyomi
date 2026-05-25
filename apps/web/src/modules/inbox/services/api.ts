@@ -1,16 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders } from "@lib/api";
-import {
-  apiJsonValidated,
-  articleCountsSchema,
-  articleDetailSchema,
-  cursorListResponseSchema,
-  extractFullTextResponseSchema,
-  type ArticleDetailDto,
-  type ExtractFullTextResponseDto,
-} from "src/lib/schemas";
-import { z } from "zod";
+import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/schemas";
 import {
   buildArticlesUrl,
   buildCountsSearchParams,
@@ -20,6 +11,30 @@ import {
 } from "./query-urls";
 
 export type { InboxFilter } from "./query-urls";
+
+let inboxSchemaModulePromise:
+  | Promise<
+      Pick<
+        typeof import("@lib/schemas"),
+        | "apiJsonValidated"
+        | "articleCountsSchema"
+        | "articleDetailSchema"
+        | "cursorListResponseSchema"
+        | "extractFullTextResponseSchema"
+      >
+    >
+  | undefined;
+
+function getInboxSchemaModule() {
+  inboxSchemaModulePromise ??= import("@lib/schemas").then((module) => ({
+    apiJsonValidated: module.apiJsonValidated,
+    articleCountsSchema: module.articleCountsSchema,
+    articleDetailSchema: module.articleDetailSchema,
+    cursorListResponseSchema: module.cursorListResponseSchema,
+    extractFullTextResponseSchema: module.extractFullTextResponseSchema,
+  }));
+  return inboxSchemaModulePromise;
+}
 
 export type InboxItem = {
   id: string;
@@ -34,8 +49,19 @@ export type InboxItem = {
   isSaved: boolean;
 };
 
-type CursorListResponse = z.infer<typeof cursorListResponseSchema>;
-type ArticleCountsResponse = z.infer<typeof articleCountsSchema>;
+type CursorListResponse = {
+  items: InboxItem[];
+  next_cursor: string | null;
+  has_more: boolean;
+  total_count: number | null;
+};
+
+type ArticleCountsResponse = {
+  all?: number;
+  unread: number;
+  saved: number;
+  today?: number;
+};
 
 type SidebarInboxCounts = {
   all: number;
@@ -105,6 +131,7 @@ async function fetchInboxList({
   cursor: string | undefined;
   headers: Headers;
 }): Promise<CursorListResponse> {
+  const { apiJsonValidated, cursorListResponseSchema } = await getInboxSchemaModule();
   return apiJsonValidated(cursorListResponseSchema, () =>
     apiJson<CursorListResponse>(
       buildInboxListUrl({ filter, timezoneOffsetMinutes, includeRead, search, cursor }),
@@ -118,6 +145,7 @@ async function fetchInboxList({
 export const getInboxItems = createServerFn({ method: "GET" })
   .inputValidator((input: GetInboxItemsInput) => input)
   .handler(async ({ data }): Promise<InboxResponse> => {
+    const { apiJsonValidated, cursorListResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const filter = data.filter ?? "inbox";
     const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
@@ -162,6 +190,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
 export const getInboxItemDetail = createServerFn({ method: "GET" })
   .inputValidator((input: { itemId: string }) => input)
   .handler(async ({ data }): Promise<InboxDetailResponse> => {
+    const { apiJsonValidated, articleDetailSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const item = await apiJsonValidated(articleDetailSchema, () =>
       apiJson<ArticleDetailDto>(`/api/v1/articles/${data.itemId}`, {
@@ -197,6 +226,7 @@ export const updateInboxItemState = createServerFn({ method: "POST" })
 export const extractInboxItemFullText = createServerFn({ method: "POST" })
   .inputValidator((input: { itemId: string }) => input)
   .handler(async ({ data }): Promise<ExtractFullTextResponseDto> => {
+    const { apiJsonValidated, extractFullTextResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
 
@@ -213,6 +243,7 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
     (input: { timezoneOffsetMinutes?: number; feedId?: string; folderId?: string }) => input,
   )
   .handler(async ({ data }): Promise<SidebarInboxCounts> => {
+    const { apiJsonValidated, articleCountsSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
     const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
@@ -250,6 +281,7 @@ export const getInboxViewCount = createServerFn({ method: "GET" })
     }) => input,
   )
   .handler(async ({ data }): Promise<ScopedUnreadCountResponse> => {
+    const { apiJsonValidated, articleCountsSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
     const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)

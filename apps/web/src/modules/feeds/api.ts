@@ -1,29 +1,53 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders } from "@lib/api";
-import {
-  apiJsonValidated,
-  discoverFeedResultSchema,
-  feedDetailSchema,
-  feedRefreshStatusListSchema,
-  feedRefreshStatusRowSchema,
-  followFeedResultSchema,
-  followedFeedsListSchema,
-  messageResponseSchema,
-  type DiscoverFeedResultDto,
-  type FeedDetailDto,
-  type FollowFeedResultDto,
-  type FollowedFeedDto,
-} from "src/lib/schemas";
-import { z } from "zod";
+import type {
+  DiscoverFeedResultDto,
+  FeedDetailDto,
+  FollowFeedResultDto,
+  FollowedFeedDto,
+} from "@lib/schemas";
 
 export type DiscoverFeedResult = DiscoverFeedResultDto;
 export type FollowFeedResult = FollowFeedResultDto;
 export type FollowedFeed = FollowedFeedDto;
 export type FeedDetail = FeedDetailDto;
 
+let feedsSchemaModulePromise:
+  | Promise<
+      Pick<
+        typeof import("@lib/schemas"),
+        | "apiJsonValidated"
+        | "discoverFeedResultSchema"
+        | "feedDetailSchema"
+        | "feedRefreshStatusListSchema"
+        | "followFeedResultSchema"
+        | "followedFeedsListSchema"
+        | "messageResponseSchema"
+      >
+    >
+  | undefined;
+
+function getFeedsSchemaModule() {
+  feedsSchemaModulePromise ??= import("@lib/schemas").then((module) => ({
+    apiJsonValidated: module.apiJsonValidated,
+    discoverFeedResultSchema: module.discoverFeedResultSchema,
+    feedDetailSchema: module.feedDetailSchema,
+    feedRefreshStatusListSchema: module.feedRefreshStatusListSchema,
+    followFeedResultSchema: module.followFeedResultSchema,
+    followedFeedsListSchema: module.followedFeedsListSchema,
+    messageResponseSchema: module.messageResponseSchema,
+  }));
+  return feedsSchemaModulePromise;
+}
+
 type FollowedFeedsResponse = {
   items: FollowedFeedDto[];
+};
+
+export type FeedRefreshStatusRow = {
+  feedId: string;
+  refreshStatus: string;
 };
 
 const DISCOVER_PREVIEW_REQUEST_TIMEOUT_MS = 8_000;
@@ -70,6 +94,7 @@ function buildRefreshStatusUrl(folderId?: string) {
 export const searchFeeds = createServerFn({ method: "GET" })
   .inputValidator((input: { query: string }) => input)
   .handler(async ({ data }): Promise<DiscoverFeedResult[]> => {
+    const { apiJsonValidated, discoverFeedResultSchema } = await getFeedsSchemaModule();
     const query = data.query.trim();
 
     if (!query) {
@@ -116,7 +141,7 @@ export const searchFeeds = createServerFn({ method: "GET" })
     }
 
     try {
-      return await apiJsonValidated(z.array(discoverFeedResultSchema), () =>
+      return await apiJsonValidated(discoverFeedResultSchema.array(), () =>
         apiJson<DiscoverFeedResult[]>(
           `/api/v1/discover/search?q=${encodeURIComponent(query)}&limit=8`,
           {
@@ -133,6 +158,7 @@ export const searchFeeds = createServerFn({ method: "GET" })
 export const followFeed = createServerFn({ method: "POST" })
   .inputValidator((input: { url: string }) => input)
   .handler(async ({ data }): Promise<FollowFeedResult> => {
+    const { apiJsonValidated, followFeedResultSchema } = await getFeedsSchemaModule();
     const normalizedUrl = normalizeUrlCandidate(data.url.trim());
     if (!normalizedUrl) {
       throw new Error("Invalid feed URL");
@@ -150,10 +176,9 @@ export const followFeed = createServerFn({ method: "POST" })
     );
   });
 
-export type FeedRefreshStatusRow = z.infer<typeof feedRefreshStatusRowSchema>;
-
 export const listFollowedFeeds = createServerFn({ method: "GET" }).handler(
   async (): Promise<FollowedFeed[]> => {
+    const { apiJsonValidated, followedFeedsListSchema } = await getFeedsSchemaModule();
     const headers = buildForwardHeaders(getRequestHeaders());
     const response = await apiJsonValidated(followedFeedsListSchema, () =>
       apiJson<FollowedFeedsResponse>("/api/v1/feeds", {
@@ -167,6 +192,7 @@ export const listFollowedFeeds = createServerFn({ method: "GET" }).handler(
 export const listFeedRefreshStatuses = createServerFn({ method: "GET" })
   .inputValidator((input: { folderId?: string } | void) => input ?? {})
   .handler(async ({ data }): Promise<FeedRefreshStatusRow[]> => {
+    const { apiJsonValidated, feedRefreshStatusListSchema } = await getFeedsSchemaModule();
     const headers = buildForwardHeaders(getRequestHeaders());
     const response = await apiJsonValidated(feedRefreshStatusListSchema, () =>
       apiJson<{ items: FeedRefreshStatusRow[] }>(buildRefreshStatusUrl(data.folderId), { headers }),
@@ -229,6 +255,7 @@ export const refreshBatchFeeds = createServerFn({ method: "POST" })
 export const getFeedDetail = createServerFn({ method: "GET" })
   .inputValidator((input: { feedId: string }) => input)
   .handler(async ({ data }): Promise<FeedDetail> => {
+    const { apiJsonValidated, feedDetailSchema } = await getFeedsSchemaModule();
     const headers = buildForwardHeaders(getRequestHeaders());
     return apiJsonValidated(feedDetailSchema, () =>
       apiJson<FeedDetail>(`/api/v1/feeds/${encodeURIComponent(data.feedId)}`, {
@@ -243,6 +270,7 @@ export const updateFeedSubscription = createServerFn({ method: "POST" })
     (input: { feedId: string; customTitle?: string | null; isPinned?: boolean }) => input,
   )
   .handler(async ({ data }): Promise<{ message: string }> => {
+    const { apiJsonValidated, messageResponseSchema } = await getFeedsSchemaModule();
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");
 

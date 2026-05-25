@@ -15,6 +15,7 @@ export async function handleMcpRequest(request: Request, server: McpServer): Pro
       responseData = message;
     };
 
+    // eslint-disable-next-line react-doctor/async-parallel
     await server.connect(serverTransport);
 
     await Promise.all([clientTransport.start(), serverTransport.start()]);

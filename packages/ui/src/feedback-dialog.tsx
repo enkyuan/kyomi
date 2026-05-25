@@ -27,13 +27,29 @@ import { Form } from "./form";
 import { Textarea } from "./textarea";
 
 type FeedbackDialogProps = {
-  trigger: React.ReactElement;
+  hideTrigger?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  open?: boolean;
+  trigger?: React.ReactElement;
 };
 
-export function FeedbackDialog({ trigger }: FeedbackDialogProps) {
-  const [dialogOpen, setDialogOpen] = useState(false);
+export function FeedbackDialog({
+  hideTrigger = false,
+  onOpenChange,
+  open,
+  trigger,
+}: FeedbackDialogProps) {
+  const [internalOpen, setInternalOpen] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [value, setValue] = useState("");
+  const dialogOpen = open ?? internalOpen;
+
+  const setDialogOpen = (nextOpen: boolean) => {
+    if (open === undefined) {
+      setInternalOpen(nextOpen);
+    }
+    onOpenChange?.(nextOpen);
+  };
 
   return (
     <Dialog
@@ -46,7 +62,7 @@ export function FeedbackDialog({ trigger }: FeedbackDialogProps) {
       }}
       open={dialogOpen}
     >
-      <DialogTrigger render={trigger} />
+      {!hideTrigger && trigger ? <DialogTrigger render={trigger} /> : null}
       <DialogPopup showCloseButton={false}>
         <DialogHeader>
           <DialogTitle>Share feedback</DialogTitle>

@@ -1,9 +1,20 @@
 "use client";
 
-import { memo } from "react";
+import { memo, useEffect, useMemo, useState } from "react";
 import type { ReaderLayoutMode } from "../../core";
-import { readerMarkdownToHtml } from "../../shared/reader-markdown-html";
+import { hasLikelyMarkdownMath, readerMarkdownToHtml } from "../../shared/reader-markdown-html";
 import { RenderHtml } from "../html";
+
+let katexRuntimePromise:
+  | Promise<Pick<typeof import("../katex-runtime"), "renderMarkdownWithKatex">>
+  | undefined;
+
+function getKatexRuntime() {
+  katexRuntimePromise ??= import("../katex-runtime").then((module) => ({
+    renderMarkdownWithKatex: module.renderMarkdownWithKatex,
+  }));
+  return katexRuntimePromise;
+}
 
 export const RenderMarkdown = memo(function RenderMarkdown({
   markdown,
@@ -18,7 +29,36 @@ export const RenderMarkdown = memo(function RenderMarkdown({
   showLinkPreviews?: boolean;
   layoutMode?: ReaderLayoutMode;
 }) {
-  const html = readerMarkdownToHtml(markdown, { baseUrl, openLinksInNewTab });
+  const [mathHtml, setMathHtml] = useState<string | null>(null);
+  const shouldLoadKatex = useMemo(() => hasLikelyMarkdownMath(markdown), [markdown]);
+  const plainHtml = useMemo(
+    () => readerMarkdownToHtml(markdown, { baseUrl, openLinksInNewTab }),
+    [markdown, baseUrl, openLinksInNewTab],
+  );
+
+  useEffect(() => {
+    if (!shouldLoadKatex) {
+      setMathHtml(null);
+      return;
+    }
+
+    let isCancelled = false;
+    setMathHtml(null);
+
+    void getKatexRuntime().then(({ renderMarkdownWithKatex }) => {
+      if (isCancelled) {
+        return;
+      }
+      setMathHtml(renderMarkdownWithKatex(markdown, { baseUrl, openLinksInNewTab }));
+    });
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [shouldLoadKatex, markdown, baseUrl, openLinksInNewTab]);
+
+  const html = mathHtml ?? plainHtml;
+
   return (
     <RenderHtml
       html={html}

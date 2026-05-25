@@ -38,6 +38,7 @@ export function InputGroup({
         className,
       )}
       data-slot="input-group"
+      // eslint-disable-next-line jsx-a11y/prefer-tag-over-role -- role="group" on div is correct ARIA for a composite input widget; <address> is semantically contact info
       role="group"
       {...props}
     />

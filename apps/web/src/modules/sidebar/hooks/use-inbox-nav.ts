@@ -3,8 +3,8 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import type { InboxFilter } from "@modules/inbox/services/api";
-import { useInboxPreferences } from "@modules/inbox/hooks/use-inbox-preferences";
-import { prefetchInboxFlow } from "@modules/inbox/lib/prefetch";
+import { useInboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
+import { prefetchInboxFlow } from "@modules/inbox/lib/navigation";
 import {
   isInboxNavItemActive,
   resolveInboxNavItems,

@@ -3,9 +3,9 @@
 import type React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { toastManager } from "@vols.rss/ui/toast";
-import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-item-state-mutation";
+import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-data";
 import { useMediaQuery } from "@hooks/use-media-query";
-import type { ArticleDetailDto, ExtractFullTextResponseDto } from "src/lib/schemas";
+import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/schemas";
 import { readerContentForMode } from "../reader-display";
 import { useArticleExtraction } from "./use-article-extraction";
 import { useReaderPreferences, type ReaderContentWidth } from "./use-reader-preferences";
@@ -157,6 +157,7 @@ export function useReaderToolbarModel({
     runExtract("auto");
   }, [extractMutation.isPending, item.id, runExtract, shouldAutoExtract]);
 
+  // oxlint-disable-next-line react-doctor/no-adjust-state-on-prop-change
   useEffect(() => {
     if (isMobile) {
       return;

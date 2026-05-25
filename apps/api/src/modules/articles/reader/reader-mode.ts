@@ -1,4 +1,4 @@
-import type { ArticleReaderContentDto, ExtractedContentStatus } from "./content.types";
+import type { ArticleReaderContentDto, ExtractedContentStatus } from "./content-types";
 import type { ArticleReaderDto } from "../types";
 
 export type ReaderMode = "original" | "extracted";

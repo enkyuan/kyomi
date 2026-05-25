@@ -48,7 +48,7 @@ export function StaticRows({
   };
 
   return (
-    <div ref={toolbarHostRef} className="relative w-full pb-4">
+    <div className="relative w-full pb-4">
       {inboxItems.map((item, index) => (
         <div key={item.id} className="group/inbox-row relative w-full">
           <Item
@@ -70,6 +70,7 @@ export function StaticRows({
           />
         </div>
       ))}
+      <div ref={toolbarHostRef} className="pointer-events-none absolute inset-0" />
     </div>
   );
 }

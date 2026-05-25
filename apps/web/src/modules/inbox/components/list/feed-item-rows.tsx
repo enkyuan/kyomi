@@ -8,10 +8,11 @@ import {
   MAX_SKELETON_ROWS,
   MIN_SKELETON_ROWS,
   SKELETON_OVERSCAN_ROWS,
-} from "@modules/inbox/lib/list-layout";
+} from "@modules/inbox/lib/layout";
 
 export type RowsPaginationState = {
   isLoading: boolean;
+  isRefreshing: boolean;
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
   fetchNextPage: () => void;

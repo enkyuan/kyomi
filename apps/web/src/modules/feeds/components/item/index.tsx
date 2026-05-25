@@ -53,7 +53,7 @@ export const Item = memo(function Item({
   return (
     <Card
       className={cn(
-        "group/inbox-item relative w-full cursor-pointer gap-0 overflow-visible rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform active:scale-[0.996] motion-reduce:active:scale-100",
+        "group/inbox-item relative w-full cursor-pointer gap-0 overflow-visible rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-[background-color,color,transform] duration-150 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform active:scale-[0.996] motion-reduce:active:scale-100",
         isFirst ? "border-t-0" : "border-t",
         showBottomSeparator ? "border-b" : "border-b-0",
         isSelected || item.isRead ? "bg-background" : "hover:bg-background/70",

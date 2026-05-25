@@ -11,7 +11,7 @@ import {
 import { buildArticleReaderDto } from "../reader/reader-mode";
 import { articleIsReadSql } from "./sql";
 import type { ArticleDetailDto } from "../types";
-import type { ExtractedContentStatus } from "../reader/content.types";
+import type { ExtractedContentStatus } from "../reader/content-types";
 
 type DB = typeof db;
 

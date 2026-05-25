@@ -1,7 +1,7 @@
 "use client";
 
+import { Suspense, useState } from "react";
 import { ArrowUpCircleFill, Chat3Fill, Settings3Fill } from "@mingcute/react";
-import { FeedbackDialog } from "@vols.rss/ui/feedback-dialog";
 import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar-mode-animated-text";
 import {
   SidebarFooter,
@@ -9,6 +9,9 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@vols.rss/ui/sidebar";
+import { lazyNamed } from "@lib/lazy-named";
+
+const FeedbackDialog = lazyNamed(() => import("@vols.rss/ui/feedback-dialog"), "FeedbackDialog");
 
 const FOOTER_ICONS = {
   upgrade: ArrowUpCircleFill,
@@ -23,6 +26,14 @@ const FOOTER_NAV = [
 ];
 
 export function FooterActions({ onOpenSettings }: { onOpenSettings: () => void }) {
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
+  const [feedbackDialogLoaded, setFeedbackDialogLoaded] = useState(false);
+
+  const preloadFeedbackDialog = () => {
+    setFeedbackDialogLoaded(true);
+    void FeedbackDialog.preload();
+  };
+
   return (
     <SidebarFooter className="px-2 pb-2 pt-0">
       <SidebarMenu>
@@ -34,14 +45,30 @@ export function FooterActions({ onOpenSettings }: { onOpenSettings: () => void }
           return (
             <SidebarMenuItem key={item.label}>
               {item.label === "Feedback" ? (
-                <FeedbackDialog
-                  trigger={
-                    <SidebarMenuButton tooltip={item.label} className="opacity-72">
-                      <Icon />
-                      <SidebarModeAnimatedText>{item.label}</SidebarModeAnimatedText>
-                    </SidebarMenuButton>
-                  }
-                />
+                <>
+                  <SidebarMenuButton
+                    tooltip={item.label}
+                    className="opacity-72"
+                    onClick={() => {
+                      preloadFeedbackDialog();
+                      setFeedbackOpen(true);
+                    }}
+                    onFocus={preloadFeedbackDialog}
+                    onPointerEnter={preloadFeedbackDialog}
+                  >
+                    <Icon />
+                    <SidebarModeAnimatedText>{item.label}</SidebarModeAnimatedText>
+                  </SidebarMenuButton>
+                  <Suspense fallback={null}>
+                    {feedbackDialogLoaded ? (
+                      <FeedbackDialog
+                        hideTrigger
+                        open={feedbackOpen}
+                        onOpenChange={setFeedbackOpen}
+                      />
+                    ) : null}
+                  </Suspense>
+                </>
               ) : (
                 <SidebarMenuButton
                   tooltip={item.label}

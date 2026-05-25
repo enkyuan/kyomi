@@ -1,13 +1,33 @@
-/**
- * Authenticated route stack (Better Auth session in Postgres).
- * Apply on the **same** `Elysia` instance as your routes — do not nest a separate
- * pre-built `Elysia` for auth: Elysia 1.x will not merge `derive` context types into handlers.
- *
- * ```ts
- * .use(loggingMiddleware)
- * .derive(async ({ request, set }) => resolveSessionContext(request, set))
- * ```
- */
-export { dbPlugin } from "../db/plugin";
-export { loggingMiddleware } from "@shared/http/logging/middleware";
-export { resolveSessionContext } from "@shared/http/session/context";
+import { betterAuth } from "better-auth";
+import { drizzleAdapter } from "better-auth/adapters/drizzle";
+import {
+  betterAuthSchema,
+  resolveBetterAuthBaseUrl,
+  resolveBetterAuthTrustedOrigins,
+  shouldUseSecureCookies,
+} from "@vols.rss/db";
+import { db } from "@adapters/db/client";
+import { env } from "@config/env";
+
+const defaultApiOrigin = `http://localhost:${env.PORT}`;
+const baseURL = resolveBetterAuthBaseUrl(env.BETTER_AUTH_URL ?? defaultApiOrigin, defaultApiOrigin);
+
+export const auth = betterAuth({
+  secret: env.BETTER_AUTH_SECRET,
+  baseURL,
+  trustedOrigins: resolveBetterAuthTrustedOrigins({
+    baseURL,
+    trustedOrigins: env.BETTER_AUTH_TRUSTED_ORIGINS,
+    additionalOrigins: [env.WEB_ORIGIN],
+  }),
+  advanced: {
+    useSecureCookies: shouldUseSecureCookies(baseURL),
+  },
+  database: drizzleAdapter(db, {
+    provider: "pg",
+    schema: betterAuthSchema,
+  }),
+  emailAndPassword: {
+    enabled: true,
+  },
+});

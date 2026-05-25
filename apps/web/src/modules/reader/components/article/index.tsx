@@ -8,7 +8,7 @@ import { useReaderToolbarModel } from "@modules/reader/hooks/use-reader-toolbar-
 import { ReaderContent } from "@vols.rss/reader/web";
 import { Button } from "@vols.rss/ui/button";
 import { Spinner } from "@vols.rss/ui/spinner";
-import type { ArticleDetailDto, InboxTimestampDisplayDto } from "src/lib/schemas";
+import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { cn } from "@lib/utils";
 import { useTimestamp } from "@hooks/use-timestamp";
 import { useLayoutEffect, useRef, useState } from "react";

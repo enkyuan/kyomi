@@ -1,4 +1,18 @@
-import hljs from "highlight.js";
+import hljs from "highlight.js/lib/core";
+import bash from "highlight.js/lib/languages/bash";
+import graphql from "highlight.js/lib/languages/graphql";
+import javascript from "highlight.js/lib/languages/javascript";
+import json from "highlight.js/lib/languages/json";
+import kotlin from "highlight.js/lib/languages/kotlin";
+import markdown from "highlight.js/lib/languages/markdown";
+import plaintext from "highlight.js/lib/languages/plaintext";
+import python from "highlight.js/lib/languages/python";
+import ruby from "highlight.js/lib/languages/ruby";
+import rust from "highlight.js/lib/languages/rust";
+import sql from "highlight.js/lib/languages/sql";
+import typescript from "highlight.js/lib/languages/typescript";
+import xml from "highlight.js/lib/languages/xml";
+import yaml from "highlight.js/lib/languages/yaml";
 import { detectCodeLanguage } from "../../core";
 
 const WRAPPER = "data-reader-code-block";
@@ -11,6 +25,21 @@ const COPY_ICON_PATH =
   "M9 2a2 2 0 0 0-2 2v2h2V4h11v11h-2v2h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM4 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z";
 const CHECK_ICON_PATH =
   "M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2m3.535 6.381-4.95 4.95-2.12-2.121a1 1 0 0 0-1.415 1.414l2.758 2.758a1.1 1.1 0 0 0 1.556 0l5.586-5.586a1 1 0 0 0-1.415-1.415";
+
+hljs.registerLanguage("bash", bash);
+hljs.registerLanguage("graphql", graphql);
+hljs.registerLanguage("javascript", javascript);
+hljs.registerLanguage("json", json);
+hljs.registerLanguage("kotlin", kotlin);
+hljs.registerLanguage("markdown", markdown);
+hljs.registerLanguage("plaintext", plaintext);
+hljs.registerLanguage("python", python);
+hljs.registerLanguage("ruby", ruby);
+hljs.registerLanguage("rust", rust);
+hljs.registerLanguage("sql", sql);
+hljs.registerLanguage("typescript", typescript);
+hljs.registerLanguage("xml", xml);
+hljs.registerLanguage("yaml", yaml);
 
 function classListFenceLanguage(classList: DOMTokenList): string | undefined {
   for (const cls of classList) {

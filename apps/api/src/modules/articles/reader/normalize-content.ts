@@ -5,7 +5,7 @@ import type {
   ArticleReaderStatus,
   ArticleStoredContentDto,
   ExtractedContentStatus,
-} from "./content.types";
+} from "./content-types";
 import { normalizeMarkdownFeedArtifacts } from "./markdown-artifacts";
 import { htmlToText, sanitizeArticleHtml } from "./sanitize-content";
 
