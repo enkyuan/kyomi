@@ -8,13 +8,7 @@ import {
   subscribeHotQueryCachePersistence,
 } from "@integrations/tanstack-query/hot-cache-persistence";
 
-const queryClient = new QueryClient();
-
-export function getContext() {
-  return {
-    queryClient,
-  };
-}
+import { queryClient } from "./client";
 
 export default function TanstackQueryProvider({ children }: { children: ReactNode }) {
   useEffect(() => {

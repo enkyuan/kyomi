@@ -74,10 +74,7 @@ export function useReaderToolbarModel({
   const extractMutation = useArticleExtraction(item.id);
   const requestedExtractionForItemRef = useRef<string | null>(null);
   const inlineToolbarRef = useRef<HTMLDivElement | null>(null);
-  const [showFloatingToolbar, setShowFloatingToolbar] = useState(false);
-  const updateFloatingToolbarVisibility = useCallback((visible: boolean) => {
-    setShowFloatingToolbar(visible);
-  }, []);
+  const [desktopFloatingToolbarVisible, setDesktopFloatingToolbarVisible] = useState(false);
 
   const updateItemMutation = useInboxItemStateMutation();
 
@@ -162,25 +159,22 @@ export function useReaderToolbarModel({
 
   useEffect(() => {
     if (isMobile) {
-      updateFloatingToolbarVisibility(true);
       return;
     }
 
     const inlineToolbarNode = inlineToolbarRef.current;
     if (!inlineToolbarNode || typeof window === "undefined") {
-      updateFloatingToolbarVisibility(false);
       return;
     }
 
     const viewport = inlineToolbarNode.closest<HTMLElement>("[data-reader-detail-viewport]");
     if (!viewport || typeof IntersectionObserver === "undefined") {
-      updateFloatingToolbarVisibility(false);
       return;
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        updateFloatingToolbarVisibility(isFloatingToolbarVisibleForEntry(entry));
+        setDesktopFloatingToolbarVisible(isFloatingToolbarVisibleForEntry(entry));
       },
       {
         root: viewport,
@@ -194,7 +188,7 @@ export function useReaderToolbarModel({
     return () => {
       observer.disconnect();
     };
-  }, [isMobile, item.id, readerFocusMode, updateFloatingToolbarVisibility]);
+  }, [isMobile, item.id, readerFocusMode]);
 
   return {
     articleClassName: cn(
@@ -214,7 +208,7 @@ export function useReaderToolbarModel({
     showLinkPreviews: preferences.showLinkPreviews,
     showFailedBanner,
     floatingToolbarEdge: isMobile ? "bottom" : "top",
-    showFloatingToolbar,
+    showFloatingToolbar: isMobile || desktopFloatingToolbarVisible,
     toolbarProps: {
       activeMode: effectiveReaderMode,
       extractedAvailable: item.reader.extracted.available,

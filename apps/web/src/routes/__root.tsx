@@ -1,3 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react-doctor/only-export-components */
+/* eslint-disable react-doctor/no-danger */
 import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanstack/react-router";
 import { Agentation } from "agentation";
 import { useEffect } from "react";
@@ -129,6 +132,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         {/* Inline theme init must be its own script: if `src` is set, browsers ignore inline body. */}
+        {/* eslint-disable-next-line react-doctor/no-danger */}
         {/* oxlint-disable-next-line react/no-danger -- static first-paint theme bootstrap; not user HTML */}
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <HeadContent />

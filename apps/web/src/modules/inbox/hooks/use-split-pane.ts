@@ -79,15 +79,15 @@ export function useSplitPane({
   dragPercentRef.current = leftPanelPercent;
 
   useEffect(() => {
-    if (!isResizing) {
-      writeSplitPanePercentToContainer(containerRef.current, leftPanelPercent);
-    }
-  }, [isResizing, leftPanelPercent]);
+    writeSplitPanePercentToContainer(containerRef.current, leftPanelPercent);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     return () => {
-      if (rafIdRef.current !== null) {
-        window.cancelAnimationFrame(rafIdRef.current);
+      const rafId = rafIdRef.current;
+      if (rafId !== null) {
+        window.cancelAnimationFrame(rafId);
       }
     };
   }, []);

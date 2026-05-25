@@ -3,11 +3,7 @@ import z from "zod";
 const _emailFormatSchema = z.email({ error: "Enter a valid email address" });
 
 /** Trimmed, non-empty email for auth and account forms. */
-export const authEmailSchema = z
-  .string()
-  .trim()
-  .min(1, "Email is required")
-  .pipe(_emailFormatSchema);
+const authEmailSchema = z.string().trim().min(1, "Email is required").pipe(_emailFormatSchema);
 
 export function isValidEmail(value: string): boolean {
   return authEmailSchema.safeParse(value).success;

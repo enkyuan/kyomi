@@ -1,6 +1,6 @@
 "use client";
 
-import { startTransition, useEffect, useState } from "react";
+import { startTransition, useCallback, useEffect, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { RssFill } from "@mingcute/react";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
@@ -77,25 +77,28 @@ export function SourcesDialog({
   const shouldShowEmpty =
     !shouldShowLoading && (debouncedQuery.length === 0 || searchResults.length === 0);
 
-  const setDialogOpen = (nextOpen: boolean) => {
-    if (!nextOpen) {
-      setQuery("");
-      setDebouncedQuery("");
-    }
-    const commit = () => {
-      if (open === undefined) {
-        setInternalOpen(nextOpen);
+  const setDialogOpen = useCallback(
+    (nextOpen: boolean) => {
+      if (!nextOpen) {
+        setQuery("");
+        setDebouncedQuery("");
       }
-      onOpenChange?.(nextOpen);
-    };
-    // Opening mounts a large Base UI dialog + autocomplete subtree; keep close synchronous
-    // so Escape dismiss feels immediate.
-    if (nextOpen) {
-      startTransition(commit);
-    } else {
-      commit();
-    }
-  };
+      const commit = () => {
+        if (open === undefined) {
+          setInternalOpen(nextOpen);
+        }
+        onOpenChange?.(nextOpen);
+      };
+      // Opening mounts a large Base UI dialog + autocomplete subtree; keep close synchronous
+      // so Escape dismiss feels immediate.
+      if (nextOpen) {
+        startTransition(commit);
+      } else {
+        commit();
+      }
+    },
+    [open, onOpenChange],
+  );
 
   const followFeedMutation = useMutation({
     mutationFn: ({ url }: { url: string }) => followFeed({ data: { url } }),
@@ -130,6 +133,9 @@ export function SourcesDialog({
     },
   });
 
+  const setDialogOpenRef = useRef(setDialogOpen);
+  setDialogOpenRef.current = setDialogOpen;
+
   useEffect(() => {
     if (!enableGlobalShortcut) {
       return;
@@ -146,7 +152,7 @@ export function SourcesDialog({
       }
 
       event.preventDefault();
-      setDialogOpen(true);
+      setDialogOpenRef.current(true);
     };
 
     window.addEventListener("keydown", handleKeyDown);
