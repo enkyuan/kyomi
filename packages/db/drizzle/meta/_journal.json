@@ -127,6 +127,13 @@
       "when": 1777845600000,
       "tag": "0017_reader_content_width_default_wide",
       "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1779728798109,
+      "tag": "0018_omniscient_leo",
+      "breakpoints": true
     }
   ]
 }

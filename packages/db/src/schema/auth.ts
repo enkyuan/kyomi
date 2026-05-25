@@ -18,6 +18,10 @@ export const sessions = pgTable("sessions", {
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
   ipAddress: text("ip_address"),
   userAgent: text("user_agent"),
+  locationLabel: text("location_label"),
+  locationCity: text("location_city"),
+  locationRegion: text("location_region"),
+  locationCountry: text("location_country"),
   userId: text("user_id")
     .notNull()
     .references(() => users.id, { onDelete: "cascade" }),

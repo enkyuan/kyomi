@@ -177,6 +177,7 @@
     "packages/reader": {
       "name": "@vols.rss/reader",
       "dependencies": {
+        "@vols.rss/ui": "workspace:*",
         "dompurify": "^3.4.0",
         "highlight.js": "^11.11.1",
         "katex": "^0.16.45",

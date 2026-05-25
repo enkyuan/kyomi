@@ -8,6 +8,7 @@ import {
 } from "@vols.rss/db";
 import { db } from "@adapters/db/client";
 import { env } from "@config/env";
+import { resolveSessionLocationFromAuthContext } from "./session-location";
 
 const defaultApiOrigin = `http://localhost:${env.PORT}`;
 const baseURL = resolveBetterAuthBaseUrl(env.BETTER_AUTH_URL ?? defaultApiOrigin, defaultApiOrigin);
@@ -23,11 +24,51 @@ export const auth = betterAuth({
   advanced: {
     useSecureCookies: shouldUseSecureCookies(baseURL),
   },
+  databaseHooks: {
+    session: {
+      create: {
+        before: async (data, context) => ({
+          data: resolveSessionLocationFromAuthContext(
+            context,
+            typeof data.ipAddress === "string" ? data.ipAddress : null,
+          ),
+        }),
+      },
+    },
+  },
   database: drizzleAdapter(db, {
     provider: "pg",
     schema: betterAuthSchema,
   }),
   emailAndPassword: {
     enabled: true,
+  },
+  session: {
+    additionalFields: {
+      locationLabel: {
+        type: "string",
+        required: false,
+        input: false,
+        returned: true,
+      },
+      locationCity: {
+        type: "string",
+        required: false,
+        input: false,
+        returned: true,
+      },
+      locationRegion: {
+        type: "string",
+        required: false,
+        input: false,
+        returned: true,
+      },
+      locationCountry: {
+        type: "string",
+        required: false,
+        input: false,
+        returned: true,
+      },
+    },
   },
 });

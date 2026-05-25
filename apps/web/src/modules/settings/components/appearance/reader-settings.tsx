@@ -5,7 +5,7 @@ import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vo
 import { SliderComfortable } from "@vols.rss/ui/slider";
 import { Switch } from "@vols.rss/ui/switch";
 import type { ReaderPreferences } from "@modules/reader/hooks/use-reader-preferences";
-import { SettingHeading } from "./shared";
+import { SettingHeading, SettingSubHeading } from "./shared";
 
 const OPEN_LINKS_SWITCH_ID = "reader-open-links-new-tab";
 const LINK_PREVIEWS_SWITCH_ID = "reader-link-previews";
@@ -29,7 +29,7 @@ export function ReaderAppearanceSettings({
         title="Reader"
       />
       <div className="space-y-3 py-1">
-        <SettingHeading
+        <SettingSubHeading
           description="Choose how articles open by default. Smart follows the server recommendation."
           title="Default reader mode"
         />
@@ -58,7 +58,7 @@ export function ReaderAppearanceSettings({
       </div>
 
       <div className="space-y-3 py-1">
-        <SettingHeading description="Adjust reader text size for comfort." title="Font size" />
+        <SettingSubHeading description="Adjust reader text size for comfort." title="Font size" />
         <SliderComfortable
           formatValue={(value) => `${value}px`}
           label={<FontSizeLine size={20} />}
@@ -74,7 +74,7 @@ export function ReaderAppearanceSettings({
       </div>
 
       <div className="space-y-3 py-1">
-        <SettingHeading
+        <SettingSubHeading
           description="Narrow keeps shorter line lengths, wide fits more text on large screens."
           title="Content width"
         />

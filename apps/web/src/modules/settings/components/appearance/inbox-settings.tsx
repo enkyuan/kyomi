@@ -6,7 +6,7 @@ import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vo
 import { SliderComfortable } from "@vols.rss/ui/slider";
 import { Switch } from "@vols.rss/ui/switch";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
-import { SettingHeading } from "./shared";
+import { SettingHeading, SettingSubHeading } from "./shared";
 
 type InboxAppearanceSettingsProps = {
   limits: { minFontSizePx: number; maxFontSizePx: number };
@@ -26,7 +26,7 @@ export function InboxAppearanceSettings({
         title="Inbox"
       />
       <div className="space-y-3 py-1">
-        <SettingHeading
+        <SettingSubHeading
           description="Choose which inbox view opens first when you land on the inbox."
           title="Default view"
         />
@@ -55,9 +55,9 @@ export function InboxAppearanceSettings({
       </div>
 
       <div className="space-y-3 py-1">
-        <SettingHeading
+        <SettingSubHeading
           description="Compact trims row spacing for denser scanning. Comfortable preserves the current roomy card layout."
-          title="Inbox density"
+          title="Density"
         />
         <Select
           items={[
@@ -82,9 +82,9 @@ export function InboxAppearanceSettings({
       </div>
 
       <div className="space-y-3 py-1">
-        <SettingHeading
+        <SettingSubHeading
           description="Scale inbox item text while preserving title, summary, and metadata hierarchy."
-          title="Inbox text size"
+          title="Text size"
         />
         <SliderComfortable
           formatValue={(value) => `${value}px`}
@@ -101,7 +101,7 @@ export function InboxAppearanceSettings({
       </div>
 
       <div className="space-y-3 py-1">
-        <SettingHeading
+        <SettingSubHeading
           description="Control whether opening an article immediately clears it from unread, waits briefly, or leaves that action manual."
           title="Mark as read"
         />
@@ -130,7 +130,7 @@ export function InboxAppearanceSettings({
       </div>
 
       <div className="space-y-3 py-1">
-        <SettingHeading
+        <SettingSubHeading
           description="Choose whether inbox timestamps prioritize precise calendar dates or relative recency."
           title="Timestamp"
         />
