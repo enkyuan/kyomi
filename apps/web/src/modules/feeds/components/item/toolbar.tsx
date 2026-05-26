@@ -120,6 +120,7 @@ function ActiveToolbarOverlay({
     anchorElement: activeToolbar.anchorElement,
     headerElement,
     viewportElement,
+    toolbarRef,
   });
 
   if (
@@ -204,49 +205,48 @@ function useToolbarUnderHeader({
   anchorElement,
   headerElement,
   viewportElement,
+  toolbarRef,
 }: {
   anchorElement: HTMLElement;
   headerElement: HTMLElement | null;
   viewportElement: HTMLElement | null;
+  toolbarRef: React.RefObject<HTMLDivElement | null>;
 }) {
   const [isUnderHeader, setIsUnderHeader] = useState(() =>
     readIsToolbarUnderHeader({ anchorElement, headerElement, viewportElement }),
   );
 
   useLayoutEffect(() => {
-    let frame = 0;
-
     const update = () => {
-      frame = 0;
-      setIsUnderHeader((previous) => {
-        const next = readIsToolbarUnderHeader({
-          anchorElement,
-          headerElement,
-          viewportElement,
-        });
-        return previous === next ? previous : next;
+      const next = readIsToolbarUnderHeader({
+        anchorElement,
+        headerElement,
+        viewportElement,
       });
-    };
 
-    const scheduleUpdate = () => {
-      if (frame) {
-        return;
+      // Synchronous DOM mutation bypasses React's batching lag
+      if (toolbarRef.current) {
+        if (next) {
+          toolbarRef.current.classList.remove("z-60");
+          toolbarRef.current.classList.add("z-20");
+        } else {
+          toolbarRef.current.classList.remove("z-20");
+          toolbarRef.current.classList.add("z-60");
+        }
       }
-      frame = window.requestAnimationFrame(update);
+
+      setIsUnderHeader((previous) => (previous === next ? previous : next));
     };
 
     update();
-    viewportElement?.addEventListener("scroll", scheduleUpdate, { passive: true });
-    window.addEventListener("resize", scheduleUpdate);
+    viewportElement?.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
 
     return () => {
-      if (frame) {
-        window.cancelAnimationFrame(frame);
-      }
-      viewportElement?.removeEventListener("scroll", scheduleUpdate);
-      window.removeEventListener("resize", scheduleUpdate);
+      viewportElement?.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
     };
-  }, [anchorElement, headerElement, viewportElement]);
+  }, [anchorElement, headerElement, viewportElement, toolbarRef]);
 
   return isUnderHeader;
 }

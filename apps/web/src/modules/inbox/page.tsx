@@ -407,14 +407,13 @@ function InboxDetailSection({
   clearSelectedItem?: () => void;
   showBackToList?: boolean;
 }) {
-  const isDetailRefreshing = detailQuery.isFetching && Boolean(selectedItem);
   const isDetailLoading = detailQuery.isFetching && !selectedItem;
   const isDetailError = detailQuery.isError;
 
   const detailProps = useMemo(
     () => ({
       detailState: selectedItem
-        ? ({ status: "selected", item: selectedItem, isRefreshing: isDetailRefreshing } as const)
+        ? ({ status: "selected", item: selectedItem } as const)
         : isDetailLoading
           ? ({ status: "loading" } as const)
           : isDetailError
@@ -428,7 +427,6 @@ function InboxDetailSection({
       detailQuery.error,
       isDetailError,
       isDetailLoading,
-      isDetailRefreshing,
       preferences.inboxShowFavicons,
       preferences.inboxTimestampDisplay,
       preferences.inboxTimestampHourCycle,

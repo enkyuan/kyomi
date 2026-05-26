@@ -222,6 +222,15 @@
   background-color: var(--scrollbar-thumb-hover);
 }
 
+[data-slot="scroll-area-viewport"] {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+[data-slot="scroll-area-viewport"]::-webkit-scrollbar {
+  display: none;
+}
+
 /* Base UI scroll-area scrollbars — thin and hidden at rest, expand on hover over the scrollbar */
 [data-slot="scroll-area-scrollbar"] {
   opacity: 1;
