@@ -10,10 +10,10 @@ import { useInboxScope } from "@hooks/use-inbox-scope";
 export function usePinnedSection() {
   const { isInbox, scopedFeedId } = useInboxScope();
   const [pinnedOpen, setPinnedOpen] = useState(true);
-  const followedFeedsQuery = useQuery(followedFeedsQueryOptions());
+  const { data: followedFeedsData } = useQuery(followedFeedsQueryOptions());
   const { pinnedFeedIds } = usePinnedFeedIds();
 
-  const feedItems = followedFeedsQuery.data ?? [];
+  const feedItems = followedFeedsData ?? [];
   const pinnedFeeds = pinnedFeedIds.reduce<FollowedFeed[]>((feeds, feedId) => {
     const feed = feedItems.find((item) => item.feedId === feedId);
     if (feed) {
@@ -23,7 +23,7 @@ export function usePinnedSection() {
   }, []);
 
   return {
-    followedFeedsQuery,
+    followedFeedsData,
     isInbox,
     pinnedFeeds,
     pinnedOpen,

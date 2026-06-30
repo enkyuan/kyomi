@@ -93,7 +93,7 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
     invalidateFeedAndInboxQueries(queryClient);
   }, [queryClient]);
 
-  const refreshStatusQuery = useQuery({
+  const { data: refreshStatusData, refetch: refetchRefreshStatus } = useQuery({
     queryKey: feedRefreshStatusQueryKey(folderId),
     queryFn: async () => (await listFeedRefreshStatuses({ data: { folderId } })) ?? [],
     refetchInterval: (query) => {
@@ -113,7 +113,7 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
     },
   });
 
-  const hasActiveRefresh = hasActiveRefreshStatus(refreshStatusQuery.data ?? []);
+  const hasActiveRefresh = hasActiveRefreshStatus(refreshStatusData ?? []);
 
   const mutation = useMutation({
     mutationFn: async () => refreshBatchFeeds({ data: { folderId } }),
@@ -152,7 +152,7 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
         pollStartRef.current = Date.now();
         wasRefreshingRef.current = false;
         isWatchingRef.current = true;
-        void refreshStatusQuery.refetch();
+        void refetchRefreshStatus();
       }
     },
   });

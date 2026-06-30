@@ -10,8 +10,7 @@ import type { InboxFilter } from "../services/api";
 import type { InboxPreferences } from "./use-inbox-data";
 
 const SPLIT_PANE_PERCENT_CSS_VAR = "--inbox-left-panel-percent";
-const INBOX_SPLIT_MIN_WIDTH_PX = 1024;
-const INBOX_READER_FOCUS_MIN_WIDTH_PX = 800;
+const INBOX_DESKTOP_MIN_WIDTH_PX = 768;
 
 type InboxItemLike = { id: string; isRead: boolean } | null;
 
@@ -25,7 +24,7 @@ type SplitPaneAction =
   | { type: "start_resize" }
   | { type: "end_resize"; percent: number };
 
-export type InboxLayoutVariant = "split" | "reader-focused" | "stacked";
+export type InboxLayoutVariant = "split" | "stacked";
 
 export type ResizeHandleProps = {
   onPointerDown: (event: ReactPointerEvent<HTMLDivElement>) => void;
@@ -76,31 +75,21 @@ function splitPaneReducer(state: SplitPaneState, action: SplitPaneAction): Split
 
 /**
  * Inbox main-column layout by available content width:
- * - wide: split (list + detail)
- * - tablet-width landscape: reader-focused (detail fills main; auto-select first item)
- * - narrow: stacked (single column list <-> detail, same as mobile)
+ * - wide: split (list view, desktop)
+ * - narrow: stacked (single column list <-> detail, mobile)
  */
 export function useResponsiveReaderMode(contentWidthPx?: number): InboxLayoutVariant {
-  const isWideViewport = useMediaQuery({ min: "lg", defaultMatches: true });
-  const isLandscape = useMediaQuery({ orientation: "landscape" });
-  const isTabletRange = useMediaQuery({ min: "md", max: "lg" });
+  const isWideViewport = useMediaQuery({ min: "md", defaultMatches: true });
 
   if (contentWidthPx && contentWidthPx > 0) {
-    if (contentWidthPx >= INBOX_SPLIT_MIN_WIDTH_PX) {
+    if (contentWidthPx >= INBOX_DESKTOP_MIN_WIDTH_PX) {
       return "split";
-    }
-    if (contentWidthPx >= INBOX_READER_FOCUS_MIN_WIDTH_PX && isLandscape) {
-      return "reader-focused";
     }
     return "stacked";
   }
 
-  // Desktop defaults to split regardless of orientation.
   if (isWideViewport) {
     return "split";
-  }
-  if (isTabletRange && isLandscape) {
-    return "reader-focused";
   }
   return "stacked";
 }
@@ -273,6 +262,7 @@ export function useSplitPane({
     writeSplitPanePercentToContainer(containerRef.current, initialPercent);
   }, [initialPercent]);
 
+  // oxlint-disable-next-line react-doctor/exhaustive-deps -- rafIdRef.current is read at cleanup time intentionally
   useEffect(() => {
     return () => {
       const rafId = rafIdRef.current;

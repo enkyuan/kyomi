@@ -13,7 +13,7 @@ const EMPTY_COUNTS: SidebarInboxCounts = { all: 0, today: 0, unread: 0, saved: 0
 export function useSidebarInboxCounts() {
   const timezoneOffsetMinutes = useTimezone();
   const { scopedFeedId, scopedFolderId } = useInboxScope();
-  const query = useQuery(
+  const { data } = useQuery(
     sidebarInboxCountsQueryOptions({
       timezoneOffsetMinutes,
       feedId: scopedFeedId,
@@ -22,8 +22,7 @@ export function useSidebarInboxCounts() {
   );
 
   return {
-    counts: query.data ?? EMPTY_COUNTS,
-    query,
+    counts: data ?? EMPTY_COUNTS,
   };
 }
 

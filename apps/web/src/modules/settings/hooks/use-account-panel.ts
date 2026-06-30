@@ -128,7 +128,7 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     setEmailDraft(user?.email ?? "");
   }
 
-  const sessionsQuery = useQuery({
+  const { data: sessionsData, isError: isSessionsError } = useQuery({
     queryKey: ["auth", "sessions"],
     queryFn: async (): Promise<SessionRow[]> => {
       const response = await fetch("/api/auth/list-sessions", {
@@ -184,7 +184,7 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
       ]
     : [];
 
-  const fetchedSessions = sessionsQuery.data ?? [];
+  const fetchedSessions = sessionsData ?? [];
   const sessions =
     fetchedSessions.length > 0
       ? fetchedSessions.map((item) => ({
@@ -235,7 +235,7 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     emailError,
     isEditingEmail,
     sessions,
-    sessionsQuery,
+    isSessionsError,
     updateEmailMutation,
     formatTimestamp,
     handleCancelEditEmail,

@@ -123,6 +123,7 @@ export type StaticRowsProps = {
   onToolbarLeave: (event: FocusEvent<HTMLElement> | PointerEvent<HTMLElement>) => void;
 };
 
+// oxlint-disable-next-line react-doctor/no-multi-comp
 export function StaticRows({
   filter,
   readerFocusMode,
@@ -196,6 +197,7 @@ export type VirtualizedRowsProps = {
   viewportHeight?: number;
 };
 
+// oxlint-disable-next-line react-doctor/no-multi-comp
 export function VirtualizedRows({
   listScrollRef,
   filter,

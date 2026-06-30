@@ -37,7 +37,7 @@ export function useUserPreferences<TPreferences extends object>({
   const mutationDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const mutationRollbackRef = useRef<TPreferences | null>(null);
 
-  const preferencesQuery = useQuery({
+  const { data: preferencesData, isLoading: isPreferencesLoading } = useQuery({
     queryKey,
     queryFn: async () => {
       const data = await queryFn();
@@ -50,11 +50,11 @@ export function useUserPreferences<TPreferences extends object>({
     refetchOnWindowFocus: false,
   });
 
-  const preferences = preferencesQuery.data ?? defaults;
+  const preferences = preferencesData ?? defaults;
 
+  // oxlint-disable-next-line react-doctor/exhaustive-deps -- refs read at cleanup time intentionally
   useEffect(() => {
     return () => {
-      // oxlint-disable-next-line react-hooks/exhaustive-deps
       const timer = mutationDebounceRef.current;
       if (timer) {
         clearTimeout(timer);
@@ -62,7 +62,6 @@ export function useUserPreferences<TPreferences extends object>({
         mutationRollbackRef.current = null;
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const updateMutation = useMutation({
@@ -85,7 +84,7 @@ export function useUserPreferences<TPreferences extends object>({
   });
 
   const getCurrentPreferences = () =>
-    queryClient.getQueryData<TPreferences>(queryKey) ?? preferencesQuery.data ?? defaults;
+    queryClient.getQueryData<TPreferences>(queryKey) ?? preferencesData ?? defaults;
 
   const setPreferences = (next: Partial<TPreferences>) => {
     const current = getCurrentPreferences();
@@ -173,7 +172,7 @@ export function useUserPreferences<TPreferences extends object>({
     setPreferences,
     setPreferencesAsync,
     resetPreferences,
-    isLoadingPreferences: preferencesQuery.isLoading,
+    isLoadingPreferences: isPreferencesLoading,
     isUpdatingPreferences: updateMutation.isPending,
   };
 }

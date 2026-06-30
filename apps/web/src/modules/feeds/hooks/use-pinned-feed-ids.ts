@@ -115,7 +115,7 @@ export function usePinnedFeedIds() {
   const { user } = useAuth();
   const queryClient = useQueryClient();
   const migrationRunningForKeyRef = useRef<string | null>(null);
-  const followedFeedsQuery = useQuery({
+  const { data: followedFeedsData, isSuccess: isFollowedFeedsSuccess } = useQuery({
     queryKey: FOLLOWED_FEEDS_QUERY_KEY,
     queryFn: () => listFollowedFeeds(),
   });
@@ -138,7 +138,7 @@ export function usePinnedFeedIds() {
   });
 
   useEffect(() => {
-    if (!user?.id || !followedFeedsQuery.isSuccess) {
+    if (!user?.id || !isFollowedFeedsSuccess) {
       return;
     }
 
@@ -148,7 +148,7 @@ export function usePinnedFeedIds() {
       return;
     }
 
-    const followed = followedFeedsQuery.data;
+    const followed = followedFeedsData;
     const serverHasPinnedFeeds = followed.some((feed) => feed.isPinned);
     const serverPinnedFeedIdSet = new Set(
       followed.flatMap((feed) => (feed.isPinned ? [feed.feedId] : [])),
@@ -193,11 +193,11 @@ export function usePinnedFeedIds() {
       migrationRunningForKeyRef.current = null;
       void queryClient.invalidateQueries({ queryKey: FOLLOWED_FEEDS_QUERY_KEY });
     });
-  }, [followedFeedsQuery.data, followedFeedsQuery.isSuccess, queryClient, user?.id]);
+  }, [followedFeedsData, isFollowedFeedsSuccess, queryClient, user?.id]);
 
   const pinnedFeedIds = useMemo(
-    () => sortPinnedFeeds(followedFeedsQuery.data ?? []).map((feed) => feed.feedId),
-    [followedFeedsQuery.data],
+    () => sortPinnedFeeds(followedFeedsData ?? []).map((feed) => feed.feedId),
+    [followedFeedsData],
   );
   const pinnedFeedIdSet = useMemo(() => new Set(pinnedFeedIds), [pinnedFeedIds]);
 

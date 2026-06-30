@@ -11,6 +11,10 @@ coverage
 .antigravitycli
 .agents
 
+# Local docker overrides (corp CA mount, etc.)
+docker/certs/
+docker/docker-compose.override.yml
+
 # Python pipeline artifacts
 packages/catalog/.venv
 packages/catalog/**/__pycache__

@@ -19,11 +19,19 @@ export function useHeader({ platform }: { platform: PlatformState }) {
   const [createFolderOpen, setCreateFolderOpen] = useState(false);
   const [manageFeedsOpen, setManageFeedsOpen] = useState(false);
 
-  const foldersQuery = useQuery(foldersQueryOptions());
-  const followedFeedsQuery = useQuery(followedFeedsQueryOptions());
+  const {
+    data: foldersData,
+    isError: isFoldersError,
+    isLoading: isFoldersLoading,
+  } = useQuery(foldersQueryOptions());
+  const {
+    data: followedFeedsData,
+    isError: isFollowedFeedsError,
+    isLoading: isFollowedFeedsLoading,
+  } = useQuery(followedFeedsQueryOptions());
 
-  const folderItems = foldersQuery.data ?? [];
-  const feedItems = followedFeedsQuery.data ?? [];
+  const folderItems = foldersData ?? [];
+  const feedItems = followedFeedsData ?? [];
   const scope = resolveWorkspaceScope(scopedFeedId, scopedFolderId, feedItems, folderItems);
   const workspaceLabel = workspaceScopeLabel(scope);
   const inboxItems = buildWorkspaceInboxCommandItems(navigate);
@@ -45,8 +53,8 @@ export function useHeader({ platform }: { platform: PlatformState }) {
     setManageFeedsOpen,
     feedItems,
     folderItems,
-    followedFeedsQuery,
-    foldersQuery,
+    followedFeedsQuery: { isError: isFollowedFeedsError, isLoading: isFollowedFeedsLoading },
+    foldersQuery: { isError: isFoldersError, isLoading: isFoldersLoading },
     inboxItems,
     platform,
     onCreateFolder: () => {

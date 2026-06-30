@@ -11,7 +11,7 @@
     "build": "turbo run build",
     "bootstrap": "bun run setup:app",
     "bootstrap:full": "bun run setup:app && bun run setup:catalog",
-    "dev": "turbo run dev --filter=@kyomi/web",
+    "dev": "turbo run dev --filter=@kyomi/web --filter=@kyomi/api",
     "dev:app": "turbo run dev --filter=@kyomi/web",
     "dev:web": "turbo run dev --filter=@kyomi/web",
     "dev:api": "bun run --cwd apps/api dev",

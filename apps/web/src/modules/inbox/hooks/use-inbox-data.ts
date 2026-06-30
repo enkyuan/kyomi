@@ -187,6 +187,7 @@ export function useInboxQueries({
   includeRead,
   timezoneOffsetMinutes,
 }: UseInboxQueriesInput) {
+  // oxlint-disable-next-line react-doctor/query-destructure-result
   const inboxQuery = useInfiniteQuery(
     inboxItemsInfiniteQueryOptions({
       filter,
@@ -198,6 +199,7 @@ export function useInboxQueries({
     }),
   );
 
+  // oxlint-disable-next-line react-doctor/query-destructure-result
   const detailQuery = useQuery(inboxDetailQueryOptions(itemId));
 
   return { inboxQuery, detailQuery };

@@ -3,8 +3,7 @@
 
 import { AppShell } from "@/app/app-shell";
 import { Detail } from "@modules/reader/components/detail";
-import { MIN_INBOX_LEFT_PERCENT, MIN_INBOX_RIGHT_PERCENT } from "./lib/layout";
-import { MobileLayout, ReaderFocusDetailLayout, SplitLayout } from "./layouts";
+import { MobileLayout } from "./layouts/mobile";
 import { useQuery } from "@tanstack/react-query";
 import { List } from "./components/list";
 import {
@@ -19,7 +18,6 @@ import {
   useInboxRouteState,
   useMarkReadBehavior,
   useResponsiveReaderMode,
-  useSplitPane,
 } from "@modules/inbox/hooks/use-inbox-layout";
 import { getInboxViewCount, type InboxItem } from "@modules/inbox/services/api";
 import { useTimezone } from "@hooks/use-timezone";
@@ -33,33 +31,27 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 export function Page({
   initialInboxPreferences,
-  initialSplitPanePercent,
+  initialSplitPanePercent: _initialSplitPanePercent,
 }: {
   initialInboxPreferences?: InboxPreferences;
   initialSplitPanePercent?: number;
 }) {
   return (
     <InboxPreferencesBootstrapProvider initialPreferences={initialInboxPreferences}>
-      <InboxPageContent
-        initialInboxPreferences={initialInboxPreferences}
-        initialSplitPanePercent={initialSplitPanePercent}
-      />
+      <InboxPageContent initialInboxPreferences={initialInboxPreferences} />
     </InboxPreferencesBootstrapProvider>
   );
 }
 
 function InboxPageContent({
   initialInboxPreferences,
-  initialSplitPanePercent,
 }: {
   initialInboxPreferences?: InboxPreferences;
-  initialSplitPanePercent?: number;
 }) {
   const { preferences } = useInboxPreferences(initialInboxPreferences);
   const layoutContainerRef = useRef<HTMLDivElement | null>(null);
   const { containerWidth: layoutContainerWidth } = useViewportMetrics(layoutContainerRef);
   const layoutVariant = useResponsiveReaderMode(layoutContainerWidth);
-  const isReaderFocusedLayout = layoutVariant === "reader-focused";
   const [mobileTransitionDirection, setMobileTransitionDirection] = useState<1 | -1>(1);
   const timezoneOffsetMinutes = useTimezone();
 
@@ -77,20 +69,6 @@ function InboxPageContent({
     includeRead,
     activeScopeLabel,
   } = route;
-
-  const {
-    containerRef: splitContainerRef,
-    leftPanelPercent,
-    isResizing,
-    resizeHandleProps,
-  } = useSplitPane({
-    minLeftPercent: MIN_INBOX_LEFT_PERCENT,
-    minRightPercent: MIN_INBOX_RIGHT_PERCENT,
-    initialPercent:
-      initialSplitPanePercent && Number.isFinite(initialSplitPanePercent)
-        ? initialSplitPanePercent
-        : 32,
-  });
 
   const { inboxQuery, detailQuery } = useInboxQueries({
     filter: effectiveFilter,
@@ -114,7 +92,7 @@ function InboxPageContent({
     return rawInboxItems;
   }, [isReadScopedFilterActive, rawInboxItems]);
 
-  const viewCountQuery = useQuery({
+  const { isSuccess: isViewCountSuccess, data: viewCountData } = useQuery({
     queryKey: inboxViewCountQueryKey({
       filter: effectiveFilter,
       feedId,
@@ -143,7 +121,7 @@ function InboxPageContent({
         filter: effectiveFilter,
         loadedCount: inboxItems.length,
         hasNextPage: !!inboxQuery.hasNextPage,
-        viewCountQuery,
+        viewCountQuery: { isSuccess: isViewCountSuccess, data: viewCountData },
         includeRead,
         activeScopeLabel,
       }),
@@ -153,7 +131,8 @@ function InboxPageContent({
       includeRead,
       inboxItems.length,
       inboxQuery.hasNextPage,
-      viewCountQuery,
+      isViewCountSuccess,
+      viewCountData,
     ],
   );
 
@@ -161,11 +140,8 @@ function InboxPageContent({
 
   const markReadMutation = useInboxItemStateMutation();
 
-  const userDismissedTabletSelectionRef = useRef(false);
-
   const clearSelectedItem = useCallback(() => {
     setMobileTransitionDirection(-1);
-    userDismissedTabletSelectionRef.current = true;
     void navigate({
       search: (prev) => ({
         ...prev,
@@ -202,45 +178,12 @@ function InboxPageContent({
   });
 
   useEffect(() => {
-    userDismissedTabletSelectionRef.current = false;
-  }, [effectiveFilter, feedId, folderId]);
-
-  useEffect(() => {
     writeShellStateSnapshot({
       inboxFilter: effectiveFilter,
       inboxLayout: layoutVariant,
       selectedItemId: itemId ?? null,
     });
   }, [effectiveFilter, itemId, layoutVariant]);
-
-  useEffect(() => {
-    if (
-      !isReaderFocusedLayout ||
-      itemId ||
-      inboxQuery.isPending ||
-      inboxItems.length === 0 ||
-      userDismissedTabletSelectionRef.current
-    ) {
-      return;
-    }
-
-    void navigate({
-      search: (prev) => ({
-        ...prev,
-        itemId: inboxItems[0]?.id,
-      }),
-      replace: true,
-    });
-  }, [
-    effectiveFilter,
-    feedId,
-    folderId,
-    inboxItems,
-    inboxQuery.isPending,
-    isReaderFocusedLayout,
-    itemId,
-    navigate,
-  ]);
 
   const listElement = (
     <InboxListSection
@@ -254,36 +197,30 @@ function InboxPageContent({
       inboxItems={inboxItems}
       headerCount={headerCount}
       inboxQuery={inboxQuery}
-      isResizing={isResizing}
+      isResizing={false}
       fetchNextInboxPage={fetchNextInboxPage}
       selectItem={selectItem}
+      navigate={navigate}
     />
   );
 
-  const detailElementWithBack = (
-    <InboxDetailSection
-      preferences={preferences}
-      detailQuery={detailQuery}
-      selectedItem={selectedItem}
-      showBackToList
-      clearSelectedItem={clearSelectedItem}
-    />
-  );
-
-  const detailElement = (
-    <InboxDetailSection
-      preferences={preferences}
-      detailQuery={detailQuery}
-      selectedItem={selectedItem}
-    />
+  const detailElementWithBack = useMemo(
+    () => (
+      <InboxDetailSection
+        preferences={preferences}
+        detailQuery={detailQuery}
+        selectedItem={selectedItem}
+        showBackToList
+        clearSelectedItem={clearSelectedItem}
+      />
+    ),
+    [clearSelectedItem, detailQuery, preferences, selectedItem],
   );
 
   return (
-    <AppShell readerFocusMode={isReaderFocusedLayout}>
+    <AppShell>
       <div ref={layoutContainerRef} className="h-full max-h-full min-h-0 min-w-0">
-        {layoutVariant === "reader-focused" ? (
-          <ReaderFocusDetailLayout>{detailElementWithBack}</ReaderFocusDetailLayout>
-        ) : layoutVariant === "stacked" ? (
+        {layoutVariant === "stacked" ? (
           <MobileLayout
             showDetail={Boolean(itemId)}
             direction={mobileTransitionDirection}
@@ -291,17 +228,21 @@ function InboxPageContent({
             detail={detailElementWithBack}
           />
         ) : (
-          <SplitLayout
-            splitContainerRef={splitContainerRef}
-            leftPanelPercent={leftPanelPercent}
-            isResizing={isResizing}
-            resizeHandleProps={resizeHandleProps}
-            list={listElement}
-            detail={detailElement}
-          />
+          <div className="flex h-full max-h-full min-h-0 min-w-0 gap-3 overflow-hidden pe-3">
+            <div className="h-full min-h-0 min-w-0 flex-1">{listElement}</div>
+            <aside className="hidden h-full w-96 shrink-0 flex-col pt-[18px] pb-4 xl:flex">
+              <InboxSidebarCard />
+            </aside>
+          </div>
         )}
       </div>
     </AppShell>
+  );
+}
+
+function InboxSidebarCard() {
+  return (
+    <div className="h-full flex-1 rounded-2xl border border-border bg-card text-card-foreground shadow-sm/5" />
   );
 }
 
@@ -319,6 +260,7 @@ function InboxListSection({
   isResizing,
   fetchNextInboxPage,
   selectItem,
+  navigate,
 }: {
   effectiveFilter: ReturnType<typeof useInboxRouteState>["effectiveFilter"];
   feedId: string | undefined;
@@ -333,7 +275,21 @@ function InboxListSection({
   isResizing: boolean;
   fetchNextInboxPage: () => void;
   selectItem: (item: InboxItem) => void;
+  navigate: ReturnType<typeof useInboxRouteState>["navigate"];
 }) {
+  const handleFilterChange = useCallback(
+    (filter: import("@modules/inbox/services/api").InboxFilter) => {
+      void navigate({
+        search: (prev) => ({
+          ...prev,
+          filter,
+          itemId: undefined,
+        }),
+      });
+    },
+    [navigate],
+  );
+
   const listProps = useMemo(
     () => ({
       inboxItems,
@@ -364,14 +320,17 @@ function InboxListSection({
         dataUpdatedAt: inboxQuery.dataUpdatedAt,
       },
       onSelectItem: selectItem,
+      onFilterChange: handleFilterChange,
     }),
     [
       effectiveFilter,
       feedId,
       folderId,
       fetchNextInboxPage,
+      handleFilterChange,
       headerCount,
       inboxItems,
+      inboxQuery.dataUpdatedAt,
       inboxQuery.isFetchingNextPage,
       inboxQuery.isFetching,
       inboxQuery.hasNextPage,

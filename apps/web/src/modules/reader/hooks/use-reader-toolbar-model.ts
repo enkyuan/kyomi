@@ -157,7 +157,6 @@ export function useReaderToolbarModel({
     runExtract("auto");
   }, [extractMutation.isPending, item.id, runExtract, shouldAutoExtract]);
 
-  // oxlint-disable-next-line react-doctor/no-adjust-state-on-prop-change
   useEffect(() => {
     if (isMobile) {
       return;
@@ -184,6 +183,7 @@ export function useReaderToolbarModel({
       },
     );
 
+    // oxlint-disable-next-line react-doctor/no-adjust-state-on-prop-change
     observer.observe(inlineToolbarNode);
 
     return () => {

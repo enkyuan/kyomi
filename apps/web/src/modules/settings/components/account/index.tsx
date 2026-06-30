@@ -60,7 +60,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
     formatTimestamp,
     isEditingEmail,
     sessions,
-    sessionsQuery,
+    isSessionsError,
     shortenUserAgent,
     updateEmailMutation,
     handleCancelEditEmail,
@@ -191,7 +191,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
             </TableFooter>
           </Table>
         </Frame>
-        {sessionsQuery.isError ? (
+        {isSessionsError ? (
           <p className="text-sm text-muted-foreground">Unable to load all sessions right now.</p>
         ) : null}
         <Button onClick={() => void onLogout()} variant="destructive-outline">

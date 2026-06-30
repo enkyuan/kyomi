@@ -64,7 +64,7 @@ export function SourcesDialog({
     return () => window.clearTimeout(timer);
   }, [query]);
 
-  const discoverResultsQuery = useQuery({
+  const { data: discoverData, isFetching: isDiscoverFetching } = useQuery({
     queryKey: ["discover", "feeds", debouncedQuery],
     queryFn: () => searchFeeds({ data: { query: debouncedQuery } }),
     enabled: dialogOpen && debouncedQuery.length > 0,
@@ -72,13 +72,13 @@ export function SourcesDialog({
     retry: 0,
     refetchOnWindowFocus: false,
   });
-  const searchResults = discoverResultsQuery.data ?? [];
+  const searchResults = discoverData ?? [];
   const cappedSearchResults =
     searchResults.length > DISCOVER_RESULTS_UI_CAP
       ? searchResults.slice(0, DISCOVER_RESULTS_UI_CAP)
       : searchResults;
   const discoverResultsTruncated = searchResults.length > DISCOVER_RESULTS_UI_CAP;
-  const shouldShowLoading = discoverResultsQuery.isFetching && searchResults.length === 0;
+  const shouldShowLoading = isDiscoverFetching && searchResults.length === 0;
   const shouldShowEmpty =
     !shouldShowLoading && (debouncedQuery.length === 0 || searchResults.length === 0);
 

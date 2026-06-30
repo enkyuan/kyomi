@@ -39,7 +39,7 @@ export function useFeedRefresh(feedId: string) {
     },
   });
 
-  const detailQuery = useQuery({
+  const { data: feedDetail } = useQuery({
     queryKey: ["feed-detail", feedId],
     queryFn: async () => {
       const data = await getFeedDetail({ data: { feedId } });
@@ -64,7 +64,7 @@ export function useFeedRefresh(feedId: string) {
     },
   });
 
-  const status = detailQuery.data?.refreshStatus ?? "idle";
+  const status = feedDetail?.refreshStatus ?? "idle";
   const isRefreshing = mutation.isPending || status === "queued" || status === "running";
 
   const triggerRefresh = () => {
@@ -78,9 +78,9 @@ export function useFeedRefresh(feedId: string) {
     refresh: triggerRefresh,
     isRefreshing,
     refreshStatus: status,
-    lastRefreshStartedAt: detailQuery.data?.lastRefreshStartedAt,
-    lastRefreshCompletedAt: detailQuery.data?.lastRefreshCompletedAt,
-    lastRefreshFailedAt: detailQuery.data?.lastRefreshFailedAt,
-    error: detailQuery.data?.lastRefreshError ?? mutation.error?.message,
+    lastRefreshStartedAt: feedDetail?.lastRefreshStartedAt,
+    lastRefreshCompletedAt: feedDetail?.lastRefreshCompletedAt,
+    lastRefreshFailedAt: feedDetail?.lastRefreshFailedAt,
+    error: feedDetail?.lastRefreshError ?? mutation.error?.message,
   };
 }

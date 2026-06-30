@@ -1,7 +1,7 @@
 "use client";
 
 import { Folder2Fill, SelectorVerticalLine } from "@mingcute/react";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useEffectEvent, useState } from "react";
 import { SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 import { SidebarModeAnimatedText } from "@kyomi/ui/sidebar/mode-animated-text";
 import { cn } from "@lib/utils";
@@ -86,17 +86,16 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
     void SourcesDialog.preload();
   };
 
-  const preloadWorkspaceDialog = () => {
-    setWorkspaceDialogLoaded(true);
-    void WorkspaceCommandDialog.preload();
-  };
-
-  const setWorkspaceOpen = (open: boolean) => {
-    if (open) {
-      preloadWorkspaceDialog();
-    }
-    setCommandOpen(open);
-  };
+  const setWorkspaceOpen = useCallback(
+    (open: boolean) => {
+      if (open) {
+        setWorkspaceDialogLoaded(true);
+        void WorkspaceCommandDialog.preload();
+      }
+      setCommandOpen(open);
+    },
+    [setCommandOpen],
+  );
 
   const setSourcesDialogOpen = (open: boolean) => {
     if (open) {
@@ -105,51 +104,49 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
     setSourcesOpen(open);
   };
 
+  const handleKeyDown = useEffectEvent((event: KeyboardEvent) => {
+    const activeEl = document.activeElement;
+    const isInput =
+      activeEl &&
+      (activeEl.tagName === "INPUT" ||
+        activeEl.tagName === "TEXTAREA" ||
+        activeEl.getAttribute("contenteditable") === "true");
+
+    if (isInput) {
+      return;
+    }
+
+    const key = event.key.toLowerCase();
+
+    // modifier + K opens Workspace Switcher
+    if (
+      key === "k" &&
+      isPlatformModifierShortcut(event, platform) &&
+      !event.shiftKey &&
+      !event.altKey
+    ) {
+      event.preventDefault();
+      setWorkspaceOpen(true);
+    }
+
+    // single / opens Follow Sources (no modifiers)
+    if (
+      event.key === "/" &&
+      !isPlatformModifierShortcut(event, platform) &&
+      !event.shiftKey &&
+      !event.altKey
+    ) {
+      event.preventDefault();
+      setSourcesDialogLoaded(true);
+      void SourcesDialog.preload();
+      setSourcesOpen(true);
+    }
+  });
+
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      const activeEl = document.activeElement;
-      const isInput =
-        activeEl &&
-        (activeEl.tagName === "INPUT" ||
-          activeEl.tagName === "TEXTAREA" ||
-          activeEl.getAttribute("contenteditable") === "true");
-
-      if (isInput) {
-        return;
-      }
-
-      const key = event.key.toLowerCase();
-
-      // modifier + K opens Workspace Switcher
-      if (
-        key === "k" &&
-        isPlatformModifierShortcut(event, platform) &&
-        !event.shiftKey &&
-        !event.altKey
-      ) {
-        event.preventDefault();
-        setWorkspaceDialogLoaded(true);
-        void WorkspaceCommandDialog.preload();
-        setWorkspaceOpen(true);
-      }
-
-      // single / opens Follow Sources (no modifiers)
-      if (
-        event.key === "/" &&
-        !isPlatformModifierShortcut(event, platform) &&
-        !event.shiftKey &&
-        !event.altKey
-      ) {
-        event.preventDefault();
-        setSourcesDialogLoaded(true);
-        void SourcesDialog.preload();
-        setSourcesOpen(true);
-      }
-    };
-
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [platform]);
+  }, []);
 
   const scopeIcon =
     scope?.kind === "feed" ? (
@@ -175,8 +172,14 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
               onClick={() => {
                 setWorkspaceOpen(true);
               }}
-              onFocus={preloadWorkspaceDialog}
-              onPointerEnter={preloadWorkspaceDialog}
+              onFocus={() => {
+                setWorkspaceDialogLoaded(true);
+                void WorkspaceCommandDialog.preload();
+              }}
+              onPointerEnter={() => {
+                setWorkspaceDialogLoaded(true);
+                void WorkspaceCommandDialog.preload();
+              }}
             >
               <SelectorVerticalLine className="size-6 shrink-0 -ms-1 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:-ms-0.75" />
               <span className="min-w-0 flex flex-1 items-center gap-2 -ms-1 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:-ms-0.75">

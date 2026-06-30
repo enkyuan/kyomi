@@ -76,24 +76,28 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
   });
   const [movingFeedId, setMovingFeedId] = useState<string | null>(null);
   const queryClient = useQueryClient();
-  const followedFeedsQuery = useQuery({
+  const {
+    data: followedFeedsData,
+    isError: isFollowedFeedsError,
+    isLoading: isFollowedFeedsLoading,
+  } = useQuery({
     queryKey: ["feeds", "followed"],
     queryFn: () => listFollowedFeeds(),
     enabled: open,
   });
-  const foldersQuery = useQuery({
+  const { data: foldersData } = useQuery({
     queryKey: ["folders"],
     queryFn: () => listFolders(),
     enabled: open,
   });
   const { pinnedFeedIdSet, setPinned } = usePinnedFeedIds();
   const folderOptions = useMemo<FolderOption[]>(
-    () => (foldersQuery.data ?? []).map((folder) => ({ label: folder.name, value: folder.id })),
-    [foldersQuery.data],
+    () => (foldersData ?? []).map((folder) => ({ label: folder.name, value: folder.id })),
+    [foldersData],
   );
   const unsortedFolderId = useMemo(
-    () => (foldersQuery.data ?? []).find((folder) => folder.name === "Unsorted")?.id ?? null,
-    [foldersQuery.data],
+    () => (foldersData ?? []).find((folder) => folder.name === "Unsorted")?.id ?? null,
+    [foldersData],
   );
 
   const moveFeedFolderMutation = useMutation({
@@ -156,7 +160,7 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
   });
 
   const tableData = useMemo<FeedRow[]>(() => {
-    return (followedFeedsQuery.data ?? []).map((feed) => ({
+    return (followedFeedsData ?? []).map((feed) => ({
       id: feed.feedId,
       title: feed.title || feed.url,
       url: feed.url,
@@ -165,7 +169,7 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
       source: getSourceLabel(feed),
       followedAtLabel: formatDateLabel(feed.subscribedAt),
     }));
-  }, [followedFeedsQuery.data, unsortedFolderId]);
+  }, [followedFeedsData, unsortedFolderId]);
 
   const columns = useMemo(
     () =>
@@ -221,8 +225,8 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
         <DialogPanel className="pt-0">
           <TableFrame
             columnsLength={columns.length}
-            isError={followedFeedsQuery.isError}
-            isLoading={followedFeedsQuery.isLoading}
+            isError={isFollowedFeedsError}
+            isLoading={isFollowedFeedsLoading}
             selectedCount={selectedCount}
             table={table}
             tableData={tableData}
