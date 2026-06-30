@@ -2,7 +2,7 @@ import { Elysia } from "elysia";
 import { auth } from ".";
 
 export const authRoutes = new Elysia({
-  name: "vols.rss.auth.routes",
+  name: "kyomi.auth.routes",
 })
   .all("/api/auth", (ctx) => {
     const ip = ctx.server?.requestIP(ctx.request)?.address;

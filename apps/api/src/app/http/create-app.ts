@@ -10,7 +10,7 @@ import { registerRoutes } from "./register-routes";
  */
 export function createApp() {
   const app = new Elysia({
-    name: "@vols.rss/api",
+    name: "@kyomi/api",
   });
 
   registerPlugins(app);

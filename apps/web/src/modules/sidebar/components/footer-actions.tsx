@@ -2,16 +2,11 @@
 
 import { Suspense, useState } from "react";
 import { ArrowUpCircleFill, Chat3Fill, Settings3Fill } from "@mingcute/react";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
-import {
-  SidebarFooter,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@vols.rss/ui/sidebar";
+import { SidebarModeAnimatedText } from "@kyomi/ui/sidebar/mode-animated-text";
+import { SidebarFooter, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 import { lazyNamed } from "@lib/lazy-named";
 
-const FeedbackDialog = lazyNamed(() => import("@vols.rss/ui/feedback-dialog"), "FeedbackDialog");
+const FeedbackDialog = lazyNamed(() => import("@kyomi/ui/feedback-dialog"), "FeedbackDialog");
 
 const FOOTER_ICONS = {
   upgrade: ArrowUpCircleFill,

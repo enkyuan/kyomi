@@ -7,7 +7,7 @@ import {
   fieldsForJob,
   parseJobMessageFields,
   toRedisStreamFieldList,
-} from "@vols.rss/worker";
+} from "@kyomi/worker";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { assertFeedAdminUser } from "@modules/feeds/admin/guard";
 

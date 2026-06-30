@@ -13,14 +13,14 @@ import {
   TextFill,
   TextLine,
 } from "@mingcute/react";
-import { Button } from "@vols.rss/ui/button";
+import { Button } from "@kyomi/ui/button";
 import {
   Toolbar as ToolbarRoot,
   ToolbarButton,
   ToolbarGroup,
   ToolbarSeparator,
-} from "@vols.rss/ui/toolbar";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@vols.rss/ui/tooltip";
+} from "@kyomi/ui/toolbar";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { useMediaQuery } from "@hooks/use-media-query";
 import type { ReaderToolbarProps } from "@modules/reader/hooks/use-reader-toolbar-model";
 import type { ReaderContentWidth } from "@modules/reader/hooks/use-reader-preferences";

@@ -1,5 +1,5 @@
 import { eq, sql } from "drizzle-orm";
-import { feedItems, feeds } from "@vols.rss/db";
+import { feedItems, feeds } from "@kyomi/db";
 import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "../favicon";
 import { fetchArticleEnrichment } from "./enrich";
 import { fetchFeedDocument } from "./fetch";

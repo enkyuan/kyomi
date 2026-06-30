@@ -1,9 +1,9 @@
 "use client";
 
 import { FontSizeLine } from "@mingcute/react";
-import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vols.rss/ui/select";
-import { SliderComfortable } from "@vols.rss/ui/slider";
-import { Switch } from "@vols.rss/ui/switch";
+import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@kyomi/ui/select";
+import { SliderComfortable } from "@kyomi/ui/slider";
+import { Switch } from "@kyomi/ui/switch";
 import type { ReaderPreferences } from "@modules/reader/hooks/use-reader-preferences";
 import { SettingHeading } from "./shared";
 

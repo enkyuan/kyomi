@@ -1,8 +1,8 @@
 "use client";
 
 import { BrushFill } from "@mingcute/react";
-import { Button } from "@vols.rss/ui/button";
-import { SidebarMenuButton, SidebarMenuItem } from "@vols.rss/ui/sidebar";
+import { Button } from "@kyomi/ui/button";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 import { InboxAppearanceSettings } from "./inbox-settings";
 import { ReaderAppearanceSettings } from "./reader-settings";
 import { ThemeSwitcher } from "./theme-switcher";

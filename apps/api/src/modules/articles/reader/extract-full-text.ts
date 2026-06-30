@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { articleClips, feedItems } from "@vols.rss/db";
+import { articleClips, feedItems } from "@kyomi/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
 import { eq } from "drizzle-orm";
 import { getArticleDetailForUser } from "../read/detail";

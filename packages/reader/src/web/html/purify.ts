@@ -11,9 +11,9 @@ function getPurify(): PurifyInstance {
   }
   if (typeof window === "undefined") {
     throw new Error(
-      "@vols.rss/reader: sanitizeReaderArticleHtml requires a browser DOM. " +
-        "Use `@vols.rss/reader/web` from client components (or a Vitest jsdom environment). " +
-        "For Node-only sanitization, use `@vols.rss/worker/sanitization` with your own JSDOM window.",
+      "@kyomi/reader: sanitizeReaderArticleHtml requires a browser DOM. " +
+        "Use `@kyomi/reader/web` from client components (or a Vitest jsdom environment). " +
+        "For Node-only sanitization, use `@kyomi/worker/sanitization` with your own JSDOM window.",
     );
   }
   cached = createDOMPurify(window);

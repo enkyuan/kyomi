@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { AddFill } from "@mingcute/react";
-import { Button } from "@vols.rss/ui/button";
+import { Button } from "@kyomi/ui/button";
 import {
   Dialog as UiDialog,
   DialogClose,
@@ -14,11 +14,11 @@ import {
   DialogPopup,
   DialogTitle,
   DialogTrigger,
-} from "@vols.rss/ui/dialog";
-import { Field, FieldError } from "@vols.rss/ui/field";
-import { Form } from "@vols.rss/ui/form";
-import { Input } from "@vols.rss/ui/input";
-import { toastManager } from "@vols.rss/ui/toast";
+} from "@kyomi/ui/dialog";
+import { Field, FieldError } from "@kyomi/ui/field";
+import { Form } from "@kyomi/ui/form";
+import { Input } from "@kyomi/ui/input";
+import { toastManager } from "@kyomi/ui/toast";
 import { createFolder } from "@modules/folders/api";
 
 type DialogProps = {

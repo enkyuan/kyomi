@@ -1,5 +1,5 @@
 {
-  "name": "@vols.rss/tests",
+  "name": "@kyomi/tests",
   "private": true,
   "type": "module",
   "scripts": {
@@ -20,10 +20,10 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.1.4",
-    "@vols.rss/db": "workspace:*",
-    "@vols.rss/reader": "workspace:*",
-    "@vols.rss/ui": "workspace:*",
-    "@vols.rss/worker": "workspace:*",
+    "@kyomi/db": "workspace:*",
+    "@kyomi/reader": "workspace:*",
+    "@kyomi/ui": "workspace:*",
+    "@kyomi/worker": "workspace:*",
     "bun-types": "latest",
     "jsdom": "^28.1.0",
     "react": "^19.2.0",

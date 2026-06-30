@@ -1,5 +1,5 @@
 import { and, eq } from "drizzle-orm";
-import { feedSubscriptions, feeds } from "@vols.rss/db";
+import { feedSubscriptions, feeds } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";

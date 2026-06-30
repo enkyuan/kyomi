@@ -2,16 +2,16 @@
 
 import { DownFill } from "@mingcute/react";
 import { Link } from "@tanstack/react-router";
-import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@vols.rss/ui/collapsible";
-import { ScrollArea } from "@vols.rss/ui/scroll-area";
+import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@kyomi/ui/collapsible";
+import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
   SidebarGroup,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@vols.rss/ui/sidebar";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
+} from "@kyomi/ui/sidebar";
+import { SidebarModeAnimatedText } from "@kyomi/ui/sidebar/mode-animated-text";
 import { cn } from "@lib/utils";
 import { FeedFavicon } from "./feed-favicon";
 import { PINNED_LIST_SCROLL_CLASS } from "../lib/constants";

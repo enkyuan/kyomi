@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { stripDangerousMarkupForWebViewFragment } from "@vols.rss/reader/webview";
+import { stripDangerousMarkupForWebViewFragment } from "@kyomi/reader/webview";
 
 describe("stripDangerousMarkupForWebViewFragment", () => {
   test("removes script tags", () => {

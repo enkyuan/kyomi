@@ -3,7 +3,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import { AppSidebar } from "@modules/sidebar/components/app-sidebar";
 import { APP_SIDEBAR_WIDTH, APP_SIDEBAR_WIDTH_READER_FOCUS } from "@modules/sidebar/lib/constants";
-import { SidebarInset, SidebarProvider } from "@vols.rss/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@kyomi/ui/sidebar";
 
 const GRID_TEMPLATE_COLUMNS = "auto minmax(0, 1fr)";
 

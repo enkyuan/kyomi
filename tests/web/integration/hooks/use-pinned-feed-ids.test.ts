@@ -8,9 +8,9 @@ import {
 
 describe("usePinnedFeedIds helpers", () => {
   test("builds stable migration keys scoped by user", () => {
-    expect(buildMigrationKey("user-1")).toBe("vols.rss:pinned-feed-ids:migrated:v1:user-1");
+    expect(buildMigrationKey("user-1")).toBe("kyomi:pinned-feed-ids:migrated:v1:user-1");
     expect(buildMigrationStartedKey("user-1")).toBe(
-      "vols.rss:pinned-feed-ids:migration-started:v1:user-1",
+      "kyomi:pinned-feed-ids:migration-started:v1:user-1",
     );
   });
 

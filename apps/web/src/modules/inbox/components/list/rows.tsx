@@ -5,7 +5,7 @@ import { useRef, type FocusEvent, type PointerEvent, type RefObject } from "reac
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
-import { Skeleton } from "@vols.rss/ui/skeleton";
+import { Skeleton } from "@kyomi/ui/skeleton";
 import {
   DEFAULT_SKELETON_ROWS,
   getFeedItemRowEstimate,

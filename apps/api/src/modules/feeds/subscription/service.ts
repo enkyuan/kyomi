@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { feedSubscriptions, feeds } from "@vols.rss/db";
+import { feedSubscriptions, feeds } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
 import { resolveRemoteFeed } from "@modules/discover/feed/resolve-remote";

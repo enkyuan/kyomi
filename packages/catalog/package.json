@@ -1,5 +1,5 @@
 {
-  "name": "@vols.rss/catalog",
+  "name": "@kyomi/catalog",
   "private": true,
   "scripts": {
     "setup": "poetry install",

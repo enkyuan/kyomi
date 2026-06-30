@@ -1,4 +1,4 @@
-# @vols.rss/web
+# @kyomi/web
 
 TanStack Start frontend for Vols.rss: RSS inbox, reader, feed management, and account settings.
 
@@ -88,7 +88,7 @@ Import from a module’s public API (`@modules/inbox`, etc.) or a concrete path 
 
 ### Shared UI
 
-Primitives and icons live in [`packages/ui`](../../packages/ui/). Import components as `@vols.rss/ui/button`, icons as `@vols.rss/ui/icons/empty-state`. Tailwind scans `packages/ui/src` via `src/styles.css` `@source`.
+Primitives and icons live in [`packages/ui`](../../packages/ui/). Import components as `@kyomi/ui/button`, icons as `@kyomi/ui/icons/empty-state`. Tailwind scans `packages/ui/src` via `src/styles.css` `@source`.
 
 ### Path aliases
 
@@ -98,7 +98,7 @@ Primitives and icons live in [`packages/ui`](../../packages/ui/). Import compone
 | `@modules/*` | `src/modules/*` |
 | `@hooks/*` | `src/hooks/*` |
 | `@lib/*` | `src/lib/*` |
-| `@vols.rss/ui/*` | `packages/ui/src/*` |
+| `@kyomi/ui/*` | `packages/ui/src/*` |
 
 ## Routing
 

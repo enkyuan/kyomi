@@ -2,10 +2,10 @@ import { env } from "@config/env";
 import { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { closeRedis, getRedis } from "@adapters/redis";
-import { consumeJobs, runFeedRefresh, type JobMessage } from "@vols.rss/worker";
+import { consumeJobs, runFeedRefresh, type JobMessage } from "@kyomi/worker";
 import { publishJob } from "@adapters/queue/publish-job";
 import { runOpmlImportFeedJob, runOpmlImportJob } from "@modules/opml/service";
-import { feedSubscriptions, feeds } from "@vols.rss/db";
+import { feedSubscriptions, feeds } from "@kyomi/db";
 import { lte, and, ne, eq, or, isNull, sql } from "drizzle-orm";
 import type Redis from "ioredis";
 

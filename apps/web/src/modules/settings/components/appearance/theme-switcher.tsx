@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Field, FieldItem, FieldLabel } from "@vols.rss/ui/field";
-import { Fieldset, FieldsetLegend } from "@vols.rss/ui/fieldset";
-import { Radio, RadioGroup } from "@vols.rss/ui/radio-group";
+import { Field, FieldItem, FieldLabel } from "@kyomi/ui/field";
+import { Fieldset, FieldsetLegend } from "@kyomi/ui/fieldset";
+import { Radio, RadioGroup } from "@kyomi/ui/radio-group";
 
 const THEME_STORAGE_KEY = "theme";
 
@@ -85,7 +85,7 @@ export function ThemeSwitcher() {
     >
       <div className="space-y-1">
         <FieldsetLegend className="font-medium text-sm">Theme</FieldsetLegend>
-        <p className="text-xs text-muted-foreground">Choose how vols.rss appears across the app.</p>
+        <p className="text-xs text-muted-foreground">Choose how kyomi appears across the app.</p>
       </div>
       <RadioGroup
         className="flex-row gap-4"

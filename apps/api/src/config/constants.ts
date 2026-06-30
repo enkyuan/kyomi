@@ -1,1 +1,1 @@
-export const SERVICE_NAME = "@vols.rss/api";
+export const SERVICE_NAME = "@kyomi/api";

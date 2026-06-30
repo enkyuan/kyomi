@@ -1,6 +1,6 @@
 import { and, eq } from "drizzle-orm";
 import type { db } from "@adapters/db/client";
-import { feedSubscriptions, feeds, folders } from "@vols.rss/db";
+import { feedSubscriptions, feeds, folders } from "@kyomi/db";
 import { decodeText } from "@shared/text/entities";
 
 type DB = typeof db;
@@ -122,7 +122,7 @@ export function buildOpmlExportDocument(
     );
 
   const generatedAt = options?.generatedAt ?? new Date();
-  const title = options?.title?.trim() || "vols.rss Subscriptions";
+  const title = options?.title?.trim() || "kyomi Subscriptions";
 
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',

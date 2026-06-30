@@ -1,4 +1,4 @@
-import { feedItemUserState, feedItems, feedSubscriptions } from "@vols.rss/db";
+import { feedItemUserState, feedItems, feedSubscriptions } from "@kyomi/db";
 import { sql } from "drizzle-orm";
 
 /** SQL expression: whether the item is read for the joined subscription + optional user state row. */

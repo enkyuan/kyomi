@@ -1,5 +1,5 @@
 import { XMLParser } from "fast-xml-parser";
-import { decodeHtmlEntities } from "@vols.rss/worker";
+import { decodeHtmlEntities } from "@kyomi/worker";
 
 export type ParsedFeedMetadata = {
   title: string;

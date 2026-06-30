@@ -1,7 +1,7 @@
 import type Redis from "ioredis";
 
 export const JOBS_STREAM_KEY = "jobs";
-export const JOBS_CONSUMER_GROUP = "vols.rss-workers";
+export const JOBS_CONSUMER_GROUP = "kyomi-workers";
 export const JOBS_DEAD_LETTER_STREAM_KEY = "jobs:dead-letter";
 
 export type FeedRefreshJob = {

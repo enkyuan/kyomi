@@ -1,5 +1,5 @@
 import type { drizzle } from "drizzle-orm/node-postgres";
-import type * as schema from "@vols.rss/db";
+import type * as schema from "@kyomi/db";
 
 export type FeedRefreshResult = {
   ok: boolean;

@@ -23,7 +23,7 @@ import {
   invalidateFeedAndInboxQueries,
 } from "@modules/inbox/queries/options";
 import { Refresh2Fill } from "@mingcute/react";
-import { Button } from "@vols.rss/ui/button";
+import { Button } from "@kyomi/ui/button";
 
 type UpdateProps = { feedId: string; folderId?: never } | { feedId?: never; folderId?: string };
 

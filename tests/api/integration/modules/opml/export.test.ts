@@ -60,7 +60,7 @@ describe("opml export", () => {
     expect(xml).toContain("<dateCreated>Mon, 25 May 2026 18:00:00 GMT</dateCreated>");
 
     const parsed = parseOpmlDocument(xml, "Unsorted");
-    expect(parsed.opmlTitle).toBe("vols.rss Subscriptions");
+    expect(parsed.opmlTitle).toBe("kyomi Subscriptions");
     expect(parsed.feeds).toEqual([
       {
         xmlUrl: "https://example.com/beta.xml",

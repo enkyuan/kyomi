@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { toastManager } from "@vols.rss/ui/toast";
+import { toastManager } from "@kyomi/ui/toast";
 import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-data";
 import { useMediaQuery } from "@hooks/use-media-query";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/schemas";

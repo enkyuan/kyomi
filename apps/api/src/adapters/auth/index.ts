@@ -5,7 +5,7 @@ import {
   resolveBetterAuthBaseUrl,
   resolveBetterAuthTrustedOrigins,
   shouldUseSecureCookies,
-} from "@vols.rss/db";
+} from "@kyomi/db";
 import { db } from "@adapters/db/client";
 import { env } from "@config/env";
 

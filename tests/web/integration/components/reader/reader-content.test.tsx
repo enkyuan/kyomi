@@ -2,8 +2,8 @@
 
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
-import { ReaderContent } from "@vols.rss/reader/web";
-import type { ReaderContent as ReaderContentModel } from "@vols.rss/reader/core";
+import { ReaderContent } from "@kyomi/reader/web";
+import type { ReaderContent as ReaderContentModel } from "@kyomi/reader/core";
 
 function baseReader(overrides: Partial<ReaderContentModel> = {}): ReaderContentModel {
   return {

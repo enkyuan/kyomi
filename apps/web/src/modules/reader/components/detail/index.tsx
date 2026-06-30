@@ -1,11 +1,11 @@
 "use client";
 
 import { Article } from "../article";
-import { EmptyStateIcon } from "@vols.rss/ui/icons/empty-state";
-import { ScrollAreaPrimitive, ScrollBar } from "@vols.rss/ui/scroll-area";
-import { Skeleton } from "@vols.rss/ui/skeleton";
+import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
+import { Skeleton } from "@kyomi/ui/skeleton";
 import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/schemas";
-import { Button } from "@vols.rss/ui/button";
+import { Button } from "@kyomi/ui/button";
 import { LeftFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
 import { useReaderPreferences } from "@modules/reader/hooks/use-reader-preferences";

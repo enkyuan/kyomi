@@ -1,5 +1,5 @@
 {
-  "name": "@vols.rss/worker",
+  "name": "@kyomi/worker",
   "private": true,
   "type": "module",
   "exports": {
@@ -13,7 +13,7 @@
     "./lib/html-entities": "./src/lib/html-entities.ts"
   },
   "dependencies": {
-    "@vols.rss/db": "workspace:*",
+    "@kyomi/db": "workspace:*",
     "dompurify": "^3.4.0",
     "drizzle-orm": "^0.45.2",
     "fast-xml-parser": "^5.5.10",

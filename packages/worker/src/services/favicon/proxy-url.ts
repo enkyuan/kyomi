@@ -17,7 +17,7 @@ function parseOrigin(raw: string | null | undefined): string | null {
  * Build the URL to use for a feed favicon in the browser:
  *  - Returns the stored favicon URL directly when one is persisted from ingestion.
  *  - Otherwise builds the `/api/favicon?domain=<origin>` proxy URL, which
- *    uses @vols.rss/worker/favicon server-side to safely resolve the real favicon.
+ *    uses @kyomi/worker/favicon server-side to safely resolve the real favicon.
  *
  * Only http/https origins are forwarded to the proxy (matching the server's
  * ALLOWED_SCHEMES guard), so data: / blob: / file: URLs are silently dropped.

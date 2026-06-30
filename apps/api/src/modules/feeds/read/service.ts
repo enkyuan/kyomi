@@ -1,5 +1,5 @@
 import { and, eq } from "drizzle-orm";
-import { feedSubscriptions, feeds, folders } from "@vols.rss/db";
+import { feedSubscriptions, feeds, folders } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";

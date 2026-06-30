@@ -2,16 +2,11 @@
 
 import { Folder2Fill, SelectorVerticalLine } from "@mingcute/react";
 import { Suspense, useEffect, useState } from "react";
-import {
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@vols.rss/ui/sidebar";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
+import { SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
+import { SidebarModeAnimatedText } from "@kyomi/ui/sidebar/mode-animated-text";
 import { cn } from "@lib/utils";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@vols.rss/ui/input-group";
-import { Kbd, KbdGroup } from "@vols.rss/ui/kbd";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@kyomi/ui/input-group";
+import { Kbd, KbdGroup } from "@kyomi/ui/kbd";
 import { FeedFavicon } from "./feed-favicon";
 import { lazyNamed } from "@lib/lazy-named";
 import {

@@ -2,11 +2,11 @@
 
 import { CheckFill, CloseFill, Edit2Fill, User3Fill } from "@mingcute/react";
 import { useAuth } from "@integrations/better-auth/provider";
-import { Button } from "@vols.rss/ui/button";
-import { Frame } from "@vols.rss/ui/frame";
-import { Group } from "@vols.rss/ui/group";
-import { Input } from "@vols.rss/ui/input";
-import { SidebarMenuButton, SidebarMenuItem } from "@vols.rss/ui/sidebar";
+import { Button } from "@kyomi/ui/button";
+import { Frame } from "@kyomi/ui/frame";
+import { Group } from "@kyomi/ui/group";
+import { Input } from "@kyomi/ui/input";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 import {
   Table,
   TableBody,
@@ -15,7 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@vols.rss/ui/table";
+} from "@kyomi/ui/table";
 import { useAccountPanel } from "@modules/settings/hooks/use-account-panel";
 
 export const accountSection = {

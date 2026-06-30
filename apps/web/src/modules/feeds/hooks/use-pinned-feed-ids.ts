@@ -16,10 +16,9 @@ import {
 } from "../queries/cache";
 
 const FOLLOWED_FEEDS_QUERY_KEY = ["feeds", "followed"] as const;
-const PINNED_FEED_IDS_STORAGE_KEY = "vols.rss:pinned-feed-ids";
-const PINNED_FEED_IDS_MIGRATION_KEY_PREFIX = "vols.rss:pinned-feed-ids:migrated:v1";
-const PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX =
-  "vols.rss:pinned-feed-ids:migration-started:v1";
+const PINNED_FEED_IDS_STORAGE_KEY = "kyomi:pinned-feed-ids";
+const PINNED_FEED_IDS_MIGRATION_KEY_PREFIX = "kyomi:pinned-feed-ids:migrated:v1";
+const PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX = "kyomi:pinned-feed-ids:migration-started:v1";
 
 function readLegacyPinnedFeedIds() {
   if (typeof window === "undefined") {

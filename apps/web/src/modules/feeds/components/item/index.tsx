@@ -3,7 +3,7 @@
 import { memo } from "react";
 import { cn } from "@lib/utils";
 import { SourceRow } from "./source-row";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@vols.rss/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/card";
 import { TimestampText } from "@modules/inbox/components/timestamp-text";
 import { useTimestamp } from "@hooks/use-timestamp";
 import { Pretext } from "./pretext";

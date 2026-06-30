@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { createReaderDocument } from "@vols.rss/reader/webview";
+import { createReaderDocument } from "@kyomi/reader/webview";
 
 describe("createReaderDocument", () => {
   test("renders html reader content into a full document", () => {

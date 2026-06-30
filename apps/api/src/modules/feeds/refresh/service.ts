@@ -1,4 +1,4 @@
-import { feeds, feedSubscriptions } from "@vols.rss/db";
+import { feeds, feedSubscriptions } from "@kyomi/db";
 import { and, eq } from "drizzle-orm";
 import type { db } from "@adapters/db/client";
 

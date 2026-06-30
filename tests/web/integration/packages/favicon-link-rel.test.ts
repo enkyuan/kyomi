@@ -2,7 +2,7 @@ import {
   findIconFromHtml,
   findIconsFromHtml,
   linkRelDeclaresSiteIcon,
-} from "@vols.rss/worker/favicon";
+} from "@kyomi/worker/favicon";
 import { afterEach, describe, expect, test, vi } from "vitest";
 
 describe("linkRelDeclaresSiteIcon", () => {

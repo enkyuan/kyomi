@@ -7,7 +7,7 @@ import { Link, useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
 import { prefetchInboxFlow } from "@modules/inbox";
 import { useAuth } from "@integrations/better-auth/provider";
-import { Button } from "@vols.rss/ui/button";
+import { Button } from "@kyomi/ui/button";
 import {
   Card,
   CardAction,
@@ -15,13 +15,13 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@vols.rss/ui/card";
-import { Form } from "@vols.rss/ui/form";
-import { Field, FieldError, FieldLabel } from "@vols.rss/ui/field";
-import { Input } from "@vols.rss/ui/input";
-import { PasswordInput } from "@vols.rss/ui/password-input";
-import { Spinner } from "@vols.rss/ui/spinner";
-import { toastManager } from "@vols.rss/ui/toast";
+} from "@kyomi/ui/card";
+import { Form } from "@kyomi/ui/form";
+import { Field, FieldError, FieldLabel } from "@kyomi/ui/field";
+import { Input } from "@kyomi/ui/input";
+import { PasswordInput } from "@kyomi/ui/password-input";
+import { Spinner } from "@kyomi/ui/spinner";
+import { toastManager } from "@kyomi/ui/toast";
 import { getFieldErrorMessage, loginDefaultValues, loginFormValidator } from "@modules/auth/schema";
 
 export function Login() {

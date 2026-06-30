@@ -5,7 +5,7 @@ import { ToolbarOverlay, type ActiveToolbar } from "@modules/feeds/components/it
 import { StaticRows, VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
 import { FilterMenu } from "./filter-menu";
 import { Update } from "../refresh/update";
-import { ScrollAreaPrimitive, ScrollBar } from "@vols.rss/ui/scroll-area";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
 import { RefreshStatus } from "./refresh-status";
 import {
   useCallback,

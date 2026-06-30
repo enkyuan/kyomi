@@ -17,12 +17,12 @@ import {
   CommandItem,
   CommandList,
   CommandPanel,
-} from "@vols.rss/ui/command";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@vols.rss/ui/input-group";
-import { Kbd, KbdGroup } from "@vols.rss/ui/kbd";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
-import { SidebarMenuButton } from "@vols.rss/ui/sidebar";
-import { toastManager } from "@vols.rss/ui/toast";
+} from "@kyomi/ui/command";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@kyomi/ui/input-group";
+import { Kbd, KbdGroup } from "@kyomi/ui/kbd";
+import { SidebarModeAnimatedText } from "@kyomi/ui/sidebar/mode-animated-text";
+import { SidebarMenuButton } from "@kyomi/ui/sidebar";
+import { toastManager } from "@kyomi/ui/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";
 import { followFeed, searchFeeds } from "@modules/feeds/api";
 import {

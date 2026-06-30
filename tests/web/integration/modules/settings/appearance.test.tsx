@@ -78,7 +78,7 @@ vi.mock("@modules/reader/hooks/use-reader-preferences", () => ({
   }),
 }));
 
-vi.mock("@vols.rss/ui/button", () => ({
+vi.mock("@kyomi/ui/button", () => ({
   Button: ({ children, onClick }: { children: ReactNode; onClick?: () => void }) => (
     <button onClick={onClick} type="button">
       {children}
@@ -86,14 +86,14 @@ vi.mock("@vols.rss/ui/button", () => ({
   ),
 }));
 
-vi.mock("@vols.rss/ui/sidebar", () => ({
+vi.mock("@kyomi/ui/sidebar", () => ({
   SidebarMenuButton: ({ children }: { children: ReactNode }) => (
     <button type="button">{children}</button>
   ),
   SidebarMenuItem: ({ children }: { children: ReactNode }) => <div>{children}</div>,
 }));
 
-vi.mock("@vols.rss/ui/select", () => ({
+vi.mock("@kyomi/ui/select", () => ({
   Select: ({
     children,
     items,
@@ -118,7 +118,7 @@ vi.mock("@vols.rss/ui/select", () => ({
   SelectValue: () => null,
 }));
 
-vi.mock("@vols.rss/ui/switch", () => ({
+vi.mock("@kyomi/ui/switch", () => ({
   Switch: ({
     checked,
     id,
@@ -134,7 +134,7 @@ vi.mock("@vols.rss/ui/switch", () => ({
   ),
 }));
 
-vi.mock("@vols.rss/ui/slider", () => ({
+vi.mock("@kyomi/ui/slider", () => ({
   SliderComfortable: ({ onChange }: { onChange?: (value: number) => void }) => (
     <button onClick={() => onChange?.(21)} type="button">
       font-size-slider
@@ -142,7 +142,7 @@ vi.mock("@vols.rss/ui/slider", () => ({
   ),
 }));
 
-vi.mock("@vols.rss/ui/group", () => ({
+vi.mock("@kyomi/ui/group", () => ({
   Group: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   GroupSeparator: () => <div />,
 }));

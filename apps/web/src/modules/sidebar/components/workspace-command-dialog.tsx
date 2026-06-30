@@ -8,7 +8,7 @@ import {
   NewsFill,
 } from "@mingcute/react";
 import type { useNavigate } from "@tanstack/react-router";
-import { Badge } from "@vols.rss/ui/badge";
+import { Badge } from "@kyomi/ui/badge";
 import {
   Command,
   CommandDialog,
@@ -23,7 +23,7 @@ import {
   CommandSeparator,
   CommandShortcut,
   CommandDialogPopup,
-} from "@vols.rss/ui/command";
+} from "@kyomi/ui/command";
 import { Dialog as CreateFolderDialog } from "@modules/folders/components/create/dialog";
 import { Dialog as ManageFeedsDialog } from "@modules/feeds/components/manage/dialog";
 import { FeedFavicon } from "./feed-favicon";

@@ -66,7 +66,7 @@ function checkFile(file: string): Violation[] {
     ) {
       violations.push({ file, specifier, reason: "packages must not import app internals" });
     }
-    if (specifier.includes("/src/") && specifier.startsWith("@vols.rss/")) {
+    if (specifier.includes("/src/") && specifier.startsWith("@kyomi/")) {
       violations.push({
         file,
         specifier,
@@ -78,11 +78,11 @@ function checkFile(file: string): Violation[] {
       (specifier.startsWith("@modules/") ||
         specifier.startsWith("@adapters/") ||
         specifier.startsWith("@shared/") ||
-        specifier.startsWith("@vols.rss/api"))
+        specifier.startsWith("@kyomi/api"))
     ) {
       violations.push({ file, specifier, reason: "worker must not import API/http modules" });
     }
-    if (isRouteFile && specifier.includes("/src/") && specifier.startsWith("@vols.rss/")) {
+    if (isRouteFile && specifier.includes("/src/") && specifier.startsWith("@kyomi/")) {
       violations.push({
         file,
         specifier,

@@ -1,5 +1,5 @@
 {
-  "name": "@vols.rss/web",
+  "name": "@kyomi/web",
   "private": true,
   "type": "module",
   "scripts": {
@@ -39,10 +39,10 @@
     "@tanstack/react-virtual": "^3.13.23",
     "@tanstack/router-plugin": "^1.132.0",
     "@tanstack/store": "^0.10.0",
-    "@vols.rss/db": "workspace:*",
-    "@vols.rss/reader": "workspace:*",
-    "@vols.rss/worker": "workspace:*",
-    "@vols.rss/ui": "workspace:*",
+    "@kyomi/db": "workspace:*",
+    "@kyomi/reader": "workspace:*",
+    "@kyomi/worker": "workspace:*",
+    "@kyomi/ui": "workspace:*",
     "better-auth": "^1.5.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

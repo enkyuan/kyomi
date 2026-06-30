@@ -1,4 +1,4 @@
-import { buildClientFaviconUrl } from "@vols.rss/worker/favicon/browser";
+import { buildClientFaviconUrl } from "@kyomi/worker/favicon/browser";
 
 const FAVICON_ERROR_TTL_MS = 60 * 1000;
 const CLIENT_FAVICON_ALLOWED_SCHEMES = new Set(["http:", "https:"]);

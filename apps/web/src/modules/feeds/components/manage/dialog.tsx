@@ -9,7 +9,7 @@ import {
 import { useMemo, useState } from "react";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { Button } from "@vols.rss/ui/button";
+import { Button } from "@kyomi/ui/button";
 import {
   Dialog as UiDialog,
   DialogClose,
@@ -19,10 +19,10 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@vols.rss/ui/dialog";
+} from "@kyomi/ui/dialog";
 import { TableFrame } from "./table";
 import { getColumns, type FeedRow, type FolderOption } from "./table-config";
-import { toastManager } from "@vols.rss/ui/toast";
+import { toastManager } from "@kyomi/ui/toast";
 import {
   listFollowedFeeds,
   moveFeedsToFolder,

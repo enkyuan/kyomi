@@ -5,7 +5,7 @@ import { apiV1Router } from "./api-v1-router";
 
 /** Root HTTP plugin: operational endpoints + versioned product API. */
 export const httpRouter = new Elysia({
-  name: "vols.rss.http",
+  name: "kyomi.http",
 })
   .use(healthPlugin)
   .use(authRoutes)

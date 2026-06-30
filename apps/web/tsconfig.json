@@ -10,8 +10,8 @@
       "@integrations/*": ["./src/integrations/*"],
       "@lib/*": ["./src/lib/*"],
       "@utils/*": ["./src/utils/*"],
-      "@vols.rss/ui": ["../../packages/ui/src/index.ts"],
-      "@vols.rss/ui/*": ["../../packages/ui/src/*"]
+      "@kyomi/ui": ["../../packages/ui/src/index.ts"],
+      "@kyomi/ui/*": ["../../packages/ui/src/*"]
     },
     "types": ["vite/client", "bun"]
   }

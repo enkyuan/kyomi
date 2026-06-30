@@ -1,5 +1,5 @@
 {
-  "name": "vols.rss",
+  "name": "kyomi",
   "private": true,
   "packageManager": "bun@1.1.0",
   "workspaces": [
@@ -11,9 +11,9 @@
     "build": "turbo run build",
     "bootstrap": "bun run setup:app",
     "bootstrap:full": "bun run setup:app && bun run setup:catalog",
-    "dev": "turbo run dev --filter=@vols.rss/web",
-    "dev:app": "turbo run dev --filter=@vols.rss/web",
-    "dev:web": "turbo run dev --filter=@vols.rss/web",
+    "dev": "turbo run dev --filter=@kyomi/web",
+    "dev:app": "turbo run dev --filter=@kyomi/web",
+    "dev:web": "turbo run dev --filter=@kyomi/web",
     "dev:api": "bun run --cwd apps/api dev",
     "dev:api:host": "bun run --cwd apps/api dev:host",
     "lint": "turbo run lint",

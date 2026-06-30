@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { feedSubscriptions, folders } from "@vols.rss/db";
+import { feedSubscriptions, folders } from "@kyomi/db";
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import type { FolderDto, FolderReadStatusResponseDto } from "./types";

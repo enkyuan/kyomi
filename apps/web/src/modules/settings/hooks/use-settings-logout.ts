@@ -2,7 +2,7 @@
 
 import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
-import { toastManager } from "@vols.rss/ui/toast";
+import { toastManager } from "@kyomi/ui/toast";
 
 type UseSettingsLogoutArgs = {
   onOpenChange: (open: boolean) => void;

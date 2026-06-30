@@ -17,8 +17,8 @@ This repository follows a monorepo shape modeled after larger production repos:
 
 ## Shared UI (`packages/ui`)
 
-- `src/*.tsx`: shadcn-style primitives (import `@vols.rss/ui/button`, etc.).
-- `src/icons/`: product illustrations and empty-state artwork (`@vols.rss/ui/icons/…`). See `src/icons/README.md` before adding new icons.
+- `src/*.tsx`: shadcn-style primitives (import `@kyomi/ui/button`, etc.).
+- `src/icons/`: product illustrations and empty-state artwork (`@kyomi/ui/icons/…`). See `src/icons/README.md` before adding new icons.
 
 ## Current Shared Baselines
 

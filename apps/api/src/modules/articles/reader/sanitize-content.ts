@@ -1,7 +1,7 @@
 import {
   ARTICLE_HTML_PURIFY_CONFIG,
   registerArticleHtmlSanitizeHooks,
-} from "@vols.rss/worker/sanitization";
+} from "@kyomi/worker/sanitization";
 import { JSDOM } from "jsdom";
 import createDOMPurify from "dompurify";
 
@@ -13,7 +13,7 @@ registerArticleHtmlSanitizeHooks(DOMPurify);
 DOMPurify.setConfig(ARTICLE_HTML_PURIFY_CONFIG);
 
 /**
- * DOMPurify-based article HTML sanitizer (see `@vols.rss/worker/sanitization`).
+ * DOMPurify-based article HTML sanitizer (see `@kyomi/worker/sanitization`).
  *
  * Configured to:
  * - Allow article-safe structural tags including `div` for publisher layout

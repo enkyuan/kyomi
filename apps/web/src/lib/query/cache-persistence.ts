@@ -2,8 +2,8 @@ import type { InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query"
 import { dehydrate, hydrate } from "@tanstack/react-query";
 import type { InboxListPage } from "@modules/inbox/queries/options";
 
-const HOT_CACHE_KEY = "vols.rss:hot-query-cache:v1";
-const HOT_CACHE_DB_NAME = "vols.rss.query-cache";
+const HOT_CACHE_KEY = "kyomi:hot-query-cache:v1";
+const HOT_CACHE_DB_NAME = "kyomi.query-cache";
 const HOT_CACHE_STORE_NAME = "snapshots";
 const HOT_CACHE_DB_VERSION = 1;
 const HOT_CACHE_MAX_AGE_MS = 24 * 60 * 60_000;

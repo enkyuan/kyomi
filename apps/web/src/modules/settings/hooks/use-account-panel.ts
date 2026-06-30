@@ -5,7 +5,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { updateUserEmail } from "@lib/auth/functions";
 import { isValidEmail } from "@modules/auth/schema";
-import { toastManager } from "@vols.rss/ui/toast";
+import { toastManager } from "@kyomi/ui/toast";
 
 type SessionRow = {
   expiresAt: string;

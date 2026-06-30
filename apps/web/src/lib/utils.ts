@@ -1,1 +1,1 @@
-export { cn } from "@vols.rss/ui/lib/utils";
+export { cn } from "@kyomi/ui/lib/utils";

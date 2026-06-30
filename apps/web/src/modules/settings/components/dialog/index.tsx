@@ -8,8 +8,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@vols.rss/ui/breadcrumb";
-import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@vols.rss/ui/dialog";
+} from "@kyomi/ui/breadcrumb";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@kyomi/ui/dialog";
 import {
   Sidebar,
   SidebarContent,
@@ -17,8 +17,8 @@ import {
   SidebarGroupContent,
   SidebarMenu,
   SidebarProvider,
-} from "@vols.rss/ui/sidebar";
-import { Separator } from "@vols.rss/ui/separator";
+} from "@kyomi/ui/sidebar";
+import { Separator } from "@kyomi/ui/separator";
 import { AccountPageNav, AccountPagePanel, accountSection } from "../account";
 import { AdvancedPageNav, AdvancedPagePanel, advancedSection } from "../advanced";
 import { AppearancePageNav, AppearancePagePanel, appearanceSection } from "../appearance";

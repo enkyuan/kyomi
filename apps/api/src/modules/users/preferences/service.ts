@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { userPreferences } from "@vols.rss/db";
+import { userPreferences } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
 import type {

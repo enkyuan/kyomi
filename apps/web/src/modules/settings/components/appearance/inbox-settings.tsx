@@ -1,10 +1,10 @@
 "use client";
 
 import { FontSizeLine } from "@mingcute/react";
-import { Group, GroupSeparator } from "@vols.rss/ui/group";
-import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vols.rss/ui/select";
-import { SliderComfortable } from "@vols.rss/ui/slider";
-import { Switch } from "@vols.rss/ui/switch";
+import { Group, GroupSeparator } from "@kyomi/ui/group";
+import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@kyomi/ui/select";
+import { SliderComfortable } from "@kyomi/ui/slider";
+import { Switch } from "@kyomi/ui/switch";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
 import { SettingHeading } from "./shared";
 

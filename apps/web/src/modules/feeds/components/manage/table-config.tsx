@@ -1,7 +1,7 @@
 import { type ColumnDef } from "@tanstack/react-table";
-import { Checkbox } from "@vols.rss/ui/checkbox";
-import { Button } from "@vols.rss/ui/button";
-import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vols.rss/ui/select";
+import { Checkbox } from "@kyomi/ui/checkbox";
+import { Button } from "@kyomi/ui/button";
+import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@kyomi/ui/select";
 import { PinFill, PinLine } from "@mingcute/react";
 
 export type FeedRow = {

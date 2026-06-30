@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@vols.rss/db";
+import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
 import { and, desc, eq, gte, ilike, lt, or, sql, type SQL } from "drizzle-orm";
 import { logger } from "@adapters/logger";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
