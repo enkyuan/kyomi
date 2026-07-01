@@ -1,7 +1,7 @@
-import type { Config, DOMPurify, NodeHook, UponSanitizeAttributeHook } from "dompurify";
+import { Sanitizer, type PolicyInput } from "neosanitize";
 
 /**
- * Shared DOMPurify policy for article HTML (server + client).
+ * Shared article HTML policy for server + browser reader sanitization.
  *
  * Goals:
  * - Preserve structural wrappers (e.g. div-based author cards, figures, callouts)
@@ -88,8 +88,8 @@ export const ARTICLE_HTML_ALLOWED_ATTR = [
   "mathvariant",
 ] as const;
 
-/** Removed entirely with children (interactive / chrome / active content). */
-export const ARTICLE_HTML_FORBID_TAGS = [
+/** Tags removed by policy because they are active content or publisher chrome. */
+export const ARTICLE_HTML_DROP_CONTENT_TAGS = [
   "aside",
   "button",
   "footer",
@@ -105,6 +105,9 @@ export const ARTICLE_HTML_FORBID_TAGS = [
   "svg",
   "textarea",
 ] as const;
+
+/** Backward-compatible policy name for callers that treat these as forbidden tags. */
+export const ARTICLE_HTML_FORBID_TAGS = ARTICLE_HTML_DROP_CONTENT_TAGS;
 
 const VOID_ELEMENTS = new Set(["br", "hr", "img"]);
 
@@ -204,6 +207,7 @@ const MATH_TAGS = new Set([
 ]);
 
 const STYLE_ALLOWED_TAGS = new Set<string>(["span", ...Array.from(MATH_TAGS)]);
+const HTTP_URL_ATTRS = ["href", "src"] as const;
 
 /**
  * Prefixes for publisher/layout classes we intentionally keep (author cards, figures, CMS).
@@ -276,6 +280,15 @@ const MICROFORMAT_CLASS = /^(?:h|p|u|dt|e)-[a-zA-Z0-9](?:[a-zA-Z0-9_-]*[a-zA-Z0-
 const WORDPRESSISH_CLASS =
   /^(?:wp|has)-[a-zA-Z0-9][a-zA-Z0-9_-]*$|^align(?:left|right|center|wide|full)$/;
 
+const ARTICLE_HTML_POLICY = {
+  tags: ARTICLE_HTML_ALLOWED_TAGS,
+  attrs: {
+    "*": ARTICLE_HTML_ALLOWED_ATTR,
+  },
+} satisfies PolicyInput;
+
+const articleHtmlSanitizer = Sanitizer.builder(ARTICLE_HTML_POLICY).build();
+
 function matchesArticlePrefix(lower: string): boolean {
   for (const prefix of ARTICLE_CLASS_PREFIXES) {
     if (lower === prefix) {
@@ -318,7 +331,7 @@ export function isAllowedArticleClassToken(token: string): boolean {
   return false;
 }
 
-function filterClassAttr(tag: string, value: string): string | null {
+export function filterArticleClassAttr(tag: string, value: string): string | null {
   const lowerTag = tag.toLowerCase();
   if (lowerTag === "code") {
     const kept = value
@@ -337,83 +350,76 @@ function filterClassAttr(tag: string, value: string): string | null {
   return kept.length > 0 ? kept.join(" ") : null;
 }
 
-const registeredPurify = new WeakSet<object>();
-
-/** Instance returned by `createDOMPurify(window)` or `DOMPurify` in the browser. */
-export type ArticleHtmlPurifyInstance = DOMPurify;
-
-const uponSanitizeArticleAttributes: UponSanitizeAttributeHook = function (_node, data) {
-  const tag = _node.tagName?.toLowerCase() ?? "";
-  const attrLower = data.attrName.toLowerCase();
-  /* TypeDoc / documentation builds emit data-tsd-* (e.g. source paths); never keep in reader HTML. */
-  if (attrLower === "data-tsd-source" || attrLower.startsWith("data-tsd-")) {
-    data.keepAttr = false;
-    return;
-  }
-  if (data.attrName === "class") {
-    const next = filterClassAttr(tag, data.attrValue);
-    if (next === null) {
-      data.keepAttr = false;
-    } else {
-      data.attrValue = next;
-    }
-    return;
-  }
-  if (data.attrName === "style") {
-    if (!STYLE_ALLOWED_TAGS.has(tag)) {
-      data.keepAttr = false;
-      return;
-    }
-    if (!data.attrValue?.trim()) {
-      data.keepAttr = false;
-    }
-    return;
-  }
-};
-
-const removeEmptyElements: NodeHook = function (currentNode) {
-  if (
-    currentNode.nodeType === 1 &&
-    !VOID_ELEMENTS.has((currentNode as Element).tagName.toLowerCase()) &&
-    !(currentNode as Element).hasChildNodes() &&
-    !(currentNode as Element).textContent?.trim()
-  ) {
-    currentNode.parentNode?.removeChild(currentNode);
-  }
-};
-
-const optimizeImages: NodeHook = function (currentNode) {
-  if (currentNode.nodeType === 1 && (currentNode as Element).tagName.toLowerCase() === "img") {
-    const el = currentNode as Element;
-    if (!el.hasAttribute("loading")) {
-      el.setAttribute("loading", "lazy");
-    }
-    if (!el.hasAttribute("decoding")) {
-      el.setAttribute("decoding", "async");
-    }
-  }
-};
-
-export function registerArticleHtmlSanitizeHooks(purify: ArticleHtmlPurifyInstance): void {
-  if (registeredPurify.has(purify as object)) {
-    return;
-  }
-  registeredPurify.add(purify as object);
-
-  purify.addHook("uponSanitizeAttribute", uponSanitizeArticleAttributes);
-  purify.addHook("afterSanitizeElements", removeEmptyElements);
-  purify.addHook("afterSanitizeAttributes", optimizeImages);
+function isSafeHttpUrl(value: string): boolean {
+  return /^https?:\/\//i.test(value.trim());
 }
 
-export const ARTICLE_HTML_PURIFY_CONFIG: Config = {
-  ALLOWED_TAGS: [...ARTICLE_HTML_ALLOWED_TAGS],
-  ALLOWED_ATTR: [...ARTICLE_HTML_ALLOWED_ATTR],
-  FORBID_TAGS: [...ARTICLE_HTML_FORBID_TAGS],
-  ALLOW_DATA_ATTR: false,
-  ALLOWED_URI_REGEXP: /^https?:\/\//i,
-};
+function normalizeElementAttributes(element: Element): void {
+  const tag = element.tagName.toLowerCase();
 
-/** Options object for `DOMPurify.sanitize(html, opts)` (client). */
-export function getArticleHtmlSanitizeOptions(): Config {
-  return { ...ARTICLE_HTML_PURIFY_CONFIG };
+  for (const attr of Array.from(element.attributes)) {
+    const attrLower = attr.name.toLowerCase();
+    /* TypeDoc / documentation builds emit data-tsd-* (e.g. source paths); never keep in reader HTML. */
+    if (attrLower === "data-tsd-source" || attrLower.startsWith("data-tsd-")) {
+      element.removeAttribute(attr.name);
+    }
+  }
+
+  for (const attr of HTTP_URL_ATTRS) {
+    const value = element.getAttribute(attr);
+    if (value && !isSafeHttpUrl(value)) {
+      element.removeAttribute(attr);
+    }
+  }
+
+  const classValue = element.getAttribute("class");
+  if (classValue !== null) {
+    const next = filterArticleClassAttr(tag, classValue);
+    if (next === null) {
+      element.removeAttribute("class");
+    } else {
+      element.setAttribute("class", next);
+    }
+  }
+
+  const styleValue = element.getAttribute("style");
+  if (styleValue !== null) {
+    if (!STYLE_ALLOWED_TAGS.has(tag) || !styleValue.trim()) {
+      element.removeAttribute("style");
+    }
+  }
+
+  if (tag === "img") {
+    if (!element.hasAttribute("loading")) {
+      element.setAttribute("loading", "lazy");
+    }
+    if (!element.hasAttribute("decoding")) {
+      element.setAttribute("decoding", "async");
+    }
+  }
+}
+
+function removeEmptyElements(root: ParentNode): void {
+  const elements = Array.from(root.querySelectorAll("*")).reverse();
+  for (const element of elements) {
+    const tag = element.tagName.toLowerCase();
+    if (
+      !VOID_ELEMENTS.has(tag) &&
+      !element.hasChildNodes() &&
+      !element.textContent?.trim()
+    ) {
+      element.parentNode?.removeChild(element);
+    }
+  }
+}
+
+export function sanitizeArticleHtmlFragment(html: string): string {
+  return articleHtmlSanitizer.sanitize(html);
+}
+
+export function normalizeSanitizedArticleRoot(root: ParentNode): void {
+  for (const element of Array.from(root.querySelectorAll("*"))) {
+    normalizeElementAttributes(element);
+  }
+  removeEmptyElements(root);
 }

@@ -11,4 +11,4 @@ Shared reader types, WebView HTML generation, and optional React **web** UI.
 
 `@kyomi/reader/core` and `@kyomi/reader/webview` do not import React.
 
-HTML sanitization in `@kyomi/reader/web` (`sanitizeReaderArticleHtml` → DOMPurify) runs **only in the browser** (a real `window`). That keeps the Vite client bundle free of Node-only modules such as `node:module` / `jsdom`. For server-side or script sanitization, use `@kyomi/worker/sanitization` with an appropriate DOM implementation in your app.
+HTML sanitization in `@kyomi/reader/web` uses the same `neosanitize` article policy exported by `@kyomi/worker/sanitization`. It runs **only in the browser** (a real `document`) and must stay free of JSDOM or other Node-only modules. For server-side or script sanitization, use `@kyomi/worker/sanitization` with an appropriate DOM implementation in your app.

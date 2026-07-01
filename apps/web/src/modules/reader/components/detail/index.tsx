@@ -1,75 +1,18 @@
-/* oxlint-disable max-lines */
 "use client";
 
-import { Article } from "../article";
-import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
-import { Skeleton } from "@kyomi/ui/skeleton";
-import { getUserSafeErrorMessage } from "@lib/errors";
 import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
-import { Button } from "@kyomi/ui/button";
-import { LeftFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
 import { useReaderPreferences } from "@modules/reader/hooks/use-reader-preferences";
 import { readerViewportContentInsetClass } from "@modules/reader/lib/detail-inset";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
+import { BlurLayer } from "./blur-layer";
+import { ContentView } from "./content-view";
 
-const EMPTY_STATE_BODY_COPY =
-  "Stories from your feeds appear here so you can preview them before opening the original source.";
-const EMPTY_STATE_BODY_WIDTH = 440;
 const DETAIL_BACK_BUTTON_BLUR_OFFSET = 52;
-const DETAIL_BLUR_HEIGHT_PX = 64;
-const DETAIL_BLUR_FEATHER_PX = 8;
-const DETAIL_BLUR_OPACITY_STYLE = {
-  opacity: "clamp(0, calc(var(--scroll-area-overflow-y-start) / 24px), 1)",
-} as CSSProperties;
-const DETAIL_BLUR_STRIPS = [
-  { blur: "6px", start: 0, end: 18, opacity: 0.26 },
-  { blur: "4.75px", start: 6, end: 24, opacity: 0.22 },
-  { blur: "3.5px", start: 14, end: 32, opacity: 0.18 },
-  { blur: "2.5px", start: 22, end: 40, opacity: 0.15 },
-  { blur: "1.75px", start: 30, end: 48, opacity: 0.13 },
-  { blur: "1.1px", start: 38, end: 56, opacity: 0.11 },
-  { blur: "0.6px", start: 46, end: 64, opacity: 0.09 },
-] as const;
 
 type ArticleStepDirection = 1 | -1;
-
-const ARTICLE_REEL_OFFSET = 56;
-
-const articleReelVariants = {
-  initial: (direction: ArticleStepDirection) => ({
-    opacity: 0,
-    y: direction * ARTICLE_REEL_OFFSET,
-  }),
-  animate: {
-    opacity: 1,
-    y: 0,
-  },
-  exit: (direction: ArticleStepDirection) => ({
-    opacity: 0,
-    y: direction * -ARTICLE_REEL_OFFSET,
-  }),
-};
-
-function createDetailBlurMask(start: number, end: number): string {
-  const clampedStart = Math.max(0, start);
-  const clampedEnd = Math.min(DETAIL_BLUR_HEIGHT_PX, end);
-  const featherStart = Math.max(clampedStart, clampedEnd - DETAIL_BLUR_FEATHER_PX);
-  const featherEnd = Math.min(clampedEnd, clampedStart + DETAIL_BLUR_FEATHER_PX);
-
-  return [
-    "linear-gradient(to bottom,",
-    `transparent 0px,`,
-    `transparent ${clampedStart}px,`,
-    `rgba(0, 0, 0, 0.88) ${featherEnd}px,`,
-    `black ${featherStart}px,`,
-    `transparent ${clampedEnd}px,`,
-    `transparent ${DETAIL_BLUR_HEIGHT_PX}px)`,
-  ].join(" ");
-}
 
 export type ReaderDetailState =
   | { status: "selected"; item: ArticleDetailDto }
@@ -224,7 +167,7 @@ export function Detail({
               detailState.status === "selected" && !isNarrowContent && "min-h-full",
             )}
           >
-            <DetailContent
+            <ContentView
               detailState={detailState}
               density={density}
               fontSizePx={fontSizePx}
@@ -240,30 +183,7 @@ export function Detail({
           </div>
         </ScrollAreaPrimitive.Viewport>
         {selectedItem && !isInboxSurface ? (
-          <div
-            className="pointer-events-none absolute inset-x-0 z-10 overflow-hidden"
-            style={{
-              ...DETAIL_BLUR_OPACITY_STYLE,
-              height: `${DETAIL_BLUR_HEIGHT_PX}px`,
-              top: `${blurTopOffset}px`,
-            }}
-          >
-            {DETAIL_BLUR_STRIPS.map((strip) => (
-              <div
-                key={`${strip.blur}-${strip.start}-${strip.end}`}
-                className="absolute inset-x-0 top-0 h-full"
-                style={
-                  {
-                    opacity: strip.opacity,
-                    WebkitMaskImage: createDetailBlurMask(strip.start, strip.end),
-                    maskImage: createDetailBlurMask(strip.start, strip.end),
-                    backdropFilter: `blur(${strip.blur})`,
-                    WebkitBackdropFilter: `blur(${strip.blur})`,
-                  } as CSSProperties
-                }
-              />
-            ))}
-          </div>
+          <BlurLayer topOffset={blurTopOffset} />
         ) : null}
         {selectedItem ? (
           <ScrollBar
@@ -278,210 +198,5 @@ export function Detail({
         ) : null}
       </ScrollAreaPrimitive.Root>
     </section>
-  );
-}
-
-function DetailContent({
-  detailState,
-  density,
-  fontSizePx,
-  showFavicons,
-  timestampDisplay,
-  timestampHourCycle,
-  showBackToList,
-  onBackToList,
-  isInboxSurface,
-  selectedContentKey,
-  articleStepDirection,
-}: {
-  detailState: ReaderDetailState;
-  density: InboxDensityDto;
-  fontSizePx: number;
-  showFavicons: boolean;
-  timestampDisplay: InboxTimestampDisplayDto;
-  timestampHourCycle: "12h" | "24h";
-  showBackToList: boolean;
-  onBackToList?: () => void;
-  isInboxSurface: boolean;
-  selectedContentKey?: string;
-  articleStepDirection: ArticleStepDirection;
-}) {
-  switch (detailState.status) {
-    case "selected": {
-      const content = (
-        <SelectedArticleContent
-          item={detailState.item}
-          density={density}
-          fontSizePx={fontSizePx}
-          showFavicons={showFavicons}
-          timestampDisplay={timestampDisplay}
-          timestampHourCycle={timestampHourCycle}
-          showBackToList={showBackToList}
-          onBackToList={onBackToList}
-          isInboxSurface={isInboxSurface}
-        />
-      );
-
-      return selectedContentKey ? (
-        <AnimatedArticleContent
-          contentKey={selectedContentKey}
-          articleStepDirection={articleStepDirection}
-        >
-          {content}
-        </AnimatedArticleContent>
-      ) : (
-        content
-      );
-    }
-    case "loading":
-      return <LoadingDetailContent />;
-    case "error":
-      return <ErrorDetailContent error={detailState.error} />;
-    case "empty":
-      return <EmptyDetailContent />;
-  }
-}
-
-function SelectedArticleContent({
-  item,
-  density,
-  fontSizePx,
-  showFavicons,
-  timestampDisplay,
-  timestampHourCycle,
-  showBackToList,
-  onBackToList,
-  isInboxSurface,
-}: {
-  item: ArticleDetailDto;
-  density: InboxDensityDto;
-  fontSizePx: number;
-  showFavicons: boolean;
-  timestampDisplay: InboxTimestampDisplayDto;
-  timestampHourCycle: "12h" | "24h";
-  showBackToList: boolean;
-  onBackToList?: () => void;
-  isInboxSurface: boolean;
-}) {
-  return (
-    <>
-      {showBackToList ? (
-        <Button
-          type="button"
-          variant="ghost"
-          size="lg"
-          className="mb-3 max-md:aspect-square max-md:px-0 md:h-8 md:gap-2 md:px-[calc(--spacing(2.5)-1px)]"
-          onClick={onBackToList}
-          aria-label="Back to feed"
-        >
-          <LeftFill className="size-4" />
-          <span className="hidden md:inline">Back to feed</span>
-        </Button>
-      ) : null}
-      <Article
-        item={item}
-        density={density}
-        fontSizePx={fontSizePx}
-        showFavicons={showFavicons}
-        timestampDisplay={timestampDisplay}
-        timestampHourCycle={timestampHourCycle}
-        readerFocusMode={showBackToList || isInboxSurface}
-        hideInlineToolbar={isInboxSurface}
-      />
-    </>
-  );
-}
-
-function AnimatedArticleContent({
-  contentKey,
-  articleStepDirection,
-  children,
-}: {
-  contentKey: string;
-  articleStepDirection: ArticleStepDirection;
-  children: ReactNode;
-}) {
-  const prefersReducedMotion = useReducedMotion();
-  const articleReelTransition = prefersReducedMotion
-    ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.3, bounce: 0 };
-
-  return (
-    <LazyMotion features={domAnimation}>
-      <AnimatePresence initial={false} mode="popLayout" custom={articleStepDirection}>
-        <m.div
-          key={contentKey}
-          custom={articleStepDirection}
-          className="min-w-0"
-          variants={articleReelVariants}
-          initial={prefersReducedMotion ? false : "initial"}
-          animate="animate"
-          exit={prefersReducedMotion ? undefined : "exit"}
-          transition={articleReelTransition}
-        >
-          {children}
-        </m.div>
-      </AnimatePresence>
-    </LazyMotion>
-  );
-}
-
-function LoadingDetailContent() {
-  return (
-    <div className="flex min-h-0 flex-1 flex-col gap-5 p-12">
-      <div className="space-y-3">
-        <Skeleton className="h-3 w-24 rounded" />
-        <Skeleton className="h-6 w-3/4 rounded" />
-        <Skeleton className="h-6 w-1/2 rounded" />
-        <Skeleton className="h-4 w-32 rounded" />
-      </div>
-      <div className="space-y-2.5">
-        <Skeleton className="h-4 w-full rounded" />
-        <Skeleton className="h-4 w-[94%] rounded" />
-        <Skeleton className="h-4 w-[88%] rounded" />
-        <Skeleton className="h-4 w-full rounded" />
-        <Skeleton className="h-4 w-[91%] rounded" />
-        <Skeleton className="h-4 w-[85%] rounded" />
-      </div>
-      <div className="space-y-2.5">
-        <Skeleton className="h-4 w-[96%] rounded" />
-        <Skeleton className="h-4 w-full rounded" />
-        <Skeleton className="h-4 w-[90%] rounded" />
-      </div>
-    </div>
-  );
-}
-
-function ErrorDetailContent({ error }: { error: unknown }) {
-  return (
-    <div className="flex h-full min-h-72 flex-col items-center justify-center gap-3 px-6 py-10 text-center">
-      <p className="text-base font-semibold text-foreground">Couldn't load article</p>
-      <p className="text-sm text-muted-foreground">
-        {getUserSafeErrorMessage(error, "There was a problem loading this item.")}
-      </p>
-    </div>
-  );
-}
-
-function EmptyDetailContent() {
-  return (
-    <div className="flex h-full min-h-72 w-full flex-col items-center justify-center gap-5 px-6 py-10 text-center">
-      <EmptyStateIcon className="size-40 shrink-0 sm:size-44" size={176} />
-      <div className="w-full max-w-136 space-y-2">
-        <p className="text-base font-semibold text-foreground">Select an item to start reading</p>
-        <BalancedEmptyStateBody text={EMPTY_STATE_BODY_COPY} />
-      </div>
-    </div>
-  );
-}
-
-function BalancedEmptyStateBody({ text }: { text: string }) {
-  return (
-    <p
-      className="mx-auto text-sm leading-6 text-muted-foreground"
-      style={{ maxWidth: `${EMPTY_STATE_BODY_WIDTH}px`, textWrap: "balance" }}
-    >
-      {text}
-    </p>
   );
 }

@@ -1,6 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { publishJob } from "@adapters/queue/publish-job";
 import { getRedis } from "@adapters/redis";
+import { enqueueFeedRefresh } from "@modules/feeds/refresh/service";
 import { createOrSubscribeToFeed } from "@modules/feeds/subscription/service";
 import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/service";
 import { AppError } from "@shared/errors/app";
@@ -172,6 +173,10 @@ export async function runOpmlImportFeedJob(
       folderId: folderId ?? null,
       customTitle: title ?? null,
     });
+
+    if (result.newSubscription) {
+      await enqueueFeedRefresh(database, result.feedId, userId, "subscription_created", logger);
+    }
 
     await recordOpmlTaskSuccess(taskId, {
       alreadySubscribed: !result.newSubscription,

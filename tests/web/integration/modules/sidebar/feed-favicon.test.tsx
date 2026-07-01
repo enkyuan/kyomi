@@ -4,7 +4,7 @@ import {
   clearFaviconMetadataMemoryCache,
   writeCachedFaviconHit,
   writeCachedFaviconMiss,
-} from "@lib/favicon-cache";
+} from "@lib/favicon/cache";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
@@ -69,6 +69,19 @@ describe("feed favicons", () => {
     ]);
   });
 
+  test("uses feed origin when a feed path was glued onto the site host", () => {
+    const urls = buildFaviconUrlCandidates(
+      null,
+      "https://www.entrepreneur.comrss-feed",
+      "https://www.entrepreneur.com/rss-feed",
+    );
+
+    expect(urls).toEqual([
+      "/api/favicon?domain=https%3A%2F%2Fwww.entrepreneur.com&v=5",
+      "https://www.entrepreneur.com/favicon.ico",
+    ]);
+  });
+
   test("renders the RSS fallback immediately behind the favicon image", () => {
     const { container } = render(
       <FeedFavicon
@@ -98,9 +111,7 @@ describe("feed favicons", () => {
     const img = screen.getByRole("img", { name: "Hacker News favicon" });
     expect(img.getAttribute("loading")).toBe("eager");
     expect(img.getAttribute("fetchpriority")).toBe("high");
-    await waitFor(() => {
-      expect(document.head.querySelector('link[rel="preload"]')).not.toBeNull();
-    });
+    expect(document.head.querySelector('link[rel="preload"]')).toBeNull();
   });
 
   test("shows an already-complete eager sidebar favicon", async () => {

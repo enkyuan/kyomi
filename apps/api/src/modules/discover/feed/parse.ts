@@ -50,6 +50,19 @@ function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
   }
 }
 
+function absoluteHttpUrl(candidate: string | null, baseUrl: string): string | null {
+  const href = absoluteUrl(candidate, baseUrl);
+  if (!href) {
+    return null;
+  }
+  try {
+    const parsed = new URL(href);
+    return parsed.protocol === "http:" || parsed.protocol === "https:" ? parsed.href : null;
+  } catch {
+    return null;
+  }
+}
+
 function pickHrefFromAtomCandidate(
   item: unknown,
   relMatcher: (rel: unknown) => boolean,
@@ -137,7 +150,10 @@ function parseJsonFeedPreview(body: string, fallbackUrl: string): ParsedFeedMeta
     typeof rec.description === "string"
       ? stripTags(rec.description)
       : "Follow recent articles from this feed";
-  const home = typeof rec.home_page_url === "string" ? rec.home_page_url : fallbackUrl;
+  const home = absoluteHttpUrl(
+    typeof rec.home_page_url === "string" ? rec.home_page_url : fallbackUrl,
+    fallbackUrl,
+  );
   return {
     title: title || "Untitled",
     description: description || "Follow recent articles from this feed",
@@ -154,7 +170,7 @@ function parseRssChannel(
 ): ParsedFeedMetadata {
   const title = xmlText(channel.title) || "Untitled";
   const description = xmlText(channel.description) || "Follow recent articles from this feed";
-  const link = pickLinkFromRssChannel(channel.link, fallbackUrl);
+  const link = absoluteHttpUrl(pickLinkFromRssChannel(channel.link, fallbackUrl), fallbackUrl);
   return { title, description, link, iconUrl: pickRssImageUrl(channel, fallbackUrl) };
 }
 
@@ -162,7 +178,7 @@ function parseAtomFeed(feed: Record<string, unknown>, fallbackUrl: string): Pars
   const title = xmlText(feed.title) || "Untitled";
   const subtitle = xmlText(feed.subtitle);
   const description = subtitle || "Follow recent articles from this feed";
-  const link = pickAtomLink(feed, fallbackUrl);
+  const link = absoluteHttpUrl(pickAtomLink(feed, fallbackUrl), fallbackUrl);
   return { title, description, link, iconUrl: pickAtomIconUrl(feed, fallbackUrl) };
 }
 

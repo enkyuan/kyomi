@@ -33,6 +33,23 @@ describe("parseFeedDocument", () => {
     expect(parsed.items[0]?.title).toBe(`Article ${'"'.repeat(1_200)}`);
   });
 
+  test("resolves relative RSS channel links against the final feed URL", () => {
+    const parsed = parseFeedDocument(
+      `<?xml version="1.0"?>
+      <rss version="2.0">
+        <channel>
+          <title>Relative site</title>
+          <link>/</link>
+          <description>Updates</description>
+        </channel>
+      </rss>`,
+      "feed-1",
+      "https://www.entrepreneur.com/rss-feed",
+    );
+
+    expect(parsed.metadata.link).toBe("https://www.entrepreneur.com/");
+  });
+
   test("keeps rejecting excessive entity expansion", () => {
     const quotedTitle = repeatEntity("&quot;", 50_001);
 
@@ -43,5 +60,15 @@ describe("parseFeedDocument", () => {
         "https://example.com/feed.xml",
       ),
     ).toThrow("Entity expansion limit exceeded: 50001 > 50000");
+  });
+
+  test("rejects HTML documents instead of treating them as empty feeds", () => {
+    expect(() =>
+      parseFeedDocument(
+        `<!doctype html><html><head><title>Access denied</title></head><body>Blocked</body></html>`,
+        "feed-1",
+        "https://engineering.fb.com/feed/",
+      ),
+    ).toThrow("Unsupported feed format: received HTML document");
   });
 });

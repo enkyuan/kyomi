@@ -37,7 +37,7 @@ export function PinnedSection() {
           <ScrollArea
             className={cn(
               PINNED_LIST_SCROLL_CLASS,
-              "data-has-overflow-y:scroll-mask-y-from-6 data-has-overflow-x:scroll-mask-x-from-6",
+              "data-has-overflow-y:scroll-mask-y-edge-6 data-has-overflow-x:scroll-mask-x-edge-6",
             )}
           >
             <SidebarMenu>

@@ -1,17 +1,21 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
-import { apiJson, buildForwardHeaders } from "@lib/api";
+import { apiJson, buildForwardHeaders, resolveApiUrl } from "@lib/api";
 import type {
   DiscoverFeedResultDto,
   FeedDetailDto,
   FollowFeedResultDto,
   FollowedFeedDto,
+  OpmlImportAcceptedDto,
+  OpmlImportStatusDto,
 } from "@lib/schemas";
 
 export type DiscoverFeedResult = DiscoverFeedResultDto;
 export type FollowFeedResult = FollowFeedResultDto;
 export type FollowedFeed = FollowedFeedDto;
 export type FeedDetail = FeedDetailDto;
+export type OpmlImportAccepted = OpmlImportAcceptedDto;
+export type OpmlImportStatus = OpmlImportStatusDto;
 
 let feedsSchemaModulePromise:
   | Promise<
@@ -24,6 +28,8 @@ let feedsSchemaModulePromise:
         | "followFeedResultSchema"
         | "followedFeedsListSchema"
         | "messageResponseSchema"
+        | "opmlImportAcceptedSchema"
+        | "opmlImportStatusSchema"
       >
     >
   | undefined;
@@ -37,6 +43,8 @@ function getFeedsSchemaModule() {
     followFeedResultSchema: module.followFeedResultSchema,
     followedFeedsListSchema: module.followedFeedsListSchema,
     messageResponseSchema: module.messageResponseSchema,
+    opmlImportAcceptedSchema: module.opmlImportAcceptedSchema,
+    opmlImportStatusSchema: module.opmlImportStatusSchema,
   }));
   return feedsSchemaModulePromise;
 }
@@ -57,6 +65,31 @@ type FollowFeedInput = {
 
 const DISCOVER_PREVIEW_REQUEST_TIMEOUT_MS = 8_000;
 const DISCOVER_SEARCH_REQUEST_TIMEOUT_MS = 5_000;
+const OPML_IMPORT_START_REQUEST_TIMEOUT_MS = 12_000;
+const OPML_IMPORT_STATUS_REQUEST_TIMEOUT_MS = 5_000;
+const OPML_EXPORT_REQUEST_TIMEOUT_MS = 12_000;
+
+function getFilenameFromContentDisposition(value: string | null) {
+  if (!value) {
+    return null;
+  }
+
+  const filenameMatch =
+    /filename\*=UTF-8''([^;]+)/i.exec(value) ??
+    /filename="([^"]+)"/i.exec(value) ??
+    /filename=([^;]+)/i.exec(value);
+  const filename = filenameMatch?.[1]?.trim();
+
+  if (!filename) {
+    return null;
+  }
+
+  try {
+    return decodeURIComponent(filename);
+  } catch {
+    return filename;
+  }
+}
 
 function looksLikeFeedUrl(value: string) {
   return Boolean(normalizeUrlCandidate(value));
@@ -212,6 +245,73 @@ export const listFeedRefreshStatuses = createServerFn({ method: "GET" })
     );
     return response.items ?? [];
   });
+
+export const importOpmlFromUrl = createServerFn({ method: "POST" })
+  .inputValidator((input: { url: string; filename?: string | null }) => input)
+  .handler(async ({ data }): Promise<OpmlImportAccepted> => {
+    const { apiJsonValidated, opmlImportAcceptedSchema } = await getFeedsSchemaModule();
+    const normalizedUrl = normalizeUrlCandidate(data.url);
+    if (!normalizedUrl) {
+      throw new Error("Invalid OPML URL");
+    }
+
+    const headers = buildForwardHeaders(getRequestHeaders());
+    headers.set("content-type", "application/json");
+
+    return apiJsonValidated(opmlImportAcceptedSchema, () =>
+      apiJson<OpmlImportAccepted>("/api/v1/opml/imports/from-url", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          url: normalizedUrl,
+          filename: data.filename?.trim() || undefined,
+        }),
+        signal: AbortSignal.timeout(OPML_IMPORT_START_REQUEST_TIMEOUT_MS),
+      }),
+    );
+  });
+
+export const getOpmlImportStatus = createServerFn({ method: "GET" })
+  .inputValidator((input: { taskId: string }) => input)
+  .handler(async ({ data }): Promise<OpmlImportStatus> => {
+    const { apiJsonValidated, opmlImportStatusSchema } = await getFeedsSchemaModule();
+    const taskId = data.taskId.trim();
+    if (!taskId) {
+      throw new Error("Missing OPML import task id");
+    }
+
+    const headers = buildForwardHeaders(getRequestHeaders());
+    return apiJsonValidated(opmlImportStatusSchema, () =>
+      apiJson<OpmlImportStatus>(
+        `/api/v1/opml/imports/${encodeURIComponent(taskId)}/status`,
+        {
+          headers,
+          signal: AbortSignal.timeout(OPML_IMPORT_STATUS_REQUEST_TIMEOUT_MS),
+        },
+      ),
+    );
+  });
+
+export const exportOpml = createServerFn({ method: "GET" }).handler(
+  async (): Promise<{ filename: string; xml: string }> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    const response = await fetch(resolveApiUrl("/api/v1/opml/export"), {
+      headers,
+      signal: AbortSignal.timeout(OPML_EXPORT_REQUEST_TIMEOUT_MS),
+    });
+
+    if (!response.ok) {
+      throw new Error("Unable to export OPML. Try again.");
+    }
+
+    return {
+      filename:
+        getFilenameFromContentDisposition(response.headers.get("content-disposition")) ??
+        "kyomi-subscriptions.opml",
+      xml: await response.text(),
+    };
+  },
+);
 
 export const unfollowFeed = createServerFn({ method: "POST" })
   .inputValidator((input: { feedId: string }) => input)

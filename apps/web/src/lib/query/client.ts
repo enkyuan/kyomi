@@ -1,5 +1,5 @@
 import { QueryClient } from "@tanstack/react-query";
-import { hydrateHotQueryCache } from "./cache-persistence";
+import { hydrateHotQueryCache } from "@lib/query/cache";
 
 export const queryClient = new QueryClient({
   defaultOptions: {

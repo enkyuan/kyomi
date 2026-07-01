@@ -17,7 +17,7 @@ import {
   READER_PREFERENCES_STORAGE_KEY,
   SHELL_STATE_STORAGE_KEY,
   THEME_STORAGE_KEY,
-} from "@lib/shell/storage-keys";
+} from "@lib/shell/keys";
 import {
   INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME,
   INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME,
