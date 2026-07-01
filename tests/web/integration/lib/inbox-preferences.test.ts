@@ -1,7 +1,10 @@
 // @vitest-environment jsdom
 
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import { resolveInitialInboxPreferences, type InboxPreferences } from "@modules/inbox";
+import {
+  resolveInitialInboxPreferences,
+  type InboxPreferences,
+} from "@modules/inbox/hooks/use-inbox-data";
 
 const QUERY_KEY = ["me", "preferences", "inbox", "user_1"] as const;
 
@@ -10,7 +13,7 @@ const SPLIT_PREFERENCES: InboxPreferences = {
   inboxDensity: "comfortable",
   articleOpenBehavior: "split",
   inboxMarkReadBehavior: "on-open",
-  inboxTimestampDisplay: "absolute",
+  inboxTimestampDisplay: "relative",
   inboxTimestampHourCycle: "12h",
   inboxFontSizePx: 16,
   inboxShowRecents: false,

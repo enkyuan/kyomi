@@ -94,6 +94,8 @@ export const Item = memo(function Item({
           <SourceRow
             articleUrl={item.link}
             feedFaviconUrl={item.feedFaviconUrl}
+            feedUrl={item.feedUrl}
+            feedSiteUrl={item.feedSiteUrl}
             feedTitle={item.feedTitle}
             showFavicon={showFavicons}
             className={cn("min-w-0 flex-1 gap-3", isCompact && "gap-2.5")}

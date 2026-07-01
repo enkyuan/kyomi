@@ -135,7 +135,7 @@ export function StaticRows({
             isFirst={index === 0}
             containerWidth={listContainerWidth || undefined}
             readerFocusMode={readerFocusMode}
-            showBottomSeparator={index === inboxItems.length - 1}
+            showBottomSeparator={false}
             density={density}
             fontSizePx={fontSizePx}
             showFavicons={showFavicons}
@@ -252,7 +252,7 @@ export function VirtualizedRows({
               isFirst={virtualRow.index === 0}
               containerWidth={listContainerWidth || undefined}
               readerFocusMode={readerFocusMode}
-              showBottomSeparator={virtualRow.index === inboxItems.length - 1}
+              showBottomSeparator={false}
               density={density}
               fontSizePx={fontSizePx}
               showFavicons={showFavicons}

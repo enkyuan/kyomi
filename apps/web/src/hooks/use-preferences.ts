@@ -10,7 +10,7 @@ type PreferenceUpdate<TPreferences extends object> = {
   rollback: TPreferences;
 };
 
-type UseUserPreferencesOptions<TPreferences extends object> = {
+type UsePreferencesOptions<TPreferences extends object> = {
   defaults: TPreferences;
   initialData: () => TPreferences;
   normalize: (current: TPreferences, next: Partial<TPreferences>) => TPreferences;
@@ -21,7 +21,7 @@ type UseUserPreferencesOptions<TPreferences extends object> = {
   updateFn: (input: { data: Partial<TPreferences> }) => Promise<TPreferences>;
 };
 
-export function useUserPreferences<TPreferences extends object>({
+export function usePreferences<TPreferences extends object>({
   defaults,
   initialData,
   normalize,
@@ -30,7 +30,7 @@ export function useUserPreferences<TPreferences extends object>({
   queryKey,
   sanitize,
   updateFn,
-}: UseUserPreferencesOptions<TPreferences>) {
+}: UsePreferencesOptions<TPreferences>) {
   const { user } = useAuth();
   const queryClient = useQueryClient();
   const latestRequestIdRef = useRef(0);

@@ -25,6 +25,8 @@ function areItemsEqual(a: InboxItem, b: InboxItem) {
     a.link === b.link &&
     a.publishedAt === b.publishedAt &&
     a.feedFaviconUrl === b.feedFaviconUrl &&
+    a.feedUrl === b.feedUrl &&
+    a.feedSiteUrl === b.feedSiteUrl &&
     a.feedTitle === b.feedTitle &&
     a.articleType === b.articleType &&
     a.isSaved === b.isSaved

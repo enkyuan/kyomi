@@ -16,6 +16,8 @@ export type ArticleListRawRow = {
   summary: string | null;
   publishedAt: Date;
   feedId: string;
+  feedUrl: string | null;
+  feedSiteUrl: string | null;
   feedTitle: string;
   feedFaviconUrl: string | null;
   isRead: boolean;

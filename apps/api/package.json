@@ -4,10 +4,11 @@
   "private": true,
   "module": "src/index.ts",
   "scripts": {
-    "dev": "docker compose --project-directory ../../docker logs -f api worker",
+    "dev": "docker compose --project-directory ../../docker logs -f api worker scheduler",
     "dev:host": "bunx dotenvx run -f ../../docker/.env -f .env -- bun --watch src/app/boot/dev.ts",
     "start": "bunx dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/entry.ts",
     "worker": "bunx dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/worker.ts",
+    "scheduler": "bunx dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/scheduler.ts",
     "catalog:import": "bunx dotenvx run -f ../../docker/.env -f .env -- bun src/scripts/import-catalog-feeds.ts --input ../../packages/catalog/processing/exports/catalog-feeds.jsonl",
     "catalog:smoke": "bunx dotenvx run -f ../../docker/.env -f .env -- bun src/scripts/smoke-discover-catalog.ts --query \"hacker news\" --expect \"hacker news\"",
     "fmt": "bunx oxfmt src",

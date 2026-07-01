@@ -172,6 +172,8 @@ function ReaderArticleHeader({
       <SourceRow
         articleUrl={item.link}
         feedFaviconUrl={item.feedFaviconUrl}
+        feedUrl={item.feedUrl}
+        feedSiteUrl={item.feedSiteUrl}
         feedTitle={item.feedTitle}
         showFavicon={showFavicons}
         className=""

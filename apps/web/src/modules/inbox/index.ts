@@ -6,6 +6,7 @@ export { formatInboxTimestamp } from "./utils/format-timestamp";
 export {
   dedupePagedInboxItemsById,
   InboxPreferencesBootstrapProvider,
+  resolveInitialInboxPreferences,
   useInboxItemStateMutation,
   useInboxPreferences,
   useInboxQueries,

@@ -12,6 +12,8 @@ type Row = {
   summary: string | null;
   publishedAt: Date;
   feedId: string;
+  feedUrl: string | null;
+  feedSiteUrl: string | null;
   feedTitle: string;
   feedFaviconUrl: string | null;
   isRead: boolean;
@@ -27,6 +29,8 @@ function row(overrides: Partial<Row>): Row {
     summary: null,
     publishedAt: new Date("2026-04-01T00:00:00.000Z"),
     feedId: "feed-1",
+    feedUrl: "https://example.com/feed.xml",
+    feedSiteUrl: "https://example.com",
     feedTitle: "Feed",
     feedFaviconUrl: null,
     isRead: false,

@@ -1,7 +1,6 @@
 "use client";
 
 import { DownFill } from "@mingcute/react";
-import { Link } from "@tanstack/react-router";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@kyomi/ui/collapsible";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
@@ -15,12 +14,10 @@ import { SidebarModeAnimatedText } from "@kyomi/ui/sidebar/mode-animated-text";
 import { cn } from "@lib/utils";
 import { FeedFavicon } from "./feed-favicon";
 import { PINNED_LIST_SCROLL_CLASS } from "../lib/constants";
-import { useInboxPrefetch } from "../hooks/use-sidebar-inbox";
 import { usePinnedSection } from "../hooks/use-pinned-section";
 
 export function PinnedSection() {
-  const { isInbox, pinnedFeeds, pinnedOpen, scopedFeedId, setPinnedOpen } = usePinnedSection();
-  const { prefetchOnFocus, prefetchOnPointerEnter } = useInboxPrefetch();
+  const { pinnedFeeds, pinnedOpen, setPinnedOpen } = usePinnedSection();
 
   return (
     <SidebarGroup className="gap-1">
@@ -57,24 +54,7 @@ export function PinnedSection() {
               ) : (
                 pinnedFeeds.map((feed) => (
                   <SidebarMenuItem key={feed.feedId}>
-                    <SidebarMenuButton
-                      tooltip={feed.title || feed.url}
-                      isActive={isInbox && scopedFeedId === feed.feedId}
-                      onFocus={prefetchOnFocus(feed.feedId)}
-                      onPointerEnter={prefetchOnPointerEnter(feed.feedId)}
-                      render={
-                        <Link
-                          to="/inbox"
-                          search={() => ({
-                            filter: "all" as const,
-                            search: undefined,
-                            feedId: feed.feedId,
-                            folderId: undefined,
-                            itemId: undefined,
-                          })}
-                        />
-                      }
-                    >
+                    <SidebarMenuButton tooltip={feed.title || feed.url}>
                       <FeedFavicon
                         className="size-4 shrink-0 rounded-[3px] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:size-4.5"
                         faviconUrl={feed.faviconUrl}

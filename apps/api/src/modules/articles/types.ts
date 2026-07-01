@@ -11,6 +11,8 @@ export type ArticleListItemDto = {
   summary: string | null;
   publishedAt: string;
   feedId: string;
+  feedUrl: string | null;
+  feedSiteUrl: string | null;
   feedTitle: string;
   feedFaviconUrl: string | null;
   isRead: boolean;

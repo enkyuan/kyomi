@@ -101,6 +101,16 @@ const articleListItemSchema = z.object({
   summary: z.string().nullable(),
   publishedAt: z.string(),
   feedId: z.string(),
+  feedUrl: z
+    .string()
+    .nullable()
+    .optional()
+    .transform((value) => value ?? null),
+  feedSiteUrl: z
+    .string()
+    .nullable()
+    .optional()
+    .transform((value) => value ?? null),
   feedTitle: z.string(),
   feedFaviconUrl: z
     .string()

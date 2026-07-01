@@ -1,4 +1,13 @@
-import { boolean, pgTable, primaryKey, text, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
+import { sql } from "drizzle-orm";
+import {
+  boolean,
+  index,
+  pgTable,
+  primaryKey,
+  text,
+  timestamp,
+  uniqueIndex,
+} from "drizzle-orm/pg-core";
 
 import { users } from "./auth";
 import { feeds } from "./feeds";
@@ -36,6 +45,12 @@ export const feedItems = pgTable(
   },
   (table) => [
     uniqueIndex("feed_items_feed_id_canonical_url_unique").on(table.feedId, table.canonicalUrl),
+    index("feed_items_published_id_idx").on(table.publishedAt.desc(), table.id.desc()),
+    index("feed_items_feed_published_id_idx").on(
+      table.feedId,
+      table.publishedAt.desc(),
+      table.id.desc(),
+    ),
   ],
 );
 
@@ -53,32 +68,45 @@ export const feedItemUserState = pgTable(
     isSaved: boolean("is_saved").notNull().default(false),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
-  (table) => [primaryKey({ columns: [table.userId, table.feedItemId] })],
+  (table) => [
+    primaryKey({ columns: [table.userId, table.feedItemId] }),
+    index("feed_item_user_state_saved_idx")
+      .on(table.userId, table.isSaved, table.feedItemId)
+      .where(sql`${table.isSaved} IS TRUE`),
+  ],
 );
 
-export const articleClips = pgTable("article_clips", {
-  id: text("id").primaryKey(),
-  userId: text("user_id")
-    .notNull()
-    .references(() => users.id, { onDelete: "cascade" }),
-  url: text("url").notNull(),
-  title: text("title").notNull(),
-  content: text("content"),
-  contentHtml: text("content_html"),
-  contentText: text("content_text"),
-  contentMarkdown: text("content_markdown"),
-  contentStatus: text("content_status"),
-  contentSource: text("content_source"),
-  extractionErrorCode: text("extraction_error_code"),
-  extractionErrorMessage: text("extraction_error_message"),
-  extractedContentHtml: text("extracted_content_html"),
-  extractedContentText: text("extracted_content_text"),
-  extractedContentStatus: text("extracted_content_status").notNull().default("pending"),
-  extractedContentError: text("extracted_content_error"),
-  extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
-  note: text("note"),
-  isRead: boolean("is_read").notNull().default(false),
-  isSaved: boolean("is_saved").notNull().default(true),
-  createdAt: timestamp("created_at").notNull().defaultNow(),
-  updatedAt: timestamp("updated_at").notNull().defaultNow(),
-});
+export const articleClips = pgTable(
+  "article_clips",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    url: text("url").notNull(),
+    title: text("title").notNull(),
+    content: text("content"),
+    contentHtml: text("content_html"),
+    contentText: text("content_text"),
+    contentMarkdown: text("content_markdown"),
+    contentStatus: text("content_status"),
+    contentSource: text("content_source"),
+    extractionErrorCode: text("extraction_error_code"),
+    extractionErrorMessage: text("extraction_error_message"),
+    extractedContentHtml: text("extracted_content_html"),
+    extractedContentText: text("extracted_content_text"),
+    extractedContentStatus: text("extracted_content_status").notNull().default("pending"),
+    extractedContentError: text("extracted_content_error"),
+    extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
+    note: text("note"),
+    isRead: boolean("is_read").notNull().default(false),
+    isSaved: boolean("is_saved").notNull().default(true),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => [
+    index("article_clips_user_saved_created_idx")
+      .on(table.userId, table.isSaved, table.createdAt.desc(), table.id.desc())
+      .where(sql`${table.isSaved} IS TRUE`),
+  ],
+);

@@ -9,6 +9,8 @@ const feed = (id: string, at: string): ArticleListItemDto => ({
   summary: null,
   publishedAt: at,
   feedId: "f1",
+  feedUrl: "https://example.com/feed.xml",
+  feedSiteUrl: "https://example.com",
   feedTitle: "F",
   feedFaviconUrl: null,
   isRead: false,

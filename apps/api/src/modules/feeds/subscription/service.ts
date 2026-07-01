@@ -63,7 +63,7 @@ async function enrichFaviconInBackground(
   resolved: Awaited<ReturnType<typeof resolveRemoteFeed>>,
 ): Promise<void> {
   try {
-    const enriched = await resolveRemoteFeedFavicon(resolved, logger);
+    const enriched = await resolveRemoteFeedFavicon(database, resolved, logger);
     if (!enriched) {
       return;
     }

@@ -1,6 +1,8 @@
 import type Redis from "ioredis";
 
-export const JOBS_STREAM_KEY = "jobs";
+export const FEED_REFRESH_JOBS_STREAM_KEY = "jobs:feed-refresh";
+export const OPML_JOBS_STREAM_KEY = "jobs:opml";
+export const JOBS_STREAM_KEY = FEED_REFRESH_JOBS_STREAM_KEY;
 export const JOBS_CONSUMER_GROUP = "kyomi-workers";
 export const JOBS_DEAD_LETTER_STREAM_KEY = "jobs:dead-letter";
 
@@ -35,6 +37,7 @@ export type OpmlImportFeedJob = {
 };
 
 export type Job = FeedRefreshJob | OpmlImportJob | OpmlImportFeedJob;
+export type JobType = Job["type"];
 
 export type JobMessage = {
   id: string;
@@ -42,6 +45,30 @@ export type JobMessage = {
   attempts: number;
   rawFields: Record<string, string>;
 };
+
+export type QueueOptions = {
+  streamKey?: string;
+  streamMaxLength?: number;
+  processConcurrency?: number;
+};
+
+export function getStreamKeyForJobType(jobType: JobType): string {
+  switch (jobType) {
+    case "feed.refresh":
+      return FEED_REFRESH_JOBS_STREAM_KEY;
+    case "opml.import":
+    case "opml.import.feed":
+      return OPML_JOBS_STREAM_KEY;
+  }
+}
+
+export function normalizeQueueOptions(options: QueueOptions = {}) {
+  return {
+    streamKey: options.streamKey,
+    streamMaxLength: Math.min(Math.max(options.streamMaxLength ?? 100_000, 1_000), 5_000_000),
+    processConcurrency: Math.min(Math.max(options.processConcurrency ?? 1, 1), 64),
+  };
+}
 
 export function fieldsForJob(
   job: Job,
@@ -208,13 +235,21 @@ async function xaddAndAck(
   options: {
     destinationStream: string;
     destinationFields: Record<string, string>;
+    destinationMaxLength: number;
     sourceStream: string;
     group: string;
     id: string;
   },
 ): Promise<void> {
   const tx = (redis as Redis & { multi: () => RedisTransaction }).multi();
-  tx.xadd(options.destinationStream, "*", ...toRedisStreamFieldList(options.destinationFields));
+  tx.xadd(
+    options.destinationStream,
+    "MAXLEN",
+    "~",
+    String(options.destinationMaxLength),
+    "*",
+    ...toRedisStreamFieldList(options.destinationFields),
+  );
   tx.xack(options.sourceStream, options.group, options.id);
   await tx.exec();
 }
@@ -243,6 +278,8 @@ export type ConsumeJobsOptions = {
   maxAttempts?: number;
   retryDelayMs?: number;
   pendingMinIdleMs?: number;
+  streamMaxLength?: number;
+  processConcurrency?: number;
   deadLetterStreamKey?: string;
   signal?: AbortSignal;
   onJob: (message: JobMessage) => Promise<void>;
@@ -259,6 +296,8 @@ type ResolvedConsumeJobsConfig = {
   maxAttempts: number;
   retryDelayMs: number;
   pendingMinIdleMs: number;
+  streamMaxLength: number;
+  processConcurrency: number;
   deadLetterStreamKey: string;
   group: string;
   streamKey: string;
@@ -268,6 +307,8 @@ type ProcessMessageOptions = {
   streamKey: string;
   group: string;
   deadLetterStreamKey: string;
+  streamMaxLength: number;
+  processConcurrency: number;
   maxAttempts: number;
   retryDelayMs: number;
   signal?: AbortSignal;
@@ -286,6 +327,12 @@ function isRedisConnectionClosedError(error: unknown): boolean {
 }
 
 function resolveConsumeJobsConfig(options: ConsumeJobsOptions): ResolvedConsumeJobsConfig {
+  const queueOptions = normalizeQueueOptions({
+    streamKey: options.streamKey,
+    streamMaxLength: options.streamMaxLength,
+    processConcurrency: options.processConcurrency,
+  });
+
   return {
     consumer: options.consumer,
     onJob: options.onJob,
@@ -296,9 +343,11 @@ function resolveConsumeJobsConfig(options: ConsumeJobsOptions): ResolvedConsumeJ
     maxAttempts: options.maxAttempts ?? 3,
     retryDelayMs: options.retryDelayMs ?? 0,
     pendingMinIdleMs: options.pendingMinIdleMs ?? 10_000,
+    streamMaxLength: queueOptions.streamMaxLength,
+    processConcurrency: queueOptions.processConcurrency,
     deadLetterStreamKey: options.deadLetterStreamKey ?? JOBS_DEAD_LETTER_STREAM_KEY,
     group: options.group ?? JOBS_CONSUMER_GROUP,
-    streamKey: options.streamKey ?? JOBS_STREAM_KEY,
+    streamKey: queueOptions.streamKey ?? JOBS_STREAM_KEY,
   };
 }
 
@@ -311,11 +360,13 @@ async function retryOrDeadLetterJob(
     message: JobMessage;
     maxAttempts: number;
     retryDelayMs: number;
+    streamMaxLength: number;
   },
 ): Promise<void> {
   if (options.message.attempts + 1 < options.maxAttempts) {
     await xaddAndAck(redis, {
       destinationStream: options.streamKey,
+      destinationMaxLength: options.streamMaxLength,
       destinationFields: fieldsForJob(options.message.job, {
         attempts: options.message.attempts + 1,
         lastError: options.message.rawFields.last_error,
@@ -332,6 +383,7 @@ async function retryOrDeadLetterJob(
 
   await xaddAndAck(redis, {
     destinationStream: options.deadLetterStreamKey,
+    destinationMaxLength: options.streamMaxLength,
     destinationFields: {
       ...fieldsForJob(options.message.job, {
         attempts: options.message.attempts + 1,
@@ -406,12 +458,14 @@ async function processMessage(
         message,
         maxAttempts: options.maxAttempts,
         retryDelayMs: options.retryDelayMs,
+        streamMaxLength: options.streamMaxLength,
       });
       return;
     }
 
     await xaddAndAck(redis, {
       destinationStream: options.deadLetterStreamKey,
+      destinationMaxLength: options.streamMaxLength,
       destinationFields: deadLetterFieldsFromRawInput(fields, id, error),
       sourceStream: options.streamKey,
       group: options.group,
@@ -425,12 +479,24 @@ async function processJobMessages(
   options: ProcessMessageOptions,
   messages: [string, string[]][],
 ): Promise<void> {
+  const executing = new Set<Promise<void>>();
+
   for (const [id, fields] of messages) {
     if (options.signal?.aborted) {
       return;
     }
-    await processMessage(redis, options, id, fields);
+
+    const task = processMessage(redis, options, id, fields).finally(() => {
+      executing.delete(task);
+    });
+    executing.add(task);
+
+    if (executing.size >= options.processConcurrency) {
+      await Promise.race(executing);
+    }
   }
+
+  await Promise.all(executing);
 }
 
 async function readNewGroupMessages(
@@ -478,6 +544,8 @@ export async function consumeJobs(redis: Redis, options: ConsumeJobsOptions): Pr
     streamKey: config.streamKey,
     group: config.group,
     deadLetterStreamKey: config.deadLetterStreamKey,
+    streamMaxLength: config.streamMaxLength,
+    processConcurrency: config.processConcurrency,
     maxAttempts: config.maxAttempts,
     retryDelayMs: config.retryDelayMs,
     signal: config.signal,

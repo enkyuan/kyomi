@@ -4,7 +4,7 @@ import { createContext, createElement, use, useMemo, type ReactNode } from "reac
 import { useMutation, useQueryClient, useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/provider";
 import { INBOX_PREFERENCES_STORAGE_KEY } from "@lib/shell/storage-keys";
-import { useUserPreferences } from "@modules/preferences";
+import { usePreferences } from "@hooks/use-preferences";
 import type { InboxPreferencesDto } from "@lib/schemas";
 import {
   DEFAULT_INBOX_PREFERENCES,
@@ -75,7 +75,7 @@ function writeInboxPreferencesCache(next: InboxPreferences, userId?: string) {
   writeInboxArticleOpenBehaviorCookie(next.articleOpenBehavior);
 }
 
-function resolveInitialInboxPreferences(
+export function resolveInitialInboxPreferences(
   queryClient: ReturnType<typeof useQueryClient>,
   queryKey: ReturnType<typeof inboxPreferencesQueryKey>,
   initialPreferences?: InboxPreferences,
@@ -159,7 +159,7 @@ export function useInboxPreferences(initialPreferences?: InboxPreferences) {
   const queryKey = inboxPreferencesQueryKey(user?.id);
   const preferredInitialPreferences = initialPreferences ?? bootstrapPreferences;
 
-  const preferencesStore = useUserPreferences({
+  const preferencesStore = usePreferences({
     defaults: DEFAULT_INBOX_PREFERENCES,
     initialData: () =>
       resolveInitialInboxPreferences(queryClient, queryKey, preferredInitialPreferences, user?.id),
@@ -190,8 +190,15 @@ export function useInboxQueries({
   sort,
   timezoneOffsetMinutes,
 }: UseInboxQueriesInput) {
-  // oxlint-disable-next-line react-doctor/query-destructure-result
-  const inboxQuery = useInfiniteQuery(
+  const {
+    data: inboxData,
+    dataUpdatedAt: inboxDataUpdatedAt,
+    fetchNextPage: fetchNextInboxPage,
+    hasNextPage: hasNextInboxPage,
+    isFetching: isInboxFetching,
+    isFetchingNextPage: isInboxFetchingNextPage,
+    isPending: isInboxPending,
+  } = useInfiniteQuery(
     inboxItemsInfiniteQueryOptions({
       filter,
       search,
@@ -203,10 +210,26 @@ export function useInboxQueries({
     }),
   );
 
-  // oxlint-disable-next-line react-doctor/query-destructure-result
-  const detailQuery = useQuery(inboxDetailQueryOptions(itemId));
+  const {
+    data: detailData,
+    error: detailError,
+    isError: isDetailError,
+    isFetching: isDetailFetching,
+  } = useQuery(inboxDetailQueryOptions(itemId));
 
-  return { inboxQuery, detailQuery };
+  return {
+    detailData,
+    detailError,
+    fetchNextInboxPage,
+    hasNextInboxPage,
+    inboxData,
+    inboxDataUpdatedAt,
+    isDetailError,
+    isDetailFetching,
+    isInboxFetching,
+    isInboxFetchingNextPage,
+    isInboxPending,
+  };
 }
 
 export function useInboxItemStateMutation() {
