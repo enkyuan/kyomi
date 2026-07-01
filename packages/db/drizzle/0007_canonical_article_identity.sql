@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION vols_rss_normalize_article_url(raw_url text)
+CREATE OR REPLACE FUNCTION kyomi_normalize_article_url(raw_url text)
 RETURNS text
 LANGUAGE plpgsql
 IMMUTABLE
@@ -54,7 +54,7 @@ $$;
 ALTER TABLE "feed_items" ADD COLUMN IF NOT EXISTS "canonical_url" text;
 
 UPDATE "feed_items"
-SET "canonical_url" = vols_rss_normalize_article_url("link")
+SET "canonical_url" = kyomi_normalize_article_url("link")
 WHERE "canonical_url" IS NULL;
 
 WITH ranked AS (
@@ -128,4 +128,4 @@ WHERE "feed_items"."id" = ranked.id
 ALTER TABLE "feed_items" ALTER COLUMN "canonical_url" SET NOT NULL;
 CREATE UNIQUE INDEX IF NOT EXISTS "feed_items_feed_id_canonical_url_unique"
   ON "feed_items" ("feed_id", "canonical_url");
-DROP FUNCTION vols_rss_normalize_article_url(text);
+DROP FUNCTION kyomi_normalize_article_url(text);
