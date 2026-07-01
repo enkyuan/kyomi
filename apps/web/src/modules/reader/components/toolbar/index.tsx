@@ -36,6 +36,7 @@ const CONTENT_WIDTH_LABELS: Record<ReaderContentWidth, string> = {
   wide: "Wide",
 };
 
+// oxlint-disable-next-line eslint/complexity, react-doctor/no-many-boolean-props
 export function Toolbar({
   isSaved,
   activeMode,
@@ -68,13 +69,9 @@ export function Toolbar({
     ? { duration: 0 }
     : { type: "spring" as const, duration: 0.3, bounce: 0 };
   const actionMotionProps = {
-    initial: prefersReducedMotion
-      ? false
-      : { opacity: 0, scale: 0.92, filter: "blur(4px)" },
+    initial: prefersReducedMotion ? false : { opacity: 0, scale: 0.92, filter: "blur(4px)" },
     animate: { opacity: 1, scale: 1, filter: "blur(0px)" },
-    exit: prefersReducedMotion
-      ? undefined
-      : { opacity: 0, scale: 0.92, filter: "blur(4px)" },
+    exit: prefersReducedMotion ? undefined : { opacity: 0, scale: 0.92, filter: "blur(4px)" },
     transition: actionTransition,
   };
 
@@ -84,7 +81,9 @@ export function Toolbar({
         aria-label="Reader tools"
         className={cn(
           "min-w-0 gap-1 border-0 p-0 text-muted-foreground shadow-none",
-          variant === "inline" ? "bg-transparent" : "reader-floating-toolbar rounded-xl px-1.5 py-1",
+          variant === "inline"
+            ? "bg-transparent"
+            : "reader-floating-toolbar rounded-xl px-1.5 py-1",
         )}
       >
         <ToolbarGroup className="min-w-0 gap-1">
@@ -218,11 +217,7 @@ export function ReaderFontSizeControls({
   tooltipSideOffset = 8,
 }: Pick<
   ToolbarProps,
-  | "canDecreaseFont"
-  | "canIncreaseFont"
-  | "fontSizePx"
-  | "onDecreaseFontSize"
-  | "onIncreaseFontSize"
+  "canDecreaseFont" | "canIncreaseFont" | "fontSizePx" | "onDecreaseFontSize" | "onIncreaseFontSize"
 > & {
   tooltipSideOffset?: number;
 }) {
@@ -254,11 +249,7 @@ function ReaderFontSizeControlGroup({
   tooltipSideOffset = 8,
 }: Pick<
   ToolbarProps,
-  | "canDecreaseFont"
-  | "canIncreaseFont"
-  | "fontSizePx"
-  | "onDecreaseFontSize"
-  | "onIncreaseFontSize"
+  "canDecreaseFont" | "canIncreaseFont" | "fontSizePx" | "onDecreaseFontSize" | "onIncreaseFontSize"
 > & {
   className?: string;
   tooltipSideOffset?: number;

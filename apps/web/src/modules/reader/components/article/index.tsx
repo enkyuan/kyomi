@@ -3,6 +3,7 @@
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { TimestampText } from "@modules/inbox/components/timestamp-text";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
+import { getTypography } from "@modules/feeds/layout";
 import { Toolbar } from "../toolbar";
 import {
   useToolbar as useReaderToolbar,
@@ -11,7 +12,7 @@ import {
 import { ReaderContent } from "@kyomi/reader/web";
 import { Button } from "@kyomi/ui/button";
 import { Spinner } from "@kyomi/ui/spinner";
-import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/schemas";
+import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { cn } from "@lib/utils";
 import { useTimestamp } from "@hooks/use-timestamp";
 import { useLayoutEffect, useRef, useState } from "react";
@@ -148,6 +149,8 @@ function FloatingReaderToolbar({
 function ReaderArticleHeader({
   item,
   readTime,
+  density,
+  fontSizePx,
   showFavicons,
   timestampDisplay,
   timestampHourCycle,
@@ -156,12 +159,20 @@ function ReaderArticleHeader({
 }: {
   item: ArticleDetailDto;
   readTime: number | null;
+  density: InboxDensityDto;
+  fontSizePx: number;
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
   toolbar: ToolbarModel;
   hideInlineToolbar?: boolean;
 }) {
+  const { titleFontSizePx, titleLineHeightPx, sourceLabelFontSizePx } = getTypography({
+    density,
+    fontSizePx,
+    readerFocusMode: false,
+  });
+
   return (
     <div className="not-prose mb-6 flex flex-col gap-3">
       {hideInlineToolbar ? null : (
@@ -193,13 +204,17 @@ function ReaderArticleHeader({
         showFavicon={showFavicons}
         className="min-w-0 flex-1 gap-3"
         iconClassName="size-5.5 rounded-sm"
-        labelClassName="text-[13px]"
+        labelStyle={{ fontSize: `${sourceLabelFontSizePx}px` }}
         layoutId={`inbox-item-${item.id}-source`}
       />
       <div className="flex flex-wrap items-start justify-between gap-3">
         <m.p
           layoutId={`inbox-item-${item.id}-title`}
-          className="min-w-0 flex-1 text-xl font-semibold text-foreground"
+          className="min-w-0 flex-1 font-semibold tracking-[-0.012em] text-foreground"
+          style={{
+            fontSize: `${titleFontSizePx}px`,
+            lineHeight: `${titleLineHeightPx}px`,
+          }}
           transition={{ type: "spring", duration: 0.28, bounce: 0 }}
         >
           {item.title}
@@ -245,6 +260,8 @@ function ExtractionFailedBanner({ toolbar }: { toolbar: ToolbarModel }) {
 
 export function Article({
   item,
+  density,
+  fontSizePx,
   showFavicons,
   timestampDisplay,
   timestampHourCycle,
@@ -252,6 +269,8 @@ export function Article({
   hideInlineToolbar = false,
 }: {
   item: ArticleDetailDto;
+  density: InboxDensityDto;
+  fontSizePx: number;
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
@@ -273,8 +292,7 @@ export function Article({
     toolbar.displayReader.contentText ??
     "";
   const readTime = displayContent ? estimateReadingTime(displayContent) : null;
-  const shouldRenderArticleBody =
-    !hideInlineToolbar || hasReaderArticleBody(toolbar.displayReader);
+  const shouldRenderArticleBody = !hideInlineToolbar || hasReaderArticleBody(toolbar.displayReader);
 
   return (
     <article
@@ -290,6 +308,8 @@ export function Article({
       <ReaderArticleHeader
         item={item}
         readTime={readTime}
+        density={density}
+        fontSizePx={fontSizePx}
         showFavicons={showFavicons}
         timestampDisplay={timestampDisplay}
         timestampHourCycle={timestampHourCycle}

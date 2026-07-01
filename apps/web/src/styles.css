@@ -318,7 +318,7 @@ body {
     0 2px 8px color-mix(in srgb, black 14%, transparent);
 }
 
-.reader-content :is(p, span, a) {
+.reader-content .article-body :is(p, span, a) {
   font-family: var(--font-reader);
 }
 

@@ -1,3 +1,4 @@
+/* oxlint-disable max-lines */
 "use client";
 
 import { Article } from "../article";
@@ -5,7 +6,7 @@ import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
 import { Skeleton } from "@kyomi/ui/skeleton";
 import { getUserSafeErrorMessage } from "@lib/errors";
-import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/schemas";
+import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { Button } from "@kyomi/ui/button";
 import { LeftFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
@@ -82,6 +83,8 @@ export type DetailHeaderState = {
 
 export interface DetailViewProps {
   detailState: ReaderDetailState;
+  density: InboxDensityDto;
+  fontSizePx: number;
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
@@ -93,8 +96,11 @@ export interface DetailViewProps {
   articleStepDirection?: ArticleStepDirection;
 }
 
+// oxlint-disable-next-line eslint/complexity
 export function Detail({
   detailState,
+  density,
+  fontSizePx,
   showFavicons,
   timestampDisplay,
   timestampHourCycle,
@@ -107,17 +113,27 @@ export function Detail({
 }: DetailViewProps) {
   const { preferences } = useReaderPreferences();
   const viewportRef = useRef<HTMLDivElement | null>(null);
-  const [readerControlsCollapsed, setReaderControlsCollapsed] = useState(false);
   const isInboxSurface = surface === "inbox";
   const isNarrowContent = preferences.contentWidth === "narrow";
   const blurTopOffset = showBackToList ? DETAIL_BACK_BUTTON_BLUR_OFFSET : 0;
   const selectedItem = detailState.status === "selected" ? detailState.item : null;
   const selectedItemId = selectedItem?.id;
+  const [readerControlsState, setReaderControlsState] = useState({
+    collapsed: false,
+    selectedItemId,
+  });
+  let readerControlsCollapsed = readerControlsState.collapsed;
+
+  if (readerControlsState.selectedItemId !== selectedItemId) {
+    readerControlsCollapsed = false;
+    setReaderControlsState({ collapsed: false, selectedItemId });
+  }
+
   const selectedContentKey = articleContentKey ?? selectedItem?.id;
   const viewportContentInset =
     selectedItem &&
     (isInboxSurface
-      ? "box-border w-full min-w-0 pl-8 pr-7"
+      ? "box-border w-full min-w-0 px-9.5"
       : readerViewportContentInsetClass({
           showBackToList,
           contentWidth: preferences.contentWidth,
@@ -128,7 +144,6 @@ export function Detail({
       return;
     }
     viewportRef.current?.scrollTo({ top: 0 });
-    setReaderControlsCollapsed(false);
   }, [selectedItemId]);
 
   useEffect(() => {
@@ -149,18 +164,18 @@ export function Detail({
       const nextScrollTop = viewport.scrollTop;
       const delta = nextScrollTop - previousScrollTop;
       previousScrollTop = nextScrollTop;
+      const nextCollapsed =
+        nextScrollTop < 16 ? false : delta > 6 ? true : delta < -6 ? false : null;
 
-      if (nextScrollTop < 16) {
-        setReaderControlsCollapsed(false);
+      if (nextCollapsed === null) {
         return;
       }
-      if (delta > 6) {
-        setReaderControlsCollapsed(true);
-        return;
-      }
-      if (delta < -6) {
-        setReaderControlsCollapsed(false);
-      }
+
+      setReaderControlsState((current) =>
+        current.selectedItemId === selectedItemId && current.collapsed === nextCollapsed
+          ? current
+          : { collapsed: nextCollapsed, selectedItemId },
+      );
     };
 
     const handleScroll = () => {
@@ -211,6 +226,8 @@ export function Detail({
           >
             <DetailContent
               detailState={detailState}
+              density={density}
+              fontSizePx={fontSizePx}
               showFavicons={showFavicons}
               timestampDisplay={timestampDisplay}
               timestampHourCycle={timestampHourCycle}
@@ -266,6 +283,8 @@ export function Detail({
 
 function DetailContent({
   detailState,
+  density,
+  fontSizePx,
   showFavicons,
   timestampDisplay,
   timestampHourCycle,
@@ -276,6 +295,8 @@ function DetailContent({
   articleStepDirection,
 }: {
   detailState: ReaderDetailState;
+  density: InboxDensityDto;
+  fontSizePx: number;
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
@@ -290,6 +311,8 @@ function DetailContent({
       const content = (
         <SelectedArticleContent
           item={detailState.item}
+          density={density}
+          fontSizePx={fontSizePx}
           showFavicons={showFavicons}
           timestampDisplay={timestampDisplay}
           timestampHourCycle={timestampHourCycle}
@@ -321,6 +344,8 @@ function DetailContent({
 
 function SelectedArticleContent({
   item,
+  density,
+  fontSizePx,
   showFavicons,
   timestampDisplay,
   timestampHourCycle,
@@ -329,6 +354,8 @@ function SelectedArticleContent({
   isInboxSurface,
 }: {
   item: ArticleDetailDto;
+  density: InboxDensityDto;
+  fontSizePx: number;
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
@@ -353,6 +380,8 @@ function SelectedArticleContent({
       ) : null}
       <Article
         item={item}
+        density={density}
+        fontSizePx={fontSizePx}
         showFavicons={showFavicons}
         timestampDisplay={timestampDisplay}
         timestampHourCycle={timestampHourCycle}

@@ -6,7 +6,6 @@ import { cn } from "@lib/utils";
 import {
   useEffect,
   useMemo,
-  useRef,
   useState,
   type CSSProperties,
   type ReactElement,
@@ -47,7 +46,6 @@ export function FeedFavicon({
     siteUrl,
   });
   const [loadedFaviconUrl, setLoadedFaviconUrl] = useState<string | null>(null);
-  const imageRef = useRef<HTMLImageElement | null>(null);
   const [wrapper, setWrapper] = useState<HTMLSpanElement | null>(null);
   const [wrapperSize, setWrapperSize] = useState({ width: 0, height: 0 });
   const isLoaded = faviconUrl !== null && loadedFaviconUrl === faviconUrl;
@@ -55,22 +53,6 @@ export function FeedFavicon({
   useEffect(() => {
     prewarmFaviconUrl(faviconUrl, priority);
   }, [faviconUrl, priority]);
-
-  useEffect(() => {
-    const image = imageRef.current;
-    if (
-      !faviconUrl ||
-      loadedFaviconUrl === faviconUrl ||
-      !image?.complete ||
-      image.naturalWidth <= 0 ||
-      image.naturalHeight <= 0
-    ) {
-      return;
-    }
-
-    handleLoad(image.naturalWidth, image.naturalHeight);
-    setLoadedFaviconUrl(faviconUrl);
-  }, [faviconUrl, handleLoad, loadedFaviconUrl]);
 
   useEffect(() => {
     if (shape !== "squircle" || !wrapper) {
@@ -152,7 +134,6 @@ export function FeedFavicon({
       fetchPriority={fetchPriority}
       key={faviconUrl}
       loading={loading}
-      ref={imageRef}
       referrerPolicy="strict-origin-when-cross-origin"
       src={faviconUrl}
       onLoad={(event) => {

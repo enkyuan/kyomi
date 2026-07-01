@@ -12,6 +12,7 @@ import {
   LayoutGroup,
   LazyMotion,
   domAnimation,
+  domMax,
   m,
   useReducedMotion,
 } from "motion/react";
@@ -302,7 +303,7 @@ function InboxPageContent({
               list={listElement}
               detail={middleColumnDetailElement}
             />
-            <aside className="hidden h-full w-96 shrink-0 flex-col pt-4.5 pb-4 xl:flex">
+            <aside className="hidden h-full w-96 shrink-0 flex-col py-8 xl:flex">
               {/* Article detail replaces the inbox pane; keep this rail reserved for future context. */}
               <InboxSidebarCard />
             </aside>
@@ -328,13 +329,10 @@ function MiddleColumnTransition({
     : { type: "spring" as const, duration: 0.28, bounce: 0 };
 
   return (
-    <LazyMotion features={domAnimation}>
-      <m.div
-        initial={false}
-        className="relative h-full min-h-0 min-w-0 flex-1 overflow-hidden"
-      >
+    <LazyMotion features={domMax}>
+      <m.div initial={false} className="relative h-full min-h-0 min-w-0 flex-1 overflow-hidden">
         <LayoutGroup id="inbox-middle-column">
-          <AnimatePresence initial={false} mode="popLayout">
+          <AnimatePresence initial={false} mode="sync">
             {showDetail ? (
               <m.div
                 key="middle-article"
@@ -371,6 +369,7 @@ function InboxSidebarCard() {
   );
 }
 
+// oxlint-disable-next-line react-doctor/no-many-boolean-props
 function MiddleColumnArticle({
   preferences,
   detailError,
@@ -432,7 +431,7 @@ function MiddleColumnArticle({
 function MiddleColumnArticleHeaderShell({ onBackToList }: { onBackToList: () => void }) {
   return (
     <div
-      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-3 pt-4.5 pb-2 isolate"
+      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 pt-8 pb-2 isolate"
       data-slot="inbox-article-header"
     >
       <div className="flex min-w-0 items-center gap-2">
@@ -468,7 +467,7 @@ function SelectedMiddleColumnArticleHeader({
 
   return (
     <div
-      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-3 pt-4.5 pb-2 isolate"
+      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 pt-8 pb-2 isolate"
       data-slot="inbox-article-header"
     >
       <LazyMotion features={domAnimation}>
@@ -812,6 +811,8 @@ function InboxDetailSection({
           : isDetailError
             ? ({ status: "error", error: detailError } as const)
             : ({ status: "empty" } as const),
+      density: preferences.inboxDensity,
+      fontSizePx: preferences.inboxFontSizePx,
       showFavicons: preferences.inboxShowFavicons,
       timestampDisplay: preferences.inboxTimestampDisplay,
       timestampHourCycle: preferences.inboxTimestampHourCycle,
@@ -820,6 +821,8 @@ function InboxDetailSection({
       detailError,
       isDetailError,
       isDetailLoading,
+      preferences.inboxDensity,
+      preferences.inboxFontSizePx,
       preferences.inboxShowFavicons,
       preferences.inboxTimestampDisplay,
       preferences.inboxTimestampHourCycle,

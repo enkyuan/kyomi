@@ -146,7 +146,7 @@ export function List({
             {onFilterChange ? (
               <div
                 ref={listHeaderRef}
-                className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-3 pt-4.5 pb-2 isolate"
+                className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-5.5 pt-8 pb-2 isolate"
                 data-slot="inbox-list-header"
               >
                 <div className="flex min-w-0 items-center gap-2">
@@ -187,46 +187,48 @@ export function List({
                           >
                             <FilterControl filter={filter} onFilterChange={onFilterChange} />
                           </m.div>
-                      )}
-                    </AnimatePresence>
-                  </m.div>
-                </LazyMotion>
-                </div>
-                <div
-                  ref={listToolsRef}
-                  className="flex min-w-0 flex-1 items-center justify-end gap-2"
-                >
-                  <SearchBar />
-                  <LazyMotion features={domAnimation}>
-                    <AnimatePresence initial={false} mode="popLayout">
-                      {!isArticleScoped ? (
-                        <m.div
-                          key="sort"
-                          layout
-                          initial={prefersReducedMotion ? false : { opacity: 0, x: -8, scale: 0.96 }}
-                          animate={{ opacity: 1, x: 0, scale: 1 }}
-                          exit={
-                            prefersReducedMotion
-                              ? undefined
-                              : { opacity: 0, x: -8, scale: 0.96 }
-                          }
-                          transition={scopeControlTransition}
-                        >
-                          <SortButton
-                            sort={sort ?? DEFAULT_SORT}
-                            anchor={listToolsRef}
-                            onSortChange={onSortChange}
-                          />
-                        </m.div>
-                      ) : null}
-                    </AnimatePresence>
+                        )}
+                      </AnimatePresence>
+                    </m.div>
                   </LazyMotion>
+                </div>
+                <div className="flex min-w-0 flex-1 items-center justify-end">
+                  <div
+                    ref={listToolsRef}
+                    className="flex min-w-0 max-w-full items-center justify-end gap-2"
+                  >
+                    <SearchBar />
+                    <LazyMotion features={domAnimation}>
+                      <AnimatePresence initial={false} mode="popLayout">
+                        {!isArticleScoped ? (
+                          <m.div
+                            key="sort"
+                            layout
+                            initial={
+                              prefersReducedMotion ? false : { opacity: 0, x: -8, scale: 0.96 }
+                            }
+                            animate={{ opacity: 1, x: 0, scale: 1 }}
+                            exit={
+                              prefersReducedMotion ? undefined : { opacity: 0, x: -8, scale: 0.96 }
+                            }
+                            transition={scopeControlTransition}
+                          >
+                            <SortButton
+                              sort={sort ?? DEFAULT_SORT}
+                              anchor={listToolsRef}
+                              onSortChange={onSortChange}
+                            />
+                          </m.div>
+                        ) : null}
+                      </AnimatePresence>
+                    </LazyMotion>
+                  </div>
                 </div>
               </div>
             ) : null}
             <div className={showEmptyState ? "flex flex-1 flex-col" : ""}>
               {showEmptyState ? (
-                <div className="flex flex-1 min-h-72 w-full flex-col items-center justify-center gap-5 px-3 py-10 text-center">
+                <div className="flex flex-1 min-h-72 w-full flex-col items-center justify-center gap-5 px-5.5 py-10 text-center">
                   <EmptyStateIcon filter={filter} />
                   <div className="w-full max-w-136 space-y-2">
                     <p className="text-base font-semibold text-foreground">{emptyState.title}</p>

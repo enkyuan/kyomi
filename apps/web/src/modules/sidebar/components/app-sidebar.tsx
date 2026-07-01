@@ -90,10 +90,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
   const { isInbox, scopedFeedId } = useScope();
   const { prefetchOnFocus, prefetchOnPointerEnter } = useInboxPrefetch();
 
-  const [dialogState, dispatchDialogState] = useReducer(
-    dialogStateReducer,
-    INITIAL_DIALOG_STATE,
-  );
+  const [dialogState, dispatchDialogState] = useReducer(dialogStateReducer, INITIAL_DIALOG_STATE);
 
   useEffect(() => {
     if (settingsOpen) {
@@ -130,15 +127,15 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       className={cn("h-svh bg-sidebar", className)}
       style={{ "--sidebar-width": APP_SIDEBAR_WIDTH, ...style } as CSSProperties}
     >
-      <SidebarHeader className="items-center px-0 py-4.5">
+      <SidebarHeader className="items-center ps-0 pe-2 pt-8 pb-4.5">
         <SidebarMenu className="gap-4.25">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Kyomi"
-              className="size-11 justify-center rounded-full! p-0 hover:bg-transparent active:bg-transparent group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
+              className="size-11 justify-center rounded-full! p-0 hover:bg-transparent focus-visible:ring-0 focus-visible:ring-transparent active:bg-transparent group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
               render={<Link to="/inbox" search={{ filter: "my-feed" as const }} />}
             >
-              <KyomiLogo size={24} className="size-auto" />
+              <KyomiLogo size={28} className="size-auto" />
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="flex justify-center">
@@ -159,7 +156,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         </SidebarMenu>
       </SidebarHeader>
 
-      <SidebarContent className="px-0">
+      <SidebarContent className="ps-0 pe-2">
         <ScrollArea className="h-auto min-h-0 flex-1 data-has-overflow-y:scroll-mask-y-from-6 **:data-[slot=scroll-area-scrollbar]:hidden">
           <SidebarMenu className="items-center gap-3 px-1">
             {feeds.map((feed) => {
@@ -186,9 +183,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
                         state={(prev) => ({
                           ...prev,
                           [INBOX_PREVIOUS_FEED_ID_STATE_KEY]:
-                            scopedFeedId && scopedFeedId !== feed.feedId
-                              ? scopedFeedId
-                              : undefined,
+                            scopedFeedId && scopedFeedId !== feed.feedId ? scopedFeedId : undefined,
                         })}
                       />
                     }
@@ -211,7 +206,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         </ScrollArea>
       </SidebarContent>
 
-      <SidebarFooter className="items-center px-0 py-4.5">
+      <SidebarFooter className="items-center ps-0 pe-2 py-4.5">
         <SidebarMenu className="items-center gap-3">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton

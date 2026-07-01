@@ -12,8 +12,8 @@ import { Pretext } from "./pretext";
 import { getSectionClassNames, getTypography } from "@modules/feeds/layout";
 import { arePropsEqual, type Props } from "@modules/feeds/props";
 
-const ITEM_GUTTER_CLASS = "pl-8 pr-7";
-const ITEM_SEPARATOR_CLASS = "left-8 right-7";
+const ITEM_GUTTER_CLASS = "px-10.5";
+const ITEM_SEPARATOR_CLASS = "left-10.5 right-10.5";
 
 export const Item = memo(function Item({
   item,

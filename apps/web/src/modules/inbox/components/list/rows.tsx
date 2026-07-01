@@ -14,8 +14,8 @@ import {
   SKELETON_OVERSCAN_ROWS,
 } from "@modules/inbox/lib/layout";
 
-const SKELETON_ROW_GUTTER_CLASS = "pl-8 pr-7";
-const SKELETON_ROW_SEPARATOR_CLASS = "left-8 right-7";
+const SKELETON_ROW_GUTTER_CLASS = "px-10.5";
+const SKELETON_ROW_SEPARATOR_CLASS = "left-10.5 right-10.5";
 
 export type RowsPaginationState = {
   isLoading: boolean;
