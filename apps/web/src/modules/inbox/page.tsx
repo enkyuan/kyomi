@@ -18,6 +18,7 @@ import {
 } from "motion/react";
 import { List } from "./components/list";
 import { BackToInboxButton, SearchBar } from "./components/list/header";
+import { InboxOrganizerCard } from "./components/organizer/card";
 import {
   ReaderFontSizeControls,
   Toolbar as ReaderToolbar,
@@ -29,10 +30,16 @@ import {
   InboxPreferencesBootstrapProvider,
   type InboxPreferences,
   dedupePagedInboxItemsById,
+  useInboxItemStateMutation,
   useInboxPreferences,
   useInboxQueries,
+  useRecordInboxItemView,
 } from "@modules/inbox/hooks/use-inbox-data";
-import { useInboxRouteState, useResponsiveReaderMode } from "@modules/inbox/hooks/use-layout";
+import {
+  useInboxRouteState,
+  useMarkReadBehavior,
+  useResponsiveReaderMode,
+} from "@modules/inbox/hooks/use-layout";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
 import { useTimezone } from "@hooks/use-timezone";
 import { useViewport } from "@hooks/use-viewport";
@@ -161,6 +168,24 @@ function InboxPageContent({
   }, [isReadScopedFilterActive, rawInboxItems]);
 
   const selectedItem = detailData?.item ?? null;
+  const { mutate: updateInboxItemState } = useInboxItemStateMutation();
+  const markItemRead = useCallback(
+    (nextItemId: string) => {
+      updateInboxItemState({
+        itemId: nextItemId,
+        patch: { isRead: true },
+      });
+    },
+    [updateInboxItemState],
+  );
+  useRecordInboxItemView(itemId);
+  useMarkReadBehavior({
+    itemId,
+    selectedItem,
+    effectiveFilter,
+    markReadBehavior: preferences.inboxMarkReadBehavior,
+    onMarkRead: markItemRead,
+  });
   const selectedItemIndex = useMemo(() => {
     if (!selectedItem) {
       return -1;
@@ -314,7 +339,7 @@ function InboxPageContent({
             />
             <aside className="hidden h-full w-96 shrink-0 flex-col py-8 xl:flex">
               {/* Article detail replaces the inbox pane; keep this rail reserved for future context. */}
-              <InboxSidebarCard />
+              <InboxOrganizerCard />
             </aside>
           </div>
         )}
@@ -369,12 +394,6 @@ function MiddleColumnTransition({
         </LayoutGroup>
       </m.div>
     </LazyMotion>
-  );
-}
-
-function InboxSidebarCard() {
-  return (
-    <div className="h-full flex-1 rounded-2xl border border-border bg-card text-card-foreground shadow-sm/5" />
   );
 }
 
@@ -591,7 +610,7 @@ function ArticleStepControls({
             />
           }
         >
-          <UpFill className="size-4 -translate-y-[0.5px]" />
+          <UpFill className="size-4" />
         </TooltipTrigger>
         <TooltipPopup
           collisionAvoidance={READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE}
@@ -618,7 +637,7 @@ function ArticleStepControls({
             />
           }
         >
-          <DownFill className="size-4 translate-y-[0.5px]" />
+          <DownFill className="size-4" />
         </TooltipTrigger>
         <TooltipPopup
           collisionAvoidance={READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE}

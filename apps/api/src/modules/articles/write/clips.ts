@@ -139,7 +139,11 @@ function assertClipUpdateHasFields(body: ClipUpdateBody): void {
   }
 }
 
-function resolveClipUpdateValues(body: ClipUpdateBody, prev: typeof articleClips.$inferSelect) {
+function resolveClipUpdateValues(
+  body: ClipUpdateBody,
+  prev: typeof articleClips.$inferSelect,
+  now: Date,
+) {
   const title =
     Object.hasOwn(body, "title") && typeof body.title === "string"
       ? body.title.trim() || prev.title
@@ -161,6 +165,12 @@ function resolveClipUpdateValues(body: ClipUpdateBody, prev: typeof articleClips
   const extractionErrorMessage = Object.hasOwn(body, "extractionErrorMessage")
     ? body.extractionErrorMessage
     : prev.extractionErrorMessage;
+  const isSaved = Object.hasOwn(body, "isSaved") ? body.isSaved === true : prev.isSaved;
+  const savedAt = Object.hasOwn(body, "isSaved")
+    ? isSaved
+      ? (prev.savedAt ?? now)
+      : null
+    : prev.savedAt;
   return {
     title,
     note: Object.hasOwn(body, "note") ? body.note : prev.note,
@@ -173,7 +183,8 @@ function resolveClipUpdateValues(body: ClipUpdateBody, prev: typeof articleClips
     extractionErrorCode,
     extractionErrorMessage,
     isRead: Object.hasOwn(body, "isRead") ? body.isRead === true : prev.isRead,
-    isSaved: Object.hasOwn(body, "isSaved") ? body.isSaved === true : prev.isSaved,
+    isSaved,
+    savedAt,
   };
 }
 
@@ -220,6 +231,7 @@ export async function createArticleClip(
       note: body.note?.trim() || null,
       isRead: false,
       isSaved: true,
+      savedAt: now,
       createdAt: now,
       updatedAt: now,
     })
@@ -327,7 +339,7 @@ export async function updateArticleClipForUser(
   }
 
   const now = new Date();
-  const next = resolveClipUpdateValues(body, prev);
+  const next = resolveClipUpdateValues(body, prev, now);
 
   await database
     .update(articleClips)
@@ -344,6 +356,7 @@ export async function updateArticleClipForUser(
       extractionErrorMessage: next.extractionErrorMessage,
       isRead: next.isRead,
       isSaved: next.isSaved,
+      savedAt: next.savedAt,
       updatedAt: now,
     })
     .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)));

@@ -64,6 +64,7 @@ export type ArticleDetailDto = ArticleListItemDto & {
 export type ArticleUpdateBody = {
   isRead?: boolean | null;
   isSaved?: boolean;
+  isHidden?: boolean;
   contentHtml?: string | null;
   contentText?: string | null;
   contentMarkdown?: string | null;
@@ -71,6 +72,11 @@ export type ArticleUpdateBody = {
   contentSource?: ArticleStoredContentDto["contentSource"] | null;
   extractionErrorCode?: string | null;
   extractionErrorMessage?: string | null;
+};
+
+export type BrokenArticleReportBody = {
+  reason?: "broken_article" | "missing_content" | "wrong_content" | "feed_error";
+  details?: string | null;
 };
 
 export type ArticleCountsDto = {

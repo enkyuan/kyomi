@@ -22,6 +22,7 @@ let inboxSchemaModulePromise:
         | "articleDetailSchema"
         | "cursorListResponseSchema"
         | "extractFullTextResponseSchema"
+        | "messageResponseSchema"
       >
     >
   | undefined;
@@ -33,6 +34,7 @@ function getInboxSchemaModule() {
     articleDetailSchema: module.articleDetailSchema,
     cursorListResponseSchema: module.cursorListResponseSchema,
     extractFullTextResponseSchema: module.extractFullTextResponseSchema,
+    messageResponseSchema: module.messageResponseSchema,
   }));
   return inboxSchemaModulePromise;
 }
@@ -88,6 +90,13 @@ export type UpdateInboxItemStateInput = {
   itemId: string;
   isRead?: boolean | null;
   isSaved?: boolean;
+  isHidden?: boolean;
+};
+
+export type ReportBrokenArticleInput = {
+  itemId: string;
+  reason?: "broken_article" | "missing_content" | "wrong_content" | "feed_error";
+  details?: string | null;
 };
 
 type GetInboxItemsInput = {
@@ -210,6 +219,7 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
 export const updateInboxItemState = createServerFn({ method: "POST" })
   .inputValidator((input: UpdateInboxItemStateInput) => input)
   .handler(async ({ data }): Promise<{ message: string }> => {
+    const { apiJsonValidated, messageResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
     forwarded.set("content-type", "application/json");
@@ -221,11 +231,46 @@ export const updateInboxItemState = createServerFn({ method: "POST" })
     if (Object.hasOwn(data, "isSaved")) {
       body.isSaved = data.isSaved;
     }
+    if (Object.hasOwn(data, "isHidden")) {
+      body.isHidden = data.isHidden;
+    }
 
-    return apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}`, {
-      method: "PUT",
-      headers: forwarded,
-      body: JSON.stringify(body),
+    return apiJsonValidated(messageResponseSchema, () =>
+      apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}`, {
+        method: "PUT",
+        headers: forwarded,
+        body: JSON.stringify(body),
+      }),
+    );
+  });
+
+export const reportBrokenArticle = createServerFn({ method: "POST" })
+  .inputValidator((input: ReportBrokenArticleInput) => input)
+  .handler(async ({ data }): Promise<{ message: string }> => {
+    const { apiJsonValidated, messageResponseSchema } = await getInboxSchemaModule();
+    const headers = getRequestHeaders();
+    const forwarded = buildForwardHeaders(headers);
+    forwarded.set("content-type", "application/json");
+
+    return apiJsonValidated(messageResponseSchema, () =>
+      apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}/reports/broken`, {
+        method: "POST",
+        headers: forwarded,
+        body: JSON.stringify({
+          reason: data.reason ?? "broken_article",
+          details: data.details ?? null,
+        }),
+      }),
+    );
+  });
+
+export const recordInboxItemView = createServerFn({ method: "POST" })
+  .inputValidator((input: { itemId: string }) => input)
+  .handler(async ({ data }): Promise<{ message: string }> => {
+    const headers = getRequestHeaders();
+    return apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}/view`, {
+      method: "POST",
+      headers: buildForwardHeaders(headers),
     });
   });
 

@@ -10,6 +10,7 @@ export {
   useInboxItemStateMutation,
   useInboxPreferences,
   useInboxQueries,
+  useRecordInboxItemView,
   type InboxItemPatch,
   type InboxPreferences,
 } from "./hooks/use-inbox-data";
