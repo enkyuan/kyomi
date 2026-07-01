@@ -944,13 +944,13 @@ git commit -m "Split scheduler and worker process roles"
 - Edit `packages/worker/src/services/feed/index.ts`
 - Edit `packages/worker/src/services/feed/search.ts`
 - Edit `apps/api/src/app/jobs/run-worker.ts`
-- Create `packages/worker/src/services/feed/host-rate-limit.ts`
-- Create `tests/api/integration/modules/feeds/host-rate-limit.test.ts`
+- Create `packages/worker/src/services/feed/host-limit.ts`
+- Create `tests/api/integration/modules/feeds/host-limit.test.ts`
 - Create `tests/api/integration/modules/feeds/feed-refresh-policy.test.ts`
 
 ### Red Tests
 
-Create `tests/api/integration/modules/feeds/host-rate-limit.test.ts`:
+Create `tests/api/integration/modules/feeds/host-limit.test.ts`:
 
 ```ts
 import { describe, expect, test } from "bun:test";
@@ -1004,12 +1004,12 @@ describe("feed refresh policy", () => {
 Run and confirm failures:
 
 ```bash
-bun test tests/api/integration/modules/feeds/host-rate-limit.test.ts tests/api/integration/modules/feeds/feed-refresh-policy.test.ts
+bun test tests/api/integration/modules/feeds/host-limit.test.ts tests/api/integration/modules/feeds/feed-refresh-policy.test.ts
 ```
 
 ### Green Implementation
 
-Create `packages/worker/src/services/feed/host-rate-limit.ts`:
+Create `packages/worker/src/services/feed/host-limit.ts`:
 
 ```ts
 import type { Redis } from "ioredis";
@@ -1158,14 +1158,14 @@ Change feed refresh sync path to call `ensureSearchIndexOnce()` instead of creat
 ### Validation
 
 ```bash
-bun test tests/api/integration/modules/feeds/host-rate-limit.test.ts tests/api/integration/modules/feeds/feed-refresh-policy.test.ts
+bun test tests/api/integration/modules/feeds/host-limit.test.ts tests/api/integration/modules/feeds/feed-refresh-policy.test.ts
 bunx tsgo -p packages/worker/tsconfig.json --noEmit
 ```
 
 ### Commit Checkpoint
 
 ```bash
-git add packages/worker/src/services/feed/host-rate-limit.ts packages/worker/src/services/feed/fetch.ts packages/worker/src/services/feed/refresh.ts packages/worker/src/services/feed/index.ts packages/worker/src/services/feed/search.ts apps/api/src/app/jobs/run-worker.ts tests/api/integration/modules/feeds/host-rate-limit.test.ts tests/api/integration/modules/feeds/feed-refresh-policy.test.ts
+git add packages/worker/src/services/feed/host-limit.ts packages/worker/src/services/feed/fetch.ts packages/worker/src/services/feed/refresh.ts packages/worker/src/services/feed/index.ts packages/worker/src/services/feed/search.ts apps/api/src/app/jobs/run-worker.ts tests/api/integration/modules/feeds/host-limit.test.ts tests/api/integration/modules/feeds/feed-refresh-policy.test.ts
 git commit -m "Bound scheduled feed refresh amplification"
 ```
 
@@ -1368,7 +1368,7 @@ git commit -m "Add feed refresh queue observability"
 - Create `docs/architecture/feed-refresh-pipeline.md`
 - Edit `apps/api/README.md` if it currently documents the worker shape
 - Edit `packages/worker/README.md`
-- Create `scripts/smoke/feed-refresh-queue.ts`
+- Create `scripts/smoke/refresh-queue.ts`
 
 ### Documentation Content
 
@@ -1383,7 +1383,7 @@ Create `docs/architecture/feed-refresh-pipeline.md` with these sections:
 - `Rollout`: create indexes concurrently, deploy code with scheduler replicas set to one, deploy workers, watch queue lag, then raise scheduler batch sizes.
 - `Rollback`: stop scheduler first, drain workers, then roll back code.
 
-Create `scripts/smoke/feed-refresh-queue.ts`:
+Create `scripts/smoke/refresh-queue.ts`:
 
 ```ts
 import { createRedisClient } from "../../apps/api/src/redis/client";
@@ -1410,7 +1410,7 @@ bun test tests/api/integration/db/feed-refresh-scale-indexes.test.ts
 bun test tests/api/integration/services/queue/job-routing.test.ts
 bun test tests/api/integration/app/jobs/refresh-scheduler.test.ts
 bun test tests/api/integration/app/jobs/process-roles.test.ts
-bun test tests/api/integration/modules/feeds/host-rate-limit.test.ts tests/api/integration/modules/feeds/feed-refresh-policy.test.ts
+bun test tests/api/integration/modules/feeds/host-limit.test.ts tests/api/integration/modules/feeds/feed-refresh-policy.test.ts
 bun test tests/api/integration/app/jobs/feed-refresh-errors.test.ts tests/api/integration/app/jobs/queue-health.test.ts
 ```
 
@@ -1429,7 +1429,7 @@ docker compose -f docker/docker-compose.yml up -d postgres redis meilisearch
 bun run --cwd packages/db db:migrate
 bun run --cwd apps/api scheduler
 bun run --cwd apps/api worker
-bun run scripts/smoke/feed-refresh-queue.ts
+bun run scripts/smoke/refresh-queue.ts
 ```
 
 When smoke testing locally, stop `scheduler` before changing queue/scheduler environment values. This prevents a local backlog from masking the result of a configuration test.
@@ -1437,7 +1437,7 @@ When smoke testing locally, stop `scheduler` before changing queue/scheduler env
 ### Commit Checkpoint
 
 ```bash
-git add docs/architecture/feed-refresh-pipeline.md apps/api/README.md packages/worker/README.md scripts/smoke/feed-refresh-queue.ts
+git add docs/architecture/feed-refresh-pipeline.md apps/api/README.md packages/worker/README.md scripts/smoke/refresh-queue.ts
 git commit -m "Document feed refresh scale architecture"
 ```
 

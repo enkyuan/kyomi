@@ -4,7 +4,7 @@ export {
   createHostRateLimiter,
   createMemoryHostRateLimitStore,
   createRedisHostRateLimitStore,
-} from "./host-rate-limit";
+} from "./host-limit";
 export { buildArticleIdentity, normalizeArticleUrl } from "../../lib/article-identity";
 export { decodeHtmlEntities } from "../../lib/html-entities";
 export type {
