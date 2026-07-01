@@ -345,7 +345,6 @@ export const inboxPreferencesSchema = z.object({
   inboxTimestampDisplay: inboxTimestampDisplaySchema,
   inboxTimestampHourCycle: inboxTimestampHourCycleSchema,
   inboxFontSizePx: z.number(),
-  inboxShowRecents: z.boolean(),
   inboxShowFavicons: z.boolean(),
 });
 
@@ -357,7 +356,6 @@ export const userPreferencesSchema = readerPreferencesSchema.extend({
   inboxTimestampDisplay: inboxTimestampDisplaySchema,
   inboxTimestampHourCycle: inboxTimestampHourCycleSchema,
   inboxFontSizePx: z.number(),
-  inboxShowRecents: z.boolean(),
   inboxShowFavicons: z.boolean(),
 });
 

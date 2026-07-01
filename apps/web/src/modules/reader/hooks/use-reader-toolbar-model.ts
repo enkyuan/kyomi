@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { toastManager } from "@kyomi/ui/toast";
 import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-data";
 import { useMediaQuery } from "@hooks/use-media-query";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/schemas";
 import { readerContentForMode } from "../reader-display";
 import { useArticleExtraction } from "./use-article-extraction";
@@ -134,12 +135,17 @@ export function useReaderToolbarModel({
           description: "Article content has been refreshed.",
           type: "success",
         },
-        error: (error) => ({
-          title: "Extraction failed",
-          description:
-            error instanceof Error ? error.message : "Could not fetch extracted article content.",
-          type: "error",
-        }),
+        error: (error) => {
+          logClientError("reader.extract", error);
+          return {
+            title: "Extraction failed",
+            description: getUserSafeErrorMessage(
+              error,
+              "Could not fetch extracted article content.",
+            ),
+            type: "error",
+          };
+        },
       });
     },
     [extractMutation],
@@ -273,11 +279,14 @@ export function useReaderToolbarModel({
               : "This article was removed from read later.",
             type: "success",
           },
-          error: (error) => ({
-            title: nextSaved ? "Unable to save article" : "Unable to update article",
-            description: error instanceof Error ? error.message : "Try again in a moment.",
-            type: "error",
-          }),
+          error: (error) => {
+            logClientError("reader.saved_state", error);
+            return {
+              title: nextSaved ? "Unable to save article" : "Unable to update article",
+              description: getUserSafeErrorMessage(error, "Try again in a moment."),
+              type: "error",
+            };
+          },
         });
       },
     },

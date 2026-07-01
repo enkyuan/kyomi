@@ -9,6 +9,7 @@ export type FeedFaviconProps = {
   siteUrl: string | null;
   title: string;
   className?: string;
+  minNaturalSize?: number;
 };
 
 export function FeedFavicon({
@@ -17,10 +18,12 @@ export function FeedFavicon({
   siteUrl,
   title,
   className,
+  minNaturalSize,
 }: FeedFaviconProps) {
   const { faviconUrl, failCurrentFavicon, handleLoad } = useFeedFavicon({
     faviconUrl: storedFaviconUrl,
     feedUrl,
+    minNaturalSize,
     siteUrl,
   });
 

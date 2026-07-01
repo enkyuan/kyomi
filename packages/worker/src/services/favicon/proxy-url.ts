@@ -1,6 +1,6 @@
 /** Schemes accepted by the server-side favicon proxy (mirrors host-safety.ts). */
 const PROXY_ALLOWED_SCHEMES = new Set(["http:", "https:"]);
-const FAVICON_PROXY_VERSION = "2";
+const FAVICON_PROXY_VERSION = "3";
 
 function parseOrigin(raw: string | null | undefined): string | null {
   if (!raw) return null;
@@ -8,6 +8,19 @@ function parseOrigin(raw: string | null | undefined): string | null {
     const parsed = new URL(raw);
     if (!PROXY_ALLOWED_SCHEMES.has(parsed.protocol)) return null;
     return parsed.origin;
+  } catch {
+    return null;
+  }
+}
+
+function buildHighResolutionGoogleFaviconUrl(raw: string): string | null {
+  try {
+    const parsed = new URL(raw);
+    if (parsed.hostname !== "www.google.com" || parsed.pathname !== "/s2/favicons") {
+      return null;
+    }
+    parsed.searchParams.set("sz", "128");
+    return parsed.toString();
   } catch {
     return null;
   }
@@ -28,7 +41,7 @@ export function buildClientFaviconUrl(
   feedUrl: string,
 ): string | null {
   const trimmed = storedFaviconUrl?.trim();
-  if (trimmed) return trimmed;
+  if (trimmed) return buildHighResolutionGoogleFaviconUrl(trimmed) ?? trimmed;
 
   const origin = parseOrigin(siteUrl) ?? parseOrigin(feedUrl);
   if (!origin) return null;

@@ -16,7 +16,6 @@ import {
   CloseLine,
   SortDescendingFill,
   SortAscendingFill,
-  InboxFill,
   type IconProps,
 } from "@mingcute/react";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
@@ -41,7 +40,6 @@ const SORT_MENU: {
 }[] = [
   { value: "newest", label: "Newest", icon: SortDescendingFill },
   { value: "oldest", label: "Oldest", icon: SortAscendingFill },
-  { value: "unread-first", label: "Unread first", icon: InboxFill },
 ];
 
 export const DEFAULT_SORT: InboxSort = "newest";
@@ -67,7 +65,6 @@ export function FilterControl({
 }) {
   const segmentedRef = useRef<HTMLDivElement | null>(null);
   const isAllGroupActive = ALL_FILTER_GROUP.includes(filter);
-  const activeAllLabel = filter === "saved" ? "Saved" : filter === "recent" ? "Recent" : "All";
   const segmentValue: InboxFilter =
     filter === "today" ? "today" : isAllGroupActive ? filter : "all";
 
@@ -86,7 +83,7 @@ export function FilterControl({
             render={<div />}
             nativeButton={false}
           >
-            <span className="leading-none">{activeAllLabel}</span>
+            <span className="leading-none">All</span>
             <Menu>
               <MenuTrigger
                 aria-label="Choose filter"
@@ -196,7 +193,7 @@ export function SearchBar() {
                   }
                 }}
                 placeholder="Search"
-                className="min-w-0 flex-1 bg-transparent text-base text-foreground outline-none placeholder:text-muted-foreground"
+                className="min-w-0 flex-1 bg-transparent text-base text-foreground outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none"
               />
               <button
                 type="button"

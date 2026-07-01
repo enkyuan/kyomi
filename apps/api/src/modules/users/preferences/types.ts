@@ -21,7 +21,6 @@ export type UserPreferencesDto = {
   inboxTimestampDisplay: InboxTimestampDisplayDto;
   inboxTimestampHourCycle: InboxTimestampHourCycleDto;
   inboxFontSizePx: number;
-  inboxShowRecents: boolean;
   inboxShowFavicons: boolean;
 };
 

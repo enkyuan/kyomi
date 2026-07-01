@@ -5,6 +5,7 @@ import { useForm } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
 import { Link, useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { prefetchInboxFlow } from "@modules/inbox";
 import { useAuth } from "@integrations/better-auth/provider";
 import { Button } from "@kyomi/ui/button";
@@ -56,12 +57,14 @@ export function Register() {
           await router.navigate({ to: "/inbox", search: {} });
         })(),
         {
-          error: (error) => ({
-            description:
-              error instanceof Error ? error.message : "An error occurred during sign up",
-            title: "Sign up failed",
-            type: "error",
-          }),
+          error: (error) => {
+            logClientError("auth.register", error);
+            return {
+              description: getUserSafeErrorMessage(error, "An error occurred during sign up"),
+              title: "Sign up failed",
+              type: "error",
+            };
+          },
           loading: {
             description: "Creating your account.",
             timeout: 0,

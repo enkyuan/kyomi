@@ -2,10 +2,6 @@
   "extends": "../../packages/tsconfig/web.json",
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
   "compilerOptions": {
-    "paths": {
-      "@vols.rss/ui": ["../ui/src/index.ts"],
-      "@vols.rss/ui/*": ["../ui/src/*"]
-    },
     "noUncheckedSideEffectImports": true
   }
 }

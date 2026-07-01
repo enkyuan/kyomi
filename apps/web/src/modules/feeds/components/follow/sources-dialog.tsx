@@ -2,39 +2,29 @@
 
 import { startTransition, useCallback, useEffect, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { RssFill } from "@mingcute/react";
+import { AddCircleFill, CheckCircleFill, RssFill, SearchLine } from "@mingcute/react";
+import * as RadixDialog from "@radix-ui/react-dialog";
+import { Command } from "cmdk";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
-import {
-  Command,
-  CommandDialog,
-  CommandDialogPopup,
-  CommandDialogTrigger,
-  CommandEmpty,
-  CommandFooter,
-  CommandGroup,
-  CommandGroupLabel,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandPanel,
-} from "@kyomi/ui/command";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@kyomi/ui/input-group";
-import { Kbd, KbdGroup } from "@kyomi/ui/kbd";
-import { SidebarModeAnimatedText } from "@kyomi/ui/sidebar/mode-animated-text";
-import { SidebarMenuButton } from "@kyomi/ui/sidebar";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { Kbd } from "@kyomi/ui/kbd";
 import { toastManager } from "@kyomi/ui/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";
 import { followFeed, searchFeeds } from "@modules/feeds/api";
 import {
-  getDiscoverFeedsSnapshot,
   markDiscoverFeedSubscribed,
-  restoreDiscoverFeedsSnapshot,
+  setDiscoverFeedSubscribed,
 } from "@modules/feeds/queries/cache";
 import { invalidateFeedAndInboxQueries } from "@modules/inbox/queries/options";
 
 /** Cap list rows so opening the dialog never mounts thousands of command items in one commit. */
 const DISCOVER_RESULTS_UI_CAP = 200;
 const DISCOVER_QUERY_DEBOUNCE_MS = 260;
+
+type FollowFeedMutationInput = {
+  feedId?: string | null;
+  url: string;
+};
 
 type SourcesDialogProps = {
   platform: PlatformState;
@@ -48,14 +38,16 @@ export function SourcesDialog({
   platform,
   open,
   onOpenChange,
-  hideTrigger = false,
   enableGlobalShortcut = true,
 }: SourcesDialogProps) {
   const queryClient = useQueryClient();
   const [internalOpen, setInternalOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [pendingFollowKeys, setPendingFollowKeys] = useState<Set<string>>(() => new Set());
   const dialogOpen = open ?? internalOpen;
+  const trimmedQuery = query.trim();
+  const hasSearchQuery = trimmedQuery.length > 0;
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -78,9 +70,11 @@ export function SourcesDialog({
       ? searchResults.slice(0, DISCOVER_RESULTS_UI_CAP)
       : searchResults;
   const discoverResultsTruncated = searchResults.length > DISCOVER_RESULTS_UI_CAP;
-  const shouldShowLoading = isDiscoverFetching && searchResults.length === 0;
+  const isWaitingForDebouncedQuery = hasSearchQuery && debouncedQuery !== trimmedQuery;
+  const shouldShowLoading =
+    (isDiscoverFetching || isWaitingForDebouncedQuery) && searchResults.length === 0;
   const shouldShowEmpty =
-    !shouldShowLoading && (debouncedQuery.length === 0 || searchResults.length === 0);
+    hasSearchQuery && !shouldShowLoading && debouncedQuery.length > 0 && searchResults.length === 0;
 
   const setDialogOpen = useCallback(
     (nextOpen: boolean) => {
@@ -94,8 +88,8 @@ export function SourcesDialog({
         }
         onOpenChange?.(nextOpen);
       };
-      // Opening mounts a large Base UI dialog + autocomplete subtree; keep close synchronous
-      // so Escape dismiss feels immediate.
+      // Opening mounts the command dialog subtree; keep close synchronous so Escape dismiss feels
+      // immediate.
       if (nextOpen) {
         startTransition(commit);
       } else {
@@ -106,12 +100,13 @@ export function SourcesDialog({
   );
 
   const followFeedMutation = useMutation({
-    mutationFn: ({ url }: { url: string }) => followFeed({ data: { url } }),
-    onMutate: async ({ url }) => {
+    mutationFn: (input: FollowFeedMutationInput) => followFeed({ data: input }),
+    onMutate: async ({ feedId, url }) => {
+      const followKey = feedId ?? url;
+      setPendingFollowKeys((current) => new Set(current).add(followKey));
       await queryClient.cancelQueries({ queryKey: ["discover", "feeds"] });
-      const snapshot = getDiscoverFeedsSnapshot(queryClient);
-      markDiscoverFeedSubscribed(queryClient, { url });
-      return { snapshot };
+      markDiscoverFeedSubscribed(queryClient, { url, feedId: feedId ?? undefined });
+      return { feedId: feedId ?? undefined, followKey, url };
     },
     onSuccess: async (result) => {
       markDiscoverFeedSubscribed(queryClient, { url: result.url, feedId: result.feedId });
@@ -119,8 +114,6 @@ export function SourcesDialog({
       await queryClient.invalidateQueries({
         queryKey: ["folders"],
       });
-      setDialogOpen(false);
-      setQuery("");
       toastManager.add({
         title: result.newSubscription ? "Feed followed" : "Already following",
         description: result.title || result.url,
@@ -128,11 +121,24 @@ export function SourcesDialog({
       });
     },
     onError: (error, _variables, context) => {
-      restoreDiscoverFeedsSnapshot(queryClient, context?.snapshot);
+      if (context) {
+        setDiscoverFeedSubscribed(queryClient, context, false);
+      }
+      logClientError("feeds.follow", error);
       toastManager.add({
         title: "Unable to follow feed",
-        description: error instanceof Error ? error.message : "Try another topic or feed URL.",
+        description: getUserSafeErrorMessage(error, "Try another topic or feed URL."),
         type: "error",
+      });
+    },
+    onSettled: (_result, _error, _variables, context) => {
+      if (!context?.followKey) {
+        return;
+      }
+      setPendingFollowKeys((current) => {
+        const next = new Set(current);
+        next.delete(context.followKey);
+        return next;
       });
     },
   });
@@ -162,118 +168,106 @@ export function SourcesDialog({
   }, [enableGlobalShortcut, platform, setDialogOpen]);
 
   return (
-    <CommandDialog open={dialogOpen} onOpenChange={setDialogOpen}>
-      {!hideTrigger ? (
-        <CommandDialogTrigger
-          render={
-            <SidebarMenuButton className="mt-1 items-stretch overflow-visible rounded-xl p-0 shadow-none transition-shadow duration-150 ease-out hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent focus-visible:ring-0 focus-within:shadow-[0_0_0_2px_var(--sidebar-ring)] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-0">
-              <InputGroup className="h-full min-h-0 w-full rounded-xl border-sidebar-border/70 bg-sidebar-accent/40 shadow-none outline-none ring-0 ring-transparent ring-offset-0 before:hidden transition-[background-color,border-color] hover:bg-sidebar-accent/56 has-[input:focus-visible,textarea:focus-visible]:border-sidebar-border/70 has-[input:focus-visible,textarea:focus-visible]:shadow-none has-[input:focus-visible,textarea:focus-visible]:ring-0! has-[input:focus-visible,textarea:focus-visible]:ring-transparent! dark:has-[input:focus-visible,textarea:focus-visible]:ring-0!">
-                <InputGroupInput
-                  aria-label="Discover"
-                  size="sm"
-                  className="cursor-text text-sm text-sidebar-foreground placeholder:text-sidebar-foreground/56 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6"
-                  placeholder="Follow sources"
-                  readOnly
-                  type="search"
-                />
-                <InputGroupAddon
-                  align="inline-end"
-                  className="ms-auto h-full items-center self-stretch has-[>kbd:last-child]:me-0"
-                >
-                  <KbdGroup className="-me-0.5">
-                    <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
-                      <SidebarModeAnimatedText>{platform.modifierKeyLabel}</SidebarModeAnimatedText>
-                    </Kbd>
-                    <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
-                      <SidebarModeAnimatedText>K</SidebarModeAnimatedText>
-                    </Kbd>
-                  </KbdGroup>
-                </InputGroupAddon>
-              </InputGroup>
-            </SidebarMenuButton>
-          }
-        />
-      ) : null}
-      <CommandDialogPopup>
-        <Command>
-          <CommandInput
-            placeholder="Search feeds or paste a feed URL…"
-            value={query}
-            onChange={(event) => {
-              setQuery(event.target.value);
-            }}
-          />
-          <CommandPanel>
-            <CommandList>
-              {shouldShowEmpty ? (
-                <CommandEmpty>
-                  {debouncedQuery
-                    ? "No feeds found yet. Try a broader topic or paste a feed URL."
-                    : "Search by topic or paste an RSS, Atom, or site feed URL."}
-                </CommandEmpty>
-              ) : null}
-              {shouldShowLoading ? (
-                <CommandGroup>
-                  <CommandGroupLabel>Feeds</CommandGroupLabel>
-                  <CommandItem disabled value="searching">
-                    <RssFill className="me-2 size-4 shrink-0" />
-                    <span>Searching feeds…</span>
-                  </CommandItem>
-                </CommandGroup>
-              ) : null}
-              {searchResults.length ? (
-                <CommandGroup>
-                  <CommandGroupLabel>Feeds</CommandGroupLabel>
-                  {cappedSearchResults.map((item) => (
-                    <CommandItem
-                      key={`${item.id ?? item.url}-${item.url}`}
-                      value={`${item.title} ${item.url} ${item.description ?? ""}`}
-                      onClick={() => {
-                        if (item.isSubscribed || followFeedMutation.isPending) {
-                          return;
-                        }
+    <RadixDialog.Root open={dialogOpen} onOpenChange={setDialogOpen}>
+      <RadixDialog.Portal>
+        <RadixDialog.Overlay className="kyomi-feed-command-overlay" />
+        <RadixDialog.Content
+          aria-describedby="kyomi-feed-command-description"
+          className="kyomi-feed-command-dialog"
+        >
+          <RadixDialog.Title className="sr-only">Add feed</RadixDialog.Title>
+          <RadixDialog.Description id="kyomi-feed-command-description" className="sr-only">
+            Search feeds or paste a feed URL to follow it.
+          </RadixDialog.Description>
+          <Command
+            className="kyomi-feed-command"
+            data-has-search-query={hasSearchQuery ? "true" : undefined}
+            label="Add feed"
+            shouldFilter={false}
+          >
+            <div className="kyomi-feed-command-search">
+              <SearchLine className="kyomi-feed-command-search-icon" />
+              <Command.Input
+                placeholder="Search feeds or paste a feed URL..."
+                value={query}
+                onValueChange={setQuery}
+              />
+            </div>
+            {hasSearchQuery ? (
+              <>
+                <Command.List>
+                  <div className="kyomi-feed-command-list-inner">
+                    {shouldShowEmpty ? (
+                      <Command.Empty>
+                        No feeds found yet. Try a broader topic or paste a feed URL.
+                      </Command.Empty>
+                    ) : null}
+                    {shouldShowLoading ? (
+                      <Command.Group heading="Feeds">
+                        <Command.Item disabled value="searching">
+                          <RssFill className="kyomi-feed-command-item-icon" />
+                          <span>Searching feeds...</span>
+                        </Command.Item>
+                      </Command.Group>
+                    ) : null}
+                    {searchResults.length ? (
+                      <Command.Group heading="Feeds">
+                        {cappedSearchResults.map((item) => (
+                          <Command.Item
+                            key={`${item.id ?? item.url}-${item.url}`}
+                            value={`${item.title} ${item.url} ${item.description ?? ""}`}
+                            onSelect={() => {
+                              const followKey = item.id ?? item.url;
+                              if (item.isSubscribed || pendingFollowKeys.has(followKey)) {
+                                return;
+                              }
 
-                        followFeedMutation.mutate({ url: item.url });
-                      }}
-                    >
-                      <span className="me-2 inline-flex size-5 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-sidebar-foreground/8 ring-1 ring-sidebar-border/70">
-                        <FeedFavicon
-                          className="size-4 shrink-0 rounded-[3px] text-sidebar-foreground/70"
-                          faviconUrl={item.faviconUrl}
-                          feedUrl={item.url}
-                          siteUrl={item.link}
-                          title={item.title}
-                        />
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <p className="truncate text-sm text-foreground">{item.title || item.url}</p>
-                        <p className="truncate text-muted-foreground text-xs">
-                          {item.description || item.url}
-                        </p>
-                      </div>
-                      <span className="shrink-0 rounded-full bg-sidebar-foreground/8 px-2 py-0.5 text-[11px] font-medium text-sidebar-foreground/72">
-                        {item.isSubscribed ? "Following" : "Follow"}
-                      </span>
-                    </CommandItem>
-                  ))}
-                  {discoverResultsTruncated ? (
-                    <CommandItem disabled value="discover-truncated-hint">
-                      <span className="text-muted-foreground text-xs">
-                        Showing first {DISCOVER_RESULTS_UI_CAP} results, refine your search to
-                        narrow matches.
-                      </span>
-                    </CommandItem>
-                  ) : null}
-                </CommandGroup>
-              ) : null}
-            </CommandList>
-          </CommandPanel>
-          <CommandFooter>
-            <span>Search by topic or paste a feed URL to follow it.</span>
-            <Kbd className="px-1.5 text-[10px] leading-none">Esc</Kbd>
-          </CommandFooter>
-        </Command>
-      </CommandDialogPopup>
-    </CommandDialog>
+                              followFeedMutation.mutate({ feedId: item.id, url: item.url });
+                            }}
+                          >
+                            <span className="kyomi-feed-command-favicon">
+                              <FeedFavicon
+                                className="kyomi-feed-command-favicon-media"
+                                faviconUrl={item.faviconUrl}
+                                feedUrl={item.url}
+                                siteUrl={item.link}
+                                title={item.title}
+                              />
+                            </span>
+                            <div className="kyomi-feed-command-item-copy">
+                              <p>{item.title || item.url}</p>
+                              <p>{item.description || item.url}</p>
+                            </div>
+                            <span
+                              aria-label={item.isSubscribed ? "Following" : "Add feed"}
+                              className="kyomi-feed-command-item-action"
+                              title={item.isSubscribed ? "Following" : "Add feed"}
+                            >
+                              {item.isSubscribed ? <CheckCircleFill /> : <AddCircleFill />}
+                            </span>
+                          </Command.Item>
+                        ))}
+                        {discoverResultsTruncated ? (
+                          <Command.Item disabled value="discover-truncated-hint">
+                            <span className="kyomi-feed-command-hint">
+                              Showing first {DISCOVER_RESULTS_UI_CAP} results, refine your search to
+                              narrow matches.
+                            </span>
+                          </Command.Item>
+                        ) : null}
+                      </Command.Group>
+                    ) : null}
+                  </div>
+                </Command.List>
+                <div className="kyomi-feed-command-footer">
+                  <span>Search by topic or paste a feed URL to follow it.</span>
+                  <Kbd className="px-1.5 text-[10px] leading-none">Esc</Kbd>
+                </div>
+              </>
+            ) : null}
+          </Command>
+        </RadixDialog.Content>
+      </RadixDialog.Portal>
+    </RadixDialog.Root>
   );
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { updateUserEmail } from "@lib/auth/functions";
+import { getUserSafeErrorMessage, logClientError, readResponseErrorSummary } from "@lib/errors";
 import { authSessionListSchema } from "@lib/schemas";
 import { isValidEmail } from "@modules/auth/schema";
 import { toastManager } from "@kyomi/ui/toast";
@@ -68,19 +69,8 @@ function normalizeTimestamp(value: string | Date): string {
   return value;
 }
 
-function parseApiErrorMessage(error: unknown): string {
-  if (error instanceof Error) {
-    try {
-      const parsed = JSON.parse(error.message) as { error?: { message?: string } };
-      if (parsed?.error?.message) {
-        return parsed.error.message;
-      }
-    } catch {
-      // Fallback to raw error message.
-    }
-    return error.message || "Request failed.";
-  }
-  return "Request failed.";
+function parseApiErrorMessage(error: unknown, fallback = "Request failed. Try again."): string {
+  return getUserSafeErrorMessage(error, fallback);
 }
 
 const accountTimestampFormatter = new Intl.DateTimeFormat("en", {
@@ -221,12 +211,12 @@ async function postAuthSessionAction(path: string, body?: Record<string, string>
   });
 
   if (!response.ok) {
-    throw new Error(`Request failed: ${response.status}`);
+    throw new Error(await readResponseErrorSummary(response));
   }
 
   const data = (await response.json()) as { status?: boolean };
   if (!data.status) {
-    throw new Error("Request failed.");
+    throw new Error("Session action was not confirmed.");
   }
 }
 
@@ -246,15 +236,20 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
   const { data: sessionsData, isError: isSessionsError } = useQuery({
     queryKey: ["auth", "sessions"],
     queryFn: async (): Promise<SessionRow[]> => {
-      const response = await fetch("/api/auth/list-sessions", {
-        credentials: "include",
-        method: "GET",
-      });
-      if (!response.ok) {
-        throw new Error("Unable to load sessions.");
+      try {
+        const response = await fetch("/api/auth/list-sessions", {
+          credentials: "include",
+          method: "GET",
+        });
+        if (!response.ok) {
+          throw new Error(await readResponseErrorSummary(response));
+        }
+        const data: unknown = await response.json();
+        return parseSessionsResponse(data);
+      } catch (error) {
+        logClientError("settings.account.sessions", error);
+        throw error;
       }
-      const data: unknown = await response.json();
-      return parseSessionsResponse(data);
     },
     retry: 1,
   });
@@ -273,7 +268,8 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
       await invalidateAuthState(queryClient, router);
     },
     onError: (error) => {
-      const message = parseApiErrorMessage(error);
+      logClientError("settings.account.email", error);
+      const message = parseApiErrorMessage(error, "Unable to update email. Try again.");
       setEmailError(message);
       toastManager.add({
         title: "Unable to update email",
@@ -296,9 +292,10 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
       await invalidateAuthState(queryClient, router);
     },
     onError: (error) => {
+      logClientError("settings.account.revoke_session", error);
       toastManager.add({
         title: "Unable to sign out session",
-        description: parseApiErrorMessage(error),
+        description: parseApiErrorMessage(error, "Unable to sign out that session. Try again."),
         type: "error",
       });
     },
@@ -317,9 +314,10 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
       await invalidateAuthState(queryClient, router);
     },
     onError: (error) => {
+      logClientError("settings.account.revoke_other_sessions", error);
       toastManager.add({
         title: "Unable to sign out other sessions",
-        description: parseApiErrorMessage(error),
+        description: parseApiErrorMessage(error, "Unable to sign out other sessions. Try again."),
         type: "error",
       });
     },
@@ -339,9 +337,10 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
       await router.navigate({ to: "/" });
     },
     onError: (error) => {
+      logClientError("settings.account.revoke_all_sessions", error);
       toastManager.add({
         title: "Unable to sign out all devices",
-        description: parseApiErrorMessage(error),
+        description: parseApiErrorMessage(error, "Unable to sign out all devices. Try again."),
         type: "error",
       });
     },
@@ -430,10 +429,6 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     describeSessionLocation,
     emailDraft,
     emailError,
-    isEditingEmail,
-    sessions,
-    isSessionsError,
-    updateEmailMutation,
     formatTimestamp,
     handleCancelEditEmail,
     handleEmailDraftChange,
@@ -443,12 +438,12 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     handleSaveEmail,
     handleStartEditEmail,
     isEditingEmail,
+    isSessionsError,
     otherSessionCount,
     revokeAllSessionsMutation,
     revokeOtherSessionsMutation,
     revokeSessionMutation,
     sessions,
-    sessionsQuery,
     updateEmailMutation,
   };
 }

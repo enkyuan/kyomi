@@ -273,7 +273,7 @@ export async function resolveFeedFaviconUrl(
     }),
   );
 
-  const googleUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=32`;
+  const googleUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=128`;
   runners.push(
     tryFetchImage(googleUrl).then((result) => {
       if (result) {

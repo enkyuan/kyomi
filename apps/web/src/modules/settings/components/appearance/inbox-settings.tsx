@@ -190,22 +190,6 @@ export function InboxAppearanceSettings({
       </div>
 
       <div className="space-y-3 py-1">
-        <label htmlFor="inbox-show-recents" className="flex items-center justify-between gap-4">
-          <span className="min-w-0">
-            <span className="block text-sm font-medium text-foreground">Show recents tab</span>
-            <span className="block text-xs text-muted-foreground">
-              Keep a dedicated tab ready for recently read items when that view is available.
-            </span>
-          </span>
-          <Switch
-            id="inbox-show-recents"
-            checked={preferences.inboxShowRecents}
-            onCheckedChange={(checked) => setPreferences({ inboxShowRecents: checked })}
-          />
-        </label>
-      </div>
-
-      <div className="space-y-3 py-1">
         <label htmlFor="inbox-show-favicons" className="flex items-center justify-between gap-4">
           <span className="min-w-0">
             <span className="block text-sm font-medium text-foreground">Show favicons</span>
