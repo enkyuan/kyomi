@@ -1,24 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   buildFaviconUrlCandidates,
   firstUsableFaviconIndex,
   nextUsableFaviconIndex,
 } from "../lib/favicon";
-
-const MIN_CLIENT_FAVICON_NATURAL_SIZE = 64;
-
-function isScalableFaviconUrl(url: string): boolean {
-  if (url.startsWith("data:image/svg+xml")) {
-    return true;
-  }
-  try {
-    return new URL(url, window.location.origin).pathname.toLowerCase().endsWith(".svg");
-  } catch {
-    return url.toLowerCase().endsWith(".svg");
-  }
-}
+import {
+  canUsePersistentFaviconCache,
+  getFaviconCacheOrigin,
+  peekCachedFaviconMetadata,
+  readCachedFaviconMetadata,
+  writeCachedFaviconHit,
+  writeCachedFaviconMiss,
+  type CachedFaviconMetadata,
+} from "../lib/favicon-cache";
 
 export function useFeedFavicon({
   faviconUrl: storedFaviconUrl,
@@ -29,12 +25,20 @@ export function useFeedFavicon({
   feedUrl: string;
   siteUrl: string | null;
 }) {
-  const faviconUrls = buildFaviconUrlCandidates(storedFaviconUrl, siteUrl, feedUrl);
+  const cacheOrigin = getFaviconCacheOrigin(siteUrl, feedUrl);
+  const [cacheHint, setCacheHint] = useState<CachedFaviconMetadata | null>(() =>
+    peekCachedFaviconMetadata(cacheOrigin),
+  );
+  const candidateUrls = buildFaviconUrlCandidates(storedFaviconUrl, siteUrl, feedUrl);
+  const faviconUrls =
+    cacheHint?.origin === cacheOrigin && cacheHint.status === "miss"
+      ? []
+      : cacheHint?.origin === cacheOrigin && cacheHint.status === "hit" && cacheHint.url
+        ? [cacheHint.url, ...candidateUrls.filter((url) => url !== cacheHint.url)]
+        : candidateUrls;
   const faviconUrlsKey = faviconUrls.join("\n");
   const [prevKey, setPrevKey] = useState(faviconUrlsKey);
   const [rejectedUrls, setRejectedUrls] = useState<ReadonlySet<string>>(() => new Set());
-  const [lowResolutionFallbackUrl, setLowResolutionFallbackUrl] = useState<string | null>(null);
-  const [acceptedLowResolutionUrl, setAcceptedLowResolutionUrl] = useState<string | null>(null);
   const [faviconIndex, setFaviconIndex] = useState(() =>
     firstUsableFaviconIndex(faviconUrls, new Set()),
   );
@@ -42,13 +46,29 @@ export function useFeedFavicon({
   if (faviconUrlsKey !== prevKey) {
     setPrevKey(faviconUrlsKey);
     setRejectedUrls(new Set());
-    setLowResolutionFallbackUrl(null);
-    setAcceptedLowResolutionUrl(null);
     setFaviconIndex(firstUsableFaviconIndex(faviconUrls, new Set()));
   }
 
-  const faviconUrl =
-    acceptedLowResolutionUrl ?? (faviconIndex >= 0 ? faviconUrls[faviconIndex] : null);
+  useEffect(() => {
+    let canceled = false;
+    const memoryHint = peekCachedFaviconMetadata(cacheOrigin);
+    setCacheHint(memoryHint);
+    if (!canUsePersistentFaviconCache()) {
+      return () => {
+        canceled = true;
+      };
+    }
+    void readCachedFaviconMetadata(cacheOrigin).then((entry) => {
+      if (!canceled) {
+        setCacheHint(entry);
+      }
+    });
+    return () => {
+      canceled = true;
+    };
+  }, [cacheOrigin]);
+
+  const faviconUrl = faviconIndex >= 0 ? faviconUrls[faviconIndex] : null;
 
   const failCurrentFavicon = () => {
     if (!faviconUrl) {
@@ -61,36 +81,18 @@ export function useFeedFavicon({
       setFaviconIndex(nextIndex);
       return;
     }
-    if (lowResolutionFallbackUrl) {
-      setAcceptedLowResolutionUrl(lowResolutionFallbackUrl);
-      return;
-    }
     setFaviconIndex(-1);
+    writeCachedFaviconMiss(cacheOrigin);
   };
 
-  const handleLoad = (
-    naturalWidth: number,
-    naturalHeight: number,
-    minNaturalSize = MIN_CLIENT_FAVICON_NATURAL_SIZE,
-  ) => {
-    if (faviconUrl && isScalableFaviconUrl(faviconUrl)) {
-      return true;
-    }
-    if (
-      faviconUrl &&
-      acceptedLowResolutionUrl !== faviconUrl &&
-      (naturalWidth < minNaturalSize || naturalHeight < minNaturalSize)
-    ) {
-      setLowResolutionFallbackUrl((current) => current ?? faviconUrl);
-      const nextRejectedUrls = new Set(rejectedUrls).add(faviconUrl);
-      const nextIndex = nextUsableFaviconIndex(faviconUrls, faviconUrl, nextRejectedUrls);
-      if (nextIndex >= 0) {
-        setRejectedUrls(nextRejectedUrls);
-        setFaviconIndex(nextIndex);
-        return false;
-      }
-      setAcceptedLowResolutionUrl(lowResolutionFallbackUrl ?? faviconUrl);
-      return true;
+  const handleLoad = (naturalWidth: number, naturalHeight: number) => {
+    if (faviconUrl) {
+      writeCachedFaviconHit({
+        origin: cacheOrigin,
+        url: faviconUrl,
+        width: naturalWidth,
+        height: naturalHeight,
+      });
     }
     return true;
   };

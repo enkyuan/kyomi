@@ -1,5 +1,13 @@
 import { sql } from "drizzle-orm";
-import { boolean, index, pgTable, text, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
+import {
+  boolean,
+  index,
+  integer,
+  pgTable,
+  text,
+  timestamp,
+  uniqueIndex,
+} from "drizzle-orm/pg-core";
 
 import { users } from "./auth";
 
@@ -36,6 +44,31 @@ export const feeds = pgTable(
       .on(table.nextRefreshAt, table.id)
       .where(sql`${table.refreshStatus} NOT IN ('running', 'queued')`),
     index("feeds_refresh_status_idx").on(table.refreshStatus, table.id),
+  ],
+);
+
+export const faviconHosts = pgTable(
+  "favicon_hosts",
+  {
+    origin: text("origin").primaryKey(),
+    hostname: text("hostname").notNull(),
+    resolvedUrl: text("resolved_url"),
+    source: text("source"),
+    status: text("status").notNull().default("miss"),
+    contentType: text("content_type"),
+    width: integer("width"),
+    height: integer("height"),
+    expiresAt: timestamp("expires_at"),
+    lastCheckedAt: timestamp("last_checked_at"),
+    lastFailedAt: timestamp("last_failed_at"),
+    errorCode: text("error_code"),
+    version: text("version").notNull().default("4"),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => [
+    index("favicon_hosts_hostname_idx").on(table.hostname),
+    index("favicon_hosts_expires_at_idx").on(table.expiresAt),
   ],
 );
 

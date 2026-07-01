@@ -53,7 +53,9 @@ export function SourceRow({
           className={cn("size-4 shrink-0 rounded-[3px] bg-card/85", iconClassName)}
           faviconUrl={feedFaviconUrl}
           feedUrl={feedUrl ?? articleUrl}
+          shape="squircle"
           siteUrl={feedSiteUrl ?? null}
+          squircleCornerRadius={5}
           title={feedTitle}
         />
       ) : null}

@@ -1,11 +1,17 @@
 import { buildClientFaviconUrl } from "@kyomi/worker/favicon/browser";
 import { buildFaviconUrlCandidates } from "@modules/sidebar/lib/favicon";
+import { clearFaviconMetadataMemoryCache } from "@modules/sidebar/lib/favicon-cache";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
-import { fireEvent, render, screen } from "@testing-library/react";
-import { describe, expect, test } from "vitest";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { beforeEach, describe, expect, test } from "vitest";
 
 describe("feed favicons", () => {
+  beforeEach(() => {
+    clearFaviconMetadataMemoryCache();
+    document.head.innerHTML = "";
+  });
+
   test("prefers stored favicon URL over proxy fallback", () => {
     const url = buildClientFaviconUrl(
       "https://cdn.example.com/icon.png",
@@ -59,6 +65,40 @@ describe("feed favicons", () => {
     ]);
   });
 
+  test("renders the RSS fallback immediately behind the favicon image", () => {
+    const { container } = render(
+      <FeedFavicon
+        faviconUrl={null}
+        feedUrl="https://feeds.techcrunch.com/rss.xml"
+        siteUrl="https://techcrunch.com/article"
+        title="TechCrunch"
+      />,
+    );
+
+    const img = screen.getByRole("img", { name: "TechCrunch favicon" });
+    expect(img.className).toContain("opacity-0");
+    expect(container.querySelector("svg[aria-hidden='true']")).not.toBeNull();
+  });
+
+  test("uses eager high-priority loading for large sidebar favicons", async () => {
+    render(
+      <FeedFavicon
+        faviconUrl={null}
+        feedUrl="https://news.ycombinator.com/rss"
+        priority="high"
+        siteUrl="https://news.ycombinator.com"
+        title="Hacker News"
+      />,
+    );
+
+    const img = screen.getByRole("img", { name: "Hacker News favicon" });
+    expect(img.getAttribute("loading")).toBe("eager");
+    expect(img.getAttribute("fetchpriority")).toBe("high");
+    await waitFor(() => {
+      expect(document.head.querySelector('link[rel="preload"]')).not.toBeNull();
+    });
+  });
+
   test("falls back from proxy to direct favicon and then RSS icon", () => {
     render(
       <FeedFavicon
@@ -83,7 +123,7 @@ describe("feed favicons", () => {
     expect(screen.getByLabelText("TechCrunch feed")).not.toBeNull();
   });
 
-  test("keeps a loaded low-resolution favicon when no higher-resolution candidate works", () => {
+  test("shows a successfully loaded favicon even when it is low resolution", () => {
     render(
       <FeedFavicon
         faviconUrl={null}
@@ -98,15 +138,11 @@ describe("feed favicons", () => {
     Object.defineProperty(proxyImg, "naturalHeight", { configurable: true, value: 16 });
     fireEvent.load(proxyImg);
 
-    const directImg = screen.getByRole("img", { name: "TechCrunch favicon" });
-    expect(directImg.getAttribute("src")).toBe("https://techcrunch.com/favicon.ico");
-
-    Object.defineProperty(directImg, "naturalWidth", { configurable: true, value: 16 });
-    Object.defineProperty(directImg, "naturalHeight", { configurable: true, value: 16 });
-    fireEvent.load(directImg);
-
     expect(screen.getByRole("img", { name: "TechCrunch favicon" }).getAttribute("src")).toBe(
       "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=4",
+    );
+    expect(screen.getByRole("img", { name: "TechCrunch favicon" }).className).toContain(
+      "opacity-100",
     );
     expect(screen.queryByLabelText("TechCrunch feed")).toBeNull();
   });
@@ -141,7 +177,11 @@ describe("feed favicons", () => {
       />,
     );
 
+    const proxyImg = screen.getByRole("img", { name: "Hacker News favicon" });
+    fireEvent.error(proxyImg);
+
     const storedImg = screen.getByRole("img", { name: "Hacker News favicon" });
+    expect(storedImg.getAttribute("src")).toBe("https://news.ycombinator.com/y18.svg");
     Object.defineProperty(storedImg, "naturalWidth", { configurable: true, value: 18 });
     Object.defineProperty(storedImg, "naturalHeight", { configurable: true, value: 18 });
     fireEvent.load(storedImg);

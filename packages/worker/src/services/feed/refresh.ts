@@ -1,6 +1,11 @@
 import { eq, sql } from "drizzle-orm";
 import { feedItems, feeds } from "@kyomi/db";
-import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "../favicon";
+import {
+  createDrizzleFaviconHostStore,
+  faviconSourceRank,
+  resolvePersistedFeedFaviconUrl,
+  tryFetchImageIfHostSafe,
+} from "../favicon";
 import { fetchArticleEnrichment } from "./enrich";
 import { fetchFeedDocument } from "./fetch";
 import { parseFeedDocument } from "./parse";
@@ -52,21 +57,6 @@ function computeFailureBackoffMs(
   return hasConsecutiveFailure ? 60 * 60 * 1000 : 15 * 60 * 1000;
 }
 
-function faviconSourceRank(source: string | null): number {
-  switch (source) {
-    case "html_link":
-    case "feed_icon":
-      return 3;
-    case "google_s2":
-    case "duckduckgo":
-      return 2;
-    case "favicon_ico":
-      return 1;
-    default:
-      return 0;
-  }
-}
-
 function shouldResolveFavicon({
   currentUrl,
   currentSource,
@@ -82,14 +72,16 @@ function shouldResolveFavicon({
 }
 
 async function tryResolveFaviconMetadata(
+  database: FeedIngestDatabase,
   seedUrl: string,
   embeddedIconUrl?: string | null,
 ): Promise<{
   url: string;
   source: string;
 } | null> {
+  const faviconStore = createDrizzleFaviconHostStore(database);
   try {
-    const websiteIcon = await resolveFeedFaviconUrl(seedUrl);
+    const websiteIcon = await resolvePersistedFeedFaviconUrl(faviconStore, seedUrl);
     if (websiteIcon) {
       return websiteIcon;
     }
@@ -208,7 +200,7 @@ export async function runFeedRefresh(
         })
       ) {
         const seed = feed.link ?? feed.url;
-        const resolved = await tryResolveFaviconMetadata(seed);
+        const resolved = await tryResolveFaviconMetadata(database, seed);
         if (resolved) {
           faviconPatch = {
             faviconUrl: resolved.url,
@@ -287,7 +279,7 @@ export async function runFeedRefresh(
     } | null = null;
     if (needsFavicon) {
       const seed = nextLink ?? parsed.metadata.canonicalUrl;
-      const resolved = await tryResolveFaviconMetadata(seed, parsed.metadata.iconUrl);
+      const resolved = await tryResolveFaviconMetadata(database, seed, parsed.metadata.iconUrl);
       if (resolved) {
         faviconPatch = {
           faviconUrl: resolved.url,

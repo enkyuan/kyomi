@@ -112,7 +112,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
                     className="size-11 shrink-0 rounded-full"
                     faviconUrl={feed.faviconUrl}
                     feedUrl={feed.url}
-                    showLoadingSkeleton
+                    priority="high"
                     siteUrl={feed.link}
                     title={feed.title || feed.url}
                   />

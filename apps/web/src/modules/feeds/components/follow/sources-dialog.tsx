@@ -230,7 +230,9 @@ export function SourcesDialog({
                                 className="kyomi-feed-command-favicon-media"
                                 faviconUrl={item.faviconUrl}
                                 feedUrl={item.url}
+                                shape="squircle"
                                 siteUrl={item.link}
+                                squircleCornerRadius={6}
                                 title={item.title}
                               />
                             </span>
