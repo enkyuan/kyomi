@@ -1,15 +1,12 @@
-# Elysia with Bun runtime
+# @kyomi/api
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
+Kyomi's Bun/Elysia API runtime.
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
+## Roles
 
-Open http://localhost:3000/ with your browser to see the result.
+- `bun run --cwd apps/api start`: HTTP API only.
+- `bun run --cwd apps/api worker`: Redis Stream consumers for refresh and OPML jobs.
+- `bun run --cwd apps/api scheduler`: due-feed scheduler that claims feeds in Postgres and publishes refresh jobs.
+- `bun run --cwd apps/api dev:host`: local host mode that starts the API, worker, and scheduler together.
+
+Product routes live under `/api/v1`. Operational probes are available at `/health`, `/ready`, `/queue/health`, and `/api/*` mirrors.

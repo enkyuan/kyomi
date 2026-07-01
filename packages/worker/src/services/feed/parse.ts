@@ -1,4 +1,4 @@
-import { XMLParser } from "fast-xml-parser";
+import { XMLParser, type X2jOptions } from "fast-xml-parser";
 import { normalizeArticleUrl } from "../../lib/article-identity";
 import { decodeHtmlEntities } from "../../lib/html-entities";
 import {
@@ -8,6 +8,15 @@ import {
   summarizeText,
 } from "../../lib/feed-text";
 import type { ParsedFeedDocument } from "./types";
+
+const FEED_XML_PROCESS_ENTITIES: NonNullable<X2jOptions["processEntities"]> = {
+  enabled: true,
+  maxEntitySize: 10_000,
+  maxExpansionDepth: 10,
+  maxTotalExpansions: 50_000,
+  maxExpandedLength: 1_000_000,
+  maxEntityCount: 100,
+};
 
 function stableUuid(seed: string): string {
   let hash = 0x811c9dc5;
@@ -361,6 +370,7 @@ export function parseFeedDocument(
   const parser = new XMLParser({
     ignoreAttributes: false,
     attributeNamePrefix: "@_",
+    processEntities: FEED_XML_PROCESS_ENTITIES,
     trimValues: true,
   });
   const doc = parser.parse(trimmed) as Record<string, unknown>;

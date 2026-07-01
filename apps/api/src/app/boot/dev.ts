@@ -1,7 +1,9 @@
+import { getRedis } from "@adapters/redis";
 import { logger } from "@adapters/logger";
 import { env } from "@config/env";
 import { createApp } from "../http/create-app";
 import { listenWithRetry } from "../http/listen-with-retry";
+import { runFeedRefreshSchedulerLoop } from "../jobs/refresh-scheduler";
 import { runWorkerLoop } from "../jobs/run-worker";
 
 const controller = new AbortController();
@@ -29,6 +31,12 @@ logger.info("server.listening", {
 
 void runWorkerLoop(controller.signal).catch((error) => {
   logger.error("dev.worker.crashed", {
+    error: error instanceof Error ? error.message : String(error),
+  });
+});
+
+void runFeedRefreshSchedulerLoop(getRedis(), controller.signal).catch((error) => {
+  logger.error("dev.scheduler.crashed", {
     error: error instanceof Error ? error.message : String(error),
   });
 });

@@ -1,13 +1,8 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
+import { publishJob } from "@adapters/queue/publish-job";
 import { getRedis } from "@adapters/redis";
-import {
-  JOBS_DEAD_LETTER_STREAM_KEY,
-  JOBS_STREAM_KEY,
-  fieldsForJob,
-  parseJobMessageFields,
-  toRedisStreamFieldList,
-} from "@kyomi/worker";
+import { JOBS_DEAD_LETTER_STREAM_KEY, parseJobMessageFields } from "@kyomi/worker";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { assertFeedAdminUser } from "@modules/feeds/admin/guard";
 
@@ -106,15 +101,7 @@ export function registerQueueRoutes(app: Elysia) {
             }, []),
           );
           const message = parseJobMessageFields(entryId, record);
-          await redis.xadd(
-            JOBS_STREAM_KEY,
-            "*",
-            ...toRedisStreamFieldList(
-              fieldsForJob(message.job, {
-                attempts: 0,
-              }),
-            ),
-          );
+          await publishJob(redis, message.job);
           await redis.xdel(JOBS_DEAD_LETTER_STREAM_KEY, id);
           replayed += 1;
         }

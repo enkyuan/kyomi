@@ -1,11 +1,18 @@
 import type { FeedMetadata, SearchSyncConfig } from "./types";
 
-export async function syncFeedToSearch(
+type NormalizedSearchSyncConfig = {
+  baseUrl: string;
+  indexUid: string;
+  headers: Record<string, string>;
+};
+
+const ensuredIndexTasks = new Map<string, Promise<void>>();
+
+function normalizeSearchSyncConfig(
   config: SearchSyncConfig | undefined,
-  document: FeedMetadata & { id: string },
-): Promise<void> {
+): NormalizedSearchSyncConfig | null {
   if (!config?.url) {
-    return;
+    return null;
   }
 
   const baseUrl = config.url.replace(/\/+$/, "");
@@ -17,33 +24,76 @@ export async function syncFeedToSearch(
     headers.Authorization = `Bearer ${config.masterKey}`;
   }
 
-  const createResponse = await fetch(`${baseUrl}/indexes`, {
+  return { baseUrl, indexUid, headers };
+}
+
+async function createFeedSearchIndex(config: NormalizedSearchSyncConfig): Promise<boolean> {
+  const createResponse = await fetch(`${config.baseUrl}/indexes`, {
     method: "POST",
-    headers,
-    body: JSON.stringify({ uid: indexUid, primaryKey: "id" }),
+    headers: config.headers,
+    body: JSON.stringify({ uid: config.indexUid, primaryKey: "id" }),
   }).catch((error: unknown) => {
     console.warn("[syncFeedToSearch] index creation request failed:", error);
     return null;
   });
 
-  if (createResponse && !createResponse.ok && createResponse.status !== 409) {
-    console.warn(`[syncFeedToSearch] index creation returned ${createResponse.status}`);
+  if (!createResponse) {
+    return false;
   }
 
-  const upsertResponse = await fetch(`${baseUrl}/indexes/${indexUid}/documents`, {
-    method: "POST",
-    headers,
-    body: JSON.stringify([
-      {
-        id: document.id,
-        url: document.canonicalUrl,
-        title: document.title,
-        description: document.description,
-        link: document.link,
-        faviconUrl: document.iconUrl,
-      },
-    ]),
-  }).catch((error: unknown) => {
+  if (createResponse && !createResponse.ok && createResponse.status !== 409) {
+    console.warn(`[syncFeedToSearch] index creation returned ${createResponse.status}`);
+    return false;
+  }
+
+  return true;
+}
+
+async function ensureFeedSearchIndex(config: NormalizedSearchSyncConfig): Promise<void> {
+  const key = `${config.baseUrl}|${config.indexUid}|${config.headers.Authorization ?? ""}`;
+  const existing = ensuredIndexTasks.get(key);
+  if (existing) {
+    await existing;
+    return;
+  }
+
+  const task = createFeedSearchIndex(config).then((ok) => {
+    if (!ok) {
+      ensuredIndexTasks.delete(key);
+    }
+  });
+  ensuredIndexTasks.set(key, task);
+  await task;
+}
+
+export async function syncFeedToSearch(
+  config: SearchSyncConfig | undefined,
+  document: FeedMetadata & { id: string },
+): Promise<void> {
+  const normalizedConfig = normalizeSearchSyncConfig(config);
+  if (!normalizedConfig) {
+    return;
+  }
+
+  await ensureFeedSearchIndex(normalizedConfig);
+
+  const upsertResponse = await fetch(
+    `${normalizedConfig.baseUrl}/indexes/${normalizedConfig.indexUid}/documents`,
+    {
+      method: "POST",
+      headers: normalizedConfig.headers,
+      body: JSON.stringify([
+        {
+          id: document.id,
+          url: document.canonicalUrl,
+          title: document.title,
+          description: document.description,
+          link: document.link,
+          faviconUrl: document.iconUrl,
+        },
+      ]),
+    },
+  ).catch((error: unknown) => {
     console.warn("[syncFeedToSearch] document upsert request failed:", error);
     return null;
   });

@@ -1,4 +1,5 @@
-import { boolean, pgTable, text, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
+import { sql } from "drizzle-orm";
+import { boolean, index, pgTable, text, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
 
 import { users } from "./auth";
 
@@ -29,7 +30,13 @@ export const feeds = pgTable(
     faviconSource: text("favicon_source"),
     faviconFetchedAt: timestamp("favicon_fetched_at"),
   },
-  (table) => [uniqueIndex("feeds_url_unique").on(table.url)],
+  (table) => [
+    uniqueIndex("feeds_url_unique").on(table.url),
+    index("feeds_refresh_due_idx")
+      .on(table.nextRefreshAt, table.id)
+      .where(sql`${table.refreshStatus} NOT IN ('running', 'queued')`),
+    index("feeds_refresh_status_idx").on(table.refreshStatus, table.id),
+  ],
 );
 
 export const folders = pgTable(
@@ -67,5 +74,6 @@ export const feedSubscriptions = pgTable(
   },
   (table) => [
     uniqueIndex("feed_subscriptions_user_id_feed_id_unique").on(table.userId, table.feedId),
+    index("feed_subscriptions_feed_id_idx").on(table.feedId),
   ],
 );
