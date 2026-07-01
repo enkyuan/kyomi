@@ -16,6 +16,20 @@ const booleanFromEnv = z.preprocess((value) => {
   return value;
 }, z.boolean());
 
+const csvFromEnv = z.preprocess(
+  (value) => {
+    if (typeof value !== "string") {
+      return value;
+    }
+
+    return value
+      .split(",")
+      .map((item) => item.trim())
+      .filter((item) => item.length > 0);
+  },
+  z.array(z.string().min(1)),
+);
+
 const nodeEnv =
   process.env.NODE_ENV === "development" ||
   process.env.NODE_ENV === "production" ||
@@ -48,8 +62,27 @@ export const env = createEnv({
     MEILI_MASTER_KEY: z.string().min(1).optional(),
     MEILI_INDEX_FEEDS: z.string().min(1).optional(),
     GLOBAL_FEED_REFRESH_ENABLED: booleanFromEnv.default(nodeEnv !== "production"),
-    GLOBAL_FEED_REFRESH_BATCH_SIZE: z.coerce.number().int().min(0).max(100).default(10),
-    GLOBAL_FEED_REFRESH_MAX_QUEUED: z.coerce.number().int().positive().max(1_000).default(25),
+    SUBSCRIBED_FEED_REFRESH_BATCH_SIZE: z.coerce.number().int().positive().max(5_000).default(50),
+    GLOBAL_FEED_REFRESH_BATCH_SIZE: z.coerce.number().int().min(0).max(1_000).default(10),
+    GLOBAL_FEED_REFRESH_MAX_QUEUED: z.coerce.number().int().positive().max(1_000_000).default(25),
+    FEED_REFRESH_QUEUED_LEASE_MS: z.coerce
+      .number()
+      .int()
+      .min(60_000)
+      .max(86_400_000)
+      .default(900_000),
+    FEED_REFRESH_RUNNING_LEASE_MS: z.coerce
+      .number()
+      .int()
+      .min(60_000)
+      .max(86_400_000)
+      .default(1_800_000),
+    JOB_PROCESS_CONCURRENCY: z.coerce.number().int().positive().max(64).default(4),
+    JOB_READ_COUNT: z.coerce.number().int().positive().max(256).default(10),
+    JOB_STREAM_MAX_LENGTH: z.coerce.number().int().min(1_000).max(5_000_000).default(100_000),
+    JOB_STREAMS: csvFromEnv.default(["jobs:feed-refresh", "jobs:opml"]),
+    FEED_FETCH_HOST_LEASE_MS: z.coerce.number().int().min(1_000).max(60_000).default(5_000),
+    FEED_FETCH_HOST_RETRY_DELAY_MS: z.coerce.number().int().min(10).max(5_000).default(250),
     /** Comma-separated Better Auth user ids allowed to call `PUT|DELETE /feeds/:feedId/admin`. */
     FEED_ADMIN_USER_IDS: z.string().optional(),
     /** Shared secret accepted in `x-feed-admin-secret` as a backup admin control plane. */
@@ -76,8 +109,17 @@ export const env = createEnv({
     MEILI_MASTER_KEY: process.env.MEILI_MASTER_KEY,
     MEILI_INDEX_FEEDS: process.env.MEILI_INDEX_FEEDS,
     GLOBAL_FEED_REFRESH_ENABLED: process.env.GLOBAL_FEED_REFRESH_ENABLED,
+    SUBSCRIBED_FEED_REFRESH_BATCH_SIZE: process.env.SUBSCRIBED_FEED_REFRESH_BATCH_SIZE,
     GLOBAL_FEED_REFRESH_BATCH_SIZE: process.env.GLOBAL_FEED_REFRESH_BATCH_SIZE,
     GLOBAL_FEED_REFRESH_MAX_QUEUED: process.env.GLOBAL_FEED_REFRESH_MAX_QUEUED,
+    FEED_REFRESH_QUEUED_LEASE_MS: process.env.FEED_REFRESH_QUEUED_LEASE_MS,
+    FEED_REFRESH_RUNNING_LEASE_MS: process.env.FEED_REFRESH_RUNNING_LEASE_MS,
+    JOB_PROCESS_CONCURRENCY: process.env.JOB_PROCESS_CONCURRENCY,
+    JOB_READ_COUNT: process.env.JOB_READ_COUNT,
+    JOB_STREAM_MAX_LENGTH: process.env.JOB_STREAM_MAX_LENGTH,
+    JOB_STREAMS: process.env.JOB_STREAMS,
+    FEED_FETCH_HOST_LEASE_MS: process.env.FEED_FETCH_HOST_LEASE_MS,
+    FEED_FETCH_HOST_RETRY_DELAY_MS: process.env.FEED_FETCH_HOST_RETRY_DELAY_MS,
     FEED_ADMIN_USER_IDS: process.env.FEED_ADMIN_USER_IDS,
     FEED_ADMIN_SHARED_SECRET: process.env.FEED_ADMIN_SHARED_SECRET,
   },

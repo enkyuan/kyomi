@@ -36,7 +36,7 @@ export async function fetchFeedDocument(
     }
 
     if (!response.ok) {
-      return { ok: false, error: `HTTP ${response.status}` };
+      return { ok: false, error: `HTTP ${response.status}`, httpStatus: response.status };
     }
 
     const buffer = await response.arrayBuffer();

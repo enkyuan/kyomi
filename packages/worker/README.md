@@ -19,7 +19,7 @@ src/
 
 | Import | Use |
 |--------|-----|
-| `@kyomi/worker` | Queue + `runFeedRefresh`, `parseFeedDocument`, `decodeHtmlEntities`, `normalizeArticleUrl` |
+| `@kyomi/worker` | Queue + feed refresh, parsing, host limiting, `decodeHtmlEntities`, `normalizeArticleUrl` |
 | `@kyomi/worker/queue` | Job stream types and `consumeJobs` |
 | `@kyomi/worker/ingestion` | Feed refresh + parsing (legacy path name) |
 | `@kyomi/worker/sanitization` | Article HTML DOMPurify config and hooks |
@@ -28,4 +28,9 @@ src/
 | `@kyomi/worker/lib/html-entities` | `decodeHtmlEntities` only |
 | `@kyomi/worker/lib/article-identity` | URL normalization helpers |
 
-API adapters publish typed jobs; the worker process executes `runFeedRefresh` via `consumeJobs`.
+API adapters publish typed jobs. `apps/api` owns the executable scheduler and worker process boots:
+
+- `bun run --cwd apps/api scheduler` claims due feeds and publishes refresh jobs.
+- `bun run --cwd apps/api worker` consumes Redis Streams and executes `runFeedRefresh` or OPML jobs.
+
+Refresh and OPML jobs use separate streams so imports cannot starve scheduled refreshes.
