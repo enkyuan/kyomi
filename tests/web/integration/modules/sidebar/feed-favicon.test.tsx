@@ -1,10 +1,13 @@
 import { buildClientFaviconUrl } from "@kyomi/worker/favicon/browser";
 import { buildFaviconUrlCandidates } from "@modules/sidebar/lib/favicon";
-import { clearFaviconMetadataMemoryCache } from "@modules/sidebar/lib/favicon-cache";
+import {
+  clearFaviconMetadataMemoryCache,
+  writeCachedFaviconMiss,
+} from "@modules/sidebar/lib/favicon-cache";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test, vi } from "vitest";
 
 describe("feed favicons", () => {
   beforeEach(() => {
@@ -99,6 +102,40 @@ describe("feed favicons", () => {
     });
   });
 
+  test("shows an already-complete eager sidebar favicon", async () => {
+    const completeSpy = vi
+      .spyOn(HTMLImageElement.prototype, "complete", "get")
+      .mockReturnValue(true);
+    const naturalWidthSpy = vi
+      .spyOn(HTMLImageElement.prototype, "naturalWidth", "get")
+      .mockReturnValue(32);
+    const naturalHeightSpy = vi
+      .spyOn(HTMLImageElement.prototype, "naturalHeight", "get")
+      .mockReturnValue(32);
+
+    try {
+      render(
+        <FeedFavicon
+          faviconUrl="https://news.ycombinator.com/y18.svg"
+          feedUrl="https://news.ycombinator.com/rss"
+          priority="high"
+          siteUrl="https://news.ycombinator.com"
+          title="Hacker News"
+        />,
+      );
+
+      await waitFor(() => {
+        expect(screen.getByRole("img", { name: "Hacker News favicon" }).className).toContain(
+          "opacity-100",
+        );
+      });
+    } finally {
+      completeSpy.mockRestore();
+      naturalWidthSpy.mockRestore();
+      naturalHeightSpy.mockRestore();
+    }
+  });
+
   test("falls back from proxy to direct favicon and then RSS icon", () => {
     render(
       <FeedFavicon
@@ -165,6 +202,23 @@ describe("feed favicons", () => {
     fireEvent.error(proxyImg);
     const storedImg = screen.getByRole("img", { name: "TechCrunch favicon" });
     expect(storedImg.getAttribute("src")).toBe("https://cdn.techcrunch.example/icon.png");
+  });
+
+  test("keeps stored favicon candidates after a cached proxy miss", () => {
+    writeCachedFaviconMiss("https://fresh.techcrunch.example");
+
+    render(
+      <FeedFavicon
+        faviconUrl="https://cdn.techcrunch.example/icon.png"
+        feedUrl="https://feeds.techcrunch.example/rss.xml"
+        siteUrl="https://fresh.techcrunch.example/article"
+        title="TechCrunch"
+      />,
+    );
+
+    expect(screen.getByRole("img", { name: "TechCrunch favicon" }).getAttribute("src")).toBe(
+      "https://cdn.techcrunch.example/icon.png",
+    );
   });
 
   test("keeps scalable SVG favicons even when their intrinsic size is small", () => {
