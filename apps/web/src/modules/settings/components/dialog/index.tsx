@@ -105,17 +105,19 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
               </Breadcrumb>
             </header>
             <Separator />
-            <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-5">
-              {activeSectionName === accountSection.name ? (
-                <AccountPagePanel onLogout={logout} />
-              ) : null}
-              {activeSectionName === appearanceSection.name ? <AppearancePagePanel /> : null}
-              {activeSectionName === personalizationSection.name ? (
-                <PersonalizationPagePanel />
-              ) : null}
-              {activeSectionName === billingSection.name ? <BillingPagePanel /> : null}
-              {activeSectionName === advancedSection.name ? <AdvancedPagePanel /> : null}
-            </div>
+            <ScrollArea className="min-h-0 flex-1">
+              <div className="flex flex-col gap-4 p-5">
+                {activeSectionName === accountSection.name ? (
+                  <AccountPagePanel onLogout={logout} />
+                ) : null}
+                {activeSectionName === appearanceSection.name ? <AppearancePagePanel /> : null}
+                {activeSectionName === personalizationSection.name ? (
+                  <PersonalizationPagePanel />
+                ) : null}
+                {activeSectionName === billingSection.name ? <BillingPagePanel /> : null}
+                {activeSectionName === advancedSection.name ? <AdvancedPagePanel /> : null}
+              </div>
+            </ScrollArea>
           </main>
         </SidebarProvider>
       </DialogContent>

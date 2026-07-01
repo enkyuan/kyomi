@@ -49,7 +49,7 @@ function createDetailBlurMask(start: number, end: number): string {
 }
 
 export type ReaderDetailState =
-  | { status: "selected"; item: ArticleDetailDto; isRefreshing?: boolean }
+  | { status: "selected"; item: ArticleDetailDto }
   | { status: "loading" }
   | { status: "error"; error: unknown }
   | { status: "empty" };
@@ -112,12 +112,6 @@ export function Detail({
                     <LeftFill className="size-4" />
                     <span className="hidden md:inline">Back to feed</span>
                   </Button>
-                ) : null}
-                {detailState.isRefreshing ? (
-                  <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-background/70 px-2.5 py-1 text-muted-foreground text-xs">
-                    <span className="size-1.5 rounded-full bg-muted-foreground/45" />
-                    Updating article
-                  </div>
                 ) : null}
                 <Article
                   item={detailState.item}

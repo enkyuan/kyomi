@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { updateUserEmail } from "@lib/auth/functions";
+import { authSessionListSchema } from "@lib/schemas";
 import { isValidEmail } from "@modules/auth/schema";
 import { toastManager } from "@kyomi/ui/toast";
 
@@ -12,8 +13,24 @@ type SessionRow = {
   id: string;
   ipAddress: string | null;
   isCurrent: boolean;
+  locationCity: string | null;
+  locationCountry: string | null;
+  locationLabel: string | null;
+  locationRegion: string | null;
+  token: string;
   updatedAt: string;
   userAgent: string | null;
+};
+
+type FormattedTimestamp = {
+  absolute: string;
+  relative: string;
+};
+
+type SessionDevice = {
+  fullUserAgent: string;
+  label: string;
+  meta: string;
 };
 
 type UseAccountPanelArgs = {
@@ -23,6 +40,11 @@ type UseAccountPanelArgs = {
           expiresAt: string | Date;
           id: string;
           ipAddress?: string | null;
+          locationCity?: string | null;
+          locationCountry?: string | null;
+          locationLabel?: string | null;
+          locationRegion?: string | null;
+          token: string;
           updatedAt: string | Date;
           userAgent?: string | null;
         };
@@ -32,47 +54,11 @@ type UseAccountPanelArgs = {
   user: { email?: string | null } | null | undefined;
 };
 
-function parseSessionRow(value: unknown): SessionRow | null {
-  if (!value || typeof value !== "object") {
-    return null;
-  }
-
-  const record = value as Record<string, unknown>;
-  const id = typeof record.id === "string" ? record.id : "";
-  const userAgent = typeof record.userAgent === "string" ? record.userAgent : null;
-  const ipAddress = typeof record.ipAddress === "string" ? record.ipAddress : null;
-  const updatedAt = typeof record.updatedAt === "string" ? record.updatedAt : "";
-  const expiresAt = typeof record.expiresAt === "string" ? record.expiresAt : "";
-
-  if (!id || !updatedAt || !expiresAt) {
-    return null;
-  }
-
-  return {
-    id,
-    userAgent,
-    ipAddress,
-    updatedAt,
-    expiresAt,
-    isCurrent: false,
-  };
-}
-
 function parseSessionsResponse(value: unknown): SessionRow[] {
-  if (!Array.isArray(value)) {
-    return [];
-  }
-
-  const sessions: SessionRow[] = [];
-
-  for (const item of value) {
-    const row = parseSessionRow(item);
-    if (row) {
-      sessions.push(row);
-    }
-  }
-
-  return sessions;
+  return authSessionListSchema.parse(value).map((session) => ({
+    ...session,
+    isCurrent: false,
+  }));
 }
 
 function normalizeTimestamp(value: string | Date): string {
@@ -92,27 +78,156 @@ function parseApiErrorMessage(error: unknown): string {
     } catch {
       // Fallback to raw error message.
     }
-    return error.message || "Unable to update email.";
+    return error.message || "Request failed.";
   }
-  return "Unable to update email.";
+  return "Request failed.";
 }
 
 const accountTimestampFormatter = new Intl.DateTimeFormat("en", {
   dateStyle: "medium",
   timeStyle: "short",
 });
+const accountRelativeFormatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
-function formatTimestamp(value: string): string {
+function formatRelativeTimestamp(value: string): string {
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "Unknown";
-  return accountTimestampFormatter.format(date);
+  if (Number.isNaN(date.getTime())) {
+    return "Unknown";
+  }
+
+  const diffMs = date.getTime() - Date.now();
+  const diffMinutes = Math.round(diffMs / 60_000);
+  const absMinutes = Math.abs(diffMinutes);
+
+  if (absMinutes < 1) {
+    return "just now";
+  }
+
+  if (absMinutes < 60) {
+    return accountRelativeFormatter.format(diffMinutes, "minute");
+  }
+
+  const diffHours = Math.round(diffMinutes / 60);
+  const absHours = Math.abs(diffHours);
+  if (absHours < 24) {
+    return accountRelativeFormatter.format(diffHours, "hour");
+  }
+
+  const diffDays = Math.round(diffHours / 24);
+  const absDays = Math.abs(diffDays);
+  if (absDays < 7) {
+    return accountRelativeFormatter.format(diffDays, "day");
+  }
+
+  const diffWeeks = Math.round(diffDays / 7);
+  if (Math.abs(diffWeeks) < 5) {
+    return accountRelativeFormatter.format(diffWeeks, "week");
+  }
+
+  const diffMonths = Math.round(diffDays / 30);
+  if (Math.abs(diffMonths) < 12) {
+    return accountRelativeFormatter.format(diffMonths, "month");
+  }
+
+  const diffYears = Math.round(diffDays / 365);
+  return accountRelativeFormatter.format(diffYears, "year");
 }
 
-function shortenUserAgent(userAgent: string | null): string {
-  if (!userAgent) return "Unknown device";
+function formatTimestamp(value: string): FormattedTimestamp {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return { absolute: "Unknown", relative: "Unknown" };
+  }
+
+  return {
+    absolute: accountTimestampFormatter.format(date),
+    relative: formatRelativeTimestamp(value),
+  };
+}
+
+function detectBrowser(userAgent: string) {
+  if (/Firefox\//i.test(userAgent)) return "Firefox";
+  if (/Edg\//i.test(userAgent)) return "Edge";
+  if (/Chrome\//i.test(userAgent) && !/Edg\//i.test(userAgent)) return "Chrome";
+  if (/Safari\//i.test(userAgent) && !/Chrome\//i.test(userAgent)) return "Safari";
+  return "Browser";
+}
+
+function detectOs(userAgent: string) {
+  if (/Windows/i.test(userAgent)) return "Windows";
+  if (/Android/i.test(userAgent)) return "Android";
+  if (/iPhone|iPad|iPod/i.test(userAgent)) return "iPhone";
+  if (/Mac OS X|Macintosh/i.test(userAgent)) return "macOS";
+  if (/Linux/i.test(userAgent)) return "Linux";
+  return "Unknown OS";
+}
+
+function describeSessionDevice(userAgent: string | null): SessionDevice {
+  if (!userAgent) {
+    return {
+      fullUserAgent: "Unknown user agent",
+      label: "Unknown device",
+      meta: "No device details available",
+    };
+  }
+
   const normalized = userAgent.trim();
-  if (!normalized) return "Unknown device";
-  return normalized.length > 80 ? `${normalized.slice(0, 77)}...` : normalized;
+  if (!normalized) {
+    return {
+      fullUserAgent: "Unknown user agent",
+      label: "Unknown device",
+      meta: "No device details available",
+    };
+  }
+
+  const browser = detectBrowser(normalized);
+  const os = detectOs(normalized);
+
+  return {
+    fullUserAgent: normalized,
+    label: `${browser} on ${os}`,
+    meta: normalized.length > 120 ? `${normalized.slice(0, 117)}...` : normalized,
+  };
+}
+
+function describeSessionLocation(session: Pick<SessionRow, "locationLabel" | "ipAddress">) {
+  if (session.locationLabel) {
+    return session.locationLabel;
+  }
+
+  if (session.ipAddress === "127.0.0.1" || session.ipAddress === "::1") {
+    return "Localhost";
+  }
+
+  return "Unknown";
+}
+
+async function invalidateAuthState(
+  queryClient: ReturnType<typeof useQueryClient>,
+  router: ReturnType<typeof useRouter>,
+) {
+  await Promise.all([
+    queryClient.invalidateQueries({ queryKey: ["auth", "sessions"] }),
+    router.invalidate(),
+  ]);
+}
+
+async function postAuthSessionAction(path: string, body?: Record<string, string>) {
+  const response = await fetch(path, {
+    body: body ? JSON.stringify(body) : undefined,
+    credentials: "include",
+    headers: body ? { "content-type": "application/json" } : undefined,
+    method: "POST",
+  });
+
+  if (!response.ok) {
+    throw new Error(`Request failed: ${response.status}`);
+  }
+
+  const data = (await response.json()) as { status?: boolean };
+  if (!data.status) {
+    throw new Error("Request failed.");
+  }
 }
 
 export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
@@ -155,10 +270,7 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
         description: updatedProfile.email,
         type: "success",
       });
-      await Promise.all([
-        queryClient.invalidateQueries({ queryKey: ["auth", "sessions"] }),
-        router.invalidate(),
-      ]);
+      await invalidateAuthState(queryClient, router);
     },
     onError: (error) => {
       const message = parseApiErrorMessage(error);
@@ -171,12 +283,81 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     },
   });
 
+  const revokeSessionMutation = useMutation({
+    mutationFn: async (token: string) => {
+      await postAuthSessionAction("/api/auth/revoke-session", { token });
+    },
+    onSuccess: async () => {
+      toastManager.add({
+        title: "Session signed out",
+        description: "The selected device no longer has access.",
+        type: "success",
+      });
+      await invalidateAuthState(queryClient, router);
+    },
+    onError: (error) => {
+      toastManager.add({
+        title: "Unable to sign out session",
+        description: parseApiErrorMessage(error),
+        type: "error",
+      });
+    },
+  });
+
+  const revokeOtherSessionsMutation = useMutation({
+    mutationFn: async () => {
+      await postAuthSessionAction("/api/auth/revoke-other-sessions");
+    },
+    onSuccess: async () => {
+      toastManager.add({
+        title: "Other sessions signed out",
+        description: "Only this device remains active.",
+        type: "success",
+      });
+      await invalidateAuthState(queryClient, router);
+    },
+    onError: (error) => {
+      toastManager.add({
+        title: "Unable to sign out other sessions",
+        description: parseApiErrorMessage(error),
+        type: "error",
+      });
+    },
+  });
+
+  const revokeAllSessionsMutation = useMutation({
+    mutationFn: async () => {
+      await postAuthSessionAction("/api/auth/revoke-sessions");
+    },
+    onSuccess: async () => {
+      toastManager.add({
+        title: "All devices signed out",
+        description: "This account has been signed out everywhere.",
+        type: "success",
+      });
+      await router.invalidate();
+      await router.navigate({ to: "/" });
+    },
+    onError: (error) => {
+      toastManager.add({
+        title: "Unable to sign out all devices",
+        description: parseApiErrorMessage(error),
+        type: "error",
+      });
+    },
+  });
+
   const fallbackSession: SessionRow[] = session?.session
     ? [
         {
           id: session.session.id,
+          token: session.session.token,
           userAgent: session.session.userAgent ?? null,
           ipAddress: session.session.ipAddress ?? null,
+          locationLabel: session.session.locationLabel ?? null,
+          locationCity: session.session.locationCity ?? null,
+          locationRegion: session.session.locationRegion ?? null,
+          locationCountry: session.session.locationCountry ?? null,
           updatedAt: normalizeTimestamp(session.session.updatedAt),
           expiresAt: normalizeTimestamp(session.session.expiresAt),
           isCurrent: true,
@@ -192,6 +373,8 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
           isCurrent: session?.session?.id === item.id,
         }))
       : fallbackSession;
+
+  const otherSessionCount = sessions.filter((item) => !item.isCurrent).length;
 
   const handleStartEditEmail = () => {
     setIsEditingEmail(true);
@@ -230,7 +413,21 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     await updateEmailMutation.mutateAsync(trimmedEmail);
   };
 
+  const handleRevokeSession = async (token: string) => {
+    await revokeSessionMutation.mutateAsync(token);
+  };
+
+  const handleRevokeOtherSessions = async () => {
+    await revokeOtherSessionsMutation.mutateAsync();
+  };
+
+  const handleRevokeAllSessions = async () => {
+    await revokeAllSessionsMutation.mutateAsync();
+  };
+
   return {
+    describeSessionDevice,
+    describeSessionLocation,
     emailDraft,
     emailError,
     isEditingEmail,
@@ -240,8 +437,18 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     formatTimestamp,
     handleCancelEditEmail,
     handleEmailDraftChange,
+    handleRevokeAllSessions,
+    handleRevokeOtherSessions,
+    handleRevokeSession,
     handleSaveEmail,
     handleStartEditEmail,
-    shortenUserAgent,
+    isEditingEmail,
+    otherSessionCount,
+    revokeAllSessionsMutation,
+    revokeOtherSessionsMutation,
+    revokeSessionMutation,
+    sessions,
+    sessionsQuery,
+    updateEmailMutation,
   };
 }

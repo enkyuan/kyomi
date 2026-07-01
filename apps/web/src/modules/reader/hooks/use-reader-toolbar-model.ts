@@ -253,7 +253,32 @@ export function useReaderToolbarModel({
         setPreferences({ defaultMode: "original" });
       },
       onToggleSaved: () => {
-        updateItemMutation.mutate({ itemId: item.id, patch: { isSaved: !item.isSaved } });
+        const nextSaved = !item.isSaved;
+        const savePromise = updateItemMutation.mutateAsync({
+          itemId: item.id,
+          patch: { isSaved: nextSaved },
+        });
+
+        void toastManager.promise(savePromise, {
+          loading: {
+            title: nextSaved ? "Saving article..." : "Removing from read later...",
+            description: nextSaved ? "Adding this article to read later." : "Updating read later.",
+            type: "loading",
+            timeout: 0,
+          },
+          success: {
+            title: nextSaved ? "Saved to read later" : "Removed from read later",
+            description: nextSaved
+              ? "This article is now in read later."
+              : "This article was removed from read later.",
+            type: "success",
+          },
+          error: (error) => ({
+            title: nextSaved ? "Unable to save article" : "Unable to update article",
+            description: error instanceof Error ? error.message : "Try again in a moment.",
+            type: "error",
+          }),
+        });
       },
     },
   };

@@ -24,7 +24,7 @@ const BUTTON_ICON_PADDING = 16;
 const COPY_ICON_PATH =
   "M9 2a2 2 0 0 0-2 2v2h2V4h11v11h-2v2h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM4 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z";
 const CHECK_ICON_PATH =
-  "M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2m3.535 6.381-4.95 4.95-2.12-2.121a1 1 0 0 0-1.415 1.414l2.758 2.758a1.1 1.1 0 0 0 1.556 0l5.586-5.586a1 1 0 0 0-1.415-1.415";
+  "M21.546 5.111a1.5 1.5 0 0 1 0 2.121L10.303 18.475a1.6 1.6 0 0 1-2.263 0L2.454 12.89a1.5 1.5 0 1 1 2.121-2.121l4.596 4.596L19.424 5.111a1.5 1.5 0 0 1 2.122 0";
 
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("graphql", graphql);
@@ -186,15 +186,34 @@ function mountCopyButton(host: HTMLElement, text: string): void {
   button.appendChild(copyIcon);
   button.appendChild(checkIcon);
 
+  let resetCopyStateTimer: number | null = null;
+
   button.addEventListener("click", () => {
     navigator.clipboard
       .writeText(text)
       .then(() => {
+        if (resetCopyStateTimer !== null) {
+          window.clearTimeout(resetCopyStateTimer);
+        }
+
         button.classList.add("is-copied");
         button.setAttribute("aria-label", "Copied");
-        window.setTimeout(() => {
+
+        anchoredToastManager.add({
+          data: {
+            tooltipStyle: true,
+          },
+          positionerProps: {
+            anchor: button,
+          },
+          timeout: 2000,
+          title: "Copied!",
+        });
+
+        resetCopyStateTimer = window.setTimeout(() => {
           button.classList.remove("is-copied");
           button.setAttribute("aria-label", "Copy code");
+          resetCopyStateTimer = null;
         }, 2000);
       })
       .catch(() => {
