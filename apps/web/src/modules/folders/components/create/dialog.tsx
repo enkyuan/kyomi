@@ -19,6 +19,7 @@ import { Field, FieldError } from "@kyomi/ui/field";
 import { Form } from "@kyomi/ui/form";
 import { Input } from "@kyomi/ui/input";
 import { toastManager } from "@kyomi/ui/toast";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { createFolder } from "@modules/folders/api";
 
 type DialogProps = {
@@ -67,9 +68,10 @@ export function Dialog({ open, onOpenChange, hideTrigger = false }: DialogProps 
       });
     },
     onError: (error) => {
+      logClientError("folders.create", error);
       toastManager.add({
         title: "Unable to create folder",
-        description: error instanceof Error ? error.message : "Try a different folder name.",
+        description: getUserSafeErrorMessage(error, "Try a different folder name."),
         type: "error",
       });
     },

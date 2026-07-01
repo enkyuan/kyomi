@@ -9,6 +9,7 @@ import {
 import { useMemo, useState } from "react";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { Button } from "@kyomi/ui/button";
 import {
   Dialog as UiDialog,
@@ -151,9 +152,10 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
     },
     onError: (error, _variables, context) => {
       restoreFeedCacheSnapshot(queryClient, context?.snapshot);
+      logClientError("feeds.manage.unfollow", error);
       toastManager.add({
         title: "Unable to remove selected feeds",
-        description: error instanceof Error ? error.message : "Try again in a moment.",
+        description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });
     },

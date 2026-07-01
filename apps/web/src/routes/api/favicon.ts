@@ -153,7 +153,7 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
   }
 
   const googleResult = await tryFetchImage(
-    `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=32`,
+    `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=128`,
   );
   if (googleResult) {
     return cacheAndBuildFaviconResponse(hostname, googleResult);

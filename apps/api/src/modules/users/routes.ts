@@ -43,7 +43,6 @@ export function registerUserRoutes(app: Elysia) {
           inboxTimestampDisplay?: "absolute" | "relative";
           inboxTimestampHourCycle?: "12h" | "24h";
           inboxFontSizePx?: number;
-          inboxShowRecents?: boolean;
           inboxShowFavicons?: boolean;
         }>(context);
         return updateUserPreferences(db, userId, body);

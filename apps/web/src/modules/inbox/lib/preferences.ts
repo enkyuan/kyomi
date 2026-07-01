@@ -19,7 +19,6 @@ export const DEFAULT_INBOX_PREFERENCES: InboxPreferences = {
   inboxTimestampDisplay: "absolute",
   inboxTimestampHourCycle: "12h",
   inboxFontSizePx: 16,
-  inboxShowRecents: false,
   inboxShowFavicons: true,
 };
 
@@ -83,10 +82,6 @@ export function sanitizeInboxPreferences(value: unknown): InboxPreferences {
     inboxTimestampDisplay: parseTimestampDisplay(record.inboxTimestampDisplay),
     inboxTimestampHourCycle: parseTimestampHourCycle(record.inboxTimestampHourCycle),
     inboxFontSizePx: clampInboxFontSize(record.inboxFontSizePx),
-    inboxShowRecents:
-      typeof record.inboxShowRecents === "boolean"
-        ? record.inboxShowRecents
-        : DEFAULT_INBOX_PREFERENCES.inboxShowRecents,
     inboxShowFavicons:
       typeof record.inboxShowFavicons === "boolean"
         ? record.inboxShowFavicons

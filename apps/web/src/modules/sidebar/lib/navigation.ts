@@ -1,7 +1,6 @@
 import { Calendar3Fill, NewsFill, StarFill, TimeDurationFill } from "@mingcute/react";
 import type { ComponentType } from "react";
 import type { useNavigate } from "@tanstack/react-router";
-import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
 
 export type InboxNavFilter = "today" | "unread" | "saved" | "recent";
 
@@ -11,23 +10,14 @@ export type InboxNavItem = {
   icon: ComponentType<{ className?: string }>;
 };
 
-const BASE_INBOX_NAV: InboxNavItem[] = [
+const INBOX_NAV: InboxNavItem[] = [
   { label: "Today", search: { filter: "today" }, icon: Calendar3Fill },
   { label: "All Unread", search: { filter: "unread" }, icon: NewsFill },
   { label: "Read Later", search: { filter: "saved" }, icon: StarFill },
+  { label: "Recents", search: { filter: "recent" }, icon: TimeDurationFill },
 ];
 
 const INBOX_NAV_FILTER_KEYS = ["filter"] as const;
-
-function buildInboxNavItems(showRecents: boolean): InboxNavItem[] {
-  if (!showRecents) {
-    return BASE_INBOX_NAV;
-  }
-  return [
-    ...BASE_INBOX_NAV,
-    { label: "Recents", search: { filter: "recent" }, icon: TimeDurationFill },
-  ];
-}
 
 function inboxNavBadgeValues(counts: {
   today: number;
@@ -64,11 +54,8 @@ export type SidebarInboxCounts = {
   saved: number;
 };
 
-export function resolveInboxNavItems(
-  preferences: Pick<InboxPreferences, "inboxShowRecents"> | undefined,
-  counts: SidebarInboxCounts,
-) {
-  const items = buildInboxNavItems(preferences?.inboxShowRecents ?? false);
+export function resolveInboxNavItems(counts: SidebarInboxCounts) {
+  const items = INBOX_NAV;
   const badgeValues = inboxNavBadgeValues(counts);
   return { items, badgeValues };
 }

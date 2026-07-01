@@ -38,8 +38,6 @@ interface ListProps {
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
   selectedItemId?: string | null;
-  feedId?: string | null;
-  folderId?: string | null;
   pagination: RowsPaginationState;
   onSelectItem: (item: InboxItem) => void;
   onFilterChange?: (filter: InboxFilter) => void;

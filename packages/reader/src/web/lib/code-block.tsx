@@ -199,17 +199,6 @@ function mountCopyButton(host: HTMLElement, text: string): void {
         button.classList.add("is-copied");
         button.setAttribute("aria-label", "Copied");
 
-        anchoredToastManager.add({
-          data: {
-            tooltipStyle: true,
-          },
-          positionerProps: {
-            anchor: button,
-          },
-          timeout: 2000,
-          title: "Copied!",
-        });
-
         resetCopyStateTimer = window.setTimeout(() => {
           button.classList.remove("is-copied");
           button.setAttribute("aria-label", "Copy code");

@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "@kyomi/ui/breadcrumb";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@kyomi/ui/dialog";
+import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
   Sidebar,
   SidebarContent,

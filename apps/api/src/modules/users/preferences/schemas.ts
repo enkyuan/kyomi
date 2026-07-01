@@ -24,7 +24,6 @@ export const userPreferencesResponse = t.Object({
   inboxTimestampDisplay: t.Union([t.Literal("absolute"), t.Literal("relative")]),
   inboxTimestampHourCycle: t.Union([t.Literal("12h"), t.Literal("24h")]),
   inboxFontSizePx: t.Number({ minimum: 14, maximum: 20 }),
-  inboxShowRecents: t.Boolean(),
   inboxShowFavicons: t.Boolean(),
 });
 
@@ -54,6 +53,5 @@ export const updateUserPreferencesBody = t.Object({
   inboxTimestampDisplay: t.Optional(t.Union([t.Literal("absolute"), t.Literal("relative")])),
   inboxTimestampHourCycle: t.Optional(t.Union([t.Literal("12h"), t.Literal("24h")])),
   inboxFontSizePx: t.Optional(t.Number({ minimum: 14, maximum: 20 })),
-  inboxShowRecents: t.Optional(t.Boolean()),
   inboxShowFavicons: t.Optional(t.Boolean()),
 });

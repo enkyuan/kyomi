@@ -9,13 +9,17 @@ import {
   nextUsableFaviconIndex,
 } from "../lib/favicon";
 
+const MIN_CLIENT_FAVICON_NATURAL_SIZE = 64;
+
 export function useFeedFavicon({
   faviconUrl: storedFaviconUrl,
   feedUrl,
+  minNaturalSize = MIN_CLIENT_FAVICON_NATURAL_SIZE,
   siteUrl,
 }: {
   faviconUrl?: string | null;
   feedUrl: string;
+  minNaturalSize?: number;
   siteUrl: string | null;
 }) {
   const faviconUrls = buildFaviconUrlCandidates(storedFaviconUrl, siteUrl, feedUrl);
@@ -39,7 +43,7 @@ export function useFeedFavicon({
   };
 
   const handleLoad = (naturalWidth: number, naturalHeight: number) => {
-    if (naturalWidth < 2 || naturalHeight < 2) {
+    if (naturalWidth < minNaturalSize || naturalHeight < minNaturalSize) {
       failCurrentFavicon();
       return;
     }

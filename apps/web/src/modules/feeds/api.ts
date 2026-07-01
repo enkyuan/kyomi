@@ -50,6 +50,11 @@ export type FeedRefreshStatusRow = {
   refreshStatus: string;
 };
 
+type FollowFeedInput = {
+  feedId?: string | null;
+  url: string;
+};
+
 const DISCOVER_PREVIEW_REQUEST_TIMEOUT_MS = 8_000;
 const DISCOVER_SEARCH_REQUEST_TIMEOUT_MS = 5_000;
 
@@ -156,23 +161,31 @@ export const searchFeeds = createServerFn({ method: "GET" })
   });
 
 export const followFeed = createServerFn({ method: "POST" })
-  .inputValidator((input: { url: string }) => input)
+  .inputValidator((input: FollowFeedInput) => input)
   .handler(async ({ data }): Promise<FollowFeedResult> => {
     const { apiJsonValidated, followFeedResultSchema } = await getFeedsSchemaModule();
+    const feedId = data.feedId?.trim();
     const normalizedUrl = normalizeUrlCandidate(data.url.trim());
-    if (!normalizedUrl) {
-      throw new Error("Invalid feed URL");
-    }
 
     const headers = buildForwardHeaders(getRequestHeaders());
-    headers.set("content-type", "application/json");
 
     return apiJsonValidated(followFeedResultSchema, () =>
-      apiJson<FollowFeedResult>("/api/v1/feeds", {
-        method: "POST",
-        headers,
-        body: JSON.stringify({ url: normalizedUrl }),
-      }),
+      feedId
+        ? apiJson<FollowFeedResult>(`/api/v1/feeds/${encodeURIComponent(feedId)}/subscribe`, {
+            method: "POST",
+            headers,
+          })
+        : (() => {
+            if (!normalizedUrl) {
+              throw new Error("Invalid feed URL");
+            }
+            headers.set("content-type", "application/json");
+            return apiJson<FollowFeedResult>("/api/v1/feeds", {
+              method: "POST",
+              headers,
+              body: JSON.stringify({ url: normalizedUrl }),
+            });
+          })(),
     );
   });
 

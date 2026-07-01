@@ -1,7 +1,6 @@
 "use client";
 
 import { useInboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
-import { useReaderPreferences } from "@modules/reader/hooks/use-reader-preferences";
 
 export function useAppearancePanel() {
   const {
@@ -10,28 +9,18 @@ export function useAppearancePanel() {
     resetPreferences: resetInboxPreferences,
     setPreferences: setInboxPreferences,
   } = useInboxPreferences();
-  const {
-    limits: readerLimits,
-    preferences: readerPreferences,
-    resetPreferences: resetReaderPreferences,
-    setPreferences: setReaderPreferences,
-  } = useReaderPreferences();
 
-  const ready = Boolean(inboxPreferences && readerPreferences);
+  const ready = Boolean(inboxPreferences);
 
   const resetAll = () => {
     resetInboxPreferences();
-    resetReaderPreferences();
   };
 
   return {
     inboxLimits,
     inboxPreferences,
-    readerLimits,
-    readerPreferences,
     ready,
     resetAll,
     setInboxPreferences,
-    setReaderPreferences,
   };
 }

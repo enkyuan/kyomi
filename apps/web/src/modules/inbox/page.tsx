@@ -14,7 +14,7 @@ import {
   useInboxQueries,
 } from "@modules/inbox/hooks/use-inbox-data";
 import { useInboxRouteState, useResponsiveReaderMode } from "@modules/inbox/hooks/use-inbox-layout";
-import { getInboxViewCount, type InboxItem } from "@modules/inbox/services/api";
+import { getInboxViewCount, type InboxFilter, type InboxItem } from "@modules/inbox/services/api";
 import { useTimezone } from "@hooks/use-timezone";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { QUERY_TIMES } from "@lib/query/policies";
@@ -24,6 +24,10 @@ import { deriveInboxListHeaderCount } from "@modules/inbox/utils/count-display";
 import { followedFeedsQueryKey, inboxViewCountQueryKey } from "@modules/inbox/queries/options";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+
+function isGlobalInboxFilter(filter: InboxFilter) {
+  return filter === "all" || filter === "saved" || filter === "recent";
+}
 
 export function Page({
   initialInboxPreferences,
@@ -189,8 +193,6 @@ function InboxPageContent({
   const listElement = (
     <InboxListSection
       effectiveFilter={effectiveFilter}
-      feedId={feedId}
-      folderId={folderId}
       itemId={itemId}
       showHiddenItems={showHiddenItems}
       showReadItems={showReadItems}
@@ -252,8 +254,6 @@ function InboxSidebarCard() {
 // oxlint-disable-next-line react-doctor/no-many-boolean-props
 function InboxListSection({
   effectiveFilter,
-  feedId,
-  folderId,
   itemId,
   showHiddenItems,
   showReadItems,
@@ -269,8 +269,6 @@ function InboxListSection({
   sort,
 }: {
   effectiveFilter: ReturnType<typeof useInboxRouteState>["effectiveFilter"];
-  feedId: string | undefined;
-  folderId: string | undefined;
   itemId: string | undefined;
   showHiddenItems: boolean;
   showReadItems: boolean;
@@ -286,11 +284,13 @@ function InboxListSection({
   sort: ReturnType<typeof useInboxRouteState>["sort"];
 }) {
   const handleFilterChange = useCallback(
-    (filter: import("@modules/inbox/services/api").InboxFilter) => {
+    (filter: InboxFilter) => {
       void navigate({
         search: (prev) => ({
           ...prev,
           filter,
+          feedId: isGlobalInboxFilter(filter) ? undefined : prev.feedId,
+          folderId: isGlobalInboxFilter(filter) ? undefined : prev.folderId,
           itemId: undefined,
         }),
       });
@@ -316,8 +316,6 @@ function InboxListSection({
       timestampDisplay: preferences.inboxTimestampDisplay,
       timestampHourCycle: preferences.inboxTimestampHourCycle,
       selectedItemId: itemId,
-      feedId,
-      folderId,
       pagination: {
         isLoading: !hasKnownEmptyFeedBackedView && inboxQuery.isPending && inboxItems.length === 0,
         isRefreshing:
@@ -333,8 +331,6 @@ function InboxListSection({
     }),
     [
       effectiveFilter,
-      feedId,
-      folderId,
       fetchNextInboxPage,
       handleFilterChange,
       hasKnownEmptyFeedBackedView,
