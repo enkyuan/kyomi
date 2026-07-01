@@ -5,6 +5,8 @@ import { apiJson, buildForwardHeaders, resolveApiUrl } from "@lib/api";
 export type Folder = {
   id: string;
   name: string;
+  isPinned: boolean;
+  pinnedAt: string | null;
   createdAt: string;
 };
 
@@ -32,15 +34,23 @@ export const createFolder = createServerFn({ method: "POST" })
   });
 
 export const updateFolder = createServerFn({ method: "POST" })
-  .inputValidator((input: { folderId: string; name: string }) => input)
+  .inputValidator((input: { folderId: string; name?: string; isPinned?: boolean }) => input)
   .handler(async ({ data }): Promise<Folder> => {
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");
 
+    const body: { name?: string; isPinned?: boolean } = {};
+    if (data.name !== undefined) {
+      body.name = data.name.trim();
+    }
+    if (data.isPinned !== undefined) {
+      body.isPinned = data.isPinned;
+    }
+
     return apiJson<Folder>(`/api/v1/folders/${encodeURIComponent(data.folderId)}`, {
       method: "PUT",
       headers,
-      body: JSON.stringify({ name: data.name.trim() }),
+      body: JSON.stringify(body),
     });
   });
 

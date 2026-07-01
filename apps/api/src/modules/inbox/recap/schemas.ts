@@ -8,6 +8,8 @@ export const inboxRecapFolderSchema = t.Object({
   id: t.String(),
   name: t.String(),
   createdAt: t.String(),
+  isPinned: t.Boolean(),
+  pinnedAt: t.Union([t.String(), t.Null()]),
   feedCount: t.Number(),
 });
 

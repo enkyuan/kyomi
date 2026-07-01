@@ -42,6 +42,8 @@ async function listFolderSummaries(
       id: folders.id,
       name: folders.name,
       createdAt: folders.createdAt,
+      isPinned: folders.isPinned,
+      pinnedAt: folders.pinnedAt,
       feedCount: sql<number>`count(${feedSubscriptions.id})::int`,
     })
     .from(folders)
@@ -60,6 +62,8 @@ async function listFolderSummaries(
     id: row.id,
     name: row.name,
     createdAt: row.createdAt.toISOString(),
+    isPinned: row.isPinned,
+    pinnedAt: row.pinnedAt ? row.pinnedAt.toISOString() : null,
     feedCount: row.feedCount,
   }));
 }

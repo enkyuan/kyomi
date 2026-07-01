@@ -25,6 +25,7 @@ import { useViewport } from "@hooks/use-viewport";
 import { QUERY_TIMES } from "@lib/query/policies";
 import { writeShellStateSnapshot } from "@lib/shell/state";
 import { listFollowedFeeds } from "@modules/feeds/api";
+import { listFolders } from "@modules/folders/api";
 import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
 import { buildInboxItemSlug } from "@modules/inbox/lib/article-slug";
 import { ArticleShell } from "./components/page/article-shell";
@@ -105,7 +106,27 @@ function InboxPageContent({
     staleTime: QUERY_TIMES.staticMetadataStale,
     gcTime: QUERY_TIMES.staticMetadataGc,
   });
+  const { data: foldersData } = useQuery({
+    queryKey: ["folders"],
+    queryFn: () => listFolders(),
+    staleTime: QUERY_TIMES.staticMetadataStale,
+    gcTime: QUERY_TIMES.staticMetadataGc,
+  });
   const hasNoFollowedFeeds = isFollowedFeedsSuccess && (followedFeedsData?.length ?? 0) === 0;
+  const pinnedFolders = useMemo(
+    () =>
+      (foldersData ?? [])
+        .filter((folder) => folder.isPinned)
+        .sort((left, right) => {
+          const leftTime = left.pinnedAt ? new Date(left.pinnedAt).getTime() : 0;
+          const rightTime = right.pinnedAt ? new Date(right.pinnedAt).getTime() : 0;
+          if (leftTime !== rightTime) {
+            return rightTime - leftTime;
+          }
+          return left.name.localeCompare(right.name);
+        }),
+    [foldersData],
+  );
   const activeFeedLabel = useMemo(() => {
     if (!feedId) {
       return undefined;
@@ -223,7 +244,9 @@ function InboxPageContent({
       effectiveFilter={effectiveFilter}
       feedId={feedId}
       feedLabel={activeFeedLabel}
+      folderId={folderId}
       itemId={itemId}
+      pinnedFolders={pinnedFolders}
       preferences={preferences}
       inboxItems={inboxItems}
       hasKnownEmptyFeedBackedView={hasKnownEmptyFeedBackedView}

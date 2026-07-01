@@ -143,7 +143,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         <ScrollArea
           className="relative h-full min-h-0 overflow-visible **:data-[slot=scroll-area-scrollbar]:hidden"
           scrollFade
-          scrollFadeClassName="data-has-overflow-y:scroll-mask-y-from-[92%]"
+          scrollFadeClassName="data-has-overflow-y:scroll-mask-y-edge-14"
         >
           <SidebarMenu className="items-center gap-3 px-1">
             {feeds.map((feed) => {

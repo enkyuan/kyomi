@@ -9,6 +9,8 @@ describe("inbox recap schema", () => {
           id: "folder-1",
           name: "Unsorted",
           createdAt: "2026-07-01T00:00:00.000Z",
+          isPinned: true,
+          pinnedAt: "2026-07-01T02:00:00.000Z",
           feedCount: 2,
         },
       ],
@@ -47,6 +49,26 @@ describe("inbox recap schema", () => {
     });
 
     expect(parsed.topViewedFeeds[0]?.viewedItemCount).toBe(12);
+    expect(parsed.folders[0]?.isPinned).toBe(true);
+    expect(parsed.folders[0]?.pinnedAt).toBe("2026-07-01T02:00:00.000Z");
     expect(parsed.oldestSavedItems[0]?.savedAt).toBe("2026-06-02T00:00:00.000Z");
+  });
+
+  test("defaults folder pin fields when recap payloads predate folder pinning", () => {
+    const parsed = inboxRecapSchema.parse({
+      folders: [
+        {
+          id: "folder-1",
+          name: "Unsorted",
+          createdAt: "2026-07-01T00:00:00.000Z",
+          feedCount: 2,
+        },
+      ],
+      topViewedFeeds: [],
+      oldestSavedItems: [],
+    });
+
+    expect(parsed.folders[0]?.isPinned).toBe(false);
+    expect(parsed.folders[0]?.pinnedAt).toBeNull();
   });
 });

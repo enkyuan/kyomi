@@ -7,6 +7,7 @@ import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
 import type { useInboxRouteState } from "@modules/inbox/hooks/use-layout";
 import { getPreviousInboxFeedId } from "@modules/inbox/lib/feed-history";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
+import type { Folder } from "@modules/folders/api";
 import type { ArticleDetailDto } from "@lib/schemas";
 
 function isGlobalInboxFilter(filter: InboxFilter) {
@@ -18,7 +19,9 @@ export function ListSection({
   effectiveFilter,
   feedId,
   feedLabel,
+  folderId,
   itemId,
+  pinnedFolders,
   preferences,
   inboxItems,
   hasKnownEmptyFeedBackedView,
@@ -39,7 +42,9 @@ export function ListSection({
   effectiveFilter: ReturnType<typeof useInboxRouteState>["effectiveFilter"];
   feedId: string | undefined;
   feedLabel: string | undefined;
+  folderId: string | undefined;
   itemId: string | undefined;
+  pinnedFolders: Folder[];
   preferences: InboxPreferences;
   inboxItems: InboxItem[];
   hasKnownEmptyFeedBackedView: boolean;
@@ -65,6 +70,21 @@ export function ListSection({
           filter,
           feedId: isGlobalInboxFilter(filter) ? undefined : prev.feedId,
           folderId: isGlobalInboxFilter(filter) ? undefined : prev.folderId,
+          itemId: undefined,
+        }),
+      });
+    },
+    [navigate],
+  );
+
+  const handleFolderFilterChange = useCallback(
+    (nextFolderId: string) => {
+      void navigate({
+        search: (prev) => ({
+          ...prev,
+          filter: "all",
+          feedId: undefined,
+          folderId: nextFolderId,
           itemId: undefined,
         }),
       });
@@ -130,12 +150,15 @@ export function ListSection({
       },
       onSelectItem: selectItem,
       onFilterChange: handleFilterChange,
+      onFolderFilterChange: handleFolderFilterChange,
       onBackToInbox: handleBackToInbox,
       onBackToList: clearSelectedItem,
       onSortChange: handleSortChange,
       sort,
       isFeedScoped: Boolean(feedId),
+      activeFolderId: folderId,
       feedLabel,
+      pinnedFolders,
       isArticleScoped: Boolean(itemId),
       selectedArticle: selectedItem,
     }),
@@ -143,9 +166,11 @@ export function ListSection({
       effectiveFilter,
       feedId,
       feedLabel,
+      folderId,
       fetchNextInboxPage,
       handleBackToInbox,
       handleFilterChange,
+      handleFolderFilterChange,
       handleSortChange,
       hasKnownEmptyFeedBackedView,
       inboxItems,
@@ -161,6 +186,7 @@ export function ListSection({
       preferences.inboxTimestampDisplay,
       preferences.inboxTimestampHourCycle,
       itemId,
+      pinnedFolders,
       selectItem,
       selectedItem,
       sort,

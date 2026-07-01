@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { buildInboxListUrl } from "@modules/inbox/services/query-urls";
+import { buildArticlesUrl, buildInboxListUrl } from "@modules/inbox/services/query-urls";
 
 describe("inbox query URLs", () => {
   test("uses subscribed feed articles for My Feed without a day window", () => {
@@ -43,6 +43,21 @@ describe("inbox query URLs", () => {
         sort: undefined,
       }),
     ).toBe("/api/v1/articles/views/all?limit=100");
+  });
+
+  test("uses folder-scoped feed articles for pinned folder views", () => {
+    expect(
+      buildArticlesUrl(
+        "all",
+        300,
+        false,
+        undefined,
+        undefined,
+        "folder-1",
+        undefined,
+        undefined,
+      ),
+    ).toBe("/api/v1/articles?folder_id=folder-1&limit=100");
   });
 
   test("keeps Recent on the recently-read view when searching", () => {

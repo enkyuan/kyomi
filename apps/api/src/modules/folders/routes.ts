@@ -8,6 +8,7 @@ import {
   markFolderReadStatus,
   updateFolder,
 } from "./service";
+import type { UpdateFolderInput } from "./types";
 import {
   createFolderBody,
   folderIdParams,
@@ -46,11 +47,11 @@ export function registerFolderRoutes(app: Elysia) {
       "/folders/:folderId",
       async (context) => {
         const { body, db, logger, params, userId } = v1HandlerContext<
-          { name: string },
+          UpdateFolderInput,
           Record<string, unknown>,
           { folderId: string }
         >(context);
-        const updated = await updateFolder(db, userId, params.folderId, body.name);
+        const updated = await updateFolder(db, userId, params.folderId, body);
         logger.info("folders.updated", { userId, folderId: params.folderId });
         return updated;
       },
