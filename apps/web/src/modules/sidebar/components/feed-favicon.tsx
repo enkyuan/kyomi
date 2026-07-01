@@ -1,7 +1,7 @@
 "use client";
 
 import { getSvgPath } from "figma-squircle";
-import { RssFill } from "@mingcute/react";
+import { Rss2Fill } from "@mingcute/react";
 import { cn } from "@lib/utils";
 import {
   useEffect,
@@ -12,8 +12,8 @@ import {
   type ReactElement,
   type ReactNode,
 } from "react";
-import { useFeedFavicon } from "../hooks/use-feed-favicon";
-import { prewarmFaviconUrl } from "../lib/favicon-cache";
+import { useFavicon } from "@hooks/use-favicon";
+import { prewarmFaviconUrl } from "@lib/favicon-cache";
 
 type FeedFaviconShape = "rounded" | "squircle";
 type FeedFaviconPriority = "high" | "normal" | "low";
@@ -41,33 +41,39 @@ export function FeedFavicon({
   squircleCornerRadius = 6,
   squircleCornerSmoothing = 1,
 }: FeedFaviconProps) {
-  const { faviconUrl, failCurrentFavicon, handleLoad } = useFeedFavicon({
+  const { faviconUrl, failCurrentFavicon, handleLoad } = useFavicon({
     faviconUrl: storedFaviconUrl,
     feedUrl,
     siteUrl,
   });
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [loadedFaviconUrl, setLoadedFaviconUrl] = useState<string | null>(null);
   const imageRef = useRef<HTMLImageElement | null>(null);
-  const wrapperRef = useRef<HTMLSpanElement | null>(null);
+  const [wrapper, setWrapper] = useState<HTMLSpanElement | null>(null);
   const [wrapperSize, setWrapperSize] = useState({ width: 0, height: 0 });
+  const isLoaded = faviconUrl !== null && loadedFaviconUrl === faviconUrl;
 
   useEffect(() => {
-    setIsLoaded(false);
     prewarmFaviconUrl(faviconUrl, priority);
-
-    const image = imageRef.current;
-    if (image?.complete && image.naturalWidth > 0 && image.naturalHeight > 0) {
-      setIsLoaded(handleLoad(image.naturalWidth, image.naturalHeight));
-    }
   }, [faviconUrl, priority]);
 
   useEffect(() => {
-    if (shape !== "squircle") {
+    const image = imageRef.current;
+    if (
+      !faviconUrl ||
+      loadedFaviconUrl === faviconUrl ||
+      !image?.complete ||
+      image.naturalWidth <= 0 ||
+      image.naturalHeight <= 0
+    ) {
       return;
     }
 
-    const wrapper = wrapperRef.current;
-    if (!wrapper) {
+    handleLoad(image.naturalWidth, image.naturalHeight);
+    setLoadedFaviconUrl(faviconUrl);
+  }, [faviconUrl, handleLoad, loadedFaviconUrl]);
+
+  useEffect(() => {
+    if (shape !== "squircle" || !wrapper) {
       return;
     }
 
@@ -78,7 +84,6 @@ export function FeedFavicon({
       });
     };
 
-    updateSize();
     if (typeof ResizeObserver === "undefined") {
       return;
     }
@@ -87,7 +92,7 @@ export function FeedFavicon({
     observer.observe(wrapper);
 
     return () => observer.disconnect();
-  }, [shape]);
+  }, [shape, wrapper]);
 
   const mediaClassName = "size-full";
   const squirclePath = useMemo(() => {
@@ -117,7 +122,7 @@ export function FeedFavicon({
     return (
       <span
         data-squircle={shape === "squircle" ? squircleCornerRadius : undefined}
-        ref={wrapperRef}
+        ref={setWrapper}
         className={wrapperClassName}
         style={squircleStyle}
       >
@@ -127,7 +132,7 @@ export function FeedFavicon({
   };
 
   if (!faviconUrl) {
-    const fallback = <RssFill className={className} aria-label={`${title} feed`} />;
+    const fallback = <Rss2Fill className={className} aria-label={`${title} feed`} />;
 
     return shape === "squircle" ? wrapFavicon(fallback) : fallback;
   }
@@ -145,13 +150,15 @@ export function FeedFavicon({
       )}
       decoding="async"
       fetchPriority={fetchPriority}
+      key={faviconUrl}
       loading={loading}
       ref={imageRef}
       referrerPolicy="strict-origin-when-cross-origin"
       src={faviconUrl}
       onLoad={(event) => {
         const image = event.currentTarget;
-        setIsLoaded(handleLoad(image.naturalWidth, image.naturalHeight));
+        handleLoad(image.naturalWidth, image.naturalHeight);
+        setLoadedFaviconUrl(faviconUrl);
       }}
       onError={failCurrentFavicon}
     />
@@ -159,7 +166,7 @@ export function FeedFavicon({
 
   return wrapFavicon(
     <>
-      <RssFill
+      <Rss2Fill
         aria-hidden="true"
         className="absolute inset-[20%] size-[60%] text-muted-foreground/80"
       />

@@ -1,6 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useEffectEvent, useMemo, useRef } from "react";
+import {
+  useCallback,
+  useEffect,
+  useEffectEvent,
+  useMemo,
+  useRef,
+  useSyncExternalStore,
+} from "react";
 import type { ReaderLayoutMode } from "../core/types";
 import { mountReaderLinkPreviewCards } from "./components/link-preview-card";
 import { prepareArticleHtml } from "./html/string-prep";
@@ -17,6 +24,26 @@ function updateReaderLinkTargets(node: HTMLElement, openLinksInNewTab: boolean) 
     }
     anchor.removeAttribute("target");
   });
+}
+
+function subscribeHydration() {
+  return () => {};
+}
+
+function getClientHydratedSnapshot() {
+  return true;
+}
+
+function getServerHydratedSnapshot() {
+  return false;
+}
+
+function useHydrated() {
+  return useSyncExternalStore(
+    subscribeHydration,
+    getClientHydratedSnapshot,
+    getServerHydratedSnapshot,
+  );
 }
 
 export function RenderHtml({
@@ -36,7 +63,11 @@ export function RenderHtml({
   const enhancementRunRef = useRef(0);
   const cancelScheduledEnhancementRef = useRef<(() => void) | null>(null);
   const linkPreviewCleanupsRef = useRef<(() => void)[]>([]);
-  const prepared = useMemo(() => prepareArticleHtml(html, baseUrl), [html, baseUrl]);
+  const isHydrated = useHydrated();
+  const prepared = useMemo(
+    () => (isHydrated ? prepareArticleHtml(html, baseUrl) : ""),
+    [baseUrl, html, isHydrated],
+  );
 
   const disposeAllLinkPreviewMounts = useCallback(() => {
     for (let i = linkPreviewCleanupsRef.current.length - 1; i >= 0; i -= 1) {

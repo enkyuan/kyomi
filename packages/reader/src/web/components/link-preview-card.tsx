@@ -39,14 +39,9 @@ function ReaderLinkPreviewCard({
 
   return (
     <PreviewCardPrimitive.Root>
-      <PreviewCardPrimitive.Trigger
-        delay={280}
-        render={
-          <a {...anchorProps} title={nativeTitle}>
-            {anchorText}
-          </a>
-        }
-      />
+      <PreviewCardPrimitive.Trigger {...anchorProps} delay={280} title={nativeTitle}>
+        {anchorText}
+      </PreviewCardPrimitive.Trigger>
       <PreviewCardPrimitive.Portal>
         <PreviewCardPrimitive.Positioner align="start" className="z-50" sideOffset={8}>
           <PreviewCardPrimitive.Popup className="relative flex w-72 origin-(--transform-origin) flex-col gap-0 rounded-lg border border-border bg-popover p-3 text-balance text-popover-foreground text-sm shadow-lg/5 transition-[scale,opacity] data-ending-style:scale-98 data-starting-style:scale-98 data-ending-style:opacity-0 data-starting-style:opacity-0">

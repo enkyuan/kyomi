@@ -8,7 +8,7 @@ type ViewportMetrics = {
   hasVerticalOverflow: boolean;
 };
 
-export function useViewportMetrics(
+export function useViewport(
   viewportRef: RefObject<HTMLElement | null>,
   dependencies: unknown[] = [],
 ) {

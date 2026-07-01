@@ -13,6 +13,7 @@ import { Route as RegisterRouteImport } from './routes/register'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as InboxIndexRouteImport } from './routes/inbox/index'
+import { Route as InboxArticleRouteImport } from './routes/inbox/$article'
 import { Route as ApiFaviconRouteImport } from './routes/api/favicon'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
@@ -36,6 +37,11 @@ const InboxIndexRoute = InboxIndexRouteImport.update({
   path: '/inbox/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InboxArticleRoute = InboxArticleRouteImport.update({
+  id: '/inbox/$article',
+  path: '/inbox/$article',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiFaviconRoute = ApiFaviconRouteImport.update({
   id: '/api/favicon',
   path: '/api/favicon',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/mcp': typeof McpRoute
   '/register': typeof RegisterRoute
   '/api/favicon': typeof ApiFaviconRoute
+  '/inbox/$article': typeof InboxArticleRoute
   '/inbox/': typeof InboxIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/mcp': typeof McpRoute
   '/register': typeof RegisterRoute
   '/api/favicon': typeof ApiFaviconRoute
+  '/inbox/$article': typeof InboxArticleRoute
   '/inbox': typeof InboxIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/mcp': typeof McpRoute
   '/register': typeof RegisterRoute
   '/api/favicon': typeof ApiFaviconRoute
+  '/inbox/$article': typeof InboxArticleRoute
   '/inbox/': typeof InboxIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
@@ -79,16 +88,25 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/register'
     | '/api/favicon'
+    | '/inbox/$article'
     | '/inbox/'
     | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/mcp' | '/register' | '/api/favicon' | '/inbox' | '/api/auth/$'
+  to:
+    | '/'
+    | '/mcp'
+    | '/register'
+    | '/api/favicon'
+    | '/inbox/$article'
+    | '/inbox'
+    | '/api/auth/$'
   id:
     | '__root__'
     | '/'
     | '/mcp'
     | '/register'
     | '/api/favicon'
+    | '/inbox/$article'
     | '/inbox/'
     | '/api/auth/$'
   fileRoutesById: FileRoutesById
@@ -98,6 +116,7 @@ export interface RootRouteChildren {
   McpRoute: typeof McpRoute
   RegisterRoute: typeof RegisterRoute
   ApiFaviconRoute: typeof ApiFaviconRoute
+  InboxArticleRoute: typeof InboxArticleRoute
   InboxIndexRoute: typeof InboxIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
@@ -132,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InboxIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/inbox/$article': {
+      id: '/inbox/$article'
+      path: '/inbox/$article'
+      fullPath: '/inbox/$article'
+      preLoaderRoute: typeof InboxArticleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/favicon': {
       id: '/api/favicon'
       path: '/api/favicon'
@@ -154,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   McpRoute: McpRoute,
   RegisterRoute: RegisterRoute,
   ApiFaviconRoute: ApiFaviconRoute,
+  InboxArticleRoute: InboxArticleRoute,
   InboxIndexRoute: InboxIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
 }

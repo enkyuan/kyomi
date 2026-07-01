@@ -8,7 +8,7 @@ export const userPreferences = pgTable("user_preferences", {
     .references(() => users.id, { onDelete: "cascade" }),
   readerMode: text("reader_mode").notNull().default("smart"),
   theme: text("theme"),
-  inboxDefaultView: text("inbox_default_view").notNull().default("today"),
+  inboxDefaultView: text("inbox_default_view").notNull().default("my-feed"),
   inboxDensity: text("inbox_density").notNull().default("comfortable"),
   articleOpenBehavior: text("article_open_behavior").notNull().default("split"),
   inboxMarkReadBehavior: text("inbox_mark_read_behavior").notNull().default("on-open"),

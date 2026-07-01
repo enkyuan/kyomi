@@ -7,7 +7,7 @@ export interface KyomiLogoProps extends Omit<React.SVGProps<SVGSVGElement>, "wid
 export function KyomiLogo({
   size = 24,
   className,
-  fill = "#A8D480",
+  fill = "oklch(0.819 0.121 131.147)",
   ...props
 }: KyomiLogoProps): React.ReactElement {
   return (

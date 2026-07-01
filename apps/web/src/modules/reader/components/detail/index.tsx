@@ -11,7 +11,9 @@ import { LeftFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
 import { useReaderPreferences } from "@modules/reader/hooks/use-reader-preferences";
 import { readerViewportContentInsetClass } from "@modules/reader/lib/detail-inset";
-import type { CSSProperties } from "react";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 const EMPTY_STATE_BODY_COPY =
   "Stories from your feeds appear here so you can preview them before opening the original source.";
@@ -31,6 +33,25 @@ const DETAIL_BLUR_STRIPS = [
   { blur: "1.1px", start: 38, end: 56, opacity: 0.11 },
   { blur: "0.6px", start: 46, end: 64, opacity: 0.09 },
 ] as const;
+
+type ArticleStepDirection = 1 | -1;
+
+const ARTICLE_REEL_OFFSET = 56;
+
+const articleReelVariants = {
+  initial: (direction: ArticleStepDirection) => ({
+    opacity: 0,
+    y: direction * ARTICLE_REEL_OFFSET,
+  }),
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+  exit: (direction: ArticleStepDirection) => ({
+    opacity: 0,
+    y: direction * -ARTICLE_REEL_OFFSET,
+  }),
+};
 
 function createDetailBlurMask(start: number, end: number): string {
   const clampedStart = Math.max(0, start);
@@ -55,6 +76,10 @@ export type ReaderDetailState =
   | { status: "error"; error: unknown }
   | { status: "empty" };
 
+export type DetailHeaderState = {
+  readerControlsCollapsed: boolean;
+};
+
 export interface DetailViewProps {
   detailState: ReaderDetailState;
   showFavicons: boolean;
@@ -62,6 +87,10 @@ export interface DetailViewProps {
   timestampHourCycle: "12h" | "24h";
   showBackToList?: boolean;
   onBackToList?: () => void;
+  surface?: "card" | "inbox";
+  header?: ReactNode | ((state: DetailHeaderState) => ReactNode);
+  articleContentKey?: string;
+  articleStepDirection?: ArticleStepDirection;
 }
 
 export function Detail({
@@ -71,25 +100,106 @@ export function Detail({
   timestampHourCycle,
   showBackToList = false,
   onBackToList,
+  surface = "card",
+  header,
+  articleContentKey,
+  articleStepDirection = 1,
 }: DetailViewProps) {
   const { preferences } = useReaderPreferences();
+  const viewportRef = useRef<HTMLDivElement | null>(null);
+  const [readerControlsCollapsed, setReaderControlsCollapsed] = useState(false);
+  const isInboxSurface = surface === "inbox";
   const isNarrowContent = preferences.contentWidth === "narrow";
   const blurTopOffset = showBackToList ? DETAIL_BACK_BUTTON_BLUR_OFFSET : 0;
   const selectedItem = detailState.status === "selected" ? detailState.item : null;
+  const selectedItemId = selectedItem?.id;
+  const selectedContentKey = articleContentKey ?? selectedItem?.id;
   const viewportContentInset =
     selectedItem &&
-    readerViewportContentInsetClass({
-      showBackToList,
-      contentWidth: preferences.contentWidth,
-    });
+    (isInboxSurface
+      ? "box-border w-full min-w-0 pl-8 pr-7"
+      : readerViewportContentInsetClass({
+          showBackToList,
+          contentWidth: preferences.contentWidth,
+        }));
+
+  useEffect(() => {
+    if (!selectedItemId) {
+      return;
+    }
+    viewportRef.current?.scrollTo({ top: 0 });
+    setReaderControlsCollapsed(false);
+  }, [selectedItemId]);
+
+  useEffect(() => {
+    if (!isInboxSurface || !selectedItemId) {
+      return;
+    }
+
+    const viewport = viewportRef.current;
+    if (!viewport) {
+      return;
+    }
+
+    let previousScrollTop = viewport.scrollTop;
+    let frameId: number | null = null;
+
+    const updateCollapsedState = () => {
+      frameId = null;
+      const nextScrollTop = viewport.scrollTop;
+      const delta = nextScrollTop - previousScrollTop;
+      previousScrollTop = nextScrollTop;
+
+      if (nextScrollTop < 16) {
+        setReaderControlsCollapsed(false);
+        return;
+      }
+      if (delta > 6) {
+        setReaderControlsCollapsed(true);
+        return;
+      }
+      if (delta < -6) {
+        setReaderControlsCollapsed(false);
+      }
+    };
+
+    const handleScroll = () => {
+      if (frameId !== null) {
+        return;
+      }
+      frameId = window.requestAnimationFrame(updateCollapsedState);
+    };
+
+    viewport.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      viewport.removeEventListener("scroll", handleScroll);
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
+  }, [isInboxSurface, selectedItemId]);
+
+  const renderedHeader =
+    typeof header === "function" ? header({ readerControlsCollapsed }) : header;
+
   return (
-    <section className="flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground md:min-h-0">
+    <section
+      className={cn(
+        "flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden md:min-h-0",
+        isInboxSurface
+          ? "rounded-none border-0 bg-transparent text-foreground"
+          : "rounded-2xl border border-border bg-card text-card-foreground shadow-sm/5 supports-[-webkit-touch-callout:none]:rounded-[1.75rem]",
+      )}
+    >
       <ScrollAreaPrimitive.Root className="relative min-h-0 flex-1 overflow-hidden">
         <ScrollAreaPrimitive.Viewport
+          ref={viewportRef}
           className="h-full overflow-x-hidden outline-none scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain scroll-mask-b-from-88%"
           data-reader-detail-viewport=""
           data-slot="scroll-area-viewport"
         >
+          {renderedHeader}
           <div
             data-reader-detail-content=""
             className={cn(
@@ -99,75 +209,20 @@ export function Detail({
               detailState.status === "selected" && !isNarrowContent && "min-h-full",
             )}
           >
-            {detailState.status === "selected" ? (
-              <>
-                {showBackToList ? (
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    size="lg"
-                    className="mb-3 max-md:aspect-square max-md:px-0 md:h-8 md:gap-2 md:px-[calc(--spacing(2.5)-1px)]"
-                    onClick={onBackToList}
-                    aria-label="Back to feed"
-                  >
-                    <LeftFill className="size-4" />
-                    <span className="hidden md:inline">Back to feed</span>
-                  </Button>
-                ) : null}
-                <Article
-                  item={detailState.item}
-                  showFavicons={showFavicons}
-                  timestampDisplay={timestampDisplay}
-                  timestampHourCycle={timestampHourCycle}
-                  readerFocusMode={showBackToList}
-                />
-              </>
-            ) : detailState.status === "loading" ? (
-              <div className="flex min-h-0 flex-1 flex-col gap-5 p-12">
-                <div className="space-y-3">
-                  <Skeleton className="h-3 w-24 rounded" />
-                  <Skeleton className="h-6 w-3/4 rounded" />
-                  <Skeleton className="h-6 w-1/2 rounded" />
-                  <Skeleton className="h-4 w-32 rounded" />
-                </div>
-                <div className="space-y-2.5">
-                  <Skeleton className="h-4 w-full rounded" />
-                  <Skeleton className="h-4 w-[94%] rounded" />
-                  <Skeleton className="h-4 w-[88%] rounded" />
-                  <Skeleton className="h-4 w-full rounded" />
-                  <Skeleton className="h-4 w-[91%] rounded" />
-                  <Skeleton className="h-4 w-[85%] rounded" />
-                </div>
-                <div className="space-y-2.5">
-                  <Skeleton className="h-4 w-[96%] rounded" />
-                  <Skeleton className="h-4 w-full rounded" />
-                  <Skeleton className="h-4 w-[90%] rounded" />
-                </div>
-              </div>
-            ) : detailState.status === "error" ? (
-              <div className="flex h-full min-h-72 flex-col items-center justify-center gap-3 px-6 py-10 text-center">
-                <p className="text-base font-semibold text-foreground">Couldn't load article</p>
-                <p className="text-sm text-muted-foreground">
-                  {getUserSafeErrorMessage(
-                    detailState.error,
-                    "There was a problem loading this item.",
-                  )}
-                </p>
-              </div>
-            ) : (
-              <div className="flex h-full min-h-72 w-full flex-col items-center justify-center gap-5 px-6 py-10 text-center">
-                <EmptyStateIcon className="size-40 shrink-0 sm:size-44" size={176} />
-                <div className="w-full max-w-136 space-y-2">
-                  <p className="text-base font-semibold text-foreground">
-                    Select an item to start reading
-                  </p>
-                  <BalancedEmptyStateBody text={EMPTY_STATE_BODY_COPY} />
-                </div>
-              </div>
-            )}
+            <DetailContent
+              detailState={detailState}
+              showFavicons={showFavicons}
+              timestampDisplay={timestampDisplay}
+              timestampHourCycle={timestampHourCycle}
+              showBackToList={showBackToList}
+              onBackToList={onBackToList}
+              isInboxSurface={isInboxSurface}
+              selectedContentKey={selectedContentKey}
+              articleStepDirection={articleStepDirection}
+            />
           </div>
         </ScrollAreaPrimitive.Viewport>
-        {selectedItem ? (
+        {selectedItem && !isInboxSurface ? (
           <div
             className="pointer-events-none absolute inset-x-0 z-10 overflow-hidden"
             style={{
@@ -193,9 +248,201 @@ export function Detail({
             ))}
           </div>
         ) : null}
-        {selectedItem ? <ScrollBar className="z-50" orientation="vertical" /> : null}
+        {selectedItem ? (
+          <ScrollBar
+            aria-label="Reader scrollbar"
+            className={cn(
+              "z-50",
+              isInboxSurface &&
+                "!fixed !top-0 !right-0 !bottom-0 !left-auto !h-auto !inset-inline-end-0",
+            )}
+            orientation="vertical"
+          />
+        ) : null}
       </ScrollAreaPrimitive.Root>
     </section>
+  );
+}
+
+function DetailContent({
+  detailState,
+  showFavicons,
+  timestampDisplay,
+  timestampHourCycle,
+  showBackToList,
+  onBackToList,
+  isInboxSurface,
+  selectedContentKey,
+  articleStepDirection,
+}: {
+  detailState: ReaderDetailState;
+  showFavicons: boolean;
+  timestampDisplay: InboxTimestampDisplayDto;
+  timestampHourCycle: "12h" | "24h";
+  showBackToList: boolean;
+  onBackToList?: () => void;
+  isInboxSurface: boolean;
+  selectedContentKey?: string;
+  articleStepDirection: ArticleStepDirection;
+}) {
+  switch (detailState.status) {
+    case "selected": {
+      const content = (
+        <SelectedArticleContent
+          item={detailState.item}
+          showFavicons={showFavicons}
+          timestampDisplay={timestampDisplay}
+          timestampHourCycle={timestampHourCycle}
+          showBackToList={showBackToList}
+          onBackToList={onBackToList}
+          isInboxSurface={isInboxSurface}
+        />
+      );
+
+      return selectedContentKey ? (
+        <AnimatedArticleContent
+          contentKey={selectedContentKey}
+          articleStepDirection={articleStepDirection}
+        >
+          {content}
+        </AnimatedArticleContent>
+      ) : (
+        content
+      );
+    }
+    case "loading":
+      return <LoadingDetailContent />;
+    case "error":
+      return <ErrorDetailContent error={detailState.error} />;
+    case "empty":
+      return <EmptyDetailContent />;
+  }
+}
+
+function SelectedArticleContent({
+  item,
+  showFavicons,
+  timestampDisplay,
+  timestampHourCycle,
+  showBackToList,
+  onBackToList,
+  isInboxSurface,
+}: {
+  item: ArticleDetailDto;
+  showFavicons: boolean;
+  timestampDisplay: InboxTimestampDisplayDto;
+  timestampHourCycle: "12h" | "24h";
+  showBackToList: boolean;
+  onBackToList?: () => void;
+  isInboxSurface: boolean;
+}) {
+  return (
+    <>
+      {showBackToList ? (
+        <Button
+          type="button"
+          variant="ghost"
+          size="lg"
+          className="mb-3 max-md:aspect-square max-md:px-0 md:h-8 md:gap-2 md:px-[calc(--spacing(2.5)-1px)]"
+          onClick={onBackToList}
+          aria-label="Back to feed"
+        >
+          <LeftFill className="size-4" />
+          <span className="hidden md:inline">Back to feed</span>
+        </Button>
+      ) : null}
+      <Article
+        item={item}
+        showFavicons={showFavicons}
+        timestampDisplay={timestampDisplay}
+        timestampHourCycle={timestampHourCycle}
+        readerFocusMode={showBackToList || isInboxSurface}
+        hideInlineToolbar={isInboxSurface}
+      />
+    </>
+  );
+}
+
+function AnimatedArticleContent({
+  contentKey,
+  articleStepDirection,
+  children,
+}: {
+  contentKey: string;
+  articleStepDirection: ArticleStepDirection;
+  children: ReactNode;
+}) {
+  const prefersReducedMotion = useReducedMotion();
+  const articleReelTransition = prefersReducedMotion
+    ? { duration: 0 }
+    : { type: "spring" as const, duration: 0.3, bounce: 0 };
+
+  return (
+    <LazyMotion features={domAnimation}>
+      <AnimatePresence initial={false} mode="popLayout" custom={articleStepDirection}>
+        <m.div
+          key={contentKey}
+          custom={articleStepDirection}
+          className="min-w-0"
+          variants={articleReelVariants}
+          initial={prefersReducedMotion ? false : "initial"}
+          animate="animate"
+          exit={prefersReducedMotion ? undefined : "exit"}
+          transition={articleReelTransition}
+        >
+          {children}
+        </m.div>
+      </AnimatePresence>
+    </LazyMotion>
+  );
+}
+
+function LoadingDetailContent() {
+  return (
+    <div className="flex min-h-0 flex-1 flex-col gap-5 p-12">
+      <div className="space-y-3">
+        <Skeleton className="h-3 w-24 rounded" />
+        <Skeleton className="h-6 w-3/4 rounded" />
+        <Skeleton className="h-6 w-1/2 rounded" />
+        <Skeleton className="h-4 w-32 rounded" />
+      </div>
+      <div className="space-y-2.5">
+        <Skeleton className="h-4 w-full rounded" />
+        <Skeleton className="h-4 w-[94%] rounded" />
+        <Skeleton className="h-4 w-[88%] rounded" />
+        <Skeleton className="h-4 w-full rounded" />
+        <Skeleton className="h-4 w-[91%] rounded" />
+        <Skeleton className="h-4 w-[85%] rounded" />
+      </div>
+      <div className="space-y-2.5">
+        <Skeleton className="h-4 w-[96%] rounded" />
+        <Skeleton className="h-4 w-full rounded" />
+        <Skeleton className="h-4 w-[90%] rounded" />
+      </div>
+    </div>
+  );
+}
+
+function ErrorDetailContent({ error }: { error: unknown }) {
+  return (
+    <div className="flex h-full min-h-72 flex-col items-center justify-center gap-3 px-6 py-10 text-center">
+      <p className="text-base font-semibold text-foreground">Couldn't load article</p>
+      <p className="text-sm text-muted-foreground">
+        {getUserSafeErrorMessage(error, "There was a problem loading this item.")}
+      </p>
+    </div>
+  );
+}
+
+function EmptyDetailContent() {
+  return (
+    <div className="flex h-full min-h-72 w-full flex-col items-center justify-center gap-5 px-6 py-10 text-center">
+      <EmptyStateIcon className="size-40 shrink-0 sm:size-44" size={176} />
+      <div className="w-full max-w-136 space-y-2">
+        <p className="text-base font-semibold text-foreground">Select an item to start reading</p>
+        <BalancedEmptyStateBody text={EMPTY_STATE_BODY_COPY} />
+      </div>
+    </div>
   );
 }
 

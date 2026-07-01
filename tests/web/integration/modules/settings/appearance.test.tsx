@@ -26,7 +26,7 @@ vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
   useInboxPreferences: () => ({
     limits: { minFontSizePx: 14, maxFontSizePx: 20 },
     defaults: {
-      inboxDefaultView: "today",
+      inboxDefaultView: "my-feed",
       inboxDensity: "comfortable",
       articleOpenBehavior: "split",
       inboxMarkReadBehavior: "on-open",
@@ -37,7 +37,7 @@ vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
       inboxShowFavicons: true,
     },
     preferences: {
-      inboxDefaultView: "today",
+      inboxDefaultView: "my-feed",
       inboxDensity: "comfortable",
       articleOpenBehavior: "split",
       inboxMarkReadBehavior: "on-open",
@@ -138,9 +138,9 @@ describe("AppearancePagePanel", () => {
   test("updates inbox default view preferences from the merged page", () => {
     render(<AppearancePagePanel />);
 
-    fireEvent.click(screen.getByRole("button", { name: "All unread" }));
+    fireEvent.click(screen.getByRole("button", { name: "Read later" }));
 
-    expect(setInboxPreferencesMock).toHaveBeenCalledWith({ inboxDefaultView: "unread" });
+    expect(setInboxPreferencesMock).toHaveBeenCalledWith({ inboxDefaultView: "saved" });
   });
 
   test("shows relative timestamp display as the default-first option", () => {

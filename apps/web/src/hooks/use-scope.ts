@@ -3,7 +3,7 @@
 import { useLocation } from "@tanstack/react-router";
 import { isInboxPathname } from "@modules/inbox/lib/navigation";
 
-export function useInboxScope() {
+export function useScope() {
   const location = useLocation();
   const isInbox = isInboxPathname(location.pathname);
 

@@ -1,7 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useReducer } from "react";
 import { Link } from "@tanstack/react-router";
 import { AddFill, Message3Fill, Settings1Fill } from "@mingcute/react";
 import { KyomiLogo, PremiumIcon } from "@kyomi/ui/icons";
@@ -17,7 +17,8 @@ import {
 } from "@kyomi/ui/sidebar";
 import { cn } from "@lib/utils";
 import { lazyNamed } from "@lib/lazy-named";
-import { useInboxScope } from "@hooks/use-inbox-scope";
+import { useScope } from "@hooks/use-scope";
+import { INBOX_PREVIOUS_FEED_ID_STATE_KEY } from "@modules/inbox/lib/feed-history";
 import { APP_SIDEBAR_WIDTH } from "../lib/constants";
 import { useAppSidebar } from "../hooks/use-app-sidebar";
 import { usePinnedSection } from "../hooks/use-pinned-section";
@@ -34,33 +35,89 @@ const SourcesDialog = lazyNamed(
   "SourcesDialog",
 );
 
+const CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS = cn(
+  "size-11 justify-center rounded-full! p-0",
+  "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-border))]",
+  "active:scale-[0.96] active:bg-sidebar-accent active:text-sidebar-accent-foreground active:shadow-[0_0_0_1px_hsl(var(--sidebar-border))]",
+  "motion-reduce:active:scale-100",
+  "group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!",
+);
+
+type AppSidebarDialogState = {
+  settingsDialogLoaded: boolean;
+  sourcesOpen: boolean;
+  sourcesDialogLoaded: boolean;
+  feedbackOpen: boolean;
+  feedbackDialogLoaded: boolean;
+};
+
+type AppSidebarDialogAction =
+  | { type: "load-settings-dialog" }
+  | { type: "load-sources-dialog" }
+  | { type: "load-feedback-dialog" }
+  | { type: "set-sources-open"; open: boolean }
+  | { type: "set-feedback-open"; open: boolean };
+
+const INITIAL_DIALOG_STATE: AppSidebarDialogState = {
+  settingsDialogLoaded: false,
+  sourcesOpen: false,
+  sourcesDialogLoaded: false,
+  feedbackOpen: false,
+  feedbackDialogLoaded: false,
+};
+
+function dialogStateReducer(
+  state: AppSidebarDialogState,
+  action: AppSidebarDialogAction,
+): AppSidebarDialogState {
+  switch (action.type) {
+    case "load-settings-dialog":
+      return state.settingsDialogLoaded ? state : { ...state, settingsDialogLoaded: true };
+    case "load-sources-dialog":
+      return state.sourcesDialogLoaded ? state : { ...state, sourcesDialogLoaded: true };
+    case "load-feedback-dialog":
+      return state.feedbackDialogLoaded ? state : { ...state, feedbackDialogLoaded: true };
+    case "set-sources-open":
+      return state.sourcesOpen === action.open ? state : { ...state, sourcesOpen: action.open };
+    case "set-feedback-open":
+      return state.feedbackOpen === action.open ? state : { ...state, feedbackOpen: action.open };
+  }
+}
+
 export function AppSidebar({ className, style }: { className?: string; style?: CSSProperties }) {
   const { platform, settingsOpen, setSettingsOpen } = useAppSidebar();
   const { followedFeedsData } = usePinnedSection();
-  const { isInbox, scopedFeedId } = useInboxScope();
+  const { isInbox, scopedFeedId } = useScope();
   const { prefetchOnFocus, prefetchOnPointerEnter } = useInboxPrefetch();
 
-  const [settingsDialogLoaded, setSettingsDialogLoaded] = useState(false);
-  const [sourcesOpen, setSourcesOpen] = useState(false);
-  const [sourcesDialogLoaded, setSourcesDialogLoaded] = useState(false);
-  const [feedbackOpen, setFeedbackOpen] = useState(false);
-  const [feedbackDialogLoaded, setFeedbackDialogLoaded] = useState(false);
+  const [dialogState, dispatchDialogState] = useReducer(
+    dialogStateReducer,
+    INITIAL_DIALOG_STATE,
+  );
 
   useEffect(() => {
     if (settingsOpen) {
-      setSettingsDialogLoaded(true);
+      dispatchDialogState({ type: "load-settings-dialog" });
       void SettingsDialog.preload();
     }
   }, [settingsOpen]);
 
   const preloadFeedbackDialog = () => {
-    setFeedbackDialogLoaded(true);
+    dispatchDialogState({ type: "load-feedback-dialog" });
     void FeedbackDialog.preload();
   };
 
   const preloadSourcesDialog = () => {
-    setSourcesDialogLoaded(true);
+    dispatchDialogState({ type: "load-sources-dialog" });
     void SourcesDialog.preload();
+  };
+
+  const setSourcesOpen = (open: boolean) => {
+    dispatchDialogState({ type: "set-sources-open", open });
+  };
+
+  const setFeedbackOpen = (open: boolean) => {
+    dispatchDialogState({ type: "set-feedback-open", open });
   };
 
   const feeds = followedFeedsData ?? [];
@@ -73,13 +130,13 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       className={cn("h-svh bg-sidebar", className)}
       style={{ "--sidebar-width": APP_SIDEBAR_WIDTH, ...style } as CSSProperties}
     >
-      <SidebarHeader className="items-center px-0 pt-[18px] pb-[18px]">
-        <SidebarMenu className="gap-[17px]">
+      <SidebarHeader className="items-center px-0 py-4.5">
+        <SidebarMenu className="gap-4.25">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Kyomi"
               className="size-11 justify-center rounded-full! p-0 hover:bg-transparent active:bg-transparent group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
-              render={<Link to="/inbox" search={{ filter: "all" as const }} />}
+              render={<Link to="/inbox" search={{ filter: "my-feed" as const }} />}
             >
               <KyomiLogo size={24} className="size-auto" />
             </SidebarMenuButton>
@@ -88,10 +145,10 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
             <SidebarMenuButton
               tooltip="Add feed"
               variant="secondary"
-              className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
+              className={CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS}
               onClick={() => {
                 preloadSourcesDialog();
-                setSourcesOpen(true);
+                dispatchDialogState({ type: "set-sources-open", open: true });
               }}
               onFocus={preloadSourcesDialog}
               onPointerEnter={preloadSourcesDialog}
@@ -112,7 +169,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
                   <SidebarMenuButton
                     tooltip={feed.title || feed.url}
                     variant="secondary"
-                    className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
+                    className="size-11 justify-center overflow-visible! rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
                     isActive={isActive}
                     onFocus={prefetchOnFocus(feed.feedId)}
                     onPointerEnter={prefetchOnPointerEnter(feed.feedId)}
@@ -126,15 +183,24 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
                           folderId: undefined,
                           itemId: undefined,
                         })}
+                        state={(prev) => ({
+                          ...prev,
+                          [INBOX_PREVIOUS_FEED_ID_STATE_KEY]:
+                            scopedFeedId && scopedFeedId !== feed.feedId
+                              ? scopedFeedId
+                              : undefined,
+                        })}
                       />
                     }
                   >
                     <FeedFavicon
-                      className="size-11 shrink-0 rounded-full"
+                      className="size-11 shrink-0"
                       faviconUrl={feed.faviconUrl}
                       feedUrl={feed.url}
                       priority="high"
+                      shape="squircle"
                       siteUrl={feed.link}
+                      squircleCornerRadius={10}
                       title={feed.title || feed.url}
                     />
                   </SidebarMenuButton>
@@ -145,13 +211,13 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         </ScrollArea>
       </SidebarContent>
 
-      <SidebarFooter className="items-center px-0 pb-[18px] pt-[18px]">
+      <SidebarFooter className="items-center px-0 py-4.5">
         <SidebarMenu className="items-center gap-3">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Upgrade Plan"
               variant="secondary"
-              className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
+              className={CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS}
               disabled
             >
               <PremiumIcon size={24} />
@@ -161,10 +227,10 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
             <SidebarMenuButton
               tooltip="Feedback"
               variant="secondary"
-              className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
+              className={CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS}
               onClick={() => {
                 preloadFeedbackDialog();
-                setFeedbackOpen(true);
+                dispatchDialogState({ type: "set-feedback-open", open: true });
               }}
               onFocus={preloadFeedbackDialog}
               onPointerEnter={preloadFeedbackDialog}
@@ -176,9 +242,9 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
             <SidebarMenuButton
               tooltip="Settings"
               variant="secondary"
-              className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
+              className={CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS}
               onClick={() => {
-                setSettingsDialogLoaded(true);
+                dispatchDialogState({ type: "load-settings-dialog" });
                 void SettingsDialog.preload();
                 setSettingsOpen(true);
               }}
@@ -190,20 +256,24 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       </SidebarFooter>
 
       <Suspense fallback={null}>
-        {settingsDialogLoaded ? (
+        {dialogState.settingsDialogLoaded ? (
           <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
         ) : null}
-        {sourcesDialogLoaded ? (
+        {dialogState.sourcesDialogLoaded ? (
           <SourcesDialog
             enableGlobalShortcut={false}
             hideTrigger
-            open={sourcesOpen}
+            open={dialogState.sourcesOpen}
             onOpenChange={setSourcesOpen}
             platform={platform}
           />
         ) : null}
-        {feedbackDialogLoaded ? (
-          <FeedbackDialog hideTrigger open={feedbackOpen} onOpenChange={setFeedbackOpen} />
+        {dialogState.feedbackDialogLoaded ? (
+          <FeedbackDialog
+            hideTrigger
+            open={dialogState.feedbackOpen}
+            onOpenChange={setFeedbackOpen}
+          />
         ) : null}
       </Suspense>
     </Sidebar>

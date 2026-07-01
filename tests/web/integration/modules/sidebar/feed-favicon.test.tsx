@@ -1,9 +1,10 @@
 import { buildClientFaviconUrl } from "@kyomi/worker/favicon/browser";
-import { buildFaviconUrlCandidates } from "@modules/sidebar/lib/favicon";
+import { buildFaviconUrlCandidates } from "@lib/favicon";
 import {
   clearFaviconMetadataMemoryCache,
+  writeCachedFaviconHit,
   writeCachedFaviconMiss,
-} from "@modules/sidebar/lib/favicon-cache";
+} from "@lib/favicon-cache";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
@@ -30,7 +31,7 @@ describe("feed favicons", () => {
       "https://example.com/posts",
       "https://example.com/feed.xml",
     );
-    expect(url).toBe("/api/favicon?domain=https%3A%2F%2Fexample.com&v=4");
+    expect(url).toBe("/api/favicon?domain=https%3A%2F%2Fexample.com&v=5");
   });
 
   test("rejects non-http/https feed URLs (no proxy for data:/file: URIs)", () => {
@@ -46,7 +47,7 @@ describe("feed favicons", () => {
     );
 
     expect(urls).toEqual([
-      "/api/favicon?domain=https%3A%2F%2Fexample.com&v=4",
+      "/api/favicon?domain=https%3A%2F%2Fexample.com&v=5",
       "https://cdn.example.com/icon.png",
       "https://example.com/favicon.ico",
     ]);
@@ -55,7 +56,7 @@ describe("feed favicons", () => {
   test("includes direct-origin favicon fallback when stored metadata is missing", () => {
     const urls = buildFaviconUrlCandidates(null, "https://techcrunch.com/news", "https://rss.tc");
     expect(urls).toEqual([
-      "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=4",
+      "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=5",
       "https://techcrunch.com/favicon.ico",
     ]);
   });
@@ -63,7 +64,7 @@ describe("feed favicons", () => {
   test("uses feed origin when site URL is unavailable", () => {
     const urls = buildFaviconUrlCandidates(null, null, "https://feeds.techcrunch.com/rss.xml");
     expect(urls).toEqual([
-      "/api/favicon?domain=https%3A%2F%2Ffeeds.techcrunch.com&v=4",
+      "/api/favicon?domain=https%3A%2F%2Ffeeds.techcrunch.com&v=5",
       "https://feeds.techcrunch.com/favicon.ico",
     ]);
   });
@@ -148,7 +149,7 @@ describe("feed favicons", () => {
 
     const proxyImg = screen.getByRole("img", { name: "TechCrunch favicon" });
     expect(proxyImg.getAttribute("src")).toBe(
-      "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=4",
+      "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=5",
     );
 
     fireEvent.error(proxyImg);
@@ -176,7 +177,7 @@ describe("feed favicons", () => {
     fireEvent.load(proxyImg);
 
     expect(screen.getByRole("img", { name: "TechCrunch favicon" }).getAttribute("src")).toBe(
-      "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=4",
+      "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=5",
     );
     expect(screen.getByRole("img", { name: "TechCrunch favicon" }).className).toContain(
       "opacity-100",
@@ -196,7 +197,7 @@ describe("feed favicons", () => {
 
     const proxyImg = screen.getByRole("img", { name: "TechCrunch favicon" });
     expect(proxyImg.getAttribute("src")).toBe(
-      "/api/favicon?domain=https%3A%2F%2Ffresh.techcrunch.example&v=4",
+      "/api/favicon?domain=https%3A%2F%2Ffresh.techcrunch.example&v=5",
     );
 
     fireEvent.error(proxyImg);
@@ -218,6 +219,50 @@ describe("feed favicons", () => {
 
     expect(screen.getByRole("img", { name: "TechCrunch favicon" }).getAttribute("src")).toBe(
       "https://cdn.techcrunch.example/icon.png",
+    );
+  });
+
+  test("ignores stale cached proxy hits from older proxy versions", () => {
+    writeCachedFaviconHit({
+      origin: "https://techcrunch.com",
+      url: "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=4",
+      width: 256,
+      height: 256,
+    });
+
+    render(
+      <FeedFavicon
+        faviconUrl={null}
+        feedUrl="https://feeds.techcrunch.com/rss.xml"
+        siteUrl="https://techcrunch.com/article"
+        title="TechCrunch"
+      />,
+    );
+
+    expect(screen.getByRole("img", { name: "TechCrunch favicon" }).getAttribute("src")).toBe(
+      "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=5",
+    );
+  });
+
+  test("does not promote cached direct-origin hits over the proxy candidate", () => {
+    writeCachedFaviconHit({
+      origin: "https://techcrunch.com",
+      url: "https://techcrunch.com/favicon.ico",
+      width: 16,
+      height: 16,
+    });
+
+    render(
+      <FeedFavicon
+        faviconUrl={null}
+        feedUrl="https://feeds.techcrunch.com/rss.xml"
+        siteUrl="https://techcrunch.com/article"
+        title="TechCrunch"
+      />,
+    );
+
+    expect(screen.getByRole("img", { name: "TechCrunch favicon" }).getAttribute("src")).toBe(
+      "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=5",
     );
   });
 
@@ -259,7 +304,7 @@ describe("feed favicons", () => {
 
     const proxyImg = screen.getByRole("img", { name: "Hacker News favicon" });
     expect(proxyImg.getAttribute("src")).toBe(
-      "/api/favicon?domain=https%3A%2F%2Fnews.ycombinator.com&v=4",
+      "/api/favicon?domain=https%3A%2F%2Fnews.ycombinator.com&v=5",
     );
 
     fireEvent.error(proxyImg);

@@ -73,10 +73,6 @@ type SidebarInboxCounts = {
   saved: number;
 };
 
-type ScopedUnreadCountResponse = {
-  count: number;
-};
-
 type InboxResponse = {
   items: InboxItem[];
   total: number;
@@ -256,13 +252,8 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
     const { apiJsonValidated, articleCountsSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
-    const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
-      ? Number(data.timezoneOffsetMinutes)
-      : 0;
     const url = buildCountsUrl(
       buildCountsSearchParams({
-        timezoneOffsetMinutes,
-        filter: "today",
         feedId: data.feedId,
         folderId: data.folderId,
       }),
@@ -278,47 +269,4 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
       unread: counts.unread,
       saved: counts.saved,
     };
-  });
-
-export const getInboxViewCount = createServerFn({ method: "GET" })
-  .inputValidator(
-    (input: {
-      filter: InboxFilter;
-      includeRead?: boolean;
-      timezoneOffsetMinutes?: number;
-      feedId?: string;
-      folderId?: string;
-    }) => input,
-  )
-  .handler(async ({ data }): Promise<ScopedUnreadCountResponse> => {
-    const { apiJsonValidated, articleCountsSchema } = await getInboxSchemaModule();
-    const headers = getRequestHeaders();
-    const forwarded = buildForwardHeaders(headers);
-    const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
-      ? Number(data.timezoneOffsetMinutes)
-      : 0;
-    const url = buildCountsUrl(
-      buildCountsSearchParams({
-        timezoneOffsetMinutes,
-        filter: data.filter,
-        includeRead: data.includeRead,
-        feedId: data.feedId,
-        folderId: data.folderId,
-      }),
-    );
-
-    const counts = await apiJsonValidated(articleCountsSchema, () =>
-      apiJson<ArticleCountsResponse>(url, { headers: forwarded }),
-    );
-
-    if (data.filter === "all") {
-      return { count: counts.all ?? 0 };
-    }
-    if (data.filter === "today") {
-      return { count: counts.today ?? 0 };
-    }
-    if (data.filter === "saved") {
-      return { count: counts.saved };
-    }
-    return { count: counts.unread };
   });

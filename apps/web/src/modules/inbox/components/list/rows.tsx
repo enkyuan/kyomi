@@ -69,7 +69,7 @@ export function SkeletonRows({
           >
             <div className="flex items-center justify-between gap-4">
               <div className="flex min-w-0 flex-1 items-center gap-2">
-                {showFavicons ? <Skeleton className="size-5.5 shrink-0 rounded-[4px]" /> : null}
+                {showFavicons ? <Skeleton className="size-5.5 shrink-0 rounded-sm" /> : null}
                 <Skeleton className="h-3.5 w-28 rounded" />
               </div>
               <Skeleton className="h-3.5 w-20 shrink-0 rounded" />

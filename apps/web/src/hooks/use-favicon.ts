@@ -5,7 +5,7 @@ import {
   buildFaviconUrlCandidates,
   firstUsableFaviconIndex,
   nextUsableFaviconIndex,
-} from "../lib/favicon";
+} from "@lib/favicon";
 import {
   canUsePersistentFaviconCache,
   getFaviconCacheOrigin,
@@ -14,13 +14,13 @@ import {
   writeCachedFaviconHit,
   writeCachedFaviconMiss,
   type CachedFaviconMetadata,
-} from "../lib/favicon-cache";
+} from "@lib/favicon-cache";
 
 function isProxyFaviconUrl(url: string) {
   return url.startsWith("/api/favicon?");
 }
 
-export function useFeedFavicon({
+export function useFavicon({
   faviconUrl: storedFaviconUrl,
   feedUrl,
   siteUrl,
@@ -34,11 +34,18 @@ export function useFeedFavicon({
     peekCachedFaviconMetadata(cacheOrigin),
   );
   const candidateUrls = buildFaviconUrlCandidates(storedFaviconUrl, siteUrl, feedUrl);
+  const cachedHitUrl =
+    cacheHint?.origin === cacheOrigin &&
+    cacheHint.status === "hit" &&
+    cacheHint.url &&
+    candidateUrls[0] === cacheHint.url
+      ? cacheHint.url
+      : null;
   const faviconUrls =
     cacheHint?.origin === cacheOrigin && cacheHint.status === "miss"
       ? candidateUrls.filter((url) => !isProxyFaviconUrl(url))
-      : cacheHint?.origin === cacheOrigin && cacheHint.status === "hit" && cacheHint.url
-        ? [cacheHint.url, ...candidateUrls.filter((url) => url !== cacheHint.url)]
+      : cachedHitUrl
+        ? [cachedHitUrl, ...candidateUrls.filter((url) => url !== cachedHitUrl)]
         : candidateUrls;
   const faviconUrlsKey = faviconUrls.join("\n");
   const [prevKey, setPrevKey] = useState(faviconUrlsKey);

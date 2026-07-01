@@ -13,13 +13,14 @@ import { useReaderPreferences, type ReaderContentWidth } from "./use-reader-pref
 import { readerArticleTopInsetClass } from "../lib/detail-inset";
 import { cn } from "@lib/utils";
 
-export type ReaderToolbarMode = "original" | "extracted";
+export type ToolbarMode = "original" | "extracted";
 
-export type ReaderToolbarProps = {
+export type ToolbarProps = {
   isSaved: boolean;
-  activeMode: ReaderToolbarMode;
+  activeMode: ToolbarMode;
   extractedAvailable: boolean;
   contentWidth: ReaderContentWidth;
+  fontSizePx: number;
   canDecreaseFont: boolean;
   canIncreaseFont: boolean;
   /** When true (reader-focused article layout), content width is layout-driven; hide the toggle. */
@@ -29,12 +30,17 @@ export type ReaderToolbarProps = {
   onCycleContentWidth: () => void;
   onDecreaseFontSize: () => void;
   onIncreaseFontSize: () => void;
+  onCopyLink: () => void;
   onOpenOriginal: () => void;
   onOpenAi: () => void;
+  onShareArticle: () => void;
   variant?: "inline" | "floating";
+  controlSize?: "default" | "large";
+  hideFontControls?: boolean;
+  readerFocusVariant?: "full" | "compact";
 };
 
-export type ReaderToolbarModel = {
+export type ToolbarModel = {
   articleClassName: string;
   articleStyle: Record<string, string>;
   canRequestExtraction: boolean;
@@ -48,7 +54,7 @@ export type ReaderToolbarModel = {
   showFailedBanner: boolean;
   floatingToolbarEdge: "top" | "bottom";
   showFloatingToolbar: boolean;
-  toolbarProps: ReaderToolbarProps;
+  toolbarProps: ToolbarProps;
 };
 
 function isFloatingToolbarVisibleForEntry(entry: IntersectionObserverEntry) {
@@ -63,13 +69,15 @@ function isFloatingToolbarVisibleForEntry(entry: IntersectionObserverEntry) {
   return isRendered && isScrolledPast;
 }
 
-export function useReaderToolbarModel({
+export function useToolbar({
   item,
   readerFocusMode = false,
+  autoExtract = true,
 }: {
   item: ArticleDetailDto;
   readerFocusMode?: boolean;
-}): ReaderToolbarModel {
+  autoExtract?: boolean;
+}): ToolbarModel {
   const { preferences, setPreferences, limits } = useReaderPreferences();
   const isMobile = useMediaQuery({ max: "md" });
   const extractMutation = useArticleExtraction(item.id);
@@ -79,7 +87,7 @@ export function useReaderToolbarModel({
 
   const updateItemMutation = useInboxItemStateMutation();
 
-  const effectiveReaderMode: ReaderToolbarMode =
+  const effectiveReaderMode: ToolbarMode =
     preferences.defaultMode === "smart" ? item.reader.activeMode : preferences.defaultMode;
   const isViewingExtracted = effectiveReaderMode === "extracted";
   const displayReader = readerContentForMode(item, effectiveReaderMode);
@@ -91,6 +99,7 @@ export function useReaderToolbarModel({
 
   const canRequestExtraction = item.link.startsWith("http");
   const shouldAutoExtract =
+    autoExtract &&
     canRequestExtraction &&
     item.reader.extracted.status === "pending" &&
     item.reader.extracted.content === null;
@@ -221,6 +230,7 @@ export function useReaderToolbarModel({
       extractedAvailable: item.reader.extracted.available,
       isSaved: item.isSaved,
       contentWidth,
+      fontSizePx: preferences.fontSizePx,
       canDecreaseFont,
       canIncreaseFont,
       readerFocusMode,
@@ -233,6 +243,9 @@ export function useReaderToolbarModel({
       },
       onIncreaseFontSize: () => {
         setPreferences({ fontSizePx: Math.min(limits.maxFontSizePx, preferences.fontSizePx + 1) });
+      },
+      onCopyLink: () => {
+        void copyTextToClipboard(item.link).catch(() => undefined);
       },
       onOpenAi: () => {
         toastManager.add({
@@ -247,6 +260,9 @@ export function useReaderToolbarModel({
           preferences.openLinksInNewTab ? "_blank" : "_self",
           preferences.openLinksInNewTab ? "noopener,noreferrer" : undefined,
         );
+      },
+      onShareArticle: () => {
+        void shareArticle(item).catch(() => undefined);
       },
       onToggleMode: () => {
         if (effectiveReaderMode === "original") {
@@ -291,4 +307,43 @@ export function useReaderToolbarModel({
       },
     },
   };
+}
+
+async function shareArticle(item: ArticleDetailDto) {
+  const shareData: ShareData = {
+    title: item.title,
+    text: item.summary ?? item.feedTitle,
+    url: item.link,
+  };
+
+  if (navigator.share && (!navigator.canShare || navigator.canShare(shareData))) {
+    await navigator.share(shareData);
+    return;
+  }
+
+  await copyTextToClipboard(item.link);
+}
+
+async function copyTextToClipboard(text: string) {
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+  } catch {
+    // Fall back to the legacy copy path below.
+  }
+
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.left = "-9999px";
+  textarea.style.opacity = "0";
+  textarea.style.position = "fixed";
+  textarea.style.top = "0";
+
+  document.body.append(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
 }

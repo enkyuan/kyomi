@@ -1,7 +1,7 @@
 "use client";
 
 import { Folder2Fill, SelectorVerticalLine } from "@mingcute/react";
-import { Suspense, useCallback, useEffect, useEffectEvent, useState } from "react";
+import { Suspense, useEffect, useEffectEvent, useState } from "react";
 import { SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 import { SidebarModeAnimatedText } from "@kyomi/ui/sidebar/mode-animated-text";
 import { cn } from "@lib/utils";
@@ -46,10 +46,6 @@ const SourcesDialog = lazyNamed(
   () => import("@modules/feeds/components/follow/sources-dialog"),
   "SourcesDialog",
 );
-const WorkspaceCommandDialog = lazyNamed(
-  () => import("./workspace-command-dialog"),
-  "WorkspaceCommandDialog",
-);
 
 type HeaderProps = {
   platform: PlatformState;
@@ -57,45 +53,14 @@ type HeaderProps = {
 };
 
 export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) {
-  const {
-    navigate,
-    commandOpen,
-    setCommandOpen,
-    createFolderOpen,
-    setCreateFolderOpen,
-    manageFeedsOpen,
-    setManageFeedsOpen,
-    feedItems,
-    folderItems,
-    followedFeedsQuery,
-    foldersQuery,
-    inboxItems,
-    onCreateFolder,
-    onManageFeeds,
-    scope,
-    scopedFeedId,
-    scopedFolderId,
-    workspaceLabel,
-  } = useHeader({ platform });
+  const { scope, workspaceLabel } = useHeader();
   const [sourcesOpen, setSourcesOpen] = useState(false);
   const [sourcesDialogLoaded, setSourcesDialogLoaded] = useState(false);
-  const [workspaceDialogLoaded, setWorkspaceDialogLoaded] = useState(false);
 
   const preloadSourcesDialog = () => {
     setSourcesDialogLoaded(true);
     void SourcesDialog.preload();
   };
-
-  const setWorkspaceOpen = useCallback(
-    (open: boolean) => {
-      if (open) {
-        setWorkspaceDialogLoaded(true);
-        void WorkspaceCommandDialog.preload();
-      }
-      setCommandOpen(open);
-    },
-    [setCommandOpen],
-  );
 
   const setSourcesDialogOpen = (open: boolean) => {
     if (open) {
@@ -114,19 +79,6 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
 
     if (isInput) {
       return;
-    }
-
-    const key = event.key.toLowerCase();
-
-    // modifier + K opens Workspace Switcher
-    if (
-      key === "k" &&
-      isPlatformModifierShortcut(event, platform) &&
-      !event.shiftKey &&
-      !event.altKey
-    ) {
-      event.preventDefault();
-      setWorkspaceOpen(true);
     }
 
     // single / opens Follow Sources (no modifiers)
@@ -151,10 +103,12 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
   const scopeIcon =
     scope?.kind === "feed" ? (
       <FeedFavicon
-        className="size-4 shrink-0 rounded-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:size-4.5"
+        className="size-4 shrink-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:size-4.5"
         faviconUrl={scope.feed.faviconUrl}
         feedUrl={scope.feed.url}
+        shape="squircle"
         siteUrl={scope.feed.link}
+        squircleCornerRadius={4}
         title={scope.feed.title || scope.feed.url}
       />
     ) : scope?.kind === "folder" ? (
@@ -166,21 +120,7 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
       <SidebarHeader className="gap-2 px-2 pb-4">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton
-              className="h-auto py-2"
-              isActive={Boolean(scope)}
-              onClick={() => {
-                setWorkspaceOpen(true);
-              }}
-              onFocus={() => {
-                setWorkspaceDialogLoaded(true);
-                void WorkspaceCommandDialog.preload();
-              }}
-              onPointerEnter={() => {
-                setWorkspaceDialogLoaded(true);
-                void WorkspaceCommandDialog.preload();
-              }}
-            >
+            <SidebarMenuButton className="h-auto py-2" isActive={Boolean(scope)}>
               <SelectorVerticalLine className="size-6 shrink-0 -ms-1 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:-ms-0.75" />
               <span className="min-w-0 flex flex-1 items-center gap-2 -ms-1 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:-ms-0.75">
                 {scopeIcon}
@@ -201,14 +141,6 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
                   />
                 </SidebarModeAnimatedText>
               </span>
-              <KbdGroup className="max-sm:hidden opacity-60">
-                <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
-                  <SidebarModeAnimatedText>{platform.modifierKeyLabel}</SidebarModeAnimatedText>
-                </Kbd>
-                <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
-                  <SidebarModeAnimatedText>K</SidebarModeAnimatedText>
-                </Kbd>
-              </KbdGroup>
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>
@@ -246,29 +178,6 @@ export function Header({ platform, isReaderFocusSidebar = false }: HeaderProps) 
         </SidebarMenu>
       </SidebarHeader>
       <Suspense fallback={null}>
-        {workspaceDialogLoaded ? (
-          <WorkspaceCommandDialog
-            commandOpen={commandOpen}
-            createFolderOpen={createFolderOpen}
-            feedItems={feedItems}
-            followedFeedsQuery={followedFeedsQuery}
-            folderItems={folderItems}
-            foldersQuery={foldersQuery}
-            inboxItems={inboxItems}
-            manageFeedsOpen={manageFeedsOpen}
-            navigate={navigate}
-            onClose={() => {
-              setCommandOpen(false);
-            }}
-            onCommandOpenChange={setWorkspaceOpen}
-            onCreateFolder={onCreateFolder}
-            onCreateFolderOpenChange={setCreateFolderOpen}
-            onManageFeeds={onManageFeeds}
-            onManageFeedsOpenChange={setManageFeedsOpen}
-            scopedFeedId={scopedFeedId}
-            scopedFolderId={scopedFolderId}
-          />
-        ) : null}
         {sourcesDialogLoaded ? (
           <SourcesDialog
             enableGlobalShortcut={false}

@@ -1,6 +1,6 @@
 /** Schemes accepted by the server-side favicon proxy (mirrors host-safety.ts). */
 const PROXY_ALLOWED_SCHEMES = new Set(["http:", "https:"]);
-export const FAVICON_PROXY_VERSION = "4";
+export const FAVICON_PROXY_VERSION = "5";
 
 function parseOrigin(raw: string | null | undefined): string | null {
   if (!raw) return null;

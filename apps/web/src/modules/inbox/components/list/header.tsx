@@ -6,21 +6,22 @@ import {
   SegmentedControlTab,
 } from "@kyomi/ui/segmented-control";
 import { Menu, MenuTrigger, MenuPopup, MenuItem } from "@kyomi/ui/menu";
-import { Badge } from "@kyomi/ui/badge";
-import { useNavigate } from "@tanstack/react-router";
 import {
+  ArrowLeftFill,
   DownFill,
   BookmarkFill,
-  HistoryFill,
+  TimeDurationFill,
   SearchLine,
   CloseLine,
   SortDescendingFill,
   SortAscendingFill,
   type IconProps,
+  AsteriskFill,
 } from "@mingcute/react";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { useCallback, useRef, useState, type ComponentType, type RefObject } from "react";
 import type { InboxFilter, InboxSort } from "@modules/inbox/services/api";
+import { cn } from "@lib/utils";
 
 const ALL_FILTER_GROUP: InboxFilter[] = ["all", "saved", "recent"];
 
@@ -29,8 +30,9 @@ const ALL_FILTER_MENU: {
   label: string;
   icon: ComponentType<IconProps>;
 }[] = [
+  { value: "all", label: "All", icon: AsteriskFill },
   { value: "saved", label: "Saved", icon: BookmarkFill },
-  { value: "recent", label: "Recent", icon: HistoryFill },
+  { value: "recent", label: "Recent", icon: TimeDurationFill },
 ];
 
 const SORT_MENU: {
@@ -44,29 +46,24 @@ const SORT_MENU: {
 
 export const DEFAULT_SORT: InboxSort = "newest";
 
-function formatFilterCount(count: number | undefined | null): string | null {
-  if (count === undefined || count === null || count <= 0) {
-    return null;
-  }
-  if (count > 999) {
-    return "999+";
-  }
-  return String(count);
-}
-
 export function FilterControl({
   filter,
   onFilterChange,
-  filterCounts,
 }: {
   filter: InboxFilter;
   onFilterChange: (filter: InboxFilter) => void;
-  filterCounts?: Partial<Record<InboxFilter, number>>;
 }) {
   const segmentedRef = useRef<HTMLDivElement | null>(null);
   const isAllGroupActive = ALL_FILTER_GROUP.includes(filter);
   const segmentValue: InboxFilter =
-    filter === "today" ? "today" : isAllGroupActive ? filter : "all";
+    filter === "my-feed" ? "my-feed" : isAllGroupActive ? filter : "all";
+  const activeAllGroupLabel =
+    ALL_FILTER_MENU.find((item) => item.value === segmentValue)?.label ?? "All";
+  const shouldShowAllMenuItem = segmentValue !== "all" && ALL_FILTER_GROUP.includes(segmentValue);
+  const allGroupMenuItems = ALL_FILTER_MENU.filter(
+    (item) =>
+      item.value !== segmentValue && (item.value !== "all" || shouldShowAllMenuItem),
+  );
 
   return (
     <div ref={segmentedRef} className="inline-flex w-fit rounded-full bg-background">
@@ -76,18 +73,19 @@ export function FilterControl({
         onValueChange={(v) => onFilterChange(v as InboxFilter)}
       >
         <SegmentedControlList>
-          <SegmentedControlTab value="today">My Feed</SegmentedControlTab>
+          <SegmentedControlTab value="my-feed">My Feed</SegmentedControlTab>
           <SegmentedControlTab
-            value={segmentValue === "today" ? "all" : segmentValue}
+            value={segmentValue === "my-feed" ? "all" : segmentValue}
             className="gap-1.5 pe-2.5"
             render={<div />}
             nativeButton={false}
           >
-            <span className="leading-none">All</span>
+            <span className="leading-none">{activeAllGroupLabel}</span>
             <Menu>
               <MenuTrigger
                 aria-label="Choose filter"
                 className="-me-0.5 inline-flex size-5 shrink-0 cursor-pointer items-center justify-center self-center rounded-full leading-none text-current outline-none transition-colors hover:bg-accent"
+                onPointerDown={(event) => event.stopPropagation()}
                 onClick={(event) => event.stopPropagation()}
                 onKeyDown={(event) => {
                   if (event.key === "Enter" || event.key === " ") event.stopPropagation();
@@ -102,24 +100,21 @@ export function FilterControl({
                 anchor={segmentedRef}
                 className="w-(--anchor-width) min-w-(--anchor-width) rounded-[22px] p-1 before:rounded-[21px]"
               >
-                {ALL_FILTER_MENU.map((item) => {
+                {allGroupMenuItems.map((item) => {
                   const Icon = item.icon;
-                  const countLabel = formatFilterCount(filterCounts?.[item.value]);
                   return (
                     <MenuItem
                       key={item.value}
                       className="h-9 justify-between gap-2 rounded-full px-3 font-medium text-base sm:h-9 sm:text-base"
-                      onClick={() => onFilterChange(item.value)}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        onFilterChange(item.value);
+                      }}
                     >
                       <span className="flex min-w-0 items-center gap-2">
                         <Icon className="size-4 shrink-0" />
                         <span className="truncate">{item.label}</span>
                       </span>
-                      {countLabel ? (
-                        <Badge variant="secondary" size="sm" className="rounded-full">
-                          {countLabel}
-                        </Badge>
-                      ) : null}
                     </MenuItem>
                   );
                 })}
@@ -132,7 +127,30 @@ export function FilterControl({
   );
 }
 
-export function SearchBar() {
+export function BackToInboxButton({
+  onClick,
+  variant = "pill",
+}: {
+  onClick: () => void;
+  variant?: "pill" | "transparent";
+}) {
+  return (
+    <button
+      type="button"
+      aria-label="Back to inbox"
+      onClick={onClick}
+      className={cn(
+        "relative inline-flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full text-muted-foreground outline-none transition-colors hover:text-foreground/70 focus-visible:ring-2 focus-visible:ring-ring [&>*]:relative",
+        variant === "pill" &&
+          "bg-background before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted",
+      )}
+    >
+      <ArrowLeftFill className="size-5" />
+    </button>
+  );
+}
+
+export function SearchBar({ variant = "pill" }: { variant?: "pill" | "transparent" }) {
   const [expanded, setExpanded] = useState(false);
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -158,7 +176,11 @@ export function SearchBar() {
         initial={false}
         animate={{ width: expanded ? 420 : 44 }}
         transition={transition}
-        className="relative flex h-11 shrink-0 items-center overflow-hidden rounded-full bg-background text-muted-foreground will-change-transform before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative"
+        className={cn(
+          "relative flex h-11 min-w-11 max-w-full items-center overflow-hidden rounded-full text-muted-foreground will-change-transform [&>*]:relative",
+          variant === "pill" &&
+            "bg-background before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted",
+        )}
       >
         <button
           type="button"
@@ -243,23 +265,13 @@ function SortMenuItem({
 export function SortButton({
   sort,
   anchor,
+  onSortChange,
 }: {
   sort: InboxSort;
   anchor?: RefObject<HTMLDivElement | null>;
+  onSortChange: (sort: InboxSort) => void;
 }) {
-  const navigate = useNavigate();
-
   const activeLabel = SORT_MENU.find((item) => item.value === sort)?.label ?? "Newest";
-
-  const updateSort = (next: InboxSort) => {
-    void navigate({
-      from: "/inbox/",
-      search: (prev) => ({
-        ...prev,
-        sort: next === DEFAULT_SORT ? undefined : next,
-      }),
-    });
-  };
 
   return (
     <Menu>
@@ -289,7 +301,7 @@ export function SortButton({
             icon={item.icon}
             label={item.label}
             active={sort === item.value}
-            onSelect={() => updateSort(item.value)}
+            onSelect={() => onSortChange(item.value)}
           />
         ))}
       </MenuPopup>

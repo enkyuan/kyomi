@@ -130,6 +130,10 @@ function mockFetch(handler: (url: string) => Response | Promise<Response>) {
   return calls;
 }
 
+function delay(ms: number) {
+  return new Promise<void>((resolve) => setTimeout(resolve, ms));
+}
+
 function faviconRequest(rawDomain: string) {
   return new Request(`https://kyomi.test/api/favicon?domain=${encodeURIComponent(rawDomain)}`);
 }
@@ -210,6 +214,47 @@ describe("favicon request service", () => {
     expect(response.status).toBe(200);
     expect(store.rows.get(ORIGIN)?.status).toBe("hit");
     expect(store.rows.get(ORIGIN)?.resolvedUrl).toBe(`${ORIGIN}/icon-256.png`);
+  });
+
+  test("prefers declared site icons before provider fallback results", async () => {
+    const store = new MemoryFaviconHostStore();
+    mockFetch(async (url) => {
+      if (url === ORIGIN) {
+        await delay(5);
+        return new Response(
+          '<html><head><link rel="icon" sizes="256x256" href="/icon-256.png"></head></html>',
+          { headers: { "content-type": "text/html" } },
+        );
+      }
+      if (url === `${ORIGIN}/icon-256.png`) {
+        await delay(5);
+        return new Response("png", { headers: { "content-type": "image/png" } });
+      }
+      if (url === `${ORIGIN}/favicon.ico`) {
+        return new Response(null, { status: 404 });
+      }
+      if (url.startsWith("https://www.google.com/s2/favicons")) {
+        return new Response("provider", { headers: { "content-type": "image/png" } });
+      }
+      if (url.startsWith("https://icons.duckduckgo.com/ip3/")) {
+        return new Response("provider", { headers: { "content-type": "image/x-icon" } });
+      }
+      return new Response(null, { status: 404 });
+    });
+
+    const result = await resolvePersistedFaviconHost(store, ORIGIN);
+    await delay(20);
+
+    expect(result).toEqual({
+      kind: "hit",
+      origin: ORIGIN,
+      hostname: new URL(ORIGIN).hostname,
+      url: `${ORIGIN}/icon-256.png`,
+      source: "html_link",
+      contentType: null,
+    });
+    expect(store.rows.get(ORIGIN)?.resolvedUrl).toBe(`${ORIGIN}/icon-256.png`);
+    expect(store.rows.get(ORIGIN)?.source).toBe("html_link");
   });
 
   test("negative-caches oversized favicon responses", async () => {

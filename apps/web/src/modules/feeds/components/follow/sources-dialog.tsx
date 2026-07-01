@@ -1,6 +1,6 @@
 "use client";
 
-import { startTransition, useCallback, useEffect, useState } from "react";
+import { startTransition, useCallback, useEffect, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { AddCircleFill, CheckCircleFill, RssFill, SearchLine } from "@mingcute/react";
 import * as RadixDialog from "@radix-ui/react-dialog";
@@ -44,7 +44,10 @@ export function SourcesDialog({
   const [internalOpen, setInternalOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
-  const [pendingFollowKeys, setPendingFollowKeys] = useState<Set<string>>(() => new Set());
+  const pendingFollowKeysRef = useRef<Set<string> | null>(null);
+  if (pendingFollowKeysRef.current === null) {
+    pendingFollowKeysRef.current = new Set();
+  }
   const dialogOpen = open ?? internalOpen;
   const trimmedQuery = query.trim();
   const hasSearchQuery = trimmedQuery.length > 0;
@@ -103,7 +106,7 @@ export function SourcesDialog({
     mutationFn: (input: FollowFeedMutationInput) => followFeed({ data: input }),
     onMutate: async ({ feedId, url }) => {
       const followKey = feedId ?? url;
-      setPendingFollowKeys((current) => new Set(current).add(followKey));
+      pendingFollowKeysRef.current?.add(followKey);
       await queryClient.cancelQueries({ queryKey: ["discover", "feeds"] });
       markDiscoverFeedSubscribed(queryClient, { url, feedId: feedId ?? undefined });
       return { feedId: feedId ?? undefined, followKey, url };
@@ -135,11 +138,7 @@ export function SourcesDialog({
       if (!context?.followKey) {
         return;
       }
-      setPendingFollowKeys((current) => {
-        const next = new Set(current);
-        next.delete(context.followKey);
-        return next;
-      });
+      pendingFollowKeysRef.current?.delete(context.followKey);
     },
   });
 
@@ -218,7 +217,10 @@ export function SourcesDialog({
                             value={`${item.title} ${item.url} ${item.description ?? ""}`}
                             onSelect={() => {
                               const followKey = item.id ?? item.url;
-                              if (item.isSubscribed || pendingFollowKeys.has(followKey)) {
+                              if (
+                                item.isSubscribed ||
+                                pendingFollowKeysRef.current?.has(followKey)
+                              ) {
                                 return;
                               }
 

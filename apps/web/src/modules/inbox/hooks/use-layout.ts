@@ -1,18 +1,35 @@
 "use client";
 
-import { useNavigate, useSearch } from "@tanstack/react-router";
-import { useEffect, useMemo, useReducer, useRef } from "react";
+import { useNavigate, useParams, useSearch } from "@tanstack/react-router";
+import { useCallback, useEffect, useMemo, useReducer, useRef } from "react";
 import type { PointerEvent as ReactPointerEvent } from "react";
 import { useMediaQuery } from "@hooks/use-media-query";
 import type { InboxMarkReadBehaviorDto } from "@lib/schemas";
 import { writeInboxSplitPanePercentCookie } from "../lib/layout-persistence";
-import type { InboxFilter } from "../services/api";
+import { getInboxItemIdFromSlug } from "../lib/article-slug";
+import type { InboxFilter, InboxSort } from "../services/api";
 import type { InboxPreferences } from "./use-inbox-data";
 
 const SPLIT_PANE_PERCENT_CSS_VAR = "--inbox-left-panel-percent";
 const INBOX_DESKTOP_MIN_WIDTH_PX = 768;
 
 type InboxItemLike = { id: string; isRead: boolean } | null;
+
+type InboxRouteSearch = {
+  filter?: InboxFilter;
+  search?: string;
+  feedId?: string;
+  folderId?: string;
+  itemId?: string;
+  showHidden?: "1";
+  showRead?: "1";
+  sort?: InboxSort;
+};
+
+type InboxRouteNavigateOptions = {
+  search: (prev: InboxRouteSearch) => InboxRouteSearch;
+  replace?: boolean;
+};
 
 type SplitPaneState = {
   leftPanelPercent: number;
@@ -96,22 +113,53 @@ export function useResponsiveReaderMode(contentWidthPx?: number): InboxLayoutVar
 
 export function useInboxRouteState(preferences: InboxPreferences) {
   const { filter, search, feedId, folderId, itemId, showHidden, showRead, sort } = useSearch({
-    from: "/inbox/",
+    strict: false,
   });
-  const navigate = useNavigate({ from: "/inbox/" });
+  const params = useParams({ strict: false });
+  const rawNavigate = useNavigate();
+  const article = typeof params?.article === "string" ? params.article : undefined;
+  const slugItemId = getInboxItemIdFromSlug(
+    article,
+  );
+  const routeItemId = itemId ?? slugItemId;
+  const navigate = useCallback(
+    ({ search: updateSearch, replace }: InboxRouteNavigateOptions) => {
+      const previousSearch: InboxRouteSearch = {
+        filter,
+        search,
+        feedId,
+        folderId,
+        itemId,
+        showHidden,
+        showRead,
+        sort,
+      };
+      const nextSearch = updateSearch(previousSearch);
+
+      if (article) {
+        return rawNavigate({
+          to: "/inbox/$article",
+          params: { article },
+          search: nextSearch,
+          replace,
+        });
+      }
+
+      return rawNavigate({
+        to: "/inbox",
+        search: nextSearch,
+        replace,
+      });
+    },
+    [article, feedId, filter, folderId, itemId, rawNavigate, search, showHidden, showRead, sort],
+  );
 
   const showHiddenItems = parseSearchFlag(showHidden);
   const showReadItems = parseSearchFlag(showRead);
   const effectiveFilter = (filter ?? preferences.inboxDefaultView) as InboxFilter;
-  const supportsReadScopedFilters = effectiveFilter === "today";
+  const supportsReadScopedFilters = false;
   const isReadScopedFilterActive = supportsReadScopedFilters && (showHiddenItems || showReadItems);
   const includeRead = isReadScopedFilterActive;
-
-  const activeScopeLabel = isReadScopedFilterActive
-    ? showHiddenItems && !showReadItems
-      ? "hidden"
-      : "read"
-    : undefined;
 
   useEffect(() => {
     if (filter !== undefined) {
@@ -147,14 +195,10 @@ export function useInboxRouteState(preferences: InboxPreferences) {
       search,
       feedId,
       folderId,
-      itemId,
-      showHiddenItems,
-      showReadItems,
+      itemId: routeItemId,
       effectiveFilter,
-      supportsReadScopedFilters,
       isReadScopedFilterActive,
       includeRead,
-      activeScopeLabel,
       sort,
     }),
     [
@@ -163,14 +207,10 @@ export function useInboxRouteState(preferences: InboxPreferences) {
       search,
       feedId,
       folderId,
-      itemId,
-      showHiddenItems,
-      showReadItems,
+      routeItemId,
       effectiveFilter,
-      supportsReadScopedFilters,
       isReadScopedFilterActive,
       includeRead,
-      activeScopeLabel,
       sort,
     ],
   );

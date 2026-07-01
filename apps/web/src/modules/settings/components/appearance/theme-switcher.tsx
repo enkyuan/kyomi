@@ -102,7 +102,7 @@ export function ThemeSwitcher() {
           <FieldItem key={item.value}>
             <FieldLabel className="cursor-pointer flex-col">
               <Radio className="peer absolute sr-only" value={item.value} />
-              <span className="relative block h-[70px] w-[88px] overflow-hidden rounded-lg shadow-xs transition-shadow peer-data-disabled:cursor-not-allowed peer-data-disabled:opacity-64 peer-data-checked:ring-2 peer-data-checked:ring-primary/48 peer-data-checked:ring-offset-1 peer-data-checked:ring-offset-background not-peer-data-checked:opacity-80">
+              <span className="relative block h-17.5 w-22 overflow-hidden rounded-lg shadow-xs transition-shadow peer-data-disabled:cursor-not-allowed peer-data-disabled:opacity-64 peer-data-checked:ring-2 peer-data-checked:ring-primary/48 peer-data-checked:ring-offset-1 peer-data-checked:ring-offset-background not-peer-data-checked:opacity-80">
                 {themePreviews[item.value]}
               </span>
               <span className="not-peer-data-checked:text-muted-foreground/70">{item.label}</span>

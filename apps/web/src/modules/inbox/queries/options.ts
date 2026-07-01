@@ -9,7 +9,7 @@ import {
 } from "../services/api";
 import { getTimezoneOffsetMinutes, QUERY_TIMES } from "@lib/query/policies";
 
-const DEFAULT_INBOX_FILTER: InboxFilter = "all";
+const DEFAULT_INBOX_FILTER: InboxFilter = "my-feed";
 const DEFAULT_INBOX_SORT: InboxSort = "newest";
 const INBOX_LIST_QUERY_VERSION = 3;
 
@@ -62,25 +62,6 @@ function followedFeedsUnreadCountsQueryKey() {
 
 export function feedRefreshStatusQueryKey(folderId?: string | null) {
   return ["feeds", "refresh-status", folderId ?? "__all__"] as const;
-}
-
-export function inboxViewCountQueryKey(scope: {
-  filter: string;
-  feedId?: string | null;
-  folderId?: string | null;
-  timezoneOffsetMinutes?: number;
-  includeRead?: boolean;
-}) {
-  return [
-    "inbox",
-    "view-count",
-    INBOX_LIST_QUERY_VERSION,
-    scope.filter,
-    scope.feedId,
-    scope.folderId,
-    scope.timezoneOffsetMinutes,
-    scope.includeRead,
-  ] as const;
 }
 
 function inboxItemsQueryKey({

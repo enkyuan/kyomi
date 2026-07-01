@@ -317,6 +317,55 @@ export type ResolveFeedFaviconUrlResult = {
   source: FaviconResolutionSource;
 };
 
+async function resolveHtmlFavicon(origin: string): Promise<ResolveFeedFaviconUrlResult | null> {
+  const iconHrefs = await findIconsFromHtml(origin);
+  for (const iconHref of iconHrefs) {
+    const htmlIconResult = await tryFetchImageIfHostSafe(iconHref);
+    if (htmlIconResult) {
+      htmlIconResult.body?.cancel().catch(() => {});
+      return { url: iconHref, source: "html_link" };
+    }
+  }
+  return null;
+}
+
+async function resolveDirectFavicon(origin: string): Promise<ResolveFeedFaviconUrlResult | null> {
+  const result = await tryFetchImage(`${origin}/favicon.ico`);
+  if (!result) {
+    return null;
+  }
+  result.body?.cancel().catch(() => {});
+  return { url: `${origin}/favicon.ico`, source: "favicon_ico" };
+}
+
+async function resolveProviderFavicon(
+  hostname: string,
+): Promise<ResolveFeedFaviconUrlResult | null> {
+  const googleUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=256`;
+  const duckUrl = `https://icons.duckduckgo.com/ip3/${hostname}.ico`;
+
+  try {
+    return await Promise.any([
+      tryFetchImage(googleUrl).then((result) => {
+        if (result) {
+          result.body?.cancel().catch(() => {});
+          return { url: googleUrl, source: "google_s2" as FaviconResolutionSource };
+        }
+        throw new Error("No Google favicon found");
+      }),
+      tryFetchImage(duckUrl).then((result) => {
+        if (result) {
+          result.body?.cancel().catch(() => {});
+          return { url: duckUrl, source: "duckduckgo" as FaviconResolutionSource };
+        }
+        throw new Error("No DuckDuckGo favicon found");
+      }),
+    ]);
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Resolve a usable favicon image URL for a site/feed URL (http/https only).
  * Validates the seed host and each fetch target with DNS + private-range checks.
@@ -343,56 +392,9 @@ export async function resolveFeedFaviconUrl(
     return null;
   }
 
-  const runners: Array<Promise<ResolveFeedFaviconUrlResult>> = [];
-
-  runners.push(
-    findIconsFromHtml(origin).then(async (iconHrefs) => {
-      for (const iconHref of iconHrefs) {
-        const htmlIconResult = await tryFetchImageIfHostSafe(iconHref);
-        if (htmlIconResult) {
-          htmlIconResult.body?.cancel().catch(() => {});
-          return { url: iconHref, source: "html_link" as FaviconResolutionSource };
-        }
-      }
-      throw new Error("No HTML icon found");
-    }),
+  return (
+    (await resolveHtmlFavicon(origin)) ??
+    (await resolveDirectFavicon(origin)) ??
+    (await resolveProviderFavicon(hostname))
   );
-
-  runners.push(
-    tryFetchImage(`${origin}/favicon.ico`).then((result) => {
-      if (result) {
-        result.body?.cancel().catch(() => {});
-        return { url: `${origin}/favicon.ico`, source: "favicon_ico" as FaviconResolutionSource };
-      }
-      throw new Error("No direct favicon found");
-    }),
-  );
-
-  const googleUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=256`;
-  runners.push(
-    tryFetchImage(googleUrl).then((result) => {
-      if (result) {
-        result.body?.cancel().catch(() => {});
-        return { url: googleUrl, source: "google_s2" as FaviconResolutionSource };
-      }
-      throw new Error("No Google favicon found");
-    }),
-  );
-
-  const duckUrl = `https://icons.duckduckgo.com/ip3/${hostname}.ico`;
-  runners.push(
-    tryFetchImage(duckUrl).then((result) => {
-      if (result) {
-        result.body?.cancel().catch(() => {});
-        return { url: duckUrl, source: "duckduckgo" as FaviconResolutionSource };
-      }
-      throw new Error("No DuckDuckGo favicon found");
-    }),
-  );
-
-  try {
-    return await Promise.any(runners);
-  } catch {
-    return null;
-  }
 }

@@ -32,18 +32,16 @@ export function InboxAppearanceSettings({
         />
         <Select
           items={[
-            { label: "Today", value: "today" },
+            { label: "My Feed", value: "my-feed" },
             { label: "All", value: "all" },
-            { label: "All unread", value: "unread" },
             { label: "Read later", value: "saved" },
             { label: "Recent", value: "recent" },
           ]}
           value={preferences.inboxDefaultView}
           onValueChange={(value) => {
             if (
-              value === "today" ||
+              value === "my-feed" ||
               value === "all" ||
-              value === "unread" ||
               value === "saved" ||
               value === "recent"
             ) {
@@ -55,9 +53,8 @@ export function InboxAppearanceSettings({
             <SelectValue />
           </SelectTrigger>
           <SelectPopup>
-            <SelectItem value="today">Today</SelectItem>
+            <SelectItem value="my-feed">My Feed</SelectItem>
             <SelectItem value="all">All</SelectItem>
-            <SelectItem value="unread">All unread</SelectItem>
             <SelectItem value="saved">Read later</SelectItem>
             <SelectItem value="recent">Recent</SelectItem>
           </SelectPopup>

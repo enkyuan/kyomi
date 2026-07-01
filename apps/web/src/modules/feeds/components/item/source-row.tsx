@@ -4,6 +4,7 @@ import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { PreviewCard, PreviewCardPopup, PreviewCardTrigger } from "@kyomi/ui/preview-card";
 import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
 import { cn } from "@lib/utils";
+import { m } from "motion/react";
 import type { CSSProperties } from "react";
 
 type SourceRowProps = {
@@ -18,6 +19,7 @@ type SourceRowProps = {
   labelStyle?: CSSProperties;
   iconClassName?: string;
   enablePreview?: boolean;
+  layoutId?: string;
 };
 
 export function SourceRow({
@@ -32,12 +34,13 @@ export function SourceRow({
   labelStyle,
   iconClassName,
   enablePreview = true,
+  layoutId,
 }: SourceRowProps) {
   const sourceLabel = getFeedSourceLabel(articleUrl, feedTitle);
   const label = (
     <span
       className={cn(
-        "min-w-0 flex-1 truncate text-[12px] font-medium tracking-[0.015em] text-muted-foreground/95",
+        "min-w-0 flex-1 truncate text-xs font-medium tracking-[0.015em] text-muted-foreground/95",
         labelClassName,
       )}
       style={labelStyle}
@@ -47,7 +50,11 @@ export function SourceRow({
   );
 
   return (
-    <div className={cn("flex w-full min-w-0 items-center gap-2.5", className)}>
+    <m.div
+      layoutId={layoutId}
+      className={cn("flex w-full min-w-0 items-center gap-2.5", className)}
+      transition={{ type: "spring", duration: 0.28, bounce: 0 }}
+    >
       {showFavicon ? (
         <FeedFavicon
           className={cn("size-4 shrink-0 rounded-[3px] bg-card/85", iconClassName)}
@@ -73,6 +80,6 @@ export function SourceRow({
       ) : (
         label
       )}
-    </div>
+    </m.div>
   );
 }

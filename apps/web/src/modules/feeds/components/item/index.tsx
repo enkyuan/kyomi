@@ -1,6 +1,7 @@
 "use client";
 
 import { memo, type KeyboardEvent } from "react";
+import { m } from "motion/react";
 import { cn } from "@lib/utils";
 import { SourceRow } from "./source-row";
 import { ItemInlineToolbar } from "./toolbar";
@@ -16,7 +17,6 @@ const ITEM_SEPARATOR_CLASS = "left-8 right-7";
 
 export const Item = memo(function Item({
   item,
-  isSelected,
   isFirst,
   showBottomSeparator,
   containerWidth,
@@ -63,8 +63,7 @@ export const Item = memo(function Item({
     <Card
       aria-label={item.title || "Untitled article"}
       className={cn(
-        "group/inbox-item relative w-full cursor-pointer gap-0 overflow-visible rounded-none border-0 bg-transparent text-left shadow-none outline-none before:hidden transition-[background-color,color,transform] duration-150 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background active:scale-[0.996] motion-reduce:active:scale-100",
-        isSelected ? "bg-background" : "hover:bg-background/55",
+        "group/inbox-item relative w-full cursor-pointer gap-0 overflow-visible rounded-none border-0 bg-transparent text-left shadow-none outline-none before:hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background",
       )}
       onClick={selectItem}
       onKeyDown={handleKeyDown}
@@ -99,40 +98,42 @@ export const Item = memo(function Item({
             feedTitle={item.feedTitle}
             showFavicon={showFavicons}
             className={cn("min-w-0 flex-1 gap-3", isCompact && "gap-2.5")}
-            iconClassName="size-5.5 rounded-[4px]"
+            iconClassName="size-5.5 rounded-sm"
             labelStyle={{ fontSize: `${sourceLabelFontSizePx}px` }}
             enablePreview={false}
+            layoutId={`inbox-item-${item.id}-source`}
           />
-          <span
+          <m.span
+            layoutId={`inbox-item-${item.id}-timestamp`}
             className="shrink-0 font-medium tracking-[0.01em] text-muted-foreground/80 tabular-nums"
             style={{ fontSize: `${metaFontSizePx}px` }}
+            transition={{ type: "spring", duration: 0.28, bounce: 0 }}
           >
             <TimestampText
               value={item.publishedAt}
               display={timestampDisplay}
               hourCycle={timestampHourCycle}
             />
-          </span>
+          </m.span>
         </div>
-        <CardTitle
-          className="min-w-0 font-semibold tracking-[-0.012em] text-foreground"
-          style={{
-            fontSize: `${titleFontSizePx}px`,
-            lineHeight: `${titleLineHeightPx}px`,
-          }}
-        >
-          <Pretext
-            className={cn("font-semibold tracking-[-0.012em] text-foreground", "line-clamp-2")}
-            lineHeight={titleLineHeightPx}
-            maxLines={2}
-            text={item.title}
-            font={titleFont}
-            containerWidth={containerWidth}
-            style={{
-              fontSize: `${titleFontSizePx}px`,
-              lineHeight: `${titleLineHeightPx}px`,
-            }}
-          />
+        <CardTitle className="min-w-0 font-semibold tracking-[-0.012em] text-foreground">
+          <m.div
+            layoutId={`inbox-item-${item.id}-title`}
+            transition={{ type: "spring", duration: 0.28, bounce: 0 }}
+          >
+            <Pretext
+              className={cn("font-semibold tracking-[-0.012em] text-foreground", "line-clamp-2")}
+              lineHeight={titleLineHeightPx}
+              maxLines={2}
+              text={item.title}
+              font={titleFont}
+              containerWidth={containerWidth}
+              style={{
+                fontSize: `${titleFontSizePx}px`,
+                lineHeight: `${titleLineHeightPx}px`,
+              }}
+            />
+          </m.div>
         </CardTitle>
       </CardHeader>
       <CardContent className={cn("min-w-0 p-0", ITEM_GUTTER_CLASS)}>
@@ -154,23 +155,20 @@ export const Item = memo(function Item({
       </CardContent>
       <CardFooter
         className={cn(
-          "flex w-full min-w-0 items-center justify-between gap-3 p-0",
+          "flex w-full min-w-0 items-center justify-end gap-3 p-0",
           ITEM_GUTTER_CLASS,
           sectionClassNames.footer,
         )}
       >
-        <ItemInlineToolbar
-          item={item}
-          className="-ms-1 opacity-80 transition-opacity group-hover/inbox-item:opacity-100 group-focus-within/inbox-item:opacity-100"
-        />
         {item.isSaved ? (
           <span
-            className="min-w-0 shrink-0 rounded-full bg-muted px-2 py-0.5 font-medium text-muted-foreground/85"
+            className="me-auto min-w-0 shrink-0 rounded-full bg-muted px-2 py-0.5 font-medium text-muted-foreground/85"
             style={{ fontSize: `${metaFontSizePx}px` }}
           >
             Saved
           </span>
         ) : null}
+        <ItemInlineToolbar item={item} />
       </CardFooter>
     </Card>
   );

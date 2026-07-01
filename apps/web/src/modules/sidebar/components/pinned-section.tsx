@@ -56,10 +56,12 @@ export function PinnedSection() {
                   <SidebarMenuItem key={feed.feedId}>
                     <SidebarMenuButton tooltip={feed.title || feed.url}>
                       <FeedFavicon
-                        className="size-4 shrink-0 rounded-[3px] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:size-4.5"
+                        className="size-4 shrink-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:size-4.5"
                         faviconUrl={feed.faviconUrl}
                         feedUrl={feed.url}
+                        shape="squircle"
                         siteUrl={feed.link}
+                        squircleCornerRadius={4}
                         title={feed.title || feed.url}
                       />
                       <span className="min-w-0 flex-1">

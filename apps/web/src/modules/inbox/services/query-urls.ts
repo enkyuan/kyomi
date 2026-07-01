@@ -1,27 +1,14 @@
-export type InboxFilter = "all" | "today" | "unread" | "saved" | "recent";
-export type LegacyInboxFilter = InboxFilter | "inbox";
+export type InboxFilter = "my-feed" | "all" | "saved" | "recent";
+export type LegacyInboxFilter = InboxFilter | "inbox" | "today" | "unread";
 export type InboxSort = "newest" | "oldest";
 
 const INBOX_PAGE_LIMIT = 100;
 const DEFAULT_SORT: InboxSort = "newest";
 
 export function normalizeInboxFilter(filter: LegacyInboxFilter | undefined): InboxFilter {
-  return filter === "inbox" || filter === undefined ? "all" : filter;
-}
-
-function getLocalDayRangeIso(timezoneOffsetMinutes: number) {
-  const nowUtcMs = Date.now();
-  const nowLocalMs = nowUtcMs - timezoneOffsetMinutes * 60_000;
-  const nowLocal = new Date(nowLocalMs);
-  const localStartUtcMs =
-    Date.UTC(nowLocal.getUTCFullYear(), nowLocal.getUTCMonth(), nowLocal.getUTCDate(), 0, 0, 0, 0) +
-    timezoneOffsetMinutes * 60_000;
-  const localEndUtcMs = localStartUtcMs + 24 * 60 * 60 * 1000;
-
-  return {
-    start: new Date(localStartUtcMs).toISOString(),
-    end: new Date(localEndUtcMs).toISOString(),
-  };
+  return filter === "inbox" || filter === "today" || filter === "unread" || filter === undefined
+    ? "my-feed"
+    : filter;
 }
 
 function setTrimmedQueryParam(params: URLSearchParams, key: string, value: string | undefined) {
@@ -33,25 +20,8 @@ function setTrimmedQueryParam(params: URLSearchParams, key: string, value: strin
   params.set(key, trimmedValue);
 }
 
-function applyArticleFilterParams(
-  params: URLSearchParams,
-  filter: LegacyInboxFilter,
-  timezoneOffsetMinutes: number,
-  includeRead: boolean,
-) {
+function applyArticleFilterParams(params: URLSearchParams, filter: LegacyInboxFilter) {
   const normalizedFilter = normalizeInboxFilter(filter);
-  if (normalizedFilter === "today") {
-    const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
-    params.set("published_after", start);
-    params.set("published_before", end);
-    return;
-  }
-
-  if (normalizedFilter === "unread" && !includeRead) {
-    params.set("is_read", "false");
-    return;
-  }
-
   if (normalizedFilter === "recent") {
     params.set("is_read", "true");
     return;
@@ -70,8 +40,8 @@ function applySortParam(params: URLSearchParams, sort: InboxSort | undefined) {
 
 export function buildArticlesUrl(
   filter: LegacyInboxFilter,
-  timezoneOffsetMinutes: number,
-  includeRead = false,
+  _timezoneOffsetMinutes: number,
+  _includeRead = false,
   search?: string,
   feedId?: string,
   folderId?: string,
@@ -79,7 +49,7 @@ export function buildArticlesUrl(
   sort?: InboxSort,
 ) {
   const params = new URLSearchParams();
-  applyArticleFilterParams(params, filter, timezoneOffsetMinutes, includeRead);
+  applyArticleFilterParams(params, filter);
   setTrimmedQueryParam(params, "feed_id", feedId);
   setTrimmedQueryParam(params, "folder_id", folderId);
   setTrimmedQueryParam(params, "search", search);
@@ -110,6 +80,11 @@ export function buildInboxListUrl({
   applySortParam(params, sort);
   params.set("limit", String(INBOX_PAGE_LIMIT));
 
+  if (normalizedFilter === "my-feed") {
+    setTrimmedQueryParam(params, "search", search);
+    return `/api/v1/articles?${params.toString()}`;
+  }
+
   if (normalizedFilter === "all") {
     setTrimmedQueryParam(params, "search", search);
     return `/api/v1/articles/views/all?${params.toString()}`;
@@ -138,9 +113,7 @@ export function buildInboxListUrl({
 }
 
 export function buildCountsSearchParams({
-  timezoneOffsetMinutes,
   filter,
-  includeRead,
   feedId,
   folderId,
 }: {
@@ -157,13 +130,7 @@ export function buildCountsSearchParams({
     params.set("view", "all");
   }
 
-  if (normalizedFilter === "today") {
-    const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes ?? 0);
-    params.set("published_after", start);
-    params.set("published_before", end);
-  } else if (normalizedFilter === "unread" && !includeRead) {
-    params.set("is_read", "false");
-  } else if (normalizedFilter === "saved") {
+  if (normalizedFilter === "saved") {
     params.set("is_saved", "true");
   }
 

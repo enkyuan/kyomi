@@ -10,12 +10,12 @@ import {
   type InboxNavItem,
   type SidebarInboxCounts,
 } from "../lib/navigation";
-import { useInboxScope } from "@hooks/use-inbox-scope";
+import { useScope } from "@hooks/use-scope";
 
 export function useInboxNav(counts: SidebarInboxCounts) {
   const router = useRouter();
   const queryClient = useQueryClient();
-  const { activeFilter, isInbox, locationSearch } = useInboxScope();
+  const { activeFilter, isInbox, locationSearch } = useScope();
   const { badgeValues, items } = resolveInboxNavItems(counts);
 
   const prefetchNavItem = (search: InboxNavItem["search"]) => {

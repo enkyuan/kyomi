@@ -5,6 +5,7 @@ import { logger } from "@adapters/logger";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { collapseObviousDuplicates, type ArticleListRawRow } from "./dedupe";
 import { articleIsReadSql, globalArticleIsReadSql } from "./sql";
+import { capPublishedBeforeAtNow } from "./published-window";
 import type { ArticleSort } from "../query";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "../types";
 
@@ -238,9 +239,7 @@ function pushPublishedDateFilters(filters: SQL[], opts: ListArticlesOptions): vo
   if (opts.publishedAfter) {
     filters.push(gte(feedItems.publishedAt, opts.publishedAfter));
   }
-  if (opts.publishedBefore) {
-    filters.push(lt(feedItems.publishedAt, opts.publishedBefore));
-  }
+  filters.push(lt(feedItems.publishedAt, capPublishedBeforeAtNow(opts.publishedBefore)));
 }
 
 function escapeLikePattern(input: string): string {

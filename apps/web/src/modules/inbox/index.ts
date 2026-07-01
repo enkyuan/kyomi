@@ -1,5 +1,5 @@
 export * from "./services/api";
-export { List, type ListDisplayOptions, type ListFilterVisibility } from "./components/list";
+export { List, type ListDisplayOptions } from "./components/list";
 export { Page } from "./page";
 
 export { formatInboxTimestamp } from "./utils/format-timestamp";
@@ -19,7 +19,7 @@ export {
   useResponsiveReaderMode,
   useSplitPane,
   type InboxLayoutVariant,
-} from "./hooks/use-inbox-layout";
+} from "./hooks/use-layout";
 export { isInboxPathname, prefetchInboxFlow } from "./lib/navigation";
 export {
   readInboxArticleOpenBehaviorCookie,

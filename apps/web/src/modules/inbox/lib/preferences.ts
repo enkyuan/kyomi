@@ -12,7 +12,7 @@ const MAX_INBOX_FONT_SIZE_PX = 20;
 export type InboxPreferences = InboxPreferencesDto;
 
 export const DEFAULT_INBOX_PREFERENCES: InboxPreferences = {
-  inboxDefaultView: "today",
+  inboxDefaultView: "my-feed",
   inboxDensity: "comfortable",
   articleOpenBehavior: "split",
   inboxMarkReadBehavior: "on-open",
@@ -60,10 +60,10 @@ function parseTimestampHourCycle(value: unknown): InboxTimestampHourCycleDto {
 }
 
 function parseDefaultView(value: unknown): InboxPreferences["inboxDefaultView"] {
-  if (value === "inbox" || value === "all") {
-    return "all";
+  if (value === "inbox" || value === "today" || value === "unread") {
+    return "my-feed";
   }
-  return value === "today" || value === "unread" || value === "saved" || value === "recent"
+  return value === "my-feed" || value === "all" || value === "saved" || value === "recent"
     ? value
     : DEFAULT_INBOX_PREFERENCES.inboxDefaultView;
 }

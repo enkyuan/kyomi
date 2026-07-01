@@ -1,8 +1,7 @@
-import { Calendar3Fill, NewsFill, StarFill, TimeDurationFill } from "@mingcute/react";
+import { StarFill, TimeDurationFill } from "@mingcute/react";
 import type { ComponentType } from "react";
-import type { useNavigate } from "@tanstack/react-router";
 
-export type InboxNavFilter = "today" | "unread" | "saved" | "recent";
+export type InboxNavFilter = "saved" | "recent";
 
 export type InboxNavItem = {
   label: string;
@@ -11,8 +10,6 @@ export type InboxNavItem = {
 };
 
 const INBOX_NAV: InboxNavItem[] = [
-  { label: "Today", search: { filter: "today" }, icon: Calendar3Fill },
-  { label: "All Unread", search: { filter: "unread" }, icon: NewsFill },
   { label: "Read Later", search: { filter: "saved" }, icon: StarFill },
   { label: "Recents", search: { filter: "recent" }, icon: TimeDurationFill },
 ];
@@ -20,13 +17,9 @@ const INBOX_NAV: InboxNavItem[] = [
 const INBOX_NAV_FILTER_KEYS = ["filter"] as const;
 
 function inboxNavBadgeValues(counts: {
-  today: number;
-  unread: number;
   saved: number;
 }): Record<string, number> {
   return {
-    Today: counts.today,
-    "All Unread": counts.unread,
     "Read Later": counts.saved,
   };
 }
@@ -58,58 +51,6 @@ export function resolveInboxNavItems(counts: SidebarInboxCounts) {
   const items = INBOX_NAV;
   const badgeValues = inboxNavBadgeValues(counts);
   return { items, badgeValues };
-}
-
-export type WorkspaceInboxFilter = "all" | "saved" | "today" | "unread" | "recent";
-
-export function navigateToInbox(
-  navigate: ReturnType<typeof useNavigate>,
-  filter: WorkspaceInboxFilter,
-  feedId?: string,
-  folderId?: string,
-) {
-  return navigate({
-    to: "/inbox",
-    search: () => ({
-      filter,
-      search: undefined,
-      feedId,
-      folderId,
-      itemId: undefined,
-    }),
-  });
-}
-
-export type WorkspaceInboxCommandItem = {
-  label: string;
-  shortcut: string;
-  icon: typeof Calendar3Fill;
-  action: () => void | Promise<void>;
-};
-
-export function buildWorkspaceInboxCommandItems(
-  navigate: ReturnType<typeof useNavigate>,
-): WorkspaceInboxCommandItem[] {
-  return [
-    {
-      label: "Today",
-      shortcut: "G I",
-      icon: Calendar3Fill,
-      action: () => navigateToInbox(navigate, "today"),
-    },
-    {
-      label: "All Unread",
-      shortcut: "G U",
-      icon: NewsFill,
-      action: () => navigateToInbox(navigate, "unread"),
-    },
-    {
-      label: "Read Later",
-      shortcut: "G S",
-      icon: StarFill,
-      action: () => navigateToInbox(navigate, "saved"),
-    },
-  ];
 }
 
 export type WorkspaceScope =

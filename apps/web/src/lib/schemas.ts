@@ -331,7 +331,19 @@ export const messageResponseSchema = z.object({
 
 const readerDefaultModeSchema = z.enum(["smart", "original", "extracted"]);
 const readerContentWidthSchema = z.enum(["narrow", "wide"]);
-const inboxDefaultViewSchema = z.enum(["all", "today", "unread", "saved", "recent"]);
+const inboxDefaultViewSchema = z
+  .union([
+    z.literal("my-feed"),
+    z.literal("all"),
+    z.literal("saved"),
+    z.literal("recent"),
+    z.literal("inbox"),
+    z.literal("today"),
+    z.literal("unread"),
+  ])
+  .transform((value): "my-feed" | "all" | "saved" | "recent" =>
+    value === "inbox" || value === "today" || value === "unread" ? "my-feed" : value,
+  );
 const inboxDensitySchema = z.enum(["comfortable", "compact"]);
 const articleOpenBehaviorSchema = z.enum(["split", "reader"]);
 const inboxMarkReadBehaviorSchema = z.enum(["on-open", "after-delay", "manual"]);

@@ -2,6 +2,7 @@ import type { db } from "@adapters/db/client";
 import { articleClips, feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
 import { and, eq, gte, inArray, lt, sql } from "drizzle-orm";
 import { articleIsReadSql, globalArticleIsReadSql } from "./sql";
+import { capPublishedBeforeAtNow } from "./published-window";
 import type { ArticleCountScope, ArticleCountsDto } from "../types";
 
 type DB = typeof db;
@@ -29,27 +30,36 @@ export async function getArticleCountsForUser(
           scopedFolderId ? eq(feedSubscriptions.folderId, scopedFolderId) : undefined,
         )
       : undefined;
+  const now = new Date();
 
   const [unreadRow] = await database
     .select({ c: sql<number>`count(*)::int` })
     .from(feedItems)
     .innerJoin(feedSubscriptions, joinCond)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(and(sql`(${articleIsReadSql}) = false`, feedScopeFilter));
+    .where(
+      and(sql`(${articleIsReadSql}) = false`, lt(feedItems.publishedAt, now), feedScopeFilter),
+    );
 
   const [allRow] = await database
     .select({ c: sql<number>`count(*)::int` })
     .from(feedItems)
     .innerJoin(feedSubscriptions, joinCond)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(feedScopeFilter);
+    .where(and(lt(feedItems.publishedAt, now), feedScopeFilter));
 
   const [savedRow] = await database
     .select({ c: sql<number>`count(*)::int` })
     .from(feedItems)
     .innerJoin(feedSubscriptions, joinCond)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(and(sql`${feedItemUserState.isSaved} IS TRUE`, feedScopeFilter));
+    .where(
+      and(
+        sql`${feedItemUserState.isSaved} IS TRUE`,
+        lt(feedItems.publishedAt, now),
+        feedScopeFilter,
+      ),
+    );
 
   // Global/unscoped: `all` counts subscribed feed items plus all clips; `saved` merges feed saved + clip saved.
   // Scoped by feed or folder: counts are feed-subscription rows only (clips are not folder-scoped).
@@ -87,24 +97,37 @@ export async function getGlobalArticleCountsForUser(
   );
   const scopedFeedId = scope?.feedId?.trim();
   const feedScopeFilter = scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined;
+  const now = new Date();
 
   const [unreadRow] = await database
     .select({ c: sql<number>`count(*)::int` })
     .from(feedItems)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(and(sql`(${globalArticleIsReadSql}) = false`, feedScopeFilter));
+    .where(
+      and(
+        sql`(${globalArticleIsReadSql}) = false`,
+        lt(feedItems.publishedAt, now),
+        feedScopeFilter,
+      ),
+    );
 
   const [allRow] = await database
     .select({ c: sql<number>`count(*)::int` })
     .from(feedItems)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(feedScopeFilter);
+    .where(and(lt(feedItems.publishedAt, now), feedScopeFilter));
 
   const [savedRow] = await database
     .select({ c: sql<number>`count(*)::int` })
     .from(feedItems)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(and(sql`${feedItemUserState.isSaved} IS TRUE`, feedScopeFilter));
+    .where(
+      and(
+        sql`${feedItemUserState.isSaved} IS TRUE`,
+        lt(feedItems.publishedAt, now),
+        feedScopeFilter,
+      ),
+    );
 
   return {
     all: allRow?.c ?? 0,
@@ -131,6 +154,7 @@ export async function countFeedArticlesPublishedInRange(
 
   const scopedFeedId = scope?.feedId?.trim();
   const scopedFolderId = scope?.folderId?.trim();
+  const effectivePublishedBefore = capPublishedBeforeAtNow(publishedBefore);
 
   const [row] = await database
     .select({ c: sql<number>`count(*)::int` })
@@ -140,7 +164,7 @@ export async function countFeedArticlesPublishedInRange(
     .where(
       and(
         gte(feedItems.publishedAt, publishedAfter),
-        lt(feedItems.publishedAt, publishedBefore),
+        lt(feedItems.publishedAt, effectivePublishedBefore),
         scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined,
         scopedFolderId ? eq(feedSubscriptions.folderId, scopedFolderId) : undefined,
       ),
@@ -156,6 +180,7 @@ export async function countGlobalFeedArticlesPublishedInRange(
   scope?: ArticleCountScope,
 ): Promise<number> {
   const scopedFeedId = scope?.feedId?.trim();
+  const effectivePublishedBefore = capPublishedBeforeAtNow(publishedBefore);
 
   const [row] = await database
     .select({ c: sql<number>`count(*)::int` })
@@ -164,7 +189,7 @@ export async function countGlobalFeedArticlesPublishedInRange(
     .where(
       and(
         gte(feedItems.publishedAt, publishedAfter),
-        lt(feedItems.publishedAt, publishedBefore),
+        lt(feedItems.publishedAt, effectivePublishedBefore),
         scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined,
       ),
     );
@@ -193,6 +218,7 @@ export async function getUnreadCountsPerFeed(
     eq(feedItemUserState.feedItemId, feedItems.id),
     eq(feedItemUserState.userId, userId),
   );
+  const now = new Date();
 
   const rows = await database
     .select({
@@ -202,7 +228,13 @@ export async function getUnreadCountsPerFeed(
     .from(feedItems)
     .innerJoin(feedSubscriptions, joinCond)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(and(inArray(feedItems.feedId, feedIds), sql`(${articleIsReadSql}) = false`))
+    .where(
+      and(
+        inArray(feedItems.feedId, feedIds),
+        sql`(${articleIsReadSql}) = false`,
+        lt(feedItems.publishedAt, now),
+      ),
+    )
     .groupBy(feedItems.feedId);
 
   const result: Record<string, number> = {};

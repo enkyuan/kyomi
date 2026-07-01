@@ -134,6 +134,41 @@
       "when": 1779728798109,
       "tag": "0018_omniscient_leo",
       "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1782878400000,
+      "tag": "0019_feed_refresh_scale_indexes",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1782878460000,
+      "tag": "0020_remove_inbox_show_recents",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1782878520000,
+      "tag": "0021_inbox_timestamp_display_relative",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1782878580000,
+      "tag": "0022_favicon_hosts",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1782878640000,
+      "tag": "0023_inbox_timestamp_display_relative_global",
+      "breakpoints": true
     }
   ]
 }

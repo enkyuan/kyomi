@@ -8,9 +8,8 @@ export const userPreferencesResponse = t.Object({
   showLinkPreviews: t.Boolean(),
   showImages: t.Boolean(),
   inboxDefaultView: t.Union([
+    t.Literal("my-feed"),
     t.Literal("all"),
-    t.Literal("today"),
-    t.Literal("unread"),
     t.Literal("saved"),
     t.Literal("recent"),
   ]),
@@ -38,9 +37,8 @@ export const updateUserPreferencesBody = t.Object({
   showImages: t.Optional(t.Boolean()),
   inboxDefaultView: t.Optional(
     t.Union([
+      t.Literal("my-feed"),
       t.Literal("all"),
-      t.Literal("today"),
-      t.Literal("unread"),
       t.Literal("saved"),
       t.Literal("recent"),
     ]),

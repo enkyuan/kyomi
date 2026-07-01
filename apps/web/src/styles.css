@@ -335,6 +335,18 @@ body {
   margin-bottom: 0;
 }
 
+[data-reader-inbox-body] .reader-content .article-body > a:first-child,
+[data-reader-inbox-body] .reader-content .article-body > p:first-child > a:only-child {
+  color: color-mix(in srgb, var(--muted-foreground) 95%, transparent);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+[data-reader-inbox-body] .reader-content .article-body > a:first-child:hover,
+[data-reader-inbox-body] .reader-content .article-body > p:first-child > a:only-child:hover {
+  color: color-mix(in srgb, var(--foreground) 86%, transparent);
+}
+
 .reader-content .article-body :is(h1, h2, h3, h4, h5, h6) {
   margin: 1.75rem 0 0.75rem;
   font-family: var(--font-sans);
@@ -1088,6 +1100,9 @@ body {
   z-index: 50;
   background: color-mix(in srgb, var(--color-black) 40%, transparent);
   backdrop-filter: blur(10px);
+  animation-duration: 200ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 
 .kyomi-feed-command-dialog {
@@ -1098,6 +1113,53 @@ body {
   width: min(calc(100vw - 2rem), 42rem);
   margin-inline: auto;
   outline: none;
+  transform-origin: top center;
+  animation-duration: 200ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  will-change: opacity, transform;
+}
+
+.kyomi-feed-command-overlay[data-state="open"] {
+  animation-name: kyomi-feed-command-overlay-in;
+}
+
+.kyomi-feed-command-overlay[data-state="closed"] {
+  animation-name: kyomi-feed-command-overlay-out;
+}
+
+.kyomi-feed-command-dialog[data-state="open"] {
+  animation-name: kyomi-feed-command-dialog-in;
+}
+
+.kyomi-feed-command-dialog[data-state="closed"] {
+  animation-name: kyomi-feed-command-dialog-out;
+}
+
+@keyframes kyomi-feed-command-overlay-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes kyomi-feed-command-overlay-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes kyomi-feed-command-dialog-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+@keyframes kyomi-feed-command-dialog-out {
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
 }
 
 .kyomi-feed-command {
@@ -1111,7 +1173,6 @@ body {
   border-radius: 1rem;
   background: var(--popover);
   color: var(--popover-foreground);
-  box-shadow: 0 12px 32px color-mix(in srgb, var(--color-black) 18%, transparent);
 }
 
 .kyomi-feed-command-search {

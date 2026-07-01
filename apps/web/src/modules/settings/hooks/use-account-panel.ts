@@ -192,14 +192,8 @@ function describeSessionLocation(session: Pick<SessionRow, "locationLabel" | "ip
   return "Unknown";
 }
 
-async function invalidateAuthState(
-  queryClient: ReturnType<typeof useQueryClient>,
-  router: ReturnType<typeof useRouter>,
-) {
-  await Promise.all([
-    queryClient.invalidateQueries({ queryKey: ["auth", "sessions"] }),
-    router.invalidate(),
-  ]);
+function authSessionsQueryKey() {
+  return ["auth", "sessions"] as const;
 }
 
 async function postAuthSessionAction(path: string, body?: Record<string, string>) {
@@ -234,7 +228,7 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
   }
 
   const { data: sessionsData, isError: isSessionsError } = useQuery({
-    queryKey: ["auth", "sessions"],
+    queryKey: authSessionsQueryKey(),
     queryFn: async (): Promise<SessionRow[]> => {
       try {
         const response = await fetch("/api/auth/list-sessions", {
@@ -265,7 +259,8 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
         description: updatedProfile.email,
         type: "success",
       });
-      await invalidateAuthState(queryClient, router);
+      await queryClient.invalidateQueries({ queryKey: authSessionsQueryKey() });
+      await router.invalidate();
     },
     onError: (error) => {
       logClientError("settings.account.email", error);
@@ -289,7 +284,8 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
         description: "The selected device no longer has access.",
         type: "success",
       });
-      await invalidateAuthState(queryClient, router);
+      await queryClient.invalidateQueries({ queryKey: authSessionsQueryKey() });
+      await router.invalidate();
     },
     onError: (error) => {
       logClientError("settings.account.revoke_session", error);
@@ -311,7 +307,8 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
         description: "Only this device remains active.",
         type: "success",
       });
-      await invalidateAuthState(queryClient, router);
+      await queryClient.invalidateQueries({ queryKey: authSessionsQueryKey() });
+      await router.invalidate();
     },
     onError: (error) => {
       logClientError("settings.account.revoke_other_sessions", error);
@@ -333,6 +330,7 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
         description: "This account has been signed out everywhere.",
         type: "success",
       });
+      await queryClient.invalidateQueries({ queryKey: authSessionsQueryKey() });
       await router.invalidate();
       await router.navigate({ to: "/" });
     },
