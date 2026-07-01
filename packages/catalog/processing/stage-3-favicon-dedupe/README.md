@@ -132,13 +132,13 @@ You can run the entire pipeline using `main.py`. This handles ingestion into Duc
 
 ```bash
 # Install dependencies
-poetry install
+uv sync --dev
 
 # Run the pipeline (Dry Run - processes 1000 feeds)
-poetry run python3 main.py --dry-run
+uv run python3 main.py --dry-run
 
 # Run the full pipeline
-poetry run python3 main.py --input ../stage-2-fetching/enriched_feeds.jsonl --output stage_3_feeds.parquet
+uv run python3 main.py --input ../stage-2-fetching/enriched_feeds.jsonl --output stage_3_feeds.parquet
 ```
 
 The pipeline implementation includes:

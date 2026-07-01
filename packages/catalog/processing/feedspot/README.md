@@ -4,7 +4,7 @@ This tool scrapes structured data from Feedspot RSS feed lists (e.g., `https://r
 
 ## Dependencies
 
-The following Python packages are required (managed via `poetry` in `pyproject.toml`):
+The following Python packages are required (managed via `uv` in `pyproject.toml`):
 - `requests`
 - `beautifulsoup4`
 - `lxml`
