@@ -1,2 +1,2 @@
-export { useUserPreferences } from "./hooks/use-user-preferences";
+export { usePreferences } from "@hooks/use-preferences";
 export { getUserPreferences, updateUserPreferences } from "./api";

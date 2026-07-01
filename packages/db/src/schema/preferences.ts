@@ -12,7 +12,7 @@ export const userPreferences = pgTable("user_preferences", {
   inboxDensity: text("inbox_density").notNull().default("comfortable"),
   articleOpenBehavior: text("article_open_behavior").notNull().default("split"),
   inboxMarkReadBehavior: text("inbox_mark_read_behavior").notNull().default("on-open"),
-  inboxTimestampDisplay: text("inbox_timestamp_display").notNull().default("absolute"),
+  inboxTimestampDisplay: text("inbox_timestamp_display").notNull().default("relative"),
   inboxTimestampHourCycle: text("inbox_timestamp_hour_cycle").notNull().default("12h"),
   inboxFontSizePx: integer("inbox_font_size_px").notNull().default(16),
   inboxShowFavicons: boolean("inbox_show_favicons").notNull().default(true),

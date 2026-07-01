@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useEffectEvent, useMemo, useRef } from "react";
 import type { ReaderLayoutMode } from "../core/types";
 import { mountReaderLinkPreviewCards } from "./components/link-preview-card";
 import { prepareArticleHtml } from "./html/string-prep";
@@ -138,8 +138,9 @@ export function RenderHtml({
     };
   }, []);
 
-  const scheduleEnhancementsRef = useRef(scheduleEnhancements);
-  scheduleEnhancementsRef.current = scheduleEnhancements;
+  const scheduleEnhancementsAfterMutation = useEffectEvent((node: HTMLElement) => {
+    scheduleEnhancements(node);
+  });
 
   useEffect(() => {
     const node = articleBodyRef.current;
@@ -163,7 +164,7 @@ export function RenderHtml({
               return;
             }
             observer.disconnect();
-            scheduleEnhancementsRef.current(current);
+            scheduleEnhancementsAfterMutation(current);
             observer.observe(current, { childList: true, subtree: true });
           });
           break;
@@ -173,7 +174,7 @@ export function RenderHtml({
 
     observer.observe(node, { childList: true, subtree: true });
     return () => observer.disconnect();
-  }, [layoutMode, openLinksInNewTab, prepared, showLinkPreviews]);
+  }, [prepared]);
 
   return (
     <div

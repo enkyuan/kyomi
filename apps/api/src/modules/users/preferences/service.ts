@@ -33,7 +33,7 @@ export const DEFAULT_USER_PREFERENCES: UserPreferencesDto = {
   inboxDensity: "comfortable",
   articleOpenBehavior: "split",
   inboxMarkReadBehavior: "on-open",
-  inboxTimestampDisplay: "absolute",
+  inboxTimestampDisplay: "relative",
   inboxTimestampHourCycle: "12h",
   inboxFontSizePx: 16,
   inboxShowFavicons: true,

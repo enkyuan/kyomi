@@ -40,14 +40,20 @@ export function deriveInboxListHeaderCount(input: {
 }): InboxListHeaderCount {
   const unitPart = unitForFilter(input.filter, input.activeScopeLabel);
 
-  let rawCount: number;
-  if (input.viewCountQuery.isSuccess && input.viewCountQuery.data && !input.includeRead) {
-    rawCount = input.viewCountQuery.data.count;
-  } else {
-    rawCount = input.loadedCount;
-  }
+  const knownCount =
+    input.viewCountQuery.isSuccess && !input.includeRead
+      ? input.viewCountQuery.data?.count
+      : undefined;
+  const usesKnownTotal = knownCount !== undefined;
+  const rawCount = knownCount ?? input.loadedCount;
 
-  const numberPart = rawCount > 999 ? "999+" : String(rawCount);
+  const hasMoreLoadedItems = !usesKnownTotal && input.hasNextPage;
+  const numberPart =
+    rawCount >= 999 && hasMoreLoadedItems
+      ? "999+"
+      : rawCount > 999
+        ? "999+"
+        : `${rawCount}${hasMoreLoadedItems ? "+" : ""}`;
 
   return {
     numberPart,

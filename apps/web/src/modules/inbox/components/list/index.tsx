@@ -5,13 +5,13 @@ import { StaticRows, VirtualizedRows, SkeletonRows, type RowsPaginationState } f
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
 import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { Badge } from "@kyomi/ui/badge";
-import { useRef, useSyncExternalStore, type CSSProperties } from "react";
+import { useRef } from "react";
+import { useHydrated } from "@hooks/use-hydrated";
 import type { InboxFilter, InboxItem, InboxSort } from "@modules/inbox/services/api";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import type { InboxListHeaderCount } from "@modules/inbox/utils/count-display";
 import { STATIC_LIST_ITEM_LIMIT } from "@modules/inbox/lib/layout";
 import { DEFAULT_SORT, FilterControl, SearchBar, SortButton } from "./header";
-import { useFixedScrollbarRect } from "./use-fixed-scrollbar";
 
 export type ListDisplayOptions = {
   readerFocusMode?: boolean;
@@ -66,8 +66,6 @@ export function List({
   const listScrollRef = useRef<HTMLDivElement | null>(null);
   const listHeaderRef = useRef<HTMLDivElement | null>(null);
   const listToolsRef = useRef<HTMLDivElement | null>(null);
-  const scrollRootRef = useRef<HTMLDivElement | null>(null);
-  const scrollbarRect = useFixedScrollbarRect(scrollRootRef);
 
   const { containerWidth: listContainerWidth, viewportHeight } = useViewportMetrics(listScrollRef, [
     inboxItems.length,
@@ -77,11 +75,7 @@ export function List({
     readerFocusMode,
   ]);
   const shouldUseStaticList = disableVirtualization && inboxItems.length <= STATIC_LIST_ITEM_LIMIT;
-  const isVirtualizerHostMounted = useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false,
-  );
+  const isVirtualizerHostMounted = useHydrated();
 
   const showEmptyState = isVirtualizerHostMounted && !isLoading && inboxItems.length === 0;
   const isAllEmptyState = filter === "all";
@@ -89,27 +83,13 @@ export function List({
     ? "New stories will show up here after feeds publish or refresh."
     : EMPTY_STATE_BODY_COPY;
 
-  const scrollbarStyle: CSSProperties | undefined = scrollbarRect
-    ? {
-        position: "fixed",
-        top: `${scrollbarRect.top}px`,
-        height: `${scrollbarRect.height}px`,
-        right: 0,
-        left: "auto",
-        insetInlineEnd: 0,
-      }
-    : undefined;
-
   return (
     <section
       className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden [--inbox-header-height:3rem] md:min-h-0"
       aria-busy={isRefreshing || undefined}
       data-slot="inbox-list-root"
     >
-      <ScrollAreaPrimitive.Root
-        ref={scrollRootRef}
-        className="relative min-h-0 flex-1 overflow-hidden"
-      >
+      <ScrollAreaPrimitive.Root className="relative min-h-0 flex-1 overflow-hidden">
         <ScrollAreaPrimitive.Viewport
           ref={listScrollRef}
           className="h-full overflow-x-hidden outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain"
@@ -210,9 +190,9 @@ export function List({
         </ScrollAreaPrimitive.Viewport>
         {inboxItems.length > 0 || isLoading ? (
           <ScrollBar
-            className="z-50 !fixed !right-0 !left-auto !inset-inline-end-0"
+            aria-label="Inbox list scrollbar"
+            className="z-50 !fixed !top-0 !right-0 !bottom-0 !left-auto !h-auto !inset-inline-end-0"
             orientation="vertical"
-            style={scrollbarStyle}
           />
         ) : null}
       </ScrollAreaPrimitive.Root>

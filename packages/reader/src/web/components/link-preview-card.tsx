@@ -3,25 +3,15 @@
 "use client";
 
 import { PreviewCard as PreviewCardPrimitive } from "@base-ui/react/preview-card";
-import { useMemo } from "react";
 import type React from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { getReaderSourceLabel } from "../../core/url";
 
 type ReaderLinkPreviewCardProps = {
   anchorProps: Record<string, string>;
-  anchorInnerHtml: string;
+  anchorText: string;
   href: string;
 };
-
-function extractAnchorText(anchorInnerHtml: string): string {
-  if (typeof document === "undefined") {
-    return anchorInnerHtml;
-  }
-  const container = document.createElement("div");
-  container.innerHTML = anchorInnerHtml;
-  return container.textContent ?? anchorInnerHtml;
-}
 
 function resolvePreviewHref(href: string) {
   try {
@@ -36,7 +26,7 @@ function resolvePreviewHref(href: string) {
 
 function ReaderLinkPreviewCard({
   anchorProps,
-  anchorInnerHtml,
+  anchorText,
   href,
 }: ReaderLinkPreviewCardProps): React.ReactElement {
   const previewHref = resolvePreviewHref(href);
@@ -46,8 +36,6 @@ function ReaderLinkPreviewCard({
     anchorProps.title !== undefined && String(anchorProps.title).trim() !== ""
       ? anchorProps.title
       : previewHref;
-
-  const anchorText = useMemo(() => extractAnchorText(anchorInnerHtml), [anchorInnerHtml]);
 
   return (
     <PreviewCardPrimitive.Root>
@@ -127,8 +115,8 @@ export function mountReaderLinkPreviewCards(container: HTMLElement): () => void 
     const root = createRoot(host);
     root.render(
       <ReaderLinkPreviewCard
-        anchorInnerHtml={anchor.innerHTML}
         anchorProps={collectAnchorProps(anchor)}
+        anchorText={anchor.textContent ?? href}
         href={href}
       />,
     );

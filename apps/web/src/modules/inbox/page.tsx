@@ -22,6 +22,7 @@ import { writeShellStateSnapshot } from "@lib/shell/state";
 import { listFollowedFeeds } from "@modules/feeds/api";
 import { deriveInboxListHeaderCount } from "@modules/inbox/utils/count-display";
 import { followedFeedsQueryKey, inboxViewCountQueryKey } from "@modules/inbox/queries/options";
+import type { ArticleDetailDto } from "@lib/schemas";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -71,7 +72,19 @@ function InboxPageContent({
     sort,
   } = route;
 
-  const { inboxQuery, detailQuery } = useInboxQueries({
+  const {
+    detailData,
+    detailError,
+    fetchNextInboxPage: requestNextInboxPage,
+    hasNextInboxPage,
+    inboxData,
+    inboxDataUpdatedAt,
+    isDetailError,
+    isDetailFetching,
+    isInboxFetching,
+    isInboxFetchingNextPage,
+    isInboxPending,
+  } = useInboxQueries({
     filter: effectiveFilter,
     search,
     feedId,
@@ -98,8 +111,8 @@ function InboxPageContent({
   const hasKnownEmptyFeedBackedView = hasNoFollowedFeeds && isFeedBackedListView;
 
   const rawInboxItems = useMemo(
-    () => dedupePagedInboxItemsById(inboxQuery.data?.pages),
-    [inboxQuery.data?.pages],
+    () => dedupePagedInboxItemsById(inboxData?.pages),
+    [inboxData?.pages],
   );
 
   const inboxItems = useMemo(() => {
@@ -137,7 +150,7 @@ function InboxPageContent({
       deriveInboxListHeaderCount({
         filter: effectiveFilter,
         loadedCount: inboxItems.length,
-        hasNextPage: !!inboxQuery.hasNextPage,
+        hasNextPage: !!hasNextInboxPage,
         viewCountQuery: { isSuccess: isViewCountSuccess, data: viewCountData },
         includeRead,
         activeScopeLabel,
@@ -145,15 +158,15 @@ function InboxPageContent({
     [
       activeScopeLabel,
       effectiveFilter,
+      hasNextInboxPage,
       includeRead,
       inboxItems.length,
-      inboxQuery.hasNextPage,
       isViewCountSuccess,
       viewCountData,
     ],
   );
 
-  const selectedItem = detailQuery.data?.item ?? null;
+  const selectedItem = detailData?.item ?? null;
 
   const clearSelectedItem = useCallback(() => {
     setMobileTransitionDirection(-1);
@@ -179,8 +192,8 @@ function InboxPageContent({
   );
 
   const fetchNextInboxPage = useCallback(() => {
-    void inboxQuery.fetchNextPage();
-  }, [inboxQuery.fetchNextPage]);
+    void requestNextInboxPage();
+  }, [requestNextInboxPage]);
 
   useEffect(() => {
     writeShellStateSnapshot({
@@ -200,7 +213,11 @@ function InboxPageContent({
       inboxItems={inboxItems}
       headerCount={headerCount}
       hasKnownEmptyFeedBackedView={hasKnownEmptyFeedBackedView}
-      inboxQuery={inboxQuery}
+      hasNextInboxPage={hasNextInboxPage}
+      inboxDataUpdatedAt={inboxDataUpdatedAt}
+      isInboxFetching={isInboxFetching}
+      isInboxFetchingNextPage={isInboxFetchingNextPage}
+      isInboxPending={isInboxPending}
       isResizing={false}
       fetchNextInboxPage={fetchNextInboxPage}
       selectItem={selectItem}
@@ -213,13 +230,15 @@ function InboxPageContent({
     () => (
       <InboxDetailSection
         preferences={preferences}
-        detailQuery={detailQuery}
+        detailError={detailError}
+        isDetailError={isDetailError}
+        isDetailFetching={isDetailFetching}
         selectedItem={selectedItem}
         showBackToList
         clearSelectedItem={clearSelectedItem}
       />
     ),
-    [clearSelectedItem, detailQuery, preferences, selectedItem],
+    [clearSelectedItem, detailError, isDetailError, isDetailFetching, preferences, selectedItem],
   );
 
   return (
@@ -261,7 +280,11 @@ function InboxListSection({
   inboxItems,
   headerCount,
   hasKnownEmptyFeedBackedView,
-  inboxQuery,
+  hasNextInboxPage,
+  inboxDataUpdatedAt,
+  isInboxFetching,
+  isInboxFetchingNextPage,
+  isInboxPending,
   isResizing,
   fetchNextInboxPage,
   selectItem,
@@ -276,7 +299,11 @@ function InboxListSection({
   inboxItems: InboxItem[];
   headerCount: ReturnType<typeof deriveInboxListHeaderCount>;
   hasKnownEmptyFeedBackedView: boolean;
-  inboxQuery: ReturnType<typeof useInboxQueries>["inboxQuery"];
+  hasNextInboxPage: boolean | undefined;
+  inboxDataUpdatedAt: number;
+  isInboxFetching: boolean;
+  isInboxFetchingNextPage: boolean;
+  isInboxPending: boolean;
   isResizing: boolean;
   fetchNextInboxPage: () => void;
   selectItem: (item: InboxItem) => void;
@@ -317,13 +344,12 @@ function InboxListSection({
       timestampHourCycle: preferences.inboxTimestampHourCycle,
       selectedItemId: itemId,
       pagination: {
-        isLoading: !hasKnownEmptyFeedBackedView && inboxQuery.isPending && inboxItems.length === 0,
-        isRefreshing:
-          inboxQuery.isFetching && !inboxQuery.isFetchingNextPage && inboxItems.length > 0,
-        hasNextPage: !!inboxQuery.hasNextPage,
-        isFetchingNextPage: inboxQuery.isFetchingNextPage,
+        isLoading: !hasKnownEmptyFeedBackedView && isInboxPending && inboxItems.length === 0,
+        isRefreshing: isInboxFetching && !isInboxFetchingNextPage && inboxItems.length > 0,
+        hasNextPage: !!hasNextInboxPage,
+        isFetchingNextPage: isInboxFetchingNextPage,
         fetchNextPage: fetchNextInboxPage,
-        dataUpdatedAt: inboxQuery.dataUpdatedAt,
+        dataUpdatedAt: inboxDataUpdatedAt,
       },
       onSelectItem: selectItem,
       onFilterChange: handleFilterChange,
@@ -336,11 +362,11 @@ function InboxListSection({
       hasKnownEmptyFeedBackedView,
       headerCount,
       inboxItems,
-      inboxQuery.dataUpdatedAt,
-      inboxQuery.isFetchingNextPage,
-      inboxQuery.isFetching,
-      inboxQuery.hasNextPage,
-      inboxQuery.isPending,
+      inboxDataUpdatedAt,
+      isInboxFetchingNextPage,
+      isInboxFetching,
+      hasNextInboxPage,
+      isInboxPending,
       isResizing,
       preferences.inboxDensity,
       preferences.inboxFontSizePx,
@@ -360,21 +386,22 @@ function InboxListSection({
 
 function InboxDetailSection({
   preferences,
-  detailQuery,
+  detailError,
+  isDetailError,
+  isDetailFetching,
   selectedItem,
   clearSelectedItem,
   showBackToList,
 }: {
   preferences: InboxPreferences;
-  detailQuery: ReturnType<typeof useInboxQueries>["detailQuery"];
-  selectedItem:
-    | NonNullable<ReturnType<typeof useInboxQueries>["detailQuery"]["data"]>["item"]
-    | null;
+  detailError: unknown;
+  isDetailError: boolean;
+  isDetailFetching: boolean;
+  selectedItem: ArticleDetailDto | null;
   clearSelectedItem?: () => void;
   showBackToList?: boolean;
 }) {
-  const isDetailLoading = detailQuery.isFetching && !selectedItem;
-  const isDetailError = detailQuery.isError;
+  const isDetailLoading = isDetailFetching && !selectedItem;
 
   const detailProps = useMemo(
     () => ({
@@ -383,14 +410,14 @@ function InboxDetailSection({
         : isDetailLoading
           ? ({ status: "loading" } as const)
           : isDetailError
-            ? ({ status: "error", error: detailQuery.error } as const)
+            ? ({ status: "error", error: detailError } as const)
             : ({ status: "empty" } as const),
       showFavicons: preferences.inboxShowFavicons,
       timestampDisplay: preferences.inboxTimestampDisplay,
       timestampHourCycle: preferences.inboxTimestampHourCycle,
     }),
     [
-      detailQuery.error,
+      detailError,
       isDetailError,
       isDetailLoading,
       preferences.inboxShowFavicons,
