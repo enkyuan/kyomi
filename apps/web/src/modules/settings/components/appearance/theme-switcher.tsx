@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { Field, FieldItem, FieldLabel } from "@kyomi/ui/field";
 import { Fieldset, FieldsetLegend } from "@kyomi/ui/fieldset";
 import { Radio, RadioGroup } from "@kyomi/ui/radio-group";
-
-const THEME_STORAGE_KEY = "theme";
+import { THEME_STORAGE_KEY } from "@lib/shell/keys";
 
 const items = [
   { label: "System", value: "system" },

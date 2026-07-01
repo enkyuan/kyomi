@@ -1574,6 +1574,13 @@ body {
   --scroll-mask-fade-from-b: --value([length], [percentage]);
 }
 
+@utility scroll-mask-y-edge-* {
+  --scroll-mask-fade-from-t: calc(100% - --spacing(--value(integer)));
+  --scroll-mask-fade-from-b: calc(100% - --spacing(--value(integer)));
+  --scroll-mask-fade-from-t: calc(100% - --value([length], [percentage]));
+  --scroll-mask-fade-from-b: calc(100% - --value([length], [percentage]));
+}
+
 @utility scroll-mask-l {
   --scroll-mask-fade-from-l: 80%;
 }
@@ -1606,4 +1613,11 @@ body {
   --scroll-mask-fade-from-r: --spacing(--value(integer));
   --scroll-mask-fade-from-r: --value(percentage);
   --scroll-mask-fade-from-r: --value([length], [percentage]);
+}
+
+@utility scroll-mask-x-edge-* {
+  --scroll-mask-fade-from-l: calc(100% - --spacing(--value(integer)));
+  --scroll-mask-fade-from-r: calc(100% - --spacing(--value(integer)));
+  --scroll-mask-fade-from-l: calc(100% - --value([length], [percentage]));
+  --scroll-mask-fade-from-r: calc(100% - --value([length], [percentage]));
 }

@@ -7,7 +7,7 @@ import {
   type InboxItem,
   type InboxSort,
 } from "../services/api";
-import { getInboxOrganizer } from "../services/organizer";
+import { getInboxRecap } from "../services/recap";
 import { getTimezoneOffsetMinutes, QUERY_TIMES } from "@lib/query/policies";
 
 const DEFAULT_INBOX_FILTER: InboxFilter = "my-feed";
@@ -92,8 +92,8 @@ function inboxDetailQueryKey(itemId: string | undefined) {
   return ["inbox", "item-detail", itemId] as const;
 }
 
-export function inboxOrganizerQueryKey() {
-  return ["inbox", "organizer"] as const;
+export function inboxRecapQueryKey() {
+  return ["inbox", "recap"] as const;
 }
 
 function sidebarInboxSummaryQueryKey(timezoneOffsetMinutes = getTimezoneOffsetMinutes()) {
@@ -166,10 +166,10 @@ export function inboxDetailQueryOptions(itemId: string | undefined) {
   };
 }
 
-export function inboxOrganizerQueryOptions(limit = 5) {
+export function inboxRecapQueryOptions(limit = 5) {
   return {
-    queryKey: inboxOrganizerQueryKey(),
-    queryFn: () => getInboxOrganizer({ data: { limit } }),
+    queryKey: inboxRecapQueryKey(),
+    queryFn: () => getInboxRecap({ data: { limit } }),
     staleTime: QUERY_TIMES.countsStale,
     gcTime: QUERY_TIMES.listGc,
   };
@@ -198,7 +198,7 @@ export function invalidateFeedAndInboxQueries(queryClient: QueryClient) {
   void queryClient.invalidateQueries({ queryKey: ["feed-detail"] });
   void queryClient.invalidateQueries({ queryKey: ["feeds", "refresh-status"] });
   void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
-  void queryClient.invalidateQueries({ queryKey: inboxOrganizerQueryKey() });
+  void queryClient.invalidateQueries({ queryKey: inboxRecapQueryKey() });
   void queryClient.invalidateQueries({ queryKey: ["inbox", "view-count"] });
   void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
 }

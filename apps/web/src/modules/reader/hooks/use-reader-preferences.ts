@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { useAuth } from "@integrations/better-auth/provider";
-import { READER_PREFERENCES_STORAGE_KEY } from "@lib/shell/storage-keys";
+import { READER_PREFERENCES_STORAGE_KEY } from "@lib/shell/keys";
 import { usePreferences } from "@hooks/use-preferences";
 import { getReaderPreferences, updateReaderPreferences } from "../reader-preferences";
 import {

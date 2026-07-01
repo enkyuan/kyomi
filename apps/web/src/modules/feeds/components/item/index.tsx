@@ -4,7 +4,7 @@ import { memo, type KeyboardEvent } from "react";
 import { m } from "motion/react";
 import { cn } from "@lib/utils";
 import { SourceRow } from "./source-row";
-import { ItemInlineToolbar } from "./toolbar";
+import { ItemInlineToolbar } from "./toolbar/item-toolbar";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/card";
 import { TimestampText } from "@modules/inbox/components/timestamp-text";
 import { useTimestamp } from "@hooks/use-timestamp";

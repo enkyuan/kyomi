@@ -309,7 +309,7 @@ export function useToolbar({
             description: nextSaved
               ? "This article is now in read later."
               : "This article was removed from read later.",
-            type: "success",
+            type: nextSaved ? "success" : "info",
           },
           error: (error) => {
             logClientError("reader.saved_state", error);

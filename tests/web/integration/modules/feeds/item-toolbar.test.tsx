@@ -3,13 +3,14 @@ import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxItem } from "@modules/inbox/services/api";
 
-const { mutateMock, reportBrokenArticleMock } = vi.hoisted(() => ({
+const { mutateAsyncMock, mutateMock, reportBrokenArticleMock } = vi.hoisted(() => ({
+  mutateAsyncMock: vi.fn(),
   mutateMock: vi.fn(),
   reportBrokenArticleMock: vi.fn(),
 }));
 
 vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
-  useInboxItemStateMutation: () => ({ mutate: mutateMock }),
+  useInboxItemStateMutation: () => ({ mutate: mutateMock, mutateAsync: mutateAsyncMock }),
 }));
 
 vi.mock("@modules/inbox/services/api", () => ({
@@ -63,6 +64,8 @@ function renderItem({ onSelect = vi.fn(), rowItem = item } = {}) {
 
 describe("inbox item toolbar", () => {
   beforeEach(() => {
+    mutateAsyncMock.mockResolvedValue(undefined);
+    mutateAsyncMock.mockClear();
     mutateMock.mockClear();
     reportBrokenArticleMock.mockReset();
     vi.stubGlobal(
