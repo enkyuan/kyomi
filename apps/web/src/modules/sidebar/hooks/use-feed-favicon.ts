@@ -16,6 +16,10 @@ import {
   type CachedFaviconMetadata,
 } from "../lib/favicon-cache";
 
+function isProxyFaviconUrl(url: string) {
+  return url.startsWith("/api/favicon?");
+}
+
 export function useFeedFavicon({
   faviconUrl: storedFaviconUrl,
   feedUrl,
@@ -32,7 +36,7 @@ export function useFeedFavicon({
   const candidateUrls = buildFaviconUrlCandidates(storedFaviconUrl, siteUrl, feedUrl);
   const faviconUrls =
     cacheHint?.origin === cacheOrigin && cacheHint.status === "miss"
-      ? []
+      ? candidateUrls.filter((url) => !isProxyFaviconUrl(url))
       : cacheHint?.origin === cacheOrigin && cacheHint.status === "hit" && cacheHint.url
         ? [cacheHint.url, ...candidateUrls.filter((url) => url !== cacheHint.url)]
         : candidateUrls;
