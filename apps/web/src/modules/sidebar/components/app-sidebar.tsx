@@ -3,7 +3,7 @@
 import type { CSSProperties } from "react";
 import { Suspense, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { AddFill, ArrowUpCircleFill, Chat3Fill, Settings3Fill } from "@mingcute/react";
+import { AddFill, ArrowUpCircleFill, Chat3Fill, Settings1Fill } from "@mingcute/react";
 import { KyomiLogo } from "@kyomi/ui/icons";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
@@ -182,7 +182,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
                 setSettingsOpen(true);
               }}
             >
-              <Settings3Fill size={24} />
+              <Settings1Fill size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
