@@ -80,10 +80,17 @@ export const folders = pgTable(
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
     name: text("name").notNull(),
+    isPinned: boolean("is_pinned").notNull().default(false),
+    pinnedAt: timestamp("pinned_at"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
-  (table) => [uniqueIndex("folders_user_id_name_unique").on(table.userId, table.name)],
+  (table) => [
+    uniqueIndex("folders_user_id_name_unique").on(table.userId, table.name),
+    index("folders_user_pinned_idx")
+      .on(table.userId, table.pinnedAt.desc(), table.name)
+      .where(sql`${table.isPinned} IS TRUE`),
+  ],
 );
 
 export const feedSubscriptions = pgTable(

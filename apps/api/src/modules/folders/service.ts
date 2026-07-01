@@ -2,7 +2,7 @@ import type { db } from "@adapters/db/client";
 import { feedSubscriptions, folders } from "@kyomi/db";
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
-import type { FolderDto, FolderReadStatusResponseDto } from "./types";
+import type { FolderDto, FolderReadStatusResponseDto, UpdateFolderInput } from "./types";
 
 type DB = typeof db;
 type FolderLookupDatabase = Pick<DB, "insert" | "select">;
@@ -13,6 +13,8 @@ function mapFolder(row: typeof folders.$inferSelect): FolderDto {
   return {
     id: row.id,
     name: row.name,
+    isPinned: row.isPinned,
+    pinnedAt: row.pinnedAt ? row.pinnedAt.toISOString() : null,
     createdAt: row.createdAt.toISOString(),
   };
 }
@@ -102,16 +104,36 @@ export async function updateFolder(
   database: DB,
   userId: string,
   folderId: string,
-  name: string,
+  patch: UpdateFolderInput,
 ): Promise<FolderDto> {
-  const trimmed = name.trim();
-  if (!trimmed) {
-    throw new AppError("name is required", { status: 400, code: "FOLDER_NAME_REQUIRED" });
+  if (!("name" in patch) && !("isPinned" in patch)) {
+    throw new AppError("No updatable fields provided", { status: 400, code: "EMPTY_UPDATE" });
   }
+
   const now = new Date();
+  const updatePatch: Partial<{
+    name: string;
+    isPinned: boolean;
+    pinnedAt: Date | null;
+    updatedAt: Date;
+  }> = { updatedAt: now };
+
+  if ("name" in patch) {
+    const trimmed = patch.name?.trim();
+    if (!trimmed) {
+      throw new AppError("name is required", { status: 400, code: "FOLDER_NAME_REQUIRED" });
+    }
+    updatePatch.name = trimmed;
+  }
+
+  if ("isPinned" in patch && typeof patch.isPinned === "boolean") {
+    updatePatch.isPinned = patch.isPinned;
+    updatePatch.pinnedAt = patch.isPinned ? now : null;
+  }
+
   const updated = await database
     .update(folders)
-    .set({ name: trimmed, updatedAt: now })
+    .set(updatePatch)
     .where(and(eq(folders.id, folderId), eq(folders.userId, userId)))
     .returning();
 

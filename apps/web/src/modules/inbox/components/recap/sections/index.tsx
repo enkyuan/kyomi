@@ -61,13 +61,13 @@ export function SectionEmpty({
   action?: ReactNode;
 }) {
   return (
-    <Empty className="min-h-0 flex-none gap-3 rounded-2xl border border-dashed bg-muted/20 px-4 py-6">
-      {icon ? (
-        <EmptyMedia className="mb-0 text-muted-foreground/80" variant="icon">
-          {icon}
-        </EmptyMedia>
-      ) : null}
+    <Empty className="min-h-0 gap-3 px-4 py-6 md:py-6">
       <EmptyHeader>
+        {icon ? (
+          <EmptyMedia className="mb-3 text-muted-foreground/80" variant="icon">
+            {icon}
+          </EmptyMedia>
+        ) : null}
         <EmptyTitle className="text-sm">{title}</EmptyTitle>
         <EmptyDescription>{description}</EmptyDescription>
       </EmptyHeader>
@@ -114,11 +114,11 @@ export function RecapSkeleton() {
 export function RecapError({ onRetry }: { onRetry: () => void }) {
   return (
     <Empty className="px-6 py-10">
-      <EmptyMedia variant="icon">
-        <FolderWarningFill />
-      </EmptyMedia>
       <EmptyHeader>
-        <EmptyTitle className="text-base">Recap paused</EmptyTitle>
+        <EmptyMedia variant="icon">
+          <FolderWarningFill />
+        </EmptyMedia>
+        <EmptyTitle className="text-base">Recap unavailable</EmptyTitle>
         <EmptyDescription>
           Folders, top sources, and saved reminders could not load right now.
         </EmptyDescription>

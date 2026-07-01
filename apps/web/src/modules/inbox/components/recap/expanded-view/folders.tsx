@@ -7,6 +7,8 @@ import {
   Edit2Fill,
   Folder2Fill,
   More2Fill,
+  PinFill,
+  PinLine,
   RightFill,
 } from "@mingcute/react";
 import { useState } from "react";
@@ -26,15 +28,52 @@ import { ScrollArea } from "@kyomi/ui/scroll-area";
 import { toastManager } from "@kyomi/ui/toast";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import type { FollowedFeed } from "@modules/feeds/api";
-import { deleteFolder, updateFolder } from "@modules/folders/api";
-import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
+import { deleteFolder, updateFolder, type Folder } from "@modules/folders/api";
+import {
+  followedFeedsQueryKey,
+  inboxRecapQueryKey,
+} from "@modules/inbox/queries/options";
+import type { InboxRecapDto } from "@modules/inbox/services/recap-schema";
 import { ExpandedFolderFeeds } from "./folder-feeds";
 import { FolderActions } from "../folders";
 import { SectionEmpty } from "../sections";
 import type { RecapFolder } from "../types";
 import { formatFeedCount, invalidateRecapSurface } from "../utils";
+import { FolderIconBadge } from "../folder-icon-badge";
 
 type FolderOption = { label: string; value: string };
+type PinFolderVariables = {
+  folderId: string;
+  isPinned: boolean;
+  name: string;
+};
+type PinFolderContext = {
+  previousFolders?: Folder[];
+  previousRecap?: InboxRecapDto;
+};
+
+function applyFolderPinState(
+  queryClient: ReturnType<typeof useQueryClient>,
+  folderId: string,
+  isPinned: boolean,
+  pinnedAt: string | null = isPinned ? new Date().toISOString() : null,
+) {
+  queryClient.setQueryData<InboxRecapDto>(inboxRecapQueryKey(), (current) =>
+    current
+      ? {
+          ...current,
+          folders: current.folders.map((folder) =>
+            folder.id === folderId ? { ...folder, isPinned, pinnedAt } : folder,
+          ),
+        }
+      : current,
+  );
+  queryClient.setQueryData<Folder[]>(["folders"], (current) =>
+    current?.map((folder) =>
+      folder.id === folderId ? { ...folder, isPinned, pinnedAt } : folder,
+    ),
+  );
+}
 
 export function ExpandedFolders({
   folders,
@@ -42,7 +81,11 @@ export function ExpandedFolders({
   followedFeedsLoading,
   folderOptions,
   moveFeed,
+  moveFeeds,
+  movingFeedIds,
   movingFeedId,
+  removeFeeds,
+  removingFeedIds,
   selectedFolder,
   unsortedFolderId,
   exportingOpml,
@@ -56,7 +99,11 @@ export function ExpandedFolders({
   followedFeedsLoading: boolean;
   folderOptions: FolderOption[];
   moveFeed: (feedId: string, folderId: string) => void;
+  moveFeeds: (feedIds: string[], folderId: string) => void;
+  movingFeedIds: string[];
   movingFeedId: string | null;
+  removeFeeds: (feedIds: string[]) => void;
+  removingFeedIds: string[];
   selectedFolder: RecapFolder | null;
   unsortedFolderId: string | null;
   exportingOpml: boolean;
@@ -116,6 +163,47 @@ export function ExpandedFolders({
     },
   });
 
+  const pinMutation = useMutation({
+    mutationFn: ({ folderId, isPinned, name }: PinFolderVariables) =>
+      updateFolder({ data: { folderId, isPinned, name } }),
+    onMutate: async (variables): Promise<PinFolderContext> => {
+      await Promise.all([
+        queryClient.cancelQueries({ queryKey: inboxRecapQueryKey() }),
+        queryClient.cancelQueries({ queryKey: ["folders"] }),
+      ]);
+      const previousRecap = queryClient.getQueryData<InboxRecapDto>(inboxRecapQueryKey());
+      const previousFolders = queryClient.getQueryData<Folder[]>(["folders"]);
+      applyFolderPinState(queryClient, variables.folderId, variables.isPinned);
+      return { previousFolders, previousRecap };
+    },
+    onSuccess: async (updated, variables) => {
+      const returnedFolder = updated as Partial<Folder>;
+      const isPinned =
+        typeof returnedFolder.isPinned === "boolean" ? returnedFolder.isPinned : variables.isPinned;
+      const pinnedAt =
+        returnedFolder.pinnedAt !== undefined
+          ? returnedFolder.pinnedAt
+          : isPinned
+            ? new Date().toISOString()
+            : null;
+      applyFolderPinState(queryClient, variables.folderId, isPinned, pinnedAt);
+      toastManager.add({
+        title: isPinned ? "Folder pinned" : "Folder unpinned",
+        type: "success",
+      });
+    },
+    onError: (error, _variables, context) => {
+      queryClient.setQueryData(inboxRecapQueryKey(), context?.previousRecap);
+      queryClient.setQueryData(["folders"], context?.previousFolders);
+      logClientError("inbox.recap.folder.pin", error);
+      toastManager.add({
+        title: "Unable to update folder pin",
+        description: getUserSafeErrorMessage(error, "Try again in a moment."),
+        type: "error",
+      });
+    },
+  });
+
   const startEditing = (folder: RecapFolder) => {
     setEditingFolderId(folder.id);
     setDraftName(folder.name);
@@ -142,7 +230,12 @@ export function ExpandedFolders({
         folderOptions={folderOptions}
         isLoading={followedFeedsLoading}
         moveFeed={moveFeed}
+        moveFeeds={moveFeeds}
+        movingFeedIds={movingFeedIds}
         movingFeedId={movingFeedId}
+        removeFeeds={removeFeeds}
+        removingFeedIds={removingFeedIds}
+        onImportOpml={onImportOpml}
         unsortedFolderId={unsortedFolderId}
       />
     );
@@ -181,9 +274,7 @@ export function ExpandedFolders({
                 key={folder.id}
                 className="group flex h-13 w-full min-w-0 items-center gap-2.5 rounded-2xl px-2 text-base transition-colors hover:bg-accent/70"
               >
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
-                  <Folder2Fill className="size-4" />
-                </span>
+                <FolderIconBadge />
                 <Input
                   aria-label={`Rename ${folder.name}`}
                   className="h-8 min-w-0 flex-1"
@@ -228,9 +319,7 @@ export function ExpandedFolders({
                   type="button"
                   onClick={() => onSelectFolder(folder)}
                 >
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
-                    <Folder2Fill className="size-4" />
-                  </span>
+                  <FolderIconBadge />
                   <span className="min-w-0 flex-1">
                     <span className="flex min-w-0 items-center gap-1">
                       <span className="truncate font-medium">{folder.name}</span>
@@ -254,18 +343,29 @@ export function ExpandedFolders({
                       <Edit2Fill />
                       Rename
                     </MenuItem>
-                    <MenuItem disabled>
-                      <span aria-hidden className="size-3" />
-                      Pin
-                    </MenuItem>
                     <MenuItem
-                      disabled={isDefaultFolder}
-                      variant="destructive"
-                      onClick={() => setDeleteTarget(folder)}
+                      disabled={pinMutation.isPending}
+                      onClick={() =>
+                        pinMutation.mutate({
+                          folderId: folder.id,
+                          isPinned: !folder.isPinned,
+                          name: folder.name,
+                        })
+                      }
                     >
-                      <span aria-hidden className="size-3" />
-                      Delete
+                      {folder.isPinned ? (
+                        <PinFill className="opacity-100 text-amber-500" />
+                      ) : (
+                        <PinLine className="opacity-70 text-muted-foreground" />
+                      )}
+                      {folder.isPinned ? "Unpin" : "Pin"}
                     </MenuItem>
+                    {!isDefaultFolder ? (
+                      <MenuItem variant="destructive" onClick={() => setDeleteTarget(folder)}>
+                        <span aria-hidden className="size-3" />
+                        Delete
+                      </MenuItem>
+                    ) : null}
                   </MenuPopup>
                 </Menu>
               </div>

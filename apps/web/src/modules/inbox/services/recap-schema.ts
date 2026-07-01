@@ -34,6 +34,12 @@ export const inboxRecapFolderSchema = z.object({
   id: z.string(),
   name: z.string(),
   createdAt: z.string(),
+  isPinned: z.boolean().optional().default(false),
+  pinnedAt: z
+    .string()
+    .nullable()
+    .optional()
+    .transform((value) => value ?? null),
   feedCount: z.number(),
 });
 

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { InboxItem } from "@modules/inbox/services/api";
 import { cn } from "@lib/utils";
-import { BrokenArticleReportDialog } from "../broken-article-report-dialog";
+import { ReportArticleDialog } from "../report-article";
 import { Toolbar } from "./toolbar-view";
 import { useToolbarModel } from "./toolbar-model";
 
@@ -23,7 +23,7 @@ export function ItemInlineToolbar({ item, className }: { item: InboxItem; classN
           className,
         )}
       />
-      <BrokenArticleReportDialog item={item} open={reportOpen} onOpenChange={setReportOpen} />
+      <ReportArticleDialog item={item} open={reportOpen} onOpenChange={setReportOpen} />
     </>
   );
 }

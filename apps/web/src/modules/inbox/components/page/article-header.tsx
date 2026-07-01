@@ -1,6 +1,6 @@
 "use client";
 
-import { LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import type { ArticleDetailDto } from "@lib/schemas";
 import { BackToInboxButton, SearchBar } from "@modules/inbox/components/list/header";
 import { ReaderFontSizeControls } from "@modules/reader/components/toolbar";
@@ -86,6 +86,10 @@ function SelectedArticleHeader({
   const scopeControlTransition = prefersReducedMotion
     ? { duration: 0 }
     : { type: "spring" as const, duration: 0.28, bounce: 0 };
+  const navCollapsedState = prefersReducedMotion
+    ? undefined
+    : { opacity: 0, scale: 0.92, filter: "blur(4px)", width: 0 };
+  const navExpandedState = { opacity: 1, scale: 1, filter: "blur(0px)", width: 84 };
 
   return (
     <div
@@ -116,14 +120,26 @@ function SelectedArticleHeader({
           >
             <SearchBar />
           </m.div>
-          <m.div layout transition={scopeControlTransition}>
-            <StepControls
-              canSelectPreviousItem={canSelectPreviousItem}
-              canSelectNextItem={canSelectNextItem}
-              onSelectPreviousItem={onSelectPreviousItem}
-              onSelectNextItem={onSelectNextItem}
-            />
-          </m.div>
+          <AnimatePresence initial={false} mode="popLayout">
+            {!readerControlsCollapsed ? (
+              <m.div
+                key="article-navigation"
+                layout
+                initial={navCollapsedState}
+                animate={navExpandedState}
+                exit={navCollapsedState}
+                className="flex shrink-0 origin-right justify-end overflow-hidden"
+                transition={scopeControlTransition}
+              >
+                <StepControls
+                  canSelectPreviousItem={canSelectPreviousItem}
+                  canSelectNextItem={canSelectNextItem}
+                  onSelectPreviousItem={onSelectPreviousItem}
+                  onSelectNextItem={onSelectNextItem}
+                />
+              </m.div>
+            ) : null}
+          </AnimatePresence>
         </m.div>
       </LazyMotion>
     </div>

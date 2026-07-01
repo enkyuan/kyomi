@@ -5,10 +5,11 @@ import { Button } from "@kyomi/ui/button";
 import type { RecapFolder } from "./types";
 import { formatFeedCount } from "./utils";
 import { RailTooltip, RecapSection, SectionEmpty } from "./sections";
+import { FolderIconBadge } from "./folder-icon-badge";
 
-const FOLDER_ACTION_BUTTON_CLASS =
+export const FOLDER_ACTION_BUTTON_CLASS =
   "h-10 flex-1 gap-1.5 rounded-full px-4 font-semibold text-sm leading-none before:rounded-full transition-transform active:scale-[0.96] sm:h-10 sm:text-sm";
-const FOLDER_ICON_BUTTON_CLASS =
+export const FOLDER_ICON_BUTTON_CLASS =
   "size-10 rounded-full px-0 before:rounded-full transition-transform active:scale-[0.96] sm:size-10";
 
 export function FolderActions({
@@ -111,9 +112,7 @@ export function Folders({
                 type="button"
                 onClick={onExpand}
               >
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
-                  <Folder2Fill className="size-4" />
-                </span>
+                <FolderIconBadge />
                 <span className="min-w-0 flex-1">
                   <span className="block truncate font-medium">{folder.name}</span>
                   <span className="block truncate text-muted-foreground text-sm">

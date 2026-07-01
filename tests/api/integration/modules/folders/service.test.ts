@@ -1,6 +1,11 @@
 import { describe, expect, mock, test } from "bun:test";
 import { AppError } from "@shared/errors/app";
-import { createFolder, deleteFolder, markFolderReadStatus } from "@modules/folders/service";
+import {
+  createFolder,
+  deleteFolder,
+  markFolderReadStatus,
+  updateFolder,
+} from "@modules/folders/service";
 
 describe("folders.service", () => {
   test("createFolder trims and returns inserted folder", async () => {
@@ -14,6 +19,8 @@ describe("folders.service", () => {
                 id: "550e8400-e29b-41d4-a716-446655440000",
                 userId: "u1",
                 name: "Inbox",
+                isPinned: false,
+                pinnedAt: null,
                 createdAt,
                 updatedAt: createdAt,
               },
@@ -56,6 +63,97 @@ describe("folders.service", () => {
     await expect(markFolderReadStatus(fakeDb, "u1", "f1")).rejects.toBeInstanceOf(AppError);
   });
 
+  test("updateFolder pins a folder and returns pinned metadata", async () => {
+    const updatedAt = new Date("2026-07-01T12:00:00.000Z");
+    let patch: Record<string, unknown> | undefined;
+    const update = mock(() => ({
+      set: (values: Record<string, unknown>) => {
+        patch = values;
+        return {
+          where: () => ({
+            returning: () =>
+              Promise.resolve([
+                {
+                  id: "folder-1",
+                  userId: "u1",
+                  name: "Programming",
+                  isPinned: true,
+                  pinnedAt: updatedAt,
+                  createdAt: new Date("2026-07-01T00:00:00.000Z"),
+                  updatedAt,
+                },
+              ]),
+          }),
+        };
+      },
+    }));
+    const fakeDb = { update } as unknown as Parameters<typeof updateFolder>[0];
+
+    const result = await updateFolder(fakeDb, "u1", "folder-1", { isPinned: true });
+
+    expect(patch?.isPinned).toBe(true);
+    expect(patch?.pinnedAt).toBeInstanceOf(Date);
+    expect(result.isPinned).toBe(true);
+    expect(result.pinnedAt).toBe("2026-07-01T12:00:00.000Z");
+  });
+
+  test("updateFolder unpins a folder", async () => {
+    let patch: Record<string, unknown> | undefined;
+    const update = mock(() => ({
+      set: (values: Record<string, unknown>) => {
+        patch = values;
+        return {
+          where: () => ({
+            returning: () =>
+              Promise.resolve([
+                {
+                  id: "folder-1",
+                  userId: "u1",
+                  name: "Programming",
+                  isPinned: false,
+                  pinnedAt: null,
+                  createdAt: new Date("2026-07-01T00:00:00.000Z"),
+                  updatedAt: new Date("2026-07-01T12:00:00.000Z"),
+                },
+              ]),
+          }),
+        };
+      },
+    }));
+    const fakeDb = { update } as unknown as Parameters<typeof updateFolder>[0];
+
+    const result = await updateFolder(fakeDb, "u1", "folder-1", { isPinned: false });
+
+    expect(patch).toMatchObject({ isPinned: false, pinnedAt: null });
+    expect(result.isPinned).toBe(false);
+    expect(result.pinnedAt).toBeNull();
+  });
+
+  test("updateFolder rejects empty patches", async () => {
+    const update = mock();
+    const fakeDb = { update } as unknown as Parameters<typeof updateFolder>[0];
+
+    await expect(updateFolder(fakeDb, "u1", "folder-1", {})).rejects.toMatchObject({
+      code: "EMPTY_UPDATE",
+    });
+    expect(update).not.toHaveBeenCalled();
+  });
+
+  test("updateFolder throws when folder missing", async () => {
+    const update = mock(() => ({
+      set: () => ({
+        where: () => ({
+          returning: () => Promise.resolve([]),
+        }),
+      }),
+    }));
+    const fakeDb = { update } as unknown as Parameters<typeof updateFolder>[0];
+
+    await expect(updateFolder(fakeDb, "u1", "missing", { isPinned: true })).rejects.toMatchObject({
+      code: "FOLDER_NOT_FOUND",
+    });
+  });
+
   test("deleteFolder moves subscriptions to Unsorted before deleting the folder", async () => {
     let selectCall = 0;
     const updateSet = mock((values: Record<string, unknown>) => ({
@@ -82,6 +180,8 @@ describe("folders.service", () => {
                         id: "folder-unsorted",
                         userId: "u1",
                         name: "Unsorted",
+                        isPinned: false,
+                        pinnedAt: null,
                         createdAt: new Date("2026-07-01T00:00:00.000Z"),
                         updatedAt: new Date("2026-07-01T00:00:00.000Z"),
                       },

@@ -4,6 +4,8 @@ export type InboxRecapFolderDto = {
   id: string;
   name: string;
   createdAt: string;
+  isPinned: boolean;
+  pinnedAt: string | null;
   feedCount: number;
 };
 

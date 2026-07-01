@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type SyntheticEvent } from "react";
 import { Button } from "@kyomi/ui/button";
 import {
   Dialog,
@@ -18,7 +18,11 @@ import { Textarea } from "@kyomi/ui/textarea";
 import { toastManager } from "@kyomi/ui/toast";
 import { reportBrokenArticle, type InboxItem } from "@modules/inbox/services/api";
 
-export function BrokenArticleReportDialog({
+function stopDialogPropagation(event: SyntheticEvent) {
+  event.stopPropagation();
+}
+
+export function ReportArticleDialog({
   item,
   open,
   onOpenChange,
@@ -62,7 +66,11 @@ export function BrokenArticleReportDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogPopup showCloseButton={false}>
+      <DialogPopup
+        showCloseButton={false}
+        onClick={stopDialogPropagation}
+        onPointerDown={stopDialogPropagation}
+      >
         <DialogHeader>
           <DialogTitle>Report broken article</DialogTitle>
           <DialogDescription>{item.title}</DialogDescription>
@@ -86,7 +94,7 @@ export function BrokenArticleReportDialog({
             </Field>
           </DialogPanel>
           <DialogFooter>
-            <DialogClose render={<Button variant="ghost" />} disabled={isPending}>
+            <DialogClose render={<Button type="button" variant="ghost" />} disabled={isPending}>
               Cancel
             </DialogClose>
             <Button loading={isPending} type="submit">

@@ -10,7 +10,14 @@ import { useHydrated } from "@hooks/use-hydrated";
 import type { InboxFilter, InboxItem, InboxSort } from "@modules/inbox/services/api";
 import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { STATIC_LIST_ITEM_LIMIT } from "@modules/inbox/lib/layout";
-import { BackToInboxButton, DEFAULT_SORT, FilterControl, SearchBar, SortButton } from "./header";
+import {
+  BackToInboxButton,
+  DEFAULT_SORT,
+  FilterControl,
+  SearchBar,
+  SortButton,
+  type PinnedFolderFilter,
+} from "./header";
 import { Toolbar as ReaderToolbar } from "@modules/reader/components/toolbar";
 import { useToolbar as useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 
@@ -69,13 +76,16 @@ interface ListProps {
   pagination: RowsPaginationState;
   onSelectItem: (item: InboxItem) => void;
   onFilterChange?: (filter: InboxFilter) => void;
+  onFolderFilterChange?: (folderId: string) => void;
   onBackToInbox?: () => void;
   onBackToList?: () => void;
   onSortChange: (sort: InboxSort) => void;
   sort?: InboxSort;
   isFeedScoped?: boolean;
   isArticleScoped?: boolean;
+  activeFolderId?: string;
   feedLabel?: string;
+  pinnedFolders?: PinnedFolderFilter[];
   selectedArticle?: ArticleDetailDto | null;
 }
 
@@ -92,13 +102,16 @@ export function List({
   pagination,
   onSelectItem,
   onFilterChange,
+  onFolderFilterChange,
   onBackToInbox,
   onBackToList,
   onSortChange,
   sort,
   isFeedScoped = false,
   isArticleScoped = false,
+  activeFolderId,
   feedLabel,
+  pinnedFolders = [],
   selectedArticle,
 }: ListProps) {
   const { readerFocusMode = false, disableVirtualization = false, showFavicons } = display;
@@ -180,7 +193,13 @@ export function List({
                             exit={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.98 }}
                             transition={scopeControlTransition}
                           >
-                            <FilterControl filter={filter} onFilterChange={onFilterChange} />
+                            <FilterControl
+                              activeFolderId={activeFolderId}
+                              filter={filter}
+                              pinnedFolders={pinnedFolders}
+                              onFilterChange={onFilterChange}
+                              onFolderFilterChange={onFolderFilterChange}
+                            />
                           </m.div>
                         )}
                       </AnimatePresence>

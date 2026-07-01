@@ -6,10 +6,12 @@ import {
   SegmentedControlTab,
 } from "@kyomi/ui/segmented-control";
 import { Menu, MenuTrigger, MenuPopup, MenuItem } from "@kyomi/ui/menu";
+import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
   ArrowLeftFill,
   DownFill,
   BookmarkFill,
+  Folder2Fill,
   TimeDurationFill,
   SearchLine,
   CloseLine,
@@ -24,6 +26,14 @@ import type { InboxFilter, InboxSort } from "@modules/inbox/services/api";
 import { cn } from "@lib/utils";
 
 const ALL_FILTER_GROUP: InboxFilter[] = ["all", "saved", "recent"];
+const PINNED_FOLDER_SCROLL_THRESHOLD = 6;
+
+export type PinnedFolderFilter = {
+  id: string;
+  name: string;
+  isPinned: boolean;
+  pinnedAt: string | null;
+};
 
 const ALL_FILTER_MENU: {
   value: InboxFilter;
@@ -47,22 +57,78 @@ const SORT_MENU: {
 export const DEFAULT_SORT: InboxSort = "newest";
 
 export function FilterControl({
+  activeFolderId,
   filter,
   onFilterChange,
+  onFolderFilterChange,
+  pinnedFolders = [],
 }: {
+  activeFolderId?: string;
   filter: InboxFilter;
   onFilterChange: (filter: InboxFilter) => void;
+  onFolderFilterChange?: (folderId: string) => void;
+  pinnedFolders?: PinnedFolderFilter[];
 }) {
   const segmentedRef = useRef<HTMLDivElement | null>(null);
+  const activeFolder = activeFolderId
+    ? pinnedFolders.find((folder) => folder.id === activeFolderId)
+    : undefined;
   const isAllGroupActive = ALL_FILTER_GROUP.includes(filter);
   const segmentValue: InboxFilter =
     filter === "my-feed" ? "my-feed" : isAllGroupActive ? filter : "all";
   const activeAllGroupLabel =
-    ALL_FILTER_MENU.find((item) => item.value === segmentValue)?.label ?? "All";
-  const shouldShowAllMenuItem = segmentValue !== "all" && ALL_FILTER_GROUP.includes(segmentValue);
+    activeFolder?.name ??
+    ALL_FILTER_MENU.find((item) => item.value === segmentValue)?.label ??
+    "All";
+  const shouldShowAllMenuItem =
+    Boolean(activeFolder) || (segmentValue !== "all" && ALL_FILTER_GROUP.includes(segmentValue));
   const allGroupMenuItems = ALL_FILTER_MENU.filter(
     (item) =>
-      item.value !== segmentValue && (item.value !== "all" || shouldShowAllMenuItem),
+      (Boolean(activeFolder) || item.value !== segmentValue) &&
+      (item.value !== "all" || shouldShowAllMenuItem),
+  );
+  const pinnedFolderMenuItems = pinnedFolders.filter((folder) => folder.id !== activeFolderId);
+  const shouldScrollPinnedFolders = pinnedFolders.length > PINNED_FOLDER_SCROLL_THRESHOLD;
+
+  const menuItems = (
+    <>
+      {allGroupMenuItems.map((item) => {
+        const Icon = item.icon;
+        return (
+          <MenuItem
+            key={item.value}
+            className="h-9 justify-between gap-2 rounded-full px-3 font-medium text-base sm:h-9 sm:text-base"
+            onClick={(event) => {
+              event.stopPropagation();
+              onFilterChange(item.value);
+            }}
+          >
+            <span className="flex min-w-0 items-center gap-2">
+              <Icon className="size-4 shrink-0" />
+              <span className="truncate">{item.label}</span>
+            </span>
+          </MenuItem>
+        );
+      })}
+      {pinnedFolderMenuItems.length > 0 ? (
+        <div className="mx-2 my-1 h-px bg-border/70" role="separator" />
+      ) : null}
+      {pinnedFolderMenuItems.map((folder) => (
+        <MenuItem
+          key={folder.id}
+          className="h-9 min-w-0 justify-between gap-2 rounded-full px-3 font-medium text-base sm:h-9 sm:text-base"
+          onClick={(event) => {
+            event.stopPropagation();
+            onFolderFilterChange?.(folder.id);
+          }}
+        >
+          <span className="flex min-w-0 max-w-full items-center gap-2">
+            <Folder2Fill className="size-4 shrink-0" />
+            <span className="min-w-0 max-w-32 truncate sm:max-w-44">{folder.name}</span>
+          </span>
+        </MenuItem>
+      ))}
+    </>
   );
 
   return (
@@ -80,7 +146,9 @@ export function FilterControl({
             render={<div />}
             nativeButton={false}
           >
-            <span className="leading-none">{activeAllGroupLabel}</span>
+            <span className="max-w-32 truncate leading-none sm:max-w-44">
+              {activeAllGroupLabel}
+            </span>
             <Menu>
               <MenuTrigger
                 aria-label="Choose filter"
@@ -98,26 +166,23 @@ export function FilterControl({
                 side="bottom"
                 sideOffset={6}
                 anchor={segmentedRef}
-                className="w-(--anchor-width) min-w-(--anchor-width) rounded-[22px] p-1 before:rounded-[21px]"
+                className={cn(
+                  "w-(--anchor-width) min-w-(--anchor-width) max-w-64 rounded-[22px] p-1 before:rounded-[21px]",
+                  shouldScrollPinnedFolders && "overflow-hidden",
+                )}
+                contentClassName={
+                  shouldScrollPinnedFolders ? "!max-h-none !overflow-hidden !p-0" : undefined
+                }
               >
-                {allGroupMenuItems.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <MenuItem
-                      key={item.value}
-                      className="h-9 justify-between gap-2 rounded-full px-3 font-medium text-base sm:h-9 sm:text-base"
-                      onClick={(event) => {
-                        event.stopPropagation();
-                        onFilterChange(item.value);
-                      }}
-                    >
-                      <span className="flex min-w-0 items-center gap-2">
-                        <Icon className="size-4 shrink-0" />
-                        <span className="truncate">{item.label}</span>
-                      </span>
-                    </MenuItem>
-                  );
-                })}
+                {shouldScrollPinnedFolders ? (
+                  <ScrollArea
+                    className="relative h-[min(--spacing(64),var(--available-height))] overflow-hidden rounded-[inherit] **:data-[slot=scroll-area-scrollbar]:!end-px **:data-[slot=scroll-area-scrollbar]:!m-0 **:data-[slot=scroll-area-scrollbar]:!my-1"
+                  >
+                    <div className="min-w-0 p-1">{menuItems}</div>
+                  </ScrollArea>
+                ) : (
+                  menuItems
+                )}
               </MenuPopup>
             </Menu>
           </SegmentedControlTab>
