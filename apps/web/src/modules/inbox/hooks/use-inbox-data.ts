@@ -11,7 +11,7 @@ import {
 } from "react";
 import { useMutation, useQueryClient, useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/provider";
-import { INBOX_PREFERENCES_STORAGE_KEY } from "@lib/shell/storage-keys";
+import { INBOX_PREFERENCES_STORAGE_KEY } from "@lib/shell/keys";
 import { usePreferences } from "@hooks/use-preferences";
 import type { InboxPreferencesDto } from "@lib/schemas";
 import {

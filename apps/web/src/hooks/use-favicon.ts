@@ -14,7 +14,7 @@ import {
   writeCachedFaviconHit,
   writeCachedFaviconMiss,
   type CachedFaviconMetadata,
-} from "@lib/favicon-cache";
+} from "@lib/favicon/cache";
 
 function isProxyFaviconUrl(url: string) {
   return url.startsWith("/api/favicon?");

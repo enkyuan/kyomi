@@ -13,7 +13,7 @@ import {
   type ReactNode,
 } from "react";
 import { useFavicon } from "@hooks/use-favicon";
-import { prewarmFaviconUrl } from "@lib/favicon-cache";
+import { prewarmFaviconUrl } from "@lib/favicon/cache";
 
 type FeedFaviconShape = "rounded" | "squircle";
 type FeedFaviconPriority = "high" | "normal" | "low";

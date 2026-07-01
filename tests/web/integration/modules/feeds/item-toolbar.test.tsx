@@ -1,15 +1,16 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { act, fireEvent, render, screen, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxItem } from "@modules/inbox/services/api";
 
-const { mutateMock, reportBrokenArticleMock } = vi.hoisted(() => ({
+const { mutateAsyncMock, mutateMock, reportBrokenArticleMock } = vi.hoisted(() => ({
+  mutateAsyncMock: vi.fn(),
   mutateMock: vi.fn(),
   reportBrokenArticleMock: vi.fn(),
 }));
 
 vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
-  useInboxItemStateMutation: () => ({ mutate: mutateMock }),
+  useInboxItemStateMutation: () => ({ mutate: mutateMock, mutateAsync: mutateAsyncMock }),
 }));
 
 vi.mock("@modules/inbox/services/api", () => ({
@@ -61,8 +62,17 @@ function renderItem({ onSelect = vi.fn(), rowItem = item } = {}) {
   };
 }
 
+async function click(element: HTMLElement) {
+  await act(async () => {
+    fireEvent.click(element);
+    await Promise.resolve();
+  });
+}
+
 describe("inbox item toolbar", () => {
   beforeEach(() => {
+    mutateAsyncMock.mockResolvedValue(undefined);
+    mutateAsyncMock.mockClear();
     mutateMock.mockClear();
     reportBrokenArticleMock.mockReset();
     vi.stubGlobal(
@@ -81,13 +91,13 @@ describe("inbox item toolbar", () => {
     vi.unstubAllGlobals();
   });
 
-  test("does not select the item when toolbar controls are clicked", () => {
+  test("does not select the item when toolbar controls are clicked", async () => {
     const { onSelect } = renderItem();
 
     for (const label of ["Read later", "Copy link", "Share article", "More"]) {
-      fireEvent.click(screen.getByRole("button", { name: label }));
+      await click(screen.getByRole("button", { name: label }));
     }
-    fireEvent.click(screen.getByRole("menuitem", { name: "Open source" }));
+    await click(screen.getByRole("menuitem", { name: "Open source" }));
 
     expect(onSelect).not.toHaveBeenCalled();
   });
@@ -100,11 +110,11 @@ describe("inbox item toolbar", () => {
     );
   });
 
-  test("marks an item hidden when Not interested is clicked", () => {
+  test("marks an item hidden when Not interested is clicked", async () => {
     renderItem();
 
-    fireEvent.click(screen.getByRole("button", { name: "More" }));
-    fireEvent.click(screen.getByRole("menuitem", { name: "Not interested" }));
+    await click(screen.getByRole("button", { name: "More" }));
+    await click(screen.getByRole("menuitem", { name: "Not interested" }));
 
     expect(mutateMock).toHaveBeenCalledWith({
       itemId: item.id,
@@ -113,13 +123,24 @@ describe("inbox item toolbar", () => {
     });
   });
 
-  test("opens a broken article report dialog from the more menu", () => {
+  test("opens a broken article report dialog from the more menu", async () => {
     renderItem();
 
-    fireEvent.click(screen.getByRole("button", { name: "More" }));
-    fireEvent.click(screen.getByRole("menuitem", { name: "Report broken article" }));
+    await click(screen.getByRole("button", { name: "More" }));
+    await click(screen.getByRole("menuitem", { name: "Report broken article" }));
 
     const dialog = screen.getByRole("dialog", { name: "Report broken article" });
     expect(within(dialog).getByText("Toolbar click regression")).toBeTruthy();
+  });
+
+  test("does not select the item when the broken article dialog is canceled", async () => {
+    const { onSelect } = renderItem();
+
+    await click(screen.getByRole("button", { name: "More" }));
+    await click(screen.getByRole("menuitem", { name: "Report broken article" }));
+    await click(screen.getByRole("button", { name: "Cancel" }));
+
+    expect(onSelect).not.toHaveBeenCalled();
+    expect(reportBrokenArticleMock).not.toHaveBeenCalled();
   });
 });

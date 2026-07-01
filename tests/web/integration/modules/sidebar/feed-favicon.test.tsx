@@ -4,7 +4,7 @@ import {
   clearFaviconMetadataMemoryCache,
   writeCachedFaviconHit,
   writeCachedFaviconMiss,
-} from "@lib/favicon-cache";
+} from "@lib/favicon/cache";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";

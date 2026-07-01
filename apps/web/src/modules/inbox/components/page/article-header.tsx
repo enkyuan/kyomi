@@ -1,0 +1,172 @@
+"use client";
+
+import { LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
+import type { ArticleDetailDto } from "@lib/schemas";
+import { BackToInboxButton, SearchBar } from "@modules/inbox/components/list/header";
+import { ReaderFontSizeControls } from "@modules/reader/components/toolbar";
+import { useToolbar as useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
+import { ReaderToolbar } from "./reader-toolbar";
+import { StepControls } from "./step-controls";
+
+const READER_HEADER_TOOLTIP_SIDE = "bottom";
+const READER_HEADER_FONT_TOOLTIP_SIDE_OFFSET = 12;
+const READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE = {
+  side: "shift",
+  align: "shift",
+  fallbackAxisSide: "none",
+} as const;
+
+export function ArticleHeader({
+  item,
+  readerControlsCollapsed,
+  onBackToList,
+  onSelectPreviousItem,
+  onSelectNextItem,
+  canSelectPreviousItem,
+  canSelectNextItem,
+}: {
+  item: ArticleDetailDto | null;
+  readerControlsCollapsed?: boolean;
+  onBackToList: () => void;
+  onSelectPreviousItem?: () => void;
+  onSelectNextItem?: () => void;
+  canSelectPreviousItem?: boolean;
+  canSelectNextItem?: boolean;
+}) {
+  if (!item) {
+    return <ArticleHeaderShell onBackToList={onBackToList} />;
+  }
+
+  return (
+    <SelectedArticleHeader
+      item={item}
+      readerControlsCollapsed={readerControlsCollapsed ?? false}
+      onBackToList={onBackToList}
+      onSelectPreviousItem={onSelectPreviousItem ?? (() => undefined)}
+      onSelectNextItem={onSelectNextItem ?? (() => undefined)}
+      canSelectPreviousItem={canSelectPreviousItem ?? false}
+      canSelectNextItem={canSelectNextItem ?? false}
+    />
+  );
+}
+
+function ArticleHeaderShell({ onBackToList }: { onBackToList: () => void }) {
+  return (
+    <div
+      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 pt-8 pb-2 isolate"
+      data-slot="inbox-article-header"
+    >
+      <div className="flex min-w-0 items-center gap-2">
+        <BackToInboxButton onClick={onBackToList} />
+      </div>
+      <SearchBar />
+    </div>
+  );
+}
+
+function SelectedArticleHeader({
+  item,
+  readerControlsCollapsed,
+  onBackToList,
+  onSelectPreviousItem,
+  onSelectNextItem,
+  canSelectPreviousItem,
+  canSelectNextItem,
+}: {
+  item: ArticleDetailDto;
+  readerControlsCollapsed: boolean;
+  onBackToList: () => void;
+  onSelectPreviousItem: () => void;
+  onSelectNextItem: () => void;
+  canSelectPreviousItem: boolean;
+  canSelectNextItem: boolean;
+}) {
+  const toolbar = useReaderToolbar({ item, readerFocusMode: true, autoExtract: false });
+  const prefersReducedMotion = useReducedMotion();
+  const scopeControlTransition = prefersReducedMotion
+    ? { duration: 0 }
+    : { type: "spring" as const, duration: 0.28, bounce: 0 };
+
+  return (
+    <div
+      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 pt-8 pb-2 isolate"
+      data-slot="inbox-article-header"
+    >
+      <LazyMotion features={domAnimation}>
+        <m.div
+          layout
+          className="flex min-w-0 items-center gap-2"
+          transition={scopeControlTransition}
+        >
+          <SelectedHeaderControls
+            toolbar={toolbar}
+            readerControlsCollapsed={readerControlsCollapsed}
+            onBackToList={onBackToList}
+          />
+        </m.div>
+        <m.div
+          layout
+          className="flex min-w-0 flex-1 items-center justify-end gap-2"
+          transition={scopeControlTransition}
+        >
+          <m.div
+            layout
+            className="flex min-w-0 flex-1 justify-end"
+            transition={scopeControlTransition}
+          >
+            <SearchBar />
+          </m.div>
+          <m.div layout transition={scopeControlTransition}>
+            <StepControls
+              canSelectPreviousItem={canSelectPreviousItem}
+              canSelectNextItem={canSelectNextItem}
+              onSelectPreviousItem={onSelectPreviousItem}
+              onSelectNextItem={onSelectNextItem}
+            />
+          </m.div>
+        </m.div>
+      </LazyMotion>
+    </div>
+  );
+}
+
+function SelectedHeaderControls({
+  toolbar,
+  readerControlsCollapsed,
+  onBackToList,
+}: {
+  toolbar: ReturnType<typeof useReaderToolbar>;
+  readerControlsCollapsed: boolean;
+  onBackToList: () => void;
+}) {
+  const prefersReducedMotion = useReducedMotion();
+  const transition = prefersReducedMotion
+    ? { duration: 0 }
+    : { type: "spring" as const, duration: 0.3, bounce: 0 };
+
+  return (
+    <>
+      <m.div layout transition={transition}>
+        <BackToInboxButton onClick={onBackToList} />
+      </m.div>
+      <ReaderToolbar
+        collapsed={readerControlsCollapsed}
+        toolbar={toolbar}
+        tooltipCollisionAvoidance={READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE}
+        tooltipSide={READER_HEADER_TOOLTIP_SIDE}
+      />
+      <m.div layout transition={transition}>
+        <ReaderFontSizeControls
+          canDecreaseFont={toolbar.toolbarProps.canDecreaseFont}
+          canIncreaseFont={toolbar.toolbarProps.canIncreaseFont}
+          fontSizePx={toolbar.toolbarProps.fontSizePx}
+          onDecreaseFontSize={toolbar.toolbarProps.onDecreaseFontSize}
+          onIncreaseFontSize={toolbar.toolbarProps.onIncreaseFontSize}
+          tooltipCollisionAvoidance={READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE}
+          tooltipSide={READER_HEADER_TOOLTIP_SIDE}
+          tooltipSideOffset={READER_HEADER_FONT_TOOLTIP_SIDE_OFFSET}
+        />
+      </m.div>
+    </>
+  );
+}

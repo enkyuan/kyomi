@@ -1,4 +1,4 @@
-import { SHELL_STATE_STORAGE_KEY } from "./storage-keys";
+import { SHELL_STATE_STORAGE_KEY } from "@lib/shell/keys";
 
 export type ShellStateSnapshot = {
   inboxFilter?: string;

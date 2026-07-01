@@ -1,6 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
-import { apiJson, buildForwardHeaders } from "@lib/api";
+import { apiJson, buildForwardHeaders, resolveApiUrl } from "@lib/api";
 import type {
   DiscoverFeedResultDto,
   FeedDetailDto,
@@ -67,6 +67,29 @@ const DISCOVER_PREVIEW_REQUEST_TIMEOUT_MS = 8_000;
 const DISCOVER_SEARCH_REQUEST_TIMEOUT_MS = 5_000;
 const OPML_IMPORT_START_REQUEST_TIMEOUT_MS = 12_000;
 const OPML_IMPORT_STATUS_REQUEST_TIMEOUT_MS = 5_000;
+const OPML_EXPORT_REQUEST_TIMEOUT_MS = 12_000;
+
+function getFilenameFromContentDisposition(value: string | null) {
+  if (!value) {
+    return null;
+  }
+
+  const filenameMatch =
+    /filename\*=UTF-8''([^;]+)/i.exec(value) ??
+    /filename="([^"]+)"/i.exec(value) ??
+    /filename=([^;]+)/i.exec(value);
+  const filename = filenameMatch?.[1]?.trim();
+
+  if (!filename) {
+    return null;
+  }
+
+  try {
+    return decodeURIComponent(filename);
+  } catch {
+    return filename;
+  }
+}
 
 function looksLikeFeedUrl(value: string) {
   return Boolean(normalizeUrlCandidate(value));
@@ -259,15 +282,33 @@ export const getOpmlImportStatus = createServerFn({ method: "GET" })
 
     const headers = buildForwardHeaders(getRequestHeaders());
     return apiJsonValidated(opmlImportStatusSchema, () =>
-      apiJson<OpmlImportStatus>(
-        `/api/v1/opml/imports/${encodeURIComponent(taskId)}/status`,
-        {
-          headers,
-          signal: AbortSignal.timeout(OPML_IMPORT_STATUS_REQUEST_TIMEOUT_MS),
-        },
-      ),
+      apiJson<OpmlImportStatus>(`/api/v1/opml/imports/${encodeURIComponent(taskId)}/status`, {
+        headers,
+        signal: AbortSignal.timeout(OPML_IMPORT_STATUS_REQUEST_TIMEOUT_MS),
+      }),
     );
   });
+
+export const exportOpml = createServerFn({ method: "GET" }).handler(
+  async (): Promise<{ filename: string; xml: string }> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    const response = await fetch(resolveApiUrl("/api/v1/opml/export"), {
+      headers,
+      signal: AbortSignal.timeout(OPML_EXPORT_REQUEST_TIMEOUT_MS),
+    });
+
+    if (!response.ok) {
+      throw new Error("Unable to export OPML. Try again.");
+    }
+
+    return {
+      filename:
+        getFilenameFromContentDisposition(response.headers.get("content-disposition")) ??
+        "kyomi-subscriptions.opml",
+      xml: await response.text(),
+    };
+  },
+);
 
 export const unfollowFeed = createServerFn({ method: "POST" })
   .inputValidator((input: { feedId: string }) => input)

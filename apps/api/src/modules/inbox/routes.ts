@@ -1,6 +1,6 @@
 import type { Elysia } from "elysia";
-import { registerInboxOrganizerRoutes } from "./organizer/routes";
+import { registerInboxRecapRoutes } from "./recap/routes";
 
 export function registerInboxRoutes(app: Elysia) {
-  return registerInboxOrganizerRoutes(app);
+  return registerInboxRecapRoutes(app);
 }
