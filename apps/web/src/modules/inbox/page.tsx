@@ -24,6 +24,7 @@ import {
 } from "@modules/reader/components/toolbar";
 import { useToolbar as useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 import { Button } from "@kyomi/ui/button";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import {
   InboxPreferencesBootstrapProvider,
   type InboxPreferences,
@@ -51,6 +52,14 @@ function isGlobalInboxFilter(filter: InboxFilter) {
 }
 
 type ArticleStepDirection = 1 | -1;
+const READER_HEADER_TOOLTIP_SIDE = "bottom";
+const READER_HEADER_TOOLTIP_SIDE_OFFSET = 8;
+const READER_HEADER_FONT_TOOLTIP_SIDE_OFFSET = 12;
+const READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE = {
+  side: "shift",
+  align: "shift",
+  fallbackAxisSide: "none",
+} as const;
 
 export function Page({
   initialInboxPreferences,
@@ -527,7 +536,12 @@ function SelectedArticleHeaderControls({
       <m.div layout transition={transition}>
         <BackToInboxButton onClick={onBackToList} />
       </m.div>
-      <MiddleColumnReaderToolbar collapsed={readerControlsCollapsed} toolbar={toolbar} />
+      <MiddleColumnReaderToolbar
+        collapsed={readerControlsCollapsed}
+        toolbar={toolbar}
+        tooltipCollisionAvoidance={READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE}
+        tooltipSide={READER_HEADER_TOOLTIP_SIDE}
+      />
       <m.div layout transition={transition}>
         <ReaderFontSizeControls
           canDecreaseFont={toolbar.toolbarProps.canDecreaseFont}
@@ -535,6 +549,9 @@ function SelectedArticleHeaderControls({
           fontSizePx={toolbar.toolbarProps.fontSizePx}
           onDecreaseFontSize={toolbar.toolbarProps.onDecreaseFontSize}
           onIncreaseFontSize={toolbar.toolbarProps.onIncreaseFontSize}
+          tooltipCollisionAvoidance={READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE}
+          tooltipSide={READER_HEADER_TOOLTIP_SIDE}
+          tooltipSideOffset={READER_HEADER_FONT_TOOLTIP_SIDE_OFFSET}
         />
       </m.div>
     </>
@@ -557,34 +574,60 @@ function ArticleStepControls({
       aria-label="Article navigation"
       className="relative flex h-11 w-21 shrink-0 items-center justify-center gap-1 overflow-hidden rounded-full bg-background p-1 text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative"
     >
-      <Button
-        aria-label="Previous article"
-        className="size-9 rounded-full text-muted-foreground transition-colors hover:text-foreground"
-        disabled={!canSelectPreviousItem}
-        size="icon-lg"
-        variant="ghost"
-        onClick={(event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          onSelectPreviousItem();
-        }}
-      >
-        <UpFill className="size-4" />
-      </Button>
-      <Button
-        aria-label="Next article"
-        className="size-9 rounded-full text-muted-foreground transition-colors hover:text-foreground"
-        disabled={!canSelectNextItem}
-        size="icon-lg"
-        variant="ghost"
-        onClick={(event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          onSelectNextItem();
-        }}
-      >
-        <DownFill className="size-4" />
-      </Button>
+      <Tooltip>
+        <TooltipTrigger
+          render={
+            <Button
+              aria-label="Previous article"
+              className="size-9 rounded-full text-muted-foreground transition-colors hover:text-foreground"
+              disabled={!canSelectPreviousItem}
+              size="icon-lg"
+              variant="ghost"
+              onClick={(event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                onSelectPreviousItem();
+              }}
+            />
+          }
+        >
+          <UpFill className="size-4 -translate-y-[0.5px]" />
+        </TooltipTrigger>
+        <TooltipPopup
+          collisionAvoidance={READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE}
+          side={READER_HEADER_TOOLTIP_SIDE}
+          sideOffset={READER_HEADER_TOOLTIP_SIDE_OFFSET}
+        >
+          Previous article
+        </TooltipPopup>
+      </Tooltip>
+      <Tooltip>
+        <TooltipTrigger
+          render={
+            <Button
+              aria-label="Next article"
+              className="size-9 rounded-full text-muted-foreground transition-colors hover:text-foreground"
+              disabled={!canSelectNextItem}
+              size="icon-lg"
+              variant="ghost"
+              onClick={(event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                onSelectNextItem();
+              }}
+            />
+          }
+        >
+          <DownFill className="size-4 translate-y-[0.5px]" />
+        </TooltipTrigger>
+        <TooltipPopup
+          collisionAvoidance={READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE}
+          side={READER_HEADER_TOOLTIP_SIDE}
+          sideOffset={READER_HEADER_TOOLTIP_SIDE_OFFSET}
+        >
+          Next article
+        </TooltipPopup>
+      </Tooltip>
     </nav>
   );
 }
@@ -592,9 +635,15 @@ function ArticleStepControls({
 function MiddleColumnReaderToolbar({
   toolbar,
   collapsed,
+  tooltipCollisionAvoidance,
+  tooltipSide,
 }: {
   toolbar: ReturnType<typeof useReaderToolbar>;
   collapsed: boolean;
+  tooltipCollisionAvoidance: NonNullable<
+    ReturnType<typeof useReaderToolbar>["toolbarProps"]["tooltipCollisionAvoidance"]
+  >;
+  tooltipSide: NonNullable<ReturnType<typeof useReaderToolbar>["toolbarProps"]["tooltipSide"]>;
 }) {
   const prefersReducedMotion = useReducedMotion();
   const transition = prefersReducedMotion
@@ -612,6 +661,8 @@ function MiddleColumnReaderToolbar({
         controlSize="large"
         hideFontControls
         readerFocusVariant={collapsed ? "compact" : "full"}
+        tooltipCollisionAvoidance={tooltipCollisionAvoidance}
+        tooltipSide={tooltipSide}
       />
     </m.div>
   );

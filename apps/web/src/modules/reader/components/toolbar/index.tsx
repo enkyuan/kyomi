@@ -59,6 +59,8 @@ export function Toolbar({
   controlSize = "default",
   hideFontControls = false,
   readerFocusVariant = "full",
+  tooltipSide = "top",
+  tooltipCollisionAvoidance,
 }: ToolbarProps) {
   const isMobile = useMediaQuery({ max: "md" });
   const prefersReducedMotion = useReducedMotion();
@@ -91,6 +93,8 @@ export function Toolbar({
             label={isSaved ? "Remove from read later" : "Read later"}
             active={isSaved}
             onClick={onToggleSaved}
+            tooltipSide={tooltipSide}
+            tooltipCollisionAvoidance={tooltipCollisionAvoidance}
             tooltipSideOffset={tooltipSideOffset}
             large={useLargeControls}
             activeClassName={SAVED_ACTION_ACTIVE_CLASS}
@@ -103,6 +107,8 @@ export function Toolbar({
                 <ReaderToolbarButton
                   label="Copy link"
                   onClick={onCopyLink}
+                  tooltipSide={tooltipSide}
+                  tooltipCollisionAvoidance={tooltipCollisionAvoidance}
                   tooltipSideOffset={tooltipSideOffset}
                   large={useLargeControls}
                 >
@@ -116,6 +122,8 @@ export function Toolbar({
               <ReaderToolbarButton
                 label="Open source"
                 onClick={onOpenOriginal}
+                tooltipSide={tooltipSide}
+                tooltipCollisionAvoidance={tooltipCollisionAvoidance}
                 tooltipSideOffset={tooltipSideOffset}
                 large={useLargeControls}
               >
@@ -131,6 +139,8 @@ export function Toolbar({
               active={activeMode === "extracted"}
               disabled={!extractedAvailable}
               onClick={onToggleMode}
+              tooltipSide={tooltipSide}
+              tooltipCollisionAvoidance={tooltipCollisionAvoidance}
               tooltipSideOffset={tooltipSideOffset}
               large={useLargeControls}
             >
@@ -141,6 +151,8 @@ export function Toolbar({
             <ReaderToolbarButton
               label={`Content width: ${CONTENT_WIDTH_LABELS[contentWidth]}`}
               onClick={onCycleContentWidth}
+              tooltipSide={tooltipSide}
+              tooltipCollisionAvoidance={tooltipCollisionAvoidance}
               tooltipSideOffset={tooltipSideOffset}
               large={useLargeControls}
             >
@@ -155,6 +167,8 @@ export function Toolbar({
             fontSizePx={fontSizePx}
             onDecreaseFontSize={onDecreaseFontSize}
             onIncreaseFontSize={onIncreaseFontSize}
+            tooltipSide={tooltipSide}
+            tooltipCollisionAvoidance={tooltipCollisionAvoidance}
             tooltipSideOffset={tooltipSideOffset}
           />
         )}
@@ -175,6 +189,8 @@ export function Toolbar({
                   <ReaderToolbarButton
                     label="Open source"
                     onClick={onOpenOriginal}
+                    tooltipSide={tooltipSide}
+                    tooltipCollisionAvoidance={tooltipCollisionAvoidance}
                     tooltipSideOffset={tooltipSideOffset}
                     large={useLargeControls}
                   >
@@ -184,6 +200,8 @@ export function Toolbar({
                 <ReaderToolbarButton
                   label="Distill this article"
                   onClick={onOpenAi}
+                  tooltipSide={tooltipSide}
+                  tooltipCollisionAvoidance={tooltipCollisionAvoidance}
                   tooltipSideOffset={tooltipSideOffset}
                   large={useLargeControls}
                 >
@@ -193,6 +211,8 @@ export function Toolbar({
                   <ReaderToolbarButton
                     label="Share article"
                     onClick={onShareArticle}
+                    tooltipSide={tooltipSide}
+                    tooltipCollisionAvoidance={tooltipCollisionAvoidance}
                     tooltipSideOffset={tooltipSideOffset}
                     large={useLargeControls}
                   >
@@ -214,11 +234,15 @@ export function ReaderFontSizeControls({
   fontSizePx,
   onDecreaseFontSize,
   onIncreaseFontSize,
+  tooltipSide = "top",
+  tooltipCollisionAvoidance,
   tooltipSideOffset = 8,
 }: Pick<
   ToolbarProps,
   "canDecreaseFont" | "canIncreaseFont" | "fontSizePx" | "onDecreaseFontSize" | "onIncreaseFontSize"
 > & {
+  tooltipSide?: NonNullable<ToolbarProps["tooltipSide"]>;
+  tooltipCollisionAvoidance?: ToolbarProps["tooltipCollisionAvoidance"];
   tooltipSideOffset?: number;
 }) {
   return (
@@ -233,6 +257,8 @@ export function ReaderFontSizeControls({
         onDecreaseFontSize={onDecreaseFontSize}
         onIncreaseFontSize={onIncreaseFontSize}
         className="h-full bg-transparent p-0"
+        tooltipSide={tooltipSide}
+        tooltipCollisionAvoidance={tooltipCollisionAvoidance}
         tooltipSideOffset={tooltipSideOffset}
       />
     </ToolbarRoot>
@@ -246,12 +272,16 @@ function ReaderFontSizeControlGroup({
   onDecreaseFontSize,
   onIncreaseFontSize,
   className,
+  tooltipSide = "top",
+  tooltipCollisionAvoidance,
   tooltipSideOffset = 8,
 }: Pick<
   ToolbarProps,
   "canDecreaseFont" | "canIncreaseFont" | "fontSizePx" | "onDecreaseFontSize" | "onIncreaseFontSize"
 > & {
   className?: string;
+  tooltipSide?: NonNullable<ToolbarProps["tooltipSide"]>;
+  tooltipCollisionAvoidance?: ToolbarProps["tooltipCollisionAvoidance"];
   tooltipSideOffset?: number;
 }) {
   return (
@@ -260,15 +290,30 @@ function ReaderFontSizeControlGroup({
         label="Decrease font size"
         disabled={!canDecreaseFont}
         onClick={onDecreaseFontSize}
+        tooltipSide={tooltipSide}
+        tooltipCollisionAvoidance={tooltipCollisionAvoidance}
         tooltipSideOffset={tooltipSideOffset}
       >
         <MinimizeFill />
       </ReaderToolbarButton>
-      <FontSizeTicker value={fontSizePx} />
+      <Tooltip>
+        <TooltipTrigger render={<span className="inline-flex h-full items-center" />}>
+          <FontSizeTicker value={fontSizePx} />
+        </TooltipTrigger>
+        <TooltipPopup
+          collisionAvoidance={tooltipCollisionAvoidance}
+          side={tooltipSide}
+          sideOffset={tooltipSideOffset}
+        >
+          Font size {fontSizePx}
+        </TooltipPopup>
+      </Tooltip>
       <ReaderToolbarButton
         label="Increase font size"
         disabled={!canIncreaseFont}
         onClick={onIncreaseFontSize}
+        tooltipSide={tooltipSide}
+        tooltipCollisionAvoidance={tooltipCollisionAvoidance}
         tooltipSideOffset={tooltipSideOffset}
       >
         <AddFill />
@@ -349,6 +394,8 @@ function ReaderToolbarButton({
   disabled = false,
   className,
   activeClassName,
+  tooltipSide = "top",
+  tooltipCollisionAvoidance,
   tooltipSideOffset = 8,
   large = false,
 }: {
@@ -359,6 +406,8 @@ function ReaderToolbarButton({
   disabled?: boolean;
   className?: string;
   activeClassName?: string;
+  tooltipSide?: NonNullable<ToolbarProps["tooltipSide"]>;
+  tooltipCollisionAvoidance?: ToolbarProps["tooltipCollisionAvoidance"];
   tooltipSideOffset?: number;
   large?: boolean;
 }) {
@@ -392,7 +441,13 @@ function ReaderToolbarButton({
           </ToolbarButton>
         }
       />
-      <TooltipPopup sideOffset={tooltipSideOffset}>{label}</TooltipPopup>
+      <TooltipPopup
+        collisionAvoidance={tooltipCollisionAvoidance}
+        side={tooltipSide}
+        sideOffset={tooltipSideOffset}
+      >
+        {label}
+      </TooltipPopup>
     </Tooltip>
   );
 }

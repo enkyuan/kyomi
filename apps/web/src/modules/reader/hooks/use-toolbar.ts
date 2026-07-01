@@ -38,6 +38,18 @@ export type ToolbarProps = {
   controlSize?: "default" | "large";
   hideFontControls?: boolean;
   readerFocusVariant?: "full" | "compact";
+  tooltipSide?: "top" | "bottom" | "left" | "right";
+  tooltipCollisionAvoidance?:
+    | {
+        side?: "flip" | "none";
+        align?: "flip" | "shift" | "none";
+        fallbackAxisSide?: "start" | "end" | "none";
+      }
+    | {
+        side?: "shift" | "none";
+        align?: "shift" | "none";
+        fallbackAxisSide?: "start" | "end" | "none";
+      };
 };
 
 export type ToolbarModel = {

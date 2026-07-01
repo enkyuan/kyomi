@@ -20,6 +20,7 @@ export function TooltipPopup({
   align = "center",
   sideOffset = 4,
   side = "top",
+  collisionAvoidance,
   anchor,
   children,
   ...props
@@ -27,6 +28,7 @@ export function TooltipPopup({
   align?: TooltipPrimitive.Positioner.Props["align"];
   side?: TooltipPrimitive.Positioner.Props["side"];
   sideOffset?: TooltipPrimitive.Positioner.Props["sideOffset"];
+  collisionAvoidance?: TooltipPrimitive.Positioner.Props["collisionAvoidance"];
   anchor?: TooltipPrimitive.Positioner.Props["anchor"];
 }): React.ReactElement {
   return (
@@ -36,6 +38,7 @@ export function TooltipPopup({
         anchor={anchor}
         className="z-50 h-(--positioner-height) w-(--positioner-width) max-w-(--available-width) transition-[top,left,right,bottom,transform] data-instant:transition-none"
         data-slot="tooltip-positioner"
+        collisionAvoidance={collisionAvoidance}
         side={side}
         sideOffset={sideOffset}
       >

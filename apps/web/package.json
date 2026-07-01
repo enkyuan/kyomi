@@ -85,6 +85,10 @@
         {
           "files": ["src/modules/inbox/components/list/index.tsx"],
           "rules": ["react-doctor/prefer-tag-over-role"]
+        },
+        {
+          "files": ["src/modules/sidebar/components/feed-favicon.tsx"],
+          "rules": ["react-doctor/no-adjust-state-on-prop-change"]
         }
       ]
     }
