@@ -156,7 +156,7 @@ export function Detail({
               </div>
             ) : (
               <div className="flex h-full min-h-72 w-full flex-col items-center justify-center gap-5 px-6 py-10 text-center">
-                <EmptyStateIcon className="size-40 shrink-0 sm:size-44" height={176} width={176} />
+                <EmptyStateIcon className="size-40 shrink-0 sm:size-44" size={176} />
                 <div className="w-full max-w-136 space-y-2">
                   <p className="text-base font-semibold text-foreground">
                     Select an item to start reading

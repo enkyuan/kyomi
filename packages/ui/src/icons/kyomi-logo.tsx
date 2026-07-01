@@ -1,25 +1,20 @@
 import * as React from "react";
 
-export interface KyomiLogoProps extends React.SVGProps<SVGSVGElement> {
-  size?: number | string;
+export interface KyomiLogoProps extends Omit<React.SVGProps<SVGSVGElement>, "width" | "height"> {
+  size?: number;
 }
 
 export function KyomiLogo({
-  size,
-  width,
-  height,
+  size = 24,
   className,
   fill = "#A8D480",
   ...props
 }: KyomiLogoProps): React.ReactElement {
-  const resolvedWidth = size ?? width ?? 24;
-  const resolvedHeight = size ?? height ?? 24;
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={resolvedWidth}
-      height={resolvedHeight}
+      width={size}
+      height={size}
       viewBox="0 0 656 646"
       fill="none"
       className={className}

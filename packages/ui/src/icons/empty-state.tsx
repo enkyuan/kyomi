@@ -3,8 +3,7 @@
 import { useLayoutEffect, useId, useState } from "react";
 
 export interface EmptyStateProps {
-  width?: number;
-  height?: number;
+  size?: number;
   className?: string;
 }
 
@@ -99,12 +98,7 @@ function useResolvedTheme() {
   return resolvedTheme;
 }
 
-const EmptyStateBase = ({
-  width = 200,
-  height = 200,
-  className,
-  isDarkTheme = true,
-}: EmptyStateBaseProps) => {
+const EmptyStateBase = ({ size = 200, className, isDarkTheme = true }: EmptyStateBaseProps) => {
   const id = useId().replace(/:/g, "");
   const theme = EMPTY_STATE_THEMES[isDarkTheme ? "dark" : "light"];
 
@@ -233,8 +227,8 @@ const EmptyStateBase = ({
 
   return (
     <svg
-      width={width}
-      height={height}
+      width={size}
+      height={size}
       viewBox={theme.viewBox}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -405,12 +399,12 @@ export const EmptyStateLight = (props: EmptyStateProps) => {
   return <EmptyStateBase {...props} isDarkTheme={false} />;
 };
 
-export const EmptyStateIcon = ({ width = 200, height = 200, className }: EmptyStateProps) => {
+export const EmptyStateIcon = ({ size = 200, className }: EmptyStateProps) => {
   const resolvedTheme = useResolvedTheme();
 
   return resolvedTheme === "dark" ? (
-    <EmptyState width={width} height={height} className={className} />
+    <EmptyState size={size} className={className} />
   ) : (
-    <EmptyStateLight width={width} height={height} className={className} />
+    <EmptyStateLight size={size} className={className} />
   );
 };

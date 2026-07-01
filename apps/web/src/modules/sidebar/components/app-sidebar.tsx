@@ -96,7 +96,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               onFocus={preloadSourcesDialog}
               onPointerEnter={preloadSourcesDialog}
             >
-              <AddFill size={24} />
+              <AddFill size={20} />
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
@@ -154,7 +154,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
               disabled
             >
-              <PremiumIcon width={24} height={24} />
+              <PremiumIcon size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="flex justify-center">

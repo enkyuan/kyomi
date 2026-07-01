@@ -1,8 +1,18 @@
 import type { SVGProps } from "react";
 
-export function PremiumIcon(props: SVGProps<SVGSVGElement>) {
+export interface PremiumIconProps extends Omit<SVGProps<SVGSVGElement>, "width" | "height"> {
+  size?: number;
+}
+
+export function PremiumIcon({ size, ...props }: PremiumIconProps) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size ?? "1em"}
+      height={size ?? "1em"}
+      viewBox="0 0 24 24"
+      {...props}
+    >
       {/* Icon from Sargam Icons by Abhimanyu Rana - https://github.com/planetabhi/sargam-icons/blob/main/LICENSE.txt */}
       <path
         fill="currentColor"

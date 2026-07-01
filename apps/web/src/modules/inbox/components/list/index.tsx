@@ -120,11 +120,7 @@ export function List({
             <div className={showEmptyState ? "flex flex-1 flex-col" : ""}>
               {showEmptyState ? (
                 <div className="flex flex-1 min-h-72 w-full flex-col items-center justify-center gap-5 px-3 py-10 text-center">
-                  <EmptyStateIcon
-                    className="size-40 shrink-0 sm:size-44"
-                    height={174}
-                    width={174}
-                  />
+                  <EmptyStateIcon className="size-40 shrink-0 sm:size-44" size={174} />
                   <div className="w-full max-w-136 space-y-2">
                     <p className="text-base font-semibold text-foreground">
                       {isAllEmptyState ? (

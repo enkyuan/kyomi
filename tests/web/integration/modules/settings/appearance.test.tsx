@@ -143,6 +143,17 @@ describe("AppearancePagePanel", () => {
     expect(setInboxPreferencesMock).toHaveBeenCalledWith({ inboxDefaultView: "unread" });
   });
 
+  test("shows relative timestamp display as the default-first option", () => {
+    render(<AppearancePagePanel />);
+
+    const timestampOptions = screen
+      .getAllByRole("button")
+      .map((button) => button.textContent)
+      .filter((label) => label === "Relative" || label === "Absolute");
+
+    expect(timestampOptions).toEqual(["Relative", "Absolute"]);
+  });
+
   test("resets inbox defaults from the merged page", () => {
     render(<AppearancePagePanel />);
 

@@ -141,14 +141,14 @@ export function InboxAppearanceSettings({
 
       <div className="space-y-3 py-1">
         <SettingSubHeading
-          description="Choose whether inbox timestamps prioritize precise calendar dates or relative recency."
+          description="Relative recency is the default for inbox timestamps; switch to absolute when you need exact dates."
           title="Timestamp"
         />
         <Group aria-label="Timestamp format">
           <Select
             items={[
-              { label: "Absolute", value: "absolute" },
               { label: "Relative", value: "relative" },
+              { label: "Absolute", value: "absolute" },
             ]}
             value={preferences.inboxTimestampDisplay}
             onValueChange={(value) => {
@@ -161,8 +161,8 @@ export function InboxAppearanceSettings({
               <SelectValue />
             </SelectTrigger>
             <SelectPopup>
-              <SelectItem value="absolute">Absolute</SelectItem>
               <SelectItem value="relative">Relative</SelectItem>
+              <SelectItem value="absolute">Absolute</SelectItem>
             </SelectPopup>
           </Select>
           <GroupSeparator />
