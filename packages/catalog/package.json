@@ -2,9 +2,10 @@
   "name": "@kyomi/catalog",
   "private": true,
   "scripts": {
-    "setup": "poetry install",
-    "export:catalog": "poetry run python processing/export_catalog_for_kyomi.py --output processing/exports/catalog-feeds.jsonl",
-    "export:catalog:sample": "poetry run python processing/export_catalog_for_kyomi.py --output processing/exports/catalog-feeds.sample.jsonl --limit 1000",
+    "setup": "UV_SYSTEM_CERTS=true uv sync --locked --dev",
+    "typecheck": "UV_SYSTEM_CERTS=true uv run ty check",
+    "export:catalog": "UV_SYSTEM_CERTS=true uv run python processing/export_catalog_for_kyomi.py --output processing/exports/catalog-feeds.jsonl",
+    "export:catalog:sample": "UV_SYSTEM_CERTS=true uv run python processing/export_catalog_for_kyomi.py --output processing/exports/catalog-feeds.sample.jsonl --limit 1000",
     "sync": "bash scripts/sync.sh"
   }
 }
