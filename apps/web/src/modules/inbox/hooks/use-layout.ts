@@ -243,6 +243,7 @@ export function useMarkReadBehavior(input: {
     if (
       !itemId ||
       !selectedItem ||
+      selectedItem.id !== itemId ||
       selectedItemIsRead ||
       effectiveFilter === "recent" ||
       markReadBehavior === "manual"

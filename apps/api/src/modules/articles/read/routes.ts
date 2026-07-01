@@ -67,7 +67,14 @@ export function registerArticleReadRoutes(app: Elysia) {
         async (context) => {
           const { db, query, userId } = v1HandlerContext(context);
           const merged = parseMergedViewListQuery(query as Record<string, unknown>);
-          return listMergedRecentlyReadView(db, userId, merged.limit, merged.cursor, merged.sort);
+          return listMergedRecentlyReadView(
+            db,
+            userId,
+            merged.limit,
+            merged.cursor,
+            merged.sort,
+            merged.search,
+          );
         },
         {
           query: mergedArticleViewsQuerySchema,
@@ -114,7 +121,12 @@ export function registerArticleReadRoutes(app: Elysia) {
               : getArticleCountsForUser(db, userId, scope),
             wantsTodayRange
               ? wantsGlobalAllView
-                ? countGlobalFeedArticlesPublishedInRange(db, publishedAfter!, publishedBefore!)
+                ? countGlobalFeedArticlesPublishedInRange(
+                    db,
+                    userId,
+                    publishedAfter!,
+                    publishedBefore!,
+                  )
                 : countFeedArticlesPublishedInRange(
                     db,
                     userId,

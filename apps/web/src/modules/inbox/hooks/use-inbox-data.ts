@@ -1,6 +1,14 @@
 "use client";
 
-import { createContext, createElement, use, useMemo, type ReactNode } from "react";
+import {
+  createContext,
+  createElement,
+  use,
+  useEffect,
+  useMemo,
+  useRef,
+  type ReactNode,
+} from "react";
 import { useMutation, useQueryClient, useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/provider";
 import { INBOX_PREFERENCES_STORAGE_KEY } from "@lib/shell/storage-keys";
@@ -21,6 +29,7 @@ import {
 import { inboxDetailQueryOptions, inboxItemsInfiniteQueryOptions } from "../queries/options";
 import {
   getInboxItems,
+  recordInboxItemView,
   updateInboxItemState,
   type InboxFilter,
   type InboxItem,
@@ -29,7 +38,9 @@ import {
 import { getInboxPreferences, updateInboxPreferences } from "../services/preferences";
 
 export type InboxPreferences = InboxPreferencesDto;
-export type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
+export type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">> & {
+  isHidden?: boolean;
+};
 
 const InboxPreferencesBootstrapContext = createContext<InboxPreferences | undefined>(undefined);
 
@@ -259,4 +270,32 @@ export function useInboxItemStateMutation() {
       void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
     },
   });
+}
+
+export function useRecordInboxItemView(itemId: string | undefined) {
+  const queryClient = useQueryClient();
+  const lastRecordedItemIdRef = useRef<string | undefined>(undefined);
+  const { mutate } = useMutation({
+    mutationFn: (nextItemId: string) =>
+      recordInboxItemView({
+        data: {
+          itemId: nextItemId,
+        },
+      }),
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
+    },
+  });
+
+  useEffect(() => {
+    if (!itemId) {
+      lastRecordedItemIdRef.current = undefined;
+      return;
+    }
+    if (lastRecordedItemIdRef.current === itemId) {
+      return;
+    }
+    lastRecordedItemIdRef.current = itemId;
+    mutate(itemId);
+  }, [itemId, mutate]);
 }

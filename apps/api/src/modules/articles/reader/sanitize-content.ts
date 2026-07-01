@@ -1,24 +1,16 @@
 import {
-  ARTICLE_HTML_PURIFY_CONFIG,
-  registerArticleHtmlSanitizeHooks,
+  normalizeSanitizedArticleRoot,
+  sanitizeArticleHtmlFragment,
 } from "@kyomi/worker/sanitization";
 import { JSDOM } from "jsdom";
-import createDOMPurify from "dompurify";
-
-// Create a DOMPurify instance using JSDOM's window for server-side usage.
-const window = new JSDOM("").window;
-const DOMPurify = createDOMPurify(window);
-
-registerArticleHtmlSanitizeHooks(DOMPurify);
-DOMPurify.setConfig(ARTICLE_HTML_PURIFY_CONFIG);
 
 /**
- * DOMPurify-based article HTML sanitizer (see `@kyomi/worker/sanitization`).
+ * Article HTML sanitizer (see `@kyomi/worker/sanitization`).
  *
  * Configured to:
  * - Allow article-safe structural tags including `div` for publisher layout
  * - Filter `class` tokens to layout/content patterns; `code` keeps `language-*` only
- * - Strip inline `style` except on KaTeX spans and MathML (DOMPurify still validates CSS)
+ * - Strip inline `style` except on KaTeX spans and MathML
  * - Strip event handlers and dangerous URI schemes
  * - Remove interactive/chrome elements entirely (forms, nav, buttons, etc.)
  */
@@ -77,6 +69,13 @@ function resolveRelativeAssetUrls(html: string, baseUrl?: string | null): string
   }
 
   return document.body.innerHTML;
+}
+
+function sanitizeWithArticlePolicy(html: string): string {
+  const clean = sanitizeArticleHtmlFragment(html);
+  const dom = new JSDOM(`<body>${clean}</body>`);
+  normalizeSanitizedArticleRoot(dom.window.document.body);
+  return dom.window.document.body.innerHTML;
 }
 
 /**
@@ -375,7 +374,7 @@ export function sanitizeArticleHtml(
   },
 ): string {
   const normalized = resolveRelativeAssetUrls(html, options?.baseUrl);
-  const clean = DOMPurify.sanitize(normalized);
+  const clean = sanitizeWithArticlePolicy(normalized);
   const withoutCarousel = stripCarouselArtifacts(clean);
   const withoutRedundantLeadingMetadata = stripLeadingArticleMetadata(withoutCarousel, {
     title: options?.title,

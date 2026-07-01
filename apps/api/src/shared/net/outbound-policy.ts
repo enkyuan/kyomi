@@ -2,14 +2,15 @@ import { lookup } from "node:dns/promises";
 import { BlockList, isIP } from "node:net";
 
 const blockedAddressList = new BlockList();
+const sharedAddressList = new BlockList();
 
 blockedAddressList.addSubnet("0.0.0.0", 8, "ipv4");
 blockedAddressList.addSubnet("10.0.0.0", 8, "ipv4");
-blockedAddressList.addSubnet("100.64.0.0", 10, "ipv4");
 blockedAddressList.addSubnet("127.0.0.0", 8, "ipv4");
 blockedAddressList.addSubnet("169.254.0.0", 16, "ipv4");
 blockedAddressList.addSubnet("172.16.0.0", 12, "ipv4");
 blockedAddressList.addSubnet("192.168.0.0", 16, "ipv4");
+sharedAddressList.addSubnet("100.64.0.0", 10, "ipv4");
 
 blockedAddressList.addSubnet("::", 128, "ipv6");
 blockedAddressList.addSubnet("::1", 128, "ipv6");
@@ -49,13 +50,20 @@ function normalizeIpAddress(address: string): string {
   return isIP(mappedIpv4) === 4 ? mappedIpv4 : normalized;
 }
 
-function isBlockedIpAddress(address: string): boolean {
+export function isBlockedOutboundIpAddress(
+  address: string,
+  options: { blockSharedAddressSpace?: boolean } = {},
+): boolean {
   const normalized = normalizeIpAddress(address);
   const family = isIP(normalized);
   if (family === 0) {
     return false;
   }
-  return blockedAddressList.check(normalized, family === 6 ? "ipv6" : "ipv4");
+  const familyName = family === 6 ? "ipv6" : "ipv4";
+  return (
+    blockedAddressList.check(normalized, familyName) ||
+    (options.blockSharedAddressSpace === true && sharedAddressList.check(normalized, familyName))
+  );
 }
 
 async function resolveHostnameAddresses(hostname: string): Promise<string[]> {
@@ -77,8 +85,15 @@ export async function assertSafeOutboundUrl(url: URL): Promise<void> {
     throw new BlockedOutboundUrlError("Private network URLs are not allowed");
   }
 
+  const isLiteralIpAddress = isIP(hostname) !== 0;
   const resolvedAddresses = await resolveHostnameAddresses(hostname);
-  if (resolvedAddresses.some((address) => isBlockedIpAddress(address))) {
+  if (
+    resolvedAddresses.some((address) =>
+      isBlockedOutboundIpAddress(address, {
+        blockSharedAddressSpace: isLiteralIpAddress,
+      }),
+    )
+  ) {
     throw new BlockedOutboundUrlError("Private network URLs are not allowed");
   }
 }

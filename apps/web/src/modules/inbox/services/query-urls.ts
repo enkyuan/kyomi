@@ -90,11 +90,13 @@ export function buildInboxListUrl({
     return `/api/v1/articles/views/all?${params.toString()}`;
   }
 
+  if (normalizedFilter === "recent") {
+    setTrimmedQueryParam(params, "search", search);
+    return `/api/v1/articles/views/recently-read?${params.toString()}`;
+  }
+
   if (!search?.trim()) {
     const query = params.toString();
-    if (normalizedFilter === "recent") {
-      return `/api/v1/articles/views/recently-read?${query}`;
-    }
     if (normalizedFilter === "saved") {
       return `/api/v1/articles/views/read-later?${query}`;
     }

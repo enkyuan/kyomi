@@ -169,6 +169,27 @@
       "when": 1782878640000,
       "tag": "0023_inbox_timestamp_display_relative_global",
       "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1782878700000,
+      "tag": "0024_recent_viewed_at",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1782878760000,
+      "tag": "0025_article_reports_and_hidden_state",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1782878820000,
+      "tag": "0026_inbox_organizer",
+      "breakpoints": true
     }
   ]
 }

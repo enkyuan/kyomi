@@ -265,6 +265,7 @@ export const createClipBodySchema = t.Object({
 export const updateArticleBodySchema = t.Object({
   isRead: t.Optional(t.Union([t.Boolean(), t.Null()])),
   isSaved: t.Optional(t.Boolean()),
+  isHidden: t.Optional(t.Boolean()),
   title: t.Optional(t.String()),
   note: t.Optional(t.Union([t.String(), t.Null()])),
   contentHtml: t.Optional(t.Union([t.String(), t.Null()])),
@@ -292,6 +293,18 @@ export const updateArticleBodySchema = t.Object({
   ),
   extractionErrorCode: t.Optional(t.Union([t.String(), t.Null()])),
   extractionErrorMessage: t.Optional(t.Union([t.String(), t.Null()])),
+});
+
+export const brokenArticleReportBodySchema = t.Object({
+  reason: t.Optional(
+    t.Union([
+      t.Literal("broken_article"),
+      t.Literal("missing_content"),
+      t.Literal("wrong_content"),
+      t.Literal("feed_error"),
+    ]),
+  ),
+  details: t.Optional(t.Union([t.String({ maxLength: 4000 }), t.Null()])),
 });
 
 export const articleIdParamsSchema = t.Object({ articleId: uuidParam });

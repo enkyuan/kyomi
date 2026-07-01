@@ -3,12 +3,11 @@
 import type { CSSProperties } from "react";
 import { Suspense, useEffect, useReducer } from "react";
 import { Link } from "@tanstack/react-router";
-import { AddFill, Message3Fill, Settings1Fill } from "@mingcute/react";
+import { AddFill, Settings1Fill } from "@mingcute/react";
 import { KyomiLogo, PremiumIcon } from "@kyomi/ui/icons";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
   Sidebar,
-  SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarMenu,
@@ -29,7 +28,6 @@ const SettingsDialog = lazyNamed(
   () => import("@modules/settings/components/dialog"),
   "SettingsDialog",
 );
-const FeedbackDialog = lazyNamed(() => import("@kyomi/ui/feedback-dialog"), "FeedbackDialog");
 const SourcesDialog = lazyNamed(
   () => import("@modules/feeds/components/follow/sources-dialog"),
   "SourcesDialog",
@@ -47,23 +45,17 @@ type AppSidebarDialogState = {
   settingsDialogLoaded: boolean;
   sourcesOpen: boolean;
   sourcesDialogLoaded: boolean;
-  feedbackOpen: boolean;
-  feedbackDialogLoaded: boolean;
 };
 
 type AppSidebarDialogAction =
   | { type: "load-settings-dialog" }
   | { type: "load-sources-dialog" }
-  | { type: "load-feedback-dialog" }
-  | { type: "set-sources-open"; open: boolean }
-  | { type: "set-feedback-open"; open: boolean };
+  | { type: "set-sources-open"; open: boolean };
 
 const INITIAL_DIALOG_STATE: AppSidebarDialogState = {
   settingsDialogLoaded: false,
   sourcesOpen: false,
   sourcesDialogLoaded: false,
-  feedbackOpen: false,
-  feedbackDialogLoaded: false,
 };
 
 function dialogStateReducer(
@@ -75,12 +67,8 @@ function dialogStateReducer(
       return state.settingsDialogLoaded ? state : { ...state, settingsDialogLoaded: true };
     case "load-sources-dialog":
       return state.sourcesDialogLoaded ? state : { ...state, sourcesDialogLoaded: true };
-    case "load-feedback-dialog":
-      return state.feedbackDialogLoaded ? state : { ...state, feedbackDialogLoaded: true };
     case "set-sources-open":
       return state.sourcesOpen === action.open ? state : { ...state, sourcesOpen: action.open };
-    case "set-feedback-open":
-      return state.feedbackOpen === action.open ? state : { ...state, feedbackOpen: action.open };
   }
 }
 
@@ -99,11 +87,6 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
     }
   }, [settingsOpen]);
 
-  const preloadFeedbackDialog = () => {
-    dispatchDialogState({ type: "load-feedback-dialog" });
-    void FeedbackDialog.preload();
-  };
-
   const preloadSourcesDialog = () => {
     dispatchDialogState({ type: "load-sources-dialog" });
     void SourcesDialog.preload();
@@ -111,10 +94,6 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
 
   const setSourcesOpen = (open: boolean) => {
     dispatchDialogState({ type: "set-sources-open", open });
-  };
-
-  const setFeedbackOpen = (open: boolean) => {
-    dispatchDialogState({ type: "set-feedback-open", open });
   };
 
   const feeds = followedFeedsData ?? [];
@@ -156,8 +135,16 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         </SidebarMenu>
       </SidebarHeader>
 
-      <SidebarContent className="ps-0 pe-2">
-        <ScrollArea className="h-auto min-h-0 flex-1 data-has-overflow-y:scroll-mask-y-from-6 **:data-[slot=scroll-area-scrollbar]:hidden">
+      <div
+        className="min-h-0 flex-1 ps-0 pe-2"
+        data-sidebar="content"
+        data-slot="sidebar-content"
+      >
+        <ScrollArea
+          className="relative h-full min-h-0 overflow-visible **:data-[slot=scroll-area-scrollbar]:hidden"
+          scrollFade
+          scrollFadeClassName="data-has-overflow-y:scroll-mask-y-from-[92%]"
+        >
           <SidebarMenu className="items-center gap-3 px-1">
             {feeds.map((feed) => {
               const isActive = isInbox && scopedFeedId === feed.feedId;
@@ -204,7 +191,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
             })}
           </SidebarMenu>
         </ScrollArea>
-      </SidebarContent>
+      </div>
 
       <SidebarFooter className="items-center ps-0 pe-2 py-4.5">
         <SidebarMenu className="items-center gap-3">
@@ -216,21 +203,6 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               disabled
             >
               <PremiumIcon size={24} />
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem className="flex justify-center">
-            <SidebarMenuButton
-              tooltip="Feedback"
-              variant="secondary"
-              className={CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS}
-              onClick={() => {
-                preloadFeedbackDialog();
-                dispatchDialogState({ type: "set-feedback-open", open: true });
-              }}
-              onFocus={preloadFeedbackDialog}
-              onPointerEnter={preloadFeedbackDialog}
-            >
-              <Message3Fill size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="flex justify-center">
@@ -261,13 +233,6 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
             open={dialogState.sourcesOpen}
             onOpenChange={setSourcesOpen}
             platform={platform}
-          />
-        ) : null}
-        {dialogState.feedbackDialogLoaded ? (
-          <FeedbackDialog
-            hideTrigger
-            open={dialogState.feedbackOpen}
-            onOpenChange={setFeedbackOpen}
           />
         ) : null}
       </Suspense>
