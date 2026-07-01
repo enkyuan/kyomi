@@ -221,15 +221,15 @@ services:
 
 volumes:
   postgres_data:
-    name: vols_rss_postgres_data
+    name: kyomi_postgres_data
   redis_data:
-    name: vols_rss_redis_data
+    name: kyomi_redis_data
   garage_data:
-    name: vols_rss_garage_data
+    name: kyomi_garage_data
   garage_meta:
-    name: vols_rss_garage_meta
+    name: kyomi_garage_meta
   meili_data:
-    name: vols_rss_meili_data
+    name: kyomi_meili_data
 
 networks:
   kyomi-network:
