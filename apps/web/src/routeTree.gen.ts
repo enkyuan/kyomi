@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as RegisterRouteImport } from './routes/register'
 import { Route as McpRouteImport } from './routes/mcp'
+import { Route as FaviconRouteImport } from './routes/favicon'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as InboxIndexRouteImport } from './routes/inbox/index'
 import { Route as InboxArticleRouteImport } from './routes/inbox/$article'
@@ -25,6 +26,11 @@ const RegisterRoute = RegisterRouteImport.update({
 const McpRoute = McpRouteImport.update({
   id: '/mcp',
   path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaviconRoute = FaviconRouteImport.update({
+  id: '/favicon',
+  path: '/favicon',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -55,6 +61,7 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/favicon': typeof FaviconRoute
   '/mcp': typeof McpRoute
   '/register': typeof RegisterRoute
   '/api/favicon': typeof ApiFaviconRoute
@@ -64,6 +71,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/favicon': typeof FaviconRoute
   '/mcp': typeof McpRoute
   '/register': typeof RegisterRoute
   '/api/favicon': typeof ApiFaviconRoute
@@ -74,6 +82,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/favicon': typeof FaviconRoute
   '/mcp': typeof McpRoute
   '/register': typeof RegisterRoute
   '/api/favicon': typeof ApiFaviconRoute
@@ -85,6 +94,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/favicon'
     | '/mcp'
     | '/register'
     | '/api/favicon'
@@ -94,6 +104,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/favicon'
     | '/mcp'
     | '/register'
     | '/api/favicon'
@@ -103,6 +114,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/favicon'
     | '/mcp'
     | '/register'
     | '/api/favicon'
@@ -113,6 +125,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FaviconRoute: typeof FaviconRoute
   McpRoute: typeof McpRoute
   RegisterRoute: typeof RegisterRoute
   ApiFaviconRoute: typeof ApiFaviconRoute
@@ -135,6 +148,13 @@ declare module '@tanstack/react-router' {
       path: '/mcp'
       fullPath: '/mcp'
       preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favicon': {
+      id: '/favicon'
+      path: '/favicon'
+      fullPath: '/favicon'
+      preLoaderRoute: typeof FaviconRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -177,6 +197,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FaviconRoute: FaviconRoute,
   McpRoute: McpRoute,
   RegisterRoute: RegisterRoute,
   ApiFaviconRoute: ApiFaviconRoute,

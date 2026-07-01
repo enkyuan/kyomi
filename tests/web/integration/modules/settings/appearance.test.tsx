@@ -92,6 +92,29 @@ vi.mock("@kyomi/ui/select", () => ({
   SelectValue: () => null,
 }));
 
+vi.mock("@kyomi/ui/segmented-control", () => {
+  let onSegmentedValueChange: ((value: string) => void) | undefined;
+
+  return {
+    SegmentedControl: ({
+      children,
+      onValueChange,
+    }: {
+      children: ReactNode;
+      onValueChange?: (value: string) => void;
+    }) => {
+      onSegmentedValueChange = onValueChange;
+      return <div>{children}</div>;
+    },
+    SegmentedControlList: ({ children }: { children: ReactNode }) => <div>{children}</div>,
+    SegmentedControlTab: ({ children, value }: { children: ReactNode; value: string }) => (
+      <button onClick={() => onSegmentedValueChange?.(value)} type="button">
+        {children}
+      </button>
+    ),
+  };
+});
+
 vi.mock("@kyomi/ui/switch", () => ({
   Switch: ({
     checked,
@@ -135,12 +158,12 @@ describe("AppearancePagePanel", () => {
     resetInboxPreferencesMock.mockReset();
   });
 
-  test("updates inbox default view preferences from the merged page", () => {
+  test("updates inbox text scale preferences from the merged page", () => {
     render(<AppearancePagePanel />);
 
-    fireEvent.click(screen.getByRole("button", { name: "Read later" }));
+    fireEvent.click(screen.getByRole("button", { name: "xl" }));
 
-    expect(setInboxPreferencesMock).toHaveBeenCalledWith({ inboxDefaultView: "saved" });
+    expect(setInboxPreferencesMock).toHaveBeenCalledWith({ inboxFontSizePx: 20 });
   });
 
   test("shows relative timestamp display as the default-first option", () => {

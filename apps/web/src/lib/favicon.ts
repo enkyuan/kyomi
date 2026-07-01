@@ -1,4 +1,4 @@
-import { buildClientFaviconUrl } from "@kyomi/worker/favicon/browser";
+import { buildClientFaviconUrl, selectClientFaviconOrigin } from "@kyomi/worker/favicon/browser";
 
 const CLIENT_FAVICON_ALLOWED_SCHEMES = new Set(["http:", "https:"]);
 
@@ -24,7 +24,7 @@ export function buildFaviconUrlCandidates(
 ): string[] {
   const proxyFallbackUrl = buildClientFaviconUrl(null, siteUrl, feedUrl);
   const storedUrl = buildClientFaviconUrl(storedFaviconUrl, siteUrl, feedUrl);
-  const origin = parseClientFaviconOrigin(siteUrl) ?? parseClientFaviconOrigin(feedUrl);
+  const origin = selectClientFaviconOrigin(siteUrl, feedUrl);
   const directOriginFallbackUrl = origin ? `${origin}/favicon.ico` : null;
 
   return [

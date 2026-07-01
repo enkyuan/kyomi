@@ -11,6 +11,12 @@ describe("parseFeedMetadata", () => {
     expect(meta.iconUrl).toBe("https://fallback/icon.png");
   });
 
+  test("resolves relative RSS channel links against the final feed URL", () => {
+    const xml = `<?xml version="1.0"?><rss version="2.0"><channel><title>Relative site</title><link>/</link><description>Updates</description></channel></rss>`;
+    const meta = parseFeedMetadata(xml, "https://www.entrepreneur.com/rss-feed");
+    expect(meta.link).toBe("https://www.entrepreneur.com/");
+  });
+
   test("parses JSON Feed", () => {
     const json = JSON.stringify({
       version: "https://jsonfeed.org/version/1",

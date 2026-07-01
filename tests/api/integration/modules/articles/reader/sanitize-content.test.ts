@@ -76,6 +76,43 @@ describe("articles.sanitize.content", () => {
     expect(sanitized).not.toContain("tsd-source");
     expect(sanitized).toContain("<p>Hello</p>");
   });
+
+  test("normalizes dangerous attrs, URL schemes, classes, image attrs, and empty wrappers", () => {
+    const sanitized = sanitizeArticleHtml(`
+      <article>
+        <p onclick="alert(1)">Intro</p>
+        <a href="vbscript:msgbox(1)" onmouseover="alert(1)">bad link</a>
+        <img src="data:text/html;base64,PHNjcmlwdD4=" onerror="alert(1)" alt="bad image">
+        <pre><code class="language-ts prettyprint promo">const x = 1;</code></pre>
+        <div class="author-bio promo sidebar" style="color: red"><span style="color: red">Author</span></div>
+        <div></div>
+        <math style="color: red"><mrow><mi>x</mi></mrow></math>
+      </article>
+    `);
+
+    expect(sanitized).not.toContain("onclick");
+    expect(sanitized).not.toContain("onmouseover");
+    expect(sanitized).not.toContain("onerror");
+    expect(sanitized).not.toContain("vbscript:");
+    expect(sanitized).not.toContain("data:text/html");
+    expect(sanitized).toContain('<code class="language-ts">const x = 1;</code>');
+    expect(sanitized).toContain('class="author-bio"');
+    expect(sanitized).not.toContain("promo");
+    expect(sanitized).not.toContain("sidebar");
+    expect(sanitized).not.toContain('<div class="author-bio" style=');
+    expect(sanitized).toContain('<span style="color: red">Author</span>');
+    expect(sanitized).toContain('<math style="color: red">');
+    expect(sanitized).not.toContain("<div></div>");
+  });
+
+  test("adds lazy image defaults after sanitization", () => {
+    const sanitized = sanitizeArticleHtml(`
+      <p><img src="https://example.com/image.jpg" alt="Image"></p>
+    `);
+
+    expect(sanitized).toContain('loading="lazy"');
+    expect(sanitized).toContain('decoding="async"');
+  });
 });
 
 describe("articles.sanitize.content – carousel artifact stripping", () => {

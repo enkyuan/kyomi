@@ -4,11 +4,13 @@ import { createArticleClip } from "./clips";
 import {
   articleDetailSchema,
   articleIdParamsSchema,
+  brokenArticleReportBodySchema,
   createClipBodySchema,
   messageResponseSchema,
   updateArticleBodySchema,
 } from "../schemas";
-import { updateArticleOrClipForUser } from "./update";
+import { createBrokenArticleReport } from "./reports";
+import { recordArticleViewForUser, updateArticleOrClipForUser } from "./update";
 
 export function registerArticleWriteRoutes(app: Elysia) {
   return app
@@ -38,6 +40,42 @@ export function registerArticleWriteRoutes(app: Elysia) {
         },
       },
     )
+    .post(
+      "/articles/:articleId/view",
+      async (context) => {
+        const { db, params, userId } = v1HandlerContext<
+          unknown,
+          Record<string, unknown>,
+          { articleId: string }
+        >(context);
+        await recordArticleViewForUser(db, userId, params.articleId);
+        return { message: "Article view recorded" };
+      },
+      {
+        params: articleIdParamsSchema,
+        response: { 200: messageResponseSchema },
+      },
+    )
+    .post(
+      "/articles/:articleId/reports/broken",
+      async (context) => {
+        const { body, db, params, userId } = v1HandlerContext<
+          {
+            reason?: "broken_article" | "missing_content" | "wrong_content" | "feed_error";
+            details?: string | null;
+          },
+          Record<string, unknown>,
+          { articleId: string }
+        >(context);
+        await createBrokenArticleReport(db, userId, params.articleId, body);
+        return { message: "Broken article report submitted" };
+      },
+      {
+        params: articleIdParamsSchema,
+        body: brokenArticleReportBodySchema,
+        response: { 200: messageResponseSchema },
+      },
+    )
     .put(
       "/articles/:articleId",
       async (context) => {
@@ -45,6 +83,7 @@ export function registerArticleWriteRoutes(app: Elysia) {
           {
             isRead?: boolean | null;
             isSaved?: boolean;
+            isHidden?: boolean;
             title?: string;
             note?: string | null;
             contentHtml?: string | null;

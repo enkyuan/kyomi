@@ -44,4 +44,17 @@ describe("inbox query URLs", () => {
       }),
     ).toBe("/api/v1/articles/views/all?limit=100");
   });
+
+  test("keeps Recent on the recently-read view when searching", () => {
+    expect(
+      buildInboxListUrl({
+        filter: "recent",
+        timezoneOffsetMinutes: 300,
+        includeRead: false,
+        search: " browser ",
+        cursor: undefined,
+        sort: undefined,
+      }),
+    ).toBe("/api/v1/articles/views/recently-read?limit=100&search=browser");
+  });
 });

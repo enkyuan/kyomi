@@ -20,6 +20,32 @@ describe("RenderHtml", () => {
     expect(root?.querySelector("img")?.getAttribute("src")).toBe("https://example.com/x.png");
   });
 
+  test("applies the shared article sanitization policy in the browser reader", () => {
+    const html = `
+      <article>
+        <p onclick="alert(1)">Intro</p>
+        <a href="javascript:alert(1)">bad link</a>
+        <img src="https://example.com/x.png" alt="" onerror="alert(1)" />
+        <pre><code class="language-ts prettyprint promo">const x = 1;</code></pre>
+        <div class="author-bio promo sidebar" style="color: red"><span style="color: red">Author</span></div>
+      </article>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    expect(root?.querySelector("[onclick]")).toBeNull();
+    expect(root?.querySelector("[onerror]")).toBeNull();
+    expect(root?.querySelector("a")?.hasAttribute("href")).toBe(false);
+    expect(root?.querySelector("img")?.getAttribute("loading")).toBe("lazy");
+    expect(root?.querySelector("img")?.getAttribute("decoding")).toBe("async");
+    expect(root?.querySelector("code")?.className).toBe("language-ts");
+    expect(root?.querySelector(".author-bio")).toBeTruthy();
+    expect(root?.querySelector(".promo")).toBeNull();
+    expect(root?.querySelector(".sidebar")).toBeNull();
+    expect(root?.querySelector(".author-bio")?.hasAttribute("style")).toBe(false);
+    expect(root?.querySelector("span")?.getAttribute("style")).toBe("color: red");
+  });
+
   test("tags author-bio host as profile thumb and keeps avatar-class image inline", async () => {
     const html = `
       <div class="author-bio"><img src="https://example.com/a.png" alt="" /></div>
@@ -318,7 +344,7 @@ describe("RenderHtml – gallery markup with class-based indicators", () => {
     const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
     const root = container.querySelector(".article-body");
     await waitFor(() => {
-      // The carousel class is stripped by DOMPurify's denied tokens.
+      // The carousel class is stripped by shared article sanitization.
       // Items with real text survive (correct conservative behavior).
       const lists = root?.querySelectorAll("ul");
       if (lists && lists.length > 0) {

@@ -7,6 +7,8 @@ import type { ArticleCountScope, ArticleCountsDto } from "../types";
 
 type DB = typeof db;
 
+const visibleFeedItemSql = sql`${feedItemUserState.hiddenAt} IS NULL`;
+
 export async function getArticleCountsForUser(
   database: DB,
   userId: string,
@@ -38,7 +40,12 @@ export async function getArticleCountsForUser(
     .innerJoin(feedSubscriptions, joinCond)
     .leftJoin(feedItemUserState, stateJoin)
     .where(
-      and(sql`(${articleIsReadSql}) = false`, lt(feedItems.publishedAt, now), feedScopeFilter),
+      and(
+        sql`(${articleIsReadSql}) = false`,
+        visibleFeedItemSql,
+        lt(feedItems.publishedAt, now),
+        feedScopeFilter,
+      ),
     );
 
   const [allRow] = await database
@@ -46,7 +53,7 @@ export async function getArticleCountsForUser(
     .from(feedItems)
     .innerJoin(feedSubscriptions, joinCond)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(and(lt(feedItems.publishedAt, now), feedScopeFilter));
+    .where(and(visibleFeedItemSql, lt(feedItems.publishedAt, now), feedScopeFilter));
 
   const [savedRow] = await database
     .select({ c: sql<number>`count(*)::int` })
@@ -56,6 +63,7 @@ export async function getArticleCountsForUser(
     .where(
       and(
         sql`${feedItemUserState.isSaved} IS TRUE`,
+        visibleFeedItemSql,
         lt(feedItems.publishedAt, now),
         feedScopeFilter,
       ),
@@ -106,6 +114,7 @@ export async function getGlobalArticleCountsForUser(
     .where(
       and(
         sql`(${globalArticleIsReadSql}) = false`,
+        visibleFeedItemSql,
         lt(feedItems.publishedAt, now),
         feedScopeFilter,
       ),
@@ -115,7 +124,7 @@ export async function getGlobalArticleCountsForUser(
     .select({ c: sql<number>`count(*)::int` })
     .from(feedItems)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(and(lt(feedItems.publishedAt, now), feedScopeFilter));
+    .where(and(visibleFeedItemSql, lt(feedItems.publishedAt, now), feedScopeFilter));
 
   const [savedRow] = await database
     .select({ c: sql<number>`count(*)::int` })
@@ -124,6 +133,7 @@ export async function getGlobalArticleCountsForUser(
     .where(
       and(
         sql`${feedItemUserState.isSaved} IS TRUE`,
+        visibleFeedItemSql,
         lt(feedItems.publishedAt, now),
         feedScopeFilter,
       ),
@@ -151,6 +161,10 @@ export async function countFeedArticlesPublishedInRange(
     eq(feedItems.feedId, feedSubscriptions.feedId),
     eq(feedSubscriptions.userId, userId),
   );
+  const stateJoin = and(
+    eq(feedItemUserState.feedItemId, feedItems.id),
+    eq(feedItemUserState.userId, userId),
+  );
 
   const scopedFeedId = scope?.feedId?.trim();
   const scopedFolderId = scope?.folderId?.trim();
@@ -161,10 +175,12 @@ export async function countFeedArticlesPublishedInRange(
     .from(feedItems)
     .innerJoin(feedSubscriptions, joinCond)
     .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
+    .leftJoin(feedItemUserState, stateJoin)
     .where(
       and(
         gte(feedItems.publishedAt, publishedAfter),
         lt(feedItems.publishedAt, effectivePublishedBefore),
+        visibleFeedItemSql,
         scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined,
         scopedFolderId ? eq(feedSubscriptions.folderId, scopedFolderId) : undefined,
       ),
@@ -175,21 +191,28 @@ export async function countFeedArticlesPublishedInRange(
 
 export async function countGlobalFeedArticlesPublishedInRange(
   database: DB,
+  userId: string,
   publishedAfter: Date,
   publishedBefore: Date,
   scope?: ArticleCountScope,
 ): Promise<number> {
   const scopedFeedId = scope?.feedId?.trim();
   const effectivePublishedBefore = capPublishedBeforeAtNow(publishedBefore);
+  const stateJoin = and(
+    eq(feedItemUserState.feedItemId, feedItems.id),
+    eq(feedItemUserState.userId, userId),
+  );
 
   const [row] = await database
     .select({ c: sql<number>`count(*)::int` })
     .from(feedItems)
     .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
+    .leftJoin(feedItemUserState, stateJoin)
     .where(
       and(
         gte(feedItems.publishedAt, publishedAfter),
         lt(feedItems.publishedAt, effectivePublishedBefore),
+        visibleFeedItemSql,
         scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined,
       ),
     );
@@ -232,6 +255,7 @@ export async function getUnreadCountsPerFeed(
       and(
         inArray(feedItems.feedId, feedIds),
         sql`(${articleIsReadSql}) = false`,
+        visibleFeedItemSql,
         lt(feedItems.publishedAt, now),
       ),
     )

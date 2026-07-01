@@ -139,14 +139,15 @@ function compareArticleRowsForSort(
 }
 
 function paginateRows(rows: ArticleListRawRow[], limit: number, sort: ArticleSort) {
-  const dedupedRows = collapseObviousDuplicates(rows).sort((left, right) =>
+  const visibleRows = filterVisibleArticleRows(rows);
+  const dedupedRows = collapseObviousDuplicates(visibleRows).sort((left, right) =>
     compareArticleRowsForSort(left, right, sort),
   );
-  if (dedupedRows.length !== rows.length) {
+  if (dedupedRows.length !== visibleRows.length) {
     logger.warn("articles.list_time_dedupe.collapsed", {
-      rawCount: rows.length,
+      rawCount: visibleRows.length,
       dedupedCount: dedupedRows.length,
-      collapsedCount: rows.length - dedupedRows.length,
+      collapsedCount: visibleRows.length - dedupedRows.length,
     });
   }
   const hasMore = dedupedRows.length > limit;
@@ -155,6 +156,12 @@ function paginateRows(rows: ArticleListRawRow[], limit: number, sort: ArticleSor
     hasMore && page.length > 0 ? encodeCompositeCursor(page[page.length - 1]!, sort) : null;
   return { hasMore, page, nextCursor };
 }
+
+function filterVisibleArticleRows(rows: ArticleListRawRow[]): ArticleListRawRow[] {
+  return rows.filter((row) => row.hiddenAt == null);
+}
+
+export const filterVisibleArticleRowsForTest = filterVisibleArticleRows;
 
 function toArticleListItems(page: ArticleListRawRow[]): ArticleListItemDto[] {
   return page.map((r) => ({
@@ -233,6 +240,10 @@ function pushGlobalReadSavedFilters(filters: SQL[], opts: GlobalListArticlesOpti
   if (opts.isSaved === true) {
     filters.push(sql`${feedItemUserState.isSaved} IS TRUE`);
   }
+}
+
+function pushHiddenFilter(filters: SQL[]): void {
+  filters.push(sql`${feedItemUserState.hiddenAt} IS NULL`);
 }
 
 function pushPublishedDateFilters(filters: SQL[], opts: ListArticlesOptions): void {
@@ -384,6 +395,7 @@ async function listArticleRows(
   const filters: SQL[] = [];
   pushBaseFilters(filters, opts);
   pushReadSavedFilters(filters, opts);
+  pushHiddenFilter(filters);
   pushPublishedDateFilters(filters, opts);
   pushSearchFilter(filters, opts);
   if (opts.exclusiveBefore) {
@@ -407,6 +419,7 @@ async function listArticleRows(
       feedFaviconUrl: feeds.faviconUrl,
       isRead: articleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
+      hiddenAt: feedItemUserState.hiddenAt,
     })
     .from(feedItems)
     .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
@@ -431,6 +444,7 @@ async function listGlobalArticleRows(
 
   const filters: SQL[] = [];
   pushGlobalReadSavedFilters(filters, opts);
+  pushHiddenFilter(filters);
   pushPublishedDateFilters(filters, opts);
   pushSearchFilter(filters, opts);
   if (opts.exclusiveBefore) {
@@ -454,6 +468,7 @@ async function listGlobalArticleRows(
       feedFaviconUrl: feeds.faviconUrl,
       isRead: globalArticleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
+      hiddenAt: feedItemUserState.hiddenAt,
     })
     .from(feedItems)
     .innerJoin(feeds, eq(feedItems.feedId, feeds.id))

@@ -24,6 +24,7 @@ import { AccountPageNav, AccountPagePanel, accountSection } from "../account";
 import { AdvancedPageNav, AdvancedPagePanel, advancedSection } from "../advanced";
 import { AppearancePageNav, AppearancePagePanel, appearanceSection } from "../appearance";
 import { BillingPageNav, BillingPagePanel, billingSection } from "../billing";
+import { FeedbackPageNav, FeedbackPagePanel, feedbackSection } from "../feedback";
 import {
   PersonalizationPageNav,
   PersonalizationPagePanel,
@@ -80,6 +81,12 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                         setActiveSectionName(billingSection.name);
                       }}
                     />
+                    <FeedbackPageNav
+                      isActive={activeSectionName === feedbackSection.name}
+                      onSelect={() => {
+                        setActiveSectionName(feedbackSection.name);
+                      }}
+                    />
                     <AdvancedPageNav
                       isActive={activeSectionName === advancedSection.name}
                       onSelect={() => {
@@ -116,6 +123,7 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                   <PersonalizationPagePanel />
                 ) : null}
                 {activeSectionName === billingSection.name ? <BillingPagePanel /> : null}
+                {activeSectionName === feedbackSection.name ? <FeedbackPagePanel /> : null}
                 {activeSectionName === advancedSection.name ? <AdvancedPagePanel /> : null}
               </div>
             </ScrollArea>

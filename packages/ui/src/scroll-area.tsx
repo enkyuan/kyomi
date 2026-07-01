@@ -8,10 +8,12 @@ export function ScrollArea({
   className,
   children,
   scrollFade = false,
+  scrollFadeClassName,
   scrollbarGutter = false,
   ...props
 }: ScrollAreaPrimitive.Root.Props & {
   scrollFade?: boolean;
+  scrollFadeClassName?: string;
   scrollbarGutter?: boolean;
 }): React.ReactElement {
   return (
@@ -20,7 +22,8 @@ export function ScrollArea({
         className={cn(
           "h-full rounded-[inherit] outline-none transition-shadows focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background data-has-overflow-y:overscroll-y-contain data-has-overflow-x:overscroll-x-contain",
           scrollFade &&
-            "data-has-overflow-y:scroll-mask-y-from-[1.5rem] data-has-overflow-x:scroll-mask-x-from-[1.5rem]",
+            (scrollFadeClassName ??
+              "data-has-overflow-y:scroll-mask-y-from-[1.5rem] data-has-overflow-x:scroll-mask-x-from-[1.5rem]"),
           scrollbarGutter && "data-has-overflow-y:pe-2.5 data-has-overflow-x:pb-2.5",
         )}
         data-slot="scroll-area-viewport"

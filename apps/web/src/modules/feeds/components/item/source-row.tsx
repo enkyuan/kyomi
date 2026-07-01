@@ -20,6 +20,7 @@ type SourceRowProps = {
   iconClassName?: string;
   enablePreview?: boolean;
   layoutId?: string;
+  sharedSourceLayoutId?: string;
 };
 
 export function SourceRow({
@@ -35,6 +36,7 @@ export function SourceRow({
   iconClassName,
   enablePreview = true,
   layoutId,
+  sharedSourceLayoutId,
 }: SourceRowProps) {
   const sourceLabel = getFeedSourceLabel(articleUrl, feedTitle);
   const label = (
@@ -49,12 +51,8 @@ export function SourceRow({
     </span>
   );
 
-  return (
-    <m.div
-      layoutId={layoutId}
-      className={cn("flex w-full min-w-0 items-center gap-2.5", className)}
-      transition={{ type: "spring", duration: 0.28, bounce: 0 }}
-    >
+  const content = (
+    <>
       {showFavicon ? (
         <FeedFavicon
           className={cn("size-4 shrink-0 rounded-[3px] bg-card/85", iconClassName)}
@@ -79,6 +77,26 @@ export function SourceRow({
         </PreviewCard>
       ) : (
         label
+      )}
+    </>
+  );
+
+  return (
+    <m.div
+      layoutId={layoutId}
+      className={cn("flex w-full min-w-0 items-center gap-2.5", className)}
+      transition={{ type: "spring", duration: 0.28, bounce: 0 }}
+    >
+      {sharedSourceLayoutId ? (
+        <m.div
+          layoutId={sharedSourceLayoutId}
+          className="flex min-w-0 flex-1 items-center gap-[inherit]"
+          transition={{ type: "spring", duration: 0.28, bounce: 0 }}
+        >
+          {content}
+        </m.div>
+      ) : (
+        content
       )}
     </m.div>
   );

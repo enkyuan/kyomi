@@ -1,21 +1,51 @@
 "use client";
 
-import { FontSizeLine } from "@mingcute/react";
 import { Group, GroupSeparator } from "@kyomi/ui/group";
+import {
+  SegmentedControl,
+  SegmentedControlList,
+  SegmentedControlTab,
+} from "@kyomi/ui/segmented-control";
 import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@kyomi/ui/select";
-import { SliderComfortable } from "@kyomi/ui/slider";
 import { Switch } from "@kyomi/ui/switch";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
 import { SettingHeading, SettingSubHeading } from "./shared";
 
+const INBOX_TEXT_SCALE_OPTIONS = [
+  { label: "sm", value: "sm", fontSizePx: 14 },
+  { label: "md", value: "md", fontSizePx: 16 },
+  { label: "lg", value: "lg", fontSizePx: 18 },
+  { label: "xl", value: "xl", fontSizePx: 20 },
+] as const;
+
+type InboxTextScaleValue = (typeof INBOX_TEXT_SCALE_OPTIONS)[number]["value"];
+type InboxTextScaleOption = (typeof INBOX_TEXT_SCALE_OPTIONS)[number];
+
+function getInboxTextScaleValue(fontSizePx: number): InboxTextScaleValue {
+  let closestOption: InboxTextScaleOption = INBOX_TEXT_SCALE_OPTIONS[0];
+  let closestDistance = Math.abs(fontSizePx - closestOption.fontSizePx);
+
+  for (const option of INBOX_TEXT_SCALE_OPTIONS.slice(1)) {
+    const distance = Math.abs(fontSizePx - option.fontSizePx);
+    if (distance < closestDistance) {
+      closestOption = option;
+      closestDistance = distance;
+    }
+  }
+
+  return closestOption.value;
+}
+
+function getInboxTextScaleFontSize(value: string): number | null {
+  return INBOX_TEXT_SCALE_OPTIONS.find((option) => option.value === value)?.fontSizePx ?? null;
+}
+
 type InboxAppearanceSettingsProps = {
-  limits: { minFontSizePx: number; maxFontSizePx: number };
   preferences: InboxPreferences;
   setPreferences: (next: Partial<InboxPreferences>) => void;
 };
 
 export function InboxAppearanceSettings({
-  limits,
   preferences,
   setPreferences,
 }: InboxAppearanceSettingsProps) {
@@ -25,42 +55,6 @@ export function InboxAppearanceSettings({
         description="Adjust inbox density and what metadata stays visible while scanning."
         title="Inbox"
       />
-      <div className="space-y-3 py-1">
-        <SettingSubHeading
-          description="Choose which inbox view opens first when you land on the inbox."
-          title="Default view"
-        />
-        <Select
-          items={[
-            { label: "My Feed", value: "my-feed" },
-            { label: "All", value: "all" },
-            { label: "Read later", value: "saved" },
-            { label: "Recent", value: "recent" },
-          ]}
-          value={preferences.inboxDefaultView}
-          onValueChange={(value) => {
-            if (
-              value === "my-feed" ||
-              value === "all" ||
-              value === "saved" ||
-              value === "recent"
-            ) {
-              setPreferences({ inboxDefaultView: value });
-            }
-          }}
-        >
-          <SelectTrigger className="w-fit min-w-48" size="sm">
-            <SelectValue />
-          </SelectTrigger>
-          <SelectPopup>
-            <SelectItem value="my-feed">My Feed</SelectItem>
-            <SelectItem value="all">All</SelectItem>
-            <SelectItem value="saved">Read later</SelectItem>
-            <SelectItem value="recent">Recent</SelectItem>
-          </SelectPopup>
-        </Select>
-      </div>
-
       <div className="space-y-3 py-1">
         <SettingSubHeading
           description="Compact trims row spacing for denser scanning. Comfortable preserves the current roomy card layout."
@@ -93,47 +87,23 @@ export function InboxAppearanceSettings({
           description="Scale inbox item text while preserving title, summary, and metadata hierarchy."
           title="Text size"
         />
-        <SliderComfortable
-          formatValue={(value) => `${value}px`}
-          label={<FontSizeLine size={20} />}
-          max={limits.maxFontSizePx}
-          min={limits.minFontSizePx}
-          step={1}
-          variant="scrubber"
-          value={preferences.inboxFontSizePx}
-          onChange={(value) => {
-            setPreferences({ inboxFontSizePx: value });
-          }}
-        />
-      </div>
-
-      <div className="space-y-3 py-1">
-        <SettingSubHeading
-          description="Control whether opening an article immediately clears it from unread, waits briefly, or leaves that action manual."
-          title="Mark as read"
-        />
-        <Select
-          items={[
-            { label: "On open", value: "on-open" },
-            { label: "After delay", value: "after-delay" },
-            { label: "Manual only", value: "manual" },
-          ]}
-          value={preferences.inboxMarkReadBehavior}
+        <SegmentedControl
+          value={getInboxTextScaleValue(preferences.inboxFontSizePx)}
           onValueChange={(value) => {
-            if (value === "on-open" || value === "after-delay" || value === "manual") {
-              setPreferences({ inboxMarkReadBehavior: value });
+            const fontSizePx = getInboxTextScaleFontSize(value);
+            if (fontSizePx !== null) {
+              setPreferences({ inboxFontSizePx: fontSizePx });
             }
           }}
         >
-          <SelectTrigger className="w-fit min-w-48" size="sm">
-            <SelectValue />
-          </SelectTrigger>
-          <SelectPopup>
-            <SelectItem value="on-open">On open</SelectItem>
-            <SelectItem value="after-delay">After delay</SelectItem>
-            <SelectItem value="manual">Manual only</SelectItem>
-          </SelectPopup>
-        </Select>
+          <SegmentedControlList aria-label="Inbox text scale">
+            {INBOX_TEXT_SCALE_OPTIONS.map((option) => (
+              <SegmentedControlTab key={option.value} className="px-3" value={option.value}>
+                {option.label}
+              </SegmentedControlTab>
+            ))}
+          </SegmentedControlList>
+        </SegmentedControl>
       </div>
 
       <div className="space-y-3 py-1">

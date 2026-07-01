@@ -5,6 +5,7 @@ import { AppError } from "@shared/errors/app";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { taskIdParam } from "@shared/http/v1/stub";
 import { exportOpmlForUser } from "./export";
+import { fetchOpmlDocumentFromUrl } from "./fetch-url";
 import { enqueueOpmlImport } from "./service";
 import {
   buildOpmlSummary,
@@ -124,6 +125,35 @@ export function registerOpmlRoutes(app: Elysia) {
       {
         body: t.Object({
           xml: t.String({ minLength: 1 }),
+          filename: t.Optional(t.String()),
+        }),
+        response: {
+          202: opmlImportAccepted,
+        },
+      },
+    )
+    .post(
+      "/opml/imports/from-url",
+      async (context) => {
+        const { body, logger, set, userId } = v1HandlerContext<{
+          url: string;
+          filename?: string;
+        }>(context);
+        await enforceRateLimitForContext(context, userId, opmlImportRateLimit);
+
+        const fetched = await fetchOpmlDocumentFromUrl(body.url);
+        const { taskId } = await enqueueOpmlImport(
+          userId,
+          fetched.xml,
+          logger,
+          normalizeOpmlFilename(body.filename ?? fetched.filename),
+        );
+        set.status = 202;
+        return { taskId };
+      },
+      {
+        body: t.Object({
+          url: t.String({ minLength: 1 }),
           filename: t.Optional(t.String()),
         }),
         response: {

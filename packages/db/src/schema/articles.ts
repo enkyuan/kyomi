@@ -2,6 +2,7 @@ import { sql } from "drizzle-orm";
 import {
   boolean,
   index,
+  integer,
   pgTable,
   primaryKey,
   text,
@@ -66,13 +67,25 @@ export const feedItemUserState = pgTable(
     // Per-user article state contract: read/save state belongs here, not on `feed_items`.
     readOverride: boolean("read_override"),
     isSaved: boolean("is_saved").notNull().default(false),
+    savedAt: timestamp("saved_at"),
+    lastViewedAt: timestamp("last_viewed_at"),
+    hiddenAt: timestamp("hidden_at"),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
     primaryKey({ columns: [table.userId, table.feedItemId] }),
+    index("feed_item_user_state_viewed_idx")
+      .on(table.userId, table.lastViewedAt.desc(), table.feedItemId.desc())
+      .where(sql`${table.lastViewedAt} IS NOT NULL`),
     index("feed_item_user_state_saved_idx")
       .on(table.userId, table.isSaved, table.feedItemId)
       .where(sql`${table.isSaved} IS TRUE`),
+    index("feed_item_user_state_saved_at_idx")
+      .on(table.userId, table.savedAt.asc(), table.feedItemId)
+      .where(sql`${table.isSaved} IS TRUE AND ${table.savedAt} IS NOT NULL`),
+    index("feed_item_user_state_hidden_idx")
+      .on(table.userId, table.hiddenAt, table.feedItemId)
+      .where(sql`${table.hiddenAt} IS NOT NULL`),
   ],
 );
 
@@ -101,12 +114,95 @@ export const articleClips = pgTable(
     note: text("note"),
     isRead: boolean("is_read").notNull().default(false),
     isSaved: boolean("is_saved").notNull().default(true),
+    savedAt: timestamp("saved_at"),
+    lastViewedAt: timestamp("last_viewed_at"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
+    index("article_clips_user_viewed_idx")
+      .on(table.userId, table.lastViewedAt.desc(), table.id.desc())
+      .where(sql`${table.lastViewedAt} IS NOT NULL`),
     index("article_clips_user_saved_created_idx")
       .on(table.userId, table.isSaved, table.createdAt.desc(), table.id.desc())
       .where(sql`${table.isSaved} IS TRUE`),
+    index("article_clips_user_saved_at_idx")
+      .on(table.userId, table.savedAt.asc(), table.id)
+      .where(sql`${table.isSaved} IS TRUE AND ${table.savedAt} IS NOT NULL`),
+  ],
+);
+
+export const articleViewEvents = pgTable(
+  "article_view_events",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    feedItemId: text("feed_item_id").references(() => feedItems.id, { onDelete: "cascade" }),
+    clipId: text("clip_id").references(() => articleClips.id, { onDelete: "cascade" }),
+    feedId: text("feed_id").references(() => feeds.id, { onDelete: "cascade" }),
+    articleType: text("article_type").notNull(),
+    isFirstView: boolean("is_first_view").notNull().default(false),
+    viewedAt: timestamp("viewed_at").notNull().defaultNow(),
+  },
+  (table) => [
+    index("article_view_events_user_viewed_idx").on(
+      table.userId,
+      table.viewedAt.desc(),
+      table.id.desc(),
+    ),
+    index("article_view_events_user_feed_viewed_idx")
+      .on(table.userId, table.feedId, table.viewedAt.desc())
+      .where(sql`${table.feedId} IS NOT NULL`),
+  ],
+);
+
+export const feedUserStats = pgTable(
+  "feed_user_stats",
+  {
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    feedId: text("feed_id")
+      .notNull()
+      .references(() => feeds.id, { onDelete: "cascade" }),
+    viewedItemCount: integer("viewed_item_count").notNull().default(0),
+    lastViewedAt: timestamp("last_viewed_at").notNull(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.userId, table.feedId] }),
+    index("feed_user_stats_user_rank_idx").on(
+      table.userId,
+      table.viewedItemCount.desc(),
+      table.lastViewedAt.desc(),
+      table.feedId,
+    ),
+  ],
+);
+
+export const articleReports = pgTable(
+  "article_reports",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    articleId: text("article_id").notNull(),
+    articleType: text("article_type").notNull(),
+    feedItemId: text("feed_item_id").references(() => feedItems.id, { onDelete: "set null" }),
+    clipId: text("clip_id").references(() => articleClips.id, { onDelete: "set null" }),
+    reason: text("reason").notNull(),
+    details: text("details"),
+    articleTitle: text("article_title").notNull(),
+    articleUrl: text("article_url").notNull(),
+    feedTitle: text("feed_title"),
+    feedUrl: text("feed_url"),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+  },
+  (table) => [
+    index("article_reports_user_created_idx").on(table.userId, table.createdAt.desc()),
+    index("article_reports_article_created_idx").on(table.articleId, table.createdAt.desc()),
   ],
 );
