@@ -47,12 +47,18 @@ export function FeedFavicon({
     siteUrl,
   });
   const [isLoaded, setIsLoaded] = useState(false);
+  const imageRef = useRef<HTMLImageElement | null>(null);
   const wrapperRef = useRef<HTMLSpanElement | null>(null);
   const [wrapperSize, setWrapperSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
     setIsLoaded(false);
     prewarmFaviconUrl(faviconUrl, priority);
+
+    const image = imageRef.current;
+    if (image?.complete && image.naturalWidth > 0 && image.naturalHeight > 0) {
+      setIsLoaded(handleLoad(image.naturalWidth, image.naturalHeight));
+    }
   }, [faviconUrl, priority]);
 
   useEffect(() => {
@@ -140,6 +146,7 @@ export function FeedFavicon({
       decoding="async"
       fetchPriority={fetchPriority}
       loading={loading}
+      ref={imageRef}
       referrerPolicy="strict-origin-when-cross-origin"
       src={faviconUrl}
       onLoad={(event) => {
