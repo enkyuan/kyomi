@@ -3,7 +3,7 @@
 import type { CSSProperties } from "react";
 import { Suspense, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowUpCircleFill, Chat3Fill, Settings3Fill } from "@mingcute/react";
+import { AddCircleFill, ArrowUpCircleFill, Chat3Fill, Settings3Fill } from "@mingcute/react";
 import { KyomiLogo } from "@kyomi/ui/icons";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
@@ -67,10 +67,18 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Kyomi"
-              className="size-11 justify-center rounded-full! p-0 hover:bg-transparent"
-              render={<Link to="/inbox" search={{ filter: "inbox" as const }} />}
+              className="size-11 justify-center rounded-full! p-0 hover:bg-transparent active:bg-transparent"
+              render={<Link to="/inbox" search={{ filter: "all" as const }} />}
             >
               <KyomiLogo size={24} className="size-auto" />
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem className="flex justify-center">
+            <SidebarMenuButton
+              tooltip="Add feed"
+              className="size-11 justify-center rounded-full! p-0 hover:bg-transparent active:bg-transparent"
+            >
+              <AddCircleFill className="size-6" />
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
@@ -85,7 +93,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
                 <SidebarMenuItem key={feed.feedId} className="flex justify-center">
                   <SidebarMenuButton
                     tooltip={feed.title || feed.url}
-                    className="size-11 justify-center rounded-full! p-0 hover:bg-transparent"
+                    className="size-11 justify-center rounded-full! p-0 hover:bg-transparent active:bg-transparent"
                     isActive={isActive}
                     onFocus={prefetchOnFocus(feed.feedId)}
                     onPointerEnter={prefetchOnPointerEnter(feed.feedId)}
@@ -93,7 +101,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
                       <Link
                         to="/inbox"
                         search={() => ({
-                          filter: "inbox" as const,
+                          filter: "all" as const,
                           search: undefined,
                           feedId: feed.feedId,
                           folderId: undefined,
@@ -122,7 +130,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Upgrade Plan"
-              className="size-10 justify-center rounded-full! p-0 opacity-72 hover:bg-sidebar-accent"
+              className="size-11 justify-center rounded-full! p-0 opacity-72 hover:bg-transparent active:bg-transparent"
               disabled
             >
               <ArrowUpCircleFill className="size-6" />
@@ -131,7 +139,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Feedback"
-              className="size-10 justify-center rounded-full! p-0 opacity-72 hover:bg-sidebar-accent"
+              className="size-11 justify-center rounded-full! p-0 opacity-72 hover:bg-transparent active:bg-transparent"
               onClick={() => {
                 preloadFeedbackDialog();
                 setFeedbackOpen(true);
@@ -145,7 +153,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Settings"
-              className="size-10 justify-center rounded-full! p-0 opacity-72 hover:bg-sidebar-accent"
+              className="size-11 justify-center rounded-full! p-0 opacity-72 hover:bg-transparent active:bg-transparent"
               onClick={() => {
                 setSettingsDialogLoaded(true);
                 void SettingsDialog.preload();

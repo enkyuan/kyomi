@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/no-event-handler, react-doctor/exhaustive-deps */
 "use client";
 
 import { useRef, useEffect, useLayoutEffect, useCallback, useMemo, useReducer } from "react";
@@ -123,6 +124,7 @@ export function usePrimarySlider({
 
   // --- Initial sync (before paint) ---
   const initialSyncDone = useRef(false);
+  // oxlint-disable-next-line react-doctor/exhaustive-deps -- mount-only sync; subsequent updates handled by effect below
   useLayoutEffect(() => {
     const el = trackRef.current;
     if (!el || initialSyncDone.current) return;

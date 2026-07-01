@@ -4,6 +4,9 @@ node_modules
 .env
 .env.*
 !.env.example
+apps/*/bun.lock
+packages/*/bun.lock
+tests/bun.lock
 dist
 build
 coverage

@@ -1,10 +1,11 @@
 import type { db } from "@adapters/db/client";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
-import { and, desc, eq, gte, ilike, lt, or, sql, type SQL } from "drizzle-orm";
+import { and, asc, desc, eq, gt, gte, ilike, lt, or, sql, type SQL } from "drizzle-orm";
 import { logger } from "@adapters/logger";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { collapseObviousDuplicates, type ArticleListRawRow } from "./dedupe";
-import { articleIsReadSql } from "./sql";
+import { articleIsReadSql, globalArticleIsReadSql } from "./sql";
+import type { ArticleSort } from "../query";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "../types";
 
 type DB = typeof db;
@@ -17,11 +18,16 @@ export type ListArticlesOptions = {
   isSaved?: boolean;
   publishedAfter?: Date;
   publishedBefore?: Date;
+  sort?: ArticleSort;
   limit: number;
   cursor?: string;
-  /** Merged feed+clip pagination: rows strictly older than this (publishedAt, id) in global sort order. */
-  exclusiveBefore?: { publishedAt: Date; id: string };
+  /** Merged feed+clip pagination boundary in the active sort order. */
+  exclusiveBefore?: { publishedAt: Date; id: string; isRead?: boolean };
 };
+
+type GlobalListArticlesOptions = Omit<ListArticlesOptions, "feedId" | "folderId">;
+
+type ArticleCursor = { publishedAt: Date; id: string; isRead?: boolean };
 
 function baseJoins(userId: string) {
   return {
@@ -40,11 +46,55 @@ function normalizeLimit(limit: number): number {
   return Math.min(Math.max(limit, 1), 200);
 }
 
-function encodeCompositeCursor(row: Pick<ArticleListRawRow, "publishedAt" | "id">): string {
-  return `${row.publishedAt.toISOString()}::${row.id}`;
+function toBase64Url(json: string): string {
+  return Buffer.from(json, "utf8").toString("base64url");
 }
 
-function decodeCompositeCursor(cursor: string): { publishedAt: Date; id: string } | null {
+function fromBase64Url(b64: string): string {
+  return Buffer.from(b64, "base64url").toString("utf8");
+}
+
+function encodeCompositeCursor(
+  row: Pick<ArticleListRawRow, "publishedAt" | "id" | "isRead">,
+  sort: ArticleSort,
+): string {
+  return `a1.${toBase64Url(
+    JSON.stringify({
+      v: 1,
+      s: sort,
+      pa: row.publishedAt.toISOString(),
+      id: row.id,
+      r: row.isRead,
+    }),
+  )}`;
+}
+
+function decodeCompositeCursor(cursor: string): ArticleCursor | null {
+  const trimmed = cursor.trim();
+  if (trimmed.startsWith("a1.")) {
+    try {
+      const raw = JSON.parse(fromBase64Url(trimmed.slice(3))) as {
+        pa?: unknown;
+        id?: unknown;
+        r?: unknown;
+      };
+      if (typeof raw.pa !== "string" || typeof raw.id !== "string" || !raw.id.trim()) {
+        return null;
+      }
+      const publishedAt = new Date(raw.pa);
+      if (Number.isNaN(publishedAt.getTime())) {
+        return null;
+      }
+      return {
+        publishedAt,
+        id: raw.id,
+        isRead: typeof raw.r === "boolean" ? raw.r : undefined,
+      };
+    } catch {
+      return null;
+    }
+  }
+
   const parts = cursor.split("::");
   if (parts.length !== 2) {
     return null;
@@ -60,13 +110,37 @@ function decodeCompositeCursor(cursor: string): { publishedAt: Date; id: string 
   return { publishedAt, id };
 }
 
-function computeFetchWindowSize(opts: ListArticlesOptions, take: number): number {
+function computeFetchWindowSize(opts: { feedId?: string }, take: number): number {
   const multiplier = opts.feedId ? 2 : 3;
   return Math.min(800, take * multiplier);
 }
 
-function paginateRows(rows: ArticleListRawRow[], limit: number) {
-  const dedupedRows = collapseObviousDuplicates(rows);
+function compareArticleRowsForSort(
+  left: ArticleListRawRow,
+  right: ArticleListRawRow,
+  sort: ArticleSort,
+): number {
+  if (sort === "oldest") {
+    const publishedDiff = left.publishedAt.getTime() - right.publishedAt.getTime();
+    if (publishedDiff !== 0) {
+      return publishedDiff;
+    }
+    return left.id.localeCompare(right.id);
+  }
+  if (sort === "unread-first" && left.isRead !== right.isRead) {
+    return Number(left.isRead) - Number(right.isRead);
+  }
+  const publishedDiff = right.publishedAt.getTime() - left.publishedAt.getTime();
+  if (publishedDiff !== 0) {
+    return publishedDiff;
+  }
+  return right.id.localeCompare(left.id);
+}
+
+function paginateRows(rows: ArticleListRawRow[], limit: number, sort: ArticleSort) {
+  const dedupedRows = collapseObviousDuplicates(rows).sort((left, right) =>
+    compareArticleRowsForSort(left, right, sort),
+  );
   if (dedupedRows.length !== rows.length) {
     logger.warn("articles.list_time_dedupe.collapsed", {
       rawCount: rows.length,
@@ -77,7 +151,7 @@ function paginateRows(rows: ArticleListRawRow[], limit: number) {
   const hasMore = dedupedRows.length > limit;
   const page = hasMore ? dedupedRows.slice(0, limit) : dedupedRows;
   const nextCursor =
-    hasMore && page.length > 0 ? encodeCompositeCursor(page[page.length - 1]!) : null;
+    hasMore && page.length > 0 ? encodeCompositeCursor(page[page.length - 1]!, sort) : null;
   return { hasMore, page, nextCursor };
 }
 
@@ -103,9 +177,25 @@ export async function listArticlesForUser(
   opts: ListArticlesOptions,
 ): Promise<ArticlesCursorListResponseDto> {
   const limit = normalizeLimit(opts.limit);
+  const sort = opts.sort ?? "newest";
 
   const rows = await listArticleRows(database, userId, opts, limit + 1);
-  const { hasMore, page, nextCursor } = paginateRows(rows, limit);
+  const { hasMore, page, nextCursor } = paginateRows(rows, limit, sort);
+
+  const items = toArticleListItems(page);
+  return { items, next_cursor: nextCursor, has_more: hasMore, total_count: null };
+}
+
+export async function listAllArticlesForUser(
+  database: DB,
+  userId: string,
+  opts: GlobalListArticlesOptions,
+): Promise<ArticlesCursorListResponseDto> {
+  const limit = normalizeLimit(opts.limit);
+  const sort = opts.sort ?? "newest";
+
+  const rows = await listGlobalArticleRows(database, userId, opts, limit + 1);
+  const { hasMore, page, nextCursor } = paginateRows(rows, limit, sort);
 
   const items = toArticleListItems(page);
   return { items, next_cursor: nextCursor, has_more: hasMore, total_count: null };
@@ -125,6 +215,17 @@ function pushReadSavedFilters(filters: SQL[], opts: ListArticlesOptions): void {
     filters.push(sql`(${articleIsReadSql}) = true`);
   } else if (opts.isRead === false) {
     filters.push(sql`(${articleIsReadSql}) = false`);
+  }
+  if (opts.isSaved === true) {
+    filters.push(sql`${feedItemUserState.isSaved} IS TRUE`);
+  }
+}
+
+function pushGlobalReadSavedFilters(filters: SQL[], opts: GlobalListArticlesOptions): void {
+  if (opts.isRead === true) {
+    filters.push(sql`(${globalArticleIsReadSql}) = true`);
+  } else if (opts.isRead === false) {
+    filters.push(sql`(${globalArticleIsReadSql}) = false`);
   }
   if (opts.isSaved === true) {
     filters.push(sql`${feedItemUserState.isSaved} IS TRUE`);
@@ -164,6 +265,7 @@ async function pushCursorFilter(
   userId: string,
   opts: ListArticlesOptions,
   feedSubscriptionsJoin: SQL<unknown> | undefined,
+  userStateJoin: SQL<unknown> | undefined,
   filters: SQL[],
 ): Promise<void> {
   if (!opts.cursor || !feedSubscriptionsJoin) {
@@ -171,21 +273,18 @@ async function pushCursorFilter(
   }
   const decoded = decodeCompositeCursor(opts.cursor);
   if (decoded) {
-    filters.push(
-      or(
-        lt(feedItems.publishedAt, decoded.publishedAt),
-        and(eq(feedItems.publishedAt, decoded.publishedAt), lt(feedItems.id, decoded.id)),
-      )!,
-    );
+    pushSortBoundaryFilter(filters, opts.sort ?? "newest", decoded);
     return;
   }
   const cur = await database
     .select({
       publishedAt: feedItems.publishedAt,
       id: feedItems.id,
+      isRead: articleIsReadSql,
     })
     .from(feedItems)
     .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
+    .leftJoin(feedItemUserState, userStateJoin)
     .where(
       and(
         eq(feedItems.id, opts.cursor),
@@ -198,12 +297,78 @@ async function pushCursorFilter(
   if (!c) {
     return;
   }
-  filters.push(
-    or(
-      lt(feedItems.publishedAt, c.publishedAt),
-      and(eq(feedItems.publishedAt, c.publishedAt), lt(feedItems.id, c.id)),
-    )!,
-  );
+  pushSortBoundaryFilter(filters, opts.sort ?? "newest", c);
+}
+
+async function pushGlobalCursorFilter(
+  database: DB,
+  opts: GlobalListArticlesOptions,
+  userStateJoin: SQL<unknown> | undefined,
+  filters: SQL[],
+): Promise<void> {
+  if (!opts.cursor) {
+    return;
+  }
+  const decoded = decodeCompositeCursor(opts.cursor);
+  if (decoded) {
+    pushSortBoundaryFilter(filters, opts.sort ?? "newest", decoded, globalArticleIsReadSql);
+    return;
+  }
+  const cur = await database
+    .select({
+      publishedAt: feedItems.publishedAt,
+      id: feedItems.id,
+      isRead: globalArticleIsReadSql,
+    })
+    .from(feedItems)
+    .leftJoin(feedItemUserState, userStateJoin)
+    .where(eq(feedItems.id, opts.cursor))
+    .limit(1);
+  const c = cur[0];
+  if (!c) {
+    return;
+  }
+  pushSortBoundaryFilter(filters, opts.sort ?? "newest", c, globalArticleIsReadSql);
+}
+
+function pushSortBoundaryFilter(
+  filters: SQL[],
+  sort: ArticleSort,
+  cursor: ArticleCursor,
+  readSql: SQL<boolean> = articleIsReadSql,
+): void {
+  const olderThanCursor = or(
+    lt(feedItems.publishedAt, cursor.publishedAt),
+    and(eq(feedItems.publishedAt, cursor.publishedAt), lt(feedItems.id, cursor.id)),
+  )!;
+  if (sort === "oldest") {
+    filters.push(
+      or(
+        gt(feedItems.publishedAt, cursor.publishedAt),
+        and(eq(feedItems.publishedAt, cursor.publishedAt), gt(feedItems.id, cursor.id)),
+      )!,
+    );
+    return;
+  }
+  if (sort === "unread-first" && cursor.isRead !== undefined) {
+    filters.push(
+      cursor.isRead
+        ? and(sql`(${readSql}) = true`, olderThanCursor)!
+        : or(sql`(${readSql}) = true`, and(sql`(${readSql}) = false`, olderThanCursor))!,
+    );
+    return;
+  }
+  filters.push(olderThanCursor);
+}
+
+function orderByForSort(sort: ArticleSort, readSql: SQL<boolean> = articleIsReadSql) {
+  if (sort === "oldest") {
+    return [asc(feedItems.publishedAt), asc(feedItems.id)] as const;
+  }
+  if (sort === "unread-first") {
+    return [asc(readSql), desc(feedItems.publishedAt), desc(feedItems.id)] as const;
+  }
+  return [desc(feedItems.publishedAt), desc(feedItems.id)] as const;
 }
 
 async function listArticleRows(
@@ -213,6 +378,7 @@ async function listArticleRows(
   take: number,
 ): Promise<ArticleListRawRow[]> {
   const { feedSubscriptionsJoin, userStateJoin } = baseJoins(userId);
+  const sort = opts.sort ?? "newest";
 
   const filters: SQL[] = [];
   pushBaseFilters(filters, opts);
@@ -220,15 +386,9 @@ async function listArticleRows(
   pushPublishedDateFilters(filters, opts);
   pushSearchFilter(filters, opts);
   if (opts.exclusiveBefore) {
-    const { publishedAt, id } = opts.exclusiveBefore;
-    filters.push(
-      or(
-        lt(feedItems.publishedAt, publishedAt),
-        and(eq(feedItems.publishedAt, publishedAt), lt(feedItems.id, id)),
-      )!,
-    );
+    pushSortBoundaryFilter(filters, sort, opts.exclusiveBefore);
   } else {
-    await pushCursorFilter(database, userId, opts, feedSubscriptionsJoin, filters);
+    await pushCursorFilter(database, userId, opts, feedSubscriptionsJoin, userStateJoin, filters);
   }
 
   return database
@@ -250,6 +410,50 @@ async function listArticleRows(
     .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
     .leftJoin(feedItemUserState, userStateJoin)
     .where(filters.length > 0 ? and(...filters) : sql`true`)
-    .orderBy(desc(feedItems.publishedAt), desc(feedItems.id))
+    .orderBy(...orderByForSort(sort))
     .limit(computeFetchWindowSize(opts, take));
+}
+
+async function listGlobalArticleRows(
+  database: DB,
+  userId: string,
+  opts: GlobalListArticlesOptions,
+  take: number,
+): Promise<ArticleListRawRow[]> {
+  const userStateJoin = and(
+    eq(feedItemUserState.feedItemId, feedItems.id),
+    eq(feedItemUserState.userId, userId),
+  );
+  const sort = opts.sort ?? "newest";
+
+  const filters: SQL[] = [];
+  pushGlobalReadSavedFilters(filters, opts);
+  pushPublishedDateFilters(filters, opts);
+  pushSearchFilter(filters, opts);
+  if (opts.exclusiveBefore) {
+    pushSortBoundaryFilter(filters, sort, opts.exclusiveBefore, globalArticleIsReadSql);
+  } else {
+    await pushGlobalCursorFilter(database, opts, userStateJoin, filters);
+  }
+
+  return database
+    .select({
+      id: feedItems.id,
+      title: feedItems.title,
+      canonicalUrl: feedItems.canonicalUrl,
+      link: feedItems.link,
+      summary: feedItems.summary,
+      publishedAt: feedItems.publishedAt,
+      feedId: feedItems.feedId,
+      feedTitle: feeds.title,
+      feedFaviconUrl: feeds.faviconUrl,
+      isRead: globalArticleIsReadSql,
+      isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
+    })
+    .from(feedItems)
+    .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
+    .leftJoin(feedItemUserState, userStateJoin)
+    .where(filters.length > 0 ? and(...filters) : sql`true`)
+    .orderBy(...orderByForSort(sort, globalArticleIsReadSql))
+    .limit(computeFetchWindowSize({}, take));
 }

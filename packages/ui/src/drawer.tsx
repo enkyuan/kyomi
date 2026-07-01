@@ -1,3 +1,4 @@
+/* oxlint-disable max-lines */
 "use client";
 
 import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
@@ -37,8 +38,9 @@ export function Drawer({
 }: DrawerPrimitive.Root.Props & {
   position?: DrawerPosition;
 }): React.ReactElement {
+  const contextValue = React.useMemo(() => ({ position }), [position]);
   return (
-    <DrawerContext.Provider value={{ position }}>
+    <DrawerContext.Provider value={contextValue}>
       <DrawerPrimitive.Root swipeDirection={swipeDirection ?? directionMap[position]} {...props} />
     </DrawerContext.Provider>
   );
@@ -125,6 +127,7 @@ export function DrawerViewport({
   );
 }
 
+// oxlint-disable-next-line eslint/complexity
 export function DrawerPopup({
   className,
   children,

@@ -58,7 +58,10 @@ function parseContentWidth(value: string): ReaderContentWidthDto {
 }
 
 function parseInboxDefaultView(value: string): InboxDefaultViewDto {
-  if (value === "inbox" || value === "today" || value === "unread" || value === "saved") {
+  if (value === "inbox" || value === "all") {
+    return "all";
+  }
+  if (value === "today" || value === "unread" || value === "saved" || value === "recent") {
     return value;
   }
   return DEFAULT_USER_PREFERENCES.inboxDefaultView;
@@ -163,7 +166,7 @@ const STRING_PREFERENCE_RULES: Array<{
   },
   {
     key: "inboxDefaultView",
-    values: ["inbox", "today", "unread", "saved"],
+    values: ["all", "today", "unread", "saved", "recent"],
     message: "Unsupported inbox default view.",
     code: "USER_PREFERENCES_INVALID_INBOX_DEFAULT_VIEW",
   },

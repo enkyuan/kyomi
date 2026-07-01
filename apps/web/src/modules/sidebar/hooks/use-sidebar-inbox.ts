@@ -31,7 +31,7 @@ export function useInboxPrefetch() {
   const queryClient = useQueryClient();
 
   const prefetchFeed = (feedId: string) => {
-    void prefetchInboxFlow(router, queryClient, { filter: "inbox", feedId });
+    void prefetchInboxFlow(router, queryClient, { filter: "all", feedId });
   };
 
   const prefetchOnFocus = (feedId: string) => () => {

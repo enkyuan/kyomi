@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { articleClips, feedItemUserState, feedItems, feedSubscriptions } from "@kyomi/db";
+import { articleClips, feedItemUserState, feedItems } from "@kyomi/db";
 import { and, eq } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { type ClipUpdateBody, updateArticleClipForUser } from "./clips";
@@ -7,14 +7,10 @@ import type { ArticleUpdateBody } from "../types";
 
 type DB = typeof db;
 
-async function assertUserCanAccessArticle(database: DB, userId: string, articleId: string) {
+async function assertFeedArticleExists(database: DB, articleId: string) {
   const rows = await database
     .select({ id: feedItems.id })
     .from(feedItems)
-    .innerJoin(
-      feedSubscriptions,
-      and(eq(feedItems.feedId, feedSubscriptions.feedId), eq(feedSubscriptions.userId, userId)),
-    )
     .where(eq(feedItems.id, articleId))
     .limit(1);
   if (!rows[0]) {
@@ -42,7 +38,7 @@ export async function updateArticleForUser(
     throw new AppError("No updatable fields provided", { status: 400, code: "EMPTY_UPDATE" });
   }
 
-  await assertUserCanAccessArticle(database, userId, articleId);
+  await assertFeedArticleExists(database, articleId);
 
   const now = new Date();
 

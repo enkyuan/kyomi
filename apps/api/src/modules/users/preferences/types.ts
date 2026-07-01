@@ -1,6 +1,6 @@
 export type ReaderDefaultModeDto = "smart" | "original" | "extracted";
 export type ReaderContentWidthDto = "narrow" | "wide";
-export type InboxDefaultViewDto = "inbox" | "today" | "unread" | "saved";
+export type InboxDefaultViewDto = "all" | "today" | "unread" | "saved" | "recent";
 export type InboxDensityDto = "comfortable" | "compact";
 export type ArticleOpenBehaviorDto = "split" | "reader";
 export type InboxMarkReadBehaviorDto = "on-open" | "after-delay" | "manual";

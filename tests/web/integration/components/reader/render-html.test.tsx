@@ -1,4 +1,5 @@
 // @vitest-environment jsdom
+/* oxlint-disable max-lines */
 
 import { act, render, waitFor } from "@testing-library/react";
 import { describe, expect, test } from "vitest";

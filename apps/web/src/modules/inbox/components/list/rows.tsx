@@ -1,7 +1,7 @@
 "use client";
 
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { useRef, type FocusEvent, type PointerEvent, type RefObject } from "react";
+import type { RefObject } from "react";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
@@ -13,6 +13,10 @@ import {
   MIN_SKELETON_ROWS,
   SKELETON_OVERSCAN_ROWS,
 } from "@modules/inbox/lib/layout";
+
+const SKELETON_ROW_GUTTER_CLASS = "pl-8 pr-7";
+const SKELETON_ROW_SEPARATOR_CLASS = "left-8 right-7";
+const SKELETON_FOOTER_ACTION_COUNT = 2;
 
 export type RowsPaginationState = {
   isLoading: boolean;
@@ -37,50 +41,52 @@ export function SkeletonRows({
   const isCompact = density === "compact";
   const summaryLineCount = readerFocusMode ? (isCompact ? 4 : 5) : isCompact ? 2 : 3;
   const estimatedRowHeight = getFeedItemRowEstimate({ density, readerFocusMode });
-  const fallbackViewportHeight =
-    viewportHeight && viewportHeight > 0
-      ? viewportHeight
-      : typeof window !== "undefined"
-        ? window.innerHeight
-        : 0;
   const skeletonRowCount =
-    fallbackViewportHeight > 0
+    viewportHeight && viewportHeight > 0
       ? Math.max(
           MIN_SKELETON_ROWS,
           Math.min(
             MAX_SKELETON_ROWS,
-            Math.ceil(fallbackViewportHeight / estimatedRowHeight) + SKELETON_OVERSCAN_ROWS,
+            Math.ceil(viewportHeight / estimatedRowHeight) + SKELETON_OVERSCAN_ROWS,
           ),
         )
       : DEFAULT_SKELETON_ROWS;
   return (
     <ul className="w-full">
       {Array.from({ length: skeletonRowCount }).map((_, index) => (
-        <li
-          key={`skeleton-${index}`}
-          className={`w-full border-x-0 border-border/70 bg-transparent${index === 0 ? "" : " border-t"}`}
-        >
+        <li key={`skeleton-${index}`} className="relative w-full bg-transparent">
+          {index === 0 ? null : (
+            <span
+              aria-hidden="true"
+              className={`pointer-events-none absolute top-0 h-px bg-border/70 ${SKELETON_ROW_SEPARATOR_CLASS}`}
+            />
+          )}
           <div
             className={
-              isCompact ? "flex flex-col gap-1.5 px-5 py-2.5" : "flex flex-col gap-2 px-5 py-3"
+              isCompact
+                ? `flex flex-col gap-3.5 pt-4 pb-2 ${SKELETON_ROW_GUTTER_CLASS}`
+                : `flex flex-col gap-4 pt-5 pb-2.5 ${SKELETON_ROW_GUTTER_CLASS}`
             }
           >
-            <div className="flex items-center gap-2">
-              {showFavicons ? <Skeleton className="size-4.5 shrink-0 rounded-[3px]" /> : null}
-              <Skeleton className="h-3 w-24 rounded" />
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex min-w-0 flex-1 items-center gap-2">
+                {showFavicons ? <Skeleton className="size-5.5 shrink-0 rounded-[4px]" /> : null}
+                <Skeleton className="h-3.5 w-28 rounded" />
+              </div>
+              <Skeleton className="h-3.5 w-20 shrink-0 rounded" />
             </div>
             <div className="space-y-1.5">
-              <Skeleton className="h-4.5 w-full rounded" />
-              <Skeleton className="h-4.5 w-3/4 rounded" />
+              <Skeleton className="h-5 w-full rounded" />
+              <Skeleton className="h-5 w-[70%] rounded" />
             </div>
           </div>
-          <div className="space-y-1.5 px-5">
-            <Skeleton className="h-3.5 w-full rounded" />
-            <Skeleton className="h-3.5 w-full rounded" />
+          <div className={`space-y-1.5 ${SKELETON_ROW_GUTTER_CLASS}`}>
+            <Skeleton className="h-4 w-full rounded" />
+            <Skeleton className="h-4 w-full rounded" />
             {Array.from({ length: Math.max(0, summaryLineCount - 2) }).map((_, index) => (
               <Skeleton
                 key={`summary-line-${index}`}
-                className={`h-3.5 rounded ${index === summaryLineCount - 3 ? "w-4/5" : "w-full"}`}
+                className={`h-4 rounded ${index === summaryLineCount - 3 ? "w-4/5" : "w-full"}`}
               />
             ))}
           </div>
@@ -88,14 +94,21 @@ export function SkeletonRows({
             className={
               readerFocusMode
                 ? isCompact
-                  ? "mt-2 px-5 pb-3"
-                  : "mt-2.5 px-5 pb-3.5"
+                  ? `mt-2.5 pb-3 ${SKELETON_ROW_GUTTER_CLASS}`
+                  : `mt-3 pb-4 ${SKELETON_ROW_GUTTER_CLASS}`
                 : isCompact
-                  ? "mt-1.5 px-5 pb-2.5"
-                  : "mt-2 px-5 pb-3"
+                  ? `mt-2.5 pb-3 ${SKELETON_ROW_GUTTER_CLASS}`
+                  : `mt-3 pb-4 ${SKELETON_ROW_GUTTER_CLASS}`
             }
           >
-            <Skeleton className="h-3 w-28 rounded" />
+            <div className="-ms-1 flex items-center gap-1">
+              {Array.from({ length: SKELETON_FOOTER_ACTION_COUNT }).map((_, actionIndex) => (
+                <Skeleton
+                  key={`footer-action-${actionIndex}`}
+                  className="size-10 rounded-xl sm:size-9"
+                />
+              ))}
+            </div>
           </div>
         </li>
       ))}
@@ -115,12 +128,6 @@ export type StaticRowsProps = {
   inboxItems: InboxItem[];
   selectedItemId?: string | null;
   onSelectItem: (item: InboxItem) => void;
-  onToolbarEnter: (
-    item: InboxItem,
-    anchorElement: HTMLElement,
-    toolbarHostElement: HTMLElement,
-  ) => void;
-  onToolbarLeave: (event: FocusEvent<HTMLElement> | PointerEvent<HTMLElement>) => void;
 };
 
 // oxlint-disable-next-line react-doctor/no-multi-comp
@@ -136,16 +143,7 @@ export function StaticRows({
   inboxItems,
   selectedItemId,
   onSelectItem,
-  onToolbarEnter,
-  onToolbarLeave,
 }: StaticRowsProps) {
-  const toolbarHostRef = useRef<HTMLDivElement | null>(null);
-  const showToolbar = (item: InboxItem, anchorElement: HTMLElement) => {
-    if (toolbarHostRef.current) {
-      onToolbarEnter(item, anchorElement, toolbarHostRef.current);
-    }
-  };
-
   return (
     <div className="relative w-full pb-4">
       {inboxItems.map((item, index) => (
@@ -164,12 +162,9 @@ export function StaticRows({
             timestampDisplay={timestampDisplay}
             timestampHourCycle={timestampHourCycle}
             onSelect={onSelectItem}
-            onToolbarEnter={showToolbar}
-            onToolbarLeave={onToolbarLeave}
           />
         </div>
       ))}
-      <div ref={toolbarHostRef} className="pointer-events-none absolute inset-0" />
     </div>
   );
 }
@@ -188,12 +183,6 @@ export type VirtualizedRowsProps = {
   selectedItemId?: string | null;
   pagination: RowsPaginationState;
   onSelectItem: (item: InboxItem) => void;
-  onToolbarEnter: (
-    item: InboxItem,
-    anchorElement: HTMLElement,
-    toolbarHostElement: HTMLElement,
-  ) => void;
-  onToolbarLeave: (event: FocusEvent<HTMLElement> | PointerEvent<HTMLElement>) => void;
   viewportHeight?: number;
 };
 
@@ -212,16 +201,8 @@ export function VirtualizedRows({
   selectedItemId,
   pagination,
   onSelectItem,
-  onToolbarEnter,
-  onToolbarLeave,
   viewportHeight,
 }: VirtualizedRowsProps) {
-  const toolbarHostRef = useRef<HTMLDivElement | null>(null);
-  const showToolbar = (item: InboxItem, anchorElement: HTMLElement) => {
-    if (toolbarHostRef.current) {
-      onToolbarEnter(item, anchorElement, toolbarHostRef.current);
-    }
-  };
   const { isLoading, hasNextPage, isFetchingNextPage, fetchNextPage } = pagination;
   const virtualizer = useVirtualizer({
     count: inboxItems.length,
@@ -298,13 +279,10 @@ export function VirtualizedRows({
               timestampDisplay={timestampDisplay}
               timestampHourCycle={timestampHourCycle}
               onSelect={onSelectItem}
-              onToolbarEnter={showToolbar}
-              onToolbarLeave={onToolbarLeave}
             />
           </div>
         );
       })}
-      <div ref={toolbarHostRef} className="pointer-events-none absolute inset-0" />
     </div>
   );
 }

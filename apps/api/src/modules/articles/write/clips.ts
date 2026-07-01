@@ -1,7 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { articleClips } from "@kyomi/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
-import { and, desc, eq, gte, lt, or, type SQL } from "drizzle-orm";
+import { and, asc, desc, eq, gt, gte, ilike, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { extractFullTextFromUrl } from "../reader/enrichment";
 import type { ExtractedContentStatus } from "../reader/content-types";
@@ -11,6 +11,7 @@ import {
   buildStoredReaderContent,
 } from "../reader/normalize-content";
 import { buildArticleReaderDto } from "../reader/reader-mode";
+import type { ArticleSort } from "../query";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./clips-constants";
 import type { ArticleDetailDto, ArticleListItemDto, ArticlesCursorListResponseDto } from "../types";
 
@@ -24,15 +25,19 @@ export type CreateArticleClipBody = {
 };
 
 export type ListClipsOptions = {
+  search?: string;
   isRead?: boolean;
   isSaved?: boolean;
   publishedAfter?: Date;
   publishedBefore?: Date;
+  sort?: ArticleSort;
   limit: number;
   cursor?: string;
-  /** Merged feed+clip pagination: rows strictly older than this instant/id (uses `createdAt` vs DTO `publishedAt`). */
-  exclusiveBefore?: { publishedAt: Date; id: string };
+  /** Merged feed+clip pagination boundary in the active sort order. */
+  exclusiveBefore?: { publishedAt: Date; id: string; isRead?: boolean };
 };
+
+type ClipCursor = { publishedAt: Date; id: string; isRead?: boolean };
 
 function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemDto {
   return {
@@ -363,12 +368,52 @@ export async function listClipsForUser(
   };
 }
 
+function pushClipSortBoundaryFilter(filters: SQL[], sort: ArticleSort, cursor: ClipCursor): void {
+  const olderThanCursor = or(
+    lt(articleClips.createdAt, cursor.publishedAt),
+    and(eq(articleClips.createdAt, cursor.publishedAt), lt(articleClips.id, cursor.id)),
+  )!;
+  if (sort === "oldest") {
+    filters.push(
+      or(
+        gt(articleClips.createdAt, cursor.publishedAt),
+        and(eq(articleClips.createdAt, cursor.publishedAt), gt(articleClips.id, cursor.id)),
+      )!,
+    );
+    return;
+  }
+  if (sort === "unread-first" && cursor.isRead !== undefined) {
+    filters.push(
+      cursor.isRead
+        ? and(eq(articleClips.isRead, true), olderThanCursor)!
+        : or(eq(articleClips.isRead, true), and(eq(articleClips.isRead, false), olderThanCursor))!,
+    );
+    return;
+  }
+  filters.push(olderThanCursor);
+}
+
+function clipOrderByForSort(sort: ArticleSort) {
+  if (sort === "oldest") {
+    return [asc(articleClips.createdAt), asc(articleClips.id)] as const;
+  }
+  if (sort === "unread-first") {
+    return [asc(articleClips.isRead), desc(articleClips.createdAt), desc(articleClips.id)] as const;
+  }
+  return [desc(articleClips.createdAt), desc(articleClips.id)] as const;
+}
+
+function escapeLikePattern(input: string): string {
+  return input.replaceAll("\\", "\\\\").replaceAll("%", "\\%").replaceAll("_", "\\_");
+}
+
 async function listClipRows(
   database: DB,
   userId: string,
   opts: ListClipsOptions,
   take: number,
 ): Promise<(typeof articleClips.$inferSelect)[]> {
+  const sort = opts.sort ?? "newest";
   const filters: SQL[] = [eq(articleClips.userId, userId)];
   if (opts.isRead === true) {
     filters.push(eq(articleClips.isRead, true));
@@ -386,29 +431,37 @@ async function listClipRows(
   if (opts.publishedBefore) {
     filters.push(lt(articleClips.createdAt, opts.publishedBefore));
   }
-
-  if (opts.exclusiveBefore) {
-    const { publishedAt, id } = opts.exclusiveBefore;
+  const search = opts.search?.trim();
+  if (search) {
+    const pattern = `%${escapeLikePattern(search)}%`;
     filters.push(
       or(
-        lt(articleClips.createdAt, publishedAt),
-        and(eq(articleClips.createdAt, publishedAt), lt(articleClips.id, id)),
+        ilike(articleClips.title, pattern),
+        ilike(articleClips.note, pattern),
+        ilike(articleClips.url, pattern),
       )!,
     );
+  }
+
+  if (opts.exclusiveBefore) {
+    pushClipSortBoundaryFilter(filters, sort, opts.exclusiveBefore);
   } else if (opts.cursor) {
     const cur = await database
-      .select({ createdAt: articleClips.createdAt, id: articleClips.id })
+      .select({
+        createdAt: articleClips.createdAt,
+        id: articleClips.id,
+        isRead: articleClips.isRead,
+      })
       .from(articleClips)
       .where(and(eq(articleClips.id, opts.cursor), eq(articleClips.userId, userId)))
       .limit(1);
     const c = cur[0];
     if (c) {
-      filters.push(
-        or(
-          lt(articleClips.createdAt, c.createdAt),
-          and(eq(articleClips.createdAt, c.createdAt), lt(articleClips.id, c.id)),
-        )!,
-      );
+      pushClipSortBoundaryFilter(filters, sort, {
+        publishedAt: c.createdAt,
+        id: c.id,
+        isRead: c.isRead,
+      });
     }
   }
 
@@ -416,6 +469,6 @@ async function listClipRows(
     .select()
     .from(articleClips)
     .where(and(...filters))
-    .orderBy(desc(articleClips.createdAt), desc(articleClips.id))
+    .orderBy(...clipOrderByForSort(sort))
     .limit(take);
 }

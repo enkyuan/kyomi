@@ -61,7 +61,10 @@ function parseTimestampHourCycle(value: unknown): InboxTimestampHourCycleDto {
 }
 
 function parseDefaultView(value: unknown): InboxPreferences["inboxDefaultView"] {
-  return value === "inbox" || value === "today" || value === "unread" || value === "saved"
+  if (value === "inbox" || value === "all") {
+    return "all";
+  }
+  return value === "today" || value === "unread" || value === "saved" || value === "recent"
     ? value
     : DEFAULT_INBOX_PREFERENCES.inboxDefaultView;
 }

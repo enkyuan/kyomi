@@ -56,10 +56,10 @@ async function getFeedArticleDetailForUser(
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
     })
     .from(feedItems)
-    .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
+    .leftJoin(feedSubscriptions, feedSubscriptionsJoin)
     .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
     .leftJoin(feedItemUserState, userStateJoin)
-    .where(and(eq(feedItems.id, articleId), eq(feedSubscriptions.userId, userId)))
+    .where(eq(feedItems.id, articleId))
     .limit(1);
 
   const r = rows[0];

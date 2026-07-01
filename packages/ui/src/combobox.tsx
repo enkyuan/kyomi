@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/only-export-components */
 "use client";
 
 import { Combobox as ComboboxPrimitive } from "@base-ui/react/combobox";
@@ -23,8 +24,12 @@ export function Combobox<Value, Multiple extends boolean | undefined = false>(
   props: ComboboxPrimitive.Root.Props<Value, Multiple>,
 ): React.ReactElement {
   const chipsRef = React.useRef<Element | null>(null);
+  const contextValue = React.useMemo(
+    () => ({ chipsRef, multiple: !!props.multiple }),
+    [props.multiple],
+  );
   return (
-    <ComboboxContext.Provider value={{ chipsRef, multiple: !!props.multiple }}>
+    <ComboboxContext.Provider value={contextValue}>
       <ComboboxPrimitive.Root {...props} />
     </ComboboxContext.Provider>
   );

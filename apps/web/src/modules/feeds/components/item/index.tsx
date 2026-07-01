@@ -1,8 +1,9 @@
 "use client";
 
-import { memo } from "react";
+import { memo, type KeyboardEvent } from "react";
 import { cn } from "@lib/utils";
 import { SourceRow } from "./source-row";
+import { ItemInlineToolbar } from "./toolbar";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/card";
 import { TimestampText } from "@modules/inbox/components/timestamp-text";
 import { useTimestamp } from "@hooks/use-timestamp";
@@ -10,8 +11,10 @@ import { Pretext } from "./pretext";
 import { getSectionClassNames, getTypography } from "@modules/feeds/layout";
 import { arePropsEqual, type Props } from "@modules/feeds/props";
 
+const ITEM_GUTTER_CLASS = "pl-8 pr-7";
+const ITEM_SEPARATOR_CLASS = "left-8 right-7";
+
 export const Item = memo(function Item({
-  filter,
   item,
   isSelected,
   isFirst,
@@ -24,11 +27,8 @@ export const Item = memo(function Item({
   timestampDisplay,
   timestampHourCycle,
   onSelect,
-  onToolbarEnter,
-  onToolbarLeave,
 }: Props) {
   useTimestamp(timestampDisplay);
-  const isReadDimmed = item.isRead && filter !== "recent";
   const typography = getTypography({ density, fontSizePx, readerFocusMode });
   const sectionClassNames = getSectionClassNames({
     readerFocusMode,
@@ -49,56 +49,78 @@ export const Item = memo(function Item({
   const selectItem = () => {
     onSelect(item);
   };
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.target !== event.currentTarget) {
+      return;
+    }
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      selectItem();
+    }
+  };
 
   return (
     <Card
+      aria-label={item.title || "Untitled article"}
       className={cn(
-        "group/inbox-item relative w-full cursor-pointer gap-0 overflow-visible rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-[background-color,color,transform] duration-150 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform active:scale-[0.996] motion-reduce:active:scale-100",
-        isFirst ? "border-t-0" : "border-t",
-        showBottomSeparator ? "border-b" : "border-b-0",
-        isSelected || item.isRead ? "bg-background" : "hover:bg-background/70",
+        "group/inbox-item relative w-full cursor-pointer gap-0 overflow-visible rounded-none border-0 bg-transparent text-left shadow-none outline-none before:hidden transition-[background-color,color,transform] duration-150 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background active:scale-[0.996] motion-reduce:active:scale-100",
+        isSelected ? "bg-background" : "hover:bg-background/55",
       )}
-      render={
-        <button
-          type="button"
-          aria-label={item.title || "Untitled article"}
-          className="text-left"
-          onBlurCapture={onToolbarLeave}
-          onClick={selectItem}
-          onFocusCapture={(event) => onToolbarEnter(item, event.currentTarget)}
-          onPointerEnter={(event) => onToolbarEnter(item, event.currentTarget)}
-          onPointerLeave={onToolbarLeave}
-        />
-      }
+      onClick={selectItem}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
     >
-      <CardHeader className={cn("px-5", sectionClassNames.header)}>
-        <SourceRow
-          articleUrl={item.link}
-          feedFaviconUrl={item.feedFaviconUrl}
-          feedTitle={item.feedTitle}
-          showFavicon={showFavicons}
-          className={cn(isCompact && "gap-2")}
-          iconClassName={cn(isReadDimmed && "opacity-65")}
-          labelClassName={cn(isReadDimmed && "text-muted-foreground/70")}
-          labelStyle={{ fontSize: `${sourceLabelFontSizePx}px` }}
-          enablePreview={false}
-        />
-        <CardTitle
+      {!isFirst ? (
+        <span
+          aria-hidden="true"
           className={cn(
-            "min-w-0 font-semibold tracking-[-0.012em] text-foreground",
-            isReadDimmed && "text-foreground/82",
+            "pointer-events-none absolute top-0 h-px bg-border/70",
+            ITEM_SEPARATOR_CLASS,
           )}
+        />
+      ) : null}
+      {showBottomSeparator ? (
+        <span
+          aria-hidden="true"
+          className={cn(
+            "pointer-events-none absolute bottom-0 h-px bg-border/70",
+            ITEM_SEPARATOR_CLASS,
+          )}
+        />
+      ) : null}
+      <CardHeader className={cn("p-0", ITEM_GUTTER_CLASS, sectionClassNames.header)}>
+        <div className="flex min-w-0 items-center justify-between gap-4">
+          <SourceRow
+            articleUrl={item.link}
+            feedFaviconUrl={item.feedFaviconUrl}
+            feedTitle={item.feedTitle}
+            showFavicon={showFavicons}
+            className={cn("min-w-0 flex-1 gap-3", isCompact && "gap-2.5")}
+            iconClassName="size-5.5 rounded-[4px]"
+            labelStyle={{ fontSize: `${sourceLabelFontSizePx}px` }}
+            enablePreview={false}
+          />
+          <span
+            className="shrink-0 font-medium tracking-[0.01em] text-muted-foreground/80 tabular-nums"
+            style={{ fontSize: `${metaFontSizePx}px` }}
+          >
+            <TimestampText
+              value={item.publishedAt}
+              display={timestampDisplay}
+              hourCycle={timestampHourCycle}
+            />
+          </span>
+        </div>
+        <CardTitle
+          className="min-w-0 font-semibold tracking-[-0.012em] text-foreground"
           style={{
             fontSize: `${titleFontSizePx}px`,
             lineHeight: `${titleLineHeightPx}px`,
           }}
         >
           <Pretext
-            className={cn(
-              "font-semibold tracking-[-0.012em] text-foreground",
-              "line-clamp-2",
-              isReadDimmed && "text-foreground/82",
-            )}
+            className={cn("font-semibold tracking-[-0.012em] text-foreground", "line-clamp-2")}
             lineHeight={titleLineHeightPx}
             maxLines={2}
             text={item.title}
@@ -111,12 +133,9 @@ export const Item = memo(function Item({
           />
         </CardTitle>
       </CardHeader>
-      <CardContent className="min-w-0 px-5 pb-0 pt-0">
+      <CardContent className={cn("min-w-0 p-0", ITEM_GUTTER_CLASS)}>
         <Pretext
-          className={cn(
-            "overflow-hidden text-pretty text-muted-foreground/95",
-            isReadDimmed && "text-muted-foreground/65",
-          )}
+          className="overflow-hidden text-pretty text-muted-foreground/95"
           text={item.summary || "No summary available."}
           font={summaryFont}
           lineHeight={summaryLineHeightPx}
@@ -133,33 +152,23 @@ export const Item = memo(function Item({
       </CardContent>
       <CardFooter
         className={cn(
-          "flex w-full min-w-0 flex-wrap items-center gap-2 px-5 pt-0",
+          "flex w-full min-w-0 items-center justify-between gap-3 p-0",
+          ITEM_GUTTER_CLASS,
           sectionClassNames.footer,
         )}
       >
-        <span
-          className={cn(
-            "flex min-w-0 max-w-full items-center gap-1.5 overflow-hidden font-medium tracking-[0.01em] text-muted-foreground/85",
-            isReadDimmed && "text-muted-foreground/65",
-          )}
-          style={{ fontSize: `${metaFontSizePx}px` }}
-        >
-          <span className="line-clamp-1 min-w-0 overflow-hidden text-ellipsis tabular-nums">
-            <TimestampText
-              value={item.publishedAt}
-              display={timestampDisplay}
-              hourCycle={timestampHourCycle}
-            />
+        <ItemInlineToolbar
+          item={item}
+          className="-ms-1 opacity-80 transition-opacity group-hover/inbox-item:opacity-100 group-focus-within/inbox-item:opacity-100"
+        />
+        {item.isSaved ? (
+          <span
+            className="min-w-0 shrink-0 rounded-full bg-muted px-2 py-0.5 font-medium text-muted-foreground/85"
+            style={{ fontSize: `${metaFontSizePx}px` }}
+          >
+            Saved
           </span>
-          {item.isSaved ? (
-            <>
-              <span aria-hidden="true" className="shrink-0 text-muted-foreground/50">
-                ·
-              </span>
-              <span className="line-clamp-1 min-w-0 overflow-hidden text-ellipsis">Saved</span>
-            </>
-          ) : null}
-        </span>
+        ) : null}
       </CardFooter>
     </Card>
   );

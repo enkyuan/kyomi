@@ -1,6 +1,13 @@
-export type InboxFilter = "inbox" | "today" | "unread" | "saved" | "recent";
+export type InboxFilter = "all" | "today" | "unread" | "saved" | "recent";
+export type LegacyInboxFilter = InboxFilter | "inbox";
+export type InboxSort = "newest" | "oldest" | "unread-first";
 
 const INBOX_PAGE_LIMIT = 100;
+const DEFAULT_SORT: InboxSort = "newest";
+
+export function normalizeInboxFilter(filter: LegacyInboxFilter | undefined): InboxFilter {
+  return filter === "inbox" || filter === undefined ? "all" : filter;
+}
 
 function getLocalDayRangeIso(timezoneOffsetMinutes: number) {
   const nowUtcMs = Date.now();
@@ -28,40 +35,48 @@ function setTrimmedQueryParam(params: URLSearchParams, key: string, value: strin
 
 function applyArticleFilterParams(
   params: URLSearchParams,
-  filter: InboxFilter,
+  filter: LegacyInboxFilter,
   timezoneOffsetMinutes: number,
   includeRead: boolean,
 ) {
-  if (filter === "today") {
+  const normalizedFilter = normalizeInboxFilter(filter);
+  if (normalizedFilter === "today") {
     const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
     params.set("published_after", start);
     params.set("published_before", end);
     return;
   }
 
-  if (filter === "unread" && !includeRead) {
+  if (normalizedFilter === "unread" && !includeRead) {
     params.set("is_read", "false");
     return;
   }
 
-  if (filter === "recent") {
+  if (normalizedFilter === "recent") {
     params.set("is_read", "true");
     return;
   }
 
-  if (filter === "saved") {
+  if (normalizedFilter === "saved") {
     params.set("is_saved", "true");
   }
 }
 
+function applySortParam(params: URLSearchParams, sort: InboxSort | undefined) {
+  if (sort && sort !== DEFAULT_SORT) {
+    params.set("sort", sort);
+  }
+}
+
 export function buildArticlesUrl(
-  filter: InboxFilter,
+  filter: LegacyInboxFilter,
   timezoneOffsetMinutes: number,
   includeRead = false,
   search?: string,
   feedId?: string,
   folderId?: string,
   cursor?: string,
+  sort?: InboxSort,
 ) {
   const params = new URLSearchParams();
   applyArticleFilterParams(params, filter, timezoneOffsetMinutes, includeRead);
@@ -69,6 +84,7 @@ export function buildArticlesUrl(
   setTrimmedQueryParam(params, "folder_id", folderId);
   setTrimmedQueryParam(params, "search", search);
   setTrimmedQueryParam(params, "cursor", cursor);
+  applySortParam(params, sort);
   params.set("limit", String(INBOX_PAGE_LIMIT));
   return `/api/v1/articles?${params.toString()}`;
 }
@@ -79,30 +95,45 @@ export function buildInboxListUrl({
   includeRead,
   search,
   cursor,
+  sort,
 }: {
-  filter: InboxFilter;
+  filter: LegacyInboxFilter;
   timezoneOffsetMinutes: number;
   includeRead: boolean;
   search: string | undefined;
   cursor: string | undefined;
+  sort: InboxSort | undefined;
 }) {
-  if (!search?.trim() && !cursor?.trim()) {
-    if (filter === "recent") {
-      return "/api/v1/articles/views/recently-read";
+  const normalizedFilter = normalizeInboxFilter(filter);
+  const params = new URLSearchParams();
+  setTrimmedQueryParam(params, "cursor", cursor);
+  applySortParam(params, sort);
+  params.set("limit", String(INBOX_PAGE_LIMIT));
+
+  if (normalizedFilter === "all") {
+    setTrimmedQueryParam(params, "search", search);
+    return `/api/v1/articles/views/all?${params.toString()}`;
+  }
+
+  if (!search?.trim()) {
+    const query = params.toString();
+    if (normalizedFilter === "recent") {
+      return `/api/v1/articles/views/recently-read?${query}`;
     }
-    if (filter === "saved") {
-      return "/api/v1/articles/views/read-later";
+    if (normalizedFilter === "saved") {
+      return `/api/v1/articles/views/read-later?${query}`;
     }
   }
 
   return buildArticlesUrl(
-    filter,
+    normalizedFilter,
     timezoneOffsetMinutes,
     includeRead,
     search,
     undefined,
     undefined,
     cursor,
+    sort,
   );
 }
 
@@ -114,20 +145,25 @@ export function buildCountsSearchParams({
   folderId,
 }: {
   timezoneOffsetMinutes?: number;
-  filter?: InboxFilter;
+  filter?: LegacyInboxFilter;
   includeRead?: boolean;
   feedId?: string;
   folderId?: string;
 }) {
   const params = new URLSearchParams();
+  const normalizedFilter = normalizeInboxFilter(filter);
 
-  if (filter === "today") {
+  if (normalizedFilter === "all") {
+    params.set("view", "all");
+  }
+
+  if (normalizedFilter === "today") {
     const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes ?? 0);
     params.set("published_after", start);
     params.set("published_before", end);
-  } else if (filter === "unread" && !includeRead) {
+  } else if (normalizedFilter === "unread" && !includeRead) {
     params.set("is_read", "false");
-  } else if (filter === "saved") {
+  } else if (normalizedFilter === "saved") {
     params.set("is_saved", "true");
   }
 

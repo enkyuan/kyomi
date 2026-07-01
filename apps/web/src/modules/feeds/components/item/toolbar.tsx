@@ -1,16 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useLayoutEffect, useState } from "react";
-import { createPortal } from "react-dom";
-import {
-  ExternalLinkLine,
-  EyeLine,
-  MailFill,
-  MailOpenLine,
-  StarFill,
-  StarLine,
-} from "@mingcute/react";
+import { ExternalLinkLine, StarFill, StarLine } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
 import { Toolbar as ToolbarRoot, ToolbarButton, ToolbarGroup } from "@kyomi/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
@@ -18,24 +9,17 @@ import {
   useInboxItemStateMutation,
   type InboxItemPatch,
 } from "@modules/inbox/hooks/use-inbox-data";
-import { type InboxFilter, type InboxItem } from "@modules/inbox/services/api";
+import { type InboxItem } from "@modules/inbox/services/api";
 import { cn } from "@lib/utils";
 
 const INBOX_ITEM_TOOLBAR_BASE_CLASS =
   "gap-0 rounded-lg border border-border/80 bg-popover/95 p-0.5 text-popover-foreground shadow-md/10 transition-opacity duration-150";
-const TOOLBAR_RIGHT_INSET_PX = 12;
-const TOOLBAR_TOP_OFFSET_PX = -8;
+const TOOLBAR_ICON_CLASS = "size-5";
 
 type ToolbarProps = {
-  filter: InboxFilter;
-  toolbarRef?: React.RefObject<HTMLDivElement | null>;
-  onToolbarPointerLeave?: (event: React.PointerEvent<HTMLDivElement>) => void;
   className?: string;
   style?: React.CSSProperties;
-  isRead: boolean;
   isSaved: boolean;
-  onHide: () => void;
-  onMarkRead: () => void;
   onOpenSource: () => void;
   onToggleSaved: () => void;
 };
@@ -44,220 +28,45 @@ export type ToolbarModel = {
   toolbarProps: ToolbarProps;
 };
 
-export type ActiveToolbar = {
-  item: InboxItem;
-  anchorElement: HTMLElement;
-  toolbarHostElement: HTMLElement;
-};
-
-function Toolbar({
-  filter,
-  toolbarRef,
-  onToolbarPointerLeave,
-  className,
-  style,
-  isRead,
-  isSaved,
-  onHide,
-  onMarkRead,
-  onOpenSource,
-  onToggleSaved,
-}: ToolbarProps) {
-  const readLabel =
-    filter === "recent" ? "Mark as unread" : isRead ? "Already read" : "Mark as read";
+export function ItemInlineToolbar({ item, className }: { item: InboxItem; className?: string }) {
+  const toolbar = useToolbarModel({ item });
 
   return (
-    <ToolbarRoot
-      ref={toolbarRef}
-      onPointerLeave={onToolbarPointerLeave}
-      className={cn(INBOX_ITEM_TOOLBAR_BASE_CLASS, className)}
-      style={style}
-    >
-      <ToolbarGroup className="gap-0">
+    <Toolbar
+      {...toolbar.toolbarProps}
+      className={cn(
+        "border-0 bg-transparent p-0 text-muted-foreground shadow-none",
+        "group-hover/inbox-item:text-muted-foreground/95 group-focus-within/inbox-item:text-muted-foreground/95",
+        className,
+      )}
+    />
+  );
+}
+
+function Toolbar({ className, style, isSaved, onOpenSource, onToggleSaved }: ToolbarProps) {
+  return (
+    <ToolbarRoot className={cn(INBOX_ITEM_TOOLBAR_BASE_CLASS, className)} style={style}>
+      <ToolbarGroup className="gap-1">
         <ToolbarButtonControl
           label={isSaved ? "Remove from read later" : "Read later"}
           onClick={onToggleSaved}
           active={isSaved}
         >
-          {isSaved ? <StarFill /> : <StarLine />}
+          {isSaved ? (
+            <StarFill className={TOOLBAR_ICON_CLASS} />
+          ) : (
+            <StarLine className={TOOLBAR_ICON_CLASS} />
+          )}
         </ToolbarButtonControl>
         <ToolbarButtonControl label="Open source article" onClick={onOpenSource}>
-          <ExternalLinkLine />
-        </ToolbarButtonControl>
-        <ToolbarButtonControl label="Hide from inbox" onClick={onHide}>
-          <EyeLine />
-        </ToolbarButtonControl>
-        <ToolbarButtonControl
-          label={readLabel}
-          onClick={onMarkRead}
-          active={isRead}
-          disabled={isRead && filter !== "recent"}
-        >
-          <ReadStateIcon isRead={isRead} />
+          <ExternalLinkLine className={TOOLBAR_ICON_CLASS} />
         </ToolbarButtonControl>
       </ToolbarGroup>
     </ToolbarRoot>
   );
 }
 
-function ActiveToolbarOverlay({
-  activeToolbar,
-  filter,
-  headerElement,
-  viewportElement,
-  toolbarRef,
-  onToolbarPointerLeave,
-}: {
-  activeToolbar: ActiveToolbar;
-  filter: InboxFilter;
-  headerElement: HTMLElement | null;
-  viewportElement: HTMLElement | null;
-  toolbarRef: React.RefObject<HTMLDivElement | null>;
-  onToolbarPointerLeave: (event: React.PointerEvent<HTMLDivElement>) => void;
-}) {
-  const toolbar = useToolbarModel({ filter, item: activeToolbar.item });
-  const isUnderHeader = useToolbarUnderHeader({
-    anchorElement: activeToolbar.anchorElement,
-    headerElement,
-    viewportElement,
-  });
-
-  if (
-    !activeToolbar.anchorElement.isConnected ||
-    !activeToolbar.toolbarHostElement.isConnected ||
-    typeof document === "undefined"
-  ) {
-    return null;
-  }
-
-  const anchorRect = activeToolbar.anchorElement.getBoundingClientRect();
-  const hostRect = activeToolbar.toolbarHostElement.getBoundingClientRect();
-  const top = anchorRect.top - hostRect.top + TOOLBAR_TOP_OFFSET_PX;
-
-  return createPortal(
-    <Toolbar
-      {...toolbar.toolbarProps}
-      toolbarRef={toolbarRef}
-      onToolbarPointerLeave={onToolbarPointerLeave}
-      className={cn(
-        "absolute! border! border-border/80! pointer-events-auto opacity-100 will-change-transform",
-        isUnderHeader ? "z-20" : "z-60",
-      )}
-      style={{
-        top: 0,
-        right: `${TOOLBAR_RIGHT_INSET_PX}px`,
-        transform: `translate3d(0, ${top}px, 0)`,
-      }}
-    />,
-    activeToolbar.toolbarHostElement,
-  );
-}
-
-export function ToolbarOverlay({
-  activeToolbar,
-  filter,
-  headerElement,
-  viewportElement,
-  toolbarRef,
-  onToolbarPointerLeave,
-}: {
-  activeToolbar: ActiveToolbar | null;
-  filter: InboxFilter;
-  headerElement: HTMLElement | null;
-  viewportElement: HTMLElement | null;
-  toolbarRef: React.RefObject<HTMLDivElement | null>;
-  onToolbarPointerLeave: (event: React.PointerEvent<HTMLDivElement>) => void;
-}) {
-  if (!activeToolbar) {
-    return null;
-  }
-
-  return (
-    <ActiveToolbarOverlay
-      activeToolbar={activeToolbar}
-      filter={filter}
-      headerElement={headerElement}
-      viewportElement={viewportElement}
-      toolbarRef={toolbarRef}
-      onToolbarPointerLeave={onToolbarPointerLeave}
-    />
-  );
-}
-
-function readIsToolbarUnderHeader({
-  anchorElement,
-  headerElement,
-  viewportElement,
-}: {
-  anchorElement: HTMLElement;
-  headerElement: HTMLElement | null;
-  viewportElement: HTMLElement | null;
-}) {
-  if (!headerElement || !viewportElement || viewportElement.scrollTop <= 0) {
-    return false;
-  }
-
-  return anchorElement.getBoundingClientRect().top <= headerElement.getBoundingClientRect().bottom;
-}
-
-function useToolbarUnderHeader({
-  anchorElement,
-  headerElement,
-  viewportElement,
-}: {
-  anchorElement: HTMLElement;
-  headerElement: HTMLElement | null;
-  viewportElement: HTMLElement | null;
-}) {
-  const [isUnderHeader, setIsUnderHeader] = useState(() =>
-    readIsToolbarUnderHeader({ anchorElement, headerElement, viewportElement }),
-  );
-
-  useLayoutEffect(() => {
-    let frame = 0;
-
-    const update = () => {
-      frame = 0;
-      setIsUnderHeader((previous) => {
-        const next = readIsToolbarUnderHeader({
-          anchorElement,
-          headerElement,
-          viewportElement,
-        });
-        return previous === next ? previous : next;
-      });
-    };
-
-    const scheduleUpdate = () => {
-      if (frame) {
-        return;
-      }
-      frame = window.requestAnimationFrame(update);
-    };
-
-    update();
-    viewportElement?.addEventListener("scroll", scheduleUpdate, { passive: true });
-    window.addEventListener("resize", scheduleUpdate);
-
-    return () => {
-      if (frame) {
-        window.cancelAnimationFrame(frame);
-      }
-      viewportElement?.removeEventListener("scroll", scheduleUpdate);
-      window.removeEventListener("resize", scheduleUpdate);
-    };
-  }, [anchorElement, headerElement, viewportElement]);
-
-  return isUnderHeader;
-}
-
-export function useToolbarModel({
-  filter,
-  item,
-}: {
-  filter: InboxFilter;
-  item: InboxItem;
-}): ToolbarModel {
+export function useToolbarModel({ item }: { item: InboxItem }): ToolbarModel {
   const updateItemMutation = useInboxItemStateMutation();
 
   const updateItem = (patch: InboxItemPatch, removeFromList = false) => {
@@ -266,39 +75,11 @@ export function useToolbarModel({
 
   return {
     toolbarProps: {
-      filter,
-      isRead: item.isRead,
       isSaved: item.isSaved,
-      onHide: () => updateItem({ isRead: true }, true),
-      onMarkRead: () =>
-        filter === "recent" ? updateItem({ isRead: false }, true) : updateItem({ isRead: true }),
       onOpenSource: () => window.open(item.link, "_blank", "noopener,noreferrer"),
       onToggleSaved: () => updateItem({ isSaved: !item.isSaved }),
     },
   };
-}
-
-function ReadStateIcon({ isRead }: { isRead: boolean }) {
-  return (
-    <span className="relative block size-4.5 sm:size-4" aria-hidden>
-      <span
-        className={cn(
-          "absolute inset-0 flex items-center justify-center transition-[opacity,transform] duration-150 ease-[cubic-bezier(0.2,0,0,1)] will-change-[opacity,transform]",
-          isRead ? "scale-75 opacity-0" : "scale-100 opacity-100",
-        )}
-      >
-        <MailOpenLine />
-      </span>
-      <span
-        className={cn(
-          "absolute inset-0 flex items-center justify-center transition-[opacity,transform] duration-150 ease-[cubic-bezier(0.2,0,0,1)] will-change-[opacity,transform]",
-          isRead ? "scale-100 opacity-100" : "scale-75 opacity-0",
-        )}
-      >
-        <MailFill />
-      </span>
-    </span>
-  );
 }
 
 function ToolbarButtonControl({
@@ -323,11 +104,11 @@ function ToolbarButtonControl({
             render={
               <Button
                 className={cn(
-                  "size-7 rounded-md text-muted-foreground hover:text-foreground",
+                  "size-10 rounded-xl text-muted-foreground hover:text-foreground sm:size-9",
                   active && "text-foreground",
                 )}
                 disabled={disabled}
-                size="icon-xs"
+                size="icon-lg"
                 variant="ghost"
                 onClick={(event) => {
                   event.preventDefault();

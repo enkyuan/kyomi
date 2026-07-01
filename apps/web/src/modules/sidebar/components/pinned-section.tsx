@@ -66,7 +66,7 @@ export function PinnedSection() {
                         <Link
                           to="/inbox"
                           search={() => ({
-                            filter: "inbox" as const,
+                            filter: "all" as const,
                             search: undefined,
                             feedId: feed.feedId,
                             folderId: undefined,

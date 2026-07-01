@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/no-multi-comp */
 "use client";
 
 import { Avatar as AvatarPrimitive } from "@base-ui/react/avatar";

@@ -1,4 +1,5 @@
-import type { ReaderLayoutMode } from "../../core";
+/* oxlint-disable max-lines */
+import type { ReaderLayoutMode } from "../../core/types";
 import { normalizeCaptionText } from "./string-prep";
 import {
   READER_FIGURE_CAPTION,

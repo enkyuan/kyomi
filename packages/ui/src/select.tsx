@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/only-export-components */
 "use client";
 
 import { mergeProps } from "@base-ui/react/merge-props";

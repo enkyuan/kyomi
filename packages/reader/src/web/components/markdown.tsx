@@ -1,7 +1,7 @@
 "use client";
 
 import { memo, useEffect, useMemo, useState } from "react";
-import type { ReaderLayoutMode } from "../../core";
+import type { ReaderLayoutMode } from "../../core/types";
 import { hasLikelyMarkdownMath, readerMarkdownToHtml } from "../../shared/reader-markdown-html";
 import { RenderHtml } from "../html";
 
@@ -36,6 +36,7 @@ export const RenderMarkdown = memo(function RenderMarkdown({
     [markdown, baseUrl, openLinksInNewTab],
   );
 
+  // oxlint-disable-next-line react-doctor/no-cascading-set-state -- three setState calls are guarded by shouldLoadKatex and cancellation; they don't cascade in one commit
   useEffect(() => {
     if (!shouldLoadKatex) {
       setMathHtml(null);

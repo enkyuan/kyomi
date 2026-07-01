@@ -4,7 +4,7 @@
   "private": true,
   "module": "src/index.ts",
   "scripts": {
-    "dev": "docker compose -f ../../docker/docker-compose.yml --project-directory ../../docker logs -f api worker",
+    "dev": "docker compose --project-directory ../../docker logs -f api worker",
     "dev:host": "bunx dotenvx run -f ../../docker/.env -f .env -- bun --watch src/app/boot/dev.ts",
     "start": "bunx dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/entry.ts",
     "worker": "bunx dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/worker.ts",

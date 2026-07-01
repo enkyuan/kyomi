@@ -183,7 +183,7 @@ export function WorkspaceCommandDialog({
                         scopedFeedId === item.feedId && "bg-accent/72 text-accent-foreground",
                       )}
                       onClick={() => {
-                        void navigateToInbox(navigate, "inbox", item.feedId);
+                        void navigateToInbox(navigate, "all", item.feedId);
                         onClose();
                       }}
                     >

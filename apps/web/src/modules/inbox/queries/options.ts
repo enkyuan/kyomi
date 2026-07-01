@@ -5,8 +5,13 @@ import {
   getSidebarInboxCounts,
   type InboxFilter,
   type InboxItem,
+  type InboxSort,
 } from "../services/api";
 import { getTimezoneOffsetMinutes, QUERY_TIMES } from "@lib/query/policies";
+
+const DEFAULT_INBOX_FILTER: InboxFilter = "all";
+const DEFAULT_INBOX_SORT: InboxSort = "newest";
+const INBOX_LIST_QUERY_VERSION = 3;
 
 export type InboxListPage = {
   items: InboxItem[];
@@ -42,6 +47,7 @@ export type InboxQueryScope = {
   feedId?: string;
   folderId?: string;
   includeRead?: boolean;
+  sort?: InboxSort;
   itemId?: string;
   timezoneOffsetMinutes?: number;
 };
@@ -68,6 +74,7 @@ export function inboxViewCountQueryKey(scope: {
   return [
     "inbox",
     "view-count",
+    INBOX_LIST_QUERY_VERSION,
     scope.filter,
     scope.feedId,
     scope.folderId,
@@ -77,21 +84,24 @@ export function inboxViewCountQueryKey(scope: {
 }
 
 function inboxItemsQueryKey({
-  filter = "inbox",
+  filter = DEFAULT_INBOX_FILTER,
   search,
   feedId,
   folderId,
   includeRead,
+  sort = DEFAULT_INBOX_SORT,
   timezoneOffsetMinutes,
 }: InboxQueryScope = {}) {
   return [
     "inbox",
     "items",
+    INBOX_LIST_QUERY_VERSION,
     filter,
     search,
     feedId,
     folderId,
     includeRead,
+    sort,
     timezoneOffsetMinutes,
   ] as const;
 }
@@ -105,11 +115,13 @@ function sidebarInboxSummaryQueryKey(timezoneOffsetMinutes = getTimezoneOffsetMi
 }
 
 export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
-  const filter = scope.filter ?? "inbox";
+  const filter = scope.filter ?? DEFAULT_INBOX_FILTER;
+  const sort = scope.sort ?? DEFAULT_INBOX_SORT;
   const timezoneOffsetMinutes = scope.timezoneOffsetMinutes;
+  const isGlobalAllView = filter === "all" && !scope.feedId && !scope.folderId;
 
   return {
-    queryKey: inboxItemsQueryKey({ ...scope, filter, timezoneOffsetMinutes }),
+    queryKey: inboxItemsQueryKey({ ...scope, filter, sort, timezoneOffsetMinutes }),
     enabled: timezoneOffsetMinutes !== undefined,
     initialPageParam: undefined as string | undefined,
     queryFn: async ({ pageParam }: { pageParam: string | undefined }) => {
@@ -125,6 +137,7 @@ export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
           includeRead: scope.includeRead,
           cursor: pageParam,
           timezoneOffsetMinutes,
+          sort,
         },
       });
       const normalized = normalizeInboxListPage(page);
@@ -139,8 +152,11 @@ export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
     },
     placeholderData: (previousData: InfiniteData<InboxListPage, string | undefined> | undefined) =>
       previousData,
-    staleTime: QUERY_TIMES.listStale,
+    staleTime: isGlobalAllView ? QUERY_TIMES.countsStale : QUERY_TIMES.listStale,
     gcTime: QUERY_TIMES.listGc,
+    refetchOnMount: isGlobalAllView ? ("always" as const) : true,
+    refetchOnWindowFocus: isGlobalAllView,
+    refetchInterval: isGlobalAllView ? QUERY_TIMES.countsStale : (false as const),
   };
 }
 

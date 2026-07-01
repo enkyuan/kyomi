@@ -1,15 +1,27 @@
+/* eslint-disable react-doctor/only-export-components */
+/* oxlint-disable react-doctor/only-export-components */
 "use client";
 
 import { PreviewCard as PreviewCardPrimitive } from "@base-ui/react/preview-card";
+import { useMemo } from "react";
 import type React from "react";
 import { createRoot, type Root } from "react-dom/client";
-import { getReaderSourceLabel } from "../../core";
+import { getReaderSourceLabel } from "../../core/url";
 
 type ReaderLinkPreviewCardProps = {
   anchorProps: Record<string, string>;
   anchorInnerHtml: string;
   href: string;
 };
+
+function extractAnchorText(anchorInnerHtml: string): string {
+  if (typeof document === "undefined") {
+    return anchorInnerHtml;
+  }
+  const container = document.createElement("div");
+  container.innerHTML = anchorInnerHtml;
+  return container.textContent ?? anchorInnerHtml;
+}
 
 function resolvePreviewHref(href: string) {
   try {
@@ -35,16 +47,16 @@ function ReaderLinkPreviewCard({
       ? anchorProps.title
       : previewHref;
 
+  const anchorText = useMemo(() => extractAnchorText(anchorInnerHtml), [anchorInnerHtml]);
+
   return (
     <PreviewCardPrimitive.Root>
       <PreviewCardPrimitive.Trigger
         delay={280}
         render={
-          <a
-            {...anchorProps}
-            title={nativeTitle}
-            dangerouslySetInnerHTML={{ __html: anchorInnerHtml }}
-          />
+          <a {...anchorProps} title={nativeTitle}>
+            {anchorText}
+          </a>
         }
       />
       <PreviewCardPrimitive.Portal>

@@ -24,6 +24,7 @@ import {
   updateInboxItemState,
   type InboxFilter,
   type InboxItem,
+  type InboxSort,
 } from "../services/api";
 import { getInboxPreferences, updateInboxPreferences } from "../services/preferences";
 
@@ -103,6 +104,7 @@ type UseInboxQueriesInput = {
   folderId?: string;
   itemId?: string;
   includeRead?: boolean;
+  sort?: InboxSort;
   timezoneOffsetMinutes?: number;
 };
 
@@ -185,6 +187,7 @@ export function useInboxQueries({
   folderId,
   itemId,
   includeRead,
+  sort,
   timezoneOffsetMinutes,
 }: UseInboxQueriesInput) {
   // oxlint-disable-next-line react-doctor/query-destructure-result
@@ -195,6 +198,7 @@ export function useInboxQueries({
       feedId,
       folderId,
       includeRead,
+      sort,
       timezoneOffsetMinutes,
     }),
   );

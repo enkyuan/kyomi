@@ -1,3 +1,4 @@
+/* oxlint-disable max-lines, react-doctor/no-giant-component */
 "use client";
 
 import { useRef, useState, useEffect, useCallback, useMemo, useReducer } from "react";
@@ -140,6 +141,7 @@ function Slider({
 // SliderComfortable
 // ---------------------------------------------------------------------------
 
+// oxlint-disable-next-line eslint/complexity
 function SliderComfortable({
   ref,
   value,

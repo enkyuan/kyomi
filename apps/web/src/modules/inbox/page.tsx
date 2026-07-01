@@ -10,22 +10,18 @@ import {
   InboxPreferencesBootstrapProvider,
   type InboxPreferences,
   dedupePagedInboxItemsById,
-  useInboxItemStateMutation,
   useInboxPreferences,
   useInboxQueries,
 } from "@modules/inbox/hooks/use-inbox-data";
-import {
-  useInboxRouteState,
-  useMarkReadBehavior,
-  useResponsiveReaderMode,
-} from "@modules/inbox/hooks/use-inbox-layout";
+import { useInboxRouteState, useResponsiveReaderMode } from "@modules/inbox/hooks/use-inbox-layout";
 import { getInboxViewCount, type InboxItem } from "@modules/inbox/services/api";
 import { useTimezone } from "@hooks/use-timezone";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { QUERY_TIMES } from "@lib/query/policies";
 import { writeShellStateSnapshot } from "@lib/shell/state";
+import { listFollowedFeeds } from "@modules/feeds/api";
 import { deriveInboxListHeaderCount } from "@modules/inbox/utils/count-display";
-import { inboxViewCountQueryKey } from "@modules/inbox/queries/options";
+import { followedFeedsQueryKey, inboxViewCountQueryKey } from "@modules/inbox/queries/options";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -68,6 +64,7 @@ function InboxPageContent({
     isReadScopedFilterActive,
     includeRead,
     activeScopeLabel,
+    sort,
   } = route;
 
   const { inboxQuery, detailQuery } = useInboxQueries({
@@ -77,8 +74,24 @@ function InboxPageContent({
     folderId,
     itemId,
     includeRead,
+    sort,
     timezoneOffsetMinutes,
   });
+  const { isSuccess: isFollowedFeedsSuccess, data: followedFeedsData } = useQuery({
+    queryKey: followedFeedsQueryKey(),
+    queryFn: () => listFollowedFeeds(),
+    staleTime: QUERY_TIMES.staticMetadataStale,
+    gcTime: QUERY_TIMES.staticMetadataGc,
+  });
+  const hasNoFollowedFeeds = isFollowedFeedsSuccess && (followedFeedsData?.length ?? 0) === 0;
+  const isFeedBackedListView =
+    !search &&
+    !feedId &&
+    !folderId &&
+    effectiveFilter !== "all" &&
+    effectiveFilter !== "saved" &&
+    effectiveFilter !== "recent";
+  const hasKnownEmptyFeedBackedView = hasNoFollowedFeeds && isFeedBackedListView;
 
   const rawInboxItems = useMemo(
     () => dedupePagedInboxItemsById(inboxQuery.data?.pages),
@@ -138,8 +151,6 @@ function InboxPageContent({
 
   const selectedItem = detailQuery.data?.item ?? null;
 
-  const markReadMutation = useInboxItemStateMutation();
-
   const clearSelectedItem = useCallback(() => {
     setMobileTransitionDirection(-1);
     void navigate({
@@ -167,16 +178,6 @@ function InboxPageContent({
     void inboxQuery.fetchNextPage();
   }, [inboxQuery.fetchNextPage]);
 
-  useMarkReadBehavior({
-    itemId,
-    selectedItem,
-    effectiveFilter,
-    markReadBehavior: preferences.inboxMarkReadBehavior,
-    onMarkRead: (id) => {
-      markReadMutation.mutate({ itemId: id, patch: { isRead: true } });
-    },
-  });
-
   useEffect(() => {
     writeShellStateSnapshot({
       inboxFilter: effectiveFilter,
@@ -196,11 +197,13 @@ function InboxPageContent({
       preferences={preferences}
       inboxItems={inboxItems}
       headerCount={headerCount}
+      hasKnownEmptyFeedBackedView={hasKnownEmptyFeedBackedView}
       inboxQuery={inboxQuery}
       isResizing={false}
       fetchNextInboxPage={fetchNextInboxPage}
       selectItem={selectItem}
       navigate={navigate}
+      sort={sort}
     />
   );
 
@@ -228,7 +231,7 @@ function InboxPageContent({
             detail={detailElementWithBack}
           />
         ) : (
-          <div className="flex h-full max-h-full min-h-0 min-w-0 gap-3 overflow-hidden pe-3">
+          <div className="flex h-full max-h-full min-h-0 min-w-0 overflow-hidden pe-3">
             <div className="h-full min-h-0 min-w-0 flex-1">{listElement}</div>
             <aside className="hidden h-full w-96 shrink-0 flex-col pt-[18px] pb-4 xl:flex">
               <InboxSidebarCard />
@@ -246,6 +249,7 @@ function InboxSidebarCard() {
   );
 }
 
+// oxlint-disable-next-line react-doctor/no-many-boolean-props
 function InboxListSection({
   effectiveFilter,
   feedId,
@@ -256,11 +260,13 @@ function InboxListSection({
   preferences,
   inboxItems,
   headerCount,
+  hasKnownEmptyFeedBackedView,
   inboxQuery,
   isResizing,
   fetchNextInboxPage,
   selectItem,
   navigate,
+  sort,
 }: {
   effectiveFilter: ReturnType<typeof useInboxRouteState>["effectiveFilter"];
   feedId: string | undefined;
@@ -271,11 +277,13 @@ function InboxListSection({
   preferences: InboxPreferences;
   inboxItems: InboxItem[];
   headerCount: ReturnType<typeof deriveInboxListHeaderCount>;
+  hasKnownEmptyFeedBackedView: boolean;
   inboxQuery: ReturnType<typeof useInboxQueries>["inboxQuery"];
   isResizing: boolean;
   fetchNextInboxPage: () => void;
   selectItem: (item: InboxItem) => void;
   navigate: ReturnType<typeof useInboxRouteState>["navigate"];
+  sort: ReturnType<typeof useInboxRouteState>["sort"];
 }) {
   const handleFilterChange = useCallback(
     (filter: import("@modules/inbox/services/api").InboxFilter) => {
@@ -311,7 +319,7 @@ function InboxListSection({
       feedId,
       folderId,
       pagination: {
-        isLoading: inboxQuery.isPending && inboxItems.length === 0,
+        isLoading: !hasKnownEmptyFeedBackedView && inboxQuery.isPending && inboxItems.length === 0,
         isRefreshing:
           inboxQuery.isFetching && !inboxQuery.isFetchingNextPage && inboxItems.length > 0,
         hasNextPage: !!inboxQuery.hasNextPage,
@@ -321,6 +329,7 @@ function InboxListSection({
       },
       onSelectItem: selectItem,
       onFilterChange: handleFilterChange,
+      sort,
     }),
     [
       effectiveFilter,
@@ -328,6 +337,7 @@ function InboxListSection({
       folderId,
       fetchNextInboxPage,
       handleFilterChange,
+      hasKnownEmptyFeedBackedView,
       headerCount,
       inboxItems,
       inboxQuery.dataUpdatedAt,
@@ -345,6 +355,7 @@ function InboxListSection({
       selectItem,
       showHiddenItems,
       showReadItems,
+      sort,
     ],
   );
 

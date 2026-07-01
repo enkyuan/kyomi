@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/only-export-components */
 "use client";
 
 import { Toggle as TogglePrimitive } from "@base-ui/react/toggle";

@@ -1,7 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { articleClips, feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
 import { and, eq, gte, inArray, lt, sql } from "drizzle-orm";
-import { articleIsReadSql } from "./sql";
+import { articleIsReadSql, globalArticleIsReadSql } from "./sql";
 import type { ArticleCountScope, ArticleCountsDto } from "../types";
 
 type DB = typeof db;
@@ -76,6 +76,43 @@ export async function getArticleCountsForUser(
   };
 }
 
+export async function getGlobalArticleCountsForUser(
+  database: DB,
+  userId: string,
+  scope?: ArticleCountScope,
+): Promise<ArticleCountsDto> {
+  const stateJoin = and(
+    eq(feedItemUserState.feedItemId, feedItems.id),
+    eq(feedItemUserState.userId, userId),
+  );
+  const scopedFeedId = scope?.feedId?.trim();
+  const feedScopeFilter = scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined;
+
+  const [unreadRow] = await database
+    .select({ c: sql<number>`count(*)::int` })
+    .from(feedItems)
+    .leftJoin(feedItemUserState, stateJoin)
+    .where(and(sql`(${globalArticleIsReadSql}) = false`, feedScopeFilter));
+
+  const [allRow] = await database
+    .select({ c: sql<number>`count(*)::int` })
+    .from(feedItems)
+    .leftJoin(feedItemUserState, stateJoin)
+    .where(feedScopeFilter);
+
+  const [savedRow] = await database
+    .select({ c: sql<number>`count(*)::int` })
+    .from(feedItems)
+    .leftJoin(feedItemUserState, stateJoin)
+    .where(and(sql`${feedItemUserState.isSaved} IS TRUE`, feedScopeFilter));
+
+  return {
+    all: allRow?.c ?? 0,
+    unread: unreadRow?.c ?? 0,
+    saved: savedRow?.c ?? 0,
+  };
+}
+
 /**
  * Counts subscribed feed articles whose `publishedAt` falls in `[publishedAfter, publishedBefore)`,
  * matching the date window used by `GET /articles` with the same query params (feeds source only).
@@ -106,6 +143,29 @@ export async function countFeedArticlesPublishedInRange(
         lt(feedItems.publishedAt, publishedBefore),
         scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined,
         scopedFolderId ? eq(feedSubscriptions.folderId, scopedFolderId) : undefined,
+      ),
+    );
+
+  return row?.c ?? 0;
+}
+
+export async function countGlobalFeedArticlesPublishedInRange(
+  database: DB,
+  publishedAfter: Date,
+  publishedBefore: Date,
+  scope?: ArticleCountScope,
+): Promise<number> {
+  const scopedFeedId = scope?.feedId?.trim();
+
+  const [row] = await database
+    .select({ c: sql<number>`count(*)::int` })
+    .from(feedItems)
+    .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
+    .where(
+      and(
+        gte(feedItems.publishedAt, publishedAfter),
+        lt(feedItems.publishedAt, publishedBefore),
+        scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined,
       ),
     );
 

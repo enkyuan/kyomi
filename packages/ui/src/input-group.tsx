@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/no-multi-comp */
 "use client";
 
 import { cva, type VariantProps } from "class-variance-authority";
@@ -38,7 +39,7 @@ export function InputGroup({
         className,
       )}
       data-slot="input-group"
-      // eslint-disable-next-line jsx-a11y/prefer-tag-over-role -- role="group" on div is correct ARIA for a composite input widget; <address> is semantically contact info
+      // oxlint-disable-next-line react-doctor/prefer-tag-over-role -- role="group" on div is correct ARIA for a composite input widget; <address> is semantically contact info
       role="group"
       {...props}
     />

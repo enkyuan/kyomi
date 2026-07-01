@@ -8,9 +8,10 @@ import {
   buildCountsUrl,
   buildInboxListUrl,
   type InboxFilter,
+  type InboxSort,
 } from "./query-urls";
 
-export type { InboxFilter } from "./query-urls";
+export type { InboxFilter, InboxSort } from "./query-urls";
 
 let inboxSchemaModulePromise:
   | Promise<
@@ -99,6 +100,7 @@ type GetInboxItemsInput = {
   includeRead?: boolean;
   cursor?: string;
   timezoneOffsetMinutes?: number;
+  sort?: InboxSort;
 };
 
 function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
@@ -122,6 +124,7 @@ async function fetchInboxList({
   includeRead,
   search,
   cursor,
+  sort,
   headers,
 }: {
   filter: InboxFilter;
@@ -129,12 +132,13 @@ async function fetchInboxList({
   includeRead: boolean;
   search: string | undefined;
   cursor: string | undefined;
+  sort: InboxSort | undefined;
   headers: Headers;
 }): Promise<CursorListResponse> {
   const { apiJsonValidated, cursorListResponseSchema } = await getInboxSchemaModule();
   return apiJsonValidated(cursorListResponseSchema, () =>
     apiJson<CursorListResponse>(
-      buildInboxListUrl({ filter, timezoneOffsetMinutes, includeRead, search, cursor }),
+      buildInboxListUrl({ filter, timezoneOffsetMinutes, includeRead, search, cursor, sort }),
       {
         headers: buildForwardHeaders(headers),
       },
@@ -147,7 +151,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
   .handler(async ({ data }): Promise<InboxResponse> => {
     const { apiJsonValidated, cursorListResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
-    const filter = data.filter ?? "inbox";
+    const filter = data.filter ?? "all";
     const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
       ? Number(data.timezoneOffsetMinutes)
       : 0;
@@ -163,6 +167,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
                 data.feedId,
                 data.folderId,
                 data.cursor,
+                data.sort,
               ),
               {
                 headers: buildForwardHeaders(headers),
@@ -175,6 +180,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
             includeRead: Boolean(data.includeRead),
             search: data.search,
             cursor: data.cursor,
+            sort: data.sort,
             headers,
           });
     const items = response.items.map(mapInboxItem);
@@ -301,7 +307,7 @@ export const getInboxViewCount = createServerFn({ method: "GET" })
       apiJson<ArticleCountsResponse>(url, { headers: forwarded }),
     );
 
-    if (data.filter === "inbox") {
+    if (data.filter === "all") {
       return { count: counts.all ?? 0 };
     }
     if (data.filter === "today") {

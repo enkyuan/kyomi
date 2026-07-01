@@ -7,3 +7,6 @@ export const articleIsReadSql = sql<boolean>`CASE
   WHEN ${feedSubscriptions.lastReadCutoff} IS NOT NULL AND ${feedItems.publishedAt} <= ${feedSubscriptions.lastReadCutoff} THEN true
   ELSE false
 END`;
+
+/** SQL expression: user-specific read state when an item is not scoped to a subscription. */
+export const globalArticleIsReadSql = sql<boolean>`COALESCE(${feedItemUserState.readOverride}, false)`;

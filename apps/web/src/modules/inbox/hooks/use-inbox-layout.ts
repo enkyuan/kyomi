@@ -95,7 +95,7 @@ export function useResponsiveReaderMode(contentWidthPx?: number): InboxLayoutVar
 }
 
 export function useInboxRouteState(preferences: InboxPreferences) {
-  const { filter, search, feedId, folderId, itemId, showHidden, showRead } = useSearch({
+  const { filter, search, feedId, folderId, itemId, showHidden, showRead, sort } = useSearch({
     from: "/inbox/",
   });
   const navigate = useNavigate({ from: "/inbox/" });
@@ -155,6 +155,7 @@ export function useInboxRouteState(preferences: InboxPreferences) {
       isReadScopedFilterActive,
       includeRead,
       activeScopeLabel,
+      sort,
     }),
     [
       navigate,
@@ -170,6 +171,7 @@ export function useInboxRouteState(preferences: InboxPreferences) {
       isReadScopedFilterActive,
       includeRead,
       activeScopeLabel,
+      sort,
     ],
   );
 }

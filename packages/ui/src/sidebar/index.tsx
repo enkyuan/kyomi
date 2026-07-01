@@ -1,3 +1,4 @@
+/* oxlint-disable max-lines */
 "use client";
 
 import { mergeProps } from "@base-ui/react/merge-props";

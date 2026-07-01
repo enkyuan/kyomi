@@ -102,6 +102,8 @@ export function Command({
   );
 }
 
+const COMMAND_INPUT_START_ADDON = <SearchLine />;
+
 export function CommandInput({
   className,
   placeholder = undefined,
@@ -116,7 +118,7 @@ export function CommandInput({
         )}
         placeholder={placeholder}
         size="lg"
-        startAddon={<SearchLine />}
+        startAddon={COMMAND_INPUT_START_ADDON}
         {...props}
       />
     </div>

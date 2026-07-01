@@ -20,7 +20,7 @@ function unitForFilter(filter: InboxFilter, activeScopeLabel: string | null | un
   if (filter === "recent") {
     return "read";
   }
-  if (filter === "inbox") {
+  if (filter === "all") {
     return "items";
   }
   return "unread";

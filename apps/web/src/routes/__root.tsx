@@ -48,11 +48,11 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "kyomi",
+        title: "Kyomi",
       },
       {
         name: "apple-mobile-web-app-title",
-        content: "kyomi",
+        content: "Kyomi",
       },
     ],
     links: [

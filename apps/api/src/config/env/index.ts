@@ -47,6 +47,9 @@ export const env = createEnv({
     MEILI_URL: z.string().min(1).optional(),
     MEILI_MASTER_KEY: z.string().min(1).optional(),
     MEILI_INDEX_FEEDS: z.string().min(1).optional(),
+    GLOBAL_FEED_REFRESH_ENABLED: booleanFromEnv.default(nodeEnv !== "production"),
+    GLOBAL_FEED_REFRESH_BATCH_SIZE: z.coerce.number().int().min(0).max(100).default(10),
+    GLOBAL_FEED_REFRESH_MAX_QUEUED: z.coerce.number().int().positive().max(1_000).default(25),
     /** Comma-separated Better Auth user ids allowed to call `PUT|DELETE /feeds/:feedId/admin`. */
     FEED_ADMIN_USER_IDS: z.string().optional(),
     /** Shared secret accepted in `x-feed-admin-secret` as a backup admin control plane. */
@@ -72,6 +75,9 @@ export const env = createEnv({
     MEILI_URL: process.env.MEILI_URL,
     MEILI_MASTER_KEY: process.env.MEILI_MASTER_KEY,
     MEILI_INDEX_FEEDS: process.env.MEILI_INDEX_FEEDS,
+    GLOBAL_FEED_REFRESH_ENABLED: process.env.GLOBAL_FEED_REFRESH_ENABLED,
+    GLOBAL_FEED_REFRESH_BATCH_SIZE: process.env.GLOBAL_FEED_REFRESH_BATCH_SIZE,
+    GLOBAL_FEED_REFRESH_MAX_QUEUED: process.env.GLOBAL_FEED_REFRESH_MAX_QUEUED,
     FEED_ADMIN_USER_IDS: process.env.FEED_ADMIN_USER_IDS,
     FEED_ADMIN_SHARED_SECRET: process.env.FEED_ADMIN_SHARED_SECRET,
   },

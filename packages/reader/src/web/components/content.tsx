@@ -1,11 +1,30 @@
 "use client";
 
 import { memo } from "react";
-import type { ReaderContent as ReaderContentModel, ReaderLayoutMode } from "../../core";
+import type { ReaderContent as ReaderContentModel, ReaderLayoutMode } from "../../core/types";
 import { RenderHtml } from "../html";
 import { ReaderFallback } from "./fallback";
 import { RenderMarkdown } from "./markdown";
 import { RenderText } from "./text";
+
+// oxlint-disable-next-line react-doctor/no-multi-comp -- tiny sibling fallback for content variants
+function ContractViolationFallback({
+  notice,
+  fallbackSummary,
+}: {
+  notice: string | null | undefined;
+  fallbackSummary: string | null | undefined;
+}) {
+  return (
+    <ReaderFallback
+      notice={
+        notice ??
+        "Saved content could not be rendered with the expected format. Showing fallback view."
+      }
+      summary={fallbackSummary ?? null}
+    />
+  );
+}
 
 export const ReaderContent = memo(function ReaderContent({
   reader,
@@ -18,22 +37,14 @@ export const ReaderContent = memo(function ReaderContent({
   showLinkPreviews?: boolean;
   layoutMode?: ReaderLayoutMode;
 }) {
-  // Client invariant: only render the server-selected `bodyKind`; never re-classify content format.
-  function ContractViolationFallback() {
-    return (
-      <ReaderFallback
-        notice={
-          reader.notice ??
-          "Saved content could not be rendered with the expected format. Showing fallback view."
-        }
-        summary={reader.fallbackSummary ?? null}
-      />
-    );
-  }
-
   if (reader.bodyKind === "html") {
     if (!reader.contentHtml) {
-      return <ContractViolationFallback />;
+      return (
+        <ContractViolationFallback
+          notice={reader.notice}
+          fallbackSummary={reader.fallbackSummary}
+        />
+      );
     }
     const body = (
       <RenderHtml
@@ -57,7 +68,12 @@ export const ReaderContent = memo(function ReaderContent({
 
   if (reader.bodyKind === "markdown") {
     if (!reader.contentMarkdown) {
-      return <ContractViolationFallback />;
+      return (
+        <ContractViolationFallback
+          notice={reader.notice}
+          fallbackSummary={reader.fallbackSummary}
+        />
+      );
     }
     const body = (
       <RenderMarkdown
@@ -81,7 +97,12 @@ export const ReaderContent = memo(function ReaderContent({
 
   if (reader.bodyKind === "text") {
     if (!reader.contentText) {
-      return <ContractViolationFallback />;
+      return (
+        <ContractViolationFallback
+          notice={reader.notice}
+          fallbackSummary={reader.fallbackSummary}
+        />
+      );
     }
     const body = <RenderText text={reader.contentText} />;
     if (!reader.notice) {

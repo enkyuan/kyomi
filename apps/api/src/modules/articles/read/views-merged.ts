@@ -1,6 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { listClipsForUser } from "../write/clips";
-import { mergeArticleListsSortedDesc, mergedFeedClipResponsePaged } from "./merge";
+import type { ArticleSort } from "../query";
+import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
 import { decodeMergedListCursor } from "./merged-view-cursor";
 import { listArticlesForUser } from "./list";
 
@@ -23,6 +24,7 @@ export async function listMergedTodayView(
   userId: string,
   limit: number,
   cursor?: string,
+  sort: ArticleSort = "newest",
 ) {
   const boundary = decodeMergedListCursor(cursor);
   const take = perSourceFetchLimit(limit);
@@ -33,16 +35,18 @@ export async function listMergedTodayView(
       publishedAfter: start,
       publishedBefore: end,
       exclusiveBefore: boundary,
+      sort,
     }),
     listClipsForUser(database, userId, {
       limit: take,
       publishedAfter: start,
       publishedBefore: end,
       exclusiveBefore: boundary,
+      sort,
     }),
   ]);
-  const mergedSorted = mergeArticleListsSortedDesc([feed.items, clips.items]);
-  return mergedFeedClipResponsePaged(mergedSorted, limit, feed.has_more, clips.has_more);
+  const mergedSorted = mergeArticleListsSorted([feed.items, clips.items], sort);
+  return mergedFeedClipResponsePaged(mergedSorted, limit, feed.has_more, clips.has_more, sort);
 }
 
 export async function listMergedRecentlyReadView(
@@ -50,6 +54,7 @@ export async function listMergedRecentlyReadView(
   userId: string,
   limit: number,
   cursor?: string,
+  sort: ArticleSort = "newest",
 ) {
   const boundary = decodeMergedListCursor(cursor);
   const take = perSourceFetchLimit(limit);
@@ -58,15 +63,17 @@ export async function listMergedRecentlyReadView(
       limit: take,
       isRead: true,
       exclusiveBefore: boundary,
+      sort,
     }),
     listClipsForUser(database, userId, {
       limit: take,
       isRead: true,
       exclusiveBefore: boundary,
+      sort,
     }),
   ]);
-  const mergedSorted = mergeArticleListsSortedDesc([feed.items, clips.items]);
-  return mergedFeedClipResponsePaged(mergedSorted, limit, feed.has_more, clips.has_more);
+  const mergedSorted = mergeArticleListsSorted([feed.items, clips.items], sort);
+  return mergedFeedClipResponsePaged(mergedSorted, limit, feed.has_more, clips.has_more, sort);
 }
 
 export async function listMergedSavedView(
@@ -74,6 +81,7 @@ export async function listMergedSavedView(
   userId: string,
   limit: number,
   cursor?: string,
+  sort: ArticleSort = "newest",
 ) {
   const boundary = decodeMergedListCursor(cursor);
   const take = perSourceFetchLimit(limit);
@@ -82,13 +90,15 @@ export async function listMergedSavedView(
       limit: take,
       isSaved: true,
       exclusiveBefore: boundary,
+      sort,
     }),
     listClipsForUser(database, userId, {
       limit: take,
       isSaved: true,
       exclusiveBefore: boundary,
+      sort,
     }),
   ]);
-  const mergedSorted = mergeArticleListsSortedDesc([feed.items, clips.items]);
-  return mergedFeedClipResponsePaged(mergedSorted, limit, feed.has_more, clips.has_more);
+  const mergedSorted = mergeArticleListsSorted([feed.items, clips.items], sort);
+  return mergedFeedClipResponsePaged(mergedSorted, limit, feed.has_more, clips.has_more, sort);
 }

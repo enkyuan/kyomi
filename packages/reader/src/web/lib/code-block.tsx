@@ -13,7 +13,7 @@ import sql from "highlight.js/lib/languages/sql";
 import typescript from "highlight.js/lib/languages/typescript";
 import xml from "highlight.js/lib/languages/xml";
 import yaml from "highlight.js/lib/languages/yaml";
-import { detectCodeLanguage } from "../../core";
+import { detectCodeLanguage } from "../../core/code-language";
 
 const WRAPPER = "data-reader-code-block";
 const COPY_MOUNTED = "data-reader-copy-mounted";

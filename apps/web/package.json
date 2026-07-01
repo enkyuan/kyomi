@@ -25,7 +25,6 @@
     "@tanstack/react-start": "^1.167.34",
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-virtual": "^3.13.23",
-    "@kyomi/db": "workspace:*",
     "@kyomi/reader": "workspace:*",
     "@kyomi/worker": "workspace:*",
     "@kyomi/ui": "workspace:*",
@@ -72,5 +71,19 @@
       "esbuild",
       "lightningcss"
     ]
+  },
+  "reactDoctor": {
+    "ignore": {
+      "overrides": [
+        {
+          "files": ["src/routeTree.gen.ts"],
+          "rules": ["unicorn/filename-case"]
+        },
+        {
+          "files": ["src/modules/inbox/components/list/index.tsx"],
+          "rules": ["react-doctor/prefer-tag-over-role"]
+        }
+      ]
+    }
   }
 }

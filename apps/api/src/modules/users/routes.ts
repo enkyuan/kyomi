@@ -36,7 +36,7 @@ export function registerUserRoutes(app: Elysia) {
           openLinksInNewTab?: boolean;
           showLinkPreviews?: boolean;
           showImages?: boolean;
-          inboxDefaultView?: "inbox" | "today" | "unread" | "saved";
+          inboxDefaultView?: "all" | "today" | "unread" | "saved" | "recent";
           inboxDensity?: "comfortable" | "compact";
           articleOpenBehavior?: "split" | "reader";
           inboxMarkReadBehavior?: "on-open" | "after-delay" | "manual";

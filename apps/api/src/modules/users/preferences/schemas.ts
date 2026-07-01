@@ -8,10 +8,11 @@ export const userPreferencesResponse = t.Object({
   showLinkPreviews: t.Boolean(),
   showImages: t.Boolean(),
   inboxDefaultView: t.Union([
-    t.Literal("inbox"),
+    t.Literal("all"),
     t.Literal("today"),
     t.Literal("unread"),
     t.Literal("saved"),
+    t.Literal("recent"),
   ]),
   inboxDensity: t.Union([t.Literal("comfortable"), t.Literal("compact")]),
   articleOpenBehavior: t.Union([t.Literal("split"), t.Literal("reader")]),
@@ -37,7 +38,13 @@ export const updateUserPreferencesBody = t.Object({
   showLinkPreviews: t.Optional(t.Boolean()),
   showImages: t.Optional(t.Boolean()),
   inboxDefaultView: t.Optional(
-    t.Union([t.Literal("inbox"), t.Literal("today"), t.Literal("unread"), t.Literal("saved")]),
+    t.Union([
+      t.Literal("all"),
+      t.Literal("today"),
+      t.Literal("unread"),
+      t.Literal("saved"),
+      t.Literal("recent"),
+    ]),
   ),
   inboxDensity: t.Optional(t.Union([t.Literal("comfortable"), t.Literal("compact")])),
   articleOpenBehavior: t.Optional(t.Union([t.Literal("split"), t.Literal("reader")])),

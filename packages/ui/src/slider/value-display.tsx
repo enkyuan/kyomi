@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/no-event-handler, react-doctor/exhaustive-deps, react-doctor/no-derived-state */
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type RefObject } from "react";
@@ -118,9 +119,11 @@ export function ValueDisplay({
   isRange,
   isInteracting,
 }: ValueDisplayProps) {
+  // oxlint-disable-next-line react-doctor/no-derived-state -- input value is user-edited between commits; keep local mirror
   const [inputValue, setInputValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // oxlint-disable-next-line react-doctor/no-event-handler,react-doctor/exhaustive-deps -- syncs local input mirror when parent begins editing a specific thumb; only editingIndex should trigger a reset
   useEffect(() => {
     if (editingIndex !== null) {
       setInputValue(String(values[editingIndex]));

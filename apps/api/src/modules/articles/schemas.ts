@@ -186,6 +186,7 @@ export const cursorListResponseSchema = t.Object({
 });
 
 export const articleCountsQuerySchema = t.Object({
+  view: t.Optional(t.Literal("all")),
   published_after: t.Optional(t.String()),
   published_before: t.Optional(t.String()),
   feed_id: t.Optional(t.String()),
@@ -238,10 +239,12 @@ export const unreadCountsQuerySchema = t.Object({
   feed_ids: t.Optional(t.String()),
 });
 
-/** Merged feed+clip list views accept `limit`; `cursor` is parsed for forward compatibility (not applied yet). */
+/** Merged feed+clip list views accept paginated, sort-aware list controls. */
 export const mergedArticleViewsQuerySchema = t.Object({
   limit: t.Optional(t.String()),
   cursor: t.Optional(t.String()),
+  search: t.Optional(t.String()),
+  sort: t.Optional(t.Union([t.Literal("newest"), t.Literal("oldest"), t.Literal("unread-first")])),
 });
 
 export const checkSavedQuerySchema = t.Object({

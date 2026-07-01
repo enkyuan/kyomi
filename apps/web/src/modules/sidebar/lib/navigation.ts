@@ -73,7 +73,7 @@ export function resolveInboxNavItems(
   return { items, badgeValues };
 }
 
-export type WorkspaceInboxFilter = "inbox" | "saved" | "today" | "unread";
+export type WorkspaceInboxFilter = "all" | "saved" | "today" | "unread" | "recent";
 
 export function navigateToInbox(
   navigate: ReturnType<typeof useNavigate>,
