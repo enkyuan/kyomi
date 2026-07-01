@@ -5,16 +5,73 @@ import { isMeiliConfigured, searchFeedSearchDocuments } from "@adapters/search/m
 import type { AppLogger } from "@adapters/logger";
 import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "./feed/normalize-url";
 import { resolveRemoteFeed } from "./feed/resolve-remote";
 import type { FeedPreviewDto, FeedSearchResultDto } from "./types";
 
 type DB = typeof db;
+
+function normalizeExistingFeedLookupUrl(rawUrl: string): string | null {
+  try {
+    return normalizeFeedUrl(assertHttpOrHttpsUrl(rawUrl).href);
+  } catch {
+    return null;
+  }
+}
+
+async function previewExistingFeedByUrl(
+  database: DB,
+  userId: string,
+  rawUrl: string,
+): Promise<FeedPreviewDto | null> {
+  const normalizedUrl = normalizeExistingFeedLookupUrl(rawUrl);
+  if (!normalizedUrl) {
+    return null;
+  }
+
+  const rows = await database
+    .select({
+      id: feeds.id,
+      url: feeds.url,
+      title: feeds.title,
+      description: feeds.description,
+      link: feeds.link,
+      faviconUrl: feeds.faviconUrl,
+      isSubscribed: sql<boolean>`CASE WHEN ${feedSubscriptions.id} IS NULL THEN false ELSE true END`,
+    })
+    .from(feeds)
+    .leftJoin(
+      feedSubscriptions,
+      and(eq(feedSubscriptions.feedId, feeds.id), eq(feedSubscriptions.userId, userId)),
+    )
+    .where(eq(feeds.url, normalizedUrl))
+    .limit(1);
+  const existing = rows[0];
+  if (!existing) {
+    return null;
+  }
+
+  return {
+    id: existing.id,
+    url: existing.url,
+    title: decodeText(existing.title),
+    description: decodeNullableText(existing.description) ?? "",
+    link: existing.link,
+    faviconUrl: existing.faviconUrl,
+    isSubscribed: existing.isSubscribed,
+  };
+}
 
 export async function previewFeedFromUrl(
   database: DB,
   userId: string,
   rawUrl: string,
 ): Promise<FeedPreviewDto> {
+  const existingPreview = await previewExistingFeedByUrl(database, userId, rawUrl);
+  if (existingPreview) {
+    return existingPreview;
+  }
+
   const resolved = await resolveRemoteFeed(rawUrl);
 
   const existingRows = await database
@@ -22,23 +79,25 @@ export async function previewFeedFromUrl(
     .from(feeds)
     .where(eq(feeds.url, resolved.canonicalUrl))
     .limit(1);
-  const existing = existingRows[0];
+  const existingFeed = existingRows[0];
 
   let isSubscribed = false;
-  if (existing) {
+  if (existingFeed) {
     const subRows = await database
       .select({ id: feedSubscriptions.id })
       .from(feedSubscriptions)
-      .where(and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.feedId, existing.id)))
+      .where(
+        and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.feedId, existingFeed.id)),
+      )
       .limit(1);
     isSubscribed = subRows.length > 0;
   }
 
   // Keep preview snappy: avoid blocking on remote favicon probing.
-  const favicon = existing?.faviconUrl ?? resolved.iconUrl ?? null;
+  const favicon = existingFeed?.faviconUrl ?? resolved.iconUrl ?? null;
 
   return {
-    id: existing?.id ?? null,
+    id: existingFeed?.id ?? null,
     url: resolved.canonicalUrl,
     title: decodeText(resolved.title),
     description: decodeText(resolved.description),

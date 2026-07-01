@@ -1,6 +1,6 @@
 export type InboxFilter = "all" | "today" | "unread" | "saved" | "recent";
 export type LegacyInboxFilter = InboxFilter | "inbox";
-export type InboxSort = "newest" | "oldest" | "unread-first";
+export type InboxSort = "newest" | "oldest";
 
 const INBOX_PAGE_LIMIT = 100;
 const DEFAULT_SORT: InboxSort = "newest";

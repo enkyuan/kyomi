@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRef } from "react";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { invalidateFeedAndInboxQueries } from "@modules/inbox/queries/options";
 import { getFeedDetail, refreshFeed, type FeedDetail } from "../api";
 import {
@@ -27,7 +28,8 @@ export function useFeedRefresh(feedId: string) {
       applyFeedRefreshQueued(queryClient, feedId);
       return { followedFeedsSnapshot, previousDetail };
     },
-    onError: (_error, _variables, context) => {
+    onError: (error, _variables, context) => {
+      logClientError("feeds.refresh.single", error);
       if (context?.previousDetail) {
         queryClient.setQueryData(["feed-detail", feedId], context.previousDetail);
       }
@@ -81,6 +83,10 @@ export function useFeedRefresh(feedId: string) {
     lastRefreshStartedAt: feedDetail?.lastRefreshStartedAt,
     lastRefreshCompletedAt: feedDetail?.lastRefreshCompletedAt,
     lastRefreshFailedAt: feedDetail?.lastRefreshFailedAt,
-    error: feedDetail?.lastRefreshError ?? mutation.error?.message,
+    error: feedDetail?.lastRefreshError
+      ? getUserSafeErrorMessage(feedDetail.lastRefreshError, "Refresh failed.")
+      : mutation.error
+        ? getUserSafeErrorMessage(mutation.error, "Refresh failed.")
+        : undefined,
   };
 }

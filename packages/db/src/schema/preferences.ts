@@ -15,7 +15,6 @@ export const userPreferences = pgTable("user_preferences", {
   inboxTimestampDisplay: text("inbox_timestamp_display").notNull().default("absolute"),
   inboxTimestampHourCycle: text("inbox_timestamp_hour_cycle").notNull().default("12h"),
   inboxFontSizePx: integer("inbox_font_size_px").notNull().default(16),
-  inboxShowRecents: boolean("inbox_show_recents").notNull().default(false),
   inboxShowFavicons: boolean("inbox_show_favicons").notNull().default(true),
   readerFontSizePx: integer("reader_font_size_px").notNull().default(17),
   readerContentWidth: text("reader_content_width").notNull().default("wide"),

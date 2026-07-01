@@ -2,6 +2,7 @@
 
 import { CheckFill, CloseFill, Edit2Fill, User3Fill } from "@mingcute/react";
 import { useAuth } from "@integrations/better-auth/provider";
+import { Badge } from "@kyomi/ui/badge";
 import { Button } from "@kyomi/ui/button";
 import { Frame } from "@kyomi/ui/frame";
 import { Group } from "@kyomi/ui/group";
@@ -61,11 +62,6 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
     emailDraft,
     emailError,
     formatTimestamp,
-    isEditingEmail,
-    sessions,
-    isSessionsError,
-    shortenUserAgent,
-    updateEmailMutation,
     handleCancelEditEmail,
     handleEmailDraftChange,
     handleRevokeAllSessions,
@@ -73,11 +69,11 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
     handleSaveEmail,
     handleStartEditEmail,
     isEditingEmail,
+    isSessionsError,
     otherSessionCount,
     revokeAllSessionsMutation,
     revokeOtherSessionsMutation,
     sessions,
-    sessionsQuery,
     updateEmailMutation,
   } = useAccountPanel({ user, session });
 

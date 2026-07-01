@@ -3,7 +3,7 @@
 import type { CSSProperties } from "react";
 import { Suspense, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { AddCircleFill, ArrowUpCircleFill, Chat3Fill, Settings3Fill } from "@mingcute/react";
+import { AddFill, ArrowUpCircleFill, Chat3Fill, Settings3Fill } from "@mingcute/react";
 import { KyomiLogo } from "@kyomi/ui/icons";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
@@ -29,14 +29,20 @@ const SettingsDialog = lazyNamed(
   "SettingsDialog",
 );
 const FeedbackDialog = lazyNamed(() => import("@kyomi/ui/feedback-dialog"), "FeedbackDialog");
+const SourcesDialog = lazyNamed(
+  () => import("@modules/feeds/components/follow/sources-dialog"),
+  "SourcesDialog",
+);
 
 export function AppSidebar({ className, style }: { className?: string; style?: CSSProperties }) {
-  const { settingsOpen, setSettingsOpen } = useAppSidebar();
+  const { platform, settingsOpen, setSettingsOpen } = useAppSidebar();
   const { followedFeedsData, scopedFeedId } = usePinnedSection();
   const { isInbox } = useInboxScope();
   const { prefetchOnFocus, prefetchOnPointerEnter } = useInboxPrefetch();
 
   const [settingsDialogLoaded, setSettingsDialogLoaded] = useState(false);
+  const [sourcesOpen, setSourcesOpen] = useState(false);
+  const [sourcesDialogLoaded, setSourcesDialogLoaded] = useState(false);
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const [feedbackDialogLoaded, setFeedbackDialogLoaded] = useState(false);
 
@@ -52,6 +58,11 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
     void FeedbackDialog.preload();
   };
 
+  const preloadSourcesDialog = () => {
+    setSourcesDialogLoaded(true);
+    void SourcesDialog.preload();
+  };
+
   const feeds = followedFeedsData ?? [];
 
   return (
@@ -63,11 +74,11 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       style={{ "--sidebar-width": APP_SIDEBAR_WIDTH, ...style } as CSSProperties}
     >
       <SidebarHeader className="items-center px-0 pt-[18px] pb-[18px]">
-        <SidebarMenu>
+        <SidebarMenu className="gap-[17px]">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Kyomi"
-              className="size-11 justify-center rounded-full! p-0 hover:bg-transparent active:bg-transparent"
+              className="size-11 justify-center rounded-full! p-0 hover:bg-transparent active:bg-transparent group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
               render={<Link to="/inbox" search={{ filter: "all" as const }} />}
             >
               <KyomiLogo size={24} className="size-auto" />
@@ -76,9 +87,16 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Add feed"
-              className="size-11 justify-center rounded-full! p-0 hover:bg-transparent active:bg-transparent"
+              variant="secondary"
+              className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
+              onClick={() => {
+                preloadSourcesDialog();
+                setSourcesOpen(true);
+              }}
+              onFocus={preloadSourcesDialog}
+              onPointerEnter={preloadSourcesDialog}
             >
-              <AddCircleFill className="size-6" />
+              <AddFill size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
@@ -93,7 +111,8 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
                 <SidebarMenuItem key={feed.feedId} className="flex justify-center">
                   <SidebarMenuButton
                     tooltip={feed.title || feed.url}
-                    className="size-11 justify-center rounded-full! p-0 hover:bg-transparent active:bg-transparent"
+                    variant="secondary"
+                    className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
                     isActive={isActive}
                     onFocus={prefetchOnFocus(feed.feedId)}
                     onPointerEnter={prefetchOnPointerEnter(feed.feedId)}
@@ -111,7 +130,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
                     }
                   >
                     <FeedFavicon
-                      className="size-6 shrink-0 rounded-[3px]"
+                      className="size-11 shrink-0 rounded-full object-cover"
                       faviconUrl={feed.faviconUrl}
                       feedUrl={feed.url}
                       siteUrl={feed.link}
@@ -130,16 +149,18 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Upgrade Plan"
-              className="size-11 justify-center rounded-full! p-0 opacity-72 hover:bg-transparent active:bg-transparent"
+              variant="secondary"
+              className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
               disabled
             >
-              <ArrowUpCircleFill className="size-6" />
+              <ArrowUpCircleFill size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Feedback"
-              className="size-11 justify-center rounded-full! p-0 opacity-72 hover:bg-transparent active:bg-transparent"
+              variant="secondary"
+              className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
               onClick={() => {
                 preloadFeedbackDialog();
                 setFeedbackOpen(true);
@@ -147,20 +168,21 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               onFocus={preloadFeedbackDialog}
               onPointerEnter={preloadFeedbackDialog}
             >
-              <Chat3Fill className="size-6" />
+              <Chat3Fill size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Settings"
-              className="size-11 justify-center rounded-full! p-0 opacity-72 hover:bg-transparent active:bg-transparent"
+              variant="secondary"
+              className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
               onClick={() => {
                 setSettingsDialogLoaded(true);
                 void SettingsDialog.preload();
                 setSettingsOpen(true);
               }}
             >
-              <Settings3Fill className="size-6" />
+              <Settings3Fill size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
@@ -169,6 +191,15 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       <Suspense fallback={null}>
         {settingsDialogLoaded ? (
           <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
+        ) : null}
+        {sourcesDialogLoaded ? (
+          <SourcesDialog
+            enableGlobalShortcut={false}
+            hideTrigger
+            open={sourcesOpen}
+            onOpenChange={setSourcesOpen}
+            platform={platform}
+          />
         ) : null}
         {feedbackDialogLoaded ? (
           <FeedbackDialog hideTrigger open={feedbackOpen} onOpenChange={setFeedbackOpen} />

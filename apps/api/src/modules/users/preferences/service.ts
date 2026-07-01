@@ -36,7 +36,6 @@ export const DEFAULT_USER_PREFERENCES: UserPreferencesDto = {
   inboxTimestampDisplay: "absolute",
   inboxTimestampHourCycle: "12h",
   inboxFontSizePx: 16,
-  inboxShowRecents: false,
   inboxShowFavicons: true,
 };
 
@@ -131,7 +130,6 @@ function rowToPreferences(row: typeof userPreferences.$inferSelect): UserPrefere
     inboxTimestampDisplay: parseInboxTimestampDisplay(row.inboxTimestampDisplay),
     inboxTimestampHourCycle: parseInboxTimestampHourCycle(row.inboxTimestampHourCycle),
     inboxFontSizePx: clampInboxFontSize(row.inboxFontSizePx),
-    inboxShowRecents: row.inboxShowRecents,
     inboxShowFavicons: row.inboxShowFavicons,
   };
 }
@@ -206,7 +204,6 @@ const BOOLEAN_PREFERENCE_KEYS = [
   "openLinksInNewTab",
   "showLinkPreviews",
   "showImages",
-  "inboxShowRecents",
   "inboxShowFavicons",
 ] as const;
 
@@ -305,7 +302,6 @@ export async function updateUserPreferences(
       inboxTimestampDisplay: DEFAULT_USER_PREFERENCES.inboxTimestampDisplay,
       inboxTimestampHourCycle: DEFAULT_USER_PREFERENCES.inboxTimestampHourCycle,
       inboxFontSizePx: DEFAULT_USER_PREFERENCES.inboxFontSizePx,
-      inboxShowRecents: DEFAULT_USER_PREFERENCES.inboxShowRecents,
       inboxShowFavicons: DEFAULT_USER_PREFERENCES.inboxShowFavicons,
       readerFontSizePx: DEFAULT_USER_PREFERENCES.fontSizePx,
       readerContentWidth: DEFAULT_USER_PREFERENCES.contentWidth,
@@ -346,9 +342,6 @@ export async function updateUserPreferences(
   }
   if (patch.inboxFontSizePx !== undefined) {
     updateSet.inboxFontSizePx = patch.inboxFontSizePx;
-  }
-  if (patch.inboxShowRecents !== undefined) {
-    updateSet.inboxShowRecents = patch.inboxShowRecents;
   }
   if (patch.inboxShowFavicons !== undefined) {
     updateSet.inboxShowFavicons = patch.inboxShowFavicons;

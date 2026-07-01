@@ -79,13 +79,13 @@
         "@fontsource-variable/inter": "^5.2.8",
         "@fontsource/dm-sans": "^5.2.8",
         "@fontsource/jetbrains-mono": "^5.2.8",
-        "@kyomi/db": "workspace:*",
         "@kyomi/reader": "workspace:*",
         "@kyomi/ui": "workspace:*",
         "@kyomi/worker": "workspace:*",
         "@mingcute/react": "^1.1.8",
         "@modelcontextprotocol/sdk": "^1.27.1",
         "@posthog/react": "^1.7.0",
+        "@radix-ui/react-dialog": "^1.1.15",
         "@t3-oss/env-core": "^0.13.10",
         "@tailwindcss/vite": "^4.1.18",
         "@tanstack/react-form": "^1.29.0",
@@ -97,6 +97,7 @@
         "@tanstack/react-virtual": "^3.13.23",
         "better-auth": "^1.5.3",
         "clsx": "^2.1.1",
+        "cmdk": "^1.1.1",
         "drizzle-kit": "^0.31.9",
         "drizzle-orm": "^0.45.1",
         "highlight.js": "^11.11.1",
@@ -151,7 +152,6 @@
     "packages/reader": {
       "name": "@kyomi/reader",
       "dependencies": {
-        "@vols.rss/ui": "workspace:*",
         "dompurify": "^3.4.0",
         "highlight.js": "^11.11.1",
         "katex": "^0.16.45",
@@ -164,7 +164,6 @@
         "@types/react-dom": "^19.2.0",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
-        "vitest": "^3.0.5",
       },
       "peerDependencies": {
         "@base-ui/react": "^1.3.0",
@@ -220,11 +219,9 @@
     "tests": {
       "name": "@kyomi/tests",
       "devDependencies": {
-        "@kyomi/db": "workspace:*",
         "@kyomi/reader": "workspace:*",
         "@kyomi/ui": "workspace:*",
         "@kyomi/worker": "workspace:*",
-        "@tanstack/react-start": "^1.167.34",
         "@testing-library/dom": "^10.4.1",
         "@testing-library/react": "^16.3.0",
         "@types/jsdom": "^21.1.7",
@@ -232,7 +229,6 @@
         "@types/react": "^19.2.0",
         "@types/react-dom": "^19.2.0",
         "@vitejs/plugin-react": "^5.1.4",
-        "bun-types": "latest",
         "jsdom": "^28.1.0",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
@@ -240,7 +236,6 @@
         "vite": "^7.3.1",
         "vite-tsconfig-paths": "^5.1.4",
         "vitest": "^3.0.5",
-        "zod": "^4.3.6",
       },
     },
   },
@@ -1336,6 +1331,8 @@
     "clsx": ["clsx@2.1.1", "", {}, "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA=="],
 
     "cluster-key-slot": ["cluster-key-slot@1.1.2", "", {}, "sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA=="],
+
+    "cmdk": ["cmdk@1.1.1", "", { "dependencies": { "@radix-ui/react-compose-refs": "^1.1.1", "@radix-ui/react-dialog": "^1.1.6", "@radix-ui/react-id": "^1.1.0", "@radix-ui/react-primitive": "^2.0.2" }, "peerDependencies": { "react": "^18 || ^19 || ^19.0.0-rc", "react-dom": "^18 || ^19 || ^19.0.0-rc" } }, "sha512-Vsv7kFaXm+ptHDMZ7izaRsP70GgrW9NBNGswt9OZaVBLlE0SNpDq8eu/VGXyF9r7M0azK3Wy7OlYXsuyYLFzHg=="],
 
     "color": ["color@4.2.3", "", { "dependencies": { "color-convert": "^2.0.1", "color-string": "^1.9.0" } }, "sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A=="],
 

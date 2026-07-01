@@ -4,6 +4,7 @@ import { Article } from "../article";
 import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
 import { Skeleton } from "@kyomi/ui/skeleton";
+import { getUserSafeErrorMessage } from "@lib/errors";
 import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { Button } from "@kyomi/ui/button";
 import { LeftFill } from "@mingcute/react";
@@ -147,9 +148,10 @@ export function Detail({
               <div className="flex h-full min-h-72 flex-col items-center justify-center gap-3 px-6 py-10 text-center">
                 <p className="text-base font-semibold text-foreground">Couldn't load article</p>
                 <p className="text-sm text-muted-foreground">
-                  {detailState.error instanceof Error
-                    ? detailState.error.message
-                    : "There was a problem loading this item."}
+                  {getUserSafeErrorMessage(
+                    detailState.error,
+                    "There was a problem loading this item.",
+                  )}
                 </p>
               </div>
             ) : (
