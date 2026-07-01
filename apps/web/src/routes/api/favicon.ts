@@ -13,7 +13,7 @@ const FAVICON_CACHE_TTL_MS = FAVICON_CACHE_MAX_AGE_SECONDS * 1000;
 const FAVICON_MISS_CACHE_TTL_MS = 60 * 2 * 1000;
 const FAVICON_CACHE_MAX_ENTRIES = 500;
 const FAVICON_MAX_RESPONSE_BYTES = 64 * 1024;
-const FAVICON_RESOLUTION_CACHE_VERSION = "html-first-v2";
+const FAVICON_RESOLUTION_CACHE_VERSION = "html-high-res-v1";
 
 type CachedFavicon =
   | {
@@ -87,7 +87,7 @@ async function cacheAndBuildFaviconResponse(
     return new Response(null, { status: 404 });
   }
   const bodyBytes = new Uint8Array(buffer);
-  setCachedFavicon(getFaviconCacheKey(hostname), {
+  setCachedFavicon(hostname, {
     kind: "hit",
     body: bodyBytes,
     contentType,
@@ -153,7 +153,7 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
   }
 
   const googleResult = await tryFetchImage(
-    `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=128`,
+    `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=256`,
   );
   if (googleResult) {
     return cacheAndBuildFaviconResponse(hostname, googleResult);
@@ -164,7 +164,7 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
     return cacheAndBuildFaviconResponse(hostname, duckDuckGoResult);
   }
 
-  setCachedFavicon(getFaviconCacheKey(hostname), {
+  setCachedFavicon(hostname, {
     kind: "miss",
     expiresAt: Date.now() + FAVICON_MISS_CACHE_TTL_MS,
   });

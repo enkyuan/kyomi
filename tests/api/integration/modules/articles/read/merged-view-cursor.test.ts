@@ -12,6 +12,8 @@ const sampleItem = (overrides: Partial<ArticleListItemDto> = {}): ArticleListIte
   summary: null,
   publishedAt: "2024-06-01T12:00:00.000Z",
   feedId: "f1",
+  feedUrl: "https://example.com/feed.xml",
+  feedSiteUrl: "https://example.com",
   feedTitle: "F",
   feedFaviconUrl: null,
   isRead: false,

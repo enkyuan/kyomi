@@ -3,8 +3,8 @@
 import type { CSSProperties } from "react";
 import { Suspense, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { AddFill, ArrowUpCircleFill, Chat3Fill, Settings1Fill } from "@mingcute/react";
-import { KyomiLogo } from "@kyomi/ui/icons";
+import { AddFill, Message3Fill, Settings1Fill } from "@mingcute/react";
+import { KyomiLogo, PremiumIcon } from "@kyomi/ui/icons";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
   Sidebar,
@@ -20,8 +20,6 @@ import { lazyNamed } from "@lib/lazy-named";
 import { APP_SIDEBAR_WIDTH } from "../lib/constants";
 import { useAppSidebar } from "../hooks/use-app-sidebar";
 import { usePinnedSection } from "../hooks/use-pinned-section";
-import { useInboxPrefetch } from "../hooks/use-sidebar-inbox";
-import { useInboxScope } from "@hooks/use-inbox-scope";
 import { FeedFavicon } from "./feed-favicon";
 
 const SettingsDialog = lazyNamed(
@@ -36,9 +34,7 @@ const SourcesDialog = lazyNamed(
 
 export function AppSidebar({ className, style }: { className?: string; style?: CSSProperties }) {
   const { platform, settingsOpen, setSettingsOpen } = useAppSidebar();
-  const { followedFeedsData, scopedFeedId } = usePinnedSection();
-  const { isInbox } = useInboxScope();
-  const { prefetchOnFocus, prefetchOnPointerEnter } = useInboxPrefetch();
+  const { followedFeedsData } = usePinnedSection();
 
   const [settingsDialogLoaded, setSettingsDialogLoaded] = useState(false);
   const [sourcesOpen, setSourcesOpen] = useState(false);
@@ -105,41 +101,24 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       <SidebarContent className="px-0">
         <ScrollArea className="h-auto min-h-0 flex-1 data-has-overflow-y:scroll-mask-y-from-6 **:data-[slot=scroll-area-scrollbar]:hidden">
           <SidebarMenu className="items-center gap-3 px-1">
-            {feeds.map((feed) => {
-              const isActive = isInbox && scopedFeedId === feed.feedId;
-              return (
-                <SidebarMenuItem key={feed.feedId} className="flex justify-center">
-                  <SidebarMenuButton
-                    tooltip={feed.title || feed.url}
-                    variant="secondary"
-                    className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
-                    isActive={isActive}
-                    onFocus={prefetchOnFocus(feed.feedId)}
-                    onPointerEnter={prefetchOnPointerEnter(feed.feedId)}
-                    render={
-                      <Link
-                        to="/inbox"
-                        search={() => ({
-                          filter: "all" as const,
-                          search: undefined,
-                          feedId: feed.feedId,
-                          folderId: undefined,
-                          itemId: undefined,
-                        })}
-                      />
-                    }
-                  >
-                    <FeedFavicon
-                      className="size-11 shrink-0 rounded-full object-cover"
-                      faviconUrl={feed.faviconUrl}
-                      feedUrl={feed.url}
-                      siteUrl={feed.link}
-                      title={feed.title || feed.url}
-                    />
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              );
-            })}
+            {feeds.map((feed) => (
+              <SidebarMenuItem key={feed.feedId} className="flex justify-center">
+                <SidebarMenuButton
+                  tooltip={feed.title || feed.url}
+                  variant="secondary"
+                  className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
+                >
+                  <FeedFavicon
+                    className="size-11 shrink-0 rounded-full"
+                    faviconUrl={feed.faviconUrl}
+                    feedUrl={feed.url}
+                    showLoadingSkeleton
+                    siteUrl={feed.link}
+                    title={feed.title || feed.url}
+                  />
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            ))}
           </SidebarMenu>
         </ScrollArea>
       </SidebarContent>
@@ -153,7 +132,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               className="size-11 justify-center rounded-full! p-0 group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
               disabled
             >
-              <ArrowUpCircleFill size={24} />
+              <PremiumIcon width={24} height={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="flex justify-center">
@@ -168,7 +147,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               onFocus={preloadFeedbackDialog}
               onPointerEnter={preloadFeedbackDialog}
             >
-              <Chat3Fill size={24} />
+              <Message3Fill size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="flex justify-center">

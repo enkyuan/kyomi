@@ -3,53 +3,96 @@
 import { useState } from "react";
 import {
   buildFaviconUrlCandidates,
-  clearFaviconFailed,
   firstUsableFaviconIndex,
-  markFaviconFailed,
   nextUsableFaviconIndex,
 } from "../lib/favicon";
 
 const MIN_CLIENT_FAVICON_NATURAL_SIZE = 64;
 
+function isScalableFaviconUrl(url: string): boolean {
+  if (url.startsWith("data:image/svg+xml")) {
+    return true;
+  }
+  try {
+    return new URL(url, window.location.origin).pathname.toLowerCase().endsWith(".svg");
+  } catch {
+    return url.toLowerCase().endsWith(".svg");
+  }
+}
+
 export function useFeedFavicon({
   faviconUrl: storedFaviconUrl,
   feedUrl,
-  minNaturalSize = MIN_CLIENT_FAVICON_NATURAL_SIZE,
   siteUrl,
 }: {
   faviconUrl?: string | null;
   feedUrl: string;
-  minNaturalSize?: number;
   siteUrl: string | null;
 }) {
   const faviconUrls = buildFaviconUrlCandidates(storedFaviconUrl, siteUrl, feedUrl);
   const faviconUrlsKey = faviconUrls.join("\n");
   const [prevKey, setPrevKey] = useState(faviconUrlsKey);
-  const [faviconIndex, setFaviconIndex] = useState(() => firstUsableFaviconIndex(faviconUrls));
+  const [rejectedUrls, setRejectedUrls] = useState<ReadonlySet<string>>(() => new Set());
+  const [lowResolutionFallbackUrl, setLowResolutionFallbackUrl] = useState<string | null>(null);
+  const [acceptedLowResolutionUrl, setAcceptedLowResolutionUrl] = useState<string | null>(null);
+  const [faviconIndex, setFaviconIndex] = useState(() =>
+    firstUsableFaviconIndex(faviconUrls, new Set()),
+  );
 
   if (faviconUrlsKey !== prevKey) {
     setPrevKey(faviconUrlsKey);
-    setFaviconIndex(firstUsableFaviconIndex(faviconUrls));
+    setRejectedUrls(new Set());
+    setLowResolutionFallbackUrl(null);
+    setAcceptedLowResolutionUrl(null);
+    setFaviconIndex(firstUsableFaviconIndex(faviconUrls, new Set()));
   }
 
-  const faviconUrl = faviconIndex >= 0 ? faviconUrls[faviconIndex] : null;
+  const faviconUrl =
+    acceptedLowResolutionUrl ?? (faviconIndex >= 0 ? faviconUrls[faviconIndex] : null);
 
   const failCurrentFavicon = () => {
     if (!faviconUrl) {
       return;
     }
-    markFaviconFailed(faviconUrl);
-    setFaviconIndex(nextUsableFaviconIndex(faviconUrls, faviconUrl));
-  };
-
-  const handleLoad = (naturalWidth: number, naturalHeight: number) => {
-    if (naturalWidth < minNaturalSize || naturalHeight < minNaturalSize) {
-      failCurrentFavicon();
+    const nextRejectedUrls = new Set(rejectedUrls).add(faviconUrl);
+    const nextIndex = nextUsableFaviconIndex(faviconUrls, faviconUrl, nextRejectedUrls);
+    setRejectedUrls(nextRejectedUrls);
+    if (nextIndex >= 0) {
+      setFaviconIndex(nextIndex);
       return;
     }
-    if (faviconUrl) {
-      clearFaviconFailed(faviconUrl);
+    if (lowResolutionFallbackUrl) {
+      setAcceptedLowResolutionUrl(lowResolutionFallbackUrl);
+      return;
     }
+    setFaviconIndex(-1);
+  };
+
+  const handleLoad = (
+    naturalWidth: number,
+    naturalHeight: number,
+    minNaturalSize = MIN_CLIENT_FAVICON_NATURAL_SIZE,
+  ) => {
+    if (faviconUrl && isScalableFaviconUrl(faviconUrl)) {
+      return true;
+    }
+    if (
+      faviconUrl &&
+      acceptedLowResolutionUrl !== faviconUrl &&
+      (naturalWidth < minNaturalSize || naturalHeight < minNaturalSize)
+    ) {
+      setLowResolutionFallbackUrl((current) => current ?? faviconUrl);
+      const nextRejectedUrls = new Set(rejectedUrls).add(faviconUrl);
+      const nextIndex = nextUsableFaviconIndex(faviconUrls, faviconUrl, nextRejectedUrls);
+      if (nextIndex >= 0) {
+        setRejectedUrls(nextRejectedUrls);
+        setFaviconIndex(nextIndex);
+        return false;
+      }
+      setAcceptedLowResolutionUrl(lowResolutionFallbackUrl ?? faviconUrl);
+      return true;
+    }
+    return true;
   };
 
   return {

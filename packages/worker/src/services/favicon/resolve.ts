@@ -61,13 +61,17 @@ async function fetchWithRedirectGuard(
 }
 
 /**
- * Whether a <link rel="..."> attribute declares a normal tab favicon.
- * Uses whitespace tokenization so `apple-touch-icon` / `mask-icon` do not match
- * (they are single tokens), unlike a naive `/\\bicon\\b/` check on the raw string.
+ * Whether a <link rel="..."> attribute declares a browser-renderable site icon.
+ * Uses whitespace tokenization so `mask-icon` does not match, unlike a naive
+ * `/\\bicon\\b/` check on the raw string.
  */
 export function linkRelDeclaresSiteIcon(rawRel: string): boolean {
   const tokens = rawRel.toLowerCase().split(/\s+/).filter(Boolean);
-  return tokens.includes("icon");
+  return (
+    tokens.includes("icon") ||
+    tokens.includes("apple-touch-icon") ||
+    tokens.includes("apple-touch-icon-precomposed")
+  );
 }
 
 function extractHtmlAttribute(tag: string, attributeName: string): string | null {
@@ -160,6 +164,78 @@ export async function tryFetchImageIfHostSafe(imageUrl: string): Promise<Respons
 }
 
 /** Parse homepage HTML to find all <link rel="icon"> href values in order. */
+function declaredIconSize(
+  rawSizes: string | null,
+  iconUrl: string,
+  rawType: string | null,
+): number {
+  const type = rawType?.toLowerCase() ?? "";
+  if (type.includes("svg")) {
+    return Number.POSITIVE_INFINITY;
+  }
+  const sizes = rawSizes?.toLowerCase() ?? "";
+  if (sizes.includes("any")) {
+    return Number.POSITIVE_INFINITY;
+  }
+
+  let largest = 0;
+  const sizeMatches = sizes.matchAll(/(\d{1,4})\s*x\s*(\d{1,4})/g);
+  for (const match of sizeMatches) {
+    const width = Number(match[1]);
+    const height = Number(match[2]);
+    if (Number.isFinite(width) && Number.isFinite(height)) {
+      largest = Math.max(largest, Math.min(width, height));
+    }
+  }
+  if (largest > 0) {
+    return largest;
+  }
+
+  try {
+    const pathname = new URL(iconUrl).pathname.toLowerCase();
+    if (pathname.endsWith(".svg")) {
+      return Number.POSITIVE_INFINITY;
+    }
+    const pathSizeMatch = /(?:^|[-_/])(\d{2,4})x(\d{2,4})(?:[-_.]|$)/.exec(pathname);
+    if (pathSizeMatch) {
+      return Math.min(Number(pathSizeMatch[1]), Number(pathSizeMatch[2]));
+    }
+    if (pathname.includes("apple-touch-icon")) {
+      return 180;
+    }
+    if (pathname.endsWith(".ico")) {
+      return 32;
+    }
+  } catch {
+    // Fall through to the default below.
+  }
+
+  return 64;
+}
+
+function iconCandidateScore({
+  rel,
+  sizes,
+  type,
+  url,
+}: {
+  rel: string;
+  sizes: string | null;
+  type: string | null;
+  url: string;
+}): number {
+  const declaredSize = declaredIconSize(sizes, url, type);
+  if (declaredSize === Number.POSITIVE_INFINITY) {
+    return 10_000;
+  }
+  const relTokens = rel.toLowerCase().split(/\s+/).filter(Boolean);
+  const appleTouchBonus =
+    relTokens.includes("apple-touch-icon") || relTokens.includes("apple-touch-icon-precomposed")
+      ? 256
+      : 0;
+  return declaredSize + appleTouchBonus;
+}
+
 export async function findIconsFromHtml(origin: string): Promise<string[]> {
   try {
     const response = await fetchWithRedirectGuard(
@@ -179,9 +255,9 @@ export async function findIconsFromHtml(origin: string): Promise<string[]> {
     reader.cancel().catch(() => {});
 
     const links = html.match(/<link[^>]*>/gi) ?? [];
-    const resolvedIconUrls: string[] = [];
+    const candidates: Array<{ order: number; score: number; url: string }> = [];
 
-    for (const linkTag of links) {
+    for (const [order, linkTag] of links.entries()) {
       const relValue = extractHtmlAttribute(linkTag, "rel");
       if (!relValue || !linkRelDeclaresSiteIcon(relValue)) {
         continue;
@@ -192,13 +268,32 @@ export async function findIconsFromHtml(origin: string): Promise<string[]> {
       }
       try {
         const absoluteHref = new URL(hrefValue, origin).href;
-        resolvedIconUrls.push(absoluteHref);
+        candidates.push({
+          order,
+          score: iconCandidateScore({
+            rel: relValue,
+            sizes: extractHtmlAttribute(linkTag, "sizes"),
+            type: extractHtmlAttribute(linkTag, "type"),
+            url: absoluteHref,
+          }),
+          url: absoluteHref,
+        });
       } catch {
         // ignore malformed href values and continue trying later candidates
       }
     }
 
-    return [...new Set(resolvedIconUrls)];
+    const dedupedCandidates = new Map<string, { order: number; score: number; url: string }>();
+    for (const candidate of candidates) {
+      const existing = dedupedCandidates.get(candidate.url);
+      if (!existing || candidate.score > existing.score) {
+        dedupedCandidates.set(candidate.url, candidate);
+      }
+    }
+
+    return [...dedupedCandidates.values()]
+      .sort((left, right) => right.score - left.score || left.order - right.order)
+      .map((candidate) => candidate.url);
   } catch {
     return [];
   }
@@ -273,7 +368,7 @@ export async function resolveFeedFaviconUrl(
     }),
   );
 
-  const googleUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=128`;
+  const googleUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=256`;
   runners.push(
     tryFetchImage(googleUrl).then((result) => {
       if (result) {
