@@ -5,5 +5,6 @@ export * from "./components/appearance/inbox-settings";
 export * from "./components/appearance/shared";
 export * from "./components/billing";
 export * from "./components/dialog";
+export * from "./components/feedback";
 export * from "./components/personalization";
 export * from "./components/appearance/theme-switcher";

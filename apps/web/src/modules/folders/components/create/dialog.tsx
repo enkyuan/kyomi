@@ -60,6 +60,9 @@ export function Dialog({ open, onOpenChange, hideTrigger = false }: DialogProps 
       await queryClient.invalidateQueries({
         queryKey: ["folders"],
       });
+      await queryClient.invalidateQueries({
+        queryKey: ["inbox", "organizer"],
+      });
       setDialogOpen(false);
       toastManager.add({
         title: "Folder created",

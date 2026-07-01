@@ -124,17 +124,25 @@ export async function updateFolder(
 
 export async function deleteFolder(database: DB, userId: string, folderId: string): Promise<void> {
   const existing = await database
-    .select({ id: folders.id })
+    .select({ id: folders.id, name: folders.name })
     .from(folders)
     .where(and(eq(folders.id, folderId), eq(folders.userId, userId)))
     .limit(1);
-  if (!existing[0]) {
+  const folder = existing[0];
+  if (!folder) {
     throw new AppError("Folder not found", { status: 404, code: "FOLDER_NOT_FOUND" });
   }
+  if (folder.name === DEFAULT_FOLDER_NAME) {
+    throw new AppError("Default folder cannot be deleted", {
+      status: 400,
+      code: "DEFAULT_FOLDER_DELETE_FORBIDDEN",
+    });
+  }
 
-  // Keep parity with Python behavior where deleting a folder deletes attached subscriptions.
+  const fallbackFolder = await getOrCreateFolderByName(database, userId, DEFAULT_FOLDER_NAME);
   await database
-    .delete(feedSubscriptions)
+    .update(feedSubscriptions)
+    .set({ folderId: fallbackFolder.id, updatedAt: new Date() })
     .where(and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.folderId, folderId)));
   await database.delete(folders).where(and(eq(folders.id, folderId), eq(folders.userId, userId)));
 }

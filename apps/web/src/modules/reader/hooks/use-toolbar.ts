@@ -30,7 +30,7 @@ export type ToolbarProps = {
   onCycleContentWidth: () => void;
   onDecreaseFontSize: () => void;
   onIncreaseFontSize: () => void;
-  onCopyLink: () => void;
+  onTranslateArticle: () => void;
   onOpenOriginal: () => void;
   onOpenAi: () => void;
   onShareArticle: () => void;
@@ -256,8 +256,12 @@ export function useToolbar({
       onIncreaseFontSize: () => {
         setPreferences({ fontSizePx: Math.min(limits.maxFontSizePx, preferences.fontSizePx + 1) });
       },
-      onCopyLink: () => {
-        void copyTextToClipboard(item.link).catch(() => undefined);
+      onTranslateArticle: () => {
+        toastManager.add({
+          title: "Translation coming soon",
+          description: "This button is reserved for article translation.",
+          type: "info",
+        });
       },
       onOpenAi: () => {
         toastManager.add({

@@ -2,12 +2,12 @@
 const PROXY_ALLOWED_SCHEMES = new Set(["http:", "https:"]);
 export const FAVICON_PROXY_VERSION = "5";
 
-function parseOrigin(raw: string | null | undefined): string | null {
+function parseHttpUrl(raw: string | null | undefined): URL | null {
   if (!raw) return null;
   try {
     const parsed = new URL(raw);
     if (!PROXY_ALLOWED_SCHEMES.has(parsed.protocol)) return null;
-    return parsed.origin;
+    return parsed;
   } catch {
     return null;
   }
@@ -24,6 +24,33 @@ function buildHighResolutionGoogleFaviconUrl(raw: string): string | null {
   } catch {
     return null;
   }
+}
+
+function shouldPreferFeedOrigin(siteUrl: URL, feedUrl: URL): boolean {
+  const siteHost = siteUrl.hostname.toLowerCase();
+  const feedHost = feedUrl.hostname.toLowerCase();
+  if (siteHost === feedHost || !siteHost.startsWith(feedHost)) {
+    return false;
+  }
+
+  const suffix = siteHost.slice(feedHost.length);
+  if (!suffix || suffix.startsWith(".")) {
+    return false;
+  }
+
+  return /(?:rss|feed|atom|xml)/i.test(suffix);
+}
+
+export function selectClientFaviconOrigin(
+  siteUrl: string | null | undefined,
+  feedUrl: string | null | undefined,
+): string | null {
+  const parsedSiteUrl = parseHttpUrl(siteUrl);
+  const parsedFeedUrl = parseHttpUrl(feedUrl);
+  if (parsedSiteUrl && parsedFeedUrl && shouldPreferFeedOrigin(parsedSiteUrl, parsedFeedUrl)) {
+    return parsedFeedUrl.origin;
+  }
+  return parsedSiteUrl?.origin ?? parsedFeedUrl?.origin ?? null;
 }
 
 /**
@@ -44,7 +71,7 @@ export function buildClientFaviconUrl(
   const trimmed = storedFaviconUrl?.trim();
   if (trimmed) return buildHighResolutionGoogleFaviconUrl(trimmed) ?? trimmed;
 
-  const origin = parseOrigin(siteUrl) ?? parseOrigin(feedUrl);
+  const origin = selectClientFaviconOrigin(siteUrl, feedUrl);
   if (!origin) return null;
 
   return `/api/favicon?domain=${encodeURIComponent(origin)}&v=${FAVICON_PROXY_VERSION}`;

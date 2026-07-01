@@ -22,6 +22,7 @@ export type ArticleListRawRow = {
   feedFaviconUrl: string | null;
   isRead: boolean;
   isSaved: boolean;
+  hiddenAt: Date | null;
 };
 
 export function normalizedArticleIdentity(rawUrl: string): string {

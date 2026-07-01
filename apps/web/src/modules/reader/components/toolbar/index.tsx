@@ -1,12 +1,10 @@
 "use client";
 
 import type React from "react";
-import { useEffect, useRef } from "react";
 import {
   AddFill,
   BookmarkFill,
   BookmarkLine,
-  Copy2Line,
   RectangleLine,
   ExternalLinkLine,
   HeadAiLine,
@@ -15,6 +13,7 @@ import {
   MinimizeFill,
   TextFill,
   TextLine,
+  Translate2Line,
 } from "@mingcute/react";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { Button } from "@kyomi/ui/button";
@@ -30,6 +29,7 @@ import type { ToolbarProps } from "@modules/reader/hooks/use-toolbar";
 import type { ReaderContentWidth } from "@modules/reader/hooks/use-reader-preferences";
 import { SAVED_ACTION_ACTIVE_CLASS } from "@lib/theme/action-colors";
 import { cn } from "@lib/utils";
+import { FontSizeTicker } from "./font-size-ticker";
 
 const CONTENT_WIDTH_LABELS: Record<ReaderContentWidth, string> = {
   narrow: "Narrow",
@@ -51,7 +51,7 @@ export function Toolbar({
   onCycleContentWidth,
   onDecreaseFontSize,
   onIncreaseFontSize,
-  onCopyLink,
+  onTranslateArticle,
   onOpenOriginal,
   onOpenAi,
   onShareArticle,
@@ -103,16 +103,16 @@ export function Toolbar({
           </ReaderToolbarButton>
           <AnimatePresence initial={false} mode="popLayout">
             {readerFocusMode && !compactReaderFocusMode ? (
-              <m.div key="copy-link" layout className="flex" {...actionMotionProps}>
+              <m.div key="translate-article" layout className="flex" {...actionMotionProps}>
                 <ReaderToolbarButton
-                  label="Copy link"
-                  onClick={onCopyLink}
+                  label="Translate article"
+                  onClick={onTranslateArticle}
                   tooltipSide={tooltipSide}
                   tooltipCollisionAvoidance={tooltipCollisionAvoidance}
                   tooltipSideOffset={tooltipSideOffset}
                   large={useLargeControls}
                 >
-                  <Copy2Line />
+                  <Translate2Line />
                 </ReaderToolbarButton>
               </m.div>
             ) : null}
@@ -322,70 +322,6 @@ function ReaderFontSizeControlGroup({
   );
 }
 
-function useTickerDirection(value: number) {
-  const previousValueRef = useRef(value);
-  const direction =
-    value > previousValueRef.current ? 1 : value < previousValueRef.current ? -1 : 0;
-
-  useEffect(() => {
-    previousValueRef.current = value;
-  }, [value]);
-
-  return direction;
-}
-
-function FontSizeTicker({ value }: { value: number }) {
-  const prefersReducedMotion = useReducedMotion();
-  const direction = useTickerDirection(value);
-  const valueText = String(value);
-  const digits = valueText.split("").map((digit, offset) => ({
-    digit,
-    place: valueText.length - offset,
-  }));
-
-  return (
-    <LazyMotion features={domAnimation}>
-      <span
-        aria-label={`Font size ${value}`}
-        className="flex min-w-7 items-center justify-center px-0.5 text-xs font-medium leading-none text-muted-foreground tabular-nums"
-      >
-        {digits.map(({ digit, place }) => (
-          <span
-            key={`font-size-place-${place}`}
-            aria-hidden
-            className="relative inline-block h-4 w-[0.62em] overflow-hidden"
-          >
-            <AnimatePresence initial={false} mode="popLayout">
-              <m.span
-                key={`${digit}-${place}`}
-                className="absolute inset-0 flex items-center justify-center"
-                initial={
-                  prefersReducedMotion || direction === 0
-                    ? false
-                    : { opacity: 0, y: direction > 0 ? 8 : -8 }
-                }
-                animate={{ opacity: 1, y: 0 }}
-                exit={
-                  prefersReducedMotion || direction === 0
-                    ? undefined
-                    : { opacity: 0, y: direction > 0 ? -8 : 8 }
-                }
-                transition={
-                  prefersReducedMotion
-                    ? { duration: 0 }
-                    : { type: "spring", duration: 0.24, bounce: 0 }
-                }
-              >
-                {digit}
-              </m.span>
-            </AnimatePresence>
-          </span>
-        ))}
-      </span>
-    </LazyMotion>
-  );
-}
-
 function ReaderToolbarButton({
   label,
   children,
@@ -400,7 +336,7 @@ function ReaderToolbarButton({
   large = false,
 }: {
   label: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClick: () => void;
   active?: boolean;
   disabled?: boolean;

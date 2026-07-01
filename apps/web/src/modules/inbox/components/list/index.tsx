@@ -151,16 +151,11 @@ export function List({
               >
                 <div className="flex min-w-0 items-center gap-2">
                   <LazyMotion features={domAnimation}>
-                    <m.div
-                      layout
-                      className="inline-flex shrink-0"
-                      transition={scopeControlTransition}
-                    >
+                    <m.div className="inline-flex shrink-0">
                       <AnimatePresence initial={false} mode="popLayout">
                         {showScopedHeader && backAction ? (
                           <m.div
-                            key={isArticleScoped ? "article-back" : "feed-back"}
-                            layout
+                            key="scoped-header"
                             className="flex min-w-0 items-center gap-2"
                             initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.92 }}
                             animate={{ opacity: 1, scale: 1 }}

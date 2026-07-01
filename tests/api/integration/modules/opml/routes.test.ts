@@ -35,6 +35,7 @@ describe("opml.routes", () => {
     expect(returned as unknown).toBe(app);
     expect(routes.map((route) => `${route.method} ${route.path}`)).toEqual([
       "post /opml/imports",
+      "post /opml/imports/from-url",
       "get /opml/export",
       "get /opml/imports/active",
       "get /opml/imports/:taskId/status",
@@ -52,6 +53,9 @@ describe("opml.routes", () => {
     registerOpmlRoutes(app as never);
 
     const importRoute = routes.find((r) => r.method === "post" && r.path === "/opml/imports");
+    const importFromUrlRoute = routes.find(
+      (r) => r.method === "post" && r.path === "/opml/imports/from-url",
+    );
     const exportRoute = routes.find((r) => r.method === "get" && r.path === "/opml/export");
     const activeRoute = routes.find((r) => r.path === "/opml/imports/active");
     const statusRoute = routes.find((r) => r.path === "/opml/imports/:taskId/status");
@@ -61,6 +65,7 @@ describe("opml.routes", () => {
     );
 
     expect(importRoute).toBeDefined();
+    expect(importFromUrlRoute).toBeDefined();
     expect(exportRoute).toBeDefined();
     expect(activeRoute).toBeDefined();
     expect(statusRoute).toBeDefined();
@@ -69,6 +74,8 @@ describe("opml.routes", () => {
 
     expect((importRoute?.options as Record<string, unknown>).body).toBeDefined();
     expect((importRoute?.options as Record<string, unknown>).response).toBeDefined();
+    expect((importFromUrlRoute?.options as Record<string, unknown>).body).toBeDefined();
+    expect((importFromUrlRoute?.options as Record<string, unknown>).response).toBeDefined();
 
     expect((exportRoute?.options as Record<string, unknown>).response).toBeDefined();
 

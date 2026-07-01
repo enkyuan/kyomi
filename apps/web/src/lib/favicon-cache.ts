@@ -1,4 +1,4 @@
-import { parseClientFaviconOrigin } from "./favicon";
+import { selectClientFaviconOrigin } from "@kyomi/worker/favicon/browser";
 
 const FAVICON_CACHE_DB_NAME = "kyomi.favicon-cache";
 const FAVICON_CACHE_STORE_NAME = "hosts";
@@ -19,7 +19,7 @@ export type CachedFaviconMetadata = {
 };
 
 const memoryCache = new Map<string, CachedFaviconMetadata>();
-const prewarmedUrls = new Set<string>();
+const prewarmedImages = new Map<string, HTMLImageElement>();
 
 function canUseIndexedDb() {
   return typeof window !== "undefined" && "indexedDB" in window;
@@ -105,7 +105,7 @@ async function writeCachedFaviconToDb(entry: CachedFaviconMetadata): Promise<voi
 }
 
 export function getFaviconCacheOrigin(siteUrl: string | null, feedUrl: string): string | null {
-  return parseClientFaviconOrigin(siteUrl) ?? parseClientFaviconOrigin(feedUrl);
+  return selectClientFaviconOrigin(siteUrl, feedUrl);
 }
 
 export function peekCachedFaviconMetadata(origin: string | null): CachedFaviconMetadata | null {
@@ -176,22 +176,21 @@ export function writeCachedFaviconMiss(origin: string | null) {
 }
 
 export function prewarmFaviconUrl(url: string | null, priority: "high" | "normal" | "low") {
-  if (priority !== "high" || !url || typeof document === "undefined") {
+  if (priority !== "high" || !url || typeof Image === "undefined") {
     return;
   }
-  if (prewarmedUrls.has(url) || prewarmedUrls.size >= FAVICON_PREWARM_LIMIT) {
+  if (prewarmedImages.has(url) || prewarmedImages.size >= FAVICON_PREWARM_LIMIT) {
     return;
   }
-  const link = document.createElement("link");
-  link.rel = "preload";
-  link.as = "image";
-  link.href = url;
-  link.setAttribute("fetchpriority", "high");
-  document.head.appendChild(link);
-  prewarmedUrls.add(url);
+  const image = new Image();
+  image.decoding = "async";
+  image.loading = "eager";
+  image.setAttribute("fetchpriority", "high");
+  image.src = url;
+  prewarmedImages.set(url, image);
 }
 
 export function clearFaviconMetadataMemoryCache() {
   memoryCache.clear();
-  prewarmedUrls.clear();
+  prewarmedImages.clear();
 }

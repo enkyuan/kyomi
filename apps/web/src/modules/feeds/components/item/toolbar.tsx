@@ -1,10 +1,9 @@
 "use client";
 
-import type React from "react";
+import { useState, type CSSProperties, type ReactNode, type SyntheticEvent } from "react";
 import {
   BookmarkFill,
   BookmarkLine,
-  Copy2Line,
   ExternalLinkLine,
   EyeCloseLine,
   HeadAiLine,
@@ -26,20 +25,22 @@ import {
   type InboxItemPatch,
 } from "@modules/inbox/hooks/use-inbox-data";
 import { type InboxItem } from "@modules/inbox/services/api";
+import { CopyFeedbackIcon, useCopyFeedback } from "@lib/copy-feedback-icon";
 import { SAVED_ACTION_ACTIVE_CLASS } from "@lib/theme/action-colors";
 import { cn } from "@lib/utils";
+import { BrokenArticleReportDialog } from "./broken-article-report-dialog";
 
 const INBOX_ITEM_TOOLBAR_BASE_CLASS =
   "justify-end gap-0 rounded-lg border border-border/80 bg-popover/95 p-0.5 text-popover-foreground shadow-md/10 transition-opacity duration-150";
 const TOOLBAR_ICON_CLASS = "size-5";
 
-function stopToolbarPropagation(event: React.SyntheticEvent) {
+function stopToolbarPropagation(event: SyntheticEvent) {
   event.stopPropagation();
 }
 
 type ToolbarProps = {
   className?: string;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
   isSaved: boolean;
   onOpenAi?: () => void;
   onCopyLink: () => void;
@@ -56,16 +57,23 @@ export type ToolbarModel = {
 };
 
 export function ItemInlineToolbar({ item, className }: { item: InboxItem; className?: string }) {
-  const toolbar = useToolbarModel({ item });
+  const [reportOpen, setReportOpen] = useState(false);
+  const toolbar = useToolbarModel({
+    item,
+    onReportBrokenArticle: () => setReportOpen(true),
+  });
 
   return (
-    <Toolbar
-      {...toolbar.toolbarProps}
-      className={cn(
-        "border-0 bg-transparent p-0 text-muted-foreground shadow-none",
-        className,
-      )}
-    />
+    <>
+      <Toolbar
+        {...toolbar.toolbarProps}
+        className={cn(
+          "border-0 bg-transparent p-0 text-muted-foreground shadow-none",
+          className,
+        )}
+      />
+      <BrokenArticleReportDialog item={item} open={reportOpen} onOpenChange={setReportOpen} />
+    </>
   );
 }
 
@@ -105,9 +113,12 @@ export function Toolbar({
             <BookmarkLine className={TOOLBAR_ICON_CLASS} />
           )}
         </ToolbarButtonControl>
-        <ToolbarButtonControl label="Copy link" onClick={onCopyLink} className={buttonClassName}>
-          <Copy2Line className={TOOLBAR_ICON_CLASS} />
-        </ToolbarButtonControl>
+        <ToolbarButtonControl
+          label="Copy link"
+          onClick={onCopyLink}
+          className={buttonClassName}
+          copyFeedback
+        />
         {isArticleHeader ? (
           <>
             <ToolbarButtonControl
@@ -155,7 +166,13 @@ export function Toolbar({
   );
 }
 
-export function useToolbarModel({ item }: { item: InboxItem }): ToolbarModel {
+export function useToolbarModel({
+  item,
+  onReportBrokenArticle,
+}: {
+  item: InboxItem;
+  onReportBrokenArticle?: () => void;
+}): ToolbarModel {
   const updateItemMutation = useInboxItemStateMutation();
 
   const updateItem = (patch: InboxItemPatch, removeFromList = false) => {
@@ -168,12 +185,12 @@ export function useToolbarModel({ item }: { item: InboxItem }): ToolbarModel {
       onCopyLink: () => {
         void copyTextToClipboard(item.link).catch(() => undefined);
       },
-      onHide: () => updateItem({ isRead: true }, true),
+      onHide: () => updateItem({ isHidden: true }, true),
       onOpenSource: () => {
         window.open(item.link, "_blank", "noopener,noreferrer");
       },
       onReportBrokenArticle: () => {
-        void copyTextToClipboard(buildBrokenArticleReport(item)).catch(() => undefined);
+        onReportBrokenArticle?.();
       },
       onShareArticle: () => {
         void shareArticle(item).catch(() => undefined);
@@ -196,17 +213,6 @@ async function shareArticle(item: InboxItem) {
   }
 
   await copyTextToClipboard(item.link);
-}
-
-function buildBrokenArticleReport(item: InboxItem) {
-  return [
-    "Broken article report",
-    `Title: ${item.title}`,
-    `Feed: ${item.feedTitle}`,
-    `Feed URL: ${item.feedUrl ?? "Unknown feed URL"}`,
-    `Article URL: ${item.link}`,
-    `Item ID: ${item.id}`,
-  ].join("\n");
 }
 
 async function copyTextToClipboard(text: string) {
@@ -294,7 +300,7 @@ function ToolbarMenuItem({
   label,
   onClick,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   label: string;
   onClick: () => void;
 }) {
@@ -319,14 +325,18 @@ function ToolbarButtonControl({
   active = false,
   disabled = false,
   className,
+  copyFeedback = false,
 }: {
   label: string;
-  children: React.ReactNode;
+  children?: ReactNode;
   onClick: () => void;
   active?: boolean;
   disabled?: boolean;
   className?: string;
+  copyFeedback?: boolean;
 }) {
+  const { isCopied, showCopyFeedback } = useCopyFeedback();
+
   return (
     <Tooltip>
       <TooltipTrigger
@@ -347,11 +357,18 @@ function ToolbarButtonControl({
                   event.preventDefault();
                   event.stopPropagation();
                   onClick();
+                  if (copyFeedback) {
+                    showCopyFeedback();
+                  }
                 }}
               />
             }
           >
-            {children}
+            {copyFeedback ? (
+              <CopyFeedbackIcon isCopied={isCopied} className={TOOLBAR_ICON_CLASS} />
+            ) : (
+              children
+            )}
           </ToolbarButton>
         }
       />

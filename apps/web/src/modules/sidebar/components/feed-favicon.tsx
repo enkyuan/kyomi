@@ -4,9 +4,9 @@ import { getSvgPath } from "figma-squircle";
 import { Rss2Fill } from "@mingcute/react";
 import { cn } from "@lib/utils";
 import {
+  useCallback,
   useEffect,
   useMemo,
-  useRef,
   useState,
   type CSSProperties,
   type ReactElement,
@@ -47,7 +47,6 @@ export function FeedFavicon({
     siteUrl,
   });
   const [loadedFaviconUrl, setLoadedFaviconUrl] = useState<string | null>(null);
-  const imageRef = useRef<HTMLImageElement | null>(null);
   const [wrapper, setWrapper] = useState<HTMLSpanElement | null>(null);
   const [wrapperSize, setWrapperSize] = useState({ width: 0, height: 0 });
   const isLoaded = faviconUrl !== null && loadedFaviconUrl === faviconUrl;
@@ -56,22 +55,29 @@ export function FeedFavicon({
     prewarmFaviconUrl(faviconUrl, priority);
   }, [faviconUrl, priority]);
 
-  useEffect(() => {
-    const image = imageRef.current;
-    if (
-      !faviconUrl ||
-      loadedFaviconUrl === faviconUrl ||
-      !image?.complete ||
-      image.naturalWidth <= 0 ||
-      image.naturalHeight <= 0
-    ) {
-      return;
-    }
+  const markFaviconLoaded = useCallback(
+    (image: HTMLImageElement) => {
+      if (!faviconUrl || image.naturalWidth <= 0 || image.naturalHeight <= 0) {
+        return;
+      }
 
-    // Preloaded or cached favicons can finish before React observes onLoad.
-    handleLoad(image.naturalWidth, image.naturalHeight);
-    setLoadedFaviconUrl(faviconUrl);
-  }, [faviconUrl, handleLoad, loadedFaviconUrl]);
+      handleLoad(image.naturalWidth, image.naturalHeight);
+      setLoadedFaviconUrl((current) => (current === faviconUrl ? current : faviconUrl));
+    },
+    [faviconUrl, handleLoad],
+  );
+
+  const setImageNode = useCallback(
+    (image: HTMLImageElement | null) => {
+      if (!image?.complete) {
+        return;
+      }
+
+      // Preloaded or cached favicons can finish before React observes onLoad.
+      markFaviconLoaded(image);
+    },
+    [markFaviconLoaded],
+  );
 
   useEffect(() => {
     if (shape !== "squircle" || !wrapper) {
@@ -153,13 +159,11 @@ export function FeedFavicon({
       fetchPriority={fetchPriority}
       key={faviconUrl}
       loading={loading}
-      ref={imageRef}
+      ref={setImageNode}
       referrerPolicy="strict-origin-when-cross-origin"
       src={faviconUrl}
       onLoad={(event) => {
-        const image = event.currentTarget;
-        handleLoad(image.naturalWidth, image.naturalHeight);
-        setLoadedFaviconUrl(faviconUrl);
+        markFaviconLoaded(event.currentTarget);
       }}
       onError={failCurrentFavicon}
     />
