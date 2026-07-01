@@ -24,6 +24,10 @@ const absoluteUtcFormatter24h = new Intl.DateTimeFormat("en", {
 });
 const relativeFormatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
+function formatCompactRelative(value: number, unit: "s" | "m" | "h") {
+  return `${Math.abs(value)}${unit}`;
+}
+
 function getAbsoluteFormatter(hourCycle: InboxTimestampHourCycleDto) {
   return hourCycle === "12h" ? absoluteFormatter12h : absoluteFormatter24h;
 }
@@ -34,17 +38,24 @@ function getAbsoluteUtcFormatter(hourCycle: InboxTimestampHourCycleDto) {
 
 function formatRelative(date: Date) {
   const diffMs = date.getTime() - Date.now();
+  const diffSeconds = Math.round(diffMs / 1000);
+  const absSeconds = Math.abs(diffSeconds);
+
+  if (absSeconds < 60) {
+    return formatCompactRelative(diffSeconds, "s");
+  }
+
   const diffMinutes = Math.round(diffMs / 60_000);
   const absMinutes = Math.abs(diffMinutes);
 
   if (absMinutes < 60) {
-    return relativeFormatter.format(diffMinutes, "minute");
+    return formatCompactRelative(diffMinutes, "m");
   }
 
   const diffHours = Math.round(diffMinutes / 60);
   const absHours = Math.abs(diffHours);
   if (absHours < 24) {
-    return relativeFormatter.format(diffHours, "hour");
+    return formatCompactRelative(diffHours, "h");
   }
 
   const diffDays = Math.round(diffHours / 24);
