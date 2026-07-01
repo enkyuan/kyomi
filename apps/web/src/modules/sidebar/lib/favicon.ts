@@ -2,7 +2,7 @@ import { buildClientFaviconUrl } from "@kyomi/worker/favicon/browser";
 
 const CLIENT_FAVICON_ALLOWED_SCHEMES = new Set(["http:", "https:"]);
 
-function parseOrigin(raw: string | null | undefined): string | null {
+export function parseClientFaviconOrigin(raw: string | null | undefined): string | null {
   if (!raw) {
     return null;
   }
@@ -24,7 +24,7 @@ export function buildFaviconUrlCandidates(
 ): string[] {
   const proxyFallbackUrl = buildClientFaviconUrl(null, siteUrl, feedUrl);
   const storedUrl = buildClientFaviconUrl(storedFaviconUrl, siteUrl, feedUrl);
-  const origin = parseOrigin(siteUrl) ?? parseOrigin(feedUrl);
+  const origin = parseClientFaviconOrigin(siteUrl) ?? parseClientFaviconOrigin(feedUrl);
   const directOriginFallbackUrl = origin ? `${origin}/favicon.ico` : null;
 
   return [
