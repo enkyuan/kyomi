@@ -1,6 +1,6 @@
 /** Schemes accepted by the server-side favicon proxy (mirrors host-safety.ts). */
 const PROXY_ALLOWED_SCHEMES = new Set(["http:", "https:"]);
-const FAVICON_PROXY_VERSION = "3";
+const FAVICON_PROXY_VERSION = "4";
 
 function parseOrigin(raw: string | null | undefined): string | null {
   if (!raw) return null;
@@ -19,7 +19,7 @@ function buildHighResolutionGoogleFaviconUrl(raw: string): string | null {
     if (parsed.hostname !== "www.google.com" || parsed.pathname !== "/s2/favicons") {
       return null;
     }
-    parsed.searchParams.set("sz", "128");
+    parsed.searchParams.set("sz", "256");
     return parsed.toString();
   } catch {
     return null;
@@ -27,10 +27,11 @@ function buildHighResolutionGoogleFaviconUrl(raw: string): string | null {
 }
 
 /**
- * Build the URL to use for a feed favicon in the browser:
- *  - Returns the stored favicon URL directly when one is persisted from ingestion.
+ * Build a favicon URL for the browser:
+ *  - Returns the stored favicon URL when one is passed in.
  *  - Otherwise builds the `/api/favicon?domain=<origin>` proxy URL, which
- *    uses @kyomi/worker/favicon server-side to safely resolve the real favicon.
+ *    uses @kyomi/worker/favicon server-side to safely resolve a high-quality
+ *    site icon.
  *
  * Only http/https origins are forwarded to the proxy (matching the server's
  * ALLOWED_SCHEMES guard), so data: / blob: / file: URLs are silently dropped.

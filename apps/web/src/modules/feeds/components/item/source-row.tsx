@@ -9,6 +9,8 @@ import type { CSSProperties } from "react";
 type SourceRowProps = {
   articleUrl: string;
   feedFaviconUrl?: string | null;
+  feedUrl?: string | null;
+  feedSiteUrl?: string | null;
   feedTitle: string;
   showFavicon?: boolean;
   className?: string;
@@ -21,6 +23,8 @@ type SourceRowProps = {
 export function SourceRow({
   articleUrl,
   feedFaviconUrl,
+  feedUrl,
+  feedSiteUrl,
   feedTitle,
   showFavicon = true,
   className,
@@ -46,13 +50,10 @@ export function SourceRow({
     <div className={cn("flex w-full min-w-0 items-center gap-2.5", className)}>
       {showFavicon ? (
         <FeedFavicon
-          className={cn(
-            "size-4 shrink-0 rounded-[3px] bg-card/85 ring-1 ring-border/55 shadow-[0_1px_0_0_color-mix(in_srgb,var(--foreground)_7%,transparent)]",
-            iconClassName,
-          )}
+          className={cn("size-4 shrink-0 rounded-[3px] bg-card/85", iconClassName)}
           faviconUrl={feedFaviconUrl}
-          feedUrl={articleUrl}
-          siteUrl={articleUrl}
+          feedUrl={feedUrl ?? articleUrl}
+          siteUrl={feedSiteUrl ?? null}
           title={feedTitle}
         />
       ) : null}

@@ -47,6 +47,8 @@ function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemD
     summary: row.note,
     publishedAt: row.createdAt.toISOString(),
     feedId: CLIP_LIST_FEED_ID,
+    feedUrl: row.url,
+    feedSiteUrl: null,
     feedTitle: CLIP_LIST_FEED_TITLE,
     feedFaviconUrl: null,
     isRead: row.isRead,

@@ -16,7 +16,6 @@ import {
 
 const SKELETON_ROW_GUTTER_CLASS = "pl-8 pr-7";
 const SKELETON_ROW_SEPARATOR_CLASS = "left-8 right-7";
-const SKELETON_FOOTER_ACTION_COUNT = 2;
 
 export type RowsPaginationState = {
   isLoading: boolean;
@@ -90,26 +89,7 @@ export function SkeletonRows({
               />
             ))}
           </div>
-          <div
-            className={
-              readerFocusMode
-                ? isCompact
-                  ? `mt-2.5 pb-3 ${SKELETON_ROW_GUTTER_CLASS}`
-                  : `mt-3 pb-4 ${SKELETON_ROW_GUTTER_CLASS}`
-                : isCompact
-                  ? `mt-2.5 pb-3 ${SKELETON_ROW_GUTTER_CLASS}`
-                  : `mt-3 pb-4 ${SKELETON_ROW_GUTTER_CLASS}`
-            }
-          >
-            <div className="-ms-1 flex items-center gap-1">
-              {Array.from({ length: SKELETON_FOOTER_ACTION_COUNT }).map((_, actionIndex) => (
-                <Skeleton
-                  key={`footer-action-${actionIndex}`}
-                  className="size-10 rounded-xl sm:size-9"
-                />
-              ))}
-            </div>
-          </div>
+          <div className={isCompact ? "pb-3" : "pb-4"} />
         </li>
       ))}
     </ul>
