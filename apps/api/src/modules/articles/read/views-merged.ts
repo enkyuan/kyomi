@@ -6,7 +6,6 @@ import {
   desc,
   eq,
   gt,
-  gte,
   ilike,
   isNotNull,
   lt,
@@ -20,11 +19,13 @@ import { listClipsForUser } from "../write/clips";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "../write/clips-constants";
 import type { ArticleSort } from "../query";
 import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
-import { decodeMergedListCursor } from "./merged-view-cursor";
+import { decodeMergedListCursor } from "./merged-cursor";
 import { mergeRecentlyViewedItemsSorted, type RecentlyViewedItem } from "./recent-view";
 import { listArticlesForUser } from "./list";
 import { globalArticleIsReadSql } from "./sql";
 import type { ArticlesCursorListResponseDto } from "../types";
+import { decodeCursorPayload, encodeCursorPayload } from "./cursor-codec";
+import { searchPattern } from "../search-filter";
 
 type DB = typeof db;
 
@@ -37,22 +38,6 @@ function perSourceFetchLimit(responseLimit: number) {
   return Math.min(200, Math.max(responseLimit * 2, responseLimit));
 }
 
-function utcDayRange() {
-  const start = new Date();
-  start.setUTCHours(0, 0, 0, 0);
-  const end = new Date(start);
-  end.setUTCDate(end.getUTCDate() + 1);
-  return { start, end };
-}
-
-function toBase64Url(json: string): string {
-  return Buffer.from(json, "utf8").toString("base64url");
-}
-
-function fromBase64Url(b64: string): string {
-  return Buffer.from(b64, "base64url").toString("utf8");
-}
-
 function invalidRecentViewCursor(): never {
   throw new AppError("Invalid recent view cursor.", {
     status: 400,
@@ -61,15 +46,13 @@ function invalidRecentViewCursor(): never {
 }
 
 function encodeRecentViewCursorFromItem(item: RecentlyViewedItem, sort: ArticleSort): string {
-  return `${RECENT_VIEW_CURSOR_PREFIX}${toBase64Url(
-    JSON.stringify({
-      v: 1,
-      va: item.lastViewedAt.toISOString(),
-      id: item.id,
-      r: item.isRead,
-      s: sort,
-    }),
-  )}`;
+  return encodeCursorPayload(RECENT_VIEW_CURSOR_PREFIX, {
+    v: 1,
+    va: item.lastViewedAt.toISOString(),
+    id: item.id,
+    r: item.isRead,
+    s: sort,
+  });
 }
 
 function decodeRecentViewCursor(cursor: string | undefined): RecentlyViewedCursor | undefined {
@@ -81,21 +64,12 @@ function decodeRecentViewCursor(cursor: string | undefined): RecentlyViewedCurso
     invalidRecentViewCursor();
   }
 
-  let raw: unknown;
-  try {
-    raw = JSON.parse(fromBase64Url(trimmed.slice(RECENT_VIEW_CURSOR_PREFIX.length)));
-  } catch {
-    invalidRecentViewCursor();
-  }
-  if (!raw || typeof raw !== "object") {
-    invalidRecentViewCursor();
-  }
-  const payload = raw as {
+  const payload = decodeCursorPayload<{
     v?: unknown;
     va?: unknown;
     id?: unknown;
     r?: unknown;
-  };
+  }>(RECENT_VIEW_CURSOR_PREFIX, trimmed, invalidRecentViewCursor);
   if (payload.v !== 1 || typeof payload.va !== "string" || typeof payload.id !== "string") {
     invalidRecentViewCursor();
   }
@@ -110,16 +84,11 @@ function decodeRecentViewCursor(cursor: string | undefined): RecentlyViewedCurso
   };
 }
 
-function escapeLikePattern(input: string): string {
-  return input.replaceAll("\\", "\\\\").replaceAll("%", "\\%").replaceAll("_", "\\_");
-}
-
 function pushRecentFeedSearchFilter(filters: SQL[], search: string | undefined) {
-  const trimmed = search?.trim();
-  if (!trimmed) {
+  const pattern = searchPattern(search);
+  if (!pattern) {
     return;
   }
-  const pattern = `%${escapeLikePattern(trimmed)}%`;
   filters.push(
     or(
       ilike(feedItems.title, pattern),
@@ -130,11 +99,10 @@ function pushRecentFeedSearchFilter(filters: SQL[], search: string | undefined) 
 }
 
 function pushRecentClipSearchFilter(filters: SQL[], search: string | undefined) {
-  const trimmed = search?.trim();
-  if (!trimmed) {
+  const pattern = searchPattern(search);
+  if (!pattern) {
     return;
   }
-  const pattern = `%${escapeLikePattern(trimmed)}%`;
   filters.push(
     or(
       ilike(articleClips.title, pattern),
@@ -391,36 +359,6 @@ function mergedRecentlyViewedResponsePaged(
     has_more: hasMore,
     total_count: null,
   };
-}
-
-export async function listMergedTodayView(
-  database: DB,
-  userId: string,
-  limit: number,
-  cursor?: string,
-  sort: ArticleSort = "newest",
-) {
-  const boundary = decodeMergedListCursor(cursor);
-  const take = perSourceFetchLimit(limit);
-  const { start, end } = utcDayRange();
-  const [feed, clips] = await Promise.all([
-    listArticlesForUser(database, userId, {
-      limit: take,
-      publishedAfter: start,
-      publishedBefore: end,
-      exclusiveBefore: boundary,
-      sort,
-    }),
-    listClipsForUser(database, userId, {
-      limit: take,
-      publishedAfter: start,
-      publishedBefore: end,
-      exclusiveBefore: boundary,
-      sort,
-    }),
-  ]);
-  const mergedSorted = mergeArticleListsSorted([feed.items, clips.items], sort);
-  return mergedFeedClipResponsePaged(mergedSorted, limit, feed.has_more, clips.has_more, sort);
 }
 
 export async function listMergedRecentlyReadView(

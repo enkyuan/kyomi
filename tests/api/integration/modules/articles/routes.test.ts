@@ -35,7 +35,6 @@ describe("articles.routes", () => {
     expect(returned as unknown).toBe(app);
     expect(routes.map((route) => `${route.method} ${route.path}`)).toEqual([
       "get /articles/views/all",
-      "get /articles/views/today",
       "get /articles/views/recently-read",
       "get /articles/views/read-later",
       "get /articles/counts",
@@ -47,13 +46,12 @@ describe("articles.routes", () => {
       "get /articles/write/clips",
       "get /articles/:articleId",
       "post /articles/:articleId/extract-full-text",
-      "post /articles/:articleId/summarize",
-      "post /articles/:articleId/translate",
       "post /articles",
       "post /articles/:articleId/view",
       "post /articles/:articleId/reports/broken",
       "put /articles/:articleId",
     ]);
+    expect(routes.find((route) => route.path === "/articles/views/today")).toBeUndefined();
     for (const route of routes) {
       expect(typeof route.handler).toBe("function");
     }
@@ -79,7 +77,7 @@ describe("articles.routes", () => {
     expect((detail?.options as Record<string, unknown>).response).toBeDefined();
   });
 
-  test("exposes validation/response schemas for enrichment routes", () => {
+  test("exposes validation/response schemas for extract-full-text only", () => {
     const { app, routes } = createRouteRecorder();
     registerArticleRoutes(app as never);
 
@@ -88,17 +86,11 @@ describe("articles.routes", () => {
     const translate = routes.find((r) => r.path.endsWith("/translate"));
 
     expect(extract).toBeDefined();
-    expect(summarize).toBeDefined();
-    expect(translate).toBeDefined();
+    expect(summarize).toBeUndefined();
+    expect(translate).toBeUndefined();
 
     expect((extract?.options as Record<string, unknown>).params).toBeDefined();
     expect((extract?.options as Record<string, unknown>).response).toBeDefined();
-    expect((summarize?.options as Record<string, unknown>).params).toBeDefined();
-    expect((summarize?.options as Record<string, unknown>).body).toBeDefined();
-    expect((summarize?.options as Record<string, unknown>).response).toBeDefined();
-    expect((translate?.options as Record<string, unknown>).params).toBeDefined();
-    expect((translate?.options as Record<string, unknown>).body).toBeDefined();
-    expect((translate?.options as Record<string, unknown>).response).toBeDefined();
   });
 
   test("exposes request/response schemas for write routes", () => {

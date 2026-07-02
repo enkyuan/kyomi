@@ -1,5 +1,5 @@
 import { db, pool } from "@adapters/db/client";
-import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
+import { assertApiDatabaseReady } from "@adapters/db/preflight";
 import { searchFeeds } from "@modules/discover/service";
 
 function getArgValue(flag: string): string | null {

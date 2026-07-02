@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { isValidEmail, normalizeEmail } from "@/lib/email";
+import { isValidEmail, normalizeEmail } from "@shared/text/email";
 
 describe("email validation", () => {
   test("accepts common addresses", () => {

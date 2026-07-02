@@ -2,7 +2,7 @@ import { getRedis } from "@adapters/redis";
 import { logger } from "@adapters/logger";
 import { env } from "@config/env";
 import { createApp } from "../http/create-app";
-import { listenWithRetry } from "../http/listen-with-retry";
+import { listenWithRetry } from "../http/listener";
 import { runFeedRefreshSchedulerLoop } from "../jobs/refresh-scheduler";
 import { runWorkerLoop } from "../jobs/run-worker";
 

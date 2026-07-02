@@ -5,7 +5,7 @@ import { uuidParam } from "@shared/http/v1/stub";
 import { assertFeedAdminUser } from "./guard";
 import { adminDeleteGlobalFeed, adminUpdateGlobalFeed } from "./service";
 import type { AdminUpdateGlobalFeedBody } from "../types";
-import * as dto from "../dto";
+import * as schemas from "../schemas";
 
 export function registerFeedAdminRoutes(app: Elysia) {
   return app
@@ -24,9 +24,9 @@ export function registerFeedAdminRoutes(app: Elysia) {
       },
       {
         params: t.Object({ feedId: uuidParam }),
-        body: dto.adminUpdateGlobalFeedBody,
+        body: schemas.adminUpdateGlobalFeedBody,
         response: {
-          200: dto.adminGlobalFeedDetail,
+          200: schemas.adminGlobalFeedDetail,
         },
       },
     )
@@ -42,7 +42,7 @@ export function registerFeedAdminRoutes(app: Elysia) {
       {
         params: t.Object({ feedId: uuidParam }),
         response: {
-          200: dto.messageResponse,
+          200: schemas.messageResponse,
         },
       },
     );

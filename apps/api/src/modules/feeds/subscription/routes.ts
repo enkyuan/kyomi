@@ -3,19 +3,16 @@ import { t } from "elysia";
 import { enforceRateLimitForContext } from "@adapters/rate-limit/plugin";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { uuidParam } from "@shared/http/v1/stub";
+import { getFeedDetailForUser, listSubscribedFeeds } from "../read/service";
+import { enqueueFeedRefresh } from "../refresh/service";
+import * as schemas from "../schemas";
 import {
-  assertUserSubscribedToFeed,
   bulkMoveFeedsToFolder,
   bulkUnsubscribeFromFeeds,
-  createOrSubscribeToFeed,
-  getFeedDetailForUser,
-  listSubscribedFeeds,
-  subscribeToExistingFeed,
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
-} from "../service";
-import * as dto from "../dto";
-import { enqueueFeedRefresh } from "../refresh/service";
+} from "./mutations";
+import { createOrSubscribeToFeed, subscribeToExistingFeed } from "./service";
 
 const createFeedRateLimit = {
   name: "feeds.create_by_url",
@@ -44,10 +41,10 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
         return result;
       },
       {
-        body: dto.subscribeFeedsByUrlBody,
+        body: schemas.subscribeFeedsByUrlBody,
         response: {
-          200: dto.feedSubscribeResult,
-          201: dto.feedSubscribeResult,
+          200: schemas.feedSubscribeResult,
+          201: schemas.feedSubscribeResult,
         },
       },
     )
@@ -70,8 +67,8 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
       {
         params: t.Object({ feedId: uuidParam }),
         response: {
-          200: dto.feedSubscribeResult,
-          201: dto.feedSubscribeResult,
+          200: schemas.feedSubscribeResult,
+          201: schemas.feedSubscribeResult,
         },
       },
     )
@@ -84,9 +81,9 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
         return result;
       },
       {
-        body: dto.unsubscribeBulkBody,
+        body: schemas.unsubscribeBulkBody,
         response: {
-          200: dto.bulkUnsubscribeResponse,
+          200: schemas.bulkUnsubscribeResponse,
         },
       },
     )
@@ -106,9 +103,9 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
         return result;
       },
       {
-        body: dto.moveFeedsBulkBody,
+        body: schemas.moveFeedsBulkBody,
         response: {
-          200: dto.bulkMoveFeedsResponse,
+          200: schemas.bulkMoveFeedsResponse,
         },
       },
     )
@@ -122,7 +119,7 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
       },
       {
         response: {
-          200: dto.subscribedFeedsListResponse,
+          200: schemas.subscribedFeedsListResponse,
         },
       },
     )
@@ -142,7 +139,7 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
       {
         params: t.Object({ feedId: uuidParam }),
         response: {
-          200: dto.feedDetailResponse,
+          200: schemas.feedDetailResponse,
         },
       },
     )
@@ -160,9 +157,9 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
       },
       {
         params: t.Object({ feedId: uuidParam }),
-        body: dto.updateFeedSubscriptionBody,
+        body: schemas.updateFeedSubscriptionBody,
         response: {
-          200: dto.messageResponse,
+          200: schemas.messageResponse,
         },
       },
     )
@@ -177,7 +174,7 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
       {
         params: t.Object({ feedId: uuidParam }),
         response: {
-          200: dto.messageResponse,
+          200: schemas.messageResponse,
         },
       },
     );

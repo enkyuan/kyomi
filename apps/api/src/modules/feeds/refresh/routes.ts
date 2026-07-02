@@ -2,8 +2,9 @@ import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { uuidParam } from "@shared/http/v1/stub";
-import { assertUserSubscribedToFeed, listFeedRefreshStatusesForUser } from "../service";
-import * as dto from "../dto";
+import { listFeedRefreshStatusesForUser } from "../read/service";
+import * as schemas from "../schemas";
+import { assertUserSubscribedToFeed } from "../subscription/mutations";
 import {
   enqueueBatchFeedRefresh,
   enqueueFeedRefresh,
@@ -25,7 +26,7 @@ export function registerFeedRefreshRoutes(app: Elysia) {
       },
       {
         response: {
-          200: dto.feedRefreshStatusListResponse,
+          200: schemas.feedRefreshStatusListResponse,
         },
       },
     )

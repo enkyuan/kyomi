@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   decodeMergedListCursor,
   encodeMergedListCursorFromItem,
-} from "@modules/articles/read/merged-view-cursor";
+} from "@modules/articles/read/merged-cursor";
 import type { ArticleListItemDto } from "@modules/articles/types";
 
 const sampleItem = (overrides: Partial<ArticleListItemDto> = {}): ArticleListItemDto => ({
@@ -31,7 +31,7 @@ describe("merged list cursor codec", () => {
 
   test("round-trips boundary", () => {
     const item = sampleItem();
-    const enc = encodeMergedListCursorFromItem(item);
+    const enc = encodeMergedListCursorFromItem(item, "newest");
     const dec = decodeMergedListCursor(enc);
     expect(dec?.publishedAt.toISOString()).toBe(item.publishedAt);
     expect(dec?.id).toBe(item.id);

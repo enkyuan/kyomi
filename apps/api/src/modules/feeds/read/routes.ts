@@ -2,7 +2,7 @@ import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { uuidParam } from "@shared/http/v1/stub";
-import * as dto from "../dto";
+import * as schemas from "../schemas";
 import { markAllArticlesReadInFeed } from "./status";
 
 export function registerFeedReadRoutes(app: Elysia) {
@@ -17,7 +17,7 @@ export function registerFeedReadRoutes(app: Elysia) {
     {
       params: t.Object({ feedId: uuidParam }),
       response: {
-        200: dto.messageResponse,
+        200: schemas.messageResponse,
       },
     },
   );

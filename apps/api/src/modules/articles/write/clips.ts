@@ -1,9 +1,9 @@
 import type { db } from "@adapters/db/client";
 import { articleClips } from "@kyomi/db";
-import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
 import { and, asc, desc, eq, gt, gte, ilike, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
-import { extractFullTextFromUrl } from "../reader/enrichment";
+import { assertHttpOrHttpsUrl } from "@shared/net/http-url";
+import { extractFullTextFromUrl } from "../reader/extract-url";
 import type { ExtractedContentStatus } from "../reader/content-types";
 import {
   buildExtractedReaderViewFromDb,
@@ -12,6 +12,7 @@ import {
 } from "../reader/normalize-content";
 import { buildArticleReaderDto } from "../reader/reader-mode";
 import type { ArticleSort } from "../query";
+import { searchPattern } from "../search-filter";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./clips-constants";
 import type { ArticleDetailDto, ArticleListItemDto, ArticlesCursorListResponseDto } from "../types";
 
@@ -418,10 +419,6 @@ function clipOrderByForSort(sort: ArticleSort) {
   return [desc(articleClips.createdAt), desc(articleClips.id)] as const;
 }
 
-function escapeLikePattern(input: string): string {
-  return input.replaceAll("\\", "\\\\").replaceAll("%", "\\%").replaceAll("_", "\\_");
-}
-
 async function listClipRows(
   database: DB,
   userId: string,
@@ -446,9 +443,8 @@ async function listClipRows(
   if (opts.publishedBefore) {
     filters.push(lt(articleClips.createdAt, opts.publishedBefore));
   }
-  const search = opts.search?.trim();
-  if (search) {
-    const pattern = `%${escapeLikePattern(search)}%`;
+  const pattern = searchPattern(opts.search);
+  if (pattern) {
     filters.push(
       or(
         ilike(articleClips.title, pattern),

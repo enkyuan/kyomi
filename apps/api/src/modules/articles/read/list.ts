@@ -6,8 +6,10 @@ import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { collapseObviousDuplicates, type ArticleListRawRow } from "./dedupe";
 import { articleIsReadSql, globalArticleIsReadSql } from "./sql";
 import { capPublishedBeforeAtNow } from "./published-window";
+import { searchPattern } from "../search-filter";
 import type { ArticleSort } from "../query";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "../types";
+import { decodeCursorPayload, encodeCursorPayload } from "./cursor-codec";
 
 type DB = typeof db;
 
@@ -47,38 +49,35 @@ function normalizeLimit(limit: number): number {
   return Math.min(Math.max(limit, 1), 200);
 }
 
-function toBase64Url(json: string): string {
-  return Buffer.from(json, "utf8").toString("base64url");
-}
-
-function fromBase64Url(b64: string): string {
-  return Buffer.from(b64, "base64url").toString("utf8");
-}
-
 function encodeCompositeCursor(
   row: Pick<ArticleListRawRow, "publishedAt" | "id" | "isRead">,
   sort: ArticleSort,
 ): string {
-  return `a1.${toBase64Url(
-    JSON.stringify({
-      v: 1,
-      s: sort,
-      pa: row.publishedAt.toISOString(),
-      id: row.id,
-      r: row.isRead,
-    }),
-  )}`;
+  return encodeCursorPayload("a1.", {
+    v: 1,
+    s: sort,
+    pa: row.publishedAt.toISOString(),
+    id: row.id,
+    r: row.isRead,
+  });
 }
 
 function decodeCompositeCursor(cursor: string): ArticleCursor | null {
   const trimmed = cursor.trim();
   if (trimmed.startsWith("a1.")) {
+    let raw: {
+      pa?: unknown;
+      id?: unknown;
+      r?: unknown;
+    };
     try {
-      const raw = JSON.parse(fromBase64Url(trimmed.slice(3))) as {
+      raw = decodeCursorPayload<{
         pa?: unknown;
         id?: unknown;
         r?: unknown;
-      };
+      }>("a1.", trimmed, () => {
+        throw new Error("Invalid article cursor");
+      });
       if (typeof raw.pa !== "string" || typeof raw.id !== "string" || !raw.id.trim()) {
         return null;
       }
@@ -253,16 +252,11 @@ function pushPublishedDateFilters(filters: SQL[], opts: ListArticlesOptions): vo
   filters.push(lt(feedItems.publishedAt, capPublishedBeforeAtNow(opts.publishedBefore)));
 }
 
-function escapeLikePattern(input: string): string {
-  return input.replaceAll("\\", "\\\\").replaceAll("%", "\\%").replaceAll("_", "\\_");
-}
-
 function pushSearchFilter(filters: SQL[], opts: ListArticlesOptions): void {
-  const search = opts.search?.trim();
-  if (!search) {
+  const pattern = searchPattern(opts.search);
+  if (!pattern) {
     return;
   }
-  const pattern = `%${escapeLikePattern(search)}%`;
   filters.push(
     or(
       ilike(feedItems.title, pattern),

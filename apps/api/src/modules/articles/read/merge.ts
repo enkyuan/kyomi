@@ -1,5 +1,5 @@
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "../types";
-import { encodeMergedListCursorFromItem } from "./merged-view-cursor";
+import { encodeMergedListCursorFromItem } from "./merged-cursor";
 import type { ArticleSort } from "../query";
 
 /** Global sort: newest first; tie-break by id descending (matches DB `orderBy`). */

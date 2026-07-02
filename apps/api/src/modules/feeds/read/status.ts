@@ -1,6 +1,6 @@
 import { sql } from "drizzle-orm";
 import type { db } from "@adapters/db/client";
-import { assertUserSubscribedToFeed } from "../service";
+import { assertUserSubscribedToFeed } from "../subscription/mutations";
 import type { MessageResponseDto } from "../types";
 
 type DB = typeof db;

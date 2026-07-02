@@ -1,6 +1,7 @@
 import { AppError } from "@shared/errors/app";
 import type { ArticleSort } from "../query";
 import type { ArticleListItemDto } from "../types";
+import { decodeCursorPayload, encodeCursorPayload } from "./cursor-codec";
 
 const PREFIX = "m1.";
 
@@ -13,14 +14,6 @@ type MergedCursorPayloadV1 = {
   s?: ArticleSort;
 };
 
-function toBase64Url(json: string): string {
-  return Buffer.from(json, "utf8").toString("base64url");
-}
-
-function fromBase64Url(b64: string): string {
-  return Buffer.from(b64, "base64url").toString("utf8");
-}
-
 function invalidMergedCursor(): never {
   throw new AppError("Invalid merged view cursor.", {
     status: 400,
@@ -29,16 +22,11 @@ function invalidMergedCursor(): never {
 }
 
 function parseMergedCursorPayload(trimmed: string): MergedCursorPayloadV1 {
-  let raw: unknown;
-  try {
-    raw = JSON.parse(fromBase64Url(trimmed.slice(PREFIX.length)));
-  } catch {
-    invalidMergedCursor();
-  }
-  if (!raw || typeof raw !== "object") {
-    invalidMergedCursor();
-  }
-  const o = raw as Partial<MergedCursorPayloadV1>;
+  const o = decodeCursorPayload<Partial<MergedCursorPayloadV1>>(
+    PREFIX,
+    trimmed,
+    invalidMergedCursor,
+  );
   if (o.v !== 1 || typeof o.pa !== "string" || typeof o.id !== "string" || !o.id.trim()) {
     invalidMergedCursor();
   }
@@ -75,7 +63,7 @@ export function encodeMergedListCursorFromItem(
     r: item.isRead,
     s: sort,
   };
-  return PREFIX + toBase64Url(JSON.stringify(payload));
+  return encodeCursorPayload(PREFIX, payload);
 }
 
 export function decodeMergedListCursor(

@@ -33,7 +33,7 @@ function applyDomainRoutes(app: Elysia): Elysia {
  * Versioned JSON API (`/api/v1/...`): shared adapters, session context, then domain routers.
  * Route order matches stable URL semantics (discovery → identity → content → feeds → imports).
  */
-export const apiV1Router = new Elysia({
+export const v1Router = new Elysia({
   name: "kyomi.api.v1",
 })
   .use(apiV1AdapterPlugin)

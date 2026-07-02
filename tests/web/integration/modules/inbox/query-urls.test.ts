@@ -30,6 +30,17 @@ describe("inbox query URLs", () => {
         }),
       ).toBe("/api/v1/articles?limit=100");
     }
+
+    expect(
+      buildInboxListUrl({
+        filter: "today",
+        timezoneOffsetMinutes: -840,
+        includeRead: false,
+        search: "edge",
+        cursor: undefined,
+        sort: undefined,
+      }),
+    ).toBe("/api/v1/articles?limit=100&search=edge");
   });
 
   test("keeps All on the global all-articles view", () => {

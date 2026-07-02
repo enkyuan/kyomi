@@ -1,6 +1,6 @@
 import { feeds } from "@kyomi/db";
 import { db, pool } from "@adapters/db/client";
-import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
+import { assertApiDatabaseReady } from "@adapters/db/preflight";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";
 import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize-url";
 

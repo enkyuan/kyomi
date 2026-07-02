@@ -2,7 +2,7 @@ import { Elysia } from "elysia";
 import { authRoutes } from "@adapters/auth/routes";
 import { faviconPlugin } from "@modules/favicon/routes";
 import { healthPlugin } from "@modules/health/routes";
-import { apiV1Router } from "./api-v1-router";
+import { v1Router } from "./v1-router";
 
 /** Root HTTP plugin: operational endpoints + versioned product API. */
 export const httpRouter = new Elysia({
@@ -11,7 +11,7 @@ export const httpRouter = new Elysia({
   .use(healthPlugin)
   .use(faviconPlugin)
   .use(authRoutes)
-  .use(apiV1Router);
+  .use(v1Router);
 
 export function registerRoutes(app: Elysia) {
   app.use(httpRouter);

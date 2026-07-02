@@ -1,8 +1,18 @@
-import { fetchFeedDocument, type FetchFeedDocumentResult } from "@modules/discover/feed/fetch";
 import { AppError } from "@shared/errors/app";
 import { assertHttpOrHttpsUrl } from "@shared/net/http-url";
+import {
+  fetchRemoteDocument,
+  type RemoteDocumentFetchResult,
+} from "@shared/net/remote-document";
+import { OPML_MAX_BYTES } from "./constants";
 
 const DEFAULT_REMOTE_OPML_FILENAME = "remote.opml";
+const OPML_FETCH_HEADERS = {
+  accept:
+    "text/html,application/xhtml+xml,application/xml;q=0.9,application/rss+xml,application/atom+xml,application/json,*/*;q=0.8",
+  "user-agent":
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 (VolsRssFeedFetcher/1.0)",
+} as const;
 
 type FetchOpmlDocumentResult = {
   xml: string;
@@ -33,7 +43,7 @@ function parseOpmlImportUrl(rawUrl: string): string {
 }
 
 function fetchFailureToAppError(
-  result: Extract<FetchFeedDocumentResult, { ok: false }>,
+  result: Extract<RemoteDocumentFetchResult, { ok: false }>,
 ): AppError {
   switch (result.code) {
     case "BLOCKED_URL":
@@ -80,7 +90,10 @@ export async function fetchOpmlDocumentFromUrl(
   rawUrl: string,
 ): Promise<FetchOpmlDocumentResult> {
   const url = parseOpmlImportUrl(rawUrl);
-  const fetched = await fetchFeedDocument(url);
+  const fetched = await fetchRemoteDocument(url, {
+    headers: OPML_FETCH_HEADERS,
+    maxBytes: OPML_MAX_BYTES,
+  });
 
   if (!fetched.ok) {
     throw fetchFailureToAppError(fetched);

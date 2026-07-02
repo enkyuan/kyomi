@@ -220,25 +220,6 @@ export const messageResponseSchema = t.Object({
   message: t.String(),
 });
 
-export const summarizeBodySchema = t.Object({
-  content: t.Optional(t.String()),
-  language_key: t.Optional(t.String()),
-});
-
-export const summarizeResponseSchema = t.Object({
-  summary: t.String(),
-});
-
-export const translateBodySchema = t.Object({
-  content: t.Optional(t.String()),
-  target_language: t.String({ minLength: 1 }),
-});
-
-export const translateResponseSchema = t.Object({
-  translated_content: t.String(),
-  target_language: t.String(),
-});
-
 export const unreadCountsQuerySchema = t.Object({
   feed_ids: t.Optional(t.String()),
 });

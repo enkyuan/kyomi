@@ -27,7 +27,6 @@ import { checkSavedArticleForUser } from "./saved-check";
 import {
   listMergedRecentlyReadView,
   listMergedSavedView,
-  listMergedTodayView,
 } from "./views-merged";
 
 export function registerArticleReadRoutes(app: Elysia) {
@@ -44,18 +43,6 @@ export function registerArticleReadRoutes(app: Elysia) {
             sort: merged.sort,
             search: merged.search,
           });
-        },
-        {
-          query: mergedArticleViewsQuerySchema,
-          response: { 200: cursorListResponseSchema },
-        },
-      )
-      .get(
-        "/articles/views/today",
-        async (context) => {
-          const { db, query, userId } = v1HandlerContext(context);
-          const merged = parseMergedViewListQuery(query as Record<string, unknown>);
-          return listMergedTodayView(db, userId, merged.limit, merged.cursor, merged.sort);
         },
         {
           query: mergedArticleViewsQuerySchema,
