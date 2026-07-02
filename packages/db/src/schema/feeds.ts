@@ -88,7 +88,7 @@ export const folders = pgTable(
   (table) => [
     uniqueIndex("folders_user_id_name_unique").on(table.userId, table.name),
     index("folders_user_pinned_idx")
-      .on(table.userId, table.pinnedAt.desc(), table.name)
+      .on(table.userId, table.pinnedAt.desc().nullsFirst(), table.name)
       .where(sql`${table.isPinned} IS TRUE`),
   ],
 );

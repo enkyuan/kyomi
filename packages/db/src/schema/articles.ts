@@ -46,11 +46,14 @@ export const feedItems = pgTable(
   },
   (table) => [
     uniqueIndex("feed_items_feed_id_canonical_url_unique").on(table.feedId, table.canonicalUrl),
-    index("feed_items_published_id_idx").on(table.publishedAt.desc(), table.id.desc()),
+    index("feed_items_published_id_idx").on(
+      table.publishedAt.desc().nullsFirst(),
+      table.id.desc().nullsFirst(),
+    ),
     index("feed_items_feed_published_id_idx").on(
       table.feedId,
-      table.publishedAt.desc(),
-      table.id.desc(),
+      table.publishedAt.desc().nullsFirst(),
+      table.id.desc().nullsFirst(),
     ),
   ],
 );
@@ -75,7 +78,11 @@ export const feedItemUserState = pgTable(
   (table) => [
     primaryKey({ columns: [table.userId, table.feedItemId] }),
     index("feed_item_user_state_viewed_idx")
-      .on(table.userId, table.lastViewedAt.desc(), table.feedItemId.desc())
+      .on(
+        table.userId,
+        table.lastViewedAt.desc().nullsFirst(),
+        table.feedItemId.desc().nullsFirst(),
+      )
       .where(sql`${table.lastViewedAt} IS NOT NULL`),
     index("feed_item_user_state_saved_idx")
       .on(table.userId, table.isSaved, table.feedItemId)
@@ -121,10 +128,15 @@ export const articleClips = pgTable(
   },
   (table) => [
     index("article_clips_user_viewed_idx")
-      .on(table.userId, table.lastViewedAt.desc(), table.id.desc())
+      .on(table.userId, table.lastViewedAt.desc().nullsFirst(), table.id.desc().nullsFirst())
       .where(sql`${table.lastViewedAt} IS NOT NULL`),
     index("article_clips_user_saved_created_idx")
-      .on(table.userId, table.isSaved, table.createdAt.desc(), table.id.desc())
+      .on(
+        table.userId,
+        table.isSaved,
+        table.createdAt.desc().nullsFirst(),
+        table.id.desc().nullsFirst(),
+      )
       .where(sql`${table.isSaved} IS TRUE`),
     index("article_clips_user_saved_at_idx")
       .on(table.userId, table.savedAt.asc(), table.id)
@@ -149,11 +161,11 @@ export const articleViewEvents = pgTable(
   (table) => [
     index("article_view_events_user_viewed_idx").on(
       table.userId,
-      table.viewedAt.desc(),
-      table.id.desc(),
+      table.viewedAt.desc().nullsFirst(),
+      table.id.desc().nullsFirst(),
     ),
     index("article_view_events_user_feed_viewed_idx")
-      .on(table.userId, table.feedId, table.viewedAt.desc())
+      .on(table.userId, table.feedId, table.viewedAt.desc().nullsFirst())
       .where(sql`${table.feedId} IS NOT NULL`),
   ],
 );
@@ -175,8 +187,8 @@ export const feedUserStats = pgTable(
     primaryKey({ columns: [table.userId, table.feedId] }),
     index("feed_user_stats_user_rank_idx").on(
       table.userId,
-      table.viewedItemCount.desc(),
-      table.lastViewedAt.desc(),
+      table.viewedItemCount.desc().nullsFirst(),
+      table.lastViewedAt.desc().nullsFirst(),
       table.feedId,
     ),
   ],
@@ -202,7 +214,10 @@ export const articleReports = pgTable(
     createdAt: timestamp("created_at").notNull().defaultNow(),
   },
   (table) => [
-    index("article_reports_user_created_idx").on(table.userId, table.createdAt.desc()),
-    index("article_reports_article_created_idx").on(table.articleId, table.createdAt.desc()),
+    index("article_reports_user_created_idx").on(table.userId, table.createdAt.desc().nullsFirst()),
+    index("article_reports_article_created_idx").on(
+      table.articleId,
+      table.createdAt.desc().nullsFirst(),
+    ),
   ],
 );
