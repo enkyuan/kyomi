@@ -7,7 +7,7 @@
 @import "@fontsource/dm-sans/400.css";
 @import "@fontsource/dm-sans/500.css";
 @import "@fontsource/dm-sans/700.css";
-@import "@vols.rss/reader/web/styles.css";
+@import "@kyomi/reader/web/styles.css";
 
 @theme inline {
   --font-sans: var(--font-sans);
@@ -32,6 +32,7 @@
   --color-info-foreground: var(--info-foreground);
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
+  --color-petrol-green: var(--petrol-green);
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
   --color-accent-foreground: var(--accent-foreground);
@@ -76,36 +77,24 @@
   --font-heading: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-reader: "DM Sans", var(--font-sans);
   --font-mono:
-    "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+    "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
   --font-code:
-    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", monospace;
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    monospace;
   --radius: 0.625rem;
   --background: oklch(0.971 0.005 78.298);
-  --foreground: color-mix(
-    in oklab,
-    var(--color-neutral-800) 92%,
-    var(--background)
-  );
+  --foreground: color-mix(in oklab, var(--color-neutral-800) 92%, var(--background));
   --card: color-mix(in oklab, var(--background) 78%, var(--color-white));
   --card-foreground: var(--foreground);
   --popover: color-mix(in oklab, var(--background) 72%, var(--color-white));
   --popover-foreground: var(--foreground);
-  --primary: color-mix(
-    in oklab,
-    var(--color-neutral-800) 96%,
-    var(--background)
-  );
+  --primary: color-mix(in oklab, var(--color-neutral-800) 96%, var(--background));
   --primary-foreground: var(--color-neutral-50);
   --secondary: --alpha(var(--color-black) / 4%);
   --secondary-foreground: var(--foreground);
   --muted: --alpha(var(--color-black) / 4%);
-  --muted-foreground: color-mix(
-    in oklab,
-    var(--foreground) 58%,
-    var(--background)
-  );
+  --muted-foreground: color-mix(in oklab, var(--foreground) 58%, var(--background));
   --accent: --alpha(var(--color-black) / 4%);
   --accent-foreground: var(--foreground);
   --destructive: var(--color-red-500);
@@ -114,17 +103,14 @@
   --info-foreground: var(--color-blue-700);
   --success: var(--color-emerald-500);
   --success-foreground: var(--color-emerald-700);
+  --petrol-green: oklch(0.486 0.081 176.621);
   --warning: var(--color-amber-500);
   --warning-foreground: var(--color-amber-700);
   --input: --alpha(var(--color-black) / 10%);
   --border: --alpha(var(--color-black) / 8%);
   --ring: var(--color-neutral-400);
   --sidebar: color-mix(in oklab, var(--background) 84%, var(--color-white));
-  --sidebar-foreground: color-mix(
-    in oklab,
-    var(--foreground) 68%,
-    var(--sidebar)
-  );
+  --sidebar-foreground: color-mix(in oklab, var(--foreground) 68%, var(--sidebar));
   --sidebar-primary: var(--primary);
   --sidebar-primary-foreground: var(--color-neutral-50);
   --sidebar-accent: --alpha(var(--color-black) / 4%);
@@ -137,11 +123,7 @@
 }
 
 .dark {
-  --background: color-mix(
-    in srgb,
-    var(--color-neutral-950) 95%,
-    var(--color-white)
-  );
+  --background: color-mix(in srgb, var(--color-neutral-950) 95%, var(--color-white));
   --foreground: var(--color-neutral-100);
   --card: color-mix(in srgb, var(--background) 98%, var(--color-white));
   --card-foreground: var(--color-neutral-100);
@@ -152,18 +134,10 @@
   --secondary: --alpha(var(--color-white) / 4%);
   --secondary-foreground: var(--color-neutral-100);
   --muted: --alpha(var(--color-white) / 4%);
-  --muted-foreground: color-mix(
-    in srgb,
-    var(--color-neutral-500) 90%,
-    var(--color-white)
-  );
+  --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-white));
   --accent: --alpha(var(--color-white) / 4%);
   --accent-foreground: var(--color-neutral-100);
-  --destructive: color-mix(
-    in srgb,
-    var(--color-red-500) 90%,
-    var(--color-white)
-  );
+  --destructive: color-mix(in srgb, var(--color-red-500) 90%, var(--color-white));
   --destructive-foreground: var(--color-red-400);
   --info: var(--color-blue-500);
   --info-foreground: var(--color-blue-400);
@@ -174,16 +148,8 @@
   --input: --alpha(var(--color-white) / 8%);
   --border: var(--input);
   --ring: var(--color-neutral-500);
-  --sidebar: color-mix(
-    in srgb,
-    var(--color-neutral-950) 97%,
-    var(--color-white)
-  );
-  --sidebar-foreground: color-mix(
-    in srgb,
-    var(--color-neutral-100) 64%,
-    var(--sidebar)
-  );
+  --sidebar: color-mix(in srgb, var(--color-neutral-950) 97%, var(--color-white));
+  --sidebar-foreground: color-mix(in srgb, var(--color-neutral-100) 64%, var(--sidebar));
   --sidebar-primary: var(--color-neutral-100);
   --sidebar-primary-foreground: var(--color-neutral-800);
   --sidebar-accent: --alpha(var(--color-white) / 4%);
@@ -218,6 +184,15 @@
 
 *::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-thumb-hover);
+}
+
+[data-slot="scroll-area-viewport"] {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+[data-slot="scroll-area-viewport"]::-webkit-scrollbar {
+  display: none;
 }
 
 /* Base UI scroll-area scrollbars — thin and hidden at rest, expand on hover over the scrollbar */
@@ -307,7 +282,7 @@ body {
     0 2px 8px color-mix(in srgb, black 14%, transparent);
 }
 
-.reader-content :is(p, span, a) {
+.reader-content .article-body :is(p, span, a) {
   font-family: var(--font-reader);
 }
 
@@ -322,6 +297,18 @@ body {
 
 .reader-content .article-body > *:last-child {
   margin-bottom: 0;
+}
+
+[data-reader-inbox-body] .reader-content .article-body > a:first-child,
+[data-reader-inbox-body] .reader-content .article-body > p:first-child > a:only-child {
+  color: color-mix(in srgb, var(--muted-foreground) 95%, transparent);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+[data-reader-inbox-body] .reader-content .article-body > a:first-child:hover,
+[data-reader-inbox-body] .reader-content .article-body > p:first-child > a:only-child:hover {
+  color: color-mix(in srgb, var(--foreground) 86%, transparent);
 }
 
 .reader-content .article-body :is(h1, h2, h3, h4, h5, h6) {
@@ -385,7 +372,10 @@ body {
 }
 
 /* Inline code only (fenced blocks are styled separately below). */
-.reader-content .article-body :where(p, li, blockquote, td, th, figcaption, a, span, em, strong, h1, h2, h3, h4, h5, h6) > code {
+.reader-content
+  .article-body
+  :where(p, li, blockquote, td, th, figcaption, a, span, em, strong, h1, h2, h3, h4, h5, h6)
+  > code {
   border-radius: 6px;
   background: color-mix(in srgb, var(--foreground) 7%, transparent);
   padding: 0.1rem 0.3rem;
@@ -419,7 +409,10 @@ body {
   --reader-code-icon-size: 0.625em;
   --reader-code-outer-radius: 0.5rem;
   --reader-code-chrome-pad-start: 0.4rem;
-  --reader-code-button-radius: max(0px, calc(var(--reader-code-outer-radius) - var(--reader-code-chrome-pad-start)));
+  --reader-code-button-radius: max(
+    0px,
+    calc(var(--reader-code-outer-radius) - var(--reader-code-chrome-pad-start))
+  );
   margin: 1rem 0;
   overflow: hidden;
   border-radius: var(--reader-code-outer-radius);
@@ -483,7 +476,12 @@ body {
   line-height: inherit;
 }
 
-.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-punctuation,
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  pre.reader-code-pre
+  code.hljs
+  .hljs-punctuation,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-operator,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-subst {
   color: oklch(0.897 0.017 250.854);
@@ -496,16 +494,43 @@ body {
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-keyword,
-.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-meta .hljs-keyword,
-.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-template-tag,
-.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-template-variable,
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  pre.reader-code-pre
+  code.hljs
+  .hljs-meta
+  .hljs-keyword,
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  pre.reader-code-pre
+  code.hljs
+  .hljs-template-tag,
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  pre.reader-code-pre
+  code.hljs
+  .hljs-template-variable,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-type,
-.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-variable.language_ {
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  pre.reader-code-pre
+  code.hljs
+  .hljs-variable.language_ {
   color: oklch(0.763 0.141 26.08);
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-string,
-.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-meta .hljs-string,
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  pre.reader-code-pre
+  code.hljs
+  .hljs-meta
+  .hljs-string,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-regexp {
   color: oklch(0.893 0.059 239.122);
 }
@@ -518,13 +543,28 @@ body {
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-title,
-.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-title.class_,
-.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-title.function_ {
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  pre.reader-code-pre
+  code.hljs
+  .hljs-title.class_,
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  pre.reader-code-pre
+  code.hljs
+  .hljs-title.function_ {
   color: oklch(0.855 0.083 237.063);
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-attr,
-.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-attribute,
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  pre.reader-code-pre
+  code.hljs
+  .hljs-attribute,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-params {
   color: oklch(0.872 0.04 260.143);
 }
@@ -542,7 +582,10 @@ body {
   transition: opacity 180ms cubic-bezier(0.2, 0, 0, 1);
 }
 
-.reader-content .article-body [data-reader-code-block]:is(:hover, :focus-within) .reader-code-copy-host {
+.reader-content
+  .article-body
+  [data-reader-code-block]:is(:hover, :focus-within)
+  .reader-code-copy-host {
   opacity: 1;
   pointer-events: auto;
 }
@@ -571,24 +614,11 @@ body {
   cursor: pointer;
   outline: none;
   box-shadow: none;
-  transition:
-    background-color 180ms cubic-bezier(0.2, 0, 0, 1),
-    color 180ms cubic-bezier(0.2, 0, 0, 1),
-    transform 180ms cubic-bezier(0.2, 0, 0, 1);
-}
-
-.reader-content .article-body [data-reader-code-block] .reader-code-copy-button:hover {
-  background: var(--accent);
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-button:focus-visible {
   outline: 2px solid color-mix(in srgb, var(--ring) 72%, transparent);
   outline-offset: 2px;
-}
-
-.reader-content .article-body [data-reader-code-block] .reader-code-copy-button:active {
-  background: color-mix(in srgb, var(--accent) 80%, transparent);
-  transform: scale(0.96);
 }
 
 /* Icon crossfade: copy ↔ check on .is-copied */
@@ -598,7 +628,10 @@ body {
   width: var(--rcb-icon-size, var(--reader-code-icon-size));
   height: var(--rcb-icon-size, var(--reader-code-icon-size));
   transform-origin: center;
-  transition: opacity 300ms ease, transform 300ms ease, filter 300ms ease;
+  transition:
+    opacity 300ms cubic-bezier(0.2, 0, 0, 1),
+    transform 300ms cubic-bezier(0.2, 0, 0, 1),
+    filter 300ms cubic-bezier(0.2, 0, 0, 1);
   will-change: opacity, transform, filter;
 }
 
@@ -611,16 +644,24 @@ body {
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon-check {
   opacity: 0;
   transform: scale(0.25);
-  filter: blur(3px);
+  filter: blur(4px);
 }
 
-.reader-content .article-body [data-reader-code-block] .reader-code-copy-button.is-copied .rcb-icon-copy {
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  .reader-code-copy-button.is-copied
+  .rcb-icon-copy {
   opacity: 0;
   transform: scale(0.25);
-  filter: blur(3px);
+  filter: blur(4px);
 }
 
-.reader-content .article-body [data-reader-code-block] .reader-code-copy-button.is-copied .rcb-icon-check {
+.reader-content
+  .article-body
+  [data-reader-code-block]
+  .reader-code-copy-button.is-copied
+  .rcb-icon-check {
   opacity: 1;
   transform: scale(1);
   filter: blur(0px);
@@ -698,7 +739,10 @@ body {
 
 /* When the profile thumb is inside a media-aside flex row, suppress the float so the
    flex layout governs sizing instead. The first-child img-frame rules handle width. */
-.reader-content .article-body [data-reader-media-aside] [data-reader-img-frame][data-reader-profile-thumb] {
+.reader-content
+  .article-body
+  [data-reader-media-aside]
+  [data-reader-img-frame][data-reader-profile-thumb] {
   float: none;
   clear: none;
   margin: 0;
@@ -761,8 +805,14 @@ body {
     gap: 0.5rem;
   }
 
-  .reader-content .article-body [data-reader-media-aside] > *:first-child:is([data-reader-img-frame]),
-  .reader-content .article-body [data-reader-media-aside] > *:first-child:is(a):has(> [data-reader-img-frame]) {
+  .reader-content
+    .article-body
+    [data-reader-media-aside]
+    > *:first-child:is([data-reader-img-frame]),
+  .reader-content
+    .article-body
+    [data-reader-media-aside]
+    > *:first-child:is(a):has(> [data-reader-img-frame]) {
     max-width: 5rem;
   }
 }
@@ -772,14 +822,20 @@ body {
   min-width: 0;
 }
 
-.reader-content .article-body [data-reader-media-aside] > *:first-child:is([data-reader-img-frame]) {
+.reader-content
+  .article-body
+  [data-reader-media-aside]
+  > *:first-child:is([data-reader-img-frame]) {
   width: auto;
   max-width: min(40%, 10rem);
   margin: 0;
   align-self: flex-start;
 }
 
-.reader-content .article-body [data-reader-media-aside] > *:first-child:is(a):has(> [data-reader-img-frame]) {
+.reader-content
+  .article-body
+  [data-reader-media-aside]
+  > *:first-child:is(a):has(> [data-reader-img-frame]) {
   width: auto;
   max-width: min(40%, 10rem);
   margin: 0;
@@ -869,7 +925,10 @@ body {
 
 /* When the profile thumb is inside a media-aside flex row, suppress the float so the
    flex layout governs sizing instead. The first-child img-frame rules handle width. */
-.reader-content .article-body [data-reader-media-aside] [data-reader-img-frame][data-reader-profile-thumb] {
+.reader-content
+  .article-body
+  [data-reader-media-aside]
+  [data-reader-img-frame][data-reader-profile-thumb] {
   float: none;
   clear: none;
   margin: 0;
@@ -923,8 +982,14 @@ body {
     gap: 0.5rem;
   }
 
-  .reader-content .article-body [data-reader-media-aside] > *:first-child:is([data-reader-img-frame]),
-  .reader-content .article-body [data-reader-media-aside] > *:first-child:is(a):has(> [data-reader-img-frame]) {
+  .reader-content
+    .article-body
+    [data-reader-media-aside]
+    > *:first-child:is([data-reader-img-frame]),
+  .reader-content
+    .article-body
+    [data-reader-media-aside]
+    > *:first-child:is(a):has(> [data-reader-img-frame]) {
     max-width: 5rem;
   }
 }
@@ -934,14 +999,20 @@ body {
   min-width: 0;
 }
 
-.reader-content .article-body [data-reader-media-aside] > *:first-child:is([data-reader-img-frame]) {
+.reader-content
+  .article-body
+  [data-reader-media-aside]
+  > *:first-child:is([data-reader-img-frame]) {
   width: auto;
   max-width: min(40%, 10rem);
   margin: 0;
   align-self: flex-start;
 }
 
-.reader-content .article-body [data-reader-media-aside] > *:first-child:is(a):has(> [data-reader-img-frame]) {
+.reader-content
+  .article-body
+  [data-reader-media-aside]
+  > *:first-child:is(a):has(> [data-reader-img-frame]) {
   width: auto;
   max-width: min(40%, 10rem);
   margin: 0;
@@ -1084,6 +1155,302 @@ body {
   width: min(100%, 56rem);
 }
 
+.kyomi-feed-command-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--color-black) 40%, transparent);
+  backdrop-filter: blur(10px);
+  animation-duration: 200ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.kyomi-feed-command-dialog {
+  position: fixed;
+  inset-inline: 1rem;
+  top: max(1rem, 10vh);
+  z-index: 51;
+  width: min(calc(100vw - 2rem), 42rem);
+  margin-inline: auto;
+  outline: none;
+  transform-origin: top center;
+  animation-duration: 200ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  will-change: opacity, transform;
+}
+
+.kyomi-feed-command-overlay[data-state="open"] {
+  animation-name: kyomi-feed-command-overlay-in;
+}
+
+.kyomi-feed-command-overlay[data-state="closed"] {
+  animation-name: kyomi-feed-command-overlay-out;
+}
+
+.kyomi-feed-command-dialog[data-state="open"] {
+  animation-name: kyomi-feed-command-dialog-in;
+}
+
+.kyomi-feed-command-dialog[data-state="closed"] {
+  animation-name: kyomi-feed-command-dialog-out;
+}
+
+@keyframes kyomi-feed-command-overlay-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes kyomi-feed-command-overlay-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes kyomi-feed-command-dialog-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+@keyframes kyomi-feed-command-dialog-out {
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+.kyomi-feed-command {
+  position: relative;
+  display: flex;
+  max-height: min(34rem, calc(100vh - 8rem));
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--popover);
+  color: var(--popover-foreground);
+}
+
+.kyomi-feed-command-search {
+  display: flex;
+  min-height: 4rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  padding-inline: 1rem;
+}
+
+.kyomi-feed-command:not([data-has-search-query="true"]) .kyomi-feed-command-search {
+  border-bottom-color: transparent;
+}
+
+.kyomi-feed-command-search-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  color: color-mix(in srgb, var(--muted-foreground) 84%, transparent);
+}
+
+.kyomi-feed-command [cmdk-input] {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  outline: none;
+}
+
+.kyomi-feed-command [cmdk-input]::placeholder {
+  color: color-mix(in srgb, var(--muted-foreground) 72%, transparent);
+}
+
+.kyomi-feed-command-import-button {
+  display: inline-flex;
+  min-height: 2rem;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.375rem;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--primary) 88%, var(--border));
+  border-radius: 0.5rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  padding-inline: 0.75rem;
+  white-space: nowrap;
+}
+
+.kyomi-feed-command-import-button:hover {
+  background: color-mix(in srgb, var(--primary) 90%, var(--foreground));
+}
+
+.kyomi-feed-command-import-button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.kyomi-feed-command-import-button:disabled {
+  cursor: default;
+  opacity: 0.64;
+}
+
+.kyomi-feed-command [cmdk-list] {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.kyomi-feed-command-list-inner {
+  padding: 0.5rem;
+}
+
+.kyomi-feed-command [cmdk-group]:not(:first-child) {
+  margin-top: 0.25rem;
+}
+
+.kyomi-feed-command [cmdk-group-heading] {
+  padding: 0.5rem 0.625rem 0.375rem;
+  color: color-mix(in srgb, var(--muted-foreground) 76%, transparent);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+
+.kyomi-feed-command [cmdk-item] {
+  display: flex;
+  min-height: 3.75rem;
+  cursor: pointer;
+  scroll-margin-block: 0.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  padding: 0.625rem;
+  color: var(--foreground);
+  outline: none;
+}
+
+.kyomi-feed-command [cmdk-item][data-selected="true"] {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.kyomi-feed-command [cmdk-item][data-disabled="true"] {
+  cursor: default;
+  opacity: 0.64;
+}
+
+.kyomi-feed-command [cmdk-empty] {
+  padding: 2.5rem 1rem;
+  color: var(--muted-foreground);
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.kyomi-feed-command-favicon {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.kyomi-feed-command-favicon-media {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--foreground) 8%, transparent);
+  object-fit: cover;
+}
+
+.kyomi-feed-command-item-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.kyomi-feed-command-item-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.kyomi-feed-command-item-copy p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kyomi-feed-command-item-copy p:first-child {
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.kyomi-feed-command-item-copy p:last-child {
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.kyomi-feed-command-item-action {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0;
+  color: color-mix(in srgb, var(--foreground) 78%, transparent);
+}
+
+.kyomi-feed-command [cmdk-item][data-selected="true"] .kyomi-feed-command-item-action {
+  color: var(--foreground);
+}
+
+.kyomi-feed-command-item-action svg {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.kyomi-feed-command-hint {
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.kyomi-feed-command-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 @property --scroll-mask-t-from {
   syntax: "<length-percentage>";
   inherits: false;
@@ -1142,7 +1509,7 @@ body {
   }
 }
 
-:where([class^="scroll-mask-"], [class*=" scroll-mask-"]) {
+:where([class^="scroll-mask-"], [class*=" scroll-mask-"], [class*=":scroll-mask-"]) {
   --scroll-mask-t-from: 100%;
   --scroll-mask-b-from: 100%;
   --scroll-mask-l-from: 100%;
@@ -1150,37 +1517,20 @@ body {
 }
 
 @supports (animation-timeline: scroll()) {
-  :where([class^="scroll-mask-"], [class*=" scroll-mask-"]) {
-    --scroll-mask-t: linear-gradient(
-      to top,
-      black,
-      black var(--scroll-mask-t-from),
-      transparent
-    );
+  :where([class^="scroll-mask-"], [class*=" scroll-mask-"], [class*=":scroll-mask-"]) {
+    --scroll-mask-t: linear-gradient(to top, black, black var(--scroll-mask-t-from), transparent);
     --scroll-mask-b: linear-gradient(
       to bottom,
       black,
       black var(--scroll-mask-b-from),
       transparent
     );
-    --scroll-mask-l: linear-gradient(
-      to left,
-      black,
-      black var(--scroll-mask-l-from),
-      transparent
-    );
-    --scroll-mask-r: linear-gradient(
-      to right,
-      black,
-      black var(--scroll-mask-r-from),
-      transparent
-    );
+    --scroll-mask-l: linear-gradient(to left, black, black var(--scroll-mask-l-from), transparent);
+    --scroll-mask-r: linear-gradient(to right, black, black var(--scroll-mask-r-from), transparent);
     mask-image:
-      var(--scroll-mask-t), var(--scroll-mask-b), var(--scroll-mask-l),
-      var(--scroll-mask-r);
+      var(--scroll-mask-t), var(--scroll-mask-b), var(--scroll-mask-l), var(--scroll-mask-r);
     -webkit-mask-image:
-      var(--scroll-mask-t), var(--scroll-mask-b), var(--scroll-mask-l),
-      var(--scroll-mask-r);
+      var(--scroll-mask-t), var(--scroll-mask-b), var(--scroll-mask-l), var(--scroll-mask-r);
     mask-composite: intersect;
     -webkit-mask-composite: source-in;
     animation:
@@ -1191,41 +1541,24 @@ body {
 }
 
 @supports not (animation-timeline: scroll()) {
-  :where([class^="scroll-mask-"], [class*=" scroll-mask-"]) {
+  :where([class^="scroll-mask-"], [class*=" scroll-mask-"], [class*=":scroll-mask-"]) {
     --scroll-mask-t-from: var(--scroll-mask-fade-from-t, 100%);
     --scroll-mask-b-from: var(--scroll-mask-fade-from-b, 100%);
     --scroll-mask-l-from: var(--scroll-mask-fade-from-l, 100%);
     --scroll-mask-r-from: var(--scroll-mask-fade-from-r, 100%);
-    --scroll-mask-t: linear-gradient(
-      to top,
-      black,
-      black var(--scroll-mask-t-from),
-      transparent
-    );
+    --scroll-mask-t: linear-gradient(to top, black, black var(--scroll-mask-t-from), transparent);
     --scroll-mask-b: linear-gradient(
       to bottom,
       black,
       black var(--scroll-mask-b-from),
       transparent
     );
-    --scroll-mask-l: linear-gradient(
-      to left,
-      black,
-      black var(--scroll-mask-l-from),
-      transparent
-    );
-    --scroll-mask-r: linear-gradient(
-      to right,
-      black,
-      black var(--scroll-mask-r-from),
-      transparent
-    );
+    --scroll-mask-l: linear-gradient(to left, black, black var(--scroll-mask-l-from), transparent);
+    --scroll-mask-r: linear-gradient(to right, black, black var(--scroll-mask-r-from), transparent);
     mask-image:
-      var(--scroll-mask-t), var(--scroll-mask-b), var(--scroll-mask-l),
-      var(--scroll-mask-r);
+      var(--scroll-mask-t), var(--scroll-mask-b), var(--scroll-mask-l), var(--scroll-mask-r);
     -webkit-mask-image:
-      var(--scroll-mask-t), var(--scroll-mask-b), var(--scroll-mask-l),
-      var(--scroll-mask-r);
+      var(--scroll-mask-t), var(--scroll-mask-b), var(--scroll-mask-l), var(--scroll-mask-r);
     mask-composite: intersect;
     -webkit-mask-composite: source-in;
   }
@@ -1265,6 +1598,13 @@ body {
   --scroll-mask-fade-from-b: --value([length], [percentage]);
 }
 
+@utility scroll-mask-y-edge-* {
+  --scroll-mask-fade-from-t: calc(100% - --spacing(--value(integer)));
+  --scroll-mask-fade-from-b: calc(100% - --spacing(--value(integer)));
+  --scroll-mask-fade-from-t: calc(100% - --value([length], [percentage]));
+  --scroll-mask-fade-from-b: calc(100% - --value([length], [percentage]));
+}
+
 @utility scroll-mask-l {
   --scroll-mask-fade-from-l: 80%;
 }
@@ -1297,4 +1637,11 @@ body {
   --scroll-mask-fade-from-r: --spacing(--value(integer));
   --scroll-mask-fade-from-r: --value(percentage);
   --scroll-mask-fade-from-r: --value([length], [percentage]);
+}
+
+@utility scroll-mask-x-edge-* {
+  --scroll-mask-fade-from-l: calc(100% - --spacing(--value(integer)));
+  --scroll-mask-fade-from-r: calc(100% - --spacing(--value(integer)));
+  --scroll-mask-fade-from-l: calc(100% - --value([length], [percentage]));
+  --scroll-mask-fade-from-r: calc(100% - --value([length], [percentage]));
 }

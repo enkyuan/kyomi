@@ -9,7 +9,7 @@ import interLatinWoff2Url from "@fontsource-variable/inter/files/inter-latin-wgh
 import AuthProvider from "@integrations/better-auth/provider";
 import TanstackQueryProvider from "@integrations/tanstack-query/provider";
 import { AppRuntimeEffects } from "@/app/runtime-effects";
-import { AnchoredToastProvider, ToastProvider } from "@vols.rss/ui/toast";
+import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/toast";
 import PostHogProvider from "@integrations/posthog/provider";
 import { getSession } from "@lib/auth/functions";
 import {
@@ -17,7 +17,7 @@ import {
   READER_PREFERENCES_STORAGE_KEY,
   SHELL_STATE_STORAGE_KEY,
   THEME_STORAGE_KEY,
-} from "@lib/shell/storage-keys";
+} from "@lib/shell/keys";
 import {
   INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME,
   INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME,
@@ -29,7 +29,7 @@ interface MyRouterContext {
 }
 
 const SHELL_INIT_SCRIPT = `(function(){try{var root=document.documentElement;function readJson(key){try{var raw=window.localStorage.getItem(key);return raw?JSON.parse(raw):null}catch(e){return null}}function readCookie(name){var prefix=name+'=';var parts=document.cookie?document.cookie.split(';'):[];for(var i=0;i<parts.length;i++){var part=parts[i].trim();if(part.indexOf(prefix)===0)return decodeURIComponent(part.slice(prefix.length))}return null}var stored=window.localStorage.getItem(${JSON.stringify(THEME_STORAGE_KEY)});var mode=(stored==='light'||stored==='dark'||stored==='auto')?stored:'dark';var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var resolved=mode==='auto'?(prefersDark?'dark':'light'):mode;root.classList.remove('light','dark');root.classList.add(resolved);if(mode==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',mode)}root.style.colorScheme=resolved;var reader=readJson(${JSON.stringify(READER_PREFERENCES_STORAGE_KEY)})||{};if(typeof reader.fontSizePx==='number')root.style.setProperty('--reader-font-size',Math.round(reader.fontSizePx)+'px');if(reader.contentWidth==='narrow'||reader.contentWidth==='wide')root.dataset.readerContentWidth=reader.contentWidth;var inbox=readJson(${JSON.stringify(INBOX_PREFERENCES_STORAGE_KEY)})||{};if(typeof inbox.inboxFontSizePx==='number')root.style.setProperty('--inbox-font-size',Math.round(inbox.inboxFontSizePx)+'px');if(inbox.inboxDensity==='compact'||inbox.inboxDensity==='comfortable')root.dataset.inboxDensity=inbox.inboxDensity;if(inbox.articleOpenBehavior==='split'||inbox.articleOpenBehavior==='reader')root.dataset.inboxArticleOpenBehavior=inbox.articleOpenBehavior;var split=Number.parseFloat(readCookie(${JSON.stringify(INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME)})||'');if(Number.isFinite(split))root.style.setProperty('--inbox-left-panel-percent',split.toFixed(3)+'%');var articleOpenBehavior=readCookie(${JSON.stringify(INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME)});if(articleOpenBehavior==='split'||articleOpenBehavior==='reader')root.dataset.inboxArticleOpenBehavior=articleOpenBehavior;var sidebarOpen=readCookie('sidebar_state');if(sidebarOpen==='true'||sidebarOpen==='false')root.dataset.sidebarState=sidebarOpen==='true'?'expanded':'collapsed';var shell=readJson(${JSON.stringify(SHELL_STATE_STORAGE_KEY)})||{};if(typeof shell.inboxFilter==='string')root.dataset.inboxFilter=shell.inboxFilter;if(typeof shell.inboxLayout==='string')root.dataset.inboxLayout=shell.inboxLayout;if(typeof shell.selectedItemId==='string')root.dataset.selectedItemId=shell.selectedItemId;}catch(e){console.warn('shell init failed',e);}})();`;
-const REACT_SCAN_STORAGE_KEY = "vols.rss:dev:react-scan";
+const REACT_SCAN_STORAGE_KEY = "kyomi:dev:react-scan";
 const REACT_SCAN_QUERY_PARAM = "react-scan";
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
@@ -48,11 +48,11 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "vols.rss",
+        title: "Kyomi",
       },
       {
         name: "apple-mobile-web-app-title",
-        content: "vols.rss",
+        content: "Kyomi",
       },
     ],
     links: [
@@ -95,7 +95,19 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
   }),
   shellComponent: RootDocument,
   component: () => <Outlet />,
+  notFoundComponent: NotFound,
 });
+
+function NotFound() {
+  return (
+    <main className="flex min-h-svh items-center justify-center bg-background p-6 text-center text-foreground">
+      <div className="max-w-sm space-y-2">
+        <h1 className="font-heading font-semibold text-2xl">Not found</h1>
+        <p className="text-muted-foreground text-sm">This page does not exist or has moved.</p>
+      </div>
+    </main>
+  );
+}
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   const loaderData = Route.useLoaderData() as

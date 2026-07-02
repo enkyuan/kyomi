@@ -11,15 +11,17 @@ import { useAuth } from "@integrations/better-auth/provider";
 import { listFollowedFeeds, type FollowedFeed, updateFeedSubscription } from "../api";
 import {
   applyPinnedFeedState,
+  applyPinnedState,
   getFollowedFeedsSnapshot,
   restoreFeedCacheSnapshot,
 } from "../queries/cache";
 
+export { applyPinnedState };
+
 const FOLLOWED_FEEDS_QUERY_KEY = ["feeds", "followed"] as const;
-const PINNED_FEED_IDS_STORAGE_KEY = "vols.rss:pinned-feed-ids";
-const PINNED_FEED_IDS_MIGRATION_KEY_PREFIX = "vols.rss:pinned-feed-ids:migrated:v1";
-const PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX =
-  "vols.rss:pinned-feed-ids:migration-started:v1";
+const PINNED_FEED_IDS_STORAGE_KEY = "kyomi:pinned-feed-ids";
+const PINNED_FEED_IDS_MIGRATION_KEY_PREFIX = "kyomi:pinned-feed-ids:migrated:v1";
+const PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX = "kyomi:pinned-feed-ids:migration-started:v1";
 
 function readLegacyPinnedFeedIds() {
   if (typeof window === "undefined") {
@@ -48,11 +50,11 @@ function readLegacyPinnedFeedIds() {
   }
 }
 
-function buildMigrationKey(userId: string) {
+export function buildMigrationKey(userId: string) {
   return `${PINNED_FEED_IDS_MIGRATION_KEY_PREFIX}:${userId}`;
 }
 
-function buildMigrationStartedKey(userId: string) {
+export function buildMigrationStartedKey(userId: string) {
   return `${PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX}:${userId}`;
 }
 
@@ -102,7 +104,7 @@ function logPinnedMigration(event: "attempted" | "succeeded" | "failed" | "skipp
   console.info("[pinned-feed-migration]", { event, ...context });
 }
 
-function sortPinnedFeeds(feeds: FollowedFeed[]) {
+export function sortPinnedFeeds(feeds: FollowedFeed[]) {
   return feeds
     .filter((feed) => feed.isPinned)
     .sort((a, b) => {
@@ -116,7 +118,7 @@ export function usePinnedFeedIds() {
   const { user } = useAuth();
   const queryClient = useQueryClient();
   const migrationRunningForKeyRef = useRef<string | null>(null);
-  const followedFeedsQuery = useQuery({
+  const { data: followedFeedsData, isSuccess: isFollowedFeedsSuccess } = useQuery({
     queryKey: FOLLOWED_FEEDS_QUERY_KEY,
     queryFn: () => listFollowedFeeds(),
   });
@@ -139,7 +141,7 @@ export function usePinnedFeedIds() {
   });
 
   useEffect(() => {
-    if (!user?.id || !followedFeedsQuery.isSuccess) {
+    if (!user?.id || !isFollowedFeedsSuccess) {
       return;
     }
 
@@ -149,7 +151,7 @@ export function usePinnedFeedIds() {
       return;
     }
 
-    const followed = followedFeedsQuery.data;
+    const followed = followedFeedsData;
     const serverHasPinnedFeeds = followed.some((feed) => feed.isPinned);
     const serverPinnedFeedIdSet = new Set(
       followed.flatMap((feed) => (feed.isPinned ? [feed.feedId] : [])),
@@ -194,11 +196,11 @@ export function usePinnedFeedIds() {
       migrationRunningForKeyRef.current = null;
       void queryClient.invalidateQueries({ queryKey: FOLLOWED_FEEDS_QUERY_KEY });
     });
-  }, [followedFeedsQuery.data, followedFeedsQuery.isSuccess, queryClient, user?.id]);
+  }, [followedFeedsData, isFollowedFeedsSuccess, queryClient, user?.id]);
 
   const pinnedFeedIds = useMemo(
-    () => sortPinnedFeeds(followedFeedsQuery.data ?? []).map((feed) => feed.feedId),
-    [followedFeedsQuery.data],
+    () => sortPinnedFeeds(followedFeedsData ?? []).map((feed) => feed.feedId),
+    [followedFeedsData],
   );
   const pinnedFeedIdSet = useMemo(() => new Set(pinnedFeedIds), [pinnedFeedIds]);
 

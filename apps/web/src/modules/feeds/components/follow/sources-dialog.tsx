@@ -1,40 +1,61 @@
 "use client";
 
-import { startTransition, useCallback, useEffect, useState } from "react";
+import { startTransition, useCallback, useEffect, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { RssFill } from "@mingcute/react";
-import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
-import {
-  Command,
-  CommandDialog,
-  CommandDialogPopup,
-  CommandDialogTrigger,
-  CommandEmpty,
-  CommandFooter,
-  CommandGroup,
-  CommandGroupLabel,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandPanel,
-} from "@vols.rss/ui/command";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@vols.rss/ui/input-group";
-import { Kbd, KbdGroup } from "@vols.rss/ui/kbd";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
-import { SidebarMenuButton } from "@vols.rss/ui/sidebar";
-import { toastManager } from "@vols.rss/ui/toast";
+import * as RadixDialog from "@radix-ui/react-dialog";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { toastManager } from "@kyomi/ui/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";
-import { followFeed, searchFeeds } from "@modules/feeds/api";
 import {
-  getDiscoverFeedsSnapshot,
+  followFeed,
+  importOpmlFromUrl,
+  searchFeeds,
+  type DiscoverFeedResult,
+  type OpmlImportStatus,
+} from "@modules/feeds/api";
+import {
+  getImportedCount,
+  getOpmlImportUrlCandidate,
+  pollOpmlImportStatus,
+} from "@modules/feeds/opml-import";
+import {
   markDiscoverFeedSubscribed,
-  restoreDiscoverFeedsSnapshot,
+  setDiscoverFeedSubscribed,
 } from "@modules/feeds/queries/cache";
 import { invalidateFeedAndInboxQueries } from "@modules/inbox/queries/options";
+import {
+  DISCOVER_RESULTS_UI_CAP,
+  SourcesCommand,
+  type SourcesCommandState,
+} from "./sources-command";
 
 /** Cap list rows so opening the dialog never mounts thousands of command items in one commit. */
-const DISCOVER_RESULTS_UI_CAP = 200;
 const DISCOVER_QUERY_DEBOUNCE_MS = 260;
+
+type FollowFeedMutationInput = {
+  feedId?: string | null;
+  url: string;
+};
+
+function formatOpmlImportProgress(status: OpmlImportStatus) {
+  const total = status.summary.totalUrls;
+  if (total <= 0) {
+    return "Preparing feed list.";
+  }
+  const completed = Math.min(status.summary.completed, total);
+  return `${completed} of ${total} feeds imported.`;
+}
+
+function formatOpmlImportCompletion(status: OpmlImportStatus) {
+  const parts = [
+    `${status.summary.subscribed} added`,
+    `${status.summary.alreadySubscribed} already followed`,
+  ];
+  if (status.summary.failed > 0) {
+    parts.push(`${status.summary.failed} failed`);
+  }
+  return parts.join(". ");
+}
 
 type SourcesDialogProps = {
   platform: PlatformState;
@@ -48,14 +69,22 @@ export function SourcesDialog({
   platform,
   open,
   onOpenChange,
-  hideTrigger = false,
   enableGlobalShortcut = true,
 }: SourcesDialogProps) {
   const queryClient = useQueryClient();
   const [internalOpen, setInternalOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [pendingOpmlImportUrl, setPendingOpmlImportUrl] = useState<string | null>(null);
+  const pendingFollowKeysRef = useRef<Set<string> | null>(null);
+  if (pendingFollowKeysRef.current === null) {
+    pendingFollowKeysRef.current = new Set();
+  }
   const dialogOpen = open ?? internalOpen;
+  const trimmedQuery = query.trim();
+  const hasSearchQuery = trimmedQuery.length > 0;
+  const opmlImportUrl = getOpmlImportUrlCandidate(trimmedQuery);
+  const hasOpmlImportCandidate = Boolean(opmlImportUrl);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -64,23 +93,41 @@ export function SourcesDialog({
     return () => window.clearTimeout(timer);
   }, [query]);
 
-  const discoverResultsQuery = useQuery({
+  const { data: discoverData, isFetching: isDiscoverFetching } = useQuery({
     queryKey: ["discover", "feeds", debouncedQuery],
     queryFn: () => searchFeeds({ data: { query: debouncedQuery } }),
-    enabled: dialogOpen && debouncedQuery.length > 0,
+    enabled: dialogOpen && debouncedQuery.length > 0 && !hasOpmlImportCandidate,
     placeholderData: (previousData) => previousData,
     retry: 0,
     refetchOnWindowFocus: false,
   });
-  const searchResults = discoverResultsQuery.data ?? [];
+  const searchResults = hasOpmlImportCandidate ? [] : (discoverData ?? []);
   const cappedSearchResults =
     searchResults.length > DISCOVER_RESULTS_UI_CAP
       ? searchResults.slice(0, DISCOVER_RESULTS_UI_CAP)
       : searchResults;
   const discoverResultsTruncated = searchResults.length > DISCOVER_RESULTS_UI_CAP;
-  const shouldShowLoading = discoverResultsQuery.isFetching && searchResults.length === 0;
+  const isWaitingForDebouncedQuery = hasSearchQuery && debouncedQuery !== trimmedQuery;
+  const shouldShowLoading =
+    (isDiscoverFetching || isWaitingForDebouncedQuery) && searchResults.length === 0;
   const shouldShowEmpty =
-    !shouldShowLoading && (debouncedQuery.length === 0 || searchResults.length === 0);
+    hasSearchQuery &&
+    !hasOpmlImportCandidate &&
+    !shouldShowLoading &&
+    debouncedQuery.length > 0 &&
+    searchResults.length === 0;
+  const commandState: SourcesCommandState = hasOpmlImportCandidate
+    ? { kind: "opml" }
+    : hasSearchQuery
+      ? {
+          kind: "search",
+          results: cappedSearchResults,
+          resultsCount: searchResults.length,
+          showEmpty: shouldShowEmpty,
+          showLoading: shouldShowLoading,
+          truncated: discoverResultsTruncated,
+        }
+      : { kind: "idle" };
 
   const setDialogOpen = useCallback(
     (nextOpen: boolean) => {
@@ -94,8 +141,8 @@ export function SourcesDialog({
         }
         onOpenChange?.(nextOpen);
       };
-      // Opening mounts a large Base UI dialog + autocomplete subtree; keep close synchronous
-      // so Escape dismiss feels immediate.
+      // Opening mounts the command dialog subtree; keep close synchronous so Escape dismiss feels
+      // immediate.
       if (nextOpen) {
         startTransition(commit);
       } else {
@@ -106,12 +153,13 @@ export function SourcesDialog({
   );
 
   const followFeedMutation = useMutation({
-    mutationFn: ({ url }: { url: string }) => followFeed({ data: { url } }),
-    onMutate: async ({ url }) => {
+    mutationFn: (input: FollowFeedMutationInput) => followFeed({ data: input }),
+    onMutate: async ({ feedId, url }) => {
+      const followKey = feedId ?? url;
+      pendingFollowKeysRef.current?.add(followKey);
       await queryClient.cancelQueries({ queryKey: ["discover", "feeds"] });
-      const snapshot = getDiscoverFeedsSnapshot(queryClient);
-      markDiscoverFeedSubscribed(queryClient, { url });
-      return { snapshot };
+      markDiscoverFeedSubscribed(queryClient, { url, feedId: feedId ?? undefined });
+      return { feedId: feedId ?? undefined, followKey, url };
     },
     onSuccess: async (result) => {
       markDiscoverFeedSubscribed(queryClient, { url: result.url, feedId: result.feedId });
@@ -119,8 +167,6 @@ export function SourcesDialog({
       await queryClient.invalidateQueries({
         queryKey: ["folders"],
       });
-      setDialogOpen(false);
-      setQuery("");
       toastManager.add({
         title: result.newSubscription ? "Feed followed" : "Already following",
         description: result.title || result.url,
@@ -128,14 +174,132 @@ export function SourcesDialog({
       });
     },
     onError: (error, _variables, context) => {
-      restoreDiscoverFeedsSnapshot(queryClient, context?.snapshot);
+      if (context) {
+        setDiscoverFeedSubscribed(queryClient, context, false);
+      }
+      logClientError("feeds.follow", error);
       toastManager.add({
         title: "Unable to follow feed",
-        description: error instanceof Error ? error.message : "Try another topic or feed URL.",
+        description: getUserSafeErrorMessage(error, "Try another topic or feed URL."),
         type: "error",
       });
     },
+    onSettled: (_result, _error, _variables, context) => {
+      if (!context?.followKey) {
+        return;
+      }
+      pendingFollowKeysRef.current?.delete(context.followKey);
+    },
   });
+  const { mutate: submitFollowFeed } = followFeedMutation;
+
+  const isPendingFollow = useCallback(
+    (item: DiscoverFeedResult) => pendingFollowKeysRef.current?.has(item.id ?? item.url) ?? false,
+    [],
+  );
+
+  const handleFollowFeed = useCallback(
+    (item: DiscoverFeedResult) => {
+      if (item.isSubscribed || isPendingFollow(item)) {
+        return;
+      }
+
+      submitFollowFeed({ feedId: item.id, url: item.url });
+    },
+    [isPendingFollow, submitFollowFeed],
+  );
+
+  const startOpmlImport = useCallback(
+    (url: string) => {
+      if (pendingOpmlImportUrl) {
+        return;
+      }
+
+      const toastId =
+        typeof globalThis.crypto?.randomUUID === "function"
+          ? `opml-import-${globalThis.crypto.randomUUID()}`
+          : `opml-import-${Date.now()}`;
+      const loadingToast = {
+        id: toastId,
+        title: "Importing feeds...",
+        description: "Starting OPML import.",
+        type: "loading",
+        timeout: 0,
+        data: {
+          progress: {
+            value: 0,
+            max: 1,
+            label: "OPML import progress",
+          },
+        },
+      };
+
+      setPendingOpmlImportUrl(url);
+
+      const importPromise = (async () => {
+        try {
+          const accepted = await importOpmlFromUrl({ data: { url } });
+          setDialogOpen(false);
+
+          const finalStatus = await pollOpmlImportStatus(accepted.taskId, {
+            onStatus: (status) => {
+              toastManager.update(toastId, {
+                title: "Importing feeds...",
+                description: formatOpmlImportProgress(status),
+                type: "loading",
+                timeout: 0,
+                data: {
+                  progress: {
+                    value: status.summary.completed,
+                    max: Math.max(status.summary.totalUrls, 1),
+                    label: "OPML import progress",
+                  },
+                },
+              });
+            },
+          });
+
+          if (finalStatus.status === "failed") {
+            throw new Error(finalStatus.message ?? "OPML import failed.");
+          }
+          if (finalStatus.status === "cancelled") {
+            throw new Error("OPML import was cancelled.");
+          }
+
+          invalidateFeedAndInboxQueries(queryClient);
+          await queryClient.invalidateQueries({ queryKey: ["folders"] });
+
+          return finalStatus;
+        } finally {
+          setPendingOpmlImportUrl(null);
+        }
+      })();
+
+      void toastManager
+        .promise(importPromise, {
+          loading: loadingToast,
+          success: (status) => ({
+            title: `Imported ${getImportedCount(status)} of ${status.summary.totalUrls} feeds`,
+            description: formatOpmlImportCompletion(status),
+            type: "success",
+            timeout: 3000,
+            data: undefined,
+          }),
+          error: (error) => {
+            logClientError("feeds.opml_import", error);
+            return {
+              title: "Unable to import feeds",
+              description: getUserSafeErrorMessage(error, "Try another OPML URL."),
+              type: "error",
+              timeout: 7000,
+              data: undefined,
+            };
+          },
+        })
+        .catch(() => undefined);
+    },
+    [pendingOpmlImportUrl, queryClient, setDialogOpen],
+  );
 
   useEffect(() => {
     if (!enableGlobalShortcut) {
@@ -162,118 +326,29 @@ export function SourcesDialog({
   }, [enableGlobalShortcut, platform, setDialogOpen]);
 
   return (
-    <CommandDialog open={dialogOpen} onOpenChange={setDialogOpen}>
-      {!hideTrigger ? (
-        <CommandDialogTrigger
-          render={
-            <SidebarMenuButton className="mt-1 items-stretch overflow-visible rounded-xl p-0 shadow-none transition-shadow duration-150 ease-out hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent focus-visible:ring-0 focus-within:shadow-[0_0_0_2px_var(--sidebar-ring)] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-0">
-              <InputGroup className="h-full min-h-0 w-full rounded-xl border-sidebar-border/70 bg-sidebar-accent/40 shadow-none outline-none ring-0 ring-transparent ring-offset-0 before:hidden transition-[background-color,border-color] hover:bg-sidebar-accent/56 has-[input:focus-visible,textarea:focus-visible]:border-sidebar-border/70 has-[input:focus-visible,textarea:focus-visible]:shadow-none has-[input:focus-visible,textarea:focus-visible]:ring-0! has-[input:focus-visible,textarea:focus-visible]:ring-transparent! dark:has-[input:focus-visible,textarea:focus-visible]:ring-0!">
-                <InputGroupInput
-                  aria-label="Discover"
-                  size="sm"
-                  className="cursor-text text-sm text-sidebar-foreground placeholder:text-sidebar-foreground/56 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6"
-                  placeholder="Follow sources"
-                  readOnly
-                  type="search"
-                />
-                <InputGroupAddon
-                  align="inline-end"
-                  className="ms-auto h-full items-center self-stretch has-[>kbd:last-child]:me-0"
-                >
-                  <KbdGroup className="-me-0.5">
-                    <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
-                      <SidebarModeAnimatedText>{platform.modifierKeyLabel}</SidebarModeAnimatedText>
-                    </Kbd>
-                    <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
-                      <SidebarModeAnimatedText>K</SidebarModeAnimatedText>
-                    </Kbd>
-                  </KbdGroup>
-                </InputGroupAddon>
-              </InputGroup>
-            </SidebarMenuButton>
-          }
-        />
-      ) : null}
-      <CommandDialogPopup>
-        <Command>
-          <CommandInput
-            placeholder="Search feeds or paste a feed URL…"
-            value={query}
-            onChange={(event) => {
-              setQuery(event.target.value);
-            }}
+    <RadixDialog.Root open={dialogOpen} onOpenChange={setDialogOpen}>
+      <RadixDialog.Portal>
+        <RadixDialog.Overlay className="kyomi-feed-command-overlay" />
+        <RadixDialog.Content
+          aria-describedby="kyomi-feed-command-description"
+          className="kyomi-feed-command-dialog"
+        >
+          <RadixDialog.Title className="sr-only">Add feed</RadixDialog.Title>
+          <RadixDialog.Description id="kyomi-feed-command-description" className="sr-only">
+            Search feeds, paste a feed URL to follow it, or paste an OPML URL to import feeds.
+          </RadixDialog.Description>
+          <SourcesCommand
+            isPendingFollow={isPendingFollow}
+            opmlImportUrl={opmlImportUrl}
+            pendingOpmlImportUrl={pendingOpmlImportUrl}
+            query={query}
+            state={commandState}
+            onFollowFeed={handleFollowFeed}
+            onQueryChange={setQuery}
+            onStartOpmlImport={startOpmlImport}
           />
-          <CommandPanel>
-            <CommandList>
-              {shouldShowEmpty ? (
-                <CommandEmpty>
-                  {debouncedQuery
-                    ? "No feeds found yet. Try a broader topic or paste a feed URL."
-                    : "Search by topic or paste an RSS, Atom, or site feed URL."}
-                </CommandEmpty>
-              ) : null}
-              {shouldShowLoading ? (
-                <CommandGroup>
-                  <CommandGroupLabel>Feeds</CommandGroupLabel>
-                  <CommandItem disabled value="searching">
-                    <RssFill className="me-2 size-4 shrink-0" />
-                    <span>Searching feeds…</span>
-                  </CommandItem>
-                </CommandGroup>
-              ) : null}
-              {searchResults.length ? (
-                <CommandGroup>
-                  <CommandGroupLabel>Feeds</CommandGroupLabel>
-                  {cappedSearchResults.map((item) => (
-                    <CommandItem
-                      key={`${item.id ?? item.url}-${item.url}`}
-                      value={`${item.title} ${item.url} ${item.description ?? ""}`}
-                      onClick={() => {
-                        if (item.isSubscribed || followFeedMutation.isPending) {
-                          return;
-                        }
-
-                        followFeedMutation.mutate({ url: item.url });
-                      }}
-                    >
-                      <span className="me-2 inline-flex size-5 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-sidebar-foreground/8 ring-1 ring-sidebar-border/70">
-                        <FeedFavicon
-                          className="size-4 shrink-0 rounded-[3px] text-sidebar-foreground/70"
-                          faviconUrl={item.faviconUrl}
-                          feedUrl={item.url}
-                          siteUrl={item.link}
-                          title={item.title}
-                        />
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <p className="truncate text-sm text-foreground">{item.title || item.url}</p>
-                        <p className="truncate text-muted-foreground text-xs">
-                          {item.description || item.url}
-                        </p>
-                      </div>
-                      <span className="shrink-0 rounded-full bg-sidebar-foreground/8 px-2 py-0.5 text-[11px] font-medium text-sidebar-foreground/72">
-                        {item.isSubscribed ? "Following" : "Follow"}
-                      </span>
-                    </CommandItem>
-                  ))}
-                  {discoverResultsTruncated ? (
-                    <CommandItem disabled value="discover-truncated-hint">
-                      <span className="text-muted-foreground text-xs">
-                        Showing first {DISCOVER_RESULTS_UI_CAP} results, refine your search to
-                        narrow matches.
-                      </span>
-                    </CommandItem>
-                  ) : null}
-                </CommandGroup>
-              ) : null}
-            </CommandList>
-          </CommandPanel>
-          <CommandFooter>
-            <span>Search by topic or paste a feed URL to follow it.</span>
-            <Kbd className="px-1.5 text-[10px] leading-none">Esc</Kbd>
-          </CommandFooter>
-        </Command>
-      </CommandDialogPopup>
-    </CommandDialog>
+        </RadixDialog.Content>
+      </RadixDialog.Portal>
+    </RadixDialog.Root>
   );
 }

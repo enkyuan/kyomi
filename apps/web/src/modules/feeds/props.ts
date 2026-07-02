@@ -1,4 +1,3 @@
-import type { FocusEvent, PointerEvent } from "react";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
 
@@ -16,8 +15,6 @@ export type Props = {
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
   onSelect: (item: InboxItem) => void;
-  onToolbarEnter: (item: InboxItem, anchorElement: HTMLElement) => void;
-  onToolbarLeave: (event: FocusEvent<HTMLElement> | PointerEvent<HTMLElement>) => void;
 };
 
 function areItemsEqual(a: InboxItem, b: InboxItem) {
@@ -28,9 +25,10 @@ function areItemsEqual(a: InboxItem, b: InboxItem) {
     a.link === b.link &&
     a.publishedAt === b.publishedAt &&
     a.feedFaviconUrl === b.feedFaviconUrl &&
+    a.feedUrl === b.feedUrl &&
+    a.feedSiteUrl === b.feedSiteUrl &&
     a.feedTitle === b.feedTitle &&
     a.articleType === b.articleType &&
-    a.isRead === b.isRead &&
     a.isSaved === b.isSaved
   );
 }
@@ -49,8 +47,6 @@ export function arePropsEqual(prev: Props, next: Props) {
     prev.showFavicons === next.showFavicons &&
     prev.timestampDisplay === next.timestampDisplay &&
     prev.timestampHourCycle === next.timestampHourCycle &&
-    prev.onSelect === next.onSelect &&
-    prev.onToolbarEnter === next.onToolbarEnter &&
-    prev.onToolbarLeave === next.onToolbarLeave
+    prev.onSelect === next.onSelect
   );
 }

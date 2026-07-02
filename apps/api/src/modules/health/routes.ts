@@ -1,4 +1,6 @@
 import { Elysia } from "elysia";
+import { getRedis } from "@adapters/redis";
+import { buildQueueHealthSnapshot } from "@app/jobs/queue-health";
 import { databaseAdapterPlugin, requestObservationPlugin } from "@shared/http/stacks";
 import { buildReadinessPayload, getHealth } from "@modules/health/service";
 
@@ -7,11 +9,13 @@ function liveness() {
 }
 
 export const healthPlugin = new Elysia({
-  name: "vols.rss.health",
+  name: "kyomi.health",
 })
   .use(requestObservationPlugin)
   .get("/health", liveness)
   .get("/api/health", liveness)
+  .get("/queue/health", () => buildQueueHealthSnapshot(getRedis()))
+  .get("/api/queue/health", () => buildQueueHealthSnapshot(getRedis()))
   .use(databaseAdapterPlugin)
   .get("/ready", async ({ db, set }) => {
     const payload = await buildReadinessPayload(db);

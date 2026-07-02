@@ -1,4 +1,4 @@
-import { normalizeSafeHttpUrl } from "../../core";
+import { normalizeSafeHttpUrl } from "../../core/url";
 
 export function resolveRelativeAssetUrls(html: string, baseUrl?: string | null): string {
   if (!baseUrl || typeof document === "undefined") {

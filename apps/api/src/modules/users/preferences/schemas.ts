@@ -8,10 +8,10 @@ export const userPreferencesResponse = t.Object({
   showLinkPreviews: t.Boolean(),
   showImages: t.Boolean(),
   inboxDefaultView: t.Union([
-    t.Literal("inbox"),
-    t.Literal("today"),
-    t.Literal("unread"),
+    t.Literal("my-feed"),
+    t.Literal("all"),
     t.Literal("saved"),
+    t.Literal("recent"),
   ]),
   inboxDensity: t.Union([t.Literal("comfortable"), t.Literal("compact")]),
   articleOpenBehavior: t.Union([t.Literal("split"), t.Literal("reader")]),
@@ -23,7 +23,6 @@ export const userPreferencesResponse = t.Object({
   inboxTimestampDisplay: t.Union([t.Literal("absolute"), t.Literal("relative")]),
   inboxTimestampHourCycle: t.Union([t.Literal("12h"), t.Literal("24h")]),
   inboxFontSizePx: t.Number({ minimum: 14, maximum: 20 }),
-  inboxShowRecents: t.Boolean(),
   inboxShowFavicons: t.Boolean(),
 });
 
@@ -37,7 +36,7 @@ export const updateUserPreferencesBody = t.Object({
   showLinkPreviews: t.Optional(t.Boolean()),
   showImages: t.Optional(t.Boolean()),
   inboxDefaultView: t.Optional(
-    t.Union([t.Literal("inbox"), t.Literal("today"), t.Literal("unread"), t.Literal("saved")]),
+    t.Union([t.Literal("my-feed"), t.Literal("all"), t.Literal("saved"), t.Literal("recent")]),
   ),
   inboxDensity: t.Optional(t.Union([t.Literal("comfortable"), t.Literal("compact")])),
   articleOpenBehavior: t.Optional(t.Union([t.Literal("split"), t.Literal("reader")])),
@@ -47,6 +46,5 @@ export const updateUserPreferencesBody = t.Object({
   inboxTimestampDisplay: t.Optional(t.Union([t.Literal("absolute"), t.Literal("relative")])),
   inboxTimestampHourCycle: t.Optional(t.Union([t.Literal("12h"), t.Literal("24h")])),
   inboxFontSizePx: t.Optional(t.Number({ minimum: 14, maximum: 20 })),
-  inboxShowRecents: t.Optional(t.Boolean()),
   inboxShowFavicons: t.Optional(t.Boolean()),
 });

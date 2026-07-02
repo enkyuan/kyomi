@@ -1,16 +1,20 @@
 // @vitest-environment jsdom
 
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import { resolveInitialInboxPreferences, type InboxPreferences } from "@modules/inbox";
+import {
+  resolveInitialInboxPreferences,
+  type InboxPreferences,
+} from "@modules/inbox/hooks/use-inbox-data";
+import { sanitizeInboxPreferences } from "@modules/inbox/lib/preferences";
 
 const QUERY_KEY = ["me", "preferences", "inbox", "user_1"] as const;
 
 const SPLIT_PREFERENCES: InboxPreferences = {
-  inboxDefaultView: "today",
+  inboxDefaultView: "my-feed",
   inboxDensity: "comfortable",
   articleOpenBehavior: "split",
   inboxMarkReadBehavior: "on-open",
-  inboxTimestampDisplay: "absolute",
+  inboxTimestampDisplay: "relative",
   inboxTimestampHourCycle: "12h",
   inboxFontSizePx: 16,
   inboxShowRecents: false,
@@ -54,7 +58,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "vols.rss:inbox-preferences:v2:user_1",
+      "kyomi:inbox-preferences:v3:user_1",
       JSON.stringify(SPLIT_PREFERENCES),
     );
 
@@ -74,7 +78,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "vols.rss:inbox-preferences:v2:user_1",
+      "kyomi:inbox-preferences:v3:user_1",
       JSON.stringify(READER_PREFERENCES),
     );
 
@@ -94,7 +98,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "vols.rss:inbox-preferences:v2:user_1",
+      "kyomi:inbox-preferences:v3:user_1",
       JSON.stringify(READER_PREFERENCES),
     );
 
@@ -106,5 +110,36 @@ describe("resolveInitialInboxPreferences", () => {
     );
 
     expect(resolved.articleOpenBehavior).toBe("reader");
+  });
+
+  test("ignores stale v2 cache so absolute timestamps do not override defaults", () => {
+    const queryClient = {
+      getQueryData: () => undefined,
+    } as { getQueryData: <T>() => T | undefined };
+
+    window.localStorage.setItem(
+      "kyomi:inbox-preferences:v2:user_1",
+      JSON.stringify({
+        ...READER_PREFERENCES,
+        inboxTimestampDisplay: "absolute",
+      }),
+    );
+
+    const resolved = resolveInitialInboxPreferences(
+      queryClient as never,
+      QUERY_KEY,
+      undefined,
+      "user_1",
+    );
+
+    expect(resolved.inboxTimestampDisplay).toBe("relative");
+  });
+
+  test("maps removed default views to My Feed", () => {
+    for (const inboxDefaultView of ["today", "unread"] as const) {
+      expect(sanitizeInboxPreferences({ ...SPLIT_PREFERENCES, inboxDefaultView })).toMatchObject({
+        inboxDefaultView: "my-feed",
+      });
+    }
   });
 });

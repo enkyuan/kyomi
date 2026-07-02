@@ -4,116 +4,19 @@ import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { updateUserEmail } from "@lib/auth/functions";
+import { logClientError, readResponseErrorSummary } from "@lib/errors";
 import { isValidEmail } from "@modules/auth/schema";
-import { toastManager } from "@vols.rss/ui/toast";
-
-type SessionRow = {
-  expiresAt: string;
-  id: string;
-  ipAddress: string | null;
-  isCurrent: boolean;
-  updatedAt: string;
-  userAgent: string | null;
-};
-
-type UseAccountPanelArgs = {
-  session:
-    | {
-        session?: {
-          expiresAt: string | Date;
-          id: string;
-          ipAddress?: string | null;
-          updatedAt: string | Date;
-          userAgent?: string | null;
-        };
-      }
-    | null
-    | undefined;
-  user: { email?: string | null } | null | undefined;
-};
-
-function parseSessionRow(value: unknown): SessionRow | null {
-  if (!value || typeof value !== "object") {
-    return null;
-  }
-
-  const record = value as Record<string, unknown>;
-  const id = typeof record.id === "string" ? record.id : "";
-  const userAgent = typeof record.userAgent === "string" ? record.userAgent : null;
-  const ipAddress = typeof record.ipAddress === "string" ? record.ipAddress : null;
-  const updatedAt = typeof record.updatedAt === "string" ? record.updatedAt : "";
-  const expiresAt = typeof record.expiresAt === "string" ? record.expiresAt : "";
-
-  if (!id || !updatedAt || !expiresAt) {
-    return null;
-  }
-
-  return {
-    id,
-    userAgent,
-    ipAddress,
-    updatedAt,
-    expiresAt,
-    isCurrent: false,
-  };
-}
-
-function parseSessionsResponse(value: unknown): SessionRow[] {
-  if (!Array.isArray(value)) {
-    return [];
-  }
-
-  const sessions: SessionRow[] = [];
-
-  for (const item of value) {
-    const row = parseSessionRow(item);
-    if (row) {
-      sessions.push(row);
-    }
-  }
-
-  return sessions;
-}
-
-function normalizeTimestamp(value: string | Date): string {
-  if (value instanceof Date) {
-    return value.toISOString();
-  }
-  return value;
-}
-
-function parseApiErrorMessage(error: unknown): string {
-  if (error instanceof Error) {
-    try {
-      const parsed = JSON.parse(error.message) as { error?: { message?: string } };
-      if (parsed?.error?.message) {
-        return parsed.error.message;
-      }
-    } catch {
-      // Fallback to raw error message.
-    }
-    return error.message || "Unable to update email.";
-  }
-  return "Unable to update email.";
-}
-
-const accountTimestampFormatter = new Intl.DateTimeFormat("en", {
-  dateStyle: "medium",
-  timeStyle: "short",
-});
-
-function formatTimestamp(value: string): string {
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "Unknown";
-  return accountTimestampFormatter.format(date);
-}
-
-function shortenUserAgent(userAgent: string | null): string {
-  if (!userAgent) return "Unknown device";
-  const normalized = userAgent.trim();
-  if (!normalized) return "Unknown device";
-  return normalized.length > 80 ? `${normalized.slice(0, 77)}...` : normalized;
-}
+import { toastManager } from "@kyomi/ui/toast";
+import {
+  authSessionsQueryKey,
+  parseApiErrorMessage,
+  parseSessionsResponse,
+  postAuthSessionAction,
+} from "./session-api";
+import { describeSessionDevice } from "./session-device";
+import { formatTimestamp, normalizeTimestamp } from "./session-format";
+import { describeSessionLocation } from "./session-location";
+import type { SessionRow, UseAccountPanelArgs } from "./session-types";
 
 export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
   const queryClient = useQueryClient();
@@ -128,18 +31,23 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     setEmailDraft(user?.email ?? "");
   }
 
-  const sessionsQuery = useQuery({
-    queryKey: ["auth", "sessions"],
+  const { data: sessionsData, isError: isSessionsError } = useQuery({
+    queryKey: authSessionsQueryKey(),
     queryFn: async (): Promise<SessionRow[]> => {
-      const response = await fetch("/api/auth/list-sessions", {
-        credentials: "include",
-        method: "GET",
-      });
-      if (!response.ok) {
-        throw new Error("Unable to load sessions.");
+      try {
+        const response = await fetch("/api/auth/list-sessions", {
+          credentials: "include",
+          method: "GET",
+        });
+        if (!response.ok) {
+          throw new Error(await readResponseErrorSummary(response));
+        }
+        const data: unknown = await response.json();
+        return parseSessionsResponse(data);
+      } catch (error) {
+        logClientError("settings.account.sessions", error);
+        throw error;
       }
-      const data: unknown = await response.json();
-      return parseSessionsResponse(data);
     },
     retry: 1,
   });
@@ -155,13 +63,12 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
         description: updatedProfile.email,
         type: "success",
       });
-      await Promise.all([
-        queryClient.invalidateQueries({ queryKey: ["auth", "sessions"] }),
-        router.invalidate(),
-      ]);
+      await queryClient.invalidateQueries({ queryKey: authSessionsQueryKey() });
+      await router.invalidate();
     },
     onError: (error) => {
-      const message = parseApiErrorMessage(error);
+      logClientError("settings.account.email", error);
+      const message = parseApiErrorMessage(error, "Unable to update email. Try again.");
       setEmailError(message);
       toastManager.add({
         title: "Unable to update email",
@@ -171,12 +78,87 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     },
   });
 
+  const revokeSessionMutation = useMutation({
+    mutationFn: async (token: string) => {
+      await postAuthSessionAction("/api/auth/revoke-session", { token });
+    },
+    onSuccess: async () => {
+      toastManager.add({
+        title: "Session signed out",
+        description: "The selected device no longer has access.",
+        type: "success",
+      });
+      await queryClient.invalidateQueries({ queryKey: authSessionsQueryKey() });
+      await router.invalidate();
+    },
+    onError: (error) => {
+      logClientError("settings.account.revoke_session", error);
+      toastManager.add({
+        title: "Unable to sign out session",
+        description: parseApiErrorMessage(error, "Unable to sign out that session. Try again."),
+        type: "error",
+      });
+    },
+  });
+
+  const revokeOtherSessionsMutation = useMutation({
+    mutationFn: async () => {
+      await postAuthSessionAction("/api/auth/revoke-other-sessions");
+    },
+    onSuccess: async () => {
+      toastManager.add({
+        title: "Other sessions signed out",
+        description: "Only this device remains active.",
+        type: "success",
+      });
+      await queryClient.invalidateQueries({ queryKey: authSessionsQueryKey() });
+      await router.invalidate();
+    },
+    onError: (error) => {
+      logClientError("settings.account.revoke_other_sessions", error);
+      toastManager.add({
+        title: "Unable to sign out other sessions",
+        description: parseApiErrorMessage(error, "Unable to sign out other sessions. Try again."),
+        type: "error",
+      });
+    },
+  });
+
+  const revokeAllSessionsMutation = useMutation({
+    mutationFn: async () => {
+      await postAuthSessionAction("/api/auth/revoke-sessions");
+    },
+    onSuccess: async () => {
+      toastManager.add({
+        title: "All devices signed out",
+        description: "This account has been signed out everywhere.",
+        type: "success",
+      });
+      await queryClient.invalidateQueries({ queryKey: authSessionsQueryKey() });
+      await router.invalidate();
+      await router.navigate({ to: "/" });
+    },
+    onError: (error) => {
+      logClientError("settings.account.revoke_all_sessions", error);
+      toastManager.add({
+        title: "Unable to sign out all devices",
+        description: parseApiErrorMessage(error, "Unable to sign out all devices. Try again."),
+        type: "error",
+      });
+    },
+  });
+
   const fallbackSession: SessionRow[] = session?.session
     ? [
         {
           id: session.session.id,
+          token: session.session.token,
           userAgent: session.session.userAgent ?? null,
           ipAddress: session.session.ipAddress ?? null,
+          locationLabel: session.session.locationLabel ?? null,
+          locationCity: session.session.locationCity ?? null,
+          locationRegion: session.session.locationRegion ?? null,
+          locationCountry: session.session.locationCountry ?? null,
           updatedAt: normalizeTimestamp(session.session.updatedAt),
           expiresAt: normalizeTimestamp(session.session.expiresAt),
           isCurrent: true,
@@ -184,7 +166,7 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
       ]
     : [];
 
-  const fetchedSessions = sessionsQuery.data ?? [];
+  const fetchedSessions = sessionsData ?? [];
   const sessions =
     fetchedSessions.length > 0
       ? fetchedSessions.map((item) => ({
@@ -192,6 +174,8 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
           isCurrent: session?.session?.id === item.id,
         }))
       : fallbackSession;
+
+  const otherSessionCount = sessions.filter((item) => !item.isCurrent).length;
 
   const handleStartEditEmail = () => {
     setIsEditingEmail(true);
@@ -230,18 +214,38 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     await updateEmailMutation.mutateAsync(trimmedEmail);
   };
 
+  const handleRevokeSession = async (token: string) => {
+    await revokeSessionMutation.mutateAsync(token);
+  };
+
+  const handleRevokeOtherSessions = async () => {
+    await revokeOtherSessionsMutation.mutateAsync();
+  };
+
+  const handleRevokeAllSessions = async () => {
+    await revokeAllSessionsMutation.mutateAsync();
+  };
+
   return {
+    describeSessionDevice,
+    describeSessionLocation,
     emailDraft,
     emailError,
-    isEditingEmail,
-    sessions,
-    sessionsQuery,
-    updateEmailMutation,
     formatTimestamp,
     handleCancelEditEmail,
     handleEmailDraftChange,
+    handleRevokeAllSessions,
+    handleRevokeOtherSessions,
+    handleRevokeSession,
     handleSaveEmail,
     handleStartEditEmail,
-    shortenUserAgent,
+    isEditingEmail,
+    isSessionsError,
+    otherSessionCount,
+    revokeAllSessionsMutation,
+    revokeOtherSessionsMutation,
+    revokeSessionMutation,
+    sessions,
+    updateEmailMutation,
   };
 }

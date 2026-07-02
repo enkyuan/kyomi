@@ -127,6 +127,83 @@
       "when": 1777845600000,
       "tag": "0017_reader_content_width_default_wide",
       "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1779728798109,
+      "tag": "0018_omniscient_leo",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1782878400000,
+      "tag": "0019_feed_refresh_scale_indexes",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1782878460000,
+      "tag": "0020_remove_inbox_show_recents",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1782878520000,
+      "tag": "0021_inbox_timestamp_display_relative",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1782878580000,
+      "tag": "0022_favicon_hosts",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1782878640000,
+      "tag": "0023_inbox_timestamp_display_relative_global",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1782878700000,
+      "tag": "0024_recent_viewed_at",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1782878760000,
+      "tag": "0025_article_reports_and_hidden_state",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1782878820000,
+      "tag": "0026_inbox_organizer",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "7",
+      "when": 1782878880000,
+      "tag": "0027_folder_pinning",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "7",
+      "when": 1783021545075,
+      "tag": "0028_inbox_default_view_my_feed",
+      "breakpoints": true
     }
   ]
 }

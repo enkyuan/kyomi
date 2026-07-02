@@ -8,8 +8,9 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@vols.rss/ui/breadcrumb";
-import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@vols.rss/ui/dialog";
+} from "@kyomi/ui/breadcrumb";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@kyomi/ui/dialog";
+import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
   Sidebar,
   SidebarContent,
@@ -17,12 +18,13 @@ import {
   SidebarGroupContent,
   SidebarMenu,
   SidebarProvider,
-} from "@vols.rss/ui/sidebar";
-import { Separator } from "@vols.rss/ui/separator";
+} from "@kyomi/ui/sidebar";
+import { Separator } from "@kyomi/ui/separator";
 import { AccountPageNav, AccountPagePanel, accountSection } from "../account";
 import { AdvancedPageNav, AdvancedPagePanel, advancedSection } from "../advanced";
 import { AppearancePageNav, AppearancePagePanel, appearanceSection } from "../appearance";
 import { BillingPageNav, BillingPagePanel, billingSection } from "../billing";
+import { FeedbackPageNav, FeedbackPagePanel, feedbackSection } from "../feedback";
 import {
   PersonalizationPageNav,
   PersonalizationPagePanel,
@@ -79,6 +81,12 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                         setActiveSectionName(billingSection.name);
                       }}
                     />
+                    <FeedbackPageNav
+                      isActive={activeSectionName === feedbackSection.name}
+                      onSelect={() => {
+                        setActiveSectionName(feedbackSection.name);
+                      }}
+                    />
                     <AdvancedPageNav
                       isActive={activeSectionName === advancedSection.name}
                       onSelect={() => {
@@ -105,17 +113,20 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
               </Breadcrumb>
             </header>
             <Separator />
-            <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-5">
-              {activeSectionName === accountSection.name ? (
-                <AccountPagePanel onLogout={logout} />
-              ) : null}
-              {activeSectionName === appearanceSection.name ? <AppearancePagePanel /> : null}
-              {activeSectionName === personalizationSection.name ? (
-                <PersonalizationPagePanel />
-              ) : null}
-              {activeSectionName === billingSection.name ? <BillingPagePanel /> : null}
-              {activeSectionName === advancedSection.name ? <AdvancedPagePanel /> : null}
-            </div>
+            <ScrollArea className="min-h-0 flex-1">
+              <div className="flex flex-col gap-4 p-5">
+                {activeSectionName === accountSection.name ? (
+                  <AccountPagePanel onLogout={logout} />
+                ) : null}
+                {activeSectionName === appearanceSection.name ? <AppearancePagePanel /> : null}
+                {activeSectionName === personalizationSection.name ? (
+                  <PersonalizationPagePanel />
+                ) : null}
+                {activeSectionName === billingSection.name ? <BillingPagePanel /> : null}
+                {activeSectionName === feedbackSection.name ? <FeedbackPagePanel /> : null}
+                {activeSectionName === advancedSection.name ? <AdvancedPagePanel /> : null}
+              </div>
+            </ScrollArea>
           </main>
         </SidebarProvider>
       </DialogContent>

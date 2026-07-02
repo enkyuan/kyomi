@@ -34,6 +34,7 @@ describe("articles.routes", () => {
 
     expect(returned as unknown).toBe(app);
     expect(routes.map((route) => `${route.method} ${route.path}`)).toEqual([
+      "get /articles/views/all",
       "get /articles/views/today",
       "get /articles/views/recently-read",
       "get /articles/views/read-later",
@@ -49,6 +50,8 @@ describe("articles.routes", () => {
       "post /articles/:articleId/summarize",
       "post /articles/:articleId/translate",
       "post /articles",
+      "post /articles/:articleId/view",
+      "post /articles/:articleId/reports/broken",
       "put /articles/:articleId",
     ]);
     for (const route of routes) {
@@ -103,13 +106,24 @@ describe("articles.routes", () => {
     registerArticleRoutes(app as never);
 
     const create = routes.find((r) => r.method === "post" && r.path === "/articles");
+    const view = routes.find((r) => r.method === "post" && r.path === "/articles/:articleId/view");
+    const report = routes.find(
+      (r) => r.method === "post" && r.path === "/articles/:articleId/reports/broken",
+    );
     const update = routes.find((r) => r.method === "put" && r.path === "/articles/:articleId");
 
     expect(create).toBeDefined();
+    expect(view).toBeDefined();
+    expect(report).toBeDefined();
     expect(update).toBeDefined();
 
     expect((create?.options as Record<string, unknown>).body).toBeDefined();
     expect((create?.options as Record<string, unknown>).response).toBeDefined();
+    expect((view?.options as Record<string, unknown>).params).toBeDefined();
+    expect((view?.options as Record<string, unknown>).response).toBeDefined();
+    expect((report?.options as Record<string, unknown>).params).toBeDefined();
+    expect((report?.options as Record<string, unknown>).body).toBeDefined();
+    expect((report?.options as Record<string, unknown>).response).toBeDefined();
     expect((update?.options as Record<string, unknown>).params).toBeDefined();
     expect((update?.options as Record<string, unknown>).body).toBeDefined();
     expect((update?.options as Record<string, unknown>).response).toBeDefined();

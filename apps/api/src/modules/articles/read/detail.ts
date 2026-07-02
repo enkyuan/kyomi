@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@vols.rss/db";
+import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
@@ -50,16 +50,18 @@ async function getFeedArticleDetailForUser(
       extractedContentUpdatedAt: feedItems.extractedContentUpdatedAt,
       publishedAt: feedItems.publishedAt,
       feedId: feedItems.feedId,
+      feedUrl: feeds.url,
+      feedSiteUrl: feeds.link,
       feedTitle: feeds.title,
       feedFaviconUrl: feeds.faviconUrl,
       isRead: articleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
     })
     .from(feedItems)
-    .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
+    .leftJoin(feedSubscriptions, feedSubscriptionsJoin)
     .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
     .leftJoin(feedItemUserState, userStateJoin)
-    .where(and(eq(feedItems.id, articleId), eq(feedSubscriptions.userId, userId)))
+    .where(eq(feedItems.id, articleId))
     .limit(1);
 
   const r = rows[0];
@@ -115,6 +117,8 @@ async function getFeedArticleDetailForUser(
     extractionErrorMessage: r.extractionErrorMessage,
     publishedAt: r.publishedAt.toISOString(),
     feedId: r.feedId,
+    feedUrl: r.feedUrl,
+    feedSiteUrl: r.feedSiteUrl,
     feedTitle: decodeText(r.feedTitle),
     feedFaviconUrl: r.feedFaviconUrl,
     isRead: r.isRead,

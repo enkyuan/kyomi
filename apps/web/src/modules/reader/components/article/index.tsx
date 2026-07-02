@@ -3,12 +3,16 @@
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { TimestampText } from "@modules/inbox/components/timestamp-text";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
+import { getTypography } from "@modules/feeds/layout";
 import { Toolbar } from "../toolbar";
-import { useReaderToolbarModel } from "@modules/reader/hooks/use-reader-toolbar-model";
-import { ReaderContent } from "@vols.rss/reader/web";
-import { Button } from "@vols.rss/ui/button";
-import { Spinner } from "@vols.rss/ui/spinner";
-import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/schemas";
+import {
+  useToolbar as useReaderToolbar,
+  type ToolbarModel,
+} from "@modules/reader/hooks/use-toolbar";
+import { ReaderContent } from "@kyomi/reader/web";
+import { Button } from "@kyomi/ui/button";
+import { Spinner } from "@kyomi/ui/spinner";
+import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
 import { cn } from "@lib/utils";
 import { useTimestamp } from "@hooks/use-timestamp";
 import { useLayoutEffect, useRef, useState } from "react";
@@ -21,6 +25,35 @@ function estimateReadingTime(html: string): number {
     .trim();
   const words = text.split(" ").filter(Boolean).length;
   return Math.max(1, Math.round(words / 238));
+}
+
+function hasReaderArticleBody(reader: ToolbarModel["displayReader"]): boolean {
+  if (reader.bodyKind === "html") {
+    return Boolean(reader.contentHtml?.trim());
+  }
+  if (reader.bodyKind === "markdown") {
+    return Boolean(reader.contentMarkdown?.trim());
+  }
+  if (reader.bodyKind === "text") {
+    return Boolean(reader.contentText?.trim());
+  }
+  return false;
+}
+
+function getReaderSourceLayoutId(item: ArticleDetailDto) {
+  const sourceIdentity = item.feedUrl ?? item.feedSiteUrl ?? item.feedTitle;
+  const normalizedSourceIdentity = sourceIdentity.trim().toLowerCase();
+
+  if (!normalizedSourceIdentity) {
+    return undefined;
+  }
+
+  let hash = 0;
+  for (const character of normalizedSourceIdentity) {
+    hash = (hash * 31 + character.charCodeAt(0)) % 2_147_483_647;
+  }
+
+  return `reader-source-${hash.toString(36)}`;
 }
 
 function useFloatingToolbarBounds(articleRef: RefObject<HTMLElement | null>, enabled: boolean) {
@@ -58,14 +91,12 @@ function useFloatingToolbarBounds(articleRef: RefObject<HTMLElement | null>, ena
   return bounds;
 }
 
-type ReaderToolbarModel = ReturnType<typeof useReaderToolbarModel>;
-
 function FloatingReaderToolbar({
   toolbar,
   floatingToolbarBounds,
   prefersReducedMotion,
 }: {
-  toolbar: ReaderToolbarModel;
+  toolbar: ToolbarModel;
   floatingToolbarBounds: { left: number; top: number; width: number } | null;
   prefersReducedMotion: boolean;
 }) {
@@ -134,54 +165,83 @@ function FloatingReaderToolbar({
 function ReaderArticleHeader({
   item,
   readTime,
+  density,
+  fontSizePx,
   showFavicons,
   timestampDisplay,
   timestampHourCycle,
   toolbar,
+  hideInlineToolbar,
 }: {
   item: ArticleDetailDto;
   readTime: number | null;
+  density: InboxDensityDto;
+  fontSizePx: number;
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
-  toolbar: ReaderToolbarModel;
+  toolbar: ToolbarModel;
+  hideInlineToolbar?: boolean;
 }) {
+  const { titleFontSizePx, titleLineHeightPx, sourceLabelFontSizePx } = getTypography({
+    density,
+    fontSizePx,
+    readerFocusMode: false,
+  });
+
   return (
     <div className="not-prose mb-6 flex flex-col gap-3">
-      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs uppercase tracking-wide text-muted-foreground">
-        <div className="flex min-w-0 flex-wrap items-center gap-2">
-          <TimestampText
-            value={item.publishedAt}
-            display={timestampDisplay}
-            hourCycle={timestampHourCycle}
-          />
-          {readTime ? (
-            <>
-              <span>·</span>
-              <span>{readTime} min read</span>
-            </>
-          ) : null}
+      {hideInlineToolbar ? null : (
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs uppercase tracking-wide text-muted-foreground">
+          <div className="flex min-w-0 flex-wrap items-center gap-2">
+            <TimestampText
+              value={item.publishedAt}
+              display={timestampDisplay}
+              hourCycle={timestampHourCycle}
+            />
+            {readTime ? (
+              <>
+                <span>·</span>
+                <span>{readTime} min read</span>
+              </>
+            ) : null}
+          </div>
+          <div ref={toolbar.inlineToolbarRef} className="hidden md:block">
+            <Toolbar {...toolbar.toolbarProps} />
+          </div>
         </div>
-        <div ref={toolbar.inlineToolbarRef} className="hidden md:block">
-          <Toolbar {...toolbar.toolbarProps} />
-        </div>
-      </div>
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <p className="min-w-0 flex-1 text-xl font-semibold text-foreground">{item.title}</p>
-      </div>
+      )}
       <SourceRow
         articleUrl={item.link}
         feedFaviconUrl={item.feedFaviconUrl}
+        feedUrl={item.feedUrl}
+        feedSiteUrl={item.feedSiteUrl}
         feedTitle={item.feedTitle}
         showFavicon={showFavicons}
-        className=""
-        labelClassName="text-sm"
+        className="min-w-0 flex-1 gap-3"
+        iconClassName="size-5.5 rounded-sm"
+        labelStyle={{ fontSize: `${sourceLabelFontSizePx}px` }}
+        layoutId={`inbox-item-${item.id}-source`}
+        sharedSourceLayoutId={getReaderSourceLayoutId(item)}
       />
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <m.p
+          layoutId={`inbox-item-${item.id}-title`}
+          className="min-w-0 flex-1 font-semibold tracking-[-0.012em] text-foreground"
+          style={{
+            fontSize: `${titleFontSizePx}px`,
+            lineHeight: `${titleLineHeightPx}px`,
+          }}
+          transition={{ type: "spring", duration: 0.28, bounce: 0 }}
+        >
+          {item.title}
+        </m.p>
+      </div>
     </div>
   );
 }
 
-function ExtractionFailedBanner({ toolbar }: { toolbar: ReaderToolbarModel }) {
+function ExtractionFailedBanner({ toolbar }: { toolbar: ToolbarModel }) {
   if (!toolbar.showFailedBanner) {
     return null;
   }
@@ -217,19 +277,25 @@ function ExtractionFailedBanner({ toolbar }: { toolbar: ReaderToolbarModel }) {
 
 export function Article({
   item,
+  density,
+  fontSizePx,
   showFavicons,
   timestampDisplay,
   timestampHourCycle,
   readerFocusMode = false,
+  hideInlineToolbar = false,
 }: {
   item: ArticleDetailDto;
+  density: InboxDensityDto;
+  fontSizePx: number;
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
   readerFocusMode?: boolean;
+  hideInlineToolbar?: boolean;
 }) {
   const prefersReducedMotion = useReducedMotion();
-  const toolbar = useReaderToolbarModel({ item, readerFocusMode });
+  const toolbar = useReaderToolbar({ item, readerFocusMode });
   const articleRef = useRef<HTMLElement>(null);
   const floatingToolbarBounds = useFloatingToolbarBounds(
     articleRef,
@@ -243,6 +309,7 @@ export function Article({
     toolbar.displayReader.contentText ??
     "";
   const readTime = displayContent ? estimateReadingTime(displayContent) : null;
+  const shouldRenderArticleBody = !hideInlineToolbar || hasReaderArticleBody(toolbar.displayReader);
 
   return (
     <article
@@ -258,20 +325,25 @@ export function Article({
       <ReaderArticleHeader
         item={item}
         readTime={readTime}
+        density={density}
+        fontSizePx={fontSizePx}
         showFavicons={showFavicons}
         timestampDisplay={timestampDisplay}
         timestampHourCycle={timestampHourCycle}
         toolbar={toolbar}
+        hideInlineToolbar={hideInlineToolbar}
       />
       <ExtractionFailedBanner toolbar={toolbar} />
 
-      <div className="relative">
-        <ReaderContent
-          reader={toolbar.displayReader}
-          openLinksInNewTab={toolbar.openLinksInNewTab}
-          showLinkPreviews={toolbar.showLinkPreviews}
-          layoutMode="fidelity"
-        />
+      <div className="relative" data-reader-inbox-body={hideInlineToolbar ? "" : undefined}>
+        {shouldRenderArticleBody ? (
+          <ReaderContent
+            reader={toolbar.displayReader}
+            openLinksInNewTab={toolbar.openLinksInNewTab}
+            showLinkPreviews={toolbar.showLinkPreviews}
+            layoutMode="fidelity"
+          />
+        ) : null}
       </div>
     </article>
   );

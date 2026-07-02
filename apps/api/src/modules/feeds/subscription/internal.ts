@@ -1,5 +1,6 @@
 import { and, eq } from "drizzle-orm";
-import { feedSubscriptions, feeds } from "@vols.rss/db";
+import { feedSubscriptions, feeds } from "@kyomi/db";
+import { faviconSourceRank } from "@kyomi/worker/favicon";
 import type { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";
@@ -9,21 +10,6 @@ import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/s
 type DB = typeof db;
 
 export type FaviconEnrichment = { url: string; source: string } | null;
-
-function faviconSourceRank(source: string | null): number {
-  switch (source) {
-    case "html_link":
-    case "feed_icon":
-      return 3;
-    case "google_s2":
-    case "duckduckgo":
-      return 2;
-    case "favicon_ico":
-      return 1;
-    default:
-      return 0;
-  }
-}
 
 /**
  * Upsert the global `feeds` row by canonical URL. Returns the feed ID and

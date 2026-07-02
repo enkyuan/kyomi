@@ -1,3 +1,5 @@
+import { createHash } from "node:crypto";
+import { readFile } from "node:fs/promises";
 import { defineConfig, transformWithEsbuild } from "vite";
 import type { Plugin } from "vite";
 import { devtools } from "@tanstack/devtools-vite";
@@ -66,14 +68,14 @@ function staticAssetServiceWorkerPlugin(): Plugin {
         return;
       }
 
-      const serviceWorkerSource = await Bun.file("sw.plugin.ts").text();
+      const serviceWorkerSource = await readFile("sw.plugin.ts", "utf8");
 
       const urls = Object.values(bundle)
         .filter((asset) => asset.fileName.startsWith("assets/"))
         .filter((asset) => STATIC_ASSET_EXTENSIONS.test(asset.fileName))
         .map((asset) => `/${asset.fileName}`)
         .sort();
-      const version = Bun.hash(urls.join("\n")).toString(16);
+      const version = createHash("sha256").update(urls.join("\n")).digest("hex").slice(0, 16);
 
       const source = (
         await transformWithEsbuild(serviceWorkerSource, "sw.plugin.ts", {

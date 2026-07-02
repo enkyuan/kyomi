@@ -5,11 +5,18 @@ export type ParsedListQuery = {
   feedId: string | undefined;
   folderId: string | undefined;
   source: string;
+  sort: ArticleSort;
   isRead: boolean | undefined;
   isSaved: boolean | undefined;
   publishedAfter: Date | undefined;
   publishedBefore: Date | undefined;
 };
+
+export type ArticleSort = "newest" | "oldest" | "unread-first";
+
+function parseArticleSort(value: unknown): ArticleSort {
+  return value === "oldest" || value === "unread-first" ? value : "newest";
+}
 
 export function parseOptionalIsoDate(value: unknown): Date | undefined {
   if (typeof value !== "string") {
@@ -31,10 +38,19 @@ export function parseMergedViewListQuery(query: Record<string, unknown>): {
   limit: number;
   /** Merged-list cursor (`m1.` + base64url JSON); opaque across feed vs clip sources. */
   cursor: string | undefined;
+  sort: ArticleSort;
+  search: string | undefined;
 } {
+  const normalizedSearch =
+    typeof query.search === "string" && query.search.trim().length > 0
+      ? query.search.trim()
+      : undefined;
+
   return {
     limit: Math.min(200, Math.max(1, Number(query.limit ?? 100) || 100)),
     cursor: typeof query.cursor === "string" ? query.cursor : undefined,
+    sort: parseArticleSort(query.sort),
+    search: normalizedSearch,
   };
 }
 
@@ -51,6 +67,7 @@ export function parseArticlesListQuery(query: Record<string, unknown>): ParsedLi
     feedId: typeof query.feed_id === "string" ? query.feed_id : undefined,
     folderId: typeof query.folder_id === "string" ? query.folder_id : undefined,
     source: typeof query.source === "string" ? query.source.toLowerCase() : "feeds",
+    sort: parseArticleSort(query.sort),
     isRead: query.is_read === "true" ? true : query.is_read === "false" ? false : undefined,
     isSaved: query.is_saved === "true" ? true : undefined,
     publishedAfter: parseOptionalIsoDate(query.published_after),

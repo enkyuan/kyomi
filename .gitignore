@@ -4,12 +4,19 @@ node_modules
 .env
 .env.*
 !.env.example
+apps/*/bun.lock
+packages/*/bun.lock
+tests/bun.lock
 dist
 build
 coverage
 .cursor/*
 .antigravitycli
 .agents
+
+# Local docker overrides (corp CA mount, etc.)
+docker/certs/
+docker/docker-compose.override.yml
 
 # Python pipeline artifacts
 packages/catalog/.venv

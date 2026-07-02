@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/no-multi-comp */
 "use client";
 
 import { Collapsible as CollapsiblePrimitive } from "@base-ui/react/collapsible";

@@ -36,14 +36,13 @@ export function registerUserRoutes(app: Elysia) {
           openLinksInNewTab?: boolean;
           showLinkPreviews?: boolean;
           showImages?: boolean;
-          inboxDefaultView?: "inbox" | "today" | "unread" | "saved";
+          inboxDefaultView?: "my-feed" | "all" | "saved" | "recent";
           inboxDensity?: "comfortable" | "compact";
           articleOpenBehavior?: "split" | "reader";
           inboxMarkReadBehavior?: "on-open" | "after-delay" | "manual";
           inboxTimestampDisplay?: "absolute" | "relative";
           inboxTimestampHourCycle?: "12h" | "24h";
           inboxFontSizePx?: number;
-          inboxShowRecents?: boolean;
           inboxShowFavicons?: boolean;
         }>(context);
         return updateUserPreferences(db, userId, body);

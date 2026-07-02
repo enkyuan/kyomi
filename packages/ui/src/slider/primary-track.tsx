@@ -53,6 +53,7 @@ export type PrimaryTrackProps = {
   isInteracting: boolean;
 };
 
+// oxlint-disable-next-line eslint/complexity,react-doctor/no-many-boolean-props
 export function PrimaryTrack({
   valuePosition,
   showValue,

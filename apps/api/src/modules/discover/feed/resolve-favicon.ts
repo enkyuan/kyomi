@@ -1,4 +1,9 @@
-import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "@vols.rss/worker/favicon";
+import {
+  createDrizzleFaviconHostStore,
+  resolvePersistedFeedFaviconUrl,
+  tryFetchImageIfHostSafe,
+  type FaviconDatabase,
+} from "@kyomi/worker/favicon";
 import type { AppLogger } from "@adapters/logger";
 import type { ResolvedRemoteFeed } from "./resolve-remote";
 
@@ -17,12 +22,14 @@ async function resolveEmbeddedFeedIcon(iconUrl: string | null): Promise<FeedFavi
 }
 
 export async function resolveRemoteFeedFavicon(
+  database: FaviconDatabase,
   resolved: ResolvedRemoteFeed,
   logger?: AppLogger,
 ): Promise<FeedFaviconEnrichment> {
   const faviconSeed = resolved.link?.trim() || resolved.canonicalUrl;
+  const faviconStore = createDrizzleFaviconHostStore(database);
   try {
-    const websiteFavicon = await resolveFeedFaviconUrl(faviconSeed);
+    const websiteFavicon = await resolvePersistedFeedFaviconUrl(faviconStore, faviconSeed);
     if (websiteFavicon) {
       return websiteFavicon;
     }

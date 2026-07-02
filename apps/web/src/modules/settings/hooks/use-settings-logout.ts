@@ -2,7 +2,8 @@
 
 import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
-import { toastManager } from "@vols.rss/ui/toast";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { toastManager } from "@kyomi/ui/toast";
 
 type UseSettingsLogoutArgs = {
   onOpenChange: (open: boolean) => void;
@@ -25,11 +26,14 @@ export function useSettingsLogout({ onOpenChange }: UseSettingsLogoutArgs) {
         await router.navigate({ to: "/" });
       })(),
       {
-        error: (error) => ({
-          description: error instanceof Error ? error.message : "Unable to log out",
-          title: "Log out failed",
-          type: "error",
-        }),
+        error: (error) => {
+          logClientError("settings.logout", error);
+          return {
+            description: getUserSafeErrorMessage(error, "Unable to log out"),
+            title: "Log out failed",
+            type: "error",
+          };
+        },
         loading: {
           description: "Ending your current session.",
           timeout: 0,

@@ -1,21 +1,51 @@
 "use client";
 
-import { FontSizeLine } from "@mingcute/react";
-import { Group, GroupSeparator } from "@vols.rss/ui/group";
-import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vols.rss/ui/select";
-import { SliderComfortable } from "@vols.rss/ui/slider";
-import { Switch } from "@vols.rss/ui/switch";
+import { Group, GroupSeparator } from "@kyomi/ui/group";
+import {
+  SegmentedControl,
+  SegmentedControlList,
+  SegmentedControlTab,
+} from "@kyomi/ui/segmented-control";
+import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@kyomi/ui/select";
+import { Switch } from "@kyomi/ui/switch";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
-import { SettingHeading } from "./shared";
+import { SettingHeading, SettingSubHeading } from "./shared";
+
+const INBOX_TEXT_SCALE_OPTIONS = [
+  { label: "sm", value: "sm", fontSizePx: 14 },
+  { label: "md", value: "md", fontSizePx: 16 },
+  { label: "lg", value: "lg", fontSizePx: 18 },
+  { label: "xl", value: "xl", fontSizePx: 20 },
+] as const;
+
+type InboxTextScaleValue = (typeof INBOX_TEXT_SCALE_OPTIONS)[number]["value"];
+type InboxTextScaleOption = (typeof INBOX_TEXT_SCALE_OPTIONS)[number];
+
+function getInboxTextScaleValue(fontSizePx: number): InboxTextScaleValue {
+  let closestOption: InboxTextScaleOption = INBOX_TEXT_SCALE_OPTIONS[0];
+  let closestDistance = Math.abs(fontSizePx - closestOption.fontSizePx);
+
+  for (const option of INBOX_TEXT_SCALE_OPTIONS.slice(1)) {
+    const distance = Math.abs(fontSizePx - option.fontSizePx);
+    if (distance < closestDistance) {
+      closestOption = option;
+      closestDistance = distance;
+    }
+  }
+
+  return closestOption.value;
+}
+
+function getInboxTextScaleFontSize(value: string): number | null {
+  return INBOX_TEXT_SCALE_OPTIONS.find((option) => option.value === value)?.fontSizePx ?? null;
+}
 
 type InboxAppearanceSettingsProps = {
-  limits: { minFontSizePx: number; maxFontSizePx: number };
   preferences: InboxPreferences;
   setPreferences: (next: Partial<InboxPreferences>) => void;
 };
 
 export function InboxAppearanceSettings({
-  limits,
   preferences,
   setPreferences,
 }: InboxAppearanceSettingsProps) {
@@ -26,38 +56,9 @@ export function InboxAppearanceSettings({
         title="Inbox"
       />
       <div className="space-y-3 py-1">
-        <SettingHeading
-          description="Choose which inbox view opens first when you land on the inbox."
-          title="Default view"
-        />
-        <Select
-          items={[
-            { label: "Today", value: "today" },
-            { label: "All unread", value: "unread" },
-            { label: "Read later", value: "saved" },
-          ]}
-          value={preferences.inboxDefaultView}
-          onValueChange={(value) => {
-            if (value === "today" || value === "unread" || value === "saved") {
-              setPreferences({ inboxDefaultView: value });
-            }
-          }}
-        >
-          <SelectTrigger className="w-fit min-w-48" size="sm">
-            <SelectValue />
-          </SelectTrigger>
-          <SelectPopup>
-            <SelectItem value="today">Today</SelectItem>
-            <SelectItem value="unread">All unread</SelectItem>
-            <SelectItem value="saved">Read later</SelectItem>
-          </SelectPopup>
-        </Select>
-      </div>
-
-      <div className="space-y-3 py-1">
-        <SettingHeading
+        <SettingSubHeading
           description="Compact trims row spacing for denser scanning. Comfortable preserves the current roomy card layout."
-          title="Inbox density"
+          title="Density"
         />
         <Select
           items={[
@@ -82,63 +83,39 @@ export function InboxAppearanceSettings({
       </div>
 
       <div className="space-y-3 py-1">
-        <SettingHeading
+        <SettingSubHeading
           description="Scale inbox item text while preserving title, summary, and metadata hierarchy."
-          title="Inbox text size"
+          title="Text size"
         />
-        <SliderComfortable
-          formatValue={(value) => `${value}px`}
-          label={<FontSizeLine size={20} />}
-          max={limits.maxFontSizePx}
-          min={limits.minFontSizePx}
-          step={1}
-          variant="scrubber"
-          value={preferences.inboxFontSizePx}
-          onChange={(value) => {
-            setPreferences({ inboxFontSizePx: value });
-          }}
-        />
-      </div>
-
-      <div className="space-y-3 py-1">
-        <SettingHeading
-          description="Control whether opening an article immediately clears it from unread, waits briefly, or leaves that action manual."
-          title="Mark as read"
-        />
-        <Select
-          items={[
-            { label: "On open", value: "on-open" },
-            { label: "After delay", value: "after-delay" },
-            { label: "Manual only", value: "manual" },
-          ]}
-          value={preferences.inboxMarkReadBehavior}
+        <SegmentedControl
+          value={getInboxTextScaleValue(preferences.inboxFontSizePx)}
           onValueChange={(value) => {
-            if (value === "on-open" || value === "after-delay" || value === "manual") {
-              setPreferences({ inboxMarkReadBehavior: value });
+            const fontSizePx = getInboxTextScaleFontSize(value);
+            if (fontSizePx !== null) {
+              setPreferences({ inboxFontSizePx: fontSizePx });
             }
           }}
         >
-          <SelectTrigger className="w-fit min-w-48" size="sm">
-            <SelectValue />
-          </SelectTrigger>
-          <SelectPopup>
-            <SelectItem value="on-open">On open</SelectItem>
-            <SelectItem value="after-delay">After delay</SelectItem>
-            <SelectItem value="manual">Manual only</SelectItem>
-          </SelectPopup>
-        </Select>
+          <SegmentedControlList aria-label="Inbox text scale">
+            {INBOX_TEXT_SCALE_OPTIONS.map((option) => (
+              <SegmentedControlTab key={option.value} className="px-3" value={option.value}>
+                {option.label}
+              </SegmentedControlTab>
+            ))}
+          </SegmentedControlList>
+        </SegmentedControl>
       </div>
 
       <div className="space-y-3 py-1">
-        <SettingHeading
-          description="Choose whether inbox timestamps prioritize precise calendar dates or relative recency."
+        <SettingSubHeading
+          description="Relative recency is the default for inbox timestamps; switch to absolute when you need exact dates."
           title="Timestamp"
         />
         <Group aria-label="Timestamp format">
           <Select
             items={[
-              { label: "Absolute", value: "absolute" },
               { label: "Relative", value: "relative" },
+              { label: "Absolute", value: "absolute" },
             ]}
             value={preferences.inboxTimestampDisplay}
             onValueChange={(value) => {
@@ -151,8 +128,8 @@ export function InboxAppearanceSettings({
               <SelectValue />
             </SelectTrigger>
             <SelectPopup>
-              <SelectItem value="absolute">Absolute</SelectItem>
               <SelectItem value="relative">Relative</SelectItem>
+              <SelectItem value="absolute">Absolute</SelectItem>
             </SelectPopup>
           </Select>
           <GroupSeparator />
@@ -177,22 +154,6 @@ export function InboxAppearanceSettings({
             </SelectPopup>
           </Select>
         </Group>
-      </div>
-
-      <div className="space-y-3 py-1">
-        <label htmlFor="inbox-show-recents" className="flex items-center justify-between gap-4">
-          <span className="min-w-0">
-            <span className="block text-sm font-medium text-foreground">Show recents tab</span>
-            <span className="block text-xs text-muted-foreground">
-              Keep a dedicated tab ready for recently read items when that view is available.
-            </span>
-          </span>
-          <Switch
-            id="inbox-show-recents"
-            checked={preferences.inboxShowRecents}
-            onCheckedChange={(checked) => setPreferences({ inboxShowRecents: checked })}
-          />
-        </label>
       </div>
 
       <div className="space-y-3 py-1">

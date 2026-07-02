@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { userPreferences } from "@vols.rss/db";
+import { userPreferences } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
 import type {
@@ -29,14 +29,13 @@ export const DEFAULT_USER_PREFERENCES: UserPreferencesDto = {
   openLinksInNewTab: true,
   showLinkPreviews: true,
   showImages: true,
-  inboxDefaultView: "today",
+  inboxDefaultView: "my-feed",
   inboxDensity: "comfortable",
   articleOpenBehavior: "split",
   inboxMarkReadBehavior: "on-open",
-  inboxTimestampDisplay: "absolute",
+  inboxTimestampDisplay: "relative",
   inboxTimestampHourCycle: "12h",
   inboxFontSizePx: 16,
-  inboxShowRecents: false,
   inboxShowFavicons: true,
 };
 
@@ -58,7 +57,10 @@ function parseContentWidth(value: string): ReaderContentWidthDto {
 }
 
 function parseInboxDefaultView(value: string): InboxDefaultViewDto {
-  if (value === "inbox" || value === "today" || value === "unread" || value === "saved") {
+  if (value === "inbox" || value === "today" || value === "unread") {
+    return "my-feed";
+  }
+  if (value === "my-feed" || value === "all" || value === "saved" || value === "recent") {
     return value;
   }
   return DEFAULT_USER_PREFERENCES.inboxDefaultView;
@@ -128,7 +130,6 @@ function rowToPreferences(row: typeof userPreferences.$inferSelect): UserPrefere
     inboxTimestampDisplay: parseInboxTimestampDisplay(row.inboxTimestampDisplay),
     inboxTimestampHourCycle: parseInboxTimestampHourCycle(row.inboxTimestampHourCycle),
     inboxFontSizePx: clampInboxFontSize(row.inboxFontSizePx),
-    inboxShowRecents: row.inboxShowRecents,
     inboxShowFavicons: row.inboxShowFavicons,
   };
 }
@@ -163,7 +164,7 @@ const STRING_PREFERENCE_RULES: Array<{
   },
   {
     key: "inboxDefaultView",
-    values: ["inbox", "today", "unread", "saved"],
+    values: ["my-feed", "all", "saved", "recent"],
     message: "Unsupported inbox default view.",
     code: "USER_PREFERENCES_INVALID_INBOX_DEFAULT_VIEW",
   },
@@ -203,7 +204,6 @@ const BOOLEAN_PREFERENCE_KEYS = [
   "openLinksInNewTab",
   "showLinkPreviews",
   "showImages",
-  "inboxShowRecents",
   "inboxShowFavicons",
 ] as const;
 
@@ -302,7 +302,6 @@ export async function updateUserPreferences(
       inboxTimestampDisplay: DEFAULT_USER_PREFERENCES.inboxTimestampDisplay,
       inboxTimestampHourCycle: DEFAULT_USER_PREFERENCES.inboxTimestampHourCycle,
       inboxFontSizePx: DEFAULT_USER_PREFERENCES.inboxFontSizePx,
-      inboxShowRecents: DEFAULT_USER_PREFERENCES.inboxShowRecents,
       inboxShowFavicons: DEFAULT_USER_PREFERENCES.inboxShowFavicons,
       readerFontSizePx: DEFAULT_USER_PREFERENCES.fontSizePx,
       readerContentWidth: DEFAULT_USER_PREFERENCES.contentWidth,
@@ -343,9 +342,6 @@ export async function updateUserPreferences(
   }
   if (patch.inboxFontSizePx !== undefined) {
     updateSet.inboxFontSizePx = patch.inboxFontSizePx;
-  }
-  if (patch.inboxShowRecents !== undefined) {
-    updateSet.inboxShowRecents = patch.inboxShowRecents;
   }
   if (patch.inboxShowFavicons !== undefined) {
     updateSet.inboxShowFavicons = patch.inboxShowFavicons;

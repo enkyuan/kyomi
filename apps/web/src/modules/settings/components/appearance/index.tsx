@@ -1,15 +1,14 @@
 "use client";
 
 import { BrushFill } from "@mingcute/react";
-import { Button } from "@vols.rss/ui/button";
-import { SidebarMenuButton, SidebarMenuItem } from "@vols.rss/ui/sidebar";
+import { Button } from "@kyomi/ui/button";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 import { InboxAppearanceSettings } from "./inbox-settings";
-import { ReaderAppearanceSettings } from "./reader-settings";
 import { ThemeSwitcher } from "./theme-switcher";
 import { useAppearancePanel } from "@modules/settings/hooks/use-appearance-panel";
 
 export const appearanceSection = {
-  description: "Adjust theme, inbox presentation, and reader display.",
+  description: "Adjust theme and inbox presentation.",
   icon: BrushFill,
   name: "Appearance",
 } as const;
@@ -33,16 +32,7 @@ export function AppearancePageNav({ isActive, onSelect }: AppearancePageNavProps
 }
 
 export function AppearancePagePanel() {
-  const {
-    inboxLimits,
-    inboxPreferences,
-    readerLimits,
-    readerPreferences,
-    ready,
-    resetAll,
-    setInboxPreferences,
-    setReaderPreferences,
-  } = useAppearancePanel();
+  const { inboxPreferences, ready, resetAll, setInboxPreferences } = useAppearancePanel();
 
   if (!ready) {
     return null;
@@ -52,25 +42,24 @@ export function AppearancePagePanel() {
     <div className={APPEARANCE_SUBSECTION_SPACING_CLASS}>
       <section className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h3 className="text-sm font-semibold">Appearance</h3>
+          <h3 className="text-base font-semibold text-foreground">Appearance</h3>
           <Button size="sm" variant="outline" onClick={resetAll}>
             Reset defaults
           </Button>
         </div>
+      </section>
+
+      <section className="space-y-3">
         <ThemeSwitcher />
       </section>
 
       <InboxAppearanceSettings
-        limits={inboxLimits}
         preferences={inboxPreferences}
         setPreferences={setInboxPreferences}
       />
-
-      <ReaderAppearanceSettings
-        limits={readerLimits}
-        preferences={readerPreferences}
-        setPreferences={setReaderPreferences}
-      />
+      {/* Reader settings were removed from Appearance for now. The removed section contained:
+          default reader mode, font size, content width, open links in new tab, link previews on
+          hover, and show images controls. */}
     </div>
   );
 }

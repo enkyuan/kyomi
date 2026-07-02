@@ -1,5 +1,5 @@
 {
-  "name": "@vols.rss/reader",
+  "name": "@kyomi/reader",
   "author": "enkyuan <yuan.enkng@gmail.com>",
   "private": true,
   "type": "module",
@@ -12,6 +12,10 @@
     "./native": "./src/native/index.ts"
   },
   "scripts": {
+    "fmt": "bunx oxfmt src",
+    "fmt:check": "bunx oxfmt --check src",
+    "lint": "bunx oxlint src",
+    "lint:fix": "bunx oxlint --fix src",
     "typecheck": "bunx tsgo -p tsconfig.json --noEmit"
   },
   "peerDependencies": {
@@ -25,7 +29,7 @@
     "react-dom": { "optional": true }
   },
   "dependencies": {
-    "dompurify": "^3.4.0",
+    "@kyomi/worker": "workspace:*",
     "highlight.js": "^11.11.1",
     "katex": "^0.16.45",
     "marked": "^18.0.0",
@@ -37,7 +41,6 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "vitest": "^3.0.5"
+    "react-dom": "^19.2.0"
   }
 }

@@ -1,0 +1,56 @@
+name: Catalog
+
+on:
+  pull_request:
+    paths:
+      - packages/catalog/**
+      - .github/workflows/catalog.yml
+  push:
+    branches:
+      - main
+    paths:
+      - packages/catalog/**
+      - .github/workflows/catalog.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  catalog-quality:
+    name: Catalog Quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: .bun-version
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.2.0
+        with:
+          enable-cache: true
+          python-version: "3.13"
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install catalog dependencies
+        run: bun run --cwd packages/catalog setup
+
+      - name: Typecheck catalog
+        run: bun run --cwd packages/catalog typecheck

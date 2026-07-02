@@ -1,19 +1,11 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
 import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@lib/schemas";
+import { useHydrated } from "@hooks/use-hydrated";
 import {
   formatInboxTimestamp,
   formatInboxTimestampSsrFallback,
 } from "@modules/inbox/utils/format-timestamp";
-
-function useHydrated() {
-  return useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false,
-  );
-}
 
 type TimestampTextProps = {
   value: string;

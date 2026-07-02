@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRef } from "react";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { invalidateFeedAndInboxQueries } from "@modules/inbox/queries/options";
 import { getFeedDetail, refreshFeed, type FeedDetail } from "../api";
 import {
@@ -27,7 +28,8 @@ export function useFeedRefresh(feedId: string) {
       applyFeedRefreshQueued(queryClient, feedId);
       return { followedFeedsSnapshot, previousDetail };
     },
-    onError: (_error, _variables, context) => {
+    onError: (error, _variables, context) => {
+      logClientError("feeds.refresh.single", error);
       if (context?.previousDetail) {
         queryClient.setQueryData(["feed-detail", feedId], context.previousDetail);
       }
@@ -39,7 +41,7 @@ export function useFeedRefresh(feedId: string) {
     },
   });
 
-  const detailQuery = useQuery({
+  const { data: feedDetail } = useQuery({
     queryKey: ["feed-detail", feedId],
     queryFn: async () => {
       const data = await getFeedDetail({ data: { feedId } });
@@ -64,7 +66,7 @@ export function useFeedRefresh(feedId: string) {
     },
   });
 
-  const status = detailQuery.data?.refreshStatus ?? "idle";
+  const status = feedDetail?.refreshStatus ?? "idle";
   const isRefreshing = mutation.isPending || status === "queued" || status === "running";
 
   const triggerRefresh = () => {
@@ -78,9 +80,13 @@ export function useFeedRefresh(feedId: string) {
     refresh: triggerRefresh,
     isRefreshing,
     refreshStatus: status,
-    lastRefreshStartedAt: detailQuery.data?.lastRefreshStartedAt,
-    lastRefreshCompletedAt: detailQuery.data?.lastRefreshCompletedAt,
-    lastRefreshFailedAt: detailQuery.data?.lastRefreshFailedAt,
-    error: detailQuery.data?.lastRefreshError ?? mutation.error?.message,
+    lastRefreshStartedAt: feedDetail?.lastRefreshStartedAt,
+    lastRefreshCompletedAt: feedDetail?.lastRefreshCompletedAt,
+    lastRefreshFailedAt: feedDetail?.lastRefreshFailedAt,
+    error: feedDetail?.lastRefreshError
+      ? getUserSafeErrorMessage(feedDetail.lastRefreshError, "Refresh failed.")
+      : mutation.error
+        ? getUserSafeErrorMessage(mutation.error, "Refresh failed.")
+        : undefined,
   };
 }

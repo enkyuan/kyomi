@@ -3,12 +3,14 @@ import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { listClipsForUser } from "../write/clips";
 import {
+  countGlobalFeedArticlesPublishedInRange,
   countFeedArticlesPublishedInRange,
   getArticleCountsForUser,
+  getGlobalArticleCountsForUser,
   getUnreadCountsPerFeed,
 } from "./counts";
 import { getArticleDetailForUser } from "./detail";
-import { listArticlesForUser } from "./list";
+import { listAllArticlesForUser, listArticlesForUser } from "./list";
 import { parseArticlesListQuery, parseMergedViewListQuery, parseOptionalIsoDate } from "../query";
 import {
   articleDetailSchema,
@@ -32,11 +34,28 @@ export function registerArticleReadRoutes(app: Elysia) {
   return (
     app
       .get(
+        "/articles/views/all",
+        async (context) => {
+          const { db, query, userId } = v1HandlerContext(context);
+          const merged = parseMergedViewListQuery(query as Record<string, unknown>);
+          return listAllArticlesForUser(db, userId, {
+            limit: merged.limit,
+            cursor: merged.cursor,
+            sort: merged.sort,
+            search: merged.search,
+          });
+        },
+        {
+          query: mergedArticleViewsQuerySchema,
+          response: { 200: cursorListResponseSchema },
+        },
+      )
+      .get(
         "/articles/views/today",
         async (context) => {
           const { db, query, userId } = v1HandlerContext(context);
           const merged = parseMergedViewListQuery(query as Record<string, unknown>);
-          return listMergedTodayView(db, userId, merged.limit, merged.cursor);
+          return listMergedTodayView(db, userId, merged.limit, merged.cursor, merged.sort);
         },
         {
           query: mergedArticleViewsQuerySchema,
@@ -48,7 +67,14 @@ export function registerArticleReadRoutes(app: Elysia) {
         async (context) => {
           const { db, query, userId } = v1HandlerContext(context);
           const merged = parseMergedViewListQuery(query as Record<string, unknown>);
-          return listMergedRecentlyReadView(db, userId, merged.limit, merged.cursor);
+          return listMergedRecentlyReadView(
+            db,
+            userId,
+            merged.limit,
+            merged.cursor,
+            merged.sort,
+            merged.search,
+          );
         },
         {
           query: mergedArticleViewsQuerySchema,
@@ -60,7 +86,7 @@ export function registerArticleReadRoutes(app: Elysia) {
         async (context) => {
           const { db, query, userId } = v1HandlerContext(context);
           const merged = parseMergedViewListQuery(query as Record<string, unknown>);
-          return listMergedSavedView(db, userId, merged.limit, merged.cursor);
+          return listMergedSavedView(db, userId, merged.limit, merged.cursor, merged.sort);
         },
         {
           query: mergedArticleViewsQuerySchema,
@@ -73,6 +99,7 @@ export function registerArticleReadRoutes(app: Elysia) {
           const { db, query, userId } = v1HandlerContext<
             unknown,
             {
+              view?: string;
               published_after?: string;
               published_before?: string;
               feed_id?: string;
@@ -86,16 +113,27 @@ export function registerArticleReadRoutes(app: Elysia) {
           const publishedAfter = parseOptionalIsoDate(query.published_after);
           const publishedBefore = parseOptionalIsoDate(query.published_before);
           const wantsTodayRange = Boolean(publishedAfter && publishedBefore);
+          const wantsGlobalAllView =
+            query.view === "all" && !scope.feedId?.trim() && !scope.folderId?.trim();
           const [base, today] = await Promise.all([
-            getArticleCountsForUser(db, userId, scope),
+            wantsGlobalAllView
+              ? getGlobalArticleCountsForUser(db, userId, scope)
+              : getArticleCountsForUser(db, userId, scope),
             wantsTodayRange
-              ? countFeedArticlesPublishedInRange(
-                  db,
-                  userId,
-                  publishedAfter!,
-                  publishedBefore!,
-                  scope,
-                )
+              ? wantsGlobalAllView
+                ? countGlobalFeedArticlesPublishedInRange(
+                    db,
+                    userId,
+                    publishedAfter!,
+                    publishedBefore!,
+                  )
+                : countFeedArticlesPublishedInRange(
+                    db,
+                    userId,
+                    publishedAfter!,
+                    publishedBefore!,
+                    scope,
+                  )
               : Promise.resolve<number | null>(null),
           ]);
           if (today !== null) {
@@ -142,7 +180,7 @@ export function registerArticleReadRoutes(app: Elysia) {
         async (context) => {
           const { db, query, userId } = v1HandlerContext(context);
           const merged = parseMergedViewListQuery(query as Record<string, unknown>);
-          return listMergedSavedView(db, userId, merged.limit, merged.cursor);
+          return listMergedSavedView(db, userId, merged.limit, merged.cursor, merged.sort);
         },
         {
           query: mergedArticleViewsQuerySchema,
@@ -162,6 +200,7 @@ export function registerArticleReadRoutes(app: Elysia) {
               isSaved: parsed.isSaved,
               publishedAfter: parsed.publishedAfter,
               publishedBefore: parsed.publishedBefore,
+              sort: parsed.sort,
             });
           }
           return listArticlesForUser(db, userId, {
@@ -174,6 +213,7 @@ export function registerArticleReadRoutes(app: Elysia) {
             isSaved: parsed.isSaved,
             publishedAfter: parsed.publishedAfter,
             publishedBefore: parsed.publishedBefore,
+            sort: parsed.sort,
           });
         },
         {

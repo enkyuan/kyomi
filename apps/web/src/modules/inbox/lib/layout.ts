@@ -18,10 +18,10 @@ export const INBOX_DETAIL_PANEL_OUTER_SPACING_STYLE = {
 } as const;
 
 const FEED_ITEM_ROW_ESTIMATE = {
-  comfortable: 232,
-  compact: 180,
-  comfortableReaderFocus: 248,
-  compactReaderFocus: 196,
+  comfortable: 252,
+  compact: 204,
+  comfortableReaderFocus: 272,
+  compactReaderFocus: 220,
 } as const;
 
 export const MIN_SKELETON_ROWS = 3;

@@ -1,10 +1,12 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
-import { apiJson, buildForwardHeaders } from "@lib/api";
+import { apiJson, buildForwardHeaders, resolveApiUrl } from "@lib/api";
 
 export type Folder = {
   id: string;
   name: string;
+  isPinned: boolean;
+  pinnedAt: string | null;
   createdAt: string;
 };
 
@@ -29,4 +31,42 @@ export const createFolder = createServerFn({ method: "POST" })
       headers,
       body: JSON.stringify({ name: data.name.trim() }),
     });
+  });
+
+export const updateFolder = createServerFn({ method: "POST" })
+  .inputValidator((input: { folderId: string; name?: string; isPinned?: boolean }) => input)
+  .handler(async ({ data }): Promise<Folder> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    headers.set("content-type", "application/json");
+
+    const body: { name?: string; isPinned?: boolean } = {};
+    if (data.name !== undefined) {
+      body.name = data.name.trim();
+    }
+    if (data.isPinned !== undefined) {
+      body.isPinned = data.isPinned;
+    }
+
+    return apiJson<Folder>(`/api/v1/folders/${encodeURIComponent(data.folderId)}`, {
+      method: "PUT",
+      headers,
+      body: JSON.stringify(body),
+    });
+  });
+
+export const deleteFolder = createServerFn({ method: "POST" })
+  .inputValidator((input: { folderId: string }) => input)
+  .handler(async ({ data }): Promise<void> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+
+    const response = await fetch(
+      resolveApiUrl(`/api/v1/folders/${encodeURIComponent(data.folderId)}`),
+      {
+        method: "DELETE",
+        headers,
+      },
+    );
+    if (!response.ok) {
+      throw new Error("Unable to delete folder. Try again.");
+    }
   });

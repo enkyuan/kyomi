@@ -1,10 +1,10 @@
 {
   "$schema": "https://v2-9-14.turborepo.dev/schema.json",
-  "globalDependencies": ["bun.lock", "package.json"],
+  "globalDependencies": ["bun.lock", "package.json", ".bun-version"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", "build/**", ".next/**"]
+      "outputs": ["dist/**", "build/**", ".next/**", ".output/**"]
     },
     "dev": {
       "cache": false,

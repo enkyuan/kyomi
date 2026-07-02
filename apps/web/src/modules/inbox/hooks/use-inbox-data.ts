@@ -1,10 +1,18 @@
 "use client";
 
-import { createContext, createElement, use, useMemo, type ReactNode } from "react";
+import {
+  createContext,
+  createElement,
+  use,
+  useEffect,
+  useMemo,
+  useRef,
+  type ReactNode,
+} from "react";
 import { useMutation, useQueryClient, useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/provider";
-import { INBOX_PREFERENCES_STORAGE_KEY } from "@lib/shell/storage-keys";
-import { useUserPreferences } from "@modules/preferences";
+import { INBOX_PREFERENCES_STORAGE_KEY } from "@lib/shell/keys";
+import { usePreferences } from "@hooks/use-preferences";
 import type { InboxPreferencesDto } from "@lib/schemas";
 import {
   DEFAULT_INBOX_PREFERENCES,
@@ -21,14 +29,18 @@ import {
 import { inboxDetailQueryOptions, inboxItemsInfiniteQueryOptions } from "../queries/options";
 import {
   getInboxItems,
+  recordInboxItemView,
   updateInboxItemState,
   type InboxFilter,
   type InboxItem,
+  type InboxSort,
 } from "../services/api";
 import { getInboxPreferences, updateInboxPreferences } from "../services/preferences";
 
 export type InboxPreferences = InboxPreferencesDto;
-export type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
+export type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">> & {
+  isHidden?: boolean;
+};
 
 const InboxPreferencesBootstrapContext = createContext<InboxPreferences | undefined>(undefined);
 
@@ -74,7 +86,7 @@ function writeInboxPreferencesCache(next: InboxPreferences, userId?: string) {
   writeInboxArticleOpenBehaviorCookie(next.articleOpenBehavior);
 }
 
-function resolveInitialInboxPreferences(
+export function resolveInitialInboxPreferences(
   queryClient: ReturnType<typeof useQueryClient>,
   queryKey: ReturnType<typeof inboxPreferencesQueryKey>,
   initialPreferences?: InboxPreferences,
@@ -103,6 +115,7 @@ type UseInboxQueriesInput = {
   folderId?: string;
   itemId?: string;
   includeRead?: boolean;
+  sort?: InboxSort;
   timezoneOffsetMinutes?: number;
 };
 
@@ -157,7 +170,7 @@ export function useInboxPreferences(initialPreferences?: InboxPreferences) {
   const queryKey = inboxPreferencesQueryKey(user?.id);
   const preferredInitialPreferences = initialPreferences ?? bootstrapPreferences;
 
-  const preferencesStore = useUserPreferences({
+  const preferencesStore = usePreferences({
     defaults: DEFAULT_INBOX_PREFERENCES,
     initialData: () =>
       resolveInitialInboxPreferences(queryClient, queryKey, preferredInitialPreferences, user?.id),
@@ -185,22 +198,49 @@ export function useInboxQueries({
   folderId,
   itemId,
   includeRead,
+  sort,
   timezoneOffsetMinutes,
 }: UseInboxQueriesInput) {
-  const inboxQuery = useInfiniteQuery(
+  const {
+    data: inboxData,
+    dataUpdatedAt: inboxDataUpdatedAt,
+    fetchNextPage: fetchNextInboxPage,
+    hasNextPage: hasNextInboxPage,
+    isFetching: isInboxFetching,
+    isFetchingNextPage: isInboxFetchingNextPage,
+    isPending: isInboxPending,
+  } = useInfiniteQuery(
     inboxItemsInfiniteQueryOptions({
       filter,
       search,
       feedId,
       folderId,
       includeRead,
+      sort,
       timezoneOffsetMinutes,
     }),
   );
 
-  const detailQuery = useQuery(inboxDetailQueryOptions(itemId));
+  const {
+    data: detailData,
+    error: detailError,
+    isError: isDetailError,
+    isFetching: isDetailFetching,
+  } = useQuery(inboxDetailQueryOptions(itemId));
 
-  return { inboxQuery, detailQuery };
+  return {
+    detailData,
+    detailError,
+    fetchNextInboxPage,
+    hasNextInboxPage,
+    inboxData,
+    inboxDataUpdatedAt,
+    isDetailError,
+    isDetailFetching,
+    isInboxFetching,
+    isInboxFetchingNextPage,
+    isInboxPending,
+  };
 }
 
 export function useInboxItemStateMutation() {
@@ -230,4 +270,32 @@ export function useInboxItemStateMutation() {
       void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
     },
   });
+}
+
+export function useRecordInboxItemView(itemId: string | undefined) {
+  const queryClient = useQueryClient();
+  const lastRecordedItemIdRef = useRef<string | undefined>(undefined);
+  const { mutate } = useMutation({
+    mutationFn: (nextItemId: string) =>
+      recordInboxItemView({
+        data: {
+          itemId: nextItemId,
+        },
+      }),
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
+    },
+  });
+
+  useEffect(() => {
+    if (!itemId) {
+      lastRecordedItemIdRef.current = undefined;
+      return;
+    }
+    if (lastRecordedItemIdRef.current === itemId) {
+      return;
+    }
+    lastRecordedItemIdRef.current = itemId;
+    mutate(itemId);
+  }, [itemId, mutate]);
 }

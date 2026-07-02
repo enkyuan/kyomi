@@ -7,6 +7,7 @@ import {
   refreshBatchFeeds,
   type FeedRefreshStatusRow,
 } from "@modules/feeds/api";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import {
   applyBatchRefreshQueued,
   getFollowedFeedsSnapshot,
@@ -23,7 +24,7 @@ import {
   invalidateFeedAndInboxQueries,
 } from "@modules/inbox/queries/options";
 import { Refresh2Fill } from "@mingcute/react";
-import { Button } from "@vols.rss/ui/button";
+import { Button } from "@kyomi/ui/button";
 
 type UpdateProps = { feedId: string; folderId?: never } | { feedId?: never; folderId?: string };
 
@@ -93,7 +94,7 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
     invalidateFeedAndInboxQueries(queryClient);
   }, [queryClient]);
 
-  const refreshStatusQuery = useQuery({
+  const { data: refreshStatusData, refetch: refetchRefreshStatus } = useQuery({
     queryKey: feedRefreshStatusQueryKey(folderId),
     queryFn: async () => (await listFeedRefreshStatuses({ data: { folderId } })) ?? [],
     refetchInterval: (query) => {
@@ -113,7 +114,7 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
     },
   });
 
-  const hasActiveRefresh = hasActiveRefreshStatus(refreshStatusQuery.data ?? []);
+  const hasActiveRefresh = hasActiveRefreshStatus(refreshStatusData ?? []);
 
   const mutation = useMutation({
     mutationFn: async () => refreshBatchFeeds({ data: { folderId } }),
@@ -132,7 +133,8 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
       applyBatchRefreshQueued(queryClient, folderId);
       return { followedFeedsSnapshot, previousStatuses };
     },
-    onError: (_error, _variables, context) => {
+    onError: (error, _variables, context) => {
+      logClientError("feeds.refresh.batch", error);
       if (context?.previousStatuses) {
         queryClient.setQueryData(feedRefreshStatusQueryKey(folderId), context.previousStatuses);
       }
@@ -152,7 +154,7 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
         pollStartRef.current = Date.now();
         wasRefreshingRef.current = false;
         isWatchingRef.current = true;
-        void refreshStatusQuery.refetch();
+        void refetchRefreshStatus();
       }
     },
   });
@@ -196,14 +198,11 @@ function BatchFeedUpdate({ folderId }: { folderId?: string }) {
     }
   }, [hasActiveRefresh, invalidateRefreshQueries]);
 
-  const batchTitle =
-    mutation.isError && mutation.error instanceof Error
-      ? `Refresh failed: ${mutation.error.message}`
-      : mutation.isError
-        ? "Refresh failed"
-        : mutation.data?.failedCount
-          ? `Some feeds failed to queue (${mutation.data.failedCount}); ${mutation.data.count} queued`
-          : "Refresh feeds";
+  const batchTitle = mutation.isError
+    ? `Refresh failed: ${getUserSafeErrorMessage(mutation.error, "Try again in a moment.")}`
+    : mutation.data?.failedCount
+      ? `Some feeds failed to queue (${mutation.data.failedCount}); ${mutation.data.count} queued`
+      : "Refresh feeds";
 
   return (
     <Button

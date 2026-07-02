@@ -3,6 +3,7 @@ import {
   collapseObviousDuplicates,
   normalizedArticleIdentity,
 } from "@modules/articles/read/dedupe";
+import { filterVisibleArticleRowsForTest } from "@modules/articles/read/list";
 
 type Row = {
   id: string;
@@ -12,10 +13,13 @@ type Row = {
   summary: string | null;
   publishedAt: Date;
   feedId: string;
+  feedUrl: string | null;
+  feedSiteUrl: string | null;
   feedTitle: string;
   feedFaviconUrl: string | null;
   isRead: boolean;
   isSaved: boolean;
+  hiddenAt: Date | null;
 };
 
 function row(overrides: Partial<Row>): Row {
@@ -27,10 +31,13 @@ function row(overrides: Partial<Row>): Row {
     summary: null,
     publishedAt: new Date("2026-04-01T00:00:00.000Z"),
     feedId: "feed-1",
+    feedUrl: "https://example.com/feed.xml",
+    feedSiteUrl: "https://example.com",
     feedTitle: "Feed",
     feedFaviconUrl: null,
     isRead: false,
     isSaved: false,
+    hiddenAt: null,
     ...overrides,
   };
 }
@@ -91,5 +98,16 @@ describe("articles.list duplicate collapse", () => {
     const deduped = collapseObviousDuplicates(rows);
     expect(deduped).toHaveLength(1);
     expect(deduped[0]?.id).toBe("2");
+  });
+
+  test("excludes hidden feed rows before pagination", () => {
+    const rows = [
+      row({ id: "visible", title: "Visible", hiddenAt: null }),
+      row({ id: "hidden", title: "Hidden", hiddenAt: new Date("2026-07-01T00:00:00.000Z") }),
+    ];
+
+    expect(filterVisibleArticleRowsForTest(rows).map((candidate) => candidate.id)).toEqual([
+      "visible",
+    ]);
   });
 });

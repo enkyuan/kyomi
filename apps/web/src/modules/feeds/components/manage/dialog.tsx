@@ -9,7 +9,8 @@ import {
 import { useMemo, useState } from "react";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { Button } from "@vols.rss/ui/button";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { Button } from "@kyomi/ui/button";
 import {
   Dialog as UiDialog,
   DialogClose,
@@ -19,10 +20,10 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@vols.rss/ui/dialog";
+} from "@kyomi/ui/dialog";
 import { TableFrame } from "./table";
 import { getColumns, type FeedRow, type FolderOption } from "./table-config";
-import { toastManager } from "@vols.rss/ui/toast";
+import { toastManager } from "@kyomi/ui/toast";
 import {
   listFollowedFeeds,
   moveFeedsToFolder,
@@ -76,24 +77,28 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
   });
   const [movingFeedId, setMovingFeedId] = useState<string | null>(null);
   const queryClient = useQueryClient();
-  const followedFeedsQuery = useQuery({
+  const {
+    data: followedFeedsData,
+    isError: isFollowedFeedsError,
+    isLoading: isFollowedFeedsLoading,
+  } = useQuery({
     queryKey: ["feeds", "followed"],
     queryFn: () => listFollowedFeeds(),
     enabled: open,
   });
-  const foldersQuery = useQuery({
+  const { data: foldersData } = useQuery({
     queryKey: ["folders"],
     queryFn: () => listFolders(),
     enabled: open,
   });
   const { pinnedFeedIdSet, setPinned } = usePinnedFeedIds();
   const folderOptions = useMemo<FolderOption[]>(
-    () => (foldersQuery.data ?? []).map((folder) => ({ label: folder.name, value: folder.id })),
-    [foldersQuery.data],
+    () => (foldersData ?? []).map((folder) => ({ label: folder.name, value: folder.id })),
+    [foldersData],
   );
   const unsortedFolderId = useMemo(
-    () => (foldersQuery.data ?? []).find((folder) => folder.name === "Unsorted")?.id ?? null,
-    [foldersQuery.data],
+    () => (foldersData ?? []).find((folder) => folder.name === "Unsorted")?.id ?? null,
+    [foldersData],
   );
 
   const moveFeedFolderMutation = useMutation({
@@ -147,16 +152,17 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
     },
     onError: (error, _variables, context) => {
       restoreFeedCacheSnapshot(queryClient, context?.snapshot);
+      logClientError("feeds.manage.unfollow", error);
       toastManager.add({
         title: "Unable to remove selected feeds",
-        description: error instanceof Error ? error.message : "Try again in a moment.",
+        description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });
     },
   });
 
   const tableData = useMemo<FeedRow[]>(() => {
-    return (followedFeedsQuery.data ?? []).map((feed) => ({
+    return (followedFeedsData ?? []).map((feed) => ({
       id: feed.feedId,
       title: feed.title || feed.url,
       url: feed.url,
@@ -165,7 +171,7 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
       source: getSourceLabel(feed),
       followedAtLabel: formatDateLabel(feed.subscribedAt),
     }));
-  }, [followedFeedsQuery.data, unsortedFolderId]);
+  }, [followedFeedsData, unsortedFolderId]);
 
   const columns = useMemo(
     () =>
@@ -221,8 +227,8 @@ export function Dialog({ open, onOpenChange }: DialogProps) {
         <DialogPanel className="pt-0">
           <TableFrame
             columnsLength={columns.length}
-            isError={followedFeedsQuery.isError}
-            isLoading={followedFeedsQuery.isLoading}
+            isError={isFollowedFeedsError}
+            isLoading={isFollowedFeedsLoading}
             selectedCount={selectedCount}
             table={table}
             tableData={tableData}

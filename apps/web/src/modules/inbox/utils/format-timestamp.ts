@@ -22,7 +22,9 @@ const absoluteUtcFormatter24h = new Intl.DateTimeFormat("en", {
   hour12: false,
   timeZone: "UTC",
 });
-const relativeFormatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+function formatCompactRelative(value: number, unit: "s" | "m" | "h" | "d" | "w" | "mo" | "y") {
+  return `${Math.abs(value)}${unit}`;
+}
 
 function getAbsoluteFormatter(hourCycle: InboxTimestampHourCycleDto) {
   return hourCycle === "12h" ? absoluteFormatter12h : absoluteFormatter24h;
@@ -34,37 +36,44 @@ function getAbsoluteUtcFormatter(hourCycle: InboxTimestampHourCycleDto) {
 
 function formatRelative(date: Date) {
   const diffMs = date.getTime() - Date.now();
+  const diffSeconds = Math.round(diffMs / 1000);
+  const absSeconds = Math.abs(diffSeconds);
+
+  if (absSeconds < 60) {
+    return formatCompactRelative(diffSeconds, "s");
+  }
+
   const diffMinutes = Math.round(diffMs / 60_000);
   const absMinutes = Math.abs(diffMinutes);
 
   if (absMinutes < 60) {
-    return relativeFormatter.format(diffMinutes, "minute");
+    return formatCompactRelative(diffMinutes, "m");
   }
 
   const diffHours = Math.round(diffMinutes / 60);
   const absHours = Math.abs(diffHours);
   if (absHours < 24) {
-    return relativeFormatter.format(diffHours, "hour");
+    return formatCompactRelative(diffHours, "h");
   }
 
   const diffDays = Math.round(diffHours / 24);
   const absDays = Math.abs(diffDays);
   if (absDays < 7) {
-    return relativeFormatter.format(diffDays, "day");
+    return formatCompactRelative(diffDays, "d");
   }
 
   const diffWeeks = Math.round(diffDays / 7);
   if (Math.abs(diffWeeks) < 5) {
-    return relativeFormatter.format(diffWeeks, "week");
+    return formatCompactRelative(diffWeeks, "w");
   }
 
   const diffMonths = Math.round(diffDays / 30);
   if (Math.abs(diffMonths) < 12) {
-    return relativeFormatter.format(diffMonths, "month");
+    return formatCompactRelative(diffMonths, "mo");
   }
 
   const diffYears = Math.round(diffDays / 365);
-  return relativeFormatter.format(diffYears, "year");
+  return formatCompactRelative(diffYears, "y");
 }
 
 export function formatInboxTimestamp(

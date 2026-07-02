@@ -5,6 +5,41 @@ import { useEffect, useRef, useState } from "react";
 
 const RELATIVE_TIME_FORMATTER = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
+const ENTER_EASE = [0.32, 0.72, 0, 1] as const;
+const EXIT_EASE = [0.7, 0, 0.84, 0] as const;
+
+const pulseVariants: Variants = {
+  initial: { opacity: 0.6 },
+  animate: {
+    opacity: [0.6, 1, 0.6],
+    transition: {
+      repeat: Infinity,
+      duration: 1.5,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const variants: Variants = {
+  initial: { opacity: 0, scale: 0.96 },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      opacity: { duration: 0.4, ease: ENTER_EASE },
+      scale: { duration: 0.4, ease: ENTER_EASE },
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.96,
+    transition: {
+      opacity: { duration: 0.3, ease: EXIT_EASE },
+      scale: { duration: 0.3, ease: EXIT_EASE },
+    },
+  },
+};
+
 export function RefreshStatus({
   isRefreshing,
   dataUpdatedAt,
@@ -20,7 +55,9 @@ export function RefreshStatus({
 
   const [tick, setTick] = useState(0);
 
+  // oxlint-disable-next-line react-doctor/rerender-state-only-in-handlers, react-doctor/no-derived-useState
   const [prevRefreshing, setPrevRefreshing] = useState(isRefreshing);
+  // oxlint-disable-next-line react-doctor/rerender-state-only-in-handlers, react-doctor/no-derived-useState
   const [prevDataUpdatedAt, setPrevDataUpdatedAt] = useState(dataUpdatedAt);
 
   // In-render state adjustment to avoid useEffect state sync warnings
@@ -80,41 +117,6 @@ export function RefreshStatus({
     }
     return `Updated ${RELATIVE_TIME_FORMATTER.format(-diffMinutes, "minute")}`;
   })();
-
-  const ENTER_EASE = [0.32, 0.72, 0, 1] as const;
-  const EXIT_EASE = [0.7, 0, 0.84, 0] as const;
-
-  const variants: Variants = {
-    initial: { opacity: 0, scale: 0.96 },
-    animate: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        opacity: { duration: 0.4, ease: ENTER_EASE },
-        scale: { duration: 0.4, ease: ENTER_EASE },
-      },
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.96,
-      transition: {
-        opacity: { duration: 0.3, ease: EXIT_EASE },
-        scale: { duration: 0.3, ease: EXIT_EASE },
-      },
-    },
-  };
-
-  const pulseVariants: Variants = {
-    initial: { opacity: 0.6 },
-    animate: {
-      opacity: [0.6, 1, 0.6],
-      transition: {
-        repeat: Infinity,
-        duration: 1.5,
-        ease: "easeInOut",
-      },
-    },
-  };
 
   return (
     <LazyMotion features={domAnimation}>

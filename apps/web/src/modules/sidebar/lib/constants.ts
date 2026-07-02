@@ -1,5 +1,4 @@
-export const APP_SIDEBAR_WIDTH = "12rem";
-export const APP_SIDEBAR_WIDTH_READER_FOCUS = "14rem";
+export const APP_SIDEBAR_WIDTH = "5rem";
 
 export const WORKSPACE_SCOPE_FONT = '500 14px "Inter Variable"';
 export const WORKSPACE_SCOPE_FONT_READER_FOCUS = '500 16px "Inter Variable"';

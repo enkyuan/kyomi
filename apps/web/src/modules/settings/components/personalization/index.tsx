@@ -1,7 +1,7 @@
 "use client";
 
 import { HeadAiFill } from "@mingcute/react";
-import { SidebarMenuButton, SidebarMenuItem } from "@vols.rss/ui/sidebar";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 
 export const personalizationSection = {
   name: "Personalization",

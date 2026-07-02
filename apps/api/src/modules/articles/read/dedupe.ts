@@ -6,7 +6,7 @@
  * unique(feed_id, canonical_url) migration are verified in production. This layer
  * is now only a defensive guard for the list API cursor pagination window.
  */
-import { normalizeArticleUrl } from "@vols.rss/worker";
+import { normalizeArticleUrl } from "@kyomi/worker";
 
 export type ArticleListRawRow = {
   id: string;
@@ -16,10 +16,13 @@ export type ArticleListRawRow = {
   summary: string | null;
   publishedAt: Date;
   feedId: string;
+  feedUrl: string | null;
+  feedSiteUrl: string | null;
   feedTitle: string;
   feedFaviconUrl: string | null;
   isRead: boolean;
   isSaved: boolean;
+  hiddenAt: Date | null;
 };
 
 export function normalizedArticleIdentity(rawUrl: string): string {

@@ -3,6 +3,7 @@ import { registerArticleRoutes } from "@modules/articles/routes";
 import { registerDiscoverRoutes } from "@modules/discover/routes";
 import { registerFeedRoutes } from "@modules/feeds/routes";
 import { registerFolderRoutes } from "@modules/folders/routes";
+import { registerInboxRoutes } from "@modules/inbox/routes";
 import { registerOpmlRoutes } from "@modules/opml/routes";
 import { registerQueueRoutes } from "@modules/queue/routes";
 import { registerUserRoutes } from "@modules/users/routes";
@@ -14,6 +15,7 @@ const domainRouteRegistrars = [
   registerFolderRoutes,
   registerUserRoutes,
   registerArticleRoutes,
+  registerInboxRoutes,
   registerFeedRoutes,
   registerOpmlRoutes,
   registerQueueRoutes,
@@ -32,7 +34,7 @@ function applyDomainRoutes(app: Elysia): Elysia {
  * Route order matches stable URL semantics (discovery → identity → content → feeds → imports).
  */
 export const apiV1Router = new Elysia({
-  name: "vols.rss.api.v1",
+  name: "kyomi.api.v1",
 })
   .use(apiV1AdapterPlugin)
   .group("/api/v1", (group) => {

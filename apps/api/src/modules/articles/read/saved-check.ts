@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { articleClips, feedItems, feedItemUserState, feedSubscriptions } from "@vols.rss/db";
+import { articleClips, feedItems, feedItemUserState, feedSubscriptions } from "@kyomi/db";
 import { AppError } from "@shared/errors/app";
 import { and, desc, eq } from "drizzle-orm";
 import type { ArticleSavedCheckDto } from "../types";

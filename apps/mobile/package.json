@@ -1,5 +1,5 @@
 {
-  "name": "@vols.rss/mobile",
+  "name": "@kyomi/mobile",
   "version": "1.0.0",
   "main": "expo-router/entry",
   "dependencies": {
@@ -27,6 +27,11 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "fmt": "bunx oxfmt src",
+    "fmt:check": "bunx oxfmt --check src",
+    "lint": "bunx oxlint src",
+    "lint:fix": "bunx oxlint --fix src",
+    "typecheck": "bunx tsc -p tsconfig.json --noEmit"
   }
 }

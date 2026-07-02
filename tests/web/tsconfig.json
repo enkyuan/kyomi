@@ -11,12 +11,12 @@
       "@integrations/*": ["../../apps/web/src/integrations/*"],
       "@lib/*": ["../../apps/web/src/lib/*"],
       "@utils/*": ["../../apps/web/src/utils/*"],
-      "@vols.rss/ui": ["../../packages/ui/src/index.ts"],
-      "@vols.rss/ui/*": ["../../packages/ui/src/*"],
-      "@vols.rss/reader": ["../../packages/reader/src/core/index.ts"],
-      "@vols.rss/reader/core": ["../../packages/reader/src/core/index.ts"],
-      "@vols.rss/reader/web": ["../../packages/reader/src/web/index.ts"],
-      "@vols.rss/reader/webview": ["../../packages/reader/src/webview/index.ts"]
+      "@kyomi/ui": ["../../packages/ui/src/index.ts"],
+      "@kyomi/ui/*": ["../../packages/ui/src/*"],
+      "@kyomi/reader": ["../../packages/reader/src/core/index.ts"],
+      "@kyomi/reader/core": ["../../packages/reader/src/core/index.ts"],
+      "@kyomi/reader/web": ["../../packages/reader/src/web/index.ts"],
+      "@kyomi/reader/webview": ["../../packages/reader/src/webview/index.ts"]
     },
     "types": ["vite/client"]
   },

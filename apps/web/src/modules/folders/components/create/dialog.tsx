@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useReducer } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { AddFill } from "@mingcute/react";
-import { Button } from "@vols.rss/ui/button";
+import { Button } from "@kyomi/ui/button";
 import {
   Dialog as UiDialog,
   DialogClose,
@@ -14,11 +14,12 @@ import {
   DialogPopup,
   DialogTitle,
   DialogTrigger,
-} from "@vols.rss/ui/dialog";
-import { Field, FieldError } from "@vols.rss/ui/field";
-import { Form } from "@vols.rss/ui/form";
-import { Input } from "@vols.rss/ui/input";
-import { toastManager } from "@vols.rss/ui/toast";
+} from "@kyomi/ui/dialog";
+import { Field, FieldError } from "@kyomi/ui/field";
+import { Form } from "@kyomi/ui/form";
+import { Input } from "@kyomi/ui/input";
+import { toastManager } from "@kyomi/ui/toast";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { createFolder } from "@modules/folders/api";
 
 type DialogProps = {
@@ -27,24 +28,63 @@ type DialogProps = {
   hideTrigger?: boolean;
 };
 
+type DialogState = {
+  internalOpen: boolean;
+  name: string;
+  touched: boolean;
+  edited: boolean;
+  submitted: boolean;
+};
+
+type DialogAction =
+  | { type: "change-name"; name: string }
+  | { type: "reset" }
+  | { type: "set-internal-open"; open: boolean }
+  | { type: "submit" }
+  | { type: "touch" };
+
+const initialDialogState: DialogState = {
+  internalOpen: false,
+  name: "",
+  touched: false,
+  edited: false,
+  submitted: false,
+};
+
+function dialogReducer(state: DialogState, action: DialogAction): DialogState {
+  switch (action.type) {
+    case "change-name":
+      return { ...state, edited: true, name: action.name };
+    case "reset":
+      return { ...initialDialogState, internalOpen: state.internalOpen };
+    case "set-internal-open":
+      return { ...state, internalOpen: action.open };
+    case "submit":
+      return { ...state, submitted: true, touched: true };
+    case "touch":
+      return { ...state, touched: true };
+  }
+}
+
 export function Dialog({ open, onOpenChange, hideTrigger = false }: DialogProps = {}) {
   const queryClient = useQueryClient();
-  const [internalOpen, setInternalOpen] = useState(false);
-  const [name, setName] = useState("");
-  const [touched, setTouched] = useState(false);
+  const [{ internalOpen, name, touched, edited, submitted }, dispatch] = useReducer(
+    dialogReducer,
+    initialDialogState,
+  );
   const dialogOpen = open ?? internalOpen;
 
   const trimmedName = name.trim();
-  const errorMessage = touched && !trimmedName ? "Folder name is required." : null;
+  const errorMessage =
+    (submitted || (touched && edited)) && !trimmedName ? "Folder name is required." : null;
 
   const resetForm = () => {
-    setName("");
-    setTouched(false);
+    dispatch({ type: "reset" });
   };
 
   const setDialogOpen = (nextOpen: boolean) => {
     if (open === undefined) {
-      setInternalOpen(nextOpen);
+      dispatch({ type: "set-internal-open", open: nextOpen });
     }
     onOpenChange?.(nextOpen);
     if (!nextOpen) {
@@ -59,6 +99,9 @@ export function Dialog({ open, onOpenChange, hideTrigger = false }: DialogProps 
       await queryClient.invalidateQueries({
         queryKey: ["folders"],
       });
+      await queryClient.invalidateQueries({
+        queryKey: ["inbox", "recap"],
+      });
       setDialogOpen(false);
       toastManager.add({
         title: "Folder created",
@@ -67,9 +110,10 @@ export function Dialog({ open, onOpenChange, hideTrigger = false }: DialogProps 
       });
     },
     onError: (error) => {
+      logClientError("folders.create", error);
       toastManager.add({
         title: "Unable to create folder",
-        description: error instanceof Error ? error.message : "Try a different folder name.",
+        description: getUserSafeErrorMessage(error, "Try a different folder name."),
         type: "error",
       });
     },
@@ -101,7 +145,7 @@ export function Dialog({ open, onOpenChange, hideTrigger = false }: DialogProps 
           className="contents"
           onSubmit={async (event) => {
             event.preventDefault();
-            setTouched(true);
+            dispatch({ type: "submit" });
 
             if (!trimmedName) {
               return;
@@ -125,10 +169,10 @@ export function Dialog({ open, onOpenChange, hideTrigger = false }: DialogProps 
                 type="text"
                 value={name}
                 onBlur={() => {
-                  setTouched(true);
+                  dispatch({ type: "touch" });
                 }}
                 onChange={(event) => {
-                  setName(event.target.value);
+                  dispatch({ type: "change-name", name: event.target.value });
                 }}
               />
               {errorMessage ? <FieldError match={true}>{errorMessage}</FieldError> : null}

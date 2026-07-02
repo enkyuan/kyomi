@@ -31,14 +31,16 @@ function updateFollowedFeeds(
   );
 }
 
-export function applyPinnedFeedState(queryClient: QueryClient, feedId: string, pinned: boolean) {
-  updateFollowedFeeds(queryClient, (feeds) =>
-    feeds.map((feed) =>
-      feed.feedId === feedId
-        ? { ...feed, isPinned: pinned, pinnedAt: pinned ? new Date().toISOString() : null }
-        : feed,
-    ),
+export function applyPinnedState(feeds: FollowedFeed[], feedId: string, pinned: boolean) {
+  return feeds.map((feed) =>
+    feed.feedId === feedId
+      ? { ...feed, isPinned: pinned, pinnedAt: pinned ? new Date().toISOString() : null }
+      : feed,
   );
+}
+
+export function applyPinnedFeedState(queryClient: QueryClient, feedId: string, pinned: boolean) {
+  updateFollowedFeeds(queryClient, (feeds) => applyPinnedState(feeds, feedId, pinned));
 }
 
 export function applyFeedFolder(
@@ -66,12 +68,20 @@ export function markDiscoverFeedSubscribed(
   queryClient: QueryClient,
   input: { url: string; feedId?: string },
 ) {
+  setDiscoverFeedSubscribed(queryClient, input, true);
+}
+
+export function setDiscoverFeedSubscribed(
+  queryClient: QueryClient,
+  input: { url: string; feedId?: string },
+  isSubscribed: boolean,
+) {
   queryClient.setQueriesData<DiscoverFeedResult[] | undefined>(
     { queryKey: ["discover", "feeds"] },
     (current) =>
       current?.map((item) =>
-        item.url === input.url
-          ? { ...item, isSubscribed: true, id: item.id ?? input.feedId ?? null }
+        item.url === input.url || (input.feedId ? item.id === input.feedId : false)
+          ? { ...item, isSubscribed, id: item.id ?? input.feedId ?? null }
           : item,
       ),
   );

@@ -41,6 +41,8 @@ function articleDetail(overrides: Partial<ArticleDetailDto> = {}): ArticleDetail
     summary: null,
     publishedAt: "2026-05-01T00:00:00.000Z",
     feedId: "f1",
+    feedUrl: "https://example.com/feed.xml",
+    feedSiteUrl: "https://example.com",
     feedTitle: "Feed",
     feedFaviconUrl: null,
     isRead: false,

@@ -12,14 +12,13 @@ const MAX_INBOX_FONT_SIZE_PX = 20;
 export type InboxPreferences = InboxPreferencesDto;
 
 export const DEFAULT_INBOX_PREFERENCES: InboxPreferences = {
-  inboxDefaultView: "today",
+  inboxDefaultView: "my-feed",
   inboxDensity: "comfortable",
   articleOpenBehavior: "split",
   inboxMarkReadBehavior: "on-open",
-  inboxTimestampDisplay: "absolute",
+  inboxTimestampDisplay: "relative",
   inboxTimestampHourCycle: "12h",
   inboxFontSizePx: 16,
-  inboxShowRecents: false,
   inboxShowFavicons: true,
 };
 
@@ -61,7 +60,10 @@ function parseTimestampHourCycle(value: unknown): InboxTimestampHourCycleDto {
 }
 
 function parseDefaultView(value: unknown): InboxPreferences["inboxDefaultView"] {
-  return value === "inbox" || value === "today" || value === "unread" || value === "saved"
+  if (value === "inbox" || value === "today" || value === "unread") {
+    return "my-feed";
+  }
+  return value === "my-feed" || value === "all" || value === "saved" || value === "recent"
     ? value
     : DEFAULT_INBOX_PREFERENCES.inboxDefaultView;
 }
@@ -80,10 +82,6 @@ export function sanitizeInboxPreferences(value: unknown): InboxPreferences {
     inboxTimestampDisplay: parseTimestampDisplay(record.inboxTimestampDisplay),
     inboxTimestampHourCycle: parseTimestampHourCycle(record.inboxTimestampHourCycle),
     inboxFontSizePx: clampInboxFontSize(record.inboxFontSizePx),
-    inboxShowRecents:
-      typeof record.inboxShowRecents === "boolean"
-        ? record.inboxShowRecents
-        : DEFAULT_INBOX_PREFERENCES.inboxShowRecents,
     inboxShowFavicons:
       typeof record.inboxShowFavicons === "boolean"
         ? record.inboxShowFavicons

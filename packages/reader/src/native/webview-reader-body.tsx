@@ -1,6 +1,6 @@
 import React from "react";
-import type { ReaderContent, ReaderLayoutMode, ReaderPreferences } from "../core";
-import { createReaderDocument } from "../webview";
+import type { ReaderContent, ReaderLayoutMode, ReaderPreferences } from "../core/types";
+import { createReaderDocument } from "../webview/create-document";
 
 /** Native entry: React is required here for `renderWebView`; string HTML still comes from `createReaderDocument`. */
 

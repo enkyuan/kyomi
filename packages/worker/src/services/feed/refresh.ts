@@ -1,6 +1,11 @@
 import { eq, sql } from "drizzle-orm";
-import { feedItems, feeds } from "@vols.rss/db";
-import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "../favicon";
+import { feedItems, feeds } from "@kyomi/db";
+import {
+  createDrizzleFaviconHostStore,
+  faviconSourceRank,
+  resolvePersistedFeedFaviconUrl,
+  tryFetchImageIfHostSafe,
+} from "../favicon";
 import { fetchArticleEnrichment } from "./enrich";
 import { fetchFeedDocument } from "./fetch";
 import { parseFeedDocument } from "./parse";
@@ -9,37 +14,47 @@ import { summarizeText } from "../../lib/feed-text";
 import type {
   FeedIngestDatabase,
   FeedRefreshResult,
+  HostRateLimiter,
   ParsedFeedItem,
   SearchSyncConfig,
 } from "./types";
 
 const MAX_ENRICHMENTS_PER_REFRESH = 5;
 const ENRICHMENT_CONCURRENCY = 3;
+const PERMANENT_FAILURE_BACKOFF_MS = 24 * 60 * 60 * 1000;
 
-function computeFailureBackoffMs(snapshot: {
-  lastRefreshSucceededAt: Date | null;
-  lastRefreshFailedAt: Date | null;
-}): number {
+export function shouldEnrichInsertedItems(input: { userId: string; reason?: string }): boolean {
+  if (
+    input.userId === "system" &&
+    (input.reason === "scheduled" || input.reason === "global_scheduled")
+  ) {
+    return false;
+  }
+
+  return true;
+}
+
+function isPermanentHttpStatus(status: number | undefined): boolean {
+  // 4xx failures other than 408 (Request Timeout) and 429 (Too Many Requests)
+  // will not resolve on retry — back off aggressively.
+  if (status === undefined) return false;
+  if (status === 408 || status === 429) return false;
+  return status >= 400 && status < 500;
+}
+
+function computeFailureBackoffMs(
+  snapshot: {
+    lastRefreshSucceededAt: Date | null;
+    lastRefreshFailedAt: Date | null;
+  },
+  permanent: boolean,
+): number {
+  if (permanent) return PERMANENT_FAILURE_BACKOFF_MS;
   const hasConsecutiveFailure =
     Boolean(snapshot.lastRefreshFailedAt) &&
     (!snapshot.lastRefreshSucceededAt ||
       snapshot.lastRefreshFailedAt!.getTime() >= snapshot.lastRefreshSucceededAt.getTime());
   return hasConsecutiveFailure ? 60 * 60 * 1000 : 15 * 60 * 1000;
-}
-
-function faviconSourceRank(source: string | null): number {
-  switch (source) {
-    case "html_link":
-    case "feed_icon":
-      return 3;
-    case "google_s2":
-    case "duckduckgo":
-      return 2;
-    case "favicon_ico":
-      return 1;
-    default:
-      return 0;
-  }
 }
 
 function shouldResolveFavicon({
@@ -57,14 +72,16 @@ function shouldResolveFavicon({
 }
 
 async function tryResolveFaviconMetadata(
+  database: FeedIngestDatabase,
   seedUrl: string,
   embeddedIconUrl?: string | null,
 ): Promise<{
   url: string;
   source: string;
 } | null> {
+  const faviconStore = createDrizzleFaviconHostStore(database);
   try {
-    const websiteIcon = await resolveFeedFaviconUrl(seedUrl);
+    const websiteIcon = await resolvePersistedFeedFaviconUrl(faviconStore, seedUrl);
     if (websiteIcon) {
       return websiteIcon;
     }
@@ -100,6 +117,7 @@ export async function runFeedRefresh(
   searchSync?: SearchSyncConfig,
   options?: {
     enrichArticles?: boolean;
+    hostRateLimiter?: HostRateLimiter;
   },
 ): Promise<FeedRefreshResult> {
   try {
@@ -133,13 +151,21 @@ export async function runFeedRefresh(
       return { ok: false, itemCount: 0, error: "Feed not found" };
     }
 
-    const fetched = await fetchFeedDocument(feed.url, feed.etag, feed.lastModified);
+    const fetched = options?.hostRateLimiter
+      ? await options.hostRateLimiter.run(feed.url, () =>
+          fetchFeedDocument(feed.url, feed.etag, feed.lastModified),
+        )
+      : await fetchFeedDocument(feed.url, feed.etag, feed.lastModified);
     if (!fetched.ok) {
       const now = new Date();
-      const backoffMs = computeFailureBackoffMs({
-        lastRefreshSucceededAt: feed.lastRefreshSucceededAt,
-        lastRefreshFailedAt: feed.lastRefreshFailedAt,
-      });
+      const permanent = isPermanentHttpStatus(fetched.httpStatus);
+      const backoffMs = computeFailureBackoffMs(
+        {
+          lastRefreshSucceededAt: feed.lastRefreshSucceededAt,
+          lastRefreshFailedAt: feed.lastRefreshFailedAt,
+        },
+        permanent,
+      );
       await database
         .update(feeds)
         .set({
@@ -150,7 +176,12 @@ export async function runFeedRefresh(
           nextRefreshAt: new Date(now.getTime() + backoffMs),
         })
         .where(eq(feeds.id, feedId));
-      return { ok: false, itemCount: 0, error: `Feed fetch failed: ${fetched.error}` };
+      return {
+        ok: false,
+        itemCount: 0,
+        error: `Feed fetch failed: ${fetched.error}`,
+        permanent,
+      };
     }
 
     if (fetched.notModified) {
@@ -169,7 +200,7 @@ export async function runFeedRefresh(
         })
       ) {
         const seed = feed.link ?? feed.url;
-        const resolved = await tryResolveFaviconMetadata(seed);
+        const resolved = await tryResolveFaviconMetadata(database, seed);
         if (resolved) {
           faviconPatch = {
             faviconUrl: resolved.url,
@@ -203,7 +234,6 @@ export async function runFeedRefresh(
       deduped.set(item.canonicalUrl, item);
     }
     const items = Array.from(deduped.values());
-    // TODO: add language detection once we settle on the TS-side metadata/storage model.
     const enrichArticles = options?.enrichArticles ?? true;
     if (enrichArticles) {
       const enrichmentCandidates = items
@@ -249,7 +279,7 @@ export async function runFeedRefresh(
     } | null = null;
     if (needsFavicon) {
       const seed = nextLink ?? parsed.metadata.canonicalUrl;
-      const resolved = await tryResolveFaviconMetadata(seed, parsed.metadata.iconUrl);
+      const resolved = await tryResolveFaviconMetadata(database, seed, parsed.metadata.iconUrl);
       if (resolved) {
         faviconPatch = {
           faviconUrl: resolved.url,

@@ -26,6 +26,7 @@ export function MenuTrigger({
 export function MenuPopup({
   children,
   className,
+  contentClassName,
   sideOffset = 4,
   align = "center",
   alignOffset,
@@ -38,6 +39,7 @@ export function MenuPopup({
   alignOffset?: MenuPrimitive.Positioner.Props["alignOffset"];
   side?: MenuPrimitive.Positioner.Props["side"];
   anchor?: MenuPrimitive.Positioner.Props["anchor"];
+  contentClassName?: string;
 }): React.ReactElement {
   return (
     <MenuPrimitive.Portal>
@@ -58,7 +60,15 @@ export function MenuPopup({
           data-slot="menu-popup"
           {...props}
         >
-          <div className="max-h-(--available-height) w-full overflow-y-auto p-1">{children}</div>
+          <div
+            className={cn(
+              "max-h-(--available-height) w-full overflow-y-auto p-1",
+              contentClassName,
+            )}
+            data-slot="menu-popup-content"
+          >
+            {children}
+          </div>
         </MenuPrimitive.Popup>
       </MenuPrimitive.Positioner>
     </MenuPrimitive.Portal>

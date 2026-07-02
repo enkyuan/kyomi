@@ -1,6 +1,14 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
-import { apiJson, buildForwardHeaders, resolveApiUrl } from "@lib/api";
+import {
+  apiFailureUserMessage,
+  apiJson,
+  buildForwardHeaders,
+  logApiNetworkError,
+  logApiResponseError,
+  resolveApiUrl,
+} from "@lib/api";
+import { readResponseErrorSummary } from "@lib/errors";
 
 export type AuthSession = {
   session: {
@@ -25,18 +33,28 @@ export type AuthSession = {
 } | null;
 
 async function fetchSessionFromHeaders(headers: Headers): Promise<AuthSession> {
-  const response = await fetch(resolveApiUrl("/api/auth/get-session"), {
-    method: "GET",
-    headers: buildForwardHeaders(headers),
-  });
+  const method = "GET";
+  const path = "/api/auth/get-session";
+  let response: Response;
+
+  try {
+    response = await fetch(resolveApiUrl(path), {
+      method,
+      headers: buildForwardHeaders(headers),
+    });
+  } catch (error) {
+    logApiNetworkError(method, path, error);
+    throw new Error("Unable to load your session.");
+  }
 
   if (response.status === 401) {
     return null;
   }
 
   if (!response.ok) {
-    const message = await response.text();
-    throw new Error(message || `Unable to fetch session: ${response.status}`);
+    const summary = await readResponseErrorSummary(response);
+    logApiResponseError(method, path, response.status, summary);
+    throw new Error(apiFailureUserMessage(response.status));
   }
 
   return (await response.json()) as AuthSession;

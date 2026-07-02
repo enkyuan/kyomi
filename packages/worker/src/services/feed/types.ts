@@ -1,5 +1,5 @@
 import type { drizzle } from "drizzle-orm/node-postgres";
-import type * as schema from "@vols.rss/db";
+import type * as schema from "@kyomi/db";
 
 export type FeedRefreshResult = {
   ok: boolean;
@@ -8,6 +8,8 @@ export type FeedRefreshResult = {
   updatedCount?: number;
   notModified?: boolean;
   error?: string;
+  // True when the failure cannot be resolved by retrying (e.g. HTTP 4xx other than 408/429).
+  permanent?: boolean;
 };
 
 export type FeedIngestDatabase = ReturnType<typeof drizzle<typeof schema>>;
@@ -66,10 +68,14 @@ export type FetchFeedDocumentResult =
       etag: string | null;
       lastModified: string | null;
     }
-  | { ok: false; error: string };
+  | { ok: false; error: string; httpStatus?: number };
 
 export type SearchSyncConfig = {
   url: string;
   masterKey?: string;
   indexUid?: string;
+};
+
+export type HostRateLimiter = {
+  run<T>(url: string, task: () => Promise<T>): Promise<T>;
 };

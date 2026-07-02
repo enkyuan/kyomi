@@ -129,6 +129,8 @@ export const articleDetailSchema = t.Object({
   extractionErrorMessage: t.Union([t.String(), t.Null()]),
   publishedAt: t.String(),
   feedId: t.String(),
+  feedUrl: t.Union([t.String(), t.Null()]),
+  feedSiteUrl: t.Union([t.String(), t.Null()]),
   feedTitle: t.String(),
   feedFaviconUrl: t.Union([t.String(), t.Null()]),
   isRead: t.Boolean(),
@@ -171,6 +173,8 @@ export const articleListItemSchema = t.Object({
   summary: t.Union([t.String(), t.Null()]),
   publishedAt: t.String(),
   feedId: t.String(),
+  feedUrl: t.Union([t.String(), t.Null()]),
+  feedSiteUrl: t.Union([t.String(), t.Null()]),
   feedTitle: t.String(),
   feedFaviconUrl: t.Union([t.String(), t.Null()]),
   isRead: t.Boolean(),
@@ -186,6 +190,7 @@ export const cursorListResponseSchema = t.Object({
 });
 
 export const articleCountsQuerySchema = t.Object({
+  view: t.Optional(t.Literal("all")),
   published_after: t.Optional(t.String()),
   published_before: t.Optional(t.String()),
   feed_id: t.Optional(t.String()),
@@ -238,10 +243,12 @@ export const unreadCountsQuerySchema = t.Object({
   feed_ids: t.Optional(t.String()),
 });
 
-/** Merged feed+clip list views accept `limit`; `cursor` is parsed for forward compatibility (not applied yet). */
+/** Merged feed+clip list views accept paginated, sort-aware list controls. */
 export const mergedArticleViewsQuerySchema = t.Object({
   limit: t.Optional(t.String()),
   cursor: t.Optional(t.String()),
+  search: t.Optional(t.String()),
+  sort: t.Optional(t.Union([t.Literal("newest"), t.Literal("oldest"), t.Literal("unread-first")])),
 });
 
 export const checkSavedQuerySchema = t.Object({
@@ -258,6 +265,7 @@ export const createClipBodySchema = t.Object({
 export const updateArticleBodySchema = t.Object({
   isRead: t.Optional(t.Union([t.Boolean(), t.Null()])),
   isSaved: t.Optional(t.Boolean()),
+  isHidden: t.Optional(t.Boolean()),
   title: t.Optional(t.String()),
   note: t.Optional(t.Union([t.String(), t.Null()])),
   contentHtml: t.Optional(t.Union([t.String(), t.Null()])),
@@ -285,6 +293,18 @@ export const updateArticleBodySchema = t.Object({
   ),
   extractionErrorCode: t.Optional(t.Union([t.String(), t.Null()])),
   extractionErrorMessage: t.Optional(t.Union([t.String(), t.Null()])),
+});
+
+export const brokenArticleReportBodySchema = t.Object({
+  reason: t.Optional(
+    t.Union([
+      t.Literal("broken_article"),
+      t.Literal("missing_content"),
+      t.Literal("wrong_content"),
+      t.Literal("feed_error"),
+    ]),
+  ),
+  details: t.Optional(t.Union([t.String({ maxLength: 4000 }), t.Null()])),
 });
 
 export const articleIdParamsSchema = t.Object({ articleId: uuidParam });

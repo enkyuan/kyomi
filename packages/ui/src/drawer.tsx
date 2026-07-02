@@ -1,3 +1,4 @@
+/* oxlint-disable max-lines */
 "use client";
 
 import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
@@ -8,7 +9,7 @@ import { RadioGroup as RadioGroupPrimitive } from "@base-ui/react/radio-group";
 import { useRender } from "@base-ui/react/use-render";
 import { CloseFill, RightFill } from "@mingcute/react";
 import type React from "react";
-import { createContext, use } from "react";
+import { createContext, use, useMemo } from "react";
 import { cn } from "./lib/utils";
 import { Button } from "./button";
 import { ScrollArea } from "./scroll-area";
@@ -37,8 +38,9 @@ export function Drawer({
 }: DrawerPrimitive.Root.Props & {
   position?: DrawerPosition;
 }): React.ReactElement {
+  const contextValue = useMemo(() => ({ position }), [position]);
   return (
-    <DrawerContext.Provider value={{ position }}>
+    <DrawerContext.Provider value={contextValue}>
       <DrawerPrimitive.Root swipeDirection={swipeDirection ?? directionMap[position]} {...props} />
     </DrawerContext.Provider>
   );
@@ -125,6 +127,7 @@ export function DrawerViewport({
   );
 }
 
+// oxlint-disable-next-line eslint/complexity
 export function DrawerPopup({
   className,
   children,

@@ -1,18 +1,22 @@
 {
-  "name": "@vols.rss/tests",
+  "name": "@kyomi/tests",
   "private": true,
   "type": "module",
   "scripts": {
+    "fmt": "bunx oxfmt api web",
+    "fmt:check": "bunx oxfmt --check api web",
+    "lint": "bunx oxlint api web",
+    "lint:fix": "bunx oxlint --fix api web",
+    "typecheck": "bunx tsc -p api/tsconfig.json --noEmit && bunx tsc -p web/tsconfig.json --noEmit",
     "test": "bun run test:api && bun run test:web",
     "test:api": "bun run test:api:integration",
-    "test:api:integration": "cd ../apps/api && bunx dotenvx run -f ../../docker/.env -f .env -- bun test ../../tests/api/integration",
-    "test:api:e2e": "cd ../apps/api && bunx dotenvx run -f ../../docker/.env -f .env -- bun test ../../tests/api/e2e",
+    "test:api:integration": "cd ../apps/api && bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun test ../../tests/api/integration",
+    "test:api:e2e": "cd ../apps/api && bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun test ../../tests/api/e2e",
     "test:web": "bun run test:web:integration",
     "test:web:integration": "vitest run --config web/vitest.config.ts",
     "test:web:e2e": "vitest run --config web/vitest.config.ts e2e"
   },
   "devDependencies": {
-    "@tanstack/react-start": "^1.167.34",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.0",
     "@types/jsdom": "^21.1.7",
@@ -20,18 +24,15 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.1.4",
-    "@vols.rss/db": "workspace:*",
-    "@vols.rss/reader": "workspace:*",
-    "@vols.rss/ui": "workspace:*",
-    "@vols.rss/worker": "workspace:*",
-    "bun-types": "latest",
+    "@kyomi/reader": "workspace:*",
+    "@kyomi/ui": "workspace:*",
+    "@kyomi/worker": "workspace:*",
     "jsdom": "^28.1.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "typescript": "^5.7.2",
     "vite": "^7.3.1",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.0.5",
-    "zod": "^4.3.6"
+    "vitest": "^3.0.5"
   }
 }

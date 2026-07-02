@@ -15,7 +15,7 @@
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils",
-    "ui": "@vols.rss/ui",
+    "ui": "@kyomi/ui",
     "lib": "@/lib",
     "hooks": "@/hooks"
   },

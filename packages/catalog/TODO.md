@@ -33,8 +33,8 @@
 ## Vols.RSS Integration
 
 ### Import Existing Data
-- [ ] Inspect vols.rss feed/article/export schema.
-- [ ] Map vols.rss fields to vols.rss catalog fields.
+- [ ] Inspect kyomi feed/article/export schema.
+- [ ] Map kyomi fields to kyomi catalog fields.
 - [ ] Identify new fields worth adding:
   - source quality score
   - feed category

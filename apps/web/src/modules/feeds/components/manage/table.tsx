@@ -1,16 +1,16 @@
 "use client";
 
 import { flexRender, type Table as ReactTable } from "@tanstack/react-table";
-import { Button } from "@vols.rss/ui/button";
-import { Frame } from "@vols.rss/ui/frame";
+import { Button } from "@kyomi/ui/button";
+import { Frame } from "@kyomi/ui/frame";
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationNext,
   PaginationPrevious,
-} from "@vols.rss/ui/pagination";
-import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@vols.rss/ui/select";
+} from "@kyomi/ui/pagination";
+import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@kyomi/ui/select";
 import {
   Table,
   TableBody,
@@ -19,7 +19,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@vols.rss/ui/table";
+} from "@kyomi/ui/table";
 import { type FeedRow } from "./table-config";
 
 function getPageRangeOptions(pageCount: number, pageSize: number, totalRows: number) {

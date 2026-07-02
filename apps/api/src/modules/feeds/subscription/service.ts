@@ -1,7 +1,8 @@
 import { eq } from "drizzle-orm";
-import { feedSubscriptions, feeds } from "@vols.rss/db";
+import { feedSubscriptions, feeds } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize-url";
 import { resolveRemoteFeed } from "@modules/discover/feed/resolve-remote";
 import { resolveRemoteFeedFavicon } from "@modules/discover/feed/resolve-favicon";
 import { logger } from "@adapters/logger";
@@ -26,12 +27,43 @@ function resolveImmediateFavicon(
   return { url: embeddedIconUrl, source: "feed_icon" };
 }
 
+function normalizeExistingFeedLookupUrl(rawUrl: string): string | null {
+  try {
+    return normalizeFeedUrl(assertHttpOrHttpsUrl(rawUrl).href);
+  } catch {
+    return null;
+  }
+}
+
+async function subscribeToExistingFeedByUrl(
+  database: DB,
+  userId: string,
+  rawUrl: string,
+): Promise<FeedSubscribeResultDto | null> {
+  const normalizedUrl = normalizeExistingFeedLookupUrl(rawUrl);
+  if (!normalizedUrl) {
+    return null;
+  }
+
+  const feedRow = await database
+    .select({ id: feeds.id })
+    .from(feeds)
+    .where(eq(feeds.url, normalizedUrl))
+    .limit(1);
+  const existingFeed = feedRow[0];
+  if (!existingFeed) {
+    return null;
+  }
+
+  return subscribeToExistingFeed(database, userId, existingFeed.id);
+}
+
 async function enrichFaviconInBackground(
   database: DB,
   resolved: Awaited<ReturnType<typeof resolveRemoteFeed>>,
 ): Promise<void> {
   try {
-    const enriched = await resolveRemoteFeedFavicon(resolved, logger);
+    const enriched = await resolveRemoteFeedFavicon(database, resolved, logger);
     if (!enriched) {
       return;
     }
@@ -65,6 +97,13 @@ export async function createOrSubscribeToFeed(
   rawUrl: string,
   options?: { folderId?: string | null; customTitle?: string | null },
 ): Promise<FeedSubscribeResultDto> {
+  if (!options?.folderId && options?.customTitle === undefined) {
+    const existing = await subscribeToExistingFeedByUrl(database, userId, rawUrl);
+    if (existing) {
+      return existing;
+    }
+  }
+
   const resolved = await resolveRemoteFeed(rawUrl);
 
   // Never block subscription flow on remote favicon probing.
@@ -155,7 +194,7 @@ export async function subscribeToExistingFeed(
       faviconUrl: feed.faviconUrl,
       faviconSource: feed.faviconSource,
       newFeed: false,
-      newSubscription: true,
+      newSubscription,
     };
   });
 }

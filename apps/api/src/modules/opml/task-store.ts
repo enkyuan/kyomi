@@ -9,7 +9,7 @@ import type {
   OpmlUrlFailure,
 } from "./types";
 
-const PREFIX = "vols.rss:opml";
+const PREFIX = "kyomi:opml";
 
 function taskBaseKey(taskId: string): string {
   return `${PREFIX}:task:${taskId}`;

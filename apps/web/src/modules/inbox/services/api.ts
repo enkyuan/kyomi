@@ -8,9 +8,10 @@ import {
   buildCountsUrl,
   buildInboxListUrl,
   type InboxFilter,
+  type InboxSort,
 } from "./query-urls";
 
-export type { InboxFilter } from "./query-urls";
+export type { InboxFilter, InboxSort } from "./query-urls";
 
 let inboxSchemaModulePromise:
   | Promise<
@@ -21,6 +22,7 @@ let inboxSchemaModulePromise:
         | "articleDetailSchema"
         | "cursorListResponseSchema"
         | "extractFullTextResponseSchema"
+        | "messageResponseSchema"
       >
     >
   | undefined;
@@ -32,6 +34,7 @@ function getInboxSchemaModule() {
     articleDetailSchema: module.articleDetailSchema,
     cursorListResponseSchema: module.cursorListResponseSchema,
     extractFullTextResponseSchema: module.extractFullTextResponseSchema,
+    messageResponseSchema: module.messageResponseSchema,
   }));
   return inboxSchemaModulePromise;
 }
@@ -43,6 +46,8 @@ export type InboxItem = {
   link: string;
   publishedAt: string;
   feedFaviconUrl: string | null;
+  feedUrl: string | null;
+  feedSiteUrl: string | null;
   feedTitle: string;
   articleType: "feed" | "clip";
   isRead: boolean;
@@ -70,10 +75,6 @@ type SidebarInboxCounts = {
   saved: number;
 };
 
-type ScopedUnreadCountResponse = {
-  count: number;
-};
-
 type InboxResponse = {
   items: InboxItem[];
   total: number;
@@ -89,6 +90,13 @@ export type UpdateInboxItemStateInput = {
   itemId: string;
   isRead?: boolean | null;
   isSaved?: boolean;
+  isHidden?: boolean;
+};
+
+export type ReportBrokenArticleInput = {
+  itemId: string;
+  reason?: "broken_article" | "missing_content" | "wrong_content" | "feed_error";
+  details?: string | null;
 };
 
 type GetInboxItemsInput = {
@@ -99,6 +107,7 @@ type GetInboxItemsInput = {
   includeRead?: boolean;
   cursor?: string;
   timezoneOffsetMinutes?: number;
+  sort?: InboxSort;
 };
 
 function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
@@ -109,6 +118,8 @@ function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
     link: item.link,
     publishedAt: item.publishedAt,
     feedFaviconUrl: item.feedFaviconUrl,
+    feedUrl: item.feedUrl,
+    feedSiteUrl: item.feedSiteUrl,
     feedTitle: item.feedTitle,
     articleType: item.articleType,
     isRead: item.isRead,
@@ -122,6 +133,7 @@ async function fetchInboxList({
   includeRead,
   search,
   cursor,
+  sort,
   headers,
 }: {
   filter: InboxFilter;
@@ -129,12 +141,13 @@ async function fetchInboxList({
   includeRead: boolean;
   search: string | undefined;
   cursor: string | undefined;
+  sort: InboxSort | undefined;
   headers: Headers;
 }): Promise<CursorListResponse> {
   const { apiJsonValidated, cursorListResponseSchema } = await getInboxSchemaModule();
   return apiJsonValidated(cursorListResponseSchema, () =>
     apiJson<CursorListResponse>(
-      buildInboxListUrl({ filter, timezoneOffsetMinutes, includeRead, search, cursor }),
+      buildInboxListUrl({ filter, timezoneOffsetMinutes, includeRead, search, cursor, sort }),
       {
         headers: buildForwardHeaders(headers),
       },
@@ -147,7 +160,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
   .handler(async ({ data }): Promise<InboxResponse> => {
     const { apiJsonValidated, cursorListResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
-    const filter = data.filter ?? "inbox";
+    const filter = data.filter ?? "all";
     const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
       ? Number(data.timezoneOffsetMinutes)
       : 0;
@@ -163,6 +176,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
                 data.feedId,
                 data.folderId,
                 data.cursor,
+                data.sort,
               ),
               {
                 headers: buildForwardHeaders(headers),
@@ -175,6 +189,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
             includeRead: Boolean(data.includeRead),
             search: data.search,
             cursor: data.cursor,
+            sort: data.sort,
             headers,
           });
     const items = response.items.map(mapInboxItem);
@@ -204,6 +219,7 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
 export const updateInboxItemState = createServerFn({ method: "POST" })
   .inputValidator((input: UpdateInboxItemStateInput) => input)
   .handler(async ({ data }): Promise<{ message: string }> => {
+    const { apiJsonValidated, messageResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
     forwarded.set("content-type", "application/json");
@@ -215,11 +231,46 @@ export const updateInboxItemState = createServerFn({ method: "POST" })
     if (Object.hasOwn(data, "isSaved")) {
       body.isSaved = data.isSaved;
     }
+    if (Object.hasOwn(data, "isHidden")) {
+      body.isHidden = data.isHidden;
+    }
 
-    return apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}`, {
-      method: "PUT",
-      headers: forwarded,
-      body: JSON.stringify(body),
+    return apiJsonValidated(messageResponseSchema, () =>
+      apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}`, {
+        method: "PUT",
+        headers: forwarded,
+        body: JSON.stringify(body),
+      }),
+    );
+  });
+
+export const reportBrokenArticle = createServerFn({ method: "POST" })
+  .inputValidator((input: ReportBrokenArticleInput) => input)
+  .handler(async ({ data }): Promise<{ message: string }> => {
+    const { apiJsonValidated, messageResponseSchema } = await getInboxSchemaModule();
+    const headers = getRequestHeaders();
+    const forwarded = buildForwardHeaders(headers);
+    forwarded.set("content-type", "application/json");
+
+    return apiJsonValidated(messageResponseSchema, () =>
+      apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}/reports/broken`, {
+        method: "POST",
+        headers: forwarded,
+        body: JSON.stringify({
+          reason: data.reason ?? "broken_article",
+          details: data.details ?? null,
+        }),
+      }),
+    );
+  });
+
+export const recordInboxItemView = createServerFn({ method: "POST" })
+  .inputValidator((input: { itemId: string }) => input)
+  .handler(async ({ data }): Promise<{ message: string }> => {
+    const headers = getRequestHeaders();
+    return apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}/view`, {
+      method: "POST",
+      headers: buildForwardHeaders(headers),
     });
   });
 
@@ -246,13 +297,8 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
     const { apiJsonValidated, articleCountsSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
-    const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
-      ? Number(data.timezoneOffsetMinutes)
-      : 0;
     const url = buildCountsUrl(
       buildCountsSearchParams({
-        timezoneOffsetMinutes,
-        filter: "today",
         feedId: data.feedId,
         folderId: data.folderId,
       }),
@@ -268,47 +314,4 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
       unread: counts.unread,
       saved: counts.saved,
     };
-  });
-
-export const getInboxViewCount = createServerFn({ method: "GET" })
-  .inputValidator(
-    (input: {
-      filter: InboxFilter;
-      includeRead?: boolean;
-      timezoneOffsetMinutes?: number;
-      feedId?: string;
-      folderId?: string;
-    }) => input,
-  )
-  .handler(async ({ data }): Promise<ScopedUnreadCountResponse> => {
-    const { apiJsonValidated, articleCountsSchema } = await getInboxSchemaModule();
-    const headers = getRequestHeaders();
-    const forwarded = buildForwardHeaders(headers);
-    const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
-      ? Number(data.timezoneOffsetMinutes)
-      : 0;
-    const url = buildCountsUrl(
-      buildCountsSearchParams({
-        timezoneOffsetMinutes,
-        filter: data.filter,
-        includeRead: data.includeRead,
-        feedId: data.feedId,
-        folderId: data.folderId,
-      }),
-    );
-
-    const counts = await apiJsonValidated(articleCountsSchema, () =>
-      apiJson<ArticleCountsResponse>(url, { headers: forwarded }),
-    );
-
-    if (data.filter === "inbox") {
-      return { count: counts.all ?? 0 };
-    }
-    if (data.filter === "today") {
-      return { count: counts.today ?? 0 };
-    }
-    if (data.filter === "saved") {
-      return { count: counts.saved };
-    }
-    return { count: counts.unread };
   });

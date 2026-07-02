@@ -1,5 +1,5 @@
-import type { ReaderContent, ReaderLayoutMode, ReaderPreferences } from "../core";
-import { normalizeSafeHttpUrl } from "../core";
+import type { ReaderContent, ReaderLayoutMode, ReaderPreferences } from "../core/types";
+import { normalizeSafeHttpUrl } from "../core/url";
 import { readerMarkdownToHtmlWithKatex } from "../shared/reader-markdown-html-katex";
 import { getReaderWebViewBridgeScript } from "./bridge-script";
 import { stripDangerousMarkupForWebViewFragment } from "./strip-dangerous-html";

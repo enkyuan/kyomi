@@ -1,13 +1,15 @@
+/* eslint-disable react-doctor/only-export-components */
+/* oxlint-disable react-doctor/only-export-components */
 "use client";
 
 import { PreviewCard as PreviewCardPrimitive } from "@base-ui/react/preview-card";
 import type React from "react";
 import { createRoot, type Root } from "react-dom/client";
-import { getReaderSourceLabel } from "../../core";
+import { getReaderSourceLabel } from "../../core/url";
 
 type ReaderLinkPreviewCardProps = {
   anchorProps: Record<string, string>;
-  anchorInnerHtml: string;
+  anchorText: string;
   href: string;
 };
 
@@ -24,7 +26,7 @@ function resolvePreviewHref(href: string) {
 
 function ReaderLinkPreviewCard({
   anchorProps,
-  anchorInnerHtml,
+  anchorText,
   href,
 }: ReaderLinkPreviewCardProps): React.ReactElement {
   const previewHref = resolvePreviewHref(href);
@@ -37,16 +39,9 @@ function ReaderLinkPreviewCard({
 
   return (
     <PreviewCardPrimitive.Root>
-      <PreviewCardPrimitive.Trigger
-        delay={280}
-        render={
-          <a
-            {...anchorProps}
-            title={nativeTitle}
-            dangerouslySetInnerHTML={{ __html: anchorInnerHtml }}
-          />
-        }
-      />
+      <PreviewCardPrimitive.Trigger {...anchorProps} delay={280} title={nativeTitle}>
+        {anchorText}
+      </PreviewCardPrimitive.Trigger>
       <PreviewCardPrimitive.Portal>
         <PreviewCardPrimitive.Positioner align="start" className="z-50" sideOffset={8}>
           <PreviewCardPrimitive.Popup className="relative flex w-72 origin-(--transform-origin) flex-col gap-0 rounded-lg border border-border bg-popover p-3 text-balance text-popover-foreground text-sm shadow-lg/5 transition-[scale,opacity] data-ending-style:scale-98 data-starting-style:scale-98 data-ending-style:opacity-0 data-starting-style:opacity-0">
@@ -115,8 +110,8 @@ export function mountReaderLinkPreviewCards(container: HTMLElement): () => void 
     const root = createRoot(host);
     root.render(
       <ReaderLinkPreviewCard
-        anchorInnerHtml={anchor.innerHTML}
         anchorProps={collectAnchorProps(anchor)}
+        anchorText={anchor.textContent ?? href}
         href={href}
       />,
     );

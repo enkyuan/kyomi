@@ -1,6 +1,6 @@
 export type ReaderDefaultModeDto = "smart" | "original" | "extracted";
 export type ReaderContentWidthDto = "narrow" | "wide";
-export type InboxDefaultViewDto = "inbox" | "today" | "unread" | "saved";
+export type InboxDefaultViewDto = "my-feed" | "all" | "saved" | "recent";
 export type InboxDensityDto = "comfortable" | "compact";
 export type ArticleOpenBehaviorDto = "split" | "reader";
 export type InboxMarkReadBehaviorDto = "on-open" | "after-delay" | "manual";
@@ -21,7 +21,6 @@ export type UserPreferencesDto = {
   inboxTimestampDisplay: InboxTimestampDisplayDto;
   inboxTimestampHourCycle: InboxTimestampHourCycleDto;
   inboxFontSizePx: number;
-  inboxShowRecents: boolean;
   inboxShowFavicons: boolean;
 };
 

@@ -2,28 +2,22 @@ import { env } from "@config/env";
 import { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { closeRedis, getRedis } from "@adapters/redis";
-import { consumeJobs, runFeedRefresh, type JobMessage } from "@vols.rss/worker";
-import { publishJob } from "@adapters/queue/publish-job";
+import {
+  consumeJobs,
+  createHostRateLimiter,
+  createRedisHostRateLimitStore,
+  runFeedRefresh,
+  shouldEnrichInsertedItems,
+  type HostRateLimiter,
+  type JobMessage,
+} from "@kyomi/worker";
 import { runOpmlImportFeedJob, runOpmlImportJob } from "@modules/opml/service";
-import { feedSubscriptions, feeds } from "@vols.rss/db";
-import { lte, and, ne, eq, or, isNull, sql } from "drizzle-orm";
-import type Redis from "ioredis";
+import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "./feed-refresh-errors";
 
-function sleep(ms: number, signal?: AbortSignal): Promise<void> {
-  return new Promise((resolve) => {
-    const timer = setTimeout(resolve, ms);
-    signal?.addEventListener(
-      "abort",
-      () => {
-        clearTimeout(timer);
-        resolve();
-      },
-      { once: true },
-    );
-  });
-}
-
-async function handleFeedRefreshJob(message: JobMessage): Promise<void> {
+async function handleWorkerJob(
+  message: JobMessage,
+  hostRateLimiter: HostRateLimiter,
+): Promise<void> {
   const { id, job, attempts } = message;
   const startTime = Date.now();
 
@@ -40,13 +34,29 @@ async function handleFeedRefreshJob(message: JobMessage): Promise<void> {
           indexUid: env.MEILI_INDEX_FEEDS,
         },
         {
-          // Prioritize quick first-item availability immediately after follow.
-          enrichArticles: job.payload.reason !== "subscription_created",
+          enrichArticles: shouldEnrichInsertedItems(job.payload),
+          hostRateLimiter,
         },
       );
       const durationMs = Date.now() - startTime;
 
       if (!result.ok) {
+        if (isNonRetryableFeedRefreshFailure(result)) {
+          const classification = classifyFeedRefreshError(result.error);
+          logger.warn("worker.job.feed_refresh.failed", {
+            streamId: id,
+            feedId: job.payload.feedId,
+            userId: job.payload.userId,
+            reason: job.payload.reason,
+            errorClass: classification.code,
+            retryable: classification.retryable,
+            error: result.error,
+            attempts,
+            durationMs,
+          });
+          return;
+        }
+
         throw new Error(result.error ?? "Feed refresh failed");
       }
       logger.info("worker.job.feed_refresh.completed", {
@@ -90,118 +100,65 @@ async function handleFeedRefreshJob(message: JobMessage): Promise<void> {
 }
 
 async function logWorkerJobError(error: unknown, message: JobMessage | null): Promise<void> {
-  logger.error("worker.job.failed", {
+  const classification =
+    message?.job.type === "feed.refresh"
+      ? classifyFeedRefreshError(error)
+      : { severity: "platform" as const, code: "unknown" as const, retryable: true };
+  const feedRefreshContext =
+    message?.job.type === "feed.refresh"
+      ? {
+          feedId: message.job.payload.feedId,
+          userId: message.job.payload.userId,
+          reason: message.job.payload.reason,
+        }
+      : {};
+
+  const payload = {
     streamId: message?.id ?? null,
     jobType: message?.job.type ?? null,
     attempts: message?.attempts ?? null,
+    ...feedRefreshContext,
+    errorClass: classification.code,
+    retryable: classification.retryable,
     error: error instanceof Error ? error.message : String(error),
-  });
+  };
+
+  if (classification.severity === "platform") {
+    logger.error("worker.job.failed", payload);
+    return;
+  }
+
+  logger.warn("worker.job.failed", payload);
 }
 
 export async function runWorkerLoop(signal?: AbortSignal): Promise<void> {
   const redis = getRedis();
   const consumer = `api-worker-${process.pid}`;
+  const hostRateLimiter = createHostRateLimiter({
+    store: createRedisHostRateLimitStore(redis),
+    leaseMs: env.FEED_FETCH_HOST_LEASE_MS,
+    retryDelayMs: env.FEED_FETCH_HOST_RETRY_DELAY_MS,
+  });
 
-  logger.info("worker.started", { consumer });
-
-  const schedulerPromise = runStaleFeedScheduler(signal);
+  logger.info("worker.started", { consumer, streams: env.JOB_STREAMS });
 
   try {
-    await consumeJobs(redis, {
-      consumer,
-      signal,
-      onJob: handleFeedRefreshJob,
-      onError: logWorkerJobError,
-    });
+    await Promise.all(
+      env.JOB_STREAMS.map((streamKey) =>
+        consumeJobs(redis, {
+          consumer: `${consumer}-${streamKey.replace(/[^a-z0-9-]/gi, "-")}`,
+          streamKey,
+          count: env.JOB_READ_COUNT,
+          processConcurrency: env.JOB_PROCESS_CONCURRENCY,
+          streamMaxLength: env.JOB_STREAM_MAX_LENGTH,
+          signal,
+          onJob: (message) => handleWorkerJob(message, hostRateLimiter),
+          onError: logWorkerJobError,
+        }),
+      ),
+    );
   } finally {
     await closeRedis();
-    await schedulerPromise.catch(() => {});
     logger.info("worker.stopped", { consumer });
-  }
-}
-
-async function markStaleFeedPublishFailed(feedId: string, err: unknown): Promise<void> {
-  const failedAt = new Date();
-  await db
-    .update(feeds)
-    .set({
-      refreshStatus: "failed",
-      lastRefreshFailedAt: failedAt,
-      lastRefreshCompletedAt: failedAt,
-      lastRefreshError: err instanceof Error ? err.message : String(err),
-      nextRefreshAt: new Date(failedAt.getTime() + 15 * 60 * 1000),
-    })
-    .where(eq(feeds.id, feedId))
-    .catch(() => {});
-  logger.error("scheduler.stale_feeds.publish_error", {
-    feedId,
-    error: err instanceof Error ? err.message : String(err),
-  });
-}
-
-async function queueStaleFeed(redis: Redis, feedId: string): Promise<void> {
-  await db
-    .update(feeds)
-    .set({ refreshStatus: "queued", lastRefreshError: null })
-    .where(eq(feeds.id, feedId));
-  await publishJob(redis, {
-    type: "feed.refresh",
-    payload: { feedId, userId: "system", reason: "scheduled" },
-  }).catch((err) => markStaleFeedPublishFailed(feedId, err));
-}
-
-async function enqueueStaleFeeds(
-  redis: Redis,
-  staleFeeds: { id: string }[],
-  signal?: AbortSignal,
-): Promise<void> {
-  if (staleFeeds.length === 0) {
-    return;
-  }
-
-  logger.info("scheduler.stale_feeds.found", { count: staleFeeds.length });
-  for (const feed of staleFeeds) {
-    if (signal?.aborted) {
-      return;
-    }
-    await queueStaleFeed(redis, feed.id);
-  }
-}
-
-async function runStaleFeedSchedulerTick(redis: Redis, signal?: AbortSignal): Promise<void> {
-  const now = new Date();
-  const staleFeeds = await db
-    .select({ id: feeds.id })
-    .from(feeds)
-    .where(
-      and(
-        // Only schedule feeds that have at least one active subscriber.
-        // This prevents queue flooding from globally imported-but-unfollowed feeds.
-        sql`exists (select 1 from ${feedSubscriptions} fs where fs.feed_id = ${feeds.id})`,
-        or(isNull(feeds.nextRefreshAt), lte(feeds.nextRefreshAt, now)),
-        ne(feeds.refreshStatus, "running"),
-        ne(feeds.refreshStatus, "queued"),
-      ),
-    )
-    .limit(50);
-
-  await enqueueStaleFeeds(redis, staleFeeds, signal);
-}
-
-async function runStaleFeedScheduler(signal?: AbortSignal) {
-  const redis = getRedis();
-  while (!signal?.aborted) {
-    try {
-      await runStaleFeedSchedulerTick(redis, signal);
-    } catch (err) {
-      logger.error("scheduler.stale_feeds.error", {
-        error: err instanceof Error ? err.message : String(err),
-      });
-    }
-
-    if (signal?.aborted) {
-      break;
-    }
-    await sleep(60_000, signal);
   }
 }

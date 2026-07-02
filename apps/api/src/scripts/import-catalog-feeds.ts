@@ -1,4 +1,4 @@
-import { feeds } from "@vols.rss/db";
+import { feeds } from "@kyomi/db";
 import { db, pool } from "@adapters/db/client";
 import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";

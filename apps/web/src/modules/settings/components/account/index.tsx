@@ -2,11 +2,12 @@
 
 import { CheckFill, CloseFill, Edit2Fill, User3Fill } from "@mingcute/react";
 import { useAuth } from "@integrations/better-auth/provider";
-import { Button } from "@vols.rss/ui/button";
-import { Frame } from "@vols.rss/ui/frame";
-import { Group } from "@vols.rss/ui/group";
-import { Input } from "@vols.rss/ui/input";
-import { SidebarMenuButton, SidebarMenuItem } from "@vols.rss/ui/sidebar";
+import { Badge } from "@kyomi/ui/badge";
+import { Button } from "@kyomi/ui/button";
+import { Frame } from "@kyomi/ui/frame";
+import { Group } from "@kyomi/ui/group";
+import { Input } from "@kyomi/ui/input";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 import {
   Table,
   TableBody,
@@ -15,8 +16,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@vols.rss/ui/table";
+} from "@kyomi/ui/table";
 import { useAccountPanel } from "@modules/settings/hooks/use-account-panel";
+import { SettingHeading } from "../appearance/shared";
 
 export const accountSection = {
   description: "Manage your account details, connected accounts, and security settings.",
@@ -55,101 +57,106 @@ type AccountPagePanelProps = {
 export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
   const { user, session } = useAuth();
   const {
+    describeSessionDevice,
+    describeSessionLocation,
     emailDraft,
     emailError,
     formatTimestamp,
-    isEditingEmail,
-    sessions,
-    sessionsQuery,
-    shortenUserAgent,
-    updateEmailMutation,
     handleCancelEditEmail,
     handleEmailDraftChange,
+    handleRevokeAllSessions,
+    handleRevokeOtherSessions,
     handleSaveEmail,
     handleStartEditEmail,
+    isEditingEmail,
+    isSessionsError,
+    otherSessionCount,
+    revokeAllSessionsMutation,
+    revokeOtherSessionsMutation,
+    sessions,
+    updateEmailMutation,
   } = useAccountPanel({ user, session });
 
   return (
     <div className={ACCOUNT_SUBSECTION_SPACING_CLASS}>
       <section className="space-y-3">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-semibold">Email</span>
-            <div className="ms-auto flex items-center gap-2">
-              {isEditingEmail ? (
-                <Group aria-label="Email subscription" className="gap-2">
-                  <Input
-                    className="flex-1"
-                    aria-label="Email"
-                    aria-invalid={emailError ? true : undefined}
-                    onChange={(event) => {
-                      handleEmailDraftChange(event.target.value);
-                    }}
-                    placeholder="you@example.com"
-                    type="email"
-                    value={emailDraft}
-                  />
-                  <div>
-                    <Button
-                      loading={updateEmailMutation.isPending}
-                      onClick={() => void handleSaveEmail()}
-                      size="icon"
-                      variant="outline"
-                    >
-                      <CheckFill />
-                    </Button>
-                  </div>
-                  <div>
-                    <Button
-                      disabled={updateEmailMutation.isPending}
-                      onClick={handleCancelEditEmail}
-                      size="icon"
-                      variant="destructive-outline"
-                    >
-                      <CloseFill />
-                    </Button>
-                  </div>
-                </Group>
-              ) : (
-                <>
-                  <span className="text-sm text-muted-foreground">
-                    {user?.email ?? "Unknown email"}
-                  </span>
-                  <Button
-                    aria-label="Edit email"
-                    onClick={handleStartEditEmail}
-                    size="icon-xs"
-                    variant="ghost"
-                  >
-                    <Edit2Fill />
-                  </Button>
-                </>
-              )}
-            </div>
-          </div>
-          {emailError ? <p className="text-sm text-destructive">{emailError}</p> : null}
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h3 className="text-base font-semibold text-foreground">Account</h3>
+          <Button size="sm" variant="destructive-outline" onClick={() => void onLogout()}>
+            Log out
+          </Button>
         </div>
       </section>
-      <section className="space-y-1">
-        <h3 className="text-sm font-semibold">Preferences</h3>
-        <p className="text-sm text-muted-foreground">
-          Account settings content will be added here.
-        </p>
-      </section>
+
       <section className="space-y-3">
-        <div className="space-y-1">
-          <h3 className="text-sm font-semibold">Session</h3>
-          <p className="text-sm text-muted-foreground">Manage active sessions for this account.</p>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <SettingHeading title="Email" description="Manage your account email address." />
+          <div className="flex items-center gap-2">
+            {isEditingEmail ? (
+              <Group aria-label="Email subscription" className="gap-2">
+                <Input
+                  className="flex-1"
+                  aria-label="Email"
+                  aria-invalid={emailError ? true : undefined}
+                  onChange={(event) => {
+                    handleEmailDraftChange(event.target.value);
+                  }}
+                  placeholder="you@example.com"
+                  type="email"
+                  value={emailDraft}
+                />
+                <div>
+                  <Button
+                    loading={updateEmailMutation.isPending}
+                    onClick={() => void handleSaveEmail()}
+                    size="icon"
+                    variant="outline"
+                  >
+                    <CheckFill />
+                  </Button>
+                </div>
+                <div>
+                  <Button
+                    disabled={updateEmailMutation.isPending}
+                    onClick={handleCancelEditEmail}
+                    size="icon"
+                    variant="destructive-outline"
+                  >
+                    <CloseFill />
+                  </Button>
+                </div>
+              </Group>
+            ) : (
+              <>
+                <span className="text-sm text-muted-foreground">
+                  {user?.email ?? "Unknown email"}
+                </span>
+                <Button
+                  aria-label="Edit email"
+                  onClick={handleStartEditEmail}
+                  size="icon-xs"
+                  variant="ghost"
+                >
+                  <Edit2Fill />
+                </Button>
+              </>
+            )}
+          </div>
         </div>
+        {emailError ? <p className="text-sm text-destructive">{emailError}</p> : null}
+      </section>
+
+      <section className="space-y-3">
+        <SettingHeading title="Session" description="Manage active sessions for this account." />
         <Frame className="w-full">
           <Table variant="card">
             <TableHeader>
               <TableRow>
                 <TableHead>Device</TableHead>
+                <TableHead>Location</TableHead>
                 <TableHead>IP address</TableHead>
                 <TableHead>Last active</TableHead>
-                <TableHead>Expires</TableHead>
-                <TableHead className="text-right">Status</TableHead>
+                <TableHead className="text-right">Expires</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -162,22 +169,34 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
               ) : (
                 sessions.map((sessionItem) => (
                   <TableRow key={sessionItem.id}>
-                    <TableCell className="max-w-80 truncate">
-                      {shortenUserAgent(sessionItem.userAgent)}
+                    <TableCell
+                      className="max-w-80 truncate"
+                      title={describeSessionDevice(sessionItem.userAgent).fullUserAgent}
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium text-foreground text-sm">
+                          {describeSessionDevice(sessionItem.userAgent).label}
+                        </span>
+                        {sessionItem.isCurrent ? (
+                          <Badge
+                            size="sm"
+                            className="text-petrol-green bg-petrol-green/20 border-transparent font-semibold tracking-wider"
+                          >
+                            Current
+                          </Badge>
+                        ) : null}
+                      </div>
+                      <span className="block text-xs text-muted-foreground truncate max-w-72 mt-0.5">
+                        {describeSessionDevice(sessionItem.userAgent).meta}
+                      </span>
+                    </TableCell>
+                    <TableCell className="text-muted-foreground">
+                      {describeSessionLocation(sessionItem)}
                     </TableCell>
                     <TableCell>{sessionItem.ipAddress || "Unknown"}</TableCell>
-                    <TableCell>{formatTimestamp(sessionItem.updatedAt)}</TableCell>
-                    <TableCell>{formatTimestamp(sessionItem.expiresAt)}</TableCell>
+                    <TableCell>{formatTimestamp(sessionItem.updatedAt).relative}</TableCell>
                     <TableCell className="text-right">
-                      {sessionItem.isCurrent ? (
-                        <span className="inline-flex items-center justify-end">
-                          <span className="relative inline-flex size-2.5">
-                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/64" />
-                            <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
-                          </span>
-                          <span className="sr-only">Current session</span>
-                        </span>
-                      ) : null}
+                      {formatTimestamp(sessionItem.expiresAt).absolute}
                     </TableCell>
                   </TableRow>
                 ))
@@ -191,12 +210,30 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
             </TableFooter>
           </Table>
         </Frame>
-        {sessionsQuery.isError ? (
+        {isSessionsError ? (
           <p className="text-sm text-muted-foreground">Unable to load all sessions right now.</p>
         ) : null}
-        <Button onClick={() => void onLogout()} variant="destructive-outline">
-          Log out
-        </Button>
+
+        <div className="flex flex-wrap items-center gap-3">
+          {otherSessionCount > 0 ? (
+            <Button
+              loading={revokeOtherSessionsMutation.isPending}
+              onClick={() => void handleRevokeOtherSessions()}
+              variant="outline"
+              size="sm"
+            >
+              Sign out other devices
+            </Button>
+          ) : null}
+          <Button
+            loading={revokeAllSessionsMutation.isPending}
+            onClick={() => void handleRevokeAllSessions()}
+            variant="destructive-outline"
+            size="sm"
+          >
+            Sign out of all devices
+          </Button>
+        </div>
       </section>
     </div>
   );

@@ -9,8 +9,8 @@ import {
   SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@vols.rss/ui/sidebar";
-import { SidebarModeAnimatedText } from "@vols.rss/ui/sidebar/mode-animated-text";
+} from "@kyomi/ui/sidebar";
+import { SidebarModeAnimatedText } from "@kyomi/ui/sidebar/mode-animated-text";
 import type { SidebarInboxCounts } from "../lib/navigation";
 import { useInboxNav } from "../hooks/use-inbox-nav";
 

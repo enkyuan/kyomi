@@ -7,8 +7,6 @@ import { AppearancePagePanel } from "@modules/settings";
 
 const setInboxPreferencesMock = vi.fn();
 const resetInboxPreferencesMock = vi.fn();
-const setReaderPreferencesMock = vi.fn();
-const resetReaderPreferencesMock = vi.fn();
 
 Object.defineProperty(window, "matchMedia", {
   writable: true,
@@ -24,26 +22,26 @@ Object.defineProperty(window, "matchMedia", {
   })),
 });
 
-vi.mock("@modules/inbox/hooks/use-inbox-preferences", () => ({
+vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
   useInboxPreferences: () => ({
     limits: { minFontSizePx: 14, maxFontSizePx: 20 },
     defaults: {
-      inboxDefaultView: "today",
+      inboxDefaultView: "my-feed",
       inboxDensity: "comfortable",
       articleOpenBehavior: "split",
       inboxMarkReadBehavior: "on-open",
-      inboxTimestampDisplay: "absolute",
+      inboxTimestampDisplay: "relative",
       inboxTimestampHourCycle: "12h",
       inboxFontSizePx: 16,
       inboxShowRecents: false,
       inboxShowFavicons: true,
     },
     preferences: {
-      inboxDefaultView: "today",
+      inboxDefaultView: "my-feed",
       inboxDensity: "comfortable",
       articleOpenBehavior: "split",
       inboxMarkReadBehavior: "on-open",
-      inboxTimestampDisplay: "absolute",
+      inboxTimestampDisplay: "relative",
       inboxTimestampHourCycle: "12h",
       inboxFontSizePx: 16,
       inboxShowRecents: false,
@@ -54,31 +52,7 @@ vi.mock("@modules/inbox/hooks/use-inbox-preferences", () => ({
   }),
 }));
 
-vi.mock("@modules/reader/hooks/use-reader-preferences", () => ({
-  useReaderPreferences: () => ({
-    limits: { minFontSizePx: 14, maxFontSizePx: 22 },
-    defaults: {
-      defaultMode: "smart",
-      fontSizePx: 17,
-      contentWidth: "wide",
-      openLinksInNewTab: true,
-      showLinkPreviews: true,
-      showImages: true,
-    },
-    preferences: {
-      defaultMode: "smart",
-      fontSizePx: 17,
-      contentWidth: "wide",
-      openLinksInNewTab: true,
-      showLinkPreviews: true,
-      showImages: true,
-    },
-    setPreferences: setReaderPreferencesMock,
-    resetPreferences: resetReaderPreferencesMock,
-  }),
-}));
-
-vi.mock("@vols.rss/ui/button", () => ({
+vi.mock("@kyomi/ui/button", () => ({
   Button: ({ children, onClick }: { children: ReactNode; onClick?: () => void }) => (
     <button onClick={onClick} type="button">
       {children}
@@ -86,14 +60,14 @@ vi.mock("@vols.rss/ui/button", () => ({
   ),
 }));
 
-vi.mock("@vols.rss/ui/sidebar", () => ({
+vi.mock("@kyomi/ui/sidebar", () => ({
   SidebarMenuButton: ({ children }: { children: ReactNode }) => (
     <button type="button">{children}</button>
   ),
   SidebarMenuItem: ({ children }: { children: ReactNode }) => <div>{children}</div>,
 }));
 
-vi.mock("@vols.rss/ui/select", () => ({
+vi.mock("@kyomi/ui/select", () => ({
   Select: ({
     children,
     items,
@@ -118,7 +92,30 @@ vi.mock("@vols.rss/ui/select", () => ({
   SelectValue: () => null,
 }));
 
-vi.mock("@vols.rss/ui/switch", () => ({
+vi.mock("@kyomi/ui/segmented-control", () => {
+  let onSegmentedValueChange: ((value: string) => void) | undefined;
+
+  return {
+    SegmentedControl: ({
+      children,
+      onValueChange,
+    }: {
+      children: ReactNode;
+      onValueChange?: (value: string) => void;
+    }) => {
+      onSegmentedValueChange = onValueChange;
+      return <div>{children}</div>;
+    },
+    SegmentedControlList: ({ children }: { children: ReactNode }) => <div>{children}</div>,
+    SegmentedControlTab: ({ children, value }: { children: ReactNode; value: string }) => (
+      <button onClick={() => onSegmentedValueChange?.(value)} type="button">
+        {children}
+      </button>
+    ),
+  };
+});
+
+vi.mock("@kyomi/ui/switch", () => ({
   Switch: ({
     checked,
     id,
@@ -134,7 +131,7 @@ vi.mock("@vols.rss/ui/switch", () => ({
   ),
 }));
 
-vi.mock("@vols.rss/ui/slider", () => ({
+vi.mock("@kyomi/ui/slider", () => ({
   SliderComfortable: ({ onChange }: { onChange?: (value: number) => void }) => (
     <button onClick={() => onChange?.(21)} type="button">
       font-size-slider
@@ -142,7 +139,7 @@ vi.mock("@vols.rss/ui/slider", () => ({
   ),
 }));
 
-vi.mock("@vols.rss/ui/group", () => ({
+vi.mock("@kyomi/ui/group", () => ({
   Group: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   GroupSeparator: () => <div />,
 }));
@@ -159,40 +156,32 @@ describe("AppearancePagePanel", () => {
   beforeEach(() => {
     setInboxPreferencesMock.mockReset();
     resetInboxPreferencesMock.mockReset();
-    setReaderPreferencesMock.mockReset();
-    resetReaderPreferencesMock.mockReset();
   });
 
-  test("updates inbox default view preferences from the merged page", () => {
+  test("updates inbox text scale preferences from the merged page", () => {
     render(<AppearancePagePanel />);
 
-    fireEvent.click(screen.getByRole("button", { name: "All unread" }));
+    fireEvent.click(screen.getByRole("button", { name: "xl" }));
 
-    expect(setInboxPreferencesMock).toHaveBeenCalledWith({ inboxDefaultView: "unread" });
+    expect(setInboxPreferencesMock).toHaveBeenCalledWith({ inboxFontSizePx: 20 });
   });
 
-  test("updates reader font size preferences from the merged page", () => {
+  test("shows relative timestamp display as the default-first option", () => {
     render(<AppearancePagePanel />);
 
-    fireEvent.click(screen.getAllByRole("button", { name: "font-size-slider" })[1]!);
+    const timestampOptions = screen
+      .getAllByRole("button")
+      .map((button) => button.textContent)
+      .filter((label) => label === "Relative" || label === "Absolute");
 
-    expect(setReaderPreferencesMock).toHaveBeenCalledWith({ fontSizePx: 21 });
+    expect(timestampOptions).toEqual(["Relative", "Absolute"]);
   });
 
-  test("toggles reader link previews from the merged page", () => {
-    render(<AppearancePagePanel />);
-
-    fireEvent.click(screen.getByRole("button", { name: "reader-link-previews" }));
-
-    expect(setReaderPreferencesMock).toHaveBeenCalledWith({ showLinkPreviews: false });
-  });
-
-  test("resets inbox and reader defaults together", () => {
+  test("resets inbox defaults from the merged page", () => {
     render(<AppearancePagePanel />);
 
     fireEvent.click(screen.getByRole("button", { name: "Reset defaults" }));
 
     expect(resetInboxPreferencesMock).toHaveBeenCalled();
-    expect(resetReaderPreferencesMock).toHaveBeenCalled();
   });
 });

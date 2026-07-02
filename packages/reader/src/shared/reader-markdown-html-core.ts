@@ -1,5 +1,5 @@
 import { Marked, Renderer } from "marked";
-import { normalizeSafeHttpUrl } from "../core";
+import { normalizeSafeHttpUrl } from "../core/url";
 
 export type ReaderMarkdownRenderOptions = {
   baseUrl?: string | null;

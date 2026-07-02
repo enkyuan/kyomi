@@ -1,6 +1,5 @@
-import { XMLParser } from "fast-xml-parser";
+import { XMLParser, type X2jOptions } from "fast-xml-parser";
 import { normalizeArticleUrl } from "../../lib/article-identity";
-import { decodeHtmlEntities } from "../../lib/html-entities";
 import {
   buildStoredFeedContent,
   extractImageUrl,
@@ -8,6 +7,15 @@ import {
   summarizeText,
 } from "../../lib/feed-text";
 import type { ParsedFeedDocument } from "./types";
+
+const FEED_XML_PROCESS_ENTITIES: NonNullable<X2jOptions["processEntities"]> = {
+  enabled: true,
+  maxEntitySize: 10_000,
+  maxExpansionDepth: 10,
+  maxTotalExpansions: 50_000,
+  maxExpandedLength: 1_000_000,
+  maxEntityCount: 100,
+};
 
 function stableUuid(seed: string): string {
   let hash = 0x811c9dc5;
@@ -53,6 +61,19 @@ function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
   }
   try {
     return new URL(candidate, baseUrl).href;
+  } catch {
+    return null;
+  }
+}
+
+function absoluteHttpUrl(candidate: string | null, baseUrl: string): string | null {
+  const href = absoluteUrl(candidate, baseUrl);
+  if (!href) {
+    return null;
+  }
+  try {
+    const parsed = new URL(href);
+    return parsed.protocol === "http:" || parsed.protocol === "https:" ? parsed.href : null;
   } catch {
     return null;
   }
@@ -172,7 +193,10 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
     typeof parsed.description === "string"
       ? stripTags(parsed.description)
       : "Follow recent articles from this feed";
-  const link = typeof parsed.home_page_url === "string" ? parsed.home_page_url : finalUrl;
+  const link = absoluteHttpUrl(
+    typeof parsed.home_page_url === "string" ? parsed.home_page_url : finalUrl,
+    finalUrl,
+  );
   const items = toArray(parsed.items).flatMap((item, index) => {
     if (!item || typeof item !== "object") {
       return [];
@@ -214,7 +238,7 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
     metadata: {
       title: title || "Untitled",
       description: description || "Follow recent articles from this feed",
-      link: link || null,
+      link,
       iconUrl: embeddedJsonFeedIconUrl(parsed, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
     },
@@ -230,7 +254,7 @@ function parseRssDocument(
   const now = new Date();
   const title = xmlText(channel.title) || "Untitled";
   const description = xmlText(channel.description) || "Follow recent articles from this feed";
-  const link = pickRssLink(channel.link, finalUrl);
+  const link = absoluteHttpUrl(pickRssLink(channel.link, finalUrl), finalUrl);
   const items = toArray(channel.item).flatMap((item, index) => {
     if (!item || typeof item !== "object") {
       return [];
@@ -272,7 +296,7 @@ function parseRssDocument(
     metadata: {
       title,
       description,
-      link: link || null,
+      link,
       iconUrl: embeddedRssFeedIconUrl(channel, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
     },
@@ -288,7 +312,7 @@ function parseAtomDocument(
   const now = new Date();
   const title = xmlText(feed.title) || "Untitled";
   const description = xmlText(feed.subtitle) || "Follow recent articles from this feed";
-  const link = pickAtomLink(feed.link, finalUrl);
+  const link = absoluteHttpUrl(pickAtomLink(feed.link, finalUrl), finalUrl);
   const items = toArray(feed.entry).flatMap((entry, index) => {
     if (!entry || typeof entry !== "object") {
       return [];
@@ -324,7 +348,7 @@ function parseAtomDocument(
     metadata: {
       title,
       description,
-      link: link || null,
+      link,
       iconUrl: embeddedAtomFeedIconUrl(feed, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
     },
@@ -344,23 +368,13 @@ export function parseFeedDocument(
 
   const lower = trimmed.toLowerCase();
   if (lower.startsWith("<html") || lower.startsWith("<!doctype html")) {
-    const titleMatch = trimmed.match(/<title[^>]*>([^<]+)<\/title>/i);
-    const title = titleMatch ? decodeHtmlEntities(titleMatch[1]).trim() : "Untitled";
-    return {
-      metadata: {
-        title,
-        description: "Website followed via link",
-        link: finalUrl,
-        iconUrl: null,
-        canonicalUrl: normalizeFeedUrl(finalUrl),
-      },
-      items: [],
-    };
+    throw new Error("Unsupported feed format: received HTML document");
   }
 
   const parser = new XMLParser({
     ignoreAttributes: false,
     attributeNamePrefix: "@_",
+    processEntities: FEED_XML_PROCESS_ENTITIES,
     trimValues: true,
   });
   const doc = parser.parse(trimmed) as Record<string, unknown>;

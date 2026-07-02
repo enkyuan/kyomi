@@ -3,8 +3,8 @@
 Current browser-persisted state:
 
 - `theme` in `localStorage`: should become server-backed when account preferences are introduced. Safe as a local default until then.
-- `vols.rss:hot-query-cache:v1` in `localStorage`: React Query warm cache only. Server responses remain source of truth.
-- `vols.rss:pinned-feed-ids` and migration keys in `localStorage`: migration-only legacy state. Remove after one or two releases once migration metrics show no active migrations.
+- `kyomi:hot-query-cache:v1` in `localStorage`: React Query warm cache only. Server responses remain source of truth.
+- `kyomi:pinned-feed-ids` and migration keys in `localStorage`: migration-only legacy state. Remove after one or two releases once migration metrics show no active migrations.
 - `sidebar_state` cookie: local-only UI chrome state. Does not need server persistence.
 
 Already server-backed:
