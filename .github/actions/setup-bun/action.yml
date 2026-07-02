@@ -23,3 +23,12 @@ runs:
     - name: Install dependencies
       shell: bash
       run: bun install --frozen-lockfile
+
+    - name: Prefetch bunx tools
+      shell: bash
+      # oxfmt/oxlint are invoked via `bunx` from every workspace package. Installing
+      # them once here avoids a race where turbo's parallel tasks all try to install
+      # the same tool into bunx's shared temp cache at once (ENOENT on the binary).
+      run: |
+        bunx oxfmt --version
+        bunx oxlint --version
