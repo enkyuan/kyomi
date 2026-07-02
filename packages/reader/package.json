@@ -12,6 +12,10 @@
     "./native": "./src/native/index.ts"
   },
   "scripts": {
+    "fmt": "bunx oxfmt src",
+    "fmt:check": "bunx oxfmt --check src",
+    "lint": "bunx oxlint src",
+    "lint:fix": "bunx oxlint --fix src",
     "typecheck": "bunx tsgo -p tsconfig.json --noEmit"
   },
   "peerDependencies": {

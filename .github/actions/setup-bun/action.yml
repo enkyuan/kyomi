@@ -1,0 +1,25 @@
+name: Setup Bun workspace
+description: Install Bun, restore package/Turbo caches, and install workspace dependencies.
+
+runs:
+  using: composite
+  steps:
+    - name: Install Bun
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version-file: .bun-version
+
+    - name: Restore Bun and Turbo caches
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.bun/install/cache
+          .turbo
+        key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}-turbo-${{ hashFiles('turbo.json') }}
+        restore-keys: |
+          ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}-turbo-
+          ${{ runner.os }}-bun-
+
+    - name: Install dependencies
+      shell: bash
+      run: bun install --frozen-lockfile

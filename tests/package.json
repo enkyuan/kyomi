@@ -3,10 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "fmt": "bunx oxfmt api web",
+    "fmt:check": "bunx oxfmt --check api web",
+    "lint": "bunx oxlint api web",
+    "lint:fix": "bunx oxlint --fix api web",
+    "typecheck": "bunx tsc -p api/tsconfig.json --noEmit && bunx tsc -p web/tsconfig.json --noEmit",
     "test": "bun run test:api && bun run test:web",
     "test:api": "bun run test:api:integration",
-    "test:api:integration": "cd ../apps/api && bunx dotenvx run -f ../../docker/.env -f .env -- bun test ../../tests/api/integration",
-    "test:api:e2e": "cd ../apps/api && bunx dotenvx run -f ../../docker/.env -f .env -- bun test ../../tests/api/e2e",
+    "test:api:integration": "cd ../apps/api && bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun test ../../tests/api/integration",
+    "test:api:e2e": "cd ../apps/api && bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun test ../../tests/api/e2e",
     "test:web": "bun run test:web:integration",
     "test:web:integration": "vitest run --config web/vitest.config.ts",
     "test:web:e2e": "vitest run --config web/vitest.config.ts e2e"
