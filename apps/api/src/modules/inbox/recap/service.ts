@@ -33,10 +33,7 @@ function normalizeLimit(value: string | number | undefined): number {
 
 export const normalizeRecapLimitForTest = normalizeLimit;
 
-async function listFolderSummaries(
-  database: DB,
-  userId: string,
-): Promise<InboxRecapFolderDto[]> {
+async function listFolderSummaries(database: DB, userId: string): Promise<InboxRecapFolderDto[]> {
   const rows = await database
     .select({
       id: folders.id,
@@ -180,7 +177,11 @@ async function listOldestSavedClips(
     .select()
     .from(articleClips)
     .where(
-      and(eq(articleClips.userId, userId), eq(articleClips.isSaved, true), isNotNull(articleClips.savedAt)),
+      and(
+        eq(articleClips.userId, userId),
+        eq(articleClips.isSaved, true),
+        isNotNull(articleClips.savedAt),
+      ),
     )
     .orderBy(asc(articleClips.savedAt), asc(articleClips.id))
     .limit(limit);

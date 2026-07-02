@@ -403,11 +403,7 @@ function removeEmptyElements(root: ParentNode): void {
   const elements = Array.from(root.querySelectorAll("*")).reverse();
   for (const element of elements) {
     const tag = element.tagName.toLowerCase();
-    if (
-      !VOID_ELEMENTS.has(tag) &&
-      !element.hasChildNodes() &&
-      !element.textContent?.trim()
-    ) {
+    if (!VOID_ELEMENTS.has(tag) && !element.hasChildNodes() && !element.textContent?.trim()) {
       element.parentNode?.removeChild(element);
     }
   }

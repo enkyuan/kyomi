@@ -20,8 +20,9 @@ const basePreferences = {
 describe("userPreferencesSchema", () => {
   test("normalizes removed inbox default views from preference responses", () => {
     for (const inboxDefaultView of ["inbox", "today", "unread"] as const) {
-      expect(userPreferencesSchema.parse({ ...basePreferences, inboxDefaultView }))
-        .toMatchObject({ inboxDefaultView: "my-feed" });
+      expect(userPreferencesSchema.parse({ ...basePreferences, inboxDefaultView })).toMatchObject({
+        inboxDefaultView: "my-feed",
+      });
     }
   });
 });

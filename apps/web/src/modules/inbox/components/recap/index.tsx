@@ -338,9 +338,7 @@ export function InboxRecapCard() {
         />
         <WorthRevisiting
           items={oldestSavedItems}
-          onExpand={() =>
-            dispatch({ type: "set-expanded-section", section: "worthRevisiting" })
-          }
+          onExpand={() => dispatch({ type: "set-expanded-section", section: "worthRevisiting" })}
           onUnsave={(itemId) => unsaveMutation.mutate({ itemId })}
           unsavingItemId={unsavingItemId}
         />

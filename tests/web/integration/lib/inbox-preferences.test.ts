@@ -137,8 +137,9 @@ describe("resolveInitialInboxPreferences", () => {
 
   test("maps removed default views to My Feed", () => {
     for (const inboxDefaultView of ["today", "unread"] as const) {
-      expect(sanitizeInboxPreferences({ ...SPLIT_PREFERENCES, inboxDefaultView }))
-        .toMatchObject({ inboxDefaultView: "my-feed" });
+      expect(sanitizeInboxPreferences({ ...SPLIT_PREFERENCES, inboxDefaultView })).toMatchObject({
+        inboxDefaultView: "my-feed",
+      });
     }
   });
 });

@@ -1,7 +1,14 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { AnimatePresence, LayoutGroup, LazyMotion, domMax, m, useReducedMotion } from "motion/react";
+import {
+  AnimatePresence,
+  LayoutGroup,
+  LazyMotion,
+  domMax,
+  m,
+  useReducedMotion,
+} from "motion/react";
 
 export function ContentTransition({
   showDetail,

@@ -61,7 +61,10 @@ export function MenuPopup({
           {...props}
         >
           <div
-            className={cn("max-h-(--available-height) w-full overflow-y-auto p-1", contentClassName)}
+            className={cn(
+              "max-h-(--available-height) w-full overflow-y-auto p-1",
+              contentClassName,
+            )}
             data-slot="menu-popup-content"
           >
             {children}

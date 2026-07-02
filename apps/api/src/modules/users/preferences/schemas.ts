@@ -36,12 +36,7 @@ export const updateUserPreferencesBody = t.Object({
   showLinkPreviews: t.Optional(t.Boolean()),
   showImages: t.Optional(t.Boolean()),
   inboxDefaultView: t.Optional(
-    t.Union([
-      t.Literal("my-feed"),
-      t.Literal("all"),
-      t.Literal("saved"),
-      t.Literal("recent"),
-    ]),
+    t.Union([t.Literal("my-feed"), t.Literal("all"), t.Literal("saved"), t.Literal("recent")]),
   ),
   inboxDensity: t.Optional(t.Union([t.Literal("comfortable"), t.Literal("compact")])),
   articleOpenBehavior: t.Optional(t.Union([t.Literal("split"), t.Literal("reader")])),

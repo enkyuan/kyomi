@@ -59,7 +59,9 @@ describe("fetchOpmlDocumentFromUrl", () => {
   });
 
   test("blocks private network URLs", async () => {
-    await expect(fetchOpmlDocumentFromUrl("http://127.0.0.1/subscriptions.opml")).rejects.toMatchObject({
+    await expect(
+      fetchOpmlDocumentFromUrl("http://127.0.0.1/subscriptions.opml"),
+    ).rejects.toMatchObject({
       code: "OPML_URL_BLOCKED",
       status: 400,
     } satisfies Partial<AppError>);

@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { ReaderContent } from "@kyomi/reader/web";
 import type { ReaderContent as ReaderContentModel } from "@kyomi/reader/core";
@@ -31,7 +31,7 @@ function baseReader(overrides: Partial<ReaderContentModel> = {}): ReaderContentM
 }
 
 describe("ReaderContent", () => {
-  test("renders markdown tables, fenced code, and math intentionally", () => {
+  test("renders markdown tables, fenced code, and math intentionally", async () => {
     render(
       <ReaderContent
         reader={baseReader({
@@ -55,7 +55,10 @@ describe("ReaderContent", () => {
     expect(screen.getByText("Heading")).toBeTruthy();
     expect(document.querySelector("table")).toBeTruthy();
     expect(document.querySelector("pre code")?.textContent).toContain("const value = 1;");
-    expect(document.querySelector(".katex")).toBeTruthy();
+    // KaTeX renders asynchronously via a dynamic import; wait for it to land.
+    await waitFor(() => {
+      expect(document.querySelector(".katex")).toBeTruthy();
+    });
   });
 
   test("renders safe inline html tags from markdown as markup, not literal text", () => {

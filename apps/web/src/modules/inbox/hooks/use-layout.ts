@@ -118,9 +118,7 @@ export function useInboxRouteState(preferences: InboxPreferences) {
   const params = useParams({ strict: false });
   const rawNavigate = useNavigate();
   const article = typeof params?.article === "string" ? params.article : undefined;
-  const slugItemId = getInboxItemIdFromSlug(
-    article,
-  );
+  const slugItemId = getInboxItemIdFromSlug(article);
   const routeItemId = itemId ?? slugItemId;
   const navigate = useCallback(
     ({ search: updateSearch, replace }: InboxRouteNavigateOptions) => {

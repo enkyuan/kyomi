@@ -16,12 +16,11 @@ const RECAP_SCREEN_OFFSET_PX = 28;
 const recapScreenVariants = {
   initial: ({ direction, reducedMotion }: RecapScreenMotionState) => ({
     opacity: reducedMotion ? 1 : 0,
-    x:
-      reducedMotion
-        ? 0
-        : direction === "forward"
-          ? RECAP_SCREEN_OFFSET_PX
-          : -RECAP_SCREEN_OFFSET_PX,
+    x: reducedMotion
+      ? 0
+      : direction === "forward"
+        ? RECAP_SCREEN_OFFSET_PX
+        : -RECAP_SCREEN_OFFSET_PX,
   }),
   animate: {
     opacity: 1,
@@ -29,12 +28,11 @@ const recapScreenVariants = {
   },
   exit: ({ direction, reducedMotion }: RecapScreenMotionState) => ({
     opacity: reducedMotion ? 1 : 0,
-    x:
-      reducedMotion
-        ? 0
-        : direction === "forward"
-          ? -RECAP_SCREEN_OFFSET_PX
-          : RECAP_SCREEN_OFFSET_PX,
+    x: reducedMotion
+      ? 0
+      : direction === "forward"
+        ? -RECAP_SCREEN_OFFSET_PX
+        : RECAP_SCREEN_OFFSET_PX,
   }),
 };
 
@@ -60,10 +58,7 @@ export function RecapScreenTransition({
 
   return (
     <LazyMotion features={domAnimation}>
-      <m.div
-        className={cn("relative min-h-0 min-w-0 overflow-hidden", className)}
-        initial={false}
-      >
+      <m.div className={cn("relative min-h-0 min-w-0 overflow-hidden", className)} initial={false}>
         <AnimatePresence custom={transitionState} initial={false} mode="popLayout">
           <m.div
             key={contentKey}

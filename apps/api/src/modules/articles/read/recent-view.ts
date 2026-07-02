@@ -21,9 +21,6 @@ export function compareRecentlyViewedItems(
   return sort === "oldest" ? left.id.localeCompare(right.id) : right.id.localeCompare(left.id);
 }
 
-export function mergeRecentlyViewedItemsSorted(
-  items: RecentlyViewedItem[],
-  sort: ArticleSort,
-) {
+export function mergeRecentlyViewedItemsSorted(items: RecentlyViewedItem[], sort: ArticleSort) {
   return [...items].sort((left, right) => compareRecentlyViewedItems(left, right, sort));
 }

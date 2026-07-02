@@ -29,10 +29,7 @@ import { toastManager } from "@kyomi/ui/toast";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import type { FollowedFeed } from "@modules/feeds/api";
 import { deleteFolder, updateFolder, type Folder } from "@modules/folders/api";
-import {
-  followedFeedsQueryKey,
-  inboxRecapQueryKey,
-} from "@modules/inbox/queries/options";
+import { followedFeedsQueryKey, inboxRecapQueryKey } from "@modules/inbox/queries/options";
 import type { InboxRecapDto } from "@modules/inbox/services/recap-schema";
 import { ExpandedFolderFeeds } from "./folder-feeds";
 import { FolderActions } from "../folders";
@@ -69,9 +66,7 @@ function applyFolderPinState(
       : current,
   );
   queryClient.setQueryData<Folder[]>(["folders"], (current) =>
-    current?.map((folder) =>
-      folder.id === folderId ? { ...folder, isPinned, pinnedAt } : folder,
-    ),
+    current?.map((folder) => (folder.id === folderId ? { ...folder, isPinned, pinnedAt } : folder)),
   );
 }
 

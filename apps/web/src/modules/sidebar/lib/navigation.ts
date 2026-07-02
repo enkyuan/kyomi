@@ -16,9 +16,7 @@ const INBOX_NAV: InboxNavItem[] = [
 
 const INBOX_NAV_FILTER_KEYS = ["filter"] as const;
 
-function inboxNavBadgeValues(counts: {
-  saved: number;
-}): Record<string, number> {
+function inboxNavBadgeValues(counts: { saved: number }): Record<string, number> {
   return {
     "Read Later": counts.saved,
   };

@@ -1,9 +1,6 @@
 import type { Elysia } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
-import {
-  inboxRecapQuerySchema,
-  inboxRecapResponseSchema,
-} from "./schemas";
+import { inboxRecapQuerySchema, inboxRecapResponseSchema } from "./schemas";
 import { getInboxRecap } from "./service";
 
 export function registerInboxRecapRoutes(app: Elysia) {

@@ -182,9 +182,7 @@ export function Detail({
             />
           </div>
         </ScrollAreaPrimitive.Viewport>
-        {selectedItem && !isInboxSurface ? (
-          <BlurLayer topOffset={blurTopOffset} />
-        ) : null}
+        {selectedItem && !isInboxSurface ? <BlurLayer topOffset={blurTopOffset} /> : null}
         {selectedItem ? (
           <ScrollBar
             aria-label="Reader scrollbar"

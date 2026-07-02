@@ -135,11 +135,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         </SidebarMenu>
       </SidebarHeader>
 
-      <div
-        className="min-h-0 flex-1 ps-0 pe-2"
-        data-sidebar="content"
-        data-slot="sidebar-content"
-      >
+      <div className="min-h-0 flex-1 ps-0 pe-2" data-sidebar="content" data-slot="sidebar-content">
         <ScrollArea
           className="relative h-full min-h-0 overflow-visible **:data-[slot=scroll-area-scrollbar]:hidden"
           scrollFade

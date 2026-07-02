@@ -77,12 +77,7 @@ export function Folders({
       action={
         folders.length > 0 ? (
           <RailTooltip label="View folders">
-            <Button
-              aria-label="View folders"
-              size="icon-xs"
-              variant="ghost"
-              onClick={onExpand}
-            >
+            <Button aria-label="View folders" size="icon-xs" variant="ghost" onClick={onExpand}>
               <RightFill />
             </Button>
           </RailTooltip>

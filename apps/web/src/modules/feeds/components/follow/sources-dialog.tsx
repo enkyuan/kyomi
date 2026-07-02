@@ -194,8 +194,7 @@ export function SourcesDialog({
   const { mutate: submitFollowFeed } = followFeedMutation;
 
   const isPendingFollow = useCallback(
-    (item: DiscoverFeedResult) =>
-      pendingFollowKeysRef.current?.has(item.id ?? item.url) ?? false,
+    (item: DiscoverFeedResult) => pendingFollowKeysRef.current?.has(item.id ?? item.url) ?? false,
     [],
   );
 

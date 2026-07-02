@@ -8,11 +8,7 @@ import {
   HeadAiLine,
   ShareForwardLine,
 } from "@mingcute/react";
-import {
-  Toolbar as ToolbarRoot,
-  ToolbarGroup,
-  ToolbarSeparator,
-} from "@kyomi/ui/toolbar";
+import { Toolbar as ToolbarRoot, ToolbarGroup, ToolbarSeparator } from "@kyomi/ui/toolbar";
 import { SAVED_ACTION_ACTIVE_CLASS } from "@lib/theme/action-colors";
 import { cn } from "@lib/utils";
 import { ButtonControl } from "./button-control";
@@ -71,11 +67,7 @@ export function Toolbar({
         />
         {isArticleHeader ? (
           <>
-            <ButtonControl
-              label="Open source"
-              onClick={onOpenSource}
-              className={buttonClassName}
-            >
+            <ButtonControl label="Open source" onClick={onOpenSource} className={buttonClassName}>
               <ExternalLinkLine className={TOOLBAR_ICON_CLASS} />
             </ButtonControl>
             <ToolbarSeparator

@@ -123,7 +123,9 @@ function SourcesCommandResults({
       <Command.List>
         <div className="kyomi-feed-command-list-inner">
           {state.showEmpty ? (
-            <Command.Empty>No feeds found yet. Try a broader topic or paste a feed URL.</Command.Empty>
+            <Command.Empty>
+              No feeds found yet. Try a broader topic or paste a feed URL.
+            </Command.Empty>
           ) : null}
           {state.showLoading ? <SourcesCommandLoading /> : null}
           {state.resultsCount > 0 ? (

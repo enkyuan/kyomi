@@ -14,13 +14,7 @@ import {
 import { Skeleton } from "@kyomi/ui/skeleton";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 
-export function RailTooltip({
-  label,
-  children,
-}: {
-  label: string;
-  children: ReactElement;
-}) {
+export function RailTooltip({ label, children }: { label: string; children: ReactElement }) {
   return (
     <Tooltip>
       <TooltipTrigger render={children} />

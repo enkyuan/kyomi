@@ -18,10 +18,7 @@ export function ItemInlineToolbar({ item, className }: { item: InboxItem; classN
     <>
       <Toolbar
         {...toolbar.toolbarProps}
-        className={cn(
-          "border-0 bg-transparent p-0 text-muted-foreground shadow-none",
-          className,
-        )}
+        className={cn("border-0 bg-transparent p-0 text-muted-foreground shadow-none", className)}
       />
       <ReportArticleDialog item={item} open={reportOpen} onOpenChange={setReportOpen} />
     </>

@@ -29,12 +29,7 @@ export function WorthRevisiting({
       action={
         items.length > WORTH_REVISITING_DISPLAY_LIMIT ? (
           <RailTooltip label="View saved items">
-            <Button
-              aria-label="View saved items"
-              size="icon-xs"
-              variant="ghost"
-              onClick={onExpand}
-            >
+            <Button aria-label="View saved items" size="icon-xs" variant="ghost" onClick={onExpand}>
               <RightFill />
             </Button>
           </RailTooltip>

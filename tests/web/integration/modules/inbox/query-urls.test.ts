@@ -47,16 +47,7 @@ describe("inbox query URLs", () => {
 
   test("uses folder-scoped feed articles for pinned folder views", () => {
     expect(
-      buildArticlesUrl(
-        "all",
-        300,
-        false,
-        undefined,
-        undefined,
-        "folder-1",
-        undefined,
-        undefined,
-      ),
+      buildArticlesUrl("all", 300, false, undefined, undefined, "folder-1", undefined, undefined),
     ).toBe("/api/v1/articles?folder_id=folder-1&limit=100");
   });
 

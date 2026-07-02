@@ -224,12 +224,8 @@ export function FolderPickerButton({
         sideOffset={6}
       >
         {shouldScrollFolders ? (
-          <ScrollArea
-            className="relative h-[min(--spacing(64),var(--available-height))] overflow-hidden rounded-[inherit] **:data-[slot=scroll-area-scrollbar]:!end-px **:data-[slot=scroll-area-scrollbar]:!m-0 **:data-[slot=scroll-area-scrollbar]:!my-1"
-          >
-            <div className="min-w-0 p-1">
-              {folderMenuItems}
-            </div>
+          <ScrollArea className="relative h-[min(--spacing(64),var(--available-height))] overflow-hidden rounded-[inherit] **:data-[slot=scroll-area-scrollbar]:!end-px **:data-[slot=scroll-area-scrollbar]:!m-0 **:data-[slot=scroll-area-scrollbar]:!my-1">
+            <div className="min-w-0 p-1">{folderMenuItems}</div>
           </ScrollArea>
         ) : (
           folderMenuItems

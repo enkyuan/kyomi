@@ -50,7 +50,7 @@ If any dependency fails, `CI Summary` fails and prints the failing job result.
 - `redis:8-alpine`
 - `getmeili/meilisearch:v1.15`
 
-No repository secrets are required for PR CI. The helper script `scripts/ci/prepare-env.sh` resets env files from checked-in examples under `CI=true`, creates missing local env files from those examples, and preserves existing local env files unless `KYOMI_FORCE_PREPARE_ENV=1` is set.
+No repository secrets are required for PR CI. The helper script `scripts/ci/prepare-env.ts` resets env files from checked-in examples under `CI=true`, creates missing local env files from those examples, and preserves existing local env files unless `KYOMI_FORCE_PREPARE_ENV=1` is set.
 
 ## Delivery
 

@@ -13,9 +13,7 @@ describe("inbox recap service", () => {
 
   test("registers the recap endpoint under api v1", async () => {
     const app = createApp();
-    const response = await app.handle(
-      new Request("http://localhost/api/v1/inbox/recap?limit=5"),
-    );
+    const response = await app.handle(new Request("http://localhost/api/v1/inbox/recap?limit=5"));
 
     expect(response.status).not.toBe(404);
     expect(response.status).toBe(401);

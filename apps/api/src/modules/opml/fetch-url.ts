@@ -32,9 +32,7 @@ function parseOpmlImportUrl(rawUrl: string): string {
   }
 }
 
-function fetchFailureToAppError(
-  result: Extract<FetchFeedDocumentResult, { ok: false }>,
-): AppError {
+function fetchFailureToAppError(result: Extract<FetchFeedDocumentResult, { ok: false }>): AppError {
   switch (result.code) {
     case "BLOCKED_URL":
       return new AppError("This OPML URL cannot be imported", {
@@ -76,9 +74,7 @@ function fetchFailureToAppError(
   }
 }
 
-export async function fetchOpmlDocumentFromUrl(
-  rawUrl: string,
-): Promise<FetchOpmlDocumentResult> {
+export async function fetchOpmlDocumentFromUrl(rawUrl: string): Promise<FetchOpmlDocumentResult> {
   const url = parseOpmlImportUrl(rawUrl);
   const fetched = await fetchFeedDocument(url);
 

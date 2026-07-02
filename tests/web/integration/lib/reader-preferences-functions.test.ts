@@ -1,6 +1,6 @@
 import { describe, expect, test, vi } from "vitest";
 
-describe("reader-preferences server functions", () => {
+describe("preferences server functions", () => {
   test("uses POST server function wrapper for updates", async () => {
     const createServerFnCalls: Array<{ method: string }> = [];
 
@@ -27,12 +27,12 @@ describe("reader-preferences server functions", () => {
       buildForwardHeaders: () => new Headers(),
     }));
 
-    vi.doMock("@lib/api-schemas", () => ({
+    vi.doMock("@lib/schemas", () => ({
       apiJsonValidated: (_schema: unknown, exec: () => unknown) => exec(),
-      readerPreferencesSchema: {},
+      userPreferencesSchema: {},
     }));
 
-    await import("@modules/reader/reader-preferences");
+    await import("@modules/preferences/api");
 
     expect(createServerFnCalls[0]).toEqual({ method: "GET" });
     expect(createServerFnCalls[1]).toEqual({ method: "POST" });

@@ -11,9 +11,12 @@ import { useAuth } from "@integrations/better-auth/provider";
 import { listFollowedFeeds, type FollowedFeed, updateFeedSubscription } from "../api";
 import {
   applyPinnedFeedState,
+  applyPinnedState,
   getFollowedFeedsSnapshot,
   restoreFeedCacheSnapshot,
 } from "../queries/cache";
+
+export { applyPinnedState };
 
 const FOLLOWED_FEEDS_QUERY_KEY = ["feeds", "followed"] as const;
 const PINNED_FEED_IDS_STORAGE_KEY = "kyomi:pinned-feed-ids";
@@ -47,11 +50,11 @@ function readLegacyPinnedFeedIds() {
   }
 }
 
-function buildMigrationKey(userId: string) {
+export function buildMigrationKey(userId: string) {
   return `${PINNED_FEED_IDS_MIGRATION_KEY_PREFIX}:${userId}`;
 }
 
-function buildMigrationStartedKey(userId: string) {
+export function buildMigrationStartedKey(userId: string) {
   return `${PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX}:${userId}`;
 }
 
@@ -101,7 +104,7 @@ function logPinnedMigration(event: "attempted" | "succeeded" | "failed" | "skipp
   console.info("[pinned-feed-migration]", { event, ...context });
 }
 
-function sortPinnedFeeds(feeds: FollowedFeed[]) {
+export function sortPinnedFeeds(feeds: FollowedFeed[]) {
   return feeds
     .filter((feed) => feed.isPinned)
     .sort((a, b) => {

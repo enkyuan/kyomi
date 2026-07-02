@@ -175,9 +175,7 @@ export function FilterControl({
                 }
               >
                 {shouldScrollPinnedFolders ? (
-                  <ScrollArea
-                    className="relative h-[min(--spacing(64),var(--available-height))] overflow-hidden rounded-[inherit] **:data-[slot=scroll-area-scrollbar]:!end-px **:data-[slot=scroll-area-scrollbar]:!m-0 **:data-[slot=scroll-area-scrollbar]:!my-1"
-                  >
+                  <ScrollArea className="relative h-[min(--spacing(64),var(--available-height))] overflow-hidden rounded-[inherit] **:data-[slot=scroll-area-scrollbar]:!end-px **:data-[slot=scroll-area-scrollbar]:!m-0 **:data-[slot=scroll-area-scrollbar]:!my-1">
                     <div className="min-w-0 p-1">{menuItems}</div>
                   </ScrollArea>
                 ) : (

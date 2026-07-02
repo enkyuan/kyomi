@@ -6,10 +6,7 @@ const root = join(import.meta.dir, "../../../..");
 
 describe("folder pinning migration", () => {
   test("adds folder pin state and an index for pinned folders", () => {
-    const sql = readFileSync(
-      join(root, "packages/db/drizzle/0027_folder_pinning.sql"),
-      "utf8",
-    );
+    const sql = readFileSync(join(root, "packages/db/drizzle/0027_folder_pinning.sql"), "utf8");
 
     expect(sql).toContain('ALTER TABLE "folders" ADD COLUMN "is_pinned"');
     expect(sql).toContain('ALTER TABLE "folders" ADD COLUMN "pinned_at"');

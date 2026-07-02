@@ -1,19 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { articleClips, feedItemUserState, feedItems, feeds } from "@kyomi/db";
-import {
-  and,
-  asc,
-  desc,
-  eq,
-  gt,
-  gte,
-  ilike,
-  isNotNull,
-  lt,
-  or,
-  sql,
-  type SQL,
-} from "drizzle-orm";
+import { and, asc, desc, eq, gt, gte, ilike, isNotNull, lt, or, sql, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { listClipsForUser } from "../write/clips";
@@ -209,10 +196,7 @@ function pushRecentClipCursorFilter(
     filters.push(
       cursor.isRead
         ? and(eq(articleClips.isRead, true), olderThanCursor)!
-        : or(
-            eq(articleClips.isRead, true),
-            and(eq(articleClips.isRead, false), olderThanCursor),
-          )!,
+        : or(eq(articleClips.isRead, true), and(eq(articleClips.isRead, false), olderThanCursor))!,
     );
     return;
   }

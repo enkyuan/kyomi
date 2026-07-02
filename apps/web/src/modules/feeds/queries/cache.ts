@@ -31,14 +31,16 @@ function updateFollowedFeeds(
   );
 }
 
-export function applyPinnedFeedState(queryClient: QueryClient, feedId: string, pinned: boolean) {
-  updateFollowedFeeds(queryClient, (feeds) =>
-    feeds.map((feed) =>
-      feed.feedId === feedId
-        ? { ...feed, isPinned: pinned, pinnedAt: pinned ? new Date().toISOString() : null }
-        : feed,
-    ),
+export function applyPinnedState(feeds: FollowedFeed[], feedId: string, pinned: boolean) {
+  return feeds.map((feed) =>
+    feed.feedId === feedId
+      ? { ...feed, isPinned: pinned, pinnedAt: pinned ? new Date().toISOString() : null }
+      : feed,
   );
+}
+
+export function applyPinnedFeedState(queryClient: QueryClient, feedId: string, pinned: boolean) {
+  updateFollowedFeeds(queryClient, (feeds) => applyPinnedState(feeds, feedId, pinned));
 }
 
 export function applyFeedFolder(

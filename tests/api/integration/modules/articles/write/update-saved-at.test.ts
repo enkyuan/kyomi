@@ -26,9 +26,7 @@ function createFakeDb(existingState?: { isSaved: boolean; savedAt: Date | null }
             where: () => ({
               limit: () =>
                 Promise.resolve(
-                  existingState
-                    ? [{ readOverride: null, hiddenAt: null, ...existingState }]
-                    : [],
+                  existingState ? [{ readOverride: null, hiddenAt: null, ...existingState }] : [],
                 ),
             }),
           }),
