@@ -2,6 +2,7 @@ import { describe, expect, test, vi } from "vitest";
 
 describe("preferences server functions", () => {
   test("uses POST server function wrapper for updates", async () => {
+    vi.resetModules();
     const createServerFnCalls: Array<{ method: string }> = [];
 
     vi.doMock("@tanstack/react-start", () => ({
