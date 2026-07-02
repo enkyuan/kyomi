@@ -30,10 +30,11 @@ vi.mock("@lib/schemas", () => ({
   userPreferencesSchema: {},
 }));
 
-describe("preferences server functions", () => {
-  test("uses POST server function wrapper for updates", async () => {
-    await import("@modules/preferences/api");
+// Imported after the mocks above so createServerFn records its config at module evaluation time.
+await import("@modules/preferences/api");
 
+describe("preferences server functions", () => {
+  test("uses POST server function wrapper for updates", () => {
     expect(createServerFnCalls[0]).toEqual({ method: "GET" });
     expect(createServerFnCalls[1]).toEqual({ method: "POST" });
   });
