@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { buildArticleReaderDto } from "@modules/articles/reader/reader-mode";
-import type { ArticleReaderContentDto } from "@modules/articles/reader/content.types";
+import { buildArticleReaderDto } from "@modules/articles/reader/content";
+import type { ArticleReaderContentDto } from "@modules/articles/reader/content";
 
 function readerHtml(overrides: Partial<ArticleReaderContentDto> = {}): ArticleReaderContentDto {
   return {

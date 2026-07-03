@@ -10,7 +10,7 @@ type AuthContextLike =
   | null
   | undefined;
 
-export type SessionLocationFields = {
+export type LocationFields = {
   locationCity: string | null;
   locationCountry: string | null;
   locationLabel: string | null;
@@ -103,7 +103,7 @@ function classifyIpAddress(ipAddress: string | null | undefined) {
   return null;
 }
 
-function buildLocationLabel(location: Omit<SessionLocationFields, "locationLabel">) {
+function buildLocationLabel(location: Omit<LocationFields, "locationLabel">) {
   if (location.locationCity && location.locationRegion) {
     return `${location.locationCity}, ${location.locationRegion}`;
   }
@@ -119,10 +119,10 @@ function buildLocationLabel(location: Omit<SessionLocationFields, "locationLabel
   return location.locationCity ?? location.locationRegion ?? location.locationCountry;
 }
 
-export function resolveSessionLocationFromHeaders(
+export function resolveLocationFromHeaders(
   headers: HeaderBag,
   ipAddress?: string | null,
-): SessionLocationFields {
+): LocationFields {
   const locationCity =
     readHeader(headers, "cf-ipcity") ??
     readHeader(headers, "x-vercel-ip-city") ??
@@ -147,16 +147,16 @@ export function resolveSessionLocationFromHeaders(
   };
 }
 
-export function resolveSessionLocationFromAuthContext(
+export function resolveLocationFromAuthContext(
   context: AuthContextLike,
   ipAddress?: string | null,
 ) {
-  return resolveSessionLocationFromHeaders(getRequestHeaders(context), ipAddress);
+  return resolveLocationFromHeaders(getRequestHeaders(context), ipAddress);
 }
 
-export function hydrateStoredSessionLocation<
-  T extends { ipAddress?: string | null } & Partial<SessionLocationFields>,
->(session: T): T & SessionLocationFields {
+export function hydrateStoredLocation<T extends { ipAddress?: string | null } & Partial<LocationFields>>(
+  session: T,
+): T & LocationFields {
   const locationCity = normalizeHeaderValue(session.locationCity ?? null);
   const locationRegion = normalizeHeaderValue(session.locationRegion ?? null);
   const locationCountry = normalizeHeaderValue(session.locationCountry ?? null);

@@ -1,8 +1,8 @@
 import { Readability } from "@mozilla/readability";
 import { parseHTML } from "linkedom";
-import { fetchArticleDocument } from "./fetch-document";
-import { htmlToText, sanitizeArticleHtml } from "./sanitize-content";
-import type { ArticleExtractionCandidate } from "./content-types";
+import { htmlToText, sanitizeArticleHtml } from "../content";
+import type { ArticleExtractionCandidate } from "../content";
+import { fetchArticleDocument } from "./fetch";
 
 function wordCount(input: string): number {
   return input.split(/\s+/).filter(Boolean).length;

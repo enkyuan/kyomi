@@ -5,9 +5,9 @@ import type {
   ArticleReaderStatus,
   ArticleStoredContentDto,
   ExtractedContentStatus,
-} from "./content-types";
-import { normalizeMarkdownFeedArtifacts } from "./markdown-artifacts";
-import { htmlToText, sanitizeArticleHtml } from "./sanitize-content";
+} from "./types";
+import { normalizeMarkdownFeedArtifacts } from "./markdown";
+import { htmlToText, sanitizeArticleHtml } from "./sanitize";
 
 type ReaderArticleInput = {
   articleType: "feed" | "clip";

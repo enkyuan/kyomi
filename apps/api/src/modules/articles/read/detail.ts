@@ -5,13 +5,13 @@ import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { getClipDetailForUser } from "../write/clips";
 import {
+  buildArticleReaderDto,
   buildExtractedReaderViewFromDb,
   buildStoredReaderContent,
-} from "../reader/normalize-content";
-import { buildArticleReaderDto } from "../reader/reader-mode";
+} from "../reader/content";
 import { articleIsReadSql } from "./sql";
 import type { ArticleDetailDto } from "../types";
-import type { ExtractedContentStatus } from "../reader/content-types";
+import type { ExtractedContentStatus } from "../reader/content";
 
 type DB = typeof db;
 

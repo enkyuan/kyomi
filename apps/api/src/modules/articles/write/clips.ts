@@ -4,13 +4,13 @@ import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
 import { and, asc, desc, eq, gt, gte, ilike, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { extractFullTextFromUrl } from "../reader/enrichment";
-import type { ExtractedContentStatus } from "../reader/content-types";
 import {
+  buildArticleReaderDto,
   buildExtractedReaderViewFromDb,
   buildStoredContentRecord,
   buildStoredReaderContent,
-} from "../reader/normalize-content";
-import { buildArticleReaderDto } from "../reader/reader-mode";
+  type ExtractedContentStatus,
+} from "../reader/content";
 import type { ArticleSort } from "../query";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./clips-constants";
 import type { ArticleDetailDto, ArticleListItemDto, ArticlesCursorListResponseDto } from "../types";

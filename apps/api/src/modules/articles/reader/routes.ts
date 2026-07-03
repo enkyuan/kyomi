@@ -2,7 +2,7 @@ import type { Elysia } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { getArticleDetailForUser } from "../read/detail";
 import { resolveEnhancementContent, summarizeContent, translateContent } from "./enrichment";
-import { extractFullTextForUser } from "./full-text";
+import { extractFullTextForUser } from "./extraction";
 import {
   articleIdParamsSchema,
   extractFullTextResponseSchema,

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { normalizeMarkdownFeedArtifacts } from "@modules/articles/reader/markdown-artifacts";
+import { normalizeMarkdownFeedArtifacts } from "@modules/articles/reader/content";
 
 describe("normalizeMarkdownFeedArtifacts", () => {
   test("strips trailing ATX hash marks from headings", () => {
