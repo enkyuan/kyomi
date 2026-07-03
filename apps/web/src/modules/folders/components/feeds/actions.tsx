@@ -4,7 +4,6 @@ import { AddFill, Delete2Fill, FileExportFill, ListCheckFill, MoveFill } from "@
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/button";
 import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
 import { cn } from "@kyomi/ui/lib/utils";
 import { RailTooltip } from "@modules/inbox/components/recap/sections";
 import {
@@ -14,6 +13,7 @@ import {
 
 type FolderOption = { label: string; value: string };
 const FOLDER_MOVE_SCROLL_THRESHOLD = 6;
+const FOLDER_MOVE_MAX_HEIGHT_CLASS = "!max-h-[min(--spacing(64),var(--available-height))]";
 
 export function FolderFeedActions({
   currentFolderId,
@@ -83,17 +83,13 @@ export function FolderFeedActions({
               "w-44 rounded-[20px] before:rounded-[19px]",
               shouldScrollFolders && "overflow-hidden",
             )}
-            contentClassName={shouldScrollFolders ? "!max-h-none !overflow-hidden !p-0" : undefined}
+            contentClassName={
+              shouldScrollFolders ? cn(FOLDER_MOVE_MAX_HEIGHT_CLASS, "overflow-y-auto") : undefined
+            }
             side="top"
             sideOffset={6}
           >
-            {shouldScrollFolders ? (
-              <ScrollArea className="relative h-[min(--spacing(64),var(--available-height))] overflow-hidden rounded-[inherit] **:data-[slot=scroll-area-scrollbar]:!end-px **:data-[slot=scroll-area-scrollbar]:!m-0 **:data-[slot=scroll-area-scrollbar]:!my-1">
-                <div className="min-w-0 p-1">{folderMenuItems}</div>
-              </ScrollArea>
-            ) : (
-              folderMenuItems
-            )}
+            {folderMenuItems}
           </MenuPopup>
         </Menu>
         <Button
