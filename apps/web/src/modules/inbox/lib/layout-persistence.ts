@@ -1,7 +1,6 @@
-import type { ArticleOpenBehaviorDto } from "@lib/schemas";
+import type { ArticleOpenBehaviorDto } from "@lib/schemas/index";
 
 export const INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME = "cronos_inbox_article_open_behavior";
-export const INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME = "cronos_inbox_split_pane_percent";
 const INBOX_LAYOUT_COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
 
 function parseCookieHeader(cookieHeader?: string | null) {
@@ -40,32 +39,11 @@ export function readInboxArticleOpenBehaviorCookie(
   return undefined;
 }
 
-export function readInboxSplitPanePercentCookie(cookieHeader?: string | null): number | undefined {
-  const value = parseCookieHeader(cookieHeader).get(INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME);
-  if (!value) {
-    return undefined;
-  }
-  const parsed = Number.parseFloat(value);
-  if (!Number.isFinite(parsed)) {
-    return undefined;
-  }
-  return parsed;
-}
-
 export function writeInboxArticleOpenBehaviorCookie(value: ArticleOpenBehaviorDto) {
   if (typeof document === "undefined") {
     return;
   }
   document.cookie =
     `${INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME}=${encodeURIComponent(value)}; ` +
-    `path=/; max-age=${INBOX_LAYOUT_COOKIE_MAX_AGE}`;
-}
-
-export function writeInboxSplitPanePercentCookie(value: number) {
-  if (typeof document === "undefined" || !Number.isFinite(value)) {
-    return;
-  }
-  document.cookie =
-    `${INBOX_SPLIT_PANE_PERCENT_COOKIE_NAME}=${encodeURIComponent(value.toFixed(3))}; ` +
     `path=/; max-age=${INBOX_LAYOUT_COOKIE_MAX_AGE}`;
 }

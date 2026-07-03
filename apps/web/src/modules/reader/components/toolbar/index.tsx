@@ -24,12 +24,12 @@ import {
   ToolbarSeparator,
 } from "@kyomi/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
-import { useMediaQuery } from "@hooks/use-media-query";
+import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
 import type { ToolbarProps } from "@modules/reader/hooks/use-toolbar";
-import type { ReaderContentWidth } from "@modules/reader/hooks/use-reader-preferences";
+import type { ReaderContentWidth } from "@modules/reader/hooks/preferences";
 import { SAVED_ACTION_ACTIVE_CLASS } from "@lib/theme/action-colors";
-import { cn } from "@lib/utils";
-import { FontSizeTicker } from "./font-size-ticker";
+import { cn } from "@kyomi/ui/lib/utils";
+import { FontSizeTicker } from "./font-ticker";
 
 const CONTENT_WIDTH_LABELS: Record<ReaderContentWidth, string> = {
   narrow: "Narrow",

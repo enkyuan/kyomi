@@ -50,43 +50,6 @@ export const followedFeedsListSchema = z.object({
   items: z.array(followedFeedSchema),
 });
 
-export const feedRefreshStatusRowSchema = z.object({
-  feedId: z.string(),
-  refreshStatus: z.string(),
-});
-
-export const feedRefreshStatusListSchema = z.object({
-  items: z.array(feedRefreshStatusRowSchema),
-});
-
-export const feedDetailSchema = z.object({
-  id: z.string(),
-  url: z.string(),
-  title: z.string(),
-  customTitle: z.string().nullable(),
-  description: z.string().nullable(),
-  link: z.string().nullable(),
-  faviconUrl: z.string().nullable(),
-  faviconSource: z.string().nullable(),
-  faviconFetchedAt: z.string().nullable(),
-  createdAt: z.string(),
-  updatedAt: z.string(),
-  isSubscribed: z.boolean(),
-  subscriptionId: z.string().nullable(),
-  subscribedAt: z.string().nullable(),
-  isPinned: z.boolean(),
-  pinnedAt: z.string().nullable(),
-  refreshStatus: feedRefreshStatusSchema,
-  lastRefreshStartedAt: z.string().nullable(),
-  lastRefreshCompletedAt: z.string().nullable(),
-  lastRefreshFailedAt: z.string().nullable(),
-  lastRefreshError: z.string().nullable(),
-  etag: z.string().nullable(),
-  lastModified: z.string().nullable(),
-  nextRefreshAt: z.string().nullable(),
-});
-
 export type DiscoverFeedResultDto = z.infer<typeof discoverFeedResultSchema>;
 export type FollowFeedResultDto = z.infer<typeof followFeedResultSchema>;
 export type FollowedFeedDto = z.infer<typeof followedFeedSchema>;
-export type FeedDetailDto = z.infer<typeof feedDetailSchema>;

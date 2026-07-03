@@ -1,6 +1,6 @@
 "use client";
 
-import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@lib/schemas";
+import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@lib/schemas/index";
 import { useHydrated } from "@hooks/use-hydrated";
 import {
   formatInboxTimestamp,

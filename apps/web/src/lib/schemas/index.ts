@@ -15,18 +15,10 @@ export type {
 export { authSessionListRowSchema, authSessionListSchema } from "./auth";
 export {
   discoverFeedResultSchema,
-  feedDetailSchema,
-  feedRefreshStatusListSchema,
-  feedRefreshStatusRowSchema,
   followedFeedsListSchema,
   followFeedResultSchema,
 } from "./feed";
-export type {
-  DiscoverFeedResultDto,
-  FeedDetailDto,
-  FollowedFeedDto,
-  FollowFeedResultDto,
-} from "./feed";
+export type { DiscoverFeedResultDto, FollowedFeedDto, FollowFeedResultDto } from "./feed";
 export { messageResponseSchema } from "./message";
 export { opmlImportAcceptedSchema, opmlImportStatusSchema } from "./opml";
 export type { OpmlImportAcceptedDto, OpmlImportStatusDto } from "./opml";

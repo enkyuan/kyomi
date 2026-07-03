@@ -13,6 +13,16 @@ import { getTimezoneOffsetMinutes, QUERY_TIMES } from "@lib/query/policies";
 const DEFAULT_INBOX_FILTER: InboxFilter = "my-feed";
 const DEFAULT_INBOX_SORT: InboxSort = "newest";
 const INBOX_LIST_QUERY_VERSION = 4;
+export const ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS = 2_500;
+
+export function hasActiveFeedRefresh(
+  feeds: readonly { refreshStatus?: string | null }[] | null | undefined,
+) {
+  return (
+    feeds?.some((feed) => feed.refreshStatus === "queued" || feed.refreshStatus === "running") ??
+    false
+  );
+}
 
 export type InboxListPage = {
   items: InboxItem[];
@@ -59,10 +69,6 @@ export function followedFeedsQueryKey() {
 
 function followedFeedsUnreadCountsQueryKey() {
   return ["feeds", "followed", "unread-counts"] as const;
-}
-
-export function feedRefreshStatusQueryKey(folderId?: string | null) {
-  return ["feeds", "refresh-status", folderId ?? "__all__"] as const;
 }
 
 function inboxItemsQueryKey({
@@ -195,8 +201,6 @@ export function invalidateFeedAndInboxQueries(queryClient: QueryClient) {
   void queryClient.invalidateQueries({ queryKey: ["feeds"] });
   void queryClient.invalidateQueries({ queryKey: followedFeedsQueryKey() });
   void queryClient.invalidateQueries({ queryKey: followedFeedsUnreadCountsQueryKey() });
-  void queryClient.invalidateQueries({ queryKey: ["feed-detail"] });
-  void queryClient.invalidateQueries({ queryKey: ["feeds", "refresh-status"] });
   void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
   void queryClient.invalidateQueries({ queryKey: inboxRecapQueryKey() });
   void queryClient.invalidateQueries({ queryKey: ["inbox", "view-count"] });

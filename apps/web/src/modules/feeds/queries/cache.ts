@@ -1,8 +1,8 @@
 "use client";
 
 import type { QueryClient, QueryKey } from "@tanstack/react-query";
-import type { DiscoverFeedResult, FeedDetail, FeedRefreshStatusRow, FollowedFeed } from "../api";
-import { followedFeedsQueryKey, feedRefreshStatusQueryKey } from "@modules/inbox/queries/options";
+import type { DiscoverFeedResult, FollowedFeed } from "../api";
+import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
 
 export type FeedCacheSnapshot = {
   followedFeeds?: FollowedFeed[];
@@ -98,36 +98,4 @@ export function restoreDiscoverFeedsSnapshot(
   for (const [queryKey, data] of snapshot ?? []) {
     queryClient.setQueryData(queryKey, data);
   }
-}
-
-export function applyFeedRefreshQueued(queryClient: QueryClient, feedId: string) {
-  const startedAt = new Date().toISOString();
-
-  queryClient.setQueryData<FeedDetail | undefined>(["feed-detail", feedId], (current) =>
-    current
-      ? {
-          ...current,
-          refreshStatus: "queued",
-          lastRefreshStartedAt: startedAt,
-          lastRefreshError: null,
-        }
-      : current,
-  );
-
-  updateFollowedFeeds(queryClient, (feeds) =>
-    feeds.map((feed) => (feed.feedId === feedId ? { ...feed, refreshStatus: "queued" } : feed)),
-  );
-}
-
-export function applyBatchRefreshQueued(queryClient: QueryClient, folderId?: string) {
-  queryClient.setQueryData<FeedRefreshStatusRow[] | undefined>(
-    feedRefreshStatusQueryKey(folderId),
-    (current) => current?.map((row) => ({ ...row, refreshStatus: "queued" })),
-  );
-
-  updateFollowedFeeds(queryClient, (feeds) =>
-    feeds.map((feed) =>
-      !folderId || feed.folderId === folderId ? { ...feed, refreshStatus: "queued" } : feed,
-    ),
-  );
 }

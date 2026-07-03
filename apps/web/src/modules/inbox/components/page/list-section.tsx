@@ -3,12 +3,12 @@
 import { useCallback, useMemo } from "react";
 import type { useRouter } from "@tanstack/react-router";
 import { List } from "@modules/inbox/components/list";
-import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
+import type { InboxPreferences } from "@modules/inbox/hooks/data";
 import type { useInboxRouteState } from "@modules/inbox/hooks/use-layout";
 import { getPreviousInboxFeedId } from "@modules/inbox/lib/feed-history";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
 import type { Folder } from "@modules/folders/api";
-import type { ArticleDetailDto } from "@lib/schemas";
+import type { ArticleDetailDto } from "@lib/schemas/index";
 
 function isGlobalInboxFilter(filter: InboxFilter) {
   return filter === "my-feed" || filter === "all" || filter === "saved" || filter === "recent";
@@ -30,7 +30,6 @@ export function ListSection({
   isInboxFetching,
   isInboxFetchingNextPage,
   isInboxPending,
-  isResizing,
   fetchNextInboxPage,
   selectItem,
   navigate,
@@ -53,7 +52,6 @@ export function ListSection({
   isInboxFetching: boolean;
   isInboxFetchingNextPage: boolean;
   isInboxPending: boolean;
-  isResizing: boolean;
   fetchNextInboxPage: () => void;
   selectItem: (item: InboxItem) => void;
   navigate: ReturnType<typeof useInboxRouteState>["navigate"];
@@ -133,7 +131,6 @@ export function ListSection({
       filter: effectiveFilter,
       display: {
         showFavicons: preferences.inboxShowFavicons,
-        disableVirtualization: isResizing,
       },
       density: preferences.inboxDensity,
       fontSizePx: preferences.inboxFontSizePx,
@@ -179,7 +176,6 @@ export function ListSection({
       isInboxFetching,
       hasNextInboxPage,
       isInboxPending,
-      isResizing,
       preferences.inboxDensity,
       preferences.inboxFontSizePx,
       preferences.inboxShowFavicons,

@@ -2,15 +2,42 @@
 
 import { AddFill, FileExportFill, FileImportFill, Folder2Fill, RightFill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
+import { getSvgPath } from "figma-squircle";
+import type { CSSProperties } from "react";
 import type { RecapFolder } from "./types";
 import { formatFeedCount } from "./utils";
 import { RailTooltip, RecapSection, SectionEmpty } from "./sections";
-import { FolderIconBadge } from "./folder-icon-badge";
 
 export const FOLDER_ACTION_BUTTON_CLASS =
   "h-10 flex-1 gap-1.5 rounded-full px-4 font-semibold text-sm leading-none before:rounded-full transition-transform active:scale-[0.96] sm:h-10 sm:text-sm";
 export const FOLDER_ICON_BUTTON_CLASS =
   "size-10 rounded-full px-0 before:rounded-full transition-transform active:scale-[0.96] sm:size-10";
+
+const folderIconSquirclePath = getSvgPath({
+  width: 36,
+  height: 36,
+  cornerRadius: 8,
+  cornerSmoothing: 1,
+});
+
+const folderIconSquircleStyle = {
+  borderRadius: 8,
+  clipPath: `path('${folderIconSquirclePath}')`,
+  WebkitClipPath: `path('${folderIconSquirclePath}')`,
+} satisfies CSSProperties;
+
+function FolderIconBadge() {
+  return (
+    <span
+      aria-hidden="true"
+      className="flex size-9 shrink-0 items-center justify-center bg-muted text-muted-foreground"
+      data-squircle="8"
+      style={folderIconSquircleStyle}
+    >
+      <Folder2Fill className="size-4" />
+    </span>
+  );
+}
 
 export function FolderActions({
   exportingOpml = false,

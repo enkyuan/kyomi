@@ -3,28 +3,24 @@ import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders, resolveApiUrl } from "@lib/api";
 import type {
   DiscoverFeedResultDto,
-  FeedDetailDto,
   FollowFeedResultDto,
   FollowedFeedDto,
   OpmlImportAcceptedDto,
   OpmlImportStatusDto,
-} from "@lib/schemas";
+} from "@lib/schemas/index";
 
 export type DiscoverFeedResult = DiscoverFeedResultDto;
 export type FollowFeedResult = FollowFeedResultDto;
 export type FollowedFeed = FollowedFeedDto;
-export type FeedDetail = FeedDetailDto;
 export type OpmlImportAccepted = OpmlImportAcceptedDto;
 export type OpmlImportStatus = OpmlImportStatusDto;
 
 let feedsSchemaModulePromise:
   | Promise<
       Pick<
-        typeof import("@lib/schemas"),
+        typeof import("@lib/schemas/index"),
         | "apiJsonValidated"
         | "discoverFeedResultSchema"
-        | "feedDetailSchema"
-        | "feedRefreshStatusListSchema"
         | "followFeedResultSchema"
         | "followedFeedsListSchema"
         | "messageResponseSchema"
@@ -35,11 +31,9 @@ let feedsSchemaModulePromise:
   | undefined;
 
 function getFeedsSchemaModule() {
-  feedsSchemaModulePromise ??= import("@lib/schemas").then((module) => ({
+  feedsSchemaModulePromise ??= import("@lib/schemas/index").then((module) => ({
     apiJsonValidated: module.apiJsonValidated,
     discoverFeedResultSchema: module.discoverFeedResultSchema,
-    feedDetailSchema: module.feedDetailSchema,
-    feedRefreshStatusListSchema: module.feedRefreshStatusListSchema,
     followFeedResultSchema: module.followFeedResultSchema,
     followedFeedsListSchema: module.followedFeedsListSchema,
     messageResponseSchema: module.messageResponseSchema,
@@ -51,11 +45,6 @@ function getFeedsSchemaModule() {
 
 type FollowedFeedsResponse = {
   items: FollowedFeedDto[];
-};
-
-export type FeedRefreshStatusRow = {
-  feedId: string;
-  refreshStatus: string;
 };
 
 type FollowFeedInput = {
@@ -115,18 +104,6 @@ function normalizeUrlCandidate(value: string) {
   } catch {
     return null;
   }
-}
-
-function buildRefreshStatusUrl(folderId?: string) {
-  const normalizedFolderId = folderId?.trim();
-  if (!normalizedFolderId) {
-    return "/api/v1/feeds/refresh-status";
-  }
-
-  const params = new URLSearchParams({
-    folder_id: normalizedFolderId,
-  });
-  return `/api/v1/feeds/refresh-status?${params.toString()}`;
 }
 
 export const searchFeeds = createServerFn({ method: "GET" })
@@ -235,17 +212,6 @@ export const listFollowedFeeds = createServerFn({ method: "GET" }).handler(
   },
 );
 
-export const listFeedRefreshStatuses = createServerFn({ method: "GET" })
-  .inputValidator((input: { folderId?: string } | void) => input ?? {})
-  .handler(async ({ data }): Promise<FeedRefreshStatusRow[]> => {
-    const { apiJsonValidated, feedRefreshStatusListSchema } = await getFeedsSchemaModule();
-    const headers = buildForwardHeaders(getRequestHeaders());
-    const response = await apiJsonValidated(feedRefreshStatusListSchema, () =>
-      apiJson<{ items: FeedRefreshStatusRow[] }>(buildRefreshStatusUrl(data.folderId), { headers }),
-    );
-    return response.items ?? [];
-  });
-
 export const importOpmlFromUrl = createServerFn({ method: "POST" })
   .inputValidator((input: { url: string; filename?: string | null }) => input)
   .handler(async ({ data }): Promise<OpmlImportAccepted> => {
@@ -330,49 +296,6 @@ export const moveFeedsToFolder = createServerFn({ method: "POST" })
       headers,
       body: JSON.stringify(data),
     });
-  });
-
-export const refreshFeed = createServerFn({ method: "POST" })
-  .inputValidator((input: { feedId: string }) => input)
-  .handler(async ({ data }): Promise<{ accepted: boolean; jobId: string; type: string }> => {
-    const headers = buildForwardHeaders(getRequestHeaders());
-    return apiJson<{ accepted: boolean; jobId: string; type: string }>(
-      `/api/v1/feeds/${encodeURIComponent(data.feedId)}/refresh`,
-      {
-        method: "POST",
-        headers,
-      },
-    );
-  });
-
-export const refreshBatchFeeds = createServerFn({ method: "POST" })
-  .inputValidator((input: { folderId?: string } | void) => input || {})
-  .handler(
-    async ({ data }): Promise<{ accepted: boolean; count: number; failedCount?: number }> => {
-      const headers = buildForwardHeaders(getRequestHeaders());
-      headers.set("content-type", "application/json");
-      return apiJson<{ accepted: boolean; count: number; failedCount?: number }>(
-        `/api/v1/feeds/refresh`,
-        {
-          method: "POST",
-          headers,
-          body: JSON.stringify(data),
-        },
-      );
-    },
-  );
-
-export const getFeedDetail = createServerFn({ method: "GET" })
-  .inputValidator((input: { feedId: string }) => input)
-  .handler(async ({ data }): Promise<FeedDetail> => {
-    const { apiJsonValidated, feedDetailSchema } = await getFeedsSchemaModule();
-    const headers = buildForwardHeaders(getRequestHeaders());
-    return apiJsonValidated(feedDetailSchema, () =>
-      apiJson<FeedDetail>(`/api/v1/feeds/${encodeURIComponent(data.feedId)}`, {
-        method: "GET",
-        headers,
-      }),
-    );
   });
 
 export const updateFeedSubscription = createServerFn({ method: "POST" })

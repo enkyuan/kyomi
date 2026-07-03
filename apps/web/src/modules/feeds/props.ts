@@ -1,4 +1,4 @@
-import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
+import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
 
 export type Props = {

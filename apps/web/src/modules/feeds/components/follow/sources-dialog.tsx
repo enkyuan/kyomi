@@ -4,7 +4,7 @@ import { startTransition, useCallback, useEffect, useRef, useState } from "react
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import * as RadixDialog from "@radix-ui/react-dialog";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
-import { toastManager } from "@kyomi/ui/toast";
+import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";
 import {
   followFeed,
@@ -33,9 +33,30 @@ import {
 const DISCOVER_QUERY_DEBOUNCE_MS = 260;
 
 type FollowFeedMutationInput = {
+  anchor?: HTMLElement | null;
   feedId?: string | null;
   url: string;
 };
+
+function showFollowedToast(anchor?: HTMLElement | null) {
+  if (!anchor?.isConnected) {
+    return;
+  }
+
+  anchoredToastManager.add({
+    title: "Following!",
+    type: "success",
+    timeout: 1600,
+    data: { tooltipStyle: true },
+    positionerProps: {
+      anchor,
+      side: "top",
+      align: "center",
+      sideOffset: 6,
+      positionMethod: "fixed",
+    },
+  });
+}
 
 function formatOpmlImportProgress(status: OpmlImportStatus) {
   const total = status.summary.totalUrls;
@@ -153,7 +174,8 @@ export function SourcesDialog({
   );
 
   const followFeedMutation = useMutation({
-    mutationFn: (input: FollowFeedMutationInput) => followFeed({ data: input }),
+    mutationFn: ({ feedId, url }: FollowFeedMutationInput) =>
+      followFeed({ data: { feedId, url } }),
     onMutate: async ({ feedId, url }) => {
       const followKey = feedId ?? url;
       pendingFollowKeysRef.current?.add(followKey);
@@ -161,16 +183,12 @@ export function SourcesDialog({
       markDiscoverFeedSubscribed(queryClient, { url, feedId: feedId ?? undefined });
       return { feedId: feedId ?? undefined, followKey, url };
     },
-    onSuccess: async (result) => {
+    onSuccess: async (result, variables) => {
+      showFollowedToast(variables.anchor);
       markDiscoverFeedSubscribed(queryClient, { url: result.url, feedId: result.feedId });
       invalidateFeedAndInboxQueries(queryClient);
       await queryClient.invalidateQueries({
         queryKey: ["folders"],
-      });
-      toastManager.add({
-        title: result.newSubscription ? "Feed followed" : "Already following",
-        description: result.title || result.url,
-        type: "success",
       });
     },
     onError: (error, _variables, context) => {
@@ -199,12 +217,12 @@ export function SourcesDialog({
   );
 
   const handleFollowFeed = useCallback(
-    (item: DiscoverFeedResult) => {
+    (item: DiscoverFeedResult, anchor?: HTMLElement | null) => {
       if (item.isSubscribed || isPendingFollow(item)) {
         return;
       }
 
-      submitFollowFeed({ feedId: item.id, url: item.url });
+      submitFollowFeed({ anchor, feedId: item.id, url: item.url });
     },
     [isPendingFollow, submitFollowFeed],
   );

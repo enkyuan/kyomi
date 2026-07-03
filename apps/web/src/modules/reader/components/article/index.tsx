@@ -12,8 +12,8 @@ import {
 import { ReaderContent } from "@kyomi/reader/web";
 import { Button } from "@kyomi/ui/button";
 import { Spinner } from "@kyomi/ui/spinner";
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
-import { cn } from "@lib/utils";
+import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
+import { cn } from "@kyomi/ui/lib/utils";
 import { useTimestamp } from "@hooks/use-timestamp";
 import { useLayoutEffect, useRef, useState } from "react";
 import type { RefObject } from "react";

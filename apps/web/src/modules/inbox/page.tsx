@@ -2,7 +2,7 @@
 
 import { AppShell } from "@/app/app-shell";
 import { MobileLayout } from "./layouts/mobile";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { InboxRecapCard } from "./components/recap";
 import {
@@ -13,8 +13,9 @@ import {
   useInboxPreferences,
   useInboxQueries,
   useRecordInboxItemView,
-} from "@modules/inbox/hooks/use-inbox-data";
+} from "@modules/inbox/hooks/data";
 import {
+  type InboxRouteSearch,
   useInboxRouteState,
   useMarkReadBehavior,
   useResponsiveReaderMode,
@@ -26,7 +27,11 @@ import { QUERY_TIMES } from "@lib/query/policies";
 import { writeShellStateSnapshot } from "@lib/shell/state";
 import { listFollowedFeeds } from "@modules/feeds/api";
 import { listFolders } from "@modules/folders/api";
-import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
+import {
+  ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS,
+  followedFeedsQueryKey,
+  hasActiveFeedRefresh,
+} from "@modules/inbox/queries/options";
 import { buildInboxItemSlug } from "@modules/inbox/lib/article-slug";
 import { ArticleShell } from "./components/page/article-shell";
 import { ContentTransition } from "./components/page/content-transition";
@@ -37,13 +42,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 type ArticleStepDirection = 1 | -1;
 
-export function Page({
-  initialInboxPreferences,
-  initialSplitPanePercent: _initialSplitPanePercent,
-}: {
-  initialInboxPreferences?: InboxPreferences;
-  initialSplitPanePercent?: number;
-}) {
+export function Page({ initialInboxPreferences }: { initialInboxPreferences?: InboxPreferences }) {
   return (
     <InboxPreferencesBootstrapProvider initialPreferences={initialInboxPreferences}>
       <InboxPageContent initialInboxPreferences={initialInboxPreferences} />
@@ -58,7 +57,9 @@ function InboxPageContent({
 }) {
   const { preferences } = useInboxPreferences(initialInboxPreferences);
   const router = useRouter();
+  const queryClient = useQueryClient();
   const layoutContainerRef = useRef<HTMLDivElement | null>(null);
+  const wasRefreshingFollowedFeedRef = useRef(false);
   const { containerWidth: layoutContainerWidth } = useViewport(layoutContainerRef);
   const layoutVariant = useResponsiveReaderMode(layoutContainerWidth);
   const [mobileTransitionDirection, setMobileTransitionDirection] = useState<1 | -1>(1);
@@ -112,6 +113,31 @@ function InboxPageContent({
     staleTime: QUERY_TIMES.staticMetadataStale,
     gcTime: QUERY_TIMES.staticMetadataGc,
   });
+  const hasRefreshingFollowedFeed = hasActiveFeedRefresh(followedFeedsData);
+  useEffect(() => {
+    const refreshInboxConsumers = () => {
+      void queryClient.invalidateQueries({ queryKey: followedFeedsQueryKey() });
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
+      void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
+    };
+
+    if (!hasRefreshingFollowedFeed) {
+      if (wasRefreshingFollowedFeedRef.current) {
+        wasRefreshingFollowedFeedRef.current = false;
+        refreshInboxConsumers();
+      }
+      return;
+    }
+
+    wasRefreshingFollowedFeedRef.current = true;
+    refreshInboxConsumers();
+    const pollTimer = window.setInterval(
+      refreshInboxConsumers,
+      ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS,
+    );
+
+    return () => window.clearInterval(pollTimer);
+  }, [hasRefreshingFollowedFeed, queryClient]);
   const hasNoFollowedFeeds = isFollowedFeedsSuccess && (followedFeedsData?.length ?? 0) === 0;
   const pinnedFolders = useMemo(
     () =>
@@ -188,7 +214,7 @@ function InboxPageContent({
     setMobileTransitionDirection(-1);
     void router.navigate({
       to: "/inbox",
-      search: (prev) => ({
+      search: (prev: InboxRouteSearch) => ({
         ...prev,
         itemId: undefined,
       }),
@@ -204,7 +230,7 @@ function InboxPageContent({
         params: {
           article: buildInboxItemSlug(item),
         },
-        search: (prev) => ({
+        search: (prev: InboxRouteSearch) => ({
           ...prev,
           itemId: undefined,
         }),
@@ -255,7 +281,6 @@ function InboxPageContent({
       isInboxFetching={isInboxFetching}
       isInboxFetchingNextPage={isInboxFetchingNextPage}
       isInboxPending={isInboxPending}
-      isResizing={false}
       fetchNextInboxPage={fetchNextInboxPage}
       selectItem={selectItem}
       navigate={navigate}

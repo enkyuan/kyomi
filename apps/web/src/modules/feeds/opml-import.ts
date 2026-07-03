@@ -1,4 +1,4 @@
-import type { OpmlImportStatusDto } from "@lib/schemas";
+import type { OpmlImportStatusDto } from "@lib/schemas/index";
 import { getOpmlImportStatus } from "./api";
 
 const DEFAULT_OPML_IMPORT_POLL_INTERVAL_MS = 1_000;

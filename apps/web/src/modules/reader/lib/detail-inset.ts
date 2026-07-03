@@ -1,5 +1,5 @@
-import type { ReaderContentWidth } from "../hooks/use-reader-preferences";
-import { cn } from "@lib/utils";
+import type { ReaderContentWidth } from "../hooks/preferences";
+import { cn } from "@kyomi/ui/lib/utils";
 
 /** Horizontal gutter on `[data-reader-detail-content]` inside the scroll viewport. */
 function readerViewportHorizontalInsetClass(contentWidth: ReaderContentWidth): string {

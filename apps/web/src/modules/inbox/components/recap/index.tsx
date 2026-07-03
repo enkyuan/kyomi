@@ -1,8 +1,10 @@
 "use client";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { AddFill, Folder2Fill } from "@mingcute/react";
 import { Suspense, type ReactNode, useReducer } from "react";
-import { toastManager } from "@kyomi/ui/toast";
+import { Button } from "@kyomi/ui/button";
+import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { lazyNamed } from "@lib/lazy-named";
 import { usePlatform } from "@hooks/use-platform";
@@ -11,10 +13,10 @@ import { Dialog as CreateFolderDialog } from "@modules/folders/components/create
 import { inboxRecapQueryKey, inboxRecapQueryOptions } from "@modules/inbox/queries/options";
 import { updateInboxItemState } from "@modules/inbox/services/api";
 import type { InboxRecapDto } from "@modules/inbox/services/recap-schema";
-import { RecapExpandedView, type RecapExpandedSection } from "./expanded-view";
+import { RecapExpandedView, type RecapExpandedSection } from "./expanded";
 import { Folders } from "./folders";
 import { RecapScreenTransition, type RecapScreenDirection } from "./screen-transition";
-import { RecapError, RecapSkeleton } from "./sections";
+import { RecapError, RecapSkeleton, SectionEmpty } from "./sections";
 import { TopSources } from "./sections/top-sources";
 import type { RecapTopViewedFeed } from "./types";
 import { invalidateRecapSurface } from "./utils";
@@ -57,6 +59,16 @@ type RecapCardAction =
     }
   | { type: "set-exporting-opml"; exporting: boolean }
   | { type: "set-sources-open"; open: boolean };
+
+type FollowTopSourceInput = {
+  feed: RecapTopViewedFeed;
+  folderId?: string;
+};
+type RemoveFeedsInput = {
+  anchor?: HTMLElement | null;
+  feedIds: string[];
+  feedName?: string;
+};
 
 const initialRecapCardState: RecapCardState = {
   createFolderOpen: false,
@@ -110,6 +122,8 @@ export function InboxRecapCard() {
   const folders = recap?.folders ?? [];
   const topViewedFeeds = recap?.topViewedFeeds ?? [];
   const oldestSavedItems = recap?.oldestSavedItems ?? [];
+  const isSummaryEmpty =
+    folders.length === 0 && topViewedFeeds.length === 0 && oldestSavedItems.length === 0;
 
   const unsaveMutation = useMutation({
     mutationFn: ({ itemId }: { itemId: string }) =>
@@ -147,8 +161,15 @@ export function InboxRecapCard() {
   });
 
   const followMutation = useMutation({
-    mutationFn: (feed: RecapTopViewedFeed) =>
-      followFeed({ data: { feedId: feed.feedId, url: feed.url } }),
+    mutationFn: async ({ feed, folderId }: FollowTopSourceInput) => {
+      const followed = await followFeed({ data: { feedId: feed.feedId, url: feed.url } });
+
+      if (folderId) {
+        await moveFeedsToFolder({ data: { feedIds: [followed.feedId], folderId } });
+      }
+
+      return followed;
+    },
     onSuccess: async (feed) => {
       await Promise.all([
         queryClient.invalidateQueries({ queryKey: inboxRecapQueryKey() }),
@@ -190,12 +211,36 @@ export function InboxRecapCard() {
   });
 
   const removeFeedsMutation = useMutation({
-    mutationFn: async ({ feedIds }: { feedIds: string[] }) => {
+    mutationFn: async ({ feedIds }: RemoveFeedsInput) => {
       await Promise.all(feedIds.map((feedId) => unfollowFeed({ data: { feedId } })));
       return { feedIds };
     },
-    onSuccess: async ({ feedIds }) => {
+    onSuccess: async ({ feedIds }, variables) => {
+      const toastAnchor = variables.anchor?.isConnected ? variables.anchor : null;
+      const feedName = variables.feedName;
+      const shouldShowAnchoredToast = feedIds.length === 1 && Boolean(feedName && toastAnchor);
+
+      if (shouldShowAnchoredToast && feedName && toastAnchor) {
+        anchoredToastManager.add({
+          title: `Unfollowed ${feedName}`,
+          type: "success",
+          timeout: 1800,
+          data: { tooltipStyle: true },
+          positionerProps: {
+            anchor: toastAnchor,
+            side: "top",
+            align: "center",
+            sideOffset: 6,
+            positionMethod: "fixed",
+          },
+        });
+      }
+
       await invalidateRecapSurface(queryClient);
+      if (shouldShowAnchoredToast) {
+        return;
+      }
+
       toastManager.add({
         title: feedIds.length === 1 ? "Feed removed" : "Feeds removed",
         description:
@@ -258,7 +303,9 @@ export function InboxRecapCard() {
   };
 
   const followingFeedId =
-    followMutation.isPending && followMutation.variables ? followMutation.variables.feedId : null;
+    followMutation.isPending && followMutation.variables
+      ? followMutation.variables.feed.feedId
+      : null;
   const movingFeedId =
     moveFeedMutation.isPending && moveFeedMutation.variables
       ? moveFeedMutation.variables.feedIds.length === 1
@@ -295,14 +342,14 @@ export function InboxRecapCard() {
       <RecapExpandedView
         exportingOpml={exportingOpml}
         folders={folders}
-        followFeed={(feed) => followMutation.mutate(feed)}
+        followFeed={(feed, folderId) => followMutation.mutate({ feed, folderId })}
         isFollowingFeed={isFollowingFeed}
         moveFeed={(feedId, folderId) => moveFeedMutation.mutate({ feedIds: [feedId], folderId })}
         moveFeeds={(feedIds, folderId) => moveFeedMutation.mutate({ feedIds, folderId })}
         movingFeedIds={movingFeedIds}
         movingFeedId={movingFeedId}
         oldestSavedItems={oldestSavedItems}
-        removeFeeds={(feedIds) => removeFeedsMutation.mutate({ feedIds })}
+        removeFeeds={(feedIds, options) => removeFeedsMutation.mutate({ feedIds, ...options })}
         removingFeedIds={removingFeedIds}
         section={expandedSection}
         topViewedFeeds={topViewedFeeds}
@@ -315,6 +362,25 @@ export function InboxRecapCard() {
         onImportOpml={() => setSourcesDialogOpen(true)}
         onUnsave={(itemId) => unsaveMutation.mutate({ itemId })}
       />
+    );
+  } else if (isSummaryEmpty) {
+    content = (
+      <div className="flex min-h-0 flex-1 items-center justify-center px-4 py-4">
+        <SectionEmpty
+          title="Nothing here yet"
+          description="Folders, top sources, and saved items will appear here as you read and organize feeds."
+          icon={<Folder2Fill />}
+          action={
+            <Button
+              size="sm"
+              onClick={() => dispatch({ type: "set-create-folder-open", open: true })}
+            >
+              <AddFill />
+              Create folder
+            </Button>
+          }
+        />
+      </div>
     );
   } else {
     content = (
@@ -330,7 +396,7 @@ export function InboxRecapCard() {
         <TopSources
           feeds={topViewedFeeds}
           folders={folders}
-          followFeed={(feed) => followMutation.mutate(feed)}
+          followFeed={(feed, folderId) => followMutation.mutate({ feed, folderId })}
           isFollowingFeed={isFollowingFeed}
           moveFeed={(feedId, folderId) => moveFeedMutation.mutate({ feedIds: [feedId], folderId })}
           movingFeedId={movingFeedId}

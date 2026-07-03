@@ -2,7 +2,7 @@
 
 import { LeftFill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
+import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
 import { Article } from "../article";
 
 export function ArticleContent({

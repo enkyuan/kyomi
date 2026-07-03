@@ -2,7 +2,7 @@
 
 import { getSvgPath } from "figma-squircle";
 import { Rss2Fill } from "@mingcute/react";
-import { cn } from "@lib/utils";
+import { cn } from "@kyomi/ui/lib/utils";
 import {
   useCallback,
   useEffect,

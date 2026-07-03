@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import type { InboxItem } from "@modules/inbox/services/api";
-import { cn } from "@lib/utils";
+import { cn } from "@kyomi/ui/lib/utils";
 import { ReportArticleDialog } from "../report-article";
-import { Toolbar } from "./toolbar-view";
-import { useToolbarModel } from "./toolbar-model";
+import { useToolbarModel } from "./model";
+import { Toolbar } from "./view";
 
 export function ItemInlineToolbar({ item, className }: { item: InboxItem; className?: string }) {
   const [reportOpen, setReportOpen] = useState(false);

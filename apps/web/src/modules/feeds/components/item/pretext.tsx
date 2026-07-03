@@ -2,7 +2,7 @@
 
 import { memo } from "react";
 import type { CSSProperties } from "react";
-import { cn } from "@lib/utils";
+import { cn } from "@kyomi/ui/lib/utils";
 import { usePretextLayout } from "@hooks/use-pretext";
 
 type PretextProps = {

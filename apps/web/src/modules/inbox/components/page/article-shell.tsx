@@ -1,8 +1,8 @@
 "use client";
 
 import type { DetailHeaderState } from "@modules/reader/components/detail";
-import type { ArticleDetailDto } from "@lib/schemas";
-import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
+import type { ArticleDetailDto } from "@lib/schemas/index";
+import type { InboxPreferences } from "@modules/inbox/hooks/data";
 import { ArticleHeader } from "./article-header";
 import { DetailSection } from "./detail-section";
 

@@ -1,14 +1,14 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders } from "@lib/api";
-import type { UserPreferencesDto } from "@lib/schemas";
+import type { UserPreferencesDto } from "@lib/schemas/index";
 
 let preferencesSchemaModulePromise:
-  | Promise<Pick<typeof import("@lib/schemas"), "apiJsonValidated" | "userPreferencesSchema">>
+  | Promise<Pick<typeof import("@lib/schemas/index"), "apiJsonValidated" | "userPreferencesSchema">>
   | undefined;
 
 function getPreferencesSchemaModule() {
-  preferencesSchemaModulePromise ??= import("@lib/schemas").then((module) => ({
+  preferencesSchemaModulePromise ??= import("@lib/schemas/index").then((module) => ({
     apiJsonValidated: module.apiJsonValidated,
     userPreferencesSchema: module.userPreferencesSchema,
   }));

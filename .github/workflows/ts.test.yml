@@ -1,0 +1,121 @@
+name: test / ts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/api/**"
+      - "apps/web/**"
+      - "packages/db/**"
+      - "packages/reader/**"
+      - "packages/tsconfig/**"
+      - "packages/ui/**"
+      - "packages/worker/**"
+      - "tests/**"
+      - ".bun-version"
+      - "bun.lock"
+      - "package.json"
+      - "turbo.json"
+      - ".github/actions/setup-bun/**"
+      - ".github/workflows/ts.test.yml"
+  pull_request:
+    paths:
+      - "apps/api/**"
+      - "apps/web/**"
+      - "packages/db/**"
+      - "packages/reader/**"
+      - "packages/tsconfig/**"
+      - "packages/ui/**"
+      - "packages/worker/**"
+      - "tests/**"
+      - ".bun-version"
+      - "bun.lock"
+      - "package.json"
+      - "turbo.json"
+      - ".github/actions/setup-bun/**"
+      - ".github/workflows/ts.test.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  web:
+    name: apps/web
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup-bun
+
+      - name: Run web integration tests
+        run: bun run ci:test:web
+
+  api:
+    name: apps/api
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_DB: kyomi
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: admin
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d kyomi"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:8-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      meilisearch:
+        image: getmeili/meilisearch:v1.15
+        env:
+          MEILI_MASTER_KEY: vols-meili-dev-key
+          MEILI_NO_ANALYTICS: "true"
+        ports:
+          - 7700:7700
+        options: >-
+          --health-cmd "wget --no-verbose --spider http://127.0.0.1:7700/health"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup-bun
+
+      - name: Show service containers
+        run: docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}'
+
+      - name: Run API integration tests
+        run: bun run ci:test:api
+
+      - name: Show service logs on failure
+        if: failure()
+        run: |
+          docker ps -a
+          for container_id in $(docker ps -aq); do
+            echo "::group::docker logs ${container_id}"
+            docker logs --tail 200 "${container_id}" || true
+            echo "::endgroup::"
+          done

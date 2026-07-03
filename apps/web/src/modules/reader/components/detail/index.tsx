@@ -1,9 +1,9 @@
 "use client";
 
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
-import { cn } from "@lib/utils";
-import { useReaderPreferences } from "@modules/reader/hooks/use-reader-preferences";
+import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
+import { cn } from "@kyomi/ui/lib/utils";
+import { useReaderPreferences } from "@modules/reader/hooks/preferences";
 import { readerViewportContentInsetClass } from "@modules/reader/lib/detail-inset";
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";

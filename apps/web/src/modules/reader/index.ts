@@ -1,1 +1,1 @@
-export { readerContentForMode } from "./reader-display";
+export { readerContentForMode } from "./lib/display";

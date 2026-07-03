@@ -8,11 +8,13 @@ import {
   SearchLine,
 } from "@mingcute/react";
 import { Command } from "cmdk";
+import { useRef } from "react";
 import { Kbd } from "@kyomi/ui/kbd";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import type { DiscoverFeedResult } from "@modules/feeds/api";
 
 export const DISCOVER_RESULTS_UI_CAP = 200;
+type FollowFeedHandler = (item: DiscoverFeedResult, anchor?: HTMLElement | null) => void;
 
 export type SourcesCommandState =
   | { kind: "idle" }
@@ -41,7 +43,7 @@ export function SourcesCommand({
   pendingOpmlImportUrl: string | null;
   query: string;
   state: SourcesCommandState;
-  onFollowFeed: (item: DiscoverFeedResult) => void;
+  onFollowFeed: FollowFeedHandler;
   onQueryChange: (query: string) => void;
   onStartOpmlImport: (url: string) => void;
 }) {
@@ -112,7 +114,7 @@ function SourcesCommandResults({
 }: {
   isPendingFollow: (item: DiscoverFeedResult) => boolean;
   state: SourcesCommandState;
-  onFollowFeed: (item: DiscoverFeedResult) => void;
+  onFollowFeed: FollowFeedHandler;
 }) {
   if (state.kind !== "search") {
     return null;
@@ -179,14 +181,17 @@ function SourcesCommandResultItem({
 }: {
   isPendingFollow: boolean;
   item: DiscoverFeedResult;
-  onFollowFeed: (item: DiscoverFeedResult) => void;
+  onFollowFeed: FollowFeedHandler;
 }) {
   const isSubscribed = item.isSubscribed || isPendingFollow;
+  const itemRef = useRef<HTMLDivElement | null>(null);
+  const actionRef = useRef<HTMLSpanElement | null>(null);
 
   return (
     <Command.Item
+      ref={itemRef}
       value={`${item.title} ${item.url} ${item.description ?? ""}`}
-      onSelect={() => onFollowFeed(item)}
+      onSelect={() => onFollowFeed(item, actionRef.current ?? itemRef.current)}
     >
       <span className="kyomi-feed-command-favicon">
         <FeedFavicon
@@ -204,6 +209,7 @@ function SourcesCommandResultItem({
         <p>{item.description || item.url}</p>
       </div>
       <span
+        ref={actionRef}
         aria-label={isSubscribed ? "Following" : "Add feed"}
         className="kyomi-feed-command-item-action"
         title={isSubscribed ? "Following" : "Add feed"}

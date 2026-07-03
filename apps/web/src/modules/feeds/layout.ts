@@ -1,4 +1,4 @@
-import type { InboxDensityDto } from "@lib/schemas";
+import type { InboxDensityDto } from "@lib/schemas/index";
 
 export function getTypography({
   density,

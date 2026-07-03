@@ -2,7 +2,7 @@
 
 import { useVirtualizer } from "@tanstack/react-virtual";
 import type { RefObject } from "react";
-import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
+import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
 import { Skeleton } from "@kyomi/ui/skeleton";
@@ -93,59 +93,6 @@ export function SkeletonRows({
         </li>
       ))}
     </ul>
-  );
-}
-
-export type StaticRowsProps = {
-  filter: InboxFilter;
-  readerFocusMode: boolean;
-  density: InboxDensityDto;
-  fontSizePx: number;
-  showFavicons: boolean;
-  listContainerWidth?: number;
-  timestampDisplay: InboxTimestampDisplayDto;
-  timestampHourCycle: "12h" | "24h";
-  inboxItems: InboxItem[];
-  selectedItemId?: string | null;
-  onSelectItem: (item: InboxItem) => void;
-};
-
-// oxlint-disable-next-line react-doctor/no-multi-comp
-export function StaticRows({
-  filter,
-  readerFocusMode,
-  density,
-  fontSizePx,
-  showFavicons,
-  listContainerWidth,
-  timestampDisplay,
-  timestampHourCycle,
-  inboxItems,
-  selectedItemId,
-  onSelectItem,
-}: StaticRowsProps) {
-  return (
-    <div className="relative w-full pb-4">
-      {inboxItems.map((item, index) => (
-        <div key={item.id} className="group/inbox-row relative w-full">
-          <Item
-            filter={filter}
-            item={item}
-            isSelected={selectedItemId === item.id}
-            isFirst={index === 0}
-            containerWidth={listContainerWidth || undefined}
-            readerFocusMode={readerFocusMode}
-            showBottomSeparator={false}
-            density={density}
-            fontSizePx={fontSizePx}
-            showFavicons={showFavicons}
-            timestampDisplay={timestampDisplay}
-            timestampHourCycle={timestampHourCycle}
-            onSelect={onSelectItem}
-          />
-        </div>
-      ))}
-    </div>
   );
 }
 

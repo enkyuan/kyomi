@@ -1,6 +1,6 @@
 "use client";
 
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
+import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
 import { AnimatedContent } from "./animated-content";
 import { ArticleContent } from "./article-content";
 import { EmptyState } from "./empty-state";

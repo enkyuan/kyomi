@@ -3,15 +3,15 @@
 import type React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { toastManager } from "@kyomi/ui/toast";
-import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-data";
-import { useMediaQuery } from "@hooks/use-media-query";
+import { useInboxItemStateMutation } from "@modules/inbox/hooks/data";
+import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
-import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/schemas";
-import { readerContentForMode } from "../reader-display";
-import { useArticleExtraction } from "./use-article-extraction";
-import { useReaderPreferences, type ReaderContentWidth } from "./use-reader-preferences";
+import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/schemas/index";
+import { readerContentForMode } from "../lib/display";
+import { useArticleExtraction } from "./extraction";
+import { useReaderPreferences, type ReaderContentWidth } from "./preferences";
 import { readerArticleTopInsetClass } from "../lib/detail-inset";
-import { cn } from "@lib/utils";
+import { cn } from "@kyomi/ui/lib/utils";
 
 export type ToolbarMode = "original" | "extracted";
 

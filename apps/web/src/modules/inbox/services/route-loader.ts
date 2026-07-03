@@ -1,16 +1,12 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
-import {
-  readInboxArticleOpenBehaviorCookie,
-  readInboxSplitPanePercentCookie,
-} from "../lib/layout-persistence";
+import { readInboxArticleOpenBehaviorCookie } from "../lib/layout-persistence";
 import { getInboxPreferences } from "./preferences";
 
 export const getInboxLoaderData = createServerFn({ method: "GET" }).handler(async () => {
   const cookieHeader = getRequestHeaders().get("cookie");
   const initialInboxPreferences = await getInboxPreferences();
   const cookieArticleOpenBehavior = readInboxArticleOpenBehaviorCookie(cookieHeader);
-  const initialSplitPanePercent = readInboxSplitPanePercentCookie(cookieHeader);
 
   return {
     initialInboxPreferences: cookieArticleOpenBehavior
@@ -18,7 +14,6 @@ export const getInboxLoaderData = createServerFn({ method: "GET" }).handler(asyn
           ...initialInboxPreferences,
           articleOpenBehavior: cookieArticleOpenBehavior,
         }
-      : initialInboxPreferences,
-    initialSplitPanePercent,
+        : initialInboxPreferences,
   };
 });

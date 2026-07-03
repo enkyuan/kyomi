@@ -13,20 +13,17 @@ export {
   useRecordInboxItemView,
   type InboxItemPatch,
   type InboxPreferences,
-} from "./hooks/use-inbox-data";
+} from "./hooks/data";
 export {
   useInboxRouteState,
   useMarkReadBehavior,
   useResponsiveReaderMode,
-  useSplitPane,
   type InboxLayoutVariant,
 } from "./hooks/use-layout";
 export { isInboxPathname, prefetchInboxFlow } from "./lib/navigation";
 export {
   readInboxArticleOpenBehaviorCookie,
-  readInboxSplitPanePercentCookie,
   writeInboxArticleOpenBehaviorCookie,
-  writeInboxSplitPanePercentCookie,
 } from "./lib/layout-persistence";
 export { invalidateFeedAndInboxQueries, type InboxListPage } from "./queries/options";
 export { getInboxPreferences, updateInboxPreferences } from "./services/preferences";

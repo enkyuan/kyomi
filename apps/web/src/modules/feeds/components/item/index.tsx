@@ -2,7 +2,7 @@
 
 import { memo, type KeyboardEvent } from "react";
 import { m } from "motion/react";
-import { cn } from "@lib/utils";
+import { cn } from "@kyomi/ui/lib/utils";
 import { SourceRow } from "./source-row";
 import { ItemInlineToolbar } from "./toolbar/item-toolbar";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/card";

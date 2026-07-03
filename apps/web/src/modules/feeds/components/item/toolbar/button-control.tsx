@@ -5,8 +5,8 @@ import { Button } from "@kyomi/ui/button";
 import { CopyIcon } from "@kyomi/ui/icons/copy";
 import { ToolbarButton } from "@kyomi/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
-import { useCopyFeedback } from "@lib/use-copy-feedback";
-import { cn } from "@lib/utils";
+import { useFeedback } from "@hooks/use-feedback";
+import { cn } from "@kyomi/ui/lib/utils";
 
 const TOOLBAR_ICON_CLASS = "size-5";
 
@@ -27,7 +27,7 @@ export function ButtonControl({
   className?: string;
   copyFeedback?: boolean;
 }) {
-  const { isCopied, showCopyFeedback } = useCopyFeedback();
+  const { isActive: isCopied, showFeedback } = useFeedback();
 
   return (
     <Tooltip>
@@ -50,7 +50,7 @@ export function ButtonControl({
                   event.stopPropagation();
                   onClick();
                   if (copyFeedback) {
-                    showCopyFeedback();
+                    showFeedback();
                   }
                 }}
               />

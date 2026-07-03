@@ -6,7 +6,7 @@ import { useMemo } from "react";
 import { Button } from "@kyomi/ui/button";
 import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
-import { cn } from "@lib/utils";
+import { cn } from "@kyomi/ui/lib/utils";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import type { RecapFolder, RecapTopViewedFeed } from "../types";
 import { formatRelativeTime, formatViewedCount } from "../utils";
@@ -14,6 +14,8 @@ import { RailTooltip, RecapSection, SectionEmpty } from ".";
 
 const TOP_SOURCE_DISPLAY_LIMIT = 4;
 const FOLDER_PICKER_SCROLL_THRESHOLD = 6;
+export const TOP_SOURCE_FOLDER_BUTTON_CLASS =
+  "size-7 rounded-full bg-primary/14 text-primary before:rounded-full transition-[background-color,color,transform] hover:bg-primary/20 active:scale-[0.96] sm:size-7";
 
 export function TopSources({
   feeds,
@@ -26,7 +28,7 @@ export function TopSources({
 }: {
   feeds: RecapTopViewedFeed[];
   folders: RecapFolder[];
-  followFeed: (feed: RecapTopViewedFeed) => void;
+  followFeed: (feed: RecapTopViewedFeed, folderId?: string) => void;
   isFollowingFeed: (feedId: string) => boolean;
   moveFeed: (feedId: string, folderId: string) => void;
   movingFeedId: string | null;
@@ -115,15 +117,26 @@ export function TopSources({
                       isMoving={movingFeedId === feed.feedId}
                       onMove={(folderId) => moveFeed(feed.feedId, folderId)}
                     />
+                  ) : !feed.isSubscribed && folderOptions.length > 0 ? (
+                    <FolderPickerButton
+                      currentFolderId=""
+                      currentFolderName="Unsorted"
+                      feedTitle={feed.title}
+                      folders={folderOptions}
+                      isMoving={isFollowingFeed(feed.feedId)}
+                      mode="follow"
+                      onMove={(folderId) => followFeed(feed, folderId)}
+                    />
                   ) : !feed.isSubscribed ? (
                     <Button
+                      aria-label={`Follow ${feed.title}`}
+                      className={TOP_SOURCE_FOLDER_BUTTON_CLASS}
                       loading={isFollowingFeed(feed.feedId)}
-                      size="xs"
-                      variant="outline"
+                      size="icon-xs"
+                      variant="ghost"
                       onClick={() => followFeed(feed)}
                     >
                       <AddFill />
-                      Follow
                     </Button>
                   ) : null}
                 </div>
@@ -142,6 +155,7 @@ export function FolderPickerButton({
   feedTitle,
   folders,
   isMoving,
+  mode = "move",
   onMove,
 }: {
   currentFolderId: string;
@@ -149,9 +163,11 @@ export function FolderPickerButton({
   feedTitle: string;
   folders: Array<{ label: string; value: string }>;
   isMoving: boolean;
+  mode?: "move" | "follow";
   onMove: (folderId: string) => void;
 }) {
-  const isFiled = currentFolderName !== "Unsorted";
+  const isFollowMode = mode === "follow";
+  const isFiled = !isFollowMode && currentFolderName !== "Unsorted";
   const Icon = isFiled ? CheckFill : AddFill;
   const orderedFolders = useMemo(() => {
     const unsortedFolder = folders.find((folder) => folder.label === "Unsorted");
@@ -162,26 +178,29 @@ export function FolderPickerButton({
   }, [folders]);
   const shouldScrollFolders = orderedFolders.length > FOLDER_PICKER_SCROLL_THRESHOLD;
   const folderMenuItems = orderedFolders.map((folder) => {
-    const isCurrent = folder.value === currentFolderId;
+    const isCurrent = !isFollowMode && folder.value === currentFolderId;
     const isUnsorted = folder.label === "Unsorted";
+    const menuLabel = isFollowMode
+      ? `Follow ${feedTitle} in ${folder.label}`
+      : isUnsorted && isFiled
+        ? `Move ${feedTitle} to Unsorted`
+        : `Move ${feedTitle} to ${folder.label}`;
     return (
       <MenuItem
         key={folder.value}
-        aria-label={
-          isUnsorted && isFiled
-            ? `Move ${feedTitle} to Unsorted`
-            : `Move ${feedTitle} to ${folder.label}`
-        }
-        aria-checked={isCurrent}
+        aria-label={menuLabel}
+        aria-checked={isFollowMode ? undefined : isCurrent}
         className={cn(
           "h-8 cursor-pointer gap-2 rounded-full px-2 text-sm",
           isCurrent && "bg-accent/70 text-accent-foreground",
         )}
-        role="menuitemradio"
+        role={isFollowMode ? "menuitem" : "menuitemradio"}
         onClick={() => {
-          if (!isCurrent) {
-            onMove(folder.value);
+          if (!isFollowMode && isCurrent) {
+            return;
           }
+
+          onMove(folder.value);
         }}
       >
         <span className="flex size-4 shrink-0 items-center justify-center">
@@ -198,13 +217,13 @@ export function FolderPickerButton({
         render={
           <Button
             aria-label={
-              isFiled
-                ? `${feedTitle} is in ${currentFolderName}. Change folder.`
-                : `Add ${feedTitle} to a folder`
+              isFollowMode
+                ? `Choose folder for ${feedTitle}`
+                : isFiled
+                  ? `${feedTitle} is in ${currentFolderName}. Change folder.`
+                  : `Add ${feedTitle} to a folder`
             }
-            className={cn(
-              "size-7 rounded-full bg-primary/14 text-primary before:rounded-full transition-[background-color,color,transform] hover:bg-primary/20 active:scale-[0.96] sm:size-7",
-            )}
+            className={TOP_SOURCE_FOLDER_BUTTON_CLASS}
             loading={isMoving}
             size="icon-xs"
             variant="ghost"

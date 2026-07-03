@@ -65,7 +65,6 @@ ensureEnvValue(apiEnvPath, "BETTER_AUTH_TRUSTED_ORIGINS", "http://localhost:3000
 ensureEnvValue(apiEnvPath, "MEILI_URL", "http://localhost:7700", apiEnvExisted);
 ensureEnvValue(apiEnvPath, "MEILI_MASTER_KEY", "vols-meili-dev-key", apiEnvExisted);
 ensureEnvValue(apiEnvPath, "MEILI_INDEX_FEEDS", "feeds", apiEnvExisted);
-ensureEnvValue(apiEnvPath, "SKIP_ENV_VALIDATION", "true", apiEnvExisted);
 ensureEnvValue(webEnvPath, "SERVER_URL", "http://localhost:3000", webEnvExisted);
 ensureEnvValue(webEnvPath, "API_ORIGIN", "http://localhost:8000", webEnvExisted);
 

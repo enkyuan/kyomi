@@ -1,15 +1,15 @@
 "use client";
 
 import { useViewport } from "@hooks/use-viewport";
-import { StaticRows, VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
+import { VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
+import { Badge } from "@kyomi/ui/badge";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
-import { BookmarkFill, NewsFill, TimeDurationFill } from "@mingcute/react";
+import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 import { useHydrated } from "@hooks/use-hydrated";
 import type { InboxFilter, InboxItem, InboxSort } from "@modules/inbox/services/api";
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
-import { STATIC_LIST_ITEM_LIMIT } from "@modules/inbox/lib/layout";
+import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
 import {
   BackToInboxButton,
   DEFAULT_SORT,
@@ -23,16 +23,26 @@ import { useToolbar as useReaderToolbar } from "@modules/reader/hooks/use-toolba
 
 export type ListDisplayOptions = {
   readerFocusMode?: boolean;
-  disableVirtualization?: boolean;
   showFavicons: boolean;
 };
+
+const EMPTY_STATE_BODY_COPY =
+  "Follow feeds to start building your reading list. New stories will show up here as they're published.";
 
 function getEmptyStateCopy(filter: InboxFilter) {
   switch (filter) {
     case "my-feed":
       return {
-        title: "No stories in My Feed",
-        description: "Articles from feeds you follow will appear here as they publish.",
+        title: (
+          <>
+            Add a new feed or check out{" "}
+            <Badge variant="secondary" size="lg">
+              All
+            </Badge>{" "}
+            to get started
+          </>
+        ),
+        description: EMPTY_STATE_BODY_COPY,
       };
     case "saved":
       return {
@@ -51,17 +61,6 @@ function getEmptyStateCopy(filter: InboxFilter) {
         description: "New stories will show up here after feeds publish or refresh.",
       };
   }
-}
-
-function EmptyStateIcon({ filter }: { filter: InboxFilter }) {
-  const Icon =
-    filter === "saved" ? BookmarkFill : filter === "recent" ? TimeDurationFill : NewsFill;
-
-  return (
-    <div className="flex size-32 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground/80 ring-1 ring-border/60 sm:size-36">
-      <Icon className="size-14 sm:size-16" aria-hidden="true" />
-    </div>
-  );
 }
 
 interface ListProps {
@@ -114,7 +113,7 @@ export function List({
   pinnedFolders = [],
   selectedArticle,
 }: ListProps) {
-  const { readerFocusMode = false, disableVirtualization = false, showFavicons } = display;
+  const { readerFocusMode = false, showFavicons } = display;
   const { isLoading, isRefreshing } = pagination;
   const listScrollRef = useRef<HTMLDivElement | null>(null);
   const listHeaderRef = useRef<HTMLDivElement | null>(null);
@@ -131,7 +130,6 @@ export function List({
     fontSizePx,
     readerFocusMode,
   ]);
-  const shouldUseStaticList = disableVirtualization && inboxItems.length <= STATIC_LIST_ITEM_LIMIT;
   const isVirtualizerHostMounted = useHydrated();
 
   const showEmptyState = isVirtualizerHostMounted && !isLoading && inboxItems.length === 0;
@@ -243,7 +241,7 @@ export function List({
             <div className={showEmptyState ? "flex flex-1 flex-col" : ""}>
               {showEmptyState ? (
                 <div className="flex flex-1 min-h-72 w-full flex-col items-center justify-center gap-5 px-5.5 py-10 text-center">
-                  <EmptyStateIcon filter={filter} />
+                  <EmptyStateIcon className="size-40 shrink-0 sm:size-44" size={176} />
                   <div className="w-full max-w-136 space-y-2">
                     <p className="text-base font-semibold text-foreground">{emptyState.title}</p>
                     <p className="mx-auto max-w-110 text-balance text-sm leading-6 text-muted-foreground">
@@ -260,20 +258,6 @@ export function List({
                     viewportHeight={viewportHeight}
                   />
                 )
-              ) : shouldUseStaticList ? (
-                <StaticRows
-                  filter={filter}
-                  readerFocusMode={readerFocusMode}
-                  density={density}
-                  fontSizePx={fontSizePx}
-                  showFavicons={showFavicons}
-                  listContainerWidth={listContainerWidth}
-                  timestampDisplay={timestampDisplay}
-                  timestampHourCycle={timestampHourCycle}
-                  inboxItems={inboxItems}
-                  selectedItemId={selectedItemId}
-                  onSelectItem={onSelectItem}
-                />
               ) : (
                 <VirtualizedRows
                   listScrollRef={listScrollRef}

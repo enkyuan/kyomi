@@ -8,7 +8,7 @@ import {
 } from "@kyomi/ui/segmented-control";
 import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@kyomi/ui/select";
 import { Switch } from "@kyomi/ui/switch";
-import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
+import type { InboxPreferences } from "@modules/inbox/hooks/data";
 import { SettingHeading, SettingSubHeading } from "./shared";
 
 const INBOX_TEXT_SCALE_OPTIONS = [

@@ -5,7 +5,7 @@ import { Button } from "@kyomi/ui/button";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 import { InboxAppearanceSettings } from "./inbox-settings";
 import { ThemeSwitcher } from "./theme-switcher";
-import { useAppearancePanel } from "@modules/settings/hooks/use-appearance-panel";
+import { useAppearancePanel } from "@modules/settings/hooks/appearance";
 
 export const appearanceSection = {
   description: "Adjust theme and inbox presentation.",

@@ -23,7 +23,7 @@ import {
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { useCallback, useRef, useState, type ComponentType, type RefObject } from "react";
 import type { InboxFilter, InboxSort } from "@modules/inbox/services/api";
-import { cn } from "@lib/utils";
+import { cn } from "@kyomi/ui/lib/utils";
 
 const ALL_FILTER_GROUP: InboxFilter[] = ["all", "saved", "recent"];
 const PINNED_FOLDER_SCROLL_THRESHOLD = 6;

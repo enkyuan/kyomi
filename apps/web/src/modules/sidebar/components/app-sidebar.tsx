@@ -14,14 +14,14 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@kyomi/ui/sidebar";
-import { cn } from "@lib/utils";
+import { cn } from "@kyomi/ui/lib/utils";
 import { lazyNamed } from "@lib/lazy-named";
 import { useScope } from "@hooks/use-scope";
 import { INBOX_PREVIOUS_FEED_ID_STATE_KEY } from "@modules/inbox/lib/feed-history";
 import { APP_SIDEBAR_WIDTH } from "../lib/constants";
-import { useAppSidebar } from "../hooks/use-app-sidebar";
-import { usePinnedSection } from "../hooks/use-pinned-section";
-import { useInboxPrefetch } from "../hooks/use-sidebar-inbox";
+import { useAppSidebar } from "../hooks/app";
+import { usePinnedSection } from "../hooks/pinned";
+import { useInboxPrefetch } from "../hooks/inbox";
 import { FeedFavicon } from "./feed-favicon";
 
 const SettingsDialog = lazyNamed(

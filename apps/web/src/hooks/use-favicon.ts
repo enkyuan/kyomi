@@ -5,7 +5,7 @@ import {
   buildFaviconUrlCandidates,
   firstUsableFaviconIndex,
   nextUsableFaviconIndex,
-} from "@lib/favicon";
+} from "@lib/favicon/index";
 import {
   canUsePersistentFaviconCache,
   getFaviconCacheOrigin,

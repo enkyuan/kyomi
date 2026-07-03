@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
-import { cn } from "@lib/utils";
+import { cn } from "@kyomi/ui/lib/utils";
 
 export type RecapScreenDirection = "forward" | "backward";
 
