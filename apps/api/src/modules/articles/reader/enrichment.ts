@@ -1,6 +1,6 @@
 import { AppError } from "@shared/errors/app";
 import type { ArticleDetailDto } from "../types";
-import { extractArticleContentFromUrl } from "./extraction";
+import { extractArticleContentFromUrl } from "./extraction/readability";
 
 function firstSentences(input: string, maxSentences: number): string {
   const chunks = input

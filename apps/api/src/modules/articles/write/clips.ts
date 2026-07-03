@@ -4,14 +4,9 @@ import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
 import { and, asc, desc, eq, gt, gte, ilike, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { extractFullTextFromUrl } from "../reader/enrichment";
-import {
-  buildArticleReaderDto,
-  buildExtractedReaderViewFromDb,
-  buildStoredContentRecord,
-  buildStoredReaderContent,
-  type ExtractedContentStatus,
-} from "../reader/content";
+import { buildStoredContentRecord } from "../reader/content";
 import type { ArticleSort } from "../query";
+import { clipToDetail } from "./clip-detail";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./clips-constants";
 import type { ArticleDetailDto, ArticleListItemDto, ArticlesCursorListResponseDto } from "../types";
 
@@ -243,66 +238,6 @@ export async function createArticleClip(
   }
 
   return clipToDetail(r);
-}
-
-function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDetailDto {
-  const base = clipToListItem(row);
-  const extractedStatus = (row.extractedContentStatus as ExtractedContentStatus) ?? "pending";
-  const readerOriginal = buildStoredReaderContent({
-    articleType: "clip",
-    title: row.title,
-    summary: row.note,
-    contentBaseUrl: row.url,
-    legacyContent: row.content,
-    contentHtml: row.contentHtml,
-    contentText: row.contentText,
-    contentMarkdown: row.contentMarkdown,
-    contentStatus: row.contentStatus as ArticleDetailDto["contentStatus"] | null,
-    contentSource: row.contentSource as ArticleDetailDto["contentSource"] | null,
-    extractionErrorCode: row.extractionErrorCode,
-    extractionErrorMessage: row.extractionErrorMessage,
-  });
-  const readerExtracted = buildExtractedReaderViewFromDb({
-    articleType: "clip",
-    title: row.title,
-    summary: row.note,
-    contentBaseUrl: row.url,
-    extractedContentHtml: row.extractedContentHtml,
-    extractedContentText: row.extractedContentText,
-    extractedContentStatus: extractedStatus,
-  });
-  const reader = buildArticleReaderDto({
-    readerOriginal,
-    readerExtracted,
-    extractedContentStatus: extractedStatus,
-    extractedContentError: row.extractedContentError,
-    extractedContentUpdatedAt: row.extractedContentUpdatedAt?.toISOString() ?? null,
-  });
-  return {
-    ...base,
-    contentHtml: row.contentHtml,
-    contentText: row.contentText,
-    contentMarkdown: row.contentMarkdown,
-    contentStatus: (row.contentStatus as ArticleDetailDto["contentStatus"]) ?? "pending",
-    contentSource: (row.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
-    extractionErrorCode: row.extractionErrorCode,
-    extractionErrorMessage: row.extractionErrorMessage,
-    reader,
-  };
-}
-
-export async function getClipDetailForUser(
-  database: DB,
-  userId: string,
-  clipId: string,
-): Promise<ArticleDetailDto | null> {
-  const rows = await database
-    .select()
-    .from(articleClips)
-    .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)))
-    .limit(1);
-  const r = rows[0];
-  return r ? clipToDetail(r) : null;
 }
 
 export type ClipUpdateBody = {

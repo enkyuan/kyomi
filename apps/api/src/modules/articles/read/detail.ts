@@ -3,7 +3,7 @@ import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/d
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
-import { getClipDetailForUser } from "../write/clips";
+import { getClipDetailForUser } from "../write/clip-detail";
 import {
   buildArticleReaderDto,
   buildExtractedReaderViewFromDb,
