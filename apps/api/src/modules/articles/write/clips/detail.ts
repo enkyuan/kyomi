@@ -1,13 +1,13 @@
 import type { db } from "@adapters/db/client";
 import { articleClips } from "@kyomi/db";
 import { and, eq } from "drizzle-orm";
+import type { ArticleDetailDto, ArticleListItemDto } from "@modules/articles/types";
 import {
   buildArticleReaderDto,
   buildExtractedReaderViewFromDb,
   buildStoredReaderContent,
   type ExtractedContentStatus,
-} from "../../reader/content";
-import type { ArticleDetailDto, ArticleListItemDto } from "../../types";
+} from "@modules/articles/reader/content";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./constants";
 
 type DB = typeof db;

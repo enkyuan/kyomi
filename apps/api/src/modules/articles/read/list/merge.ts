@@ -1,6 +1,6 @@
-import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "../../types";
+import type { ArticleSort } from "@modules/articles/query";
+import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { encodeMergedListCursorFromItem } from "./cursor";
-import type { ArticleSort } from "../../query";
 
 /** Global sort: newest first; tie-break by id descending (matches DB `orderBy`). */
 export function mergeArticleListsSortedDesc(parts: ArticleListItemDto[][]): ArticleListItemDto[] {

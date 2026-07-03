@@ -1,5 +1,5 @@
-import type { ArticleSort } from "../../query";
-import type { ArticleListItemDto } from "../../types";
+import type { ArticleSort } from "@modules/articles/query";
+import type { ArticleListItemDto } from "@modules/articles/types";
 
 export type RecentlyViewedItem = ArticleListItemDto & { lastViewedAt: Date };
 

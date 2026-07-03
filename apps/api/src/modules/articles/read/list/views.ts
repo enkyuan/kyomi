@@ -2,16 +2,16 @@ import type { db } from "@adapters/db/client";
 import { articleClips, feedItemUserState, feedItems, feeds } from "@kyomi/db";
 import { and, asc, desc, eq, gt, gte, ilike, isNotNull, lt, or, sql, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
+import type { ArticleSort } from "@modules/articles/query";
+import type { ArticlesCursorListResponseDto } from "@modules/articles/types";
+import { listClipsForUser } from "@modules/articles/write/clips";
+import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "@modules/articles/write/clips/constants";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
-import { listClipsForUser } from "../../write/clips";
-import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "../../write/clips/constants";
-import type { ArticleSort } from "../../query";
 import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
 import { decodeMergedListCursor } from "./cursor";
 import { mergeRecentlyViewedItemsSorted, type RecentlyViewedItem } from "./recent";
 import { listArticlesForUser } from "./service";
 import { globalArticleIsReadSql } from "../sql";
-import type { ArticlesCursorListResponseDto } from "../../types";
 
 type DB = typeof db;
 
