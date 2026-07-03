@@ -2,7 +2,7 @@ import type { db } from "@adapters/db/client";
 import { articleClips, feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
 import { and, eq, gte, inArray, lt, sql } from "drizzle-orm";
 import { articleIsReadSql, globalArticleIsReadSql } from "./sql";
-import { capPublishedBeforeAtNow } from "./published-window";
+import { capPublishedBeforeAtNow } from "./list/window";
 import type { ArticleCountScope, ArticleCountsDto } from "../types";
 
 type DB = typeof db;

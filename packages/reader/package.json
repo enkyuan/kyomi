@@ -1,11 +1,22 @@
 {
   "name": "@kyomi/reader",
+  "version": "0.1.0",
+  "description": "Kyomi reader rendering primitives for web and native surfaces.",
   "author": "enkyuan <yuan.enkng@gmail.com>",
-  "private": true,
   "type": "module",
+  "files": ["src"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enkyuan/kyomi.git",
+    "directory": "packages/reader"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "exports": {
     ".": "./src/core/index.ts",
     "./core": "./src/core/index.ts",
+    "./sanitization": "./src/sanitization/index.ts",
     "./web": "./src/web/index.ts",
     "./web/styles.css": "./src/web/styles.css",
     "./webview": "./src/webview/index.ts",
@@ -29,11 +40,11 @@
     "react-dom": { "optional": true }
   },
   "dependencies": {
-    "@kyomi/worker": "workspace:*",
     "highlight.js": "^11.11.1",
     "katex": "^0.16.45",
     "marked": "^18.0.0",
-    "marked-katex-extension": "^5.1.8"
+    "marked-katex-extension": "^5.1.8",
+    "neosanitize": "^0.3.0"
   },
 
   "devDependencies": {

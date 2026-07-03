@@ -1,8 +1,6 @@
 import { assertHttpOrHttpsUrl } from "./http-url";
 import { assertSafeOutboundUrl } from "./outbound-policy";
 
-export { BlockedOutboundUrlError } from "./outbound-policy";
-
 export class TooManyRedirectsError extends Error {
   constructor(message = "Too many redirects") {
     super(message);

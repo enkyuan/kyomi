@@ -2,7 +2,7 @@ import { afterEach, describe, expect, test } from "bun:test";
 import {
   classifyFeedRefreshError,
   isNonRetryableFeedRefreshFailure,
-} from "@app/jobs/feed-refresh-errors";
+} from "@app/jobs/refresh-errors";
 import { runFeedRefresh } from "@kyomi/worker";
 
 const originalFetch = globalThis.fetch;

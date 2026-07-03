@@ -1,5 +1,5 @@
+import type { ArticleReaderDto } from "@modules/articles/types";
 import type { ArticleReaderContentDto, ExtractedContentStatus } from "./types";
-import type { ArticleReaderDto } from "../../types";
 
 export type ReaderMode = "original" | "extracted";
 

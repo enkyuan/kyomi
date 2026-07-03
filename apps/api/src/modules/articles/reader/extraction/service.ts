@@ -2,8 +2,8 @@ import type { db } from "@adapters/db/client";
 import { articleClips, feedItems } from "@kyomi/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
 import { eq } from "drizzle-orm";
-import { getArticleDetailForUser } from "../../read/detail";
-import type { ArticleDetailDto } from "../../types";
+import { getArticleDetailForUser } from "@modules/articles/read/detail";
+import type { ArticleDetailDto } from "@modules/articles/types";
 import { extractArticleContentFromUrl } from "./readability";
 
 type DB = typeof db;

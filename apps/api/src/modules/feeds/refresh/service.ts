@@ -4,8 +4,6 @@ import type { db } from "@adapters/db/client";
 
 type DB = typeof db;
 
-export { enqueueBatchFeedRefresh, enqueueFeedRefresh } from "./enqueue";
-
 export async function listRefreshableFeedIdsForUser(
   database: DB,
   userId: string,

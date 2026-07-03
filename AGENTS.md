@@ -1,4 +1,5 @@
 ## Learned User Preferences
+
 - Follow attached implementation plans exactly (do not edit the plan file); reuse existing plan to-dos and advance statuses in order—do not recreate them.
 - Prioritize deep root-cause diagnosis and clean, standards-based fixes over quick/hacky workarounds; when refactoring, preserve behavior and avoid runtime regressions.
 - Apply UI feedback literally and iteratively with precise visual adjustments; prefer Tailwind utility classes over inline styles for small layout and typography tweaks in `apps/web` when both are viable. Do not add layout or interaction behavior the user did not ask for. Keep the app navigation sidebar on the left at every breakpoint—tablet reader layouts change main-column content only, not sidebar placement.
@@ -13,8 +14,9 @@
 - Sidebar discover / “Follow sources” field (`modules/feeds/components/follow/sources-dialog.tsx`): size the inner `InputGroup` to the parent `SidebarMenuButton` (`items-stretch`, `h-full min-h-0`) instead of a second hard-coded height; for an outside-only focus halo, use `overflow-visible` on the button with `focus-within` + ring-like `box-shadow` and suppress the inner input-group focus ring—`SidebarMenuButton` defaults to `overflow-hidden`, which clips outside rings.
 
 ## Learned Workspace Facts
+
 - Monorepo: `apps/web`, `apps/api`, `packages/*`; rebranded from cronos — npm scope `@kyomi/*`, root package `kyomi`. Feed refresh enqueue lives under `apps/api/src/modules/feeds/refresh/`; keep `feeds/routes.ts` a thin delegator.
-- `packages/catalog` is optional offline Python enrichment (`packages/catalog/feed`, import `feed`); sync via `scripts/sync.sh` (`catalog:sync:local`), export `processing/export_catalog_for_kyomi.py`; `feed/favicon.py` needs PyPI `extract-favicon` in catalog `pyproject.toml`. Normal app runtime/setup must not require Poetry or catalog sync.
+- `packages/catalog` is optional offline Python enrichment (`packages/catalog/feed`, import `feed`); sync via `scripts/catalog/sync.ts` (`catalog:sync:local`), export `processing/export_catalog_for_kyomi.py`; `feed/favicon.py` needs PyPI `extract-favicon` in catalog `pyproject.toml`. Normal app runtime/setup must not require Poetry or catalog sync.
 - Inbox tablet landscape (`md`–`lg` + `orientation: landscape`): reader-focused (article fills main, no list column, auto-select first item). Tablet portrait and phones use stacked single-column list↔detail (`InboxMobileLayout`). Desktop split at `lg+` landscape. Layout in `use-responsive-reader-mode.ts`.
 - Module layout (`apps/web/src/modules/*`): `hooks/` for hooks, `components/<area>/` for UI, module-root `*.ts` barrels/API where used. Inbox: `page.tsx`, `layout.tsx`, plus `services/`, `queries/` (including `hooks/use-inbox-queries.ts`), `lib/`, `utils/`, and `components/` (`list/`, `refresh/`). Feeds keeps flat root `*.ts` plus `components/`: `item/`, `manage/`, `follow/`.
 - Shared shadcn/Base UI primitives live in `packages/ui` (`@kyomi/ui`); import `@kyomi/ui/button`, `@kyomi/ui/lib/utils`, etc. App shell sidebar chrome lives in `apps/web/src/modules/sidebar/` (`components/`, `hooks/`, `lib/`, `queries/`). `@lib/utils` and `@hooks/use-media-query` re-export from `@kyomi/ui` for existing call sites.

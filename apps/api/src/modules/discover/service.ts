@@ -127,20 +127,59 @@ export async function searchFeeds(
         return [];
       }
       const hitIds = hits.map((hit) => hit.id);
-      const subscriptionRows = await database
-        .select({ feedId: feedSubscriptions.feedId })
-        .from(feedSubscriptions)
-        .where(
-          and(eq(feedSubscriptions.userId, userId), inArray(feedSubscriptions.feedId, hitIds)),
-        );
-      const subscribedIds = new Set(subscriptionRows.map((row) => row.feedId));
-      return hits.map((hit) => ({
-        ...hit,
-        title: decodeText(hit.title),
-        description: decodeNullableText(hit.description),
-        faviconUrl: hit.faviconUrl ?? null,
-        isSubscribed: subscribedIds.has(hit.id),
-      }));
+      const rows = await database
+        .select({
+          id: feeds.id,
+          url: feeds.url,
+          title: feeds.title,
+          description: feeds.description,
+          link: feeds.link,
+          faviconUrl: feeds.faviconUrl,
+          isSubscribed: sql<boolean>`CASE WHEN ${feedSubscriptions.id} IS NULL THEN false ELSE true END`,
+        })
+        .from(feeds)
+        .leftJoin(
+          feedSubscriptions,
+          and(eq(feedSubscriptions.feedId, feeds.id), eq(feedSubscriptions.userId, userId)),
+        )
+        .where(inArray(feeds.id, hitIds));
+      const rowsById = new Map(rows.map((row) => [row.id, row]));
+      const results = hits.map((hit) => {
+        const row = rowsById.get(hit.id);
+        if (!row) {
+          return {
+            id: null,
+            url: hit.url,
+            title: decodeText(hit.title),
+            description: decodeNullableText(hit.description),
+            link: hit.link,
+            faviconUrl: hit.faviconUrl ?? null,
+            isSubscribed: false,
+          };
+        }
+        return {
+          id: row.id,
+          url: row.url,
+          title: decodeText(row.title),
+          description: decodeNullableText(row.description),
+          link: row.link,
+          faviconUrl: row.faviconUrl ?? null,
+          isSubscribed: row.isSubscribed,
+        };
+      });
+      const staleHitCount = hits.reduce(
+        (count, hit) => (rowsById.has(hit.id) ? count : count + 1),
+        0,
+      );
+      if (staleHitCount > 0) {
+        logger?.warn("discover.search.meili_stale_hits", {
+          userId,
+          query,
+          limit: safeLimit,
+          staleHitCount,
+        });
+      }
+      return results;
     } catch (error) {
       logger?.warn("discover.search.meili_fallback", {
         userId,

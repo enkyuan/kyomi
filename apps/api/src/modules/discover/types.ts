@@ -11,7 +11,7 @@ export type FeedPreviewDto = {
 };
 
 export type FeedSearchResultDto = {
-  id: string;
+  id: string | null;
   url: string;
   title: string;
   description: string | null;
