@@ -1,7 +1,7 @@
 import { describe, expect, mock, test } from "bun:test";
-import { getUserProfileById, updateUserEmailById } from "@modules/users";
+import { getUserProfileById, updateUserEmailById } from "@modules/users/profile/service";
 
-describe("users.service", () => {
+describe("users.profile.service", () => {
   test("getUserProfileById returns DTO when user exists", async () => {
     const createdAt = new Date("2026-01-01T00:00:00.000Z");
     const updatedAt = new Date("2026-01-02T00:00:00.000Z");
