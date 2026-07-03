@@ -102,7 +102,7 @@ export function Toolbar({
           </ReaderToolbarButton>
           <AnimatePresence initial={false} mode="popLayout">
             {readerFocusMode && !compactReaderFocusMode ? (
-              <m.div key="translate-article" layout className="flex" {...actionMotionProps}>
+              <m.div layout className="flex" {...actionMotionProps} key="translate-article">
                 <ReaderToolbarButton
                   label="Translate article"
                   onClick={onTranslateArticle}
@@ -174,10 +174,10 @@ export function Toolbar({
         <AnimatePresence initial={false} mode="popLayout">
           {compactReaderFocusMode ? null : (
             <m.div
-              key="secondary-actions"
               layout
               className="flex items-center"
               {...actionMotionProps}
+              key="secondary-actions"
             >
               <ToolbarSeparator
                 className="mx-1 hidden h-9 w-px self-center bg-border/70 data-[orientation=vertical]:my-0 sm:block"

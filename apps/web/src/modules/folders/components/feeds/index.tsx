@@ -60,6 +60,12 @@ export function ExpandedFolderFeeds({
 }) {
   const [isSelecting, setIsSelecting] = useState(false);
   const [selectedFeedIds, setSelectedFeedIds] = useState<Set<string>>(() => new Set());
+  const [previousFolderId, setPreviousFolderId] = useState(folder.id);
+  if (previousFolderId !== folder.id) {
+    setPreviousFolderId(folder.id);
+    setIsSelecting(false);
+    setSelectedFeedIds(new Set());
+  }
   const folderFeeds = useMemo(
     () =>
       feeds.filter((feed) => {
@@ -84,11 +90,6 @@ export function ExpandedFolderFeeds({
     (feedId) => movingFeedIds.includes(feedId) || removingFeedIds.includes(feedId),
   );
   const isUnsortedFolder = Boolean(unsortedFolderId && folder.id === unsortedFolderId);
-
-  useEffect(() => {
-    setIsSelecting(false);
-    setSelectedFeedIds(new Set());
-  }, [folder.id]);
 
   useEffect(() => {
     setSelectedFeedIds((current) => {
@@ -240,6 +241,7 @@ export function ExpandedFolderFeeds({
             const isSelected = selectedFeedIds.has(feed.feedId);
 
             return (
+              // oxlint-disable-next-line react-doctor/no-static-element-interactions -- role/tabIndex/onKeyDown are set when interactive
               <div
                 key={feed.feedId}
                 className={cn(

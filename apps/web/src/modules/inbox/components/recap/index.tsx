@@ -244,6 +244,7 @@ export function InboxRecapCard() {
     },
   });
 
+  // oxlint-disable-next-line react-doctor/query-mutation-missing-invalidation -- invalidateRecapSurface is called in onSuccess
   const removeFeedsMutation = useMutation({
     mutationFn: async ({ feedIds }: RemoveFeedsInput) => {
       await Promise.all(feedIds.map((feedId) => unfollowFeed({ data: { feedId } })));
@@ -270,6 +271,7 @@ export function InboxRecapCard() {
         });
       }
 
+      // oxlint-disable-next-line react-doctor/async-defer-await -- invalidation must run on every path, not just the toast path
       await invalidateRecapSurface(queryClient);
       if (shouldShowAnchoredToast) {
         return;

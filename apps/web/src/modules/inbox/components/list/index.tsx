@@ -33,6 +33,8 @@ export type ListDisplayOptions = {
 const EMPTY_STATE_BODY_COPY =
   "Follow feeds to start building your reading list. New stories will show up here as they're published.";
 
+const EMPTY_PINNED_FOLDERS: PinnedFolderFilter[] = [];
+
 function getEmptyStateCopy(filter: InboxFilter) {
   switch (filter) {
     case "my-feed":
@@ -114,7 +116,7 @@ export function List({
   isArticleScoped = false,
   activeFolderId,
   feedLabel,
-  pinnedFolders = [],
+  pinnedFolders = EMPTY_PINNED_FOLDERS,
   selectedArticle,
 }: ListProps) {
   const { readerFocusMode = false, showFavicons } = display;

@@ -16,6 +16,8 @@ const READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE = {
   fallbackAxisSide: "none",
 } as const;
 
+const NAV_EXPANDED_STATE = { opacity: 1, scale: 1, filter: "blur(0px)", width: 84 };
+
 export function ArticleHeader({
   item,
   readerControlsCollapsed,
@@ -89,7 +91,6 @@ function SelectedArticleHeader({
   const navCollapsedState = prefersReducedMotion
     ? undefined
     : { opacity: 0, scale: 0.92, filter: "blur(4px)", width: 0 };
-  const navExpandedState = { opacity: 1, scale: 1, filter: "blur(0px)", width: 84 };
 
   return (
     <div
@@ -126,7 +127,7 @@ function SelectedArticleHeader({
                 key="article-navigation"
                 layout
                 initial={navCollapsedState}
-                animate={navExpandedState}
+                animate={NAV_EXPANDED_STATE}
                 exit={navCollapsedState}
                 className="flex shrink-0 origin-right justify-end overflow-hidden"
                 transition={scopeControlTransition}
