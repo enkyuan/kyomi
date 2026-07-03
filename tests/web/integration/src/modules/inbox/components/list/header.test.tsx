@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
 import { FilterControl } from "@modules/inbox/components/list/header";
 
@@ -76,5 +76,31 @@ describe("FilterControl", () => {
     );
 
     expect(screen.getByText("Programming")).toBeTruthy();
+  });
+
+  test("scrolls the All dropdown after four visible options", async () => {
+    render(
+      <FilterControl
+        filter="all"
+        pinnedFolders={Array.from({ length: 5 }, (_, index) => ({
+          id: `folder-${index + 1}`,
+          name: `Folder ${index + 1}`,
+          isPinned: true,
+          pinnedAt: "2026-07-01T02:00:00.000Z",
+        }))}
+        onFilterChange={vi.fn()}
+        onFolderFilterChange={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "Choose filter" }));
+
+    await waitFor(() => {
+      const menuContent = document.querySelector('[data-slot="menu-popup-content"]');
+
+      expect(menuContent).toBeTruthy();
+      expect(menuContent?.className).toContain("max-h-[min(calc(--spacing(9)*4");
+      expect(menuContent?.className).toContain("overflow-y-auto");
+    });
   });
 });

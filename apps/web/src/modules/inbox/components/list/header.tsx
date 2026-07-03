@@ -6,7 +6,6 @@ import {
   SegmentedControlTab,
 } from "@kyomi/ui/segmented-control";
 import { Menu, MenuTrigger, MenuPopup, MenuItem } from "@kyomi/ui/menu";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {
   ArrowLeftFill,
   DownFill,
@@ -26,7 +25,9 @@ import type { InboxFilter, InboxSort } from "@modules/inbox/lib/articles/index";
 import { cn } from "@kyomi/ui/lib/utils";
 
 const ALL_FILTER_GROUP: InboxFilter[] = ["all", "saved", "recent"];
-const PINNED_FOLDER_SCROLL_THRESHOLD = 6;
+const MAX_VISIBLE_FILTER_MENU_ITEMS = 4;
+const FILTER_MENU_MAX_HEIGHT_CLASS =
+  "!max-h-[min(calc(--spacing(9)*4+--spacing(4)+1px),var(--available-height))]";
 
 export type PinnedFolderFilter = {
   id: string;
@@ -56,12 +57,14 @@ const SORT_MENU: {
 
 export const DEFAULT_SORT: InboxSort = "newest";
 
+const EMPTY_PINNED_FOLDERS: PinnedFolderFilter[] = [];
+
 export function FilterControl({
   activeFolderId,
   filter,
   onFilterChange,
   onFolderFilterChange,
-  pinnedFolders = [],
+  pinnedFolders = EMPTY_PINNED_FOLDERS,
 }: {
   activeFolderId?: string;
   filter: InboxFilter;
@@ -88,7 +91,8 @@ export function FilterControl({
       (item.value !== "all" || shouldShowAllMenuItem),
   );
   const pinnedFolderMenuItems = pinnedFolders.filter((folder) => folder.id !== activeFolderId);
-  const shouldScrollPinnedFolders = pinnedFolders.length > PINNED_FOLDER_SCROLL_THRESHOLD;
+  const menuItemCount = allGroupMenuItems.length + pinnedFolderMenuItems.length;
+  const shouldScrollMenu = menuItemCount > MAX_VISIBLE_FILTER_MENU_ITEMS;
 
   const menuItems = (
     <>
@@ -111,7 +115,7 @@ export function FilterControl({
         );
       })}
       {pinnedFolderMenuItems.length > 0 ? (
-        <div className="mx-2 my-1 h-px bg-border/70" role="separator" />
+        <hr className="mx-2 my-1 h-px border-0 bg-border/70" />
       ) : null}
       {pinnedFolderMenuItems.map((folder) => (
         <MenuItem
@@ -168,19 +172,13 @@ export function FilterControl({
                 anchor={segmentedRef}
                 className={cn(
                   "w-(--anchor-width) min-w-(--anchor-width) max-w-64 rounded-[22px] p-1 before:rounded-[21px]",
-                  shouldScrollPinnedFolders && "overflow-hidden",
+                  shouldScrollMenu && "overflow-hidden",
                 )}
                 contentClassName={
-                  shouldScrollPinnedFolders ? "!max-h-none !overflow-hidden !p-0" : undefined
+                  shouldScrollMenu ? cn(FILTER_MENU_MAX_HEIGHT_CLASS, "overflow-y-auto") : undefined
                 }
               >
-                {shouldScrollPinnedFolders ? (
-                  <ScrollArea className="relative h-[min(--spacing(64),var(--available-height))] overflow-hidden rounded-[inherit] **:data-[slot=scroll-area-scrollbar]:!end-px **:data-[slot=scroll-area-scrollbar]:!m-0 **:data-[slot=scroll-area-scrollbar]:!my-1">
-                    <div className="min-w-0 p-1">{menuItems}</div>
-                  </ScrollArea>
-                ) : (
-                  menuItems
-                )}
+                {menuItems}
               </MenuPopup>
             </Menu>
           </SegmentedControlTab>
