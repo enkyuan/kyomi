@@ -35,7 +35,7 @@ import type { RecapFolder } from "@modules/folders/lib/types";
 import { followedFeedsQueryKey, inboxRecapQueryKey } from "@modules/inbox/queries/options";
 import type { InboxRecapDto } from "@modules/inbox/services/recap-schema";
 import { SectionEmpty } from "@modules/inbox/components/recap/sections";
-import { formatFeedCount, invalidateRecapSurface } from "@modules/inbox/components/recap/utils";
+import { formatFeedCount, invalidateRecapSurface } from "@modules/inbox/lib/recap";
 import { ExpandedFolderFeeds } from "../feeds";
 import { FolderActions } from "./summary";
 

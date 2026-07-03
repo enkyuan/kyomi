@@ -5,7 +5,7 @@ import { BookmarkFill, ExternalLinkLine, RightFill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
 import { buildInboxItemSlug } from "@modules/inbox/lib/article-slug";
 import type { RecapSavedItem } from "../types";
-import { formatRelativeTime } from "../utils";
+import { formatRelativeTime } from "@modules/inbox/lib/recap";
 import { RailTooltip, RecapSection, SectionEmpty } from ".";
 
 const WORTH_REVISITING_DISPLAY_LIMIT = 3;

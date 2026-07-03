@@ -21,7 +21,7 @@ import { RecapExpandedView, type RecapExpandedSection } from "./expanded";
 import { RecapError, RecapSkeleton, SectionEmpty } from "./sections";
 import { TopSources } from "./sections/top-sources";
 import type { RecapTopViewedFeed } from "./types";
-import { invalidateRecapSurface } from "./utils";
+import { invalidateRecapSurface } from "@modules/inbox/lib/recap";
 import { WorthRevisiting } from "./sections/worth-revisiting";
 
 const FollowSourcesDialog = lazyNamed(

@@ -19,7 +19,7 @@ import type {
   InboxRecapFolderDto,
   InboxRecapSavedItemDto,
   InboxRecapTopViewedFeedDto,
-} from "./types";
+} from "./lib/types";
 
 type DB = typeof db;
 

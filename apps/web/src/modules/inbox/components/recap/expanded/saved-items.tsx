@@ -6,7 +6,7 @@ import { Button } from "@kyomi/ui/button";
 import { buildInboxItemSlug } from "@modules/inbox/lib/article-slug";
 import { RailTooltip, SectionEmpty } from "../sections";
 import type { RecapSavedItem } from "../types";
-import { formatRelativeTime } from "../utils";
+import { formatRelativeTime } from "@modules/inbox/lib/recap";
 
 export function ExpandedSavedItems({
   items,

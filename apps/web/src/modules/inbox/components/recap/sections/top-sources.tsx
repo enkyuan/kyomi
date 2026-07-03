@@ -11,7 +11,7 @@ import {
 import type { RecapFolder } from "@modules/folders/lib/types";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import type { RecapTopViewedFeed } from "../types";
-import { formatRelativeTime, formatViewedCount } from "../utils";
+import { formatRelativeTime, formatViewedCount } from "@modules/inbox/lib/recap";
 import { RailTooltip, RecapSection, SectionEmpty } from ".";
 
 const TOP_SOURCE_DISPLAY_LIMIT = 4;
