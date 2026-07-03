@@ -1,33 +1,23 @@
-# Stage 4
+# Stage 4: LLM Enrichment
 
-The final stage. After we have a clean dataset to work with, we can extract several critical features from the feed using an LLM.
+Catalog pipeline stage for improving categories, tags, descriptions, titles, and ranking signals with batched LLM prompts.
 
-1. Mapping to top level category + tag generation
-    - include content_type (indie blog, news, opinion, how-to, recipe, announcement)
-    - Few shot prompting
-2. LLM popularity estimate:
-    - Score from 0-100
-    - Both within its own category and globally
-    - Include examples of popular feeds in each category in prompt (few-shot)
-3. Generate description and improve titles for 'opml' dataset.
+## Goals
 
-Each task gets its own prompt. Each prompt can contain 5-20 input samples for batch processing (necessary for 140k size).
+- Map feeds to top-level categories and capped tag lists.
+- Improve weak titles and descriptions, especially for OPML-derived feeds.
+- Estimate popularity signals only for live feeds and combine them later with non-LLM signals.
 
-Each prompt outputs valid JSON only. 
+## Layout
 
-Remember to cap # of tags. 
+```text
+batch_scripts/  Batch execution helpers.
+experiments/    Prompt and scoring experiments.
+preprocess/     Input preparation.
+```
 
-Skip popularity scoring for dead feeds.
+## Notes
 
-Understand how well these english prompts work for chinese / japanese feeds.
-
-Combine popularity estimate with tranco rank, social follower count, quality score, etc. to get final score. 
-
-And then we're done!
-
-We can then backup this duckdb dataset to drive. Load it up into Meilisearch and Postgres. 
-
-Follow up potential:
-- Answering "How good of a feed is this?" for each. Different heuristics like how "complete" the articles are, volume, feed metadata completeness, etc, rich in images, etc etc.
-- Standardize all language codes 
-- Basic data analysis to get a feel for it perhaps. 
+- Prompts should return valid JSON only.
+- Batch sizes should stay small enough for reliable validation and retry.
+- Validate prompts against non-English feeds before applying them to the full catalog.

@@ -1,73 +1,55 @@
-# RSS Catalog Pipeline
+# @kyomi/catalog
 
-This directory is the absorbed Python pipeline from the former `rss-r-us` repository.
+Optional offline Python pipeline for building the seeded RSS feed catalog used by Kyomi discovery.
 
-This package is intentionally optional/offline for kyomi app runtime: normal app setup/dev does not require uv or catalog sync.
+This package is not required for normal app development. The web and API apps run without `uv` or catalog sync.
 
-## Purpose
+## Layout
 
-- Build a broad RSS feed catalog from multiple datasets.
-- Export a canonical feed list for kyomi API import.
-- Feed discovery search with pre-seeded feeds (for example, "Hacker News").
+```text
+processing/
+  feedspot/                  Feedspot scraper utilities.
+  stage-1-merge/             Source merge inputs.
+  stage-2-fetching/          Feed fetching and metadata enrichment.
+  stage-3-favicon-dedupe/   Favicon recovery, DuckDB import, and dedupe.
+  stage-4-llm-enrich/       LLM category, tag, title, and description enrichment.
+  stage-5-cleaning/         Post-enrichment cleanup.
+  stage-6-reranking/        Category ranking adjustments.
+  exports/                  JSONL output consumed by apps/api import scripts.
+```
 
-## Commands (from monorepo root)
+## Commands
 
-- Install Python dependencies:
-  - `bun run catalog:install`
-- Export canonical catalog JSONL:
-  - `bun run catalog:export`
-- Type-check the catalog exporter:
-  - `bun run --cwd packages/catalog typecheck`
-- Import exported catalog into Postgres + Meilisearch:
-  - `bun run catalog:import`
-- Run end-to-end sync and smoke check:
-  - `bun run catalog:sync`
+Run from the repository root.
 
-## Output Contract
+| Command | Purpose |
+| --- | --- |
+| `bun run catalog:install` | Install catalog Python dependencies with `uv`. |
+| `bun run catalog:export` | Export canonical catalog JSONL. |
+| `bun run catalog:import` | Import exported feeds into the app database and search index. |
+| `bun run catalog:smoke` | Verify catalog search returns expected seeded results. |
+| `bun run catalog:sync` | Export, import, and smoke test. |
+| `bun run catalog:sync:local` | Run the local scheduled-sync wrapper. |
+| `bun run --cwd packages/catalog typecheck` | Type-check the Python catalog package. |
 
-Exporter writes:
+## Output
 
-- `packages/catalog/processing/exports/catalog-feeds.jsonl`
+`catalog:export` writes `packages/catalog/processing/exports/catalog-feeds.jsonl`.
 
-Each JSONL record contains:
+Each JSONL record uses this contract:
 
-- `feed_url` (required)
-- `title`
-- `description`
-- `link`
-- `source`
-- `language`
-- `category`
+| Field | Required | Notes |
+| --- | --- | --- |
+| `feed_url` | Yes | Canonical RSS/Atom feed URL. |
+| `title` | No | Display title. |
+| `description` | No | Short source description. |
+| `link` | No | Website URL. |
+| `source` | No | Source dataset name. |
+| `language` | No | Language code when known. |
+| `category` | No | Top-level catalog category. |
 
-## Validation
+## Notes
 
-After import, run:
-
-- `bun run catalog:smoke`
-
-This asserts discover search returns expected seeded results for a known query.
-
-## Local Scheduled Sync
-
-Use the repository script for local cron scheduling:
-
-- `bun scripts/catalog/sync.ts`
-- or from package scope: `bun run --cwd packages/catalog sync`
-
-The script:
-
-- Runs `bun run catalog:sync` from repo root.
-- Writes logs to `.catalog-sync-logs/catalog-sync-YYYY-MM-DD.log`.
-- Uses `.catalog-sync.lock` to prevent overlapping runs.
-
-Example `crontab -e` entry (every 30 minutes):
-
-- `*/30 * * * * cd /ABSOLUTE_PATH_TO_REPO && /ABSOLUTE_PATH_TO_BUN/bun scripts/catalog/sync.ts`
-
-Troubleshooting:
-
-- If runs are skipped repeatedly, check for stale lock directory: `.catalog-sync.lock`.
-- If sync fails, inspect latest log in `.catalog-sync-logs/`.
-- Make sure `bun`, `uv`, project `.env` files, and local Postgres/Redis/Meilisearch are available in the cron environment.
-- For local Docker-backed development, run `bun run setup:app` once first, or `bun run docker:up` if the stack is currently stopped. `catalog:import` and `catalog:smoke` now fail early with this hint when Postgres is unreachable or migrations have not been applied.
-- Local API env values that point at `localhost` are normalized to `127.0.0.1` inside the API adapters to avoid Bun loopback timeout issues during catalog import/smoke commands.
+- `scripts/catalog/sync.ts` writes logs to `.catalog-sync-logs/` and uses `.catalog-sync.lock` to prevent overlapping local runs.
+- Run `bun run setup:app` before importing into a fresh local database.
+- Keep catalog dependencies isolated here; normal Kyomi setup should not require Poetry, `uv`, or the catalog pipeline.

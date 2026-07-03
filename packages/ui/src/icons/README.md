@@ -1,11 +1,16 @@
-# Icons
+# @kyomi/ui Icons
 
-Illustrations and branded SVG artwork for product empty states and similar surfaces.
+Self-contained SVG icons and illustrations for Kyomi product surfaces.
 
-## Adding an icon
+## Add An Icon
 
-1. Add `your-icon-name.tsx` in this folder (kebab-case, one primary export per file).
-2. Re-export it from `index.ts`.
-3. Import in apps as `@kyomi/ui/icons/your-icon-name` or from `@kyomi/ui/icons`.
+1. Add a kebab-case `*.tsx` file in this folder.
+2. Export one primary React component from that file.
+3. Re-export it from `index.ts`.
+4. Import it as `@kyomi/ui/icons/name` or from `@kyomi/ui/icons`.
 
-Keep icons self-contained (props, theme handling, and SVG markup in the same module). Prefer `"use client"` when the icon reads DOM theme or uses effects.
+## Notes
+
+- Keep SVG markup, props, and theme handling in the same module.
+- Use `"use client"` only when an icon reads DOM state or uses effects.
+- Prefer product-specific illustrations here; general UI icons should come from the app's icon library.
