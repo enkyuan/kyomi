@@ -12,7 +12,7 @@ const recordOpmlTaskSuccessMock = mock(async () => undefined);
 mock.module("@modules/feeds/subscription/service", () => ({
   createOrSubscribeToFeed: createOrSubscribeToFeedMock,
 }));
-mock.module("@modules/feeds/refresh/service", () => ({
+mock.module("@modules/feeds/refresh/enqueue", () => ({
   enqueueFeedRefresh: enqueueFeedRefreshMock,
 }));
 mock.module("@modules/opml/task-store", () => ({

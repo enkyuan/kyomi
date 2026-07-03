@@ -28,7 +28,7 @@ import {
   listMergedRecentlyReadView,
   listMergedSavedView,
   listMergedTodayView,
-} from "./views-merged";
+} from "./list/views";
 
 export function registerArticleReadRoutes(app: Elysia) {
   return (

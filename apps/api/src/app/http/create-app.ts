@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
-import { registerErrorHandlers } from "../setup/register-error-handlers";
-import { registerLifecycle } from "../setup/register-lifecycle";
-import { registerPlugins } from "../setup/register-plugins";
+import { registerErrorHandlers } from "../setup/error-handlers";
+import { registerLifecycle } from "../setup/lifecycle";
+import { registerPlugins } from "../setup/plugins";
 import { registerRoutes } from "./register-routes";
 
 /**

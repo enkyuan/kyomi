@@ -1,5 +1,5 @@
 import { describe, expect, mock, test } from "bun:test";
-import { getUserProfileById, updateUserEmailById } from "@modules/users/service";
+import { getUserProfileById, updateUserEmailById } from "@modules/users";
 
 describe("users.service", () => {
   test("getUserProfileById returns DTO when user exists", async () => {

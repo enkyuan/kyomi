@@ -3,15 +3,15 @@ import { articleClips, feedItemUserState, feedItems, feeds } from "@kyomi/db";
 import { and, asc, desc, eq, gt, gte, ilike, isNotNull, lt, or, sql, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
-import { listClipsForUser } from "../write/clips";
-import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "../write/clips-constants";
-import type { ArticleSort } from "../query";
+import { listClipsForUser } from "../../write/clips";
+import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "../../write/clips-constants";
+import type { ArticleSort } from "../../query";
 import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
-import { decodeMergedListCursor } from "./merged-view-cursor";
-import { mergeRecentlyViewedItemsSorted, type RecentlyViewedItem } from "./recent-view";
-import { listArticlesForUser } from "./list";
-import { globalArticleIsReadSql } from "./sql";
-import type { ArticlesCursorListResponseDto } from "../types";
+import { decodeMergedListCursor } from "./cursor";
+import { mergeRecentlyViewedItemsSorted, type RecentlyViewedItem } from "./recent";
+import { listArticlesForUser } from "./service";
+import { globalArticleIsReadSql } from "../sql";
+import type { ArticlesCursorListResponseDto } from "../../types";
 
 type DB = typeof db;
 

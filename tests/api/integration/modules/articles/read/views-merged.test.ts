@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   mergeRecentlyViewedItemsSorted,
   type RecentlyViewedItem,
-} from "@modules/articles/read/recent-view";
+} from "@modules/articles/read/list/recent";
 
 function item(overrides: Partial<RecentlyViewedItem>): RecentlyViewedItem {
   return {

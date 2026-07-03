@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { capPublishedBeforeAtNow } from "@modules/articles/read/published-window";
+import { capPublishedBeforeAtNow } from "@modules/articles/read/list/window";
 
 describe("published window", () => {
   const now = new Date("2026-07-01T12:00:00.000Z");

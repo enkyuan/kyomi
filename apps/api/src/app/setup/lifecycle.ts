@@ -1,5 +1,5 @@
 import type { Elysia } from "elysia";
-import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/startup-schema-guard";
+import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/schema-guard";
 import { env } from "@config/env";
 import { shutdownAdapters } from "@adapters/lifecycle";
 import { logger } from "@adapters/logger";

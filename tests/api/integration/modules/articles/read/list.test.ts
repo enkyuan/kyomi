@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   collapseObviousDuplicates,
   normalizedArticleIdentity,
-} from "@modules/articles/read/dedupe";
+} from "@modules/articles/read/list/dedupe";
 import { filterVisibleArticleRowsForTest } from "@modules/articles/read/list";
 
 type Row = {

@@ -12,7 +12,7 @@ import {
   type JobMessage,
 } from "@kyomi/worker";
 import { runOpmlImportFeedJob, runOpmlImportJob } from "@modules/opml/service";
-import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "./feed-refresh-errors";
+import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "./refresh-errors";
 
 async function handleWorkerJob(
   message: JobMessage,

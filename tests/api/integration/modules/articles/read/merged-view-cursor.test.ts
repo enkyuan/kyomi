@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   decodeMergedListCursor,
   encodeMergedListCursorFromItem,
-} from "@modules/articles/read/merged-view-cursor";
+} from "@modules/articles/read/list/cursor";
 import type { ArticleListItemDto } from "@modules/articles/types";
 
 const sampleItem = (overrides: Partial<ArticleListItemDto> = {}): ArticleListItemDto => ({

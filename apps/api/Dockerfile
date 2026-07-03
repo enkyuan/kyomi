@@ -17,7 +17,8 @@ COPY packages/ui/package.json packages/ui/package.json
 COPY packages/worker/package.json packages/worker/package.json
 COPY tests/package.json tests/package.json
 
-RUN bun install --frozen-lockfile --ignore-scripts
+RUN --mount=type=cache,id=bun,target=/root/.bun/install/cache \
+  bun install --frozen-lockfile --ignore-scripts
 
 FROM deps AS runtime
 WORKDIR /app
@@ -25,7 +26,11 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=8000
 
-COPY . .
+COPY apps/api apps/api
+COPY docker docker
+COPY packages/db packages/db
+COPY packages/tsconfig packages/tsconfig
+COPY packages/worker packages/worker
 
 WORKDIR /app/apps/api
 EXPOSE 8000

@@ -23,7 +23,7 @@ export const feedPreviewResponse = t.Object({
 });
 
 export const feedSearchItem = t.Object({
-  id: t.String(),
+  id: t.Union([t.String(), t.Null()]),
   url: t.String(),
   title: t.String(),
   description: t.Union([t.String(), t.Null()]),

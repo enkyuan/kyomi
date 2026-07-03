@@ -1,5 +1,5 @@
 import { pool } from "./client";
-import { assertDevelopmentDatabaseSchemaReady } from "./startup-schema-guard";
+import { assertDevelopmentDatabaseSchemaReady } from "./schema-guard";
 
 type PreflightOptions = {
   commandName: string;

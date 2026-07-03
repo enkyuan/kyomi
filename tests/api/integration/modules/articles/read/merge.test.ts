@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { mergeArticleItemsByDate } from "@modules/articles/read/merge";
+import { mergeArticleItemsByDate } from "@modules/articles/read/list/merge";
 import type { ArticleListItemDto } from "@modules/articles/types";
 
 const feed = (id: string, at: string): ArticleListItemDto => ({

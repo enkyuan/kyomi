@@ -1,6 +1,6 @@
 import { AppError } from "@shared/errors/app";
-import type { ArticleSort } from "../query";
-import type { ArticleListItemDto } from "../types";
+import type { ArticleSort } from "../../query";
+import type { ArticleListItemDto } from "../../types";
 
 const PREFIX = "m1.";
 

@@ -13,9 +13,9 @@ import {
   subscribeToExistingFeed,
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
-} from "../service";
+} from "../index";
 import * as dto from "../dto";
-import { enqueueFeedRefresh } from "../refresh/service";
+import { enqueueFeedRefresh } from "../refresh/enqueue";
 
 const createFeedRateLimit = {
   name: "feeds.create_by_url",

@@ -35,7 +35,9 @@ describe("discover.service", () => {
   });
 
   test("searchFeeds trims input and maps meili hits when configured", async () => {
-    const searchFeeds = await loadSearchFeeds();
+    const searchFeeds = await loadSearchFeeds({
+      MEILI_URL: "http://meili.local",
+    });
     globalThis.fetch = mock((input: unknown) => {
       const href =
         typeof input === "string"
@@ -76,8 +78,21 @@ describe("discover.service", () => {
       return Promise.resolve(new Response(null, { status: 404 }));
     }) as unknown as typeof fetch;
 
-    const where = mock(() => Promise.resolve([{ feedId: "feed_1" }]));
-    const from = mock(() => ({ where }));
+    const where = mock(() =>
+      Promise.resolve([
+        {
+          id: "feed_1",
+          url: "https://example.com/feed.xml",
+          title: "Example &#8216;Feed&#8217;",
+          description: "Latest &amp; updates",
+          link: "https://example.com",
+          faviconUrl: null,
+          isSubscribed: true,
+        },
+      ]),
+    );
+    const leftJoin = mock(() => ({ where }));
+    const from = mock(() => ({ leftJoin }));
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof searchFeeds>[0];
 
@@ -94,6 +109,107 @@ describe("discover.service", () => {
         isSubscribed: true,
       },
     ]);
+  });
+
+  test("searchFeeds makes stale Meili hits followable by URL", async () => {
+    const searchFeeds = await loadSearchFeeds({
+      MEILI_URL: "http://meili.local",
+    });
+    globalThis.fetch = mock((input: unknown) => {
+      const href =
+        typeof input === "string"
+          ? input
+          : input instanceof URL
+            ? input.href
+            : typeof input === "object" && input !== null && "url" in input
+              ? String((input as { url: unknown }).url)
+              : "";
+      if (href.endsWith("/indexes")) {
+        return Promise.resolve(new Response(null, { status: 409 }));
+      }
+      if (href.includes("/settings/searchable-attributes")) {
+        return Promise.resolve(new Response(null, { status: 202 }));
+      }
+      if (href.endsWith("/search")) {
+        return Promise.resolve(
+          new Response(
+            JSON.stringify({
+              hits: [
+                {
+                  id: "missing_feed",
+                  url: "https://stale.example/feed.xml",
+                  title: "Stale Feed",
+                  description: "No longer in Postgres",
+                  link: "https://stale.example",
+                  faviconUrl: null,
+                },
+                {
+                  id: "feed_1",
+                  url: "https://example.com/feed.xml",
+                  title: "Example Feed",
+                  description: "Latest updates",
+                  link: "https://example.com",
+                  faviconUrl: null,
+                },
+              ],
+            }),
+            {
+              status: 200,
+              headers: { "content-type": "application/json" },
+            },
+          ),
+        );
+      }
+      return Promise.resolve(new Response(null, { status: 404 }));
+    }) as unknown as typeof fetch;
+
+    const where = mock(() =>
+      Promise.resolve([
+        {
+          id: "feed_1",
+          url: "https://example.com/feed.xml",
+          title: "Example Feed",
+          description: "Latest updates",
+          link: "https://example.com",
+          faviconUrl: null,
+          isSubscribed: false,
+        },
+      ]),
+    );
+    const leftJoin = mock(() => ({ where }));
+    const from = mock(() => ({ leftJoin }));
+    const select = mock(() => ({ from }));
+    const fakeDb = { select } as unknown as Parameters<typeof searchFeeds>[0];
+    const logger = { warn: mock(() => undefined) };
+
+    const result = await searchFeeds(fakeDb, "user_1", "example", 10, logger);
+
+    expect(result).toEqual([
+      {
+        id: null,
+        url: "https://stale.example/feed.xml",
+        title: "Stale Feed",
+        description: "No longer in Postgres",
+        link: "https://stale.example",
+        faviconUrl: null,
+        isSubscribed: false,
+      },
+      {
+        id: "feed_1",
+        url: "https://example.com/feed.xml",
+        title: "Example Feed",
+        description: "Latest updates",
+        link: "https://example.com",
+        faviconUrl: null,
+        isSubscribed: false,
+      },
+    ]);
+    expect(logger.warn).toHaveBeenCalledWith("discover.search.meili_stale_hits", {
+      userId: "user_1",
+      query: "example",
+      limit: 10,
+      staleHitCount: 1,
+    });
   });
 
   test("searchFeeds returns an empty list for blank input", async () => {
