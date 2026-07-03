@@ -17,7 +17,8 @@ COPY packages/ui/package.json packages/ui/package.json
 COPY packages/worker/package.json packages/worker/package.json
 COPY tests/package.json tests/package.json
 
-RUN bun install --frozen-lockfile --ignore-scripts
+RUN --mount=type=cache,id=bun,target=/root/.bun/install/cache \
+  bun install --frozen-lockfile --ignore-scripts
 
 FROM deps AS build
 WORKDIR /app

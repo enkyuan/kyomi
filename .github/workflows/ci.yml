@@ -126,18 +126,31 @@ jobs:
         run: bun run ci:build
 
   docker-build:
-    name: Docker Build
+    name: Docker Build (${{ matrix.component }})
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - component: api
+            dockerfile: apps/api/Dockerfile
+            image: kyomi-api:ci
+          - component: web
+            dockerfile: apps/web/Dockerfile
+            image: kyomi-web:ci
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Bun workspace
-        uses: ./.github/actions/setup-bun
-
-      - name: Build Docker images
-        run: bun run ci:docker:build
+      - name: Build Docker image
+        run: |
+          bun_version="$(cat .bun-version)"
+          docker build \
+            --build-arg BUN_VERSION="${bun_version}" \
+            -f "${{ matrix.dockerfile }}" \
+            -t "${{ matrix.image }}" \
+            .
 
   ci-summary:
     name: CI Summary
