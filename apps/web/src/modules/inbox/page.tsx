@@ -21,7 +21,7 @@ import {
   useMarkReadBehavior,
   useResponsiveReaderMode,
 } from "@modules/inbox/hooks/use-layout";
-import type { InboxItem } from "@modules/inbox/services/api";
+import type { InboxItem } from "@modules/inbox/lib/articles/index";
 import { useTimezone } from "@hooks/use-timezone";
 import { useTransition } from "@hooks/use-transition";
 import { useViewport } from "@hooks/use-viewport";
@@ -34,14 +34,13 @@ import {
   followedFeedsQueryKey,
   hasActiveFeedRefresh,
 } from "@modules/inbox/queries/options";
-import { buildInboxItemSlug } from "@modules/inbox/lib/article-slug";
+import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
+import type { ArticleStepDirection } from "@modules/reader/lib/detail";
 import { ArticleShell } from "./components/page/article/shell";
 import { DetailSection } from "./components/page/detail";
 import { ListSection } from "./components/page/list";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-
-type ArticleStepDirection = 1 | -1;
 
 const MIDDLE_COLUMN_TRANSITION_OFFSET: TransitionOffset = {
   forward: { enter: 18, exit: -12 },

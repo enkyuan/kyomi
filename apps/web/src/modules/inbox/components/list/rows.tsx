@@ -4,7 +4,7 @@ import { useVirtualizer } from "@tanstack/react-virtual";
 import type { RefObject } from "react";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
 import { Item } from "@modules/feeds/components/item";
-import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
+import type { InboxFilter, InboxItem } from "@modules/inbox/lib/articles/index";
 import { Skeleton } from "@kyomi/ui/skeleton";
 import {
   DEFAULT_SKELETON_ROWS,
@@ -12,7 +12,7 @@ import {
   MAX_SKELETON_ROWS,
   MIN_SKELETON_ROWS,
   SKELETON_OVERSCAN_ROWS,
-} from "@modules/inbox/lib/layout";
+} from "@modules/inbox/lib/layout/index";
 
 const SKELETON_ROW_GUTTER_CLASS = "px-10.5";
 const SKELETON_ROW_SEPARATOR_CLASS = "left-10.5 right-10.5";

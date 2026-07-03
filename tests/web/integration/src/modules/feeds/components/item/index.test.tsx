@@ -1,7 +1,7 @@
 import { act, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Item } from "@modules/feeds/components/item";
-import type { InboxItem } from "@modules/inbox/services/api";
+import type { InboxItem } from "@modules/inbox/lib/articles/index";
 
 const { mutateAsyncMock, mutateMock, reportBrokenArticleMock, toastAddMock, toastUpdateMock } =
   vi.hoisted(() => ({
@@ -16,7 +16,7 @@ vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
   useInboxItemStateMutation: () => ({ mutate: mutateMock, mutateAsync: mutateAsyncMock }),
 }));
 
-vi.mock("@modules/inbox/services/api", () => ({
+vi.mock("@modules/inbox/lib/articles/index", () => ({
   reportBrokenArticle: reportBrokenArticleMock,
 }));
 

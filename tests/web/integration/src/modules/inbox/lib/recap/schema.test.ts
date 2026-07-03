@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { inboxRecapSchema } from "@modules/inbox/services/recap-schema";
+import { inboxRecapSchema } from "@modules/inbox/lib/recap/schema";
 
 describe("inbox recap schema", () => {
   test("accepts folders, top viewed feeds, and oldest saved items", () => {

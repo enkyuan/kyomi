@@ -22,7 +22,7 @@ import {
 } from "@mingcute/react";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { useCallback, useRef, useState, type ComponentType, type RefObject } from "react";
-import type { InboxFilter, InboxSort } from "@modules/inbox/services/api";
+import type { InboxFilter, InboxSort } from "@modules/inbox/lib/articles/index";
 import { cn } from "@kyomi/ui/lib/utils";
 
 const ALL_FILTER_GROUP: InboxFilter[] = ["all", "saved", "recent"];

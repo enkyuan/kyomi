@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { buildArticlesUrl, buildInboxListUrl } from "@modules/inbox/services/query-urls";
+import { buildArticlesUrl, buildInboxListUrl } from "@modules/inbox/lib/articles/query";
 
 describe("inbox query URLs", () => {
   test("uses subscribed feed articles for My Feed without a day window", () => {

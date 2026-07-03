@@ -1,5 +1,5 @@
 import { getUserPreferences, updateUserPreferences } from "@modules/preferences/api";
-import { sanitizeReaderPreferences, type ReaderPreferences } from "../lib/preferences";
+import { sanitizeReaderPreferences, type ReaderPreferences } from "@modules/reader/lib/preferences";
 
 export async function getReaderPreferences(): Promise<ReaderPreferences> {
   return sanitizeReaderPreferences(await getUserPreferences());

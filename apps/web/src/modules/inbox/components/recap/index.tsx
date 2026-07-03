@@ -15,8 +15,8 @@ import { CreateFolderDialog } from "@modules/folders/components/dialog";
 import { Folders } from "@modules/folders/components/recap/summary";
 import { moveFeedsToFolder } from "@modules/folders/lib/api";
 import { inboxRecapQueryKey, inboxRecapQueryOptions } from "@modules/inbox/queries/options";
-import { updateInboxItemState } from "@modules/inbox/services/api";
-import type { InboxRecapDto } from "@modules/inbox/services/recap-schema";
+import { updateInboxItemState } from "@modules/inbox/lib/articles/index";
+import type { InboxRecapDto } from "@modules/inbox/lib/recap/schema";
 import {
   RecapExpandedView,
   type RecapExpandedSection,
@@ -25,7 +25,7 @@ import {
 import { RecapError, RecapSkeleton, SectionEmpty } from "./sections";
 import { TopSources } from "./sections/top-sources";
 import type { RecapTopViewedFeed } from "./types";
-import { invalidateRecapSurface } from "@modules/inbox/lib/recap";
+import { invalidateRecapSurface } from "@modules/inbox/lib/recap/index";
 import { WorthRevisiting } from "./sections/worth-revisiting";
 
 const FollowSourcesDialog = lazyNamed(

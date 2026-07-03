@@ -14,7 +14,7 @@ import { useAuth } from "@integrations/better-auth/provider";
 import { usePreferences } from "@hooks/use-preferences";
 import { INBOX_PREFERENCES_STORAGE_KEY } from "@lib/shell/keys";
 import type { InboxPreferencesDto } from "@lib/schemas/index";
-import { writeInboxArticleOpenBehaviorCookie } from "../lib/layout-persistence";
+import { writeInboxArticleOpenBehaviorCookie } from "../lib/layout/persistence";
 import {
   DEFAULT_INBOX_PREFERENCES,
   getInboxPreferenceLimits,
@@ -34,8 +34,8 @@ import {
   type InboxFilter,
   type InboxItem,
   type InboxSort,
-} from "../services/api";
-import { getInboxPreferences, updateInboxPreferences } from "../services/preferences";
+} from "../lib/articles/index";
+import { getInboxPreferences, updateInboxPreferences } from "@modules/preferences/inbox";
 
 export type InboxPreferences = InboxPreferencesDto;
 export type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">> & {

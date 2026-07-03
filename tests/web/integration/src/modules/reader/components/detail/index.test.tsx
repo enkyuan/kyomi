@@ -6,7 +6,7 @@ import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Detail } from "@modules/reader/components/detail";
 import type { ArticleDetailDto, ReaderContentDto } from "@lib/schemas/index";
 
-vi.mock("@modules/reader/hooks/preferences", () => ({
+vi.mock("@modules/reader/hooks/use-preferences", () => ({
   useReaderPreferences: () => ({
     preferences: { contentWidth: "wide" },
   }),
@@ -33,7 +33,7 @@ vi.mock("@kyomi/ui/scroll-area", () => ({
   ),
 }));
 
-vi.mock("@modules/reader/components/detail/content-view", () => ({
+vi.mock("@modules/reader/components/detail/content", () => ({
   ContentView: () => <div>Reader detail content</div>,
 }));
 

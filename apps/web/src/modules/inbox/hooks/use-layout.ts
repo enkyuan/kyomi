@@ -5,8 +5,8 @@ import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
 import type { InboxMarkReadBehaviorDto } from "@lib/schemas/index";
 import type { InboxPreferences } from "./use-inbox-data";
-import { getInboxItemIdFromSlug } from "../lib/article-slug";
-import type { InboxFilter, InboxSort } from "../services/api";
+import { getInboxItemIdFromSlug } from "../lib/articles/slug";
+import type { InboxFilter, InboxSort } from "../lib/articles/index";
 
 const INBOX_DESKTOP_MIN_WIDTH_PX = 768;
 

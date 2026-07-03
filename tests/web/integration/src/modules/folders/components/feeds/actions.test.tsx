@@ -9,7 +9,7 @@ vi.mock("@modules/inbox/components/recap/sections", () => ({
   RailTooltip: ({ children }: { children: ReactElement }) => children,
 }));
 
-vi.mock("@modules/inbox/lib/recap", () => ({
+vi.mock("@modules/inbox/lib/recap/index", () => ({
   formatFeedCount: (count: number) => (count === 1 ? "1 feed" : `${count} feeds`),
 }));
 

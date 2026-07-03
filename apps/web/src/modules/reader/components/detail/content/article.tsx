@@ -7,7 +7,7 @@ import type {
   InboxDensityDto,
   InboxTimestampDisplayDto,
 } from "@lib/schemas/index";
-import { Article } from "../article";
+import { Article } from "../../article";
 
 export function ArticleContent({
   item,

@@ -18,7 +18,7 @@ import {
   SHELL_STATE_STORAGE_KEY,
   THEME_STORAGE_KEY,
 } from "@lib/shell/keys";
-import { INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME } from "@modules/inbox/lib/layout-persistence";
+import { INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME } from "@modules/inbox/lib/layout/persistence";
 import appCss from "../styles.css?url";
 
 interface MyRouterContext {

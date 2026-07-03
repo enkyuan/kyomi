@@ -1,48 +1,22 @@
 "use client";
 
 import { BrowserScrollBar, ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
-import type {
-  ArticleDetailDto,
-  InboxDensityDto,
-  InboxTimestampDisplayDto,
-} from "@lib/schemas/index";
 import { cn } from "@kyomi/ui/lib/utils";
-import { useReaderPreferences } from "@modules/reader/hooks/preferences";
-import { readerViewportContentInsetClass } from "@modules/reader/lib/detail-inset";
+import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
+import { readerViewportContentInsetClass, type DetailViewProps } from "@modules/reader/lib/detail";
 import { useEffect, useRef, useState } from "react";
-import type { ReactNode } from "react";
-import { BlurLayer } from "./blur-layer";
-import { ContentView } from "./content-view";
+import { BlurLayer } from "./chrome/blur";
+import { ContentView } from "./content";
 
 const DETAIL_BACK_BUTTON_BLUR_OFFSET = 52;
 
-type ArticleStepDirection = 1 | -1;
-type DetailSurface = "browser" | "card";
-
-export type ReaderDetailState =
-  | { status: "selected"; item: ArticleDetailDto }
-  | { status: "loading" }
-  | { status: "error"; error: unknown }
-  | { status: "empty" };
-
-export type DetailHeaderState = {
-  readerControlsCollapsed: boolean;
-};
-
-export interface DetailViewProps {
-  detailState: ReaderDetailState;
-  density: InboxDensityDto;
-  fontSizePx: number;
-  showFavicons: boolean;
-  timestampDisplay: InboxTimestampDisplayDto;
-  timestampHourCycle: "12h" | "24h";
-  showBackToList?: boolean;
-  onBackToList?: () => void;
-  surface?: DetailSurface;
-  header?: ReactNode | ((state: DetailHeaderState) => ReactNode);
-  articleContentKey?: string;
-  articleStepDirection?: ArticleStepDirection;
-}
+export type {
+  ArticleStepDirection,
+  DetailHeaderState,
+  DetailSurface,
+  DetailViewProps,
+  ReaderDetailState,
+} from "@modules/reader/lib/detail";
 
 // oxlint-disable-next-line eslint/complexity
 export function Detail({

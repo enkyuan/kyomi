@@ -2,9 +2,10 @@
 
 import type { ArticleDetailDto } from "@lib/schemas/index";
 import { cn } from "@kyomi/ui/lib/utils";
-import { readerArticleTopInsetClass } from "@modules/reader/lib/detail-inset";
+import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
+import { readerArticleTopInsetClass } from "@modules/reader/lib/detail";
 import { readerContentForMode } from "@modules/reader/lib/display";
-import { useReaderPreferences, type ReaderContentWidth } from "@modules/reader/hooks/preferences";
+import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
 import type { ToolbarMode } from "../lib/types";
 
 export function useReaderDisplay({

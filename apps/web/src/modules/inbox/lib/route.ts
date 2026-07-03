@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
-import { readInboxArticleOpenBehaviorCookie } from "../lib/layout-persistence";
-import { getInboxPreferences } from "./preferences";
+import { getInboxPreferences } from "@modules/preferences/inbox";
+import { readInboxArticleOpenBehaviorCookie } from "./layout/persistence";
 
 export const getInboxLoaderData = createServerFn({ method: "GET" }).handler(async () => {
   const cookieHeader = getRequestHeaders().get("cookie");

@@ -16,7 +16,7 @@ import { Field } from "@kyomi/ui/field";
 import { Form } from "@kyomi/ui/form";
 import { Textarea } from "@kyomi/ui/textarea";
 import { toastManager } from "@kyomi/ui/toast";
-import { reportBrokenArticle, type InboxItem } from "@modules/inbox/services/api";
+import { reportBrokenArticle, type InboxItem } from "@modules/inbox/lib/articles/index";
 
 function stopDialogPropagation(event: SyntheticEvent) {
   event.stopPropagation();

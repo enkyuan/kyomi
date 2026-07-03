@@ -13,7 +13,7 @@ import { getSvgPath } from "figma-squircle";
 import type { CSSProperties } from "react";
 import type { RecapFolder } from "@modules/folders/lib/types";
 import { RailTooltip, RecapSection, SectionEmpty } from "@modules/inbox/components/recap/sections";
-import { formatFeedCount } from "@modules/inbox/lib/recap";
+import { formatFeedCount } from "@modules/inbox/lib/recap/index";
 
 export const FOLDER_ACTION_BUTTON_CLASS =
   "h-10 flex-1 gap-1.5 rounded-full px-4 font-semibold text-sm leading-none before:rounded-full transition-transform active:scale-[0.96] sm:h-10 sm:text-sm";

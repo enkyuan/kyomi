@@ -8,7 +8,7 @@ import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 import { useHydrated } from "@hooks/use-hydrated";
-import type { InboxFilter, InboxItem, InboxSort } from "@modules/inbox/services/api";
+import type { InboxFilter, InboxItem, InboxSort } from "@modules/inbox/lib/articles/index";
 import type {
   ArticleDetailDto,
   InboxDensityDto,

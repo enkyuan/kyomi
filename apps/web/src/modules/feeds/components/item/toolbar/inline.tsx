@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { InboxItem } from "@modules/inbox/services/api";
+import type { InboxItem } from "@modules/inbox/lib/articles/index";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useItemToolbarModel } from "@modules/toolbar/hooks/use-item";
 import { ReportArticleDialog } from "../report-article";

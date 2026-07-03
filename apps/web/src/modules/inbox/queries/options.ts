@@ -6,8 +6,8 @@ import {
   type InboxFilter,
   type InboxItem,
   type InboxSort,
-} from "../services/api";
-import { getInboxRecap } from "../services/recap";
+} from "../lib/articles/index";
+import { getInboxRecap } from "../lib/recap/api";
 import { getTimezoneOffsetMinutes, QUERY_TIMES } from "@lib/query/policies";
 
 const DEFAULT_INBOX_FILTER: InboxFilter = "my-feed";

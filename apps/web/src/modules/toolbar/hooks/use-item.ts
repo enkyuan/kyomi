@@ -1,6 +1,6 @@
 "use client";
 
-import type { InboxItem } from "@modules/inbox/services/api";
+import type { InboxItem } from "@modules/inbox/lib/articles/index";
 import type { ItemToolbarModel } from "../lib/types";
 import { useArticleActions } from "./use-article";
 

@@ -33,9 +33,9 @@ import type { FollowedFeed } from "@modules/feeds/lib/api";
 import { deleteFolder, updateFolder, type Folder } from "@modules/folders/lib/api";
 import type { RecapFolder } from "@modules/folders/lib/types";
 import { followedFeedsQueryKey, inboxRecapQueryKey } from "@modules/inbox/queries/options";
-import type { InboxRecapDto } from "@modules/inbox/services/recap-schema";
+import type { InboxRecapDto } from "@modules/inbox/lib/recap/schema";
 import { SectionEmpty } from "@modules/inbox/components/recap/sections";
-import { formatFeedCount, invalidateRecapSurface } from "@modules/inbox/lib/recap";
+import { formatFeedCount, invalidateRecapSurface } from "@modules/inbox/lib/recap/index";
 import { ExpandedFolderFeeds } from "../feeds";
 import { FolderActions } from "./summary";
 

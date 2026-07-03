@@ -1,4 +1,4 @@
-import type { InboxItem } from "../services/api";
+import type { InboxItem } from "./index";
 
 const ARTICLE_SLUG_ID_SEPARATOR = "--";
 const DEFAULT_ARTICLE_SLUG = "article";

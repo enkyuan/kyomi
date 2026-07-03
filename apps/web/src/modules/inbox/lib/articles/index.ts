@@ -9,9 +9,9 @@ import {
   buildInboxListUrl,
   type InboxFilter,
   type InboxSort,
-} from "./query-urls";
+} from "./query";
 
-export type { InboxFilter, InboxSort } from "./query-urls";
+export type { InboxFilter, InboxSort } from "./query";
 
 let inboxSchemaModulePromise:
   | Promise<

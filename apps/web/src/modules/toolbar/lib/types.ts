@@ -1,8 +1,8 @@
 import type React from "react";
 import type { CSSProperties } from "react";
 import type { ArticleDetailDto } from "@lib/schemas/index";
-import type { InboxItem } from "@modules/inbox/services/api";
-import type { ReaderContentWidth } from "@modules/reader/hooks/preferences";
+import type { InboxItem } from "@modules/inbox/lib/articles/index";
+import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
 
 export type ToolbarMode = "original" | "extracted";
 

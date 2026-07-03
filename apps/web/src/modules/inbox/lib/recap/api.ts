@@ -2,7 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders } from "@lib/api";
 import { fetchValidatedJson } from "@lib/schemas/index";
-import { inboxRecapSchema, type InboxRecapDto } from "./recap-schema";
+import { inboxRecapSchema, type InboxRecapDto } from "./schema";
 
 export const getInboxRecap = createServerFn({ method: "GET" })
   .inputValidator((input: { limit?: number }) => input)

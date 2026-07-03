@@ -5,8 +5,8 @@ import type { useRouter } from "@tanstack/react-router";
 import { List } from "@modules/inbox/components/list";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
 import type { useInboxRouteState } from "@modules/inbox/hooks/use-layout";
-import { getPreviousInboxFeedId } from "@modules/inbox/lib/feed-history";
-import type { InboxFilter, InboxItem } from "@modules/inbox/services/api";
+import { getPreviousInboxFeedId } from "@modules/inbox/lib/layout/history";
+import type { InboxFilter, InboxItem } from "@modules/inbox/lib/articles/index";
 import type { Folder } from "@modules/folders/lib/api";
 import type { ArticleDetailDto } from "@lib/schemas/index";
 

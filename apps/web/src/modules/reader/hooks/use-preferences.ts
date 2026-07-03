@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { useAuth } from "@integrations/better-auth/provider";
 import { READER_PREFERENCES_STORAGE_KEY } from "@lib/shell/keys";
 import { usePreferences } from "@hooks/use-preferences";
-import { getReaderPreferences, updateReaderPreferences } from "../services/preferences";
+import { getReaderPreferences, updateReaderPreferences } from "@modules/preferences/reader";
 import {
   DEFAULT_READER_PREFERENCES,
   getReaderPreferenceLimits,

@@ -5,7 +5,7 @@ import type { ReactElement, ReactNode } from "react";
 import { describe, expect, test, vi } from "vitest";
 import { Folders } from "@modules/folders/components/recap/summary";
 
-vi.mock("@modules/inbox/lib/recap", () => ({
+vi.mock("@modules/inbox/lib/recap/index", () => ({
   formatFeedCount: (count: number) => (count === 1 ? "1 feed" : `${count} feeds`),
 }));
 
