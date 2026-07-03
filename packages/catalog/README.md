@@ -1,4 +1,4 @@
-# RSS Catalog Pipeline 
+# RSS Catalog Pipeline
 
 This directory is the absorbed Python pipeline from the former `rss-r-us` repository.
 
@@ -51,7 +51,7 @@ This asserts discover search returns expected seeded results for a known query.
 
 Use the repository script for local cron scheduling:
 
-- `bash packages/catalog/scripts/sync.sh`
+- `bun scripts/catalog/sync.ts`
 - or from package scope: `bun run --cwd packages/catalog sync`
 
 The script:
@@ -62,7 +62,7 @@ The script:
 
 Example `crontab -e` entry (every 30 minutes):
 
-- `*/30 * * * * /bin/bash /ABSOLUTE_PATH_TO_REPO/packages/catalog/scripts/sync.sh`
+- `*/30 * * * * cd /ABSOLUTE_PATH_TO_REPO && /ABSOLUTE_PATH_TO_BUN/bun scripts/catalog/sync.ts`
 
 Troubleshooting:
 

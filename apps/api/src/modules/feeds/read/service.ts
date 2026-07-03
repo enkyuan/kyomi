@@ -3,7 +3,7 @@ import { feedSubscriptions, feeds, folders } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
-import { displayFeedTitle } from "./display-title";
+import { displayFeedTitle } from "./title";
 import type { FeedDetailDto, SubscribedFeedListItemDto } from "../types";
 
 type DB = typeof db;

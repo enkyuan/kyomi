@@ -10,6 +10,8 @@ tests/bun.lock
 dist
 build
 coverage
+.catalog-sync-logs/
+.catalog-sync.lock/
 .cursor/*
 .antigravitycli
 .agents

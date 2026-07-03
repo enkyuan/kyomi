@@ -4,7 +4,7 @@ import { and, asc, desc, eq, gt, gte, ilike, isNotNull, lt, or, sql, type SQL } 
 import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { listClipsForUser } from "../../write/clips";
-import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "../../write/clips-constants";
+import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "../../write/clips/constants";
 import type { ArticleSort } from "../../query";
 import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
 import { decodeMergedListCursor } from "./cursor";

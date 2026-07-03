@@ -1,6 +1,6 @@
-import { db, pool } from "@adapters/db/client";
-import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
-import { searchFeeds } from "@modules/discover/service";
+import { db, pool } from "../../apps/api/src/adapters/db/client";
+import { assertApiDatabaseReady } from "../../apps/api/src/adapters/db/script-preflight";
+import { searchFeeds } from "../../apps/api/src/modules/discover/service";
 
 function getArgValue(flag: string): string | null {
   const index = process.argv.indexOf(flag);

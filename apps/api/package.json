@@ -9,8 +9,8 @@
     "start": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/entry.ts",
     "worker": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/worker.ts",
     "scheduler": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/scheduler.ts",
-    "catalog:import": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/scripts/catalog-import.ts --input ../../packages/catalog/processing/exports/catalog-feeds.jsonl",
-    "catalog:smoke": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/scripts/catalog-smoke.ts --query \"hacker news\" --expect \"hacker news\"",
+    "catalog:import": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun ../../scripts/catalog/import.ts --input ../../packages/catalog/processing/exports/catalog-feeds.jsonl",
+    "catalog:smoke": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun ../../scripts/catalog/smoke.ts --query \"hacker news\" --expect \"hacker news\"",
     "fmt": "bunx oxfmt src",
     "fmt:check": "bunx oxfmt --check src",
     "lint": "bunx oxlint src",
@@ -18,10 +18,10 @@
     "typecheck": "bunx tsgo -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@kyomi/db": "workspace:*",
-    "@kyomi/worker": "workspace:*",
     "@elysiajs/cors": "^1.4.0",
     "@elysiajs/swagger": "^1.3.1",
+    "@kyomi/db": "workspace:*",
+    "@kyomi/worker": "workspace:*",
     "@mozilla/readability": "^0.6.0",
     "@sinclair/typebox": "0.34.48",
     "@t3-oss/env-core": "^0.13.10",

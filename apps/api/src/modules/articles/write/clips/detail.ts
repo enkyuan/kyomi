@@ -6,9 +6,9 @@ import {
   buildExtractedReaderViewFromDb,
   buildStoredReaderContent,
   type ExtractedContentStatus,
-} from "../reader/content";
-import type { ArticleDetailDto, ArticleListItemDto } from "../types";
-import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./clips-constants";
+} from "../../reader/content";
+import type { ArticleDetailDto, ArticleListItemDto } from "../../types";
+import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./constants";
 
 type DB = typeof db;
 

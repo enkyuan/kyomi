@@ -1,8 +1,11 @@
-import { feeds } from "@kyomi/db";
-import { db, pool } from "@adapters/db/client";
-import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
-import { upsertFeedSearchDocument } from "@adapters/search/meili";
-import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize-url";
+import { feeds } from "../../packages/db/src";
+import { db, pool } from "../../apps/api/src/adapters/db/client";
+import { assertApiDatabaseReady } from "../../apps/api/src/adapters/db/script-preflight";
+import { upsertFeedSearchDocument } from "../../apps/api/src/adapters/search/meili";
+import {
+  assertHttpOrHttpsUrl,
+  normalizeFeedUrl,
+} from "../../apps/api/src/modules/discover/feed/normalize-url";
 
 type CatalogFeedRecord = {
   feed_url: string;
