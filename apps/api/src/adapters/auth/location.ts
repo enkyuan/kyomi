@@ -154,9 +154,9 @@ export function resolveLocationFromAuthContext(
   return resolveLocationFromHeaders(getRequestHeaders(context), ipAddress);
 }
 
-export function hydrateStoredLocation<T extends { ipAddress?: string | null } & Partial<LocationFields>>(
-  session: T,
-): T & LocationFields {
+export function hydrateStoredLocation<
+  T extends { ipAddress?: string | null } & Partial<LocationFields>,
+>(session: T): T & LocationFields {
   const locationCity = normalizeHeaderValue(session.locationCity ?? null);
   const locationRegion = normalizeHeaderValue(session.locationRegion ?? null);
   const locationCountry = normalizeHeaderValue(session.locationCountry ?? null);

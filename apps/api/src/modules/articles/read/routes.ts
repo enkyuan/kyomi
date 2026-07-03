@@ -24,11 +24,7 @@ import {
   unreadCountsQuerySchema,
 } from "../schemas";
 import { checkSavedArticleForUser } from "./saved-check";
-import {
-  listMergedRecentlyReadView,
-  listMergedSavedView,
-  listMergedTodayView,
-} from "./list/views";
+import { listMergedRecentlyReadView, listMergedSavedView, listMergedTodayView } from "./list/views";
 
 export function registerArticleReadRoutes(app: Elysia) {
   return (
