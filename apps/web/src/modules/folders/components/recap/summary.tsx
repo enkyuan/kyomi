@@ -1,6 +1,13 @@
 "use client";
 
-import { AddFill, FileExportFill, FileImportFill, Folder2Fill, RightFill } from "@mingcute/react";
+import {
+  AddFill,
+  FileExportFill,
+  FileImportFill,
+  Folder2Fill,
+  ListCheckFill,
+  RightFill,
+} from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
 import { getSvgPath } from "figma-squircle";
 import type { CSSProperties } from "react";
@@ -84,20 +91,64 @@ export function FolderActions({
   );
 }
 
+function FolderSummaryActions({
+  onAddFolder,
+  onImportOpml,
+  onManageFolders,
+}: {
+  onAddFolder: () => void;
+  onImportOpml: () => void;
+  onManageFolders: () => void;
+}) {
+  return (
+    <div className="mt-auto grid min-w-0 shrink-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)_2.5rem] gap-2 px-1 pt-3">
+      <RailTooltip label="Manage folders">
+        <Button
+          className={FOLDER_ACTION_BUTTON_CLASS}
+          variant="secondary"
+          onClick={onManageFolders}
+        >
+          <ListCheckFill className="!mx-0 size-4" />
+          Manage
+        </Button>
+      </RailTooltip>
+      <RailTooltip label="Import OPML">
+        <Button
+          aria-label="Import OPML"
+          className={FOLDER_ACTION_BUTTON_CLASS}
+          variant="secondary"
+          onClick={onImportOpml}
+        >
+          <FileImportFill className="!mx-0 size-4" />
+          Import
+        </Button>
+      </RailTooltip>
+      <RailTooltip label="Create folder">
+        <Button
+          aria-label="Create folder"
+          className={FOLDER_ICON_BUTTON_CLASS}
+          variant="outline"
+          onClick={onAddFolder}
+        >
+          <AddFill className="!mx-0 size-4" />
+        </Button>
+      </RailTooltip>
+    </div>
+  );
+}
+
 export function Folders({
-  exportingOpml,
   folders,
   onExpand,
   onCreateFolder,
-  onExportOpml,
   onImportOpml,
+  onSelectFolder,
 }: {
-  exportingOpml: boolean;
   folders: RecapFolder[];
   onExpand: () => void;
   onCreateFolder: () => void;
-  onExportOpml: () => void;
   onImportOpml: () => void;
+  onSelectFolder: (folder: RecapFolder) => void;
 }) {
   return (
     <RecapSection
@@ -125,14 +176,14 @@ export function Folders({
           }
         />
       ) : (
-        <>
-          <div className="space-y-3">
+        <div className="flex min-h-0 flex-1 flex-col">
+          <div className="min-h-0 space-y-3 overflow-hidden">
             {folders.slice(0, 3).map((folder) => (
               <button
                 key={folder.id}
                 className="group flex min-h-10 w-full min-w-0 cursor-pointer items-center gap-3 rounded-2xl py-1 ps-2 pe-1 text-left text-base outline-none transition-colors hover:bg-accent/70 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
                 type="button"
-                onClick={onExpand}
+                onClick={() => onSelectFolder(folder)}
               >
                 <FolderIconBadge />
                 <span className="min-w-0 flex-1">
@@ -144,13 +195,12 @@ export function Folders({
               </button>
             ))}
           </div>
-          <FolderActions
-            exportingOpml={exportingOpml}
-            onCreateFolder={onCreateFolder}
-            onExportOpml={onExportOpml}
+          <FolderSummaryActions
+            onAddFolder={onCreateFolder}
             onImportOpml={onImportOpml}
+            onManageFolders={onExpand}
           />
-        </>
+        </div>
       )}
     </RecapSection>
   );

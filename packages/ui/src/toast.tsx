@@ -155,6 +155,8 @@ function toastMingcuteIconClassName(type: string | undefined): string {
   return type === "loading" ? "animate-spin opacity-90" : "";
 }
 
+type SwipeDirection = "up" | "down" | "left" | "right";
+
 type AnchorRect = {
   bottom: number;
   height: number;
@@ -163,6 +165,14 @@ type AnchorRect = {
   top: number;
   width: number;
 };
+
+type AnchoredToastData = {
+  anchorRect?: AnchorRect;
+  tooltipStyle?: boolean;
+};
+
+type ToastManager = ReturnType<typeof Toast.createToastManager>;
+type ToastInput = Parameters<ToastManager["add"]>[0];
 
 function getAnchorRect(anchor: Element | null | undefined): AnchorRect | null {
   if (!anchor?.isConnected) {
@@ -211,12 +221,12 @@ function useAnchorRect(anchor: Element | null | undefined): AnchorRect | null {
 
 function getToastAnchorStyle(
   rect: AnchorRect,
-  positionerProps: NonNullable<ToastObject<Record<string, unknown>>["positionerProps"]>,
+  positionerProps: ToastObject<Record<string, unknown>>["positionerProps"] | undefined,
 ): CSSProperties {
-  const side = positionerProps.side ?? "top";
+  const side = positionerProps?.side ?? "top";
   const sideOffset =
-    typeof positionerProps.sideOffset === "number" ? positionerProps.sideOffset : 4;
-  const position = positionerProps.positionMethod ?? "fixed";
+    typeof positionerProps?.sideOffset === "number" ? positionerProps.sideOffset : 4;
+  const position = positionerProps?.positionMethod ?? "fixed";
   const scrollLeft = position === "absolute" ? window.scrollX : 0;
   const scrollTop = position === "absolute" ? window.scrollY : 0;
 
@@ -229,8 +239,6 @@ function getToastAnchorStyle(
     zIndex: TOAST_LAYER_Z_INDEX,
   };
 }
-
-type SwipeDirection = "up" | "down" | "left" | "right";
 
 function getSwipeDirection(position: ToastPosition): SwipeDirection[] {
   const verticalDirection: SwipeDirection = position.startsWith("top") ? "up" : "down";
@@ -347,22 +355,34 @@ function AnchoredToastItem({
 }: {
   toast: ToastObject<Record<string, unknown>>;
 }): React.ReactElement | null {
-  const tooltipStyle = (toast.data as { tooltipStyle?: boolean })?.tooltipStyle ?? false;
+  const toastData = toast.data as AnchoredToastData | undefined;
+  const tooltipStyle = toastData?.tooltipStyle ?? false;
   const positionerProps = toast.positionerProps;
-  const anchorRect = useAnchorRect(positionerProps?.anchor);
+  const liveAnchorRect = useAnchorRect(positionerProps?.anchor);
+  const anchorRect = liveAnchorRect ?? toastData?.anchorRect ?? null;
 
-  if (!positionerProps?.anchor || !anchorRect) {
+  if (!anchorRect) {
     return null;
   }
 
-  const positionerClassName =
-    typeof positionerProps.className === "string" ? positionerProps.className : undefined;
+  const { className, sideOffset, style, ...basePositionerProps } = positionerProps ?? {};
+  const positionerClassName = typeof className === "string" ? className : undefined;
+  const positionerStyle = {
+    ...(style as CSSProperties | undefined),
+    ...getToastAnchorStyle(anchorRect, positionerProps),
+  } satisfies CSSProperties;
 
   return (
-    <div
-      className={cn("max-w-64", positionerClassName)}
+    <Toast.Positioner
+      {...basePositionerProps}
+      className={cn(
+        "z-[60] max-w-[min(--spacing(64),var(--available-width))]",
+        positionerClassName,
+      )}
       data-slot="toast-positioner"
-      style={getToastAnchorStyle(anchorRect, positionerProps)}
+      sideOffset={sideOffset ?? 4}
+      style={positionerStyle}
+      toast={toast}
     >
       <Toast.Root
         className={cn(
@@ -399,8 +419,31 @@ function AnchoredToastItem({
           </Toast.Content>
         )}
       </Toast.Root>
-    </div>
+    </Toast.Positioner>
   );
+}
+
+function snapshotAnchoredToastInput(toast: ToastInput): ToastInput {
+  const anchorRect = getAnchorRect(toast.positionerProps?.anchor);
+  if (!anchorRect) {
+    return toast;
+  }
+
+  return {
+    ...toast,
+    data: {
+      ...toast.data,
+      anchorRect,
+    },
+  };
+}
+
+function createAnchoredToastManager(): ToastManager {
+  const manager = Toast.createToastManager();
+  const add = manager.add.bind(manager);
+  manager.add = ((toast: ToastInput) =>
+    add(snapshotAnchoredToastInput(toast))) as ToastManager["add"];
+  return manager;
 }
 
 function AnchoredToasts(): React.ReactElement {
@@ -421,9 +464,8 @@ function AnchoredToasts(): React.ReactElement {
   );
 }
 
-export const toastManager: ReturnType<typeof Toast.createToastManager> = Toast.createToastManager();
-export const anchoredToastManager: ReturnType<typeof Toast.createToastManager> =
-  Toast.createToastManager();
+export const toastManager: ToastManager = Toast.createToastManager();
+export const anchoredToastManager: ToastManager = createAnchoredToastManager();
 
 export type ToastPosition =
   | "top-left"

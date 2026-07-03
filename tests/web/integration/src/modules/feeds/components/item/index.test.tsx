@@ -1,13 +1,16 @@
-import { act, fireEvent, render, screen, within } from "@testing-library/react";
+import { act, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxItem } from "@modules/inbox/services/api";
 
-const { mutateAsyncMock, mutateMock, reportBrokenArticleMock } = vi.hoisted(() => ({
-  mutateAsyncMock: vi.fn(),
-  mutateMock: vi.fn(),
-  reportBrokenArticleMock: vi.fn(),
-}));
+const { mutateAsyncMock, mutateMock, reportBrokenArticleMock, toastAddMock, toastUpdateMock } =
+  vi.hoisted(() => ({
+    mutateAsyncMock: vi.fn(),
+    mutateMock: vi.fn(),
+    reportBrokenArticleMock: vi.fn(),
+    toastAddMock: vi.fn(),
+    toastUpdateMock: vi.fn(),
+  }));
 
 vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
   useInboxItemStateMutation: () => ({ mutate: mutateMock, mutateAsync: mutateAsyncMock }),
@@ -15,6 +18,13 @@ vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
 
 vi.mock("@modules/inbox/services/api", () => ({
   reportBrokenArticle: reportBrokenArticleMock,
+}));
+
+vi.mock("@kyomi/ui/toast", () => ({
+  toastManager: {
+    add: toastAddMock,
+    update: toastUpdateMock,
+  },
 }));
 
 vi.mock("@hooks/use-pretext", () => ({
@@ -75,6 +85,9 @@ describe("inbox item toolbar", () => {
     mutateAsyncMock.mockClear();
     mutateMock.mockClear();
     reportBrokenArticleMock.mockReset();
+    toastAddMock.mockReturnValue("toast-1");
+    toastAddMock.mockClear();
+    toastUpdateMock.mockClear();
     vi.stubGlobal(
       "ResizeObserver",
       class ResizeObserver {
@@ -120,6 +133,32 @@ describe("inbox item toolbar", () => {
       itemId: item.id,
       patch: { isHidden: true },
       removeFromList: true,
+    });
+  });
+
+  test("uses an info toast when removing an item from read later", async () => {
+    renderItem({ rowItem: { ...item, isSaved: true } });
+
+    await click(screen.getByRole("button", { name: "Remove from read later" }));
+
+    expect(mutateAsyncMock).toHaveBeenCalledWith({
+      itemId: item.id,
+      patch: { isSaved: false },
+    });
+    expect(toastAddMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        title: "Removing from read later...",
+        type: "loading",
+      }),
+    );
+    await waitFor(() => {
+      expect(toastUpdateMock).toHaveBeenCalledWith(
+        "toast-1",
+        expect.objectContaining({
+          title: "Removed from read later",
+          type: "info",
+        }),
+      );
     });
   });
 

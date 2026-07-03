@@ -9,12 +9,25 @@ import {
 } from "@mingcute/react";
 import { Command } from "cmdk";
 import { useRef } from "react";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { Kbd } from "@kyomi/ui/kbd";
+import { useFeedback } from "@hooks/use-feedback";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import type { DiscoverFeedResult } from "@modules/feeds/lib/api";
 
 export const DISCOVER_RESULTS_UI_CAP = 200;
 type FollowFeedHandler = (item: DiscoverFeedResult, anchor?: HTMLElement | null) => void;
+const FOLLOW_ACTION_ICON_TRANSITION = { type: "spring" as const, duration: 0.3, bounce: 0 };
+const FOLLOW_ACTION_ICON_STATE = {
+  opacity: 1,
+  scale: 1,
+  filter: "blur(0px)",
+};
+const FOLLOW_ACTION_ICON_HIDDEN_STATE = {
+  opacity: 0,
+  scale: 0.25,
+  filter: "blur(4px)",
+};
 
 export type FollowSourcesCommandState =
   | { kind: "idle" }
@@ -180,14 +193,24 @@ function CommandResultItem({
   onFollowFeed: FollowFeedHandler;
 }) {
   const isSubscribed = item.isSubscribed || isPendingFollow;
+  const { isActive: isShowingFollowFeedback, showFeedback } = useFeedback();
+  const showFollowedState = isSubscribed || isShowingFollowFeedback;
   const itemRef = useRef<HTMLDivElement | null>(null);
-  const actionRef = useRef<HTMLSpanElement | null>(null);
+  const actionRef = useRef<HTMLButtonElement | null>(null);
+  const followFromAction = () => {
+    if (showFollowedState) {
+      return;
+    }
+
+    showFeedback();
+    onFollowFeed(item, actionRef.current ?? itemRef.current);
+  };
 
   return (
     <Command.Item
       ref={itemRef}
       value={`${item.title} ${item.url} ${item.description ?? ""}`}
-      onSelect={() => onFollowFeed(item, actionRef.current ?? itemRef.current)}
+      onSelect={followFromAction}
     >
       <span className="kyomi-feed-command-favicon">
         <FeedFavicon
@@ -204,14 +227,45 @@ function CommandResultItem({
         <p>{item.title || item.url}</p>
         <p>{item.description || item.url}</p>
       </div>
-      <span
+      <button
         ref={actionRef}
-        aria-label={isSubscribed ? "Following" : "Add feed"}
+        aria-label={showFollowedState ? "Following" : "Add feed"}
         className="kyomi-feed-command-item-action"
-        title={isSubscribed ? "Following" : "Add feed"}
+        disabled={showFollowedState}
+        tabIndex={-1}
+        title={showFollowedState ? "Following" : "Add feed"}
+        type="button"
+        onClick={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          followFromAction();
+        }}
+        onPointerDown={(event) => event.stopPropagation()}
       >
-        {isSubscribed ? <CheckCircleFill /> : <AddCircleFill />}
-      </span>
+        <FollowActionIcon isFollowing={showFollowedState} />
+      </button>
     </Command.Item>
+  );
+}
+
+function FollowActionIcon({ isFollowing }: { isFollowing: boolean }) {
+  const prefersReducedMotion = useReducedMotion();
+  const Icon = isFollowing ? CheckCircleFill : AddCircleFill;
+
+  return (
+    <LazyMotion features={domAnimation}>
+      <AnimatePresence mode="popLayout" initial={false}>
+        <m.span
+          key={isFollowing ? "following" : "add"}
+          className="kyomi-feed-command-action-icon"
+          initial={prefersReducedMotion ? false : FOLLOW_ACTION_ICON_HIDDEN_STATE}
+          animate={FOLLOW_ACTION_ICON_STATE}
+          exit={prefersReducedMotion ? undefined : FOLLOW_ACTION_ICON_HIDDEN_STATE}
+          transition={prefersReducedMotion ? { duration: 0 } : FOLLOW_ACTION_ICON_TRANSITION}
+        >
+          <Icon />
+        </m.span>
+      </AnimatePresence>
+    </LazyMotion>
   );
 }

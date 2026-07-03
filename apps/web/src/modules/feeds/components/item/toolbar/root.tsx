@@ -10,7 +10,7 @@ import {
 } from "@mingcute/react";
 import { Toolbar as ToolbarRoot, ToolbarGroup, ToolbarSeparator } from "@kyomi/ui/toolbar";
 import { cn } from "@kyomi/ui/lib/utils";
-import type { ItemToolbarProps } from "@hooks/use-toolbar";
+import type { ItemToolbarProps } from "@modules/toolbar/lib/types";
 import { ItemToolbarButton } from "./button";
 import { ItemToolbarMenu } from "./menu";
 

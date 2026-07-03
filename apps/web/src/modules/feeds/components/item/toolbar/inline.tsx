@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { InboxItem } from "@modules/inbox/services/api";
 import { cn } from "@kyomi/ui/lib/utils";
-import { useItemToolbarModel } from "@hooks/use-toolbar";
+import { useItemToolbarModel } from "@modules/toolbar/hooks/use-item";
 import { ReportArticleDialog } from "../report-article";
 import { ItemToolbar } from "./root";
 

@@ -150,20 +150,29 @@ export function ExpandedFolderFeeds({
     cancelSelecting();
   };
 
-  const exportSelectedFeeds = () => {
-    if (selectedFeeds.length === 0) {
+  const exportFeeds = (
+    feedsToExport: FollowedFeed[],
+    description: string | ((count: number) => string),
+  ) => {
+    if (feedsToExport.length === 0) {
       return;
     }
-    downloadSelectedOpml(folder, selectedFeeds);
+    downloadSelectedOpml(folder, feedsToExport);
     toastManager.add({
       title: "OPML exported",
       description:
-        selectedFeeds.length === 1
-          ? "1 selected source exported."
-          : `${selectedFeeds.length} selected sources exported.`,
+        typeof description === "function" ? description(feedsToExport.length) : description,
       type: "success",
     });
   };
+  const exportFolderFeeds = () =>
+    exportFeeds(folderFeeds, (count) =>
+      count === 1 ? "1 source exported." : `${count} sources exported.`,
+    );
+  const exportSelectedFeeds = () =>
+    exportFeeds(selectedFeeds, (count) =>
+      count === 1 ? "1 selected source exported." : `${count} selected sources exported.`,
+    );
 
   if (isLoading) {
     return (
@@ -195,8 +204,8 @@ export function ExpandedFolderFeeds({
           isSelecting={false}
           selectedCount={0}
           onAddSources={onImportOpml}
+          onExportFeeds={exportFolderFeeds}
           onExportSelected={exportSelectedFeeds}
-          onImportOpml={onImportOpml}
           onMoveSelected={moveSelectedFeeds}
           onRemoveSelected={removeSelectedFeeds}
           onStartSelecting={() => setIsSelecting(true)}
@@ -332,8 +341,8 @@ export function ExpandedFolderFeeds({
           isSelecting={isSelecting}
           selectedCount={selectedFeeds.length}
           onAddSources={onImportOpml}
+          onExportFeeds={exportFolderFeeds}
           onExportSelected={exportSelectedFeeds}
-          onImportOpml={onImportOpml}
           onMoveSelected={moveSelectedFeeds}
           onRemoveSelected={removeSelectedFeeds}
           onStartSelecting={() => setIsSelecting(true)}

@@ -17,7 +17,11 @@ import { moveFeedsToFolder } from "@modules/folders/lib/api";
 import { inboxRecapQueryKey, inboxRecapQueryOptions } from "@modules/inbox/queries/options";
 import { updateInboxItemState } from "@modules/inbox/services/api";
 import type { InboxRecapDto } from "@modules/inbox/services/recap-schema";
-import { RecapExpandedView, type RecapExpandedSection } from "./expanded";
+import {
+  RecapExpandedView,
+  type RecapExpandedSection,
+  type SelectedFolderBackTarget,
+} from "./expanded";
 import { RecapError, RecapSkeleton, SectionEmpty } from "./sections";
 import { TopSources } from "./sections/top-sources";
 import type { RecapTopViewedFeed } from "./types";
@@ -51,6 +55,8 @@ type RecapCardState = {
   followSourcesDialogLoaded: boolean;
   followSourcesOpen: boolean;
   navigationDirection: TransitionDirection;
+  selectedFolderBackTarget: SelectedFolderBackTarget | null;
+  selectedFolderId: string | null;
 };
 
 type RecapCardAction =
@@ -60,9 +66,16 @@ type RecapCardAction =
       type: "set-expanded-section";
       section: RecapExpandedSection | null;
       direction?: TransitionDirection;
+      selectedFolderBackTarget?: SelectedFolderBackTarget;
+      selectedFolderId?: string | null;
     }
   | { type: "set-exporting-opml"; exporting: boolean }
-  | { type: "set-follow-sources-open"; open: boolean };
+  | { type: "set-follow-sources-open"; open: boolean }
+  | {
+      type: "set-selected-folder";
+      folderId: string | null;
+      backTarget?: SelectedFolderBackTarget;
+    };
 
 type FollowTopSourceInput = {
   feed: RecapTopViewedFeed;
@@ -81,6 +94,8 @@ const initialRecapCardState: RecapCardState = {
   followSourcesDialogLoaded: false,
   followSourcesOpen: false,
   navigationDirection: "forward",
+  selectedFolderBackTarget: null,
+  selectedFolderId: null,
 };
 
 function recapCardReducer(state: RecapCardState, action: RecapCardAction): RecapCardState {
@@ -89,16 +104,29 @@ function recapCardReducer(state: RecapCardState, action: RecapCardAction): Recap
       return { ...state, followSourcesDialogLoaded: true };
     case "set-create-folder-open":
       return { ...state, createFolderOpen: action.open };
-    case "set-expanded-section":
+    case "set-expanded-section": {
+      const selectedFolderId =
+        action.section === "folders" ? (action.selectedFolderId ?? null) : null;
       return {
         ...state,
         expandedSection: action.section,
         navigationDirection: action.direction ?? (action.section ? "forward" : "backward"),
+        selectedFolderBackTarget: selectedFolderId
+          ? (action.selectedFolderBackTarget ?? "folders")
+          : null,
+        selectedFolderId,
       };
+    }
     case "set-exporting-opml":
       return { ...state, exportingOpml: action.exporting };
     case "set-follow-sources-open":
       return { ...state, followSourcesOpen: action.open };
+    case "set-selected-folder":
+      return {
+        ...state,
+        selectedFolderBackTarget: action.folderId ? (action.backTarget ?? "folders") : null,
+        selectedFolderId: action.folderId,
+      };
   }
 }
 
@@ -111,6 +139,8 @@ export function InboxRecapCard() {
       followSourcesDialogLoaded,
       followSourcesOpen,
       navigationDirection,
+      selectedFolderBackTarget,
+      selectedFolderId,
     },
     dispatch,
   ] = useReducer(recapCardReducer, initialRecapCardState);
@@ -356,6 +386,8 @@ export function InboxRecapCard() {
         removeFeeds={(feedIds, options) => removeFeedsMutation.mutate({ feedIds, ...options })}
         removingFeedIds={removingFeedIds}
         section={expandedSection}
+        selectedFolderBackTarget={selectedFolderBackTarget}
+        selectedFolderId={selectedFolderId}
         topViewedFeeds={topViewedFeeds}
         unsavingItemId={unsavingItemId}
         onBack={() =>
@@ -364,6 +396,9 @@ export function InboxRecapCard() {
         onCreateFolder={() => dispatch({ type: "set-create-folder-open", open: true })}
         onExportOpml={exportOpmlAction}
         onImportOpml={() => setFollowSourcesDialogOpen(true)}
+        onSelectFolder={(folderId, backTarget) =>
+          dispatch({ type: "set-selected-folder", folderId, backTarget })
+        }
         onUnsave={(itemId) => unsaveMutation.mutate({ itemId })}
       />
     );
@@ -390,12 +425,18 @@ export function InboxRecapCard() {
     content = (
       <div className="grid min-h-0 flex-1 grid-rows-3 gap-4 overflow-hidden py-4">
         <Folders
-          exportingOpml={exportingOpml}
           folders={folders}
           onExpand={() => dispatch({ type: "set-expanded-section", section: "folders" })}
           onCreateFolder={() => dispatch({ type: "set-create-folder-open", open: true })}
-          onExportOpml={exportOpmlAction}
           onImportOpml={() => setFollowSourcesDialogOpen(true)}
+          onSelectFolder={(folder) =>
+            dispatch({
+              type: "set-expanded-section",
+              section: "folders",
+              selectedFolderBackTarget: "recap",
+              selectedFolderId: folder.id,
+            })
+          }
         />
         <TopSources
           feeds={topViewedFeeds}

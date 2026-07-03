@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  AddFill,
-  Delete2Fill,
-  FileExportFill,
-  FileImportFill,
-  ListCheckFill,
-  MoveFill,
-} from "@mingcute/react";
+import { AddFill, Delete2Fill, FileExportFill, ListCheckFill, MoveFill } from "@mingcute/react";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/button";
 import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
@@ -29,8 +22,8 @@ export function FolderFeedActions({
   isMovingSelected,
   isSelecting,
   onAddSources,
+  onExportFeeds,
   onExportSelected,
-  onImportOpml,
   onMoveSelected,
   onRemoveSelected,
   onStartSelecting,
@@ -42,8 +35,8 @@ export function FolderFeedActions({
   isMovingSelected: boolean;
   isSelecting: boolean;
   onAddSources: () => void;
+  onExportFeeds: () => void;
   onExportSelected: () => void;
-  onImportOpml: () => void;
   onMoveSelected: (folderId: string) => void;
   onRemoveSelected: () => void;
   onStartSelecting: () => void;
@@ -141,18 +134,23 @@ export function FolderFeedActions({
         <ListCheckFill className="!mx-0 size-4" />
         Select
       </Button>
-      <Button className={FOLDER_ACTION_BUTTON_CLASS} variant="secondary" onClick={onAddSources}>
-        <AddFill className="!mx-0 size-4" />
-        Add
+      <Button
+        className={FOLDER_ACTION_BUTTON_CLASS}
+        disabled={!hasFeeds}
+        variant="secondary"
+        onClick={onExportFeeds}
+      >
+        <FileExportFill className="!mx-0 size-4" />
+        Export
       </Button>
-      <RailTooltip label="Import OPML">
+      <RailTooltip label="Add sources">
         <Button
-          aria-label="Import OPML"
+          aria-label="Add sources"
           className={FOLDER_ICON_BUTTON_CLASS}
           variant="outline"
-          onClick={onImportOpml}
+          onClick={onAddSources}
         >
-          <FileImportFill className="!mx-0 size-4" />
+          <AddFill className="!mx-0 size-4" />
         </Button>
       </RailTooltip>
     </div>

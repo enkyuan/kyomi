@@ -46,7 +46,7 @@ function showFollowedToast(anchor?: HTMLElement | null) {
   anchoredToastManager.add({
     title: "Following!",
     type: "success",
-    timeout: 1600,
+    timeout: 2400,
     data: { tooltipStyle: true },
     positionerProps: {
       anchor,
@@ -175,15 +175,15 @@ export function FollowSourcesDialog({
 
   const followFeedMutation = useMutation({
     mutationFn: ({ feedId, url }: FollowFeedMutationInput) => followFeed({ data: { feedId, url } }),
-    onMutate: async ({ feedId, url }) => {
+    onMutate: async ({ anchor, feedId, url }) => {
       const followKey = feedId ?? url;
       pendingFollowKeysRef.current?.add(followKey);
+      showFollowedToast(anchor);
       await queryClient.cancelQueries({ queryKey: ["discover", "feeds"] });
       markDiscoverFeedSubscribed(queryClient, { url, feedId: feedId ?? undefined });
       return { feedId: feedId ?? undefined, followKey, url };
     },
-    onSuccess: async (result, variables) => {
-      showFollowedToast(variables.anchor);
+    onSuccess: async (result) => {
       markDiscoverFeedSubscribed(queryClient, { url: result.url, feedId: result.feedId });
       invalidateFeedAndInboxQueries(queryClient);
       await queryClient.invalidateQueries({

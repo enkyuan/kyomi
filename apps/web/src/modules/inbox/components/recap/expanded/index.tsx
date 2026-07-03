@@ -15,6 +15,7 @@ import { ExpandedTopSources } from "./top-sources";
 import type { RecapSavedItem, RecapTopViewedFeed } from "../types";
 
 export type RecapExpandedSection = "folders" | "topSources" | "worthRevisiting";
+export type SelectedFolderBackTarget = "folders" | "recap";
 type RemoveFeedsToastOptions = {
   anchor?: HTMLElement | null;
   feedName?: string;
@@ -41,10 +42,13 @@ export function RecapExpandedView({
   removeFeeds,
   removingFeedIds,
   exportingOpml,
+  selectedFolderId,
+  selectedFolderBackTarget,
   onCreateFolder,
   onExportOpml,
   onImportOpml,
   onBack,
+  onSelectFolder,
   onUnsave,
   unsavingItemId,
 }: {
@@ -61,14 +65,16 @@ export function RecapExpandedView({
   removeFeeds: (feedIds: string[], options?: RemoveFeedsToastOptions) => void;
   removingFeedIds: string[];
   exportingOpml: boolean;
+  selectedFolderId: string | null;
+  selectedFolderBackTarget: SelectedFolderBackTarget | null;
   onCreateFolder: () => void;
   onExportOpml: () => void;
   onImportOpml: () => void;
   onBack: () => void;
+  onSelectFolder: (folderId: string | null, backTarget?: SelectedFolderBackTarget) => void;
   onUnsave: (itemId: string) => void;
   unsavingItemId: string | null;
 }) {
-  const [selectedFolderId, setSelectedFolderId] = useState<string | null>(null);
   const [folderScreenDirection, setFolderScreenDirection] =
     useState<TransitionDirection>("forward");
   const folderOptions = useMemo(
@@ -92,16 +98,21 @@ export function RecapExpandedView({
   const handleBack = () => {
     if (selectedFolder) {
       setFolderScreenDirection("backward");
-      setSelectedFolderId(null);
+      if (selectedFolderBackTarget === "recap") {
+        onBack();
+        return;
+      }
+      onSelectFolder(null);
       return;
     }
     onBack();
   };
   const selectFolder = (folder: RecapFolder) => {
     setFolderScreenDirection("forward");
-    setSelectedFolderId(folder.id);
+    onSelectFolder(folder.id, "folders");
   };
-  const backLabel = selectedFolder ? "Back to folders" : "Back to recap";
+  const backLabel =
+    selectedFolder && selectedFolderBackTarget !== "recap" ? "Back to folders" : "Back to recap";
   const screenKey = selectedFolder ? `folder-${selectedFolder.id}` : `section-${section}`;
   const folderTransition = useTransition({
     className: "relative min-h-0 min-w-0 flex-1 overflow-hidden",

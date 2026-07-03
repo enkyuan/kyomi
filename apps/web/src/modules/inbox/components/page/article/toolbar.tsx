@@ -5,7 +5,7 @@ import { m, useReducedMotion } from "motion/react";
 import { Button } from "@kyomi/ui/button";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { Toolbar as ReaderToolbarRoot } from "@modules/reader/components/toolbar";
-import type { ToolbarModel } from "@hooks/use-toolbar";
+import type { ToolbarModel } from "@modules/toolbar/lib/types";
 
 const EXPANDED_READER_TOOLBAR_WIDTH = "13.5625rem";
 const COLLAPSED_READER_TOOLBAR_WIDTH = "5.5rem";
