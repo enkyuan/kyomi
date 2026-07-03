@@ -1,4 +1,4 @@
-export { apiJsonValidated } from "./api-json";
+export { fetchValidatedJson } from "./json";
 export {
   articleCountsSchema,
   articleDetailSchema,
@@ -13,20 +13,8 @@ export type {
   ExtractFullTextResponseDto,
 } from "./article";
 export { authSessionListRowSchema, authSessionListSchema } from "./auth";
-export {
-  discoverFeedResultSchema,
-  feedDetailSchema,
-  feedRefreshStatusListSchema,
-  feedRefreshStatusRowSchema,
-  followedFeedsListSchema,
-  followFeedResultSchema,
-} from "./feed";
-export type {
-  DiscoverFeedResultDto,
-  FeedDetailDto,
-  FollowedFeedDto,
-  FollowFeedResultDto,
-} from "./feed";
+export { discoverFeedResultSchema, followedFeedsListSchema, followFeedResultSchema } from "./feed";
+export type { DiscoverFeedResultDto, FollowedFeedDto, FollowFeedResultDto } from "./feed";
 export { messageResponseSchema } from "./message";
 export { opmlImportAcceptedSchema, opmlImportStatusSchema } from "./opml";
 export type { OpmlImportAcceptedDto, OpmlImportStatusDto } from "./opml";

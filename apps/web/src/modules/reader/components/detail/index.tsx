@@ -1,43 +1,22 @@
 "use client";
 
-import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
-import { cn } from "@lib/utils";
-import { useReaderPreferences } from "@modules/reader/hooks/use-reader-preferences";
-import { readerViewportContentInsetClass } from "@modules/reader/lib/detail-inset";
+import { BrowserScrollBar, ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
+import { cn } from "@kyomi/ui/lib/utils";
+import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
+import { readerViewportContentInsetClass, type DetailViewProps } from "@modules/reader/lib/detail";
 import { useEffect, useRef, useState } from "react";
-import type { ReactNode } from "react";
-import { BlurLayer } from "./blur-layer";
-import { ContentView } from "./content-view";
+import { BlurLayer } from "./chrome/blur";
+import { ContentView } from "./content";
 
 const DETAIL_BACK_BUTTON_BLUR_OFFSET = 52;
 
-type ArticleStepDirection = 1 | -1;
-
-export type ReaderDetailState =
-  | { status: "selected"; item: ArticleDetailDto }
-  | { status: "loading" }
-  | { status: "error"; error: unknown }
-  | { status: "empty" };
-
-export type DetailHeaderState = {
-  readerControlsCollapsed: boolean;
-};
-
-export interface DetailViewProps {
-  detailState: ReaderDetailState;
-  density: InboxDensityDto;
-  fontSizePx: number;
-  showFavicons: boolean;
-  timestampDisplay: InboxTimestampDisplayDto;
-  timestampHourCycle: "12h" | "24h";
-  showBackToList?: boolean;
-  onBackToList?: () => void;
-  surface?: "card" | "inbox";
-  header?: ReactNode | ((state: DetailHeaderState) => ReactNode);
-  articleContentKey?: string;
-  articleStepDirection?: ArticleStepDirection;
-}
+export type {
+  ArticleStepDirection,
+  DetailHeaderState,
+  DetailSurface,
+  DetailViewProps,
+  ReaderDetailState,
+} from "@modules/reader/lib/detail";
 
 // oxlint-disable-next-line eslint/complexity
 export function Detail({
@@ -49,14 +28,14 @@ export function Detail({
   timestampHourCycle,
   showBackToList = false,
   onBackToList,
-  surface = "card",
+  surface = "browser",
   header,
   articleContentKey,
   articleStepDirection = 1,
 }: DetailViewProps) {
   const { preferences } = useReaderPreferences();
   const viewportRef = useRef<HTMLDivElement | null>(null);
-  const isInboxSurface = surface === "inbox";
+  const isBrowserSurface = surface === "browser";
   const isNarrowContent = preferences.contentWidth === "narrow";
   const blurTopOffset = showBackToList ? DETAIL_BACK_BUTTON_BLUR_OFFSET : 0;
   const selectedItem = detailState.status === "selected" ? detailState.item : null;
@@ -75,7 +54,7 @@ export function Detail({
   const selectedContentKey = articleContentKey ?? selectedItem?.id;
   const viewportContentInset =
     selectedItem &&
-    (isInboxSurface
+    (isBrowserSurface
       ? "box-border w-full min-w-0 px-9.5"
       : readerViewportContentInsetClass({
           showBackToList,
@@ -90,7 +69,7 @@ export function Detail({
   }, [selectedItemId]);
 
   useEffect(() => {
-    if (!isInboxSurface || !selectedItemId) {
+    if (!isBrowserSurface || !selectedItemId) {
       return;
     }
 
@@ -136,7 +115,7 @@ export function Detail({
         window.cancelAnimationFrame(frameId);
       }
     };
-  }, [isInboxSurface, selectedItemId]);
+  }, [isBrowserSurface, selectedItemId]);
 
   const renderedHeader =
     typeof header === "function" ? header({ readerControlsCollapsed }) : header;
@@ -145,7 +124,7 @@ export function Detail({
     <section
       className={cn(
         "flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden md:min-h-0",
-        isInboxSurface
+        isBrowserSurface
           ? "rounded-none border-0 bg-transparent text-foreground"
           : "rounded-2xl border border-border bg-card text-card-foreground shadow-sm/5 supports-[-webkit-touch-callout:none]:rounded-[1.75rem]",
       )}
@@ -176,23 +155,21 @@ export function Detail({
               timestampHourCycle={timestampHourCycle}
               showBackToList={showBackToList}
               onBackToList={onBackToList}
-              isInboxSurface={isInboxSurface}
+              isBrowserSurface={isBrowserSurface}
               selectedContentKey={selectedContentKey}
               articleStepDirection={articleStepDirection}
             />
           </div>
         </ScrollAreaPrimitive.Viewport>
-        {selectedItem && !isInboxSurface ? <BlurLayer topOffset={blurTopOffset} /> : null}
-        {selectedItem ? (
-          <ScrollBar
+        {selectedItem && !isBrowserSurface ? <BlurLayer topOffset={blurTopOffset} /> : null}
+        {selectedItem && isBrowserSurface ? (
+          <BrowserScrollBar
             aria-label="Reader scrollbar"
-            className={cn(
-              "z-50",
-              isInboxSurface &&
-                "!fixed !top-0 !right-0 !bottom-0 !left-auto !h-auto !inset-inline-end-0",
-            )}
+            className="z-50 !fixed !top-0 !right-0 !bottom-0 !left-auto !h-auto !inset-inline-end-0"
             orientation="vertical"
           />
+        ) : selectedItem ? (
+          <ScrollBar aria-label="Reader scrollbar" className="z-50" orientation="vertical" />
         ) : null}
       </ScrollAreaPrimitive.Root>
     </section>

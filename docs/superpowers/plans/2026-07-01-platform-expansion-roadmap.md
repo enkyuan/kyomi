@@ -2,13 +2,13 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development for implementation work with independent lanes, or use superpowers:executing-plans task-by-task if working serially. Steps use checkbox (`- [ ]`) syntax for tracking. Do not edit this plan while executing it; advance checkbox status only.
 
-**Goal:** Expand Kyomi from an RSS-first reader into a source-aware, searchable, AI-assisted reading platform with a carefully scoped developer API, while preserving the calm default reading experience.
+**Goal:** Expand Kyomi from an RSS-first reader into a source-aware, searchable, AI-assisted reading platform with a carefully scoped developer API, a trustworthy self-hosting path, and million-feed scale readiness, while preserving the calm default reading experience.
 
-**Architecture:** Add a metadata spine across Postgres, Meilisearch, and article DTOs; reuse Better Auth for OAuth and verified API-key primitives; add source connectors behind explicit credentials and feature flags; route article intelligence through a small AI service boundary; make social features opt-in and private by default; expose only allowlisted public API DTOs through a separate `/api/public/v1` contract.
+**Architecture:** Add a metadata spine across Postgres, Meilisearch, and article DTOs; reuse Better Auth for OAuth and verified API-key primitives; add source connectors behind explicit credentials and feature flags; route article intelligence through a small AI service boundary; make social features opt-in and private by default; expose only allowlisted public API DTOs through a separate `/api/public/v1` contract; split background refresh scale from the user-initiated feed-follow fast path; treat Postgres as the durable source of truth for ingestion, backfills, upgrades, and recovery; make self-hosted/local Kyomi a first-class deployment mode with zero-credential defaults.
 
 **Tech Stack:** Bun, TypeScript, Elysia, Drizzle/Postgres, Redis Streams, Meilisearch, Better Auth, OpenAPI, TanStack React Start/Router/Query/Form, Tailwind CSS, `@kyomi/ui`, Python catalog pipeline, YouTube Data API v3, Reddit API, X API v2, and a verified AI provider adapter.
 
-**Review Status:** Drafted with `writing-plans` and refined with the `plan-tune`, CEO review, and engineering review rubrics. Engineering review D1 selected the parent-roadmap structure: this file owns sequence, dependencies, and acceptance gates; child implementation plans own code-level task detail. Engineering review also added explicit gates for source identity, search authorization, token-vault boundaries, AI annotation privacy, share/discussion previews, and public developer API exposure.
+**Review Status:** Drafted with `writing-plans` and refined with the `plan-tune`, CEO review, engineering review, and developer-experience review rubrics. Engineering review D1 selected the parent-roadmap structure: this file owns sequence, dependencies, and acceptance gates; child implementation plans own code-level task detail. Engineering review also added explicit gates for source identity, search authorization, token-vault boundaries, AI annotation privacy, share/discussion previews, public developer API exposure, feed-follow performance, durability/recovery, and self-hosting.
 
 **Plan Type:** Parent roadmap. Do not implement code directly from this file except for creating or updating the child implementation plans named below.
 
@@ -25,6 +25,9 @@
 - Normal app runtime and onboarding must not require the optional Python catalog pipeline.
 - Sharing should use Kyomi-owned share targets when possible so feed items and feeds get reliable previews, while the original publisher URL remains visible and reachable.
 - Developer API access is a product surface, not a shortcut into internal routes. Public API responses must use explicit DTO allowlists, scoped credentials, rate limits, audit logs, and documentation that can be trusted by third-party builders.
+- Self-hosted/local Kyomi should feel like an appliance, not a source checkout. Core reading, RSS, search, saved/read state, and OPML should work with no third-party credentials.
+- User-initiated feed follows are a separate fast path from scheduled refresh. Known feeds should populate from cached normalized items immediately; unknown feeds should acknowledge the follow quickly and stream/poll first items as soon as the high-priority fetch completes.
+- Kyomi accepts human-facing source URLs, but workers refresh canonical machine-readable source URLs. HTML returned during refresh triggers autodiscovery or a feed-owner failure classification; it is not treated as a new feed format unless Microformats support is explicitly planned.
 
 ## Current Architecture From Audit
 
@@ -45,6 +48,8 @@ What already exists:
 - `apps/api/src/adapters/rate-limit/plugin.ts` already provides Redis-backed route rate limiting with an in-memory fallback, but it does not yet model developer principals, scopes, quotas, usage dashboards, or public API audit logs.
 - `apps/api/src/app/http/api-v1-router.ts` owns the authenticated product API under `/api/v1`, and `apps/api/src/adapters/openapi/plugin.ts` documents that product API under `/api/v1/openapi`. There is no separate external developer contract.
 - `docs/superpowers/plans/2026-07-01-feed-refresh-scale-architecture.md` already covers scaling feed refresh from the current local worker shape to horizontally scaled workers and large feed catalogs.
+- `packages/worker/src/services/feed/parse.ts` already rejects HTML bodies with `Unsupported feed format: received HTML document`; scheduled refresh currently does not run the same HTML autodiscovery fallback used by initial discovery.
+- The Docker compose stack can run local infrastructure, but there is no one-command local appliance flow, browser installer, doctor command, backup/restore workflow, or published image naming/release policy.
 
 Primary gaps:
 
@@ -56,6 +61,11 @@ Primary gaps:
 - Comment/discussion links inside feed items are not modeled as related content. A link whose visible text is `Comments` can only show a bare URL preview today.
 - Feed item and feed sharing lacks server-owned public preview routes, crawler metadata, revocation/visibility rules, and tests that prove private user state is not exposed.
 - A public-facing developer API does not exist. Adding one safely requires a separate router, credential model, scope taxonomy, rate-limit/quota model, OpenAPI contract, developer docs, and tests that prove internal fields and private user state are never exposed.
+- The roadmap protects high-volume scheduled refresh, but it does not yet define an interactive feed-follow SLO, priority lane, known-feed cache path, or cold unknown-feed user experience.
+- Redis Streams are treated as job transport, but the roadmap needs a durable Postgres ingestion ledger for refresh attempts, backfills, indexing, replay, failed jobs, and upgrade audits.
+- Upgrade safety is under-specified for rolling workers, versioned queue payloads, Meili index swaps, backfills that span deploys, and old/new code running together.
+- Self-hosting is not yet a product lane. Without prebuilt images, a guided setup, health checks, backups, and upgrade docs, local users inherit open-source setup friction.
+- Stored feed URLs may be human-facing pages, stale endpoints, access-denied pages, or content-negotiated HTML. The refresh path needs feed-first `Accept` headers, HTML autodiscovery, canonical URL updates, and feed-owner failure classification.
 
 ## Scale Readiness Dependency
 
@@ -71,6 +81,22 @@ Minimum scale gate:
 - Queue lag, scheduler claims, feed-owner errors, platform errors, and host-level failure classes are observable.
 - Production rollout docs include scale math for 500K and 1M feeds, concurrent index guidance, and rollback.
 
+Million-feed product gate:
+
+- Scale targets are explicit before implementation: at least 1M feeds, stretch target above 5M feeds, expected items/day, active users, search document count, AI jobs/day, and connector refresh volume.
+- Feed refresh cadence is adaptive, not uniformly hourly. The scheduler uses subscriber count, source activity, HTTP cache headers, observed publish frequency, failure class, platform quota, and host politeness to choose refresh windows.
+- User-triggered feed follows, OPML imports, scheduled refresh, connector backfills, search indexing, AI enrichment, preview fetching, and catalog imports use separate priority lanes or route-family limits.
+- Known-feed follows populate from existing normalized items without a network fetch. Unknown-feed follows acknowledge quickly, enqueue a high-priority discovery/fetch job, and expose visible progress to the UI.
+- Cold-follow SLOs distinguish what can actually be instant from what requires network I/O:
+  - API follow acknowledgement: target `<100ms` p95 after auth and validation.
+  - Known-feed first visible items: target `<300ms` p95 from cached Postgres/Meili data.
+  - Unknown-feed first visible items: target `<2s` p50 and `<5s` p95 when the publisher responds normally.
+  - Full historical backfill, search indexing, AI enrichment, previews, and favicon work are background operations with visible status.
+- Sub-millisecond populated articles for a brand-new unknown feed is not a realistic networked SLO. The product target is "feels instant": immediate subscription state, cached data when available, and progressive hydration for first fetches.
+- Postgres is the durable ingestion and backfill ledger. Redis Streams transport work, but important ingestion intent, attempts, outcomes, replay cursors, and backfill progress must be reconstructable from Postgres.
+- Meilisearch is rebuildable from Postgres through versioned indexes and atomic swaps. A broken index must not require data loss or ad hoc mutation to recover.
+- Rolling deploys tolerate old and new workers concurrently. Queue payloads, ingestion ledger records, connector payloads, and backfill cursors must be versioned before incompatible worker changes ship.
+
 Scale rollout order:
 
 1. Land the feed refresh scale plan.
@@ -79,8 +105,9 @@ Scale rollout order:
 4. Create or update Meilisearch indexes.
 5. Enable article search on existing articles.
 6. Enable connector ingestion at low concurrency.
-7. Enable public API in a closed beta only after route-level quotas, usage metrics, and private-state leak tests pass.
-8. Increase connector, scheduler, and public API throughput only after queue lag, database utilization, Meili indexing latency, public API 429/5xx rates, and host error rates are measured.
+7. Enable the feed-follow fast path only after known-feed and unknown-feed SLO tests pass with realistic network fixtures.
+8. Enable public API in a closed beta only after route-level quotas, usage metrics, and private-state leak tests pass.
+9. Increase connector, scheduler, cold-follow, indexing, and public API throughput only after queue lag, oldest job age, database utilization, Meili indexing latency, cold-follow p95, public API 429/5xx rates, and host error rates are measured.
 
 ## Target Architecture
 
@@ -115,6 +142,90 @@ flowchart LR
 The most important invariant: every user-facing article, regardless of source, belongs to a `feeds` row and becomes a normalized feed item with source metadata, category/tag assignments, search documents, and privacy-aware user state.
 
 The public API invariant: external callers never receive internal entities directly. Every endpoint must map through a public DTO allowlist after credential, scope, object-level authorization, property-level authorization, and rate-limit checks.
+
+The scale invariant: scheduled refresh throughput and interactive feed-follow latency are separate codepaths with separate SLOs, priority, observability, and failure handling. Optimizing one must not starve or hide failures in the other.
+
+The durability invariant: Postgres records the durable truth for subscriptions, source identity, feed URLs, feed items, ingestion attempts, backfill progress, share targets, public API audit events, and user state. Redis queues, Meilisearch indexes, object storage derivatives, and AI/indexing outputs must be replayable or rebuildable from durable state.
+
+The self-hosting invariant: a local user can run core Kyomi without Google, YouTube, Reddit, X, AI, or public API credentials. Optional integrations advertise disabled status with clear enablement steps instead of failing at startup.
+
+## Feed Follow Cold Start Flow
+
+```mermaid
+flowchart TD
+  User["user follows URL/source"] --> Normalize["normalize submitted URL"]
+  Normalize --> Known["lookup canonical feed/source"]
+  Known -->|known feed| Subscribe["create subscription"]
+  Subscribe --> Cached["return cached items immediately"]
+  Cached --> UI["inbox/search hydrate from Postgres/Meili"]
+
+  Known -->|unknown URL| Discover["priority discovery + fetch job"]
+  Discover --> Html["HTML autodiscovery fallback if needed"]
+  Html --> Canonical["store canonical machine-readable URL"]
+  Canonical --> Persist["persist feed + first items"]
+  Persist --> Index["enqueue search indexing"]
+  Persist --> Notify["invalidate/poll/push UI refresh"]
+```
+
+Cold-start requirements:
+
+- Store the original submitted URL separately from the canonical feed URL and site URL.
+- Normalize known feeds by canonical feed URL, canonical site URL, platform source id, and final redirect target where safe.
+- Return an optimistic subscribed state before first unknown-feed fetch completes.
+- If the feed is already known, do not refetch before showing existing items.
+- If the feed is unknown, put discovery/fetch ahead of scheduled refresh and OPML import, but still enforce host politeness and global backpressure.
+- First fetch should parse the latest visible feed items first; historical expansion, metadata enrichment, favicon, preview, AI, and indexing jobs follow.
+- UI should show explicit states: `subscribed`, `fetching_latest`, `items_ready`, `feed_unavailable`, and `needs_feed_url`.
+- Performance tests must cover known feed, unknown RSS, homepage with alternate RSS link, stale endpoint returning HTML, slow publisher, duplicate concurrent follows, and two users following the same unknown URL at once.
+
+## Feed URL Canonicalization Flow
+
+```mermaid
+flowchart TD
+  Fetch["fetch stored feeds.url"] --> Accept["feed-first Accept header"]
+  Accept --> Parse["parse RSS / Atom / JSON Feed"]
+  Parse -->|ok| Refresh["refresh feed items"]
+  Parse -->|HTML body| Auto["scan alternate feed links"]
+  Auto -->|found| FetchAlt["fetch discovered feed URL"]
+  FetchAlt --> ParseAlt["parse discovered document"]
+  ParseAlt -->|ok| Update["update canonical feed URL"]
+  Update --> Refresh
+  Auto -->|none| Classify["feed-owner HTML failure"]
+  Classify --> Backoff["longer backoff + visible source health"]
+```
+
+Canonicalization requirements:
+
+- Worker refresh `Accept` headers should prefer `application/feed+json`, `application/rss+xml`, `application/atom+xml`, XML, and JSON feed types before `text/html`.
+- HTML returned during scheduled refresh is not a new parser format by default. It triggers autodiscovery for `<link rel="alternate">` feed URLs.
+- If autodiscovery succeeds, update the canonical machine-readable `feeds.url` while retaining the submitted/site URL for display and audit.
+- If autodiscovery fails, classify as feed-owner failure such as `html_not_feed`, `access_denied_html`, `captcha_html`, `login_html`, or `stale_endpoint_html`; do not log it as unknown platform failure.
+- Microformats `h-feed` / `h-entry` support is explicitly out of scope unless a separate plan adds HTML-as-feed semantics and tests.
+
+## Self-Hosting And Local Appliance Flow
+
+```mermaid
+flowchart TD
+  Download["download compose or launcher"] --> Start["kyomi up / docker compose up"]
+  Start --> Installer["browser setup wizard"]
+  Installer --> Health["service health checks"]
+  Health --> Secrets["generate local secrets"]
+  Secrets --> Migrate["run migrations + Meili setup"]
+  Migrate --> Admin["create admin account"]
+  Admin --> Ready["open inbox with demo/import options"]
+  Ready --> Optional["enable optional integrations"]
+```
+
+Self-hosting requirements:
+
+- Publish prebuilt images with canonical GHCR names: `ghcr.io/kyomi/web`, `ghcr.io/kyomi/api`, `ghcr.io/kyomi/worker`, `ghcr.io/kyomi/catalog`, and `ghcr.io/kyomi/local` for a future all-in-one appliance image.
+- Docker Hub mirrors may use `kyomi/web`, `kyomi/api`, `kyomi/worker`, `kyomi/catalog`, and `kyomi/local`, but GHCR remains the canonical provenance source.
+- Provide Docker Compose profiles for `core`, `ai`, `connectors`, `catalog`, and `devtools`.
+- Provide `kyomi up`, `kyomi doctor`, `kyomi backup`, `kyomi restore`, and `kyomi reset` as wrapper commands or equivalent container commands.
+- The browser installer handles admin account creation, generated local secrets, base URL, service health, migrations, Meili index setup, optional OPML import, and optional integration credentials.
+- Backup/restore covers Postgres and uploaded/object-storage assets. Meilisearch can be restored from snapshot or rebuilt from Postgres, but the chosen strategy must be documented and tested.
+- Local AI can use Ollama or an OpenAI-compatible endpoint, but AI remains optional and disabled by default.
+- Self-hosting smoke tests must prove a fresh environment reaches a usable inbox in under 5 minutes on a normal developer machine, excluding first image download.
 
 ## Source Search Flow
 
@@ -334,9 +445,12 @@ Privacy invariants:
 - Keep `apps/api/src/modules/feeds/routes.ts` thin. New search, connector, and AI work belongs in dedicated modules or shared packages.
 - Avoid feeds, inbox, and sidebar import cycles by importing concrete module paths, not broad barrels.
 - Keep normal runtime and setup independent from Poetry, `uv`, and catalog sync.
+- Keep self-hosted/local core setup independent from external API credentials, paid AI services, Google OAuth, YouTube, Reddit, X, and public API enablement.
 - Use explicit Drizzle migrations and update `packages/db/drizzle/meta/_journal.json`.
 - Do not enable large connector backfills or catalog imports until the Scale Readiness Dependency gate is complete.
+- Do not enable million-feed scheduled refresh throughput until feed-follow SLO tests, ingestion ledger replay tests, and adaptive refresh controls are in place.
 - Reuse existing Meilisearch infrastructure. Do not add a second search engine before proving Meili cannot handle the required ranking, filtering, or indexing behavior.
+- Treat Meilisearch indexes as rebuildable derivatives. Every index backfill or rebuild must have versioned index names, progress state, swap criteria, and rollback.
 - Use Better Auth for Google OAuth rather than a separate auth library.
 - Use Tailwind utilities and `@kyomi/ui` primitives for frontend settings, onboarding, and search UI.
 - Use `LazyMotion` plus `m` from `motion/react` for Framer Motion work.
@@ -345,6 +459,11 @@ Privacy invariants:
 - Do not trust LLM output. Validate structured outputs, store provenance, and display confidence only when it is meaningful.
 - Do not require API credentials for YouTube, Reddit, X, Google OAuth, or AI providers in local development unless the related feature flag is enabled.
 - Reddit and X v1 connectors are public-source or app-credential only. Per-user Reddit/X OAuth, home timelines, private follows, or refresh-token storage require a separate token-vault child plan with encryption, key rotation, revocation, and audit tests.
+- Store submitted URL, canonical feed URL, site URL, and discovery provenance separately. User-facing URLs can be human pages; worker refresh URLs should be machine-readable feed endpoints.
+- Scheduled refresh should never treat HTML as a successful feed parse. HTML is either autodiscovery input or a classified feed-owner failure.
+- Queue payloads that can survive deploys must be versioned before rolling workers or replaying old jobs.
+- Backfills must be resumable, pausable, bounded, and auditable through Postgres progress state rather than one-off scripts.
+- Local/self-hosting image names must stay consistent with the monorepo surfaces: `web`, `api`, `worker`, `catalog`, and `local`.
 - Link previews and discussion previews must be server-enriched, cached, size-limited, and governed by the existing outbound URL safety policy.
 - Server-owned share URLs must re-check visibility on every request and must never include private user state in HTML, Open Graph metadata, or JSON hydration payloads.
 - Public developer API endpoints must live under `/api/public/v1` and must not reuse private `/api/v1` response objects directly.
@@ -364,6 +483,9 @@ Privacy invariants:
 - Public algorithmic social feeds enabled by default.
 - Training custom models on user reading history.
 - Replacing the existing feed refresh architecture.
+- Guaranteeing that brand-new unknown feeds populate articles in sub-millisecond time. The roadmap targets instant acknowledgement and cached known-feed population, while network fetches remain bounded by publisher latency.
+- Microformats `h-feed` / `h-entry` parsing or arbitrary HTML-as-feed ingestion. HTML autodiscovery is in scope; treating generic pages as feeds needs a separate reviewed plan.
+- Making the all-in-one `ghcr.io/kyomi/local` image the first self-hosting deliverable. It is a future appliance target after split images and compose are stable.
 - Delegated third-party OAuth consent for developers to access other users' Kyomi accounts. Public API v1 uses owner-authorized API keys; OAuth app consent needs a separate reviewed child plan.
 - Public API write access for following/unfollowing sources, mutating connector credentials, marking read/saved state, managing folders, editing clips/notes, creating knowledge banks, or changing social visibility.
 - Exposing private read activity, saved state, folder names, private clips, private notes, private AI annotations, knowledge banks, source credentials, raw request logs, or internal queue/admin diagnostics through the public API.
@@ -373,7 +495,13 @@ Privacy invariants:
 | User note | Covered by |
 | --- | --- |
 | Add YouTube support | Task 8 |
-| Expand system scale and take in more feeds | Scale Readiness Dependency plus Tasks 2, 3, 5, 8, 9, and 13 |
+| Expand system scale and take in more feeds | Scale Readiness Dependency plus Tasks 2, 3, 5, 8, 9, 13, 15, and 16 |
+| Reach well over 1M feeds | Feed Refresh Scale Architecture plus Tasks 15, 16, and 18 |
+| Make first feed follow feel instant | Task 15 |
+| Add durability, replay, and upgrade safety | Task 16 |
+| Run Kyomi locally with extreme ease | Task 17 |
+| Self-host with prebuilt Docker images and guided setup | Task 17 |
+| Handle stored feed URLs that return HTML pages | Tasks 2 and 15 |
 | i18n and translations | Task 11 |
 | Tagging feed items based on category | Tasks 2, 3, and 4 |
 | Search service for the search bar | Task 5 |
@@ -413,7 +541,10 @@ Child plan gate matrix:
 | `2026-07-01-social-mode.md` | Task 12 | Any profile, follow, or read-activity sharing implementation | Profiles, follows, visibility rules, blocks, social UI, privacy tests |
 | `2026-07-01-sharing-discussion-previews.md` | Task 13 | Any Kyomi-owned share URL, feed share preview, feed item share preview, or enriched comments/discussion link preview | Preview classification, server-side preview cache, public discussion excerpts, share target routes, Open Graph metadata, privacy tests |
 | `2026-07-01-public-api-platform.md` | Task 14 | Any public developer API endpoint, API key management surface, public API docs, or external client contract | Separate `/api/public/v1` router, scoped API keys, public DTO allowlists, rate limits, usage/audit logs, OpenAPI docs, privacy tests |
-| `2026-07-01-platform-rollout-observability.md` | Task 15 | Production rollout of the platform expansion | Smoke tests, feature flag rollout, backfills, dashboards, rollback, release notes |
+| `2026-07-01-feed-follow-cold-start-performance.md` | Task 15 | Any new follow-source path, million-feed performance gate, or feed URL canonicalization change | Known-feed cache path, unknown-feed priority fetch, SLOs, HTML autodiscovery, canonical URL updates, priority queues, load tests |
+| `2026-07-01-durability-upgrades-recovery.md` | Task 16 | Any durable ingestion ledger, queue payload versioning, backfill/reindex framework, backup/restore, or rolling worker upgrade | Postgres ingestion ledger, replay, DLQs, versioned payloads, Meili index swaps, migration safety, restore drills |
+| `2026-07-01-self-hosting-local-appliance.md` | Task 17 | Any self-hosting docs, local launcher, published images, setup wizard, local doctor, backup, restore, or upgrade UX | GHCR image naming, compose profiles, browser installer, zero-credential defaults, health checks, backup/restore, upgrade docs |
+| `2026-07-01-platform-rollout-observability.md` | Task 18 | Production rollout of the platform expansion | Smoke tests, feature flag rollout, backfills, dashboards, rollback, release notes |
 
 Child plan creation order:
 
@@ -425,7 +556,10 @@ Child plan creation order:
 6. Create and review `social-mode`.
 7. Create and review `sharing-discussion-previews`.
 8. Create and review `public-api-platform`.
-9. Create and review `platform-rollout-observability`.
+9. Create and review `feed-follow-cold-start-performance`.
+10. Create and review `durability-upgrades-recovery`.
+11. Create and review `self-hosting-local-appliance`.
+12. Create and review `platform-rollout-observability`.
 
 ## Parent Gate List
 
@@ -444,7 +578,10 @@ Child plan creation order:
 - [ ] Task 12: Add opt-in social mode.
 - [ ] Task 13: Add sharing and discussion previews.
 - [ ] Task 14: Add public developer API platform.
-- [ ] Task 15: Run final validation, observability, and rollout checks.
+- [ ] Task 15: Add feed-follow cold start and million-feed performance gates.
+- [ ] Task 16: Add durability, recovery, and upgrade safety.
+- [ ] Task 17: Add self-hosting and local appliance support.
+- [ ] Task 18: Run final validation, observability, and rollout checks.
 
 ## Task 0: Child Implementation Plan Gates
 
@@ -459,6 +596,9 @@ Child plan creation order:
 - Create `docs/superpowers/plans/2026-07-01-social-mode.md`
 - Create `docs/superpowers/plans/2026-07-01-sharing-discussion-previews.md`
 - Create `docs/superpowers/plans/2026-07-01-public-api-platform.md`
+- Create `docs/superpowers/plans/2026-07-01-feed-follow-cold-start-performance.md`
+- Create `docs/superpowers/plans/2026-07-01-durability-upgrades-recovery.md`
+- Create `docs/superpowers/plans/2026-07-01-self-hosting-local-appliance.md`
 - Create `docs/superpowers/plans/2026-07-01-platform-rollout-observability.md`
 
 ### Steps
@@ -470,14 +610,17 @@ Child plan creation order:
 - [ ] Create the social child plan covering Task 12, with route-level visibility tests before UI work.
 - [ ] Create the sharing/discussion child plan covering Task 13, with server-side preview enrichment, share URL visibility rules, Open Graph metadata, and crawler tests.
 - [ ] Create the public API child plan covering Task 14, with scoped credentials, DTO allowlists, rate limits, public OpenAPI docs, and private-state leak tests.
-- [ ] Create the rollout child plan covering Task 15, with batch sizing, observability, backfill, and rollback runbooks.
+- [ ] Create the feed-follow/cold-start child plan covering Task 15, with known-feed cache population, unknown-feed priority fetch, realistic SLOs, duplicate follow races, HTML autodiscovery, canonical URL updates, and load tests.
+- [ ] Create the durability/upgrades child plan covering Task 16, with durable ingestion ledger, replay, DLQs, versioned queue payloads, rolling worker safety, Meili index swaps, restore drills, and migration runbooks.
+- [ ] Create the self-hosting/local appliance child plan covering Task 17, with prebuilt image publishing, compose profiles, setup wizard, doctor, backup, restore, reset, zero-credential defaults, and upgrade docs.
+- [ ] Create the rollout child plan covering Task 18, with batch sizing, observability, backfill, and rollback runbooks.
 - [ ] Run `/plan-eng-review` on each child plan before code implementation starts.
 
 ### Validation
 
 ```bash
-rg -n "## GSTACK REVIEW REPORT|NO UNRESOLVED DECISIONS" docs/superpowers/plans/2026-07-01-{platform-foundation-metadata-search,settings-onboarding-auth,source-connectors,article-intelligence-knowledge-i18n,social-mode,sharing-discussion-previews,public-api-platform,platform-rollout-observability}.md
-rg -n "feature flag|rollback|failure mode|Validation" docs/superpowers/plans/2026-07-01-{platform-foundation-metadata-search,sharing-discussion-previews,public-api-platform,platform-rollout-observability}.md
+rg -n "## GSTACK REVIEW REPORT|NO UNRESOLVED DECISIONS" docs/superpowers/plans/2026-07-01-{platform-foundation-metadata-search,settings-onboarding-auth,source-connectors,article-intelligence-knowledge-i18n,social-mode,sharing-discussion-previews,public-api-platform,feed-follow-cold-start-performance,durability-upgrades-recovery,self-hosting-local-appliance,platform-rollout-observability}.md
+rg -n "feature flag|rollback|failure mode|Validation|SLO|backup|restore|versioned payload|canonical" docs/superpowers/plans/2026-07-01-{platform-foundation-metadata-search,sharing-discussion-previews,public-api-platform,feed-follow-cold-start-performance,durability-upgrades-recovery,self-hosting-local-appliance,platform-rollout-observability}.md
 ```
 
 ## Task 1: Dependency, Platform, And Rollout Audit
@@ -493,7 +636,7 @@ rg -n "feature flag|rollback|failure mode|Validation" docs/superpowers/plans/202
 
 ### Steps
 
-- [ ] Create `docs/superpowers/platform-expansion-decisions.md` with sections for Google OAuth, YouTube, Reddit, X, AI provider, Meilisearch index strategy, link/share preview behavior, public developer API exposure, public API rate limits, and social privacy defaults.
+- [ ] Create `docs/superpowers/platform-expansion-decisions.md` with sections for Google OAuth, YouTube, Reddit, X, AI provider, Meilisearch index strategy, link/share preview behavior, public developer API exposure, public API rate limits, feed-follow SLOs, self-hosting image/distribution policy, durable ingestion/recovery posture, and social privacy defaults.
 - [ ] Verify whether an official stable TanStack AI SDK exists and whether it is compatible with the current Bun/TypeScript stack. Record package name, version, docs URL, and install decision.
 - [ ] If the TanStack AI SDK is not verified, record `ai_provider_adapter` as the chosen initial implementation path and do not add the package.
 - [ ] Verify whether `@better-auth/api-key` is compatible with the current Better Auth, Drizzle, Bun, and Postgres setup. Record package name, version, docs URL, schema changes, rate-limit behavior, permission model, and whether Kyomi will use the plugin or a local hashed-key implementation.
@@ -508,6 +651,7 @@ rg -n "feature flag|rollback|failure mode|Validation" docs/superpowers/plans/202
   - `FEATURE_LINK_PREVIEWS`
   - `FEATURE_SHARE_PREVIEWS`
   - `FEATURE_PUBLIC_API`
+  - `FEATURE_SELF_HOSTING_SETUP`
   - `PUBLIC_API_KEY_PREFIX`
   - `PUBLIC_API_DEFAULT_RATE_LIMIT_PER_MINUTE`
   - `PUBLIC_API_DEFAULT_RATE_LIMIT_PER_DAY`
@@ -561,7 +705,7 @@ Add these concepts:
 - `feedCategoryAssignments`: feed-level category assignments with `provenance`, `confidence`, and timestamps.
 - `feedItemTagAssignments`: article-level tags with `slug`, `label`, `provenance`, `confidence`, and timestamps.
 - `feedItemCategoryAssignments`: article-level category assignments when a feed item has stronger metadata than its parent feed.
-- New feed fields for source and catalog parity: `sourceKind`, `sourceId`, `externalId`, `catalogSource`, `language`, `contentType`, `qualityScore`, `lastSuccessfulFetchAt`, `catalogUpdatedAt`, and `metadataProvenance`.
+- New feed fields for source, catalog, and URL canonicalization parity: `sourceKind`, `sourceId`, `externalId`, `submittedUrl`, `siteUrl`, `canonicalFeedUrl`, `discoveredFromUrl`, `discoveryProvenance`, `catalogSource`, `language`, `contentType`, `qualityScore`, `lastSuccessfulFetchAt`, `catalogUpdatedAt`, and `metadataProvenance`.
 - New feed item fields for source parity: `sourceKind`, `sourceId`, `externalId`, `authorName`, `language`, and `media`.
 
 ### Invariants
@@ -570,6 +714,8 @@ Add these concepts:
 - `catalog` is never a `sourceKind`; it is metadata provenance used for imported categories, language, quality scores, favicon hints, and catalog merge records.
 - Every followable source is represented by a `feeds` row. YouTube channels/playlists, public subreddits, and public X users are feed-like containers with `feeds.sourceKind` and optional `feeds.sourceId`.
 - Do not make `feed_items.feed_id` nullable in this roadmap. Non-RSS items still belong to the feed-like container that produced them.
+- `feeds.url` or its replacement must represent the canonical machine-readable fetch URL, while `submittedUrl` and `siteUrl` preserve what the user entered and what should be displayed.
+- Canonical URL merge logic must prevent duplicate feed rows when one user follows a homepage and another follows the discovered RSS/Atom/JSON Feed URL.
 - Category and tag slugs are normalized lowercase ASCII strings.
 - User-visible labels preserve capitalization from the best trusted source.
 - All AI-derived tags use `provenance = "ai"` and include confidence.
@@ -615,6 +761,7 @@ The schema test must assert that the migration contains source tables, category 
 - [ ] Keep catalog sync optional by documenting the enriched fields in `packages/catalog/README.md`.
 - [ ] Keep favicon fetching nonblocking and compatible with Garage S3 if favicon asset storage is enabled.
 - [ ] Add validation reports for missing title, missing site URL, missing language, missing category, duplicate feed URL, duplicate canonical URL, and invalid favicon URL.
+- [ ] Add validation reports for homepage URLs that discover the same canonical feed URL as an existing feed.
 
 ### Validation
 
@@ -1287,7 +1434,184 @@ bunx vitest run tests/web/integration/modules/developers/api-keys.test.tsx
 bun run typecheck
 ```
 
-## Task 15: Final Validation, Observability, And Rollout
+## Task 15: Feed Follow Cold Start And Million-Feed Performance
+
+**Why:** Background refresh scale and first-follow latency are different product problems. Kyomi can support well over 1M feeds only if scheduled work is adaptive and user-initiated follows have their own fast, observable, priority path.
+
+### Files
+
+- Create `docs/superpowers/plans/2026-07-01-feed-follow-cold-start-performance.md`
+- Modify `apps/api/src/modules/feeds/` or create `apps/api/src/modules/sources/follow/`
+- Modify `apps/api/src/modules/discover/`
+- Modify `packages/worker/src/services/feed/fetch.ts`
+- Modify `packages/worker/src/services/feed/parse.ts`
+- Modify `packages/worker/src/services/feed/refresh.ts`
+- Modify `packages/worker/src/services/feed/` to add HTML autodiscovery helpers if they do not already exist.
+- Modify `packages/db/src/schema/feeds.ts`
+- Create or modify queue priority helpers under `packages/worker/src/services/queue/`
+- Create `tests/api/integration/modules/feeds/follow-cold-start.test.ts`
+- Create `tests/api/integration/modules/feeds/feed-url-canonicalization.test.ts`
+- Create `tests/api/integration/modules/feeds/feed-follow-slo.test.ts`
+- Create `tests/api/integration/modules/feeds/feed-follow-race.test.ts`
+- Create `tests/api/integration/modules/feeds/html-autodiscovery-refresh.test.ts`
+
+### SLO Contract
+
+| Scenario | Target | Notes |
+| --- | --- | --- |
+| Follow known feed | `<100ms` API acknowledgement, `<300ms` first visible cached items p95 | No network fetch before showing existing items. |
+| Follow unknown RSS/Atom/JSON Feed | `<100ms` acknowledgement, `<2s` p50 / `<5s` p95 first visible items | Publisher latency and host politeness still apply. |
+| Follow homepage with alternate feed link | Same as unknown feed after first HTML discovery fetch | Store submitted URL and canonical feed URL separately. |
+| Follow stale endpoint returning HTML | `<100ms` acknowledgement, visible `needs_feed_url` or `feed_unavailable` state | Do not spin indefinitely or log as platform unknown. |
+| Concurrent duplicate follows | One canonical feed row, one priority fetch, both users updated | Tests cover two users and same-user double-click. |
+
+### Requirements
+
+- [ ] Create and review the feed-follow/cold-start child plan before implementation.
+- [ ] Add explicit follow-source states: `subscribed`, `fetching_latest`, `items_ready`, `feed_unavailable`, and `needs_feed_url`.
+- [ ] Split the known-feed path from the unknown-feed path. Known feeds create subscription state and return existing feed items without waiting for network I/O.
+- [ ] Route unknown user-initiated follows through a high-priority discovery/fetch lane that cannot be starved by scheduled refresh, OPML import, connector backfills, AI jobs, or preview fetching.
+- [ ] Keep host politeness and global backpressure active for priority fetches.
+- [ ] Add a same-feed singleflight or equivalent guard so concurrent follows do not duplicate discovery/fetch/index work.
+- [ ] Store submitted URL, site URL, canonical feed URL, discovered-from URL, and discovery provenance.
+- [ ] Prefer feed formats in the worker `Accept` header before `text/html`.
+- [ ] Add scheduled-refresh HTML autodiscovery fallback that scans alternate RSS/Atom/JSON Feed links, fetches the discovered URL, parses it, and updates the canonical machine-readable feed URL.
+- [ ] If HTML autodiscovery fails, classify the result as a feed-owner failure such as `html_not_feed`, `access_denied_html`, `captcha_html`, `login_html`, or `stale_endpoint_html`, with longer backoff and source-health visibility.
+- [ ] Keep Microformats parsing out of scope unless a separate child plan adds it.
+- [ ] Add deterministic latency/load smoke tests for known feed, unknown feed, homepage discovery, stale HTML endpoint, duplicate follows, and slow publisher fixtures.
+- [ ] Add observability for follow acknowledgement latency, first item visible latency, discovery latency, canonical merge count, duplicate follow suppression count, HTML autodiscovery success/failure, and feed-owner HTML failure classes.
+
+### Validation
+
+```bash
+bun test tests/api/integration/modules/feeds/follow-cold-start.test.ts
+bun test tests/api/integration/modules/feeds/feed-url-canonicalization.test.ts
+bun test tests/api/integration/modules/feeds/feed-follow-slo.test.ts
+bun test tests/api/integration/modules/feeds/feed-follow-race.test.ts
+bun test tests/api/integration/modules/feeds/html-autodiscovery-refresh.test.ts
+bun run typecheck
+```
+
+## Task 16: Durability, Recovery, And Upgrade Safety
+
+**Why:** At million-feed scale, the system must survive worker crashes, queue loss, partial backfills, rolling deploys, and broken search indexes without losing durable user/source state or forcing manual archaeology.
+
+### Files
+
+- Create `docs/superpowers/plans/2026-07-01-durability-upgrades-recovery.md`
+- Create `packages/db/drizzle/0032_ingestion_ledger.sql`
+- Modify `packages/db/drizzle/meta/_journal.json`
+- Create or modify `packages/db/src/schema/ingestion.ts`
+- Modify `packages/worker/src/services/queue/job.ts`
+- Modify `packages/worker/src/services/feed/refresh.ts`
+- Modify Meili index setup modules under `apps/api/src/adapters/search/` and `apps/api/src/modules/search/`
+- Create backfill/reindex orchestration modules under `apps/api/src/app/jobs/` or `packages/worker/src/services/backfill/`
+- Create `tests/api/integration/db/ingestion-ledger.test.ts`
+- Create `tests/api/integration/modules/worker/versioned-payloads.test.ts`
+- Create `tests/api/integration/modules/worker/replay-ingestion.test.ts`
+- Create `tests/api/integration/modules/search/meili-index-swap.test.ts`
+- Create `tests/api/integration/modules/backfill/resume.test.ts`
+- Create restore-drill docs or tests under deployment docs.
+
+### Durable Model
+
+- `ingestionAttempts`: feed/source id, attempt kind, trigger, payload version, status, startedAt, finishedAt, error class, retry count, worker id, and request id.
+- `ingestionEvents`: append-only events for fetch started, fetch succeeded, parse failed, items inserted, index enqueued, index completed, enrichment enqueued, and terminal failure.
+- `backfillRuns`: run kind, target version, cursor, batch size, status, startedBy, startedAt, pausedAt, finishedAt, and rollback notes.
+- `reindexRuns`: source index, target index, document cursor, status, swap criteria, swappedAt, and rollback index.
+- `deadLetterJobs`: job type, payload version, payload redacted as needed, failure class, attempts, last error, and replay eligibility.
+
+### Requirements
+
+- [ ] Create and review the durability/upgrades child plan before implementation.
+- [ ] Make Postgres the durable ledger for ingestion intent, attempts, outcomes, backfills, reindexes, and replay eligibility.
+- [ ] Treat Redis Streams as transport. Losing queued Redis entries must not erase durable knowledge of work that should be retried or investigated.
+- [ ] Version all long-lived queue payloads before rolling worker changes.
+- [ ] Define compatibility rules for old workers reading new payloads and new workers reading old payloads.
+- [ ] Add dead-letter handling with named failure classes, replay eligibility, redaction rules, and operator-visible diagnostics.
+- [ ] Make backfills resumable, pausable, bounded by batch size, and restart-safe after deploy or worker crash.
+- [ ] Make Meili index changes use versioned target indexes, validation gates, atomic swaps, and rollback to prior index names.
+- [ ] Add restore drills for Postgres backup, object storage backup, and Meili rebuild from Postgres.
+- [ ] Add migration safety rules for large tables: concurrent index runbooks, nullable-first columns, dual-write/backfill/read-switch sequencing, and rollback.
+- [ ] Add operational dashboards for oldest ingestion attempt, retry histogram, DLQ depth, replay rate, backfill progress, reindex progress, index swap status, restore drill freshness, and worker payload-version mix.
+
+### Validation
+
+```bash
+bun test tests/api/integration/db/ingestion-ledger.test.ts
+bun test tests/api/integration/modules/worker/versioned-payloads.test.ts
+bun test tests/api/integration/modules/worker/replay-ingestion.test.ts
+bun test tests/api/integration/modules/search/meili-index-swap.test.ts
+bun test tests/api/integration/modules/backfill/resume.test.ts
+bun run typecheck
+```
+
+## Task 17: Self-Hosting And Local Appliance
+
+**Why:** Local Kyomi should not require users to become monorepo operators. The long-term self-hosting path should feel like a small appliance: start it, finish setup in a browser, back it up, upgrade it, and keep optional integrations visibly disabled until configured.
+
+### Files
+
+- Create `docs/superpowers/plans/2026-07-01-self-hosting-local-appliance.md`
+- Modify `docker/docker-compose.yml`
+- Create or modify `docker/docker-compose.selfhost.yml`
+- Create or modify `docker/Dockerfile`
+- Create image build/publish workflow under `.github/workflows/` if CI/CD is selected.
+- Create `scripts/kyomi` or equivalent local wrapper entry point.
+- Create `apps/web/src/modules/setup/` or equivalent first-run setup surface.
+- Create `apps/api/src/modules/setup/` or equivalent local setup API.
+- Create backup/restore scripts under `scripts/` or container commands.
+- Create `docs/self-hosting/README.md`
+- Create `docs/self-hosting/upgrade.md`
+- Create `docs/self-hosting/backup-restore.md`
+- Create `tests/api/integration/modules/setup/local-setup.test.ts`
+- Create `tests/api/integration/modules/setup/doctor.test.ts`
+- Create `tests/api/integration/modules/setup/backup-restore.test.ts`
+
+### Image Naming And Distribution
+
+Canonical GHCR images:
+
+- `ghcr.io/kyomi/web`
+- `ghcr.io/kyomi/api`
+- `ghcr.io/kyomi/worker`
+- `ghcr.io/kyomi/catalog`
+- `ghcr.io/kyomi/local` for a future all-in-one appliance image
+
+Optional Docker Hub mirrors:
+
+- `kyomi/web`
+- `kyomi/api`
+- `kyomi/worker`
+- `kyomi/catalog`
+- `kyomi/local`
+
+### Requirements
+
+- [ ] Create and review the self-hosting/local appliance child plan before implementation.
+- [ ] Define the supported self-hosting personas: developer local, NAS/home server, VPS, and future desktop launcher.
+- [ ] Add one-command technical startup through `kyomi up` or documented `docker compose up -d`.
+- [ ] Add `kyomi doctor` or equivalent diagnostics for Docker, ports, env, Postgres, Redis, Meili, object storage, migrations, API, worker, scheduler, and setup state.
+- [ ] Add `kyomi backup`, `kyomi restore`, and `kyomi reset` or equivalent container commands with clear data-loss warnings for reset.
+- [ ] Add a browser setup wizard for admin account creation, generated local secrets, base URL, service health, migrations, Meili index setup, optional OPML import, and optional integrations.
+- [ ] Keep all optional integrations disabled and non-blocking by default: Google OAuth, YouTube, Reddit, X, AI, social mode, public API, and catalog sync.
+- [ ] Add Docker Compose profiles for `core`, `ai`, `connectors`, `catalog`, and `devtools`.
+- [ ] Add image build, tagging, signing/provenance, and publish policy before documenting prebuilt images as supported.
+- [ ] Add upgrade docs with preflight checks, backup-before-upgrade guidance, image tag policy, migrations, rollback, and compatibility notes.
+- [ ] Add smoke tests proving a fresh self-hosted core environment reaches a usable inbox in under 5 minutes after images are available locally.
+
+### Validation
+
+```bash
+docker compose -f docker/docker-compose.yml config
+docker compose -f docker/docker-compose.selfhost.yml config
+bun test tests/api/integration/modules/setup/local-setup.test.ts
+bun test tests/api/integration/modules/setup/doctor.test.ts
+bun test tests/api/integration/modules/setup/backup-restore.test.ts
+bun run typecheck
+```
+
+## Task 18: Final Validation, Observability, And Rollout
 
 **Why:** This roadmap adds user-facing breadth and multiple external dependencies. Each lane needs independent verification plus a final integrated pass.
 
@@ -1300,10 +1624,13 @@ bun run typecheck
 
 ### Steps
 
-- [ ] Add structured logs for search queries, connector refreshes, AI jobs, OAuth failures, onboarding completion, preview fetches, share target creation, public API auth/scope/rate-limit outcomes, and social privacy denials.
-- [ ] Add health diagnostics for Meilisearch article index status, connector credentials, AI provider availability, preview fetch failure rate, public API route status, public API quota errors, share route status, and source queue lag.
+- [ ] Add structured logs for search queries, connector refreshes, feed-follow acknowledgement, first-item visible latency, HTML autodiscovery, canonical URL updates, ingestion ledger events, backfill/reindex progress, self-hosting setup, backup/restore, AI jobs, OAuth failures, onboarding completion, preview fetches, share target creation, public API auth/scope/rate-limit outcomes, and social privacy denials.
+- [ ] Add health diagnostics for Meilisearch article index status, connector credentials, AI provider availability, preview fetch failure rate, public API route status, public API quota errors, share route status, source queue lag, ingestion ledger lag, DLQ depth, cold-follow SLOs, self-hosting service health, backup freshness, and restore-drill status.
 - [ ] Add a production rollout checklist:
   - Complete the Scale Readiness Dependency gate.
+  - Complete the feed-follow cold-start SLO gate.
+  - Complete the durability, recovery, and rolling-upgrade gate.
+  - Complete the self-hosting/local appliance smoke gate before advertising self-hosting.
   - Apply migrations.
   - Backfill source metadata from existing feeds.
   - Backfill category assignments from catalog.
@@ -1318,14 +1645,17 @@ bun run typecheck
   - Enable share previews only after unauthenticated crawler tests and private-state leak tests pass.
   - Enable public API only after OpenAPI snapshot, BOLA, scope, quota, and private-state leak tests pass.
   - Enable social mode only after privacy tests pass in CI.
-- [ ] Add rollback steps for each feature flag and each index backfill.
-- [ ] Add smoke tests that create a user, follow an RSS feed, import catalog metadata, search by tag, complete onboarding, create a disabled-by-default public API key when the feature is off, and verify social mode remains disabled.
+- [ ] Add rollback steps for each feature flag, each index backfill, each queue payload version, each self-hosting image tag, and each public API exposure change.
+- [ ] Add smoke tests that create a user, follow a known RSS feed, follow an unknown RSS feed, follow a homepage with alternate RSS, import catalog metadata, search by tag, complete onboarding, verify local optional credentials are not required, create a disabled-by-default public API key when the feature is off, and verify social mode remains disabled.
 
 ### Validation
 
 ```bash
 bun test tests/api/integration/modules/platform-expansion/smoke.test.ts
 bun test tests/api/integration/modules/public-api/privacy.test.ts
+bun test tests/api/integration/modules/feeds/feed-follow-slo.test.ts
+bun test tests/api/integration/modules/worker/replay-ingestion.test.ts
+bun test tests/api/integration/modules/setup/local-setup.test.ts
 bun run test:api
 bun run test:web
 bun run check:boundaries
@@ -1354,6 +1684,17 @@ bun run typecheck
 - **Public OpenAPI docs drift:** OpenAPI snapshot tests fail when public docs include internal routes or omit required auth/scope/error metadata.
 - **Social privacy leak:** Route tests enforce visibility for owner, follower, unrelated user, blocked user, and logged-out user before feature flag rollout.
 - **Migration partial failure:** Every schema task has explicit migrations, journal updates, and rollback notes in the decisions document.
+- **Known feed follow refetches before showing cached items:** SLO tests fail if a known-feed follow waits on network I/O before returning existing normalized items.
+- **Unknown feed follow stalls silently:** UI state exposes `fetching_latest`, `feed_unavailable`, or `needs_feed_url`; logs include discovery/fetch failure class and first-item latency.
+- **Concurrent follows create duplicate feed rows:** Canonical URL merge tests and unique constraints fail if homepage/feed URL variants produce separate canonical feed rows.
+- **Stored feed URL returns HTML:** Worker runs HTML autodiscovery; if no alternate feed exists, it records a named feed-owner failure with longer backoff instead of unknown platform error.
+- **Redis queue data loss:** Ingestion ledger replay tests prove durable Postgres state can re-enqueue eligible work and explain terminal failures.
+- **Rolling worker incompatibility:** Versioned payload tests fail if new and old workers cannot safely ignore, process, or dead-letter payload versions.
+- **Meili reindex corrupts search:** Index swap tests validate target index settings and document counts before swap; rollback keeps the previous index addressable.
+- **Backfill interrupted mid-run:** Resume tests prove cursor state, batch boundaries, and idempotent writes prevent duplication or skipped records.
+- **Self-hosted setup blocks on optional credentials:** Local setup tests fail if Google, YouTube, Reddit, X, AI, public API, social mode, or catalog sync credentials are required for core RSS reading.
+- **Backup restore loses user data:** Backup/restore tests cover Postgres plus object-storage assets and prove Meili can be rebuilt or restored according to the documented path.
+- **Image release drift:** Self-hosting release checks fail if documented GHCR image names, tags, or compose references do not match the publish workflow.
 
 ## Worktree Parallelization
 
@@ -1366,7 +1707,10 @@ bun run typecheck
 | E | 12 | social schema, API, UI, privacy settings | Tasks 1, 2, 6, and 10 |
 | F | 13 | preview service, sharing API, share routes, reader link preview UI | Tasks 1, 2, and 5; Task 12 only for profile context |
 | G | 14 | public API router, key management, public DTOs, OpenAPI docs, usage/audit logs | Tasks 1, 2, 5, 6, and 13; Task 12 only for explicitly public profile fields |
-| H | 15 | docs, smoke tests, observability | all tasks |
+| H | 15 | feed follow fast path, canonical URL updates, priority queues, worker fetch policy | Feed Refresh Scale Architecture plus Tasks 1, 2, 3, and 5 |
+| I | 16 | ingestion ledger, queue payloads, backfills, Meili swaps, restore drills | Feed Refresh Scale Architecture plus Tasks 2, 3, 5, 8, 9, and 15 |
+| J | 17 | Docker, setup wizard, self-hosting docs, backup/restore commands, image publishing | Tasks 1, 6, 7, 15, and 16 |
+| K | 18 | docs, smoke tests, observability | all tasks |
 
 Recommended execution:
 
@@ -1377,7 +1721,10 @@ Recommended execution:
 5. Run Lane E only after privacy settings exist.
 6. Run Lane F after the metadata/search spine exists; social profile context remains conditional on Lane E.
 7. Run Lane G after search, settings, and share visibility checks exist.
-8. Run Lane H as the integrated release gate.
+8. Run Lane H after the feed refresh scale plan and metadata schema exist; it can proceed before social/API work.
+9. Run Lane I after feed-follow and metadata/backfill contracts exist.
+10. Run Lane J after setup/settings contracts and durability backup/restore decisions exist.
+11. Run Lane K as the integrated release gate.
 
 ## Commit Checkpoints
 
@@ -1395,7 +1742,10 @@ Recommended execution:
 - Commit 12: Social mode privacy model and UI.
 - Commit 13: Sharing, discussion previews, share routes, and crawler metadata tests.
 - Commit 14: Public developer API, API key management, rate limits, public OpenAPI docs, and privacy tests.
-- Commit 15: Smoke tests, observability, docs, and rollout checklist.
+- Commit 15: Feed-follow cold start, HTML autodiscovery, canonical URL updates, priority lanes, and SLO tests.
+- Commit 16: Durable ingestion ledger, versioned queue payloads, replay, backfills, Meili index swaps, and restore drills.
+- Commit 17: Self-hosting images, compose profiles, setup wizard, doctor, backup, restore, and upgrade docs.
+- Commit 18: Smoke tests, observability, docs, and rollout checklist.
 
 ## Final Acceptance Criteria
 
@@ -1411,23 +1761,44 @@ Recommended execution:
 - Social mode is off by default and privacy tests prove read activity is not exposed without explicit consent.
 - `Comments` links can show server-enriched public discussion context when available, and sharing feed items/feeds creates Kyomi-owned preview URLs without exposing private state.
 - Developers can use scoped API keys against `/api/public/v1` for allowed feed, item, search, tag, share-target, and usage operations, with rate limits, OpenAPI docs, usage visibility, and private-state leak tests.
+- Known-feed follows acknowledge quickly and show cached normalized items without waiting for a network fetch.
+- Unknown-feed follows expose progress, priority fetch results, or actionable feed-owner failures within the feed-follow SLO contract.
+- Homepage URLs with alternate feed links canonicalize to machine-readable feed URLs and do not create duplicate feed rows.
+- Scheduled refresh classifies HTML responses as autodiscovery input or feed-owner failures, not unknown platform failures.
+- Ingestion attempts, backfills, reindexes, DLQs, and replay state are durable in Postgres and observable.
+- Rolling worker deploys tolerate versioned queue payloads and old/new worker overlap.
+- Meilisearch article indexes can be rebuilt and swapped without losing the Postgres source of truth.
+- Self-hosted core setup works with no optional third-party credentials, publishes consistent GHCR image names, and includes doctor, backup, restore, reset, and upgrade paths.
 - The integrated smoke test passes with social mode disabled, proving the zen default remains intact.
 
 ## GSTACK REVIEW REPORT
 
-**Review Date:** 2026-07-02
+| Review | Trigger | Why | Runs | Status | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CEO Review | `/plan-ceo-review` | Scope & strategy | 1 | CLEAR | Added three first-class product lanes: feed-follow/million-feed performance, durability/upgrades/recovery, and self-hosting/local appliance. |
+| Codex Review | `/codex review` | Independent 2nd opinion | 0 | NOT RUN | Not requested separately; this pass used the requested gstack review rubrics directly. |
+| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 1 | CLEAR | Split background refresh from cold-follow fast path, added durable Postgres ingestion ledger requirements, versioned payloads, Meili swaps, SLO tests, and failure-mode coverage. |
+| Design Review | `/plan-design-review` | UI/UX gaps | 0 | NOT RUN | No visual design change in this parent roadmap update; setup wizard and local status UI are deferred to the self-hosting child plan. |
+| DX Review | `/plan-devex-review` | Developer experience gaps | 1 | CLEAR | Added appliance-style self-hosting, canonical GHCR image names, compose profiles, browser installer, doctor, backup, restore, reset, upgrade docs, and zero-credential local defaults. |
 
-**Review Skills:** `plan-tune`, `plan-ceo-review`, `plan-eng-review`
+- **VERDICT:** CEO + ENG + DX CLEARED. The parent roadmap now captures the requested considerations with explicit child plans, task gates, validation commands, failure modes, rollout order, and acceptance criteria.
 
-**Result:** NO UNRESOLVED DECISIONS
+**Review Date:** 2026-07-03
 
-**Review Outcome:** The plan is complete enough to stay as the parent roadmap. The public-facing developer API was the remaining major product and engineering gap, so this review added it as a dedicated child plan and Task 14 instead of folding it into the private product API or the sharing/search tasks.
+**Review Skills:** `plan-tune`, `plan-ceo-review`, `plan-eng-review`, `plan-devex-review`
+
+**Review Outcome:** The roadmap remains a parent plan, but it no longer treats scale, durability, cold-start follow latency, self-hosting, or HTML feed URL failures as implicit follow-up work. Each now has a dedicated lane and must pass its own child-plan review before implementation.
 
 **Changes From Review:**
 
-- Added the public API as a first-class product principle and target-architecture branch.
-- Added a separate `/api/public/v1` flow with credential, scope, object-authorization, property-authorization, quota, DTO allowlist, and audit-log gates.
-- Added an exposure policy for feeds, feed items, search, tags, share targets, usage, social profiles, knowledge banks, and source connector management.
-- Added Task 14, `2026-07-01-public-api-platform.md`, with logical schema, endpoint/scope matrix, rate-limit model, OpenAPI docs, UI key management, and tests.
-- Moved final rollout and observability to Task 15 and updated lanes, commit checkpoints, failure modes, rollout gates, and final acceptance criteria.
-- Added Task 1 dependency verification for the Better Auth API Key plugin and a required public API exposure matrix in `platform-expansion-decisions.md`.
+- Added self-hosting/local appliance as a first-class product principle and architecture invariant.
+- Added million-feed product gates for adaptive refresh, priority lanes, cold-follow SLOs, durable ingestion state, versioned worker payloads, and Meili rebuild/swap safety.
+- Added feed-follow cold start flow with realistic targets for known feeds, unknown feeds, homepage autodiscovery, stale HTML endpoints, and duplicate concurrent follows.
+- Added feed URL canonicalization flow: feed-first `Accept` headers, scheduled-refresh HTML autodiscovery, canonical machine-readable URL updates, and named feed-owner HTML failure classes.
+- Added self-hosting flow with GHCR image names `ghcr.io/kyomi/web`, `api`, `worker`, `catalog`, and future `local`, plus optional Docker Hub mirrors.
+- Added Task 15 for feed-follow cold start and million-feed performance.
+- Added Task 16 for durability, recovery, rolling upgrades, ingestion ledger, replay, DLQs, backfills, and Meili index swaps.
+- Added Task 17 for self-hosting/local appliance setup, doctor, backup, restore, reset, images, profiles, and upgrade docs.
+- Moved final rollout and observability to Task 18 and updated lanes, commit checkpoints, failure modes, rollout gates, validation commands, and final acceptance criteria.
+
+NO UNRESOLVED DECISIONS

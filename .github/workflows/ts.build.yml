@@ -1,0 +1,59 @@
+name: build / ts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/api/**"
+      - "apps/web/**"
+      - "packages/db/**"
+      - "packages/reader/**"
+      - "packages/tsconfig/**"
+      - "packages/ui/**"
+      - "packages/worker/**"
+      - ".bun-version"
+      - "bun.lock"
+      - "package.json"
+      - "turbo.json"
+      - ".github/actions/setup-bun/**"
+      - ".github/workflows/ts.build.yml"
+  pull_request:
+    paths:
+      - "apps/api/**"
+      - "apps/web/**"
+      - "packages/db/**"
+      - "packages/reader/**"
+      - "packages/tsconfig/**"
+      - "packages/ui/**"
+      - "packages/worker/**"
+      - ".bun-version"
+      - "bun.lock"
+      - "package.json"
+      - "turbo.json"
+      - ".github/actions/setup-bun/**"
+      - ".github/workflows/ts.build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  workspaces:
+    name: workspaces
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup-bun
+
+      - name: Build workspaces
+        run: bun run ci:build

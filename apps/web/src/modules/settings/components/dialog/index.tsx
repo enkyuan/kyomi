@@ -30,7 +30,7 @@ import {
   PersonalizationPagePanel,
   personalizationSection,
 } from "../personalization";
-import { useSettingsLogout } from "@modules/settings/hooks/use-settings-logout";
+import { useSettingsLogout } from "@modules/settings/hooks/logout";
 
 const DEFAULT_ACTIVE_SECTION_NAME = accountSection.name;
 

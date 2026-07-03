@@ -2,7 +2,8 @@
 
 import { AppShell } from "@/app/app-shell";
 import { MobileLayout } from "./layouts/mobile";
-import { useQuery } from "@tanstack/react-query";
+import { Transition, type TransitionOffset } from "@kyomi/ui/transition";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { InboxRecapCard } from "./components/recap";
 import {
@@ -15,35 +16,38 @@ import {
   useRecordInboxItemView,
 } from "@modules/inbox/hooks/use-inbox-data";
 import {
+  type InboxRouteSearch,
   useInboxRouteState,
   useMarkReadBehavior,
   useResponsiveReaderMode,
 } from "@modules/inbox/hooks/use-layout";
-import type { InboxItem } from "@modules/inbox/services/api";
+import type { InboxItem } from "@modules/inbox/lib/articles/index";
 import { useTimezone } from "@hooks/use-timezone";
+import { useTransition } from "@hooks/use-transition";
 import { useViewport } from "@hooks/use-viewport";
 import { QUERY_TIMES } from "@lib/query/policies";
 import { writeShellStateSnapshot } from "@lib/shell/state";
-import { listFollowedFeeds } from "@modules/feeds/api";
-import { listFolders } from "@modules/folders/api";
-import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
-import { buildInboxItemSlug } from "@modules/inbox/lib/article-slug";
-import { ArticleShell } from "./components/page/article-shell";
-import { ContentTransition } from "./components/page/content-transition";
-import { DetailSection } from "./components/page/detail-section";
-import { ListSection } from "./components/page/list-section";
+import { listFollowedFeeds } from "@modules/feeds/lib/api";
+import { listFolders } from "@modules/folders/lib/api";
+import {
+  ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS,
+  followedFeedsQueryKey,
+  hasActiveFeedRefresh,
+} from "@modules/inbox/queries/options";
+import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
+import type { ArticleStepDirection } from "@modules/reader/lib/detail";
+import { ArticleShell } from "./components/page/article/shell";
+import { DetailSection } from "./components/page/detail";
+import { ListSection } from "./components/page/list";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-type ArticleStepDirection = 1 | -1;
+const MIDDLE_COLUMN_TRANSITION_OFFSET: TransitionOffset = {
+  forward: { enter: 18, exit: -12 },
+  backward: { enter: -12, exit: 18 },
+};
 
-export function Page({
-  initialInboxPreferences,
-  initialSplitPanePercent: _initialSplitPanePercent,
-}: {
-  initialInboxPreferences?: InboxPreferences;
-  initialSplitPanePercent?: number;
-}) {
+export function Page({ initialInboxPreferences }: { initialInboxPreferences?: InboxPreferences }) {
   return (
     <InboxPreferencesBootstrapProvider initialPreferences={initialInboxPreferences}>
       <InboxPageContent initialInboxPreferences={initialInboxPreferences} />
@@ -58,7 +62,9 @@ function InboxPageContent({
 }) {
   const { preferences } = useInboxPreferences(initialInboxPreferences);
   const router = useRouter();
+  const queryClient = useQueryClient();
   const layoutContainerRef = useRef<HTMLDivElement | null>(null);
+  const wasRefreshingFollowedFeedRef = useRef(false);
   const { containerWidth: layoutContainerWidth } = useViewport(layoutContainerRef);
   const layoutVariant = useResponsiveReaderMode(layoutContainerWidth);
   const [mobileTransitionDirection, setMobileTransitionDirection] = useState<1 | -1>(1);
@@ -112,6 +118,31 @@ function InboxPageContent({
     staleTime: QUERY_TIMES.staticMetadataStale,
     gcTime: QUERY_TIMES.staticMetadataGc,
   });
+  const hasRefreshingFollowedFeed = hasActiveFeedRefresh(followedFeedsData);
+  useEffect(() => {
+    const refreshInboxConsumers = () => {
+      void queryClient.invalidateQueries({ queryKey: followedFeedsQueryKey() });
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
+      void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
+    };
+
+    if (!hasRefreshingFollowedFeed) {
+      if (wasRefreshingFollowedFeedRef.current) {
+        wasRefreshingFollowedFeedRef.current = false;
+        refreshInboxConsumers();
+      }
+      return;
+    }
+
+    wasRefreshingFollowedFeedRef.current = true;
+    refreshInboxConsumers();
+    const pollTimer = window.setInterval(
+      refreshInboxConsumers,
+      ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS,
+    );
+
+    return () => window.clearInterval(pollTimer);
+  }, [hasRefreshingFollowedFeed, queryClient]);
   const hasNoFollowedFeeds = isFollowedFeedsSuccess && (followedFeedsData?.length ?? 0) === 0;
   const pinnedFolders = useMemo(
     () =>
@@ -157,6 +188,16 @@ function InboxPageContent({
   }, [isReadScopedFilterActive, rawInboxItems]);
 
   const selectedItem = detailData?.item ?? null;
+  const showMiddleColumnDetail = Boolean(itemId);
+  const middleColumnTransition = useTransition({
+    className: "relative h-full min-h-0 min-w-0 flex-1 overflow-hidden",
+    contentKey: showMiddleColumnDetail ? "middle-article" : "middle-inbox",
+    direction: showMiddleColumnDetail ? "forward" : "backward",
+    features: "max",
+    layoutGroupId: "inbox-middle-column",
+    mode: "sync",
+    offset: MIDDLE_COLUMN_TRANSITION_OFFSET,
+  });
   const { mutate: updateInboxItemState } = useInboxItemStateMutation();
   const markItemRead = useCallback(
     (nextItemId: string) => {
@@ -188,7 +229,7 @@ function InboxPageContent({
     setMobileTransitionDirection(-1);
     void router.navigate({
       to: "/inbox",
-      search: (prev) => ({
+      search: (prev: InboxRouteSearch) => ({
         ...prev,
         itemId: undefined,
       }),
@@ -204,7 +245,7 @@ function InboxPageContent({
         params: {
           article: buildInboxItemSlug(item),
         },
-        search: (prev) => ({
+        search: (prev: InboxRouteSearch) => ({
           ...prev,
           itemId: undefined,
         }),
@@ -255,7 +296,6 @@ function InboxPageContent({
       isInboxFetching={isInboxFetching}
       isInboxFetchingNextPage={isInboxFetchingNextPage}
       isInboxPending={isInboxPending}
-      isResizing={false}
       fetchNextInboxPage={fetchNextInboxPage}
       selectItem={selectItem}
       navigate={navigate}
@@ -275,6 +315,7 @@ function InboxPageContent({
         isDetailFetching={isDetailFetching}
         selectedItem={selectedItem}
         showBackToList
+        surface="card"
         clearSelectedItem={clearSelectedItem}
       />
     ),
@@ -323,11 +364,9 @@ function InboxPageContent({
           />
         ) : (
           <div className="flex h-full max-h-full min-h-0 min-w-0 overflow-hidden pe-3">
-            <ContentTransition
-              showDetail={Boolean(itemId)}
-              list={listElement}
-              detail={middleColumnDetailElement}
-            />
+            <Transition {...middleColumnTransition}>
+              {itemId ? middleColumnDetailElement : listElement}
+            </Transition>
             <aside className="hidden h-full w-96 shrink-0 flex-col py-8 xl:flex">
               {/* Article detail replaces the inbox pane; keep this rail reserved for future context. */}
               <InboxRecapCard />

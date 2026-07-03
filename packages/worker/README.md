@@ -1,40 +1,42 @@
 # @kyomi/worker
 
-Queue contracts, feed refresh/ingestion, and shared article HTML sanitization.
+Shared queue contracts, feed ingestion, favicon resolution, and article sanitization used by Kyomi background jobs and apps.
 
 ## Layout
 
-```
+```text
 src/
-  index.ts                 # public barrel
   services/
-    queue/                 # Redis stream jobs
-    feed/                  # fetch, parse, enrich, refresh
-    favicon/               # SSRF-safe favicon resolution + browser proxy URL
-  lib/                     # article identity, html entities, feed helpers
-  sanitization/            # neosanitize article HTML policy
+    queue/    Redis Stream job contracts and consumers.
+    feed/     Feed fetch, parse, enrich, and refresh helpers.
+    favicon/  SSRF-safe favicon resolution and browser proxy URL helpers.
+  sanitization/  Shared article HTML policy.
+  lib/           Article identity, HTML entities, and feed helpers.
 ```
 
 ## Exports
 
-| Import | Use |
-|--------|-----|
-| `@kyomi/worker` | Queue + feed refresh, parsing, host limiting, `decodeHtmlEntities`, `normalizeArticleUrl` |
-| `@kyomi/worker/queue` | Job stream types and `consumeJobs` |
-| `@kyomi/worker/ingestion` | Feed refresh + parsing (legacy path name) |
-| `@kyomi/worker/sanitization` | Browser-safe shared article HTML policy and sanitizer |
-| `@kyomi/worker/favicon` | Server-side favicon fetch and resolution |
-| `@kyomi/worker/favicon/browser` | `buildClientFaviconUrl` for web UI |
-| `@kyomi/worker/lib/html-entities` | `decodeHtmlEntities` only |
-| `@kyomi/worker/lib/article-identity` | URL normalization helpers |
+| Import | Purpose |
+| --- | --- |
+| `@kyomi/worker` | Main queue, feed, favicon, sanitization, and helper exports. |
+| `@kyomi/worker/queue` | Job stream types and consumers. |
+| `@kyomi/worker/ingestion` | Feed refresh and parsing helpers. |
+| `@kyomi/worker/sanitization` | Browser-safe article HTML policy and sanitizer. |
+| `@kyomi/worker/favicon` | Server-side favicon fetch and resolution. |
+| `@kyomi/worker/favicon/browser` | Client favicon proxy URL builder. |
+| `@kyomi/worker/lib/article-identity` | Article URL identity helpers. |
+| `@kyomi/worker/lib/html-entities` | HTML entity decoding helper. |
 
-API adapters publish typed jobs. `apps/api` owns the executable scheduler and worker process boots:
+## Commands
 
-- `bun run --cwd apps/api scheduler` claims due feeds and publishes refresh jobs.
-- `bun run --cwd apps/api worker` consumes Redis Streams and executes `runFeedRefresh` or OPML jobs.
+| Command | Purpose |
+| --- | --- |
+| `bun run --cwd packages/worker typecheck` | Type-check the package. |
+| `bun run --cwd packages/worker lint` | Lint source. |
+| `bun run --cwd packages/worker fmt:check` | Check formatting. |
 
-Refresh and OPML jobs use separate streams so imports cannot starve scheduled refreshes.
+## Notes
 
-The `@kyomi/worker/sanitization` subpath is intentionally browser-safe. It owns the shared
-article HTML `neosanitize` policy used by the API and `@kyomi/reader/web`; do not import queue,
-database, Redis, JSDOM, or other Node-only modules from that subpath.
+- `apps/api` owns executable `worker` and `scheduler` process boots.
+- Refresh and OPML jobs use separate streams so imports do not starve scheduled refreshes.
+- `@kyomi/worker/sanitization` must stay browser-safe; do not import Redis, database, queue, or JSDOM modules from that subpath.

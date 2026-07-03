@@ -1,4 +1,4 @@
-export * from "./services/api";
+export * from "./lib/articles/index";
 export { List, type ListDisplayOptions } from "./components/list";
 export { Page } from "./page";
 
@@ -18,15 +18,12 @@ export {
   useInboxRouteState,
   useMarkReadBehavior,
   useResponsiveReaderMode,
-  useSplitPane,
   type InboxLayoutVariant,
 } from "./hooks/use-layout";
 export { isInboxPathname, prefetchInboxFlow } from "./lib/navigation";
 export {
   readInboxArticleOpenBehaviorCookie,
-  readInboxSplitPanePercentCookie,
   writeInboxArticleOpenBehaviorCookie,
-  writeInboxSplitPanePercentCookie,
-} from "./lib/layout-persistence";
+} from "./lib/layout/persistence";
 export { invalidateFeedAndInboxQueries, type InboxListPage } from "./queries/options";
-export { getInboxPreferences, updateInboxPreferences } from "./services/preferences";
+export { getInboxPreferences, updateInboxPreferences } from "@modules/preferences/inbox";

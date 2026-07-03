@@ -85,7 +85,7 @@ services:
       [
         "sh",
         "-lc",
-        "CA_FLAG=\"\"; [ -f /etc/ssl/certs/corp-ca.pem ] && CA_FLAG=\"--cafile /etc/ssl/certs/corp-ca.pem\"; bun install $$CA_FLAG --frozen-lockfile --ignore-scripts && bun run --cwd apps/api start"
+        "CA_FLAG=\"\"; [ -f /etc/ssl/certs/corp-ca.pem ] && CA_FLAG=\"--cafile /etc/ssl/certs/corp-ca.pem\"; bun install $$CA_FLAG --frozen-lockfile --ignore-scripts && touch node_modules/.install-complete && bun run --cwd apps/api start"
       ]
     environment:
       PORT: 8000
@@ -134,7 +134,7 @@ services:
       [
         "sh",
         "-lc",
-        "CA_FLAG=\"\"; [ -f /etc/ssl/certs/corp-ca.pem ] && CA_FLAG=\"--cafile /etc/ssl/certs/corp-ca.pem\"; bun install $$CA_FLAG --frozen-lockfile --ignore-scripts && bun run --cwd apps/api worker"
+        "until [ -f node_modules/.install-complete ]; do sleep 1; done; bun run --cwd apps/api worker"
       ]
     environment:
       PORT: 8000
@@ -163,6 +163,8 @@ services:
     volumes:
       - ..:/app
     depends_on:
+      api:
+        condition: service_started
       postgres:
         condition: service_healthy
       redis:
@@ -181,7 +183,7 @@ services:
       [
         "sh",
         "-lc",
-        "CA_FLAG=\"\"; [ -f /etc/ssl/certs/corp-ca.pem ] && CA_FLAG=\"--cafile /etc/ssl/certs/corp-ca.pem\"; bun install $$CA_FLAG --frozen-lockfile --ignore-scripts && bun run --cwd apps/api scheduler"
+        "until [ -f node_modules/.install-complete ]; do sleep 1; done; bun run --cwd apps/api scheduler"
       ]
     environment:
       PORT: 8000
@@ -210,6 +212,8 @@ services:
     volumes:
       - ..:/app
     depends_on:
+      api:
+        condition: service_started
       postgres:
         condition: service_healthy
       redis:

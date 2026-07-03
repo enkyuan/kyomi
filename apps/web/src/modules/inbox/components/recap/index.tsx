@@ -1,29 +1,39 @@
 "use client";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { AddFill, Folder2Fill } from "@mingcute/react";
 import { Suspense, type ReactNode, useReducer } from "react";
-import { toastManager } from "@kyomi/ui/toast";
+import { Button } from "@kyomi/ui/button";
+import { Transition, type TransitionDirection } from "@kyomi/ui/transition";
+import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { lazyNamed } from "@lib/lazy-named";
 import { usePlatform } from "@hooks/use-platform";
-import { exportOpml, followFeed, moveFeedsToFolder, unfollowFeed } from "@modules/feeds/api";
-import { Dialog as CreateFolderDialog } from "@modules/folders/components/create/dialog";
+import { useTransition } from "@hooks/use-transition";
+import { exportOpml, followFeed, unfollowFeed } from "@modules/feeds/lib/api";
+import { CreateFolderDialog } from "@modules/folders/components/dialog";
+import { Folders } from "@modules/folders/components/recap/summary";
+import { moveFeedsToFolder } from "@modules/folders/lib/api";
 import { inboxRecapQueryKey, inboxRecapQueryOptions } from "@modules/inbox/queries/options";
-import { updateInboxItemState } from "@modules/inbox/services/api";
-import type { InboxRecapDto } from "@modules/inbox/services/recap-schema";
-import { RecapExpandedView, type RecapExpandedSection } from "./expanded-view";
-import { Folders } from "./folders";
-import { RecapScreenTransition, type RecapScreenDirection } from "./screen-transition";
-import { RecapError, RecapSkeleton } from "./sections";
+import { updateInboxItemState } from "@modules/inbox/lib/articles/index";
+import type { InboxRecapDto } from "@modules/inbox/lib/recap/schema";
+import {
+  RecapExpandedView,
+  type RecapExpandedSection,
+  type SelectedFolderBackTarget,
+} from "./expanded";
+import { RecapError, RecapSkeleton, SectionEmpty } from "./sections";
 import { TopSources } from "./sections/top-sources";
 import type { RecapTopViewedFeed } from "./types";
-import { invalidateRecapSurface } from "./utils";
+import { invalidateRecapSurface } from "@modules/inbox/lib/recap/index";
 import { WorthRevisiting } from "./sections/worth-revisiting";
 
-const SourcesDialog = lazyNamed(
-  () => import("@modules/feeds/components/follow/sources-dialog"),
-  "SourcesDialog",
+const FollowSourcesDialog = lazyNamed(
+  () => import("@modules/feeds/components/follow/dialog"),
+  "FollowSourcesDialog",
 );
+
+const RECAP_TRANSITION_OFFSET_PX = 28;
 
 function downloadOpmlExport({ filename, xml }: { filename: string; xml: string }) {
   const url = URL.createObjectURL(new Blob([xml], { type: "application/xml;charset=utf-8" }));
@@ -42,47 +52,81 @@ type RecapCardState = {
   createFolderOpen: boolean;
   expandedSection: RecapExpandedSection | null;
   exportingOpml: boolean;
-  navigationDirection: RecapScreenDirection;
-  sourcesDialogLoaded: boolean;
-  sourcesOpen: boolean;
+  followSourcesDialogLoaded: boolean;
+  followSourcesOpen: boolean;
+  navigationDirection: TransitionDirection;
+  selectedFolderBackTarget: SelectedFolderBackTarget | null;
+  selectedFolderId: string | null;
 };
 
 type RecapCardAction =
-  | { type: "preload-sources-dialog" }
+  | { type: "preload-follow-sources" }
   | { type: "set-create-folder-open"; open: boolean }
   | {
       type: "set-expanded-section";
       section: RecapExpandedSection | null;
-      direction?: RecapScreenDirection;
+      direction?: TransitionDirection;
+      selectedFolderBackTarget?: SelectedFolderBackTarget;
+      selectedFolderId?: string | null;
     }
   | { type: "set-exporting-opml"; exporting: boolean }
-  | { type: "set-sources-open"; open: boolean };
+  | { type: "set-follow-sources-open"; open: boolean }
+  | {
+      type: "set-selected-folder";
+      folderId: string | null;
+      backTarget?: SelectedFolderBackTarget;
+    };
+
+type FollowTopSourceInput = {
+  feed: RecapTopViewedFeed;
+  folderId?: string;
+};
+type RemoveFeedsInput = {
+  anchor?: HTMLElement | null;
+  feedIds: string[];
+  feedName?: string;
+};
 
 const initialRecapCardState: RecapCardState = {
   createFolderOpen: false,
   expandedSection: null,
   exportingOpml: false,
+  followSourcesDialogLoaded: false,
+  followSourcesOpen: false,
   navigationDirection: "forward",
-  sourcesDialogLoaded: false,
-  sourcesOpen: false,
+  selectedFolderBackTarget: null,
+  selectedFolderId: null,
 };
 
 function recapCardReducer(state: RecapCardState, action: RecapCardAction): RecapCardState {
   switch (action.type) {
-    case "preload-sources-dialog":
-      return { ...state, sourcesDialogLoaded: true };
+    case "preload-follow-sources":
+      return { ...state, followSourcesDialogLoaded: true };
     case "set-create-folder-open":
       return { ...state, createFolderOpen: action.open };
-    case "set-expanded-section":
+    case "set-expanded-section": {
+      const selectedFolderId =
+        action.section === "folders" ? (action.selectedFolderId ?? null) : null;
       return {
         ...state,
         expandedSection: action.section,
         navigationDirection: action.direction ?? (action.section ? "forward" : "backward"),
+        selectedFolderBackTarget: selectedFolderId
+          ? (action.selectedFolderBackTarget ?? "folders")
+          : null,
+        selectedFolderId,
       };
+    }
     case "set-exporting-opml":
       return { ...state, exportingOpml: action.exporting };
-    case "set-sources-open":
-      return { ...state, sourcesOpen: action.open };
+    case "set-follow-sources-open":
+      return { ...state, followSourcesOpen: action.open };
+    case "set-selected-folder":
+      return {
+        ...state,
+        selectedFolderBackTarget: action.folderId ? (action.backTarget ?? "folders") : null,
+        selectedFolderId: action.folderId,
+      };
   }
 }
 
@@ -92,9 +136,11 @@ export function InboxRecapCard() {
       createFolderOpen,
       expandedSection,
       exportingOpml,
+      followSourcesDialogLoaded,
+      followSourcesOpen,
       navigationDirection,
-      sourcesDialogLoaded,
-      sourcesOpen,
+      selectedFolderBackTarget,
+      selectedFolderId,
     },
     dispatch,
   ] = useReducer(recapCardReducer, initialRecapCardState);
@@ -110,6 +156,8 @@ export function InboxRecapCard() {
   const folders = recap?.folders ?? [];
   const topViewedFeeds = recap?.topViewedFeeds ?? [];
   const oldestSavedItems = recap?.oldestSavedItems ?? [];
+  const isSummaryEmpty =
+    folders.length === 0 && topViewedFeeds.length === 0 && oldestSavedItems.length === 0;
 
   const unsaveMutation = useMutation({
     mutationFn: ({ itemId }: { itemId: string }) =>
@@ -147,8 +195,15 @@ export function InboxRecapCard() {
   });
 
   const followMutation = useMutation({
-    mutationFn: (feed: RecapTopViewedFeed) =>
-      followFeed({ data: { feedId: feed.feedId, url: feed.url } }),
+    mutationFn: async ({ feed, folderId }: FollowTopSourceInput) => {
+      const followed = await followFeed({ data: { feedId: feed.feedId, url: feed.url } });
+
+      if (folderId) {
+        await moveFeedsToFolder({ data: { feedIds: [followed.feedId], folderId } });
+      }
+
+      return followed;
+    },
     onSuccess: async (feed) => {
       await Promise.all([
         queryClient.invalidateQueries({ queryKey: inboxRecapQueryKey() }),
@@ -189,13 +244,39 @@ export function InboxRecapCard() {
     },
   });
 
+  // oxlint-disable-next-line react-doctor/query-mutation-missing-invalidation -- invalidateRecapSurface is called in onSuccess
   const removeFeedsMutation = useMutation({
-    mutationFn: async ({ feedIds }: { feedIds: string[] }) => {
+    mutationFn: async ({ feedIds }: RemoveFeedsInput) => {
       await Promise.all(feedIds.map((feedId) => unfollowFeed({ data: { feedId } })));
       return { feedIds };
     },
-    onSuccess: async ({ feedIds }) => {
+    onSuccess: async ({ feedIds }, variables) => {
+      const toastAnchor = variables.anchor?.isConnected ? variables.anchor : null;
+      const feedName = variables.feedName;
+      const shouldShowAnchoredToast = feedIds.length === 1 && Boolean(feedName && toastAnchor);
+
+      if (shouldShowAnchoredToast && feedName && toastAnchor) {
+        anchoredToastManager.add({
+          title: `Unfollowed ${feedName}`,
+          type: "success",
+          timeout: 1800,
+          data: { tooltipStyle: true },
+          positionerProps: {
+            anchor: toastAnchor,
+            side: "top",
+            align: "center",
+            sideOffset: 6,
+            positionMethod: "fixed",
+          },
+        });
+      }
+
+      // oxlint-disable-next-line react-doctor/async-defer-await -- invalidation must run on every path, not just the toast path
       await invalidateRecapSurface(queryClient);
+      if (shouldShowAnchoredToast) {
+        return;
+      }
+
       toastManager.add({
         title: feedIds.length === 1 ? "Feed removed" : "Feeds removed",
         description:
@@ -246,19 +327,21 @@ export function InboxRecapCard() {
   };
 
   const preloadSourcesDialog = () => {
-    dispatch({ type: "preload-sources-dialog" });
-    void SourcesDialog.preload();
+    dispatch({ type: "preload-follow-sources" });
+    void FollowSourcesDialog.preload();
   };
 
-  const setSourcesDialogOpen = (open: boolean) => {
+  const setFollowSourcesDialogOpen = (open: boolean) => {
     if (open) {
       preloadSourcesDialog();
     }
-    dispatch({ type: "set-sources-open", open });
+    dispatch({ type: "set-follow-sources-open", open });
   };
 
   const followingFeedId =
-    followMutation.isPending && followMutation.variables ? followMutation.variables.feedId : null;
+    followMutation.isPending && followMutation.variables
+      ? followMutation.variables.feed.feedId
+      : null;
   const movingFeedId =
     moveFeedMutation.isPending && moveFeedMutation.variables
       ? moveFeedMutation.variables.feedIds.length === 1
@@ -295,16 +378,18 @@ export function InboxRecapCard() {
       <RecapExpandedView
         exportingOpml={exportingOpml}
         folders={folders}
-        followFeed={(feed) => followMutation.mutate(feed)}
+        followFeed={(feed, folderId) => followMutation.mutate({ feed, folderId })}
         isFollowingFeed={isFollowingFeed}
         moveFeed={(feedId, folderId) => moveFeedMutation.mutate({ feedIds: [feedId], folderId })}
         moveFeeds={(feedIds, folderId) => moveFeedMutation.mutate({ feedIds, folderId })}
         movingFeedIds={movingFeedIds}
         movingFeedId={movingFeedId}
         oldestSavedItems={oldestSavedItems}
-        removeFeeds={(feedIds) => removeFeedsMutation.mutate({ feedIds })}
+        removeFeeds={(feedIds, options) => removeFeedsMutation.mutate({ feedIds, ...options })}
         removingFeedIds={removingFeedIds}
         section={expandedSection}
+        selectedFolderBackTarget={selectedFolderBackTarget}
+        selectedFolderId={selectedFolderId}
         topViewedFeeds={topViewedFeeds}
         unsavingItemId={unsavingItemId}
         onBack={() =>
@@ -312,25 +397,53 @@ export function InboxRecapCard() {
         }
         onCreateFolder={() => dispatch({ type: "set-create-folder-open", open: true })}
         onExportOpml={exportOpmlAction}
-        onImportOpml={() => setSourcesDialogOpen(true)}
+        onImportOpml={() => setFollowSourcesDialogOpen(true)}
+        onSelectFolder={(folderId, backTarget) =>
+          dispatch({ type: "set-selected-folder", folderId, backTarget })
+        }
         onUnsave={(itemId) => unsaveMutation.mutate({ itemId })}
       />
+    );
+  } else if (isSummaryEmpty) {
+    content = (
+      <div className="flex min-h-0 flex-1 items-center justify-center px-4 py-4">
+        <SectionEmpty
+          title="Nothing here yet"
+          description="Folders, top sources, and saved items will appear here as you read and organize feeds."
+          icon={<Folder2Fill />}
+          action={
+            <Button
+              size="sm"
+              onClick={() => dispatch({ type: "set-create-folder-open", open: true })}
+            >
+              <AddFill />
+              Create folder
+            </Button>
+          }
+        />
+      </div>
     );
   } else {
     content = (
       <div className="grid min-h-0 flex-1 grid-rows-3 gap-4 overflow-hidden py-4">
         <Folders
-          exportingOpml={exportingOpml}
           folders={folders}
           onExpand={() => dispatch({ type: "set-expanded-section", section: "folders" })}
           onCreateFolder={() => dispatch({ type: "set-create-folder-open", open: true })}
-          onExportOpml={exportOpmlAction}
-          onImportOpml={() => setSourcesDialogOpen(true)}
+          onImportOpml={() => setFollowSourcesDialogOpen(true)}
+          onSelectFolder={(folder) =>
+            dispatch({
+              type: "set-expanded-section",
+              section: "folders",
+              selectedFolderBackTarget: "recap",
+              selectedFolderId: folder.id,
+            })
+          }
         />
         <TopSources
           feeds={topViewedFeeds}
           folders={folders}
-          followFeed={(feed) => followMutation.mutate(feed)}
+          followFeed={(feed, folderId) => followMutation.mutate({ feed, folderId })}
           isFollowingFeed={isFollowingFeed}
           moveFeed={(feedId, folderId) => moveFeedMutation.mutate({ feedIds: [feedId], folderId })}
           movingFeedId={movingFeedId}
@@ -345,16 +458,17 @@ export function InboxRecapCard() {
       </div>
     );
   }
+  const recapTransition = useTransition({
+    className: "relative min-h-0 min-w-0 flex-1 overflow-hidden",
+    contentKey: recapScreenKey,
+    direction: navigationDirection,
+    mode: "popLayout",
+    offset: RECAP_TRANSITION_OFFSET_PX,
+  });
 
   return (
     <div className="flex h-full flex-1 flex-col overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-sm/5">
-      <RecapScreenTransition
-        className="flex-1"
-        contentKey={recapScreenKey}
-        direction={navigationDirection}
-      >
-        {content}
-      </RecapScreenTransition>
+      <Transition {...recapTransition}>{content}</Transition>
 
       <CreateFolderDialog
         hideTrigger
@@ -367,12 +481,12 @@ export function InboxRecapCard() {
         }}
       />
       <Suspense fallback={null}>
-        {sourcesDialogLoaded ? (
-          <SourcesDialog
+        {followSourcesDialogLoaded ? (
+          <FollowSourcesDialog
             enableGlobalShortcut={false}
             hideTrigger
-            open={sourcesOpen}
-            onOpenChange={setSourcesDialogOpen}
+            open={followSourcesOpen}
+            onOpenChange={setFollowSourcesDialogOpen}
             platform={platform}
           />
         ) : null}

@@ -11,8 +11,15 @@ const recordOpmlTaskSuccessMock = mock(async () => undefined);
 
 mock.module("@modules/feeds/subscription/service", () => ({
   createOrSubscribeToFeed: createOrSubscribeToFeedMock,
+  subscribeToExistingFeed: mock(async () => ({
+    feedId: "feed-1",
+    subscriptionId: "sub-1",
+    newFeed: false,
+    newSubscription: false,
+  })),
 }));
-mock.module("@modules/feeds/refresh/service", () => ({
+mock.module("@modules/feeds/refresh/enqueue", () => ({
+  enqueueBatchFeedRefresh: mock(async () => ({ accepted: true, count: 0, failedCount: 0 })),
   enqueueFeedRefresh: enqueueFeedRefreshMock,
 }));
 mock.module("@modules/opml/task-store", () => ({

@@ -1,4 +1,4 @@
-import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@lib/schemas";
+import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@lib/schemas/index";
 
 const absoluteFormatter12h = new Intl.DateTimeFormat("en", {
   dateStyle: "medium",

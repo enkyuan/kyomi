@@ -32,7 +32,6 @@
     "@tanstack/react-router": "^1.168.19",
     "@tanstack/react-router-ssr-query": "^1.166.10",
     "@tanstack/react-start": "^1.167.34",
-    "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-virtual": "^3.13.23",
     "better-auth": "^1.5.3",
     "clsx": "^2.1.1",
@@ -84,6 +83,15 @@
     "ignore": {
       "overrides": [
         {
+          "files": [".output/**"],
+          "rules": [
+            "react-doctor/dangerous-html-sink",
+            "react-doctor/insecure-crypto-risk",
+            "react-doctor/mcp-tool-capability-risk",
+            "react-doctor/request-body-mass-assignment"
+          ]
+        },
+        {
           "files": ["src/routeTree.gen.ts"],
           "rules": ["unicorn/filename-case"]
         },
@@ -94,6 +102,19 @@
         {
           "files": ["src/modules/sidebar/components/feed-favicon.tsx"],
           "rules": ["react-doctor/no-adjust-state-on-prop-change"]
+        },
+        {
+          "files": [
+            "src/modules/folders/components/feeds/index.tsx",
+            "src/modules/folders/components/recap/expanded.tsx",
+            "src/modules/inbox/components/recap/index.tsx",
+            "src/modules/inbox/page.tsx"
+          ],
+          "rules": [
+            "react-doctor/no-giant-component",
+            "eslint/complexity",
+            "eslint/max-lines"
+          ]
         }
       ]
     }

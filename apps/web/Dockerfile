@@ -17,7 +17,8 @@ COPY packages/ui/package.json packages/ui/package.json
 COPY packages/worker/package.json packages/worker/package.json
 COPY tests/package.json tests/package.json
 
-RUN bun install --frozen-lockfile --ignore-scripts
+RUN --mount=type=cache,id=bun,target=/root/.bun/install/cache \
+  bun install --frozen-lockfile --ignore-scripts
 
 FROM deps AS build
 WORKDIR /app
@@ -26,7 +27,13 @@ ENV NODE_ENV=production
 ENV SERVER_URL=http://localhost:3000
 ENV API_ORIGIN=http://localhost:8000
 
-COPY . .
+COPY apps/web apps/web
+COPY docker docker
+COPY packages/db packages/db
+COPY packages/reader packages/reader
+COPY packages/tsconfig packages/tsconfig
+COPY packages/ui packages/ui
+COPY packages/worker packages/worker
 
 RUN bun run --cwd apps/web build
 

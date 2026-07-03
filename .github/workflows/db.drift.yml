@@ -1,0 +1,54 @@
+name: drift / db
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/db/**"
+      - "apps/api/**"
+      - "docker/.env.example"
+      - ".bun-version"
+      - "bun.lock"
+      - "package.json"
+      - "turbo.json"
+      - ".github/actions/setup-bun/**"
+      - ".github/workflows/db.drift.yml"
+  pull_request:
+    paths:
+      - "packages/db/**"
+      - "apps/api/**"
+      - "docker/.env.example"
+      - ".bun-version"
+      - "bun.lock"
+      - "package.json"
+      - "turbo.json"
+      - ".github/actions/setup-bun/**"
+      - ".github/workflows/db.drift.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  migrations:
+    name: packages/db
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup-bun
+
+      - name: Prepare env
+        run: bun scripts/ci/prepare-env.ts
+
+      - name: Check migration drift
+        run: bun scripts/ci/drizzle-drift.ts

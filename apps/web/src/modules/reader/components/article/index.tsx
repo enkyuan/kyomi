@@ -1,19 +1,21 @@
 "use client";
 
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
-import { TimestampText } from "@modules/inbox/components/timestamp-text";
+import { Timestamp } from "@modules/inbox/components/timestamp";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
-import { getTypography } from "@modules/feeds/layout";
+import { getTypography } from "@modules/feeds/lib/layout";
 import { Toolbar } from "../toolbar";
-import {
-  useToolbar as useReaderToolbar,
-  type ToolbarModel,
-} from "@modules/reader/hooks/use-toolbar";
+import { useReaderToolbar } from "@hooks/use-toolbar";
+import type { ToolbarModel } from "@modules/toolbar/lib/types";
 import { ReaderContent } from "@kyomi/reader/web";
 import { Button } from "@kyomi/ui/button";
 import { Spinner } from "@kyomi/ui/spinner";
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas";
-import { cn } from "@lib/utils";
+import type {
+  ArticleDetailDto,
+  InboxDensityDto,
+  InboxTimestampDisplayDto,
+} from "@lib/schemas/index";
+import { cn } from "@kyomi/ui/lib/utils";
 import { useTimestamp } from "@hooks/use-timestamp";
 import { useLayoutEffect, useRef, useState } from "react";
 import type { RefObject } from "react";
@@ -194,7 +196,7 @@ function ReaderArticleHeader({
       {hideInlineToolbar ? null : (
         <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs uppercase tracking-wide text-muted-foreground">
           <div className="flex min-w-0 flex-wrap items-center gap-2">
-            <TimestampText
+            <Timestamp
               value={item.publishedAt}
               display={timestampDisplay}
               hourCycle={timestampHourCycle}

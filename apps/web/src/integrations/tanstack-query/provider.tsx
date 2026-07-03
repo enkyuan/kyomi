@@ -3,16 +3,16 @@
 import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { subscribeHotQueryCachePersistence } from "@lib/query/cache";
+import { hydrateHotQueryCache, subscribeHotQueryCachePersistence } from "@lib/query/cache";
 
-import { hotQueryCacheHydration, queryClient } from "@lib/query/client";
+import { queryClient } from "@lib/query/client";
 
 export default function TanstackQueryProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     let unsubscribe: (() => void) | undefined;
     let cancelled = false;
 
-    void hotQueryCacheHydration.finally(() => {
+    void hydrateHotQueryCache(queryClient).finally(() => {
       if (cancelled) {
         return;
       }

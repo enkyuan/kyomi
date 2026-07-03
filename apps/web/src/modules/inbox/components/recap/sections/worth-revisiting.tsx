@@ -3,10 +3,9 @@
 import { Link } from "@tanstack/react-router";
 import { BookmarkFill, ExternalLinkLine, RightFill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
-import { SAVED_ACTION_ACTIVE_CLASS } from "@lib/theme/action-colors";
-import { buildInboxItemSlug } from "@modules/inbox/lib/article-slug";
+import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
 import type { RecapSavedItem } from "../types";
-import { formatRelativeTime } from "../utils";
+import { formatRelativeTime } from "@modules/inbox/lib/recap/index";
 import { RailTooltip, RecapSection, SectionEmpty } from ".";
 
 const WORTH_REVISITING_DISPLAY_LIMIT = 3;
@@ -93,7 +92,7 @@ export function WorthRevisiting({
                   <RailTooltip label="Unsave">
                     <Button
                       aria-label={`Unsave ${item.title}`}
-                      className={SAVED_ACTION_ACTIVE_CLASS}
+                      className="text-mizu"
                       loading={unsavingItemId === item.id}
                       size="icon-xs"
                       variant="ghost"

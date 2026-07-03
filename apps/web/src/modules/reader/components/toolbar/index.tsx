@@ -24,12 +24,11 @@ import {
   ToolbarSeparator,
 } from "@kyomi/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
-import { useMediaQuery } from "@hooks/use-media-query";
-import type { ToolbarProps } from "@modules/reader/hooks/use-toolbar";
-import type { ReaderContentWidth } from "@modules/reader/hooks/use-reader-preferences";
-import { SAVED_ACTION_ACTIVE_CLASS } from "@lib/theme/action-colors";
-import { cn } from "@lib/utils";
-import { FontSizeTicker } from "./font-size-ticker";
+import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
+import type { ToolbarProps } from "@modules/toolbar/lib/types";
+import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
+import { cn } from "@kyomi/ui/lib/utils";
+import { FontSizeTicker } from "./font-ticker";
 
 const CONTENT_WIDTH_LABELS: Record<ReaderContentWidth, string> = {
   narrow: "Narrow",
@@ -97,13 +96,13 @@ export function Toolbar({
             tooltipCollisionAvoidance={tooltipCollisionAvoidance}
             tooltipSideOffset={tooltipSideOffset}
             large={useLargeControls}
-            activeClassName={SAVED_ACTION_ACTIVE_CLASS}
+            activeClassName="text-mizu"
           >
             {isSaved ? <BookmarkFill /> : <BookmarkLine />}
           </ReaderToolbarButton>
           <AnimatePresence initial={false} mode="popLayout">
             {readerFocusMode && !compactReaderFocusMode ? (
-              <m.div key="translate-article" layout className="flex" {...actionMotionProps}>
+              <m.div layout className="flex" {...actionMotionProps} key="translate-article">
                 <ReaderToolbarButton
                   label="Translate article"
                   onClick={onTranslateArticle}
@@ -175,10 +174,10 @@ export function Toolbar({
         <AnimatePresence initial={false} mode="popLayout">
           {compactReaderFocusMode ? null : (
             <m.div
-              key="secondary-actions"
               layout
               className="flex items-center"
               {...actionMotionProps}
+              key="secondary-actions"
             >
               <ToolbarSeparator
                 className="mx-1 hidden h-9 w-px self-center bg-border/70 data-[orientation=vertical]:my-0 sm:block"

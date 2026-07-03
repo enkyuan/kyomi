@@ -2,7 +2,7 @@ import type {
   ReaderContentWidthDto,
   ReaderDefaultModeDto,
   ReaderPreferencesDto,
-} from "@lib/schemas";
+} from "@lib/schemas/index";
 
 const MIN_FONT_SIZE_PX = 14;
 const MAX_FONT_SIZE_PX = 22;

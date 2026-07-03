@@ -1,12 +1,22 @@
 {
   "name": "@kyomi/ui",
-  "private": true,
+  "version": "0.1.0",
+  "description": "Shared Kyomi React UI primitives.",
   "type": "module",
+  "files": ["src"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enkyuan/kyomi.git",
+    "directory": "packages/ui"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "exports": {
     ".": "./src/index.ts",
     "./lib/utils": "./src/lib/utils.ts",
     "./hooks/use-media-query": "./src/hooks/use-media-query.ts",
-    "./icons": "./src/icons/index.ts",
+    "./icons": "./src/icons/index.tsx",
     "./icons/*": "./src/icons/*.tsx",
     "./slider": "./src/slider/index.tsx",
     "./sidebar": "./src/sidebar/index.tsx",

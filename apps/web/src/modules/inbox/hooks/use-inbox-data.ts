@@ -9,18 +9,18 @@ import {
   useRef,
   type ReactNode,
 } from "react";
-import { useMutation, useQueryClient, useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/provider";
-import { INBOX_PREFERENCES_STORAGE_KEY } from "@lib/shell/keys";
 import { usePreferences } from "@hooks/use-preferences";
-import type { InboxPreferencesDto } from "@lib/schemas";
+import { INBOX_PREFERENCES_STORAGE_KEY } from "@lib/shell/keys";
+import type { InboxPreferencesDto } from "@lib/schemas/index";
+import { writeInboxArticleOpenBehaviorCookie } from "../lib/layout/persistence";
 import {
   DEFAULT_INBOX_PREFERENCES,
   getInboxPreferenceLimits,
   normalizeInboxPreferencePatch,
   sanitizeInboxPreferences,
 } from "../lib/preferences";
-import { writeInboxArticleOpenBehaviorCookie } from "../lib/layout-persistence";
 import {
   getInboxItemCacheSnapshot,
   restoreInboxItemCacheSnapshot,
@@ -34,12 +34,29 @@ import {
   type InboxFilter,
   type InboxItem,
   type InboxSort,
-} from "../services/api";
-import { getInboxPreferences, updateInboxPreferences } from "../services/preferences";
+} from "../lib/articles/index";
+import { getInboxPreferences, updateInboxPreferences } from "@modules/preferences/inbox";
 
 export type InboxPreferences = InboxPreferencesDto;
 export type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">> & {
   isHidden?: boolean;
+};
+
+type UseInboxQueriesInput = {
+  filter: InboxFilter;
+  search?: string;
+  feedId?: string;
+  folderId?: string;
+  itemId?: string;
+  includeRead?: boolean;
+  sort?: InboxSort;
+  timezoneOffsetMinutes?: number;
+};
+
+type InboxItemStateMutationInput = {
+  itemId: string;
+  patch: InboxItemPatch;
+  removeFromList?: boolean;
 };
 
 const InboxPreferencesBootstrapContext = createContext<InboxPreferences | undefined>(undefined);
@@ -107,23 +124,6 @@ export function resolveInitialInboxPreferences(
 
   return DEFAULT_INBOX_PREFERENCES;
 }
-
-type UseInboxQueriesInput = {
-  filter: InboxFilter;
-  search?: string;
-  feedId?: string;
-  folderId?: string;
-  itemId?: string;
-  includeRead?: boolean;
-  sort?: InboxSort;
-  timezoneOffsetMinutes?: number;
-};
-
-type InboxItemStateMutationInput = {
-  itemId: string;
-  patch: InboxItemPatch;
-  removeFromList?: boolean;
-};
 
 export function InboxPreferencesBootstrapProvider({
   children,

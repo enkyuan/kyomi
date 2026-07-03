@@ -4,7 +4,7 @@ import type {
   InboxPreferencesDto,
   InboxTimestampDisplayDto,
   InboxTimestampHourCycleDto,
-} from "@lib/schemas";
+} from "@lib/schemas/index";
 
 const MIN_INBOX_FONT_SIZE_PX = 14;
 const MAX_INBOX_FONT_SIZE_PX = 20;

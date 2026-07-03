@@ -1,0 +1,137 @@
+name: Delivery
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v*
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  NPM_REGISTRY_URL: https://npm.pkg.github.com
+
+jobs:
+  verify:
+    name: Delivery Verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_DB: kyomi
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: admin
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d kyomi"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:8-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      meilisearch:
+        image: getmeili/meilisearch:v1.15
+        env:
+          MEILI_MASTER_KEY: vols-meili-dev-key
+          MEILI_NO_ANALYTICS: "true"
+        ports:
+          - 7700:7700
+        options: >-
+          --health-cmd "wget --no-verbose --spider http://127.0.0.1:7700/health"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun workspace
+        uses: ./.github/actions/setup-bun
+
+      - name: Run static quality checks
+        run: bun run ci:static
+
+      - name: Run web integration tests
+        run: bun run ci:test:web
+
+      - name: Run API integration tests
+        run: bun run ci:test:api
+
+      - name: Build workspaces
+        run: bun run ci:build
+
+      - name: Show service logs on failure
+        if: failure()
+        run: |
+          docker ps -a
+          for container_id in $(docker ps -aq); do
+            echo "::group::docker logs ${container_id}"
+            docker logs --tail 200 "${container_id}" || true
+            echo "::endgroup::"
+          done
+
+  publish:
+    name: Publish ${{ matrix.package }} Package
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs:
+      - verify
+    environment: delivery
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - package: "@kyomi/ui"
+            working-directory: packages/ui
+          - package: "@kyomi/reader"
+            working-directory: packages/reader
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun workspace
+        uses: ./.github/actions/setup-bun
+
+      - name: Setup Node package publishing
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: ${{ env.NPM_REGISTRY_URL }}
+          scope: "@kyomi"
+
+      - name: Publish package
+        working-directory: ${{ matrix.working-directory }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          package_name="$(node -p "require('./package.json').name")"
+          package_version="$(node -p "require('./package.json').version")"
+
+          if npm view "${package_name}@${package_version}" version --registry="${NPM_REGISTRY_URL}" >/dev/null 2>&1; then
+            echo "${package_name}@${package_version} already exists in GitHub Packages; skipping publish."
+            exit 0
+          fi
+
+          npm publish --registry="${NPM_REGISTRY_URL}"

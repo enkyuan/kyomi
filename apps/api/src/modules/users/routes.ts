@@ -10,7 +10,7 @@ import {
   getUserProfileById,
   updateUserEmailById,
   updateUserPreferences,
-} from "./service";
+} from "./index";
 
 export function registerUserRoutes(app: Elysia) {
   return app

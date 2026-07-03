@@ -1,6 +1,6 @@
 import { assertHttpOrHttpsUrl } from "./normalize-url";
+import { BlockedOutboundUrlError } from "@shared/net/outbound-policy";
 import {
-  BlockedOutboundUrlError,
   TooManyRedirectsError,
   fetchWithSafeRedirects,
   readResponseBodyWithByteLimit,

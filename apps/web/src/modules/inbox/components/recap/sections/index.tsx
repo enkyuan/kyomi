@@ -107,7 +107,7 @@ export function RecapSkeleton() {
 
 export function RecapError({ onRetry }: { onRetry: () => void }) {
   return (
-    <Empty className="px-6 py-10">
+    <Empty className="h-full px-6 py-10">
       <EmptyHeader>
         <EmptyMedia variant="icon">
           <FolderWarningFill />

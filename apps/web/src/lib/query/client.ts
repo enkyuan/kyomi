@@ -1,5 +1,4 @@
 import { QueryClient } from "@tanstack/react-query";
-import { hydrateHotQueryCache } from "@lib/query/cache";
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -9,8 +8,6 @@ export const queryClient = new QueryClient({
     },
   },
 });
-
-export const hotQueryCacheHydration = hydrateHotQueryCache(queryClient);
 
 export function getContext() {
   return {

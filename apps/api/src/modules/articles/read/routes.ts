@@ -23,12 +23,8 @@ import {
   savedCheckResponseSchema,
   unreadCountsQuerySchema,
 } from "../schemas";
-import { checkSavedArticleForUser } from "./saved-check";
-import {
-  listMergedRecentlyReadView,
-  listMergedSavedView,
-  listMergedTodayView,
-} from "./views-merged";
+import { checkSavedArticleForUser } from "./saved";
+import { listMergedRecentlyReadView, listMergedSavedView, listMergedTodayView } from "./list/views";
 
 export function registerArticleReadRoutes(app: Elysia) {
   return (
