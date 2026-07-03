@@ -1,6 +1,10 @@
 "use client";
 
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
+import type {
+  ArticleDetailDto,
+  InboxDensityDto,
+  InboxTimestampDisplayDto,
+} from "@lib/schemas/index";
 import { AnimatedContent } from "./animated-content";
 import { ArticleContent } from "./article-content";
 import { EmptyState } from "./empty-state";
@@ -22,7 +26,7 @@ export function ContentView({
   timestampHourCycle,
   showBackToList,
   onBackToList,
-  isInboxSurface,
+  isBrowserSurface,
   selectedContentKey,
   articleStepDirection,
 }: {
@@ -34,7 +38,7 @@ export function ContentView({
   timestampHourCycle: "12h" | "24h";
   showBackToList: boolean;
   onBackToList?: () => void;
-  isInboxSurface: boolean;
+  isBrowserSurface: boolean;
   selectedContentKey?: string;
   articleStepDirection: 1 | -1;
 }) {
@@ -50,7 +54,7 @@ export function ContentView({
           timestampHourCycle={timestampHourCycle}
           showBackToList={showBackToList}
           onBackToList={onBackToList}
-          isInboxSurface={isInboxSurface}
+          isBrowserSurface={isBrowserSurface}
         />
       );
 

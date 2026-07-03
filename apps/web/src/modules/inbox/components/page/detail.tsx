@@ -25,7 +25,7 @@ export function DetailSection({
   selectedItem: ArticleDetailDto | null;
   clearSelectedItem?: () => void;
   showBackToList?: boolean;
-  surface?: "card" | "inbox";
+  surface?: "browser" | "card";
   header?: ReactNode | ((state: DetailHeaderState) => ReactNode);
   articleContentKey?: string;
   articleStepDirection?: 1 | -1;

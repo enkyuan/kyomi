@@ -316,6 +316,7 @@ function InboxPageContent({
         isDetailFetching={isDetailFetching}
         selectedItem={selectedItem}
         showBackToList
+        surface="card"
         clearSelectedItem={clearSelectedItem}
       />
     ),

@@ -55,7 +55,6 @@ export function ArticleShell({
           isDetailError={isDetailError}
           isDetailFetching={isDetailFetching}
           selectedItem={selectedItem}
-          surface="inbox"
           header={header}
           articleContentKey={selectedItem?.id}
           articleStepDirection={articleStepDirection}

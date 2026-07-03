@@ -3,7 +3,7 @@
 import { useViewport } from "@hooks/use-viewport";
 import { VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
 import { Badge } from "@kyomi/ui/badge";
-import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
+import { BrowserScrollBar, ScrollAreaPrimitive } from "@kyomi/ui/scroll-area";
 import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { useRef } from "react";
@@ -284,7 +284,7 @@ export function List({
           </div>
         </ScrollAreaPrimitive.Viewport>
         {inboxItems.length > 0 || isLoading ? (
-          <ScrollBar
+          <BrowserScrollBar
             aria-label="Inbox list scrollbar"
             className="z-50 !fixed !top-0 !right-0 !bottom-0 !left-auto !h-auto !inset-inline-end-0"
             orientation="vertical"

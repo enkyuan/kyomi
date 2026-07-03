@@ -2,7 +2,11 @@
 
 import { LeftFill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
+import type {
+  ArticleDetailDto,
+  InboxDensityDto,
+  InboxTimestampDisplayDto,
+} from "@lib/schemas/index";
 import { Article } from "../article";
 
 export function ArticleContent({
@@ -14,7 +18,7 @@ export function ArticleContent({
   timestampHourCycle,
   showBackToList,
   onBackToList,
-  isInboxSurface,
+  isBrowserSurface,
 }: {
   item: ArticleDetailDto;
   density: InboxDensityDto;
@@ -24,7 +28,7 @@ export function ArticleContent({
   timestampHourCycle: "12h" | "24h";
   showBackToList: boolean;
   onBackToList?: () => void;
-  isInboxSurface: boolean;
+  isBrowserSurface: boolean;
 }) {
   return (
     <>
@@ -48,8 +52,8 @@ export function ArticleContent({
         showFavicons={showFavicons}
         timestampDisplay={timestampDisplay}
         timestampHourCycle={timestampHourCycle}
-        readerFocusMode={showBackToList || isInboxSurface}
-        hideInlineToolbar={isInboxSurface}
+        readerFocusMode={showBackToList || isBrowserSurface}
+        hideInlineToolbar={isBrowserSurface}
       />
     </>
   );
