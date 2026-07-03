@@ -14,6 +14,6 @@ export const getInboxLoaderData = createServerFn({ method: "GET" }).handler(asyn
           ...initialInboxPreferences,
           articleOpenBehavior: cookieArticleOpenBehavior,
         }
-        : initialInboxPreferences,
+      : initialInboxPreferences,
   };
 });
