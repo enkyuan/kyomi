@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import type { FollowedFeed } from "@modules/feeds/api";
-import { usePinnedFeedIds } from "@modules/feeds/hooks/pinned";
+import type { FollowedFeed } from "@modules/feeds/lib/api";
+import { usePinnedFeedIds } from "@modules/feeds/hooks/use-pinned";
 import { followedFeedsQueryOptions } from "../queries/options";
 
 export function usePinnedSection() {

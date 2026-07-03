@@ -2,7 +2,7 @@ import type {
   ArticleReaderContentDto,
   ArticleStoredContentDto,
   ExtractedContentStatus,
-} from "./reader/content-types";
+} from "./reader/content";
 
 export type ArticleListItemDto = {
   id: string;

@@ -3,7 +3,6 @@
 import { Link } from "@tanstack/react-router";
 import { BookmarkFill, ExternalLinkLine } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
-import { SAVED_ACTION_ACTIVE_CLASS } from "@lib/theme/action-colors";
 import { buildInboxItemSlug } from "@modules/inbox/lib/article-slug";
 import { RailTooltip, SectionEmpty } from "../sections";
 import type { RecapSavedItem } from "../types";
@@ -20,11 +19,13 @@ export function ExpandedSavedItems({
 }) {
   if (items.length === 0) {
     return (
-      <SectionEmpty
-        title="No saved items"
-        description="Saved posts and clips will appear here."
-        icon={<BookmarkFill />}
-      />
+      <div className="flex h-full min-h-0">
+        <SectionEmpty
+          title="No saved items"
+          description="Saved posts and clips will appear here."
+          icon={<BookmarkFill />}
+        />
+      </div>
     );
   }
 
@@ -69,7 +70,7 @@ export function ExpandedSavedItems({
               <RailTooltip label="Unsave">
                 <Button
                   aria-label={`Unsave ${item.title}`}
-                  className={SAVED_ACTION_ACTIVE_CLASS}
+                  className="text-mizu"
                   loading={unsavingItemId === item.id}
                   size="icon-xs"
                   variant="ghost"

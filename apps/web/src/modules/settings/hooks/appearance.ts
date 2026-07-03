@@ -1,6 +1,6 @@
 "use client";
 
-import { useInboxPreferences } from "@modules/inbox/hooks/data";
+import { useInboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
 
 export function useAppearancePanel() {
   const {

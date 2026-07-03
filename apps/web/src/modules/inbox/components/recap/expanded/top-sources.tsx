@@ -3,9 +3,12 @@
 import { Link } from "@tanstack/react-router";
 import { AddFill, Rss2Fill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
+import {
+  FolderPickerButton,
+  TOP_SOURCE_FOLDER_BUTTON_CLASS,
+} from "@modules/folders/components/picker";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { SectionEmpty } from "../sections";
-import { FolderPickerButton, TOP_SOURCE_FOLDER_BUTTON_CLASS } from "../sections/top-sources";
 import type { RecapTopViewedFeed } from "../types";
 import { formatRelativeTime, formatViewedCount } from "../utils";
 
@@ -28,11 +31,13 @@ export function ExpandedTopSources({
 }) {
   if (feeds.length === 0) {
     return (
-      <SectionEmpty
-        title="No viewed sources"
-        description="Open a few posts to build this list."
-        icon={<Rss2Fill />}
-      />
+      <div className="flex h-full min-h-0">
+        <SectionEmpty
+          title="No viewed sources"
+          description="Open a few posts to build this list."
+          icon={<Rss2Fill />}
+        />
+      </div>
     );
   }
 

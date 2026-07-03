@@ -9,6 +9,7 @@ import {
   LoadingFill,
   WarningFill,
 } from "@mingcute/react";
+import { useEffect, useState, type CSSProperties } from "react";
 import type React from "react";
 import { cn } from "./lib/utils";
 import { buttonVariants } from "./button";
@@ -20,6 +21,14 @@ const TOAST_ICONS = {
   success: CheckCircleFill,
   warning: WarningFill,
 } as const;
+const TOAST_LAYER_Z_INDEX = 60;
+const TOAST_VIEWPORT_STYLE = {
+  zIndex: TOAST_LAYER_Z_INDEX,
+} satisfies CSSProperties;
+const ANCHORED_TOAST_VIEWPORT_STYLE = {
+  pointerEvents: "none",
+  zIndex: TOAST_LAYER_Z_INDEX,
+} satisfies CSSProperties;
 
 type ToastProgressData = {
   progress?: {
@@ -146,6 +155,81 @@ function toastMingcuteIconClassName(type: string | undefined): string {
   return type === "loading" ? "animate-spin opacity-90" : "";
 }
 
+type AnchorRect = {
+  bottom: number;
+  height: number;
+  left: number;
+  right: number;
+  top: number;
+  width: number;
+};
+
+function getAnchorRect(anchor: Element | null | undefined): AnchorRect | null {
+  if (!anchor?.isConnected) {
+    return null;
+  }
+
+  const rect = anchor.getBoundingClientRect();
+
+  return {
+    bottom: rect.bottom,
+    height: rect.height,
+    left: rect.left,
+    right: rect.right,
+    top: rect.top,
+    width: rect.width,
+  };
+}
+
+function useAnchorRect(anchor: Element | null | undefined): AnchorRect | null {
+  const [rect, setRect] = useState<AnchorRect | null>(() => getAnchorRect(anchor));
+
+  useEffect(() => {
+    const update = () => setRect(getAnchorRect(anchor));
+
+    update();
+
+    if (!anchor?.isConnected) {
+      return undefined;
+    }
+
+    const resizeObserver =
+      typeof ResizeObserver === "undefined" ? null : new ResizeObserver(update);
+    resizeObserver?.observe(anchor);
+    window.addEventListener("resize", update);
+    window.addEventListener("scroll", update, true);
+
+    return () => {
+      resizeObserver?.disconnect();
+      window.removeEventListener("resize", update);
+      window.removeEventListener("scroll", update, true);
+    };
+  }, [anchor]);
+
+  return rect;
+}
+
+function getToastAnchorStyle(
+  rect: AnchorRect,
+  positionerProps: NonNullable<ToastObject<Record<string, unknown>>["positionerProps"]>,
+): CSSProperties {
+  const side = positionerProps.side ?? "top";
+  const sideOffset =
+    typeof positionerProps.sideOffset === "number" ? positionerProps.sideOffset : 4;
+  const position = positionerProps.positionMethod ?? "fixed";
+  const scrollLeft = position === "absolute" ? window.scrollX : 0;
+  const scrollTop = position === "absolute" ? window.scrollY : 0;
+
+  return {
+    left: rect.left + rect.width / 2 + scrollLeft,
+    pointerEvents: "none",
+    position,
+    top: (side === "bottom" ? rect.bottom + sideOffset : rect.top - sideOffset) + scrollTop,
+    transform: side === "bottom" ? "translateX(-50%)" : "translate(-50%, -100%)",
+    zIndex: TOAST_LAYER_Z_INDEX,
+  };
+}
+
 type SwipeDirection = "up" | "down" | "left" | "right";
 
 function getSwipeDirection(position: ToastPosition): SwipeDirection[] {
@@ -170,7 +254,7 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
     <Toast.Portal data-slot="toast-portal">
       <Toast.Viewport
         className={cn(
-          "fixed z-60 mx-auto flex w-[calc(100%-var(--toast-inset)*2)] max-w-90 [--toast-inset:--spacing(4)] sm:[--toast-inset:--spacing(8)]",
+          "fixed mx-auto flex w-[calc(100%-var(--toast-inset)*2)] max-w-90 [--toast-inset:--spacing(4)] sm:[--toast-inset:--spacing(8)]",
           // Vertical positioning
           "data-[position*=top]:top-(--toast-inset)",
           "data-[position*=bottom]:bottom-(--toast-inset)",
@@ -181,6 +265,7 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
         )}
         data-position={position}
         data-slot="toast-viewport"
+        style={TOAST_VIEWPORT_STYLE}
       >
         {toasts.map((toast) => {
           return (
@@ -264,21 +349,24 @@ function AnchoredToastItem({
 }): React.ReactElement | null {
   const tooltipStyle = (toast.data as { tooltipStyle?: boolean })?.tooltipStyle ?? false;
   const positionerProps = toast.positionerProps;
+  const anchorRect = useAnchorRect(positionerProps?.anchor);
 
-  if (!positionerProps?.anchor) {
+  if (!positionerProps?.anchor || !anchorRect) {
     return null;
   }
 
+  const positionerClassName =
+    typeof positionerProps.className === "string" ? positionerProps.className : undefined;
+
   return (
-    <Toast.Positioner
-      className="z-50 max-w-[min(--spacing(64),var(--available-width))]"
+    <div
+      className={cn("max-w-64", positionerClassName)}
       data-slot="toast-positioner"
-      sideOffset={positionerProps.sideOffset ?? 4}
-      toast={toast}
+      style={getToastAnchorStyle(anchorRect, positionerProps)}
     >
       <Toast.Root
         className={cn(
-          "relative text-balance border border-border bg-popover not-dark:bg-clip-padding text-popover-foreground text-xs transition-[scale,opacity] before:pointer-events-none before:absolute before:inset-0 before:shadow-[0_1px_--theme(--color-black/4%)] data-ending-style:scale-98 data-starting-style:scale-98 data-ending-style:opacity-0 data-starting-style:opacity-0 dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
+          "relative text-balance border border-border bg-popover not-dark:bg-clip-padding text-popover-foreground text-xs transition-[scale,opacity] before:pointer-events-none before:absolute before:inset-0 before:shadow-[0_1px_--theme(--color-black/4%)] data-ending-style:scale-98 data-starting-style:scale-98 data-ending-style:opacity-0 data-starting-style:opacity-0 pointer-events-auto dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
           tooltipStyle
             ? "rounded-md shadow-md/5 before:rounded-[calc(var(--radius-md)-1px)]"
             : "rounded-lg shadow-lg/5 before:rounded-[calc(var(--radius-lg)-1px)]",
@@ -311,7 +399,7 @@ function AnchoredToastItem({
           </Toast.Content>
         )}
       </Toast.Root>
-    </Toast.Positioner>
+    </div>
   );
 }
 
@@ -320,7 +408,11 @@ function AnchoredToasts(): React.ReactElement {
 
   return (
     <Toast.Portal data-slot="toast-portal-anchored">
-      <Toast.Viewport className="outline-none" data-slot="toast-viewport-anchored">
+      <Toast.Viewport
+        className="fixed inset-0 outline-none"
+        data-slot="toast-viewport-anchored"
+        style={ANCHORED_TOAST_VIEWPORT_STYLE}
+      >
         {toasts.map((toast) => (
           <AnchoredToastItem key={toast.id} toast={toast} />
         ))}

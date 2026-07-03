@@ -1,4 +1,4 @@
-import { listFollowedFeeds } from "@modules/feeds/api";
+import { listFollowedFeeds } from "@modules/feeds/lib/api";
 import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
 import { QUERY_TIMES } from "@lib/query/policies";
 

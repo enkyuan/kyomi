@@ -1,7 +1,7 @@
 "use client";
 
 import type { QueryClient, QueryKey } from "@tanstack/react-query";
-import type { DiscoverFeedResult, FollowedFeed } from "../api";
+import type { DiscoverFeedResult, FollowedFeed } from "../lib/api";
 import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
 
 export type FeedCacheSnapshot = {
@@ -41,20 +41,6 @@ export function applyPinnedState(feeds: FollowedFeed[], feedId: string, pinned: 
 
 export function applyPinnedFeedState(queryClient: QueryClient, feedId: string, pinned: boolean) {
   updateFollowedFeeds(queryClient, (feeds) => applyPinnedState(feeds, feedId, pinned));
-}
-
-export function applyFeedFolder(
-  queryClient: QueryClient,
-  feedId: string,
-  folder: { id: string; name?: string },
-) {
-  updateFollowedFeeds(queryClient, (feeds) =>
-    feeds.map((feed) =>
-      feed.feedId === feedId
-        ? { ...feed, folderId: folder.id, folderName: folder.name ?? feed.folderName }
-        : feed,
-    ),
-  );
 }
 
 export function removeFollowedFeeds(queryClient: QueryClient, feedIds: string[]) {

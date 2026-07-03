@@ -1,6 +1,6 @@
 import type { QueryClient } from "@tanstack/react-query";
 import { requireAuth } from "@/routes/-guards";
-import { listFollowedFeeds } from "@modules/feeds/api";
+import { listFollowedFeeds } from "@modules/feeds/lib/api";
 import { getInboxItemIdFromSlug } from "@modules/inbox/lib/article-slug";
 import { followedFeedsQueryKey, inboxDetailQueryOptions } from "@modules/inbox/queries/options";
 import { getInboxLoaderData } from "@modules/inbox/services/route-loader";

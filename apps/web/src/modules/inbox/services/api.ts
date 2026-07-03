@@ -17,7 +17,7 @@ let inboxSchemaModulePromise:
   | Promise<
       Pick<
         typeof import("@lib/schemas/index"),
-        | "apiJsonValidated"
+        | "fetchValidatedJson"
         | "articleCountsSchema"
         | "articleDetailSchema"
         | "cursorListResponseSchema"
@@ -29,7 +29,7 @@ let inboxSchemaModulePromise:
 
 function getInboxSchemaModule() {
   inboxSchemaModulePromise ??= import("@lib/schemas/index").then((module) => ({
-    apiJsonValidated: module.apiJsonValidated,
+    fetchValidatedJson: module.fetchValidatedJson,
     articleCountsSchema: module.articleCountsSchema,
     articleDetailSchema: module.articleDetailSchema,
     cursorListResponseSchema: module.cursorListResponseSchema,
@@ -144,8 +144,8 @@ async function fetchInboxList({
   sort: InboxSort | undefined;
   headers: Headers;
 }): Promise<CursorListResponse> {
-  const { apiJsonValidated, cursorListResponseSchema } = await getInboxSchemaModule();
-  return apiJsonValidated(cursorListResponseSchema, () =>
+  const { fetchValidatedJson, cursorListResponseSchema } = await getInboxSchemaModule();
+  return fetchValidatedJson(cursorListResponseSchema, () =>
     apiJson<CursorListResponse>(
       buildInboxListUrl({ filter, timezoneOffsetMinutes, includeRead, search, cursor, sort }),
       {
@@ -158,7 +158,7 @@ async function fetchInboxList({
 export const getInboxItems = createServerFn({ method: "GET" })
   .inputValidator((input: GetInboxItemsInput) => input)
   .handler(async ({ data }): Promise<InboxResponse> => {
-    const { apiJsonValidated, cursorListResponseSchema } = await getInboxSchemaModule();
+    const { fetchValidatedJson, cursorListResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const filter = data.filter ?? "all";
     const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
@@ -166,7 +166,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
       : 0;
     const response =
       data.feedId?.trim() || data.folderId?.trim()
-        ? await apiJsonValidated(cursorListResponseSchema, () =>
+        ? await fetchValidatedJson(cursorListResponseSchema, () =>
             apiJson<CursorListResponse>(
               buildArticlesUrl(
                 filter,
@@ -205,9 +205,9 @@ export const getInboxItems = createServerFn({ method: "GET" })
 export const getInboxItemDetail = createServerFn({ method: "GET" })
   .inputValidator((input: { itemId: string }) => input)
   .handler(async ({ data }): Promise<InboxDetailResponse> => {
-    const { apiJsonValidated, articleDetailSchema } = await getInboxSchemaModule();
+    const { fetchValidatedJson, articleDetailSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
-    const item = await apiJsonValidated(articleDetailSchema, () =>
+    const item = await fetchValidatedJson(articleDetailSchema, () =>
       apiJson<ArticleDetailDto>(`/api/v1/articles/${data.itemId}`, {
         headers: buildForwardHeaders(headers),
       }),
@@ -219,7 +219,7 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
 export const updateInboxItemState = createServerFn({ method: "POST" })
   .inputValidator((input: UpdateInboxItemStateInput) => input)
   .handler(async ({ data }): Promise<{ message: string }> => {
-    const { apiJsonValidated, messageResponseSchema } = await getInboxSchemaModule();
+    const { fetchValidatedJson, messageResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
     forwarded.set("content-type", "application/json");
@@ -235,7 +235,7 @@ export const updateInboxItemState = createServerFn({ method: "POST" })
       body.isHidden = data.isHidden;
     }
 
-    return apiJsonValidated(messageResponseSchema, () =>
+    return fetchValidatedJson(messageResponseSchema, () =>
       apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}`, {
         method: "PUT",
         headers: forwarded,
@@ -247,12 +247,12 @@ export const updateInboxItemState = createServerFn({ method: "POST" })
 export const reportBrokenArticle = createServerFn({ method: "POST" })
   .inputValidator((input: ReportBrokenArticleInput) => input)
   .handler(async ({ data }): Promise<{ message: string }> => {
-    const { apiJsonValidated, messageResponseSchema } = await getInboxSchemaModule();
+    const { fetchValidatedJson, messageResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
     forwarded.set("content-type", "application/json");
 
-    return apiJsonValidated(messageResponseSchema, () =>
+    return fetchValidatedJson(messageResponseSchema, () =>
       apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}/reports/broken`, {
         method: "POST",
         headers: forwarded,
@@ -277,11 +277,11 @@ export const recordInboxItemView = createServerFn({ method: "POST" })
 export const extractInboxItemFullText = createServerFn({ method: "POST" })
   .inputValidator((input: { itemId: string }) => input)
   .handler(async ({ data }): Promise<ExtractFullTextResponseDto> => {
-    const { apiJsonValidated, extractFullTextResponseSchema } = await getInboxSchemaModule();
+    const { fetchValidatedJson, extractFullTextResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
 
-    return apiJsonValidated(extractFullTextResponseSchema, () =>
+    return fetchValidatedJson(extractFullTextResponseSchema, () =>
       apiJson<ExtractFullTextResponseDto>(`/api/v1/articles/${data.itemId}/extract-full-text`, {
         method: "POST",
         headers: forwarded,
@@ -294,7 +294,7 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
     (input: { timezoneOffsetMinutes?: number; feedId?: string; folderId?: string }) => input,
   )
   .handler(async ({ data }): Promise<SidebarInboxCounts> => {
-    const { apiJsonValidated, articleCountsSchema } = await getInboxSchemaModule();
+    const { fetchValidatedJson, articleCountsSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
     const url = buildCountsUrl(
@@ -304,7 +304,7 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
       }),
     );
 
-    const counts = await apiJsonValidated(articleCountsSchema, () =>
+    const counts = await fetchValidatedJson(articleCountsSchema, () =>
       apiJson<ArticleCountsResponse>(url, { headers: forwarded }),
     );
 

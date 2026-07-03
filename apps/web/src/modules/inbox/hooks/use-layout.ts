@@ -4,9 +4,9 @@ import { useNavigate, useParams, useSearch } from "@tanstack/react-router";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
 import type { InboxMarkReadBehaviorDto } from "@lib/schemas/index";
+import type { InboxPreferences } from "./use-inbox-data";
 import { getInboxItemIdFromSlug } from "../lib/article-slug";
 import type { InboxFilter, InboxSort } from "../services/api";
-import type { InboxPreferences } from "./data";
 
 const INBOX_DESKTOP_MIN_WIDTH_PX = 768;
 

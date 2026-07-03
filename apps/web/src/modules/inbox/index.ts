@@ -13,7 +13,7 @@ export {
   useRecordInboxItemView,
   type InboxItemPatch,
   type InboxPreferences,
-} from "./hooks/data";
+} from "./hooks/use-inbox-data";
 export {
   useInboxRouteState,
   useMarkReadBehavior,

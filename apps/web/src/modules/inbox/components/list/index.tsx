@@ -9,7 +9,11 @@ import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "
 import { useRef } from "react";
 import { useHydrated } from "@hooks/use-hydrated";
 import type { InboxFilter, InboxItem, InboxSort } from "@modules/inbox/services/api";
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
+import type {
+  ArticleDetailDto,
+  InboxDensityDto,
+  InboxTimestampDisplayDto,
+} from "@lib/schemas/index";
 import {
   BackToInboxButton,
   DEFAULT_SORT,
@@ -19,7 +23,7 @@ import {
   type PinnedFolderFilter,
 } from "./header";
 import { Toolbar as ReaderToolbar } from "@modules/reader/components/toolbar";
-import { useToolbar as useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
+import { useReaderToolbar } from "@hooks/use-toolbar";
 
 export type ListDisplayOptions = {
   readerFocusMode?: boolean;

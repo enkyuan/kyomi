@@ -8,7 +8,7 @@ import {
 } from "@kyomi/db";
 import { db } from "@adapters/db/client";
 import { env } from "@config/env";
-import { resolveSessionLocationFromAuthContext } from "./session-location";
+import { resolveLocationFromAuthContext } from "./location";
 
 const defaultApiOrigin = `http://localhost:${env.PORT}`;
 const baseURL = resolveBetterAuthBaseUrl(env.BETTER_AUTH_URL ?? defaultApiOrigin, defaultApiOrigin);
@@ -28,7 +28,7 @@ export const auth = betterAuth({
     session: {
       create: {
         before: async (data, context) => ({
-          data: resolveSessionLocationFromAuthContext(
+          data: resolveLocationFromAuthContext(
             context,
             typeof data.ipAddress === "string" ? data.ipAddress : null,
           ),

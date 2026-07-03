@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import { MenuItem as MenuPrimitiveItem } from "@kyomi/ui/menu";
 
-export function MenuItem({
+export function ItemToolbarMenuItem({
   children,
   label,
   onClick,

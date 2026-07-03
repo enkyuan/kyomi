@@ -4,13 +4,13 @@ import { memo, type KeyboardEvent } from "react";
 import { m } from "motion/react";
 import { cn } from "@kyomi/ui/lib/utils";
 import { SourceRow } from "./source-row";
-import { ItemInlineToolbar } from "./toolbar/item-toolbar";
+import { ItemInlineToolbar } from "./toolbar/inline";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/card";
-import { TimestampText } from "@modules/inbox/components/timestamp-text";
+import { TimestampText } from "@/components/timestamp-text";
 import { useTimestamp } from "@hooks/use-timestamp";
-import { Pretext } from "./pretext";
-import { getSectionClassNames, getTypography } from "@modules/feeds/layout";
-import { arePropsEqual, type Props } from "@modules/feeds/props";
+import { usePretextLayout } from "@hooks/use-pretext";
+import { getSectionClassNames, getTypography } from "@modules/feeds/lib/layout";
+import { arePropsEqual, type Props } from "@modules/feeds/lib/props";
 
 const ITEM_GUTTER_CLASS = "px-10.5";
 const ITEM_SEPARATOR_CLASS = "left-10.5 right-10.5";
@@ -46,6 +46,21 @@ export const Item = memo(function Item({
     metaFontSizePx,
     sourceLabelFontSizePx,
   } = typography;
+  const summaryText = item.summary || "No summary available.";
+  const titlePretext = usePretextLayout({
+    text: item.title,
+    font: titleFont,
+    lineHeight: titleLineHeightPx,
+    maxLines: 2,
+    containerWidth,
+  });
+  const summaryPretext = usePretextLayout({
+    text: summaryText,
+    font: summaryFont,
+    lineHeight: summaryLineHeightPx,
+    maxLines: summaryMaxLines,
+    containerWidth,
+  });
   const selectItem = () => {
     onSelect(item);
   };
@@ -121,37 +136,38 @@ export const Item = memo(function Item({
             layoutId={`inbox-item-${item.id}-title`}
             transition={{ type: "spring", duration: 0.28, bounce: 0 }}
           >
-            <Pretext
-              className={cn("font-semibold tracking-[-0.012em] text-foreground", "line-clamp-2")}
-              lineHeight={titleLineHeightPx}
-              maxLines={2}
-              text={item.title}
-              font={titleFont}
-              containerWidth={containerWidth}
+            <p
+              ref={titlePretext.ref}
+              className={cn(
+                "w-full font-semibold tracking-[-0.012em] text-foreground",
+                "line-clamp-2",
+              )}
               style={{
+                maxWidth: titlePretext.fittedWidth ? `${titlePretext.fittedWidth}px` : undefined,
                 fontSize: `${titleFontSizePx}px`,
                 lineHeight: `${titleLineHeightPx}px`,
               }}
-            />
+            >
+              {item.title}
+            </p>
           </m.div>
         </CardTitle>
       </CardHeader>
       <CardContent className={cn("min-w-0 p-0", ITEM_GUTTER_CLASS)}>
-        <Pretext
-          className="overflow-hidden text-pretty text-muted-foreground/95"
-          text={item.summary || "No summary available."}
-          font={summaryFont}
-          lineHeight={summaryLineHeightPx}
-          maxLines={summaryMaxLines}
-          containerWidth={containerWidth}
+        <p
+          ref={summaryPretext.ref}
+          className="w-full overflow-hidden text-pretty text-muted-foreground/95"
           style={{
+            maxWidth: summaryPretext.fittedWidth ? `${summaryPretext.fittedWidth}px` : undefined,
             display: "-webkit-box",
             fontSize: `${summaryFontSizePx}px`,
             lineHeight: `${summaryLineHeightPx}px`,
             WebkitBoxOrient: "vertical",
             WebkitLineClamp: summaryMaxLines,
           }}
-        />
+        >
+          {summaryText}
+        </p>
       </CardContent>
       <CardFooter
         className={cn(

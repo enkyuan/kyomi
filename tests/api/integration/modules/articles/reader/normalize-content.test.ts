@@ -3,8 +3,8 @@ import {
   buildFallbackReaderContent,
   buildReadabilityReaderContent,
   buildStoredReaderContent,
-} from "@modules/articles/reader/normalize-content";
-import type { ArticleStoredContentDto } from "@modules/articles/reader/content.types";
+  type ArticleStoredContentDto,
+} from "@modules/articles/reader/content";
 
 /*
  * Base input factory — all fields null/empty. Override only what each test cares about.

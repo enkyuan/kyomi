@@ -32,6 +32,7 @@
   --color-info-foreground: var(--info-foreground);
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
+  --color-mizu: oklch(0.788 0.073 210.53);
   --color-petrol-green: var(--petrol-green);
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);

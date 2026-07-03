@@ -25,9 +25,8 @@ import {
 } from "@kyomi/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
-import type { ToolbarProps } from "@modules/reader/hooks/use-toolbar";
+import type { ToolbarProps } from "@hooks/use-toolbar";
 import type { ReaderContentWidth } from "@modules/reader/hooks/preferences";
-import { SAVED_ACTION_ACTIVE_CLASS } from "@lib/theme/action-colors";
 import { cn } from "@kyomi/ui/lib/utils";
 import { FontSizeTicker } from "./font-ticker";
 
@@ -97,7 +96,7 @@ export function Toolbar({
             tooltipCollisionAvoidance={tooltipCollisionAvoidance}
             tooltipSideOffset={tooltipSideOffset}
             large={useLargeControls}
-            activeClassName={SAVED_ACTION_ACTIVE_CLASS}
+            activeClassName="text-mizu"
           >
             {isSaved ? <BookmarkFill /> : <BookmarkLine />}
           </ReaderToolbarButton>

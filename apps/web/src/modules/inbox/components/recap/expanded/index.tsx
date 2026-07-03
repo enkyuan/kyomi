@@ -3,14 +3,16 @@
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
-import { listFollowedFeeds } from "@modules/feeds/api";
+import { Transition, type TransitionDirection } from "@kyomi/ui/transition";
+import { useTransition } from "@hooks/use-transition";
+import { listFollowedFeeds } from "@modules/feeds/lib/api";
+import { ExpandedFolders } from "@modules/folders/components/recap/expanded";
+import type { RecapFolder } from "@modules/folders/lib/types";
 import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
-import { ExpandedFolders } from "./folders";
 import { ExpandedViewHeader } from "./header";
 import { ExpandedSavedItems } from "./saved-items";
 import { ExpandedTopSources } from "./top-sources";
-import { RecapScreenTransition, type RecapScreenDirection } from "../screen-transition";
-import type { RecapFolder, RecapSavedItem, RecapTopViewedFeed } from "../types";
+import type { RecapSavedItem, RecapTopViewedFeed } from "../types";
 
 export type RecapExpandedSection = "folders" | "topSources" | "worthRevisiting";
 type RemoveFeedsToastOptions = {
@@ -23,6 +25,7 @@ const EXPANDED_SECTION_TITLES = {
   topSources: "Top Sources",
   worthRevisiting: "Worth revisiting",
 } satisfies Record<RecapExpandedSection, string>;
+const EXPANDED_SECTION_TRANSITION_OFFSET_PX = 28;
 
 export function RecapExpandedView({
   section,
@@ -67,7 +70,7 @@ export function RecapExpandedView({
 }) {
   const [selectedFolderId, setSelectedFolderId] = useState<string | null>(null);
   const [folderScreenDirection, setFolderScreenDirection] =
-    useState<RecapScreenDirection>("forward");
+    useState<TransitionDirection>("forward");
   const folderOptions = useMemo(
     () => folders.map((folder) => ({ label: folder.name, value: folder.id })),
     [folders],
@@ -100,13 +103,16 @@ export function RecapExpandedView({
   };
   const backLabel = selectedFolder ? "Back to folders" : "Back to recap";
   const screenKey = selectedFolder ? `folder-${selectedFolder.id}` : `section-${section}`;
+  const folderTransition = useTransition({
+    className: "relative min-h-0 min-w-0 flex-1 overflow-hidden",
+    contentKey: screenKey,
+    direction: folderScreenDirection,
+    mode: "popLayout",
+    offset: EXPANDED_SECTION_TRANSITION_OFFSET_PX,
+  });
 
   return (
-    <RecapScreenTransition
-      className="flex-1"
-      contentKey={screenKey}
-      direction={folderScreenDirection}
-    >
+    <Transition {...folderTransition}>
       <div className="flex min-h-0 flex-1 flex-col py-4">
         <ExpandedViewHeader
           backLabel={backLabel}
@@ -156,6 +162,6 @@ export function RecapExpandedView({
           </ScrollArea>
         )}
       </div>
-    </RecapScreenTransition>
+    </Transition>
   );
 }

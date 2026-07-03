@@ -28,9 +28,9 @@ const SettingsDialog = lazyNamed(
   () => import("@modules/settings/components/dialog"),
   "SettingsDialog",
 );
-const SourcesDialog = lazyNamed(
-  () => import("@modules/feeds/components/follow/sources-dialog"),
-  "SourcesDialog",
+const FollowSourcesDialog = lazyNamed(
+  () => import("@modules/feeds/components/follow/dialog"),
+  "FollowSourcesDialog",
 );
 
 const CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS = cn(
@@ -42,20 +42,20 @@ const CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS = cn(
 );
 
 type AppSidebarDialogState = {
+  followSourcesDialogLoaded: boolean;
+  followSourcesOpen: boolean;
   settingsDialogLoaded: boolean;
-  sourcesOpen: boolean;
-  sourcesDialogLoaded: boolean;
 };
 
 type AppSidebarDialogAction =
+  | { type: "load-follow-sources" }
   | { type: "load-settings-dialog" }
-  | { type: "load-sources-dialog" }
-  | { type: "set-sources-open"; open: boolean };
+  | { type: "set-follow-sources-open"; open: boolean };
 
 const INITIAL_DIALOG_STATE: AppSidebarDialogState = {
+  followSourcesDialogLoaded: false,
+  followSourcesOpen: false,
   settingsDialogLoaded: false,
-  sourcesOpen: false,
-  sourcesDialogLoaded: false,
 };
 
 function dialogStateReducer(
@@ -63,12 +63,16 @@ function dialogStateReducer(
   action: AppSidebarDialogAction,
 ): AppSidebarDialogState {
   switch (action.type) {
+    case "load-follow-sources":
+      return state.followSourcesDialogLoaded
+        ? state
+        : { ...state, followSourcesDialogLoaded: true };
     case "load-settings-dialog":
       return state.settingsDialogLoaded ? state : { ...state, settingsDialogLoaded: true };
-    case "load-sources-dialog":
-      return state.sourcesDialogLoaded ? state : { ...state, sourcesDialogLoaded: true };
-    case "set-sources-open":
-      return state.sourcesOpen === action.open ? state : { ...state, sourcesOpen: action.open };
+    case "set-follow-sources-open":
+      return state.followSourcesOpen === action.open
+        ? state
+        : { ...state, followSourcesOpen: action.open };
   }
 }
 
@@ -88,12 +92,12 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
   }, [settingsOpen]);
 
   const preloadSourcesDialog = () => {
-    dispatchDialogState({ type: "load-sources-dialog" });
-    void SourcesDialog.preload();
+    dispatchDialogState({ type: "load-follow-sources" });
+    void FollowSourcesDialog.preload();
   };
 
-  const setSourcesOpen = (open: boolean) => {
-    dispatchDialogState({ type: "set-sources-open", open });
+  const setFollowSourcesOpen = (open: boolean) => {
+    dispatchDialogState({ type: "set-follow-sources-open", open });
   };
 
   const feeds = followedFeedsData ?? [];
@@ -124,7 +128,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               className={CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS}
               onClick={() => {
                 preloadSourcesDialog();
-                dispatchDialogState({ type: "set-sources-open", open: true });
+                dispatchDialogState({ type: "set-follow-sources-open", open: true });
               }}
               onFocus={preloadSourcesDialog}
               onPointerEnter={preloadSourcesDialog}
@@ -222,12 +226,12 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         {dialogState.settingsDialogLoaded ? (
           <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
         ) : null}
-        {dialogState.sourcesDialogLoaded ? (
-          <SourcesDialog
+        {dialogState.followSourcesDialogLoaded ? (
+          <FollowSourcesDialog
             enableGlobalShortcut={false}
             hideTrigger
-            open={dialogState.sourcesOpen}
-            onOpenChange={setSourcesOpen}
+            open={dialogState.followSourcesOpen}
+            onOpenChange={setFollowSourcesOpen}
             platform={platform}
           />
         ) : null}

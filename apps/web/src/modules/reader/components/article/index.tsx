@@ -1,18 +1,19 @@
 "use client";
 
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
-import { TimestampText } from "@modules/inbox/components/timestamp-text";
+import { TimestampText } from "@/components/timestamp-text";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
-import { getTypography } from "@modules/feeds/layout";
+import { getTypography } from "@modules/feeds/lib/layout";
 import { Toolbar } from "../toolbar";
-import {
-  useToolbar as useReaderToolbar,
-  type ToolbarModel,
-} from "@modules/reader/hooks/use-toolbar";
+import { useReaderToolbar, type ToolbarModel } from "@hooks/use-toolbar";
 import { ReaderContent } from "@kyomi/reader/web";
 import { Button } from "@kyomi/ui/button";
 import { Spinner } from "@kyomi/ui/spinner";
-import type { ArticleDetailDto, InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
+import type {
+  ArticleDetailDto,
+  InboxDensityDto,
+  InboxTimestampDisplayDto,
+} from "@lib/schemas/index";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useTimestamp } from "@hooks/use-timestamp";
 import { useLayoutEffect, useRef, useState } from "react";

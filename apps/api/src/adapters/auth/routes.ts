@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 import { auth } from ".";
-import { hydrateStoredSessionLocation } from "./session-location";
+import { hydrateStoredLocation } from "./location";
 
 function withForwardedForHeader(request: Request, ipAddress?: string) {
   const headers = new Headers(request.headers);
@@ -19,7 +19,7 @@ export const authRoutes = new Elysia({
       ctx.server?.requestIP(ctx.request)?.address,
     );
     const sessions = await auth.api.listSessions({ headers });
-    return sessions.map((session) => hydrateStoredSessionLocation(session));
+    return sessions.map((session) => hydrateStoredLocation(session));
   })
   .all("/api/auth", (ctx) => {
     const headers = withForwardedForHeader(

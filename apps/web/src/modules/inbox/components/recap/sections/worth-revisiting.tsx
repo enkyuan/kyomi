@@ -3,7 +3,6 @@
 import { Link } from "@tanstack/react-router";
 import { BookmarkFill, ExternalLinkLine, RightFill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
-import { SAVED_ACTION_ACTIVE_CLASS } from "@lib/theme/action-colors";
 import { buildInboxItemSlug } from "@modules/inbox/lib/article-slug";
 import type { RecapSavedItem } from "../types";
 import { formatRelativeTime } from "../utils";
@@ -93,7 +92,7 @@ export function WorthRevisiting({
                   <RailTooltip label="Unsave">
                     <Button
                       aria-label={`Unsave ${item.title}`}
-                      className={SAVED_ACTION_ACTIVE_CLASS}
+                      className="text-mizu"
                       loading={unsavingItemId === item.id}
                       size="icon-xs"
                       variant="ghost"
