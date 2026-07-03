@@ -4,6 +4,7 @@ import { Menu as MenuPrimitive } from "@base-ui/react/menu";
 import { RightFill } from "@mingcute/react";
 import type * as React from "react";
 import { cn } from "./lib/utils";
+import { ScrollAreaPrimitive, ScrollBar } from "./scroll-area";
 
 export const MenuCreateHandle: typeof MenuPrimitive.createHandle = MenuPrimitive.createHandle;
 
@@ -60,15 +61,19 @@ export function MenuPopup({
           data-slot="menu-popup"
           {...props}
         >
-          <div
-            className={cn(
-              "max-h-(--available-height) w-full overflow-y-auto p-1",
-              contentClassName,
-            )}
+          <ScrollAreaPrimitive.Root
+            className={cn("relative max-h-(--available-height) min-h-0 w-full", contentClassName)}
             data-slot="menu-popup-content"
           >
-            {children}
-          </div>
+            <ScrollAreaPrimitive.Viewport
+              className="max-h-[inherit] rounded-[inherit] outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain"
+              data-slot="scroll-area-viewport"
+            >
+              <div className="w-full p-1">{children}</div>
+            </ScrollAreaPrimitive.Viewport>
+            <ScrollBar className="absolute inset-y-0 end-0 z-10 m-0" orientation="vertical" />
+            <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
+          </ScrollAreaPrimitive.Root>
         </MenuPrimitive.Popup>
       </MenuPrimitive.Positioner>
     </MenuPrimitive.Portal>

@@ -83,9 +83,7 @@ export function FolderFeedActions({
               "w-44 rounded-[20px] before:rounded-[19px]",
               shouldScrollFolders && "overflow-hidden",
             )}
-            contentClassName={
-              shouldScrollFolders ? cn(FOLDER_MOVE_MAX_HEIGHT_CLASS, "overflow-y-auto") : undefined
-            }
+            contentClassName={shouldScrollFolders ? FOLDER_MOVE_MAX_HEIGHT_CLASS : undefined}
             side="top"
             sideOffset={6}
           >

@@ -101,9 +101,7 @@ export function FolderPickerButton({
           "w-40 rounded-[20px] before:rounded-[19px]",
           shouldScrollFolders && "overflow-hidden",
         )}
-        contentClassName={
-          shouldScrollFolders ? cn(FOLDER_PICKER_MAX_HEIGHT_CLASS, "overflow-y-auto") : undefined
-        }
+        contentClassName={shouldScrollFolders ? FOLDER_PICKER_MAX_HEIGHT_CLASS : undefined}
         side="bottom"
         sideOffset={6}
       >

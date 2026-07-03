@@ -96,11 +96,14 @@ describe("FilterControl", () => {
     fireEvent.click(screen.getByRole("button", { name: "Choose filter" }));
 
     await waitFor(() => {
+      const menuPopup = document.querySelector('[data-slot="menu-popup"]');
       const menuContent = document.querySelector('[data-slot="menu-popup-content"]');
 
+      expect(menuPopup?.className).not.toMatch(/(^|\s)p-1(\s|$)/);
       expect(menuContent).toBeTruthy();
       expect(menuContent?.className).toContain("max-h-[min(calc(--spacing(9)*4");
-      expect(menuContent?.className).toContain("overflow-y-auto");
+      expect(menuContent?.className).not.toContain("overflow-y-auto");
+      expect(menuContent?.querySelector('[data-slot="scroll-area-viewport"]')).toBeTruthy();
     });
   });
 });

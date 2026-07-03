@@ -171,12 +171,10 @@ export function FilterControl({
                 sideOffset={6}
                 anchor={segmentedRef}
                 className={cn(
-                  "w-(--anchor-width) min-w-(--anchor-width) max-w-64 rounded-[22px] p-1 before:rounded-[21px]",
+                  "w-(--anchor-width) min-w-(--anchor-width) max-w-64 rounded-[22px] before:rounded-[21px]",
                   shouldScrollMenu && "overflow-hidden",
                 )}
-                contentClassName={
-                  shouldScrollMenu ? cn(FILTER_MENU_MAX_HEIGHT_CLASS, "overflow-y-auto") : undefined
-                }
+                contentClassName={shouldScrollMenu ? FILTER_MENU_MAX_HEIGHT_CLASS : undefined}
               >
                 {menuItems}
               </MenuPopup>
@@ -354,7 +352,7 @@ export function SortButton({
         align="end"
         sideOffset={6}
         anchor={anchor}
-        className="w-(--anchor-width) min-w-(--anchor-width) rounded-2xl p-1 before:rounded-[15px]"
+        className="w-(--anchor-width) min-w-(--anchor-width) rounded-2xl before:rounded-[15px]"
       >
         {SORT_MENU.map((item) => (
           <SortMenuItem

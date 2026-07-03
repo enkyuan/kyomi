@@ -46,11 +46,7 @@ export function ItemToolbarMenu({
         />
         <TooltipPopup sideOffset={8}>More</TooltipPopup>
       </Tooltip>
-      <MenuPopup
-        align="end"
-        sideOffset={8}
-        className="min-w-48 rounded-xl p-1 before:rounded-[11px]"
-      >
+      <MenuPopup align="end" sideOffset={8} className="min-w-48 rounded-xl before:rounded-[11px]">
         <ItemToolbarMenuItem label="Open source" onClick={onOpenSource}>
           <ExternalLinkLine />
         </ItemToolbarMenuItem>
