@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
-import { TimestampText } from "@/components/timestamp-text";
+import { Timestamp } from "@modules/inbox/components/timestamp";
 import { SourceRow } from "@modules/feeds/components/item/source-row";
 import { getTypography } from "@modules/feeds/lib/layout";
 import { Toolbar } from "../toolbar";
@@ -195,7 +195,7 @@ function ReaderArticleHeader({
       {hideInlineToolbar ? null : (
         <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs uppercase tracking-wide text-muted-foreground">
           <div className="flex min-w-0 flex-wrap items-center gap-2">
-            <TimestampText
+            <Timestamp
               value={item.publishedAt}
               display={timestampDisplay}
               hourCycle={timestampHourCycle}

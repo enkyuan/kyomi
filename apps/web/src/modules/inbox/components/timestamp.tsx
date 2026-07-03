@@ -7,13 +7,13 @@ import {
   formatInboxTimestampSsrFallback,
 } from "@modules/inbox/utils/format-timestamp";
 
-type TimestampTextProps = {
+type TimestampProps = {
   value: string;
   display: InboxTimestampDisplayDto;
   hourCycle: InboxTimestampHourCycleDto;
 };
 
-export function TimestampText({ value, display, hourCycle }: TimestampTextProps) {
+export function Timestamp({ value, display, hourCycle }: TimestampProps) {
   const hydrated = useHydrated();
   const formattedValue = hydrated
     ? formatInboxTimestamp(value, display, hourCycle)

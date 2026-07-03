@@ -6,7 +6,7 @@ import { cn } from "@kyomi/ui/lib/utils";
 import { SourceRow } from "./source-row";
 import { ItemInlineToolbar } from "./toolbar/inline";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/card";
-import { TimestampText } from "@/components/timestamp-text";
+import { Timestamp } from "@modules/inbox/components/timestamp";
 import { useTimestamp } from "@hooks/use-timestamp";
 import { usePretextLayout } from "@hooks/use-pretext";
 import { getSectionClassNames, getTypography } from "@modules/feeds/lib/layout";
@@ -124,7 +124,7 @@ export const Item = memo(function Item({
             style={{ fontSize: `${metaFontSizePx}px` }}
             transition={{ type: "spring", duration: 0.28, bounce: 0 }}
           >
-            <TimestampText
+            <Timestamp
               value={item.publishedAt}
               display={timestampDisplay}
               hourCycle={timestampHourCycle}
