@@ -42,6 +42,8 @@ const ENRICHMENT_CONCURRENCY = 3;
 const PERMANENT_FAILURE_BACKOFF_MS = 24 * 60 * 60 * 1000;
 const HTML_PARSE_ERROR = "Unsupported feed format: received HTML document";
 const SCHEDULED_HTML_AUTODISCOVERY_PROVENANCE = "scheduled_html_autodiscovery";
+const CERTIFICATE_FETCH_ERROR_PATTERN =
+  /certificate|ERR_TLS_CERT|UNABLE_TO_GET_ISSUER_CERT|UNABLE_TO_VERIFY_LEAF_SIGNATURE|SELF_SIGNED_CERT|CERT_HAS_EXPIRED/i;
 
 type FetchedFeedDocument = Extract<
   FetchFeedDocumentResult,
@@ -79,6 +81,10 @@ function isPermanentHttpStatus(status: number | undefined): boolean {
   if (status === undefined) return false;
   if (status === 408 || status === 429) return false;
   return status >= 400 && status < 500;
+}
+
+function isPermanentFetchError(error: string | undefined): boolean {
+  return Boolean(error && CERTIFICATE_FETCH_ERROR_PATTERN.test(error));
 }
 
 function computeFailureBackoffMs(
@@ -498,7 +504,8 @@ export async function runFeedRefresh(
     const fetched = await fetchDocument(feed.url, feed.etag, feed.lastModified);
     if (!fetched.ok) {
       const now = new Date();
-      const permanent = isPermanentHttpStatus(fetched.httpStatus);
+      const permanent =
+        isPermanentHttpStatus(fetched.httpStatus) || isPermanentFetchError(fetched.error);
       const backoffMs = computeFailureBackoffMs(
         {
           lastRefreshSucceededAt: feed.lastRefreshSucceededAt,

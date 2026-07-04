@@ -45,7 +45,11 @@ export function classifyFeedRefreshError(error: unknown): FeedRefreshErrorClass 
     return { severity: "feed", code: "http_5xx", retryable: true };
   }
 
-  if (/certificate|UNABLE_TO_GET_ISSUER_CERT/i.test(message)) {
+  if (
+    /certificate|ERR_TLS_CERT|UNABLE_TO_GET_ISSUER_CERT|UNABLE_TO_VERIFY_LEAF_SIGNATURE|SELF_SIGNED_CERT|CERT_HAS_EXPIRED/i.test(
+      message,
+    )
+  ) {
     return { severity: "feed", code: "certificate", retryable: false };
   }
 
