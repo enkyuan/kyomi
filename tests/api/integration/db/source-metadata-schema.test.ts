@@ -19,7 +19,9 @@ describe("source metadata migration", () => {
   });
 
   test("adds source and canonicalization columns to feeds", () => {
-    expect(sql).toContain('ALTER TABLE "feeds" ADD COLUMN "source_kind" text DEFAULT \'rss\' NOT NULL');
+    expect(sql).toContain(
+      'ALTER TABLE "feeds" ADD COLUMN "source_kind" text DEFAULT \'rss\' NOT NULL',
+    );
     expect(sql).toContain('ALTER TABLE "feeds" ADD COLUMN "submitted_url"');
     expect(sql).toContain('ALTER TABLE "feeds" ADD COLUMN "site_url"');
     expect(sql).toContain('ALTER TABLE "feeds" ADD COLUMN "canonical_feed_url"');
@@ -28,7 +30,9 @@ describe("source metadata migration", () => {
   });
 
   test("adds source parity columns to feed_items", () => {
-    expect(sql).toContain('ALTER TABLE "feed_items" ADD COLUMN "source_kind" text DEFAULT \'rss\' NOT NULL');
+    expect(sql).toContain(
+      'ALTER TABLE "feed_items" ADD COLUMN "source_kind" text DEFAULT \'rss\' NOT NULL',
+    );
     expect(sql).toContain('ALTER TABLE "feed_items" ADD COLUMN "author_name"');
     expect(sql).toContain('ALTER TABLE "feed_items" ADD COLUMN "language"');
     expect(sql).toContain('ALTER TABLE "feed_items" ADD COLUMN "media"');
