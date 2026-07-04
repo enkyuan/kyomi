@@ -71,14 +71,33 @@ function resolveCanonicalUrl(raw: string): string {
   return normalizeFeedUrl(asserted.href);
 }
 
-/** Normalize a category label to a lowercase ASCII slug per the schema invariant. */
+/**
+ * Normalize a category label to a lowercase ASCII slug per the schema invariant. Labels with
+ * no ASCII alphanumerics (e.g. CJK/Arabic) would otherwise collapse to an empty slug and be
+ * dropped, so they fall back to a deterministic hex encoding of the trimmed lowercased label
+ * (same label -> same slug) prefixed with `u-` to stay ASCII and avoid colliding with Latin
+ * slugs.
+ */
 export function toCategorySlug(label: string): string {
-  return label
+  const asciiSlug = label
     .normalize("NFKD")
     .replace(/[̀-ͯ]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+  if (asciiSlug) {
+    return asciiSlug;
+  }
+  // Only fall back for labels with real letters/numbers in some script; pure punctuation
+  // ("!!!") stays empty and is dropped by the caller.
+  const normalized = label.normalize("NFKC").trim().toLowerCase();
+  if (!/[\p{L}\p{N}]/u.test(normalized)) {
+    return "";
+  }
+  const hex = Array.from(normalized)
+    .map((char) => char.codePointAt(0)!.toString(16))
+    .join("-");
+  return `u-${hex}`;
 }
 
 export function normalizeImportRecord(record: CatalogFeedRecord): NormalizedImportRecord {

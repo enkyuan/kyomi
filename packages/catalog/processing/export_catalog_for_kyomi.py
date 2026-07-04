@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import math
 from pathlib import Path
 from typing import Any
 
@@ -27,14 +28,21 @@ def pick_float(record: dict[str, Any], keys: list[str]) -> float | None:
         if isinstance(value, bool):
             continue
         if isinstance(value, (int, float)):
-            return float(value)
-        if isinstance(value, str):
+            candidate = float(value)
+        elif isinstance(value, str):
             trimmed = value.strip()
-            if trimmed:
-                try:
-                    return float(trimmed)
-                except ValueError:
-                    continue
+            if not trimmed:
+                continue
+            try:
+                candidate = float(trimmed)
+            except ValueError:
+                continue
+        else:
+            continue
+        # Skip non-finite values (NaN/inf): json.dumps would emit bare NaN/Infinity
+        # tokens that the TS importer's JSON.parse rejects, dropping the whole record.
+        if math.isfinite(candidate):
+            return candidate
     return None
 
 

@@ -65,6 +65,16 @@ describe("catalog import metadata preservation", () => {
     expect(toCategorySlug("!!!")).toBe("");
   });
 
+  test("toCategorySlug keeps non-Latin labels via a stable hex fallback", () => {
+    const slug = toCategorySlug("科技");
+    expect(slug).not.toBe("");
+    expect(slug).toMatch(/^u-[0-9a-f-]+$/);
+    // Deterministic: same label -> same slug (so assignments dedupe correctly).
+    expect(toCategorySlug("科技")).toBe(slug);
+    // Distinct non-Latin labels get distinct slugs.
+    expect(toCategorySlug("日本語")).not.toBe(slug);
+  });
+
   test("domainFromUrl strips www and returns hostname", () => {
     expect(domainFromUrl("https://www.example.com/rss")).toBe("example.com");
     expect(domainFromUrl("not a url")).toBeNull();
