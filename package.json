@@ -68,14 +68,16 @@
     "drizzle-kit": "^0.31.10",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
+    "oxfmt": "^0.57.0",
+    "oxlint": "^1.72.0",
     "turbo": "^2.9.14"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,mjs,cjs}": [
-      "bunx oxfmt"
+      "oxfmt"
     ],
     "apps/api/@**/*.{ts,tsx}": [
-      "bunx oxlint --fix"
+      "oxlint --fix"
     ]
   },
   "packageManager": "bun@1.3.14"

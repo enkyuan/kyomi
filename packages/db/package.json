@@ -7,11 +7,11 @@
     "./schema": "./src/schema.ts"
   },
   "scripts": {
-    "fmt": "bunx oxfmt src drizzle.config.ts",
-    "fmt:check": "bunx oxfmt --check src drizzle.config.ts",
-    "lint": "bunx oxlint src drizzle.config.ts",
-    "lint:fix": "bunx oxlint --fix src drizzle.config.ts",
-    "typecheck": "bunx tsgo -p tsconfig.json --noEmit",
+    "fmt": "oxfmt src drizzle.config.ts",
+    "fmt:check": "oxfmt --check src drizzle.config.ts",
+    "lint": "oxlint src drizzle.config.ts",
+    "lint:fix": "oxlint --fix src drizzle.config.ts",
+    "typecheck": "tsgo -p tsconfig.json --noEmit",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",

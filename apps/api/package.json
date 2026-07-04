@@ -11,11 +11,11 @@
     "scheduler": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/scheduler.ts",
     "catalog:import": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun ../../scripts/catalog/import.ts --input ../../packages/catalog/processing/exports/catalog-feeds.jsonl",
     "catalog:smoke": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun ../../scripts/catalog/smoke.ts --query \"hacker news\" --expect \"hacker news\"",
-    "fmt": "bunx oxfmt src",
-    "fmt:check": "bunx oxfmt --check src",
-    "lint": "bunx oxlint src",
-    "lint:fix": "bunx oxlint --fix src",
-    "typecheck": "bunx tsgo -p tsconfig.json --noEmit"
+    "fmt": "oxfmt src",
+    "fmt:check": "oxfmt --check src",
+    "lint": "oxlint src",
+    "lint:fix": "oxlint --fix src",
+    "typecheck": "tsgo -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",
