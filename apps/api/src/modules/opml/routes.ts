@@ -170,7 +170,7 @@ export function registerOpmlRoutes(app: Elysia) {
           status: 200,
           headers: {
             "content-type": "application/xml; charset=utf-8",
-            "content-disposition": 'attachment; filename="vols-rss-subscriptions.opml"',
+            "content-disposition": 'attachment; filename="kyomi-subscriptions.opml"',
           },
         });
       },

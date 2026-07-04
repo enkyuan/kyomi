@@ -137,7 +137,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     }
 
     const existingScript = document.querySelector<HTMLScriptElement>(
-      'script[data-vols-rss-react-scan="true"]',
+      'script[data-kyomi-react-scan="true"]',
     );
     if (existingScript) {
       return;
@@ -145,7 +145,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 
     const script = document.createElement("script");
     script.crossOrigin = "anonymous";
-    script.dataset.volsRssReactScan = "true";
+    script.dataset.kyomiReactScan = "true";
     script.src = "https://unpkg.com/react-scan/dist/auto.global.js";
     document.head.appendChild(script);
 

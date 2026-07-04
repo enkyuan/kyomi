@@ -42,7 +42,7 @@ describe("createReaderDocument", () => {
 
     expect(document).not.toContain("document.write");
     expect(document).toContain("<p>Hi</p>");
-    expect(document).toContain("__VOLS_RSS_READER_READY__");
+    expect(document).toContain("__KYOMI_READER_READY__");
   });
 
   test("hides images when preferences disable them", () => {

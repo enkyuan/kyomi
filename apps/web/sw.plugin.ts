@@ -21,7 +21,7 @@ type ServiceWorkerGlobal = {
 };
 
 const serviceWorker = self as unknown as ServiceWorkerGlobal;
-const CACHE_PREFIX = "vols-rss-static";
+const CACHE_PREFIX = "kyomi-static";
 const CACHE_NAME = `${CACHE_PREFIX}-${__SW_VERSION__}`;
 const PRECACHE_URLS = __STATIC_ASSET_URLS__;
 

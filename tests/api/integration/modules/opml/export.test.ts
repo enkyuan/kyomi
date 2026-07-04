@@ -259,7 +259,7 @@ describe("opml export", () => {
 
     expect(response.headers.get("content-type")).toBe("application/xml; charset=utf-8");
     expect(response.headers.get("content-disposition")).toBe(
-      'attachment; filename="vols-rss-subscriptions.opml"',
+      'attachment; filename="kyomi-subscriptions.opml"',
     );
     const body = await response.text();
     expect(body).toContain("https://example.com/route.xml");

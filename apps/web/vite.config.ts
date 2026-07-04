@@ -60,7 +60,7 @@ function getVendorChunkName(id: string) {
 
 function staticAssetServiceWorkerPlugin(): Plugin {
   return {
-    name: "vols-rss-static-asset-service-worker",
+    name: "kyomi-static-asset-service-worker",
     apply: "build",
     enforce: "post",
     async generateBundle(outputOptions, bundle) {
