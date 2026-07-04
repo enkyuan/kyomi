@@ -10,6 +10,7 @@ import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
 import { decodeMergedListCursor } from "./cursor";
 import { mergeRecentlyViewedItemsSorted, type RecentlyViewedItem } from "./recent";
+import { feedCategoryLabelsSql } from "../category-labels";
 import { listArticlesForUser } from "./service";
 import { globalArticleIsReadSql } from "../sql";
 
@@ -245,6 +246,7 @@ function recentFeedRowToItem(row: {
   feedFaviconUrl: string | null;
   isRead: boolean;
   isSaved: boolean;
+  categories: string[];
   lastViewedAt: Date | null;
 }): RecentlyViewedItem {
   return {
@@ -261,6 +263,7 @@ function recentFeedRowToItem(row: {
     isRead: row.isRead,
     isSaved: row.isSaved,
     articleType: "feed",
+    categories: row.categories.map((label) => decodeText(label)),
     lastViewedAt: row.lastViewedAt ?? row.publishedAt,
   };
 }
@@ -280,6 +283,7 @@ function recentClipRowToItem(row: typeof articleClips.$inferSelect): RecentlyVie
     isRead: row.isRead,
     isSaved: row.isSaved,
     articleType: "clip",
+    categories: [],
     lastViewedAt: row.lastViewedAt ?? row.createdAt,
   };
 }
@@ -314,6 +318,7 @@ async function listRecentlyViewedFeedItems(
       feedFaviconUrl: feeds.faviconUrl,
       isRead: globalArticleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
+      categories: feedCategoryLabelsSql,
       lastViewedAt: feedItemUserState.lastViewedAt,
     })
     .from(feedItemUserState)

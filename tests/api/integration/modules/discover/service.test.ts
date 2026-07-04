@@ -53,6 +53,9 @@ describe("discover.service", () => {
       if (href.includes("/settings/searchable-attributes")) {
         return Promise.resolve(new Response(null, { status: 202 }));
       }
+      if (href.includes("/settings/filterable-attributes")) {
+        return Promise.resolve(new Response(null, { status: 202 }));
+      }
       if (href.endsWith("/search")) {
         return Promise.resolve(
           new Response(
@@ -128,6 +131,9 @@ describe("discover.service", () => {
         return Promise.resolve(new Response(null, { status: 409 }));
       }
       if (href.includes("/settings/searchable-attributes")) {
+        return Promise.resolve(new Response(null, { status: 202 }));
+      }
+      if (href.includes("/settings/filterable-attributes")) {
         return Promise.resolve(new Response(null, { status: 202 }));
       }
       if (href.endsWith("/search")) {
@@ -237,6 +243,9 @@ describe("discover.service", () => {
         return Promise.resolve(new Response(null, { status: 409 }));
       }
       if (href.includes("/settings/searchable-attributes")) {
+        return Promise.resolve(new Response(null, { status: 202 }));
+      }
+      if (href.includes("/settings/filterable-attributes")) {
         return Promise.resolve(new Response(null, { status: 202 }));
       }
       if (href.endsWith("/search")) {

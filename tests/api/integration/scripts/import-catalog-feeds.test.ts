@@ -1,0 +1,121 @@
+import { describe, expect, test } from "bun:test";
+import { mapCategoryLabelToCanonical } from "@kyomi/db";
+import {
+  domainFromUrl,
+  normalizeImportRecord,
+  parseRecord,
+  reportValidation,
+  toCategorySlug,
+  type NormalizedImportRecord,
+  type ValidationReport,
+} from "../../../../apps/api/src/modules/catalog/import";
+
+describe("catalog import metadata preservation", () => {
+  test("parseRecord carries source/language/category/content_type/quality_score", () => {
+    const record = parseRecord(
+      JSON.stringify({
+        feed_url: "https://a.example.com/rss",
+        title: "Alpha",
+        link: "https://a.example.com",
+        source: "feeeed",
+        language: "en",
+        category: "Engineering",
+        content_type: "article",
+        quality_score: 0.9,
+      }),
+    );
+    expect(record).not.toBeNull();
+    expect(record).toMatchObject({
+      source: "feeeed",
+      language: "en",
+      category: "Engineering",
+      content_type: "article",
+      quality_score: 0.9,
+    });
+  });
+
+  test("parseRecord rejects records without feed_url", () => {
+    expect(parseRecord(JSON.stringify({ title: "no url" }))).toBeNull();
+  });
+
+  test("normalizeImportRecord maps catalog fields onto the feed shape", () => {
+    const normalized = normalizeImportRecord({
+      feed_url: "https://a.example.com/rss",
+      title: "Alpha",
+      link: "https://a.example.com",
+      source: "feeeed",
+      language: "en",
+      category: "Engineering",
+      content_type: "article",
+      quality_score: 0.9,
+    });
+    expect(normalized).toMatchObject({
+      catalogSource: "feeeed",
+      language: "en",
+      category: "Engineering",
+      contentType: "article",
+      qualityScore: 0.9,
+    });
+    expect(normalized.canonicalUrl).toContain("a.example.com");
+  });
+
+  test("toCategorySlug normalizes to lowercase ASCII", () => {
+    expect(toCategorySlug("Engineering & Tech")).toBe("engineering-tech");
+    expect(toCategorySlug("  Café News  ")).toBe("cafe-news");
+    expect(toCategorySlug("AI/ML")).toBe("ai-ml");
+    expect(toCategorySlug("!!!")).toBe("");
+  });
+
+  test("toCategorySlug keeps non-Latin labels via a stable hex fallback", () => {
+    const slug = toCategorySlug("科技");
+    expect(slug).not.toBe("");
+    expect(slug).toMatch(/^u-[0-9a-f-]+$/);
+    // Deterministic: same label -> same slug (so assignments dedupe correctly).
+    expect(toCategorySlug("科技")).toBe(slug);
+    // Distinct non-Latin labels get distinct slugs.
+    expect(toCategorySlug("日本語")).not.toBe(slug);
+  });
+
+  test("domainFromUrl strips www and returns hostname", () => {
+    expect(domainFromUrl("https://www.example.com/rss")).toBe("example.com");
+    expect(domainFromUrl("not a url")).toBeNull();
+  });
+
+  test("catalog import maps a raw category onto its canonical label before assignment", () => {
+    // scripts/catalog/import.ts's assignCatalogCategory only inserts a `categories` row when
+    // this mapping succeeds, so a catalog category is never assigned to the feed as raw text.
+    expect(mapCategoryLabelToCanonical("SaaS")).toBe("Business & Startups");
+    expect(mapCategoryLabelToCanonical("Deep Learning")).toBe("AI & ML");
+  });
+
+  test("catalog import skips assignment for an unmapped raw category", () => {
+    expect(mapCategoryLabelToCanonical("Feedspot Curated List #42")).toBeNull();
+  });
+
+  test("reportValidation counts missing site url, language, and category", () => {
+    const report: ValidationReport = {
+      missingTitle: 0,
+      missingSiteUrl: 0,
+      missingLanguage: 0,
+      missingCategory: 0,
+    };
+    const record: NormalizedImportRecord = {
+      canonicalUrl: "https://b.example.com/feed",
+      title: "https://b.example.com/feed",
+      description: null,
+      link: null,
+      catalogSource: "feedspot",
+      language: null,
+      category: null,
+      contentType: null,
+      qualityScore: null,
+    };
+    reportValidation(report, record, record.title === record.canonicalUrl);
+    expect(report).toEqual({
+      missingTitle: 1,
+      missingSiteUrl: 1,
+      missingLanguage: 1,
+      missingCategory: 1,
+    });
+  });
+});

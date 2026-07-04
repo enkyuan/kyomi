@@ -23,6 +23,7 @@ export type ArticleListRawRow = {
   isRead: boolean;
   isSaved: boolean;
   hiddenAt: Date | null;
+  categories: string[];
 };
 
 export function normalizedArticleIdentity(rawUrl: string): string {

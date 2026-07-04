@@ -10,6 +10,11 @@ export type FeedRefreshErrorClass = {
     | "http_5xx"
     | "certificate"
     | "parser_limit"
+    | "html_not_feed"
+    | "access_denied_html"
+    | "captcha_html"
+    | "login_html"
+    | "stale_endpoint_html"
     | "network"
     | "unknown";
   retryable: boolean;
@@ -40,12 +45,27 @@ export function classifyFeedRefreshError(error: unknown): FeedRefreshErrorClass 
     return { severity: "feed", code: "http_5xx", retryable: true };
   }
 
-  if (/certificate|UNABLE_TO_GET_ISSUER_CERT/i.test(message)) {
+  if (
+    /certificate|ERR_TLS_CERT|UNABLE_TO_GET_ISSUER_CERT|UNABLE_TO_VERIFY_LEAF_SIGNATURE|SELF_SIGNED_CERT|CERT_HAS_EXPIRED/i.test(
+      message,
+    )
+  ) {
     return { severity: "feed", code: "certificate", retryable: false };
   }
 
   if (/Entity expansion limit exceeded/i.test(message)) {
     return { severity: "feed", code: "parser_limit", retryable: false };
+  }
+
+  const htmlFailure = message.match(
+    /Feed returned HTML \((html_not_feed|access_denied_html|captcha_html|login_html|stale_endpoint_html)\)/,
+  );
+  if (htmlFailure?.[1]) {
+    return {
+      severity: "feed",
+      code: htmlFailure[1] as FeedRefreshErrorClass["code"],
+      retryable: false,
+    };
   }
 
   if (/Unable to connect|fetch failed|network/i.test(message)) {

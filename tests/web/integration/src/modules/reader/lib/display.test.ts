@@ -48,6 +48,7 @@ function articleDetail(overrides: Partial<ArticleDetailDto> = {}): ArticleDetail
     isRead: false,
     isSaved: false,
     articleType: "feed",
+    categories: [],
     contentHtml: null,
     contentText: null,
     contentMarkdown: null,

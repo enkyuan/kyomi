@@ -6,6 +6,7 @@ import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/ind
 import { Item } from "@modules/feeds/components/item";
 import type { InboxFilter, InboxItem } from "@modules/inbox/lib/articles/index";
 import { Skeleton } from "@kyomi/ui/skeleton";
+import { getSectionClassNames, getTypography } from "@modules/feeds/lib/layout";
 import {
   DEFAULT_SKELETON_ROWS,
   getFeedItemRowEstimate,
@@ -28,17 +29,24 @@ export type RowsPaginationState = {
 
 export function SkeletonRows({
   density,
+  fontSizePx,
   showFavicons,
   readerFocusMode = false,
   viewportHeight,
 }: {
   density: InboxDensityDto;
+  fontSizePx: number;
   showFavicons: boolean;
   readerFocusMode?: boolean;
   viewportHeight?: number;
 }) {
-  const isCompact = density === "compact";
-  const summaryLineCount = readerFocusMode ? (isCompact ? 4 : 5) : isCompact ? 2 : 3;
+  const typography = getTypography({ density, fontSizePx, readerFocusMode });
+  const sectionClassNames = getSectionClassNames({
+    readerFocusMode,
+    isCompact: typography.isCompact,
+  });
+  const { isCompact, titleLineHeightPx, summaryLineHeightPx, summaryMaxLines, metaFontSizePx } =
+    typography;
   const estimatedRowHeight = getFeedItemRowEstimate({ density, readerFocusMode });
   const skeletonRowCount =
     viewportHeight && viewportHeight > 0
@@ -60,36 +68,52 @@ export function SkeletonRows({
               className={`pointer-events-none absolute top-0 h-px bg-border/70 ${SKELETON_ROW_SEPARATOR_CLASS}`}
             />
           )}
-          <div
-            className={
-              isCompact
-                ? `flex flex-col gap-3.5 pt-4 pb-2 ${SKELETON_ROW_GUTTER_CLASS}`
-                : `flex flex-col gap-4 pt-5 pb-2.5 ${SKELETON_ROW_GUTTER_CLASS}`
-            }
-          >
-            <div className="flex items-center justify-between gap-4">
-              <div className="flex min-w-0 flex-1 items-center gap-2">
+          <div className={`flex flex-col ${SKELETON_ROW_GUTTER_CLASS} ${sectionClassNames.header}`}>
+            <div className="flex min-w-0 items-center justify-between gap-4">
+              <div
+                className={`flex min-w-0 flex-1 items-center ${isCompact ? "gap-2.5" : "gap-3"}`}
+              >
                 {showFavicons ? <Skeleton className="size-5.5 shrink-0 rounded-sm" /> : null}
-                <Skeleton className="h-3.5 w-28 rounded" />
+                <Skeleton
+                  className="w-28 rounded"
+                  style={{ height: `${Math.max(13, metaFontSizePx)}px` }}
+                />
               </div>
-              <Skeleton className="h-3.5 w-20 shrink-0 rounded" />
+              <Skeleton
+                className="w-16 shrink-0 rounded"
+                style={{ height: `${Math.max(13, metaFontSizePx)}px` }}
+              />
             </div>
             <div className="space-y-1.5">
-              <Skeleton className="h-5 w-full rounded" />
-              <Skeleton className="h-5 w-[70%] rounded" />
+              <Skeleton className="w-full rounded" style={{ height: `${titleLineHeightPx}px` }} />
+              <Skeleton className="w-[70%] rounded" style={{ height: `${titleLineHeightPx}px` }} />
             </div>
           </div>
           <div className={`space-y-1.5 ${SKELETON_ROW_GUTTER_CLASS}`}>
-            <Skeleton className="h-4 w-full rounded" />
-            <Skeleton className="h-4 w-full rounded" />
-            {Array.from({ length: Math.max(0, summaryLineCount - 2) }).map((_, index) => (
+            <Skeleton className="w-full rounded" style={{ height: `${summaryLineHeightPx}px` }} />
+            <Skeleton className="w-full rounded" style={{ height: `${summaryLineHeightPx}px` }} />
+            {Array.from({ length: Math.max(0, summaryMaxLines - 2) }).map((_, index) => (
               <Skeleton
                 key={`summary-line-${index}`}
-                className={`h-4 rounded ${index === summaryLineCount - 3 ? "w-4/5" : "w-full"}`}
+                className={`rounded ${index === summaryMaxLines - 3 ? "w-4/5" : "w-full"}`}
+                style={{ height: `${summaryLineHeightPx}px` }}
               />
             ))}
           </div>
-          <div className={isCompact ? "pb-3" : "pb-4"} />
+          <div
+            className={`flex w-full min-w-0 items-center justify-end gap-3 ${SKELETON_ROW_GUTTER_CLASS} ${sectionClassNames.footer}`}
+          >
+            <div className="me-auto flex min-w-0 items-center gap-1.5">
+              <Skeleton className="h-5 w-16 rounded-full" />
+              <Skeleton className="h-5 w-24 rounded-full" />
+            </div>
+            <div className="flex shrink-0 items-center gap-3">
+              <Skeleton className="size-4 rounded" />
+              <Skeleton className="size-4 rounded" />
+              <Skeleton className="size-4 rounded" />
+              <Skeleton className="size-4 rounded" />
+            </div>
+          </div>
         </li>
       ))}
     </ul>
@@ -159,6 +183,7 @@ export function VirtualizedRows({
     return (
       <SkeletonRows
         density={density}
+        fontSizePx={fontSizePx}
         showFavicons={showFavicons}
         readerFocusMode={readerFocusMode}
         viewportHeight={viewportHeight}

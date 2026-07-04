@@ -5,6 +5,13 @@ import type { InboxItem } from "@modules/inbox/lib/articles/index";
 import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
 
 export type ToolbarMode = "original" | "extracted";
+export type ToolbarSide = "top" | "bottom" | "left" | "right";
+export type AnchoredToolbarActionOptions = {
+  anchor?: HTMLElement | null;
+  side?: ToolbarSide;
+  sideOffset?: number;
+};
+export type AnchoredToolbarAction = (options?: AnchoredToolbarActionOptions) => void;
 
 export type ToolbarProps = {
   isSaved: boolean;
@@ -15,7 +22,7 @@ export type ToolbarProps = {
   canDecreaseFont: boolean;
   canIncreaseFont: boolean;
   readerFocusMode?: boolean;
-  onToggleSaved: () => void;
+  onToggleSaved: AnchoredToolbarAction;
   onToggleMode: () => void;
   onCycleContentWidth: () => void;
   onDecreaseFontSize: () => void;
@@ -28,7 +35,7 @@ export type ToolbarProps = {
   controlSize?: "default" | "large";
   hideFontControls?: boolean;
   readerFocusVariant?: "full" | "compact";
-  tooltipSide?: "top" | "bottom" | "left" | "right";
+  tooltipSide?: ToolbarSide;
   tooltipCollisionAvoidance?:
     | {
         side?: "flip" | "none";
@@ -74,7 +81,7 @@ export type ItemToolbarProps = {
   onOpenSource: () => void;
   onReportBrokenArticle: () => void;
   onShareArticle: () => void;
-  onToggleSaved: () => void;
+  onToggleSaved: AnchoredToolbarAction;
   presentation?: "row" | "articleHeader";
 };
 

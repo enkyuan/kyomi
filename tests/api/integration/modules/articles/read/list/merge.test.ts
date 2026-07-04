@@ -16,6 +16,7 @@ const feed = (id: string, at: string): ArticleListItemDto => ({
   isRead: false,
   isSaved: false,
   articleType: "feed",
+  categories: [],
 });
 
 describe("mergeArticleItemsByDate", () => {

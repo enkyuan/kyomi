@@ -1,6 +1,20 @@
 import { describe, expect, mock, test } from "bun:test";
 import { updateArticleForUser } from "@modules/articles/write/update";
 
+function firstValueInput(fake: ReturnType<typeof createFakeDb>): Record<string, unknown> {
+  const call = fake.values.mock.calls[0] as unknown as [Record<string, unknown>] | undefined;
+  expect(call).toBeDefined();
+  return call![0];
+}
+
+function firstConflictSet(fake: ReturnType<typeof createFakeDb>): Record<string, unknown> {
+  const call = fake.onConflictDoUpdate.mock.calls[0] as unknown as
+    | [{ set: Record<string, unknown> }]
+    | undefined;
+  expect(call).toBeDefined();
+  return call![0].set;
+}
+
 function createFakeDb(existingState?: { isSaved: boolean; savedAt: Date | null }) {
   let selectCall = 0;
   const onConflictDoUpdate = mock(() => Promise.resolve());
@@ -43,9 +57,9 @@ describe("updateArticleForUser saved aging state", () => {
 
     await updateArticleForUser(fake.db as never, "user-1", "article-1", { isSaved: true });
 
-    expect(fake.values.mock.calls[0]?.[0].isSaved).toBe(true);
-    expect(fake.values.mock.calls[0]?.[0].savedAt).toBeInstanceOf(Date);
-    expect(fake.onConflictDoUpdate.mock.calls[0]?.[0].set.savedAt).toBeInstanceOf(Date);
+    expect(firstValueInput(fake).isSaved).toBe(true);
+    expect(firstValueInput(fake).savedAt).toBeInstanceOf(Date);
+    expect(firstConflictSet(fake).savedAt).toBeInstanceOf(Date);
   });
 
   test("preserves savedAt when saving an already saved article", async () => {
@@ -54,8 +68,8 @@ describe("updateArticleForUser saved aging state", () => {
 
     await updateArticleForUser(fake.db as never, "user-1", "article-1", { isSaved: true });
 
-    expect(fake.values.mock.calls[0]?.[0].savedAt).toBe(savedAt);
-    expect(fake.onConflictDoUpdate.mock.calls[0]?.[0].set.savedAt).toBe(savedAt);
+    expect(firstValueInput(fake).savedAt).toBe(savedAt);
+    expect(firstConflictSet(fake).savedAt).toBe(savedAt);
   });
 
   test("clears savedAt when unsaving an article", async () => {
@@ -66,8 +80,8 @@ describe("updateArticleForUser saved aging state", () => {
 
     await updateArticleForUser(fake.db as never, "user-1", "article-1", { isSaved: false });
 
-    expect(fake.values.mock.calls[0]?.[0].isSaved).toBe(false);
-    expect(fake.values.mock.calls[0]?.[0].savedAt).toBeNull();
-    expect(fake.onConflictDoUpdate.mock.calls[0]?.[0].set.savedAt).toBeNull();
+    expect(firstValueInput(fake).isSaved).toBe(false);
+    expect(firstValueInput(fake).savedAt).toBeNull();
+    expect(firstConflictSet(fake).savedAt).toBeNull();
   });
 });

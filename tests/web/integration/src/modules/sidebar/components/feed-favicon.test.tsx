@@ -5,7 +5,7 @@ import {
   writeCachedFaviconHit,
   writeCachedFaviconMiss,
 } from "@lib/favicon/cache";
-import { SourceRow } from "@modules/feeds/components/item/source-row";
+import { Source } from "@modules/feeds/components/item/source";
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, test, vi } from "vitest";
@@ -303,7 +303,7 @@ describe("feed favicons", () => {
 
   test("source rows fall back through feed origin instead of article origin", () => {
     render(
-      <SourceRow
+      <Source
         articleUrl="https://en.wikipedia.org/wiki/Forestiere_Underground_Gardens"
         feedFaviconUrl="https://news.ycombinator.com/y18.svg"
         feedSiteUrl="https://news.ycombinator.com"

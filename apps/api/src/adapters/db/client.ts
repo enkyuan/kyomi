@@ -5,12 +5,12 @@ import { env } from "@config/env";
 import { normalizeLoopbackUrl } from "@shared/net/loopback-url";
 
 declare global {
-  var __volsRssApiDbPool: Pool | undefined;
-  var __volsRssApiDb: ReturnType<typeof drizzle<typeof schema>> | undefined;
+  var __kyomiApiDbPool: Pool | undefined;
+  var __kyomiApiDb: ReturnType<typeof drizzle<typeof schema>> | undefined;
 }
 
 export const pool =
-  globalThis.__volsRssApiDbPool ??
+  globalThis.__kyomiApiDbPool ??
   new Pool({
     connectionString: normalizeLoopbackUrl(env.DATABASE_URL),
     max: env.DATABASE_POOL_MAX,
@@ -21,14 +21,14 @@ export const pool =
   });
 
 export const db =
-  globalThis.__volsRssApiDb ??
+  globalThis.__kyomiApiDb ??
   drizzle(pool, {
     schema,
   });
 
 if (env.NODE_ENV !== "production") {
-  globalThis.__volsRssApiDbPool = pool;
-  globalThis.__volsRssApiDb = db;
+  globalThis.__kyomiApiDbPool = pool;
+  globalThis.__kyomiApiDb = db;
 }
 
 function resolveSslConfig(): PoolConfig["ssl"] | undefined {

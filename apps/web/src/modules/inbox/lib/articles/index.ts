@@ -45,6 +45,7 @@ export type InboxItem = {
   summary: string | null;
   link: string;
   publishedAt: string;
+  feedId: string;
   feedFaviconUrl: string | null;
   feedUrl: string | null;
   feedSiteUrl: string | null;
@@ -52,6 +53,7 @@ export type InboxItem = {
   articleType: "feed" | "clip";
   isRead: boolean;
   isSaved: boolean;
+  categories: string[];
 };
 
 type CursorListResponse = {
@@ -117,6 +119,7 @@ function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
     summary: item.summary,
     link: item.link,
     publishedAt: item.publishedAt,
+    feedId: item.feedId,
     feedFaviconUrl: item.feedFaviconUrl,
     feedUrl: item.feedUrl,
     feedSiteUrl: item.feedSiteUrl,
@@ -124,6 +127,7 @@ function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
     articleType: item.articleType,
     isRead: item.isRead,
     isSaved: item.isSaved,
+    categories: item.categories,
   };
 }
 

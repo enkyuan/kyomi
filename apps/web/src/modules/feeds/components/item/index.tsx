@@ -3,7 +3,8 @@
 import { memo, type KeyboardEvent } from "react";
 import { m } from "motion/react";
 import { cn } from "@kyomi/ui/lib/utils";
-import { SourceRow } from "./source-row";
+import { Categories } from "./categories";
+import { Source } from "./source";
 import { ItemInlineToolbar } from "./toolbar/inline";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/card";
 import { Timestamp } from "@modules/inbox/components/timestamp";
@@ -105,8 +106,9 @@ export const Item = memo(function Item({
       ) : null}
       <CardHeader className={cn("p-0", ITEM_GUTTER_CLASS, sectionClassNames.header)}>
         <div className="flex min-w-0 items-center justify-between gap-4">
-          <SourceRow
+          <Source
             articleUrl={item.link}
+            feedId={item.feedId}
             feedFaviconUrl={item.feedFaviconUrl}
             feedUrl={item.feedUrl}
             feedSiteUrl={item.feedSiteUrl}
@@ -176,13 +178,18 @@ export const Item = memo(function Item({
           sectionClassNames.footer,
         )}
       >
-        {item.isSaved ? (
-          <span
-            className="me-auto min-w-0 shrink-0 rounded-full bg-muted px-2 py-0.5 font-medium text-muted-foreground/85"
-            style={{ fontSize: `${metaFontSizePx}px` }}
-          >
-            Saved
-          </span>
+        {item.isSaved || item.categories.length > 0 ? (
+          <div className="me-auto flex min-w-0 items-center gap-1.5">
+            {item.isSaved ? (
+              <span
+                className="min-w-0 shrink-0 rounded-full bg-mizu/8 px-2 py-0.5 font-medium text-mizu-foreground dark:bg-mizu/16"
+                style={{ fontSize: `${metaFontSizePx}px` }}
+              >
+                Saved
+              </span>
+            ) : null}
+            <Categories categories={item.categories} fontSizePx={metaFontSizePx} />
+          </div>
         ) : null}
         <ItemInlineToolbar item={item} />
       </CardFooter>

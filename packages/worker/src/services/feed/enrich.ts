@@ -29,7 +29,7 @@ export async function fetchArticleEnrichment(url: string): Promise<{
       imageUrl: null,
     };
   }
-  const fetched = await fetchFeedDocument(url);
+  const fetched = await fetchFeedDocument(url, null, null, { accept: "html" });
   if (!fetched.ok) {
     return {
       content: null,

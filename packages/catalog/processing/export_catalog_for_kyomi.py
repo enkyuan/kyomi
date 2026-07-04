@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import math
 from pathlib import Path
 from typing import Any
 
@@ -21,7 +22,31 @@ def load_json(path: Path) -> Any:
         return json.load(handle)
 
 
-def normalize_source_record(record: dict[str, Any], source: str) -> dict[str, str] | None:
+def pick_float(record: dict[str, Any], keys: list[str]) -> float | None:
+    for key in keys:
+        value = record.get(key)
+        if isinstance(value, bool):
+            continue
+        if isinstance(value, (int, float)):
+            candidate = float(value)
+        elif isinstance(value, str):
+            trimmed = value.strip()
+            if not trimmed:
+                continue
+            try:
+                candidate = float(trimmed)
+            except ValueError:
+                continue
+        else:
+            continue
+        # Skip non-finite values (NaN/inf): json.dumps would emit bare NaN/Infinity
+        # tokens that the TS importer's JSON.parse rejects, dropping the whole record.
+        if math.isfinite(candidate):
+            return candidate
+    return None
+
+
+def normalize_source_record(record: dict[str, Any], source: str) -> dict[str, Any] | None:
     feed_url = pick_str(record, ["feed_url", "xmlUrl", "url"])
     if not feed_url:
         return None
@@ -31,6 +56,8 @@ def normalize_source_record(record: dict[str, Any], source: str) -> dict[str, st
     link = pick_str(record, ["website_url", "htmlUrl", "link"]) or ""
     language = pick_str(record, ["language"]) or ""
     category = pick_str(record, ["category", "top_level_category"]) or ""
+    content_type = pick_str(record, ["content_type", "contentType"]) or ""
+    quality_score = pick_float(record, ["quality_score", "qualityScore", "popularity_score"])
 
     return {
         "feed_url": feed_url,
@@ -40,6 +67,8 @@ def normalize_source_record(record: dict[str, Any], source: str) -> dict[str, st
         "source": source,
         "language": language,
         "category": category,
+        "content_type": content_type,
+        "quality_score": quality_score,
     }
 
 

@@ -8,6 +8,7 @@ import { Checkbox } from "@kyomi/ui/checkbox";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import { toastManager } from "@kyomi/ui/toast";
 import { cn } from "@kyomi/ui/lib/utils";
+import type { InboxSearch } from "@/routes/inbox/-route-helpers";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import { FolderPickerButton } from "@modules/folders/components/picker";
 import type { RecapFolder } from "@modules/folders/lib/types";
@@ -292,7 +293,7 @@ export function ExpandedFolderFeeds({
                     <Link
                       className="flex min-w-0 flex-1 items-center gap-2.5 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
                       to="/inbox"
-                      search={(prev) => ({
+                      search={(prev: InboxSearch) => ({
                         ...prev,
                         filter: "all" as const,
                         feedId: feed.feedId,

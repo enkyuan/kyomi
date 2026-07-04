@@ -2,7 +2,8 @@
 
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { Timestamp } from "@modules/inbox/components/timestamp";
-import { SourceRow } from "@modules/feeds/components/item/source-row";
+import { Categories } from "@modules/feeds/components/item/categories";
+import { Source } from "@modules/feeds/components/item/source";
 import { getTypography } from "@modules/feeds/lib/layout";
 import { Toolbar } from "../toolbar";
 import { useReaderToolbar } from "@hooks/use-toolbar";
@@ -213,8 +214,9 @@ function ReaderArticleHeader({
           </div>
         </div>
       )}
-      <SourceRow
+      <Source
         articleUrl={item.link}
+        feedId={item.feedId}
         feedFaviconUrl={item.feedFaviconUrl}
         feedUrl={item.feedUrl}
         feedSiteUrl={item.feedSiteUrl}
@@ -239,6 +241,11 @@ function ReaderArticleHeader({
           {item.title}
         </m.p>
       </div>
+      <Categories
+        categories={item.categories}
+        fontSizePx={sourceLabelFontSizePx}
+        className="not-prose"
+      />
     </div>
   );
 }
