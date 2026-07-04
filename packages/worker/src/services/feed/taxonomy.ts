@@ -12,6 +12,7 @@ export const CATEGORY_CLASSIFIER_PROVENANCE = "classifier";
 export const KEYWORD_CLASSIFIER_METHOD = "keyword";
 export const KEYWORD_CLASSIFIER_MODEL_ID = "keyword-v1";
 export const EMBEDDING_CLASSIFIER_METHOD = "embedding";
+export const EMBEDDING_CLASSIFIER_MODEL_ID = "voyage-4";
 export const CLASSIFIER_TAXONOMY_VERSION = "v1";
 export { MISCELLANEOUS_CATEGORY_LABEL };
 

@@ -189,6 +189,46 @@ describe("classifyFeedItemCategoriesByEmbedding", () => {
     // Prototypes should only be embedded once across both calls, not once per call.
     expect(prototypeCallCount).toBe(1);
   });
+
+  test("does not share cached category prototypes across API keys", async () => {
+    let prototypeCallCount = 0;
+    globalThis.fetch = (async (url: string, init: RequestInit) => {
+      const body = JSON.parse(init.body as string) as { input: string[] };
+      const isPrototypeCall = body.input.length > 1;
+      if (isPrototypeCall) {
+        prototypeCallCount += 1;
+        const embeddings = body.input.map(() => ORTHOGONAL_Z);
+        return new Response(
+          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
+          { status: 200 },
+        );
+      }
+      return new Response(JSON.stringify({ data: [{ embedding: ORTHOGONAL_Z, index: 0 }] }), {
+        status: 200,
+      });
+    }) as unknown as typeof fetch;
+
+    const input = {
+      feedTitle: "Hacker News",
+      feedDescription: null,
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "First article",
+      itemSummary: null,
+      itemUrl: null,
+    };
+    await classifyFeedItemCategoriesByEmbedding(input, {
+      ...FAKE_CONFIG,
+      apiKey: "first-account-key",
+    });
+    await classifyFeedItemCategoriesByEmbedding(input, {
+      ...FAKE_CONFIG,
+      apiKey: "second-account-key",
+    });
+
+    expect(prototypeCallCount).toBe(2);
+  });
 });
 
 describe("classifyFeedCategoriesByEmbedding", () => {

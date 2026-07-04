@@ -33,6 +33,7 @@ import { syncParsedFeedItemTags } from "./tags";
 import {
   CLASSIFIER_TAXONOMY_VERSION,
   EMBEDDING_CLASSIFIER_METHOD,
+  EMBEDDING_CLASSIFIER_MODEL_ID,
   KEYWORD_CLASSIFIER_METHOD,
   KEYWORD_CLASSIFIER_MODEL_ID,
 } from "./taxonomy";
@@ -399,11 +400,9 @@ const KEYWORD_CLASSIFIER_MODEL: ClassifierModelInfo = {
   classifierMethod: KEYWORD_CLASSIFIER_METHOD,
 };
 
-const DEFAULT_EMBEDDING_MODEL_ID = "voyage-4";
-
 function embeddingClassifierModel(config: EmbeddingClassifierConfig): ClassifierModelInfo {
   return {
-    modelId: config.model ?? DEFAULT_EMBEDDING_MODEL_ID,
+    modelId: config.model ?? EMBEDDING_CLASSIFIER_MODEL_ID,
     taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
     classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
   };

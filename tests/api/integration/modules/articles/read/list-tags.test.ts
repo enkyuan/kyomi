@@ -1,7 +1,10 @@
 import { describe, expect, test } from "bun:test";
 import { PgDialect } from "drizzle-orm/pg-core";
 import { isCanonicalCategoryLabel } from "@kyomi/db";
-import { feedCategoryLabelsSql } from "@modules/articles/read/category-labels";
+import {
+  buildFeedCategoryLabelsSql,
+  feedCategoryLabelsSql,
+} from "@modules/articles/read/category-labels";
 import { toArticleListItemsForTest } from "@modules/articles/read/list/service";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
 import { articleListItemSchema } from "@modules/articles/schemas";
@@ -53,18 +56,41 @@ describe("article list item categories", () => {
     expect(articleListItemSchema.properties).toHaveProperty("categories");
   });
 
-  test("category label SQL ranks explicit item labels before classifier fallbacks", () => {
-    const sql = renderSql(feedCategoryLabelsSql);
+  test("category label SQL defaults to keyword classifier rows after explicit labels", () => {
+    const sql = renderSql(buildFeedCategoryLabelsSql("keyword"));
 
     expect(sql).toContain('"feed_item_category_assignments"');
     expect(sql).toContain('"feed_category_assignments"');
-    expect(sql).toContain("= 'classifier'");
+    expect(sql).toContain("classifier_method\" = 'keyword'");
+    expect(sql).not.toContain("classifier_method\" = 'embedding'");
+    expect(sql).toContain("category_sources.source_rank < 99");
 
-    // Ranks: 0 explicit item, 1 classifier item, 2 explicit feed, 3 classifier feed.
-    const itemExplicit = sql.indexOf("THEN 1 ELSE 0 END");
-    const feedExplicit = sql.indexOf("THEN 3 ELSE 2 END");
-    expect(itemExplicit).toBeGreaterThanOrEqual(0);
-    expect(feedExplicit).toBeGreaterThan(itemExplicit);
+    const explicitItem = sql.indexOf("THEN 0");
+    const keywordItem = sql.indexOf("THEN 1");
+    const explicitFeed = sql.indexOf("THEN 2");
+    const keywordFeed = sql.indexOf("THEN 3");
+    expect(explicitItem).toBeGreaterThanOrEqual(0);
+    expect(keywordItem).toBeGreaterThan(explicitItem);
+    expect(explicitFeed).toBeGreaterThan(keywordItem);
+    expect(keywordFeed).toBeGreaterThan(explicitFeed);
+  });
+
+  test("category label SQL can rank embedding rows ahead of keyword rows", () => {
+    const sql = renderSql(buildFeedCategoryLabelsSql("embedding"));
+
+    const explicitItem = sql.indexOf("THEN 0");
+    const embeddingItem = sql.indexOf("= 'embedding' THEN 1");
+    const keywordItem = sql.indexOf("= 'keyword' THEN 2");
+    const explicitFeed = sql.indexOf("THEN 3");
+    const embeddingFeed = sql.indexOf("= 'embedding' THEN 4");
+    const keywordFeed = sql.indexOf("= 'keyword' THEN 5");
+    expect(explicitItem).toBeGreaterThanOrEqual(0);
+    expect(embeddingItem).toBeGreaterThan(explicitItem);
+    expect(keywordItem).toBeGreaterThan(embeddingItem);
+    expect(explicitFeed).toBeGreaterThan(keywordItem);
+    expect(embeddingFeed).toBeGreaterThan(explicitFeed);
+    expect(keywordFeed).toBeGreaterThan(embeddingFeed);
+    expect(sql).toContain("confidence DESC NULLS LAST");
   });
 
   test("category label SQL caps the DTO at two labels per item", () => {

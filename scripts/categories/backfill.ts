@@ -13,34 +13,53 @@ import { assertApiDatabaseReady } from "../../apps/api/src/adapters/db/script-pr
 import {
   canonicalWinsOnConflictSql,
   classifyFeedCategories,
+  classifyFeedCategoriesByEmbedding,
   classifyFeedItemCategories,
+  classifyFeedItemCategoriesByEmbedding,
   shouldSuppressClassifierFeedFallback,
   syncInferredFeedCategories,
   CLASSIFIER_TAXONOMY_VERSION,
+  EMBEDDING_CLASSIFIER_METHOD,
+  EMBEDDING_CLASSIFIER_MODEL_ID,
   KEYWORD_CLASSIFIER_METHOD,
   KEYWORD_CLASSIFIER_MODEL_ID,
+  MAX_CLASSIFIER_LABELS,
   type ClassifierModelInfo,
+  type EmbeddingClassifierConfig,
   type InferredCategoryLabel,
 } from "../../packages/worker/src";
 
-// The backfill script only re-runs the deterministic keyword classifier; it does not call
-// the embedding classifier (that requires a live API key and is meant for the online
-// refresh path, not a bulk offline pass).
 const BACKFILL_CLASSIFIER_MODEL: ClassifierModelInfo = {
   modelId: KEYWORD_CLASSIFIER_MODEL_ID,
   taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
   classifierMethod: KEYWORD_CLASSIFIER_METHOD,
 };
 
+export type BackfillClassifierMethod = "keyword" | "embedding";
+
+type BackfillClassifier =
+  | {
+      method: "keyword";
+      model: ClassifierModelInfo;
+    }
+  | {
+      method: "embedding";
+      model: ClassifierModelInfo;
+      embeddingConfig: EmbeddingClassifierConfig;
+    };
+
 export type BackfillArgs = {
   apply: boolean;
   limit: number;
   itemLimit: number | null;
   feedId: string | null;
+  classifier: BackfillClassifierMethod;
 };
 
 export type BackfillStats = {
   apply: boolean;
+  classifierMethod: BackfillClassifierMethod;
+  classifierModelId: string;
   feedsScanned: number;
   feedsWithClassifierCategories: number;
   feedClassifierFallbacksSuppressed: number;
@@ -83,12 +102,31 @@ function optionalPositiveInt(value: string | null): number | null {
   return parsed;
 }
 
+function parseBackfillClassifier(argv: string[]): BackfillClassifierMethod {
+  const value = valueAfter(argv, "--classifier");
+  const shorthand = argv.includes("--embedding");
+  if (shorthand && value && value !== "embedding") {
+    throw new Error("--embedding cannot be combined with --classifier keyword");
+  }
+  if (shorthand) {
+    return "embedding";
+  }
+  if (!value) {
+    return "keyword";
+  }
+  if (value === "keyword" || value === "embedding") {
+    return value;
+  }
+  throw new Error(`Invalid --classifier value: ${value}`);
+}
+
 export function parseBackfillArgs(argv: string[]): BackfillArgs {
   return {
     apply: argv.includes("--apply"),
     limit: positiveInt(valueAfter(argv, "--limit"), 500),
     itemLimit: optionalPositiveInt(valueAfter(argv, "--item-limit")),
     feedId: valueAfter(argv, "--feed-id"),
+    classifier: parseBackfillClassifier(argv),
   };
 }
 
@@ -97,7 +135,7 @@ export function summarizeBackfill(stats: BackfillStats): string {
   const verb = stats.apply ? "wrote" : "would write";
   const assignmentVerb = stats.apply ? "rewrote" : "would rewrite";
   return (
-    `${action}: scanned ${stats.feedsScanned} feeds and ${stats.itemsScanned} items; ${verb} classifier categories for ${stats.feedsWithClassifierCategories} feeds and ${stats.itemsWithClassifierCategories} items. ` +
+    `${action} (${stats.classifierMethod}/${stats.classifierModelId}): scanned ${stats.feedsScanned} feeds and ${stats.itemsScanned} items; ${verb} classifier categories for ${stats.feedsWithClassifierCategories} feeds and ${stats.itemsWithClassifierCategories} items. ` +
     `${assignmentVerb} ${stats.assignmentsRewritten} of ${stats.assignmentsScanned} existing assignments to canonical categories and dropped ${stats.assignmentsDroppedUnmapped} unmapped assignments. ` +
     `Suppressed classifier feed fallback for ${stats.feedClassifierFallbacksSuppressed} broad feeds; item classifier abstained on ${stats.itemClassifierAbstentions} items.`
   );
@@ -354,6 +392,27 @@ type BackfillItemRow = {
   canonicalUrl: string;
 };
 
+function resolveBackfillClassifier(args: BackfillArgs): BackfillClassifier {
+  if (args.classifier === "keyword") {
+    return { method: "keyword", model: BACKFILL_CLASSIFIER_MODEL };
+  }
+
+  const apiKey = process.env.VOYAGE_API_KEY?.trim();
+  if (!apiKey) {
+    throw new Error("VOYAGE_API_KEY is required when --classifier embedding is used");
+  }
+  const embeddingConfig: EmbeddingClassifierConfig = { apiKey };
+  return {
+    method: "embedding",
+    embeddingConfig,
+    model: {
+      modelId: embeddingConfig.model ?? EMBEDDING_CLASSIFIER_MODEL_ID,
+      taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+      classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
+    },
+  };
+}
+
 export function inferBackfillFeedCategories(feed: BackfillFeedRow): {
   categories: InferredCategoryLabel[];
   suppressedFallback: boolean;
@@ -391,9 +450,83 @@ export function inferBackfillItemCategories(
   }).categories;
 }
 
+export async function inferBackfillFeedCategoriesByEmbedding(
+  feed: BackfillFeedRow,
+  config: EmbeddingClassifierConfig,
+): Promise<{
+  categories: InferredCategoryLabel[];
+  suppressedFallback: boolean;
+}> {
+  const classificationInput = {
+    feedTitle: feed.title,
+    feedDescription: feed.description,
+    feedUrl: feed.url,
+    feedSiteUrl: feed.link,
+    sourceKind: feed.sourceKind,
+  };
+  if (shouldSuppressClassifierFeedFallback(classificationInput)) {
+    return { categories: [], suppressedFallback: true };
+  }
+  return {
+    categories: (await classifyFeedCategoriesByEmbedding(classificationInput, config)).categories,
+    suppressedFallback: false,
+  };
+}
+
+export async function inferBackfillItemCategoriesByEmbedding(
+  feed: BackfillFeedRow,
+  item: BackfillItemRow,
+  config: EmbeddingClassifierConfig,
+): Promise<InferredCategoryLabel[]> {
+  return (
+    await classifyFeedItemCategoriesByEmbedding(
+      {
+        feedTitle: feed.title,
+        feedDescription: feed.description,
+        feedUrl: feed.url,
+        feedSiteUrl: feed.link,
+        sourceKind: feed.sourceKind,
+        itemTitle: item.title,
+        itemSummary: item.summary,
+        itemContentText: item.contentText,
+        itemUrl: item.link || item.canonicalUrl,
+      },
+      config,
+      MAX_CLASSIFIER_LABELS,
+    )
+  ).categories;
+}
+
+async function inferBackfillFeedCategoriesForClassifier(
+  feed: BackfillFeedRow,
+  classifier: BackfillClassifier,
+): Promise<{
+  categories: InferredCategoryLabel[];
+  suppressedFallback: boolean;
+}> {
+  if (classifier.method === "keyword") {
+    return inferBackfillFeedCategories(feed);
+  }
+  return inferBackfillFeedCategoriesByEmbedding(feed, classifier.embeddingConfig);
+}
+
+async function inferBackfillItemCategoriesForClassifier(
+  feed: BackfillFeedRow,
+  item: BackfillItemRow,
+  classifier: BackfillClassifier,
+): Promise<InferredCategoryLabel[]> {
+  if (classifier.method === "keyword") {
+    return inferBackfillItemCategories(feed, item);
+  }
+  return inferBackfillItemCategoriesByEmbedding(feed, item, classifier.embeddingConfig);
+}
+
 export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillStats> {
+  const classifier = resolveBackfillClassifier(args);
   const stats: BackfillStats = {
     apply: args.apply,
+    classifierMethod: classifier.method,
+    classifierModelId: classifier.model.modelId,
     feedsScanned: 0,
     feedsWithClassifierCategories: 0,
     feedClassifierFallbacksSuppressed: 0,
@@ -415,7 +548,8 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
 
   for (const feed of feedRows) {
     stats.feedsScanned += 1;
-    const { categories: feedCategories, suppressedFallback } = inferBackfillFeedCategories(feed);
+    const { categories: feedCategories, suppressedFallback } =
+      await inferBackfillFeedCategoriesForClassifier(feed, classifier);
     if (suppressedFallback) {
       stats.feedClassifierFallbacksSuppressed += 1;
     }
@@ -439,16 +573,22 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
         break;
       }
 
-      const inferredItems = items.map((item) => {
-        stats.itemsScanned += 1;
-        const inferredCategoryLabels = inferBackfillItemCategories(feed, item);
-        if (inferredCategoryLabels.length > 0) {
-          stats.itemsWithClassifierCategories += 1;
-        } else {
-          stats.itemClassifierAbstentions += 1;
-        }
-        return { id: item.id, inferredCategoryLabels };
-      });
+      const inferredItems = await Promise.all(
+        items.map(async (item) => {
+          stats.itemsScanned += 1;
+          const inferredCategoryLabels = await inferBackfillItemCategoriesForClassifier(
+            feed,
+            item,
+            classifier,
+          );
+          if (inferredCategoryLabels.length > 0) {
+            stats.itemsWithClassifierCategories += 1;
+          } else {
+            stats.itemClassifierAbstentions += 1;
+          }
+          return { id: item.id, inferredCategoryLabels };
+        }),
+      );
 
       if (args.apply) {
         // syncInferredFeedCategories unconditionally deletes+reinserts the feed's
@@ -462,7 +602,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
             feedId: feed.id,
             feedCategories: [],
             items: inferredItems,
-            model: BACKFILL_CLASSIFIER_MODEL,
+            model: classifier.model,
           },
           now,
         );
@@ -485,7 +625,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
           feedId: feed.id,
           feedCategories,
           items: [],
-          model: BACKFILL_CLASSIFIER_MODEL,
+          model: classifier.model,
         },
         now,
       );
