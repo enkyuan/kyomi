@@ -77,10 +77,12 @@ function stopDialogPropagation(event: SyntheticEvent) {
 }
 
 function formatReportDetails(selectedReasonIds: ReportReasonId[], otherDetails: string) {
-  const selectedLabels = REPORT_REASON_OPTIONS.filter(
-    (option) => selectedReasonIds.includes(option.id) && option.id !== "other",
-  ).map((option) => option.label);
-  const lines = selectedLabels.map((label) => `- ${label}`);
+  const lines: string[] = [];
+  for (const option of REPORT_REASON_OPTIONS) {
+    if (option.id !== "other" && selectedReasonIds.includes(option.id)) {
+      lines.push(`- ${option.label}`);
+    }
+  }
   const trimmedOtherDetails = otherDetails.trim();
 
   if (selectedReasonIds.includes("other") && trimmedOtherDetails) {
