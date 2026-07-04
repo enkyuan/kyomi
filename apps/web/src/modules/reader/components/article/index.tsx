@@ -215,6 +215,7 @@ function ReaderArticleHeader({
       )}
       <SourceRow
         articleUrl={item.link}
+        feedId={item.feedId}
         feedFaviconUrl={item.feedFaviconUrl}
         feedUrl={item.feedUrl}
         feedSiteUrl={item.feedSiteUrl}

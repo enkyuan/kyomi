@@ -107,6 +107,7 @@ export const Item = memo(function Item({
         <div className="flex min-w-0 items-center justify-between gap-4">
           <SourceRow
             articleUrl={item.link}
+            feedId={item.feedId}
             feedFaviconUrl={item.feedFaviconUrl}
             feedUrl={item.feedUrl}
             feedSiteUrl={item.feedSiteUrl}

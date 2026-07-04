@@ -45,6 +45,7 @@ export type InboxItem = {
   summary: string | null;
   link: string;
   publishedAt: string;
+  feedId: string;
   feedFaviconUrl: string | null;
   feedUrl: string | null;
   feedSiteUrl: string | null;
@@ -117,6 +118,7 @@ function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
     summary: item.summary,
     link: item.link,
     publishedAt: item.publishedAt,
+    feedId: item.feedId,
     feedFaviconUrl: item.feedFaviconUrl,
     feedUrl: item.feedUrl,
     feedSiteUrl: item.feedSiteUrl,

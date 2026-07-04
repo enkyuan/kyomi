@@ -4,11 +4,13 @@ import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { PreviewCard, PreviewCardPopup, PreviewCardTrigger } from "@kyomi/ui/preview-card";
 import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
 import { cn } from "@kyomi/ui/lib/utils";
+import { Link } from "@tanstack/react-router";
 import { m } from "motion/react";
 import type { CSSProperties } from "react";
 
 type SourceRowProps = {
   articleUrl: string;
+  feedId?: string;
   feedFaviconUrl?: string | null;
   feedUrl?: string | null;
   feedSiteUrl?: string | null;
@@ -25,6 +27,7 @@ type SourceRowProps = {
 
 export function SourceRow({
   articleUrl,
+  feedId,
   feedFaviconUrl,
   feedUrl,
   feedSiteUrl,
@@ -80,6 +83,26 @@ export function SourceRow({
       )}
     </>
   );
+  const interactiveContent = feedId ? (
+    <Link
+      aria-label={`Open ${sourceLabel} feed`}
+      className="flex min-w-0 flex-1 items-center gap-[inherit] rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      onClick={(event) => event.stopPropagation()}
+      search={(prev) => ({
+        ...prev,
+        filter: "all" as const,
+        feedId,
+        folderId: undefined,
+        itemId: undefined,
+        search: undefined,
+      })}
+      to="/inbox"
+    >
+      {content}
+    </Link>
+  ) : (
+    content
+  );
 
   return (
     <m.div
@@ -93,10 +116,10 @@ export function SourceRow({
           className="flex min-w-0 flex-1 items-center gap-[inherit]"
           transition={{ type: "spring", duration: 0.28, bounce: 0 }}
         >
-          {content}
+          {interactiveContent}
         </m.div>
       ) : (
-        content
+        interactiveContent
       )}
     </m.div>
   );
