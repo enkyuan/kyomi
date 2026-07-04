@@ -45,14 +45,6 @@ run from the repository root.
 | `source` | no | source dataset name. |
 | `language` | no | language code when known. |
 | `category` | no | top-level catalog category. |
-| `content_type` | no | content type hint (e.g. `article`, `video`). |
-| `quality_score` | no | numeric quality/popularity score when known. |
-
-`catalog:import` preserves these fields: `language`, `content_type`, and `quality_score`
-are stored on the feed (with `metadata_provenance = catalog`), and `category` is upserted as
-a `catalog`-provenance category assignment. it also emits a validation report and a dry-run
-mode (`--dry-run`) that prints counts for imported feeds, category/language assignments,
-duplicate canonical URLs, and missing-field totals without writing.
 
 ## notes
 

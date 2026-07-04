@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { AppError } from "@shared/errors/app";
+import { discoverFeedUrlFromHtml } from "@modules/discover/feed/discover-url";
 import { resolveRemoteFeed } from "@modules/discover/feed/resolve-remote";
 
 describe("resolveRemoteFeed", () => {
@@ -67,8 +68,12 @@ describe("resolveRemoteFeed", () => {
 
     const result = await resolveRemoteFeed(httpsUrl);
 
-    expect(result).toEqual({
+    expect(result).toMatchObject({
       canonicalUrl: httpUrl,
+      canonicalFeedUrl: httpUrl,
+      submittedUrl: httpsUrl,
+      discoveredFromUrl: httpsUrl,
+      discoveryProvenance: "http_fallback",
       title: "HTTP Feed",
       description: "Fallback path",
       link: "http://93.184.216.34/",
@@ -105,12 +110,29 @@ describe("resolveRemoteFeed", () => {
 
     const result = await resolveRemoteFeed(siteUrl);
 
-    expect(result).toEqual({
+    expect(result).toMatchObject({
       canonicalUrl: feedUrl,
+      canonicalFeedUrl: feedUrl,
+      submittedUrl: siteUrl,
+      siteUrl,
+      discoveredFromUrl: siteUrl,
+      discoveryProvenance: "html_autodiscovery",
       title: "Example Feed",
       description: "Latest updates",
       link: siteUrl,
       iconUrl: null,
     });
+  });
+
+  test("ranks alternate feed links by supported feed type", () => {
+    const html = `<!doctype html><html><head>
+      <link rel="alternate" type="application/json" href="/feed.json">
+      <link rel="alternate" type="application/atom+xml" href="/atom.xml">
+      <link rel="alternate" type="application/rss+xml" href="/rss.xml">
+    </head></html>`;
+
+    expect(discoverFeedUrlFromHtml(html, "https://93.184.216.34/posts/")).toBe(
+      "https://93.184.216.34/rss.xml",
+    );
   });
 });

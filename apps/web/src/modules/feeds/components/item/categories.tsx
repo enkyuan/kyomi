@@ -2,7 +2,7 @@ import { cn } from "@kyomi/ui/lib/utils";
 
 const MAX_VISIBLE_CHIPS = 2;
 
-type TagChipRowProps = {
+type CategoriesProps = {
   categories: string[];
   /** Meta font size in px, kept in sync with the footer's saved chip and timestamp. */
   fontSizePx: number;
@@ -10,11 +10,10 @@ type TagChipRowProps = {
 };
 
 /**
- * Renders up to two feed-level category chips in the feed item footer. Overflow beyond two is
- * summarized as a `+N` chip with an accessible label listing the hidden categories. Uses the
- * same restrained pill styling as the footer's saved chip.
+ * Renders up to two category chips in the feed item footer. Overflow beyond two is
+ * summarized as a `+N` chip with an accessible label listing the hidden categories.
  */
-export function TagChipRow({ categories, fontSizePx, className }: TagChipRowProps) {
+export function Categories({ categories, fontSizePx, className }: CategoriesProps) {
   if (categories.length === 0) {
     return null;
   }

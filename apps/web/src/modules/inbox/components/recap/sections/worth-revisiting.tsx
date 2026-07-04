@@ -3,6 +3,7 @@
 import { Link } from "@tanstack/react-router";
 import { BookmarkFill, ExternalLinkLine, RightFill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
+import type { InboxSearch } from "@/routes/inbox/-route-helpers";
 import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
 import type { RecapSavedItem } from "../types";
 import { formatRelativeTime } from "@modules/inbox/lib/recap/index";
@@ -38,8 +39,8 @@ export function WorthRevisiting({
     >
       {items.length === 0 ? (
         <SectionEmpty
-          title="No saved items"
-          description="Saved posts and clips will appear here."
+          title="Nothing to revisit yet"
+          description="Older saved posts and clips will surface here after they've been waiting a while."
           icon={<BookmarkFill />}
         />
       ) : (
@@ -53,7 +54,7 @@ export function WorthRevisiting({
                 aria-label={item.title}
                 className="absolute inset-0 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
                 params={{ article: buildInboxItemSlug(item) }}
-                search={(prev) => ({
+                search={(prev: InboxSearch) => ({
                   ...prev,
                   itemId: undefined,
                 })}

@@ -73,6 +73,7 @@ const article: ArticleDetailDto = {
   isRead: false,
   isSaved: false,
   articleType: "feed",
+  categories: [],
   contentHtml: null,
   contentText: null,
   contentMarkdown: "Reader body",

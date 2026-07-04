@@ -259,6 +259,7 @@ export function List({
                 inboxItems.length === 0 && !isLoading ? null : (
                   <SkeletonRows
                     density={density}
+                    fontSizePx={fontSizePx}
                     showFavicons={showFavicons}
                     readerFocusMode={readerFocusMode}
                     viewportHeight={viewportHeight}

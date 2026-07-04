@@ -3,6 +3,7 @@
 import { Link } from "@tanstack/react-router";
 import { BookmarkFill, ExternalLinkLine } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
+import type { InboxSearch } from "@/routes/inbox/-route-helpers";
 import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
 import { RailTooltip, SectionEmpty } from "../sections";
 import type { RecapSavedItem } from "../types";
@@ -21,8 +22,8 @@ export function ExpandedSavedItems({
     return (
       <div className="flex h-full min-h-0">
         <SectionEmpty
-          title="No saved items"
-          description="Saved posts and clips will appear here."
+          title="Nothing to revisit yet"
+          description="Older saved posts and clips will surface here after they've been waiting a while."
           icon={<BookmarkFill />}
         />
       </div>
@@ -37,7 +38,7 @@ export function ExpandedSavedItems({
             aria-label={item.title}
             className="block min-w-0 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
             params={{ article: buildInboxItemSlug(item) }}
-            search={(prev) => ({
+            search={(prev: InboxSearch) => ({
               ...prev,
               itemId: undefined,
             })}

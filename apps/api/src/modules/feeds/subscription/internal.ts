@@ -31,6 +31,9 @@ export async function upsertFeedRecord(
     .select({
       id: feeds.id,
       link: feeds.link,
+      submittedUrl: feeds.submittedUrl,
+      discoveredFromUrl: feeds.discoveredFromUrl,
+      discoveryProvenance: feeds.discoveryProvenance,
       faviconUrl: feeds.faviconUrl,
       faviconSource: feeds.faviconSource,
     })
@@ -51,6 +54,14 @@ export async function upsertFeedRecord(
         title: resolved.title,
         description: resolved.description,
         link: resolved.link,
+        submittedUrl: existingFeed[0].submittedUrl ?? resolved.submittedUrl,
+        siteUrl: resolved.siteUrl ?? resolved.link,
+        canonicalFeedUrl: resolved.canonicalFeedUrl,
+        discoveredFromUrl: resolved.discoveredFromUrl ?? existingFeed[0].discoveredFromUrl,
+        discoveryProvenance:
+          resolved.discoveredFromUrl !== null
+            ? resolved.discoveryProvenance
+            : existingFeed[0].discoveryProvenance ?? resolved.discoveryProvenance,
         updatedAt: now,
         ...(shouldApplyFavicon
           ? {
@@ -80,6 +91,11 @@ export async function upsertFeedRecord(
   await tx.insert(feeds).values({
     id: feedId,
     url: resolved.canonicalUrl,
+    submittedUrl: resolved.submittedUrl,
+    siteUrl: resolved.siteUrl ?? resolved.link,
+    canonicalFeedUrl: resolved.canonicalFeedUrl,
+    discoveredFromUrl: resolved.discoveredFromUrl,
+    discoveryProvenance: resolved.discoveryProvenance,
     title: resolved.title,
     description: resolved.description,
     link: resolved.link,

@@ -10,13 +10,15 @@ import {
 } from "@mingcute/react";
 import { Toolbar as ToolbarRoot, ToolbarGroup, ToolbarSeparator } from "@kyomi/ui/toolbar";
 import { cn } from "@kyomi/ui/lib/utils";
-import type { ItemToolbarProps } from "@modules/toolbar/lib/types";
+import type { ItemToolbarProps, ToolbarSide } from "@modules/toolbar/lib/types";
 import { ItemToolbarButton } from "./button";
 import { ItemToolbarMenu } from "./menu";
 
 const INBOX_ITEM_TOOLBAR_BASE_CLASS =
   "justify-end gap-0 rounded-lg border border-border/80 bg-popover/95 p-0.5 text-popover-foreground shadow-md/10 transition-opacity duration-150";
 const TOOLBAR_ICON_CLASS = "size-5";
+const ITEM_TOOLBAR_TOOLTIP_SIDE: ToolbarSide = "top";
+const ITEM_TOOLBAR_TOOLTIP_SIDE_OFFSET = 6;
 
 function stopToolbarPropagation(event: SyntheticEvent) {
   event.stopPropagation();
@@ -48,7 +50,13 @@ export function ItemToolbar({
       <ToolbarGroup className="justify-end gap-1">
         <ItemToolbarButton
           label={isSaved ? "Remove from read later" : "Read later"}
-          onClick={onToggleSaved}
+          onClick={(anchor) =>
+            onToggleSaved({
+              anchor,
+              side: ITEM_TOOLBAR_TOOLTIP_SIDE,
+              sideOffset: ITEM_TOOLBAR_TOOLTIP_SIDE_OFFSET,
+            })
+          }
           active={isSaved}
           className={cn(buttonClassName, isSaved && "text-mizu")}
         >

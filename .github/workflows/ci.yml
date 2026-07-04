@@ -1,0 +1,197 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  static-quality:
+    name: Static Quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun workspace
+        uses: ./.github/actions/setup-bun
+
+      - name: Run static quality checks
+        run: bun run ci:static
+
+  web-tests:
+    name: Web Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun workspace
+        uses: ./.github/actions/setup-bun
+
+      - name: Run web integration tests
+        run: bun run ci:test:web
+
+  api-tests:
+    name: API Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_DB: kyomi
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: admin
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d kyomi"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:8-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      meilisearch:
+        image: getmeili/meilisearch:v1.15
+        env:
+          MEILI_MASTER_KEY: vols-meili-dev-key
+          MEILI_NO_ANALYTICS: "true"
+        ports:
+          - 7700:7700
+        options: >-
+          --health-cmd "wget --no-verbose --spider http://127.0.0.1:7700/health"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun workspace
+        uses: ./.github/actions/setup-bun
+
+      - name: Show service containers
+        run: docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}'
+
+      - name: Run API integration tests
+        run: bun run ci:test:api
+
+      - name: Show service logs on failure
+        if: failure()
+        run: |
+          docker ps -a
+          for container_id in $(docker ps -aq); do
+            echo "::group::docker logs ${container_id}"
+            docker logs --tail 200 "${container_id}" || true
+            echo "::endgroup::"
+          done
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun workspace
+        uses: ./.github/actions/setup-bun
+
+      - name: Build workspaces
+        run: bun run ci:build
+
+  docker-build:
+    name: Docker Build (${{ matrix.component }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - component: api
+            dockerfile: apps/api/Dockerfile
+            image: kyomi-api:ci
+          - component: web
+            dockerfile: apps/web/Dockerfile
+            image: kyomi-web:ci
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: |
+          bun_version="$(cat .bun-version)"
+          docker build \
+            --build-arg BUN_VERSION="${bun_version}" \
+            -f "${{ matrix.dockerfile }}" \
+            -t "${{ matrix.image }}" \
+            .
+
+  ci-summary:
+    name: CI Summary
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: ${{ always() }}
+    needs:
+      - static-quality
+      - web-tests
+      - api-tests
+      - build
+      - docker-build
+    env:
+      STATIC_RESULT: ${{ needs.static-quality.result }}
+      WEB_RESULT: ${{ needs.web-tests.result }}
+      API_RESULT: ${{ needs.api-tests.result }}
+      BUILD_RESULT: ${{ needs.build.result }}
+      DOCKER_RESULT: ${{ needs.docker-build.result }}
+    steps:
+      - name: Summarize required checks
+        run: |
+          failed=0
+
+          check_result() {
+            local name="$1"
+            local result="$2"
+            printf "%s: %s\n" "$name" "$result"
+            if [[ "$result" != "success" ]]; then
+              failed=1
+            fi
+          }
+
+          check_result "static-quality" "$STATIC_RESULT"
+          check_result "web-tests" "$WEB_RESULT"
+          check_result "api-tests" "$API_RESULT"
+          check_result "build" "$BUILD_RESULT"
+          check_result "docker-build" "$DOCKER_RESULT"
+
+          if [[ "$failed" -ne 0 ]]; then
+            echo "One or more required CI jobs failed."
+            exit 1
+          fi
+
+          echo "All required CI jobs passed."

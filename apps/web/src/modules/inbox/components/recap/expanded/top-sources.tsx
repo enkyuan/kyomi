@@ -3,6 +3,7 @@
 import { Link } from "@tanstack/react-router";
 import { AddFill, Rss2Fill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
+import type { InboxSearch } from "@/routes/inbox/-route-helpers";
 import {
   FolderPickerButton,
   TOP_SOURCE_FOLDER_BUTTON_CLASS,
@@ -55,7 +56,7 @@ export function ExpandedTopSources({
               <Link
                 className="min-w-0 flex flex-1 gap-3 outline-none"
                 to="/inbox"
-                search={(prev) => ({
+                search={(prev: InboxSearch) => ({
                   ...prev,
                   filter: "all" as const,
                   feedId: feed.feedId,

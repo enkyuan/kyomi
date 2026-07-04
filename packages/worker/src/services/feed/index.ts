@@ -1,5 +1,6 @@
 export { runFeedRefresh, shouldEnrichInsertedItems } from "./refresh";
 export { parseFeedDocument } from "./parse";
+export { discoverFeedUrlFromHtml } from "./discover-url";
 export {
   canonicalWinsOnConflictSql,
   hasExplicitFeedCategories,
@@ -11,6 +12,7 @@ export {
   classifyFeedItemCategories,
   isMixedFeedHost,
   MAX_CLASSIFIER_LABELS,
+  shouldSuppressClassifierFeedFallback,
   type CategoryClassification,
   type FeedCategoryClassificationInput,
   type FeedItemCategoryClassificationInput,
@@ -25,7 +27,9 @@ export { buildArticleIdentity, normalizeArticleUrl } from "../../lib/article-ide
 export { decodeHtmlEntities } from "../../lib/html-entities";
 export type {
   FeedIngestDatabase,
+  FeedRefreshCategoryStats,
   FeedRefreshResult,
   HostRateLimiter,
+  HtmlFeedFailureClass,
   SearchSyncConfig,
 } from "./types";

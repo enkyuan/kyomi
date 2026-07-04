@@ -7,6 +7,7 @@ export type CategoryTaxonomyEntry = {
   label: string;
   slug: string;
   keywords: readonly string[];
+  weakKeywords?: readonly string[];
   domainHints: readonly string[];
 };
 
@@ -34,6 +35,7 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "developer",
       "engineering",
       "frontend",
+      "git",
       "github",
       "infrastructure",
       "javascript",
@@ -44,6 +46,7 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "rust",
       "software",
       "typescript",
+      "version control",
     ],
     domainHints: ["github.com", "gitlab.com", "stackoverflow.com", "medium.com"],
   },
@@ -51,19 +54,27 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
     label: "Technology",
     slug: "technology",
     keywords: [
-      "app",
+      "changelog",
       "chip",
       "computer",
       "gadget",
       "hardware",
       "internet",
+      "metasearch",
       "platform",
+      "search engine",
       "startup",
-      "tech",
       "technology",
-      "web",
     ],
-    domainHints: ["techcrunch.com", "wired.com", "theverge.com", "arstechnica.com"],
+    weakKeywords: ["app", "tech", "web"],
+    domainHints: [
+      "kagi.com",
+      "searxng.org",
+      "techcrunch.com",
+      "wired.com",
+      "theverge.com",
+      "arstechnica.com",
+    ],
   },
   {
     label: "Security & Privacy",
@@ -95,11 +106,11 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "language model",
       "llm",
       "machine learning",
-      "model",
       "neural",
       "openai",
       "transformer",
     ],
+    weakKeywords: ["model"],
     domainHints: ["openai.com", "huggingface.co", "arxiv.org"],
   },
   {
@@ -123,7 +134,8 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
   {
     label: "Business & Startups",
     slug: "business-startups",
-    keywords: ["business", "company", "earnings", "funding", "revenue", "startup", "venture"],
+    keywords: ["business", "earnings", "funding", "revenue", "startup", "venture"],
+    weakKeywords: ["company"],
     domainHints: ["bloomberg.com", "wsj.com", "ft.com", "techcrunch.com"],
   },
   {
@@ -163,7 +175,8 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
   {
     label: "World & Society",
     slug: "world-society",
-    keywords: ["breaking", "headline", "international", "news", "society", "world"],
+    keywords: ["breaking", "headline", "international", "society", "world"],
+    weakKeywords: ["news"],
     domainHints: ["apnews.com", "reuters.com", "bbc.com", "nytimes.com"],
   },
   {

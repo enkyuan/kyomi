@@ -10,7 +10,8 @@ import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
 import { decodeMergedListCursor } from "./cursor";
 import { mergeRecentlyViewedItemsSorted, type RecentlyViewedItem } from "./recent";
-import { feedCategoryLabelsSql, listArticlesForUser } from "./service";
+import { feedCategoryLabelsSql } from "../category-labels";
+import { listArticlesForUser } from "./service";
 import { globalArticleIsReadSql } from "../sql";
 
 type DB = typeof db;

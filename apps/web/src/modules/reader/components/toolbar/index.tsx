@@ -91,7 +91,9 @@ export function Toolbar({
           <ReaderToolbarButton
             label={isSaved ? "Remove from read later" : "Read later"}
             active={isSaved}
-            onClick={onToggleSaved}
+            onClick={(anchor) =>
+              onToggleSaved({ anchor, side: tooltipSide, sideOffset: tooltipSideOffset })
+            }
             tooltipSide={tooltipSide}
             tooltipCollisionAvoidance={tooltipCollisionAvoidance}
             tooltipSideOffset={tooltipSideOffset}
@@ -336,7 +338,7 @@ function ReaderToolbarButton({
 }: {
   label: string;
   children?: React.ReactNode;
-  onClick: () => void;
+  onClick: (anchor: HTMLButtonElement) => void;
   active?: boolean;
   disabled?: boolean;
   className?: string;
@@ -367,7 +369,7 @@ function ReaderToolbarButton({
                 onClick={(event) => {
                   event.preventDefault();
                   event.stopPropagation();
-                  onClick();
+                  onClick(event.currentTarget);
                 }}
               />
             }

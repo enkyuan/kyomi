@@ -2,6 +2,21 @@ import type { drizzle } from "drizzle-orm/node-postgres";
 import type * as schema from "@kyomi/db";
 import type { InferredCategoryLabel } from "./classifier";
 
+export type FeedRefreshCategoryStats = {
+  feedClassifierLabels: number;
+  itemClassifierLabels: number;
+  itemClassifierAbstentions: number;
+  suppressedFeedClassifierFallback: boolean;
+  sourceTagAssignments?: number;
+};
+
+export type HtmlFeedFailureClass =
+  | "html_not_feed"
+  | "access_denied_html"
+  | "captcha_html"
+  | "login_html"
+  | "stale_endpoint_html";
+
 export type FeedRefreshResult = {
   ok: boolean;
   itemCount: number;
@@ -9,6 +24,8 @@ export type FeedRefreshResult = {
   updatedCount?: number;
   notModified?: boolean;
   error?: string;
+  failureClass?: HtmlFeedFailureClass;
+  categoryStats?: FeedRefreshCategoryStats;
   // True when the failure cannot be resolved by retrying (e.g. HTTP 4xx other than 408/429).
   permanent?: boolean;
 };

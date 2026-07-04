@@ -7,10 +7,21 @@ import { parseFeedMetadata, parseHtmlMetadataFallback } from "./parse";
 
 export type ResolvedRemoteFeed = {
   canonicalUrl: string;
+  canonicalFeedUrl: string;
+  submittedUrl: string;
+  siteUrl: string | null;
+  discoveredFromUrl: string | null;
+  discoveryProvenance: string;
   title: string;
   description: string;
   link: string | null;
   iconUrl: string | null;
+};
+
+type RemoteFeedResolutionContext = {
+  submittedUrl: string;
+  discoveredFromUrl: string | null;
+  discoveryProvenance: string;
 };
 
 function toHttpFallbackUrl(rawUrl: string): string | null {
@@ -29,14 +40,16 @@ function toHttpFallbackUrl(rawUrl: string): string | null {
 async function tryTlsRetryOrHttpFallback(
   url: string,
   visitedUrls: Set<string>,
+  context: RemoteFeedResolutionContext,
 ): Promise<ResolvedRemoteFeed | null> {
   logger.warn("discover.feed.tls_failed_retrying", { url });
-  return await resolveRemoteFeedFromUrl(url, visitedUrls, true);
+  return await resolveRemoteFeedFromUrl(url, visitedUrls, context, true);
 }
 
 async function tryHttpFallbackAfterTls(
   url: string,
   visitedUrls: Set<string>,
+  context: RemoteFeedResolutionContext,
 ): Promise<ResolvedRemoteFeed | null> {
   const httpFallbackUrl = toHttpFallbackUrl(url);
   if (!httpFallbackUrl) {
@@ -46,13 +59,18 @@ async function tryHttpFallbackAfterTls(
   if (visitedUrls.has(normalizedFallbackUrl)) {
     return null;
   }
-  return await resolveRemoteFeedFromUrl(httpFallbackUrl, visitedUrls, false);
+  return await resolveRemoteFeedFromUrl(httpFallbackUrl, visitedUrls, {
+    ...context,
+    discoveredFromUrl: url,
+    discoveryProvenance: "http_fallback",
+  });
 }
 
 async function tryBaseUrlFallbackOn404(
   url: string,
   visitedUrls: Set<string>,
   ignoreTlsError: boolean,
+  context: RemoteFeedResolutionContext,
 ): Promise<ResolvedRemoteFeed | null> {
   let parsedUrl: URL;
   try {
@@ -73,7 +91,16 @@ async function tryBaseUrlFallbackOn404(
   }
 
   logger.warn("discover.feed.fallback_to_base_url", { url, baseUrl });
-  return await resolveRemoteFeedFromUrl(baseUrl, visitedUrls, ignoreTlsError);
+  return await resolveRemoteFeedFromUrl(
+    baseUrl,
+    visitedUrls,
+    {
+      ...context,
+      discoveredFromUrl: url,
+      discoveryProvenance: "base_url_fallback",
+    },
+    ignoreTlsError,
+  );
 }
 
 async function handleFailedFeedFetch(
@@ -81,6 +108,7 @@ async function handleFailedFeedFetch(
   visitedUrls: Set<string>,
   ignoreTlsError: boolean,
   fetched: Extract<FetchFeedDocumentResult, { ok: false }>,
+  context: RemoteFeedResolutionContext,
 ): Promise<ResolvedRemoteFeed> {
   if (fetched.code === "BLOCKED_URL") {
     throw new AppError(fetched.error || "Invalid feed URL", {
@@ -91,19 +119,24 @@ async function handleFailedFeedFetch(
 
   if (fetched.code === "TLS_CERTIFICATE_FAILED") {
     if (!ignoreTlsError) {
-      const tlsRetry = await tryTlsRetryOrHttpFallback(url, visitedUrls);
+      const tlsRetry = await tryTlsRetryOrHttpFallback(url, visitedUrls, context);
       if (tlsRetry) {
         return tlsRetry;
       }
     }
-    const httpFallback = await tryHttpFallbackAfterTls(url, visitedUrls);
+    const httpFallback = await tryHttpFallbackAfterTls(url, visitedUrls, context);
     if (httpFallback) {
       return httpFallback;
     }
   }
 
   if (fetched.status === 404) {
-    const baseFallback = await tryBaseUrlFallbackOn404(url, visitedUrls, ignoreTlsError);
+    const baseFallback = await tryBaseUrlFallbackOn404(
+      url,
+      visitedUrls,
+      ignoreTlsError,
+      context,
+    );
     if (baseFallback) {
       return baseFallback;
     }
@@ -130,11 +163,18 @@ async function handleFailedFeedFetch(
 async function resolveFromFetchedBody(
   fetched: Extract<FetchFeedDocumentResult, { ok: true }>,
   visitedUrls: Set<string>,
+  context: RemoteFeedResolutionContext,
 ): Promise<ResolvedRemoteFeed> {
   try {
     const meta = parseFeedMetadata(fetched.body, fetched.finalUrl);
+    const canonicalUrl = normalizeFeedUrl(fetched.finalUrl);
     return {
-      canonicalUrl: normalizeFeedUrl(fetched.finalUrl),
+      canonicalUrl,
+      canonicalFeedUrl: canonicalUrl,
+      submittedUrl: context.submittedUrl,
+      siteUrl: meta.link,
+      discoveredFromUrl: context.discoveredFromUrl,
+      discoveryProvenance: context.discoveryProvenance,
       title: meta.title,
       description: meta.description,
       link: meta.link,
@@ -143,12 +183,25 @@ async function resolveFromFetchedBody(
   } catch {
     const discoveredFeedUrl = discoverFeedUrlFromHtml(fetched.body, fetched.finalUrl);
     if (discoveredFeedUrl) {
-      return await resolveRemoteFeedFromUrl(discoveredFeedUrl, visitedUrls);
+      return await resolveRemoteFeedFromUrl(discoveredFeedUrl, visitedUrls, {
+        ...context,
+        discoveredFromUrl: fetched.finalUrl,
+        discoveryProvenance: "html_autodiscovery",
+      });
     }
 
     const meta = parseHtmlMetadataFallback(fetched.body, fetched.finalUrl);
+    const canonicalUrl = normalizeFeedUrl(fetched.finalUrl);
     return {
-      canonicalUrl: normalizeFeedUrl(fetched.finalUrl),
+      canonicalUrl,
+      canonicalFeedUrl: canonicalUrl,
+      submittedUrl: context.submittedUrl,
+      siteUrl: meta.link,
+      discoveredFromUrl: context.discoveredFromUrl,
+      discoveryProvenance:
+        context.discoveryProvenance === "direct"
+          ? "html_metadata_fallback"
+          : context.discoveryProvenance,
       title: meta.title,
       description: meta.description,
       link: meta.link,
@@ -171,12 +224,17 @@ export async function resolveRemoteFeed(rawUrl: string): Promise<ResolvedRemoteF
     throw new AppError("Invalid feed URL", { status: 400, code: "INVALID_FEED_URL" });
   }
 
-  return await resolveRemoteFeedFromUrl(initial.href, new Set());
+  return await resolveRemoteFeedFromUrl(initial.href, new Set(), {
+    submittedUrl: initial.href,
+    discoveredFromUrl: null,
+    discoveryProvenance: "direct",
+  });
 }
 
 async function resolveRemoteFeedFromUrl(
   url: string,
   visitedUrls: Set<string>,
+  context: RemoteFeedResolutionContext,
   ignoreTlsError = false,
 ): Promise<ResolvedRemoteFeed> {
   const normalizedInputUrl = normalizeFeedUrl(url);
@@ -190,8 +248,8 @@ async function resolveRemoteFeedFromUrl(
 
   const fetched = await fetchFeedDocument(url, { ignoreTlsError });
   if (!fetched.ok) {
-    return await handleFailedFeedFetch(url, visitedUrls, ignoreTlsError, fetched);
+    return await handleFailedFeedFetch(url, visitedUrls, ignoreTlsError, fetched, context);
   }
 
-  return await resolveFromFetchedBody(fetched, visitedUrls);
+  return await resolveFromFetchedBody(fetched, visitedUrls, context);
 }

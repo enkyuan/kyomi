@@ -1,6 +1,20 @@
 import { describe, expect, mock, test } from "bun:test";
 import { updateArticleForUser } from "@modules/articles/write/update";
 
+function firstValueInput(fake: ReturnType<typeof createFakeDb>): Record<string, unknown> {
+  const call = fake.values.mock.calls[0] as unknown as [Record<string, unknown>] | undefined;
+  expect(call).toBeDefined();
+  return call![0];
+}
+
+function firstConflictSet(fake: ReturnType<typeof createFakeDb>): Record<string, unknown> {
+  const call = fake.onConflictDoUpdate.mock.calls[0] as unknown as
+    | [{ set: Record<string, unknown> }]
+    | undefined;
+  expect(call).toBeDefined();
+  return call![0].set;
+}
+
 function createFakeDb(existingState?: { hiddenAt: Date | null }) {
   let selectCall = 0;
   const onConflictDoUpdate = mock(() => Promise.resolve());
@@ -43,8 +57,8 @@ describe("updateArticleForUser hidden state", () => {
 
     await updateArticleForUser(fake.db as never, "user-1", "article-1", { isHidden: true });
 
-    expect(fake.values.mock.calls[0]?.[0].hiddenAt).toBeInstanceOf(Date);
-    expect(fake.onConflictDoUpdate.mock.calls[0]?.[0].set.hiddenAt).toBeInstanceOf(Date);
+    expect(firstValueInput(fake).hiddenAt).toBeInstanceOf(Date);
+    expect(firstConflictSet(fake).hiddenAt).toBeInstanceOf(Date);
   });
 
   test("clears hiddenAt when isHidden is false", async () => {
@@ -52,7 +66,7 @@ describe("updateArticleForUser hidden state", () => {
 
     await updateArticleForUser(fake.db as never, "user-1", "article-1", { isHidden: false });
 
-    expect(fake.values.mock.calls[0]?.[0].hiddenAt).toBeNull();
-    expect(fake.onConflictDoUpdate.mock.calls[0]?.[0].set.hiddenAt).toBeNull();
+    expect(firstValueInput(fake).hiddenAt).toBeNull();
+    expect(firstConflictSet(fake).hiddenAt).toBeNull();
   });
 });

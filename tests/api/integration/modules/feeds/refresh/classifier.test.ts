@@ -1,5 +1,10 @@
 import { describe, expect, test } from "bun:test";
-import { classifyFeedCategories, classifyFeedItemCategories, isMixedFeedHost } from "@kyomi/worker";
+import {
+  classifyFeedCategories,
+  classifyFeedItemCategories,
+  isMixedFeedHost,
+  shouldSuppressClassifierFeedFallback,
+} from "@kyomi/worker";
 
 describe("feed category classifier", () => {
   test("classifies technology feeds without RSS category tags", () => {
@@ -117,6 +122,107 @@ describe("feed category classifier", () => {
     });
 
     expect(result.categories.map((category) => category.label)).toEqual(["AI & ML"]);
+  });
+
+  test("classifies thin search-product titles with targeted technology signals", () => {
+    const result = classifyFeedItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "SearXNG: A free internet metasearch engine",
+      itemSummary: null,
+      itemUrl: "https://docs.searxng.org/",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["Technology"]);
+  });
+
+  test("classifies thin developer-tool titles with git and host signals", () => {
+    const result = classifyFeedItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Oak: Git for Agents",
+      itemSummary: null,
+      itemUrl: "https://github.com/oak/oak",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
+  });
+
+  test("does not classify a single generic dev-tool title word without a corroborating signal", () => {
+    // A bare "git" hit in the title (score 3) alone does not clear ITEM_SCORE_THRESHOLD=4
+    // without a domain hint or a second keyword — this keeps the classifier honest about
+    // requiring more than one generic word before assigning a label, the same discipline
+    // that moved "news"/"app"/"web"/"tech" into weakKeywords elsewhere in this taxonomy.
+    const result = classifyFeedItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Oak: Git for Agents",
+      itemSummary: null,
+      itemUrl: "https://oak.space/",
+    });
+
+    expect(result.categories).toEqual([]);
+  });
+
+  test("classifies thin changelog titles with product host signals", () => {
+    const result = classifyFeedItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Kagi Changelog",
+      itemSummary: null,
+      itemUrl: "https://kagi.com/changelog",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["Technology"]);
+  });
+
+  test("does not classify from broad weak words alone", () => {
+    const result = classifyFeedItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Company news app updates",
+      itemSummary: null,
+      itemUrl: "https://example.com/updates",
+    });
+
+    expect(result.categories).toEqual([]);
+  });
+
+  test("suppresses classifier feed fallback for broad aggregator feeds", () => {
+    expect(
+      shouldSuppressClassifierFeedFallback({
+        feedTitle: "Hacker News",
+        feedDescription: "Links for hackers",
+        feedUrl: "https://news.ycombinator.com/rss",
+        feedSiteUrl: "https://news.ycombinator.com",
+        sourceKind: "rss",
+      }),
+    ).toBe(true);
+
+    expect(
+      shouldSuppressClassifierFeedFallback({
+        feedTitle: "Airbnb Engineering",
+        feedDescription: "Software engineering posts about infrastructure and architecture.",
+        feedUrl: "https://medium.com/feed/airbnb-engineering",
+        feedSiteUrl: "https://medium.com/airbnb-engineering",
+        sourceKind: "rss",
+      }),
+    ).toBe(false);
   });
 
   test("accepts a maxLabels override so callers can post-filter without losing candidates", () => {

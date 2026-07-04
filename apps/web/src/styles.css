@@ -33,6 +33,7 @@
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
   --color-mizu: oklch(0.788 0.073 210.53);
+  --color-mizu-foreground: var(--mizu-foreground);
   --color-petrol-green: var(--petrol-green);
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
@@ -104,6 +105,7 @@
   --info-foreground: var(--color-blue-700);
   --success: var(--color-emerald-500);
   --success-foreground: var(--color-emerald-700);
+  --mizu-foreground: oklch(0.47 0.073 210.53);
   --petrol-green: oklch(0.486 0.081 176.621);
   --warning: var(--color-amber-500);
   --warning-foreground: var(--color-amber-700);
@@ -144,6 +146,7 @@
   --info-foreground: var(--color-blue-400);
   --success: var(--color-emerald-500);
   --success-foreground: var(--color-emerald-400);
+  --mizu-foreground: var(--color-mizu);
   --warning: var(--color-amber-500);
   --warning-foreground: var(--color-amber-400);
   --input: --alpha(var(--color-white) / 8%);

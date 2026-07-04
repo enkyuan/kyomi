@@ -1,10 +1,38 @@
 "use client";
 
 import { useCallback } from "react";
-import { toastManager } from "@kyomi/ui/toast";
+import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-data";
-import type { ArticleActionItem } from "../lib/types";
+import type { AnchoredToolbarActionOptions, ArticleActionItem, ToolbarSide } from "../lib/types";
+
+const DEFAULT_SAVED_TOAST_SIDE: ToolbarSide = "top";
+const DEFAULT_SAVED_TOAST_SIDE_OFFSET = 6;
+
+function showSavedToast(options: AnchoredToolbarActionOptions | undefined, isSaved: boolean) {
+  const title = isSaved ? "Article saved" : "Article unsaved";
+  const type = isSaved ? "success" : "info";
+  const anchor = options?.anchor;
+
+  if (anchor?.isConnected) {
+    anchoredToastManager.add({
+      title,
+      type,
+      timeout: 1800,
+      data: { tooltipStyle: true },
+      positionerProps: {
+        anchor,
+        side: options?.side ?? DEFAULT_SAVED_TOAST_SIDE,
+        align: "center",
+        sideOffset: options?.sideOffset ?? DEFAULT_SAVED_TOAST_SIDE_OFFSET,
+        positionMethod: "fixed",
+      },
+    });
+    return;
+  }
+
+  toastManager.add({ title, type });
+}
 
 export function useArticleActions({
   item,
@@ -15,38 +43,29 @@ export function useArticleActions({
 }) {
   const updateItemMutation = useInboxItemStateMutation();
 
-  const toggleSaved = useCallback(() => {
-    const nextSaved = !item.isSaved;
-    const savePromise = updateItemMutation.mutateAsync({
-      itemId: item.id,
-      patch: { isSaved: nextSaved },
-    });
-    const toastId = toastManager.add({
-      title: nextSaved ? "Saving article..." : "Removing from read later...",
-      description: nextSaved ? "Adding this article to read later." : "Updating read later.",
-      type: "loading",
-      timeout: 0,
-    });
-
-    void savePromise
-      .then(() => {
-        toastManager.update(toastId, {
-          title: nextSaved ? "Saved to read later" : "Removed from read later",
-          description: nextSaved
-            ? "This article is now in read later."
-            : "This article was removed from read later.",
-          type: nextSaved ? "success" : "info",
-        });
-      })
-      .catch((error) => {
-        logClientError(saveErrorScope, error);
-        toastManager.update(toastId, {
-          title: nextSaved ? "Unable to save article" : "Unable to update article",
-          description: getUserSafeErrorMessage(error, "Try again in a moment."),
-          type: "error",
-        });
+  const toggleSaved = useCallback(
+    (options?: AnchoredToolbarActionOptions) => {
+      const nextSaved = !item.isSaved;
+      const savePromise = updateItemMutation.mutateAsync({
+        itemId: item.id,
+        patch: { isSaved: nextSaved },
       });
-  }, [item.id, item.isSaved, saveErrorScope, updateItemMutation]);
+
+      void savePromise
+        .then(() => {
+          showSavedToast(options, nextSaved);
+        })
+        .catch((error) => {
+          logClientError(saveErrorScope, error);
+          toastManager.add({
+            title: nextSaved ? "Unable to save article" : "Unable to update article",
+            description: getUserSafeErrorMessage(error, "Try again in a moment."),
+            type: "error",
+          });
+        });
+    },
+    [item.id, item.isSaved, saveErrorScope, updateItemMutation],
+  );
 
   return {
     isSaved: item.isSaved,

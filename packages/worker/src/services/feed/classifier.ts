@@ -32,6 +32,10 @@ export type FeedItemCategoryClassificationInput = FeedCategoryClassificationInpu
 export const MAX_CLASSIFIER_LABELS = 2;
 const FEED_SCORE_THRESHOLD = 3;
 const ITEM_SCORE_THRESHOLD = 4;
+const STRONG_TITLE_KEYWORD_SCORE = 3;
+const STRONG_BODY_KEYWORD_SCORE = 1;
+const WEAK_KEYWORD_SCORE = 1;
+const DOMAIN_HINT_SCORE = 3;
 
 function safeHost(url: string | null): string {
   if (!url) {
@@ -86,10 +90,15 @@ function scoreCategory(
   let score = 0;
   for (const keyword of entry.keywords) {
     if (includesToken(input.titleText, keyword)) {
-      score += 3;
+      score += STRONG_TITLE_KEYWORD_SCORE;
     }
     if (includesToken(input.bodyText, keyword)) {
-      score += 1;
+      score += STRONG_BODY_KEYWORD_SCORE;
+    }
+  }
+  for (const keyword of entry.weakKeywords ?? []) {
+    if (includesToken(input.titleText, keyword) || includesToken(input.bodyText, keyword)) {
+      score += WEAK_KEYWORD_SCORE;
     }
   }
   for (const host of input.hosts) {
@@ -97,7 +106,7 @@ function scoreCategory(
       continue;
     }
     if (entry.domainHints.some((hint) => host === hint || host.endsWith(`.${hint}`))) {
-      score += 3;
+      score += DOMAIN_HINT_SCORE;
     }
   }
   return score;
@@ -139,6 +148,12 @@ function topCategories(input: {
 export function isMixedFeedHost(url: string | null): boolean {
   const host = safeHost(url);
   return MIXED_FEED_HOSTS.has(host);
+}
+
+export function shouldSuppressClassifierFeedFallback(
+  input: FeedCategoryClassificationInput,
+): boolean {
+  return isMixedFeedHost(input.feedUrl) || isMixedFeedHost(input.feedSiteUrl);
 }
 
 export function classifyFeedCategories(

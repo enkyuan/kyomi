@@ -19,6 +19,7 @@ const sampleItem = (overrides: Partial<ArticleListItemDto> = {}): ArticleListIte
   isRead: false,
   isSaved: false,
   articleType: "clip",
+  categories: [],
   ...overrides,
 });
 
@@ -31,7 +32,7 @@ describe("merged list cursor codec", () => {
 
   test("round-trips boundary", () => {
     const item = sampleItem();
-    const enc = encodeMergedListCursorFromItem(item);
+    const enc = encodeMergedListCursorFromItem(item, "newest");
     const dec = decodeMergedListCursor(enc);
     expect(dec?.publishedAt.toISOString()).toBe(item.publishedAt);
     expect(dec?.id).toBe(item.id);

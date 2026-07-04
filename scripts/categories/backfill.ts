@@ -14,6 +14,7 @@ import {
   canonicalWinsOnConflictSql,
   classifyFeedCategories,
   classifyFeedItemCategories,
+  shouldSuppressClassifierFeedFallback,
   syncInferredFeedCategories,
   type InferredCategoryLabel,
 } from "../../packages/worker/src";
@@ -29,8 +30,10 @@ export type BackfillStats = {
   apply: boolean;
   feedsScanned: number;
   feedsWithClassifierCategories: number;
+  feedClassifierFallbacksSuppressed: number;
   itemsScanned: number;
   itemsWithClassifierCategories: number;
+  itemClassifierAbstentions: number;
   assignmentsScanned: number;
   assignmentsRewritten: number;
   assignmentsDroppedUnmapped: number;
@@ -82,7 +85,8 @@ export function summarizeBackfill(stats: BackfillStats): string {
   const assignmentVerb = stats.apply ? "rewrote" : "would rewrite";
   return (
     `${action}: scanned ${stats.feedsScanned} feeds and ${stats.itemsScanned} items; ${verb} classifier categories for ${stats.feedsWithClassifierCategories} feeds and ${stats.itemsWithClassifierCategories} items. ` +
-    `${assignmentVerb} ${stats.assignmentsRewritten} of ${stats.assignmentsScanned} existing assignments to canonical categories and dropped ${stats.assignmentsDroppedUnmapped} unmapped assignments.`
+    `${assignmentVerb} ${stats.assignmentsRewritten} of ${stats.assignmentsScanned} existing assignments to canonical categories and dropped ${stats.assignmentsDroppedUnmapped} unmapped assignments. ` +
+    `Suppressed classifier feed fallback for ${stats.feedClassifierFallbacksSuppressed} broad feeds; item classifier abstained on ${stats.itemClassifierAbstentions} items.`
   );
 }
 
@@ -225,7 +229,9 @@ async function normalizeFeedCategoryAssignments(
     await db.delete(feedCategoryAssignments).where(eq(feedCategoryAssignments.id, row.id));
   }
   if (apply && idsToDelete.length > 0) {
-    await db.delete(feedCategoryAssignments).where(inArray(feedCategoryAssignments.id, idsToDelete));
+    await db
+      .delete(feedCategoryAssignments)
+      .where(inArray(feedCategoryAssignments.id, idsToDelete));
   }
   return plan;
 }
@@ -335,6 +341,26 @@ type BackfillItemRow = {
   canonicalUrl: string;
 };
 
+export function inferBackfillFeedCategories(feed: BackfillFeedRow): {
+  categories: InferredCategoryLabel[];
+  suppressedFallback: boolean;
+} {
+  const classificationInput = {
+    feedTitle: feed.title,
+    feedDescription: feed.description,
+    feedUrl: feed.url,
+    feedSiteUrl: feed.link,
+    sourceKind: feed.sourceKind,
+  };
+  if (shouldSuppressClassifierFeedFallback(classificationInput)) {
+    return { categories: [], suppressedFallback: true };
+  }
+  return {
+    categories: classifyFeedCategories(classificationInput).categories,
+    suppressedFallback: false,
+  };
+}
+
 export function inferBackfillItemCategories(
   feed: BackfillFeedRow,
   item: BackfillItemRow,
@@ -357,8 +383,10 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
     apply: args.apply,
     feedsScanned: 0,
     feedsWithClassifierCategories: 0,
+    feedClassifierFallbacksSuppressed: 0,
     itemsScanned: 0,
     itemsWithClassifierCategories: 0,
+    itemClassifierAbstentions: 0,
     assignmentsScanned: 0,
     assignmentsRewritten: 0,
     assignmentsDroppedUnmapped: 0,
@@ -374,13 +402,10 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
 
   for (const feed of feedRows) {
     stats.feedsScanned += 1;
-    const feedCategories = classifyFeedCategories({
-      feedTitle: feed.title,
-      feedDescription: feed.description,
-      feedUrl: feed.url,
-      feedSiteUrl: feed.link,
-      sourceKind: feed.sourceKind,
-    }).categories;
+    const { categories: feedCategories, suppressedFallback } = inferBackfillFeedCategories(feed);
+    if (suppressedFallback) {
+      stats.feedClassifierFallbacksSuppressed += 1;
+    }
     if (feedCategories.length > 0) {
       stats.feedsWithClassifierCategories += 1;
     }
@@ -406,6 +431,8 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
         const inferredCategoryLabels = inferBackfillItemCategories(feed, item);
         if (inferredCategoryLabels.length > 0) {
           stats.itemsWithClassifierCategories += 1;
+        } else {
+          stats.itemClassifierAbstentions += 1;
         }
         return { id: item.id, inferredCategoryLabels };
       });

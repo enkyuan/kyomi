@@ -20,6 +20,7 @@ type Row = {
   isRead: boolean;
   isSaved: boolean;
   hiddenAt: Date | null;
+  categories: string[];
 };
 
 function row(overrides: Partial<Row>): Row {
@@ -38,6 +39,7 @@ function row(overrides: Partial<Row>): Row {
     isRead: false,
     isSaved: false,
     hiddenAt: null,
+    categories: [],
     ...overrides,
   };
 }

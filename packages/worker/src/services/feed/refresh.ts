@@ -10,8 +10,10 @@ import {
   classifyFeedCategories,
   classifyFeedItemCategories,
   MAX_CLASSIFIER_LABELS,
+  shouldSuppressClassifierFeedFallback,
   type InferredCategoryLabel,
 } from "./classifier";
+import { discoverFeedUrlFromHtml } from "./discover-url";
 import { fetchArticleEnrichment } from "./enrich";
 import { fetchFeedDocument } from "./fetch";
 import { parseFeedDocument } from "./parse";
@@ -21,12 +23,15 @@ import {
   syncInferredFeedCategories,
   syncParsedFeedCategories,
 } from "./categories";
+import { syncParsedFeedItemTags } from "./tags";
 import { summarizeText } from "../../lib/feed-text";
 import type {
   FeedIngestDatabase,
   FeedMetadata,
+  FetchFeedDocumentResult,
   FeedRefreshResult,
   HostRateLimiter,
+  HtmlFeedFailureClass,
   ParsedFeedDocument,
   ParsedFeedItem,
   SearchSyncConfig,
@@ -35,6 +40,27 @@ import type {
 const MAX_ENRICHMENTS_PER_REFRESH = 5;
 const ENRICHMENT_CONCURRENCY = 3;
 const PERMANENT_FAILURE_BACKOFF_MS = 24 * 60 * 60 * 1000;
+const HTML_PARSE_ERROR = "Unsupported feed format: received HTML document";
+const SCHEDULED_HTML_AUTODISCOVERY_PROVENANCE = "scheduled_html_autodiscovery";
+
+type FetchedFeedDocument = Extract<
+  FetchFeedDocumentResult,
+  { ok: true; notModified: false }
+>;
+
+type ResolvedRefreshDocument =
+  | {
+      ok: true;
+      fetched: FetchedFeedDocument;
+      parsed: ParsedFeedDocument;
+      discoveredFromUrl: string | null;
+      discoveryProvenance: string | null;
+    }
+  | {
+      ok: false;
+      error: string;
+      failureClass: HtmlFeedFailureClass;
+    };
 
 export function shouldEnrichInsertedItems(input: { userId: string; reason?: string }): boolean {
   if (
@@ -70,6 +96,200 @@ function computeFailureBackoffMs(
   return hasConsecutiveFailure ? 60 * 60 * 1000 : 15 * 60 * 1000;
 }
 
+function contentTypeIsHtml(contentType: string): boolean {
+  const normalized = contentType.split(";")[0]?.trim().toLowerCase();
+  return normalized === "text/html" || normalized === "application/xhtml+xml";
+}
+
+function bodyLooksLikeHtmlDocument(body: string): boolean {
+  const lower = body.trimStart().slice(0, 2048).toLowerCase();
+  return (
+    lower.startsWith("<!doctype html") ||
+    lower.startsWith("<html") ||
+    lower.includes("<head") ||
+    lower.includes("<body")
+  );
+}
+
+function fetchedDocumentIsHtml(fetched: FetchedFeedDocument): boolean {
+  if (bodyLooksLikeHtmlDocument(fetched.body)) {
+    return true;
+  }
+  if (!contentTypeIsHtml(fetched.contentType)) {
+    return false;
+  }
+  const lower = fetched.body.trimStart().slice(0, 256).toLowerCase();
+  return !(
+    lower.startsWith("<?xml") ||
+    lower.startsWith("<rss") ||
+    lower.startsWith("<feed") ||
+    lower.startsWith("{")
+  );
+}
+
+function isHtmlParseError(error: unknown): boolean {
+  return error instanceof Error && error.message === HTML_PARSE_ERROR;
+}
+
+function endpointLooksStale(url: string): boolean {
+  try {
+    const path = new URL(url).pathname.toLowerCase();
+    return /\/(feed|feeds|rss|atom)\/?$/.test(path) || /\.(rss|atom|xml|json)$/.test(path);
+  } catch {
+    return false;
+  }
+}
+
+function classifyHtmlFeedFailure(body: string, url: string): HtmlFeedFailureClass {
+  const text = body.slice(0, 65536).toLowerCase();
+
+  if (/captcha|turnstile|cf-challenge|cloudflare|checking your browser|are you human/.test(text)) {
+    return "captcha_html";
+  }
+
+  if (
+    /access denied|forbidden|not authorized|permission denied|request blocked|blocked/.test(text)
+  ) {
+    return "access_denied_html";
+  }
+
+  if (/log in|login|sign in|signin|authentication required|please authenticate/.test(text)) {
+    return "login_html";
+  }
+
+  if (
+    /not found|404|feed no longer|feed moved|endpoint no longer/.test(text) ||
+    endpointLooksStale(url)
+  ) {
+    return "stale_endpoint_html";
+  }
+
+  return "html_not_feed";
+}
+
+function htmlFeedFailure(
+  failureClass: HtmlFeedFailureClass,
+  reason: string,
+): ResolvedRefreshDocument {
+  return {
+    ok: false,
+    failureClass,
+    error: `Feed returned HTML (${failureClass}): ${reason}`,
+  };
+}
+
+async function markHtmlFeedRefreshFailed(
+  database: FeedIngestDatabase,
+  feedId: string,
+  error: string,
+  failureClass: HtmlFeedFailureClass,
+): Promise<FeedRefreshResult> {
+  const now = new Date();
+  await database
+    .update(feeds)
+    .set({
+      refreshStatus: "failed",
+      lastRefreshFailedAt: now,
+      lastRefreshError: error,
+      lastRefreshCompletedAt: now,
+      nextRefreshAt: new Date(now.getTime() + PERMANENT_FAILURE_BACKOFF_MS),
+    })
+    .where(eq(feeds.id, feedId));
+
+  return {
+    ok: false,
+    itemCount: 0,
+    error,
+    failureClass,
+    permanent: true,
+  };
+}
+
+async function fetchRefreshDocument(
+  url: string,
+  etag: string | null,
+  lastModified: string | null,
+  options?: { hostRateLimiter?: HostRateLimiter },
+): Promise<FetchFeedDocumentResult> {
+  if (options?.hostRateLimiter) {
+    return await options.hostRateLimiter.run(url, () => fetchFeedDocument(url, etag, lastModified));
+  }
+  return await fetchFeedDocument(url, etag, lastModified);
+}
+
+async function resolveHtmlRefreshDocument(input: {
+  feedId: string;
+  fetched: FetchedFeedDocument;
+  fetchDocument: (
+    url: string,
+    etag: string | null,
+    lastModified: string | null,
+  ) => Promise<FetchFeedDocumentResult>;
+}): Promise<ResolvedRefreshDocument> {
+  const initialFailureClass = classifyHtmlFeedFailure(input.fetched.body, input.fetched.finalUrl);
+  const discoveredUrl = discoverFeedUrlFromHtml(input.fetched.body, input.fetched.finalUrl);
+  if (!discoveredUrl) {
+    return htmlFeedFailure(initialFailureClass, "no feed alternate found");
+  }
+
+  const discoveredFetched = await input.fetchDocument(discoveredUrl, null, null);
+  if (!discoveredFetched.ok) {
+    return htmlFeedFailure(
+      initialFailureClass,
+      `discovered alternate fetch failed: ${discoveredFetched.error}`,
+    );
+  }
+
+  if (discoveredFetched.notModified) {
+    return htmlFeedFailure(initialFailureClass, "discovered alternate returned 304 Not Modified");
+  }
+
+  try {
+    return {
+      ok: true,
+      fetched: discoveredFetched,
+      parsed: parseFeedDocument(discoveredFetched.body, input.feedId, discoveredFetched.finalUrl),
+      discoveredFromUrl: input.fetched.finalUrl,
+      discoveryProvenance: SCHEDULED_HTML_AUTODISCOVERY_PROVENANCE,
+    };
+  } catch (error) {
+    const failureClass =
+      isHtmlParseError(error) || fetchedDocumentIsHtml(discoveredFetched)
+        ? classifyHtmlFeedFailure(discoveredFetched.body, discoveredFetched.finalUrl)
+        : initialFailureClass;
+    return htmlFeedFailure(failureClass, "discovered alternate was not a supported feed");
+  }
+}
+
+async function resolveRefreshDocument(input: {
+  feedId: string;
+  fetched: FetchedFeedDocument;
+  fetchDocument: (
+    url: string,
+    etag: string | null,
+    lastModified: string | null,
+  ) => Promise<FetchFeedDocumentResult>;
+}): Promise<ResolvedRefreshDocument> {
+  if (fetchedDocumentIsHtml(input.fetched)) {
+    return await resolveHtmlRefreshDocument(input);
+  }
+
+  try {
+    return {
+      ok: true,
+      fetched: input.fetched,
+      parsed: parseFeedDocument(input.fetched.body, input.feedId, input.fetched.finalUrl),
+      discoveredFromUrl: null,
+      discoveryProvenance: null,
+    };
+  } catch (error) {
+    if (!isHtmlParseError(error)) {
+      throw error;
+    }
+    return await resolveHtmlRefreshDocument(input);
+  }
+}
+
 function shouldResolveFavicon({
   currentUrl,
   currentSource,
@@ -92,17 +312,24 @@ function shouldResolveFavicon({
 function classifyFeedLevelCategories(input: {
   feed: { url: string; link: string | null; sourceKind: string | null };
   parsed: ParsedFeedDocument;
-}): InferredCategoryLabel[] {
+}): { categories: InferredCategoryLabel[]; suppressedFallback: boolean } {
   if (canonicalizeCategoryLabels(input.parsed.metadata.categoryLabels).length > 0) {
-    return [];
+    return { categories: [], suppressedFallback: false };
   }
-  return classifyFeedCategories({
+  const classificationInput = {
     feedTitle: input.parsed.metadata.title,
     feedDescription: input.parsed.metadata.description,
     feedUrl: input.parsed.metadata.canonicalUrl || input.feed.url,
     feedSiteUrl: input.parsed.metadata.link ?? input.feed.link,
     sourceKind: input.feed.sourceKind,
-  }).categories;
+  };
+  if (shouldSuppressClassifierFeedFallback(classificationInput)) {
+    return { categories: [], suppressedFallback: true };
+  }
+  return {
+    categories: classifyFeedCategories(classificationInput).categories,
+    suppressedFallback: false,
+  };
 }
 
 /**
@@ -149,6 +376,26 @@ function classifyItemLevelCategories(input: {
 
     return { ...item, inferredCategoryLabels };
   });
+}
+
+function summarizeItemCategoryStats(items: ParsedFeedItem[]): {
+  itemClassifierLabels: number;
+  itemClassifierAbstentions: number;
+} {
+  return items.reduce(
+    (stats, item) => {
+      const inferredLabelCount = item.inferredCategoryLabels?.length ?? 0;
+      stats.itemClassifierLabels += inferredLabelCount;
+      if (
+        canonicalizeCategoryLabels(item.categoryLabels).length === 0 &&
+        inferredLabelCount === 0
+      ) {
+        stats.itemClassifierAbstentions += 1;
+      }
+      return stats;
+    },
+    { itemClassifierLabels: 0, itemClassifierAbstentions: 0 },
+  );
 }
 
 async function tryResolveFaviconMetadata(
@@ -216,6 +463,11 @@ export async function runFeedRefresh(
         id: feeds.id,
         url: feeds.url,
         link: feeds.link,
+        submittedUrl: feeds.submittedUrl,
+        siteUrl: feeds.siteUrl,
+        canonicalFeedUrl: feeds.canonicalFeedUrl,
+        discoveredFromUrl: feeds.discoveredFromUrl,
+        discoveryProvenance: feeds.discoveryProvenance,
         title: feeds.title,
         description: feeds.description,
         sourceKind: feeds.sourceKind,
@@ -234,11 +486,16 @@ export async function runFeedRefresh(
       return { ok: false, itemCount: 0, error: "Feed not found" };
     }
 
-    const fetched = options?.hostRateLimiter
-      ? await options.hostRateLimiter.run(feed.url, () =>
-          fetchFeedDocument(feed.url, feed.etag, feed.lastModified),
-        )
-      : await fetchFeedDocument(feed.url, feed.etag, feed.lastModified);
+    const fetchDocument = (
+      url: string,
+      etag: string | null,
+      lastModified: string | null,
+    ): Promise<FetchFeedDocumentResult> =>
+      fetchRefreshDocument(url, etag, lastModified, {
+        hostRateLimiter: options?.hostRateLimiter,
+      });
+
+    const fetched = await fetchDocument(feed.url, feed.etag, feed.lastModified);
     if (!fetched.ok) {
       const now = new Date();
       const permanent = isPermanentHttpStatus(fetched.httpStatus);
@@ -302,6 +559,9 @@ export async function runFeedRefresh(
           lastRefreshError: null,
           etag: fetched.etag ?? feed.etag,
           lastModified: fetched.lastModified ?? feed.lastModified,
+          submittedUrl: feed.submittedUrl ?? feed.url,
+          siteUrl: feed.siteUrl ?? feed.link,
+          canonicalFeedUrl: feed.canonicalFeedUrl ?? feed.url,
           nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000), // Next refresh in 1 hour
           ...(faviconPatch ?? {}),
         })
@@ -315,24 +575,65 @@ export async function runFeedRefresh(
       // Skipping this otherwise avoids re-running the classifier and rewriting
       // `provenance = "classifier"` rows on every poll of an unchanged, already-categorized feed.
       if (!(await hasExplicitFeedCategories(database, feed.id))) {
-        const feedCategories = classifyFeedCategories({
+        const classificationInput = {
           feedTitle: feed.title,
           feedDescription: feed.description,
           feedUrl: feed.url,
           feedSiteUrl: feed.link,
           sourceKind: feed.sourceKind,
-        }).categories;
+        };
+        const suppressedFeedClassifierFallback =
+          shouldSuppressClassifierFeedFallback(classificationInput);
+        const feedCategories = suppressedFeedClassifierFallback
+          ? []
+          : classifyFeedCategories(classificationInput).categories;
         await syncInferredFeedCategories(
           database,
           { feedId: feed.id, feedCategories, items: [] },
           now,
         );
+        return {
+          ok: true,
+          itemCount: 0,
+          notModified: true,
+          categoryStats: {
+            feedClassifierLabels: feedCategories.length,
+            itemClassifierLabels: 0,
+            itemClassifierAbstentions: 0,
+            suppressedFeedClassifierFallback,
+          },
+        };
       }
 
-      return { ok: true, itemCount: 0, notModified: true };
+      return {
+        ok: true,
+        itemCount: 0,
+        notModified: true,
+        categoryStats: {
+          feedClassifierLabels: 0,
+          itemClassifierLabels: 0,
+          itemClassifierAbstentions: 0,
+          suppressedFeedClassifierFallback: false,
+        },
+      };
     }
 
-    const parsed = parseFeedDocument(fetched.body, feed.id, fetched.finalUrl);
+    const resolved = await resolveRefreshDocument({
+      feedId: feed.id,
+      fetched,
+      fetchDocument,
+    });
+    if (!resolved.ok) {
+      return await markHtmlFeedRefreshFailed(
+        database,
+        feed.id,
+        resolved.error,
+        resolved.failureClass,
+      );
+    }
+
+    const parsed = resolved.parsed;
+    const fetchedForParse = resolved.fetched;
     const now = new Date();
     const deduped = new Map<string, ParsedFeedItem>();
     for (const item of parsed.items) {
@@ -340,10 +641,11 @@ export async function runFeedRefresh(
       deduped.set(item.canonicalUrl, item);
     }
     const feedForClassification = { url: feed.url, link: feed.link, sourceKind: feed.sourceKind };
-    const feedCategories = classifyFeedLevelCategories({
+    const feedClassification = classifyFeedLevelCategories({
       feed: feedForClassification,
       parsed: { metadata: parsed.metadata, items: [] },
     });
+    const feedCategories = feedClassification.categories;
     let items = Array.from(deduped.values());
     const enrichArticles = options?.enrichArticles ?? true;
     if (enrichArticles) {
@@ -381,6 +683,7 @@ export async function runFeedRefresh(
       parsed: { metadata: parsed.metadata },
       items,
     });
+    const itemCategoryStats = summarizeItemCategoryStats(items);
 
     const prevLink = feed.link ?? null;
     const nextLink = parsed.metadata.link ?? null;
@@ -407,6 +710,7 @@ export async function runFeedRefresh(
       }
     }
 
+    let sourceTagAssignments = 0;
     await database.transaction(async (tx) => {
       await tx
         .update(feeds)
@@ -415,13 +719,19 @@ export async function runFeedRefresh(
           title: parsed.metadata.title,
           description: parsed.metadata.description,
           link: parsed.metadata.link,
+          submittedUrl: feed.submittedUrl ?? feed.url,
+          siteUrl: parsed.metadata.link,
+          canonicalFeedUrl: parsed.metadata.canonicalUrl,
+          discoveredFromUrl: resolved.discoveredFromUrl ?? feed.discoveredFromUrl,
+          discoveryProvenance:
+            resolved.discoveryProvenance ?? feed.discoveryProvenance ?? "direct_feed_refresh",
           updatedAt: now,
           refreshStatus: "idle",
           lastRefreshCompletedAt: now,
           lastRefreshSucceededAt: now,
           lastRefreshError: null,
-          etag: fetched.etag,
-          lastModified: fetched.lastModified,
+          etag: fetchedForParse.etag,
+          lastModified: fetchedForParse.lastModified,
           nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000),
           ...(faviconPatch ?? {}),
         })
@@ -475,6 +785,8 @@ export async function runFeedRefresh(
           });
       }
 
+      sourceTagAssignments = await syncParsedFeedItemTags(tx, items, now);
+
       await syncParsedFeedCategories(
         tx,
         {
@@ -506,6 +818,13 @@ export async function runFeedRefresh(
       ok: true,
       itemCount: items.length,
       insertedCount: items.length, // Rough estimate as we don't have exact UPSERT counts right now
+      categoryStats: {
+        feedClassifierLabels: feedCategories.length,
+        itemClassifierLabels: itemCategoryStats.itemClassifierLabels,
+        itemClassifierAbstentions: itemCategoryStats.itemClassifierAbstentions,
+        suppressedFeedClassifierFallback: feedClassification.suppressedFallback,
+        sourceTagAssignments,
+      },
     };
   } catch (error) {
     let message = "Feed refresh failed";

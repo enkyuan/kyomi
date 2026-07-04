@@ -12,11 +12,16 @@ vi.mock("@modules/inbox/lib/articles/index", () => ({
 }));
 
 vi.mock("@kyomi/ui/toast", () => ({
+  anchoredToastManager: { add: vi.fn() },
   toastManager: { add: vi.fn(), update: vi.fn() },
 }));
 
 vi.mock("@hooks/use-pretext", () => ({
   usePretextLayout: () => ({ ref: { current: null }, fittedWidth: undefined, maxWidth: 640 }),
+}));
+
+vi.mock("@modules/feeds/components/item/source", () => ({
+  Source: ({ feedTitle }: { feedTitle: string }) => <span>{feedTitle}</span>,
 }));
 
 const baseItem: InboxItem = {
@@ -25,6 +30,7 @@ const baseItem: InboxItem = {
   summary: "A short summary for the inbox row.",
   link: "https://example.com/article",
   publishedAt: "2026-07-01T00:00:00.000Z",
+  feedId: "feed-1",
   feedFaviconUrl: null,
   feedUrl: "https://example.com/feed.xml",
   feedSiteUrl: "https://example.com",
@@ -95,7 +101,11 @@ describe("feed item category chips", () => {
 
   test("shows the saved chip alongside category chips", () => {
     renderItem({ ...baseItem, isSaved: true, categories: ["Engineering"] });
-    expect(screen.getByText("Saved")).toBeTruthy();
+    const savedChip = screen.getByText("Saved");
+    expect(savedChip).toBeTruthy();
+    expect(savedChip.className).toContain("bg-mizu/8");
+    expect(savedChip.className).toContain("text-mizu-foreground");
+    expect(savedChip.className).toContain("dark:bg-mizu/16");
     expect(screen.getByText("Engineering")).toBeTruthy();
   });
 

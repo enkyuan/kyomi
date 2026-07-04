@@ -9,6 +9,10 @@ import {
 
 const originalFetch = globalThis.fetch;
 
+function mockFetch(handler: () => Response | Promise<Response>): typeof fetch {
+  return handler as unknown as typeof fetch;
+}
+
 afterEach(() => {
   globalThis.fetch = originalFetch;
 });
@@ -53,6 +57,7 @@ function createFeedRefreshDb(
     ...(options.existingFeedCategoryAssignments ?? []),
   ];
   const feedItemCategoryAssignments: CapturedRow[] = [];
+  const feedItemTagAssignments: CapturedRow[] = [];
 
   const db = {
     updates,
@@ -61,6 +66,7 @@ function createFeedRefreshDb(
     feedItems,
     feedCategoryAssignments,
     feedItemCategoryAssignments,
+    feedItemTagAssignments,
     update: (table: unknown) => ({
       set: (patch: CapturedRow) => {
         updates.push({ table: tableName(table), patch });
@@ -92,6 +98,8 @@ function createFeedRefreshDb(
           feedCategoryAssignments.push(...rows);
         } else if (name === "feed_item_category_assignments") {
           feedItemCategoryAssignments.push(...rows);
+        } else if (name === "feed_item_tag_assignments") {
+          feedItemTagAssignments.push(...rows);
         }
         return {
           onConflictDoUpdate: () => promiseQuery([]),
@@ -112,7 +120,7 @@ function createFeedRefreshDb(
         }),
       }),
     }),
-    transaction: async (callback: (tx: typeof db) => Promise<void>) => callback(db),
+    transaction: async (callback: (tx: unknown) => Promise<void>) => callback(db),
   };
 
   return db;
@@ -128,7 +136,7 @@ function labelsForAssignments(assignments: CapturedRow[], categories: CapturedRo
 describe("runFeedRefresh category ingestion", () => {
   test("persists RSS channel and item categories mapped to canonical labels", async () => {
     const fake = createFeedRefreshDb();
-    globalThis.fetch = async () => {
+    globalThis.fetch = mockFetch(async () => {
       const response = new Response(
         `<?xml version="1.0"?>
         <rss version="2.0">
@@ -155,7 +163,7 @@ describe("runFeedRefresh category ingestion", () => {
       );
       Object.defineProperty(response, "url", { value: "https://example.com/feed.xml" });
       return response;
-    };
+    });
 
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
       enrichArticles: false,
@@ -166,6 +174,7 @@ describe("runFeedRefresh category ingestion", () => {
     // canonical labels already present and writes nothing) issues its own delete pass on
     // both tables.
     expect(fake.deletes).toEqual([
+      "feed_item_tag_assignments",
       "feed_category_assignments",
       "feed_item_category_assignments",
       "feed_category_assignments",
@@ -182,11 +191,16 @@ describe("runFeedRefresh category ingestion", () => {
     expect(labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories)).toEqual([
       "Software Engineering",
     ]);
+    expect(fake.feedItemTagAssignments.map((row) => row.label)).toEqual([
+      "JavaScript",
+      "Programming",
+    ]);
+    expect(result.categoryStats?.sourceTagAssignments).toBe(2);
   });
 
   test("does not insert a raw category row for an unmapped RSS label", async () => {
     const fake = createFeedRefreshDb();
-    globalThis.fetch = async () => {
+    globalThis.fetch = mockFetch(async () => {
       const response = new Response(
         `<?xml version="1.0"?>
         <rss version="2.0">
@@ -208,7 +222,7 @@ describe("runFeedRefresh category ingestion", () => {
       );
       Object.defineProperty(response, "url", { value: "https://example.com/feed.xml" });
       return response;
-    };
+    });
 
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
       enrichArticles: false,
@@ -217,6 +231,8 @@ describe("runFeedRefresh category ingestion", () => {
     expect(result.ok).toBe(true);
     expect(fake.categories.some((row) => row.provenance === "feed")).toBe(false);
     expect(fake.feedItemCategoryAssignments.some((row) => row.provenance === "feed")).toBe(false);
+    expect(fake.feedItemTagAssignments.map((row) => row.label)).toEqual(["#random-tag-2026"]);
+    expect(result.categoryStats?.sourceTagAssignments).toBe(1);
     // The feed has no explicit channel-level category at all, so the classifier fallback
     // still runs and fills in a canonical label from the feed title/description/domain.
     expect(fake.feedCategoryAssignments.some((row) => row.provenance === "classifier")).toBe(true);
@@ -271,7 +287,7 @@ describe("runFeedRefresh category ingestion", () => {
 
   test("classifies a feed with no RSS categories during refresh", async () => {
     const fake = createFeedRefreshDb();
-    globalThis.fetch = async () => {
+    globalThis.fetch = mockFetch(async () => {
       const response = new Response(
         `<?xml version="1.0"?>
         <rss version="2.0">
@@ -294,7 +310,7 @@ describe("runFeedRefresh category ingestion", () => {
         value: "https://medium.com/feed/airbnb-engineering",
       });
       return response;
-    };
+    });
 
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
       enrichArticles: false,
@@ -323,7 +339,7 @@ describe("runFeedRefresh category ingestion", () => {
         lastRefreshFailedAt: null,
       },
     });
-    globalThis.fetch = async () => {
+    globalThis.fetch = mockFetch(async () => {
       const response = new Response(
         `<?xml version="1.0"?>
         <rss version="2.0">
@@ -344,7 +360,7 @@ describe("runFeedRefresh category ingestion", () => {
       );
       Object.defineProperty(response, "url", { value: "https://news.ycombinator.com/rss" });
       return response;
-    };
+    });
 
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
       enrichArticles: false,
@@ -354,6 +370,67 @@ describe("runFeedRefresh category ingestion", () => {
     expect(labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories)).toContain(
       "Security & Privacy",
     );
+    expect(fake.feedCategoryAssignments.some((row) => row.provenance === "classifier")).toBe(false);
+    expect(result.categoryStats).toMatchObject({
+      feedClassifierLabels: 0,
+      itemClassifierLabels: 1,
+      itemClassifierAbstentions: 0,
+      suppressedFeedClassifierFallback: true,
+    });
+  });
+
+  test("suppresses classifier feed fallback for broad feeds when item signal is absent", async () => {
+    const fake = createFeedRefreshDb({
+      feed: {
+        id: "feed-1",
+        url: "https://news.ycombinator.com/rss",
+        link: "https://news.ycombinator.com",
+        title: "Hacker News",
+        description: "Links for hackers",
+        faviconUrl: null,
+        faviconSource: null,
+        etag: null,
+        lastModified: null,
+        lastRefreshSucceededAt: null,
+        lastRefreshFailedAt: null,
+      },
+    });
+    globalThis.fetch = mockFetch(async () => {
+      const response = new Response(
+        `<?xml version="1.0"?>
+        <rss version="2.0">
+          <channel>
+            <title>Hacker News</title>
+            <link>https://news.ycombinator.com</link>
+            <description>Links for hackers</description>
+            <item>
+              <title>Launch notes</title>
+              <link>https://example.com/launch-notes</link>
+              <guid>launch-notes</guid>
+              <description>Comments and discussion.</description>
+              <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+            </item>
+          </channel>
+        </rss>`,
+        { status: 200, headers: { "content-type": "application/rss+xml" } },
+      );
+      Object.defineProperty(response, "url", { value: "https://news.ycombinator.com/rss" });
+      return response;
+    });
+
+    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
+      enrichArticles: false,
+    });
+
+    expect(result.ok).toBe(true);
+    expect(fake.feedCategoryAssignments.some((row) => row.provenance === "classifier")).toBe(false);
+    expect(fake.feedItemCategoryAssignments).toHaveLength(0);
+    expect(result.categoryStats).toMatchObject({
+      feedClassifierLabels: 0,
+      itemClassifierLabels: 0,
+      itemClassifierAbstentions: 1,
+      suppressedFeedClassifierFallback: true,
+    });
   });
 
   test("classifies item-level categories for non-allowlisted feeds", async () => {
@@ -372,7 +449,7 @@ describe("runFeedRefresh category ingestion", () => {
         lastRefreshFailedAt: null,
       },
     });
-    globalThis.fetch = async () => {
+    globalThis.fetch = mockFetch(async () => {
       const response = new Response(
         `<?xml version="1.0"?>
         <rss version="2.0">
@@ -400,7 +477,7 @@ describe("runFeedRefresh category ingestion", () => {
       );
       Object.defineProperty(response, "url", { value: "https://example.com/feed.xml" });
       return response;
-    };
+    });
 
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
       enrichArticles: false,
@@ -431,7 +508,7 @@ describe("runFeedRefresh category ingestion", () => {
         lastRefreshFailedAt: null,
       },
     });
-    globalThis.fetch = async () => new Response(null, { status: 304 });
+    globalThis.fetch = mockFetch(() => new Response(null, { status: 304 }));
 
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
       enrichArticles: false,
@@ -441,6 +518,46 @@ describe("runFeedRefresh category ingestion", () => {
     expect(result.notModified).toBe(true);
     expect(fake.feedItemCategoryAssignments).toHaveLength(0);
     expect(fake.feedCategoryAssignments.some((row) => row.provenance === "classifier")).toBe(true);
+    expect(result.categoryStats).toMatchObject({
+      feedClassifierLabels: 2,
+      itemClassifierLabels: 0,
+      itemClassifierAbstentions: 0,
+      suppressedFeedClassifierFallback: false,
+    });
+  });
+
+  test("suppresses classifier feed fallback on a broad-feed 304 response", async () => {
+    const fake = createFeedRefreshDb({
+      feed: {
+        id: "feed-1",
+        url: "https://news.ycombinator.com/rss",
+        link: "https://news.ycombinator.com",
+        title: "Hacker News",
+        description: "Links for hackers",
+        faviconUrl: null,
+        faviconSource: null,
+        etag: "etag-1",
+        lastModified: null,
+        lastRefreshSucceededAt: null,
+        lastRefreshFailedAt: null,
+      },
+    });
+    globalThis.fetch = mockFetch(() => new Response(null, { status: 304 }));
+
+    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
+      enrichArticles: false,
+    });
+
+    expect(result.ok).toBe(true);
+    expect(result.notModified).toBe(true);
+    expect(fake.feedCategoryAssignments).toHaveLength(0);
+    expect(fake.deletes).toContain("feed_category_assignments");
+    expect(result.categoryStats).toMatchObject({
+      feedClassifierLabels: 0,
+      itemClassifierLabels: 0,
+      itemClassifierAbstentions: 0,
+      suppressedFeedClassifierFallback: true,
+    });
   });
 
   test("skips classifier fallback on a 304 when the feed already has explicit categories", async () => {
@@ -462,7 +579,7 @@ describe("runFeedRefresh category ingestion", () => {
         { id: "assignment-1", feedId: "feed-1", categoryId: "category-1", provenance: "feed" },
       ],
     });
-    globalThis.fetch = async () => new Response(null, { status: 304 });
+    globalThis.fetch = mockFetch(() => new Response(null, { status: 304 }));
 
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
       enrichArticles: false,

@@ -1,10 +1,8 @@
 import { describe, expect, test } from "bun:test";
 import { PgDialect } from "drizzle-orm/pg-core";
 import { isCanonicalCategoryLabel } from "@kyomi/db";
-import {
-  feedCategoryLabelsSql,
-  toArticleListItemsForTest,
-} from "@modules/articles/read/list/service";
+import { feedCategoryLabelsSql } from "@modules/articles/read/category-labels";
+import { toArticleListItemsForTest } from "@modules/articles/read/list/service";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
 import { articleListItemSchema } from "@modules/articles/schemas";
 

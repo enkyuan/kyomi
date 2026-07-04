@@ -3,12 +3,13 @@
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { PreviewCard, PreviewCardPopup, PreviewCardTrigger } from "@kyomi/ui/preview-card";
 import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
+import type { InboxSearch } from "@/routes/inbox/-route-helpers";
 import { cn } from "@kyomi/ui/lib/utils";
 import { Link } from "@tanstack/react-router";
 import { m } from "motion/react";
 import type { CSSProperties } from "react";
 
-type SourceRowProps = {
+type SourceProps = {
   articleUrl: string;
   feedId?: string;
   feedFaviconUrl?: string | null;
@@ -25,7 +26,7 @@ type SourceRowProps = {
   sharedSourceLayoutId?: string;
 };
 
-export function SourceRow({
+export function Source({
   articleUrl,
   feedId,
   feedFaviconUrl,
@@ -40,7 +41,7 @@ export function SourceRow({
   enablePreview = true,
   layoutId,
   sharedSourceLayoutId,
-}: SourceRowProps) {
+}: SourceProps) {
   const sourceLabel = getFeedSourceLabel(articleUrl, feedTitle);
   const label = (
     <span
@@ -88,7 +89,7 @@ export function SourceRow({
       aria-label={`Open ${sourceLabel} feed`}
       className="flex min-w-0 flex-1 items-center gap-[inherit] rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       onClick={(event) => event.stopPropagation()}
-      search={(prev) => ({
+      search={(prev: InboxSearch) => ({
         ...prev,
         filter: "all" as const,
         feedId,

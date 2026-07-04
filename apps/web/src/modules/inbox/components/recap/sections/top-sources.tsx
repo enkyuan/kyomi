@@ -4,6 +4,7 @@ import { Link } from "@tanstack/react-router";
 import { AddFill, RightFill, Rss2Fill } from "@mingcute/react";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/button";
+import type { InboxSearch } from "@/routes/inbox/-route-helpers";
 import {
   FolderPickerButton,
   TOP_SOURCE_FOLDER_BUTTON_CLASS,
@@ -79,7 +80,7 @@ export function TopSources({
                   <Link
                     className="min-w-0 flex flex-1 gap-2.5 outline-none"
                     to="/inbox"
-                    search={(prev) => ({
+                    search={(prev: InboxSearch) => ({
                       ...prev,
                       filter: "all" as const,
                       feedId: feed.feedId,
