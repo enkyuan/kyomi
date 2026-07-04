@@ -5,7 +5,17 @@ import {
   canonicalWinsOnConflictSql,
   runFeedRefresh,
   syncInferredFeedCategories,
+  CLASSIFIER_TAXONOMY_VERSION,
+  KEYWORD_CLASSIFIER_METHOD,
+  KEYWORD_CLASSIFIER_MODEL_ID,
+  type ClassifierModelInfo,
 } from "@kyomi/worker";
+
+const KEYWORD_MODEL: ClassifierModelInfo = {
+  modelId: KEYWORD_CLASSIFIER_MODEL_ID,
+  taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+  classifierMethod: KEYWORD_CLASSIFIER_METHOD,
+};
 
 const originalFetch = globalThis.fetch;
 
@@ -253,6 +263,7 @@ describe("runFeedRefresh category ingestion", () => {
             inferredCategoryLabels: [{ label: "Security & Privacy", confidence: 0.8 }],
           },
         ],
+        model: KEYWORD_MODEL,
       },
       now,
     );
@@ -267,11 +278,13 @@ describe("runFeedRefresh category ingestion", () => {
     ]);
   });
 
-  test("stamps model_id and taxonomy_version on classifier assignment rows", async () => {
-    // The keyword classifier writes provenance fields (modelId, taxonomyVersion) so a
-    // future re-classify pass can pick out stale rows. Locking in the expected values here
-    // is the guard against a future refactor accidentally dropping the stamps and leaving
-    // the DB unable to tell keyword-classifier rows from embedding-classifier rows.
+  test("stamps model_id, taxonomy_version, and classifier_method on classifier assignment rows", async () => {
+    // The keyword classifier writes provenance fields (modelId, taxonomyVersion,
+    // classifierMethod) so a future re-classify pass can pick out stale rows, and so the read
+    // path can rank embedding rows above keyword rows without parsing modelId. Locking in the
+    // expected values here is the guard against a future refactor accidentally dropping the
+    // stamps and leaving the DB unable to tell keyword-classifier rows from
+    // embedding-classifier rows.
     const fake = createFeedRefreshDb();
     const now = new Date("2026-07-04T00:00:00.000Z");
 
@@ -286,15 +299,26 @@ describe("runFeedRefresh category ingestion", () => {
             inferredCategoryLabels: [{ label: "Security & Privacy", confidence: 0.8 }],
           },
         ],
+        model: KEYWORD_MODEL,
       },
       now,
     );
 
     expect(fake.feedCategoryAssignments).toMatchObject([
-      { provenance: "classifier", modelId: "keyword-v1", taxonomyVersion: "v1" },
+      {
+        provenance: "classifier",
+        modelId: "keyword-v1",
+        taxonomyVersion: "v1",
+        classifierMethod: "keyword",
+      },
     ]);
     expect(fake.feedItemCategoryAssignments).toMatchObject([
-      { provenance: "classifier", modelId: "keyword-v1", taxonomyVersion: "v1" },
+      {
+        provenance: "classifier",
+        modelId: "keyword-v1",
+        taxonomyVersion: "v1",
+        classifierMethod: "keyword",
+      },
     ]);
   });
 
@@ -308,6 +332,7 @@ describe("runFeedRefresh category ingestion", () => {
         feedId: "feed-1",
         feedCategories: [{ label: "Miscellaneous", confidence: 0.1 }],
         items: [{ id: "item-1", inferredCategoryLabels: [] }],
+        model: KEYWORD_MODEL,
       },
       now,
     );
