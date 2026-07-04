@@ -4,6 +4,7 @@ import { render } from "@testing-library/react";
 import type { ReactNode, Ref } from "react";
 import { describe, expect, test, vi } from "vitest";
 import { List } from "@modules/inbox/components/list";
+import type { ArticleDetailDto } from "@lib/schemas";
 
 vi.mock("@hooks/use-viewport", () => ({
   useViewport: () => ({
@@ -75,5 +76,37 @@ describe("List scrollbar surface", () => {
     expect(scrollbar?.getAttribute("data-slot")).toBe("browser-scrollbar");
     expect(scrollbar?.className).toContain("!fixed");
     expect(scrollbar?.className).toContain("!right-0");
+  });
+});
+
+describe("List scoped article header", () => {
+  test("does not render article action toolbar while the article surface is skeleton loading", () => {
+    const selectedArticle = { id: "article-1", title: "Loading article" } as ArticleDetailDto;
+    const { container } = render(
+      <List
+        inboxItems={[]}
+        filter="my-feed"
+        display={{ showFavicons: true }}
+        density="comfortable"
+        fontSizePx={16}
+        timestampDisplay="relative"
+        timestampHourCycle="12h"
+        isArticleScoped
+        selectedArticle={selectedArticle}
+        pagination={{
+          isLoading: true,
+          isRefreshing: false,
+          hasNextPage: false,
+          isFetchingNextPage: false,
+          fetchNextPage: vi.fn(),
+        }}
+        onBackToList={vi.fn()}
+        onFilterChange={vi.fn()}
+        onSelectItem={vi.fn()}
+        onSortChange={vi.fn()}
+      />,
+    );
+
+    expect(container.querySelector('[data-slot="reader-toolbar"]')).toBeNull();
   });
 });
