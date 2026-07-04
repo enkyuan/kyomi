@@ -36,6 +36,10 @@ async function handleWorkerJob(
         {
           enrichArticles: shouldEnrichInsertedItems(job.payload),
           hostRateLimiter,
+          // Best-effort embedding classification runs alongside the keyword classifier when
+          // a key is configured; absent means refresh proceeds with the keyword classifier
+          // only, same fallback shape as MEILI_URL above.
+          embeddingClassifier: env.VOYAGE_API_KEY ? { apiKey: env.VOYAGE_API_KEY } : undefined,
         },
       );
       const durationMs = Date.now() - startTime;
