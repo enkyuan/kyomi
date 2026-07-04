@@ -2,6 +2,7 @@ import { inArray, sql } from "drizzle-orm";
 import type Redis from "ioredis";
 import { feeds } from "@kyomi/db";
 import { db } from "@adapters/db/client";
+import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/schema-guard";
 import { logger } from "@adapters/logger";
 import { publishJob } from "@adapters/queue/publish-job";
 import { env } from "@config/env";
@@ -235,6 +236,10 @@ export async function runFeedRefreshSchedulerLoop(
   redis: Redis,
   signal?: AbortSignal,
 ): Promise<void> {
+  if (env.NODE_ENV === "development") {
+    await assertDevelopmentDatabaseSchemaReady();
+  }
+
   const options = normalizeSchedulerOptions({
     tickMs: 60_000,
   });

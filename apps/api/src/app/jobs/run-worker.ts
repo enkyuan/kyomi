@@ -1,5 +1,6 @@
 import { env } from "@config/env";
 import { db } from "@adapters/db/client";
+import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/schema-guard";
 import { logger } from "@adapters/logger";
 import { closeRedis, getRedis } from "@adapters/redis";
 import {
@@ -136,6 +137,10 @@ async function logWorkerJobError(error: unknown, message: JobMessage | null): Pr
 }
 
 export async function runWorkerLoop(signal?: AbortSignal): Promise<void> {
+  if (env.NODE_ENV === "development") {
+    await assertDevelopmentDatabaseSchemaReady();
+  }
+
   const redis = getRedis();
   const consumer = `api-worker-${process.pid}`;
   const hostRateLimiter = createHostRateLimiter({
