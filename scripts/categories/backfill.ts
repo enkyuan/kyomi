@@ -16,8 +16,21 @@ import {
   classifyFeedItemCategories,
   shouldSuppressClassifierFeedFallback,
   syncInferredFeedCategories,
+  CLASSIFIER_TAXONOMY_VERSION,
+  KEYWORD_CLASSIFIER_METHOD,
+  KEYWORD_CLASSIFIER_MODEL_ID,
+  type ClassifierModelInfo,
   type InferredCategoryLabel,
 } from "../../packages/worker/src";
+
+// The backfill script only re-runs the deterministic keyword classifier; it does not call
+// the embedding classifier (that requires a live API key and is meant for the online
+// refresh path, not a bulk offline pass).
+const BACKFILL_CLASSIFIER_MODEL: ClassifierModelInfo = {
+  modelId: KEYWORD_CLASSIFIER_MODEL_ID,
+  taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+  classifierMethod: KEYWORD_CLASSIFIER_METHOD,
+};
 
 export type BackfillArgs = {
   apply: boolean;
@@ -449,6 +462,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
             feedId: feed.id,
             feedCategories: [],
             items: inferredItems,
+            model: BACKFILL_CLASSIFIER_MODEL,
           },
           now,
         );
@@ -471,6 +485,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
           feedId: feed.id,
           feedCategories,
           items: [],
+          model: BACKFILL_CLASSIFIER_MODEL,
         },
         now,
       );

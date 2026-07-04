@@ -92,6 +92,22 @@ export const categories = pgTable(
  * re-classify pass (adding a new classifier, bumping the taxonomy) can pick out stale rows
  * without diffing full row contents. They are NULL for explicit-source rows
  * (feed/catalog/user/ai/connector) where "which model produced this" has no meaning.
+ *
+ * `classifier_method` distinguishes which classifier family produced a `provenance =
+ * "classifier"` row ("embedding" | "keyword"), independent of the specific `model_id`. The
+ * read path ranks embedding rows above keyword rows for the same category slot; encoding the
+ * family in its own column keeps that ranking a plain CASE expression instead of a `model_id`
+ * string-prefix match that would need updating every time a new model name ships. NULL for
+ * explicit-source rows, same as `model_id`.
+ *
+ * Uniqueness is split into two PARTIAL indexes rather than one index over all four columns:
+ * Postgres treats every NULL as distinct from every other NULL in a unique index, so a single
+ * `(feed_id, category_id, provenance, model_id)` index would never actually catch duplicate
+ * explicit-source rows (they all have `model_id = NULL`) — every re-parse of the same feed
+ * would insert a new row instead of updating the existing one. The `model_id IS NULL` index
+ * preserves the original 3-column dedupe behavior for explicit rows; the `model_id IS NOT
+ * NULL` index lets multiple classifiers (keyword, embedding) each hold one row per
+ * (feed, category) without colliding with each other.
  */
 export const feedCategoryAssignments = pgTable(
   "feed_category_assignments",
@@ -107,15 +123,17 @@ export const feedCategoryAssignments = pgTable(
     confidence: doublePrecision("confidence"),
     modelId: text("model_id"),
     taxonomyVersion: text("taxonomy_version"),
+    classifierMethod: text("classifier_method"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
-    uniqueIndex("feed_category_assignments_feed_category_provenance_unique").on(
-      table.feedId,
-      table.categoryId,
-      table.provenance,
-    ),
+    uniqueIndex("feed_category_assignments_feed_category_provenance_unique")
+      .on(table.feedId, table.categoryId, table.provenance)
+      .where(sql`model_id IS NULL`),
+    uniqueIndex("feed_category_assignments_feed_category_provenance_model_unique")
+      .on(table.feedId, table.categoryId, table.provenance, table.modelId)
+      .where(sql`model_id IS NOT NULL`),
     index("feed_category_assignments_category_id_idx").on(table.categoryId),
   ],
 );
@@ -123,7 +141,7 @@ export const feedCategoryAssignments = pgTable(
 /**
  * Article-level category assignment, used when a feed item has stronger category metadata
  * than its parent feed. See `feedCategoryAssignments` for the meaning of `model_id` /
- * `taxonomy_version`.
+ * `taxonomy_version` / `classifier_method` and the split-partial-index rationale.
  */
 export const feedItemCategoryAssignments = pgTable(
   "feed_item_category_assignments",
@@ -139,15 +157,17 @@ export const feedItemCategoryAssignments = pgTable(
     confidence: doublePrecision("confidence"),
     modelId: text("model_id"),
     taxonomyVersion: text("taxonomy_version"),
+    classifierMethod: text("classifier_method"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
-    uniqueIndex("feed_item_category_assignments_item_category_provenance_unique").on(
-      table.feedItemId,
-      table.categoryId,
-      table.provenance,
-    ),
+    uniqueIndex("feed_item_category_assignments_item_category_provenance_unique")
+      .on(table.feedItemId, table.categoryId, table.provenance)
+      .where(sql`model_id IS NULL`),
+    uniqueIndex("feed_item_category_assignments_item_category_provenance_model_unique")
+      .on(table.feedItemId, table.categoryId, table.provenance, table.modelId)
+      .where(sql`model_id IS NOT NULL`),
     index("feed_item_category_assignments_category_id_idx").on(table.categoryId),
   ],
 );

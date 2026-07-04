@@ -7,11 +7,7 @@ import {
   feedItemCategoryAssignments,
   toCategorySlug,
 } from "@kyomi/db";
-import {
-  CATEGORY_CLASSIFIER_PROVENANCE,
-  CLASSIFIER_TAXONOMY_VERSION,
-  KEYWORD_CLASSIFIER_MODEL_ID,
-} from "./taxonomy";
+import { CATEGORY_CLASSIFIER_PROVENANCE } from "./taxonomy";
 import type { InferredCategoryLabel } from "./classifier";
 import type { FeedIngestDatabase, ParsedFeedItem } from "./types";
 
@@ -217,6 +213,13 @@ export async function syncParsedFeedCategories(
           feedCategoryAssignments.categoryId,
           feedCategoryAssignments.provenance,
         ],
+        // Must match the partial unique index's predicate exactly (`model_id IS NULL`) —
+        // explicit rows never set model_id, so this targets the "explicit rows" partial
+        // index rather than the "classifier rows" one that also includes model_id in its
+        // column list. Omitting this throws "no unique or exclusion constraint matching
+        // the ON CONFLICT specification" since a bare 3-column target no longer identifies
+        // either partial index unambiguously.
+        targetWhere: sql`model_id IS NULL`,
         set: { updatedAt: now },
       });
   }
@@ -248,15 +251,24 @@ export async function syncParsedFeedCategories(
           feedItemCategoryAssignments.categoryId,
           feedItemCategoryAssignments.provenance,
         ],
+        targetWhere: sql`model_id IS NULL`,
         set: { updatedAt: now },
       });
   }
 }
 
+export type ClassifierModelInfo = {
+  modelId: string;
+  taxonomyVersion: string;
+  classifierMethod: string;
+};
+
 /**
- * Syncs deterministic classifier fallback categories. Only rewrites
- * `provenance = "classifier"` rows, so it never deletes or overwrites explicit
- * `feed`/`catalog` assignments.
+ * Syncs deterministic classifier fallback categories for one classifier model. Only rewrites
+ * `provenance = "classifier"` rows stamped with the given `modelId`, so it never deletes or
+ * overwrites explicit `feed`/`catalog` assignments, nor rows written by a different
+ * classifier model (e.g. running the embedding classifier never deletes the keyword
+ * classifier's rows, and vice versa) — that's what lets both coexist for side-by-side eval.
  */
 export async function syncInferredFeedCategories(
   database: CategoryAssignmentDatabase,
@@ -264,6 +276,7 @@ export async function syncInferredFeedCategories(
     feedId: string;
     feedCategories: InferredCategoryLabel[];
     items: InferredItemCategoryInput[];
+    model: ClassifierModelInfo;
   },
   now: Date,
 ): Promise<void> {
@@ -273,6 +286,7 @@ export async function syncInferredFeedCategories(
       and(
         eq(feedCategoryAssignments.feedId, input.feedId),
         eq(feedCategoryAssignments.provenance, CATEGORY_CLASSIFIER_PROVENANCE),
+        eq(feedCategoryAssignments.modelId, input.model.modelId),
       ),
     );
 
@@ -284,6 +298,7 @@ export async function syncInferredFeedCategories(
         and(
           inArray(feedItemCategoryAssignments.feedItemId, itemIds),
           eq(feedItemCategoryAssignments.provenance, CATEGORY_CLASSIFIER_PROVENANCE),
+          eq(feedItemCategoryAssignments.modelId, input.model.modelId),
         ),
       );
   }
@@ -314,8 +329,9 @@ export async function syncInferredFeedCategories(
             categoryId,
             provenance: CATEGORY_CLASSIFIER_PROVENANCE,
             confidence: record.confidence,
-            modelId: KEYWORD_CLASSIFIER_MODEL_ID,
-            taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+            modelId: input.model.modelId,
+            taxonomyVersion: input.model.taxonomyVersion,
+            classifierMethod: input.model.classifierMethod,
             createdAt: now,
             updatedAt: now,
           },
@@ -331,11 +347,15 @@ export async function syncInferredFeedCategories(
           feedCategoryAssignments.feedId,
           feedCategoryAssignments.categoryId,
           feedCategoryAssignments.provenance,
+          feedCategoryAssignments.modelId,
         ],
+        // Matches the "classifier rows" partial index's predicate — see the targetWhere
+        // comment in syncParsedFeedCategories above for why this must be explicit.
+        targetWhere: sql`model_id IS NOT NULL`,
         set: {
           confidence: sql`excluded.confidence`,
-          modelId: sql`excluded.model_id`,
           taxonomyVersion: sql`excluded.taxonomy_version`,
+          classifierMethod: sql`excluded.classifier_method`,
           updatedAt: now,
         },
       });
@@ -352,8 +372,9 @@ export async function syncInferredFeedCategories(
               categoryId,
               provenance: CATEGORY_CLASSIFIER_PROVENANCE,
               confidence: record.confidence,
-              modelId: KEYWORD_CLASSIFIER_MODEL_ID,
-              taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+              modelId: input.model.modelId,
+              taxonomyVersion: input.model.taxonomyVersion,
+              classifierMethod: input.model.classifierMethod,
               createdAt: now,
               updatedAt: now,
             },
@@ -370,11 +391,13 @@ export async function syncInferredFeedCategories(
           feedItemCategoryAssignments.feedItemId,
           feedItemCategoryAssignments.categoryId,
           feedItemCategoryAssignments.provenance,
+          feedItemCategoryAssignments.modelId,
         ],
+        targetWhere: sql`model_id IS NOT NULL`,
         set: {
           confidence: sql`excluded.confidence`,
-          modelId: sql`excluded.model_id`,
           taxonomyVersion: sql`excluded.taxonomy_version`,
+          classifierMethod: sql`excluded.classifier_method`,
           updatedAt: now,
         },
       });

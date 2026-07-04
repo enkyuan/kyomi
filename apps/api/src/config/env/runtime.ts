@@ -123,6 +123,12 @@ export const env = createEnv({
     FEED_ADMIN_USER_IDS: z.string().optional(),
     /** Shared secret accepted in `x-feed-admin-secret` as a backup admin control plane. */
     FEED_ADMIN_SHARED_SECRET: z.string().min(1).optional(),
+    /**
+     * Voyage AI API key for the embedding-based article classifier. Leave unset to run feed
+     * refresh with only the deterministic keyword classifier — no FEATURE_* flag gates this,
+     * matching the MEILI_* pattern of "absent means fall back," not "absent means error."
+     */
+    VOYAGE_API_KEY: z.string().min(1).optional(),
 
     // Platform-expansion feature flags. All default false; a flag's credentials are only
     // required when it is enabled (see createFinalSchema below).
@@ -188,6 +194,7 @@ export const env = createEnv({
     FEED_FETCH_HOST_RETRY_DELAY_MS: process.env.FEED_FETCH_HOST_RETRY_DELAY_MS,
     FEED_ADMIN_USER_IDS: process.env.FEED_ADMIN_USER_IDS,
     FEED_ADMIN_SHARED_SECRET: process.env.FEED_ADMIN_SHARED_SECRET,
+    VOYAGE_API_KEY: process.env.VOYAGE_API_KEY,
     FEATURE_GOOGLE_OAUTH: process.env.FEATURE_GOOGLE_OAUTH,
     FEATURE_ONBOARDING: process.env.FEATURE_ONBOARDING,
     FEATURE_SOURCE_YOUTUBE: process.env.FEATURE_SOURCE_YOUTUBE,
