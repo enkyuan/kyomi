@@ -34,6 +34,7 @@ export {
   classifyFeedCategories,
   classifyFeedItemCategories,
   isMixedFeedHost,
+  MAX_CLASSIFIER_LABELS,
   canonicalWinsOnConflictSql,
   syncInferredFeedCategories,
   type CategoryClassification,

@@ -14,7 +14,6 @@ import {
   canonicalWinsOnConflictSql,
   classifyFeedCategories,
   classifyFeedItemCategories,
-  isMixedFeedHost,
   syncInferredFeedCategories,
   type InferredCategoryLabel,
 } from "../../packages/worker/src";
@@ -22,7 +21,7 @@ import {
 export type BackfillArgs = {
   apply: boolean;
   limit: number;
-  itemLimit: number;
+  itemLimit: number | null;
   feedId: string | null;
 };
 
@@ -54,11 +53,25 @@ function positiveInt(value: string | null, fallback: number): number {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
 
+function optionalPositiveInt(value: string | null): number | null {
+  if (!value) {
+    return null;
+  }
+  const parsed = Number.parseInt(value, 10);
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    // Unlike a missing flag (which intentionally means "no limit"), a present-but-invalid
+    // value must not silently fall back to the same "no limit" behavior — that would make
+    // a typo indistinguishable from an explicit unbounded --apply run.
+    throw new Error(`Invalid --item-limit value: ${value}`);
+  }
+  return parsed;
+}
+
 export function parseBackfillArgs(argv: string[]): BackfillArgs {
   return {
     apply: argv.includes("--apply"),
     limit: positiveInt(valueAfter(argv, "--limit"), 500),
-    itemLimit: positiveInt(valueAfter(argv, "--item-limit"), 50),
+    itemLimit: optionalPositiveInt(valueAfter(argv, "--item-limit")),
     feedId: valueAfter(argv, "--feed-id"),
   };
 }
@@ -95,19 +108,23 @@ function loadFeeds(args: BackfillArgs) {
     .limit(args.limit);
 }
 
-function loadRecentItems(feedId: string, limit: number) {
+const ITEM_BACKFILL_BATCH_SIZE = 500;
+
+function loadItemsPage(feedId: string, limit: number, offset: number) {
   return db
     .select({
       id: feedItems.id,
       title: feedItems.title,
       summary: feedItems.summary,
+      contentText: feedItems.contentText,
       link: feedItems.link,
       canonicalUrl: feedItems.canonicalUrl,
     })
     .from(feedItems)
     .where(eq(feedItems.feedId, feedId))
     .orderBy(desc(feedItems.publishedAt), desc(feedItems.id))
-    .limit(limit);
+    .limit(limit)
+    .offset(offset);
 }
 
 type AssignmentRewritePlan = {
@@ -288,6 +305,53 @@ async function normalizeExistingAssignments(
   };
 }
 
+export function nextItemBackfillBatchSize(input: {
+  itemLimit: number | null;
+  processed: number;
+}): number | null {
+  if (input.itemLimit === null) {
+    return ITEM_BACKFILL_BATCH_SIZE;
+  }
+  const remaining = input.itemLimit - input.processed;
+  if (remaining <= 0) {
+    return null;
+  }
+  return Math.min(ITEM_BACKFILL_BATCH_SIZE, remaining);
+}
+
+type BackfillFeedRow = {
+  title: string;
+  description: string | null;
+  url: string;
+  link: string | null;
+  sourceKind: string | null;
+};
+
+type BackfillItemRow = {
+  title: string;
+  summary: string | null;
+  contentText: string | null;
+  link: string | null;
+  canonicalUrl: string;
+};
+
+export function inferBackfillItemCategories(
+  feed: BackfillFeedRow,
+  item: BackfillItemRow,
+): InferredCategoryLabel[] {
+  return classifyFeedItemCategories({
+    feedTitle: feed.title,
+    feedDescription: feed.description,
+    feedUrl: feed.url,
+    feedSiteUrl: feed.link,
+    sourceKind: feed.sourceKind,
+    itemTitle: item.title,
+    itemSummary: item.summary,
+    itemContentText: item.contentText,
+    itemUrl: item.link || item.canonicalUrl,
+  }).categories;
+}
+
 export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillStats> {
   const stats: BackfillStats = {
     apply: args.apply,
@@ -321,35 +385,65 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
       stats.feedsWithClassifierCategories += 1;
     }
 
-    const mixedFeed = isMixedFeedHost(feed.url) || isMixedFeedHost(feed.link);
-    const items = await loadRecentItems(feed.id, args.itemLimit);
-    const inferredItems = items.map((item) => {
-      stats.itemsScanned += 1;
-      const inferredCategoryLabels: InferredCategoryLabel[] = mixedFeed
-        ? classifyFeedItemCategories({
-            feedTitle: feed.title,
-            feedDescription: feed.description,
-            feedUrl: feed.url,
-            feedSiteUrl: feed.link,
-            sourceKind: feed.sourceKind,
-            itemTitle: item.title,
-            itemSummary: item.summary,
-            itemUrl: item.link || item.canonicalUrl,
-          }).categories
-        : [];
-      if (inferredCategoryLabels.length > 0) {
-        stats.itemsWithClassifierCategories += 1;
+    let itemOffset = 0;
+    let remainingItems = args.itemLimit ?? Number.POSITIVE_INFINITY;
+
+    while (remainingItems > 0) {
+      const batchSize = nextItemBackfillBatchSize({
+        itemLimit: args.itemLimit,
+        processed: itemOffset,
+      });
+      if (batchSize === null) {
+        break;
       }
-      return { id: item.id, inferredCategoryLabels };
-    });
+      const items = await loadItemsPage(feed.id, batchSize, itemOffset);
+      if (items.length === 0) {
+        break;
+      }
+
+      const inferredItems = items.map((item) => {
+        stats.itemsScanned += 1;
+        const inferredCategoryLabels = inferBackfillItemCategories(feed, item);
+        if (inferredCategoryLabels.length > 0) {
+          stats.itemsWithClassifierCategories += 1;
+        }
+        return { id: item.id, inferredCategoryLabels };
+      });
+
+      if (args.apply) {
+        // syncInferredFeedCategories unconditionally deletes+reinserts the feed's
+        // classifier-provenance feed_category_assignments rows on every call, so passing
+        // the real feedCategories here would rewrite identical feed-level data once per
+        // page. Item-level deletes ARE correctly scoped to this page's item ids, so only
+        // the item sync needs to run per page; the feed-level sync happens once below.
+        await syncInferredFeedCategories(
+          db,
+          {
+            feedId: feed.id,
+            feedCategories: [],
+            items: inferredItems,
+          },
+          now,
+        );
+      }
+
+      itemOffset += items.length;
+      if (Number.isFinite(remainingItems)) {
+        remainingItems -= items.length;
+      }
+      if (items.length < batchSize) {
+        break;
+      }
+    }
 
     if (args.apply) {
+      // Single feed-level sync per feed, run last so no later per-page call can delete it.
       await syncInferredFeedCategories(
         db,
         {
           feedId: feed.id,
           feedCategories,
-          items: inferredItems,
+          items: [],
         },
         now,
       );

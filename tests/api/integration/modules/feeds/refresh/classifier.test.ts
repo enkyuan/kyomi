@@ -83,4 +83,66 @@ describe("feed category classifier", () => {
     expect(isMixedFeedHost("https://lobste.rs/rss")).toBe(true);
     expect(isMixedFeedHost("https://example.com/rss")).toBe(false);
   });
+
+  test("does not let parent feed metadata dilute item classification", () => {
+    const result = classifyFeedItemCategories({
+      feedTitle: "AI & ML Daily",
+      feedDescription:
+        "Language model, transformer, embedding, agent, and artificial intelligence analysis.",
+      feedUrl: "https://example.com/rss",
+      feedSiteUrl: "https://example.com",
+      sourceKind: "rss",
+      itemTitle: "A practical guide to pasta dough and weeknight cooking",
+      itemSummary: "Chef notes on kitchen technique, recipe testing, and restaurant prep.",
+      itemUrl: "https://seriouseats.com/pasta-dough-guide",
+    });
+
+    const labels = result.categories.map((category) => category.label);
+    expect(labels).toContain("Food & Travel");
+    expect(labels).not.toContain("AI & ML");
+  });
+
+  test("uses enriched content text when RSS summary is thin", () => {
+    const result = classifyFeedItemCategories({
+      feedTitle: "Daily Links",
+      feedDescription: "A mixed collection of links.",
+      feedUrl: "https://example.com/rss",
+      feedSiteUrl: "https://example.com",
+      sourceKind: "rss",
+      itemTitle: "Release notes",
+      itemSummary: "Comments",
+      itemContentText:
+        "The new open weights language model uses transformer layers, embeddings, and agent training data.",
+      itemUrl: "https://huggingface.co/blog/open-model-release",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["AI & ML"]);
+  });
+
+  test("accepts a maxLabels override so callers can post-filter without losing candidates", () => {
+    const input = {
+      feedTitle: "Tech Blog",
+      feedDescription: "",
+      feedUrl: "https://example.com/rss",
+      feedSiteUrl: "https://example.com",
+      sourceKind: "rss",
+      itemTitle: "Technology security AI: startup builds machine learning cybersecurity platform",
+      itemSummary:
+        "The company uses artificial intelligence, neural networks, and embeddings for threat detection. A tech startup platform for enterprise apps and hardware gadgets.",
+      itemUrl: "https://example.com/article",
+    };
+
+    // With the default cap, only the top 2 scored categories are ever returned.
+    const defaultResult = classifyFeedItemCategories(input);
+    expect(defaultResult.categories).toHaveLength(2);
+
+    // A caller that will filter out one of those two (e.g. because it duplicates an
+    // explicit source label) needs to ask for more candidates up front, since truncation
+    // happens inside the classifier before the caller ever sees the list.
+    const expandedResult = classifyFeedItemCategories(input, 3);
+    expect(expandedResult.categories.length).toBeGreaterThan(defaultResult.categories.length);
+    expect(expandedResult.categories.map((category) => category.label)).toEqual(
+      expect.arrayContaining(defaultResult.categories.map((category) => category.label)),
+    );
+  });
 });

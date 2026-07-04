@@ -1,7 +1,11 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { getTableName, sql } from "drizzle-orm";
 import { PgDialect } from "drizzle-orm/pg-core";
-import { canonicalWinsOnConflictSql, runFeedRefresh, syncInferredFeedCategories } from "@kyomi/worker";
+import {
+  canonicalWinsOnConflictSql,
+  runFeedRefresh,
+  syncInferredFeedCategories,
+} from "@kyomi/worker";
 
 const originalFetch = globalThis.fetch;
 
@@ -45,7 +49,9 @@ function createFeedRefreshDb(
   const deletes: string[] = [];
   const categories: CapturedRow[] = [];
   const feedItems: CapturedRow[] = [];
-  const feedCategoryAssignments: CapturedRow[] = [...(options.existingFeedCategoryAssignments ?? [])];
+  const feedCategoryAssignments: CapturedRow[] = [
+    ...(options.existingFeedCategoryAssignments ?? []),
+  ];
   const feedItemCategoryAssignments: CapturedRow[] = [];
 
   const db = {
@@ -168,10 +174,7 @@ describe("runFeedRefresh category ingestion", () => {
     // Raw "JavaScript"/"Programming"/"Technology" source labels are canonicalized before
     // ever reaching the categories dictionary, so both map onto "Software Engineering" and
     // "Technology" stays as-is; no raw label is inserted as its own row.
-    expect(fake.categories.map((row) => row.label)).toEqual([
-      "Technology",
-      "Software Engineering",
-    ]);
+    expect(fake.categories.map((row) => row.label)).toEqual(["Technology", "Software Engineering"]);
     expect(fake.categories.every((row) => row.provenance === "feed")).toBe(true);
     expect(labelsForAssignments(fake.feedCategoryAssignments, fake.categories)).toEqual([
       "Technology",
@@ -350,6 +353,65 @@ describe("runFeedRefresh category ingestion", () => {
     expect(result.ok).toBe(true);
     expect(labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories)).toContain(
       "Security & Privacy",
+    );
+  });
+
+  test("classifies item-level categories for non-allowlisted feeds", async () => {
+    const fake = createFeedRefreshDb({
+      feed: {
+        id: "feed-1",
+        url: "https://example.com/feed.xml",
+        link: "https://example.com",
+        title: "Daily Links",
+        description: "A mixed collection of links from across the web.",
+        faviconUrl: null,
+        faviconSource: null,
+        etag: null,
+        lastModified: null,
+        lastRefreshSucceededAt: null,
+        lastRefreshFailedAt: null,
+      },
+    });
+    globalThis.fetch = async () => {
+      const response = new Response(
+        `<?xml version="1.0"?>
+        <rss version="2.0">
+          <channel>
+            <title>Daily Links</title>
+            <link>https://example.com</link>
+            <description>A mixed collection of links from across the web.</description>
+            <item>
+              <title>Open weights language model released</title>
+              <link>https://huggingface.co/blog/open-model-release</link>
+              <guid>ai-story</guid>
+              <description>The transformer model uses embeddings and agent training data.</description>
+              <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+            </item>
+            <item>
+              <title>Bitcoin market rally lifts crypto stocks</title>
+              <link>https://finance.yahoo.com/news/bitcoin-market-rally</link>
+              <guid>finance-story</guid>
+              <description>Investors watch the market, stock prices, and crypto trading volume.</description>
+              <pubDate>Wed, 01 Jul 2026 01:00:00 GMT</pubDate>
+            </item>
+          </channel>
+        </rss>`,
+        { status: 200, headers: { "content-type": "application/rss+xml" } },
+      );
+      Object.defineProperty(response, "url", { value: "https://example.com/feed.xml" });
+      return response;
+    };
+
+    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
+      enrichArticles: false,
+    });
+
+    expect(result.ok).toBe(true);
+    const itemLabels = labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories);
+    expect(itemLabels).toContain("AI & ML");
+    expect(itemLabels).toContain("Finance & Markets");
+    expect(fake.feedItemCategoryAssignments.every((row) => row.provenance === "classifier")).toBe(
+      true,
     );
   });
 

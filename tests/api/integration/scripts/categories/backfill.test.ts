@@ -1,12 +1,17 @@
 import { describe, expect, test } from "bun:test";
-import { parseBackfillArgs, summarizeBackfill } from "../../../../../scripts/categories/backfill";
+import {
+  inferBackfillItemCategories,
+  nextItemBackfillBatchSize,
+  parseBackfillArgs,
+  summarizeBackfill,
+} from "../../../../../scripts/categories/backfill";
 
 describe("category backfill script", () => {
-  test("defaults to dry-run", () => {
+  test("defaults to dry-run and scans all items", () => {
     expect(parseBackfillArgs(["bun", "backfill"])).toEqual({
       apply: false,
       limit: 500,
-      itemLimit: 50,
+      itemLimit: null,
       feedId: null,
     });
   });
@@ -30,6 +35,48 @@ describe("category backfill script", () => {
       itemLimit: 10,
       feedId: "feed-1",
     });
+  });
+
+  test("rejects a malformed --item-limit instead of silently scanning all items", () => {
+    expect(() => parseBackfillArgs(["bun", "backfill", "--item-limit", "abc"])).toThrow(
+      "Invalid --item-limit value: abc",
+    );
+    expect(() => parseBackfillArgs(["bun", "backfill", "--item-limit", "0"])).toThrow(
+      "Invalid --item-limit value: 0",
+    );
+    expect(() => parseBackfillArgs(["bun", "backfill", "--item-limit", "-5"])).toThrow(
+      "Invalid --item-limit value: -5",
+    );
+  });
+
+  test("classifies non-allowlisted feed items during backfill", () => {
+    const labels = inferBackfillItemCategories(
+      {
+        title: "Daily Links",
+        description: "A mixed collection of links.",
+        url: "https://example.com/feed.xml",
+        link: "https://example.com",
+        sourceKind: "rss",
+      },
+      {
+        title: "Bitcoin market rally lifts crypto stocks",
+        summary: "Investors watch market prices, stock performance, and crypto trading volume.",
+        contentText: null,
+        link: "https://finance.yahoo.com/news/bitcoin-market-rally",
+        canonicalUrl: "https://finance.yahoo.com/news/bitcoin-market-rally",
+      },
+    ).map((category) => category.label);
+
+    expect(labels).toEqual(["Finance & Markets"]);
+  });
+
+  test("computes all-item and capped item backfill batches", () => {
+    expect(nextItemBackfillBatchSize({ itemLimit: null, processed: 0 })).toBe(500);
+    expect(nextItemBackfillBatchSize({ itemLimit: null, processed: 1500 })).toBe(500);
+    expect(nextItemBackfillBatchSize({ itemLimit: 10, processed: 0 })).toBe(10);
+    expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 0 })).toBe(500);
+    expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 500 })).toBe(250);
+    expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 750 })).toBeNull();
   });
 
   test("summarizes dry-run and apply output", () => {

@@ -25,10 +25,11 @@ export type FeedCategoryClassificationInput = {
 export type FeedItemCategoryClassificationInput = FeedCategoryClassificationInput & {
   itemTitle: string;
   itemSummary: string | null;
+  itemContentText?: string | null;
   itemUrl: string | null;
 };
 
-const MAX_CLASSIFIER_LABELS = 2;
+export const MAX_CLASSIFIER_LABELS = 2;
 const FEED_SCORE_THRESHOLD = 3;
 const ITEM_SCORE_THRESHOLD = 4;
 
@@ -112,6 +113,7 @@ function topCategories(input: {
   hosts: readonly string[];
   threshold: number;
   allowGeneralFallback: boolean;
+  maxLabels: number;
 }): InferredCategoryLabel[] {
   const scored = CATEGORY_TAXONOMY.map((entry) => ({
     label: entry.label,
@@ -119,7 +121,7 @@ function topCategories(input: {
   }))
     .filter((entry) => entry.score >= input.threshold)
     .sort((a, b) => b.score - a.score || a.label.localeCompare(b.label))
-    .slice(0, MAX_CLASSIFIER_LABELS)
+    .slice(0, input.maxLabels)
     .map((entry) => ({
       label: entry.label,
       confidence: toConfidence(entry.score, input.threshold),
@@ -154,28 +156,34 @@ export function classifyFeedCategories(
       hosts: [feedHost, siteHost],
       threshold: FEED_SCORE_THRESHOLD,
       allowGeneralFallback: true,
+      maxLabels: MAX_CLASSIFIER_LABELS,
     }),
   };
 }
 
 export function classifyFeedItemCategories(
   input: FeedItemCategoryClassificationInput,
+  // Callers that will post-filter the result (e.g. to drop labels already covered by an
+  // explicit source category) should request more candidates than they intend to keep:
+  // topCategories() truncates to maxLabels BEFORE the caller ever sees the list, so a
+  // caller filtering after receiving only MAX_CLASSIFIER_LABELS results could discard a
+  // real match and be left with fewer labels than the chip slots it actually has open.
+  maxLabels: number = MAX_CLASSIFIER_LABELS,
 ): CategoryClassification {
   const itemHost = safeHost(input.itemUrl);
-  const feedHost = safeHost(input.feedUrl);
-  const siteHost = safeHost(input.feedSiteUrl);
   const titleText = normalizeText(input.itemTitle);
   const bodyText = normalizeText(
-    [input.itemSummary, input.feedTitle, input.feedDescription].join(" "),
+    [input.itemSummary, input.itemContentText].filter(Boolean).join(" "),
   );
 
   return {
     categories: topCategories({
       titleText,
       bodyText,
-      hosts: [itemHost, feedHost, siteHost],
+      hosts: [itemHost],
       threshold: ITEM_SCORE_THRESHOLD,
       allowGeneralFallback: false,
+      maxLabels,
     }),
   };
 }

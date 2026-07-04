@@ -9,7 +9,7 @@ import {
 import {
   classifyFeedCategories,
   classifyFeedItemCategories,
-  isMixedFeedHost,
+  MAX_CLASSIFIER_LABELS,
   type InferredCategoryLabel,
 } from "./classifier";
 import { fetchArticleEnrichment } from "./enrich";
@@ -105,45 +105,49 @@ function classifyFeedLevelCategories(input: {
   }).categories;
 }
 
-function isMixedFeed(input: {
-  feed: { url: string; link: string | null };
-  parsed: ParsedFeedDocument;
-}): boolean {
-  return (
-    isMixedFeedHost(input.parsed.metadata.canonicalUrl) ||
-    isMixedFeedHost(input.parsed.metadata.link) ||
-    isMixedFeedHost(input.feed.url) ||
-    isMixedFeedHost(input.feed.link)
-  );
-}
-
 /**
- * Classifies item-level categories, only on known mixed/aggregator feeds (e.g. Hacker News)
- * so single-topic feeds do not get noisy per-item labels. Must run after article enrichment
- * so items with a thin/empty RSS summary are scored against the fetched article text instead
- * of an empty string.
+ * Classifies item-level categories for every item after enrichment. Explicit source
+ * categories still win at read time; classifier labels only fill remaining chip slots.
+ * Must run after article enrichment so items with a thin/empty RSS summary are scored
+ * against the fetched article text instead of an empty string.
  */
 function classifyItemLevelCategories(input: {
   feed: { url: string; link: string | null; sourceKind: string | null };
   parsed: { metadata: FeedMetadata };
-  mixedFeed: boolean;
   items: ParsedFeedItem[];
 }): ParsedFeedItem[] {
   return input.items.map((item) => {
-    if (canonicalizeCategoryLabels(item.categoryLabels).length > 0 || !input.mixedFeed) {
+    const explicitLabels = canonicalizeCategoryLabels(item.categoryLabels);
+    const remainingChipSlots = Math.max(0, MAX_CLASSIFIER_LABELS - explicitLabels.length);
+    if (remainingChipSlots === 0) {
       return { ...item, inferredCategoryLabels: [] };
     }
-    const itemClassification = classifyFeedItemCategories({
-      feedTitle: input.parsed.metadata.title,
-      feedDescription: input.parsed.metadata.description,
-      feedUrl: input.parsed.metadata.canonicalUrl || input.feed.url,
-      feedSiteUrl: input.parsed.metadata.link ?? input.feed.link,
-      sourceKind: input.feed.sourceKind,
-      itemTitle: item.title,
-      itemSummary: item.summary ?? item.contentText,
-      itemUrl: item.link,
-    });
-    return { ...item, inferredCategoryLabels: itemClassification.categories };
+
+    // Request enough candidates to survive filtering out labels the explicit source
+    // already claimed: classifyFeedItemCategories() truncates internally, so asking for
+    // only remainingChipSlots risks losing a higher-scored category to truncation before
+    // this filter ever runs, when a lower-scored duplicate of an explicit label took its
+    // place in the top-N.
+    const itemClassification = classifyFeedItemCategories(
+      {
+        feedTitle: input.parsed.metadata.title,
+        feedDescription: input.parsed.metadata.description,
+        feedUrl: input.parsed.metadata.canonicalUrl || input.feed.url,
+        feedSiteUrl: input.parsed.metadata.link ?? input.feed.link,
+        sourceKind: input.feed.sourceKind,
+        itemTitle: item.title,
+        itemSummary: item.summary,
+        itemContentText: item.contentText,
+        itemUrl: item.link,
+      },
+      remainingChipSlots + explicitLabels.length,
+    );
+
+    const inferredCategoryLabels = itemClassification.categories
+      .filter((category) => !explicitLabels.includes(category.label))
+      .slice(0, remainingChipSlots);
+
+    return { ...item, inferredCategoryLabels };
   });
 }
 
@@ -340,10 +344,6 @@ export async function runFeedRefresh(
       feed: feedForClassification,
       parsed: { metadata: parsed.metadata, items: [] },
     });
-    const mixedFeed = isMixedFeed({
-      feed: feedForClassification,
-      parsed: { metadata: parsed.metadata, items: [] },
-    });
     let items = Array.from(deduped.values());
     const enrichArticles = options?.enrichArticles ?? true;
     if (enrichArticles) {
@@ -379,7 +379,6 @@ export async function runFeedRefresh(
     items = classifyItemLevelCategories({
       feed: feedForClassification,
       parsed: { metadata: parsed.metadata },
-      mixedFeed,
       items,
     });
 

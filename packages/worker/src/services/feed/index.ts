@@ -10,6 +10,7 @@ export {
   classifyFeedCategories,
   classifyFeedItemCategories,
   isMixedFeedHost,
+  MAX_CLASSIFIER_LABELS,
   type CategoryClassification,
   type FeedCategoryClassificationInput,
   type FeedItemCategoryClassificationInput,
