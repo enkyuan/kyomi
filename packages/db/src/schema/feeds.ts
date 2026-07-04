@@ -1,6 +1,7 @@
 import { sql } from "drizzle-orm";
 import {
   boolean,
+  doublePrecision,
   index,
   integer,
   pgTable,
@@ -19,6 +20,26 @@ export const feeds = pgTable(
     title: text("title").notNull(),
     description: text("description"),
     link: text("link"),
+    // Source identity. `sourceKind` is one of rss | youtube | reddit | x; `catalog` is never
+    // a source kind. `sourceId` references a normalized `sources` row when present.
+    sourceKind: text("source_kind").notNull().default("rss"),
+    sourceId: text("source_id"),
+    externalId: text("external_id"),
+    // URL canonicalization parity: `url` remains the canonical machine-readable fetch URL;
+    // these preserve what the user submitted, what to display, and discovery provenance.
+    submittedUrl: text("submitted_url"),
+    siteUrl: text("site_url"),
+    canonicalFeedUrl: text("canonical_feed_url"),
+    discoveredFromUrl: text("discovered_from_url"),
+    discoveryProvenance: text("discovery_provenance"),
+    // Catalog-derived metadata (provenance = catalog).
+    catalogSource: text("catalog_source"),
+    language: text("language"),
+    contentType: text("content_type"),
+    qualityScore: doublePrecision("quality_score"),
+    lastSuccessfulFetchAt: timestamp("last_successful_fetch_at"),
+    catalogUpdatedAt: timestamp("catalog_updated_at"),
+    metadataProvenance: text("metadata_provenance"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
     // Refresh lifecycle is owned by worker/ingestion and read by UI read models.
@@ -44,6 +65,7 @@ export const feeds = pgTable(
       .on(table.nextRefreshAt, table.id)
       .where(sql`${table.refreshStatus} NOT IN ('running', 'queued')`),
     index("feeds_refresh_status_idx").on(table.refreshStatus, table.id),
+    index("feeds_source_kind_idx").on(table.sourceKind, table.id),
   ],
 );
 

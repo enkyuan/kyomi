@@ -3,6 +3,7 @@ import {
   boolean,
   index,
   integer,
+  jsonb,
   pgTable,
   primaryKey,
   text,
@@ -40,6 +41,14 @@ export const feedItems = pgTable(
     extractedContentError: text("extracted_content_error"),
     extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
     imageUrl: text("image_url"),
+    // Source parity for non-RSS items. Items still belong to a `feeds` row (feed_id stays
+    // NOT NULL); these record the concrete platform identity and normalized author/language.
+    sourceKind: text("source_kind").notNull().default("rss"),
+    sourceId: text("source_id"),
+    externalId: text("external_id"),
+    authorName: text("author_name"),
+    language: text("language"),
+    media: jsonb("media"),
     publishedAt: timestamp("published_at").notNull(),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
