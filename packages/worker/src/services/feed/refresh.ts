@@ -14,6 +14,11 @@ import {
   type InferredCategoryLabel,
 } from "./classifier";
 import { discoverFeedUrlFromHtml } from "./discover-url";
+import {
+  classifyFeedCategoriesByEmbedding,
+  classifyFeedItemCategoriesByEmbedding,
+  type EmbeddingClassifierConfig,
+} from "./embeddings";
 import { fetchArticleEnrichment } from "./enrich";
 import { fetchFeedDocument } from "./fetch";
 import { parseFeedDocument } from "./parse";
@@ -22,8 +27,15 @@ import {
   hasExplicitFeedCategories,
   syncInferredFeedCategories,
   syncParsedFeedCategories,
+  type ClassifierModelInfo,
 } from "./categories";
 import { syncParsedFeedItemTags } from "./tags";
+import {
+  CLASSIFIER_TAXONOMY_VERSION,
+  EMBEDDING_CLASSIFIER_METHOD,
+  KEYWORD_CLASSIFIER_METHOD,
+  KEYWORD_CLASSIFIER_MODEL_ID,
+} from "./taxonomy";
 import { summarizeText } from "../../lib/feed-text";
 import type {
   FeedIngestDatabase,
@@ -381,6 +393,123 @@ function classifyItemLevelCategories(input: {
   });
 }
 
+const KEYWORD_CLASSIFIER_MODEL: ClassifierModelInfo = {
+  modelId: KEYWORD_CLASSIFIER_MODEL_ID,
+  taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+  classifierMethod: KEYWORD_CLASSIFIER_METHOD,
+};
+
+const DEFAULT_EMBEDDING_MODEL_ID = "voyage-4";
+
+function embeddingClassifierModel(config: EmbeddingClassifierConfig): ClassifierModelInfo {
+  return {
+    modelId: config.model ?? DEFAULT_EMBEDDING_MODEL_ID,
+    taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+    classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
+  };
+}
+
+/**
+ * Best-effort embedding-classifier pass, run in parallel with (never instead of) the keyword
+ * classifier so both write independent rows for direct comparison. Failures here (network,
+ * rate limit, bad API key) never fail the refresh — embedding classification is a comparison
+ * signal layered on top of the keyword classifier's baseline, not a hard dependency. Returns
+ * `null` when no config was provided (embedding classification is opt-in) or the call failed.
+ */
+async function classifyFeedCategoriesByEmbeddingSafely(
+  classificationInput: Parameters<typeof classifyFeedCategoriesByEmbedding>[0],
+  config: EmbeddingClassifierConfig | undefined,
+): Promise<InferredCategoryLabel[] | null> {
+  if (!config) {
+    return null;
+  }
+  if (shouldSuppressClassifierFeedFallback(classificationInput)) {
+    return null;
+  }
+  try {
+    const result = await classifyFeedCategoriesByEmbedding(classificationInput, config);
+    return result.categories;
+  } catch {
+    return null;
+  }
+}
+
+async function classifyFeedLevelCategoriesByEmbeddingSafely(
+  input: {
+    feed: { url: string; link: string | null; sourceKind: string | null };
+    parsed: ParsedFeedDocument;
+  },
+  config: EmbeddingClassifierConfig | undefined,
+): Promise<InferredCategoryLabel[] | null> {
+  if (!config) {
+    return null;
+  }
+  if (canonicalizeCategoryLabels(input.parsed.metadata.categoryLabels).length > 0) {
+    return null;
+  }
+  return classifyFeedCategoriesByEmbeddingSafely(
+    {
+      feedTitle: input.parsed.metadata.title,
+      feedDescription: input.parsed.metadata.description,
+      feedUrl: input.parsed.metadata.canonicalUrl || input.feed.url,
+      feedSiteUrl: input.parsed.metadata.link ?? input.feed.link,
+      sourceKind: input.feed.sourceKind,
+    },
+    config,
+  );
+}
+
+async function classifyItemLevelCategoriesByEmbeddingSafely(
+  input: {
+    feed: { url: string; link: string | null; sourceKind: string | null };
+    parsed: { metadata: FeedMetadata };
+    items: ParsedFeedItem[];
+  },
+  config: EmbeddingClassifierConfig | undefined,
+): Promise<Map<string, InferredCategoryLabel[]> | null> {
+  if (!config) {
+    return null;
+  }
+  const results = new Map<string, InferredCategoryLabel[]>();
+  await Promise.all(
+    input.items.map(async (item) => {
+      const explicitLabels = canonicalizeCategoryLabels(item.categoryLabels);
+      const remainingChipSlots = Math.max(0, MAX_CLASSIFIER_LABELS - explicitLabels.length);
+      if (remainingChipSlots === 0) {
+        results.set(item.id, []);
+        return;
+      }
+      try {
+        const classification = await classifyFeedItemCategoriesByEmbedding(
+          {
+            feedTitle: input.parsed.metadata.title,
+            feedDescription: input.parsed.metadata.description,
+            feedUrl: input.parsed.metadata.canonicalUrl || input.feed.url,
+            feedSiteUrl: input.parsed.metadata.link ?? input.feed.link,
+            sourceKind: input.feed.sourceKind,
+            itemTitle: item.title,
+            itemSummary: item.summary,
+            itemContentText: item.contentText,
+            itemUrl: item.link,
+          },
+          config,
+          remainingChipSlots + explicitLabels.length,
+        );
+        results.set(
+          item.id,
+          classification.categories
+            .filter((category) => !explicitLabels.includes(category.label))
+            .slice(0, remainingChipSlots),
+        );
+      } catch {
+        // One item's embedding call failing (rate limit, transient network error) does not
+        // block the rest of the batch or the keyword classifier's already-computed labels.
+      }
+    }),
+  );
+  return results;
+}
+
 function summarizeItemCategoryStats(items: ParsedFeedItem[]): {
   itemClassifierLabels: number;
   itemClassifierAbstentions: number;
@@ -448,6 +577,7 @@ export async function runFeedRefresh(
   options?: {
     enrichArticles?: boolean;
     hostRateLimiter?: HostRateLimiter;
+    embeddingClassifier?: EmbeddingClassifierConfig;
   },
 ): Promise<FeedRefreshResult> {
   try {
@@ -593,9 +723,26 @@ export async function runFeedRefresh(
           : classifyFeedCategories(classificationInput).categories;
         await syncInferredFeedCategories(
           database,
-          { feedId: feed.id, feedCategories, items: [] },
+          { feedId: feed.id, feedCategories, items: [], model: KEYWORD_CLASSIFIER_MODEL },
           now,
         );
+        const embeddingConfig = options?.embeddingClassifier;
+        const embeddingFeedCategories = await classifyFeedCategoriesByEmbeddingSafely(
+          classificationInput,
+          embeddingConfig,
+        );
+        if (embeddingConfig && embeddingFeedCategories) {
+          await syncInferredFeedCategories(
+            database,
+            {
+              feedId: feed.id,
+              feedCategories: embeddingFeedCategories,
+              items: [],
+              model: embeddingClassifierModel(embeddingConfig),
+            },
+            now,
+          );
+        }
         return {
           ok: true,
           itemCount: 0,
@@ -650,6 +797,11 @@ export async function runFeedRefresh(
       parsed: { metadata: parsed.metadata, items: [] },
     });
     const feedCategories = feedClassification.categories;
+    const embeddingConfig = options?.embeddingClassifier;
+    const embeddingFeedCategoriesPromise = classifyFeedLevelCategoriesByEmbeddingSafely(
+      { feed: feedForClassification, parsed },
+      embeddingConfig,
+    );
     let items = Array.from(deduped.values());
     const enrichArticles = options?.enrichArticles ?? true;
     if (enrichArticles) {
@@ -688,6 +840,17 @@ export async function runFeedRefresh(
       items,
     });
     const itemCategoryStats = summarizeItemCategoryStats(items);
+
+    // Embedding classification runs after enrichment for the same reason as the keyword
+    // pass above, and after the feed-level embedding promise was already fired in parallel
+    // with enrichment (both are network calls; running them concurrently instead of
+    // sequentially keeps embedding classification from adding its own latency on top of
+    // enrichment's, rather than after it).
+    const embeddingFeedCategories = await embeddingFeedCategoriesPromise;
+    const embeddingItemCategoriesById = await classifyItemLevelCategoriesByEmbeddingSafely(
+      { feed: feedForClassification, parsed: { metadata: parsed.metadata }, items },
+      embeddingConfig,
+    );
 
     const prevLink = feed.link ?? null;
     const nextLink = parsed.metadata.link ?? null;
@@ -807,9 +970,37 @@ export async function runFeedRefresh(
           feedId: feed.id,
           feedCategories,
           items,
+          model: KEYWORD_CLASSIFIER_MODEL,
         },
         now,
       );
+
+      // `embeddingItemCategoriesById` is a Map even when every item's embed call failed
+      // (each item's own try/catch just skips setting its entry rather than making the
+      // whole call return null) — an empty Map is still truthy, so checking its presence
+      // alone would run the sync and wipe out previously-good embedding rows during a total
+      // Voyage outage. Only include items that actually got a result, and skip the item sync
+      // entirely (passing `items: []`) when nothing succeeded so existing rows are left alone.
+      const embeddingItemAssignments = embeddingItemCategoriesById
+        ? items.flatMap((item) => {
+            const inferredCategoryLabels = embeddingItemCategoriesById.get(item.id);
+            return inferredCategoryLabels === undefined
+              ? []
+              : [{ id: item.id, inferredCategoryLabels }];
+          })
+        : [];
+      if (embeddingConfig && (embeddingFeedCategories || embeddingItemAssignments.length > 0)) {
+        await syncInferredFeedCategories(
+          tx,
+          {
+            feedId: feed.id,
+            feedCategories: embeddingFeedCategories ?? [],
+            items: embeddingItemAssignments,
+            model: embeddingClassifierModel(embeddingConfig),
+          },
+          now,
+        );
+      }
     });
 
     await syncFeedToSearch(searchSync, {
