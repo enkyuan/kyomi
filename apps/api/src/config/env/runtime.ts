@@ -42,6 +42,42 @@ if (skipEnvValidation && nodeEnv === "production") {
   throw new Error("SKIP_ENV_VALIDATION must not be enabled in production");
 }
 
+/** A feature flag and the credentials it requires only when the flag is enabled. */
+type FeatureCredentialRule = {
+  flag: string;
+  credentials: readonly string[];
+};
+
+const FEATURE_CREDENTIAL_RULES: readonly FeatureCredentialRule[] = [
+  { flag: "FEATURE_GOOGLE_OAUTH", credentials: ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET"] },
+  { flag: "FEATURE_SOURCE_YOUTUBE", credentials: ["YOUTUBE_API_KEY"] },
+  { flag: "FEATURE_SOURCE_REDDIT", credentials: ["REDDIT_CLIENT_ID", "REDDIT_CLIENT_SECRET"] },
+  { flag: "FEATURE_SOURCE_X", credentials: ["X_CLIENT_ID", "X_CLIENT_SECRET"] },
+  { flag: "FEATURE_AI_ARTICLE_INTELLIGENCE", credentials: ["AI_PROVIDER", "AI_API_KEY"] },
+];
+
+/**
+ * Returns the credential keys that are missing given the enabled feature flags. A credential
+ * is only required when its owning flag is enabled; disabled flags never require credentials.
+ */
+export function findMissingFeatureCredentials(
+  value: Record<string, unknown>,
+): { flag: string; key: string }[] {
+  const missing: { flag: string; key: string }[] = [];
+  for (const rule of FEATURE_CREDENTIAL_RULES) {
+    if (value[rule.flag] !== true) {
+      continue;
+    }
+    for (const key of rule.credentials) {
+      const credential = value[key];
+      if (credential == null || credential === "") {
+        missing.push({ flag: rule.flag, key });
+      }
+    }
+  }
+  return missing;
+}
+
 export const env = createEnv({
   server: {
     NODE_ENV: z.enum(["development", "production", "test"]),
@@ -87,6 +123,36 @@ export const env = createEnv({
     FEED_ADMIN_USER_IDS: z.string().optional(),
     /** Shared secret accepted in `x-feed-admin-secret` as a backup admin control plane. */
     FEED_ADMIN_SHARED_SECRET: z.string().min(1).optional(),
+
+    // Platform-expansion feature flags. All default false; a flag's credentials are only
+    // required when it is enabled (see createFinalSchema below).
+    FEATURE_GOOGLE_OAUTH: booleanFromEnv.default(false),
+    FEATURE_ONBOARDING: booleanFromEnv.default(false),
+    FEATURE_SOURCE_YOUTUBE: booleanFromEnv.default(false),
+    FEATURE_SOURCE_REDDIT: booleanFromEnv.default(false),
+    FEATURE_SOURCE_X: booleanFromEnv.default(false),
+    FEATURE_AI_ARTICLE_INTELLIGENCE: booleanFromEnv.default(false),
+    FEATURE_SOCIAL_MODE: booleanFromEnv.default(false),
+    FEATURE_LINK_PREVIEWS: booleanFromEnv.default(false),
+    FEATURE_SHARE_PREVIEWS: booleanFromEnv.default(false),
+    FEATURE_PUBLIC_API: booleanFromEnv.default(false),
+    FEATURE_SELF_HOSTING_SETUP: booleanFromEnv.default(false),
+
+    // Public developer API settings.
+    PUBLIC_API_KEY_PREFIX: z.string().min(1).default("kyomi_pk_"),
+    PUBLIC_API_DEFAULT_RATE_LIMIT_PER_MINUTE: z.coerce.number().int().positive().default(60),
+    PUBLIC_API_DEFAULT_RATE_LIMIT_PER_DAY: z.coerce.number().int().positive().default(10_000),
+
+    // Optional external credentials, gated by their matching FEATURE_* flag.
+    GOOGLE_CLIENT_ID: z.string().min(1).optional(),
+    GOOGLE_CLIENT_SECRET: z.string().min(1).optional(),
+    YOUTUBE_API_KEY: z.string().min(1).optional(),
+    REDDIT_CLIENT_ID: z.string().min(1).optional(),
+    REDDIT_CLIENT_SECRET: z.string().min(1).optional(),
+    X_CLIENT_ID: z.string().min(1).optional(),
+    X_CLIENT_SECRET: z.string().min(1).optional(),
+    AI_PROVIDER: z.string().min(1).optional(),
+    AI_API_KEY: z.string().min(1).optional(),
   },
   runtimeEnv: {
     NODE_ENV: nodeEnv,
@@ -122,8 +188,41 @@ export const env = createEnv({
     FEED_FETCH_HOST_RETRY_DELAY_MS: process.env.FEED_FETCH_HOST_RETRY_DELAY_MS,
     FEED_ADMIN_USER_IDS: process.env.FEED_ADMIN_USER_IDS,
     FEED_ADMIN_SHARED_SECRET: process.env.FEED_ADMIN_SHARED_SECRET,
+    FEATURE_GOOGLE_OAUTH: process.env.FEATURE_GOOGLE_OAUTH,
+    FEATURE_ONBOARDING: process.env.FEATURE_ONBOARDING,
+    FEATURE_SOURCE_YOUTUBE: process.env.FEATURE_SOURCE_YOUTUBE,
+    FEATURE_SOURCE_REDDIT: process.env.FEATURE_SOURCE_REDDIT,
+    FEATURE_SOURCE_X: process.env.FEATURE_SOURCE_X,
+    FEATURE_AI_ARTICLE_INTELLIGENCE: process.env.FEATURE_AI_ARTICLE_INTELLIGENCE,
+    FEATURE_SOCIAL_MODE: process.env.FEATURE_SOCIAL_MODE,
+    FEATURE_LINK_PREVIEWS: process.env.FEATURE_LINK_PREVIEWS,
+    FEATURE_SHARE_PREVIEWS: process.env.FEATURE_SHARE_PREVIEWS,
+    FEATURE_PUBLIC_API: process.env.FEATURE_PUBLIC_API,
+    FEATURE_SELF_HOSTING_SETUP: process.env.FEATURE_SELF_HOSTING_SETUP,
+    PUBLIC_API_KEY_PREFIX: process.env.PUBLIC_API_KEY_PREFIX,
+    PUBLIC_API_DEFAULT_RATE_LIMIT_PER_MINUTE: process.env.PUBLIC_API_DEFAULT_RATE_LIMIT_PER_MINUTE,
+    PUBLIC_API_DEFAULT_RATE_LIMIT_PER_DAY: process.env.PUBLIC_API_DEFAULT_RATE_LIMIT_PER_DAY,
+    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+    GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
+    YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
+    REDDIT_CLIENT_ID: process.env.REDDIT_CLIENT_ID,
+    REDDIT_CLIENT_SECRET: process.env.REDDIT_CLIENT_SECRET,
+    X_CLIENT_ID: process.env.X_CLIENT_ID,
+    X_CLIENT_SECRET: process.env.X_CLIENT_SECRET,
+    AI_PROVIDER: process.env.AI_PROVIDER,
+    AI_API_KEY: process.env.AI_API_KEY,
   },
   emptyStringAsUndefined: true,
+  createFinalSchema: (shape) =>
+    z.object(shape).superRefine((value, ctx) => {
+      for (const { flag, key } of findMissingFeatureCredentials(value)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: [key],
+          message: `${key} is required when ${flag} is enabled`,
+        });
+      }
+    }),
   skipValidation: skipEnvValidation,
   onValidationError: (issues) => {
     console.error("Invalid environment variables:", issues);
