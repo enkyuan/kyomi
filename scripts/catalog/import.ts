@@ -12,7 +12,7 @@ import {
   toCategorySlug,
   type ValidationReport,
   type CatalogFeedRecord,
-} from "./import-core";
+} from "../../apps/api/src/modules/catalog/import";
 
 function getArgValue(flag: string): string | null {
   const index = process.argv.indexOf(flag);

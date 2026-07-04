@@ -1,7 +1,4 @@
-import {
-  assertHttpOrHttpsUrl,
-  normalizeFeedUrl,
-} from "../../apps/api/src/modules/discover/feed/normalize-url";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize-url";
 
 export type CatalogFeedRecord = {
   feed_url: string;
