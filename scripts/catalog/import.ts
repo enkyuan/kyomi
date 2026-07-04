@@ -43,7 +43,7 @@ async function assignCatalogCategory(feedId: string, label: string): Promise<boo
   const categoryRows = await db
     .insert(categories)
     .values({ id: crypto.randomUUID(), slug, label, provenance: "catalog", createdAt: now, updatedAt: now })
-    .onConflictDoUpdate({ target: categories.slug, set: { updatedAt: now } })
+    .onConflictDoUpdate({ target: categories.slug, set: { label, updatedAt: now } })
     .returning({ id: categories.id });
   const categoryId = categoryRows[0]?.id;
   if (!categoryId) {
@@ -223,7 +223,11 @@ export async function importCatalogFile(
     }
 
     if (seenCanonicalUrls.has(normalized.canonicalUrl)) {
+      // A later user/import pass may follow the same canonical feed; skip the redundant
+      // upsert so `imported` counts distinct feeds and we do not re-write metadata.
       duplicateCanonicalUrls += 1;
+      stats.skipped += 1;
+      continue;
     }
     seenCanonicalUrls.add(normalized.canonicalUrl);
     reportValidation(validation, normalized, normalized.title === normalized.canonicalUrl);
