@@ -1,23 +1,23 @@
-# Stage 4: LLM Enrichment
+# stage 4: LLM enrichment
 
-Catalog pipeline stage for improving categories, tags, descriptions, titles, and ranking signals with batched LLM prompts.
+improves categories, tags, descriptions, titles, and ranking signals with batched LLM prompts.
 
-## Goals
+## goals
 
-- Map feeds to top-level categories and capped tag lists.
-- Improve weak titles and descriptions, especially for OPML-derived feeds.
-- Estimate popularity signals only for live feeds and combine them later with non-LLM signals.
+- map feeds to top-level categories and capped tag lists.
+- improve weak titles and descriptions, especially for OPML-derived feeds.
+- estimate popularity signals for live feeds only. combine them with non-LLM signals later.
 
-## Layout
+## layout
 
 ```text
-batch_scripts/  Batch execution helpers.
-experiments/    Prompt and scoring experiments.
-preprocess/     Input preparation.
+batch_scripts/  batch execution helpers.
+experiments/    prompt and scoring experiments.
+preprocess/     input preparation.
 ```
 
-## Notes
+## notes
 
-- Prompts should return valid JSON only.
-- Batch sizes should stay small enough for reliable validation and retry.
-- Validate prompts against non-English feeds before applying them to the full catalog.
+- prompts must return valid JSON.
+- keep batch sizes small enough for reliable validation and retry.
+- validate prompts against non-English feeds before applying them to the full catalog.

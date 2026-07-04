@@ -1,20 +1,27 @@
-# Expo Router and Uniwind 
+# @kyomi/mobile
 
-Use [Expo Router](https://docs.expo.dev/router/introduction/) with [Uniwind](https://docs.uniwind.dev/) styling.
+the mobile client. built with Expo Router and Uniwind.
 
-## Launch your own
+## layout
 
-[![Launch with Expo](https://github.com/expo/examples/blob/master/.gh-assets/launch.svg?raw=true)](https://launch.expo.dev/?github=https://github.com/expo/examples/tree/master/with-router-uniwind)
-
-## 🚀 How to use
-
-```sh
-npx create-expo-app -e with-router-uniwind
+```text
+src/
+  app/  file-based Expo Router routes and screens.
 ```
 
-## Deploy
+## commands
 
-Deploy on all platforms with Expo Application Services (EAS).
+| command | purpose |
+| --- | --- |
+| `bun run --cwd apps/mobile start` | start the Expo dev server. |
+| `bun run --cwd apps/mobile ios` | build and run on iOS. |
+| `bun run --cwd apps/mobile android` | build and run on Android. |
+| `bun run --cwd apps/mobile web` | start Expo in web mode. |
+| `bun run --cwd apps/mobile typecheck` | type-check. |
+| `bun run --cwd apps/mobile lint` | lint. |
+| `bun run --cwd apps/mobile fmt:check` | check formatting. |
 
-- Deploy the website: `npx eas-cli deploy` — [Learn more](https://docs.expo.dev/eas/hosting/get-started/)
-- Deploy on iOS and Android using: `npx eas-cli build` — [Learn more](https://expo.dev/eas)
+## notes
+
+- styling uses Uniwind (Tailwind for React Native). global styles live in `src/global.css`.
+- native modules run through Nitro (`react-native-nitro-modules`).

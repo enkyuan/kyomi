@@ -26,11 +26,11 @@
     "./*.ts": "./src/*.ts"
   },
   "scripts": {
-    "fmt": "bunx oxfmt src",
-    "fmt:check": "bunx oxfmt --check src",
-    "lint": "bunx oxlint src",
-    "lint:fix": "bunx oxlint --fix src",
-    "typecheck": "bunx tsgo -p tsconfig.json --noEmit"
+    "fmt": "oxfmt src",
+    "fmt:check": "oxfmt --check src",
+    "lint": "oxlint src",
+    "lint:fix": "oxlint --fix src",
+    "typecheck": "tsgo -p tsconfig.json --noEmit"
   },
   "peerDependencies": {
     "react": "^19.2.0",

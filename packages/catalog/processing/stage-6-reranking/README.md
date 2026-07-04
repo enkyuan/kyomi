@@ -1,13 +1,13 @@
-# Stage 6: Reranking
+# stage 6: reranking
 
-Catalog pipeline stage for final category ordering after enrichment and cleaning.
+final category ordering after enrichment and cleaning.
 
-## Goals
+## goals
 
-- Prevent duplicate variants of the same source from crowding a category.
-- Demote low-value outliers with inflated popularity scores.
-- Prefer representative, high-quality feeds for seeded discovery results.
+- prevent duplicate variants of the same source from crowding a category.
+- demote low-value outliers with inflated popularity scores.
+- prefer representative, high-quality feeds for seeded discovery results.
 
-## Notes
+## notes
 
-Popularity alone is not a reliable sort key. Ranking should combine quality, dedupe, category fit, and curated examples for major languages and categories.
+popularity alone is not a reliable sort key. ranking combines quality, dedupe, category fit, and curated examples for major languages and categories.
