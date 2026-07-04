@@ -20,6 +20,7 @@ export type FeedMetadata = {
   link: string | null;
   iconUrl: string | null;
   canonicalUrl: string;
+  categoryLabels: string[];
 };
 
 export type ParsedFeedItem = {
@@ -45,6 +46,7 @@ export type ParsedFeedItem = {
   extractionErrorMessage: string | null;
   imageUrl: string | null;
   publishedAt: Date;
+  categoryLabels: string[];
 };
 
 export type ParsedFeedDocument = {

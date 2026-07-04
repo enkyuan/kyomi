@@ -50,6 +50,70 @@ describe("parseFeedDocument", () => {
     expect(parsed.metadata.link).toBe("https://www.entrepreneur.com/");
   });
 
+  test("extracts RSS channel and item categories", () => {
+    const parsed = parseFeedDocument(
+      `<?xml version="1.0"?>
+      <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+        <channel>
+          <title>Tech feed</title>
+          <link>https://example.com/</link>
+          <description>Updates</description>
+          <category>Technology</category>
+          <itunes:category text="Podcasts">
+            <itunes:category text="Software" />
+          </itunes:category>
+          <item>
+            <title>Article one</title>
+            <link>https://example.com/article-one</link>
+            <guid>article-1</guid>
+            <category>JavaScript</category>
+            <category domain="https://example.com/taxonomy">Programming</category>
+            <description>Summary</description>
+            <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+          </item>
+          <item>
+            <title>Article two</title>
+            <link>https://example.com/article-two</link>
+            <guid>article-2</guid>
+            <description>Summary</description>
+            <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+          </item>
+        </channel>
+      </rss>`,
+      "feed-1",
+      "https://example.com/feed.xml",
+    );
+
+    expect(parsed.metadata.categoryLabels).toEqual(["Technology", "Podcasts", "Software"]);
+    expect(parsed.items[0]?.categoryLabels).toEqual(["JavaScript", "Programming"]);
+    expect(parsed.items[1]?.categoryLabels).toEqual([]);
+  });
+
+  test("extracts Atom feed and entry categories", () => {
+    const parsed = parseFeedDocument(
+      `<?xml version="1.0"?>
+      <feed xmlns="http://www.w3.org/2005/Atom">
+        <title>Atom feed</title>
+        <link href="https://example.com/" rel="alternate" />
+        <subtitle>Updates</subtitle>
+        <category term="engineering" label="Engineering" />
+        <entry>
+          <title>Atom article</title>
+          <link href="https://example.com/atom-article" rel="alternate" />
+          <id>atom-1</id>
+          <summary>Summary</summary>
+          <updated>2026-07-01T00:00:00Z</updated>
+          <category term="ai" label="AI" />
+        </entry>
+      </feed>`,
+      "feed-1",
+      "https://example.com/feed.atom",
+    );
+
+    expect(parsed.metadata.categoryLabels).toEqual(["Engineering"]);
+    expect(parsed.items[0]?.categoryLabels).toEqual(["AI"]);
+  });
+
   test("keeps rejecting excessive entity expansion", () => {
     const quotedTitle = repeatEntity("&quot;", 50_001);
 

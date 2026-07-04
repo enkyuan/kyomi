@@ -10,6 +10,7 @@ import { fetchArticleEnrichment } from "./enrich";
 import { fetchFeedDocument } from "./fetch";
 import { parseFeedDocument } from "./parse";
 import { syncFeedToSearch } from "./search";
+import { syncParsedFeedCategories } from "./categories";
 import { summarizeText } from "../../lib/feed-text";
 import type {
   FeedIngestDatabase,
@@ -309,55 +310,63 @@ export async function runFeedRefresh(
         })
         .where(eq(feeds.id, feed.id));
 
-      if (items.length === 0) {
-        return;
+      if (items.length > 0) {
+        await tx
+          .insert(feedItems)
+          .values(
+            items.map((item) => ({
+              id: item.id,
+              feedId: feed.id,
+              canonicalUrl: item.canonicalUrl,
+              title: item.title,
+              link: item.link,
+              summary: item.summary,
+              content: item.content,
+              contentHtml: item.contentHtml,
+              contentText: item.contentText,
+              contentMarkdown: item.contentMarkdown,
+              contentStatus: item.contentStatus,
+              contentSource: item.contentSource,
+              extractionErrorCode: item.extractionErrorCode,
+              extractionErrorMessage: item.extractionErrorMessage,
+              imageUrl: item.imageUrl,
+              publishedAt: item.publishedAt,
+              createdAt: now,
+              updatedAt: now,
+            })),
+          )
+          .onConflictDoUpdate({
+            // Primary identity lives in DB unique(feed_id, canonical_url).
+            // Any list-time dedupe is defensive only.
+            target: [feedItems.feedId, feedItems.canonicalUrl],
+            set: {
+              title: sql`CASE WHEN length(trim(excluded.title)) > length(trim(${feedItems.title})) THEN excluded.title ELSE ${feedItems.title} END`,
+              link: sql`COALESCE(NULLIF(${feedItems.link}, ''), excluded.link)`,
+              summary: sql`CASE WHEN length(COALESCE(excluded.summary, '')) > length(COALESCE(${feedItems.summary}, '')) THEN excluded.summary ELSE ${feedItems.summary} END`,
+              content: sql`COALESCE(${feedItems.content}, excluded.content)`,
+              contentHtml: sql`COALESCE(${feedItems.contentHtml}, excluded.content_html)`,
+              contentText: sql`COALESCE(${feedItems.contentText}, excluded.content_text)`,
+              contentMarkdown: sql`COALESCE(${feedItems.contentMarkdown}, excluded.content_markdown)`,
+              contentStatus: sql`CASE WHEN ${feedItems.content} IS NULL AND excluded.content IS NOT NULL THEN excluded.content_status ELSE ${feedItems.contentStatus} END`,
+              contentSource: sql`CASE WHEN ${feedItems.content} IS NULL AND excluded.content IS NOT NULL THEN excluded.content_source ELSE ${feedItems.contentSource} END`,
+              extractionErrorCode: sql`COALESCE(${feedItems.extractionErrorCode}, excluded.extraction_error_code)`,
+              extractionErrorMessage: sql`COALESCE(${feedItems.extractionErrorMessage}, excluded.extraction_error_message)`,
+              imageUrl: sql`COALESCE(${feedItems.imageUrl}, excluded.image_url)`,
+              publishedAt: sql`LEAST(${feedItems.publishedAt}, excluded.published_at)`,
+              updatedAt: now,
+            },
+          });
       }
 
-      await tx
-        .insert(feedItems)
-        .values(
-          items.map((item) => ({
-            id: item.id,
-            feedId: feed.id,
-            canonicalUrl: item.canonicalUrl,
-            title: item.title,
-            link: item.link,
-            summary: item.summary,
-            content: item.content,
-            contentHtml: item.contentHtml,
-            contentText: item.contentText,
-            contentMarkdown: item.contentMarkdown,
-            contentStatus: item.contentStatus,
-            contentSource: item.contentSource,
-            extractionErrorCode: item.extractionErrorCode,
-            extractionErrorMessage: item.extractionErrorMessage,
-            imageUrl: item.imageUrl,
-            publishedAt: item.publishedAt,
-            createdAt: now,
-            updatedAt: now,
-          })),
-        )
-        .onConflictDoUpdate({
-          // Primary identity lives in DB unique(feed_id, canonical_url).
-          // Any list-time dedupe is defensive only.
-          target: [feedItems.feedId, feedItems.canonicalUrl],
-          set: {
-            title: sql`CASE WHEN length(trim(excluded.title)) > length(trim(${feedItems.title})) THEN excluded.title ELSE ${feedItems.title} END`,
-            link: sql`COALESCE(NULLIF(${feedItems.link}, ''), excluded.link)`,
-            summary: sql`CASE WHEN length(COALESCE(excluded.summary, '')) > length(COALESCE(${feedItems.summary}, '')) THEN excluded.summary ELSE ${feedItems.summary} END`,
-            content: sql`COALESCE(${feedItems.content}, excluded.content)`,
-            contentHtml: sql`COALESCE(${feedItems.contentHtml}, excluded.content_html)`,
-            contentText: sql`COALESCE(${feedItems.contentText}, excluded.content_text)`,
-            contentMarkdown: sql`COALESCE(${feedItems.contentMarkdown}, excluded.content_markdown)`,
-            contentStatus: sql`CASE WHEN ${feedItems.content} IS NULL AND excluded.content IS NOT NULL THEN excluded.content_status ELSE ${feedItems.contentStatus} END`,
-            contentSource: sql`CASE WHEN ${feedItems.content} IS NULL AND excluded.content IS NOT NULL THEN excluded.content_source ELSE ${feedItems.contentSource} END`,
-            extractionErrorCode: sql`COALESCE(${feedItems.extractionErrorCode}, excluded.extraction_error_code)`,
-            extractionErrorMessage: sql`COALESCE(${feedItems.extractionErrorMessage}, excluded.extraction_error_message)`,
-            imageUrl: sql`COALESCE(${feedItems.imageUrl}, excluded.image_url)`,
-            publishedAt: sql`LEAST(${feedItems.publishedAt}, excluded.published_at)`,
-            updatedAt: now,
-          },
-        });
+      await syncParsedFeedCategories(
+        tx,
+        {
+          feedId: feed.id,
+          feedLabels: parsed.metadata.categoryLabels,
+          items,
+        },
+        now,
+      );
     });
 
     await syncFeedToSearch(searchSync, {

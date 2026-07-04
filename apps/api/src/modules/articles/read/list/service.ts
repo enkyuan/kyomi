@@ -2,6 +2,7 @@ import type { db } from "@adapters/db/client";
 import {
   categories,
   feedCategoryAssignments,
+  feedItemCategoryAssignments,
   feedItemUserState,
   feedItems,
   feedSubscriptions,
@@ -51,18 +52,26 @@ function baseJoins(userId: string) {
 }
 
 /**
- * Correlated subquery yielding up to two feed-level category labels per feed item, as a
- * text[]. Kept as a scalar subquery so the list query stays a single round trip (no N+1).
- * Deterministic ordering (label, then id) keeps the chosen two chips stable across requests.
+ * Correlated subquery yielding up to two category labels per feed item, as a text[]. Item-level
+ * categories win over feed-level fallbacks, and the scalar subquery keeps the list query a
+ * single round trip (no N+1). Deterministic ordering keeps the chosen two chips stable.
  */
 export const feedCategoryLabelsSql = sql<string[]>`(
-  SELECT COALESCE(array_agg(fc.label ORDER BY fc.label, fc.id), ARRAY[]::text[])
+  SELECT COALESCE(array_agg(fc.label ORDER BY fc.source_rank, fc.label, fc.id), ARRAY[]::text[])
   FROM (
-    SELECT ${categories.label} AS label, ${categories.id} AS id
-    FROM ${feedCategoryAssignments}
-    INNER JOIN ${categories} ON ${categories.id} = ${feedCategoryAssignments.categoryId}
-    WHERE ${feedCategoryAssignments.feedId} = ${feedItems.feedId}
-    ORDER BY ${categories.label}, ${categories.id}
+    SELECT ${categories.label} AS label, ${categories.id} AS id, min(category_sources.source_rank) AS source_rank
+    FROM (
+      SELECT ${feedItemCategoryAssignments.categoryId} AS category_id, 0 AS source_rank
+      FROM ${feedItemCategoryAssignments}
+      WHERE ${feedItemCategoryAssignments.feedItemId} = ${feedItems.id}
+      UNION ALL
+      SELECT ${feedCategoryAssignments.categoryId} AS category_id, 1 AS source_rank
+      FROM ${feedCategoryAssignments}
+      WHERE ${feedCategoryAssignments.feedId} = ${feedItems.feedId}
+    ) AS category_sources
+    INNER JOIN ${categories} ON ${categories.id} = category_sources.category_id
+    GROUP BY ${categories.label}, ${categories.id}
+    ORDER BY source_rank, ${categories.label}, ${categories.id}
     LIMIT 2
   ) AS fc
 )`;

@@ -18,7 +18,7 @@ export type ArticleListItemDto = {
   isRead: boolean;
   isSaved: boolean;
   articleType: "feed" | "clip";
-  /** Feed-level category labels for footer chips (currently up to 2, catalog-provenance). */
+  /** Category labels for footer chips, item-level first and feed-level fallback, capped by SQL. */
   categories: string[];
 };
 

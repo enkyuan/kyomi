@@ -1,7 +1,11 @@
 import { describe, expect, test } from "bun:test";
-import { toArticleListItemsForTest } from "@modules/articles/read/list/service";
+import {
+  feedCategoryLabelsSql,
+  toArticleListItemsForTest,
+} from "@modules/articles/read/list/service";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
 import { articleListItemSchema } from "@modules/articles/schemas";
+import { feedCategoryAssignments, feedItemCategoryAssignments } from "@kyomi/db";
 
 function rawRow(overrides: Partial<ArticleListRawRow> = {}): ArticleListRawRow {
   return {
@@ -24,6 +28,26 @@ function rawRow(overrides: Partial<ArticleListRawRow> = {}): ArticleListRawRow {
   };
 }
 
+function queryContainsReference(
+  value: unknown,
+  target: unknown,
+  seen = new Set<unknown>(),
+): boolean {
+  if (value === target) {
+    return true;
+  }
+  if (!value || typeof value !== "object" || seen.has(value)) {
+    return false;
+  }
+  seen.add(value);
+  if (Array.isArray(value)) {
+    return value.some((entry) => queryContainsReference(entry, target, seen));
+  }
+  return Object.values(value as Record<string, unknown>).some((entry) =>
+    queryContainsReference(entry, target, seen),
+  );
+}
+
 describe("article list item categories", () => {
   test("maps feed-level category labels onto the DTO", () => {
     const [item] = toArticleListItemsForTest([rawRow({ categories: ["Engineering", "AI"] })]);
@@ -44,5 +68,14 @@ describe("article list item categories", () => {
     // Guards against the API returning categories that get cleaned off the wire because the
     // runtime response schema (not just the TS type) was missing the field.
     expect(articleListItemSchema.properties).toHaveProperty("categories");
+  });
+
+  test("category label SQL reads item-level categories before feed-level fallback", () => {
+    expect(
+      queryContainsReference(feedCategoryLabelsSql, feedItemCategoryAssignments.categoryId),
+    ).toBe(true);
+    expect(queryContainsReference(feedCategoryLabelsSql, feedCategoryAssignments.categoryId)).toBe(
+      true,
+    );
   });
 });

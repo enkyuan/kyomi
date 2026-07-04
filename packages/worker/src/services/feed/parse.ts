@@ -16,6 +16,8 @@ const FEED_XML_PROCESS_ENTITIES: NonNullable<X2jOptions["processEntities"]> = {
   maxExpandedLength: 1_000_000,
   maxEntityCount: 100,
 };
+const MAX_CATEGORY_LABELS_PER_SCOPE = 20;
+const MAX_CATEGORY_LABEL_LENGTH = 120;
 
 function stableUuid(seed: string): string {
   let hash = 0x811c9dc5;
@@ -105,6 +107,63 @@ function toArray<T>(value: T | T[] | null | undefined): T[] {
     return value;
   }
   return value == null ? [] : [value];
+}
+
+function normalizeCategoryLabel(value: string): string | null {
+  const normalized = stripTags(value).replace(/\s+/g, " ").trim();
+  if (!normalized) {
+    return null;
+  }
+  return normalized.length > MAX_CATEGORY_LABEL_LENGTH
+    ? normalized.slice(0, MAX_CATEGORY_LABEL_LENGTH).trim()
+    : normalized;
+}
+
+function collectCategoryLabels(value: unknown, labels: string[]): void {
+  for (const candidate of toArray(value)) {
+    if (typeof candidate === "string") {
+      const label = normalizeCategoryLabel(candidate);
+      if (label) {
+        labels.push(label);
+      }
+      continue;
+    }
+    if (!candidate || typeof candidate !== "object") {
+      continue;
+    }
+
+    const record = candidate as Record<string, unknown>;
+    for (const key of ["#text", "@_text", "@_label", "@_term"]) {
+      const raw = record[key];
+      if (typeof raw === "string") {
+        const label = normalizeCategoryLabel(raw);
+        if (label) {
+          labels.push(label);
+        }
+      }
+    }
+    collectCategoryLabels(record["itunes:category"], labels);
+    collectCategoryLabels(record.category, labels);
+  }
+}
+
+function categoryLabelsFrom(...values: unknown[]): string[] {
+  const labels: string[] = [];
+  for (const value of values) {
+    collectCategoryLabels(value, labels);
+  }
+
+  const seen = new Set<string>();
+  return labels
+    .filter((label) => {
+      const key = label.toLocaleLowerCase();
+      if (seen.has(key)) {
+        return false;
+      }
+      seen.add(key);
+      return true;
+    })
+    .slice(0, MAX_CATEGORY_LABELS_PER_SCOPE);
 }
 
 function pickRssLink(link: unknown, fallback: string): string {
@@ -230,6 +289,7 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
         ...storedContent,
         imageUrl,
         publishedAt,
+        categoryLabels: [],
       },
     ];
   });
@@ -241,6 +301,7 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       link,
       iconUrl: embeddedJsonFeedIconUrl(parsed, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
+      categoryLabels: [],
     },
     items,
   };
@@ -276,6 +337,7 @@ function parseRssDocument(
     );
     const summary = summarizeText(rawText(record.description) ?? storedContent.content);
     const publishedAt = parsePublishedAt(record.pubDate ?? record.isoDate, now);
+    const categoryLabels = categoryLabelsFrom(record.category, record["itunes:category"]);
 
     return [
       {
@@ -288,6 +350,7 @@ function parseRssDocument(
         ...storedContent,
         imageUrl,
         publishedAt,
+        categoryLabels,
       },
     ];
   });
@@ -299,6 +362,7 @@ function parseRssDocument(
       link,
       iconUrl: embeddedRssFeedIconUrl(channel, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
+      categoryLabels: categoryLabelsFrom(channel.category, channel["itunes:category"]),
     },
     items,
   };
@@ -328,6 +392,7 @@ function parseAtomDocument(
     const imageUrl = extractImageUrl(rawText(record.content) ?? rawText(record.summary), itemLink);
     const summary = summarizeText(rawText(record.summary) ?? storedContent.content);
     const publishedAt = parsePublishedAt(record.published ?? record.updated, now);
+    const categoryLabels = categoryLabelsFrom(record.category);
 
     return [
       {
@@ -340,6 +405,7 @@ function parseAtomDocument(
         ...storedContent,
         imageUrl,
         publishedAt,
+        categoryLabels,
       },
     ];
   });
@@ -351,6 +417,7 @@ function parseAtomDocument(
       link,
       iconUrl: embeddedAtomFeedIconUrl(feed, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
+      categoryLabels: categoryLabelsFrom(feed.category),
     },
     items,
   };
