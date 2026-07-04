@@ -1,32 +1,18 @@
-import { feeds } from "../../packages/db/src";
+import { categories, feedCategoryAssignments, feeds } from "../../packages/db/src";
 import { db, pool } from "../../apps/api/src/adapters/db/client";
 import { assertApiDatabaseReady } from "../../apps/api/src/adapters/db/script-preflight";
 import { upsertFeedSearchDocument } from "../../apps/api/src/adapters/search/meili";
 import {
-  assertHttpOrHttpsUrl,
-  normalizeFeedUrl,
-} from "../../apps/api/src/modules/discover/feed/normalize-url";
-
-type CatalogFeedRecord = {
-  feed_url: string;
-  title?: string | null;
-  description?: string | null;
-  link?: string | null;
-};
-
-type ImportStats = {
-  processed: number;
-  imported: number;
-  skipped: number;
-  failed: number;
-};
-
-type NormalizedImportRecord = {
-  canonicalUrl: string;
-  title: string;
-  description: string | null;
-  link: string | null;
-};
+  domainFromUrl,
+  type ImportStats,
+  type NormalizedImportRecord,
+  normalizeImportRecord,
+  parseRecord,
+  reportValidation,
+  toCategorySlug,
+  type ValidationReport,
+  type CatalogFeedRecord,
+} from "./import-core";
 
 function getArgValue(flag: string): string | null {
   const index = process.argv.indexOf(flag);
@@ -41,40 +27,59 @@ function hasFlag(flag: string): boolean {
   return process.argv.includes(flag);
 }
 
-function parseRecord(line: string): CatalogFeedRecord | null {
-  const raw = line.trim();
-  if (!raw) {
-    return null;
+type UpsertResult = {
+  ok: boolean;
+  categoryAssigned: boolean;
+  languageAssigned: boolean;
+};
+
+/** Upsert a `catalog`-provenance category and assign it to the feed. Returns true on assign. */
+async function assignCatalogCategory(feedId: string, label: string): Promise<boolean> {
+  const slug = toCategorySlug(label);
+  if (!slug) {
+    return false;
   }
-  const parsed = JSON.parse(raw) as Partial<CatalogFeedRecord>;
-  if (typeof parsed.feed_url !== "string" || parsed.feed_url.trim().length === 0) {
-    return null;
-  }
-  return {
-    feed_url: parsed.feed_url.trim(),
-    title: typeof parsed.title === "string" ? parsed.title.trim() : null,
-    description: typeof parsed.description === "string" ? parsed.description.trim() : null,
-    link: typeof parsed.link === "string" ? parsed.link.trim() : null,
-  };
-}
-
-function resolveCanonicalUrl(raw: string): string {
-  const asserted = assertHttpOrHttpsUrl(raw);
-  return normalizeFeedUrl(asserted.href);
-}
-
-function normalizeImportRecord(record: CatalogFeedRecord): NormalizedImportRecord {
-  const canonicalUrl = resolveCanonicalUrl(record.feed_url);
-  return {
-    canonicalUrl,
-    title: record.title && record.title.length > 0 ? record.title : canonicalUrl,
-    description: record.description && record.description.length > 0 ? record.description : null,
-    link: record.link && record.link.length > 0 ? record.link : null,
-  };
-}
-
-async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<boolean> {
   const now = new Date();
+  const categoryRows = await db
+    .insert(categories)
+    .values({ id: crypto.randomUUID(), slug, label, provenance: "catalog", createdAt: now, updatedAt: now })
+    .onConflictDoUpdate({ target: categories.slug, set: { updatedAt: now } })
+    .returning({ id: categories.id });
+  const categoryId = categoryRows[0]?.id;
+  if (!categoryId) {
+    return false;
+  }
+  await db
+    .insert(feedCategoryAssignments)
+    .values({
+      id: crypto.randomUUID(),
+      feedId,
+      categoryId,
+      provenance: "catalog",
+      createdAt: now,
+      updatedAt: now,
+    })
+    .onConflictDoUpdate({
+      target: [
+        feedCategoryAssignments.feedId,
+        feedCategoryAssignments.categoryId,
+        feedCategoryAssignments.provenance,
+      ],
+      set: { updatedAt: now },
+    });
+  return true;
+}
+
+async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<UpsertResult> {
+  const now = new Date();
+  const metadata = {
+    catalogSource: record.catalogSource,
+    language: record.language,
+    contentType: record.contentType,
+    qualityScore: record.qualityScore,
+    catalogUpdatedAt: now,
+    metadataProvenance: "catalog",
+  };
   const rows = await db
     .insert(feeds)
     .values({
@@ -83,6 +88,7 @@ async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<boolea
       title: record.title,
       description: record.description,
       link: record.link,
+      ...metadata,
       createdAt: now,
       updatedAt: now,
     })
@@ -92,6 +98,7 @@ async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<boolea
         title: record.title,
         description: record.description,
         link: record.link,
+        ...metadata,
         updatedAt: now,
       },
     })
@@ -101,12 +108,21 @@ async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<boolea
       title: feeds.title,
       description: feeds.description,
       link: feeds.link,
+      sourceKind: feeds.sourceKind,
+      language: feeds.language,
+      contentType: feeds.contentType,
+      qualityScore: feeds.qualityScore,
+      faviconUrl: feeds.faviconUrl,
     });
 
   const upserted = rows[0];
   if (!upserted) {
-    return false;
+    return { ok: false, categoryAssigned: false, languageAssigned: false };
   }
+
+  const categoryAssigned = record.category
+    ? await assignCatalogCategory(upserted.id, record.category)
+    : false;
 
   await upsertFeedSearchDocument({
     id: upserted.id,
@@ -114,9 +130,16 @@ async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<boolea
     title: upserted.title,
     description: upserted.description,
     link: upserted.link,
+    faviconUrl: upserted.faviconUrl,
+    sourceKind: upserted.sourceKind,
+    language: upserted.language,
+    contentType: upserted.contentType,
+    qualityScore: upserted.qualityScore,
+    domain: domainFromUrl(upserted.link ?? upserted.url),
+    categories: record.category ? [toCategorySlug(record.category)].filter(Boolean) : [],
   }).catch(() => undefined);
 
-  return true;
+  return { ok: true, categoryAssigned, languageAssigned: record.language != null };
 }
 
 async function* readLines(filePath: string): AsyncIterable<string> {
@@ -152,8 +175,26 @@ async function* readLines(filePath: string): AsyncIterable<string> {
   }
 }
 
-async function importCatalogFile(inputPath: string, dryRun: boolean): Promise<ImportStats> {
-  const stats: ImportStats = { processed: 0, imported: 0, skipped: 0, failed: 0 };
+export async function importCatalogFile(
+  inputPath: string,
+  dryRun: boolean,
+): Promise<{ stats: ImportStats; validation: ValidationReport; duplicateCanonicalUrls: number }> {
+  const stats: ImportStats = {
+    processed: 0,
+    imported: 0,
+    skipped: 0,
+    failed: 0,
+    categoryAssignments: 0,
+    languageAssignments: 0,
+  };
+  const validation: ValidationReport = {
+    missingTitle: 0,
+    missingSiteUrl: 0,
+    missingLanguage: 0,
+    missingCategory: 0,
+  };
+  const seenCanonicalUrls = new Set<string>();
+  let duplicateCanonicalUrls = 0;
 
   for await (const line of readLines(inputPath)) {
     if (!line.trim()) {
@@ -181,21 +222,39 @@ async function importCatalogFile(inputPath: string, dryRun: boolean): Promise<Im
       continue;
     }
 
+    if (seenCanonicalUrls.has(normalized.canonicalUrl)) {
+      duplicateCanonicalUrls += 1;
+    }
+    seenCanonicalUrls.add(normalized.canonicalUrl);
+    reportValidation(validation, normalized, normalized.title === normalized.canonicalUrl);
+
     if (dryRun) {
       stats.imported += 1;
+      if (normalized.category && toCategorySlug(normalized.category)) {
+        stats.categoryAssignments += 1;
+      }
+      if (normalized.language) {
+        stats.languageAssignments += 1;
+      }
       continue;
     }
 
-    const ok = await upsertCatalogFeed(normalized);
-    if (!ok) {
+    const result = await upsertCatalogFeed(normalized);
+    if (!result.ok) {
       stats.failed += 1;
       continue;
     }
 
     stats.imported += 1;
+    if (result.categoryAssigned) {
+      stats.categoryAssignments += 1;
+    }
+    if (result.languageAssigned) {
+      stats.languageAssignments += 1;
+    }
   }
 
-  return stats;
+  return { stats, validation, duplicateCanonicalUrls };
 }
 
 async function main() {
@@ -211,7 +270,7 @@ async function main() {
       ensureSchema: true,
     });
   }
-  const stats = await importCatalogFile(input, dryRun);
+  const { stats, validation, duplicateCanonicalUrls } = await importCatalogFile(input, dryRun);
 
   console.log(
     JSON.stringify(
@@ -219,6 +278,8 @@ async function main() {
         input,
         dryRun,
         ...stats,
+        duplicateCanonicalUrls,
+        validation,
       },
       null,
       2,
@@ -226,25 +287,27 @@ async function main() {
   );
 }
 
-main()
-  .catch((error: unknown) => {
-    const maybeCause =
-      typeof error === "object" &&
-      error !== null &&
-      "cause" in error &&
-      (error as { cause?: unknown }).cause
-        ? (error as { cause?: unknown }).cause
-        : null;
+if (import.meta.main) {
+  main()
+    .catch((error: unknown) => {
+      const maybeCause =
+        typeof error === "object" &&
+        error !== null &&
+        "cause" in error &&
+        (error as { cause?: unknown }).cause
+          ? (error as { cause?: unknown }).cause
+          : null;
 
-    console.error(
-      "[catalog-import] failed:",
-      error instanceof Error ? error.message : String(error),
-    );
-    if (maybeCause) {
-      console.error("[catalog-import] cause:", maybeCause);
-    }
-    process.exitCode = 1;
-  })
-  .finally(async () => {
-    await pool.end().catch(() => undefined);
-  });
+      console.error(
+        "[catalog-import] failed:",
+        error instanceof Error ? error.message : String(error),
+      );
+      if (maybeCause) {
+        console.error("[catalog-import] cause:", maybeCause);
+      }
+      process.exitCode = 1;
+    })
+    .finally(async () => {
+      await pool.end().catch(() => undefined);
+    });
+}

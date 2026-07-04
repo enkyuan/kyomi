@@ -9,6 +9,12 @@ export type FeedSearchDocument = {
   description: string | null;
   link: string | null;
   faviconUrl?: string | null;
+  sourceKind?: string | null;
+  language?: string | null;
+  categories?: string[];
+  contentType?: string | null;
+  qualityScore?: number | null;
+  domain?: string | null;
 };
 
 function getBaseUrl(): string | null {
@@ -72,12 +78,27 @@ async function doEnsureFeedIndex(): Promise<void> {
 
   const settingsResponse = await meiliFetch(`/indexes/${uid}/settings/searchable-attributes`, {
     method: "PUT",
-    body: JSON.stringify(["title", "url", "description", "link"]),
+    body: JSON.stringify(["title", "url", "description", "link", "domain"]),
   });
 
   if (!settingsResponse.ok) {
     throw new AppError(
       `Meilisearch searchable-attributes update failed (${settingsResponse.status})`,
+      {
+        status: 503,
+        code: "MEILI_SETTINGS_UPDATE_FAILED",
+      },
+    );
+  }
+
+  const filterableResponse = await meiliFetch(`/indexes/${uid}/settings/filterable-attributes`, {
+    method: "PUT",
+    body: JSON.stringify(["sourceKind", "language", "categories", "contentType", "domain"]),
+  });
+
+  if (!filterableResponse.ok) {
+    throw new AppError(
+      `Meilisearch filterable-attributes update failed (${filterableResponse.status})`,
       {
         status: 503,
         code: "MEILI_SETTINGS_UPDATE_FAILED",
