@@ -1,13 +1,13 @@
-# Stage 5: Cleaning
+# stage 5: cleaning
 
-Catalog pipeline stage for correcting enrichment output before final ranking.
+corrects enrichment output before final ranking.
 
-## Goals
+## goals
 
-- Remove or revise noisy LLM popularity scores.
-- Normalize category, tag, language, title, and description fields.
-- Keep only fields that are useful for Kyomi discovery and import.
+- remove or revise noisy LLM popularity scores.
+- normalize category, tag, language, title, and description fields.
+- drop fields that aren't useful for discovery or import.
 
-## Notes
+## notes
 
-Popularity scores need review before they are trusted for ranking. High-scoring outliers should be corrected or sent back through a narrower prompt.
+popularity scores need review before they're trusted for ranking. high-scoring outliers should be corrected or sent back through a narrower prompt.

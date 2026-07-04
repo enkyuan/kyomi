@@ -1,27 +1,27 @@
-# Feedspot Processing
+# feedspot
 
-Feedspot scraper utilities used as one input to the optional catalog pipeline.
+Feedspot scraper. one of the inputs to the catalog pipeline.
 
-## Use
+## use
 
-Run from `packages/catalog`.
+run from `packages/catalog`.
 
 ```bash
 uv run python processing/feedspot/scraper.py [URL]
 ```
 
-If `URL` is omitted, the scraper uses Feedspot's technology RSS list.
+if `URL` is omitted, the scraper uses Feedspot's technology RSS list.
 
-## Output
+## output
 
-The scraper prints a JSON object with:
+a JSON object with:
 
-| Field | Notes |
+| field | notes |
 | --- | --- |
-| `category` | Category inferred from the Feedspot page. |
-| `feeds` | Feed entries with title, feed URL, website URL, description, and follower counts when available. |
+| `category` | category inferred from the Feedspot page. |
+| `feeds` | title, feed URL, website URL, description, and follower counts when available. |
 
-## Notes
+## notes
 
-- Python dependencies are managed by `packages/catalog/pyproject.toml`.
-- Feedspot markup is not an API contract; keep selector changes isolated to the scraper.
+- Python dependencies come from `packages/catalog/pyproject.toml`.
+- Feedspot markup is not an API contract. keep selector changes isolated to the scraper.

@@ -1,55 +1,53 @@
 # @kyomi/catalog
 
-Optional offline Python pipeline for building the seeded RSS feed catalog used by Kyomi discovery.
+offline Python pipeline that builds the seeded RSS feed catalog used by discovery.
 
-This package is not required for normal app development. The web and API apps run without `uv` or catalog sync.
+optional. normal app development runs without `uv` or catalog sync.
 
-## Layout
+## layout
 
 ```text
 processing/
-  feedspot/                  Feedspot scraper utilities.
-  stage-1-merge/             Source merge inputs.
-  stage-2-fetching/          Feed fetching and metadata enrichment.
-  stage-3-favicon-dedupe/   Favicon recovery, DuckDB import, and dedupe.
-  stage-4-llm-enrich/       LLM category, tag, title, and description enrichment.
-  stage-5-cleaning/         Post-enrichment cleanup.
-  stage-6-reranking/        Category ranking adjustments.
-  exports/                  JSONL output consumed by apps/api import scripts.
+  feedspot/                 Feedspot scraper.
+  stage-1-merge/            merge source inputs.
+  stage-2-fetching/         feed fetching and metadata enrichment.
+  stage-3-favicon-dedupe/   favicon recovery, DuckDB import, and dedupe.
+  stage-4-llm-enrich/       LLM enrichment of categories, tags, titles, descriptions.
+  stage-5-cleaning/         post-enrichment cleanup.
+  stage-6-reranking/        category ranking adjustments.
+  exports/                  JSONL output consumed by `apps/api` import scripts.
 ```
 
-## Commands
+## commands
 
-Run from the repository root.
+run from the repository root.
 
-| Command | Purpose |
+| command | purpose |
 | --- | --- |
-| `bun run catalog:install` | Install catalog Python dependencies with `uv`. |
-| `bun run catalog:export` | Export canonical catalog JSONL. |
-| `bun run catalog:import` | Import exported feeds into the app database and search index. |
-| `bun run catalog:smoke` | Verify catalog search returns expected seeded results. |
-| `bun run catalog:sync` | Export, import, and smoke test. |
-| `bun run catalog:sync:local` | Run the local scheduled-sync wrapper. |
-| `bun run --cwd packages/catalog typecheck` | Type-check the Python catalog package. |
+| `bun run catalog:install` | install Python dependencies with `uv`. |
+| `bun run catalog:export` | export canonical catalog JSONL. |
+| `bun run catalog:import` | import exported feeds into the database and search index. |
+| `bun run catalog:smoke` | verify catalog search returns expected seeded results. |
+| `bun run catalog:sync` | export, import, and smoke test in one pass. |
+| `bun run catalog:sync:local` | run the local scheduled-sync wrapper. |
+| `bun run --cwd packages/catalog typecheck` | type-check. |
 
-## Output
+## output
 
-`catalog:export` writes `packages/catalog/processing/exports/catalog-feeds.jsonl`.
+`catalog:export` writes `packages/catalog/processing/exports/catalog-feeds.jsonl`. each record follows this contract:
 
-Each JSONL record uses this contract:
-
-| Field | Required | Notes |
+| field | required | notes |
 | --- | --- | --- |
-| `feed_url` | Yes | Canonical RSS/Atom feed URL. |
-| `title` | No | Display title. |
-| `description` | No | Short source description. |
-| `link` | No | Website URL. |
-| `source` | No | Source dataset name. |
-| `language` | No | Language code when known. |
-| `category` | No | Top-level catalog category. |
+| `feed_url` | yes | canonical RSS/Atom feed URL. |
+| `title` | no | display title. |
+| `description` | no | short source description. |
+| `link` | no | website URL. |
+| `source` | no | source dataset name. |
+| `language` | no | language code when known. |
+| `category` | no | top-level catalog category. |
 
-## Notes
+## notes
 
-- `scripts/catalog/sync.ts` writes logs to `.catalog-sync-logs/` and uses `.catalog-sync.lock` to prevent overlapping local runs.
-- Run `bun run setup:app` before importing into a fresh local database.
-- Keep catalog dependencies isolated here; normal Kyomi setup should not require Poetry, `uv`, or the catalog pipeline.
+- `scripts/catalog/sync.ts` writes logs to `.catalog-sync-logs/` and holds `.catalog-sync.lock` to prevent overlapping local runs.
+- run `bun run setup:app` before importing into a fresh local database.
+- keep catalog dependencies isolated here. a normal kyomi setup should not require Poetry, `uv`, or the pipeline.

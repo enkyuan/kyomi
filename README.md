@@ -1,65 +1,59 @@
-# Kyomi
+# kyomi
 
-Kyomi is a monorepo for the web, API, worker, reader, catalog, and mobile surfaces that power a personal reading inbox.
+a personal reading inbox for RSS.
 
-## Layout
+## layout
 
 ```text
 apps/
-  api/     Bun/Elysia API, auth, feeds, folders, articles, and jobs.
-  mobile/  Native mobile app surface.
-  web/     TanStack Start web app.
+  api/     Bun/Elysia backend.
+  mobile/  react native client.
+  web/     TanStack Start web client.
 packages/
-  catalog/  Offline feed catalog processing.
-  db/       Drizzle schema, migrations, and database tooling.
-  reader/   Shared article rendering primitives.
-  ui/       Shared React UI primitives.
-  worker/   Shared queue, feed ingestion, favicon, and sanitization code.
-tests/       API and web integration suites.
-docker/      Local Postgres, Redis, search, storage, and supporting services.
+  catalog/  offline feed catalog pipeline.
+  db/       Drizzle schema and migrations.
+  reader/   article rendering.
+  ui/       React UI primitives.
+  worker/   queue, ingestion, favicon, sanitization.
+tests/       api and web integration suites.
+docker/      local Postgres, Redis, search, and storage.
 ```
 
-Keep product code inside the owning app or package. Shared runtime code should live in `packages/*`; cross-app tests should mirror the source tree under `tests/`.
+product code lives inside its owning app or package. runtime code shared across apps belongs in `packages/*`. cross-app tests mirror the source tree under `tests/`.
 
-## Setup
-
-Install dependencies with Bun, then start local infrastructure and run migrations:
+## setup
 
 ```sh
 bun install
 bun run bootstrap
 ```
 
-For catalog enrichment and import, use the full setup:
+for catalog enrichment and import, use `bun run bootstrap:full`.
 
-```sh
-bun run bootstrap:full
-```
+env is loaded from `docker/.env` and each app's local `.env`. copy the matching `.env.example` to start.
 
-Env is loaded from `docker/.env` plus app-local `.env` files. Start from the matching `.env.example` files when configuring a new machine.
+## commands
 
-## Commands
+run from the repository root unless noted.
 
-Run from the repository root unless noted otherwise.
-
-| Command | Purpose |
+| command | purpose |
 | --- | --- |
-| `bun run dev` | Start web and API development tasks. |
-| `bun run dev:web` | Start only the web app. |
-| `bun run dev:api` | Follow API, worker, and scheduler Docker logs. |
-| `bun run dev:api:host` | Run API, worker, and scheduler locally with file watching. |
-| `bun run docker:up` | Start local infrastructure. |
-| `bun run docker:down` | Stop local infrastructure. |
-| `bun run db:migrate` | Apply database migrations. |
-| `bun run typecheck` | Type-check all workspaces. |
-| `bun run lint` | Lint all workspaces. |
-| `bun run fmt:check` | Check formatting. |
-| `bun run test` | Run web and API integration tests. |
-| `bun run catalog:sync` | Export, import, and smoke-test the feed catalog. |
+| `bun run dev` | start web and api together. |
+| `bun run dev:web` | start the web app. |
+| `bun run dev:api` | follow api, worker, and scheduler Docker logs. |
+| `bun run dev:api:host` | run api, worker, and scheduler locally with file watching. |
+| `bun run docker:up` | start local infrastructure. |
+| `bun run docker:down` | stop local infrastructure. |
+| `bun run db:migrate` | apply database migrations. |
+| `bun run typecheck` | type-check every workspace. |
+| `bun run lint` | lint every workspace. |
+| `bun run fmt:check` | check formatting. |
+| `bun run test` | run web and api integration tests. |
+| `bun run catalog:sync` | export, import, and smoke-test the feed catalog. |
 
-## Notes
+## notes
 
-- Web UI lives in `apps/web`; shared UI primitives live in `packages/ui`.
-- API processes live in `apps/api`; shared ingestion and queue code lives in `packages/worker`.
-- Database schema lives in `packages/db`.
-- Generated files such as route trees and migrations should be changed through their owning scripts.
+- shared UI primitives live in `packages/ui`; app-specific UI stays in the owning app.
+- shared ingestion and queue code lives in `packages/worker`; the executable api and worker processes live in `apps/api`.
+- database schema lives in `packages/db`.
+- generated files (route trees, migrations) change through their owning scripts, not by hand.
