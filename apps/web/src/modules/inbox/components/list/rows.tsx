@@ -45,13 +45,8 @@ export function SkeletonRows({
     readerFocusMode,
     isCompact: typography.isCompact,
   });
-  const {
-    isCompact,
-    titleLineHeightPx,
-    summaryLineHeightPx,
-    summaryMaxLines,
-    metaFontSizePx,
-  } = typography;
+  const { isCompact, titleLineHeightPx, summaryLineHeightPx, summaryMaxLines, metaFontSizePx } =
+    typography;
   const estimatedRowHeight = getFeedItemRowEstimate({ density, readerFocusMode });
   const skeletonRowCount =
     viewportHeight && viewportHeight > 0
@@ -75,7 +70,9 @@ export function SkeletonRows({
           )}
           <div className={`flex flex-col ${SKELETON_ROW_GUTTER_CLASS} ${sectionClassNames.header}`}>
             <div className="flex min-w-0 items-center justify-between gap-4">
-              <div className={`flex min-w-0 flex-1 items-center ${isCompact ? "gap-2.5" : "gap-3"}`}>
+              <div
+                className={`flex min-w-0 flex-1 items-center ${isCompact ? "gap-2.5" : "gap-3"}`}
+              >
                 {showFavicons ? <Skeleton className="size-5.5 shrink-0 rounded-sm" /> : null}
                 <Skeleton
                   className="w-28 rounded"
