@@ -7,11 +7,11 @@
     "build": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- vite build",
     "start": "bun .output/server/index.mjs",
     "preview": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- vite preview",
-    "fmt": "bunx oxfmt src vite.config.ts sw.plugin.ts",
-    "fmt:check": "bunx oxfmt --check src vite.config.ts sw.plugin.ts",
-    "lint": "bunx oxlint src vite.config.ts sw.plugin.ts",
-    "lint:fix": "bunx oxlint --fix src vite.config.ts sw.plugin.ts",
-    "typecheck": "bunx tsgo -p tsconfig.json --noEmit"
+    "fmt": "oxfmt src vite.config.ts sw.plugin.ts",
+    "fmt:check": "oxfmt --check src vite.config.ts sw.plugin.ts",
+    "lint": "oxlint src vite.config.ts sw.plugin.ts",
+    "lint:fix": "oxlint --fix src vite.config.ts sw.plugin.ts",
+    "typecheck": "tsgo -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "@chenglou/pretext": "^0.0.4",
