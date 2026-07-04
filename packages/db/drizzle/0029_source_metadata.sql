@@ -98,6 +98,6 @@ CREATE INDEX "feed_item_category_assignments_category_id_idx" ON "feed_item_cate
 CREATE UNIQUE INDEX "feed_item_tag_assignments_item_slug_provenance_unique" ON "feed_item_tag_assignments" USING btree ("feed_item_id","slug","provenance");--> statement-breakpoint
 CREATE INDEX "feed_item_tag_assignments_slug_idx" ON "feed_item_tag_assignments" USING btree ("slug");--> statement-breakpoint
 CREATE INDEX "source_accounts_source_id_idx" ON "source_accounts" USING btree ("source_id");--> statement-breakpoint
-CREATE UNIQUE INDEX "sources_kind_external_id_unique" ON "sources" USING btree ("kind","external_id") WHERE "sources"."external_id" IS NOT NULL;--> statement-breakpoint
+CREATE UNIQUE INDEX "sources_kind_external_id_unique" ON "sources" USING btree ("kind","external_id") WHERE external_id IS NOT NULL;--> statement-breakpoint
 CREATE INDEX "sources_domain_idx" ON "sources" USING btree ("domain");--> statement-breakpoint
 CREATE INDEX "feeds_source_kind_idx" ON "feeds" USING btree ("source_kind","id");

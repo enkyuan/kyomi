@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { toArticleListItemsForTest } from "@modules/articles/read/list/service";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
+import { articleListItemSchema } from "@modules/articles/schemas";
 
 function rawRow(overrides: Partial<ArticleListRawRow> = {}): ArticleListRawRow {
   return {
@@ -37,5 +38,11 @@ describe("article list item categories", () => {
   test("decodes HTML entities in category labels", () => {
     const [item] = toArticleListItemsForTest([rawRow({ categories: ["Arts &amp; Culture"] })]);
     expect(item?.categories).toEqual(["Arts & Culture"]);
+  });
+
+  test("response schema includes categories so Elysia does not strip it", () => {
+    // Guards against the API returning categories that get cleaned off the wire because the
+    // runtime response schema (not just the TS type) was missing the field.
+    expect(articleListItemSchema.properties).toHaveProperty("categories");
   });
 });

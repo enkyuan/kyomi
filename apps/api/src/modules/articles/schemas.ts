@@ -136,6 +136,7 @@ export const articleDetailSchema = t.Object({
   isRead: t.Boolean(),
   isSaved: t.Boolean(),
   articleType: t.Union([t.Literal("feed"), t.Literal("clip")]),
+  categories: t.Array(t.String()),
   reader: t.Object({
     activeMode: t.Union([t.Literal("original"), t.Literal("extracted")]),
     selected: readerContentContractSchema,
@@ -180,6 +181,7 @@ export const articleListItemSchema = t.Object({
   isRead: t.Boolean(),
   isSaved: t.Boolean(),
   articleType: t.Union([t.Literal("feed"), t.Literal("clip")]),
+  categories: t.Array(t.String()),
 });
 
 export const cursorListResponseSchema = t.Object({

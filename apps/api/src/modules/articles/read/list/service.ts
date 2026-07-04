@@ -55,7 +55,7 @@ function baseJoins(userId: string) {
  * text[]. Kept as a scalar subquery so the list query stays a single round trip (no N+1).
  * Deterministic ordering (label, then id) keeps the chosen two chips stable across requests.
  */
-const feedCategoryLabelsSql = sql<string[]>`(
+export const feedCategoryLabelsSql = sql<string[]>`(
   SELECT COALESCE(array_agg(fc.label ORDER BY fc.label, fc.id), ARRAY[]::text[])
   FROM (
     SELECT ${categories.label} AS label, ${categories.id} AS id

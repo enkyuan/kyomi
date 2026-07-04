@@ -34,7 +34,9 @@ export const sources = pgTable(
   (table) => [
     uniqueIndex("sources_kind_external_id_unique")
       .on(table.kind, table.externalId)
-      .where(sql`${table.externalId} IS NOT NULL`),
+      // Unqualified column in the predicate: Postgres rejects table-qualified refs in
+      // CREATE INDEX ... WHERE, and it matches the other partial-index migrations.
+      .where(sql`external_id IS NOT NULL`),
     index("sources_domain_idx").on(table.domain),
   ],
 );
