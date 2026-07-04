@@ -6,16 +6,24 @@ import {
   resolvePersistedFeedFaviconUrl,
   tryFetchImageIfHostSafe,
 } from "../favicon";
+import {
+  classifyFeedCategories,
+  classifyFeedItemCategories,
+  isMixedFeedHost,
+  type InferredCategoryLabel,
+} from "./classifier";
 import { fetchArticleEnrichment } from "./enrich";
 import { fetchFeedDocument } from "./fetch";
 import { parseFeedDocument } from "./parse";
 import { syncFeedToSearch } from "./search";
-import { syncParsedFeedCategories } from "./categories";
+import { syncInferredFeedCategories, syncParsedFeedCategories } from "./categories";
 import { summarizeText } from "../../lib/feed-text";
 import type {
   FeedIngestDatabase,
+  FeedMetadata,
   FeedRefreshResult,
   HostRateLimiter,
+  ParsedFeedDocument,
   ParsedFeedItem,
   SearchSyncConfig,
 } from "./types";
@@ -70,6 +78,69 @@ function shouldResolveFavicon({
   return (
     !currentUrl || linkChanged || faviconSourceRank(currentSource) < faviconSourceRank("html_link")
   );
+}
+
+/**
+ * Classifies feed-level categories when the parsed document has no explicit RSS/Atom/JSON
+ * Feed category tags. Feed-level classification does not depend on item content, so it can
+ * run before article enrichment.
+ */
+function classifyFeedLevelCategories(input: {
+  feed: { url: string; link: string | null; sourceKind: string | null };
+  parsed: ParsedFeedDocument;
+}): InferredCategoryLabel[] {
+  if (input.parsed.metadata.categoryLabels.length > 0) {
+    return [];
+  }
+  return classifyFeedCategories({
+    feedTitle: input.parsed.metadata.title,
+    feedDescription: input.parsed.metadata.description,
+    feedUrl: input.parsed.metadata.canonicalUrl || input.feed.url,
+    feedSiteUrl: input.parsed.metadata.link ?? input.feed.link,
+    sourceKind: input.feed.sourceKind,
+  }).categories;
+}
+
+function isMixedFeed(input: {
+  feed: { url: string; link: string | null };
+  parsed: ParsedFeedDocument;
+}): boolean {
+  return (
+    isMixedFeedHost(input.parsed.metadata.canonicalUrl) ||
+    isMixedFeedHost(input.parsed.metadata.link) ||
+    isMixedFeedHost(input.feed.url) ||
+    isMixedFeedHost(input.feed.link)
+  );
+}
+
+/**
+ * Classifies item-level categories, only on known mixed/aggregator feeds (e.g. Hacker News)
+ * so single-topic feeds do not get noisy per-item labels. Must run after article enrichment
+ * so items with a thin/empty RSS summary are scored against the fetched article text instead
+ * of an empty string.
+ */
+function classifyItemLevelCategories(input: {
+  feed: { url: string; link: string | null; sourceKind: string | null };
+  parsed: { metadata: FeedMetadata };
+  mixedFeed: boolean;
+  items: ParsedFeedItem[];
+}): ParsedFeedItem[] {
+  return input.items.map((item) => {
+    if (item.categoryLabels.length > 0 || !input.mixedFeed) {
+      return { ...item, inferredCategoryLabels: [] };
+    }
+    const itemClassification = classifyFeedItemCategories({
+      feedTitle: input.parsed.metadata.title,
+      feedDescription: input.parsed.metadata.description,
+      feedUrl: input.parsed.metadata.canonicalUrl || input.feed.url,
+      feedSiteUrl: input.parsed.metadata.link ?? input.feed.link,
+      sourceKind: input.feed.sourceKind,
+      itemTitle: item.title,
+      itemSummary: item.summary ?? item.contentText,
+      itemUrl: item.link,
+    });
+    return { ...item, inferredCategoryLabels: itemClassification.categories };
+  });
 }
 
 async function tryResolveFaviconMetadata(
@@ -137,6 +208,7 @@ export async function runFeedRefresh(
         id: feeds.id,
         url: feeds.url,
         link: feeds.link,
+        sourceKind: feeds.sourceKind,
         faviconUrl: feeds.faviconUrl,
         faviconSource: feeds.faviconSource,
         etag: feeds.etag,
@@ -234,7 +306,16 @@ export async function runFeedRefresh(
       // Ingestion owns canonical URL generation and in-memory dedupe before DB upsert.
       deduped.set(item.canonicalUrl, item);
     }
-    const items = Array.from(deduped.values());
+    const feedForClassification = { url: feed.url, link: feed.link, sourceKind: feed.sourceKind };
+    const feedCategories = classifyFeedLevelCategories({
+      feed: feedForClassification,
+      parsed: { metadata: parsed.metadata, items: [] },
+    });
+    const mixedFeed = isMixedFeed({
+      feed: feedForClassification,
+      parsed: { metadata: parsed.metadata, items: [] },
+    });
+    let items = Array.from(deduped.values());
     const enrichArticles = options?.enrichArticles ?? true;
     if (enrichArticles) {
       const enrichmentCandidates = items
@@ -264,6 +345,14 @@ export async function runFeedRefresh(
         );
       }
     }
+    // Item-level classification runs after enrichment so items with a thin/empty RSS summary
+    // are scored against the fetched article text instead of an empty string.
+    items = classifyItemLevelCategories({
+      feed: feedForClassification,
+      parsed: { metadata: parsed.metadata },
+      mixedFeed,
+      items,
+    });
 
     const prevLink = feed.link ?? null;
     const nextLink = parsed.metadata.link ?? null;
@@ -363,6 +452,16 @@ export async function runFeedRefresh(
         {
           feedId: feed.id,
           feedLabels: parsed.metadata.categoryLabels,
+          items,
+        },
+        now,
+      );
+
+      await syncInferredFeedCategories(
+        tx,
+        {
+          feedId: feed.id,
+          feedCategories,
           items,
         },
         now,

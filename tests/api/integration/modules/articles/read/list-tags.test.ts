@@ -54,15 +54,17 @@ describe("article list item categories", () => {
     expect(articleListItemSchema.properties).toHaveProperty("categories");
   });
 
-  test("category label SQL reads item-level categories before feed-level fallback", () => {
+  test("category label SQL ranks explicit item labels before classifier fallbacks", () => {
     const sql = renderSql(feedCategoryLabelsSql);
-    // Reads both assignment sources...
+
     expect(sql).toContain('"feed_item_category_assignments"');
     expect(sql).toContain('"feed_category_assignments"');
-    // ...and ranks item-level (0) ahead of feed-level (1) so item categories win.
-    const itemRank = sql.indexOf("0 AS source_rank");
-    const feedRank = sql.indexOf("1 AS source_rank");
-    expect(itemRank).toBeGreaterThanOrEqual(0);
-    expect(feedRank).toBeGreaterThan(itemRank);
+    expect(sql).toContain("= 'classifier'");
+
+    // Ranks: 0 explicit item, 1 classifier item, 2 explicit feed, 3 classifier feed.
+    const itemExplicit = sql.indexOf("THEN 1 ELSE 0 END");
+    const feedExplicit = sql.indexOf("THEN 3 ELSE 2 END");
+    expect(itemExplicit).toBeGreaterThanOrEqual(0);
+    expect(feedExplicit).toBeGreaterThan(itemExplicit);
   });
 });

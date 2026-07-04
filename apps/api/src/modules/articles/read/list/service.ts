@@ -52,20 +52,25 @@ function baseJoins(userId: string) {
 }
 
 /**
- * Correlated subquery yielding up to two category labels per feed item, as a text[]. Item-level
- * categories win over feed-level fallbacks, and the scalar subquery keeps the list query a
- * single round trip (no N+1). Deterministic ordering keeps the chosen two chips stable.
+ * Correlated subquery yielding up to two category labels per feed item, as a text[]. Ranks
+ * explicit item labels first, then classifier item labels, then explicit feed labels, then
+ * classifier feed fallbacks, so deterministic inferred categories never hide a more specific
+ * explicit source. The scalar subquery keeps the list query a single round trip (no N+1).
  */
 export const feedCategoryLabelsSql = sql<string[]>`(
   SELECT COALESCE(array_agg(fc.label ORDER BY fc.source_rank, fc.label, fc.id), ARRAY[]::text[])
   FROM (
     SELECT ${categories.label} AS label, ${categories.id} AS id, min(category_sources.source_rank) AS source_rank
     FROM (
-      SELECT ${feedItemCategoryAssignments.categoryId} AS category_id, 0 AS source_rank
+      SELECT
+        ${feedItemCategoryAssignments.categoryId} AS category_id,
+        CASE WHEN ${feedItemCategoryAssignments.provenance} = 'classifier' THEN 1 ELSE 0 END AS source_rank
       FROM ${feedItemCategoryAssignments}
       WHERE ${feedItemCategoryAssignments.feedItemId} = ${feedItems.id}
       UNION ALL
-      SELECT ${feedCategoryAssignments.categoryId} AS category_id, 1 AS source_rank
+      SELECT
+        ${feedCategoryAssignments.categoryId} AS category_id,
+        CASE WHEN ${feedCategoryAssignments.provenance} = 'classifier' THEN 3 ELSE 2 END AS source_rank
       FROM ${feedCategoryAssignments}
       WHERE ${feedCategoryAssignments.feedId} = ${feedItems.feedId}
     ) AS category_sources

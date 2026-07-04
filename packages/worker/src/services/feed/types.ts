@@ -1,5 +1,6 @@
 import type { drizzle } from "drizzle-orm/node-postgres";
 import type * as schema from "@kyomi/db";
+import type { InferredCategoryLabel } from "./classifier";
 
 export type FeedRefreshResult = {
   ok: boolean;
@@ -47,6 +48,7 @@ export type ParsedFeedItem = {
   imageUrl: string | null;
   publishedAt: Date;
   categoryLabels: string[];
+  inferredCategoryLabels?: InferredCategoryLabel[];
 };
 
 export type ParsedFeedDocument = {
