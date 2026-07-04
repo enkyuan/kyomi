@@ -8,6 +8,7 @@ import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { ItemToolbarMenuItem } from "./menu-item";
 
 const TOOLBAR_ICON_CLASS = "size-5";
+const TOOLBAR_TOOLTIP_SIDE_OFFSET = 6;
 
 export function ItemToolbarMenu({
   onHide,
@@ -44,7 +45,7 @@ export function ItemToolbarMenu({
             />
           }
         />
-        <TooltipPopup sideOffset={8}>More</TooltipPopup>
+        <TooltipPopup sideOffset={TOOLBAR_TOOLTIP_SIDE_OFFSET}>More</TooltipPopup>
       </Tooltip>
       <MenuPopup align="end" sideOffset={8} className="min-w-48 rounded-xl before:rounded-[11px]">
         <ItemToolbarMenuItem label="Open source" onClick={onOpenSource}>

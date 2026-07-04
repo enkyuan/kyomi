@@ -9,6 +9,7 @@ import { useFeedback } from "@hooks/use-feedback";
 import { cn } from "@kyomi/ui/lib/utils";
 
 const TOOLBAR_ICON_CLASS = "size-5";
+const TOOLBAR_TOOLTIP_SIDE_OFFSET = 6;
 
 export function ItemToolbarButton({
   label,
@@ -64,7 +65,7 @@ export function ItemToolbarButton({
           </ToolbarButton>
         }
       />
-      <TooltipPopup sideOffset={8}>{label}</TooltipPopup>
+      <TooltipPopup sideOffset={TOOLBAR_TOOLTIP_SIDE_OFFSET}>{label}</TooltipPopup>
     </Tooltip>
   );
 }
