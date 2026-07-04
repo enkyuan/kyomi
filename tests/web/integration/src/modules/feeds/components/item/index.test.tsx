@@ -169,7 +169,7 @@ describe("inbox item toolbar", () => {
           title: "Article saved",
           type: "success",
           timeout: 1800,
-          data: { tooltipStyle: true },
+          data: { groupKey: "article.saved-state", tooltipStyle: true },
           positionerProps: expect.objectContaining({
             anchor: button,
             side: "top",
@@ -201,7 +201,7 @@ describe("inbox item toolbar", () => {
           title: "Article unsaved",
           type: "info",
           timeout: 1800,
-          data: { tooltipStyle: true },
+          data: { groupKey: "article.saved-state", tooltipStyle: true },
           positionerProps: expect.objectContaining({
             anchor: button,
             side: "top",
