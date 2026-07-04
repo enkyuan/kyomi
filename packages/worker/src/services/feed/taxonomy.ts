@@ -1,6 +1,16 @@
 import { MISCELLANEOUS_CATEGORY_LABEL } from "@kyomi/db";
 
 export const CATEGORY_CLASSIFIER_PROVENANCE = "classifier";
+
+// Stamped onto every classifier-produced category assignment row so a future re-classify
+// pass can pick out stale rows (e.g. after the taxonomy adds a category, or when the
+// embedding classifier lands and rows produced by the keyword model need refreshing).
+// Bump `KEYWORD_CLASSIFIER_MODEL_ID` when the classifier's scoring logic changes in a way
+// that could yield different labels for identical inputs; bump `CLASSIFIER_TAXONOMY_VERSION`
+// when a category is added/removed/renamed or when keyword lists gain/lose entries that
+// could shift outputs.
+export const KEYWORD_CLASSIFIER_MODEL_ID = "keyword-v1";
+export const CLASSIFIER_TAXONOMY_VERSION = "v1";
 export { MISCELLANEOUS_CATEGORY_LABEL };
 
 export type CategoryTaxonomyEntry = {

@@ -85,7 +85,14 @@ export const categories = pgTable(
   ],
 );
 
-/** Feed-level category assignment with provenance and optional confidence. */
+/**
+ * Feed-level category assignment with provenance and optional confidence.
+ *
+ * `model_id` / `taxonomy_version` are populated for classifier-produced rows so a future
+ * re-classify pass (adding a new classifier, bumping the taxonomy) can pick out stale rows
+ * without diffing full row contents. They are NULL for explicit-source rows
+ * (feed/catalog/user/ai/connector) where "which model produced this" has no meaning.
+ */
 export const feedCategoryAssignments = pgTable(
   "feed_category_assignments",
   {
@@ -98,6 +105,8 @@ export const feedCategoryAssignments = pgTable(
       .references(() => categories.id, { onDelete: "cascade" }),
     provenance: text("provenance").notNull(),
     confidence: doublePrecision("confidence"),
+    modelId: text("model_id"),
+    taxonomyVersion: text("taxonomy_version"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
@@ -113,7 +122,8 @@ export const feedCategoryAssignments = pgTable(
 
 /**
  * Article-level category assignment, used when a feed item has stronger category metadata
- * than its parent feed.
+ * than its parent feed. See `feedCategoryAssignments` for the meaning of `model_id` /
+ * `taxonomy_version`.
  */
 export const feedItemCategoryAssignments = pgTable(
   "feed_item_category_assignments",
@@ -127,6 +137,8 @@ export const feedItemCategoryAssignments = pgTable(
       .references(() => categories.id, { onDelete: "cascade" }),
     provenance: text("provenance").notNull(),
     confidence: doublePrecision("confidence"),
+    modelId: text("model_id"),
+    taxonomyVersion: text("taxonomy_version"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
