@@ -1,11 +1,11 @@
 import { describe, expect, test } from "bun:test";
+import { PgDialect } from "drizzle-orm/pg-core";
 import {
   feedCategoryLabelsSql,
   toArticleListItemsForTest,
 } from "@modules/articles/read/list/service";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
 import { articleListItemSchema } from "@modules/articles/schemas";
-import { feedCategoryAssignments, feedItemCategoryAssignments } from "@kyomi/db";
 
 function rawRow(overrides: Partial<ArticleListRawRow> = {}): ArticleListRawRow {
   return {
@@ -28,24 +28,8 @@ function rawRow(overrides: Partial<ArticleListRawRow> = {}): ArticleListRawRow {
   };
 }
 
-function queryContainsReference(
-  value: unknown,
-  target: unknown,
-  seen = new Set<unknown>(),
-): boolean {
-  if (value === target) {
-    return true;
-  }
-  if (!value || typeof value !== "object" || seen.has(value)) {
-    return false;
-  }
-  seen.add(value);
-  if (Array.isArray(value)) {
-    return value.some((entry) => queryContainsReference(entry, target, seen));
-  }
-  return Object.values(value as Record<string, unknown>).some((entry) =>
-    queryContainsReference(entry, target, seen),
-  );
+function renderSql(fragment: Parameters<PgDialect["sqlToQuery"]>[0]): string {
+  return new PgDialect().sqlToQuery(fragment).sql;
 }
 
 describe("article list item categories", () => {
@@ -71,11 +55,14 @@ describe("article list item categories", () => {
   });
 
   test("category label SQL reads item-level categories before feed-level fallback", () => {
-    expect(
-      queryContainsReference(feedCategoryLabelsSql, feedItemCategoryAssignments.categoryId),
-    ).toBe(true);
-    expect(queryContainsReference(feedCategoryLabelsSql, feedCategoryAssignments.categoryId)).toBe(
-      true,
-    );
+    const sql = renderSql(feedCategoryLabelsSql);
+    // Reads both assignment sources...
+    expect(sql).toContain('"feed_item_category_assignments"');
+    expect(sql).toContain('"feed_category_assignments"');
+    // ...and ranks item-level (0) ahead of feed-level (1) so item categories win.
+    const itemRank = sql.indexOf("0 AS source_rank");
+    const feedRank = sql.indexOf("1 AS source_rank");
+    expect(itemRank).toBeGreaterThanOrEqual(0);
+    expect(feedRank).toBeGreaterThan(itemRank);
   });
 });
