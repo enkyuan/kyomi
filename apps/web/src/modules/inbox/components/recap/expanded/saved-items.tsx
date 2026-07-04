@@ -21,8 +21,8 @@ export function ExpandedSavedItems({
     return (
       <div className="flex h-full min-h-0">
         <SectionEmpty
-          title="No saved items"
-          description="Saved posts and clips will appear here."
+          title="Nothing to revisit yet"
+          description="Older saved posts and clips will surface here after they've been waiting a while."
           icon={<BookmarkFill />}
         />
       </div>
