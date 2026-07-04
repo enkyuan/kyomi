@@ -1,4 +1,4 @@
-name: Delivery
+name: delivery / publish
 
 on:
   push:
@@ -25,7 +25,7 @@ env:
 
 jobs:
   verify:
-    name: Delivery Verification
+    name: verify
     runs-on: ubuntu-latest
     timeout-minutes: 35
     services:
@@ -93,7 +93,7 @@ jobs:
           done
 
   publish:
-    name: Publish ${{ matrix.package }} Package
+    name: ${{ matrix.package }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     needs:
