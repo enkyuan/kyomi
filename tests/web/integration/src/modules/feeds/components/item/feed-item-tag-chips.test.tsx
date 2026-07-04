@@ -1,0 +1,106 @@
+import { render, screen } from "@testing-library/react";
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
+import { Item } from "@modules/feeds/components/item";
+import type { InboxItem } from "@modules/inbox/lib/articles/index";
+
+vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
+  useInboxItemStateMutation: () => ({ mutate: vi.fn(), mutateAsync: vi.fn() }),
+}));
+
+vi.mock("@modules/inbox/lib/articles/index", () => ({
+  reportBrokenArticle: vi.fn(),
+}));
+
+vi.mock("@kyomi/ui/toast", () => ({
+  toastManager: { add: vi.fn(), update: vi.fn() },
+}));
+
+vi.mock("@hooks/use-pretext", () => ({
+  usePretextLayout: () => ({ ref: { current: null }, fittedWidth: undefined, maxWidth: 640 }),
+}));
+
+const baseItem: InboxItem = {
+  id: "item-1",
+  title: "Category chip row",
+  summary: "A short summary for the inbox row.",
+  link: "https://example.com/article",
+  publishedAt: "2026-07-01T00:00:00.000Z",
+  feedFaviconUrl: null,
+  feedUrl: "https://example.com/feed.xml",
+  feedSiteUrl: "https://example.com",
+  feedTitle: "Example Feed",
+  articleType: "feed",
+  isRead: false,
+  isSaved: false,
+  categories: [],
+};
+
+function renderItem(rowItem: InboxItem) {
+  return render(
+    <Item
+      filter="all"
+      item={rowItem}
+      isSelected={false}
+      isFirst
+      showBottomSeparator={false}
+      containerWidth={640}
+      density="comfortable"
+      fontSizePx={16}
+      showFavicons={false}
+      timestampDisplay="absolute"
+      timestampHourCycle="12h"
+      onSelect={vi.fn()}
+    />,
+  );
+}
+
+describe("feed item category chips", () => {
+  beforeEach(() => {
+    vi.stubGlobal(
+      "ResizeObserver",
+      class ResizeObserver {
+        observe() {}
+        unobserve() {}
+        disconnect() {}
+      },
+    );
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+    vi.unstubAllGlobals();
+  });
+
+  test("renders no chips when there are no categories", () => {
+    renderItem(baseItem);
+    expect(screen.queryByText("Engineering")).toBeNull();
+    expect(screen.queryByText("Saved")).toBeNull();
+  });
+
+  test("renders a single category chip", () => {
+    renderItem({ ...baseItem, categories: ["Engineering"] });
+    expect(screen.getByText("Engineering")).toBeTruthy();
+  });
+
+  test("renders at most two chips and summarizes overflow with +N", () => {
+    renderItem({ ...baseItem, categories: ["Engineering", "AI", "Design", "Science"] });
+    expect(screen.getByText("Engineering")).toBeTruthy();
+    expect(screen.getByText("AI")).toBeTruthy();
+    expect(screen.queryByText("Design")).toBeNull();
+    const overflow = screen.getByText("+2");
+    expect(overflow).toBeTruthy();
+    expect(overflow.getAttribute("aria-label")).toContain("Design");
+    expect(overflow.getAttribute("aria-label")).toContain("Science");
+  });
+
+  test("shows the saved chip alongside category chips", () => {
+    renderItem({ ...baseItem, isSaved: true, categories: ["Engineering"] });
+    expect(screen.getByText("Saved")).toBeTruthy();
+    expect(screen.getByText("Engineering")).toBeTruthy();
+  });
+
+  test("keeps the inline toolbar present with chips rendered", () => {
+    renderItem({ ...baseItem, categories: ["Engineering"] });
+    expect(screen.getByRole("button", { name: "More" })).toBeTruthy();
+  });
+});

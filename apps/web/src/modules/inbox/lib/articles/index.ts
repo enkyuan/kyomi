@@ -52,6 +52,7 @@ export type InboxItem = {
   articleType: "feed" | "clip";
   isRead: boolean;
   isSaved: boolean;
+  categories: string[];
 };
 
 type CursorListResponse = {
@@ -124,6 +125,7 @@ function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
     articleType: item.articleType,
     isRead: item.isRead,
     isSaved: item.isSaved,
+    categories: item.categories,
   };
 }
 

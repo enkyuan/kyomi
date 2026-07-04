@@ -124,6 +124,7 @@ async function getFeedArticleDetailForUser(
     isRead: r.isRead,
     isSaved: Boolean(r.isSaved),
     articleType: "feed",
+    categories: [],
     reader,
   };
 }

@@ -1,5 +1,12 @@
 import type { db } from "@adapters/db/client";
-import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
+import {
+  categories,
+  feedCategoryAssignments,
+  feedItemUserState,
+  feedItems,
+  feedSubscriptions,
+  feeds,
+} from "@kyomi/db";
 import { and, asc, desc, eq, gt, gte, ilike, lt, or, sql, type SQL } from "drizzle-orm";
 import { logger } from "@adapters/logger";
 import type { ArticleSort } from "@modules/articles/query";
@@ -42,6 +49,23 @@ function baseJoins(userId: string) {
     ),
   };
 }
+
+/**
+ * Correlated subquery yielding up to two feed-level category labels per feed item, as a
+ * text[]. Kept as a scalar subquery so the list query stays a single round trip (no N+1).
+ * Deterministic ordering (label, then id) keeps the chosen two chips stable across requests.
+ */
+const feedCategoryLabelsSql = sql<string[]>`(
+  SELECT COALESCE(array_agg(fc.label ORDER BY fc.label, fc.id), ARRAY[]::text[])
+  FROM (
+    SELECT ${categories.label} AS label, ${categories.id} AS id
+    FROM ${feedCategoryAssignments}
+    INNER JOIN ${categories} ON ${categories.id} = ${feedCategoryAssignments.categoryId}
+    WHERE ${feedCategoryAssignments.feedId} = ${feedItems.feedId}
+    ORDER BY ${categories.label}, ${categories.id}
+    LIMIT 2
+  ) AS fc
+)`;
 
 function normalizeLimit(limit: number): number {
   return Math.min(Math.max(limit, 1), 200);
@@ -178,8 +202,11 @@ function toArticleListItems(page: ArticleListRawRow[]): ArticleListItemDto[] {
     isRead: r.isRead,
     isSaved: r.isSaved,
     articleType: "feed" as const,
+    categories: r.categories.map((label) => decodeText(label)),
   }));
 }
+
+export const toArticleListItemsForTest = toArticleListItems;
 
 export async function listArticlesForUser(
   database: DB,
@@ -420,6 +447,7 @@ async function listArticleRows(
       isRead: articleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
       hiddenAt: feedItemUserState.hiddenAt,
+      categories: feedCategoryLabelsSql,
     })
     .from(feedItems)
     .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
@@ -469,6 +497,7 @@ async function listGlobalArticleRows(
       isRead: globalArticleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
       hiddenAt: feedItemUserState.hiddenAt,
+      categories: feedCategoryLabelsSql,
     })
     .from(feedItems)
     .innerJoin(feeds, eq(feedItems.feedId, feeds.id))

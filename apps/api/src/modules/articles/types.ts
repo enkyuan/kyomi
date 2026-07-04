@@ -18,6 +18,8 @@ export type ArticleListItemDto = {
   isRead: boolean;
   isSaved: boolean;
   articleType: "feed" | "clip";
+  /** Feed-level category labels for footer chips (currently up to 2, catalog-provenance). */
+  categories: string[];
 };
 
 export type ArticlesCursorListResponseDto = {

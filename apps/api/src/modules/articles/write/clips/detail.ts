@@ -27,6 +27,7 @@ function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemD
     isRead: row.isRead,
     isSaved: row.isSaved,
     articleType: "clip",
+    categories: [],
   };
 }
 

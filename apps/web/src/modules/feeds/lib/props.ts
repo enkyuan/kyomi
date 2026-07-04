@@ -17,6 +17,10 @@ export type Props = {
   onSelect: (item: InboxItem) => void;
 };
 
+function areStringArraysEqual(a: string[], b: string[]) {
+  return a.length === b.length && a.every((value, index) => value === b[index]);
+}
+
 function areItemsEqual(a: InboxItem, b: InboxItem) {
   return (
     a.id === b.id &&
@@ -29,7 +33,8 @@ function areItemsEqual(a: InboxItem, b: InboxItem) {
     a.feedSiteUrl === b.feedSiteUrl &&
     a.feedTitle === b.feedTitle &&
     a.articleType === b.articleType &&
-    a.isSaved === b.isSaved
+    a.isSaved === b.isSaved &&
+    areStringArraysEqual(a.categories, b.categories)
   );
 }
 

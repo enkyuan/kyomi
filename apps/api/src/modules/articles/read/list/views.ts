@@ -261,6 +261,7 @@ function recentFeedRowToItem(row: {
     isRead: row.isRead,
     isSaved: row.isSaved,
     articleType: "feed",
+    categories: [],
     lastViewedAt: row.lastViewedAt ?? row.publishedAt,
   };
 }
@@ -280,6 +281,7 @@ function recentClipRowToItem(row: typeof articleClips.$inferSelect): RecentlyVie
     isRead: row.isRead,
     isSaved: row.isSaved,
     articleType: "clip",
+    categories: [],
     lastViewedAt: row.lastViewedAt ?? row.createdAt,
   };
 }

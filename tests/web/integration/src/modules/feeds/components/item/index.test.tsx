@@ -48,6 +48,7 @@ const item: InboxItem = {
   articleType: "feed",
   isRead: false,
   isSaved: false,
+  categories: [],
 };
 
 function renderItem({ onSelect = vi.fn(), rowItem = item } = {}) {

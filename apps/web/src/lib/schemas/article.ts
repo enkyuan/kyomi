@@ -30,6 +30,10 @@ const articleListItemSchema = z.object({
   isRead: z.boolean(),
   isSaved: z.boolean(),
   articleType: articleTypeSchema,
+  categories: z
+    .array(z.string())
+    .optional()
+    .transform((value) => value ?? []),
 });
 
 export const cursorListResponseSchema = z.object({
