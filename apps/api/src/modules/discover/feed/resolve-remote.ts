@@ -131,12 +131,7 @@ async function handleFailedFeedFetch(
   }
 
   if (fetched.status === 404) {
-    const baseFallback = await tryBaseUrlFallbackOn404(
-      url,
-      visitedUrls,
-      ignoreTlsError,
-      context,
-    );
+    const baseFallback = await tryBaseUrlFallbackOn404(url, visitedUrls, ignoreTlsError, context);
     if (baseFallback) {
       return baseFallback;
     }

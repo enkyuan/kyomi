@@ -203,10 +203,7 @@ describe("runFeedRefresh HTML autodiscovery", () => {
   });
 
   test.each([
-    [
-      "login_html",
-      "<!doctype html><html><body>Please sign in to continue.</body></html>",
-    ],
+    ["login_html", "<!doctype html><html><body>Please sign in to continue.</body></html>"],
     [
       "captcha_html",
       "<!doctype html><html><body>Cloudflare checking your browser captcha</body></html>",
@@ -215,10 +212,7 @@ describe("runFeedRefresh HTML autodiscovery", () => {
       "access_denied_html",
       "<!doctype html><html><body>Access denied. Request blocked.</body></html>",
     ],
-    [
-      "stale_endpoint_html",
-      "<!doctype html><html><body>Feed no longer exists.</body></html>",
-    ],
+    ["stale_endpoint_html", "<!doctype html><html><body>Feed no longer exists.</body></html>"],
   ] as const)("classifies %s HTML failures", async (failureClass, body) => {
     const fake = createFeedRefreshDb();
     globalThis.fetch = mockFetch(() =>

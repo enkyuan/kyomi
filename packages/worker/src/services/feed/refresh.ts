@@ -45,10 +45,7 @@ const SCHEDULED_HTML_AUTODISCOVERY_PROVENANCE = "scheduled_html_autodiscovery";
 const CERTIFICATE_FETCH_ERROR_PATTERN =
   /certificate|ERR_TLS_CERT|UNABLE_TO_GET_ISSUER_CERT|UNABLE_TO_VERIFY_LEAF_SIGNATURE|SELF_SIGNED_CERT|CERT_HAS_EXPIRED/i;
 
-type FetchedFeedDocument = Extract<
-  FetchFeedDocumentResult,
-  { ok: true; notModified: false }
->;
+type FetchedFeedDocument = Extract<FetchFeedDocumentResult, { ok: true; notModified: false }>;
 
 type ResolvedRefreshDocument =
   | {

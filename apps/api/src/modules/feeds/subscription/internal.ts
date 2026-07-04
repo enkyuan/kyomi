@@ -61,7 +61,7 @@ export async function upsertFeedRecord(
         discoveryProvenance:
           resolved.discoveredFromUrl !== null
             ? resolved.discoveryProvenance
-            : existingFeed[0].discoveryProvenance ?? resolved.discoveryProvenance,
+            : (existingFeed[0].discoveryProvenance ?? resolved.discoveryProvenance),
         updatedAt: now,
         ...(shouldApplyFavicon
           ? {

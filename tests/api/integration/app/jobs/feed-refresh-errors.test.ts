@@ -185,9 +185,7 @@ describe("runFeedRefresh HTML responses", () => {
     expect(result.ok).toBe(false);
     expect(result.permanent).toBe(true);
     expect(result.failureClass).toBe("access_denied_html");
-    expect(result.error).toBe(
-      "Feed returned HTML (access_denied_html): no feed alternate found",
-    );
+    expect(result.error).toBe("Feed returned HTML (access_denied_html): no feed alternate found");
     expect(fake.updates.at(-1)?.refreshStatus).toBe("failed");
     expect(fake.updates.at(-1)?.lastRefreshError).toBe(
       "Feed returned HTML (access_denied_html): no feed alternate found",
