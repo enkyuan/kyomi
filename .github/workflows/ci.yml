@@ -1,4 +1,4 @@
-name: CI
+name: ci
 
 on:
   pull_request:
@@ -22,7 +22,7 @@ defaults:
 
 jobs:
   static-quality:
-    name: Static Quality
+    name: quality / static
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -36,7 +36,7 @@ jobs:
         run: bun run ci:static
 
   web-tests:
-    name: Web Tests
+    name: test / apps/web
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -50,7 +50,7 @@ jobs:
         run: bun run ci:test:web
 
   api-tests:
-    name: API Tests
+    name: test / apps/api
     runs-on: ubuntu-latest
     timeout-minutes: 25
     services:
@@ -112,7 +112,7 @@ jobs:
           done
 
   build:
-    name: Build
+    name: build / workspaces
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -126,17 +126,17 @@ jobs:
         run: bun run ci:build
 
   docker-build:
-    name: Docker Build (${{ matrix.component }})
+    name: build / docker / ${{ matrix.component }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     strategy:
       fail-fast: false
       matrix:
         include:
-          - component: api
+          - component: apps/api
             dockerfile: apps/api/Dockerfile
             image: kyomi-api:ci
-          - component: web
+          - component: apps/web
             dockerfile: apps/web/Dockerfile
             image: kyomi-web:ci
     steps:
@@ -153,7 +153,7 @@ jobs:
             .
 
   ci-summary:
-    name: CI Summary
+    name: summary
     runs-on: ubuntu-latest
     timeout-minutes: 5
     if: ${{ always() }}
