@@ -47,6 +47,14 @@ Each JSONL record uses this contract:
 | `source` | No | Source dataset name. |
 | `language` | No | Language code when known. |
 | `category` | No | Top-level catalog category. |
+| `content_type` | No | Content type hint (e.g. `article`, `video`). |
+| `quality_score` | No | Numeric quality/popularity score when known. |
+
+`catalog:import` preserves these fields: `language`, `content_type`, and `quality_score`
+are stored on the feed (with `metadata_provenance = catalog`), and `category` is upserted as
+a `catalog`-provenance category assignment. It also emits a validation report and a dry-run
+mode (`--dry-run`) that prints counts for imported feeds, category/language assignments,
+duplicate canonical URLs, and missing-field totals without writing.
 
 ## Notes
 
