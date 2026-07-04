@@ -267,6 +267,37 @@ describe("runFeedRefresh category ingestion", () => {
     ]);
   });
 
+  test("stamps model_id and taxonomy_version on classifier assignment rows", async () => {
+    // The keyword classifier writes provenance fields (modelId, taxonomyVersion) so a
+    // future re-classify pass can pick out stale rows. Locking in the expected values here
+    // is the guard against a future refactor accidentally dropping the stamps and leaving
+    // the DB unable to tell keyword-classifier rows from embedding-classifier rows.
+    const fake = createFeedRefreshDb();
+    const now = new Date("2026-07-04T00:00:00.000Z");
+
+    await syncInferredFeedCategories(
+      fake as never,
+      {
+        feedId: "feed-1",
+        feedCategories: [{ label: "Technology", confidence: 0.7 }],
+        items: [
+          {
+            id: "item-1",
+            inferredCategoryLabels: [{ label: "Security & Privacy", confidence: 0.8 }],
+          },
+        ],
+      },
+      now,
+    );
+
+    expect(fake.feedCategoryAssignments).toMatchObject([
+      { provenance: "classifier", modelId: "keyword-v1", taxonomyVersion: "v1" },
+    ]);
+    expect(fake.feedItemCategoryAssignments).toMatchObject([
+      { provenance: "classifier", modelId: "keyword-v1", taxonomyVersion: "v1" },
+    ]);
+  });
+
   test("does not write item classifier labels when an item has no inferred labels", async () => {
     const fake = createFeedRefreshDb();
     const now = new Date("2026-07-04T00:00:00.000Z");

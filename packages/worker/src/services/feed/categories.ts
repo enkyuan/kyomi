@@ -7,7 +7,11 @@ import {
   feedItemCategoryAssignments,
   toCategorySlug,
 } from "@kyomi/db";
-import { CATEGORY_CLASSIFIER_PROVENANCE } from "./taxonomy";
+import {
+  CATEGORY_CLASSIFIER_PROVENANCE,
+  CLASSIFIER_TAXONOMY_VERSION,
+  KEYWORD_CLASSIFIER_MODEL_ID,
+} from "./taxonomy";
 import type { InferredCategoryLabel } from "./classifier";
 import type { FeedIngestDatabase, ParsedFeedItem } from "./types";
 
@@ -310,6 +314,8 @@ export async function syncInferredFeedCategories(
             categoryId,
             provenance: CATEGORY_CLASSIFIER_PROVENANCE,
             confidence: record.confidence,
+            modelId: KEYWORD_CLASSIFIER_MODEL_ID,
+            taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
             createdAt: now,
             updatedAt: now,
           },
@@ -326,7 +332,12 @@ export async function syncInferredFeedCategories(
           feedCategoryAssignments.categoryId,
           feedCategoryAssignments.provenance,
         ],
-        set: { confidence: sql`excluded.confidence`, updatedAt: now },
+        set: {
+          confidence: sql`excluded.confidence`,
+          modelId: sql`excluded.model_id`,
+          taxonomyVersion: sql`excluded.taxonomy_version`,
+          updatedAt: now,
+        },
       });
   }
 
@@ -341,6 +352,8 @@ export async function syncInferredFeedCategories(
               categoryId,
               provenance: CATEGORY_CLASSIFIER_PROVENANCE,
               confidence: record.confidence,
+              modelId: KEYWORD_CLASSIFIER_MODEL_ID,
+              taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
               createdAt: now,
               updatedAt: now,
             },
@@ -358,7 +371,12 @@ export async function syncInferredFeedCategories(
           feedItemCategoryAssignments.categoryId,
           feedItemCategoryAssignments.provenance,
         ],
-        set: { confidence: sql`excluded.confidence`, updatedAt: now },
+        set: {
+          confidence: sql`excluded.confidence`,
+          modelId: sql`excluded.model_id`,
+          taxonomyVersion: sql`excluded.taxonomy_version`,
+          updatedAt: now,
+        },
       });
   }
 }
