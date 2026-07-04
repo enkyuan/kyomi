@@ -16,8 +16,20 @@ export type EmbeddingClassifierConfig = {
 
 const DEFAULT_VOYAGE_MODEL = "voyage-4";
 const DEFAULT_VOYAGE_API_URL = "https://api.voyageai.com/v1/embeddings";
-const ITEM_SIMILARITY_THRESHOLD = 0.3;
-const FEED_SIMILARITY_THRESHOLD = 0.3;
+// Empirically tuned against tests/api/integration/modules/feeds/refresh/classifier-eval-fixture.ts
+// via classifier-eval-embedding.test.ts (live Voyage API). Re-validate against that fixture if
+// the model, category cards, or fixture change materially.
+//
+// A relative-margin secondary-label rule (admit a second category within some gap of the top
+// score) was tried and reverted: genuinely dual-topic articles (e.g. "Congress debates AI
+// regulation" -> Politics & Policy + AI & ML, gap ~0.32) and single-topic articles with a
+// semantically adjacent runner-up (e.g. "Anthropic releases new Claude model" wrongly picking
+// up Software Engineering, gap ~0.29) produce the same gap sizes -- no margin value separates
+// them without hand-tuning per category pair against this ~30-item fixture, which is
+// overfitting, not a real fix. A single absolute threshold with no secondary-label margin is
+// the simplest rule that doesn't require that per-pair tuning.
+const ITEM_SIMILARITY_THRESHOLD = 0.6;
+const FEED_SIMILARITY_THRESHOLD = 0.6;
 
 type VoyageEmbeddingsResponse = {
   data: Array<{ embedding: number[]; index: number }>;
@@ -178,7 +190,12 @@ export async function classifyFeedCategoriesByEmbedding(
 export async function classifyFeedItemCategoriesByEmbedding(
   input: FeedItemCategoryClassificationInput,
   config: EmbeddingClassifierConfig,
-  maxLabels: number = MAX_CLASSIFIER_LABELS,
+  // Unlike the keyword classifier, similarity scoring has no natural label count to default
+  // to: MAX_CLASSIFIER_LABELS is a UI chip-slot budget, not evidence about how many topics an
+  // article legitimately spans. Callers with a real slot budget (e.g. refresh.ts) pass their
+  // own maxLabels; this default only governs raw classification (e.g. eval harnesses), so it
+  // should let every category that clears the threshold through rather than truncate early.
+  maxLabels: number = CATEGORY_CARDS.length,
 ): Promise<CategoryClassification> {
   const prototypes = await loadCategoryPrototypes(config);
   const [textEmbedding] = await embedTexts([buildItemText(input)], config);

@@ -24,7 +24,7 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
     label: "Software Engineering",
     slug: "software-engineering",
     description:
-      "Software development practice: programming languages, frameworks, architecture, version control, backend/frontend engineering, developer tools, and infrastructure.",
+      "Software development practice: programming languages, frameworks, architecture, version control, backend/frontend engineering, developer tools, and infrastructure — including developer tools built to assist AI-assisted coding workflows, as distinct from AI & ML's focus on the models and research themselves.",
     representativeTitles: [
       "Refactoring our TypeScript backend to reduce database load",
       "Git for Agents: a version-control tool built for AI coding workflows",
@@ -60,12 +60,12 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
     label: "AI & ML",
     slug: "ai-ml",
     description:
-      "Artificial intelligence and machine learning: language models, neural networks, embeddings, transformers, AI agents, and research from labs like OpenAI or Anthropic.",
+      "Artificial intelligence and machine learning as a subject in itself: language models, neural networks, embeddings, transformers, and research from labs like OpenAI or Anthropic — not developer tools that merely use AI, which belong under Software Engineering.",
     representativeTitles: [
       "Anthropic releases new Claude model with tool use",
       "New open-weights language model released with improved reasoning",
       "How transformer architectures changed natural language processing",
-      "An autonomous AI agent pipeline for coding tasks",
+      "Researchers debate whether scaling laws will hold for the next generation of models",
     ],
   },
   {
