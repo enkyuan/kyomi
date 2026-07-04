@@ -32,7 +32,7 @@ describe("feed category classifier", () => {
       itemUrl: "https://mrbruh.com/msi-center-privilege-escalation",
     });
 
-    expect(result.categories.map((category) => category.label)).toEqual(["Security"]);
+    expect(result.categories.map((category) => category.label)).toEqual(["Security & Privacy"]);
     expect(result.categories[0]?.confidence).toBeGreaterThanOrEqual(0.5);
   });
 
@@ -48,10 +48,25 @@ describe("feed category classifier", () => {
       itemUrl: "https://news.exeter.ac.uk/songbirds-guidance-system",
     });
 
-    expect(result.categories.map((category) => category.label)).toEqual(["Science"]);
+    expect(result.categories.map((category) => category.label)).toEqual(["Science & Research"]);
   });
 
-  test("returns General for sparse unknown feeds", () => {
+  test("classifies an AI story from title and body keywords", () => {
+    const result = classifyFeedItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "New open-weights language model released",
+      itemSummary: "The transformer model uses embeddings trained by an autonomous agent pipeline.",
+      itemUrl: "https://huggingface.co/blog/new-model",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["AI & ML"]);
+  });
+
+  test("returns Miscellaneous for sparse unknown feeds", () => {
     const result = classifyFeedCategories({
       feedTitle: "Updates",
       feedDescription: "",
@@ -60,7 +75,7 @@ describe("feed category classifier", () => {
       sourceKind: "rss",
     });
 
-    expect(result.categories).toEqual([{ label: "General", confidence: 0.1 }]);
+    expect(result.categories).toEqual([{ label: "Miscellaneous", confidence: 0.1 }]);
   });
 
   test("detects known mixed feed hosts", () => {

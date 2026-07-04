@@ -1,5 +1,7 @@
-import { and, eq, inArray, sql } from "drizzle-orm";
+import { and, eq, inArray, sql, type SQL, type SQLWrapper } from "drizzle-orm";
 import {
+  CANONICAL_CATEGORY_LABELS,
+  canonicalizeCategoryLabels,
   categories,
   feedCategoryAssignments,
   feedItemCategoryAssignments,
@@ -10,6 +12,30 @@ import type { InferredCategoryLabel } from "./classifier";
 import type { FeedIngestDatabase, ParsedFeedItem } from "./types";
 
 const FEED_CATEGORY_PROVENANCE = "feed";
+
+// `sql.join` needs at least one element; CANONICAL_CATEGORY_LABELS is a fixed non-empty
+// constant, so this never runs with an empty list.
+const CANONICAL_LABELS_SQL_LIST = sql.join(
+  CANONICAL_CATEGORY_LABELS.map((label) => sql`${label}`),
+  sql`, `,
+);
+
+/**
+ * `categories.slug` is unique across ALL provenances (feed/catalog/classifier share one
+ * dictionary row per slug), so a raw noisy label and a canonical label can collide on the
+ * same slug (e.g. raw "MISCELLANEOUS" vs. canonical "Miscellaneous"). Builds the winning-value
+ * expression for an `onConflictDoUpdate` column: the incoming (`excluded`) value wins when
+ * either (a) the existing row is classifier-provenance (always safe to refresh), or (b) the
+ * incoming label is canonical and the existing one is not — a canonical label must never lose
+ * a slug race to a raw label, since callers use the returned id to attach assignments and
+ * assume the row they get back is canonical.
+ */
+export function canonicalWinsOnConflictSql(
+  existingColumnSql: SQLWrapper,
+  excludedColumnSql: SQLWrapper,
+): SQL<string> {
+  return sql`CASE WHEN ${categories.provenance} = ${CATEGORY_CLASSIFIER_PROVENANCE} OR (excluded.label IN (${CANONICAL_LABELS_SQL_LIST}) AND ${categories.label} NOT IN (${CANONICAL_LABELS_SQL_LIST})) THEN ${excludedColumnSql} ELSE ${existingColumnSql} END`;
+}
 
 type CategoryAssignmentDatabase = Pick<FeedIngestDatabase, "delete" | "insert">;
 
@@ -78,19 +104,39 @@ async function upsertCategories(
     )
     .onConflictDoUpdate({
       target: categories.slug,
-      // categories.slug is unique across ALL provenances (feed/catalog/classifier share one
-      // dictionary row per slug). Only let an explicit source overwrite the label/provenance
-      // of a slug an earlier classifier-only insert claimed; never let a later classifier
-      // insert downgrade an existing explicit row.
       set: {
-        label: sql`CASE WHEN ${categories.provenance} = ${CATEGORY_CLASSIFIER_PROVENANCE} THEN excluded.label ELSE ${categories.label} END`,
-        provenance: sql`CASE WHEN ${categories.provenance} = ${CATEGORY_CLASSIFIER_PROVENANCE} THEN excluded.provenance ELSE ${categories.provenance} END`,
+        label: canonicalWinsOnConflictSql(categories.label, sql`excluded.label`),
+        provenance: canonicalWinsOnConflictSql(categories.provenance, sql`excluded.provenance`),
         updatedAt: now,
       },
     })
     .returning({ id: categories.id, slug: categories.slug });
 
   return new Map(rows.map((row) => [row.slug, row.id]));
+}
+
+/**
+ * True when a feed already has at least one explicit (`provenance = "feed"`) category
+ * assignment from a prior full fetch. Used to skip re-running the classifier fallback on a
+ * `304 Not Modified` response, mirroring the canonical-label check `classifyFeedLevelCategories`
+ * runs against freshly parsed metadata on a full fetch — a 304 has no fresh document to check,
+ * so this checks persisted state instead.
+ */
+export async function hasExplicitFeedCategories(
+  database: Pick<FeedIngestDatabase, "select">,
+  feedId: string,
+): Promise<boolean> {
+  const rows = await database
+    .select({ id: feedCategoryAssignments.id })
+    .from(feedCategoryAssignments)
+    .where(
+      and(
+        eq(feedCategoryAssignments.feedId, feedId),
+        eq(feedCategoryAssignments.provenance, FEED_CATEGORY_PROVENANCE),
+      ),
+    )
+    .limit(1);
+  return rows.length > 0;
 }
 
 export async function syncParsedFeedCategories(
@@ -123,9 +169,17 @@ export async function syncParsedFeedCategories(
       );
   }
 
+  // Raw source labels (RSS/Atom/JSON Feed categories) are signals, not chip labels: map them
+  // onto the canonical taxonomy before ever inserting a `categories` row, so unmapped noisy
+  // labels (hashtags, dates, free-text titles) never reach the dictionary or the chip UI.
+  const canonicalFeedLabels = canonicalizeCategoryLabels(input.feedLabels);
+  const canonicalItemLabelsById = new Map(
+    input.items.map((item) => [item.id, canonicalizeCategoryLabels(item.categoryLabels)]),
+  );
+
   const allRecords = normalizeCategoryRecords([
-    ...input.feedLabels,
-    ...input.items.flatMap((item) => item.categoryLabels),
+    ...canonicalFeedLabels,
+    ...Array.from(canonicalItemLabelsById.values()).flat(),
   ]);
   const categoryIdsBySlug = await upsertCategories(
     database,
@@ -134,7 +188,7 @@ export async function syncParsedFeedCategories(
     FEED_CATEGORY_PROVENANCE,
   );
 
-  const feedAssignments = normalizeCategoryRecords(input.feedLabels).flatMap((record) => {
+  const feedAssignments = normalizeCategoryRecords(canonicalFeedLabels).flatMap((record) => {
     const categoryId = categoryIdsBySlug.get(record.slug);
     return categoryId
       ? [
@@ -164,7 +218,7 @@ export async function syncParsedFeedCategories(
   }
 
   const itemAssignments = input.items.flatMap((item) =>
-    normalizeCategoryRecords(item.categoryLabels).flatMap((record) => {
+    normalizeCategoryRecords(canonicalItemLabelsById.get(item.id) ?? []).flatMap((record) => {
       const categoryId = categoryIdsBySlug.get(record.slug);
       return categoryId
         ? [

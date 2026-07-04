@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, test } from "bun:test";
-import { getTableName } from "drizzle-orm";
-import { runFeedRefresh, syncInferredFeedCategories } from "@kyomi/worker";
+import { getTableName, sql } from "drizzle-orm";
+import { PgDialect } from "drizzle-orm/pg-core";
+import { canonicalWinsOnConflictSql, runFeedRefresh, syncInferredFeedCategories } from "@kyomi/worker";
 
 const originalFetch = globalThis.fetch;
 
@@ -24,11 +25,15 @@ function tableName(table: unknown): string {
   return getTableName(table as Parameters<typeof getTableName>[0]);
 }
 
-function createFeedRefreshDb(options: { feed?: CapturedRow } = {}) {
+function createFeedRefreshDb(
+  options: { feed?: CapturedRow; existingFeedCategoryAssignments?: CapturedRow[] } = {},
+) {
   const feed = options.feed ?? {
     id: "feed-1",
     url: "https://example.com/feed.xml",
     link: "https://example.com/",
+    title: "Example Feed",
+    description: "Updates",
     faviconUrl: "https://example.com/favicon.ico",
     faviconSource: "html_link",
     etag: null,
@@ -40,7 +45,7 @@ function createFeedRefreshDb(options: { feed?: CapturedRow } = {}) {
   const deletes: string[] = [];
   const categories: CapturedRow[] = [];
   const feedItems: CapturedRow[] = [];
-  const feedCategoryAssignments: CapturedRow[] = [];
+  const feedCategoryAssignments: CapturedRow[] = [...(options.existingFeedCategoryAssignments ?? [])];
   const feedItemCategoryAssignments: CapturedRow[] = [];
 
   const db = {
@@ -88,9 +93,16 @@ function createFeedRefreshDb(options: { feed?: CapturedRow } = {}) {
       },
     }),
     select: () => ({
-      from: () => ({
+      from: (table: unknown) => ({
         where: () => ({
-          limit: () => Promise.resolve([feed]),
+          limit: () => {
+            if (tableName(table) === "feed_category_assignments") {
+              return Promise.resolve(
+                feedCategoryAssignments.filter((row) => row.provenance === "feed").slice(0, 1),
+              );
+            }
+            return Promise.resolve([feed]);
+          },
         }),
       }),
     }),
@@ -108,7 +120,7 @@ function labelsForAssignments(assignments: CapturedRow[], categories: CapturedRo
 }
 
 describe("runFeedRefresh category ingestion", () => {
-  test("persists RSS channel and item categories with feed provenance", async () => {
+  test("persists RSS channel and item categories mapped to canonical labels", async () => {
     const fake = createFeedRefreshDb();
     globalThis.fetch = async () => {
       const response = new Response(
@@ -145,26 +157,66 @@ describe("runFeedRefresh category ingestion", () => {
 
     expect(result.ok).toBe(true);
     // Explicit-provenance sync runs first, then the classifier sync (which finds explicit
-    // labels already present and writes nothing) issues its own delete pass on both tables.
+    // canonical labels already present and writes nothing) issues its own delete pass on
+    // both tables.
     expect(fake.deletes).toEqual([
       "feed_category_assignments",
       "feed_item_category_assignments",
       "feed_category_assignments",
       "feed_item_category_assignments",
     ]);
+    // Raw "JavaScript"/"Programming"/"Technology" source labels are canonicalized before
+    // ever reaching the categories dictionary, so both map onto "Software Engineering" and
+    // "Technology" stays as-is; no raw label is inserted as its own row.
     expect(fake.categories.map((row) => row.label)).toEqual([
       "Technology",
-      "JavaScript",
-      "Programming",
+      "Software Engineering",
     ]);
     expect(fake.categories.every((row) => row.provenance === "feed")).toBe(true);
     expect(labelsForAssignments(fake.feedCategoryAssignments, fake.categories)).toEqual([
       "Technology",
     ]);
     expect(labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories)).toEqual([
-      "JavaScript",
-      "Programming",
+      "Software Engineering",
     ]);
+  });
+
+  test("does not insert a raw category row for an unmapped RSS label", async () => {
+    const fake = createFeedRefreshDb();
+    globalThis.fetch = async () => {
+      const response = new Response(
+        `<?xml version="1.0"?>
+        <rss version="2.0">
+          <channel>
+            <title>Example Feed</title>
+            <link>https://example.com/</link>
+            <description>Updates</description>
+            <item>
+              <title>First item</title>
+              <link>https://example.com/first</link>
+              <guid>first</guid>
+              <description>Summary</description>
+              <category>#random-tag-2026</category>
+              <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+            </item>
+          </channel>
+        </rss>`,
+        { status: 200, headers: { "content-type": "application/rss+xml" } },
+      );
+      Object.defineProperty(response, "url", { value: "https://example.com/feed.xml" });
+      return response;
+    };
+
+    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
+      enrichArticles: false,
+    });
+
+    expect(result.ok).toBe(true);
+    expect(fake.categories.some((row) => row.provenance === "feed")).toBe(false);
+    expect(fake.feedItemCategoryAssignments.some((row) => row.provenance === "feed")).toBe(false);
+    // The feed has no explicit channel-level category at all, so the classifier fallback
+    // still runs and fills in a canonical label from the feed title/description/domain.
+    expect(fake.feedCategoryAssignments.some((row) => row.provenance === "classifier")).toBe(true);
   });
 
   test("persists classifier feed and item categories without touching explicit feed provenance", async () => {
@@ -179,7 +231,7 @@ describe("runFeedRefresh category ingestion", () => {
         items: [
           {
             id: "item-1",
-            inferredCategoryLabels: [{ label: "Security", confidence: 0.8 }],
+            inferredCategoryLabels: [{ label: "Security & Privacy", confidence: 0.8 }],
           },
         ],
       },
@@ -187,7 +239,7 @@ describe("runFeedRefresh category ingestion", () => {
     );
 
     expect(fake.deletes).toEqual(["feed_category_assignments", "feed_item_category_assignments"]);
-    expect(fake.categories.map((row) => row.label)).toEqual(["Technology", "Security"]);
+    expect(fake.categories.map((row) => row.label)).toEqual(["Technology", "Security & Privacy"]);
     expect(fake.feedCategoryAssignments).toMatchObject([
       { feedId: "feed-1", provenance: "classifier", confidence: 0.7 },
     ]);
@@ -204,7 +256,7 @@ describe("runFeedRefresh category ingestion", () => {
       fake as never,
       {
         feedId: "feed-1",
-        feedCategories: [{ label: "General", confidence: 0.1 }],
+        feedCategories: [{ label: "Miscellaneous", confidence: 0.1 }],
         items: [{ id: "item-1", inferredCategoryLabels: [] }],
       },
       now,
@@ -258,6 +310,8 @@ describe("runFeedRefresh category ingestion", () => {
         id: "feed-1",
         url: "https://news.ycombinator.com/rss",
         link: "https://news.ycombinator.com",
+        title: "Hacker News",
+        description: "Links for hackers",
         faviconUrl: null,
         faviconSource: null,
         etag: null,
@@ -295,7 +349,85 @@ describe("runFeedRefresh category ingestion", () => {
 
     expect(result.ok).toBe(true);
     expect(labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories)).toContain(
-      "Security",
+      "Security & Privacy",
     );
+  });
+
+  test("classifies feed-level categories from stored metadata on a 304 Not Modified response", async () => {
+    const fake = createFeedRefreshDb({
+      feed: {
+        id: "feed-1",
+        url: "https://techcrunch.com/feed",
+        link: "https://techcrunch.com",
+        title: "TechCrunch",
+        description: "Startup and technology news, funding, and product launches.",
+        faviconUrl: "https://techcrunch.com/favicon.ico",
+        faviconSource: "html_link",
+        etag: "etag-1",
+        lastModified: null,
+        lastRefreshSucceededAt: null,
+        lastRefreshFailedAt: null,
+      },
+    });
+    globalThis.fetch = async () => new Response(null, { status: 304 });
+
+    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
+      enrichArticles: false,
+    });
+
+    expect(result.ok).toBe(true);
+    expect(result.notModified).toBe(true);
+    expect(fake.feedItemCategoryAssignments).toHaveLength(0);
+    expect(fake.feedCategoryAssignments.some((row) => row.provenance === "classifier")).toBe(true);
+  });
+
+  test("skips classifier fallback on a 304 when the feed already has explicit categories", async () => {
+    const fake = createFeedRefreshDb({
+      feed: {
+        id: "feed-1",
+        url: "https://techcrunch.com/feed",
+        link: "https://techcrunch.com",
+        title: "TechCrunch",
+        description: "Startup and technology news, funding, and product launches.",
+        faviconUrl: "https://techcrunch.com/favicon.ico",
+        faviconSource: "html_link",
+        etag: "etag-1",
+        lastModified: null,
+        lastRefreshSucceededAt: null,
+        lastRefreshFailedAt: null,
+      },
+      existingFeedCategoryAssignments: [
+        { id: "assignment-1", feedId: "feed-1", categoryId: "category-1", provenance: "feed" },
+      ],
+    });
+    globalThis.fetch = async () => new Response(null, { status: 304 });
+
+    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
+      enrichArticles: false,
+    });
+
+    expect(result.ok).toBe(true);
+    expect(result.notModified).toBe(true);
+    // Only the pre-seeded explicit assignment should be present; no classifier rewrite ran.
+    expect(fake.feedCategoryAssignments).toHaveLength(1);
+    expect(fake.deletes).toEqual([]);
+  });
+});
+
+describe("canonicalWinsOnConflictSql", () => {
+  test("lets a canonical incoming label win over a non-canonical existing label", () => {
+    // Regression test: categories.slug is unique across all provenances, so a raw noisy label
+    // (e.g. "MISCELLANEOUS") and the canonical label it happens to slug-collide with (e.g.
+    // "Miscellaneous") can land on the same row. Without this branch, a classifier upsert that
+    // lost the initial insert race would silently keep the non-canonical existing label
+    // forever, and callers would attach new classifier assignments to a non-canonical row.
+    const query = new PgDialect().sqlToQuery(
+      canonicalWinsOnConflictSql(sql`existing_column`, sql`excluded.some_column`),
+    );
+    expect(query.sql).toContain("excluded.label IN (");
+    expect(query.sql).toContain("NOT IN (");
+    expect(query.sql).toContain("THEN excluded.some_column ELSE existing_column END");
+    expect(query.params).toContain("Miscellaneous");
+    expect(query.params).toContain("Software Engineering");
   });
 });

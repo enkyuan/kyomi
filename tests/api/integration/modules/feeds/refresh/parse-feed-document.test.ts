@@ -135,4 +135,59 @@ describe("parseFeedDocument", () => {
       ),
     ).toThrow("Unsupported feed format: received HTML document");
   });
+
+  test("extracts JSON Feed item tags into categoryLabels", () => {
+    const parsed = parseFeedDocument(
+      JSON.stringify({
+        version: "https://jsonfeed.org/version/1.1",
+        title: "JSON feed",
+        home_page_url: "https://example.com/",
+        items: [
+          {
+            id: "item-1",
+            title: "Article one",
+            url: "https://example.com/article-one",
+            content_text: "Body",
+            tags: ["AI", "Machine Learning"],
+          },
+        ],
+      }),
+      "feed-1",
+      "https://example.com/feed.json",
+    );
+
+    expect(parsed.items[0]?.categoryLabels).toEqual(["AI", "Machine Learning"]);
+  });
+
+  test("extracts JSON Feed top-level tags into feed metadata categoryLabels", () => {
+    const parsed = parseFeedDocument(
+      JSON.stringify({
+        version: "https://jsonfeed.org/version/1.1",
+        title: "JSON feed",
+        home_page_url: "https://example.com/",
+        tags: ["Technology", "technology"],
+        items: [],
+      }),
+      "feed-1",
+      "https://example.com/feed.json",
+    );
+
+    expect(parsed.metadata.categoryLabels).toEqual(["Technology"]);
+  });
+
+  test("defaults to no categoryLabels when a JSON Feed has no tags", () => {
+    const parsed = parseFeedDocument(
+      JSON.stringify({
+        version: "https://jsonfeed.org/version/1.1",
+        title: "JSON feed",
+        home_page_url: "https://example.com/",
+        items: [{ id: "item-1", title: "Article one", url: "https://example.com/article-one" }],
+      }),
+      "feed-1",
+      "https://example.com/feed.json",
+    );
+
+    expect(parsed.metadata.categoryLabels).toEqual([]);
+    expect(parsed.items[0]?.categoryLabels).toEqual([]);
+  });
 });

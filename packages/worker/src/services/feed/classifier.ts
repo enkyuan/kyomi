@@ -1,6 +1,6 @@
 import {
   CATEGORY_TAXONOMY,
-  GENERAL_CATEGORY_LABEL,
+  MISCELLANEOUS_CATEGORY_LABEL,
   MIXED_FEED_HOSTS,
   type CategoryTaxonomyEntry,
 } from "./taxonomy";
@@ -129,7 +129,9 @@ function topCategories(input: {
     return scored;
   }
 
-  return input.allowGeneralFallback ? [{ label: GENERAL_CATEGORY_LABEL, confidence: 0.1 }] : [];
+  return input.allowGeneralFallback
+    ? [{ label: MISCELLANEOUS_CATEGORY_LABEL, confidence: 0.1 }]
+    : [];
 }
 
 export function isMixedFeedHost(url: string | null): boolean {

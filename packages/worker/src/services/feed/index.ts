@@ -1,7 +1,11 @@
 export { runFeedRefresh, shouldEnrichInsertedItems } from "./refresh";
 export { parseFeedDocument } from "./parse";
-export { syncInferredFeedCategories } from "./categories";
-export { CATEGORY_CLASSIFIER_PROVENANCE, GENERAL_CATEGORY_LABEL } from "./taxonomy";
+export {
+  canonicalWinsOnConflictSql,
+  hasExplicitFeedCategories,
+  syncInferredFeedCategories,
+} from "./categories";
+export { CATEGORY_CLASSIFIER_PROVENANCE, MISCELLANEOUS_CATEGORY_LABEL } from "./taxonomy";
 export {
   classifyFeedCategories,
   classifyFeedItemCategories,

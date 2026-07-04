@@ -1,5 +1,7 @@
+import { MISCELLANEOUS_CATEGORY_LABEL } from "@kyomi/db";
+
 export const CATEGORY_CLASSIFIER_PROVENANCE = "classifier";
-export const GENERAL_CATEGORY_LABEL = "General";
+export { MISCELLANEOUS_CATEGORY_LABEL };
 
 export type CategoryTaxonomyEntry = {
   label: string;
@@ -16,6 +18,8 @@ export const MIXED_FEED_HOSTS = new Set([
   "slashdot.org",
 ]);
 
+// Every `label` here must be one of the canonical labels in `@kyomi/db`'s
+// `CANONICAL_CATEGORY_LABELS` so classifier output never needs a second normalization pass.
 export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
   {
     label: "Software Engineering",
@@ -47,7 +51,6 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
     label: "Technology",
     slug: "technology",
     keywords: [
-      "ai",
       "app",
       "chip",
       "computer",
@@ -63,8 +66,8 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
     domainHints: ["techcrunch.com", "wired.com", "theverge.com", "arstechnica.com"],
   },
   {
-    label: "Security",
-    slug: "security",
+    label: "Security & Privacy",
+    slug: "security-privacy",
     keywords: [
       "attack",
       "breach",
@@ -72,6 +75,7 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "exploit",
       "malware",
       "password",
+      "privacy",
       "privilege",
       "ransomware",
       "security",
@@ -81,10 +85,11 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
     domainHints: ["krebsonsecurity.com", "bleepingcomputer.com", "hackercombat.com"],
   },
   {
-    label: "AI",
-    slug: "ai",
+    label: "AI & ML",
+    slug: "ai-ml",
     keywords: [
       "agent",
+      "ai",
       "artificial intelligence",
       "embedding",
       "language model",
@@ -98,13 +103,12 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
     domainHints: ["openai.com", "huggingface.co", "arxiv.org"],
   },
   {
-    label: "Science",
-    slug: "science",
+    label: "Science & Research",
+    slug: "science-research",
     keywords: [
       "astronomy",
       "biology",
       "brain",
-      "climate",
       "discovery",
       "experiment",
       "migration",
@@ -117,24 +121,22 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
     domainHints: ["nature.com", "science.org", "news.exeter.ac.uk", "engineering.columbia.edu"],
   },
   {
-    label: "Business",
-    slug: "business",
+    label: "Business & Startups",
+    slug: "business-startups",
     keywords: [
       "business",
       "company",
       "earnings",
       "funding",
-      "market",
       "revenue",
       "startup",
-      "stock",
       "venture",
     ],
     domainHints: ["bloomberg.com", "wsj.com", "ft.com", "techcrunch.com"],
   },
   {
-    label: "Finance",
-    slug: "finance",
+    label: "Finance & Markets",
+    slug: "finance-markets",
     keywords: [
       "bank",
       "bitcoin",
@@ -150,8 +152,8 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
     domainHints: ["finance.yahoo.com", "marketwatch.com", "coinbase.com"],
   },
   {
-    label: "Politics",
-    slug: "politics",
+    label: "Politics & Policy",
+    slug: "politics-policy",
     keywords: [
       "congress",
       "election",
@@ -167,14 +169,27 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
     domainHints: ["politico.com", "whitehouse.gov", "congress.gov"],
   },
   {
-    label: "Culture",
-    slug: "culture",
-    keywords: ["art", "book", "culture", "essay", "film", "history", "music", "society", "writing"],
+    label: "World & Society",
+    slug: "world-society",
+    keywords: [
+      "breaking",
+      "headline",
+      "international",
+      "news",
+      "society",
+      "world",
+    ],
+    domainHints: ["apnews.com", "reuters.com", "bbc.com", "nytimes.com"],
+  },
+  {
+    label: "Culture & Media",
+    slug: "culture-media",
+    keywords: ["art", "book", "culture", "film", "history", "music", "podcast", "writing"],
     domainHints: ["newyorker.com", "theatlantic.com", "lithub.com"],
   },
   {
-    label: "Design",
-    slug: "design",
+    label: "Design & UX",
+    slug: "design-ux",
     keywords: [
       "brand",
       "design",
@@ -190,8 +205,8 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
     domainHints: ["dribbble.com", "figma.com", "smashingmagazine.com"],
   },
   {
-    label: "Health",
-    slug: "health",
+    label: "Health & Medicine",
+    slug: "health-medicine",
     keywords: [
       "clinical",
       "doctor",
@@ -204,6 +219,18 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "vaccine",
     ],
     domainHints: ["nih.gov", "who.int", "nejm.org"],
+  },
+  {
+    label: "Climate & Environment",
+    slug: "climate-environment",
+    keywords: ["climate", "emissions", "energy", "environment", "renewable", "sustainability"],
+    domainHints: ["climate.gov", "carbonbrief.org"],
+  },
+  {
+    label: "Education & Work",
+    slug: "education-work",
+    keywords: ["career", "classroom", "curriculum", "education", "student", "teacher", "workplace"],
+    domainHints: ["edutopia.org", "chronicle.com"],
   },
   {
     label: "Sports",
@@ -222,30 +249,29 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
     domainHints: ["espn.com", "theathletic.com", "mlb.com", "nba.com", "nfl.com"],
   },
   {
-    label: "Travel",
-    slug: "travel",
+    label: "Food & Travel",
+    slug: "food-travel",
     keywords: [
       "airline",
-      "city guide",
+      "baking",
+      "chef",
+      "cooking",
       "flight",
+      "food",
       "hotel",
+      "kitchen",
+      "recipe",
       "restaurant",
       "tourism",
       "travel",
       "trip",
     ],
-    domainHints: ["lonelyplanet.com", "cntraveler.com"],
+    domainHints: ["seriouseats.com", "bonappetit.com", "lonelyplanet.com", "cntraveler.com"],
   },
   {
-    label: "Food",
-    slug: "food",
-    keywords: ["baking", "chef", "cooking", "food", "kitchen", "recipe", "restaurant"],
-    domainHints: ["seriouseats.com", "bonappetit.com"],
-  },
-  {
-    label: "News",
-    slug: "news",
-    keywords: ["breaking", "daily", "headline", "latest", "news", "report", "world"],
-    domainHints: ["apnews.com", "reuters.com", "bbc.com", "nytimes.com"],
+    label: "Personal & Essays",
+    slug: "personal-essays",
+    keywords: ["diary", "essay", "memoir", "personal", "reflection"],
+    domainHints: ["lithub.com"],
   },
 ];

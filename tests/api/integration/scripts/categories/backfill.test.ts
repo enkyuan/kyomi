@@ -40,9 +40,13 @@ describe("category backfill script", () => {
         feedsWithClassifierCategories: 2,
         itemsScanned: 4,
         itemsWithClassifierCategories: 1,
+        assignmentsScanned: 5,
+        assignmentsRewritten: 2,
+        assignmentsDroppedUnmapped: 1,
       }),
     ).toBe(
-      "DRY RUN: scanned 2 feeds and 4 items; would write classifier categories for 2 feeds and 1 items.",
+      "DRY RUN: scanned 2 feeds and 4 items; would write classifier categories for 2 feeds and 1 items. " +
+        "would rewrite 2 of 5 existing assignments to canonical categories and dropped 1 unmapped assignments.",
     );
 
     expect(
@@ -52,9 +56,13 @@ describe("category backfill script", () => {
         feedsWithClassifierCategories: 2,
         itemsScanned: 4,
         itemsWithClassifierCategories: 1,
+        assignmentsScanned: 5,
+        assignmentsRewritten: 2,
+        assignmentsDroppedUnmapped: 1,
       }),
     ).toBe(
-      "APPLIED: scanned 2 feeds and 4 items; wrote classifier categories for 2 feeds and 1 items.",
+      "APPLIED: scanned 2 feeds and 4 items; wrote classifier categories for 2 feeds and 1 items. " +
+        "rewrote 2 of 5 existing assignments to canonical categories and dropped 1 unmapped assignments.",
     );
   });
 });

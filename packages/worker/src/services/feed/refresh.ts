@@ -1,5 +1,5 @@
 import { eq, sql } from "drizzle-orm";
-import { feedItems, feeds } from "@kyomi/db";
+import { canonicalizeCategoryLabels, feedItems, feeds } from "@kyomi/db";
 import {
   createDrizzleFaviconHostStore,
   faviconSourceRank,
@@ -16,7 +16,11 @@ import { fetchArticleEnrichment } from "./enrich";
 import { fetchFeedDocument } from "./fetch";
 import { parseFeedDocument } from "./parse";
 import { syncFeedToSearch } from "./search";
-import { syncInferredFeedCategories, syncParsedFeedCategories } from "./categories";
+import {
+  hasExplicitFeedCategories,
+  syncInferredFeedCategories,
+  syncParsedFeedCategories,
+} from "./categories";
 import { summarizeText } from "../../lib/feed-text";
 import type {
   FeedIngestDatabase,
@@ -81,15 +85,15 @@ function shouldResolveFavicon({
 }
 
 /**
- * Classifies feed-level categories when the parsed document has no explicit RSS/Atom/JSON
- * Feed category tags. Feed-level classification does not depend on item content, so it can
- * run before article enrichment.
+ * Classifies feed-level categories when the parsed document's RSS/Atom/JSON Feed category
+ * tags don't map to any canonical category. Feed-level classification does not depend on
+ * item content, so it can run before article enrichment.
  */
 function classifyFeedLevelCategories(input: {
   feed: { url: string; link: string | null; sourceKind: string | null };
   parsed: ParsedFeedDocument;
 }): InferredCategoryLabel[] {
-  if (input.parsed.metadata.categoryLabels.length > 0) {
+  if (canonicalizeCategoryLabels(input.parsed.metadata.categoryLabels).length > 0) {
     return [];
   }
   return classifyFeedCategories({
@@ -126,7 +130,7 @@ function classifyItemLevelCategories(input: {
   items: ParsedFeedItem[];
 }): ParsedFeedItem[] {
   return input.items.map((item) => {
-    if (item.categoryLabels.length > 0 || !input.mixedFeed) {
+    if (canonicalizeCategoryLabels(item.categoryLabels).length > 0 || !input.mixedFeed) {
       return { ...item, inferredCategoryLabels: [] };
     }
     const itemClassification = classifyFeedItemCategories({
@@ -208,6 +212,8 @@ export async function runFeedRefresh(
         id: feeds.id,
         url: feeds.url,
         link: feeds.link,
+        title: feeds.title,
+        description: feeds.description,
         sourceKind: feeds.sourceKind,
         faviconUrl: feeds.faviconUrl,
         faviconSource: feeds.faviconSource,
@@ -296,6 +302,25 @@ export async function runFeedRefresh(
           ...(faviconPatch ?? {}),
         })
         .where(eq(feeds.id, feedId));
+
+      // A 304 means the document wasn't fetched, so there's no parsed content to classify
+      // items against. Still run feed-level classification off stored metadata so a feed
+      // that has never had a successful full-content refresh doesn't stay uncategorized
+      // indefinitely — but only when the feed has no explicit categories yet, mirroring the
+      // canonical-label check the full-fetch path runs against freshly parsed metadata.
+      // Skipping this otherwise avoids re-running the classifier and rewriting
+      // `provenance = "classifier"` rows on every poll of an unchanged, already-categorized feed.
+      if (!(await hasExplicitFeedCategories(database, feed.id))) {
+        const feedCategories = classifyFeedCategories({
+          feedTitle: feed.title,
+          feedDescription: feed.description,
+          feedUrl: feed.url,
+          feedSiteUrl: feed.link,
+          sourceKind: feed.sourceKind,
+        }).categories;
+        await syncInferredFeedCategories(database, { feedId: feed.id, feedCategories, items: [] }, now);
+      }
+
       return { ok: true, itemCount: 0, notModified: true };
     }
 

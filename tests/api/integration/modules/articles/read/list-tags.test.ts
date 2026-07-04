@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { PgDialect } from "drizzle-orm/pg-core";
+import { isCanonicalCategoryLabel } from "@kyomi/db";
 import {
   feedCategoryLabelsSql,
   toArticleListItemsForTest,
@@ -66,5 +67,28 @@ describe("article list item categories", () => {
     const feedExplicit = sql.indexOf("THEN 3 ELSE 2 END");
     expect(itemExplicit).toBeGreaterThanOrEqual(0);
     expect(feedExplicit).toBeGreaterThan(itemExplicit);
+  });
+
+  test("category label SQL caps the DTO at two labels per item", () => {
+    // Categories are normalized to canonical labels before this query ever runs (see
+    // packages/worker/src/services/feed/categories.ts), so this LIMIT is the only remaining
+    // enforcement point for "chips show at most two categories".
+    const sql = renderSql(feedCategoryLabelsSql);
+    expect(sql).toMatch(/LIMIT 2\s*\)\s*AS fc/);
+  });
+
+  test("DTO categories only ever contain canonical labels sourced from the categories table", () => {
+    // The article list query selects `categories.label` directly (see feedCategoryLabelsSql
+    // and listArticleRows/listGlobalArticleRows), with no transformation in between. Write-time
+    // canonicalization (Tasks 3/6/7 of the taxonomy plan) is what keeps that column
+    // canonical-only; this test documents the invariant the DTO mapper relies on rather than
+    // re-normalizing at read time.
+    const [item] = toArticleListItemsForTest([
+      rawRow({ categories: ["Software Engineering", "AI & ML"] }),
+    ]);
+    expect(item?.categories).toEqual(["Software Engineering", "AI & ML"]);
+    for (const label of item?.categories ?? []) {
+      expect(isCanonicalCategoryLabel(label)).toBe(true);
+    }
   });
 });

@@ -1,4 +1,6 @@
-import { categories, feedCategoryAssignments, feeds } from "../../packages/db/src";
+import { sql } from "drizzle-orm";
+import { categories, feedCategoryAssignments, feeds, mapCategoryLabelToCanonical } from "../../packages/db/src";
+import { canonicalWinsOnConflictSql } from "../../packages/worker/src";
 import { db, pool } from "../../apps/api/src/adapters/db/client";
 import { assertApiDatabaseReady } from "../../apps/api/src/adapters/db/script-preflight";
 import { upsertFeedSearchDocument } from "../../apps/api/src/adapters/search/meili";
@@ -33,7 +35,12 @@ type UpsertResult = {
   languageAssigned: boolean;
 };
 
-/** Upsert a `catalog`-provenance category and assign it to the feed. Returns true on assign. */
+/**
+ * Upsert a `catalog`-provenance category and assign it to the feed. Returns true on assign.
+ * Callers must pass an already-canonical label: the raw catalog category is a signal, not a
+ * chip label, so only canonical mappings are ever inserted into the shared `categories`
+ * dictionary.
+ */
 async function assignCatalogCategory(feedId: string, label: string): Promise<boolean> {
   const slug = toCategorySlug(label);
   if (!slug) {
@@ -43,7 +50,14 @@ async function assignCatalogCategory(feedId: string, label: string): Promise<boo
   const categoryRows = await db
     .insert(categories)
     .values({ id: crypto.randomUUID(), slug, label, provenance: "catalog", createdAt: now, updatedAt: now })
-    .onConflictDoUpdate({ target: categories.slug, set: { label, updatedAt: now } })
+    .onConflictDoUpdate({
+      target: categories.slug,
+      set: {
+        label: canonicalWinsOnConflictSql(categories.label, sql`excluded.label`),
+        provenance: canonicalWinsOnConflictSql(categories.provenance, sql`excluded.provenance`),
+        updatedAt: now,
+      },
+    })
     .returning({ id: categories.id });
   const categoryId = categoryRows[0]?.id;
   if (!categoryId) {
@@ -120,8 +134,9 @@ async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<Upsert
     return { ok: false, categoryAssigned: false, languageAssigned: false };
   }
 
-  const categoryAssigned = record.category
-    ? await assignCatalogCategory(upserted.id, record.category)
+  const canonicalCategory = record.category ? mapCategoryLabelToCanonical(record.category) : null;
+  const categoryAssigned = canonicalCategory
+    ? await assignCatalogCategory(upserted.id, canonicalCategory)
     : false;
 
   await upsertFeedSearchDocument({
@@ -136,7 +151,7 @@ async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<Upsert
     contentType: upserted.contentType,
     qualityScore: upserted.qualityScore,
     domain: domainFromUrl(upserted.link ?? upserted.url),
-    categories: record.category ? [toCategorySlug(record.category)].filter(Boolean) : [],
+    categories: canonicalCategory ? [toCategorySlug(canonicalCategory)].filter(Boolean) : [],
   }).catch(() => undefined);
 
   return { ok: true, categoryAssigned, languageAssigned: record.language != null };

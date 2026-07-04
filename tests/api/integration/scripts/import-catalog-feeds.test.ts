@@ -1,4 +1,5 @@
 import { describe, expect, test } from "bun:test";
+import { mapCategoryLabelToCanonical } from "@kyomi/db";
 import {
   domainFromUrl,
   normalizeImportRecord,
@@ -78,6 +79,17 @@ describe("catalog import metadata preservation", () => {
   test("domainFromUrl strips www and returns hostname", () => {
     expect(domainFromUrl("https://www.example.com/rss")).toBe("example.com");
     expect(domainFromUrl("not a url")).toBeNull();
+  });
+
+  test("catalog import maps a raw category onto its canonical label before assignment", () => {
+    // scripts/catalog/import.ts's assignCatalogCategory only inserts a `categories` row when
+    // this mapping succeeds, so a catalog category is never assigned to the feed as raw text.
+    expect(mapCategoryLabelToCanonical("SaaS")).toBe("Business & Startups");
+    expect(mapCategoryLabelToCanonical("Deep Learning")).toBe("AI & ML");
+  });
+
+  test("catalog import skips assignment for an unmapped raw category", () => {
+    expect(mapCategoryLabelToCanonical("Feedspot Curated List #42")).toBeNull();
   });
 
   test("reportValidation counts missing site url, language, and category", () => {

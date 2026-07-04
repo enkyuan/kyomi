@@ -147,23 +147,25 @@ function collectCategoryLabels(value: unknown, labels: string[]): void {
   }
 }
 
+function dedupeCategoryLabels(labels: string[]): string[] {
+  const seen = new Set<string>();
+  return labels.filter((label) => {
+    const key = label.toLocaleLowerCase();
+    if (seen.has(key)) {
+      return false;
+    }
+    seen.add(key);
+    return true;
+  });
+}
+
 function categoryLabelsFrom(...values: unknown[]): string[] {
   const labels: string[] = [];
   for (const value of values) {
     collectCategoryLabels(value, labels);
   }
 
-  const seen = new Set<string>();
-  return labels
-    .filter((label) => {
-      const key = label.toLocaleLowerCase();
-      if (seen.has(key)) {
-        return false;
-      }
-      seen.add(key);
-      return true;
-    })
-    .slice(0, MAX_CATEGORY_LABELS_PER_SCOPE);
+  return dedupeCategoryLabels(labels).slice(0, MAX_CATEGORY_LABELS_PER_SCOPE);
 }
 
 function pickRssLink(link: unknown, fallback: string): string {
@@ -244,6 +246,23 @@ function embeddedAtomFeedIconUrl(feed: Record<string, unknown>, baseUrl: string)
   return absoluteUrl(rawText(feed.icon) ?? rawText(feed.logo), baseUrl);
 }
 
+function jsonFeedTagLabels(value: unknown): string[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+  const labels: string[] = [];
+  for (const tag of value) {
+    if (typeof tag !== "string") {
+      continue;
+    }
+    const label = normalizeCategoryLabel(tag);
+    if (label) {
+      labels.push(label);
+    }
+  }
+  return dedupeCategoryLabels(labels);
+}
+
 function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): ParsedFeedDocument {
   const now = new Date();
   const parsed = JSON.parse(body) as Record<string, unknown>;
@@ -289,7 +308,7 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
         ...storedContent,
         imageUrl,
         publishedAt,
-        categoryLabels: [],
+        categoryLabels: jsonFeedTagLabels(record.tags).slice(0, MAX_CATEGORY_LABELS_PER_SCOPE),
       },
     ];
   });
@@ -301,7 +320,7 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       link,
       iconUrl: embeddedJsonFeedIconUrl(parsed, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
-      categoryLabels: [],
+      categoryLabels: jsonFeedTagLabels(parsed.tags).slice(0, MAX_CATEGORY_LABELS_PER_SCOPE),
     },
     items,
   };
