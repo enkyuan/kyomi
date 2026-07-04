@@ -123,15 +123,7 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
   {
     label: "Business & Startups",
     slug: "business-startups",
-    keywords: [
-      "business",
-      "company",
-      "earnings",
-      "funding",
-      "revenue",
-      "startup",
-      "venture",
-    ],
+    keywords: ["business", "company", "earnings", "funding", "revenue", "startup", "venture"],
     domainHints: ["bloomberg.com", "wsj.com", "ft.com", "techcrunch.com"],
   },
   {
@@ -171,14 +163,7 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
   {
     label: "World & Society",
     slug: "world-society",
-    keywords: [
-      "breaking",
-      "headline",
-      "international",
-      "news",
-      "society",
-      "world",
-    ],
+    keywords: ["breaking", "headline", "international", "news", "society", "world"],
     domainHints: ["apnews.com", "reuters.com", "bbc.com", "nytimes.com"],
   },
   {

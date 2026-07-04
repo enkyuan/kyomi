@@ -222,6 +222,7 @@
     "tests": {
       "name": "@kyomi/tests",
       "devDependencies": {
+        "@kyomi/db": "workspace:*",
         "@kyomi/reader": "workspace:*",
         "@kyomi/ui": "workspace:*",
         "@kyomi/worker": "workspace:*",

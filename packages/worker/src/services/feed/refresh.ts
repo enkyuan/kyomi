@@ -318,7 +318,11 @@ export async function runFeedRefresh(
           feedSiteUrl: feed.link,
           sourceKind: feed.sourceKind,
         }).categories;
-        await syncInferredFeedCategories(database, { feedId: feed.id, feedCategories, items: [] }, now);
+        await syncInferredFeedCategories(
+          database,
+          { feedId: feed.id, feedCategories, items: [] },
+          now,
+        );
       }
 
       return { ok: true, itemCount: 0, notModified: true };
