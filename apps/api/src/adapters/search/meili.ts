@@ -119,7 +119,10 @@ async function ensureFeedIndex(): Promise<void> {
   return feedIndexPromise;
 }
 
-export async function upsertFeedSearchDocument(document: FeedSearchDocument): Promise<void> {
+export async function upsertFeedSearchDocuments(documents: FeedSearchDocument[]): Promise<void> {
+  if (documents.length === 0) {
+    return;
+  }
   if (!isMeiliConfigured()) {
     return;
   }
@@ -127,7 +130,7 @@ export async function upsertFeedSearchDocument(document: FeedSearchDocument): Pr
   const uid = getIndexUid();
   const response = await meiliFetch(`/indexes/${uid}/documents`, {
     method: "POST",
-    body: JSON.stringify([document]),
+    body: JSON.stringify(documents),
   });
   if (!response.ok) {
     throw new AppError(`Meilisearch upsert failed (${response.status})`, {
@@ -135,6 +138,10 @@ export async function upsertFeedSearchDocument(document: FeedSearchDocument): Pr
       code: "MEILI_UPSERT_FAILED",
     });
   }
+}
+
+export async function upsertFeedSearchDocument(document: FeedSearchDocument): Promise<void> {
+  await upsertFeedSearchDocuments([document]);
 }
 
 export async function deleteFeedSearchDocument(feedId: string): Promise<void> {

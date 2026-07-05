@@ -1,9 +1,17 @@
 import { sql } from "drizzle-orm";
-import { categories, feedCategoryAssignments, feeds, mapCategoryLabelToCanonical } from "../../packages/db/src";
+import {
+  categories,
+  feedCategoryAssignments,
+  feeds,
+  mapCategoryLabelToCanonical,
+} from "../../packages/db/src";
 import { canonicalWinsOnConflictSql } from "../../packages/worker/src";
 import { db, pool } from "../../apps/api/src/adapters/db/client";
 import { assertApiDatabaseReady } from "../../apps/api/src/adapters/db/script-preflight";
-import { upsertFeedSearchDocument } from "../../apps/api/src/adapters/search/meili";
+import {
+  type FeedSearchDocument,
+  upsertFeedSearchDocuments,
+} from "../../apps/api/src/adapters/search/meili";
 import {
   domainFromUrl,
   type ImportStats,
@@ -16,12 +24,18 @@ import {
   type CatalogFeedRecord,
 } from "../../apps/api/src/modules/catalog/import";
 
-function getArgValue(flag: string): string | null {
-  const index = process.argv.indexOf(flag);
+const DEFAULT_CATALOG_IMPORT_BATCH_SIZE = 1_000;
+
+type CatalogImportOptions = {
+  batchSize: number;
+};
+
+function getArgValue(flag: string, argv = process.argv): string | null {
+  const index = argv.indexOf(flag);
   if (index === -1) {
     return null;
   }
-  const value = process.argv[index + 1];
+  const value = argv[index + 1];
   return value && !value.startsWith("--") ? value : null;
 }
 
@@ -29,91 +43,139 @@ function hasFlag(flag: string): boolean {
   return process.argv.includes(flag);
 }
 
-type UpsertResult = {
-  ok: boolean;
-  categoryAssigned: boolean;
-  languageAssigned: boolean;
+function positiveIntArg(flag: string, fallback: number, argv = process.argv): number {
+  const value = getArgValue(flag, argv);
+  if (!value) {
+    return fallback;
+  }
+  const parsed = Number.parseInt(value, 10);
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    throw new Error(`Invalid ${flag} value: ${value}`);
+  }
+  return parsed;
+}
+
+export function parseCatalogImportOptions(argv = process.argv): CatalogImportOptions {
+  return {
+    batchSize: positiveIntArg("--batch-size", DEFAULT_CATALOG_IMPORT_BATCH_SIZE, argv),
+  };
+}
+
+type BatchUpsertResult = {
+  imported: number;
+  failed: number;
+  categoryAssignments: number;
+  languageAssignments: number;
 };
 
 /**
- * Upsert a `catalog`-provenance category and assign it to the feed. Returns true on assign.
- * Callers must pass an already-canonical label: the raw catalog category is a signal, not a
- * chip label, so only canonical mappings are ever inserted into the shared `categories`
- * dictionary.
+ * Upsert `catalog`-provenance categories once per canonical slug and cache their ids across
+ * batches. Raw catalog categories are signals, not chip labels, so only canonical mappings ever
+ * enter the shared `categories` dictionary.
  */
-async function assignCatalogCategory(feedId: string, label: string): Promise<boolean> {
-  const slug = toCategorySlug(label);
-  if (!slug) {
-    return false;
-  }
-  const now = new Date();
-  const categoryRows = await db
-    .insert(categories)
-    .values({ id: crypto.randomUUID(), slug, label, provenance: "catalog", createdAt: now, updatedAt: now })
-    .onConflictDoUpdate({
-      target: categories.slug,
-      set: {
-        label: canonicalWinsOnConflictSql(categories.label, sql`excluded.label`),
-        provenance: canonicalWinsOnConflictSql(categories.provenance, sql`excluded.provenance`),
-        updatedAt: now,
-      },
-    })
-    .returning({ id: categories.id });
-  const categoryId = categoryRows[0]?.id;
-  if (!categoryId) {
-    return false;
-  }
-  await db
-    .insert(feedCategoryAssignments)
-    .values({
+async function resolveCatalogCategoryIds(
+  labels: string[],
+  now: Date,
+  cache: Map<string, string>,
+): Promise<Map<string, string>> {
+  const pendingBySlug = new Map<
+    string,
+    {
+      id: string;
+      slug: string;
+      label: string;
+      provenance: "catalog";
+      createdAt: Date;
+      updatedAt: Date;
+    }
+  >();
+
+  for (const label of labels) {
+    const slug = toCategorySlug(label);
+    if (!slug || cache.has(slug) || pendingBySlug.has(slug)) {
+      continue;
+    }
+    pendingBySlug.set(slug, {
       id: crypto.randomUUID(),
-      feedId,
-      categoryId,
+      slug,
+      label,
       provenance: "catalog",
       createdAt: now,
       updatedAt: now,
-    })
-    .onConflictDoUpdate({
-      target: [
-        feedCategoryAssignments.feedId,
-        feedCategoryAssignments.categoryId,
-        feedCategoryAssignments.provenance,
-      ],
-      set: { updatedAt: now },
     });
-  return true;
+  }
+
+  if (pendingBySlug.size > 0) {
+    const rows = await db
+      .insert(categories)
+      .values([...pendingBySlug.values()])
+      .onConflictDoUpdate({
+        target: categories.slug,
+        set: {
+          label: canonicalWinsOnConflictSql(categories.label, sql`excluded.label`),
+          provenance: canonicalWinsOnConflictSql(categories.provenance, sql`excluded.provenance`),
+          updatedAt: now,
+        },
+      })
+      .returning({ id: categories.id, slug: categories.slug });
+
+    for (const row of rows) {
+      cache.set(row.slug, row.id);
+    }
+  }
+
+  const idsByLabel = new Map<string, string>();
+  for (const label of labels) {
+    const slug = toCategorySlug(label);
+    const id = slug ? cache.get(slug) : undefined;
+    if (id) {
+      idsByLabel.set(label, id);
+    }
+  }
+  return idsByLabel;
 }
 
-async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<UpsertResult> {
+async function upsertCatalogFeeds(
+  records: NormalizedImportRecord[],
+  categoryIdCache: Map<string, string>,
+): Promise<BatchUpsertResult> {
+  if (records.length === 0) {
+    return { imported: 0, failed: 0, categoryAssignments: 0, languageAssignments: 0 };
+  }
+
   const now = new Date();
-  const metadata = {
-    catalogSource: record.catalogSource,
-    language: record.language,
-    contentType: record.contentType,
-    qualityScore: record.qualityScore,
-    catalogUpdatedAt: now,
-    metadataProvenance: "catalog",
-  };
   const rows = await db
     .insert(feeds)
-    .values({
-      id: crypto.randomUUID(),
-      url: record.canonicalUrl,
-      title: record.title,
-      description: record.description,
-      link: record.link,
-      ...metadata,
-      createdAt: now,
-      updatedAt: now,
-    })
-    .onConflictDoUpdate({
-      target: feeds.url,
-      set: {
+    .values(
+      records.map((record) => ({
+        id: crypto.randomUUID(),
+        url: record.canonicalUrl,
         title: record.title,
         description: record.description,
         link: record.link,
-        ...metadata,
+        catalogSource: record.catalogSource,
+        language: record.language,
+        contentType: record.contentType,
+        qualityScore: record.qualityScore,
+        catalogUpdatedAt: now,
+        metadataProvenance: "catalog",
+        createdAt: now,
         updatedAt: now,
+      })),
+    )
+    .onConflictDoUpdate({
+      target: feeds.url,
+      set: {
+        title: sql`excluded.title`,
+        description: sql`excluded.description`,
+        link: sql`excluded.link`,
+        catalogSource: sql`excluded.catalog_source`,
+        language: sql`excluded.language`,
+        contentType: sql`excluded.content_type`,
+        qualityScore: sql`excluded.quality_score`,
+        catalogUpdatedAt: sql`excluded.catalog_updated_at`,
+        metadataProvenance: sql`excluded.metadata_provenance`,
+        updatedAt: sql`excluded.updated_at`,
       },
     })
     .returning({
@@ -129,32 +191,84 @@ async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<Upsert
       faviconUrl: feeds.faviconUrl,
     });
 
-  const upserted = rows[0];
-  if (!upserted) {
-    return { ok: false, categoryAssigned: false, languageAssigned: false };
+  const recordsByUrl = new Map(records.map((record) => [record.canonicalUrl, record]));
+  const canonicalCategoryByUrl = new Map<string, string>();
+  const canonicalLabels: string[] = [];
+
+  for (const record of records) {
+    const canonicalCategory = record.category ? mapCategoryLabelToCanonical(record.category) : null;
+    if (!canonicalCategory) {
+      continue;
+    }
+    canonicalCategoryByUrl.set(record.canonicalUrl, canonicalCategory);
+    canonicalLabels.push(canonicalCategory);
   }
 
-  const canonicalCategory = record.category ? mapCategoryLabelToCanonical(record.category) : null;
-  const categoryAssigned = canonicalCategory
-    ? await assignCatalogCategory(upserted.id, canonicalCategory)
-    : false;
+  const categoryIdsByLabel = await resolveCatalogCategoryIds(canonicalLabels, now, categoryIdCache);
+  const assignments: (typeof feedCategoryAssignments.$inferInsert)[] = [];
+  const searchDocuments: FeedSearchDocument[] = [];
+  let categoryAssignments = 0;
+  let languageAssignments = 0;
 
-  await upsertFeedSearchDocument({
-    id: upserted.id,
-    url: upserted.url,
-    title: upserted.title,
-    description: upserted.description,
-    link: upserted.link,
-    faviconUrl: upserted.faviconUrl,
-    sourceKind: upserted.sourceKind,
-    language: upserted.language,
-    contentType: upserted.contentType,
-    qualityScore: upserted.qualityScore,
-    domain: domainFromUrl(upserted.link ?? upserted.url),
-    categories: canonicalCategory ? [toCategorySlug(canonicalCategory)].filter(Boolean) : [],
-  }).catch(() => undefined);
+  for (const row of rows) {
+    const record = recordsByUrl.get(row.url);
+    if (record?.language) {
+      languageAssignments += 1;
+    }
 
-  return { ok: true, categoryAssigned, languageAssigned: record.language != null };
+    const canonicalCategory = canonicalCategoryByUrl.get(row.url) ?? null;
+    const categoryId = canonicalCategory ? categoryIdsByLabel.get(canonicalCategory) : undefined;
+    const categorySlug = canonicalCategory ? toCategorySlug(canonicalCategory) : "";
+    if (categoryId) {
+      assignments.push({
+        id: crypto.randomUUID(),
+        feedId: row.id,
+        categoryId,
+        provenance: "catalog",
+        createdAt: now,
+        updatedAt: now,
+      });
+      categoryAssignments += 1;
+    }
+
+    searchDocuments.push({
+      id: row.id,
+      url: row.url,
+      title: row.title,
+      description: row.description,
+      link: row.link,
+      faviconUrl: row.faviconUrl,
+      sourceKind: row.sourceKind,
+      language: row.language,
+      contentType: row.contentType,
+      qualityScore: row.qualityScore,
+      domain: domainFromUrl(row.link ?? row.url),
+      categories: categorySlug ? [categorySlug] : [],
+    });
+  }
+
+  if (assignments.length > 0) {
+    await db
+      .insert(feedCategoryAssignments)
+      .values(assignments)
+      .onConflictDoUpdate({
+        target: [
+          feedCategoryAssignments.feedId,
+          feedCategoryAssignments.categoryId,
+          feedCategoryAssignments.provenance,
+        ],
+        set: { updatedAt: now },
+      });
+  }
+
+  await upsertFeedSearchDocuments(searchDocuments).catch(() => undefined);
+
+  return {
+    imported: rows.length,
+    failed: records.length - rows.length,
+    categoryAssignments,
+    languageAssignments,
+  };
 }
 
 async function* readLines(filePath: string): AsyncIterable<string> {
@@ -193,6 +307,7 @@ async function* readLines(filePath: string): AsyncIterable<string> {
 export async function importCatalogFile(
   inputPath: string,
   dryRun: boolean,
+  options: CatalogImportOptions = { batchSize: DEFAULT_CATALOG_IMPORT_BATCH_SIZE },
 ): Promise<{ stats: ImportStats; validation: ValidationReport; duplicateCanonicalUrls: number }> {
   const stats: ImportStats = {
     processed: 0,
@@ -209,7 +324,27 @@ export async function importCatalogFile(
     missingCategory: 0,
   };
   const seenCanonicalUrls = new Set<string>();
+  const categoryIdCache = new Map<string, string>();
+  let pendingRecords: NormalizedImportRecord[] = [];
   let duplicateCanonicalUrls = 0;
+
+  async function flushPendingRecords(): Promise<void> {
+    if (pendingRecords.length === 0) {
+      return;
+    }
+    const batch = pendingRecords;
+    pendingRecords = [];
+
+    try {
+      const result = await upsertCatalogFeeds(batch, categoryIdCache);
+      stats.imported += result.imported;
+      stats.failed += result.failed;
+      stats.categoryAssignments += result.categoryAssignments;
+      stats.languageAssignments += result.languageAssignments;
+    } catch {
+      stats.failed += batch.length;
+    }
+  }
 
   for await (const line of readLines(inputPath)) {
     if (!line.trim()) {
@@ -258,20 +393,12 @@ export async function importCatalogFile(
       continue;
     }
 
-    const result = await upsertCatalogFeed(normalized);
-    if (!result.ok) {
-      stats.failed += 1;
-      continue;
-    }
-
-    stats.imported += 1;
-    if (result.categoryAssigned) {
-      stats.categoryAssignments += 1;
-    }
-    if (result.languageAssigned) {
-      stats.languageAssignments += 1;
+    pendingRecords.push(normalized);
+    if (pendingRecords.length >= options.batchSize) {
+      await flushPendingRecords();
     }
   }
+  await flushPendingRecords();
 
   return { stats, validation, duplicateCanonicalUrls };
 }
@@ -283,19 +410,25 @@ async function main() {
   }
 
   const dryRun = hasFlag("--dry-run");
+  const options = parseCatalogImportOptions();
   if (!dryRun) {
     await assertApiDatabaseReady({
       commandName: "catalog:import",
       ensureSchema: true,
     });
   }
-  const { stats, validation, duplicateCanonicalUrls } = await importCatalogFile(input, dryRun);
+  const { stats, validation, duplicateCanonicalUrls } = await importCatalogFile(
+    input,
+    dryRun,
+    options,
+  );
 
   console.log(
     JSON.stringify(
       {
         input,
         dryRun,
+        batchSize: options.batchSize,
         ...stats,
         duplicateCanonicalUrls,
         validation,

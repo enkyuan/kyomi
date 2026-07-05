@@ -8,6 +8,7 @@ import {
   inferFeedCategories,
   inferItemEmbedding,
   inferItemCategories,
+  mapWithConcurrency,
   nextItemBackfillBatchSize,
   parseBackfillArgs,
   summarizeBackfill,
@@ -31,18 +32,20 @@ afterEach(() => {
 });
 
 describe("category backfill script", () => {
-  test("defaults to dry-run and scans all items", () => {
+  test("defaults to dry-run with capped item scans and bounded concurrency", () => {
     expect(parseBackfillArgs(["bun", "backfill"])).toEqual({
       apply: false,
       limit: 500,
-      itemLimit: null,
+      itemLimit: 50,
       feedId: null,
       classifier: "keyword",
       recentDays: null,
+      concurrency: 8,
+      normalizeExisting: false,
     });
   });
 
-  test("parses apply, limit, item limit, feed id, classifier, and recent days", () => {
+  test("parses apply, limit, item limit, feed id, classifier, recent days, and concurrency", () => {
     expect(
       parseBackfillArgs([
         "bun",
@@ -58,6 +61,9 @@ describe("category backfill script", () => {
         "embedding",
         "--recent-days",
         "7",
+        "--concurrency",
+        "3",
+        "--normalize-existing",
       ]),
     ).toEqual({
       apply: true,
@@ -66,12 +72,15 @@ describe("category backfill script", () => {
       feedId: "feed-1",
       classifier: "embedding",
       recentDays: 7,
+      concurrency: 3,
+      normalizeExisting: true,
     });
 
     expect(parseBackfillArgs(["bun", "backfill", "--embedding"]).classifier).toBe("embedding");
+    expect(parseBackfillArgs(["bun", "backfill", "--all-items"]).itemLimit).toBeNull();
   });
 
-  test("rejects a malformed --item-limit instead of silently scanning all items", () => {
+  test("rejects malformed throttling flags instead of silently scanning too much", () => {
     expect(() => parseBackfillArgs(["bun", "backfill", "--item-limit", "abc"])).toThrow(
       "Invalid --item-limit value: abc",
     );
@@ -87,6 +96,12 @@ describe("category backfill script", () => {
     expect(() => parseBackfillArgs(["bun", "backfill", "--recent-days", "0"])).toThrow(
       "Invalid --recent-days value: 0",
     );
+    expect(() => parseBackfillArgs(["bun", "backfill", "--concurrency", "0"])).toThrow(
+      "Invalid --concurrency value: 0",
+    );
+    expect(() =>
+      parseBackfillArgs(["bun", "backfill", "--all-items", "--item-limit", "50"]),
+    ).toThrow("--all-items cannot be combined with --item-limit");
   });
 
   test("rejects malformed classifier flags", () => {
@@ -187,10 +202,28 @@ describe("category backfill script", () => {
   test("computes all-item and capped item backfill batches", () => {
     expect(nextItemBackfillBatchSize({ itemLimit: null, processed: 0 })).toBe(500);
     expect(nextItemBackfillBatchSize({ itemLimit: null, processed: 1500 })).toBe(500);
+    expect(nextItemBackfillBatchSize({ itemLimit: 50, processed: 0 })).toBe(50);
+    expect(nextItemBackfillBatchSize({ itemLimit: 50, processed: 50 })).toBeNull();
     expect(nextItemBackfillBatchSize({ itemLimit: 10, processed: 0 })).toBe(10);
     expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 0 })).toBe(500);
     expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 500 })).toBe(250);
     expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 750 })).toBeNull();
+  });
+
+  test("limits concurrent item classification work", async () => {
+    let active = 0;
+    let maxActive = 0;
+
+    const values = await mapWithConcurrency([1, 2, 3, 4, 5], 2, async (value) => {
+      active += 1;
+      maxActive = Math.max(maxActive, active);
+      await new Promise((resolve) => setTimeout(resolve, 1));
+      active -= 1;
+      return value * 2;
+    });
+
+    expect(values).toEqual([2, 4, 6, 8, 10]);
+    expect(maxActive).toBeLessThanOrEqual(2);
   });
 
   test("summarizes dry-run and apply output", () => {

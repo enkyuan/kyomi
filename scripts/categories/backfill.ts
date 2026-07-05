@@ -54,6 +54,8 @@ export type BackfillArgs = {
   feedId: string | null;
   classifier: BackfillClassifierMethod;
   recentDays: number | null;
+  concurrency: number;
+  normalizeExisting: boolean;
 };
 
 export type BackfillStats = {
@@ -103,6 +105,18 @@ function optionalPositiveIntFlag(argv: string[], flag: string): number | null {
   return parsed;
 }
 
+function requiredPositiveIntFlag(argv: string[], flag: string, fallback: number): number {
+  const value = valueAfter(argv, flag);
+  if (!value) {
+    return fallback;
+  }
+  const parsed = Number.parseInt(value, 10);
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    throw new Error(`Invalid ${flag} value: ${value}`);
+  }
+  return parsed;
+}
+
 function parseBackfillClassifier(argv: string[]): BackfillClassifierMethod {
   const value = valueAfter(argv, "--classifier");
   const shorthand = argv.includes("--embedding");
@@ -121,14 +135,29 @@ function parseBackfillClassifier(argv: string[]): BackfillClassifierMethod {
   throw new Error(`Invalid --classifier value: ${value}`);
 }
 
+const DEFAULT_BACKFILL_FEED_LIMIT = 500;
+const DEFAULT_BACKFILL_ITEM_LIMIT = 50;
+const DEFAULT_BACKFILL_CONCURRENCY = 8;
+
+function parseBackfillItemLimit(argv: string[]): number | null {
+  const allItems = argv.includes("--all-items");
+  const itemLimit = optionalPositiveIntFlag(argv, "--item-limit");
+  if (allItems && itemLimit !== null) {
+    throw new Error("--all-items cannot be combined with --item-limit");
+  }
+  return allItems ? null : (itemLimit ?? DEFAULT_BACKFILL_ITEM_LIMIT);
+}
+
 export function parseBackfillArgs(argv: string[]): BackfillArgs {
   return {
     apply: argv.includes("--apply"),
-    limit: positiveInt(valueAfter(argv, "--limit"), 500),
-    itemLimit: optionalPositiveIntFlag(argv, "--item-limit"),
+    limit: positiveInt(valueAfter(argv, "--limit"), DEFAULT_BACKFILL_FEED_LIMIT),
+    itemLimit: parseBackfillItemLimit(argv),
     feedId: valueAfter(argv, "--feed-id"),
     classifier: parseBackfillClassifier(argv),
     recentDays: optionalPositiveIntFlag(argv, "--recent-days"),
+    concurrency: requiredPositiveIntFlag(argv, "--concurrency", DEFAULT_BACKFILL_CONCURRENCY),
+    normalizeExisting: argv.includes("--normalize-existing"),
   };
 }
 
@@ -196,10 +225,38 @@ function loadFeeds(args: BackfillArgs) {
 
 const ITEM_BACKFILL_BATCH_SIZE = 500;
 
+export async function mapWithConcurrency<T, R>(
+  items: T[],
+  concurrency: number,
+  mapper: (item: T, index: number) => Promise<R>,
+): Promise<R[]> {
+  if (items.length === 0) {
+    return [];
+  }
+  const workers = Math.min(Math.max(1, concurrency), items.length);
+  const results = new Array<R>(items.length);
+  let nextIndex = 0;
+
+  await Promise.all(
+    Array.from({ length: workers }, async () => {
+      while (nextIndex < items.length) {
+        const index = nextIndex;
+        nextIndex += 1;
+        results[index] = await mapper(items[index]!, index);
+      }
+    }),
+  );
+
+  return results;
+}
+
 function loadItemsPage(feedId: string, limit: number, offset: number, recentDays: number | null) {
   const feedFilter = eq(feedItems.feedId, feedId);
   const whereClause = recentDays
-    ? and(feedFilter, sql`${feedItems.publishedAt} >= now() - (${recentDays}::int * interval '1 day')`)
+    ? and(
+        feedFilter,
+        sql`${feedItems.publishedAt} >= now() - (${recentDays}::int * interval '1 day')`,
+      )
     : feedFilter;
 
   return db
@@ -571,17 +628,21 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
   };
   const now = new Date();
 
-  const assignmentPlan = await normalizeExistingAssignments(args.apply, now);
-  stats.assignmentsScanned = assignmentPlan.scanned;
-  stats.assignmentsRewritten = assignmentPlan.rewritten;
-  stats.assignmentsDroppedUnmapped = assignmentPlan.droppedUnmapped;
+  if (args.normalizeExisting) {
+    const assignmentPlan = await normalizeExistingAssignments(args.apply, now);
+    stats.assignmentsScanned = assignmentPlan.scanned;
+    stats.assignmentsRewritten = assignmentPlan.rewritten;
+    stats.assignmentsDroppedUnmapped = assignmentPlan.droppedUnmapped;
+  }
 
   const feedRows = await loadFeeds(args);
 
   for (const feed of feedRows) {
     stats.feedsScanned += 1;
-    const { categories: feedCategories, suppressedFallback } =
-      await inferClassifierFeed(feed, classifier);
+    const { categories: feedCategories, suppressedFallback } = await inferClassifierFeed(
+      feed,
+      classifier,
+    );
     if (suppressedFallback) {
       stats.feedClassifierFallbacksSuppressed += 1;
     }
@@ -605,22 +666,16 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
         break;
       }
 
-      const inferredItems = await Promise.all(
-        items.map(async (item) => {
-          stats.itemsScanned += 1;
-          const inferredCategoryLabels = await inferClassifierItem(
-            feed,
-            item,
-            classifier,
-          );
-          if (inferredCategoryLabels.length > 0) {
-            stats.itemsWithClassifierCategories += 1;
-          } else {
-            stats.itemClassifierAbstentions += 1;
-          }
-          return { id: item.id, inferredCategoryLabels };
-        }),
-      );
+      const inferredItems = await mapWithConcurrency(items, args.concurrency, async (item) => {
+        stats.itemsScanned += 1;
+        const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier);
+        if (inferredCategoryLabels.length > 0) {
+          stats.itemsWithClassifierCategories += 1;
+        } else {
+          stats.itemClassifierAbstentions += 1;
+        }
+        return { id: item.id, inferredCategoryLabels };
+      });
 
       if (args.apply) {
         // syncInferredFeedCategories unconditionally deletes+reinserts the feed's
