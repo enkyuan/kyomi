@@ -73,6 +73,7 @@ async function handleWorkerJob(
         itemCount: result.itemCount,
         insertedCount: result.insertedCount,
         updatedCount: result.updatedCount,
+        categoryStats: result.categoryStats ?? null,
         attempts,
         durationMs,
       });
