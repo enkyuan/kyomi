@@ -5,6 +5,7 @@ import {
   index,
   integer,
   pgTable,
+  primaryKey,
   text,
   timestamp,
   uniqueIndex,
@@ -137,5 +138,43 @@ export const feedSubscriptions = pgTable(
   (table) => [
     uniqueIndex("feed_subscriptions_user_id_feed_id_unique").on(table.userId, table.feedId),
     index("feed_subscriptions_feed_id_idx").on(table.feedId),
+  ],
+);
+
+export const feedCategoryBackfillStatus = pgTable(
+  "feed_category_backfill_status",
+  {
+    feedId: text("feed_id")
+      .notNull()
+      .references(() => feeds.id, { onDelete: "cascade" }),
+    classifierMethod: text("classifier_method").notNull(),
+    modelId: text("model_id").notNull(),
+    taxonomyVersion: text("taxonomy_version").notNull(),
+    status: text("status").notNull(),
+    feedClassifierCategories: integer("feed_classifier_categories").notNull().default(0),
+    feedClassifierFallbackSuppressed: boolean("feed_classifier_fallback_suppressed")
+      .notNull()
+      .default(false),
+    itemsScanned: integer("items_scanned").notNull().default(0),
+    itemsWithClassifierCategories: integer("items_with_classifier_categories").notNull().default(0),
+    itemClassifierAbstentions: integer("item_classifier_abstentions").notNull().default(0),
+    lastError: text("last_error"),
+    processedAt: timestamp("processed_at"),
+    failedAt: timestamp("failed_at"),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => [
+    primaryKey({
+      name: "feed_cat_backfill_status_pk",
+      columns: [table.feedId, table.classifierMethod, table.modelId, table.taxonomyVersion],
+    }),
+    index("feed_cat_backfill_status_idx").on(
+      table.classifierMethod,
+      table.modelId,
+      table.taxonomyVersion,
+      table.status,
+      table.feedId,
+    ),
   ],
 );

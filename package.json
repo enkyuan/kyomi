@@ -9,7 +9,7 @@
   "scripts": {
     "build": "turbo run build",
     "bootstrap": "bun run setup:app",
-    "bootstrap:full": "bun run setup:app && bun run setup:catalog",
+    "bootstrap:full": "bun run setup:app && bun run setup:catalog && bun run categories:backfill -- --apply --all",
     "dev": "turbo run dev --filter=@kyomi/web --filter=@kyomi/api",
     "dev:app": "turbo run dev --filter=@kyomi/web",
     "dev:web": "turbo run dev --filter=@kyomi/web",
@@ -57,9 +57,9 @@
     "catalog:smoke": "bun run --cwd apps/api catalog:smoke",
     "catalog:sync": "bun run catalog:export && bun run catalog:import && bun run catalog:smoke",
     "catalog:sync:local": "bun scripts/catalog/sync.ts",
-    "categories:backfill": "bun scripts/categories/backfill.ts",
-    "categories:report": "bun scripts/categories/report.ts",
-    "categories:audit": "bun scripts/categories/audit.ts"
+    "categories:backfill": "bunx --no-install dotenvx run -f docker/.env -f apps/api/.env -- bun scripts/categories/backfill.ts",
+    "categories:report": "bunx --no-install dotenvx run -f docker/.env -f apps/api/.env -- bun scripts/categories/report.ts",
+    "categories:audit": "bunx --no-install dotenvx run -f docker/.env -f apps/api/.env -- bun scripts/categories/audit.ts"
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.66.0",

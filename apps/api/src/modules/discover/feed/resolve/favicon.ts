@@ -5,7 +5,7 @@ import {
   type FaviconDatabase,
 } from "@kyomi/worker/favicon";
 import type { AppLogger } from "@adapters/logger";
-import type { ResolvedRemoteFeed } from "./resolve-remote";
+import type { ResolvedRemoteFeed } from "./remote";
 
 export type FeedFaviconEnrichment = { url: string; source: string } | null;
 

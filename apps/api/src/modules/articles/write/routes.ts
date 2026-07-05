@@ -1,6 +1,6 @@
 import type { Elysia } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
-import { createArticleClip } from "./clips";
+import { createArticleClip } from "./clips/operations";
 import {
   articleDetailSchema,
   articleIdParamsSchema,

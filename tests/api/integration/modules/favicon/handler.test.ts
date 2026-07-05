@@ -5,7 +5,7 @@ import {
   type FaviconHostStore,
   type FaviconResolutionSource,
 } from "@kyomi/worker/favicon";
-import { handleFaviconRequestWithStore } from "@modules/favicon/service";
+import { handleFaviconRequestWithStore } from "@modules/favicon/handler";
 
 type CachedFaviconHost = NonNullable<Awaited<ReturnType<FaviconHostStore["read"]>>>;
 
@@ -151,7 +151,7 @@ function faviconResolutionFetch(url: string) {
   return new Response(null, { status: 404 });
 }
 
-describe("favicon request service", () => {
+describe("favicon request handler", () => {
   afterEach(() => {
     globalThis.fetch = originalFetch;
   });

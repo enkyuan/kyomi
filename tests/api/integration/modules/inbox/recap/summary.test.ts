@@ -1,8 +1,8 @@
 import { describe, expect, test } from "bun:test";
 import { createApp } from "@app/http/create-app";
-import { normalizeRecapLimitForTest } from "@modules/inbox/recap/service";
+import { normalizeRecapLimitForTest } from "@modules/inbox/recap/summary";
 
-describe("inbox recap service", () => {
+describe("inbox recap summary", () => {
   test("normalizes rail limits", () => {
     expect(normalizeRecapLimitForTest(undefined)).toBe(5);
     expect(normalizeRecapLimitForTest("")).toBe(5);

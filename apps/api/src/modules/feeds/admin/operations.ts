@@ -2,7 +2,7 @@ import { and, eq, ne } from "drizzle-orm";
 import { feeds } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { deleteFeedSearchDocument, upsertFeedSearchDocument } from "@adapters/search/meili";
-import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize-url";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize";
 import { AppError } from "@shared/errors/app";
 import type { AdminGlobalFeedDetailDto, AdminUpdateGlobalFeedBody } from "../types";
 

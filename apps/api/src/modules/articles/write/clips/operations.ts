@@ -1,6 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { articleClips } from "@kyomi/db";
-import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
+import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize";
 import { and, asc, desc, eq, gt, gte, ilike, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import type { ArticleSort } from "@modules/articles/query";

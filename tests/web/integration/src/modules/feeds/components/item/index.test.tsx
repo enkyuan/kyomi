@@ -1,41 +1,7 @@
-import { act, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxItem } from "@modules/inbox/lib/articles/index";
-
-const {
-  anchoredToastAddMock,
-  mutateAsyncMock,
-  mutateMock,
-  reportBrokenArticleMock,
-  toastAddMock,
-  toastUpdateMock,
-} = vi.hoisted(() => ({
-  anchoredToastAddMock: vi.fn(),
-  mutateAsyncMock: vi.fn(),
-  mutateMock: vi.fn(),
-  reportBrokenArticleMock: vi.fn(),
-  toastAddMock: vi.fn(),
-  toastUpdateMock: vi.fn(),
-}));
-
-vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
-  useInboxItemStateMutation: () => ({ mutate: mutateMock, mutateAsync: mutateAsyncMock }),
-}));
-
-vi.mock("@modules/inbox/lib/articles/index", () => ({
-  reportBrokenArticle: reportBrokenArticleMock,
-}));
-
-vi.mock("@kyomi/ui/toast", () => ({
-  anchoredToastManager: {
-    add: anchoredToastAddMock,
-  },
-  toastManager: {
-    add: toastAddMock,
-    update: toastUpdateMock,
-  },
-}));
 
 vi.mock("@hooks/use-pretext", () => ({
   usePretextLayout: () => ({
@@ -89,22 +55,12 @@ function renderItem({ onSelect = vi.fn(), rowItem = item } = {}) {
 }
 
 async function click(element: HTMLElement) {
-  await act(async () => {
-    fireEvent.click(element);
-    await Promise.resolve();
-  });
+  fireEvent.click(element);
+  await Promise.resolve();
 }
 
-describe("inbox item toolbar", () => {
+describe("inbox item row", () => {
   beforeEach(() => {
-    mutateAsyncMock.mockResolvedValue(undefined);
-    anchoredToastAddMock.mockClear();
-    mutateAsyncMock.mockClear();
-    mutateMock.mockClear();
-    reportBrokenArticleMock.mockReset();
-    toastAddMock.mockReturnValue("toast-1");
-    toastAddMock.mockClear();
-    toastUpdateMock.mockClear();
     vi.stubGlobal(
       "ResizeObserver",
       class ResizeObserver {
@@ -113,7 +69,6 @@ describe("inbox item toolbar", () => {
         disconnect() {}
       },
     );
-    vi.spyOn(window, "open").mockImplementation(() => null);
   });
 
   afterEach(() => {
@@ -121,120 +76,19 @@ describe("inbox item toolbar", () => {
     vi.unstubAllGlobals();
   });
 
-  test("does not select the item when toolbar controls are clicked", async () => {
+  test("selects the item when the row is clicked", async () => {
     const { onSelect } = renderItem();
+
+    await click(screen.getByRole("button", { name: item.title }));
+
+    expect(onSelect).toHaveBeenCalledWith(item);
+  });
+
+  test("does not render article action controls in feed item rows", () => {
+    renderItem();
 
     for (const label of ["Read later", "Copy link", "Share article", "More"]) {
-      await click(screen.getByRole("button", { name: label }));
+      expect(screen.queryByRole("button", { name: label })).toBeNull();
     }
-    await click(screen.getByRole("menuitem", { name: "Open source" }));
-
-    expect(onSelect).not.toHaveBeenCalled();
-  });
-
-  test("aligns the inline toolbar at the end of the row footer", () => {
-    const { container } = renderItem();
-
-    expect(container.querySelector('[data-slot="card-footer"]')?.className).toContain(
-      "justify-end",
-    );
-  });
-
-  test("marks an item hidden when Not interested is clicked", async () => {
-    renderItem();
-
-    await click(screen.getByRole("button", { name: "More" }));
-    await click(screen.getByRole("menuitem", { name: "Not interested" }));
-
-    expect(mutateMock).toHaveBeenCalledWith({
-      itemId: item.id,
-      patch: { isHidden: true },
-      removeFromList: true,
-    });
-  });
-
-  test("uses an anchored toast when saving an item to read later", async () => {
-    renderItem();
-
-    const button = screen.getByRole("button", { name: "Read later" });
-    await click(button);
-
-    expect(mutateAsyncMock).toHaveBeenCalledWith({
-      itemId: item.id,
-      patch: { isSaved: true },
-    });
-    await waitFor(() => {
-      expect(anchoredToastAddMock).toHaveBeenCalledWith(
-        expect.objectContaining({
-          title: "Article saved",
-          type: "success",
-          timeout: 1800,
-          data: { groupKey: "article.saved-state", tooltipStyle: true },
-          positionerProps: expect.objectContaining({
-            anchor: button,
-            side: "top",
-            align: "center",
-            sideOffset: 6,
-            positionMethod: "fixed",
-          }),
-        }),
-      );
-    });
-    expect(anchoredToastAddMock.mock.calls[0]?.[0]).not.toHaveProperty("description");
-    expect(toastAddMock).not.toHaveBeenCalled();
-    expect(toastUpdateMock).not.toHaveBeenCalled();
-  });
-
-  test("uses an anchored toast when removing an item from read later", async () => {
-    renderItem({ rowItem: { ...item, isSaved: true } });
-
-    const button = screen.getByRole("button", { name: "Remove from read later" });
-    await click(button);
-
-    expect(mutateAsyncMock).toHaveBeenCalledWith({
-      itemId: item.id,
-      patch: { isSaved: false },
-    });
-    await waitFor(() => {
-      expect(anchoredToastAddMock).toHaveBeenCalledWith(
-        expect.objectContaining({
-          title: "Article unsaved",
-          type: "info",
-          timeout: 1800,
-          data: { groupKey: "article.saved-state", tooltipStyle: true },
-          positionerProps: expect.objectContaining({
-            anchor: button,
-            side: "top",
-            align: "center",
-            sideOffset: 6,
-            positionMethod: "fixed",
-          }),
-        }),
-      );
-    });
-    expect(anchoredToastAddMock.mock.calls[0]?.[0]).not.toHaveProperty("description");
-    expect(toastAddMock).not.toHaveBeenCalled();
-    expect(toastUpdateMock).not.toHaveBeenCalled();
-  });
-
-  test("opens a broken article report dialog from the more menu", async () => {
-    renderItem();
-
-    await click(screen.getByRole("button", { name: "More" }));
-    await click(screen.getByRole("menuitem", { name: "Report broken article" }));
-
-    const dialog = screen.getByRole("dialog", { name: "Report broken article" });
-    expect(within(dialog).getByText("Toolbar click regression")).toBeTruthy();
-  });
-
-  test("does not select the item when the broken article dialog is canceled", async () => {
-    const { onSelect } = renderItem();
-
-    await click(screen.getByRole("button", { name: "More" }));
-    await click(screen.getByRole("menuitem", { name: "Report broken article" }));
-    await click(screen.getByRole("button", { name: "Cancel" }));
-
-    expect(onSelect).not.toHaveBeenCalled();
-    expect(reportBrokenArticleMock).not.toHaveBeenCalled();
   });
 });

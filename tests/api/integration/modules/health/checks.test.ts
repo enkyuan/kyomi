@@ -1,10 +1,10 @@
 import { describe, expect, test } from "bun:test";
 import type { db } from "@adapters/db/client";
-import { buildReadinessPayload, getHealth } from "@modules/health/service";
+import { buildReadinessPayload, getHealth } from "@modules/health/checks";
 
 type DB = typeof db;
 
-describe("health.service", () => {
+describe("health checks", () => {
   test("getHealth includes semver version", () => {
     const payload = getHealth();
     expect(payload.status).toBe("ok");

@@ -3,7 +3,7 @@ import {
   collapseObviousDuplicates,
   normalizedArticleIdentity,
 } from "@modules/articles/read/list/dedupe";
-import { filterVisibleArticleRowsForTest } from "@modules/articles/read/list";
+import { filterVisibleArticleRowsForTest } from "@modules/articles/read/list/query";
 
 type Row = {
   id: string;

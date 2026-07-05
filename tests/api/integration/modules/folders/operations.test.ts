@@ -5,9 +5,9 @@ import {
   deleteFolder,
   markFolderReadStatus,
   updateFolder,
-} from "@modules/folders/service";
+} from "@modules/folders/operations";
 
-describe("folders.service", () => {
+describe("folders operations", () => {
   test("createFolder trims and returns inserted folder", async () => {
     const createdAt = new Date("2026-04-01T00:00:00.000Z");
     const insert = mock(() => ({

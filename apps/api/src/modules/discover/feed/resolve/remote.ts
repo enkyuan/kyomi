@@ -1,9 +1,9 @@
 import { AppError } from "@shared/errors/app";
 import { logger } from "@adapters/logger";
-import { discoverFeedUrlFromHtml } from "./discover-url";
-import { fetchFeedDocument, type FetchFeedDocumentResult } from "./fetch";
-import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "./normalize-url";
-import { parseFeedMetadata, parseHtmlMetadataFallback } from "./parse";
+import { discoverFeedUrlFromHtml } from "@kyomi/worker/ingestion";
+import { fetchFeedDocument, type FetchFeedDocumentResult } from "../fetch";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "../normalize";
+import { parseFeedMetadata, parseHtmlMetadataFallback } from "../parse";
 
 export type ResolvedRemoteFeed = {
   canonicalUrl: string;

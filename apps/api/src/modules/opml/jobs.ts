@@ -2,8 +2,8 @@ import type { db } from "@adapters/db/client";
 import { publishJob } from "@adapters/queue/publish-job";
 import { getRedis } from "@adapters/redis";
 import { enqueueFeedRefresh } from "@modules/feeds/refresh/enqueue";
-import { createOrSubscribeToFeed } from "@modules/feeds/subscription/service";
-import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/service";
+import { createOrSubscribeToFeed } from "@modules/feeds/subscription/subscribe";
+import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/operations";
 import { AppError } from "@shared/errors/app";
 import { parseOpmlDocument } from "./parse";
 import {

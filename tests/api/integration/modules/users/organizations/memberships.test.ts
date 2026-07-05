@@ -1,7 +1,7 @@
 import { describe, expect, mock, test } from "bun:test";
-import { listMembershipsForUser } from "@modules/users/organizations/service";
+import { listMembershipsForUser } from "@modules/users/organizations/memberships";
 
-describe("users.organizations.service", () => {
+describe("users organization memberships", () => {
   test("listMembershipsForUser returns joined rows", async () => {
     const row = {
       membershipId: "mem_1",

@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, mock, test } from "bun:test";
-import { createArticleClip } from "@modules/articles/write/clips";
+import { createArticleClip } from "@modules/articles/write/clips/operations";
 
 const originalFetch = globalThis.fetch;
 

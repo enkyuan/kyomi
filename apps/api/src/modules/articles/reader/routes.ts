@@ -3,7 +3,7 @@ import { env } from "@config/env";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { getArticleDetailForUser } from "../read/detail";
 import { resolveEnhancementContent, summarizeContent, translateContent } from "./enrichment";
-import { extractFullTextForUser } from "./extraction/service";
+import { extractFullTextForUser } from "./extraction/workflow";
 import {
   articleIdParamsSchema,
   extractFullTextResponseSchema,

@@ -12,7 +12,7 @@ import {
   type HostRateLimiter,
   type JobMessage,
 } from "@kyomi/worker";
-import { runOpmlImportFeedJob, runOpmlImportJob } from "@modules/opml/service";
+import { runOpmlImportFeedJob, runOpmlImportJob } from "@modules/opml/jobs";
 import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "./refresh-errors";
 
 async function handleWorkerJob(
