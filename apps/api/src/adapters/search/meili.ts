@@ -120,6 +120,9 @@ async function ensureFeedIndex(): Promise<void> {
 }
 
 export async function upsertFeedSearchDocuments(documents: FeedSearchDocument[]): Promise<void> {
+  if (documents.length === 0) {
+    return;
+  }
   if (!isMeiliConfigured()) {
     return;
   }

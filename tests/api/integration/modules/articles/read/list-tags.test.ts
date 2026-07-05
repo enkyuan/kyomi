@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { PgDialect } from "drizzle-orm/pg-core";
-import { isCanonicalCategoryLabel } from "@kyomi/db";
+import { isCanonicalCategoryLabel, MISCELLANEOUS_CATEGORY_LABEL } from "@kyomi/db";
 import { buildCategoryLabelsSql, categoryLabelsSql } from "@modules/articles/read/labels";
 import { toArticleListItemsForTest } from "@modules/articles/read/list/query";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
@@ -27,8 +27,14 @@ function rawRow(overrides: Partial<ArticleListRawRow> = {}): ArticleListRawRow {
   };
 }
 
+function renderQuery(
+  fragment: Parameters<PgDialect["sqlToQuery"]>[0],
+): ReturnType<PgDialect["sqlToQuery"]> {
+  return new PgDialect().sqlToQuery(fragment);
+}
+
 function renderSql(fragment: Parameters<PgDialect["sqlToQuery"]>[0]): string {
-  return new PgDialect().sqlToQuery(fragment).sql;
+  return renderQuery(fragment).sql;
 }
 
 describe("article list item categories", () => {
@@ -60,7 +66,8 @@ describe("article list item categories", () => {
     expect(sql).toContain('"feed_category_assignments"');
     expect(sql).toContain("classifier_method\" = 'keyword'");
     expect(sql).not.toContain("classifier_method\" = 'embedding'");
-    expect(sql).toContain("category_sources.source_rank < 99");
+    expect(sql).toContain("raw_item_sources.source_rank < 99");
+    expect(sql).toContain("raw_feed_sources.source_rank < 99");
 
     const explicitItem = sql.indexOf("THEN 0");
     const keywordItem = sql.indexOf("THEN 1");
@@ -88,6 +95,32 @@ describe("article list item categories", () => {
     expect(embeddingFeed).toBeGreaterThan(explicitFeed);
     expect(keywordFeed).toBeGreaterThan(embeddingFeed);
     expect(sql).toContain("confidence DESC NULLS LAST");
+  });
+
+  test("embedding category label SQL uses keyword rows only as fallback rows", () => {
+    const sql = renderSql(buildCategoryLabelsSql("embedding"));
+
+    expect(sql).toContain("raw_item_sources.classifier_method IS DISTINCT FROM 'keyword'");
+    expect(sql).toContain("FROM raw_item_sources AS embedding_item_sources");
+    expect(sql).toContain("embedding_item_sources.classifier_method = 'embedding'");
+    expect(sql).toContain("raw_feed_sources.classifier_method IS DISTINCT FROM 'keyword'");
+    expect(sql).toContain("FROM raw_feed_sources AS embedding_feed_sources");
+    expect(sql).toContain("embedding_feed_sources.classifier_method = 'embedding'");
+  });
+
+  test("category label SQL only uses feed fallbacks when no item labels are eligible", () => {
+    const sql = renderSql(buildCategoryLabelsSql("embedding"));
+
+    expect(sql).toContain("AND NOT EXISTS (SELECT 1 FROM item_sources)");
+  });
+
+  test("category label SQL suppresses classifier Miscellaneous rows from chips", () => {
+    const query = renderQuery(buildCategoryLabelsSql("embedding"));
+
+    expect(query.params).toContain(MISCELLANEOUS_CATEGORY_LABEL);
+    expect(query.sql).toMatch(/raw_item_sources\.label <> \$\d+/);
+    expect(query.sql).toMatch(/raw_feed_sources\.label <> \$\d+/);
+    expect(query.sql).toContain("assignment_provenance IS DISTINCT FROM 'classifier'");
   });
 
   test("category label SQL caps the DTO at two labels per item", () => {

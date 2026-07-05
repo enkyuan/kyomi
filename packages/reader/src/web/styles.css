@@ -59,8 +59,8 @@
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre {
   box-sizing: border-box;
   width: 100%;
-  min-width: 0;
   max-width: 100%;
+  min-width: 0;
   overflow-x: auto;
   white-space: pre-wrap;
   overflow-wrap: normal;

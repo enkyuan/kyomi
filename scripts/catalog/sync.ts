@@ -11,6 +11,29 @@ async function log(message: string): Promise<void> {
   await appendFile(LOG_FILE, `${message}\n`);
 }
 
+async function logStream(stream: ReadableStream<Uint8Array> | null): Promise<void> {
+  if (!stream) {
+    return;
+  }
+  const reader = stream.getReader();
+  const decoder = new TextDecoder();
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) {
+        break;
+      }
+      await appendFile(LOG_FILE, decoder.decode(value, { stream: true }));
+    }
+    const trailing = decoder.decode();
+    if (trailing) {
+      await appendFile(LOG_FILE, trailing);
+    }
+  } finally {
+    reader.releaseLock();
+  }
+}
+
 function cleanup(): void {
   if (existsSync(LOCK_DIR)) {
     rmdirSync(LOCK_DIR);
@@ -23,18 +46,11 @@ async function runCatalogSync(): Promise<number> {
     stdout: "pipe",
     stderr: "pipe",
   });
-  const [stdout, stderr, exitCode] = await Promise.all([
-    new Response(proc.stdout).text(),
-    new Response(proc.stderr).text(),
+  const [, , exitCode] = await Promise.all([
+    logStream(proc.stdout),
+    logStream(proc.stderr),
     proc.exited,
   ]);
-
-  if (stdout.trim()) {
-    await log(stdout.trimEnd());
-  }
-  if (stderr.trim()) {
-    await log(stderr.trimEnd());
-  }
 
   return exitCode;
 }
