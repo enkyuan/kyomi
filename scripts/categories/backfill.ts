@@ -1116,12 +1116,14 @@ async function processFeed(
   feed: BackfillFeedRecord,
   args: BackfillArgs,
   classifier: BackfillClassifier,
+  stats: BackfillStats,
   now: Date,
   feedStats: ProcessedFeedStats,
 ): Promise<void> {
   const { categories: feedCategories, suppressedFallback } = await inferClassifierFeed(
     feed,
     classifier,
+    stats,
   );
   feedStats.feedClassifierCategories = feedCategories.length;
   feedStats.feedClassifierFallbackSuppressed = suppressedFallback;
@@ -1142,18 +1144,16 @@ async function processFeed(
       break;
     }
 
-    const inferredItems = await Promise.all(
-      items.map(async (item) => {
-        feedStats.itemsScanned += 1;
-        const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier);
-        if (inferredCategoryLabels.length > 0) {
-          feedStats.itemsWithClassifierCategories += 1;
-        } else {
-          feedStats.itemClassifierAbstentions += 1;
-        }
-        return { id: item.id, inferredCategoryLabels };
-      }),
-    );
+    const inferredItems = await mapWithConcurrency(items, args.concurrency, async (item) => {
+      feedStats.itemsScanned += 1;
+      const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier, stats);
+      if (inferredCategoryLabels.length > 0) {
+        feedStats.itemsWithClassifierCategories += 1;
+      } else {
+        feedStats.itemClassifierAbstentions += 1;
+      }
+      return { id: item.id, inferredCategoryLabels };
+    });
 
     if (args.apply) {
       // syncInferredFeedCategories unconditionally deletes+reinserts the feed's
@@ -1204,6 +1204,8 @@ function shouldUseBatchBackfill(args: BackfillArgs): boolean {
 async function processFeedBatch(
   feedRows: BackfillFeedRecord[],
   classifier: BackfillClassifier,
+  stats: BackfillStats,
+  concurrency: number,
 ): Promise<{
   processed: ProcessedFeedBatchEntry[];
   failedStatuses: BackfillStatusRecord[];
@@ -1228,21 +1230,25 @@ async function processFeedBatch(
       const { categories: feedCategories, suppressedFallback } = await inferClassifierFeed(
         feed,
         classifier,
+        stats,
       );
       feedStats.feedClassifierCategories = feedCategories.length;
       feedStats.feedClassifierFallbackSuppressed = suppressedFallback;
 
-      const inferredItems: InferredBackfillItem[] = [];
-      for (const item of itemsByFeedId.get(feed.id) ?? []) {
-        feedStats.itemsScanned += 1;
-        const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier);
-        if (inferredCategoryLabels.length > 0) {
-          feedStats.itemsWithClassifierCategories += 1;
-        } else {
-          feedStats.itemClassifierAbstentions += 1;
-        }
-        inferredItems.push({ id: item.id, feedId: feed.id, inferredCategoryLabels });
-      }
+      const inferredItems = await mapWithConcurrency(
+        itemsByFeedId.get(feed.id) ?? [],
+        concurrency,
+        async (item) => {
+          feedStats.itemsScanned += 1;
+          const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier, stats);
+          if (inferredCategoryLabels.length > 0) {
+            feedStats.itemsWithClassifierCategories += 1;
+          } else {
+            feedStats.itemClassifierAbstentions += 1;
+          }
+          return { id: item.id, feedId: feed.id, inferredCategoryLabels };
+        },
+      );
 
       processed.push({
         feed,
@@ -1297,14 +1303,14 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
   const useBatchBackfill = shouldUseBatchBackfill(args);
   let lastProgressAt = 0;
 
-  for (const feed of feedRows) {
-    stats.feedsScanned += 1;
-    const { categories: feedCategories, suppressedFallback } = await inferClassifierFeed(
-      feed,
+  while (true) {
+    const feedRows = (await loadNextFeedBatch(
+      args,
       classifier,
-    );
-    if (suppressedFallback) {
-      stats.feedClassifierFallbacksSuppressed += 1;
+      cursorFeedId,
+    )) as BackfillFeedRecord[];
+    if (feedRows.length === 0) {
+      break;
     }
     if (args.all && !args.feedId) {
       cursorFeedId = feedRows[feedRows.length - 1]!.id;
@@ -1312,21 +1318,22 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
 
     if (useBatchBackfill) {
       stats.feedsScanned += feedRows.length;
-      const { processed, failedStatuses } = await processFeedBatch(feedRows, classifier);
+      const { processed, failedStatuses } = await processFeedBatch(
+        feedRows,
+        classifier,
+        stats,
+        args.concurrency,
+      );
       if (args.apply) {
         await syncInferredFeedBatch(processed, classifier, now);
       }
-
-      const inferredItems = await mapWithConcurrency(items, args.concurrency, async (item) => {
-        stats.itemsScanned += 1;
-        const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier);
-        if (inferredCategoryLabels.length > 0) {
-          stats.itemsWithClassifierCategories += 1;
-        } else {
-          stats.itemClassifierAbstentions += 1;
-        }
-        return { id: item.id, inferredCategoryLabels };
-      });
+      for (const entry of processed) {
+        mergeProcessedFeedStats(stats, entry.stats);
+      }
+      for (const failedStatus of failedStatuses) {
+        mergeProcessedFeedStats(stats, failedStatus.stats);
+      }
+      stats.feedsFailed += failedStatuses.length;
 
       const processedStatuses = processed.map<BackfillStatusRecord>((entry) => ({
         feedId: entry.feed.id,
@@ -1359,7 +1366,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
       const feedStats = createProcessedFeedStats();
       let aggregated = false;
       try {
-        await processFeed(feed, args, classifier, now, feedStats);
+        await processFeed(feed, args, classifier, stats, now, feedStats);
         mergeProcessedFeedStats(stats, feedStats);
         aggregated = true;
         if (trackStatus) {
