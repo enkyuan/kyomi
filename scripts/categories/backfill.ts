@@ -65,6 +65,7 @@ export type BackfillArgs = {
   recentDays: number | null;
   concurrency: number;
   normalizeExisting: boolean;
+  retryFailed: boolean;
 };
 
 export type BackfillStats = {
@@ -177,13 +178,16 @@ export function parseBackfillArgs(argv: string[]): BackfillArgs {
   }
   return {
     apply: argv.includes("--apply"),
+    all,
     limit: positiveInt(valueAfter(argv, "--limit"), DEFAULT_BACKFILL_FEED_LIMIT),
-    itemLimit: parseBackfillItemLimit(argv),
+    batchSize: positiveInt(valueAfter(argv, "--batch-size"), DEFAULT_FEED_BATCH_SIZE),
+    itemLimit: all ? null : parseBackfillItemLimit(argv),
     feedId: valueAfter(argv, "--feed-id"),
     classifier: parseBackfillClassifier(argv),
-    recentDays: optionalPositiveIntFlag(argv, "--recent-days"),
+    recentDays,
     concurrency: requiredPositiveIntFlag(argv, "--concurrency", DEFAULT_BACKFILL_CONCURRENCY),
     normalizeExisting: argv.includes("--normalize-existing"),
+    retryFailed: argv.includes("--retry-failed"),
   };
 }
 

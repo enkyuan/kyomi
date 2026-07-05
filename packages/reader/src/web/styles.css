@@ -61,16 +61,24 @@
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre {
+  box-sizing: border-box;
   width: 100%;
-  min-width: 0;
   max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs {
+  box-sizing: border-box;
   display: block;
   max-width: 100%;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
+  min-width: 0;
+  white-space: inherit;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-chrome {

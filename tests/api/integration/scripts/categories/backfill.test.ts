@@ -37,12 +37,14 @@ describe("category backfill script", () => {
       apply: false,
       all: false,
       limit: 500,
+      batchSize: 1000,
       itemLimit: 50,
       feedId: null,
       classifier: "keyword",
       recentDays: null,
       concurrency: 8,
       normalizeExisting: false,
+      retryFailed: false,
     });
   });
 
@@ -81,10 +83,16 @@ describe("category backfill script", () => {
       recentDays: 7,
       concurrency: 3,
       normalizeExisting: true,
+      retryFailed: true,
     });
 
     expect(parseBackfillArgs(["bun", "backfill", "--embedding"]).classifier).toBe("embedding");
     expect(parseBackfillArgs(["bun", "backfill", "--all-items"]).itemLimit).toBeNull();
+    expect(parseBackfillArgs(["bun", "backfill", "--all"])).toMatchObject({
+      all: true,
+      itemLimit: null,
+      recentDays: null,
+    });
   });
 
   test("rejects malformed throttling flags instead of silently scanning too much", () => {
