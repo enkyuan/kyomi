@@ -58,7 +58,8 @@
     "catalog:sync": "bun run catalog:export && bun run catalog:import && bun run catalog:smoke",
     "catalog:sync:local": "bun scripts/catalog/sync.ts",
     "categories:backfill": "bun scripts/categories/backfill.ts",
-    "categories:report": "bun scripts/categories/report.ts"
+    "categories:report": "bun scripts/categories/report.ts",
+    "categories:audit": "bun scripts/categories/audit.ts"
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.66.0",
