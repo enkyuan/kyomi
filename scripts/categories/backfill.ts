@@ -69,6 +69,7 @@ export type BackfillStats = {
   assignmentsScanned: number;
   assignmentsRewritten: number;
   assignmentsDroppedUnmapped: number;
+  itemEmbeddingFailures: number;
 };
 
 function valueAfter(argv: string[], flag: string): string | null {
@@ -136,8 +137,10 @@ export function summarizeBackfill(stats: BackfillStats): string {
   const action = stats.apply ? "APPLIED" : "DRY RUN";
   const verb = stats.apply ? "wrote" : "would write";
   const assignmentVerb = stats.apply ? "rewrote" : "would rewrite";
+  const failureSummary =
+    stats.itemEmbeddingFailures > 0 ? ` (${stats.itemEmbeddingFailures} embedding API failures)` : "";
   return (
-    `${action} (${stats.classifierMethod}/${stats.classifierModelId}): scanned ${stats.feedsScanned} feeds and ${stats.itemsScanned} items; ${verb} classifier categories for ${stats.feedsWithClassifierCategories} feeds and ${stats.itemsWithClassifierCategories} items. ` +
+    `${action} (${stats.classifierMethod}/${stats.classifierModelId}): scanned ${stats.feedsScanned} feeds and ${stats.itemsScanned} items; ${verb} classifier categories for ${stats.feedsWithClassifierCategories} feeds and ${stats.itemsWithClassifierCategories} items${failureSummary}. ` +
     `${assignmentVerb} ${stats.assignmentsRewritten} of ${stats.assignmentsScanned} existing assignments to canonical categories and dropped ${stats.assignmentsDroppedUnmapped} unmapped assignments. ` +
     `Suppressed classifier feed fallback for ${stats.feedClassifierFallbacksSuppressed} broad feeds; item classifier abstained on ${stats.itemClassifierAbstentions} items.`
   );
@@ -529,9 +532,15 @@ export async function inferItemEmbedding(
   ).categories;
 }
 
+/**
+ * A failing embedding call (rate limit, transient network error) must not abort a bulk backfill
+ * run that may be hours into processing thousands of items — it's counted and logged instead,
+ * mirroring the online refresh path's best-effort handling of the same calls.
+ */
 async function inferClassifierFeed(
   feed: BackfillFeedRow,
   classifier: BackfillClassifier,
+  stats: BackfillStats,
 ): Promise<{
   categories: InferredCategoryLabel[];
   suppressedFallback: boolean;
@@ -539,18 +548,38 @@ async function inferClassifierFeed(
   if (classifier.method === "keyword") {
     return inferFeedCategories(feed);
   }
-  return inferFeedEmbedding(feed, classifier.embeddingConfig);
+  try {
+    return await inferFeedEmbedding(feed, classifier.embeddingConfig);
+  } catch (error) {
+    stats.itemEmbeddingFailures += 1;
+    console.warn("[categories:backfill] feed embedding classification failed", {
+      feedUrl: feed.url,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return { categories: [], suppressedFallback: false };
+  }
 }
 
 async function inferClassifierItem(
   feed: BackfillFeedRow,
   item: BackfillItemRow,
   classifier: BackfillClassifier,
+  stats: BackfillStats,
 ): Promise<InferredCategoryLabel[]> {
   if (classifier.method === "keyword") {
     return inferItemCategories(feed, item);
   }
-  return inferItemEmbedding(feed, item, classifier.embeddingConfig);
+  try {
+    return await inferItemEmbedding(feed, item, classifier.embeddingConfig);
+  } catch (error) {
+    stats.itemEmbeddingFailures += 1;
+    console.warn("[categories:backfill] item embedding classification failed", {
+      feedUrl: feed.url,
+      itemUrl: item.link || item.canonicalUrl,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return [];
+  }
 }
 
 export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillStats> {
@@ -568,6 +597,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
     assignmentsScanned: 0,
     assignmentsRewritten: 0,
     assignmentsDroppedUnmapped: 0,
+    itemEmbeddingFailures: 0,
   };
   const now = new Date();
 
@@ -580,8 +610,11 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
 
   for (const feed of feedRows) {
     stats.feedsScanned += 1;
-    const { categories: feedCategories, suppressedFallback } =
-      await inferClassifierFeed(feed, classifier);
+    const { categories: feedCategories, suppressedFallback } = await inferClassifierFeed(
+      feed,
+      classifier,
+      stats,
+    );
     if (suppressedFallback) {
       stats.feedClassifierFallbacksSuppressed += 1;
     }
@@ -608,11 +641,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
       const inferredItems = await Promise.all(
         items.map(async (item) => {
           stats.itemsScanned += 1;
-          const inferredCategoryLabels = await inferClassifierItem(
-            feed,
-            item,
-            classifier,
-          );
+          const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier, stats);
           if (inferredCategoryLabels.length > 0) {
             stats.itemsWithClassifierCategories += 1;
           } else {
