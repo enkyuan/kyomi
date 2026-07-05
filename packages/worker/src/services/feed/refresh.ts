@@ -520,10 +520,15 @@ async function tryItemEmbedding(
           stats.itemClassifierAbstentions += 1;
         }
         results.set(item.id, inferredCategoryLabels);
-      } catch {
+      } catch (error) {
         stats.itemClassifierFailures += 1;
         // One item's embedding call failing (rate limit, transient network error) does not
         // block the rest of the batch or the keyword classifier's already-computed labels.
+        console.warn("[ingestion] item embedding classification failed", {
+          feedUrl: input.feed.url,
+          itemUrl: item.link,
+          error: error instanceof Error ? error.message : String(error),
+        });
       }
     }),
   );
