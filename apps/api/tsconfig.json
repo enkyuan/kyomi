@@ -10,7 +10,7 @@
       "@shared/*": ["./src/shared/*"],
       "@modules/*": ["./src/modules/*"]
     },
-    "types": ["bun-types"]
+    "types": ["bun"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
