@@ -8,7 +8,7 @@ const REQUIRED_DEV_INDEXES = [
   "feed_category_assignments_feed_category_provenance_unique",
   "feed_category_assignments_feed_category_provenance_model_unique",
   "feed_item_category_assignments_item_category_provenance_unique",
-  "feed_item_category_assignments_item_category_provenance_model_unique",
+  "feed_item_category_assignments_item_category_prov_model_unique",
 ] as const;
 
 type TableRow = { table_name: string };

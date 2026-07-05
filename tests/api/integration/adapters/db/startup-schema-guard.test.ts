@@ -19,7 +19,7 @@ describe("findMissingRequiredIndexes", () => {
     "feed_category_assignments_feed_category_provenance_unique",
     "feed_category_assignments_feed_category_provenance_model_unique",
     "feed_item_category_assignments_item_category_provenance_unique",
-    "feed_item_category_assignments_item_category_provenance_model_unique",
+    "feed_item_category_assignments_item_category_prov_model_unique",
   ];
 
   test("returns missing feed-refresh sentinel indexes", () => {
@@ -33,7 +33,7 @@ describe("findMissingRequiredIndexes", () => {
       "feed_category_assignments_feed_category_provenance_unique",
       "feed_category_assignments_feed_category_provenance_model_unique",
       "feed_item_category_assignments_item_category_provenance_unique",
-      "feed_item_category_assignments_item_category_provenance_model_unique",
+      "feed_item_category_assignments_item_category_prov_model_unique",
     ]);
   });
 

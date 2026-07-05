@@ -165,7 +165,7 @@ export const feedItemCategoryAssignments = pgTable(
     uniqueIndex("feed_item_category_assignments_item_category_provenance_unique")
       .on(table.feedItemId, table.categoryId, table.provenance)
       .where(sql`model_id IS NULL`),
-    uniqueIndex("feed_item_category_assignments_item_category_provenance_model_unique")
+    uniqueIndex("feed_item_category_assignments_item_category_prov_model_unique")
       .on(table.feedItemId, table.categoryId, table.provenance, table.modelId)
       .where(sql`model_id IS NOT NULL`),
     index("feed_item_category_assignments_category_id_idx").on(table.categoryId),

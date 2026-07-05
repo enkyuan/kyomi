@@ -225,6 +225,13 @@
       "when": 1783195633333,
       "tag": "0031_widen_classifier_assignment_uniqueness",
       "breakpoints": true
+    },
+    {
+      "idx": 32,
+      "version": "7",
+      "when": 1783207800000,
+      "tag": "0032_shorten_feed_item_classifier_index_name",
+      "breakpoints": true
     }
   ]
 }
