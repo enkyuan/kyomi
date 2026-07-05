@@ -17,6 +17,7 @@ import { discoverFeedUrlFromHtml } from "./discover-url";
 import {
   classifyFeedEmbedding,
   classifyItemEmbedding,
+  embeddingModelInfo,
   type EmbeddingClassifierConfig,
 } from "./embeddings";
 import { fetchArticleEnrichment } from "./enrich";
@@ -32,8 +33,6 @@ import {
 import { syncParsedFeedItemTags } from "./tags";
 import {
   CLASSIFIER_TAXONOMY_VERSION,
-  EMBEDDING_CLASSIFIER_METHOD,
-  EMBEDDING_CLASSIFIER_MODEL_ID,
   KEYWORD_CLASSIFIER_METHOD,
   KEYWORD_CLASSIFIER_MODEL_ID,
 } from "./taxonomy";
@@ -401,14 +400,6 @@ const KEYWORD_CLASSIFIER_MODEL: ClassifierModelInfo = {
   classifierMethod: KEYWORD_CLASSIFIER_METHOD,
 };
 
-function embeddingClassifierModel(config: EmbeddingClassifierConfig): ClassifierModelInfo {
-  return {
-    modelId: config.model ?? EMBEDDING_CLASSIFIER_MODEL_ID,
-    taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
-    classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
-  };
-}
-
 type EmbeddingRefreshStats = NonNullable<FeedRefreshCategoryStats["embeddingClassifier"]>;
 
 function createEmbeddingStats(
@@ -768,7 +759,7 @@ export async function runFeedRefresh(
               feedId: feed.id,
               feedCategories: embeddingFeedCategories,
               items: [],
-              model: embeddingClassifierModel(embeddingConfig),
+              model: embeddingModelInfo(embeddingConfig),
             },
             now,
           );
@@ -1033,7 +1024,7 @@ export async function runFeedRefresh(
             feedId: feed.id,
             feedCategories: embeddingFeedCategories ?? [],
             items: embeddingItemAssignments,
-            model: embeddingClassifierModel(embeddingConfig),
+            model: embeddingModelInfo(embeddingConfig),
           },
           now,
         );

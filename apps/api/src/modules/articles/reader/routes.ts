@@ -1,4 +1,5 @@
 import type { Elysia } from "elysia";
+import { env } from "@config/env";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { getArticleDetailForUser } from "../read/detail";
 import { resolveEnhancementContent, summarizeContent, translateContent } from "./enrichment";
@@ -18,7 +19,12 @@ export function registerArticleEnrichmentRoutes(app: Elysia) {
       "/articles/:articleId/extract-full-text",
       async (context) => {
         const { db, logger, params, userId } = v1HandlerContext(context);
-        const result = await extractFullTextForUser(db, userId, params.articleId);
+        const result = await extractFullTextForUser(db, userId, params.articleId, {
+          embeddingClassifier: env.VOYAGE_API_KEY
+            ? { apiKey: env.VOYAGE_API_KEY, timeoutMs: 8000 }
+            : undefined,
+          logger,
+        });
         if (result.ok) {
           logger.info("articles.extract_full_text.succeeded", {
             userId,

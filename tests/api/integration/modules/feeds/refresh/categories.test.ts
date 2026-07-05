@@ -5,6 +5,7 @@ import {
   canonicalWinsOnConflictSql,
   runFeedRefresh,
   syncInferredFeedCategories,
+  syncItemInferences,
   CLASSIFIER_TAXONOMY_VERSION,
   KEYWORD_CLASSIFIER_METHOD,
   KEYWORD_CLASSIFIER_MODEL_ID,
@@ -272,6 +273,49 @@ describe("runFeedRefresh category ingestion", () => {
     expect(fake.categories.map((row) => row.label)).toEqual(["Technology", "Security & Privacy"]);
     expect(fake.feedCategoryAssignments).toMatchObject([
       { feedId: "feed-1", provenance: "classifier", confidence: 0.7 },
+    ]);
+    expect(fake.feedItemCategoryAssignments).toMatchObject([
+      { feedItemId: "item-1", provenance: "classifier", confidence: 0.8 },
+    ]);
+  });
+
+  test("syncs item-only classifier categories without deleting feed-level classifier rows", async () => {
+    const fake = createFeedRefreshDb({
+      existingFeedCategoryAssignments: [
+        {
+          id: "feed-assignment-1",
+          feedId: "feed-1",
+          categoryId: "category-1",
+          provenance: "classifier",
+          modelId: KEYWORD_MODEL.modelId,
+        },
+      ],
+    });
+    const now = new Date("2026-07-04T00:00:00.000Z");
+
+    await syncItemInferences(
+      fake as never,
+      {
+        items: [
+          {
+            id: "item-1",
+            inferredCategoryLabels: [{ label: "Security & Privacy", confidence: 0.8 }],
+          },
+        ],
+        model: KEYWORD_MODEL,
+      },
+      now,
+    );
+
+    expect(fake.deletes).toEqual(["feed_item_category_assignments"]);
+    expect(fake.feedCategoryAssignments).toEqual([
+      {
+        id: "feed-assignment-1",
+        feedId: "feed-1",
+        categoryId: "category-1",
+        provenance: "classifier",
+        modelId: KEYWORD_MODEL.modelId,
+      },
     ]);
     expect(fake.feedItemCategoryAssignments).toMatchObject([
       { feedItemId: "item-1", provenance: "classifier", confidence: 0.8 },

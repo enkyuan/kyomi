@@ -16,11 +16,10 @@ import {
   classifyFeedEmbedding,
   classifyItemCategories,
   classifyItemEmbedding,
+  embeddingModelInfo,
   shouldSuppressFallback,
   syncInferredFeedCategories,
   CLASSIFIER_TAXONOMY_VERSION,
-  EMBEDDING_CLASSIFIER_METHOD,
-  EMBEDDING_CLASSIFIER_MODEL_ID,
   KEYWORD_CLASSIFIER_METHOD,
   KEYWORD_CLASSIFIER_MODEL_ID,
   MAX_CLASSIFIER_LABELS,
@@ -442,11 +441,7 @@ function resolveBackfillClassifier(args: BackfillArgs): BackfillClassifier {
   return {
     method: "embedding",
     embeddingConfig,
-    model: {
-      modelId: embeddingConfig.model ?? EMBEDDING_CLASSIFIER_MODEL_ID,
-      taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
-      classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
-    },
+    model: embeddingModelInfo(embeddingConfig),
   };
 }
 

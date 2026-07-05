@@ -4,11 +4,11 @@ const REQUIRED_DEV_TABLES = ["users", "sessions", "feeds", "memberships"] as con
 const REQUIRED_DEV_INDEXES = [
   "categories_slug_unique",
   "feed_items_feed_id_canonical_url_unique",
-  "feed_item_tag_assignments_item_slug_provenance_unique",
-  "feed_category_assignments_feed_category_provenance_unique",
-  "feed_category_assignments_feed_category_provenance_model_unique",
-  "feed_item_category_assignments_item_category_provenance_unique",
-  "feed_item_category_assignments_item_category_prov_model_unique",
+  "fitag_item_slug_prov_uidx",
+  "fcat_feed_cat_prov_uidx",
+  "fcat_feed_cat_prov_model_uidx",
+  "ficat_item_cat_prov_uidx",
+  "ficat_item_cat_prov_model_uidx",
 ] as const;
 
 type TableRow = { table_name: string };

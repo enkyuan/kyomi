@@ -5,6 +5,7 @@ export {
   canonicalWinsOnConflictSql,
   hasExplicitFeedCategories,
   syncInferredFeedCategories,
+  syncItemInferences,
   type ClassifierModelInfo,
 } from "./categories";
 export {
@@ -35,6 +36,7 @@ export {
 export {
   classifyFeedEmbedding,
   classifyItemEmbedding,
+  embeddingModelInfo,
   embedTexts,
   resetPrototypeCache,
   type EmbeddingClassifierConfig,

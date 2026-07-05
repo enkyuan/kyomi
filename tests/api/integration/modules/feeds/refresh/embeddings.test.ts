@@ -71,6 +71,17 @@ describe("embedTexts", () => {
 
     await expect(embedTexts(["a"], FAKE_CONFIG)).rejects.toThrow(/429/);
   });
+
+  test("aborts requests when timeoutMs elapses", async () => {
+    globalThis.fetch = (async (_url: string, init: RequestInit) =>
+      new Promise<Response>((_resolve, reject) => {
+        const signal = init.signal as AbortSignal;
+        expect(signal).toBeInstanceOf(AbortSignal);
+        signal.addEventListener("abort", () => reject(new Error("aborted")));
+      })) as unknown as typeof fetch;
+
+    await expect(embedTexts(["a"], { ...FAKE_CONFIG, timeoutMs: 1 })).rejects.toThrow("aborted");
+  });
 });
 
 describe("classifyItemEmbedding", () => {
@@ -127,7 +138,7 @@ describe("classifyItemEmbedding", () => {
         );
       }
       // Item embedding orthogonal to every prototype: cosine similarity is 0, well below
-      // the 0.3 item threshold.
+      // the item threshold.
       return new Response(JSON.stringify({ data: [{ embedding: ORTHOGONAL_Z, index: 0 }] }), {
         status: 200,
       });
@@ -225,6 +236,47 @@ describe("classifyItemEmbedding", () => {
     });
 
     expect(prototypeCallCount).toBe(2);
+  });
+
+  test("evicts failed prototype cache entries so a later call can retry", async () => {
+    let prototypeCallCount = 0;
+    let failNextPrototypeCall = true;
+    globalThis.fetch = (async (url: string, init: RequestInit) => {
+      const body = JSON.parse(init.body as string) as { input: string[] };
+      const isPrototypeCall = body.input.length > 1;
+      if (isPrototypeCall) {
+        prototypeCallCount += 1;
+        if (failNextPrototypeCall) {
+          failNextPrototypeCall = false;
+          return new Response("temporary outage", { status: 503 });
+        }
+        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
+        return new Response(
+          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
+          { status: 200 },
+        );
+      }
+      return new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
+        status: 200,
+      });
+    }) as unknown as typeof fetch;
+
+    const input = {
+      feedTitle: "Hacker News",
+      feedDescription: null,
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Some article",
+      itemSummary: null,
+      itemUrl: null,
+    };
+
+    await expect(classifyItemEmbedding(input, FAKE_CONFIG)).rejects.toThrow(/503/);
+    const result = await classifyItemEmbedding(input, FAKE_CONFIG);
+
+    expect(prototypeCallCount).toBe(2);
+    expect(result.categories[0]?.label).toBe("Software Engineering");
   });
 });
 

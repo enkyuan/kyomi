@@ -232,6 +232,13 @@
       "when": 1783207800000,
       "tag": "0032_shorten_feed_item_classifier_index_name",
       "breakpoints": true
+    },
+    {
+      "idx": 33,
+      "version": "7",
+      "when": 1783211400000,
+      "tag": "0033_shorten_assignment_index_names",
+      "breakpoints": true
     }
   ]
 }

@@ -4,6 +4,10 @@ import { describe, expect, test } from "bun:test";
 
 const root = join(import.meta.dir, "../../../..");
 const sql = readFileSync(join(root, "packages/db/drizzle/0029_source_metadata.sql"), "utf8");
+const assignmentIndexRenameSql = readFileSync(
+  join(root, "packages/db/drizzle/0033_shorten_assignment_index_names.sql"),
+  "utf8",
+);
 
 describe("source metadata migration", () => {
   test("creates source identity tables", () => {
@@ -56,5 +60,32 @@ describe("source metadata migration", () => {
   test("is registered in the drizzle journal", () => {
     const journal = readFileSync(join(root, "packages/db/drizzle/meta/_journal.json"), "utf8");
     expect(journal).toContain('"tag": "0029_source_metadata"');
+  });
+
+  test("shortens final assignment unique-index names", () => {
+    expect(assignmentIndexRenameSql).toContain(
+      'CREATE UNIQUE INDEX IF NOT EXISTS "fitag_item_slug_prov_uidx"',
+    );
+    expect(assignmentIndexRenameSql).toContain(
+      'CREATE UNIQUE INDEX IF NOT EXISTS "fcat_feed_cat_prov_uidx"',
+    );
+    expect(assignmentIndexRenameSql).toContain(
+      'CREATE UNIQUE INDEX IF NOT EXISTS "fcat_feed_cat_prov_model_uidx"',
+    );
+    expect(assignmentIndexRenameSql).toContain(
+      'CREATE UNIQUE INDEX IF NOT EXISTS "ficat_item_cat_prov_uidx"',
+    );
+    expect(assignmentIndexRenameSql).toContain(
+      'CREATE UNIQUE INDEX IF NOT EXISTS "ficat_item_cat_prov_model_uidx"',
+    );
+    expect(assignmentIndexRenameSql).toContain(
+      'DROP INDEX IF EXISTS "feed_item_tag_assignments_item_slug_provenance_unique"',
+    );
+    expect(assignmentIndexRenameSql).toContain(
+      'DROP INDEX IF EXISTS "feed_category_assignments_feed_category_provenance_unique"',
+    );
+    expect(assignmentIndexRenameSql).toContain(
+      'DROP INDEX IF EXISTS "feed_item_category_assignments_item_category_provenance_unique"',
+    );
   });
 });

@@ -1,7 +1,12 @@
 import { createHash } from "node:crypto";
 import { MISCELLANEOUS_CATEGORY_LABEL } from "@kyomi/db";
 import { CATEGORY_CARDS } from "./category-cards";
-import { EMBEDDING_CLASSIFIER_MODEL_ID } from "./taxonomy";
+import type { ClassifierModelInfo } from "./categories";
+import {
+  CLASSIFIER_TAXONOMY_VERSION,
+  EMBEDDING_CLASSIFIER_METHOD,
+  EMBEDDING_CLASSIFIER_MODEL_ID,
+} from "./taxonomy";
 import type {
   CategoryClassification,
   FeedCategoryClassificationInput,
@@ -14,6 +19,8 @@ export type EmbeddingClassifierConfig = {
   model?: string;
   /** Override for tests; defaults to Voyage's public embeddings endpoint. */
   apiUrl?: string;
+  /** Optional request timeout for best-effort callers that must not block user flows. */
+  timeoutMs?: number;
 };
 
 const DEFAULT_VOYAGE_MODEL = EMBEDDING_CLASSIFIER_MODEL_ID;
@@ -50,17 +57,28 @@ export async function embedTexts(
   if (texts.length === 0) {
     return [];
   }
-  const response = await fetch(config.apiUrl ?? DEFAULT_VOYAGE_API_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${config.apiKey}`,
-    },
-    body: JSON.stringify({
-      input: texts,
-      model: config.model ?? DEFAULT_VOYAGE_MODEL,
-    }),
-  });
+  const controller = config.timeoutMs ? new AbortController() : null;
+  const timeout = controller ? setTimeout(() => controller.abort(), config.timeoutMs) : null;
+  const response = await (async () => {
+    try {
+      return await fetch(config.apiUrl ?? DEFAULT_VOYAGE_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${config.apiKey}`,
+        },
+        signal: controller?.signal,
+        body: JSON.stringify({
+          input: texts,
+          model: config.model ?? DEFAULT_VOYAGE_MODEL,
+        }),
+      });
+    } finally {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+    }
+  })();
   if (!response.ok) {
     const body = await response.text().catch(() => "");
     throw new Error(`Voyage embeddings request failed (${response.status}): ${body}`);
@@ -104,7 +122,15 @@ function apiKeyFingerprint(apiKey: string): string {
 }
 
 function cacheKeyFor(config: EmbeddingClassifierConfig): string {
-  return `${config.apiUrl ?? DEFAULT_VOYAGE_API_URL}::${config.model ?? DEFAULT_VOYAGE_MODEL}::${apiKeyFingerprint(config.apiKey)}`;
+  return `${config.apiUrl ?? DEFAULT_VOYAGE_API_URL}::${config.model ?? DEFAULT_VOYAGE_MODEL}::${apiKeyFingerprint(config.apiKey)}::${config.timeoutMs ?? "none"}`;
+}
+
+export function embeddingModelInfo(config: EmbeddingClassifierConfig): ClassifierModelInfo {
+  return {
+    modelId: config.model ?? EMBEDDING_CLASSIFIER_MODEL_ID,
+    taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+    classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
+  };
 }
 
 async function loadCategoryPrototypes(
@@ -128,6 +154,11 @@ async function loadCategoryPrototypes(
       });
     })();
     prototypeCache.set(key, cached);
+    cached.catch(() => {
+      if (prototypeCache.get(key) === cached) {
+        prototypeCache.delete(key);
+      }
+    });
   }
   return cached;
 }

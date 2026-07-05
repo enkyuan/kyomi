@@ -128,10 +128,10 @@ export const feedCategoryAssignments = pgTable(
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
-    uniqueIndex("feed_category_assignments_feed_category_provenance_unique")
+    uniqueIndex("fcat_feed_cat_prov_uidx")
       .on(table.feedId, table.categoryId, table.provenance)
       .where(sql`model_id IS NULL`),
-    uniqueIndex("feed_category_assignments_feed_category_provenance_model_unique")
+    uniqueIndex("fcat_feed_cat_prov_model_uidx")
       .on(table.feedId, table.categoryId, table.provenance, table.modelId)
       .where(sql`model_id IS NOT NULL`),
     index("feed_category_assignments_category_id_idx").on(table.categoryId),
@@ -162,10 +162,10 @@ export const feedItemCategoryAssignments = pgTable(
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
-    uniqueIndex("feed_item_category_assignments_item_category_provenance_unique")
+    uniqueIndex("ficat_item_cat_prov_uidx")
       .on(table.feedItemId, table.categoryId, table.provenance)
       .where(sql`model_id IS NULL`),
-    uniqueIndex("feed_item_category_assignments_item_category_prov_model_unique")
+    uniqueIndex("ficat_item_cat_prov_model_uidx")
       .on(table.feedItemId, table.categoryId, table.provenance, table.modelId)
       .where(sql`model_id IS NOT NULL`),
     index("feed_item_category_assignments_category_id_idx").on(table.categoryId),
@@ -193,11 +193,7 @@ export const feedItemTagAssignments = pgTable(
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
-    uniqueIndex("feed_item_tag_assignments_item_slug_provenance_unique").on(
-      table.feedItemId,
-      table.slug,
-      table.provenance,
-    ),
+    uniqueIndex("fitag_item_slug_prov_uidx").on(table.feedItemId, table.slug, table.provenance),
     index("feed_item_tag_assignments_slug_idx").on(table.slug),
   ],
 );
