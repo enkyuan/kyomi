@@ -4,8 +4,8 @@ import { faviconSourceRank } from "@kyomi/worker/favicon";
 import type { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";
-import { resolveRemoteFeed } from "@modules/discover/feed/resolve-remote";
-import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/service";
+import { resolveRemoteFeed } from "@modules/discover/feed/resolve/remote";
+import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/operations";
 
 type DB = typeof db;
 

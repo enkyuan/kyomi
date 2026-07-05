@@ -9,7 +9,7 @@
   "scripts": {
     "build": "turbo run build",
     "bootstrap": "bun run setup:app",
-    "bootstrap:full": "bun run setup:app && bun run setup:catalog",
+    "bootstrap:full": "bun run setup:app && bun run setup:catalog && bun run categories:backfill -- --apply --all",
     "dev": "turbo run dev --filter=@kyomi/web --filter=@kyomi/api",
     "dev:app": "turbo run dev --filter=@kyomi/web",
     "dev:web": "turbo run dev --filter=@kyomi/web",

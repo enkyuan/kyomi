@@ -9,7 +9,7 @@ const createOrSubscribeToFeedMock = mock(async () => ({
 const enqueueFeedRefreshMock = mock(async () => ({ jobId: "job-1" }));
 const recordOpmlTaskSuccessMock = mock(async () => undefined);
 
-mock.module("@modules/feeds/subscription/service", () => ({
+mock.module("@modules/feeds/subscription/subscribe", () => ({
   createOrSubscribeToFeed: createOrSubscribeToFeedMock,
   subscribeToExistingFeed: mock(async () => ({
     feedId: "feed-1",
@@ -48,7 +48,7 @@ mock.module("@modules/opml/task-store", () => ({
 
 describe("runOpmlImportFeedJob", () => {
   test("enqueues a first refresh for newly imported subscriptions", async () => {
-    const { runOpmlImportFeedJob } = await import("@modules/opml/service");
+    const { runOpmlImportFeedJob } = await import("@modules/opml/jobs");
     const logger = {
       info: mock(() => undefined),
       warn: mock(() => undefined),

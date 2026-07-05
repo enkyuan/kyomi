@@ -1,6 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { articleClips, categories, feedItemCategoryAssignments, feedItems } from "@kyomi/db";
-import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
+import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize";
 import { and, eq, ne } from "drizzle-orm";
 import { getArticleDetailForUser } from "@modules/articles/read/detail";
 import type { ArticleDetailDto } from "@modules/articles/types";

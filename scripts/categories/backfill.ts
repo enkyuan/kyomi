@@ -1,6 +1,7 @@
-import { and, desc, eq, inArray, sql } from "drizzle-orm";
+import { and, desc, eq, gt, inArray, isNull, or, sql } from "drizzle-orm";
 import {
   categories,
+  feedCategoryBackfillStatus,
   feedCategoryAssignments,
   feedItemCategoryAssignments,
   feedItems,
@@ -19,6 +20,7 @@ import {
   embeddingModelInfo,
   shouldSuppressFallback,
   syncInferredFeedCategories,
+  CATEGORY_CLASSIFIER_PROVENANCE,
   CLASSIFIER_TAXONOMY_VERSION,
   KEYWORD_CLASSIFIER_METHOD,
   KEYWORD_CLASSIFIER_MODEL_ID,
@@ -33,6 +35,11 @@ const BACKFILL_CLASSIFIER_MODEL: ClassifierModelInfo = {
   taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
   classifierMethod: KEYWORD_CLASSIFIER_METHOD,
 };
+const DEFAULT_FEED_LIMIT = 500;
+const DEFAULT_FEED_BATCH_SIZE = 1000;
+const BACKFILL_STATUS_PROCESSED = "processed";
+const BACKFILL_STATUS_FAILED = "failed";
+const BACKFILL_PROGRESS_INTERVAL = 10_000;
 
 export type BackfillClassifierMethod = "keyword" | "embedding";
 
@@ -49,11 +56,15 @@ type BackfillClassifier =
 
 export type BackfillArgs = {
   apply: boolean;
+  all: boolean;
   limit: number;
+  batchSize: number;
   itemLimit: number | null;
   feedId: string | null;
   classifier: BackfillClassifierMethod;
   recentDays: number | null;
+  normalizeExisting: boolean;
+  retryFailed: boolean;
 };
 
 export type BackfillStats = {
@@ -63,9 +74,12 @@ export type BackfillStats = {
   feedsScanned: number;
   feedsWithClassifierCategories: number;
   feedClassifierFallbacksSuppressed: number;
+  feedsFailed: number;
   itemsScanned: number;
   itemsWithClassifierCategories: number;
   itemClassifierAbstentions: number;
+  feedBackfillStatusesRecorded: number;
+  normalizedExistingAssignments: boolean;
   assignmentsScanned: number;
   assignmentsRewritten: number;
   assignmentsDroppedUnmapped: number;
@@ -123,26 +137,50 @@ function parseBackfillClassifier(argv: string[]): BackfillClassifierMethod {
 }
 
 export function parseBackfillArgs(argv: string[]): BackfillArgs {
+  const all = argv.includes("--all");
+  const itemLimit = optionalPositiveIntFlag(argv, "--item-limit");
+  const recentDays = optionalPositiveIntFlag(argv, "--recent-days");
+  if (all && itemLimit !== null) {
+    throw new Error(
+      "--all cannot be combined with --item-limit; coverage requires full item scans",
+    );
+  }
+  if (all && recentDays !== null) {
+    throw new Error(
+      "--all cannot be combined with --recent-days; coverage requires full item scans",
+    );
+  }
   return {
     apply: argv.includes("--apply"),
-    limit: positiveInt(valueAfter(argv, "--limit"), 500),
-    itemLimit: optionalPositiveIntFlag(argv, "--item-limit"),
+    all,
+    limit: positiveInt(valueAfter(argv, "--limit"), DEFAULT_FEED_LIMIT),
+    batchSize: positiveInt(valueAfter(argv, "--batch-size"), DEFAULT_FEED_BATCH_SIZE),
+    itemLimit,
     feedId: valueAfter(argv, "--feed-id"),
     classifier: parseBackfillClassifier(argv),
-    recentDays: optionalPositiveIntFlag(argv, "--recent-days"),
+    recentDays,
+    normalizeExisting: argv.includes("--normalize-existing"),
+    retryFailed: argv.includes("--retry-failed"),
   };
+}
+
+function pluralize(count: number, singular: string): string {
+  return `${count} ${singular}${count === 1 ? "" : "s"}`;
 }
 
 export function summarizeBackfill(stats: BackfillStats): string {
   const action = stats.apply ? "APPLIED" : "DRY RUN";
   const verb = stats.apply ? "wrote" : "would write";
   const assignmentVerb = stats.apply ? "rewrote" : "would rewrite";
-  const failureSummary =
-    stats.itemEmbeddingFailures > 0 ? ` (${stats.itemEmbeddingFailures} embedding API failures)` : "";
+  const coverageVerb = stats.apply ? "wrote" : "would write";
+  const assignmentSummary = stats.normalizedExistingAssignments
+    ? `${assignmentVerb} ${stats.assignmentsRewritten} of ${stats.assignmentsScanned} existing assignments to canonical categories and dropped ${stats.assignmentsDroppedUnmapped} unmapped assignments.`
+    : "Skipped existing assignment normalization.";
   return (
-    `${action} (${stats.classifierMethod}/${stats.classifierModelId}): scanned ${stats.feedsScanned} feeds and ${stats.itemsScanned} items; ${verb} classifier categories for ${stats.feedsWithClassifierCategories} feeds and ${stats.itemsWithClassifierCategories} items${failureSummary}. ` +
-    `${assignmentVerb} ${stats.assignmentsRewritten} of ${stats.assignmentsScanned} existing assignments to canonical categories and dropped ${stats.assignmentsDroppedUnmapped} unmapped assignments. ` +
-    `Suppressed classifier feed fallback for ${stats.feedClassifierFallbacksSuppressed} broad feeds; item classifier abstained on ${stats.itemClassifierAbstentions} items.`
+    `${action} (${stats.classifierMethod}/${stats.classifierModelId}): scanned ${stats.feedsScanned} feeds and ${stats.itemsScanned} items; ${verb} classifier categories for ${stats.feedsWithClassifierCategories} feeds and ${stats.itemsWithClassifierCategories} items. ` +
+    `${assignmentSummary} ` +
+    `Suppressed classifier feed fallback for ${stats.feedClassifierFallbacksSuppressed} broad feeds; item classifier abstained on ${stats.itemClassifierAbstentions} items. ` +
+    `${coverageVerb} coverage status for ${pluralize(stats.feedBackfillStatusesRecorded, "feed")}; ${pluralize(stats.feedsFailed, "feed")} failed.`
   );
 }
 
@@ -197,12 +235,62 @@ function loadFeeds(args: BackfillArgs) {
     .limit(args.limit);
 }
 
+function loadUncoveredFeedsPage(
+  args: BackfillArgs,
+  classifier: BackfillClassifier,
+  cursorFeedId: string | null,
+) {
+  const columns = {
+    id: feeds.id,
+    title: feeds.title,
+    description: feeds.description,
+    url: feeds.url,
+    link: feeds.link,
+    sourceKind: feeds.sourceKind,
+  };
+  const statusJoin = and(
+    eq(feedCategoryBackfillStatus.feedId, feeds.id),
+    eq(feedCategoryBackfillStatus.classifierMethod, classifier.model.classifierMethod),
+    eq(feedCategoryBackfillStatus.modelId, classifier.model.modelId),
+    eq(feedCategoryBackfillStatus.taxonomyVersion, classifier.model.taxonomyVersion),
+  );
+  const statusFilter = args.retryFailed
+    ? or(
+        isNull(feedCategoryBackfillStatus.feedId),
+        eq(feedCategoryBackfillStatus.status, BACKFILL_STATUS_FAILED),
+      )
+    : isNull(feedCategoryBackfillStatus.feedId);
+  const whereClause = cursorFeedId ? and(gt(feeds.id, cursorFeedId), statusFilter) : statusFilter;
+
+  return db
+    .select(columns)
+    .from(feeds)
+    .leftJoin(feedCategoryBackfillStatus, statusJoin)
+    .where(whereClause)
+    .orderBy(feeds.id)
+    .limit(args.batchSize);
+}
+
+function loadNextFeedBatch(
+  args: BackfillArgs,
+  classifier: BackfillClassifier,
+  cursorFeedId: string | null,
+) {
+  if (args.all && !args.feedId) {
+    return loadUncoveredFeedsPage(args, classifier, cursorFeedId);
+  }
+  return loadFeeds(args);
+}
+
 const ITEM_BACKFILL_BATCH_SIZE = 500;
 
 function loadItemsPage(feedId: string, limit: number, offset: number, recentDays: number | null) {
   const feedFilter = eq(feedItems.feedId, feedId);
   const whereClause = recentDays
-    ? and(feedFilter, sql`${feedItems.publishedAt} >= now() - (${recentDays}::int * interval '1 day')`)
+    ? and(
+        feedFilter,
+        sql`${feedItems.publishedAt} >= now() - (${recentDays}::int * interval '1 day')`,
+      )
     : feedFilter;
 
   return db
@@ -219,6 +307,26 @@ function loadItemsPage(feedId: string, limit: number, offset: number, recentDays
     .orderBy(desc(feedItems.publishedAt), desc(feedItems.id))
     .limit(limit)
     .offset(offset);
+}
+
+function loadItemsForFeeds(feedIds: string[]) {
+  if (feedIds.length === 0) {
+    return [];
+  }
+
+  return db
+    .select({
+      id: feedItems.id,
+      feedId: feedItems.feedId,
+      title: feedItems.title,
+      summary: feedItems.summary,
+      contentText: feedItems.contentText,
+      link: feedItems.link,
+      canonicalUrl: feedItems.canonicalUrl,
+    })
+    .from(feedItems)
+    .where(inArray(feedItems.feedId, feedIds))
+    .orderBy(feedItems.feedId, desc(feedItems.publishedAt), desc(feedItems.id));
 }
 
 type AssignmentRewritePlan = {
@@ -423,12 +531,53 @@ type BackfillFeedRow = {
   sourceKind: string | null;
 };
 
+type BackfillFeedRecord = BackfillFeedRow & { id: string };
+
 type BackfillItemRow = {
   title: string;
   summary: string | null;
   contentText: string | null;
   link: string | null;
   canonicalUrl: string;
+};
+
+type BackfillItemRecord = BackfillItemRow & {
+  id: string;
+  feedId: string;
+};
+
+type ProcessedFeedStats = {
+  feedClassifierCategories: number;
+  feedClassifierFallbackSuppressed: boolean;
+  itemsScanned: number;
+  itemsWithClassifierCategories: number;
+  itemClassifierAbstentions: number;
+};
+
+type CategoryRecord = {
+  slug: string;
+  label: string;
+  confidence?: number;
+};
+
+type InferredBackfillItem = {
+  id: string;
+  feedId: string;
+  inferredCategoryLabels: InferredCategoryLabel[];
+};
+
+type ProcessedFeedBatchEntry = {
+  feed: BackfillFeedRecord;
+  feedCategories: InferredCategoryLabel[];
+  items: InferredBackfillItem[];
+  stats: ProcessedFeedStats;
+};
+
+type BackfillStatusRecord = {
+  feedId: string;
+  status: typeof BACKFILL_STATUS_PROCESSED | typeof BACKFILL_STATUS_FAILED;
+  stats: ProcessedFeedStats;
+  errorMessage: string | null;
 };
 
 function resolveBackfillClassifier(args: BackfillArgs): BackfillClassifier {
@@ -582,6 +731,486 @@ async function inferClassifierItem(
   }
 }
 
+function createProcessedFeedStats(): ProcessedFeedStats {
+  return {
+    feedClassifierCategories: 0,
+    feedClassifierFallbackSuppressed: false,
+    itemsScanned: 0,
+    itemsWithClassifierCategories: 0,
+    itemClassifierAbstentions: 0,
+  };
+}
+
+function mergeProcessedFeedStats(stats: BackfillStats, feedStats: ProcessedFeedStats): void {
+  if (feedStats.feedClassifierCategories > 0) {
+    stats.feedsWithClassifierCategories += 1;
+  }
+  if (feedStats.feedClassifierFallbackSuppressed) {
+    stats.feedClassifierFallbacksSuppressed += 1;
+  }
+  stats.itemsScanned += feedStats.itemsScanned;
+  stats.itemsWithClassifierCategories += feedStats.itemsWithClassifierCategories;
+  stats.itemClassifierAbstentions += feedStats.itemClassifierAbstentions;
+}
+
+function shouldTrackBackfillStatus(args: BackfillArgs): boolean {
+  return args.itemLimit === null && args.recentDays === null;
+}
+
+function toErrorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : String(error);
+}
+
+function normalizeInferredRecords(labels: InferredCategoryLabel[]): CategoryRecord[] {
+  const bySlug = new Map<string, CategoryRecord>();
+  for (const label of labels) {
+    const trimmed = label.label.trim();
+    const slug = toCategorySlug(trimmed);
+    if (!slug || bySlug.has(slug)) {
+      continue;
+    }
+    bySlug.set(slug, {
+      slug,
+      label: trimmed,
+      confidence: Math.max(0, Math.min(1, label.confidence)),
+    });
+  }
+  return [...bySlug.values()];
+}
+
+async function upsertClassifierCategories(
+  records: CategoryRecord[],
+  now: Date,
+): Promise<Map<string, string>> {
+  const uniqueRecords = new Map<string, CategoryRecord>();
+  for (const record of records) {
+    if (!uniqueRecords.has(record.slug)) {
+      uniqueRecords.set(record.slug, record);
+    }
+  }
+  if (uniqueRecords.size === 0) {
+    return new Map();
+  }
+
+  const rows = await db
+    .insert(categories)
+    .values(
+      [...uniqueRecords.values()].map((record) => ({
+        id: crypto.randomUUID(),
+        slug: record.slug,
+        label: record.label,
+        provenance: CATEGORY_CLASSIFIER_PROVENANCE,
+        createdAt: now,
+        updatedAt: now,
+      })),
+    )
+    .onConflictDoUpdate({
+      target: categories.slug,
+      set: {
+        label: canonicalWinsOnConflictSql(categories.label, sql`excluded.label`),
+        provenance: canonicalWinsOnConflictSql(categories.provenance, sql`excluded.provenance`),
+        updatedAt: now,
+      },
+    })
+    .returning({ id: categories.id, slug: categories.slug });
+
+  return new Map(rows.map((row) => [row.slug, row.id]));
+}
+
+async function syncInferredFeedBatch(
+  entries: ProcessedFeedBatchEntry[],
+  classifier: BackfillClassifier,
+  now: Date,
+): Promise<void> {
+  if (entries.length === 0) {
+    return;
+  }
+
+  const feedIds = entries.map((entry) => entry.feed.id);
+  const itemIds = entries.flatMap((entry) => entry.items.map((item) => item.id));
+
+  await db
+    .delete(feedCategoryAssignments)
+    .where(
+      and(
+        inArray(feedCategoryAssignments.feedId, feedIds),
+        eq(feedCategoryAssignments.provenance, CATEGORY_CLASSIFIER_PROVENANCE),
+        eq(feedCategoryAssignments.modelId, classifier.model.modelId),
+      ),
+    );
+
+  if (itemIds.length > 0) {
+    await db
+      .delete(feedItemCategoryAssignments)
+      .where(
+        and(
+          inArray(feedItemCategoryAssignments.feedItemId, itemIds),
+          eq(feedItemCategoryAssignments.provenance, CATEGORY_CLASSIFIER_PROVENANCE),
+          eq(feedItemCategoryAssignments.modelId, classifier.model.modelId),
+        ),
+      );
+  }
+
+  const feedRecordsByFeedId = new Map<string, CategoryRecord[]>();
+  const itemRecordsByItemId = new Map<string, CategoryRecord[]>();
+  const allRecords: CategoryRecord[] = [];
+
+  for (const entry of entries) {
+    const feedRecords = normalizeInferredRecords(entry.feedCategories);
+    feedRecordsByFeedId.set(entry.feed.id, feedRecords);
+    allRecords.push(...feedRecords);
+
+    for (const item of entry.items) {
+      const itemRecords = normalizeInferredRecords(item.inferredCategoryLabels);
+      itemRecordsByItemId.set(item.id, itemRecords);
+      allRecords.push(...itemRecords);
+    }
+  }
+
+  const categoryIdsBySlug = await upsertClassifierCategories(allRecords, now);
+  const feedAssignments = entries.flatMap((entry) =>
+    (feedRecordsByFeedId.get(entry.feed.id) ?? []).flatMap((record) => {
+      const categoryId = categoryIdsBySlug.get(record.slug);
+      return categoryId
+        ? [
+            {
+              id: crypto.randomUUID(),
+              feedId: entry.feed.id,
+              categoryId,
+              provenance: CATEGORY_CLASSIFIER_PROVENANCE,
+              confidence: record.confidence,
+              modelId: classifier.model.modelId,
+              taxonomyVersion: classifier.model.taxonomyVersion,
+              classifierMethod: classifier.model.classifierMethod,
+              createdAt: now,
+              updatedAt: now,
+            },
+          ]
+        : [];
+    }),
+  );
+
+  if (feedAssignments.length > 0) {
+    await db
+      .insert(feedCategoryAssignments)
+      .values(feedAssignments)
+      .onConflictDoUpdate({
+        target: [
+          feedCategoryAssignments.feedId,
+          feedCategoryAssignments.categoryId,
+          feedCategoryAssignments.provenance,
+          feedCategoryAssignments.modelId,
+        ],
+        targetWhere: sql`model_id IS NOT NULL`,
+        set: {
+          confidence: sql`excluded.confidence`,
+          taxonomyVersion: sql`excluded.taxonomy_version`,
+          classifierMethod: sql`excluded.classifier_method`,
+          updatedAt: now,
+        },
+      });
+  }
+
+  const itemAssignments = entries.flatMap((entry) =>
+    entry.items.flatMap((item) =>
+      (itemRecordsByItemId.get(item.id) ?? []).flatMap((record) => {
+        const categoryId = categoryIdsBySlug.get(record.slug);
+        return categoryId
+          ? [
+              {
+                id: crypto.randomUUID(),
+                feedItemId: item.id,
+                categoryId,
+                provenance: CATEGORY_CLASSIFIER_PROVENANCE,
+                confidence: record.confidence,
+                modelId: classifier.model.modelId,
+                taxonomyVersion: classifier.model.taxonomyVersion,
+                classifierMethod: classifier.model.classifierMethod,
+                createdAt: now,
+                updatedAt: now,
+              },
+            ]
+          : [];
+      }),
+    ),
+  );
+
+  if (itemAssignments.length > 0) {
+    await db
+      .insert(feedItemCategoryAssignments)
+      .values(itemAssignments)
+      .onConflictDoUpdate({
+        target: [
+          feedItemCategoryAssignments.feedItemId,
+          feedItemCategoryAssignments.categoryId,
+          feedItemCategoryAssignments.provenance,
+          feedItemCategoryAssignments.modelId,
+        ],
+        targetWhere: sql`model_id IS NOT NULL`,
+        set: {
+          confidence: sql`excluded.confidence`,
+          taxonomyVersion: sql`excluded.taxonomy_version`,
+          classifierMethod: sql`excluded.classifier_method`,
+          updatedAt: now,
+        },
+      });
+  }
+}
+
+async function recordFeedBackfillStatuses(
+  records: BackfillStatusRecord[],
+  classifier: BackfillClassifier,
+  now: Date,
+): Promise<void> {
+  if (records.length === 0) {
+    return;
+  }
+
+  await db
+    .insert(feedCategoryBackfillStatus)
+    .values(
+      records.map((record) => ({
+        feedId: record.feedId,
+        classifierMethod: classifier.model.classifierMethod,
+        modelId: classifier.model.modelId,
+        taxonomyVersion: classifier.model.taxonomyVersion,
+        status: record.status,
+        feedClassifierCategories: record.stats.feedClassifierCategories,
+        feedClassifierFallbackSuppressed: record.stats.feedClassifierFallbackSuppressed,
+        itemsScanned: record.stats.itemsScanned,
+        itemsWithClassifierCategories: record.stats.itemsWithClassifierCategories,
+        itemClassifierAbstentions: record.stats.itemClassifierAbstentions,
+        lastError: record.errorMessage,
+        processedAt: record.status === BACKFILL_STATUS_PROCESSED ? now : null,
+        failedAt: record.status === BACKFILL_STATUS_FAILED ? now : null,
+        createdAt: now,
+        updatedAt: now,
+      })),
+    )
+    .onConflictDoUpdate({
+      target: [
+        feedCategoryBackfillStatus.feedId,
+        feedCategoryBackfillStatus.classifierMethod,
+        feedCategoryBackfillStatus.modelId,
+        feedCategoryBackfillStatus.taxonomyVersion,
+      ],
+      set: {
+        status: sql`excluded.status`,
+        feedClassifierCategories: sql`excluded.feed_classifier_categories`,
+        feedClassifierFallbackSuppressed: sql`excluded.feed_classifier_fallback_suppressed`,
+        itemsScanned: sql`excluded.items_scanned`,
+        itemsWithClassifierCategories: sql`excluded.items_with_classifier_categories`,
+        itemClassifierAbstentions: sql`excluded.item_classifier_abstentions`,
+        lastError: sql`excluded.last_error`,
+        processedAt: sql`excluded.processed_at`,
+        failedAt: sql`excluded.failed_at`,
+        updatedAt: now,
+      },
+    });
+}
+
+async function recordFeedBackfillStatus(input: {
+  feedId: string;
+  classifier: BackfillClassifier;
+  status: typeof BACKFILL_STATUS_PROCESSED | typeof BACKFILL_STATUS_FAILED;
+  stats: ProcessedFeedStats;
+  errorMessage: string | null;
+  now: Date;
+}): Promise<void> {
+  const processedAt = input.status === BACKFILL_STATUS_PROCESSED ? input.now : null;
+  const failedAt = input.status === BACKFILL_STATUS_FAILED ? input.now : null;
+  await db
+    .insert(feedCategoryBackfillStatus)
+    .values({
+      feedId: input.feedId,
+      classifierMethod: input.classifier.model.classifierMethod,
+      modelId: input.classifier.model.modelId,
+      taxonomyVersion: input.classifier.model.taxonomyVersion,
+      status: input.status,
+      feedClassifierCategories: input.stats.feedClassifierCategories,
+      feedClassifierFallbackSuppressed: input.stats.feedClassifierFallbackSuppressed,
+      itemsScanned: input.stats.itemsScanned,
+      itemsWithClassifierCategories: input.stats.itemsWithClassifierCategories,
+      itemClassifierAbstentions: input.stats.itemClassifierAbstentions,
+      lastError: input.errorMessage,
+      processedAt,
+      failedAt,
+      createdAt: input.now,
+      updatedAt: input.now,
+    })
+    .onConflictDoUpdate({
+      target: [
+        feedCategoryBackfillStatus.feedId,
+        feedCategoryBackfillStatus.classifierMethod,
+        feedCategoryBackfillStatus.modelId,
+        feedCategoryBackfillStatus.taxonomyVersion,
+      ],
+      set: {
+        status: input.status,
+        feedClassifierCategories: input.stats.feedClassifierCategories,
+        feedClassifierFallbackSuppressed: input.stats.feedClassifierFallbackSuppressed,
+        itemsScanned: input.stats.itemsScanned,
+        itemsWithClassifierCategories: input.stats.itemsWithClassifierCategories,
+        itemClassifierAbstentions: input.stats.itemClassifierAbstentions,
+        lastError: input.errorMessage,
+        processedAt,
+        failedAt,
+        updatedAt: input.now,
+      },
+    });
+}
+
+async function processFeed(
+  feed: BackfillFeedRecord,
+  args: BackfillArgs,
+  classifier: BackfillClassifier,
+  now: Date,
+  feedStats: ProcessedFeedStats,
+): Promise<void> {
+  const { categories: feedCategories, suppressedFallback } = await inferClassifierFeed(
+    feed,
+    classifier,
+  );
+  feedStats.feedClassifierCategories = feedCategories.length;
+  feedStats.feedClassifierFallbackSuppressed = suppressedFallback;
+
+  let itemOffset = 0;
+  let remainingItems = args.itemLimit ?? Number.POSITIVE_INFINITY;
+
+  while (remainingItems > 0) {
+    const batchSize = nextItemBackfillBatchSize({
+      itemLimit: args.itemLimit,
+      processed: itemOffset,
+    });
+    if (batchSize === null) {
+      break;
+    }
+    const items = await loadItemsPage(feed.id, batchSize, itemOffset, args.recentDays);
+    if (items.length === 0) {
+      break;
+    }
+
+    const inferredItems = await Promise.all(
+      items.map(async (item) => {
+        feedStats.itemsScanned += 1;
+        const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier);
+        if (inferredCategoryLabels.length > 0) {
+          feedStats.itemsWithClassifierCategories += 1;
+        } else {
+          feedStats.itemClassifierAbstentions += 1;
+        }
+        return { id: item.id, inferredCategoryLabels };
+      }),
+    );
+
+    if (args.apply) {
+      // syncInferredFeedCategories unconditionally deletes+reinserts the feed's
+      // classifier-provenance feed_category_assignments rows on every call, so passing
+      // the real feedCategories here would rewrite identical feed-level data once per
+      // page. Item-level deletes ARE correctly scoped to this page's item ids, so only
+      // the item sync needs to run per page; the feed-level sync happens once below.
+      await syncInferredFeedCategories(
+        db,
+        {
+          feedId: feed.id,
+          feedCategories: [],
+          items: inferredItems,
+          model: classifier.model,
+        },
+        now,
+      );
+    }
+
+    itemOffset += items.length;
+    if (Number.isFinite(remainingItems)) {
+      remainingItems -= items.length;
+    }
+    if (items.length < batchSize) {
+      break;
+    }
+  }
+
+  if (args.apply) {
+    // Single feed-level sync per feed, run last so no later per-page call can delete it.
+    await syncInferredFeedCategories(
+      db,
+      {
+        feedId: feed.id,
+        feedCategories,
+        items: [],
+        model: classifier.model,
+      },
+      now,
+    );
+  }
+}
+
+function shouldUseBatchBackfill(args: BackfillArgs): boolean {
+  return args.all && !args.feedId && args.itemLimit === null && args.recentDays === null;
+}
+
+async function processFeedBatch(
+  feedRows: BackfillFeedRecord[],
+  classifier: BackfillClassifier,
+): Promise<{
+  processed: ProcessedFeedBatchEntry[];
+  failedStatuses: BackfillStatusRecord[];
+}> {
+  const items = (await loadItemsForFeeds(feedRows.map((feed) => feed.id))) as BackfillItemRecord[];
+  const itemsByFeedId = new Map<string, BackfillItemRecord[]>();
+  for (const item of items) {
+    const feedItems = itemsByFeedId.get(item.feedId);
+    if (feedItems) {
+      feedItems.push(item);
+    } else {
+      itemsByFeedId.set(item.feedId, [item]);
+    }
+  }
+
+  const processed: ProcessedFeedBatchEntry[] = [];
+  const failedStatuses: BackfillStatusRecord[] = [];
+
+  for (const feed of feedRows) {
+    const feedStats = createProcessedFeedStats();
+    try {
+      const { categories: feedCategories, suppressedFallback } = await inferClassifierFeed(
+        feed,
+        classifier,
+      );
+      feedStats.feedClassifierCategories = feedCategories.length;
+      feedStats.feedClassifierFallbackSuppressed = suppressedFallback;
+
+      const inferredItems: InferredBackfillItem[] = [];
+      for (const item of itemsByFeedId.get(feed.id) ?? []) {
+        feedStats.itemsScanned += 1;
+        const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier);
+        if (inferredCategoryLabels.length > 0) {
+          feedStats.itemsWithClassifierCategories += 1;
+        } else {
+          feedStats.itemClassifierAbstentions += 1;
+        }
+        inferredItems.push({ id: item.id, feedId: feed.id, inferredCategoryLabels });
+      }
+
+      processed.push({
+        feed,
+        feedCategories,
+        items: inferredItems,
+        stats: feedStats,
+      });
+    } catch (error) {
+      failedStatuses.push({
+        feedId: feed.id,
+        status: BACKFILL_STATUS_FAILED,
+        stats: feedStats,
+        errorMessage: toErrorMessage(error),
+      });
+    }
+  }
+
+  return { processed, failedStatuses };
+}
+
 export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillStats> {
   const classifier = resolveBackfillClassifier(args);
   const stats: BackfillStats = {
@@ -591,9 +1220,12 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
     feedsScanned: 0,
     feedsWithClassifierCategories: 0,
     feedClassifierFallbacksSuppressed: 0,
+    feedsFailed: 0,
     itemsScanned: 0,
     itemsWithClassifierCategories: 0,
     itemClassifierAbstentions: 0,
+    feedBackfillStatusesRecorded: 0,
+    normalizedExistingAssignments: args.normalizeExisting,
     assignmentsScanned: 0,
     assignmentsRewritten: 0,
     assignmentsDroppedUnmapped: 0,
@@ -601,95 +1233,112 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
   };
   const now = new Date();
 
-  const assignmentPlan = await normalizeExistingAssignments(args.apply, now);
-  stats.assignmentsScanned = assignmentPlan.scanned;
-  stats.assignmentsRewritten = assignmentPlan.rewritten;
-  stats.assignmentsDroppedUnmapped = assignmentPlan.droppedUnmapped;
+  if (args.normalizeExisting) {
+    const assignmentPlan = await normalizeExistingAssignments(args.apply, now);
+    stats.assignmentsScanned = assignmentPlan.scanned;
+    stats.assignmentsRewritten = assignmentPlan.rewritten;
+    stats.assignmentsDroppedUnmapped = assignmentPlan.droppedUnmapped;
+  }
 
-  const feedRows = await loadFeeds(args);
+  let cursorFeedId: string | null = null;
+  const trackStatus = shouldTrackBackfillStatus(args);
+  const useBatchBackfill = shouldUseBatchBackfill(args);
+  let lastProgressAt = 0;
 
-  for (const feed of feedRows) {
-    stats.feedsScanned += 1;
-    const { categories: feedCategories, suppressedFallback } = await inferClassifierFeed(
-      feed,
-      classifier,
-      stats,
-    );
-    if (suppressedFallback) {
-      stats.feedClassifierFallbacksSuppressed += 1;
+  while (true) {
+    const feedRows = await loadNextFeedBatch(args, classifier, cursorFeedId);
+    if (feedRows.length === 0) {
+      break;
     }
-    if (feedCategories.length > 0) {
-      stats.feedsWithClassifierCategories += 1;
+    if (args.all && !args.feedId) {
+      cursorFeedId = feedRows[feedRows.length - 1]!.id;
     }
 
-    let itemOffset = 0;
-    let remainingItems = args.itemLimit ?? Number.POSITIVE_INFINITY;
-
-    while (remainingItems > 0) {
-      const batchSize = nextItemBackfillBatchSize({
-        itemLimit: args.itemLimit,
-        processed: itemOffset,
-      });
-      if (batchSize === null) {
-        break;
-      }
-      const items = await loadItemsPage(feed.id, batchSize, itemOffset, args.recentDays);
-      if (items.length === 0) {
-        break;
-      }
-
-      const inferredItems = await Promise.all(
-        items.map(async (item) => {
-          stats.itemsScanned += 1;
-          const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier, stats);
-          if (inferredCategoryLabels.length > 0) {
-            stats.itemsWithClassifierCategories += 1;
-          } else {
-            stats.itemClassifierAbstentions += 1;
-          }
-          return { id: item.id, inferredCategoryLabels };
-        }),
-      );
-
+    if (useBatchBackfill) {
+      stats.feedsScanned += feedRows.length;
+      const { processed, failedStatuses } = await processFeedBatch(feedRows, classifier);
       if (args.apply) {
-        // syncInferredFeedCategories unconditionally deletes+reinserts the feed's
-        // classifier-provenance feed_category_assignments rows on every call, so passing
-        // the real feedCategories here would rewrite identical feed-level data once per
-        // page. Item-level deletes ARE correctly scoped to this page's item ids, so only
-        // the item sync needs to run per page; the feed-level sync happens once below.
-        await syncInferredFeedCategories(
-          db,
-          {
-            feedId: feed.id,
-            feedCategories: [],
-            items: inferredItems,
-            model: classifier.model,
-          },
-          now,
+        await syncInferredFeedBatch(processed, classifier, now);
+      }
+
+      for (const entry of processed) {
+        mergeProcessedFeedStats(stats, entry.stats);
+      }
+      stats.feedsFailed += failedStatuses.length;
+
+      const processedStatuses = processed.map<BackfillStatusRecord>((entry) => ({
+        feedId: entry.feed.id,
+        status: BACKFILL_STATUS_PROCESSED,
+        stats: entry.stats,
+        errorMessage: null,
+      }));
+      const statusRecords: BackfillStatusRecord[] = [...processedStatuses, ...failedStatuses];
+      if (trackStatus) {
+        if (args.apply) {
+          await recordFeedBackfillStatuses(statusRecords, classifier, now);
+        }
+        stats.feedBackfillStatusesRecorded += statusRecords.length;
+      }
+
+      if (stats.feedsScanned - lastProgressAt >= BACKFILL_PROGRESS_INTERVAL) {
+        lastProgressAt = stats.feedsScanned;
+        console.error(
+          `[categories-backfill] scanned ${stats.feedsScanned} feeds and ${stats.itemsScanned} items; recorded ${stats.feedBackfillStatusesRecorded} coverage rows`,
         );
       }
-
-      itemOffset += items.length;
-      if (Number.isFinite(remainingItems)) {
-        remainingItems -= items.length;
-      }
-      if (items.length < batchSize) {
+      if (feedRows.length < args.batchSize) {
         break;
+      }
+      continue;
+    }
+
+    for (const feed of feedRows) {
+      stats.feedsScanned += 1;
+      const feedStats = createProcessedFeedStats();
+      let aggregated = false;
+      try {
+        await processFeed(feed, args, classifier, now, feedStats);
+        mergeProcessedFeedStats(stats, feedStats);
+        aggregated = true;
+        if (trackStatus) {
+          if (args.apply) {
+            await recordFeedBackfillStatus({
+              feedId: feed.id,
+              classifier,
+              status: BACKFILL_STATUS_PROCESSED,
+              stats: feedStats,
+              errorMessage: null,
+              now,
+            });
+          }
+          stats.feedBackfillStatusesRecorded += 1;
+        }
+      } catch (error) {
+        if (!aggregated) {
+          mergeProcessedFeedStats(stats, feedStats);
+        }
+        stats.feedsFailed += 1;
+        if (trackStatus) {
+          if (args.apply) {
+            await recordFeedBackfillStatus({
+              feedId: feed.id,
+              classifier,
+              status: BACKFILL_STATUS_FAILED,
+              stats: feedStats,
+              errorMessage: toErrorMessage(error),
+              now,
+            });
+          }
+          stats.feedBackfillStatusesRecorded += 1;
+        }
+        if (!args.all) {
+          throw error;
+        }
       }
     }
 
-    if (args.apply) {
-      // Single feed-level sync per feed, run last so no later per-page call can delete it.
-      await syncInferredFeedCategories(
-        db,
-        {
-          feedId: feed.id,
-          feedCategories,
-          items: [],
-          model: classifier.model,
-        },
-        now,
-      );
+    if (!args.all || args.feedId || feedRows.length < args.batchSize) {
+      break;
     }
   }
 

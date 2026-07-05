@@ -7,7 +7,7 @@ import {
   listFolders,
   markFolderReadStatus,
   updateFolder,
-} from "./service";
+} from "./operations";
 import type { UpdateFolderInput } from "./types";
 import {
   createFolderBody,

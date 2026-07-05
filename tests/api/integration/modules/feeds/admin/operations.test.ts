@@ -1,5 +1,5 @@
 import { describe, expect, mock, test } from "bun:test";
-import { adminUpdateGlobalFeed } from "@modules/feeds/admin/service";
+import { adminUpdateGlobalFeed } from "@modules/feeds/admin/operations";
 
 describe("adminUpdateGlobalFeed", () => {
   test("throws EMPTY_UPDATE when no fields", async () => {

@@ -8,7 +8,7 @@ import {
 } from "@kyomi/db";
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
-import { type ClipUpdateBody, updateArticleClipForUser } from "./clips";
+import { type ClipUpdateBody, updateArticleClipForUser } from "./clips/operations";
 import type { ArticleUpdateBody } from "../types";
 
 type DB = typeof db;

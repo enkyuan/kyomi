@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { AppError } from "@shared/errors/app";
-import { discoverFeedUrlFromHtml } from "@modules/discover/feed/discover-url";
-import { resolveRemoteFeed } from "@modules/discover/feed/resolve-remote";
+import { discoverFeedUrlFromHtml } from "@kyomi/worker/ingestion";
+import { resolveRemoteFeed } from "@modules/discover/feed/resolve/remote";
 
 describe("resolveRemoteFeed", () => {
   const originalFetch = globalThis.fetch;

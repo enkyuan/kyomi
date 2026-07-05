@@ -10,7 +10,7 @@ import {
   feedPreviewResponse,
   feedSearchItem,
 } from "./schemas";
-import { previewFeedFromUrl, searchFeeds } from "./service";
+import { previewFeedFromUrl, searchFeeds } from "./feeds";
 
 export function registerDiscoverRoutes(app: Elysia) {
   return app

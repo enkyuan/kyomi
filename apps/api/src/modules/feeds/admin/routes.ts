@@ -3,7 +3,7 @@ import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { uuidParam } from "@shared/http/v1/stub";
 import { assertFeedAdminUser } from "./guard";
-import { adminDeleteGlobalFeed, adminUpdateGlobalFeed } from "./service";
+import { adminDeleteGlobalFeed, adminUpdateGlobalFeed } from "./operations";
 import type { AdminUpdateGlobalFeedBody } from "../types";
 import * as dto from "../dto";
 

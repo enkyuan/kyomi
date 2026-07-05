@@ -26,10 +26,16 @@
 }
 
 .reader-content .article-body pre {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
   overflow-x: auto;
   border-radius: 8px;
   background: color-mix(in srgb, var(--foreground) 7%, transparent);
   padding: 1rem;
+  white-space: pre-wrap;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .reader-content .article-body [data-reader-code-block] {
@@ -44,6 +50,10 @@
   min-width: 0;
   max-width: 100%;
   margin: 1rem 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   overflow: hidden;
   border-radius: var(--reader-code-outer-radius);
   border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
@@ -68,15 +78,42 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  min-width: 0;
   padding: var(--reader-code-chrome-pad-start) 0.875rem 0.25rem;
   background: transparent;
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-lang-label {
+  min-width: 0;
+  flex: 1 1 auto;
   color: color-mix(in srgb, var(--foreground) 62%, transparent);
   font-family: var(--font-sans);
   font-size: 0.8125em;
   font-weight: 500;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+  white-space: inherit;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs :where(*) {
+  white-space: inherit;
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-host {

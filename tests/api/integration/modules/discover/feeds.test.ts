@@ -19,11 +19,11 @@ async function loadSearchFeeds(envOverrides?: Record<string, string | undefined>
   process.env.MEILI_MASTER_KEY = envOverrides?.MEILI_MASTER_KEY;
   process.env.MEILI_INDEX_FEEDS = envOverrides?.MEILI_INDEX_FEEDS;
 
-  const mod = await import(`@modules/discover/service?test=${Date.now()}-${Math.random()}`);
+  const mod = await import(`@modules/discover/feeds?test=${Date.now()}-${Math.random()}`);
   return mod.searchFeeds;
 }
 
-describe("discover.service", () => {
+describe("discover feeds", () => {
   afterEach(() => {
     process.env.DATABASE_URL = originalEnv.DATABASE_URL;
     process.env.BETTER_AUTH_SECRET = originalEnv.BETTER_AUTH_SECRET;

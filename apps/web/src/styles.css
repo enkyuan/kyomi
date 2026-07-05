@@ -393,15 +393,22 @@ body {
 }
 
 .reader-content .article-body pre {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
   overflow-x: auto;
   border-radius: 8px;
   background: color-mix(in srgb, var(--foreground) 7%, transparent);
   padding: 1rem;
+  white-space: pre-wrap;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .reader-content .article-body pre code {
   background: transparent;
   padding: 0;
+  white-space: inherit;
 }
 
 /* Fenced code: JetBrains Mono, highlight.js tokens (github-dark), language + copy above code (no toolbar strip) */
@@ -422,6 +429,10 @@ body {
   min-width: 0;
   max-width: 100%;
   margin: 1rem 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   overflow: hidden;
   border-radius: var(--reader-code-outer-radius);
   border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
@@ -433,6 +444,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  min-width: 0;
   padding-block: var(--reader-code-chrome-pad-start) 0.25rem;
   padding-inline-start: var(--reader-code-inline-pad);
   padding-inline-end: calc(var(--reader-code-inline-pad) - 0.4rem);
@@ -453,19 +465,26 @@ body {
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre {
   margin: 0;
+  box-sizing: border-box;
   width: 100%;
-  min-width: 0;
   max-width: 100%;
+  min-width: 0;
   overflow-x: auto;
   border: none;
   border-radius: 0;
   background: transparent;
   padding: 0;
+  white-space: pre-wrap;
+  overflow-wrap: normal;
+  word-break: normal;
   overscroll-behavior-x: contain;
   scrollbar-width: thin;
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
   font-family: var(--font-code);
   font-size: var(--reader-code-body-size);
   line-height: 1.5;
@@ -479,6 +498,9 @@ body {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
   tab-size: 2;
+  white-space: inherit;
+  overflow-wrap: normal;
+  word-break: normal;
   font-variant-ligatures: none;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
@@ -488,6 +510,7 @@ body {
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs :where(*) {
   font-size: inherit;
   line-height: inherit;
+  white-space: inherit;
 }
 
 .reader-content

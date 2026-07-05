@@ -1,8 +1,8 @@
 import { describe, expect, mock, test } from "bun:test";
 import { AppError } from "@shared/errors/app";
-import { getFeedDetailForUser, listSubscribedFeeds } from "@modules/feeds/read/service";
+import { getFeedDetailForUser, listSubscribedFeeds } from "@modules/feeds/read/queries";
 
-describe("feeds.read.service", () => {
+describe("feeds read queries", () => {
   test("listSubscribedFeeds maps rows", async () => {
     const createdAt = new Date("2026-03-01T12:00:00.000Z");
     const where = mock(() =>

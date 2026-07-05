@@ -12,7 +12,7 @@ import { and, asc, desc, eq, isNotNull, sql } from "drizzle-orm";
 import { articleIsReadSql } from "@modules/articles/read/sql";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "@modules/articles/write/clips/constants";
 import { displayFeedTitle } from "@modules/feeds/read/title";
-import { DEFAULT_FOLDER_NAME } from "@modules/folders/service";
+import { DEFAULT_FOLDER_NAME } from "@modules/folders/operations";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import type {
   InboxRecapDto,

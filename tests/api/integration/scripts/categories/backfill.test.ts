@@ -34,11 +34,15 @@ describe("category backfill script", () => {
   test("defaults to dry-run and scans all items", () => {
     expect(parseBackfillArgs(["bun", "backfill"])).toEqual({
       apply: false,
+      all: false,
       limit: 500,
+      batchSize: 1000,
       itemLimit: null,
       feedId: null,
       classifier: "keyword",
       recentDays: null,
+      normalizeExisting: false,
+      retryFailed: false,
     });
   });
 
@@ -48,8 +52,12 @@ describe("category backfill script", () => {
         "bun",
         "backfill",
         "--apply",
+        "--normalize-existing",
+        "--retry-failed",
         "--limit",
         "25",
+        "--batch-size",
+        "1250",
         "--item-limit",
         "10",
         "--feed-id",
@@ -61,14 +69,29 @@ describe("category backfill script", () => {
       ]),
     ).toEqual({
       apply: true,
+      all: false,
       limit: 25,
+      batchSize: 1250,
       itemLimit: 10,
       feedId: "feed-1",
       classifier: "embedding",
       recentDays: 7,
+      normalizeExisting: true,
+      retryFailed: true,
     });
 
     expect(parseBackfillArgs(["bun", "backfill", "--embedding"]).classifier).toBe("embedding");
+  });
+
+  test("parses explicit full-coverage mode", () => {
+    expect(parseBackfillArgs(["bun", "backfill", "--apply", "--all"])).toMatchObject({
+      apply: true,
+      all: true,
+      limit: 500,
+      batchSize: 1000,
+      itemLimit: null,
+      recentDays: null,
+    });
   });
 
   test("rejects a malformed --item-limit instead of silently scanning all items", () => {
@@ -86,6 +109,12 @@ describe("category backfill script", () => {
     );
     expect(() => parseBackfillArgs(["bun", "backfill", "--recent-days", "0"])).toThrow(
       "Invalid --recent-days value: 0",
+    );
+    expect(() => parseBackfillArgs(["bun", "backfill", "--all", "--item-limit", "10"])).toThrow(
+      "--all cannot be combined with --item-limit; coverage requires full item scans",
+    );
+    expect(() => parseBackfillArgs(["bun", "backfill", "--all", "--recent-days", "7"])).toThrow(
+      "--all cannot be combined with --recent-days; coverage requires full item scans",
     );
   });
 
@@ -202,9 +231,12 @@ describe("category backfill script", () => {
         feedsScanned: 2,
         feedsWithClassifierCategories: 2,
         feedClassifierFallbacksSuppressed: 1,
+        feedsFailed: 0,
         itemsScanned: 4,
         itemsWithClassifierCategories: 1,
         itemClassifierAbstentions: 3,
+        feedBackfillStatusesRecorded: 0,
+        normalizedExistingAssignments: true,
         assignmentsScanned: 5,
         assignmentsRewritten: 2,
         assignmentsDroppedUnmapped: 1,
@@ -212,7 +244,8 @@ describe("category backfill script", () => {
     ).toBe(
       "DRY RUN (keyword/keyword-v1): scanned 2 feeds and 4 items; would write classifier categories for 2 feeds and 1 items. " +
         "would rewrite 2 of 5 existing assignments to canonical categories and dropped 1 unmapped assignments. " +
-        "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items.",
+        "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items. " +
+        "would write coverage status for 0 feeds; 0 feeds failed.",
     );
 
     expect(
@@ -223,17 +256,21 @@ describe("category backfill script", () => {
         feedsScanned: 2,
         feedsWithClassifierCategories: 2,
         feedClassifierFallbacksSuppressed: 1,
+        feedsFailed: 1,
         itemsScanned: 4,
         itemsWithClassifierCategories: 1,
         itemClassifierAbstentions: 3,
+        feedBackfillStatusesRecorded: 2,
+        normalizedExistingAssignments: false,
         assignmentsScanned: 5,
         assignmentsRewritten: 2,
         assignmentsDroppedUnmapped: 1,
       }),
     ).toBe(
       `APPLIED (embedding/${EMBEDDING_CLASSIFIER_MODEL_ID}): scanned 2 feeds and 4 items; wrote classifier categories for 2 feeds and 1 items. ` +
-        "rewrote 2 of 5 existing assignments to canonical categories and dropped 1 unmapped assignments. " +
-        "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items.",
+        "Skipped existing assignment normalization. " +
+        "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items. " +
+        "wrote coverage status for 2 feeds; 1 feed failed.",
     );
   });
 });

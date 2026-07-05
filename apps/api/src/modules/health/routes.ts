@@ -2,7 +2,7 @@ import { Elysia } from "elysia";
 import { getRedis } from "@adapters/redis";
 import { buildQueueHealthSnapshot } from "@app/jobs/queue-health";
 import { databaseAdapterPlugin, requestObservationPlugin } from "@shared/http/stacks";
-import { buildReadinessPayload, getHealth } from "@modules/health/service";
+import { buildReadinessPayload, getHealth } from "@modules/health/checks";
 
 function liveness() {
   return getHealth();

@@ -5,8 +5,8 @@ import { isMeiliConfigured, searchFeedSearchDocuments } from "@adapters/search/m
 import type { AppLogger } from "@adapters/logger";
 import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
-import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "./feed/normalize-url";
-import { resolveRemoteFeed } from "./feed/resolve-remote";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "./feed/normalize";
+import { resolveRemoteFeed } from "./feed/resolve/remote";
 import type { FeedPreviewDto, FeedSearchResultDto } from "./types";
 
 type DB = typeof db;

@@ -101,17 +101,11 @@ export function SkeletonRows({
             ))}
           </div>
           <div
-            className={`flex w-full min-w-0 items-center justify-end gap-3 ${SKELETON_ROW_GUTTER_CLASS} ${sectionClassNames.footer}`}
+            className={`flex w-full min-w-0 items-center ${SKELETON_ROW_GUTTER_CLASS} ${sectionClassNames.footer}`}
           >
-            <div className="me-auto flex min-w-0 items-center gap-1.5">
+            <div className="flex min-w-0 items-center gap-1.5">
               <Skeleton className="h-5 w-16 rounded-full" />
               <Skeleton className="h-5 w-24 rounded-full" />
-            </div>
-            <div className="flex shrink-0 items-center gap-3">
-              <Skeleton className="size-4 rounded" />
-              <Skeleton className="size-4 rounded" />
-              <Skeleton className="size-4 rounded" />
-              <Skeleton className="size-4 rounded" />
             </div>
           </div>
         </li>

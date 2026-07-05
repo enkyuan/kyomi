@@ -2,10 +2,11 @@ import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { uuidParam } from "@shared/http/v1/stub";
-import { assertUserSubscribedToFeed, listFeedRefreshStatusesForUser } from "../index";
+import { listFeedRefreshStatusesForUser } from "../read/queries";
+import { assertUserSubscribedToFeed } from "../subscription/mutations";
 import * as dto from "../dto";
 import { enqueueBatchFeedRefresh, enqueueFeedRefresh } from "./enqueue";
-import { listRefreshableFeedIdsForUser } from "./service";
+import { listRefreshableFeedIdsForUser } from "./selection";
 
 export function registerFeedRefreshRoutes(app: Elysia) {
   return app
