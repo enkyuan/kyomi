@@ -38,19 +38,27 @@ describe("reader code block CSS", () => {
     readRepoFile("packages/reader/src/web/styles.css"),
   ];
 
-  test("keeps enhanced code blocks column-width while wrapping code content", () => {
+  test("keeps enhanced code blocks column-width while inheriting normal wrapping", () => {
     for (const css of stylesheets) {
       const wrapper = ruleBody(css, ".reader-content .article-body [data-reader-code-block]");
       expect(wrapper).toContain("width: 100%;");
       expect(wrapper).toContain("min-width: 0;");
       expect(wrapper).toContain("max-width: 100%;");
 
+      const pre = ruleBody(
+        css,
+        ".reader-content .article-body [data-reader-code-block] pre.reader-code-pre",
+      );
+      expect(pre).toContain("overflow-x: auto;");
+      expect(pre).toContain("white-space: pre-wrap;");
+      expect(pre).toContain("overflow-wrap: normal;");
+
       const code = ruleBody(
         css,
         ".reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs",
       );
-      expect(code).toContain("white-space: pre-wrap;");
-      expect(code).toContain("overflow-wrap: anywhere;");
+      expect(code).toContain("white-space: inherit;");
+      expect(code).toContain("overflow-wrap: normal;");
     }
   });
 });
