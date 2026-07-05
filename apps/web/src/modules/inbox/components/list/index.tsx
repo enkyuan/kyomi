@@ -180,7 +180,7 @@ export function List({
                             transition={scopeControlTransition}
                           >
                             <BackToInboxButton onClick={backAction} />
-                            {isArticleScoped && selectedArticle ? (
+                            {isArticleScoped && selectedArticle && !isLoading ? (
                               <HeaderReaderToolbar item={selectedArticle} />
                             ) : feedLabel ? (
                               <span className="relative inline-flex h-11 min-w-0 max-w-72 items-center overflow-hidden rounded-full bg-background px-4 font-medium text-base text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative">

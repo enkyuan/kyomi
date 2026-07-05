@@ -8,6 +8,7 @@ import type { AnchoredToolbarActionOptions, ArticleActionItem, ToolbarSide } fro
 
 const DEFAULT_SAVED_TOAST_SIDE: ToolbarSide = "top";
 const DEFAULT_SAVED_TOAST_SIDE_OFFSET = 6;
+const SAVED_STATE_TOAST_GROUP_KEY = "article.saved-state";
 
 function showSavedToast(options: AnchoredToolbarActionOptions | undefined, isSaved: boolean) {
   const title = isSaved ? "Article saved" : "Article unsaved";
@@ -19,7 +20,7 @@ function showSavedToast(options: AnchoredToolbarActionOptions | undefined, isSav
       title,
       type,
       timeout: 1800,
-      data: { tooltipStyle: true },
+      data: { groupKey: SAVED_STATE_TOAST_GROUP_KEY, tooltipStyle: true },
       positionerProps: {
         anchor,
         side: options?.side ?? DEFAULT_SAVED_TOAST_SIDE,

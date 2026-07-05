@@ -153,6 +153,85 @@ describe("AnchoredToastProvider", () => {
     });
   });
 
+  test("updates an existing grouped anchored toast instead of stacking another one", async () => {
+    render(
+      <AnchoredToastProvider>
+        <button type="button">Save</button>
+        <button type="button">Unsave</button>
+      </AnchoredToastProvider>,
+    );
+    const saveAnchor = screen.getByRole("button", { name: "Save" });
+    const unsaveAnchor = screen.getByRole("button", { name: "Unsave" });
+    vi.spyOn(saveAnchor, "getBoundingClientRect").mockReturnValue({
+      bottom: 120,
+      height: 24,
+      left: 80,
+      right: 104,
+      top: 96,
+      width: 24,
+      x: 80,
+      y: 96,
+      toJSON: () => ({}),
+    });
+    vi.spyOn(unsaveAnchor, "getBoundingClientRect").mockReturnValue({
+      bottom: 180,
+      height: 24,
+      left: 200,
+      right: 224,
+      top: 156,
+      width: 24,
+      x: 200,
+      y: 156,
+      toJSON: () => ({}),
+    });
+
+    act(() => {
+      anchoredToastManager.add({
+        title: "Article saved",
+        type: "success",
+        timeout: 0,
+        data: { groupKey: "article.saved-state", tooltipStyle: true },
+        positionerProps: {
+          anchor: saveAnchor,
+          side: "top",
+          align: "center",
+          sideOffset: 6,
+          positionMethod: "fixed",
+        },
+      });
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText("Article saved")).toBeTruthy();
+    });
+
+    act(() => {
+      anchoredToastManager.add({
+        title: "Article unsaved",
+        type: "info",
+        timeout: 0,
+        data: { groupKey: "article.saved-state", tooltipStyle: true },
+        positionerProps: {
+          anchor: unsaveAnchor,
+          side: "top",
+          align: "center",
+          sideOffset: 6,
+          positionMethod: "fixed",
+        },
+      });
+    });
+
+    await waitFor(() => {
+      const positioner = screen
+        .getByText("Article unsaved")
+        .closest('[data-slot="toast-positioner"]') as HTMLElement | null;
+      expect(screen.queryByText("Article saved")).toBeNull();
+      expect(positioner).not.toBeNull();
+      expect(positioner?.style.left).toBe("212px");
+      expect(positioner?.style.top).toBe("150px");
+    });
+  });
+
   test("renders an anchored toast with the app's nested toast providers", async () => {
     render(
       <ToastProvider>

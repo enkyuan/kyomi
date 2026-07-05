@@ -168,11 +168,13 @@ type AnchorRect = {
 
 type AnchoredToastData = {
   anchorRect?: AnchorRect;
+  groupKey?: string;
   tooltipStyle?: boolean;
 };
 
 type ToastManager = ReturnType<typeof Toast.createToastManager>;
 type ToastInput = Parameters<ToastManager["add"]>[0];
+type ToastId = Parameters<ToastManager["update"]>[0];
 
 function getAnchorRect(anchor: Element | null | undefined): AnchorRect | null {
   if (!anchor?.isConnected) {
@@ -438,11 +440,64 @@ function snapshotAnchoredToastInput(toast: ToastInput): ToastInput {
   };
 }
 
+function getAnchoredToastGroupKey(toast: ToastInput): string | null {
+  const groupKey = (toast.data as AnchoredToastData | undefined)?.groupKey;
+  return typeof groupKey === "string" && groupKey.length > 0 ? groupKey : null;
+}
+
+function getAnchoredToastCleanupDelay(toast: ToastInput): number | null {
+  return typeof toast.timeout === "number" && Number.isFinite(toast.timeout) && toast.timeout > 0
+    ? toast.timeout
+    : null;
+}
+
 function createAnchoredToastManager(): ToastManager {
   const manager = Toast.createToastManager();
   const add = manager.add.bind(manager);
-  manager.add = ((toast: ToastInput) =>
-    add(snapshotAnchoredToastInput(toast))) as ToastManager["add"];
+  const update = manager.update.bind(manager);
+  const groupedToastIds = new Map<string, ToastId>();
+  const cleanupTimers = new Map<string, ReturnType<typeof setTimeout>>();
+
+  function scheduleGroupCleanup(groupKey: string, toastId: ToastId, toast: ToastInput): void {
+    const existingTimer = cleanupTimers.get(groupKey);
+    if (existingTimer) {
+      clearTimeout(existingTimer);
+    }
+
+    const delay = getAnchoredToastCleanupDelay(toast);
+    if (delay === null) {
+      cleanupTimers.delete(groupKey);
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      if (groupedToastIds.get(groupKey) === toastId) {
+        groupedToastIds.delete(groupKey);
+      }
+      cleanupTimers.delete(groupKey);
+    }, delay);
+    cleanupTimers.set(groupKey, timer);
+  }
+
+  manager.add = ((toast: ToastInput) => {
+    const nextToast = snapshotAnchoredToastInput(toast);
+    const groupKey = getAnchoredToastGroupKey(nextToast);
+    if (!groupKey) {
+      return add(nextToast);
+    }
+
+    const existingToastId = groupedToastIds.get(groupKey);
+    if (existingToastId) {
+      update(existingToastId, nextToast);
+      scheduleGroupCleanup(groupKey, existingToastId, nextToast);
+      return existingToastId as ReturnType<ToastManager["add"]>;
+    }
+
+    const toastId = add(nextToast) as ToastId;
+    groupedToastIds.set(groupKey, toastId);
+    scheduleGroupCleanup(groupKey, toastId, nextToast);
+    return toastId as ReturnType<ToastManager["add"]>;
+  }) as ToastManager["add"];
   return manager;
 }
 
