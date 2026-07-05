@@ -1,3 +1,4 @@
+import { env } from "@config/env";
 import {
   categories,
   feedCategoryAssignments,
@@ -49,7 +50,7 @@ function feedCategorySourceRankSql(readMode: CategoryClassifierReadMode): SQL<nu
  * keyword-only or embedding-first with keyword fallback. The scalar subquery keeps article
  * queries a single round trip (no N+1).
  */
-export function buildFeedCategoryLabelsSql(readMode: CategoryClassifierReadMode): SQL<string[]> {
+export function buildCategoryLabelsSql(readMode: CategoryClassifierReadMode): SQL<string[]> {
   const itemSourceRank = itemCategorySourceRankSql(readMode);
   const feedSourceRank = feedCategorySourceRankSql(readMode);
 
@@ -80,3 +81,5 @@ export function buildFeedCategoryLabelsSql(readMode: CategoryClassifierReadMode)
   ) AS fc
 )`;
 }
+
+export const categoryLabelsSql = buildCategoryLabelsSql(env.CATEGORY_CLASSIFIER_READ_MODE);

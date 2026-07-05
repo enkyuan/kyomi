@@ -1,10 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { PgDialect } from "drizzle-orm/pg-core";
 import { isCanonicalCategoryLabel } from "@kyomi/db";
-import {
-  buildFeedCategoryLabelsSql,
-  feedCategoryLabelsSql,
-} from "@modules/articles/read/category-labels";
+import { buildCategoryLabelsSql, categoryLabelsSql } from "@modules/articles/read/labels";
 import { toArticleListItemsForTest } from "@modules/articles/read/list/service";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
 import { articleListItemSchema } from "@modules/articles/schemas";
@@ -57,7 +54,7 @@ describe("article list item categories", () => {
   });
 
   test("category label SQL defaults to keyword classifier rows after explicit labels", () => {
-    const sql = renderSql(buildFeedCategoryLabelsSql("keyword"));
+    const sql = renderSql(buildCategoryLabelsSql("keyword"));
 
     expect(sql).toContain('"feed_item_category_assignments"');
     expect(sql).toContain('"feed_category_assignments"');
@@ -76,7 +73,7 @@ describe("article list item categories", () => {
   });
 
   test("category label SQL can rank embedding rows ahead of keyword rows", () => {
-    const sql = renderSql(buildFeedCategoryLabelsSql("embedding"));
+    const sql = renderSql(buildCategoryLabelsSql("embedding"));
 
     const explicitItem = sql.indexOf("THEN 0");
     const embeddingItem = sql.indexOf("= 'embedding' THEN 1");
@@ -97,12 +94,12 @@ describe("article list item categories", () => {
     // Categories are normalized to canonical labels before this query ever runs (see
     // packages/worker/src/services/feed/categories.ts), so this LIMIT is the only remaining
     // enforcement point for "chips show at most two categories".
-    const sql = renderSql(feedCategoryLabelsSql);
+    const sql = renderSql(categoryLabelsSql);
     expect(sql).toMatch(/LIMIT 2\s*\)\s*AS fc/);
   });
 
   test("DTO categories only ever contain canonical labels sourced from the categories table", () => {
-    // The article list query selects `categories.label` directly (see feedCategoryLabelsSql
+    // The article list query selects `categories.label` directly (see categoryLabelsSql
     // and listArticleRows/listGlobalArticleRows), with no transformation in between. Write-time
     // canonicalization (Tasks 3/6/7 of the taxonomy plan) is what keeps that column
     // canonical-only; this test documents the invariant the DTO mapper relies on rather than

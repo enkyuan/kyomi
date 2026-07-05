@@ -10,7 +10,7 @@ import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
 import { decodeMergedListCursor } from "./cursor";
 import { mergeRecentlyViewedItemsSorted, type RecentlyViewedItem } from "./recent";
-import { feedCategoryLabelsSql } from "../category-labels";
+import { categoryLabelsSql } from "../labels";
 import { listArticlesForUser } from "./service";
 import { globalArticleIsReadSql } from "../sql";
 
@@ -318,7 +318,7 @@ async function listRecentlyViewedFeedItems(
       feedFaviconUrl: feeds.faviconUrl,
       isRead: globalArticleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
-      categories: feedCategoryLabelsSql,
+      categories: categoryLabelsSql,
       lastViewedAt: feedItemUserState.lastViewedAt,
     })
     .from(feedItemUserState)

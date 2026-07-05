@@ -5,7 +5,7 @@ import {
   feedItemCategoryAssignments,
 } from "../../packages/db/src";
 import { feeds, feedItems } from "../../packages/db/src";
-import { buildFeedCategoryLabelsSql } from "../../apps/api/src/modules/articles/read/category-labels-sql";
+import { buildCategoryLabelsSql } from "../../apps/api/src/modules/articles/read/labels";
 
 export type CategoryAuditFormat = "jsonl" | "summary";
 
@@ -207,8 +207,8 @@ export async function runCategoryAudit(
       ${feeds.title} AS feed_title,
       ${feeds.url} AS feed_url,
       ${explicitCategoryLabelsSql()} AS explicit_categories,
-      ${buildFeedCategoryLabelsSql("keyword")} AS keyword_categories,
-      ${buildFeedCategoryLabelsSql("embedding")} AS embedding_categories
+      ${buildCategoryLabelsSql("keyword")} AS keyword_categories,
+      ${buildCategoryLabelsSql("embedding")} AS embedding_categories
     FROM ${feedItems}
     INNER JOIN ${feeds} ON ${feeds.id} = ${feedItems.feedId}
     WHERE ${
