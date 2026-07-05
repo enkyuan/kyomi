@@ -1,13 +1,13 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import {
   EMBEDDING_CLASSIFIER_MODEL_ID,
-  resetCategoryPrototypeCacheForTests,
+  resetPrototypeCache,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
 import {
-  inferBackfillFeedCategories,
-  inferBackfillItemCategoriesByEmbedding,
-  inferBackfillItemCategories,
+  inferFeedCategories,
+  inferItemEmbedding,
+  inferItemCategories,
   nextItemBackfillBatchSize,
   parseBackfillArgs,
   summarizeBackfill,
@@ -22,12 +22,12 @@ const UNIT_X = [1, 0, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
 
 beforeEach(() => {
-  resetCategoryPrototypeCacheForTests();
+  resetPrototypeCache();
 });
 
 afterEach(() => {
   globalThis.fetch = originalFetch;
-  resetCategoryPrototypeCacheForTests();
+  resetPrototypeCache();
 });
 
 describe("category backfill script", () => {
@@ -99,7 +99,7 @@ describe("category backfill script", () => {
   });
 
   test("classifies non-allowlisted feed items during backfill", () => {
-    const labels = inferBackfillItemCategories(
+    const labels = inferItemCategories(
       {
         title: "Daily Links",
         description: "A mixed collection of links.",
@@ -120,7 +120,7 @@ describe("category backfill script", () => {
   });
 
   test("suppresses broad feed classifier fallback during backfill", () => {
-    const result = inferBackfillFeedCategories({
+    const result = inferFeedCategories({
       title: "Hacker News",
       description: "Links for hackers",
       url: "https://news.ycombinator.com/rss",
@@ -133,7 +133,7 @@ describe("category backfill script", () => {
   });
 
   test("keeps single-topic feed classifier fallback during backfill", () => {
-    const result = inferBackfillFeedCategories({
+    const result = inferFeedCategories({
       title: "Airbnb Engineering",
       description: "Software engineering posts about infrastructure and architecture.",
       url: "https://medium.com/feed/airbnb-engineering",
@@ -162,7 +162,7 @@ describe("category backfill script", () => {
     }) as unknown as typeof fetch;
 
     const labels = (
-      await inferBackfillItemCategoriesByEmbedding(
+      await inferItemEmbedding(
         {
           title: "Daily Links",
           description: "A mixed collection of links.",

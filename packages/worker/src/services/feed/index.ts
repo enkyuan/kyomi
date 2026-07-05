@@ -18,10 +18,10 @@ export {
 } from "./taxonomy";
 export {
   classifyFeedCategories,
-  classifyFeedItemCategories,
+  classifyItemCategories,
   isMixedFeedHost,
   MAX_CLASSIFIER_LABELS,
-  shouldSuppressClassifierFeedFallback,
+  shouldSuppressFallback,
   type CategoryClassification,
   type FeedCategoryClassificationInput,
   type FeedItemCategoryClassificationInput,
@@ -33,10 +33,10 @@ export {
   createRedisHostRateLimitStore,
 } from "./host-limit";
 export {
-  classifyFeedCategoriesByEmbedding,
-  classifyFeedItemCategoriesByEmbedding,
+  classifyFeedEmbedding,
+  classifyItemEmbedding,
   embedTexts,
-  resetCategoryPrototypeCacheForTests,
+  resetPrototypeCache,
   type EmbeddingClassifierConfig,
 } from "./embeddings";
 export { buildArticleIdentity, normalizeArticleUrl } from "../../lib/article-identity";

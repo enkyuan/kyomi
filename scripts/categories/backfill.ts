@@ -13,10 +13,10 @@ import { assertApiDatabaseReady } from "../../apps/api/src/adapters/db/script-pr
 import {
   canonicalWinsOnConflictSql,
   classifyFeedCategories,
-  classifyFeedCategoriesByEmbedding,
-  classifyFeedItemCategories,
-  classifyFeedItemCategoriesByEmbedding,
-  shouldSuppressClassifierFeedFallback,
+  classifyFeedEmbedding,
+  classifyItemCategories,
+  classifyItemEmbedding,
+  shouldSuppressFallback,
   syncInferredFeedCategories,
   CLASSIFIER_TAXONOMY_VERSION,
   EMBEDDING_CLASSIFIER_METHOD,
@@ -450,7 +450,7 @@ function resolveBackfillClassifier(args: BackfillArgs): BackfillClassifier {
   };
 }
 
-export function inferBackfillFeedCategories(feed: BackfillFeedRow): {
+export function inferFeedCategories(feed: BackfillFeedRow): {
   categories: InferredCategoryLabel[];
   suppressedFallback: boolean;
 } {
@@ -461,7 +461,7 @@ export function inferBackfillFeedCategories(feed: BackfillFeedRow): {
     feedSiteUrl: feed.link,
     sourceKind: feed.sourceKind,
   };
-  if (shouldSuppressClassifierFeedFallback(classificationInput)) {
+  if (shouldSuppressFallback(classificationInput)) {
     return { categories: [], suppressedFallback: true };
   }
   return {
@@ -470,11 +470,11 @@ export function inferBackfillFeedCategories(feed: BackfillFeedRow): {
   };
 }
 
-export function inferBackfillItemCategories(
+export function inferItemCategories(
   feed: BackfillFeedRow,
   item: BackfillItemRow,
 ): InferredCategoryLabel[] {
-  return classifyFeedItemCategories({
+  return classifyItemCategories({
     feedTitle: feed.title,
     feedDescription: feed.description,
     feedUrl: feed.url,
@@ -487,7 +487,7 @@ export function inferBackfillItemCategories(
   }).categories;
 }
 
-export async function inferBackfillFeedCategoriesByEmbedding(
+export async function inferFeedEmbedding(
   feed: BackfillFeedRow,
   config: EmbeddingClassifierConfig,
 ): Promise<{
@@ -501,22 +501,22 @@ export async function inferBackfillFeedCategoriesByEmbedding(
     feedSiteUrl: feed.link,
     sourceKind: feed.sourceKind,
   };
-  if (shouldSuppressClassifierFeedFallback(classificationInput)) {
+  if (shouldSuppressFallback(classificationInput)) {
     return { categories: [], suppressedFallback: true };
   }
   return {
-    categories: (await classifyFeedCategoriesByEmbedding(classificationInput, config)).categories,
+    categories: (await classifyFeedEmbedding(classificationInput, config)).categories,
     suppressedFallback: false,
   };
 }
 
-export async function inferBackfillItemCategoriesByEmbedding(
+export async function inferItemEmbedding(
   feed: BackfillFeedRow,
   item: BackfillItemRow,
   config: EmbeddingClassifierConfig,
 ): Promise<InferredCategoryLabel[]> {
   return (
-    await classifyFeedItemCategoriesByEmbedding(
+    await classifyItemEmbedding(
       {
         feedTitle: feed.title,
         feedDescription: feed.description,
@@ -534,7 +534,7 @@ export async function inferBackfillItemCategoriesByEmbedding(
   ).categories;
 }
 
-async function inferBackfillFeedCategoriesForClassifier(
+async function inferClassifierFeed(
   feed: BackfillFeedRow,
   classifier: BackfillClassifier,
 ): Promise<{
@@ -542,20 +542,20 @@ async function inferBackfillFeedCategoriesForClassifier(
   suppressedFallback: boolean;
 }> {
   if (classifier.method === "keyword") {
-    return inferBackfillFeedCategories(feed);
+    return inferFeedCategories(feed);
   }
-  return inferBackfillFeedCategoriesByEmbedding(feed, classifier.embeddingConfig);
+  return inferFeedEmbedding(feed, classifier.embeddingConfig);
 }
 
-async function inferBackfillItemCategoriesForClassifier(
+async function inferClassifierItem(
   feed: BackfillFeedRow,
   item: BackfillItemRow,
   classifier: BackfillClassifier,
 ): Promise<InferredCategoryLabel[]> {
   if (classifier.method === "keyword") {
-    return inferBackfillItemCategories(feed, item);
+    return inferItemCategories(feed, item);
   }
-  return inferBackfillItemCategoriesByEmbedding(feed, item, classifier.embeddingConfig);
+  return inferItemEmbedding(feed, item, classifier.embeddingConfig);
 }
 
 export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillStats> {
@@ -586,7 +586,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
   for (const feed of feedRows) {
     stats.feedsScanned += 1;
     const { categories: feedCategories, suppressedFallback } =
-      await inferBackfillFeedCategoriesForClassifier(feed, classifier);
+      await inferClassifierFeed(feed, classifier);
     if (suppressedFallback) {
       stats.feedClassifierFallbacksSuppressed += 1;
     }
@@ -613,7 +613,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
       const inferredItems = await Promise.all(
         items.map(async (item) => {
           stats.itemsScanned += 1;
-          const inferredCategoryLabels = await inferBackfillItemCategoriesForClassifier(
+          const inferredCategoryLabels = await inferClassifierItem(
             feed,
             item,
             classifier,

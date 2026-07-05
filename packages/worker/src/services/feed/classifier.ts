@@ -158,9 +158,7 @@ export function isMixedFeedHost(url: string | null): boolean {
   return MIXED_FEED_HOSTS.has(host);
 }
 
-export function shouldSuppressClassifierFeedFallback(
-  input: FeedCategoryClassificationInput,
-): boolean {
+export function shouldSuppressFallback(input: FeedCategoryClassificationInput): boolean {
   return isMixedFeedHost(input.feedUrl) || isMixedFeedHost(input.feedSiteUrl);
 }
 
@@ -184,7 +182,7 @@ export function classifyFeedCategories(
   };
 }
 
-export function classifyFeedItemCategories(
+export function classifyItemCategories(
   input: FeedItemCategoryClassificationInput,
   // Callers that will post-filter the result (e.g. to drop labels already covered by an
   // explicit source category) should request more candidates than they intend to keep:

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { classifyFeedItemCategories } from "@kyomi/worker";
+import { classifyItemCategories } from "@kyomi/worker";
 import {
   accumulateConfusion,
   f1,
@@ -27,7 +27,7 @@ import { CLASSIFIER_EVAL_FIXTURE, type ClassifierEvalCase } from "./classifier-e
 
 function runClassifier(cases: readonly ClassifierEvalCase[]): Prediction[] {
   return cases.map((case_) => {
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: case_.feedTitle,
       feedDescription: case_.feedDescription,
       feedUrl: case_.feedUrl,

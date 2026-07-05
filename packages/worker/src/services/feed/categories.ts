@@ -118,7 +118,7 @@ async function upsertCategories(
 /**
  * True when a feed already has at least one explicit (`provenance = "feed"`) category
  * assignment from a prior full fetch. Used to skip re-running the classifier fallback on a
- * `304 Not Modified` response, mirroring the canonical-label check `classifyFeedLevelCategories`
+ * `304 Not Modified` response, mirroring the canonical-label check `classifyFeedLevel`
  * runs against freshly parsed metadata on a full fetch — a 304 has no fresh document to check,
  * so this checks persisted state instead.
  */

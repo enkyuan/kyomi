@@ -133,7 +133,7 @@ async function loadCategoryPrototypes(
 }
 
 /** Test-only escape hatch: forces the next call to re-embed prototypes instead of reusing the cache. */
-export function resetCategoryPrototypeCacheForTests(): void {
+export function resetPrototypeCache(): void {
   prototypeCache.clear();
 }
 
@@ -168,7 +168,7 @@ function buildItemText(input: FeedItemCategoryClassificationInput): string {
   return [input.itemTitle, input.itemSummary, input.itemContentText].filter(Boolean).join(". ");
 }
 
-export async function classifyFeedCategoriesByEmbedding(
+export async function classifyFeedEmbedding(
   input: FeedCategoryClassificationInput,
   config: EmbeddingClassifierConfig,
 ): Promise<CategoryClassification> {
@@ -193,7 +193,7 @@ export async function classifyFeedCategoriesByEmbedding(
   };
 }
 
-export async function classifyFeedItemCategoriesByEmbedding(
+export async function classifyItemEmbedding(
   input: FeedItemCategoryClassificationInput,
   config: EmbeddingClassifierConfig,
   // Unlike the keyword classifier, similarity scoring has no natural label count to default

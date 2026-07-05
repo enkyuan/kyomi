@@ -1,9 +1,9 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import {
-  classifyFeedCategoriesByEmbedding,
-  classifyFeedItemCategoriesByEmbedding,
+  classifyFeedEmbedding,
+  classifyItemEmbedding,
   embedTexts,
-  resetCategoryPrototypeCacheForTests,
+  resetPrototypeCache,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
 
@@ -23,12 +23,12 @@ const UNIT_Y = [0, 1, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
 
 beforeEach(() => {
-  resetCategoryPrototypeCacheForTests();
+  resetPrototypeCache();
 });
 
 afterEach(() => {
   globalThis.fetch = originalFetch;
-  resetCategoryPrototypeCacheForTests();
+  resetPrototypeCache();
 });
 
 describe("embedTexts", () => {
@@ -73,7 +73,7 @@ describe("embedTexts", () => {
   });
 });
 
-describe("classifyFeedItemCategoriesByEmbedding", () => {
+describe("classifyItemEmbedding", () => {
   test("returns categories above the similarity threshold, sorted by score", async () => {
     // First call embeds all category-card prototypes; second call embeds the item text.
     // CATEGORY_CARDS order is deterministic (defined in category-cards.ts), so the first
@@ -96,7 +96,7 @@ describe("classifyFeedItemCategoriesByEmbedding", () => {
       });
     }) as unknown as typeof fetch;
 
-    const result = await classifyFeedItemCategoriesByEmbedding(
+    const result = await classifyItemEmbedding(
       {
         feedTitle: "Hacker News",
         feedDescription: null,
@@ -133,7 +133,7 @@ describe("classifyFeedItemCategoriesByEmbedding", () => {
       });
     }) as unknown as typeof fetch;
 
-    const result = await classifyFeedItemCategoriesByEmbedding(
+    const result = await classifyItemEmbedding(
       {
         feedTitle: "Hacker News",
         feedDescription: null,
@@ -180,11 +180,8 @@ describe("classifyFeedItemCategoriesByEmbedding", () => {
       itemSummary: null,
       itemUrl: null,
     };
-    await classifyFeedItemCategoriesByEmbedding(input, FAKE_CONFIG);
-    await classifyFeedItemCategoriesByEmbedding(
-      { ...input, itemTitle: "Second article" },
-      FAKE_CONFIG,
-    );
+    await classifyItemEmbedding(input, FAKE_CONFIG);
+    await classifyItemEmbedding({ ...input, itemTitle: "Second article" }, FAKE_CONFIG);
 
     // Prototypes should only be embedded once across both calls, not once per call.
     expect(prototypeCallCount).toBe(1);
@@ -218,11 +215,11 @@ describe("classifyFeedItemCategoriesByEmbedding", () => {
       itemSummary: null,
       itemUrl: null,
     };
-    await classifyFeedItemCategoriesByEmbedding(input, {
+    await classifyItemEmbedding(input, {
       ...FAKE_CONFIG,
       apiKey: "first-account-key",
     });
-    await classifyFeedItemCategoriesByEmbedding(input, {
+    await classifyItemEmbedding(input, {
       ...FAKE_CONFIG,
       apiKey: "second-account-key",
     });
@@ -231,7 +228,7 @@ describe("classifyFeedItemCategoriesByEmbedding", () => {
   });
 });
 
-describe("classifyFeedCategoriesByEmbedding", () => {
+describe("classifyFeedEmbedding", () => {
   test("falls back to Miscellaneous at low confidence when nothing clears the threshold", async () => {
     globalThis.fetch = (async (url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
@@ -248,7 +245,7 @@ describe("classifyFeedCategoriesByEmbedding", () => {
       });
     }) as unknown as typeof fetch;
 
-    const result = await classifyFeedCategoriesByEmbedding(
+    const result = await classifyFeedEmbedding(
       {
         feedTitle: "Some obscure feed",
         feedDescription: null,

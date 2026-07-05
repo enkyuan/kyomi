@@ -8,15 +8,15 @@ import {
 } from "../favicon";
 import {
   classifyFeedCategories,
-  classifyFeedItemCategories,
+  classifyItemCategories,
   MAX_CLASSIFIER_LABELS,
-  shouldSuppressClassifierFeedFallback,
+  shouldSuppressFallback,
   type InferredCategoryLabel,
 } from "./classifier";
 import { discoverFeedUrlFromHtml } from "./discover-url";
 import {
-  classifyFeedCategoriesByEmbedding,
-  classifyFeedItemCategoriesByEmbedding,
+  classifyFeedEmbedding,
+  classifyItemEmbedding,
   type EmbeddingClassifierConfig,
 } from "./embeddings";
 import { fetchArticleEnrichment } from "./enrich";
@@ -326,7 +326,7 @@ function shouldResolveFavicon({
  * tags don't map to any canonical category. Feed-level classification does not depend on
  * item content, so it can run before article enrichment.
  */
-function classifyFeedLevelCategories(input: {
+function classifyFeedLevel(input: {
   feed: { url: string; link: string | null; sourceKind: string | null };
   parsed: ParsedFeedDocument;
 }): { categories: InferredCategoryLabel[]; suppressedFallback: boolean } {
@@ -340,7 +340,7 @@ function classifyFeedLevelCategories(input: {
     feedSiteUrl: input.parsed.metadata.link ?? input.feed.link,
     sourceKind: input.feed.sourceKind,
   };
-  if (shouldSuppressClassifierFeedFallback(classificationInput)) {
+  if (shouldSuppressFallback(classificationInput)) {
     return { categories: [], suppressedFallback: true };
   }
   return {
@@ -355,7 +355,7 @@ function classifyFeedLevelCategories(input: {
  * Must run after article enrichment so items with a thin/empty RSS summary are scored
  * against the fetched article text instead of an empty string.
  */
-function classifyItemLevelCategories(input: {
+function classifyItemLevel(input: {
   feed: { url: string; link: string | null; sourceKind: string | null };
   parsed: { metadata: FeedMetadata };
   items: ParsedFeedItem[];
@@ -368,11 +368,11 @@ function classifyItemLevelCategories(input: {
     }
 
     // Request enough candidates to survive filtering out labels the explicit source
-    // already claimed: classifyFeedItemCategories() truncates internally, so asking for
+    // already claimed: classifyItemCategories() truncates internally, so asking for
     // only remainingChipSlots risks losing a higher-scored category to truncation before
     // this filter ever runs, when a lower-scored duplicate of an explicit label took its
     // place in the top-N.
-    const itemClassification = classifyFeedItemCategories(
+    const itemClassification = classifyItemCategories(
       {
         feedTitle: input.parsed.metadata.title,
         feedDescription: input.parsed.metadata.description,
@@ -409,11 +409,11 @@ function embeddingClassifierModel(config: EmbeddingClassifierConfig): Classifier
   };
 }
 
-type EmbeddingClassifierRefreshStats = NonNullable<FeedRefreshCategoryStats["embeddingClassifier"]>;
+type EmbeddingRefreshStats = NonNullable<FeedRefreshCategoryStats["embeddingClassifier"]>;
 
-function createEmbeddingClassifierRefreshStats(
+function createEmbeddingStats(
   config: EmbeddingClassifierConfig | undefined,
-): EmbeddingClassifierRefreshStats {
+): EmbeddingRefreshStats {
   return {
     configured: Boolean(config),
     feedClassifierLabels: 0,
@@ -432,20 +432,20 @@ function createEmbeddingClassifierRefreshStats(
  * signal layered on top of the keyword classifier's baseline, not a hard dependency. Returns
  * `null` when no config was provided (embedding classification is opt-in) or the call failed.
  */
-async function classifyFeedCategoriesByEmbeddingSafely(
-  classificationInput: Parameters<typeof classifyFeedCategoriesByEmbedding>[0],
+async function tryFeedEmbedding(
+  classificationInput: Parameters<typeof classifyFeedEmbedding>[0],
   config: EmbeddingClassifierConfig | undefined,
-  stats: EmbeddingClassifierRefreshStats,
+  stats: EmbeddingRefreshStats,
 ): Promise<InferredCategoryLabel[] | null> {
   if (!config) {
     return null;
   }
-  if (shouldSuppressClassifierFeedFallback(classificationInput)) {
+  if (shouldSuppressFallback(classificationInput)) {
     stats.feedClassifierAbstentions += 1;
     return null;
   }
   try {
-    const result = await classifyFeedCategoriesByEmbedding(classificationInput, config);
+    const result = await classifyFeedEmbedding(classificationInput, config);
     stats.feedClassifierLabels += result.categories.length;
     if (result.categories.length === 0) {
       stats.feedClassifierAbstentions += 1;
@@ -457,13 +457,13 @@ async function classifyFeedCategoriesByEmbeddingSafely(
   }
 }
 
-async function classifyFeedLevelCategoriesByEmbeddingSafely(
+async function tryChannelEmbedding(
   input: {
     feed: { url: string; link: string | null; sourceKind: string | null };
     parsed: ParsedFeedDocument;
   },
   config: EmbeddingClassifierConfig | undefined,
-  stats: EmbeddingClassifierRefreshStats,
+  stats: EmbeddingRefreshStats,
 ): Promise<InferredCategoryLabel[] | null> {
   if (!config) {
     return null;
@@ -471,7 +471,7 @@ async function classifyFeedLevelCategoriesByEmbeddingSafely(
   if (canonicalizeCategoryLabels(input.parsed.metadata.categoryLabels).length > 0) {
     return null;
   }
-  return classifyFeedCategoriesByEmbeddingSafely(
+  return tryFeedEmbedding(
     {
       feedTitle: input.parsed.metadata.title,
       feedDescription: input.parsed.metadata.description,
@@ -484,14 +484,14 @@ async function classifyFeedLevelCategoriesByEmbeddingSafely(
   );
 }
 
-async function classifyItemLevelCategoriesByEmbeddingSafely(
+async function tryItemEmbedding(
   input: {
     feed: { url: string; link: string | null; sourceKind: string | null };
     parsed: { metadata: FeedMetadata };
     items: ParsedFeedItem[];
   },
   config: EmbeddingClassifierConfig | undefined,
-  stats: EmbeddingClassifierRefreshStats,
+  stats: EmbeddingRefreshStats,
 ): Promise<Map<string, InferredCategoryLabel[]> | null> {
   if (!config) {
     return null;
@@ -506,7 +506,7 @@ async function classifyItemLevelCategoriesByEmbeddingSafely(
         return;
       }
       try {
-        const classification = await classifyFeedItemCategoriesByEmbedding(
+        const classification = await classifyItemEmbedding(
           {
             feedTitle: input.parsed.metadata.title,
             feedDescription: input.parsed.metadata.description,
@@ -745,8 +745,7 @@ export async function runFeedRefresh(
           feedSiteUrl: feed.link,
           sourceKind: feed.sourceKind,
         };
-        const suppressedFeedClassifierFallback =
-          shouldSuppressClassifierFeedFallback(classificationInput);
+        const suppressedFeedClassifierFallback = shouldSuppressFallback(classificationInput);
         const feedCategories = suppressedFeedClassifierFallback
           ? []
           : classifyFeedCategories(classificationInput).categories;
@@ -756,8 +755,8 @@ export async function runFeedRefresh(
           now,
         );
         const embeddingConfig = options?.embeddingClassifier;
-        const embeddingCategoryStats = createEmbeddingClassifierRefreshStats(embeddingConfig);
-        const embeddingFeedCategories = await classifyFeedCategoriesByEmbeddingSafely(
+        const embeddingCategoryStats = createEmbeddingStats(embeddingConfig);
+        const embeddingFeedCategories = await tryFeedEmbedding(
           classificationInput,
           embeddingConfig,
           embeddingCategoryStats,
@@ -788,9 +787,7 @@ export async function runFeedRefresh(
         };
       }
 
-      const embeddingCategoryStats = createEmbeddingClassifierRefreshStats(
-        options?.embeddingClassifier,
-      );
+      const embeddingCategoryStats = createEmbeddingStats(options?.embeddingClassifier);
 
       return {
         ok: true,
@@ -829,14 +826,14 @@ export async function runFeedRefresh(
       deduped.set(item.canonicalUrl, item);
     }
     const feedForClassification = { url: feed.url, link: feed.link, sourceKind: feed.sourceKind };
-    const feedClassification = classifyFeedLevelCategories({
+    const feedClassification = classifyFeedLevel({
       feed: feedForClassification,
       parsed: { metadata: parsed.metadata, items: [] },
     });
     const feedCategories = feedClassification.categories;
     const embeddingConfig = options?.embeddingClassifier;
-    const embeddingCategoryStats = createEmbeddingClassifierRefreshStats(embeddingConfig);
-    const embeddingFeedCategoriesPromise = classifyFeedLevelCategoriesByEmbeddingSafely(
+    const embeddingCategoryStats = createEmbeddingStats(embeddingConfig);
+    const embeddingFeedCategoriesPromise = tryChannelEmbedding(
       { feed: feedForClassification, parsed },
       embeddingConfig,
       embeddingCategoryStats,
@@ -873,7 +870,7 @@ export async function runFeedRefresh(
     }
     // Item-level classification runs after enrichment so items with a thin/empty RSS summary
     // are scored against the fetched article text instead of an empty string.
-    items = classifyItemLevelCategories({
+    items = classifyItemLevel({
       feed: feedForClassification,
       parsed: { metadata: parsed.metadata },
       items,
@@ -886,7 +883,7 @@ export async function runFeedRefresh(
     // sequentially keeps embedding classification from adding its own latency on top of
     // enrichment's, rather than after it).
     const embeddingFeedCategories = await embeddingFeedCategoriesPromise;
-    const embeddingItemCategoriesById = await classifyItemLevelCategoriesByEmbeddingSafely(
+    const embeddingItemCategoriesById = await tryItemEmbedding(
       { feed: feedForClassification, parsed: { metadata: parsed.metadata }, items },
       embeddingConfig,
       embeddingCategoryStats,
