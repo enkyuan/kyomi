@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { PgDialect } from "drizzle-orm/pg-core";
 import { isCanonicalCategoryLabel, MISCELLANEOUS_CATEGORY_LABEL } from "@kyomi/db";
 import { buildCategoryLabelsSql, categoryLabelsSql } from "@modules/articles/read/labels";
-import { toArticleListItemsForTest } from "@modules/articles/read/list/service";
+import { toArticleListItemsForTest } from "@modules/articles/read/list/query";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
 import { articleListItemSchema } from "@modules/articles/schemas";
 

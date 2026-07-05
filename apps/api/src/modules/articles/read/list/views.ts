@@ -4,14 +4,14 @@ import { and, asc, desc, eq, gt, gte, ilike, isNotNull, lt, or, sql, type SQL } 
 import { AppError } from "@shared/errors/app";
 import type { ArticleSort } from "@modules/articles/query";
 import type { ArticlesCursorListResponseDto } from "@modules/articles/types";
-import { listClipsForUser } from "@modules/articles/write/clips";
+import { listClipsForUser } from "@modules/articles/write/clips/operations";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "@modules/articles/write/clips/constants";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
 import { decodeMergedListCursor } from "./cursor";
 import { mergeRecentlyViewedItemsSorted, type RecentlyViewedItem } from "./recent";
 import { categoryLabelsSql } from "../labels";
-import { listArticlesForUser } from "./service";
+import { listArticlesForUser } from "./query";
 import { globalArticleIsReadSql } from "../sql";
 
 type DB = typeof db;

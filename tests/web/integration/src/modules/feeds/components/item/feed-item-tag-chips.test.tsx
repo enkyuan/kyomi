@@ -3,19 +3,6 @@ import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxItem } from "@modules/inbox/lib/articles/index";
 
-vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
-  useInboxItemStateMutation: () => ({ mutate: vi.fn(), mutateAsync: vi.fn() }),
-}));
-
-vi.mock("@modules/inbox/lib/articles/index", () => ({
-  reportBrokenArticle: vi.fn(),
-}));
-
-vi.mock("@kyomi/ui/toast", () => ({
-  anchoredToastManager: { add: vi.fn() },
-  toastManager: { add: vi.fn(), update: vi.fn() },
-}));
-
 vi.mock("@hooks/use-pretext", () => ({
   usePretextLayout: () => ({ ref: { current: null }, fittedWidth: undefined, maxWidth: 640 }),
 }));
@@ -109,8 +96,8 @@ describe("feed item category chips", () => {
     expect(screen.getByText("Engineering")).toBeTruthy();
   });
 
-  test("keeps the inline toolbar present with chips rendered", () => {
+  test("does not render inline action controls with chips rendered", () => {
     renderItem({ ...baseItem, categories: ["Engineering"] });
-    expect(screen.getByRole("button", { name: "More" })).toBeTruthy();
+    expect(screen.queryByRole("button", { name: "More" })).toBeNull();
   });
 });

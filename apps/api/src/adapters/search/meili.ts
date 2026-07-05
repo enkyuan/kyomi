@@ -126,6 +126,9 @@ export async function upsertFeedSearchDocuments(documents: FeedSearchDocument[])
   if (!isMeiliConfigured()) {
     return;
   }
+  if (documents.length === 0) {
+    return;
+  }
   await ensureFeedIndex();
   const uid = getIndexUid();
   const response = await meiliFetch(`/indexes/${uid}/documents`, {

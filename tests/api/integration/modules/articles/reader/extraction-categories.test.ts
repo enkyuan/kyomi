@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import { getTableName } from "drizzle-orm";
 import { resetPrototypeCache, type EmbeddingClassifierConfig } from "@kyomi/worker";
-import { reclassifyExtractedFeedItem } from "@modules/articles/reader/extraction/service";
+import { reclassifyExtractedFeedItem } from "@modules/articles/reader/extraction/workflow";
 import type { ArticleDetailDto } from "@modules/articles/types";
 
 const originalFetch = globalThis.fetch;

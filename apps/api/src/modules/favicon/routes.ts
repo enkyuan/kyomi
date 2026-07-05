@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 import { databaseAdapterPlugin, requestObservationPlugin } from "@shared/http/stacks";
-import { handleFaviconRequest } from "./service";
+import { handleFaviconRequest } from "./handler";
 
 export const faviconPlugin = new Elysia({
   name: "kyomi.favicon",

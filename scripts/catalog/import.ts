@@ -327,6 +327,33 @@ export async function importCatalogFile(
   const categoryIdCache = new Map<string, string>();
   let pendingRecords: NormalizedImportRecord[] = [];
   let duplicateCanonicalUrls = 0;
+  let lastProgressAt = 0;
+  const batch: NormalizedImportRecord[] = [];
+
+  async function flushBatch(): Promise<void> {
+    if (batch.length === 0) {
+      return;
+    }
+
+    const records = batch.splice(0);
+    if (dryRun) {
+      stats.imported += records.length;
+      stats.categoryAssignments += records.filter(resolveCanonicalCategory).length;
+      stats.languageAssignments += records.filter((record) => record.language != null).length;
+    } else {
+      const result = await upsertCatalogBatch(records);
+      stats.imported += result.imported;
+      stats.categoryAssignments += result.categoryAssignments;
+      stats.languageAssignments += result.languageAssignments;
+    }
+
+    if (!dryRun && stats.processed - lastProgressAt >= 10_000) {
+      lastProgressAt = stats.processed;
+      console.error(
+        `[catalog-import] processed ${stats.processed} records; imported ${stats.imported} feeds`,
+      );
+    }
+  }
 
   async function flushPendingRecords(): Promise<void> {
     if (pendingRecords.length === 0) {

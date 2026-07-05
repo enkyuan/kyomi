@@ -6,7 +6,7 @@ import { v1HandlerContext } from "@shared/http/v1/context";
 import { taskIdParam } from "@shared/http/v1/stub";
 import { exportOpmlForUser } from "./export";
 import { fetchOpmlDocumentFromUrl } from "./fetch-url";
-import { enqueueOpmlImport } from "./service";
+import { enqueueOpmlImport } from "./jobs";
 import {
   buildOpmlSummary,
   cancelOpmlTask,

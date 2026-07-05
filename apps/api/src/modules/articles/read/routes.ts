@@ -1,7 +1,7 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
-import { listClipsForUser } from "../write/clips";
+import { listClipsForUser } from "../write/clips/operations";
 import {
   countGlobalFeedArticlesPublishedInRange,
   countFeedArticlesPublishedInRange,
@@ -10,7 +10,7 @@ import {
   getUnreadCountsPerFeed,
 } from "./counts";
 import { getArticleDetailForUser } from "./detail";
-import { listAllArticlesForUser, listArticlesForUser } from "./list";
+import { listAllArticlesForUser, listArticlesForUser } from "./list/query";
 import { parseArticlesListQuery, parseMergedViewListQuery, parseOptionalIsoDate } from "../query";
 import {
   articleDetailSchema,

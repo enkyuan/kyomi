@@ -1,16 +1,12 @@
 import type { Elysia } from "elysia";
 import { AppError } from "@shared/errors/app";
 import { v1HandlerContext } from "@shared/http/v1/context";
-import { listMembershipsForUser } from "./organizations/service";
+import { listMembershipsForUser } from "./organizations/memberships";
 import { userMembershipsResponse } from "./organizations/schemas";
+import { getUserProfileById, updateUserEmailById } from "./profile/account";
 import { updateEmailBody, userProfileResponse } from "./profile/schemas";
+import { getUserPreferences, updateUserPreferences } from "./preferences/settings";
 import { updateUserPreferencesBody, userPreferencesResponse } from "./preferences/schemas";
-import {
-  getUserPreferences,
-  getUserProfileById,
-  updateUserEmailById,
-  updateUserPreferences,
-} from "./index";
 
 export function registerUserRoutes(app: Elysia) {
   return app

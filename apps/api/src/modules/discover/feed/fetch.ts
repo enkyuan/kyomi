@@ -1,4 +1,4 @@
-import { assertHttpOrHttpsUrl } from "./normalize-url";
+import { assertHttpOrHttpsUrl } from "./normalize";
 import { BlockedOutboundUrlError } from "@shared/net/outbound-policy";
 import {
   TooManyRedirectsError,

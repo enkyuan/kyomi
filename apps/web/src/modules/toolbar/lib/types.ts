@@ -1,5 +1,4 @@
 import type React from "react";
-import type { CSSProperties } from "react";
 import type { ArticleDetailDto } from "@lib/schemas/index";
 import type { InboxItem } from "@modules/inbox/lib/articles/index";
 import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
@@ -70,19 +69,3 @@ export type ArticleActionItem = Pick<
   InboxItem,
   "id" | "title" | "summary" | "feedTitle" | "link" | "isSaved"
 >;
-
-export type ItemToolbarProps = {
-  className?: string;
-  style?: CSSProperties;
-  isSaved: boolean;
-  onOpenAi?: () => void;
-  onCopyLink: () => void;
-  onHide: () => void;
-  onOpenSource: () => void;
-  onReportBrokenArticle: () => void;
-  onShareArticle: () => void;
-  onToggleSaved: AnchoredToolbarAction;
-  presentation?: "row" | "articleHeader";
-};
-
-export type ItemToolbarModel = { toolbarProps: ItemToolbarProps };

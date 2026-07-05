@@ -4,18 +4,15 @@ import { enforceRateLimitForContext } from "@adapters/rate-limit/plugin";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { uuidParam } from "@shared/http/v1/stub";
 import {
-  assertUserSubscribedToFeed,
   bulkMoveFeedsToFolder,
   bulkUnsubscribeFromFeeds,
-  createOrSubscribeToFeed,
-  getFeedDetailForUser,
-  listSubscribedFeeds,
-  subscribeToExistingFeed,
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
-} from "../index";
+} from "./mutations";
+import { getFeedDetailForUser, listSubscribedFeeds } from "../read/queries";
 import * as dto from "../dto";
 import { enqueueFeedRefresh } from "../refresh/enqueue";
+import { createOrSubscribeToFeed, subscribeToExistingFeed } from "./subscribe";
 
 const createFeedRateLimit = {
   name: "feeds.create_by_url",

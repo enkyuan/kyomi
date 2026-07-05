@@ -1,5 +1,5 @@
 import { toCategorySlug } from "@kyomi/db";
-import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize-url";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize";
 
 export { toCategorySlug };
 

@@ -35,6 +35,7 @@ describe("category backfill script", () => {
   test("defaults to dry-run with capped item scans and bounded concurrency", () => {
     expect(parseBackfillArgs(["bun", "backfill"])).toEqual({
       apply: false,
+      all: false,
       limit: 500,
       itemLimit: 50,
       feedId: null,
@@ -51,8 +52,12 @@ describe("category backfill script", () => {
         "bun",
         "backfill",
         "--apply",
+        "--normalize-existing",
+        "--retry-failed",
         "--limit",
         "25",
+        "--batch-size",
+        "1250",
         "--item-limit",
         "10",
         "--feed-id",
@@ -67,7 +72,9 @@ describe("category backfill script", () => {
       ]),
     ).toEqual({
       apply: true,
+      all: false,
       limit: 25,
+      batchSize: 1250,
       itemLimit: 10,
       feedId: "feed-1",
       classifier: "embedding",
@@ -235,9 +242,12 @@ describe("category backfill script", () => {
         feedsScanned: 2,
         feedsWithClassifierCategories: 2,
         feedClassifierFallbacksSuppressed: 1,
+        feedsFailed: 0,
         itemsScanned: 4,
         itemsWithClassifierCategories: 1,
         itemClassifierAbstentions: 3,
+        feedBackfillStatusesRecorded: 0,
+        normalizedExistingAssignments: true,
         assignmentsScanned: 5,
         assignmentsRewritten: 2,
         assignmentsDroppedUnmapped: 1,
@@ -245,7 +255,8 @@ describe("category backfill script", () => {
     ).toBe(
       "DRY RUN (keyword/keyword-v1): scanned 2 feeds and 4 items; would write classifier categories for 2 feeds and 1 items. " +
         "would rewrite 2 of 5 existing assignments to canonical categories and dropped 1 unmapped assignments. " +
-        "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items.",
+        "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items. " +
+        "would write coverage status for 0 feeds; 0 feeds failed.",
     );
 
     expect(
@@ -256,17 +267,21 @@ describe("category backfill script", () => {
         feedsScanned: 2,
         feedsWithClassifierCategories: 2,
         feedClassifierFallbacksSuppressed: 1,
+        feedsFailed: 1,
         itemsScanned: 4,
         itemsWithClassifierCategories: 1,
         itemClassifierAbstentions: 3,
+        feedBackfillStatusesRecorded: 2,
+        normalizedExistingAssignments: false,
         assignmentsScanned: 5,
         assignmentsRewritten: 2,
         assignmentsDroppedUnmapped: 1,
       }),
     ).toBe(
       `APPLIED (embedding/${EMBEDDING_CLASSIFIER_MODEL_ID}): scanned 2 feeds and 4 items; wrote classifier categories for 2 feeds and 1 items. ` +
-        "rewrote 2 of 5 existing assignments to canonical categories and dropped 1 unmapped assignments. " +
-        "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items.",
+        "Skipped existing assignment normalization. " +
+        "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items. " +
+        "wrote coverage status for 2 feeds; 1 feed failed.",
     );
   });
 });
