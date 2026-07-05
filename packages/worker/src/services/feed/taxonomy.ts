@@ -22,6 +22,7 @@ export type CategoryTaxonomyEntry = {
   keywords: readonly string[];
   weakKeywords?: readonly string[];
   domainHints: readonly string[];
+  strongDomainHints?: readonly string[];
 };
 
 export const MIXED_FEED_HOSTS = new Set([
@@ -53,6 +54,8 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "infrastructure",
       "javascript",
       "kubernetes",
+      "package management",
+      "package manager",
       "programming",
       "python",
       "react",
@@ -60,8 +63,11 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "software",
       "typescript",
       "version control",
+      "build system",
+      "zig",
     ],
     domainHints: ["github.com", "gitlab.com", "stackoverflow.com", "medium.com"],
+    strongDomainHints: ["github.com", "gitlab.com", "stackoverflow.com", "ziglang.org"],
   },
   {
     label: "Technology",
@@ -97,6 +103,8 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "breach",
       "cve",
       "exploit",
+      "leak",
+      "leaking",
       "malware",
       "password",
       "privacy",
@@ -106,6 +114,7 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "threat",
       "vulnerability",
     ],
+    weakKeywords: ["private"],
     domainHints: ["krebsonsecurity.com", "bleepingcomputer.com", "hackercombat.com"],
   },
   {

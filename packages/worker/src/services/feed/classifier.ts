@@ -36,6 +36,7 @@ const STRONG_TITLE_KEYWORD_SCORE = 3;
 const STRONG_BODY_KEYWORD_SCORE = 1;
 const WEAK_KEYWORD_SCORE = 1;
 const DOMAIN_HINT_SCORE = 3;
+const STRONG_DOMAIN_HINT_SCORE = 4;
 
 function safeHost(url: string | null): string {
   if (!url) {
@@ -103,6 +104,13 @@ function scoreCategory(
   }
   for (const host of input.hosts) {
     if (!host) {
+      continue;
+    }
+    const strongDomainMatch = entry.strongDomainHints?.some(
+      (hint) => host === hint || host.endsWith(`.${hint}`),
+    );
+    if (strongDomainMatch) {
+      score += STRONG_DOMAIN_HINT_SCORE;
       continue;
     }
     if (entry.domainHints.some((hint) => host === hint || host.endsWith(`.${hint}`))) {

@@ -154,6 +154,36 @@ describe("feed category classifier", () => {
     expect(result.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
   });
 
+  test("classifies thin compiler and package-management titles", () => {
+    const result = classifyFeedItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Zig: All Package Management Functionality Moved from Compiler to Build System",
+      itemSummary: null,
+      itemUrl: "https://ziglang.org/devlog/2026/#2026-06-30",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
+  });
+
+  test("classifies code-hosted project links from strong source domains", () => {
+    const result = classifyFeedItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Windows CE Dreamcast Community Edition (wince-dc)",
+      itemSummary: null,
+      itemUrl: "https://github.com/maximqaxd/wince-dc",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
+  });
+
   test("does not classify a single generic dev-tool title word without a corroborating signal", () => {
     // A bare "git" hit in the title (score 3) alone does not clear ITEM_SCORE_THRESHOLD=4
     // without a domain hint or a second keyword — this keeps the classifier honest about
@@ -171,6 +201,21 @@ describe("feed category classifier", () => {
     });
 
     expect(result.categories).toEqual([]);
+  });
+
+  test("classifies leaking private-video stories as security and privacy", () => {
+    const result = classifyFeedItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Leaking YouTube creators' private videos",
+      itemSummary: null,
+      itemUrl: "https://javoriuski.com/blog/leaking-youtube-creators-private-videos",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["Security & Privacy"]);
   });
 
   test("classifies thin changelog titles with product host signals", () => {
