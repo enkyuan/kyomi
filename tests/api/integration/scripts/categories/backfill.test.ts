@@ -38,10 +38,11 @@ describe("category backfill script", () => {
       itemLimit: null,
       feedId: null,
       classifier: "keyword",
+      recentDays: null,
     });
   });
 
-  test("parses apply, limit, item limit, feed id, and classifier", () => {
+  test("parses apply, limit, item limit, feed id, classifier, and recent days", () => {
     expect(
       parseBackfillArgs([
         "bun",
@@ -55,6 +56,8 @@ describe("category backfill script", () => {
         "feed-1",
         "--classifier",
         "embedding",
+        "--recent-days",
+        "7",
       ]),
     ).toEqual({
       apply: true,
@@ -62,6 +65,7 @@ describe("category backfill script", () => {
       itemLimit: 10,
       feedId: "feed-1",
       classifier: "embedding",
+      recentDays: 7,
     });
 
     expect(parseBackfillArgs(["bun", "backfill", "--embedding"]).classifier).toBe("embedding");
@@ -76,6 +80,12 @@ describe("category backfill script", () => {
     );
     expect(() => parseBackfillArgs(["bun", "backfill", "--item-limit", "-5"])).toThrow(
       "Invalid --item-limit value: -5",
+    );
+    expect(() => parseBackfillArgs(["bun", "backfill", "--recent-days", "soon"])).toThrow(
+      "Invalid --recent-days value: soon",
+    );
+    expect(() => parseBackfillArgs(["bun", "backfill", "--recent-days", "0"])).toThrow(
+      "Invalid --recent-days value: 0",
     );
   });
 

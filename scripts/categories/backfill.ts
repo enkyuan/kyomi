@@ -1,4 +1,4 @@
-import { desc, eq, inArray, sql } from "drizzle-orm";
+import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import {
   categories,
   feedCategoryAssignments,
@@ -54,6 +54,7 @@ export type BackfillArgs = {
   itemLimit: number | null;
   feedId: string | null;
   classifier: BackfillClassifierMethod;
+  recentDays: number | null;
 };
 
 export type BackfillStats = {
@@ -88,7 +89,8 @@ function positiveInt(value: string | null, fallback: number): number {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
 
-function optionalPositiveInt(value: string | null): number | null {
+function optionalPositiveIntFlag(argv: string[], flag: string): number | null {
+  const value = valueAfter(argv, flag);
   if (!value) {
     return null;
   }
@@ -97,7 +99,7 @@ function optionalPositiveInt(value: string | null): number | null {
     // Unlike a missing flag (which intentionally means "no limit"), a present-but-invalid
     // value must not silently fall back to the same "no limit" behavior — that would make
     // a typo indistinguishable from an explicit unbounded --apply run.
-    throw new Error(`Invalid --item-limit value: ${value}`);
+    throw new Error(`Invalid ${flag} value: ${value}`);
   }
   return parsed;
 }
@@ -124,9 +126,10 @@ export function parseBackfillArgs(argv: string[]): BackfillArgs {
   return {
     apply: argv.includes("--apply"),
     limit: positiveInt(valueAfter(argv, "--limit"), 500),
-    itemLimit: optionalPositiveInt(valueAfter(argv, "--item-limit")),
+    itemLimit: optionalPositiveIntFlag(argv, "--item-limit"),
     feedId: valueAfter(argv, "--feed-id"),
     classifier: parseBackfillClassifier(argv),
+    recentDays: optionalPositiveIntFlag(argv, "--recent-days"),
   };
 }
 
@@ -151,6 +154,35 @@ function loadFeeds(args: BackfillArgs) {
     sourceKind: feeds.sourceKind,
   };
 
+  if (args.recentDays) {
+    const recentFeedItems = db
+      .select({
+        feedId: feedItems.feedId,
+        latestPublishedAt: sql<Date>`max(${feedItems.publishedAt})`.as("latest_published_at"),
+      })
+      .from(feedItems)
+      .where(sql`${feedItems.publishedAt} >= now() - (${args.recentDays}::int * interval '1 day')`)
+      .groupBy(feedItems.feedId)
+      .as("recent_feed_items");
+
+    if (args.feedId) {
+      return db
+        .select(columns)
+        .from(feeds)
+        .innerJoin(recentFeedItems, eq(feeds.id, recentFeedItems.feedId))
+        .where(eq(feeds.id, args.feedId))
+        .orderBy(desc(recentFeedItems.latestPublishedAt), feeds.id)
+        .limit(args.limit);
+    }
+
+    return db
+      .select(columns)
+      .from(feeds)
+      .innerJoin(recentFeedItems, eq(feeds.id, recentFeedItems.feedId))
+      .orderBy(desc(recentFeedItems.latestPublishedAt), feeds.id)
+      .limit(args.limit);
+  }
+
   if (!args.feedId) {
     return db.select(columns).from(feeds).orderBy(feeds.id).limit(args.limit);
   }
@@ -165,7 +197,12 @@ function loadFeeds(args: BackfillArgs) {
 
 const ITEM_BACKFILL_BATCH_SIZE = 500;
 
-function loadItemsPage(feedId: string, limit: number, offset: number) {
+function loadItemsPage(feedId: string, limit: number, offset: number, recentDays: number | null) {
+  const feedFilter = eq(feedItems.feedId, feedId);
+  const whereClause = recentDays
+    ? and(feedFilter, sql`${feedItems.publishedAt} >= now() - (${recentDays}::int * interval '1 day')`)
+    : feedFilter;
+
   return db
     .select({
       id: feedItems.id,
@@ -176,7 +213,7 @@ function loadItemsPage(feedId: string, limit: number, offset: number) {
       canonicalUrl: feedItems.canonicalUrl,
     })
     .from(feedItems)
-    .where(eq(feedItems.feedId, feedId))
+    .where(whereClause)
     .orderBy(desc(feedItems.publishedAt), desc(feedItems.id))
     .limit(limit)
     .offset(offset);
@@ -568,7 +605,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
       if (batchSize === null) {
         break;
       }
-      const items = await loadItemsPage(feed.id, batchSize, itemOffset);
+      const items = await loadItemsPage(feed.id, batchSize, itemOffset, args.recentDays);
       if (items.length === 0) {
         break;
       }
