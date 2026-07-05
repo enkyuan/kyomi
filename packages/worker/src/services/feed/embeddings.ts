@@ -1,5 +1,12 @@
+import { createHash } from "node:crypto";
 import { MISCELLANEOUS_CATEGORY_LABEL } from "@kyomi/db";
 import { CATEGORY_CARDS } from "./category-cards";
+import type { ClassifierModelInfo } from "./categories";
+import {
+  CLASSIFIER_TAXONOMY_VERSION,
+  EMBEDDING_CLASSIFIER_METHOD,
+  EMBEDDING_CLASSIFIER_MODEL_ID,
+} from "./taxonomy";
 import type {
   CategoryClassification,
   FeedCategoryClassificationInput,
@@ -12,9 +19,11 @@ export type EmbeddingClassifierConfig = {
   model?: string;
   /** Override for tests; defaults to Voyage's public embeddings endpoint. */
   apiUrl?: string;
+  /** Optional request timeout for best-effort callers that must not block user flows. */
+  timeoutMs?: number;
 };
 
-const DEFAULT_VOYAGE_MODEL = "voyage-4";
+const DEFAULT_VOYAGE_MODEL = EMBEDDING_CLASSIFIER_MODEL_ID;
 const DEFAULT_VOYAGE_API_URL = "https://api.voyageai.com/v1/embeddings";
 // Empirically tuned against tests/api/integration/modules/feeds/refresh/classifier-eval-fixture.ts
 // via classifier-eval-embedding.test.ts (live Voyage API). Re-validate against that fixture if
@@ -48,17 +57,28 @@ export async function embedTexts(
   if (texts.length === 0) {
     return [];
   }
-  const response = await fetch(config.apiUrl ?? DEFAULT_VOYAGE_API_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${config.apiKey}`,
-    },
-    body: JSON.stringify({
-      input: texts,
-      model: config.model ?? DEFAULT_VOYAGE_MODEL,
-    }),
-  });
+  const controller = config.timeoutMs ? new AbortController() : null;
+  const timeout = controller ? setTimeout(() => controller.abort(), config.timeoutMs) : null;
+  const response = await (async () => {
+    try {
+      return await fetch(config.apiUrl ?? DEFAULT_VOYAGE_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${config.apiKey}`,
+        },
+        signal: controller?.signal,
+        body: JSON.stringify({
+          input: texts,
+          model: config.model ?? DEFAULT_VOYAGE_MODEL,
+        }),
+      });
+    } finally {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+    }
+  })();
   if (!response.ok) {
     const body = await response.text().catch(() => "");
     throw new Error(`Voyage embeddings request failed (${response.status}): ${body}`);
@@ -97,8 +117,20 @@ type CategoryPrototypes = {
  */
 const prototypeCache = new Map<string, Promise<CategoryPrototypes[]>>();
 
+function apiKeyFingerprint(apiKey: string): string {
+  return createHash("sha256").update(apiKey).digest("hex").slice(0, 12);
+}
+
 function cacheKeyFor(config: EmbeddingClassifierConfig): string {
-  return `${config.apiUrl ?? DEFAULT_VOYAGE_API_URL}::${config.model ?? DEFAULT_VOYAGE_MODEL}`;
+  return `${config.apiUrl ?? DEFAULT_VOYAGE_API_URL}::${config.model ?? DEFAULT_VOYAGE_MODEL}::${apiKeyFingerprint(config.apiKey)}::${config.timeoutMs ?? "none"}`;
+}
+
+export function embeddingModelInfo(config: EmbeddingClassifierConfig): ClassifierModelInfo {
+  return {
+    modelId: config.model ?? EMBEDDING_CLASSIFIER_MODEL_ID,
+    taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+    classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
+  };
 }
 
 async function loadCategoryPrototypes(
@@ -122,12 +154,17 @@ async function loadCategoryPrototypes(
       });
     })();
     prototypeCache.set(key, cached);
+    cached.catch(() => {
+      if (prototypeCache.get(key) === cached) {
+        prototypeCache.delete(key);
+      }
+    });
   }
   return cached;
 }
 
 /** Test-only escape hatch: forces the next call to re-embed prototypes instead of reusing the cache. */
-export function resetCategoryPrototypeCacheForTests(): void {
+export function resetPrototypeCache(): void {
   prototypeCache.clear();
 }
 
@@ -162,7 +199,7 @@ function buildItemText(input: FeedItemCategoryClassificationInput): string {
   return [input.itemTitle, input.itemSummary, input.itemContentText].filter(Boolean).join(". ");
 }
 
-export async function classifyFeedCategoriesByEmbedding(
+export async function classifyFeedEmbedding(
   input: FeedCategoryClassificationInput,
   config: EmbeddingClassifierConfig,
 ): Promise<CategoryClassification> {
@@ -187,7 +224,7 @@ export async function classifyFeedCategoriesByEmbedding(
   };
 }
 
-export async function classifyFeedItemCategoriesByEmbedding(
+export async function classifyItemEmbedding(
   input: FeedItemCategoryClassificationInput,
   config: EmbeddingClassifierConfig,
   // Unlike the keyword classifier, similarity scoring has no natural label count to default

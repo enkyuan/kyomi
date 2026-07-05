@@ -36,6 +36,7 @@ const STRONG_TITLE_KEYWORD_SCORE = 3;
 const STRONG_BODY_KEYWORD_SCORE = 1;
 const WEAK_KEYWORD_SCORE = 1;
 const DOMAIN_HINT_SCORE = 3;
+const STRONG_DOMAIN_HINT_SCORE = 4;
 
 function safeHost(url: string | null): string {
   if (!url) {
@@ -105,6 +106,13 @@ function scoreCategory(
     if (!host) {
       continue;
     }
+    const strongDomainMatch = entry.strongDomainHints?.some(
+      (hint) => host === hint || host.endsWith(`.${hint}`),
+    );
+    if (strongDomainMatch) {
+      score += STRONG_DOMAIN_HINT_SCORE;
+      continue;
+    }
     if (entry.domainHints.some((hint) => host === hint || host.endsWith(`.${hint}`))) {
       score += DOMAIN_HINT_SCORE;
     }
@@ -150,9 +158,7 @@ export function isMixedFeedHost(url: string | null): boolean {
   return MIXED_FEED_HOSTS.has(host);
 }
 
-export function shouldSuppressClassifierFeedFallback(
-  input: FeedCategoryClassificationInput,
-): boolean {
+export function shouldSuppressFallback(input: FeedCategoryClassificationInput): boolean {
   return isMixedFeedHost(input.feedUrl) || isMixedFeedHost(input.feedSiteUrl);
 }
 
@@ -176,7 +182,7 @@ export function classifyFeedCategories(
   };
 }
 
-export function classifyFeedItemCategories(
+export function classifyItemCategories(
   input: FeedItemCategoryClassificationInput,
   // Callers that will post-filter the result (e.g. to drop labels already covered by an
   // explicit source category) should request more candidates than they intend to keep:

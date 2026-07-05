@@ -7,6 +7,15 @@ export type FeedRefreshCategoryStats = {
   itemClassifierLabels: number;
   itemClassifierAbstentions: number;
   suppressedFeedClassifierFallback: boolean;
+  embeddingClassifier?: {
+    configured: boolean;
+    feedClassifierLabels: number;
+    feedClassifierAbstentions: number;
+    feedClassifierFailures: number;
+    itemClassifierLabels: number;
+    itemClassifierAbstentions: number;
+    itemClassifierFailures: number;
+  };
   sourceTagAssignments?: number;
 };
 

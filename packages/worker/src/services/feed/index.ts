@@ -5,22 +5,24 @@ export {
   canonicalWinsOnConflictSql,
   hasExplicitFeedCategories,
   syncInferredFeedCategories,
+  syncItemInferences,
   type ClassifierModelInfo,
 } from "./categories";
 export {
   CATEGORY_CLASSIFIER_PROVENANCE,
   CLASSIFIER_TAXONOMY_VERSION,
   EMBEDDING_CLASSIFIER_METHOD,
+  EMBEDDING_CLASSIFIER_MODEL_ID,
   KEYWORD_CLASSIFIER_METHOD,
   KEYWORD_CLASSIFIER_MODEL_ID,
   MISCELLANEOUS_CATEGORY_LABEL,
 } from "./taxonomy";
 export {
   classifyFeedCategories,
-  classifyFeedItemCategories,
+  classifyItemCategories,
   isMixedFeedHost,
   MAX_CLASSIFIER_LABELS,
-  shouldSuppressClassifierFeedFallback,
+  shouldSuppressFallback,
   type CategoryClassification,
   type FeedCategoryClassificationInput,
   type FeedItemCategoryClassificationInput,
@@ -32,10 +34,11 @@ export {
   createRedisHostRateLimitStore,
 } from "./host-limit";
 export {
-  classifyFeedCategoriesByEmbedding,
-  classifyFeedItemCategoriesByEmbedding,
+  classifyFeedEmbedding,
+  classifyItemEmbedding,
+  embeddingModelInfo,
   embedTexts,
-  resetCategoryPrototypeCacheForTests,
+  resetPrototypeCache,
   type EmbeddingClassifierConfig,
 } from "./embeddings";
 export { buildArticleIdentity, normalizeArticleUrl } from "../../lib/article-identity";

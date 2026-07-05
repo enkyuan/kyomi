@@ -118,7 +118,7 @@ async function upsertCategories(
 /**
  * True when a feed already has at least one explicit (`provenance = "feed"`) category
  * assignment from a prior full fetch. Used to skip re-running the classifier fallback on a
- * `304 Not Modified` response, mirroring the canonical-label check `classifyFeedLevelCategories`
+ * `304 Not Modified` response, mirroring the canonical-label check `classifyFeedLevel`
  * runs against freshly parsed metadata on a full fetch — a 304 has no fresh document to check,
  * so this checks persisted state instead.
  */
@@ -263,6 +263,128 @@ export type ClassifierModelInfo = {
   classifierMethod: string;
 };
 
+function normalizeItemInferences(items: InferredItemCategoryInput[]): Array<{
+  id: string;
+  records: CategoryRecord[];
+}> {
+  return items.map((item) => ({
+    id: item.id,
+    records: normalizeInferredRecords(item.inferredCategoryLabels ?? []),
+  }));
+}
+
+async function deleteItemInferences(
+  database: CategoryAssignmentDatabase,
+  items: InferredItemCategoryInput[],
+  modelId: string,
+): Promise<void> {
+  const itemIds = items.map((item) => item.id);
+  if (itemIds.length === 0) {
+    return;
+  }
+
+  await database
+    .delete(feedItemCategoryAssignments)
+    .where(
+      and(
+        inArray(feedItemCategoryAssignments.feedItemId, itemIds),
+        eq(feedItemCategoryAssignments.provenance, CATEGORY_CLASSIFIER_PROVENANCE),
+        eq(feedItemCategoryAssignments.modelId, modelId),
+      ),
+    );
+}
+
+async function insertItemInferences(
+  database: CategoryAssignmentDatabase,
+  input: {
+    itemRecordsBySlug: Array<{ id: string; records: CategoryRecord[] }>;
+    categoryIdsBySlug: Map<string, string>;
+    model: ClassifierModelInfo;
+  },
+  now: Date,
+): Promise<void> {
+  const itemAssignments = input.itemRecordsBySlug.flatMap((item) =>
+    item.records.flatMap((record) => {
+      const categoryId = input.categoryIdsBySlug.get(record.slug);
+      return categoryId
+        ? [
+            {
+              id: crypto.randomUUID(),
+              feedItemId: item.id,
+              categoryId,
+              provenance: CATEGORY_CLASSIFIER_PROVENANCE,
+              confidence: record.confidence,
+              modelId: input.model.modelId,
+              taxonomyVersion: input.model.taxonomyVersion,
+              classifierMethod: input.model.classifierMethod,
+              createdAt: now,
+              updatedAt: now,
+            },
+          ]
+        : [];
+    }),
+  );
+  if (itemAssignments.length === 0) {
+    return;
+  }
+
+  await database
+    .insert(feedItemCategoryAssignments)
+    .values(itemAssignments)
+    .onConflictDoUpdate({
+      target: [
+        feedItemCategoryAssignments.feedItemId,
+        feedItemCategoryAssignments.categoryId,
+        feedItemCategoryAssignments.provenance,
+        feedItemCategoryAssignments.modelId,
+      ],
+      targetWhere: sql`model_id IS NOT NULL`,
+      set: {
+        confidence: sql`excluded.confidence`,
+        taxonomyVersion: sql`excluded.taxonomy_version`,
+        classifierMethod: sql`excluded.classifier_method`,
+        updatedAt: now,
+      },
+    });
+}
+
+/**
+ * Rewrites classifier rows for specific feed items only. Unlike syncInferredFeedCategories(),
+ * this never deletes feed-level classifier rows, which makes it safe for on-demand reader
+ * extraction to refresh one article's embedding labels without disturbing its parent feed.
+ */
+export async function syncItemInferences(
+  database: CategoryAssignmentDatabase,
+  input: {
+    items: InferredItemCategoryInput[];
+    model: ClassifierModelInfo;
+  },
+  now: Date,
+): Promise<void> {
+  await deleteItemInferences(database, input.items, input.model.modelId);
+
+  const itemRecordsBySlug = normalizeItemInferences(input.items);
+  const allRecords = normalizeCategoryRecords(
+    itemRecordsBySlug.flatMap((item) => item.records.map((record) => record.label)),
+  );
+  const categoryIdsBySlug = await upsertCategories(
+    database,
+    allRecords,
+    now,
+    CATEGORY_CLASSIFIER_PROVENANCE,
+  );
+
+  await insertItemInferences(
+    database,
+    {
+      itemRecordsBySlug,
+      categoryIdsBySlug,
+      model: input.model,
+    },
+    now,
+  );
+}
+
 /**
  * Syncs deterministic classifier fallback categories for one classifier model. Only rewrites
  * `provenance = "classifier"` rows stamped with the given `modelId`, so it never deletes or
@@ -290,24 +412,10 @@ export async function syncInferredFeedCategories(
       ),
     );
 
-  const itemIds = input.items.map((item) => item.id);
-  if (itemIds.length > 0) {
-    await database
-      .delete(feedItemCategoryAssignments)
-      .where(
-        and(
-          inArray(feedItemCategoryAssignments.feedItemId, itemIds),
-          eq(feedItemCategoryAssignments.provenance, CATEGORY_CLASSIFIER_PROVENANCE),
-          eq(feedItemCategoryAssignments.modelId, input.model.modelId),
-        ),
-      );
-  }
+  await deleteItemInferences(database, input.items, input.model.modelId);
 
   const feedRecords = normalizeInferredRecords(input.feedCategories);
-  const itemRecordsBySlug = input.items.map((item) => ({
-    id: item.id,
-    records: normalizeInferredRecords(item.inferredCategoryLabels ?? []),
-  }));
+  const itemRecordsBySlug = normalizeItemInferences(input.items);
   const allRecords = normalizeCategoryRecords([
     ...feedRecords.map((record) => record.label),
     ...itemRecordsBySlug.flatMap((item) => item.records.map((record) => record.label)),
@@ -361,45 +469,13 @@ export async function syncInferredFeedCategories(
       });
   }
 
-  const itemAssignments = itemRecordsBySlug.flatMap((item) =>
-    item.records.flatMap((record) => {
-      const categoryId = categoryIdsBySlug.get(record.slug);
-      return categoryId
-        ? [
-            {
-              id: crypto.randomUUID(),
-              feedItemId: item.id,
-              categoryId,
-              provenance: CATEGORY_CLASSIFIER_PROVENANCE,
-              confidence: record.confidence,
-              modelId: input.model.modelId,
-              taxonomyVersion: input.model.taxonomyVersion,
-              classifierMethod: input.model.classifierMethod,
-              createdAt: now,
-              updatedAt: now,
-            },
-          ]
-        : [];
-    }),
+  await insertItemInferences(
+    database,
+    {
+      itemRecordsBySlug,
+      categoryIdsBySlug,
+      model: input.model,
+    },
+    now,
   );
-  if (itemAssignments.length > 0) {
-    await database
-      .insert(feedItemCategoryAssignments)
-      .values(itemAssignments)
-      .onConflictDoUpdate({
-        target: [
-          feedItemCategoryAssignments.feedItemId,
-          feedItemCategoryAssignments.categoryId,
-          feedItemCategoryAssignments.provenance,
-          feedItemCategoryAssignments.modelId,
-        ],
-        targetWhere: sql`model_id IS NOT NULL`,
-        set: {
-          confidence: sql`excluded.confidence`,
-          taxonomyVersion: sql`excluded.taxonomy_version`,
-          classifierMethod: sql`excluded.classifier_method`,
-          updatedAt: now,
-        },
-      });
-  }
 }

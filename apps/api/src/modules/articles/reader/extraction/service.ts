@@ -1,12 +1,28 @@
 import type { db } from "@adapters/db/client";
-import { articleClips, feedItems } from "@kyomi/db";
+import { articleClips, categories, feedItemCategoryAssignments, feedItems } from "@kyomi/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize-url";
-import { eq } from "drizzle-orm";
+import { and, eq, ne } from "drizzle-orm";
 import { getArticleDetailForUser } from "@modules/articles/read/detail";
 import type { ArticleDetailDto } from "@modules/articles/types";
+import {
+  CATEGORY_CLASSIFIER_PROVENANCE,
+  classifyItemEmbedding,
+  embeddingModelInfo,
+  MAX_CLASSIFIER_LABELS,
+  syncItemInferences,
+  type EmbeddingClassifierConfig,
+} from "@kyomi/worker";
 import { extractArticleContentFromUrl } from "./readability";
 
 type DB = typeof db;
+type ExtractionLogger = {
+  warn?: (message: string, data?: Record<string, unknown>) => void;
+};
+
+type ExtractFullTextOptions = {
+  embeddingClassifier?: EmbeddingClassifierConfig;
+  logger?: ExtractionLogger;
+};
 
 function safeExtractErrorMessage(raw: string, maxLen = 280): string {
   const t = raw.trim();
@@ -82,6 +98,84 @@ async function persistClipExtracted(
   }
 }
 
+async function loadExplicitItemCategoryLabels(database: DB, articleId: string): Promise<string[]> {
+  const rows = await database
+    .select({ label: categories.label })
+    .from(feedItemCategoryAssignments)
+    .innerJoin(categories, eq(feedItemCategoryAssignments.categoryId, categories.id))
+    .where(
+      and(
+        eq(feedItemCategoryAssignments.feedItemId, articleId),
+        ne(feedItemCategoryAssignments.provenance, CATEGORY_CLASSIFIER_PROVENANCE),
+      ),
+    );
+
+  return rows.map((row) => row.label);
+}
+
+export async function reclassifyExtractedFeedItem(
+  database: DB,
+  article: ArticleDetailDto,
+  extractedText: string,
+  options: ExtractFullTextOptions,
+): Promise<void> {
+  const config = options.embeddingClassifier;
+  if (!config || article.articleType !== "feed") {
+    return;
+  }
+
+  try {
+    const explicitLabels = await loadExplicitItemCategoryLabels(database, article.id);
+    const explicitLabelSet = new Set(explicitLabels);
+    const remainingChipSlots = Math.max(0, MAX_CLASSIFIER_LABELS - explicitLabels.length);
+
+    if (remainingChipSlots === 0) {
+      await syncItemInferences(
+        database,
+        {
+          items: [{ id: article.id, inferredCategoryLabels: [] }],
+          model: embeddingModelInfo(config),
+        },
+        new Date(),
+      );
+      return;
+    }
+
+    const classification = await classifyItemEmbedding(
+      {
+        feedTitle: article.feedTitle,
+        feedDescription: null,
+        feedUrl: article.feedUrl ?? article.link,
+        feedSiteUrl: article.feedSiteUrl,
+        sourceKind: null,
+        itemTitle: article.title,
+        itemSummary: article.summary,
+        itemContentText: extractedText,
+        itemUrl: article.link,
+      },
+      config,
+      remainingChipSlots + explicitLabels.length,
+    );
+    const inferredCategoryLabels = classification.categories
+      .filter((category) => !explicitLabelSet.has(category.label))
+      .slice(0, remainingChipSlots);
+
+    await syncItemInferences(
+      database,
+      {
+        items: [{ id: article.id, inferredCategoryLabels }],
+        model: embeddingModelInfo(config),
+      },
+      new Date(),
+    );
+  } catch (error) {
+    options.logger?.warn?.("articles.extract_full_text.categories_reclassify_failed", {
+      articleId: article.id,
+      error: error instanceof Error ? error.message : String(error),
+    });
+  }
+}
+
 /**
  * On-demand source-page extraction. Persists to extracted* columns only; feed content fields stay unchanged.
  */
@@ -89,6 +183,7 @@ export async function extractFullTextForUser(
   database: DB,
   userId: string,
   articleId: string,
+  options: ExtractFullTextOptions = {},
 ): Promise<
   | { ok: true; article: ArticleDetailDto }
   | { ok: false; errorCode: string; errorMessage: string; article: ArticleDetailDto }
@@ -146,6 +241,7 @@ export async function extractFullTextForUser(
 
   if (before.articleType === "feed") {
     await persistFeedExtracted(database, articleId, { kind: "ready", html, text });
+    await reclassifyExtractedFeedItem(database, before, text, options);
   } else {
     await persistClipExtracted(database, articleId, { kind: "ready", html, text });
   }

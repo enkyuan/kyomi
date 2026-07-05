@@ -1,9 +1,9 @@
 import { describe, expect, test } from "bun:test";
 import {
   classifyFeedCategories,
-  classifyFeedItemCategories,
+  classifyItemCategories,
   isMixedFeedHost,
-  shouldSuppressClassifierFeedFallback,
+  shouldSuppressFallback,
 } from "@kyomi/worker";
 
 describe("feed category classifier", () => {
@@ -26,7 +26,7 @@ describe("feed category classifier", () => {
   });
 
   test("classifies security articles inside mixed feeds", () => {
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: "Hacker News",
       feedDescription: "Links for hackers",
       feedUrl: "https://news.ycombinator.com/rss",
@@ -42,7 +42,7 @@ describe("feed category classifier", () => {
   });
 
   test("classifies science articles from title and source domain", () => {
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: "Hacker News",
       feedDescription: "Links for hackers",
       feedUrl: "https://news.ycombinator.com/rss",
@@ -57,7 +57,7 @@ describe("feed category classifier", () => {
   });
 
   test("classifies an AI story from title and body keywords", () => {
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: "Hacker News",
       feedDescription: "Links for hackers",
       feedUrl: "https://news.ycombinator.com/rss",
@@ -90,7 +90,7 @@ describe("feed category classifier", () => {
   });
 
   test("does not let parent feed metadata dilute item classification", () => {
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: "AI & ML Daily",
       feedDescription:
         "Language model, transformer, embedding, agent, and artificial intelligence analysis.",
@@ -108,7 +108,7 @@ describe("feed category classifier", () => {
   });
 
   test("uses enriched content text when RSS summary is thin", () => {
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: "Daily Links",
       feedDescription: "A mixed collection of links.",
       feedUrl: "https://example.com/rss",
@@ -125,7 +125,7 @@ describe("feed category classifier", () => {
   });
 
   test("classifies thin search-product titles with targeted technology signals", () => {
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: "Hacker News",
       feedDescription: "Links for hackers",
       feedUrl: "https://news.ycombinator.com/rss",
@@ -140,7 +140,7 @@ describe("feed category classifier", () => {
   });
 
   test("classifies thin developer-tool titles with git and host signals", () => {
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: "Hacker News",
       feedDescription: "Links for hackers",
       feedUrl: "https://news.ycombinator.com/rss",
@@ -154,12 +154,42 @@ describe("feed category classifier", () => {
     expect(result.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
   });
 
+  test("classifies thin compiler and package-management titles", () => {
+    const result = classifyItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Zig: All Package Management Functionality Moved from Compiler to Build System",
+      itemSummary: null,
+      itemUrl: "https://ziglang.org/devlog/2026/#2026-06-30",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
+  });
+
+  test("classifies code-hosted project links from strong source domains", () => {
+    const result = classifyItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Windows CE Dreamcast Community Edition (wince-dc)",
+      itemSummary: null,
+      itemUrl: "https://github.com/maximqaxd/wince-dc",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
+  });
+
   test("does not classify a single generic dev-tool title word without a corroborating signal", () => {
     // A bare "git" hit in the title (score 3) alone does not clear ITEM_SCORE_THRESHOLD=4
     // without a domain hint or a second keyword — this keeps the classifier honest about
     // requiring more than one generic word before assigning a label, the same discipline
     // that moved "news"/"app"/"web"/"tech" into weakKeywords elsewhere in this taxonomy.
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: "Hacker News",
       feedDescription: "Links for hackers",
       feedUrl: "https://news.ycombinator.com/rss",
@@ -173,8 +203,23 @@ describe("feed category classifier", () => {
     expect(result.categories).toEqual([]);
   });
 
+  test("classifies leaking private-video stories as security and privacy", () => {
+    const result = classifyItemCategories({
+      feedTitle: "Hacker News",
+      feedDescription: "Links for hackers",
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Leaking YouTube creators' private videos",
+      itemSummary: null,
+      itemUrl: "https://javoriuski.com/blog/leaking-youtube-creators-private-videos",
+    });
+
+    expect(result.categories.map((category) => category.label)).toEqual(["Security & Privacy"]);
+  });
+
   test("classifies thin changelog titles with product host signals", () => {
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: "Hacker News",
       feedDescription: "Links for hackers",
       feedUrl: "https://news.ycombinator.com/rss",
@@ -189,7 +234,7 @@ describe("feed category classifier", () => {
   });
 
   test("does not classify from broad weak words alone", () => {
-    const result = classifyFeedItemCategories({
+    const result = classifyItemCategories({
       feedTitle: "Hacker News",
       feedDescription: "Links for hackers",
       feedUrl: "https://news.ycombinator.com/rss",
@@ -205,7 +250,7 @@ describe("feed category classifier", () => {
 
   test("suppresses classifier feed fallback for broad aggregator feeds", () => {
     expect(
-      shouldSuppressClassifierFeedFallback({
+      shouldSuppressFallback({
         feedTitle: "Hacker News",
         feedDescription: "Links for hackers",
         feedUrl: "https://news.ycombinator.com/rss",
@@ -215,7 +260,7 @@ describe("feed category classifier", () => {
     ).toBe(true);
 
     expect(
-      shouldSuppressClassifierFeedFallback({
+      shouldSuppressFallback({
         feedTitle: "Airbnb Engineering",
         feedDescription: "Software engineering posts about infrastructure and architecture.",
         feedUrl: "https://medium.com/feed/airbnb-engineering",
@@ -239,13 +284,13 @@ describe("feed category classifier", () => {
     };
 
     // With the default cap, only the top 2 scored categories are ever returned.
-    const defaultResult = classifyFeedItemCategories(input);
+    const defaultResult = classifyItemCategories(input);
     expect(defaultResult.categories).toHaveLength(2);
 
     // A caller that will filter out one of those two (e.g. because it duplicates an
     // explicit source label) needs to ask for more candidates up front, since truncation
     // happens inside the classifier before the caller ever sees the list.
-    const expandedResult = classifyFeedItemCategories(input, 3);
+    const expandedResult = classifyItemCategories(input, 3);
     expect(expandedResult.categories.length).toBeGreaterThan(defaultResult.categories.length);
     expect(expandedResult.categories.map((category) => category.label)).toEqual(
       expect.arrayContaining(defaultResult.categories.map((category) => category.label)),

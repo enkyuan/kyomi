@@ -1,11 +1,34 @@
-import { describe, expect, test } from "bun:test";
+import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import {
-  inferBackfillFeedCategories,
-  inferBackfillItemCategories,
+  EMBEDDING_CLASSIFIER_MODEL_ID,
+  resetPrototypeCache,
+  type EmbeddingClassifierConfig,
+} from "@kyomi/worker";
+import {
+  inferFeedCategories,
+  inferItemEmbedding,
+  inferItemCategories,
   nextItemBackfillBatchSize,
   parseBackfillArgs,
   summarizeBackfill,
 } from "../../../../../scripts/categories/backfill";
+
+const originalFetch = globalThis.fetch;
+const FAKE_EMBEDDING_CONFIG: EmbeddingClassifierConfig = {
+  apiKey: "test-key",
+  apiUrl: "https://fake.voyage.test/v1/embeddings",
+};
+const UNIT_X = [1, 0, 0];
+const ORTHOGONAL_Z = [0, 0, 1];
+
+beforeEach(() => {
+  resetPrototypeCache();
+});
+
+afterEach(() => {
+  globalThis.fetch = originalFetch;
+  resetPrototypeCache();
+});
 
 describe("category backfill script", () => {
   test("defaults to dry-run and scans all items", () => {
@@ -14,10 +37,12 @@ describe("category backfill script", () => {
       limit: 500,
       itemLimit: null,
       feedId: null,
+      classifier: "keyword",
+      recentDays: null,
     });
   });
 
-  test("parses apply, limit, item limit, and feed id", () => {
+  test("parses apply, limit, item limit, feed id, classifier, and recent days", () => {
     expect(
       parseBackfillArgs([
         "bun",
@@ -29,13 +54,21 @@ describe("category backfill script", () => {
         "10",
         "--feed-id",
         "feed-1",
+        "--classifier",
+        "embedding",
+        "--recent-days",
+        "7",
       ]),
     ).toEqual({
       apply: true,
       limit: 25,
       itemLimit: 10,
       feedId: "feed-1",
+      classifier: "embedding",
+      recentDays: 7,
     });
+
+    expect(parseBackfillArgs(["bun", "backfill", "--embedding"]).classifier).toBe("embedding");
   });
 
   test("rejects a malformed --item-limit instead of silently scanning all items", () => {
@@ -48,10 +81,25 @@ describe("category backfill script", () => {
     expect(() => parseBackfillArgs(["bun", "backfill", "--item-limit", "-5"])).toThrow(
       "Invalid --item-limit value: -5",
     );
+    expect(() => parseBackfillArgs(["bun", "backfill", "--recent-days", "soon"])).toThrow(
+      "Invalid --recent-days value: soon",
+    );
+    expect(() => parseBackfillArgs(["bun", "backfill", "--recent-days", "0"])).toThrow(
+      "Invalid --recent-days value: 0",
+    );
+  });
+
+  test("rejects malformed classifier flags", () => {
+    expect(() => parseBackfillArgs(["bun", "backfill", "--classifier", "semantic"])).toThrow(
+      "Invalid --classifier value: semantic",
+    );
+    expect(() =>
+      parseBackfillArgs(["bun", "backfill", "--classifier", "keyword", "--embedding"]),
+    ).toThrow("--embedding cannot be combined with --classifier keyword");
   });
 
   test("classifies non-allowlisted feed items during backfill", () => {
-    const labels = inferBackfillItemCategories(
+    const labels = inferItemCategories(
       {
         title: "Daily Links",
         description: "A mixed collection of links.",
@@ -72,7 +120,7 @@ describe("category backfill script", () => {
   });
 
   test("suppresses broad feed classifier fallback during backfill", () => {
-    const result = inferBackfillFeedCategories({
+    const result = inferFeedCategories({
       title: "Hacker News",
       description: "Links for hackers",
       url: "https://news.ycombinator.com/rss",
@@ -85,7 +133,7 @@ describe("category backfill script", () => {
   });
 
   test("keeps single-topic feed classifier fallback during backfill", () => {
-    const result = inferBackfillFeedCategories({
+    const result = inferFeedCategories({
       title: "Airbnb Engineering",
       description: "Software engineering posts about infrastructure and architecture.",
       url: "https://medium.com/feed/airbnb-engineering",
@@ -95,6 +143,45 @@ describe("category backfill script", () => {
 
     expect(result.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
     expect(result.suppressedFallback).toBe(false);
+  });
+
+  test("can classify item categories with the embedding classifier during backfill", async () => {
+    globalThis.fetch = (async (url: string, init: RequestInit) => {
+      const body = JSON.parse(init.body as string) as { input: string[] };
+      const isPrototypeCall = body.input.length > 1;
+      if (isPrototypeCall) {
+        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
+        return new Response(
+          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
+          { status: 200 },
+        );
+      }
+      return new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
+        status: 200,
+      });
+    }) as unknown as typeof fetch;
+
+    const labels = (
+      await inferItemEmbedding(
+        {
+          title: "Daily Links",
+          description: "A mixed collection of links.",
+          url: "https://example.com/feed.xml",
+          link: "https://example.com",
+          sourceKind: "rss",
+        },
+        {
+          title: "A compiler engineer's guide to TypeScript infrastructure",
+          summary: null,
+          contentText: null,
+          link: "https://example.com/compiler",
+          canonicalUrl: "https://example.com/compiler",
+        },
+        FAKE_EMBEDDING_CONFIG,
+      )
+    ).map((category) => category.label);
+
+    expect(labels).toEqual(["Software Engineering"]);
   });
 
   test("computes all-item and capped item backfill batches", () => {
@@ -110,6 +197,8 @@ describe("category backfill script", () => {
     expect(
       summarizeBackfill({
         apply: false,
+        classifierMethod: "keyword",
+        classifierModelId: "keyword-v1",
         feedsScanned: 2,
         feedsWithClassifierCategories: 2,
         feedClassifierFallbacksSuppressed: 1,
@@ -121,7 +210,7 @@ describe("category backfill script", () => {
         assignmentsDroppedUnmapped: 1,
       }),
     ).toBe(
-      "DRY RUN: scanned 2 feeds and 4 items; would write classifier categories for 2 feeds and 1 items. " +
+      "DRY RUN (keyword/keyword-v1): scanned 2 feeds and 4 items; would write classifier categories for 2 feeds and 1 items. " +
         "would rewrite 2 of 5 existing assignments to canonical categories and dropped 1 unmapped assignments. " +
         "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items.",
     );
@@ -129,6 +218,8 @@ describe("category backfill script", () => {
     expect(
       summarizeBackfill({
         apply: true,
+        classifierMethod: "embedding",
+        classifierModelId: EMBEDDING_CLASSIFIER_MODEL_ID,
         feedsScanned: 2,
         feedsWithClassifierCategories: 2,
         feedClassifierFallbacksSuppressed: 1,
@@ -140,7 +231,7 @@ describe("category backfill script", () => {
         assignmentsDroppedUnmapped: 1,
       }),
     ).toBe(
-      "APPLIED: scanned 2 feeds and 4 items; wrote classifier categories for 2 feeds and 1 items. " +
+      `APPLIED (embedding/${EMBEDDING_CLASSIFIER_MODEL_ID}): scanned 2 feeds and 4 items; wrote classifier categories for 2 feeds and 1 items. ` +
         "rewrote 2 of 5 existing assignments to canonical categories and dropped 1 unmapped assignments. " +
         "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items.",
     );

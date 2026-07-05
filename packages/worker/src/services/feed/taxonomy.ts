@@ -12,6 +12,7 @@ export const CATEGORY_CLASSIFIER_PROVENANCE = "classifier";
 export const KEYWORD_CLASSIFIER_METHOD = "keyword";
 export const KEYWORD_CLASSIFIER_MODEL_ID = "keyword-v1";
 export const EMBEDDING_CLASSIFIER_METHOD = "embedding";
+export const EMBEDDING_CLASSIFIER_MODEL_ID = "voyage-4";
 export const CLASSIFIER_TAXONOMY_VERSION = "v1";
 export { MISCELLANEOUS_CATEGORY_LABEL };
 
@@ -21,6 +22,7 @@ export type CategoryTaxonomyEntry = {
   keywords: readonly string[];
   weakKeywords?: readonly string[];
   domainHints: readonly string[];
+  strongDomainHints?: readonly string[];
 };
 
 export const MIXED_FEED_HOSTS = new Set([
@@ -52,6 +54,8 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "infrastructure",
       "javascript",
       "kubernetes",
+      "package management",
+      "package manager",
       "programming",
       "python",
       "react",
@@ -59,8 +63,11 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "software",
       "typescript",
       "version control",
+      "build system",
+      "zig",
     ],
     domainHints: ["github.com", "gitlab.com", "stackoverflow.com", "medium.com"],
+    strongDomainHints: ["github.com", "gitlab.com", "stackoverflow.com", "ziglang.org"],
   },
   {
     label: "Technology",
@@ -96,6 +103,8 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "breach",
       "cve",
       "exploit",
+      "leak",
+      "leaking",
       "malware",
       "password",
       "privacy",
@@ -105,6 +114,7 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
       "threat",
       "vulnerability",
     ],
+    weakKeywords: ["private"],
     domainHints: ["krebsonsecurity.com", "bleepingcomputer.com", "hackercombat.com"],
   },
   {

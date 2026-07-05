@@ -12,7 +12,7 @@ DROP INDEX "feed_item_category_assignments_item_category_provenance_unique";--> 
 ALTER TABLE "feed_category_assignments" ADD COLUMN "classifier_method" text;--> statement-breakpoint
 ALTER TABLE "feed_item_category_assignments" ADD COLUMN "classifier_method" text;--> statement-breakpoint
 CREATE UNIQUE INDEX "feed_category_assignments_feed_category_provenance_model_unique" ON "feed_category_assignments" USING btree ("feed_id","category_id","provenance","model_id") WHERE model_id IS NOT NULL;--> statement-breakpoint
-CREATE UNIQUE INDEX "feed_item_category_assignments_item_category_provenance_model_unique" ON "feed_item_category_assignments" USING btree ("feed_item_id","category_id","provenance","model_id") WHERE model_id IS NOT NULL;--> statement-breakpoint
+CREATE UNIQUE INDEX "feed_item_category_assignments_item_category_prov_model_unique" ON "feed_item_category_assignments" USING btree ("feed_item_id","category_id","provenance","model_id") WHERE model_id IS NOT NULL;--> statement-breakpoint
 CREATE UNIQUE INDEX "feed_category_assignments_feed_category_provenance_unique" ON "feed_category_assignments" USING btree ("feed_id","category_id","provenance") WHERE model_id IS NULL;--> statement-breakpoint
 CREATE UNIQUE INDEX "feed_item_category_assignments_item_category_provenance_unique" ON "feed_item_category_assignments" USING btree ("feed_item_id","category_id","provenance") WHERE model_id IS NULL;--> statement-breakpoint
 UPDATE "feed_category_assignments" SET "classifier_method" = 'keyword' WHERE "provenance" = 'classifier' AND "classifier_method" IS NULL;--> statement-breakpoint

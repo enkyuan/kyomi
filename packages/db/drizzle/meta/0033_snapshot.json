@@ -1,6 +1,6 @@
 {
-  "id": "82a5d55f-2b90-4315-a3c5-b49d012292c1",
-  "prevId": "5c2f66e4-c8f7-46bf-8dce-285d4f88f521",
+  "id": "d6f61758-051f-47a1-8077-ccfcf0161887",
+  "prevId": "0de8b3c6-e521-48fe-b591-8cf091f48590",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -2443,8 +2443,8 @@
         }
       },
       "indexes": {
-        "feed_category_assignments_feed_category_provenance_unique": {
-          "name": "feed_category_assignments_feed_category_provenance_unique",
+        "fcat_feed_cat_prov_uidx": {
+          "name": "fcat_feed_cat_prov_uidx",
           "columns": [
             {
               "expression": "feed_id",
@@ -2471,8 +2471,8 @@
           "method": "btree",
           "with": {}
         },
-        "feed_category_assignments_feed_category_provenance_model_unique": {
-          "name": "feed_category_assignments_feed_category_provenance_model_unique",
+        "fcat_feed_cat_prov_model_uidx": {
+          "name": "fcat_feed_cat_prov_model_uidx",
           "columns": [
             {
               "expression": "feed_id",
@@ -2623,8 +2623,8 @@
         }
       },
       "indexes": {
-        "feed_item_category_assignments_item_category_provenance_unique": {
-          "name": "feed_item_category_assignments_item_category_provenance_unique",
+        "ficat_item_cat_prov_uidx": {
+          "name": "ficat_item_cat_prov_uidx",
           "columns": [
             {
               "expression": "feed_item_id",
@@ -2651,8 +2651,8 @@
           "method": "btree",
           "with": {}
         },
-        "feed_item_category_assignments_item_category_prov_model_unique": {
-          "name": "feed_item_category_assignments_item_category_prov_model_unique",
+        "ficat_item_cat_prov_model_uidx": {
+          "name": "ficat_item_cat_prov_model_uidx",
           "columns": [
             {
               "expression": "feed_item_id",
@@ -2791,8 +2791,8 @@
         }
       },
       "indexes": {
-        "feed_item_tag_assignments_item_slug_provenance_unique": {
-          "name": "feed_item_tag_assignments_item_slug_provenance_unique",
+        "fitag_item_slug_prov_uidx": {
+          "name": "fitag_item_slug_prov_uidx",
           "columns": [
             {
               "expression": "feed_item_id",

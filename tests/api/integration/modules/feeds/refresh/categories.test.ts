@@ -5,6 +5,7 @@ import {
   canonicalWinsOnConflictSql,
   runFeedRefresh,
   syncInferredFeedCategories,
+  syncItemInferences,
   CLASSIFIER_TAXONOMY_VERSION,
   KEYWORD_CLASSIFIER_METHOD,
   KEYWORD_CLASSIFIER_MODEL_ID,
@@ -272,6 +273,49 @@ describe("runFeedRefresh category ingestion", () => {
     expect(fake.categories.map((row) => row.label)).toEqual(["Technology", "Security & Privacy"]);
     expect(fake.feedCategoryAssignments).toMatchObject([
       { feedId: "feed-1", provenance: "classifier", confidence: 0.7 },
+    ]);
+    expect(fake.feedItemCategoryAssignments).toMatchObject([
+      { feedItemId: "item-1", provenance: "classifier", confidence: 0.8 },
+    ]);
+  });
+
+  test("syncs item-only classifier categories without deleting feed-level classifier rows", async () => {
+    const fake = createFeedRefreshDb({
+      existingFeedCategoryAssignments: [
+        {
+          id: "feed-assignment-1",
+          feedId: "feed-1",
+          categoryId: "category-1",
+          provenance: "classifier",
+          modelId: KEYWORD_MODEL.modelId,
+        },
+      ],
+    });
+    const now = new Date("2026-07-04T00:00:00.000Z");
+
+    await syncItemInferences(
+      fake as never,
+      {
+        items: [
+          {
+            id: "item-1",
+            inferredCategoryLabels: [{ label: "Security & Privacy", confidence: 0.8 }],
+          },
+        ],
+        model: KEYWORD_MODEL,
+      },
+      now,
+    );
+
+    expect(fake.deletes).toEqual(["feed_item_category_assignments"]);
+    expect(fake.feedCategoryAssignments).toEqual([
+      {
+        id: "feed-assignment-1",
+        feedId: "feed-1",
+        categoryId: "category-1",
+        provenance: "classifier",
+        modelId: KEYWORD_MODEL.modelId,
+      },
     ]);
     expect(fake.feedItemCategoryAssignments).toMatchObject([
       { feedItemId: "item-1", provenance: "classifier", confidence: 0.8 },
@@ -546,6 +590,76 @@ describe("runFeedRefresh category ingestion", () => {
     expect(fake.feedItemCategoryAssignments.every((row) => row.provenance === "classifier")).toBe(
       true,
     );
+  });
+
+  test("counts embedding classifier failures without failing feed refresh", async () => {
+    const fake = createFeedRefreshDb({
+      feed: {
+        id: "feed-1",
+        url: "https://example.com/feed.xml",
+        link: "https://example.com",
+        title: "Daily Links",
+        description: "A mixed collection of links from across the web.",
+        faviconUrl: null,
+        faviconSource: null,
+        etag: null,
+        lastModified: null,
+        lastRefreshSucceededAt: null,
+        lastRefreshFailedAt: null,
+      },
+    });
+    globalThis.fetch = (async (url: string) => {
+      if (url === "https://fake.voyage.test/v1/embeddings") {
+        return new Response("rate limited", { status: 429 });
+      }
+      const response = new Response(
+        `<?xml version="1.0"?>
+        <rss version="2.0">
+          <channel>
+            <title>Daily Links</title>
+            <link>https://example.com</link>
+            <description>A mixed collection of links from across the web.</description>
+            <item>
+              <title>Open weights language model released</title>
+              <link>https://huggingface.co/blog/open-model-release</link>
+              <guid>ai-story</guid>
+              <description>The transformer model uses embeddings and agent training data.</description>
+              <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+            </item>
+            <item>
+              <title>Bitcoin market rally lifts crypto stocks</title>
+              <link>https://finance.yahoo.com/news/bitcoin-market-rally</link>
+              <guid>finance-story</guid>
+              <description>Investors watch the market, stock prices, and crypto trading volume.</description>
+              <pubDate>Wed, 01 Jul 2026 01:00:00 GMT</pubDate>
+            </item>
+          </channel>
+        </rss>`,
+        { status: 200, headers: { "content-type": "application/rss+xml" } },
+      );
+      Object.defineProperty(response, "url", { value: "https://example.com/feed.xml" });
+      return response;
+    }) as unknown as typeof fetch;
+
+    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
+      enrichArticles: false,
+      embeddingClassifier: {
+        apiKey: "test-key",
+        apiUrl: "https://fake.voyage.test/v1/embeddings",
+      },
+    });
+
+    expect(result.ok).toBe(true);
+    expect(labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories)).toContain(
+      "AI & ML",
+    );
+    expect(result.categoryStats?.embeddingClassifier).toMatchObject({
+      configured: true,
+      feedClassifierLabels: 0,
+      feedClassifierFailures: 1,
+      itemClassifierLabels: 0,
+      itemClassifierFailures: 2,
+    });
   });
 
   test("classifies feed-level categories from stored metadata on a 304 Not Modified response", async () => {

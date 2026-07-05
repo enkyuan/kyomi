@@ -1,9 +1,9 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import {
-  classifyFeedCategoriesByEmbedding,
-  classifyFeedItemCategoriesByEmbedding,
+  classifyFeedEmbedding,
+  classifyItemEmbedding,
   embedTexts,
-  resetCategoryPrototypeCacheForTests,
+  resetPrototypeCache,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
 
@@ -23,12 +23,12 @@ const UNIT_Y = [0, 1, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
 
 beforeEach(() => {
-  resetCategoryPrototypeCacheForTests();
+  resetPrototypeCache();
 });
 
 afterEach(() => {
   globalThis.fetch = originalFetch;
-  resetCategoryPrototypeCacheForTests();
+  resetPrototypeCache();
 });
 
 describe("embedTexts", () => {
@@ -71,9 +71,20 @@ describe("embedTexts", () => {
 
     await expect(embedTexts(["a"], FAKE_CONFIG)).rejects.toThrow(/429/);
   });
+
+  test("aborts requests when timeoutMs elapses", async () => {
+    globalThis.fetch = (async (_url: string, init: RequestInit) =>
+      new Promise<Response>((_resolve, reject) => {
+        const signal = init.signal as AbortSignal;
+        expect(signal).toBeInstanceOf(AbortSignal);
+        signal.addEventListener("abort", () => reject(new Error("aborted")));
+      })) as unknown as typeof fetch;
+
+    await expect(embedTexts(["a"], { ...FAKE_CONFIG, timeoutMs: 1 })).rejects.toThrow("aborted");
+  });
 });
 
-describe("classifyFeedItemCategoriesByEmbedding", () => {
+describe("classifyItemEmbedding", () => {
   test("returns categories above the similarity threshold, sorted by score", async () => {
     // First call embeds all category-card prototypes; second call embeds the item text.
     // CATEGORY_CARDS order is deterministic (defined in category-cards.ts), so the first
@@ -96,7 +107,7 @@ describe("classifyFeedItemCategoriesByEmbedding", () => {
       });
     }) as unknown as typeof fetch;
 
-    const result = await classifyFeedItemCategoriesByEmbedding(
+    const result = await classifyItemEmbedding(
       {
         feedTitle: "Hacker News",
         feedDescription: null,
@@ -127,13 +138,13 @@ describe("classifyFeedItemCategoriesByEmbedding", () => {
         );
       }
       // Item embedding orthogonal to every prototype: cosine similarity is 0, well below
-      // the 0.3 item threshold.
+      // the item threshold.
       return new Response(JSON.stringify({ data: [{ embedding: ORTHOGONAL_Z, index: 0 }] }), {
         status: 200,
       });
     }) as unknown as typeof fetch;
 
-    const result = await classifyFeedItemCategoriesByEmbedding(
+    const result = await classifyItemEmbedding(
       {
         feedTitle: "Hacker News",
         feedDescription: null,
@@ -180,18 +191,96 @@ describe("classifyFeedItemCategoriesByEmbedding", () => {
       itemSummary: null,
       itemUrl: null,
     };
-    await classifyFeedItemCategoriesByEmbedding(input, FAKE_CONFIG);
-    await classifyFeedItemCategoriesByEmbedding(
-      { ...input, itemTitle: "Second article" },
-      FAKE_CONFIG,
-    );
+    await classifyItemEmbedding(input, FAKE_CONFIG);
+    await classifyItemEmbedding({ ...input, itemTitle: "Second article" }, FAKE_CONFIG);
 
     // Prototypes should only be embedded once across both calls, not once per call.
     expect(prototypeCallCount).toBe(1);
   });
+
+  test("does not share cached category prototypes across API keys", async () => {
+    let prototypeCallCount = 0;
+    globalThis.fetch = (async (url: string, init: RequestInit) => {
+      const body = JSON.parse(init.body as string) as { input: string[] };
+      const isPrototypeCall = body.input.length > 1;
+      if (isPrototypeCall) {
+        prototypeCallCount += 1;
+        const embeddings = body.input.map(() => ORTHOGONAL_Z);
+        return new Response(
+          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
+          { status: 200 },
+        );
+      }
+      return new Response(JSON.stringify({ data: [{ embedding: ORTHOGONAL_Z, index: 0 }] }), {
+        status: 200,
+      });
+    }) as unknown as typeof fetch;
+
+    const input = {
+      feedTitle: "Hacker News",
+      feedDescription: null,
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "First article",
+      itemSummary: null,
+      itemUrl: null,
+    };
+    await classifyItemEmbedding(input, {
+      ...FAKE_CONFIG,
+      apiKey: "first-account-key",
+    });
+    await classifyItemEmbedding(input, {
+      ...FAKE_CONFIG,
+      apiKey: "second-account-key",
+    });
+
+    expect(prototypeCallCount).toBe(2);
+  });
+
+  test("evicts failed prototype cache entries so a later call can retry", async () => {
+    let prototypeCallCount = 0;
+    let failNextPrototypeCall = true;
+    globalThis.fetch = (async (url: string, init: RequestInit) => {
+      const body = JSON.parse(init.body as string) as { input: string[] };
+      const isPrototypeCall = body.input.length > 1;
+      if (isPrototypeCall) {
+        prototypeCallCount += 1;
+        if (failNextPrototypeCall) {
+          failNextPrototypeCall = false;
+          return new Response("temporary outage", { status: 503 });
+        }
+        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
+        return new Response(
+          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
+          { status: 200 },
+        );
+      }
+      return new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
+        status: 200,
+      });
+    }) as unknown as typeof fetch;
+
+    const input = {
+      feedTitle: "Hacker News",
+      feedDescription: null,
+      feedUrl: "https://news.ycombinator.com/rss",
+      feedSiteUrl: "https://news.ycombinator.com",
+      sourceKind: "rss",
+      itemTitle: "Some article",
+      itemSummary: null,
+      itemUrl: null,
+    };
+
+    await expect(classifyItemEmbedding(input, FAKE_CONFIG)).rejects.toThrow(/503/);
+    const result = await classifyItemEmbedding(input, FAKE_CONFIG);
+
+    expect(prototypeCallCount).toBe(2);
+    expect(result.categories[0]?.label).toBe("Software Engineering");
+  });
 });
 
-describe("classifyFeedCategoriesByEmbedding", () => {
+describe("classifyFeedEmbedding", () => {
   test("falls back to Miscellaneous at low confidence when nothing clears the threshold", async () => {
     globalThis.fetch = (async (url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
@@ -208,7 +297,7 @@ describe("classifyFeedCategoriesByEmbedding", () => {
       });
     }) as unknown as typeof fetch;
 
-    const result = await classifyFeedCategoriesByEmbedding(
+    const result = await classifyFeedEmbedding(
       {
         feedTitle: "Some obscure feed",
         feedDescription: null,

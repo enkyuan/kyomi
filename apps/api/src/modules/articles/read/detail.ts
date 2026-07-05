@@ -10,7 +10,7 @@ import {
   buildStoredReaderContent,
 } from "../reader/content";
 import { articleIsReadSql } from "./sql";
-import { feedCategoryLabelsSql } from "./category-labels";
+import { categoryLabelsSql } from "./labels";
 import type { ArticleDetailDto } from "../types";
 import type { ExtractedContentStatus } from "../reader/content";
 
@@ -153,7 +153,7 @@ async function getFeedArticleDetailForUser(
       feedFaviconUrl: feeds.faviconUrl,
       isRead: articleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
-      categories: feedCategoryLabelsSql,
+      categories: categoryLabelsSql,
     })
     .from(feedItems)
     .leftJoin(feedSubscriptions, feedSubscriptionsJoin)

@@ -1,8 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import {
-  classifyFeedItemCategoriesByEmbedding,
-  type EmbeddingClassifierConfig,
-} from "@kyomi/worker";
+import { classifyItemEmbedding, type EmbeddingClassifierConfig } from "@kyomi/worker";
 import {
   accumulateConfusion,
   f1,
@@ -34,7 +31,7 @@ async function runEmbeddingClassifier(
 ): Promise<Prediction[]> {
   const predictions: Prediction[] = [];
   for (const case_ of cases) {
-    const result = await classifyFeedItemCategoriesByEmbedding(
+    const result = await classifyItemEmbedding(
       {
         feedTitle: case_.feedTitle,
         feedDescription: case_.feedDescription,

@@ -6,7 +6,7 @@ import type { ArticleSort } from "@modules/articles/query";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { collapseObviousDuplicates, type ArticleListRawRow } from "./dedupe";
-import { feedCategoryLabelsSql } from "../category-labels";
+import { categoryLabelsSql } from "../labels";
 import { articleIsReadSql, globalArticleIsReadSql } from "../sql";
 import { capPublishedBeforeAtNow } from "./window";
 
@@ -424,7 +424,7 @@ async function listArticleRows(
       isRead: articleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
       hiddenAt: feedItemUserState.hiddenAt,
-      categories: feedCategoryLabelsSql,
+      categories: categoryLabelsSql,
     })
     .from(feedItems)
     .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
@@ -474,7 +474,7 @@ async function listGlobalArticleRows(
       isRead: globalArticleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
       hiddenAt: feedItemUserState.hiddenAt,
-      categories: feedCategoryLabelsSql,
+      categories: categoryLabelsSql,
     })
     .from(feedItems)
     .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
