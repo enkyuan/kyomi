@@ -45,6 +45,10 @@
     0px,
     calc(var(--reader-code-outer-radius) - var(--reader-code-chrome-pad-start))
   );
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   margin: 1rem 0;
   box-sizing: border-box;
   width: 100%;
@@ -54,6 +58,19 @@
   border-radius: var(--reader-code-outer-radius);
   border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
   background: var(--card);
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs {
+  display: block;
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-chrome {

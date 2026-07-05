@@ -83,6 +83,7 @@ export type BackfillStats = {
   assignmentsScanned: number;
   assignmentsRewritten: number;
   assignmentsDroppedUnmapped: number;
+  itemEmbeddingFailures: number;
 };
 
 function valueAfter(argv: string[], flag: string): string | null {
@@ -680,9 +681,15 @@ export async function inferItemEmbedding(
   ).categories;
 }
 
+/**
+ * A failing embedding call (rate limit, transient network error) must not abort a bulk backfill
+ * run that may be hours into processing thousands of items — it's counted and logged instead,
+ * mirroring the online refresh path's best-effort handling of the same calls.
+ */
 async function inferClassifierFeed(
   feed: BackfillFeedRow,
   classifier: BackfillClassifier,
+  stats: BackfillStats,
 ): Promise<{
   categories: InferredCategoryLabel[];
   suppressedFallback: boolean;
@@ -690,18 +697,38 @@ async function inferClassifierFeed(
   if (classifier.method === "keyword") {
     return inferFeedCategories(feed);
   }
-  return inferFeedEmbedding(feed, classifier.embeddingConfig);
+  try {
+    return await inferFeedEmbedding(feed, classifier.embeddingConfig);
+  } catch (error) {
+    stats.itemEmbeddingFailures += 1;
+    console.warn("[categories:backfill] feed embedding classification failed", {
+      feedUrl: feed.url,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return { categories: [], suppressedFallback: false };
+  }
 }
 
 async function inferClassifierItem(
   feed: BackfillFeedRow,
   item: BackfillItemRow,
   classifier: BackfillClassifier,
+  stats: BackfillStats,
 ): Promise<InferredCategoryLabel[]> {
   if (classifier.method === "keyword") {
     return inferItemCategories(feed, item);
   }
-  return inferItemEmbedding(feed, item, classifier.embeddingConfig);
+  try {
+    return await inferItemEmbedding(feed, item, classifier.embeddingConfig);
+  } catch (error) {
+    stats.itemEmbeddingFailures += 1;
+    console.warn("[categories:backfill] item embedding classification failed", {
+      feedUrl: feed.url,
+      itemUrl: item.link || item.canonicalUrl,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return [];
+  }
 }
 
 function createProcessedFeedStats(): ProcessedFeedStats {
@@ -1202,6 +1229,7 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
     assignmentsScanned: 0,
     assignmentsRewritten: 0,
     assignmentsDroppedUnmapped: 0,
+    itemEmbeddingFailures: 0,
   };
   const now = new Date();
 
