@@ -1,12 +1,8 @@
 import { sql } from "drizzle-orm";
-import {
-  feedCategoryAssignments,
-  feedItemCategoryAssignments,
-  feedItems,
-} from "../../packages/db/src";
-import { db, pool } from "../../apps/api/src/adapters/db/client";
-import { assertApiDatabaseReady } from "../../apps/api/src/adapters/db/script-preflight";
-import { EMBEDDING_CLASSIFIER_METHOD, KEYWORD_CLASSIFIER_METHOD } from "../../packages/worker/src";
+import { feedCategoryAssignments, feedItemCategoryAssignments, feedItems } from "@kyomi/db";
+import { db, pool } from "@adapters/db/client";
+import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
+import { EMBEDDING_CLASSIFIER_METHOD, KEYWORD_CLASSIFIER_METHOD } from "@kyomi/worker";
 
 export type CategoryCoverageArgs = {
   days: number;

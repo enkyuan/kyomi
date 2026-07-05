@@ -10,6 +10,7 @@
         "nitro": "npm:nitro-nightly@latest",
       },
       "devDependencies": {
+        "@types/bun": "^1.3.14",
         "@typescript/native-preview": "^7.0.0-dev.20260418.1",
         "drizzle-kit": "^0.31.10",
         "husky": "^9.1.7",

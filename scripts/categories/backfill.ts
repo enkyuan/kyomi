@@ -8,9 +8,9 @@ import {
   feeds,
   mapCategoryLabelToCanonical,
   toCategorySlug,
-} from "../../packages/db/src";
-import { db, pool } from "../../apps/api/src/adapters/db/client";
-import { assertApiDatabaseReady } from "../../apps/api/src/adapters/db/script-preflight";
+} from "@kyomi/db";
+import { db, pool } from "@adapters/db/client";
+import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
 import {
   canonicalWinsOnConflictSql,
   classifyFeedCategories,
@@ -28,7 +28,7 @@ import {
   type ClassifierModelInfo,
   type EmbeddingClassifierConfig,
   type InferredCategoryLabel,
-} from "../../packages/worker/src";
+} from "@kyomi/worker";
 
 const BACKFILL_CLASSIFIER_MODEL: ClassifierModelInfo = {
   modelId: KEYWORD_CLASSIFIER_MODEL_ID,
