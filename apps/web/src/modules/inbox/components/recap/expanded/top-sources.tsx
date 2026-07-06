@@ -3,7 +3,7 @@
 import { Link } from "@tanstack/react-router";
 import { AddFill, Rss2Fill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
-import type { InboxSearch } from "@/routes/inbox/-route-helpers";
+import type { InboxSearch } from "@/routes/_app/inbox/-route-helpers";
 import {
   FolderPickerButton,
   TOP_SOURCE_FOLDER_BUTTON_CLASS,

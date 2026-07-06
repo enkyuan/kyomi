@@ -1,4 +1,7 @@
-import { normalizeSanitizedArticleRoot, sanitizeArticleHtmlFragment } from "../../sanitization";
+import {
+  normalizeSanitizedArticleRoot,
+  sanitizeArticleHtmlFragment,
+} from "../../sanitization/article-html";
 
 /** Same article HTML policy as the API sanitizer; runs in the browser. */
 export function sanitizeReaderArticleHtml(dirty: string): string {

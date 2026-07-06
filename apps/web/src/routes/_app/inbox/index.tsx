@@ -1,3 +1,3 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/inbox/")({});
+export const Route = createFileRoute("/_app/inbox/")({});

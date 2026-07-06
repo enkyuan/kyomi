@@ -6,7 +6,7 @@ import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { toastManager } from "@kyomi/ui/toast";
 
 type UseSettingsLogoutArgs = {
-  onOpenChange: (open: boolean) => void;
+  onOpenChange?: (open: boolean) => void;
 };
 
 export function useSettingsLogout({ onOpenChange }: UseSettingsLogoutArgs) {
@@ -21,7 +21,7 @@ export function useSettingsLogout({ onOpenChange }: UseSettingsLogoutArgs) {
           throw new Error(result.error.message?.trim() || "Unable to log out");
         }
 
-        onOpenChange(false);
+        onOpenChange?.(false);
         await router.invalidate();
         await router.navigate({ to: "/" });
       })(),

@@ -8,7 +8,7 @@ import { Checkbox } from "@kyomi/ui/checkbox";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import { toastManager } from "@kyomi/ui/toast";
 import { cn } from "@kyomi/ui/lib/utils";
-import type { InboxSearch } from "@/routes/inbox/-route-helpers";
+import type { InboxSearch } from "@/routes/_app/inbox/-route-helpers";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import { FolderPickerButton } from "@modules/folders/components/picker";
 import type { RecapFolder } from "@modules/folders/lib/types";
