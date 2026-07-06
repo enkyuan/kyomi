@@ -3,7 +3,7 @@
 import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { PreviewCard, PreviewCardPopup, PreviewCardTrigger } from "@kyomi/ui/preview-card";
 import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
-import type { InboxSearch } from "@/routes/inbox/-route-helpers";
+import type { InboxSearch } from "@/routes/_app/inbox/-route-helpers";
 import { cn } from "@kyomi/ui/lib/utils";
 import { Link } from "@tanstack/react-router";
 import { m } from "motion/react";

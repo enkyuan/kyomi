@@ -1,7 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { Suspense, useEffect, useReducer } from "react";
+import { Suspense, useReducer } from "react";
 import { Link } from "@tanstack/react-router";
 import { AddFill, Settings1Fill } from "@mingcute/react";
 import { KyomiLogo, PremiumIcon } from "@kyomi/ui/icons";
@@ -24,10 +24,6 @@ import { usePinnedSection } from "../hooks/pinned";
 import { useInboxPrefetch } from "../hooks/inbox";
 import { FeedFavicon } from "./feed-favicon";
 
-const SettingsDialog = lazyNamed(
-  () => import("@modules/settings/components/dialog"),
-  "SettingsDialog",
-);
 const FollowSourcesDialog = lazyNamed(
   () => import("@modules/feeds/components/follow/dialog"),
   "FollowSourcesDialog",
@@ -44,18 +40,15 @@ const CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS = cn(
 type AppSidebarDialogState = {
   followSourcesDialogLoaded: boolean;
   followSourcesOpen: boolean;
-  settingsDialogLoaded: boolean;
 };
 
 type AppSidebarDialogAction =
   | { type: "load-follow-sources" }
-  | { type: "load-settings-dialog" }
   | { type: "set-follow-sources-open"; open: boolean };
 
 const INITIAL_DIALOG_STATE: AppSidebarDialogState = {
   followSourcesDialogLoaded: false,
   followSourcesOpen: false,
-  settingsDialogLoaded: false,
 };
 
 function dialogStateReducer(
@@ -67,8 +60,6 @@ function dialogStateReducer(
       return state.followSourcesDialogLoaded
         ? state
         : { ...state, followSourcesDialogLoaded: true };
-    case "load-settings-dialog":
-      return state.settingsDialogLoaded ? state : { ...state, settingsDialogLoaded: true };
     case "set-follow-sources-open":
       return state.followSourcesOpen === action.open
         ? state
@@ -77,19 +68,12 @@ function dialogStateReducer(
 }
 
 export function AppSidebar({ className, style }: { className?: string; style?: CSSProperties }) {
-  const { platform, settingsOpen, setSettingsOpen } = useAppSidebar();
+  const { platform } = useAppSidebar();
   const { followedFeedsData } = usePinnedSection();
   const { isInbox, scopedFeedId } = useScope();
   const { prefetchOnFocus, prefetchOnPointerEnter } = useInboxPrefetch();
 
   const [dialogState, dispatchDialogState] = useReducer(dialogStateReducer, INITIAL_DIALOG_STATE);
-
-  useEffect(() => {
-    if (settingsOpen) {
-      dispatchDialogState({ type: "load-settings-dialog" });
-      void SettingsDialog.preload();
-    }
-  }, [settingsOpen]);
 
   const preloadSourcesDialog = () => {
     dispatchDialogState({ type: "load-follow-sources" });
@@ -210,11 +194,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               tooltip="Settings"
               variant="secondary"
               className={CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS}
-              onClick={() => {
-                dispatchDialogState({ type: "load-settings-dialog" });
-                void SettingsDialog.preload();
-                setSettingsOpen(true);
-              }}
+              render={<Link to="/settings/account" />}
             >
               <Settings1Fill size={24} />
             </SidebarMenuButton>
@@ -223,9 +203,6 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       </SidebarFooter>
 
       <Suspense fallback={null}>
-        {dialogState.settingsDialogLoaded ? (
-          <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
-        ) : null}
         {dialogState.followSourcesDialogLoaded ? (
           <FollowSourcesDialog
             enableGlobalShortcut={false}
