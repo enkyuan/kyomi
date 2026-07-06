@@ -1,4 +1,4 @@
-import { createReaderMarked, type ReaderMarkdownRenderOptions } from "./reader-markdown-html-core";
+import { createReaderMarked, type ReaderMarkdownRenderOptions } from "./markdown-core";
 
 const markedByBaseUrl = new Map<string, ReturnType<typeof createReaderMarked>>();
 

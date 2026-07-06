@@ -9,7 +9,7 @@ import {
   useSyncExternalStore,
 } from "react";
 import type { ReaderLayoutMode } from "../core/types";
-import { mountReaderLinkPreviewCards } from "./components/link-preview-card";
+import { mountReaderLinkPreviewCards } from "./components/link-card";
 import { prepareArticleHtml } from "./html/string-prep";
 import { runReaderDomEnhancements } from "./html/dom-enhancements";
 import { enhanceCodeBlocks } from "./lib/code-block";

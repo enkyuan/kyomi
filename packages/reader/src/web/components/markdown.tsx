@@ -2,7 +2,7 @@
 
 import { memo, useEffect, useMemo, useState } from "react";
 import type { ReaderLayoutMode } from "../../core/types";
-import { hasLikelyMarkdownMath, readerMarkdownToHtml } from "../../shared/reader-markdown-html";
+import { hasLikelyMarkdownMath, readerMarkdownToHtml } from "../../shared/markdown-html";
 import { RenderHtml } from "../html";
 
 let katexRuntimePromise:

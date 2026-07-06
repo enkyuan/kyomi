@@ -1,5 +1,5 @@
 import markedKatex from "marked-katex-extension";
-import { createReaderMarked, type ReaderMarkdownRenderOptions } from "./reader-markdown-html-core";
+import { createReaderMarked, type ReaderMarkdownRenderOptions } from "./markdown-core";
 
 const markedWithKatexByBaseUrl = new Map<string, ReturnType<typeof createReaderMarked>>();
 
