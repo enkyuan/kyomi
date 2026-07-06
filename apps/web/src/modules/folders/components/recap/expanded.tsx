@@ -11,9 +11,7 @@ import {
   PinLine,
   RightFill,
 } from "@mingcute/react";
-import { getSvgPath } from "figma-squircle";
 import { useState } from "react";
-import type { CSSProperties } from "react";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -31,12 +29,14 @@ import { toastManager } from "@kyomi/ui/toast";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import { deleteFolder, updateFolder, type Folder } from "@modules/folders/lib/api";
+import { applyFolderPinState } from "@modules/folders/queries/cache";
 import type { RecapFolder } from "@modules/folders/lib/types";
 import { followedFeedsQueryKey, inboxRecapQueryKey } from "@modules/inbox/queries/options";
 import type { InboxRecapDto } from "@modules/inbox/lib/recap/schema";
 import { SectionEmpty } from "@modules/inbox/components/recap/sections";
 import { formatFeedCount, invalidateRecapSurface } from "@modules/inbox/lib/recap/index";
 import { ExpandedFolderFeeds } from "../feeds";
+import { FolderIconBadge } from "./folder-icon";
 import { FolderActions } from "./summary";
 
 type FolderOption = { label: string; value: string };
@@ -53,53 +53,6 @@ type PinFolderContext = {
   previousFolders?: Folder[];
   previousRecap?: InboxRecapDto;
 };
-
-const folderIconSquirclePath = getSvgPath({
-  width: 36,
-  height: 36,
-  cornerRadius: 8,
-  cornerSmoothing: 1,
-});
-
-const folderIconSquircleStyle = {
-  borderRadius: 8,
-  clipPath: `path('${folderIconSquirclePath}')`,
-  WebkitClipPath: `path('${folderIconSquirclePath}')`,
-} satisfies CSSProperties;
-
-function FolderIconBadge() {
-  return (
-    <span
-      aria-hidden="true"
-      className="flex size-9 shrink-0 items-center justify-center bg-muted text-muted-foreground"
-      data-squircle="8"
-      style={folderIconSquircleStyle}
-    >
-      <Folder2Fill className="size-4" />
-    </span>
-  );
-}
-
-function applyFolderPinState(
-  queryClient: ReturnType<typeof useQueryClient>,
-  folderId: string,
-  isPinned: boolean,
-  pinnedAt: string | null = isPinned ? new Date().toISOString() : null,
-) {
-  queryClient.setQueryData<InboxRecapDto>(inboxRecapQueryKey(), (current) =>
-    current
-      ? {
-          ...current,
-          folders: current.folders.map((folder) =>
-            folder.id === folderId ? { ...folder, isPinned, pinnedAt } : folder,
-          ),
-        }
-      : current,
-  );
-  queryClient.setQueryData<Folder[]>(["folders"], (current) =>
-    current?.map((folder) => (folder.id === folderId ? { ...folder, isPinned, pinnedAt } : folder)),
-  );
-}
 
 export function ExpandedFolders({
   folders,

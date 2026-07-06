@@ -9,10 +9,22 @@ import {
   useSyncExternalStore,
 } from "react";
 import type { ReaderLayoutMode } from "../core/types";
+import { hasLikelyDelimitedTex } from "../shared/math";
 import { mountReaderLinkPreviewCards } from "./components/link-card";
 import { prepareArticleHtml } from "./html/string-prep";
 import { runReaderDomEnhancements } from "./html/dom-enhancements";
 import { enhanceCodeBlocks } from "./lib/code-block";
+
+let katexRuntimePromise:
+  | Promise<Pick<typeof import("./katex-runtime"), "renderMathInHtmlElement">>
+  | undefined;
+
+function getKatexRuntime() {
+  katexRuntimePromise ??= import("./katex-runtime").then((module) => ({
+    renderMathInHtmlElement: module.renderMathInHtmlElement,
+  }));
+  return katexRuntimePromise;
+}
 
 function updateReaderLinkTargets(node: HTMLElement, openLinksInNewTab: boolean) {
   const anchors = node.querySelectorAll("a[href]");
@@ -61,6 +73,7 @@ export function RenderHtml({
 }) {
   const articleBodyRef = useRef<HTMLDivElement | null>(null);
   const enhancementRunRef = useRef(0);
+  const mathRenderedHtmlRef = useRef<string | null>(null);
   const cancelScheduledEnhancementRef = useRef<(() => void) | null>(null);
   const linkPreviewCleanupsRef = useRef<(() => void)[]>([]);
   const isHydrated = useHydrated();
@@ -68,6 +81,7 @@ export function RenderHtml({
     () => (isHydrated ? prepareArticleHtml(html, baseUrl) : ""),
     [baseUrl, html, isHydrated],
   );
+  const shouldRenderMath = useMemo(() => hasLikelyDelimitedTex(prepared), [prepared]);
 
   const disposeAllLinkPreviewMounts = useCallback(() => {
     for (let i = linkPreviewCleanupsRef.current.length - 1; i >= 0; i -= 1) {
@@ -81,11 +95,19 @@ export function RenderHtml({
       enhanceCodeBlocks(node);
       runReaderDomEnhancements(node, { layoutMode });
       updateReaderLinkTargets(node, openLinksInNewTab);
+      if (shouldRenderMath && mathRenderedHtmlRef.current !== prepared) {
+        mathRenderedHtmlRef.current = prepared;
+        void getKatexRuntime().then(({ renderMathInHtmlElement }) => {
+          if (articleBodyRef.current === node && mathRenderedHtmlRef.current === prepared) {
+            renderMathInHtmlElement(node);
+          }
+        });
+      }
       if (showLinkPreviews) {
         linkPreviewCleanupsRef.current.push(mountReaderLinkPreviewCards(node));
       }
     },
-    [layoutMode, openLinksInNewTab, showLinkPreviews],
+    [layoutMode, openLinksInNewTab, prepared, shouldRenderMath, showLinkPreviews],
   );
 
   const scheduleEnhancements = useCallback(
@@ -145,6 +167,7 @@ export function RenderHtml({
   );
 
   useEffect(() => {
+    mathRenderedHtmlRef.current = null;
     disposeAllLinkPreviewMounts();
   }, [prepared, disposeAllLinkPreviewMounts]);
 

@@ -1,20 +1,15 @@
 "use client";
 
-import { Link } from "@tanstack/react-router";
 import { Refresh2Fill, Rss2Fill } from "@mingcute/react";
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@kyomi/ui/button";
-import { Checkbox } from "@kyomi/ui/checkbox";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import { toastManager } from "@kyomi/ui/toast";
-import { cn } from "@kyomi/ui/lib/utils";
-import type { InboxSearch } from "@modules/inbox/lib/search";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
-import { FolderPickerButton } from "@modules/folders/components/picker";
 import type { RecapFolder } from "@modules/folders/lib/types";
-import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import { SectionEmpty } from "@modules/inbox/components/recap/sections";
 import { FolderFeedActions } from "./actions";
+import { FolderFeedRow } from "./row";
 import { downloadSelectedOpml } from "../../lib/opml";
 
 type FolderOption = { label: string; value: string };
@@ -22,15 +17,6 @@ type RemoveFeedsToastOptions = {
   anchor?: HTMLElement | null;
   feedName?: string;
 };
-
-function getFollowedFeedSource(feed: FollowedFeed) {
-  const value = feed.link ?? feed.url;
-  try {
-    return new URL(value).hostname.replace(/^www\./, "");
-  } catch {
-    return value;
-  }
-}
 
 export function ExpandedFolderFeeds({
   folder,
@@ -235,104 +221,20 @@ export function ExpandedFolderFeeds({
       ) : null}
       <ScrollArea className="min-h-0 flex-1" scrollbarGutter>
         <div className="min-w-0 space-y-2.5 px-4 pb-1">
-          {folderFeeds.map((feed) => {
-            const currentFolderId =
-              feed.folderId ?? unsortedFolderId ?? folderOptions[0]?.value ?? "";
-            const currentFolder = folderOptions.find((option) => option.value === currentFolderId);
-            const isSelected = selectedFeedIds.has(feed.feedId);
-
-            return (
-              // oxlint-disable-next-line react-doctor/no-static-element-interactions -- role/tabIndex/onKeyDown are set when interactive
-              <div
-                key={feed.feedId}
-                className={cn(
-                  "group flex h-13 w-full min-w-0 items-center gap-2.5 rounded-2xl px-2 text-base transition-colors hover:bg-accent/70",
-                  isSelecting && "cursor-pointer",
-                  isSelected && "bg-accent/70",
-                )}
-                role={isSelecting ? "button" : undefined}
-                tabIndex={isSelecting ? 0 : undefined}
-                onClick={isSelecting ? () => toggleFeedSelected(feed.feedId) : undefined}
-                onKeyDown={
-                  isSelecting
-                    ? (event) => {
-                        if (event.key === "Enter" || event.key === " ") {
-                          event.preventDefault();
-                          toggleFeedSelected(feed.feedId);
-                        }
-                      }
-                    : undefined
-                }
-              >
-                {isSelecting ? (
-                  <>
-                    <FeedFavicon
-                      className="size-9 shrink-0"
-                      faviconUrl={feed.faviconUrl}
-                      feedUrl={feed.url}
-                      shape="squircle"
-                      siteUrl={feed.link}
-                      squircleCornerRadius={8}
-                      title={feed.title || feed.url}
-                    />
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate font-medium">{feed.title || feed.url}</span>
-                      <span className="block truncate text-muted-foreground text-sm">
-                        {getFollowedFeedSource(feed)}
-                      </span>
-                    </span>
-                    <Checkbox
-                      aria-label={`Select ${feed.title || feed.url}`}
-                      checked={isSelected}
-                      onCheckedChange={(checked) => setFeedSelected(feed.feedId, checked === true)}
-                      onClick={(event) => event.stopPropagation()}
-                    />
-                  </>
-                ) : (
-                  <>
-                    <Link
-                      className="flex min-w-0 flex-1 items-center gap-2.5 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
-                      to="/inbox"
-                      search={(prev: InboxSearch) => ({
-                        ...prev,
-                        filter: "all" as const,
-                        feedId: feed.feedId,
-                        folderId: undefined,
-                        itemId: undefined,
-                        search: undefined,
-                      })}
-                    >
-                      <FeedFavicon
-                        className="size-9 shrink-0"
-                        faviconUrl={feed.faviconUrl}
-                        feedUrl={feed.url}
-                        shape="squircle"
-                        siteUrl={feed.link}
-                        squircleCornerRadius={8}
-                        title={feed.title || feed.url}
-                      />
-                      <span className="min-w-0 flex-1">
-                        <span className="block truncate font-medium">{feed.title || feed.url}</span>
-                        <span className="block truncate text-muted-foreground text-sm">
-                          {getFollowedFeedSource(feed)}
-                        </span>
-                      </span>
-                    </Link>
-                    {currentFolderId ? (
-                      <FolderPickerButton
-                        currentFolderId={currentFolderId}
-                        currentFolderName={currentFolder?.label ?? "Unsorted"}
-                        feedTitle={feed.title || feed.url}
-                        folders={folderOptions}
-                        isMoving={movingFeedId === feed.feedId}
-                        onMove={(folderId) => moveFeed(feed.feedId, folderId)}
-                      />
-                    ) : null}
-                  </>
-                )}
-              </div>
-            );
-          })}
+          {folderFeeds.map((feed) => (
+            <FolderFeedRow
+              key={feed.feedId}
+              feed={feed}
+              folderOptions={folderOptions}
+              isSelected={selectedFeedIds.has(feed.feedId)}
+              isSelecting={isSelecting}
+              moveFeed={moveFeed}
+              movingFeedId={movingFeedId}
+              setFeedSelected={setFeedSelected}
+              toggleFeedSelected={toggleFeedSelected}
+              unsortedFolderId={unsortedFolderId}
+            />
+          ))}
         </div>
       </ScrollArea>
       <div className="px-4">

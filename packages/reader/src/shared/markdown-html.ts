@@ -1,4 +1,5 @@
 import { createReaderMarked, type ReaderMarkdownRenderOptions } from "./markdown-core";
+import { hasLikelyMarkdownMath } from "./math";
 
 const markedByBaseUrl = new Map<string, ReturnType<typeof createReaderMarked>>();
 
@@ -12,29 +13,7 @@ function getMarkedForBaseUrl(baseUrl?: string | null, openLinksInNewTab = true) 
   return parser;
 }
 
-function hasInlineMathDelimiter(markdown: string) {
-  const matches = markdown.matchAll(/(^|[^\\])\$([^$\n]+?)\$/g);
-  for (const match of matches) {
-    const candidate = match[2]?.trim();
-    if (!candidate) {
-      continue;
-    }
-    if (/[\\^_=]/.test(candidate) || /\d\s*[-+*/=]\s*\d/.test(candidate)) {
-      return true;
-    }
-  }
-  return false;
-}
-
-export function hasLikelyMarkdownMath(markdown: string) {
-  return (
-    /(^|[^\\])\$\$[\s\S]+?(^|[^\\])\$\$/m.test(markdown) ||
-    /\\\([\s\S]+?\\\)/.test(markdown) ||
-    /\\\[[\s\S]+?\\\]/.test(markdown) ||
-    /\\begin\{[a-zA-Z*]+\}/.test(markdown) ||
-    hasInlineMathDelimiter(markdown)
-  );
-}
+export { hasLikelyMarkdownMath };
 
 /** Markdown -> HTML using the same non-math rules as the web reader. */
 export function readerMarkdownToHtml(
