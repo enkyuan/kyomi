@@ -7,6 +7,7 @@ import { CommandDialog, CommandDialogPortal, CommandDialogPrimitive } from "@kyo
 import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";
 import {
+  DISCOVER_SEARCH_RESULT_LIMIT,
   followFeed,
   importOpmlFromUrl,
   searchFeeds,
@@ -172,7 +173,7 @@ export function FollowSourcesDialog({
   }, [query]);
 
   const { data: discoverData, isFetching: isDiscoverFetching } = useQuery({
-    queryKey: ["discover", "feeds", debouncedQuery],
+    queryKey: ["discover", "feeds", debouncedQuery, DISCOVER_SEARCH_RESULT_LIMIT],
     queryFn: () => searchFeeds({ data: { query: debouncedQuery } }),
     enabled: dialogOpen && debouncedQuery.length > 0 && !hasOpmlImportCandidate,
     placeholderData: (previousData) => previousData,

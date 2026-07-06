@@ -54,6 +54,7 @@ type FollowFeedInput = {
 
 const DISCOVER_PREVIEW_REQUEST_TIMEOUT_MS = 8_000;
 const DISCOVER_SEARCH_REQUEST_TIMEOUT_MS = 5_000;
+export const DISCOVER_SEARCH_RESULT_LIMIT = 50;
 const OPML_IMPORT_START_REQUEST_TIMEOUT_MS = 12_000;
 const OPML_IMPORT_STATUS_REQUEST_TIMEOUT_MS = 5_000;
 const OPML_EXPORT_REQUEST_TIMEOUT_MS = 12_000;
@@ -158,7 +159,7 @@ export const searchFeeds = createServerFn({ method: "GET" })
     try {
       return await fetchValidatedJson(discoverFeedResultSchema.array(), () =>
         apiJson<DiscoverFeedResult[]>(
-          `/api/v1/discover/search?q=${encodeURIComponent(query)}&limit=8`,
+          `/api/v1/discover/search?q=${encodeURIComponent(query)}&limit=${DISCOVER_SEARCH_RESULT_LIMIT}`,
           {
             headers,
             signal: AbortSignal.timeout(DISCOVER_SEARCH_REQUEST_TIMEOUT_MS),

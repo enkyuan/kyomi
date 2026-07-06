@@ -9,14 +9,7 @@ import {
 } from "@kyomi/ui/icons/mingcute";
 import { useRef } from "react";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@kyomi/ui/command";
+import { Command, CommandEmpty, CommandInput, CommandItem, CommandList } from "@kyomi/ui/command";
 import { Kbd } from "@kyomi/ui/kbd";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
 import { useFeedback } from "@hooks/use-feedback";
@@ -72,6 +65,7 @@ export function FollowSourcesCommand({
     <Command
       className="kyomi-command"
       data-has-search-query={state.kind === "idle" ? undefined : "true"}
+      data-has-results-panel={state.kind === "search" ? "true" : undefined}
       label="Add feed"
       shouldFilter={false}
     >
@@ -144,7 +138,7 @@ function CommandResults({
           className="kyomi-command-list-viewport"
           data-slot="scroll-area-viewport"
         >
-          <CommandList>
+          <CommandList className="not-empty:p-0">
             <div className="kyomi-command-list-inner">
               {state.showEmpty ? (
                 <CommandEmpty>
@@ -153,7 +147,7 @@ function CommandResults({
               ) : null}
               {state.showLoading ? <CommandLoading /> : null}
               {state.resultsCount > 0 ? (
-                <CommandGroup heading="Feeds">
+                <>
                   {state.results.map((item) => (
                     <CommandResultItem
                       key={`${item.id ?? item.url}-${item.url}`}
@@ -163,7 +157,7 @@ function CommandResults({
                     />
                   ))}
                   {state.truncated ? <CommandTruncatedHint /> : null}
-                </CommandGroup>
+                </>
               ) : null}
             </div>
           </CommandList>
@@ -181,12 +175,10 @@ function CommandResults({
 
 function CommandLoading() {
   return (
-    <CommandGroup heading="Feeds">
-      <CommandItem disabled value="searching">
-        <RssFill className="kyomi-command-item-icon" />
-        <span>Searching feeds...</span>
-      </CommandItem>
-    </CommandGroup>
+    <CommandItem disabled value="searching">
+      <RssFill className="kyomi-command-item-icon" />
+      <span>Searching feeds...</span>
+    </CommandItem>
   );
 }
 

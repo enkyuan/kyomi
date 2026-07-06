@@ -19,6 +19,15 @@ const feed: DiscoverFeedResult = {
   isSubscribed: false,
 };
 
+function makeFeed(index: number): DiscoverFeedResult {
+  return {
+    ...feed,
+    id: `feed-${index}`,
+    title: `History Feed ${index}`,
+    url: `https://example.com/feed-${index}.xml`,
+  };
+}
+
 describe("FollowSourcesCommand", () => {
   beforeEach(() => {
     vi.stubGlobal(
@@ -33,12 +42,17 @@ describe("FollowSourcesCommand", () => {
       configurable: true,
       value: vi.fn(),
     });
+    Object.defineProperty(Element.prototype, "getAnimations", {
+      configurable: true,
+      value: vi.fn(() => []),
+    });
   });
 
   afterEach(() => {
     vi.useRealTimers();
     vi.unstubAllGlobals();
     delete (Element.prototype as { scrollIntoView?: unknown }).scrollIntoView;
+    delete (Element.prototype as { getAnimations?: unknown }).getAnimations;
   });
 
   test("shows follow feedback when adding a feed from the action button", () => {
@@ -80,5 +94,62 @@ describe("FollowSourcesCommand", () => {
     expect((screen.getByRole("button", { name: "Add feed" }) as HTMLButtonElement).disabled).toBe(
       false,
     );
+  });
+
+  test("renders search results without the feed group heading inside the scroll area", () => {
+    const { container } = render(
+      <FollowSourcesCommand
+        isPendingFollow={() => false}
+        opmlImportUrl={null}
+        pendingOpmlImportUrl={null}
+        query="bio"
+        state={{
+          kind: "search",
+          results: [feed],
+          resultsCount: 1,
+          showEmpty: false,
+          showLoading: false,
+          truncated: false,
+        }}
+        onFollowFeed={vi.fn()}
+        onQueryChange={vi.fn()}
+        onStartOpmlImport={vi.fn()}
+      />,
+    );
+
+    expect(screen.queryByText("Feeds")).toBeNull();
+    expect(container.querySelector(".kyomi-command")?.getAttribute("data-has-results-panel")).toBe(
+      "true",
+    );
+    expect(container.querySelector("[data-slot='command-list']")?.className).toContain(
+      "not-empty:p-0",
+    );
+    expect(container.querySelector(".kyomi-command-list-scroll")).not.toBeNull();
+    expect(container.querySelector(".kyomi-command-list-viewport")).not.toBeNull();
+  });
+
+  test("renders more than the old eight-result search limit", () => {
+    render(
+      <FollowSourcesCommand
+        isPendingFollow={() => false}
+        opmlImportUrl={null}
+        pendingOpmlImportUrl={null}
+        query="history"
+        state={{
+          kind: "search",
+          results: Array.from({ length: 12 }, (_, index) => makeFeed(index + 1)),
+          resultsCount: 12,
+          showEmpty: false,
+          showLoading: false,
+          truncated: false,
+        }}
+        onFollowFeed={vi.fn()}
+        onQueryChange={vi.fn()}
+        onStartOpmlImport={vi.fn()}
+      />,
+    );
+
+    expect(screen.getAllByRole("option")).toHaveLength(12);
+    expect(screen.getByText("History Feed 12")).toBeTruthy();
   });
 });

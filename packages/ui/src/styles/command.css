@@ -47,6 +47,10 @@
   color: var(--popover-foreground);
 }
 
+.kyomi-command[data-has-results-panel="true"] {
+  height: min(34rem, calc(100vh - 8rem));
+}
+
 .kyomi-command-search {
   display: flex;
   min-height: 4rem;
@@ -151,14 +155,18 @@
 }
 
 .kyomi-command [cmdk-item] {
+  --kyomi-command-item-padding: 0.5rem;
+  --kyomi-command-item-radius: 0.875rem;
+  --kyomi-command-favicon-size: 2.25rem;
+
   display: flex;
-  min-height: 3.75rem;
+  min-height: calc(var(--kyomi-command-favicon-size) + var(--kyomi-command-item-padding) * 2);
   cursor: pointer;
   scroll-margin-block: 0.5rem;
   align-items: center;
   gap: 0.75rem;
-  border-radius: 0.75rem;
-  padding: 0.625rem;
+  border-radius: var(--kyomi-command-item-radius);
+  padding: var(--kyomi-command-item-padding);
   color: var(--foreground);
   outline: none;
 }
@@ -183,8 +191,8 @@
 
 .kyomi-command-favicon {
   display: inline-flex;
-  width: 2rem;
-  height: 2rem;
+  width: var(--kyomi-command-favicon-size);
+  height: var(--kyomi-command-favicon-size);
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
