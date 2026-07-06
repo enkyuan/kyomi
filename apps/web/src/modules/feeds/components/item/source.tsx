@@ -6,7 +6,6 @@ import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
 import type { InboxSearch } from "@modules/inbox/lib/search";
 import { cn } from "@kyomi/ui/lib/utils";
 import { Link } from "@tanstack/react-router";
-import { m } from "motion/react";
 import type { CSSProperties } from "react";
 
 type SourceProps = {
@@ -22,8 +21,6 @@ type SourceProps = {
   labelStyle?: CSSProperties;
   iconClassName?: string;
   enablePreview?: boolean;
-  layoutId?: string;
-  sharedSourceLayoutId?: string;
 };
 
 export function Source({
@@ -39,8 +36,6 @@ export function Source({
   labelStyle,
   iconClassName,
   enablePreview = true,
-  layoutId,
-  sharedSourceLayoutId,
 }: SourceProps) {
   const sourceLabel = getFeedSourceLabel(articleUrl, feedTitle);
   const label = (
@@ -106,22 +101,8 @@ export function Source({
   );
 
   return (
-    <m.div
-      layoutId={layoutId}
-      className={cn("flex w-full min-w-0 items-center gap-2.5", className)}
-      transition={{ type: "spring", duration: 0.28, bounce: 0 }}
-    >
-      {sharedSourceLayoutId ? (
-        <m.div
-          layoutId={sharedSourceLayoutId}
-          className="flex min-w-0 flex-1 items-center gap-[inherit]"
-          transition={{ type: "spring", duration: 0.28, bounce: 0 }}
-        >
-          {interactiveContent}
-        </m.div>
-      ) : (
-        interactiveContent
-      )}
-    </m.div>
+    <div className={cn("flex w-full min-w-0 items-center gap-2.5", className)}>
+      {interactiveContent}
+    </div>
   );
 }

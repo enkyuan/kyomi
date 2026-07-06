@@ -43,22 +43,6 @@ function hasReaderArticleBody(reader: ToolbarModel["displayReader"]): boolean {
   return false;
 }
 
-function getReaderSourceLayoutId(item: ArticleDetailDto) {
-  const sourceIdentity = item.feedUrl ?? item.feedSiteUrl ?? item.feedTitle;
-  const normalizedSourceIdentity = sourceIdentity.trim().toLowerCase();
-
-  if (!normalizedSourceIdentity) {
-    return undefined;
-  }
-
-  let hash = 0;
-  for (const character of normalizedSourceIdentity) {
-    hash = (hash * 31 + character.charCodeAt(0)) % 2_147_483_647;
-  }
-
-  return `reader-source-${hash.toString(36)}`;
-}
-
 function useFloatingToolbarBounds(articleRef: RefObject<HTMLElement | null>, enabled: boolean) {
   const [bounds, setBounds] = useState<{ left: number; top: number; width: number } | null>(null);
 
@@ -225,21 +209,17 @@ function ReaderArticleHeader({
         className="min-w-0 flex-1 gap-3"
         iconClassName="size-5.5 rounded-sm"
         labelStyle={{ fontSize: `${sourceLabelFontSizePx}px` }}
-        layoutId={`inbox-item-${item.id}-source`}
-        sharedSourceLayoutId={getReaderSourceLayoutId(item)}
       />
       <div className="flex flex-wrap items-start justify-between gap-3">
-        <m.p
-          layoutId={`inbox-item-${item.id}-title`}
+        <p
           className="min-w-0 flex-1 font-semibold tracking-[-0.012em] text-foreground"
           style={{
             fontSize: `${titleFontSizePx}px`,
             lineHeight: `${titleLineHeightPx}px`,
           }}
-          transition={{ type: "spring", duration: 0.28, bounce: 0 }}
         >
           {item.title}
-        </m.p>
+        </p>
       </div>
       <Categories
         categories={item.categories}

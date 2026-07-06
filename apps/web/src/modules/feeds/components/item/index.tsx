@@ -1,7 +1,6 @@
 "use client";
 
 import { memo, type KeyboardEvent } from "react";
-import { m } from "motion/react";
 import { cn } from "@kyomi/ui/lib/utils";
 import { Categories } from "./categories";
 import { Source } from "./source";
@@ -117,41 +116,33 @@ export const Item = memo(function Item({
             iconClassName="size-5.5 rounded-sm"
             labelStyle={{ fontSize: `${sourceLabelFontSizePx}px` }}
             enablePreview={false}
-            layoutId={`inbox-item-${item.id}-source`}
           />
-          <m.span
-            layoutId={`inbox-item-${item.id}-timestamp`}
+          <span
             className="shrink-0 font-medium tracking-[0.01em] text-muted-foreground/80 tabular-nums"
             style={{ fontSize: `${metaFontSizePx}px` }}
-            transition={{ type: "spring", duration: 0.28, bounce: 0 }}
           >
             <Timestamp
               value={item.publishedAt}
               display={timestampDisplay}
               hourCycle={timestampHourCycle}
             />
-          </m.span>
+          </span>
         </div>
         <CardTitle className="min-w-0 font-semibold tracking-[-0.012em] text-foreground">
-          <m.div
-            layoutId={`inbox-item-${item.id}-title`}
-            transition={{ type: "spring", duration: 0.28, bounce: 0 }}
+          <p
+            ref={titlePretext.ref}
+            className={cn(
+              "w-full font-semibold tracking-[-0.012em] text-foreground",
+              "line-clamp-2",
+            )}
+            style={{
+              maxWidth: titlePretext.fittedWidth ? `${titlePretext.fittedWidth}px` : undefined,
+              fontSize: `${titleFontSizePx}px`,
+              lineHeight: `${titleLineHeightPx}px`,
+            }}
           >
-            <p
-              ref={titlePretext.ref}
-              className={cn(
-                "w-full font-semibold tracking-[-0.012em] text-foreground",
-                "line-clamp-2",
-              )}
-              style={{
-                maxWidth: titlePretext.fittedWidth ? `${titlePretext.fittedWidth}px` : undefined,
-                fontSize: `${titleFontSizePx}px`,
-                lineHeight: `${titleLineHeightPx}px`,
-              }}
-            >
-              {item.title}
-            </p>
-          </m.div>
+            {item.title}
+          </p>
         </CardTitle>
       </CardHeader>
       <CardContent className={cn("min-w-0 p-0", ITEM_GUTTER_CLASS)}>

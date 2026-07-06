@@ -1,7 +1,7 @@
 "use client";
 
 import { useVirtualizer } from "@tanstack/react-virtual";
-import type { RefObject } from "react";
+import { type RefObject, useLayoutEffect, useRef } from "react";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxFilter, InboxItem } from "@modules/inbox/lib/articles/index";
@@ -116,6 +116,7 @@ export function SkeletonRows({
 
 export type VirtualizedRowsProps = {
   listScrollRef: RefObject<HTMLDivElement | null>;
+  initialScrollOffset?: number;
   filter: InboxFilter;
   readerFocusMode: boolean;
   density: InboxDensityDto;
@@ -134,6 +135,7 @@ export type VirtualizedRowsProps = {
 // oxlint-disable-next-line react-doctor/no-multi-comp
 export function VirtualizedRows({
   listScrollRef,
+  initialScrollOffset,
   filter,
   readerFocusMode,
   density,
@@ -149,11 +151,13 @@ export function VirtualizedRows({
   viewportHeight,
 }: VirtualizedRowsProps) {
   const { isLoading, hasNextPage, isFetchingNextPage, fetchNextPage } = pagination;
+  const restoredScrollOffsetRef = useRef<number | null>(null);
   const virtualizer = useVirtualizer({
     count: inboxItems.length,
     getItemKey: (index) => inboxItems[index]?.id ?? index,
     getScrollElement: () => listScrollRef.current,
     estimateSize: () => getFeedItemRowEstimate({ density, readerFocusMode }),
+    initialOffset: initialScrollOffset,
     overscan: 6,
     useAnimationFrameWithResizeObserver: true,
     onChange: (nextVirtualizer) => {
@@ -172,6 +176,21 @@ export function VirtualizedRows({
 
   const virtualItems = virtualizer.getVirtualItems();
   const listContentHeight = virtualizer.getTotalSize();
+
+  useLayoutEffect(() => {
+    if (
+      typeof initialScrollOffset !== "number" ||
+      restoredScrollOffsetRef.current === initialScrollOffset ||
+      isLoading ||
+      inboxItems.length === 0 ||
+      !listScrollRef.current
+    ) {
+      return;
+    }
+
+    restoredScrollOffsetRef.current = initialScrollOffset;
+    virtualizer.scrollToOffset(initialScrollOffset, { behavior: "auto" });
+  }, [inboxItems.length, initialScrollOffset, isLoading, listScrollRef, virtualizer]);
 
   if (isLoading && inboxItems.length === 0) {
     return (

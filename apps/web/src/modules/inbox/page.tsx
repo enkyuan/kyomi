@@ -39,7 +39,7 @@ import { ArticleShell } from "./components/page/article/shell";
 import { DetailSection } from "./components/page/detail";
 import { ListSection } from "./components/page/list";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const MIDDLE_COLUMN_TRANSITION_OFFSET: TransitionOffset = {
   forward: { enter: 18, exit: -12 },
@@ -192,7 +192,7 @@ function InboxPageContent({
   const selectedItem = detailData?.item ?? null;
   const showMiddleColumnDetail = Boolean(itemId);
   const middleColumnTransition = useTransition({
-    className: "relative h-full min-h-0 min-w-0 flex-1 overflow-hidden",
+    className: "absolute inset-0",
     contentKey: showMiddleColumnDetail ? "middle-article" : "middle-inbox",
     direction: showMiddleColumnDetail ? "forward" : "backward",
     features: "max",
@@ -365,9 +365,12 @@ function InboxPageContent({
         />
       ) : (
         <div className="flex h-full max-h-full min-h-0 min-w-0 overflow-hidden pe-3">
-          <Transition {...middleColumnTransition}>
-            {itemId ? middleColumnDetailElement : listElement}
-          </Transition>
+          <MiddleColumn
+            detail={middleColumnDetailElement}
+            list={listElement}
+            showDetail={showMiddleColumnDetail}
+            transition={middleColumnTransition}
+          />
           <aside className="hidden h-full w-96 shrink-0 flex-col py-8 xl:flex">
             {/* Article detail replaces the inbox pane; keep this rail reserved for future context. */}
             <InboxRecapCard
@@ -379,6 +382,33 @@ function InboxPageContent({
           </aside>
         </div>
       )}
+    </div>
+  );
+}
+
+function MiddleColumn({
+  detail,
+  list,
+  showDetail,
+  transition,
+}: {
+  detail: ReactNode;
+  list: ReactNode;
+  showDetail: boolean;
+  transition: ReturnType<typeof useTransition>;
+}) {
+  return (
+    <div className="relative h-full min-h-0 min-w-0 flex-1 overflow-hidden">
+      <div
+        aria-hidden={showDetail}
+        className={`absolute inset-0 flex min-h-0 min-w-0 flex-col transition-opacity duration-150 ${
+          showDetail ? "pointer-events-none opacity-0" : "opacity-100"
+        }`}
+        inert={showDetail ? true : undefined}
+      >
+        {list}
+      </div>
+      {showDetail ? <Transition {...transition}>{detail}</Transition> : null}
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows"
 import { Badge } from "@kyomi/ui/badge";
 import { BrowserScrollBar, ScrollAreaPrimitive } from "@kyomi/ui/scroll-area";
 import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
+import { useElementScrollRestoration } from "@tanstack/react-router";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 import { useHydrated } from "@hooks/use-hydrated";
@@ -34,6 +35,7 @@ const EMPTY_STATE_BODY_COPY =
   "Follow feeds to start building your reading list. New stories will show up here as they're published.";
 
 const EMPTY_PINNED_FOLDERS: PinnedFolderFilter[] = [];
+const INBOX_LIST_SCROLL_RESTORATION_ID = "inbox-list";
 
 function getEmptyStateCopy(filter: InboxFilter) {
   switch (filter) {
@@ -137,6 +139,9 @@ export function List({
     readerFocusMode,
   ]);
   const isVirtualizerHostMounted = useHydrated();
+  const scrollRestorationEntry = useElementScrollRestoration({
+    id: INBOX_LIST_SCROLL_RESTORATION_ID,
+  });
 
   const showEmptyState = isVirtualizerHostMounted && !isLoading && inboxItems.length === 0;
   const emptyState = getEmptyStateCopy(filter);
@@ -153,6 +158,7 @@ export function List({
         <ScrollAreaPrimitive.Viewport
           ref={listScrollRef}
           className="h-full overflow-x-hidden outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain"
+          data-scroll-restoration-id={INBOX_LIST_SCROLL_RESTORATION_ID}
           data-slot="inbox-list-viewport"
         >
           <div
@@ -281,6 +287,7 @@ export function List({
                   pagination={pagination}
                   onSelectItem={onSelectItem}
                   viewportHeight={viewportHeight}
+                  initialScrollOffset={scrollRestorationEntry?.scrollY}
                 />
               )}
             </div>

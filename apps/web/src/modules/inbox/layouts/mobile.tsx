@@ -29,6 +29,19 @@ export function MobileLayout({ showDetail, direction, list, detail }: MobileLayo
           } as CSSProperties
         }
       >
+        <m.div
+          key="inbox-list"
+          animate={showDetail ? { opacity: 0, x: -slideOffset } : { opacity: 1, x: 0 }}
+          aria-hidden={showDetail}
+          className={`absolute bottom-(--inbox-stacked-panel-inset) left-(--inbox-stacked-left-inset) right-(--inbox-stacked-panel-inset) top-(--inbox-stacked-panel-inset) flex min-h-0 min-w-0 flex-col ${
+            showDetail ? "pointer-events-none" : ""
+          }`}
+          inert={showDetail ? true : undefined}
+          initial={false}
+          transition={transition}
+        >
+          {list}
+        </m.div>
         <AnimatePresence initial={false} mode="popLayout">
           {showDetail ? (
             <m.div
@@ -41,18 +54,7 @@ export function MobileLayout({ showDetail, direction, list, detail }: MobileLayo
             >
               {detail}
             </m.div>
-          ) : (
-            <m.div
-              key="inbox-list"
-              initial={prefersReducedMotion ? false : { opacity: 0, x: -slideOffset }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={prefersReducedMotion ? undefined : { opacity: 0, x: slideOffset }}
-              transition={transition}
-              className="absolute bottom-(--inbox-stacked-panel-inset) left-(--inbox-stacked-left-inset) right-(--inbox-stacked-panel-inset) top-(--inbox-stacked-panel-inset) flex min-h-0 min-w-0 flex-col"
-            >
-              {list}
-            </m.div>
-          )}
+          ) : null}
         </AnimatePresence>
       </m.div>
     </LazyMotion>
