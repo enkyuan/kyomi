@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Message3Fill } from "@mingcute/react";
+import { AttachmentLine, Message3Fill, PicLine } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
-import { Field } from "@kyomi/ui/field";
 import { Form } from "@kyomi/ui/form";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
-import { Textarea } from "@kyomi/ui/textarea";
 import { SettingHeading } from "../appearance/shared";
 
 export const feedbackSection = {
@@ -48,22 +47,50 @@ export function FeedbackPagePanel() {
             clearFeedback();
           }}
         >
-          <Field>
-            <Textarea
-              className="max-h-72 [&_textarea]:max-h-72 [&_textarea]:resize-y [&_textarea]:overflow-auto"
-              onChange={(event) => {
-                setValue(event.target.value);
-              }}
-              placeholder="Write your feedback..."
-              size="lg"
-              value={value}
-            />
-          </Field>
-          <div className="flex justify-end gap-2">
-            <Button type="button" variant="ghost" onClick={clearFeedback}>
-              Clear
-            </Button>
-            <Button type="submit">Send</Button>
+          <div className="feedback-composer">
+            <ScrollAreaPrimitive.Root className="feedback-composer-scroll">
+              <ScrollAreaPrimitive.Viewport
+                className="feedback-composer-viewport"
+                data-slot="scroll-area-viewport"
+              >
+                <textarea
+                  aria-label="Feedback message"
+                  className="feedback-composer-textarea"
+                  onChange={(event) => {
+                    setValue(event.target.value);
+                  }}
+                  placeholder="Compose your message..."
+                  value={value}
+                />
+              </ScrollAreaPrimitive.Viewport>
+              <ScrollBar className="feedback-composer-scrollbar" orientation="vertical" />
+              <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
+            </ScrollAreaPrimitive.Root>
+            <div className="feedback-composer-toolbar">
+              <div className="feedback-composer-actions">
+                <Button
+                  aria-label="Attach file"
+                  className="feedback-composer-icon-button"
+                  size="icon-xs"
+                  type="button"
+                  variant="ghost"
+                >
+                  <AttachmentLine />
+                </Button>
+                <Button
+                  aria-label="Attach image"
+                  className="feedback-composer-icon-button"
+                  size="icon-xs"
+                  type="button"
+                  variant="ghost"
+                >
+                  <PicLine />
+                </Button>
+              </div>
+              <Button className="feedback-composer-submit" size="sm" type="submit">
+                Send
+              </Button>
+            </div>
           </div>
         </Form>
       </section>

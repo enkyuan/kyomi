@@ -233,6 +233,111 @@
   height: 6px;
 }
 
+.feedback-composer {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 1px 2px color-mix(in oklab, var(--color-black) 5%, transparent);
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.feedback-composer:focus-within {
+  border-color: var(--ring);
+  box-shadow:
+    0 1px 2px color-mix(in oklab, var(--color-black) 5%, transparent),
+    0 0 0 3px color-mix(in oklab, var(--ring) 24%, transparent);
+}
+
+.dark .feedback-composer {
+  background: color-mix(in oklab, var(--input) 32%, transparent);
+}
+
+.feedback-composer-scroll {
+  position: relative;
+  min-height: 12rem;
+  max-height: 19rem;
+  padding-inline-end: 0.75rem;
+}
+
+.feedback-composer-viewport {
+  max-height: inherit;
+  border-start-start-radius: inherit;
+  border-start-end-radius: inherit;
+  outline: none;
+}
+
+.feedback-composer-viewport[data-has-overflow-y] {
+  overscroll-behavior-y: contain;
+}
+
+.feedback-composer-textarea {
+  display: block;
+  field-sizing: content;
+  width: 100%;
+  min-height: 12rem;
+  resize: none;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 1rem 0.25rem 0.5rem 1rem;
+  font: inherit;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  outline: none;
+}
+
+.feedback-composer-textarea::placeholder {
+  color: var(--muted-foreground);
+}
+
+.feedback-composer-scrollbar {
+  position: absolute;
+  z-index: 10;
+  inset-block: 0.25rem;
+  inset-inline-end: 0.25rem;
+  margin: 0;
+}
+
+.feedback-composer-toolbar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.25rem 0.625rem 0.625rem;
+}
+
+.feedback-composer-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.feedback-composer-icon-button {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-md);
+  color: var(--muted-foreground);
+}
+
+.feedback-composer-icon-button:hover {
+  color: var(--foreground);
+}
+
+.feedback-composer-submit {
+  height: 1.75rem;
+  border-radius: 9999px;
+  padding-inline: 0.75rem;
+}
+
 html,
 body,
 #app {
