@@ -46,19 +46,26 @@ const MIDDLE_COLUMN_TRANSITION_OFFSET: TransitionOffset = {
   backward: { enter: -12, exit: 18 },
 };
 
-export function Page({ initialInboxPreferences }: { initialInboxPreferences?: InboxPreferences }) {
+type InboxPageProps = {
+  initialInboxPreferences?: InboxPreferences;
+  initialTimezoneOffsetMinutes?: number;
+};
+
+export function Page({ initialInboxPreferences, initialTimezoneOffsetMinutes }: InboxPageProps) {
   return (
     <InboxPreferencesBootstrapProvider initialPreferences={initialInboxPreferences}>
-      <InboxPageContent initialInboxPreferences={initialInboxPreferences} />
+      <InboxPageContent
+        initialInboxPreferences={initialInboxPreferences}
+        initialTimezoneOffsetMinutes={initialTimezoneOffsetMinutes}
+      />
     </InboxPreferencesBootstrapProvider>
   );
 }
 
 function InboxPageContent({
   initialInboxPreferences,
-}: {
-  initialInboxPreferences?: InboxPreferences;
-}) {
+  initialTimezoneOffsetMinutes,
+}: InboxPageProps) {
   const { preferences } = useInboxPreferences(initialInboxPreferences);
   const router = useRouter();
   const queryClient = useQueryClient();
@@ -68,7 +75,8 @@ function InboxPageContent({
   const layoutVariant = useResponsiveReaderMode(layoutContainerWidth);
   const [mobileTransitionDirection, setMobileTransitionDirection] = useState<1 | -1>(1);
   const [articleStepDirection, setArticleStepDirection] = useState<ArticleStepDirection>(1);
-  const timezoneOffsetMinutes = useTimezone();
+  const clientTimezoneOffsetMinutes = useTimezone();
+  const timezoneOffsetMinutes = clientTimezoneOffsetMinutes ?? initialTimezoneOffsetMinutes;
 
   const route = useInboxRouteState(preferences);
   const {

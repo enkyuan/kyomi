@@ -4,9 +4,16 @@ import { useEffect, useSyncExternalStore } from "react";
 import { writeTimezoneOffsetCookie } from "@lib/timezone";
 
 function subscribeToTimezoneChanges(onStoreChange: () => void) {
+  let isSubscribed = true;
+  queueMicrotask(() => {
+    if (isSubscribed) {
+      onStoreChange();
+    }
+  });
   const intervalId = window.setInterval(onStoreChange, 60_000);
 
   return () => {
+    isSubscribed = false;
     window.clearInterval(intervalId);
   };
 }

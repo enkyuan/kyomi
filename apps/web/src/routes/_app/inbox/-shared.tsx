@@ -3,9 +3,14 @@ import { Page } from "@modules/inbox";
 import type { InboxLoaderData } from "./-route-helpers";
 
 export function InboxRouteComponent() {
-  const { initialInboxPreferences } = useLoaderData({
+  const { initialInboxPreferences, initialTimezoneOffsetMinutes } = useLoaderData({
     strict: false,
   }) as InboxLoaderData;
 
-  return <Page initialInboxPreferences={initialInboxPreferences} />;
+  return (
+    <Page
+      initialInboxPreferences={initialInboxPreferences}
+      initialTimezoneOffsetMinutes={initialTimezoneOffsetMinutes}
+    />
+  );
 }
