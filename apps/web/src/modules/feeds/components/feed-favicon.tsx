@@ -1,6 +1,6 @@
 "use client";
 
-import { Rss2Fill } from "@mingcute/react";
+import { Rss2Fill } from "@kyomi/ui/icons/mingcute";
 import { Favicon, type FaviconShape } from "@kyomi/ui/favicon";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useCallback, useEffect, useState } from "react";
@@ -78,18 +78,7 @@ export function FeedFavicon({
       className={cn("bg-card/85", className)}
       cornerRadius={squircleCornerRadius}
       cornerSmoothing={squircleCornerSmoothing}
-      fallback={
-        isLoading ? (
-          <span className="size-full rounded-[inherit]" />
-        ) : (
-          <Rss2Fill className="size-full" />
-        )
-      }
-      fallbackClassName={cn(
-        isLoading &&
-          "inset-0 size-full rounded-[inherit] bg-muted/72 text-transparent shadow-[inset_0_1px_--theme(--color-white/28%),inset_0_0_0_1px_--theme(--color-black/6%)] dark:bg-muted/56 dark:shadow-[inset_0_1px_--theme(--color-white/8%),inset_0_0_0_1px_--theme(--color-white/6%)]",
-      )}
-      imageClassName={cn("transition-opacity duration-150", isLoaded ? "opacity-100" : "opacity-0")}
+      fallback={faviconUrl ? undefined : <Rss2Fill className="size-full" />}
       imageKey={faviconUrl ?? undefined}
       imageProps={{
         decoding: "async",
@@ -102,6 +91,8 @@ export function FeedFavicon({
         onError: failCurrentFavicon,
       }}
       imageRef={setImageNode}
+      loading={isLoading}
+      loadingClassName="bg-muted/72 dark:bg-muted/56"
       shape={shape}
       src={faviconUrl}
       title={title}

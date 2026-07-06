@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
 import { Timestamp } from "@modules/inbox/components/timestamp";
 import { Categories } from "@modules/feeds/components/item/categories";
 import { Source } from "@modules/feeds/components/item/source";

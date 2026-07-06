@@ -5,7 +5,7 @@ import { fetchValidatedJson } from "@lib/schemas/index";
 import { inboxRecapSchema, type InboxRecapDto } from "./schema";
 
 export const getInboxRecap = createServerFn({ method: "GET" })
-  .inputValidator((input: { limit?: number }) => input)
+  .validator((input: { limit?: number }) => input)
   .handler(async ({ data }): Promise<InboxRecapDto> => {
     const headers = buildForwardHeaders(getRequestHeaders());
     const search = new URLSearchParams();

@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckFill, CloseFill, Edit2Fill, User3Fill } from "@mingcute/react";
+import { CheckFill, CloseFill, Edit2Fill, User3Fill } from "@kyomi/ui/icons/mingcute";
 import { useAuth } from "@integrations/better-auth/provider";
 import { Badge } from "@kyomi/ui/badge";
 import { Button } from "@kyomi/ui/button";

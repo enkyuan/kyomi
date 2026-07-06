@@ -1,6 +1,6 @@
 "use client";
 
-import { Bill2Fill } from "@mingcute/react";
+import { Bill2Fill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 

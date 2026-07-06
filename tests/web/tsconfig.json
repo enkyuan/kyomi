@@ -11,6 +11,8 @@
       "@integrations/*": ["../../apps/web/src/integrations/*"],
       "@lib/*": ["../../apps/web/src/lib/*"],
       "@utils/*": ["../../apps/web/src/utils/*"],
+      "@tests/*": ["../*"],
+      "@web-tests/*": ["integration/src/*"],
       "@kyomi/ui": ["../../packages/ui/src/index.ts"],
       "@kyomi/ui/*": ["../../packages/ui/src/*"],
       "@kyomi/reader": ["../../packages/reader/src/core/index.ts"],
@@ -20,5 +22,11 @@
     },
     "types": ["vite/client"]
   },
-  "include": ["integration/**/*.ts", "integration/**/*.tsx", "e2e/**/*.ts", "e2e/**/*.tsx"]
+  "include": [
+    "integration/**/*.ts",
+    "integration/**/*.tsx",
+    "e2e/**/*.ts",
+    "e2e/**/*.tsx",
+    "../../packages/reader/src/**/*.d.ts"
+  ]
 }

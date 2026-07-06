@@ -1,21 +1,14 @@
 "use client";
 
-import { Folder2Fill } from "@mingcute/react";
-import { getSvgPath } from "figma-squircle";
-import type { CSSProperties } from "react";
+import { createSquircleStyle } from "@kyomi/ui/lib/squircle";
+import { Folder2Fill } from "@kyomi/ui/icons/mingcute";
 
-const folderIconSquirclePath = getSvgPath({
+const folderIconSquircleStyle = createSquircleStyle({
   width: 36,
   height: 36,
   cornerRadius: 8,
   cornerSmoothing: 1,
 });
-
-const folderIconSquircleStyle = {
-  borderRadius: 8,
-  clipPath: `path('${folderIconSquirclePath}')`,
-  WebkitClipPath: `path('${folderIconSquirclePath}')`,
-} satisfies CSSProperties;
 
 export function FolderIconBadge() {
   return (

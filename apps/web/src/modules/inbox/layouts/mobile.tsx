@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
 import type { CSSProperties, ReactNode } from "react";
 import { INBOX_PANEL_SPACING_PX } from "../lib/layout/index";
 

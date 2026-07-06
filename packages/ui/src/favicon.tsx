@@ -4,6 +4,7 @@ import { getSvgPath } from "figma-squircle";
 import {
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useState,
   type CSSProperties,
@@ -16,6 +17,8 @@ import {
 import { cn } from "./lib/utils";
 
 export type FaviconShape = "rounded" | "squircle";
+
+const useIsomorphicLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
 
 type FaviconImageProps = Omit<ComponentProps<"img">, "alt" | "className" | "ref" | "src">;
 
@@ -33,6 +36,8 @@ export type FaviconProps = Omit<ComponentProps<"span">, "children" | "ref" | "ti
   imageKey?: Key;
   imageProps?: FaviconImageProps;
   imageRef?: Ref<HTMLImageElement>;
+  loading?: boolean;
+  loadingClassName?: string;
 };
 
 function assignRef<T>(ref: Ref<T> | undefined, value: T | null): void {
@@ -44,6 +49,11 @@ function assignRef<T>(ref: Ref<T> | undefined, value: T | null): void {
   }
 
   (ref as { current: T | null }).current = value;
+}
+
+function createSquircleMaskUrl(path: string, width: number, height: number): string {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}"><path fill="black" d="${path}"/></svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
 }
 
 export function Favicon({
@@ -60,6 +70,8 @@ export function Favicon({
   imageKey,
   imageProps,
   imageRef,
+  loading = false,
+  loadingClassName,
   className,
   style,
   ...props
@@ -75,7 +87,7 @@ export function Favicon({
     [ref],
   );
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (shape !== "squircle" || !wrapper) {
       return;
     }
@@ -112,12 +124,26 @@ export function Favicon({
     });
   }, [cornerRadius, cornerSmoothing, shape, wrapperSize.height, wrapperSize.width]);
 
+  const squircleMaskUrl = useMemo(() => {
+    if (!squirclePath) {
+      return undefined;
+    }
+
+    return createSquircleMaskUrl(squirclePath, wrapperSize.width, wrapperSize.height);
+  }, [squirclePath, wrapperSize.height, wrapperSize.width]);
+
   const squircleStyle =
     shape === "squircle"
       ? ({
           borderRadius: cornerRadius,
           clipPath: squirclePath ? `path('${squirclePath}')` : undefined,
           WebkitClipPath: squirclePath ? `path('${squirclePath}')` : undefined,
+          maskImage: squircleMaskUrl,
+          maskRepeat: "no-repeat",
+          maskSize: "100% 100%",
+          WebkitMaskImage: squircleMaskUrl,
+          WebkitMaskRepeat: "no-repeat",
+          WebkitMaskSize: "100% 100%",
         } satisfies CSSProperties)
       : undefined;
 
@@ -127,6 +153,7 @@ export function Favicon({
       data-shape={shape}
       data-slot="favicon"
       data-squircle={shape === "squircle" ? cornerRadius : undefined}
+      data-loading={loading ? "" : undefined}
       ref={setWrapperNode}
       role={src ? undefined : "img"}
       className={cn(
@@ -136,7 +163,15 @@ export function Favicon({
       style={{ ...squircleStyle, ...style }}
       {...props}
     >
-      {fallback ? (
+      {loading ? (
+        <span
+          aria-hidden="true"
+          className={cn("absolute inset-0 rounded-[inherit] bg-muted/60", loadingClassName)}
+          data-slot="favicon-loading"
+          style={squircleStyle}
+        />
+      ) : null}
+      {!src && fallback ? (
         <span
           aria-hidden="true"
           className={cn(
@@ -152,7 +187,8 @@ export function Favicon({
         <img
           alt={alt}
           className={cn(
-            "absolute inset-0 size-full rounded-[inherit] bg-white object-contain",
+            "absolute inset-0 size-full rounded-[inherit] object-contain transition-opacity duration-150",
+            loading ? "opacity-0" : "opacity-100",
             imageClassName,
           )}
           data-slot="favicon-image"

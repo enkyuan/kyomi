@@ -1,6 +1,6 @@
 "use client";
 
-import { AddFill, Folder2Fill } from "@mingcute/react";
+import { AddFill, Folder2Fill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import { Folders } from "@modules/folders/components/recap/summary";
 import type { RecapFolder } from "@modules/folders/lib/types";

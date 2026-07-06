@@ -1,7 +1,7 @@
 "use client";
 
-import { DownFill, UpFill } from "@mingcute/react";
-import { m, useReducedMotion } from "motion/react";
+import { DownFill, UpFill } from "@kyomi/ui/icons/mingcute";
+import { m, useReducedMotion } from "@kyomi/ui/motion";
 import { Button } from "@kyomi/ui/button";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { Toolbar as ReaderToolbarRoot } from "@modules/reader/components/toolbar";

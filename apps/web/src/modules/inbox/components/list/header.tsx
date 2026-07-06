@@ -18,8 +18,8 @@ import {
   SortAscendingFill,
   type IconProps,
   AsteriskFill,
-} from "@mingcute/react";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
+} from "@kyomi/ui/icons/mingcute";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
 import { useCallback, useRef, useState, type ComponentType, type RefObject } from "react";
 import type { InboxFilter, InboxSort } from "@modules/inbox/lib/articles/index";
 import { cn } from "@kyomi/ui/lib/utils";

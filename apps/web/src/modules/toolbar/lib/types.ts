@@ -69,3 +69,23 @@ export type ArticleActionItem = Pick<
   InboxItem,
   "id" | "title" | "summary" | "feedTitle" | "link" | "isSaved"
 >;
+
+export type ItemToolbarPresentation = "row" | "articleHeader";
+
+export type ItemToolbarProps = {
+  isSaved: boolean;
+  onCopyLink: (anchor?: HTMLButtonElement) => void;
+  onHide: () => void;
+  onOpenAi?: (anchor?: HTMLButtonElement) => void;
+  onOpenSource: (anchor?: HTMLButtonElement) => void;
+  onReportBrokenArticle: () => void;
+  onShareArticle: (anchor?: HTMLButtonElement) => void;
+  onToggleSaved: AnchoredToolbarAction;
+  className?: string;
+  style?: React.CSSProperties;
+  presentation?: ItemToolbarPresentation;
+};
+
+export type ItemToolbarModel = {
+  toolbarProps: ItemToolbarProps;
+};

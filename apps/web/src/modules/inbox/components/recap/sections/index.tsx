@@ -1,6 +1,6 @@
 "use client";
 
-import { FolderWarningFill } from "@mingcute/react";
+import { FolderWarningFill } from "@kyomi/ui/icons/mingcute";
 import type { ReactElement, ReactNode } from "react";
 import { Button } from "@kyomi/ui/button";
 import {

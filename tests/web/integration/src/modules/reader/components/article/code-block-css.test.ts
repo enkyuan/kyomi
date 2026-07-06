@@ -34,7 +34,7 @@ function ruleBody(css: string, selector: string) {
 
 describe("reader code block CSS", () => {
   const stylesheets = [
-    readRepoFile("apps/web/src/styles.css"),
+    readRepoFile("packages/ui/src/styles/reader.css"),
     readRepoFile("packages/reader/src/web/styles.css"),
   ];
 

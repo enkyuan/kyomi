@@ -6,11 +6,19 @@ import {
   CornerDownLeftFill,
   RssFill,
   SearchLine,
-} from "@mingcute/react";
-import { Command } from "cmdk";
+} from "@kyomi/ui/icons/mingcute";
 import { useRef } from "react";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@kyomi/ui/command";
 import { Kbd } from "@kyomi/ui/kbd";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
 import { useFeedback } from "@hooks/use-feedback";
 import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import type { DiscoverFeedResult } from "@modules/feeds/lib/api";
@@ -62,7 +70,7 @@ export function FollowSourcesCommand({
 }) {
   return (
     <Command
-      className="kyomi-feed-command"
+      className="kyomi-command"
       data-has-search-query={state.kind === "idle" ? undefined : "true"}
       label="Add feed"
       shouldFilter={false}
@@ -93,9 +101,9 @@ function CommandSearch({
   onStartOpmlImport: (url: string) => void;
 }) {
   return (
-    <div className="kyomi-feed-command-search">
-      <SearchLine className="kyomi-feed-command-search-icon" />
-      <Command.Input
+    <div className="kyomi-command-search">
+      <SearchLine className="kyomi-command-search-icon" />
+      <CommandInput
         placeholder="Search feeds or paste a feed URL..."
         value={query}
         onValueChange={onQueryChange}
@@ -103,7 +111,7 @@ function CommandSearch({
       {opmlImportUrl ? (
         <button
           aria-label="Import feeds from OPML"
-          className="kyomi-feed-command-import-button"
+          className="kyomi-command-import-button"
           disabled={Boolean(pendingOpmlImportUrl)}
           type="button"
           onClick={() => onStartOpmlImport(opmlImportUrl)}
@@ -131,30 +139,39 @@ function CommandResults({
 
   return (
     <>
-      <Command.List>
-        <div className="kyomi-feed-command-list-inner">
-          {state.showEmpty ? (
-            <Command.Empty>
-              No feeds found yet. Try a broader topic or paste a feed URL.
-            </Command.Empty>
-          ) : null}
-          {state.showLoading ? <CommandLoading /> : null}
-          {state.resultsCount > 0 ? (
-            <Command.Group heading="Feeds">
-              {state.results.map((item) => (
-                <CommandResultItem
-                  key={`${item.id ?? item.url}-${item.url}`}
-                  isPendingFollow={isPendingFollow(item)}
-                  item={item}
-                  onFollowFeed={onFollowFeed}
-                />
-              ))}
-              {state.truncated ? <CommandTruncatedHint /> : null}
-            </Command.Group>
-          ) : null}
-        </div>
-      </Command.List>
-      <div className="kyomi-feed-command-footer">
+      <ScrollAreaPrimitive.Root className="kyomi-command-list-scroll">
+        <ScrollAreaPrimitive.Viewport
+          className="kyomi-command-list-viewport"
+          data-slot="scroll-area-viewport"
+        >
+          <CommandList>
+            <div className="kyomi-command-list-inner">
+              {state.showEmpty ? (
+                <CommandEmpty>
+                  No feeds found yet. Try a broader topic or paste a feed URL.
+                </CommandEmpty>
+              ) : null}
+              {state.showLoading ? <CommandLoading /> : null}
+              {state.resultsCount > 0 ? (
+                <CommandGroup heading="Feeds">
+                  {state.results.map((item) => (
+                    <CommandResultItem
+                      key={`${item.id ?? item.url}-${item.url}`}
+                      isPendingFollow={isPendingFollow(item)}
+                      item={item}
+                      onFollowFeed={onFollowFeed}
+                    />
+                  ))}
+                  {state.truncated ? <CommandTruncatedHint /> : null}
+                </CommandGroup>
+              ) : null}
+            </div>
+          </CommandList>
+        </ScrollAreaPrimitive.Viewport>
+        <ScrollBar orientation="vertical" />
+        <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
+      </ScrollAreaPrimitive.Root>
+      <div className="kyomi-command-footer">
         <span>Search by topic or paste a feed URL to follow it.</span>
         <Kbd className="px-1.5 text-[10px] leading-none">Esc</Kbd>
       </div>
@@ -164,22 +181,22 @@ function CommandResults({
 
 function CommandLoading() {
   return (
-    <Command.Group heading="Feeds">
-      <Command.Item disabled value="searching">
-        <RssFill className="kyomi-feed-command-item-icon" />
+    <CommandGroup heading="Feeds">
+      <CommandItem disabled value="searching">
+        <RssFill className="kyomi-command-item-icon" />
         <span>Searching feeds...</span>
-      </Command.Item>
-    </Command.Group>
+      </CommandItem>
+    </CommandGroup>
   );
 }
 
 function CommandTruncatedHint() {
   return (
-    <Command.Item disabled value="discover-truncated-hint">
-      <span className="kyomi-feed-command-hint">
+    <CommandItem disabled value="discover-truncated-hint">
+      <span className="kyomi-command-hint">
         Showing first {DISCOVER_RESULTS_UI_CAP} results, refine your search to narrow matches.
       </span>
-    </Command.Item>
+    </CommandItem>
   );
 }
 
@@ -207,14 +224,14 @@ function CommandResultItem({
   };
 
   return (
-    <Command.Item
+    <CommandItem
       ref={itemRef}
       value={`${item.title} ${item.url} ${item.description ?? ""}`}
       onSelect={followFromAction}
     >
-      <span className="kyomi-feed-command-favicon">
+      <span className="kyomi-command-favicon">
         <FeedFavicon
-          className="kyomi-feed-command-favicon-media"
+          className="kyomi-command-favicon-media"
           faviconUrl={item.faviconUrl}
           feedUrl={item.url}
           shape="squircle"
@@ -223,14 +240,14 @@ function CommandResultItem({
           title={item.title}
         />
       </span>
-      <div className="kyomi-feed-command-item-copy">
+      <div className="kyomi-command-item-copy">
         <p>{item.title || item.url}</p>
         <p>{item.description || item.url}</p>
       </div>
       <button
         ref={actionRef}
         aria-label={showFollowedState ? "Following" : "Add feed"}
-        className="kyomi-feed-command-item-action"
+        className="kyomi-command-item-action"
         disabled={showFollowedState}
         tabIndex={-1}
         title={showFollowedState ? "Following" : "Add feed"}
@@ -244,7 +261,7 @@ function CommandResultItem({
       >
         <FollowActionIcon isFollowing={showFollowedState} />
       </button>
-    </Command.Item>
+    </CommandItem>
   );
 }
 
@@ -257,7 +274,7 @@ function FollowActionIcon({ isFollowing }: { isFollowing: boolean }) {
       <AnimatePresence mode="popLayout" initial={false}>
         <m.span
           key={isFollowing ? "following" : "add"}
-          className="kyomi-feed-command-action-icon"
+          className="kyomi-command-action-icon"
           initial={prefersReducedMotion ? false : FOLLOW_ACTION_ICON_HIDDEN_STATE}
           animate={FOLLOW_ACTION_ICON_STATE}
           exit={prefersReducedMotion ? undefined : FOLLOW_ACTION_ICON_HIDDEN_STATE}

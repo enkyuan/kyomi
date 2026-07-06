@@ -1,5 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
+import { readTimezoneOffsetCookie } from "@lib/timezone";
 import { getInboxPreferences } from "@modules/preferences/inbox";
 import { readInboxArticleOpenBehaviorCookie } from "./layout/persistence";
 
@@ -7,6 +8,7 @@ export const getInboxLoaderData = createServerFn({ method: "GET" }).handler(asyn
   const cookieHeader = getRequestHeaders().get("cookie");
   const initialInboxPreferences = await getInboxPreferences();
   const cookieArticleOpenBehavior = readInboxArticleOpenBehaviorCookie(cookieHeader);
+  const initialTimezoneOffsetMinutes = readTimezoneOffsetCookie(cookieHeader);
 
   return {
     initialInboxPreferences: cookieArticleOpenBehavior
@@ -15,5 +17,6 @@ export const getInboxLoaderData = createServerFn({ method: "GET" }).handler(asyn
           articleOpenBehavior: cookieArticleOpenBehavior,
         }
       : initialInboxPreferences,
+    initialTimezoneOffsetMinutes,
   };
 });

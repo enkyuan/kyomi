@@ -5,8 +5,8 @@ import {
   writeCachedFaviconHit,
   writeCachedFaviconMiss,
 } from "@lib/favicon/cache";
+import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import { Source } from "@modules/feeds/components/item/source";
-import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, test, vi } from "vitest";
 

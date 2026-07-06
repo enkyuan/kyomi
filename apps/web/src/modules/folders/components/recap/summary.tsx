@@ -7,7 +7,7 @@ import {
   Folder2Fill,
   ListCheckFill,
   RightFill,
-} from "@mingcute/react";
+} from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import type { RecapFolder } from "@modules/folders/lib/types";
 import { RailTooltip, RecapSection, SectionEmpty } from "@modules/inbox/components/recap/sections";

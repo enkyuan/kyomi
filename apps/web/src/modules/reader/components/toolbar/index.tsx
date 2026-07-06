@@ -14,8 +14,8 @@ import {
   TextFill,
   TextLine,
   Translate2Line,
-} from "@mingcute/react";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
+} from "@kyomi/ui/icons/mingcute";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
 import { Button } from "@kyomi/ui/button";
 import {
   Toolbar as ToolbarRoot,

@@ -1,0 +1,289 @@
+.kyomi-command-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--color-black) 40%, transparent);
+  backdrop-filter: blur(10px);
+  transition: opacity 200ms ease-in-out;
+}
+
+.kyomi-command-dialog {
+  position: fixed;
+  inset-inline: 1rem;
+  top: max(1rem, 10vh);
+  z-index: 51;
+  width: min(calc(100vw - 2rem), 42rem);
+  margin-inline: auto;
+  outline: none;
+  transform-origin: top center;
+  transition:
+    opacity 200ms ease-in-out,
+    transform 200ms ease-in-out;
+  will-change: opacity, transform;
+}
+
+.kyomi-command-overlay[data-starting-style],
+.kyomi-command-overlay[data-ending-style],
+.kyomi-command-dialog[data-starting-style],
+.kyomi-command-dialog[data-ending-style] {
+  opacity: 0;
+}
+
+.kyomi-command-dialog[data-starting-style],
+.kyomi-command-dialog[data-ending-style] {
+  transform: scale(0.98);
+}
+
+.kyomi-command {
+  position: relative;
+  display: flex;
+  max-height: min(34rem, calc(100vh - 8rem));
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--popover);
+  color: var(--popover-foreground);
+}
+
+.kyomi-command-search {
+  display: flex;
+  min-height: 4rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  padding-inline: 1rem;
+}
+
+.kyomi-command:not([data-has-search-query="true"]) .kyomi-command-search {
+  border-bottom-color: transparent;
+}
+
+.kyomi-command-search-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  color: color-mix(in srgb, var(--muted-foreground) 84%, transparent);
+}
+
+.kyomi-command [cmdk-input] {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  outline: none;
+}
+
+.kyomi-command [cmdk-input]::placeholder {
+  color: color-mix(in srgb, var(--muted-foreground) 72%, transparent);
+}
+
+.kyomi-command-import-button {
+  display: inline-flex;
+  min-height: 2rem;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.375rem;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--primary) 88%, var(--border));
+  border-radius: 0.5rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  padding-inline: 0.75rem;
+  white-space: nowrap;
+}
+
+.kyomi-command-import-button:hover {
+  background: color-mix(in srgb, var(--primary) 90%, var(--foreground));
+}
+
+.kyomi-command-import-button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.kyomi-command-import-button:disabled {
+  cursor: default;
+  opacity: 0.64;
+}
+
+.kyomi-command-list-scroll {
+  min-height: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.kyomi-command-list-viewport {
+  height: 100%;
+  border-radius: inherit;
+  outline: none;
+  overscroll-behavior: contain;
+}
+
+.kyomi-command [cmdk-list] {
+  min-height: 0;
+}
+
+.kyomi-command-list-inner {
+  padding: 0.5rem;
+}
+
+.kyomi-command [cmdk-group]:not(:first-child) {
+  margin-top: 0.25rem;
+}
+
+.kyomi-command [cmdk-group-heading] {
+  padding: 0.5rem 0.625rem 0.375rem;
+  color: color-mix(in srgb, var(--muted-foreground) 76%, transparent);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+
+.kyomi-command [cmdk-item] {
+  display: flex;
+  min-height: 3.75rem;
+  cursor: pointer;
+  scroll-margin-block: 0.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  padding: 0.625rem;
+  color: var(--foreground);
+  outline: none;
+}
+
+.kyomi-command [cmdk-item][data-selected="true"] {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.kyomi-command [cmdk-item][data-disabled="true"] {
+  cursor: default;
+  opacity: 0.64;
+}
+
+.kyomi-command [cmdk-empty] {
+  padding: 2.5rem 1rem;
+  color: var(--muted-foreground);
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.kyomi-command-favicon {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.kyomi-command-favicon-media {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--foreground) 8%, transparent);
+  object-fit: cover;
+}
+
+.kyomi-command-item-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.kyomi-command-item-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.kyomi-command-item-copy p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kyomi-command-item-copy p:first-child {
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.kyomi-command-item-copy p:last-child {
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.kyomi-command-item-action {
+  appearance: none;
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  color: color-mix(in srgb, var(--foreground) 78%, transparent);
+}
+
+.kyomi-command-item-action:disabled {
+  cursor: default;
+}
+
+.kyomi-command [cmdk-item][data-selected="true"] .kyomi-command-item-action {
+  color: var(--foreground);
+}
+
+.kyomi-command-action-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kyomi-command-item-action svg {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.kyomi-command-hint {
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.kyomi-command-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}

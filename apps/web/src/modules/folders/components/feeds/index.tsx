@@ -1,6 +1,6 @@
 "use client";
 
-import { Refresh2Fill, Rss2Fill } from "@mingcute/react";
+import { Refresh2Fill, Rss2Fill } from "@kyomi/ui/icons/mingcute";
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@kyomi/ui/button";
 import { ScrollArea } from "@kyomi/ui/scroll-area";

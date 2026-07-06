@@ -1,9 +1,9 @@
 "use client";
 
-import { startTransition, useCallback, useEffect, useRef, useState } from "react";
+import { startTransition, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import * as RadixDialog from "@radix-ui/react-dialog";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { CommandDialog, CommandDialogPortal, CommandDialogPrimitive } from "@kyomi/ui/command";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";
 import {
@@ -37,6 +37,63 @@ type FollowFeedMutationInput = {
   feedId?: string | null;
   url: string;
 };
+
+function normalizeDedupeUrl(value: string | null | undefined) {
+  if (!value) {
+    return null;
+  }
+
+  try {
+    const url = new URL(value);
+    url.hash = "";
+    url.hostname = url.hostname.toLowerCase().replace(/^www\./, "");
+    if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+      url.pathname = url.pathname.slice(0, -1);
+    }
+    return `${url.hostname}${url.pathname}${url.search}`;
+  } catch {
+    return value.trim().toLowerCase();
+  }
+}
+
+function normalizeDedupeText(value: string | null | undefined) {
+  const normalized = value?.trim().replace(/\s+/g, " ").toLowerCase();
+  return normalized || null;
+}
+
+function getDiscoverResultDedupeKeys(item: DiscoverFeedResult) {
+  const keys: string[] = [];
+  const urlKey = normalizeDedupeUrl(item.url);
+  const linkKey = normalizeDedupeUrl(item.link);
+  const titleKey = normalizeDedupeText(item.title);
+  const descriptionKey = normalizeDedupeText(item.description);
+
+  if (urlKey) {
+    keys.push(`url:${urlKey}`);
+  }
+  if (linkKey && titleKey) {
+    keys.push(`link-title:${linkKey}:${titleKey}`);
+  }
+  if (titleKey && descriptionKey) {
+    keys.push(`title-description:${titleKey}:${descriptionKey}`);
+  }
+
+  return keys;
+}
+
+function dedupeDiscoverResults(results: DiscoverFeedResult[]) {
+  const seen = new Set<string>();
+  return results.filter((item) => {
+    const keys = getDiscoverResultDedupeKeys(item);
+    if (keys.length > 0 && keys.some((key) => seen.has(key))) {
+      return false;
+    }
+    for (const key of keys) {
+      seen.add(key);
+    }
+    return true;
+  });
+}
 
 function showFollowedToast(anchor?: HTMLElement | null) {
   if (!anchor?.isConnected) {
@@ -122,7 +179,10 @@ export function FollowSourcesDialog({
     retry: 0,
     refetchOnWindowFocus: false,
   });
-  const searchResults = hasOpmlImportCandidate ? [] : (discoverData ?? []);
+  const searchResults = useMemo(
+    () => (hasOpmlImportCandidate ? [] : dedupeDiscoverResults(discoverData ?? [])),
+    [discoverData, hasOpmlImportCandidate],
+  );
   const cappedSearchResults =
     searchResults.length > DISCOVER_RESULTS_UI_CAP
       ? searchResults.slice(0, DISCOVER_RESULTS_UI_CAP)
@@ -343,17 +403,17 @@ export function FollowSourcesDialog({
   }, [enableGlobalShortcut, platform, setDialogOpen]);
 
   return (
-    <RadixDialog.Root open={dialogOpen} onOpenChange={setDialogOpen}>
-      <RadixDialog.Portal>
-        <RadixDialog.Overlay className="kyomi-feed-command-overlay" />
-        <RadixDialog.Content
-          aria-describedby="kyomi-feed-command-description"
-          className="kyomi-feed-command-dialog"
+    <CommandDialog open={dialogOpen} onOpenChange={setDialogOpen}>
+      <CommandDialogPortal>
+        <CommandDialogPrimitive.Backdrop className="kyomi-command-overlay" />
+        <CommandDialogPrimitive.Popup
+          aria-describedby="kyomi-command-description"
+          className="kyomi-command-dialog"
         >
-          <RadixDialog.Title className="sr-only">Add feed</RadixDialog.Title>
-          <RadixDialog.Description id="kyomi-feed-command-description" className="sr-only">
+          <CommandDialogPrimitive.Title className="sr-only">Add feed</CommandDialogPrimitive.Title>
+          <CommandDialogPrimitive.Description id="kyomi-command-description" className="sr-only">
             Search feeds, paste a feed URL to follow it, or paste an OPML URL to import feeds.
-          </RadixDialog.Description>
+          </CommandDialogPrimitive.Description>
           <FollowSourcesCommand
             isPendingFollow={isPendingFollow}
             opmlImportUrl={opmlImportUrl}
@@ -364,8 +424,8 @@ export function FollowSourcesDialog({
             onQueryChange={setQuery}
             onStartOpmlImport={startOpmlImport}
           />
-        </RadixDialog.Content>
-      </RadixDialog.Portal>
-    </RadixDialog.Root>
+        </CommandDialogPrimitive.Popup>
+      </CommandDialogPortal>
+    </CommandDialog>
   );
 }

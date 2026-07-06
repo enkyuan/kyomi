@@ -3,7 +3,7 @@
 import type { CSSProperties } from "react";
 import { Suspense, useReducer } from "react";
 import { Link } from "@tanstack/react-router";
-import { AddFill, Settings1Fill } from "@mingcute/react";
+import { AddFill, Settings1Fill } from "@kyomi/ui/icons/mingcute";
 import { KyomiLogo, PremiumIcon } from "@kyomi/ui/icons";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import {

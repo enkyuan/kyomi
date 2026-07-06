@@ -1,6 +1,7 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
+import { writeTimezoneOffsetCookie } from "@lib/timezone";
 
 function subscribeToTimezoneChanges(onStoreChange: () => void) {
   const intervalId = window.setInterval(onStoreChange, 60_000);
@@ -20,9 +21,17 @@ function getServerTimezoneOffsetMinutes() {
 
 /** Client timezone offset in minutes; `undefined` until after mount so SSR and hydration agree. */
 export function useTimezone() {
-  return useSyncExternalStore(
+  const timezoneOffsetMinutes = useSyncExternalStore(
     subscribeToTimezoneChanges,
     getTimezoneOffsetMinutes,
     getServerTimezoneOffsetMinutes,
   );
+
+  useEffect(() => {
+    if (typeof timezoneOffsetMinutes === "number") {
+      writeTimezoneOffsetCookie(timezoneOffsetMinutes);
+    }
+  }, [timezoneOffsetMinutes]);
+
+  return timezoneOffsetMinutes;
 }

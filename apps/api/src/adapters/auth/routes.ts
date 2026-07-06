@@ -1,4 +1,5 @@
 import { Elysia } from "elysia";
+import { requestObservationPlugin } from "@shared/http/stacks";
 import { auth } from ".";
 import { hydrateStoredLocation } from "./location";
 
@@ -13,6 +14,7 @@ function withForwardedForHeader(request: Request, ipAddress?: string) {
 export const authRoutes = new Elysia({
   name: "kyomi.auth.routes",
 })
+  .use(requestObservationPlugin)
   .get("/api/auth/list-sessions", async (ctx) => {
     const headers = withForwardedForHeader(
       ctx.request,

@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { AddFill, RightFill, Rss2Fill } from "@mingcute/react";
+import { AddFill, RightFill, Rss2Fill } from "@kyomi/ui/icons/mingcute";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/button";
 import type { InboxSearch } from "@modules/inbox/lib/search";
@@ -74,7 +74,7 @@ export function TopSources({
             return (
               <div
                 key={feed.feedId}
-                className="-mx-1 min-w-0 rounded-xl px-2 py-1.5 hover:bg-accent/70"
+                className="-mx-1 min-w-0 rounded-[15px] p-2 hover:bg-accent/70"
               >
                 <div className="flex min-w-0 items-center gap-2.5">
                   <Link

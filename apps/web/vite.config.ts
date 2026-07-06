@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import { defineConfig, transformWithEsbuild } from "vite";
 import type { Plugin } from "vite";
 import { devtools } from "@tanstack/devtools-vite";
@@ -117,11 +118,11 @@ const config = defineConfig(({ command }) => {
       include: [
         "react",
         "react-dom",
-        "@mingcute/react",
+        "@kyomi/ui/icons/mingcute",
+        "@kyomi/ui/motion",
         "@tanstack/react-query",
         "@tanstack/react-router",
         "@tanstack/react-virtual",
-        "motion/react",
       ],
     },
     plugins: isTest
@@ -156,6 +157,9 @@ const config = defineConfig(({ command }) => {
           nitro({ rollupConfig: { external: [/^@sentry\//] } }),
         ],
     resolve: {
+      alias: {
+        "@styles": fileURLToPath(new URL("./src/styles", import.meta.url)),
+      },
       dedupe: ["react", "react-dom"],
     },
   };

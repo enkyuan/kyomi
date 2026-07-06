@@ -124,8 +124,8 @@ export function InboxAppearanceSettings({
               }
             }}
           >
-            <SelectTrigger className="min-w-44" size="sm">
-              <SelectValue />
+            <SelectTrigger className="w-fit min-w-0" size="sm">
+              <SelectValue className="flex-none" />
             </SelectTrigger>
             <SelectPopup>
               <SelectItem value="relative">Relative</SelectItem>
@@ -145,8 +145,8 @@ export function InboxAppearanceSettings({
               }
             }}
           >
-            <SelectTrigger className="min-w-40" size="sm">
-              <SelectValue />
+            <SelectTrigger className="w-fit min-w-0" size="sm">
+              <SelectValue className="flex-none" />
             </SelectTrigger>
             <SelectPopup>
               <SelectItem value="12h">12-hour</SelectItem>

@@ -1,6 +1,6 @@
 "use client";
 
-import { LeftFill } from "@mingcute/react";
+import { LeftFill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import type {
   ArticleDetailDto,

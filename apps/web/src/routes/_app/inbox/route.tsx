@@ -6,6 +6,7 @@ import { InboxRouteComponent } from "./-shared";
 
 export const Route = createFileRoute("/_app/inbox")({
   validateSearch: validateInboxSearch,
+  loaderDeps: ({ search }) => search,
   loader: loadInboxRoute,
   component: InboxRouteComponent,
 });

@@ -66,7 +66,7 @@ export const getSession = createServerFn({ method: "POST" }).handler(async () =>
 });
 
 export const updateUserEmail = createServerFn({ method: "POST" })
-  .inputValidator((input: { email: string }) => input)
+  .validator((input: { email: string }) => input)
   .handler(async ({ data }) => {
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");

@@ -1,6 +1,6 @@
 "use client";
 
-import { AddFill, CheckFill } from "@mingcute/react";
+import { AddFill, CheckFill } from "@kyomi/ui/icons/mingcute";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/button";
 import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";

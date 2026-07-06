@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb);
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  background-color: var(--scrollbar-thumb);
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+[data-slot="scroll-area-viewport"] {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+[data-slot="scroll-area-viewport"]::-webkit-scrollbar {
+  display: none;
+}
+
+/* Base UI scroll-area scrollbars — thin and hidden at rest, expand on hover over the scrollbar */
+[data-slot="scroll-area-scrollbar"] {
+  opacity: 1;
+  transition:
+    width 300ms 300ms,
+    height 300ms 300ms;
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="vertical"] {
+  width: 2px;
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"] {
+  height: 2px;
+}
+
+[data-slot="scroll-area-scrollbar"]:hover {
+  transition:
+    width 150ms 0ms,
+    height 150ms 0ms;
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="vertical"]:hover {
+  width: 6px;
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"]:hover {
+  height: 6px;
+}

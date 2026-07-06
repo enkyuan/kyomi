@@ -1,6 +1,6 @@
 "use client";
 
-import { SwitchFill } from "@mingcute/react";
+import { SwitchFill } from "@kyomi/ui/icons/mingcute";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 
 export const advancedSection = {

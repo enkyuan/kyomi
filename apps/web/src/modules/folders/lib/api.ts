@@ -21,7 +21,7 @@ export const listFolders = createServerFn({ method: "GET" }).handler(
 );
 
 export const createFolder = createServerFn({ method: "POST" })
-  .inputValidator((input: { name: string }) => input)
+  .validator((input: { name: string }) => input)
   .handler(async ({ data }): Promise<Folder> => {
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");
@@ -34,7 +34,7 @@ export const createFolder = createServerFn({ method: "POST" })
   });
 
 export const updateFolder = createServerFn({ method: "POST" })
-  .inputValidator((input: { folderId: string; name?: string; isPinned?: boolean }) => input)
+  .validator((input: { folderId: string; name?: string; isPinned?: boolean }) => input)
   .handler(async ({ data }): Promise<Folder> => {
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");
@@ -55,7 +55,7 @@ export const updateFolder = createServerFn({ method: "POST" })
   });
 
 export const deleteFolder = createServerFn({ method: "POST" })
-  .inputValidator((input: { folderId: string }) => input)
+  .validator((input: { folderId: string }) => input)
   .handler(async ({ data }): Promise<void> => {
     const headers = buildForwardHeaders(getRequestHeaders());
 
@@ -72,7 +72,7 @@ export const deleteFolder = createServerFn({ method: "POST" })
   });
 
 export const moveFeedsToFolder = createServerFn({ method: "POST" })
-  .inputValidator((input: { feedIds: string[]; folderId: string }) => input)
+  .validator((input: { feedIds: string[]; folderId: string }) => input)
   .handler(async ({ data }): Promise<{ updatedCount: number }> => {
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");

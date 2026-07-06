@@ -1,6 +1,12 @@
 "use client";
 
-import { AddFill, Delete2Fill, FileExportFill, ListCheckFill, MoveFill } from "@mingcute/react";
+import {
+  AddFill,
+  Delete2Fill,
+  FileExportFill,
+  ListCheckFill,
+  MoveFill,
+} from "@kyomi/ui/icons/mingcute";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/button";
 import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";

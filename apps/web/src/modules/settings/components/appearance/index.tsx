@@ -1,6 +1,6 @@
 "use client";
 
-import { BrushFill } from "@mingcute/react";
+import { BrushFill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 import { InboxAppearanceSettings } from "./inbox-settings";

@@ -1,6 +1,12 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
+      "@kyomi/ui": ["../../packages/ui/src/index.ts"],
+      "@kyomi/ui/*": ["../../packages/ui/src/*"]
+    },
     "strict": true
   }
 }

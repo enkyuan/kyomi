@@ -10,7 +10,7 @@ import {
   PinFill,
   PinLine,
   RightFill,
-} from "@mingcute/react";
+} from "@kyomi/ui/icons/mingcute";
 import { useState } from "react";
 import {
   AlertDialog,

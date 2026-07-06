@@ -1,7 +1,12 @@
 import type { QueryClient } from "@tanstack/react-query";
 import { listFollowedFeeds } from "@modules/feeds/lib/api";
 import { getInboxItemIdFromSlug } from "@modules/inbox/lib/articles/slug";
-import { followedFeedsQueryKey, inboxDetailQueryOptions } from "@modules/inbox/queries/options";
+import type { InboxSearch } from "@modules/inbox/lib/search";
+import {
+  followedFeedsQueryKey,
+  inboxDetailQueryOptions,
+  prefetchInboxHotQueries,
+} from "@modules/inbox/queries/options";
 import { getInboxLoaderData } from "@modules/inbox/lib/route";
 import { QUERY_TIMES } from "@lib/query/policies";
 
@@ -14,9 +19,10 @@ type InboxRouteLoaderArgs = {
   params?: {
     article?: string;
   };
+  deps?: InboxSearch;
 };
 
-export async function loadInboxRoute({ context, params }: InboxRouteLoaderArgs) {
+export async function loadInboxRoute({ context, params, deps }: InboxRouteLoaderArgs) {
   const queryClient = context.queryClient;
   const routeItemId = getInboxItemIdFromSlug(params?.article);
   const followedFeedsPrefetch = queryClient
@@ -27,15 +33,25 @@ export async function loadInboxRoute({ context, params }: InboxRouteLoaderArgs) 
       gcTime: QUERY_TIMES.staticMetadataGc,
     })
     .catch(() => undefined);
-  const detailPrefetch = routeItemId
-    ? queryClient.prefetchQuery(inboxDetailQueryOptions(routeItemId)).catch(() => undefined)
-    : Promise.resolve();
+  const loaderData = await getInboxLoaderData();
+  const hotPrefetch =
+    typeof loaderData.initialTimezoneOffsetMinutes === "number"
+      ? prefetchInboxHotQueries(queryClient, {
+          filter: deps?.filter ?? loaderData.initialInboxPreferences.inboxDefaultView,
+          search: deps?.search,
+          feedId: deps?.feedId,
+          folderId: deps?.folderId,
+          itemId: routeItemId,
+          sort: deps?.sort,
+          timezoneOffsetMinutes: loaderData.initialTimezoneOffsetMinutes,
+        }).catch(() => undefined)
+      : Promise.resolve();
+  const detailPrefetch =
+    routeItemId && typeof loaderData.initialTimezoneOffsetMinutes !== "number"
+      ? queryClient.prefetchQuery(inboxDetailQueryOptions(routeItemId)).catch(() => undefined)
+      : Promise.resolve();
 
-  const [, loaderData] = await Promise.all([
-    followedFeedsPrefetch,
-    getInboxLoaderData(),
-    detailPrefetch,
-  ]);
+  await Promise.all([followedFeedsPrefetch, hotPrefetch, detailPrefetch]);
   return loaderData;
 }
 

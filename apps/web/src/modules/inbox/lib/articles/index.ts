@@ -160,7 +160,7 @@ async function fetchInboxList({
 }
 
 export const getInboxItems = createServerFn({ method: "GET" })
-  .inputValidator((input: GetInboxItemsInput) => input)
+  .validator((input: GetInboxItemsInput) => input)
   .handler(async ({ data }): Promise<InboxResponse> => {
     const { fetchValidatedJson, cursorListResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
@@ -207,7 +207,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
   });
 
 export const getInboxItemDetail = createServerFn({ method: "GET" })
-  .inputValidator((input: { itemId: string }) => input)
+  .validator((input: { itemId: string }) => input)
   .handler(async ({ data }): Promise<InboxDetailResponse> => {
     const { fetchValidatedJson, articleDetailSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
@@ -221,7 +221,7 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
   });
 
 export const updateInboxItemState = createServerFn({ method: "POST" })
-  .inputValidator((input: UpdateInboxItemStateInput) => input)
+  .validator((input: UpdateInboxItemStateInput) => input)
   .handler(async ({ data }): Promise<{ message: string }> => {
     const { fetchValidatedJson, messageResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
@@ -249,7 +249,7 @@ export const updateInboxItemState = createServerFn({ method: "POST" })
   });
 
 export const reportBrokenArticle = createServerFn({ method: "POST" })
-  .inputValidator((input: ReportBrokenArticleInput) => input)
+  .validator((input: ReportBrokenArticleInput) => input)
   .handler(async ({ data }): Promise<{ message: string }> => {
     const { fetchValidatedJson, messageResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
@@ -269,7 +269,7 @@ export const reportBrokenArticle = createServerFn({ method: "POST" })
   });
 
 export const recordInboxItemView = createServerFn({ method: "POST" })
-  .inputValidator((input: { itemId: string }) => input)
+  .validator((input: { itemId: string }) => input)
   .handler(async ({ data }): Promise<{ message: string }> => {
     const headers = getRequestHeaders();
     return apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}/view`, {
@@ -279,7 +279,7 @@ export const recordInboxItemView = createServerFn({ method: "POST" })
   });
 
 export const extractInboxItemFullText = createServerFn({ method: "POST" })
-  .inputValidator((input: { itemId: string }) => input)
+  .validator((input: { itemId: string }) => input)
   .handler(async ({ data }): Promise<ExtractFullTextResponseDto> => {
     const { fetchValidatedJson, extractFullTextResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
@@ -294,7 +294,7 @@ export const extractInboxItemFullText = createServerFn({ method: "POST" })
   });
 
 export const getSidebarInboxCounts = createServerFn({ method: "GET" })
-  .inputValidator(
+  .validator(
     (input: { timezoneOffsetMinutes?: number; feedId?: string; folderId?: string }) => input,
   )
   .handler(async ({ data }): Promise<SidebarInboxCounts> => {

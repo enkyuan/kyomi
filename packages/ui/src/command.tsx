@@ -1,20 +1,9 @@
 "use client";
 
 import { Dialog as CommandDialogPrimitive } from "@base-ui/react/dialog";
-import { SearchLine } from "@mingcute/react";
+import { Command as CommandPrimitive } from "cmdk";
 import type * as React from "react";
 import { cn } from "./lib/utils";
-import {
-  Autocomplete,
-  AutocompleteCollection,
-  AutocompleteEmpty,
-  AutocompleteGroup,
-  AutocompleteGroupLabel,
-  AutocompleteInput,
-  AutocompleteItem,
-  AutocompleteList,
-  AutocompleteSeparator,
-} from "./autocomplete";
 
 export const CommandDialog: typeof CommandDialogPrimitive.Root = CommandDialogPrimitive.Root;
 
@@ -87,50 +76,36 @@ export function CommandDialogPopup({
 }
 
 export function Command({
-  autoHighlight = "always",
-  keepHighlight = true,
+  className,
   ...props
-}: React.ComponentProps<typeof Autocomplete>): React.ReactElement {
-  return (
-    <Autocomplete
-      autoHighlight={autoHighlight}
-      inline
-      keepHighlight={keepHighlight}
-      open
-      {...props}
-    />
-  );
+}: React.ComponentProps<typeof CommandPrimitive>): React.ReactElement {
+  return <CommandPrimitive className={className} data-slot="command" {...props} />;
 }
-
-const COMMAND_INPUT_START_ADDON = <SearchLine />;
 
 export function CommandInput({
   className,
   placeholder = undefined,
   ...props
-}: React.ComponentProps<typeof AutocompleteInput>): React.ReactElement {
+}: React.ComponentProps<typeof CommandPrimitive.Input>): React.ReactElement {
   return (
-    <div className="px-2.5 py-1.5">
-      <AutocompleteInput
-        className={cn(
-          "border-transparent! bg-transparent! shadow-none before:hidden has-focus-visible:ring-0",
-          className,
-        )}
-        placeholder={placeholder}
-        size="lg"
-        startAddon={COMMAND_INPUT_START_ADDON}
-        {...props}
-      />
-    </div>
+    <CommandPrimitive.Input
+      className={cn(
+        "flex h-11 w-full min-w-0 rounded-md bg-transparent px-3 py-2 text-foreground text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",
+        className,
+      )}
+      data-slot="command-input"
+      placeholder={placeholder}
+      {...props}
+    />
   );
 }
 
 export function CommandList({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompleteList>): React.ReactElement {
+}: React.ComponentProps<typeof CommandPrimitive.List>): React.ReactElement {
   return (
-    <AutocompleteList
+    <CommandPrimitive.List
       className={cn("not-empty:scroll-py-2 not-empty:p-2", className)}
       data-slot="command-list"
       {...props}
@@ -141,9 +116,9 @@ export function CommandList({
 export function CommandEmpty({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompleteEmpty>): React.ReactElement {
+}: React.ComponentProps<typeof CommandPrimitive.Empty>): React.ReactElement {
   return (
-    <AutocompleteEmpty
+    <CommandPrimitive.Empty
       className={cn("not-empty:py-6", className)}
       data-slot="command-empty"
       {...props}
@@ -169,40 +144,43 @@ export function CommandPanel({
 export function CommandGroup({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompleteGroup>): React.ReactElement {
-  return <AutocompleteGroup className={className} data-slot="command-group" {...props} />;
+}: React.ComponentProps<typeof CommandPrimitive.Group>): React.ReactElement {
+  return <CommandPrimitive.Group className={className} data-slot="command-group" {...props} />;
 }
 
 export function CommandGroupLabel({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompleteGroupLabel>): React.ReactElement {
-  return (
-    <AutocompleteGroupLabel className={className} data-slot="command-group-label" {...props} />
-  );
+}: React.ComponentProps<"div">): React.ReactElement {
+  return <div className={className} data-slot="command-group-label" {...props} />;
 }
 
-export function CommandCollection({
+export function CommandLoading({
+  className,
   ...props
-}: React.ComponentProps<typeof AutocompleteCollection>): React.ReactElement {
-  return <AutocompleteCollection data-slot="command-collection" {...props} />;
+}: React.ComponentProps<typeof CommandPrimitive.Loading>): React.ReactElement {
+  return <CommandPrimitive.Loading className={className} data-slot="command-loading" {...props} />;
 }
 
 export function CommandItem({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompleteItem>): React.ReactElement {
+}: React.ComponentProps<typeof CommandPrimitive.Item>): React.ReactElement {
   return (
-    <AutocompleteItem className={cn("py-1.5", className)} data-slot="command-item" {...props} />
+    <CommandPrimitive.Item
+      className={cn("py-1.5", className)}
+      data-slot="command-item"
+      {...props}
+    />
   );
 }
 
 export function CommandSeparator({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompleteSeparator>): React.ReactElement {
+}: React.ComponentProps<typeof CommandPrimitive.Separator>): React.ReactElement {
   return (
-    <AutocompleteSeparator
+    <CommandPrimitive.Separator
       className={cn("my-2", className)}
       data-slot="command-separator"
       {...props}
@@ -242,4 +220,5 @@ export function CommandFooter({
   );
 }
 
-export { CommandDialogPrimitive };
+export { CommandDialogPrimitive, CommandPrimitive };
+export { defaultFilter, useCommandState } from "cmdk";

@@ -1,6 +1,6 @@
 "use client";
 
-import { HeadAiFill } from "@mingcute/react";
+import { HeadAiFill } from "@kyomi/ui/icons/mingcute";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
 
 export const personalizationSection = {

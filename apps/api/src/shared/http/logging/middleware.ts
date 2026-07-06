@@ -1,37 +1,83 @@
 import { Elysia } from "elysia";
+import logixlysia, { type LogLevel as LogixlysiaLevel } from "logixlysia";
 import { logger } from "@adapters/logger";
-import { getRequestIdFromHeaders } from "@shared/utils/request-id";
-import { elapsedMs } from "@shared/utils/timing";
+import { SERVICE_NAME } from "@config/constants";
+import { env } from "@config/env";
 
-const startedAtByRequest = new WeakMap<Request, number>();
+type LogixlysiaContext = {
+  request: Request;
+  requestId?: unknown;
+  store?: {
+    logger?: {
+      mergeContext?: (key: Request | object, partial: Record<string, unknown>) => void;
+    };
+  };
+};
 
-function requestPathname(request: Request): string {
-  return new URL(request.url).pathname;
+function getPinoLevel() {
+  return env.LOG_LEVEL ?? (env.NODE_ENV === "production" ? "warn" : "info");
 }
 
-/** Structured request start / complete logging (pairs with request id middleware on the same stack). */
+function getRequestLogFilter(): { level: LogixlysiaLevel[] } | undefined {
+  if (env.LOG_LEVEL === "error") {
+    return { level: ["ERROR"] };
+  }
+  if (env.LOG_LEVEL === "warn") {
+    return { level: ["WARNING", "ERROR"] };
+  }
+  return undefined;
+}
+
+function mergeRequestIdIntoLogixlysiaContext(context: LogixlysiaContext) {
+  if (typeof context.requestId !== "string") {
+    return;
+  }
+  context.store?.logger?.mergeContext?.(context.request, {
+    requestId: context.requestId,
+  });
+}
+
+/**
+ * Human-readable request logging through Logixlysia, plus Kyomi's domain-event logger
+ * on the route context (`logger.info("event", context)`).
+ */
 export const loggingMiddleware = new Elysia({
   name: "logging",
 })
+  .use(
+    logixlysia({
+      preset: env.NODE_ENV === "production" ? "prod" : "dev",
+      config: {
+        autoRedact: true,
+        contextDepth: 2,
+        customLogFormat:
+          "{now} {service}{level} {method} {pathname} {status} {duration} {message}{speed}",
+        logFilter: getRequestLogFilter(),
+        pino: {
+          base: {
+            environment: env.NODE_ENV,
+            service: SERVICE_NAME,
+          },
+          level: getPinoLevel(),
+          redact: {
+            censor: "[redacted]",
+            paths: ["authorization", "cookie", "password", "set-cookie", "token"],
+          },
+        },
+        service: "kyomi-api",
+        showContextTree: true,
+        showStartupMessage: false,
+        slowThreshold: 500,
+        timestamp: {
+          translateTime: "yyyy-mm-dd HH:MM:ss.SSS",
+        },
+        useColors: env.NODE_ENV !== "production",
+        verySlowThreshold: 1000,
+      },
+    }),
+  )
   .decorate("logger", logger)
-  .onRequest(({ request, logger: log }) => {
-    startedAtByRequest.set(request, Date.now());
-    const observedRequestId = getRequestIdFromHeaders(request.headers);
-    log.info("request.started", {
-      path: requestPathname(request),
-      method: request.method,
-      requestId: observedRequestId,
-    });
-  })
-  .onAfterResponse(({ request, logger: log, set }) => {
-    const observedRequestId = getRequestIdFromHeaders(request.headers);
-    const startedAt = startedAtByRequest.get(request);
-    log.info("request.completed", {
-      path: requestPathname(request),
-      method: request.method,
-      status: set.status,
-      requestId: observedRequestId,
-      durationMs: startedAt ? elapsedMs(startedAt) : undefined,
-    });
-    startedAtByRequest.delete(request);
+  .derive((context) => {
+    mergeRequestIdIntoLogixlysiaContext(context as LogixlysiaContext);
+    return {};
   });

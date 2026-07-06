@@ -28,7 +28,7 @@ export const getUserPreferences = createServerFn({ method: "GET" }).handler(
 );
 
 export const updateUserPreferences = createServerFn({ method: "POST" })
-  .inputValidator((input: Partial<UserPreferencesDto>) => input)
+  .validator((input: Partial<UserPreferencesDto>) => input)
   .handler(async ({ data }): Promise<UserPreferencesDto> => {
     const { fetchValidatedJson, userPreferencesSchema } = await getPreferencesSchemaModule();
     const headers = buildForwardHeaders(getRequestHeaders());

@@ -107,7 +107,7 @@ function normalizeUrlCandidate(value: string) {
 }
 
 export const searchFeeds = createServerFn({ method: "GET" })
-  .inputValidator((input: { query: string }) => input)
+  .validator((input: { query: string }) => input)
   .handler(async ({ data }): Promise<DiscoverFeedResult[]> => {
     const { fetchValidatedJson, discoverFeedResultSchema } = await getFeedsSchemaModule();
     const query = data.query.trim();
@@ -171,7 +171,7 @@ export const searchFeeds = createServerFn({ method: "GET" })
   });
 
 export const followFeed = createServerFn({ method: "POST" })
-  .inputValidator((input: FollowFeedInput) => input)
+  .validator((input: FollowFeedInput) => input)
   .handler(async ({ data }): Promise<FollowFeedResult> => {
     const { fetchValidatedJson, followFeedResultSchema } = await getFeedsSchemaModule();
     const feedId = data.feedId?.trim();
@@ -213,7 +213,7 @@ export const listFollowedFeeds = createServerFn({ method: "GET" }).handler(
 );
 
 export const importOpmlFromUrl = createServerFn({ method: "POST" })
-  .inputValidator((input: { url: string; filename?: string | null }) => input)
+  .validator((input: { url: string; filename?: string | null }) => input)
   .handler(async ({ data }): Promise<OpmlImportAccepted> => {
     const { fetchValidatedJson, opmlImportAcceptedSchema } = await getFeedsSchemaModule();
     const normalizedUrl = normalizeUrlCandidate(data.url);
@@ -238,7 +238,7 @@ export const importOpmlFromUrl = createServerFn({ method: "POST" })
   });
 
 export const getOpmlImportStatus = createServerFn({ method: "GET" })
-  .inputValidator((input: { taskId: string }) => input)
+  .validator((input: { taskId: string }) => input)
   .handler(async ({ data }): Promise<OpmlImportStatus> => {
     const { fetchValidatedJson, opmlImportStatusSchema } = await getFeedsSchemaModule();
     const taskId = data.taskId.trim();
@@ -277,7 +277,7 @@ export const exportOpml = createServerFn({ method: "GET" }).handler(
 );
 
 export const unfollowFeed = createServerFn({ method: "POST" })
-  .inputValidator((input: { feedId: string }) => input)
+  .validator((input: { feedId: string }) => input)
   .handler(async ({ data }): Promise<{ message: string }> => {
     const headers = buildForwardHeaders(getRequestHeaders());
     return apiJson<{ message: string }>(`/api/v1/feeds/${encodeURIComponent(data.feedId)}`, {
@@ -287,9 +287,7 @@ export const unfollowFeed = createServerFn({ method: "POST" })
   });
 
 export const updateFeedSubscription = createServerFn({ method: "POST" })
-  .inputValidator(
-    (input: { feedId: string; customTitle?: string | null; isPinned?: boolean }) => input,
-  )
+  .validator((input: { feedId: string; customTitle?: string | null; isPinned?: boolean }) => input)
   .handler(async ({ data }): Promise<{ message: string }> => {
     const { fetchValidatedJson, messageResponseSchema } = await getFeedsSchemaModule();
     const headers = buildForwardHeaders(getRequestHeaders());

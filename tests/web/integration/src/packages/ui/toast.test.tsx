@@ -1,8 +1,8 @@
 // @vitest-environment jsdom
 
 import { act, render, screen, waitFor } from "@testing-library/react";
-import * as RadixDialog from "@radix-ui/react-dialog";
 import { afterEach, describe, expect, test, vi } from "vitest";
+import { Dialog, DialogBackdrop, DialogPortal, DialogPrimitive } from "@kyomi/ui/dialog";
 import { AnchoredToastProvider, ToastProvider, anchoredToastManager } from "@kyomi/ui/toast";
 
 describe("AnchoredToastProvider", () => {
@@ -63,15 +63,15 @@ describe("AnchoredToastProvider", () => {
   test("renders an anchored toast for an anchor inside a modal dialog", async () => {
     render(
       <AnchoredToastProvider>
-        <RadixDialog.Root open>
-          <RadixDialog.Portal>
-            <RadixDialog.Overlay />
-            <RadixDialog.Content aria-describedby={undefined}>
-              <RadixDialog.Title>Add feed</RadixDialog.Title>
+        <Dialog open>
+          <DialogPortal>
+            <DialogBackdrop />
+            <DialogPrimitive.Popup aria-describedby={undefined}>
+              <DialogPrimitive.Title>Add feed</DialogPrimitive.Title>
               <button type="button">Add feed</button>
-            </RadixDialog.Content>
-          </RadixDialog.Portal>
-        </RadixDialog.Root>
+            </DialogPrimitive.Popup>
+          </DialogPortal>
+        </Dialog>
       </AnchoredToastProvider>,
     );
     const anchor = screen.getByRole("button", { name: "Add feed" });
@@ -236,15 +236,15 @@ describe("AnchoredToastProvider", () => {
     render(
       <ToastProvider>
         <AnchoredToastProvider>
-          <RadixDialog.Root open>
-            <RadixDialog.Portal>
-              <RadixDialog.Overlay />
-              <RadixDialog.Content aria-describedby={undefined}>
-                <RadixDialog.Title>Add feed</RadixDialog.Title>
+          <Dialog open>
+            <DialogPortal>
+              <DialogBackdrop />
+              <DialogPrimitive.Popup aria-describedby={undefined}>
+                <DialogPrimitive.Title>Add feed</DialogPrimitive.Title>
                 <button type="button">Add feed</button>
-              </RadixDialog.Content>
-            </RadixDialog.Portal>
-          </RadixDialog.Root>
+              </DialogPrimitive.Popup>
+            </DialogPortal>
+          </Dialog>
         </AnchoredToastProvider>
       </ToastProvider>,
     );

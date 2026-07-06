@@ -2,7 +2,7 @@
 
 import { useReducer } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { AddFill } from "@mingcute/react";
+import { AddFill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import {
   Dialog as UiDialog,

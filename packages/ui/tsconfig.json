@@ -2,6 +2,14 @@
   "extends": "../tsconfig/web.json",
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "compilerOptions": {
+    "paths": {
+      "*": ["./*"],
+      "@/*": ["./src/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@icons/*": ["./src/icons/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@styles/*": ["./src/styles/*"]
+    },
     "noUncheckedSideEffectImports": true
   }
 }

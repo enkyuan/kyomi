@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AttachmentLine, Message3Fill, PicLine } from "@mingcute/react";
+import { AttachmentLine, Message3Fill, PicLine } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import { Form } from "@kyomi/ui/form";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";

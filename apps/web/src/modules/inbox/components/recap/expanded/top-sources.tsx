@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { AddFill, Rss2Fill } from "@mingcute/react";
+import { AddFill, Rss2Fill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import type { InboxSearch } from "@modules/inbox/lib/search";
 import {

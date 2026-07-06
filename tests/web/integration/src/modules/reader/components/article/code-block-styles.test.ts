@@ -28,7 +28,7 @@ function expectDeclaration(block: string, property: string, value: string): void
 describe("reader code block styles", () => {
   test("wrap enhanced code without letting content resize the block", () => {
     const stylesheets = [
-      readStylesheet("apps/web/src/styles.css"),
+      readStylesheet("packages/ui/src/styles/reader.css"),
       readStylesheet("packages/reader/src/web/styles.css"),
     ];
 
