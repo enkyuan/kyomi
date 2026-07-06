@@ -12,7 +12,7 @@ import { exportOpml } from "@modules/feeds/lib/api";
 import { CreateFolderDialog } from "@modules/folders/components/dialog";
 import type { useInboxRouteState } from "@modules/inbox/hooks/use-layout";
 import { inboxRecapQueryOptions } from "@modules/inbox/queries/options";
-import { getRecapScreenKey, RecapContent } from "./content";
+import { RecapContent } from "./content";
 import type {
   InboxRecapRailFolderBackTarget,
   InboxRecapRailSection,
@@ -25,6 +25,7 @@ import {
   useRemoveRecapFeedsMutation,
   useUnsaveRecapItemMutation,
 } from "./mutations";
+import { getRecapScreenKey } from "./screen-key";
 
 const FollowSourcesDialog = lazyNamed(
   () => import("@modules/feeds/components/follow/dialog"),

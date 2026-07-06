@@ -75,7 +75,8 @@
             "react-doctor/dangerous-html-sink",
             "react-doctor/insecure-crypto-risk",
             "react-doctor/mcp-tool-capability-risk",
-            "react-doctor/request-body-mass-assignment"
+            "react-doctor/request-body-mass-assignment",
+            "react-doctor/unsafe-json-in-html"
           ]
         },
         {

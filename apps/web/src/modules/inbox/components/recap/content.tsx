@@ -19,24 +19,6 @@ type RemoveFeedsToastOptions = {
   feedName?: string;
 };
 
-export function getRecapScreenKey({
-  expandedSection,
-  isError,
-  isLoading,
-}: {
-  expandedSection: InboxRecapRailSection | null;
-  isError: boolean;
-  isLoading: boolean;
-}) {
-  if (isLoading) {
-    return "recap-loading";
-  }
-  if (isError) {
-    return "recap-error";
-  }
-  return expandedSection ? `recap-expanded-${expandedSection}` : "recap-summary";
-}
-
 export function RecapContent({
   expandedSection,
   exportingOpml,

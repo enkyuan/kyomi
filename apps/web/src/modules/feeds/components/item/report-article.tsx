@@ -78,14 +78,15 @@ function stopDialogPropagation(event: SyntheticEvent) {
 
 function formatReportDetails(selectedReasonIds: ReportReasonId[], otherDetails: string) {
   const lines: string[] = [];
+  const selectedReasonIdSet = new Set(selectedReasonIds);
   for (const option of REPORT_REASON_OPTIONS) {
-    if (option.id !== "other" && selectedReasonIds.includes(option.id)) {
+    if (option.id !== "other" && selectedReasonIdSet.has(option.id)) {
       lines.push(`- ${option.label}`);
     }
   }
   const trimmedOtherDetails = otherDetails.trim();
 
-  if (selectedReasonIds.includes("other") && trimmedOtherDetails) {
+  if (selectedReasonIdSet.has("other") && trimmedOtherDetails) {
     lines.push(`- Other: ${trimmedOtherDetails}`);
   }
 
@@ -95,8 +96,9 @@ function formatReportDetails(selectedReasonIds: ReportReasonId[], otherDetails: 
 function getPrimaryReportReason(
   selectedReasonIds: ReportReasonId[],
 ): NonNullable<ReportBrokenArticleInput["reason"]> {
+  const selectedReasonIdSet = new Set(selectedReasonIds);
   return (
-    REPORT_REASON_OPTIONS.find((option) => selectedReasonIds.includes(option.id))?.reportReason ??
+    REPORT_REASON_OPTIONS.find((option) => selectedReasonIdSet.has(option.id))?.reportReason ??
     "broken_article"
   );
 }

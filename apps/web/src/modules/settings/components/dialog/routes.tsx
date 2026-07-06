@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { createContext, use, useMemo } from "react";
 import {
   Outlet,
   RouterProvider,
@@ -46,7 +46,7 @@ type SettingsDialogRouteContextValue = {
 const SettingsDialogRouteContext = createContext<SettingsDialogRouteContextValue | null>(null);
 
 function useSettingsDialogRouteContext() {
-  const value = useContext(SettingsDialogRouteContext);
+  const value = use(SettingsDialogRouteContext);
 
   if (!value) {
     throw new Error("Settings dialog routes must be rendered inside SettingsDialogRoutes.");
@@ -216,8 +216,10 @@ type SettingsDialogRoutesProps = {
 };
 
 export function SettingsDialogRoutes({ logout }: SettingsDialogRoutesProps) {
+  const routeContextValue = useMemo(() => ({ logout }), [logout]);
+
   return (
-    <SettingsDialogRouteContext.Provider value={{ logout }}>
+    <SettingsDialogRouteContext.Provider value={routeContextValue}>
       <RouterProvider router={settingsRouter} />
     </SettingsDialogRouteContext.Provider>
   );

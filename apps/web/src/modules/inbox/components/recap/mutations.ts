@@ -114,6 +114,7 @@ export function useMoveRecapFeedMutation(queryClient: QueryClient) {
 }
 
 export function useRemoveRecapFeedsMutation(queryClient: QueryClient) {
+  // oxlint-disable-next-line react-doctor/query-mutation-missing-invalidation -- invalidateRecapSurface invalidates inboxRecapQueryKey and related recap/sidebar surfaces.
   return useMutation({
     mutationFn: async ({ feedIds }: RemoveFeedsInput) => {
       await Promise.all(feedIds.map((feedId) => unfollowFeed({ data: { feedId } })));
@@ -140,7 +141,7 @@ export function useRemoveRecapFeedsMutation(queryClient: QueryClient) {
         });
       }
 
-      // oxlint-disable-next-line react-doctor/async-defer-await -- invalidation must run on every path, not just the toast path
+      // oxlint-disable-next-line react-doctor/async-defer-await -- invalidation must run on every path, not just the toast path.
       await invalidateRecapSurface(queryClient);
       if (shouldShowAnchoredToast) {
         return;
