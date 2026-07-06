@@ -8,7 +8,7 @@ import { Source } from "./source";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/card";
 import { Timestamp } from "@modules/inbox/components/timestamp";
 import { useTimestamp } from "@hooks/use-timestamp";
-import { usePretextLayout } from "@hooks/use-pretext";
+import { usePretextLayout } from "@kyomi/ui/hooks/use-pretext";
 import { getSectionClassNames, getTypography } from "@modules/feeds/lib/layout";
 import { arePropsEqual, type Props } from "@modules/feeds/lib/props";
 
