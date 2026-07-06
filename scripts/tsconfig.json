@@ -9,20 +9,8 @@
       "@shared/*": ["../apps/api/src/shared/*"],
       "@modules/*": ["../apps/api/src/modules/*"],
       "@scripts/*": ["./*"],
-      "@catalog/*": ["./catalog/*"],
-      "@categories/*": ["./categories/*"],
-      "@ci/*": ["./ci/*"],
-      "@smoke/*": ["./smoke/*"],
       "@kyomi/db": ["../packages/db/src/index.ts"],
-      "@kyomi/db/schema": ["../packages/db/src/schema.ts"],
-      "@kyomi/worker": ["../packages/worker/src/index.ts"],
-      "@kyomi/worker/queue": ["../packages/worker/src/services/queue/index.ts"],
-      "@kyomi/worker/sanitization": ["../packages/worker/src/sanitization/index.ts"],
-      "@kyomi/worker/ingestion": ["../packages/worker/src/services/feed/index.ts"],
-      "@kyomi/worker/favicon": ["../packages/worker/src/services/favicon/index.ts"],
-      "@kyomi/worker/favicon/browser": ["../packages/worker/src/services/favicon/proxy-url.ts"],
-      "@kyomi/worker/lib/article-identity": ["../packages/worker/src/lib/article-identity.ts"],
-      "@kyomi/worker/lib/html-entities": ["../packages/worker/src/lib/html-entities.ts"]
+      "@kyomi/worker": ["../packages/worker/src/index.ts"]
     },
     "typeRoots": [
       "../node_modules/@types",
