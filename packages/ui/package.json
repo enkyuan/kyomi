@@ -13,7 +13,6 @@
     "registry": "https://npm.pkg.github.com"
   },
   "exports": {
-    ".": "./src/index.ts",
     "./lib/utils": "./src/lib/utils.ts",
     "./checkbox": "./src/checkbox/index.tsx",
     "./checkbox/group": "./src/checkbox/group.tsx",

@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { EyeCloseLine, EyeLine } from "@mingcute/react";
+import { useEffect, useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
 import { Link, useRouter } from "@tanstack/react-router";
@@ -20,8 +21,9 @@ import {
 import { Form } from "@kyomi/ui/form";
 import { Field, FieldError, FieldLabel } from "@kyomi/ui/field";
 import { Input } from "@kyomi/ui/input";
-import { PasswordInput } from "@kyomi/ui/password-input";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@kyomi/ui/input/group";
 import { Spinner } from "@kyomi/ui/spinner";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { toastManager } from "@kyomi/ui/toast";
 import { getFieldErrorMessage, loginDefaultValues, loginFormValidator } from "@modules/auth/schema";
 
@@ -29,6 +31,7 @@ export function Login() {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
   const form = useForm({
     defaultValues: loginDefaultValues,
     validators: {
@@ -153,14 +156,38 @@ export function Login() {
                 return (
                   <Field>
                     <FieldLabel>Password</FieldLabel>
-                    <PasswordInput
-                      autoComplete="current-password"
-                      name={field.name}
-                      onBlur={field.handleBlur}
-                      onChange={(event) => field.handleChange(event.target.value)}
-                      placeholder="Enter your password"
-                      value={field.state.value}
-                    />
+                    <InputGroup>
+                      <InputGroupInput
+                        aria-label="Password with toggle visibility"
+                        autoComplete="current-password"
+                        name={field.name}
+                        onBlur={field.handleBlur}
+                        onChange={(event) => field.handleChange(event.target.value)}
+                        placeholder="Enter your password"
+                        type={showPassword ? "text" : "password"}
+                        value={field.state.value}
+                      />
+                      <InputGroupAddon align="inline-end">
+                        <Tooltip>
+                          <TooltipTrigger
+                            render={
+                              <Button
+                                aria-label={showPassword ? "Hide password" : "Show password"}
+                                onClick={() => setShowPassword((visible) => !visible)}
+                                size="icon-xs"
+                                type="button"
+                                variant="ghost"
+                              />
+                            }
+                          >
+                            {showPassword ? <EyeCloseLine /> : <EyeLine />}
+                          </TooltipTrigger>
+                          <TooltipPopup>
+                            {showPassword ? "Hide password" : "Show password"}
+                          </TooltipPopup>
+                        </Tooltip>
+                      </InputGroupAddon>
+                    </InputGroup>
                     {errorMessage ? (
                       <FieldError match={true}>{errorMessage as string}</FieldError>
                     ) : null}
