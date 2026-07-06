@@ -23,7 +23,7 @@ function rememberCacheValue<T>(cache: Map<string, T>, key: string, value: T) {
 }
 
 function preparePretextText(text: string, font: string) {
-  if (import.meta.env.SSR) {
+  if (typeof window === "undefined") {
     return null;
   }
   const key = `${font}\n${text}`;

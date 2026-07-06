@@ -1,5 +1,9 @@
 @import "highlight.js/styles/github-dark.css";
 
+:root {
+  --matcha: oklch(0.819 0.121 131.147);
+}
+
 .reader-content {
   font-family: var(--font-reader);
 }
@@ -11,6 +15,15 @@
 .reader-content .article-body {
   font-size: var(--reader-font-size, 1rem);
   color: color-mix(in srgb, var(--foreground) 92%, transparent);
+}
+
+.reader-content .article-body ::selection {
+  background-color: color-mix(in oklab, var(--matcha) 28%, transparent);
+}
+
+.reader-content .article-body :is(mark, .highlight) {
+  background-color: color-mix(in oklab, var(--matcha) 42%, transparent);
+  color: inherit;
 }
 
 .reader-content .article-body :is(h1, h2, h3, h4, h5, h6) {

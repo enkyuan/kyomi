@@ -3,7 +3,7 @@
 import type { CSSProperties, PointerEvent, RefObject } from "react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import { AnimatePresence, m, type MotionValue } from "motion/react";
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 import { TooltipValue } from "./value-display";
 import { VisualThumb } from "./visual-thumb";
 import {
@@ -14,8 +14,8 @@ import {
   TRACK_BG_HEIGHT,
   TRACK_INSET,
   type ValuePosition,
-} from "./shared";
-import type { PrimarySliderUiAction, PrimarySliderUiState } from "./primary-state";
+} from "../lib/model";
+import type { PrimarySliderUiAction, PrimarySliderUiState } from "../lib/primary-state";
 
 export type PrimaryTrackProps = {
   valuePosition: ValuePosition;

@@ -15,7 +15,6 @@
     "typecheck": "bun run routes:generate && tsgo -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@chenglou/pretext": "^0.0.4",
     "@fontsource-variable/inter": "^5.2.8",
     "@fontsource/dm-sans": "^5.2.8",
     "@fontsource/jetbrains-mono": "^5.2.8",
@@ -35,20 +34,13 @@
     "@tanstack/react-start": "^1.167.34",
     "@tanstack/react-virtual": "^3.13.23",
     "better-auth": "^1.5.3",
-    "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
-    "drizzle-kit": "^0.31.9",
-    "drizzle-orm": "^0.45.1",
     "figma-squircle": "^1.1.0",
-    "highlight.js": "^11.11.1",
-    "jsdom": "^28.1.0",
     "motion": "^12.38.0",
     "nitro": "npm:nitro-nightly@3.0.1-20260410-164248-8ab58a4b",
-    "pg": "^8.16.3",
     "posthog-js": "^1.358.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.1.18",
     "zod": "^4.3.6"
   },
@@ -58,11 +50,8 @@
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.0",
     "@types/bun": "^1.3.14",
-    "@types/jsdom": "^21.1.7",
     "@types/katex": "^0.16.8",
-    "@types/marked": "^6.0.0",
     "@types/node": "^22.10.2",
-    "@types/pg": "^8.15.6",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.1.4",
@@ -84,7 +73,9 @@
     "ignore": {
       "overrides": [
         {
-          "files": [".output/**"],
+          "files": [
+            ".output/**"
+          ],
           "rules": [
             "react-doctor/dangerous-html-sink",
             "react-doctor/insecure-crypto-risk",
@@ -93,16 +84,28 @@
           ]
         },
         {
-          "files": ["src/routeTree.gen.ts"],
-          "rules": ["unicorn/filename-case"]
+          "files": [
+            "src/routeTree.gen.ts"
+          ],
+          "rules": [
+            "unicorn/filename-case"
+          ]
         },
         {
-          "files": ["src/modules/inbox/components/list/index.tsx"],
-          "rules": ["react-doctor/prefer-tag-over-role"]
+          "files": [
+            "src/modules/inbox/components/list/index.tsx"
+          ],
+          "rules": [
+            "react-doctor/prefer-tag-over-role"
+          ]
         },
         {
-          "files": ["src/modules/sidebar/components/feed-favicon.tsx"],
-          "rules": ["react-doctor/no-adjust-state-on-prop-change"]
+          "files": [
+            "src/modules/sidebar/components/feed-favicon.tsx"
+          ],
+          "rules": [
+            "react-doctor/no-adjust-state-on-prop-change"
+          ]
         },
         {
           "files": [

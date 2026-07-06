@@ -166,7 +166,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: SHELL_INIT_SCRIPT }} />
         <HeadContent />
       </head>
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased wrap-anywhere selection:bg-[rgba(79,184,178,0.24)]">
+      <body className="min-h-screen bg-background font-sans text-foreground antialiased wrap-anywhere selection:bg-matcha/24">
         <PostHogProvider>
           <ToastProvider>
             <AnchoredToastProvider>

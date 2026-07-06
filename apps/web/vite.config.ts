@@ -122,8 +122,6 @@ const config = defineConfig(({ command }) => {
         "@tanstack/react-router",
         "@tanstack/react-virtual",
         "motion/react",
-        "clsx",
-        "tailwind-merge",
       ],
     },
     plugins: isTest

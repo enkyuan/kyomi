@@ -3,178 +3,22 @@
 
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
-import { cva, type VariantProps } from "class-variance-authority";
+import type { VariantProps } from "class-variance-authority";
 import { LayoutLeftFill } from "@mingcute/react";
-import { use } from "react";
 import * as React from "react";
-import { useMediaQuery } from "../hooks/use-media-query";
-import { cn } from "../lib/utils";
-import { Button } from "../button";
-import { Input } from "../input";
-import { ScrollArea } from "../scroll-area";
-import { Separator } from "../separator";
-import { Sheet, SheetDescription, SheetHeader, SheetPopup, SheetTitle } from "../sheet";
-import { Skeleton } from "../skeleton";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "../tooltip";
+import { Button } from "../../button";
+import { Input } from "../../input";
+import { cn } from "../../lib/utils";
+import { ScrollArea } from "../../scroll-area";
+import { Separator } from "../../separator";
+import { Sheet, SheetDescription, SheetHeader, SheetPopup, SheetTitle } from "../../sheet";
+import { Skeleton } from "../../skeleton";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "../../tooltip";
+import { SIDEBAR_WIDTH_MOBILE, useSidebar } from "../state/provider";
+import { sidebarMenuButtonVariants } from "../styles/variants";
 
-const SIDEBAR_COOKIE_NAME: string = "sidebar_state";
-const SIDEBAR_COOKIE_MAX_AGE: number = 60 * 60 * 24 * 7;
-
-function readSidebarOpenCookie(): boolean | undefined {
-  if (typeof document === "undefined") {
-    return undefined;
-  }
-  const entry = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith(`${SIDEBAR_COOKIE_NAME}=`));
-  if (!entry) {
-    return undefined;
-  }
-  return entry.slice(`${SIDEBAR_COOKIE_NAME}=`.length) === "true";
-}
-const SIDEBAR_WIDTH: string = "16rem";
-const SIDEBAR_WIDTH_MOBILE: string = "18rem";
-const SIDEBAR_WIDTH_ICON: string = "3rem";
-const SIDEBAR_KEYBOARD_SHORTCUT: string = "b";
-const sidebarMenuButtonVariants = cva(
-  "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-lg p-2 text-left text-sm outline-hidden ring-sidebar-ring transition-[background-color,color,box-shadow,opacity,transform] duration-150 ease-out motion-reduce:transition-none hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 focus-visible:ring-inset active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pe-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-2.25 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2.5 [&>span:last-child]:truncate [&>svg:not([class*='size-']):not([width])]:size-4 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:[&>svg:not([class*='size-']):not([width])]:size-4.5 [&>svg]:shrink-0",
-  {
-    defaultVariants: {
-      size: "default",
-      variant: "default",
-    },
-    variants: {
-      size: {
-        default:
-          "h-8 text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-10 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6",
-        lg: "h-12 text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-13 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-base group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-6 group-data-[collapsible=icon]:p-0!",
-        sm: "h-7 text-xs group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-7.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5",
-      },
-      variant: {
-        default: "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
-        outline:
-          "bg-background shadow-[0_0_0_1px_var(--sidebar-border)] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_var(--sidebar-accent)]",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:text-secondary-foreground active:bg-secondary/80 data-[active=true]:bg-secondary data-[active=true]:text-secondary-foreground data-[state=open]:hover:bg-secondary/90 data-[state=open]:hover:text-secondary-foreground",
-      },
-    },
-  },
-);
-
-export type SidebarContextProps = {
-  state: "expanded" | "collapsed";
-  open: boolean;
-  setOpen: (open: boolean) => void;
-  openMobile: boolean;
-  setOpenMobile: (open: boolean) => void;
-  isMobile: boolean;
-  toggleSidebar: () => void;
-};
-
-export const SidebarContext: React.Context<SidebarContextProps | null> =
-  React.createContext<SidebarContextProps | null>(null);
-
-export function useSidebar(): SidebarContextProps {
-  const context = use(SidebarContext);
-  if (!context) {
-    throw new Error("useSidebar must be used within a SidebarProvider.");
-  }
-
-  return context;
-}
-
-export function SidebarProvider({
-  defaultOpen = true,
-  open: openProp,
-  onOpenChange: setOpenProp,
-  className,
-  style,
-  children,
-  ...props
-}: React.ComponentProps<"div"> & {
-  defaultOpen?: boolean;
-  open?: boolean;
-  onOpenChange?: (open: boolean) => void;
-}): React.ReactElement {
-  const isMobile = useMediaQuery("max-md");
-  const [openMobile, setOpenMobile] = React.useState(false);
-
-  // Uncontrolled open state: lazy-init from cookie, then defaultOpen (not `useState(defaultOpen)`).
-  const [_open, _setOpen] = React.useState(() => readSidebarOpenCookie() ?? defaultOpen);
-  const open = openProp ?? _open;
-  const setOpen = React.useCallback(
-    (value: boolean | ((value: boolean) => boolean)) => {
-      const openState = typeof value === "function" ? value(open) : value;
-      if (setOpenProp) {
-        setOpenProp(openState);
-      } else {
-        _setOpen(openState);
-      }
-
-      if (typeof document !== "undefined") {
-        document.cookie = `${SIDEBAR_COOKIE_NAME}=${String(openState)}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
-      }
-    },
-    [setOpenProp, open],
-  );
-
-  // Helper to toggle the sidebar.
-  const toggleSidebar = React.useCallback(() => {
-    return isMobile ? setOpenMobile((open) => !open) : setOpen((open) => !open);
-  }, [isMobile, setOpen]);
-
-  // Adds a keyboard shortcut to toggle the sidebar.
-  React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent): void => {
-      if (event.key === SIDEBAR_KEYBOARD_SHORTCUT && (event.metaKey || event.ctrlKey)) {
-        event.preventDefault();
-        toggleSidebar();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [toggleSidebar]);
-
-  // We add a state so that we can do data-state="expanded" or "collapsed".
-  // This makes it easier to style the sidebar with Tailwind classes.
-  const state = open ? "expanded" : "collapsed";
-
-  const contextValue = React.useMemo<SidebarContextProps>(
-    () => ({
-      isMobile,
-      open,
-      openMobile,
-      setOpen,
-      setOpenMobile,
-      state,
-      toggleSidebar,
-    }),
-    [state, open, setOpen, isMobile, openMobile, toggleSidebar],
-  );
-
-  return (
-    <SidebarContext.Provider value={contextValue}>
-      <div
-        className={cn(
-          "group/sidebar-wrapper flex min-h-svh w-full has-data-[variant=inset]:bg-sidebar",
-          className,
-        )}
-        data-slot="sidebar-wrapper"
-        style={
-          {
-            "--sidebar-width": SIDEBAR_WIDTH,
-            "--sidebar-width-icon": SIDEBAR_WIDTH_ICON,
-            ...style,
-          } as React.CSSProperties
-        }
-        {...props}
-      >
-        {children}
-      </div>
-    </SidebarContext.Provider>
-  );
-}
+export { SidebarContext, SidebarProvider, useSidebar } from "../state/provider";
+export type { SidebarContextProps } from "../state/provider";
 
 export function Sidebar({
   side = "left",

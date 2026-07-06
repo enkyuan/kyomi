@@ -32,6 +32,7 @@
   --color-info-foreground: var(--info-foreground);
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
+  --color-matcha: var(--matcha);
   --color-mizu: oklch(0.788 0.073 210.53);
   --color-mizu-foreground: var(--mizu-foreground);
   --color-petrol-green: var(--petrol-green);
@@ -105,6 +106,7 @@
   --info-foreground: var(--color-blue-700);
   --success: var(--color-emerald-500);
   --success-foreground: var(--color-emerald-700);
+  --matcha: oklch(0.819 0.121 131.147);
   --mizu-foreground: oklch(0.47 0.073 210.53);
   --petrol-green: oklch(0.486 0.081 176.621);
   --warning: var(--color-amber-500);
@@ -293,6 +295,15 @@ body {
 .reader-content .article-body {
   font-size: var(--reader-font-size, 1rem);
   color: color-mix(in srgb, var(--foreground) 92%, transparent);
+}
+
+.reader-content .article-body ::selection {
+  background-color: color-mix(in oklab, var(--matcha) 28%, transparent);
+}
+
+.reader-content .article-body :is(mark, .highlight) {
+  background-color: color-mix(in oklab, var(--matcha) 42%, transparent);
+  color: inherit;
 }
 
 .reader-content .article-body > *:first-child {

@@ -34,6 +34,6 @@ yarn-error.log*
 **/*.log
 package-lock.json
 **/*.bun
-.env
-.env.*
+.env.keys
+.env*.local
 !.env.example

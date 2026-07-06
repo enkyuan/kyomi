@@ -13,7 +13,7 @@ import {
   type MotionValue,
 } from "motion/react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 import {
   PIP_SIZE,
   fontWeights,
@@ -22,9 +22,9 @@ import {
   type SliderProps,
   type SliderValue,
   type ValuePosition,
-} from "./shared";
+} from "../lib/model";
 import { ValueDisplay } from "./value-display";
-import { hoverTooltipReducer } from "./primary-state";
+import { hoverTooltipReducer } from "../lib/primary-state";
 import { usePrimarySlider } from "../hooks/use-primary-slider";
 import { PrimaryTrack } from "./primary-track";
 
