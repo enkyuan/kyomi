@@ -22,6 +22,7 @@
     "./sidebar": "./src/sidebar/index.tsx",
     "./sidebar/mode-animated-text": "./src/sidebar/mode-animated-text.tsx",
     "./sidebar/reader-focus": "./src/sidebar/reader-focus.tsx",
+    "./toast": "./src/toast/index.tsx",
     "./*": "./src/*.tsx",
     "./*.ts": "./src/*.ts"
   },
