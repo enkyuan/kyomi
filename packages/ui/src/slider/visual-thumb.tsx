@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { m, type MotionValue } from "motion/react";
-import { springs, THUMB_SIZE, THUMB_SIZE_REST } from "./shared";
+import { springs, THUMB_SIZE, THUMB_SIZE_REST } from "./model";
 
 const SLIDER_VISUAL_THUMB_CLASS =
   "pointer-events-none absolute top-1/2 left-0 z-10 flex items-center justify-center";

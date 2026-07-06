@@ -22,7 +22,7 @@ import {
   type SliderProps,
   type SliderValue,
   type ValuePosition,
-} from "./shared";
+} from "./model";
 import { ValueDisplay } from "./value-display";
 import { hoverTooltipReducer } from "./primary-state";
 import { usePrimarySlider } from "../hooks/use-primary-slider";

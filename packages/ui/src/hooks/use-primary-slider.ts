@@ -11,7 +11,7 @@ import {
   toRadixValue,
   valueToPixel,
   type SliderValue,
-} from "../slider/shared";
+} from "../slider/model";
 import { initialPrimarySliderUiState, primarySliderUiReducer } from "../slider/primary-state";
 
 export function usePrimarySlider({

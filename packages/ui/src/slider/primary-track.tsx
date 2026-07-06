@@ -14,7 +14,7 @@ import {
   TRACK_BG_HEIGHT,
   TRACK_INSET,
   type ValuePosition,
-} from "./shared";
+} from "./model";
 import type { PrimarySliderUiAction, PrimarySliderUiState } from "./primary-state";
 
 export type PrimaryTrackProps = {

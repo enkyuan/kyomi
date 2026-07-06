@@ -15,12 +15,14 @@
   "exports": {
     ".": "./src/index.ts",
     "./lib/utils": "./src/lib/utils.ts",
+    "./favicon": "./src/favicon.tsx",
     "./hooks/use-media-query": "./src/hooks/use-media-query.ts",
     "./icons": "./src/icons/index.tsx",
     "./icons/*": "./src/icons/*.tsx",
     "./slider": "./src/slider/index.tsx",
     "./sidebar": "./src/sidebar/index.tsx",
-    "./sidebar/mode-animated-text": "./src/sidebar/mode-animated-text.tsx",
+    "./sidebar/mode-animated-text": "./src/sidebar/mode-text.tsx",
+    "./sidebar/mode-text": "./src/sidebar/mode-text.tsx",
     "./sidebar/reader-focus": "./src/sidebar/reader-focus.tsx",
     "./*": "./src/*.tsx",
     "./*.ts": "./src/*.ts"
@@ -42,6 +44,7 @@
     "@radix-ui/react-slider": "^1.3.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "figma-squircle": "^1.1.0",
     "input-otp": "^1.4.2",
     "motion": "^12.38.0",
     "react-day-picker": "^9.14.0",

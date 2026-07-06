@@ -1,21 +1,12 @@
 "use client";
 
-import { getSvgPath } from "figma-squircle";
 import { Rss2Fill } from "@mingcute/react";
+import { Favicon, type FaviconShape } from "@kyomi/ui/favicon";
 import { cn } from "@kyomi/ui/lib/utils";
-import {
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-  type CSSProperties,
-  type ReactElement,
-  type ReactNode,
-} from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useFavicon } from "@hooks/use-favicon";
 import { prewarmFaviconUrl } from "@lib/favicon/cache";
 
-type FeedFaviconShape = "rounded" | "squircle";
 type FeedFaviconPriority = "high" | "normal" | "low";
 
 export type FeedFaviconProps = {
@@ -24,7 +15,7 @@ export type FeedFaviconProps = {
   siteUrl: string | null;
   title: string;
   className?: string;
-  shape?: FeedFaviconShape;
+  shape?: FaviconShape;
   priority?: FeedFaviconPriority;
   squircleCornerRadius?: number;
   squircleCornerSmoothing?: number;
@@ -47,8 +38,6 @@ export function FeedFavicon({
     siteUrl,
   });
   const [loadedFaviconUrl, setLoadedFaviconUrl] = useState<string | null>(null);
-  const [wrapper, setWrapper] = useState<HTMLSpanElement | null>(null);
-  const [wrapperSize, setWrapperSize] = useState({ width: 0, height: 0 });
   const isLoaded = faviconUrl !== null && loadedFaviconUrl === faviconUrl;
 
   useEffect(() => {
@@ -79,103 +68,32 @@ export function FeedFavicon({
     [markFaviconLoaded],
   );
 
-  useEffect(() => {
-    if (shape !== "squircle" || !wrapper) {
-      return;
-    }
-
-    const updateSize = () => {
-      setWrapperSize((current) => {
-        const next = { width: wrapper.offsetWidth, height: wrapper.offsetHeight };
-        return current.width === next.width && current.height === next.height ? current : next;
-      });
-    };
-
-    if (typeof ResizeObserver === "undefined") {
-      return;
-    }
-
-    const observer = new ResizeObserver(updateSize);
-    observer.observe(wrapper);
-
-    return () => observer.disconnect();
-  }, [shape, wrapper]);
-
-  const mediaClassName = "size-full";
-  const squirclePath = useMemo(() => {
-    if (shape !== "squircle" || wrapperSize.width <= 0 || wrapperSize.height <= 0) {
-      return undefined;
-    }
-
-    return getSvgPath({
-      width: wrapperSize.width,
-      height: wrapperSize.height,
-      cornerRadius: squircleCornerRadius,
-      cornerSmoothing: squircleCornerSmoothing,
-    });
-  }, [shape, squircleCornerRadius, squircleCornerSmoothing, wrapperSize.height, wrapperSize.width]);
-
-  const wrapFavicon = (children: ReactNode): ReactElement => {
-    const wrapperClassName = cn("relative inline-flex overflow-hidden bg-card/85", className);
-    const squircleStyle =
-      shape === "squircle"
-        ? ({
-            borderRadius: squircleCornerRadius,
-            clipPath: squirclePath ? `path('${squirclePath}')` : undefined,
-            WebkitClipPath: squirclePath ? `path('${squirclePath}')` : undefined,
-          } satisfies CSSProperties)
-        : undefined;
-
-    return (
-      <span
-        data-squircle={shape === "squircle" ? squircleCornerRadius : undefined}
-        ref={setWrapper}
-        className={wrapperClassName}
-        style={squircleStyle}
-      >
-        {children}
-      </span>
-    );
-  };
-
-  if (!faviconUrl) {
-    const fallback = <Rss2Fill className={className} aria-label={`${title} feed`} />;
-
-    return shape === "squircle" ? wrapFavicon(fallback) : fallback;
-  }
-
   const loading = priority === "high" ? "eager" : "lazy";
   const fetchPriority = priority === "high" ? "high" : priority === "low" ? "low" : "auto";
 
-  const image = (
-    <img
+  return (
+    <Favicon
       alt={`${title} favicon`}
-      className={cn(
-        mediaClassName,
-        "absolute inset-0 rounded-[inherit] bg-white object-contain transition-opacity duration-150",
-        isLoaded ? "opacity-100" : "opacity-0",
-      )}
-      decoding="async"
-      fetchPriority={fetchPriority}
-      key={faviconUrl}
-      loading={loading}
-      ref={setImageNode}
-      referrerPolicy="strict-origin-when-cross-origin"
-      src={faviconUrl}
-      onLoad={(event) => {
-        markFaviconLoaded(event.currentTarget);
+      className={cn("bg-card/85", className)}
+      cornerRadius={squircleCornerRadius}
+      cornerSmoothing={squircleCornerSmoothing}
+      fallback={<Rss2Fill className="size-full" />}
+      imageClassName={cn("transition-opacity duration-150", isLoaded ? "opacity-100" : "opacity-0")}
+      imageKey={faviconUrl ?? undefined}
+      imageProps={{
+        decoding: "async",
+        fetchPriority,
+        loading,
+        referrerPolicy: "strict-origin-when-cross-origin",
+        onLoad: (event) => {
+          markFaviconLoaded(event.currentTarget);
+        },
+        onError: failCurrentFavicon,
       }}
-      onError={failCurrentFavicon}
+      imageRef={setImageNode}
+      shape={shape}
+      src={faviconUrl}
+      title={title}
     />
-  );
-
-  return wrapFavicon(
-    <>
-      <Rss2Fill
-        aria-hidden="true"
-        className="absolute inset-[20%] size-[60%] text-muted-foreground/80"
-      />
-      {image}
-    </>,
   );
 }
