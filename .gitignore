@@ -1,8 +1,8 @@
 node_modules
 .turbo
 .DS_Store
-.env
-.env.*
+.env.keys
+.env*.local
 !.env.example
 apps/*/bun.lock
 packages/*/bun.lock

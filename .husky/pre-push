@@ -12,4 +12,3 @@ else
 fi
 
 "$BUN_BIN" run check:env
-"$BUN_BIN" x lint-staged
