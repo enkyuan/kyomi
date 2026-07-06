@@ -1,10 +1,26 @@
 import type { QueryClient } from "@tanstack/react-query";
 import { followedFeedsQueryKey, inboxRecapQueryKey } from "@modules/inbox/queries/options";
 
+export const INBOX_RECAP_RAIL_SECTIONS = ["folders", "topSources", "worthRevisiting"] as const;
+export const INBOX_RECAP_RAIL_FOLDER_BACK_TARGETS = ["folders", "recap"] as const;
+
+export type InboxRecapRailSection = (typeof INBOX_RECAP_RAIL_SECTIONS)[number];
+export type InboxRecapRailFolderBackTarget = (typeof INBOX_RECAP_RAIL_FOLDER_BACK_TARGETS)[number];
+
 const absoluteFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
   day: "numeric",
 });
+
+export function isInboxRecapRailSection(value: unknown): value is InboxRecapRailSection {
+  return typeof value === "string" && INBOX_RECAP_RAIL_SECTIONS.includes(value as never);
+}
+
+export function isInboxRecapRailFolderBackTarget(
+  value: unknown,
+): value is InboxRecapRailFolderBackTarget {
+  return typeof value === "string" && INBOX_RECAP_RAIL_FOLDER_BACK_TARGETS.includes(value as never);
+}
 
 export function formatRelativeTime(value: string) {
   const date = new Date(value);

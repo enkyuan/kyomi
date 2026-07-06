@@ -148,7 +148,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
 
       <section className="space-y-3">
         <SettingHeading title="Session" description="Manage active sessions for this account." />
-        <Frame className="w-full">
+        <Frame className="w-full pb-0">
           <Table variant="card">
             <TableHeader>
               <TableRow>

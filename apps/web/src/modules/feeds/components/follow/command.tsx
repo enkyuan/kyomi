@@ -12,7 +12,7 @@ import { useRef } from "react";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { Kbd } from "@kyomi/ui/kbd";
 import { useFeedback } from "@hooks/use-feedback";
-import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
+import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import type { DiscoverFeedResult } from "@modules/feeds/lib/api";
 
 export const DISCOVER_RESULTS_UI_CAP = 200;

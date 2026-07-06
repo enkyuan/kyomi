@@ -12,8 +12,9 @@ import {
 } from "@modules/folders/components/recap/summary";
 
 type FolderOption = { label: string; value: string };
-const FOLDER_MOVE_SCROLL_THRESHOLD = 6;
-const FOLDER_MOVE_MAX_HEIGHT_CLASS = "!max-h-[min(--spacing(64),var(--available-height))]";
+const FOLDER_MOVE_SCROLL_THRESHOLD = 4;
+const FOLDER_MOVE_MAX_HEIGHT_CLASS =
+  "!max-h-[min(calc(--spacing(8)*4+--spacing(2)+1px),var(--available-height))]";
 
 export function FolderFeedActions({
   currentFolderId,

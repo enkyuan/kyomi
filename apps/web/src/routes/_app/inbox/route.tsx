@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { loadInboxRoute, validateInboxSearch } from "./-route-helpers";
+import { validateInboxSearch } from "@modules/inbox/lib/search";
+
+import { loadInboxRoute } from "./-route-helpers";
 import { InboxRouteComponent } from "./-shared";
 
 export const Route = createFileRoute("/_app/inbox")({

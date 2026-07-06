@@ -77,6 +77,9 @@ function InboxPageContent({
     feedId,
     folderId,
     itemId,
+    rail,
+    railFolderBack,
+    railFolderId,
     effectiveFilter,
     isReadScopedFilterActive,
     includeRead,
@@ -367,7 +370,12 @@ function InboxPageContent({
           </Transition>
           <aside className="hidden h-full w-96 shrink-0 flex-col py-8 xl:flex">
             {/* Article detail replaces the inbox pane; keep this rail reserved for future context. */}
-            <InboxRecapCard />
+            <InboxRecapCard
+              navigate={navigate}
+              rail={rail}
+              railFolderBack={railFolderBack}
+              railFolderId={railFolderId}
+            />
           </aside>
         </div>
       )}

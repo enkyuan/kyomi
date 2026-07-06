@@ -6,6 +6,5 @@ export * from "./components/appearance/shared";
 export * from "./components/billing";
 export * from "./components/dialog";
 export * from "./components/feedback";
-export * from "./components/page";
 export * from "./components/personalization";
 export * from "./components/appearance/theme-switcher";

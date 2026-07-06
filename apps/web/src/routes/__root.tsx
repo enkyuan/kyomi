@@ -9,6 +9,7 @@ import interLatinWoff2Url from "@fontsource-variable/inter/files/inter-latin-wgh
 import AuthProvider from "@integrations/better-auth/provider";
 import TanstackQueryProvider from "@integrations/tanstack-query/provider";
 import { AppRuntimeEffects } from "@/app/runtime-effects";
+import { NotFoundPage } from "@/app/not-found";
 import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/toast";
 import PostHogProvider from "@integrations/posthog/provider";
 import { getSession } from "@lib/auth/functions";
@@ -93,19 +94,8 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
   }),
   shellComponent: RootDocument,
   component: () => <Outlet />,
-  notFoundComponent: NotFound,
+  notFoundComponent: NotFoundPage,
 });
-
-function NotFound() {
-  return (
-    <main className="flex min-h-svh items-center justify-center bg-background p-6 text-center text-foreground">
-      <div className="max-w-sm space-y-2">
-        <h1 className="font-heading font-semibold text-2xl">Not found</h1>
-        <p className="text-muted-foreground text-sm">This page does not exist or has moved.</p>
-      </div>
-    </main>
-  );
-}
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   const loaderData = Route.useLoaderData() as

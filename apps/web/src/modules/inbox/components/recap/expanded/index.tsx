@@ -9,13 +9,17 @@ import { listFollowedFeeds } from "@modules/feeds/lib/api";
 import { ExpandedFolders } from "@modules/folders/components/recap/expanded";
 import type { RecapFolder } from "@modules/folders/lib/types";
 import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
+import type {
+  InboxRecapRailFolderBackTarget,
+  InboxRecapRailSection,
+} from "@modules/inbox/lib/recap/index";
 import { ExpandedViewHeader } from "./header";
 import { ExpandedSavedItems } from "./saved-items";
 import { ExpandedTopSources } from "./top-sources";
 import type { RecapSavedItem, RecapTopViewedFeed } from "../types";
 
-export type RecapExpandedSection = "folders" | "topSources" | "worthRevisiting";
-export type SelectedFolderBackTarget = "folders" | "recap";
+export type RecapExpandedSection = InboxRecapRailSection;
+export type SelectedFolderBackTarget = InboxRecapRailFolderBackTarget;
 type RemoveFeedsToastOptions = {
   anchor?: HTMLElement | null;
   feedName?: string;

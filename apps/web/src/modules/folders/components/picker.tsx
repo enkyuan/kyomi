@@ -6,8 +6,9 @@ import { Button } from "@kyomi/ui/button";
 import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
 import { cn } from "@kyomi/ui/lib/utils";
 
-const FOLDER_PICKER_SCROLL_THRESHOLD = 6;
-const FOLDER_PICKER_MAX_HEIGHT_CLASS = "!max-h-[min(--spacing(64),var(--available-height))]";
+const FOLDER_PICKER_SCROLL_THRESHOLD = 4;
+const FOLDER_PICKER_MAX_HEIGHT_CLASS =
+  "!max-h-[min(calc(--spacing(8)*4+--spacing(2)+1px),var(--available-height))]";
 
 export const TOP_SOURCE_FOLDER_BUTTON_CLASS =
   "size-7 rounded-full bg-primary/14 text-primary before:rounded-full transition-[background-color,color,transform] hover:bg-primary/20 active:scale-[0.96] sm:size-7";

@@ -7,6 +7,7 @@ import type { InboxMarkReadBehaviorDto } from "@lib/schemas/index";
 import type { InboxPreferences } from "./use-inbox-data";
 import { getInboxItemIdFromSlug } from "../lib/articles/slug";
 import type { InboxFilter, InboxSort } from "../lib/articles/index";
+import type { InboxRecapRailFolderBackTarget, InboxRecapRailSection } from "../lib/recap/index";
 
 const INBOX_DESKTOP_MIN_WIDTH_PX = 768;
 
@@ -18,6 +19,9 @@ export type InboxRouteSearch = {
   feedId?: string;
   folderId?: string;
   itemId?: string;
+  rail?: InboxRecapRailSection;
+  railFolderBack?: InboxRecapRailFolderBackTarget;
+  railFolderId?: string;
   showHidden?: "1";
   showRead?: "1";
   sort?: InboxSort;
@@ -60,9 +64,19 @@ export function useResponsiveReaderMode(contentWidthPx?: number): InboxLayoutVar
 }
 
 export function useInboxRouteState(preferences: InboxPreferences) {
-  const { filter, search, feedId, folderId, itemId, showHidden, showRead, sort } = useSearch({
-    strict: false,
-  });
+  const {
+    filter,
+    search,
+    feedId,
+    folderId,
+    itemId,
+    rail,
+    railFolderBack,
+    railFolderId,
+    showHidden,
+    showRead,
+    sort,
+  } = useSearch({ strict: false });
   const params = useParams({ strict: false });
   const rawNavigate = useNavigate();
   const article = typeof params?.article === "string" ? params.article : undefined;
@@ -76,6 +90,9 @@ export function useInboxRouteState(preferences: InboxPreferences) {
         feedId,
         folderId,
         itemId,
+        rail,
+        railFolderBack,
+        railFolderId,
         showHidden,
         showRead,
         sort,
@@ -97,7 +114,21 @@ export function useInboxRouteState(preferences: InboxPreferences) {
         replace,
       });
     },
-    [article, feedId, filter, folderId, itemId, rawNavigate, search, showHidden, showRead, sort],
+    [
+      article,
+      feedId,
+      filter,
+      folderId,
+      itemId,
+      rail,
+      railFolderBack,
+      railFolderId,
+      rawNavigate,
+      search,
+      showHidden,
+      showRead,
+      sort,
+    ],
   );
 
   const showHiddenItems = parseSearchFlag(showHidden);
@@ -142,6 +173,9 @@ export function useInboxRouteState(preferences: InboxPreferences) {
       feedId,
       folderId,
       itemId: routeItemId,
+      rail,
+      railFolderBack,
+      railFolderId,
       effectiveFilter,
       isReadScopedFilterActive,
       includeRead,
@@ -154,6 +188,9 @@ export function useInboxRouteState(preferences: InboxPreferences) {
       feedId,
       folderId,
       routeItemId,
+      rail,
+      railFolderBack,
+      railFolderId,
       effectiveFilter,
       isReadScopedFilterActive,
       includeRead,

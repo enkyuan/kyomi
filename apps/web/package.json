@@ -39,8 +39,8 @@
     "motion": "^12.38.0",
     "nitro": "npm:nitro-nightly@3.0.1-20260410-164248-8ab58a4b",
     "posthog-js": "^1.358.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "tailwindcss": "^4.1.18",
     "zod": "^4.3.6"
   },

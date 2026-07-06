@@ -4,13 +4,13 @@ import { Link } from "@tanstack/react-router";
 import { AddFill, RightFill, Rss2Fill } from "@mingcute/react";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/button";
-import type { InboxSearch } from "@/routes/_app/inbox/-route-helpers";
+import type { InboxSearch } from "@modules/inbox/lib/search";
 import {
   FolderPickerButton,
   TOP_SOURCE_FOLDER_BUTTON_CLASS,
 } from "@modules/folders/components/picker";
 import type { RecapFolder } from "@modules/folders/lib/types";
-import { FeedFavicon } from "@modules/sidebar/components/feed-favicon";
+import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import type { RecapTopViewedFeed } from "../types";
 import { formatRelativeTime, formatViewedCount } from "@modules/inbox/lib/recap/index";
 import { RailTooltip, RecapSection, SectionEmpty } from ".";

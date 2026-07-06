@@ -3,7 +3,7 @@
 import { Link } from "@tanstack/react-router";
 import { BookmarkFill, ExternalLinkLine, RightFill } from "@mingcute/react";
 import { Button } from "@kyomi/ui/button";
-import type { InboxSearch } from "@/routes/_app/inbox/-route-helpers";
+import type { InboxSearch } from "@modules/inbox/lib/search";
 import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
 import type { RecapSavedItem } from "../types";
 import { formatRelativeTime } from "@modules/inbox/lib/recap/index";

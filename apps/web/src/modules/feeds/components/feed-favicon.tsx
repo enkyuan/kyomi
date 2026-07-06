@@ -39,6 +39,7 @@ export function FeedFavicon({
   });
   const [loadedFaviconUrl, setLoadedFaviconUrl] = useState<string | null>(null);
   const isLoaded = faviconUrl !== null && loadedFaviconUrl === faviconUrl;
+  const isLoading = faviconUrl !== null && !isLoaded;
 
   useEffect(() => {
     prewarmFaviconUrl(faviconUrl, priority);
@@ -77,7 +78,17 @@ export function FeedFavicon({
       className={cn("bg-card/85", className)}
       cornerRadius={squircleCornerRadius}
       cornerSmoothing={squircleCornerSmoothing}
-      fallback={<Rss2Fill className="size-full" />}
+      fallback={
+        isLoading ? (
+          <span className="size-full rounded-[inherit]" />
+        ) : (
+          <Rss2Fill className="size-full" />
+        )
+      }
+      fallbackClassName={cn(
+        isLoading &&
+          "inset-0 size-full rounded-[inherit] bg-muted/72 text-transparent shadow-[inset_0_1px_--theme(--color-white/28%),inset_0_0_0_1px_--theme(--color-black/6%)] dark:bg-muted/56 dark:shadow-[inset_0_1px_--theme(--color-white/8%),inset_0_0_0_1px_--theme(--color-white/6%)]",
+      )}
       imageClassName={cn("transition-opacity duration-150", isLoaded ? "opacity-100" : "opacity-0")}
       imageKey={faviconUrl ?? undefined}
       imageProps={{
