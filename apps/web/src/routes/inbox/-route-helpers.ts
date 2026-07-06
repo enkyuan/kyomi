@@ -86,3 +86,14 @@ export async function loadInboxRoute({ context, params }: InboxRouteLoaderArgs) 
   ]);
   return loaderData;
 }
+
+export async function prefetchInboxArticleRoute({ context, params }: InboxRouteLoaderArgs) {
+  const routeItemId = getInboxItemIdFromSlug(params?.article);
+  if (!routeItemId) {
+    return;
+  }
+
+  await context.queryClient
+    .prefetchQuery(inboxDetailQueryOptions(routeItemId))
+    .catch(() => undefined);
+}
