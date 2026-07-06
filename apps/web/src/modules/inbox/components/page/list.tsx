@@ -30,6 +30,7 @@ export function ListSection({
   isInboxFetching,
   isInboxFetchingNextPage,
   isInboxPending,
+  showScrollbar,
   fetchNextInboxPage,
   selectItem,
   navigate,
@@ -52,6 +53,7 @@ export function ListSection({
   isInboxFetching: boolean;
   isInboxFetchingNextPage: boolean;
   isInboxPending: boolean;
+  showScrollbar: boolean;
   fetchNextInboxPage: () => void;
   selectItem: (item: InboxItem) => void;
   navigate: ReturnType<typeof useInboxRouteState>["navigate"];
@@ -158,6 +160,7 @@ export function ListSection({
       pinnedFolders,
       isArticleScoped: Boolean(itemId),
       selectedArticle: selectedItem,
+      showScrollbar,
     }),
     [
       effectiveFilter,
@@ -185,6 +188,7 @@ export function ListSection({
       pinnedFolders,
       selectItem,
       selectedItem,
+      showScrollbar,
       sort,
       clearSelectedItem,
     ],

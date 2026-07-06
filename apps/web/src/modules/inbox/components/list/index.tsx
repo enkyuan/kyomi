@@ -94,6 +94,7 @@ interface ListProps {
   feedLabel?: string;
   pinnedFolders?: PinnedFolderFilter[];
   selectedArticle?: ArticleDetailDto | null;
+  showScrollbar?: boolean;
 }
 
 // oxlint-disable-next-line eslint/complexity
@@ -120,6 +121,7 @@ export function List({
   feedLabel,
   pinnedFolders = EMPTY_PINNED_FOLDERS,
   selectedArticle,
+  showScrollbar = true,
 }: ListProps) {
   const { readerFocusMode = false, showFavicons } = display;
   const { isLoading, isRefreshing } = pagination;
@@ -293,7 +295,7 @@ export function List({
             </div>
           </div>
         </ScrollAreaPrimitive.Viewport>
-        {inboxItems.length > 0 || isLoading ? (
+        {showScrollbar && (inboxItems.length > 0 || isLoading) ? (
           <BrowserScrollBar
             aria-label="Inbox list scrollbar"
             className="z-50 !fixed !top-0 !right-0 !bottom-0 !left-auto !h-auto !inset-inline-end-0"

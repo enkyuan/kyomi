@@ -306,6 +306,7 @@ function InboxPageContent({
       isInboxFetching={isInboxFetching}
       isInboxFetchingNextPage={isInboxFetchingNextPage}
       isInboxPending={isInboxPending}
+      showScrollbar={!showMiddleColumnDetail}
       fetchNextInboxPage={fetchNextInboxPage}
       selectItem={selectItem}
       navigate={navigate}

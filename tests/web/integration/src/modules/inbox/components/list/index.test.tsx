@@ -18,6 +18,10 @@ vi.mock("@hooks/use-hydrated", () => ({
   useHydrated: () => true,
 }));
 
+vi.mock("@tanstack/react-router", () => ({
+  useElementScrollRestoration: () => undefined,
+}));
+
 vi.mock("@modules/inbox/components/list/rows", () => ({
   SkeletonRows: () => <div data-slot="skeleton-rows" />,
   VirtualizedRows: () => <div data-slot="virtualized-rows" />,
@@ -76,6 +80,32 @@ describe("List scrollbar surface", () => {
     expect(scrollbar?.getAttribute("data-slot")).toBe("browser-scrollbar");
     expect(scrollbar?.className).toContain("!fixed");
     expect(scrollbar?.className).toContain("!right-0");
+  });
+
+  test("does not render the browser scrollbar while the list pane is hidden", () => {
+    const { container } = render(
+      <List
+        inboxItems={[]}
+        filter="my-feed"
+        display={{ showFavicons: true }}
+        density="comfortable"
+        fontSizePx={16}
+        timestampDisplay="relative"
+        timestampHourCycle="12h"
+        showScrollbar={false}
+        pagination={{
+          isLoading: true,
+          isRefreshing: false,
+          hasNextPage: false,
+          isFetchingNextPage: false,
+          fetchNextPage: vi.fn(),
+        }}
+        onSelectItem={vi.fn()}
+        onSortChange={vi.fn()}
+      />,
+    );
+
+    expect(container.querySelector('[aria-label="Inbox list scrollbar"]')).toBeNull();
   });
 });
 
