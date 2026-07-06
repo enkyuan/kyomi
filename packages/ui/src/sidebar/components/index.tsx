@@ -6,19 +6,19 @@ import { useRender } from "@base-ui/react/use-render";
 import type { VariantProps } from "class-variance-authority";
 import { LayoutLeftFill } from "@mingcute/react";
 import * as React from "react";
-import { cn } from "../lib/utils";
-import { Button } from "../button";
-import { Input } from "../input";
-import { ScrollArea } from "../scroll-area";
-import { Separator } from "../separator";
-import { Sheet, SheetDescription, SheetHeader, SheetPopup, SheetTitle } from "../sheet";
-import { Skeleton } from "../skeleton";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "../tooltip";
-import { SIDEBAR_WIDTH_MOBILE, useSidebar } from "./provider";
-import { sidebarMenuButtonVariants } from "./variants";
+import { Button } from "../../button";
+import { Input } from "../../input";
+import { cn } from "../../lib/utils";
+import { ScrollArea } from "../../scroll-area";
+import { Separator } from "../../separator";
+import { Sheet, SheetDescription, SheetHeader, SheetPopup, SheetTitle } from "../../sheet";
+import { Skeleton } from "../../skeleton";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "../../tooltip";
+import { SIDEBAR_WIDTH_MOBILE, useSidebar } from "../state/provider";
+import { sidebarMenuButtonVariants } from "../styles/variants";
 
-export { SidebarContext, SidebarProvider, useSidebar } from "./provider";
-export type { SidebarContextProps } from "./provider";
+export { SidebarContext, SidebarProvider, useSidebar } from "../state/provider";
+export type { SidebarContextProps } from "../state/provider";
 
 export function Sidebar({
   side = "left",

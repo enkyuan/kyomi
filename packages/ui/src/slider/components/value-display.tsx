@@ -3,8 +3,8 @@
 
 import { useCallback, useEffect, useRef, useState, type RefObject } from "react";
 import { m, useTransform, type MotionValue } from "motion/react";
-import { cn } from "../lib/utils";
-import { fontWeights, springs, THUMB_SIZE } from "./model";
+import { cn } from "../../lib/utils";
+import { fontWeights, springs, THUMB_SIZE } from "../lib/model";
 
 interface ValueDisplayProps {
   values: number[];

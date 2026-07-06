@@ -3,7 +3,7 @@
 import { EyeCloseLine, EyeLine } from "@mingcute/react";
 import { useState } from "react";
 import { Button } from "./button";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "./input-group";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "./input/group";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "./tooltip";
 
 export function PasswordInput({

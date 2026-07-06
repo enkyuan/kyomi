@@ -3,8 +3,8 @@
 import { OTPInput, OTPInputContext } from "input-otp";
 import type * as React from "react";
 import { use } from "react";
-import { cn } from "./lib/utils";
-import { Separator } from "./separator";
+import { cn } from "../lib/utils";
+import { Separator } from "../separator";
 
 type InputOTPSize = "default" | "lg";
 type DistributiveOmit<T, K extends PropertyKey> = T extends unknown ? Omit<T, K> : never;

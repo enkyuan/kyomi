@@ -2,8 +2,8 @@
 
 import { use } from "react";
 import * as React from "react";
-import { useMediaQuery } from "../hooks/use-media-query";
-import { cn } from "../lib/utils";
+import { useMediaQuery } from "../../hooks/use-media-query";
+import { cn } from "../../lib/utils";
 
 const SIDEBAR_COOKIE_NAME: string = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE: number = 60 * 60 * 24 * 7;
