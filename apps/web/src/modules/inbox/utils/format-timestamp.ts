@@ -96,12 +96,17 @@ export function formatInboxTimestamp(
 
 export function formatInboxTimestampSsrFallback(
   value: string,
+  display: InboxTimestampDisplayDto,
   hourCycle: InboxTimestampHourCycleDto,
 ) {
   const date = new Date(value);
 
   if (Number.isNaN(date.getTime())) {
     return value;
+  }
+
+  if (display === "relative") {
+    return formatRelative(date);
   }
 
   return getAbsoluteUtcFormatter(hourCycle).format(date);

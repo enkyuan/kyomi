@@ -12,8 +12,9 @@ import { usePretextLayout } from "@kyomi/ui/hooks/use-pretext";
 import { getSectionClassNames, getTypography } from "@modules/feeds/lib/layout";
 import { arePropsEqual, type Props } from "@modules/feeds/lib/props";
 
-const ITEM_GUTTER_CLASS = "px-10.5";
-const ITEM_SEPARATOR_CLASS = "left-10.5 right-10.5";
+const ITEM_INSET_CLASS = "mx-10.5";
+const ITEM_GUTTER_CLASS = "px-0";
+const ITEM_SEPARATOR_CLASS = "left-0 right-0";
 
 export const Item = memo(function Item({
   item,
@@ -78,7 +79,8 @@ export const Item = memo(function Item({
     <Card
       aria-label={item.title || "Untitled article"}
       className={cn(
-        "group/inbox-item relative w-full cursor-pointer gap-0 overflow-visible rounded-none border-0 bg-transparent text-left shadow-none outline-none before:hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background",
+        "group/inbox-item relative w-auto cursor-pointer gap-0 overflow-visible rounded-none border-0 bg-transparent text-left shadow-none outline-none before:hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background",
+        ITEM_INSET_CLASS,
       )}
       onClick={selectItem}
       onKeyDown={handleKeyDown}

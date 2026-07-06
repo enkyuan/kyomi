@@ -17,7 +17,11 @@ export function Timestamp({ value, display, hourCycle }: TimestampProps) {
   const hydrated = useHydrated();
   const formattedValue = hydrated
     ? formatInboxTimestamp(value, display, hourCycle)
-    : formatInboxTimestampSsrFallback(value, hourCycle);
+    : formatInboxTimestampSsrFallback(value, display, hourCycle);
 
-  return <time dateTime={value}>{formattedValue}</time>;
+  return (
+    <time dateTime={value} suppressHydrationWarning>
+      {formattedValue}
+    </time>
+  );
 }

@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, test, vi } from "vitest";
 import { formatInboxTimestamp } from "@modules/inbox";
+import { formatInboxTimestampSsrFallback } from "@modules/inbox/utils/format-timestamp";
 
 const NOW = Date.UTC(2026, 6, 1, 12, 0, 0);
 const HOUR_CYCLE = "12h";
@@ -27,6 +28,15 @@ describe("formatInboxTimestamp", () => {
     );
     expect(formatInboxTimestamp(isoFromNow(18 * 30 * 86_400_000), "relative", HOUR_CYCLE)).toBe(
       "1y",
+    );
+  });
+
+  test("keeps relative display for the server fallback", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date(NOW));
+
+    expect(formatInboxTimestampSsrFallback(isoFromNow(6 * 3_600_000), "relative", HOUR_CYCLE)).toBe(
+      "6h",
     );
   });
 });

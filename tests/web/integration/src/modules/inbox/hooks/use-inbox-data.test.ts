@@ -57,7 +57,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "kyomi:inbox-preferences:v3:user_1",
+      "kyomi:inbox-preferences:v4:user_1",
       JSON.stringify(SPLIT_PREFERENCES),
     );
 
@@ -77,7 +77,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "kyomi:inbox-preferences:v3:user_1",
+      "kyomi:inbox-preferences:v4:user_1",
       JSON.stringify(READER_PREFERENCES),
     );
 
@@ -97,7 +97,7 @@ describe("resolveInitialInboxPreferences", () => {
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "kyomi:inbox-preferences:v3:user_1",
+      "kyomi:inbox-preferences:v4:user_1",
       JSON.stringify(READER_PREFERENCES),
     );
 
@@ -111,13 +111,13 @@ describe("resolveInitialInboxPreferences", () => {
     expect(resolved.articleOpenBehavior).toBe("reader");
   });
 
-  test("ignores stale v2 cache so absolute timestamps do not override defaults", () => {
+  test("ignores stale v3 cache so absolute timestamps do not override defaults", () => {
     const queryClient = {
       getQueryData: () => undefined,
     } as { getQueryData: <T>() => T | undefined };
 
     window.localStorage.setItem(
-      "kyomi:inbox-preferences:v2:user_1",
+      "kyomi:inbox-preferences:v3:user_1",
       JSON.stringify({
         ...READER_PREFERENCES,
         inboxTimestampDisplay: "absolute",
