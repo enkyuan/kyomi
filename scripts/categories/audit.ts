@@ -3,9 +3,10 @@ import {
   categories,
   feedCategoryAssignments,
   feedItemCategoryAssignments,
-} from "../../packages/db/src";
-import { feeds, feedItems } from "../../packages/db/src";
-import { buildCategoryLabelsSql } from "../../apps/api/src/modules/articles/read/labels";
+  feeds,
+  feedItems,
+} from "@kyomi/db";
+import { buildCategoryLabelsSql } from "@modules/articles/read/labels";
 
 export type CategoryAuditFormat = "jsonl" | "summary";
 
@@ -391,8 +392,8 @@ if (import.meta.main) {
   const args = parseCategoryAuditArgs(process.argv);
   let labels: CategoryAuditLabel[] | null = null;
   const [{ db, pool }, { assertApiDatabaseReady }] = await Promise.all([
-    import("../../apps/api/src/adapters/db/client"),
-    import("../../apps/api/src/adapters/db/script-preflight"),
+    import("@adapters/db/client"),
+    import("@adapters/db/script-preflight"),
   ]);
   try {
     labels = args.labelsFile ? await readAuditLabelsFile(args.labelsFile) : null;

@@ -1,17 +1,9 @@
 import { sql } from "drizzle-orm";
-import {
-  categories,
-  feedCategoryAssignments,
-  feeds,
-  mapCategoryLabelToCanonical,
-} from "../../packages/db/src";
-import { canonicalWinsOnConflictSql } from "../../packages/worker/src";
-import { db, pool } from "../../apps/api/src/adapters/db/client";
-import { assertApiDatabaseReady } from "../../apps/api/src/adapters/db/script-preflight";
-import {
-  type FeedSearchDocument,
-  upsertFeedSearchDocuments,
-} from "../../apps/api/src/adapters/search/meili";
+import { categories, feedCategoryAssignments, feeds, mapCategoryLabelToCanonical } from "@kyomi/db";
+import { canonicalWinsOnConflictSql } from "@kyomi/worker";
+import { db, pool } from "@adapters/db/client";
+import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
+import { type FeedSearchDocument, upsertFeedSearchDocuments } from "@adapters/search/meili";
 import {
   domainFromUrl,
   type ImportStats,
@@ -22,7 +14,7 @@ import {
   toCategorySlug,
   type ValidationReport,
   type CatalogFeedRecord,
-} from "../../apps/api/src/modules/catalog/import";
+} from "@modules/catalog/import";
 
 const DEFAULT_CATALOG_IMPORT_BATCH_SIZE = 1_000;
 
@@ -328,32 +320,6 @@ export async function importCatalogFile(
   let pendingRecords: NormalizedImportRecord[] = [];
   let duplicateCanonicalUrls = 0;
   let lastProgressAt = 0;
-  const batch: NormalizedImportRecord[] = [];
-
-  async function flushBatch(): Promise<void> {
-    if (batch.length === 0) {
-      return;
-    }
-
-    const records = batch.splice(0);
-    if (dryRun) {
-      stats.imported += records.length;
-      stats.categoryAssignments += records.filter(resolveCanonicalCategory).length;
-      stats.languageAssignments += records.filter((record) => record.language != null).length;
-    } else {
-      const result = await upsertCatalogBatch(records);
-      stats.imported += result.imported;
-      stats.categoryAssignments += result.categoryAssignments;
-      stats.languageAssignments += result.languageAssignments;
-    }
-
-    if (!dryRun && stats.processed - lastProgressAt >= 10_000) {
-      lastProgressAt = stats.processed;
-      console.error(
-        `[catalog-import] processed ${stats.processed} records; imported ${stats.imported} feeds`,
-      );
-    }
-  }
 
   async function flushPendingRecords(): Promise<void> {
     if (pendingRecords.length === 0) {
@@ -371,8 +337,13 @@ export async function importCatalogFile(
     } catch {
       stats.failed += batch.length;
     }
+    if (stats.processed - lastProgressAt >= 10_000) {
+      lastProgressAt = stats.processed;
+      console.error(
+        `[catalog-import] processed ${stats.processed} records; imported ${stats.imported} feeds`,
+      );
+    }
   }
-
   for await (const line of readLines(inputPath)) {
     if (!line.trim()) {
       continue;

@@ -1,5 +1,4 @@
 import type { QueryClient } from "@tanstack/react-query";
-import { requireAuth } from "@/routes/-guards";
 import { listFollowedFeeds } from "@modules/feeds/lib/api";
 import { getInboxItemIdFromSlug } from "@modules/inbox/lib/articles/slug";
 import { followedFeedsQueryKey, inboxDetailQueryOptions } from "@modules/inbox/queries/options";
@@ -79,10 +78,20 @@ export async function loadInboxRoute({ context, params }: InboxRouteLoaderArgs) 
     : Promise.resolve();
 
   const [, loaderData] = await Promise.all([
-    requireAuth(),
-    getInboxLoaderData(),
     followedFeedsPrefetch,
+    getInboxLoaderData(),
     detailPrefetch,
   ]);
   return loaderData;
+}
+
+export async function prefetchInboxArticleRoute({ context, params }: InboxRouteLoaderArgs) {
+  const routeItemId = getInboxItemIdFromSlug(params?.article);
+  if (!routeItemId) {
+    return;
+  }
+
+  await context.queryClient
+    .prefetchQuery(inboxDetailQueryOptions(routeItemId))
+    .catch(() => undefined);
 }

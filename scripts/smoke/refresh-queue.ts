@@ -1,5 +1,5 @@
-import { getRedis, closeRedis } from "../../apps/api/src/adapters/redis";
-import { buildQueueHealthSnapshot } from "../../apps/api/src/app/jobs/queue-health";
+import { buildQueueHealthSnapshot } from "@app/jobs/queue-health";
+import { getRedis, closeRedis } from "@adapters/redis";
 
 try {
   const snapshot = await buildQueueHealthSnapshot(getRedis());

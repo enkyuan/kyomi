@@ -11,7 +11,8 @@
     "fmt:check": "oxfmt --check src vite.config.ts sw.plugin.ts",
     "lint": "oxlint src vite.config.ts sw.plugin.ts",
     "lint:fix": "oxlint --fix src vite.config.ts sw.plugin.ts",
-    "typecheck": "tsgo -p tsconfig.json --noEmit"
+    "routes:generate": "node scripts/generate-route-tree.mjs",
+    "typecheck": "bun run routes:generate && tsgo -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",

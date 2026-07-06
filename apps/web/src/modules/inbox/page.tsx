@@ -1,6 +1,5 @@
 "use client";
 
-import { AppShell } from "@/app/app-shell";
 import { MobileLayout } from "./layouts/mobile";
 import { Transition, type TransitionOffset } from "@kyomi/ui/transition";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -353,27 +352,25 @@ function InboxPageContent({
   );
 
   return (
-    <AppShell>
-      <div ref={layoutContainerRef} className="h-full max-h-full min-h-0 min-w-0">
-        {layoutVariant === "stacked" ? (
-          <MobileLayout
-            showDetail={Boolean(itemId)}
-            direction={mobileTransitionDirection}
-            list={listElement}
-            detail={detailElementWithBack}
-          />
-        ) : (
-          <div className="flex h-full max-h-full min-h-0 min-w-0 overflow-hidden pe-3">
-            <Transition {...middleColumnTransition}>
-              {itemId ? middleColumnDetailElement : listElement}
-            </Transition>
-            <aside className="hidden h-full w-96 shrink-0 flex-col py-8 xl:flex">
-              {/* Article detail replaces the inbox pane; keep this rail reserved for future context. */}
-              <InboxRecapCard />
-            </aside>
-          </div>
-        )}
-      </div>
-    </AppShell>
+    <div ref={layoutContainerRef} className="h-full max-h-full min-h-0 min-w-0">
+      {layoutVariant === "stacked" ? (
+        <MobileLayout
+          showDetail={Boolean(itemId)}
+          direction={mobileTransitionDirection}
+          list={listElement}
+          detail={detailElementWithBack}
+        />
+      ) : (
+        <div className="flex h-full max-h-full min-h-0 min-w-0 overflow-hidden pe-3">
+          <Transition {...middleColumnTransition}>
+            {itemId ? middleColumnDetailElement : listElement}
+          </Transition>
+          <aside className="hidden h-full w-96 shrink-0 flex-col py-8 xl:flex">
+            {/* Article detail replaces the inbox pane; keep this rail reserved for future context. */}
+            <InboxRecapCard />
+          </aside>
+        </div>
+      )}
+    </div>
   );
 }
