@@ -60,6 +60,7 @@ type InboxItemStateMutationInput = {
 };
 
 const InboxPreferencesBootstrapContext = createContext<InboxPreferences | undefined>(undefined);
+const INBOX_TIMESTAMP_DISPLAY_USER_SET_STORAGE_KEY = `${INBOX_PREFERENCES_STORAGE_KEY}:timestamp-display-user-set`;
 
 function inboxPreferencesQueryKey(userId?: string) {
   return ["me", "preferences", "inbox", userId ?? "anonymous"] as const;
@@ -67,6 +68,67 @@ function inboxPreferencesQueryKey(userId?: string) {
 
 function inboxPreferencesStorageKey(userId?: string) {
   return userId ? `${INBOX_PREFERENCES_STORAGE_KEY}:${userId}` : INBOX_PREFERENCES_STORAGE_KEY;
+}
+
+function inboxTimestampDisplayUserSetStorageKey(userId?: string) {
+  return userId
+    ? `${INBOX_TIMESTAMP_DISPLAY_USER_SET_STORAGE_KEY}:${userId}`
+    : INBOX_TIMESTAMP_DISPLAY_USER_SET_STORAGE_KEY;
+}
+
+function hasStoredTimestampDisplayChoice(userId?: string) {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  return (
+    window.localStorage.getItem(inboxTimestampDisplayUserSetStorageKey(userId)) === "1" ||
+    window.localStorage.getItem(INBOX_TIMESTAMP_DISPLAY_USER_SET_STORAGE_KEY) === "1"
+  );
+}
+
+function markStoredTimestampDisplayChoice(userId?: string) {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  try {
+    window.localStorage.setItem(INBOX_TIMESTAMP_DISPLAY_USER_SET_STORAGE_KEY, "1");
+    window.localStorage.setItem(inboxTimestampDisplayUserSetStorageKey(userId), "1");
+  } catch {
+    // Ignore storage errors (quota exceeded, storage disabled, etc.)
+  }
+}
+
+function clearStoredTimestampDisplayChoice(userId?: string) {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  try {
+    window.localStorage.removeItem(INBOX_TIMESTAMP_DISPLAY_USER_SET_STORAGE_KEY);
+    window.localStorage.removeItem(inboxTimestampDisplayUserSetStorageKey(userId));
+  } catch {
+    // Ignore storage errors (quota exceeded, storage disabled, etc.)
+  }
+}
+
+function normalizeTimestampDisplayDefault(
+  preferences: InboxPreferences,
+  userId?: string,
+): InboxPreferences {
+  if (preferences.inboxTimestampDisplay !== "absolute" || hasStoredTimestampDisplayChoice(userId)) {
+    return preferences;
+  }
+
+  return {
+    ...preferences,
+    inboxTimestampDisplay: DEFAULT_INBOX_PREFERENCES.inboxTimestampDisplay,
+  };
+}
+
+function hasTimestampDisplayPatch(next: Partial<InboxPreferences>) {
+  return Object.prototype.hasOwnProperty.call(next, "inboxTimestampDisplay");
 }
 
 function readCachedInboxPreferences(userId?: string): InboxPreferences {
@@ -78,7 +140,9 @@ function readCachedInboxPreferences(userId?: string): InboxPreferences {
     const raw =
       window.localStorage.getItem(inboxPreferencesStorageKey(userId)) ??
       window.localStorage.getItem(INBOX_PREFERENCES_STORAGE_KEY);
-    return raw ? sanitizeInboxPreferences(JSON.parse(raw)) : DEFAULT_INBOX_PREFERENCES;
+    return raw
+      ? normalizeTimestampDisplayDefault(sanitizeInboxPreferences(JSON.parse(raw)), userId)
+      : DEFAULT_INBOX_PREFERENCES;
   } catch {
     return DEFAULT_INBOX_PREFERENCES;
   }
@@ -110,12 +174,12 @@ export function resolveInitialInboxPreferences(
   userId?: string,
 ) {
   if (initialPreferences) {
-    return sanitizeInboxPreferences(initialPreferences);
+    return normalizeTimestampDisplayDefault(sanitizeInboxPreferences(initialPreferences), userId);
   }
 
   const cachedQuery = queryClient.getQueryData<InboxPreferences>(queryKey);
   if (cachedQuery) {
-    return cachedQuery;
+    return normalizeTimestampDisplayDefault(cachedQuery, userId);
   }
 
   if (typeof window !== "undefined") {
@@ -176,7 +240,7 @@ export function useInboxPreferences(initialPreferences?: InboxPreferences) {
       resolveInitialInboxPreferences(queryClient, queryKey, preferredInitialPreferences, user?.id),
     normalize: normalizeInboxPreferencePatch,
     onCacheWrite: writeInboxPreferencesCache,
-    queryFn: () => getInboxPreferences(),
+    queryFn: async () => normalizeTimestampDisplayDefault(await getInboxPreferences(), user?.id),
     queryKey,
     sanitize: sanitizeInboxPreferences,
     updateFn: updateInboxPreferences,
@@ -186,6 +250,22 @@ export function useInboxPreferences(initialPreferences?: InboxPreferences) {
 
   return {
     ...preferencesStore,
+    setPreferences: (next: Partial<InboxPreferences>) => {
+      if (hasTimestampDisplayPatch(next)) {
+        markStoredTimestampDisplayChoice(user?.id);
+      }
+      preferencesStore.setPreferences(next);
+    },
+    setPreferencesAsync: async (next: Partial<InboxPreferences>) => {
+      if (hasTimestampDisplayPatch(next)) {
+        markStoredTimestampDisplayChoice(user?.id);
+      }
+      return preferencesStore.setPreferencesAsync(next);
+    },
+    resetPreferences: () => {
+      clearStoredTimestampDisplayChoice(user?.id);
+      preferencesStore.resetPreferences();
+    },
     defaults: DEFAULT_INBOX_PREFERENCES,
     limits,
   };
