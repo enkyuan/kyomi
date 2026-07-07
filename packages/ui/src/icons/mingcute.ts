@@ -36,6 +36,7 @@ export {
   MinimizeFill,
   MinusCircleFill,
   More1Fill,
+  More1Line,
   More2Fill,
   More2Line,
   MoveFill,

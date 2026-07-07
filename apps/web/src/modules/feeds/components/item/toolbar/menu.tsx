@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLinkLine, EyeCloseLine, More2Line, ReportLine } from "@kyomi/ui/icons/mingcute";
+import { ExternalLinkLine, EyeCloseLine, More1Line, ReportLine } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import { Menu, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
 import { ToolbarButton } from "@kyomi/ui/toolbar";
@@ -39,7 +39,7 @@ export function ItemToolbarMenu({
                     />
                   }
                 >
-                  <More2Line className={TOOLBAR_ICON_CLASS} />
+                  <More1Line className={TOOLBAR_ICON_CLASS} />
                 </ToolbarButton>
               }
             />
