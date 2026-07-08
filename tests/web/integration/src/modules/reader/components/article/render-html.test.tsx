@@ -117,6 +117,62 @@ describe("RenderHtml", () => {
       );
     });
   });
+
+  test("renders high-confidence implicit TeX variables in HTML prose", async () => {
+    const html = `
+      <p>
+        A brief glossary: θ_c denotes the demand parameters for corridor c,
+        and y_{c,t} is the observed demand signal. The later corridor arrives at τ_{c’} > τ_c.
+      </p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      expect(root?.querySelectorAll(".katex").length).toBeGreaterThanOrEqual(4);
+    });
+
+    const annotations = Array.from(root?.querySelectorAll("annotation") ?? []).map((node) =>
+      node.textContent?.trim(),
+    );
+    expect(annotations).toContain("θ_c");
+    expect(annotations).toContain("y_{c,t}");
+    expect(annotations).toContain("τ_{c'}");
+    expect(annotations).toContain("τ_c");
+  });
+
+  test("does not treat ordinary identifiers, urls, or code as implicit TeX", async () => {
+    const html = `
+      <p>Store feed_item_id next to https://example.com/a_b for diagnostics.</p>
+      <pre><code>const x_i = 1;</code></pre>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    expect(root?.querySelector(".katex")).toBeNull();
+    expect(root?.textContent).toContain("feed_item_id");
+    expect(root?.textContent).toContain("x_i");
+  });
+
+  test("removes Medium image placeholder text and keeps placeholder alt silent", async () => {
+    const html = `
+      <p>Press enter or click to view image in full size</p>
+      <figure>
+        <img src="https://example.com/equation.png" alt="Press enter or click to view image in full size" />
+        <figcaption>Figure 1. Equation output.</figcaption>
+      </figure>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    expect(root?.textContent).not.toContain("Press enter or click to view image in full size");
+    expect(root?.querySelector("img")?.getAttribute("alt")).toBe("");
+    expect(root?.textContent).toContain("Figure 1. Equation output.");
+  });
 });
 
 describe("RenderHtml – carousel stripping", () => {
