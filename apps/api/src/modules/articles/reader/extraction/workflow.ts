@@ -1,7 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { getRedis } from "@adapters/redis";
 import { publishJob } from "@adapters/queue/publish-job";
-import { articleClips, categories, feedItemCategoryAssignments, feedItems } from "@kyomi/db";
+import { categories, feedItemCategoryAssignments } from "@kyomi/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize";
 import { and, eq, ne } from "drizzle-orm";
 import { getArticleDetailForUser } from "@modules/articles/read/detail";
@@ -22,6 +22,12 @@ import {
   upsertFailedExtractionCache,
   upsertReadyExtractionCache,
 } from "./cache";
+import {
+  persistClipExtracted,
+  persistExtracted,
+  persistFeedExtracted,
+  persistPendingExtracted,
+} from "./persistence";
 import { extractArticleContentFromUrl } from "./readability";
 
 type DB = typeof db;
@@ -50,111 +56,6 @@ type ExtractFullTextResult =
 
 async function defaultEnqueueExtractionJob(job: ArticleExtractionJob): Promise<string> {
   return publishJob(getRedis(), job);
-}
-
-async function persistPendingExtracted(database: DB, article: ArticleDetailDto) {
-  const now = new Date();
-  if (article.articleType === "feed") {
-    await database
-      .update(feedItems)
-      .set({
-        extractedContentStatus: "pending",
-        extractedContentError: null,
-        extractedContentUpdatedAt: now,
-        updatedAt: now,
-      })
-      .where(eq(feedItems.id, article.id));
-    return;
-  }
-
-  await database
-    .update(articleClips)
-    .set({
-      extractedContentStatus: "pending",
-      extractedContentError: null,
-      extractedContentUpdatedAt: now,
-      updatedAt: now,
-    })
-    .where(eq(articleClips.id, article.id));
-}
-
-async function persistFeedExtracted(
-  database: DB,
-  articleId: string,
-  payload: { kind: "ready"; html: string; text: string } | { kind: "failed"; message: string },
-) {
-  const now = new Date();
-  if (payload.kind === "ready") {
-    await database
-      .update(feedItems)
-      .set({
-        extractedContentHtml: payload.html,
-        extractedContentText: payload.text,
-        extractedContentStatus: "ready",
-        extractedContentError: null,
-        extractedContentUpdatedAt: now,
-        updatedAt: now,
-      })
-      .where(eq(feedItems.id, articleId));
-  } else {
-    await database
-      .update(feedItems)
-      .set({
-        extractedContentHtml: null,
-        extractedContentText: null,
-        extractedContentStatus: "failed",
-        extractedContentError: payload.message,
-        extractedContentUpdatedAt: now,
-        updatedAt: now,
-      })
-      .where(eq(feedItems.id, articleId));
-  }
-}
-
-async function persistClipExtracted(
-  database: DB,
-  articleId: string,
-  payload: { kind: "ready"; html: string; text: string } | { kind: "failed"; message: string },
-) {
-  const now = new Date();
-  if (payload.kind === "ready") {
-    await database
-      .update(articleClips)
-      .set({
-        extractedContentHtml: payload.html,
-        extractedContentText: payload.text,
-        extractedContentStatus: "ready",
-        extractedContentError: null,
-        extractedContentUpdatedAt: now,
-        updatedAt: now,
-      })
-      .where(eq(articleClips.id, articleId));
-  } else {
-    await database
-      .update(articleClips)
-      .set({
-        extractedContentHtml: null,
-        extractedContentText: null,
-        extractedContentStatus: "failed",
-        extractedContentError: payload.message,
-        extractedContentUpdatedAt: now,
-        updatedAt: now,
-      })
-      .where(eq(articleClips.id, articleId));
-  }
-}
-
-async function persistExtracted(
-  database: DB,
-  article: ArticleDetailDto,
-  payload: { kind: "ready"; html: string; text: string } | { kind: "failed"; message: string },
-) {
-  if (article.articleType === "feed") {
-    await persistFeedExtracted(database, article.id, payload);
-    return;
-  }
-
-  await persistClipExtracted(database, article.id, payload);
 }
 
 async function loadExplicitItemCategoryLabels(database: DB, articleId: string): Promise<string[]> {
