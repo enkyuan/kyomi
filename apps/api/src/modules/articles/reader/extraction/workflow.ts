@@ -1,4 +1,6 @@
 import type { db } from "@adapters/db/client";
+import { getRedis } from "@adapters/redis";
+import { publishJob } from "@adapters/queue/publish-job";
 import { articleClips, categories, feedItemCategoryAssignments, feedItems } from "@kyomi/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize";
 import { and, eq, ne } from "drizzle-orm";
@@ -10,26 +12,70 @@ import {
   embeddingModelInfo,
   MAX_CLASSIFIER_LABELS,
   syncItemInferences,
+  type ArticleExtractionJob,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
+import {
+  normalizeExtractionUrlKey,
+  readFreshExtractionCache,
+  safeExtractErrorMessage,
+  upsertFailedExtractionCache,
+  upsertReadyExtractionCache,
+} from "./cache";
 import { extractArticleContentFromUrl } from "./readability";
 
 type DB = typeof db;
 type ExtractionLogger = {
+  info?: (message: string, data?: Record<string, unknown>) => void;
   warn?: (message: string, data?: Record<string, unknown>) => void;
+  error?: (message: string, data?: Record<string, unknown>) => void;
 };
 
 type ExtractFullTextOptions = {
+  enqueueExtractionJob?: (job: ArticleExtractionJob) => Promise<string>;
   embeddingClassifier?: EmbeddingClassifierConfig;
   logger?: ExtractionLogger;
 };
 
-function safeExtractErrorMessage(raw: string, maxLen = 280): string {
-  const t = raw.trim();
-  if (!t) {
-    return "Full text could not be extracted.";
+type ExtractFullTextResult =
+  | { ok: true; status: "ready"; article: ArticleDetailDto }
+  | { ok: true; status: "queued"; article: ArticleDetailDto }
+  | {
+      ok: false;
+      status: "failed";
+      errorCode: string;
+      errorMessage: string;
+      article: ArticleDetailDto;
+    };
+
+async function defaultEnqueueExtractionJob(job: ArticleExtractionJob): Promise<string> {
+  return publishJob(getRedis(), job);
+}
+
+async function persistPendingExtracted(database: DB, article: ArticleDetailDto) {
+  const now = new Date();
+  if (article.articleType === "feed") {
+    await database
+      .update(feedItems)
+      .set({
+        extractedContentStatus: "pending",
+        extractedContentError: null,
+        extractedContentUpdatedAt: now,
+        updatedAt: now,
+      })
+      .where(eq(feedItems.id, article.id));
+    return;
   }
-  return t.length > maxLen ? `${t.slice(0, maxLen)}…` : t;
+
+  await database
+    .update(articleClips)
+    .set({
+      extractedContentStatus: "pending",
+      extractedContentError: null,
+      extractedContentUpdatedAt: now,
+      updatedAt: now,
+    })
+    .where(eq(articleClips.id, article.id));
 }
 
 async function persistFeedExtracted(
@@ -96,6 +142,19 @@ async function persistClipExtracted(
       })
       .where(eq(articleClips.id, articleId));
   }
+}
+
+async function persistExtracted(
+  database: DB,
+  article: ArticleDetailDto,
+  payload: { kind: "ready"; html: string; text: string } | { kind: "failed"; message: string },
+) {
+  if (article.articleType === "feed") {
+    await persistFeedExtracted(database, article.id, payload);
+    return;
+  }
+
+  await persistClipExtracted(database, article.id, payload);
 }
 
 async function loadExplicitItemCategoryLabels(database: DB, articleId: string): Promise<string[]> {
@@ -176,45 +235,133 @@ export async function reclassifyExtractedFeedItem(
   }
 }
 
-/**
- * On-demand source-page extraction. Persists to extracted* columns only; feed content fields stay unchanged.
- */
-export async function extractFullTextForUser(
+export async function requestFullTextExtractionForUser(
   database: DB,
   userId: string,
   articleId: string,
   options: ExtractFullTextOptions = {},
-): Promise<
-  | { ok: true; article: ArticleDetailDto }
-  | { ok: false; errorCode: string; errorMessage: string; article: ArticleDetailDto }
-> {
+): Promise<ExtractFullTextResult> {
   const before = await getArticleDetailForUser(database, userId, articleId);
 
   try {
     assertHttpOrHttpsUrl(before.link);
   } catch {
     const msg = "A valid public http(s) article URL is required.";
+    await persistExtracted(database, before, { kind: "failed", message: msg });
+    const article = await getArticleDetailForUser(database, userId, articleId);
+    return { ok: false, status: "failed", errorCode: "INVALID_URL", errorMessage: msg, article };
+  }
+
+  if (before.reader.extracted.status === "ready" && before.reader.extracted.content) {
+    return { ok: true, status: "ready", article: before };
+  }
+
+  if (before.reader.extracted.status === "pending" && before.reader.extracted.updatedAt) {
+    return { ok: true, status: "queued", article: before };
+  }
+
+  await persistPendingExtracted(database, before);
+  const article = await getArticleDetailForUser(database, userId, articleId);
+
+  try {
+    const enqueueExtractionJob = options.enqueueExtractionJob ?? defaultEnqueueExtractionJob;
+    await enqueueExtractionJob({
+      type: "article.extract",
+      payload: {
+        articleId,
+        userId,
+        requestedAt: new Date().toISOString(),
+      },
+    });
+  } catch (error) {
+    options.logger?.error?.("articles.extract_full_text.enqueue_failed", {
+      userId,
+      articleId,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    const message = "Full text extraction could not be queued.";
+    await persistExtracted(database, before, { kind: "failed", message });
+    const failedArticle = await getArticleDetailForUser(database, userId, articleId);
+    return {
+      ok: false,
+      status: "failed",
+      errorCode: "QUEUE_UNAVAILABLE",
+      errorMessage: message,
+      article: failedArticle,
+    };
+  }
+
+  return { ok: true, status: "queued", article };
+}
+
+/**
+ * Worker-side source-page extraction. Persists to extracted* columns only; feed content fields stay unchanged.
+ */
+export async function runArticleExtractionForUser(
+  database: DB,
+  userId: string,
+  articleId: string,
+  options: ExtractFullTextOptions = {},
+): Promise<ExtractFullTextResult> {
+  const before = await getArticleDetailForUser(database, userId, articleId);
+
+  let sourceUrl: URL;
+  try {
+    sourceUrl = assertHttpOrHttpsUrl(before.link);
+  } catch {
+    const msg = "A valid public http(s) article URL is required.";
+    await persistExtracted(database, before, { kind: "failed", message: msg });
+    const article = await getArticleDetailForUser(database, userId, articleId);
+    return { ok: false, status: "failed", errorCode: "INVALID_URL", errorMessage: msg, article };
+  }
+
+  if (before.reader.extracted.status === "ready" && before.reader.extracted.content) {
+    return { ok: true, status: "ready", article: before };
+  }
+
+  const urlKey = normalizeExtractionUrlKey(sourceUrl);
+  const cached = await readFreshExtractionCache(database, urlKey);
+
+  if (cached?.kind === "ready") {
+    await persistExtracted(database, before, {
+      kind: "ready",
+      html: cached.html,
+      text: cached.text,
+    });
     if (before.articleType === "feed") {
-      await persistFeedExtracted(database, articleId, { kind: "failed", message: msg });
-    } else {
-      await persistClipExtracted(database, articleId, { kind: "failed", message: msg });
+      await reclassifyExtractedFeedItem(database, before, cached.text, options);
     }
     const article = await getArticleDetailForUser(database, userId, articleId);
-    return { ok: false, errorCode: "INVALID_URL", errorMessage: msg, article };
+    return { ok: true, status: "ready", article };
+  }
+
+  if (cached?.kind === "failed") {
+    await persistExtracted(database, before, { kind: "failed", message: cached.message });
+    const article = await getArticleDetailForUser(database, userId, articleId);
+    return {
+      ok: false,
+      status: "failed",
+      errorCode: cached.errorCode,
+      errorMessage: cached.message,
+      article,
+    };
   }
 
   const extracted = await extractArticleContentFromUrl(before.link);
 
   if (!extracted.ok) {
     const message = safeExtractErrorMessage(extracted.errorMessage);
-    if (before.articleType === "feed") {
-      await persistFeedExtracted(database, articleId, { kind: "failed", message });
-    } else {
-      await persistClipExtracted(database, articleId, { kind: "failed", message });
-    }
+    await upsertFailedExtractionCache(database, {
+      urlKey,
+      sourceUrl: sourceUrl.href,
+      errorCode: extracted.errorCode,
+      message,
+    });
+    await persistExtracted(database, before, { kind: "failed", message });
     const article = await getArticleDetailForUser(database, userId, articleId);
     return {
       ok: false,
+      status: "failed",
       errorCode: extracted.errorCode,
       errorMessage: message,
       article,
@@ -225,19 +372,31 @@ export async function extractFullTextForUser(
   const text = extracted.content.contentText?.trim() ?? "";
   if (!html) {
     const message = "No readable article body was found.";
-    if (before.articleType === "feed") {
-      await persistFeedExtracted(database, articleId, { kind: "failed", message });
-    } else {
-      await persistClipExtracted(database, articleId, { kind: "failed", message });
-    }
+    await upsertFailedExtractionCache(database, {
+      urlKey,
+      sourceUrl: sourceUrl.href,
+      finalUrl: extracted.finalUrl,
+      errorCode: "NO_READABLE_CONTENT",
+      message,
+    });
+    await persistExtracted(database, before, { kind: "failed", message });
     const article = await getArticleDetailForUser(database, userId, articleId);
     return {
       ok: false,
+      status: "failed",
       errorCode: "NO_READABLE_CONTENT",
       errorMessage: message,
       article,
     };
   }
+
+  await upsertReadyExtractionCache(database, {
+    urlKey,
+    sourceUrl: sourceUrl.href,
+    finalUrl: extracted.finalUrl,
+    html,
+    text,
+  });
 
   if (before.articleType === "feed") {
     await persistFeedExtracted(database, articleId, { kind: "ready", html, text });
@@ -247,5 +406,5 @@ export async function extractFullTextForUser(
   }
 
   const article = await getArticleDetailForUser(database, userId, articleId);
-  return { ok: true, article };
+  return { ok: true, status: "ready", article };
 }

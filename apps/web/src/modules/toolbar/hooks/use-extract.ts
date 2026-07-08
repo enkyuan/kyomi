@@ -60,11 +60,18 @@ export function useReaderExtract({
           type: "loading",
           timeout: 0,
         },
-        success: {
-          title: "Full text ready",
-          description: "Article content has been refreshed.",
-          type: "success",
-        },
+        success: (result) =>
+          result.status === "ready"
+            ? {
+                title: "Full text ready",
+                description: "Article content has been refreshed.",
+                type: "success",
+              }
+            : {
+                title: "Extraction queued",
+                description: "The article will update when full text is ready.",
+                type: "info",
+              },
         error: (error) => {
           logClientError("reader.extract", error);
           return {

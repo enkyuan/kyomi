@@ -13,6 +13,7 @@ import {
   type JobMessage,
 } from "@kyomi/worker";
 import { runOpmlImportFeedJob, runOpmlImportJob } from "@modules/opml/jobs";
+import { runArticleExtractionForUser } from "@modules/articles/reader/extraction/workflow";
 import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "./refresh-errors";
 
 async function handleWorkerJob(
@@ -102,6 +103,42 @@ async function handleWorkerJob(
       });
       return;
     }
+    case "article.extract": {
+      const result = await runArticleExtractionForUser(
+        db,
+        job.payload.userId,
+        job.payload.articleId,
+        {
+          embeddingClassifier: env.VOYAGE_API_KEY
+            ? { apiKey: env.VOYAGE_API_KEY, timeoutMs: 8000 }
+            : undefined,
+          logger,
+        },
+      );
+      const durationMs = Date.now() - startTime;
+
+      if (!result.ok) {
+        logger.warn("worker.job.article_extract.failed", {
+          streamId: id,
+          articleId: job.payload.articleId,
+          userId: job.payload.userId,
+          errorCode: result.errorCode,
+          attempts,
+          durationMs,
+        });
+        return;
+      }
+
+      logger.info("worker.job.article_extract.completed", {
+        streamId: id,
+        articleId: job.payload.articleId,
+        userId: job.payload.userId,
+        status: result.status,
+        attempts,
+        durationMs,
+      });
+      return;
+    }
   }
 }
 
@@ -118,12 +155,20 @@ async function logWorkerJobError(error: unknown, message: JobMessage | null): Pr
           reason: message.job.payload.reason,
         }
       : {};
+  const articleExtractContext =
+    message?.job.type === "article.extract"
+      ? {
+          articleId: message.job.payload.articleId,
+          userId: message.job.payload.userId,
+        }
+      : {};
 
   const payload = {
     streamId: message?.id ?? null,
     jobType: message?.job.type ?? null,
     attempts: message?.attempts ?? null,
     ...feedRefreshContext,
+    ...articleExtractContext,
     errorClass: classification.code,
     retryable: classification.retryable,
     error: error instanceof Error ? error.message : String(error),

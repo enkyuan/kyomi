@@ -5,7 +5,7 @@ import type { ArticleExtractionCandidate } from "../content";
 import { fetchArticleDocument } from "./fetch";
 
 type ArticleExtractionResult =
-  | { ok: true; content: ArticleExtractionCandidate }
+  | { ok: true; content: ArticleExtractionCandidate; finalUrl: string }
   | { ok: false; errorCode: string; errorMessage: string };
 
 function wordCount(input: string): number {
@@ -97,6 +97,7 @@ export function extractArticleContentFromHtml(input: {
 
   return {
     ok: true,
+    finalUrl: finalUrl.href,
     content: {
       title: article.title?.trim() || null,
       byline: article.byline?.trim() || null,

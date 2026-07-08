@@ -1,5 +1,6 @@
 export {
   FEED_REFRESH_JOBS_STREAM_KEY,
+  ARTICLE_EXTRACTION_JOBS_STREAM_KEY,
   JOBS_CONSUMER_GROUP,
   JOBS_DEAD_LETTER_STREAM_KEY,
   JOBS_STREAM_KEY,
@@ -13,6 +14,7 @@ export {
   parseJobMessageFields,
   toRedisStreamFieldList,
   type ConsumeJobsOptions,
+  type ArticleExtractionJob,
   type FeedRefreshJob,
   type Job,
   type JobMessage,

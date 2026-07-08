@@ -15,6 +15,7 @@ export type Props = {
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
   onSelect: (item: InboxItem) => void;
+  onIntent?: (item: InboxItem) => void;
 };
 
 function areStringArraysEqual(a: string[], b: string[]) {
@@ -53,6 +54,7 @@ export function arePropsEqual(prev: Props, next: Props) {
     prev.showFavicons === next.showFavicons &&
     prev.timestampDisplay === next.timestampDisplay &&
     prev.timestampHourCycle === next.timestampHourCycle &&
-    prev.onSelect === next.onSelect
+    prev.onSelect === next.onSelect &&
+    prev.onIntent === next.onIntent
   );
 }

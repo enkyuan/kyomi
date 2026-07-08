@@ -30,6 +30,7 @@ import { listFolders } from "@modules/folders/lib/api";
 import {
   followedFeedsQueryKey,
   getFeedRefreshPollInterval,
+  prefetchInboxItemDetail,
   prefetchInboxSegmentedControlTarget,
 } from "@modules/inbox/queries/options";
 import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
@@ -282,6 +283,13 @@ function InboxPageContent({
     void requestNextInboxPage();
   }, [requestNextInboxPage]);
 
+  const prefetchItem = useCallback(
+    (item: InboxItem) => {
+      void prefetchInboxItemDetail(queryClient, item.id).catch(() => undefined);
+    },
+    [queryClient],
+  );
+
   useEffect(() => {
     writeShellStateSnapshot({
       inboxFilter: effectiveFilter,
@@ -309,6 +317,7 @@ function InboxPageContent({
       showScrollbar={!showFeedDetail}
       fetchNextInboxPage={fetchNextInboxPage}
       selectItem={selectItem}
+      prefetchItem={prefetchItem}
       navigate={navigate}
       router={router}
       sort={sort}

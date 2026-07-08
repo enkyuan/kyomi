@@ -2,6 +2,7 @@ import type Redis from "ioredis";
 
 export const FEED_REFRESH_JOBS_STREAM_KEY = "jobs:feed-refresh";
 export const OPML_JOBS_STREAM_KEY = "jobs:opml";
+export const ARTICLE_EXTRACTION_JOBS_STREAM_KEY = "jobs:article-extraction";
 export const JOBS_STREAM_KEY = FEED_REFRESH_JOBS_STREAM_KEY;
 export const JOBS_CONSUMER_GROUP = "kyomi-workers";
 export const JOBS_DEAD_LETTER_STREAM_KEY = "jobs:dead-letter";
@@ -36,7 +37,16 @@ export type OpmlImportFeedJob = {
   };
 };
 
-export type Job = FeedRefreshJob | OpmlImportJob | OpmlImportFeedJob;
+export type ArticleExtractionJob = {
+  type: "article.extract";
+  payload: {
+    articleId: string;
+    userId: string;
+    requestedAt: string;
+  };
+};
+
+export type Job = FeedRefreshJob | OpmlImportJob | OpmlImportFeedJob | ArticleExtractionJob;
 export type JobType = Job["type"];
 
 export type JobMessage = {
@@ -59,6 +69,8 @@ export function getStreamKeyForJobType(jobType: JobType): string {
     case "opml.import":
     case "opml.import.feed":
       return OPML_JOBS_STREAM_KEY;
+    case "article.extract":
+      return ARTICLE_EXTRACTION_JOBS_STREAM_KEY;
   }
 }
 
@@ -161,6 +173,25 @@ function parseOpmlImportFeedJob(parsedPayload: Record<string, unknown>): OpmlImp
   };
 }
 
+function parseArticleExtractionJob(parsedPayload: Record<string, unknown>): ArticleExtractionJob {
+  if (
+    typeof parsedPayload.articleId !== "string" ||
+    typeof parsedPayload.userId !== "string" ||
+    typeof parsedPayload.requestedAt !== "string"
+  ) {
+    throw new Error("Invalid article.extract payload");
+  }
+
+  return {
+    type: "article.extract",
+    payload: {
+      articleId: parsedPayload.articleId,
+      userId: parsedPayload.userId,
+      requestedAt: parsedPayload.requestedAt,
+    },
+  };
+}
+
 export function parseJob(fields: Record<string, string>): Job {
   const parsedPayload = JSON.parse(fields.payload ?? "null") as Record<string, unknown> | null;
   if (!parsedPayload) {
@@ -174,6 +205,8 @@ export function parseJob(fields: Record<string, string>): Job {
       return parseOpmlImportJob(parsedPayload);
     case "opml.import.feed":
       return parseOpmlImportFeedJob(parsedPayload);
+    case "article.extract":
+      return parseArticleExtractionJob(parsedPayload);
     default:
       throw new Error(`Unsupported job type: ${fields.type ?? "unknown"}`);
   }

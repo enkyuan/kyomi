@@ -24,6 +24,59 @@ describe("active feed refresh status", () => {
   });
 });
 
+describe("inbox detail prefetch", () => {
+  test("prefetches the item detail query for a known article id", async () => {
+    const prefetchQueryCalls: unknown[] = [];
+    const queryClient = {
+      prefetchQuery: async (options: unknown) => {
+        prefetchQueryCalls.push(options);
+      },
+    };
+
+    await inboxQueryOptions.prefetchInboxItemDetail(queryClient as never, "item-1");
+
+    expect(prefetchQueryCalls).toHaveLength(1);
+    expect((prefetchQueryCalls[0] as { queryKey: readonly unknown[] }).queryKey).toEqual([
+      "inbox",
+      "item-detail",
+      "item-1",
+    ]);
+  });
+
+  test("polls detail only for a requested pending extraction", () => {
+    const options = inboxQueryOptions.inboxDetailQueryOptions("item-1");
+    const refetchInterval = options.refetchInterval;
+
+    expect(
+      refetchInterval({
+        state: {
+          data: {
+            item: {
+              reader: {
+                extracted: { status: "pending", updatedAt: "2026-07-08T00:00:00.000Z" },
+              },
+            },
+          },
+        },
+      } as never),
+    ).toBe(2_500);
+
+    expect(
+      refetchInterval({
+        state: {
+          data: {
+            item: {
+              reader: {
+                extracted: { status: "pending", updatedAt: null },
+              },
+            },
+          },
+        },
+      } as never),
+    ).toBe(false);
+  });
+});
+
 describe("feed refresh polling policy", () => {
   test("uses the active cadence only while a refresh is queued or running", () => {
     expect(inboxQueryOptions.getFeedRefreshPollInterval([{ refreshStatus: "idle" }])).toBe(30_000);

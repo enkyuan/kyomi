@@ -153,6 +153,29 @@ export const articleClips = pgTable(
   ],
 );
 
+export const articleExtractionCache = pgTable(
+  "article_extraction_cache",
+  {
+    id: text("id").primaryKey(),
+    urlKey: text("url_key").notNull(),
+    sourceUrl: text("source_url").notNull(),
+    finalUrl: text("final_url"),
+    contentHash: text("content_hash"),
+    contentHtml: text("content_html"),
+    contentText: text("content_text"),
+    status: text("status").notNull(),
+    errorCode: text("error_code"),
+    errorMessage: text("error_message"),
+    fetchedAt: timestamp("fetched_at").notNull(),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => [
+    uniqueIndex("article_extraction_cache_url_key_unique").on(table.urlKey),
+    index("article_extraction_cache_content_hash_idx").on(table.contentHash),
+  ],
+);
+
 export const articleViewEvents = pgTable(
   "article_view_events",
   {

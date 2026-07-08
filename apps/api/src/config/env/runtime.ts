@@ -116,7 +116,7 @@ export const env = createEnv({
     JOB_PROCESS_CONCURRENCY: z.coerce.number().int().positive().max(64).default(4),
     JOB_READ_COUNT: z.coerce.number().int().positive().max(256).default(10),
     JOB_STREAM_MAX_LENGTH: z.coerce.number().int().min(1_000).max(5_000_000).default(100_000),
-    JOB_STREAMS: csvFromEnv.default(["jobs:feed-refresh", "jobs:opml"]),
+    JOB_STREAMS: csvFromEnv.default(["jobs:feed-refresh", "jobs:opml", "jobs:article-extraction"]),
     FEED_FETCH_HOST_LEASE_MS: z.coerce.number().int().min(1_000).max(60_000).default(5_000),
     FEED_FETCH_HOST_RETRY_DELAY_MS: z.coerce.number().int().min(10).max(5_000).default(250),
     /** Comma-separated Better Auth user ids allowed to call `PUT|DELETE /feeds/:feedId/admin`. */

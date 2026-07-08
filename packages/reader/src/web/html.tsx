@@ -12,7 +12,10 @@ import type { ReaderLayoutMode } from "../core/types";
 import { hasLikelyDelimitedTex } from "../shared/math";
 import { mountReaderLinkPreviewCards } from "./components/link-card";
 import { prepareArticleHtml } from "./html/string-prep";
-import { runReaderDomEnhancements } from "./html/dom-enhancements";
+import {
+  runReaderCriticalDomEnhancements,
+  runReaderIdleDomEnhancements,
+} from "./html/dom-enhancements";
 import { enhanceCodeBlocks } from "./lib/code-block";
 
 let katexRuntimePromise:
@@ -36,6 +39,48 @@ function updateReaderLinkTargets(node: HTMLElement, openLinksInNewTab: boolean) 
     }
     anchor.removeAttribute("target");
   });
+}
+
+function isReaderPerfEnabled(): boolean {
+  if (typeof window === "undefined" || typeof performance === "undefined") {
+    return false;
+  }
+
+  try {
+    return window.localStorage.getItem("kyomi:reader-perf") === "1";
+  } catch {
+    return false;
+  }
+}
+
+function measureReaderWork<T>(name: string, work: () => T): T {
+  if (!isReaderPerfEnabled()) {
+    return work();
+  }
+
+  const startMark = `kyomi:reader:${name}:start`;
+  performance.mark(startMark);
+  try {
+    return work();
+  } finally {
+    performance.measure(`kyomi:reader:${name}`, startMark);
+    performance.clearMarks(startMark);
+  }
+}
+
+function requestReaderIdleCallback(callback: () => void): () => void {
+  const idleWindow = window as Window & {
+    requestIdleCallback?: (callback: () => void, options?: { timeout?: number }) => number;
+    cancelIdleCallback?: (handle: number) => void;
+  };
+
+  if (idleWindow.requestIdleCallback && idleWindow.cancelIdleCallback) {
+    const handle = idleWindow.requestIdleCallback(callback, { timeout: 800 });
+    return () => idleWindow.cancelIdleCallback?.(handle);
+  }
+
+  const timeoutId = window.setTimeout(callback, 48);
+  return () => window.clearTimeout(timeoutId);
 }
 
 function subscribeHydration() {
@@ -78,7 +123,10 @@ export function RenderHtml({
   const linkPreviewCleanupsRef = useRef<(() => void)[]>([]);
   const isHydrated = useHydrated();
   const prepared = useMemo(
-    () => (isHydrated ? prepareArticleHtml(html, baseUrl) : ""),
+    () =>
+      isHydrated
+        ? measureReaderWork("prepareArticleHtml", () => prepareArticleHtml(html, baseUrl))
+        : "",
     [baseUrl, html, isHydrated],
   );
   const shouldRenderMath = useMemo(() => hasLikelyDelimitedTex(prepared), [prepared]);
@@ -90,24 +138,43 @@ export function RenderHtml({
     linkPreviewCleanupsRef.current = [];
   }, []);
 
-  const runAllEnhancements = useCallback(
+  const renderMathIfNeeded = useCallback(
     (node: HTMLElement) => {
-      enhanceCodeBlocks(node);
-      runReaderDomEnhancements(node, { layoutMode });
-      updateReaderLinkTargets(node, openLinksInNewTab);
       if (shouldRenderMath && mathRenderedHtmlRef.current !== prepared) {
         mathRenderedHtmlRef.current = prepared;
         void getKatexRuntime().then(({ renderMathInHtmlElement }) => {
           if (articleBodyRef.current === node && mathRenderedHtmlRef.current === prepared) {
-            renderMathInHtmlElement(node);
+            measureReaderWork("katex", () => renderMathInHtmlElement(node));
           }
         });
       }
+    },
+    [prepared, shouldRenderMath],
+  );
+
+  const runCriticalEnhancements = useCallback(
+    (node: HTMLElement) => {
+      measureReaderWork("criticalEnhancements", () => {
+        runReaderCriticalDomEnhancements(node);
+        updateReaderLinkTargets(node, openLinksInNewTab);
+      });
+      renderMathIfNeeded(node);
+    },
+    [openLinksInNewTab, renderMathIfNeeded],
+  );
+
+  const runIdleEnhancements = useCallback(
+    (node: HTMLElement) => {
+      measureReaderWork("idleEnhancements", () => {
+        enhanceCodeBlocks(node);
+        runReaderIdleDomEnhancements(node, { layoutMode });
+      });
       if (showLinkPreviews) {
+        disposeAllLinkPreviewMounts();
         linkPreviewCleanupsRef.current.push(mountReaderLinkPreviewCards(node));
       }
     },
-    [layoutMode, openLinksInNewTab, prepared, shouldRenderMath, showLinkPreviews],
+    [disposeAllLinkPreviewMounts, layoutMode, showLinkPreviews],
   );
 
   const scheduleEnhancements = useCallback(
@@ -119,10 +186,17 @@ export function RenderHtml({
       enhancementRunRef.current = runId;
       let timeoutId: number | null = null;
       let frameId: number | null = null;
+      let cancelIdle: (() => void) | null = null;
 
       const runIfCurrent = () => {
         if (articleBodyRef.current === node && enhancementRunRef.current === runId) {
-          runAllEnhancements(node);
+          runCriticalEnhancements(node);
+          cancelIdle = requestReaderIdleCallback(() => {
+            cancelIdle = null;
+            if (articleBodyRef.current === node && enhancementRunRef.current === runId) {
+              runIdleEnhancements(node);
+            }
+          });
         }
       };
 
@@ -158,12 +232,14 @@ export function RenderHtml({
         if (timeoutId !== null) {
           window.clearTimeout(timeoutId);
         }
+        cancelIdle?.();
+        cancelIdle = null;
       };
 
       cancelScheduledEnhancementRef.current = cancel;
       return cancel;
     },
-    [runAllEnhancements],
+    [runCriticalEnhancements, runIdleEnhancements],
   );
 
   useEffect(() => {

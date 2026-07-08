@@ -33,6 +33,7 @@ export function ListSection({
   showScrollbar,
   fetchNextInboxPage,
   selectItem,
+  prefetchItem,
   navigate,
   router,
   sort,
@@ -56,6 +57,7 @@ export function ListSection({
   showScrollbar: boolean;
   fetchNextInboxPage: () => void;
   selectItem: (item: InboxItem) => void;
+  prefetchItem?: (item: InboxItem) => void;
   navigate: ReturnType<typeof useInboxRouteState>["navigate"];
   router: ReturnType<typeof useRouter>;
   sort: ReturnType<typeof useInboxRouteState>["sort"];
@@ -148,6 +150,7 @@ export function ListSection({
         dataUpdatedAt: inboxDataUpdatedAt,
       },
       onSelectItem: selectItem,
+      onIntentItem: prefetchItem,
       onFilterChange: handleFilterChange,
       onFolderFilterChange: handleFolderFilterChange,
       onBackToInbox: handleBackToInbox,
@@ -186,6 +189,7 @@ export function ListSection({
       preferences.inboxTimestampHourCycle,
       itemId,
       pinnedFolders,
+      prefetchItem,
       selectItem,
       selectedItem,
       showScrollbar,

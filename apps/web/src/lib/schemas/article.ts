@@ -80,10 +80,12 @@ export const articleCountsSchema = z.object({
 export const extractFullTextResponseSchema = z.discriminatedUnion("ok", [
   z.object({
     ok: z.literal(true),
+    status: z.enum(["ready", "queued"]),
     article: articleDetailSchema,
   }),
   z.object({
     ok: z.literal(false),
+    status: z.literal("failed"),
     errorCode: z.string(),
     errorMessage: z.string(),
     article: articleDetailSchema,

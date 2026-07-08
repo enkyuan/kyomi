@@ -540,6 +540,19 @@ describe("RenderHtml – media/image hardening", () => {
 });
 
 describe("RenderHtml – code block normalization", () => {
+  test("renders sanitized HTML before idle code-block chrome runs", async () => {
+    const html = `<pre><code class="language-ts">const ready = true;</code></pre>`;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    expect(root?.textContent).toContain("const ready = true;");
+    expect(root?.querySelector("button[aria-label='Copy code']")).toBeNull();
+
+    await waitFor(() => {
+      expect(root?.querySelector("button[aria-label='Copy code']")).toBeTruthy();
+    });
+  });
+
   test("normalizes standalone multiline code tags into enhanced blocks", async () => {
     const html = `
       <div>
