@@ -1,7 +1,6 @@
 "use client";
 
 import { MobileLayout } from "./layouts/mobile";
-import { Transition, type TransitionOffset } from "@kyomi/ui/transition";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { InboxRecapCard } from "./components/recap";
@@ -29,22 +28,19 @@ import { writeShellStateSnapshot } from "@lib/shell/state";
 import { listFollowedFeeds } from "@modules/feeds/lib/api";
 import { listFolders } from "@modules/folders/lib/api";
 import {
-  ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS,
   followedFeedsQueryKey,
-  hasActiveFeedRefresh,
+  prefetchInboxItemDetail,
+  prefetchInboxSwitchTargets,
 } from "@modules/inbox/queries/options";
 import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
 import type { ArticleStepDirection } from "@modules/reader/lib/detail";
+import { usePolling } from "./hooks/use-polling";
 import { ArticleShell } from "./components/page/article/shell";
 import { DetailSection } from "./components/page/detail";
+import { Feed, FEED_TRANSITION_OFFSET } from "./components/page/feed";
 import { ListSection } from "./components/page/list";
 
-import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
-
-const MIDDLE_COLUMN_TRANSITION_OFFSET: TransitionOffset = {
-  forward: { enter: 18, exit: -12 },
-  backward: { enter: -12, exit: 18 },
-};
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 type InboxPageProps = {
   initialInboxPreferences?: InboxPreferences;
@@ -70,7 +66,6 @@ function InboxPageContent({
   const router = useRouter();
   const queryClient = useQueryClient();
   const layoutContainerRef = useRef<HTMLDivElement | null>(null);
-  const wasRefreshingFollowedFeedRef = useRef(false);
   const { containerWidth: layoutContainerWidth } = useViewport(layoutContainerRef);
   const layoutVariant = useResponsiveReaderMode(layoutContainerWidth);
   const [mobileTransitionDirection, setMobileTransitionDirection] = useState<1 | -1>(1);
@@ -128,31 +123,7 @@ function InboxPageContent({
     staleTime: QUERY_TIMES.staticMetadataStale,
     gcTime: QUERY_TIMES.staticMetadataGc,
   });
-  const hasRefreshingFollowedFeed = hasActiveFeedRefresh(followedFeedsData);
-  useEffect(() => {
-    const refreshInboxConsumers = () => {
-      void queryClient.invalidateQueries({ queryKey: followedFeedsQueryKey() });
-      void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
-      void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
-    };
-
-    if (!hasRefreshingFollowedFeed) {
-      if (wasRefreshingFollowedFeedRef.current) {
-        wasRefreshingFollowedFeedRef.current = false;
-        refreshInboxConsumers();
-      }
-      return;
-    }
-
-    wasRefreshingFollowedFeedRef.current = true;
-    refreshInboxConsumers();
-    const pollTimer = window.setInterval(
-      refreshInboxConsumers,
-      ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS,
-    );
-
-    return () => window.clearInterval(pollTimer);
-  }, [hasRefreshingFollowedFeed, queryClient]);
+  usePolling(followedFeedsData);
   const hasNoFollowedFeeds = isFollowedFeedsSuccess && (followedFeedsData?.length ?? 0) === 0;
   const pinnedFolders = useMemo(
     () =>
@@ -168,6 +139,37 @@ function InboxPageContent({
         }),
     [foldersData],
   );
+  useEffect(() => {
+    if (timezoneOffsetMinutes === undefined) {
+      return;
+    }
+    if ((followedFeedsData?.length ?? 0) === 0 && (foldersData?.length ?? 0) === 0) {
+      return;
+    }
+
+    void prefetchInboxSwitchTargets(queryClient, {
+      filter: effectiveFilter,
+      search,
+      feedId,
+      folderId,
+      includeRead,
+      sort,
+      timezoneOffsetMinutes,
+      feeds: followedFeedsData,
+      folders: foldersData,
+    }).catch(() => undefined);
+  }, [
+    effectiveFilter,
+    feedId,
+    folderId,
+    followedFeedsData,
+    foldersData,
+    includeRead,
+    queryClient,
+    search,
+    sort,
+    timezoneOffsetMinutes,
+  ]);
   const activeFeedLabel = useMemo(() => {
     if (!feedId) {
       return undefined;
@@ -198,15 +200,15 @@ function InboxPageContent({
   }, [isReadScopedFilterActive, rawInboxItems]);
 
   const selectedItem = detailData?.item ?? null;
-  const showMiddleColumnDetail = Boolean(itemId);
-  const middleColumnTransition = useTransition({
+  const showFeedDetail = Boolean(itemId);
+  const feedTransition = useTransition({
     className: "absolute inset-0",
-    contentKey: showMiddleColumnDetail ? "middle-article" : "middle-inbox",
-    direction: showMiddleColumnDetail ? "forward" : "backward",
+    contentKey: showFeedDetail ? "feed-article" : "feed-list",
+    direction: showFeedDetail ? "forward" : "backward",
     features: "max",
-    layoutGroupId: "inbox-middle-column",
+    layoutGroupId: "inbox-feed",
     mode: "sync",
-    offset: MIDDLE_COLUMN_TRANSITION_OFFSET,
+    offset: FEED_TRANSITION_OFFSET,
   });
   const { mutate: updateInboxItemState } = useInboxItemStateMutation();
   const markItemRead = useCallback(
@@ -282,6 +284,13 @@ function InboxPageContent({
     void requestNextInboxPage();
   }, [requestNextInboxPage]);
 
+  const prefetchItem = useCallback(
+    (item: InboxItem) => {
+      void prefetchInboxItemDetail(queryClient, item.id).catch(() => undefined);
+    },
+    [queryClient],
+  );
+
   useEffect(() => {
     writeShellStateSnapshot({
       inboxFilter: effectiveFilter,
@@ -306,9 +315,10 @@ function InboxPageContent({
       isInboxFetching={isInboxFetching}
       isInboxFetchingNextPage={isInboxFetchingNextPage}
       isInboxPending={isInboxPending}
-      showScrollbar={!showMiddleColumnDetail}
+      showScrollbar={!showFeedDetail}
       fetchNextInboxPage={fetchNextInboxPage}
       selectItem={selectItem}
+      prefetchItem={prefetchItem}
       navigate={navigate}
       router={router}
       sort={sort}
@@ -333,7 +343,7 @@ function InboxPageContent({
     [clearSelectedItem, detailError, isDetailError, isDetailFetching, preferences, selectedItem],
   );
 
-  const middleColumnDetailElement = useMemo(
+  const feedDetailElement = useMemo(
     () => (
       <ArticleShell
         preferences={preferences}
@@ -374,13 +384,13 @@ function InboxPageContent({
         />
       ) : (
         <div className="flex h-full max-h-full min-h-0 min-w-0 overflow-hidden pe-3">
-          <MiddleColumn
-            detail={middleColumnDetailElement}
+          <Feed
+            detail={feedDetailElement}
             list={listElement}
-            showDetail={showMiddleColumnDetail}
-            transition={middleColumnTransition}
+            showDetail={showFeedDetail}
+            transition={feedTransition}
           />
-          <aside className="hidden h-full w-96 shrink-0 flex-col py-8 xl:flex">
+          <aside className="hidden h-full w-96 shrink-0 flex-col py-4.5 xl:flex">
             {/* Article detail replaces the inbox pane; keep this rail reserved for future context. */}
             <InboxRecapCard
               navigate={navigate}
@@ -391,33 +401,6 @@ function InboxPageContent({
           </aside>
         </div>
       )}
-    </div>
-  );
-}
-
-function MiddleColumn({
-  detail,
-  list,
-  showDetail,
-  transition,
-}: {
-  detail: ReactNode;
-  list: ReactNode;
-  showDetail: boolean;
-  transition: ReturnType<typeof useTransition>;
-}) {
-  return (
-    <div className="relative h-full min-h-0 min-w-0 flex-1 overflow-hidden">
-      <div
-        aria-hidden={showDetail}
-        className={`absolute inset-0 flex min-h-0 min-w-0 flex-col transition-opacity duration-150 ${
-          showDetail ? "pointer-events-none opacity-0" : "opacity-100"
-        }`}
-        inert={showDetail ? true : undefined}
-      >
-        {list}
-      </div>
-      {showDetail ? <Transition {...transition}>{detail}</Transition> : null}
     </div>
   );
 }

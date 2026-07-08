@@ -1,10 +1,11 @@
 import type { QueryClient } from "@tanstack/react-query";
 import { listFollowedFeeds } from "@modules/feeds/lib/api";
+import { listFolders } from "@modules/folders/lib/api";
 import { getInboxItemIdFromSlug } from "@modules/inbox/lib/articles/slug";
 import type { InboxSearch } from "@modules/inbox/lib/search";
 import {
   followedFeedsQueryKey,
-  inboxDetailQueryOptions,
+  prefetchInboxItemDetail,
   prefetchInboxHotQueries,
 } from "@modules/inbox/queries/options";
 import { getInboxLoaderData } from "@modules/inbox/lib/route";
@@ -33,6 +34,14 @@ export async function loadInboxRoute({ context, params, deps }: InboxRouteLoader
       gcTime: QUERY_TIMES.staticMetadataGc,
     })
     .catch(() => undefined);
+  const foldersPrefetch = queryClient
+    .prefetchQuery({
+      queryKey: ["folders"],
+      queryFn: () => listFolders(),
+      staleTime: QUERY_TIMES.staticMetadataStale,
+      gcTime: QUERY_TIMES.staticMetadataGc,
+    })
+    .catch(() => undefined);
   const loaderData = await getInboxLoaderData();
   const hotPrefetch =
     typeof loaderData.initialTimezoneOffsetMinutes === "number"
@@ -46,12 +55,12 @@ export async function loadInboxRoute({ context, params, deps }: InboxRouteLoader
           timezoneOffsetMinutes: loaderData.initialTimezoneOffsetMinutes,
         }).catch(() => undefined)
       : Promise.resolve();
-  const detailPrefetch =
-    routeItemId && typeof loaderData.initialTimezoneOffsetMinutes !== "number"
-      ? queryClient.prefetchQuery(inboxDetailQueryOptions(routeItemId)).catch(() => undefined)
-      : Promise.resolve();
 
-  await Promise.all([followedFeedsPrefetch, hotPrefetch, detailPrefetch]);
+  if (routeItemId) {
+    void prefetchInboxItemDetail(queryClient, routeItemId).catch(() => undefined);
+  }
+
+  await Promise.all([followedFeedsPrefetch, foldersPrefetch, hotPrefetch]);
   return loaderData;
 }
 
@@ -61,7 +70,5 @@ export async function prefetchInboxArticleRoute({ context, params }: InboxRouteL
     return;
   }
 
-  await context.queryClient
-    .prefetchQuery(inboxDetailQueryOptions(routeItemId))
-    .catch(() => undefined);
+  void prefetchInboxItemDetail(context.queryClient, routeItemId).catch(() => undefined);
 }
