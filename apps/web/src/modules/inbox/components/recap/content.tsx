@@ -161,7 +161,7 @@ export function RecapContent({
     <LazyMotion features={domAnimation}>
       <m.div
         animate="visible"
-        className="grid min-h-0 flex-1 grid-rows-3 gap-4 overflow-hidden py-4"
+        className="grid min-h-0 flex-1 grid-rows-[auto_auto_auto] content-between gap-4 overflow-hidden py-4"
         initial={prefersReducedMotion ? false : "hidden"}
         variants={RECAP_SUMMARY_VARIANTS}
       >
