@@ -8,11 +8,16 @@ import { getArticleDetailForUser } from "@modules/articles/read/detail";
 import type { ArticleDetailDto } from "@modules/articles/types";
 import {
   CATEGORY_CLASSIFIER_PROVENANCE,
+  CLASSIFIER_TAXONOMY_VERSION,
+  classifyItemCategories,
   classifyItemEmbedding,
+  KEYWORD_CLASSIFIER_METHOD,
+  KEYWORD_CLASSIFIER_MODEL_ID,
   embeddingModelInfo,
   MAX_CLASSIFIER_LABELS,
   syncItemInferences,
   type ArticleExtractionJob,
+  type ClassifierModelInfo,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
 import {
@@ -54,6 +59,12 @@ type ExtractFullTextResult =
       article: ArticleDetailDto;
     };
 
+const KEYWORD_EXTRACTED_ITEM_CLASSIFIER_MODEL: ClassifierModelInfo = {
+  modelId: KEYWORD_CLASSIFIER_MODEL_ID,
+  taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+  classifierMethod: KEYWORD_CLASSIFIER_METHOD,
+};
+
 async function defaultEnqueueExtractionJob(job: ArticleExtractionJob): Promise<string> {
   return publishJob(getRedis(), job);
 }
@@ -80,27 +91,82 @@ export async function reclassifyExtractedFeedItem(
   options: ExtractFullTextOptions,
 ): Promise<void> {
   const config = options.embeddingClassifier;
-  if (!config || article.articleType !== "feed") {
+  if (article.articleType !== "feed") {
     return;
   }
 
+  let explicitLabels: string[];
+  let remainingChipSlots: number;
+  let explicitLabelSet: Set<string>;
+
   try {
-    const explicitLabels = await loadExplicitItemCategoryLabels(database, article.id);
-    const explicitLabelSet = new Set(explicitLabels);
-    const remainingChipSlots = Math.max(0, MAX_CLASSIFIER_LABELS - explicitLabels.length);
+    explicitLabels = await loadExplicitItemCategoryLabels(database, article.id);
+    explicitLabelSet = new Set(explicitLabels);
+    remainingChipSlots = Math.max(0, MAX_CLASSIFIER_LABELS - explicitLabels.length);
 
     if (remainingChipSlots === 0) {
       await syncItemInferences(
         database,
         {
           items: [{ id: article.id, inferredCategoryLabels: [] }],
-          model: embeddingModelInfo(config),
+          model: KEYWORD_EXTRACTED_ITEM_CLASSIFIER_MODEL,
         },
         new Date(),
       );
+      if (config) {
+        await syncItemInferences(
+          database,
+          {
+            items: [{ id: article.id, inferredCategoryLabels: [] }],
+            model: embeddingModelInfo(config),
+          },
+          new Date(),
+        );
+      }
       return;
     }
 
+    const keywordClassification = classifyItemCategories(
+      {
+        feedTitle: article.feedTitle,
+        feedDescription: null,
+        feedUrl: article.feedUrl ?? article.link,
+        feedSiteUrl: article.feedSiteUrl,
+        sourceKind: null,
+        itemTitle: article.title,
+        itemSummary: article.summary,
+        itemContentText: extractedText,
+        itemUrl: article.link,
+      },
+      remainingChipSlots + explicitLabels.length,
+    );
+    const keywordInferredLabels = keywordClassification.categories
+      .filter((category) => !explicitLabelSet.has(category.label))
+      .slice(0, remainingChipSlots);
+
+    await syncItemInferences(
+      database,
+      {
+        items: [{ id: article.id, inferredCategoryLabels: keywordInferredLabels }],
+        model: KEYWORD_EXTRACTED_ITEM_CLASSIFIER_MODEL,
+      },
+      new Date(),
+    );
+  } catch (error) {
+    options.logger?.warn?.("articles.extract_full_text.categories_reclassify_failed", {
+      articleId: article.id,
+      classifierMethod: KEYWORD_CLASSIFIER_METHOD,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return;
+  }
+
+  if (!config) {
+    return;
+  }
+
+  const embeddingModel = embeddingModelInfo(config);
+  try {
     const classification = await classifyItemEmbedding(
       {
         feedTitle: article.feedTitle,
@@ -124,13 +190,14 @@ export async function reclassifyExtractedFeedItem(
       database,
       {
         items: [{ id: article.id, inferredCategoryLabels }],
-        model: embeddingModelInfo(config),
+        model: embeddingModel,
       },
       new Date(),
     );
   } catch (error) {
     options.logger?.warn?.("articles.extract_full_text.categories_reclassify_failed", {
       articleId: article.id,
+      classifierMethod: embeddingModel.classifierMethod,
       error: error instanceof Error ? error.message : String(error),
     });
   }

@@ -55,7 +55,7 @@ export function ArticleHeader({
 function ArticleHeaderShell({ onBackToList }: { onBackToList: () => void }) {
   return (
     <div
-      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 pt-8 pb-2 isolate"
+      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 pt-4.5 pb-2 isolate"
       data-slot="inbox-article-header"
     >
       <div className="flex min-w-0 items-center gap-2">
@@ -94,7 +94,7 @@ function SelectedArticleHeader({
 
   return (
     <div
-      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 pt-8 pb-2 isolate"
+      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 pt-4.5 pb-2 isolate"
       data-slot="inbox-article-header"
     >
       <LazyMotion features={domAnimation}>
