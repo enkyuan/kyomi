@@ -3,6 +3,7 @@ import {
   getInboxSwitchTargetScopes,
   hasActiveFeedRefresh,
   inboxDetailQueryOptions,
+  prefetchInboxHotQueries,
   prefetchInboxItemDetail,
   prefetchInboxSwitchTargets,
 } from "@modules/inbox/queries/options";
@@ -80,6 +81,35 @@ describe("inbox detail prefetch", () => {
 });
 
 describe("inbox switch target prefetch", () => {
+  test("hot prefetch blocks only on the active list and sidebar summary", async () => {
+    const prefetchInfiniteQueryCalls: unknown[] = [];
+    const prefetchQueryCalls: unknown[] = [];
+    const queryClient = {
+      prefetchInfiniteQuery: async (options: unknown) => {
+        prefetchInfiniteQueryCalls.push(options);
+      },
+      prefetchQuery: async (options: unknown) => {
+        prefetchQueryCalls.push(options);
+      },
+    };
+
+    await prefetchInboxHotQueries(queryClient as never, {
+      filter: "all",
+      timezoneOffsetMinutes: 300,
+    });
+
+    expect(
+      prefetchInfiniteQueryCalls.map(
+        (options) => (options as { queryKey: readonly unknown[] }).queryKey,
+      ),
+    ).toEqual([
+      ["inbox", "items", 4, "all", undefined, undefined, undefined, undefined, "newest", 300],
+    ]);
+    expect(
+      prefetchQueryCalls.map((options) => (options as { queryKey: readonly unknown[] }).queryKey),
+    ).toEqual([["sidebar", "inbox-summary", "global", 300]]);
+  });
+
   test("includes the active scope, filter tabs, followed feeds, and folders once", () => {
     expect(
       getInboxSwitchTargetScopes({

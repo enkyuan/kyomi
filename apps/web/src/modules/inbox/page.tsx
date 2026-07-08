@@ -143,9 +143,6 @@ function InboxPageContent({
     if (timezoneOffsetMinutes === undefined) {
       return;
     }
-    if ((followedFeedsData?.length ?? 0) === 0 && (foldersData?.length ?? 0) === 0) {
-      return;
-    }
 
     void prefetchInboxSwitchTargets(queryClient, {
       filter: effectiveFilter,

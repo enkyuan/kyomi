@@ -370,7 +370,9 @@ export async function prefetchInboxHotQueries(
   const timezoneOffsetMinutes = scope.timezoneOffsetMinutes ?? getTimezoneOffsetMinutes();
 
   await Promise.all([
-    prefetchInboxSwitchTargets(queryClient, { ...scope, timezoneOffsetMinutes }),
+    queryClient
+      .prefetchInfiniteQuery(inboxItemsInfiniteQueryOptions({ ...scope, timezoneOffsetMinutes }))
+      .catch(() => undefined),
     queryClient.prefetchQuery(sidebarInboxSummaryQueryOptions(timezoneOffsetMinutes)),
   ]);
 }
