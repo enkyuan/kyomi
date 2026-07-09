@@ -77,7 +77,7 @@ function feedRow(overrides: CapturedRow = {}) {
 }
 
 function cacheRow(overrides: Partial<FakeCacheRow> = {}): FakeCacheRow {
-  const now = new Date("2026-07-08T12:00:00.000Z");
+  const now = new Date();
   return {
     id: "article_extract_1",
     urlKey: "https://93.184.216.34/how-is-linear-so-fast-a-technical-breakdown",
@@ -220,6 +220,31 @@ describe("article extraction workflow", () => {
     expect(db.item.extractedContentUpdatedAt).toBeInstanceOf(Date);
   });
 
+  test("request path returns ready immediately for fresh extraction cache hits", async () => {
+    const db = createExtractionDb({
+      cache: cacheRow({
+        contentHtml: "<article><p>Cached request article body.</p></article>",
+        contentText: "Cached request article body.",
+      }),
+    });
+    const enqueued: CapturedRow[] = [];
+
+    const result = await requestFullTextExtractionForUser(db as never, "user-1", "item-1", {
+      enqueueExtractionJob: async (job) => {
+        enqueued.push(job as unknown as CapturedRow);
+        return "job-1";
+      },
+    });
+
+    expect(result).toMatchObject({ ok: true, status: "ready" });
+    expect(enqueued).toEqual([]);
+    expect(db.item).toMatchObject({
+      extractedContentStatus: "ready",
+      extractedContentHtml: "<article><p>Cached request article body.</p></article>",
+      extractedContentText: "Cached request article body.",
+    });
+  });
+
   test("ready extraction cache persists article content without fetching", async () => {
     const db = createExtractionDb({
       cache: cacheRow({
@@ -326,6 +351,34 @@ describe("article extraction workflow", () => {
     });
     expect(db.item.extractedContentStatus).toBe("ready");
     expect(String(db.item.extractedContentText)).toContain("Linear feels immediate");
+  });
+
+  test("worker source fetch runs through the provided host limiter", async () => {
+    const html = await Bun.file(PERFORMANCE_DEV_LINEAR_FIXTURE).text();
+    const db = createExtractionDb();
+    const limitedUrls: string[] = [];
+    const fetchMock = mock(async () => {
+      return new Response(html, {
+        status: 200,
+        headers: { "content-type": "text/html" },
+      });
+    });
+    globalThis.fetch = fetchMock as unknown as typeof fetch;
+
+    const result = await runArticleExtractionForUser(db as never, "user-1", "item-1", {
+      hostRateLimiter: {
+        run: async (url, task) => {
+          limitedUrls.push(url);
+          return task();
+        },
+      },
+    });
+
+    expect(result).toMatchObject({ ok: true, status: "ready" });
+    expect(limitedUrls).toEqual([
+      "https://93.184.216.34/how-is-linear-so-fast-a-technical-breakdown",
+    ]);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 
   test("queue failure persists failed state instead of leaving pending poll active", async () => {

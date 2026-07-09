@@ -43,6 +43,7 @@ export type ArticleExtractionJob = {
     articleId: string;
     userId: string;
     requestedAt: string;
+    reason?: "manual" | "prefetch" | "scheduled" | "global_scheduled" | "subscription_created";
   };
 };
 
@@ -173,6 +174,19 @@ function parseOpmlImportFeedJob(parsedPayload: Record<string, unknown>): OpmlImp
   };
 }
 
+function parseArticleExtractionReason(value: unknown): ArticleExtractionJob["payload"]["reason"] {
+  switch (value) {
+    case "manual":
+    case "prefetch":
+    case "scheduled":
+    case "global_scheduled":
+    case "subscription_created":
+      return value;
+    default:
+      return undefined;
+  }
+}
+
 function parseArticleExtractionJob(parsedPayload: Record<string, unknown>): ArticleExtractionJob {
   if (
     typeof parsedPayload.articleId !== "string" ||
@@ -188,6 +202,7 @@ function parseArticleExtractionJob(parsedPayload: Record<string, unknown>): Arti
       articleId: parsedPayload.articleId,
       userId: parsedPayload.userId,
       requestedAt: parsedPayload.requestedAt,
+      reason: parseArticleExtractionReason(parsedPayload.reason),
     },
   };
 }

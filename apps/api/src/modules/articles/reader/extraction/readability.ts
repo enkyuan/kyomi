@@ -1,5 +1,6 @@
 import { Readability } from "@mozilla/readability";
 import { parseHTML } from "linkedom";
+import type { HostRateLimiter } from "@kyomi/worker";
 import { htmlToText, sanitizeArticleHtml } from "../content";
 import type { ArticleExtractionCandidate } from "../content";
 import { fetchArticleDocument } from "./fetch";
@@ -13,10 +14,51 @@ function wordCount(input: string): number {
 }
 
 function paragraphCount(input: string): number {
-  return input
+  const blankSeparated = input
     .split(/\n{2,}/)
     .map((part) => part.trim())
     .filter(Boolean).length;
+
+  if (blankSeparated > 1) {
+    return blankSeparated;
+  }
+
+  return input
+    .split(/\n+/)
+    .map((part) => part.trim())
+    .filter((part) => part && (wordCount(part) >= 8 || /[.!?](?:\s|$)/.test(part))).length;
+}
+
+function normalizeReadabilityPreformattedProse(html: string): string {
+  const { document } = parseHTML(`<!doctype html><html><body>${html}</body></html>`);
+
+  for (const pre of Array.from(document.querySelectorAll("pre"))) {
+    if (pre.querySelector("code")) {
+      continue;
+    }
+
+    const paragraphs = (pre.textContent ?? "")
+      .split(/\n\s*\n+/)
+      .map((part) => part.replace(/\s*\n\s*/g, " ").trim())
+      .filter(Boolean);
+    const proseParagraphCount = paragraphs.filter(
+      (part) => wordCount(part) >= 8 && /[.!?](?:[\"')\]]?)(?:\s|$)/.test(part),
+    ).length;
+
+    if (paragraphs.length < 2 || wordCount(paragraphs.join(" ")) < 60 || proseParagraphCount < 2) {
+      continue;
+    }
+
+    pre.replaceWith(
+      ...paragraphs.map((text) => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = text;
+        return paragraph;
+      }),
+    );
+  }
+
+  return document.body.innerHTML;
 }
 
 function looksLikeNonArticlePage(url: URL): boolean {
@@ -79,7 +121,7 @@ export function extractArticleContentFromHtml(input: {
     };
   }
 
-  const contentHtml = sanitizeArticleHtml(article.content, {
+  const contentHtml = sanitizeArticleHtml(normalizeReadabilityPreformattedProse(article.content), {
     baseUrl: finalUrl.href,
     title: article.title?.trim() || null,
     byline: article.byline?.trim() || null,
@@ -111,8 +153,13 @@ export function extractArticleContentFromHtml(input: {
   };
 }
 
-export async function extractArticleContentFromUrl(url: string): Promise<ArticleExtractionResult> {
-  const fetched = await fetchArticleDocument(url);
+export async function extractArticleContentFromUrl(
+  url: string,
+  options?: { hostRateLimiter?: HostRateLimiter },
+): Promise<ArticleExtractionResult> {
+  const fetched = options?.hostRateLimiter
+    ? await options.hostRateLimiter.run(url, () => fetchArticleDocument(url))
+    : await fetchArticleDocument(url);
   if (!fetched.ok) {
     return fetched;
   }

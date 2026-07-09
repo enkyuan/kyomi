@@ -89,6 +89,61 @@ describe("parseFeedDocument", () => {
     expect(parsed.items[1]?.categoryLabels).toEqual([]);
   });
 
+  test("sanitizes feed HTML while preserving readable article structure", () => {
+    const parsed = parseFeedDocument(
+      `<?xml version="1.0"?>
+      <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+        <channel>
+          <title>Readable feed</title>
+          <link>https://example.com/</link>
+          <description>Updates</description>
+          <item>
+            <title>Readable article</title>
+            <link>https://example.com/readable</link>
+            <guid>article-1</guid>
+            <content:encoded><![CDATA[
+              <article>
+                <h2>Readable heading</h2>
+                <p onclick="steal()">Important source paragraph.</p>
+                <figure>
+                  <img src="https://example.com/chart.png" onerror="steal()" alt="Chart">
+                  <figcaption>Chart caption</figcaption>
+                </figure>
+                <table><thead><tr><th>Metric</th></tr></thead><tbody><tr><td>42</td></tr></tbody></table>
+                <pre><code class="language-ts noisy">const answer = 42;</code></pre>
+                <a href="javascript:alert(1)">unsafe link</a>
+                <script>steal()</script>
+                <form><input name="email"></form>
+                <iframe src="https://evil.example/embed"></iframe>
+              </article>
+            ]]></content:encoded>
+            <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+          </item>
+        </channel>
+      </rss>`,
+      "feed-1",
+      "https://example.com/feed.xml",
+    );
+
+    const item = parsed.items[0];
+    expect(item?.contentSource).toBe("feed_html");
+    expect(item?.contentHtml).toContain("<h2>Readable heading</h2>");
+    expect(item?.contentHtml).toContain("<p>Important source paragraph.</p>");
+    expect(item?.contentHtml).toContain("<figure>");
+    expect(item?.contentHtml).toContain("<figcaption>Chart caption</figcaption>");
+    expect(item?.contentHtml).toContain("<table>");
+    expect(item?.contentHtml).toContain("<pre><code");
+    expect(item?.contentHtml).toContain("const answer = 42;");
+    expect(item?.contentText).toContain("Important source paragraph.");
+    expect(item?.contentText).toContain("Metric");
+    expect(item?.contentHtml).not.toContain("onclick");
+    expect(item?.contentHtml).not.toContain("onerror");
+    expect(item?.contentHtml).not.toContain("javascript:");
+    expect(item?.contentHtml).not.toContain("<script");
+    expect(item?.contentHtml).not.toContain("<form");
+    expect(item?.contentHtml).not.toContain("<iframe");
+  });
+
   test("extracts Atom feed and entry categories", () => {
     const parsed = parseFeedDocument(
       `<?xml version="1.0"?>
@@ -123,7 +178,7 @@ describe("parseFeedDocument", () => {
         "feed-1",
         "https://example.com/feed.xml",
       ),
-    ).toThrow("Entity expansion limit exceeded: 50001 > 50000");
+    ).toThrow(/Entity expansion.*50001 > 50000/);
   });
 
   test("rejects HTML documents instead of treating them as empty feeds", () => {

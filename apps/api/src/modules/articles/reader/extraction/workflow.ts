@@ -19,6 +19,7 @@ import {
   type ArticleExtractionJob,
   type ClassifierModelInfo,
   type EmbeddingClassifierConfig,
+  type HostRateLimiter,
 } from "@kyomi/worker";
 import {
   normalizeExtractionUrlKey,
@@ -27,12 +28,7 @@ import {
   upsertFailedExtractionCache,
   upsertReadyExtractionCache,
 } from "./cache";
-import {
-  persistClipExtracted,
-  persistExtracted,
-  persistFeedExtracted,
-  persistPendingExtracted,
-} from "./persistence";
+import { persistExtracted, persistPendingExtracted } from "./persistence";
 import { extractArticleContentFromUrl } from "./readability";
 
 type DB = typeof db;
@@ -45,6 +41,7 @@ type ExtractionLogger = {
 type ExtractFullTextOptions = {
   enqueueExtractionJob?: (job: ArticleExtractionJob) => Promise<string>;
   embeddingClassifier?: EmbeddingClassifierConfig;
+  hostRateLimiter?: HostRateLimiter;
   logger?: ExtractionLogger;
 };
 
@@ -58,6 +55,7 @@ type ExtractFullTextResult =
       errorMessage: string;
       article: ArticleDetailDto;
     };
+type FreshExtractionCacheEntry = NonNullable<Awaited<ReturnType<typeof readFreshExtractionCache>>>;
 
 const KEYWORD_EXTRACTED_ITEM_CLASSIFIER_MODEL: ClassifierModelInfo = {
   modelId: KEYWORD_CLASSIFIER_MODEL_ID,
@@ -67,6 +65,41 @@ const KEYWORD_EXTRACTED_ITEM_CLASSIFIER_MODEL: ClassifierModelInfo = {
 
 async function defaultEnqueueExtractionJob(job: ArticleExtractionJob): Promise<string> {
   return publishJob(getRedis(), job);
+}
+
+async function applyFreshExtractionCache(
+  database: DB,
+  userId: string,
+  article: ArticleDetailDto,
+  cached: FreshExtractionCacheEntry | null,
+  options: ExtractFullTextOptions,
+): Promise<ExtractFullTextResult | null> {
+  if (!cached) {
+    return null;
+  }
+
+  if (cached.kind === "ready") {
+    await persistExtracted(database, article, {
+      kind: "ready",
+      html: cached.html,
+      text: cached.text,
+    });
+    if (article.articleType === "feed") {
+      await reclassifyExtractedFeedItem(database, article, cached.text, options);
+    }
+    const updatedArticle = await getArticleDetailForUser(database, userId, article.id);
+    return { ok: true, status: "ready", article: updatedArticle };
+  }
+
+  await persistExtracted(database, article, { kind: "failed", message: cached.message });
+  const updatedArticle = await getArticleDetailForUser(database, userId, article.id);
+  return {
+    ok: false,
+    status: "failed",
+    errorCode: cached.errorCode,
+    errorMessage: cached.message,
+    article: updatedArticle,
+  };
 }
 
 async function loadExplicitItemCategoryLabels(database: DB, articleId: string): Promise<string[]> {
@@ -211,8 +244,9 @@ export async function requestFullTextExtractionForUser(
 ): Promise<ExtractFullTextResult> {
   const before = await getArticleDetailForUser(database, userId, articleId);
 
+  let sourceUrl: URL;
   try {
-    assertHttpOrHttpsUrl(before.link);
+    sourceUrl = assertHttpOrHttpsUrl(before.link);
   } catch {
     const msg = "A valid public http(s) article URL is required.";
     await persistExtracted(database, before, { kind: "failed", message: msg });
@@ -222,6 +256,17 @@ export async function requestFullTextExtractionForUser(
 
   if (before.reader.extracted.status === "ready" && before.reader.extracted.content) {
     return { ok: true, status: "ready", article: before };
+  }
+
+  const cachedResult = await applyFreshExtractionCache(
+    database,
+    userId,
+    before,
+    await readFreshExtractionCache(database, normalizeExtractionUrlKey(sourceUrl)),
+    options,
+  );
+  if (cachedResult) {
+    return cachedResult;
   }
 
   if (before.reader.extracted.status === "pending" && before.reader.extracted.updatedAt) {
@@ -239,6 +284,7 @@ export async function requestFullTextExtractionForUser(
         articleId,
         userId,
         requestedAt: new Date().toISOString(),
+        reason: "manual",
       },
     });
   } catch (error) {
@@ -288,34 +334,20 @@ export async function runArticleExtractionForUser(
   }
 
   const urlKey = normalizeExtractionUrlKey(sourceUrl);
-  const cached = await readFreshExtractionCache(database, urlKey);
-
-  if (cached?.kind === "ready") {
-    await persistExtracted(database, before, {
-      kind: "ready",
-      html: cached.html,
-      text: cached.text,
-    });
-    if (before.articleType === "feed") {
-      await reclassifyExtractedFeedItem(database, before, cached.text, options);
-    }
-    const article = await getArticleDetailForUser(database, userId, articleId);
-    return { ok: true, status: "ready", article };
+  const cachedResult = await applyFreshExtractionCache(
+    database,
+    userId,
+    before,
+    await readFreshExtractionCache(database, urlKey),
+    options,
+  );
+  if (cachedResult) {
+    return cachedResult;
   }
 
-  if (cached?.kind === "failed") {
-    await persistExtracted(database, before, { kind: "failed", message: cached.message });
-    const article = await getArticleDetailForUser(database, userId, articleId);
-    return {
-      ok: false,
-      status: "failed",
-      errorCode: cached.errorCode,
-      errorMessage: cached.message,
-      article,
-    };
-  }
-
-  const extracted = await extractArticleContentFromUrl(before.link);
+  const extracted = await extractArticleContentFromUrl(before.link, {
+    hostRateLimiter: options.hostRateLimiter,
+  });
 
   if (!extracted.ok) {
     const message = safeExtractErrorMessage(extracted.errorMessage);
@@ -366,11 +398,9 @@ export async function runArticleExtractionForUser(
     text,
   });
 
+  await persistExtracted(database, before, { kind: "ready", html, text });
   if (before.articleType === "feed") {
-    await persistFeedExtracted(database, articleId, { kind: "ready", html, text });
     await reclassifyExtractedFeedItem(database, before, text, options);
-  } else {
-    await persistClipExtracted(database, articleId, { kind: "ready", html, text });
   }
 
   const article = await getArticleDetailForUser(database, userId, articleId);

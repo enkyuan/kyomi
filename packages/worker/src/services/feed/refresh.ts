@@ -16,11 +16,10 @@ import {
 import { discoverFeedUrlFromHtml } from "./discover-url";
 import {
   classifyFeedEmbedding,
-  classifyItemEmbedding,
+  classifyItemEmbeddings,
   embeddingModelInfo,
   type EmbeddingClassifierConfig,
 } from "./embeddings";
-import { fetchArticleEnrichment } from "./enrich";
 import { fetchFeedDocument } from "./fetch";
 import { parseFeedDocument } from "./parse";
 import { syncFeedToSearch } from "./search";
@@ -36,7 +35,6 @@ import {
   KEYWORD_CLASSIFIER_METHOD,
   KEYWORD_CLASSIFIER_MODEL_ID,
 } from "./taxonomy";
-import { summarizeText } from "../../lib/feed-text";
 import type {
   FeedIngestDatabase,
   FeedMetadata,
@@ -50,8 +48,7 @@ import type {
   SearchSyncConfig,
 } from "./types";
 
-const MAX_ENRICHMENTS_PER_REFRESH = 5;
-const ENRICHMENT_CONCURRENCY = 3;
+const MAX_EXTRACTION_PREFETCH_PER_REFRESH = 5;
 const PERMANENT_FAILURE_BACKOFF_MS = 24 * 60 * 60 * 1000;
 const HTML_PARSE_ERROR = "Unsupported feed format: received HTML document";
 const SCHEDULED_HTML_AUTODISCOVERY_PROVENANCE = "scheduled_html_autodiscovery";
@@ -488,50 +485,58 @@ async function tryItemEmbedding(
     return null;
   }
   const results = new Map<string, InferredCategoryLabel[]>();
-  await Promise.all(
-    input.items.map(async (item) => {
-      const explicitLabels = canonicalizeCategoryLabels(item.categoryLabels);
-      const remainingChipSlots = Math.max(0, MAX_CLASSIFIER_LABELS - explicitLabels.length);
-      if (remainingChipSlots === 0) {
-        results.set(item.id, []);
-        return;
+  const candidates: Array<{
+    item: ParsedFeedItem;
+    explicitLabels: string[];
+    remainingChipSlots: number;
+  }> = [];
+  for (const item of input.items) {
+    const explicitLabels = canonicalizeCategoryLabels(item.categoryLabels);
+    const remainingChipSlots = Math.max(0, MAX_CLASSIFIER_LABELS - explicitLabels.length);
+    if (remainingChipSlots === 0) {
+      results.set(item.id, []);
+      continue;
+    }
+    candidates.push({ item, explicitLabels, remainingChipSlots });
+  }
+
+  try {
+    const classifications = await classifyItemEmbeddings(
+      candidates.map(({ item, explicitLabels, remainingChipSlots }) => ({
+        id: item.id,
+        feedTitle: input.parsed.metadata.title,
+        feedDescription: input.parsed.metadata.description,
+        feedUrl: input.parsed.metadata.canonicalUrl || input.feed.url,
+        feedSiteUrl: input.parsed.metadata.link ?? input.feed.link,
+        sourceKind: input.feed.sourceKind,
+        itemTitle: item.title,
+        itemSummary: item.summary,
+        itemContentText: item.contentText,
+        itemUrl: item.link,
+        maxLabels: remainingChipSlots + explicitLabels.length,
+      })),
+      config,
+    );
+
+    for (const { item, explicitLabels, remainingChipSlots } of candidates) {
+      const classification = classifications.get(item.id);
+      const inferredCategoryLabels = (classification?.categories ?? [])
+        .filter((category) => !explicitLabels.includes(category.label))
+        .slice(0, remainingChipSlots);
+      stats.itemClassifierLabels += inferredCategoryLabels.length;
+      if (inferredCategoryLabels.length === 0) {
+        stats.itemClassifierAbstentions += 1;
       }
-      try {
-        const classification = await classifyItemEmbedding(
-          {
-            feedTitle: input.parsed.metadata.title,
-            feedDescription: input.parsed.metadata.description,
-            feedUrl: input.parsed.metadata.canonicalUrl || input.feed.url,
-            feedSiteUrl: input.parsed.metadata.link ?? input.feed.link,
-            sourceKind: input.feed.sourceKind,
-            itemTitle: item.title,
-            itemSummary: item.summary,
-            itemContentText: item.contentText,
-            itemUrl: item.link,
-          },
-          config,
-          remainingChipSlots + explicitLabels.length,
-        );
-        const inferredCategoryLabels = classification.categories
-          .filter((category) => !explicitLabels.includes(category.label))
-          .slice(0, remainingChipSlots);
-        stats.itemClassifierLabels += inferredCategoryLabels.length;
-        if (inferredCategoryLabels.length === 0) {
-          stats.itemClassifierAbstentions += 1;
-        }
-        results.set(item.id, inferredCategoryLabels);
-      } catch (error) {
-        stats.itemClassifierFailures += 1;
-        // One item's embedding call failing (rate limit, transient network error) does not
-        // block the rest of the batch or the keyword classifier's already-computed labels.
-        console.warn("[ingestion] item embedding classification failed", {
-          feedUrl: input.feed.url,
-          itemUrl: item.link,
-          error: error instanceof Error ? error.message : String(error),
-        });
-      }
-    }),
-  );
+      results.set(item.id, inferredCategoryLabels);
+    }
+  } catch (error) {
+    stats.itemClassifierFailures += candidates.length;
+    console.warn("[ingestion] item embedding batch classification failed", {
+      feedUrl: input.feed.url,
+      itemCount: candidates.length,
+      error: error instanceof Error ? error.message : String(error),
+    });
+  }
   return results;
 }
 
@@ -553,6 +558,23 @@ function summarizeItemCategoryStats(items: ParsedFeedItem[]): {
     },
     { itemClassifierLabels: 0, itemClassifierAbstentions: 0 },
   );
+}
+
+function shouldPrefetchExtractedContent(item: ParsedFeedItem): boolean {
+  return (
+    item.contentStatus === "pending" ||
+    item.contentStatus === "partial" ||
+    item.contentSource === "link_only" ||
+    !item.contentText ||
+    item.contentText.length < 220
+  );
+}
+
+function selectExtractionPrefetchCandidates(items: ParsedFeedItem[]): string[] {
+  return items
+    .filter(shouldPrefetchExtractedContent)
+    .slice(0, MAX_EXTRACTION_PREFETCH_PER_REFRESH)
+    .map((item) => item.id);
 }
 
 async function tryResolveFaviconMetadata(
@@ -829,61 +851,17 @@ export async function runFeedRefresh(
     const feedCategories = feedClassification.categories;
     const embeddingConfig = options?.embeddingClassifier;
     const embeddingCategoryStats = createEmbeddingStats(embeddingConfig);
-    const embeddingFeedCategoriesPromise = tryChannelEmbedding(
-      { feed: feedForClassification, parsed },
-      embeddingConfig,
-      embeddingCategoryStats,
-    );
     let items = Array.from(deduped.values());
-    const enrichArticles = options?.enrichArticles ?? true;
-    if (enrichArticles) {
-      const enrichmentCandidates = items
-        .filter((item) => !(item.contentText && item.contentText.length >= 220 && item.imageUrl))
-        .slice(0, MAX_ENRICHMENTS_PER_REFRESH);
+    const articleExtractionCandidateIds = selectExtractionPrefetchCandidates(items);
 
-      for (let i = 0; i < enrichmentCandidates.length; i += ENRICHMENT_CONCURRENCY) {
-        const batch = enrichmentCandidates.slice(i, i + ENRICHMENT_CONCURRENCY);
-        await Promise.all(
-          batch.map(async (item) => {
-            const enrichment = await fetchArticleEnrichment(item.link);
-            if ((!item.contentText || item.contentText.length < 220) && enrichment.content) {
-              item.content = enrichment.content;
-              item.contentHtml = enrichment.contentHtml;
-              item.contentText = enrichment.contentText ?? enrichment.content;
-              item.contentStatus = enrichment.contentStatus;
-              item.contentSource = enrichment.contentSource;
-              item.extractionErrorCode = enrichment.extractionErrorCode;
-              item.extractionErrorMessage = enrichment.extractionErrorMessage;
-              item.summary =
-                summarizeText(enrichment.contentText ?? enrichment.content) ?? item.summary;
-            }
-            if (!item.imageUrl && enrichment.imageUrl) {
-              item.imageUrl = enrichment.imageUrl;
-            }
-          }),
-        );
-      }
-    }
-    // Item-level classification runs after enrichment so items with a thin/empty RSS summary
-    // are scored against the fetched article text instead of an empty string.
+    // Keep the refresh critical path CPU/local-DB only. Full source-page text now flows through
+    // article.extract jobs after items are visible, so feed rows are not blocked on article fetches.
     items = classifyItemLevel({
       feed: feedForClassification,
       parsed: { metadata: parsed.metadata },
       items,
     });
     const itemCategoryStats = summarizeItemCategoryStats(items);
-
-    // Embedding classification runs after enrichment for the same reason as the keyword
-    // pass above, and after the feed-level embedding promise was already fired in parallel
-    // with enrichment (both are network calls; running them concurrently instead of
-    // sequentially keeps embedding classification from adding its own latency on top of
-    // enrichment's, rather than after it).
-    const embeddingFeedCategories = await embeddingFeedCategoriesPromise;
-    const embeddingItemCategoriesById = await tryItemEmbedding(
-      { feed: feedForClassification, parsed: { metadata: parsed.metadata }, items },
-      embeddingConfig,
-      embeddingCategoryStats,
-    );
 
     const prevLink = feed.link ?? null;
     const nextLink = parsed.metadata.link ?? null;
@@ -898,17 +876,6 @@ export async function runFeedRefresh(
       faviconSource: string;
       faviconFetchedAt: Date;
     } | null = null;
-    if (needsFavicon) {
-      const seed = nextLink ?? parsed.metadata.canonicalUrl;
-      const resolved = await tryResolveFaviconMetadata(database, seed, parsed.metadata.iconUrl);
-      if (resolved) {
-        faviconPatch = {
-          faviconUrl: resolved.url,
-          faviconSource: resolved.source,
-          faviconFetchedAt: now,
-        };
-      }
-    }
 
     let sourceTagAssignments = 0;
     await database.transaction(async (tx) => {
@@ -933,7 +900,6 @@ export async function runFeedRefresh(
           etag: fetchedForParse.etag,
           lastModified: fetchedForParse.lastModified,
           nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000),
-          ...(faviconPatch ?? {}),
         })
         .where(eq(feeds.id, feed.id));
 
@@ -1007,13 +973,44 @@ export async function runFeedRefresh(
         },
         now,
       );
+    });
 
-      // `embeddingItemCategoriesById` is a Map even when every item's embed call failed
-      // (each item's own try/catch just skips setting its entry rather than making the
-      // whole call return null) — an empty Map is still truthy, so checking its presence
-      // alone would run the sync and wipe out previously-good embedding rows during a total
-      // Voyage outage. Only include items that actually got a result, and skip the item sync
-      // entirely (passing `items: []`) when nothing succeeded so existing rows are left alone.
+    if (needsFavicon) {
+      const seed = nextLink ?? parsed.metadata.canonicalUrl;
+      const resolved = await tryResolveFaviconMetadata(database, seed, parsed.metadata.iconUrl);
+      if (resolved) {
+        faviconPatch = {
+          faviconUrl: resolved.url,
+          faviconSource: resolved.source,
+          faviconFetchedAt: new Date(),
+        };
+        await database
+          .update(feeds)
+          .set({
+            ...faviconPatch,
+            updatedAt: new Date(),
+          })
+          .where(eq(feeds.id, feed.id))
+          .catch((error) => {
+            console.warn("[ingestion] favicon persistence failed", {
+              feedId: feed.id,
+              error: error instanceof Error ? error.message : String(error),
+            });
+          });
+      }
+    }
+
+    if (embeddingConfig) {
+      const embeddingFeedCategories = await tryChannelEmbedding(
+        { feed: feedForClassification, parsed },
+        embeddingConfig,
+        embeddingCategoryStats,
+      );
+      const embeddingItemCategoriesById = await tryItemEmbedding(
+        { feed: feedForClassification, parsed: { metadata: parsed.metadata }, items },
+        embeddingConfig,
+        embeddingCategoryStats,
+      );
       const embeddingItemAssignments = embeddingItemCategoriesById
         ? items.flatMap((item) => {
             const inferredCategoryLabels = embeddingItemCategoriesById.get(item.id);
@@ -1022,30 +1019,41 @@ export async function runFeedRefresh(
               : [{ id: item.id, inferredCategoryLabels }];
           })
         : [];
-      if (embeddingConfig && (embeddingFeedCategories || embeddingItemAssignments.length > 0)) {
+      if (embeddingFeedCategories || embeddingItemAssignments.length > 0) {
         await syncInferredFeedCategories(
-          tx,
+          database,
           {
             feedId: feed.id,
             feedCategories: embeddingFeedCategories ?? [],
             items: embeddingItemAssignments,
             model: embeddingModelInfo(embeddingConfig),
           },
-          now,
-        );
+          new Date(),
+        ).catch((error) => {
+          console.warn("[ingestion] embedding category persistence failed", {
+            feedId: feed.id,
+            error: error instanceof Error ? error.message : String(error),
+          });
+        });
       }
-    });
+    }
 
     await syncFeedToSearch(searchSync, {
       id: feed.id,
       ...parsed.metadata,
       iconUrl: faviconPatch?.faviconUrl ?? feed.faviconUrl ?? parsed.metadata.iconUrl,
+    }).catch((error) => {
+      console.warn("[ingestion] feed search sync failed", {
+        feedId: feed.id,
+        error: error instanceof Error ? error.message : String(error),
+      });
     });
 
     return {
       ok: true,
       itemCount: items.length,
       insertedCount: items.length, // Rough estimate as we don't have exact UPSERT counts right now
+      articleExtractionCandidateIds,
       categoryStats: {
         feedClassifierLabels: feedCategories.length,
         itemClassifierLabels: itemCategoryStats.itemClassifierLabels,

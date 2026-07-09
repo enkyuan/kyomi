@@ -34,7 +34,7 @@ export async function persistPendingExtracted(database: DB, article: ArticleDeta
     .where(eq(articleClips.id, article.id));
 }
 
-export async function persistFeedExtracted(
+async function persistFeedExtracted(
   database: DB,
   articleId: string,
   payload: ExtractedPersistencePayload,
@@ -67,7 +67,7 @@ export async function persistFeedExtracted(
   }
 }
 
-export async function persistClipExtracted(
+async function persistClipExtracted(
   database: DB,
   articleId: string,
   payload: ExtractedPersistencePayload,

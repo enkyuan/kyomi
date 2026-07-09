@@ -8,13 +8,28 @@ import {
   createHostRateLimiter,
   createRedisHostRateLimitStore,
   runFeedRefresh,
-  shouldEnrichInsertedItems,
+  type ArticleExtractionJob,
   type HostRateLimiter,
   type JobMessage,
 } from "@kyomi/worker";
 import { runOpmlImportFeedJob, runOpmlImportJob } from "@modules/opml/jobs";
 import { runArticleExtractionForUser } from "@modules/articles/reader/extraction/workflow";
+import { prefetchArticleExtractionsForFeedItems } from "@modules/articles/reader/extraction/prefetch";
 import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "./refresh-errors";
+
+function extractionReasonForFeedRefresh(
+  reason: string | undefined,
+): NonNullable<ArticleExtractionJob["payload"]["reason"]> {
+  switch (reason) {
+    case "manual":
+    case "subscription_created":
+    case "scheduled":
+    case "global_scheduled":
+      return reason;
+    default:
+      return "prefetch";
+  }
+}
 
 async function handleWorkerJob(
   message: JobMessage,
@@ -36,7 +51,6 @@ async function handleWorkerJob(
           indexUid: env.MEILI_INDEX_FEEDS,
         },
         {
-          enrichArticles: shouldEnrichInsertedItems(job.payload),
           hostRateLimiter,
           // Best-effort embedding classification runs alongside the keyword classifier when
           // a key is configured; absent means refresh proceeds with the keyword classifier
@@ -65,6 +79,30 @@ async function handleWorkerJob(
 
         throw new Error(result.error ?? "Feed refresh failed");
       }
+      let extractionPrefetch: Awaited<
+        ReturnType<typeof prefetchArticleExtractionsForFeedItems>
+      > | null = null;
+      if (result.articleExtractionCandidateIds?.length) {
+        try {
+          extractionPrefetch = await prefetchArticleExtractionsForFeedItems(
+            db,
+            {
+              articleIds: result.articleExtractionCandidateIds,
+              userId: job.payload.userId,
+              reason: extractionReasonForFeedRefresh(job.payload.reason),
+            },
+            { logger },
+          );
+        } catch (error) {
+          logger.warn("worker.job.feed_refresh.extraction_prefetch_failed", {
+            streamId: id,
+            feedId: job.payload.feedId,
+            userId: job.payload.userId,
+            reason: job.payload.reason,
+            error: error instanceof Error ? error.message : String(error),
+          });
+        }
+      }
       logger.info("worker.job.feed_refresh.completed", {
         streamId: id,
         feedId: job.payload.feedId,
@@ -75,6 +113,7 @@ async function handleWorkerJob(
         insertedCount: result.insertedCount,
         updatedCount: result.updatedCount,
         categoryStats: result.categoryStats ?? null,
+        extractionPrefetch,
         attempts,
         durationMs,
       });
@@ -112,6 +151,7 @@ async function handleWorkerJob(
           embeddingClassifier: env.VOYAGE_API_KEY
             ? { apiKey: env.VOYAGE_API_KEY, timeoutMs: 8000 }
             : undefined,
+          hostRateLimiter,
           logger,
         },
       );
@@ -122,6 +162,7 @@ async function handleWorkerJob(
           streamId: id,
           articleId: job.payload.articleId,
           userId: job.payload.userId,
+          reason: job.payload.reason,
           errorCode: result.errorCode,
           attempts,
           durationMs,
@@ -133,6 +174,7 @@ async function handleWorkerJob(
         streamId: id,
         articleId: job.payload.articleId,
         userId: job.payload.userId,
+        reason: job.payload.reason,
         status: result.status,
         attempts,
         durationMs,
@@ -160,6 +202,7 @@ async function logWorkerJobError(error: unknown, message: JobMessage | null): Pr
       ? {
           articleId: message.job.payload.articleId,
           userId: message.job.payload.userId,
+          reason: message.job.payload.reason,
         }
       : {};
 
