@@ -8,6 +8,7 @@ import type { QueryClient } from "@tanstack/react-query";
 import interLatinWoff2Url from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
 import AuthProvider from "@integrations/better-auth/provider";
 import TanstackQueryProvider from "@integrations/tanstack-query/provider";
+import { RouteErrorPage } from "@/app/error";
 import { AppRuntimeEffects } from "@/app/runtime-effects";
 import { NotFoundPage } from "@/app/not-found";
 import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/toast";
@@ -102,6 +103,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
   }),
   shellComponent: RootDocument,
   component: () => <Outlet />,
+  errorComponent: RouteErrorPage,
   notFoundComponent: NotFoundPage,
 });
 
