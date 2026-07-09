@@ -29,8 +29,8 @@ import { listFollowedFeeds } from "@modules/feeds/lib/api";
 import { listFolders } from "@modules/folders/lib/api";
 import {
   followedFeedsQueryKey,
+  getFeedRefreshPollInterval,
   prefetchInboxItemDetail,
-  prefetchInboxSwitchTargets,
 } from "@modules/inbox/queries/options";
 import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
 import type { ArticleStepDirection } from "@modules/reader/lib/detail";
@@ -116,6 +116,11 @@ function InboxPageContent({
     queryFn: () => listFollowedFeeds(),
     staleTime: QUERY_TIMES.staticMetadataStale,
     gcTime: QUERY_TIMES.staticMetadataGc,
+    refetchInterval: (query) =>
+      getFeedRefreshPollInterval(
+        query.state.data as Awaited<ReturnType<typeof listFollowedFeeds>> | undefined,
+      ),
+    refetchIntervalInBackground: false,
   });
   const { data: foldersData } = useQuery({
     queryKey: ["folders"],
@@ -139,34 +144,6 @@ function InboxPageContent({
         }),
     [foldersData],
   );
-  useEffect(() => {
-    if (timezoneOffsetMinutes === undefined) {
-      return;
-    }
-
-    void prefetchInboxSwitchTargets(queryClient, {
-      filter: effectiveFilter,
-      search,
-      feedId,
-      folderId,
-      includeRead,
-      sort,
-      timezoneOffsetMinutes,
-      feeds: followedFeedsData,
-      folders: foldersData,
-    }).catch(() => undefined);
-  }, [
-    effectiveFilter,
-    feedId,
-    folderId,
-    followedFeedsData,
-    foldersData,
-    includeRead,
-    queryClient,
-    search,
-    sort,
-    timezoneOffsetMinutes,
-  ]);
   const activeFeedLabel = useMemo(() => {
     if (!feedId) {
       return undefined;

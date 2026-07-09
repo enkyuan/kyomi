@@ -14,6 +14,7 @@ const DEFAULT_INBOX_FILTER: InboxFilter = "my-feed";
 const DEFAULT_INBOX_SORT: InboxSort = "newest";
 const INBOX_LIST_QUERY_VERSION = 4;
 export const ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS = 2_500;
+export const IDLE_FEED_REFRESH_POLL_INTERVAL_MS = 30_000;
 
 export function hasActiveFeedRefresh(
   feeds: readonly { refreshStatus?: string | null }[] | null | undefined,
@@ -22,6 +23,14 @@ export function hasActiveFeedRefresh(
     feeds?.some((feed) => feed.refreshStatus === "queued" || feed.refreshStatus === "running") ??
     false
   );
+}
+
+export function getFeedRefreshPollInterval(
+  feeds: readonly { refreshStatus?: string | null }[] | null | undefined,
+) {
+  return hasActiveFeedRefresh(feeds)
+    ? ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS
+    : IDLE_FEED_REFRESH_POLL_INTERVAL_MS;
 }
 
 export type InboxListPage = {
@@ -62,21 +71,6 @@ export type InboxQueryScope = {
   itemId?: string;
   timezoneOffsetMinutes?: number;
 };
-
-type InboxFeedSwitchTarget = {
-  feedId?: string | null;
-};
-
-type InboxFolderSwitchTarget = {
-  id?: string | null;
-};
-
-type InboxSwitchTargetScope = InboxQueryScope & {
-  feeds?: readonly InboxFeedSwitchTarget[];
-  folders?: readonly InboxFolderSwitchTarget[];
-};
-
-const INBOX_SWITCH_FILTERS: readonly InboxFilter[] = ["my-feed", "all", "saved", "recent"];
 
 export function followedFeedsQueryKey() {
   return ["feeds", "followed"] as const;
@@ -119,129 +113,6 @@ export function inboxRecapQueryKey() {
 
 function sidebarInboxSummaryQueryKey(timezoneOffsetMinutes = getTimezoneOffsetMinutes()) {
   return ["sidebar", "inbox-summary", "global", timezoneOffsetMinutes] as const;
-}
-
-function getScopeCacheKey(scope: InboxQueryScope) {
-  return JSON.stringify([
-    scope.filter ?? DEFAULT_INBOX_FILTER,
-    scope.search,
-    scope.feedId,
-    scope.folderId,
-    scope.includeRead,
-    scope.sort ?? DEFAULT_INBOX_SORT,
-    scope.timezoneOffsetMinutes,
-  ]);
-}
-
-function addInboxSwitchScope(
-  scopes: InboxQueryScope[],
-  seenScopes: Set<string>,
-  scope: InboxQueryScope,
-) {
-  const cacheKey = getScopeCacheKey(scope);
-  if (seenScopes.has(cacheKey)) {
-    return;
-  }
-  seenScopes.add(cacheKey);
-  scopes.push(compactInboxSwitchScope(scope));
-}
-
-function compactInboxSwitchScope(scope: InboxQueryScope) {
-  const compactedScope: InboxQueryScope = {};
-
-  if (scope.filter !== undefined) {
-    compactedScope.filter = scope.filter;
-  }
-  if (scope.search !== undefined) {
-    compactedScope.search = scope.search;
-  }
-  if (scope.feedId !== undefined) {
-    compactedScope.feedId = scope.feedId;
-  }
-  if (scope.folderId !== undefined) {
-    compactedScope.folderId = scope.folderId;
-  }
-  if (scope.includeRead !== undefined) {
-    compactedScope.includeRead = scope.includeRead;
-  }
-  if (scope.sort !== undefined) {
-    compactedScope.sort = scope.sort;
-  }
-  if (scope.itemId !== undefined) {
-    compactedScope.itemId = scope.itemId;
-  }
-  if (scope.timezoneOffsetMinutes !== undefined) {
-    compactedScope.timezoneOffsetMinutes = scope.timezoneOffsetMinutes;
-  }
-
-  return compactedScope;
-}
-
-function buildInboxSwitchBaseScope(scope: InboxSwitchTargetScope): InboxQueryScope {
-  const baseScope: InboxQueryScope = {
-    sort: scope.sort ?? DEFAULT_INBOX_SORT,
-    timezoneOffsetMinutes: scope.timezoneOffsetMinutes,
-  };
-
-  if (scope.search) {
-    baseScope.search = scope.search;
-  }
-  if (scope.includeRead !== undefined) {
-    baseScope.includeRead = scope.includeRead;
-  }
-
-  return baseScope;
-}
-
-export function getInboxSwitchTargetScopes(scope: InboxSwitchTargetScope = {}) {
-  const scopes: InboxQueryScope[] = [];
-  const seenScopes = new Set<string>();
-  const baseScope = buildInboxSwitchBaseScope(scope);
-
-  addInboxSwitchScope(scopes, seenScopes, {
-    ...baseScope,
-    filter: scope.filter ?? DEFAULT_INBOX_FILTER,
-    feedId: scope.feedId,
-    folderId: scope.folderId,
-  });
-
-  for (const filter of INBOX_SWITCH_FILTERS) {
-    addInboxSwitchScope(scopes, seenScopes, {
-      ...baseScope,
-      filter,
-      feedId: undefined,
-      folderId: undefined,
-    });
-  }
-
-  for (const feed of scope.feeds ?? []) {
-    const feedId = feed.feedId?.trim();
-    if (!feedId) {
-      continue;
-    }
-    addInboxSwitchScope(scopes, seenScopes, {
-      ...baseScope,
-      filter: "all",
-      search: undefined,
-      feedId,
-      folderId: undefined,
-    });
-  }
-
-  for (const folder of scope.folders ?? []) {
-    const folderId = folder.id?.trim();
-    if (!folderId) {
-      continue;
-    }
-    addInboxSwitchScope(scopes, seenScopes, {
-      ...baseScope,
-      filter: "all",
-      feedId: undefined,
-      folderId,
-    });
-  }
-
-  return scopes;
 }
 
 export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
@@ -375,22 +246,4 @@ export async function prefetchInboxHotQueries(
       .catch(() => undefined),
     queryClient.prefetchQuery(sidebarInboxSummaryQueryOptions(timezoneOffsetMinutes)),
   ]);
-}
-
-export async function prefetchInboxSwitchTargets(
-  queryClient: QueryClient,
-  scope: InboxSwitchTargetScope = {},
-) {
-  const timezoneOffsetMinutes = scope.timezoneOffsetMinutes ?? getTimezoneOffsetMinutes();
-  const switchScopes = getInboxSwitchTargetScopes({ ...scope, timezoneOffsetMinutes });
-
-  await Promise.all(
-    switchScopes.map((switchScope) =>
-      queryClient
-        .prefetchInfiniteQuery(
-          inboxItemsInfiniteQueryOptions({ ...switchScope, timezoneOffsetMinutes }),
-        )
-        .catch(() => undefined),
-    ),
-  );
 }

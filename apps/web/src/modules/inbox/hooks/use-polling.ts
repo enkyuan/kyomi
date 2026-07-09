@@ -2,11 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import {
-  ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS,
-  followedFeedsQueryKey,
-  hasActiveFeedRefresh,
-} from "../queries/options";
+import { hasActiveFeedRefresh } from "../queries/options";
 
 export function usePolling(feeds: readonly { refreshStatus?: string | null }[] | null | undefined) {
   const queryClient = useQueryClient();
@@ -14,27 +10,13 @@ export function usePolling(feeds: readonly { refreshStatus?: string | null }[] |
   const hasRefreshingFollowedFeed = hasActiveFeedRefresh(feeds);
 
   useEffect(() => {
-    const refreshInboxConsumers = () => {
-      void queryClient.invalidateQueries({ queryKey: followedFeedsQueryKey() });
-      void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
-      void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
-    };
-
-    if (!hasRefreshingFollowedFeed) {
-      if (wasRefreshingFollowedFeedRef.current) {
-        wasRefreshingFollowedFeedRef.current = false;
-        refreshInboxConsumers();
-      }
+    if (wasRefreshingFollowedFeedRef.current === hasRefreshingFollowedFeed) {
       return;
     }
 
-    wasRefreshingFollowedFeedRef.current = true;
-    refreshInboxConsumers();
-    const pollTimer = window.setInterval(
-      refreshInboxConsumers,
-      ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS,
-    );
+    wasRefreshingFollowedFeedRef.current = hasRefreshingFollowedFeed;
 
-    return () => window.clearInterval(pollTimer);
+    void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
+    void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
   }, [hasRefreshingFollowedFeed, queryClient]);
 }

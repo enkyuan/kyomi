@@ -1,17 +1,20 @@
-import type { InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
+import type { DehydratedState, InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
 import { dehydrate, hydrate } from "@tanstack/react-query";
 import type { InboxListPage } from "@modules/inbox/queries/options";
 
-const HOT_CACHE_KEY = "kyomi:hot-query-cache:v1";
+const HOT_CACHE_KEY = "kyomi:hot-query-cache:v2";
+const HOT_CACHE_LEGACY_KEY = "kyomi:hot-query-cache:v1";
 const HOT_CACHE_DB_NAME = "kyomi.query-cache";
 const HOT_CACHE_STORE_NAME = "snapshots";
 const HOT_CACHE_DB_VERSION = 1;
 const HOT_CACHE_MAX_AGE_MS = 24 * 60 * 60_000;
 const PERSIST_THROTTLE_MS = 1_000;
+const HOT_CACHE_MAX_INBOX_LISTS = 8;
+const HOT_CACHE_MAX_ITEM_DETAILS = 20;
 
 type PersistedHotCache = {
   savedAt: number;
-  state: unknown;
+  state: DehydratedState;
 };
 
 let hasHydrated = false;
@@ -27,6 +30,10 @@ function isHotQueryKey(queryKey: QueryKey) {
       (scope === "items" || scope === "item-detail" || scope === "view-count")) ||
     (family === "sidebar" && scope === "inbox-summary")
   );
+}
+
+function isSuccessfulHotQuery(query: { state: { status: string }; queryKey: QueryKey }) {
+  return query.state.status === "success" && isHotQueryKey(query.queryKey);
 }
 
 function canUseIndexedDb() {
@@ -91,7 +98,7 @@ async function writeHotCache(cache: PersistedHotCache): Promise<void> {
   });
 }
 
-async function removeHotCache(): Promise<void> {
+async function removeHotCache(cacheKey: string): Promise<void> {
   if (!canUseIndexedDb()) {
     return;
   }
@@ -99,7 +106,7 @@ async function removeHotCache(): Promise<void> {
   const db = await openHotCacheDb();
   return new Promise((resolve, reject) => {
     const transaction = db.transaction(HOT_CACHE_STORE_NAME, "readwrite");
-    transaction.objectStore(HOT_CACHE_STORE_NAME).delete(HOT_CACHE_KEY);
+    transaction.objectStore(HOT_CACHE_STORE_NAME).delete(cacheKey);
 
     transaction.oncomplete = () => {
       db.close();
@@ -118,7 +125,7 @@ async function removeHotCache(): Promise<void> {
 
 function removeLegacyLocalStorageCache() {
   try {
-    window.localStorage.removeItem(HOT_CACHE_KEY);
+    window.localStorage.removeItem(HOT_CACHE_LEGACY_KEY);
   } catch {
     // localStorage can be unavailable in private or constrained browsing contexts.
   }
@@ -130,6 +137,71 @@ function isValidInboxListPage(page: unknown): page is InboxListPage {
   }
   const candidate = page as Partial<InboxListPage>;
   return Array.isArray(candidate.items);
+}
+
+type DehydratedHotQuery = DehydratedState["queries"][number];
+
+function isInboxQueryScope(query: DehydratedHotQuery, scope: "items" | "item-detail") {
+  return query.queryKey[0] === "inbox" && query.queryKey[1] === scope;
+}
+
+function isValidInfiniteInboxListData(data: unknown): data is InfiniteData<InboxListPage> {
+  if (!data || typeof data !== "object") {
+    return false;
+  }
+
+  const candidate = data as Partial<InfiniteData<InboxListPage>>;
+  return (
+    Array.isArray(candidate.pages) &&
+    candidate.pages.length > 0 &&
+    Array.isArray(candidate.pageParams) &&
+    candidate.pageParams.length > 0 &&
+    isValidInboxListPage(candidate.pages[0])
+  );
+}
+
+function newestQueries(queries: DehydratedHotQuery[], limit: number) {
+  return queries
+    .sort((left, right) => right.state.dataUpdatedAt - left.state.dataUpdatedAt)
+    .slice(0, limit);
+}
+
+function retainInboxListFirstPage(query: DehydratedHotQuery): DehydratedHotQuery {
+  const data = query.state.data as InfiniteData<InboxListPage>;
+
+  return {
+    ...query,
+    state: {
+      ...query.state,
+      data: {
+        ...data,
+        pages: [data.pages[0]!],
+        pageParams: [data.pageParams[0]],
+      },
+    },
+  };
+}
+
+export function prepareHotCacheState(state: DehydratedState): DehydratedState {
+  const inboxListQueries = newestQueries(
+    state.queries.filter(
+      (query) =>
+        isInboxQueryScope(query, "items") && isValidInfiniteInboxListData(query.state.data),
+    ),
+    HOT_CACHE_MAX_INBOX_LISTS,
+  ).map(retainInboxListFirstPage);
+  const inboxItemDetailQueries = newestQueries(
+    state.queries.filter((query) => isInboxQueryScope(query, "item-detail")),
+    HOT_CACHE_MAX_ITEM_DETAILS,
+  );
+  const otherQueries = state.queries.filter(
+    (query) => !isInboxQueryScope(query, "items") && !isInboxQueryScope(query, "item-detail"),
+  );
+
+  return {
+    ...state,
+    queries: [...otherQueries, ...inboxListQueries, ...inboxItemDetailQueries],
+  };
 }
 
 function dropCorruptInboxItemQueries(queryClient: QueryClient) {
@@ -153,12 +225,13 @@ export function hydrateHotQueryCache(queryClient: QueryClient): Promise<void> {
   return readHotCache()
     .then(async (parsed) => {
       removeLegacyLocalStorageCache();
+      await removeHotCache(HOT_CACHE_LEGACY_KEY).catch(() => {});
       if (!parsed) {
         return;
       }
 
       if (!parsed.savedAt || Date.now() - parsed.savedAt > HOT_CACHE_MAX_AGE_MS) {
-        await removeHotCache();
+        await removeHotCache(HOT_CACHE_KEY);
         return;
       }
 
@@ -166,7 +239,7 @@ export function hydrateHotQueryCache(queryClient: QueryClient): Promise<void> {
       dropCorruptInboxItemQueries(queryClient);
     })
     .catch(async () => {
-      await removeHotCache().catch(() => {});
+      await removeHotCache(HOT_CACHE_KEY).catch(() => {});
     });
 }
 
@@ -177,17 +250,15 @@ async function persistHotQueryCache(queryClient: QueryClient) {
 
   pendingPersist = Promise.resolve()
     .then(async () => {
-      const state = dehydrate(queryClient, {
-        shouldDehydrateQuery: (query) =>
-          query.state.status === "success" && isHotQueryKey(query.queryKey),
-      });
+      const dehydrated = dehydrate(queryClient, { shouldDehydrateQuery: isSuccessfulHotQuery });
+      const state = prepareHotCacheState(dehydrated);
       await writeHotCache({
         savedAt: Date.now(),
         state,
       });
     })
     .catch(async () => {
-      await removeHotCache().catch(() => {});
+      await removeHotCache(HOT_CACHE_KEY).catch(() => {});
     })
     .finally(() => {
       pendingPersist = undefined;
