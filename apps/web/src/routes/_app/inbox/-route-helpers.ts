@@ -26,7 +26,7 @@ type InboxRouteLoaderArgs = {
 export async function loadInboxRoute({ context, params, deps }: InboxRouteLoaderArgs) {
   const queryClient = context.queryClient;
   const routeItemId = getInboxItemIdFromSlug(params?.article);
-  const followedFeedsPrefetch = queryClient
+  void queryClient
     .prefetchQuery({
       queryKey: followedFeedsQueryKey(),
       queryFn: () => listFollowedFeeds(),
@@ -34,7 +34,7 @@ export async function loadInboxRoute({ context, params, deps }: InboxRouteLoader
       gcTime: QUERY_TIMES.staticMetadataGc,
     })
     .catch(() => undefined);
-  const foldersPrefetch = queryClient
+  void queryClient
     .prefetchQuery({
       queryKey: ["folders"],
       queryFn: () => listFolders(),
@@ -43,24 +43,22 @@ export async function loadInboxRoute({ context, params, deps }: InboxRouteLoader
     })
     .catch(() => undefined);
   const loaderData = await getInboxLoaderData();
-  const hotPrefetch =
-    typeof loaderData.initialTimezoneOffsetMinutes === "number"
-      ? prefetchInboxHotQueries(queryClient, {
-          filter: deps?.filter ?? loaderData.initialInboxPreferences.inboxDefaultView,
-          search: deps?.search,
-          feedId: deps?.feedId,
-          folderId: deps?.folderId,
-          itemId: routeItemId,
-          sort: deps?.sort,
-          timezoneOffsetMinutes: loaderData.initialTimezoneOffsetMinutes,
-        }).catch(() => undefined)
-      : Promise.resolve();
+  if (typeof loaderData.initialTimezoneOffsetMinutes === "number") {
+    void prefetchInboxHotQueries(queryClient, {
+      filter: deps?.filter ?? loaderData.initialInboxPreferences.inboxDefaultView,
+      search: deps?.search,
+      feedId: deps?.feedId,
+      folderId: deps?.folderId,
+      itemId: routeItemId,
+      sort: deps?.sort,
+      timezoneOffsetMinutes: loaderData.initialTimezoneOffsetMinutes,
+    }).catch(() => undefined);
+  }
 
   if (routeItemId) {
     void prefetchInboxItemDetail(queryClient, routeItemId).catch(() => undefined);
   }
 
-  await Promise.all([followedFeedsPrefetch, foldersPrefetch, hotPrefetch]);
   return loaderData;
 }
 
