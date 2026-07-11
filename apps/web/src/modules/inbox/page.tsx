@@ -31,6 +31,7 @@ import {
   followedFeedsQueryKey,
   getFeedRefreshPollInterval,
   prefetchInboxItemDetail,
+  prefetchInboxSegmentedControlTarget,
 } from "@modules/inbox/queries/options";
 import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
 import type { ArticleStepDirection } from "@modules/reader/lib/detail";
@@ -144,6 +145,30 @@ function InboxPageContent({
         }),
     [foldersData],
   );
+  useEffect(() => {
+    if (timezoneOffsetMinutes === undefined) {
+      return;
+    }
+
+    void prefetchInboxSegmentedControlTarget(queryClient, {
+      filter: effectiveFilter,
+      search,
+      feedId,
+      folderId,
+      includeRead,
+      sort,
+      timezoneOffsetMinutes,
+    }).catch(() => undefined);
+  }, [
+    effectiveFilter,
+    feedId,
+    folderId,
+    includeRead,
+    queryClient,
+    search,
+    sort,
+    timezoneOffsetMinutes,
+  ]);
   const activeFeedLabel = useMemo(() => {
     if (!feedId) {
       return undefined;

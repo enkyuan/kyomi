@@ -1,4 +1,4 @@
-import type { InfiniteData, QueryClient } from "@tanstack/react-query";
+import type { QueryClient } from "@tanstack/react-query";
 import {
   getInboxItemDetail,
   getInboxItems,
@@ -85,7 +85,7 @@ function inboxItemsQueryKey({
   search,
   feedId,
   folderId,
-  includeRead,
+  includeRead = false,
   sort = DEFAULT_INBOX_SORT,
   timezoneOffsetMinutes,
 }: InboxQueryScope = {}) {
@@ -117,12 +117,13 @@ function sidebarInboxSummaryQueryKey(timezoneOffsetMinutes = getTimezoneOffsetMi
 
 export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
   const filter = scope.filter ?? DEFAULT_INBOX_FILTER;
+  const includeRead = scope.includeRead ?? false;
   const sort = scope.sort ?? DEFAULT_INBOX_SORT;
   const timezoneOffsetMinutes = scope.timezoneOffsetMinutes;
   const isGlobalAllView = filter === "all" && !scope.feedId && !scope.folderId;
 
   return {
-    queryKey: inboxItemsQueryKey({ ...scope, filter, sort, timezoneOffsetMinutes }),
+    queryKey: inboxItemsQueryKey({ ...scope, filter, includeRead, sort, timezoneOffsetMinutes }),
     enabled: timezoneOffsetMinutes !== undefined,
     initialPageParam: undefined as string | undefined,
     queryFn: async ({ pageParam }: { pageParam: string | undefined }) => {
@@ -135,7 +136,7 @@ export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
           search: scope.search,
           feedId: scope.feedId,
           folderId: scope.folderId,
-          includeRead: scope.includeRead,
+          includeRead,
           cursor: pageParam,
           timezoneOffsetMinutes,
           sort,
@@ -151,8 +152,6 @@ export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
       const page = normalizeInboxListPage(lastPage);
       return page?.hasMore ? (page.nextCursor ?? undefined) : undefined;
     },
-    placeholderData: (previousData: InfiniteData<InboxListPage, string | undefined> | undefined) =>
-      previousData,
     staleTime: isGlobalAllView ? QUERY_TIMES.countsStale : QUERY_TIMES.listStale,
     gcTime: QUERY_TIMES.listGc,
     refetchOnMount: isGlobalAllView ? ("always" as const) : true,
@@ -234,11 +233,40 @@ export function invalidateFeedAndInboxQueries(queryClient: QueryClient) {
   void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
 }
 
+export async function prefetchInboxSegmentedControlTarget(
+  queryClient: QueryClient,
+  scope: InboxQueryScope = {},
+) {
+  if (scope.feedId || scope.folderId) {
+    return;
+  }
+
+  const timezoneOffsetMinutes = scope.timezoneOffsetMinutes ?? getTimezoneOffsetMinutes();
+  const targetFilter: InboxFilter =
+    (scope.filter ?? DEFAULT_INBOX_FILTER) === "my-feed" ? "all" : "my-feed";
+
+  await queryClient.prefetchInfiniteQuery(
+    inboxItemsInfiniteQueryOptions({
+      ...scope,
+      filter: targetFilter,
+      feedId: undefined,
+      folderId: undefined,
+      itemId: undefined,
+      timezoneOffsetMinutes,
+    }),
+  );
+}
+
 export async function prefetchInboxHotQueries(
   queryClient: QueryClient,
   scope: InboxQueryScope = {},
 ) {
   const timezoneOffsetMinutes = scope.timezoneOffsetMinutes ?? getTimezoneOffsetMinutes();
+
+  void prefetchInboxSegmentedControlTarget(queryClient, {
+    ...scope,
+    timezoneOffsetMinutes,
+  }).catch(() => undefined);
 
   await Promise.all([
     queryClient

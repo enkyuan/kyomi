@@ -16,18 +16,23 @@ export async function prefetchInboxFlow(
   queryClient: QueryClient,
   scope: InboxQueryScope = {},
 ) {
+  const resolvedScope = {
+    ...scope,
+    filter: scope.filter ?? DEFAULT_INBOX_FILTER,
+  };
+
   await Promise.all([
     router.preloadRoute({
       to: "/inbox",
       search: {
-        filter: scope.filter ?? DEFAULT_INBOX_FILTER,
-        search: scope.search,
-        feedId: scope.feedId,
-        folderId: scope.folderId,
-        itemId: scope.itemId,
-        sort: scope.sort,
+        filter: resolvedScope.filter,
+        search: resolvedScope.search,
+        feedId: resolvedScope.feedId,
+        folderId: resolvedScope.folderId,
+        itemId: resolvedScope.itemId,
+        sort: resolvedScope.sort,
       },
     }),
-    prefetchInboxHotQueries(queryClient, scope),
+    prefetchInboxHotQueries(queryClient, resolvedScope),
   ]);
 }
