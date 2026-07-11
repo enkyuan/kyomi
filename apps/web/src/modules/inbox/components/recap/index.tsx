@@ -33,6 +33,7 @@ const FollowSourcesDialog = lazyNamed(
 );
 
 const RECAP_TRANSITION_OFFSET_PX = 28;
+const INSTANT_TRANSITION = { duration: 0 };
 
 function downloadOpmlExport({ filename, xml }: { filename: string; xml: string }) {
   const url = URL.createObjectURL(new Blob([xml], { type: "application/xml;charset=utf-8" }));
@@ -360,6 +361,7 @@ export function InboxRecapCard({
     direction: navigationDirection,
     mode: "popLayout",
     offset: RECAP_TRANSITION_OFFSET_PX,
+    transition: expandedSection ? undefined : INSTANT_TRANSITION,
   });
 
   return (

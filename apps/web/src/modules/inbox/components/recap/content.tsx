@@ -2,6 +2,7 @@
 
 import { AddFill, Folder2Fill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
+import { LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
 import { Folders } from "@modules/folders/components/recap/summary";
 import type { RecapFolder } from "@modules/folders/lib/types";
 import type {
@@ -13,6 +14,25 @@ import { RecapError, RecapSkeleton, SectionEmpty } from "./sections";
 import { TopSources } from "./sections/top-sources";
 import { WorthRevisiting } from "./sections/worth-revisiting";
 import type { RecapSavedItem, RecapTopViewedFeed } from "./types";
+
+const RECAP_SUMMARY_VARIANTS = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: -1,
+    },
+  },
+} as const;
+
+const RECAP_SUMMARY_ITEM_VARIANTS = {
+  hidden: { opacity: 0, y: 12 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", duration: 0.3, bounce: 0 },
+  },
+} as const;
 
 type RemoveFeedsToastOptions = {
   anchor?: HTMLElement | null;
@@ -77,6 +97,8 @@ export function RecapContent({
   onImportOpml: () => void;
   onUnsave: (itemId: string) => void;
 }) {
+  const prefersReducedMotion = Boolean(useReducedMotion());
+
   if (recapLoading) {
     return <RecapSkeleton />;
   }
@@ -136,35 +158,48 @@ export function RecapContent({
     );
   }
   return (
-    <div className="grid min-h-0 flex-1 grid-rows-3 gap-4 overflow-hidden py-4">
-      <Folders
-        folders={folders}
-        onExpand={() => navigateRecap({ rail: "folders" })}
-        onCreateFolder={onCreateFolder}
-        onImportOpml={onImportOpml}
-        onSelectFolder={(folder) =>
-          navigateRecap({
-            rail: "folders",
-            railFolderBack: "recap",
-            railFolderId: folder.id,
-          })
-        }
-      />
-      <TopSources
-        feeds={topViewedFeeds}
-        folders={folders}
-        followFeed={followFeed}
-        isFollowingFeed={isFollowingFeed}
-        moveFeed={moveFeed}
-        movingFeedId={movingFeedId}
-        onExpand={() => navigateRecap({ rail: "topSources" })}
-      />
-      <WorthRevisiting
-        items={oldestSavedItems}
-        onExpand={() => navigateRecap({ rail: "worthRevisiting" })}
-        onUnsave={onUnsave}
-        unsavingItemId={unsavingItemId}
-      />
-    </div>
+    <LazyMotion features={domAnimation}>
+      <m.div
+        animate="visible"
+        className="grid min-h-0 flex-1 grid-rows-3 gap-4 overflow-hidden py-4"
+        initial={prefersReducedMotion ? false : "hidden"}
+        variants={RECAP_SUMMARY_VARIANTS}
+      >
+        <m.div className="flex min-h-0 min-w-0 flex-col" variants={RECAP_SUMMARY_ITEM_VARIANTS}>
+          <Folders
+            folders={folders}
+            onExpand={() => navigateRecap({ rail: "folders" })}
+            onCreateFolder={onCreateFolder}
+            onImportOpml={onImportOpml}
+            onSelectFolder={(folder) =>
+              navigateRecap({
+                rail: "folders",
+                railFolderBack: "recap",
+                railFolderId: folder.id,
+              })
+            }
+          />
+        </m.div>
+        <m.div className="flex min-h-0 min-w-0 flex-col" variants={RECAP_SUMMARY_ITEM_VARIANTS}>
+          <TopSources
+            feeds={topViewedFeeds}
+            folders={folders}
+            followFeed={followFeed}
+            isFollowingFeed={isFollowingFeed}
+            moveFeed={moveFeed}
+            movingFeedId={movingFeedId}
+            onExpand={() => navigateRecap({ rail: "topSources" })}
+          />
+        </m.div>
+        <m.div className="flex min-h-0 min-w-0 flex-col" variants={RECAP_SUMMARY_ITEM_VARIANTS}>
+          <WorthRevisiting
+            items={oldestSavedItems}
+            onExpand={() => navigateRecap({ rail: "worthRevisiting" })}
+            onUnsave={onUnsave}
+            unsavingItemId={unsavingItemId}
+          />
+        </m.div>
+      </m.div>
+    </LazyMotion>
   );
 }
