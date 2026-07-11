@@ -1,21 +1,15 @@
 "use client";
 
-import { Link, useRouter, type ErrorComponentProps } from "@tanstack/react-router";
+import { Link, type ErrorComponentProps } from "@tanstack/react-router";
 import { Button } from "@kyomi/ui/button";
 import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyTitle } from "@kyomi/ui/empty";
 import { KyomiLogo } from "@kyomi/ui/icons";
 
-export function RouteErrorPage({ error, reset }: ErrorComponentProps) {
-  const router = useRouter();
+export function RouteErrorPage({ error }: ErrorComponentProps) {
   const message =
     error instanceof Error && error.message.trim()
       ? error.message
       : "The page lost its place for a moment.";
-
-  function handleRetry() {
-    reset?.();
-    void router.invalidate();
-  }
 
   return (
     <main className="flex min-h-svh bg-background text-foreground">
@@ -23,15 +17,11 @@ export function RouteErrorPage({ error, reset }: ErrorComponentProps) {
         <EmptyHeader className="max-w-md">
           <KyomiLogo size={28} className="mb-5 size-7 text-matcha" />
           <EmptyTitle className="text-2xl text-balance">We lost the plot</EmptyTitle>
-          <EmptyDescription className="max-w-sm text-pretty">{message}</EmptyDescription>
+          <EmptyDescription className="max-w-sm text-balance">{message}</EmptyDescription>
         </EmptyHeader>
-        <EmptyContent className="flex flex-wrap justify-center gap-2 max-sm:w-full">
-          <Button className="w-28 max-sm:flex-1" onClick={handleRetry}>
-            Try again
-          </Button>
+        <EmptyContent>
           <Button
-            variant="outline"
-            className="w-32 max-sm:flex-1"
+            className="w-28 max-sm:w-full rounded-full"
             render={<Link to="/inbox" search={{ filter: "my-feed" }} />}
           >
             Back to inbox
