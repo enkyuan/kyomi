@@ -38,6 +38,7 @@
     "./sidebar/reader-focus": "./src/sidebar/state/reader-focus.tsx",
     "./styles": "./src/styles/index.css",
     "./styles/*": "./src/styles/*.css",
+    "./toast": "./src/toast/index.tsx",
     "./*": "./src/*.tsx",
     "./*.ts": "./src/*.ts"
   },

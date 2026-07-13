@@ -141,6 +141,18 @@ describe("RenderHtml", () => {
     expect(annotations).toContain("τ_c");
   });
 
+  test("renders starred TeX environments in HTML prose", async () => {
+    const html = String.raw`
+      <p>\begin{align*}x &amp;= y + 1 \\ z &amp;= 2\end{align*}</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      expect(root?.querySelector(".katex-display")).toBeTruthy();
+    });
+  });
+
   test("does not treat ordinary identifiers, urls, or code as implicit TeX", async () => {
     const html = `
       <p>Store feed_item_id next to https://example.com/a_b for diagnostics.</p>

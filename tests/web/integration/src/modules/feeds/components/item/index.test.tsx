@@ -1,9 +1,13 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from "../../../../../../../../apps/web/node_modules/@tanstack/react-query";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxItem } from "@modules/inbox/lib/articles/index";
 
-vi.mock("@hooks/use-pretext", () => ({
+vi.mock("@kyomi/ui/hooks/use-pretext", () => ({
   usePretextLayout: () => ({
     ref: { current: null },
     fittedWidth: undefined,
@@ -33,23 +37,28 @@ const item: InboxItem = {
 };
 
 function renderItem({ onSelect = vi.fn(), rowItem = item } = {}) {
+  const queryClient = new QueryClient({
+    defaultOptions: { mutations: { retry: false }, queries: { retry: false } },
+  });
   return {
     onSelect,
     ...render(
-      <Item
-        filter="all"
-        item={rowItem}
-        isSelected={false}
-        isFirst
-        showBottomSeparator={false}
-        containerWidth={640}
-        density="comfortable"
-        fontSizePx={16}
-        showFavicons={false}
-        timestampDisplay="absolute"
-        timestampHourCycle="12h"
-        onSelect={onSelect}
-      />,
+      <QueryClientProvider client={queryClient}>
+        <Item
+          filter="all"
+          item={rowItem}
+          isSelected={false}
+          isFirst
+          showBottomSeparator={false}
+          containerWidth={640}
+          density="comfortable"
+          fontSizePx={16}
+          showFavicons={false}
+          timestampDisplay="absolute"
+          timestampHourCycle="12h"
+          onSelect={onSelect}
+        />
+      </QueryClientProvider>,
     ),
   };
 }
@@ -84,11 +93,14 @@ describe("inbox item row", () => {
     expect(onSelect).toHaveBeenCalledWith(item);
   });
 
-  test("does not render article action controls in feed item rows", () => {
-    renderItem();
+  test("renders article action controls without selecting the row", async () => {
+    const { onSelect } = renderItem();
 
     for (const label of ["Read later", "Copy link", "Share article", "More"]) {
-      expect(screen.queryByRole("button", { name: label })).toBeNull();
+      expect(screen.getByRole("button", { name: label })).toBeTruthy();
     }
+
+    await click(screen.getByRole("button", { name: "Copy link" }));
+    expect(onSelect).not.toHaveBeenCalled();
   });
 });

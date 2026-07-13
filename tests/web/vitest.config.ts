@@ -14,6 +14,7 @@ export default defineConfig({
   resolve: {
     dedupe: ["react", "react-dom"],
     alias: {
+      "@tanstack/react-router": join(webAppRoot, "node_modules/@tanstack/react-router"),
       "@": webSrc,
       "@modules": join(webSrc, "modules"),
       "@hooks": join(webSrc, "hooks"),

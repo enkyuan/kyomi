@@ -22,7 +22,7 @@
       "@kyomi/worker/lib/article-identity": ["../../packages/worker/src/lib/article-identity.ts"],
       "@kyomi/worker/lib/html-entities": ["../../packages/worker/src/lib/html-entities.ts"]
     },
-    "types": ["bun-types"]
+    "types": ["bun"]
   },
   "include": ["integration/**/*.ts", "e2e/**/*.ts"]
 }

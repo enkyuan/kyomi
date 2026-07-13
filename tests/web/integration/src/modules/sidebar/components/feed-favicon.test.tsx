@@ -94,7 +94,9 @@ describe("feed favicons", () => {
 
     const img = screen.getByRole("img", { name: "TechCrunch favicon" });
     expect(img.className).toContain("opacity-0");
-    expect(container.querySelector("svg[aria-hidden='true']")).not.toBeNull();
+    const fallback = container.querySelector("[data-slot='favicon-fallback']");
+    expect(fallback?.getAttribute("aria-hidden")).toBe("true");
+    expect(fallback?.querySelector("svg")).not.toBeNull();
   });
 
   test("uses eager high-priority loading for large sidebar favicons", async () => {

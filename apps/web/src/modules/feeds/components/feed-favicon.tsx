@@ -75,10 +75,11 @@ export function FeedFavicon({
   return (
     <Favicon
       alt={`${title} favicon`}
+      aria-label={faviconUrl ? undefined : `${title} feed`}
       className={cn("bg-card/85", className)}
       cornerRadius={squircleCornerRadius}
       cornerSmoothing={squircleCornerSmoothing}
-      fallback={faviconUrl ? undefined : <Rss2Fill className="size-full" />}
+      fallback={<Rss2Fill className="size-full" />}
       imageKey={faviconUrl ?? undefined}
       imageProps={{
         decoding: "async",

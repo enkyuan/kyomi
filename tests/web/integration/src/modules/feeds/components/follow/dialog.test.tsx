@@ -46,6 +46,7 @@ const mocks = vi.hoisted(() => ({
 }));
 
 vi.mock("@modules/feeds/lib/api", () => ({
+  DISCOVER_SEARCH_RESULT_LIMIT: 50,
   followFeed: mocks.followFeed,
   getOpmlImportStatus: mocks.getOpmlImportStatus,
   importOpmlFromUrl: mocks.importOpmlFromUrl,
@@ -159,12 +160,17 @@ describe("SourcesDialog OPML import", () => {
         disconnect() {}
       },
     );
+    Object.defineProperty(Element.prototype, "getAnimations", {
+      configurable: true,
+      value: vi.fn(() => []),
+    });
   });
 
   afterEach(() => {
     cleanup();
     vi.clearAllMocks();
     vi.unstubAllGlobals();
+    delete (Element.prototype as { getAnimations?: unknown }).getAnimations;
   });
 
   test("shows the import button for OPML-looking URLs", () => {
@@ -256,12 +262,17 @@ describe("SourcesDialog feed follow", () => {
         disconnect() {}
       },
     );
+    Object.defineProperty(Element.prototype, "getAnimations", {
+      configurable: true,
+      value: vi.fn(() => []),
+    });
   });
 
   afterEach(() => {
     cleanup();
     vi.clearAllMocks();
     vi.unstubAllGlobals();
+    delete (Element.prototype as { getAnimations?: unknown }).getAnimations;
   });
 
   test("shows the anchored followed toast from the command action", async () => {

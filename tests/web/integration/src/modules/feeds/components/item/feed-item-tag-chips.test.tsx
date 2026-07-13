@@ -1,4 +1,8 @@
 import { render, screen } from "@testing-library/react";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from "../../../../../../../../apps/web/node_modules/@tanstack/react-query";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxItem } from "@modules/inbox/lib/articles/index";
@@ -29,21 +33,26 @@ const baseItem: InboxItem = {
 };
 
 function renderItem(rowItem: InboxItem) {
+  const queryClient = new QueryClient({
+    defaultOptions: { mutations: { retry: false }, queries: { retry: false } },
+  });
   return render(
-    <Item
-      filter="all"
-      item={rowItem}
-      isSelected={false}
-      isFirst
-      showBottomSeparator={false}
-      containerWidth={640}
-      density="comfortable"
-      fontSizePx={16}
-      showFavicons={false}
-      timestampDisplay="absolute"
-      timestampHourCycle="12h"
-      onSelect={vi.fn()}
-    />,
+    <QueryClientProvider client={queryClient}>
+      <Item
+        filter="all"
+        item={rowItem}
+        isSelected={false}
+        isFirst
+        showBottomSeparator={false}
+        containerWidth={640}
+        density="comfortable"
+        fontSizePx={16}
+        showFavicons={false}
+        timestampDisplay="absolute"
+        timestampHourCycle="12h"
+        onSelect={vi.fn()}
+      />
+    </QueryClientProvider>,
   );
 }
 
@@ -96,8 +105,8 @@ describe("feed item category chips", () => {
     expect(screen.getByText("Engineering")).toBeTruthy();
   });
 
-  test("does not render inline action controls with chips rendered", () => {
+  test("renders inline action controls with chips rendered", () => {
     renderItem({ ...baseItem, categories: ["Engineering"] });
-    expect(screen.queryByRole("button", { name: "More" })).toBeNull();
+    expect(screen.getByRole("button", { name: "More" })).toBeTruthy();
   });
 });

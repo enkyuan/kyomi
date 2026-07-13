@@ -59,6 +59,37 @@ function navigateToSettingsRoute(to: SettingsRoutePath) {
   void settingsRouter.navigate({ to: to as never });
 }
 
+function SettingsSectionMenu({ pathname, className }: { pathname: string; className?: string }) {
+  return (
+    <SidebarMenu className={className}>
+      <AccountPageNav
+        isActive={pathname === "/account"}
+        onSelect={() => navigateToSettingsRoute("/account")}
+      />
+      <AppearancePageNav
+        isActive={pathname === "/appearance"}
+        onSelect={() => navigateToSettingsRoute("/appearance")}
+      />
+      <PersonalizationPageNav
+        isActive={pathname === "/personalization"}
+        onSelect={() => navigateToSettingsRoute("/personalization")}
+      />
+      <BillingPageNav
+        isActive={pathname === "/billing"}
+        onSelect={() => navigateToSettingsRoute("/billing")}
+      />
+      <FeedbackPageNav
+        isActive={pathname === "/feedback"}
+        onSelect={() => navigateToSettingsRoute("/feedback")}
+      />
+      <AdvancedPageNav
+        isActive={pathname === "/advanced"}
+        onSelect={() => navigateToSettingsRoute("/advanced")}
+      />
+    </SidebarMenu>
+  );
+}
+
 function SettingsDialogRouteLayout() {
   const pathname = useRouterState({
     router: settingsRouter,
@@ -88,42 +119,31 @@ function SettingsDialogRouteLayout() {
         <SidebarContent className="gap-0">
           <SidebarGroup className="p-3">
             <SidebarGroupContent>
-              <SidebarMenu>
-                <AccountPageNav
-                  isActive={accountMatch}
-                  onSelect={() => navigateToSettingsRoute("/account")}
-                />
-                <AppearancePageNav
-                  isActive={appearanceMatch}
-                  onSelect={() => navigateToSettingsRoute("/appearance")}
-                />
-                <PersonalizationPageNav
-                  isActive={personalizationMatch}
-                  onSelect={() => navigateToSettingsRoute("/personalization")}
-                />
-                <BillingPageNav
-                  isActive={billingMatch}
-                  onSelect={() => navigateToSettingsRoute("/billing")}
-                />
-                <FeedbackPageNav
-                  isActive={feedbackMatch}
-                  onSelect={() => navigateToSettingsRoute("/feedback")}
-                />
-                <AdvancedPageNav
-                  isActive={advancedMatch}
-                  onSelect={() => navigateToSettingsRoute("/advanced")}
-                />
-              </SidebarMenu>
+              <SettingsSectionMenu pathname={pathname} />
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
       </Sidebar>
       <main className="flex h-135 min-w-0 flex-1 flex-col overflow-hidden">
+        <nav aria-label="Settings sections" className="border-b border-border p-2 md:hidden">
+          <SettingsSectionMenu
+            pathname={pathname}
+            className="flex-row overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>[data-slot=sidebar-menu-item]]:shrink-0 [&_[data-slot=sidebar-menu-button]]:w-auto"
+          />
+        </nav>
         <header className="flex h-16 shrink-0 items-center ps-5 pe-14">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem className="hidden md:block">
-                <BreadcrumbLink href="#">Settings</BreadcrumbLink>
+                <BreadcrumbLink
+                  href="/account"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    navigateToSettingsRoute("/account");
+                  }}
+                >
+                  Settings
+                </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator className="hidden md:block" />
               <BreadcrumbItem>

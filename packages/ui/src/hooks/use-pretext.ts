@@ -23,7 +23,7 @@ function rememberCacheValue<T>(cache: Map<string, T>, key: string, value: T) {
 }
 
 function preparePretextText(text: string, font: string) {
-  if (typeof window === "undefined") {
+  if (typeof window === "undefined" || typeof CanvasRenderingContext2D === "undefined") {
     return null;
   }
   const key = `${font}\n${text}`;

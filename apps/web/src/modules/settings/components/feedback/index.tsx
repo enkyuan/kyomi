@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AttachmentLine, Message3Fill, PicLine } from "@kyomi/ui/icons/mingcute";
+import { Message3Fill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import { Form } from "@kyomi/ui/form";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
@@ -67,26 +67,6 @@ export function FeedbackPagePanel() {
               <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
             </ScrollAreaPrimitive.Root>
             <div className="feedback-composer-toolbar">
-              <div className="feedback-composer-actions">
-                <Button
-                  aria-label="Attach file"
-                  className="feedback-composer-icon-button"
-                  size="icon-xs"
-                  type="button"
-                  variant="ghost"
-                >
-                  <AttachmentLine />
-                </Button>
-                <Button
-                  aria-label="Attach image"
-                  className="feedback-composer-icon-button"
-                  size="icon-xs"
-                  type="button"
-                  variant="ghost"
-                >
-                  <PicLine />
-                </Button>
-              </div>
               <Button className="feedback-composer-submit" size="sm" type="submit">
                 Send
               </Button>
