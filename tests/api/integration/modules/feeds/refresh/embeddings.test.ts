@@ -2,6 +2,7 @@ import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import {
   classifyFeedEmbedding,
   classifyItemEmbedding,
+  classifyItemEmbeddings,
   embedTexts,
   resetPrototypeCache,
   type EmbeddingClassifierConfig,
@@ -85,6 +86,68 @@ describe("embedTexts", () => {
 });
 
 describe("classifyItemEmbedding", () => {
+  test("batches multiple item texts in one embeddings request after prototypes are cached", async () => {
+    const inputs: string[][] = [];
+    globalThis.fetch = (async (_url: string, init: RequestInit) => {
+      const body = JSON.parse(init.body as string) as { input: string[] };
+      inputs.push(body.input);
+      if (inputs.length === 1) {
+        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
+        return new Response(
+          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
+          { status: 200 },
+        );
+      }
+
+      expect(body.input).toEqual(["First item. Detailed body", "Second item. Other body"]);
+      return new Response(
+        JSON.stringify({
+          data: [
+            { embedding: UNIT_X, index: 0 },
+            { embedding: UNIT_Y, index: 1 },
+          ],
+        }),
+        { status: 200 },
+      );
+    }) as unknown as typeof fetch;
+
+    const result = await classifyItemEmbeddings(
+      [
+        {
+          id: "item-1",
+          feedTitle: "Feed",
+          feedDescription: null,
+          feedUrl: "https://example.com/feed",
+          feedSiteUrl: "https://example.com",
+          sourceKind: "rss",
+          itemTitle: "First item",
+          itemSummary: null,
+          itemContentText: "Detailed body",
+          itemUrl: "https://example.com/1",
+          maxLabels: 1,
+        },
+        {
+          id: "item-2",
+          feedTitle: "Feed",
+          feedDescription: null,
+          feedUrl: "https://example.com/feed",
+          feedSiteUrl: "https://example.com",
+          sourceKind: "rss",
+          itemTitle: "Second item",
+          itemSummary: null,
+          itemContentText: "Other body",
+          itemUrl: "https://example.com/2",
+          maxLabels: 1,
+        },
+      ],
+      FAKE_CONFIG,
+    );
+
+    expect(inputs).toHaveLength(2);
+    expect(result.get("item-1")?.categories[0]?.label).toBe("Software Engineering");
+    expect(result.get("item-2")?.categories).toEqual([]);
+  });
+
   test("returns categories above the similarity threshold, sorted by score", async () => {
     // First call embeds all category-card prototypes; second call embeds the item text.
     // CATEGORY_CARDS order is deterministic (defined in category-cards.ts), so the first

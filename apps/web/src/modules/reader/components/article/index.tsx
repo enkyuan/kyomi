@@ -31,6 +31,9 @@ function estimateReadingTime(html: string): number {
 }
 
 function hasReaderArticleBody(reader: ToolbarModel["displayReader"]): boolean {
+  if (reader.bodyKind === "fallback") {
+    return true;
+  }
   if (reader.bodyKind === "html") {
     return Boolean(reader.contentHtml?.trim());
   }

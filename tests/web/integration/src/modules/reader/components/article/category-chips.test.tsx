@@ -136,6 +136,43 @@ function renderArticle(item: ArticleDetailDto) {
 }
 
 describe("reader article category chips", () => {
+  test("renders fallback reader content in browser surface mode", () => {
+    const fallback = readerContent({
+      contentStatus: "partial",
+      contentSource: "feed_summary",
+      bodyKind: "fallback",
+      contentHtml: null,
+      contentMarkdown: null,
+      contentText: null,
+      fallbackSummary: "Saved summary while extracted content is pending.",
+      fallbackReason: "missing_content",
+      shouldExtract: true,
+    });
+
+    renderArticle(
+      articleDetail({
+        summary: "Saved summary while extracted content is pending.",
+        reader: {
+          activeMode: "original",
+          selected: fallback,
+          original: {
+            available: true,
+            content: fallback,
+          },
+          extracted: {
+            available: false,
+            content: null,
+            status: "pending",
+            error: null,
+            updatedAt: "2026-07-08T00:00:00.000Z",
+          },
+        },
+      }),
+    );
+
+    expect(screen.getByText("Reader body")).toBeTruthy();
+  });
+
   test("shows the same capped topic chips as list rows", () => {
     renderArticle(
       articleDetail({

@@ -31,6 +31,7 @@ export type FeedRefreshResult = {
   itemCount: number;
   insertedCount?: number;
   updatedCount?: number;
+  articleExtractionCandidateIds?: string[];
   notModified?: boolean;
   error?: string;
   failureClass?: HtmlFeedFailureClass;

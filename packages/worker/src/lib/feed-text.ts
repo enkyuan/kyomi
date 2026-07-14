@@ -1,4 +1,5 @@
 import { decodeHtmlEntities } from "./html-entities";
+import { sanitizeArticleHtmlFragment } from "../sanitization";
 import type { ParsedFeedItem } from "../services/feed/types";
 
 function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
@@ -29,12 +30,14 @@ function sanitizeStoredContent(value: string | null): string | null {
   if (!value) {
     return null;
   }
-  const sanitized = value
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/\son\w+="[^"]*"/gi, "")
-    .replace(/\son\w+='[^']*'/gi, "")
-    .trim();
+  const sanitized = looksLikeHtml(value)
+    ? sanitizeArticleHtmlFragment(value).trim()
+    : value
+        .replace(/<script[\s\S]*?<\/script>/gi, " ")
+        .replace(/<style[\s\S]*?<\/style>/gi, " ")
+        .replace(/\son\w+="[^"]*"/gi, "")
+        .replace(/\son\w+='[^']*'/gi, "")
+        .trim();
   return sanitized || null;
 }
 

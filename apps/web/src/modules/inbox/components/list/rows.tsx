@@ -1,7 +1,7 @@
 "use client";
 
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { type RefObject, useLayoutEffect, useRef } from "react";
+import { type RefObject, useEffect, useLayoutEffect, useRef } from "react";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxFilter, InboxItem } from "@modules/inbox/lib/articles/index";
@@ -129,6 +129,7 @@ export type VirtualizedRowsProps = {
   selectedItemId?: string | null;
   pagination: RowsPaginationState;
   onSelectItem: (item: InboxItem) => void;
+  onIntentItem?: (item: InboxItem) => void;
   viewportHeight?: number;
 };
 
@@ -148,10 +149,12 @@ export function VirtualizedRows({
   selectedItemId,
   pagination,
   onSelectItem,
+  onIntentItem,
   viewportHeight,
 }: VirtualizedRowsProps) {
   const { isLoading, hasNextPage, isFetchingNextPage, fetchNextPage } = pagination;
   const restoredScrollOffsetRef = useRef<number | null>(null);
+  const intendedItemIdsRef = useRef<Set<string>>(new Set());
   const virtualizer = useVirtualizer({
     count: inboxItems.length,
     getItemKey: (index) => inboxItems[index]?.id ?? index,
@@ -176,6 +179,21 @@ export function VirtualizedRows({
 
   const virtualItems = virtualizer.getVirtualItems();
   const listContentHeight = virtualizer.getTotalSize();
+
+  useEffect(() => {
+    if (!onIntentItem) {
+      return;
+    }
+
+    for (const virtualRow of virtualItems) {
+      const item = inboxItems[virtualRow.index];
+      if (!item || intendedItemIdsRef.current.has(item.id)) {
+        continue;
+      }
+      intendedItemIdsRef.current.add(item.id);
+      onIntentItem(item);
+    }
+  }, [inboxItems, onIntentItem, virtualItems]);
 
   useLayoutEffect(() => {
     if (
@@ -244,6 +262,7 @@ export function VirtualizedRows({
               timestampDisplay={timestampDisplay}
               timestampHourCycle={timestampHourCycle}
               onSelect={onSelectItem}
+              onIntent={onIntentItem}
             />
           </div>
         );

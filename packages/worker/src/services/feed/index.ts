@@ -36,10 +36,12 @@ export {
 export {
   classifyFeedEmbedding,
   classifyItemEmbedding,
+  classifyItemEmbeddings,
   embeddingModelInfo,
   embedTexts,
   resetPrototypeCache,
   type EmbeddingClassifierConfig,
+  type FeedItemEmbeddingBatchInput,
 } from "./embeddings";
 export { buildArticleIdentity, normalizeArticleUrl } from "../../lib/article-identity";
 export { decodeHtmlEntities } from "../../lib/html-entities";

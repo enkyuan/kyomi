@@ -28,6 +28,7 @@ export const Item = memo(function Item({
   timestampDisplay,
   timestampHourCycle,
   onSelect,
+  onIntent,
 }: Props) {
   useTimestamp(timestampDisplay);
   const typography = getTypography({ density, fontSizePx, readerFocusMode });
@@ -65,6 +66,9 @@ export const Item = memo(function Item({
   const selectItem = () => {
     onSelect(item);
   };
+  const signalIntent = () => {
+    onIntent?.(item);
+  };
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.target !== event.currentTarget) {
       return;
@@ -83,7 +87,9 @@ export const Item = memo(function Item({
         ITEM_INSET_CLASS,
       )}
       onClick={selectItem}
+      onFocus={signalIntent}
       onKeyDown={handleKeyDown}
+      onPointerEnter={signalIntent}
       role="button"
       tabIndex={0}
     >

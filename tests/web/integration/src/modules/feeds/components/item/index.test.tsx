@@ -36,11 +36,12 @@ const item: InboxItem = {
   categories: [],
 };
 
-function renderItem({ onSelect = vi.fn(), rowItem = item } = {}) {
+function renderItem({ onSelect = vi.fn(), onIntent = vi.fn(), rowItem = item } = {}) {
   const queryClient = new QueryClient({
     defaultOptions: { mutations: { retry: false }, queries: { retry: false } },
   });
   return {
+    onIntent,
     onSelect,
     ...render(
       <QueryClientProvider client={queryClient}>
@@ -57,6 +58,7 @@ function renderItem({ onSelect = vi.fn(), rowItem = item } = {}) {
           timestampDisplay="absolute"
           timestampHourCycle="12h"
           onSelect={onSelect}
+          onIntent={onIntent}
         />
       </QueryClientProvider>,
     ),
@@ -91,6 +93,18 @@ describe("inbox item row", () => {
     await click(screen.getByRole("button", { name: item.title }));
 
     expect(onSelect).toHaveBeenCalledWith(item);
+  });
+
+  test("signals item intent on pointer enter and focus without selecting", () => {
+    const { onIntent, onSelect } = renderItem();
+    const row = screen.getByRole("button", { name: item.title });
+
+    fireEvent.pointerEnter(row);
+    fireEvent.focus(row);
+
+    expect(onIntent).toHaveBeenCalledWith(item);
+    expect(onIntent).toHaveBeenCalledTimes(2);
+    expect(onSelect).not.toHaveBeenCalled();
   });
 
   test("renders article action controls without selecting the row", async () => {

@@ -115,7 +115,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       className={cn("h-svh bg-sidebar", className)}
       style={{ "--sidebar-width": APP_SIDEBAR_WIDTH, ...style } as CSSProperties}
     >
-      <SidebarHeader className="items-center ps-0 pe-2 pt-8 pb-4.5">
+      <SidebarHeader className="items-center ps-0 pe-2 py-4.5">
         <SidebarMenu className="gap-4.25">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton

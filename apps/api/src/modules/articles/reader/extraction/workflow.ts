@@ -1,101 +1,105 @@
 import type { db } from "@adapters/db/client";
-import { articleClips, categories, feedItemCategoryAssignments, feedItems } from "@kyomi/db";
+import { getRedis } from "@adapters/redis";
+import { publishJob } from "@adapters/queue/publish-job";
+import { categories, feedItemCategoryAssignments } from "@kyomi/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize";
 import { and, eq, ne } from "drizzle-orm";
 import { getArticleDetailForUser } from "@modules/articles/read/detail";
 import type { ArticleDetailDto } from "@modules/articles/types";
 import {
   CATEGORY_CLASSIFIER_PROVENANCE,
+  CLASSIFIER_TAXONOMY_VERSION,
+  classifyItemCategories,
   classifyItemEmbedding,
+  KEYWORD_CLASSIFIER_METHOD,
+  KEYWORD_CLASSIFIER_MODEL_ID,
   embeddingModelInfo,
   MAX_CLASSIFIER_LABELS,
   syncItemInferences,
+  type ArticleExtractionJob,
+  type ClassifierModelInfo,
   type EmbeddingClassifierConfig,
+  type HostRateLimiter,
 } from "@kyomi/worker";
+import {
+  normalizeExtractionUrlKey,
+  readFreshExtractionCache,
+  safeExtractErrorMessage,
+  upsertFailedExtractionCache,
+  upsertReadyExtractionCache,
+} from "./cache";
+import { persistExtracted, persistPendingExtracted } from "./persistence";
 import { extractArticleContentFromUrl } from "./readability";
 
 type DB = typeof db;
 type ExtractionLogger = {
+  info?: (message: string, data?: Record<string, unknown>) => void;
   warn?: (message: string, data?: Record<string, unknown>) => void;
+  error?: (message: string, data?: Record<string, unknown>) => void;
 };
 
 type ExtractFullTextOptions = {
+  enqueueExtractionJob?: (job: ArticleExtractionJob) => Promise<string>;
   embeddingClassifier?: EmbeddingClassifierConfig;
+  hostRateLimiter?: HostRateLimiter;
   logger?: ExtractionLogger;
 };
 
-function safeExtractErrorMessage(raw: string, maxLen = 280): string {
-  const t = raw.trim();
-  if (!t) {
-    return "Full text could not be extracted.";
-  }
-  return t.length > maxLen ? `${t.slice(0, maxLen)}…` : t;
+type ExtractFullTextResult =
+  | { ok: true; status: "ready"; article: ArticleDetailDto }
+  | { ok: true; status: "queued"; article: ArticleDetailDto }
+  | {
+      ok: false;
+      status: "failed";
+      errorCode: string;
+      errorMessage: string;
+      article: ArticleDetailDto;
+    };
+type FreshExtractionCacheEntry = NonNullable<Awaited<ReturnType<typeof readFreshExtractionCache>>>;
+
+const KEYWORD_EXTRACTED_ITEM_CLASSIFIER_MODEL: ClassifierModelInfo = {
+  modelId: KEYWORD_CLASSIFIER_MODEL_ID,
+  taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
+  classifierMethod: KEYWORD_CLASSIFIER_METHOD,
+};
+
+async function defaultEnqueueExtractionJob(job: ArticleExtractionJob): Promise<string> {
+  return publishJob(getRedis(), job);
 }
 
-async function persistFeedExtracted(
+async function applyFreshExtractionCache(
   database: DB,
-  articleId: string,
-  payload: { kind: "ready"; html: string; text: string } | { kind: "failed"; message: string },
-) {
-  const now = new Date();
-  if (payload.kind === "ready") {
-    await database
-      .update(feedItems)
-      .set({
-        extractedContentHtml: payload.html,
-        extractedContentText: payload.text,
-        extractedContentStatus: "ready",
-        extractedContentError: null,
-        extractedContentUpdatedAt: now,
-        updatedAt: now,
-      })
-      .where(eq(feedItems.id, articleId));
-  } else {
-    await database
-      .update(feedItems)
-      .set({
-        extractedContentHtml: null,
-        extractedContentText: null,
-        extractedContentStatus: "failed",
-        extractedContentError: payload.message,
-        extractedContentUpdatedAt: now,
-        updatedAt: now,
-      })
-      .where(eq(feedItems.id, articleId));
+  userId: string,
+  article: ArticleDetailDto,
+  cached: FreshExtractionCacheEntry | null,
+  options: ExtractFullTextOptions,
+): Promise<ExtractFullTextResult | null> {
+  if (!cached) {
+    return null;
   }
-}
 
-async function persistClipExtracted(
-  database: DB,
-  articleId: string,
-  payload: { kind: "ready"; html: string; text: string } | { kind: "failed"; message: string },
-) {
-  const now = new Date();
-  if (payload.kind === "ready") {
-    await database
-      .update(articleClips)
-      .set({
-        extractedContentHtml: payload.html,
-        extractedContentText: payload.text,
-        extractedContentStatus: "ready",
-        extractedContentError: null,
-        extractedContentUpdatedAt: now,
-        updatedAt: now,
-      })
-      .where(eq(articleClips.id, articleId));
-  } else {
-    await database
-      .update(articleClips)
-      .set({
-        extractedContentHtml: null,
-        extractedContentText: null,
-        extractedContentStatus: "failed",
-        extractedContentError: payload.message,
-        extractedContentUpdatedAt: now,
-        updatedAt: now,
-      })
-      .where(eq(articleClips.id, articleId));
+  if (cached.kind === "ready") {
+    await persistExtracted(database, article, {
+      kind: "ready",
+      html: cached.html,
+      text: cached.text,
+    });
+    if (article.articleType === "feed") {
+      await reclassifyExtractedFeedItem(database, article, cached.text, options);
+    }
+    const updatedArticle = await getArticleDetailForUser(database, userId, article.id);
+    return { ok: true, status: "ready", article: updatedArticle };
   }
+
+  await persistExtracted(database, article, { kind: "failed", message: cached.message });
+  const updatedArticle = await getArticleDetailForUser(database, userId, article.id);
+  return {
+    ok: false,
+    status: "failed",
+    errorCode: cached.errorCode,
+    errorMessage: cached.message,
+    article: updatedArticle,
+  };
 }
 
 async function loadExplicitItemCategoryLabels(database: DB, articleId: string): Promise<string[]> {
@@ -120,27 +124,82 @@ export async function reclassifyExtractedFeedItem(
   options: ExtractFullTextOptions,
 ): Promise<void> {
   const config = options.embeddingClassifier;
-  if (!config || article.articleType !== "feed") {
+  if (article.articleType !== "feed") {
     return;
   }
 
+  let explicitLabels: string[];
+  let remainingChipSlots: number;
+  let explicitLabelSet: Set<string>;
+
   try {
-    const explicitLabels = await loadExplicitItemCategoryLabels(database, article.id);
-    const explicitLabelSet = new Set(explicitLabels);
-    const remainingChipSlots = Math.max(0, MAX_CLASSIFIER_LABELS - explicitLabels.length);
+    explicitLabels = await loadExplicitItemCategoryLabels(database, article.id);
+    explicitLabelSet = new Set(explicitLabels);
+    remainingChipSlots = Math.max(0, MAX_CLASSIFIER_LABELS - explicitLabels.length);
 
     if (remainingChipSlots === 0) {
       await syncItemInferences(
         database,
         {
           items: [{ id: article.id, inferredCategoryLabels: [] }],
-          model: embeddingModelInfo(config),
+          model: KEYWORD_EXTRACTED_ITEM_CLASSIFIER_MODEL,
         },
         new Date(),
       );
+      if (config) {
+        await syncItemInferences(
+          database,
+          {
+            items: [{ id: article.id, inferredCategoryLabels: [] }],
+            model: embeddingModelInfo(config),
+          },
+          new Date(),
+        );
+      }
       return;
     }
 
+    const keywordClassification = classifyItemCategories(
+      {
+        feedTitle: article.feedTitle,
+        feedDescription: null,
+        feedUrl: article.feedUrl ?? article.link,
+        feedSiteUrl: article.feedSiteUrl,
+        sourceKind: null,
+        itemTitle: article.title,
+        itemSummary: article.summary,
+        itemContentText: extractedText,
+        itemUrl: article.link,
+      },
+      remainingChipSlots + explicitLabels.length,
+    );
+    const keywordInferredLabels = keywordClassification.categories
+      .filter((category) => !explicitLabelSet.has(category.label))
+      .slice(0, remainingChipSlots);
+
+    await syncItemInferences(
+      database,
+      {
+        items: [{ id: article.id, inferredCategoryLabels: keywordInferredLabels }],
+        model: KEYWORD_EXTRACTED_ITEM_CLASSIFIER_MODEL,
+      },
+      new Date(),
+    );
+  } catch (error) {
+    options.logger?.warn?.("articles.extract_full_text.categories_reclassify_failed", {
+      articleId: article.id,
+      classifierMethod: KEYWORD_CLASSIFIER_METHOD,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return;
+  }
+
+  if (!config) {
+    return;
+  }
+
+  const embeddingModel = embeddingModelInfo(config);
+  try {
     const classification = await classifyItemEmbedding(
       {
         feedTitle: article.feedTitle,
@@ -164,57 +223,145 @@ export async function reclassifyExtractedFeedItem(
       database,
       {
         items: [{ id: article.id, inferredCategoryLabels }],
-        model: embeddingModelInfo(config),
+        model: embeddingModel,
       },
       new Date(),
     );
   } catch (error) {
     options.logger?.warn?.("articles.extract_full_text.categories_reclassify_failed", {
       articleId: article.id,
+      classifierMethod: embeddingModel.classifierMethod,
       error: error instanceof Error ? error.message : String(error),
     });
   }
 }
 
-/**
- * On-demand source-page extraction. Persists to extracted* columns only; feed content fields stay unchanged.
- */
-export async function extractFullTextForUser(
+export async function requestFullTextExtractionForUser(
   database: DB,
   userId: string,
   articleId: string,
   options: ExtractFullTextOptions = {},
-): Promise<
-  | { ok: true; article: ArticleDetailDto }
-  | { ok: false; errorCode: string; errorMessage: string; article: ArticleDetailDto }
-> {
+): Promise<ExtractFullTextResult> {
   const before = await getArticleDetailForUser(database, userId, articleId);
 
+  let sourceUrl: URL;
   try {
-    assertHttpOrHttpsUrl(before.link);
+    sourceUrl = assertHttpOrHttpsUrl(before.link);
   } catch {
     const msg = "A valid public http(s) article URL is required.";
-    if (before.articleType === "feed") {
-      await persistFeedExtracted(database, articleId, { kind: "failed", message: msg });
-    } else {
-      await persistClipExtracted(database, articleId, { kind: "failed", message: msg });
-    }
+    await persistExtracted(database, before, { kind: "failed", message: msg });
     const article = await getArticleDetailForUser(database, userId, articleId);
-    return { ok: false, errorCode: "INVALID_URL", errorMessage: msg, article };
+    return { ok: false, status: "failed", errorCode: "INVALID_URL", errorMessage: msg, article };
   }
 
-  const extracted = await extractArticleContentFromUrl(before.link);
+  if (before.reader.extracted.status === "ready" && before.reader.extracted.content) {
+    return { ok: true, status: "ready", article: before };
+  }
+
+  const cachedResult = await applyFreshExtractionCache(
+    database,
+    userId,
+    before,
+    await readFreshExtractionCache(database, normalizeExtractionUrlKey(sourceUrl)),
+    options,
+  );
+  if (cachedResult) {
+    return cachedResult;
+  }
+
+  if (before.reader.extracted.status === "pending" && before.reader.extracted.updatedAt) {
+    return { ok: true, status: "queued", article: before };
+  }
+
+  await persistPendingExtracted(database, before);
+  const article = await getArticleDetailForUser(database, userId, articleId);
+
+  try {
+    const enqueueExtractionJob = options.enqueueExtractionJob ?? defaultEnqueueExtractionJob;
+    await enqueueExtractionJob({
+      type: "article.extract",
+      payload: {
+        articleId,
+        userId,
+        requestedAt: new Date().toISOString(),
+        reason: "manual",
+      },
+    });
+  } catch (error) {
+    options.logger?.error?.("articles.extract_full_text.enqueue_failed", {
+      userId,
+      articleId,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    const message = "Full text extraction could not be queued.";
+    await persistExtracted(database, before, { kind: "failed", message });
+    const failedArticle = await getArticleDetailForUser(database, userId, articleId);
+    return {
+      ok: false,
+      status: "failed",
+      errorCode: "QUEUE_UNAVAILABLE",
+      errorMessage: message,
+      article: failedArticle,
+    };
+  }
+
+  return { ok: true, status: "queued", article };
+}
+
+/**
+ * Worker-side source-page extraction. Persists to extracted* columns only; feed content fields stay unchanged.
+ */
+export async function runArticleExtractionForUser(
+  database: DB,
+  userId: string,
+  articleId: string,
+  options: ExtractFullTextOptions = {},
+): Promise<ExtractFullTextResult> {
+  const before = await getArticleDetailForUser(database, userId, articleId);
+
+  let sourceUrl: URL;
+  try {
+    sourceUrl = assertHttpOrHttpsUrl(before.link);
+  } catch {
+    const msg = "A valid public http(s) article URL is required.";
+    await persistExtracted(database, before, { kind: "failed", message: msg });
+    const article = await getArticleDetailForUser(database, userId, articleId);
+    return { ok: false, status: "failed", errorCode: "INVALID_URL", errorMessage: msg, article };
+  }
+
+  if (before.reader.extracted.status === "ready" && before.reader.extracted.content) {
+    return { ok: true, status: "ready", article: before };
+  }
+
+  const urlKey = normalizeExtractionUrlKey(sourceUrl);
+  const cachedResult = await applyFreshExtractionCache(
+    database,
+    userId,
+    before,
+    await readFreshExtractionCache(database, urlKey),
+    options,
+  );
+  if (cachedResult) {
+    return cachedResult;
+  }
+
+  const extracted = await extractArticleContentFromUrl(before.link, {
+    hostRateLimiter: options.hostRateLimiter,
+  });
 
   if (!extracted.ok) {
     const message = safeExtractErrorMessage(extracted.errorMessage);
-    if (before.articleType === "feed") {
-      await persistFeedExtracted(database, articleId, { kind: "failed", message });
-    } else {
-      await persistClipExtracted(database, articleId, { kind: "failed", message });
-    }
+    await upsertFailedExtractionCache(database, {
+      urlKey,
+      sourceUrl: sourceUrl.href,
+      errorCode: extracted.errorCode,
+      message,
+    });
+    await persistExtracted(database, before, { kind: "failed", message });
     const article = await getArticleDetailForUser(database, userId, articleId);
     return {
       ok: false,
+      status: "failed",
       errorCode: extracted.errorCode,
       errorMessage: message,
       article,
@@ -225,27 +372,37 @@ export async function extractFullTextForUser(
   const text = extracted.content.contentText?.trim() ?? "";
   if (!html) {
     const message = "No readable article body was found.";
-    if (before.articleType === "feed") {
-      await persistFeedExtracted(database, articleId, { kind: "failed", message });
-    } else {
-      await persistClipExtracted(database, articleId, { kind: "failed", message });
-    }
+    await upsertFailedExtractionCache(database, {
+      urlKey,
+      sourceUrl: sourceUrl.href,
+      finalUrl: extracted.finalUrl,
+      errorCode: "NO_READABLE_CONTENT",
+      message,
+    });
+    await persistExtracted(database, before, { kind: "failed", message });
     const article = await getArticleDetailForUser(database, userId, articleId);
     return {
       ok: false,
+      status: "failed",
       errorCode: "NO_READABLE_CONTENT",
       errorMessage: message,
       article,
     };
   }
 
+  await upsertReadyExtractionCache(database, {
+    urlKey,
+    sourceUrl: sourceUrl.href,
+    finalUrl: extracted.finalUrl,
+    html,
+    text,
+  });
+
+  await persistExtracted(database, before, { kind: "ready", html, text });
   if (before.articleType === "feed") {
-    await persistFeedExtracted(database, articleId, { kind: "ready", html, text });
     await reclassifyExtractedFeedItem(database, before, text, options);
-  } else {
-    await persistClipExtracted(database, articleId, { kind: "ready", html, text });
   }
 
   const article = await getArticleDetailForUser(database, userId, articleId);
-  return { ok: true, article };
+  return { ok: true, status: "ready", article };
 }

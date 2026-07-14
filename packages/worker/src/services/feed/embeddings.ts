@@ -109,6 +109,11 @@ type CategoryPrototypes = {
   prototypeEmbeddings: number[][];
 };
 
+export type FeedItemEmbeddingBatchInput = FeedItemCategoryClassificationInput & {
+  id: string;
+  maxLabels?: number;
+};
+
 /**
  * Per-config prototype cache. Embedding the ~70 category-card prototype texts costs one
  * Voyage call; caching by config identity (not globally) means tests that pass a fake
@@ -247,4 +252,35 @@ export async function classifyItemEmbedding(
       .slice(0, maxLabels)
       .map((entry) => ({ label: entry.label, confidence: toConfidence(entry.score) })),
   };
+}
+
+export async function classifyItemEmbeddings(
+  inputs: readonly FeedItemEmbeddingBatchInput[],
+  config: EmbeddingClassifierConfig,
+): Promise<Map<string, CategoryClassification>> {
+  const results = new Map<string, CategoryClassification>();
+  if (inputs.length === 0) {
+    return results;
+  }
+
+  const prototypes = await loadCategoryPrototypes(config);
+  const textEmbeddings = await embedTexts(inputs.map(buildItemText), config);
+  inputs.forEach((input, index) => {
+    const textEmbedding = textEmbeddings[index];
+    if (!textEmbedding) {
+      results.set(input.id, { categories: [] });
+      return;
+    }
+
+    const scored = scoreAgainstPrototypes(textEmbedding, prototypes).filter(
+      (entry) => entry.score >= ITEM_SIMILARITY_THRESHOLD,
+    );
+    results.set(input.id, {
+      categories: scored
+        .slice(0, input.maxLabels ?? CATEGORY_CARDS.length)
+        .map((entry) => ({ label: entry.label, confidence: toConfidence(entry.score) })),
+    });
+  });
+
+  return results;
 }

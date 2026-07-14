@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta property="og:site_name" content="performance.dev" />
+    <meta
+      name="description"
+      content="A compact fixture modeled after a performance.dev article page about Linear."
+    />
+    <title>How's Linear so fast? A technical breakdown</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">performance.dev</a>
+      <nav><a href="/archive">Archive</a></nav>
+    </header>
+    <main>
+      <article>
+        <h1>How's Linear so fast? A technical breakdown</h1>
+        <p class="byline">Dennis Brotzky</p>
+        <p>
+          Linear feels immediate because the interface treats local application state as the
+          starting point and lets synchronization happen outside the critical path. Views can appear
+          with useful data, updates can be reflected optimistically, and slower network confirmation
+          can settle after the user has already moved to the next action.
+        </p>
+        <p>
+          The same principle applies to test design. A deterministic extraction test should keep
+          article markup close to the target page while avoiding a fresh internet request on every
+          run. The slower fetch boundary can still be covered by a small smoke check, but parser
+          behavior belongs in fast fixture-backed tests.
+        </p>
+        <p>
+          <a href="/how-is-linear-so-fast-a-technical-breakdown">Canonical article link</a>
+        </p>
+        <figure>
+          <img src="/images/linear-cache-flow.png" alt="Local cache and sync flow" />
+          <figcaption>Local state renders first, then background sync reconciles.</figcaption>
+        </figure>
+      </article>
+    </main>
+    <aside>Related posts and newsletter chrome should not dominate the readable article.</aside>
+  </body>
+</html>

@@ -115,7 +115,39 @@ afterEach(() => {
 });
 
 describe("reclassifyExtractedFeedItem", () => {
-  test("classifies extracted text and writes embedding item rows only", async () => {
+  test("writes keyword item rows when embedding classification is not configured", async () => {
+    const fake = createCategoryDb();
+    let fetched = false;
+    globalThis.fetch = (async () => {
+      fetched = true;
+      return new Response("{}", { status: 200 });
+    }) as unknown as typeof fetch;
+
+    await reclassifyExtractedFeedItem(
+      fake as never,
+      article({
+        title: "Release notes",
+        link: "https://example.com/release-notes",
+      }),
+      "The new open weights language model uses transformer layers, embeddings, and agent training data.",
+      {},
+    );
+
+    expect(fetched).toBe(false);
+    expect(fake.deletes).toEqual(["feed_item_category_assignments"]);
+    expect(fake.categories.map((row) => row.label)).toEqual(["AI & ML"]);
+    expect(fake.feedItemCategoryAssignments).toMatchObject([
+      {
+        feedItemId: "item-1",
+        provenance: "classifier",
+        modelId: "keyword-v1",
+        taxonomyVersion: "v1",
+        classifierMethod: "keyword",
+      },
+    ]);
+  });
+
+  test("classifies extracted text and writes keyword plus embedding item rows", async () => {
     const fake = createCategoryDb();
     const itemInputs: string[] = [];
     globalThis.fetch = (async (_url: string, init: RequestInit) => {
@@ -142,20 +174,35 @@ describe("reclassifyExtractedFeedItem", () => {
     );
 
     expect(itemInputs[0]).toContain("Extracted full text");
-    expect(fake.deletes).toEqual(["feed_item_category_assignments"]);
-    expect(fake.categories.map((row) => row.label)).toEqual(["Software Engineering"]);
-    expect(fake.feedItemCategoryAssignments).toMatchObject([
-      {
-        feedItemId: "item-1",
-        provenance: "classifier",
-        modelId: "voyage-4",
-        taxonomyVersion: "v1",
-        classifierMethod: "embedding",
-      },
+    expect(fake.deletes).toEqual([
+      "feed_item_category_assignments",
+      "feed_item_category_assignments",
     ]);
+    expect(fake.categories.map((row) => row.label)).toEqual([
+      "Software Engineering",
+      "Software Engineering",
+    ]);
+    expect(fake.feedItemCategoryAssignments).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          feedItemId: "item-1",
+          provenance: "classifier",
+          modelId: "keyword-v1",
+          taxonomyVersion: "v1",
+          classifierMethod: "keyword",
+        }),
+        expect.objectContaining({
+          feedItemId: "item-1",
+          provenance: "classifier",
+          modelId: "voyage-4",
+          taxonomyVersion: "v1",
+          classifierMethod: "embedding",
+        }),
+      ]),
+    );
   });
 
-  test("clears item embedding rows without calling Voyage when explicit labels fill the chip slots", async () => {
+  test("clears classifier item rows without calling Voyage when explicit labels fill the chip slots", async () => {
     const fake = createCategoryDb({ explicitLabels: ["AI & ML", "Business & Startups"] });
     let fetched = false;
     globalThis.fetch = (async () => {
@@ -168,7 +215,10 @@ describe("reclassifyExtractedFeedItem", () => {
     });
 
     expect(fetched).toBe(false);
-    expect(fake.deletes).toEqual(["feed_item_category_assignments"]);
+    expect(fake.deletes).toEqual([
+      "feed_item_category_assignments",
+      "feed_item_category_assignments",
+    ]);
     expect(fake.categories).toEqual([]);
     expect(fake.feedItemCategoryAssignments).toEqual([]);
   });
@@ -192,12 +242,24 @@ describe("reclassifyExtractedFeedItem", () => {
       },
     });
 
-    expect(fake.deletes).toEqual([]);
-    expect(fake.feedItemCategoryAssignments).toEqual([existing]);
+    expect(fake.deletes).toEqual(["feed_item_category_assignments"]);
+    expect(fake.feedItemCategoryAssignments).toEqual(
+      expect.arrayContaining([
+        existing,
+        expect.objectContaining({
+          feedItemId: "item-1",
+          provenance: "classifier",
+          modelId: "keyword-v1",
+          taxonomyVersion: "v1",
+          classifierMethod: "keyword",
+        }),
+      ]),
+    );
     expect(warnings).toMatchObject([
       {
         message: "articles.extract_full_text.categories_reclassify_failed",
         articleId: "item-1",
+        classifierMethod: "embedding",
       },
     ]);
   });

@@ -82,6 +82,7 @@ interface ListProps {
   selectedItemId?: string | null;
   pagination: RowsPaginationState;
   onSelectItem: (item: InboxItem) => void;
+  onIntentItem?: (item: InboxItem) => void;
   onFilterChange?: (filter: InboxFilter) => void;
   onFolderFilterChange?: (folderId: string) => void;
   onBackToInbox?: () => void;
@@ -109,6 +110,7 @@ export function List({
   selectedItemId,
   pagination,
   onSelectItem,
+  onIntentItem,
   onFilterChange,
   onFolderFilterChange,
   onBackToInbox,
@@ -171,7 +173,7 @@ export function List({
             {onFilterChange ? (
               <div
                 ref={listHeaderRef}
-                className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-5.5 pt-8 pb-2 isolate"
+                className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-5.5 pt-4.5 pb-2 isolate"
                 data-slot="inbox-list-header"
               >
                 <div className="flex min-w-0 items-center gap-2">
@@ -288,6 +290,7 @@ export function List({
                   selectedItemId={selectedItemId}
                   pagination={pagination}
                   onSelectItem={onSelectItem}
+                  onIntentItem={onIntentItem}
                   viewportHeight={viewportHeight}
                   initialScrollOffset={scrollRestorationEntry?.scrollY}
                 />

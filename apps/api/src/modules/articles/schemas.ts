@@ -157,10 +157,12 @@ export const articleDetailSchema = t.Object({
 export const extractFullTextResponseSchema = t.Union([
   t.Object({
     ok: t.Literal(true),
+    status: t.Union([t.Literal("ready"), t.Literal("queued")]),
     article: articleDetailSchema,
   }),
   t.Object({
     ok: t.Literal(false),
+    status: t.Literal("failed"),
     errorCode: t.String(),
     errorMessage: t.String(),
     article: articleDetailSchema,
