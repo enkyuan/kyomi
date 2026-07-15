@@ -1,7 +1,16 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { describe, expect, test, vi } from "vitest";
-import { RouteErrorPage, getRouteErrorRecoveryAction } from "@/app/error";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { beforeEach, describe, expect, test, vi } from "vitest";
+import { RouteErrorPage } from "@/app/error";
 import { NotFoundPage } from "@/app/not-found";
+import {
+  getAuthRecoveryAction,
+  INBOX_RECOVERY_ACTION,
+  LOGIN_RECOVERY_ACTION,
+} from "@/app/recovery";
+
+const mocks = vi.hoisted(() => ({
+  invalidate: vi.fn(),
+}));
 
 vi.mock("@tanstack/react-router", async () => {
   const React = await import("react");
@@ -11,39 +20,75 @@ vi.mock("@tanstack/react-router", async () => {
       HTMLAnchorElement,
       React.AnchorHTMLAttributes<HTMLAnchorElement> & { to: string }
     >(({ to, ...props }, ref) => React.createElement("a", { ...props, href: to, ref })),
+    useRouter: () => ({ invalidate: mocks.invalidate }),
   };
 });
 
+beforeEach(() => {
+  mocks.invalidate.mockReset();
+  mocks.invalidate.mockResolvedValue(undefined);
+});
+
 describe("RouteErrorPage", () => {
-  test("retries the failed route through the router reset callback", () => {
+  test("invalidates the failed route before resetting its boundary", async () => {
     const reset = vi.fn();
 
     render(<RouteErrorPage error={new Error("Route failed")} reset={reset} />);
     fireEvent.click(screen.getByRole("button", { name: "Try again" }));
 
-    expect(reset).toHaveBeenCalledOnce();
+    expect(mocks.invalidate).toHaveBeenCalledOnce();
+    await waitFor(() => expect(reset).toHaveBeenCalledOnce());
   });
 
-  test("sends the exact session-load failure to login", () => {
-    const action = getRouteErrorRecoveryAction(new Error("Unable to load your session."));
+  test("resets the boundary when route invalidation reports another failure", async () => {
+    const reset = vi.fn();
+    mocks.invalidate.mockRejectedValueOnce(new Error("Still unavailable"));
 
-    expect(action).toEqual({ label: "Go to login", to: "/" });
+    render(<RouteErrorPage error={new Error("Route failed")} reset={reset} />);
+    fireEvent.click(screen.getByRole("button", { name: "Try again" }));
 
+    await waitFor(() => expect(reset).toHaveBeenCalledOnce());
+  });
+
+  test("keeps root session failures retry-only", () => {
     render(<RouteErrorPage error={new Error("Unable to load your session.")} reset={vi.fn()} />);
-    expect(screen.getByRole("link", { name: "Go to login" }).getAttribute("href")).toBe("/");
+
+    expect(screen.getByRole("button", { name: "Try again" })).toBeTruthy();
+    expect(screen.queryByRole("link")).toBeNull();
   });
 
-  test("sends other route failures home", () => {
-    const action = getRouteErrorRecoveryAction(new Error("Feed failed"));
+  test("uses the recovery action supplied by a protected route", () => {
+    render(
+      <RouteErrorPage
+        error={new Error("Feed failed")}
+        recoveryAction={INBOX_RECOVERY_ACTION}
+        reset={vi.fn()}
+      />,
+    );
 
-    expect(action).toEqual({ label: "Go home", to: "/" });
+    expect(screen.getByRole("link", { name: "Back to inbox" }).getAttribute("href")).toBe("/inbox");
   });
 });
 
 describe("NotFoundPage", () => {
-  test("sends users home instead of entering the protected inbox", () => {
-    render(<NotFoundPage />);
+  test.each([
+    [LOGIN_RECOVERY_ACTION, "Go to login", "/"],
+    [INBOX_RECOVERY_ACTION, "Back to inbox", "/inbox"],
+  ] as const)("renders its route-owned recovery action", (recoveryAction, label, href) => {
+    render(<NotFoundPage recoveryAction={recoveryAction} />);
 
-    expect(screen.getByRole("link", { name: "Go home" }).getAttribute("href")).toBe("/");
+    expect(screen.getByRole("link", { name: label }).getAttribute("href")).toBe(href);
+  });
+
+  test("selects the public recovery target from resolved authentication", () => {
+    expect(getAuthRecoveryAction({ status: "anonymous", session: null })).toBe(
+      LOGIN_RECOVERY_ACTION,
+    );
+    expect(
+      getAuthRecoveryAction({
+        status: "authenticated",
+        session: { session: {} as never, user: {} as never },
+      }),
+    ).toBe(INBOX_RECOVERY_ACTION);
   });
 });

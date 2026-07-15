@@ -243,6 +243,24 @@ export function hydrateHotQueryCache(queryClient: QueryClient): Promise<void> {
     });
 }
 
+export async function clearHotQueryCache(): Promise<void> {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  if (persistTimer) {
+    clearTimeout(persistTimer);
+    persistTimer = undefined;
+  }
+
+  await pendingPersist;
+  removeLegacyLocalStorageCache();
+  await Promise.all([
+    removeHotCache(HOT_CACHE_KEY).catch(() => {}),
+    removeHotCache(HOT_CACHE_LEGACY_KEY).catch(() => {}),
+  ]);
+}
+
 async function persistHotQueryCache(queryClient: QueryClient) {
   if (pendingPersist) {
     return pendingPersist;

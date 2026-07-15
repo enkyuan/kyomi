@@ -1,28 +1,24 @@
 "use client";
 
-import { Link, type ErrorComponentProps } from "@tanstack/react-router";
+import { Link, type ErrorComponentProps, useRouter } from "@tanstack/react-router";
 import { Button } from "@kyomi/ui/button";
 import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyTitle } from "@kyomi/ui/empty";
 import { KyomiLogo } from "@kyomi/ui/icons";
+import type { RouteRecoveryAction } from "@/app/recovery";
 
-const SESSION_LOAD_ERROR_MESSAGE = "Unable to load your session.";
-
-export function getRouteErrorRecoveryAction(error: unknown) {
-  return {
-    label:
-      error instanceof Error && error.message === SESSION_LOAD_ERROR_MESSAGE
-        ? "Go to login"
-        : "Go home",
-    to: "/" as const,
-  };
-}
-
-export function RouteErrorPage({ error, reset }: ErrorComponentProps) {
+export function RouteErrorPage({
+  error,
+  recoveryAction,
+  reset,
+}: ErrorComponentProps & { recoveryAction?: RouteRecoveryAction }) {
+  const router = useRouter();
   const message =
     error instanceof Error && error.message.trim()
       ? error.message
       : "The page lost its place for a moment.";
-  const recoveryAction = getRouteErrorRecoveryAction(error);
+  const retry = () => {
+    void router.invalidate().then(reset, reset);
+  };
 
   return (
     <main className="flex min-h-svh bg-background text-foreground">
@@ -33,16 +29,18 @@ export function RouteErrorPage({ error, reset }: ErrorComponentProps) {
           <EmptyDescription className="max-w-sm text-balance">{message}</EmptyDescription>
         </EmptyHeader>
         <EmptyContent className="gap-2">
-          <Button className="w-28 max-sm:w-full rounded-full" onClick={reset}>
+          <Button className="w-28 max-sm:w-full rounded-full" onClick={retry}>
             Try again
           </Button>
-          <Button
-            className="w-28 max-sm:w-full rounded-full"
-            render={<Link to={recoveryAction.to} />}
-            variant="outline"
-          >
-            {recoveryAction.label}
-          </Button>
+          {recoveryAction ? (
+            <Button
+              className="w-28 max-sm:w-full rounded-full"
+              render={<Link to={recoveryAction.to} />}
+              variant="outline"
+            >
+              {recoveryAction.label}
+            </Button>
+          ) : null}
         </EmptyContent>
       </Empty>
     </main>

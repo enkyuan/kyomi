@@ -7,4 +7,7 @@ const baseURL =
 
 export const authClient = createAuthClient({
   baseURL,
+  sessionOptions: {
+    refetchInterval: 5 * 60,
+  },
 });

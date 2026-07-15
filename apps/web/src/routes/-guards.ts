@@ -1,20 +1,18 @@
 import { redirect } from "@tanstack/react-router";
-import { getSession } from "@lib/auth/functions";
+import type { AvailableAuthSessionState } from "@lib/auth/session";
+import { buildAuthEntryHref, resolveAuthReturnTo } from "@modules/auth/redirect";
 
-export async function requireAuth() {
-  // Route truth is server-grounded; client auth cache only hydrates UI.
-  const session = await getSession();
-
-  if (!session?.user) {
-    throw redirect({ to: "/" });
+export function requireAuth(authState: AvailableAuthSessionState, returnTo: string) {
+  if (authState.status === "anonymous") {
+    throw redirect({
+      href: buildAuthEntryHref("/", returnTo),
+      replace: true,
+    });
   }
 }
 
-export async function requireGuest() {
-  // Prevent guest-page flashes for authenticated users by redirecting in server-aware guard.
-  const session = await getSession();
-
-  if (session?.user) {
-    throw redirect({ to: "/inbox" });
+export function requireGuest(authState: AvailableAuthSessionState, returnTo?: string) {
+  if (authState.status === "authenticated") {
+    throw redirect({ href: resolveAuthReturnTo(returnTo), replace: true });
   }
 }

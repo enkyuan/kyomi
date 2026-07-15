@@ -1,7 +1,13 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react-doctor/only-export-components */
 /* eslint-disable react-doctor/no-danger */
-import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanstack/react-router";
+import {
+  HeadContent,
+  Outlet,
+  Scripts,
+  createRootRouteWithContext,
+  type ErrorComponentProps,
+} from "@tanstack/react-router";
 import { Agentation } from "agentation";
 import { useEffect } from "react";
 import type { QueryClient } from "@tanstack/react-query";
@@ -11,9 +17,11 @@ import TanstackQueryProvider from "@integrations/tanstack-query/provider";
 import { RouteErrorPage } from "@/app/error";
 import { AppRuntimeEffects } from "@/app/runtime-effects";
 import { NotFoundPage } from "@/app/not-found";
+import { getAuthRecoveryAction, LOGIN_RECOVERY_ACTION } from "@/app/recovery";
 import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/toast";
 import PostHogProvider from "@integrations/posthog/provider";
-import { getSession } from "@lib/auth/functions";
+import { getAuthSessionState } from "@lib/auth/functions";
+import type { AvailableAuthSessionState } from "@lib/auth/session";
 import {
   INBOX_PREFERENCES_STORAGE_KEY,
   READER_PREFERENCES_STORAGE_KEY,
@@ -27,16 +35,23 @@ interface MyRouterContext {
   queryClient: QueryClient;
 }
 
+type RootLoaderData = {
+  authState: AvailableAuthSessionState;
+};
+
 const SHELL_INIT_SCRIPT = `(function(){try{var root=document.documentElement;function readJson(key){try{var raw=window.localStorage.getItem(key);return raw?JSON.parse(raw):null}catch(e){return null}}function readCookie(name){var prefix=name+'=';var parts=document.cookie?document.cookie.split(';'):[];for(var i=0;i<parts.length;i++){var part=parts[i].trim();if(part.indexOf(prefix)===0)return decodeURIComponent(part.slice(prefix.length))}return null}var stored=window.localStorage.getItem(${JSON.stringify(THEME_STORAGE_KEY)});var mode=(stored==='light'||stored==='dark'||stored==='auto')?stored:'dark';var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var resolved=mode==='auto'?(prefersDark?'dark':'light'):mode;root.classList.remove('light','dark');root.classList.add(resolved);if(mode==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',mode)}root.style.colorScheme=resolved;var reader=readJson(${JSON.stringify(READER_PREFERENCES_STORAGE_KEY)})||{};if(typeof reader.fontSizePx==='number')root.style.setProperty('--reader-font-size',Math.round(reader.fontSizePx)+'px');if(reader.contentWidth==='narrow'||reader.contentWidth==='wide')root.dataset.readerContentWidth=reader.contentWidth;var inbox=readJson(${JSON.stringify(INBOX_PREFERENCES_STORAGE_KEY)})||{};if(typeof inbox.inboxFontSizePx==='number')root.style.setProperty('--inbox-font-size',Math.round(inbox.inboxFontSizePx)+'px');if(inbox.inboxDensity==='compact'||inbox.inboxDensity==='comfortable')root.dataset.inboxDensity=inbox.inboxDensity;if(inbox.articleOpenBehavior==='split'||inbox.articleOpenBehavior==='reader')root.dataset.inboxArticleOpenBehavior=inbox.articleOpenBehavior;var articleOpenBehavior=readCookie(${JSON.stringify(INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME)});if(articleOpenBehavior==='split'||articleOpenBehavior==='reader')root.dataset.inboxArticleOpenBehavior=articleOpenBehavior;var sidebarOpen=readCookie('sidebar_state');if(sidebarOpen==='true'||sidebarOpen==='false')root.dataset.sidebarState=sidebarOpen==='true'?'expanded':'collapsed';var shell=readJson(${JSON.stringify(SHELL_STATE_STORAGE_KEY)})||{};if(typeof shell.inboxFilter==='string')root.dataset.inboxFilter=shell.inboxFilter;if(typeof shell.inboxLayout==='string')root.dataset.inboxLayout=shell.inboxLayout;if(typeof shell.selectedItemId==='string')root.dataset.selectedItemId=shell.selectedItemId;}catch(e){console.warn('shell init failed',e);}})();`;
 const REACT_SCAN_STORAGE_KEY = "kyomi:dev:react-scan";
 const REACT_SCAN_QUERY_PARAM = "react-scan";
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
-  loader: async () => {
-    // Canonical session hydration source for route tree/bootstrap render.
-    const initialSession = await getSession();
-    return { initialSession };
+  beforeLoad: async () => {
+    const authState = await getAuthSessionState();
+    if (authState.status === "unavailable") {
+      throw new Error(authState.message);
+    }
+    return { authState };
   },
+  loader: ({ context }) => ({ authState: context.authState }),
   head: () => ({
     meta: [
       {
@@ -103,15 +118,27 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
   }),
   shellComponent: RootDocument,
   component: () => <Outlet />,
-  errorComponent: RouteErrorPage,
-  notFoundComponent: NotFoundPage,
+  errorComponent: RootRouteErrorPage,
+  notFoundComponent: RootNotFoundPage,
 });
 
+function RootRouteErrorPage(props: ErrorComponentProps) {
+  return <RouteErrorPage {...props} />;
+}
+
+function RootNotFoundPage() {
+  const loaderData = Route.useLoaderData() as RootLoaderData;
+  return (
+    <NotFoundPage
+      recoveryAction={getAuthRecoveryAction(loaderData.authState) ?? LOGIN_RECOVERY_ACTION}
+    />
+  );
+}
+
 function RootDocument({ children }: { children: React.ReactNode }) {
-  const loaderData = Route.useLoaderData() as
-    | { initialSession?: Awaited<ReturnType<typeof getSession>> }
-    | undefined;
-  const initialSession = loaderData?.initialSession ?? null;
+  const loaderData = Route.useLoaderData() as RootLoaderData | undefined;
+  const initialSession =
+    loaderData?.authState.status === "authenticated" ? loaderData.authState.session : null;
 
   useEffect(() => {
     if (import.meta.env.DEV) {
@@ -170,7 +197,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <PostHogProvider>
           <ToastProvider>
             <AnchoredToastProvider>
-              <TanstackQueryProvider>
+              <TanstackQueryProvider sessionStatus={loaderData?.authState.status}>
                 <AuthProvider initialSession={initialSession}>
                   <AppRuntimeEffects />
                   {children}

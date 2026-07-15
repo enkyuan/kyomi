@@ -4,12 +4,14 @@ import { act, cleanup, render, screen, waitFor } from "@testing-library/react";
 import { afterEach, describe, expect, test, vi } from "vitest";
 
 const mocks = vi.hoisted(() => ({
+  clearHotQueryCache: vi.fn(),
   hydrateHotQueryCache: vi.fn(),
   subscribeHotQueryCachePersistence: vi.fn(),
   unsubscribe: vi.fn(),
 }));
 
 vi.mock("@lib/query/cache", () => ({
+  clearHotQueryCache: mocks.clearHotQueryCache,
   hydrateHotQueryCache: mocks.hydrateHotQueryCache,
   subscribeHotQueryCachePersistence: mocks.subscribeHotQueryCachePersistence,
 }));
@@ -39,7 +41,7 @@ describe("TanstackQueryProvider", () => {
     expect(mocks.hydrateHotQueryCache).not.toHaveBeenCalled();
 
     render(
-      <TanstackQueryProvider>
+      <TanstackQueryProvider sessionStatus="authenticated">
         <div>Query provider ready</div>
       </TanstackQueryProvider>,
     );
@@ -58,5 +60,21 @@ describe("TanstackQueryProvider", () => {
     await waitFor(() => {
       expect(mocks.subscribeHotQueryCachePersistence).toHaveBeenCalledTimes(1);
     });
+  });
+
+  test("clears persisted user data instead of hydrating it for an anonymous session", async () => {
+    mocks.clearHotQueryCache.mockResolvedValue(undefined);
+    const { default: TanstackQueryProvider } =
+      await import("../../../../../../apps/web/src/integrations/tanstack-query/provider");
+
+    render(
+      <TanstackQueryProvider sessionStatus="anonymous">
+        <div>Guest query provider ready</div>
+      </TanstackQueryProvider>,
+    );
+
+    expect(screen.getByText("Guest query provider ready")).toBeTruthy();
+    await waitFor(() => expect(mocks.clearHotQueryCache).toHaveBeenCalledOnce());
+    expect(mocks.hydrateHotQueryCache).not.toHaveBeenCalled();
   });
 });

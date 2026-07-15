@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { useAuth } from "@integrations/better-auth/provider";
+import { clearHotQueryCache } from "@lib/query/cache";
 import { prefetchInboxFlow } from "@modules/inbox";
 
 const SERVICE_WORKER_URL = "/sw.js";
@@ -32,6 +33,7 @@ export function AppRuntimeEffects() {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
+  const previousIsAuthenticated = useRef(isAuthenticated);
 
   useEffect(() => {
     if (import.meta.env.DEV || !("serviceWorker" in navigator)) {
@@ -42,6 +44,27 @@ export function AppRuntimeEffects() {
       void navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: "/" });
     });
   }, []);
+
+  useEffect(() => {
+    if (isPending) {
+      return;
+    }
+
+    const wasAuthenticated = previousIsAuthenticated.current;
+    previousIsAuthenticated.current = isAuthenticated;
+    if (!wasAuthenticated || isAuthenticated) {
+      return;
+    }
+
+    queryClient.clear();
+    void (async () => {
+      try {
+        await clearHotQueryCache();
+      } finally {
+        await router.invalidate();
+      }
+    })().catch(() => {});
+  }, [isAuthenticated, isPending, queryClient, router]);
 
   useEffect(() => {
     if (isPending) {
