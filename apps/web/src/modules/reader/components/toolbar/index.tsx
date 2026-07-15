@@ -358,7 +358,7 @@ function ReaderToolbarButton({
               <Button
                 className={cn(
                   "rounded-full text-muted-foreground transition-[color,background-color,transform] hover:text-foreground data-pressed:text-foreground",
-                  large && "size-9",
+                  large && "size-9 [&_svg]:size-5!",
                   active && "bg-accent/50 text-foreground",
                   active && activeClassName,
                   className,

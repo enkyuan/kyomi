@@ -7,8 +7,8 @@ import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { Toolbar as ReaderToolbarRoot } from "@modules/reader/components/toolbar";
 import type { ToolbarModel } from "@modules/toolbar/lib/types";
 
-const EXPANDED_READER_TOOLBAR_WIDTH = "13.5625rem";
-const COLLAPSED_READER_TOOLBAR_WIDTH = "5.5rem";
+const EXPANDED_READER_TOOLBAR_WIDTH = "13.3125rem";
+const COLLAPSED_READER_TOOLBAR_WIDTH = "5.25rem";
 const STEP_CONTROL_TOOLTIP_SIDE = "bottom";
 const STEP_CONTROL_TOOLTIP_SIDE_OFFSET = 8;
 const STEP_CONTROL_TOOLTIP_COLLISION_AVOIDANCE = {
@@ -110,7 +110,7 @@ export function ReaderToolbar(props: ReaderToolbarProps) {
       animate={{
         width: props.collapsed ? COLLAPSED_READER_TOOLBAR_WIDTH : EXPANDED_READER_TOOLBAR_WIDTH,
       }}
-      className="relative inline-flex h-11 min-w-0 shrink-0 origin-left items-center overflow-hidden rounded-full bg-background px-1.5 font-medium text-base text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative"
+      className="relative inline-flex h-11 min-w-0 shrink-0 origin-left items-center overflow-hidden rounded-full bg-background p-1 font-medium text-base text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative"
       initial={false}
       transition={transition}
     >
