@@ -171,7 +171,7 @@ export function Favicon({
           style={squircleStyle}
         />
       ) : null}
-      {fallback ? (
+      {fallback && (!src || loading) ? (
         <span
           aria-hidden="true"
           className={cn(

@@ -8,9 +8,11 @@ import {
   useRef,
   useSyncExternalStore,
 } from "react";
+import { PhotoSlider } from "react-photo-view";
 import type { ReaderLayoutMode } from "../core/types";
 import { hasLikelyDelimitedTex } from "../shared/math";
 import { mountReaderLinkPreviewCards } from "./components/link-card";
+import { useReaderPhotoPreviewTargets } from "./html/photo-preview";
 import { prepareArticleHtml } from "./html/string-prep";
 import {
   runReaderCriticalDomEnhancements,
@@ -121,6 +123,16 @@ export function RenderHtml({
   const mathRenderedHtmlRef = useRef<string | null>(null);
   const cancelScheduledEnhancementRef = useRef<(() => void) | null>(null);
   const linkPreviewCleanupsRef = useRef<(() => void)[]>([]);
+  const {
+    disposePhotoPreviewTargets,
+    installPhotoPreviewTargets,
+    photoIndex,
+    photoVisible,
+    photos,
+    resetPhotoPreviewTargets,
+    setPhotoIndex,
+    setPhotoVisible,
+  } = useReaderPhotoPreviewTargets();
   const isHydrated = useHydrated();
   const prepared = useMemo(
     () =>
@@ -245,7 +257,8 @@ export function RenderHtml({
   useEffect(() => {
     mathRenderedHtmlRef.current = null;
     disposeAllLinkPreviewMounts();
-  }, [prepared, disposeAllLinkPreviewMounts]);
+    resetPhotoPreviewTargets();
+  }, [prepared, disposeAllLinkPreviewMounts, resetPhotoPreviewTargets]);
 
   useEffect(() => {
     const node = articleBodyRef.current;
@@ -265,10 +278,12 @@ export function RenderHtml({
         linkPreviewCleanupsRef.current[i]();
       }
       linkPreviewCleanupsRef.current = [];
+      disposePhotoPreviewTargets();
     };
   }, []);
 
   const scheduleEnhancementsAfterMutation = useEffectEvent((node: HTMLElement) => {
+    installPhotoPreviewTargets(node);
     scheduleEnhancements(node);
   });
 
@@ -306,13 +321,29 @@ export function RenderHtml({
     return () => observer.disconnect();
   }, [prepared]);
 
+  const articleBody = useMemo(
+    () => (
+      <div
+        className="article-body"
+        data-reader-layout-mode={layoutMode}
+        suppressHydrationWarning
+        ref={articleBodyRef}
+        dangerouslySetInnerHTML={{ __html: prepared }}
+      />
+    ),
+    [layoutMode, prepared],
+  );
+
   return (
-    <div
-      className="article-body"
-      data-reader-layout-mode={layoutMode}
-      suppressHydrationWarning
-      ref={articleBodyRef}
-      dangerouslySetInnerHTML={{ __html: prepared }}
-    />
+    <>
+      {articleBody}
+      <PhotoSlider
+        images={photos}
+        visible={photoVisible && photos.length > 0}
+        index={Math.min(photoIndex, Math.max(photos.length - 1, 0))}
+        onIndexChange={setPhotoIndex}
+        onClose={() => setPhotoVisible(false)}
+      />
+    </>
   );
 }

@@ -99,6 +99,29 @@ describe("feed favicons", () => {
     expect(fallback?.querySelector("svg")).not.toBeNull();
   });
 
+  test("removes the RSS fallback after a transparent favicon loads", async () => {
+    const { container } = render(
+      <FeedFavicon
+        faviconUrl={null}
+        feedUrl="https://hackercombat.com/feed"
+        siteUrl="https://hackercombat.com"
+        title="Hacker Combat"
+      />,
+    );
+
+    const img = screen.getByRole("img", { name: "Hacker Combat favicon" });
+    expect(container.querySelector("[data-slot='favicon-fallback']")).not.toBeNull();
+
+    Object.defineProperty(img, "naturalWidth", { configurable: true, value: 48 });
+    Object.defineProperty(img, "naturalHeight", { configurable: true, value: 48 });
+    fireEvent.load(img);
+
+    await waitFor(() => {
+      expect(img.className).toContain("opacity-100");
+      expect(container.querySelector("[data-slot='favicon-fallback']")).toBeNull();
+    });
+  });
+
   test("uses eager high-priority loading for large sidebar favicons", async () => {
     render(
       <FeedFavicon
