@@ -23,17 +23,25 @@ export const authRoutes = new Elysia({
     const sessions = await auth.api.listSessions({ headers });
     return sessions.map((session) => hydrateStoredLocation(session));
   })
-  .all("/api/auth", (ctx) => {
-    const headers = withForwardedForHeader(
-      ctx.request,
-      ctx.server?.requestIP(ctx.request)?.address,
-    );
-    return auth.handler(new Request(ctx.request, { headers }));
-  })
-  .all("/api/auth/*", (ctx) => {
-    const headers = withForwardedForHeader(
-      ctx.request,
-      ctx.server?.requestIP(ctx.request)?.address,
-    );
-    return auth.handler(new Request(ctx.request, { headers }));
-  });
+  .all(
+    "/api/auth",
+    (ctx) => {
+      const headers = withForwardedForHeader(
+        ctx.request,
+        ctx.server?.requestIP(ctx.request)?.address,
+      );
+      return auth.handler(new Request(ctx.request, { headers }));
+    },
+    { parse: "none" },
+  )
+  .all(
+    "/api/auth/*",
+    (ctx) => {
+      const headers = withForwardedForHeader(
+        ctx.request,
+        ctx.server?.requestIP(ctx.request)?.address,
+      );
+      return auth.handler(new Request(ctx.request, { headers }));
+    },
+    { parse: "none" },
+  );
