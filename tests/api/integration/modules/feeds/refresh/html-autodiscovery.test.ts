@@ -372,6 +372,43 @@ describe("runFeedRefresh HTML autodiscovery", () => {
     });
   });
 
+  test("keeps the existing feed URL when an autodiscovered canonical URL is already owned", async () => {
+    const siteUrl = "https://93.184.216.34/";
+    const feedUrl = "https://93.184.216.34/feed.xml";
+    const fake = createFeedRefreshDb({ canonicalUrlConflict: true });
+
+    globalThis.fetch = mockFetch((input) => {
+      const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
+      if (url === siteUrl) {
+        return response(
+          '<!doctype html><html><head><link rel="alternate" type="application/rss+xml" href="/feed.xml"></head></html>',
+          siteUrl,
+          "text/html",
+        );
+      }
+      return response(
+        `<?xml version="1.0"?><rss version="2.0"><channel><title>Example Feed</title><link>${siteUrl}</link><description>Latest updates</description></channel></rss>`,
+        feedUrl,
+        "application/rss+xml",
+      );
+    });
+
+    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
+      enrichArticles: false,
+    });
+
+    expect(result.ok).toBe(true);
+    const feedUpdate = lastUpdateForTable(fake.updates, "feeds");
+    expect(feedUpdate).toMatchObject({
+      canonicalFeedUrl: feedUrl,
+      discoveredFromUrl: siteUrl,
+      discoveryProvenance: "scheduled_html_autodiscovery",
+      refreshStatus: "idle",
+      lastRefreshError: null,
+    });
+    expect(feedUpdate).not.toHaveProperty("url");
+  });
+
   test("returns a permanent html_not_feed failure when HTML has no feed alternate", async () => {
     const fake = createFeedRefreshDb();
     globalThis.fetch = mockFetch(() =>

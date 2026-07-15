@@ -144,6 +144,14 @@ function isHtmlParseError(error: unknown): boolean {
   return error instanceof Error && error.message === HTML_PARSE_ERROR;
 }
 
+function isFeedsUrlUniqueViolation(error: unknown): boolean {
+  if (!error || typeof error !== "object") {
+    return false;
+  }
+  const databaseError = error as { code?: unknown; constraint?: unknown };
+  return databaseError.code === "23505" && databaseError.constraint === "feeds_url_unique";
+}
+
 function endpointLooksStale(url: string): boolean {
   try {
     const path = new URL(url).pathname.toLowerCase();
@@ -938,30 +946,55 @@ export async function runFeedRefresh(
     let sourceTagAssignments = 0;
     let refreshSuperseded = false;
     await database.transaction(async (tx) => {
-      const [updated] = await tx
-        .update(feeds)
-        .set({
-          url: parsed.metadata.canonicalUrl,
-          title: parsed.metadata.title,
-          description: parsed.metadata.description,
-          link: parsed.metadata.link,
-          submittedUrl: feed.submittedUrl ?? feed.url,
-          siteUrl: parsed.metadata.link,
-          canonicalFeedUrl: parsed.metadata.canonicalUrl,
-          discoveredFromUrl: resolved.discoveredFromUrl ?? feed.discoveredFromUrl,
-          discoveryProvenance:
-            resolved.discoveryProvenance ?? feed.discoveryProvenance ?? "direct_feed_refresh",
-          updatedAt: now,
-          refreshStatus: "idle",
-          lastRefreshCompletedAt: now,
-          lastRefreshSucceededAt: now,
-          lastRefreshError: null,
-          etag: fetchedForParse.etag,
-          lastModified: fetchedForParse.lastModified,
-          nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000),
-        })
-        .where(and(eq(feeds.id, feed.id), eq(feeds.refreshGeneration, generation)))
-        .returning({ id: feeds.id });
+      const feedPatch = {
+        title: parsed.metadata.title,
+        description: parsed.metadata.description,
+        link: parsed.metadata.link,
+        submittedUrl: feed.submittedUrl ?? feed.url,
+        siteUrl: parsed.metadata.link,
+        canonicalFeedUrl: parsed.metadata.canonicalUrl,
+        discoveredFromUrl: resolved.discoveredFromUrl ?? feed.discoveredFromUrl,
+        discoveryProvenance:
+          resolved.discoveryProvenance ?? feed.discoveryProvenance ?? "direct_feed_refresh",
+        updatedAt: now,
+        refreshStatus: "idle",
+        lastRefreshCompletedAt: now,
+        lastRefreshSucceededAt: now,
+        lastRefreshError: null,
+        etag: fetchedForParse.etag,
+        lastModified: fetchedForParse.lastModified,
+        nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000),
+      };
+      const persistFeed = (updateTx: typeof tx, patch: typeof feedPatch & { url?: string }) =>
+        updateTx
+          .update(feeds)
+          .set(patch)
+          .where(and(eq(feeds.id, feed.id), eq(feeds.refreshGeneration, generation)))
+          .returning({ id: feeds.id });
+
+      let updatedRows: Array<{ id: string }>;
+      const shouldUpdateUrl =
+        feed.url !== parsed.metadata.canonicalUrl &&
+        feed.canonicalFeedUrl !== parsed.metadata.canonicalUrl;
+      if (shouldUpdateUrl) {
+        try {
+          updatedRows = await tx.transaction(
+            async (savepoint) =>
+              await persistFeed(savepoint, { ...feedPatch, url: parsed.metadata.canonicalUrl }),
+          );
+        } catch (error) {
+          if (!isFeedsUrlUniqueViolation(error)) {
+            throw error;
+          }
+          // Preserve this row's existing alias while committing the refreshed content and
+          // canonical provenance. The savepoint keeps the outer ingestion transaction usable.
+          updatedRows = await persistFeed(tx, feedPatch);
+        }
+      } else {
+        updatedRows = await persistFeed(tx, feedPatch);
+      }
+
+      const [updated] = updatedRows;
       if (!updated) {
         logFeedRefreshSuperseded(feed.id, generation, "idle");
         refreshSuperseded = true;
