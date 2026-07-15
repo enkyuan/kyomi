@@ -13,6 +13,7 @@ export type FeedRefreshJob = {
     feedId: string;
     userId: string;
     reason?: string;
+    generation?: number;
   };
 };
 
@@ -117,12 +118,18 @@ function parseFeedRefreshJob(parsedPayload: Record<string, unknown>): FeedRefres
     throw new Error("Invalid feed.refresh payload");
   }
 
+  const generation = parsedPayload.generation as number | undefined;
+  if (generation !== undefined && (!Number.isInteger(generation) || generation < 0)) {
+    throw new Error("Invalid feed.refresh payload");
+  }
+
   return {
     type: "feed.refresh",
     payload: {
       feedId: parsedPayload.feedId,
       userId: parsedPayload.userId,
       reason: typeof parsedPayload.reason === "string" ? parsedPayload.reason : undefined,
+      generation,
     },
   };
 }

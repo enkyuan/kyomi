@@ -46,6 +46,7 @@ export const feeds = pgTable(
     // Refresh lifecycle is owned by worker/ingestion and read by UI read models.
     // Reads must never mutate these fields.
     refreshStatus: text("refresh_status").notNull().default("idle"),
+    refreshGeneration: integer("refresh_generation").notNull().default(0),
     lastRefreshStartedAt: timestamp("last_refresh_started_at"),
     lastRefreshCompletedAt: timestamp("last_refresh_completed_at"),
     lastRefreshSucceededAt: timestamp("last_refresh_succeeded_at"),

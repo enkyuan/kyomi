@@ -1,4 +1,4 @@
-import { eq, sql } from "drizzle-orm";
+import { and, eq, or, sql } from "drizzle-orm";
 import { canonicalizeCategoryLabels, feedItems, feeds } from "@kyomi/db";
 import {
   createDrizzleFaviconHostStore,
@@ -194,11 +194,12 @@ function htmlFeedFailure(
 async function markHtmlFeedRefreshFailed(
   database: FeedIngestDatabase,
   feedId: string,
+  generation: number,
   error: string,
   failureClass: HtmlFeedFailureClass,
 ): Promise<FeedRefreshResult> {
   const now = new Date();
-  await database
+  const [updated] = await database
     .update(feeds)
     .set({
       refreshStatus: "failed",
@@ -207,7 +208,12 @@ async function markHtmlFeedRefreshFailed(
       lastRefreshCompletedAt: now,
       nextRefreshAt: new Date(now.getTime() + PERMANENT_FAILURE_BACKOFF_MS),
     })
-    .where(eq(feeds.id, feedId));
+    .where(and(eq(feeds.id, feedId), eq(feeds.refreshGeneration, generation)))
+    .returning({ id: feeds.id });
+  if (!updated) {
+    logFeedRefreshSuperseded(feedId, generation, "failed");
+    return skippedSupersededFeedRefresh();
+  }
 
   return {
     ok: false,
@@ -216,6 +222,45 @@ async function markHtmlFeedRefreshFailed(
     failureClass,
     permanent: true,
   };
+}
+
+async function claimFeedRefresh(
+  database: FeedIngestDatabase,
+  feedId: string,
+  expectedGeneration: number | undefined,
+): Promise<{ generation: number } | null> {
+  const now = new Date();
+  const predicate =
+    expectedGeneration === undefined
+      ? and(eq(feeds.id, feedId), eq(feeds.refreshStatus, "queued"))
+      : and(
+          eq(feeds.id, feedId),
+          eq(feeds.refreshGeneration, expectedGeneration),
+          // Redis retries retain their original generation. A transient failure marks that
+          // generation failed before rethrowing, so its reclaimed message must be able to
+          // move it back to running. New manual/scheduled work increments the generation,
+          // making an older message fail this claim instead.
+          or(eq(feeds.refreshStatus, "queued"), eq(feeds.refreshStatus, "failed")),
+        );
+  const [claimed] = await database
+    .update(feeds)
+    .set({
+      refreshStatus: "running",
+      lastRefreshStartedAt: now,
+      lastRefreshError: null,
+      updatedAt: now,
+    })
+    .where(predicate)
+    .returning({ generation: feeds.refreshGeneration });
+  return claimed ?? null;
+}
+
+function logFeedRefreshSuperseded(feedId: string, generation: number, state: "failed" | "idle") {
+  console.info("feed.refresh.superseded", { feedId, generation, state });
+}
+
+function skippedSupersededFeedRefresh(): FeedRefreshResult {
+  return { ok: true, itemCount: 0, skipped: "superseded" };
 }
 
 async function fetchRefreshDocument(
@@ -625,19 +670,20 @@ export async function runFeedRefresh(
     enrichArticles?: boolean;
     hostRateLimiter?: HostRateLimiter;
     embeddingClassifier?: EmbeddingClassifierConfig;
+    refreshGeneration?: number;
   },
 ): Promise<FeedRefreshResult> {
-  try {
-    const startedAt = new Date();
-    await database
-      .update(feeds)
-      .set({
-        refreshStatus: "running",
-        lastRefreshStartedAt: startedAt,
-        lastRefreshError: null,
-      })
-      .where(eq(feeds.id, feedId));
+  const claimed = await claimFeedRefresh(database, feedId, options?.refreshGeneration);
+  if (!claimed) {
+    return {
+      ok: true,
+      itemCount: 0,
+      skipped: options?.refreshGeneration === undefined ? "not_queued" : "superseded",
+    };
+  }
 
+  const generation = claimed.generation;
+  try {
     const [feed] = await database
       .select({
         id: feeds.id,
@@ -687,7 +733,7 @@ export async function runFeedRefresh(
         },
         permanent,
       );
-      await database
+      const [updated] = await database
         .update(feeds)
         .set({
           refreshStatus: "failed",
@@ -696,7 +742,12 @@ export async function runFeedRefresh(
           lastRefreshCompletedAt: now,
           nextRefreshAt: new Date(now.getTime() + backoffMs),
         })
-        .where(eq(feeds.id, feedId));
+        .where(and(eq(feeds.id, feedId), eq(feeds.refreshGeneration, generation)))
+        .returning({ id: feeds.id });
+      if (!updated) {
+        logFeedRefreshSuperseded(feedId, generation, "failed");
+        return skippedSupersededFeedRefresh();
+      }
       return {
         ok: false,
         itemCount: 0,
@@ -731,23 +782,6 @@ export async function runFeedRefresh(
           };
         }
       }
-      await database
-        .update(feeds)
-        .set({
-          refreshStatus: "idle",
-          lastRefreshCompletedAt: now,
-          lastRefreshSucceededAt: now,
-          lastRefreshError: null,
-          etag: fetched.etag ?? feed.etag,
-          lastModified: fetched.lastModified ?? feed.lastModified,
-          submittedUrl: feed.submittedUrl ?? feed.url,
-          siteUrl: feed.siteUrl ?? feed.link,
-          canonicalFeedUrl: feed.canonicalFeedUrl ?? feed.url,
-          nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000), // Next refresh in 1 hour
-          ...(faviconPatch ?? {}),
-        })
-        .where(eq(feeds.id, feedId));
-
       // A 304 means the document wasn't fetched, so there's no parsed content to classify
       // items against. Still run feed-level classification off stored metadata so a feed
       // that has never had a successful full-content refresh doesn't stay uncategorized
@@ -755,33 +789,66 @@ export async function runFeedRefresh(
       // canonical-label check the full-fetch path runs against freshly parsed metadata.
       // Skipping this otherwise avoids re-running the classifier and rewriting
       // `provenance = "classifier"` rows on every poll of an unchanged, already-categorized feed.
-      if (!(await hasExplicitFeedCategories(database, feed.id))) {
-        const classificationInput = {
-          feedTitle: feed.title,
-          feedDescription: feed.description,
-          feedUrl: feed.url,
-          feedSiteUrl: feed.link,
-          sourceKind: feed.sourceKind,
-        };
-        const suppressedFeedClassifierFallback = shouldSuppressFallback(classificationInput);
-        const feedCategories = suppressedFeedClassifierFallback
+      const hasExplicitCategories = await hasExplicitFeedCategories(database, feed.id);
+      const classificationInput = {
+        feedTitle: feed.title,
+        feedDescription: feed.description,
+        feedUrl: feed.url,
+        feedSiteUrl: feed.link,
+        sourceKind: feed.sourceKind,
+      };
+      const suppressedFeedClassifierFallback =
+        !hasExplicitCategories && shouldSuppressFallback(classificationInput);
+      const feedCategories =
+        hasExplicitCategories || suppressedFeedClassifierFallback
           ? []
           : classifyFeedCategories(classificationInput).categories;
+      const embeddingConfig = options?.embeddingClassifier;
+      const embeddingCategoryStats = createEmbeddingStats(embeddingConfig);
+      const embeddingFeedCategories = hasExplicitCategories
+        ? null
+        : await tryFeedEmbedding(classificationInput, embeddingConfig, embeddingCategoryStats);
+      let refreshSuperseded = false;
+
+      // The terminal update locks this feed row until the classifier writes commit. That keeps
+      // a newer generation from being queued between the fenced lifecycle update and category
+      // mutations; if classification fails, both are rolled back before the failure path runs.
+      await database.transaction(async (tx) => {
+        const [updated] = await tx
+          .update(feeds)
+          .set({
+            refreshStatus: "idle",
+            lastRefreshCompletedAt: now,
+            lastRefreshSucceededAt: now,
+            lastRefreshError: null,
+            etag: fetched.etag ?? feed.etag,
+            lastModified: fetched.lastModified ?? feed.lastModified,
+            submittedUrl: feed.submittedUrl ?? feed.url,
+            siteUrl: feed.siteUrl ?? feed.link,
+            canonicalFeedUrl: feed.canonicalFeedUrl ?? feed.url,
+            nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000), // Next refresh in 1 hour
+            ...(faviconPatch ?? {}),
+          })
+          .where(and(eq(feeds.id, feedId), eq(feeds.refreshGeneration, generation)))
+          .returning({ id: feeds.id });
+        if (!updated) {
+          logFeedRefreshSuperseded(feedId, generation, "idle");
+          refreshSuperseded = true;
+          return;
+        }
+
+        if (hasExplicitCategories) {
+          return;
+        }
+
         await syncInferredFeedCategories(
-          database,
+          tx,
           { feedId: feed.id, feedCategories, items: [], model: KEYWORD_CLASSIFIER_MODEL },
           now,
         );
-        const embeddingConfig = options?.embeddingClassifier;
-        const embeddingCategoryStats = createEmbeddingStats(embeddingConfig);
-        const embeddingFeedCategories = await tryFeedEmbedding(
-          classificationInput,
-          embeddingConfig,
-          embeddingCategoryStats,
-        );
         if (embeddingConfig && embeddingFeedCategories) {
           await syncInferredFeedCategories(
-            database,
+            tx,
             {
               feedId: feed.id,
               feedCategories: embeddingFeedCategories,
@@ -791,31 +858,21 @@ export async function runFeedRefresh(
             now,
           );
         }
-        return {
-          ok: true,
-          itemCount: 0,
-          notModified: true,
-          categoryStats: {
-            feedClassifierLabels: feedCategories.length,
-            itemClassifierLabels: 0,
-            itemClassifierAbstentions: 0,
-            suppressedFeedClassifierFallback,
-            embeddingClassifier: embeddingCategoryStats,
-          },
-        };
-      }
+      });
 
-      const embeddingCategoryStats = createEmbeddingStats(options?.embeddingClassifier);
+      if (refreshSuperseded) {
+        return skippedSupersededFeedRefresh();
+      }
 
       return {
         ok: true,
         itemCount: 0,
         notModified: true,
         categoryStats: {
-          feedClassifierLabels: 0,
+          feedClassifierLabels: feedCategories.length,
           itemClassifierLabels: 0,
           itemClassifierAbstentions: 0,
-          suppressedFeedClassifierFallback: false,
+          suppressedFeedClassifierFallback,
           embeddingClassifier: embeddingCategoryStats,
         },
       };
@@ -830,6 +887,7 @@ export async function runFeedRefresh(
       return await markHtmlFeedRefreshFailed(
         database,
         feed.id,
+        generation,
         resolved.error,
         resolved.failureClass,
       );
@@ -878,8 +936,9 @@ export async function runFeedRefresh(
     } | null = null;
 
     let sourceTagAssignments = 0;
+    let refreshSuperseded = false;
     await database.transaction(async (tx) => {
-      await tx
+      const [updated] = await tx
         .update(feeds)
         .set({
           url: parsed.metadata.canonicalUrl,
@@ -901,7 +960,13 @@ export async function runFeedRefresh(
           lastModified: fetchedForParse.lastModified,
           nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000),
         })
-        .where(eq(feeds.id, feed.id));
+        .where(and(eq(feeds.id, feed.id), eq(feeds.refreshGeneration, generation)))
+        .returning({ id: feeds.id });
+      if (!updated) {
+        logFeedRefreshSuperseded(feed.id, generation, "idle");
+        refreshSuperseded = true;
+        return;
+      }
 
       if (items.length > 0) {
         await tx
@@ -1038,6 +1103,10 @@ export async function runFeedRefresh(
       }
     }
 
+    if (refreshSuperseded) {
+      return skippedSupersededFeedRefresh();
+    }
+
     await syncFeedToSearch(searchSync, {
       id: feed.id,
       ...parsed.metadata,
@@ -1071,17 +1140,23 @@ export async function runFeedRefresh(
     }
     const now = new Date();
     const backoffMs = 30 * 60 * 1000;
-    await database
-      .update(feeds)
-      .set({
-        refreshStatus: "failed",
-        lastRefreshFailedAt: now,
-        lastRefreshError: message,
-        lastRefreshCompletedAt: now,
-        nextRefreshAt: new Date(now.getTime() + backoffMs),
-      })
-      .where(eq(feeds.id, feedId))
-      .catch(() => {});
+    try {
+      const [updated] = await database
+        .update(feeds)
+        .set({
+          refreshStatus: "failed",
+          lastRefreshFailedAt: now,
+          lastRefreshError: message,
+          lastRefreshCompletedAt: now,
+          nextRefreshAt: new Date(now.getTime() + backoffMs),
+        })
+        .where(and(eq(feeds.id, feedId), eq(feeds.refreshGeneration, generation)))
+        .returning({ id: feeds.id });
+      if (!updated) {
+        logFeedRefreshSuperseded(feedId, generation, "failed");
+        return skippedSupersededFeedRefresh();
+      }
+    } catch {}
 
     return {
       ok: false,

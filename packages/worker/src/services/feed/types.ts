@@ -33,6 +33,7 @@ export type FeedRefreshResult = {
   updatedCount?: number;
   articleExtractionCandidateIds?: string[];
   notModified?: boolean;
+  skipped?: "superseded" | "not_queued";
   error?: string;
   failureClass?: HtmlFeedFailureClass;
   categoryStats?: FeedRefreshCategoryStats;

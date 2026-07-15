@@ -1,16 +1,29 @@
 import { feeds } from "@kyomi/db";
-import { eq, inArray } from "drizzle-orm";
+import { and, eq, notInArray, sql } from "drizzle-orm";
 import { publishJob } from "@adapters/queue/publish-job";
 import { getRedis } from "@adapters/redis";
 import type { db } from "@adapters/db/client";
-import { AppError } from "@shared/errors/app";
 
 type DB = typeof db;
 type Logger = {
   info: (msg: string, meta?: Record<string, unknown>) => void;
-  warn: (msg: string, meta?: Record<string, unknown>) => void;
   error: (msg: string, meta?: Record<string, unknown>) => void;
 };
+
+async function claimManualFeedRefresh(database: DB, feedId: string) {
+  const [claim] = await database
+    .update(feeds)
+    .set({
+      refreshStatus: "queued",
+      refreshGeneration: sql`${feeds.refreshGeneration} + 1`,
+      lastRefreshError: null,
+      updatedAt: new Date(),
+    })
+    .where(and(eq(feeds.id, feedId), notInArray(feeds.refreshStatus, ["queued", "running"])))
+    .returning({ generation: feeds.refreshGeneration });
+
+  return claim ?? null;
+}
 
 export async function enqueueFeedRefresh(
   database: DB,
@@ -18,17 +31,24 @@ export async function enqueueFeedRefresh(
   userId: string,
   reason: "manual" | "subscription_created",
   logger: Logger,
-): Promise<{ jobId: string }> {
+): Promise<{
+  jobId: string;
+  generation?: number;
+  coalesced: boolean;
+  deliveryPending: boolean;
+}> {
+  const claim = await claimManualFeedRefresh(database, feedId);
+
+  if (!claim) {
+    return { jobId: "", coalesced: true, deliveryPending: false };
+  }
+
   try {
     const redis = getRedis();
     const jobId = await publishJob(redis, {
       type: "feed.refresh",
-      payload: { feedId, userId, reason },
+      payload: { feedId, userId, reason, generation: claim.generation },
     });
-    await database
-      .update(feeds)
-      .set({ refreshStatus: "queued", lastRefreshError: null })
-      .where(eq(feeds.id, feedId));
 
     logger.info("queue.job.enqueued", {
       jobId,
@@ -36,28 +56,28 @@ export async function enqueueFeedRefresh(
       feedId,
       userId,
       reason,
+      generation: claim.generation,
     });
-    return { jobId };
+    return {
+      jobId,
+      generation: claim.generation,
+      coalesced: false,
+      deliveryPending: false,
+    };
   } catch (error) {
-    if (reason !== "subscription_created") {
-      logger.error("queue.job.enqueue.failed", {
-        feedId,
-        userId,
-        error: error instanceof Error ? error.message : String(error),
-      });
-      throw new AppError("Failed to enqueue feed refresh", {
-        status: 503,
-        code: "QUEUE_UNAVAILABLE",
-      });
-    }
-
-    logger.warn("queue.job.enqueue.skipped", {
+    logger.error("queue.job.delivery_pending", {
       feedId,
       userId,
       reason,
+      generation: claim.generation,
       error: error instanceof Error ? error.message : String(error),
     });
-    return { jobId: "" };
+    return {
+      jobId: "",
+      generation: claim.generation,
+      coalesced: false,
+      deliveryPending: true,
+    };
   }
 }
 
@@ -67,60 +87,69 @@ export async function enqueueBatchFeedRefresh(
   userId: string,
   reason: "manual",
   logger: Logger,
-): Promise<{ accepted: true; count: number; failedCount: number }> {
+): Promise<{
+  accepted: true;
+  count: number;
+  coalescedCount: number;
+  deliveryPendingCount: number;
+}> {
   if (feedIds.length === 0) {
-    return { accepted: true, count: 0, failedCount: 0 };
+    return { accepted: true, count: 0, coalescedCount: 0, deliveryPendingCount: 0 };
   }
 
-  const redis = getRedis();
-  const results = await Promise.allSettled(
-    feedIds.map((feedId) =>
-      publishJob(redis, {
-        type: "feed.refresh",
-        payload: { feedId, userId, reason },
-      }).then((jobId) => ({ feedId, jobId })),
-    ),
+  const claimed = await Promise.all(
+    feedIds.map(async (feedId) => ({
+      feedId,
+      claim: await claimManualFeedRefresh(database, feedId),
+    })),
   );
 
-  const successfulFeedIds: string[] = [];
-  const failedFeedIds: string[] = [];
+  const claimedFeeds = claimed.filter(
+    (item): item is { feedId: string; claim: { generation: number } } => item.claim !== null,
+  );
+  const deliveryPending = await Promise.all(
+    claimedFeeds.map(async ({ feedId, claim }) => {
+      try {
+        const jobId = await publishJob(getRedis(), {
+          type: "feed.refresh",
+          payload: { feedId, userId, reason, generation: claim.generation },
+        });
+        logger.info("queue.job.enqueued", {
+          jobId,
+          jobType: "feed.refresh",
+          feedId,
+          userId,
+          reason,
+          generation: claim.generation,
+        });
+        return false;
+      } catch (error) {
+        logger.error("queue.job.delivery_pending", {
+          feedId,
+          userId,
+          reason,
+          generation: claim.generation,
+          error: error instanceof Error ? error.message : String(error),
+        });
+        return true;
+      }
+    }),
+  );
 
-  for (const [index, result] of results.entries()) {
-    if (result.status === "fulfilled") {
-      successfulFeedIds.push(result.value.feedId);
-    } else {
-      failedFeedIds.push(feedIds[index]!);
-      logger.error("queue.job.enqueue.batch_item.failed", {
-        userId,
-        feedId: feedIds[index],
-        error: result.reason instanceof Error ? result.reason.message : String(result.reason),
-      });
-    }
-  }
-
-  if (successfulFeedIds.length > 0) {
-    await database
-      .update(feeds)
-      .set({ refreshStatus: "queued", lastRefreshError: null })
-      .where(inArray(feeds.id, successfulFeedIds));
-  }
-
-  if (successfulFeedIds.length === 0 && feedIds.length > 0) {
-    logger.error("queue.job.enqueue.batch.all_failed", {
-      userId,
-      count: feedIds.length,
-    });
-    throw new AppError("Failed to enqueue batch feed refresh", {
-      status: 503,
-      code: "QUEUE_UNAVAILABLE",
-    });
-  }
+  const deliveryPendingCount = deliveryPending.filter(Boolean).length;
+  const coalescedCount = feedIds.length - claimedFeeds.length;
 
   logger.info("queue.job.enqueued.batch", {
-    count: successfulFeedIds.length,
-    failedCount: failedFeedIds.length,
+    count: claimedFeeds.length,
+    coalescedCount,
+    deliveryPendingCount,
     userId,
   });
 
-  return { accepted: true, count: successfulFeedIds.length, failedCount: failedFeedIds.length };
+  return {
+    accepted: true,
+    count: claimedFeeds.length,
+    coalescedCount,
+    deliveryPendingCount,
+  };
 }
