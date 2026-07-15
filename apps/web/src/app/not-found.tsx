@@ -17,11 +17,8 @@ export function NotFoundPage() {
           </EmptyDescription>
         </EmptyHeader>
         <EmptyContent>
-          <Button
-            className="w-28 max-sm:w-full rounded-full"
-            render={<Link to="/inbox" search={{ filter: "my-feed" }} />}
-          >
-            Back to inbox
+          <Button className="w-28 max-sm:w-full rounded-full" render={<Link to="/" />}>
+            Go home
           </Button>
         </EmptyContent>
       </Empty>
