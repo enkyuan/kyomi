@@ -2,7 +2,7 @@
 
 import { EyeCloseLine, EyeLine } from "@kyomi/ui/icons/mingcute";
 import { useEffect, useState } from "react";
-import { useForm } from "@tanstack/react-form";
+import { useForm, useStore } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
@@ -86,6 +86,7 @@ export function Register({ redirect }: { redirect?: string }) {
       );
     },
   });
+  const isSubmitting = useStore(form.store, (state) => state.isSubmitting);
 
   useEffect(() => {
     if (!isPending && isAuthenticated) {
@@ -95,7 +96,7 @@ export function Register({ redirect }: { redirect?: string }) {
     }
   }, [isAuthenticated, isPending, queryClient, returnTo, router]);
 
-  if (isPending) {
+  if (isPending && !isSubmitting) {
     return (
       <main className="flex min-h-dvh w-full items-center justify-center px-4 py-12">
         <div className="flex items-center gap-2 text-muted-foreground text-sm">
@@ -252,13 +253,9 @@ export function Register({ redirect }: { redirect?: string }) {
               }}
             </form.Field>
 
-            <form.Subscribe selector={(state) => [state.isSubmitting]}>
-              {([isSubmitting]) => (
-                <Button className="w-full" type="submit" loading={Boolean(isSubmitting)}>
-                  {isSubmitting ? "Signing up…" : "Sign up"}
-                </Button>
-              )}
-            </form.Subscribe>
+            <Button className="w-full" type="submit" loading={isSubmitting}>
+              {isSubmitting ? "Signing up…" : "Sign up"}
+            </Button>
           </Form>
         </CardPanel>
       </Card>
