@@ -82,7 +82,10 @@ function createFeedRefreshDb(
     deletes,
     update: (table: unknown) => ({
       set: (patch: CapturedRow) => {
-        const update = { table: tableName(table), patch };
+        const update: { table: string; patch: CapturedRow; whereClause?: string } = {
+          table: tableName(table),
+          patch,
+        };
         updates.push(update);
         return {
           where: (condition: unknown) => {
