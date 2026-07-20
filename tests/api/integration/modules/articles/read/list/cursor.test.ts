@@ -32,10 +32,20 @@ describe("merged list cursor codec", () => {
 
   test("round-trips boundary", () => {
     const item = sampleItem();
-    const enc = encodeMergedListCursorFromItem(item, "newest");
+    const enc = encodeMergedListCursorFromItem(item, "latest");
     const dec = decodeMergedListCursor(enc);
     expect(dec?.publishedAt.toISOString()).toBe(item.publishedAt);
     expect(dec?.id).toBe(item.id);
+  });
+
+  test("decodes cursors issued with the legacy newest token", () => {
+    const item = sampleItem();
+    const legacyCursor = `m1.${Buffer.from(
+      JSON.stringify({ v: 1, pa: item.publishedAt, id: item.id, s: "newest" }),
+      "utf8",
+    ).toString("base64url")}`;
+
+    expect(decodeMergedListCursor(legacyCursor)?.id).toBe(item.id);
   });
 
   test("rejects unknown prefix", () => {

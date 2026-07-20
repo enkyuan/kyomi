@@ -41,4 +41,22 @@ describe("queue routing", () => {
     expect(normalizeQueueOptions({ processConcurrency: 0 }).processConcurrency).toBe(1);
     expect(normalizeQueueOptions({ processConcurrency: 1_000 }).processConcurrency).toBe(64);
   });
+
+  test("parses valid feed refresh generations and rejects malformed ones", () => {
+    expect(
+      parseJob({
+        type: "feed.refresh",
+        payload: JSON.stringify({ feedId: "feed-1", userId: "user-1", generation: 7 }),
+      }).payload,
+    ).toMatchObject({ generation: 7 });
+
+    for (const generation of [-1, 1.5]) {
+      expect(() =>
+        parseJob({
+          type: "feed.refresh",
+          payload: JSON.stringify({ feedId: "feed-1", userId: "user-1", generation }),
+        }),
+      ).toThrow("Invalid feed.refresh payload");
+    }
+  });
 });

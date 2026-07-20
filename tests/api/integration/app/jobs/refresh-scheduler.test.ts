@@ -13,8 +13,11 @@ describe("feed refresh scheduler", () => {
 
     expect(source).toContain("FOR UPDATE SKIP LOCKED");
     expect(source).toContain("refresh_status = 'queued'");
+    expect(source).toContain("refresh_generation = feeds.refresh_generation + 1");
+    expect(source).toContain('feeds.refresh_generation AS "generation"');
     expect(source).toContain("staleQueuedBefore");
-    expect(source).toContain("releaseUnpublishedFeedRefreshClaims");
+    expect(source).toContain("generation: feed.generation");
+    expect(source).not.toContain("releaseUnpublishedFeedRefreshClaims");
   });
 
   test("normalizes scheduler limits", async () => {

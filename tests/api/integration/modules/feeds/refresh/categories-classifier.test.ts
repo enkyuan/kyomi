@@ -311,6 +311,7 @@ describe("runFeedRefresh classifier fallback", () => {
 
     expect(result.ok).toBe(true);
     expect(result.notModified).toBe(true);
+    expect(fake.transactionCount).toBe(1);
     expect(fake.feedItemCategoryAssignments).toHaveLength(0);
     expect(fake.feedCategoryAssignments.some((row) => row.provenance === "classifier")).toBe(true);
     expect(result.categoryStats).toMatchObject({

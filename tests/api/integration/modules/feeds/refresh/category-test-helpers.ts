@@ -63,6 +63,7 @@ export function createFeedRefreshDb(
   ];
   const feedItemCategoryAssignments: CapturedRow[] = [];
   const feedItemTagAssignments: CapturedRow[] = [];
+  let transactionCount = 0;
 
   const db = {
     updates,
@@ -72,11 +73,16 @@ export function createFeedRefreshDb(
     feedCategoryAssignments,
     feedItemCategoryAssignments,
     feedItemTagAssignments,
+    get transactionCount() {
+      return transactionCount;
+    },
     update: (table: unknown) => ({
       set: (patch: CapturedRow) => {
         updates.push({ table: tableName(table), patch });
         return {
-          where: () => Promise.resolve(),
+          where: () => ({
+            returning: () => Promise.resolve([{ generation: 0 }]),
+          }),
         };
       },
     }),
@@ -125,7 +131,10 @@ export function createFeedRefreshDb(
         }),
       }),
     }),
-    transaction: async (callback: (tx: unknown) => Promise<void>) => callback(db),
+    transaction: async (callback: (tx: unknown) => Promise<void>) => {
+      transactionCount += 1;
+      return await callback(db);
+    },
   };
 
   return db;

@@ -31,3 +31,6 @@ packages/catalog/processing/exports
 packages/catalog/**/*.parquet
 packages/catalog/**/*.duckdb
 packages/catalog/**/*.db
+.gstack/
+/.superpowers/
+/.claude/launch.json

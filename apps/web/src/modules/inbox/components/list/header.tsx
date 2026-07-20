@@ -51,11 +51,11 @@ const SORT_MENU: {
   label: string;
   icon: ComponentType<IconProps>;
 }[] = [
-  { value: "newest", label: "Newest", icon: SortDescendingFill },
+  { value: "latest", label: "Latest", icon: SortDescendingFill },
   { value: "oldest", label: "Oldest", icon: SortAscendingFill },
 ];
 
-export const DEFAULT_SORT: InboxSort = "newest";
+export const DEFAULT_SORT: InboxSort = "latest";
 
 const EMPTY_PINNED_FOLDERS: PinnedFolderFilter[] = [];
 
@@ -330,7 +330,7 @@ export function SortButton({
   anchor?: RefObject<HTMLDivElement | null>;
   onSortChange: (sort: InboxSort) => void;
 }) {
-  const activeLabel = SORT_MENU.find((item) => item.value === sort)?.label ?? "Newest";
+  const activeLabel = SORT_MENU.find((item) => item.value === sort)?.label ?? "Latest";
 
   return (
     <Menu>

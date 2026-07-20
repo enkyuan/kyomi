@@ -24,7 +24,9 @@ function createFeedRefreshDb() {
         set: (patch: Record<string, unknown>) => {
           updates.push(patch);
           return {
-            where: () => Promise.resolve(),
+            where: () => ({
+              returning: () => Promise.resolve([{ generation: 0 }]),
+            }),
           };
         },
       }),

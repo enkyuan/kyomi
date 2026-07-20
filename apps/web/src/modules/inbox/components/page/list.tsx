@@ -122,7 +122,7 @@ export function ListSection({
       void navigate({
         search: (prev) => ({
           ...prev,
-          sort: nextSort === "newest" ? undefined : nextSort,
+          sort: nextSort === "latest" ? undefined : nextSort,
         }),
       });
     },

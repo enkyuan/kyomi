@@ -191,7 +191,7 @@ export async function listArticlesForUser(
   opts: ListArticlesOptions,
 ): Promise<ArticlesCursorListResponseDto> {
   const limit = normalizeLimit(opts.limit);
-  const sort = opts.sort ?? "newest";
+  const sort = opts.sort ?? "latest";
 
   const rows = await listArticleRows(database, userId, opts, limit + 1);
   const { hasMore, page, nextCursor } = paginateRows(rows, limit, sort);
@@ -206,7 +206,7 @@ export async function listAllArticlesForUser(
   opts: GlobalListArticlesOptions,
 ): Promise<ArticlesCursorListResponseDto> {
   const limit = normalizeLimit(opts.limit);
-  const sort = opts.sort ?? "newest";
+  const sort = opts.sort ?? "latest";
 
   const rows = await listGlobalArticleRows(database, userId, opts, limit + 1);
   const { hasMore, page, nextCursor } = paginateRows(rows, limit, sort);
@@ -289,7 +289,7 @@ async function pushCursorFilter(
   }
   const decoded = decodeCompositeCursor(opts.cursor);
   if (decoded) {
-    pushSortBoundaryFilter(filters, opts.sort ?? "newest", decoded);
+    pushSortBoundaryFilter(filters, opts.sort ?? "latest", decoded);
     return;
   }
   const cur = await database
@@ -313,7 +313,7 @@ async function pushCursorFilter(
   if (!c) {
     return;
   }
-  pushSortBoundaryFilter(filters, opts.sort ?? "newest", c);
+  pushSortBoundaryFilter(filters, opts.sort ?? "latest", c);
 }
 
 async function pushGlobalCursorFilter(
@@ -327,7 +327,7 @@ async function pushGlobalCursorFilter(
   }
   const decoded = decodeCompositeCursor(opts.cursor);
   if (decoded) {
-    pushSortBoundaryFilter(filters, opts.sort ?? "newest", decoded, globalArticleIsReadSql);
+    pushSortBoundaryFilter(filters, opts.sort ?? "latest", decoded, globalArticleIsReadSql);
     return;
   }
   const cur = await database
@@ -344,7 +344,7 @@ async function pushGlobalCursorFilter(
   if (!c) {
     return;
   }
-  pushSortBoundaryFilter(filters, opts.sort ?? "newest", c, globalArticleIsReadSql);
+  pushSortBoundaryFilter(filters, opts.sort ?? "latest", c, globalArticleIsReadSql);
 }
 
 function pushSortBoundaryFilter(
@@ -394,7 +394,7 @@ async function listArticleRows(
   take: number,
 ): Promise<ArticleListRawRow[]> {
   const { feedSubscriptionsJoin, userStateJoin } = baseJoins(userId);
-  const sort = opts.sort ?? "newest";
+  const sort = opts.sort ?? "latest";
 
   const filters: SQL[] = [];
   pushBaseFilters(filters, opts);
@@ -445,7 +445,7 @@ async function listGlobalArticleRows(
     eq(feedItemUserState.feedItemId, feedItems.id),
     eq(feedItemUserState.userId, userId),
   );
-  const sort = opts.sort ?? "newest";
+  const sort = opts.sort ?? "latest";
 
   const filters: SQL[] = [];
   pushGlobalReadSavedFilters(filters, opts);

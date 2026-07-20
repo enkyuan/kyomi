@@ -1,4 +1,4 @@
-import { inArray, sql } from "drizzle-orm";
+import { sql } from "drizzle-orm";
 import type Redis from "ioredis";
 import { feeds } from "@kyomi/db";
 import { db } from "@adapters/db/client";
@@ -12,6 +12,7 @@ export type FeedRefreshScheduleReason = "scheduled" | "global_scheduled";
 export type ClaimedFeedRefresh = {
   feedId: string;
   reason: FeedRefreshScheduleReason;
+  generation: number;
 };
 
 export type SchedulerOptions = {
@@ -87,11 +88,13 @@ export function buildFeedRefreshClaimSql(input: {
     )
     UPDATE feeds
     SET refresh_status = 'queued',
+        refresh_generation = feeds.refresh_generation + 1,
         last_refresh_error = NULL,
         updated_at = ${input.now}
     FROM claimed
     WHERE feeds.id = claimed.id
-    RETURNING feeds.id AS "feedId", claimed.reason AS reason
+    RETURNING feeds.id AS "feedId", claimed.reason AS reason,
+              feeds.refresh_generation AS "generation"
   `;
 }
 
@@ -139,27 +142,10 @@ export async function claimDueFeedRefreshes(
   return rowsFromExecute<ClaimedFeedRefresh>(result);
 }
 
-export async function releaseUnpublishedFeedRefreshClaims(feedIds: string[]): Promise<void> {
-  if (feedIds.length === 0) {
-    return;
-  }
-
-  await db
-    .update(feeds)
-    .set({
-      refreshStatus: "idle",
-      lastRefreshError: "Feed refresh enqueue failed",
-      updatedAt: new Date(),
-    })
-    .where(inArray(feeds.id, feedIds));
-}
-
 export async function publishClaimedFeedRefreshes(
   redis: Redis,
   claimed: ClaimedFeedRefresh[],
 ): Promise<void> {
-  const unpublishedFeedIds: string[] = [];
-
   for (const feed of claimed) {
     try {
       await publishJob(redis, {
@@ -168,18 +154,16 @@ export async function publishClaimedFeedRefreshes(
           feedId: feed.feedId,
           userId: "system",
           reason: feed.reason,
+          generation: feed.generation,
         },
       });
     } catch (error) {
-      unpublishedFeedIds.push(feed.feedId);
       logger.error("feed.scheduler.publish_failed", {
         feedId: feed.feedId,
         error: error instanceof Error ? error.message : String(error),
       });
     }
   }
-
-  await releaseUnpublishedFeedRefreshClaims(unpublishedFeedIds);
 }
 
 function sleep(ms: number, signal?: AbortSignal): Promise<void> {

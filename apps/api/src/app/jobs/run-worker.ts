@@ -7,6 +7,7 @@ import {
   consumeJobs,
   createHostRateLimiter,
   createRedisHostRateLimitStore,
+  FEED_REFRESH_JOBS_STREAM_KEY,
   runFeedRefresh,
   type ArticleExtractionJob,
   type HostRateLimiter,
@@ -52,6 +53,7 @@ async function handleWorkerJob(
         },
         {
           hostRateLimiter,
+          refreshGeneration: job.payload.generation,
           // Best-effort embedding classification runs alongside the keyword classifier when
           // a key is configured; absent means refresh proceeds with the keyword classifier
           // only, same fallback shape as MEILI_URL above.
@@ -109,6 +111,7 @@ async function handleWorkerJob(
         userId: job.payload.userId,
         ok: result.ok,
         notModified: result.notModified ?? false,
+        skipped: result.skipped ?? null,
         itemCount: result.itemCount,
         insertedCount: result.insertedCount,
         updatedCount: result.updatedCount,
@@ -246,6 +249,10 @@ export async function runWorkerLoop(signal?: AbortSignal): Promise<void> {
         consumeJobs(redis, {
           consumer: `${consumer}-${streamKey.replace(/[^a-z0-9-]/gi, "-")}`,
           streamKey,
+          pendingMinIdleMs:
+            streamKey === FEED_REFRESH_JOBS_STREAM_KEY
+              ? env.FEED_REFRESH_RUNNING_LEASE_MS
+              : undefined,
           count: env.JOB_READ_COUNT,
           processConcurrency: env.JOB_PROCESS_CONCURRENCY,
           streamMaxLength: env.JOB_STREAM_MAX_LENGTH,

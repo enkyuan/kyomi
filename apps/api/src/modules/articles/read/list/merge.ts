@@ -2,7 +2,7 @@ import type { ArticleSort } from "@modules/articles/query";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { encodeMergedListCursorFromItem } from "./cursor";
 
-/** Global sort: newest first; tie-break by id descending (matches DB `orderBy`). */
+/** Global sort: latest first; tie-break by id descending (matches DB `orderBy`). */
 export function mergeArticleListsSortedDesc(parts: ArticleListItemDto[][]): ArticleListItemDto[] {
   return parts.flat().sort((a, b) => {
     const dt = Date.parse(b.publishedAt) - Date.parse(a.publishedAt);

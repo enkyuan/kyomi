@@ -1,0 +1,1 @@
+ALTER TABLE "feeds" ADD COLUMN "refresh_generation" integer DEFAULT 0 NOT NULL;

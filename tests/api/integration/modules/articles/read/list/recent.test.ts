@@ -40,7 +40,7 @@ describe("recently viewed merged articles", () => {
 
     const sorted = mergeRecentlyViewedItemsSorted(
       [newerArticleViewedEarlier, oldArticleViewedNow],
-      "newest",
+      "latest",
     );
 
     expect(sorted.map((entry) => entry.id)).toEqual(["old", "newer"]);
