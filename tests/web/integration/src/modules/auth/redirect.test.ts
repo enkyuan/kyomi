@@ -1,11 +1,13 @@
 import { describe, expect, test } from "vitest";
 import {
   buildAuthEntryHref,
+  buildOAuthErrorHref,
   DEFAULT_AUTH_RETURN_TO,
   parseAuthReturnTo,
   preserveAuthEntryHash,
   resolveAuthReturnTo,
   validateAuthSearch,
+  validateResetPasswordSearch,
 } from "@modules/auth/redirect";
 
 describe("auth return targets", () => {
@@ -16,7 +18,10 @@ describe("auth return targets", () => {
   ])("preserves an internal protected target", (target) => {
     expect(parseAuthReturnTo(target)).toBe(target);
     expect(resolveAuthReturnTo(target)).toBe(target);
-    expect(validateAuthSearch({ redirect: target })).toEqual({ redirect: target });
+    expect(validateAuthSearch({ redirect: target })).toEqual({
+      redirect: target,
+      authError: undefined,
+    });
   });
 
   test("encodes the complete target when building an auth entry URL", () => {
@@ -24,6 +29,38 @@ describe("auth return targets", () => {
       "/?redirect=%2Finbox%2Farticle%3Ffilter%3Dsaved%23reader",
     );
     expect(buildAuthEntryHref("/register", "https://evil.example/inbox")).toBe("/register");
+    expect(buildAuthEntryHref("/forgot-password", "/inbox")).toBe(
+      "/forgot-password?redirect=%2Finbox",
+    );
+  });
+
+  test("builds a constrained OAuth error callback", () => {
+    expect(buildOAuthErrorHref("/inbox?filter=saved")).toBe(
+      "/?authError=oauth&redirect=%2Finbox%3Ffilter%3Dsaved",
+    );
+    expect(buildOAuthErrorHref("/inbox", "/register")).toBe(
+      "/register?authError=oauth&redirect=%2Finbox",
+    );
+    expect(validateAuthSearch({ authError: "oauth" })).toEqual({
+      redirect: undefined,
+      authError: "oauth",
+    });
+  });
+
+  test("accepts only bounded reset tokens and collapses provider errors", () => {
+    expect(
+      validateResetPasswordSearch({
+        redirect: "/inbox",
+        token: "reset-token",
+        error: "INVALID_TOKEN",
+      }),
+    ).toEqual({
+      redirect: "/inbox",
+      authError: undefined,
+      token: "reset-token",
+      resetError: true,
+    });
+    expect(validateResetPasswordSearch({ token: "" }).token).toBeUndefined();
   });
 
   test("recovers a protected fragment carried to the auth page by the browser", () => {
@@ -56,6 +93,9 @@ describe("auth return targets", () => {
   ])("rejects an unsafe or public target", (target) => {
     expect(parseAuthReturnTo(target)).toBeUndefined();
     expect(resolveAuthReturnTo(target)).toBe(DEFAULT_AUTH_RETURN_TO);
-    expect(validateAuthSearch({ redirect: target })).toEqual({ redirect: undefined });
+    expect(validateAuthSearch({ redirect: target })).toEqual({
+      redirect: undefined,
+      authError: undefined,
+    });
   });
 });

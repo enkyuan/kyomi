@@ -13,6 +13,13 @@ export const Route = createFileRoute("/register")({
 });
 
 function RegisterRoute() {
-  const { redirect } = Route.useSearch();
-  return <Register redirect={useAuthReturnTarget(redirect)} />;
+  const { redirect, authError } = Route.useSearch();
+  const { authCapabilities } = Route.useRouteContext();
+  return (
+    <Register
+      authError={authError}
+      googleOAuthEnabled={authCapabilities.google}
+      redirect={useAuthReturnTarget(redirect)}
+    />
+  );
 }

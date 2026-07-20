@@ -11,6 +11,15 @@ export type RegisterFormValues = LoginFormValues & {
   confirmPassword: string;
 };
 
+export type ForgotPasswordFormValues = {
+  email: string;
+};
+
+export type ResetPasswordFormValues = {
+  password: string;
+  confirmPassword: string;
+};
+
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function normalizeEmail(value: string) {
@@ -84,6 +93,26 @@ export function registerFormValidator({ value }: { value: RegisterFormValues }) 
   return Object.keys(errors).length ? { fields: errors } : undefined;
 }
 
+export function forgotPasswordFormValidator({ value }: { value: ForgotPasswordFormValues }) {
+  const emailError = getEmailError(value.email);
+  return emailError ? { fields: { email: emailError } } : undefined;
+}
+
+export function resetPasswordFormValidator({ value }: { value: ResetPasswordFormValues }) {
+  const errors: Partial<Record<keyof ResetPasswordFormValues, string>> = {};
+  const passwordError = getRegisterPasswordError(value.password);
+  const confirmPasswordError = getConfirmPasswordError(value.password, value.confirmPassword);
+
+  if (passwordError) {
+    errors.password = passwordError;
+  }
+  if (confirmPasswordError) {
+    errors.confirmPassword = confirmPasswordError;
+  }
+
+  return Object.keys(errors).length ? { fields: errors } : undefined;
+}
+
 export const loginDefaultValues: LoginFormValues = {
   email: "",
   password: "",
@@ -91,6 +120,15 @@ export const loginDefaultValues: LoginFormValues = {
 
 export const registerDefaultValues: RegisterFormValues = {
   email: "",
+  password: "",
+  confirmPassword: "",
+};
+
+export const forgotPasswordDefaultValues: ForgotPasswordFormValues = {
+  email: "",
+};
+
+export const resetPasswordDefaultValues: ResetPasswordFormValues = {
   password: "",
   confirmPassword: "",
 };

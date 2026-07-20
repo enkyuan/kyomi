@@ -85,7 +85,7 @@ services:
       [
         "sh",
         "-lc",
-        "CA_FLAG=\"\"; [ -f /etc/ssl/certs/corp-ca.pem ] && CA_FLAG=\"--cafile /etc/ssl/certs/corp-ca.pem\"; bun install $$CA_FLAG --frozen-lockfile --ignore-scripts && touch node_modules/.install-complete && bun run --cwd apps/api start"
+        'CA_FLAG=""; [ -f /etc/ssl/certs/corp-ca.pem ] && CA_FLAG="--cafile /etc/ssl/certs/corp-ca.pem"; bun install $$CA_FLAG --frozen-lockfile --ignore-scripts && touch node_modules/.install-complete && bun run --cwd apps/api start',
       ]
     environment:
       PORT: 8000
@@ -127,6 +127,8 @@ services:
       PUBLIC_API_DEFAULT_RATE_LIMIT_PER_DAY: ${PUBLIC_API_DEFAULT_RATE_LIMIT_PER_DAY:-10000}
       GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
       GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
+      AUTH_EMAIL_FROM: ${AUTH_EMAIL_FROM:-}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
       YOUTUBE_API_KEY: ${YOUTUBE_API_KEY:-}
       REDDIT_CLIENT_ID: ${REDDIT_CLIENT_ID:-}
       REDDIT_CLIENT_SECRET: ${REDDIT_CLIENT_SECRET:-}
@@ -157,7 +159,7 @@ services:
       [
         "sh",
         "-lc",
-        "until [ -f node_modules/.install-complete ]; do sleep 1; done; bun run --cwd apps/api worker"
+        "until [ -f node_modules/.install-complete ]; do sleep 1; done; bun run --cwd apps/api worker",
       ]
     environment:
       PORT: 8000
@@ -206,7 +208,7 @@ services:
       [
         "sh",
         "-lc",
-        "until [ -f node_modules/.install-complete ]; do sleep 1; done; bun run --cwd apps/api scheduler"
+        "until [ -f node_modules/.install-complete ]; do sleep 1; done; bun run --cwd apps/api scheduler",
       ]
     environment:
       PORT: 8000

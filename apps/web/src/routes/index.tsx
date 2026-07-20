@@ -13,6 +13,14 @@ export const Route = createFileRoute("/")({
 });
 
 function LoginRoute() {
-  const { redirect } = Route.useSearch();
-  return <Login redirect={useAuthReturnTarget(redirect)} />;
+  const { redirect, authError } = Route.useSearch();
+  const { authCapabilities } = Route.useRouteContext();
+  return (
+    <Login
+      authError={authError}
+      googleOAuthEnabled={authCapabilities.google}
+      passwordResetEnabled={authCapabilities.passwordReset}
+      redirect={useAuthReturnTarget(redirect)}
+    />
+  );
 }

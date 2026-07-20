@@ -9,8 +9,10 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as RegisterRouteImport } from './routes/register'
 import { Route as McpRouteImport } from './routes/mcp'
+import { Route as ForgotPasswordRouteImport } from './routes/forgot-password'
 import { Route as FaviconRouteImport } from './routes/favicon'
 import { Route as AppRouteRouteImport } from './routes/_app/route'
 import { Route as IndexRouteImport } from './routes/index'
@@ -20,6 +22,11 @@ import { Route as AppInboxIndexRouteImport } from './routes/_app/inbox/index'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as AppInboxArticleRouteImport } from './routes/_app/inbox/$article'
 
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RegisterRoute = RegisterRouteImport.update({
   id: '/register',
   path: '/register',
@@ -28,6 +35,11 @@ const RegisterRoute = RegisterRouteImport.update({
 const McpRoute = McpRouteImport.update({
   id: '/mcp',
   path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForgotPasswordRoute = ForgotPasswordRouteImport.update({
+  id: '/forgot-password',
+  path: '/forgot-password',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaviconRoute = FaviconRouteImport.update({
@@ -73,8 +85,10 @@ const AppInboxArticleRoute = AppInboxArticleRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/favicon': typeof FaviconRoute
+  '/forgot-password': typeof ForgotPasswordRoute
   '/mcp': typeof McpRoute
   '/register': typeof RegisterRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/inbox': typeof AppInboxRouteRouteWithChildren
   '/api/favicon': typeof ApiFaviconRoute
   '/inbox/$article': typeof AppInboxArticleRoute
@@ -84,8 +98,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/favicon': typeof FaviconRoute
+  '/forgot-password': typeof ForgotPasswordRoute
   '/mcp': typeof McpRoute
   '/register': typeof RegisterRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/api/favicon': typeof ApiFaviconRoute
   '/inbox/$article': typeof AppInboxArticleRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -96,8 +112,10 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/_app': typeof AppRouteRouteWithChildren
   '/favicon': typeof FaviconRoute
+  '/forgot-password': typeof ForgotPasswordRoute
   '/mcp': typeof McpRoute
   '/register': typeof RegisterRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/_app/inbox': typeof AppInboxRouteRouteWithChildren
   '/api/favicon': typeof ApiFaviconRoute
   '/_app/inbox/$article': typeof AppInboxArticleRoute
@@ -109,8 +127,10 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/favicon'
+    | '/forgot-password'
     | '/mcp'
     | '/register'
+    | '/reset-password'
     | '/inbox'
     | '/api/favicon'
     | '/inbox/$article'
@@ -120,8 +140,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/favicon'
+    | '/forgot-password'
     | '/mcp'
     | '/register'
+    | '/reset-password'
     | '/api/favicon'
     | '/inbox/$article'
     | '/api/auth/$'
@@ -131,8 +153,10 @@ export interface FileRouteTypes {
     | '/'
     | '/_app'
     | '/favicon'
+    | '/forgot-password'
     | '/mcp'
     | '/register'
+    | '/reset-password'
     | '/_app/inbox'
     | '/api/favicon'
     | '/_app/inbox/$article'
@@ -144,14 +168,23 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRouteRoute: typeof AppRouteRouteWithChildren
   FaviconRoute: typeof FaviconRoute
+  ForgotPasswordRoute: typeof ForgotPasswordRoute
   McpRoute: typeof McpRoute
   RegisterRoute: typeof RegisterRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
   ApiFaviconRoute: typeof ApiFaviconRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/register': {
       id: '/register'
       path: '/register'
@@ -164,6 +197,13 @@ declare module '@tanstack/react-router' {
       path: '/mcp'
       fullPath: '/mcp'
       preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forgot-password': {
+      id: '/forgot-password'
+      path: '/forgot-password'
+      fullPath: '/forgot-password'
+      preLoaderRoute: typeof ForgotPasswordRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/favicon': {
@@ -255,8 +295,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRouteRoute: AppRouteRouteWithChildren,
   FaviconRoute: FaviconRoute,
+  ForgotPasswordRoute: ForgotPasswordRoute,
   McpRoute: McpRoute,
   RegisterRoute: RegisterRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
   ApiFaviconRoute: ApiFaviconRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
 }

@@ -1,44 +1,49 @@
 "use client";
 
-import { EyeCloseLine, EyeLine } from "@kyomi/ui/icons/mingcute";
 import { useEffect, useState } from "react";
 import { useForm, useStore } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
+import { useAuth } from "@integrations/better-auth/provider";
 import { authClient } from "@lib/auth/client";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
-import { prefetchInboxFlow } from "@modules/inbox";
-import { useAuth } from "@integrations/better-auth/provider";
 import { Button } from "@kyomi/ui/button";
-import {
-  Card,
-  CardAction,
-  CardDescription,
-  CardHeader,
-  CardPanel,
-  CardTitle,
-} from "@kyomi/ui/card";
-import { Form } from "@kyomi/ui/form";
 import { Field, FieldError, FieldLabel } from "@kyomi/ui/field";
+import { Form } from "@kyomi/ui/form";
 import { Input } from "@kyomi/ui/input";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@kyomi/ui/input/group";
-import { Spinner } from "@kyomi/ui/spinner";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { toastManager } from "@kyomi/ui/toast";
+import {
+  AuthCard,
+  AuthDivider,
+  AuthLoading,
+  authLinkClassName,
+  GoogleAuthButton,
+} from "@modules/auth/components/auth-card";
+import { PasswordField } from "@modules/auth/components/password-field";
+import {
+  buildAuthEntryHref,
+  buildOAuthErrorHref,
+  resolveAuthReturnTo,
+} from "@modules/auth/redirect";
 import {
   getFieldErrorMessage,
   registerDefaultValues,
   registerFormValidator,
 } from "@modules/auth/schema";
-import { buildAuthEntryHref, resolveAuthReturnTo } from "@modules/auth/redirect";
+import { prefetchInboxFlow } from "@modules/inbox";
 
-export function Register({ redirect }: { redirect?: string }) {
+type RegisterProps = {
+  redirect?: string;
+  googleOAuthEnabled?: boolean;
+  authError?: "oauth";
+};
+
+export function Register({ redirect, googleOAuthEnabled = false, authError }: RegisterProps) {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
   const returnTo = resolveAuthReturnTo(redirect);
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isGooglePending, setIsGooglePending] = useState(false);
   const form = useForm({
     defaultValues: registerDefaultValues,
     validators: {
@@ -93,169 +98,138 @@ export function Register({ redirect }: { redirect?: string }) {
     }
   }, [isAuthenticated, isPending, queryClient, returnTo, router]);
 
+  async function handleGoogleSignIn() {
+    setIsGooglePending(true);
+    try {
+      const result = await authClient.signIn.social({
+        provider: "google",
+        callbackURL: returnTo,
+        errorCallbackURL: buildOAuthErrorHref(redirect, "/register"),
+      });
+
+      if (result.error) {
+        throw new Error(result.error.message?.trim() || "Google sign-in failed");
+      }
+    } catch (error) {
+      logClientError("auth.google", error);
+      toastManager.add({
+        title: getUserSafeErrorMessage(error, "Google sign-in failed"),
+        type: "error",
+      });
+      setIsGooglePending(false);
+    }
+  }
+
   if (isPending && !isSubmitting) {
-    return (
-      <main className="flex min-h-dvh w-full items-center justify-center px-4 py-12">
-        <div className="flex items-center gap-2 text-muted-foreground text-sm">
-          <Spinner className="size-4" />
-          <span>Loading…</span>
-        </div>
-      </main>
-    );
+    return <AuthLoading />;
   }
 
   return (
-    <main className="flex min-h-dvh w-full items-center justify-center px-4 py-12">
-      <Card className="w-full max-w-xs">
-        <CardHeader>
-          <div className="space-y-1">
-            <CardTitle>Create an account</CardTitle>
-            <CardDescription>Enter your details to get started.</CardDescription>
-          </div>
-          <CardAction>
-            <a
-              href={buildAuthEntryHref("/", redirect)}
-              className="text-foreground text-sm leading-4.5 hover:text-foreground/80 hover:underline"
-            >
-              Log in
-            </a>
-          </CardAction>
-        </CardHeader>
-        <CardPanel>
-          <Form
-            onSubmit={(event) => {
-              event.preventDefault();
-              event.stopPropagation();
-              void form.handleSubmit();
-            }}
-          >
-            <form.Field name="email">
-              {(field) => {
-                const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
-                const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
+    <AuthCard
+      title="Create your account"
+      description="Start reading with Kyomi."
+      footer={
+        <>
+          Already have an account?{" "}
+          <a className={authLinkClassName} href={buildAuthEntryHref("/", redirect)}>
+            Sign in
+          </a>
+        </>
+      }
+    >
+      {authError === "oauth" && googleOAuthEnabled ? (
+        <p
+          className="rounded-lg bg-destructive/8 px-3 py-2 text-destructive-foreground text-sm"
+          role="alert"
+        >
+          Google sign-in couldn’t be completed. Try again.
+        </p>
+      ) : null}
 
-                return (
-                  <Field>
-                    <FieldLabel>Email</FieldLabel>
-                    <Input
-                      name={field.name}
-                      value={field.state.value}
-                      onBlur={field.handleBlur}
-                      onChange={(event) => field.handleChange(event.target.value)}
-                      placeholder="Enter your email"
-                      type="email"
-                      autoComplete="email"
-                    />
-                    {errorMessage ? (
-                      <FieldError match={true}>{errorMessage as string}</FieldError>
-                    ) : null}
-                  </Field>
-                );
-              }}
-            </form.Field>
+      {googleOAuthEnabled ? (
+        <>
+          <GoogleAuthButton loading={isGooglePending} onClick={() => void handleGoogleSignIn()} />
+          <AuthDivider />
+        </>
+      ) : null}
 
-            <form.Field name="password">
-              {(field) => {
-                const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
-                const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
+      <Form
+        onSubmit={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          void form.handleSubmit();
+        }}
+      >
+        <form.Field name="email">
+          {(field) => {
+            const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
+            const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
 
-                return (
-                  <Field>
-                    <FieldLabel>Password</FieldLabel>
-                    <InputGroup>
-                      <InputGroupInput
-                        aria-label="Password with toggle visibility"
-                        autoComplete="new-password"
-                        name={field.name}
-                        onBlur={field.handleBlur}
-                        onChange={(event) => field.handleChange(event.target.value)}
-                        placeholder="Create a password"
-                        type={showPassword ? "text" : "password"}
-                        value={field.state.value}
-                      />
-                      <InputGroupAddon align="inline-end">
-                        <Tooltip>
-                          <TooltipTrigger
-                            render={
-                              <Button
-                                aria-label={showPassword ? "Hide password" : "Show password"}
-                                onClick={() => setShowPassword((visible) => !visible)}
-                                size="icon-xs"
-                                type="button"
-                                variant="ghost"
-                              />
-                            }
-                          >
-                            {showPassword ? <EyeCloseLine /> : <EyeLine />}
-                          </TooltipTrigger>
-                          <TooltipPopup sideOffset={8}>
-                            {showPassword ? "Hide password" : "Show password"}
-                          </TooltipPopup>
-                        </Tooltip>
-                      </InputGroupAddon>
-                    </InputGroup>
-                    {errorMessage ? (
-                      <FieldError match={true}>{errorMessage as string}</FieldError>
-                    ) : null}
-                  </Field>
-                );
-              }}
-            </form.Field>
+            return (
+              <Field>
+                <FieldLabel>Email</FieldLabel>
+                <Input
+                  aria-invalid={Boolean(errorMessage) || undefined}
+                  autoComplete="email"
+                  name={field.name}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                  placeholder="you@example.com"
+                  type="email"
+                  value={field.state.value}
+                />
+                {errorMessage ? (
+                  <FieldError match={true}>{errorMessage as string}</FieldError>
+                ) : null}
+              </Field>
+            );
+          }}
+        </form.Field>
 
-            <form.Field name="confirmPassword">
-              {(field) => {
-                const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
-                const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
+        <form.Field name="password">
+          {(field) => {
+            const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
+            const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
 
-                return (
-                  <Field>
-                    <FieldLabel>Confirm Password</FieldLabel>
-                    <InputGroup>
-                      <InputGroupInput
-                        aria-label="Password with toggle visibility"
-                        autoComplete="new-password"
-                        name={field.name}
-                        onBlur={field.handleBlur}
-                        onChange={(event) => field.handleChange(event.target.value)}
-                        placeholder="Confirm your password"
-                        type={showConfirmPassword ? "text" : "password"}
-                        value={field.state.value}
-                      />
-                      <InputGroupAddon align="inline-end">
-                        <Tooltip>
-                          <TooltipTrigger
-                            render={
-                              <Button
-                                aria-label={showConfirmPassword ? "Hide password" : "Show password"}
-                                onClick={() => setShowConfirmPassword((visible) => !visible)}
-                                size="icon-xs"
-                                type="button"
-                                variant="ghost"
-                              />
-                            }
-                          >
-                            {showConfirmPassword ? <EyeCloseLine /> : <EyeLine />}
-                          </TooltipTrigger>
-                          <TooltipPopup sideOffset={8}>
-                            {showConfirmPassword ? "Hide password" : "Show password"}
-                          </TooltipPopup>
-                        </Tooltip>
-                      </InputGroupAddon>
-                    </InputGroup>
-                    {errorMessage ? (
-                      <FieldError match={true}>{errorMessage as string}</FieldError>
-                    ) : null}
-                  </Field>
-                );
-              }}
-            </form.Field>
+            return (
+              <PasswordField
+                autoComplete="new-password"
+                errorMessage={errorMessage as string | null}
+                label="Password"
+                name={field.name}
+                onBlur={field.handleBlur}
+                onChange={(event) => field.handleChange(event.target.value)}
+                placeholder="At least 8 characters"
+                value={field.state.value}
+              />
+            );
+          }}
+        </form.Field>
 
-            <Button className="w-full" type="submit" loading={isSubmitting}>
-              {isSubmitting ? "Signing up…" : "Sign up"}
-            </Button>
-          </Form>
-        </CardPanel>
-      </Card>
-    </main>
+        <form.Field name="confirmPassword">
+          {(field) => {
+            const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
+            const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
+
+            return (
+              <PasswordField
+                autoComplete="new-password"
+                errorMessage={errorMessage as string | null}
+                label="Confirm password"
+                name={field.name}
+                onBlur={field.handleBlur}
+                onChange={(event) => field.handleChange(event.target.value)}
+                placeholder="Repeat your password"
+                value={field.state.value}
+              />
+            );
+          }}
+        </form.Field>
+
+        <Button className="w-full" loading={isSubmitting} type="submit">
+          {isSubmitting ? "Creating account…" : "Create account"}
+        </Button>
+      </Form>
+    </AuthCard>
   );
 }

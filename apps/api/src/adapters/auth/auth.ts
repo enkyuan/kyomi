@@ -8,7 +8,9 @@ import {
 } from "@kyomi/db";
 import { db } from "@adapters/db/client";
 import { env } from "@config/env";
+import { resolveGoogleSocialProvider } from "./capabilities";
 import { resolveLocationFromAuthContext } from "./location";
+import { queuePasswordResetEmail } from "./password-reset-email";
 
 const defaultApiOrigin = `http://localhost:${env.PORT}`;
 const baseURL = resolveBetterAuthBaseUrl(env.BETTER_AUTH_URL ?? defaultApiOrigin, defaultApiOrigin);
@@ -42,7 +44,16 @@ export const auth = betterAuth({
   }),
   emailAndPassword: {
     enabled: true,
+    revokeSessionsOnPasswordReset: true,
+    sendResetPassword: async ({ user, url }) => {
+      queuePasswordResetEmail({ to: user.email, url });
+    },
   },
+  socialProviders: resolveGoogleSocialProvider({
+    enabled: env.FEATURE_GOOGLE_OAUTH,
+    clientId: env.GOOGLE_CLIENT_ID,
+    clientSecret: env.GOOGLE_CLIENT_SECRET,
+  }),
   session: {
     additionalFields: {
       locationLabel: {

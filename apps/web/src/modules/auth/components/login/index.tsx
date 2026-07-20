@@ -1,39 +1,51 @@
 "use client";
 
-import { EyeCloseLine, EyeLine } from "@kyomi/ui/icons/mingcute";
 import { useEffect, useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
+import { useAuth } from "@integrations/better-auth/provider";
 import { authClient } from "@lib/auth/client";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
-import { prefetchInboxFlow } from "@modules/inbox";
-import { useAuth } from "@integrations/better-auth/provider";
 import { Button } from "@kyomi/ui/button";
-import {
-  Card,
-  CardAction,
-  CardDescription,
-  CardHeader,
-  CardPanel,
-  CardTitle,
-} from "@kyomi/ui/card";
-import { Form } from "@kyomi/ui/form";
 import { Field, FieldError, FieldLabel } from "@kyomi/ui/field";
+import { Form } from "@kyomi/ui/form";
 import { Input } from "@kyomi/ui/input";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@kyomi/ui/input/group";
-import { Spinner } from "@kyomi/ui/spinner";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { toastManager } from "@kyomi/ui/toast";
+import {
+  AuthCard,
+  AuthDivider,
+  AuthLoading,
+  authLinkClassName,
+  GoogleAuthButton,
+} from "@modules/auth/components/auth-card";
+import { PasswordField } from "@modules/auth/components/password-field";
+import {
+  buildAuthEntryHref,
+  buildOAuthErrorHref,
+  resolveAuthReturnTo,
+} from "@modules/auth/redirect";
 import { getFieldErrorMessage, loginDefaultValues, loginFormValidator } from "@modules/auth/schema";
-import { buildAuthEntryHref, resolveAuthReturnTo } from "@modules/auth/redirect";
+import { prefetchInboxFlow } from "@modules/inbox";
 
-export function Login({ redirect }: { redirect?: string }) {
+type LoginProps = {
+  redirect?: string;
+  googleOAuthEnabled?: boolean;
+  passwordResetEnabled?: boolean;
+  authError?: "oauth";
+};
+
+export function Login({
+  redirect,
+  googleOAuthEnabled = false,
+  passwordResetEnabled = false,
+  authError,
+}: LoginProps) {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
   const returnTo = resolveAuthReturnTo(redirect);
-  const [showPassword, setShowPassword] = useState(false);
+  const [isGooglePending, setIsGooglePending] = useState(false);
   const form = useForm({
     defaultValues: loginDefaultValues,
     validators: {
@@ -86,125 +98,132 @@ export function Login({ redirect }: { redirect?: string }) {
     }
   }, [isAuthenticated, isPending, queryClient, returnTo, router]);
 
+  async function handleGoogleSignIn() {
+    setIsGooglePending(true);
+    try {
+      const result = await authClient.signIn.social({
+        provider: "google",
+        callbackURL: returnTo,
+        errorCallbackURL: buildOAuthErrorHref(redirect),
+      });
+
+      if (result.error) {
+        throw new Error(result.error.message?.trim() || "Google sign-in failed");
+      }
+    } catch (error) {
+      logClientError("auth.google", error);
+      toastManager.add({
+        title: getUserSafeErrorMessage(error, "Google sign-in failed"),
+        type: "error",
+      });
+      setIsGooglePending(false);
+    }
+  }
+
   if (isPending) {
-    return (
-      <main className="flex min-h-dvh w-full items-center justify-center px-4 py-12">
-        <div className="flex items-center gap-2 text-muted-foreground text-sm">
-          <Spinner className="size-4" />
-          <span>Loading…</span>
-        </div>
-      </main>
-    );
+    return <AuthLoading />;
   }
 
   return (
-    <main className="flex min-h-dvh w-full items-center justify-center px-4 py-12">
-      <Card className="w-full max-w-xs">
-        <CardHeader>
-          <div className="space-y-1">
-            <CardTitle>Login to your account</CardTitle>
-            <CardDescription>Enter your email and password to continue.</CardDescription>
-          </div>
-          <CardAction>
-            <a
-              href={buildAuthEntryHref("/register", redirect)}
-              className="text-foreground text-sm leading-4.5 hover:text-foreground/80 hover:underline"
-            >
-              Sign up
-            </a>
-          </CardAction>
-        </CardHeader>
-        <CardPanel>
-          <Form
-            onSubmit={(event) => {
-              event.preventDefault();
-              event.stopPropagation();
-              void form.handleSubmit();
-            }}
-          >
-            <form.Field name="email">
-              {(field) => {
-                const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
-                const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
+    <AuthCard
+      title="Welcome back"
+      description="Sign in to continue to Kyomi."
+      footer={
+        <>
+          New to Kyomi?{" "}
+          <a className={authLinkClassName} href={buildAuthEntryHref("/register", redirect)}>
+            Create an account
+          </a>
+        </>
+      }
+    >
+      {authError === "oauth" && googleOAuthEnabled ? (
+        <p
+          className="rounded-lg bg-destructive/8 px-3 py-2 text-destructive-foreground text-sm"
+          role="alert"
+        >
+          Google sign-in couldn’t be completed. Try again.
+        </p>
+      ) : null}
 
-                return (
-                  <Field>
-                    <FieldLabel>Email</FieldLabel>
-                    <Input
-                      name={field.name}
-                      value={field.state.value}
-                      onBlur={field.handleBlur}
-                      onChange={(event) => field.handleChange(event.target.value)}
-                      placeholder="Enter your email"
-                      type="email"
-                      autoComplete="email"
-                    />
-                    {errorMessage ? (
-                      <FieldError match={true}>{errorMessage as string}</FieldError>
-                    ) : null}
-                  </Field>
-                );
-              }}
-            </form.Field>
+      {googleOAuthEnabled ? (
+        <>
+          <GoogleAuthButton loading={isGooglePending} onClick={() => void handleGoogleSignIn()} />
+          <AuthDivider />
+        </>
+      ) : null}
 
-            <form.Field name="password">
-              {(field) => {
-                const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
-                const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
+      <Form
+        onSubmit={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          void form.handleSubmit();
+        }}
+      >
+        <form.Field name="email">
+          {(field) => {
+            const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
+            const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
 
-                return (
-                  <Field>
-                    <FieldLabel>Password</FieldLabel>
-                    <InputGroup>
-                      <InputGroupInput
-                        aria-label="Password with toggle visibility"
-                        autoComplete="current-password"
-                        name={field.name}
-                        onBlur={field.handleBlur}
-                        onChange={(event) => field.handleChange(event.target.value)}
-                        placeholder="Enter your password"
-                        type={showPassword ? "text" : "password"}
-                        value={field.state.value}
-                      />
-                      <InputGroupAddon align="inline-end">
-                        <Tooltip>
-                          <TooltipTrigger
-                            render={
-                              <Button
-                                aria-label={showPassword ? "Hide password" : "Show password"}
-                                onClick={() => setShowPassword((visible) => !visible)}
-                                size="icon-xs"
-                                type="button"
-                                variant="ghost"
-                              />
-                            }
-                          >
-                            {showPassword ? <EyeCloseLine /> : <EyeLine />}
-                          </TooltipTrigger>
-                          <TooltipPopup sideOffset={8}>
-                            {showPassword ? "Hide password" : "Show password"}
-                          </TooltipPopup>
-                        </Tooltip>
-                      </InputGroupAddon>
-                    </InputGroup>
-                    {errorMessage ? (
-                      <FieldError match={true}>{errorMessage as string}</FieldError>
-                    ) : null}
-                  </Field>
-                );
-              }}
-            </form.Field>
+            return (
+              <Field>
+                <FieldLabel>Email</FieldLabel>
+                <Input
+                  aria-invalid={Boolean(errorMessage) || undefined}
+                  autoComplete="email"
+                  name={field.name}
+                  onBlur={field.handleBlur}
+                  onChange={(event) => field.handleChange(event.target.value)}
+                  placeholder="you@example.com"
+                  type="email"
+                  value={field.state.value}
+                />
+                {errorMessage ? (
+                  <FieldError match={true}>{errorMessage as string}</FieldError>
+                ) : null}
+              </Field>
+            );
+          }}
+        </form.Field>
 
-            <form.Subscribe selector={(state) => [state.isSubmitting]}>
-              {([isSubmitting]) => (
-                <Button className="w-full" type="submit" loading={Boolean(isSubmitting)}>
-                  {isSubmitting ? "Logging in…" : "Login"}
-                </Button>
-              )}
-            </form.Subscribe>
-          </Form>
-        </CardPanel>
-      </Card>
-    </main>
+        <form.Field name="password">
+          {(field) => {
+            const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
+            const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
+
+            return (
+              <PasswordField
+                action={
+                  passwordResetEnabled ? (
+                    <a
+                      className="text-muted-foreground text-xs underline-offset-4 hover:text-foreground hover:underline"
+                      href={buildAuthEntryHref("/forgot-password", redirect)}
+                    >
+                      Forgot password?
+                    </a>
+                  ) : undefined
+                }
+                autoComplete="current-password"
+                errorMessage={errorMessage as string | null}
+                label="Password"
+                name={field.name}
+                onBlur={field.handleBlur}
+                onChange={(event) => field.handleChange(event.target.value)}
+                placeholder="Enter your password"
+                value={field.state.value}
+              />
+            );
+          }}
+        </form.Field>
+
+        <form.Subscribe selector={(state) => [state.isSubmitting]}>
+          {([isSubmitting]) => (
+            <Button className="w-full" loading={Boolean(isSubmitting)} type="submit">
+              {isSubmitting ? "Signing in…" : "Sign in"}
+            </Button>
+          )}
+        </form.Subscribe>
+      </Form>
+    </AuthCard>
   );
 }

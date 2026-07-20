@@ -25,6 +25,7 @@ export {
   FileImportFill,
   Folder2Fill,
   FolderWarningFill,
+  GoogleFill,
   HeadAiFill,
   HeadAiLine,
   InformationFill,

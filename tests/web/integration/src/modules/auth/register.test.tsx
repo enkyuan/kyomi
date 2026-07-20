@@ -10,7 +10,9 @@ const mocks = vi.hoisted(() => ({
   invalidate: vi.fn(),
   navigate: vi.fn(),
   prefetchInboxFlow: vi.fn(),
+  signInSocial: vi.fn(),
   signUp: vi.fn(),
+  toastAdd: vi.fn(),
   toastPromise: vi.fn((promise: Promise<unknown>) => promise),
 }));
 
@@ -20,6 +22,9 @@ vi.mock("@integrations/better-auth/provider", () => ({
 
 vi.mock("@lib/auth/client", () => ({
   authClient: {
+    signIn: {
+      social: mocks.signInSocial,
+    },
     signUp: {
       email: mocks.signUp,
     },
@@ -43,6 +48,7 @@ vi.mock("@modules/inbox", () => ({
 
 vi.mock("@kyomi/ui/toast", () => ({
   toastManager: {
+    add: mocks.toastAdd,
     promise: mocks.toastPromise,
   },
 }));
@@ -64,7 +70,9 @@ describe("Register", () => {
     mocks.invalidate.mockReset();
     mocks.navigate.mockReset().mockResolvedValue(undefined);
     mocks.prefetchInboxFlow.mockReset().mockResolvedValue(undefined);
+    mocks.signInSocial.mockReset().mockResolvedValue({ error: null });
     mocks.signUp.mockReset().mockResolvedValue({ error: null });
+    mocks.toastAdd.mockReset();
     mocks.toastPromise.mockClear();
   });
 
@@ -82,27 +90,41 @@ describe("Register", () => {
     mocks.invalidate.mockReturnValueOnce(invalidation.promise);
     const view = render(<Register />);
 
-    fireEvent.change(screen.getByPlaceholderText("Enter your email"), {
+    fireEvent.change(screen.getByPlaceholderText("you@example.com"), {
       target: { value: "reader@example.com" },
     });
-    fireEvent.change(screen.getByPlaceholderText("Create a password"), {
+    fireEvent.change(screen.getByPlaceholderText("At least 8 characters"), {
       target: { value: "password123" },
     });
-    fireEvent.change(screen.getByPlaceholderText("Confirm your password"), {
+    fireEvent.change(screen.getByPlaceholderText("Repeat your password"), {
       target: { value: "password123" },
     });
-    fireEvent.click(screen.getByRole("button", { name: "Sign up" }));
+    fireEvent.click(screen.getByRole("button", { name: "Create account" }));
 
     await waitFor(() => expect(mocks.signUp).toHaveBeenCalledOnce());
-    expect(screen.getByText("Signing up…")).toBeTruthy();
+    expect(screen.getByText("Creating account…")).toBeTruthy();
 
     mocks.auth.isPending = true;
     view.rerender(<Register />);
 
-    expect(screen.getByText("Create an account")).toBeTruthy();
+    expect(screen.getByText("Create your account")).toBeTruthy();
     expect(screen.queryByText("Loading…")).toBeNull();
 
     invalidation.resolve();
     await waitFor(() => expect(mocks.navigate).toHaveBeenCalledOnce());
+  });
+
+  test("starts Google sign-in with the register return path", async () => {
+    render(<Register googleOAuthEnabled redirect="/inbox?filter=all" />);
+
+    fireEvent.click(screen.getByRole("button", { name: "Continue with Google" }));
+
+    await waitFor(() => {
+      expect(mocks.signInSocial).toHaveBeenCalledWith({
+        provider: "google",
+        callbackURL: "/inbox?filter=all",
+        errorCallbackURL: "/register?authError=oauth&redirect=%2Finbox%3Ffilter%3Dall",
+      });
+    });
   });
 });
