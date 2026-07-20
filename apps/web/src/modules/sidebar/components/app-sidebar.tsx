@@ -116,7 +116,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       style={{ "--sidebar-width": APP_SIDEBAR_WIDTH, ...style } as CSSProperties}
     >
       <SidebarHeader className="items-center ps-0 pe-2 py-4.5">
-        <SidebarMenu className="gap-4.25">
+        <SidebarMenu className="gap-4.5">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
               tooltip="Kyomi"

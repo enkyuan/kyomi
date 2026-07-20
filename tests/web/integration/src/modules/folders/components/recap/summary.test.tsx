@@ -80,7 +80,7 @@ const folders: RecapFolder[] = [
   },
 ];
 
-function renderFolders() {
+function renderFolders(visibleFolders = folders) {
   const onCreateFolder = vi.fn();
   const onExpand = vi.fn();
   const onImportOpml = vi.fn();
@@ -88,7 +88,7 @@ function renderFolders() {
 
   render(
     <Folders
-      folders={folders}
+      folders={visibleFolders}
       onCreateFolder={onCreateFolder}
       onExpand={onExpand}
       onImportOpml={onImportOpml}
@@ -112,8 +112,8 @@ describe("recap folders summary", () => {
     expect(screen.queryByRole("link", { name: /Tech/ })).toBeNull();
   });
 
-  test("keeps compact actions rail-scoped and fixed below the folder slots", () => {
-    const { onCreateFolder, onExpand, onImportOpml } = renderFolders();
+  test("keeps compact actions rail-scoped at the bottom of the folder section", () => {
+    const { onCreateFolder, onExpand, onImportOpml } = renderFolders(folders.slice(0, 1));
 
     const manageButton = screen.getByRole("button", { name: /Manage/ });
     const importButton = screen.getByRole("button", { name: "Import OPML" });

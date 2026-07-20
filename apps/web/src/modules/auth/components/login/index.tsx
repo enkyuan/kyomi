@@ -4,7 +4,7 @@ import { EyeCloseLine, EyeLine } from "@kyomi/ui/icons/mingcute";
 import { useEffect, useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
-import { Link, useRouter } from "@tanstack/react-router";
+import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { prefetchInboxFlow } from "@modules/inbox";
@@ -26,11 +26,13 @@ import { Spinner } from "@kyomi/ui/spinner";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { toastManager } from "@kyomi/ui/toast";
 import { getFieldErrorMessage, loginDefaultValues, loginFormValidator } from "@modules/auth/schema";
+import { buildAuthEntryHref, resolveAuthReturnTo } from "@modules/auth/redirect";
 
-export function Login() {
+export function Login({ redirect }: { redirect?: string }) {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
+  const returnTo = resolveAuthReturnTo(redirect);
   const [showPassword, setShowPassword] = useState(false);
   const form = useForm({
     defaultValues: loginDefaultValues,
@@ -44,7 +46,7 @@ export function Login() {
           const result = await authClient.signIn.email({
             email: value.email,
             password: value.password,
-            callbackURL: "/inbox",
+            callbackURL: returnTo,
           });
 
           if (result.error) {
@@ -52,7 +54,7 @@ export function Login() {
           }
 
           await Promise.all([router.invalidate(), prefetchInboxFlow(router, queryClient)]);
-          await router.navigate({ to: "/inbox", search: {} });
+          await router.navigate({ href: returnTo });
         })(),
         {
           error: (error) => {
@@ -82,10 +84,10 @@ export function Login() {
   useEffect(() => {
     if (!isPending && isAuthenticated) {
       void prefetchInboxFlow(router, queryClient).finally(() => {
-        void router.navigate({ to: "/inbox", search: {} });
+        void router.navigate({ href: returnTo });
       });
     }
-  }, [isAuthenticated, isPending, queryClient, router]);
+  }, [isAuthenticated, isPending, queryClient, returnTo, router]);
 
   if (isPending) {
     return (
@@ -107,12 +109,12 @@ export function Login() {
             <CardDescription>Enter your email and password to continue.</CardDescription>
           </div>
           <CardAction>
-            <Link
-              to="/register"
+            <a
+              href={buildAuthEntryHref("/register", redirect)}
               className="text-foreground text-sm leading-4.5 hover:text-foreground/80 hover:underline"
             >
               Sign up
-            </Link>
+            </a>
           </CardAction>
         </CardHeader>
         <CardPanel>

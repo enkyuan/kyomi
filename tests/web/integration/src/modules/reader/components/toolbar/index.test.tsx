@@ -51,4 +51,18 @@ describe("reader toolbar", () => {
       sideOffset: 8,
     });
   });
+
+  test("uses the inbox toolbar icon scale for large reader controls", () => {
+    render(
+      <Toolbar
+        {...toolbarProps({
+          controlSize: "large",
+          readerFocusMode: true,
+        })}
+      />,
+    );
+
+    const button = screen.getByRole("button", { name: "Read later" });
+    expect(button.className).toContain("[&_svg]:size-5!");
+  });
 });

@@ -50,7 +50,8 @@
     "katex": "^0.16.45",
     "marked": "^18.0.0",
     "marked-katex-extension": "^5.1.8",
-    "neosanitize": "^0.3.0"
+    "neosanitize": "^0.3.0",
+    "react-photo-view": "^1.2.7"
   },
   "devDependencies": {
     "@base-ui/react": "^1.3.0",

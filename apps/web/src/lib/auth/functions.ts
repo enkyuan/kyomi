@@ -8,31 +8,16 @@ import {
   logApiResponseError,
   resolveApiUrl,
 } from "@lib/api";
-import { readResponseErrorSummary } from "@lib/errors";
+import { formatErrorForLog, readResponseErrorSummary } from "@lib/errors";
+import {
+  classifyAuthSessionPayload,
+  type AuthSessionState,
+  unavailableAuthSessionState,
+} from "@lib/auth/session";
 
-export type AuthSession = {
-  session: {
-    id: string;
-    expiresAt: string;
-    token: string;
-    createdAt: string;
-    updatedAt: string;
-    ipAddress?: string | null;
-    userAgent?: string | null;
-    userId: string;
-  } | null;
-  user: {
-    id: string;
-    email: string;
-    emailVerified: boolean;
-    name: string;
-    image?: string | null;
-    createdAt: string;
-    updatedAt: string;
-  } | null;
-} | null;
+export type { AuthSession } from "@lib/auth/session";
 
-async function fetchSessionFromHeaders(headers: Headers): Promise<AuthSession> {
+async function fetchAuthSessionStateFromHeaders(headers: Headers): Promise<AuthSessionState> {
   const method = "GET";
   const path = "/api/auth/get-session";
   let response: Response;
@@ -44,25 +29,30 @@ async function fetchSessionFromHeaders(headers: Headers): Promise<AuthSession> {
     });
   } catch (error) {
     logApiNetworkError(method, path, error);
-    throw new Error("Unable to load your session.");
+    return unavailableAuthSessionState();
   }
 
   if (response.status === 401) {
-    return null;
+    return { status: "anonymous", session: null };
   }
 
   if (!response.ok) {
     const summary = await readResponseErrorSummary(response);
     logApiResponseError(method, path, response.status, summary);
-    throw new Error(apiFailureUserMessage(response.status));
+    return unavailableAuthSessionState(apiFailureUserMessage(response.status));
   }
 
-  return (await response.json()) as AuthSession;
+  try {
+    return classifyAuthSessionPayload(await response.json());
+  } catch (error) {
+    console.error(`[api] ${method} ${path} -> invalid JSON: ${formatErrorForLog(error)}`);
+    return unavailableAuthSessionState("Received an invalid response from the server.");
+  }
 }
 
-export const getSession = createServerFn({ method: "POST" }).handler(async () => {
+export const getAuthSessionState = createServerFn({ method: "POST" }).handler(async () => {
   const headers = getRequestHeaders();
-  return fetchSessionFromHeaders(headers);
+  return fetchAuthSessionStateFromHeaders(headers);
 });
 
 export const updateUserEmail = createServerFn({ method: "POST" })

@@ -4,7 +4,7 @@ import { EyeCloseLine, EyeLine } from "@kyomi/ui/icons/mingcute";
 import { useEffect, useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
-import { Link, useRouter } from "@tanstack/react-router";
+import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { prefetchInboxFlow } from "@modules/inbox";
@@ -30,11 +30,13 @@ import {
   registerDefaultValues,
   registerFormValidator,
 } from "@modules/auth/schema";
+import { buildAuthEntryHref, resolveAuthReturnTo } from "@modules/auth/redirect";
 
-export function Register() {
+export function Register({ redirect }: { redirect?: string }) {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
+  const returnTo = resolveAuthReturnTo(redirect);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const form = useForm({
@@ -50,7 +52,7 @@ export function Register() {
             email: value.email,
             password: value.password,
             name: "",
-            callbackURL: "/inbox",
+            callbackURL: returnTo,
           });
 
           if (result.error) {
@@ -58,7 +60,7 @@ export function Register() {
           }
 
           await Promise.all([router.invalidate(), prefetchInboxFlow(router, queryClient)]);
-          await router.navigate({ to: "/inbox", search: {} });
+          await router.navigate({ href: returnTo });
         })(),
         {
           error: (error) => {
@@ -88,10 +90,10 @@ export function Register() {
   useEffect(() => {
     if (!isPending && isAuthenticated) {
       void prefetchInboxFlow(router, queryClient).finally(() => {
-        void router.navigate({ to: "/inbox", search: {} });
+        void router.navigate({ href: returnTo });
       });
     }
-  }, [isAuthenticated, isPending, queryClient, router]);
+  }, [isAuthenticated, isPending, queryClient, returnTo, router]);
 
   if (isPending) {
     return (
@@ -113,12 +115,12 @@ export function Register() {
             <CardDescription>Enter your details to get started.</CardDescription>
           </div>
           <CardAction>
-            <Link
-              to="/"
+            <a
+              href={buildAuthEntryHref("/", redirect)}
               className="text-foreground text-sm leading-4.5 hover:text-foreground/80 hover:underline"
             >
               Log in
-            </Link>
+            </a>
           </CardAction>
         </CardHeader>
         <CardPanel>

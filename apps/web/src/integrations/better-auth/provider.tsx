@@ -2,7 +2,7 @@
 
 import { createContext, use, useMemo } from "react";
 import { authClient } from "@lib/auth/client";
-import type { AuthSession } from "@lib/auth/functions";
+import type { AuthSession } from "@lib/auth/session";
 
 type SessionData = NonNullable<ReturnType<typeof authClient.useSession>["data"]>;
 
@@ -47,13 +47,16 @@ export default function AuthProvider({
   children: React.ReactNode;
   initialSession?: AuthSession | null;
 }) {
-  const { data: liveSession, isPending } = authClient.useSession();
+  const { data: liveSession, error, isPending } = authClient.useSession();
   const normalizedInitialSession = useMemo(
     () => normalizeInitialSession(initialSession),
     [initialSession],
   );
+  const clientSessionUnavailable = error !== null && error.status !== 401;
   const shouldUseInitialSession =
-    isPending && liveSession == null && normalizedInitialSession != null;
+    liveSession == null &&
+    normalizedInitialSession != null &&
+    (isPending || clientSessionUnavailable);
   // Client session hook is hydration/cache; authoritative route gating remains server-side.
   const session = shouldUseInitialSession ? normalizedInitialSession : (liveSession ?? null);
   const pending = isPending && session == null;

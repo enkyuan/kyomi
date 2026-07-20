@@ -1,8 +1,10 @@
 "use client";
 
+import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { clearHotQueryCache } from "@lib/query/cache";
 import { toastManager } from "@kyomi/ui/toast";
 
 type UseSettingsLogoutArgs = {
@@ -11,6 +13,7 @@ type UseSettingsLogoutArgs = {
 
 export function useSettingsLogout({ onOpenChange }: UseSettingsLogoutArgs) {
   const router = useRouter();
+  const queryClient = useQueryClient();
 
   const logout = async () => {
     await toastManager.promise(
@@ -22,8 +25,10 @@ export function useSettingsLogout({ onOpenChange }: UseSettingsLogoutArgs) {
         }
 
         onOpenChange?.(false);
+        queryClient.clear();
+        await clearHotQueryCache();
         await router.invalidate();
-        await router.navigate({ to: "/" });
+        await router.navigate({ to: "/", search: { redirect: undefined }, replace: true });
       })(),
       {
         error: (error) => {
