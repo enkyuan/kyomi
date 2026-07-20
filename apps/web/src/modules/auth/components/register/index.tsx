@@ -188,7 +188,7 @@ export function Register({ redirect }: { redirect?: string }) {
                           >
                             {showPassword ? <EyeCloseLine /> : <EyeLine />}
                           </TooltipTrigger>
-                          <TooltipPopup>
+                          <TooltipPopup sideOffset={8}>
                             {showPassword ? "Hide password" : "Show password"}
                           </TooltipPopup>
                         </Tooltip>
@@ -236,7 +236,7 @@ export function Register({ redirect }: { redirect?: string }) {
                           >
                             {showConfirmPassword ? <EyeCloseLine /> : <EyeLine />}
                           </TooltipTrigger>
-                          <TooltipPopup>
+                          <TooltipPopup sideOffset={8}>
                             {showConfirmPassword ? "Hide password" : "Show password"}
                           </TooltipPopup>
                         </Tooltip>

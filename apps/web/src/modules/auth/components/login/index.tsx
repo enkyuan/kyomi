@@ -181,7 +181,7 @@ export function Login({ redirect }: { redirect?: string }) {
                           >
                             {showPassword ? <EyeCloseLine /> : <EyeLine />}
                           </TooltipTrigger>
-                          <TooltipPopup>
+                          <TooltipPopup sideOffset={8}>
                             {showPassword ? "Hide password" : "Show password"}
                           </TooltipPopup>
                         </Tooltip>
