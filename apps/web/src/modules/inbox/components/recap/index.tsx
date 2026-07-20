@@ -25,15 +25,16 @@ import {
   useRemoveRecapFeedsMutation,
   useUnsaveRecapItemMutation,
 } from "./mutations";
-import { getRecapScreenKey } from "./screen-key";
+import {
+  getRecapScreenKey,
+  RECAP_NAVIGATION_TRANSITION,
+  RECAP_TRANSITION_OFFSET,
+} from "./screen-key";
 
 const FollowSourcesDialog = lazyNamed(
   () => import("@modules/feeds/components/follow/dialog"),
   "FollowSourcesDialog",
 );
-
-const RECAP_TRANSITION_OFFSET_PX = 28;
-const INSTANT_TRANSITION = { duration: 0 };
 
 function downloadOpmlExport({ filename, xml }: { filename: string; xml: string }) {
   const url = URL.createObjectURL(new Blob([xml], { type: "application/xml;charset=utf-8" }));
@@ -350,18 +351,14 @@ export function InboxRecapCard({
 
   const isFollowingFeed = (feedId: string) => followingFeedId === feedId;
   const navigateRecap = useRecapNavigation({ dispatch, navigate, rail });
-  const recapScreenKey = getRecapScreenKey({
-    expandedSection,
-    isError: recapError,
-    isLoading: recapLoading,
-  });
+  const recapScreenKey = getRecapScreenKey({ expandedSection });
   const recapTransition = useTransition({
     className: "relative min-h-0 min-w-0 flex-1 overflow-hidden",
     contentKey: recapScreenKey,
     direction: navigationDirection,
-    mode: "popLayout",
-    offset: RECAP_TRANSITION_OFFSET_PX,
-    transition: expandedSection ? undefined : INSTANT_TRANSITION,
+    mode: "sync",
+    offset: RECAP_TRANSITION_OFFSET,
+    transition: RECAP_NAVIGATION_TRANSITION[navigationDirection],
   });
 
   return (

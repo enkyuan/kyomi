@@ -30,9 +30,19 @@ export type TransitionOffset =
       backward: DirectionalOffset;
     };
 
-const DEFAULT_TRANSITION = { type: "spring" as const, duration: 0.28, bounce: 0 };
+export const TRANSITION_EASE_OUT = [0.23, 1, 0.32, 1] as const;
+
+export const DEFAULT_TRANSITION = {
+  type: "tween" as const,
+  duration: 0.2,
+  ease: TRANSITION_EASE_OUT,
+};
 const DEFAULT_OFFSET_PX = 18;
 const DEFAULT_CONTENT_CLASS_NAME = "absolute inset-0 flex min-h-0 min-w-0 flex-col";
+export const REDUCED_MOTION_TRANSITION = {
+  duration: 0.15,
+  ease: TRANSITION_EASE_OUT,
+};
 
 function resolveOffset(offset: TransitionOffset, direction: TransitionDirection) {
   if (typeof offset !== "number") {
@@ -42,6 +52,38 @@ function resolveOffset(offset: TransitionOffset, direction: TransitionDirection)
   return direction === "forward"
     ? { enter: offset, exit: -offset }
     : { enter: -offset, exit: offset };
+}
+
+function resolveTransform(axis: TransitionAxis, offset: number) {
+  return axis === "x" ? `translate3d(${offset}px, 0, 0)` : `translate3d(0, ${offset}px, 0)`;
+}
+
+export function resolveTransitionStates({
+  axis,
+  direction,
+  offset,
+  prefersReducedMotion,
+  transition = DEFAULT_TRANSITION,
+}: {
+  axis: TransitionAxis;
+  direction: TransitionDirection;
+  offset: TransitionOffset;
+  prefersReducedMotion: boolean;
+  transition?: MotionTransition;
+}) {
+  const resolvedOffset = resolveOffset(offset, direction);
+  const restingTransform = resolveTransform(axis, 0);
+
+  return {
+    animate: { opacity: 1, transform: restingTransform },
+    exit: prefersReducedMotion
+      ? { opacity: 0, transform: restingTransform }
+      : { opacity: 0, transform: resolveTransform(axis, resolvedOffset.exit) },
+    initial: prefersReducedMotion
+      ? { opacity: 0, transform: restingTransform }
+      : { opacity: 0, transform: resolveTransform(axis, resolvedOffset.enter) },
+    transition: prefersReducedMotion ? REDUCED_MOTION_TRANSITION : transition,
+  };
 }
 
 export type TransitionProps = {
@@ -72,18 +114,23 @@ export function Transition({
   transition = DEFAULT_TRANSITION,
 }: TransitionProps) {
   const prefersReducedMotion = Boolean(useReducedMotion());
-  const resolvedOffset = resolveOffset(offset, direction);
-  const motionAxis = axis === "x" ? "x" : "y";
+  const states = resolveTransitionStates({
+    axis,
+    direction,
+    offset,
+    prefersReducedMotion,
+    transition,
+  });
   const featureBundle = features === "max" ? domMax : domAnimation;
   const content = (
     <AnimatePresence initial={false} mode={mode}>
       <m.div
         key={contentKey}
-        animate={{ opacity: 1, [motionAxis]: 0 }}
+        animate={states.animate}
         className={cn(DEFAULT_CONTENT_CLASS_NAME, contentClassName)}
-        exit={prefersReducedMotion ? undefined : { opacity: 0, [motionAxis]: resolvedOffset.exit }}
-        initial={prefersReducedMotion ? false : { opacity: 0, [motionAxis]: resolvedOffset.enter }}
-        transition={prefersReducedMotion ? { duration: 0 } : transition}
+        exit={states.exit}
+        initial={states.initial}
+        transition={states.transition}
       >
         {children}
       </m.div>
