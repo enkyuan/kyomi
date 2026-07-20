@@ -13,6 +13,12 @@ import {
 } from "@kyomi/ui/empty";
 import { Skeleton } from "@kyomi/ui/skeleton";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+import { cn } from "@kyomi/ui/lib/utils";
+
+export const RECAP_SUMMARY_LAYOUT_CLASS =
+  "grid min-h-0 w-full min-w-0 flex-1 grid-rows-3 gap-6 overflow-hidden py-4";
+export const RECAP_SUMMARY_SECTION_CLASS =
+  "flex h-full min-h-0 w-full min-w-0 flex-col overflow-x-hidden overflow-y-auto [scrollbar-gutter:stable]";
 
 export function RailTooltip({ label, children }: { label: string; children: ReactElement }) {
   return (
@@ -33,7 +39,7 @@ export function RecapSection({
   children: ReactNode;
 }) {
   return (
-    <section className="flex min-h-0 min-w-0 flex-col overflow-visible px-4">
+    <section className="flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-visible px-4">
       <div className="mb-3 flex h-7 shrink-0 items-center gap-1">
         <h3 className="min-w-0 truncate font-semibold text-base">{title}</h3>
         {action}
@@ -55,15 +61,17 @@ export function SectionEmpty({
   action?: ReactNode;
 }) {
   return (
-    <Empty className="min-h-0 gap-3 px-4 py-6 md:py-6">
-      <EmptyHeader>
+    <Empty className="min-h-0 w-full gap-3 px-4 py-6 md:py-6">
+      <EmptyHeader className="gap-3">
         {icon ? (
-          <EmptyMedia className="mb-3 text-muted-foreground/80" variant="icon">
+          <EmptyMedia className="mb-0 text-muted-foreground/80" variant="icon">
             {icon}
           </EmptyMedia>
         ) : null}
-        <EmptyTitle className="text-sm">{title}</EmptyTitle>
-        <EmptyDescription>{description}</EmptyDescription>
+        <div>
+          <EmptyTitle className="text-sm">{title}</EmptyTitle>
+          <EmptyDescription>{description}</EmptyDescription>
+        </div>
       </EmptyHeader>
       {action ? <EmptyContent>{action}</EmptyContent> : null}
     </Empty>
@@ -72,19 +80,19 @@ export function SectionEmpty({
 
 export function RecapSkeleton() {
   return (
-    <div className="grid min-h-0 flex-1 grid-rows-[auto_auto_auto] content-between gap-4 overflow-hidden py-4">
-      <div className="flex min-h-0 min-w-0 flex-col overflow-hidden px-4">
+    <div className={RECAP_SUMMARY_LAYOUT_CLASS}>
+      <div className={cn(RECAP_SUMMARY_SECTION_CLASS, "px-4")}>
         <div className="mb-3 flex h-7 shrink-0 items-center">
           <Skeleton className="h-5 w-24" />
         </div>
         <div className="space-y-3">
           {Array.from({ length: 3 }).map((_, index) => (
-            <Skeleton key={index} className="h-10 w-full rounded-xl" />
+            <Skeleton key={index} className="h-11 w-full rounded-xl" />
           ))}
         </div>
         <div aria-hidden="true" className="mt-auto h-[52px] shrink-0" />
       </div>
-      <div className="flex min-h-0 min-w-0 flex-col overflow-hidden px-4">
+      <div className={cn(RECAP_SUMMARY_SECTION_CLASS, "px-4")}>
         <div className="mb-3 flex h-7 shrink-0 items-center">
           <Skeleton className="h-5 w-28" />
         </div>
@@ -101,7 +109,7 @@ export function RecapSkeleton() {
           ))}
         </div>
       </div>
-      <div className="flex min-h-0 min-w-0 flex-col overflow-hidden px-4">
+      <div className={cn(RECAP_SUMMARY_SECTION_CLASS, "px-4")}>
         <div className="mb-3 flex h-7 shrink-0 items-center">
           <Skeleton className="h-5 w-32" />
         </div>
@@ -120,7 +128,7 @@ export function RecapSkeleton() {
 
 export function RecapError({ onRetry }: { onRetry: () => void }) {
   return (
-    <Empty className="h-full px-6 py-10">
+    <Empty className="h-full w-full overflow-y-auto px-6 py-10 [scrollbar-gutter:stable] md:py-10">
       <EmptyHeader>
         <EmptyMedia variant="icon">
           <FolderWarningFill />
