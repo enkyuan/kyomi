@@ -30,6 +30,35 @@ describe("reader photo preview", () => {
       expect(document.body.querySelector(".PhotoView__Photo")?.getAttribute("src")).toBe(
         "https://example.com/photo.jpg",
       );
+      expect(
+        (document.body.querySelector(".PhotoView-Slider__Backdrop") as HTMLElement | null)?.style
+          .animationDuration,
+      ).toBe("180ms");
+    });
+  });
+
+  test("opens without motion from the keyboard", async () => {
+    const { container } = render(
+      <RenderHtml
+        html='<figure><img src="https://example.com/photo.jpg" alt="Previewable image" /></figure>'
+        baseUrl="https://example.com/p"
+      />,
+    );
+
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(root?.querySelector("[data-reader-photo-view]")).toBeTruthy();
+    });
+
+    fireEvent.keyDown(root!.querySelector<HTMLElement>("[data-reader-photo-view]")!, {
+      key: "Enter",
+    });
+
+    await waitFor(() => {
+      expect(
+        (document.body.querySelector(".PhotoView-Slider__Backdrop") as HTMLElement | null)?.style
+          .animationDuration,
+      ).toBe("0ms");
     });
   });
 });

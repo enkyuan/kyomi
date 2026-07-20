@@ -9,6 +9,17 @@ type ReaderPhoto = {
   alt?: string;
 };
 
+const PHOTO_TRANSITION_MS = 180;
+const PHOTO_OPEN_ANIMATION = 1;
+const PHOTO_SLIDE_ANIMATION = 3;
+
+export function getReaderPhotoTransitionSpeed(type: number, openedWithKeyboard: boolean) {
+  if (type === PHOTO_SLIDE_ANIMATION || (type === PHOTO_OPEN_ANIMATION && openedWithKeyboard)) {
+    return 0;
+  }
+  return PHOTO_TRANSITION_MS;
+}
+
 function getPhotoSrc(img: HTMLImageElement): string | null {
   const src = img.currentSrc || img.src || img.getAttribute("src");
   return src && src.trim().length > 0 ? src : null;
@@ -33,6 +44,7 @@ export function useReaderPhotoPreviewTargets() {
   const [photos, setPhotos] = useState<ReaderPhoto[]>([]);
   const [photoIndex, setPhotoIndex] = useState(0);
   const [photoVisible, setPhotoVisible] = useState(false);
+  const [photoOpenedWithKeyboard, setPhotoOpenedWithKeyboard] = useState(false);
 
   const disposePhotoPreviewTargets = useCallback(() => {
     for (let i = photoPreviewCleanupsRef.current.length - 1; i >= 0; i -= 1) {
@@ -79,7 +91,8 @@ export function useReaderPhotoPreviewTargets() {
       }
       target.setAttribute("aria-label", alt ? `Open image preview: ${alt}` : "Open image preview");
 
-      const openPhoto = () => {
+      const openPhoto = (openedWithKeyboard: boolean) => {
+        setPhotoOpenedWithKeyboard(openedWithKeyboard);
         setPhotoIndex(index);
         setPhotoVisible(true);
       };
@@ -95,7 +108,7 @@ export function useReaderPhotoPreviewTargets() {
         }
         event.preventDefault();
         event.stopPropagation();
-        openPhoto();
+        openPhoto(false);
       };
       const onKeyDown = (event: KeyboardEvent) => {
         if (event.key !== "Enter" && event.key !== " ") {
@@ -103,7 +116,7 @@ export function useReaderPhotoPreviewTargets() {
         }
         event.preventDefault();
         event.stopPropagation();
-        openPhoto();
+        openPhoto(true);
       };
 
       target.addEventListener("click", onClick);
@@ -153,12 +166,14 @@ export function useReaderPhotoPreviewTargets() {
     disposePhotoPreviewTargets();
     setPhotos([]);
     setPhotoVisible(false);
+    setPhotoOpenedWithKeyboard(false);
   }, [disposePhotoPreviewTargets]);
 
   return {
     disposePhotoPreviewTargets,
     installPhotoPreviewTargets,
     photoIndex,
+    photoOpenedWithKeyboard,
     photoVisible,
     photos,
     resetPhotoPreviewTargets,

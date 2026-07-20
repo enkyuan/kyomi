@@ -12,7 +12,7 @@ import { PhotoSlider } from "react-photo-view";
 import type { ReaderLayoutMode } from "../core/types";
 import { hasLikelyDelimitedTex } from "../shared/math";
 import { mountReaderLinkPreviewCards } from "./components/link-card";
-import { useReaderPhotoPreviewTargets } from "./html/photo-preview";
+import { getReaderPhotoTransitionSpeed, useReaderPhotoPreviewTargets } from "./html/photo-preview";
 import { prepareArticleHtml } from "./html/string-prep";
 import {
   runReaderCriticalDomEnhancements,
@@ -127,6 +127,7 @@ export function RenderHtml({
     disposePhotoPreviewTargets,
     installPhotoPreviewTargets,
     photoIndex,
+    photoOpenedWithKeyboard,
     photoVisible,
     photos,
     resetPhotoPreviewTargets,
@@ -338,9 +339,11 @@ export function RenderHtml({
     <>
       {articleBody}
       <PhotoSlider
+        easing={() => "cubic-bezier(0.23, 1, 0.32, 1)"}
         images={photos}
         visible={photoVisible && photos.length > 0}
         index={Math.min(photoIndex, Math.max(photos.length - 1, 0))}
+        speed={(type) => getReaderPhotoTransitionSpeed(type, photoOpenedWithKeyboard)}
         onIndexChange={setPhotoIndex}
         onClose={() => setPhotoVisible(false)}
       />

@@ -212,6 +212,21 @@
   outline-offset: 3px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .PhotoView__PhotoBox,
+  .PhotoView__PhotoWrap {
+    transition: none !important;
+  }
+
+  .PhotoView__Photo,
+  .PhotoView-Slider__Backdrop {
+    animation-duration: 150ms !important;
+    transition-duration: 150ms !important;
+    transition-property: opacity !important;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1) !important;
+  }
+}
+
 .reader-content .article-body [data-reader-media-aside] {
   display: flex;
   align-items: flex-start;
