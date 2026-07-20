@@ -1,9 +1,16 @@
 export type InboxFilter = "my-feed" | "all" | "saved" | "recent";
 export type LegacyInboxFilter = InboxFilter | "inbox" | "today" | "unread";
-export type InboxSort = "newest" | "oldest";
+export type InboxSort = "latest" | "oldest";
 
 const INBOX_PAGE_LIMIT = 100;
-const DEFAULT_SORT: InboxSort = "newest";
+const DEFAULT_SORT: InboxSort = "latest";
+
+export function normalizeInboxSort(value: unknown): InboxSort | undefined {
+  if (value === "latest" || value === "newest") {
+    return "latest";
+  }
+  return value === "oldest" ? value : undefined;
+}
 
 export function normalizeInboxFilter(filter: LegacyInboxFilter | undefined): InboxFilter {
   return filter === "inbox" || filter === "today" || filter === "unread" || filter === undefined

@@ -1,6 +1,23 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
-import { FilterControl } from "@modules/inbox/components/list/header";
+import { FilterControl, SortButton } from "@modules/inbox/components/list/header";
+
+describe("SortButton", () => {
+  test("uses Latest as the visible label and canonical sort token", async () => {
+    const onSortChange = vi.fn();
+
+    render(<SortButton sort="latest" onSortChange={onSortChange} />);
+
+    const trigger = screen.getByRole("button", { name: "Sort" });
+    expect(trigger.textContent).toContain("Latest");
+    expect(screen.queryByText("Newest")).toBeNull();
+
+    fireEvent.click(trigger);
+    fireEvent.click(await screen.findByRole("menuitem", { name: "Latest" }));
+
+    expect(onSortChange).toHaveBeenCalledWith("latest");
+  });
+});
 
 describe("FilterControl", () => {
   test("renders pinned folders in the All dropdown and selects a folder", () => {

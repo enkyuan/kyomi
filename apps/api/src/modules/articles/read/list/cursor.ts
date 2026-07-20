@@ -38,7 +38,7 @@ function parseMergedCursorPayload(trimmed: string): MergedCursorPayloadV1 {
   if (!raw || typeof raw !== "object") {
     invalidMergedCursor();
   }
-  const o = raw as Partial<MergedCursorPayloadV1>;
+  const o = raw as Omit<Partial<MergedCursorPayloadV1>, "s"> & { s?: unknown };
   if (o.v !== 1 || typeof o.pa !== "string" || typeof o.id !== "string" || !o.id.trim()) {
     invalidMergedCursor();
   }
@@ -47,7 +47,12 @@ function parseMergedCursorPayload(trimmed: string): MergedCursorPayloadV1 {
     pa: o.pa,
     id: o.id,
     r: typeof o.r === "boolean" ? o.r : undefined,
-    s: o.s === "oldest" || o.s === "unread-first" || o.s === "newest" ? o.s : undefined,
+    s:
+      o.s === "newest"
+        ? "latest"
+        : o.s === "oldest" || o.s === "unread-first" || o.s === "latest"
+          ? o.s
+          : undefined,
   };
 }
 

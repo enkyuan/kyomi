@@ -387,7 +387,7 @@ export async function listMergedTodayView(
   userId: string,
   limit: number,
   cursor?: string,
-  sort: ArticleSort = "newest",
+  sort: ArticleSort = "latest",
 ) {
   const boundary = decodeMergedListCursor(cursor);
   const take = perSourceFetchLimit(limit);
@@ -417,7 +417,7 @@ export async function listMergedRecentlyReadView(
   userId: string,
   limit: number,
   cursor?: string,
-  sort: ArticleSort = "newest",
+  sort: ArticleSort = "latest",
   search?: string,
 ) {
   const boundary = decodeRecentViewCursor(cursor);
@@ -435,7 +435,7 @@ export async function listMergedSavedView(
   userId: string,
   limit: number,
   cursor?: string,
-  sort: ArticleSort = "newest",
+  sort: ArticleSort = "latest",
 ) {
   const boundary = decodeMergedListCursor(cursor);
   const take = perSourceFetchLimit(limit);

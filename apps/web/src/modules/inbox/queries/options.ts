@@ -11,7 +11,7 @@ import { getInboxRecap } from "../lib/recap/api";
 import { getTimezoneOffsetMinutes, QUERY_TIMES } from "@lib/query/policies";
 
 const DEFAULT_INBOX_FILTER: InboxFilter = "my-feed";
-const DEFAULT_INBOX_SORT: InboxSort = "newest";
+const DEFAULT_INBOX_SORT: InboxSort = "latest";
 const INBOX_LIST_QUERY_VERSION = 4;
 export const ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS = 2_500;
 export const IDLE_FEED_REFRESH_POLL_INTERVAL_MS = 30_000;

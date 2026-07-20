@@ -12,10 +12,10 @@ export type ParsedListQuery = {
   publishedBefore: Date | undefined;
 };
 
-export type ArticleSort = "newest" | "oldest" | "unread-first";
+export type ArticleSort = "latest" | "oldest" | "unread-first";
 
 function parseArticleSort(value: unknown): ArticleSort {
-  return value === "oldest" || value === "unread-first" ? value : "newest";
+  return value === "oldest" || value === "unread-first" ? value : "latest";
 }
 
 export function parseOptionalIsoDate(value: unknown): Date | undefined {

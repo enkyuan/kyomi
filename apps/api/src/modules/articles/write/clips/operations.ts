@@ -368,7 +368,7 @@ async function listClipRows(
   opts: ListClipsOptions,
   take: number,
 ): Promise<(typeof articleClips.$inferSelect)[]> {
-  const sort = opts.sort ?? "newest";
+  const sort = opts.sort ?? "latest";
   const filters: SQL[] = [eq(articleClips.userId, userId)];
   if (opts.isRead === true) {
     filters.push(eq(articleClips.isRead, true));

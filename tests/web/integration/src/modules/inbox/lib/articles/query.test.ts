@@ -1,5 +1,9 @@
 import { describe, expect, test } from "vitest";
-import { buildArticlesUrl, buildInboxListUrl } from "@modules/inbox/lib/articles/query";
+import {
+  buildArticlesUrl,
+  buildInboxListUrl,
+  normalizeInboxSort,
+} from "@modules/inbox/lib/articles/query";
 
 describe("inbox query URLs", () => {
   test("uses subscribed feed articles for My Feed without a day window", () => {
@@ -62,5 +66,21 @@ describe("inbox query URLs", () => {
         sort: undefined,
       }),
     ).toBe("/api/v1/articles/views/recently-read?limit=100&search=browser");
+  });
+
+  test("uses latest as the default token and migrates legacy newest links", () => {
+    expect(normalizeInboxSort("latest")).toBe("latest");
+    expect(normalizeInboxSort("newest")).toBe("latest");
+
+    expect(
+      buildInboxListUrl({
+        filter: "all",
+        timezoneOffsetMinutes: 300,
+        includeRead: false,
+        search: undefined,
+        cursor: undefined,
+        sort: "latest",
+      }),
+    ).toBe("/api/v1/articles/views/all?limit=100");
   });
 });
