@@ -60,19 +60,16 @@ export function Login({ redirect }: { redirect?: string }) {
           error: (error) => {
             logClientError("auth.login", error);
             return {
-              description: getUserSafeErrorMessage(error, "Invalid email or password"),
-              title: "Login failed",
+              title: getUserSafeErrorMessage(error, "Invalid email or password"),
               type: "error",
             };
           },
           loading: {
-            description: "Authenticating your account.",
             timeout: 0,
             title: "Logging in…",
             type: "loading",
           },
           success: {
-            description: "Redirecting to your inbox.",
             title: "Logged in",
             type: "success",
           },

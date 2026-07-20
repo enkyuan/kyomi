@@ -2,7 +2,7 @@
 
 import { startTransition, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { logClientError } from "@lib/errors";
 import { CommandDialog, CommandDialogPortal, CommandDialogPrimitive } from "@kyomi/ui/command";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";
@@ -123,17 +123,6 @@ function formatOpmlImportProgress(status: OpmlImportStatus) {
   }
   const completed = Math.min(status.summary.completed, total);
   return `${completed} of ${total} feeds imported.`;
-}
-
-function formatOpmlImportCompletion(status: OpmlImportStatus) {
-  const parts = [
-    `${status.summary.subscribed} added`,
-    `${status.summary.alreadySubscribed} already followed`,
-  ];
-  if (status.summary.failed > 0) {
-    parts.push(`${status.summary.failed} failed`);
-  }
-  return parts.join(". ");
 }
 
 type FollowSourcesDialogProps = {
@@ -258,7 +247,6 @@ export function FollowSourcesDialog({
       logClientError("feeds.follow", error);
       toastManager.add({
         title: "Unable to follow feed",
-        description: getUserSafeErrorMessage(error, "Try another topic or feed URL."),
         type: "error",
       });
     },
@@ -299,8 +287,7 @@ export function FollowSourcesDialog({
           : `opml-import-${Date.now()}`;
       const loadingToast = {
         id: toastId,
-        title: "Importing feeds...",
-        description: "Starting OPML import.",
+        title: "Starting OPML import…",
         type: "loading",
         timeout: 0,
         data: {
@@ -322,8 +309,7 @@ export function FollowSourcesDialog({
           const finalStatus = await pollOpmlImportStatus(accepted.taskId, {
             onStatus: (status) => {
               toastManager.update(toastId, {
-                title: "Importing feeds...",
-                description: formatOpmlImportProgress(status),
+                title: formatOpmlImportProgress(status),
                 type: "loading",
                 timeout: 0,
                 data: {
@@ -358,7 +344,6 @@ export function FollowSourcesDialog({
           loading: loadingToast,
           success: (status) => ({
             title: `Imported ${getImportedCount(status)} of ${status.summary.totalUrls} feeds`,
-            description: formatOpmlImportCompletion(status),
             type: "success",
             timeout: 3000,
             data: undefined,
@@ -367,7 +352,6 @@ export function FollowSourcesDialog({
             logClientError("feeds.opml_import", error);
             return {
               title: "Unable to import feeds",
-              description: getUserSafeErrorMessage(error, "Try another OPML URL."),
               type: "error",
               timeout: 7000,
               data: undefined,

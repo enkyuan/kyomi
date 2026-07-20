@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { logClientError } from "@lib/errors";
 import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-data";
 import type { AnchoredToolbarActionOptions, ArticleActionItem, ToolbarSide } from "../lib/types";
 
@@ -60,7 +60,6 @@ export function useArticleActions({
           logClientError(saveErrorScope, error);
           toastManager.add({
             title: nextSaved ? "Unable to save article" : "Unable to update article",
-            description: getUserSafeErrorMessage(error, "Try again in a moment."),
             type: "error",
           });
         });

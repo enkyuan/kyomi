@@ -66,19 +66,16 @@ export function Register({ redirect }: { redirect?: string }) {
           error: (error) => {
             logClientError("auth.register", error);
             return {
-              description: getUserSafeErrorMessage(error, "An error occurred during sign up"),
-              title: "Sign up failed",
+              title: getUserSafeErrorMessage(error, "Sign up failed"),
               type: "error",
             };
           },
           loading: {
-            description: "Creating your account.",
             timeout: 0,
             title: "Signing up…",
             type: "loading",
           },
           success: {
-            description: "Redirecting to your inbox.",
             title: "Account created",
             type: "success",
           },

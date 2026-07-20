@@ -68,7 +68,6 @@ export function useReaderToolbar({
       onOpenAi: () => {
         toastManager.add({
           title: "AI tools coming soon",
-          description: "This button is reserved for article-side LLM actions.",
           type: "info",
         });
       },
@@ -90,7 +89,6 @@ export function useReaderToolbar({
       onTranslateArticle: () => {
         toastManager.add({
           title: "Translation coming soon",
-          description: "This button is reserved for article translation.",
           type: "info",
         });
       },

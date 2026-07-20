@@ -7,6 +7,7 @@ import type React from "react";
 import { buttonVariants } from "../button";
 import { cn } from "../lib/utils";
 import { ToastStatusIcon } from "./status-icon";
+import { useToastSquircle } from "./use-toast-squircle";
 import { getAnchorRect, type AnchoredToastData, type AnchorRect } from "./utils";
 
 const ANCHORED_TOAST_VIEWPORT_STYLE = {
@@ -73,6 +74,8 @@ function AnchoredToastItem({
   const positionerProps = toast.positionerProps;
   const liveAnchorRect = useAnchorRect(positionerProps?.anchor);
   const anchorRect = liveAnchorRect ?? toastData?.anchorRect ?? null;
+  const cornerRadius = tooltipStyle ? 8 : 14;
+  const { squircleRef, squircleStyle } = useToastSquircle(cornerRadius);
 
   if (!anchorRect) {
     return null;
@@ -100,32 +103,36 @@ function AnchoredToastItem({
       <Toast.Root
         className={cn(
           "relative text-balance border border-border bg-popover not-dark:bg-clip-padding text-popover-foreground text-xs transition-[scale,opacity] before:pointer-events-none before:absolute before:inset-0 before:shadow-[0_1px_--theme(--color-black/4%)] data-ending-style:scale-98 data-starting-style:scale-98 data-ending-style:opacity-0 data-starting-style:opacity-0 pointer-events-auto dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
-          tooltipStyle
-            ? "rounded-md shadow-md/5 before:rounded-[calc(var(--radius-md)-1px)]"
-            : "rounded-lg shadow-lg/5 before:rounded-[calc(var(--radius-lg)-1px)]",
+          tooltipStyle ? "shadow-md/5" : "shadow-lg/5",
         )}
         data-slot="toast-popup"
+        data-squircle={cornerRadius}
+        ref={squircleRef}
+        style={squircleStyle}
         toast={toast}
       >
         {tooltipStyle ? (
-          <Toast.Content className="pointer-events-auto px-2 py-1">
-            <Toast.Title data-slot="toast-title" />
+          <Toast.Content className="pointer-events-auto min-w-0 overflow-hidden px-2 py-1">
+            <Toast.Title
+              className="block min-w-0 truncate whitespace-nowrap"
+              data-slot="toast-title"
+            />
           </Toast.Content>
         ) : (
-          <Toast.Content className="pointer-events-auto flex items-center justify-between gap-1.5 overflow-hidden px-3.5 py-3 text-sm">
-            <div className="flex gap-2">
+          <Toast.Content className="pointer-events-auto flex min-w-0 items-center justify-between gap-1.5 overflow-hidden px-3.5 py-3 text-sm">
+            <div className="flex min-w-0 flex-1 items-center gap-2">
               <ToastStatusIcon toast={toast} />
 
-              <div className="flex flex-col gap-0.5">
-                <Toast.Title className="font-medium" data-slot="toast-title" />
-                <Toast.Description
-                  className="text-muted-foreground"
-                  data-slot="toast-description"
-                />
-              </div>
+              <Toast.Title
+                className="block min-w-0 flex-1 truncate whitespace-nowrap font-medium"
+                data-slot="toast-title"
+              />
             </div>
             {toast.actionProps && (
-              <Toast.Action className={buttonVariants({ size: "xs" })} data-slot="toast-action">
+              <Toast.Action
+                className={cn(buttonVariants({ size: "xs" }), "shrink-0")}
+                data-slot="toast-action"
+              >
                 {toast.actionProps.children}
               </Toast.Action>
             )}

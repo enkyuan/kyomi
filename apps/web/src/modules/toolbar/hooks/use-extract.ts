@@ -56,7 +56,6 @@ export function useReaderExtract({
       void toastManager.promise(extractionPromise, {
         loading: {
           title: "Extracting full text...",
-          description: "Fetching full article text.",
           type: "loading",
           timeout: 0,
         },
@@ -64,22 +63,16 @@ export function useReaderExtract({
           result.status === "ready"
             ? {
                 title: "Full text ready",
-                description: "Article content has been refreshed.",
                 type: "success",
               }
             : {
                 title: "Extraction queued",
-                description: "The article will update when full text is ready.",
                 type: "info",
               },
         error: (error) => {
           logClientError("reader.extract", error);
           return {
-            title: "Extraction failed",
-            description: getUserSafeErrorMessage(
-              error,
-              "Could not fetch extracted article content.",
-            ),
+            title: getUserSafeErrorMessage(error, "Could not extract article content"),
             type: "error",
           };
         },

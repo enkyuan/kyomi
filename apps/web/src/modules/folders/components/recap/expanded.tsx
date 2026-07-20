@@ -26,7 +26,7 @@ import { Input } from "@kyomi/ui/input";
 import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import { toastManager } from "@kyomi/ui/toast";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { logClientError } from "@lib/errors";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import { deleteFolder, updateFolder, type Folder } from "@modules/folders/lib/api";
 import { applyFolderPinState } from "@modules/folders/queries/cache";
@@ -112,7 +112,6 @@ export function ExpandedFolders({
       logClientError("inbox.recap.folder.rename", error);
       toastManager.add({
         title: "Unable to rename folder",
-        description: getUserSafeErrorMessage(error, "Try a different name."),
         type: "error",
       });
     },
@@ -127,8 +126,7 @@ export function ExpandedFolders({
         invalidateRecapSurface(queryClient),
       ]);
       toastManager.add({
-        title: "Folder deleted",
-        description: "Feeds moved to Unsorted.",
+        title: "Folder deleted; feeds moved to Unsorted",
         type: "success",
       });
     },
@@ -136,7 +134,6 @@ export function ExpandedFolders({
       logClientError("inbox.recap.folder.delete", error);
       toastManager.add({
         title: "Unable to delete folder",
-        description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });
     },
@@ -177,7 +174,6 @@ export function ExpandedFolders({
       logClientError("inbox.recap.folder.pin", error);
       toastManager.add({
         title: "Unable to update folder pin",
-        description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });
     },

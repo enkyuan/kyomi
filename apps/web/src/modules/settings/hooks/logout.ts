@@ -34,19 +34,16 @@ export function useSettingsLogout({ onOpenChange }: UseSettingsLogoutArgs) {
         error: (error) => {
           logClientError("settings.logout", error);
           return {
-            description: getUserSafeErrorMessage(error, "Unable to log out"),
-            title: "Log out failed",
+            title: getUserSafeErrorMessage(error, "Unable to log out"),
             type: "error",
           };
         },
         loading: {
-          description: "Ending your current session.",
           timeout: 0,
           title: "Logging out...",
           type: "loading",
         },
         success: {
-          description: "You have been signed out.",
           title: "Logged out",
           type: "success",
         },

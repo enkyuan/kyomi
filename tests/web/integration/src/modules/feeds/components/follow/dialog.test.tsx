@@ -5,7 +5,6 @@ import {
   QueryClientProvider,
 } from "../../../../../../../../apps/web/node_modules/@tanstack/react-query";
 import { cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
-import type { ReactNode } from "react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import type { OpmlImportStatusDto } from "@lib/schemas";
 import type { PlatformState } from "@hooks/use-platform";
@@ -214,7 +213,7 @@ describe("SourcesDialog OPML import", () => {
     expect(mocks.toastUpdate).toHaveBeenCalledWith(
       expect.stringMatching(/^opml-import-/),
       expect.objectContaining({
-        description: "2 of 2 feeds imported.",
+        title: "2 of 2 feeds imported.",
         data: {
           progress: {
             value: 2,
@@ -235,12 +234,10 @@ describe("SourcesDialog OPML import", () => {
         loading: { timeout: number };
         success: (status: OpmlImportStatusDto) => {
           title: string;
-          description: ReactNode;
           timeout: number;
         };
         error: (error: unknown) => {
           title: string;
-          description: string;
           timeout: number;
         };
       },

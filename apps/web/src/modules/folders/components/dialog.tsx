@@ -19,7 +19,7 @@ import { Field, FieldError } from "@kyomi/ui/field";
 import { Form } from "@kyomi/ui/form";
 import { Input } from "@kyomi/ui/input";
 import { toastManager } from "@kyomi/ui/toast";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { logClientError } from "@lib/errors";
 import { createFolder } from "@modules/folders/lib/api";
 
 type CreateFolderDialogProps = {
@@ -99,7 +99,7 @@ export function CreateFolderDialog({
   const createFolderMutation = useMutation({
     mutationFn: ({ folderName }: { folderName: string }) =>
       createFolder({ data: { name: folderName } }),
-    onSuccess: async (folder) => {
+    onSuccess: async () => {
       await queryClient.invalidateQueries({
         queryKey: ["folders"],
       });
@@ -109,7 +109,6 @@ export function CreateFolderDialog({
       setDialogOpen(false);
       toastManager.add({
         title: "Folder created",
-        description: folder.name,
         type: "success",
       });
     },
@@ -117,7 +116,6 @@ export function CreateFolderDialog({
       logClientError("folders.create", error);
       toastManager.add({
         title: "Unable to create folder",
-        description: getUserSafeErrorMessage(error, "Try a different folder name."),
         type: "error",
       });
     },

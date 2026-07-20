@@ -3,15 +3,55 @@
 import { act, render, screen, waitFor } from "@testing-library/react";
 import { afterEach, describe, expect, test, vi } from "vitest";
 import { Dialog, DialogBackdrop, DialogPortal, DialogPrimitive } from "@kyomi/ui/dialog";
-import { AnchoredToastProvider, ToastProvider, anchoredToastManager } from "@kyomi/ui/toast";
+import {
+  AnchoredToastProvider,
+  ToastProvider,
+  anchoredToastManager,
+  toastManager,
+} from "@kyomi/ui/toast";
 
-describe("AnchoredToastProvider", () => {
-  afterEach(() => {
+afterEach(() => {
+  act(() => {
+    toastManager.close();
+    anchoredToastManager.close();
+  });
+  vi.restoreAllMocks();
+});
+
+describe("ToastProvider", () => {
+  test("renders title-only toast content on a measured squircle", async () => {
+    vi.spyOn(HTMLElement.prototype, "offsetWidth", "get").mockReturnValue(360);
+    vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(44);
+
+    render(<ToastProvider />);
+
     act(() => {
-      anchoredToastManager.close();
+      toastManager.add({
+        title: "A concise single-line update",
+        description: "This secondary line must not render.",
+        timeout: 0,
+        type: "success",
+      });
+    });
+
+    const title = await screen.findByText("A concise single-line update");
+    const popup = title.closest('[data-slot="toast-popup"]') as HTMLElement | null;
+
+    expect(screen.queryByText("This secondary line must not render.")).toBeNull();
+    expect(title.className).toContain("truncate");
+    expect(title.className).toContain("whitespace-nowrap");
+    expect(popup?.className.split(" ")).toContain("w-fit");
+    expect(popup?.className.split(" ")).toContain("max-w-full");
+    expect(popup?.className.split(" ")).not.toContain("w-full");
+    expect(popup?.dataset.squircle).toBe("14");
+    await waitFor(() => {
+      expect(popup?.style.clipPath).toMatch(/^path\('/);
+      expect(popup?.style.borderRadius).toBe("14px");
     });
   });
+});
 
+describe("AnchoredToastProvider", () => {
   test("positions an anchored toast against a connected anchor", async () => {
     render(
       <AnchoredToastProvider>
@@ -49,14 +89,67 @@ describe("AnchoredToastProvider", () => {
     });
 
     await waitFor(() => {
-      const positioner = screen
-        .getByText("Following!")
-        .closest('[data-slot="toast-positioner"]') as HTMLElement | null;
+      const title = screen.getByText("Following!");
+      const positioner = title.closest('[data-slot="toast-positioner"]') as HTMLElement | null;
+      const popup = title.closest('[data-slot="toast-popup"]') as HTMLElement | null;
       expect(positioner).not.toBeNull();
       expect(positioner?.style.position).toBe("fixed");
       expect(positioner?.style.left).toBe("92px");
       expect(positioner?.style.top).toBe("90px");
       expect(positioner?.style.transform).toBe("translate(-50%, -100%)");
+      expect(title.className).toContain("whitespace-nowrap");
+      expect(popup?.dataset.squircle).toBe("8");
+      expect(popup?.style.borderRadius).toBe("8px");
+    });
+  });
+
+  test("keeps a standard anchored toast title-only and applies its squircle path", async () => {
+    vi.spyOn(HTMLElement.prototype, "offsetWidth", "get").mockReturnValue(240);
+    vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(44);
+
+    render(
+      <AnchoredToastProvider>
+        <button type="button">Move feed</button>
+      </AnchoredToastProvider>,
+    );
+    const anchor = screen.getByRole("button", { name: "Move feed" });
+    vi.spyOn(anchor, "getBoundingClientRect").mockReturnValue({
+      bottom: 120,
+      height: 24,
+      left: 80,
+      right: 104,
+      top: 96,
+      width: 24,
+      x: 80,
+      y: 96,
+      toJSON: () => ({}),
+    });
+
+    act(() => {
+      anchoredToastManager.add({
+        title: "Feed moved",
+        description: "This secondary line must not render.",
+        type: "success",
+        timeout: 0,
+        positionerProps: {
+          anchor,
+          side: "top",
+          align: "center",
+          sideOffset: 6,
+          positionMethod: "fixed",
+        },
+      });
+    });
+
+    const title = await screen.findByText("Feed moved");
+    const popup = title.closest('[data-slot="toast-popup"]') as HTMLElement | null;
+
+    expect(screen.queryByText("This secondary line must not render.")).toBeNull();
+    expect(title.className).toContain("whitespace-nowrap");
+    expect(popup?.dataset.squircle).toBe("14");
+    await waitFor(() => {
+      expect(popup?.style.clipPath).toMatch(/^path\('/);
+      expect(popup?.style.borderRadius).toBe("14px");
     });
   });
 

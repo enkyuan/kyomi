@@ -146,10 +146,10 @@ export function ExpandedFolderFeeds({
       return;
     }
     downloadSelectedOpml(folder, feedsToExport);
+    const title =
+      typeof description === "function" ? description(feedsToExport.length) : description;
     toastManager.add({
-      title: "OPML exported",
-      description:
-        typeof description === "function" ? description(feedsToExport.length) : description,
+      title,
       type: "success",
     });
   };
