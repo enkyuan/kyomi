@@ -252,7 +252,14 @@ export const mergedArticleViewsQuerySchema = t.Object({
   limit: t.Optional(t.String()),
   cursor: t.Optional(t.String()),
   search: t.Optional(t.String()),
-  sort: t.Optional(t.Union([t.Literal("newest"), t.Literal("oldest"), t.Literal("unread-first")])),
+  sort: t.Optional(
+    t.Union([
+      t.Literal("latest"),
+      t.Literal("oldest"),
+      t.Literal("unread-first"),
+      t.Literal("newest"),
+    ]),
+  ),
 });
 
 export const checkSavedQuerySchema = t.Object({

@@ -1,4 +1,5 @@
 import type { InboxFilter, InboxSort } from "./articles/index";
+import { normalizeInboxSort } from "./articles/query";
 import {
   isInboxRecapRailFolderBackTarget,
   isInboxRecapRailSection,
@@ -40,7 +41,7 @@ export function validateInboxSearch(search: Record<string, unknown>): InboxSearc
     return undefined;
   })();
 
-  const sort = search.sort === "newest" || search.sort === "oldest" ? search.sort : undefined;
+  const sort = normalizeInboxSort(search.sort);
   const rail = isInboxRecapRailSection(search.rail) ? search.rail : undefined;
   const railFolderId = rail === "folders" ? parseOptionalString(search.railFolderId) : undefined;
   const railFolderBack =

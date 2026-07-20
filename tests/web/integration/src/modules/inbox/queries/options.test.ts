@@ -271,8 +271,8 @@ describe("inbox prefetch", () => {
         (options) => (options as { queryKey: readonly unknown[] }).queryKey,
       ),
     ).toEqual([
-      ["inbox", "items", 4, "all", undefined, undefined, undefined, false, "newest", 300],
-      ["inbox", "items", 4, "my-feed", undefined, undefined, undefined, false, "newest", 300],
+      ["inbox", "items", 4, "all", undefined, undefined, undefined, false, "latest", 300],
+      ["inbox", "items", 4, "my-feed", undefined, undefined, undefined, false, "latest", 300],
     ]);
     expect(prefetchQueryCalls).toHaveLength(1);
   });

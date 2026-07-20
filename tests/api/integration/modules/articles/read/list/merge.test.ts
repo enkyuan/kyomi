@@ -20,7 +20,7 @@ const feed = (id: string, at: string): ArticleListItemDto => ({
 });
 
 describe("mergeArticleItemsByDate", () => {
-  test("orders newest first and caps limit", () => {
+  test("orders latest first and caps limit", () => {
     const merged = mergeArticleItemsByDate(
       [
         [feed("a", "2024-01-01T00:00:00.000Z"), feed("b", "2024-06-01T00:00:00.000Z")],
