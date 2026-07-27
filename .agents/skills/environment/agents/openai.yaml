@@ -1,0 +1,4 @@
+interface:
+  display_name: "Environment"
+  short_description: "Manage Kyomi env contracts safely"
+  default_prompt: "Use $environment to add or change this Kyomi environment variable without exposing secrets."

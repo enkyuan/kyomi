@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile"
+  short_description: "Build native Kyomi mobile experiences"
+  default_prompt: "Use $mobile to build this Kyomi mobile change with Expo Router, @expo/ui, and platform-native iOS and Android boundaries."

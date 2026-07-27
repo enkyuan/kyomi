@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web"
+  short_description: "Build Kyomi web features by domain"
+  default_prompt: "Use $web to implement this Kyomi web change in the correct domain and shared boundary."
