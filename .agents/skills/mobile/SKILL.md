@@ -1,6 +1,6 @@
 ---
 name: mobile
-description: Build, refactor, review, or debug the Kyomi Expo Router mobile application in apps/mobile. Use for route and domain structure, @expo/ui universal components, platform-native SwiftUI and Jetpack Compose renderers, Material 3 Expressive, React Native or Uniwind surfaces, native-safe shared UI, reader native or WebView integration, mobile data and persistence, Expo configuration, Swift or Kotlin Expo modules, iOS or Android work, and mobile tests. Use when deciding whether behavior belongs in an Expo route, a mobile domain, packages/ui, packages/reader, an @expo/ui platform component, or a native module. Not for web-only, API-only, or final repository-wide verification work.
+description: Build, refactor, review, or debug the Kyomi Expo Router mobile application in apps/mobile. Use for route and domain structure, Uniwind-first React Native styling, @expo/ui universal components, platform-native SwiftUI and Jetpack Compose renderers, Material 3 Expressive, active mobile dependency selection, native-safe shared UI, reader native or WebView integration, mobile data and persistence, Expo configuration, Swift or Kotlin Expo modules, iOS or Android work, and mobile tests. Use when deciding whether behavior belongs in an Expo route, a mobile domain, packages/ui, packages/reader, an existing apps/mobile dependency, an @expo/ui platform component, or a native module. Not for web-only, API-only, or final repository-wide verification work.
 ---
 
 # Mobile
@@ -11,11 +11,13 @@ Build one Kyomi product language with platform-native iOS and Android expression
 
 1. Read `AGENTS.md`, `apps/mobile/README.md`, `apps/mobile/app.json`, the nearest route and domain,
    relevant package exports, and any active mobile implementation plan.
-2. Inspect `apps/mobile/package.json` and the installed Expo package types before assuming an SDK,
-   component, modifier, or native-build capability.
-3. Treat `apps/mobile` as an evolving product, not a template. Add structure only for present
+2. Inventory `apps/mobile/package.json`, actual imports, configuration, and installed package types
+   before selecting a library or assuming an SDK, component, modifier, or native-build capability.
+   Package presence means the capability is available, not that product behavior is implemented.
+3. Prefer an active dependency or public `@kyomi/*` contract over adding an overlapping library.
+4. Treat `apps/mobile` as an evolving product, not a template. Add structure only for present
    behavior and preserve decisions already established by an active plan.
-4. Load `$architecture` before adding a domain convention, native dependency, test runner, shared
+5. Load `$architecture` before adding a domain convention, native dependency, test runner, shared
    entrypoint, or platform-specific ownership. Add `$packages`, `$design`, `$security`,
    `$environment`, and `$testing` when their boundaries apply.
 
@@ -79,9 +81,31 @@ apps/mobile/src/
 3. Use paired `@expo/ui/swift-ui` and `@expo/ui/jetpack-compose` renderers when the feature needs
    platform-specific hierarchy, behavior, components, modifiers, or expression.
 4. Use React Native for custom cross-platform composition, renderer fallbacks, and native-safe
-   islands. Keep current Uniwind usage only where the owning React Native surface supports it.
+   islands. Style these surfaces with Uniwind instead of `StyleSheet` when Uniwind can express the
+   requirement.
 5. Write Swift or Kotlin only behind an Expo Modules API boundary when the layers above cannot meet
    a concrete requirement.
+
+## Style React Native with Uniwind
+
+- Prefer `className` on React Native `View`, `Text`, `Pressable`, `TextInput`, images, and list
+  surfaces for static layout, spacing, sizing, typography, semantic colors, borders, radii,
+  opacity, transforms, platform variants, and interaction states.
+- Prefer mapped props such as `contentContainerClassName`, `placeholderTextColorClassName`,
+  `tintColorClassName`, and `colorClassName` over their style or raw-color equivalents. Use
+  Uniwind's `accent-*` utilities for mapped non-style color props.
+- Keep shared fonts and semantic roles in `src/global.css`; use complete utility strings that the
+  Tailwind compiler can discover. Select between complete strings for runtime variants instead of
+  interpolating utility names.
+- Wrap a reusable third-party React Native component once with `withUniwind` when it forwards
+  compatible style or color props. Use `useResolveClassNames` only for an API that requires a style
+  object and cannot be wrapped cleanly.
+- Use `style`, `contentContainerStyle`, or `StyleSheet` only for values that must remain runtime
+  objects: Reanimated worklet output, continuously computed geometry, native opaque color values,
+  an unsupported third-party prop, or an `@expo/ui` host constraint. Keep the exception narrow and
+  do not duplicate the same responsibility in both `className` and `style`.
+- Do not pass Uniwind classes into SwiftUI or Jetpack Compose components. Use their native props,
+  modifiers, typography, colors, and motion APIs.
 
 For every `@expo/ui` tree:
 
@@ -96,6 +120,21 @@ For every `@expo/ui` tree:
 Read [native-interface.md](references/native-interface.md) before designing a screen, changing
 shared mobile presentation contracts, using SwiftUI or Material 3 Expressive, or writing native
 Swift or Kotlin.
+
+## Use active dependencies
+
+Read [dependencies.md](references/dependencies.md) before adding, replacing, upgrading, or directly
+using a mobile dependency.
+
+- Treat `apps/mobile/package.json` and installed types as version authority; treat the dependency
+  reference as ownership guidance.
+- Reuse the existing auth, native UI, navigation, font, storage, linking, network, motion, SVG,
+  safe-area, and Uniwind stack instead of installing parallel libraries.
+- Do not import framework transport packages merely because they are declared, and do not call a
+  configured dependency unused without checking config plugins, Metro, native projects, and
+  transitive runtime requirements.
+- Install Expo-governed packages with `bunx expo install`; use
+  `bun add --cwd apps/mobile <package>` for other approved additions.
 
 ## Preserve native boundaries
 
@@ -115,10 +154,11 @@ Swift or Kotlin.
 1. Note that no mobile test runner is currently wired. Use `$architecture` and `$testing` before
    introducing the first runner or mobile test tree.
 2. Run `bun run --cwd apps/mobile typecheck`, `lint`, and `fmt:check`.
-3. Bundle or run every affected platform. Platform-specific imports require both iOS and Android
+3. Run `bunx expo install --check` when the Expo or React Native dependency graph changes.
+4. Bundle or run every affected platform. Platform-specific imports require both iOS and Android
    verification; include the fallback target when it changed.
-4. Check Dynamic Type or font scaling, screen readers, focus order, hit targets, dark appearance,
+5. Check Dynamic Type or font scaling, screen readers, focus order, hit targets, dark appearance,
    reduced motion, loading, empty, error, and offline states as applicable.
-5. Use Expo Go when the installed dependencies support it. Use a development build and real native
+6. Use Expo Go when the installed dependencies support it. Use a development build and real native
    target when local modules, config plugins, platform code, or native configuration changes.
-6. Finish through `$qa`.
+7. Finish through `$qa`.
