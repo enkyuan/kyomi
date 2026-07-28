@@ -1,19 +1,17 @@
 {
   "expo": {
-    "scheme": "acme",
+    "scheme": "kyomi",
     "userInterfaceStyle": "automatic",
     "orientation": "default",
     "web": {
       "output": "static"
     },
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "Kyomi",
+    "slug": "kyomi",
     "experiments": {
       "reactCompiler": true
     },
-    "plugins": [
-      "expo-router"
-    ],
+    "plugins": ["expo-router"],
     "android": {
       "package": "com.anonymous.mobile"
     },
