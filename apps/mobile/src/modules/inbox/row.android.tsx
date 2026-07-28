@@ -14,7 +14,7 @@ import {
   type ModifierConfig,
 } from "@expo/ui/jetpack-compose/modifiers";
 
-import { MingcuteIcon } from "@/components/mingcute-icon";
+import { MingcuteIcon } from "@/components/icons";
 
 import type { InboxRowProps } from "./model";
 

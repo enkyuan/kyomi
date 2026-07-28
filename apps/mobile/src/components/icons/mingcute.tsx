@@ -16,7 +16,7 @@ export function MingcuteIcon({ icon, color, size = 20, decorative = true }: Ming
       accessible={!decorative}
       accessibilityElementsHidden={decorative}
       importantForAccessibility={decorative ? "no-hide-descendants" : "auto"}
-      style={{ width: size, height: size }}
+      style={{ height: size, width: size }}
     >
       <Svg
         accessibilityRole={decorative ? undefined : "image"}

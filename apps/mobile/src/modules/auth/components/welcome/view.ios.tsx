@@ -20,15 +20,10 @@ import {
 import { useWindowDimensions } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { GoogleLogoMark } from "@/components/google-logo-mark";
-import { KyomiLogoMark } from "@/components/kyomi-logo-mark";
+import { GoogleIcon, KyomiIcon } from "@/components/icons";
 
 import type { AuthActionModel, AuthWelcomeModel } from "../model";
-import {
-  authLayoutTokens,
-  authWelcomeColors,
-  resolveAuthPanelRadius,
-} from "../tokens";
+import { authLayoutTokens, authWelcomeColors, resolveAuthPanelRadius } from "../tokens";
 
 function WelcomeAction({
   action,
@@ -60,7 +55,7 @@ function WelcomeAction({
       <HStack alignment="center" spacing={8}>
         {isGoogle ? (
           <RNHostView matchContents>
-            <GoogleLogoMark size={18} />
+            <GoogleIcon size={18} />
           </RNHostView>
         ) : null}
         <Text
@@ -103,7 +98,7 @@ export function AuthWelcomeView({ model }: { model: AuthWelcomeModel }) {
             <Spacer />
             <HStack alignment="center" spacing={authLayoutTokens.brandGap}>
               <RNHostView matchContents>
-                <KyomiLogoMark size={authLayoutTokens.heroMarkSize} />
+                <KyomiIcon size={authLayoutTokens.heroMarkSize} />
               </RNHostView>
               <Text modifiers={[font({ textStyle: "largeTitle", weight: "bold" })]}>
                 {model.wordmark}
@@ -162,7 +157,7 @@ export function AuthWelcomeView({ model }: { model: AuthWelcomeModel }) {
                   ]}
                 >
                   <RNHostView matchContents>
-                    <KyomiLogoMark size={authLayoutTokens.panelBadgeMarkSize} />
+                    <KyomiIcon size={authLayoutTokens.panelBadgeMarkSize} />
                   </RNHostView>
                 </ZStack>
 

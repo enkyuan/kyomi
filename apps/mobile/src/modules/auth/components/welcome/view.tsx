@@ -11,8 +11,7 @@ import {
 } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { GoogleLogoMark } from "@/components/google-logo-mark";
-import { KyomiLogoMark } from "@/components/kyomi-logo-mark";
+import { GoogleIcon, KyomiIcon } from "@/components/icons";
 
 import type { AuthActionModel, AuthWelcomeModel } from "../model";
 import {
@@ -53,7 +52,7 @@ function WelcomeAction({
       onPress={action.onPress}
       style={({ pressed }) => actionStyle(kind, pressed, action.enabled)}
     >
-      {kind === "google" ? <GoogleLogoMark size={18} /> : null}
+      {kind === "google" ? <GoogleIcon size={18} /> : null}
       <Text style={styles.actionText}>{action.label}</Text>
     </Pressable>
   );
@@ -73,7 +72,7 @@ export function AuthWelcomeView({ model }: { model: AuthWelcomeModel }) {
       >
         <View style={styles.hero}>
           <View style={styles.brand}>
-            <KyomiLogoMark size={authLayoutTokens.heroMarkSize} />
+            <KyomiIcon size={authLayoutTokens.heroMarkSize} />
             <Text style={styles.wordmark}>{model.wordmark}</Text>
           </View>
         </View>
@@ -89,7 +88,7 @@ export function AuthWelcomeView({ model }: { model: AuthWelcomeModel }) {
         >
           <View style={styles.content}>
             <View style={styles.badge}>
-              <KyomiLogoMark size={authLayoutTokens.panelBadgeMarkSize} />
+              <KyomiIcon size={authLayoutTokens.panelBadgeMarkSize} />
             </View>
 
             <View style={styles.heading}>

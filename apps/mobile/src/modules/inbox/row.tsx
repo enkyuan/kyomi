@@ -6,9 +6,10 @@ import {
 } from "@kyomi/ui/native/motion";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import { useEffect, useRef } from "react";
-import { Animated, Pressable, StyleSheet, Text, useColorScheme, View } from "react-native";
+import { Animated, Pressable, Text, View } from "react-native";
+import { useCSSVariable } from "uniwind";
 
-import { MingcuteIcon } from "@/components/mingcute-icon";
+import { MingcuteIcon } from "@/components/icons";
 
 import type { InboxRowProps } from "./model";
 
@@ -49,104 +50,41 @@ function useSelectionOpacity(
 }
 
 export function InboxRow({ item, onSelect, reducedMotion, selected }: InboxRowProps) {
-  const dark = useColorScheme() === "dark";
+  const themedMatcha = useCSSVariable("--color-matcha");
+  const matcha = typeof themedMatcha === "string" ? themedMatcha : kyomiNativeBrand.matcha.color;
   const outcome = resolveNativeMotionEffect("selection-change", reducedMotion);
   const selectionOpacity = useSelectionOpacity(outcome, selected);
 
   return (
-    <View style={[styles.surface, dark && styles.surfaceDark]}>
+    <View className="relative w-full border-b border-border bg-background">
       <Animated.View
+        className="absolute inset-0 bg-matcha"
         pointerEvents="none"
-        style={[
-          StyleSheet.absoluteFill,
-          {
-            backgroundColor: kyomiNativeBrand.matcha.color,
-            opacity: selectionOpacity,
-          },
-        ]}
+        style={{ opacity: selectionOpacity }}
       />
       <Pressable
         accessibilityLabel={`${item.source}. ${item.title}. ${item.summary}. ${item.timestamp}`}
         accessibilityRole="button"
         accessibilityState={{ selected }}
+        className="min-h-[104px] w-full flex-row items-start gap-3 px-4 py-3.5 active:opacity-60"
         onPress={() => onSelect(item.id)}
-        style={styles.row}
       >
-        <MingcuteIcon color={kyomiNativeBrand.matcha.color} decorative icon={Rss2LineNativeIcon} />
-        <View style={styles.content}>
-          <Text numberOfLines={1} style={[styles.source, dark && styles.sourceDark]}>
+        <MingcuteIcon color={matcha} decorative icon={Rss2LineNativeIcon} />
+        <View className="min-w-0 flex-1 gap-[3px]">
+          <Text className="font-sans-semibold text-xs/4 text-muted-foreground" numberOfLines={1}>
             {item.source}
           </Text>
-          <Text numberOfLines={2} style={[styles.title, dark && styles.titleDark]}>
+          <Text className="font-sans-semibold text-base/5 text-foreground" numberOfLines={2}>
             {item.title}
           </Text>
-          <Text numberOfLines={2} style={[styles.summary, dark && styles.summaryDark]}>
+          <Text className="font-sans text-sm/[19px] text-muted-foreground" numberOfLines={2}>
             {item.summary}
           </Text>
         </View>
-        <Text numberOfLines={1} style={[styles.timestamp, dark && styles.summaryDark]}>
+        <Text className="font-sans text-[11px]/4 text-muted-foreground" numberOfLines={1}>
           {item.timestamp}
         </Text>
       </Pressable>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  surface: {
-    position: "relative",
-    width: "100%",
-    borderBottomColor: "#e5e7eb",
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    backgroundColor: "#ffffff",
-  },
-  surfaceDark: {
-    borderBottomColor: "#303033",
-    backgroundColor: "#111113",
-  },
-  row: {
-    minHeight: 104,
-    width: "100%",
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: 12,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-  },
-  content: {
-    minWidth: 0,
-    flex: 1,
-    gap: 3,
-  },
-  source: {
-    color: "#59616d",
-    fontSize: 12,
-    fontWeight: "600",
-    lineHeight: 16,
-  },
-  sourceDark: {
-    color: "#a6adb8",
-  },
-  title: {
-    color: "#17181a",
-    fontSize: 16,
-    fontWeight: "600",
-    lineHeight: 20,
-  },
-  titleDark: {
-    color: "#f7f7f8",
-  },
-  summary: {
-    color: "#6b7280",
-    fontSize: 14,
-    lineHeight: 19,
-  },
-  summaryDark: {
-    color: "#a6adb8",
-  },
-  timestamp: {
-    color: "#7b8491",
-    fontSize: 11,
-    lineHeight: 16,
-  },
-});

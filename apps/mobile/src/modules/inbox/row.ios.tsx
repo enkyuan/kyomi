@@ -23,7 +23,7 @@ import {
   type ModifierConfig,
 } from "@expo/ui/swift-ui/modifiers";
 
-import { MingcuteIcon } from "@/components/mingcute-icon";
+import { MingcuteIcon } from "@/components/icons";
 
 import type { InboxRowProps } from "./model";
 

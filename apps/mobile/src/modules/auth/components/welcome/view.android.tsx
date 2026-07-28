@@ -22,15 +22,10 @@ import {
 import { useWindowDimensions } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { GoogleLogoMark } from "@/components/google-logo-mark";
-import { KyomiLogoMark } from "@/components/kyomi-logo-mark";
+import { GoogleIcon, KyomiIcon } from "@/components/icons";
 
 import type { AuthActionModel, AuthWelcomeModel } from "../model";
-import {
-  authLayoutTokens,
-  authWelcomeColors,
-  resolveAuthPanelRadius,
-} from "../tokens";
+import { authLayoutTokens, authWelcomeColors, resolveAuthPanelRadius } from "../tokens";
 
 function roundedCornerShape(radius: number) {
   return Shape.RoundedCorner({
@@ -50,9 +45,7 @@ function WelcomeAction({ action, kind }: { action: AuthActionModel; kind: "googl
   return (
     <Action
       colors={{
-        containerColor: isGoogle
-          ? authWelcomeColors.googleSurface
-          : authWelcomeColors.emailSurface,
+        containerColor: isGoogle ? authWelcomeColors.googleSurface : authWelcomeColors.emailSurface,
         contentColor: authWelcomeColors.text,
         disabledContainerColor: isGoogle
           ? authWelcomeColors.googleSurface
@@ -67,7 +60,7 @@ function WelcomeAction({ action, kind }: { action: AuthActionModel; kind: "googl
       <Row horizontalArrangement={{ spacedBy: 8 }} verticalAlignment="center">
         {isGoogle ? (
           <RNHostView matchContents>
-            <GoogleLogoMark size={18} />
+            <GoogleIcon size={18} />
           </RNHostView>
         ) : null}
         <Text
@@ -111,7 +104,7 @@ function WelcomeContent({ model }: { model: AuthWelcomeModel }) {
           verticalAlignment="center"
         >
           <RNHostView matchContents>
-            <KyomiLogoMark size={authLayoutTokens.heroMarkSize} />
+            <KyomiIcon size={authLayoutTokens.heroMarkSize} />
           </RNHostView>
           <Text color="#ffffff" style={{ typography: "headlineLarge", fontWeight: "700" }}>
             {model.wordmark}
@@ -173,7 +166,7 @@ function WelcomeContent({ model }: { model: AuthWelcomeModel }) {
                   verticalAlignment="center"
                 >
                   <RNHostView matchContents>
-                    <KyomiLogoMark size={authLayoutTokens.panelBadgeMarkSize} />
+                    <KyomiIcon size={authLayoutTokens.panelBadgeMarkSize} />
                   </RNHostView>
                 </Row>
               </Surface>
