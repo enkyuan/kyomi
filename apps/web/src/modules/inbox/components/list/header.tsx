@@ -4,8 +4,8 @@ import {
   SegmentedControl,
   SegmentedControlList,
   SegmentedControlTab,
-} from "@kyomi/ui/segmented-control";
-import { Menu, MenuTrigger, MenuPopup, MenuItem } from "@kyomi/ui/menu";
+} from "@kyomi/ui/atoms/segmented-control";
+import { Menu, MenuTrigger, MenuPopup, MenuItem } from "@kyomi/ui/atoms/menu";
 import {
   ArrowLeftFill,
   DownFill,
@@ -19,7 +19,13 @@ import {
   type IconProps,
   AsteriskFill,
 } from "@kyomi/ui/icons/mingcute";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "@kyomi/ui/atoms/motion";
 import { useCallback, useRef, useState, type ComponentType, type RefObject } from "react";
 import type { InboxFilter, InboxSort } from "@modules/inbox/lib/articles/index";
 import { cn } from "@kyomi/ui/lib/utils";

@@ -13,7 +13,7 @@ import {
 } from "@modules/inbox/components/recap/expanded";
 import type { RecapFolder } from "@modules/folders/lib/types";
 
-vi.mock("@kyomi/ui/transition", () => ({
+vi.mock("@kyomi/ui/atoms/transition", () => ({
   Transition: ({ children }: { children: ReactNode }) => <>{children}</>,
 }));
 

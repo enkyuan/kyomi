@@ -2,8 +2,8 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
-import { Transition, type TransitionDirection } from "@kyomi/ui/transition";
+import { ScrollArea } from "@kyomi/ui/atoms/scroll-area";
+import { Transition, type TransitionDirection } from "@kyomi/ui/atoms/transition";
 import { useTransition } from "@hooks/use-transition";
 import { listFollowedFeeds } from "@modules/feeds/lib/api";
 import { ExpandedFolders } from "@modules/folders/components/recap/expanded";

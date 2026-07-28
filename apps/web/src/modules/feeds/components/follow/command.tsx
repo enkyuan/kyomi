@@ -8,10 +8,22 @@ import {
   SearchLine,
 } from "@kyomi/ui/icons/mingcute";
 import { useRef } from "react";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
-import { Command, CommandEmpty, CommandInput, CommandItem, CommandList } from "@kyomi/ui/command";
-import { Kbd } from "@kyomi/ui/kbd";
-import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "@kyomi/ui/atoms/motion";
+import {
+  Command,
+  CommandEmpty,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@kyomi/ui/atoms/command";
+import { Kbd } from "@kyomi/ui/atoms/kbd";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/atoms/scroll-area";
 import { useFeedback } from "@hooks/use-feedback";
 import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import type { DiscoverFeedResult } from "@modules/feeds/lib/api";

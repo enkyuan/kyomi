@@ -1,9 +1,9 @@
 "use client";
 
 import { DownFill, UpFill } from "@kyomi/ui/icons/mingcute";
-import { m, useReducedMotion } from "@kyomi/ui/motion";
-import { Button } from "@kyomi/ui/button";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+import { m, useReducedMotion } from "@kyomi/ui/atoms/motion";
+import { Button } from "@kyomi/ui/atoms/button";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/atoms/tooltip";
 import { Toolbar as ReaderToolbarRoot } from "@modules/reader/components/toolbar";
 import type { ToolbarModel } from "@modules/toolbar/lib/types";
 

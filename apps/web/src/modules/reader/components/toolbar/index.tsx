@@ -15,15 +15,21 @@ import {
   TextLine,
   Translate2Line,
 } from "@kyomi/ui/icons/mingcute";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
-import { Button } from "@kyomi/ui/button";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "@kyomi/ui/atoms/motion";
+import { Button } from "@kyomi/ui/atoms/button";
 import {
   Toolbar as ToolbarRoot,
   ToolbarButton,
   ToolbarGroup,
   ToolbarSeparator,
-} from "@kyomi/ui/toolbar";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+} from "@kyomi/ui/atoms/toolbar";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/atoms/tooltip";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
 import type { ToolbarProps } from "@modules/toolbar/lib/types";
 import type { ReaderContentWidth } from "@modules/reader/lib/preferences";

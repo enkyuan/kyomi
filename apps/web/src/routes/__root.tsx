@@ -18,7 +18,7 @@ import { RouteErrorPage } from "@/app/error";
 import { AppRuntimeEffects } from "@/app/runtime-effects";
 import { NotFoundPage } from "@/app/not-found";
 import { getAuthRecoveryAction, LOGIN_RECOVERY_ACTION } from "@/app/recovery";
-import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/toast";
+import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/atoms/toast";
 import PostHogProvider from "@integrations/posthog/provider";
 import { getAuthBootstrapState } from "@lib/auth/functions";
 import type { AuthCapabilities } from "@lib/auth/capabilities";

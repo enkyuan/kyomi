@@ -1,7 +1,11 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { Transition, type TransitionOffset, type TransitionProps } from "@kyomi/ui/transition";
+import {
+  Transition,
+  type TransitionOffset,
+  type TransitionProps,
+} from "@kyomi/ui/atoms/transition";
 
 export const FEED_TRANSITION_OFFSET: TransitionOffset = {
   forward: { enter: 18, exit: -12 },

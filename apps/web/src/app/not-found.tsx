@@ -1,8 +1,14 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { Button } from "@kyomi/ui/button";
-import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyTitle } from "@kyomi/ui/empty";
+import { Button } from "@kyomi/ui/atoms/button";
+import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyTitle,
+} from "@kyomi/ui/atoms/empty";
 import { KyomiLogo } from "@kyomi/ui/icons";
 import type { RouteRecoveryAction } from "@/app/recovery";
 

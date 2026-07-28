@@ -5,7 +5,7 @@ import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { clearHotQueryCache } from "@lib/query/cache";
-import { toastManager } from "@kyomi/ui/toast";
+import { toastManager } from "@kyomi/ui/atoms/toast";
 
 type UseSettingsLogoutArgs = {
   onOpenChange?: (open: boolean) => void;

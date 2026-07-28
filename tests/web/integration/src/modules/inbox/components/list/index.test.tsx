@@ -35,7 +35,7 @@ vi.mock("@hooks/use-toolbar", () => ({
   useReaderToolbar: () => ({ toolbarProps: {} }),
 }));
 
-vi.mock("@kyomi/ui/scroll-area", () => ({
+vi.mock("@kyomi/ui/atoms/scroll-area", () => ({
   ScrollAreaPrimitive: {
     Root: ({ children, ...props }: { children: ReactNode }) => (
       <div data-slot="scroll-area-root" {...props}>

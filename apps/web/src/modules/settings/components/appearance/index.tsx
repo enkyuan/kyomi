@@ -1,8 +1,8 @@
 "use client";
 
 import { BrushFill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
-import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
+import { Button } from "@kyomi/ui/atoms/button";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/atoms/sidebar";
 import { InboxAppearanceSettings } from "./inbox-settings";
 import { ThemeSwitcher } from "./theme-switcher";
 import { useAppearancePanel } from "@modules/settings/hooks/appearance";

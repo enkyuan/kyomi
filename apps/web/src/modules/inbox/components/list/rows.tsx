@@ -5,7 +5,7 @@ import { type RefObject, useEffect, useLayoutEffect, useRef } from "react";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxFilter, InboxItem } from "@modules/inbox/lib/articles/index";
-import { Skeleton } from "@kyomi/ui/skeleton";
+import { Skeleton } from "@kyomi/ui/atoms/skeleton";
 import { getSectionClassNames, getTypography } from "@modules/feeds/lib/layout";
 import {
   DEFAULT_SKELETON_ROWS,

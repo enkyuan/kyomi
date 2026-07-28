@@ -7,8 +7,8 @@ vi.mock("@kyomi/ui/hooks/use-media-query", () => ({
   useMediaQuery: () => false,
 }));
 
-vi.mock("@kyomi/ui/motion", async (importOriginal) => {
-  const motion = await importOriginal<typeof import("@kyomi/ui/motion")>();
+vi.mock("@kyomi/ui/atoms/motion", async (importOriginal) => {
+  const motion = await importOriginal<typeof import("@kyomi/ui/atoms/motion")>();
 
   return {
     ...motion,

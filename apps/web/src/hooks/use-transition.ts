@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import type { TransitionProps } from "@kyomi/ui/transition";
+import type { TransitionProps } from "@kyomi/ui/atoms/transition";
 
 export type UseTransitionOptions = Omit<TransitionProps, "children">;
 

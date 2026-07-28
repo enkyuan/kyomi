@@ -2,11 +2,17 @@
 
 import { useViewport } from "@hooks/use-viewport";
 import { VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
-import { Badge } from "@kyomi/ui/badge";
-import { BrowserScrollBar, ScrollAreaPrimitive } from "@kyomi/ui/scroll-area";
+import { Badge } from "@kyomi/ui/atoms/badge";
+import { BrowserScrollBar, ScrollAreaPrimitive } from "@kyomi/ui/atoms/scroll-area";
 import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { useElementScrollRestoration } from "@tanstack/react-router";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "@kyomi/ui/atoms/motion";
 import { useRef } from "react";
 import { useHydrated } from "@hooks/use-hydrated";
 import type { InboxFilter, InboxItem, InboxSort } from "@modules/inbox/lib/articles/index";

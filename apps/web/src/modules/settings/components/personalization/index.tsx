@@ -1,7 +1,7 @@
 "use client";
 
 import { HeadAiFill } from "@kyomi/ui/icons/mingcute";
-import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/atoms/sidebar";
 
 export const personalizationSection = {
   name: "Personalization",

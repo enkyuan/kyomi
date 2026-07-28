@@ -2,9 +2,9 @@
 
 import { Refresh2Fill, Rss2Fill } from "@kyomi/ui/icons/mingcute";
 import { useEffect, useMemo, useState } from "react";
-import { Button } from "@kyomi/ui/button";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
-import { toastManager } from "@kyomi/ui/toast";
+import { Button } from "@kyomi/ui/atoms/button";
+import { ScrollArea } from "@kyomi/ui/atoms/scroll-area";
+import { toastManager } from "@kyomi/ui/atoms/toast";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import type { RecapFolder } from "@modules/folders/lib/types";
 import { SectionEmpty } from "@modules/inbox/components/recap/sections";

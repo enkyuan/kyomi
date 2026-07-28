@@ -2,7 +2,11 @@
 
 import { render, screen } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
-import { SidebarContext, SidebarMenuButton, type SidebarContextProps } from "@kyomi/ui/sidebar";
+import {
+  SidebarContext,
+  SidebarMenuButton,
+  type SidebarContextProps,
+} from "@kyomi/ui/atoms/sidebar";
 
 const sidebarContext: SidebarContextProps = {
   state: "expanded",

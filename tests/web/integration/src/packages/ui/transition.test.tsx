@@ -3,7 +3,7 @@ import {
   DEFAULT_TRANSITION,
   REDUCED_MOTION_TRANSITION,
   resolveTransitionStates,
-} from "@kyomi/ui/transition";
+} from "@kyomi/ui/atoms/transition";
 
 const DIRECTIONAL_OFFSET = {
   forward: { enter: 28, exit: -16 },

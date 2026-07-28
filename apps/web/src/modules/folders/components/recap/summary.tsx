@@ -8,7 +8,7 @@ import {
   ListCheckFill,
   RightFill,
 } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/atoms/button";
 import type { RecapFolder } from "@modules/folders/lib/types";
 import { RailTooltip, RecapSection, SectionEmpty } from "@modules/inbox/components/recap/sections";
 import { formatFeedCount } from "@modules/inbox/lib/recap/index";

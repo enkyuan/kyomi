@@ -1,7 +1,7 @@
 "use client";
 
 import { Folder2Fill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/atoms/button";
 import { Folders } from "@modules/folders/components/recap/summary";
 import type { RecapFolder } from "@modules/folders/lib/types";
 import type {

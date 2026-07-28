@@ -1,10 +1,10 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/atoms/button";
 import { CopyIcon } from "@kyomi/ui/icons/copy";
-import { ToolbarButton } from "@kyomi/ui/toolbar";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+import { ToolbarButton } from "@kyomi/ui/atoms/toolbar";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/atoms/tooltip";
 import { useFeedback } from "@hooks/use-feedback";
 import { cn } from "@kyomi/ui/lib/utils";
 

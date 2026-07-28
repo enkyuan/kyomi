@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { MenuItem as MenuPrimitiveItem } from "@kyomi/ui/menu";
+import { MenuItem as MenuPrimitiveItem } from "@kyomi/ui/atoms/menu";
 
 export function ItemToolbarMenuItem({
   children,

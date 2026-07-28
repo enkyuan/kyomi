@@ -1,6 +1,6 @@
 "use client";
 
-import { toastManager } from "@kyomi/ui/toast";
+import { toastManager } from "@kyomi/ui/atoms/toast";
 import type { ArticleDetailDto } from "@lib/schemas/index";
 import { useArticleActions } from "@modules/toolbar/hooks/use-article";
 import { useFloatingToolbar } from "@modules/toolbar/hooks/use-floating";

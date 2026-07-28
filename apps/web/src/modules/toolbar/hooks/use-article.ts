@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback } from "react";
-import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
+import { anchoredToastManager, toastManager } from "@kyomi/ui/atoms/toast";
 import { logClientError } from "@lib/errors";
 import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-data";
 import type { AnchoredToolbarActionOptions, ArticleActionItem, ToolbarSide } from "../lib/types";

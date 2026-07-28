@@ -1,8 +1,8 @@
 "use client";
 
 import { Bill2Fill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
-import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
+import { Button } from "@kyomi/ui/atoms/button";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/atoms/sidebar";
 
 export const billingSection = {
   description: "Review your workspace plan, payment method, and billing history.",

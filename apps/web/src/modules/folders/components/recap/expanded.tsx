@@ -20,12 +20,12 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@kyomi/ui/alert-dialog";
-import { Button } from "@kyomi/ui/button";
-import { Input } from "@kyomi/ui/input";
-import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
-import { toastManager } from "@kyomi/ui/toast";
+} from "@kyomi/ui/atoms/alert-dialog";
+import { Button } from "@kyomi/ui/atoms/button";
+import { Input } from "@kyomi/ui/atoms/input";
+import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/atoms/menu";
+import { ScrollArea } from "@kyomi/ui/atoms/scroll-area";
+import { toastManager } from "@kyomi/ui/atoms/toast";
 import { logClientError } from "@lib/errors";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import { deleteFolder, updateFolder, type Folder } from "@modules/folders/lib/api";

@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { Checkbox } from "@kyomi/ui/checkbox";
+import { Checkbox } from "@kyomi/ui/atoms/checkbox";
 import { cn } from "@kyomi/ui/lib/utils";
 import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import type { FollowedFeed } from "@modules/feeds/lib/api";

@@ -6,7 +6,7 @@ import { useRouter } from "@tanstack/react-router";
 import { updateUserEmail } from "@lib/auth/functions";
 import { logClientError, readResponseErrorSummary } from "@lib/errors";
 import { isValidEmail } from "@modules/auth/schema";
-import { toastManager } from "@kyomi/ui/toast";
+import { toastManager } from "@kyomi/ui/atoms/toast";
 import {
   authSessionsQueryKey,
   parseApiErrorMessage,

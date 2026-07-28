@@ -1,7 +1,7 @@
 "use client";
 
 import { SwitchFill } from "@kyomi/ui/icons/mingcute";
-import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/atoms/sidebar";
 
 export const advancedSection = {
   description: "Update advanced preferences and account-level controls.",

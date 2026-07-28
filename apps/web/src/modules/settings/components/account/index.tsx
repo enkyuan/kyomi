@@ -2,12 +2,12 @@
 
 import { CheckFill, CloseFill, Edit2Fill, User3Fill } from "@kyomi/ui/icons/mingcute";
 import { useAuth } from "@integrations/better-auth/provider";
-import { Badge } from "@kyomi/ui/badge";
-import { Button } from "@kyomi/ui/button";
-import { Frame } from "@kyomi/ui/frame";
-import { Group } from "@kyomi/ui/group";
-import { Input } from "@kyomi/ui/input";
-import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
+import { Badge } from "@kyomi/ui/atoms/badge";
+import { Button } from "@kyomi/ui/atoms/button";
+import { Frame } from "@kyomi/ui/atoms/frame";
+import { Group } from "@kyomi/ui/atoms/group";
+import { Input } from "@kyomi/ui/atoms/input";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/atoms/sidebar";
 import {
   Table,
   TableBody,
@@ -16,7 +16,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@kyomi/ui/table";
+} from "@kyomi/ui/atoms/table";
 import { useAccountPanel } from "@modules/settings/hooks/account";
 import { SettingHeading } from "../appearance/shared";
 

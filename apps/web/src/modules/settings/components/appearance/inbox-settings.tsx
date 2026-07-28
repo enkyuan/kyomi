@@ -1,13 +1,19 @@
 "use client";
 
-import { Group, GroupSeparator } from "@kyomi/ui/group";
+import { Group, GroupSeparator } from "@kyomi/ui/atoms/group";
 import {
   SegmentedControl,
   SegmentedControlList,
   SegmentedControlTab,
-} from "@kyomi/ui/segmented-control";
-import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@kyomi/ui/select";
-import { Switch } from "@kyomi/ui/switch";
+} from "@kyomi/ui/atoms/segmented-control";
+import {
+  Select,
+  SelectItem,
+  SelectPopup,
+  SelectTrigger,
+  SelectValue,
+} from "@kyomi/ui/atoms/select";
+import { Switch } from "@kyomi/ui/atoms/switch";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
 import { SettingHeading, SettingSubHeading } from "./shared";
 

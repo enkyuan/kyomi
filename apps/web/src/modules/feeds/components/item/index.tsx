@@ -5,7 +5,7 @@ import { cn } from "@kyomi/ui/lib/utils";
 import { Categories } from "./categories";
 import { Source } from "./source";
 import { ItemInlineToolbar } from "./toolbar/inline";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/atoms/card";
 import { Timestamp } from "@modules/inbox/components/timestamp";
 import { useTimestamp } from "@hooks/use-timestamp";
 import { usePretextLayout } from "@kyomi/ui/hooks/use-pretext";

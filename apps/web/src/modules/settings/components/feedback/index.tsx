@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { Message3Fill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
-import { Form } from "@kyomi/ui/form";
-import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
-import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
+import { Button } from "@kyomi/ui/atoms/button";
+import { Form } from "@kyomi/ui/atoms/form";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/atoms/scroll-area";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/atoms/sidebar";
 import { SettingHeading } from "../appearance/shared";
 
 export const feedbackSection = {

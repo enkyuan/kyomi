@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef } from "react";
-import { toastManager } from "@kyomi/ui/toast";
+import { toastManager } from "@kyomi/ui/atoms/toast";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/schemas/index";
 import { useArticleExtraction } from "@modules/reader/hooks/use-extraction";

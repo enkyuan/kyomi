@@ -1,10 +1,10 @@
 "use client";
 
 import { ExternalLinkLine, EyeCloseLine, More1Line, ReportLine } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
-import { Menu, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
-import { ToolbarButton } from "@kyomi/ui/toolbar";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+import { Button } from "@kyomi/ui/atoms/button";
+import { Menu, MenuPopup, MenuTrigger } from "@kyomi/ui/atoms/menu";
+import { ToolbarButton } from "@kyomi/ui/atoms/toolbar";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/atoms/tooltip";
 import { ItemToolbarMenuItem } from "./menu-item";
 
 const TOOLBAR_ICON_CLASS = "size-5";

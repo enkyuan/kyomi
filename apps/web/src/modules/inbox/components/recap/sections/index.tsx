@@ -2,7 +2,7 @@
 
 import { FolderWarningFill } from "@kyomi/ui/icons/mingcute";
 import type { ReactElement, ReactNode } from "react";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/atoms/button";
 import {
   Empty,
   EmptyContent,
@@ -10,9 +10,9 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@kyomi/ui/empty";
-import { Skeleton } from "@kyomi/ui/skeleton";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+} from "@kyomi/ui/atoms/empty";
+import { Skeleton } from "@kyomi/ui/atoms/skeleton";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/atoms/tooltip";
 import { cn } from "@kyomi/ui/lib/utils";
 
 export const RECAP_SUMMARY_LAYOUT_CLASS =

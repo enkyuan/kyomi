@@ -1,7 +1,13 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "@kyomi/ui/atoms/motion";
 
 const ARTICLE_REEL_OFFSET = 56;
 

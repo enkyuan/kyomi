@@ -1,7 +1,7 @@
 "use client";
 
 import { LeftFill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/atoms/button";
 import { RailTooltip } from "../sections";
 
 export function ExpandedViewHeader({

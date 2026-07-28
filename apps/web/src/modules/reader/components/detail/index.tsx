@@ -1,6 +1,6 @@
 "use client";
 
-import { BrowserScrollBar, ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
+import { BrowserScrollBar, ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/atoms/scroll-area";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
 import { readerViewportContentInsetClass, type DetailViewProps } from "@modules/reader/lib/detail";

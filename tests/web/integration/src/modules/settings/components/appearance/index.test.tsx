@@ -50,7 +50,7 @@ vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
   }),
 }));
 
-vi.mock("@kyomi/ui/button", () => ({
+vi.mock("@kyomi/ui/atoms/button", () => ({
   Button: ({ children, onClick }: { children: ReactNode; onClick?: () => void }) => (
     <button onClick={onClick} type="button">
       {children}
@@ -58,14 +58,14 @@ vi.mock("@kyomi/ui/button", () => ({
   ),
 }));
 
-vi.mock("@kyomi/ui/sidebar", () => ({
+vi.mock("@kyomi/ui/atoms/sidebar", () => ({
   SidebarMenuButton: ({ children }: { children: ReactNode }) => (
     <button type="button">{children}</button>
   ),
   SidebarMenuItem: ({ children }: { children: ReactNode }) => <div>{children}</div>,
 }));
 
-vi.mock("@kyomi/ui/select", () => ({
+vi.mock("@kyomi/ui/atoms/select", () => ({
   Select: ({
     children,
     items,
@@ -90,7 +90,7 @@ vi.mock("@kyomi/ui/select", () => ({
   SelectValue: () => null,
 }));
 
-vi.mock("@kyomi/ui/segmented-control", () => {
+vi.mock("@kyomi/ui/atoms/segmented-control", () => {
   let onSegmentedValueChange: ((value: string) => void) | undefined;
 
   return {
@@ -113,7 +113,7 @@ vi.mock("@kyomi/ui/segmented-control", () => {
   };
 });
 
-vi.mock("@kyomi/ui/switch", () => ({
+vi.mock("@kyomi/ui/atoms/switch", () => ({
   Switch: ({
     checked,
     id,
@@ -129,7 +129,7 @@ vi.mock("@kyomi/ui/switch", () => ({
   ),
 }));
 
-vi.mock("@kyomi/ui/slider", () => ({
+vi.mock("@kyomi/ui/atoms/slider", () => ({
   SliderComfortable: ({ onChange }: { onChange?: (value: number) => void }) => (
     <button onClick={() => onChange?.(21)} type="button">
       font-size-slider
@@ -137,7 +137,7 @@ vi.mock("@kyomi/ui/slider", () => ({
   ),
 }));
 
-vi.mock("@kyomi/ui/group", () => ({
+vi.mock("@kyomi/ui/atoms/group", () => ({
   Group: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   GroupSeparator: () => <div />,
 }));

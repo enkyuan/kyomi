@@ -4,7 +4,7 @@ import {
   type TransitionDirection,
   type TransitionOffset,
   type TransitionProps,
-} from "@kyomi/ui/transition";
+} from "@kyomi/ui/atoms/transition";
 
 export const RECAP_TRANSITION_OFFSET: TransitionOffset = {
   forward: { enter: 28, exit: -16 },

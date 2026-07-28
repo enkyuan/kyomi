@@ -119,7 +119,7 @@ const config = defineConfig(({ command }) => {
         "react",
         "react-dom",
         "@kyomi/ui/icons/mingcute",
-        "@kyomi/ui/motion",
+        "@kyomi/ui/atoms/motion",
         "@tanstack/react-query",
         "@tanstack/react-router",
         "@tanstack/react-virtual",

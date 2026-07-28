@@ -17,12 +17,14 @@ This repository follows a monorepo shape modeled after larger production repos:
 
 ## Shared UI (`packages/ui`)
 
-- `src/*.tsx`: shadcn-style primitives (import `@kyomi/ui/button`, etc.).
+- `src/atoms/`: shared primitives and cohesive component areas (import
+  `@kyomi/ui/atoms/button`, etc.).
+- `src/hooks/` and `src/lib/`: shared presentation hooks and utilities.
 - `src/icons/`: product illustrations and empty-state artwork (`@kyomi/ui/icons/…`). See `src/icons/README.md` before adding new icons.
+- `src/styles/`: shared CSS modules and theme entrypoints (`@kyomi/ui/styles`).
 
 ## Current Shared Baselines
 
 - `packages/tsconfig/base.json`: default strict TS compiler baseline.
 - `packages/tsconfig/web.json`: browser/react-focused TS defaults.
 - `packages/tsconfig/node.json`: node/server-focused TS defaults.
-

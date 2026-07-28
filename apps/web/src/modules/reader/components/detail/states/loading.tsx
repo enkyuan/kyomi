@@ -1,6 +1,6 @@
 "use client";
 
-import { Skeleton } from "@kyomi/ui/skeleton";
+import { Skeleton } from "@kyomi/ui/atoms/skeleton";
 
 export function LoadingState() {
   return (

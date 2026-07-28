@@ -5,7 +5,7 @@ import { Suspense, useReducer } from "react";
 import { Link } from "@tanstack/react-router";
 import { AddFill, Settings1Fill } from "@kyomi/ui/icons/mingcute";
 import { KyomiLogo, PremiumIcon } from "@kyomi/ui/icons";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
+import { ScrollArea } from "@kyomi/ui/atoms/scroll-area";
 import {
   Sidebar,
   SidebarFooter,
@@ -13,7 +13,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@kyomi/ui/sidebar";
+} from "@kyomi/ui/atoms/sidebar";
 import { cn } from "@kyomi/ui/lib/utils";
 import { lazyNamed } from "@lib/lazy-named";
 import { useScope } from "@hooks/use-scope";

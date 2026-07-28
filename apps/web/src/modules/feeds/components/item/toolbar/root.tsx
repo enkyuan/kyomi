@@ -8,7 +8,7 @@ import {
   HeadAiLine,
   ShareForwardLine,
 } from "@kyomi/ui/icons/mingcute";
-import { Toolbar as ToolbarRoot, ToolbarGroup, ToolbarSeparator } from "@kyomi/ui/toolbar";
+import { Toolbar as ToolbarRoot, ToolbarGroup, ToolbarSeparator } from "@kyomi/ui/atoms/toolbar";
 import { cn } from "@kyomi/ui/lib/utils";
 import type { ItemToolbarProps, ToolbarSide } from "@modules/toolbar/lib/types";
 import { ItemToolbarButton } from "./button";
