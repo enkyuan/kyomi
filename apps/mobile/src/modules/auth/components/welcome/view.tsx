@@ -1,38 +1,10 @@
-import { kyomiNativeColors } from "@kyomi/ui/native/theme";
-import {
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  useWindowDimensions,
-  View,
-  type StyleProp,
-  type ViewStyle,
-} from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { GoogleIcon, KyomiIcon } from "@/components/icons";
 
 import type { AuthActionModel, AuthWelcomeModel } from "../model";
-import {
-  authFallbackColors,
-  authLayoutTokens,
-  authWelcomeColors,
-  resolveAuthPanelRadius,
-} from "../tokens";
-
-function actionStyle(
-  kind: "google" | "email",
-  pressed: boolean,
-  enabled: boolean,
-): StyleProp<ViewStyle> {
-  return [
-    styles.action,
-    kind === "email" ? styles.emailAction : styles.googleAction,
-    pressed && enabled ? styles.pressed : null,
-    !enabled ? styles.disabled : null,
-  ];
-}
+import { authLayoutTokens, authWelcomeColors, resolveAuthPanelRadius } from "../tokens";
 
 function WelcomeAction({
   action,
@@ -43,17 +15,26 @@ function WelcomeAction({
   kind: "google" | "email";
   accessibilityHint?: string;
 }) {
+  const baseClass =
+    "flex-row items-center justify-center gap-2 rounded-[14px] min-h-[50px] px-[18px]";
+  const kindClass = kind === "email" ? "bg-[#ececec]" : "bg-white";
+
   return (
     <Pressable
       accessibilityHint={accessibilityHint}
       accessibilityRole="button"
       accessibilityState={{ disabled: !action.enabled }}
+      className={`${baseClass} ${kindClass}`}
       disabled={!action.enabled}
       onPress={action.onPress}
-      style={({ pressed }) => actionStyle(kind, pressed, action.enabled)}
+      style={({ pressed }) => [
+        kind === "google" ? styles.googleBorder : null,
+        pressed && action.enabled ? styles.pressed : null,
+        !action.enabled ? styles.disabled : null,
+      ]}
     >
       {kind === "google" ? <GoogleIcon size={18} /> : null}
-      <Text style={styles.actionText}>{action.label}</Text>
+      <Text className="text-[#171717] text-[15px] font-sans-semibold">{action.label}</Text>
     </Pressable>
   );
 }
@@ -67,40 +48,43 @@ export function AuthWelcomeView({ model }: { model: AuthWelcomeModel }) {
     <SafeAreaView className="flex-1 bg-black" edges={["top", "left", "right"]}>
       <ScrollView
         className="bg-black"
-        contentContainerStyle={styles.scrollContent}
+        contentContainerClassName="flex-grow bg-black"
         keyboardShouldPersistTaps="handled"
       >
-        <View style={styles.hero}>
-          <View style={styles.brand}>
+        <View className="flex-1 min-h-[220px] items-center justify-center px-6 py-12">
+          <View className="flex-row items-center gap-[10px]">
             <KyomiIcon size={authLayoutTokens.heroMarkSize} />
-            <Text style={styles.wordmark}>{model.wordmark}</Text>
+            <Text className="text-white text-[32px] font-sans-bold tracking-[-0.8px]">
+              {model.wordmark}
+            </Text>
           </View>
         </View>
 
         <View
-          style={[
-            styles.panel,
-            {
-              borderRadius: panelRadius,
-              paddingBottom: authLayoutTokens.panelBottomPadding + insets.bottom,
-            },
-          ]}
+          className="items-center bg-white mx-[6px] mb-[6px] px-6 pt-6"
+          style={{
+            borderRadius: panelRadius,
+            paddingBottom: authLayoutTokens.panelBottomPadding + insets.bottom,
+          }}
         >
-          <View style={styles.content}>
-            <View style={styles.badge}>
+          <View className="gap-5 max-w-[440px] w-full">
+            <View className="items-center justify-center self-start bg-[#f2f2f2] rounded-full h-9 w-9">
               <KyomiIcon size={authLayoutTokens.panelBadgeMarkSize} />
             </View>
 
-            <View style={styles.heading}>
-              <Text accessibilityRole="header" style={styles.title}>
+            <View className="gap-1.5">
+              <Text
+                accessibilityRole="header"
+                className="text-[#171717] text-2xl font-sans-bold tracking-[-0.4px]"
+              >
                 {model.title}
               </Text>
-              <Text numberOfLines={2} style={styles.description}>
+              <Text className="text-[#6e6e73] text-base leading-[23px]" numberOfLines={2}>
                 {model.description}
               </Text>
             </View>
 
-            <View style={styles.actions}>
+            <View className="gap-[10px]">
               <WelcomeAction
                 accessibilityHint={model.googleUnavailableMessage}
                 action={model.google}
@@ -109,7 +93,7 @@ export function AuthWelcomeView({ model }: { model: AuthWelcomeModel }) {
               <WelcomeAction action={model.email} kind="email" />
             </View>
 
-            <Text style={styles.legal}>{model.legalText}</Text>
+            <Text className="text-[#8a8a8a] text-xs leading-4">{model.legalText}</Text>
           </View>
         </View>
       </ScrollView>
@@ -118,89 +102,9 @@ export function AuthWelcomeView({ model }: { model: AuthWelcomeModel }) {
 }
 
 const styles = StyleSheet.create({
-  scrollContent: {
-    backgroundColor: kyomiNativeColors.black,
-    flexGrow: 1,
-  },
-  hero: {
-    alignItems: "center",
-    flex: 1,
-    justifyContent: "center",
-    minHeight: 220,
-    paddingHorizontal: authLayoutTokens.screenHorizontalPadding,
-    paddingVertical: 48,
-  },
-  brand: {
-    alignItems: "center",
-    flexDirection: "row",
-    gap: authLayoutTokens.brandGap,
-  },
-  wordmark: {
-    color: authFallbackColors.text,
-    fontSize: 32,
-    fontWeight: "700",
-    letterSpacing: -0.8,
-  },
-  panel: {
-    alignItems: "center",
-    backgroundColor: authWelcomeColors.panel,
-    marginBottom: authLayoutTokens.panelScreenInset,
-    marginHorizontal: authLayoutTokens.panelScreenInset,
-    paddingHorizontal: authLayoutTokens.panelHorizontalPadding,
-    paddingTop: authLayoutTokens.panelTopPadding,
-  },
-  content: {
-    gap: authLayoutTokens.contentGap,
-    maxWidth: authLayoutTokens.contentMaxWidth,
-    width: "100%",
-  },
-  badge: {
-    alignItems: "center",
-    alignSelf: "flex-start",
-    backgroundColor: authWelcomeColors.badgeSurface,
-    borderRadius: authLayoutTokens.panelBadgeSize / 2,
-    height: authLayoutTokens.panelBadgeSize,
-    justifyContent: "center",
-    width: authLayoutTokens.panelBadgeSize,
-  },
-  heading: {
-    gap: 6,
-  },
-  title: {
-    color: authWelcomeColors.text,
-    fontSize: 24,
-    fontWeight: "700",
-    letterSpacing: -0.4,
-  },
-  description: {
-    color: authWelcomeColors.mutedText,
-    fontSize: 16,
-    lineHeight: 23,
-  },
-  actions: {
-    gap: authLayoutTokens.actionGap,
-  },
-  action: {
-    alignItems: "center",
-    borderRadius: authLayoutTokens.controlRadius,
-    flexDirection: "row",
-    gap: 8,
-    justifyContent: "center",
-    minHeight: authLayoutTokens.controlMinHeight,
-    paddingHorizontal: 18,
-  },
-  emailAction: {
-    backgroundColor: authWelcomeColors.emailSurface,
-  },
-  googleAction: {
-    backgroundColor: authWelcomeColors.googleSurface,
-    borderColor: authWelcomeColors.googleOutline,
+  googleBorder: {
+    borderColor: "#dadce0",
     borderWidth: StyleSheet.hairlineWidth,
-  },
-  actionText: {
-    color: authWelcomeColors.text,
-    fontSize: 15,
-    fontWeight: "600",
   },
   pressed: {
     opacity: 0.76,
@@ -208,10 +112,5 @@ const styles = StyleSheet.create({
   },
   disabled: {
     opacity: 0.56,
-  },
-  legal: {
-    color: authWelcomeColors.legalText,
-    fontSize: 12,
-    lineHeight: 16,
   },
 });

@@ -1,4 +1,4 @@
-import { kyomiNativeBrand, kyomiNativeColors } from "@kyomi/ui/native/theme";
+import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import { useEffect, useRef } from "react";
 import {
   ActivityIndicator,
@@ -14,18 +14,17 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { KyomiIcon } from "@/components/icons";
 
-import { authFallbackColors, authLayoutTokens } from "../tokens";
+import { authLayoutTokens } from "../tokens";
 import type { AuthActionModel, AuthFieldModel, AuthScreenModel } from "../model";
 
 function NativeAction({ action }: { action: AuthActionModel }) {
   return (
     <Pressable
       accessibilityRole="button"
+      className="flex-row items-center justify-center gap-2 rounded-[14px] min-h-[50px] px-[18px] bg-matcha"
       disabled={!action.enabled}
       onPress={action.onPress}
       style={({ pressed }) => [
-        styles.button,
-        styles.primaryButton,
         pressed && action.enabled ? styles.pressed : null,
         !action.enabled ? styles.disabled : null,
       ]}
@@ -33,7 +32,7 @@ function NativeAction({ action }: { action: AuthActionModel }) {
       {action.pending ? (
         <ActivityIndicator color={kyomiNativeBrand.matcha.onColor} size="small" />
       ) : null}
-      <Text style={styles.primaryButtonText}>
+      <Text className="text-matcha-foreground text-[15px] font-sans-semibold">
         {action.pending ? (action.pendingLabel ?? action.label) : action.label}
       </Text>
     </Pressable>
@@ -48,11 +47,15 @@ function TextAction({
   return (
     <Pressable
       accessibilityRole="button"
+      className="justify-center min-h-[40px]"
       disabled={!action.enabled}
       onPress={action.onPress}
-      style={styles.textAction}
     >
-      <Text style={[styles.link, !action.enabled ? styles.disabled : null]}>{action.label}</Text>
+      <Text
+        className={`text-white text-sm font-sans-semibold${!action.enabled ? " opacity-50" : ""}`}
+      >
+        {action.label}
+      </Text>
     </Pressable>
   );
 }
@@ -68,56 +71,61 @@ export function AuthScreenView({ model }: { model: AuthScreenModel }) {
   }, [model.focusRequest]);
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView className="flex-1 bg-black">
       <ScrollView
-        contentContainerStyle={styles.scrollContent}
+        contentContainerClassName="flex-grow items-center px-6 py-10"
         keyboardDismissMode="interactive"
         keyboardShouldPersistTaps="handled"
       >
-        <View style={styles.content}>
-          <View style={styles.brand}>
+        <View className="gap-5 max-w-[440px] w-full">
+          <View className="flex-row items-center gap-[10px]">
             <KyomiIcon size={24} />
-            <Text style={styles.wordmark}>Kyomi</Text>
+            <Text className="text-white text-2xl font-sans-bold tracking-[-0.5px]">Kyomi</Text>
           </View>
 
-          <View style={styles.heading}>
-            <Text accessibilityRole="header" style={styles.title}>
+          <View className="gap-1.5">
+            <Text
+              accessibilityRole="header"
+              className="text-white text-[32px] font-sans-bold tracking-[-0.7px]"
+            >
               {model.title}
             </Text>
-            <Text style={styles.description}>{model.description}</Text>
+            <Text className="text-[#a0a19a] text-base leading-[23px]">{model.description}</Text>
           </View>
 
           {model.busyIndicator ? (
-            <View style={styles.loadingRow}>
+            <View className="flex-row items-center gap-2">
               <ActivityIndicator color={kyomiNativeBrand.matcha.color} />
-              <Text style={styles.description}>Loading…</Text>
+              <Text className="text-[#a0a19a] text-base leading-[23px]">Loading…</Text>
             </View>
           ) : null}
 
           {model.status ? (
             <Text
               accessibilityLiveRegion="polite"
-              style={[
-                styles.status,
+              className={`text-sm leading-5 ${
                 model.status.kind === "error"
-                  ? styles.error
+                  ? "text-[#ff8a82]"
                   : model.status.kind === "success"
-                    ? styles.success
-                    : null,
-              ]}
+                    ? "text-matcha"
+                    : "text-[#a0a19a]"
+              }`}
             >
               {model.status.message}
             </Text>
           ) : null}
 
           {model.fields?.map((field) => (
-            <View key={field.id} style={styles.field}>
-              <Text style={styles.label}>{field.label}</Text>
+            <View className="gap-[6px]" key={field.id}>
+              <Text className="text-white text-sm font-sans-medium">{field.label}</Text>
               <TextInput
                 accessibilityLabel={field.label}
                 autoCapitalize="none"
                 autoComplete={field.autoComplete}
                 autoCorrect={false}
+                className={`bg-[rgba(255,255,255,0.06)] border rounded-[14px] text-white text-base min-h-[50px] px-[14px] ${
+                  field.error ? "border-[#ff8a82]" : "border-[rgba(255,255,255,0.12)]"
+                }`}
                 editable={field.enabled}
                 keyboardAppearance="dark"
                 keyboardType={field.id === "email" ? "email-address" : "default"}
@@ -128,33 +136,38 @@ export function AuthScreenView({ model }: { model: AuthScreenModel }) {
                 }}
                 onSubmitEditing={field.onSubmit}
                 placeholder={field.placeholder}
-                placeholderTextColor={authFallbackColors.mutedText}
+                placeholderTextColor="#a0a19a"
                 ref={(value) => {
                   refs.current[field.id] = value ?? undefined;
                 }}
                 secureTextEntry={field.secure}
                 selectionColor={kyomiNativeBrand.matcha.color}
-                style={[styles.input, field.error ? styles.inputError : null]}
                 value={field.value.value}
               />
-              {field.error ? <Text style={styles.error}>{field.error}</Text> : null}
+              {field.error ? (
+                <Text className="text-[#ff8a82] text-sm leading-5">{field.error}</Text>
+              ) : null}
             </View>
           ))}
 
           {model.auxiliary ? (
-            <View style={styles.leadingAction}>
+            <View className="items-start">
               <TextAction action={model.auxiliary} />
             </View>
           ) : null}
 
           {model.primary ? <NativeAction action={model.primary} /> : null}
 
-          {model.note ? <Text style={styles.description}>{model.note}</Text> : null}
+          {model.note ? (
+            <Text className="text-[#a0a19a] text-base leading-[23px]">{model.note}</Text>
+          ) : null}
 
           {model.footer ? (
-            <View style={styles.footer}>
+            <View className="flex-row flex-wrap items-center gap-1">
               {model.footer.prompt ? (
-                <Text style={styles.description}>{model.footer.prompt}</Text>
+                <Text className="text-[#a0a19a] text-base leading-[23px]">
+                  {model.footer.prompt}
+                </Text>
               ) : null}
               <TextAction action={model.footer.action} />
             </View>
@@ -166,123 +179,10 @@ export function AuthScreenView({ model }: { model: AuthScreenModel }) {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: kyomiNativeColors.black,
-  },
-  scrollContent: {
-    flexGrow: 1,
-    alignItems: "center",
-    paddingHorizontal: authLayoutTokens.screenHorizontalPadding,
-    paddingVertical: authLayoutTokens.screenVerticalPadding,
-  },
-  content: {
-    gap: authLayoutTokens.contentGap,
-    maxWidth: authLayoutTokens.contentMaxWidth,
-    width: "100%",
-  },
-  brand: {
-    alignItems: "center",
-    flexDirection: "row",
-    gap: authLayoutTokens.brandGap,
-  },
-  wordmark: {
-    color: authFallbackColors.text,
-    fontSize: 24,
-    fontWeight: "700",
-    letterSpacing: -0.5,
-  },
-  heading: {
-    gap: 6,
-  },
-  title: {
-    color: authFallbackColors.text,
-    fontSize: 32,
-    fontWeight: "700",
-    letterSpacing: -0.7,
-  },
-  description: {
-    color: authFallbackColors.mutedText,
-    fontSize: 16,
-    lineHeight: 23,
-  },
-  loadingRow: {
-    alignItems: "center",
-    flexDirection: "row",
-    gap: 8,
-  },
-  status: {
-    color: authFallbackColors.mutedText,
-    fontSize: 14,
-    lineHeight: 20,
-  },
-  error: {
-    color: authFallbackColors.error,
-  },
-  success: {
-    color: kyomiNativeBrand.matcha.color,
-  },
-  field: {
-    gap: authLayoutTokens.fieldGap,
-  },
-  label: {
-    color: authFallbackColors.text,
-    fontSize: 14,
-    fontWeight: "500",
-  },
-  input: {
-    backgroundColor: authFallbackColors.inputSurface,
-    borderColor: authFallbackColors.outline,
-    borderRadius: authLayoutTokens.controlRadius,
-    borderWidth: 1,
-    color: authFallbackColors.text,
-    fontSize: 16,
-    minHeight: authLayoutTokens.controlMinHeight,
-    paddingHorizontal: 14,
-  },
-  inputError: {
-    borderColor: authFallbackColors.error,
-  },
-  button: {
-    alignItems: "center",
-    borderRadius: authLayoutTokens.controlRadius,
-    flexDirection: "row",
-    gap: 8,
-    justifyContent: "center",
-    minHeight: authLayoutTokens.controlMinHeight,
-    paddingHorizontal: 18,
-  },
-  primaryButton: {
-    backgroundColor: kyomiNativeBrand.matcha.color,
-  },
-  primaryButtonText: {
-    color: kyomiNativeBrand.matcha.onColor,
-    fontSize: 15,
-    fontWeight: "600",
-  },
   pressed: {
     transform: [{ scale: 0.96 }],
   },
   disabled: {
     opacity: 0.48,
-  },
-  leadingAction: {
-    alignItems: "flex-start",
-  },
-  textAction: {
-    justifyContent: "center",
-    minHeight: 40,
-  },
-  link: {
-    color: authFallbackColors.text,
-    fontSize: 14,
-    fontWeight: "600",
-  },
-  footer: {
-    alignItems: "center",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 4,
-    justifyContent: "flex-start",
   },
 });
