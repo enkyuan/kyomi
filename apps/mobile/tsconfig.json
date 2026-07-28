@@ -3,9 +3,7 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
-      "@app/*": ["./src/app/*"],
-      "@kyomi/ui": ["../../packages/ui/src/index.ts"],
-      "@kyomi/ui/*": ["../../packages/ui/src/*"]
+      "@app/*": ["./src/app/*"]
     },
     "strict": true
   }
