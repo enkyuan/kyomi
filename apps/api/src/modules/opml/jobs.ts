@@ -6,9 +6,9 @@ import { createOrSubscribeToFeed } from "@modules/feeds/subscription/subscribe";
 import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/operations";
 import { AppError } from "@shared/errors/app";
 import { parseOpmlDocument } from "./parse";
+import { createOpmlImport, recordOpmlImportPrepareWakeup } from "./store";
 import {
   failOpmlTask,
-  initializeOpmlTask,
   isOpmlTaskCancelled,
   markOpmlTaskInProgress,
   recordOpmlTaskFailure,
@@ -37,52 +37,43 @@ function assertSupportedFilename(filename: string): string {
 }
 
 export async function enqueueOpmlImport(
+  database: DB,
   userId: string,
   xml: string,
   logger: Logger,
   filename = "inline.opml",
+  sourceUrl?: string | null,
 ): Promise<{ taskId: string }> {
   const normalizedFilename = assertSupportedFilename(filename);
-  const document = parseOpmlDocument(xml, DEFAULT_FOLDER_NAME);
-  const taskId = crypto.randomUUID();
-
-  await initializeOpmlTask({
-    taskId,
+  const created = await createOpmlImport(database, {
     userId,
     filename: normalizedFilename,
-    opmlTitle: document.opmlTitle,
-    opmlAuthor: document.opmlAuthor,
-    totalUrls: document.feeds.length,
+    sourceUrl,
+    sourceXml: xml,
   });
 
   try {
     const redis = getRedis();
     await publishJob(redis, {
-      type: "opml.import",
-      payload: {
-        taskId,
-        userId,
-        xml,
-        filename: normalizedFilename,
-      },
+      type: "opml.import.prepare",
+      payload: { importId: created.id },
     });
+    await recordOpmlImportPrepareWakeup(database, created.id);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    await failOpmlTask(taskId, `Failed to enqueue import: ${message}`);
-    logger.error("opml.import.enqueue.failed", { userId, taskId, error: message });
-    throw new AppError("Failed to start OPML import", {
-      status: 503,
-      code: "QUEUE_UNAVAILABLE",
+    logger.error("opml.import.prepare.delivery_pending", {
+      userId,
+      taskId: created.id,
+      error: message,
     });
   }
 
   logger.info("opml.import.enqueued", {
     userId,
-    taskId,
+    taskId: created.id,
     filename: normalizedFilename,
-    totalUrls: document.feeds.length,
   });
-  return { taskId };
+  return { taskId: created.id };
 }
 
 export async function runOpmlImportJob(
