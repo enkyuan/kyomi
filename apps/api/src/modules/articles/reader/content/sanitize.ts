@@ -5,6 +5,8 @@ import {
 } from "@kyomi/worker/sanitization";
 import { JSDOM } from "jsdom";
 
+export { ARTICLE_HTML_SANITIZER_VERSION };
+
 /**
  * Article HTML sanitizer (see `@kyomi/worker/sanitization`).
  *
