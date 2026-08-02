@@ -1,12 +1,16 @@
-import { and, eq, inArray } from "drizzle-orm";
+import { and, desc, eq, inArray, lt, or } from "drizzle-orm";
 import { opmlImports } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
+import { decodeOpmlImportCursor, encodeOpmlImportCursor } from "../import-cursor";
 import { assertOpmlSourceAdmission } from "../parse";
 import type { OpmlImportCounters, OpmlImportStatus } from "../types";
 
 type DB = typeof db;
 type OpmlImportRow = typeof opmlImports.$inferSelect;
+
+const OPML_IMPORT_PAGE_DEFAULT_LIMIT = 20;
+const OPML_IMPORT_PAGE_MAX_LIMIT = 100;
 
 const ACTIVE_STATUSES = ["accepted", "parsing", "dispatching", "running", "cancelling"] as const;
 
@@ -28,6 +32,24 @@ export function toCompatibleOpmlImportStatus(row: OpmlImportRow): OpmlImportStat
       return "cancelled";
     default:
       return "pending";
+  }
+}
+
+export type OpmlImportStage = "queued" | "parsing" | "dispatching" | "processing" | "finalizing";
+
+/** Maps the durable internal state machine to the 5-value stage the web client already understands. */
+export function toOpmlImportStage(row: OpmlImportRow): OpmlImportStage {
+  switch (row.status) {
+    case "accepted":
+      return "queued";
+    case "parsing":
+      return "parsing";
+    case "dispatching":
+      return "dispatching";
+    case "running":
+      return "processing";
+    default:
+      return "finalizing";
   }
 }
 
@@ -321,4 +343,70 @@ export async function deleteTerminalOpmlImport(
     )
     .returning({ id: opmlImports.id });
   return deleted.length > 0;
+}
+
+export type ListOpmlImportsForUserInput = {
+  userId: string;
+  limit?: number;
+  cursor?: string;
+};
+
+export type OpmlImportPage = {
+  items: OpmlImportRow[];
+  nextCursor: string | null;
+  hasMore: boolean;
+};
+
+function normalizeOpmlImportPageLimit(limit: number | undefined): number {
+  return Math.min(Math.max(1, limit ?? OPML_IMPORT_PAGE_DEFAULT_LIMIT), OPML_IMPORT_PAGE_MAX_LIMIT);
+}
+
+/**
+ * Keyset-paginates a user's imports newest first, ordered by (createdAt DESC, id DESC) using
+ * the opml_imports_user_created_idx index. Invalid cursors throw AppError
+ * OPML_IMPORT_CURSOR_INVALID rather than silently restarting from the newest page.
+ */
+export async function listOpmlImportsForUser(
+  database: DB,
+  input: ListOpmlImportsForUserInput,
+): Promise<OpmlImportPage> {
+  const limit = normalizeOpmlImportPageLimit(input.limit);
+  let cursor: { createdAt: string; id: string } | null = null;
+  if (input.cursor !== undefined) {
+    cursor = decodeOpmlImportCursor(input.cursor);
+    if (!cursor) {
+      throw new AppError("Invalid import cursor", {
+        status: 400,
+        code: "OPML_IMPORT_CURSOR_INVALID",
+      });
+    }
+  }
+
+  const cursorCreatedAt = cursor ? new Date(cursor.createdAt) : null;
+  const boundary =
+    cursor && cursorCreatedAt
+      ? or(
+          lt(opmlImports.createdAt, cursorCreatedAt),
+          and(eq(opmlImports.createdAt, cursorCreatedAt), lt(opmlImports.id, cursor.id)),
+        )
+      : undefined;
+
+  const rows = await database
+    .select()
+    .from(opmlImports)
+    .where(and(eq(opmlImports.userId, input.userId), boundary))
+    .orderBy(desc(opmlImports.createdAt), desc(opmlImports.id))
+    .limit(limit + 1);
+
+  const hasMore = rows.length > limit;
+  const page = rows.slice(0, limit);
+  const last = page.at(-1);
+  return {
+    items: page,
+    nextCursor:
+      hasMore && last
+        ? encodeOpmlImportCursor({ createdAt: last.createdAt.toISOString(), id: last.id })
+        : null,
+    hasMore,
+  };
 }
