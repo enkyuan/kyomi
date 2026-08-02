@@ -34,8 +34,8 @@ describe("matchKnownFeedsForImport", () => {
         canonicalFeedUrl: null,
       },
     ];
-    const updateCalls: unknown[][] = [];
     let selectCount = 0;
+    const executeCalls: unknown[] = [];
     const fakeDb = {
       select: () => ({
         from: () => ({
@@ -45,35 +45,30 @@ describe("matchKnownFeedsForImport", () => {
           },
         }),
       }),
-      update: () => ({
-        set: (patch: Record<string, unknown>) => ({
-          where: (whereClause: unknown) => {
-            updateCalls.push([patch, whereClause]);
-            return Promise.resolve();
-          },
-        }),
-      }),
+      execute: (query: unknown) => {
+        executeCalls.push(query);
+        // Both item-1 (exact) and item-2 (alias) match; item-3 does not.
+        return Promise.resolve([{ id: "item-1" }, { id: "item-2" }]);
+      },
     } as unknown as Parameters<typeof matchKnownFeedsForImport>[0];
 
     const matched = await matchKnownFeedsForImport(fakeDb, "import-1");
 
     expect(matched).toBe(2);
-    expect(updateCalls).toHaveLength(2);
-    expect(updateCalls[0]?.[0]).toMatchObject({ feedId: "feed-exact" });
-    expect(updateCalls[1]?.[0]).toMatchObject({ feedId: "feed-alias" });
+    expect(executeCalls).toHaveLength(1);
   });
 
   test("returns 0 without any update when there are no pending items", async () => {
-    const update = mock(() => {
+    const execute = mock(() => {
       throw new Error("must not be called");
     });
     const fakeDb = {
       select: () => ({ from: () => ({ where: () => Promise.resolve([]) }) }),
-      update,
+      execute,
     } as unknown as Parameters<typeof matchKnownFeedsForImport>[0];
 
     expect(await matchKnownFeedsForImport(fakeDb, "import-1")).toBe(0);
-    expect(update).not.toHaveBeenCalled();
+    expect(execute).not.toHaveBeenCalled();
   });
 
   test("processes pending items in chunks of at most 500", async () => {
@@ -95,9 +90,7 @@ describe("matchKnownFeedsForImport", () => {
           },
         }),
       }),
-      update: () => ({
-        set: () => ({ where: () => Promise.resolve() }),
-      }),
+      execute: () => Promise.resolve([]),
     } as unknown as Parameters<typeof matchKnownFeedsForImport>[0];
 
     await matchKnownFeedsForImport(fakeDb, "import-1");

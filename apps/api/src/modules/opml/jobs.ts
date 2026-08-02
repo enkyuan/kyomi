@@ -250,6 +250,9 @@ export async function runOpmlImportPrepareJob(
     });
     await recordOpmlPreparationHeartbeat(database, importId);
 
+    // Matching only touches items still pending, and nothing inserts new import items after
+    // materialization, so one full match up front covers every known feed; re-matching inside
+    // the drain loop below would rescan the entire (still large) pending set on every batch.
     await matchKnownFeedsForImport(database, importId);
     while (true) {
       const completion = await subscribeKnownOpmlItems(database, importId, claimed.userId);
@@ -265,7 +268,6 @@ export async function runOpmlImportPrepareJob(
       if (completion.processed === 0) {
         break;
       }
-      await matchKnownFeedsForImport(database, importId);
     }
 
     await finalizeOpmlImportPreparation(database, importId);

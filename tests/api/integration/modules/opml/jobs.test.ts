@@ -372,18 +372,18 @@ describe("runOpmlImportPrepareJob", () => {
         from: () => ({
           where: () => {
             topSelectCount += 1;
-            // Exact call order for one drain-loop round that finds one match then stops:
-            // 1 countOpmlImportItems (bare), 2 match-pending round 1 (bare), 3 subscribe-matched
-            // round 1 (.limit, finds 1 item), 4 match-pending round 2 (bare), 5 subscribe-matched
-            // round 2 (.limit, finds none -- processed===0 ends the loop), 6 finalize totals
-            // (.limit).
-            if (topSelectCount === 1 || topSelectCount === 2 || topSelectCount === 4) {
+            // Exact call order for one match (up front, not re-run per drain round) followed by
+            // a drain loop that finds one match then stops:
+            // 1 countOpmlImportItems (bare), 2 match-pending (bare, once), 3 subscribe-matched
+            // round 1 (.limit, finds 1 item), 4 subscribe-matched round 2 (.limit, finds none --
+            // processed===0 ends the loop), 5 finalize totals (.limit).
+            if (topSelectCount === 1 || topSelectCount === 2) {
               return Promise.resolve(topSelectCount === 1 ? [{ total: 5 }] : []);
             }
             if (topSelectCount === 3) {
               return withLimit([{ id: "item-1", feedId: "feed-1", folderId: null, title: null }]);
             }
-            if (topSelectCount === 5) {
+            if (topSelectCount === 4) {
               return withLimit([]);
             }
             // finalizeOpmlImportPreparation's totals select.
