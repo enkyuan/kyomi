@@ -19,6 +19,7 @@ const app = createApp();
 
 await listenWithRetry(app, {
   port: env.PORT,
+  maxRequestBodySize: env.API_MAX_REQUEST_BODY_BYTES,
   retries: 20,
   retryDelayMs: 250,
   signal: controller.signal,
