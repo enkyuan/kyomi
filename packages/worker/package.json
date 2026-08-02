@@ -10,7 +10,8 @@
     "./favicon": "./src/services/favicon/index.ts",
     "./favicon/browser": "./src/services/favicon/proxy-url.ts",
     "./lib/article-identity": "./src/lib/article-identity.ts",
-    "./lib/html-entities": "./src/lib/html-entities.ts"
+    "./lib/html-entities": "./src/lib/html-entities.ts",
+    "./lib/response-body": "./src/lib/response-body.ts"
   },
   "scripts": {
     "fmt": "oxfmt src",

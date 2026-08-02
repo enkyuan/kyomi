@@ -1,5 +1,6 @@
 import type { FetchFeedDocumentResult } from "./types";
 import { isSafeEnrichmentUrl } from "../../lib/safe-url";
+import { cancelResponseBody, readResponseBodyWithByteLimit } from "../../lib/response-body";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_BYTES = 2 * 1024 * 1024;
@@ -90,18 +91,19 @@ export async function fetchFeedDocument(
     }
 
     if (!response.ok) {
+      await cancelResponseBody(response);
       return { ok: false, error: `HTTP ${response.status}`, httpStatus: response.status };
     }
 
-    const buffer = await response.arrayBuffer();
-    if (buffer.byteLength > MAX_BYTES) {
+    const result = await readResponseBodyWithByteLimit(response, { maxBytes: MAX_BYTES });
+    if (!result.ok) {
       return { ok: false, error: "Feed response too large" };
     }
 
     return {
       ok: true,
       finalUrl,
-      body: new TextDecoder("utf-8", { fatal: false }).decode(buffer),
+      body: result.body,
       contentType: response.headers.get("content-type") ?? "",
       etag: response.headers.get("etag"),
       lastModified: response.headers.get("last-modified"),
