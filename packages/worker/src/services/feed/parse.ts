@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { XMLParser, type X2jOptions } from "fast-xml-parser";
 import { normalizeArticleUrl } from "../../lib/article-identity";
 import {
@@ -6,7 +7,7 @@ import {
   stripTags,
   summarizeText,
 } from "../../lib/feed-text";
-import type { ParsedFeedDocument } from "./types";
+import type { FeedContentLimitStats, ParsedFeedDocument, ParsedFeedItem } from "./types";
 
 const FEED_XML_PROCESS_ENTITIES: NonNullable<X2jOptions["processEntities"]> = {
   enabled: true,
@@ -19,21 +20,86 @@ const FEED_XML_PROCESS_ENTITIES: NonNullable<X2jOptions["processEntities"]> = {
 const MAX_CATEGORY_LABELS_PER_SCOPE = 20;
 const MAX_CATEGORY_LABEL_LENGTH = 120;
 
-function stableUuid(seed: string): string {
-  let hash = 0x811c9dc5;
-  for (let i = 0; i < seed.length; i += 1) {
-    hash ^= seed.charCodeAt(i);
-    hash = Math.imul(hash, 0x01000193);
+// ponytail: kept below the plan's 5,000-feed target until large-data-read-models Task 5
+// (persistFeedItems) lands; that dependency bounds SQL statement size for a 5K-item feed.
+const FEED_MAX_ITEMS = 500;
+const FEED_TITLE_MAX_CHARS = 1_024;
+const FEED_DESCRIPTION_MAX_CHARS = 8_192;
+const ITEM_TITLE_MAX_CHARS = 1_024;
+const ITEM_SOURCE_CONTENT_MAX_BYTES = 256 * 1024;
+const FEED_ACCEPTED_CONTENT_MAX_BYTES = 4 * 1024 * 1024;
+
+function utf8ByteLength(value: string): number {
+  return Buffer.byteLength(value, "utf8");
+}
+
+function clampChars(value: string, maxChars: number): string {
+  return value.length > maxChars ? value.slice(0, maxChars) : value;
+}
+
+class ContentLimitTracker {
+  sourceItemCount = 0;
+  acceptedItemCount = 0;
+  contentCandidateCount = 0;
+  droppedContentItemCount = 0;
+  acceptedContentBytes = 0;
+
+  admitItem(): boolean {
+    this.sourceItemCount += 1;
+    if (this.acceptedItemCount >= FEED_MAX_ITEMS) {
+      return false;
+    }
+    this.acceptedItemCount += 1;
+    return true;
   }
 
-  const bytes = new Uint8Array(16);
-  let state = hash >>> 0;
-  for (let i = 0; i < bytes.length; i += 1) {
-    state ^= state << 13;
-    state ^= state >>> 17;
-    state ^= state << 5;
-    bytes[i] = state & 0xff;
+  /** Returns the candidate body if it fits under the per-item and aggregate budgets, else null. */
+  admitContent(candidate: string | null): string | null {
+    if (!candidate) {
+      return null;
+    }
+    this.contentCandidateCount += 1;
+    const byteLength = utf8ByteLength(candidate);
+    if (
+      byteLength > ITEM_SOURCE_CONTENT_MAX_BYTES ||
+      this.acceptedContentBytes + byteLength > FEED_ACCEPTED_CONTENT_MAX_BYTES
+    ) {
+      this.droppedContentItemCount += 1;
+      return null;
+    }
+    this.acceptedContentBytes += byteLength;
+    return candidate;
   }
+
+  finish(): FeedContentLimitStats {
+    return {
+      sourceItemCount: this.sourceItemCount,
+      acceptedItemCount: this.acceptedItemCount,
+      droppedItemCount: this.sourceItemCount - this.acceptedItemCount,
+      contentCandidateCount: this.contentCandidateCount,
+      droppedContentItemCount: this.droppedContentItemCount,
+      acceptedContentBytes: this.acceptedContentBytes,
+    };
+  }
+}
+
+/**
+ * A body dropped for size still needs a summary fallback, so derive it from at most the
+ * first 256 KiB of source text rather than the (possibly much larger) rejected candidate.
+ */
+function boundedSummarySource(candidate: string | null): string | null {
+  if (!candidate) {
+    return null;
+  }
+  if (utf8ByteLength(candidate) <= ITEM_SOURCE_CONTENT_MAX_BYTES) {
+    return candidate;
+  }
+  return Buffer.from(candidate, "utf8").subarray(0, ITEM_SOURCE_CONTENT_MAX_BYTES).toString("utf8");
+}
+
+function stableUuid(seed: string): string {
+  const digest = createHash("sha256").update(seed).digest();
+  const bytes = digest.subarray(0, 16);
 
   bytes[6] = (bytes[6] & 0x0f) | 0x50;
   bytes[8] = (bytes[8] & 0x3f) | 0x80;
@@ -42,8 +108,8 @@ function stableUuid(seed: string): string {
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20, 32)}`;
 }
 
-function computeFeedItemId(feedId: string, stableIdentity: string): string {
-  return stableUuid(`${feedId}|${stableIdentity}`);
+function computeFeedItemId(feedId: string, canonicalUrl: string): string {
+  return stableUuid(`${feedId}|${canonicalUrl}`);
 }
 
 function normalizeFeedUrl(raw: string): string {
@@ -275,13 +341,20 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
     typeof parsed.home_page_url === "string" ? parsed.home_page_url : finalUrl,
     finalUrl,
   );
-  const items = toArray(parsed.items).flatMap((item, index) => {
+  const tracker = new ContentLimitTracker();
+  const items: ParsedFeedItem[] = [];
+  for (const [index, item] of toArray(parsed.items).entries()) {
     if (!item || typeof item !== "object") {
-      return [];
+      continue;
+    }
+    if (!tracker.admitItem()) {
+      continue;
     }
     const record = item as Record<string, unknown>;
-    const itemTitle =
-      (typeof record.title === "string" && stripTags(record.title)) || `Untitled item ${index + 1}`;
+    const itemTitle = clampChars(
+      (typeof record.title === "string" && stripTags(record.title)) || `Untitled item ${index + 1}`,
+      ITEM_TITLE_MAX_CHARS,
+    );
     const itemLink =
       (typeof record.url === "string" && record.url.trim()) ||
       (typeof record.external_url === "string" && record.external_url.trim()) ||
@@ -292,37 +365,40 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       typeof record.content_html === "string" ? record.content_html.trim() || null : null;
     const contentText =
       typeof record.content_text === "string" ? record.content_text.trim() || null : null;
-    const storedContent = buildStoredFeedContent(contentHtml ?? contentText);
+    const rawCandidate = contentHtml ?? contentText;
+    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate));
     const imageUrl = extractImageUrl(contentHtml, itemLink);
     const publishedAt = parsePublishedAt(record.date_published, now);
-    return [
-      {
-        id: computeFeedItemId(feedId, stableIdentity),
-        stableIdentity,
-        canonicalUrl,
-        title: itemTitle,
-        link: itemLink,
-        summary:
-          (typeof record.summary === "string" && summarizeText(record.summary)) ||
-          summarizeText(storedContent.content),
-        ...storedContent,
-        imageUrl,
-        publishedAt,
-        categoryLabels: jsonFeedTagLabels(record.tags).slice(0, MAX_CATEGORY_LABELS_PER_SCOPE),
-      },
-    ];
-  });
+    items.push({
+      id: computeFeedItemId(feedId, canonicalUrl),
+      stableIdentity,
+      canonicalUrl,
+      title: itemTitle,
+      link: itemLink,
+      summary:
+        (typeof record.summary === "string" && summarizeText(record.summary)) ||
+        summarizeText(storedContent.content ?? boundedSummarySource(rawCandidate)),
+      ...storedContent,
+      imageUrl,
+      publishedAt,
+      categoryLabels: jsonFeedTagLabels(record.tags).slice(0, MAX_CATEGORY_LABELS_PER_SCOPE),
+    });
+  }
 
   return {
     metadata: {
-      title: title || "Untitled",
-      description: description || "Follow recent articles from this feed",
+      title: clampChars(title || "Untitled", FEED_TITLE_MAX_CHARS),
+      description: clampChars(
+        description || "Follow recent articles from this feed",
+        FEED_DESCRIPTION_MAX_CHARS,
+      ),
       link,
       iconUrl: embeddedJsonFeedIconUrl(parsed, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
       categoryLabels: jsonFeedTagLabels(parsed.tags).slice(0, MAX_CATEGORY_LABELS_PER_SCOPE),
     },
     items,
+    contentLimitStats: tracker.finish(),
   };
 }
 
@@ -335,55 +411,63 @@ function parseRssDocument(
   const title = xmlText(channel.title) || "Untitled";
   const description = xmlText(channel.description) || "Follow recent articles from this feed";
   const link = absoluteHttpUrl(pickRssLink(channel.link, finalUrl), finalUrl);
-  const items = toArray(channel.item).flatMap((item, index) => {
+  const tracker = new ContentLimitTracker();
+  const items: ParsedFeedItem[] = [];
+  for (const [index, item] of toArray(channel.item).entries()) {
     if (!item || typeof item !== "object") {
-      return [];
+      continue;
+    }
+    if (!tracker.admitItem()) {
+      continue;
     }
     const record = item as Record<string, unknown>;
-    const itemTitle = xmlText(record.title) || `Untitled item ${index + 1}`;
+    const itemTitle = clampChars(
+      xmlText(record.title) || `Untitled item ${index + 1}`,
+      ITEM_TITLE_MAX_CHARS,
+    );
     const itemLink = pickRssLink(
       record.link,
       rawText(record.guid) ?? `${finalUrl}#item-${index + 1}`,
     );
     const canonicalUrl = normalizeArticleUrl(itemLink);
     const stableIdentity = rawText(record.guid) ?? canonicalUrl;
-    const storedContent = buildStoredFeedContent(
-      rawText(record["content:encoded"]) ?? rawText(record.description),
-    );
+    const rawCandidate = rawText(record["content:encoded"]) ?? rawText(record.description);
+    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate));
     const imageUrl = extractImageUrl(
       rawText(record["content:encoded"]) ?? rawText(record.description),
       itemLink,
     );
-    const summary = summarizeText(rawText(record.description) ?? storedContent.content);
+    const summary = summarizeText(
+      rawText(record.description) ?? storedContent.content ?? boundedSummarySource(rawCandidate),
+    );
     const publishedAt = parsePublishedAt(record.pubDate ?? record.isoDate, now);
     const categoryLabels = categoryLabelsFrom(record.category, record["itunes:category"]);
 
-    return [
-      {
-        id: computeFeedItemId(feedId, stableIdentity),
-        stableIdentity,
-        canonicalUrl,
-        title: itemTitle,
-        link: itemLink,
-        summary,
-        ...storedContent,
-        imageUrl,
-        publishedAt,
-        categoryLabels,
-      },
-    ];
-  });
+    items.push({
+      id: computeFeedItemId(feedId, canonicalUrl),
+      stableIdentity,
+      canonicalUrl,
+      title: itemTitle,
+      link: itemLink,
+      summary,
+      ...storedContent,
+      imageUrl,
+      publishedAt,
+      categoryLabels,
+    });
+  }
 
   return {
     metadata: {
-      title,
-      description,
+      title: clampChars(title, FEED_TITLE_MAX_CHARS),
+      description: clampChars(description, FEED_DESCRIPTION_MAX_CHARS),
       link,
       iconUrl: embeddedRssFeedIconUrl(channel, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
       categoryLabels: categoryLabelsFrom(channel.category, channel["itunes:category"]),
     },
     items,
+    contentLimitStats: tracker.finish(),
   };
 }
 
@@ -396,49 +480,57 @@ function parseAtomDocument(
   const title = xmlText(feed.title) || "Untitled";
   const description = xmlText(feed.subtitle) || "Follow recent articles from this feed";
   const link = absoluteHttpUrl(pickAtomLink(feed.link, finalUrl), finalUrl);
-  const items = toArray(feed.entry).flatMap((entry, index) => {
+  const tracker = new ContentLimitTracker();
+  const items: ParsedFeedItem[] = [];
+  for (const [index, entry] of toArray(feed.entry).entries()) {
     if (!entry || typeof entry !== "object") {
-      return [];
+      continue;
+    }
+    if (!tracker.admitItem()) {
+      continue;
     }
     const record = entry as Record<string, unknown>;
-    const itemTitle = xmlText(record.title) || `Untitled item ${index + 1}`;
+    const itemTitle = clampChars(
+      xmlText(record.title) || `Untitled item ${index + 1}`,
+      ITEM_TITLE_MAX_CHARS,
+    );
     const itemLink = pickAtomLink(record.link, `${finalUrl}#entry-${index + 1}`);
     const canonicalUrl = normalizeArticleUrl(itemLink);
     const stableIdentity = rawText(record.id) ?? canonicalUrl;
-    const storedContent = buildStoredFeedContent(
-      rawText(record.content) ?? rawText(record.summary),
-    );
+    const rawCandidate = rawText(record.content) ?? rawText(record.summary);
+    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate));
     const imageUrl = extractImageUrl(rawText(record.content) ?? rawText(record.summary), itemLink);
-    const summary = summarizeText(rawText(record.summary) ?? storedContent.content);
+    const summary = summarizeText(
+      rawText(record.summary) ?? storedContent.content ?? boundedSummarySource(rawCandidate),
+    );
     const publishedAt = parsePublishedAt(record.published ?? record.updated, now);
     const categoryLabels = categoryLabelsFrom(record.category);
 
-    return [
-      {
-        id: computeFeedItemId(feedId, stableIdentity),
-        stableIdentity,
-        canonicalUrl,
-        title: itemTitle,
-        link: itemLink,
-        summary,
-        ...storedContent,
-        imageUrl,
-        publishedAt,
-        categoryLabels,
-      },
-    ];
-  });
+    items.push({
+      id: computeFeedItemId(feedId, canonicalUrl),
+      stableIdentity,
+      canonicalUrl,
+      title: itemTitle,
+      link: itemLink,
+      summary,
+      ...storedContent,
+      imageUrl,
+      publishedAt,
+      categoryLabels,
+    });
+  }
 
   return {
     metadata: {
-      title,
-      description,
+      title: clampChars(title, FEED_TITLE_MAX_CHARS),
+      description: clampChars(description, FEED_DESCRIPTION_MAX_CHARS),
       link,
       iconUrl: embeddedAtomFeedIconUrl(feed, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
       categoryLabels: categoryLabelsFrom(feed.category),
     },
     items,
+    contentLimitStats: tracker.finish(),
   };
 }
 

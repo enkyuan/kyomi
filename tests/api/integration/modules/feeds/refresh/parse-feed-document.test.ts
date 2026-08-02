@@ -28,9 +28,70 @@ describe("parseFeedDocument", () => {
       "https://example.com/feed.xml",
     );
 
-    expect(parsed.metadata.title).toBe('"'.repeat(1_200));
+    // The 1,200-entity title exceeds the 1,024-char feed/item title budget (Task 2 of
+    // content-processing-resource-bounds), so both are clamped rather than rejected.
+    expect(parsed.metadata.title).toBe('"'.repeat(1_024));
     expect(parsed.items).toHaveLength(1);
-    expect(parsed.items[0]?.title).toBe(`Article ${'"'.repeat(1_200)}`);
+    expect(parsed.items[0]?.title).toBe(`Article ${'"'.repeat(1_024)}`.slice(0, 1_024));
+  });
+
+  test("derives distinct item ids for RSS entries that reuse the same GUID", () => {
+    const parsed = parseFeedDocument(
+      `<?xml version="1.0"?>
+      <rss version="2.0">
+        <channel>
+          <title>Presswire</title>
+          <link>https://presswire.com/</link>
+          <description>Releases</description>
+          <item>
+            <title>Article one</title>
+            <link>https://presswire.com/release/one</link>
+            <guid>reused-guid</guid>
+            <description>Summary</description>
+            <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+          </item>
+          <item>
+            <title>Article two</title>
+            <link>https://presswire.com/release/two</link>
+            <guid>reused-guid</guid>
+            <description>Summary</description>
+            <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+          </item>
+        </channel>
+      </rss>`,
+      "feed-1",
+      "https://presswire.com/feed?post_type=release",
+    );
+
+    expect(parsed.items).toHaveLength(2);
+    expect(parsed.items[0]?.stableIdentity).toBe("reused-guid");
+    expect(parsed.items[1]?.stableIdentity).toBe("reused-guid");
+    expect(parsed.items[0]?.id).not.toBe(parsed.items[1]?.id);
+  });
+
+  test("derives the same item id across refreshes for a stable canonical URL", () => {
+    const buildFeed = () =>
+      parseFeedDocument(
+        `<?xml version="1.0"?>
+        <rss version="2.0">
+          <channel>
+            <title>Example</title>
+            <link>https://example.com/</link>
+            <description>Updates</description>
+            <item>
+              <title>Article</title>
+              <link>https://example.com/article</link>
+              <guid isPermaLink="false">${Math.random()}</guid>
+              <description>Summary</description>
+              <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+            </item>
+          </channel>
+        </rss>`,
+        "feed-1",
+        "https://example.com/feed.xml",
+      );
+
+    expect(buildFeed().items[0]?.id).toBe(buildFeed().items[0]?.id);
   });
 
   test("resolves relative RSS channel links against the final feed URL", () => {
