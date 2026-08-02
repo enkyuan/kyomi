@@ -34,7 +34,7 @@ function extractionCacheId(urlKey: string): string {
 }
 
 function extractionContentHash(html: string, text: string): string {
-  return sha256(`${html}\0${text}`);
+  return new Bun.CryptoHasher("sha256").update(html).update("\0").update(text).digest("hex");
 }
 
 function isFreshCacheRow(
@@ -53,7 +53,7 @@ export async function readFreshExtractionCache(
   urlKey: string,
   now = new Date(),
 ): Promise<
-  | { kind: "ready"; html: string; text: string }
+  | { kind: "ready"; html: string; text: string; sanitizerVersion: string | null }
   | { kind: "failed"; errorCode: string; message: string }
   | null
 > {
@@ -62,6 +62,7 @@ export async function readFreshExtractionCache(
       status: articleExtractionCache.status,
       contentHtml: articleExtractionCache.contentHtml,
       contentText: articleExtractionCache.contentText,
+      sanitizerVersion: articleExtractionCache.sanitizerVersion,
       errorCode: articleExtractionCache.errorCode,
       errorMessage: articleExtractionCache.errorMessage,
       fetchedAt: articleExtractionCache.fetchedAt,
@@ -75,7 +76,12 @@ export async function readFreshExtractionCache(
   }
 
   if (row.status === "ready" && row.contentHtml?.trim()) {
-    return { kind: "ready", html: row.contentHtml, text: row.contentText ?? "" };
+    return {
+      kind: "ready",
+      html: row.contentHtml,
+      text: row.contentText ?? "",
+      sanitizerVersion: row.sanitizerVersion,
+    };
   }
 
   if (row.status === "failed") {
@@ -97,6 +103,7 @@ export async function upsertReadyExtractionCache(
     finalUrl: string | null;
     html: string;
     text: string;
+    sanitizerVersion: string;
   },
 ) {
   const now = new Date();
@@ -110,6 +117,7 @@ export async function upsertReadyExtractionCache(
       contentHash: extractionContentHash(input.html, input.text),
       contentHtml: input.html,
       contentText: input.text,
+      sanitizerVersion: input.sanitizerVersion,
       status: "ready",
       errorCode: null,
       errorMessage: null,
@@ -124,6 +132,7 @@ export async function upsertReadyExtractionCache(
         contentHash: extractionContentHash(input.html, input.text),
         contentHtml: input.html,
         contentText: input.text,
+        sanitizerVersion: input.sanitizerVersion,
         status: "ready",
         errorCode: null,
         errorMessage: null,
@@ -154,6 +163,7 @@ export async function upsertFailedExtractionCache(
       contentHash: null,
       contentHtml: null,
       contentText: null,
+      sanitizerVersion: null,
       status: "failed",
       errorCode: input.errorCode,
       errorMessage: input.message,
@@ -168,6 +178,7 @@ export async function upsertFailedExtractionCache(
         contentHash: null,
         contentHtml: null,
         contentText: null,
+        sanitizerVersion: null,
         status: "failed",
         errorCode: input.errorCode,
         errorMessage: input.message,
