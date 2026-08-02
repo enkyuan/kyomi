@@ -48,7 +48,10 @@ export type OpmlTaskListItem = {
 };
 
 export type ParsedOpmlFeed = {
+  /** @deprecated Use originalUrl. Kept equal to originalUrl for source compatibility. */
   xmlUrl: string;
+  originalUrl: string;
+  normalizedUrl: string;
   title: string | null;
   folderName: string;
 };
