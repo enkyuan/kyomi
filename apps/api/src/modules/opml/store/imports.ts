@@ -145,23 +145,62 @@ export async function recordOpmlPreparationHeartbeat(
 }
 
 /**
- * Clears sourceXml and transitions parsing -> dispatching once every parsed item is durably
- * materialized. Records totalItems, opmlTitle, and opmlAuthor alongside the transition.
+ * Records totalItems, opmlTitle, and opmlAuthor once every parsed item is durably materialized.
+ * The parent stays in parsing (and sourceXml stays present) so the known-feed matching loop can
+ * still run and, if the process crashes here, a stale-parsing reparse can safely resume.
  */
-export async function finalizeOpmlImportPreparation(
+export async function recordOpmlImportMaterialized(
   database: DB,
   importId: string,
   input: { totalItems: number; opmlTitle: string | null; opmlAuthor: string | null },
 ): Promise<void> {
-  const now = new Date();
   await database
     .update(opmlImports)
     .set({
-      status: "dispatching",
-      sourceXml: null,
       totalItems: input.totalItems,
       opmlTitle: input.opmlTitle,
       opmlAuthor: input.opmlAuthor,
+      updatedAt: new Date(),
+    })
+    .where(and(eq(opmlImports.id, importId), eq(opmlImports.status, "parsing")));
+}
+
+/**
+ * Atomically clears sourceXml and exits parsing once no known-feed matching work remains:
+ * transitions to dispatching when unknown items still need a lease, or straight to completed
+ * (or failed, if every item failed) when every item is already terminal.
+ */
+export async function finalizeOpmlImportPreparation(database: DB, importId: string): Promise<void> {
+  const now = new Date();
+  const [row] = await database
+    .select({
+      totalItems: opmlImports.totalItems,
+      subscribedItems: opmlImports.subscribedItems,
+      alreadySubscribedItems: opmlImports.alreadySubscribedItems,
+      failedItems: opmlImports.failedItems,
+    })
+    .from(opmlImports)
+    .where(and(eq(opmlImports.id, importId), eq(opmlImports.status, "parsing")))
+    .limit(1);
+  if (!row) {
+    return;
+  }
+
+  const completed = row.subscribedItems + row.alreadySubscribedItems + row.failedItems;
+  if (completed < row.totalItems) {
+    await database
+      .update(opmlImports)
+      .set({ status: "dispatching", sourceXml: null, updatedAt: now })
+      .where(and(eq(opmlImports.id, importId), eq(opmlImports.status, "parsing")));
+    return;
+  }
+
+  await database
+    .update(opmlImports)
+    .set({
+      status: row.failedItems === row.totalItems && row.totalItems > 0 ? "failed" : "completed",
+      sourceXml: null,
+      completedAt: now,
       updatedAt: now,
     })
     .where(and(eq(opmlImports.id, importId), eq(opmlImports.status, "parsing")));

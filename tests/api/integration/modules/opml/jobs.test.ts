@@ -30,17 +30,20 @@ const insertOpmlImportItemsMock = mock(async (...args: unknown[]) => {
   return (args[2] as unknown[]).length;
 });
 const recordOpmlPreparationHeartbeatMock = mock(async () => undefined);
+const recordOpmlImportMaterializedMock = mock(async () => undefined);
 const finalizeOpmlImportPreparationMock = mock(async () => undefined);
 const failOpmlImportPreparationMock = mock(async () => undefined);
+const matchKnownFeedsForImportMock = mock(async () => 0);
+const subscribeKnownOpmlItemsMock = mock(async () => ({
+  processed: 0,
+  subscribed: 0,
+  alreadySubscribed: 0,
+  refreshCandidateFeedIds: [] as string[],
+}));
+const publishKnownFeedRefreshCandidatesMock = mock(async () => undefined);
 
 mock.module("@modules/feeds/subscription/subscribe", () => ({
   createOrSubscribeToFeed: createOrSubscribeToFeedMock,
-  subscribeToExistingFeed: mock(async () => ({
-    feedId: "feed-1",
-    subscriptionId: "sub-1",
-    newFeed: false,
-    newSubscription: false,
-  })),
 }));
 mock.module("@modules/feeds/refresh/enqueue", () => ({
   enqueueBatchFeedRefresh: mock(async () => ({ accepted: true, count: 0, failedCount: 0 })),
@@ -74,9 +77,15 @@ mock.module("@modules/opml/store", () => ({
   recordOpmlImportPrepareWakeup: recordOpmlImportPrepareWakeupMock,
   claimOpmlPreparation: claimOpmlPreparationMock,
   insertOpmlImportItems: insertOpmlImportItemsMock,
+  recordOpmlImportMaterialized: recordOpmlImportMaterializedMock,
   recordOpmlPreparationHeartbeat: recordOpmlPreparationHeartbeatMock,
   finalizeOpmlImportPreparation: finalizeOpmlImportPreparationMock,
   failOpmlImportPreparation: failOpmlImportPreparationMock,
+}));
+mock.module("@modules/opml/known-feeds", () => ({
+  matchKnownFeedsForImport: matchKnownFeedsForImportMock,
+  subscribeKnownOpmlItems: subscribeKnownOpmlItemsMock,
+  publishKnownFeedRefreshCandidates: publishKnownFeedRefreshCandidatesMock,
 }));
 mock.module("@adapters/queue/publish-job", () => ({
   publishJob: publishJobMock,
@@ -198,11 +207,13 @@ describe("runOpmlImportPrepareJob", () => {
     expect(insertOpmlImportItemsCalls).toHaveLength(1);
     const feedsArg = insertOpmlImportItemsCalls[0]?.[2] as unknown[];
     expect(feedsArg).toHaveLength(1201);
-    expect(finalizeOpmlImportPreparationMock).toHaveBeenCalledWith(
+    expect(recordOpmlImportMaterializedMock).toHaveBeenCalledWith(
       {},
       "import-1",
       expect.objectContaining({ totalItems: 1201 }),
     );
+    expect(matchKnownFeedsForImportMock).toHaveBeenCalledWith({}, "import-1");
+    expect(finalizeOpmlImportPreparationMock).toHaveBeenCalledWith({}, "import-1");
     expect(failOpmlImportPreparationMock).not.toHaveBeenCalled();
   });
 
@@ -268,5 +279,47 @@ describe("runOpmlImportPrepareJob", () => {
       runOpmlImportPrepareJob({} as never, { importId: "import-1" }, logger),
     ).rejects.toThrow("connection reset");
     expect(failOpmlImportPreparationMock).not.toHaveBeenCalled();
+  });
+
+  test("drains known-feed matches in a loop and publishes refresh candidates before finalizing", async () => {
+    subscribeKnownOpmlItemsMock.mockClear();
+    publishKnownFeedRefreshCandidatesMock.mockClear();
+    claimOpmlPreparationMock.mockImplementationOnce(async (_db: unknown, importId: string) => ({
+      importId,
+      userId: "user-1",
+      filename: "feeds.opml",
+      sourceXml: buildOpmlWithFeedCount(5),
+    }));
+    matchKnownFeedsForImportMock.mockImplementationOnce(async () => 5);
+    subscribeKnownOpmlItemsMock
+      .mockImplementationOnce(async () => ({
+        processed: 3,
+        subscribed: 2,
+        alreadySubscribed: 1,
+        refreshCandidateFeedIds: ["feed-1", "feed-2"],
+      }))
+      .mockImplementationOnce(async () => ({
+        processed: 0,
+        subscribed: 0,
+        alreadySubscribed: 0,
+        refreshCandidateFeedIds: [],
+      }));
+    const { runOpmlImportPrepareJob } = await import("@modules/opml/jobs");
+    const logger = {
+      info: mock(() => undefined),
+      warn: mock(() => undefined),
+      error: mock(() => undefined),
+    };
+
+    await runOpmlImportPrepareJob({} as never, { importId: "import-1" }, logger);
+
+    expect(subscribeKnownOpmlItemsMock).toHaveBeenCalledTimes(2);
+    expect(publishKnownFeedRefreshCandidatesMock).toHaveBeenCalledWith(
+      {},
+      "user-1",
+      ["feed-1", "feed-2"],
+      logger,
+    );
+    expect(finalizeOpmlImportPreparationMock).toHaveBeenCalledWith({}, "import-1");
   });
 });

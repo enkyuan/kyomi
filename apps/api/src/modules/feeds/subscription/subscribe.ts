@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { feedSubscriptions, feeds } from "@kyomi/db";
+import { feeds } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
 import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize";
@@ -13,6 +13,7 @@ import {
   subscribeUserToFeed,
   upsertFeedRecord,
   type FaviconEnrichment,
+  type SubscriptionInsertOptions,
 } from "./internal";
 
 type DB = typeof db;
@@ -39,6 +40,7 @@ async function subscribeToExistingFeedByUrl(
   database: DB,
   userId: string,
   rawUrl: string,
+  options?: SubscriptionInsertOptions,
 ): Promise<FeedSubscribeResultDto | null> {
   const normalizedUrl = normalizeExistingFeedLookupUrl(rawUrl);
   if (!normalizedUrl) {
@@ -55,7 +57,7 @@ async function subscribeToExistingFeedByUrl(
     return null;
   }
 
-  return subscribeToExistingFeed(database, userId, existingFeed.id);
+  return subscribeToExistingFeed(database, userId, existingFeed.id, options);
 }
 
 async function enrichFaviconInBackground(
@@ -95,13 +97,11 @@ export async function createOrSubscribeToFeed(
   database: DB,
   userId: string,
   rawUrl: string,
-  options?: { folderId?: string | null; customTitle?: string | null },
+  options?: SubscriptionInsertOptions,
 ): Promise<FeedSubscribeResultDto> {
-  if (!options?.folderId && options?.customTitle === undefined) {
-    const existing = await subscribeToExistingFeedByUrl(database, userId, rawUrl);
-    if (existing) {
-      return existing;
-    }
+  const existing = await subscribeToExistingFeedByUrl(database, userId, rawUrl, options);
+  if (existing) {
+    return existing;
   }
 
   const resolved = await resolveRemoteFeed(rawUrl);
@@ -115,19 +115,12 @@ export async function createOrSubscribeToFeed(
       resolved,
       favicon,
     );
-    const { subscriptionId, newSubscription } = await subscribeUserToFeed(tx, userId, feedId);
-
-    if (newSubscription && (options?.folderId || options?.customTitle !== undefined)) {
-      const customTitle = options?.customTitle?.trim() || null;
-      await tx
-        .update(feedSubscriptions)
-        .set({
-          ...(options?.folderId ? { folderId: options.folderId } : {}),
-          ...(options?.customTitle !== undefined ? { customTitle } : {}),
-          updatedAt: new Date(),
-        })
-        .where(eq(feedSubscriptions.id, subscriptionId));
-    }
+    const { subscriptionId, newSubscription } = await subscribeUserToFeed(
+      tx,
+      userId,
+      feedId,
+      options,
+    );
 
     return {
       feedId,
@@ -163,6 +156,7 @@ export async function subscribeToExistingFeed(
   database: DB,
   userId: string,
   feedId: string,
+  options?: SubscriptionInsertOptions,
 ): Promise<FeedSubscribeResultDto> {
   return await database.transaction(async (tx) => {
     const feedRow = await tx
@@ -183,7 +177,12 @@ export async function subscribeToExistingFeed(
       throw new AppError("Feed not found", { status: 404, code: "FEED_NOT_FOUND" });
     }
 
-    const { subscriptionId, newSubscription } = await subscribeUserToFeed(tx, userId, feed.id);
+    const { subscriptionId, newSubscription } = await subscribeUserToFeed(
+      tx,
+      userId,
+      feed.id,
+      options,
+    );
 
     return {
       feedId: feed.id,

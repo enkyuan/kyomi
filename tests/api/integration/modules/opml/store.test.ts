@@ -4,11 +4,13 @@ import {
   buildOpmlImportSummary,
   createOpmlImport,
   deleteTerminalOpmlImport,
+  finalizeOpmlImportPreparation,
   getOpmlImportForUser,
   insertOpmlImportItems,
   listActiveOpmlImportsForUser,
   opmlImportItemId,
   opmlImportStatusMessage,
+  recordOpmlImportMaterialized,
   requestOpmlImportCancellation,
   toCompatibleOpmlImportStatus,
 } from "@modules/opml/store";
@@ -323,5 +325,98 @@ describe("opml import store", () => {
     const fakeDb = { insert } as unknown as Parameters<typeof insertOpmlImportItems>[0];
 
     expect(await insertOpmlImportItems(fakeDb, "import-1", [], new Map())).toBe(0);
+  });
+});
+
+describe("recordOpmlImportMaterialized", () => {
+  test("records totals without leaving the parsing state", async () => {
+    const where = mock(() => Promise.resolve());
+    const set = mock(() => ({ where }));
+    const update = mock(() => ({ set }));
+    const fakeDb = { update } as unknown as Parameters<typeof recordOpmlImportMaterialized>[0];
+
+    await recordOpmlImportMaterialized(fakeDb, "import-1", {
+      totalItems: 1201,
+      opmlTitle: "My Feeds",
+      opmlAuthor: null,
+    });
+
+    expect(set).toHaveBeenCalledWith(
+      expect.objectContaining({ totalItems: 1201, opmlTitle: "My Feeds" }),
+    );
+    const setPatch = (set as unknown as { mock: { calls: unknown[][] } }).mock
+      .calls[0]?.[0] as Record<string, unknown>;
+    expect(setPatch.status).toBeUndefined();
+    expect(setPatch.sourceXml).toBeUndefined();
+  });
+});
+
+describe("finalizeOpmlImportPreparation", () => {
+  function createFakeFinalizeDb(row: Record<string, unknown> | undefined) {
+    const setCalls: Array<Record<string, unknown>> = [];
+    const fakeDb = {
+      select: () => ({
+        from: () => ({
+          where: () => ({
+            limit: () => Promise.resolve(row ? [row] : []),
+          }),
+        }),
+      }),
+      update: () => ({
+        set: (patch: Record<string, unknown>) => {
+          setCalls.push(patch);
+          return { where: () => Promise.resolve() };
+        },
+      }),
+    };
+    return { fakeDb, setCalls };
+  }
+
+  test("transitions to dispatching when unknown items still remain", async () => {
+    const { fakeDb, setCalls } = createFakeFinalizeDb({
+      totalItems: 10,
+      subscribedItems: 3,
+      alreadySubscribedItems: 2,
+      failedItems: 0,
+    });
+
+    await finalizeOpmlImportPreparation(fakeDb as never, "import-1");
+
+    expect(setCalls).toHaveLength(1);
+    expect(setCalls[0]).toMatchObject({ status: "dispatching", sourceXml: null });
+  });
+
+  test("transitions straight to completed when every item is already terminal", async () => {
+    const { fakeDb, setCalls } = createFakeFinalizeDb({
+      totalItems: 10,
+      subscribedItems: 7,
+      alreadySubscribedItems: 3,
+      failedItems: 0,
+    });
+
+    await finalizeOpmlImportPreparation(fakeDb as never, "import-1");
+
+    expect(setCalls[0]).toMatchObject({ status: "completed", sourceXml: null });
+  });
+
+  test("transitions to failed when every item failed", async () => {
+    const { fakeDb, setCalls } = createFakeFinalizeDb({
+      totalItems: 5,
+      subscribedItems: 0,
+      alreadySubscribedItems: 0,
+      failedItems: 5,
+    });
+
+    await finalizeOpmlImportPreparation(fakeDb as never, "import-1");
+
+    expect(setCalls[0]).toMatchObject({ status: "failed", sourceXml: null });
+  });
+
+  test("does nothing when the import has already left parsing", async () => {
+    const { fakeDb, setCalls } = createFakeFinalizeDb(undefined);
+
+    await finalizeOpmlImportPreparation(fakeDb as never, "import-1");
+
+    expect(setCalls).toHaveLength(0);
   });
 });
