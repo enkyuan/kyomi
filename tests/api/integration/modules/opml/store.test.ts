@@ -2,6 +2,8 @@ import { describe, expect, mock, test } from "bun:test";
 import { AppError } from "@shared/errors/app";
 import {
   buildOpmlImportSummary,
+  claimLeasedOpmlItem,
+  completeOpmlItem,
   createOpmlImport,
   deleteTerminalOpmlImport,
   finalizeOpmlImportPreparation,
@@ -12,6 +14,7 @@ import {
   opmlImportStatusMessage,
   recordOpmlImportMaterialized,
   requestOpmlImportCancellation,
+  retryOrFailOpmlItem,
   toCompatibleOpmlImportStatus,
 } from "@modules/opml/store";
 
@@ -418,5 +421,247 @@ describe("finalizeOpmlImportPreparation", () => {
     await finalizeOpmlImportPreparation(fakeDb as never, "import-1");
 
     expect(setCalls).toHaveLength(0);
+  });
+});
+
+describe("claimLeasedOpmlItem", () => {
+  test("returns the claimed item with the parent's userId on a successful claim", async () => {
+    const claimedRow = {
+      id: "item-1",
+      importId: "import-1",
+      originalUrl: "https://example.com/feed.xml",
+      normalizedUrl: "https://example.com/feed.xml",
+      title: null,
+      folderName: "Unsorted",
+      folderId: null,
+      feedId: null,
+      leaseToken: "lease-1",
+      attempts: 1,
+    };
+    const update = mock(() => ({
+      set: () => ({ where: () => ({ returning: () => Promise.resolve([claimedRow]) }) }),
+    }));
+    const select = mock(() => ({
+      from: () => ({ where: () => ({ limit: () => Promise.resolve([{ userId: "user-1" }]) }) }),
+    }));
+    const fakeDb = { update, select } as unknown as Parameters<typeof claimLeasedOpmlItem>[0];
+
+    const claim = await claimLeasedOpmlItem(fakeDb, "import-1", "item-1", "lease-1");
+
+    expect(claim).toMatchObject({ id: "item-1", userId: "user-1", leaseToken: "lease-1" });
+  });
+
+  test("returns null for a stale or already-claimed duplicate wakeup", async () => {
+    const update = mock(() => ({
+      set: () => ({ where: () => ({ returning: () => Promise.resolve([]) }) }),
+    }));
+    const select = mock(() => {
+      throw new Error("must not look up the parent when the claim itself failed");
+    });
+    const fakeDb = { update, select } as unknown as Parameters<typeof claimLeasedOpmlItem>[0];
+
+    expect(await claimLeasedOpmlItem(fakeDb, "import-1", "item-1", "lease-1")).toBeNull();
+  });
+});
+
+function claimStub(overrides: Partial<Record<string, unknown>> = {}) {
+  return {
+    id: "item-1",
+    importId: "import-1",
+    leaseToken: "lease-1",
+    attempts: 1,
+    ...overrides,
+  };
+}
+
+describe("completeOpmlItem", () => {
+  test("increments completedItems and subscribedItems, then finalizes when everything is accounted for", async () => {
+    const setCalls: Array<Record<string, unknown>> = [];
+    const fakeDb = {
+      transaction: async (callback: (tx: unknown) => unknown) => {
+        let updateCount = 0;
+        const tx = {
+          update: () => ({
+            set: (patch: Record<string, unknown>) => {
+              updateCount += 1;
+              setCalls.push(patch);
+              return {
+                where: () =>
+                  updateCount === 1
+                    ? { returning: () => Promise.resolve([{ id: "item-1" }]) }
+                    : Promise.resolve(),
+              };
+            },
+          }),
+          select: () => ({
+            from: () => ({
+              where: () => ({
+                limit: () =>
+                  Promise.resolve([
+                    {
+                      totalItems: 1,
+                      subscribedItems: 1,
+                      alreadySubscribedItems: 0,
+                      failedItems: 0,
+                      cancelledItems: 0,
+                    },
+                  ]),
+              }),
+            }),
+          }),
+        };
+        return callback(tx);
+      },
+    };
+
+    const result = await completeOpmlItem(fakeDb as never, claimStub(), "subscribed");
+
+    expect(result).toBe(true);
+    expect(setCalls[0]).toMatchObject({ status: "subscribed" });
+    expect(setCalls[2]).toMatchObject({ status: "completed" });
+  });
+
+  test("returns false and increments nothing for a duplicate completion", async () => {
+    const fakeDb = {
+      transaction: async (callback: (tx: unknown) => unknown) => {
+        const tx = {
+          update: () => ({
+            set: () => ({
+              where: () => ({ returning: () => Promise.resolve([]) }),
+            }),
+          }),
+        };
+        return callback(tx);
+      },
+    };
+
+    expect(await completeOpmlItem(fakeDb as never, claimStub(), "subscribed")).toBe(false);
+  });
+});
+
+describe("retryOrFailOpmlItem", () => {
+  test("returns a retryable failure to pending with a cleared token and delayed availableAt", async () => {
+    const setCalls: Array<Record<string, unknown>> = [];
+    const update = mock(() => ({
+      set: (patch: Record<string, unknown>) => {
+        setCalls.push(patch);
+        return { where: () => Promise.resolve() };
+      },
+    }));
+    const fakeDb = { update } as unknown as Parameters<typeof retryOrFailOpmlItem>[0];
+    const availableAt = new Date("2026-01-01T00:05:00.000Z");
+
+    await retryOrFailOpmlItem(
+      fakeDb,
+      claimStub({ attempts: 2 }),
+      { retryable: true, code: "FEED_FETCH_FAILED", message: "timeout" },
+      availableAt,
+    );
+
+    expect(setCalls).toHaveLength(1);
+    expect(setCalls[0]).toMatchObject({
+      status: "pending",
+      leaseToken: null,
+      availableAt,
+    });
+  });
+
+  test("fails permanently on a non-retryable error even on the first attempt", async () => {
+    const setCalls: Array<Record<string, unknown>> = [];
+    const fakeDb = {
+      transaction: async (callback: (tx: unknown) => unknown) => {
+        let updateCount = 0;
+        const tx = {
+          update: () => ({
+            set: (patch: Record<string, unknown>) => {
+              updateCount += 1;
+              setCalls.push(patch);
+              return {
+                where: () =>
+                  updateCount === 1
+                    ? { returning: () => Promise.resolve([{ id: "item-1" }]) }
+                    : Promise.resolve(),
+              };
+            },
+          }),
+          select: () => ({
+            from: () => ({
+              where: () => ({
+                limit: () =>
+                  Promise.resolve([
+                    {
+                      totalItems: 1,
+                      subscribedItems: 0,
+                      alreadySubscribedItems: 0,
+                      failedItems: 1,
+                      cancelledItems: 0,
+                    },
+                  ]),
+              }),
+            }),
+          }),
+        };
+        return callback(tx);
+      },
+    };
+
+    await retryOrFailOpmlItem(
+      fakeDb as never,
+      claimStub({ attempts: 1 }),
+      { retryable: false, code: "INVALID_FEED_URL", message: "bad url" },
+      new Date(),
+    );
+
+    expect(setCalls[0]).toMatchObject({ status: "failed", errorCode: "INVALID_FEED_URL" });
+    expect(setCalls[2]).toMatchObject({ status: "failed" });
+  });
+
+  test("fails permanently once the max attempt count is reached, even for a retryable error", async () => {
+    const setCalls: Array<Record<string, unknown>> = [];
+    const fakeDb = {
+      transaction: async (callback: (tx: unknown) => unknown) => {
+        let updateCount = 0;
+        const tx = {
+          update: () => ({
+            set: (patch: Record<string, unknown>) => {
+              updateCount += 1;
+              setCalls.push(patch);
+              return {
+                where: () =>
+                  updateCount === 1
+                    ? { returning: () => Promise.resolve([{ id: "item-1" }]) }
+                    : Promise.resolve(),
+              };
+            },
+          }),
+          select: () => ({
+            from: () => ({
+              where: () => ({
+                limit: () =>
+                  Promise.resolve([
+                    {
+                      totalItems: 1,
+                      subscribedItems: 0,
+                      alreadySubscribedItems: 0,
+                      failedItems: 1,
+                      cancelledItems: 0,
+                    },
+                  ]),
+              }),
+            }),
+          }),
+        };
+        return callback(tx);
+      },
+    };
+
+    await retryOrFailOpmlItem(
+      fakeDb as never,
+      claimStub({ attempts: 5 }),
+      { retryable: true, code: "FEED_FETCH_FAILED", message: "timeout" },
+      new Date(),
+    );
+
+    expect(setCalls[0]).toMatchObject({ status: "failed" });
   });
 });

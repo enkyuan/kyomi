@@ -2,7 +2,10 @@ import type { db } from "@adapters/db/client";
 import { publishJob } from "@adapters/queue/publish-job";
 import { getRedis } from "@adapters/redis";
 import { enqueueFeedRefresh } from "@modules/feeds/refresh/enqueue";
-import { createOrSubscribeToFeed } from "@modules/feeds/subscription/subscribe";
+import {
+  createOrSubscribeToFeed,
+  subscribeToExistingFeed,
+} from "@modules/feeds/subscription/subscribe";
 import {
   DEFAULT_FOLDER_NAME,
   ensureFoldersByName,
@@ -15,8 +18,11 @@ import {
   subscribeKnownOpmlItems,
 } from "./known-feeds";
 import { parseOpmlDocument } from "./parse";
+import { classifyOpmlItemError, computeOpmlRetryDelayMs, randomOpmlRetryJitter } from "./retry";
 import {
+  claimLeasedOpmlItem,
   claimOpmlPreparation,
+  completeOpmlItem,
   createOpmlImport,
   failOpmlImportPreparation,
   finalizeOpmlImportPreparation,
@@ -24,6 +30,8 @@ import {
   recordOpmlImportMaterialized,
   recordOpmlImportPrepareWakeup,
   recordOpmlPreparationHeartbeat,
+  retryOrFailOpmlItem,
+  withOpmlItemLeaseHeartbeat,
 } from "./store";
 import {
   failOpmlTask,
@@ -282,4 +290,75 @@ export async function runOpmlImportPrepareJob(
       code: error.code,
     });
   }
+}
+
+/**
+ * Processes one leased unknown-feed import item. A stale/duplicate wakeup (claim fails) or an
+ * observed cancellation both return successfully with no counter change and no remote fetch.
+ * Retryable failures are persisted durably and this function still returns; only a failure to
+ * persist the retry/failure decision itself is allowed to throw (so the queue retries).
+ */
+export async function runOpmlImportItemJob(
+  database: DB,
+  payload: { importId: string; itemId: string; leaseToken: string },
+  logger: Logger,
+): Promise<void> {
+  const { importId, itemId, leaseToken } = payload;
+  const claim = await claimLeasedOpmlItem(database, importId, itemId, leaseToken);
+  if (!claim) {
+    logger.info("worker.job.opml_import_item.stale_or_cancelled", { importId, itemId });
+    return;
+  }
+
+  await withOpmlItemLeaseHeartbeat(database, claim, async () => {
+    try {
+      const result = claim.feedId
+        ? await subscribeToExistingFeed(database, claim.userId, claim.feedId, {
+            folderId: claim.folderId,
+            customTitle: claim.title,
+          })
+        : await createOrSubscribeToFeed(database, claim.userId, claim.originalUrl, {
+            folderId: claim.folderId,
+            customTitle: claim.title,
+          });
+
+      if (result.newSubscription) {
+        await enqueueFeedRefresh(
+          database,
+          result.feedId,
+          claim.userId,
+          "subscription_created",
+          logger,
+        );
+      }
+
+      await completeOpmlItem(
+        database,
+        claim,
+        result.newSubscription ? "subscribed" : "already_subscribed",
+      );
+      logger.info("worker.job.opml_import_item.completed", {
+        importId,
+        itemId,
+        newSubscription: result.newSubscription,
+      });
+    } catch (error) {
+      const decision = classifyOpmlItemError(error);
+      const message = error instanceof Error ? error.message : String(error);
+      const delayMs = computeOpmlRetryDelayMs(claim.attempts, randomOpmlRetryJitter());
+      await retryOrFailOpmlItem(
+        database,
+        claim,
+        { retryable: decision.retryable, code: decision.code, message },
+        new Date(Date.now() + delayMs),
+      );
+      logger.error("worker.job.opml_import_item.failed", {
+        importId,
+        itemId,
+        retryable: decision.retryable,
+        code: decision.code,
+        error: message,
+      });
+    }
+  });
 }
