@@ -15,6 +15,23 @@ const createOpmlImportMock = mock(async (_db: unknown, input: { userId: string }
   status: "accepted",
 }));
 const recordOpmlImportPrepareWakeupMock = mock(async () => undefined);
+const claimOpmlPreparationMock = mock(
+  async (_db: unknown, importId: string) =>
+    ({
+      importId,
+      userId: "user-1",
+      filename: "feeds.opml",
+      sourceXml: '<opml><body><outline xmlUrl="https://example.com/feed.xml"/></body></opml>',
+    }) as { importId: string; userId: string; filename: string; sourceXml: string } | null,
+);
+const insertOpmlImportItemsCalls: unknown[][] = [];
+const insertOpmlImportItemsMock = mock(async (...args: unknown[]) => {
+  insertOpmlImportItemsCalls.push(args);
+  return (args[2] as unknown[]).length;
+});
+const recordOpmlPreparationHeartbeatMock = mock(async () => undefined);
+const finalizeOpmlImportPreparationMock = mock(async () => undefined);
+const failOpmlImportPreparationMock = mock(async () => undefined);
 
 mock.module("@modules/feeds/subscription/subscribe", () => ({
   createOrSubscribeToFeed: createOrSubscribeToFeedMock,
@@ -55,6 +72,11 @@ mock.module("@modules/opml/task-store", () => ({
 mock.module("@modules/opml/store", () => ({
   createOpmlImport: createOpmlImportMock,
   recordOpmlImportPrepareWakeup: recordOpmlImportPrepareWakeupMock,
+  claimOpmlPreparation: claimOpmlPreparationMock,
+  insertOpmlImportItems: insertOpmlImportItemsMock,
+  recordOpmlPreparationHeartbeat: recordOpmlPreparationHeartbeatMock,
+  finalizeOpmlImportPreparation: finalizeOpmlImportPreparationMock,
+  failOpmlImportPreparation: failOpmlImportPreparationMock,
 }));
 mock.module("@adapters/queue/publish-job", () => ({
   publishJob: publishJobMock,
@@ -144,5 +166,107 @@ describe("runOpmlImportFeedJob", () => {
     expect(recordOpmlTaskSuccessMock).toHaveBeenCalledWith("task-1", {
       alreadySubscribed: false,
     });
+  });
+});
+
+describe("runOpmlImportPrepareJob", () => {
+  function buildOpmlWithFeedCount(count: number): string {
+    const outlines = Array.from(
+      { length: count },
+      (_, i) => `<outline xmlUrl="https://example.com/feed-${i}.xml"/>`,
+    ).join("");
+    return `<opml><body>${outlines}</body></opml>`;
+  }
+
+  test("materializes items in chunks of at most 500 and finalizes once", async () => {
+    insertOpmlImportItemsCalls.length = 0;
+    claimOpmlPreparationMock.mockImplementationOnce(async (_db: unknown, importId: string) => ({
+      importId,
+      userId: "user-1",
+      filename: "feeds.opml",
+      sourceXml: buildOpmlWithFeedCount(1201),
+    }));
+    const { runOpmlImportPrepareJob } = await import("@modules/opml/jobs");
+    const logger = {
+      info: mock(() => undefined),
+      warn: mock(() => undefined),
+      error: mock(() => undefined),
+    };
+
+    await runOpmlImportPrepareJob({} as never, { importId: "import-1" }, logger);
+
+    expect(insertOpmlImportItemsCalls).toHaveLength(1);
+    const feedsArg = insertOpmlImportItemsCalls[0]?.[2] as unknown[];
+    expect(feedsArg).toHaveLength(1201);
+    expect(finalizeOpmlImportPreparationMock).toHaveBeenCalledWith(
+      {},
+      "import-1",
+      expect.objectContaining({ totalItems: 1201 }),
+    );
+    expect(failOpmlImportPreparationMock).not.toHaveBeenCalled();
+  });
+
+  test("performs no work for a duplicate or missing prepare wakeup", async () => {
+    insertOpmlImportItemsMock.mockClear();
+    finalizeOpmlImportPreparationMock.mockClear();
+    claimOpmlPreparationMock.mockImplementationOnce(async () => null);
+    const { runOpmlImportPrepareJob } = await import("@modules/opml/jobs");
+    const logger = {
+      info: mock(() => undefined),
+      warn: mock(() => undefined),
+      error: mock(() => undefined),
+    };
+
+    await runOpmlImportPrepareJob({} as never, { importId: "import-1" }, logger);
+
+    expect(insertOpmlImportItemsMock).not.toHaveBeenCalled();
+    expect(finalizeOpmlImportPreparationMock).not.toHaveBeenCalled();
+  });
+
+  test("fails the import on invalid XML without throwing", async () => {
+    claimOpmlPreparationMock.mockImplementationOnce(async (_db: unknown, importId: string) => ({
+      importId,
+      userId: "user-1",
+      filename: "feeds.opml",
+      sourceXml: "<opml><body></body></opml>",
+    }));
+    const { runOpmlImportPrepareJob } = await import("@modules/opml/jobs");
+    const logger = {
+      info: mock(() => undefined),
+      warn: mock(() => undefined),
+      error: mock(() => undefined),
+    };
+
+    await runOpmlImportPrepareJob({} as never, { importId: "import-1" }, logger);
+
+    expect(failOpmlImportPreparationMock).toHaveBeenCalledWith(
+      {},
+      "import-1",
+      expect.objectContaining({ code: "OPML_NO_FEEDS" }),
+    );
+  });
+
+  test("rethrows platform errors so the queue retries instead of failing the import", async () => {
+    failOpmlImportPreparationMock.mockClear();
+    claimOpmlPreparationMock.mockImplementationOnce(async (_db: unknown, importId: string) => ({
+      importId,
+      userId: "user-1",
+      filename: "feeds.opml",
+      sourceXml: buildOpmlWithFeedCount(5),
+    }));
+    insertOpmlImportItemsMock.mockImplementationOnce(async () => {
+      throw new Error("connection reset");
+    });
+    const { runOpmlImportPrepareJob } = await import("@modules/opml/jobs");
+    const logger = {
+      info: mock(() => undefined),
+      warn: mock(() => undefined),
+      error: mock(() => undefined),
+    };
+
+    await expect(
+      runOpmlImportPrepareJob({} as never, { importId: "import-1" }, logger),
+    ).rejects.toThrow("connection reset");
+    expect(failOpmlImportPreparationMock).not.toHaveBeenCalled();
   });
 });

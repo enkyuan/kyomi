@@ -5,7 +5,9 @@ import {
   createOpmlImport,
   deleteTerminalOpmlImport,
   getOpmlImportForUser,
+  insertOpmlImportItems,
   listActiveOpmlImportsForUser,
+  opmlImportItemId,
   opmlImportStatusMessage,
   requestOpmlImportCancellation,
   toCompatibleOpmlImportStatus,
@@ -228,5 +230,98 @@ describe("opml import store", () => {
       "boom",
     );
     expect(opmlImportStatusMessage(importRow({ status: "accepted" }))).toBeNull();
+  });
+
+  test("opmlImportItemId is deterministic and distinguishes different imports and URLs", () => {
+    const a = opmlImportItemId("import-1", "https://example.com/feed.xml");
+    const b = opmlImportItemId("import-1", "https://example.com/feed.xml");
+    const c = opmlImportItemId("import-1", "https://example.com/other.xml");
+    const d = opmlImportItemId("import-2", "https://example.com/feed.xml");
+
+    expect(a).toBe(b);
+    expect(a).not.toBe(c);
+    expect(a).not.toBe(d);
+    expect(a.startsWith("import-1:")).toBe(true);
+  });
+
+  function parsedFeed(overrides: Partial<Record<string, unknown>> = {}) {
+    return {
+      xmlUrl: "https://example.com/feed.xml",
+      originalUrl: "https://example.com/feed.xml",
+      normalizedUrl: "https://example.com/feed.xml",
+      title: null,
+      folderName: "Unsorted",
+      ...overrides,
+    } as Parameters<typeof insertOpmlImportItems>[2][number];
+  }
+
+  test("insertOpmlImportItems writes at most 500 rows per statement and returns the durable count", async () => {
+    const insertCalls: unknown[][] = [];
+    const insertValues = mock((rows: unknown[]) => {
+      insertCalls.push(rows);
+      return { onConflictDoNothing: () => Promise.resolve() };
+    });
+    const insert = mock(() => ({ values: insertValues }));
+    const select = mock(() => ({
+      from: () => ({ where: () => Promise.resolve([{ total: 1201 }]) }),
+    }));
+    const fakeDb = { insert, select } as unknown as Parameters<typeof insertOpmlImportItems>[0];
+
+    const feeds = Array.from({ length: 1201 }, (_, i) =>
+      parsedFeed({
+        xmlUrl: `https://example.com/feed-${i}.xml`,
+        originalUrl: `https://example.com/feed-${i}.xml`,
+        normalizedUrl: `https://example.com/feed-${i}.xml`,
+      }),
+    );
+
+    const total = await insertOpmlImportItems(fakeDb, "import-1", feeds, new Map());
+
+    expect(insertCalls).toHaveLength(3);
+    expect((insertCalls[0] as unknown[]).length).toBe(500);
+    expect((insertCalls[1] as unknown[]).length).toBe(500);
+    expect((insertCalls[2] as unknown[]).length).toBe(201);
+    expect(total).toBe(1201);
+  });
+
+  test("insertOpmlImportItems assigns positions and resolves folderId from the folder map", async () => {
+    let capturedRows: Array<Record<string, unknown>> = [];
+    const insert = mock(() => ({
+      values: (rows: Array<Record<string, unknown>>) => {
+        capturedRows = rows;
+        return { onConflictDoNothing: () => Promise.resolve() };
+      },
+    }));
+    const select = mock(() => ({
+      from: () => ({ where: () => Promise.resolve([{ total: 2 }]) }),
+    }));
+    const fakeDb = { insert, select } as unknown as Parameters<typeof insertOpmlImportItems>[0];
+
+    await insertOpmlImportItems(
+      fakeDb,
+      "import-1",
+      [
+        parsedFeed({ folderName: "Tech" }),
+        parsedFeed({
+          xmlUrl: "https://example.com/other.xml",
+          originalUrl: "https://example.com/other.xml",
+          normalizedUrl: "https://example.com/other.xml",
+          folderName: "Unsorted",
+        }),
+      ],
+      new Map([["Tech", "folder-1"]]),
+    );
+
+    expect(capturedRows[0]).toMatchObject({ position: 0, folderId: "folder-1" });
+    expect(capturedRows[1]).toMatchObject({ position: 1, folderId: null });
+  });
+
+  test("insertOpmlImportItems does nothing for an empty feed list", async () => {
+    const insert = mock(() => {
+      throw new Error("must not be called");
+    });
+    const fakeDb = { insert } as unknown as Parameters<typeof insertOpmlImportItems>[0];
+
+    expect(await insertOpmlImportItems(fakeDb, "import-1", [], new Map())).toBe(0);
   });
 });
