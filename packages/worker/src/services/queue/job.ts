@@ -38,6 +38,14 @@ export type OpmlImportFeedJob = {
   };
 };
 
+/** Wakeup carrying only an import id; the worker loads durable state from Postgres. */
+export type OpmlImportPrepareJob = {
+  type: "opml.import.prepare";
+  payload: {
+    importId: string;
+  };
+};
+
 export type ArticleExtractionJob = {
   type: "article.extract";
   payload: {
@@ -58,7 +66,12 @@ export type ArticleExtractionJob = {
   };
 };
 
-export type Job = FeedRefreshJob | OpmlImportJob | OpmlImportFeedJob | ArticleExtractionJob;
+export type Job =
+  | FeedRefreshJob
+  | OpmlImportJob
+  | OpmlImportFeedJob
+  | OpmlImportPrepareJob
+  | ArticleExtractionJob;
 export type JobType = Job["type"];
 
 export type JobMessage = {
@@ -80,6 +93,7 @@ export function getStreamKeyForJobType(jobType: JobType): string {
       return FEED_REFRESH_JOBS_STREAM_KEY;
     case "opml.import":
     case "opml.import.feed":
+    case "opml.import.prepare":
       return OPML_JOBS_STREAM_KEY;
     case "article.extract":
       return ARTICLE_EXTRACTION_JOBS_STREAM_KEY;
@@ -191,6 +205,16 @@ function parseOpmlImportFeedJob(parsedPayload: Record<string, unknown>): OpmlImp
   };
 }
 
+function parseOpmlImportPrepareJob(parsedPayload: Record<string, unknown>): OpmlImportPrepareJob {
+  if (typeof parsedPayload.importId !== "string" || parsedPayload.importId.length === 0) {
+    throw new Error("Invalid opml.import.prepare payload");
+  }
+  return {
+    type: "opml.import.prepare",
+    payload: { importId: parsedPayload.importId },
+  };
+}
+
 function parseArticleExtractionReason(value: unknown): ArticleExtractionJob["payload"]["reason"] {
   switch (value) {
     case "manual":
@@ -260,6 +284,8 @@ export function parseJob(fields: Record<string, string>): Job {
       return parseOpmlImportJob(parsedPayload);
     case "opml.import.feed":
       return parseOpmlImportFeedJob(parsedPayload);
+    case "opml.import.prepare":
+      return parseOpmlImportPrepareJob(parsedPayload);
     case "article.extract":
       return parseArticleExtractionJob(parsedPayload);
     default:
