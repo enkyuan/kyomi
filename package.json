@@ -62,7 +62,8 @@
     "catalog:sync:local": "bun scripts/catalog/sync.ts",
     "categories:backfill": "bunx --no-install dotenvx run -f docker/.env -f apps/api/.env -- bun scripts/categories/backfill.ts",
     "categories:report": "bunx --no-install dotenvx run -f docker/.env -f apps/api/.env -- bun scripts/categories/report.ts",
-    "categories:audit": "bunx --no-install dotenvx run -f docker/.env -f apps/api/.env -- bun scripts/categories/audit.ts"
+    "categories:audit": "bunx --no-install dotenvx run -f docker/.env -f apps/api/.env -- bun scripts/categories/audit.ts",
+    "content:sanitizer-backfill": "bunx --no-install dotenvx run -f docker/.env -f apps/api/.env -- bun scripts/content/backfill-sanitizer-version.ts"
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.66.0",
