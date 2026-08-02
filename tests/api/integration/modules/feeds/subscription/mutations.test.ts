@@ -7,7 +7,7 @@ import {
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
 } from "@modules/feeds/subscription/mutations";
-import { subscribeToExistingFeed } from "@modules/feeds/subscription/subscribe";
+import { subscribeUserToFeed } from "@modules/feeds/subscription/internal";
 
 describe("feeds.subscription.mutations", () => {
   test("unsubscribeFromFeed returns message when row deleted", async () => {
@@ -127,68 +127,46 @@ describe("feeds.subscription.mutations", () => {
 });
 
 /**
- * Minimal in-memory fake modeling exactly the two tables subscribeToExistingFeed touches, with
- * a real (userId, feedId) uniqueness check so onConflictDoNothing behaves like Postgres would.
- * subscribeToExistingFeed always selects from feeds first, then (on conflict) from
- * feedSubscriptions, so a per-transaction select counter distinguishes them without needing to
- * inspect Drizzle's internal table symbols.
+ * Minimal in-memory fake for the feed_subscriptions table, with a real (userId, feedId)
+ * uniqueness check so onConflictDoNothing behaves like Postgres would.
  */
-function createFakeSubscriptionDb(feedRow: Record<string, unknown>) {
+function createFakeSubscriptionTx() {
   const subscriptions: Array<Record<string, unknown>> = [];
 
-  const db = {
-    transaction: async (callback: (tx: unknown) => unknown) => {
-      let selectCount = 0;
-      const tx = {
-        select: () => ({
-          from: () => ({
-            where: () => ({
-              limit: () => {
-                selectCount += 1;
-                if (selectCount === 1) {
-                  return Promise.resolve([feedRow]);
-                }
-                return Promise.resolve(subscriptions.map((s) => ({ id: s.id })));
-              },
-            }),
-          }),
+  const tx = {
+    select: () => ({
+      from: () => ({
+        where: () => ({
+          limit: () => Promise.resolve(subscriptions.map((s) => ({ id: s.id }))),
         }),
-        insert: () => ({
-          values: (row: Record<string, unknown>) => ({
-            onConflictDoNothing: () => ({
-              returning: () => {
-                const conflict = subscriptions.some(
-                  (s) => s.userId === row.userId && s.feedId === row.feedId,
-                );
-                if (conflict) {
-                  return Promise.resolve([]);
-                }
-                subscriptions.push(row);
-                return Promise.resolve([{ id: row.id }]);
-              },
-            }),
-          }),
+      }),
+    }),
+    insert: () => ({
+      values: (row: Record<string, unknown>) => ({
+        onConflictDoNothing: () => ({
+          returning: () => {
+            const conflict = subscriptions.some(
+              (s) => s.userId === row.userId && s.feedId === row.feedId,
+            );
+            if (conflict) {
+              return Promise.resolve([]);
+            }
+            subscriptions.push(row);
+            return Promise.resolve([{ id: row.id }]);
+          },
         }),
-      };
-      return callback(tx);
-    },
+      }),
+    }),
   };
 
-  return { db, subscriptions };
+  return { tx, subscriptions };
 }
 
-describe("subscribeToExistingFeed", () => {
-  test("imports an existing feed without remote discovery", async () => {
-    const { db, subscriptions } = createFakeSubscriptionDb({
-      id: "feed-1",
-      url: "https://example.com/feed.xml",
-      title: "Example",
-      link: null,
-      faviconUrl: null,
-      faviconSource: null,
-    });
+describe("subscribeUserToFeed", () => {
+  test("inserts a subscription with the requested folder/title without a select-then-insert race", async () => {
+    const { tx, subscriptions } = createFakeSubscriptionTx();
 
-    const result = await subscribeToExistingFeed(db as never, "user-1", "feed-1", {
+    const result = await subscribeUserToFeed(tx as never, "user-1", "feed-1", {
       folderId: "folder-1",
       customTitle: "Imported title",
     });
@@ -202,20 +180,13 @@ describe("subscribeToExistingFeed", () => {
   });
 
   test("duplicate delivery returns the same subscription without overwriting metadata", async () => {
-    const { db, subscriptions } = createFakeSubscriptionDb({
-      id: "feed-1",
-      url: "https://example.com/feed.xml",
-      title: "Example",
-      link: null,
-      faviconUrl: null,
-      faviconSource: null,
-    });
+    const { tx, subscriptions } = createFakeSubscriptionTx();
 
-    const first = await subscribeToExistingFeed(db as never, "user-1", "feed-1", {
+    const first = await subscribeUserToFeed(tx as never, "user-1", "feed-1", {
       folderId: "folder-original",
       customTitle: "Original",
     });
-    const duplicate = await subscribeToExistingFeed(db as never, "user-1", "feed-1", {
+    const duplicate = await subscribeUserToFeed(tx as never, "user-1", "feed-1", {
       folderId: "folder-import",
       customTitle: "Import title",
     });

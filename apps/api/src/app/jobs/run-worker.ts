@@ -15,6 +15,7 @@ import {
 } from "@kyomi/worker";
 import {
   runOpmlImportFeedJob,
+  runOpmlImportItemJob,
   runOpmlImportJob,
   runOpmlImportPrepareJob,
 } from "@modules/opml/jobs";
@@ -162,6 +163,10 @@ async function handleWorkerJob(
     }
     case "opml.import.prepare": {
       await runOpmlImportPrepareJob(db, job.payload, logger);
+      return;
+    }
+    case "opml.import.item": {
+      await runOpmlImportItemJob(db, job.payload, logger);
       return;
     }
     case "article.extract": {
