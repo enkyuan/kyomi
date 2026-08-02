@@ -10,6 +10,14 @@ import { Sanitizer, type PolicyInput } from "neosanitize";
  * - Restrict inline `style` to MathML + spans (KaTeX); rely on tags/classes elsewhere
  */
 
+/**
+ * Increment whenever the allowlist, drop-content tags, attribute/class/URL/style rules,
+ * image defaults, or empty-element normalization changes output semantics. A persisted
+ * row's stored version is compared against this to decide whether a fresh sanitizer pass
+ * is required before it can be treated as already-safe.
+ */
+export const ARTICLE_HTML_SANITIZER_VERSION = "article-html-v1" as const;
+
 export const ARTICLE_HTML_ALLOWED_TAGS = [
   "a",
   "article",
