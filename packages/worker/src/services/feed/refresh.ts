@@ -377,7 +377,7 @@ function shouldResolveFavicon({
  */
 function classifyFeedLevel(input: {
   feed: { url: string; link: string | null; sourceKind: string | null };
-  parsed: ParsedFeedDocument;
+  parsed: { metadata: FeedMetadata };
 }): { categories: InferredCategoryLabel[]; suppressedFallback: boolean } {
   if (canonicalizeCategoryLabels(input.parsed.metadata.categoryLabels).length > 0) {
     return { categories: [], suppressedFallback: false };
@@ -912,7 +912,7 @@ export async function runFeedRefresh(
     const feedForClassification = { url: feed.url, link: feed.link, sourceKind: feed.sourceKind };
     const feedClassification = classifyFeedLevel({
       feed: feedForClassification,
-      parsed: { metadata: parsed.metadata, items: [] },
+      parsed: { metadata: parsed.metadata },
     });
     const feedCategories = feedClassification.categories;
     const embeddingConfig = options?.embeddingClassifier;
@@ -1156,6 +1156,7 @@ export async function runFeedRefresh(
       itemCount: items.length,
       insertedCount: items.length, // Rough estimate as we don't have exact UPSERT counts right now
       articleExtractionCandidateIds,
+      contentLimitStats: parsed.contentLimitStats,
       categoryStats: {
         feedClassifierLabels: feedCategories.length,
         itemClassifierLabels: itemCategoryStats.itemClassifierLabels,

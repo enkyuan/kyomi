@@ -116,10 +116,21 @@ async function handleWorkerJob(
         insertedCount: result.insertedCount,
         updatedCount: result.updatedCount,
         categoryStats: result.categoryStats ?? null,
+        contentLimitStats: result.contentLimitStats ?? null,
         extractionPrefetch,
         attempts,
         durationMs,
       });
+      if (
+        result.contentLimitStats &&
+        (result.contentLimitStats.droppedItemCount > 0 ||
+          result.contentLimitStats.droppedContentItemCount > 0)
+      ) {
+        logger.info("worker.job.feed_refresh.content_limited", {
+          feedId: job.payload.feedId,
+          ...result.contentLimitStats,
+        });
+      }
       return;
     }
     case "opml.import": {
