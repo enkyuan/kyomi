@@ -82,6 +82,17 @@ export const env = createEnv({
   server: {
     NODE_ENV: z.enum(["development", "production", "test"]),
     PORT: z.coerce.number().int().positive().default(8000),
+    /**
+     * Pre-parse HTTP transport ceiling. Sized to accommodate the durable OPML plan's 32 MiB raw
+     * XML route; article/content routes stay bounded by their own, much smaller field/aggregate
+     * budgets in @shared/http/content-budget regardless of this value.
+     */
+    API_MAX_REQUEST_BODY_BYTES: z.coerce
+      .number()
+      .int()
+      .min(32 * 1024 * 1024)
+      .max(64 * 1024 * 1024)
+      .default(40 * 1024 * 1024),
     DATABASE_URL: z.string().min(1),
     DATABASE_POOL_MAX: z.coerce.number().int().positive().default(10),
     DATABASE_POOL_IDLE_TIMEOUT_MS: z.coerce.number().int().nonnegative().default(30_000),
@@ -168,6 +179,7 @@ export const env = createEnv({
   runtimeEnv: {
     NODE_ENV: nodeEnv,
     PORT: process.env.PORT,
+    API_MAX_REQUEST_BODY_BYTES: process.env.API_MAX_REQUEST_BODY_BYTES,
     DATABASE_URL: process.env.DATABASE_URL,
     DATABASE_POOL_MAX: process.env.DATABASE_POOL_MAX,
     DATABASE_POOL_IDLE_TIMEOUT_MS: process.env.DATABASE_POOL_IDLE_TIMEOUT_MS,

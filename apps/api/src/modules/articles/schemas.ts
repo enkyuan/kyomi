@@ -1,6 +1,13 @@
 import { t } from "elysia";
 import { uuidParam } from "@shared/http/v1/stub";
 
+const TITLE_MAX_CHARS = 1_024;
+const NOTE_MAX_CHARS = 16_384;
+const LANGUAGE_IDENTIFIER_MAX_CHARS = 64;
+const CONTENT_FIELD_MAX_CHARS = 1_048_576;
+const EXTRACTION_ERROR_CODE_MAX_CHARS = 128;
+const EXTRACTION_ERROR_MESSAGE_MAX_CHARS = 2_048;
+
 export const extractedContentStatusSchema = t.Union([
   t.Literal("pending"),
   t.Literal("ready"),
@@ -225,8 +232,8 @@ export const messageResponseSchema = t.Object({
 });
 
 export const summarizeBodySchema = t.Object({
-  content: t.Optional(t.String()),
-  language_key: t.Optional(t.String()),
+  content: t.Optional(t.String({ maxLength: CONTENT_FIELD_MAX_CHARS })),
+  language_key: t.Optional(t.String({ maxLength: LANGUAGE_IDENTIFIER_MAX_CHARS })),
 });
 
 export const summarizeResponseSchema = t.Object({
@@ -234,8 +241,8 @@ export const summarizeResponseSchema = t.Object({
 });
 
 export const translateBodySchema = t.Object({
-  content: t.Optional(t.String()),
-  target_language: t.String({ minLength: 1 }),
+  content: t.Optional(t.String({ maxLength: CONTENT_FIELD_MAX_CHARS })),
+  target_language: t.String({ minLength: 1, maxLength: LANGUAGE_IDENTIFIER_MAX_CHARS }),
 });
 
 export const translateResponseSchema = t.Object({
@@ -268,20 +275,22 @@ export const checkSavedQuerySchema = t.Object({
 
 export const createClipBodySchema = t.Object({
   url: t.String({ minLength: 1 }),
-  title: t.Optional(t.String()),
-  content: t.Optional(t.String()),
-  note: t.Optional(t.String()),
+  title: t.Optional(t.String({ maxLength: TITLE_MAX_CHARS })),
+  content: t.Optional(t.String({ maxLength: CONTENT_FIELD_MAX_CHARS })),
+  note: t.Optional(t.String({ maxLength: NOTE_MAX_CHARS })),
 });
 
 export const updateArticleBodySchema = t.Object({
   isRead: t.Optional(t.Union([t.Boolean(), t.Null()])),
   isSaved: t.Optional(t.Boolean()),
   isHidden: t.Optional(t.Boolean()),
-  title: t.Optional(t.String()),
-  note: t.Optional(t.Union([t.String(), t.Null()])),
-  contentHtml: t.Optional(t.Union([t.String(), t.Null()])),
-  contentText: t.Optional(t.Union([t.String(), t.Null()])),
-  contentMarkdown: t.Optional(t.Union([t.String(), t.Null()])),
+  title: t.Optional(t.String({ maxLength: TITLE_MAX_CHARS })),
+  note: t.Optional(t.Union([t.String({ maxLength: NOTE_MAX_CHARS }), t.Null()])),
+  contentHtml: t.Optional(t.Union([t.String({ maxLength: CONTENT_FIELD_MAX_CHARS }), t.Null()])),
+  contentText: t.Optional(t.Union([t.String({ maxLength: CONTENT_FIELD_MAX_CHARS }), t.Null()])),
+  contentMarkdown: t.Optional(
+    t.Union([t.String({ maxLength: CONTENT_FIELD_MAX_CHARS }), t.Null()]),
+  ),
   contentStatus: t.Optional(
     t.Union([
       t.Literal("ready"),
@@ -302,8 +311,12 @@ export const updateArticleBodySchema = t.Object({
       t.Null(),
     ]),
   ),
-  extractionErrorCode: t.Optional(t.Union([t.String(), t.Null()])),
-  extractionErrorMessage: t.Optional(t.Union([t.String(), t.Null()])),
+  extractionErrorCode: t.Optional(
+    t.Union([t.String({ maxLength: EXTRACTION_ERROR_CODE_MAX_CHARS }), t.Null()]),
+  ),
+  extractionErrorMessage: t.Optional(
+    t.Union([t.String({ maxLength: EXTRACTION_ERROR_MESSAGE_MAX_CHARS }), t.Null()]),
+  ),
 });
 
 export const brokenArticleReportBodySchema = t.Object({
