@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { and, count, eq, gt, inArray, notInArray, or, sql } from "drizzle-orm";
+import { and, count, eq, gt, inArray, lt, notInArray, or, sql } from "drizzle-orm";
 import { opmlImportItems, opmlImports } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
@@ -390,10 +390,15 @@ export async function completeOpmlItem(
   });
 }
 
+const RECLAIMABLE_ITEM_STATUSES = ["leased", "processing"] as const;
+
 /**
  * Retryable failures before the max-attempts threshold return the item to pending with a
  * cleared token and a backoff-delayed availableAt. Permanent errors or the final attempt
  * transition to failed and increment the parent's failedItems/completedItems exactly once.
+ * Matches either leased (never claimed, expired before a worker picked it up) or processing
+ * (claimed, then abandoned or failed) so the reconciler can reuse this for expired-lease
+ * recovery without duplicating the attempt-based decision.
  */
 export async function retryOrFailOpmlItem(
   database: DB,
@@ -420,7 +425,7 @@ export async function retryOrFailOpmlItem(
           eq(opmlImportItems.id, claim.id),
           eq(opmlImportItems.importId, claim.importId),
           eq(opmlImportItems.leaseToken, claim.leaseToken),
-          eq(opmlImportItems.status, "processing"),
+          inArray(opmlImportItems.status, RECLAIMABLE_ITEM_STATUSES),
         ),
       );
     return;
@@ -442,7 +447,7 @@ export async function retryOrFailOpmlItem(
           eq(opmlImportItems.id, claim.id),
           eq(opmlImportItems.importId, claim.importId),
           eq(opmlImportItems.leaseToken, claim.leaseToken),
-          eq(opmlImportItems.status, "processing"),
+          inArray(opmlImportItems.status, RECLAIMABLE_ITEM_STATUSES),
         ),
       )
       .returning({ id: opmlImportItems.id });
@@ -681,4 +686,48 @@ export async function listOpmlImportFailures(
       hasMore && last ? encodeOpmlFailureCursor({ position: last.position, id: last.id }) : null,
     hasMore,
   };
+}
+
+const RECONCILE_EXPIRED_LEASE_BATCH = 500;
+
+export type ExpiredOpmlLeaseItem = {
+  id: string;
+  importId: string;
+  leaseToken: string;
+  attempts: number;
+};
+
+/**
+ * Finds at most RECONCILE_EXPIRED_LEASE_BATCH leased/processing items whose lease has expired,
+ * for the reconciler to feed into retryOrFailOpmlItem. Unexpired rows (a worker still holding
+ * a live lease or heartbeat) are never touched.
+ */
+export async function findExpiredOpmlLeases(
+  database: DB,
+  now: Date,
+): Promise<ExpiredOpmlLeaseItem[]> {
+  const rows = await database
+    .select({
+      id: opmlImportItems.id,
+      importId: opmlImportItems.importId,
+      leaseToken: opmlImportItems.leaseToken,
+      attempts: opmlImportItems.attempts,
+    })
+    .from(opmlImportItems)
+    .where(
+      and(
+        inArray(opmlImportItems.status, RECLAIMABLE_ITEM_STATUSES),
+        lt(opmlImportItems.leaseExpiresAt, now),
+      ),
+    )
+    .limit(RECONCILE_EXPIRED_LEASE_BATCH);
+
+  return rows
+    .filter((row): row is ExpiredOpmlLeaseItem => row.leaseToken !== null)
+    .map((row) => ({
+      id: row.id,
+      importId: row.importId,
+      leaseToken: row.leaseToken,
+      attempts: row.attempts,
+    }));
 }

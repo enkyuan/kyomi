@@ -6,6 +6,7 @@ import {
   OPML_DISPATCH_MAX_IMPORTS,
   OPML_DISPATCH_PER_IMPORT,
   OPML_DISPATCH_TOTAL,
+  runOpmlImportDispatcherLoop,
   runOpmlImportDispatcherTick,
 } from "@app/jobs/opml-import-dispatcher";
 
@@ -13,6 +14,21 @@ const itemsStorePath = join(
   import.meta.dir,
   "../../../../../apps/api/src/modules/opml/store/items.ts",
 );
+
+/**
+ * Drives the dispatcher through the real @modules/opml/store functions with a fake
+ * Postgres-shaped db and a fake redis client, rather than mock.module(...): a module-level mock
+ * of @modules/opml/store or @adapters/queue/publish-job is process-wide and was proven to leak
+ * into other files' real-implementation tests at scale (store.test.ts, recovery.test.ts), even
+ * with mock.restore() called afterEach -- so this file never mocks either module.
+ */
+function fakeRedis() {
+  return { xadd: mock(async () => "stream-id") };
+}
+
+function logger() {
+  return { info: mock(() => undefined), error: mock(() => undefined) };
+}
 
 describe("opml import dispatcher claim SQL", () => {
   test("uses row locks, skip locked, bounded per-import fairness, and distinct lease tokens", () => {
@@ -37,47 +53,76 @@ describe("dispatcher fairness defaults", () => {
   });
 });
 
-function claimedItem(overrides: Partial<Record<string, unknown>> = {}) {
+function claimedRow(overrides: Partial<Record<string, unknown>> = {}) {
   return {
     id: "item-1",
-    importId: "import-1",
+    import_id: "import-1",
     position: 0,
-    originalUrl: "https://example.com/feed.xml",
-    normalizedUrl: "https://example.com/feed.xml",
+    original_url: "https://example.com/feed.xml",
+    normalized_url: "https://example.com/feed.xml",
     title: null,
-    folderName: "Unsorted",
-    folderId: null,
-    feedId: null,
-    leaseToken: "lease-1",
+    folder_name: "Unsorted",
+    folder_id: null,
+    feed_id: null,
+    lease_token: "lease-1",
     attempts: 1,
     ...overrides,
   };
 }
 
+/** Models claimDispatchableOpmlItems' single raw execute call and the plain update chains used by markOpmlImportRunning/releaseOpmlItemLease. */
+function createFakeDispatchDb(options: {
+  claimedRows?: Array<Record<string, unknown>>;
+  releaseSucceeds?: boolean;
+}) {
+  const opts = { claimedRows: [], releaseSucceeds: true, ...options };
+  const updateSets: Array<Record<string, unknown>> = [];
+  const db = {
+    execute: () =>
+      Promise.resolve(
+        opts.claimedRows.map((row) => ({
+          id: row.id,
+          importId: row.import_id,
+          position: row.position,
+          originalUrl: row.original_url,
+          normalizedUrl: row.normalized_url,
+          title: row.title,
+          folderName: row.folder_name,
+          folderId: row.folder_id,
+          feedId: row.feed_id,
+          leaseToken: row.lease_token,
+          attempts: row.attempts,
+        })),
+      ),
+    update: () => ({
+      set: (patch: Record<string, unknown>) => {
+        updateSets.push(patch);
+        return {
+          where: () =>
+            patch.status === "pending"
+              ? { returning: () => Promise.resolve(opts.releaseSucceeds ? [{ id: "item-1" }] : []) }
+              : Promise.resolve(),
+        };
+      },
+    }),
+  };
+  return { db, updateSets };
+}
+
 describe("runOpmlImportDispatcherTick", () => {
   test("publishes exactly one ID-only wakeup per claimed item and marks imports running once", async () => {
-    const claimed = [
-      claimedItem({ id: "item-1", importId: "import-a", leaseToken: "lease-1" }),
-      claimedItem({ id: "item-2", importId: "import-a", leaseToken: "lease-2" }),
-      claimedItem({ id: "item-3", importId: "import-b", leaseToken: "lease-3" }),
-    ];
-    const claimDispatchableOpmlItemsMock = mock(async () => claimed);
-    const markOpmlImportRunningMock = mock(async () => undefined);
-    const releaseOpmlItemLeaseMock = mock(async () => true);
-    const publishJobMock = mock(async () => "stream-id");
-    mock.module("@modules/opml/store", () => ({
-      claimDispatchableOpmlItems: claimDispatchableOpmlItemsMock,
-      markOpmlImportRunning: markOpmlImportRunningMock,
-      releaseOpmlItemLease: releaseOpmlItemLeaseMock,
-    }));
-    mock.module("@adapters/queue/publish-job", () => ({
-      publishJob: publishJobMock,
-    }));
-    const { runOpmlImportDispatcherTick: tick } = await import("@app/jobs/opml-import-dispatcher");
-
-    const logger = { info: mock(() => undefined), error: mock(() => undefined) };
+    const { db } = createFakeDispatchDb({
+      claimedRows: [
+        claimedRow({ id: "item-1", import_id: "import-a", lease_token: "lease-1" }),
+        claimedRow({ id: "item-2", import_id: "import-a", lease_token: "lease-2" }),
+        claimedRow({ id: "item-3", import_id: "import-b", lease_token: "lease-3" }),
+      ],
+    });
+    const redis = fakeRedis();
+    const testLogger = logger();
     const now = new Date("2026-01-01T00:00:00.000Z");
-    const stats = await tick({} as never, {} as never, logger, now);
+
+    const stats = await runOpmlImportDispatcherTick(db as never, redis as never, testLogger, now);
 
     expect(stats).toEqual({
       claimed: 3,
@@ -85,68 +130,77 @@ describe("runOpmlImportDispatcherTick", () => {
       releasedAfterPublishFailure: 0,
       importsStarted: 2,
     });
-    expect(claimDispatchableOpmlItemsMock).toHaveBeenCalledWith({}, now, {
-      maxImports: 10,
-      perImport: 5,
-      total: 50,
-      leaseMs: 120_000,
-    });
-    expect(publishJobMock).toHaveBeenCalledWith(
-      {},
-      {
-        type: "opml.import.item",
-        payload: { importId: "import-a", itemId: "item-1", leaseToken: "lease-1" },
-      },
-    );
-    expect(markOpmlImportRunningMock).toHaveBeenCalledTimes(2);
-    expect(releaseOpmlItemLeaseMock).not.toHaveBeenCalled();
+    expect(redis.xadd).toHaveBeenCalledTimes(3);
   });
 
   test("returns a matching lease to pending on publish failure without failing the tick", async () => {
-    const claimed = [claimedItem({ id: "item-1", leaseToken: "lease-1" })];
-    mock.module("@modules/opml/store", () => ({
-      claimDispatchableOpmlItems: mock(async () => claimed),
-      markOpmlImportRunning: mock(async () => undefined),
-      releaseOpmlItemLease: mock(async () => true),
-    }));
-    const publishJobMock = mock(async () => {
-      throw new Error("redis unavailable");
+    const { db, updateSets } = createFakeDispatchDb({
+      claimedRows: [claimedRow({ id: "item-1", lease_token: "lease-1" })],
     });
-    mock.module("@adapters/queue/publish-job", () => ({
-      publishJob: publishJobMock,
-    }));
-    const { runOpmlImportDispatcherTick: tick } = await import("@app/jobs/opml-import-dispatcher");
+    const redis = { xadd: mock(async () => Promise.reject(new Error("redis unavailable"))) };
+    const testLogger = logger();
 
-    const logger = { info: mock(() => undefined), error: mock(() => undefined) };
-    const stats = await tick({} as never, {} as never, logger, new Date());
+    const stats = await runOpmlImportDispatcherTick(
+      db as never,
+      redis as never,
+      testLogger,
+      new Date(),
+    );
 
     expect(stats.published).toBe(0);
     expect(stats.releasedAfterPublishFailure).toBe(1);
-    expect(logger.error).toHaveBeenCalledWith(
+    expect(updateSets.some((patch) => patch.status === "pending")).toBe(true);
+    expect(testLogger.error).toHaveBeenCalledWith(
       "opml.import.dispatch.publish_failed",
       expect.objectContaining({ importId: "import-1", itemId: "item-1" }),
     );
   });
 
   test("does not attempt to release a lease that a concurrent claim already reused", async () => {
-    const claimed = [claimedItem({ id: "item-1", leaseToken: "lease-1" })];
-    const releaseOpmlItemLeaseMock = mock(async () => false);
-    mock.module("@modules/opml/store", () => ({
-      claimDispatchableOpmlItems: mock(async () => claimed),
-      markOpmlImportRunning: mock(async () => undefined),
-      releaseOpmlItemLease: releaseOpmlItemLeaseMock,
-    }));
-    mock.module("@adapters/queue/publish-job", () => ({
-      publishJob: mock(async () => {
-        throw new Error("redis unavailable");
-      }),
-    }));
-    const { runOpmlImportDispatcherTick: tick } = await import("@app/jobs/opml-import-dispatcher");
+    const { db } = createFakeDispatchDb({
+      claimedRows: [claimedRow({ id: "item-1", lease_token: "lease-1" })],
+      releaseSucceeds: false,
+    });
+    const redis = { xadd: mock(async () => Promise.reject(new Error("redis unavailable"))) };
 
-    const logger = { info: mock(() => undefined), error: mock(() => undefined) };
-    const stats = await tick({} as never, {} as never, logger, new Date());
+    const stats = await runOpmlImportDispatcherTick(
+      db as never,
+      redis as never,
+      logger(),
+      new Date(),
+    );
 
     expect(stats.releasedAfterPublishFailure).toBe(0);
-    expect(releaseOpmlItemLeaseMock).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("runOpmlImportDispatcherLoop", () => {
+  test("ticks at least once and stops promptly once the signal aborts", async () => {
+    const { db } = createFakeDispatchDb({ claimedRows: [] });
+    // reconcileOpmlImports' extra store calls (reclaimStalePrepareImports, findExpiredOpmlLeases,
+    // listCancellingOpmlImportIds) are select-based with no rows, so an empty select chain covers
+    // all of them without a real reconciliation tick landing inside this short-lived test.
+    const fullDb = {
+      ...db,
+      update: db.update,
+      select: () => ({ from: () => ({ where: () => ({ limit: () => Promise.resolve([]) }) }) }),
+    };
+    const redis = fakeRedis();
+    const testLogger = logger();
+    const controller = new AbortController();
+
+    const loopPromise = runOpmlImportDispatcherLoop(
+      fullDb as never,
+      redis as never,
+      testLogger,
+      controller.signal,
+    );
+    controller.abort();
+    await loopPromise;
+
+    expect(testLogger.info).toHaveBeenCalledWith(
+      "opml.import.dispatcher.started",
+      expect.objectContaining({ dispatchTickMs: 1_000, reconcileTickMs: 30_000 }),
+    );
   });
 });

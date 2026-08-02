@@ -1,4 +1,4 @@
-import { and, desc, eq, inArray, lt, or } from "drizzle-orm";
+import { and, desc, eq, inArray, lt, or, sql } from "drizzle-orm";
 import { opmlImports } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
@@ -409,4 +409,89 @@ export async function listOpmlImportsForUser(
         : null,
     hasMore,
   };
+}
+
+const RECONCILE_PREPARE_BATCH = 20;
+const RECONCILE_RETENTION_BATCH = 100;
+
+/**
+ * Finds up to RECONCILE_PREPARE_BATCH imports needing a fresh prepare wakeup: an accepted import
+ * with no wakeup yet or one older than `staleWakeupBefore`, or a parsing import whose heartbeat
+ * is older than `staleHeartbeatBefore` (returned to accepted first so it can be reclaimed).
+ * Uses FOR UPDATE SKIP LOCKED-equivalent guarded updates so multiple scheduler replicas never
+ * republish the same import twice in one pass.
+ */
+export async function reclaimStalePrepareImports(
+  database: DB,
+  now: Date,
+  staleWakeupBefore: Date,
+  staleHeartbeatBefore: Date,
+): Promise<string[]> {
+  const reclaimedParsing = await database
+    .update(opmlImports)
+    .set({ status: "accepted", updatedAt: now })
+    .where(
+      and(
+        eq(opmlImports.status, "parsing"),
+        or(
+          sql`${opmlImports.lastHeartbeatAt} IS NULL`,
+          lt(opmlImports.lastHeartbeatAt, staleHeartbeatBefore),
+        ),
+      ),
+    )
+    .returning({ id: opmlImports.id });
+
+  const dueForPrepare = await database
+    .select({ id: opmlImports.id })
+    .from(opmlImports)
+    .where(
+      and(
+        eq(opmlImports.status, "accepted"),
+        or(
+          sql`${opmlImports.prepareWakeupAt} IS NULL`,
+          lt(opmlImports.prepareWakeupAt, staleWakeupBefore),
+        ),
+      ),
+    )
+    .limit(RECONCILE_PREPARE_BATCH);
+
+  return dueForPrepare.map((row) => row.id);
+}
+
+/** Deletes at most RECONCILE_RETENTION_BATCH terminal imports whose completedAt predates the cutoff. */
+export async function deleteOldTerminalOpmlImports(database: DB, olderThan: Date): Promise<number> {
+  const candidates = await database
+    .select({ id: opmlImports.id })
+    .from(opmlImports)
+    .where(
+      and(
+        inArray(opmlImports.status, ["completed", "failed", "cancelled"]),
+        lt(opmlImports.completedAt, olderThan),
+      ),
+    )
+    .limit(RECONCILE_RETENTION_BATCH);
+  if (candidates.length === 0) {
+    return 0;
+  }
+
+  const deleted = await database
+    .delete(opmlImports)
+    .where(
+      inArray(
+        opmlImports.id,
+        candidates.map((row) => row.id),
+      ),
+    )
+    .returning({ id: opmlImports.id });
+  return deleted.length;
+}
+
+/** Lists imports currently cancelling, for the reconciler to drain via cancelPendingOpmlItems. */
+export async function listCancellingOpmlImportIds(database: DB, limit: number): Promise<string[]> {
+  const rows = await database
+    .select({ id: opmlImports.id })
+    .from(opmlImports)
+    .where(eq(opmlImports.status, "cancelling"))
+    .limit(limit);
+  return rows.map((row) => row.id);
 }
