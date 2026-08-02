@@ -7,6 +7,7 @@ import {
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
 } from "@modules/feeds/subscription/mutations";
+import { subscribeToExistingFeed } from "@modules/feeds/subscription/subscribe";
 
 describe("feeds.subscription.mutations", () => {
   test("unsubscribeFromFeed returns message when row deleted", async () => {
@@ -122,5 +123,110 @@ describe("feeds.subscription.mutations", () => {
     const fakeDb = { select } as unknown as Parameters<typeof assertUserSubscribedToFeed>[0];
 
     await expect(assertUserSubscribedToFeed(fakeDb, "u1", "f1")).rejects.toBeInstanceOf(AppError);
+  });
+});
+
+/**
+ * Minimal in-memory fake modeling exactly the two tables subscribeToExistingFeed touches, with
+ * a real (userId, feedId) uniqueness check so onConflictDoNothing behaves like Postgres would.
+ * subscribeToExistingFeed always selects from feeds first, then (on conflict) from
+ * feedSubscriptions, so a per-transaction select counter distinguishes them without needing to
+ * inspect Drizzle's internal table symbols.
+ */
+function createFakeSubscriptionDb(feedRow: Record<string, unknown>) {
+  const subscriptions: Array<Record<string, unknown>> = [];
+
+  const db = {
+    transaction: async (callback: (tx: unknown) => unknown) => {
+      let selectCount = 0;
+      const tx = {
+        select: () => ({
+          from: () => ({
+            where: () => ({
+              limit: () => {
+                selectCount += 1;
+                if (selectCount === 1) {
+                  return Promise.resolve([feedRow]);
+                }
+                return Promise.resolve(subscriptions.map((s) => ({ id: s.id })));
+              },
+            }),
+          }),
+        }),
+        insert: () => ({
+          values: (row: Record<string, unknown>) => ({
+            onConflictDoNothing: () => ({
+              returning: () => {
+                const conflict = subscriptions.some(
+                  (s) => s.userId === row.userId && s.feedId === row.feedId,
+                );
+                if (conflict) {
+                  return Promise.resolve([]);
+                }
+                subscriptions.push(row);
+                return Promise.resolve([{ id: row.id }]);
+              },
+            }),
+          }),
+        }),
+      };
+      return callback(tx);
+    },
+  };
+
+  return { db, subscriptions };
+}
+
+describe("subscribeToExistingFeed", () => {
+  test("imports an existing feed without remote discovery", async () => {
+    const { db, subscriptions } = createFakeSubscriptionDb({
+      id: "feed-1",
+      url: "https://example.com/feed.xml",
+      title: "Example",
+      link: null,
+      faviconUrl: null,
+      faviconSource: null,
+    });
+
+    const result = await subscribeToExistingFeed(db as never, "user-1", "feed-1", {
+      folderId: "folder-1",
+      customTitle: "Imported title",
+    });
+
+    expect(result.newSubscription).toBe(true);
+    expect(subscriptions).toHaveLength(1);
+    expect(subscriptions[0]).toMatchObject({
+      folderId: "folder-1",
+      customTitle: "Imported title",
+    });
+  });
+
+  test("duplicate delivery returns the same subscription without overwriting metadata", async () => {
+    const { db, subscriptions } = createFakeSubscriptionDb({
+      id: "feed-1",
+      url: "https://example.com/feed.xml",
+      title: "Example",
+      link: null,
+      faviconUrl: null,
+      faviconSource: null,
+    });
+
+    const first = await subscribeToExistingFeed(db as never, "user-1", "feed-1", {
+      folderId: "folder-original",
+      customTitle: "Original",
+    });
+    const duplicate = await subscribeToExistingFeed(db as never, "user-1", "feed-1", {
+      folderId: "folder-import",
+      customTitle: "Import title",
+    });
+
+    expect(first.newSubscription).toBe(true);
+    expect(duplicate.newSubscription).toBe(false);
+    expect(duplicate.subscriptionId).toBe(first.subscriptionId);
+    expect(subscriptions).toHaveLength(1);
+    expect(subscriptions[0]).toMatchObject({
+      folderId: "folder-original",
+      customTitle: "Original",
+    });
   });
 });

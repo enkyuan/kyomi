@@ -9,6 +9,11 @@ import {
   getOrCreateFolderByName,
 } from "@modules/folders/operations";
 import { AppError } from "@shared/errors/app";
+import {
+  matchKnownFeedsForImport,
+  publishKnownFeedRefreshCandidates,
+  subscribeKnownOpmlItems,
+} from "./known-feeds";
 import { parseOpmlDocument } from "./parse";
 import {
   claimOpmlPreparation,
@@ -16,6 +21,7 @@ import {
   failOpmlImportPreparation,
   finalizeOpmlImportPreparation,
   insertOpmlImportItems,
+  recordOpmlImportMaterialized,
   recordOpmlImportPrepareWakeup,
   recordOpmlPreparationHeartbeat,
 } from "./store";
@@ -229,12 +235,32 @@ export async function runOpmlImportPrepareJob(
     const folderMap = await ensureFoldersByName(database, claimed.userId, folderNames);
 
     await insertOpmlImportItems(database, importId, document.feeds, folderMap);
-    await recordOpmlPreparationHeartbeat(database, importId);
-    await finalizeOpmlImportPreparation(database, importId, {
+    await recordOpmlImportMaterialized(database, importId, {
       totalItems: document.feeds.length,
       opmlTitle: document.opmlTitle,
       opmlAuthor: document.opmlAuthor,
     });
+    await recordOpmlPreparationHeartbeat(database, importId);
+
+    await matchKnownFeedsForImport(database, importId);
+    while (true) {
+      const completion = await subscribeKnownOpmlItems(database, importId, claimed.userId);
+      if (completion.refreshCandidateFeedIds.length > 0) {
+        await publishKnownFeedRefreshCandidates(
+          database,
+          claimed.userId,
+          completion.refreshCandidateFeedIds,
+          logger,
+        );
+      }
+      await recordOpmlPreparationHeartbeat(database, importId);
+      if (completion.processed === 0) {
+        break;
+      }
+      await matchKnownFeedsForImport(database, importId);
+    }
+
+    await finalizeOpmlImportPreparation(database, importId);
 
     logger.info("worker.job.opml_import_prepare.completed", {
       importId,

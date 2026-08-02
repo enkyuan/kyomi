@@ -68,6 +68,12 @@ export const feeds = pgTable(
       .where(sql`${table.refreshStatus} NOT IN ('running', 'queued')`),
     index("feeds_refresh_status_idx").on(table.refreshStatus, table.id),
     index("feeds_source_kind_idx").on(table.sourceKind, table.id),
+    index("feeds_submitted_url_idx")
+      .on(table.submittedUrl)
+      .where(sql`${table.submittedUrl} IS NOT NULL`),
+    index("feeds_canonical_feed_url_idx")
+      .on(table.canonicalFeedUrl)
+      .where(sql`${table.canonicalFeedUrl} IS NOT NULL`),
   ],
 );
 
