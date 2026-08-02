@@ -46,6 +46,16 @@ export type OpmlImportPrepareJob = {
   };
 };
 
+/** Leased-item wakeup; the worker loads the item's URL/title/folder from Postgres by id. */
+export type OpmlImportItemJob = {
+  type: "opml.import.item";
+  payload: {
+    importId: string;
+    itemId: string;
+    leaseToken: string;
+  };
+};
+
 export type ArticleExtractionJob = {
   type: "article.extract";
   payload: {
@@ -71,6 +81,7 @@ export type Job =
   | OpmlImportJob
   | OpmlImportFeedJob
   | OpmlImportPrepareJob
+  | OpmlImportItemJob
   | ArticleExtractionJob;
 export type JobType = Job["type"];
 
@@ -94,6 +105,7 @@ export function getStreamKeyForJobType(jobType: JobType): string {
     case "opml.import":
     case "opml.import.feed":
     case "opml.import.prepare":
+    case "opml.import.item":
       return OPML_JOBS_STREAM_KEY;
     case "article.extract":
       return ARTICLE_EXTRACTION_JOBS_STREAM_KEY;
@@ -215,6 +227,27 @@ function parseOpmlImportPrepareJob(parsedPayload: Record<string, unknown>): Opml
   };
 }
 
+function parseOpmlImportItemJob(parsedPayload: Record<string, unknown>): OpmlImportItemJob {
+  if (
+    typeof parsedPayload.importId !== "string" ||
+    typeof parsedPayload.itemId !== "string" ||
+    typeof parsedPayload.leaseToken !== "string" ||
+    parsedPayload.importId.length === 0 ||
+    parsedPayload.itemId.length === 0 ||
+    parsedPayload.leaseToken.length === 0
+  ) {
+    throw new Error("Invalid opml.import.item payload");
+  }
+  return {
+    type: "opml.import.item",
+    payload: {
+      importId: parsedPayload.importId,
+      itemId: parsedPayload.itemId,
+      leaseToken: parsedPayload.leaseToken,
+    },
+  };
+}
+
 function parseArticleExtractionReason(value: unknown): ArticleExtractionJob["payload"]["reason"] {
   switch (value) {
     case "manual":
@@ -286,6 +319,8 @@ export function parseJob(fields: Record<string, string>): Job {
       return parseOpmlImportFeedJob(parsedPayload);
     case "opml.import.prepare":
       return parseOpmlImportPrepareJob(parsedPayload);
+    case "opml.import.item":
+      return parseOpmlImportItemJob(parsedPayload);
     case "article.extract":
       return parseArticleExtractionJob(parsedPayload);
     default:

@@ -62,4 +62,23 @@ describe("worker queue job parsing", () => {
   test("rejects an opml.import.prepare payload without an importId", () => {
     expect(() => parseJob({ type: "opml.import.prepare", payload: JSON.stringify({}) })).toThrow();
   });
+
+  test("round-trips leased opml.import.item jobs", () => {
+    const job = {
+      type: "opml.import.item" as const,
+      payload: { importId: "import-1", itemId: "item-1", leaseToken: "lease-1" },
+    };
+    const fields = fieldsForJob(job);
+
+    expect(parseJob(fields)).toEqual(job);
+  });
+
+  test("rejects an opml.import.item payload missing a lease token", () => {
+    expect(() =>
+      parseJob({
+        type: "opml.import.item",
+        payload: JSON.stringify({ importId: "import-1", itemId: "item-1" }),
+      }),
+    ).toThrow();
+  });
 });

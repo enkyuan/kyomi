@@ -1,6 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { feedSubscriptions, folders } from "@kyomi/db";
-import { and, eq, sql } from "drizzle-orm";
+import { and, eq, inArray, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import type { FolderDto, FolderReadStatusResponseDto, UpdateFolderInput } from "./types";
 
@@ -8,6 +8,73 @@ type DB = typeof db;
 type FolderLookupDatabase = Pick<DB, "insert" | "select">;
 
 export const DEFAULT_FOLDER_NAME = "Unsorted";
+const FOLDER_BATCH_SIZE = 500;
+const FOLDER_MAX_NAME_LENGTH = 512;
+
+function chunk<T>(items: T[], size: number): T[][] {
+  const chunks: T[][] = [];
+  for (let i = 0; i < items.length; i += size) {
+    chunks.push(items.slice(i, i + size));
+  }
+  return chunks;
+}
+
+/**
+ * Bulk get-or-create for folder names, bounded to at most FOLDER_BATCH_SIZE rows per
+ * insert/select statement regardless of how many distinct names are requested.
+ */
+export async function ensureFoldersByName(
+  database: FolderLookupDatabase,
+  userId: string,
+  names: string[],
+): Promise<Map<string, string>> {
+  const trimmed = [...new Set(names.map((name) => name.trim()).filter((name) => name.length > 0))];
+  for (const name of trimmed) {
+    if (name.length > FOLDER_MAX_NAME_LENGTH) {
+      throw new AppError("Folder name exceeds maximum length", {
+        status: 400,
+        code: "FOLDER_NAME_TOO_LONG",
+      });
+    }
+  }
+  if (trimmed.length === 0) {
+    return new Map();
+  }
+
+  const now = new Date();
+  for (const batch of chunk(trimmed, FOLDER_BATCH_SIZE)) {
+    await database
+      .insert(folders)
+      .values(
+        batch.map((name) => ({
+          id: crypto.randomUUID(),
+          userId,
+          name,
+          createdAt: now,
+          updatedAt: now,
+        })),
+      )
+      .onConflictDoNothing();
+  }
+
+  const result = new Map<string, string>();
+  for (const batch of chunk(trimmed, FOLDER_BATCH_SIZE)) {
+    const rows = await database
+      .select({ id: folders.id, name: folders.name })
+      .from(folders)
+      .where(and(eq(folders.userId, userId), inArray(folders.name, batch)));
+    for (const row of rows) {
+      result.set(row.name, row.id);
+    }
+  }
+
+  const missing = trimmed.filter((name) => !result.has(name));
+  if (missing.length > 0) {
+    throw new AppError("Failed to create folder", { status: 500, code: "FOLDER_CREATE_FAILED" });
+  }
+
+  return result;
+}
 
 function mapFolder(row: typeof folders.$inferSelect): FolderDto {
   return {

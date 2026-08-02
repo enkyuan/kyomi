@@ -3,10 +3,22 @@ import { publishJob } from "@adapters/queue/publish-job";
 import { getRedis } from "@adapters/redis";
 import { enqueueFeedRefresh } from "@modules/feeds/refresh/enqueue";
 import { createOrSubscribeToFeed } from "@modules/feeds/subscription/subscribe";
-import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/operations";
+import {
+  DEFAULT_FOLDER_NAME,
+  ensureFoldersByName,
+  getOrCreateFolderByName,
+} from "@modules/folders/operations";
 import { AppError } from "@shared/errors/app";
 import { parseOpmlDocument } from "./parse";
-import { createOpmlImport, recordOpmlImportPrepareWakeup } from "./store";
+import {
+  claimOpmlPreparation,
+  createOpmlImport,
+  failOpmlImportPreparation,
+  finalizeOpmlImportPreparation,
+  insertOpmlImportItems,
+  recordOpmlImportPrepareWakeup,
+  recordOpmlPreparationHeartbeat,
+} from "./store";
 import {
   failOpmlTask,
   isOpmlTaskCancelled,
@@ -193,6 +205,55 @@ export async function runOpmlImportFeedJob(
       url,
       error: err.message,
       code: err.code,
+    });
+  }
+}
+
+export async function runOpmlImportPrepareJob(
+  database: DB,
+  payload: { importId: string },
+  logger: Logger,
+): Promise<void> {
+  const { importId } = payload;
+  const claimed = await claimOpmlPreparation(database, importId);
+  if (!claimed) {
+    logger.info("worker.job.opml_import_prepare.duplicate_or_missing", { importId });
+    return;
+  }
+
+  try {
+    const document = parseOpmlDocument(claimed.sourceXml, DEFAULT_FOLDER_NAME);
+    const folderNames = [...new Set(document.feeds.map((feed) => feed.folderName))].filter(
+      (name) => name !== DEFAULT_FOLDER_NAME,
+    );
+    const folderMap = await ensureFoldersByName(database, claimed.userId, folderNames);
+
+    await insertOpmlImportItems(database, importId, document.feeds, folderMap);
+    await recordOpmlPreparationHeartbeat(database, importId);
+    await finalizeOpmlImportPreparation(database, importId, {
+      totalItems: document.feeds.length,
+      opmlTitle: document.opmlTitle,
+      opmlAuthor: document.opmlAuthor,
+    });
+
+    logger.info("worker.job.opml_import_prepare.completed", {
+      importId,
+      totalItems: document.feeds.length,
+    });
+  } catch (error) {
+    if (!(error instanceof AppError)) {
+      // Platform (database/Redis) errors are not the source XML's fault: rethrow so the
+      // queue retries instead of permanently failing an import over a transient outage.
+      throw error;
+    }
+    await failOpmlImportPreparation(database, importId, {
+      code: error.code,
+      message: error.message,
+    });
+    logger.error("worker.job.opml_import_prepare.failed", {
+      importId,
+      error: error.message,
+      code: error.code,
     });
   }
 }

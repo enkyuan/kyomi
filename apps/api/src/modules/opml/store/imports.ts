@@ -104,6 +104,88 @@ export async function recordOpmlImportPrepareWakeup(database: DB, importId: stri
     .where(eq(opmlImports.id, importId));
 }
 
+export type ClaimedOpmlPreparation = {
+  importId: string;
+  userId: string;
+  filename: string;
+  sourceXml: string;
+};
+
+/** Guarded accepted -> parsing claim. A duplicate prepare wakeup returns null. */
+export async function claimOpmlPreparation(
+  database: DB,
+  importId: string,
+): Promise<ClaimedOpmlPreparation | null> {
+  const now = new Date();
+  const [claimed] = await database
+    .update(opmlImports)
+    .set({ status: "parsing", startedAt: now, lastHeartbeatAt: now, updatedAt: now })
+    .where(and(eq(opmlImports.id, importId), eq(opmlImports.status, "accepted")))
+    .returning();
+
+  if (!claimed || claimed.sourceXml === null) {
+    return null;
+  }
+  return {
+    importId: claimed.id,
+    userId: claimed.userId,
+    filename: claimed.filename,
+    sourceXml: claimed.sourceXml,
+  };
+}
+
+export async function recordOpmlPreparationHeartbeat(
+  database: DB,
+  importId: string,
+): Promise<void> {
+  await database
+    .update(opmlImports)
+    .set({ lastHeartbeatAt: new Date(), updatedAt: new Date() })
+    .where(eq(opmlImports.id, importId));
+}
+
+/**
+ * Clears sourceXml and transitions parsing -> dispatching once every parsed item is durably
+ * materialized. Records totalItems, opmlTitle, and opmlAuthor alongside the transition.
+ */
+export async function finalizeOpmlImportPreparation(
+  database: DB,
+  importId: string,
+  input: { totalItems: number; opmlTitle: string | null; opmlAuthor: string | null },
+): Promise<void> {
+  const now = new Date();
+  await database
+    .update(opmlImports)
+    .set({
+      status: "dispatching",
+      sourceXml: null,
+      totalItems: input.totalItems,
+      opmlTitle: input.opmlTitle,
+      opmlAuthor: input.opmlAuthor,
+      updatedAt: now,
+    })
+    .where(and(eq(opmlImports.id, importId), eq(opmlImports.status, "parsing")));
+}
+
+export async function failOpmlImportPreparation(
+  database: DB,
+  importId: string,
+  error: { code: string; message: string },
+): Promise<void> {
+  const now = new Date();
+  await database
+    .update(opmlImports)
+    .set({
+      status: "failed",
+      sourceXml: null,
+      lastErrorCode: error.code,
+      lastErrorMessage: error.message,
+      completedAt: now,
+      updatedAt: now,
+    })
+    .where(and(eq(opmlImports.id, importId), eq(opmlImports.status, "parsing")));
+}
+
 export async function getOpmlImportForUser(
   database: DB,
   userId: string,
