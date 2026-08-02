@@ -64,16 +64,22 @@ describe("opml export", () => {
     expect(parsed.feeds).toEqual([
       {
         xmlUrl: "https://example.com/beta.xml",
+        originalUrl: "https://example.com/beta.xml",
+        normalizedUrl: "https://example.com/beta.xml",
         title: "Beta Feed",
         folderName: "Unsorted",
       },
       {
         xmlUrl: "https://example.com/gamma.xml",
+        originalUrl: "https://example.com/gamma.xml",
+        normalizedUrl: "https://example.com/gamma.xml",
         title: "Gamma Feed",
         folderName: "Unsorted",
       },
       {
         xmlUrl: "https://example.com/alpha.xml",
+        originalUrl: "https://example.com/alpha.xml",
+        normalizedUrl: "https://example.com/alpha.xml",
         title: "Alpha Feed",
         folderName: "Research",
       },
@@ -102,6 +108,8 @@ describe("opml export", () => {
     expect(parsed.feeds).toEqual([
       {
         xmlUrl: "https://example.com/feed?x=1&y=2",
+        originalUrl: "https://example.com/feed?x=1&y=2",
+        normalizedUrl: "https://example.com/feed?x=1&y=2",
         title: `Tom & Jerry <Daily> "Quotes" 'Edition'`,
         folderName: `R&D <Lab> "North" 'A'`,
       },
@@ -176,6 +184,8 @@ describe("opml export", () => {
     const parsed = parseOpmlDocument(titledXml, "Unsorted");
     expect(parsed.feeds[0]).toEqual({
       xmlUrl: "https://example.com/fallback.xml",
+      originalUrl: "https://example.com/fallback.xml",
+      normalizedUrl: "https://example.com/fallback.xml",
       title: "https://example.com/fallback.xml",
       folderName: "Unsorted",
     });
@@ -211,6 +221,8 @@ describe("opml export", () => {
     expect(parsed.feeds).toEqual([
       {
         xmlUrl: "https://example.com/feed.xml",
+        originalUrl: "https://example.com/feed.xml",
+        normalizedUrl: "https://example.com/feed.xml",
         title: "My & Feed",
         folderName: "Research",
       },
