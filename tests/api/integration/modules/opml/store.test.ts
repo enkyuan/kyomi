@@ -1,7 +1,10 @@
 import { describe, expect, mock, test } from "bun:test";
 import { AppError } from "@shared/errors/app";
+import { encodeOpmlFailureCursor } from "@modules/opml/failure-cursor";
+import { encodeOpmlImportCursor } from "@modules/opml/import-cursor";
 import {
   buildOpmlImportSummary,
+  cancelPendingOpmlItems,
   claimLeasedOpmlItem,
   completeOpmlItem,
   createOpmlImport,
@@ -10,6 +13,8 @@ import {
   getOpmlImportForUser,
   insertOpmlImportItems,
   listActiveOpmlImportsForUser,
+  listOpmlImportFailures,
+  listOpmlImportsForUser,
   opmlImportItemId,
   opmlImportStatusMessage,
   recordOpmlImportMaterialized,
@@ -663,5 +668,254 @@ describe("retryOrFailOpmlItem", () => {
     );
 
     expect(setCalls[0]).toMatchObject({ status: "failed" });
+  });
+});
+
+describe("completion cannot overwrite cancellation", () => {
+  test("returns false once the parent import is cancelling", async () => {
+    const fakeDb = {
+      transaction: async (callback: (tx: unknown) => unknown) => {
+        const tx = {
+          update: () => ({
+            set: () => ({
+              where: () => ({ returning: () => Promise.resolve([]) }),
+            }),
+          }),
+        };
+        return callback(tx);
+      },
+    };
+
+    expect(
+      await completeOpmlItem(
+        fakeDb as never,
+        { id: "item-1", importId: "import-1", leaseToken: "lease-1" },
+        "subscribed",
+      ),
+    ).toBe(false);
+  });
+});
+
+describe("cancelPendingOpmlItems", () => {
+  function createFakeCancelDb(batches: number[]) {
+    let batchIndex = 0;
+    const setCalls: Array<Record<string, unknown>> = [];
+    const db = {
+      transaction: async (callback: (tx: unknown) => unknown) => {
+        const tx = {
+          execute: () => {
+            const count = batches[batchIndex] ?? 0;
+            batchIndex += 1;
+            return Promise.resolve(Array.from({ length: count }, (_, i) => ({ id: `item-${i}` })));
+          },
+          update: () => ({
+            set: (patch: Record<string, unknown>) => {
+              setCalls.push(patch);
+              return { where: () => Promise.resolve() };
+            },
+          }),
+          select: () => ({
+            from: () => ({
+              where: () => ({
+                limit: () => Promise.resolve([]),
+              }),
+            }),
+          }),
+        };
+        return callback(tx);
+      },
+    };
+    return { db, setCalls };
+  }
+
+  test("cancels in bounded batches and stops once nothing remains", async () => {
+    const { db } = createFakeCancelDb([500, 201, 0]);
+
+    expect(await cancelPendingOpmlItems(db as never, "import-1", 500)).toBe(500);
+    expect(await cancelPendingOpmlItems(db as never, "import-1", 500)).toBe(201);
+    expect(await cancelPendingOpmlItems(db as never, "import-1", 500)).toBe(0);
+  });
+
+  test("clamps batchSize to at most 500", async () => {
+    let capturedQuery: { queryChunks?: unknown[] } | undefined;
+    const db = {
+      transaction: async (callback: (tx: unknown) => unknown) => {
+        const tx = {
+          execute: (query: { queryChunks?: unknown[] }) => {
+            capturedQuery = query;
+            return Promise.resolve([]);
+          },
+        };
+        return callback(tx);
+      },
+    };
+
+    await cancelPendingOpmlItems(db as never, "import-1", 10_000);
+
+    const values = (capturedQuery?.queryChunks ?? []).filter(
+      (chunk): chunk is number => typeof chunk === "number",
+    );
+    expect(values).toContain(500);
+    expect(values).not.toContain(10_000);
+  });
+});
+
+describe("listOpmlImportsForUser", () => {
+  function importListRow(overrides: Partial<Record<string, unknown>> = {}) {
+    return {
+      id: "import-1",
+      userId: "user-1",
+      status: "completed",
+      createdAt: new Date("2026-01-01T00:00:00.000Z"),
+      ...overrides,
+    };
+  }
+
+  test("returns a nextCursor and hasMore when there are more rows than the limit", async () => {
+    const rows = Array.from({ length: 21 }, (_, i) =>
+      importListRow({ id: `import-${i}`, createdAt: new Date(2026, 0, 1, 0, 0, 20 - i) }),
+    );
+    const fakeDb = {
+      select: () => ({
+        from: () => ({
+          where: () => ({
+            orderBy: () => ({
+              limit: () => Promise.resolve(rows),
+            }),
+          }),
+        }),
+      }),
+    } as unknown as Parameters<typeof listOpmlImportsForUser>[0];
+
+    const page = await listOpmlImportsForUser(fakeDb, { userId: "user-1", limit: 20 });
+
+    expect(page.items).toHaveLength(20);
+    expect(page.hasMore).toBe(true);
+    expect(page.nextCursor).toBeString();
+  });
+
+  test("throws OPML_IMPORT_CURSOR_INVALID for a malformed cursor", async () => {
+    const fakeDb = {} as unknown as Parameters<typeof listOpmlImportsForUser>[0];
+
+    await expect(
+      listOpmlImportsForUser(fakeDb, { userId: "user-1", cursor: "not-a-valid-cursor" }),
+    ).rejects.toMatchObject({ code: "OPML_IMPORT_CURSOR_INVALID", status: 400 });
+  });
+
+  test("accepts its own encoded cursor on a subsequent call", async () => {
+    const cursor = encodeOpmlImportCursor({
+      createdAt: "2026-01-01T00:00:00.000Z",
+      id: "import-5",
+    });
+    const fakeDb = {
+      select: () => ({
+        from: () => ({
+          where: () => ({
+            orderBy: () => ({
+              limit: () => Promise.resolve([]),
+            }),
+          }),
+        }),
+      }),
+    } as unknown as Parameters<typeof listOpmlImportsForUser>[0];
+
+    const page = await listOpmlImportsForUser(fakeDb, { userId: "user-1", cursor });
+    expect(page.items).toEqual([]);
+  });
+});
+
+describe("listOpmlImportFailures", () => {
+  function failureRow(overrides: Partial<Record<string, unknown>> = {}) {
+    return {
+      id: "item-1",
+      url: "https://example.com/feed.xml",
+      code: "FEED_FETCH_FAILED",
+      message: "timeout",
+      position: 0,
+      ...overrides,
+    };
+  }
+
+  test("returns an empty page when the import does not belong to the requesting user", async () => {
+    const fakeDb = {
+      select: () => ({
+        from: () => ({
+          where: () => ({
+            limit: () => Promise.resolve([]),
+          }),
+        }),
+      }),
+    } as unknown as Parameters<typeof listOpmlImportFailures>[0];
+
+    const page = await listOpmlImportFailures(fakeDb, {
+      userId: "user-1",
+      importId: "import-1",
+    });
+    expect(page).toEqual({ items: [], nextCursor: null, hasMore: false });
+  });
+
+  test("paginates failures by position and id, never exceeding the limit", async () => {
+    const rows = Array.from({ length: 3 }, (_, i) => failureRow({ id: `item-${i}`, position: i }));
+    let selectCount = 0;
+    const fakeDb = {
+      select: () => ({
+        from: () => ({
+          where: () => {
+            selectCount += 1;
+            if (selectCount === 1) {
+              return { limit: () => Promise.resolve([{ id: "import-1" }]) };
+            }
+            return { orderBy: () => ({ limit: () => Promise.resolve(rows) }) };
+          },
+        }),
+      }),
+    } as unknown as Parameters<typeof listOpmlImportFailures>[0];
+
+    const page = await listOpmlImportFailures(fakeDb, {
+      userId: "user-1",
+      importId: "import-1",
+      limit: 2,
+    });
+
+    expect(page.items).toHaveLength(2);
+    expect(page.hasMore).toBe(true);
+    expect(page.nextCursor).toBeString();
+  });
+
+  test("throws OPML_FAILURE_CURSOR_INVALID for a malformed cursor", async () => {
+    const fakeDb = {} as unknown as Parameters<typeof listOpmlImportFailures>[0];
+
+    await expect(
+      listOpmlImportFailures(fakeDb, {
+        userId: "user-1",
+        importId: "import-1",
+        cursor: "garbage",
+      }),
+    ).rejects.toMatchObject({ code: "OPML_FAILURE_CURSOR_INVALID", status: 400 });
+  });
+
+  test("accepts its own encoded cursor on a subsequent call", async () => {
+    const cursor = encodeOpmlFailureCursor({ position: 1, id: "item-1" });
+    let selectCount = 0;
+    const fakeDb = {
+      select: () => ({
+        from: () => ({
+          where: () => {
+            selectCount += 1;
+            if (selectCount === 1) {
+              return { limit: () => Promise.resolve([{ id: "import-1" }]) };
+            }
+            return { orderBy: () => ({ limit: () => Promise.resolve([]) }) };
+          },
+        }),
+      }),
+    } as unknown as Parameters<typeof listOpmlImportFailures>[0];
+
+    const page = await listOpmlImportFailures(fakeDb, {
+      userId: "user-1",
+      importId: "import-1",
+      cursor,
+    });
+    expect(page.items).toEqual([]);
   });
 });

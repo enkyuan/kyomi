@@ -10,13 +10,17 @@ import { fetchOpmlDocumentFromUrl } from "./fetch-url";
 import { enqueueOpmlImport } from "./jobs";
 import {
   buildOpmlImportSummary,
+  cancelPendingOpmlItems,
   deleteTerminalOpmlImport,
   getOpmlImportForUser,
   getOpmlImportOwner,
   listActiveOpmlImportsForUser,
+  listOpmlImportFailures,
+  listOpmlImportsForUser,
   opmlImportStatusMessage,
   requestOpmlImportCancellation,
   toCompatibleOpmlImportStatus,
+  toOpmlImportStage,
 } from "./store";
 
 const opmlImportRateLimit = {
@@ -24,6 +28,8 @@ const opmlImportRateLimit = {
   max: 5,
   windowMs: 15 * 60_000,
 } as const;
+
+const MAX_STATUS_FAILURES = 25;
 
 const failureItem = t.Object({
   url: t.String(),
@@ -53,6 +59,14 @@ const opmlTaskStatusValue = t.Union([
   t.Literal("completed"),
   t.Literal("failed"),
   t.Literal("cancelled"),
+]);
+
+const opmlTaskStage = t.Union([
+  t.Literal("queued"),
+  t.Literal("parsing"),
+  t.Literal("dispatching"),
+  t.Literal("processing"),
+  t.Literal("finalizing"),
 ]);
 
 const opmlTaskStatus = t.Object({
@@ -86,6 +100,45 @@ const opmlActiveResponse = t.Object({
   ),
 });
 
+const opmlImportPageItem = t.Object({
+  taskId: t.String(),
+  filename: t.Union([t.String(), t.Null()]),
+  sourceUrl: t.Union([t.String(), t.Null()]),
+  stage: opmlTaskStage,
+  status: opmlTaskStatusValue,
+  summary: t.Object({
+    totalUrls: t.Number(),
+    completed: t.Number(),
+    subscribed: t.Number(),
+    alreadySubscribed: t.Number(),
+    failed: t.Number(),
+  }),
+  createdAt: t.String(),
+  updatedAt: t.String(),
+  completedAt: t.Union([t.String(), t.Null()]),
+  message: t.Union([t.String(), t.Null()]),
+});
+
+const opmlImportPageResponse = t.Object({
+  items: t.Array(opmlImportPageItem),
+  nextCursor: t.Union([t.String(), t.Null()]),
+  hasMore: t.Boolean(),
+});
+
+const opmlFailurePageItem = t.Object({
+  id: t.String(),
+  url: t.String(),
+  code: t.String(),
+  message: t.String(),
+  position: t.Number(),
+});
+
+const opmlFailurePageResponse = t.Object({
+  items: t.Array(opmlFailurePageItem),
+  nextCursor: t.Union([t.String(), t.Null()]),
+  hasMore: t.Boolean(),
+});
+
 const messageResponse = t.Object({
   message: t.String(),
 });
@@ -114,6 +167,28 @@ function assertLegacyJsonSourceSize(xml: string): void {
 function readRequestHeader(context: unknown, name: string): string | undefined {
   const headers = (context as { headers?: Record<string, string | undefined> }).headers;
   return headers?.[name];
+}
+
+function mapOpmlImportRowToPageItem(row: Parameters<typeof toCompatibleOpmlImportStatus>[0]) {
+  const summary = buildOpmlImportSummary(row);
+  return {
+    taskId: row.id,
+    filename: row.filename,
+    sourceUrl: row.sourceUrl,
+    stage: toOpmlImportStage(row),
+    status: toCompatibleOpmlImportStatus(row),
+    summary: {
+      totalUrls: summary.totalUrls,
+      completed: summary.completed,
+      subscribed: summary.subscribed,
+      alreadySubscribed: summary.alreadySubscribed,
+      failed: summary.failed,
+    },
+    createdAt: row.createdAt.toISOString(),
+    updatedAt: row.updatedAt.toISOString(),
+    completedAt: row.completedAt?.toISOString() ?? null,
+    message: opmlImportStatusMessage(row),
+  };
 }
 
 export function registerOpmlRoutes(app: Elysia) {
@@ -230,6 +305,34 @@ export function registerOpmlRoutes(app: Elysia) {
       },
     )
     .get(
+      "/opml/imports",
+      async (context) => {
+        const { db, userId, query } = v1HandlerContext<
+          unknown,
+          { cursor?: string; limit?: string }
+        >(context);
+        const page = await listOpmlImportsForUser(db, {
+          userId,
+          cursor: query.cursor,
+          limit: query.limit !== undefined ? Number(query.limit) : undefined,
+        });
+        return {
+          items: page.items.map(mapOpmlImportRowToPageItem),
+          nextCursor: page.nextCursor,
+          hasMore: page.hasMore,
+        };
+      },
+      {
+        query: t.Object({
+          cursor: t.Optional(t.String()),
+          limit: t.Optional(t.String()),
+        }),
+        response: {
+          200: opmlImportPageResponse,
+        },
+      },
+    )
+    .get(
       "/opml/imports/active",
       async (context) => {
         const { db, userId } = v1HandlerContext(context);
@@ -264,6 +367,14 @@ export function registerOpmlRoutes(app: Elysia) {
         }
 
         const summary = buildOpmlImportSummary(row);
+        const failuresPage =
+          row.failedItems > 0
+            ? await listOpmlImportFailures(db, {
+                userId,
+                importId: row.id,
+                limit: MAX_STATUS_FAILURES,
+              })
+            : null;
         return {
           taskId: row.id,
           status: toCompatibleOpmlImportStatus(row),
@@ -273,13 +384,46 @@ export function registerOpmlRoutes(app: Elysia) {
           opmlTitle: row.opmlTitle,
           opmlAuthor: row.opmlAuthor,
           message: opmlImportStatusMessage(row),
-          summary: { ...summary, failures: [] },
+          summary: {
+            ...summary,
+            failures: (failuresPage?.items ?? []).map((failure) => ({
+              url: failure.url,
+              code: failure.code,
+              message: failure.message,
+            })),
+          },
         };
       },
       {
         params: t.Object({ taskId: taskIdParam }),
         response: {
           200: opmlTaskStatus,
+        },
+      },
+    )
+    .get(
+      "/opml/imports/:taskId/failures",
+      async (context) => {
+        const { db, params, userId, query } = v1HandlerContext<
+          unknown,
+          { cursor?: string; limit?: string }
+        >(context);
+        const page = await listOpmlImportFailures(db, {
+          userId,
+          importId: params.taskId,
+          cursor: query.cursor,
+          limit: query.limit !== undefined ? Number(query.limit) : undefined,
+        });
+        return page;
+      },
+      {
+        params: t.Object({ taskId: taskIdParam }),
+        query: t.Object({
+          cursor: t.Optional(t.String()),
+          limit: t.Optional(t.String()),
+        }),
+        response: {
+          200: opmlFailurePageResponse,
         },
       },
     )
@@ -296,6 +440,13 @@ export function registerOpmlRoutes(app: Elysia) {
               status: 404,
               code: "OPML_TASK_NOT_FOUND",
             });
+          }
+        }
+
+        if (result.cancelled) {
+          let cancelledInBatch = await cancelPendingOpmlItems(db, params.taskId, 500);
+          while (cancelledInBatch > 0) {
+            cancelledInBatch = await cancelPendingOpmlItems(db, params.taskId, 500);
           }
         }
 
