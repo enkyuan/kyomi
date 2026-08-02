@@ -1,4 +1,5 @@
 import {
+  ARTICLE_HTML_SANITIZER_VERSION,
   normalizeSanitizedArticleRoot,
   sanitizeArticleHtmlFragment,
 } from "@kyomi/worker/sanitization";
@@ -31,23 +32,21 @@ function normalizeSafeHttpUrl(raw: string, baseUrl?: string | null): string | nu
   }
 }
 
-function resolveRelativeAssetUrls(html: string, baseUrl?: string | null): string {
+function resolveRelativeAssetUrls(root: ParentNode, baseUrl?: string | null): void {
   if (!baseUrl) {
-    return html;
+    return;
   }
-  const root = normalizeSafeHttpUrl(baseUrl);
-  if (!root) {
-    return html;
+  const resolvedBase = normalizeSafeHttpUrl(baseUrl);
+  if (!resolvedBase) {
+    return;
   }
-  const dom = new JSDOM(`<body>${html}</body>`);
-  const { document } = dom.window;
 
-  for (const link of document.querySelectorAll("a[href]")) {
+  for (const link of root.querySelectorAll("a[href]")) {
     const href = link.getAttribute("href");
     if (!href) {
       continue;
     }
-    const normalized = normalizeSafeHttpUrl(href, root);
+    const normalized = normalizeSafeHttpUrl(href, resolvedBase);
     if (normalized) {
       link.setAttribute("href", normalized);
     } else {
@@ -55,27 +54,18 @@ function resolveRelativeAssetUrls(html: string, baseUrl?: string | null): string
     }
   }
 
-  for (const img of document.querySelectorAll("img[src]")) {
+  for (const img of root.querySelectorAll("img[src]")) {
     const src = img.getAttribute("src");
     if (!src) {
       continue;
     }
-    const normalized = normalizeSafeHttpUrl(src, root);
+    const normalized = normalizeSafeHttpUrl(src, resolvedBase);
     if (normalized) {
       img.setAttribute("src", normalized);
     } else {
       img.removeAttribute("src");
     }
   }
-
-  return document.body.innerHTML;
-}
-
-function sanitizeWithArticlePolicy(html: string): string {
-  const clean = sanitizeArticleHtmlFragment(html);
-  const dom = new JSDOM(`<body>${clean}</body>`);
-  normalizeSanitizedArticleRoot(dom.window.document.body);
-  return dom.window.document.body.innerHTML;
 }
 
 /**
@@ -110,18 +100,12 @@ function isSingleDotOrIndex(text: string): boolean {
  *
  * This avoids stripping legitimate article lists.
  */
-function stripCarouselArtifacts(html: string): string {
-  if (!html.includes("<li")) return html;
-  const dom = new JSDOM(`<body>${html}</body>`);
-  const { document } = dom.window;
-  let changed = false;
-
-  for (const list of document.querySelectorAll("ul, ol")) {
+function stripCarouselArtifacts(root: ParentNode): void {
+  for (const list of root.querySelectorAll("ul, ol")) {
     const items = list.querySelectorAll(":scope > li");
     if (items.length === 0) {
       // Empty list — remove
       list.remove();
-      changed = true;
       continue;
     }
 
@@ -133,11 +117,8 @@ function stripCarouselArtifacts(html: string): string {
 
     if (hasCarouselClass || allDots) {
       list.remove();
-      changed = true;
     }
   }
-
-  return changed ? document.body.innerHTML : html;
 }
 
 function normalizeMetadataText(value: string | null | undefined): string {
@@ -321,30 +302,28 @@ function isMetadataOnlyBlock(
 }
 
 function stripLeadingArticleMetadata(
-  html: string,
+  body: HTMLElement,
   metadata?: { title?: string | null; byline?: string | null; excerpt?: string | null },
-): string {
+): void {
   const normalizedTitle = normalizeMetadataText(metadata?.title);
   if (!normalizedTitle) {
-    return html;
+    return;
   }
 
   const normalizedByline = normalizeMetadataText(metadata?.byline);
   const normalizedExcerpt = normalizeMetadataText(metadata?.excerpt);
-  const dom = new JSDOM(`<body>${html}</body>`);
-  const { document } = dom.window;
-  let root: HTMLElement = document.body;
-  const bodyFirstChild = document.body.firstElementChild;
+  let root: HTMLElement = body;
+  const bodyFirstChild = body.firstElementChild;
   if (
-    document.body.childElementCount === 1 &&
-    bodyFirstChild instanceof dom.window.HTMLElement &&
+    body.childElementCount === 1 &&
+    bodyFirstChild instanceof body.ownerDocument.defaultView!.HTMLElement &&
     GENERIC_WRAPPER_TAGS.has(bodyFirstChild.tagName)
   ) {
     root = descendToContentRoot(bodyFirstChild);
   }
   const titleBlock = isTitleLikeBlock(root, normalizedTitle);
   if (!titleBlock) {
-    return html;
+    return;
   }
   titleBlock.block.remove();
 
@@ -360,8 +339,99 @@ function stripLeadingArticleMetadata(
     removedMetadataCount += 1;
     cursor = next;
   }
+}
 
-  return document.body.innerHTML;
+/**
+ * Extracts block-aware text from `root` without mutating it (the same root is later
+ * serialized back to HTML, so text extraction must read-only).
+ */
+function extractBlockAwareText(root: HTMLElement): string {
+  const clone = root.cloneNode(true) as HTMLElement;
+
+  for (const element of clone.querySelectorAll("br")) {
+    element.replaceWith("\n");
+  }
+
+  for (const element of clone.querySelectorAll(
+    "p, li, blockquote, pre, h1, h2, h3, h4, h5, h6, tr, div, section, article, main",
+  )) {
+    element.append("\n");
+  }
+
+  return clone.textContent?.replace(/\n{3,}/g, "\n\n").trim() ?? "";
+}
+
+export type ArticleHtmlProcessingInstrumentation = {
+  onCoreSanitizerRun?: () => void;
+  onDomCreated?: () => void;
+};
+
+export type ArticleHtmlProcessingOptions = {
+  baseUrl?: string | null;
+  title?: string | null;
+  byline?: string | null;
+  excerpt?: string | null;
+  sanitizerVersion?: string | null;
+  instrumentation?: ArticleHtmlProcessingInstrumentation;
+};
+
+export type ProcessedArticleHtml = {
+  html: string;
+  text: string;
+  sanitizerVersion: typeof ARTICLE_HTML_SANITIZER_VERSION;
+  coreSanitizerRan: boolean;
+};
+
+/**
+ * The one server-side semantic pass over article HTML. On the full (untrusted/legacy) path:
+ * resolve relative URLs to absolute http(s) first (so they survive the sanitizer's URL
+ * allowlist), sanitize, then normalize/strip-carousel/strip-metadata/extract-text on that one
+ * sanitized document. On the current-version fast path, the input was already sanitized and
+ * URL-resolved by a prior full pass, so only one document is built. Every call site that
+ * previously chained `sanitizeArticleHtml()` + `htmlToText()` (each building its own JSDOM)
+ * should call this once instead.
+ */
+export function processArticleHtml(
+  html: string,
+  options?: ArticleHtmlProcessingOptions,
+): ProcessedArticleHtml {
+  const coreSanitizerRan = options?.sanitizerVersion !== ARTICLE_HTML_SANITIZER_VERSION;
+
+  let clean = html;
+  if (coreSanitizerRan) {
+    options?.instrumentation?.onCoreSanitizerRun?.();
+    const preDom = new JSDOM(`<body>${html}</body>`);
+    resolveRelativeAssetUrls(preDom.window.document.body, options?.baseUrl);
+    clean = sanitizeArticleHtmlFragment(preDom.window.document.body.innerHTML);
+  }
+
+  const dom = new JSDOM(`<body>${clean}</body>`);
+  options?.instrumentation?.onDomCreated?.();
+  const body = dom.window.document.body;
+
+  if (coreSanitizerRan) {
+    normalizeSanitizedArticleRoot(body);
+  } else {
+    // Fast path: input was already sanitized/URL-resolved by a prior full pass, but a
+    // caller-supplied baseUrl may differ, so still normalize URLs against it.
+    resolveRelativeAssetUrls(body, options?.baseUrl);
+  }
+  stripCarouselArtifacts(body);
+  stripLeadingArticleMetadata(body, {
+    title: options?.title,
+    byline: options?.byline,
+    excerpt: options?.excerpt,
+  });
+
+  const text = extractBlockAwareText(body);
+  const serialized = body.innerHTML.replace(/\n{3,}/g, "\n\n").trim();
+
+  return {
+    html: serialized,
+    text,
+    sanitizerVersion: ARTICLE_HTML_SANITIZER_VERSION,
+    coreSanitizerRan,
+  };
 }
 
 export function sanitizeArticleHtml(
@@ -373,15 +443,7 @@ export function sanitizeArticleHtml(
     excerpt?: string | null;
   },
 ): string {
-  const normalized = resolveRelativeAssetUrls(html, options?.baseUrl);
-  const clean = sanitizeWithArticlePolicy(normalized);
-  const withoutCarousel = stripCarouselArtifacts(clean);
-  const withoutRedundantLeadingMetadata = stripLeadingArticleMetadata(withoutCarousel, {
-    title: options?.title,
-    byline: options?.byline,
-    excerpt: options?.excerpt,
-  });
-  return withoutRedundantLeadingMetadata.replace(/\n{3,}/g, "\n\n").trim();
+  return processArticleHtml(html, { ...options, sanitizerVersion: null }).html;
 }
 
 /**
@@ -390,17 +452,5 @@ export function sanitizeArticleHtml(
  */
 export function htmlToText(html: string): string {
   const dom = new JSDOM(`<body>${html}</body>`);
-  const { document } = dom.window;
-
-  for (const element of document.querySelectorAll("br")) {
-    element.replaceWith("\n");
-  }
-
-  for (const element of document.querySelectorAll(
-    "p, li, blockquote, pre, h1, h2, h3, h4, h5, h6, tr, div, section, article, main",
-  )) {
-    element.append("\n");
-  }
-
-  return document.body.textContent?.replace(/\n{3,}/g, "\n\n").trim() ?? "";
+  return extractBlockAwareText(dom.window.document.body);
 }

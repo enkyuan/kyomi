@@ -4,6 +4,7 @@ import { publishJob } from "@adapters/queue/publish-job";
 import { categories, feedItemCategoryAssignments } from "@kyomi/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize";
 import { and, eq, ne } from "drizzle-orm";
+import { processArticleHtml } from "@modules/articles/reader/content";
 import { getArticleDetailForUser } from "@modules/articles/read/detail";
 import type { ArticleDetailDto } from "@modules/articles/types";
 import {
@@ -79,10 +80,16 @@ async function applyFreshExtractionCache(
   }
 
   if (cached.kind === "ready") {
+    // A cache row written before sanitizer versioning (or with a stale version) is
+    // untrusted; reprocess it once here rather than persisting it as already-current.
+    const processed = processArticleHtml(cached.html, {
+      sanitizerVersion: cached.sanitizerVersion,
+    });
     await persistExtracted(database, article, {
       kind: "ready",
-      html: cached.html,
+      html: processed.html,
       text: cached.text,
+      sanitizerVersion: processed.sanitizerVersion,
     });
     if (article.articleType === "feed") {
       await reclassifyExtractedFeedItem(database, article, cached.text, options);
@@ -396,9 +403,15 @@ export async function runArticleExtractionForUser(
     finalUrl: extracted.finalUrl,
     html,
     text,
+    sanitizerVersion: extracted.sanitizerVersion,
   });
 
-  await persistExtracted(database, before, { kind: "ready", html, text });
+  await persistExtracted(database, before, {
+    kind: "ready",
+    html,
+    text,
+    sanitizerVersion: extracted.sanitizerVersion,
+  });
   if (before.articleType === "feed") {
     await reclassifyExtractedFeedItem(database, before, text, options);
   }

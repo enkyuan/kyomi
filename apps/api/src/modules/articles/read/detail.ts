@@ -34,6 +34,7 @@ type FeedArticleDetailRawRow = {
   extractedContentStatus: ExtractedContentStatus | string | null;
   extractedContentError: string | null;
   extractedContentUpdatedAt: Date | null;
+  extractedContentSanitizerVersion: string | null;
   publishedAt: Date;
   feedId: string;
   feedUrl: string | null;
@@ -75,6 +76,7 @@ function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto 
       ? decodeNullableText(row.extractedContentText)
       : null,
     extractedContentStatus: extractedStatus,
+    extractedContentSanitizerVersion: row.extractedContentSanitizerVersion,
   });
   const reader = buildArticleReaderDto({
     readerOriginal,
@@ -145,6 +147,7 @@ async function getFeedArticleDetailForUser(
       extractedContentStatus: feedItems.extractedContentStatus,
       extractedContentError: feedItems.extractedContentError,
       extractedContentUpdatedAt: feedItems.extractedContentUpdatedAt,
+      extractedContentSanitizerVersion: feedItems.extractedContentSanitizerVersion,
       publishedAt: feedItems.publishedAt,
       feedId: feedItems.feedId,
       feedUrl: feeds.url,

@@ -7,7 +7,7 @@ import type {
   ExtractedContentStatus,
 } from "./types";
 import { normalizeMarkdownFeedArtifacts } from "./markdown";
-import { htmlToText, sanitizeArticleHtml } from "./sanitize";
+import { htmlToText, processArticleHtml, sanitizeArticleHtml } from "./sanitize";
 
 type ReaderArticleInput = {
   articleType: "feed" | "clip";
@@ -322,8 +322,10 @@ export function buildStoredContentRecord(input: ReaderArticleInput): ArticleStor
   };
 }
 
-function shouldExtractStoredContent(input: ReaderArticleInput): boolean {
-  const body = buildStoredBody(input);
+function shouldExtractStoredContent(
+  input: ReaderArticleInput,
+  body: ReturnType<typeof buildStoredBody>,
+): boolean {
   const text =
     body?.contentText?.trim() ??
     body?.contentMarkdown?.trim() ??
@@ -392,7 +394,7 @@ function toReaderStatus(
 export function buildStoredReaderContent(input: ReaderArticleInput): ArticleReaderContentDto {
   // Invariant: this function is the only place that maps stored/original columns to reader bodyKind.
   const storedBody = buildStoredBody(input);
-  const shouldExtract = shouldExtractStoredContent(input);
+  const shouldExtract = shouldExtractStoredContent(input, storedBody);
 
   if (storedBody) {
     const base = {
@@ -502,6 +504,7 @@ export function buildExtractedReaderViewFromDb(input: {
   extractedContentHtml: string | null;
   extractedContentText: string | null;
   extractedContentStatus: ExtractedContentStatus;
+  extractedContentSanitizerVersion?: string | null;
 }): ArticleReaderContentDto | null {
   if (input.extractedContentStatus !== "ready") {
     return null;
@@ -510,13 +513,9 @@ export function buildExtractedReaderViewFromDb(input: {
   if (!rawHtml) {
     return null;
   }
-  const sanitized = sanitizeArticleHtml(rawHtml, {
-    baseUrl: safeHttpBaseUrl(input.contentBaseUrl),
-    title: input.title,
-    byline: null,
-    excerpt: input.summary,
-  });
-  const text = input.extractedContentText?.trim() || (sanitized ? htmlToText(sanitized) : null);
+  // Pass the raw HTML and its stored sanitizer version through untouched;
+  // buildReadabilityReaderContent performs the single sanitize/normalize/text-extraction
+  // pass and skips re-sanitizing only when the version is already current.
   return buildReadabilityReaderContent(
     {
       articleType: input.articleType,
@@ -536,25 +535,28 @@ export function buildExtractedReaderViewFromDb(input: {
       title: null,
       byline: null,
       excerpt: input.summary,
-      contentHtml: sanitized || null,
-      contentText: text,
+      contentHtml: rawHtml,
+      contentText: input.extractedContentText?.trim() || null,
       siteName: null,
       language: null,
       publishedTime: null,
     },
+    input.extractedContentSanitizerVersion ?? null,
   );
 }
 
 export function buildReadabilityReaderContent(
   input: ReaderArticleInput,
   extracted: ArticleExtractionCandidate,
+  sanitizerVersion: string | null = null,
 ): ArticleReaderContentDto {
   if (extracted.contentHtml?.trim()) {
-    const sanitizedHtml = sanitizeArticleHtml(extracted.contentHtml, {
+    const processed = processArticleHtml(extracted.contentHtml, {
       baseUrl: safeHttpBaseUrl(input.contentBaseUrl),
       title: extracted.title ?? input.title,
       byline: extracted.byline,
       excerpt: extracted.excerpt ?? input.summary,
+      sanitizerVersion,
     });
     return {
       contentStatus: "ready",
@@ -564,9 +566,9 @@ export function buildReadabilityReaderContent(
       title: extracted.title ?? input.title,
       byline: extracted.byline,
       excerpt: extracted.excerpt ?? input.summary,
-      contentHtml: sanitizedHtml,
+      contentHtml: processed.html,
       contentMarkdown: null,
-      contentText: extracted.contentText?.trim() || htmlToText(sanitizedHtml) || null,
+      contentText: extracted.contentText?.trim() || processed.text || null,
       fallbackSummary: null,
       fallbackReason: null,
       siteName: extracted.siteName,

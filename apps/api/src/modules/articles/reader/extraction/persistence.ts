@@ -5,7 +5,7 @@ import { eq } from "drizzle-orm";
 
 type DB = typeof db;
 type ExtractedPersistencePayload =
-  | { kind: "ready"; html: string; text: string }
+  | { kind: "ready"; html: string; text: string; sanitizerVersion: string }
   | { kind: "failed"; message: string };
 
 export async function persistPendingExtracted(database: DB, article: ArticleDetailDto) {
@@ -46,6 +46,7 @@ async function persistFeedExtracted(
       .set({
         extractedContentHtml: payload.html,
         extractedContentText: payload.text,
+        extractedContentSanitizerVersion: payload.sanitizerVersion,
         extractedContentStatus: "ready",
         extractedContentError: null,
         extractedContentUpdatedAt: now,
@@ -58,6 +59,7 @@ async function persistFeedExtracted(
       .set({
         extractedContentHtml: null,
         extractedContentText: null,
+        extractedContentSanitizerVersion: null,
         extractedContentStatus: "failed",
         extractedContentError: payload.message,
         extractedContentUpdatedAt: now,
@@ -79,6 +81,7 @@ async function persistClipExtracted(
       .set({
         extractedContentHtml: payload.html,
         extractedContentText: payload.text,
+        extractedContentSanitizerVersion: payload.sanitizerVersion,
         extractedContentStatus: "ready",
         extractedContentError: null,
         extractedContentUpdatedAt: now,
@@ -91,6 +94,7 @@ async function persistClipExtracted(
       .set({
         extractedContentHtml: null,
         extractedContentText: null,
+        extractedContentSanitizerVersion: null,
         extractedContentStatus: "failed",
         extractedContentError: payload.message,
         extractedContentUpdatedAt: now,
