@@ -8,15 +8,19 @@ import {
   claimLeasedOpmlItem,
   completeOpmlItem,
   createOpmlImport,
+  deleteOldTerminalOpmlImports,
   deleteTerminalOpmlImport,
+  findExpiredOpmlLeases,
   finalizeOpmlImportPreparation,
   getOpmlImportForUser,
   insertOpmlImportItems,
   listActiveOpmlImportsForUser,
+  listCancellingOpmlImportIds,
   listOpmlImportFailures,
   listOpmlImportsForUser,
   opmlImportItemId,
   opmlImportStatusMessage,
+  reclaimStalePrepareImports,
   recordOpmlImportMaterialized,
   requestOpmlImportCancellation,
   retryOrFailOpmlItem,
@@ -917,5 +921,118 @@ describe("listOpmlImportFailures", () => {
       cursor,
     });
     expect(page.items).toEqual([]);
+  });
+});
+
+describe("reclaimStalePrepareImports", () => {
+  test("returns imports newly stale-parsing back to accepted, then lists all imports due for a wakeup", async () => {
+    const updateReturning = mock(() => Promise.resolve([{ id: "import-parsing-1" }]));
+    const updateWhere = mock(() => ({ returning: updateReturning }));
+    const update = mock(() => ({ set: () => ({ where: updateWhere }) }));
+    const selectLimit = mock(() =>
+      Promise.resolve([{ id: "import-accepted-1" }, { id: "import-accepted-2" }]),
+    );
+    const select = mock(() => ({ from: () => ({ where: () => ({ limit: selectLimit }) }) }));
+    const fakeDb = { update, select } as unknown as Parameters<
+      typeof reclaimStalePrepareImports
+    >[0];
+
+    const now = new Date("2026-01-01T00:10:00.000Z");
+    const dueForPrepare = await reclaimStalePrepareImports(
+      fakeDb,
+      now,
+      new Date(now.getTime() - 30_000),
+      new Date(now.getTime() - 5 * 60_000),
+    );
+
+    expect(dueForPrepare).toEqual(["import-accepted-1", "import-accepted-2"]);
+    expect(update).toHaveBeenCalled();
+  });
+});
+
+describe("findExpiredOpmlLeases", () => {
+  test("filters out rows with a null lease token defensively", async () => {
+    const rows = [
+      { id: "item-1", importId: "import-1", leaseToken: "lease-1", attempts: 1 },
+      { id: "item-2", importId: "import-1", leaseToken: null, attempts: 1 },
+    ];
+    const limit = mock(() => Promise.resolve(rows));
+    const where = mock(() => ({ limit }));
+    const from = mock(() => ({ where }));
+    const select = mock(() => ({ from }));
+    const fakeDb = { select } as unknown as Parameters<typeof findExpiredOpmlLeases>[0];
+
+    const expired = await findExpiredOpmlLeases(fakeDb, new Date());
+
+    expect(expired).toEqual([
+      { id: "item-1", importId: "import-1", leaseToken: "lease-1", attempts: 1 },
+    ]);
+  });
+});
+
+describe("listCancellingOpmlImportIds", () => {
+  test("returns at most the requested limit of cancelling import ids", async () => {
+    const limit = mock(() => Promise.resolve([{ id: "import-1" }, { id: "import-2" }]));
+    const where = mock(() => ({ limit }));
+    const from = mock(() => ({ where }));
+    const select = mock(() => ({ from }));
+    const fakeDb = { select } as unknown as Parameters<typeof listCancellingOpmlImportIds>[0];
+
+    expect(await listCancellingOpmlImportIds(fakeDb, 2)).toEqual(["import-1", "import-2"]);
+    expect(limit).toHaveBeenCalledWith(2);
+  });
+});
+
+describe("deleteOldTerminalOpmlImports", () => {
+  test("deletes only the terminal imports found older than the cutoff, in one bounded batch", async () => {
+    const selectLimit = mock(() => Promise.resolve([{ id: "import-1" }, { id: "import-2" }]));
+    const selectWhere = mock(() => ({ limit: selectLimit }));
+    const select = mock(() => ({ from: () => ({ where: selectWhere }) }));
+    const deleteReturning = mock(() => Promise.resolve([{ id: "import-1" }, { id: "import-2" }]));
+    const deleteWhere = mock(() => ({ returning: deleteReturning }));
+    const del = mock(() => ({ where: deleteWhere }));
+    const fakeDb = { select, delete: del } as unknown as Parameters<
+      typeof deleteOldTerminalOpmlImports
+    >[0];
+
+    const deletedCount = await deleteOldTerminalOpmlImports(fakeDb, new Date());
+
+    expect(deletedCount).toBe(2);
+  });
+
+  test("returns 0 without issuing a delete when nothing is old enough", async () => {
+    const selectLimit = mock(() => Promise.resolve([]));
+    const selectWhere = mock(() => ({ limit: selectLimit }));
+    const select = mock(() => ({ from: () => ({ where: selectWhere }) }));
+    const del = mock(() => {
+      throw new Error("must not be called");
+    });
+    const fakeDb = { select, delete: del } as unknown as Parameters<
+      typeof deleteOldTerminalOpmlImports
+    >[0];
+
+    expect(await deleteOldTerminalOpmlImports(fakeDb, new Date())).toBe(0);
+  });
+});
+
+describe("retryOrFailOpmlItem reclaims a leased (never-claimed) item the same as processing", () => {
+  test("returns a leased item to pending on a retryable expiry before the max attempt", async () => {
+    const setCalls: Array<Record<string, unknown>> = [];
+    const update = mock(() => ({
+      set: (patch: Record<string, unknown>) => {
+        setCalls.push(patch);
+        return { where: () => Promise.resolve() };
+      },
+    }));
+    const fakeDb = { update } as unknown as Parameters<typeof retryOrFailOpmlItem>[0];
+
+    await retryOrFailOpmlItem(
+      fakeDb,
+      { id: "item-1", importId: "import-1", leaseToken: "lease-1", attempts: 1 },
+      { retryable: true, code: "OPML_ITEM_LEASE_EXPIRED", message: "Lease expired" },
+      new Date(),
+    );
+
+    expect(setCalls[0]).toMatchObject({ status: "pending", leaseToken: null });
   });
 });
