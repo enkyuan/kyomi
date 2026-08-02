@@ -107,11 +107,7 @@ export const opmlImportItems = pgTable(
       table.position,
       table.id,
     ),
-    index("opml_import_items_lease_expiry_idx").on(
-      table.status,
-      table.leaseExpiresAt,
-      table.id,
-    ),
+    index("opml_import_items_lease_expiry_idx").on(table.status, table.leaseExpiresAt, table.id),
     index("opml_import_items_failure_page_idx").on(
       table.importId,
       table.status,

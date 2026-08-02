@@ -18,6 +18,16 @@ function chunk<T>(items: T[], size: number): T[][] {
   return chunks;
 }
 
+function rowsFromExecute<T>(result: unknown): T[] {
+  if (Array.isArray(result)) {
+    return result as T[];
+  }
+  if (result && typeof result === "object" && "rows" in result) {
+    return (result as { rows: T[] }).rows;
+  }
+  return [];
+}
+
 type PendingItem = { id: string; normalizedUrl: string };
 type FeedAlias = {
   id: string;
@@ -56,7 +66,7 @@ async function matchPendingBatch(database: DB, batch: PendingItem[]): Promise<nu
       ),
     );
 
-  let matched = 0;
+  const matches: Array<{ itemId: string; feedId: string }> = [];
   for (const item of batch) {
     const aliasMatches = candidates.filter(
       (feed) =>
@@ -65,16 +75,28 @@ async function matchPendingBatch(database: DB, batch: PendingItem[]): Promise<nu
         feed.canonicalFeedUrl === item.normalizedUrl,
     );
     const best = pickBestFeedMatch(item.normalizedUrl, aliasMatches);
-    if (!best) {
-      continue;
+    if (best) {
+      matches.push({ itemId: item.id, feedId: best.id });
     }
-    await database
-      .update(opmlImportItems)
-      .set({ feedId: best.id, updatedAt: new Date() })
-      .where(and(eq(opmlImportItems.id, item.id), eq(opmlImportItems.status, "pending")));
-    matched += 1;
   }
-  return matched;
+  if (matches.length === 0) {
+    return 0;
+  }
+
+  // One batched UPDATE...FROM(VALUES) statement instead of one round-trip per matched item --
+  // at up to 500 matches per chunk, a per-row loop here was the dominant cost at 50K scale.
+  const now = new Date();
+  const updated = await database.execute(sql`
+    UPDATE ${opmlImportItems} item
+    SET feed_id = v.feed_id, updated_at = ${now}
+    FROM (VALUES ${sql.join(
+      matches.map((m) => sql`(${m.itemId}, ${m.feedId})`),
+      sql`, `,
+    )}) AS v(item_id, feed_id)
+    WHERE item.id = v.item_id AND item.status = 'pending'
+    RETURNING item.id
+  `);
+  return rowsFromExecute<{ id: string }>(updated).length;
 }
 
 /**
