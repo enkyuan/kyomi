@@ -1,5 +1,5 @@
-import { Stack } from "expo-router";
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { Stack, useNavigation, type NativeStackNavigationProp } from "expo-router";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Pressable, Text, View, useColorScheme } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useReaderTabBar, type ReaderTabBarConfig } from "@/components/ui/tab-bar/reader-mode";
@@ -15,13 +15,17 @@ export type ReaderScreenProps = {
   readonly articleId: string;
 };
 
+type ReaderStackNavigation = NativeStackNavigationProp<Record<string, object | undefined>>;
+
 export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const colorScheme = useColorScheme();
   const insets = useSafeAreaInsets();
+  const navigation = useNavigation<ReaderStackNavigation>();
   const readerColorScheme = getReaderColorScheme(colorScheme);
   const readerCanvasColor = getReaderCanvasColor(colorScheme);
   const tabBarOcclusionHeight = getReaderTabBarOcclusionHeight(insets);
-  const { setConfig } = useReaderTabBar();
+  const { setConfig, setIsDismissingReader } = useReaderTabBar();
+  const [isDomReady, setIsDomReady] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const { data: article, error, isLoading, refetch } = useReaderArticle(articleId);
   const actions = useReaderActions(article);
@@ -51,6 +55,31 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   useEffect(() => {
     return () => setConfig(null);
   }, [setConfig]);
+
+  useEffect(() => {
+    setIsDismissingReader(false);
+    const unsubscribeTransitionStart = navigation.addListener("transitionStart", (event) => {
+      setIsDismissingReader(event.data.closing);
+    });
+    const unsubscribeTransitionEnd = navigation.addListener("transitionEnd", (event) => {
+      if (!event.data.closing) {
+        setIsDismissingReader(false);
+      }
+    });
+    const unsubscribeGestureCancel = navigation.addListener("gestureCancel", () => {
+      setIsDismissingReader(false);
+    });
+
+    return () => {
+      unsubscribeTransitionStart();
+      unsubscribeTransitionEnd();
+      unsubscribeGestureCancel();
+    };
+  }, [navigation, setIsDismissingReader]);
+
+  useEffect(() => {
+    setIsDomReady(false);
+  }, [articleId]);
 
   useEffect(() => {
     if (!article || article.isRead) {
@@ -92,19 +121,45 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
     );
   }
 
+  const handleArticleReady = useCallback(() => {
+    setIsDomReady(true);
+  }, []);
+
   return (
     <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
-      <ArticleBody
-        colorScheme={readerColorScheme}
-        bottomInset={tabBarOcclusionHeight}
-        dom={{ scrollEnabled: true, style: { backgroundColor: readerCanvasColor, flex: 1 } }}
-        feedTitle={article.feedTitle}
-        fontSizePx={17}
-        reader={article.reader.selected}
-        searchQuery={searchQuery}
-        summary={article.summary}
-        title={article.title}
-      />
+      <View style={{ flex: 1 }}>
+        <ArticleBody
+          colorScheme={readerColorScheme}
+          bottomInset={tabBarOcclusionHeight}
+          dom={{
+            scrollEnabled: true,
+            style: { backgroundColor: readerCanvasColor, flex: 1, opacity: isDomReady ? 1 : 0 },
+          }}
+          feedTitle={article.feedTitle}
+          fontSizePx={17}
+          imageUrl={article.imageUrl}
+          onReady={handleArticleReady}
+          reader={article.reader.selected}
+          searchQuery={searchQuery}
+          summary={article.summary}
+          title={article.title}
+        />
+        {!isDomReady ? (
+          <View
+            pointerEvents="none"
+            style={{
+              backgroundColor: readerCanvasColor,
+              bottom: 0,
+              left: 0,
+              position: "absolute",
+              right: 0,
+              top: 0,
+            }}
+          >
+            <ReaderSkeleton bottomInset={tabBarOcclusionHeight} />
+          </View>
+        ) : null}
+      </View>
     </ReaderCanvas>
   );
 }
