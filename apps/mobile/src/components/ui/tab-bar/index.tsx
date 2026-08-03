@@ -22,7 +22,7 @@ export function TabBar(props: BottomTabBarProps) {
   const isReaderRoute = useSegments().includes("[article]");
 
   if (isReaderRoute) {
-    return <ReaderTabBarContent Surface={BlurSurface} />;
+    return <ReaderTabBarContent insets={props.insets} Surface={BlurSurface} />;
   }
 
   return <TabBarContent {...props} Surface={BlurSurface} />;

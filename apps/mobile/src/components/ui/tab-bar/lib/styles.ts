@@ -1,19 +1,59 @@
 import { StyleSheet } from "react-native";
+import type { EdgeInsets } from "react-native-safe-area-context";
 
 const SEPARATE_WIDTH = 72;
 const READER_SEPARATE_WIDTH = 72;
+const FLOATING_BAR_SIDE_GUTTER = 20;
+const FLOATING_BAR_EDGE_GUTTER = 20;
+const FLOATING_BAR_SAFE_AREA_TAIL_OVERLAP = 12;
+const FLOATING_BAR_CONTENT_GUTTER = 12;
+
 export const TAB_BAR_HEIGHT = 56;
-export const TAB_BAR_BOTTOM_OFFSET = 30;
-export const TAB_BAR_OCCLUSION_HEIGHT = TAB_BAR_HEIGHT + TAB_BAR_BOTTOM_OFFSET;
 export const READER_TAB_BAR_HEIGHT = 56;
-export const READER_TAB_BAR_OCCLUSION_HEIGHT = READER_TAB_BAR_HEIGHT + TAB_BAR_BOTTOM_OFFSET;
+
+type FloatingBarInsets = Pick<EdgeInsets, "bottom" | "left" | "right">;
+
+type FloatingBarPosition = {
+  readonly bottom: number;
+  readonly left: number;
+  readonly right: number;
+};
+
+/**
+ * The custom tab bar is already absolutely positioned against the navigator's
+ * physical lower edge. Let the visual edge gutter do the optical alignment,
+ * while retaining the upper portion of a large Android navigation inset.
+ */
+export function getFloatingBarPosition(insets: FloatingBarInsets): FloatingBarPosition {
+  const horizontalInset = Math.max(insets.left, insets.right) + FLOATING_BAR_SIDE_GUTTER;
+
+  return {
+    bottom: Math.max(FLOATING_BAR_EDGE_GUTTER, insets.bottom - FLOATING_BAR_SAFE_AREA_TAIL_OVERLAP),
+    left: horizontalInset,
+    right: horizontalInset,
+  };
+}
+
+export function getFloatingBarWidth(windowWidth: number, insets: FloatingBarInsets) {
+  const { left, right } = getFloatingBarPosition(insets);
+  return Math.max(0, windowWidth - left - right);
+}
+
+function getFloatingBarOcclusionHeight(insets: FloatingBarInsets, barHeight: number) {
+  return getFloatingBarPosition(insets).bottom + barHeight + FLOATING_BAR_CONTENT_GUTTER;
+}
+
+export function getTabBarOcclusionHeight(insets: FloatingBarInsets) {
+  return getFloatingBarOcclusionHeight(insets, TAB_BAR_HEIGHT);
+}
+
+export function getReaderTabBarOcclusionHeight(insets: FloatingBarInsets) {
+  return getFloatingBarOcclusionHeight(insets, READER_TAB_BAR_HEIGHT);
+}
 
 export const styles = StyleSheet.create({
   row: {
     position: "absolute",
-    bottom: TAB_BAR_BOTTOM_OFFSET,
-    left: 20,
-    right: 20,
     flexDirection: "row",
     alignItems: "center",
     gap: 12,
@@ -70,18 +110,12 @@ export const styles = StyleSheet.create({
   },
   readerRow: {
     position: "absolute",
-    bottom: TAB_BAR_BOTTOM_OFFSET,
-    left: 20,
-    right: 20,
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
   },
   liquidHost: {
     position: "absolute",
-    bottom: TAB_BAR_BOTTOM_OFFSET,
-    left: 20,
-    right: 20,
     height: TAB_BAR_HEIGHT,
   },
   liquidHostedContent: {

@@ -32,7 +32,7 @@ import {
 } from "@/components/icons";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import { FeedTabActions } from "./feed-actions";
-import { styles } from "../lib/styles";
+import { getFloatingBarPosition, getFloatingBarWidth, styles } from "../lib/styles";
 import { useReaderTabBar, type ReaderTabBarConfig } from "../reader-mode";
 
 const ACTION_ICON_SIZE = 19;
@@ -41,7 +41,6 @@ const INACTIVE_COLOR = "#a1a1aa";
 const BAR_HEIGHT = 56;
 const SIDE_ACTION_WIDTH = 72;
 const FEED_TRAILING_WIDTH = 72;
-const HORIZONTAL_INSET = 20;
 const FEED_GAP = 12;
 const READER_GAP = 8;
 const GLASS_DEFAULT_SPACING = 6;
@@ -58,6 +57,7 @@ type LiquidTabBarContentProps = BottomTabBarProps & {
  */
 export function LiquidTabBarContent({
   descriptors,
+  insets,
   isReaderRoute,
   navigation,
   state,
@@ -70,7 +70,8 @@ export function LiquidTabBarContent({
   const searchInputRef = useRef<TextInput>(null);
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
 
-  const barWidth = Math.max(0, windowWidth - HORIZONTAL_INSET * 2);
+  const barPosition = getFloatingBarPosition(insets);
+  const barWidth = getFloatingBarWidth(windowWidth, insets);
   const gap = isReaderRoute ? READER_GAP : FEED_GAP;
   const trailingWidth = isReaderRoute ? SIDE_ACTION_WIDTH : FEED_TRAILING_WIDTH;
   const leadingWidth = isReaderRoute && !isSearchExpanded ? SIDE_ACTION_WIDTH : 0;
@@ -111,7 +112,7 @@ export function LiquidTabBarContent({
   };
 
   return (
-    <Host style={styles.liquidHost}>
+    <Host style={[styles.liquidHost, barPosition]}>
       <Namespace id={namespaceId}>
         <GlassEffectContainer
           modifiers={[

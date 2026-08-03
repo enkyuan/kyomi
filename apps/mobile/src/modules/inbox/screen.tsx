@@ -1,6 +1,7 @@
 import { Text, useColorScheme, useWindowDimensions, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { EmptyStateIcon } from "@/components/icons/empty-state";
-import { TAB_BAR_OCCLUSION_HEIGHT } from "@/components/ui/tab-bar/lib/styles";
+import { getTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { TopTabs } from "@ui/top-tabs";
 import { useTopTabsHeader } from "@ui/top-tabs/lib/scroll-context";
@@ -26,6 +27,7 @@ const EMPTY_STATES = {
 function InboxEmptyState({ tabName }: { tabName: keyof typeof EMPTY_STATES }) {
   const { description, title } = EMPTY_STATES[tabName];
   const { width } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const header = useTopTabsHeader();
   const isCompact = width <= 360;
   const titleFontSize = isCompact ? COMPACT_TITLE_FONT_SIZE : DEFAULT_TITLE_FONT_SIZE;
@@ -40,7 +42,10 @@ function InboxEmptyState({ tabName }: { tabName: keyof typeof EMPTY_STATES }) {
   return (
     <View
       className="flex-1 items-center justify-center gap-5 px-5.5"
-      style={{ paddingBottom: TAB_BAR_OCCLUSION_HEIGHT, paddingTop: header?.headerHeight ?? 0 }}
+      style={{
+        paddingBottom: getTabBarOcclusionHeight(insets),
+        paddingTop: header?.headerHeight ?? 0,
+      }}
     >
       <EmptyStateIcon size={176} />
       <View className="w-full max-w-136 gap-2">

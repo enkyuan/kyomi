@@ -31,7 +31,7 @@ export function TabBar(props: BottomTabBarProps) {
   }
 
   if (isReaderRoute) {
-    return <ReaderTabBarContent Surface={BlurSurface} />;
+    return <ReaderTabBarContent insets={props.insets} Surface={BlurSurface} />;
   }
 
   return <TabBarContent {...props} Surface={BlurSurface} />;

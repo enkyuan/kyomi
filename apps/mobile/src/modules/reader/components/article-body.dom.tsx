@@ -33,7 +33,7 @@ const MOBILE_READER_STYLES = String.raw`
     --card: var(--reader-card);
     --ring: #a1a1aa;
     min-height: 100vh;
-    padding: 20px 20px 112px;
+    padding: 20px 20px var(--mobile-reader-bottom-inset, 112px);
     background: var(--reader-background);
     color: var(--reader-foreground);
   }
@@ -126,6 +126,7 @@ const MOBILE_READER_STYLES = String.raw`
 `;
 
 type ArticleBodyProps = {
+  readonly bottomInset: number;
   readonly colorScheme: "dark" | "light";
   readonly feedTitle: string;
   readonly fontSizePx: number;
@@ -209,6 +210,7 @@ function highlightSearchMatches(root: HTMLElement, query: string) {
 }
 
 export default function ArticleBody({
+  bottomInset,
   colorScheme,
   feedTitle,
   fontSizePx,
@@ -247,6 +249,7 @@ export default function ArticleBody({
       style={
         {
           "--reader-font-size": `${fontSizePx}px`,
+          "--mobile-reader-bottom-inset": `${bottomInset}px`,
         } as CSSProperties
       }
     >

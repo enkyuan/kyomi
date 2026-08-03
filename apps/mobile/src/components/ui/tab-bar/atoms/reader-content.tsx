@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useRouter } from "expo-router";
+import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Pressable, TextInput, View } from "react-native";
 import Animated, { LinearTransition, useReducedMotion } from "react-native-reanimated";
 import {
@@ -12,7 +13,7 @@ import {
 } from "@/components/icons";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import { useReaderTabBar } from "../reader-mode";
-import { styles } from "../lib/styles";
+import { getFloatingBarPosition, styles } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 
 const ACTION_ICON_SIZE = 19;
@@ -20,7 +21,13 @@ const FOREGROUND_COLOR = "#f4f4f5";
 const INACTIVE_COLOR = "#a1a1aa";
 const READER_LAYOUT_TRANSITION = LinearTransition.duration(220);
 
-export function ReaderTabBarContent({ Surface }: { readonly Surface: TabBarSurface }) {
+export function ReaderTabBarContent({
+  insets,
+  Surface,
+}: {
+  readonly insets: BottomTabBarProps["insets"];
+  readonly Surface: TabBarSurface;
+}) {
   const router = useRouter();
   const { config } = useReaderTabBar();
   const searchInputRef = useRef<TextInput>(null);
@@ -50,7 +57,11 @@ export function ReaderTabBarContent({ Surface }: { readonly Surface: TabBarSurfa
   };
 
   return (
-    <View accessibilityRole="toolbar" pointerEvents="box-none" style={styles.readerRow}>
+    <View
+      accessibilityRole="toolbar"
+      pointerEvents="box-none"
+      style={[styles.readerRow, getFloatingBarPosition(insets)]}
+    >
       <ReaderSeparateAction
         accessibilityLabel="Back to inbox"
         onPress={goBack}

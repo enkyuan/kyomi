@@ -1,7 +1,7 @@
 import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { View } from "react-native";
 import { FeedTabActions, hasSeparateFeedTabAction } from "./feed-actions";
-import { styles } from "../lib/styles";
+import { getFloatingBarPosition, styles } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 
 type TabBarContentProps = BottomTabBarProps & {
@@ -9,9 +9,15 @@ type TabBarContentProps = BottomTabBarProps & {
 };
 
 /** Shared tab content so iOS can swap only its backdrop for native glass. */
-export function TabBarContent({ state, descriptors, navigation, Surface }: TabBarContentProps) {
+export function TabBarContent({
+  state,
+  descriptors,
+  insets,
+  navigation,
+  Surface,
+}: TabBarContentProps) {
   return (
-    <View style={styles.row}>
+    <View style={[styles.row, getFloatingBarPosition(insets)]}>
       <View style={styles.wrapper}>
         <Surface style={styles.primarySurface}>
           <View accessibilityRole="tablist" style={styles.bar}>

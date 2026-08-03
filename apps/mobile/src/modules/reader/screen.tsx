@@ -1,8 +1,9 @@
 import { Stack } from "expo-router";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Pressable, Text, View, useColorScheme } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useReaderTabBar, type ReaderTabBarConfig } from "@/components/ui/tab-bar/reader-mode";
-import { READER_TAB_BAR_OCCLUSION_HEIGHT } from "@/components/ui/tab-bar/lib/styles";
+import { getReaderTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { Skeleton } from "@ui/skeleton";
 import { fetchMobileApiJson } from "@/lib/api-client";
 import ArticleBody from "./components/article-body.dom";
@@ -16,8 +17,10 @@ export type ReaderScreenProps = {
 
 export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const colorScheme = useColorScheme();
+  const insets = useSafeAreaInsets();
   const readerColorScheme = getReaderColorScheme(colorScheme);
   const readerCanvasColor = getReaderCanvasColor(colorScheme);
+  const tabBarOcclusionHeight = getReaderTabBarOcclusionHeight(insets);
   const { setConfig } = useReaderTabBar();
   const [searchQuery, setSearchQuery] = useState("");
   const { data: article, error, isLoading, refetch } = useReaderArticle(articleId);
@@ -62,7 +65,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   if (isLoading) {
     return (
       <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
-        <ReaderSkeleton />
+        <ReaderSkeleton bottomInset={tabBarOcclusionHeight} />
       </ReaderCanvas>
     );
   }
@@ -93,6 +96,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
     <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
       <ArticleBody
         colorScheme={readerColorScheme}
+        bottomInset={tabBarOcclusionHeight}
         dom={{ scrollEnabled: true, style: { backgroundColor: readerCanvasColor, flex: 1 } }}
         feedTitle={article.feedTitle}
         fontSizePx={17}
@@ -105,9 +109,9 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   );
 }
 
-function ReaderSkeleton() {
+function ReaderSkeleton({ bottomInset }: { readonly bottomInset: number }) {
   return (
-    <View className="flex-1 px-5 pt-5" style={{ paddingBottom: READER_TAB_BAR_OCCLUSION_HEIGHT }}>
+    <View className="flex-1 px-5 pt-5" style={{ paddingBottom: bottomInset }}>
       <View className="gap-3">
         <Skeleton className="h-3.5 w-32" radius={4} />
         <View className="gap-2">

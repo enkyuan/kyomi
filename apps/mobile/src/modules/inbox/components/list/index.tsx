@@ -2,7 +2,9 @@ import { LegendList } from "@legendapp/list/react-native";
 import { router } from "expo-router";
 import type { NativeScrollEvent, NativeSyntheticEvent } from "react-native";
 import { Platform, Text, useWindowDimensions, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Skeleton } from "@ui/skeleton";
+import { getTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { useTopTabsHeader } from "@ui/top-tabs/lib/scroll-context";
 import { useArticles } from "@modules/inbox/hooks/use-articles";
 import type { ArticleListItem } from "@modules/inbox/lib/articles";
@@ -57,9 +59,11 @@ function SkeletonRow({ isFirst }: { isFirst: boolean }) {
 }
 
 function SkeletonRows({
+  bottomInset,
   headerHeight,
   viewportHeight,
 }: {
+  bottomInset: number;
   headerHeight: number;
   viewportHeight: number;
 }) {
@@ -71,7 +75,7 @@ function SkeletonRows({
     : 6;
 
   return (
-    <View style={{ paddingTop: headerHeight }}>
+    <View style={{ paddingBottom: bottomInset, paddingTop: headerHeight }}>
       {Array.from({ length: rowCount }).map((_, index) => (
         <SkeletonRow isFirst={index === 0} key={index} />
       ))}
@@ -81,12 +85,20 @@ function SkeletonRows({
 
 export function List({ ListEmptyComponent }: { ListEmptyComponent: React.ReactElement }) {
   const { height } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const { items, isLoading, isFetchingNextPage, hasNextPage, fetchNextPage } = useArticles();
   const header = useTopTabsHeader();
   const headerHeight = header?.headerHeight ?? 0;
+  const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
 
   if (isLoading) {
-    return <SkeletonRows headerHeight={headerHeight} viewportHeight={height} />;
+    return (
+      <SkeletonRows
+        bottomInset={tabBarOcclusionHeight}
+        headerHeight={headerHeight}
+        viewportHeight={height}
+      />
+    );
   }
 
   if (items.length === 0) {
@@ -99,8 +111,10 @@ export function List({ ListEmptyComponent }: { ListEmptyComponent: React.ReactEl
     <LegendList
       automaticallyAdjustContentInsets={false}
       automaticallyAdjustsScrollIndicatorInsets={false}
-      contentContainerStyle={isIOS ? undefined : { paddingTop: headerHeight }}
-      contentInset={isIOS ? { top: headerHeight } : undefined}
+      contentContainerStyle={
+        isIOS ? undefined : { paddingBottom: tabBarOcclusionHeight, paddingTop: headerHeight }
+      }
+      contentInset={isIOS ? { bottom: tabBarOcclusionHeight, top: headerHeight } : undefined}
       contentInsetAdjustmentBehavior="never"
       data={items}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
@@ -116,7 +130,9 @@ export function List({ ListEmptyComponent }: { ListEmptyComponent: React.ReactEl
         header?.scrollY.set(Math.max(0, offset));
       }}
       scrollEventThrottle={16}
-      scrollIndicatorInsets={isIOS ? { top: headerHeight } : undefined}
+      scrollIndicatorInsets={
+        isIOS ? { bottom: tabBarOcclusionHeight, top: headerHeight } : undefined
+      }
       renderItem={({ item, index }: { item: ArticleListItem; index: number }) => (
         <Item
           isFirst={index === 0}
