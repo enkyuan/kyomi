@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import {
+  buildExtractedReaderViewFromDb,
   buildFallbackReaderContent,
   buildReadabilityReaderContent,
   buildStoredReaderContent,
@@ -444,6 +445,51 @@ describe("articles.normalize.content", () => {
       expect(reader.contentHtml).not.toContain("Jaroslav Lukiv");
       expect(reader.contentHtml).not.toContain("2 hours ago");
       expect(reader.contentHtml).toContain("Body paragraph starts here.");
+    });
+  });
+
+  describe("buildExtractedReaderViewFromDb", () => {
+    test("sanitizes the persisted extracted HTML exactly once", () => {
+      const reader = buildExtractedReaderViewFromDb({
+        articleType: "feed",
+        title: "My Article",
+        summary: "A summary.",
+        contentBaseUrl: "https://example.com/post",
+        extractedContentHtml:
+          '<article><p onclick="alert(1)">Intro</p><a href="/rel">link</a></article>',
+        extractedContentText: null,
+        extractedContentStatus: "ready",
+      });
+
+      expect(reader?.contentHtml).not.toContain("onclick");
+      expect(reader?.contentHtml).toContain('href="https://example.com/rel"');
+      expect(reader?.contentText).toContain("Intro");
+    });
+
+    test("returns null when extracted status is not ready or HTML is empty", () => {
+      expect(
+        buildExtractedReaderViewFromDb({
+          articleType: "feed",
+          title: "T",
+          summary: null,
+          contentBaseUrl: null,
+          extractedContentHtml: "<p>x</p>",
+          extractedContentText: null,
+          extractedContentStatus: "pending",
+        }),
+      ).toBeNull();
+
+      expect(
+        buildExtractedReaderViewFromDb({
+          articleType: "feed",
+          title: "T",
+          summary: null,
+          contentBaseUrl: null,
+          extractedContentHtml: "  ",
+          extractedContentText: null,
+          extractedContentStatus: "ready",
+        }),
+      ).toBeNull();
     });
   });
 });

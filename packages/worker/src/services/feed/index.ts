@@ -1,6 +1,7 @@
 export { runFeedRefresh, shouldEnrichInsertedItems } from "./refresh";
 export { parseFeedDocument } from "./parse";
 export { discoverFeedUrlFromHtml } from "./discover-url";
+export { FEED_FETCH_ACCEPT, fetchFeedDocument } from "./fetch";
 export {
   canonicalWinsOnConflictSql,
   hasExplicitFeedCategories,

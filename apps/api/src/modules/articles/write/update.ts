@@ -8,6 +8,7 @@ import {
 } from "@kyomi/db";
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
+import { assertContentFieldBudget } from "@shared/http/content-budget";
 import { type ClipUpdateBody, updateArticleClipForUser } from "./clips/operations";
 import type { ArticleUpdateBody } from "../types";
 
@@ -46,6 +47,11 @@ export async function updateArticleForUser(
   if (!hasRead && !hasSaved && !hasHidden && !hasContentFields) {
     throw new AppError("No updatable fields provided", { status: 400, code: "EMPTY_UPDATE" });
   }
+  assertContentFieldBudget([
+    { name: "contentHtml", value: body.contentHtml },
+    { name: "contentText", value: body.contentText },
+    { name: "contentMarkdown", value: body.contentMarkdown },
+  ]);
 
   await getFeedArticleOrThrow(database, articleId);
 

@@ -1,5 +1,6 @@
 import type { Elysia } from "elysia";
 import { env } from "@config/env";
+import { assertContentFieldBudget } from "@shared/http/content-budget";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { getArticleDetailForUser } from "../read/detail";
 import { resolveEnhancementContent, summarizeContent, translateContent } from "./enrichment";
@@ -55,6 +56,7 @@ export function registerArticleEnrichmentRoutes(app: Elysia) {
         >(context);
         const article = await getArticleDetailForUser(db, userId, params.articleId);
         const content = resolveEnhancementContent(body.content, article);
+        assertContentFieldBudget([{ name: "content", value: content }]);
         const summary = summarizeContent(content, body.language_key);
         logger.info("articles.summarize.succeeded", { userId, articleId: params.articleId });
         return { summary };
@@ -76,6 +78,7 @@ export function registerArticleEnrichmentRoutes(app: Elysia) {
         const article = await getArticleDetailForUser(db, userId, params.articleId);
         const targetLanguage = body.target_language;
         const content = resolveEnhancementContent(body.content, article);
+        assertContentFieldBudget([{ name: "content", value: content }]);
         const translated = translateContent(content, targetLanguage);
         logger.info("articles.translate.succeeded", {
           userId,

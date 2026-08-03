@@ -3,10 +3,20 @@ import { logger } from "@adapters/logger";
 
 type ListenRetryOptions = {
   port: number;
+  maxRequestBodySize?: number;
   retries?: number;
   retryDelayMs?: number;
   signal?: AbortSignal;
 };
+
+export function buildListenOptions(options: { port: number; maxRequestBodySize?: number }): {
+  port: number;
+  maxRequestBodySize?: number;
+} {
+  return options.maxRequestBodySize === undefined
+    ? { port: options.port }
+    : { port: options.port, maxRequestBodySize: options.maxRequestBodySize };
+}
 
 function sleep(ms: number, signal?: AbortSignal): Promise<void> {
   return new Promise((resolve) => {
@@ -37,7 +47,7 @@ export async function listenWithRetry(app: Elysia, options: ListenRetryOptions):
 
   for (let attempt = 0; attempt <= retries; attempt += 1) {
     try {
-      app.listen(options.port);
+      app.listen(buildListenOptions(options));
       return;
     } catch (error) {
       const lastAttempt = attempt === retries;

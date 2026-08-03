@@ -37,6 +37,7 @@ export type FeedRefreshResult = {
   error?: string;
   failureClass?: HtmlFeedFailureClass;
   categoryStats?: FeedRefreshCategoryStats;
+  contentLimitStats?: FeedContentLimitStats;
   // True when the failure cannot be resolved by retrying (e.g. HTTP 4xx other than 408/429).
   permanent?: boolean;
 };
@@ -79,9 +80,19 @@ export type ParsedFeedItem = {
   inferredCategoryLabels?: InferredCategoryLabel[];
 };
 
+export type FeedContentLimitStats = {
+  sourceItemCount: number;
+  acceptedItemCount: number;
+  droppedItemCount: number;
+  contentCandidateCount: number;
+  droppedContentItemCount: number;
+  acceptedContentBytes: number;
+};
+
 export type ParsedFeedDocument = {
   metadata: FeedMetadata;
   items: ParsedFeedItem[];
+  contentLimitStats: FeedContentLimitStats;
 };
 
 export type FetchFeedDocumentResult =

@@ -1,12 +1,12 @@
 import { Readability } from "@mozilla/readability";
 import { parseHTML } from "linkedom";
 import type { HostRateLimiter } from "@kyomi/worker";
-import { htmlToText, sanitizeArticleHtml } from "../content";
+import { processArticleHtml } from "../content";
 import type { ArticleExtractionCandidate } from "../content";
 import { fetchArticleDocument } from "./fetch";
 
 type ArticleExtractionResult =
-  | { ok: true; content: ArticleExtractionCandidate; finalUrl: string }
+  | { ok: true; content: ArticleExtractionCandidate; finalUrl: string; sanitizerVersion: string }
   | { ok: false; errorCode: string; errorMessage: string };
 
 function wordCount(input: string): number {
@@ -121,13 +121,15 @@ export function extractArticleContentFromHtml(input: {
     };
   }
 
-  const contentHtml = sanitizeArticleHtml(normalizeReadabilityPreformattedProse(article.content), {
+  const processed = processArticleHtml(normalizeReadabilityPreformattedProse(article.content), {
     baseUrl: finalUrl.href,
     title: article.title?.trim() || null,
     byline: article.byline?.trim() || null,
     excerpt: article.excerpt?.trim() || null,
+    sanitizerVersion: null,
   });
-  const contentText = htmlToText(contentHtml);
+  const contentHtml = processed.html;
+  const contentText = processed.text;
 
   if (wordCount(contentText) < 60 || paragraphCount(contentText) < 2) {
     return {
@@ -140,6 +142,7 @@ export function extractArticleContentFromHtml(input: {
   return {
     ok: true,
     finalUrl: finalUrl.href,
+    sanitizerVersion: processed.sanitizerVersion,
     content: {
       title: article.title?.trim() || null,
       byline: article.byline?.trim() || null,

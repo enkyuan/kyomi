@@ -34,12 +34,16 @@ export const feedItems = pgTable(
     contentSource: text("content_source"),
     extractionErrorCode: text("extraction_error_code"),
     extractionErrorMessage: text("extraction_error_message"),
+    /** Sanitizer version that produced `content_html`; null means untrusted/never processed. */
+    contentSanitizerVersion: text("content_sanitizer_version"),
     /** Source-page full text (Readability); separate from feed-provided content fields. */
     extractedContentHtml: text("extracted_content_html"),
     extractedContentText: text("extracted_content_text"),
     extractedContentStatus: text("extracted_content_status").notNull().default("pending"),
     extractedContentError: text("extracted_content_error"),
     extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
+    /** Sanitizer version that produced `extracted_content_html`; null means untrusted. */
+    extractedContentSanitizerVersion: text("extracted_content_sanitizer_version"),
     imageUrl: text("image_url"),
     // Source parity for non-RSS items. Items still belong to a `feeds` row (feed_id stays
     // NOT NULL); these record the concrete platform identity and normalized author/language.
@@ -122,11 +126,13 @@ export const articleClips = pgTable(
     contentSource: text("content_source"),
     extractionErrorCode: text("extraction_error_code"),
     extractionErrorMessage: text("extraction_error_message"),
+    contentSanitizerVersion: text("content_sanitizer_version"),
     extractedContentHtml: text("extracted_content_html"),
     extractedContentText: text("extracted_content_text"),
     extractedContentStatus: text("extracted_content_status").notNull().default("pending"),
     extractedContentError: text("extracted_content_error"),
     extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
+    extractedContentSanitizerVersion: text("extracted_content_sanitizer_version"),
     note: text("note"),
     isRead: boolean("is_read").notNull().default(false),
     isSaved: boolean("is_saved").notNull().default(true),
@@ -163,6 +169,7 @@ export const articleExtractionCache = pgTable(
     contentHash: text("content_hash"),
     contentHtml: text("content_html"),
     contentText: text("content_text"),
+    sanitizerVersion: text("sanitizer_version"),
     status: text("status").notNull(),
     errorCode: text("error_code"),
     errorMessage: text("error_message"),

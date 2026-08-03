@@ -140,11 +140,11 @@
       "name": "@kyomi/reader",
       "version": "0.1.0",
       "dependencies": {
+        "@kyomi/worker": "workspace:*",
         "highlight.js": "^11.11.1",
         "katex": "^0.16.45",
         "marked": "^18.0.0",
         "marked-katex-extension": "^5.1.8",
-        "neosanitize": "^0.3.0",
         "react-photo-view": "^1.2.7",
       },
       "devDependencies": {

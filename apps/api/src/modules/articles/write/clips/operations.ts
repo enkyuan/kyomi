@@ -3,6 +3,7 @@ import { articleClips } from "@kyomi/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize";
 import { and, asc, desc, eq, gt, gte, ilike, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
+import { assertContentFieldBudget } from "@shared/http/content-budget";
 import type { ArticleSort } from "@modules/articles/query";
 import { buildStoredContentRecord } from "@modules/articles/reader/content";
 import { extractFullTextFromUrl } from "@modules/articles/reader/enrichment";
@@ -193,6 +194,7 @@ export async function createArticleClip(
   userId: string,
   body: CreateArticleClipBody,
 ): Promise<ArticleDetailDto> {
+  assertContentFieldBudget([{ name: "content", value: body.content }]);
   const trimmedUrl = ensureClipUrl(body.url);
   const content = await resolveClipContent(body.content, trimmedUrl);
   const title = resolveClipTitle(body.title, content, trimmedUrl);
@@ -267,6 +269,12 @@ export async function updateArticleClipForUser(
   body: ClipUpdateBody,
 ): Promise<boolean> {
   assertClipUpdateHasFields(body);
+  assertContentFieldBudget([
+    { name: "content", value: body.content },
+    { name: "contentHtml", value: body.contentHtml },
+    { name: "contentText", value: body.contentText },
+    { name: "contentMarkdown", value: body.contentMarkdown },
+  ]);
 
   const existing = await database
     .select()

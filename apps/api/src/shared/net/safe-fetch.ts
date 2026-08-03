@@ -1,5 +1,6 @@
 import { assertHttpOrHttpsUrl } from "./http-url";
 import { assertSafeOutboundUrl } from "./outbound-policy";
+import { readResponseBodyWithByteLimit as readBoundedBody } from "@kyomi/worker/lib/response-body";
 
 export class TooManyRedirectsError extends Error {
   constructor(message = "Too many redirects") {
@@ -55,9 +56,9 @@ export async function readResponseBodyWithByteLimit(
   response: Response,
   maxBytes: number,
 ): Promise<{ ok: true; body: string } | { ok: false }> {
-  const buffer = await response.arrayBuffer();
-  if (buffer.byteLength > maxBytes) {
+  const result = await readBoundedBody(response, { maxBytes });
+  if (!result.ok) {
     return { ok: false };
   }
-  return { ok: true, body: new TextDecoder("utf-8", { fatal: false }).decode(buffer) };
+  return { ok: true, body: result.body };
 }

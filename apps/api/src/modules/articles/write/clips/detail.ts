@@ -56,6 +56,7 @@ export function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDeta
     extractedContentHtml: row.extractedContentHtml,
     extractedContentText: row.extractedContentText,
     extractedContentStatus: extractedStatus,
+    extractedContentSanitizerVersion: row.extractedContentSanitizerVersion,
   });
   const reader = buildArticleReaderDto({
     readerOriginal,
