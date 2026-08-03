@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design"
+  short_description: "Shape polished Kyomi interfaces"
+  default_prompt: "Use $design to shape and verify this Kyomi interface across web, mobile, and shared UI."

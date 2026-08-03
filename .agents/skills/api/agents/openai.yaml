@@ -1,0 +1,4 @@
+interface:
+  display_name: "API"
+  short_description: "Build Kyomi API domains and processes"
+  default_prompt: "Use $api to implement this Kyomi backend change in the correct module, adapter, or process boundary."

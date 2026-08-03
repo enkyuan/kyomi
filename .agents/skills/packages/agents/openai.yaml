@@ -1,0 +1,4 @@
+interface:
+  display_name: "Packages"
+  short_description: "Develop Kyomi shared packages safely"
+  default_prompt: "Use $packages to change the owning Kyomi package while preserving its public entrypoints and runtime boundaries."

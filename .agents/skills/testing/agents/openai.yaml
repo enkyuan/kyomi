@@ -1,0 +1,4 @@
+interface:
+  display_name: "Testing"
+  short_description: "Structure durable Kyomi tests by owner"
+  default_prompt: "Use $testing to place and write focused tests for this Kyomi behavior."

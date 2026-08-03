@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security"
+  short_description: "Protect Kyomi trust boundaries"
+  default_prompt: "Use $security to assess and secure this Kyomi change at its real trust boundary."

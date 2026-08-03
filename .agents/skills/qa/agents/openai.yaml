@@ -1,0 +1,4 @@
+interface:
+  display_name: "QA"
+  short_description: "Verify Kyomi changes before checkpointing"
+  default_prompt: "Use $qa to validate this Kyomi change and prepare a focused GitButler checkpoint."

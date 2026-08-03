@@ -1,3 +1,32 @@
+<!-- project-skills:start -->
+
+## Project skill routing
+
+Project-local skills under `.agents/skills` are the canonical implementation guides. Before a
+substantial change, load the smallest matching set:
+
+- Use `$architecture` for ownership, placement, dependency direction, new workspaces, public
+  entrypoints, or repository-wide structure and naming decisions.
+- Use `$web`, `$mobile`, or `$api` for work owned by `apps/web`, `apps/mobile`, or `apps/api`.
+- Use `$packages` for `packages/db`, `packages/reader`, `packages/ui`, `packages/worker`,
+  `packages/catalog`, or `packages/tsconfig`.
+- Use `$testing` while designing, writing, moving, or reviewing tests and fixtures.
+- Use `$environment` for dotenvx files, runtime schemas, feature flags, Turbo/Compose environment
+  contracts, or secret handling.
+- Add `$security` for authentication, authorization, sessions, untrusted content, public endpoints,
+  outbound requests, secrets, or another trust-boundary change.
+- Add `$design` for visual, interaction, responsive, motion, accessibility, or shared design-system
+  work.
+- Finish implemented changes through `$qa` for focused checks, broader gates, and the GitButler
+  checkpoint.
+
+Load `$architecture` before an owner skill when placement is ambiguous. Pair `$testing` with the
+owning app or package skill, and pair `$environment` or `$security` with every owner whose contract
+changes. Agents that do not automatically discover `.agents/skills` must read the named `SKILL.md`
+files directly and follow the same routing.
+
+<!-- project-skills:end -->
+
 ## Learned User Preferences
 
 - Follow attached implementation plans exactly (do not edit the plan file); reuse existing plan to-dos and advance statuses in order—do not recreate them.

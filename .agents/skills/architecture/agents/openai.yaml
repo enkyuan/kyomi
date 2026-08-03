@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture"
+  short_description: "Place Kyomi code in the correct boundary"
+  default_prompt: "Use $architecture to decide where this Kyomi change belongs and preserve repository boundaries."

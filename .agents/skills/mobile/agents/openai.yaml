@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile"
+  short_description: "Build structured Kyomi mobile experiences"
+  default_prompt: "Use $mobile to build this Kyomi mobile change with active dependencies, Uniwind-first React Native styling, Expo Router, and platform-native UI boundaries."

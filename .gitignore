@@ -14,8 +14,6 @@ coverage
 .catalog-sync.lock/
 .cursor/*
 .antigravitycli
-.agents
-
 # Local docker overrides (corp CA mount, etc.)
 docker/certs/
 docker/docker-compose.override.yml
