@@ -1,6 +1,9 @@
+import "../uniwind.css";
+
 import { Stack } from "expo-router/stack";
 import { ThemeProvider, DarkTheme, DefaultTheme } from "expo-router/react-navigation";
 import { useColorScheme } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { useEffect } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
@@ -15,17 +18,14 @@ import {
   DMSans_500Medium,
   DMSans_600SemiBold,
 } from "@expo-google-fonts/dm-sans";
-import {
-  JetBrainsMono_400Regular,
-  JetBrainsMono_500Medium,
-} from "@expo-google-fonts/jetbrains-mono";
-import { useIsAuthenticated } from "@lib/session";
+import { useSessionGate } from "@lib/session";
+import { AppQueryClientProvider } from "@lib/query-client";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
-  const isAuthenticated = useIsAuthenticated();
+  const { isAuthenticated, isPending } = useSessionGate();
   const [fontsLoaded] = useFonts({
     "Inter Variable": Inter_400Regular,
     "Inter Variable Medium": Inter_500Medium,
@@ -34,26 +34,29 @@ export default function RootLayout() {
     "DM Sans": DMSans_400Regular,
     "DM Sans Medium": DMSans_500Medium,
     "DM Sans SemiBold": DMSans_600SemiBold,
-    "JetBrains Mono": JetBrainsMono_400Regular,
-    "JetBrains Mono Medium": JetBrainsMono_500Medium,
   });
 
   useEffect(() => {
-    if (fontsLoaded) SplashScreen.hideAsync();
-  }, [fontsLoaded]);
+    if (fontsLoaded && !isPending) void SplashScreen.hideAsync();
+  }, [fontsLoaded, isPending]);
 
-  if (!fontsLoaded) return null;
+  if (!fontsLoaded || isPending) return null;
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Protected guard={isAuthenticated}>
-          <Stack.Screen name="(protected)" />
-        </Stack.Protected>
-        <Stack.Protected guard={!isAuthenticated}>
-          <Stack.Screen name="(auth)" />
-        </Stack.Protected>
-      </Stack>
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <AppQueryClientProvider>
+        <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Protected guard={isAuthenticated}>
+              <Stack.Screen name="(protected)" />
+            </Stack.Protected>
+            <Stack.Protected guard={!isAuthenticated}>
+              <Stack.Screen name="index" />
+              <Stack.Screen name="(auth)" />
+            </Stack.Protected>
+          </Stack>
+        </ThemeProvider>
+      </AppQueryClientProvider>
+    </GestureHandlerRootView>
   );
 }

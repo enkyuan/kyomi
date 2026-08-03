@@ -1,7 +1,5 @@
-import { Redirect } from "expo-router";
-import { useIsAuthenticated } from "@lib/session";
+import { InitScreen } from "@/modules/auth/init/screen";
 
 export default function IndexScreen() {
-  const isAuthenticated = useIsAuthenticated();
-  return <Redirect href={isAuthenticated ? "/(protected)/inbox" : "/(auth)/login"} />;
+  return <InitScreen />;
 }

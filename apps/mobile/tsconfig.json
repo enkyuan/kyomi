@@ -5,9 +5,11 @@
     "types": ["uniwind/types"],
     "paths": {
       "@/*": ["./src/*"],
+      "@icons": ["./src/components/icons/*"],
       "@modules/*": ["./src/modules/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@lib/*": ["./src/lib/*"],
+      "@ui/*": ["./src/components/ui/*"],
       "@utils/*": ["./src/utils/*"],
       "@kyomi/auth/*": ["../../packages/auth/src/*"],
       "@kyomi/ui/*": ["../../packages/ui/src/*"]
