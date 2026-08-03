@@ -1,6 +1,6 @@
 "use dom";
 
-import { useEffect, type CSSProperties } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import type { DOMProps } from "expo/dom";
 import type { ReaderContent as ReaderContentModel } from "@kyomi/reader";
 import { ReaderContent } from "@kyomi/reader/web";
@@ -76,6 +76,15 @@ const MOBILE_READER_STYLES = String.raw`
     line-height: 1.55;
   }
 
+  .mobile-reader__image {
+    display: block;
+    width: 100%;
+    max-height: 28rem;
+    margin: 1.5rem 0 0;
+    border-radius: 0.75rem;
+    object-fit: cover;
+  }
+
   .mobile-reader__content {
     max-width: 44rem;
     margin: 0 auto;
@@ -130,6 +139,8 @@ type ArticleBodyProps = {
   readonly colorScheme: "dark" | "light";
   readonly feedTitle: string;
   readonly fontSizePx: number;
+  readonly imageUrl: string | null;
+  readonly onReady?: () => void;
   readonly reader: ReaderContentModel;
   readonly searchQuery: string;
   readonly summary: string | null;
@@ -148,6 +159,19 @@ function clearSearchMatches(root: HTMLElement) {
     }
     match.remove();
     parent.normalize();
+  }
+}
+
+function safeImageUrl(value: string | null): string | null {
+  if (!value) {
+    return null;
+  }
+
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href : null;
+  } catch {
+    return null;
   }
 }
 
@@ -214,11 +238,38 @@ export default function ArticleBody({
   colorScheme,
   feedTitle,
   fontSizePx,
+  imageUrl,
+  onReady,
   reader,
   searchQuery,
   summary,
   title,
 }: ArticleBodyProps) {
+  const didNotifyReady = useRef(false);
+  const articleImageUrl = safeImageUrl(imageUrl);
+
+  useEffect(() => {
+    didNotifyReady.current = false;
+    const frameId = window.requestAnimationFrame(() => {
+      for (const image of document.querySelectorAll<HTMLImageElement>(
+        ".mobile-reader .article-body img",
+      )) {
+        // Feed sanitization marks every image as lazy. Inside the DOM component
+        // WebView that can leave images permanently deferred, so opt into the
+        // browser's normal eager loading path for the active article.
+        image.loading = "eager";
+        image.decoding = "async";
+      }
+
+      if (!didNotifyReady.current) {
+        didNotifyReady.current = true;
+        onReady?.();
+      }
+    });
+
+    return () => window.cancelAnimationFrame(frameId);
+  }, [onReady, reader]);
+
   useEffect(() => {
     const frameId = window.requestAnimationFrame(() => {
       const root = document.querySelector<HTMLElement>(".mobile-reader .article-body");
@@ -258,6 +309,15 @@ export default function ArticleBody({
         <p className="mobile-reader__source">{feedTitle}</p>
         <h1 className="mobile-reader__title">{title}</h1>
         {summary ? <p className="mobile-reader__summary">{summary}</p> : null}
+        {articleImageUrl ? (
+          <img
+            alt=""
+            className="mobile-reader__image"
+            decoding="async"
+            loading="eager"
+            src={articleImageUrl}
+          />
+        ) : null}
       </header>
       <article className="mobile-reader__content reader-content">
         <ReaderContent

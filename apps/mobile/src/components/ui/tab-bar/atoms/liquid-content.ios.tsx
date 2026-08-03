@@ -18,7 +18,7 @@ import {
   glassEffectId,
   opacity,
 } from "@expo/ui/swift-ui/modifiers";
-import { useRouter } from "expo-router";
+import { useRouter, useTheme } from "expo-router";
 import { useEffect, useId, useRef, useState, type ReactNode, type RefObject } from "react";
 import { Pressable, TextInput, View, useWindowDimensions } from "react-native";
 import { useReducedMotion } from "react-native-reanimated";
@@ -36,8 +36,6 @@ import { getFloatingBarPosition, getFloatingBarWidth, styles } from "../lib/styl
 import { useReaderTabBar, type ReaderTabBarConfig } from "../reader-mode";
 
 const ACTION_ICON_SIZE = 19;
-const FOREGROUND_COLOR = "#f4f4f5";
-const INACTIVE_COLOR = "#a1a1aa";
 const BAR_HEIGHT = 56;
 const SIDE_ACTION_WIDTH = 72;
 const FEED_TRAILING_WIDTH = 72;
@@ -63,7 +61,9 @@ export function LiquidTabBarContent({
   state,
 }: LiquidTabBarContentProps) {
   const router = useRouter();
-  const { config } = useReaderTabBar();
+  const { colors } = useTheme();
+  const { config, isDismissingReader } = useReaderTabBar();
+  const inactiveIconColor = String(colors.text);
   const { width: windowWidth } = useWindowDimensions();
   const namespaceId = useId();
   const shouldReduceMotion = useReducedMotion();
@@ -72,30 +72,32 @@ export function LiquidTabBarContent({
 
   const barPosition = getFloatingBarPosition(insets);
   const barWidth = getFloatingBarWidth(windowWidth, insets);
-  const gap = isReaderRoute ? READER_GAP : FEED_GAP;
-  const trailingWidth = isReaderRoute ? SIDE_ACTION_WIDTH : FEED_TRAILING_WIDTH;
-  const leadingWidth = isReaderRoute && !isSearchExpanded ? SIDE_ACTION_WIDTH : 0;
+  const isReaderPresentation = isReaderRoute && !isDismissingReader;
+  const isReaderSearchExpanded = isReaderPresentation && isSearchExpanded;
+  const gap = isReaderPresentation ? READER_GAP : FEED_GAP;
+  const trailingWidth = isReaderPresentation ? SIDE_ACTION_WIDTH : FEED_TRAILING_WIDTH;
+  const leadingWidth = isReaderPresentation && !isReaderSearchExpanded ? SIDE_ACTION_WIDTH : 0;
   const primaryWidth = Math.max(
     0,
     barWidth - trailingWidth - gap - (leadingWidth > 0 ? leadingWidth + gap : 0),
   );
-  const glassLayoutState = (isReaderRoute ? 2 : 0) + (isSearchExpanded ? 1 : 0);
+  const glassLayoutState = (isReaderPresentation ? 2 : 0) + (isReaderSearchExpanded ? 1 : 0);
   const isReady = config !== null;
 
   useEffect(() => {
-    if (!isReaderRoute && isSearchExpanded) {
+    if (!isReaderPresentation && isSearchExpanded) {
       config?.onSearchQueryChange("");
       setIsSearchExpanded(false);
     }
-  }, [config, isReaderRoute, isSearchExpanded]);
+  }, [config, isReaderPresentation, isSearchExpanded]);
 
   useEffect(() => {
-    if (!isReaderRoute || !isSearchExpanded) {
+    if (!isReaderPresentation || !isSearchExpanded) {
       return;
     }
     const timeout = setTimeout(() => searchInputRef.current?.focus(), 0);
     return () => clearTimeout(timeout);
-  }, [isReaderRoute, isSearchExpanded]);
+  }, [isReaderPresentation, isSearchExpanded]);
 
   const goBack = () => {
     if (router.canGoBack()) {
@@ -126,7 +128,7 @@ export function LiquidTabBarContent({
             modifiers={[frame({ height: BAR_HEIGHT, width: barWidth })]}
             spacing={gap}
           >
-            {isReaderRoute && !isSearchExpanded ? (
+            {isReaderPresentation && !isReaderSearchExpanded ? (
               <LiquidGlassShell
                 id="reader-back"
                 namespaceId={namespaceId}
@@ -138,14 +140,14 @@ export function LiquidTabBarContent({
                   width={SIDE_ACTION_WIDTH}
                 >
                   <ReaderSeparateAction accessibilityLabel="Back to inbox" onPress={goBack}>
-                    <BackIcon fill={FOREGROUND_COLOR} size={ACTION_ICON_SIZE} />
+                    <BackIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
                   </ReaderSeparateAction>
                 </LiquidLayer>
               </LiquidGlassShell>
             ) : null}
             <LiquidGlassShell id="primary" namespaceId={namespaceId} width={primaryWidth}>
               <LiquidLayer
-                active={!isReaderRoute}
+                active={!isReaderPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={primaryWidth}
               >
@@ -159,20 +161,21 @@ export function LiquidTabBarContent({
                 </View>
               </LiquidLayer>
               <LiquidLayer
-                active={isReaderRoute}
+                active={isReaderPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={primaryWidth}
               >
                 <ReaderPrimaryActions
                   config={config}
-                  isSearchExpanded={isSearchExpanded}
+                  inactiveColor={inactiveIconColor}
+                  isSearchExpanded={isReaderSearchExpanded}
                   searchInputRef={searchInputRef}
                 />
               </LiquidLayer>
             </LiquidGlassShell>
             <LiquidGlassShell id="trailing" namespaceId={namespaceId} width={trailingWidth}>
               <LiquidLayer
-                active={!isReaderRoute}
+                active={!isReaderPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={trailingWidth}
               >
@@ -186,19 +189,21 @@ export function LiquidTabBarContent({
                 </View>
               </LiquidLayer>
               <LiquidLayer
-                active={isReaderRoute}
+                active={isReaderPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={trailingWidth}
               >
                 <ReaderSeparateAction
-                  accessibilityLabel={isSearchExpanded ? "Close article search" : "Find in article"}
-                  disabled={!isSearchExpanded && !isReady}
-                  onPress={isSearchExpanded ? closeSearch : openSearch}
+                  accessibilityLabel={
+                    isReaderSearchExpanded ? "Close article search" : "Find in article"
+                  }
+                  disabled={!isReaderSearchExpanded && !isReady}
+                  onPress={isReaderSearchExpanded ? closeSearch : openSearch}
                 >
-                  {isSearchExpanded ? (
-                    <CloseIcon fill={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
+                  {isReaderSearchExpanded ? (
+                    <CloseIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
                   ) : (
-                    <SearchIcon fill={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
+                    <SearchIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
                   )}
                 </ReaderSeparateAction>
               </LiquidLayer>
@@ -273,10 +278,12 @@ function LiquidLayer({
 
 function ReaderPrimaryActions({
   config,
+  inactiveColor,
   isSearchExpanded,
   searchInputRef,
 }: {
   readonly config: ReaderTabBarConfig | null;
+  readonly inactiveColor: string;
   readonly isSearchExpanded: boolean;
   readonly searchInputRef: RefObject<TextInput | null>;
 }) {
@@ -285,7 +292,7 @@ function ReaderPrimaryActions({
   if (isSearchExpanded) {
     return (
       <View style={styles.readerSearchField}>
-        <SearchIcon fill={INACTIVE_COLOR} size={16} />
+        <SearchIcon fill={inactiveColor} size={16} />
         <TextInput
           accessibilityLabel="Find in article"
           autoCapitalize="none"
@@ -313,7 +320,7 @@ function ReaderPrimaryActions({
         onPress={config?.onToggleSaved}
       >
         <BookmarkIcon
-          fill={config?.isSaved ? kyomiNativeBrand.mizu.color : INACTIVE_COLOR}
+          fill={config?.isSaved ? kyomiNativeBrand.mizu.color : inactiveColor}
           focused={config?.isSaved}
           size={ACTION_ICON_SIZE}
         />
@@ -323,14 +330,14 @@ function ReaderPrimaryActions({
         disabled={!isReady}
         onPress={config?.onOpenSource}
       >
-        <ExternalLinkIcon fill={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
+        <ExternalLinkIcon fill={inactiveColor} size={ACTION_ICON_SIZE} />
       </ReaderToolbarAction>
       <ReaderToolbarAction
         accessibilityLabel="Share article"
         disabled={!isReady}
         onPress={config?.onShare}
       >
-        <ShareIcon fill={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
+        <ShareIcon fill={inactiveColor} size={ACTION_ICON_SIZE} />
       </ReaderToolbarAction>
     </View>
   );

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { useRouter } from "expo-router";
+import { useRouter, useTheme } from "expo-router";
 import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Pressable, TextInput, View } from "react-native";
 import Animated, { LinearTransition, useReducedMotion } from "react-native-reanimated";
@@ -17,8 +17,6 @@ import { getFloatingBarPosition, styles } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 
 const ACTION_ICON_SIZE = 19;
-const FOREGROUND_COLOR = "#f4f4f5";
-const INACTIVE_COLOR = "#a1a1aa";
 const READER_LAYOUT_TRANSITION = LinearTransition.duration(220);
 
 export function ReaderTabBarContent({
@@ -29,6 +27,8 @@ export function ReaderTabBarContent({
   readonly Surface: TabBarSurface;
 }) {
   const router = useRouter();
+  const { colors } = useTheme();
+  const inactiveIconColor = String(colors.text);
   const { config } = useReaderTabBar();
   const searchInputRef = useRef<TextInput>(null);
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
@@ -68,7 +68,7 @@ export function ReaderTabBarContent({
         shouldAnimate={!shouldReduceMotion}
         Surface={Surface}
       >
-        <BackIcon fill={FOREGROUND_COLOR} size={ACTION_ICON_SIZE} />
+        <BackIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
       </ReaderSeparateAction>
       <Animated.View
         layout={shouldReduceMotion ? undefined : READER_LAYOUT_TRANSITION}
@@ -77,7 +77,7 @@ export function ReaderTabBarContent({
         <Surface style={styles.readerSurface}>
           {isSearchExpanded ? (
             <View style={styles.readerSearchField}>
-              <SearchIcon fill={INACTIVE_COLOR} size={16} />
+              <SearchIcon fill={inactiveIconColor} size={16} />
               <TextInput
                 accessibilityLabel="Find in article"
                 autoCapitalize="none"
@@ -99,7 +99,7 @@ export function ReaderTabBarContent({
                 onPress={closeSearch}
                 style={styles.readerSearchCloseAction}
               >
-                <CloseIcon fill={INACTIVE_COLOR} size={18} />
+                <CloseIcon fill={inactiveIconColor} size={18} />
               </Pressable>
             </View>
           ) : (
@@ -110,7 +110,7 @@ export function ReaderTabBarContent({
                 onPress={config?.onToggleSaved}
               >
                 <BookmarkIcon
-                  fill={config?.isSaved ? kyomiNativeBrand.mizu.color : INACTIVE_COLOR}
+                  fill={config?.isSaved ? kyomiNativeBrand.mizu.color : inactiveIconColor}
                   focused={config?.isSaved}
                   size={ACTION_ICON_SIZE}
                 />
@@ -120,14 +120,14 @@ export function ReaderTabBarContent({
                 disabled={!isReady}
                 onPress={config?.onOpenSource}
               >
-                <ExternalLinkIcon fill={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
+                <ExternalLinkIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
               </ReaderAction>
               <ReaderAction
                 accessibilityLabel="Share article"
                 disabled={!isReady}
                 onPress={config?.onShare}
               >
-                <ShareIcon fill={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
+                <ShareIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
               </ReaderAction>
             </View>
           )}
@@ -141,7 +141,7 @@ export function ReaderTabBarContent({
           shouldAnimate={!shouldReduceMotion}
           Surface={Surface}
         >
-          <SearchIcon fill={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
+          <SearchIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
         </ReaderSeparateAction>
       )}
     </View>

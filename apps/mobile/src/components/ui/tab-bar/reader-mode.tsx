@@ -20,14 +20,20 @@ export type ReaderTabBarConfig = {
 
 type ReaderTabBarContextValue = {
   readonly config: ReaderTabBarConfig | null;
+  readonly isDismissingReader: boolean;
   readonly setConfig: Dispatch<SetStateAction<ReaderTabBarConfig | null>>;
+  readonly setIsDismissingReader: Dispatch<SetStateAction<boolean>>;
 };
 
 const ReaderTabBarContext = createContext<ReaderTabBarContextValue | null>(null);
 
 export function ReaderTabBarProvider({ children }: PropsWithChildren) {
   const [config, setConfig] = useState<ReaderTabBarConfig | null>(null);
-  const value = useMemo(() => ({ config, setConfig }), [config]);
+  const [isDismissingReader, setIsDismissingReader] = useState(false);
+  const value = useMemo(
+    () => ({ config, isDismissingReader, setConfig, setIsDismissingReader }),
+    [config, isDismissingReader],
+  );
 
   return <ReaderTabBarContext value={value}>{children}</ReaderTabBarContext>;
 }
