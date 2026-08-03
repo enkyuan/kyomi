@@ -17,26 +17,26 @@ import {
   size,
 } from "@expo/ui/jetpack-compose/modifiers";
 import { useColorScheme } from "react-native";
+import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { useLogout } from "./hooks/use-logout";
 
-const THEMES = {
+const DESTRUCTIVE_THEMES = {
   dark: {
-    background: "#100d09",
     destructive: "#ffb4ab",
     destructiveContainer: "#93000a",
   },
   light: {
-    background: "#f7f5f2",
     destructive: "#b3261e",
     destructiveContainer: "#ffdad6",
   },
-};
+} as const;
 
 const BUTTON_LABEL_STYLE = { fontSize: 18, fontWeight: "600" as const };
 
 export function SettingsScreen() {
-  const colorScheme = useColorScheme() === "dark" ? "dark" : "light";
-  const theme = THEMES[colorScheme];
+  const colorScheme = useColorScheme();
+  const theme = getMobileSurfaceTheme(colorScheme);
+  const destructiveTheme = DESTRUCTIVE_THEMES[colorScheme === "dark" ? "dark" : "light"];
   const { confirmLogout, errorMessage, isLoggingOut } = useLogout();
 
   return (
@@ -47,8 +47,8 @@ export function SettingsScreen() {
       >
         <Button
           colors={{
-            containerColor: theme.destructiveContainer,
-            contentColor: theme.destructive,
+            containerColor: destructiveTheme.destructiveContainer,
+            contentColor: destructiveTheme.destructive,
           }}
           contentPadding={{ bottom: 14, top: 14 }}
           enabled={!isLoggingOut}
@@ -59,7 +59,7 @@ export function SettingsScreen() {
           <Box contentAlignment="center" modifiers={[fillMaxWidth(), height(22)]}>
             {isLoggingOut ? (
               <CircularProgressIndicator
-                color={theme.destructive}
+                color={destructiveTheme.destructive}
                 strokeWidth={2}
                 modifiers={[size(20, 20)]}
               />
@@ -71,7 +71,7 @@ export function SettingsScreen() {
           </Box>
         </Button>
         {errorMessage ? (
-          <Text color={theme.destructive} style={{ fontSize: 14 }}>
+          <Text color={destructiveTheme.destructive} style={{ fontSize: 14 }}>
             {errorMessage}
           </Text>
         ) : null}

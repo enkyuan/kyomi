@@ -1,4 +1,4 @@
-import { SettingsScreen } from "@modules/settings/components/screen";
+import { SettingsScreen } from "@/modules/settings/screen";
 
 export default function SettingsRoute() {
   return <SettingsScreen />;

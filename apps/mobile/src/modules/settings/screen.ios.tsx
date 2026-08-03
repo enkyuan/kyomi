@@ -2,6 +2,7 @@ import { Host } from "@expo/ui";
 import { Button, ProgressView, ScrollView, Text, VStack, ZStack } from "@expo/ui/swift-ui";
 import {
   accessibilityLabel,
+  background,
   buttonBorderShape,
   buttonStyle,
   controlSize,
@@ -12,7 +13,8 @@ import {
   padding,
   tint,
 } from "@expo/ui/swift-ui/modifiers";
-import { Platform } from "react-native";
+import { Platform, useColorScheme } from "react-native";
+import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { useLogout } from "./hooks/use-logout";
 
 const DESTRUCTIVE_TINT = "#fb414a";
@@ -23,12 +25,16 @@ const FULL_WIDTH = frame({ maxWidth: Infinity });
 const BUTTON_LABEL_FONT = font({ weight: "semibold", size: 18 });
 
 export function SettingsScreen() {
+  const theme = getMobileSurfaceTheme(useColorScheme());
   const { confirmLogout, errorMessage, isLoggingOut } = useLogout();
 
   return (
     <Host style={{ flex: 1 }}>
       <ScrollView
-        modifiers={[frame({ maxWidth: Infinity, maxHeight: Infinity })]}
+        modifiers={[
+          frame({ maxWidth: Infinity, maxHeight: Infinity }),
+          background(theme.background),
+        ]}
         showsIndicators={false}
       >
         <VStack
