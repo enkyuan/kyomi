@@ -257,7 +257,7 @@ export async function searchFeeds(
         logger?.warn("discover.search.meili_stale_hits", {
           userId,
           query,
-          limit: scanLimit,
+          limit: safeLimit,
           staleHitCount,
         });
       }
