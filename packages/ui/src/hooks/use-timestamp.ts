@@ -1,7 +1,6 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import type { InboxTimestampDisplayDto } from "@lib/schemas/index";
 
 let timestampTick = 0;
 let timestampIntervalId: ReturnType<typeof setInterval> | null = null;
@@ -38,7 +37,7 @@ function getTimestampSnapshot() {
  * Subscribes to a shared minute ticker when timestamps render in relative mode,
  * so list rows and detail surfaces stay in sync without per-item intervals.
  */
-export function useTimestamp(display: InboxTimestampDisplayDto) {
+export function useTimestamp(display: "absolute" | "relative") {
   useSyncExternalStore(
     display === "relative" ? subscribeToTimestampTick : () => () => {},
     getTimestampSnapshot,

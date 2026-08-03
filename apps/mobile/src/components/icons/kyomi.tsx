@@ -4,11 +4,7 @@ export type KyomiIconProps = Omit<SvgProps, "width" | "height"> & {
   size?: number;
 };
 
-export function KyomiIcon({
-  size = 24,
-  fill = "oklch(0.819 0.121 131.147)",
-  ...props
-}: KyomiIconProps) {
+export function KyomiIcon({ size = 24, fill = "#a8d480", ...props }: KyomiIconProps) {
   return (
     <Svg
       accessibilityElementsHidden

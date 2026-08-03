@@ -5,7 +5,7 @@ import { Button } from "@kyomi/ui/button";
 import { CopyIcon } from "@kyomi/ui/icons/copy";
 import { ToolbarButton } from "@kyomi/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
-import { useFeedback } from "@hooks/use-feedback";
+import { useFeedback } from "@kyomi/ui/hooks/use-feedback";
 import { cn } from "@kyomi/ui/lib/utils";
 
 const TOOLBAR_ICON_CLASS = "size-5";

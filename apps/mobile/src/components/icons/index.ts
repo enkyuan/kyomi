@@ -1,3 +1,17 @@
 export { AppleIcon, type AppleIconProps } from "./apple";
+export { BackIcon, type BackIconProps } from "./back";
+export { BookmarkIcon, type BookmarkIconProps } from "./bookmark";
+export { CloseIcon, type CloseIconProps } from "./close";
+export { EnvelopeIcon, type EnvelopeIconProps } from "./envelope";
+export { ExternalLinkIcon, type ExternalLinkIconProps } from "./external-link";
 export { GoogleIcon, type GoogleIconProps } from "./google";
+export { InboxIcon, type InboxIconProps } from "./inbox";
 export { KyomiIcon, type KyomiIconProps } from "./kyomi";
+export { MoreIcon, type MoreIconProps } from "./more";
+export { PlusIcon, type PlusIconProps } from "./plus";
+export { RecentsIcon, type RecentsIconProps } from "./recents";
+export { RssIcon, type RssIconProps } from "./rss";
+export { SearchIcon, type SearchIconProps } from "./search";
+export { SettingsIcon, type SettingsIconProps } from "./settings";
+export { ShareIcon, type ShareIconProps } from "./share";
+export { SwitcherIcon, type SwitcherIconProps } from "./switcher";
