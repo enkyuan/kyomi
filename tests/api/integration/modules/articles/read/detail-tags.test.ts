@@ -9,6 +9,7 @@ function rawDetailRow(overrides: Partial<FeedArticleDetailRawRow> = {}): FeedArt
     title: "SearXNG: A free internet metasearch engine",
     link: "https://searxng.org/",
     summary: "Summary",
+    imageUrl: "https://searxng.org/og-image.png",
     content: null,
     contentHtml: "<p>Summary</p>",
     contentText: "Summary",
@@ -36,6 +37,14 @@ function rawDetailRow(overrides: Partial<FeedArticleDetailRawRow> = {}): FeedArt
 }
 
 describe("article detail categories", () => {
+  test("preserves the feed-provided lead image for reader clients", () => {
+    const item = toFeedArticleDetailDtoForTest(
+      rawDetailRow({ imageUrl: "https://searxng.org/og-image.png" }),
+    );
+
+    expect(item.imageUrl).toBe("https://searxng.org/og-image.png");
+  });
+
   test("returns the same canonical category labels the list query selects", () => {
     const item = toFeedArticleDetailDtoForTest(
       rawDetailRow({ categories: ["Technology", "Software Engineering"] }),

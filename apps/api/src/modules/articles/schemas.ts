@@ -108,6 +108,7 @@ export const articleDetailSchema = t.Object({
   title: t.String(),
   link: t.String(),
   summary: t.Union([t.String(), t.Null()]),
+  imageUrl: t.Union([t.String(), t.Null()]),
   contentHtml: t.Union([t.String(), t.Null()]),
   contentText: t.Union([t.String(), t.Null()]),
   contentMarkdown: t.Union([t.String(), t.Null()]),

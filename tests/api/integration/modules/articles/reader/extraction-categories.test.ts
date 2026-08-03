@@ -35,6 +35,7 @@ function article(overrides: Partial<ArticleDetailDto> = {}): ArticleDetailDto {
     title: "Compiler maintainers rewrite package manager",
     link: "https://example.com/compiler-package-manager",
     summary: "Short feed summary",
+    imageUrl: null,
     publishedAt: "2026-07-05T00:00:00.000Z",
     feedId: "feed-1",
     feedUrl: "https://example.com/feed.xml",

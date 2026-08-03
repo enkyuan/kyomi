@@ -21,6 +21,7 @@ type FeedArticleDetailRawRow = {
   title: string;
   link: string;
   summary: string | null;
+  imageUrl: string | null;
   content: string | null;
   contentHtml: string | null;
   contentText: string | null;
@@ -89,6 +90,7 @@ function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto 
     title,
     link: row.link,
     summary,
+    imageUrl: row.imageUrl,
     contentHtml: row.contentHtml,
     contentText: decodeNullableText(row.contentText),
     contentMarkdown: row.contentMarkdown,
@@ -132,6 +134,7 @@ async function getFeedArticleDetailForUser(
       title: feedItems.title,
       link: feedItems.link,
       summary: feedItems.summary,
+      imageUrl: feedItems.imageUrl,
       content: feedItems.content,
       contentHtml: feedItems.contentHtml,
       contentText: feedItems.contentText,

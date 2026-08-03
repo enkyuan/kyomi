@@ -53,6 +53,8 @@ export type ArticleReaderDto = {
 };
 
 export type ArticleDetailDto = ArticleListItemDto & {
+  /** Feed-provided lead image; list payloads deliberately omit this field. */
+  imageUrl: string | null;
   contentHtml: string | null;
   contentText: string | null;
   contentMarkdown: string | null;

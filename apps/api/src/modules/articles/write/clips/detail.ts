@@ -66,6 +66,7 @@ export function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDeta
   });
   return {
     ...base,
+    imageUrl: null,
     contentHtml: row.contentHtml,
     contentText: row.contentText,
     contentMarkdown: row.contentMarkdown,
