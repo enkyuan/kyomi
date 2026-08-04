@@ -4,24 +4,32 @@ import { enforceRateLimitForContext } from "@adapters/rate-limit/plugin";
 import { AppError } from "@shared/errors/app";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { taskIdParam } from "@shared/http/v1/stub";
+import { OPML_LEGACY_JSON_MAX_SOURCE_BYTES } from "./constants";
 import { exportOpmlForUser } from "./export";
 import { fetchOpmlDocumentFromUrl } from "./fetch-url";
 import { enqueueOpmlImport } from "./jobs";
 import {
-  buildOpmlSummary,
-  cancelOpmlTask,
-  deleteOpmlTask,
-  getOpmlTask,
-  getOpmlTaskOwner,
-  isTerminalOpmlStatus,
-  listActiveOpmlTasksForUser,
-} from "./task-store";
+  buildOpmlImportSummary,
+  cancelPendingOpmlItems,
+  deleteTerminalOpmlImport,
+  getOpmlImportForUser,
+  getOpmlImportOwner,
+  listActiveOpmlImportsForUser,
+  listOpmlImportFailures,
+  listOpmlImportsForUser,
+  opmlImportStatusMessage,
+  requestOpmlImportCancellation,
+  toCompatibleOpmlImportStatus,
+  toOpmlImportStage,
+} from "./store";
 
 const opmlImportRateLimit = {
   name: "opml.import",
   max: 5,
   windowMs: 15 * 60_000,
 } as const;
+
+const MAX_STATUS_FAILURES = 25;
 
 const failureItem = t.Object({
   url: t.String(),
@@ -51,6 +59,14 @@ const opmlTaskStatusValue = t.Union([
   t.Literal("completed"),
   t.Literal("failed"),
   t.Literal("cancelled"),
+]);
+
+const opmlTaskStage = t.Union([
+  t.Literal("queued"),
+  t.Literal("parsing"),
+  t.Literal("dispatching"),
+  t.Literal("processing"),
+  t.Literal("finalizing"),
 ]);
 
 const opmlTaskStatus = t.Object({
@@ -84,6 +100,45 @@ const opmlActiveResponse = t.Object({
   ),
 });
 
+const opmlImportPageItem = t.Object({
+  taskId: t.String(),
+  filename: t.Union([t.String(), t.Null()]),
+  sourceUrl: t.Union([t.String(), t.Null()]),
+  stage: opmlTaskStage,
+  status: opmlTaskStatusValue,
+  summary: t.Object({
+    totalUrls: t.Number(),
+    completed: t.Number(),
+    subscribed: t.Number(),
+    alreadySubscribed: t.Number(),
+    failed: t.Number(),
+  }),
+  createdAt: t.String(),
+  updatedAt: t.String(),
+  completedAt: t.Union([t.String(), t.Null()]),
+  message: t.Union([t.String(), t.Null()]),
+});
+
+const opmlImportPageResponse = t.Object({
+  items: t.Array(opmlImportPageItem),
+  nextCursor: t.Union([t.String(), t.Null()]),
+  hasMore: t.Boolean(),
+});
+
+const opmlFailurePageItem = t.Object({
+  id: t.String(),
+  url: t.String(),
+  code: t.String(),
+  message: t.String(),
+  position: t.Number(),
+});
+
+const opmlFailurePageResponse = t.Object({
+  items: t.Array(opmlFailurePageItem),
+  nextCursor: t.Union([t.String(), t.Null()]),
+  hasMore: t.Boolean(),
+});
+
 const messageResponse = t.Object({
   message: t.String(),
 });
@@ -99,12 +154,49 @@ function normalizeOpmlFilename(filename: string | undefined): string {
   return trimmed && trimmed.length > 0 ? trimmed : "inline.opml";
 }
 
+function assertLegacyJsonSourceSize(xml: string): void {
+  if (Buffer.byteLength(xml, "utf8") > OPML_LEGACY_JSON_MAX_SOURCE_BYTES) {
+    throw new AppError("OPML payload exceeds the JSON import size limit", {
+      status: 413,
+      code: "OPML_LEGACY_JSON_TOO_LARGE",
+      details: { maxBytes: OPML_LEGACY_JSON_MAX_SOURCE_BYTES },
+    });
+  }
+}
+
+function readRequestHeader(context: unknown, name: string): string | undefined {
+  const headers = (context as { headers?: Record<string, string | undefined> }).headers;
+  return headers?.[name];
+}
+
+function mapOpmlImportRowToPageItem(row: Parameters<typeof toCompatibleOpmlImportStatus>[0]) {
+  const summary = buildOpmlImportSummary(row);
+  return {
+    taskId: row.id,
+    filename: row.filename,
+    sourceUrl: row.sourceUrl,
+    stage: toOpmlImportStage(row),
+    status: toCompatibleOpmlImportStatus(row),
+    summary: {
+      totalUrls: summary.totalUrls,
+      completed: summary.completed,
+      subscribed: summary.subscribed,
+      alreadySubscribed: summary.alreadySubscribed,
+      failed: summary.failed,
+    },
+    createdAt: row.createdAt.toISOString(),
+    updatedAt: row.updatedAt.toISOString(),
+    completedAt: row.completedAt?.toISOString() ?? null,
+    message: opmlImportStatusMessage(row),
+  };
+}
+
 export function registerOpmlRoutes(app: Elysia) {
   return app
     .post(
       "/opml/imports",
       async (context) => {
-        const { body, logger, set, userId } = v1HandlerContext<{
+        const { db, body, logger, set, userId } = v1HandlerContext<{
           xml: string;
           filename?: string;
         }>(context);
@@ -112,8 +204,10 @@ export function registerOpmlRoutes(app: Elysia) {
         if (!body.xml.trim()) {
           throw new AppError("xml is required", { status: 400, code: "OPML_XML_REQUIRED" });
         }
+        assertLegacyJsonSourceSize(body.xml);
 
         const { taskId } = await enqueueOpmlImport(
+          db,
           userId,
           body.xml,
           logger,
@@ -133,9 +227,37 @@ export function registerOpmlRoutes(app: Elysia) {
       },
     )
     .post(
+      "/opml/imports/raw",
+      async (context) => {
+        const { db, body, logger, set, userId } = v1HandlerContext<string>(context);
+        await enforceRateLimitForContext(context, userId, opmlImportRateLimit);
+        if (!body.trim()) {
+          throw new AppError("xml is required", { status: 400, code: "OPML_XML_REQUIRED" });
+        }
+
+        const filenameHeader = readRequestHeader(context, "x-opml-filename");
+        const { taskId } = await enqueueOpmlImport(
+          db,
+          userId,
+          body,
+          logger,
+          normalizeOpmlFilename(filenameHeader),
+        );
+        set.status = 202;
+        return { taskId };
+      },
+      {
+        parse: "text",
+        type: "application/xml",
+        response: {
+          202: opmlImportAccepted,
+        },
+      },
+    )
+    .post(
       "/opml/imports/from-url",
       async (context) => {
-        const { body, logger, set, userId } = v1HandlerContext<{
+        const { db, body, logger, set, userId } = v1HandlerContext<{
           url: string;
           filename?: string;
         }>(context);
@@ -143,10 +265,12 @@ export function registerOpmlRoutes(app: Elysia) {
 
         const fetched = await fetchOpmlDocumentFromUrl(body.url);
         const { taskId } = await enqueueOpmlImport(
+          db,
           userId,
           fetched.xml,
           logger,
           normalizeOpmlFilename(body.filename ?? fetched.filename),
+          fetched.finalUrl,
         );
         set.status = 202;
         return { taskId };
@@ -181,10 +305,47 @@ export function registerOpmlRoutes(app: Elysia) {
       },
     )
     .get(
+      "/opml/imports",
+      async (context) => {
+        const { db, userId, query } = v1HandlerContext<
+          unknown,
+          { cursor?: string; limit?: string }
+        >(context);
+        const page = await listOpmlImportsForUser(db, {
+          userId,
+          cursor: query.cursor,
+          limit: query.limit !== undefined ? Number(query.limit) : undefined,
+        });
+        return {
+          items: page.items.map(mapOpmlImportRowToPageItem),
+          nextCursor: page.nextCursor,
+          hasMore: page.hasMore,
+        };
+      },
+      {
+        query: t.Object({
+          cursor: t.Optional(t.String()),
+          limit: t.Optional(t.String()),
+        }),
+        response: {
+          200: opmlImportPageResponse,
+        },
+      },
+    )
+    .get(
       "/opml/imports/active",
       async (context) => {
-        const { userId } = v1HandlerContext(context);
-        return { items: await listActiveOpmlTasksForUser(userId) };
+        const { db, userId } = v1HandlerContext(context);
+        const active = await listActiveOpmlImportsForUser(db, userId);
+        return {
+          items: active.map((row) => ({
+            taskId: row.id,
+            status: toCompatibleOpmlImportStatus(row),
+            createdAt: row.createdAt.toISOString(),
+            completedAt: row.completedAt?.toISOString() ?? null,
+            summary: buildOpmlImportSummary(row),
+          })),
+        };
       },
       {
         response: {
@@ -195,39 +356,42 @@ export function registerOpmlRoutes(app: Elysia) {
     .get(
       "/opml/imports/:taskId/status",
       async (context) => {
-        const { params, userId } = v1HandlerContext(context);
-        const state = await getOpmlTask(params.taskId);
+        const { db, params, userId } = v1HandlerContext(context);
+        const row = await getOpmlImportForUser(db, userId, params.taskId);
 
-        if (!state) {
-          const owner = await getOpmlTaskOwner(params.taskId);
-          if (!owner || owner !== userId) {
-            throw new AppError("Import task not found", {
-              status: 404,
-              code: "OPML_TASK_NOT_FOUND",
-            });
-          }
-          throw new AppError("Import task state is unavailable", {
-            status: 503,
-            code: "OPML_TASK_STATE_UNAVAILABLE",
-          });
-        }
-        if (state.userId !== userId) {
+        if (!row) {
           throw new AppError("Import task not found", {
             status: 404,
             code: "OPML_TASK_NOT_FOUND",
           });
         }
 
+        const summary = buildOpmlImportSummary(row);
+        const failuresPage =
+          row.failedItems > 0
+            ? await listOpmlImportFailures(db, {
+                userId,
+                importId: row.id,
+                limit: MAX_STATUS_FAILURES,
+              })
+            : null;
         return {
-          taskId: params.taskId,
-          status: state.status,
-          createdAt: state.createdAt,
-          completedAt: state.completedAt,
-          filename: state.filename,
-          opmlTitle: state.opmlTitle,
-          opmlAuthor: state.opmlAuthor,
-          message: state.message,
-          summary: buildOpmlSummary(state),
+          taskId: row.id,
+          status: toCompatibleOpmlImportStatus(row),
+          createdAt: row.createdAt.toISOString(),
+          completedAt: row.completedAt?.toISOString() ?? null,
+          filename: row.filename,
+          opmlTitle: row.opmlTitle,
+          opmlAuthor: row.opmlAuthor,
+          message: opmlImportStatusMessage(row),
+          summary: {
+            ...summary,
+            failures: (failuresPage?.items ?? []).map((failure) => ({
+              url: failure.url,
+              code: failure.code,
+              message: failure.message,
+            })),
+          },
         };
       },
       {
@@ -237,37 +401,60 @@ export function registerOpmlRoutes(app: Elysia) {
         },
       },
     )
+    .get(
+      "/opml/imports/:taskId/failures",
+      async (context) => {
+        const { db, params, userId, query } = v1HandlerContext<
+          unknown,
+          { cursor?: string; limit?: string }
+        >(context);
+        const page = await listOpmlImportFailures(db, {
+          userId,
+          importId: params.taskId,
+          cursor: query.cursor,
+          limit: query.limit !== undefined ? Number(query.limit) : undefined,
+        });
+        return page;
+      },
+      {
+        params: t.Object({ taskId: taskIdParam }),
+        query: t.Object({
+          cursor: t.Optional(t.String()),
+          limit: t.Optional(t.String()),
+        }),
+        response: {
+          200: opmlFailurePageResponse,
+        },
+      },
+    )
     .delete(
       "/opml/imports/:taskId/cancel",
       async (context) => {
-        const { params, userId } = v1HandlerContext(context);
-        const state = await getOpmlTask(params.taskId);
-        if (!state) {
-          const owner = await getOpmlTaskOwner(params.taskId);
+        const { db, params, userId } = v1HandlerContext(context);
+        const result = await requestOpmlImportCancellation(db, userId, params.taskId);
+
+        if (!result.found) {
+          const owner = await getOpmlImportOwner(db, params.taskId);
           if (!owner || owner !== userId) {
             throw new AppError("Import task not found", {
               status: 404,
               code: "OPML_TASK_NOT_FOUND",
             });
           }
-          await cancelOpmlTask(params.taskId);
-          return { taskId: params.taskId, cancelled: true, message: "Import cancelled" };
         }
-        if (state.userId !== userId) {
-          throw new AppError("Import task not found", {
-            status: 404,
-            code: "OPML_TASK_NOT_FOUND",
-          });
+
+        if (result.cancelled) {
+          let cancelledInBatch = await cancelPendingOpmlItems(db, params.taskId, 500);
+          while (cancelledInBatch > 0) {
+            cancelledInBatch = await cancelPendingOpmlItems(db, params.taskId, 500);
+          }
         }
-        if (isTerminalOpmlStatus(state.status)) {
-          return {
-            taskId: params.taskId,
-            cancelled: false,
-            message: `Import is already ${state.status}`,
-          };
-        }
-        await cancelOpmlTask(params.taskId);
-        return { taskId: params.taskId, cancelled: true, message: "Import cancelled" };
+
+        return {
+          taskId: params.taskId,
+          cancelled: result.cancelled,
+          message: result.cancelled ? "Import cancelled" : `Import is already ${result.status}`,
+        };
       },
       {
         params: t.Object({ taskId: taskIdParam }),
@@ -279,16 +466,16 @@ export function registerOpmlRoutes(app: Elysia) {
     .delete(
       "/opml/imports/:taskId",
       async (context) => {
-        const { params, userId } = v1HandlerContext(context);
-        const state = await getOpmlTask(params.taskId);
-        if (state && !isTerminalOpmlStatus(state.status)) {
-          throw new AppError("Active imports must be cancelled before removal", {
-            status: 409,
-            code: "OPML_TASK_ACTIVE",
-          });
-        }
-        const removed = await deleteOpmlTask(userId, params.taskId);
+        const { db, params, userId } = v1HandlerContext(context);
+        const removed = await deleteTerminalOpmlImport(db, userId, params.taskId);
         if (!removed) {
+          const row = await getOpmlImportForUser(db, userId, params.taskId);
+          if (row) {
+            throw new AppError("Active imports must be cancelled before removal", {
+              status: 409,
+              code: "OPML_TASK_ACTIVE",
+            });
+          }
           throw new AppError("Import task not found", {
             status: 404,
             code: "OPML_TASK_NOT_FOUND",

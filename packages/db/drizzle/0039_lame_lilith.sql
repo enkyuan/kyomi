@@ -1,0 +1,2 @@
+CREATE INDEX "feeds_submitted_url_idx" ON "feeds" USING btree ("submitted_url") WHERE "feeds"."submitted_url" IS NOT NULL;--> statement-breakpoint
+CREATE INDEX "feeds_canonical_feed_url_idx" ON "feeds" USING btree ("canonical_feed_url") WHERE "feeds"."canonical_feed_url" IS NOT NULL;

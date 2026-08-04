@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, test } from "bun:test";
-import { OPML_MAX_BYTES } from "@modules/opml/constants";
+import { OPML_MAX_SOURCE_BYTES } from "@modules/opml/constants";
 import { fetchOpmlDocumentFromUrl } from "@modules/opml/fetch-url";
 import { AppError } from "@shared/errors/app";
 
@@ -102,11 +102,24 @@ describe("fetchOpmlDocumentFromUrl", () => {
   });
 
   test("rejects oversized remote documents", async () => {
-    globalThis.fetch = mockedFetch(() => new Response("x".repeat(OPML_MAX_BYTES + 1)));
+    globalThis.fetch = mockedFetch(() => new Response("x".repeat(OPML_MAX_SOURCE_BYTES + 1)));
 
     await expect(fetchOpmlDocumentFromUrl(publicOpmlUrl)).rejects.toMatchObject({
       code: "OPML_TOO_LARGE",
       status: 413,
     } satisfies Partial<AppError>);
+  });
+
+  test("accepts a remote document above the 2 MiB feed-discovery limit but below 32 MiB", async () => {
+    const body =
+      '<opml><body><outline xmlUrl="https://example.com/feed.xml"/></body></opml>' +
+      "<!-- padding -->".repeat(200_000);
+    globalThis.fetch = mockedFetch(
+      () => new Response(body, { status: 200, headers: { "content-type": "application/xml" } }),
+    );
+
+    const result = await fetchOpmlDocumentFromUrl(publicOpmlUrl);
+    expect(Buffer.byteLength(result.xml, "utf8")).toBeGreaterThan(2 * 1024 * 1024);
+    expect(Buffer.byteLength(result.xml, "utf8")).toBeLessThan(OPML_MAX_SOURCE_BYTES);
   });
 });
