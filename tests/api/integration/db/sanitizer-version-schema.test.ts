@@ -4,21 +4,14 @@ import { describe, expect, test } from "bun:test";
 import { articleClips, articleExtractionCache, feedItems } from "@kyomi/db";
 
 const drizzleDir = join(import.meta.dir, "../../../../packages/db/drizzle");
-const journalPath = join(drizzleDir, "meta/_journal.json");
 
-function latestMigrationSql(): string {
-  const journal = JSON.parse(readFileSync(journalPath, "utf8")) as {
-    entries: Array<{ idx: number; tag: string }>;
-  };
-  const latest = journal.entries.at(-1);
-  if (!latest) {
-    throw new Error("Drizzle journal has no entries");
-  }
+function migrationContaining(fragment: string): string {
   const filename = readdirSync(drizzleDir)
     .filter((entry) => entry.endsWith(".sql"))
-    .find((entry) => entry.startsWith(`${String(latest.idx).padStart(4, "0")}_`));
+    .sort()
+    .findLast((entry) => readFileSync(join(drizzleDir, entry), "utf8").includes(fragment));
   if (!filename) {
-    throw new Error(`No migration file found for journal entry ${latest.tag}`);
+    throw new Error("No generated migration contains " + fragment);
   }
   return readFileSync(join(drizzleDir, filename), "utf8");
 }
@@ -36,8 +29,8 @@ describe("sanitizer version schema", () => {
     expect(articleExtractionCache.sanitizerVersion.name).toBe("sanitizer_version");
   });
 
-  test("the latest migration adds exactly five nullable text columns with no rewrite/default", () => {
-    const migration = latestMigrationSql();
+  test("the sanitizer-version migration adds exactly five nullable text columns with no rewrite/default", () => {
+    const migration = migrationContaining(`ADD COLUMN "content_sanitizer_version" text`);
 
     expect(migration).toContain(`ADD COLUMN "content_sanitizer_version" text`);
     expect(migration).toContain(`ADD COLUMN "extracted_content_sanitizer_version" text`);

@@ -7,6 +7,7 @@ import {
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
 } from "@modules/feeds/subscription/mutations";
+import { subscribeUserToFeed } from "@modules/feeds/subscription/internal";
 
 describe("feeds.subscription.mutations", () => {
   test("unsubscribeFromFeed returns message when row deleted", async () => {
@@ -122,5 +123,81 @@ describe("feeds.subscription.mutations", () => {
     const fakeDb = { select } as unknown as Parameters<typeof assertUserSubscribedToFeed>[0];
 
     await expect(assertUserSubscribedToFeed(fakeDb, "u1", "f1")).rejects.toBeInstanceOf(AppError);
+  });
+});
+
+/**
+ * Minimal in-memory fake for the feed_subscriptions table, with a real (userId, feedId)
+ * uniqueness check so onConflictDoNothing behaves like Postgres would.
+ */
+function createFakeSubscriptionTx() {
+  const subscriptions: Array<Record<string, unknown>> = [];
+
+  const tx = {
+    select: () => ({
+      from: () => ({
+        where: () => ({
+          limit: () => Promise.resolve(subscriptions.map((s) => ({ id: s.id }))),
+        }),
+      }),
+    }),
+    insert: () => ({
+      values: (row: Record<string, unknown>) => ({
+        onConflictDoNothing: () => ({
+          returning: () => {
+            const conflict = subscriptions.some(
+              (s) => s.userId === row.userId && s.feedId === row.feedId,
+            );
+            if (conflict) {
+              return Promise.resolve([]);
+            }
+            subscriptions.push(row);
+            return Promise.resolve([{ id: row.id }]);
+          },
+        }),
+      }),
+    }),
+  };
+
+  return { tx, subscriptions };
+}
+
+describe("subscribeUserToFeed", () => {
+  test("inserts a subscription with the requested folder/title without a select-then-insert race", async () => {
+    const { tx, subscriptions } = createFakeSubscriptionTx();
+
+    const result = await subscribeUserToFeed(tx as never, "user-1", "feed-1", {
+      folderId: "folder-1",
+      customTitle: "Imported title",
+    });
+
+    expect(result.newSubscription).toBe(true);
+    expect(subscriptions).toHaveLength(1);
+    expect(subscriptions[0]).toMatchObject({
+      folderId: "folder-1",
+      customTitle: "Imported title",
+    });
+  });
+
+  test("duplicate delivery returns the same subscription without overwriting metadata", async () => {
+    const { tx, subscriptions } = createFakeSubscriptionTx();
+
+    const first = await subscribeUserToFeed(tx as never, "user-1", "feed-1", {
+      folderId: "folder-original",
+      customTitle: "Original",
+    });
+    const duplicate = await subscribeUserToFeed(tx as never, "user-1", "feed-1", {
+      folderId: "folder-import",
+      customTitle: "Import title",
+    });
+
+    expect(first.newSubscription).toBe(true);
+    expect(duplicate.newSubscription).toBe(false);
+    expect(duplicate.subscriptionId).toBe(first.subscriptionId);
+    expect(subscriptions).toHaveLength(1);
+    expect(subscriptions[0]).toMatchObject({
+      folderId: "folder-original",
+      customTitle: "Original",
+    });
   });
 });

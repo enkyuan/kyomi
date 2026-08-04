@@ -3,6 +3,7 @@ import { AppError } from "@shared/errors/app";
 import {
   createFolder,
   deleteFolder,
+  ensureFoldersByName,
   markFolderReadStatus,
   updateFolder,
 } from "@modules/folders/operations";
@@ -221,5 +222,87 @@ describe("folders operations", () => {
     });
     expect(update).not.toHaveBeenCalled();
     expect(deleteFrom).not.toHaveBeenCalled();
+  });
+
+  test("ensureFoldersByName trims, dedupes, and maps every requested name", async () => {
+    const insertValues = mock(() => ({ onConflictDoNothing: () => Promise.resolve() }));
+    const insert = mock(() => ({ values: insertValues }));
+    const select = mock(() => ({
+      from: () => ({
+        where: () =>
+          Promise.resolve([
+            { id: "folder-1", name: "Tech" },
+            { id: "folder-2", name: "News" },
+          ]),
+      }),
+    }));
+    const fakeDb = { insert, select } as unknown as Parameters<typeof ensureFoldersByName>[0];
+
+    const result = await ensureFoldersByName(fakeDb, "u1", ["  Tech ", "News", "Tech"]);
+
+    expect(result).toEqual(
+      new Map([
+        ["Tech", "folder-1"],
+        ["News", "folder-2"],
+      ]),
+    );
+    const insertedRows = insertValues.mock.calls[0]?.[0] as unknown[];
+    expect(insertedRows).toHaveLength(2);
+  });
+
+  test("ensureFoldersByName returns an empty map without touching the database for no names", async () => {
+    const insert = mock(() => {
+      throw new Error("must not be called");
+    });
+    const fakeDb = { insert } as unknown as Parameters<typeof ensureFoldersByName>[0];
+
+    expect(await ensureFoldersByName(fakeDb, "u1", ["", "   "])).toEqual(new Map());
+  });
+
+  test("ensureFoldersByName rejects a name over the 512-character limit", async () => {
+    const insert = mock(() => {
+      throw new Error("must not be called");
+    });
+    const fakeDb = { insert } as unknown as Parameters<typeof ensureFoldersByName>[0];
+
+    await expect(ensureFoldersByName(fakeDb, "u1", ["x".repeat(513)])).rejects.toMatchObject({
+      code: "FOLDER_NAME_TOO_LONG",
+      status: 400,
+    });
+  });
+
+  test("ensureFoldersByName batches insert and select statements at 500 names", async () => {
+    const insertValues = mock(() => ({ onConflictDoNothing: () => Promise.resolve() }));
+    const insert = mock(() => ({ values: insertValues }));
+    const names = Array.from({ length: 501 }, (_, i) => `Folder ${i}`);
+    const select = mock(() => ({
+      from: () => ({
+        where: () => Promise.resolve(names.map((name, i) => ({ id: `folder-${i}`, name }))),
+      }),
+    }));
+    const fakeDb = { insert, select } as unknown as Parameters<typeof ensureFoldersByName>[0];
+
+    const result = await ensureFoldersByName(fakeDb, "u1", names);
+
+    expect(insertValues.mock.calls).toHaveLength(2);
+    expect((insertValues.mock.calls[0]?.[0] as unknown[]).length).toBe(500);
+    expect((insertValues.mock.calls[1]?.[0] as unknown[]).length).toBe(1);
+    expect(result.size).toBe(501);
+  });
+
+  test("ensureFoldersByName throws FOLDER_CREATE_FAILED when a name never resolves to an id", async () => {
+    const insertValues = mock(() => ({ onConflictDoNothing: () => Promise.resolve() }));
+    const insert = mock(() => ({ values: insertValues }));
+    const select = mock(() => ({
+      from: () => ({
+        where: () => Promise.resolve([]),
+      }),
+    }));
+    const fakeDb = { insert, select } as unknown as Parameters<typeof ensureFoldersByName>[0];
+
+    await expect(ensureFoldersByName(fakeDb, "u1", ["Tech"])).rejects.toMatchObject({
+      code: "FOLDER_CREATE_FAILED",
+      status: 500,
+    });
   });
 });

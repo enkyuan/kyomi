@@ -13,7 +13,12 @@ import {
   type HostRateLimiter,
   type JobMessage,
 } from "@kyomi/worker";
-import { runOpmlImportFeedJob, runOpmlImportJob } from "@modules/opml/jobs";
+import {
+  runOpmlImportFeedJob,
+  runOpmlImportItemJob,
+  runOpmlImportJob,
+  runOpmlImportPrepareJob,
+} from "@modules/opml/jobs";
 import { runArticleExtractionForUser } from "@modules/articles/reader/extraction/workflow";
 import { prefetchArticleExtractionsForFeedItems } from "@modules/articles/reader/extraction/prefetch";
 import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "./refresh-errors";
@@ -154,6 +159,14 @@ async function handleWorkerJob(
         attempts,
         durationMs: Date.now() - startTime,
       });
+      return;
+    }
+    case "opml.import.prepare": {
+      await runOpmlImportPrepareJob(db, job.payload, logger);
+      return;
+    }
+    case "opml.import.item": {
+      await runOpmlImportItemJob(db, job.payload, logger);
       return;
     }
     case "article.extract": {

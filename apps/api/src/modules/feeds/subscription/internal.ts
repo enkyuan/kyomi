@@ -114,35 +114,53 @@ export async function upsertFeedRecord(
   };
 }
 
+export type SubscriptionInsertOptions = {
+  folderId?: string | null;
+  customTitle?: string | null;
+};
+
 /**
- * Ensure a `feed_subscriptions` row exists for the user. Creates the default
- * folder if needed.
+ * Ensure a `feed_subscriptions` row exists for the user, using a conflict-safe insert-first
+ * write so duplicate delivery (e.g. a retried OPML item) can never race the unique
+ * (userId, feedId) constraint. If a subscription already exists, its folder/customTitle are
+ * left untouched — only a newly inserted row gets the requested metadata.
  */
 export async function subscribeUserToFeed(
   tx: Parameters<Parameters<DB["transaction"]>[0]>[0],
   userId: string,
   feedId: string,
+  options?: SubscriptionInsertOptions,
 ): Promise<{ subscriptionId: string; newSubscription: boolean }> {
+  const subscriptionId = crypto.randomUUID();
+  const folderId =
+    options?.folderId ?? (await getOrCreateFolderByName(tx, userId, DEFAULT_FOLDER_NAME)).id;
+
+  const inserted = await tx
+    .insert(feedSubscriptions)
+    .values({
+      id: subscriptionId,
+      userId,
+      feedId,
+      folderId,
+      customTitle: options?.customTitle?.trim() || null,
+      createdAt: new Date(),
+    })
+    .onConflictDoNothing()
+    .returning({ id: feedSubscriptions.id });
+
+  if (inserted[0]) {
+    return { subscriptionId: inserted[0].id, newSubscription: true };
+  }
+
   const existingSub = await tx
     .select({ id: feedSubscriptions.id })
     .from(feedSubscriptions)
     .where(and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.feedId, feedId)))
     .limit(1);
-
-  if (existingSub[0]) {
-    return { subscriptionId: existingSub[0].id, newSubscription: false };
+  if (!existingSub[0]) {
+    throw new Error("Subscription insert conflicted but no existing row was found");
   }
-
-  const subscriptionId = crypto.randomUUID();
-  const defaultFolder = await getOrCreateFolderByName(tx, userId, DEFAULT_FOLDER_NAME);
-  await tx.insert(feedSubscriptions).values({
-    id: subscriptionId,
-    userId,
-    feedId,
-    folderId: defaultFolder.id,
-    createdAt: new Date(),
-  });
-  return { subscriptionId, newSubscription: true };
+  return { subscriptionId: existingSub[0].id, newSubscription: false };
 }
 
 /**
