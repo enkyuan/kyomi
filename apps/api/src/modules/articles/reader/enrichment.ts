@@ -1,6 +1,5 @@
 import { AppError } from "@shared/errors/app";
 import type { ArticleDetailDto } from "../types";
-import { extractArticleContentFromUrl } from "./extraction/readability";
 
 function firstSentences(input: string, maxSentences: number): string {
   const chunks = input
@@ -35,24 +34,6 @@ export function resolveEnhancementContent(
   return fallback;
 }
 
-export async function extractFullTextFromUrl(url: string): Promise<string> {
-  const extracted = await extractArticleContentFromUrl(url);
-  if (!extracted.ok) {
-    throw new AppError(extracted.errorMessage, {
-      status: 400,
-      code: extracted.errorCode,
-    });
-  }
-
-  if (!extracted.content.contentHtml) {
-    throw new AppError("No readable HTML content was extracted.", {
-      status: 400,
-      code: "EXTRACTION_EMPTY",
-    });
-  }
-
-  return extracted.content.contentHtml;
-}
 export function summarizeContent(content: string, languageKey: string | undefined): string {
   const text = content.trim();
   if (!text) {
