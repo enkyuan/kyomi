@@ -128,6 +128,7 @@ async function listOldestSavedFeedItems(
       feedFaviconUrl: feeds.faviconUrl,
       isRead: articleIsReadSql,
       isSaved: feedItemUserState.isSaved,
+      lastViewedAt: feedItemUserState.lastViewedAt,
       savedAt: feedItemUserState.savedAt,
     })
     .from(feedItemUserState)
@@ -163,6 +164,7 @@ async function listOldestSavedFeedItems(
       feedFaviconUrl: row.feedFaviconUrl,
       isRead: row.isRead,
       isSaved: row.isSaved,
+      lastViewedAt: row.lastViewedAt?.toISOString() ?? null,
       articleType: "feed" as const,
       categories: [],
       savedAt: row.savedAt.toISOString(),
@@ -202,6 +204,7 @@ async function listOldestSavedClips(
       feedFaviconUrl: null,
       isRead: row.isRead,
       isSaved: row.isSaved,
+      lastViewedAt: row.lastViewedAt?.toISOString() ?? null,
       articleType: "clip" as const,
       categories: [],
       savedAt: row.savedAt.toISOString(),

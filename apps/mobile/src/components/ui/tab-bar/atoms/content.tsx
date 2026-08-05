@@ -1,15 +1,15 @@
 import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { useRouter, useTheme } from "expo-router";
 import { useEffect, useRef } from "react";
-import { Pressable, TextInput, View } from "react-native";
+import { Pressable, View } from "react-native";
 import Animated, {
   FadeIn,
   FadeOut,
   LinearTransition,
   useReducedMotion,
 } from "react-native-reanimated";
-import { CloseIcon } from "@/components/icons";
-import { AddSearchField } from "./add-search-field";
+import { AddCloseIcon } from "@/components/ui/add-icon";
+import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { FeedTabActions, hasSeparateFeedTabAction } from "./feed-actions";
 import { useAddTabBar } from "../add-mode";
 import { getFloatingBarPosition, styles } from "../lib/styles";
@@ -37,7 +37,7 @@ export function TabBarContent({
   const { colors } = useTheme();
   const shouldReduceMotion = useReducedMotion();
   const { config } = useAddTabBar();
-  const searchInputRef = useRef<TextInput>(null);
+  const searchInputRef = useRef<SearchFieldRef>(null);
   const isAddPresentation = isAddRoute && config !== null;
 
   useEffect(() => {
@@ -67,10 +67,13 @@ export function TabBarContent({
               key="add-search"
               style={styles.readerSearchContent}
             >
-              <AddSearchField
-                config={config}
-                inactiveColor={String(colors.text)}
+              <SearchField
+                accessibilityLabel="Search feeds"
+                clearAccessibilityLabel="Clear feed search"
                 inputRef={searchInputRef}
+                onChangeText={config.onQueryChange}
+                placeholder="Search feeds or paste a URL"
+                value={config.query}
               />
             </Animated.View>
           ) : (
@@ -115,7 +118,11 @@ export function TabBarContent({
                     pressed && styles.readerActionPressed,
                   ]}
                 >
-                  <CloseIcon fill={String(colors.text)} size={19} />
+                  <AddCloseIcon
+                    active
+                    color={String(colors.text)}
+                    shouldReduceMotion={shouldReduceMotion}
+                  />
                 </Pressable>
               </Animated.View>
             ) : (

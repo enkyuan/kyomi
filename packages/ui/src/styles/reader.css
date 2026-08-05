@@ -914,6 +914,40 @@
   margin-top: 0.35rem;
 }
 
+/* A failed editorial image is a standalone media state, not a compact media-aside. */
+.reader-content
+  .article-body
+  [data-reader-media-aside]:is(
+    :has(> [data-reader-img-frame][data-reader-img-unavailable]),
+    :has(> *:first-child [data-reader-img-frame][data-reader-img-unavailable])
+  ) {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reader-content
+  .article-body
+  [data-reader-media-aside]
+  > :is(
+    [data-reader-img-frame][data-reader-img-unavailable],
+    *:first-child:has([data-reader-img-frame][data-reader-img-unavailable])
+  ) {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: none;
+  align-self: stretch;
+}
+
+.reader-content
+  .article-body
+  [data-reader-media-aside]
+  > :is([data-reader-img-frame][data-reader-img-unavailable], *:first-child)
+  [data-reader-img-frame][data-reader-img-unavailable] {
+  width: 100%;
+  max-width: 56rem;
+  align-self: stretch;
+}
+
 .reader-content .article-body [data-reader-figure-caption] + [data-reader-figure-credit] {
   margin-top: 0.15rem;
 }

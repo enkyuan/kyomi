@@ -21,6 +21,7 @@ function rawRow(overrides: Partial<ArticleListRawRow> = {}): ArticleListRawRow {
     feedFaviconUrl: null,
     isRead: false,
     isSaved: false,
+    lastViewedAt: null,
     hiddenAt: null,
     categories: [],
     ...overrides,
@@ -57,6 +58,14 @@ describe("article list item categories", () => {
     // Guards against the API returning categories that get cleaned off the wire because the
     // runtime response schema (not just the TS type) was missing the field.
     expect(articleListItemSchema.properties).toHaveProperty("categories");
+  });
+
+  test("maps a persisted view timestamp into the list DTO", () => {
+    const lastViewedAt = new Date("2026-07-02T00:00:00.000Z");
+    const [item] = toArticleListItemsForTest([rawRow({ lastViewedAt })]);
+
+    expect(item?.lastViewedAt).toBe(lastViewedAt.toISOString());
+    expect(articleListItemSchema.properties).toHaveProperty("lastViewedAt");
   });
 
   test("category label SQL defaults to keyword classifier rows after explicit labels", () => {

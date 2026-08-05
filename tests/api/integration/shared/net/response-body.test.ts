@@ -1,5 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { cancelResponseBody, readResponseBodyWithByteLimit } from "@kyomi/worker/lib/response-body";
+import {
+  cancelResponseBody,
+  readResponseBodyWithByteLimit,
+  readResponseBytesWithByteLimit,
+} from "@kyomi/worker/lib/response-body";
 
 function streamResponse(chunks: Uint8Array[], headers?: Record<string, string>): Response {
   const stream = new ReadableStream<Uint8Array>({
@@ -78,6 +82,21 @@ describe("readResponseBodyWithByteLimit", () => {
     await expect(readResponseBodyWithByteLimit(response, { maxBytes: 100 })).rejects.toThrow(
       "boom",
     );
+  });
+});
+
+describe("readResponseBytesWithByteLimit", () => {
+  test("preserves binary image bytes while enforcing the same limit", async () => {
+    const bytes = new Uint8Array([0, 255, 137, 80, 78, 71]);
+    const response = streamResponse([bytes], { "content-type": "image/png" });
+
+    await expect(
+      readResponseBytesWithByteLimit(response, { maxBytes: bytes.byteLength }),
+    ).resolves.toEqual({
+      ok: true,
+      bytes,
+      bytesRead: bytes.byteLength,
+    });
   });
 });
 

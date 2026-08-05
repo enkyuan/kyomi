@@ -190,31 +190,10 @@ export const styles = StyleSheet.create({
   readerActionPressed: {
     backgroundColor: "rgba(255, 255, 255, 0.12)",
   },
-  readerSearchField: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-    paddingHorizontal: 12,
-  },
   readerSearchContent: {
     flex: 1,
     width: "100%",
     height: "100%",
-  },
-  readerSearchInput: {
-    flex: 1,
-    minWidth: 0,
-    paddingVertical: 0,
-    color: "#f4f4f5",
-    fontSize: 14,
-  },
-  readerSearchClearAction: {
-    width: 24,
-    height: 24,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 24,
   },
   readerSeparateWrapper: {
     width: READER_SEPARATE_WIDTH,

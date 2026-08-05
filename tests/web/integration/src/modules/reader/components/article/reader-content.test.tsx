@@ -104,6 +104,22 @@ describe("ReaderContent", () => {
     expect(image?.getAttribute("src")).toBe("https://example.com/blog/assets/graph.png");
   });
 
+  test("requests mobile reader images eagerly before they enter the DOM", () => {
+    const { container } = render(
+      <ReaderContent
+        imageLoading="eager"
+        reader={baseReader({
+          bodyKind: "html",
+          contentHtml:
+            '<p><img loading="lazy" src="https://example.com/photo.jpg" alt="Photo" /></p>',
+          contentMarkdown: null,
+        })}
+      />,
+    );
+
+    expect(container.querySelector("img")?.getAttribute("loading")).toBe("eager");
+  });
+
   test("renders link-only fallback without surfacing raw backend errors", () => {
     render(
       <ReaderContent

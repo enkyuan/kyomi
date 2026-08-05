@@ -39,6 +39,7 @@ export const inboxRecapSavedItemSchema = t.Object({
   feedFaviconUrl: t.Union([t.String(), t.Null()]),
   isRead: t.Boolean(),
   isSaved: t.Boolean(),
+  lastViewedAt: t.Union([t.String(), t.Null()]),
   articleType: t.Union([t.Literal("feed"), t.Literal("clip")]),
   savedAt: t.String(),
 });

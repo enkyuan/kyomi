@@ -2,7 +2,7 @@
 /* oxlint-disable max-lines */
 
 import { act, render, waitFor } from "@testing-library/react";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test, vi } from "vitest";
 import { RenderHtml } from "@kyomi/reader/web";
 
 describe("RenderHtml", () => {
@@ -485,6 +485,206 @@ describe("RenderHtml – edge cases", () => {
 });
 
 describe("RenderHtml – media/image hardening", () => {
+  test("routes resolved article image URLs through a caller-owned image transport", () => {
+    const transformImageUrl = vi.fn(
+      (sourceUrl: string) =>
+        `https://mobile.kyomi.test/api/reader-image?url=${encodeURIComponent(sourceUrl)}`,
+    );
+    const { container } = render(
+      <RenderHtml
+        html='<img src="/images/hero.jpg" alt="Hero" />'
+        baseUrl="https://publisher.example/articles/1"
+        transformImageUrl={transformImageUrl}
+      />,
+    );
+
+    expect(transformImageUrl).toHaveBeenCalledWith("https://publisher.example/images/hero.jpg");
+    expect(container.querySelector("img")?.getAttribute("src")).toBe(
+      "https://mobile.kyomi.test/api/reader-image?url=https%3A%2F%2Fpublisher.example%2Fimages%2Fhero.jpg",
+    );
+  });
+
+  test("keeps an eager image pending when WebKit reports complete before it can decode", async () => {
+    const decode = vi.fn(() => Promise.reject(new DOMException("Not ready", "EncodingError")));
+    const originalComplete = Object.getOwnPropertyDescriptor(
+      HTMLImageElement.prototype,
+      "complete",
+    );
+    const originalDecode = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, "decode");
+    Object.defineProperty(HTMLImageElement.prototype, "complete", {
+      configurable: true,
+      get: () => true,
+    });
+    Object.defineProperty(HTMLImageElement.prototype, "decode", {
+      configurable: true,
+      value: decode,
+    });
+
+    try {
+      const { container } = render(
+        <RenderHtml
+          html='<figure><img src="https://example.com/webkit.jpg" alt="WebKit image" /></figure>'
+          baseUrl="https://example.com/p"
+          imageLoading="eager"
+        />,
+      );
+      const root = container.querySelector(".article-body");
+
+      await waitFor(() => {
+        expect(root?.querySelector<HTMLImageElement>("[data-reader-img-frame] > img")).toBeTruthy();
+      });
+
+      expect(decode).not.toHaveBeenCalled();
+      expect(root?.querySelector("[data-reader-img-unavailable]")).toBeNull();
+
+      const image = root?.querySelector<HTMLImageElement>("[data-reader-img-frame] > img");
+      image?.dispatchEvent(new Event("load"));
+
+      await waitFor(() => {
+        expect(decode).toHaveBeenCalledTimes(1);
+        expect(image?.classList.contains("opacity-0")).toBe(false);
+      });
+      expect(root?.querySelector("[data-reader-img-unavailable]")).toBeNull();
+    } finally {
+      if (originalComplete) {
+        Object.defineProperty(HTMLImageElement.prototype, "complete", originalComplete);
+      } else {
+        Reflect.deleteProperty(HTMLImageElement.prototype, "complete");
+      }
+      if (originalDecode) {
+        Object.defineProperty(HTMLImageElement.prototype, "decode", originalDecode);
+      } else {
+        Reflect.deleteProperty(HTMLImageElement.prototype, "decode");
+      }
+    }
+  });
+
+  test("waits for image decode before it falls back to an unavailable notice", async () => {
+    let resolveDecode: (() => void) | undefined;
+    const decode = vi.fn(
+      () =>
+        new Promise<void>((resolve) => {
+          resolveDecode = resolve;
+        }),
+    );
+    const originalDecode = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, "decode");
+    Object.defineProperty(HTMLImageElement.prototype, "decode", {
+      configurable: true,
+      value: decode,
+    });
+
+    try {
+      const { container } = render(
+        <RenderHtml
+          html='<figure><img src="https://example.com/eager.jpg" alt="Eager image" /></figure>'
+          baseUrl="https://example.com/p"
+          imageLoading="eager"
+        />,
+      );
+      const root = container.querySelector(".article-body");
+
+      await waitFor(() => {
+        expect(root?.querySelector<HTMLImageElement>("[data-reader-img-frame] > img")).toBeTruthy();
+      });
+
+      const image = root?.querySelector<HTMLImageElement>("[data-reader-img-frame] > img");
+      image?.dispatchEvent(new Event("load"));
+
+      await waitFor(() => {
+        expect(decode).toHaveBeenCalled();
+      });
+      expect(root?.querySelector("[data-reader-img-unavailable]")).toBeNull();
+
+      resolveDecode?.();
+
+      await waitFor(() => {
+        expect(image?.classList.contains("opacity-0")).toBe(false);
+      });
+    } finally {
+      if (originalDecode) {
+        Object.defineProperty(HTMLImageElement.prototype, "decode", originalDecode);
+      } else {
+        Reflect.deleteProperty(HTMLImageElement.prototype, "decode");
+      }
+    }
+  });
+
+  test("replaces failed editorial images with a quiet accessible annotation", async () => {
+    const { container, getByRole } = render(
+      <RenderHtml
+        html='<figure><img src="https://example.com/broken.jpg" alt="Broken image" /></figure>'
+        baseUrl="https://example.com/p"
+      />,
+    );
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      expect(root?.querySelector<HTMLImageElement>("[data-reader-img-frame] > img")).toBeTruthy();
+    });
+
+    const image = root?.querySelector<HTMLImageElement>("[data-reader-img-frame] > img");
+    image?.dispatchEvent(new Event("error"));
+
+    await waitFor(() => {
+      const frame = root?.querySelector<HTMLElement>("[data-reader-img-frame]");
+      expect(frame?.hasAttribute("data-reader-img-unavailable")).toBe(true);
+      expect(frame?.querySelector("img")).toBeNull();
+      expect(getByRole("note", { name: "Image unavailable: Broken image" })).toBeTruthy();
+      expect(frame?.textContent).toContain("Broken image");
+      const label = frame?.querySelector(".reader-image-unavailable-label");
+      expect(label?.firstElementChild?.tagName.toLowerCase()).toBe("svg");
+      expect(label?.textContent).toBe("Image unavailable");
+    });
+  });
+
+  test("removes failed decorative images without adding reader chrome", async () => {
+    const { container, queryByRole } = render(
+      <RenderHtml
+        html='<p><img src="https://example.com/decorative.jpg" alt="" /></p>'
+        baseUrl="https://example.com/p"
+      />,
+    );
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      expect(root?.querySelector<HTMLImageElement>("[data-reader-img-frame] > img")).toBeTruthy();
+    });
+
+    root
+      ?.querySelector<HTMLImageElement>("[data-reader-img-frame] > img")
+      ?.dispatchEvent(new Event("error"));
+
+    await waitFor(() => {
+      expect(root?.querySelector("[data-reader-img-frame]")).toBeNull();
+      expect(queryByRole("note")).toBeNull();
+    });
+  });
+
+  test("keeps a figure caption as the description for a failed image", async () => {
+    const caption = "Kajol speaks at a film event in Mumbai.";
+    const { container, getByRole } = render(
+      <RenderHtml
+        html={`<figure><img src="https://example.com/kajol.jpg" alt="Kajol at an event" /><figcaption>${caption}</figcaption></figure>`}
+        baseUrl="https://example.com/p"
+      />,
+    );
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      expect(root?.querySelector<HTMLImageElement>("[data-reader-img-frame] > img")).toBeTruthy();
+    });
+
+    root
+      ?.querySelector<HTMLImageElement>("[data-reader-img-frame] > img")
+      ?.dispatchEvent(new Event("error"));
+
+    await waitFor(() => {
+      expect(getByRole("note", { name: `Image unavailable: ${caption}` })).toBeTruthy();
+      expect(root?.querySelector("figcaption")?.textContent).toContain(caption);
+      expect(root?.querySelector(".reader-image-unavailable-description")).toBeNull();
+    });
+  });
+
   test("keeps inline badge images out of block media frames", async () => {
     const html = `
       <p>

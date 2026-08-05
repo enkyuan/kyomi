@@ -1,9 +1,10 @@
 "use client";
 
 import { memo, useEffect, useMemo, useState } from "react";
-import type { ReaderLayoutMode } from "../../core/types";
+import type { ReaderImageLoading, ReaderLayoutMode } from "../../core/types";
 import { hasLikelyMarkdownMath, readerMarkdownToHtml } from "../../shared/markdown-html";
 import { RenderHtml } from "../html";
+import type { ReaderImageUrlTransformer } from "../html/url-resolve";
 
 let katexRuntimePromise:
   | Promise<Pick<typeof import("../katex-runtime"), "renderMarkdownWithKatex">>
@@ -22,12 +23,16 @@ export const RenderMarkdown = memo(function RenderMarkdown({
   openLinksInNewTab = true,
   showLinkPreviews = true,
   layoutMode = "normalized",
+  imageLoading,
+  transformImageUrl,
 }: {
   markdown: string;
   baseUrl?: string | null;
   openLinksInNewTab?: boolean;
   showLinkPreviews?: boolean;
   layoutMode?: ReaderLayoutMode;
+  imageLoading?: ReaderImageLoading;
+  transformImageUrl?: ReaderImageUrlTransformer;
 }) {
   const [mathHtml, setMathHtml] = useState<string | null>(null);
   const shouldLoadKatex = useMemo(() => hasLikelyMarkdownMath(markdown), [markdown]);
@@ -67,6 +72,8 @@ export const RenderMarkdown = memo(function RenderMarkdown({
       openLinksInNewTab={openLinksInNewTab}
       showLinkPreviews={showLinkPreviews}
       layoutMode={layoutMode}
+      imageLoading={imageLoading}
+      transformImageUrl={transformImageUrl}
     />
   );
 });

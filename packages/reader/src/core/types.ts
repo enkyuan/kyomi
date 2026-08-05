@@ -14,9 +14,26 @@ export type ReaderFallbackReason = "extraction_failed" | "timeout" | "missing_co
 
 export type ReaderLayoutMode = "fidelity" | "normalized";
 
+/** Controls when a DOM renderer requests article images. */
+export type ReaderImageLoading = "eager" | "lazy";
+
 export type ReaderDefaultMode = "original" | "extracted" | "smart";
 
 export type ReaderContentWidth = "narrow" | "wide";
+
+/**
+ * Product-level article information that surrounds a reader body.
+ *
+ * The body payload remains independent so web, WebView, and native renderers
+ * can share the same hierarchy without coupling the reader package to an app
+ * DTO.
+ */
+export type ReaderArticlePresentation = {
+  feedTitle: string;
+  title: string;
+  summary?: string | null;
+  imageUrl?: string | null;
+};
 
 export type ReaderContent = {
   bodyKind: ReaderBodyKind;

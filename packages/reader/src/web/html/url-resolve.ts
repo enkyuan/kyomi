@@ -1,6 +1,12 @@
 import { normalizeSafeHttpUrl } from "../../core/url";
 
-export function resolveRelativeAssetUrls(html: string, baseUrl?: string | null): string {
+export type ReaderImageUrlTransformer = (url: string) => string | null | undefined;
+
+export function resolveRelativeAssetUrls(
+  html: string,
+  baseUrl?: string | null,
+  transformImageUrl?: ReaderImageUrlTransformer,
+): string {
   if (!baseUrl || typeof document === "undefined") {
     return html;
   }
@@ -31,7 +37,13 @@ export function resolveRelativeAssetUrls(html: string, baseUrl?: string | null):
     }
     const normalized = normalizeSafeHttpUrl(src, normalizedBase);
     if (normalized) {
-      image.setAttribute("src", normalized);
+      const transformed = transformImageUrl?.(normalized) ?? normalized;
+      const safeTransformed = normalizeSafeHttpUrl(transformed);
+      if (safeTransformed) {
+        image.setAttribute("src", safeTransformed);
+      } else {
+        image.removeAttribute("src");
+      }
     } else {
       image.removeAttribute("src");
     }

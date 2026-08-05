@@ -21,6 +21,7 @@ type FeedArticleDetailRawRow = {
   title: string;
   link: string;
   summary: string | null;
+  imageUrl: string | null;
   content: string | null;
   contentHtml: string | null;
   contentText: string | null;
@@ -43,6 +44,7 @@ type FeedArticleDetailRawRow = {
   feedFaviconUrl: string | null;
   isRead: boolean;
   isSaved: boolean | null;
+  lastViewedAt: Date | null;
   categories: string[];
 };
 
@@ -91,6 +93,7 @@ function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto 
     title,
     link: row.link,
     summary,
+    imageUrl: row.imageUrl,
     contentHtml: row.contentHtml,
     contentText: decodeNullableText(row.contentText),
     contentMarkdown: row.contentMarkdown,
@@ -106,6 +109,7 @@ function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto 
     feedFaviconUrl: row.feedFaviconUrl,
     isRead: row.isRead,
     isSaved: Boolean(row.isSaved),
+    lastViewedAt: row.lastViewedAt?.toISOString() ?? null,
     articleType: "feed",
     categories: row.categories.map(decodeText),
     reader,
@@ -134,6 +138,7 @@ async function getFeedArticleDetailForUser(
       title: feedItems.title,
       link: feedItems.link,
       summary: feedItems.summary,
+      imageUrl: feedItems.imageUrl,
       content: feedItems.content,
       contentHtml: feedItems.contentHtml,
       contentText: feedItems.contentText,
@@ -156,6 +161,7 @@ async function getFeedArticleDetailForUser(
       feedFaviconUrl: feeds.faviconUrl,
       isRead: articleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
+      lastViewedAt: feedItemUserState.lastViewedAt,
       categories: categoryLabelsSql,
     })
     .from(feedItems)

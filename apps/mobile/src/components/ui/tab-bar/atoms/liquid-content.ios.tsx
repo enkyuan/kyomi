@@ -20,21 +20,14 @@ import {
 } from "@expo/ui/swift-ui/modifiers";
 import { useRouter, useTheme } from "expo-router";
 import { useEffect, useId, useRef, useState, type ReactNode, type RefObject } from "react";
-import { Pressable, TextInput, View, useWindowDimensions } from "react-native";
+import { Pressable, View, useWindowDimensions } from "react-native";
 import Animated, { FadeIn, FadeOut, useReducedMotion } from "react-native-reanimated";
-import {
-  BackIcon,
-  BookmarkIcon,
-  CloseIcon,
-  ExternalLinkIcon,
-  ListSearchIcon,
-  ShareIcon,
-} from "@/components/icons";
-import { AddCloseIcon } from "./add-close-icon";
+import { BackIcon, BookmarkIcon, CloseIcon, ExternalLinkIcon, ShareIcon } from "@/components/icons";
+import { AddCloseIcon } from "@/components/ui/add-icon";
+import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
-import { AddSearchField } from "./add-search-field";
 import { FeedTabActions } from "./feed-actions";
-import { ReaderSearchToggleIcon } from "./reader-search-toggle-icon.ios";
+import { ReaderSearchToggleIcon } from "./search-toggle.ios";
 import { useAddTabBar } from "../add-mode";
 import { getFloatingBarPosition, getFloatingBarWidth, styles } from "../lib/styles";
 import { useReaderTabBar, type ReaderTabBarConfig } from "../reader-mode";
@@ -78,8 +71,8 @@ export function LiquidTabBarContent({
   const { width: windowWidth } = useWindowDimensions();
   const namespaceId = useId();
   const shouldReduceMotion = useReducedMotion();
-  const searchInputRef = useRef<TextInput>(null);
-  const addSearchInputRef = useRef<TextInput>(null);
+  const searchInputRef = useRef<SearchFieldRef>(null);
+  const addSearchInputRef = useRef<SearchFieldRef>(null);
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
 
   const barPosition = getFloatingBarPosition(insets);
@@ -214,10 +207,13 @@ export function LiquidTabBarContent({
                     exiting={shouldReduceMotion ? undefined : FadeOut.duration(96)}
                     style={styles.liquidContentLayer}
                   >
-                    <AddSearchField
-                      config={addConfig}
-                      inactiveColor={inactiveIconColor}
+                    <SearchField
+                      accessibilityLabel="Search feeds"
+                      clearAccessibilityLabel="Clear feed search"
                       inputRef={addSearchInputRef}
+                      onChangeText={addConfig.onQueryChange}
+                      placeholder="Search feeds or paste a URL"
+                      value={addConfig.query}
                     />
                   </Animated.View>
                 ) : null}
@@ -264,7 +260,11 @@ export function LiquidTabBarContent({
                 width={trailingWidth}
               >
                 <ReaderSeparateAction accessibilityLabel="Close feed search" onPress={closeAdd}>
-                  <CloseIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
+                  <AddCloseIcon
+                    active
+                    color={inactiveIconColor}
+                    shouldReduceMotion={shouldReduceMotion}
+                  />
                 </ReaderSeparateAction>
               </LiquidLayer>
             </LiquidGlassShell>
@@ -346,7 +346,7 @@ function ReaderPrimaryActions({
   readonly config: ReaderTabBarConfig | null;
   readonly inactiveColor: string;
   readonly isSearchExpanded: boolean;
-  readonly searchInputRef: RefObject<TextInput | null>;
+  readonly searchInputRef: RefObject<SearchFieldRef | null>;
   readonly shouldReduceMotion: boolean;
 }) {
   const isReady = config !== null;
@@ -364,24 +364,15 @@ function ReaderPrimaryActions({
         key="search"
         style={styles.liquidContentLayer}
       >
-        <View style={styles.readerSearchField}>
-          <ListSearchIcon fill={inactiveColor} size={18} />
-          <TextInput
-            accessibilityLabel="Find in article"
-            autoCapitalize="none"
-            autoCorrect={false}
-            clearButtonMode="while-editing"
-            editable={isReady}
-            onChangeText={config?.onSearchQueryChange}
-            placeholder="Find in article"
-            placeholderTextColor="#71717a"
-            ref={searchInputRef}
-            returnKeyType="search"
-            selectionColor={kyomiNativeBrand.mizu.color}
-            style={styles.readerSearchInput}
-            value={config?.searchQuery ?? ""}
-          />
-        </View>
+        <SearchField
+          accessibilityLabel="Find in article"
+          clearAccessibilityLabel="Clear article search"
+          editable={isReady}
+          inputRef={searchInputRef}
+          onChangeText={config?.onSearchQueryChange}
+          placeholder="Find in article"
+          value={config?.searchQuery ?? ""}
+        />
       </Animated.View>
     );
   }
