@@ -15,6 +15,7 @@ const feed = (id: string, at: string): ArticleListItemDto => ({
   feedFaviconUrl: null,
   isRead: false,
   isSaved: false,
+  lastViewedAt: null,
   articleType: "feed",
   categories: [],
 });

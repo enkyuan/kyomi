@@ -17,6 +17,8 @@ export type ArticleListItemDto = {
   feedFaviconUrl: string | null;
   isRead: boolean;
   isSaved: boolean;
+  /** Most recent time this user opened the article, when available. */
+  lastViewedAt: string | null;
   articleType: "feed" | "clip";
   /** Category labels for footer chips, item-level first and feed-level fallback, capped by SQL. */
   categories: string[];
@@ -53,6 +55,8 @@ export type ArticleReaderDto = {
 };
 
 export type ArticleDetailDto = ArticleListItemDto & {
+  /** Feed-provided lead image; list payloads deliberately omit this field. */
+  imageUrl: string | null;
   contentHtml: string | null;
   contentText: string | null;
   contentMarkdown: string | null;

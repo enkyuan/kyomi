@@ -29,6 +29,11 @@ const articleListItemSchema = z.object({
     .transform((value) => value ?? null),
   isRead: z.boolean(),
   isSaved: z.boolean(),
+  lastViewedAt: z
+    .string()
+    .nullable()
+    .optional()
+    .transform((value) => value ?? null),
   articleType: articleTypeSchema,
   categories: z
     .array(z.string())

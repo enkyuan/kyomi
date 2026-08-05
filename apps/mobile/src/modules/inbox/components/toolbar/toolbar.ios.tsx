@@ -1,6 +1,6 @@
 import { Host } from "@expo/ui";
 import { Button, Menu, RNHostView } from "@expo/ui/swift-ui";
-import { accessibilityLabel } from "@expo/ui/swift-ui/modifiers";
+import { accessibilityLabel, frame } from "@expo/ui/swift-ui/modifiers";
 import { Pressable, StyleSheet, View } from "react-native";
 import { BookmarkIcon, MoreIcon, ShareIcon } from "@/components/icons";
 import type { ArticleListItem } from "@modules/inbox/lib/articles";
@@ -38,7 +38,7 @@ export function ItemToolbar({ item }: { readonly item: ArticleListItem }) {
         <ShareIcon fill={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
       </Pressable>
       <View className="size-12 shrink-0">
-        <Host style={styles.menuHost}>
+        <Host ignoreSafeArea="all" style={styles.menuHost}>
           <Menu
             label={
               <RNHostView matchContents>
@@ -50,7 +50,10 @@ export function ItemToolbar({ item }: { readonly item: ArticleListItem }) {
                 </View>
               </RNHostView>
             }
-            modifiers={[accessibilityLabel("More article actions")]}
+            modifiers={[
+              frame({ height: 48, width: 48 }),
+              accessibilityLabel("More article actions"),
+            ]}
           >
             <Button label="Open source" onPress={openSource} systemImage="arrow.up.right" />
             <Button

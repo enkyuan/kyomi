@@ -22,6 +22,7 @@ export type ArticleListRawRow = {
   feedFaviconUrl: string | null;
   isRead: boolean;
   isSaved: boolean;
+  lastViewedAt: Date | null;
   hiddenAt: Date | null;
   categories: string[];
 };

@@ -55,6 +55,7 @@ function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemD
     feedFaviconUrl: null,
     isRead: row.isRead,
     isSaved: row.isSaved,
+    lastViewedAt: row.lastViewedAt?.toISOString() ?? null,
     articleType: "clip",
     categories: [],
   };

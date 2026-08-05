@@ -9,11 +9,12 @@ import {
   useSyncExternalStore,
 } from "react";
 import { PhotoSlider } from "react-photo-view";
-import type { ReaderLayoutMode } from "../core/types";
+import type { ReaderImageLoading, ReaderLayoutMode } from "../core/types";
 import { hasLikelyDelimitedTex } from "../shared/math";
 import { mountReaderLinkPreviewCards } from "./components/link-card";
 import { getReaderPhotoTransitionSpeed, useReaderPhotoPreviewTargets } from "./html/photo-preview";
 import { prepareArticleHtml } from "./html/string-prep";
+import type { ReaderImageUrlTransformer } from "./html/url-resolve";
 import {
   runReaderCriticalDomEnhancements,
   runReaderIdleDomEnhancements,
@@ -111,12 +112,16 @@ export function RenderHtml({
   openLinksInNewTab = true,
   showLinkPreviews = true,
   layoutMode = "normalized",
+  imageLoading,
+  transformImageUrl,
 }: {
   html: string;
   baseUrl?: string | null;
   openLinksInNewTab?: boolean;
   showLinkPreviews?: boolean;
   layoutMode?: ReaderLayoutMode;
+  imageLoading?: ReaderImageLoading;
+  transformImageUrl?: ReaderImageUrlTransformer;
 }) {
   const articleBodyRef = useRef<HTMLDivElement | null>(null);
   const enhancementRunRef = useRef(0);
@@ -138,9 +143,11 @@ export function RenderHtml({
   const prepared = useMemo(
     () =>
       isHydrated
-        ? measureReaderWork("prepareArticleHtml", () => prepareArticleHtml(html, baseUrl))
+        ? measureReaderWork("prepareArticleHtml", () =>
+            prepareArticleHtml(html, baseUrl, imageLoading, transformImageUrl),
+          )
         : "",
-    [baseUrl, html, isHydrated],
+    [baseUrl, html, imageLoading, isHydrated, transformImageUrl],
   );
   const shouldRenderMath = useMemo(() => hasLikelyDelimitedTex(prepared), [prepared]);
 

@@ -26,6 +26,7 @@ function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemD
     feedFaviconUrl: null,
     isRead: row.isRead,
     isSaved: row.isSaved,
+    lastViewedAt: row.lastViewedAt?.toISOString() ?? null,
     articleType: "clip",
     categories: [],
   };
@@ -67,6 +68,7 @@ export function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDeta
   });
   return {
     ...base,
+    imageUrl: null,
     contentHtml: row.contentHtml,
     contentText: row.contentText,
     contentMarkdown: row.contentMarkdown,
