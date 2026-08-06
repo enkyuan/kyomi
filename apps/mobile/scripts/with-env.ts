@@ -8,7 +8,14 @@ if (!command) {
 
 // `.env.local` is the documented local override. Keep `.env` as a private,
 // ignored migration fallback so existing developer setups do not stop working.
-const localEnvFile = (await Bun.file(".env.local").exists()) ? ".env.local" : ".env";
+// Neither file is required: the app has local development defaults for public
+// configuration when no override is needed.
+const localEnvFile = (await Bun.file(".env.local").exists())
+  ? ".env.local"
+  : (await Bun.file(".env").exists())
+    ? ".env"
+    : null;
+const localEnvArgs = localEnvFile ? ["-f", localEnvFile] : [];
 const child = Bun.spawn(
   [
     "bunx",
@@ -17,8 +24,7 @@ const child = Bun.spawn(
     "run",
     "-f",
     "../../docker/.env",
-    "-f",
-    localEnvFile,
+    ...localEnvArgs,
     "--",
     command,
     ...args,

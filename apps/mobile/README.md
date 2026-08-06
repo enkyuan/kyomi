@@ -86,15 +86,15 @@ Dynamic Type and Material typography.
 
 ## Authentication development
 
-Copy `.env.example` to `.env.local` and set `EXPO_PUBLIC_AUTH_ORIGIN` to the public origin that
-serves `/api/auth/*`. The built-in local defaults point at the web auth proxy:
+`EXPO_PUBLIC_AUTH_ORIGIN` is optional for local development. Create `.env.local` only to override
+the public origin serving `/api/auth/*`. The built-in local defaults point directly to the API:
 
-- iOS simulator: `http://localhost:3000`;
-- Android emulator: `http://10.0.2.2:3000`.
+- iOS simulator: `http://localhost:8000`;
+- Android emulator: `http://10.0.2.2:8000`.
 
-Run both the API and web app while using those defaults. Use an HTTPS development URL and an Expo
-development build for stable password-reset callbacks. Expo Go's callback URL is not a stable
-application identity. Release builds reject a non-HTTPS authentication origin.
+Run the API while using those defaults. Use an HTTPS development URL and an Expo development build
+for stable password-reset callbacks. Expo Go's callback URL is not a stable application identity.
+Release builds reject a non-HTTPS authentication origin.
 
 ## Design rule
 
