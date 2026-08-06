@@ -1,10 +1,10 @@
 import { AnimatedLegendList } from "@legendapp/list/reanimated";
-import { router } from "expo-router";
-import { useMemo } from "react";
+import { router, useFocusEffect } from "expo-router";
+import { useCallback, useMemo, useRef, type ComponentRef } from "react";
 import { Platform, Pressable, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import type { SharedValue } from "react-native-reanimated";
-import { getTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
+import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { FeedFavicon } from "@modules/inbox/components/feed-favicon";
 import { feedItemTypography } from "@modules/inbox/lib/layout";
 import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
@@ -29,7 +29,19 @@ export function RecentHistoryList({
   const articles = useRecentArticles();
   const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
   const isIOS = Platform.OS === "ios";
+  const initialScrollOffset = isIOS ? -headerHeight : 0;
+  const listRef = useRef<ComponentRef<typeof AnimatedLegendList<RecentArticle>>>(null);
   const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
+
+  useFocusEffect(
+    useCallback(() => {
+      // Tab routes remain mounted. Recents is a chronological destination, so
+      // each visit starts at the latest viewed item rather than restoring a
+      // previous reading position.
+      scrollY.set(initialScrollOffset);
+      void listRef.current?.scrollToOffset({ animated: false, offset: initialScrollOffset });
+    }, [initialScrollOffset, scrollY]),
+  );
 
   return (
     <AnimatedLegendList
@@ -51,6 +63,7 @@ export function RecentHistoryList({
       contentInsetAdjustmentBehavior="never"
       data={articles}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
+      initialScrollOffset={isIOS ? initialScrollOffset : undefined}
       keyExtractor={(article) => article.id}
       ListEmptyComponent={<RecentHistoryEmptyState />}
       onScrollBeginDrag={onScrollBeginDrag}
@@ -58,6 +71,7 @@ export function RecentHistoryList({
         <RecentHistoryItem article={item} isFirst={index === 0} />
       )}
       recycleItems
+      ref={listRef}
       scrollIndicatorInsets={
         isIOS ? { bottom: tabBarOcclusionHeight, top: headerHeight } : undefined
       }
