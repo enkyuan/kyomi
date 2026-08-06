@@ -1,36 +1,29 @@
 import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
-import {
-  GlassEffectContainer,
-  HStack,
-  Host,
-  Namespace,
-  RNHostView,
-  ZStack,
-} from "@expo/ui/swift-ui";
+import { GlassEffectContainer, HStack, Host, Namespace, ZStack } from "@expo/ui/swift-ui";
 import {
   Animation,
-  accessibilityHidden,
   animation,
-  blur,
-  disabled,
   frame,
   glassEffect,
   glassEffectId,
-  opacity,
 } from "@expo/ui/swift-ui/modifiers";
 import { useRouter, useTheme } from "expo-router";
-import { useEffect, useId, useRef, useState, type ReactNode, type RefObject } from "react";
-import { Pressable, View, useWindowDimensions } from "react-native";
+import { useEffect, useId, useRef, useState, type ReactNode } from "react";
+import { View, useWindowDimensions } from "react-native";
 import Animated, { FadeIn, FadeOut, useReducedMotion } from "react-native-reanimated";
-import { BackIcon, BookmarkIcon, CloseIcon, ExternalLinkIcon, ShareIcon } from "@/components/icons";
+import { BackIcon } from "@/components/icons";
 import { AddCloseIcon } from "@/components/ui/add-icon";
 import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
-import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import { FeedTabActions } from "./feed-actions";
+import {
+  LiquidReaderLayer,
+  LiquidReaderPrimaryActions,
+  LiquidReaderSeparateAction,
+} from "./liquid-reader-actions.ios";
 import { ReaderSearchToggleIcon } from "./search-toggle.ios";
-import { useAddTabBar } from "../add-mode";
+import { useAddTabBar } from "../modes/add";
 import { getFloatingBarPosition, getFloatingBarWidth, styles } from "../lib/styles";
-import { useReaderTabBar, type ReaderTabBarConfig } from "../reader-mode";
+import { useReaderTabBar } from "../modes/reader";
 
 const ACTION_ICON_SIZE = 19;
 const BAR_HEIGHT = 56;
@@ -75,23 +68,25 @@ export function LiquidTabBarContent({
   const addSearchInputRef = useRef<SearchFieldRef>(null);
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
 
-  const barPosition = getFloatingBarPosition(insets);
-  const barWidth = getFloatingBarWidth(windowWidth, insets);
-  const isReaderPresentation = isReaderRoute && !isDismissingReader;
-  const isAddPresentation = isAddRoute && addConfig !== null;
-  const isReaderSearchExpanded = isReaderPresentation && isSearchExpanded;
-  const gap = isReaderPresentation ? READER_GAP : FEED_GAP;
-  const trailingWidth = isReaderPresentation ? SIDE_ACTION_WIDTH : FEED_TRAILING_WIDTH;
-  const leadingWidth = isReaderPresentation && !isReaderSearchExpanded ? SIDE_ACTION_WIDTH : 0;
-  const primaryWidth = Math.max(
-    0,
-    barWidth - trailingWidth - gap - (leadingWidth > 0 ? leadingWidth + gap : 0),
-  );
-  const glassLayoutState = isReaderPresentation
-    ? 2 + (isReaderSearchExpanded ? 1 : 0)
-    : isAddPresentation
-      ? 4
-      : 0;
+  const {
+    barPosition,
+    barWidth,
+    gap,
+    glassLayoutState,
+    isAddPresentation,
+    isReaderPresentation,
+    isReaderSearchExpanded,
+    primaryWidth,
+    trailingWidth,
+  } = getLiquidBarLayout({
+    hasAddConfig: addConfig !== null,
+    insets,
+    isAddRoute,
+    isDismissingReader,
+    isReaderRoute,
+    isSearchExpanded,
+    windowWidth,
+  });
   const isReady = config !== null;
 
   useEffect(() => {
@@ -156,19 +151,19 @@ export function LiquidTabBarContent({
                 namespaceId={namespaceId}
                 width={SIDE_ACTION_WIDTH}
               >
-                <LiquidLayer
+                <LiquidReaderLayer
                   active
                   shouldReduceMotion={shouldReduceMotion}
                   width={SIDE_ACTION_WIDTH}
                 >
-                  <ReaderSeparateAction accessibilityLabel="Back to inbox" onPress={goBack}>
+                  <LiquidReaderSeparateAction accessibilityLabel="Back to inbox" onPress={goBack}>
                     <BackIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
-                  </ReaderSeparateAction>
-                </LiquidLayer>
+                  </LiquidReaderSeparateAction>
+                </LiquidReaderLayer>
               </LiquidGlassShell>
             ) : null}
             <LiquidGlassShell id="primary" namespaceId={namespaceId} width={primaryWidth}>
-              <LiquidLayer
+              <LiquidReaderLayer
                 active={!isReaderPresentation && !isAddPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={primaryWidth}
@@ -182,21 +177,21 @@ export function LiquidTabBarContent({
                     state={state}
                   />
                 </View>
-              </LiquidLayer>
-              <LiquidLayer
+              </LiquidReaderLayer>
+              <LiquidReaderLayer
                 active={isReaderPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={primaryWidth}
               >
-                <ReaderPrimaryActions
+                <LiquidReaderPrimaryActions
                   config={config}
                   inactiveColor={inactiveIconColor}
                   isSearchExpanded={isReaderSearchExpanded}
                   searchInputRef={searchInputRef}
                   shouldReduceMotion={shouldReduceMotion}
                 />
-              </LiquidLayer>
-              <LiquidLayer
+              </LiquidReaderLayer>
+              <LiquidReaderLayer
                 active={isAddPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={primaryWidth}
@@ -217,10 +212,10 @@ export function LiquidTabBarContent({
                     />
                   </Animated.View>
                 ) : null}
-              </LiquidLayer>
+              </LiquidReaderLayer>
             </LiquidGlassShell>
             <LiquidGlassShell id="trailing" namespaceId={namespaceId} width={trailingWidth}>
-              <LiquidLayer
+              <LiquidReaderLayer
                 active={!isReaderPresentation && !isAddPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={trailingWidth}
@@ -234,13 +229,13 @@ export function LiquidTabBarContent({
                     state={state}
                   />
                 </View>
-              </LiquidLayer>
-              <LiquidLayer
+              </LiquidReaderLayer>
+              <LiquidReaderLayer
                 active={isReaderPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={trailingWidth}
               >
-                <ReaderSeparateAction
+                <LiquidReaderSeparateAction
                   accessibilityLabel={
                     isReaderSearchExpanded ? "Close article search" : "Find in article"
                   }
@@ -252,27 +247,77 @@ export function LiquidTabBarContent({
                     isSearchExpanded={isReaderSearchExpanded}
                     shouldReduceMotion={shouldReduceMotion}
                   />
-                </ReaderSeparateAction>
-              </LiquidLayer>
-              <LiquidLayer
+                </LiquidReaderSeparateAction>
+              </LiquidReaderLayer>
+              <LiquidReaderLayer
                 active={isAddPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={trailingWidth}
               >
-                <ReaderSeparateAction accessibilityLabel="Close feed search" onPress={closeAdd}>
+                <LiquidReaderSeparateAction
+                  accessibilityLabel="Close feed search"
+                  onPress={closeAdd}
+                >
                   <AddCloseIcon
                     active
                     color={inactiveIconColor}
                     shouldReduceMotion={shouldReduceMotion}
                   />
-                </ReaderSeparateAction>
-              </LiquidLayer>
+                </LiquidReaderSeparateAction>
+              </LiquidReaderLayer>
             </LiquidGlassShell>
           </HStack>
         </GlassEffectContainer>
       </Namespace>
     </Host>
   );
+}
+
+function getLiquidBarLayout({
+  hasAddConfig,
+  insets,
+  isAddRoute,
+  isDismissingReader,
+  isReaderRoute,
+  isSearchExpanded,
+  windowWidth,
+}: {
+  readonly hasAddConfig: boolean;
+  readonly insets: BottomTabBarProps["insets"];
+  readonly isAddRoute: boolean;
+  readonly isDismissingReader: boolean;
+  readonly isReaderRoute: boolean;
+  readonly isSearchExpanded: boolean;
+  readonly windowWidth: number;
+}) {
+  const barWidth = getFloatingBarWidth(windowWidth, insets);
+  const isReaderPresentation = isReaderRoute && !isDismissingReader;
+  const isAddPresentation = isAddRoute && hasAddConfig;
+  const isReaderSearchExpanded = isReaderPresentation && isSearchExpanded;
+  const gap = isReaderPresentation ? READER_GAP : FEED_GAP;
+  const trailingWidth = isReaderPresentation ? SIDE_ACTION_WIDTH : FEED_TRAILING_WIDTH;
+  const leadingWidth = isReaderPresentation && !isReaderSearchExpanded ? SIDE_ACTION_WIDTH : 0;
+  const primaryWidth = Math.max(
+    0,
+    barWidth - trailingWidth - gap - (leadingWidth > 0 ? leadingWidth + gap : 0),
+  );
+  const glassLayoutState = isReaderPresentation
+    ? 2 + (isReaderSearchExpanded ? 1 : 0)
+    : isAddPresentation
+      ? 4
+      : 0;
+
+  return {
+    barPosition: getFloatingBarPosition(insets),
+    barWidth,
+    gap,
+    glassLayoutState,
+    isAddPresentation,
+    isReaderPresentation,
+    isReaderSearchExpanded,
+    primaryWidth,
+    trailingWidth,
+  };
 }
 
 function LiquidGlassShell({
@@ -303,162 +348,5 @@ function LiquidGlassShell({
     >
       {children}
     </ZStack>
-  );
-}
-
-function LiquidLayer({
-  active,
-  children,
-  shouldReduceMotion,
-  width,
-}: {
-  readonly active: boolean;
-  readonly children: ReactNode;
-  readonly shouldReduceMotion: boolean;
-  readonly width: number;
-}) {
-  return (
-    <ZStack
-      modifiers={[
-        frame({ height: BAR_HEIGHT, width }),
-        opacity(active ? 1 : 0),
-        accessibilityHidden(!active),
-        disabled(!active),
-        ...(shouldReduceMotion ? [] : [blur(active ? 0 : 2), animation(BAR_ANIMATION, active)]),
-      ]}
-    >
-      <RNHostView>
-        <View pointerEvents={active ? "auto" : "none"} style={styles.liquidHostedContent}>
-          {children}
-        </View>
-      </RNHostView>
-    </ZStack>
-  );
-}
-
-function ReaderPrimaryActions({
-  config,
-  inactiveColor,
-  isSearchExpanded,
-  searchInputRef,
-  shouldReduceMotion,
-}: {
-  readonly config: ReaderTabBarConfig | null;
-  readonly inactiveColor: string;
-  readonly isSearchExpanded: boolean;
-  readonly searchInputRef: RefObject<SearchFieldRef | null>;
-  readonly shouldReduceMotion: boolean;
-}) {
-  const isReady = config !== null;
-  // Allow the primary glass capsule to establish its new width before its
-  // contents fade in. The outgoing controls leave early, preventing the
-  // input from reading as a crossfade over the toolbar actions.
-  const entering = shouldReduceMotion ? undefined : FadeIn.delay(36).duration(164);
-  const exiting = shouldReduceMotion ? undefined : FadeOut.duration(96);
-
-  if (isSearchExpanded) {
-    return (
-      <Animated.View
-        entering={entering}
-        exiting={exiting}
-        key="search"
-        style={styles.liquidContentLayer}
-      >
-        <SearchField
-          accessibilityLabel="Find in article"
-          clearAccessibilityLabel="Clear article search"
-          editable={isReady}
-          inputRef={searchInputRef}
-          onChangeText={config?.onSearchQueryChange}
-          placeholder="Find in article"
-          value={config?.searchQuery ?? ""}
-        />
-      </Animated.View>
-    );
-  }
-
-  return (
-    <Animated.View
-      entering={entering}
-      exiting={exiting}
-      key="actions"
-      style={styles.liquidContentLayer}
-    >
-      <View style={styles.readerBar}>
-        <ReaderToolbarAction
-          accessibilityLabel={config?.isSaved ? "Remove from read later" : "Read later"}
-          disabled={!isReady || config.isUpdating}
-          onPress={config?.onToggleSaved}
-        >
-          <BookmarkIcon
-            fill={config?.isSaved ? kyomiNativeBrand.mizu.color : inactiveColor}
-            focused={config?.isSaved}
-            size={ACTION_ICON_SIZE}
-          />
-        </ReaderToolbarAction>
-        <ReaderToolbarAction
-          accessibilityLabel="Open source"
-          disabled={!isReady}
-          onPress={config?.onOpenSource}
-        >
-          <ExternalLinkIcon fill={inactiveColor} size={ACTION_ICON_SIZE} />
-        </ReaderToolbarAction>
-        <ReaderToolbarAction
-          accessibilityLabel="Share article"
-          disabled={!isReady}
-          onPress={config?.onShare}
-        >
-          <ShareIcon fill={inactiveColor} size={ACTION_ICON_SIZE} />
-        </ReaderToolbarAction>
-      </View>
-    </Animated.View>
-  );
-}
-
-function ReaderToolbarAction({
-  accessibilityLabel,
-  children,
-  disabled: isDisabled,
-  onPress,
-}: {
-  readonly accessibilityLabel: string;
-  readonly children: ReactNode;
-  readonly disabled?: boolean;
-  readonly onPress: (() => void) | undefined;
-}) {
-  return (
-    <Pressable
-      accessibilityLabel={accessibilityLabel}
-      accessibilityRole="button"
-      disabled={isDisabled}
-      onPress={onPress}
-      style={({ pressed }) => [styles.readerAction, pressed && styles.readerActionPressed]}
-    >
-      {children}
-    </Pressable>
-  );
-}
-
-function ReaderSeparateAction({
-  accessibilityLabel,
-  children,
-  disabled: isDisabled = false,
-  onPress,
-}: {
-  readonly accessibilityLabel: string;
-  readonly children: ReactNode;
-  readonly disabled?: boolean;
-  readonly onPress: () => void;
-}) {
-  return (
-    <Pressable
-      accessibilityLabel={accessibilityLabel}
-      accessibilityRole="button"
-      disabled={isDisabled}
-      onPress={onPress}
-      style={({ pressed }) => [styles.readerSeparateAction, pressed && styles.readerActionPressed]}
-    >
-      {children}
-    </Pressable>
   );
 }

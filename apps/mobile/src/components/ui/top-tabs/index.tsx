@@ -145,13 +145,6 @@ export function TopTabs({
     },
   );
 
-  const handleTabPress = useCallback(
-    (name: string) => {
-      onTabPress(name);
-    },
-    [onTabPress],
-  );
-
   const headerHeight = insets.top + HEADER_CONTENT_HEIGHT;
 
   return (
@@ -188,7 +181,7 @@ export function TopTabs({
             indexDecimal={indexDecimal}
             indicatorClassName={indicatorClassName}
             labelClassName={labelClassName}
-            onTabPress={handleTabPress}
+            onTabPress={onTabPress}
             sidePadding={sidePadding}
             tabClassName={tabClassName}
             tabNames={tabNames}

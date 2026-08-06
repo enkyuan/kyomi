@@ -3,7 +3,7 @@ import { useQueryClient, type InfiniteData } from "@tanstack/react-query";
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Pressable, Text, View, useColorScheme } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useReaderTabBar, type ReaderTabBarConfig } from "@/components/ui/tab-bar/reader-mode";
+import { useReaderTabBar, type ReaderTabBarConfig } from "@/components/ui/tab-bar/modes/reader";
 import { getReaderTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { Skeleton } from "@ui/skeleton";
 import { fetchMobileApiJson, resolveMobileApiUrl } from "@/lib/api-client";
@@ -45,7 +45,6 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const { data: article, error, isLoading, refetch } = useReaderArticle(articleId);
   const actions = useReaderActions(article);
   const actionRef = useRef(actions);
-  actionRef.current = actions;
   const faviconUrls = useMemo(
     () =>
       article
@@ -73,6 +72,10 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
       searchQuery,
     };
   }, [actions.isUpdating, article, searchQuery]);
+
+  useEffect(() => {
+    actionRef.current = actions;
+  }, [actions]);
 
   useEffect(() => {
     setConfig(tabBarConfig);

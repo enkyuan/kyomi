@@ -11,7 +11,7 @@ import Animated, {
 import { AddCloseIcon } from "@/components/ui/add-icon";
 import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { FeedTabActions, hasSeparateFeedTabAction } from "./feed-actions";
-import { useAddTabBar } from "../add-mode";
+import { useAddTabBar } from "../modes/add";
 import { getFloatingBarPosition, styles } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 

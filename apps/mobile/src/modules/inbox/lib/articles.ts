@@ -11,6 +11,7 @@ export type ArticleListItem = {
   readonly feedFaviconUrl: string | null;
   readonly isRead: boolean;
   readonly isSaved: boolean;
+  readonly lastViewedAt: string | null;
   readonly articleType: "feed" | "clip";
   readonly categories: string[];
 };
