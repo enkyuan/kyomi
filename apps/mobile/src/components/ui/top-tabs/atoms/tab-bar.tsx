@@ -143,7 +143,6 @@ export function TopTabsBar({
       <TabItem
         className={labelClassName ?? tabClassName}
         isFocused={focusedTabName === item}
-        key={item}
         name={item}
         onLayout={(width) => onTabLayout(index, width)}
         onPress={onPress}

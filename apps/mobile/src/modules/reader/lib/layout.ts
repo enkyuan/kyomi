@@ -11,12 +11,6 @@ export const mobileReaderLayout = {
     minFontSizePx: 30,
     skeletonLines: 3,
   },
-  summary: {
-    fontSizePx: 17,
-    lineHeight: 1.55,
-    marginTopPx: 16,
-    skeletonLines: 4,
-  },
   body: {
     fontSizePx: 17,
     lineHeight: 1.68,
@@ -31,4 +25,5 @@ export const mobileReaderSkeletonLayout = {
   titleLineHeightPx: Math.round(
     mobileReaderLayout.title.minFontSizePx * mobileReaderLayout.title.lineHeight,
   ),
+  titleLineSpacingPx: 4,
 } as const;

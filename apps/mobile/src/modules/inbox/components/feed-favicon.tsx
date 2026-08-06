@@ -23,26 +23,34 @@ export function FeedFavicon({ faviconUrl, feedUrl, siteUrl, title, size = 22 }: 
   );
   const candidateKey = candidateUrls.join("\n");
   const [candidateIndex, setCandidateIndex] = useState(0);
+  const [loadedFaviconUrl, setLoadedFaviconUrl] = useState<string | null>(null);
   const { mutedForeground } = getMobileSurfaceTheme(useColorScheme());
   const faviconSource = candidateUrls[candidateIndex];
+  const hasLoadedFavicon = faviconSource !== undefined && loadedFaviconUrl === faviconSource;
 
   useEffect(() => {
     setCandidateIndex(0);
+    setLoadedFaviconUrl(null);
   }, [candidateKey]);
 
   return (
     <View
-      accessibilityLabel={faviconSource ? undefined : `${title} feed`}
+      accessibilityLabel={hasLoadedFavicon ? undefined : `${title} feed`}
       className="items-center justify-center overflow-hidden rounded-sm bg-card/85"
       style={{ width: size, height: size }}
     >
-      <RssIcon fill={mutedForeground} size={size * 0.6} />
+      {!hasLoadedFavicon ? <RssIcon fill={mutedForeground} size={size * 0.6} /> : null}
       {faviconSource ? (
         <Image
           accessibilityElementsHidden
           className="absolute inset-0 size-full"
           importantForAccessibility="no-hide-descendants"
+          key={faviconSource}
+          onLoad={() => {
+            setLoadedFaviconUrl(faviconSource);
+          }}
           onError={() => {
+            setLoadedFaviconUrl(null);
             setCandidateIndex((current) => Math.min(current + 1, candidateUrls.length));
           }}
           resizeMode="contain"

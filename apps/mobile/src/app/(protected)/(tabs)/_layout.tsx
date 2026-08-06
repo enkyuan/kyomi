@@ -2,8 +2,8 @@ import { Tabs } from "expo-router/tabs";
 import type { ComponentProps } from "react";
 import { InboxIcon, PlusIcon, RecentsIcon, SettingsIcon, SwitcherIcon } from "@/components/icons";
 import { TabBar } from "@ui/tab-bar";
-import { AddTabBarProvider } from "@ui/tab-bar/add-mode";
-import { ReaderTabBarProvider } from "@ui/tab-bar/reader-mode";
+import { AddTabBarProvider } from "@/components/ui/tab-bar/modes/add";
+import { ReaderTabBarProvider } from "@/components/ui/tab-bar/modes/reader";
 import { ToastViewport } from "@ui/toast";
 
 // expo-router bundles its own copy of @react-navigation/bottom-tabs' types,

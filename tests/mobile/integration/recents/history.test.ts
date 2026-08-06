@@ -4,6 +4,7 @@ import {
   parseRecentArticles,
   recordRecentArticle,
 } from "../../../../apps/mobile/src/modules/recents/lib/history";
+import type { RecentArticle } from "../../../../apps/mobile/src/modules/recents/lib/history";
 import type { ArticleListItem } from "../../../../apps/mobile/src/modules/inbox/lib/articles";
 
 const article = (id: string, articleType: "feed" | "clip" = "feed"): ArticleListItem => ({
@@ -43,7 +44,9 @@ describe("recent article history", () => {
       recordRecentArticle(original, article("clip", "clip"), "2026-08-05T12:01:00.000Z"),
     ).toEqual(original);
 
-    const capped = Array.from({ length: MAX_RECENT_ARTICLES + 1 }, (_, index) => index).reduce(
+    const capped = Array.from({ length: MAX_RECENT_ARTICLES + 1 }, (_, index) => index).reduce<
+      RecentArticle[]
+    >(
       (history, index) =>
         recordRecentArticle(history, article(String(index)), "2026-08-05T12:01:00.000Z"),
       [],

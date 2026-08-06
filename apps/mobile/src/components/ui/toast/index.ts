@@ -1,4 +1,4 @@
-import { ToastViewport } from "./components/viewport";
+import { ToastViewport } from "./atoms/viewport";
 import { durationFor, type ToastConfig } from "./lib/config";
 import { engine, type ToastHandle } from "./lib/manager";
 import type { Toast } from "./lib/model";

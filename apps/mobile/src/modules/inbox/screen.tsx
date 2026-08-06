@@ -7,7 +7,7 @@ import { TopTabs } from "@ui/top-tabs";
 import { useTopTabsHeader } from "@ui/top-tabs/lib/scroll-context";
 import { List } from "@modules/inbox/components/list";
 import { usePinnedFolders } from "@modules/inbox/hooks/use-pinned";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@ui/badge";
 
 const COMPACT_TITLE_FONT_SIZE = 12.5;
 const DEFAULT_TITLE_FONT_SIZE = 16;
@@ -56,7 +56,7 @@ function InboxEmptyState({ tabName }: { tabName: keyof typeof EMPTY_STATES }) {
               Add a new feed or check out
             </Text>
             <Badge
-              className="mx-1 translate-y-px"
+              className="mx-1 translate-y-px rounded-md px-0.5"
               size={isCompact ? "xs" : "sm"}
               variant="secondary"
             >

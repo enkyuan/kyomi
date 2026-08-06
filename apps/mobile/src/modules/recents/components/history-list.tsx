@@ -10,6 +10,11 @@ import { feedItemTypography } from "@modules/inbox/lib/layout";
 import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
 import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
 import type { RecentArticle } from "../lib/history";
+import {
+  getRecentHistoryInitialOffset,
+  resetRecentHistoryScroll,
+  type NativeScrollable,
+} from "../lib/scroll-position";
 import { useRecentArticles } from "../lib/store";
 
 const ESTIMATED_ROW_SIZE = 116;
@@ -17,19 +22,21 @@ const ESTIMATED_ROW_SIZE = 116;
 type RecentHistoryListProps = {
   headerHeight: number;
   onScrollBeginDrag: () => void;
+  onScrollReset: () => void;
   scrollY: SharedValue<number>;
 };
 
 export function RecentHistoryList({
   headerHeight,
   onScrollBeginDrag,
+  onScrollReset,
   scrollY,
 }: RecentHistoryListProps) {
   const insets = useSafeAreaInsets();
   const articles = useRecentArticles();
   const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
   const isIOS = Platform.OS === "ios";
-  const initialScrollOffset = isIOS ? -headerHeight : 0;
+  const initialScrollOffset = getRecentHistoryInitialOffset(headerHeight, isIOS);
   const listRef = useRef<ComponentRef<typeof AnimatedLegendList<RecentArticle>>>(null);
   const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
 
@@ -38,9 +45,13 @@ export function RecentHistoryList({
       // Tab routes remain mounted. Recents is a chronological destination, so
       // each visit starts at the latest viewed item rather than restoring a
       // previous reading position.
+      onScrollReset();
       scrollY.set(initialScrollOffset);
-      void listRef.current?.scrollToOffset({ animated: false, offset: initialScrollOffset });
-    }, [initialScrollOffset, scrollY]),
+      resetRecentHistoryScroll(
+        listRef.current?.getNativeScrollRef() as NativeScrollable | undefined,
+        initialScrollOffset,
+      );
+    }, [initialScrollOffset, onScrollReset, scrollY]),
   );
 
   return (

@@ -21,7 +21,7 @@ export function TabItem({ name, isFocused, onPress, onLayout, className }: Props
       accessibilityLabel={name}
       accessibilityRole={Platform.OS === "ios" ? "button" : "tab"}
       accessibilityState={{ selected: isFocused }}
-      className="items-center justify-center rounded-full px-1 py-2"
+      className="items-center justify-center rounded-full px-1 pb-1 pt-3"
       onLayout={(event) => onLayout(event.nativeEvent.layout.width)}
       onPress={onPress}
     >

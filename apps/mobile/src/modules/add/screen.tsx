@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-import { Alert, FlatList, Pressable, StyleSheet, Text, View, useColorScheme } from "react-native";
+import { Alert, FlatList, Pressable, Text, View, useColorScheme } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import { FeedFavicon } from "@modules/inbox/components/feed-favicon";
-import { useAddTabBar } from "@ui/tab-bar/add-mode";
+import { useAddTabBar } from "@/components/ui/tab-bar/modes/add";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { triggerSelectionHaptic } from "@utils/haptics";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
@@ -45,9 +45,9 @@ export function AddScreen() {
     : "Search by topic or paste a feed URL to follow it.";
 
   return (
-    <SafeAreaView edges={["top"]} style={[styles.screen, { backgroundColor: theme.background }]}>
+    <SafeAreaView className="flex-1" edges={["top"]} style={{ backgroundColor: theme.background }}>
       <FlatList
-        style={styles.list}
+        className="flex-1"
         contentContainerClassName="grow px-5 pt-6"
         contentContainerStyle={{ paddingBottom: getTabBarOcclusionHeight(insets) + 16 }}
         data={items}
@@ -95,12 +95,3 @@ export function AddScreen() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-  },
-  list: {
-    flex: 1,
-  },
-});

@@ -38,12 +38,17 @@ export function RecentsScreen() {
     hasUserInteracted.set(true);
   }, [hasUserInteracted]);
 
+  const handleScrollReset = useCallback(() => {
+    hasUserInteracted.set(contentInsetTop === 0);
+  }, [contentInsetTop, hasUserInteracted]);
+
   return (
     <View className="flex-1" style={{ backgroundColor: theme.background }}>
       <BlurTargetView ref={blurTargetRef} style={{ flex: 1 }}>
         <RecentHistoryList
           headerHeight={headerHeight}
           onScrollBeginDrag={handleScrollBeginDrag}
+          onScrollReset={handleScrollReset}
           scrollY={scrollY}
         />
       </BlurTargetView>

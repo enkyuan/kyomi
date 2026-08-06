@@ -72,6 +72,11 @@ const native = {
 };
 
 mock.module("../../../../apps/mobile/modules/liquid-toasts", () => ({ default: native }));
+// The public barrel also exports the native viewport. These engine tests do not
+// render it, so keep React Native's Flow entrypoint out of Bun's test runtime.
+mock.module("../../../../apps/mobile/src/components/ui/toast/atoms/viewport", () => ({
+  ToastViewport: () => null,
+}));
 
 const { toast } = await import("../../../../apps/mobile/src/components/ui/toast");
 const { engine } = await import("../../../../apps/mobile/src/components/ui/toast/lib/manager");

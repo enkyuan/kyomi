@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode, type RefObject } from "react";
 import { useRouter, useTheme } from "expo-router";
 import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Pressable, View } from "react-native";
@@ -18,7 +18,7 @@ import {
 } from "@/components/icons";
 import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
-import { useReaderTabBar } from "../reader-mode";
+import { useReaderTabBar } from "../modes/reader";
 import { getFloatingBarPosition, styles } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 
@@ -78,80 +78,172 @@ export function ReaderTabBarContent({
       >
         <BackIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
       </ReaderSeparateAction>
-      <Animated.View
-        layout={shouldReduceMotion ? undefined : READER_LAYOUT_TRANSITION}
-        style={styles.readerWrapper}
-      >
-        <Surface style={styles.readerSurface}>
-          {isSearchExpanded ? (
-            <Animated.View
-              entering={shouldReduceMotion ? undefined : READER_CONTENT_ENTERING}
-              exiting={shouldReduceMotion ? undefined : READER_CONTENT_EXITING}
-              key="reader-search"
-              style={styles.readerSearchContent}
-            >
-              <SearchField
-                accessibilityLabel="Find in article"
-                clearAccessibilityLabel="Clear article search"
-                editable={isReady}
-                inputRef={searchInputRef}
-                onChangeText={config?.onSearchQueryChange}
-                placeholder="Find in article"
-                value={config?.searchQuery ?? ""}
-              />
-            </Animated.View>
-          ) : (
-            <Animated.View
-              entering={shouldReduceMotion ? undefined : READER_CONTENT_ENTERING}
-              exiting={shouldReduceMotion ? undefined : READER_CONTENT_EXITING}
-              key="reader-actions"
-              style={styles.readerSearchContent}
-            >
-              <View style={styles.readerBar}>
-                <ReaderAction
-                  accessibilityLabel={config?.isSaved ? "Remove from read later" : "Read later"}
-                  disabled={!isReady || config.isUpdating}
-                  onPress={config?.onToggleSaved}
-                >
-                  <BookmarkIcon
-                    fill={config?.isSaved ? kyomiNativeBrand.mizu.color : inactiveIconColor}
-                    focused={config?.isSaved}
-                    size={ACTION_ICON_SIZE}
-                  />
-                </ReaderAction>
-                <ReaderAction
-                  accessibilityLabel="Open source"
-                  disabled={!isReady}
-                  onPress={config?.onOpenSource}
-                >
-                  <ExternalLinkIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
-                </ReaderAction>
-                <ReaderAction
-                  accessibilityLabel="Share article"
-                  disabled={!isReady}
-                  onPress={config?.onShare}
-                >
-                  <ShareIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
-                </ReaderAction>
-              </View>
-            </Animated.View>
-          )}
-        </Surface>
-      </Animated.View>
-      <ReaderSeparateAction
-        accessibilityLabel={isSearchExpanded ? "Close article search" : "Find in article"}
-        disabled={!isSearchExpanded && !isReady}
-        onPress={isSearchExpanded ? closeSearch : () => setIsSearchExpanded(true)}
-        shouldAnimate={!shouldReduceMotion}
+      <ReaderPrimarySurface
         Surface={Surface}
-      >
-        {isSearchExpanded ? (
-          <CloseIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
-        ) : (
-          <ListSearchIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
-        )}
-      </ReaderSeparateAction>
+        config={config}
+        inactiveIconColor={inactiveIconColor}
+        isReady={isReady}
+        isSearchExpanded={isSearchExpanded}
+        searchInputRef={searchInputRef}
+        shouldReduceMotion={shouldReduceMotion}
+      />
+      <ReaderSearchControl
+        Surface={Surface}
+        inactiveIconColor={inactiveIconColor}
+        isReady={isReady}
+        isSearchExpanded={isSearchExpanded}
+        onCloseSearch={closeSearch}
+        onOpenSearch={() => setIsSearchExpanded(true)}
+        shouldReduceMotion={shouldReduceMotion}
+      />
     </View>
+  );
+}
+
+function ReaderPrimarySurface({
+  Surface,
+  config,
+  inactiveIconColor,
+  isReady,
+  isSearchExpanded,
+  searchInputRef,
+  shouldReduceMotion,
+}: {
+  readonly Surface: TabBarSurface;
+  readonly config: ReturnType<typeof useReaderTabBar>["config"];
+  readonly inactiveIconColor: string;
+  readonly isReady: boolean;
+  readonly isSearchExpanded: boolean;
+  readonly searchInputRef: RefObject<SearchFieldRef | null>;
+  readonly shouldReduceMotion: boolean;
+}) {
+  return (
+    <Animated.View
+      layout={shouldReduceMotion ? undefined : READER_LAYOUT_TRANSITION}
+      style={styles.readerWrapper}
+    >
+      <Surface style={styles.readerSurface}>
+        <ReaderPrimaryContent
+          config={config}
+          inactiveIconColor={inactiveIconColor}
+          isReady={isReady}
+          isSearchExpanded={isSearchExpanded}
+          searchInputRef={searchInputRef}
+          shouldReduceMotion={shouldReduceMotion}
+        />
+      </Surface>
+    </Animated.View>
+  );
+}
+
+function ReaderPrimaryContent({
+  config,
+  inactiveIconColor,
+  isReady,
+  isSearchExpanded,
+  searchInputRef,
+  shouldReduceMotion,
+}: {
+  readonly config: ReturnType<typeof useReaderTabBar>["config"];
+  readonly inactiveIconColor: string;
+  readonly isReady: boolean;
+  readonly isSearchExpanded: boolean;
+  readonly searchInputRef: RefObject<SearchFieldRef | null>;
+  readonly shouldReduceMotion: boolean;
+}) {
+  if (isSearchExpanded) {
+    return (
+      <Animated.View
+        entering={shouldReduceMotion ? undefined : READER_CONTENT_ENTERING}
+        exiting={shouldReduceMotion ? undefined : READER_CONTENT_EXITING}
+        key="reader-search"
+        style={styles.readerSearchContent}
+      >
+        <SearchField
+          accessibilityLabel="Find in article"
+          clearAccessibilityLabel="Clear article search"
+          editable={isReady}
+          inputRef={searchInputRef}
+          onChangeText={config?.onSearchQueryChange}
+          placeholder="Find in article"
+          value={config?.searchQuery ?? ""}
+        />
+      </Animated.View>
+    );
+  }
+
+  return (
+    <Animated.View
+      entering={shouldReduceMotion ? undefined : READER_CONTENT_ENTERING}
+      exiting={shouldReduceMotion ? undefined : READER_CONTENT_EXITING}
+      key="reader-actions"
+      style={styles.readerSearchContent}
+    >
+      <View style={styles.readerBar}>
+        <ReaderAction
+          accessibilityLabel={config?.isSaved ? "Remove from read later" : "Read later"}
+          disabled={config?.isUpdating ?? true}
+          onPress={config?.onToggleSaved}
+        >
+          <BookmarkIcon
+            fill={config?.isSaved ? kyomiNativeBrand.mizu.color : inactiveIconColor}
+            focused={config?.isSaved}
+            size={ACTION_ICON_SIZE}
+          />
+        </ReaderAction>
+        <ReaderAction
+          accessibilityLabel="Open source"
+          disabled={!isReady}
+          onPress={config?.onOpenSource}
+        >
+          <ExternalLinkIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
+        </ReaderAction>
+        <ReaderAction
+          accessibilityLabel="Share article"
+          disabled={!isReady}
+          onPress={config?.onShare}
+        >
+          <ShareIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
+        </ReaderAction>
+      </View>
+    </Animated.View>
+  );
+}
+
+function ReaderSearchControl({
+  Surface,
+  inactiveIconColor,
+  isReady,
+  isSearchExpanded,
+  onCloseSearch,
+  onOpenSearch,
+  shouldReduceMotion,
+}: {
+  readonly Surface: TabBarSurface;
+  readonly inactiveIconColor: string;
+  readonly isReady: boolean;
+  readonly isSearchExpanded: boolean;
+  readonly onCloseSearch: () => void;
+  readonly onOpenSearch: () => void;
+  readonly shouldReduceMotion: boolean;
+}) {
+  const label = isSearchExpanded ? "Close article search" : "Find in article";
+  const onPress = isSearchExpanded ? onCloseSearch : onOpenSearch;
+
+  return (
+    <ReaderSeparateAction
+      accessibilityLabel={label}
+      disabled={!isSearchExpanded && !isReady}
+      onPress={onPress}
+      shouldAnimate={!shouldReduceMotion}
+      Surface={Surface}
+    >
+      {isSearchExpanded ? (
+        <CloseIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
+      ) : (
+        <ListSearchIcon fill={inactiveIconColor} size={ACTION_ICON_SIZE} />
+      )}
+    </ReaderSeparateAction>
   );
 }
 
@@ -216,4 +308,3 @@ function ReaderSeparateAction({
     </Animated.View>
   );
 }
-
