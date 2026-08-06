@@ -7,19 +7,10 @@ import {
   Shape,
   Text,
 } from "@expo/ui/jetpack-compose";
-import {
-  align,
-  background,
-  fillMaxSize,
-  fillMaxWidth,
-  height,
-  padding,
-  size,
-} from "@expo/ui/jetpack-compose/modifiers";
-import { View, useColorScheme } from "react-native";
-import { Header } from "@ui/header";
-import { getMobileSurfaceTheme } from "@/theme/surfaces";
+import { align, fillMaxWidth, height, padding, size } from "@expo/ui/jetpack-compose/modifiers";
+import { useColorScheme } from "react-native";
 import { useLogout } from "./hooks/use-logout";
+import { SettingsScreenLayout } from "./components/screen-layout";
 
 const DESTRUCTIVE_THEMES = {
   dark: {
@@ -36,17 +27,15 @@ const BUTTON_LABEL_STYLE = { fontSize: 18, fontWeight: "600" as const };
 
 export function SettingsScreen() {
   const colorScheme = useColorScheme();
-  const theme = getMobileSurfaceTheme(colorScheme);
   const destructiveTheme = DESTRUCTIVE_THEMES[colorScheme === "dark" ? "dark" : "light"];
   const { confirmLogout, errorMessage, isLoggingOut } = useLogout();
 
   return (
-    <View style={{ backgroundColor: theme.background, flex: 1 }}>
-      <Header title="Settings" />
-      <Host style={{ flex: 1 }}>
+    <SettingsScreenLayout>
+      <Host matchContents={{ vertical: true }} style={{ width: "100%" }}>
         <Column
           verticalArrangement={{ spacedBy: 12 }}
-          modifiers={[fillMaxSize(), background(theme.background), padding(24, 24, 24, 24)]}
+          modifiers={[fillMaxWidth(), padding(24, 24, 24, 24)]}
         >
           <Button
             colors={{
@@ -80,6 +69,6 @@ export function SettingsScreen() {
           ) : null}
         </Column>
       </Host>
-    </View>
+    </SettingsScreenLayout>
   );
 }
