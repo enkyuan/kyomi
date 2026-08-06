@@ -76,3 +76,27 @@ export function buildClientFaviconUrl(
 
   return `/api/favicon?domain=${encodeURIComponent(origin)}&v=${FAVICON_PROXY_VERSION}`;
 }
+
+/**
+ * Return favicon URLs in load order: the server-side proxy, persisted metadata,
+ * then a direct origin fallback. The browser and native clients share this order
+ * so a failed proxy does not leave either surface without a usable icon.
+ */
+export function buildFaviconUrlCandidates(
+  storedFaviconUrl: string | null | undefined,
+  siteUrl: string | null,
+  feedUrl: string,
+): string[] {
+  const proxyFallbackUrl = buildClientFaviconUrl(null, siteUrl, feedUrl);
+  const storedUrl = buildClientFaviconUrl(storedFaviconUrl, siteUrl, feedUrl);
+  const origin = selectClientFaviconOrigin(siteUrl, feedUrl);
+  const directOriginFallbackUrl = origin ? `${origin}/favicon.ico` : null;
+
+  return [
+    ...new Set(
+      [proxyFallbackUrl, storedUrl, directOriginFallbackUrl].filter((url): url is string =>
+        Boolean(url),
+      ),
+    ),
+  ];
+}

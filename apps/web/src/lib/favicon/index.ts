@@ -1,40 +1,4 @@
-import { buildClientFaviconUrl, selectClientFaviconOrigin } from "@kyomi/worker/favicon/browser";
-
-const CLIENT_FAVICON_ALLOWED_SCHEMES = new Set(["http:", "https:"]);
-
-export function parseClientFaviconOrigin(raw: string | null | undefined): string | null {
-  if (!raw) {
-    return null;
-  }
-  try {
-    const parsed = new URL(raw);
-    if (!CLIENT_FAVICON_ALLOWED_SCHEMES.has(parsed.protocol)) {
-      return null;
-    }
-    return parsed.origin;
-  } catch {
-    return null;
-  }
-}
-
-export function buildFaviconUrlCandidates(
-  storedFaviconUrl: string | null | undefined,
-  siteUrl: string | null,
-  feedUrl: string,
-): string[] {
-  const proxyFallbackUrl = buildClientFaviconUrl(null, siteUrl, feedUrl);
-  const storedUrl = buildClientFaviconUrl(storedFaviconUrl, siteUrl, feedUrl);
-  const origin = selectClientFaviconOrigin(siteUrl, feedUrl);
-  const directOriginFallbackUrl = origin ? `${origin}/favicon.ico` : null;
-
-  return [
-    ...new Set(
-      [proxyFallbackUrl, storedUrl, directOriginFallbackUrl].filter((url): url is string =>
-        Boolean(url),
-      ),
-    ),
-  ];
-}
+export { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
 
 export function firstUsableFaviconIndex(urls: string[], rejectedUrls: ReadonlySet<string>): number {
   const index = urls.findIndex((url) => !rejectedUrls.has(url));
