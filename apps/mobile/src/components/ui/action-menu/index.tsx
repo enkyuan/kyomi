@@ -1,71 +1,70 @@
-import { useEffect, useState, type ReactNode } from "react";
-import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
-import Animated, {
-  interpolate,
-  useAnimatedStyle,
-  useReducedMotion,
-  useSharedValue,
-  withDelay,
-  withTiming,
-} from "react-native-reanimated";
-import { triggerSelectionHaptic } from "@utils/haptics";
+import { useEffect, useState } from "react";
+import { Modal, StyleSheet, View } from "react-native";
+import { useReducedMotion, useSharedValue } from "react-native-reanimated";
 import { useLiquidGlassAvailable } from "@ui/liquid-glass/use-availability";
-import { ActionMenuSurface } from "./surface";
+import { ActionMenuBackdrop } from "./atoms/backdrop";
+import { AnimatedActionMenuRow } from "./atoms/animated-row";
+import { ActionMenuItem } from "./atoms/item";
+import { type ActionMenuAnchor, type ActionMenuItem as ActionMenuItemModel } from "./lib/model";
+import { ActionMenuSurface } from "./atoms/surface";
 
-const ANIMATION_DURATION = 180;
-const ROW_STAGGER = 36;
-const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
+export { ACTION_MENU_ICON_SIZE, type ActionMenuAnchor, type ActionMenuItem } from "./lib/model";
 
-export type ActionMenuItem = {
-  readonly id: string;
-  readonly label: string;
-  readonly icon: ReactNode;
-  readonly accessibilityLabel?: string;
-  readonly onPress?: () => void;
-};
+const DISMISS_DURATION = 220;
+const ITEM_GAP = 8;
 
 type ActionMenuProps = {
   readonly isOpen: boolean;
-  readonly items: readonly ActionMenuItem[];
+  readonly items: readonly ActionMenuItemModel[];
   readonly onDismiss: () => void;
   /** Bottom offset from the physical screen edge, including any persistent chrome. */
   readonly bottomOffset: number;
+  /** Physical edge offset for the menu item's outer edge. */
+  readonly edgeOffset?: number;
   /** Defaults to the trailing edge so a menu can expand from a right-side action. */
   readonly alignment?: "start" | "end";
+  /** An optional visual continuation of the trigger above the overlay. */
+  readonly anchor?: ActionMenuAnchor;
 };
 
 /**
- * A controlled, full-screen action menu that expands from either lower corner.
- * Consumers supply the trigger and item behavior; this primitive owns only
- * presentation, dismissal, accessibility, and the staggered menu motion.
+ * A controlled full-screen action menu. The menu owns the dimmed overlay and
+ * staggered action rows; callers provide its trigger, placement, and behavior.
  */
 export function ActionMenu({
   alignment = "end",
+  anchor,
   bottomOffset,
+  edgeOffset = 20,
   isOpen,
   items,
   onDismiss,
 }: ActionMenuProps) {
+  const [isPresented, setIsPresented] = useState(false);
+  const itemsHeight = useSharedValue(0);
+  const menuOpen = useSharedValue(false);
   const shouldReduceMotion = useReducedMotion();
   const usesLiquidGlass = useLiquidGlassAvailable();
-  const [isPresented, setIsPresented] = useState(isOpen);
-  const backdropProgress = useSharedValue(0);
 
   useEffect(() => {
     let dismissTimer: ReturnType<typeof setTimeout> | undefined;
+    let frame: ReturnType<typeof requestAnimationFrame> | undefined;
 
     if (isOpen) {
       setIsPresented(true);
-      backdropProgress.value = shouldReduceMotion
-        ? 1
-        : withTiming(1, { duration: ANIMATION_DURATION });
+      if (shouldReduceMotion) {
+        menuOpen.value = true;
+      } else {
+        // Mount the closed state first so each row has a real origin to spring from.
+        frame = requestAnimationFrame(() => {
+          menuOpen.value = true;
+        });
+      }
     } else {
-      backdropProgress.value = shouldReduceMotion
-        ? 0
-        : withTiming(0, { duration: ANIMATION_DURATION });
+      menuOpen.value = false;
       dismissTimer = setTimeout(
         () => setIsPresented(false),
-        shouldReduceMotion ? 0 : ANIMATION_DURATION,
+        shouldReduceMotion ? 0 : DISMISS_DURATION,
       );
     }
 
@@ -73,119 +72,74 @@ export function ActionMenu({
       if (dismissTimer) {
         clearTimeout(dismissTimer);
       }
+      if (frame) {
+        cancelAnimationFrame(frame);
+      }
     };
-  }, [backdropProgress, isOpen, shouldReduceMotion]);
-
-  const backdropStyle = useAnimatedStyle(() => ({
-    opacity: backdropProgress.value,
-  }));
+  }, [isOpen, menuOpen, shouldReduceMotion]);
 
   if (!isPresented || items.length === 0) {
     return null;
   }
 
-  const alignmentStyle = alignment === "end" ? styles.endAligned : styles.startAligned;
+  const alignmentStyle =
+    alignment === "end"
+      ? { right: edgeOffset, alignItems: "flex-end" as const }
+      : { left: edgeOffset, alignItems: "flex-start" as const };
 
   return (
     <Modal animationType="none" onRequestClose={onDismiss} statusBarTranslucent transparent visible>
       <View accessibilityViewIsModal style={styles.container}>
-        <AnimatedPressable
-          accessibilityLabel="Dismiss actions menu"
-          accessibilityRole="button"
-          onPress={onDismiss}
-          style={[StyleSheet.absoluteFill, styles.backdrop, backdropStyle]}
+        <ActionMenuBackdrop
+          isOpen={menuOpen}
+          onDismiss={onDismiss}
+          shouldReduceMotion={shouldReduceMotion}
         />
-        <View pointerEvents="box-none" style={styles.menuContainer}>
-          <View style={[styles.items, alignmentStyle, { bottom: bottomOffset }]}>
+        <View pointerEvents={isOpen ? "box-none" : "none"} style={styles.menuContainer}>
+          <View
+            onLayout={(event) => {
+              itemsHeight.value = event.nativeEvent.layout.height;
+            }}
+            style={[styles.items, alignmentStyle, { bottom: bottomOffset }]}
+          >
             {items.map((item, index) => (
-              <AnimatedActionMenuItem
+              <AnimatedActionMenuRow
                 alignment={alignment}
-                item={item}
+                containerHeight={itemsHeight}
+                index={index}
+                isOpen={menuOpen}
                 key={item.id}
-                onDismiss={onDismiss}
-                open={isOpen}
-                order={index}
+                numberOfRows={items.length}
                 shouldReduceMotion={shouldReduceMotion}
-                usesLiquidGlass={usesLiquidGlass}
-              />
+              >
+                <ActionMenuItem
+                  alignment={alignment}
+                  item={item}
+                  onDismiss={onDismiss}
+                  usesLiquidGlass={usesLiquidGlass}
+                />
+              </AnimatedActionMenuRow>
             ))}
           </View>
         </View>
+        {anchor ? (
+          <ActionMenuSurface
+            style={[
+              styles.anchor,
+              {
+                bottom: anchor.bottomOffset,
+                height: anchor.height,
+                width: anchor.width,
+              },
+              alignment === "end" ? { right: anchor.edgeOffset } : { left: anchor.edgeOffset },
+            ]}
+            usesLiquidGlass={usesLiquidGlass}
+          >
+            {anchor.content}
+          </ActionMenuSurface>
+        ) : null}
       </View>
     </Modal>
-  );
-}
-
-function AnimatedActionMenuItem({
-  alignment,
-  item,
-  onDismiss,
-  open,
-  order,
-  shouldReduceMotion,
-  usesLiquidGlass,
-}: {
-  readonly alignment: "start" | "end";
-  readonly item: ActionMenuItem;
-  readonly onDismiss: () => void;
-  readonly open: boolean;
-  readonly order: number;
-  readonly shouldReduceMotion: boolean;
-  readonly usesLiquidGlass: boolean;
-}) {
-  const progress = useSharedValue(0);
-
-  useEffect(() => {
-    const delay = shouldReduceMotion ? 0 : open ? order * ROW_STAGGER : 0;
-    progress.value = shouldReduceMotion
-      ? open
-        ? 1
-        : 0
-      : withDelay(delay, withTiming(open ? 1 : 0, { duration: ANIMATION_DURATION }));
-  }, [open, order, progress, shouldReduceMotion]);
-
-  const rowStyle = useAnimatedStyle(() => {
-    const x = alignment === "end" ? 24 : -24;
-
-    return {
-      opacity: progress.value,
-      transform: [
-        { translateX: interpolate(progress.value, [0, 1], [x, 0]) },
-        { translateY: interpolate(progress.value, [0, 1], [12 + order * 8, 0]) },
-        { scale: interpolate(progress.value, [0, 1], [0.94, 1]) },
-      ],
-    };
-  });
-
-  const handlePress = () => {
-    void triggerSelectionHaptic();
-    item.onPress?.();
-    onDismiss();
-  };
-
-  return (
-    <Animated.View style={rowStyle}>
-      <ActionMenuSurface style={styles.surface} usesLiquidGlass={usesLiquidGlass}>
-        <Pressable
-          accessibilityLabel={item.accessibilityLabel ?? item.label}
-          accessibilityRole="button"
-          className={
-            alignment === "end"
-              ? "flex-row-reverse items-center gap-3 px-4"
-              : "flex-row items-center gap-3 px-4"
-          }
-          onPress={handlePress}
-          style={({ pressed }) => [styles.action, pressed && styles.actionPressed]}
-        >
-          <View accessible={false} style={styles.icon}>
-            {item.icon}
-          </View>
-          <Text className="text-base font-semibold text-foreground" numberOfLines={1}>
-            {item.label}
-          </Text>
-        </Pressable>
-      </ActionMenuSurface>
-    </Animated.View>
   );
 }
 
@@ -193,44 +147,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  backdrop: {
-    backgroundColor: "rgba(0, 0, 0, 0.28)",
-  },
   menuContainer: {
     position: "absolute",
     top: 0,
     right: 0,
     bottom: 0,
     left: 0,
+    justifyContent: "flex-end",
   },
   items: {
+    gap: ITEM_GAP,
     position: "absolute",
-    gap: 12,
-    maxWidth: "100%",
   },
-  startAligned: {
-    left: 20,
-  },
-  endAligned: {
-    right: 20,
-    alignItems: "flex-end",
-  },
-  surface: {
-    borderRadius: 24,
+  anchor: {
+    borderRadius: 28,
     overflow: "hidden",
-  },
-  action: {
-    minWidth: 176,
-    height: 48,
-    justifyContent: "center",
-  },
-  actionPressed: {
-    opacity: 0.72,
-  },
-  icon: {
-    width: 20,
-    height: 20,
-    alignItems: "center",
-    justifyContent: "center",
+    position: "absolute",
   },
 });

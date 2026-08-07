@@ -7,7 +7,7 @@ type ActionMenuSurfaceProps = PropsWithChildren<{
   readonly style?: StyleProp<ViewStyle>;
 }>;
 
-/** Material fallback for Android, where the menu keeps the same geometry and motion. */
+/** Material fallback that preserves the same pill geometry on Android. */
 export function ActionMenuSurface({ children, style }: ActionMenuSurfaceProps) {
   return (
     <BlurView intensity={72} style={style} tint="systemThickMaterialDark">
