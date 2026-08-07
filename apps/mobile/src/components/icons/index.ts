@@ -9,6 +9,7 @@ export { GoogleIcon, type GoogleIconProps } from "./google";
 export { InboxIcon, type InboxIconProps } from "./inbox";
 export { KyomiIcon, type KyomiIconProps } from "./kyomi";
 export { ListSearchIcon, type ListSearchIconProps } from "./list-search";
+export { MingcuteIcon, type MingcuteIconProps } from "./mingcute";
 export { MoreIcon, type MoreIconProps } from "./more";
 export { PlusIcon, type PlusIconProps } from "./plus";
 export { RecentsIcon, type RecentsIconProps } from "./recents";
