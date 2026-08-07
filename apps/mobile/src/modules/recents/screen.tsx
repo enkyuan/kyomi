@@ -1,22 +1,18 @@
-import { BlurTargetView } from "expo-blur";
-import { useCallback, useRef } from "react";
-import { Platform, View, useColorScheme } from "react-native";
+import { useCallback } from "react";
+import { Platform } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useAnimatedReaction, useSharedValue } from "react-native-reanimated";
-import { HEADER_CONTENT_HEIGHT, Header } from "@ui/header";
-import { HeaderSurface } from "@ui/header/surface";
-import { getMobileSurfaceTheme } from "@/theme/surfaces";
+import { TITLE_CONTENT_HEIGHT } from "@ui/header";
+import { ScrollHeaderLayout } from "@ui/header/scroll-layout";
 import { RecentHistoryList } from "./components/history-list";
 
 export function RecentsScreen() {
   const insets = useSafeAreaInsets();
-  const theme = getMobileSurfaceTheme(useColorScheme());
-  const headerHeight = insets.top + HEADER_CONTENT_HEIGHT;
+  const headerHeight = insets.top + TITLE_CONTENT_HEIGHT;
   const contentInsetTop = Platform.OS === "ios" ? headerHeight : 0;
   const scrollY = useSharedValue(-contentInsetTop);
   const headerScrollY = useSharedValue(0);
   const hasUserInteracted = useSharedValue(contentInsetTop === 0);
-  const blurTargetRef = useRef<View>(null);
 
   useAnimatedReaction(
     () => {
@@ -43,22 +39,15 @@ export function RecentsScreen() {
   }, [contentInsetTop, hasUserInteracted]);
 
   return (
-    <View className="flex-1" style={{ backgroundColor: theme.background }}>
-      <BlurTargetView ref={blurTargetRef} style={{ flex: 1 }}>
+    <ScrollHeaderLayout scrollY={headerScrollY} title="Recents">
+      {() => (
         <RecentHistoryList
           headerHeight={headerHeight}
           onScrollBeginDrag={handleScrollBeginDrag}
           onScrollReset={handleScrollReset}
           scrollY={scrollY}
         />
-      </BlurTargetView>
-      <HeaderSurface
-        blurTarget={blurTargetRef}
-        scrollY={headerScrollY}
-        style={{ left: 0, position: "absolute", right: 0, top: 0 }}
-      >
-        <Header surface="transparent" title="Recents" />
-      </HeaderSurface>
-    </View>
+      )}
+    </ScrollHeaderLayout>
   );
 }
