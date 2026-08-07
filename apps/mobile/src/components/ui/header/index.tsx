@@ -5,6 +5,11 @@ import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
 export const HEADER_CONTENT_HEIGHT = 48;
 
+// The title variant needs a taller strip than the tab-bar variant to seat a
+// large title; only that variant opts into the extra height, so the inbox's
+// tab-bar blur edge stays put.
+export const TITLE_CONTENT_HEIGHT = 60;
+
 export type HeaderSurface = "default" | "transparent";
 
 type HeaderProps = PropsWithChildren<{
@@ -26,22 +31,31 @@ export function Header({ children, style, surface = "default", title }: HeaderPr
   const insets = useSafeAreaInsets();
   const { background, foreground } = getMobileSurfaceTheme(useColorScheme());
 
+  const contentHeight = title ? TITLE_CONTENT_HEIGHT : HEADER_CONTENT_HEIGHT;
+
   return (
     <View
       style={[
-        { height: insets.top + HEADER_CONTENT_HEIGHT },
+        { height: insets.top + contentHeight },
         surface === "default" ? { backgroundColor: background } : undefined,
         style,
       ]}
     >
       <View style={{ height: insets.top }} />
       {title ? (
-        <View className="h-12 justify-center px-5 pb-1 pt-3" pointerEvents="none">
+        <View
+          className="justify-center px-5 pb-1"
+          pointerEvents="none"
+          style={{ height: TITLE_CONTENT_HEIGHT }}
+        >
           <Text
             accessibilityRole="header"
-            className="text-lg font-medium"
+            allowFontScaling={false}
+            className="text-[28px] font-bold"
             numberOfLines={1}
-            style={{ color: foreground }}
+            // Negative tracking keeps a large title from reading loose — Apple
+            // tightens tracking as type grows; a fixed 0 would look airy here.
+            style={{ color: foreground, letterSpacing: -0.4, lineHeight: 34 }}
           >
             {title}
           </Text>
