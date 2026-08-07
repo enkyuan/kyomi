@@ -3,7 +3,7 @@ import { BlurView } from "expo-blur";
 import { useSegments } from "expo-router";
 import type { PropsWithChildren } from "react";
 import type { StyleProp, ViewStyle } from "react-native";
-import { useLiquidGlassAvailable } from "./hooks/use-liquid-glass";
+import { useLiquidGlassAvailable } from "@ui/liquid-glass/use-availability";
 import { TabBarContent } from "./atoms/content";
 import { LiquidTabBarContent } from "./atoms/liquid-content.ios";
 import { ReaderTabBarContent } from "./atoms/reader-content";

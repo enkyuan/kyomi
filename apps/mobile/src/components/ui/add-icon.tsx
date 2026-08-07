@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import type { ColorValue } from "react-native";
 import Animated, {
   Easing,
   useAnimatedStyle,
@@ -18,7 +19,7 @@ export function AddCloseIcon({
   size = 19,
 }: {
   readonly active: boolean;
-  readonly color: string;
+  readonly color: ColorValue;
   readonly shouldReduceMotion: boolean;
   readonly size?: number;
 }) {

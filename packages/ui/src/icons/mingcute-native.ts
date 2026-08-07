@@ -25,6 +25,25 @@ export const Rss2LineNativeIcon: MingcuteNativeIcon = {
   ],
 };
 
+export const FileImportLineNativeIcon: MingcuteNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M13.586 2a2 2 0 0 1 1.284.467l.13.119L19.414 7a2 2 0 0 1 .578 1.238l.008.176V20a2 2 0 0 1-1.85 1.995L18 22h-6v-2h6V10h-4.5a1.5 1.5 0 0 1-1.493-1.356L12 8.5V4H6v8H4V4a2 2 0 0 1 1.85-1.995L6 2zM7.707 14.465l2.829 2.828a1 1 0 0 1 0 1.414l-2.829 2.828a1 1 0 1 1-1.414-1.414L7.414 19H3a1 1 0 1 1 0-2h4.414l-1.121-1.121a1 1 0 1 1 1.414-1.415ZM14 4.414V8h3.586z",
+      fillRule: "evenodd",
+    },
+  ],
+};
+
+export const Folder2LineNativeIcon: MingcuteNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M9.52 3a2 2 0 0 1 1.442.614l.12.137L12.48 5.5H20a2 2 0 0 1 1.995 1.85L22 7.5V19a2 2 0 0 1-1.85 1.995L20 21H4a2 2 0 0 1-1.995-1.85L2 19V5a2 2 0 0 1 1.85-1.995L4 3zM20 11H4v8h16zM9.52 5H4v4h16V7.5h-7.52a2 2 0 0 1-1.442-.614l-.12-.137z",
+    },
+  ],
+};
+
 export const BookmarkLineNativeIcon: MingcuteNativeIcon = {
   viewBox,
   paths: [

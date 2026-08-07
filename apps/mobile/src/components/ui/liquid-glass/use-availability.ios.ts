@@ -11,6 +11,10 @@ function supportsLiquidGlass() {
   }
 }
 
+/**
+ * A shared availability check for Kyomi-owned glass surfaces. It includes
+ * the accessibility preference that turns translucent materials off.
+ */
 export function useLiquidGlassAvailable() {
   const [reduceTransparencyEnabled, setReduceTransparencyEnabled] = useState<boolean | null>(null);
 
