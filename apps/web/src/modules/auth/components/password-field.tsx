@@ -1,10 +1,10 @@
 import { useState } from "react";
 import type React from "react";
-import { Button } from "@kyomi/ui/button";
-import { Field, FieldError, FieldLabel } from "@kyomi/ui/field";
+import { Button } from "@kyomi/ui/atoms/button";
+import { Field, FieldError, FieldLabel } from "@kyomi/ui/atoms/field";
 import { EyeCloseLine, EyeLine } from "@kyomi/ui/icons/mingcute";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@kyomi/ui/input/group";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@kyomi/ui/atoms/input/group";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/atoms/tooltip";
 
 type PasswordFieldProps = Omit<
   React.ComponentProps<typeof InputGroupInput>,

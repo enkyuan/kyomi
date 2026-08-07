@@ -2,7 +2,7 @@
 
 import { startTransition, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { logClientError } from "@lib/errors";
 import {
   CommandDialog,
   CommandDialogPortal,

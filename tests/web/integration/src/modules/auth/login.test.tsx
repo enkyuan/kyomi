@@ -44,7 +44,7 @@ vi.mock("@modules/inbox", () => ({
   prefetchInboxFlow: mocks.prefetchInboxFlow,
 }));
 
-vi.mock("@kyomi/ui/toast", () => ({
+vi.mock("@kyomi/ui/atoms/toast", () => ({
   toastManager: {
     add: mocks.toastAdd,
     promise: mocks.toastPromise,

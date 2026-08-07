@@ -2,13 +2,13 @@
 
 import { act, render, screen, waitFor } from "@testing-library/react";
 import { afterEach, describe, expect, test, vi } from "vitest";
-import { Dialog, DialogBackdrop, DialogPortal, DialogPrimitive } from "@kyomi/ui/dialog";
+import { Dialog, DialogBackdrop, DialogPortal, DialogPrimitive } from "@kyomi/ui/atoms/dialog";
 import {
   AnchoredToastProvider,
   ToastProvider,
   anchoredToastManager,
   toastManager,
-} from "@kyomi/ui/toast";
+} from "@kyomi/ui/atoms/toast";
 
 afterEach(() => {
   act(() => {

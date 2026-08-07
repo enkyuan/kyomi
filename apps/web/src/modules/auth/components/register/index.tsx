@@ -7,11 +7,11 @@ import { useRouter } from "@tanstack/react-router";
 import { useAuth } from "@integrations/better-auth/provider";
 import { authClient } from "@lib/auth/client";
 import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
-import { Button } from "@kyomi/ui/button";
-import { Field, FieldError, FieldLabel } from "@kyomi/ui/field";
-import { Form } from "@kyomi/ui/form";
-import { Input } from "@kyomi/ui/input";
-import { toastManager } from "@kyomi/ui/toast";
+import { Button } from "@kyomi/ui/atoms/button";
+import { Field, FieldError, FieldLabel } from "@kyomi/ui/atoms/field";
+import { Form } from "@kyomi/ui/atoms/form";
+import { Input } from "@kyomi/ui/atoms/input";
+import { toastManager } from "@kyomi/ui/atoms/toast";
 import {
   AuthCard,
   AuthDivider,

@@ -1,9 +1,9 @@
 import type React from "react";
-import { Button } from "@kyomi/ui/button";
-import { Card, CardDescription, CardHeader, CardPanel, CardTitle } from "@kyomi/ui/card";
+import { Button } from "@kyomi/ui/atoms/button";
+import { Card, CardDescription, CardHeader, CardPanel, CardTitle } from "@kyomi/ui/atoms/card";
 import { GoogleFill } from "@kyomi/ui/icons/mingcute";
-import { Separator } from "@kyomi/ui/separator";
-import { Spinner } from "@kyomi/ui/spinner";
+import { Separator } from "@kyomi/ui/atoms/separator";
+import { Spinner } from "@kyomi/ui/atoms/spinner";
 
 export function AuthLoading() {
   return (
