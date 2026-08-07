@@ -4,7 +4,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Suspense, useCallback, useReducer, type Dispatch } from "react";
 import { Transition, type TransitionDirection } from "@kyomi/ui/atoms/transition";
 import { toastManager } from "@kyomi/ui/atoms/toast";
-import { logClientError } from "@lib/errors";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { lazyNamed } from "@lib/lazy-named";
 import { usePlatform } from "@hooks/use-platform";
 import { useTransition } from "@hooks/use-transition";

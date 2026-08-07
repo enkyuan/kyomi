@@ -2,7 +2,7 @@
 
 import { useMutation, type QueryClient } from "@tanstack/react-query";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/atoms/toast";
-import { logClientError } from "@lib/errors";
+import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
 import { followFeed, unfollowFeed } from "@modules/feeds/lib/api";
 import { moveFeedsToFolder } from "@modules/folders/lib/api";
 import { updateInboxItemState } from "@modules/inbox/lib/articles/index";
