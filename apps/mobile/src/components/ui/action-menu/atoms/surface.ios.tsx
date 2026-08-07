@@ -8,15 +8,11 @@ type ActionMenuSurfaceProps = PropsWithChildren<{
   readonly style?: StyleProp<ViewStyle>;
 }>;
 
-/** Uses native interactive Liquid Glass when the device and accessibility settings allow it. */
+/** Native Liquid Glass where available, with the same material fallback as the tab bar. */
 export function ActionMenuSurface({ children, style, usesLiquidGlass }: ActionMenuSurfaceProps) {
   if (usesLiquidGlass) {
     return (
-      <GlassView
-        glassEffectStyle={{ animate: true, animationDuration: 0.18, style: "regular" }}
-        isInteractive
-        style={style}
-      >
+      <GlassView glassEffectStyle="regular" isInteractive style={style}>
         {children}
       </GlassView>
     );

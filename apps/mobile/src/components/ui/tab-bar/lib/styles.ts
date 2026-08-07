@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import type { EdgeInsets } from "react-native-safe-area-context";
 
-const SEPARATE_WIDTH = 72;
+export const SEPARATE_ACTION_WIDTH = 72;
 const READER_SEPARATE_WIDTH = 72;
 const FLOATING_BAR_SIDE_GUTTER = 20;
 const FLOATING_BAR_EDGE_GUTTER = 20;
@@ -73,7 +73,7 @@ export const styles = StyleSheet.create({
     overflow: "hidden",
   },
   separateWrapper: {
-    width: SEPARATE_WIDTH,
+    width: SEPARATE_ACTION_WIDTH,
     height: TAB_BAR_HEIGHT,
     borderRadius: TAB_BAR_HEIGHT / 2,
     overflow: "hidden",

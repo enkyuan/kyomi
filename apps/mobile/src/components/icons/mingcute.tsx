@@ -7,12 +7,7 @@ export type MingcuteIconProps = Omit<SvgProps, "height" | "viewBox" | "width"> &
 };
 
 /** Renders renderer-neutral Mingcute geometry without importing DOM icon components into native. */
-export function MingcuteIcon({
-  icon,
-  size = 20,
-  fill = "currentColor",
-  ...props
-}: MingcuteIconProps) {
+export function MingcuteIcon({ icon, size = 20, fill = "#0B0B0C", ...props }: MingcuteIconProps) {
   return (
     <Svg
       accessibilityElementsHidden
