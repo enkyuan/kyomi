@@ -22,7 +22,12 @@ import {
 } from "./liquid-reader-actions.ios";
 import { ReaderSearchToggleIcon } from "./search-toggle.ios";
 import { useAddTabBar } from "../modes/add";
-import { getFloatingBarPosition, getFloatingBarWidth, styles } from "../lib/styles";
+import {
+  getFloatingBarPosition,
+  getFloatingBarWidth,
+  styles,
+  type BottomScreenCornerRadii,
+} from "../lib/styles";
 import { useReaderTabBar } from "../modes/reader";
 
 const ACTION_ICON_SIZE = 19;
@@ -41,6 +46,7 @@ const BAR_ANIMATION = Animation.spring({ duration: 0.22, bounce: 0 });
 type LiquidTabBarContentProps = BottomTabBarProps & {
   readonly isAddRoute: boolean;
   readonly isReaderRoute: boolean;
+  readonly screenCorners?: BottomScreenCornerRadii;
 };
 
 /**
@@ -54,6 +60,7 @@ export function LiquidTabBarContent({
   isAddRoute,
   isReaderRoute,
   navigation,
+  screenCorners,
   state,
 }: LiquidTabBarContentProps) {
   const router = useRouter();
@@ -85,6 +92,7 @@ export function LiquidTabBarContent({
     isDismissingReader,
     isReaderRoute,
     isSearchExpanded,
+    screenCorners,
     windowWidth,
   });
   const isReady = config !== null;
@@ -286,6 +294,7 @@ function getLiquidBarLayout({
   isDismissingReader,
   isReaderRoute,
   isSearchExpanded,
+  screenCorners,
   windowWidth,
 }: {
   readonly hasAddConfig: boolean;
@@ -294,9 +303,10 @@ function getLiquidBarLayout({
   readonly isDismissingReader: boolean;
   readonly isReaderRoute: boolean;
   readonly isSearchExpanded: boolean;
+  readonly screenCorners?: BottomScreenCornerRadii;
   readonly windowWidth: number;
 }) {
-  const barWidth = getFloatingBarWidth(windowWidth, insets);
+  const barWidth = getFloatingBarWidth(windowWidth, insets, screenCorners);
   const isReaderPresentation = isReaderRoute && !isDismissingReader;
   const isAddPresentation = isAddRoute && hasAddConfig;
   const isReaderSearchExpanded = isReaderPresentation && isSearchExpanded;
@@ -314,7 +324,7 @@ function getLiquidBarLayout({
       : 0;
 
   return {
-    barPosition: getFloatingBarPosition(insets),
+    barPosition: getFloatingBarPosition(insets, screenCorners),
     barWidth,
     gap,
     glassLayoutState,

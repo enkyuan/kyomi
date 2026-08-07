@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
-export const ACTION_MENU_ICON_SIZE = 40;
+/** Large, thumb-friendly circular targets for a compact action menu. */
+export const ACTION_MENU_ICON_SIZE = 56;
 
 export type ActionMenuItem = {
   readonly id: string;

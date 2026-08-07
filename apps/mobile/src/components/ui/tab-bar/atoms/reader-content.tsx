@@ -19,7 +19,7 @@ import {
 import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import { useReaderTabBar } from "../modes/reader";
-import { getFloatingBarPosition, styles } from "../lib/styles";
+import { getFloatingBarPosition, styles, type BottomScreenCornerRadii } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 
 const ACTION_ICON_SIZE = 19;
@@ -29,9 +29,11 @@ const READER_CONTENT_EXITING = FadeOut.duration(96);
 
 export function ReaderTabBarContent({
   insets,
+  screenCorners,
   Surface,
 }: {
   readonly insets: BottomTabBarProps["insets"];
+  readonly screenCorners?: BottomScreenCornerRadii;
   readonly Surface: TabBarSurface;
 }) {
   const router = useRouter();
@@ -68,7 +70,7 @@ export function ReaderTabBarContent({
     <View
       accessibilityRole="toolbar"
       pointerEvents="box-none"
-      style={[styles.readerRow, getFloatingBarPosition(insets)]}
+      style={[styles.readerRow, getFloatingBarPosition(insets, screenCorners)]}
     >
       <ReaderSeparateAction
         accessibilityLabel="Back to inbox"

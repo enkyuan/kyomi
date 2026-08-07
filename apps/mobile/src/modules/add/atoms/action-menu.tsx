@@ -11,46 +11,61 @@ import { AddCloseIcon } from "@/components/ui/add-icon";
 import { ActionMenu, type ActionMenuItem } from "@ui/action-menu";
 import {
   getFloatingBarPosition,
-  getTabBarTopEdgeOffset,
   SEPARATE_ACTION_WIDTH,
   TAB_BAR_HEIGHT,
+  TAB_BAR_ICON_SIZE,
+  type FloatingBarPosition,
 } from "@ui/tab-bar/lib/styles";
 import { Pressable, StyleSheet } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useReducedMotion } from "react-native-reanimated";
 
 type AddActionMenuProps = {
+  /** Position reported by the live tab bar so the overlay shares the real trigger origin. */
+  readonly floatingBarPosition?: FloatingBarPosition;
   readonly isOpen: boolean;
+  readonly onCreateFolder: () => void;
   readonly onDismiss: () => void;
+  readonly onDismissComplete: () => void;
 };
 
 /** Domain composition for the global add action; follow-up flows can be attached per item later. */
-export function AddActionMenu({ isOpen, onDismiss }: AddActionMenuProps) {
+export function AddActionMenu({
+  floatingBarPosition: tabBarPosition,
+  isOpen,
+  onCreateFolder,
+  onDismiss,
+  onDismissComplete,
+}: AddActionMenuProps) {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const shouldReduceMotion = useReducedMotion();
   const { colors } = useTheme();
-  const floatingBarPosition = getFloatingBarPosition(insets);
+  const floatingBarPosition = tabBarPosition ?? getFloatingBarPosition(insets);
+  // The action menu darkens its backdrop in both schemes, so its action
+  // symbols deliberately retain high contrast rather than inheriting page text.
+  const actionIconColor = "#FFFFFF";
   const items = useMemo<readonly ActionMenuItem[]>(
     () => [
       {
         id: "add-feed",
         label: "Add feed",
-        icon: <MingcuteIcon icon={NewsLineNativeIcon} />,
+        icon: <MingcuteIcon fill={actionIconColor} icon={NewsLineNativeIcon} size={26} />,
         onPress: () => router.navigate("/(protected)/(tabs)/add"),
       },
       {
         id: "import-opml",
         label: "Import OPML",
-        icon: <MingcuteIcon icon={FileImportLineNativeIcon} />,
+        icon: <MingcuteIcon fill={actionIconColor} icon={FileImportLineNativeIcon} size={26} />,
       },
       {
-        id: "add-folder",
-        label: "Add folder",
-        icon: <MingcuteIcon icon={Folder2LineNativeIcon} />,
+        id: "create-folder",
+        label: "Create folder",
+        icon: <MingcuteIcon fill={actionIconColor} icon={Folder2LineNativeIcon} size={26} />,
+        onPress: onCreateFolder,
       },
     ],
-    [router],
+    [onCreateFolder, router],
   );
 
   return (
@@ -69,6 +84,7 @@ export function AddActionMenu({ isOpen, onDismiss }: AddActionMenuProps) {
               active={isOpen}
               color={colors.text}
               shouldReduceMotion={shouldReduceMotion}
+              size={TAB_BAR_ICON_SIZE}
             />
           </Pressable>
         ),
@@ -76,11 +92,14 @@ export function AddActionMenu({ isOpen, onDismiss }: AddActionMenuProps) {
         height: TAB_BAR_HEIGHT,
         width: SEPARATE_ACTION_WIDTH,
       }}
-      bottomOffset={getTabBarTopEdgeOffset(insets) + 12}
+      // The same inset drives the tab-bar action and its modal continuation,
+      // keeping the close control fixed directly below the last menu action.
+      bottomOffset={floatingBarPosition.bottom + TAB_BAR_HEIGHT + 12}
       edgeOffset={floatingBarPosition.right}
       isOpen={isOpen}
       items={items}
       onDismiss={onDismiss}
+      onDismissComplete={onDismissComplete}
     />
   );
 }

@@ -3,39 +3,62 @@ import type { EdgeInsets } from "react-native-safe-area-context";
 
 export const SEPARATE_ACTION_WIDTH = 72;
 const READER_SEPARATE_WIDTH = 72;
-const FLOATING_BAR_SIDE_GUTTER = 20;
-const FLOATING_BAR_EDGE_GUTTER = 20;
 const FLOATING_BAR_SAFE_AREA_TAIL_OVERLAP = 12;
 const FLOATING_BAR_CONTENT_GUTTER = 12;
 
 export const TAB_BAR_HEIGHT = 56;
+const FLOATING_BAR_RADIUS = TAB_BAR_HEIGHT / 2;
+const FALLBACK_SCREEN_CORNER_RADIUS = TAB_BAR_HEIGHT;
+/** Standard glyph size for the root tab bar, including the add action. */
+export const TAB_BAR_ICON_SIZE = 24;
 export const READER_TAB_BAR_HEIGHT = 56;
 
 type FloatingBarInsets = Pick<EdgeInsets, "bottom" | "left" | "right">;
 
-type FloatingBarPosition = {
+export type FloatingBarPosition = {
   readonly bottom: number;
   readonly left: number;
   readonly right: number;
 };
 
+/** Physical lower display corners measured by the native platform. */
+export type BottomScreenCornerRadii = {
+  readonly bottomLeft: number;
+  readonly bottomRight: number;
+};
+
+function getConcentricInset(radius: number | undefined) {
+  return Math.max(0, (radius ?? FALLBACK_SCREEN_CORNER_RADIUS) - FLOATING_BAR_RADIUS);
+}
+
 /**
- * The custom tab bar is already absolutely positioned against the navigator's
- * physical lower edge. Let the visual edge gutter do the optical alignment,
- * while retaining the upper portion of a large Android navigation inset.
+ * Insets each lower capsule edge by the difference between the display's
+ * corner radius and the capsule radius. That makes the two arcs concentric.
+ * A persistent Android navigation bar may require a larger safe-area inset.
  */
-export function getFloatingBarPosition(insets: FloatingBarInsets): FloatingBarPosition {
-  const horizontalInset = Math.max(insets.left, insets.right) + FLOATING_BAR_SIDE_GUTTER;
+export function getFloatingBarPosition(
+  insets: FloatingBarInsets,
+  screenCorners?: BottomScreenCornerRadii,
+): FloatingBarPosition {
+  const bottomInset = getConcentricInset(
+    screenCorners ? Math.min(screenCorners.bottomLeft, screenCorners.bottomRight) : undefined,
+  );
 
   return {
-    bottom: Math.max(FLOATING_BAR_EDGE_GUTTER, insets.bottom - FLOATING_BAR_SAFE_AREA_TAIL_OVERLAP),
-    left: horizontalInset,
-    right: horizontalInset,
+    // A capsule's lower radius plus this inset equals the screen's lower
+    // radius. The safety guard only takes over for a persistent Android nav bar.
+    bottom: Math.max(bottomInset, insets.bottom - FLOATING_BAR_SAFE_AREA_TAIL_OVERLAP),
+    left: Math.max(insets.left, getConcentricInset(screenCorners?.bottomLeft)),
+    right: Math.max(insets.right, getConcentricInset(screenCorners?.bottomRight)),
   };
 }
 
-export function getFloatingBarWidth(windowWidth: number, insets: FloatingBarInsets) {
-  const { left, right } = getFloatingBarPosition(insets);
+export function getFloatingBarWidth(
+  windowWidth: number,
+  insets: FloatingBarInsets,
+  screenCorners?: BottomScreenCornerRadii,
+) {
+  const { left, right } = getFloatingBarPosition(insets, screenCorners);
   return Math.max(0, windowWidth - left - right);
 }
 
@@ -69,7 +92,7 @@ export const styles = StyleSheet.create({
   },
   wrapper: {
     flex: 1,
-    borderRadius: 32,
+    borderRadius: FLOATING_BAR_RADIUS,
     overflow: "hidden",
   },
   separateWrapper: {
@@ -82,7 +105,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     height: "100%",
-    borderRadius: 32,
+    borderRadius: FLOATING_BAR_RADIUS,
   },
   separateSurface: {
     flex: 1,
