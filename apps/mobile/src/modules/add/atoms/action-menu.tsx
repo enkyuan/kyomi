@@ -16,7 +16,7 @@ import {
   TAB_BAR_ICON_SIZE,
   type FloatingBarPosition,
 } from "@ui/tab-bar/lib/styles";
-import { Pressable, StyleSheet } from "react-native";
+import { Pressable } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useReducedMotion } from "react-native-reanimated";
 
@@ -78,7 +78,7 @@ export function AddActionMenu({
             accessibilityLabel="Close actions menu"
             accessibilityRole="button"
             onPress={onDismiss}
-            style={styles.anchorButton}
+            className="flex-1 items-center justify-center"
           >
             <AddCloseIcon
               active={isOpen}
@@ -103,11 +103,3 @@ export function AddActionMenu({
     />
   );
 }
-
-const styles = StyleSheet.create({
-  anchorButton: {
-    alignItems: "center",
-    flex: 1,
-    justifyContent: "center",
-  },
-});

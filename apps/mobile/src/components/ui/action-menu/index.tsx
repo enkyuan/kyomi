@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Modal, StyleSheet, View } from "react-native";
+import { Modal, View } from "react-native";
 import { useReducedMotion, useSharedValue } from "react-native-reanimated";
 import { useLiquidGlassAvailable } from "@ui/liquid-glass/use-availability";
 import { ActionMenuBackdrop } from "./atoms/backdrop";
@@ -15,7 +15,6 @@ import { ActionMenuSurface } from "./atoms/surface";
 export { ACTION_MENU_ICON_SIZE, type ActionMenuAnchor, type ActionMenuItem } from "./lib/model";
 
 const DISMISS_DURATION = 220;
-const ITEM_GAP = 8;
 
 type ActionMenuProps = {
   readonly isOpen: boolean;
@@ -108,18 +107,19 @@ export function ActionMenu({
 
   return (
     <Modal animationType="none" onRequestClose={onDismiss} statusBarTranslucent transparent visible>
-      <View accessibilityViewIsModal style={styles.container}>
+      <View accessibilityViewIsModal className="flex-1">
         <ActionMenuBackdrop
           isOpen={menuOpen}
           onDismiss={onDismiss}
           shouldReduceMotion={shouldReduceMotion}
         />
-        <View pointerEvents={isOpen ? "box-none" : "none"} style={styles.menuContainer}>
+        <View className="absolute inset-0 justify-end" pointerEvents={isOpen ? "box-none" : "none"}>
           <View
             onLayout={(event) => {
               itemsHeight.value = event.nativeEvent.layout.height;
             }}
-            style={[styles.items, alignmentStyle, { bottom: bottomOffset }]}
+            className="absolute gap-2"
+            style={[alignmentStyle, { bottom: bottomOffset }]}
           >
             {items.map((item, index) => (
               <AnimatedActionMenuRow
@@ -139,7 +139,7 @@ export function ActionMenu({
         {anchor ? (
           <ActionMenuSurface
             style={[
-              styles.anchor,
+              { borderRadius: 28, overflow: "hidden", position: "absolute" },
               {
                 bottom: anchor.bottomOffset,
                 height: anchor.height,
@@ -165,26 +165,3 @@ function getItemEdgeOffset(anchor: ActionMenuAnchor | undefined, edgeOffset: num
 
   return edgeOffset + Math.max(0, (anchor.width - ACTION_MENU_ICON_SIZE) / 2);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  menuContainer: {
-    position: "absolute",
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    justifyContent: "flex-end",
-  },
-  items: {
-    gap: ITEM_GAP,
-    position: "absolute",
-  },
-  anchor: {
-    borderRadius: 28,
-    overflow: "hidden",
-    position: "absolute",
-  },
-});
