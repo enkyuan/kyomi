@@ -1,7 +1,6 @@
 import { CloseIcon, ListSearchIcon } from "@/components/icons";
 import { View } from "react-native";
 import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
-import { styles } from "../lib/styles";
 
 const ACTION_ICON_SIZE = 19;
 
@@ -18,12 +17,12 @@ export function ReaderSearchToggleIcon({
   const exiting = shouldReduceMotion ? undefined : FadeOut.duration(90);
 
   return (
-    <View style={styles.liquidIconSwap}>
+    <View className="size-[19px]">
       <Animated.View
         entering={entering}
         exiting={exiting}
         key={isSearchExpanded ? "close" : "search"}
-        style={styles.liquidIconSwapLayer}
+        className="absolute inset-0 items-center justify-center"
       >
         {isSearchExpanded ? (
           <CloseIcon fill={inactiveColor} size={ACTION_ICON_SIZE} />

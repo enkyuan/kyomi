@@ -25,7 +25,6 @@ import { useAddTabBar } from "../modes/add";
 import {
   getFloatingBarPosition,
   getFloatingBarWidth,
-  styles,
   type BottomScreenCornerRadii,
 } from "../lib/styles";
 import { useReaderTabBar } from "../modes/reader";
@@ -144,7 +143,7 @@ export function LiquidTabBarContent({
       // physical floating-bar inset. Keep SwiftUI from applying a second
       // safe-area transform so their shared trailing action stays fixed.
       ignoreSafeArea="all"
-      style={[styles.liquidHost, barPosition]}
+      style={[{ height: BAR_HEIGHT, position: "absolute" }, barPosition]}
     >
       <Namespace id={namespaceId}>
         <GlassEffectContainer
@@ -182,7 +181,7 @@ export function LiquidTabBarContent({
                 shouldReduceMotion={shouldReduceMotion}
                 width={primaryWidth}
               >
-                <View accessibilityRole="tablist" style={styles.liquidPrimaryGroup}>
+                <View accessibilityRole="tablist" className="h-14 flex-1 flex-row">
                   <FeedTabActions
                     descriptors={descriptors}
                     navigation={navigation}
@@ -214,7 +213,7 @@ export function LiquidTabBarContent({
                   <Animated.View
                     entering={shouldReduceMotion ? undefined : FadeIn.delay(36).duration(164)}
                     exiting={shouldReduceMotion ? undefined : FadeOut.duration(96)}
-                    style={styles.liquidContentLayer}
+                    className="size-full flex-1"
                   >
                     <SearchField
                       accessibilityLabel="Search feeds"
@@ -234,7 +233,7 @@ export function LiquidTabBarContent({
                 shouldReduceMotion={shouldReduceMotion}
                 width={trailingWidth}
               >
-                <View accessibilityRole="tablist" style={styles.liquidSeparateGroup}>
+                <View accessibilityRole="tablist" className="flex-1">
                   <FeedTabActions
                     descriptors={descriptors}
                     navigation={navigation}

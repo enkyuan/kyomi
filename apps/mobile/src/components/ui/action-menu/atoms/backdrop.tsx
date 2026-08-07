@@ -1,5 +1,5 @@
 import { BlurView } from "expo-blur";
-import { Platform, Pressable, StyleSheet } from "react-native";
+import { Platform, Pressable } from "react-native";
 import Animated, {
   type SharedValue,
   useAnimatedProps,
@@ -35,7 +35,8 @@ export function ActionMenuBackdrop({
         accessibilityLabel="Dismiss actions menu"
         accessibilityRole="button"
         onPress={onDismiss}
-        style={[StyleSheet.absoluteFill, styles.androidBackdrop, androidStyle]}
+        className="absolute inset-0 bg-[rgba(0,0,0,0.9)]"
+        style={androidStyle}
       />
     );
   }
@@ -45,15 +46,9 @@ export function ActionMenuBackdrop({
       accessibilityLabel="Dismiss actions menu"
       accessibilityRole="button"
       onPress={onDismiss}
-      style={StyleSheet.absoluteFill}
+      className="absolute inset-0"
     >
-      <AnimatedBlurView animatedProps={animatedProps} style={StyleSheet.absoluteFill} tint="dark" />
+      <AnimatedBlurView animatedProps={animatedProps} className="absolute inset-0" tint="dark" />
     </Pressable>
   );
 }
-
-const styles = StyleSheet.create({
-  androidBackdrop: {
-    backgroundColor: "rgba(0, 0, 0, 0.9)",
-  },
-});

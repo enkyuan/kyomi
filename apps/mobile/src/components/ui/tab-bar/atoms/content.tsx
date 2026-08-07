@@ -12,7 +12,7 @@ import { AddCloseIcon } from "@/components/ui/add-icon";
 import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { FeedTabActions, hasSeparateFeedTabAction } from "./feed-actions";
 import { useAddTabBar } from "../modes/add";
-import { getFloatingBarPosition, styles, type BottomScreenCornerRadii } from "../lib/styles";
+import { getFloatingBarPosition, type BottomScreenCornerRadii } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 
 type TabBarContentProps = BottomTabBarProps & {
@@ -56,18 +56,21 @@ export function TabBarContent({
   };
 
   return (
-    <View style={[styles.row, getFloatingBarPosition(insets, screenCorners)]}>
+    <View
+      className="absolute flex-row items-center gap-3"
+      style={getFloatingBarPosition(insets, screenCorners)}
+    >
       <Animated.View
         layout={shouldReduceMotion ? undefined : ADD_LAYOUT_TRANSITION}
-        style={styles.wrapper}
+        className="flex-1 overflow-hidden rounded-full"
       >
-        <Surface style={styles.primarySurface}>
+        <Surface style={{ flex: 1, height: "100%", width: "100%" }}>
           {isAddPresentation && config ? (
             <Animated.View
               entering={shouldReduceMotion ? undefined : ADD_CONTENT_ENTERING}
               exiting={shouldReduceMotion ? undefined : ADD_CONTENT_EXITING}
               key="add-search"
-              style={styles.readerSearchContent}
+              className="size-full flex-1"
             >
               <SearchField
                 accessibilityLabel="Search feeds"
@@ -83,9 +86,9 @@ export function TabBarContent({
               entering={shouldReduceMotion ? undefined : ADD_CONTENT_ENTERING}
               exiting={shouldReduceMotion ? undefined : ADD_CONTENT_EXITING}
               key="feed-tabs"
-              style={styles.readerSearchContent}
+              className="size-full flex-1"
             >
-              <View accessibilityRole="tablist" style={styles.bar}>
+              <View accessibilityRole="tablist" className="h-14 flex-row">
                 <FeedTabActions
                   descriptors={descriptors}
                   navigation={navigation}
@@ -101,24 +104,21 @@ export function TabBarContent({
       {isAddPresentation || hasSeparateFeedTabAction({ descriptors, state }) ? (
         <Animated.View
           layout={shouldReduceMotion ? undefined : ADD_LAYOUT_TRANSITION}
-          style={styles.separateWrapper}
+          className="h-14 w-18 overflow-hidden rounded-full"
         >
-          <Surface style={styles.separateSurface}>
+          <Surface style={{ flex: 1, height: "100%", width: "100%" }}>
             {isAddPresentation ? (
               <Animated.View
                 entering={shouldReduceMotion ? undefined : ADD_CONTENT_ENTERING}
                 exiting={shouldReduceMotion ? undefined : ADD_CONTENT_EXITING}
                 key="close-add-search"
-                style={styles.readerSearchContent}
+                className="size-full flex-1"
               >
                 <Pressable
                   accessibilityLabel="Close feed search"
                   accessibilityRole="button"
                   onPress={closeAdd}
-                  style={({ pressed }) => [
-                    styles.readerSeparateAction,
-                    pressed && styles.readerActionPressed,
-                  ]}
+                  className="size-full items-center justify-center rounded-full active:bg-[rgba(255,255,255,0.12)]"
                 >
                   <AddCloseIcon
                     active
@@ -132,9 +132,9 @@ export function TabBarContent({
                 entering={shouldReduceMotion ? undefined : ADD_CONTENT_ENTERING}
                 exiting={shouldReduceMotion ? undefined : ADD_CONTENT_EXITING}
                 key="add-tab"
-                style={styles.readerSearchContent}
+                className="size-full flex-1"
               >
-                <View accessibilityRole="tablist" style={styles.separateBar}>
+                <View accessibilityRole="tablist" className="flex-1">
                   <FeedTabActions
                     descriptors={descriptors}
                     navigation={navigation}

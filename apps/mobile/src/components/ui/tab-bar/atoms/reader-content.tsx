@@ -19,7 +19,7 @@ import {
 import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import { useReaderTabBar } from "../modes/reader";
-import { getFloatingBarPosition, styles, type BottomScreenCornerRadii } from "../lib/styles";
+import { getFloatingBarPosition, type BottomScreenCornerRadii } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 
 const ACTION_ICON_SIZE = 19;
@@ -70,7 +70,8 @@ export function ReaderTabBarContent({
     <View
       accessibilityRole="toolbar"
       pointerEvents="box-none"
-      style={[styles.readerRow, getFloatingBarPosition(insets, screenCorners)]}
+      className="absolute flex-row items-center gap-2"
+      style={getFloatingBarPosition(insets, screenCorners)}
     >
       <ReaderSeparateAction
         accessibilityLabel="Back to inbox"
@@ -122,9 +123,9 @@ function ReaderPrimarySurface({
   return (
     <Animated.View
       layout={shouldReduceMotion ? undefined : READER_LAYOUT_TRANSITION}
-      style={styles.readerWrapper}
+      className="h-14 min-w-0 flex-1 overflow-hidden rounded-full"
     >
-      <Surface style={styles.readerSurface}>
+      <Surface style={{ flex: 1, height: "100%", width: "100%" }}>
         <ReaderPrimaryContent
           config={config}
           inactiveIconColor={inactiveIconColor}
@@ -159,7 +160,7 @@ function ReaderPrimaryContent({
         entering={shouldReduceMotion ? undefined : READER_CONTENT_ENTERING}
         exiting={shouldReduceMotion ? undefined : READER_CONTENT_EXITING}
         key="reader-search"
-        style={styles.readerSearchContent}
+        className="size-full flex-1"
       >
         <SearchField
           accessibilityLabel="Find in article"
@@ -179,9 +180,9 @@ function ReaderPrimaryContent({
       entering={shouldReduceMotion ? undefined : READER_CONTENT_ENTERING}
       exiting={shouldReduceMotion ? undefined : READER_CONTENT_EXITING}
       key="reader-actions"
-      style={styles.readerSearchContent}
+      className="size-full flex-1"
     >
-      <View style={styles.readerBar}>
+      <View className="flex-1 flex-row items-center">
         <ReaderAction
           accessibilityLabel={config?.isSaved ? "Remove from read later" : "Read later"}
           disabled={config?.isUpdating ?? true}
@@ -266,7 +267,7 @@ function ReaderAction({
       accessibilityRole="button"
       disabled={disabled}
       onPress={onPress}
-      style={({ pressed }) => [styles.readerAction, pressed && styles.readerActionPressed]}
+      className="m-1 h-12 min-w-0 grow basis-0 items-center justify-center rounded-full active:bg-[rgba(255,255,255,0.12)]"
     >
       {children}
     </Pressable>
@@ -291,18 +292,15 @@ function ReaderSeparateAction({
   return (
     <Animated.View
       layout={shouldAnimate ? READER_LAYOUT_TRANSITION : undefined}
-      style={styles.readerSeparateWrapper}
+      className="h-14 w-18 overflow-hidden rounded-full"
     >
-      <Surface style={styles.readerSeparateSurface}>
+      <Surface style={{ height: "100%", width: "100%" }}>
         <Pressable
           accessibilityLabel={accessibilityLabel}
           accessibilityRole="button"
           disabled={disabled}
           onPress={onPress}
-          style={({ pressed }) => [
-            styles.readerSeparateAction,
-            pressed && styles.readerActionPressed,
-          ]}
+          className="size-full items-center justify-center rounded-full active:bg-[rgba(255,255,255,0.12)]"
         >
           {children}
         </Pressable>

@@ -1,9 +1,7 @@
 import { BlurView } from "expo-blur";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { triggerSelectionHaptic } from "@utils/haptics";
-import { ACTION_MENU_ICON_SIZE, type ActionMenuItem as ActionMenuItemModel } from "../lib/model";
-
-const ICON_TINT = "rgba(255, 255, 255, 0.18)";
+import type { ActionMenuItem as ActionMenuItemModel } from "../lib/model";
 
 type ActionMenuItemProps = {
   readonly alignment: "start" | "end";
@@ -25,76 +23,32 @@ export function ActionMenuItem({ alignment, item, onDismiss }: ActionMenuItemPro
       accessibilityRole="button"
       hitSlop={8}
       onPress={handlePress}
-      style={({ pressed }) => [
-        styles.row,
-        alignment === "end" ? styles.endAligned : styles.startAligned,
-        pressed && styles.pressed,
-      ]}
+      className={
+        alignment === "end"
+          ? "h-16 min-w-70 flex-row items-center justify-end gap-3 active:scale-[0.96] active:opacity-[0.72]"
+          : "h-16 min-w-70 flex-row-reverse items-center justify-end gap-3 active:scale-[0.96] active:opacity-[0.72]"
+      }
     >
       <Text
         numberOfLines={1}
-        style={[styles.label, alignment === "end" ? styles.endLabel : styles.startLabel]}
+        className={
+          alignment === "end"
+            ? "min-w-0 shrink text-right text-xl font-semibold leading-6 text-white"
+            : "min-w-0 shrink text-left text-xl font-semibold leading-6 text-white"
+        }
       >
         {item.label}
       </Text>
       <BlurView
         accessible={false}
         intensity={72}
-        style={styles.iconSlot}
+        className="size-14 items-center justify-center overflow-hidden rounded-full border border-white/[0.14] bg-[rgba(255,255,255,0.18)]"
         tint="systemThickMaterialDark"
       >
-        <View accessible={false} style={styles.iconContent}>
+        <View accessible={false} className="translate-y-[-0.5px]">
           {item.icon}
         </View>
       </BlurView>
     </Pressable>
   );
 }
-
-const styles = StyleSheet.create({
-  row: {
-    alignItems: "center",
-    columnGap: 12,
-    flexDirection: "row",
-    height: 64,
-    justifyContent: "flex-end",
-    minWidth: 280,
-  },
-  startAligned: {
-    flexDirection: "row-reverse",
-  },
-  endAligned: {
-    flexDirection: "row",
-  },
-  pressed: {
-    opacity: 0.72,
-    transform: [{ scale: 0.96 }],
-  },
-  iconSlot: {
-    alignItems: "center",
-    backgroundColor: ICON_TINT,
-    borderColor: "rgba(255, 255, 255, 0.14)",
-    borderRadius: ACTION_MENU_ICON_SIZE / 2,
-    borderWidth: StyleSheet.hairlineWidth,
-    height: ACTION_MENU_ICON_SIZE,
-    justifyContent: "center",
-    overflow: "hidden",
-    width: ACTION_MENU_ICON_SIZE,
-  },
-  iconContent: {
-    transform: [{ translateY: -0.5 }],
-  },
-  label: {
-    color: "#FFFFFF",
-    flexShrink: 1,
-    fontSize: 20,
-    fontWeight: "600",
-    lineHeight: 24,
-  },
-  startLabel: {
-    textAlign: "left",
-  },
-  endLabel: {
-    textAlign: "right",
-  },
-});

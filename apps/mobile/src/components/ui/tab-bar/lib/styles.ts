@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 import type { EdgeInsets } from "react-native-safe-area-context";
 
 export const SEPARATE_ACTION_WIDTH = 72;
-const READER_SEPARATE_WIDTH = 72;
 const FLOATING_BAR_SAFE_AREA_TAIL_OVERLAP = 12;
 const FLOATING_BAR_CONTENT_GUTTER = 12;
 
@@ -83,157 +82,26 @@ export function getReaderTabBarOcclusionHeight(insets: FloatingBarInsets) {
   return getFloatingBarOcclusionHeight(insets, READER_TAB_BAR_HEIGHT);
 }
 
+/** Reanimated needs these resolved style objects for its animated tab layer. */
 export const styles = StyleSheet.create({
-  row: {
-    position: "absolute",
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 12,
-  },
-  wrapper: {
-    flex: 1,
-    borderRadius: FLOATING_BAR_RADIUS,
-    overflow: "hidden",
-  },
-  separateWrapper: {
-    width: SEPARATE_ACTION_WIDTH,
-    height: TAB_BAR_HEIGHT,
-    borderRadius: TAB_BAR_HEIGHT / 2,
-    overflow: "hidden",
-  },
-  primarySurface: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-    borderRadius: FLOATING_BAR_RADIUS,
-  },
-  separateSurface: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-    borderRadius: TAB_BAR_HEIGHT / 2,
-  },
-  bar: {
-    flexDirection: "row",
-    height: TAB_BAR_HEIGHT,
-  },
-  separateBar: {
-    flex: 1,
-  },
   tab: {
-    flex: 1,
     alignItems: "center",
-    justifyContent: "center",
     borderRadius: 200,
+    flex: 1,
+    justifyContent: "center",
     margin: 6,
     position: "relative",
   },
+  tabBackground: {
+    backgroundColor: "rgba(255, 255, 255, 0.16)",
+    borderRadius: 200,
+    bottom: 0,
+    left: 0,
+    position: "absolute",
+    right: 0,
+    top: 0,
+  },
   tabPressed: {
     opacity: 0.7,
-  },
-  tabBackground: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    borderRadius: 200,
-    backgroundColor: "rgba(255, 255, 255, 0.16)",
-  },
-  readerRow: {
-    position: "absolute",
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-  },
-  liquidHost: {
-    position: "absolute",
-    height: TAB_BAR_HEIGHT,
-  },
-  liquidHostedContent: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-  },
-  liquidContentLayer: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-  },
-  liquidIconSwap: {
-    width: 19,
-    height: 19,
-  },
-  liquidIconSwapLayer: {
-    position: "absolute",
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  liquidPrimaryGroup: {
-    flex: 1,
-    flexDirection: "row",
-    height: TAB_BAR_HEIGHT,
-  },
-  liquidSeparateGroup: {
-    flex: 1,
-  },
-  readerWrapper: {
-    flex: 1,
-    minWidth: 0,
-    height: READER_TAB_BAR_HEIGHT,
-    borderRadius: READER_TAB_BAR_HEIGHT / 2,
-    overflow: "hidden",
-  },
-  readerSurface: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-    borderRadius: READER_TAB_BAR_HEIGHT / 2,
-  },
-  readerBar: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  readerAction: {
-    flexBasis: 0,
-    flexGrow: 1,
-    flexShrink: 1,
-    minWidth: 0,
-    height: 48,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 24,
-    margin: 4,
-  },
-  readerActionPressed: {
-    backgroundColor: "rgba(255, 255, 255, 0.12)",
-  },
-  readerSearchContent: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-  },
-  readerSeparateWrapper: {
-    width: READER_SEPARATE_WIDTH,
-    height: READER_TAB_BAR_HEIGHT,
-    borderRadius: READER_TAB_BAR_HEIGHT / 2,
-    overflow: "hidden",
-  },
-  readerSeparateSurface: {
-    width: READER_SEPARATE_WIDTH,
-    height: READER_TAB_BAR_HEIGHT,
-    borderRadius: READER_TAB_BAR_HEIGHT / 2,
-  },
-  readerSeparateAction: {
-    width: READER_SEPARATE_WIDTH,
-    height: READER_TAB_BAR_HEIGHT,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: READER_TAB_BAR_HEIGHT / 2,
   },
 });

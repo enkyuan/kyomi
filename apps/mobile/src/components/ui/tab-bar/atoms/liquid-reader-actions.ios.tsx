@@ -14,7 +14,6 @@ import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
 import { BookmarkIcon, ExternalLinkIcon, ShareIcon } from "@/components/icons";
 import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
-import { styles } from "../lib/styles";
 import type { ReaderTabBarConfig } from "../modes/reader";
 
 const ACTION_ICON_SIZE = 19;
@@ -43,7 +42,7 @@ export function LiquidReaderLayer({
       ]}
     >
       <RNHostView>
-        <View pointerEvents={active ? "auto" : "none"} style={styles.liquidHostedContent}>
+        <View pointerEvents={active ? "auto" : "none"} className="size-full flex-1">
           {children}
         </View>
       </RNHostView>
@@ -74,7 +73,7 @@ export function LiquidReaderPrimaryActions({
         entering={entering}
         exiting={exiting}
         key="search"
-        style={styles.liquidContentLayer}
+        className="size-full flex-1"
       >
         <SearchField
           accessibilityLabel="Find in article"
@@ -90,13 +89,8 @@ export function LiquidReaderPrimaryActions({
   }
 
   return (
-    <Animated.View
-      entering={entering}
-      exiting={exiting}
-      key="actions"
-      style={styles.liquidContentLayer}
-    >
-      <View style={styles.readerBar}>
+    <Animated.View entering={entering} exiting={exiting} key="actions" className="size-full flex-1">
+      <View className="flex-1 flex-row items-center">
         <LiquidReaderToolbarAction
           accessibilityLabel={config?.isSaved ? "Remove from read later" : "Read later"}
           disabled={!isReady || config.isUpdating}
@@ -144,7 +138,7 @@ export function LiquidReaderSeparateAction({
       accessibilityRole="button"
       disabled={isDisabled}
       onPress={onPress}
-      style={({ pressed }) => [styles.readerSeparateAction, pressed && styles.readerActionPressed]}
+      className="size-full items-center justify-center rounded-full active:bg-[rgba(255,255,255,0.12)]"
     >
       {children}
     </Pressable>
@@ -168,7 +162,7 @@ function LiquidReaderToolbarAction({
       accessibilityRole="button"
       disabled={isDisabled}
       onPress={onPress}
-      style={({ pressed }) => [styles.readerAction, pressed && styles.readerActionPressed]}
+      className="m-1 h-12 min-w-0 grow basis-0 items-center justify-center rounded-full active:bg-[rgba(255,255,255,0.12)]"
     >
       {children}
     </Pressable>
