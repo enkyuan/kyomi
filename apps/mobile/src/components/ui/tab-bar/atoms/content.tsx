@@ -12,11 +12,12 @@ import { AddCloseIcon } from "@/components/ui/add-icon";
 import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { FeedTabActions, hasSeparateFeedTabAction } from "./feed-actions";
 import { useAddTabBar } from "../modes/add";
-import { getFloatingBarPosition, styles } from "../lib/styles";
+import { getFloatingBarPosition, styles, type BottomScreenCornerRadii } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 
 type TabBarContentProps = BottomTabBarProps & {
   readonly isAddRoute: boolean;
+  readonly screenCorners?: BottomScreenCornerRadii;
   Surface: TabBarSurface;
 };
 
@@ -31,6 +32,7 @@ export function TabBarContent({
   insets,
   isAddRoute,
   navigation,
+  screenCorners,
   Surface,
 }: TabBarContentProps) {
   const router = useRouter();
@@ -54,7 +56,7 @@ export function TabBarContent({
   };
 
   return (
-    <View style={[styles.row, getFloatingBarPosition(insets)]}>
+    <View style={[styles.row, getFloatingBarPosition(insets, screenCorners)]}>
       <Animated.View
         layout={shouldReduceMotion ? undefined : ADD_LAYOUT_TRANSITION}
         style={styles.wrapper}

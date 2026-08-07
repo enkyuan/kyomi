@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Modal, StyleSheet, View } from "react-native";
 import { useReducedMotion, useSharedValue } from "react-native-reanimated";
 import { useLiquidGlassAvailable } from "@ui/liquid-glass/use-availability";
 import { ActionMenuBackdrop } from "./atoms/backdrop";
 import { AnimatedActionMenuRow } from "./atoms/animated-row";
 import { ActionMenuItem } from "./atoms/item";
-import { type ActionMenuAnchor, type ActionMenuItem as ActionMenuItemModel } from "./lib/model";
+import {
+  ACTION_MENU_ICON_SIZE,
+  type ActionMenuAnchor,
+  type ActionMenuItem as ActionMenuItemModel,
+} from "./lib/model";
 import { ActionMenuSurface } from "./atoms/surface";
 
 export { ACTION_MENU_ICON_SIZE, type ActionMenuAnchor, type ActionMenuItem } from "./lib/model";
@@ -17,6 +21,8 @@ type ActionMenuProps = {
   readonly isOpen: boolean;
   readonly items: readonly ActionMenuItemModel[];
   readonly onDismiss: () => void;
+  /** Called after the menu's closing motion has completed. */
+  readonly onDismissComplete?: () => void;
   /** Bottom offset from the physical screen edge, including any persistent chrome. */
   readonly bottomOffset: number;
   /** Physical edge offset for the menu item's outer edge. */
@@ -39,18 +45,24 @@ export function ActionMenu({
   isOpen,
   items,
   onDismiss,
+  onDismissComplete,
 }: ActionMenuProps) {
   const [isPresented, setIsPresented] = useState(false);
+  const didPresentRef = useRef(false);
+  const onDismissCompleteRef = useRef(onDismissComplete);
   const itemsHeight = useSharedValue(0);
   const menuOpen = useSharedValue(false);
   const shouldReduceMotion = useReducedMotion();
   const usesLiquidGlass = useLiquidGlassAvailable();
+
+  onDismissCompleteRef.current = onDismissComplete;
 
   useEffect(() => {
     let dismissTimer: ReturnType<typeof setTimeout> | undefined;
     let frame: ReturnType<typeof requestAnimationFrame> | undefined;
 
     if (isOpen) {
+      didPresentRef.current = true;
       setIsPresented(true);
       if (shouldReduceMotion) {
         menuOpen.value = true;
@@ -62,8 +74,15 @@ export function ActionMenu({
       }
     } else {
       menuOpen.value = false;
+      if (!didPresentRef.current) {
+        return;
+      }
       dismissTimer = setTimeout(
-        () => setIsPresented(false),
+        () => {
+          setIsPresented(false);
+          didPresentRef.current = false;
+          onDismissCompleteRef.current?.();
+        },
         shouldReduceMotion ? 0 : DISMISS_DURATION,
       );
     }
@@ -84,8 +103,8 @@ export function ActionMenu({
 
   const alignmentStyle =
     alignment === "end"
-      ? { right: edgeOffset, alignItems: "flex-end" as const }
-      : { left: edgeOffset, alignItems: "flex-start" as const };
+      ? { right: getItemEdgeOffset(anchor, edgeOffset), alignItems: "flex-end" as const }
+      : { left: getItemEdgeOffset(anchor, edgeOffset), alignItems: "flex-start" as const };
 
   return (
     <Modal animationType="none" onRequestClose={onDismiss} statusBarTranslucent transparent visible>
@@ -112,12 +131,7 @@ export function ActionMenu({
                 numberOfRows={items.length}
                 shouldReduceMotion={shouldReduceMotion}
               >
-                <ActionMenuItem
-                  alignment={alignment}
-                  item={item}
-                  onDismiss={onDismiss}
-                  usesLiquidGlass={usesLiquidGlass}
-                />
+                <ActionMenuItem alignment={alignment} item={item} onDismiss={onDismiss} />
               </AnimatedActionMenuRow>
             ))}
           </View>
@@ -141,6 +155,15 @@ export function ActionMenu({
       </View>
     </Modal>
   );
+}
+
+/** Centers the option-icon column on the persistent action's centerline. */
+function getItemEdgeOffset(anchor: ActionMenuAnchor | undefined, edgeOffset: number) {
+  if (!anchor) {
+    return edgeOffset;
+  }
+
+  return edgeOffset + Math.max(0, (anchor.width - ACTION_MENU_ICON_SIZE) / 2);
 }
 
 const styles = StyleSheet.create({
