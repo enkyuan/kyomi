@@ -131,7 +131,13 @@ export function LiquidTabBarContent({
   };
 
   return (
-    <Host style={[styles.liquidHost, barPosition]}>
+    <Host
+      // The tab bar and the React Native action-menu overlay both use the
+      // physical floating-bar inset. Keep SwiftUI from applying a second
+      // safe-area transform so their shared trailing action stays fixed.
+      ignoreSafeArea="all"
+      style={[styles.liquidHost, barPosition]}
+    >
       <Namespace id={namespaceId}>
         <GlassEffectContainer
           modifiers={[
