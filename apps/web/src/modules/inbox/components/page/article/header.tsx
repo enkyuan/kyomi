@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
-import type { ArticleDetailDto } from "@lib/schemas/index";
+import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import { BackToInboxButton, SearchBar } from "@modules/inbox/components/list/header";
 import { ReaderFontSizeControls } from "@modules/reader/components/toolbar";
 import { useReaderToolbar } from "@hooks/use-toolbar";

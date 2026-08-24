@@ -1,4 +1,4 @@
-import type { InboxDensityDto } from "@lib/schemas/index";
+import type { InboxDensityDto } from "@kyomi/reader/schemas";
 
 export function getTypography({
   density,

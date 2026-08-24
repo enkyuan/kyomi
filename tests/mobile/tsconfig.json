@@ -12,7 +12,6 @@
       "@ui/*": ["../../apps/mobile/src/components/ui/*"],
       "@utils/*": ["../../apps/mobile/src/utils/*"],
       "@tests/*": ["../*"],
-      "@kyomi/auth/*": ["../../packages/auth/src/*"],
       "@kyomi/ui/*": ["../../packages/ui/src/*"]
     },
     "types": ["bun"]

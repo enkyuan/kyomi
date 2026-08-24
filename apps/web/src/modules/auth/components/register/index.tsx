@@ -6,7 +6,7 @@ import { useForm } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { prefetchInboxFlow } from "@modules/inbox";
 import { useAuth } from "@integrations/better-auth/provider";
 import { Button } from "@kyomi/ui/button";

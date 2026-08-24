@@ -1,4 +1,4 @@
-import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
+import type { InboxDensityDto, InboxTimestampDisplayDto } from "@kyomi/reader/schemas";
 import type { InboxFilter, InboxItem } from "@modules/inbox/lib/articles/index";
 
 export type Props = {

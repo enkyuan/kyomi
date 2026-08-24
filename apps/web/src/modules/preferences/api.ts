@@ -1,16 +1,16 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders } from "@lib/api";
-import type { UserPreferencesDto } from "@lib/schemas/index";
+import type { UserPreferencesDto } from "@kyomi/reader/schemas";
 
 let preferencesSchemaModulePromise:
   | Promise<
-      Pick<typeof import("@lib/schemas/index"), "fetchValidatedJson" | "userPreferencesSchema">
+      Pick<typeof import("@kyomi/reader/schemas"), "fetchValidatedJson" | "userPreferencesSchema">
     >
   | undefined;
 
 function getPreferencesSchemaModule() {
-  preferencesSchemaModulePromise ??= import("@lib/schemas/index").then((module) => ({
+  preferencesSchemaModulePromise ??= import("@kyomi/reader/schemas").then((module) => ({
     fetchValidatedJson: module.fetchValidatedJson,
     userPreferencesSchema: module.userPreferencesSchema,
   }));

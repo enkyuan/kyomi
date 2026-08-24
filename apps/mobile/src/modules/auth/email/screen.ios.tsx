@@ -30,7 +30,8 @@ import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "react-native-reanimated";
 import { EmailFormStep, OtpFormStep, type EmailStepTheme } from "./components/step-content.ios";
 import { useErrorShake } from "./hooks/use-error-shake";
-import { authClient } from "@/lib/auth-client";
+import { isValidEmail } from "@kyomi/reader/schemas/auth";
+import { authClient } from "@/lib/auth";
 
 const FULL_WIDTH = [frame({ maxWidth: Infinity })];
 const CENTERED_LABEL = [frame({ maxWidth: Infinity, alignment: "center" })];
@@ -107,6 +108,11 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
 
   async function handleSendCode() {
     if (isSubmitting) return;
+    if (!isValidEmail(email.value)) {
+      reportInvalid("email");
+      emailFieldRef.current?.focus();
+      return;
+    }
     setIsSubmitting(true);
     setInvalidStep(null);
     const { error: sendError } = await authClient.emailOtp.sendVerificationOtp({

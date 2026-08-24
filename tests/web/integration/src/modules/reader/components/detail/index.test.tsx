@@ -4,7 +4,7 @@ import { render } from "@testing-library/react";
 import type { ReactNode, Ref } from "react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Detail } from "@modules/reader/components/detail";
-import type { ArticleDetailDto, ReaderContentDto } from "@lib/schemas/index";
+import type { ArticleDetailDto, ReaderContentDto } from "@kyomi/reader/schemas";
 
 vi.mock("@modules/reader/hooks/use-preferences", () => ({
   useReaderPreferences: () => ({

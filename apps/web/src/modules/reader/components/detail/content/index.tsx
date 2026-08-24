@@ -1,6 +1,6 @@
 "use client";
 
-import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
+import type { InboxDensityDto, InboxTimestampDisplayDto } from "@kyomi/reader/schemas";
 import type { ArticleStepDirection, ReaderDetailState } from "@modules/reader/lib/detail";
 import { EmptyState } from "../states/empty";
 import { ErrorState } from "../states/error";

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchMobileApiJson } from "@/lib/api-client";
+import { fetchMobileApiJson } from "@/lib/api";
 import type { ReaderArticle } from "../lib/article";
 
 export const readerArticleQueryKey = (articleId: string) =>

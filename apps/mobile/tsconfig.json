@@ -11,7 +11,6 @@
       "@lib/*": ["./src/lib/*"],
       "@ui/*": ["./src/components/ui/*"],
       "@utils/*": ["./src/utils/*"],
-      "@kyomi/auth/*": ["../../packages/auth/src/*"],
       "@kyomi/ui/*": ["../../packages/ui/src/*"]
     }
   }

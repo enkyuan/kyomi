@@ -1,12 +1,10 @@
 import { QueryClient } from "@tanstack/react-query";
-import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
-import type { ReactNode } from "react";
 import { createMMKV } from "react-native-mmkv";
 
 const storage = createMMKV({ id: "query-cache" });
 
-const persister = createSyncStoragePersister({
+export const persister = createSyncStoragePersister({
   storage: {
     getItem: (key) => storage.getString(key) ?? null,
     setItem: (key, value) => storage.set(key, value),
@@ -14,7 +12,7 @@ const persister = createSyncStoragePersister({
   },
 });
 
-const queryClient = new QueryClient({
+export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: 60_000,
@@ -22,11 +20,3 @@ const queryClient = new QueryClient({
     },
   },
 });
-
-export function AppQueryClientProvider({ children }: { children: ReactNode }) {
-  return (
-    <PersistQueryClientProvider client={queryClient} persistOptions={{ persister }}>
-      {children}
-    </PersistQueryClientProvider>
-  );
-}

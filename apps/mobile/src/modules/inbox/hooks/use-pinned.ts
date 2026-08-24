@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchMobileApiJson } from "@/lib/api-client";
+import { fetchMobileApiJson } from "@/lib/api";
 
 type Folder = {
   id: string;

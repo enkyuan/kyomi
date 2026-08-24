@@ -6,10 +6,10 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useReaderTabBar, type ReaderTabBarConfig } from "@/components/ui/tab-bar/modes/reader";
 import { getReaderTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { Skeleton } from "@ui/skeleton";
-import { fetchMobileApiJson, resolveMobileApiUrl } from "@/lib/api-client";
+import { fetchMobileApiJson, resolveMobileApiUrl } from "@/lib/api";
 import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
 import { allArticlesQueryKey } from "@modules/inbox/hooks/use-articles";
-import type { ArticleListPage } from "@modules/inbox/lib/articles";
+import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
 import { saveRecentArticle } from "@modules/recents/lib/store";
 import ArticleBody from "./components/article-body.dom";
 import { useReaderActions } from "./hooks/use-reader-actions";
@@ -123,21 +123,24 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
       { method: "POST" },
     )
       .then(() => {
-        queryClient.setQueryData<InfiniteData<ArticleListPage>>(allArticlesQueryKey, (current) => {
-          if (!current) {
-            return current;
-          }
+        queryClient.setQueryData<InfiniteData<CursorListResponseDto>>(
+          allArticlesQueryKey,
+          (current) => {
+            if (!current) {
+              return current;
+            }
 
-          return {
-            ...current,
-            pages: current.pages.map((page) => ({
-              ...page,
-              items: page.items.map((item) =>
-                item.id === article.id ? { ...item, lastViewedAt } : item,
-              ),
-            })),
-          };
-        });
+            return {
+              ...current,
+              pages: current.pages.map((page) => ({
+                ...page,
+                items: page.items.map((item) =>
+                  item.id === article.id ? { ...item, lastViewedAt } : item,
+                ),
+              })),
+            };
+          },
+        );
         void queryClient.invalidateQueries({ queryKey: allArticlesQueryKey });
       })
       .catch(() => undefined);

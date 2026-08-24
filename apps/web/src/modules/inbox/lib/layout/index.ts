@@ -1,4 +1,4 @@
-import type { InboxDensityDto } from "@lib/schemas/index";
+import type { InboxDensityDto } from "@kyomi/reader/schemas";
 
 export const INBOX_PANEL_SPACING_PX = 4;
 

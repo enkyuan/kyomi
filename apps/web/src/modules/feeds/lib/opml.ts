@@ -1,4 +1,4 @@
-import type { OpmlImportStatusDto } from "@lib/schemas/index";
+import type { OpmlImportStatusDto } from "@kyomi/reader/schemas";
 import { getOpmlImportStatus } from "./api";
 
 const DEFAULT_OPML_IMPORT_POLL_INTERVAL_MS = 1_000;

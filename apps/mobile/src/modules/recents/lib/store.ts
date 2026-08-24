@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from "react";
 import { createMMKV } from "react-native-mmkv";
-import type { ArticleListItem } from "@modules/inbox/lib/articles";
+import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { parseRecentArticles, recordRecentArticle, type RecentArticle } from "./history";
 
 const RECENT_ARTICLES_KEY = "recent-articles";
@@ -29,7 +29,10 @@ export function useRecentArticles() {
   return useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
 }
 
-export function saveRecentArticle(article: ArticleListItem, viewedAt = new Date().toISOString()) {
+export function saveRecentArticle(
+  article: ArticleListItemDto,
+  viewedAt = new Date().toISOString(),
+) {
   if (article.articleType !== "feed") {
     return;
   }

@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import { Alert } from "react-native";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth";
 
 const LOGOUT_ERROR_MESSAGE = "Unable to log out. Try again.";
 

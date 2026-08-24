@@ -13,7 +13,7 @@ import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from "@tansta
 import { useAuth } from "@integrations/better-auth/provider";
 import { usePreferences } from "@hooks/use-preferences";
 import { INBOX_PREFERENCES_STORAGE_KEY } from "@lib/shell/keys";
-import type { InboxPreferencesDto } from "@lib/schemas/index";
+import type { InboxPreferencesDto } from "@kyomi/reader/schemas";
 import { writeInboxArticleOpenBehaviorCookie } from "../lib/layout/persistence";
 import {
   DEFAULT_INBOX_PREFERENCES,

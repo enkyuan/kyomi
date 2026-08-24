@@ -4,7 +4,7 @@ import { render } from "@testing-library/react";
 import type { ReactNode, Ref } from "react";
 import { describe, expect, test, vi } from "vitest";
 import { List } from "@modules/inbox/components/list";
-import type { ArticleDetailDto } from "@lib/schemas";
+import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 
 vi.mock("@hooks/use-viewport", () => ({
   useViewport: () => ({

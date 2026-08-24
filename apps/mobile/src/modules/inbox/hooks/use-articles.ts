@@ -1,34 +1,26 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
-import { fetchMobileApiJson } from "@/lib/api-client";
-import type { ArticleListItem, ArticleListPage } from "@modules/inbox/lib/articles";
+import { fetchMobileApiJson } from "@/lib/api";
+import type { ArticleListItemDto, CursorListResponseDto } from "@kyomi/reader/schemas/article";
 
 const PAGE_LIMIT = 100;
 export const allArticlesQueryKey = ["inbox", "articles", "all"] as const;
 
-type ArticlesAllResponse = {
-  items: ArticleListItem[];
-  next_cursor: string | null;
-  has_more: boolean;
-};
-
-async function fetchAllArticles(cursor: string | undefined): Promise<ArticleListPage> {
+async function fetchAllArticles(cursor: string | undefined): Promise<CursorListResponseDto> {
   const query = new URLSearchParams({
     limit: String(PAGE_LIMIT),
     sort: "latest",
   });
   if (cursor) query.set("cursor", cursor);
 
-  const data = await fetchMobileApiJson<ArticlesAllResponse>(
+  return fetchMobileApiJson<CursorListResponseDto>(
     `/api/v1/articles/views/all?${query.toString()}`,
   );
-
-  return { items: data.items, nextCursor: data.next_cursor, hasMore: data.has_more };
 }
 
-function dedupeById(pages: ArticleListPage[] | undefined): ArticleListItem[] {
+function dedupeById(pages: CursorListResponseDto[] | undefined): ArticleListItemDto[] {
   if (!pages) return [];
-  const unique = new Map<string, ArticleListItem>();
+  const unique = new Map<string, ArticleListItemDto>();
   for (const page of pages) {
     for (const item of page.items) {
       if (!unique.has(item.id)) unique.set(item.id, item);
@@ -43,7 +35,7 @@ export function useArticles() {
     queryFn: ({ pageParam }) => fetchAllArticles(pageParam),
     initialPageParam: undefined as string | undefined,
     getNextPageParam: (lastPage) =>
-      lastPage.hasMore ? (lastPage.nextCursor ?? undefined) : undefined,
+      lastPage.has_more ? (lastPage.next_cursor ?? undefined) : undefined,
   });
 
   const items = useMemo(() => dedupeById(query.data?.pages), [query.data]);

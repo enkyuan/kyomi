@@ -1,6 +1,6 @@
 "use client";
 
-import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@lib/schemas/index";
+import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@kyomi/reader/schemas";
 import { useHydrated } from "@hooks/use-hydrated";
 import {
   formatInboxTimestamp,

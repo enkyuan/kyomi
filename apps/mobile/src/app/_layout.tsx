@@ -18,8 +18,9 @@ import {
   DMSans_500Medium,
   DMSans_600SemiBold,
 } from "@expo-google-fonts/dm-sans";
+import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
+import { persister, queryClient } from "@lib/query/client";
 import { useSessionGate } from "@lib/session";
-import { AppQueryClientProvider } from "@lib/query-client";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -44,7 +45,7 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <AppQueryClientProvider>
+      <PersistQueryClientProvider client={queryClient} persistOptions={{ persister }}>
         <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
           <Stack screenOptions={{ headerShown: false }}>
             <Stack.Protected guard={isAuthenticated}>
@@ -56,7 +57,7 @@ export default function RootLayout() {
             </Stack.Protected>
           </Stack>
         </ThemeProvider>
-      </AppQueryClientProvider>
+      </PersistQueryClientProvider>
     </GestureHandlerRootView>
   );
 }

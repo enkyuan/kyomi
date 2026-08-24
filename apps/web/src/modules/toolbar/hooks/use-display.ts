@@ -1,6 +1,6 @@
 "use client";
 
-import type { ArticleDetailDto } from "@lib/schemas/index";
+import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import { cn } from "@kyomi/ui/lib/utils";
 import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
 import { readerArticleTopInsetClass } from "@modules/reader/lib/detail";

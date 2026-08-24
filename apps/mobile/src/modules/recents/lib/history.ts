@@ -1,15 +1,15 @@
-import type { ArticleListItem } from "@modules/inbox/lib/articles";
+import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 
 export const MAX_RECENT_ARTICLES = 100;
 
 export type RecentArticle = Pick<
-  ArticleListItem,
+  ArticleListItemDto,
   "feedFaviconUrl" | "feedSiteUrl" | "feedTitle" | "feedUrl" | "id" | "link" | "title"
 > & {
   readonly viewedAt: string;
 };
 
-function toRecentArticle(article: ArticleListItem, viewedAt: string): RecentArticle {
+function toRecentArticle(article: ArticleListItemDto, viewedAt: string): RecentArticle {
   return {
     feedFaviconUrl: article.feedFaviconUrl,
     feedSiteUrl: article.feedSiteUrl,
@@ -24,7 +24,7 @@ function toRecentArticle(article: ArticleListItem, viewedAt: string): RecentArti
 
 export function recordRecentArticle(
   articles: readonly RecentArticle[],
-  article: ArticleListItem,
+  article: ArticleListItemDto,
   viewedAt: string,
 ): RecentArticle[] {
   if (article.articleType !== "feed") {

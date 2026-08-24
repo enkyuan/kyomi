@@ -8,7 +8,13 @@ import {
   logApiResponseError,
   resolveApiUrl,
 } from "@lib/api";
-import { formatErrorForLog, readResponseErrorSummary } from "@lib/errors";
+import { formatErrorForLog, readResponseErrorSummary } from "@kyomi/reader/lib/errors";
+import {
+  AUTH_CAPABILITIES_HEADER,
+  DEFAULT_AUTH_CAPABILITIES,
+  parseAuthCapabilities,
+  type AuthCapabilities,
+} from "@lib/auth/capabilities";
 import {
   classifyAuthSessionPayload,
   type AuthSessionState,
@@ -17,7 +23,12 @@ import {
 
 export type { AuthSession } from "@lib/auth/session";
 
-async function fetchAuthSessionStateFromHeaders(headers: Headers): Promise<AuthSessionState> {
+export type AuthBootstrapState = {
+  authState: AuthSessionState;
+  authCapabilities: AuthCapabilities;
+};
+
+async function fetchAuthBootstrapStateFromHeaders(headers: Headers): Promise<AuthBootstrapState> {
   const method = "GET";
   const path = "/api/auth/get-session";
   let response: Response;
@@ -29,30 +40,44 @@ async function fetchAuthSessionStateFromHeaders(headers: Headers): Promise<AuthS
     });
   } catch (error) {
     logApiNetworkError(method, path, error);
-    return unavailableAuthSessionState();
+    return {
+      authState: unavailableAuthSessionState(),
+      authCapabilities: DEFAULT_AUTH_CAPABILITIES,
+    };
   }
 
+  const authCapabilities = parseAuthCapabilities(response.headers.get(AUTH_CAPABILITIES_HEADER));
+
   if (response.status === 401) {
-    return { status: "anonymous", session: null };
+    return { authState: { status: "anonymous", session: null }, authCapabilities };
   }
 
   if (!response.ok) {
     const summary = await readResponseErrorSummary(response);
     logApiResponseError(method, path, response.status, summary);
-    return unavailableAuthSessionState(apiFailureUserMessage(response.status));
+    return {
+      authState: unavailableAuthSessionState(apiFailureUserMessage(response.status)),
+      authCapabilities,
+    };
   }
 
   try {
-    return classifyAuthSessionPayload(await response.json());
+    return {
+      authState: classifyAuthSessionPayload(await response.json()),
+      authCapabilities,
+    };
   } catch (error) {
     console.error(`[api] ${method} ${path} -> invalid JSON: ${formatErrorForLog(error)}`);
-    return unavailableAuthSessionState("Received an invalid response from the server.");
+    return {
+      authState: unavailableAuthSessionState("Received an invalid response from the server."),
+      authCapabilities,
+    };
   }
 }
 
-export const getAuthSessionState = createServerFn({ method: "POST" }).handler(async () => {
+export const getAuthBootstrapState = createServerFn({ method: "POST" }).handler(async () => {
   const headers = getRequestHeaders();
-  return fetchAuthSessionStateFromHeaders(headers);
+  return fetchAuthBootstrapStateFromHeaders(headers);
 });
 
 export const updateUserEmail = createServerFn({ method: "POST" })

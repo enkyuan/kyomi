@@ -1,4 +1,4 @@
-import type { ArticleOpenBehaviorDto } from "@lib/schemas/index";
+import type { ArticleOpenBehaviorDto } from "@kyomi/reader/schemas";
 
 export const INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME = "cronos_inbox_article_open_behavior";
 const INBOX_LAYOUT_COOKIE_MAX_AGE = 60 * 60 * 24 * 30;

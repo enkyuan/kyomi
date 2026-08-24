@@ -9,7 +9,7 @@ import "@kyomi/reader/web/styles.css";
 import "@kyomi/ui/styles/reader.css";
 import { mobileReaderLayout } from "../lib/layout";
 import { readerCanvas } from "../lib/theme";
-import { resolveMobileApiUrl } from "@/lib/api-client";
+import { resolveMobileApiUrl } from "@/lib/api";
 
 const MOBILE_READER_STYLES = String.raw`
   :root {

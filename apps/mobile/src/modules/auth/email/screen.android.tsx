@@ -40,7 +40,8 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "react-native-reanimated";
 import { ERROR_SHAKE_STEP_DURATION_MS, useErrorShake } from "./hooks/use-error-shake";
-import { authClient } from "@/lib/auth-client";
+import { isValidEmail } from "@kyomi/reader/schemas/auth";
+import { authClient } from "@/lib/auth";
 
 const BUTTON_LABEL_STYLE = { fontSize: 18, fontWeight: "600" as const };
 const OTP_LENGTH = 6;
@@ -122,6 +123,11 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
 
   async function handleSendCode() {
     if (isSubmitting) return;
+    if (!isValidEmail(email.value)) {
+      reportInvalid("email");
+      emailFieldRef.current?.focus();
+      return;
+    }
     setIsSubmitting(true);
     setInvalidStep(null);
     const { error: sendError } = await authClient.emailOtp.sendVerificationOtp({

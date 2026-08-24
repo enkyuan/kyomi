@@ -3,7 +3,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { clearHotQueryCache } from "@lib/query/cache";
 import { toastManager } from "@kyomi/ui/toast";
 

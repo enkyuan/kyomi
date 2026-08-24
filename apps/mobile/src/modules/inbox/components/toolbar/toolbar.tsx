@@ -1,12 +1,12 @@
 import { Alert, Pressable, View } from "react-native";
 import { BookmarkIcon, MoreIcon, ShareIcon } from "@/components/icons";
-import type { ArticleListItem } from "@modules/inbox/lib/articles";
+import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import { useArticleActions } from "../../hooks/use-article-actions";
 
 const ACTION_ICON_SIZE = 19;
 
-export function ItemToolbar({ item }: { readonly item: ArticleListItem }) {
+export function ItemToolbar({ item }: { readonly item: ArticleListItemDto }) {
   const { hideArticle, isUpdating, openSource, reportBrokenArticle, shareArticle, toggleSaved } =
     useArticleActions(item);
 

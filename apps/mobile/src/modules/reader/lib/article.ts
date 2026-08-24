@@ -1,7 +1,7 @@
 import type { ReaderContent } from "@kyomi/reader";
-import type { ArticleListItem } from "@modules/inbox/lib/articles";
+import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 
-export type ReaderArticle = ArticleListItem & {
+export type ReaderArticle = ArticleListItemDto & {
   readonly imageUrl: string | null;
   readonly reader: {
     readonly selected: ReaderContent;

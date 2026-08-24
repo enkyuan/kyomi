@@ -14,7 +14,7 @@ import type {
   ArticleDetailDto,
   InboxDensityDto,
   InboxTimestampDisplayDto,
-} from "@lib/schemas/index";
+} from "@kyomi/reader/schemas";
 import {
   BackToInboxButton,
   DEFAULT_SORT,

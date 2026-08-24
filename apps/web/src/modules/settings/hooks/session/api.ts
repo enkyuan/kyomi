@@ -1,5 +1,5 @@
-import { readResponseErrorSummary, getUserSafeErrorMessage } from "@lib/errors";
-import { authSessionListSchema } from "@lib/schemas/index";
+import { readResponseErrorSummary, getUserSafeErrorMessage } from "@kyomi/reader/lib/errors";
+import { authSessionListSchema } from "@kyomi/reader/schemas";
 import type { SessionRow } from "./types";
 
 export function parseSessionsResponse(value: unknown): SessionRow[] {

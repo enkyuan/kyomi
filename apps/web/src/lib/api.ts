@@ -1,4 +1,8 @@
-import { formatErrorForLog, getUserSafeErrorMessage, readResponseErrorSummary } from "@lib/errors";
+import {
+  formatErrorForLog,
+  getUserSafeErrorMessage,
+  readResponseErrorSummary,
+} from "@kyomi/reader/lib/errors";
 
 const HOP_BY_HOP_HEADERS = new Set([
   "connection",

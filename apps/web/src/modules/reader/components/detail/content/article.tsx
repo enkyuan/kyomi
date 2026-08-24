@@ -6,7 +6,7 @@ import type {
   ArticleDetailDto,
   InboxDensityDto,
   InboxTimestampDisplayDto,
-} from "@lib/schemas/index";
+} from "@kyomi/reader/schemas";
 import { Article } from "../../article";
 
 export function ArticleContent({

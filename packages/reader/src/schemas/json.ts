@@ -13,14 +13,9 @@ export async function fetchValidatedJson<T>(
   const result = schema.safeParse(raw);
   if (!result.success) {
     console.error("[api-schema] Response validation failed:", result.error.issues);
-    // In development, throw to surface the issue. In production, fall through
-    // with the raw data to avoid breaking the UI for schema-compatible changes.
-    if (process.env.NODE_ENV === "development") {
-      throw new Error(
-        `API response validation failed: ${result.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join(", ")}`,
-      );
-    }
-    return raw as T;
+    throw new Error(
+      `API response validation failed: ${result.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join(", ")}`,
+    );
   }
   return result.data;
 }

@@ -10,7 +10,8 @@ import Animated, {
 } from "react-native-reanimated";
 import { ERROR_SHAKE_STEP_DURATION_MS, useErrorShake } from "./hooks/use-error-shake";
 import { CloseIcon } from "@/components/icons";
-import { authClient } from "@/lib/auth-client";
+import { isValidEmail } from "@kyomi/reader/schemas/auth";
+import { authClient } from "@/lib/auth";
 
 type Theme = { background: string; foreground: string; input: string };
 
@@ -69,6 +70,10 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
 
   async function handleSendCode() {
     if (isSubmitting) return;
+    if (!isValidEmail(email.value)) {
+      reportInvalid("email");
+      return;
+    }
     setIsSubmitting(true);
     setInvalidStep(null);
     const { error: sendError } = await authClient.emailOtp.sendVerificationOtp({

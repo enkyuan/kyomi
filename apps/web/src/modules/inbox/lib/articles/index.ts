@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders } from "@lib/api";
-import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/schemas/index";
+import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@kyomi/reader/schemas";
 import {
   buildArticlesUrl,
   buildCountsSearchParams,
@@ -16,7 +16,7 @@ export type { InboxFilter, InboxSort } from "./query";
 let inboxSchemaModulePromise:
   | Promise<
       Pick<
-        typeof import("@lib/schemas/index"),
+        typeof import("@kyomi/reader/schemas"),
         | "fetchValidatedJson"
         | "articleCountsSchema"
         | "articleDetailSchema"
@@ -28,7 +28,7 @@ let inboxSchemaModulePromise:
   | undefined;
 
 function getInboxSchemaModule() {
-  inboxSchemaModulePromise ??= import("@lib/schemas/index").then((module) => ({
+  inboxSchemaModulePromise ??= import("@kyomi/reader/schemas").then((module) => ({
     fetchValidatedJson: module.fetchValidatedJson,
     articleCountsSchema: module.articleCountsSchema,
     articleDetailSchema: module.articleDetailSchema,

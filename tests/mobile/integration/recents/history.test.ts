@@ -5,9 +5,9 @@ import {
   recordRecentArticle,
 } from "../../../../apps/mobile/src/modules/recents/lib/history";
 import type { RecentArticle } from "../../../../apps/mobile/src/modules/recents/lib/history";
-import type { ArticleListItem } from "../../../../apps/mobile/src/modules/inbox/lib/articles";
+import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 
-const article = (id: string, articleType: "feed" | "clip" = "feed"): ArticleListItem => ({
+const article = (id: string, articleType: "feed" | "clip" = "feed"): ArticleListItemDto => ({
   articleType,
   categories: [],
   feedFaviconUrl: null,

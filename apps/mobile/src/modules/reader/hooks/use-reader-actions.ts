@@ -1,6 +1,6 @@
 import { Alert, Linking, Share } from "react-native";
 import { useQueryClient } from "@tanstack/react-query";
-import { fetchMobileApiJson } from "@/lib/api-client";
+import { fetchMobileApiJson } from "@/lib/api";
 import { useArticleStateMutation } from "@modules/inbox/hooks/use-article-state";
 import { triggerSavedToggleHaptic } from "@utils/haptics";
 import { readerArticleQueryKey } from "./use-reader-article";

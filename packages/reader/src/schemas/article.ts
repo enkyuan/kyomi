@@ -4,7 +4,7 @@ import { contentSourceSchema, readerContentSchema } from "./reader";
 const contentStatusSchema = z.enum(["ready", "partial", "failed", "pending"]);
 const articleTypeSchema = z.enum(["feed", "clip"]);
 
-const articleListItemSchema = z.object({
+export const articleListItemSchema = z.object({
   id: z.string(),
   title: z.string(),
   link: z.string(),

@@ -7,7 +7,7 @@ import { Skeleton } from "@ui/skeleton";
 import { getTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { useTopTabsHeader } from "@ui/top-tabs/lib/scroll-context";
 import { useArticles } from "@modules/inbox/hooks/use-articles";
-import type { ArticleListItem } from "@modules/inbox/lib/articles";
+import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { feedItemTypography } from "@modules/inbox/lib/layout";
 import { Item } from "../item";
 
@@ -102,7 +102,7 @@ export function List({ ListEmptyComponent }: { ListEmptyComponent: React.ReactEl
       contentInsetAdjustmentBehavior="never"
       data={items}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
-      keyExtractor={(item: ArticleListItem) => item.id}
+      keyExtractor={(item: ArticleListItemDto) => item.id}
       onEndReached={() => {
         if (hasNextPage && !isFetchingNextPage) fetchNextPage();
       }}
@@ -112,7 +112,7 @@ export function List({ ListEmptyComponent }: { ListEmptyComponent: React.ReactEl
       scrollIndicatorInsets={
         isIOS ? { bottom: tabBarOcclusionHeight, top: headerHeight } : undefined
       }
-      renderItem={({ item, index }: { item: ArticleListItem; index: number }) => (
+      renderItem={({ item, index }: { item: ArticleListItemDto; index: number }) => (
         <Item
           isFirst={index === 0}
           item={item}

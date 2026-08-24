@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { useInboxItemStateMutation } from "@modules/inbox/hooks/use-inbox-data";
 import type { AnchoredToolbarActionOptions, ArticleActionItem, ToolbarSide } from "../lib/types";
 

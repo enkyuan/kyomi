@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { fetchMobileApiJson } from "@/lib/api-client";
+import { fetchMobileApiJson } from "@/lib/api";
 import { toast } from "@ui/toast";
 
 type Folder = {

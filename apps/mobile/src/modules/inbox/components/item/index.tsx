@@ -1,5 +1,5 @@
 import { Pressable, Text, useWindowDimensions, View } from "react-native";
-import type { ArticleListItem } from "@modules/inbox/lib/articles";
+import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { feedItemTypography } from "@modules/inbox/lib/layout";
 import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
 import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
@@ -8,9 +8,9 @@ import { ItemToolbar } from "../toolbar/toolbar";
 import { FeedFavicon } from "../feed-favicon";
 
 export type ItemProps = {
-  readonly item: ArticleListItem;
+  readonly item: ArticleListItemDto;
   readonly isFirst: boolean;
-  readonly onPress: (item: ArticleListItem) => void;
+  readonly onPress: (item: ArticleListItemDto) => void;
 };
 
 export function Item({ item, isFirst, onPress }: ItemProps) {

@@ -2,7 +2,7 @@ import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
 import { useEffect, useMemo, useState } from "react";
 import { Image, useColorScheme, View } from "react-native";
 import { RssIcon } from "@/components/icons/rss";
-import { resolveMobileApiUrl } from "@/lib/api-client";
+import { resolveMobileApiUrl } from "@/lib/api";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
 export type FeedFaviconProps = {

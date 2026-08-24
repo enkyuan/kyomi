@@ -1,14 +1,14 @@
 import { Alert, Linking, Share } from "react-native";
-import { fetchMobileApiJson } from "@/lib/api-client";
+import { fetchMobileApiJson } from "@/lib/api";
 import { triggerSavedToggleHaptic } from "@/utils/haptics";
 import { useArticleStateMutation } from "@modules/inbox/hooks/use-article-state";
-import type { ArticleListItem } from "@modules/inbox/lib/articles";
+import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 
 function showActionError(message: string) {
   Alert.alert("Unable to update article", message);
 }
 
-export function useArticleActions(item: ArticleListItem) {
+export function useArticleActions(item: ArticleListItemDto) {
   const updateItem = useArticleStateMutation();
 
   const toggleSaved = () => {

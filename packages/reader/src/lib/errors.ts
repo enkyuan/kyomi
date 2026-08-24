@@ -33,7 +33,7 @@ function getRecordString(record: Record<string, unknown>, key: string) {
   return typeof value === "string" && value.trim() ? value.trim() : null;
 }
 
-function extractErrorMessageFromJson(value: unknown): string | null {
+export function extractErrorMessageFromJson(value: unknown): string | null {
   if (!value || typeof value !== "object") {
     return null;
   }
