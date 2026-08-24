@@ -16,8 +16,8 @@ describe("auth capabilities", () => {
       }),
     ).toEqual({
       google: true,
-      passwordReset: true,
-      passwordResetUsesDevelopmentLog: false,
+      emailOtp: true,
+      emailOtpUsesDevelopmentLog: false,
     });
 
     expect(
@@ -27,28 +27,28 @@ describe("auth capabilities", () => {
       }),
     ).toEqual({
       google: false,
-      passwordReset: false,
-      passwordResetUsesDevelopmentLog: false,
+      emailOtp: true,
+      emailOtpUsesDevelopmentLog: false,
     });
   });
 
-  test("keeps password reset available through development log links", () => {
+  test("keeps email OTP available through development log links", () => {
     expect(
       resolveAuthCapabilities({
         googleOAuthEnabled: false,
         nodeEnv: "development",
       }),
-    ).toMatchObject({ passwordReset: true, passwordResetUsesDevelopmentLog: true });
+    ).toMatchObject({ emailOtp: true, emailOtpUsesDevelopmentLog: true });
   });
 
   test("serializes enabled capabilities for the bootstrap response", () => {
     expect(
       serializeAuthCapabilities({
         google: true,
-        passwordReset: false,
-        passwordResetUsesDevelopmentLog: false,
+        emailOtp: true,
+        emailOtpUsesDevelopmentLog: false,
       }),
-    ).toBe("google");
+    ).toBe("google,emailOtp");
   });
 });
 

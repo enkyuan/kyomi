@@ -2,14 +2,14 @@ export const AUTH_CAPABILITIES_HEADER = "x-kyomi-auth-capabilities";
 
 export type AuthCapabilities = {
   google: boolean;
-  passwordReset: boolean;
-  passwordResetUsesDevelopmentLog: boolean;
+  emailOtp: boolean;
+  emailOtpUsesDevelopmentLog: boolean;
 };
 
 export const DEFAULT_AUTH_CAPABILITIES: AuthCapabilities = {
   google: false,
-  passwordReset: false,
-  passwordResetUsesDevelopmentLog: false,
+  emailOtp: false,
+  emailOtpUsesDevelopmentLog: false,
 };
 
 export function parseAuthCapabilities(value: string | null): AuthCapabilities {
@@ -22,7 +22,7 @@ export function parseAuthCapabilities(value: string | null): AuthCapabilities {
 
   return {
     google: enabled.has("google"),
-    passwordReset: enabled.has("passwordReset"),
-    passwordResetUsesDevelopmentLog: enabled.has("passwordResetUsesDevelopmentLog"),
+    emailOtp: enabled.has("emailOtp"),
+    emailOtpUsesDevelopmentLog: enabled.has("emailOtpUsesDevelopmentLog"),
   };
 }

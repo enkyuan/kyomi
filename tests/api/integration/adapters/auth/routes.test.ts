@@ -46,7 +46,7 @@ describe("authRoutes JSON passthrough", () => {
     );
 
     expect(response.status).toBe(200);
-    expect(response.headers.get(AUTH_CAPABILITIES_HEADER)).toContain("passwordReset");
+    expect(response.headers.get(AUTH_CAPABILITIES_HEADER)).toContain("emailOtp");
     expect(response.headers.get("set-cookie")).toContain("session=probe");
     expect(await response.json()).toEqual({
       bodyWasUsed: false,

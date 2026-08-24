@@ -3,23 +3,23 @@ import { parseAuthCapabilities } from "@lib/auth/capabilities";
 
 describe("parseAuthCapabilities", () => {
   test("parses the capability response header", () => {
-    expect(parseAuthCapabilities("google,passwordReset,passwordResetUsesDevelopmentLog")).toEqual({
+    expect(parseAuthCapabilities("google,emailOtp,emailOtpUsesDevelopmentLog")).toEqual({
       google: true,
-      passwordReset: true,
-      passwordResetUsesDevelopmentLog: true,
+      emailOtp: true,
+      emailOtpUsesDevelopmentLog: true,
     });
   });
 
   test("defaults missing and unknown capabilities to disabled", () => {
     expect(parseAuthCapabilities(null)).toEqual({
       google: false,
-      passwordReset: false,
-      passwordResetUsesDevelopmentLog: false,
+      emailOtp: false,
+      emailOtpUsesDevelopmentLog: false,
     });
     expect(parseAuthCapabilities("unknown")).toEqual({
       google: false,
-      passwordReset: false,
-      passwordResetUsesDevelopmentLog: false,
+      emailOtp: false,
+      emailOtpUsesDevelopmentLog: false,
     });
   });
 });

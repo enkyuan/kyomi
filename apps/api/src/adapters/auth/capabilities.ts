@@ -4,8 +4,8 @@ export const AUTH_CAPABILITIES_HEADER = "x-kyomi-auth-capabilities";
 
 export type AuthCapabilities = {
   google: boolean;
-  passwordReset: boolean;
-  passwordResetUsesDevelopmentLog: boolean;
+  emailOtp: boolean;
+  emailOtpUsesDevelopmentLog: boolean;
 };
 
 export function resolveGoogleSocialProvider({
@@ -40,8 +40,8 @@ export function resolveAuthCapabilities({
   const hasEmailDelivery = Boolean(resendApiKey && emailFrom);
   return {
     google: googleOAuthEnabled,
-    passwordReset: nodeEnv !== "production" || hasEmailDelivery,
-    passwordResetUsesDevelopmentLog: nodeEnv !== "production" && !hasEmailDelivery,
+    emailOtp: true,
+    emailOtpUsesDevelopmentLog: nodeEnv !== "production" && !hasEmailDelivery,
   };
 }
 

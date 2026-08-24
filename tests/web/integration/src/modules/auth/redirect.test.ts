@@ -23,7 +23,7 @@ describe("auth return targets", () => {
     expect(buildAuthEntryHref("/", "/inbox/article?filter=saved#reader")).toBe(
       "/?redirect=%2Finbox%2Farticle%3Ffilter%3Dsaved%23reader",
     );
-    expect(buildAuthEntryHref("/register", "https://evil.example/inbox")).toBe("/register");
+    expect(buildAuthEntryHref("/", "https://evil.example/inbox")).toBe("/");
   });
 
   test("recovers a protected fragment carried to the auth page by the browser", () => {

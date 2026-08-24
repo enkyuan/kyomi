@@ -42,7 +42,7 @@ export function preserveAuthEntryHash(value: unknown, entryHash: unknown) {
   return `${url.pathname}${url.search}${url.hash}`;
 }
 
-export function buildAuthEntryHref(path: "/" | "/register", returnTo: unknown) {
+export function buildAuthEntryHref(path: "/", returnTo: unknown) {
   const parsed = parseAuthReturnTo(returnTo);
   return parsed ? `${path}?redirect=${encodeURIComponent(parsed)}` : path;
 }

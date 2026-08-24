@@ -1,8 +1,32 @@
-/**
- * Auth form validation helpers shared by web and mobile.
- *
- * The canonical implementation now lives in `@kyomi/reader/schemas/auth`.
- * This module re-exports everything so existing `@modules/auth/schema`
- * imports continue to resolve.
- */
+import { isValidEmail } from "@kyomi/reader/schemas/auth";
+
 export * from "@kyomi/reader/schemas/auth";
+
+export type EmailOTPFormValues = { email: string };
+export type OtpFormValues = { otp: string };
+
+function normalizeEmail(value: string) {
+  return value.trim();
+}
+
+export function emailOtpFormValidator({ value }: { value: EmailOTPFormValues }) {
+  const normalized = normalizeEmail(value.email);
+  if (!isValidEmail(normalized)) {
+    return { fields: { email: "Enter a valid email address" } };
+  }
+  return undefined;
+}
+
+export function otpFormValidator({ value }: { value: OtpFormValues }) {
+  const otp = value.otp.trim();
+  if (!otp) {
+    return { fields: { otp: "Code is required" } };
+  }
+  if (!/^\d{6}$/.test(otp)) {
+    return { fields: { otp: "Enter the 6-digit code sent to your email" } };
+  }
+  return undefined;
+}
+
+export const emailOtpDefaultValues: EmailOTPFormValues = { email: "" };
+export const otpDefaultValues: OtpFormValues = { otp: "" };

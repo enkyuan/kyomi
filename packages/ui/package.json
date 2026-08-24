@@ -36,6 +36,7 @@
     "./native/motion": "./src/native/motion.ts",
     "./native/theme": "./src/native/theme.ts",
     "./lib/*": "./src/lib/*.ts",
+    "./otp-field": "./src/otp-field.tsx",
     "./slider": "./src/slider/index.ts",
     "./sidebar": "./src/sidebar/index.ts",
     "./sidebar/mode-animated-text": "./src/sidebar/components/mode-text.tsx",

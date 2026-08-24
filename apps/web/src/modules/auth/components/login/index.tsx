@@ -1,6 +1,5 @@
 "use client";
 
-import { EyeCloseLine, EyeLine } from "@kyomi/ui/icons/mingcute";
 import { useEffect, useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
@@ -21,36 +20,91 @@ import {
 import { Form } from "@kyomi/ui/form";
 import { Field, FieldError, FieldLabel } from "@kyomi/ui/field";
 import { Input } from "@kyomi/ui/input";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@kyomi/ui/input/group";
+import { OTPField, OTPFieldInput, OTPFieldSeparator } from "@kyomi/ui/otp-field";
 import { Spinner } from "@kyomi/ui/spinner";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { toastManager } from "@kyomi/ui/toast";
-import { getFieldErrorMessage, loginDefaultValues, loginFormValidator } from "@modules/auth/schema";
-import { buildAuthEntryHref, resolveAuthReturnTo } from "@modules/auth/redirect";
+import {
+  emailOtpDefaultValues,
+  emailOtpFormValidator,
+  getFieldErrorMessage,
+  otpDefaultValues,
+  otpFormValidator,
+} from "@modules/auth/schema";
+import { resolveAuthReturnTo } from "@modules/auth/redirect";
 
 export function Login({ redirect }: { redirect?: string }) {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
   const returnTo = resolveAuthReturnTo(redirect);
-  const [showPassword, setShowPassword] = useState(false);
-  const form = useForm({
-    defaultValues: loginDefaultValues,
+
+  const [step, setStep] = useState<"email" | "otp">("email");
+  const [email, setEmail] = useState("");
+  const [isResending, setIsResending] = useState(false);
+
+  const emailForm = useForm({
+    defaultValues: emailOtpDefaultValues,
     validators: {
-      onChange: loginFormValidator,
-      onSubmit: loginFormValidator,
+      onChange: emailOtpFormValidator,
+      onSubmit: emailOtpFormValidator,
     },
     onSubmit: async ({ value }) => {
       await toastManager.promise(
         (async () => {
-          const result = await authClient.signIn.email({
+          const result = await authClient.emailOtp.sendVerificationOtp({
             email: value.email,
-            password: value.password,
+            type: "sign-in",
+          });
+
+          if (result.error) {
+            throw new Error(result.error.message?.trim() || "Could not send sign-in code");
+          }
+
+          setEmail(value.email);
+          setStep("otp");
+        })(),
+        {
+          error: (error) => {
+            logClientError("auth.send_otp", error);
+            return {
+              description: getUserSafeErrorMessage(error, "Could not send sign-in code"),
+              title: "Error sending code",
+              type: "error",
+            };
+          },
+          loading: {
+            description: "Sending sign-in code to your email.",
+            timeout: 0,
+            title: "Sending code…",
+            type: "loading",
+          },
+          success: {
+            description: "Check your email for the 6-digit code.",
+            title: "Code sent",
+            type: "success",
+          },
+        },
+      );
+    },
+  });
+
+  const otpForm = useForm({
+    defaultValues: otpDefaultValues,
+    validators: {
+      onChange: otpFormValidator,
+      onSubmit: otpFormValidator,
+    },
+    onSubmit: async ({ value }) => {
+      await toastManager.promise(
+        (async () => {
+          const result = await authClient.signIn.emailOtp({
+            email,
+            otp: value.otp,
             callbackURL: returnTo,
           });
 
           if (result.error) {
-            throw new Error(result.error.message?.trim() || "Invalid email or password");
+            throw new Error(result.error.message?.trim() || "Invalid code");
           }
 
           await Promise.all([router.invalidate(), prefetchInboxFlow(router, queryClient)]);
@@ -58,17 +112,17 @@ export function Login({ redirect }: { redirect?: string }) {
         })(),
         {
           error: (error) => {
-            logClientError("auth.login", error);
+            logClientError("auth.verify_otp", error);
             return {
-              description: getUserSafeErrorMessage(error, "Invalid email or password"),
-              title: "Login failed",
+              description: getUserSafeErrorMessage(error, "Invalid code"),
+              title: "Verification failed",
               type: "error",
             };
           },
           loading: {
-            description: "Authenticating your account.",
+            description: "Verifying your sign-in code.",
             timeout: 0,
-            title: "Logging in…",
+            title: "Verifying…",
             type: "loading",
           },
           success: {
@@ -80,6 +134,48 @@ export function Login({ redirect }: { redirect?: string }) {
       );
     },
   });
+
+  const handleResendCode = async () => {
+    if (!email || isResending) return;
+    setIsResending(true);
+    try {
+      await toastManager.promise(
+        (async () => {
+          const result = await authClient.emailOtp.sendVerificationOtp({
+            email,
+            type: "sign-in",
+          });
+
+          if (result.error) {
+            throw new Error(result.error.message?.trim() || "Could not resend code");
+          }
+        })(),
+        {
+          error: (error) => {
+            logClientError("auth.resend_otp", error);
+            return {
+              description: getUserSafeErrorMessage(error, "Could not resend code"),
+              title: "Resend failed",
+              type: "error",
+            };
+          },
+          loading: {
+            description: "Sending a new code to your email.",
+            timeout: 0,
+            title: "Resending code…",
+            type: "loading",
+          },
+          success: {
+            description: "Check your email for the new code.",
+            title: "Code sent",
+            type: "success",
+          },
+        },
+      );
+    } finally {
+      setIsResending(false);
+    }
+  };
 
   useEffect(() => {
     if (!isPending && isAuthenticated) {
@@ -103,110 +199,145 @@ export function Login({ redirect }: { redirect?: string }) {
   return (
     <main className="flex min-h-dvh w-full items-center justify-center px-4 py-12">
       <Card className="w-full max-w-xs">
-        <CardHeader>
-          <div className="space-y-1">
-            <CardTitle>Login to your account</CardTitle>
-            <CardDescription>Enter your email and password to continue.</CardDescription>
-          </div>
-          <CardAction>
-            <a
-              href={buildAuthEntryHref("/register", redirect)}
-              className="text-foreground text-sm leading-4.5 hover:text-foreground/80 hover:underline"
-            >
-              Sign up
-            </a>
-          </CardAction>
-        </CardHeader>
-        <CardPanel>
-          <Form
-            onSubmit={(event) => {
-              event.preventDefault();
-              event.stopPropagation();
-              void form.handleSubmit();
-            }}
-          >
-            <form.Field name="email">
-              {(field) => {
-                const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
-                const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
+        {step === "email" ? (
+          <>
+            <CardHeader>
+              <div className="space-y-1">
+                <CardTitle>Sign in to Kyomi</CardTitle>
+                <CardDescription>Enter your email to receive a sign-in code.</CardDescription>
+              </div>
+            </CardHeader>
+            <CardPanel>
+              <Form
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  void emailForm.handleSubmit();
+                }}
+              >
+                <emailForm.Field name="email">
+                  {(field) => {
+                    const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
+                    const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
 
-                return (
-                  <Field>
-                    <FieldLabel>Email</FieldLabel>
-                    <Input
-                      name={field.name}
-                      value={field.state.value}
-                      onBlur={field.handleBlur}
-                      onChange={(event) => field.handleChange(event.target.value)}
-                      placeholder="Enter your email"
-                      type="email"
-                      autoComplete="email"
-                    />
-                    {errorMessage ? (
-                      <FieldError match={true}>{errorMessage as string}</FieldError>
-                    ) : null}
-                  </Field>
-                );
-              }}
-            </form.Field>
+                    return (
+                      <Field>
+                        <FieldLabel>Email</FieldLabel>
+                        <Input
+                          name={field.name}
+                          value={field.state.value}
+                          onBlur={field.handleBlur}
+                          onChange={(event) => field.handleChange(event.target.value)}
+                          placeholder="Enter your email"
+                          type="email"
+                          autoComplete="email"
+                          autoFocus
+                        />
+                        {errorMessage ? (
+                          <FieldError match={true}>{errorMessage as string}</FieldError>
+                        ) : null}
+                      </Field>
+                    );
+                  }}
+                </emailForm.Field>
 
-            <form.Field name="password">
-              {(field) => {
-                const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
-                const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
+                <emailForm.Subscribe selector={(state) => [state.isSubmitting]}>
+                  {([isSubmitting]) => (
+                    <Button className="w-full" type="submit" loading={Boolean(isSubmitting)}>
+                      {isSubmitting ? "Sending code…" : "Continue"}
+                    </Button>
+                  )}
+                </emailForm.Subscribe>
+              </Form>
+            </CardPanel>
+          </>
+        ) : (
+          <>
+            <CardHeader>
+              <div className="space-y-1">
+                <CardTitle>Enter verification code</CardTitle>
+                <CardDescription>
+                  We sent a 6-digit code to{" "}
+                  <span className="font-medium text-foreground">{email}</span>.
+                </CardDescription>
+              </div>
+              <CardAction>
+                <button
+                  type="button"
+                  onClick={() => setStep("email")}
+                  className="text-foreground text-sm leading-4.5 hover:text-foreground/80 hover:underline cursor-pointer"
+                >
+                  Edit
+                </button>
+              </CardAction>
+            </CardHeader>
+            <CardPanel>
+              <Form
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  void otpForm.handleSubmit();
+                }}
+              >
+                <otpForm.Field name="otp">
+                  {(field) => {
+                    const canShow = field.state.meta.isTouched || field.form.state.isSubmitted;
+                    const errorMessage = getFieldErrorMessage(field.state.meta.errors, canShow);
 
-                return (
-                  <Field>
-                    <FieldLabel>Password</FieldLabel>
-                    <InputGroup>
-                      <InputGroupInput
-                        aria-label="Password with toggle visibility"
-                        autoComplete="current-password"
-                        name={field.name}
-                        onBlur={field.handleBlur}
-                        onChange={(event) => field.handleChange(event.target.value)}
-                        placeholder="Enter your password"
-                        type={showPassword ? "text" : "password"}
-                        value={field.state.value}
-                      />
-                      <InputGroupAddon align="inline-end">
-                        <Tooltip>
-                          <TooltipTrigger
-                            render={
-                              <Button
-                                aria-label={showPassword ? "Hide password" : "Show password"}
-                                onClick={() => setShowPassword((visible) => !visible)}
-                                size="icon-xs"
-                                type="button"
-                                variant="ghost"
-                              />
-                            }
-                          >
-                            {showPassword ? <EyeCloseLine /> : <EyeLine />}
-                          </TooltipTrigger>
-                          <TooltipPopup>
-                            {showPassword ? "Hide password" : "Show password"}
-                          </TooltipPopup>
-                        </Tooltip>
-                      </InputGroupAddon>
-                    </InputGroup>
-                    {errorMessage ? (
-                      <FieldError match={true}>{errorMessage as string}</FieldError>
-                    ) : null}
-                  </Field>
-                );
-              }}
-            </form.Field>
+                    return (
+                      <Field className="items-center">
+                        <FieldLabel className="sr-only">Verification code</FieldLabel>
+                        <OTPField
+                          aria-label="Verification code"
+                          length={6}
+                          value={field.state.value}
+                          onValueChange={(val) => field.handleChange(val)}
+                        >
+                          <OTPFieldInput autoFocus />
+                          <OTPFieldInput aria-label="Character 2 of 6" />
+                          <OTPFieldInput aria-label="Character 3 of 6" />
+                          <OTPFieldSeparator />
+                          <OTPFieldInput aria-label="Character 4 of 6" />
+                          <OTPFieldInput aria-label="Character 5 of 6" />
+                          <OTPFieldInput aria-label="Character 6 of 6" />
+                        </OTPField>
+                        {errorMessage ? (
+                          <FieldError match={true}>{errorMessage as string}</FieldError>
+                        ) : null}
+                      </Field>
+                    );
+                  }}
+                </otpForm.Field>
 
-            <form.Subscribe selector={(state) => [state.isSubmitting]}>
-              {([isSubmitting]) => (
-                <Button className="w-full" type="submit" loading={Boolean(isSubmitting)}>
-                  {isSubmitting ? "Logging in…" : "Login"}
-                </Button>
-              )}
-            </form.Subscribe>
-          </Form>
-        </CardPanel>
+                <div className="flex items-center justify-between text-xs text-muted-foreground">
+                  <button
+                    type="button"
+                    onClick={() => setStep("email")}
+                    className="hover:text-foreground hover:underline transition-colors cursor-pointer"
+                  >
+                    Back to email
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => void handleResendCode()}
+                    disabled={isResending}
+                    className="font-medium text-foreground hover:underline transition-colors cursor-pointer disabled:opacity-50"
+                  >
+                    {isResending ? "Resending…" : "Resend code"}
+                  </button>
+                </div>
+
+                <otpForm.Subscribe selector={(state) => [state.isSubmitting]}>
+                  {([isSubmitting]) => (
+                    <Button className="w-full" type="submit" loading={Boolean(isSubmitting)}>
+                      {isSubmitting ? "Verifying…" : "Continue"}
+                    </Button>
+                  )}
+                </otpForm.Subscribe>
+              </Form>
+            </CardPanel>
+          </>
+        )}
       </Card>
     </main>
   );
