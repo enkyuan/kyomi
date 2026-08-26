@@ -384,7 +384,7 @@ function InboxPageContent({
           detail={detailElementWithBack}
         />
       ) : (
-        <div className="flex h-full max-h-full min-h-0 min-w-0 overflow-hidden gap-6">
+        <div className="flex h-full max-h-full min-h-0 min-w-0 overflow-hidden gap-8">
           <Feed
             detail={feedDetailElement}
             list={listElement}
