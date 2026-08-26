@@ -27,10 +27,10 @@ type Logger = {
   error: (msg: string, meta?: Record<string, unknown>) => void;
 };
 
-export const OPML_DISPATCH_MAX_IMPORTS = 10;
-export const OPML_DISPATCH_PER_IMPORT = 5;
-export const OPML_DISPATCH_TOTAL = 50;
-export const OPML_DISPATCH_LEASE_MS = 120_000;
+export const IMPORT_DISPATCH_MAX_IMPORTS = 10;
+export const IMPORT_DISPATCH_PER_IMPORT = 5;
+export const IMPORT_DISPATCH_TOTAL = 50;
+export const IMPORT_DISPATCH_LEASE_MS = 120_000;
 const PUBLISH_FAILURE_RETRY_DELAY_MS = 5_000;
 
 const RECONCILE_PREPARE_WAKEUP_STALE_MS = 30_000;
@@ -49,17 +49,17 @@ export type DispatchStats = {
   importsStarted: number;
 };
 
-export async function runOpmlImportDispatcherTick(
+export async function runImportDispatcherTick(
   database: DB,
   redis: Redis,
   logger: Logger,
   now: Date = new Date(),
 ): Promise<DispatchStats> {
   const claimed = await claimDispatchableOpmlItems(database, now, {
-    maxImports: OPML_DISPATCH_MAX_IMPORTS,
-    perImport: OPML_DISPATCH_PER_IMPORT,
-    total: OPML_DISPATCH_TOTAL,
-    leaseMs: OPML_DISPATCH_LEASE_MS,
+    maxImports: IMPORT_DISPATCH_MAX_IMPORTS,
+    perImport: IMPORT_DISPATCH_PER_IMPORT,
+    total: IMPORT_DISPATCH_TOTAL,
+    leaseMs: IMPORT_DISPATCH_LEASE_MS,
   });
 
   const stats: DispatchStats = {
@@ -117,7 +117,7 @@ export type ReconcileStats = {
  * deletes old terminal imports. Every step is bounded and uses guarded/conditional updates so
  * multiple scheduler replicas running this concurrently never duplicate or lose work.
  */
-export async function reconcileOpmlImports(
+export async function reconcileImports(
   database: DB,
   redis: Redis,
   logger: Logger,
@@ -213,13 +213,13 @@ function sleep(ms: number, signal?: AbortSignal): Promise<void> {
  * Retention only needs to run roughly once a day; it piggybacks on whichever reconciliation
  * tick crosses the RETENTION_TICK_MS boundary rather than needing its own timer.
  */
-export async function runOpmlImportDispatcherLoop(
+export async function runImportDispatcherLoop(
   database: DB,
   redis: Redis,
   logger: Logger,
   signal?: AbortSignal,
 ): Promise<void> {
-  logger.info("opml.import.dispatcher.started", {
+  logger.info("import.dispatcher.started", {
     dispatchTickMs: DISPATCH_TICK_MS,
     reconcileTickMs: RECONCILE_TICK_MS,
   });
@@ -234,15 +234,15 @@ export async function runOpmlImportDispatcherLoop(
     lastReconcileAt = now;
     const includeRetention = now - lastRetentionAt >= RETENTION_TICK_MS;
     lastRetentionAt = includeRetention ? now : lastRetentionAt;
-    await reconcileOpmlImports(database, redis, logger, new Date(now), { includeRetention });
+    await reconcileImports(database, redis, logger, new Date(now), { includeRetention });
   };
 
   while (!signal?.aborted) {
     try {
-      await runOpmlImportDispatcherTick(database, redis, logger);
+      await runImportDispatcherTick(database, redis, logger);
       await maybeReconcile(Date.now());
     } catch (error) {
-      logger.error("opml.import.dispatcher.tick_failed", {
+      logger.error("import.dispatcher.tick_failed", {
         error: serializeError(error),
       });
     }

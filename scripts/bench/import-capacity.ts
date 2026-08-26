@@ -14,7 +14,7 @@ import { parseOpmlDocument } from "@modules/opml/parse";
 import { OPML_MATERIALIZE_CHUNK_SIZE } from "@modules/opml/constants";
 
 /**
- * bun run bench:opml-import -- --feeds 50000 --known-ratio 0.5
+ * bun run bench:import -- --feeds 50000 --known-ratio 0.5
  * Drives the real prepare pipeline (parse -> materialize -> match-known -> subscribe-known loop
  * -> finalize) against a real dev Postgres, using a throwaway user/feeds that are deleted (via
  * FK cascade on the user row) once the run completes, whether it succeeds or throws.
@@ -52,7 +52,7 @@ function buildRepresentativeOpml(feedCount: number, knownUrls: string[]): string
 }
 
 async function main() {
-  await assertApiDatabaseReady({ commandName: "bench:opml-import" });
+  await assertApiDatabaseReady({ commandName: "bench:import" });
 
   const args = parseArgs(process.argv.slice(2));
   const knownFeedCount = Math.round(args.feeds * args.knownRatio);
@@ -62,8 +62,8 @@ async function main() {
   try {
     await db.insert(users).values({
       id: userId,
-      name: "opml-bench",
-      email: `opml-bench-${userId}@bench.local`,
+      name: "import-bench",
+      email: `import-bench-${userId}@bench.local`,
     });
 
     const knownUrls: string[] = [];

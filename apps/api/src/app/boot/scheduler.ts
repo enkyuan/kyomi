@@ -1,7 +1,7 @@
 import { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { closeRedis, getRedis } from "@adapters/redis";
-import { runOpmlImportDispatcherLoop } from "../jobs/opml-import-dispatcher";
+import { runImportDispatcherLoop } from "../jobs/import-dispatcher";
 import { runFeedRefreshSchedulerLoop } from "../jobs/refresh-scheduler";
 
 const controller = new AbortController();
@@ -17,7 +17,7 @@ try {
   const redis = getRedis();
   await Promise.all([
     runFeedRefreshSchedulerLoop(redis, controller.signal),
-    runOpmlImportDispatcherLoop(db, redis, logger, controller.signal),
+    runImportDispatcherLoop(db, redis, logger, controller.signal),
   ]);
 } catch (error) {
   logger.error("scheduler.crashed", {

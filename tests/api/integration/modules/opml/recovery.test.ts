@@ -1,14 +1,14 @@
 import { describe, expect, mock, test } from "bun:test";
-import { reconcileOpmlImports } from "@app/jobs/opml-import-dispatcher";
+import { reconcileImports } from "@app/jobs/import-dispatcher";
 
 /**
- * Drives reconcileOpmlImports through the real store functions with a fake Postgres-shaped db,
+ * Drives reconcileImports through the real store functions with a fake Postgres-shaped db,
  * rather than mock.module("@modules/opml/store", ...): that approach was tried and reverted
  * because mock.module's replacement is process-wide and not reliably undone by mock.restore()
  * once the suite has enough files (confirmed by reproducing the leak at ~50 files) -- it broke
  * store.test.ts's real-implementation tests intermittently depending on run composition.
  *
- * The fake models exactly the sequence reconcileOpmlImports issues: reclaimStalePrepareImports
+ * The fake models exactly the sequence reconcileImports issues: reclaimStalePrepareImports
  * (update parsing->accepted, then select accepted due for wakeup), findExpiredOpmlLeases
  * (select), listCancellingOpmlImportIds (select), cancelPendingOpmlItems (transaction+execute,
  * looped to 0), and optionally deleteOldTerminalOpmlImports (select then delete).
@@ -106,14 +106,14 @@ function logger() {
   return { info: mock(() => undefined), error: mock(() => undefined) };
 }
 
-describe("reconcileOpmlImports", () => {
+describe("reconcileImports", () => {
   test("republishes a prepare wakeup for each accepted import due, and reclaims stale-parsing imports first", async () => {
     const { db, itemUpdateSets } = createFakeReconcileDb({
       parsingReclaimed: [{ id: "import-parsing-1" }],
       dueForPrepare: [{ id: "import-accepted-1" }, { id: "import-accepted-2" }],
     });
 
-    const stats = await reconcileOpmlImports(db as never, fakeRedis() as never, logger());
+    const stats = await reconcileImports(db as never, fakeRedis() as never, logger());
 
     expect(stats.prepareRepublished).toBe(2);
     expect(itemUpdateSets[0]).toMatchObject({ status: "accepted" });
@@ -127,7 +127,7 @@ describe("reconcileOpmlImports", () => {
       ],
     });
 
-    const stats = await reconcileOpmlImports(db as never, fakeRedis() as never, logger());
+    const stats = await reconcileImports(db as never, fakeRedis() as never, logger());
 
     expect(stats.leasesReclaimed).toBe(2);
     // item-1 (attempt 1, retryable) goes back to pending; item-2 (attempt 5) fails permanently.
@@ -141,7 +141,7 @@ describe("reconcileOpmlImports", () => {
       cancelBatches: [500, 201, 0],
     });
 
-    const stats = await reconcileOpmlImports(db as never, fakeRedis() as never, logger());
+    const stats = await reconcileImports(db as never, fakeRedis() as never, logger());
 
     expect(stats.cancellingProcessed).toBe(701);
   });
@@ -151,15 +151,9 @@ describe("reconcileOpmlImports", () => {
       retentionCandidates: [{ id: "import-old-1" }],
     });
 
-    const stats = await reconcileOpmlImports(
-      db as never,
-      fakeRedis() as never,
-      logger(),
-      new Date(),
-      {
-        includeRetention: false,
-      },
-    );
+    const stats = await reconcileImports(db as never, fakeRedis() as never, logger(), new Date(), {
+      includeRetention: false,
+    });
 
     expect(stats.retentionDeleted).toBe(0);
   });
@@ -169,15 +163,9 @@ describe("reconcileOpmlImports", () => {
       retentionCandidates: [{ id: "import-old-1" }, { id: "import-old-2" }],
     });
 
-    const stats = await reconcileOpmlImports(
-      db as never,
-      fakeRedis() as never,
-      logger(),
-      new Date(),
-      {
-        includeRetention: true,
-      },
-    );
+    const stats = await reconcileImports(db as never, fakeRedis() as never, logger(), new Date(), {
+      includeRetention: true,
+    });
 
     expect(stats.retentionDeleted).toBe(2);
   });
@@ -190,7 +178,7 @@ describe("reconcileOpmlImports", () => {
 
     // publishJob (real, unmocked) calls redis.xadd internally; an empty object has no such
     // method, so it throws exactly like a real Redis connection failure would.
-    const stats = await reconcileOpmlImports(db as never, {} as never, testLogger);
+    const stats = await reconcileImports(db as never, {} as never, testLogger);
 
     expect(stats.prepareRepublished).toBe(0);
     expect(testLogger.error).toHaveBeenCalledWith(

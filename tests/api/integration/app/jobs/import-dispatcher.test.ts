@@ -2,13 +2,13 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, mock, test } from "bun:test";
 import {
-  OPML_DISPATCH_LEASE_MS,
-  OPML_DISPATCH_MAX_IMPORTS,
-  OPML_DISPATCH_PER_IMPORT,
-  OPML_DISPATCH_TOTAL,
-  runOpmlImportDispatcherLoop,
-  runOpmlImportDispatcherTick,
-} from "@app/jobs/opml-import-dispatcher";
+  IMPORT_DISPATCH_LEASE_MS,
+  IMPORT_DISPATCH_MAX_IMPORTS,
+  IMPORT_DISPATCH_PER_IMPORT,
+  IMPORT_DISPATCH_TOTAL,
+  runImportDispatcherLoop,
+  runImportDispatcherTick,
+} from "@app/jobs/import-dispatcher";
 
 const itemsStorePath = join(
   import.meta.dir,
@@ -30,7 +30,7 @@ function logger() {
   return { info: mock(() => undefined), error: mock(() => undefined) };
 }
 
-describe("opml import dispatcher claim SQL", () => {
+describe("import dispatcher claim SQL", () => {
   test("uses row locks, skip locked, bounded per-import fairness, and distinct lease tokens", () => {
     const source = readFileSync(itemsStorePath, "utf8");
 
@@ -46,10 +46,10 @@ describe("opml import dispatcher claim SQL", () => {
 
 describe("dispatcher fairness defaults", () => {
   test("defaults match the plan exactly", () => {
-    expect(OPML_DISPATCH_MAX_IMPORTS).toBe(10);
-    expect(OPML_DISPATCH_PER_IMPORT).toBe(5);
-    expect(OPML_DISPATCH_TOTAL).toBe(50);
-    expect(OPML_DISPATCH_LEASE_MS).toBe(120_000);
+    expect(IMPORT_DISPATCH_MAX_IMPORTS).toBe(10);
+    expect(IMPORT_DISPATCH_PER_IMPORT).toBe(5);
+    expect(IMPORT_DISPATCH_TOTAL).toBe(50);
+    expect(IMPORT_DISPATCH_LEASE_MS).toBe(120_000);
   });
 });
 
@@ -109,7 +109,7 @@ function createFakeDispatchDb(options: {
   return { db, updateSets };
 }
 
-describe("runOpmlImportDispatcherTick", () => {
+describe("runImportDispatcherTick", () => {
   test("publishes exactly one ID-only wakeup per claimed item and marks imports running once", async () => {
     const { db } = createFakeDispatchDb({
       claimedRows: [
@@ -122,7 +122,7 @@ describe("runOpmlImportDispatcherTick", () => {
     const testLogger = logger();
     const now = new Date("2026-01-01T00:00:00.000Z");
 
-    const stats = await runOpmlImportDispatcherTick(db as never, redis as never, testLogger, now);
+    const stats = await runImportDispatcherTick(db as never, redis as never, testLogger, now);
 
     expect(stats).toEqual({
       claimed: 3,
@@ -140,7 +140,7 @@ describe("runOpmlImportDispatcherTick", () => {
     const redis = { xadd: mock(async () => Promise.reject(new Error("redis unavailable"))) };
     const testLogger = logger();
 
-    const stats = await runOpmlImportDispatcherTick(
+    const stats = await runImportDispatcherTick(
       db as never,
       redis as never,
       testLogger,
@@ -163,21 +163,16 @@ describe("runOpmlImportDispatcherTick", () => {
     });
     const redis = { xadd: mock(async () => Promise.reject(new Error("redis unavailable"))) };
 
-    const stats = await runOpmlImportDispatcherTick(
-      db as never,
-      redis as never,
-      logger(),
-      new Date(),
-    );
+    const stats = await runImportDispatcherTick(db as never, redis as never, logger(), new Date());
 
     expect(stats.releasedAfterPublishFailure).toBe(0);
   });
 });
 
-describe("runOpmlImportDispatcherLoop", () => {
+describe("runImportDispatcherLoop", () => {
   test("ticks at least once and stops promptly once the signal aborts", async () => {
     const { db } = createFakeDispatchDb({ claimedRows: [] });
-    // reconcileOpmlImports' extra store calls (reclaimStalePrepareImports, findExpiredOpmlLeases,
+    // reconcileImports' extra store calls (reclaimStalePrepareImports, findExpiredOpmlLeases,
     // listCancellingOpmlImportIds) are select-based with no rows, so an empty select chain covers
     // all of them without a real reconciliation tick landing inside this short-lived test.
     const fullDb = {
@@ -189,7 +184,7 @@ describe("runOpmlImportDispatcherLoop", () => {
     const testLogger = logger();
     const controller = new AbortController();
 
-    const loopPromise = runOpmlImportDispatcherLoop(
+    const loopPromise = runImportDispatcherLoop(
       fullDb as never,
       redis as never,
       testLogger,
@@ -199,7 +194,7 @@ describe("runOpmlImportDispatcherLoop", () => {
     await loopPromise;
 
     expect(testLogger.info).toHaveBeenCalledWith(
-      "opml.import.dispatcher.started",
+      "import.dispatcher.started",
       expect.objectContaining({ dispatchTickMs: 1_000, reconcileTickMs: 30_000 }),
     );
   });
@@ -221,7 +216,7 @@ describe("runOpmlImportDispatcherLoop", () => {
     const testLogger = logger();
     const controller = new AbortController();
 
-    const loopPromise = runOpmlImportDispatcherLoop(
+    const loopPromise = runImportDispatcherLoop(
       throwingExecuteDb as never,
       redis as never,
       testLogger,
@@ -231,7 +226,7 @@ describe("runOpmlImportDispatcherLoop", () => {
     await loopPromise;
 
     expect(testLogger.error).toHaveBeenCalledWith(
-      "opml.import.dispatcher.tick_failed",
+      "import.dispatcher.tick_failed",
       expect.objectContaining({
         error: expect.objectContaining({
           name: "DrizzleQueryError",
