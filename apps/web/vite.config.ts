@@ -154,7 +154,10 @@ const config = defineConfig(({ command }) => {
           viteReact(),
           tailwindcss(),
           staticAssetServiceWorkerPlugin(),
-          nitro({ rollupConfig: { external: [/^@sentry\//] } }),
+          nitro({
+            dotenv: false,
+            rollupConfig: { external: [/^@sentry\//] },
+          }),
         ],
     resolve: {
       alias: {
