@@ -128,7 +128,7 @@ function SelectedArticleHeader({
                 initial={navCollapsedState}
                 animate={NAV_EXPANDED_STATE}
                 exit={navCollapsedState}
-                className="flex w-21 shrink-0 origin-right justify-end overflow-hidden will-change-[opacity,filter,transform]"
+                className="flex w-21 shrink-0 origin-right justify-end overflow-hidden"
                 transition={scopeControlTransition}
               >
                 <ReaderToolbar

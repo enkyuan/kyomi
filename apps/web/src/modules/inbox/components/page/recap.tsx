@@ -19,7 +19,7 @@ import type {
  * `AnimatePresence initial={false}` still skips the entrance animation on the page's first
  * render, so it only animates on a later resize, never on load.
  */
-export function RecapRail({
+export function Recap({
   show,
   navigate,
   rail,
@@ -49,7 +49,7 @@ export function RecapRail({
             exit={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.98 }}
             transition={transition}
           >
-            <aside className="flex h-full w-80 shrink-0 flex-col py-4.5 2xl:w-96 3xl:w-104">
+            <aside className="flex h-full w-68 shrink-0 flex-col py-4.5 2xl:w-76 3xl:w-80">
               {/* Article detail replaces the inbox pane; keep this rail reserved for future context. */}
               <InboxRecapCard
                 navigate={navigate}

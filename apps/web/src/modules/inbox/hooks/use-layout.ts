@@ -12,7 +12,7 @@ import type { InboxRecapRailFolderBackTarget, InboxRecapRailSection } from "../l
 const INBOX_DESKTOP_MIN_WIDTH_PX = 768;
 // Matches the `xl` breakpoint the recap rail used to key off of via a raw Tailwind `xl:flex`
 // class, now checked against the measured content column instead of raw viewport width.
-const INBOX_RECAP_RAIL_MIN_CONTAINER_WIDTH_PX = 1280;
+const INBOX_RECAP_RAIL_MIN_CONTAINER_WIDTH_PX = 1200;
 
 type InboxItemLike = { id: string; isRead: boolean } | null;
 
@@ -229,7 +229,10 @@ export function useMarkReadBehavior(input: {
 }) {
   const timeoutRef = useRef<number | null>(null);
   const onMarkReadRef = useRef(input.onMarkRead);
-  onMarkReadRef.current = input.onMarkRead;
+
+  useEffect(() => {
+    onMarkReadRef.current = input.onMarkRead;
+  }, [input.onMarkRead]);
 
   useEffect(() => {
     if (timeoutRef.current !== null) {

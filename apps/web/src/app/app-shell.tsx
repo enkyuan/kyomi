@@ -9,7 +9,7 @@ const GRID_TEMPLATE_COLUMNS = "auto minmax(0, 1fr)";
 
 // Graduated content-width ceiling: fills the viewport below `xl`, then steps up at each wide
 // tier instead of freezing at one width forever. Keep in sync with the recap rail's width ladder
-// in modules/inbox/page.tsx and the --breakpoint-* tokens in packages/ui/src/styles/theme.css.
+// in modules/inbox/components/page/recap.tsx and the --breakpoint-* tokens in packages/ui/src/styles/theme.css.
 // Deliberately not transitioned: max-width forces layout, and this can fire continuously while
 // the user drags an OS window edge, so animating it would fight the performance guidance to only
 // animate transform/opacity.
@@ -22,11 +22,12 @@ export function AppShell({ children }: { children: ReactNode }) {
       <div className="relative flex h-dvh max-h-dvh min-h-0 w-full justify-center overflow-hidden">
         <div
           data-slot="app-shell-content"
-          className={`relative grid h-full min-h-0 w-full overflow-visible px-8 ${SHELL_MAX_WIDTH_CLASS}`}
+          className={`relative grid h-full min-h-0 w-full overflow-visible ${SHELL_MAX_WIDTH_CLASS}`}
           style={
             {
               "--sidebar-width": APP_SIDEBAR_WIDTH,
               gridTemplateColumns: GRID_TEMPLATE_COLUMNS,
+              paddingInline: "calc(var(--sidebar-width) + 2rem)",
             } as CSSProperties
           }
         >

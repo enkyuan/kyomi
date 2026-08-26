@@ -40,9 +40,11 @@ export function RecapSection({
 }) {
   return (
     <section className="flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-hidden">
-      <div className="mb-3 flex h-7 shrink-0 items-center gap-1">
+      <div className="mb-3 flex h-7 shrink-0 items-center justify-between gap-2">
         <h3 className="min-w-0 truncate font-semibold text-base">{title}</h3>
-        {action}
+        {action ? (
+          <div className="ms-auto flex shrink-0 items-center justify-end">{action}</div>
+        ) : null}
       </div>
       {children}
     </section>
@@ -61,7 +63,7 @@ export function SectionEmpty({
   action?: ReactNode;
 }) {
   return (
-    <Empty className="min-h-0 w-full gap-3 px-4 py-6 md:py-6">
+    <Empty className="min-h-0 w-full gap-3 px-2 py-6 md:py-6">
       <EmptyHeader className="gap-3">
         {icon ? (
           <EmptyMedia className="mb-0 text-muted-foreground/80" variant="icon">
@@ -70,7 +72,9 @@ export function SectionEmpty({
         ) : null}
         <div>
           <EmptyTitle className="text-sm">{title}</EmptyTitle>
-          <EmptyDescription>{description}</EmptyDescription>
+          <EmptyDescription className="mx-auto max-w-full text-pretty line-clamp-2">
+            {description}
+          </EmptyDescription>
         </div>
       </EmptyHeader>
       {action ? <EmptyContent>{action}</EmptyContent> : null}
@@ -87,7 +91,13 @@ export function RecapSkeleton() {
         </div>
         <div className="space-y-3">
           {Array.from({ length: 3 }).map((_, index) => (
-            <Skeleton key={index} className="h-11 w-full rounded-xl" />
+            <div key={index} className="flex min-w-0 items-center gap-2.5 rounded-[15px] p-2">
+              <Skeleton className="size-9 shrink-0 rounded-lg" />
+              <div className="min-w-0 flex-1 space-y-1.5">
+                <Skeleton className="h-4 w-3/5" />
+                <Skeleton className="h-3 w-1/3" />
+              </div>
+            </div>
           ))}
         </div>
         <div aria-hidden="true" className="mt-auto h-[52px] shrink-0" />
@@ -98,7 +108,7 @@ export function RecapSkeleton() {
         </div>
         <div className="space-y-2">
           {Array.from({ length: 4 }).map((_, index) => (
-            <div key={index} className="-mx-1 flex min-w-0 items-center gap-2.5 rounded-[15px] p-2">
+            <div key={index} className="flex min-w-0 items-center gap-2.5 rounded-[15px] p-2">
               <Skeleton className="size-9 shrink-0 rounded-lg" />
               <div className="min-w-0 flex-1 space-y-1.5">
                 <Skeleton className="h-4 w-4/5" />
@@ -115,7 +125,7 @@ export function RecapSkeleton() {
         </div>
         <div className="space-y-3">
           {Array.from({ length: 3 }).map((_, index) => (
-            <div key={index} className="-mx-1 h-[60px] space-y-1 rounded-xl px-2 py-2">
+            <div key={index} className="h-[60px] space-y-1 rounded-xl px-2 py-2">
               <Skeleton className="h-5 w-full" />
               <Skeleton className="h-5 w-2/3" />
             </div>

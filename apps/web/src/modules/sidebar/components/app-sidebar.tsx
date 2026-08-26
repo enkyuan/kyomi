@@ -34,11 +34,11 @@ const SettingsDialog = lazyNamed(
 );
 
 const CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS = cn(
-  "size-11 justify-center rounded-full! p-0",
+  "size-10 justify-center rounded-full! p-0",
   "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-border))]",
   "active:scale-[0.96] active:bg-sidebar-accent active:text-sidebar-accent-foreground active:shadow-[0_0_0_1px_hsl(var(--sidebar-border))]",
   "motion-reduce:active:scale-100",
-  "group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!",
+  "group-data-[collapsible=icon]:size-10! group-data-[collapsible=icon]:p-0!",
 );
 
 type AppSidebarDialogState = {
@@ -123,7 +123,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               className="size-11 justify-center rounded-full! p-0 hover:bg-transparent focus-visible:ring-0 focus-visible:ring-transparent active:bg-transparent group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
               render={<Link to="/inbox" search={{ filter: "my-feed" as const }} />}
             >
-              <KyomiLogo size={28} className="size-auto" />
+              <KyomiLogo size={44} className="size-8" />
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="flex justify-center">
