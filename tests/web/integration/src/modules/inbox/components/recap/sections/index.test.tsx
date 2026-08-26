@@ -19,7 +19,7 @@ describe("recap summary layout", () => {
     expect(RECAP_SUMMARY_LAYOUT_CLASS).not.toContain("max-content");
     expect(RECAP_SUMMARY_SECTION_CLASS).toContain("w-full");
     expect(RECAP_SUMMARY_SECTION_CLASS).toContain("h-full");
-    expect(RECAP_SUMMARY_SECTION_CLASS).toContain("[scrollbar-gutter:stable]");
+    expect(RECAP_SUMMARY_SECTION_CLASS).toContain("overflow-hidden");
 
     const sections = Array.from(layout?.children ?? []);
     expect(sections).toHaveLength(3);

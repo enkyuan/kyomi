@@ -3,7 +3,7 @@
 import { useViewport } from "@hooks/use-viewport";
 import { VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
 import { Badge } from "@kyomi/ui/badge";
-import { BrowserScrollBar, ScrollAreaPrimitive } from "@kyomi/ui/scroll-area";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
 import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { useElementScrollRestoration } from "@tanstack/react-router";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
@@ -154,16 +154,16 @@ export function List({
 
   return (
     <section
-      className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden [--inbox-header-height:3rem] md:min-h-0"
+      className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden md:min-h-0"
       aria-busy={isRefreshing || undefined}
       data-slot="inbox-list-root"
     >
       <ScrollAreaPrimitive.Root className="relative min-h-0 flex-1 overflow-hidden">
         <ScrollAreaPrimitive.Viewport
           ref={listScrollRef}
-          className="h-full overflow-x-hidden outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain"
+          className="h-full overflow-x-hidden outline-none scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain"
           data-scroll-restoration-id={INBOX_LIST_SCROLL_RESTORATION_ID}
-          data-slot="inbox-list-viewport"
+          data-slot="scroll-area-viewport"
         >
           <div
             className={
@@ -173,7 +173,7 @@ export function List({
             {onFilterChange ? (
               <div
                 ref={listHeaderRef}
-                className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-5.5 py-4.5 isolate"
+                className="isolate sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-5.5 py-4.5"
                 data-slot="inbox-list-header"
               >
                 <div className="flex min-w-0 items-center gap-2">
@@ -193,7 +193,7 @@ export function List({
                             {isArticleScoped && selectedArticle && !isLoading ? (
                               <HeaderReaderToolbar item={selectedArticle} />
                             ) : feedLabel ? (
-                              <span className="relative inline-flex h-11 min-w-0 max-w-72 items-center overflow-hidden rounded-full bg-background px-4 font-medium text-base text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative">
+                              <span className="relative inline-flex h-11 min-w-0 max-w-72 items-center overflow-hidden rounded-full bg-background px-4 text-base font-medium text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted *:relative">
                                 <span className="truncate">{feedLabel}</span>
                               </span>
                             ) : null}
@@ -299,10 +299,11 @@ export function List({
           </div>
         </ScrollAreaPrimitive.Viewport>
         {showScrollbar && (inboxItems.length > 0 || isLoading) ? (
-          <BrowserScrollBar
+          <ScrollBar
             aria-label="Inbox list scrollbar"
-            className="z-50 !fixed !top-0 !right-0 !bottom-0 !left-auto !h-auto !inset-inline-end-0"
+            className="z-50"
             orientation="vertical"
+            style={{ position: "fixed", top: 0, bottom: 0, insetInlineEnd: 0 }}
           />
         ) : null}
       </ScrollAreaPrimitive.Root>
@@ -314,7 +315,7 @@ function HeaderReaderToolbar({ item }: { item: ArticleDetailDto }) {
   const toolbar = useReaderToolbar({ item });
 
   return (
-    <div className="relative inline-flex h-11 min-w-0 max-w-96 items-center overflow-hidden rounded-full bg-background px-1.5 font-medium text-base text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative">
+    <div className="relative inline-flex h-11 min-w-0 max-w-96 items-center overflow-hidden rounded-full bg-background px-1.5 text-base font-medium text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted *:relative">
       <ReaderToolbar {...toolbar.toolbarProps} />
     </div>
   );

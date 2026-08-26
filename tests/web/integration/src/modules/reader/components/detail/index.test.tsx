@@ -28,9 +28,6 @@ vi.mock("@kyomi/ui/scroll-area", () => ({
   ScrollBar: ({ orientation, ...props }: { orientation: string; className?: string }) => (
     <div data-orientation={orientation} data-slot="scroll-area-scrollbar" {...props} />
   ),
-  BrowserScrollBar: ({ orientation, ...props }: { orientation: string; className?: string }) => (
-    <div data-orientation={orientation} data-slot="browser-scrollbar" {...props} />
-  ),
 }));
 
 vi.mock("@modules/reader/components/detail/content", () => ({
@@ -134,19 +131,19 @@ describe("Detail scrollbar surface", () => {
     delete (HTMLElement.prototype as { scrollTo?: unknown }).scrollTo;
   });
 
-  test("defaults the reader scrollbar to the browser viewport surface", () => {
+  test("renders the reader scrollbar for the browser viewport surface", () => {
     const { container } = renderDetail();
     const scrollbar = container.querySelector('[aria-label="Reader scrollbar"]');
 
-    expect(scrollbar?.className).toContain("!fixed");
-    expect(scrollbar?.className).toContain("!right-0");
+    expect(scrollbar?.getAttribute("data-slot")).toBe("scroll-area-scrollbar");
+    expect(scrollbar?.className).toContain("z-50");
   });
 
-  test("keeps the reader scrollbar local for the card surface", () => {
+  test("renders the reader scrollbar for the card surface", () => {
     const { container } = renderDetail("card");
     const scrollbar = container.querySelector('[aria-label="Reader scrollbar"]');
 
-    expect(scrollbar?.className).not.toContain("!fixed");
-    expect(scrollbar?.className).not.toContain("!right-0");
+    expect(scrollbar?.getAttribute("data-slot")).toBe("scroll-area-scrollbar");
+    expect(scrollbar?.className).toContain("z-50");
   });
 });

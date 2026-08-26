@@ -4,7 +4,7 @@ import { Link, type ErrorComponentProps, useRouter } from "@tanstack/react-route
 import { Button } from "@kyomi/ui/button";
 import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyTitle } from "@kyomi/ui/empty";
 import { KyomiLogo } from "@kyomi/ui/icons";
-import type { RouteRecoveryAction } from "@/app/recovery";
+import type { RouteRecoveryAction } from "@lib/recovery";
 
 export function RouteErrorPage({
   error,

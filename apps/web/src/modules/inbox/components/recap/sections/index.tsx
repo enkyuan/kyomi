@@ -18,7 +18,7 @@ import { cn } from "@kyomi/ui/lib/utils";
 export const RECAP_SUMMARY_LAYOUT_CLASS =
   "grid min-h-0 w-full min-w-0 flex-1 grid-rows-3 gap-6 overflow-hidden py-4";
 export const RECAP_SUMMARY_SECTION_CLASS =
-  "flex h-full min-h-0 w-full min-w-0 flex-col overflow-x-hidden overflow-y-auto [scrollbar-gutter:stable]";
+  "flex h-full min-h-0 w-full min-w-0 flex-col overflow-hidden px-4";
 
 export function RailTooltip({ label, children }: { label: string; children: ReactElement }) {
   return (
@@ -39,7 +39,7 @@ export function RecapSection({
   children: ReactNode;
 }) {
   return (
-    <section className="flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-visible px-4">
+    <section className="flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-hidden">
       <div className="mb-3 flex h-7 shrink-0 items-center gap-1">
         <h3 className="min-w-0 truncate font-semibold text-base">{title}</h3>
         {action}
@@ -128,7 +128,7 @@ export function RecapSkeleton() {
 
 export function RecapError({ onRetry }: { onRetry: () => void }) {
   return (
-    <Empty className="h-full w-full overflow-y-auto px-6 py-10 [scrollbar-gutter:stable] md:py-10">
+    <Empty className="h-full w-full flex-1 overflow-hidden px-6 py-10 md:py-10">
       <EmptyHeader>
         <EmptyMedia variant="icon">
           <FolderWarningFill />

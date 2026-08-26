@@ -115,7 +115,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       className={cn("h-svh bg-sidebar", className)}
       style={{ "--sidebar-width": APP_SIDEBAR_WIDTH, ...style } as CSSProperties}
     >
-      <SidebarHeader className="items-center ps-0 pe-2 py-4.5">
+      <SidebarHeader className="items-center px-0 py-4.5">
         <SidebarMenu className="gap-4.5">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
@@ -144,13 +144,13 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         </SidebarMenu>
       </SidebarHeader>
 
-      <div className="min-h-0 flex-1 ps-0 pe-2" data-sidebar="content" data-slot="sidebar-content">
+      <div className="min-h-0 flex-1 px-0" data-sidebar="content" data-slot="sidebar-content">
         <ScrollArea
           className="relative h-full min-h-0 overflow-visible **:data-[slot=scroll-area-scrollbar]:hidden"
           scrollFade
           scrollFadeClassName="data-has-overflow-y:scroll-mask-y-edge-14"
         >
-          <SidebarMenu className="items-center gap-3 px-1">
+          <SidebarMenu className="items-center gap-3 px-0">
             {feeds.map((feed) => {
               const isActive = isInbox && scopedFeedId === feed.feedId;
               return (
@@ -198,7 +198,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         </ScrollArea>
       </div>
 
-      <SidebarFooter className="items-center ps-0 pe-2 py-4.5">
+      <SidebarFooter className="items-center px-0 py-4.5">
         <SidebarMenu className="items-center gap-3">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton

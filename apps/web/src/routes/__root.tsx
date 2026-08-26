@@ -17,7 +17,7 @@ import TanstackQueryProvider from "@integrations/tanstack-query/provider";
 import { RouteErrorPage } from "@/app/error";
 import { AppRuntimeEffects } from "@/app/runtime-effects";
 import { NotFoundPage } from "@/app/not-found";
-import { getAuthRecoveryAction, LOGIN_RECOVERY_ACTION } from "@/app/recovery";
+import { getAuthRecoveryAction, LOGIN_RECOVERY_ACTION } from "@lib/recovery";
 import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/toast";
 import PostHogProvider from "@integrations/posthog/provider";
 import { getAuthBootstrapState } from "@lib/auth/functions";

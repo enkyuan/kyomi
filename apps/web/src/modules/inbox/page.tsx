@@ -3,7 +3,7 @@
 import { MobileLayout } from "./layouts/mobile";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
-import { InboxRecapCard } from "./components/recap";
+import { RecapRail } from "./components/page/recap-rail";
 import {
   InboxPreferencesBootstrapProvider,
   type InboxPreferences,
@@ -17,6 +17,7 @@ import {
   type InboxRouteSearch,
   useInboxRouteState,
   useMarkReadBehavior,
+  useRecapRailVisibility,
   useResponsiveReaderMode,
 } from "@modules/inbox/hooks/use-layout";
 import type { InboxItem } from "@modules/inbox/lib/articles/index";
@@ -69,6 +70,7 @@ function InboxPageContent({
   const layoutContainerRef = useRef<HTMLDivElement | null>(null);
   const { containerWidth: layoutContainerWidth } = useViewport(layoutContainerRef);
   const layoutVariant = useResponsiveReaderMode(layoutContainerWidth);
+  const showRecapRail = useRecapRailVisibility(layoutContainerWidth);
   const [mobileTransitionDirection, setMobileTransitionDirection] = useState<1 | -1>(1);
   const [articleStepDirection, setArticleStepDirection] = useState<ArticleStepDirection>(1);
   const clientTimezoneOffsetMinutes = useTimezone();
@@ -382,22 +384,21 @@ function InboxPageContent({
           detail={detailElementWithBack}
         />
       ) : (
-        <div className="flex h-full max-h-full min-h-0 min-w-0 overflow-hidden pe-3">
+        <div className="flex h-full max-h-full min-h-0 min-w-0 overflow-hidden gap-4.5 px-4.5">
           <Feed
             detail={feedDetailElement}
             list={listElement}
             showDetail={showFeedDetail}
             transition={feedTransition}
           />
-          <aside className="hidden h-full w-96 shrink-0 flex-col py-4.5 xl:flex">
-            {/* Article detail replaces the inbox pane; keep this rail reserved for future context. */}
-            <InboxRecapCard
-              navigate={navigate}
-              rail={rail}
-              railFolderBack={railFolderBack}
-              railFolderId={railFolderId}
-            />
-          </aside>
+          {/* Visibility driven by measured content width; see RecapRail for the animation details. */}
+          <RecapRail
+            show={showRecapRail}
+            navigate={navigate}
+            rail={rail}
+            railFolderBack={railFolderBack}
+            railFolderId={railFolderId}
+          />
         </div>
       )}
     </div>

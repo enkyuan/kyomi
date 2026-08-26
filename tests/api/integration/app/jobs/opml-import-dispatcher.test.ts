@@ -203,4 +203,45 @@ describe("runOpmlImportDispatcherLoop", () => {
       expect.objectContaining({ dispatchTickMs: 1_000, reconcileTickMs: 30_000 }),
     );
   });
+
+  test("logs the full cause chain (not just the truncated SQL message) on tick failure", async () => {
+    const rootCause = new Error("permission denied for table opml_import_items");
+    rootCause.name = "DatabaseError";
+    (rootCause as Record<string, unknown>).code = "42501";
+    (rootCause as Record<string, unknown>).severity = "ERROR";
+
+    const drizzleError = new Error("Failed query: WITH active_imports AS (SELECT id FROM …");
+    drizzleError.name = "DrizzleQueryError";
+    (drizzleError as Record<string, unknown>).cause = rootCause;
+
+    const throwingExecuteDb = {
+      execute: mock(async () => Promise.reject(drizzleError)),
+    };
+    const redis = fakeRedis();
+    const testLogger = logger();
+    const controller = new AbortController();
+
+    const loopPromise = runOpmlImportDispatcherLoop(
+      throwingExecuteDb as never,
+      redis as never,
+      testLogger,
+      controller.signal,
+    );
+    controller.abort();
+    await loopPromise;
+
+    expect(testLogger.error).toHaveBeenCalledWith(
+      "opml.import.dispatcher.tick_failed",
+      expect.objectContaining({
+        error: expect.objectContaining({
+          name: "DrizzleQueryError",
+          cause: expect.objectContaining({
+            name: "DatabaseError",
+            message: "permission denied for table opml_import_items",
+            code: "42501",
+          }),
+        }),
+      }),
+    );
+  });
 });

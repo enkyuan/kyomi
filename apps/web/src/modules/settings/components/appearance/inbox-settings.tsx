@@ -1,11 +1,7 @@
 "use client";
 
 import { Group, GroupSeparator } from "@kyomi/ui/group";
-import {
-  SegmentedControl,
-  SegmentedControlList,
-  SegmentedControlTab,
-} from "@kyomi/ui/segmented-control";
+import { Tabs, TabsList, TabsTab } from "@kyomi/ui/tabs";
 import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@kyomi/ui/select";
 import { Switch } from "@kyomi/ui/switch";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
@@ -87,23 +83,23 @@ export function InboxAppearanceSettings({
           description="Scale inbox item text while preserving title, summary, and metadata hierarchy."
           title="Text size"
         />
-        <SegmentedControl
+        <Tabs
           value={getInboxTextScaleValue(preferences.inboxFontSizePx)}
           onValueChange={(value) => {
-            const fontSizePx = getInboxTextScaleFontSize(value);
+            const fontSizePx = getInboxTextScaleFontSize(value as string);
             if (fontSizePx !== null) {
               setPreferences({ inboxFontSizePx: fontSizePx });
             }
           }}
         >
-          <SegmentedControlList aria-label="Inbox text scale">
+          <TabsList aria-label="Inbox text scale" variant="pill">
             {INBOX_TEXT_SCALE_OPTIONS.map((option) => (
-              <SegmentedControlTab key={option.value} className="px-3" value={option.value}>
+              <TabsTab key={option.value} className="px-3" value={option.value}>
                 {option.label}
-              </SegmentedControlTab>
+              </TabsTab>
             ))}
-          </SegmentedControlList>
-        </SegmentedControl>
+          </TabsList>
+        </Tabs>
       </div>
 
       <div className="space-y-3 py-1">

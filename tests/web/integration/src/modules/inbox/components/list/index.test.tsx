@@ -48,8 +48,8 @@ vi.mock("@kyomi/ui/scroll-area", () => ({
       </div>
     ),
   },
-  BrowserScrollBar: ({ orientation, ...props }: { orientation: string; className?: string }) => (
-    <div data-orientation={orientation} data-slot="browser-scrollbar" {...props} />
+  ScrollBar: ({ orientation, ...props }: { orientation: string; className?: string }) => (
+    <div data-orientation={orientation} data-slot="scroll-area-scrollbar" {...props} />
   ),
 }));
 
@@ -77,9 +77,8 @@ describe("List scrollbar surface", () => {
     );
     const scrollbar = container.querySelector('[aria-label="Inbox list scrollbar"]');
 
-    expect(scrollbar?.getAttribute("data-slot")).toBe("browser-scrollbar");
-    expect(scrollbar?.className).toContain("!fixed");
-    expect(scrollbar?.className).toContain("!right-0");
+    expect(scrollbar?.getAttribute("data-slot")).toBe("scroll-area-scrollbar");
+    expect(scrollbar?.className).toContain("z-50");
   });
 
   test("does not render the browser scrollbar while the list pane is hidden", () => {

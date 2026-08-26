@@ -2,6 +2,7 @@
 
 import { useCallback, useSyncExternalStore } from "react";
 
+// Keep these in sync with the --breakpoint-* tokens in packages/ui/src/styles/theme.css.
 const BREAKPOINTS = {
   "2xl": 1536,
   "3xl": 1600,

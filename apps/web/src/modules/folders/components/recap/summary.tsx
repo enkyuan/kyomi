@@ -34,7 +34,7 @@ export function FolderActions({
     <div className="mt-3 grid min-w-0 shrink-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)_2.5rem] gap-2 px-1">
       <RailTooltip label="Create folder">
         <Button className={FOLDER_ACTION_BUTTON_CLASS} variant="secondary" onClick={onCreateFolder}>
-          <AddFill className="!mx-0 size-4" />
+          <AddFill className="mx-0 size-4" />
           Add
         </Button>
       </RailTooltip>
@@ -45,7 +45,7 @@ export function FolderActions({
           variant="secondary"
           onClick={onImportOpml}
         >
-          <FileImportFill className="!mx-0 size-4" />
+          <FileImportFill className="mx-0 size-4" />
           Import
         </Button>
       </RailTooltip>
@@ -57,7 +57,7 @@ export function FolderActions({
           variant="outline"
           onClick={onExportOpml}
         >
-          <FileExportFill className="!mx-0 size-4" />
+          <FileExportFill className="mx-0 size-4" />
         </Button>
       </RailTooltip>
     </div>
@@ -81,7 +81,7 @@ function FolderSummaryActions({
           variant="secondary"
           onClick={onManageFolders}
         >
-          <ListCheckFill className="!mx-0 size-4" />
+          <ListCheckFill className="mx-0 size-4" />
           Manage
         </Button>
       </RailTooltip>
@@ -92,7 +92,7 @@ function FolderSummaryActions({
           variant="secondary"
           onClick={onImportOpml}
         >
-          <FileImportFill className="!mx-0 size-4" />
+          <FileImportFill className="mx-0 size-4" />
           Import
         </Button>
       </RailTooltip>
@@ -103,7 +103,7 @@ function FolderSummaryActions({
           variant="outline"
           onClick={onAddFolder}
         >
-          <AddFill className="!mx-0 size-4" />
+          <AddFill className="mx-0 size-4" />
         </Button>
       </RailTooltip>
     </div>

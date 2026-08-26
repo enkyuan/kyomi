@@ -126,7 +126,7 @@ export function RecapContent({
   }
   if (isSummaryEmpty) {
     return (
-      <div className="flex min-h-0 w-full flex-1 items-center justify-center overflow-y-auto px-4 py-4 [scrollbar-gutter:stable]">
+      <div className="flex min-h-0 w-full flex-1 items-center justify-center overflow-hidden px-4 py-4">
         <SectionEmpty
           title="Nothing here yet"
           description="Folders, top sources, and saved items will appear here as you read and organize feeds."

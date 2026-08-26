@@ -1,6 +1,7 @@
 import type Redis from "ioredis";
 import type { db } from "@adapters/db/client";
 import { publishJob } from "@adapters/queue/publish-job";
+import { serializeError } from "@shared/utils/serialize-error";
 import {
   cancelPendingOpmlItems,
   claimDispatchableOpmlItems,
@@ -95,7 +96,7 @@ export async function runOpmlImportDispatcherTick(
       logger.error("opml.import.dispatch.publish_failed", {
         importId: item.importId,
         itemId: item.id,
-        error: error instanceof Error ? error.message : String(error),
+        error: serializeError(error),
       });
     }
   }
@@ -144,7 +145,7 @@ export async function reconcileOpmlImports(
     } catch (error) {
       logger.error("opml.import.reconcile.prepare_republish_failed", {
         importId,
-        error: error instanceof Error ? error.message : String(error),
+        error: serializeError(error),
       });
     }
   }
@@ -242,7 +243,7 @@ export async function runOpmlImportDispatcherLoop(
       await maybeReconcile(Date.now());
     } catch (error) {
       logger.error("opml.import.dispatcher.tick_failed", {
-        error: error instanceof Error ? error.message : String(error),
+        error: serializeError(error),
       });
     }
 
