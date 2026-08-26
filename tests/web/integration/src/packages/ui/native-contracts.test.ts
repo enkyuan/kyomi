@@ -6,7 +6,7 @@ import { resolveNativeMotionEffect } from "@kyomi/ui/native/motion";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 
 const uiPackage = JSON.parse(
-  readFileSync(resolve(process.cwd(), "../packages/ui/package.json"), "utf8"),
+  readFileSync(resolve(import.meta.dirname, "../../../../../../packages/ui/package.json"), "utf8"),
 ) as {
   exports: Record<string, string>;
 };
@@ -25,6 +25,10 @@ describe("native UI contracts", () => {
       matcha: {
         color: "#a8d480",
         onColor: "#17240c",
+      },
+      mizu: {
+        color: "#81c7d4",
+        onColor: "#082b33",
       },
     });
   });

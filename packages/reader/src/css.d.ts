@@ -18,3 +18,14 @@ declare module "katex/dist/contrib/auto-render.mjs" {
   const renderMathInElement: (element: HTMLElement, options?: RenderMathOptions) => void;
   export default renderMathInElement;
 }
+
+declare module "marked-katex-extension" {
+  import type { MarkedExtension } from "marked";
+  import type { KatexOptions } from "katex";
+
+  export type MarkedKatexOptions = KatexOptions & {
+    nonStandard?: boolean;
+  };
+
+  export default function markedKatex(options?: MarkedKatexOptions): MarkedExtension;
+}

@@ -22,7 +22,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <div className="relative flex h-dvh max-h-dvh min-h-0 w-full justify-center overflow-hidden">
         <div
           data-slot="app-shell-content"
-          className={`relative grid h-full min-h-0 w-full overflow-visible ${SHELL_MAX_WIDTH_CLASS}`}
+          className={`relative grid h-full min-h-0 w-full overflow-visible px-6 ${SHELL_MAX_WIDTH_CLASS}`}
           style={
             {
               "--sidebar-width": APP_SIDEBAR_WIDTH,
