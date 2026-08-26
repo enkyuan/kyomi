@@ -39,4 +39,4 @@ export function ScrollArea({
 }
 
 export { ScrollAreaPrimitive };
-export { BrowserScrollBar, ScrollBar } from "./scroll-bar";
+export { ScrollBar } from "./scroll-bar";

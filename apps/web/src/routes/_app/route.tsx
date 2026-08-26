@@ -2,7 +2,7 @@ import { Outlet, createFileRoute, type ErrorComponentProps } from "@tanstack/rea
 import { AppShell } from "@/app/app-shell";
 import { RouteErrorPage } from "@/app/error";
 import { NotFoundPage } from "@/app/not-found";
-import { INBOX_RECOVERY_ACTION } from "@/app/recovery";
+import { INBOX_RECOVERY_ACTION } from "@lib/recovery";
 import { requireAuth } from "@/routes/-guards";
 
 export const Route = createFileRoute("/_app")({

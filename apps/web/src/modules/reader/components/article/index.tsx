@@ -15,9 +15,9 @@ import type {
   ArticleDetailDto,
   InboxDensityDto,
   InboxTimestampDisplayDto,
-} from "@lib/schemas/index";
+} from "@kyomi/reader/schemas";
 import { cn } from "@kyomi/ui/lib/utils";
-import { useTimestamp } from "@hooks/use-timestamp";
+import { useTimestamp } from "@kyomi/ui/hooks/use-timestamp";
 import { useLayoutEffect, useRef, useState } from "react";
 import type { RefObject } from "react";
 

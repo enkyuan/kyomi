@@ -4,7 +4,7 @@ import type {
   ArticleDetailDto,
   InboxDensityDto,
   InboxTimestampDisplayDto,
-} from "@lib/schemas/index";
+} from "@kyomi/reader/schemas";
 import type { ReaderContentWidth } from "./preferences";
 
 export type ArticleStepDirection = 1 | -1;

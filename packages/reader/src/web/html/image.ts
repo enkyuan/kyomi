@@ -1,4 +1,9 @@
-import { READER_IMG_FRAME, READER_INLINE_IMG } from "./constants";
+import {
+  READER_FIGURE_CAPTION,
+  READER_IMG_FRAME,
+  READER_IMG_UNAVAILABLE,
+  READER_INLINE_IMG,
+} from "./constants";
 import { dedupeFigureInlineCaptionNoise } from "./caption";
 import { cn, hasOnlyElementOrWhitespace, parsePositiveInt } from "./utils";
 
@@ -25,6 +30,7 @@ const BADGE_OR_ICON_RE = /badge|icon|emoji|logo|shield|status|avatar/i;
 const PLACEHOLDER_IMG_RE =
   /placeholder|grey-placeholder|spacer|blank|pixel|transparent(?:\.gif|\.png)?/i;
 const PLACEHOLDER_CLASS_RE = /placeholder|unavailable|skeleton|lazy(?:load|loading)?|loading/i;
+const GENERIC_ALT_RE = /^(?:image|photo|picture|illustration|thumbnail)$/i;
 
 function countMeaningfulNonImageText(parent: HTMLElement, target: HTMLImageElement): number {
   let chars = 0;
@@ -142,13 +148,122 @@ function unwrapImageOnlyParagraph(frame: HTMLElement): void {
   }
 }
 
-/** Remove loading skeleton once the image has dimensions (load, error, or decode). */
+function getMeaningfulText(value: string | null | undefined): string | null {
+  const text = value?.replace(/\s+/g, " ").trim() ?? "";
+  return text && !GENERIC_ALT_RE.test(text) ? text : null;
+}
+
+function getFigureCaption(wrap: HTMLElement): string | null {
+  return getMeaningfulText(
+    wrap.closest("figure")?.querySelector(":scope > figcaption")?.textContent,
+  );
+}
+
+function getAdjacentCaption(wrap: HTMLElement): string | null {
+  const anchor = wrap.parentElement?.tagName === "A" ? wrap.parentElement : wrap;
+  const sibling = anchor.nextElementSibling as HTMLElement | null;
+  if (!sibling?.hasAttribute(READER_FIGURE_CAPTION)) {
+    return null;
+  }
+  return getMeaningfulText(sibling.textContent);
+}
+
+function createImageUnavailableIcon(): SVGSVGElement {
+  const namespace = "http://www.w3.org/2000/svg";
+  const icon = document.createElementNS(namespace, "svg");
+  icon.classList.add("reader-image-unavailable-icon");
+  icon.setAttribute("aria-hidden", "true");
+  icon.setAttribute("fill", "none");
+  icon.setAttribute("viewBox", "0 0 16 16");
+
+  const frame = document.createElementNS(namespace, "rect");
+  frame.setAttribute("height", "11");
+  frame.setAttribute("rx", "1.5");
+  frame.setAttribute("width", "13");
+  frame.setAttribute("x", "1.5");
+  frame.setAttribute("y", "2.5");
+
+  const landscape = document.createElementNS(namespace, "path");
+  landscape.setAttribute("d", "m3.5 11 2.4-2.4 1.8 1.8 1.3-1.3 2.5 2.5");
+
+  const sun = document.createElementNS(namespace, "circle");
+  sun.setAttribute("cx", "5.25");
+  sun.setAttribute("cy", "6.25");
+  sun.setAttribute("r", "0.75");
+
+  const slash = document.createElementNS(namespace, "path");
+  slash.setAttribute("d", "M2 2 14 14");
+
+  icon.append(frame, landscape, sun, slash);
+  return icon;
+}
+
+function removeDecorativeImageFallback(wrap: HTMLElement): void {
+  const parent = wrap.parentElement;
+  wrap.remove();
+
+  if (!parent || parent.textContent?.trim() || parent.childElementCount > 0) {
+    return;
+  }
+
+  if (parent.tagName === "P" || parent.tagName === "A" || parent.tagName === "FIGURE") {
+    parent.remove();
+  }
+}
+
+function replaceWithImageUnavailable(
+  wrap: HTMLElement,
+  skeletonEl: HTMLElement,
+  img: HTMLImageElement,
+): void {
+  const figureCaption = getFigureCaption(wrap);
+  const adjacentCaption = getAdjacentCaption(wrap);
+  const alt = getMeaningfulText(img.getAttribute("alt"));
+  const externalDescription = figureCaption ?? adjacentCaption;
+
+  wrap.removeAttribute("data-reader-img-loading");
+  wrap.removeAttribute("data-reader-photo-view");
+  skeletonEl.remove();
+  img.remove();
+
+  if (!externalDescription && !alt) {
+    removeDecorativeImageFallback(wrap);
+    return;
+  }
+
+  wrap.setAttribute(READER_IMG_UNAVAILABLE, "");
+
+  const notice = document.createElement("span");
+  notice.className = "reader-image-unavailable";
+  notice.setAttribute("role", "note");
+  notice.setAttribute(
+    "aria-label",
+    `Image unavailable: ${externalDescription ?? alt ?? "Image unavailable"}`,
+  );
+
+  const label = document.createElement("span");
+  label.className = "reader-image-unavailable-label";
+  label.append(createImageUnavailableIcon(), document.createTextNode("Image unavailable"));
+  notice.append(label);
+
+  if (!externalDescription && alt) {
+    const description = document.createElement("span");
+    description.className = "reader-image-unavailable-description";
+    description.textContent = alt;
+    notice.append(description);
+  }
+
+  wrap.appendChild(notice);
+}
+
+/** Reveal loaded images and replace failed media with a compact semantic fallback. */
 function bindReaderImageReveal(
   wrap: HTMLElement,
   skeletonEl: HTMLElement,
   img: HTMLImageElement,
 ): void {
   let revealed = false;
+  let settling = false;
   const reveal = (): void => {
     if (revealed) {
       return;
@@ -159,15 +274,47 @@ function bindReaderImageReveal(
     img.classList.remove("opacity-0");
   };
 
-  if (img.complete && img.naturalWidth > 0) {
-    reveal();
-  } else {
-    img.addEventListener("load", reveal, { once: true });
-    img.addEventListener("error", reveal, { once: true });
+  const markUnavailable = (): void => {
+    if (revealed) {
+      return;
+    }
+    revealed = true;
+    replaceWithImageUnavailable(wrap, skeletonEl, img);
+  };
+
+  const hasDecodedDimensions = (): boolean => img.naturalWidth > 0 || img.naturalHeight > 0;
+
+  const decodeThenSettle = (loadConfirmed = false): void => {
+    if (revealed || settling) {
+      return;
+    }
+    if (typeof img.decode !== "function") {
+      if (loadConfirmed || hasDecodedDimensions()) {
+        reveal();
+      }
+      return;
+    }
+    settling = true;
+    void img.decode().then(reveal, () => {
+      settling = false;
+      // Expo DOM/WebKit may reject decode while an eager image is still settling.
+      // A successful load event or populated dimensions is the authoritative success signal;
+      // only the image error event below can turn the image into an unavailable fallback.
+      if (loadConfirmed || hasDecodedDimensions()) {
+        reveal();
+      }
+    });
+  };
+
+  img.addEventListener("load", () => decodeThenSettle(true), { once: true });
+  img.addEventListener("error", markUnavailable, { once: true });
+
+  if (img.complete && hasDecodedDimensions()) {
+    decodeThenSettle();
   }
 
   requestAnimationFrame(() => {
-    if (img.naturalWidth > 0 || img.naturalHeight > 0) {
+    if (hasDecodedDimensions()) {
       reveal();
     }
   });
@@ -218,6 +365,7 @@ export function enhanceArticleBodyImages(container: HTMLElement): void {
       "opacity-0",
       "transition-opacity",
       "duration-200",
+      "ease-out",
     );
 
     bindReaderImageReveal(wrap, skeletonEl, img);

@@ -1,6 +1,6 @@
 {
   "extends": "../../packages/tsconfig/web.json",
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "scripts/**/*.ts", "scripts/**/*.mjs"],
   "compilerOptions": {
     "paths": {
       "*": ["./*"],
@@ -12,6 +12,7 @@
       "@utils/*": ["./src/utils/*"],
       "@kyomi/ui/*": ["../../packages/ui/src/*"]
     },
-    "types": ["vite/client", "bun"]
+    "types": ["vite/client", "bun"],
+    "noUnusedParameters": false
   }
 }

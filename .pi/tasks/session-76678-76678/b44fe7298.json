@@ -1,0 +1,20 @@
+{
+  "id": "b44fe7298",
+  "name": "React doctor",
+  "command": "bunx react-doctor@latest . --verbose; echo REACT_DOCTOR_EXIT:$?",
+  "description": "React Doctor QA after inbox/sidebar polish fixes.",
+  "status": "completed",
+  "outputPath": ".pi/tasks/session-76678-76678/b44fe7298.output",
+  "cwd": "/Users/enkyuan/Desktop/Projects/kyomi",
+  "startTime": 1787768657771,
+  "endTime": 1787768670537,
+  "exitCode": 0,
+  "signal": null,
+  "pid": 91516,
+  "bytesWritten": 12488,
+  "isAgent": false,
+  "notified": true,
+  "notifyOnCompletion": true,
+  "triggerOnCompletion": true,
+  "timeoutSeconds": 300
+}

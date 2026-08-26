@@ -18,6 +18,7 @@ const sampleItem = (overrides: Partial<ArticleListItemDto> = {}): ArticleListIte
   feedFaviconUrl: null,
   isRead: false,
   isSaved: false,
+  lastViewedAt: null,
   articleType: "clip",
   categories: [],
   ...overrides,

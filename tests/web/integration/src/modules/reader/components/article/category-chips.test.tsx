@@ -3,7 +3,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
 import { Article } from "@modules/reader/components/article";
-import type { ArticleDetailDto, ReaderContentDto } from "@lib/schemas/index";
+import type { ArticleDetailDto, ReaderContentDto } from "@kyomi/reader/schemas";
 
 vi.mock("@modules/feeds/components/item/source", () => ({
   Source: ({ feedTitle }: { feedTitle: string }) => <div>{feedTitle}</div>,

@@ -1,7 +1,9 @@
 import type { ArticleSort } from "@modules/articles/query";
 import type { ArticleListItemDto } from "@modules/articles/types";
 
-export type RecentlyViewedItem = ArticleListItemDto & { lastViewedAt: Date };
+export type RecentlyViewedItem = Omit<ArticleListItemDto, "lastViewedAt"> & {
+  lastViewedAt: Date;
+};
 
 export function compareRecentlyViewedItems(
   left: RecentlyViewedItem,

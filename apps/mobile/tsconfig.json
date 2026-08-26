@@ -1,12 +1,17 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "strict": true,
+    "types": ["uniwind/types"],
     "paths": {
       "@/*": ["./src/*"],
-      "@app/*": ["./src/app/*"],
-      "@kyomi/ui": ["../../packages/ui/src/index.ts"],
+      "@icons": ["./src/components/icons/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@ui/*": ["./src/components/ui/*"],
+      "@utils/*": ["./src/utils/*"],
       "@kyomi/ui/*": ["../../packages/ui/src/*"]
-    },
-    "strict": true
+    }
   }
 }

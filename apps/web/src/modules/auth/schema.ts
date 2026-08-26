@@ -1,110 +1,32 @@
-type ValidationErrorLike = {
-  message?: string;
-};
+import { isValidEmail } from "@kyomi/reader/schemas/auth";
 
-export type LoginFormValues = {
-  email: string;
-  password: string;
-};
+export * from "@kyomi/reader/schemas/auth";
 
-export type RegisterFormValues = LoginFormValues & {
-  confirmPassword: string;
-};
-
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+export type EmailOTPFormValues = { email: string };
+export type OtpFormValues = { otp: string };
 
 function normalizeEmail(value: string) {
   return value.trim();
 }
 
-function getEmailError(value: string) {
-  const normalized = normalizeEmail(value);
-  if (!normalized) {
-    return "Email is required";
+export function emailOtpFormValidator({ value }: { value: EmailOTPFormValues }) {
+  const normalized = normalizeEmail(value.email);
+  if (!isValidEmail(normalized)) {
+    return { fields: { email: "Enter a valid email address" } };
   }
-  if (!EMAIL_PATTERN.test(normalized)) {
-    return "Enter a valid email address";
-  }
-  return null;
+  return undefined;
 }
 
-export function isValidEmail(value: string): boolean {
-  return getEmailError(value) === null;
+export function otpFormValidator({ value }: { value: OtpFormValues }) {
+  const otp = value.otp.trim();
+  if (!otp) {
+    return { fields: { otp: "Code is required" } };
+  }
+  if (!/^\d{6}$/.test(otp)) {
+    return { fields: { otp: "Enter the 6-digit code sent to your email" } };
+  }
+  return undefined;
 }
 
-function getPasswordError(value: string) {
-  return value.length > 0 ? null : "Password is required";
-}
-
-function getRegisterPasswordError(value: string) {
-  return value.length >= 8 ? null : "Password must be at least 8 characters long";
-}
-
-function getConfirmPasswordError(password: string, confirmPassword: string) {
-  if (!confirmPassword.length) {
-    return "Please confirm your password";
-  }
-  if (password !== confirmPassword) {
-    return "Passwords don't match";
-  }
-  return null;
-}
-
-export function loginFormValidator({ value }: { value: LoginFormValues }) {
-  const errors: Partial<Record<keyof LoginFormValues, string>> = {};
-  const emailError = getEmailError(value.email);
-  const passwordError = getPasswordError(value.password);
-
-  if (emailError) {
-    errors.email = emailError;
-  }
-  if (passwordError) {
-    errors.password = passwordError;
-  }
-
-  return Object.keys(errors).length ? { fields: errors } : undefined;
-}
-
-export function registerFormValidator({ value }: { value: RegisterFormValues }) {
-  const errors: Partial<Record<keyof RegisterFormValues, string>> = {};
-  const emailError = getEmailError(value.email);
-  const passwordError = getRegisterPasswordError(value.password);
-  const confirmPasswordError = getConfirmPasswordError(value.password, value.confirmPassword);
-
-  if (emailError) {
-    errors.email = emailError;
-  }
-  if (passwordError) {
-    errors.password = passwordError;
-  }
-  if (confirmPasswordError) {
-    errors.confirmPassword = confirmPasswordError;
-  }
-
-  return Object.keys(errors).length ? { fields: errors } : undefined;
-}
-
-export const loginDefaultValues: LoginFormValues = {
-  email: "",
-  password: "",
-};
-
-export const registerDefaultValues: RegisterFormValues = {
-  email: "",
-  password: "",
-  confirmPassword: "",
-};
-
-export function getFieldErrorMessage(errors: readonly unknown[], canShow: boolean) {
-  if (!canShow) {
-    return null;
-  }
-
-  const firstError = errors[0] as string | ValidationErrorLike | undefined;
-
-  if (!firstError) {
-    return null;
-  }
-
-  return typeof firstError === "string" ? firstError : (firstError.message ?? null);
-}
+export const emailOtpDefaultValues: EmailOTPFormValues = { email: "" };
+export const otpDefaultValues: OtpFormValues = { otp: "" };

@@ -2,7 +2,7 @@
 
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { type RefObject, useEffect, useLayoutEffect, useRef } from "react";
-import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/schemas/index";
+import type { InboxDensityDto, InboxTimestampDisplayDto } from "@kyomi/reader/schemas";
 import { Item } from "@modules/feeds/components/item";
 import type { InboxFilter, InboxItem } from "@modules/inbox/lib/articles/index";
 import { Skeleton } from "@kyomi/ui/skeleton";
@@ -155,6 +155,17 @@ export function VirtualizedRows({
   const { isLoading, hasNextPage, isFetchingNextPage, fetchNextPage } = pagination;
   const restoredScrollOffsetRef = useRef<number | null>(null);
   const intendedItemIdsRef = useRef<Set<string>>(new Set());
+  const onIntentItemRef = useRef(onIntentItem);
+  const inboxItemsRef = useRef(inboxItems);
+
+  useEffect(() => {
+    onIntentItemRef.current = onIntentItem;
+  }, [onIntentItem]);
+
+  useEffect(() => {
+    inboxItemsRef.current = inboxItems;
+  }, [inboxItems]);
+
   const virtualizer = useVirtualizer({
     count: inboxItems.length,
     getItemKey: (index) => inboxItems[index]?.id ?? index,
@@ -168,32 +179,30 @@ export function VirtualizedRows({
       const nextLastVirtualItem = nextVirtualItems[nextVirtualItems.length - 1];
       if (
         nextLastVirtualItem &&
-        nextLastVirtualItem.index >= inboxItems.length - 10 &&
+        nextLastVirtualItem.index >= inboxItemsRef.current.length - 10 &&
         hasNextPage &&
         !isFetchingNextPage
       ) {
         fetchNextPage();
+      }
+
+      if (!onIntentItemRef.current) {
+        return;
+      }
+
+      for (const virtualRow of nextVirtualItems) {
+        const item = inboxItemsRef.current[virtualRow.index];
+        if (!item || intendedItemIdsRef.current.has(item.id)) {
+          continue;
+        }
+        intendedItemIdsRef.current.add(item.id);
+        onIntentItemRef.current(item);
       }
     },
   });
 
   const virtualItems = virtualizer.getVirtualItems();
   const listContentHeight = virtualizer.getTotalSize();
-
-  useEffect(() => {
-    if (!onIntentItem) {
-      return;
-    }
-
-    for (const virtualRow of virtualItems) {
-      const item = inboxItems[virtualRow.index];
-      if (!item || intendedItemIdsRef.current.has(item.id)) {
-        continue;
-      }
-      intendedItemIdsRef.current.add(item.id);
-      onIntentItem(item);
-    }
-  }, [inboxItems, onIntentItem, virtualItems]);
 
   useLayoutEffect(() => {
     if (

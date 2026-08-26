@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { BookmarkFill, ExternalLinkLine, RightFill } from "@kyomi/ui/icons/mingcute";
+import { BookmarkFill, ExternalLinkLine, Fullscreen2Fill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import type { InboxSearch } from "@modules/inbox/lib/search";
 import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
@@ -30,7 +30,7 @@ export function WorthRevisiting({
         items.length > WORTH_REVISITING_DISPLAY_LIMIT ? (
           <RailTooltip label="View saved items">
             <Button aria-label="View saved items" size="icon-xs" variant="ghost" onClick={onExpand}>
-              <RightFill />
+              <Fullscreen2Fill />
             </Button>
           </RailTooltip>
         ) : null
@@ -48,7 +48,7 @@ export function WorthRevisiting({
           {visibleItems.map((item) => (
             <div
               key={item.id}
-              className="-mx-1 group relative min-w-0 rounded-xl px-2 py-2 hover:bg-accent/70"
+              className="group relative min-w-0 rounded-xl px-2 py-2 hover:bg-accent/70"
             >
               <Link
                 aria-label={item.title}
@@ -61,9 +61,7 @@ export function WorthRevisiting({
                 to="/inbox/$article"
               />
               <span className="pointer-events-none relative block min-w-0">
-                <span className="block truncate font-semibold text-base leading-5">
-                  {item.title}
-                </span>
+                <span className="block truncate font-semibold text-sm leading-5">{item.title}</span>
               </span>
               <div className="mt-1 flex min-w-0 items-center gap-1">
                 <span className="pointer-events-none min-w-0 flex-1 truncate text-muted-foreground text-sm">

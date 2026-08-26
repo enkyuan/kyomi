@@ -1,3 +1,12 @@
+export type ReadResponseBytesResult =
+  | { ok: true; bytes: Uint8Array; bytesRead: number }
+  | {
+      ok: false;
+      reason: "content_length" | "stream_limit";
+      bytesRead: number;
+      contentLength: number | null;
+    };
+
 export type ReadResponseBodyResult =
   | { ok: true; body: string; bytesRead: number }
   | {
@@ -19,10 +28,11 @@ export async function cancelResponseBody(response: Response): Promise<void> {
   await response.body.cancel().catch(() => undefined);
 }
 
-export async function readResponseBodyWithByteLimit(
+/** Read a response into bytes while enforcing its limit before and during streaming. */
+export async function readResponseBytesWithByteLimit(
   response: Response,
   options: { maxBytes: number },
-): Promise<ReadResponseBodyResult> {
+): Promise<ReadResponseBytesResult> {
   const { maxBytes } = options;
   const contentLength = parseContentLength(response);
   if (contentLength !== null && contentLength > maxBytes) {
@@ -31,7 +41,7 @@ export async function readResponseBodyWithByteLimit(
   }
 
   if (!response.body) {
-    return { ok: true, body: "", bytesRead: 0 };
+    return { ok: true, bytes: new Uint8Array(), bytesRead: 0 };
   }
 
   const reader = response.body.getReader();
@@ -64,7 +74,23 @@ export async function readResponseBodyWithByteLimit(
 
   return {
     ok: true,
-    body: new TextDecoder("utf-8", { fatal: false }).decode(combined),
+    bytes: combined,
     bytesRead,
+  };
+}
+
+export async function readResponseBodyWithByteLimit(
+  response: Response,
+  options: { maxBytes: number },
+): Promise<ReadResponseBodyResult> {
+  const result = await readResponseBytesWithByteLimit(response, options);
+  if (!result.ok) {
+    return result;
+  }
+
+  return {
+    ok: true,
+    body: new TextDecoder("utf-8", { fatal: false }).decode(result.bytes),
+    bytesRead: result.bytesRead,
   };
 }

@@ -9,25 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as RegisterRouteImport } from './routes/register'
-import { Route as McpRouteImport } from './routes/mcp'
-import { Route as FaviconRouteImport } from './routes/favicon'
-import { Route as AppRouteRouteImport } from './routes/_app/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ApiFaviconRouteImport } from './routes/api/favicon'
+import { Route as AppRouteRouteImport } from './routes/_app/route'
+import { Route as FaviconRouteImport } from './routes/favicon'
+import { Route as McpRouteImport } from './routes/mcp'
+import { Route as RegisterRouteImport } from './routes/register'
 import { Route as AppInboxRouteRouteImport } from './routes/_app/inbox/route'
+import { Route as ApiFaviconRouteImport } from './routes/api/favicon'
 import { Route as AppInboxIndexRouteImport } from './routes/_app/inbox/index'
-import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as AppInboxArticleRouteImport } from './routes/_app/inbox/$article'
+import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
-const RegisterRoute = RegisterRouteImport.update({
-  id: '/register',
-  path: '/register',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
+const AppRouteRoute = AppRouteRouteImport.update({
+  id: '/_app',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaviconRoute = FaviconRouteImport.update({
@@ -35,18 +34,14 @@ const FaviconRoute = FaviconRouteImport.update({
   path: '/favicon',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AppRouteRoute = AppRouteRouteImport.update({
-  id: '/_app',
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiFaviconRoute = ApiFaviconRouteImport.update({
-  id: '/api/favicon',
-  path: '/api/favicon',
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppInboxRouteRoute = AppInboxRouteRouteImport.update({
@@ -54,20 +49,25 @@ const AppInboxRouteRoute = AppInboxRouteRouteImport.update({
   path: '/inbox',
   getParentRoute: () => AppRouteRoute,
 } as any)
+const ApiFaviconRoute = ApiFaviconRouteImport.update({
+  id: '/api/favicon',
+  path: '/api/favicon',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AppInboxIndexRoute = AppInboxIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => AppInboxRouteRoute,
+} as any)
+const AppInboxArticleRoute = AppInboxArticleRouteImport.update({
+  id: '/$article',
+  path: '/$article',
   getParentRoute: () => AppInboxRouteRoute,
 } as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
-} as any)
-const AppInboxArticleRoute = AppInboxArticleRouteImport.update({
-  id: '/$article',
-  path: '/$article',
-  getParentRoute: () => AppInboxRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -152,25 +152,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/register': {
-      id: '/register'
-      path: '/register'
-      fullPath: '/register'
-      preLoaderRoute: typeof RegisterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/favicon': {
-      id: '/favicon'
-      path: '/favicon'
-      fullPath: '/favicon'
-      preLoaderRoute: typeof FaviconRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_app': {
@@ -180,18 +166,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/favicon': {
+      id: '/favicon'
+      path: '/favicon'
+      fullPath: '/favicon'
+      preLoaderRoute: typeof FaviconRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/favicon': {
-      id: '/api/favicon'
-      path: '/api/favicon'
-      fullPath: '/api/favicon'
-      preLoaderRoute: typeof ApiFaviconRouteImport
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_app/inbox': {
@@ -201,11 +194,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppInboxRouteRouteImport
       parentRoute: typeof AppRouteRoute
     }
+    '/api/favicon': {
+      id: '/api/favicon'
+      path: '/api/favicon'
+      fullPath: '/api/favicon'
+      preLoaderRoute: typeof ApiFaviconRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_app/inbox/': {
       id: '/_app/inbox/'
       path: '/'
       fullPath: '/inbox/'
       preLoaderRoute: typeof AppInboxIndexRouteImport
+      parentRoute: typeof AppInboxRouteRoute
+    }
+    '/_app/inbox/$article': {
+      id: '/_app/inbox/$article'
+      path: '/$article'
+      fullPath: '/inbox/$article'
+      preLoaderRoute: typeof AppInboxArticleRouteImport
       parentRoute: typeof AppInboxRouteRoute
     }
     '/api/auth/$': {
@@ -214,13 +221,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/api/auth/$'
       preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/_app/inbox/$article': {
-      id: '/_app/inbox/$article'
-      path: '/$article'
-      fullPath: '/inbox/$article'
-      preLoaderRoute: typeof AppInboxArticleRouteImport
-      parentRoute: typeof AppInboxRouteRoute
     }
   }
 }

@@ -1,15 +1,12 @@
 // @vitest-environment jsdom
 
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "../../../../../../../../apps/web/node_modules/@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import type { OpmlImportStatusDto } from "@lib/schemas";
+import type { OpmlImportStatusDto } from "@kyomi/reader/schemas";
 import type { PlatformState } from "@hooks/use-platform";
-import { FollowSourcesDialog } from "@modules/feeds/components/follow/dialog";
+import { FollowSourcesDialog } from "@modules/feeds/components/follow/dialog.tsx";
 
 const mocks = vi.hoisted(() => ({
   followFeed: vi.fn(),

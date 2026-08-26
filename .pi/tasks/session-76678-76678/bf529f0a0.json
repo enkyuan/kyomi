@@ -1,0 +1,20 @@
+{
+  "id": "bf529f0a0",
+  "name": "Web build",
+  "command": "bun run --cwd apps/web build; echo BUILD_EXIT:$?",
+  "description": "Production-build QA after responsive inbox layout CSS changes.",
+  "status": "completed",
+  "outputPath": ".pi/tasks/session-76678-76678/bf529f0a0.output",
+  "cwd": "/Users/enkyuan/Desktop/Projects/kyomi",
+  "startTime": 1787768155827,
+  "endTime": 1787768172130,
+  "exitCode": 0,
+  "signal": null,
+  "pid": 89818,
+  "bytesWritten": 62896,
+  "isAgent": false,
+  "notified": true,
+  "notifyOnCompletion": true,
+  "triggerOnCompletion": true,
+  "timeoutSeconds": 300
+}

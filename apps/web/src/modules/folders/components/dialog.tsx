@@ -19,7 +19,7 @@ import { Field, FieldError } from "@kyomi/ui/field";
 import { Form } from "@kyomi/ui/form";
 import { Input } from "@kyomi/ui/input";
 import { toastManager } from "@kyomi/ui/toast";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { createFolder } from "@modules/folders/lib/api";
 
 type CreateFolderDialogProps = {

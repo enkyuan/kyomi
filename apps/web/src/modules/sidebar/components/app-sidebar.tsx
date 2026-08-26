@@ -34,11 +34,11 @@ const SettingsDialog = lazyNamed(
 );
 
 const CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS = cn(
-  "size-11 justify-center rounded-full! p-0",
+  "size-10 justify-center rounded-full! p-0",
   "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-border))]",
   "active:scale-[0.96] active:bg-sidebar-accent active:text-sidebar-accent-foreground active:shadow-[0_0_0_1px_hsl(var(--sidebar-border))]",
   "motion-reduce:active:scale-100",
-  "group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!",
+  "group-data-[collapsible=icon]:size-10! group-data-[collapsible=icon]:p-0!",
 );
 
 type AppSidebarDialogState = {
@@ -115,7 +115,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
       className={cn("h-svh bg-sidebar", className)}
       style={{ "--sidebar-width": APP_SIDEBAR_WIDTH, ...style } as CSSProperties}
     >
-      <SidebarHeader className="items-center ps-0 pe-2 py-4.5">
+      <SidebarHeader className="items-center px-0 py-4.5">
         <SidebarMenu className="gap-4.5">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
@@ -123,7 +123,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               className="size-11 justify-center rounded-full! p-0 hover:bg-transparent focus-visible:ring-0 focus-visible:ring-transparent active:bg-transparent group-data-[collapsible=icon]:size-11! group-data-[collapsible=icon]:p-0!"
               render={<Link to="/inbox" search={{ filter: "my-feed" as const }} />}
             >
-              <KyomiLogo size={28} className="size-auto" />
+              <KyomiLogo size={44} className="size-8" />
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="flex justify-center">
@@ -144,13 +144,13 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         </SidebarMenu>
       </SidebarHeader>
 
-      <div className="min-h-0 flex-1 ps-0 pe-2" data-sidebar="content" data-slot="sidebar-content">
+      <div className="min-h-0 flex-1 px-0" data-sidebar="content" data-slot="sidebar-content">
         <ScrollArea
           className="relative h-full min-h-0 overflow-visible **:data-[slot=scroll-area-scrollbar]:hidden"
           scrollFade
           scrollFadeClassName="data-has-overflow-y:scroll-mask-y-edge-14"
         >
-          <SidebarMenu className="items-center gap-3 px-1">
+          <SidebarMenu className="items-center gap-3 px-0">
             {feeds.map((feed) => {
               const isActive = isInbox && scopedFeedId === feed.feedId;
               return (
@@ -198,7 +198,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         </ScrollArea>
       </div>
 
-      <SidebarFooter className="items-center ps-0 pe-2 py-4.5">
+      <SidebarFooter className="items-center px-0 py-4.5">
         <SidebarMenu className="items-center gap-3">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton

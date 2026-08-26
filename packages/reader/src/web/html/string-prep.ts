@@ -1,5 +1,6 @@
 import { sanitizeReaderArticleHtml } from "./purify";
-import { resolveRelativeAssetUrls } from "./url-resolve";
+import type { ReaderImageLoading } from "../../core/types";
+import { resolveRelativeAssetUrls, type ReaderImageUrlTransformer } from "./url-resolve";
 
 const MEDIUM_IMAGE_PLACEHOLDER_TEXT = "Press enter or click to view image in full size";
 const SUBSCRIPT_OR_SUPERSCRIPT = String.raw`(?:[_^](?:\{[^}\n]{1,48}\}|[A-Za-z0-9'’′]{1,8}))`;
@@ -180,9 +181,14 @@ function unwrapRedundantInlineCodeMarkup(html: string): string {
     .replace(/<code><code>([\s\S]*?)<\/code><\/code>/gi, "<code>$1</code>");
 }
 
-export function prepareArticleHtml(html: string, baseUrl?: string | null): string {
+export function prepareArticleHtml(
+  html: string,
+  baseUrl?: string | null,
+  imageLoading?: ReaderImageLoading,
+  transformImageUrl?: ReaderImageUrlTransformer,
+): string {
   const normalized = unwrapRedundantInlineCodeMarkup(html);
-  const withResolvedUrls = resolveRelativeAssetUrls(normalized, baseUrl);
+  const withResolvedUrls = resolveRelativeAssetUrls(normalized, baseUrl, transformImageUrl);
   const safe = sanitizeReaderArticleHtml(withResolvedUrls);
   const figureNormalized = normalizeFigureContent(safe);
   if (typeof document === "undefined") {
@@ -191,5 +197,14 @@ export function prepareArticleHtml(html: string, baseUrl?: string | null): strin
 
   const tpl = document.createElement("template");
   tpl.innerHTML = figureNormalized;
-  return normalizeImplicitTexText(tpl.content) ? tpl.innerHTML : figureNormalized;
+
+  if (imageLoading) {
+    for (const image of tpl.content.querySelectorAll<HTMLImageElement>("img")) {
+      image.setAttribute("loading", imageLoading);
+      image.setAttribute("decoding", "async");
+    }
+  }
+
+  const mathNormalized = normalizeImplicitTexText(tpl.content);
+  return mathNormalized || imageLoading ? tpl.innerHTML : figureNormalized;
 }

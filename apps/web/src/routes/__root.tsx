@@ -17,10 +17,11 @@ import TanstackQueryProvider from "@integrations/tanstack-query/provider";
 import { RouteErrorPage } from "@/app/error";
 import { AppRuntimeEffects } from "@/app/runtime-effects";
 import { NotFoundPage } from "@/app/not-found";
-import { getAuthRecoveryAction, LOGIN_RECOVERY_ACTION } from "@/app/recovery";
+import { getAuthRecoveryAction, LOGIN_RECOVERY_ACTION } from "@lib/recovery";
 import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/toast";
 import PostHogProvider from "@integrations/posthog/provider";
-import { getAuthSessionState } from "@lib/auth/functions";
+import { getAuthBootstrapState } from "@lib/auth/functions";
+import type { AuthCapabilities } from "@lib/auth/capabilities";
 import type { AvailableAuthSessionState } from "@lib/auth/session";
 import {
   INBOX_PREFERENCES_STORAGE_KEY,
@@ -37,6 +38,7 @@ interface MyRouterContext {
 
 type RootLoaderData = {
   authState: AvailableAuthSessionState;
+  authCapabilities: AuthCapabilities;
 };
 
 const SHELL_INIT_SCRIPT = `(function(){try{var root=document.documentElement;function readJson(key){try{var raw=window.localStorage.getItem(key);return raw?JSON.parse(raw):null}catch(e){return null}}function readCookie(name){var prefix=name+'=';var parts=document.cookie?document.cookie.split(';'):[];for(var i=0;i<parts.length;i++){var part=parts[i].trim();if(part.indexOf(prefix)===0)return decodeURIComponent(part.slice(prefix.length))}return null}var stored=window.localStorage.getItem(${JSON.stringify(THEME_STORAGE_KEY)});var mode=(stored==='light'||stored==='dark'||stored==='auto')?stored:'dark';var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var resolved=mode==='auto'?(prefersDark?'dark':'light'):mode;root.classList.remove('light','dark');root.classList.add(resolved);if(mode==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',mode)}root.style.colorScheme=resolved;var reader=readJson(${JSON.stringify(READER_PREFERENCES_STORAGE_KEY)})||{};if(typeof reader.fontSizePx==='number')root.style.setProperty('--reader-font-size',Math.round(reader.fontSizePx)+'px');if(reader.contentWidth==='narrow'||reader.contentWidth==='wide')root.dataset.readerContentWidth=reader.contentWidth;var inbox=readJson(${JSON.stringify(INBOX_PREFERENCES_STORAGE_KEY)})||{};if(typeof inbox.inboxFontSizePx==='number')root.style.setProperty('--inbox-font-size',Math.round(inbox.inboxFontSizePx)+'px');if(inbox.inboxDensity==='compact'||inbox.inboxDensity==='comfortable')root.dataset.inboxDensity=inbox.inboxDensity;if(inbox.articleOpenBehavior==='split'||inbox.articleOpenBehavior==='reader')root.dataset.inboxArticleOpenBehavior=inbox.articleOpenBehavior;var articleOpenBehavior=readCookie(${JSON.stringify(INBOX_ARTICLE_OPEN_BEHAVIOR_COOKIE_NAME)});if(articleOpenBehavior==='split'||articleOpenBehavior==='reader')root.dataset.inboxArticleOpenBehavior=articleOpenBehavior;var sidebarOpen=readCookie('sidebar_state');if(sidebarOpen==='true'||sidebarOpen==='false')root.dataset.sidebarState=sidebarOpen==='true'?'expanded':'collapsed';var shell=readJson(${JSON.stringify(SHELL_STATE_STORAGE_KEY)})||{};if(typeof shell.inboxFilter==='string')root.dataset.inboxFilter=shell.inboxFilter;if(typeof shell.inboxLayout==='string')root.dataset.inboxLayout=shell.inboxLayout;if(typeof shell.selectedItemId==='string')root.dataset.selectedItemId=shell.selectedItemId;}catch(e){console.warn('shell init failed',e);}})();`;
@@ -45,13 +47,16 @@ const REACT_SCAN_QUERY_PARAM = "react-scan";
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
   beforeLoad: async () => {
-    const authState = await getAuthSessionState();
+    const { authState, authCapabilities } = await getAuthBootstrapState();
     if (authState.status === "unavailable") {
       throw new Error(authState.message);
     }
-    return { authState };
+    return { authState, authCapabilities };
   },
-  loader: ({ context }) => ({ authState: context.authState }),
+  loader: ({ context }) => ({
+    authState: context.authState,
+    authCapabilities: context.authCapabilities,
+  }),
   head: () => ({
     meta: [
       {

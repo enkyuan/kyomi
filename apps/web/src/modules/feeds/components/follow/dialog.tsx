@@ -2,7 +2,7 @@
 
 import { startTransition, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { CommandDialog, CommandDialogPortal, CommandDialogPrimitive } from "@kyomi/ui/command";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";

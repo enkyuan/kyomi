@@ -1,11 +1,16 @@
 "use client";
 
 import { memo } from "react";
-import type { ReaderContent as ReaderContentModel, ReaderLayoutMode } from "../../core/types";
+import type {
+  ReaderContent as ReaderContentModel,
+  ReaderImageLoading,
+  ReaderLayoutMode,
+} from "../../core/types";
 import { RenderHtml } from "../html";
 import { ReaderFallback } from "./fallback";
 import { RenderMarkdown } from "./markdown";
 import { RenderText } from "./text";
+import type { ReaderImageUrlTransformer } from "../html/url-resolve";
 
 // oxlint-disable-next-line react-doctor/no-multi-comp -- tiny sibling fallback for content variants
 function ContractViolationFallback({
@@ -31,11 +36,15 @@ export const ReaderContent = memo(function ReaderContent({
   openLinksInNewTab = true,
   showLinkPreviews = true,
   layoutMode = "normalized",
+  imageLoading,
+  transformImageUrl,
 }: {
   reader: ReaderContentModel;
   openLinksInNewTab?: boolean;
   showLinkPreviews?: boolean;
   layoutMode?: ReaderLayoutMode;
+  imageLoading?: ReaderImageLoading;
+  transformImageUrl?: ReaderImageUrlTransformer;
 }) {
   if (reader.bodyKind === "html") {
     if (!reader.contentHtml) {
@@ -53,6 +62,8 @@ export const ReaderContent = memo(function ReaderContent({
         openLinksInNewTab={openLinksInNewTab}
         showLinkPreviews={showLinkPreviews}
         layoutMode={layoutMode}
+        imageLoading={imageLoading}
+        transformImageUrl={transformImageUrl}
       />
     );
     if (!reader.notice) {
@@ -82,6 +93,8 @@ export const ReaderContent = memo(function ReaderContent({
         openLinksInNewTab={openLinksInNewTab}
         showLinkPreviews={showLinkPreviews}
         layoutMode={layoutMode}
+        imageLoading={imageLoading}
+        transformImageUrl={transformImageUrl}
       />
     );
     if (!reader.notice) {

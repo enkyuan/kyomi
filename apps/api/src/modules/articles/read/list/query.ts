@@ -178,6 +178,7 @@ function toArticleListItems(page: ArticleListRawRow[]): ArticleListItemDto[] {
     feedFaviconUrl: r.feedFaviconUrl,
     isRead: r.isRead,
     isSaved: r.isSaved,
+    lastViewedAt: r.lastViewedAt?.toISOString() ?? null,
     articleType: "feed" as const,
     categories: r.categories.map((label) => decodeText(label)),
   }));
@@ -423,6 +424,7 @@ async function listArticleRows(
       feedFaviconUrl: feeds.faviconUrl,
       isRead: articleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
+      lastViewedAt: feedItemUserState.lastViewedAt,
       hiddenAt: feedItemUserState.hiddenAt,
       categories: categoryLabelsSql,
     })
@@ -473,6 +475,7 @@ async function listGlobalArticleRows(
       feedFaviconUrl: feeds.faviconUrl,
       isRead: globalArticleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
+      lastViewedAt: feedItemUserState.lastViewedAt,
       hiddenAt: feedItemUserState.hiddenAt,
       categories: categoryLabelsSql,
     })

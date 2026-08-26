@@ -1,5 +1,6 @@
 /** Applied to block images for layout, loading, and reader CSS hooks. */
 export const READER_IMG_FRAME = "data-reader-img-frame";
+export const READER_IMG_UNAVAILABLE = "data-reader-img-unavailable";
 export const READER_INLINE_IMG = "data-reader-inline-img";
 /** Applied to author / CMS wrappers so image+text stay side-by-side (see styles.css). */
 export const READER_MEDIA_ASIDE = "data-reader-media-aside";

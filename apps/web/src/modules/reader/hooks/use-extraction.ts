@@ -2,7 +2,7 @@
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { extractInboxItemFullText } from "@modules/inbox/lib/articles/index";
-import type { ArticleDetailDto } from "@lib/schemas/index";
+import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 
 export function useArticleExtraction(itemId: string | undefined) {
   const queryClient = useQueryClient();

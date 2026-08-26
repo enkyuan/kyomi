@@ -1,6 +1,12 @@
-import type { InboxDensityDto } from "@lib/schemas/index";
+import type { InboxDensityDto } from "@kyomi/reader/schemas";
+import type { TransitionOffset } from "@kyomi/ui/transition";
 
 export const INBOX_PANEL_SPACING_PX = 4;
+
+export const FEED_TRANSITION_OFFSET: TransitionOffset = {
+  forward: { enter: 18, exit: -12 },
+  backward: { enter: -12, exit: 18 },
+};
 
 const FEED_ITEM_ROW_ESTIMATE = {
   comfortable: 252,

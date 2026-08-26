@@ -4,7 +4,7 @@ import { render } from "@testing-library/react";
 import type { ReactNode, Ref } from "react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Detail } from "@modules/reader/components/detail";
-import type { ArticleDetailDto, ReaderContentDto } from "@lib/schemas/index";
+import type { ArticleDetailDto, ReaderContentDto } from "@kyomi/reader/schemas";
 
 vi.mock("@modules/reader/hooks/use-preferences", () => ({
   useReaderPreferences: () => ({
@@ -27,9 +27,6 @@ vi.mock("@kyomi/ui/scroll-area", () => ({
   },
   ScrollBar: ({ orientation, ...props }: { orientation: string; className?: string }) => (
     <div data-orientation={orientation} data-slot="scroll-area-scrollbar" {...props} />
-  ),
-  BrowserScrollBar: ({ orientation, ...props }: { orientation: string; className?: string }) => (
-    <div data-orientation={orientation} data-slot="browser-scrollbar" {...props} />
   ),
 }));
 
@@ -134,19 +131,19 @@ describe("Detail scrollbar surface", () => {
     delete (HTMLElement.prototype as { scrollTo?: unknown }).scrollTo;
   });
 
-  test("defaults the reader scrollbar to the browser viewport surface", () => {
+  test("renders the reader scrollbar for the browser viewport surface", () => {
     const { container } = renderDetail();
     const scrollbar = container.querySelector('[aria-label="Reader scrollbar"]');
 
-    expect(scrollbar?.className).toContain("!fixed");
-    expect(scrollbar?.className).toContain("!right-0");
+    expect(scrollbar?.getAttribute("data-slot")).toBe("scroll-area-scrollbar");
+    expect(scrollbar?.className).toContain("z-50");
   });
 
-  test("keeps the reader scrollbar local for the card surface", () => {
+  test("renders the reader scrollbar for the card surface", () => {
     const { container } = renderDetail("card");
     const scrollbar = container.querySelector('[aria-label="Reader scrollbar"]');
 
-    expect(scrollbar?.className).not.toContain("!fixed");
-    expect(scrollbar?.className).not.toContain("!right-0");
+    expect(scrollbar?.getAttribute("data-slot")).toBe("scroll-area-scrollbar");
+    expect(scrollbar?.className).toContain("z-50");
   });
 });

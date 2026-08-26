@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { updateUserEmail } from "@lib/auth/functions";
-import { logClientError, readResponseErrorSummary } from "@lib/errors";
+import { logClientError, readResponseErrorSummary } from "@kyomi/reader/lib/errors";
 import { isValidEmail } from "@modules/auth/schema";
 import { toastManager } from "@kyomi/ui/toast";
 import {

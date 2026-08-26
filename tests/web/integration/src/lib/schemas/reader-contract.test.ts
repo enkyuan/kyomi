@@ -1,5 +1,9 @@
 import { describe, expect, test } from "vitest";
-import { articleDetailSchema, cursorListResponseSchema, readerContentSchema } from "@lib/schemas";
+import {
+  articleDetailSchema,
+  cursorListResponseSchema,
+  readerContentSchema,
+} from "@kyomi/reader/schemas";
 
 const base = {
   contentStatus: "ready",

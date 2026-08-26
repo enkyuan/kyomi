@@ -8,7 +8,7 @@ import type { useInboxRouteState } from "@modules/inbox/hooks/use-layout";
 import { getPreviousInboxFeedId } from "@modules/inbox/lib/layout/history";
 import type { InboxFilter, InboxItem } from "@modules/inbox/lib/articles/index";
 import type { Folder } from "@modules/folders/lib/api";
-import type { ArticleDetailDto } from "@lib/schemas/index";
+import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 
 function isGlobalInboxFilter(filter: InboxFilter) {
   return filter === "my-feed" || filter === "all" || filter === "saved" || filter === "recent";

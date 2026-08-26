@@ -1,4 +1,5 @@
 import { createAuthClient } from "better-auth/react";
+import { emailOTPClient } from "better-auth/client/plugins";
 
 const baseURL =
   typeof window === "undefined"
@@ -7,6 +8,7 @@ const baseURL =
 
 export const authClient = createAuthClient({
   baseURL,
+  plugins: [emailOTPClient()],
   sessionOptions: {
     refetchInterval: 5 * 60,
   },

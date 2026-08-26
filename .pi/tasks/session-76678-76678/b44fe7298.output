@@ -1,0 +1,299 @@
+Resolving dependencies
+Resolved, downloaded and extracted [552]
+Saved lockfile
+✔ Select projects › @kyomi/mobile, @kyomi/web, @kyomi/reader, @kyomi/ui, @kyomi/tests
+✔ Scanned 667 files in 8.6s
+
+React Doctor — kyomi
+Score: 0 / 100 Critical
+
+207 issues
+Bugs: 6 errors, 44 warnings
+Maintainability: 82 warnings
+Correctness: 1 warning
+Performance: 55 errors, 18 warnings
+Security: 1 warning
+
+⚠ unicorn/filename-case ×3
+  unicorn/filename-case
+  modules/screen-shape/src/ScreenShape.types.ts:1
+  modules/screen-shape/src/ScreenShapeModule.ts:1
+  modules/screen-shape/src/ScreenShapeModule.web.ts:1
+⚠ deslop/unused-export ×25
+  deslop/unused-export
+  modules/screen-shape/src/ScreenShapeModule.ts:12
+  src/components/icons/close-circle.tsx:8
+  src/components/icons/envelope.tsx:8
+  src/components/icons/search.tsx:8
+  src/components/ui/action-menu/atoms/surface.android.tsx:12
+  src/components/ui/action-menu/atoms/surface.tsx:10
+  src/components/ui/header/surface.android.tsx:30
+  src/components/ui/header/surface.tsx:27
+  src/components/ui/liquid-glass/use-availability.ts:1
+  src/components/ui/search-field/atoms/index.android.tsx:30
+  src/components/ui/search-field/atoms/index.tsx:11
+  src/components/ui/skeleton/index.tsx:15
+  src/components/ui/tab-bar/index.tsx:28
+  src/components/ui/toast/lib/style.ts:30
+  src/components/ui/toast/lib/style.ts:36
+  src/lib/api.ts:32
+  src/modules/add/atoms/create-folder.android.tsx:25
+  src/modules/add/atoms/create-folder.tsx:10
+  src/modules/auth/email/screen.android.tsx:68
+  src/modules/auth/email/screen.tsx:28
+  src/modules/auth/init/screen.android.tsx:22
+  src/modules/auth/init/screen.tsx:17
+  src/modules/inbox/components/toolbar/toolbar.tsx:9
+  src/modules/settings/screen.android.tsx:28
+  src/modules/settings/screen.tsx:13
+⚠ deslop/unused-dependency ×2
+  deslop/unused-dependency
+  package.json
+  package.json
+⚠ react-doctor/expo-no-redundant-dependency
+  react-doctor/expo-no-redundant-dependency
+  package.json
+⚠ Manual memoization in compiler-managed code ×21
+  react-doctor/react-compiler-no-manual-memoization
+  src/app/(protected)/(tabs)/_layout.tsx:26
+  src/app/(protected)/(tabs)/_layout.tsx:36
+  src/app/(protected)/(tabs)/_layout.tsx:45
+  src/app/(protected)/(tabs)/_layout.tsx:50
+  src/app/(protected)/(tabs)/_layout.tsx:53
+  src/components/ui/tab-bar/modes/add.tsx:25
+  src/components/ui/tab-bar/modes/reader.tsx:33
+  src/components/ui/toast/atoms/viewport.tsx:16
+  src/components/ui/top-tabs/hooks/use-pager.ts:39
+  src/components/ui/top-tabs/hooks/use-pager.ts:58
+  src/components/ui/top-tabs/hooks/use-pager.ts:67
+  src/components/ui/top-tabs/index.tsx:55
+  src/modules/add/atoms/action-menu.tsx:48
+  src/modules/add/screen.tsx:20
+  src/modules/inbox/components/list/index.tsx:26
+  src/modules/inbox/components/list/index.tsx:30
+  src/modules/inbox/hooks/use-articles.ts:41
+  src/modules/recents/components/history-list.tsx:41
+  src/modules/recents/components/history-list.tsx:44
+  src/modules/recents/screen.tsx:33
+  src/modules/recents/screen.tsx:37
+⚠ Overly precise SVG path values ×2
+  react-doctor/rendering-svg-precision
+  src/components/icons/kyomi.tsx:18
+  src/icons/kyomi.tsx:25
+✖ Ref mutated during render ×5
+  react-doctor/no-ref-current-in-render
+  src/components/ui/action-menu/index.tsx:57
+  src/modules/inbox/hooks/use-layout.ts:232
+  src/slider/hooks/use-primary-slider.ts:45
+  src/slider/hooks/use-primary-slider.ts:46
+  src/slider/hooks/use-primary-slider.ts:47
+✖ React Compiler can't optimize this ×3
+  react-hooks-js/refs
+  src/components/ui/action-menu/index.tsx:57
+  src/modules/auth/email/components/step-content.ios.tsx:199
+  src/modules/auth/email/screen.android.tsx:328
+✖ React Compiler can't optimize this ×33
+  react-hooks-js/immutability
+  src/components/ui/action-menu/index.tsx:59
+  src/components/ui/action-menu/index.tsx:67
+  src/components/ui/action-menu/index.tsx:119
+  src/components/ui/add-icon.tsx:30
+  src/components/ui/search-field/atoms/index.android.tsx:54
+  src/components/ui/search-field/atoms/index.android.tsx:59
+  src/components/ui/search-field/atoms/index.android.tsx:102
+  src/components/ui/search-field/atoms/index.ios.tsx:60
+  src/components/ui/search-field/atoms/index.ios.tsx:65
+  src/components/ui/search-field/atoms/index.ios.tsx:99
+  src/components/ui/search-field/atoms/index.tsx:34
+  src/components/ui/top-tabs/atoms/pager.tsx:38
+  src/components/ui/top-tabs/atoms/tab-bar.tsx:60
+  src/components/ui/top-tabs/hooks/use-layout.ts:40
+  src/components/ui/top-tabs/hooks/use-layout.ts:48
+  src/modules/add/hooks/use-create-folder.ts:41
+  src/modules/add/hooks/use-create-folder.ts:88
+  src/modules/auth/email/screen.android.tsx:114
+  src/modules/auth/email/screen.android.tsx:178
+  src/modules/auth/email/screen.android.tsx:213
+  src/modules/auth/email/screen.android.tsx:214
+  src/modules/auth/email/screen.android.tsx:358
+  src/modules/auth/email/screen.android.tsx:369
+  src/modules/auth/email/screen.ios.tsx:99
+  src/modules/auth/email/screen.ios.tsx:163
+  src/modules/auth/email/screen.ios.tsx:188
+  src/modules/auth/email/screen.ios.tsx:189
+  src/modules/auth/email/screen.ios.tsx:270
+  src/modules/auth/email/screen.ios.tsx:281
+  src/modules/auth/email/screen.tsx:46
+  src/modules/auth/email/screen.tsx:57
+  src/modules/auth/email/screen.tsx:58
+  src/modules/settings/components/screen-layout.tsx:16
+⚠ React Compiler can't optimize this ×7
+  react-hooks-js/set-state-in-effect
+  src/components/ui/action-menu/index.tsx:65
+  src/components/ui/tab-bar/atoms/liquid-content.ios.tsx:102
+  src/components/ui/top-tabs/hooks/use-layout.ts:30
+  src/modules/auth/email/hooks/use-error-shake.ts:52
+  src/modules/inbox/components/feed-favicon.tsx:32
+  src/modules/reader/components/article-body.dom.tsx:198
+  src/modules/reader/screen.tsx:110
+⚠ Legacy platform-specific shadow styles
+  react-doctor/rn-no-legacy-shadow-styles
+  src/components/ui/header/surface.android.tsx:50
+⚠ All state reset on prop change ×3
+  react-doctor/no-reset-all-state-on-prop-change
+  src/components/ui/tab-bar/atoms/liquid-content.ios.tsx:99
+  src/modules/inbox/components/feed-favicon.tsx:31
+  src/modules/reader/components/article-body.dom.tsx:197
+⚠ State adjusted after a prop changes ×8
+  react-doctor/no-adjust-state-on-prop-change
+  src/components/ui/tab-bar/atoms/liquid-content.ios.tsx:102
+  src/modules/add/hooks/use-create-folder.ts:42
+  src/modules/auth/email/hooks/use-error-shake.ts:21
+  src/modules/inbox/components/feed-favicon.tsx:32
+  src/modules/inbox/components/feed-favicon.tsx:33
+  src/modules/reader/components/article-body.dom.tsx:198
+  src/modules/reader/screen.tsx:110
+  src/modules/folders/components/feeds/index.tsx:82
+⚠ Import from a barrel file
+  react-doctor/no-barrel-import
+  src/components/ui/tab-bar/hooks/use-screen.ts:2
+⚠ Data passed to parent via effect ×2
+  react-doctor/no-pass-data-to-parent
+  src/components/ui/tab-bar/index.ios.tsx:39
+  src/components/ui/tab-bar/index.tsx:34
+⚠ Missing effect dependencies ×6
+  react-doctor/exhaustive-deps
+  src/components/ui/tab-bar/index.ios.tsx:40
+  src/components/ui/tab-bar/index.tsx:35
+  src/components/ui/toast/atoms/viewport.tsx:21
+  src/modules/add/hooks/use-create-folder.ts:93
+  src/modules/reader/screen.tsx:147
+  src/web/html.tsx:291
+⚠ Side effect inside a state updater function
+  react-doctor/no-side-effect-in-state-updater-function
+  src/components/ui/top-tabs/hooks/use-layout.ts:55
+⚠ Ref initializer runs on every render
+  react-doctor/rerender-lazy-ref-init
+  src/components/ui/top-tabs/hooks/use-pager.ts:26
+⚠ useAnimatedReaction just copies a value ×3
+  react-doctor/rn-animation-reaction-as-derived
+  src/components/ui/top-tabs/hooks/use-pager.ts:32
+  src/components/ui/top-tabs/index.tsx:128
+  src/modules/recents/screen.tsx:17
+✖ React Compiler can't optimize this ×4
+  react-hooks-js/preserve-manual-memoization
+  src/components/ui/top-tabs/index.tsx:108
+  src/components/ui/top-tabs/index.tsx:112
+  src/components/ui/top-tabs/index.tsx:116
+  src/components/ui/top-tabs/index.tsx:119
+⚠ Mutation without cache invalidation
+  react-doctor/query-mutation-missing-invalidation
+  src/modules/add/hooks/use-create-folder.ts:34
+⚠ Dynamic padding on contentContainerStyle ×2
+  react-doctor/rn-scrollview-dynamic-padding
+  src/modules/add/screen.tsx:52
+  src/modules/settings/components/screen-layout.tsx:25
+⚠ deslop/unused-file ×2
+  deslop/unused-file
+  src/modules/auth/components/login.tsx
+  sw.plugin.ts
+⚠ Large component is hard to read and change ×2
+  react-doctor/no-giant-component
+  src/modules/auth/email/screen.android.tsx:68
+  src/modules/auth/components/login/index.tsx:35
+⚠ Loading flag reset outside finally ×6
+  react-doctor/no-loading-flag-reset-outside-finally
+  src/modules/auth/email/screen.android.tsx:138
+  src/modules/auth/email/screen.android.tsx:161
+  src/modules/auth/email/screen.ios.tsx:123
+  src/modules/auth/email/screen.ios.tsx:146
+  src/modules/auth/email/screen.tsx:83
+  src/modules/auth/email/screen.tsx:105
+⚠ react-native Image instead of expo-image
+  react-doctor/rn-prefer-expo-image
+  src/modules/inbox/components/feed-favicon.tsx:3
+⚠ Array index used as a key
+  react-doctor/no-array-index-as-key
+  src/modules/reader/screen.tsx:258
+✖ React Compiler doesn't support this syntax
+  react-hooks-js/todo
+  src/modules/settings/hooks/use-logout.ts:17
+⚠ Array lookup inside a loop ×2
+  react-doctor/js-set-map-lookups
+  src/modules/folders/components/feeds/index.tsx:77
+  src/modules/folders/components/feeds/index.tsx:77
+✖ Animating a layout property ×14
+  react-doctor/no-layout-property-animation
+  src/modules/inbox/components/list/header.tsx:232
+  src/modules/inbox/components/page/article/toolbar.tsx:111
+  src/slider/components/index.tsx:618
+  src/slider/components/index.tsx:619
+  src/slider/components/index.tsx:676
+  src/slider/components/index.tsx:677
+  src/slider/components/primary-track.tsx:220
+  src/slider/components/primary-track.tsx:221
+  src/slider/components/primary-track.tsx:278
+  src/slider/components/primary-track.tsx:279
+  src/slider/components/visual-thumb.tsx:50
+  src/slider/components/visual-thumb.tsx:51
+  src/slider/components/visual-thumb.tsx:61
+  src/slider/components/visual-thumb.tsx:62
+⚠ Parent kept in sync with a callback effect
+  react-doctor/no-prop-callback-in-effect
+  src/modules/inbox/components/list/rows.tsx:194
+⚠ Permanent will-change wastes GPU ×4
+  react-doctor/no-permanent-will-change
+  src/modules/inbox/components/page/article/header.tsx:131
+  src/modules/reader/components/article/index.tsx:123
+  src/drawer.tsx:519
+  src/menu.tsx:137
+⚠ Non-component export in component file ×30
+  react-doctor/only-export-components
+  src/modules/inbox/components/page/feed.tsx:6
+  src/modules/settings/components/account/index.tsx:23
+  src/modules/settings/components/advanced/index.tsx:6
+  src/modules/settings/components/appearance/index.tsx:10
+  src/modules/settings/components/billing/index.tsx:7
+  src/modules/settings/components/feedback/index.tsx:11
+  src/modules/settings/components/personalization/index.tsx:6
+  src/alert-dialog.tsx:7
+  src/command.tsx:13
+  src/dialog.tsx:12
+  src/drawer.tsx:32
+  src/icons/close.tsx:8
+  src/icons/google.tsx:9
+  src/icons/inbox.tsx:8
+  src/icons/mail.tsx:8
+  src/icons/plus.tsx:8
+  src/icons/recents.tsx:8
+  src/icons/rss.tsx:8
+  src/icons/search.tsx:8
+  src/icons/switcher.tsx:18
+  src/menu.tsx:9
+  src/menu.tsx:309
+  src/popover.tsx:7
+  src/sidebar/state/provider.tsx:42
+  src/toast/index.tsx:131
+  src/tooltip.tsx:7
+  src/transition.tsx:33
+  src/transition.tsx:35
+  src/transition.tsx:42
+  src/transition.tsx:61
+⚠ Redirect or frame boundary risk
+  react-doctor/clickjacking-redirect-risk
+  src/routes/-guards.ts:16
+✖ Hook called conditionally
+  react-doctor/rules-of-hooks
+  src/web/html/photo-preview.ts:174
+⚠ Unstable context provider value
+  react-doctor/jsx-no-constructed-context-values
+  src/tabs.tsx:46
+⚠ eslint/max-lines ×5
+  eslint/max-lines
+  api/integration/modules/articles/reader/content/normalize.test.ts:495 (test file)
+  api/integration/modules/articles/reader/extraction/workflow.test.ts:515 (test file)
+  api/integration/modules/feeds/refresh/html-autodiscovery.test.ts:526 (test file)
+  api/integration/modules/opml/jobs.test.ts:654 (test file)
+  api/integration/modules/opml/store.test.ts:1038 (test file)
+  Full diagnostics written to /var/folders/ky/pd_3n8dx5752bdcr8zym87vc0000gn/T/react-doctor-20ac7d78-d0a3-4bfe-9386-6518e726f15c
+REACT_DOCTOR_EXIT:1

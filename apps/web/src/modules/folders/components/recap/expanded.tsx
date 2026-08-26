@@ -26,7 +26,7 @@ import { Input } from "@kyomi/ui/input";
 import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
 import { ScrollArea } from "@kyomi/ui/scroll-area";
 import { toastManager } from "@kyomi/ui/toast";
-import { getUserSafeErrorMessage, logClientError } from "@lib/errors";
+import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import { deleteFolder, updateFolder, type Folder } from "@modules/folders/lib/api";
 import { applyFolderPinState } from "@modules/folders/queries/cache";

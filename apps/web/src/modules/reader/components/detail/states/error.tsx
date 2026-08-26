@@ -1,6 +1,6 @@
 "use client";
 
-import { getUserSafeErrorMessage } from "@lib/errors";
+import { getUserSafeErrorMessage } from "@kyomi/reader/lib/errors";
 
 export function ErrorState({ error }: { error: unknown }) {
   return (

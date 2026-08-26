@@ -1,7 +1,6 @@
 "use client";
 
 import { DownFill, UpFill } from "@kyomi/ui/icons/mingcute";
-import { m, useReducedMotion } from "@kyomi/ui/motion";
 import { Button } from "@kyomi/ui/button";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { Toolbar as ReaderToolbarRoot } from "@modules/reader/components/toolbar";
@@ -36,11 +35,6 @@ type ReaderToolbarProps =
     };
 
 export function ReaderToolbar(props: ReaderToolbarProps) {
-  const prefersReducedMotion = Boolean(useReducedMotion());
-  const transition = prefersReducedMotion
-    ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.3, bounce: 0 };
-
   if (props.variant === "navigation") {
     return (
       <nav
@@ -106,13 +100,11 @@ export function ReaderToolbar(props: ReaderToolbarProps) {
   }
 
   return (
-    <m.div
-      animate={{
+    <div
+      className="relative inline-flex h-11 min-w-0 shrink-0 origin-left items-center overflow-hidden rounded-full bg-background p-1 font-medium text-base text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative"
+      style={{
         width: props.collapsed ? COLLAPSED_READER_TOOLBAR_WIDTH : EXPANDED_READER_TOOLBAR_WIDTH,
       }}
-      className="relative inline-flex h-11 min-w-0 shrink-0 origin-left items-center overflow-hidden rounded-full bg-background p-1 font-medium text-base text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative"
-      initial={false}
-      transition={transition}
     >
       <ReaderToolbarRoot
         {...props.toolbar.toolbarProps}
@@ -122,6 +114,6 @@ export function ReaderToolbar(props: ReaderToolbarProps) {
         tooltipCollisionAvoidance={props.tooltipCollisionAvoidance}
         tooltipSide={props.tooltipSide}
       />
-    </m.div>
+    </div>
   );
 }

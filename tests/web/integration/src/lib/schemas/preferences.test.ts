@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { userPreferencesSchema } from "@lib/schemas";
+import { userPreferencesSchema } from "@kyomi/reader/schemas";
 
 const basePreferences = {
   defaultMode: "smart",

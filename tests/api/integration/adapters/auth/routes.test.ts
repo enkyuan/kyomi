@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, mock, test } from "bun:test";
 import { auth } from "@adapters/auth";
+import { AUTH_CAPABILITIES_HEADER } from "@adapters/auth/capabilities";
 import { createApp } from "@app/http/create-app";
 
 type MutableAuth = {
@@ -23,7 +24,14 @@ describe("authRoutes JSON passthrough", () => {
       const bodyWasUsed = request.bodyUsed;
       const body = await request.json();
 
-      return Response.json({ bodyWasUsed, body });
+      return Response.json(
+        { bodyWasUsed, body },
+        {
+          headers: {
+            "set-cookie": "session=probe; Path=/; HttpOnly",
+          },
+        },
+      );
     });
 
     mutableAuth.handler = handler as typeof auth.handler;
@@ -38,6 +46,8 @@ describe("authRoutes JSON passthrough", () => {
     );
 
     expect(response.status).toBe(200);
+    expect(response.headers.get(AUTH_CAPABILITIES_HEADER)).toContain("emailOtp");
+    expect(response.headers.get("set-cookie")).toContain("session=probe");
     expect(await response.json()).toEqual({
       bodyWasUsed: false,
       body: payload,

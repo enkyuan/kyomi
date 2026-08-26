@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import type { ArticleDetailDto, ReaderContentDto } from "@lib/schemas";
+import type { ArticleDetailDto, ReaderContentDto } from "@kyomi/reader/schemas";
 import { readerContentForMode } from "@modules/reader";
 
 function readerContent(overrides: Partial<ReaderContentDto> = {}): ReaderContentDto {

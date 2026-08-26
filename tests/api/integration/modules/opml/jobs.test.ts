@@ -7,13 +7,13 @@ import { describe, expect, mock, test } from "bun:test";
  * suite has enough files (confirmed by reproducing the leak at ~50 files) -- it corrupted
  * store.test.ts's and known-feeds.test.ts's real-implementation tests depending on run order.
  *
- * @adapters/queue/publish-job is left unmocked for the same reason: opml-import-dispatcher.ts
- * (exercised unmocked by recovery.test.ts and opml-import-dispatcher.test.ts) imports the real
+ * @adapters/queue/publish-job is left unmocked for the same reason: import-dispatcher.ts
+ * (exercised unmocked by recovery.test.ts and import-dispatcher.test.ts) imports the real
  * publishJob, so mocking it here leaked into those files' real-implementation assertions about
  * how the real publishJob behaves against a fake redis client. getRedis() (from @adapters/redis,
  * confirmed safe -- no other file imports it unmocked) is mocked instead to return a fake redis
  * with a controllable .xadd, the same technique recovery.test.ts and
- * opml-import-dispatcher.test.ts already use.
+ * import-dispatcher.test.ts already use.
  *
  * @modules/feeds/subscription/subscribe, @modules/feeds/refresh/enqueue, and
  * @modules/opml/task-store have no other file importing them unmocked, so those three stay

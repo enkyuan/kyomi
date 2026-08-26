@@ -3,13 +3,16 @@
 import { useNavigate, useParams, useSearch } from "@tanstack/react-router";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
-import type { InboxMarkReadBehaviorDto } from "@lib/schemas/index";
+import type { InboxMarkReadBehaviorDto } from "@kyomi/reader/schemas";
 import type { InboxPreferences } from "./use-inbox-data";
 import { getInboxItemIdFromSlug } from "../lib/articles/slug";
 import type { InboxFilter, InboxSort } from "../lib/articles/index";
 import type { InboxRecapRailFolderBackTarget, InboxRecapRailSection } from "../lib/recap/index";
 
 const INBOX_DESKTOP_MIN_WIDTH_PX = 768;
+// Matches the `xl` breakpoint the recap rail used to key off of via a raw Tailwind `xl:flex`
+// class, now checked against the measured content column instead of raw viewport width.
+const INBOX_RECAP_RAIL_MIN_CONTAINER_WIDTH_PX = 1200;
 
 type InboxItemLike = { id: string; isRead: boolean } | null;
 
@@ -61,6 +64,20 @@ export function useResponsiveReaderMode(contentWidthPx?: number): InboxLayoutVar
     return "split";
   }
   return "stacked";
+}
+
+/**
+ * Whether the inbox recap rail has enough *measured* content width to show, not just a wide
+ * window (a maximized-but-narrow split-screen window can be `xl`+ wide while the actual content
+ * column is cramped). `defaultMatches: true` keeps the SSR-rendered default the same as the
+ * rail's old behavior (visible at `xl`+) so there's no hydration flash; `contentWidthPx` only
+ * ever narrows that down further, once a real measurement exists.
+ */
+export function useRecapRailVisibility(contentWidthPx: number): boolean {
+  const isViewportWideEnough = useMediaQuery({ min: "xl", defaultMatches: true });
+  const isTooTight = contentWidthPx > 0 && contentWidthPx < INBOX_RECAP_RAIL_MIN_CONTAINER_WIDTH_PX;
+
+  return isViewportWideEnough && !isTooTight;
 }
 
 export function useInboxRouteState(preferences: InboxPreferences) {
@@ -212,7 +229,10 @@ export function useMarkReadBehavior(input: {
 }) {
   const timeoutRef = useRef<number | null>(null);
   const onMarkReadRef = useRef(input.onMarkRead);
-  onMarkReadRef.current = input.onMarkRead;
+
+  useEffect(() => {
+    onMarkReadRef.current = input.onMarkRead;
+  }, [input.onMarkRead]);
 
   useEffect(() => {
     if (timeoutRef.current !== null) {

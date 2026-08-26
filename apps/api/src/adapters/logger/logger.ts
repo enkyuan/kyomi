@@ -57,13 +57,39 @@ function truncate(value: string, maxLength: number) {
   return `${value.slice(0, maxLength - 1)}…`;
 }
 
+const DRIVER_ERROR_KEYS = [
+  "code",
+  "severity",
+  "detail",
+  "hint",
+  "position",
+  "table",
+  "column",
+  "constraint",
+  "schema",
+  "dataType",
+] as const;
+
 function normalizeForJson(value: unknown, seen = new WeakSet<object>()): unknown {
   if (value instanceof Error) {
-    return {
+    const record = value as unknown as Record<string, unknown>;
+    const result: Record<string, unknown> = {
       name: value.name,
       message: value.message,
       stack: value.stack,
     };
+    // Preserve the cause chain so DrizzleQueryError's underlying pg DatabaseError
+    // is never silently dropped from structured logs.
+    if (value.cause !== undefined) {
+      result.cause = normalizeForJson(value.cause, seen);
+    }
+    for (const key of DRIVER_ERROR_KEYS) {
+      const val = record[key];
+      if (typeof val === "string" && val.length > 0) {
+        result[key] = val;
+      }
+    }
+    return result;
   }
   if (typeof value === "bigint") {
     return value.toString();

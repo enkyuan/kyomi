@@ -375,7 +375,10 @@ function mergedRecentlyViewedResponsePaged(
       : null;
 
   return {
-    items: page.map(({ lastViewedAt: _lastViewedAt, ...item }) => item),
+    items: page.map(({ lastViewedAt, ...item }) => ({
+      ...item,
+      lastViewedAt: lastViewedAt.toISOString(),
+    })),
     next_cursor: nextCursor,
     has_more: hasMore,
     total_count: null,

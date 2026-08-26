@@ -7,7 +7,7 @@ import type {
   FollowedFeedDto,
   OpmlImportAcceptedDto,
   OpmlImportStatusDto,
-} from "@lib/schemas/index";
+} from "@kyomi/reader/schemas";
 
 export type DiscoverFeedResult = DiscoverFeedResultDto;
 export type FollowFeedResult = FollowFeedResultDto;
@@ -18,7 +18,7 @@ export type OpmlImportStatus = OpmlImportStatusDto;
 let feedsSchemaModulePromise:
   | Promise<
       Pick<
-        typeof import("@lib/schemas/index"),
+        typeof import("@kyomi/reader/schemas"),
         | "fetchValidatedJson"
         | "discoverFeedResultSchema"
         | "followFeedResultSchema"
@@ -31,7 +31,7 @@ let feedsSchemaModulePromise:
   | undefined;
 
 function getFeedsSchemaModule() {
-  feedsSchemaModulePromise ??= import("@lib/schemas/index").then((module) => ({
+  feedsSchemaModulePromise ??= import("@kyomi/reader/schemas").then((module) => ({
     fetchValidatedJson: module.fetchValidatedJson,
     discoverFeedResultSchema: module.discoverFeedResultSchema,
     followFeedResultSchema: module.followFeedResultSchema,

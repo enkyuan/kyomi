@@ -5,7 +5,7 @@ import {
   isTerminalOpmlImportStatus,
   pollOpmlImportStatus,
 } from "@modules/feeds/lib/opml";
-import type { OpmlImportStatusDto } from "@lib/schemas";
+import type { OpmlImportStatusDto } from "@kyomi/reader/schemas";
 
 function status(
   overrides: Omit<Partial<OpmlImportStatusDto>, "summary"> & {

@@ -5,8 +5,8 @@ import {
   FileExportFill,
   FileImportFill,
   Folder2Fill,
+  Fullscreen2Fill,
   ListCheckFill,
-  RightFill,
 } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import type { RecapFolder } from "@modules/folders/lib/types";
@@ -34,7 +34,7 @@ export function FolderActions({
     <div className="mt-3 grid min-w-0 shrink-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)_2.5rem] gap-2 px-1">
       <RailTooltip label="Create folder">
         <Button className={FOLDER_ACTION_BUTTON_CLASS} variant="secondary" onClick={onCreateFolder}>
-          <AddFill className="!mx-0 size-4" />
+          <AddFill className="mx-0 size-4" />
           Add
         </Button>
       </RailTooltip>
@@ -45,7 +45,7 @@ export function FolderActions({
           variant="secondary"
           onClick={onImportOpml}
         >
-          <FileImportFill className="!mx-0 size-4" />
+          <FileImportFill className="mx-0 size-4" />
           Import
         </Button>
       </RailTooltip>
@@ -57,7 +57,7 @@ export function FolderActions({
           variant="outline"
           onClick={onExportOpml}
         >
-          <FileExportFill className="!mx-0 size-4" />
+          <FileExportFill className="mx-0 size-4" />
         </Button>
       </RailTooltip>
     </div>
@@ -81,7 +81,7 @@ function FolderSummaryActions({
           variant="secondary"
           onClick={onManageFolders}
         >
-          <ListCheckFill className="!mx-0 size-4" />
+          <ListCheckFill className="mx-0 size-4" />
           Manage
         </Button>
       </RailTooltip>
@@ -92,7 +92,7 @@ function FolderSummaryActions({
           variant="secondary"
           onClick={onImportOpml}
         >
-          <FileImportFill className="!mx-0 size-4" />
+          <FileImportFill className="mx-0 size-4" />
           Import
         </Button>
       </RailTooltip>
@@ -103,7 +103,7 @@ function FolderSummaryActions({
           variant="outline"
           onClick={onAddFolder}
         >
-          <AddFill className="!mx-0 size-4" />
+          <AddFill className="mx-0 size-4" />
         </Button>
       </RailTooltip>
     </div>
@@ -129,7 +129,7 @@ export function Folders({
         folders.length > 0 ? (
           <RailTooltip label="View folders">
             <Button aria-label="View folders" size="icon-xs" variant="ghost" onClick={onExpand}>
-              <RightFill />
+              <Fullscreen2Fill />
             </Button>
           </RailTooltip>
         ) : null
@@ -154,14 +154,16 @@ export function Folders({
             {folders.slice(0, 3).map((folder) => (
               <button
                 key={folder.id}
-                className="group flex min-h-10 w-full min-w-0 cursor-pointer items-center gap-3 rounded-2xl py-1 ps-2 pe-1 text-left text-base outline-none transition-colors hover:bg-accent/70 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
+                className="group flex min-h-10 w-full min-w-0 cursor-pointer items-center gap-2.5 rounded-[15px] p-2 text-left text-base outline-none transition-colors hover:bg-accent/70 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
                 type="button"
                 onClick={() => onSelectFolder(folder)}
               >
                 <FolderIconBadge />
                 <span className="min-w-0 flex-1">
-                  <span className="block truncate font-medium">{folder.name}</span>
-                  <span className="block truncate text-muted-foreground text-sm">
+                  <span className="block truncate font-medium text-sm leading-5">
+                    {folder.name}
+                  </span>
+                  <span className="block truncate text-muted-foreground text-xs leading-4">
                     {formatFeedCount(folder.feedCount)}
                   </span>
                 </span>

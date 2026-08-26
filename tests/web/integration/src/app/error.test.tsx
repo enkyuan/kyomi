@@ -6,7 +6,7 @@ import {
   getAuthRecoveryAction,
   INBOX_RECOVERY_ACTION,
   LOGIN_RECOVERY_ACTION,
-} from "@/app/recovery";
+} from "@/lib/recovery";
 
 const mocks = vi.hoisted(() => ({
   invalidate: vi.fn(),

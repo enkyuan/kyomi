@@ -1,34 +1,5 @@
+import { articleListItemSchema } from "@kyomi/reader/schemas";
 import { z } from "zod";
-
-const articleTypeSchema = z.enum(["feed", "clip"]);
-
-const articleListItemSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  link: z.string(),
-  summary: z.string().nullable(),
-  publishedAt: z.string(),
-  feedId: z.string(),
-  feedUrl: z
-    .string()
-    .nullable()
-    .optional()
-    .transform((value) => value ?? null),
-  feedSiteUrl: z
-    .string()
-    .nullable()
-    .optional()
-    .transform((value) => value ?? null),
-  feedTitle: z.string(),
-  feedFaviconUrl: z
-    .string()
-    .nullable()
-    .optional()
-    .transform((value) => value ?? null),
-  isRead: z.boolean(),
-  isSaved: z.boolean(),
-  articleType: articleTypeSchema,
-});
 
 export const inboxRecapFolderSchema = z.object({
   id: z.string(),

@@ -1,4 +1,4 @@
-import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@lib/schemas/index";
+import type { InboxTimestampDisplayDto, InboxTimestampHourCycleDto } from "@kyomi/reader/schemas";
 
 const absoluteFormatter12h = new Intl.DateTimeFormat("en", {
   dateStyle: "medium",

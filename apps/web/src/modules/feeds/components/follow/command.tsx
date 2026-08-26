@@ -12,7 +12,7 @@ import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "
 import { Command, CommandEmpty, CommandInput, CommandItem, CommandList } from "@kyomi/ui/command";
 import { Kbd } from "@kyomi/ui/kbd";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
-import { useFeedback } from "@hooks/use-feedback";
+import { useFeedback } from "@kyomi/ui/hooks/use-feedback";
 import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import type { DiscoverFeedResult } from "@modules/feeds/lib/api";
 

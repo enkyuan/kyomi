@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  SegmentedControl,
-  SegmentedControlList,
-  SegmentedControlTab,
-} from "@kyomi/ui/segmented-control";
+import { Tabs, TabsList, TabsTab } from "@kyomi/ui/tabs";
 import { Menu, MenuTrigger, MenuPopup, MenuItem } from "@kyomi/ui/menu";
 import {
   ArrowLeftFill,
@@ -101,7 +97,7 @@ export function FilterControl({
         return (
           <MenuItem
             key={item.value}
-            className="h-9 justify-between gap-2 rounded-full px-3 font-medium text-base sm:h-9 sm:text-base"
+            className="h-9 justify-between gap-2 rounded-[17px] px-3 font-medium text-base sm:h-9 sm:text-base"
             onClick={(event) => {
               event.stopPropagation();
               onFilterChange(item.value);
@@ -120,7 +116,7 @@ export function FilterControl({
       {pinnedFolderMenuItems.map((folder) => (
         <MenuItem
           key={folder.id}
-          className="h-9 min-w-0 justify-between gap-2 rounded-full px-3 font-medium text-base sm:h-9 sm:text-base"
+          className="h-9 min-w-0 justify-between gap-2 rounded-[17px] px-3 font-medium text-base sm:h-9 sm:text-base"
           onClick={(event) => {
             event.stopPropagation();
             onFolderFilterChange?.(folder.id);
@@ -137,14 +133,14 @@ export function FilterControl({
 
   return (
     <div ref={segmentedRef} className="inline-flex w-fit rounded-full bg-background">
-      <SegmentedControl
+      <Tabs
         className="w-fit"
         value={segmentValue}
         onValueChange={(v) => onFilterChange(v as InboxFilter)}
       >
-        <SegmentedControlList>
-          <SegmentedControlTab value="my-feed">My Feed</SegmentedControlTab>
-          <SegmentedControlTab
+        <TabsList variant="pill">
+          <TabsTab value="my-feed">My Feed</TabsTab>
+          <TabsTab
             value={segmentValue === "my-feed" ? "all" : segmentValue}
             className="gap-1.5 pe-2.5"
             render={<div />}
@@ -171,7 +167,7 @@ export function FilterControl({
                 sideOffset={6}
                 anchor={segmentedRef}
                 className={cn(
-                  "w-(--anchor-width) min-w-(--anchor-width) max-w-64 rounded-[22px] before:rounded-[21px]",
+                  "w-(--anchor-width) min-w-(--anchor-width) max-w-64 rounded-[22px]",
                   shouldScrollMenu && "overflow-hidden",
                 )}
                 contentClassName={shouldScrollMenu ? FILTER_MENU_MAX_HEIGHT_CLASS : undefined}
@@ -179,9 +175,9 @@ export function FilterControl({
                 {menuItems}
               </MenuPopup>
             </Menu>
-          </SegmentedControlTab>
-        </SegmentedControlList>
-      </SegmentedControl>
+          </TabsTab>
+        </TabsList>
+      </Tabs>
     </div>
   );
 }
@@ -214,10 +210,6 @@ export function SearchBar({ variant = "pill" }: { variant?: "pill" | "transparen
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement | null>(null);
   const prefersReducedMotion = useReducedMotion();
-  const transition = prefersReducedMotion
-    ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.32, bounce: 0 };
-
   const open = useCallback(() => {
     setExpanded(true);
     requestAnimationFrame(() => inputRef.current?.focus());
@@ -230,13 +222,10 @@ export function SearchBar({ variant = "pill" }: { variant?: "pill" | "transparen
 
   return (
     <LazyMotion features={domAnimation}>
-      <m.div
-        layout
-        initial={false}
-        animate={{ width: expanded ? 420 : 44 }}
-        transition={transition}
+      <div
         className={cn(
-          "relative flex h-11 min-w-11 max-w-full items-center overflow-hidden rounded-full text-muted-foreground will-change-transform [&>*]:relative",
+          "relative flex h-11 min-w-11 max-w-full items-center overflow-hidden rounded-full text-muted-foreground [&>*]:relative",
+          expanded ? "w-[420px]" : "w-11",
           variant === "pill" &&
             "bg-background before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted",
         )}
@@ -289,7 +278,7 @@ export function SearchBar({ variant = "pill" }: { variant?: "pill" | "transparen
             </m.div>
           ) : null}
         </AnimatePresence>
-      </m.div>
+      </div>
     </LazyMotion>
   );
 }
@@ -313,7 +302,7 @@ function SortMenuItem({
         onSelect();
       }}
       data-active={active || undefined}
-      className="flex h-9 cursor-pointer items-center justify-start gap-2 rounded-xl px-3 font-medium text-base text-muted-foreground sm:h-9 sm:text-base data-highlighted:bg-transparent data-highlighted:text-foreground/70 data-active:bg-background data-active:text-foreground data-active:shadow-sm/8 data-active:data-highlighted:bg-background data-active:data-highlighted:text-foreground"
+      className="flex h-9 cursor-pointer items-center justify-start gap-2 rounded-[17px] px-3 font-medium text-base text-muted-foreground sm:h-9 sm:text-base data-active:bg-background data-active:text-foreground data-active:shadow-sm/8 data-active:data-highlighted:bg-accent data-active:data-highlighted:text-accent-foreground"
     >
       <Icon className="size-4 shrink-0" />
       <span>{label}</span>
@@ -352,7 +341,7 @@ export function SortButton({
         align="end"
         sideOffset={6}
         anchor={anchor}
-        className="w-(--anchor-width) min-w-(--anchor-width) rounded-2xl before:rounded-[15px]"
+        className="w-(--anchor-width) min-w-(--anchor-width) rounded-[22px]"
       >
         {SORT_MENU.map((item) => (
           <SortMenuItem

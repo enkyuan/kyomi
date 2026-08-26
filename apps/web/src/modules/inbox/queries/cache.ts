@@ -1,7 +1,7 @@
 "use client";
 
 import type { InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
-import type { ArticleDetailDto } from "@lib/schemas/index";
+import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import type { InboxItem } from "../lib/articles/index";
 import type { InboxListPage } from "./options";
 

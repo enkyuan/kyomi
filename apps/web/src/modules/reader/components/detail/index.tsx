@@ -1,6 +1,6 @@
 "use client";
 
-import { BrowserScrollBar, ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
 import { readerViewportContentInsetClass, type DetailViewProps } from "@modules/reader/lib/detail";
@@ -162,13 +162,7 @@ export function Detail({
           </div>
         </ScrollAreaPrimitive.Viewport>
         {selectedItem && !isBrowserSurface ? <BlurLayer topOffset={blurTopOffset} /> : null}
-        {selectedItem && isBrowserSurface ? (
-          <BrowserScrollBar
-            aria-label="Reader scrollbar"
-            className="z-50 !fixed !top-0 !right-0 !bottom-0 !left-auto !h-auto !inset-inline-end-0"
-            orientation="vertical"
-          />
-        ) : selectedItem ? (
+        {selectedItem ? (
           <ScrollBar aria-label="Reader scrollbar" className="z-50" orientation="vertical" />
         ) : null}
       </ScrollAreaPrimitive.Root>

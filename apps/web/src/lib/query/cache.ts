@@ -1,6 +1,7 @@
 import type { DehydratedState, InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
 import { dehydrate, hydrate } from "@tanstack/react-query";
 import type { InboxListPage } from "@modules/inbox/queries/options";
+import { articleDetailSchema } from "@kyomi/reader/schemas";
 
 const HOT_CACHE_KEY = "kyomi:hot-query-cache:v2";
 const HOT_CACHE_LEGACY_KEY = "kyomi:hot-query-cache:v1";
@@ -204,13 +205,21 @@ export function prepareHotCacheState(state: DehydratedState): DehydratedState {
   };
 }
 
-function dropCorruptInboxItemQueries(queryClient: QueryClient) {
+export function dropCorruptInboxItemQueries(queryClient: QueryClient) {
   for (const query of queryClient.getQueryCache().findAll({ queryKey: ["inbox", "items"] })) {
     const data = query.state.data as InfiniteData<InboxListPage> | undefined;
     if (!data?.pages?.length) {
       continue;
     }
     if (data.pages.some((page) => !isValidInboxListPage(page))) {
+      queryClient.removeQueries({ queryKey: query.queryKey, exact: true });
+    }
+  }
+
+  for (const query of queryClient.getQueryCache().findAll({ queryKey: ["inbox", "item-detail"] })) {
+    const itemId = query.queryKey[2];
+    const parsed = articleDetailSchema.safeParse(query.state.data);
+    if (!parsed.success || parsed.data.id !== itemId) {
       queryClient.removeQueries({ queryKey: query.queryKey, exact: true });
     }
   }

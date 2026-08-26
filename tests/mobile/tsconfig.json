@@ -1,0 +1,20 @@
+{
+  "extends": "../../packages/tsconfig/node.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["../../apps/mobile/src/*"],
+      "@icons": ["../../apps/mobile/src/components/icons/*"],
+      "@modules/*": ["../../apps/mobile/src/modules/*"],
+      "@hooks/*": ["../../apps/mobile/src/hooks/*"],
+      "@lib/*": ["../../apps/mobile/src/lib/*"],
+      "@ui/*": ["../../apps/mobile/src/components/ui/*"],
+      "@utils/*": ["../../apps/mobile/src/utils/*"],
+      "@tests/*": ["../*"],
+      "@kyomi/ui/*": ["../../packages/ui/src/*"]
+    },
+    "types": ["bun"]
+  },
+  "include": ["integration/**/*.ts", "integration/**/*.tsx", "../../apps/mobile/uniwind-types.d.ts"]
+}

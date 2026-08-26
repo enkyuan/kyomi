@@ -1,5 +1,5 @@
 import type React from "react";
-import type { ArticleDetailDto } from "@lib/schemas/index";
+import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import type { InboxItem } from "@modules/inbox/lib/articles/index";
 import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
 

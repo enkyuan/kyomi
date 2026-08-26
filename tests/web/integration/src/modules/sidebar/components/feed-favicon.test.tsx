@@ -1,5 +1,4 @@
-import { buildClientFaviconUrl } from "@kyomi/worker/favicon/browser";
-import { buildFaviconUrlCandidates } from "@lib/favicon";
+import { buildClientFaviconUrl, buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
 import {
   clearFaviconMetadataMemoryCache,
   writeCachedFaviconHit,

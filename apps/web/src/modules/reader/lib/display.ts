@@ -1,4 +1,4 @@
-import type { ArticleDetailDto, ReaderContentDto } from "@lib/schemas/index";
+import type { ArticleDetailDto, ReaderContentDto } from "@kyomi/reader/schemas";
 import type { ReaderMode } from "./mode";
 
 /**
