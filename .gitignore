@@ -4,7 +4,6 @@ node_modules
 .env.keys
 .env*.local
 !.env.example
-.env.example
 apps/*/bun.lock
 packages/*/bun.lock
 tests/bun.lock
@@ -33,3 +32,4 @@ packages/catalog/**/*.db
 .gstack/
 /.superpowers/
 /.claude/launch.json
+.pi/
