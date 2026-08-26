@@ -12,10 +12,19 @@ import { fail, section } from "./log";
 const ROOT_DIR = join(import.meta.dir, "../..");
 const WEB_OUTPUT_DIR = join(ROOT_DIR, "apps/web/.output");
 
-const REQUIRED_MEDIA_QUERIES = [
-  "@media (min-width: 800px)", // md — must match useMediaQuery's BREAKPOINTS.md, not Tailwind's 768px default
-  "@media (min-width: 1600px)", // 3xl
-  "@media (min-width: 2000px)", // 4xl
+const REQUIRED_BREAKPOINTS = [
+  {
+    name: "md (800px)",
+    patterns: ["(min-width: 800px)", "min-width:800px", "width>=800px", "width >= 800px"],
+  },
+  {
+    name: "3xl (1600px)",
+    patterns: ["(min-width: 1600px)", "min-width:1600px", "width>=1600px", "width >= 1600px"],
+  },
+  {
+    name: "4xl (2000px)",
+    patterns: ["(min-width: 2000px)", "min-width:2000px", "width>=2000px", "width >= 2000px"],
+  },
 ];
 
 section("Checking built CSS for the aligned breakpoint tokens");
@@ -35,14 +44,16 @@ if (fileCount === 0) {
   );
 }
 
-const missing = REQUIRED_MEDIA_QUERIES.filter((query) => !cssContent.includes(query));
+const missing = REQUIRED_BREAKPOINTS.filter(
+  ({ patterns }) => !patterns.some((pattern) => cssContent.includes(pattern)),
+);
 
 if (missing.length > 0) {
   fail(
-    `Built CSS is missing expected breakpoint(s): ${missing.join(", ")}. ` +
+    `Built CSS is missing expected breakpoint(s): ${missing.map((b) => b.name).join(", ")}. ` +
       "Check the --breakpoint-* tokens in packages/ui/src/styles/theme.css against BREAKPOINTS in " +
       "packages/ui/src/hooks/use-media-query.ts — they must stay in sync.",
   );
 }
 
-console.log(`Found all ${REQUIRED_MEDIA_QUERIES.length} expected breakpoints in built CSS.`);
+console.log(`Found all ${REQUIRED_BREAKPOINTS.length} expected breakpoints in built CSS.`);
