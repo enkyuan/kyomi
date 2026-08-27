@@ -44,11 +44,6 @@ export default function TabsLayout() {
               Sources
             </NativeTabs.Trigger.Label>
           </NativeTabs.Trigger>
-          <NativeTabs.Trigger name="search" role="search">
-            <NativeTabs.Trigger.Label hidden={Platform.OS === "ios"}>
-              Search
-            </NativeTabs.Trigger.Label>
-          </NativeTabs.Trigger>
         </NativeTabs>
       </SearchTabBarProvider>
     </ReaderTabBarProvider>
