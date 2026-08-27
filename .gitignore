@@ -33,3 +33,4 @@ packages/catalog/**/*.db
 /.superpowers/
 /.claude/launch.json
 .pi/
+.poolside/
