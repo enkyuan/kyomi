@@ -9,8 +9,8 @@ import {
   More2Fill,
   PinFill,
   PinLine,
-  RightFill,
 } from "@kyomi/ui/icons/mingcute";
+import { createSquircleStyle, useSquircle } from "@kyomi/ui/lib/squircle";
 import { useState } from "react";
 import {
   AlertDialog,
@@ -39,20 +39,32 @@ import { ExpandedFolderFeeds } from "../feeds";
 import { FolderIconBadge } from "./folder-icon";
 import { FolderActions } from "./summary";
 
+const FOLDER_MANAGE_BUTTON_SIZE_PX = 30;
+
+const folderManageButtonSquircleStyle = createSquircleStyle({
+  width: FOLDER_MANAGE_BUTTON_SIZE_PX,
+  height: FOLDER_MANAGE_BUTTON_SIZE_PX,
+  cornerRadius: 7,
+  cornerSmoothing: 1,
+});
+
 type FolderOption = { label: string; value: string };
-type RemoveFeedsToastOptions = {
-  anchor?: HTMLElement | null;
-  feedName?: string;
-};
-type PinFolderVariables = {
-  folderId: string;
-  isPinned: boolean;
-  name: string;
-};
-type PinFolderContext = {
-  previousFolders?: Folder[];
-  previousRecap?: InboxRecapDto;
-};
+type RemoveFeedsToastOptions = { anchor?: HTMLElement | null; feedName?: string };
+type PinFolderVariables = { folderId: string; isPinned: boolean; name: string };
+type PinFolderContext = { previousFolders?: Folder[]; previousRecap?: InboxRecapDto };
+
+function ExpandedFolderRow({ children }: { children: React.ReactNode }) {
+  const { ref, style } = useSquircle<HTMLDivElement>(16, 1);
+  return (
+    <div
+      ref={ref}
+      style={style}
+      className="group flex h-13 w-full min-w-0 items-center gap-2.5 px-2 text-base transition-colors hover:bg-accent/70"
+    >
+      {children}
+    </div>
+  );
+}
 
 export function ExpandedFolders({
   folders,
@@ -249,10 +261,7 @@ export function ExpandedFolders({
             const isEditing = editingFolderId === folder.id;
 
             return isEditing ? (
-              <div
-                key={folder.id}
-                className="group flex h-13 w-full min-w-0 items-center gap-2.5 rounded-2xl px-2 text-base transition-colors hover:bg-accent/70"
-              >
+              <ExpandedFolderRow key={folder.id}>
                 <FolderIconBadge />
                 <Input
                   aria-label={`Rename ${folder.name}`}
@@ -272,8 +281,10 @@ export function ExpandedFolders({
                 />
                 <Button
                   aria-label="Save folder name"
+                  data-squircle="7"
                   loading={renameMutation.isPending}
                   size="icon-xs"
+                  style={folderManageButtonSquircleStyle}
                   variant="ghost"
                   onClick={() => submitRename(folder)}
                 >
@@ -281,18 +292,17 @@ export function ExpandedFolders({
                 </Button>
                 <Button
                   aria-label="Cancel rename"
+                  data-squircle="7"
                   size="icon-xs"
+                  style={folderManageButtonSquircleStyle}
                   variant="ghost"
                   onClick={cancelEditing}
                 >
                   <CloseFill />
                 </Button>
-              </div>
+              </ExpandedFolderRow>
             ) : (
-              <div
-                key={folder.id}
-                className="group flex h-13 w-full min-w-0 items-center gap-2.5 rounded-2xl px-2 text-base transition-colors hover:bg-accent/70"
-              >
+              <ExpandedFolderRow key={folder.id}>
                 <button
                   className="flex min-w-0 flex-1 items-center gap-2.5 rounded-xl text-left outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
                   type="button"
@@ -300,11 +310,10 @@ export function ExpandedFolders({
                 >
                   <FolderIconBadge />
                   <span className="min-w-0 flex-1">
-                    <span className="flex min-w-0 items-center gap-1">
-                      <span className="truncate font-medium">{folder.name}</span>
-                      <RightFill className="size-4 shrink-0 text-muted-foreground/70 transition-transform group-hover:translate-x-0.5" />
+                    <span className="block truncate font-medium text-sm leading-5">
+                      {folder.name}
                     </span>
-                    <span className="block truncate text-muted-foreground text-sm">
+                    <span className="block truncate text-muted-foreground text-xs leading-4">
                       {formatFeedCount(folder.feedCount)}
                     </span>
                   </span>
@@ -312,7 +321,13 @@ export function ExpandedFolders({
                 <Menu>
                   <MenuTrigger
                     render={
-                      <Button aria-label={`Manage ${folder.name}`} size="icon-xs" variant="ghost">
+                      <Button
+                        aria-label={`Manage ${folder.name}`}
+                        data-squircle="7"
+                        size="icon-xs"
+                        style={folderManageButtonSquircleStyle}
+                        variant="ghost"
+                      >
                         <More2Fill />
                       </Button>
                     }
@@ -347,7 +362,7 @@ export function ExpandedFolders({
                     ) : null}
                   </MenuPopup>
                 </Menu>
-              </div>
+              </ExpandedFolderRow>
             );
           })}
         </div>

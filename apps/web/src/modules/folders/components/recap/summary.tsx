@@ -9,6 +9,7 @@ import {
   ListCheckFill,
 } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
+import { useSquircle } from "@kyomi/ui/lib/squircle";
 import type { RecapFolder } from "@modules/folders/lib/types";
 import { RailTooltip, RecapSection, SectionEmpty } from "@modules/inbox/components/recap/sections";
 import { formatFeedCount } from "@modules/inbox/lib/recap/index";
@@ -110,6 +111,34 @@ function FolderSummaryActions({
   );
 }
 
+function FolderSummaryItem({
+  folder,
+  onSelect,
+}: {
+  folder: RecapFolder;
+  onSelect: (folder: RecapFolder) => void;
+}) {
+  const { ref, style } = useSquircle<HTMLButtonElement>(15, 1);
+
+  return (
+    <button
+      ref={ref}
+      className="group flex min-h-10 w-full min-w-0 cursor-pointer items-center gap-2.5 p-2 text-left text-base outline-none transition-colors hover:bg-accent/70 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
+      style={style}
+      type="button"
+      onClick={() => onSelect(folder)}
+    >
+      <FolderIconBadge />
+      <span className="min-w-0 flex-1">
+        <span className="block truncate font-medium text-sm leading-5">{folder.name}</span>
+        <span className="block truncate text-muted-foreground text-xs leading-4">
+          {formatFeedCount(folder.feedCount)}
+        </span>
+      </span>
+    </button>
+  );
+}
+
 export function Folders({
   folders,
   onExpand,
@@ -152,22 +181,7 @@ export function Folders({
         <div className="flex min-h-0 flex-1 flex-col">
           <div className="min-h-0 space-y-3 overflow-hidden">
             {folders.slice(0, 3).map((folder) => (
-              <button
-                key={folder.id}
-                className="group flex min-h-10 w-full min-w-0 cursor-pointer items-center gap-2.5 rounded-[15px] p-2 text-left text-base outline-none transition-colors hover:bg-accent/70 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
-                type="button"
-                onClick={() => onSelectFolder(folder)}
-              >
-                <FolderIconBadge />
-                <span className="min-w-0 flex-1">
-                  <span className="block truncate font-medium text-sm leading-5">
-                    {folder.name}
-                  </span>
-                  <span className="block truncate text-muted-foreground text-xs leading-4">
-                    {formatFeedCount(folder.feedCount)}
-                  </span>
-                </span>
-              </button>
+              <FolderSummaryItem key={folder.id} folder={folder} onSelect={onSelectFolder} />
             ))}
           </div>
           <FolderSummaryActions

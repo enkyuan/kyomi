@@ -12,10 +12,100 @@ import {
 import type { RecapFolder } from "@modules/folders/lib/types";
 import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import type { RecapTopViewedFeed } from "../types";
+import { useSquircle } from "@kyomi/ui/lib/squircle";
 import { formatRelativeTime, formatViewedCount } from "@modules/inbox/lib/recap/index";
 import { RailTooltip, RecapSection, SectionEmpty } from ".";
 
 const TOP_SOURCE_DISPLAY_LIMIT = 4;
+
+function TopSourceRow({
+  currentFolder,
+  currentFolderId,
+  feed,
+  folderOptions,
+  followFeed,
+  isFollowingFeed,
+  moveFeed,
+  movingFeedId,
+}: {
+  currentFolder?: { label: string; value: string };
+  currentFolderId: string;
+  feed: RecapTopViewedFeed;
+  folderOptions: { label: string; value: string }[];
+  followFeed: (feed: RecapTopViewedFeed, folderId?: string) => void;
+  isFollowingFeed: (feedId: string) => boolean;
+  moveFeed: (feedId: string, folderId: string) => void;
+  movingFeedId: string | null;
+}) {
+  const { ref, style } = useSquircle<HTMLDivElement>(15, 1);
+
+  return (
+    <div ref={ref} style={style} className="min-w-0 p-2 hover:bg-accent/70">
+      <div className="flex min-w-0 items-center gap-2.5">
+        <Link
+          className="min-w-0 flex flex-1 gap-2.5 outline-none"
+          to="/inbox"
+          search={(prev: InboxSearch) => ({
+            ...prev,
+            filter: "all" as const,
+            feedId: feed.feedId,
+            folderId: undefined,
+            itemId: undefined,
+            search: undefined,
+          })}
+        >
+          <FeedFavicon
+            className="size-9 shrink-0"
+            faviconUrl={feed.faviconUrl}
+            feedUrl={feed.url}
+            shape="squircle"
+            siteUrl={feed.siteUrl}
+            squircleCornerRadius={7}
+            title={feed.title}
+          />
+          <span className="min-w-0 flex-1">
+            <span className="block truncate font-semibold text-sm leading-5">{feed.title}</span>
+            <span className="block truncate text-muted-foreground text-xs leading-4">
+              {formatViewedCount(feed.viewedItemCount)} · viewed{" "}
+              {formatRelativeTime(feed.lastViewedAt)}
+            </span>
+          </span>
+        </Link>
+        {feed.isSubscribed && currentFolderId ? (
+          <FolderPickerButton
+            currentFolderId={currentFolderId}
+            currentFolderName={currentFolder?.label ?? "Unsorted"}
+            feedTitle={feed.title}
+            folders={folderOptions}
+            isMoving={movingFeedId === feed.feedId}
+            onMove={(folderId) => moveFeed(feed.feedId, folderId)}
+          />
+        ) : !feed.isSubscribed && folderOptions.length > 0 ? (
+          <FolderPickerButton
+            currentFolderId=""
+            currentFolderName="Unsorted"
+            feedTitle={feed.title}
+            folders={folderOptions}
+            isMoving={isFollowingFeed(feed.feedId)}
+            mode="follow"
+            onMove={(folderId) => followFeed(feed, folderId)}
+          />
+        ) : !feed.isSubscribed ? (
+          <Button
+            aria-label={`Follow ${feed.title}`}
+            className={TOP_SOURCE_FOLDER_BUTTON_CLASS}
+            loading={isFollowingFeed(feed.feedId)}
+            size="icon-xs"
+            variant="ghost"
+            onClick={() => followFeed(feed)}
+          >
+            <AddFill />
+          </Button>
+        ) : null}
+      </div>
+    </div>
+  );
+}
 
 export function TopSources({
   feeds,
@@ -72,72 +162,17 @@ export function TopSources({
               feed.folderId ?? unsortedFolder?.value ?? folderOptions[0]?.value ?? "";
             const currentFolder = folderOptions.find((folder) => folder.value === currentFolderId);
             return (
-              <div key={feed.feedId} className="min-w-0 rounded-[15px] p-2 hover:bg-accent/70">
-                <div className="flex min-w-0 items-center gap-2.5">
-                  <Link
-                    className="min-w-0 flex flex-1 gap-2.5 outline-none"
-                    to="/inbox"
-                    search={(prev: InboxSearch) => ({
-                      ...prev,
-                      filter: "all" as const,
-                      feedId: feed.feedId,
-                      folderId: undefined,
-                      itemId: undefined,
-                      search: undefined,
-                    })}
-                  >
-                    <FeedFavicon
-                      className="size-9 shrink-0"
-                      faviconUrl={feed.faviconUrl}
-                      feedUrl={feed.url}
-                      shape="squircle"
-                      siteUrl={feed.siteUrl}
-                      squircleCornerRadius={7}
-                      title={feed.title}
-                    />
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate font-semibold text-sm leading-5">
-                        {feed.title}
-                      </span>
-                      <span className="block truncate text-muted-foreground text-xs leading-4">
-                        {formatViewedCount(feed.viewedItemCount)} · viewed{" "}
-                        {formatRelativeTime(feed.lastViewedAt)}
-                      </span>
-                    </span>
-                  </Link>
-                  {feed.isSubscribed && currentFolderId ? (
-                    <FolderPickerButton
-                      currentFolderId={currentFolderId}
-                      currentFolderName={currentFolder?.label ?? "Unsorted"}
-                      feedTitle={feed.title}
-                      folders={folderOptions}
-                      isMoving={movingFeedId === feed.feedId}
-                      onMove={(folderId) => moveFeed(feed.feedId, folderId)}
-                    />
-                  ) : !feed.isSubscribed && folderOptions.length > 0 ? (
-                    <FolderPickerButton
-                      currentFolderId=""
-                      currentFolderName="Unsorted"
-                      feedTitle={feed.title}
-                      folders={folderOptions}
-                      isMoving={isFollowingFeed(feed.feedId)}
-                      mode="follow"
-                      onMove={(folderId) => followFeed(feed, folderId)}
-                    />
-                  ) : !feed.isSubscribed ? (
-                    <Button
-                      aria-label={`Follow ${feed.title}`}
-                      className={TOP_SOURCE_FOLDER_BUTTON_CLASS}
-                      loading={isFollowingFeed(feed.feedId)}
-                      size="icon-xs"
-                      variant="ghost"
-                      onClick={() => followFeed(feed)}
-                    >
-                      <AddFill />
-                    </Button>
-                  ) : null}
-                </div>
-              </div>
+              <TopSourceRow
+                key={feed.feedId}
+                currentFolder={currentFolder}
+                currentFolderId={currentFolderId}
+                feed={feed}
+                folderOptions={folderOptions}
+                followFeed={followFeed}
+                isFollowingFeed={isFollowingFeed}
+                moveFeed={moveFeed}
+                movingFeedId={movingFeedId}
+              />
             );
           })}
         </div>
