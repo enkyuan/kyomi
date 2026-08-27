@@ -5,6 +5,7 @@ import { Platform, Pressable, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import type { SharedValue } from "react-native-reanimated";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
+import { useTabBarMinimize, useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
 import { FeedFavicon } from "@modules/inbox/components/feed-favicon";
 import { feedItemTypography } from "@modules/inbox/lib/layout";
 import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
@@ -39,6 +40,8 @@ export function RecentHistoryList({
   const initialScrollOffset = getRecentHistoryInitialOffset(headerHeight, isIOS);
   const listRef = useRef<ComponentRef<typeof AnimatedLegendList<RecentArticle>>>(null);
   const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
+  const { reset: resetTabBarMinimize } = useTabBarMinimize();
+  const minimizeScrollHandler = useTabBarMinimizeScroll(scrollY);
 
   useFocusEffect(
     useCallback(() => {
@@ -46,12 +49,13 @@ export function RecentHistoryList({
       // each visit starts at the latest viewed item rather than restoring a
       // previous reading position.
       onScrollReset();
+      resetTabBarMinimize();
       scrollY.set(initialScrollOffset);
       resetRecentHistoryScroll(
         listRef.current?.getNativeScrollRef() as NativeScrollable | undefined,
         initialScrollOffset,
       );
-    }, [initialScrollOffset, onScrollReset, scrollY]),
+    }, [initialScrollOffset, onScrollReset, resetTabBarMinimize, scrollY]),
   );
 
   return (
@@ -77,6 +81,7 @@ export function RecentHistoryList({
       initialScrollOffset={isIOS ? initialScrollOffset : undefined}
       keyExtractor={(article) => article.id}
       ListEmptyComponent={<RecentHistoryEmptyState />}
+      onScroll={minimizeScrollHandler}
       onScrollBeginDrag={onScrollBeginDrag}
       renderItem={({ item, index }: { item: RecentArticle; index: number }) => (
         <RecentHistoryItem article={item} isFirst={index === 0} />

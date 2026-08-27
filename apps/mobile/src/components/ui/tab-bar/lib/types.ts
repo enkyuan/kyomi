@@ -1,4 +1,8 @@
 import type { ViewStyle } from "react-native";
+import type {
+  KyomiSourceItem,
+  KyomiSourceKind,
+} from "../../../../../modules/tab-bar/src/KyomiNativeTabBar.types";
 import type { SharedValue, AnimatedStyle } from "react-native-reanimated";
 import type { ComposedGesture, GestureType } from "react-native-gesture-handler";
 
@@ -26,6 +30,11 @@ export interface TabBarProps {
   readonly navigation?: TabBarNavigation;
   readonly onTabChange?: (index: number) => void;
   readonly onSearchQueryChange?: (query: string) => void;
+  readonly onSearchSubmit?: (query: string) => void;
+  readonly minimized?: boolean;
+  readonly sources?: readonly KyomiSourceItem[];
+  readonly selectedSourceId?: string;
+  readonly onSelectSource?: (source: { id: string; kind: KyomiSourceKind }) => void;
   readonly [key: string]: unknown;
 }
 

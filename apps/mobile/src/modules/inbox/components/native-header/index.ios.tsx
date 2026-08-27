@@ -1,4 +1,4 @@
-import KyomiNativeHeaderView from "../../../../../modules/kyomi-native-header/src/KyomiNativeHeaderView";
+import KyomiNativeHeaderView from "../../../../../modules/header/src/KyomiNativeHeaderView";
 
 type InboxNativeHeaderProps = {
   collapseProgress: number;

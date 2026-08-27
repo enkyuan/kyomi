@@ -5,7 +5,7 @@ import { scheduleOnRN } from "react-native-worklets";
 import * as Haptics from "expo-haptics";
 import { PILL_HEIGHT, SEARCH_BUTTON_SIZE, SPRING_BOUNCY } from "../lib/constants";
 
-export function useSearch(onToggleSearch: () => void) {
+export function useSearch(onToggleSearch: () => void, allowPull = true) {
   const pressed = useSharedValue(0);
   const overflowX = useSharedValue(0);
   const overflowY = useSharedValue(0);
@@ -72,9 +72,9 @@ export function useSearch(onToggleSearch: () => void) {
       });
   }, [overflowX, overflowY, touchX, touchY, pressed, glowProgress]);
 
-  const composedGesture: ComposedGesture = useMemo(
-    () => Gesture.Race(panGesture, tapGesture),
-    [panGesture, tapGesture],
+  const composedGesture: ComposedGesture | typeof tapGesture = useMemo(
+    () => (allowPull ? Gesture.Race(panGesture, tapGesture) : tapGesture),
+    [allowPull, panGesture, tapGesture],
   );
 
   return {

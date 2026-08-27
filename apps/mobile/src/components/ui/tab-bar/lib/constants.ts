@@ -1,4 +1,4 @@
-import { Dimensions } from "react-native";
+import { Dimensions, Platform } from "react-native";
 import { interpolate } from "react-native-reanimated";
 
 // --- Layout ---
@@ -8,8 +8,8 @@ const { width: SCREEN_WIDTH } = Dimensions.get("window");
 export const TAB_BAR_HORIZONTAL_PADDING = 16;
 export const TAB_BAR_GAP = 36;
 
-export const PILL_HEIGHT = 52;
-export const SEARCH_ACTIVE_HEIGHT = 44;
+export const PILL_HEIGHT = Platform.select({ android: 56, default: 52 });
+export const SEARCH_ACTIVE_HEIGHT = Platform.select({ android: 48, default: 44 });
 export const PILL_BORDER_RADIUS = PILL_HEIGHT / 2;
 export const SEARCH_ACTIVE_RADIUS = SEARCH_ACTIVE_HEIGHT / 2;
 
@@ -24,10 +24,10 @@ export const SEARCH_BUTTON_SIZE = 52;
 export const SEARCH_BAR_RADIUS = PILL_BORDER_RADIUS;
 
 export const TOTAL_WIDTH = SCREEN_WIDTH - 2 * TAB_BAR_HORIZONTAL_PADDING;
-export const CLOSE_BUTTON_SIZE = SEARCH_BUTTON_SIZE;
-export const SEARCH_BAR_WIDTH = TOTAL_WIDTH - TAB_BAR_GAP - CLOSE_BUTTON_SIZE;
+export const CLOSE_BUTTON_SIZE = SEARCH_ACTIVE_HEIGHT;
+export const SEARCH_BAR_WIDTH = TOTAL_WIDTH - CLOSE_BUTTON_SIZE;
 
-export const TAB_BAR_BOTTOM_PADDING = 12;
+export const TAB_BAR_BOTTOM_PADDING = Platform.select({ android: 16, default: 12 });
 
 // --- Tab Zone Constants (Tabs 1 & 2 regular width, Tab 3 selector at 0.6x width) ---
 

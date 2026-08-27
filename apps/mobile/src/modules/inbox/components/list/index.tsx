@@ -1,13 +1,13 @@
 import { AnimatedLegendList } from "@legendapp/list/reanimated";
 import { router } from "expo-router";
 import { useMemo, type ReactElement } from "react";
-import type { NativeScrollEvent, NativeSyntheticEvent } from "react-native";
 import { Platform, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, { type SharedValue } from "react-native-reanimated";
 import { Skeleton } from "@ui/skeleton";
 import { COMPACT_NAV_HEIGHT } from "@ui/header";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
+import { useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
 import { useArticles } from "@modules/inbox/hooks/use-articles";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { feedItemTypography } from "@modules/inbox/lib/layout";
@@ -40,6 +40,7 @@ export function List({
 
   const { items, isLoading, isFetchingNextPage, hasNextPage, fetchNextPage } = useArticles();
   const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
+  const minimizeScrollHandler = useTabBarMinimizeScroll(scrollY);
 
   if (isLoading) {
     const { titleLineHeightPx, summaryLineHeightPx, metaFontSizePx } = feedItemTypography;
@@ -101,9 +102,7 @@ export function List({
       <Animated.ScrollView
         automaticallyAdjustsScrollIndicatorInsets={false}
         contentContainerStyle={{ flexGrow: 1, paddingTop: topContentInset }}
-        onScroll={(event) => {
-          scrollY.value = event.nativeEvent.contentOffset.y;
-        }}
+        onScroll={minimizeScrollHandler}
         scrollEventThrottle={16}
         scrollIndicatorInsets={
           isIOS ? { bottom: tabBarOcclusionHeight, top: scrollbarTopInset } : undefined
@@ -128,9 +127,7 @@ export function List({
       onEndReached={() => {
         if (hasNextPage && !isFetchingNextPage) fetchNextPage();
       }}
-      onScroll={(event: NativeSyntheticEvent<NativeScrollEvent>) => {
-        scrollY.value = event.nativeEvent.contentOffset.y;
-      }}
+      onScroll={minimizeScrollHandler}
       scrollEventThrottle={16}
       onEndReachedThreshold={NEAR_END_THRESHOLD}
       renderItem={({ item, index }: { item: ArticleListItemDto; index: number }) => (

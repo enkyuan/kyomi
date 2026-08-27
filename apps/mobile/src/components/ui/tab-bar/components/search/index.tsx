@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
-import { GestureDetector, type ComposedGesture } from "react-native-gesture-handler";
+import {
+  GestureDetector,
+  type ComposedGesture,
+  type GestureType,
+} from "react-native-gesture-handler";
 import Animated, {
   interpolate,
   useAnimatedStyle,
@@ -18,7 +22,6 @@ import {
   SEARCH_BAR_RADIUS,
   SEARCH_BAR_WIDTH,
   SEARCH_BUTTON_SIZE,
-  TAB_BAR_GAP,
   liquidGlassTransform,
 } from "../../lib/constants";
 import { GlassMaterial } from "../pill/glass-material";
@@ -30,7 +33,7 @@ const SEARCH_HALF_W = SEARCH_BUTTON_SIZE / 2;
 const SEARCH_HALF_H = PILL_HEIGHT / 2;
 
 interface SearchButtonProps {
-  readonly composedGesture: ComposedGesture;
+  readonly composedGesture: ComposedGesture | GestureType;
   readonly glowProgress: SharedValue<number>;
   readonly isSearchActive: boolean;
   readonly onQueryChange?: (query: string) => void;
@@ -172,10 +175,10 @@ const searchStyles = StyleSheet.create({
 // --- Close Search Button ---
 
 const CLOSE_HALF_W = CLOSE_BUTTON_SIZE / 2;
-const CLOSE_HALF_H = PILL_HEIGHT / 2;
+const CLOSE_HALF_H = CLOSE_BUTTON_SIZE / 2;
 
 interface CloseSearchButtonProps {
-  readonly composedGesture: ComposedGesture;
+  readonly composedGesture: ComposedGesture | GestureType;
   readonly glowProgress: SharedValue<number>;
   readonly overflowX: SharedValue<number>;
   readonly overflowY: SharedValue<number>;
@@ -212,8 +215,6 @@ export function CloseSearchButton({
   const visibilityStyle = useAnimatedStyle(() => {
     const progress = searchProgress.get();
     return {
-      marginLeft: interpolate(progress, [0, 0.5], [0, TAB_BAR_GAP], "clamp"),
-      opacity: interpolate(progress, [0.3, 0.6], [0, 1], "clamp"),
       transform: [
         { translateX: interpolate(progress, [0.3, 0.8], [20, 0], "clamp") },
         { scale: interpolate(progress, [0.3, 0.8], [0.5, 1], "clamp") },
@@ -232,7 +233,7 @@ export function CloseSearchButton({
   });
 
   return (
-    <Animated.View style={visibilityStyle}>
+    <Animated.View style={[closeStyles.wrapper, visibilityStyle]}>
       <GestureDetector gesture={composedGesture}>
         <Animated.View style={[closeStyles.button, glassStyle, heightStyle]}>
           <GlassMaterial borderRadius={SEARCH_ACTIVE_RADIUS} style={closeStyles.material}>
@@ -254,11 +255,16 @@ export function CloseSearchButton({
 }
 
 const closeStyles = StyleSheet.create({
+  wrapper: {
+    overflow: "hidden",
+  },
   button: {
+    backgroundColor: COLORS.surfaceHover,
+    borderColor: COLORS.border,
+    borderWidth: 1,
     overflow: "hidden",
   },
   material: {
-    backgroundColor: COLORS.surface,
     flex: 1,
   },
   iconCenter: {

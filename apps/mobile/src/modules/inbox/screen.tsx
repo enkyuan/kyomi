@@ -56,7 +56,7 @@ export function InboxScreen() {
       <HeaderActionButton
         icon={<FilterIcon fill={theme.foreground} size={18} />}
         label="Sources and filters"
-        onPress={() => router.push("/(protected)/(tabs)/switcher")}
+        onPress={() => router.push("/(protected)/switcher")}
       />
       <HeaderActionButton
         icon={<SettingsIcon fill={theme.foreground} size={18} />}
