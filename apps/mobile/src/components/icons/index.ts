@@ -5,6 +5,7 @@ export { CloseIcon, type CloseIconProps } from "./close";
 export { CloseCircleIcon, type CloseCircleIconProps } from "./close-circle";
 export { EnvelopeIcon, type EnvelopeIconProps } from "./envelope";
 export { ExternalLinkIcon, type ExternalLinkIconProps } from "./external-link";
+export { FilterIcon, type FilterIconProps } from "./filter";
 export { GoogleIcon, type GoogleIconProps } from "./google";
 export { InboxIcon, type InboxIconProps } from "./inbox";
 export { KyomiIcon, type KyomiIconProps } from "./kyomi";

@@ -11,9 +11,10 @@ export type ItemProps = {
   readonly item: ArticleListItemDto;
   readonly isFirst: boolean;
   readonly onPress: (item: ArticleListItemDto) => void;
+  readonly onPressIn: (item: ArticleListItemDto) => void;
 };
 
-export function Item({ item, isFirst, onPress }: ItemProps) {
+export function Item({ item, isFirst, onPress, onPressIn }: ItemProps) {
   const { width } = useWindowDimensions();
   const {
     titleFontSizePx,
@@ -30,7 +31,11 @@ export function Item({ item, isFirst, onPress }: ItemProps) {
     <View className="relative">
       {!isFirst && <View className="absolute top-0 left-0 right-0 h-px bg-border/70" />}
 
-      <Pressable accessibilityRole="button" onPress={() => onPress(item)}>
+      <Pressable
+        accessibilityRole="button"
+        onPress={() => onPress(item)}
+        onPressIn={() => onPressIn(item)}
+      >
         <View className="gap-4 px-5 pt-5 pb-2.5">
           <View className="flex-row items-center justify-between gap-4">
             <View className="min-w-0 flex-1 flex-row items-center gap-3">

@@ -31,6 +31,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
   const [step, setStep] = useState<Step>("email");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [invalidStep, setInvalidStep] = useState<Step | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const shouldReduceMotion = useReducedMotion();
   const {
     cancel: cancelErrorShake,
@@ -53,13 +54,20 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
     setStep("email");
     setIsSubmitting(false);
     setInvalidStep(null);
+    setErrorMessage(null);
     cancelErrorShake();
     email.value = "";
     otp.value = "";
   }
 
-  function reportInvalid(nextInvalidStep: Step) {
+  function reportInvalid(nextInvalidStep: Step, message?: string | null) {
     setInvalidStep(nextInvalidStep);
+    setErrorMessage(
+      message ??
+        (nextInvalidStep === "email"
+          ? "Enter a valid email address."
+          : "Invalid verification code."),
+    );
     triggerErrorShake();
   }
 
@@ -70,45 +78,61 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
 
   async function handleSendCode() {
     if (isSubmitting) return;
-    if (!isValidEmail(email.value)) {
-      reportInvalid("email");
+    const normalizedEmail = email.value.trim().toLowerCase();
+    if (!isValidEmail(normalizedEmail)) {
+      reportInvalid("email", "Enter a valid email address.");
       return;
     }
     setIsSubmitting(true);
     setInvalidStep(null);
-    const { error: sendError } = await authClient.emailOtp.sendVerificationOtp({
-      email: email.value,
-      type: "sign-in",
-    });
-    setIsSubmitting(false);
-    if (sendError) {
-      reportInvalid("email");
-      return;
+    setErrorMessage(null);
+    try {
+      const { error: sendError } = await authClient.emailOtp.sendVerificationOtp({
+        email: normalizedEmail,
+        type: "sign-in",
+      });
+      setIsSubmitting(false);
+      if (sendError) {
+        const errorMsg = sendError.message?.trim() || "Could not send sign-in code.";
+        reportInvalid("email", errorMsg);
+        return;
+      }
+      setStep("otp");
+    } catch {
+      setIsSubmitting(false);
+      reportInvalid("email", "Unable to connect to server. Check your connection.");
     }
-    setStep("otp");
   }
 
   async function handleVerifyCode() {
     if (isSubmitting) return;
 
     if (otp.value.length !== 6) {
-      reportInvalid("otp");
+      reportInvalid("otp", "Code must be 6 digits.");
       return;
     }
 
+    const normalizedEmail = email.value.trim().toLowerCase();
     setIsSubmitting(true);
     setInvalidStep(null);
-    const { error: verifyError } = await authClient.signIn.emailOtp({
-      email: email.value,
-      otp: otp.value,
-    });
-    setIsSubmitting(false);
-    if (verifyError) {
-      reportInvalid("otp");
-      return;
+    setErrorMessage(null);
+    try {
+      const { error: verifyError } = await authClient.signIn.emailOtp({
+        email: normalizedEmail,
+        otp: otp.value,
+      });
+      setIsSubmitting(false);
+      if (verifyError) {
+        const errorMsg = verifyError.message?.trim() || "Invalid verification code.";
+        reportInvalid("otp", errorMsg);
+        return;
+      }
+      reset();
+      onDismiss();
+    } catch {
+      setIsSubmitting(false);
+      reportInvalid("otp", "Unable to connect to server. Check your connection.");
     }
-    reset();
-    onDismiss();
   }
 
   const isEmailStep = step === "email";
@@ -116,15 +140,17 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
   const isOtpInvalid = invalidStep === "otp";
 
   function handleEmailChange() {
-    if (isEmailInvalid) {
+    if (isEmailInvalid || errorMessage) {
       setInvalidStep(null);
+      setErrorMessage(null);
       cancelErrorShake();
     }
   }
 
   function handleOtpChange() {
-    if (isOtpInvalid) {
+    if (isOtpInvalid || errorMessage) {
       setInvalidStep(null);
+      setErrorMessage(null);
       cancelErrorShake();
     }
   }

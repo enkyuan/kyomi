@@ -3,7 +3,7 @@ node_modules
 .DS_Store
 .env.keys
 .env*.local
-!.env.example
+**/.env.example
 apps/*/bun.lock
 packages/*/bun.lock
 tests/bun.lock

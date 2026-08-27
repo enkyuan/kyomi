@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchMobileApiJson } from "@/lib/api";
+import { readerArticlePath, readerArticlePrefetchKey } from "../lib/article-request";
 import type { ReaderArticle } from "../lib/article";
 
 export const readerArticleQueryKey = (articleId: string) =>
@@ -9,7 +10,8 @@ export function useReaderArticle(articleId: string) {
   return useQuery({
     enabled: Boolean(articleId),
     queryFn: ({ signal }) =>
-      fetchMobileApiJson<ReaderArticle>(`/api/v1/articles/${encodeURIComponent(articleId)}`, {
+      fetchMobileApiJson<ReaderArticle>(readerArticlePath(articleId), {
+        prefetchKey: readerArticlePrefetchKey(articleId),
         signal,
       }),
     queryKey: readerArticleQueryKey(articleId),

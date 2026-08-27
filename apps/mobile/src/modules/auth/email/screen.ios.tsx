@@ -28,7 +28,7 @@ import {
 } from "@expo/ui/swift-ui/modifiers";
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "react-native-reanimated";
-import { EmailFormStep, OtpFormStep, type EmailStepTheme } from "./components/step-content.ios";
+import { EmailFormStep, OTPFormStep, type EmailStepTheme } from "./components/step-content.ios";
 import { useErrorShake } from "./hooks/use-error-shake";
 import { isValidEmail } from "@kyomi/reader/schemas/auth";
 import { authClient } from "@/lib/auth";
@@ -63,6 +63,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
   const [step, setStep] = useState<Step>("email");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [invalidStep, setInvalidStep] = useState<Step | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const {
     cancel: cancelErrorShake,
     offset: errorShakeOffset,
@@ -74,12 +75,16 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
     setStep("email");
     setIsSubmitting(false);
     setInvalidStep(null);
+    setErrorMessage(null);
     cancelErrorShake();
     setOtpValue("");
   }
 
-  function reportInvalid(step: Step) {
+  function reportInvalid(step: Step, message?: string | null) {
     setInvalidStep(step);
+    setErrorMessage(
+      message ?? (step === "email" ? "Enter a valid email address." : "Invalid verification code."),
+    );
     triggerErrorShake();
   }
 
@@ -94,69 +99,92 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
     shouldFocusEmailRef.current = true;
     setStep("email");
     setInvalidStep(null);
+    setErrorMessage(null);
     cancelErrorShake();
     setOtpValue("");
     otp.value = "";
   }
 
   function handleEmailChange() {
-    if (invalidStep === "email") {
+    if (invalidStep === "email" || errorMessage) {
       setInvalidStep(null);
+      setErrorMessage(null);
       cancelErrorShake();
     }
   }
 
   async function handleSendCode() {
     if (isSubmitting) return;
-    if (!isValidEmail(email.value)) {
-      reportInvalid("email");
+    const normalizedEmail = email.value.trim().toLowerCase();
+    if (!isValidEmail(normalizedEmail)) {
+      reportInvalid("email", "Enter a valid email address.");
       emailFieldRef.current?.focus();
       return;
     }
     setIsSubmitting(true);
     setInvalidStep(null);
-    const { error: sendError } = await authClient.emailOtp.sendVerificationOtp({
-      email: email.value,
-      type: "sign-in",
-    });
-    if (!isMountedRef.current || !isPresentedRef.current) return;
-    setIsSubmitting(false);
-    if (sendError) {
-      reportInvalid("email");
+    setErrorMessage(null);
+    try {
+      const { error: sendError } = await authClient.emailOtp.sendVerificationOtp({
+        email: normalizedEmail,
+        type: "sign-in",
+      });
+      if (!isMountedRef.current || !isPresentedRef.current) return;
+      setIsSubmitting(false);
+      if (sendError) {
+        const errorMsg = sendError.message?.trim() || "Could not send sign-in code.";
+        reportInvalid("email", errorMsg);
+        emailFieldRef.current?.focus();
+        return;
+      }
+      setStep("otp");
+    } catch {
+      if (!isMountedRef.current || !isPresentedRef.current) return;
+      setIsSubmitting(false);
+      reportInvalid("email", "Unable to connect to server. Check your connection.");
       emailFieldRef.current?.focus();
-      return;
     }
-    setStep("otp");
   }
 
   async function handleVerifyCode(code: string) {
     if (isSubmitting) return;
     if (code.length !== OTP_LENGTH) {
-      reportInvalid("otp");
+      reportInvalid("otp", "Code must be 6 digits.");
       otpFieldRef.current?.focus();
       return;
     }
+    const normalizedEmail = email.value.trim().toLowerCase();
     setIsSubmitting(true);
     setInvalidStep(null);
-    const { error: verifyError } = await authClient.signIn.emailOtp({
-      email: email.value,
-      otp: code,
-    });
-    if (!isMountedRef.current || !isPresentedRef.current) return;
-    setIsSubmitting(false);
-    if (verifyError) {
-      reportInvalid("otp");
+    setErrorMessage(null);
+    try {
+      const { error: verifyError } = await authClient.signIn.emailOtp({
+        email: normalizedEmail,
+        otp: code,
+      });
+      if (!isMountedRef.current || !isPresentedRef.current) return;
+      setIsSubmitting(false);
+      if (verifyError) {
+        const errorMsg = verifyError.message?.trim() || "Invalid verification code.";
+        reportInvalid("otp", errorMsg);
+        otpFieldRef.current?.focus();
+        return;
+      }
+      isPresentedRef.current = false;
+      onDismiss();
+    } catch {
+      if (!isMountedRef.current || !isPresentedRef.current) return;
+      setIsSubmitting(false);
+      reportInvalid("otp", "Unable to connect to server. Check your connection.");
       otpFieldRef.current?.focus();
-      return;
     }
-    isPresentedRef.current = false;
-    onDismiss();
   }
 
-  function handleOtpChange(typedValue: string) {
+  function handleOTPChange(typedValue: string) {
     const digitsOnly = typedValue.replace(/\D/g, "").slice(0, OTP_LENGTH);
-    if (invalidStep === "otp") {
+    if (invalidStep === "otp" || errorMessage) {
       setInvalidStep(null);
+      setErrorMessage(null);
       cancelErrorShake();
     }
     if (digitsOnly !== typedValue) {
@@ -208,7 +236,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
       fitToContents
     >
       <VStack modifiers={FULL_WIDTH}>
-        <HStack modifiers={[...FULL_WIDTH, padding({ top: 12, trailing: 6 })]}>
+        <HStack modifiers={[...FULL_WIDTH, padding({ top: 18, trailing: 18 })]}>
           <Spacer />
           <Button
             label="Close"
@@ -217,7 +245,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
             modifiers={[
               buttonStyle("bordered"),
               buttonBorderShape("circle"),
-              controlSize("large"),
+              controlSize("regular"),
               labelStyle("iconOnly"),
               foregroundStyle(theme.foreground),
               font({ weight: "semibold" }),
@@ -256,18 +284,20 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 active={isEmailStep}
                 email={email}
                 emailFieldRef={emailFieldRef}
+                errorMessage={isEmailInvalid ? errorMessage : null}
                 errorShakeOffset={errorShakeOffset}
                 invalid={isEmailInvalid}
                 onEmailChange={handleEmailChange}
                 reducedMotion={shouldReduceMotion}
                 theme={theme}
               />
-              <OtpFormStep
+              <OTPFormStep
                 active={!isEmailStep}
                 email={email}
+                errorMessage={isOtpInvalid ? errorMessage : null}
                 errorShakeOffset={errorShakeOffset}
                 invalid={isOtpInvalid}
-                onOtpChange={handleOtpChange}
+                onOtpChange={handleOTPChange}
                 otp={otp}
                 otpFieldRef={otpFieldRef}
                 otpValue={otpValue}

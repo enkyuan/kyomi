@@ -1,14 +1,17 @@
 import { AnimatedLegendList } from "@legendapp/list/reanimated";
 import { router } from "expo-router";
+import { useMemo, type ReactElement } from "react";
+import type { NativeScrollEvent, NativeSyntheticEvent } from "react-native";
 import { Platform, useWindowDimensions, View } from "react-native";
-import { useCallback, useMemo } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import Animated, { type SharedValue } from "react-native-reanimated";
 import { Skeleton } from "@ui/skeleton";
-import { getTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
-import { useTopTabsHeader } from "@ui/top-tabs/lib/scroll-context";
+import { COMPACT_NAV_HEIGHT } from "@ui/header";
+import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { useArticles } from "@modules/inbox/hooks/use-articles";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { feedItemTypography } from "@modules/inbox/lib/layout";
+import { prefetchReaderArticle } from "@modules/reader/lib/article-request";
 import { Item } from "../item";
 
 const ESTIMATED_ROW_SIZE = 252;
@@ -16,20 +19,27 @@ const NEAR_END_THRESHOLD = 0.5;
 const MIN_SKELETON_ROWS = 3;
 const MAX_SKELETON_ROWS = 12;
 
-export function List({ ListEmptyComponent }: { ListEmptyComponent: React.ReactElement }) {
+type ListProps = {
+  ListEmptyComponent: ReactElement;
+  ListHeaderComponent?: ReactElement | null;
+  scrollY: SharedValue<number>;
+  topContentInset?: number;
+};
+
+export function List({
+  ListEmptyComponent,
+  ListHeaderComponent,
+  scrollY,
+  topContentInset = 0,
+}: ListProps) {
   const { height } = useWindowDimensions();
   const insets = useSafeAreaInsets();
-  const { items, isLoading, isFetchingNextPage, hasNextPage, fetchNextPage } = useArticles();
-  const header = useTopTabsHeader();
-  const headerHeight = header?.headerHeight ?? 0;
   const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
-  const sharedValues = useMemo(
-    () => (header ? { scrollOffset: header.scrollY } : undefined),
-    [header],
-  );
-  const handleScrollBeginDrag = useCallback(() => {
-    header?.hasUserInteracted.set(true);
-  }, [header]);
+  const scrollbarTopInset = insets.top + COMPACT_NAV_HEIGHT;
+  const isIOS = Platform.OS === "ios";
+
+  const { items, isLoading, isFetchingNextPage, hasNextPage, fetchNextPage } = useArticles();
+  const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
 
   if (isLoading) {
     const { titleLineHeightPx, summaryLineHeightPx, metaFontSizePx } = feedItemTypography;
@@ -41,7 +51,8 @@ export function List({ ListEmptyComponent }: { ListEmptyComponent: React.ReactEl
       : 6;
 
     return (
-      <View style={{ paddingBottom: tabBarOcclusionHeight, paddingTop: headerHeight }}>
+      <View style={{ paddingTop: topContentInset }}>
+        {ListHeaderComponent}
         {Array.from({ length: rowCount }).map((_, index) => (
           <View className="relative" key={index}>
             {index > 0 ? (
@@ -86,19 +97,30 @@ export function List({ ListEmptyComponent }: { ListEmptyComponent: React.ReactEl
   }
 
   if (items.length === 0) {
-    return ListEmptyComponent;
+    return (
+      <Animated.ScrollView
+        automaticallyAdjustsScrollIndicatorInsets={false}
+        contentContainerStyle={{ flexGrow: 1, paddingTop: topContentInset }}
+        onScroll={(event) => {
+          scrollY.value = event.nativeEvent.contentOffset.y;
+        }}
+        scrollEventThrottle={16}
+        scrollIndicatorInsets={
+          isIOS ? { bottom: tabBarOcclusionHeight, top: scrollbarTopInset } : undefined
+        }
+      >
+        {ListHeaderComponent}
+        {ListEmptyComponent}
+      </Animated.ScrollView>
+    );
   }
-
-  const isIOS = Platform.OS === "ios";
 
   return (
     <AnimatedLegendList
+      ListHeaderComponent={ListHeaderComponent}
       automaticallyAdjustContentInsets={false}
       automaticallyAdjustsScrollIndicatorInsets={false}
-      contentContainerStyle={
-        isIOS ? undefined : { paddingBottom: tabBarOcclusionHeight, paddingTop: headerHeight }
-      }
-      contentInset={isIOS ? { bottom: tabBarOcclusionHeight, top: headerHeight } : undefined}
+      contentContainerStyle={{ paddingTop: topContentInset }}
       contentInsetAdjustmentBehavior="never"
       data={items}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
@@ -106,12 +128,11 @@ export function List({ ListEmptyComponent }: { ListEmptyComponent: React.ReactEl
       onEndReached={() => {
         if (hasNextPage && !isFetchingNextPage) fetchNextPage();
       }}
+      onScroll={(event: NativeSyntheticEvent<NativeScrollEvent>) => {
+        scrollY.value = event.nativeEvent.contentOffset.y;
+      }}
+      scrollEventThrottle={16}
       onEndReachedThreshold={NEAR_END_THRESHOLD}
-      onScrollBeginDrag={handleScrollBeginDrag}
-      sharedValues={sharedValues}
-      scrollIndicatorInsets={
-        isIOS ? { bottom: tabBarOcclusionHeight, top: headerHeight } : undefined
-      }
       renderItem={({ item, index }: { item: ArticleListItemDto; index: number }) => (
         <Item
           isFirst={index === 0}
@@ -122,9 +143,14 @@ export function List({ ListEmptyComponent }: { ListEmptyComponent: React.ReactEl
               params: { article: pressedItem.id },
             })
           }
+          onPressIn={(pressedItem) => prefetchReaderArticle(pressedItem.id)}
         />
       )}
       recycleItems
+      scrollIndicatorInsets={
+        isIOS ? { bottom: tabBarOcclusionHeight, top: scrollbarTopInset } : undefined
+      }
+      sharedValues={sharedValues}
     />
   );
 }

@@ -1,3 +1,4 @@
+import { fetch as nitroFetch, prefetch as nitroPrefetch } from "react-native-nitro-fetch";
 import { getAuthCookie, resolveAuthOrigin } from "./auth";
 import {
   extractErrorMessageFromBody,
@@ -5,9 +6,36 @@ import {
   logClientError,
 } from "@kyomi/reader/lib/errors";
 
-type ApiFetchInit = Omit<RequestInit, "headers"> & {
+export type ApiFetchInit = Omit<RequestInit, "headers"> & {
   headers?: HeadersInit;
+  /** An internal Nitro cache key. It is never sent to the API. */
+  prefetchKey?: string;
 };
+
+function buildMobileApiRequest(path: string, init?: ApiFetchInit) {
+  const { prefetchKey, ...requestInit } = init ?? {};
+  const headers = new Headers(requestInit.headers);
+  const cookie = getAuthCookie();
+
+  headers.set("accept", "application/json");
+  if (cookie) {
+    headers.set("cookie", cookie);
+  }
+  if (prefetchKey) {
+    headers.set("prefetchKey", prefetchKey);
+  }
+
+  return {
+    init: {
+      ...requestInit,
+      credentials: "omit" as const,
+      headers,
+    },
+    url: resolveMobileApiUrl(path),
+  };
+}
+
+const inFlightPrefetches = new Set<string>();
 
 export class MobileApiError extends Error {
   readonly status: number;
@@ -34,21 +62,11 @@ export function mobileApiErrorMessage(error: unknown): string {
 }
 
 export async function fetchMobileApiJson<T>(path: string, init?: ApiFetchInit): Promise<T> {
-  const headers = new Headers(init?.headers);
-  const cookie = getAuthCookie();
-
-  headers.set("accept", "application/json");
-  if (cookie) {
-    headers.set("cookie", cookie);
-  }
+  const request = buildMobileApiRequest(path, init);
 
   let response: Response;
   try {
-    response = await fetch(resolveMobileApiUrl(path), {
-      ...init,
-      credentials: "omit",
-      headers,
-    });
+    response = await nitroFetch(request.url, request.init);
   } catch (error) {
     throw new MobileApiError(0, null, `Network error: ${getUserSafeErrorMessage(error)}`);
   }
@@ -69,4 +87,24 @@ export async function fetchMobileApiJson<T>(path: string, init?: ApiFetchInit): 
       `Invalid JSON response: ${getUserSafeErrorMessage(error)}`,
     );
   }
+}
+
+export function prefetchMobileApi(path: string, init?: ApiFetchInit): void {
+  const method = init?.method?.toUpperCase() ?? "GET";
+  const prefetchKey = init?.prefetchKey;
+
+  if (method !== "GET" || !prefetchKey || inFlightPrefetches.has(prefetchKey)) {
+    return;
+  }
+
+  const request = buildMobileApiRequest(path, init);
+  inFlightPrefetches.add(prefetchKey);
+
+  void nitroPrefetch(request.url, request.init)
+    .catch((error) => {
+      logClientError("prefetchMobileApi", getUserSafeErrorMessage(error));
+    })
+    .finally(() => {
+      inFlightPrefetches.delete(prefetchKey);
+    });
 }

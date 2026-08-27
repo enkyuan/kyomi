@@ -1,21 +1,15 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 import { fetchMobileApiJson } from "@/lib/api";
+import { allArticlesPath, allArticlesPrefetchKey } from "@modules/inbox/lib/articles";
 import type { ArticleListItemDto, CursorListResponseDto } from "@kyomi/reader/schemas/article";
 
-const PAGE_LIMIT = 100;
 export const allArticlesQueryKey = ["inbox", "articles", "all"] as const;
 
 async function fetchAllArticles(cursor: string | undefined): Promise<CursorListResponseDto> {
-  const query = new URLSearchParams({
-    limit: String(PAGE_LIMIT),
-    sort: "latest",
+  return fetchMobileApiJson<CursorListResponseDto>(allArticlesPath(cursor), {
+    prefetchKey: cursor ? undefined : allArticlesPrefetchKey(),
   });
-  if (cursor) query.set("cursor", cursor);
-
-  return fetchMobileApiJson<CursorListResponseDto>(
-    `/api/v1/articles/views/all?${query.toString()}`,
-  );
 }
 
 function dedupeById(pages: CursorListResponseDto[] | undefined): ArticleListItemDto[] {

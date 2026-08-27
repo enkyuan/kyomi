@@ -134,3 +134,21 @@ export const CloseCircleLineNativeIcon: MingcuteNativeIcon = {
     },
   ],
 };
+
+export const Filter2LineNativeIcon: MingcuteNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M14 17a1 1 0 0 1 .117 1.993L14 19h-4a1 1 0 0 1-.117-1.993L10 17zm3-6a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2zm3-6a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z",
+    },
+  ],
+};
+
+export const Filter2FillNativeIcon: MingcuteNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M14 16.5a1.5 1.5 0 0 1 .144 2.993L14 19.5h-4a1.5 1.5 0 0 1-.144-2.993L10 16.5zm3-6a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3zm3-6a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z",
+    },
+  ],
+};

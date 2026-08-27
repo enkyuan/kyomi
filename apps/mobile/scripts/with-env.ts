@@ -16,6 +16,22 @@ const localEnvFile = (await Bun.file(".env.local").exists())
     ? ".env"
     : null;
 const localEnvArgs = localEnvFile ? ["-f", localEnvFile] : [];
+
+const env = { ...process.env };
+
+if (process.platform === "darwin" && !env.DEVELOPER_DIR) {
+  const candidateDirs = [
+    "/Applications/Xcode.app/Contents/Developer",
+    "/Applications/Xcode-beta.app/Contents/Developer",
+  ];
+  for (const dir of candidateDirs) {
+    if (await Bun.file(`${dir}/usr/bin/xcodebuild`).exists()) {
+      env.DEVELOPER_DIR = dir;
+      break;
+    }
+  }
+}
+
 const child = Bun.spawn(
   [
     "bunx",
@@ -29,7 +45,7 @@ const child = Bun.spawn(
     command,
     ...args,
   ],
-  { stderr: "inherit", stdin: "inherit", stdout: "inherit" },
+  { env, stderr: "inherit", stdin: "inherit", stdout: "inherit" },
 );
 
 process.exit(await child.exited);

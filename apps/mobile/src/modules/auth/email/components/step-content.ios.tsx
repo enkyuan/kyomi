@@ -47,6 +47,7 @@ type EmailFormStepProps = {
   active: boolean;
   email: ObservableStringState;
   emailFieldRef: RefObject<TextFieldRef | null>;
+  errorMessage?: string | null;
   errorShakeOffset: number;
   invalid: boolean;
   onEmailChange: (value: string) => void;
@@ -58,6 +59,7 @@ export function EmailFormStep({
   active,
   email,
   emailFieldRef,
+  errorMessage,
   errorShakeOffset,
   invalid,
   onEmailChange,
@@ -87,9 +89,13 @@ export function EmailFormStep({
       </Text>
 
       <Text
-        modifiers={[padding({ top: 6 }), font({ size: 15 }), foregroundStyle(theme.foreground)]}
+        modifiers={[
+          padding({ top: 2 }),
+          font({ size: 16, weight: "medium" }),
+          foregroundStyle(theme.foreground),
+        ]}
       >
-        Sign in or sign up with your email.
+        Sign in or sign up to get started
       </Text>
 
       <TextField
@@ -122,7 +128,9 @@ export function EmailFormStep({
           ),
           accessibilityLabel("Email address"),
           accessibilityHint(
-            invalid ? "Check your email address and try again." : "Enter your email address.",
+            invalid
+              ? (errorMessage ?? "Check your email address and try again.")
+              : "Enter your email address.",
           ),
           padding({ top: 24 }),
         ]}
@@ -131,9 +139,10 @@ export function EmailFormStep({
   );
 }
 
-type OtpFormStepProps = {
+type OTPFormStepProps = {
   active: boolean;
   email: ObservableStringState;
+  errorMessage?: string | null;
   errorShakeOffset: number;
   invalid: boolean;
   onOtpChange: (value: string) => void;
@@ -144,9 +153,10 @@ type OtpFormStepProps = {
   theme: EmailStepTheme;
 };
 
-export function OtpFormStep({
+export function OTPFormStep({
   active,
   email,
+  errorMessage,
   errorShakeOffset,
   invalid,
   onOtpChange,
@@ -155,7 +165,7 @@ export function OtpFormStep({
   otpValue,
   reducedMotion,
   theme,
-}: OtpFormStepProps) {
+}: OTPFormStepProps) {
   return (
     <VStack
       alignment="leading"
@@ -175,13 +185,17 @@ export function OtpFormStep({
           foregroundStyle(theme.foreground),
         ]}
       >
-        Enter your code
+        Enter your Passcode
       </Text>
 
       <Text
-        modifiers={[padding({ top: 6 }), font({ size: 15 }), foregroundStyle(theme.foreground)]}
+        modifiers={[
+          padding({ top: 2 }),
+          font({ size: 16, weight: "medium" }),
+          foregroundStyle(theme.foreground),
+        ]}
       >
-        {`We sent a code to ${email.value}.`}
+        {`Check your inbox for a one-time passcode`}
       </Text>
 
       <ZStack modifiers={[...FULL_WIDTH, padding({ top: 24 })]}>
@@ -239,7 +253,9 @@ export function OtpFormStep({
               invalid ? "Invalid 6-digit verification code" : "6-digit verification code",
             ),
             accessibilityHint(
-              invalid ? "Check every digit and try again." : "Enter the verification code we sent.",
+              invalid
+                ? (errorMessage ?? "Check every digit and try again.")
+                : "Enter the verification code we sent.",
             ),
             frame({ width: 0, height: 0 }),
           ]}

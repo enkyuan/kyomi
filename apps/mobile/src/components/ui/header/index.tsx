@@ -66,3 +66,13 @@ export function Header({ children, style, surface = "default", title }: HeaderPr
     </View>
   );
 }
+
+export {
+  CollapsingHeader,
+  HeaderActionButton,
+  COLLAPSE_DISTANCE,
+  COMPACT_NAV_HEIGHT,
+  EXPANDED_TITLE_HEIGHT,
+  type CollapsingHeaderProps,
+  type HeaderActionButtonProps,
+} from "./collapsing";
