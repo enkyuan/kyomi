@@ -14,5 +14,18 @@ export default function AppLayout() {
     prefetchInitialAllArticles();
   }, []);
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="(tabs)" />
+      <Stack.Screen
+        name="settings"
+        options={{
+          headerShown: true,
+          headerTitle: "Settings",
+          headerTitleAlign: "center",
+          presentation: "modal",
+        }}
+      />
+    </Stack>
+  );
 }

@@ -3,7 +3,7 @@ import { useQueryClient, type InfiniteData } from "@tanstack/react-query";
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Pressable, Text, View, useColorScheme } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useReaderTabBar, type ReaderTabBarConfig } from "@/components/ui/tab-bar/modes/reader";
+import { useReaderTab, type ReaderTabConfig } from "@/components/ui/tab-bar/components/reader-tab";
 import { getReaderTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { Skeleton } from "@ui/skeleton";
 import { fetchMobileApiJson, resolveMobileApiUrl } from "@/lib/api";
@@ -36,7 +36,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const readerColorScheme = getReaderColorScheme(colorScheme);
   const readerCanvasColor = getReaderCanvasColor(colorScheme);
   const tabBarOcclusionHeight = getReaderTabBarOcclusionHeight(insets);
-  const { setConfig, setIsDismissingReader } = useReaderTabBar();
+  const { setConfig, setIsDismissingReader } = useReaderTab();
   const [isDomReady, setIsDomReady] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const handleArticleReady = useCallback(() => {
@@ -57,7 +57,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
     [article?.feedFaviconUrl, article?.feedSiteUrl, article?.feedUrl, article?.link],
   );
 
-  const tabBarConfig = useMemo<ReaderTabBarConfig | null>(() => {
+  const tabBarConfig = useMemo<ReaderTabConfig | null>(() => {
     if (!article) {
       return null;
     }

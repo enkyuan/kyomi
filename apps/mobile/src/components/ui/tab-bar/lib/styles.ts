@@ -1,4 +1,3 @@
-import { StyleSheet } from "react-native";
 import type { EdgeInsets } from "react-native-safe-area-context";
 
 export const SEPARATE_ACTION_WIDTH = 56;
@@ -52,15 +51,6 @@ export function getFloatingBarPosition(
   };
 }
 
-export function getFloatingBarWidth(
-  windowWidth: number,
-  insets: FloatingBarInsets,
-  screenCorners?: BottomScreenCornerRadii,
-) {
-  const { left, right } = getFloatingBarPosition(insets, screenCorners);
-  return Math.max(0, windowWidth - left - right);
-}
-
 function getFloatingBarOcclusionHeight(insets: FloatingBarInsets, barHeight: number) {
   return getFloatingBarPosition(insets).bottom + barHeight + FLOATING_BAR_CONTENT_GUTTER;
 }
@@ -69,39 +59,6 @@ export function getTabBarOcclusionHeight(insets: FloatingBarInsets) {
   return getFloatingBarOcclusionHeight(insets, TAB_BAR_HEIGHT);
 }
 
-/**
- * Distance from the physical bottom edge to the top of the standard floating
- * tab bar. Overlay surfaces use this as their minimum inset, then apply their
- * own visual clearance rather than inheriting scroll-content padding.
- */
-export function getTabBarTopEdgeOffset(insets: FloatingBarInsets) {
-  return getFloatingBarPosition(insets).bottom + TAB_BAR_HEIGHT;
-}
-
 export function getReaderTabBarOcclusionHeight(insets: FloatingBarInsets) {
   return getFloatingBarOcclusionHeight(insets, READER_TAB_BAR_HEIGHT);
 }
-
-/** Reanimated needs these resolved style objects for its animated tab layer. */
-export const styles = StyleSheet.create({
-  tab: {
-    alignItems: "center",
-    borderRadius: 200,
-    flex: 1,
-    justifyContent: "center",
-    margin: 6,
-    position: "relative",
-  },
-  tabBackground: {
-    backgroundColor: "rgba(255, 255, 255, 0.16)",
-    borderRadius: 200,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
-    right: 0,
-    top: 0,
-  },
-  tabPressed: {
-    opacity: 0.7,
-  },
-});

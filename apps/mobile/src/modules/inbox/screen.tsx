@@ -61,7 +61,7 @@ export function InboxScreen() {
       <HeaderActionButton
         icon={<SettingsIcon fill={theme.foreground} size={18} />}
         label="Settings"
-        onPress={() => router.push("/(protected)/(tabs)/settings")}
+        onPress={() => router.push("/(protected)/settings")}
       />
     </>
   );

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Alert, FlatList, Pressable, Text, View, useColorScheme } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import { FeedFavicon } from "@modules/inbox/components/feed-favicon";
-import { useSearchTabBar } from "@/components/ui/tab-bar/modes/search";
+import { useSearchTab } from "@/components/ui/tab-bar/components/search-tab";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { triggerSelectionHaptic } from "@utils/haptics";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
@@ -23,7 +23,7 @@ export function SearchScreen({
 }: SearchScreenProps = {}) {
   const theme = getMobileSurfaceTheme(useColorScheme());
   const insets = useSafeAreaInsets();
-  const { setConfig } = useSearchTabBar();
+  const { setConfig } = useSearchTab();
   const [internalQuery, setInternalQuery] = useState("");
   const query = externalQuery ?? internalQuery;
   const setQuery = externalOnQueryChange ?? setInternalQuery;

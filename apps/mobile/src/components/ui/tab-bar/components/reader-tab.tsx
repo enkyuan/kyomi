@@ -8,7 +8,7 @@ import {
   type SetStateAction,
 } from "react";
 
-export type ReaderTabBarConfig = {
+export type ReaderTabConfig = {
   readonly isSaved: boolean;
   readonly isUpdating: boolean;
   readonly searchQuery: string;
@@ -18,30 +18,30 @@ export type ReaderTabBarConfig = {
   readonly onToggleSaved: () => void;
 };
 
-type ReaderTabBarContextValue = {
-  readonly config: ReaderTabBarConfig | null;
+type ReaderTabContextValue = {
+  readonly config: ReaderTabConfig | null;
   readonly isDismissingReader: boolean;
-  readonly setConfig: Dispatch<SetStateAction<ReaderTabBarConfig | null>>;
+  readonly setConfig: Dispatch<SetStateAction<ReaderTabConfig | null>>;
   readonly setIsDismissingReader: Dispatch<SetStateAction<boolean>>;
 };
 
-const ReaderTabBarContext = createContext<ReaderTabBarContextValue | null>(null);
+const ReaderTabContext = createContext<ReaderTabContextValue | null>(null);
 
-export function ReaderTabBarProvider({ children }: PropsWithChildren) {
-  const [config, setConfig] = useState<ReaderTabBarConfig | null>(null);
+export function ReaderTabProvider({ children }: PropsWithChildren) {
+  const [config, setConfig] = useState<ReaderTabConfig | null>(null);
   const [isDismissingReader, setIsDismissingReader] = useState(false);
   const value = useMemo(
     () => ({ config, isDismissingReader, setConfig, setIsDismissingReader }),
     [config, isDismissingReader],
   );
 
-  return <ReaderTabBarContext value={value}>{children}</ReaderTabBarContext>;
+  return <ReaderTabContext value={value}>{children}</ReaderTabContext>;
 }
 
-export function useReaderTabBar() {
-  const context = useContext(ReaderTabBarContext);
+export function useReaderTab() {
+  const context = useContext(ReaderTabContext);
   if (!context) {
-    throw new Error("useReaderTabBar must be used within ReaderTabBarProvider.");
+    throw new Error("useReaderTab must be used within ReaderTabProvider.");
   }
   return context;
 }

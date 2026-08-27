@@ -37,9 +37,8 @@ export function RecentsScreen() {
   const handleScrollReset = useCallback(() => {
     hasUserInteracted.set(contentInsetTop === 0);
   }, [contentInsetTop, hasUserInteracted]);
-
   return (
-    <ScrollHeaderLayout scrollY={headerScrollY} title="Recents">
+    <ScrollHeaderLayout scrollY={headerScrollY} title="Inbox">
       {() => (
         <RecentHistoryList
           headerHeight={headerHeight}
