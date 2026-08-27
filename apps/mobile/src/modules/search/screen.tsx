@@ -12,12 +12,22 @@ import {
   useFollowDiscoveredFeed,
 } from "./hooks/use-discovered-feeds";
 
-export function SearchScreen() {
+type SearchScreenProps = {
+  readonly query?: string;
+  readonly onQueryChange?: (query: string) => void;
+};
+
+export function SearchScreen({
+  query: externalQuery,
+  onQueryChange: externalOnQueryChange,
+}: SearchScreenProps = {}) {
   const theme = getMobileSurfaceTheme(useColorScheme());
   const insets = useSafeAreaInsets();
   const { setConfig } = useSearchTabBar();
-  const [query, setQuery] = useState("");
-  const config = useMemo(() => ({ query, onQueryChange: setQuery }), [query]);
+  const [internalQuery, setInternalQuery] = useState("");
+  const query = externalQuery ?? internalQuery;
+  const setQuery = externalOnQueryChange ?? setInternalQuery;
+  const config = useMemo(() => ({ query, onQueryChange: setQuery }), [query, setQuery]);
   const { items, isLoading, isSearching } = useDiscoveredFeeds(query);
   const followMutation = useFollowDiscoveredFeed();
 
