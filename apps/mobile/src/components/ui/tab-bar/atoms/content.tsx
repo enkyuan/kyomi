@@ -12,6 +12,7 @@ import { AddCloseIcon } from "@/components/ui/add-icon";
 import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { FeedTabActions, hasSeparateFeedTabAction } from "./feed-actions";
 import { useAddTabBar } from "../modes/add";
+import { useScrollTabBar } from "../modes/scroll";
 import { getFloatingBarPosition, type BottomScreenCornerRadii } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 
@@ -39,8 +40,10 @@ export function TabBarContent({
   const { colors } = useTheme();
   const shouldReduceMotion = useReducedMotion();
   const { config } = useAddTabBar();
+  const { isMinimized } = useScrollTabBar();
   const searchInputRef = useRef<SearchFieldRef>(null);
   const isAddPresentation = isAddRoute && config !== null;
+  const isMinimizedPresentation = isMinimized && !isAddPresentation;
 
   useEffect(() => {
     if (!isAddPresentation) {
@@ -57,12 +60,16 @@ export function TabBarContent({
 
   return (
     <View
-      className="absolute flex-row items-center gap-3"
+      className="absolute flex-row items-center justify-center gap-3"
       style={getFloatingBarPosition(insets, screenCorners)}
     >
       <Animated.View
         layout={shouldReduceMotion ? undefined : ADD_LAYOUT_TRANSITION}
-        className="flex-1 overflow-hidden rounded-full"
+        className={
+          isMinimizedPresentation
+            ? "h-14 w-18 overflow-hidden rounded-full"
+            : "flex-1 overflow-hidden rounded-full"
+        }
       >
         <Surface style={{ flex: 1, height: "100%", width: "100%" }}>
           {isAddPresentation && config ? (
@@ -91,6 +98,7 @@ export function TabBarContent({
               <View accessibilityRole="tablist" className="h-14 flex-row">
                 <FeedTabActions
                   descriptors={descriptors}
+                  isMinimized={isMinimizedPresentation}
                   navigation={navigation}
                   placement="primary"
                   shouldReduceMotion={shouldReduceMotion}

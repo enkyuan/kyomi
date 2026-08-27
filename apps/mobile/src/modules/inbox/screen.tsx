@@ -1,12 +1,14 @@
 import { router } from "expo-router";
 import { Text, useColorScheme, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useSharedValue } from "react-native-reanimated";
+import { useAnimatedReaction, useSharedValue } from "react-native-reanimated";
+import { scheduleOnRN } from "react-native-worklets";
 import { EmptyStateIcon } from "@/components/icons/empty-state";
 import { FilterIcon } from "@/components/icons/filter";
 import { SettingsIcon } from "@/components/icons/settings";
 import { CollapsingHeader, HeaderActionButton, COMPACT_NAV_HEIGHT } from "@ui/header";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
+import { useScrollTabBar } from "@ui/tab-bar/modes/scroll";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { List } from "@modules/inbox/components/list";
 
@@ -50,6 +52,19 @@ export function InboxScreen() {
   const insets = useSafeAreaInsets();
   const scrollY = useSharedValue(0);
   const topContentInset = insets.top + COMPACT_NAV_HEIGHT + 14;
+  const { setIsMinimized } = useScrollTabBar();
+
+  useAnimatedReaction(
+    () => scrollY.value,
+    (currentY, previousY) => {
+      if (previousY === null) return;
+      if (currentY > 60 && currentY > previousY + 4) {
+        scheduleOnRN(setIsMinimized, true);
+      } else if (currentY < 30 || previousY - currentY > 12) {
+        scheduleOnRN(setIsMinimized, false);
+      }
+    },
+  );
 
   const headerActions = (
     <>
@@ -73,7 +88,7 @@ export function InboxScreen() {
         scrollY={scrollY}
         topContentInset={topContentInset}
       />
-      <CollapsingHeader actions={headerActions} scrollY={scrollY} title="Home" />
+      <CollapsingHeader actions={headerActions} scrollY={scrollY} title="Inbox" />
     </View>
   );
 }

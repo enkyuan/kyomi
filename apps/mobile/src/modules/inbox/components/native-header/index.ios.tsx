@@ -11,7 +11,7 @@ export function InboxNativeHeader({ collapseProgress, topInset }: InboxNativeHea
       collapseProgress={collapseProgress}
       pointerEvents="none"
       style={{ height: topInset + 89, left: 0, position: "absolute", right: 0, top: 0, zIndex: 1 }}
-      title="Home"
+      title="Inbox"
       topInset={topInset}
     />
   );

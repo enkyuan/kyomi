@@ -22,6 +22,7 @@ import {
 } from "./liquid-reader-actions.ios";
 import { ReaderSearchToggleIcon } from "./search-toggle.ios";
 import { useAddTabBar } from "../modes/add";
+import { useScrollTabBar } from "../modes/scroll";
 import {
   getFloatingBarPosition,
   getFloatingBarWidth,
@@ -66,6 +67,7 @@ export function LiquidTabBarContent({
   const { colors } = useTheme();
   const { config, isDismissingReader } = useReaderTabBar();
   const { config: addConfig } = useAddTabBar();
+  const { isMinimized } = useScrollTabBar();
   const inactiveIconColor = String(colors.text);
   const { width: windowWidth } = useWindowDimensions();
   const namespaceId = useId();
@@ -80,6 +82,7 @@ export function LiquidTabBarContent({
     gap,
     glassLayoutState,
     isAddPresentation,
+    isMinimizedPresentation,
     isReaderPresentation,
     isReaderSearchExpanded,
     primaryWidth,
@@ -89,6 +92,7 @@ export function LiquidTabBarContent({
     insets,
     isAddRoute,
     isDismissingReader,
+    isMinimized,
     isReaderRoute,
     isSearchExpanded,
     screenCorners,
@@ -184,6 +188,7 @@ export function LiquidTabBarContent({
                 <View accessibilityRole="tablist" className="h-14 flex-1 flex-row">
                   <FeedTabActions
                     descriptors={descriptors}
+                    isMinimized={isMinimizedPresentation}
                     navigation={navigation}
                     placement="primary"
                     shouldReduceMotion={shouldReduceMotion}
@@ -291,6 +296,7 @@ function getLiquidBarLayout({
   insets,
   isAddRoute,
   isDismissingReader,
+  isMinimized,
   isReaderRoute,
   isSearchExpanded,
   screenCorners,
@@ -300,34 +306,50 @@ function getLiquidBarLayout({
   readonly insets: BottomTabBarProps["insets"];
   readonly isAddRoute: boolean;
   readonly isDismissingReader: boolean;
+  readonly isMinimized: boolean;
   readonly isReaderRoute: boolean;
   readonly isSearchExpanded: boolean;
   readonly screenCorners?: BottomScreenCornerRadii;
   readonly windowWidth: number;
 }) {
-  const barWidth = getFloatingBarWidth(windowWidth, insets, screenCorners);
+  const baseBarWidth = getFloatingBarWidth(windowWidth, insets, screenCorners);
   const isReaderPresentation = isReaderRoute && !isDismissingReader;
   const isAddPresentation = isAddRoute && hasAddConfig;
+  const isMinimizedPresentation = isMinimized && !isReaderPresentation && !isAddPresentation;
   const isReaderSearchExpanded = isReaderPresentation && isSearchExpanded;
   const gap = isReaderPresentation ? READER_GAP : FEED_GAP;
   const trailingWidth = isReaderPresentation ? SIDE_ACTION_WIDTH : FEED_TRAILING_WIDTH;
   const leadingWidth = isReaderPresentation && !isReaderSearchExpanded ? SIDE_ACTION_WIDTH : 0;
-  const primaryWidth = Math.max(
+  const fullPrimaryWidth = Math.max(
     0,
-    barWidth - trailingWidth - gap - (leadingWidth > 0 ? leadingWidth + gap : 0),
+    baseBarWidth - trailingWidth - gap - (leadingWidth > 0 ? leadingWidth + gap : 0),
   );
+  const primaryWidth = isMinimizedPresentation ? SIDE_ACTION_WIDTH : fullPrimaryWidth;
+  const barWidth = isMinimizedPresentation ? primaryWidth + gap + trailingWidth : baseBarWidth;
+  const basePosition = getFloatingBarPosition(insets, screenCorners);
+  const barPosition = isMinimizedPresentation
+    ? {
+        ...basePosition,
+        left: (windowWidth - barWidth) / 2,
+        right: (windowWidth - barWidth) / 2,
+      }
+    : basePosition;
+
   const glassLayoutState = isReaderPresentation
     ? 2 + (isReaderSearchExpanded ? 1 : 0)
     : isAddPresentation
       ? 4
-      : 0;
+      : isMinimizedPresentation
+        ? 5
+        : 0;
 
   return {
-    barPosition: getFloatingBarPosition(insets, screenCorners),
+    barPosition,
     barWidth,
     gap,
     glassLayoutState,
     isAddPresentation,
+    isMinimizedPresentation,
     isReaderPresentation,
     isReaderSearchExpanded,
     primaryWidth,

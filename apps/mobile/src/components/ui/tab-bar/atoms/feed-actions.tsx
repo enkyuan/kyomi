@@ -9,6 +9,7 @@ const SEPARATE_ROUTE_NAMES = new Set(["add"]);
 const NO_ACTIVE_COLOR_ROUTE_NAMES = new Set(["add", "switcher"]);
 
 type FeedTabActionsProps = Pick<BottomTabBarProps, "descriptors" | "navigation" | "state"> & {
+  readonly isMinimized?: boolean;
   readonly placement: "primary" | "separate";
   readonly shouldReduceMotion: boolean;
 };
@@ -20,13 +21,14 @@ type FeedTabActionsProps = Pick<BottomTabBarProps, "descriptors" | "navigation" 
  */
 export function FeedTabActions({
   descriptors,
+  isMinimized = false,
   navigation,
   placement,
   shouldReduceMotion,
   state,
 }: FeedTabActionsProps) {
   const { colors } = useTheme();
-  const routes = state.routes.filter((route) => {
+  let routes = state.routes.filter((route) => {
     if (descriptors[route.key].options.tabBarIcon === undefined) {
       return false;
     }
@@ -34,6 +36,10 @@ export function FeedTabActions({
     const isSeparate = SEPARATE_ROUTE_NAMES.has(route.name);
     return placement === "separate" ? isSeparate : !isSeparate;
   });
+
+  if (isMinimized && placement === "primary" && routes.length > 0) {
+    routes = [routes[0]];
+  }
 
   return routes.map((route) => {
     const { options } = descriptors[route.key];
