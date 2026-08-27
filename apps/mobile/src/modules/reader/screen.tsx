@@ -1,9 +1,8 @@
-import { Stack, useNavigation, type NativeStackNavigationProp } from "expo-router";
+import { Stack } from "expo-router";
 import { useQueryClient, type InfiniteData } from "@tanstack/react-query";
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import { Pressable, Text, View, useColorScheme } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useReaderTab, type ReaderTabConfig } from "@/components/ui/tab-bar/components/reader-tab";
 import { getReaderTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { Skeleton } from "@ui/skeleton";
 import { fetchMobileApiJson, resolveMobileApiUrl } from "@/lib/api";
@@ -12,7 +11,6 @@ import { allArticlesQueryKey } from "@modules/inbox/hooks/use-articles";
 import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
 import { saveRecentArticle } from "@modules/recents/lib/store";
 import ArticleBody from "./components/article-body.dom";
-import { useReaderActions } from "./hooks/use-reader-actions";
 import { useReaderArticle } from "./hooks/use-reader-article";
 import { getReaderCanvasColor, getReaderColorScheme } from "./lib/theme";
 import { mobileReaderLayout, mobileReaderSkeletonLayout } from "./lib/layout";
@@ -20,8 +18,6 @@ import { mobileReaderLayout, mobileReaderSkeletonLayout } from "./lib/layout";
 export type ReaderScreenProps = {
   readonly articleId: string;
 };
-
-type ReaderStackNavigation = NativeStackNavigationProp<Record<string, object | undefined>>;
 
 const READER_SKELETON_PARAGRAPHS = [
   ["100%", "94%", "88%", "100%", "78%"],
@@ -31,20 +27,16 @@ const READER_SKELETON_PARAGRAPHS = [
 export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const colorScheme = useColorScheme();
   const insets = useSafeAreaInsets();
-  const navigation = useNavigation<ReaderStackNavigation>();
   const queryClient = useQueryClient();
   const readerColorScheme = getReaderColorScheme(colorScheme);
   const readerCanvasColor = getReaderCanvasColor(colorScheme);
   const tabBarOcclusionHeight = getReaderTabBarOcclusionHeight(insets);
-  const { setConfig, setIsDismissingReader } = useReaderTab();
   const [isDomReady, setIsDomReady] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const handleArticleReady = useCallback(() => {
     setIsDomReady(true);
   }, []);
   const { data: article, error, isLoading, refetch } = useReaderArticle(articleId);
-  const actions = useReaderActions(article);
-  const actionRef = useRef(actions);
   const faviconUrls = useMemo(
     () =>
       article
@@ -56,55 +48,6 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
         : [],
     [article?.feedFaviconUrl, article?.feedSiteUrl, article?.feedUrl, article?.link],
   );
-
-  const tabBarConfig = useMemo<ReaderTabConfig | null>(() => {
-    if (!article) {
-      return null;
-    }
-
-    return {
-      isSaved: article.isSaved,
-      isUpdating: actions.isUpdating,
-      onOpenSource: () => actionRef.current.openSource(),
-      onSearchQueryChange: setSearchQuery,
-      onShare: () => actionRef.current.shareArticle(),
-      onToggleSaved: () => actionRef.current.toggleSaved(),
-      searchQuery,
-    };
-  }, [actions.isUpdating, article, searchQuery]);
-
-  useEffect(() => {
-    actionRef.current = actions;
-  }, [actions]);
-
-  useEffect(() => {
-    setConfig(tabBarConfig);
-  }, [setConfig, tabBarConfig]);
-
-  useEffect(() => {
-    return () => setConfig(null);
-  }, [setConfig]);
-
-  useEffect(() => {
-    setIsDismissingReader(false);
-    const unsubscribeTransitionStart = navigation.addListener("transitionStart", (event) => {
-      setIsDismissingReader(event.data.closing);
-    });
-    const unsubscribeTransitionEnd = navigation.addListener("transitionEnd", (event) => {
-      if (!event.data.closing) {
-        setIsDismissingReader(false);
-      }
-    });
-    const unsubscribeGestureCancel = navigation.addListener("gestureCancel", () => {
-      setIsDismissingReader(false);
-    });
-
-    return () => {
-      unsubscribeTransitionStart();
-      unsubscribeTransitionEnd();
-      unsubscribeGestureCancel();
-    };
-  }, [navigation, setIsDismissingReader]);
 
   useEffect(() => {
     setIsDomReady(false);

@@ -1,10 +1,9 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Platform, StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated from "react-native-reanimated";
 import { KyomiNativeTabBar } from "../../../../modules/tab-bar";
 import { CloseSearchButton, SearchButton } from "./components/search";
-import { useSearchTab } from "./components/search-tab";
 import { TabBarPill } from "./components/pill";
 import { usePill } from "./hooks/use-pill";
 import { useSearch } from "./hooks/use-search";
@@ -25,10 +24,8 @@ export function TabBar({
   state,
 }: TabBarProps) {
   const insets = useSafeAreaInsets();
-  const { searchRequestId } = useSearchTab();
   const bottomPadding = Math.max(insets.bottom, TAB_BAR_BOTTOM_PADDING);
   const [searchQuery, setSearchQuery] = useState("");
-  const lastSearchRequestId = useRef(searchRequestId);
 
   const currentIndex = state?.index === 1 ? 1 : 0;
 
@@ -46,17 +43,6 @@ export function TabBar({
       setActiveTab(state.index);
     }
   }, [state, activeTab, setActiveTab]);
-
-  useEffect(() => {
-    if (searchRequestId === lastSearchRequestId.current) {
-      return;
-    }
-
-    lastSearchRequestId.current = searchRequestId;
-    if (!isSearchActive) {
-      toggleSearch();
-    }
-  }, [isSearchActive, searchRequestId, toggleSearch]);
 
   const handleTabPress = useCallback(
     (index: number) => {
