@@ -44,7 +44,7 @@ export default function TabsLayout() {
               Sources
             </NativeTabs.Trigger.Label>
           </NativeTabs.Trigger>
-          <NativeTabs.Trigger name="add">
+          <NativeTabs.Trigger name="add" role="search">
             <NativeTabs.Trigger.Icon
               md={{ default: "add_circle", selected: "add_circle" }}
               xcasset={{ default: "add-fill", selected: "add-fill" }}
