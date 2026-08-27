@@ -34,7 +34,7 @@ export function TabBar({ onFloatingBarPositionChange, ...props }: TabBarProps) {
   const isLiquidGlassAvailable = useLiquidGlassAvailable();
   const segments = useSegments();
   const isReaderRoute = segments.includes("[article]");
-  const isAddRoute = segments.includes("add");
+  const isSearchRoute = segments.includes("search");
   useEffect(() => {
     onFloatingBarPositionChange?.(getFloatingBarPosition(props.insets, screenCorners));
   }, [
@@ -49,8 +49,8 @@ export function TabBar({ onFloatingBarPositionChange, ...props }: TabBarProps) {
     return (
       <LiquidTabBarContent
         {...props}
-        isAddRoute={isAddRoute}
         isReaderRoute={isReaderRoute}
+        isSearchRoute={isSearchRoute}
         screenCorners={screenCorners}
       />
     );
@@ -69,7 +69,7 @@ export function TabBar({ onFloatingBarPositionChange, ...props }: TabBarProps) {
   return (
     <TabBarContent
       {...props}
-      isAddRoute={isAddRoute}
+      isSearchRoute={isSearchRoute}
       screenCorners={screenCorners}
       Surface={BlurSurface}
     />

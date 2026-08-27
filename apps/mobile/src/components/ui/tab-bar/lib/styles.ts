@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import type { EdgeInsets } from "react-native-safe-area-context";
 
-export const SEPARATE_ACTION_WIDTH = 72;
+export const SEPARATE_ACTION_WIDTH = 56;
 const FLOATING_BAR_SAFE_AREA_TAIL_OVERLAP = 12;
 const FLOATING_BAR_CONTENT_GUTTER = 12;
 

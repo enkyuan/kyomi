@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Alert, FlatList, Pressable, Text, View, useColorScheme } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import { FeedFavicon } from "@modules/inbox/components/feed-favicon";
-import { useAddTabBar } from "@/components/ui/tab-bar/modes/add";
+import { useSearchTabBar } from "@/components/ui/tab-bar/modes/search";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { triggerSelectionHaptic } from "@utils/haptics";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
@@ -12,10 +12,10 @@ import {
   useFollowDiscoveredFeed,
 } from "./hooks/use-discovered-feeds";
 
-export function AddScreen() {
+export function SearchScreen() {
   const theme = getMobileSurfaceTheme(useColorScheme());
   const insets = useSafeAreaInsets();
-  const { setConfig } = useAddTabBar();
+  const { setConfig } = useSearchTabBar();
   const [query, setQuery] = useState("");
   const config = useMemo(() => ({ query, onQueryChange: setQuery }), [query]);
   const { items, isLoading, isSearching } = useDiscoveredFeeds(query);
@@ -95,3 +95,5 @@ export function AddScreen() {
     </SafeAreaView>
   );
 }
+
+export const AddScreen = SearchScreen;

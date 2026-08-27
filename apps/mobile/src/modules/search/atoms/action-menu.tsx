@@ -51,7 +51,7 @@ export function AddActionMenu({
         id: "add-feed",
         label: "Add feed",
         icon: <MingcuteIcon fill={actionIconColor} icon={NewsLineNativeIcon} size={26} />,
-        onPress: () => router.navigate("/(protected)/(tabs)/add"),
+        onPress: () => router.navigate("/(protected)/(tabs)/search"),
       },
       {
         id: "import-opml",

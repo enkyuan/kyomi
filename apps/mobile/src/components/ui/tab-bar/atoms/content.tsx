@@ -11,13 +11,13 @@ import Animated, {
 import { AddCloseIcon } from "@/components/ui/add-icon";
 import { SearchField, type SearchFieldRef } from "@/components/ui/search-field/atoms";
 import { FeedTabActions, hasSeparateFeedTabAction } from "./feed-actions";
-import { useAddTabBar } from "../modes/add";
+import { useSearchTabBar } from "../modes/search";
 import { useScrollTabBar } from "../modes/scroll";
 import { getFloatingBarPosition, type BottomScreenCornerRadii } from "../lib/styles";
 import type { TabBarSurface } from "../lib/types";
 
 type TabBarContentProps = BottomTabBarProps & {
-  readonly isAddRoute: boolean;
+  readonly isSearchRoute: boolean;
   readonly screenCorners?: BottomScreenCornerRadii;
   Surface: TabBarSurface;
 };
@@ -31,7 +31,7 @@ export function TabBarContent({
   state,
   descriptors,
   insets,
-  isAddRoute,
+  isSearchRoute,
   navigation,
   screenCorners,
   Surface,
@@ -39,21 +39,21 @@ export function TabBarContent({
   const router = useRouter();
   const { colors } = useTheme();
   const shouldReduceMotion = useReducedMotion();
-  const { config } = useAddTabBar();
+  const { config } = useSearchTabBar();
   const { isMinimized } = useScrollTabBar();
   const searchInputRef = useRef<SearchFieldRef>(null);
-  const isAddPresentation = isAddRoute && config !== null;
-  const isMinimizedPresentation = isMinimized && !isAddPresentation;
+  const isSearchPresentation = isSearchRoute && config !== null;
+  const isMinimizedPresentation = isMinimized && !isSearchPresentation;
 
   useEffect(() => {
-    if (!isAddPresentation) {
+    if (!isSearchPresentation) {
       return;
     }
     const timeout = setTimeout(() => searchInputRef.current?.focus(), 0);
     return () => clearTimeout(timeout);
-  }, [isAddPresentation]);
+  }, [isSearchPresentation]);
 
-  const closeAdd = () => {
+  const closeSearch = () => {
     config?.onQueryChange("");
     router.replace("/(protected)/(tabs)/(inbox)");
   };
@@ -67,12 +67,12 @@ export function TabBarContent({
         layout={shouldReduceMotion ? undefined : ADD_LAYOUT_TRANSITION}
         className={
           isMinimizedPresentation
-            ? "h-14 w-18 overflow-hidden rounded-full"
+            ? "h-14 w-14 overflow-hidden rounded-full"
             : "flex-1 overflow-hidden rounded-full"
         }
       >
         <Surface style={{ flex: 1, height: "100%", width: "100%" }}>
-          {isAddPresentation && config ? (
+          {isSearchPresentation && config ? (
             <Animated.View
               entering={shouldReduceMotion ? undefined : ADD_CONTENT_ENTERING}
               exiting={shouldReduceMotion ? undefined : ADD_CONTENT_EXITING}
@@ -109,13 +109,13 @@ export function TabBarContent({
           )}
         </Surface>
       </Animated.View>
-      {isAddPresentation || hasSeparateFeedTabAction({ descriptors, state }) ? (
+      {isSearchPresentation || hasSeparateFeedTabAction({ descriptors, state }) ? (
         <Animated.View
           layout={shouldReduceMotion ? undefined : ADD_LAYOUT_TRANSITION}
-          className="h-14 w-18 overflow-hidden rounded-full"
+          className="h-14 w-14 overflow-hidden rounded-full"
         >
           <Surface style={{ flex: 1, height: "100%", width: "100%" }}>
-            {isAddPresentation ? (
+            {isSearchPresentation ? (
               <Animated.View
                 entering={shouldReduceMotion ? undefined : ADD_CONTENT_ENTERING}
                 exiting={shouldReduceMotion ? undefined : ADD_CONTENT_EXITING}
@@ -125,7 +125,7 @@ export function TabBarContent({
                 <Pressable
                   accessibilityLabel="Close feed search"
                   accessibilityRole="button"
-                  onPress={closeAdd}
+                  onPress={closeSearch}
                   className="size-full items-center justify-center rounded-full active:bg-[rgba(255,255,255,0.12)]"
                 >
                   <AddCloseIcon

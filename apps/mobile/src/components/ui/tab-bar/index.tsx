@@ -29,7 +29,7 @@ export function TabBar({ onFloatingBarPositionChange, ...props }: TabBarProps) {
   const screenCorners = useScreenCorners();
   const segments = useSegments();
   const isReaderRoute = segments.includes("[article]");
-  const isAddRoute = segments.includes("add");
+  const isSearchRoute = segments.includes("search");
   useEffect(() => {
     onFloatingBarPositionChange?.(getFloatingBarPosition(props.insets, screenCorners));
   }, [
@@ -53,7 +53,7 @@ export function TabBar({ onFloatingBarPositionChange, ...props }: TabBarProps) {
   return (
     <TabBarContent
       {...props}
-      isAddRoute={isAddRoute}
+      isSearchRoute={isSearchRoute}
       screenCorners={screenCorners}
       Surface={BlurSurface}
     />

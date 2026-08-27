@@ -3,10 +3,10 @@ import { useTheme } from "expo-router/react-navigation";
 import { triggerSelectionHaptic } from "@utils/haptics";
 import { AnimatedTab } from "./animated-tab";
 
-const SEPARATE_ROUTE_NAMES = new Set(["add"]);
+const SEPARATE_ROUTE_NAMES = new Set(["search"]);
 // These actions transition into a different control instead of representing a
 // persistent selection, so their glyphs retain the standard inactive color.
-const NO_ACTIVE_COLOR_ROUTE_NAMES = new Set(["add", "switcher"]);
+const NO_ACTIVE_COLOR_ROUTE_NAMES = new Set(["search", "switcher"]);
 
 type FeedTabActionsProps = Pick<BottomTabBarProps, "descriptors" | "navigation" | "state"> & {
   readonly isMinimized?: boolean;

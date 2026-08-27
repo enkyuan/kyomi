@@ -21,7 +21,7 @@ import {
   LiquidReaderSeparateAction,
 } from "./liquid-reader-actions.ios";
 import { ReaderSearchToggleIcon } from "./search-toggle.ios";
-import { useAddTabBar } from "../modes/add";
+import { useSearchTabBar } from "../modes/search";
 import { useScrollTabBar } from "../modes/scroll";
 import {
   getFloatingBarPosition,
@@ -32,8 +32,8 @@ import { useReaderTabBar } from "../modes/reader";
 
 const ACTION_ICON_SIZE = 19;
 const BAR_HEIGHT = 56;
-const SIDE_ACTION_WIDTH = 72;
-const FEED_TRAILING_WIDTH = 72;
+const SIDE_ACTION_WIDTH = 56;
+const FEED_TRAILING_WIDTH = 56;
 const FEED_GAP = 12;
 const READER_GAP = 8;
 const GLASS_DEFAULT_SPACING = 6;
@@ -44,8 +44,8 @@ const GLASS_DEFAULT_SPACING = 6;
 const BAR_ANIMATION = Animation.spring({ duration: 0.22, bounce: 0 });
 
 type LiquidTabBarContentProps = BottomTabBarProps & {
-  readonly isAddRoute: boolean;
   readonly isReaderRoute: boolean;
+  readonly isSearchRoute: boolean;
   readonly screenCorners?: BottomScreenCornerRadii;
 };
 
@@ -57,8 +57,8 @@ type LiquidTabBarContentProps = BottomTabBarProps & {
 export function LiquidTabBarContent({
   descriptors,
   insets,
-  isAddRoute,
   isReaderRoute,
+  isSearchRoute,
   navigation,
   screenCorners,
   state,
@@ -66,7 +66,7 @@ export function LiquidTabBarContent({
   const router = useRouter();
   const { colors } = useTheme();
   const { config, isDismissingReader } = useReaderTabBar();
-  const { config: addConfig } = useAddTabBar();
+  const { config: searchConfig } = useSearchTabBar();
   const { isMinimized } = useScrollTabBar();
   const inactiveIconColor = String(colors.text);
   const { width: windowWidth } = useWindowDimensions();
@@ -81,20 +81,20 @@ export function LiquidTabBarContent({
     barWidth,
     gap,
     glassLayoutState,
-    isAddPresentation,
     isMinimizedPresentation,
     isReaderPresentation,
     isReaderSearchExpanded,
+    isSearchPresentation,
     primaryWidth,
     trailingWidth,
   } = getLiquidBarLayout({
-    hasAddConfig: addConfig !== null,
+    hasSearchConfig: searchConfig !== null,
     insets,
-    isAddRoute,
     isDismissingReader,
     isMinimized,
     isReaderRoute,
     isSearchExpanded,
+    isSearchRoute,
     screenCorners,
     windowWidth,
   });
@@ -116,12 +116,12 @@ export function LiquidTabBarContent({
   }, [isReaderPresentation, isSearchExpanded]);
 
   useEffect(() => {
-    if (!isAddPresentation) {
+    if (!isSearchPresentation) {
       return;
     }
     const timeout = setTimeout(() => addSearchInputRef.current?.focus(), 0);
     return () => clearTimeout(timeout);
-  }, [isAddPresentation]);
+  }, [isSearchPresentation]);
 
   const goBack = () => {
     if (router.canGoBack()) {
@@ -136,8 +136,8 @@ export function LiquidTabBarContent({
     config?.onSearchQueryChange("");
     setIsSearchExpanded(false);
   };
-  const closeAdd = () => {
-    addConfig?.onQueryChange("");
+  const closeSearchScreen = () => {
+    searchConfig?.onQueryChange("");
     router.replace("/(protected)/(tabs)/(inbox)");
   };
 
@@ -181,7 +181,7 @@ export function LiquidTabBarContent({
             ) : null}
             <LiquidGlassShell id="primary" namespaceId={namespaceId} width={primaryWidth}>
               <LiquidReaderLayer
-                active={!isReaderPresentation && !isAddPresentation}
+                active={!isReaderPresentation && !isSearchPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={primaryWidth}
               >
@@ -210,11 +210,11 @@ export function LiquidTabBarContent({
                 />
               </LiquidReaderLayer>
               <LiquidReaderLayer
-                active={isAddPresentation}
+                active={isSearchPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={primaryWidth}
               >
-                {addConfig ? (
+                {searchConfig ? (
                   <Animated.View
                     entering={shouldReduceMotion ? undefined : FadeIn.delay(36).duration(164)}
                     exiting={shouldReduceMotion ? undefined : FadeOut.duration(96)}
@@ -224,9 +224,9 @@ export function LiquidTabBarContent({
                       accessibilityLabel="Search feeds"
                       clearAccessibilityLabel="Clear feed search"
                       inputRef={addSearchInputRef}
-                      onChangeText={addConfig.onQueryChange}
+                      onChangeText={searchConfig.onQueryChange}
                       placeholder="Search feeds or paste a URL"
-                      value={addConfig.query}
+                      value={searchConfig.query}
                     />
                   </Animated.View>
                 ) : null}
@@ -234,7 +234,7 @@ export function LiquidTabBarContent({
             </LiquidGlassShell>
             <LiquidGlassShell id="trailing" namespaceId={namespaceId} width={trailingWidth}>
               <LiquidReaderLayer
-                active={!isReaderPresentation && !isAddPresentation}
+                active={!isReaderPresentation && !isSearchPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={trailingWidth}
               >
@@ -268,13 +268,13 @@ export function LiquidTabBarContent({
                 </LiquidReaderSeparateAction>
               </LiquidReaderLayer>
               <LiquidReaderLayer
-                active={isAddPresentation}
+                active={isSearchPresentation}
                 shouldReduceMotion={shouldReduceMotion}
                 width={trailingWidth}
               >
                 <LiquidReaderSeparateAction
                   accessibilityLabel="Close feed search"
-                  onPress={closeAdd}
+                  onPress={closeSearchScreen}
                 >
                   <AddCloseIcon
                     active
@@ -292,30 +292,30 @@ export function LiquidTabBarContent({
 }
 
 function getLiquidBarLayout({
-  hasAddConfig,
+  hasSearchConfig,
   insets,
-  isAddRoute,
   isDismissingReader,
   isMinimized,
   isReaderRoute,
   isSearchExpanded,
+  isSearchRoute,
   screenCorners,
   windowWidth,
 }: {
-  readonly hasAddConfig: boolean;
+  readonly hasSearchConfig: boolean;
   readonly insets: BottomTabBarProps["insets"];
-  readonly isAddRoute: boolean;
   readonly isDismissingReader: boolean;
   readonly isMinimized: boolean;
   readonly isReaderRoute: boolean;
   readonly isSearchExpanded: boolean;
+  readonly isSearchRoute: boolean;
   readonly screenCorners?: BottomScreenCornerRadii;
   readonly windowWidth: number;
 }) {
   const baseBarWidth = getFloatingBarWidth(windowWidth, insets, screenCorners);
   const isReaderPresentation = isReaderRoute && !isDismissingReader;
-  const isAddPresentation = isAddRoute && hasAddConfig;
-  const isMinimizedPresentation = isMinimized && !isReaderPresentation && !isAddPresentation;
+  const isSearchPresentation = isSearchRoute && hasSearchConfig;
+  const isMinimizedPresentation = isMinimized && !isReaderPresentation && !isSearchPresentation;
   const isReaderSearchExpanded = isReaderPresentation && isSearchExpanded;
   const gap = isReaderPresentation ? READER_GAP : FEED_GAP;
   const trailingWidth = isReaderPresentation ? SIDE_ACTION_WIDTH : FEED_TRAILING_WIDTH;
@@ -337,7 +337,7 @@ function getLiquidBarLayout({
 
   const glassLayoutState = isReaderPresentation
     ? 2 + (isReaderSearchExpanded ? 1 : 0)
-    : isAddPresentation
+    : isSearchPresentation
       ? 4
       : isMinimizedPresentation
         ? 5
@@ -348,10 +348,10 @@ function getLiquidBarLayout({
     barWidth,
     gap,
     glassLayoutState,
-    isAddPresentation,
     isMinimizedPresentation,
     isReaderPresentation,
     isReaderSearchExpanded,
+    isSearchPresentation,
     primaryWidth,
     trailingWidth,
   };
@@ -378,7 +378,7 @@ function LiquidGlassShell({
           // (readerActionPressed / AnimatedTab) — interactive:true double-shows
           // both, and the native ripple reads as a stray circle inside the pill.
           glass: { interactive: false, variant: "regular" },
-          shape: "capsule",
+          shape: width === BAR_HEIGHT ? "circle" : "capsule",
         }),
         glassEffectId(id, namespaceId),
       ]}
