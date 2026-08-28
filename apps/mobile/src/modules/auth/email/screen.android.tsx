@@ -40,8 +40,9 @@ import {
 import { useCallback, useRef } from "react";
 import { ERROR_SHAKE_STEP_DURATION_MS } from "./hooks/use-error-shake";
 import { useEmailAuth } from "./hooks/use-email-auth";
+import { FONT_STYLES } from "@/theme/fonts";
 
-const BUTTON_LABEL_STYLE = { fontSize: 18, fontWeight: "600" as const };
+const BUTTON_LABEL_STYLE = FONT_STYLES.button;
 const OTP_LENGTH = 6;
 const ERROR_COLOR = "#c0392b";
 const STEP_ENTER_TRANSITION = EnterTransition.fadeIn()
@@ -128,7 +129,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 <Text
                   color={theme.foreground}
                   modifiers={[padding(0, 20, 0, 0)]}
-                  style={{ fontSize: 24, fontWeight: "600" }}
+                  style={FONT_STYLES.screenTitle}
                 >
                   Continue with Email
                 </Text>
@@ -136,7 +137,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 <Text
                   color={theme.foreground}
                   modifiers={[padding(0, 6, 0, 0)]}
-                  style={{ fontSize: 15 }}
+                  style={FONT_STYLES.bodyMedium}
                 >
                   Sign in or sign up to get started
                 </Text>
@@ -159,7 +160,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                   }}
                 >
                   <OutlinedTextField.Placeholder>
-                    <Text>you@example.com</Text>
+                    <Text style={FONT_STYLES.bodyMedium}>you@example.com</Text>
                   </OutlinedTextField.Placeholder>
                 </OutlinedTextField>
               </Column>
@@ -174,7 +175,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 <Text
                   color={theme.foreground}
                   modifiers={[padding(0, 20, 0, 0)]}
-                  style={{ fontSize: 24, fontWeight: "600" }}
+                  style={FONT_STYLES.screenTitle}
                 >
                   Enter your code
                 </Text>
@@ -182,7 +183,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 <Text
                   color={theme.foreground}
                   modifiers={[padding(0, 2, 0, 0)]}
-                  style={{ fontSize: 16 }}
+                  style={FONT_STYLES.body}
                 >
                   {`We sent a code to ${email.value}.`}
                 </Text>
@@ -216,7 +217,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                           clickable(() => otpFieldRef.current?.focus()),
                         ]}
                       >
-                        <Text style={{ fontSize: 22, fontWeight: "600" }} color={theme.foreground}>
+                        <Text style={FONT_STYLES.otp} color={theme.foreground}>
                           {otpValue[index] ?? ""}
                         </Text>
                       </Box>
@@ -242,7 +243,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                   modifiers={[fillMaxWidth(), padding(0, 12, 0, 0)]}
                 >
                   <Box modifiers={[fillMaxWidth()]}>
-                    <Text style={{ fontSize: 15, fontWeight: "500" }} modifiers={[align("center")]}>
+                    <Text style={FONT_STYLES.bodyMediumMedium} modifiers={[align("center")]}>
                       Use a different email
                     </Text>
                   </Box>

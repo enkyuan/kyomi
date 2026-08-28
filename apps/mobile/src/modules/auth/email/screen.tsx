@@ -10,6 +10,7 @@ import Animated, {
 } from "react-native-reanimated";
 import { ERROR_SHAKE_STEP_DURATION_MS, useErrorShake } from "./hooks/use-error-shake";
 import { CloseIcon } from "@/components/icons";
+import { FONT_STYLES } from "@/theme/fonts";
 import { isValidEmail } from "@kyomi/reader/schemas/auth";
 import { authClient } from "@/lib/auth";
 
@@ -158,18 +159,18 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
   return (
     <BottomSheet isPresented={isPresented} onDismiss={handleDismiss}>
       <View style={{ width: "100%", padding: 16, alignItems: "flex-end" }}>
-        <Pressable onPress={handleDismiss}>
-          <CloseIcon size={24} fill={theme.foreground} />
+        <Pressable accessibilityLabel="Close" accessibilityRole="button" onPress={handleDismiss}>
+          <CloseIcon fill={theme.foreground} size={22} />
         </Pressable>
       </View>
 
       <View style={{ width: "100%", paddingHorizontal: 24, paddingBottom: 24 }}>
-        <Text textStyle={{ fontSize: 24, fontWeight: "600", color: theme.foreground }}>
+        <Text textStyle={{ ...FONT_STYLES.screenTitle, color: theme.foreground }}>
           {isEmailStep ? "Continue with Email" : "Enter your code"}
         </Text>
 
         <View style={{ marginTop: 6 }}>
-          <Text textStyle={{ fontSize: 15, color: theme.foreground }}>
+          <Text textStyle={{ ...FONT_STYLES.bodyMedium, color: theme.foreground }}>
             {isEmailStep
               ? "Sign in or sign up with your email."
               : `We sent a code to ${email.value}.`}
@@ -187,6 +188,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 autoCorrect={false}
                 onChangeText={handleEmailChange}
                 style={{
+                  ...FONT_STYLES.input,
                   width: "100%",
                   paddingVertical: 14,
                   paddingHorizontal: 20,
@@ -207,6 +209,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 autoCorrect={false}
                 onChangeText={handleOtpChange}
                 style={{
+                  ...FONT_STYLES.input,
                   width: "100%",
                   paddingVertical: 14,
                   paddingHorizontal: 20,
@@ -226,7 +229,9 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
             style={{ width: "100%", backgroundColor: "#a8d480" }}
             onPress={isEmailStep ? handleSendCode : handleVerifyCode}
           >
-            <Text textStyle={{ textAlign: "center", color: theme.background }}>
+            <Text
+              textStyle={{ ...FONT_STYLES.button, textAlign: "center", color: theme.background }}
+            >
               {isSubmitting ? "Please wait…" : "Continue"}
             </Text>
           </Button>

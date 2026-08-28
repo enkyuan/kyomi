@@ -9,6 +9,7 @@ import { useTabBarMinimize, useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/us
 import { FeedFavicon } from "@modules/inbox/components/feed-favicon";
 import { feedItemTypography } from "@modules/inbox/lib/layout";
 import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
+import { FONT_STYLES } from "@/theme/fonts";
 import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
 import type { RecentArticle } from "../lib/history";
 import {
@@ -125,23 +126,26 @@ function RecentHistoryItem({ article, isFirst }: { article: RecentArticle; isFir
               title={article.feedTitle}
             />
             <Text
-              className="min-w-0 flex-1 font-medium text-muted-foreground/95"
+              className="min-w-0 flex-1 text-muted-foreground/95"
               numberOfLines={1}
-              style={{ fontSize: metaFontSizePx }}
+              style={[FONT_STYLES.meta, { fontSize: metaFontSizePx }]}
             >
               {sourceLabel}
             </Text>
           </View>
           <Text
-            className="font-semibold text-foreground"
+            className="text-foreground"
             numberOfLines={2}
-            style={{ fontSize: titleFontSizePx, lineHeight: titleLineHeightPx }}
+            style={[
+              FONT_STYLES.screenTitle,
+              { fontSize: titleFontSizePx, lineHeight: titleLineHeightPx },
+            ]}
           >
             {article.title}
           </Text>
           <Text
-            className="font-medium text-muted-foreground/80"
-            style={{ fontSize: metaFontSizePx }}
+            className="text-muted-foreground/80"
+            style={[FONT_STYLES.meta, { fontSize: metaFontSizePx }]}
           >
             {viewedLabel}
           </Text>
@@ -154,10 +158,10 @@ function RecentHistoryItem({ article, isFirst }: { article: RecentArticle; isFir
 function RecentHistoryEmptyState() {
   return (
     <View className="flex-1 items-center justify-center px-8 pb-24">
-      <Text className="text-center text-lg font-semibold text-foreground">
+      <Text className="text-center text-foreground" style={FONT_STYLES.screenTitle}>
         No recently viewed articles
       </Text>
-      <Text className="mt-2 text-center text-sm leading-5 text-muted-foreground">
+      <Text className="mt-2 text-center text-muted-foreground" style={FONT_STYLES.bodySmall}>
         Open a feed item to keep it here for later.
       </Text>
     </View>

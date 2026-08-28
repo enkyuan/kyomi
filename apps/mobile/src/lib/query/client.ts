@@ -1,8 +1,8 @@
 import { QueryClient } from "@tanstack/react-query";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
-import { createMMKV } from "react-native-mmkv";
+import { createAppStorage } from "@lib/storage";
 
-const storage = createMMKV({ id: "query-cache" });
+const storage = createAppStorage("query-cache");
 
 export const persister = createSyncStoragePersister({
   storage: {

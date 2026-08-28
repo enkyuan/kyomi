@@ -11,6 +11,7 @@ import { align, fillMaxWidth, height, padding, size } from "@expo/ui/jetpack-com
 import { useColorScheme } from "react-native";
 import { useLogout } from "./hooks/use-logout";
 import { SettingsScreenLayout } from "./components/screen-layout";
+import { FONT_STYLES } from "@/theme/fonts";
 
 const DESTRUCTIVE_THEMES = {
   dark: {
@@ -23,7 +24,7 @@ const DESTRUCTIVE_THEMES = {
   },
 } as const;
 
-const BUTTON_LABEL_STYLE = { fontSize: 18, fontWeight: "600" as const };
+const BUTTON_LABEL_STYLE = FONT_STYLES.button;
 
 export function SettingsScreen() {
   const colorScheme = useColorScheme();
@@ -63,7 +64,7 @@ export function SettingsScreen() {
             </Box>
           </Button>
           {errorMessage ? (
-            <Text color={destructiveTheme.destructive} style={{ fontSize: 14 }}>
+            <Text color={destructiveTheme.destructive} style={FONT_STYLES.bodySmall}>
               {errorMessage}
             </Text>
           ) : null}

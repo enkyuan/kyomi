@@ -1,5 +1,6 @@
 import { Host, TextInput, type TextInputRef, useNativeState } from "@expo/ui";
 import { useEffect, useImperativeHandle, useRef } from "react";
+import { FONT_STYLES } from "@/theme/fonts";
 import {
   INPUT_COLOR,
   PLACEHOLDER_COLOR,
@@ -53,11 +54,7 @@ export function SearchField({
           paddingHorizontal: 16,
           paddingVertical: 0,
         }}
-        textStyle={{
-          color: INPUT_COLOR,
-          fontSize: 15,
-          lineHeight: 20,
-        }}
+        textStyle={{ ...FONT_STYLES.bodyMedium, color: INPUT_COLOR }}
         value={text}
       />
     </Host>

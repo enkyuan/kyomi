@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { Text, View, type ViewProps } from "react-native";
+import { Text, View, type TextStyle, type ViewProps } from "react-native";
+import { FONT_STYLES } from "@/theme/fonts";
 
 export type BadgeVariant =
   | "default"
@@ -17,8 +18,6 @@ export type BadgeSize = "default" | "lg" | "sm" | "xs";
 
 const BASE_CLASS =
   "shrink-0 items-center justify-center overflow-hidden rounded-full border border-transparent";
-const TEXT_BASE_CLASS = "font-medium";
-
 const SIZE_CLASS: Record<BadgeSize, string> = {
   default: "h-[26px] min-w-6.5 px-1.5",
   lg: "h-[30px] min-w-7.5 px-2",
@@ -26,11 +25,11 @@ const SIZE_CLASS: Record<BadgeSize, string> = {
   xs: "h-[14px] min-w-6 px-1.5",
 };
 
-const TEXT_SIZE_CLASS: Record<BadgeSize, string> = {
-  default: "text-[15px] leading-[18px]",
-  lg: "text-[17px] leading-[20px]",
-  sm: "text-[13px] leading-[16px]",
-  xs: "text-[10px] leading-[12px]",
+const TEXT_STYLE: Record<BadgeSize, TextStyle> = {
+  default: FONT_STYLES.badgeDefault,
+  lg: FONT_STYLES.badgeLarge,
+  sm: FONT_STYLES.badgeSmall,
+  xs: FONT_STYLES.badgeExtraSmall,
 };
 
 const VARIANT_CLASS: Record<BadgeVariant, { container: string; text: string }> = {
@@ -89,10 +88,8 @@ export function Badge({
       {...props}
     >
       <Text
-        className={[TEXT_BASE_CLASS, TEXT_SIZE_CLASS[size], variantClasses.text, textClassName]
-          .filter(Boolean)
-          .join(" ")}
-        style={{ includeFontPadding: false, textAlignVertical: "center" }}
+        className={[variantClasses.text, textClassName].filter(Boolean).join(" ")}
+        style={[TEXT_STYLE[size], { includeFontPadding: false, textAlignVertical: "center" }]}
       >
         {children}
       </Text>

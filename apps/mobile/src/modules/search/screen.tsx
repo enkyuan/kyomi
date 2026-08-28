@@ -4,6 +4,7 @@ import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context"
 import { FeedFavicon } from "@modules/inbox/components/feed-favicon";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { triggerSelectionHaptic } from "@utils/haptics";
+import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import {
   type DiscoveredFeed,
@@ -55,7 +56,7 @@ export function SearchScreen({
         keyExtractor={(item) => `${item.id ?? item.url}-${item.url}`}
         ListEmptyComponent={
           <View className="flex-1 items-center justify-center px-8 pb-20">
-            <Text className="text-center text-base leading-6 text-muted-foreground">
+            <Text className="text-center text-muted-foreground" style={FONT_STYLES.body}>
               {emptyCopy}
             </Text>
           </View>
@@ -70,10 +71,14 @@ export function SearchScreen({
               title={item.title || item.url}
             />
             <View className="min-w-0 flex-1">
-              <Text className="text-base font-semibold text-foreground" numberOfLines={1}>
+              <Text className="text-foreground" numberOfLines={1} style={FONT_STYLES.bodyLarge}>
                 {item.title || item.url}
               </Text>
-              <Text className="mt-0.5 text-sm leading-5 text-muted-foreground" numberOfLines={2}>
+              <Text
+                className="mt-0.5 text-muted-foreground"
+                numberOfLines={2}
+                style={FONT_STYLES.bodySmall}
+              >
                 {item.description || item.url}
               </Text>
             </View>
@@ -86,7 +91,7 @@ export function SearchScreen({
               disabled={item.isSubscribed || followMutation.isPending}
               onPress={() => follow(item)}
             >
-              <Text className="text-sm font-semibold text-foreground">
+              <Text className="text-foreground" style={FONT_STYLES.button}>
                 {item.isSubscribed ? "Following" : "Follow"}
               </Text>
             </Pressable>

@@ -16,6 +16,7 @@ import { saveRecentArticle } from "@modules/recents/lib/store";
 import ArticleBody from "./components/article-body.dom";
 import { useReaderArticle } from "./hooks/use-reader-article";
 import { getReaderCanvasColor, getReaderColorScheme } from "./lib/theme";
+import { FONT_STYLES } from "@/theme/fonts";
 import { mobileReaderLayout, mobileReaderSkeletonLayout } from "./lib/layout";
 
 export type ReaderScreenProps = {
@@ -112,10 +113,10 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
     return (
       <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
         <View className="flex-1 items-center justify-center px-8">
-          <Text className="text-center text-lg font-semibold text-foreground">
+          <Text className="text-center text-foreground" style={FONT_STYLES.screenTitle}>
             Couldn’t load article
           </Text>
-          <Text className="mt-2 text-center text-sm text-muted-foreground">
+          <Text className="mt-2 text-center text-muted-foreground" style={FONT_STYLES.bodySmall}>
             {error instanceof Error ? error.message : "Please try again."}
           </Text>
           <Pressable
@@ -123,7 +124,9 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
             className="mt-5 min-h-12 items-center justify-center rounded-full bg-secondary px-5 active:opacity-70"
             onPress={() => void refetch()}
           >
-            <Text className="font-semibold text-foreground">Try again</Text>
+            <Text className="text-foreground" style={FONT_STYLES.button}>
+              Try again
+            </Text>
           </Pressable>
         </View>
       </ReaderCanvas>
@@ -142,7 +145,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
           }}
           faviconUrls={faviconUrls}
           feedTitle={article.feedTitle}
-          fontSizePx={17}
+          fontSizePx={mobileReaderLayout.body.fontSizePx}
           onReady={handleArticleReady}
           reader={article.reader.selected}
           searchQuery={searchQuery}

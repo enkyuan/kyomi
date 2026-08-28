@@ -1,5 +1,5 @@
-import { fetch as nitroFetch, prefetch as nitroPrefetch } from "react-native-nitro-fetch";
 import { getAuthCookie, resolveAuthOrigin } from "./auth";
+import { fetchMobile, prefetchMobile } from "./mobile-fetch";
 import {
   extractErrorMessageFromBody,
   getUserSafeErrorMessage,
@@ -66,7 +66,7 @@ export async function fetchMobileApiJson<T>(path: string, init?: ApiFetchInit): 
 
   let response: Response;
   try {
-    response = await nitroFetch(request.url, request.init);
+    response = await fetchMobile(request.url, request.init);
   } catch (error) {
     throw new MobileApiError(0, null, `Network error: ${getUserSafeErrorMessage(error)}`);
   }
@@ -100,7 +100,7 @@ export function prefetchMobileApi(path: string, init?: ApiFetchInit): void {
   const request = buildMobileApiRequest(path, init);
   inFlightPrefetches.add(prefetchKey);
 
-  void nitroPrefetch(request.url, request.init)
+  void prefetchMobile(request.url, request.init)
     .catch((error) => {
       logClientError("prefetchMobileApi", getUserSafeErrorMessage(error));
     })

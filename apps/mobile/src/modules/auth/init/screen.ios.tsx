@@ -16,13 +16,18 @@ import {
 import { useState } from "react";
 import { useColorScheme } from "react-native";
 import { AppleIcon, GoogleIcon, KyomiIcon } from "@/components/icons";
+import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { EmailSheet } from "@modules/auth/email/screen";
 
 const FULL_WIDTH = [frame({ maxWidth: Infinity })];
 const ICON_SLOT = [frame({ maxWidth: Infinity, alignment: "leading" }), padding({ leading: 20 })];
 const CENTERED_LABEL = [frame({ maxWidth: Infinity, alignment: "center" })];
-const LABEL_FONT = font({ weight: "semibold", size: 18 });
+const LABEL_FONT = font({
+  family: FONT_FAMILIES.inter.semibold,
+  size: FONT_SIZES.button,
+  weight: SWIFT_FONT_WEIGHTS.semibold,
+});
 
 export function InitScreen() {
   const theme = getMobileSurfaceTheme(useColorScheme());
@@ -49,7 +54,11 @@ export function InitScreen() {
             padding({ top: 24 }),
             multilineTextAlignment("center"),
             lineLimit(2),
-            font({ size: 24, weight: "semibold" }),
+            font({
+              family: FONT_FAMILIES.inter.semibold,
+              size: FONT_SIZES.hero,
+              weight: SWIFT_FONT_WEIGHTS.semibold,
+            }),
             foregroundStyle(theme.foreground),
           ]}
         >

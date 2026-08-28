@@ -2,6 +2,7 @@ import { Button, Column, Host, Spacer, Text } from "@expo/ui";
 import { useState } from "react";
 import { useColorScheme, View } from "react-native";
 import { AppleIcon, GoogleIcon, KyomiIcon } from "@/components/icons";
+import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { EmailSheet } from "@modules/auth/email/screen";
 
@@ -9,7 +10,7 @@ function ButtonLabel({ icon, label }: { icon: React.ReactNode; label: string }) 
   return (
     <View style={{ width: "100%", justifyContent: "center" }}>
       <View style={{ position: "absolute", left: 20 }}>{icon}</View>
-      <Text>{label}</Text>
+      <Text textStyle={FONT_STYLES.button}>{label}</Text>
     </View>
   );
 }
@@ -25,14 +26,7 @@ export function InitScreen() {
 
         <KyomiIcon size={64} />
 
-        <Text
-          textStyle={{
-            fontSize: 30,
-            fontWeight: "600",
-            color: theme.foreground,
-            textAlign: "center",
-          }}
-        >
+        <Text textStyle={{ ...FONT_STYLES.hero, color: theme.foreground, textAlign: "center" }}>
           {"Your reading inbox.\nAll your feeds, one place."}
         </Text>
 
@@ -44,7 +38,9 @@ export function InitScreen() {
             style={{ width: "100%", backgroundColor: theme.card }}
             onPress={() => setIsEmailSheetOpen(true)}
           >
-            <Text textStyle={{ textAlign: "center" }}>Continue with email</Text>
+            <Text textStyle={{ ...FONT_STYLES.button, textAlign: "center" }}>
+              Continue with email
+            </Text>
           </Button>
           <Button
             variant="outlined"

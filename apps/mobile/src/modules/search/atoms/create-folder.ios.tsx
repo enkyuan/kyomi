@@ -31,6 +31,7 @@ import {
   tint,
 } from "@expo/ui/swift-ui/modifiers";
 import { useColorScheme } from "react-native";
+import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { useCreateFolder } from "../hooks/use-create-folder";
 import type { CreateFolderProps } from "../lib/create-folder.types";
@@ -64,11 +65,23 @@ export function CreateFolder({ isPresented, onDismiss }: CreateFolderProps) {
             modifiers={[...LEADING_FULL_WIDTH, ...ROW_PADDING]}
           >
             <Text
-              modifiers={[font({ size: 24, weight: "bold" }), foregroundStyle(theme.foreground)]}
+              modifiers={[
+                font({
+                  family: FONT_FAMILIES.inter.bold,
+                  size: FONT_SIZES.screenTitle,
+                  weight: SWIFT_FONT_WEIGHTS.bold,
+                }),
+                foregroundStyle(theme.foreground),
+              ]}
             >
               Create folder
             </Text>
-            <Text modifiers={[font({ size: 15 }), foregroundStyle(theme.mutedForeground)]}>
+            <Text
+              modifiers={[
+                font({ family: FONT_FAMILIES.inter.regular, size: FONT_SIZES.bodyMedium }),
+                foregroundStyle(theme.mutedForeground),
+              ]}
+            >
               Name a folder to organize your feeds.
             </Text>
           </VStack>
@@ -82,7 +95,7 @@ export function CreateFolder({ isPresented, onDismiss }: CreateFolderProps) {
               modifiers={[
                 textFieldStyle("plain"),
                 textInputAutocapitalization("words"),
-                font({ size: 17 }),
+                font({ family: FONT_FAMILIES.inter.regular, size: FONT_SIZES.input }),
                 foregroundStyle(theme.foreground),
                 padding({ horizontal: 20 }),
                 frame({ height: 52 }),
@@ -104,7 +117,10 @@ export function CreateFolder({ isPresented, onDismiss }: CreateFolderProps) {
             {form.nameError ? (
               <Text
                 modifiers={[
-                  font({ size: 13 }),
+                  font({
+                    family: FONT_FAMILIES.inter.regular,
+                    size: FONT_SIZES.bodySmall,
+                  }),
                   foregroundStyle(ERROR_COLOR),
                   accessibilityLabel(form.nameError),
                 ]}
@@ -133,7 +149,11 @@ export function CreateFolder({ isPresented, onDismiss }: CreateFolderProps) {
               <Text
                 modifiers={[
                   ...CENTERED_LABEL,
-                  font({ size: 17, weight: "semibold" }),
+                  font({
+                    family: FONT_FAMILIES.inter.semibold,
+                    size: FONT_SIZES.button,
+                    weight: SWIFT_FONT_WEIGHTS.semibold,
+                  }),
                   foregroundStyle(theme.foreground),
                 ]}
               >
@@ -165,7 +185,11 @@ export function CreateFolder({ isPresented, onDismiss }: CreateFolderProps) {
                   <Text
                     modifiers={[
                       ...CENTERED_LABEL,
-                      font({ size: 17, weight: "semibold" }),
+                      font({
+                        family: FONT_FAMILIES.inter.semibold,
+                        size: FONT_SIZES.button,
+                        weight: SWIFT_FONT_WEIGHTS.semibold,
+                      }),
                       foregroundStyle(theme.background),
                     ]}
                   >

@@ -126,6 +126,24 @@ export const ListSearchLineNativeIcon: MingcuteNativeIcon = {
   ],
 };
 
+export const Album2LineNativeIcon: MingcuteNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M6 3a1 1 0 1 0 0 2h12a1 1 0 1 0 0-2zM4.18 6a2 2 0 0 0-1.972 2.329l1.666 10A2 2 0 0 0 5.847 20h12.306a2 2 0 0 0 1.973-1.671l1.666-10A2 2 0 0 0 19.82 6zm0 2h15.64l-1.667 10H5.847z",
+    },
+  ],
+};
+
+export const Album2FillNativeIcon: MingcuteNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M19.82 6a2 2 0 0 1 1.972 2.329l-1.666 10A2 2 0 0 1 18.153 20H5.847a2 2 0 0 1-1.973-1.671l-1.666-10A2 2 0 0 1 4.18 6ZM18 3a1 1 0 1 1 0 2H6a1 1 0 0 1 0-2Z",
+    },
+  ],
+};
+
 export const CloseCircleLineNativeIcon: MingcuteNativeIcon = {
   viewBox,
   paths: [

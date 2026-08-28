@@ -19,6 +19,7 @@ import Animated, {
 } from "react-native-reanimated";
 import * as Haptics from "expo-haptics";
 import { GlassContainer, GlassView } from "expo-glass-effect";
+import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
 export const COMPACT_NAV_HEIGHT = 48;
@@ -203,7 +204,7 @@ export function CollapsingHeader({
           accessibilityLabel={title}
           allowFontScaling={false}
           numberOfLines={1}
-          style={[styles.expandedTitleText, { color: foreground }]}
+          style={[styles.expandedTitleText, FONT_STYLES.largeTitle, { color: foreground }]}
         >
           {title}
         </Text>
@@ -226,7 +227,7 @@ export function CollapsingHeader({
         <Text
           allowFontScaling={false}
           numberOfLines={1}
-          style={[styles.compactTitleText, { color: foreground }]}
+          style={[styles.compactTitleText, FONT_STYLES.compactTitle, { color: foreground }]}
         >
           {title}
         </Text>
@@ -289,15 +290,10 @@ const styles = StyleSheet.create({
     zIndex: 2,
   },
   compactTitleText: {
-    fontSize: 17,
-    fontWeight: "600",
     letterSpacing: -0.25,
   },
   expandedTitleText: {
-    fontSize: 34,
-    fontWeight: "700",
     letterSpacing: -0.45,
-    lineHeight: 41,
   },
   fixedHeaderRoot: {
     backgroundColor: "transparent",

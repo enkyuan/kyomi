@@ -21,6 +21,7 @@ import {
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { persister, queryClient } from "@lib/query/client";
 import { useSessionGate } from "@lib/session";
+import { FONT_FAMILIES } from "@/theme/fonts";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -28,13 +29,13 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const { isAuthenticated, isPending } = useSessionGate();
   const [fontsLoaded] = useFonts({
-    "Inter Variable": Inter_400Regular,
-    "Inter Variable Medium": Inter_500Medium,
-    "Inter Variable SemiBold": Inter_600SemiBold,
-    "Inter Variable Bold": Inter_700Bold,
-    "DM Sans": DMSans_400Regular,
-    "DM Sans Medium": DMSans_500Medium,
-    "DM Sans SemiBold": DMSans_600SemiBold,
+    [FONT_FAMILIES.inter.regular]: Inter_400Regular,
+    [FONT_FAMILIES.inter.medium]: Inter_500Medium,
+    [FONT_FAMILIES.inter.semibold]: Inter_600SemiBold,
+    [FONT_FAMILIES.inter.bold]: Inter_700Bold,
+    [FONT_FAMILIES.dmSans.regular]: DMSans_400Regular,
+    [FONT_FAMILIES.dmSans.medium]: DMSans_500Medium,
+    [FONT_FAMILIES.dmSans.semibold]: DMSans_600SemiBold,
   });
 
   useEffect(() => {

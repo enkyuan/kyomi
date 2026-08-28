@@ -7,6 +7,7 @@ import { ReaderContent } from "@kyomi/reader/web";
 import { RssIcon } from "@kyomi/ui/icons/rss";
 import "@kyomi/reader/web/styles.css";
 import "@kyomi/ui/styles/reader.css";
+import { FONT_FAMILIES, FONT_WEIGHTS } from "@/theme/fonts";
 import { mobileReaderLayout } from "../lib/layout";
 import { readerCanvas } from "../lib/theme";
 import { resolveMobileApiUrl } from "@/lib/api";
@@ -70,8 +71,9 @@ const MOBILE_READER_STYLES = String.raw`
     gap: 0.5rem;
     margin: 0 0 ${mobileReaderLayout.source.marginBottomPx}px;
     color: var(--reader-muted);
+    font-family: "${FONT_FAMILIES.inter.medium}", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: ${mobileReaderLayout.source.fontSizePx}px;
-    font-weight: 600;
+    font-weight: ${FONT_WEIGHTS.semibold};
     letter-spacing: 0.01em;
   }
 
@@ -87,9 +89,9 @@ const MOBILE_READER_STYLES = String.raw`
   .mobile-reader__title {
     margin: 0;
     color: var(--reader-foreground);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "${FONT_FAMILIES.inter.bold}", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: clamp(${mobileReaderLayout.title.minFontSizePx}px, 7vw, ${mobileReaderLayout.title.maxFontSizePx}px);
-    font-weight: 700;
+    font-weight: ${FONT_WEIGHTS.bold};
     letter-spacing: -0.035em;
     line-height: ${mobileReaderLayout.title.lineHeight};
     overflow-wrap: anywhere;
@@ -104,8 +106,8 @@ const MOBILE_READER_STYLES = String.raw`
   }
 
   .mobile-reader .reader-content {
-    --font-reader: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-reader: "${FONT_FAMILIES.dmSans.regular}", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-sans: "${FONT_FAMILIES.inter.regular}", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font-mono: "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     --font-code: var(--font-mono);
     width: 100%;

@@ -1,13 +1,13 @@
 import { ActivityIndicator, Pressable, Text, View } from "react-native";
 import { useLogout } from "./hooks/use-logout";
 import { SettingsScreenLayout } from "./components/screen-layout";
+import { FONT_STYLES } from "@/theme/fonts";
 
 const DESTRUCTIVE_TINT = "#fb414a";
 const DESTRUCTIVE_FOREGROUND = "#ffffff";
 const BUTTON_LABEL_STYLE = {
   color: DESTRUCTIVE_FOREGROUND,
-  fontSize: 18,
-  fontWeight: "600" as const,
+  ...FONT_STYLES.button,
 };
 
 export function SettingsScreen() {
@@ -42,7 +42,7 @@ export function SettingsScreen() {
           </View>
         </Pressable>
         {errorMessage ? (
-          <Text selectable style={{ color: DESTRUCTIVE_TINT }}>
+          <Text selectable style={{ ...FONT_STYLES.error, color: DESTRUCTIVE_TINT }}>
             {errorMessage}
           </Text>
         ) : null}

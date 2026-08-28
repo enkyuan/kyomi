@@ -1,6 +1,7 @@
 import type { PropsWithChildren } from "react";
 import { Text, View, useColorScheme, type StyleProp, type ViewStyle } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
 export const HEADER_CONTENT_HEIGHT = 48;
@@ -51,11 +52,10 @@ export function Header({ children, style, surface = "default", title }: HeaderPr
           <Text
             accessibilityRole="header"
             allowFontScaling={false}
-            className="text-[28px] font-bold"
             numberOfLines={1}
             // Negative tracking keeps a large title from reading loose — Apple
             // tightens tracking as type grows; a fixed 0 would look airy here.
-            style={{ color: foreground, letterSpacing: -0.4, lineHeight: 34 }}
+            style={[FONT_STYLES.navigationTitle, { color: foreground, letterSpacing: -0.4 }]}
           >
             {title}
           </Text>

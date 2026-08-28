@@ -24,6 +24,7 @@ import {
   tint,
 } from "@expo/ui/swift-ui/modifiers";
 import { useEffect, useImperativeHandle, useRef } from "react";
+import { FONT_FAMILIES, FONT_SIZES } from "@/theme/fonts";
 import {
   INPUT_COLOR,
   PLACEHOLDER_COLOR,
@@ -86,7 +87,7 @@ export function SearchField({
             textInputAutocapitalization("never"),
             autocorrectionDisabled(),
             submitLabel("search"),
-            font({ size: 15 }),
+            font({ family: FONT_FAMILIES.inter.regular, size: FONT_SIZES.bodyMedium }),
             foregroundStyle(INPUT_COLOR),
             tint(INPUT_COLOR),
             accessibilityLabel(fieldAccessibilityLabel),

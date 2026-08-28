@@ -12,6 +12,7 @@ import Animated, {
   type SharedValue,
 } from "react-native-reanimated";
 import { CloseIcon, SearchIcon } from "@/components/icons";
+import { FONT_STYLES } from "@/theme/fonts";
 import {
   CLOSE_BUTTON_SIZE,
   COLORS,
@@ -153,8 +154,8 @@ const searchStyles = StyleSheet.create({
     width: "100%",
   },
   input: {
+    ...FONT_STYLES.bodyMedium,
     color: COLORS.textPrimary,
-    fontSize: 15,
     height: "100%",
   },
   inputContainer: {

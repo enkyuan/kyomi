@@ -13,12 +13,13 @@ import {
 } from "@expo/ui/jetpack-compose";
 import { fillMaxWidth, height, padding, size, weight } from "@expo/ui/jetpack-compose/modifiers";
 import { useColorScheme } from "react-native";
+import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { useCreateFolder } from "../hooks/use-create-folder";
 import type { CreateFolderProps } from "../lib/create-folder.types";
 
 const ERROR_COLOR = "#c0392b";
-const BUTTON_LABEL_STYLE = { fontSize: 17, fontWeight: "600" as const };
+const BUTTON_LABEL_STYLE = FONT_STYLES.button;
 const CONTENT_HORIZONTAL_INSET = 24;
 
 /** Material 3 expression of the folder-name sheet. */
@@ -37,13 +38,13 @@ export function CreateFolder({ isPresented, onDismiss }: CreateFolderProps) {
             padding(CONTENT_HORIZONTAL_INSET, 0, CONTENT_HORIZONTAL_INSET, 0),
           ]}
         >
-          <Text color={theme.foreground} style={{ fontSize: 24, fontWeight: "600" }}>
+          <Text color={theme.foreground} style={FONT_STYLES.screenTitle}>
             Create folder
           </Text>
           <Text
             color={theme.mutedForeground}
             modifiers={[padding(0, 6, 0, 0)]}
-            style={{ fontSize: 15 }}
+            style={FONT_STYLES.bodyMedium}
           >
             Name a folder to organize your feeds.
           </Text>
@@ -70,16 +71,18 @@ export function CreateFolder({ isPresented, onDismiss }: CreateFolderProps) {
             keyboardOptions={{ capitalization: "words", imeAction: "done" }}
             onValueChange={form.handleNameChange}
             shape={Shape.Pill({})}
-            textStyle={{ color: theme.foreground, fontSize: 17 }}
+            textStyle={{ ...FONT_STYLES.input, color: theme.foreground }}
             value={name}
             modifiers={[fillMaxWidth(), height(52)]}
           >
             <OutlinedTextField.Placeholder>
-              <Text>Folder name</Text>
+              <Text style={FONT_STYLES.bodyMedium}>Folder name</Text>
             </OutlinedTextField.Placeholder>
             {form.nameError ? (
               <OutlinedTextField.SupportingText>
-                <Text color={ERROR_COLOR}>{form.nameError}</Text>
+                <Text color={ERROR_COLOR} style={FONT_STYLES.error}>
+                  {form.nameError}
+                </Text>
               </OutlinedTextField.SupportingText>
             ) : null}
           </OutlinedTextField>

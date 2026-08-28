@@ -1,4 +1,6 @@
-const FONT_SIZE_PX = 16;
+import { FONT_SIZES } from "@/theme/fonts";
+
+const FONT_SIZE_PX = FONT_SIZES.body;
 
 function getTypography() {
   const readableFontSizePx = FONT_SIZE_PX + 2;

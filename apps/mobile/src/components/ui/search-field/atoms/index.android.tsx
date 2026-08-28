@@ -18,6 +18,7 @@ import {
   weight,
 } from "@expo/ui/jetpack-compose/modifiers";
 import { useEffect, useImperativeHandle, useRef } from "react";
+import { FONT_STYLES } from "@/theme/fonts";
 import {
   INPUT_COLOR,
   PLACEHOLDER_COLOR,
@@ -78,7 +79,7 @@ export function SearchField({
           }}
           onValueChange={onChangeText}
           singleLine
-          textStyle={{ color: INPUT_COLOR, fontSize: 15, lineHeight: 20 }}
+          textStyle={{ ...FONT_STYLES.bodyMedium, color: INPUT_COLOR }}
           textSelectionColors={{
             backgroundColor: "#f4f4f566",
             handleColor: INPUT_COLOR,
@@ -89,7 +90,7 @@ export function SearchField({
           <BasicTextField.DecorationBox>
             <Box contentAlignment="centerStart" modifiers={[fillMaxWidth(), fillMaxHeight()]}>
               <BasicTextField.Placeholder>
-                <Text color={PLACEHOLDER_COLOR} style={{ fontSize: 15, lineHeight: 20 }}>
+                <Text color={PLACEHOLDER_COLOR} style={FONT_STYLES.bodyMedium}>
                   {placeholder}
                 </Text>
               </BasicTextField.Placeholder>

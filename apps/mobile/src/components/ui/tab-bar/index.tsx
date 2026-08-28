@@ -147,6 +147,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
     bottom: 0,
     flexDirection: "row",
+    justifyContent: "center",
     left: 0,
     paddingHorizontal: TAB_BAR_HORIZONTAL_PADDING,
     position: "absolute",

@@ -5,6 +5,7 @@ import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
 import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
 import { Badge } from "../../../../components/ui/badge";
 import { ItemToolbar } from "../toolbar/toolbar";
+import { FONT_STYLES } from "@/theme/fonts";
 import { FeedFavicon } from "../feed-favicon";
 
 export type ItemProps = {
@@ -47,25 +48,28 @@ export function Item({ item, isFirst, onPress, onPressIn }: ItemProps) {
                 title={item.feedTitle}
               />
               <Text
-                className="flex-1 font-medium text-muted-foreground/95"
+                className="flex-1 text-muted-foreground/95"
                 numberOfLines={1}
-                style={{ fontSize: metaFontSizePx }}
+                style={[FONT_STYLES.meta, { fontSize: metaFontSizePx }]}
               >
                 {sourceLabel}
               </Text>
             </View>
             <Text
-              className="shrink-0 font-medium text-muted-foreground/80"
-              style={{ fontSize: metaFontSizePx }}
+              className="shrink-0 text-muted-foreground/80"
+              style={[FONT_STYLES.meta, { fontSize: metaFontSizePx }]}
             >
               {formatInboxTimestamp(item.publishedAt)}
             </Text>
           </View>
 
           <Text
-            className="font-semibold text-foreground"
+            className="text-foreground"
             numberOfLines={2}
-            style={{ fontSize: titleFontSizePx, lineHeight: titleLineHeightPx }}
+            style={[
+              FONT_STYLES.screenTitle,
+              { fontSize: titleFontSizePx, lineHeight: titleLineHeightPx },
+            ]}
           >
             {item.title}
           </Text>
@@ -74,7 +78,10 @@ export function Item({ item, isFirst, onPress, onPressIn }: ItemProps) {
         <Text
           className="px-5 text-muted-foreground/95"
           numberOfLines={summaryMaxLines}
-          style={{ fontSize: summaryFontSizePx, lineHeight: summaryLineHeightPx }}
+          style={[
+            FONT_STYLES.body,
+            { fontSize: summaryFontSizePx, lineHeight: summaryLineHeightPx },
+          ]}
         >
           {item.summary || "No summary available."}
         </Text>

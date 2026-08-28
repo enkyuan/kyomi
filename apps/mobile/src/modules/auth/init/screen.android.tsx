@@ -12,12 +12,13 @@ import {
 import { useState } from "react";
 import { useColorScheme } from "react-native";
 import { AppleIcon, GoogleIcon, KyomiIcon } from "@/components/icons";
+import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { EmailSheet } from "@modules/auth/email/screen";
 
 const ICON_SLOT = [align("centerStart"), padding(20, 0, 0, 0)];
 
-const BUTTON_LABEL_STYLE = { fontSize: 18, fontWeight: "600" as const };
+const BUTTON_LABEL_STYLE = FONT_STYLES.button;
 
 export function InitScreen() {
   const theme = getMobileSurfaceTheme(useColorScheme());
@@ -36,10 +37,7 @@ export function InitScreen() {
           <KyomiIcon size={64} />
         </RNHostView>
 
-        <Text
-          color={theme.foreground}
-          style={{ fontSize: 30, fontWeight: "600", textAlign: "center" }}
-        >
+        <Text color={theme.foreground} style={{ ...FONT_STYLES.hero, textAlign: "center" }}>
           {"Your reading inbox.\nAll your feeds, one place."}
         </Text>
 

@@ -33,6 +33,7 @@ import {
 } from "@expo/ui/swift-ui/modifiers";
 import type { RefObject } from "react";
 import { ERROR_SHAKE_STEP_DURATION_SECONDS } from "../hooks/use-error-shake";
+import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
 
 const FULL_WIDTH = [frame({ maxWidth: Infinity })];
 const OTP_LENGTH = 6;
@@ -81,7 +82,11 @@ export function EmailFormStep({
       <Text
         modifiers={[
           padding({ top: 20 }),
-          font({ size: 24, weight: "bold" }),
+          font({
+            family: FONT_FAMILIES.inter.bold,
+            size: FONT_SIZES.screenTitle,
+            weight: SWIFT_FONT_WEIGHTS.bold,
+          }),
           foregroundStyle(theme.foreground),
         ]}
       >
@@ -91,7 +96,11 @@ export function EmailFormStep({
       <Text
         modifiers={[
           padding({ top: 2 }),
-          font({ size: 16, weight: "medium" }),
+          font({
+            family: FONT_FAMILIES.inter.medium,
+            size: FONT_SIZES.body,
+            weight: SWIFT_FONT_WEIGHTS.medium,
+          }),
           foregroundStyle(theme.foreground),
         ]}
       >
@@ -109,7 +118,7 @@ export function EmailFormStep({
           textContentType("emailAddress"),
           textInputAutocapitalization("never"),
           autocorrectionDisabled(),
-          font({ size: 17 }),
+          font({ family: FONT_FAMILIES.inter.regular, size: FONT_SIZES.input }),
           foregroundStyle(theme.foreground),
           padding({ horizontal: 20 }),
           ...FULL_WIDTH,
@@ -181,7 +190,11 @@ export function OTPFormStep({
       <Text
         modifiers={[
           padding({ top: 20 }),
-          font({ size: 24, weight: "bold" }),
+          font({
+            family: FONT_FAMILIES.inter.bold,
+            size: FONT_SIZES.screenTitle,
+            weight: SWIFT_FONT_WEIGHTS.bold,
+          }),
           foregroundStyle(theme.foreground),
         ]}
       >
@@ -191,7 +204,11 @@ export function OTPFormStep({
       <Text
         modifiers={[
           padding({ top: 2 }),
-          font({ size: 16, weight: "medium" }),
+          font({
+            family: FONT_FAMILIES.inter.medium,
+            size: FONT_SIZES.body,
+            weight: SWIFT_FONT_WEIGHTS.medium,
+          }),
           foregroundStyle(theme.foreground),
         ]}
       >
@@ -230,7 +247,11 @@ export function OTPFormStep({
             >
               <Text
                 modifiers={[
-                  font({ size: 22, weight: "semibold" }),
+                  font({
+                    family: FONT_FAMILIES.inter.semibold,
+                    size: FONT_SIZES.otp,
+                    weight: SWIFT_FONT_WEIGHTS.semibold,
+                  }),
                   foregroundStyle(theme.foreground),
                 ]}
               >

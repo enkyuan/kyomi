@@ -1,10 +1,10 @@
 import { useSyncExternalStore } from "react";
-import { createMMKV } from "react-native-mmkv";
+import { createAppStorage } from "@lib/storage";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { parseRecentArticles, recordRecentArticle, type RecentArticle } from "./history";
 
 const RECENT_ARTICLES_KEY = "recent-articles";
-const storage = createMMKV({ id: "recent-articles" });
+const storage = createAppStorage("recent-articles");
 const listeners = new Set<() => void>();
 
 let snapshot: RecentArticle[] | undefined;

@@ -1,5 +1,6 @@
 import { Text, useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
 export function SwitcherScreen() {
@@ -11,7 +12,9 @@ export function SwitcherScreen() {
       edges={["top"]}
       style={{ backgroundColor: theme.background }}
     >
-      <Text className="text-xl font-semibold text-foreground">Switcher</Text>
+      <Text className="text-foreground" style={FONT_STYLES.sectionTitle}>
+        Switcher
+      </Text>
     </SafeAreaView>
   );
 }

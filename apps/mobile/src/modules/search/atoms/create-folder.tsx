@@ -1,5 +1,6 @@
 import { BottomSheet, Button, Column, Row, Text, TextInput, useNativeState } from "@expo/ui";
 import { useColorScheme } from "react-native";
+import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { useCreateFolder } from "../hooks/use-create-folder";
 import type { CreateFolderProps } from "../lib/create-folder.types";
@@ -16,10 +17,10 @@ export function CreateFolder({ isPresented, onDismiss }: CreateFolderProps) {
     <BottomSheet isPresented={isPresented} onDismiss={form.handleDismiss}>
       <Column alignment="start" spacing={20} style={{ paddingBottom: 12, width: "100%" }}>
         <Column alignment="start" spacing={6} style={{ width: "100%" }}>
-          <Text textStyle={{ color: theme.foreground, fontSize: 22, fontWeight: "600" }}>
+          <Text textStyle={{ ...FONT_STYLES.sectionTitle, color: theme.foreground }}>
             Create folder
           </Text>
-          <Text textStyle={{ color: theme.mutedForeground, fontSize: 15, lineHeight: 21 }}>
+          <Text textStyle={{ ...FONT_STYLES.bodyMedium, color: theme.mutedForeground }}>
             Name a folder to organize your feeds.
           </Text>
         </Column>
@@ -45,11 +46,11 @@ export function CreateFolder({ isPresented, onDismiss }: CreateFolderProps) {
               paddingVertical: 13,
               width: "100%",
             }}
-            textStyle={{ color: theme.foreground, fontSize: 17 }}
+            textStyle={{ ...FONT_STYLES.input, color: theme.foreground }}
             value={name}
           />
           {form.nameError ? (
-            <Text textStyle={{ color: ERROR_COLOR, fontSize: 13 }}>{form.nameError}</Text>
+            <Text textStyle={{ ...FONT_STYLES.error, color: ERROR_COLOR }}>{form.nameError}</Text>
           ) : null}
         </Column>
 

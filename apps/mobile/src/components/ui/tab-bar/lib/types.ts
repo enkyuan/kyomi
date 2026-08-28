@@ -1,7 +1,15 @@
-import type { ViewStyle } from "react-native";
-import type { KyomiSourceItem, KyomiSourceKind } from "../../../../../modules/tab-bar";
-import type { SharedValue, AnimatedStyle } from "react-native-reanimated";
 import type { ComposedGesture, GestureType } from "react-native-gesture-handler";
+import type { ViewStyle } from "react-native";
+import type { AnimatedStyle, SharedValue } from "react-native-reanimated";
+
+export type KyomiSourceKind = "folder" | "feed";
+export type KyomiSourceItem = {
+  readonly id: string;
+  readonly title: string;
+  readonly kind: KyomiSourceKind;
+  readonly iconUrl?: string;
+  readonly unreadCount?: number;
+};
 
 export interface TabBarNavigationRoute {
   key: string;

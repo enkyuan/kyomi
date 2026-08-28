@@ -7,6 +7,7 @@ import { FilterIcon } from "@/components/icons/filter";
 import { SettingsIcon } from "@/components/icons/settings";
 import { CollapsingHeader, HeaderActionButton, COMPACT_NAV_HEIGHT } from "@ui/header";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
+import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { List } from "@modules/inbox/components/list";
 import { type ArticleScope } from "@modules/inbox/hooks/use-articles";
@@ -35,14 +36,20 @@ function InboxEmptyState({ hasNoFeeds, height, topContentInset }: InboxEmptyStat
         <Text
           adjustsFontSizeToFit
           allowFontScaling={false}
-          className="w-full self-center text-center font-semibold text-foreground"
+          className="w-full self-center text-center text-foreground"
           minimumFontScale={0.8}
           numberOfLines={1}
-          style={{ fontSize: titleFontSize, lineHeight: Math.round(titleFontSize * 1.35) }}
+          style={[
+            FONT_STYLES.sectionTitle,
+            { fontSize: titleFontSize, lineHeight: Math.round(titleFontSize * 1.35) },
+          ]}
         >
           {hasNoFeeds ? "No feeds yet" : "No articles yet"}
         </Text>
-        <Text className="w-full self-center max-w-88 text-center text-[13px] leading-5 text-muted-foreground">
+        <Text
+          className="w-full self-center max-w-88 text-center text-muted-foreground"
+          style={FONT_STYLES.bodySmall}
+        >
           {hasNoFeeds
             ? "Follow a feed to see its latest stories here."
             : "New stories will show up here after feeds publish or refresh."}

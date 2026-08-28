@@ -29,10 +29,15 @@ import {
 import { useCallback, useRef } from "react";
 import { EmailFormStep, OTPFormStep, type EmailStepTheme } from "./components/step-content.ios";
 import { useEmailAuth } from "./hooks/use-email-auth";
+import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
 
 const FULL_WIDTH = [frame({ maxWidth: Infinity })];
 const CENTERED_LABEL = [frame({ maxWidth: Infinity, alignment: "center" })];
-const LABEL_FONT = font({ weight: "semibold", size: 18 });
+const LABEL_FONT = font({
+  family: FONT_FAMILIES.inter.semibold,
+  size: FONT_SIZES.button,
+  weight: SWIFT_FONT_WEIGHTS.semibold,
+});
 const STEP_TRANSITION = Animation.easeOut({ duration: 0.24 });
 const REDUCED_MOTION_STEP_TRANSITION = Animation.easeOut({ duration: 0.16 });
 
@@ -87,7 +92,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               controlSize("regular"),
               labelStyle("iconOnly"),
               foregroundStyle(theme.foreground),
-              font({ weight: "semibold" }),
+              font({ weight: SWIFT_FONT_WEIGHTS.semibold }),
             ]}
           />
         </HStack>
@@ -103,7 +108,11 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
             <Image
               systemName="envelope"
               modifiers={[
-                font({ size: 24, weight: "semibold" }),
+                font({
+                  family: FONT_FAMILIES.inter.semibold,
+                  size: FONT_SIZES.screenTitle,
+                  weight: SWIFT_FONT_WEIGHTS.semibold,
+                }),
                 foregroundStyle(theme.foreground),
               ]}
             />
@@ -154,7 +163,11 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                   <Text
                     modifiers={[
                       ...CENTERED_LABEL,
-                      font({ size: 17, weight: "medium" }),
+                      font({
+                        family: FONT_FAMILIES.inter.medium,
+                        size: FONT_SIZES.button,
+                        weight: SWIFT_FONT_WEIGHTS.medium,
+                      }),
                       foregroundStyle(theme.foreground),
                     ]}
                   >
