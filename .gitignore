@@ -30,6 +30,8 @@ packages/catalog/**/*.parquet
 packages/catalog/**/*.duckdb
 packages/catalog/**/*.db
 .gstack/
+.pi/
+.poolside/
 /.superpowers/
 /.claude/launch.json
 .pi/
