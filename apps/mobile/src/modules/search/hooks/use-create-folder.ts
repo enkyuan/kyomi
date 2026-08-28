@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { fetchMobileApiJson } from "@/lib/api";
 import { toast } from "@ui/toast";
@@ -36,11 +36,11 @@ export function useCreateFolder({ isPresented, name, onDismiss }: UseCreateFolde
   const isPresentedRef = useRef(isPresented);
   const [nameError, setNameError] = useState<string | null>(null);
 
-  function reset() {
+  const reset = useCallback(() => {
     if (!isMountedRef.current) return;
     name.value = "";
     setNameError(null);
-  }
+  }, [name]);
 
   function handleDismiss() {
     if (!isMountedRef.current) return;
@@ -90,7 +90,7 @@ export function useCreateFolder({ isPresented, name, onDismiss }: UseCreateFolde
     if (isPresented) {
       reset();
     }
-  }, [isPresented, name]);
+  }, [isPresented, reset]);
 
   return {
     handleDismiss,

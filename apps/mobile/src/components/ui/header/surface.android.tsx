@@ -47,7 +47,7 @@ export function HeaderSurface({ children, blurTarget, scrollY, style }: HeaderSu
   }));
 
   return (
-    <View style={[{ elevation: 1, zIndex: 1 }, style]}>
+    <View style={[{ boxShadow: "0 1px 2px rgba(0, 0, 0, 0.12)", zIndex: 1 }, style]}>
       <AnimatedBlurView
         animatedProps={animatedProps}
         blurMethod="dimezisBlurViewSdk31Plus"

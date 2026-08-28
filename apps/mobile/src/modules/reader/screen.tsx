@@ -1,13 +1,16 @@
 import { Stack } from "expo-router";
 import { useQueryClient, type InfiniteData } from "@tanstack/react-query";
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Pressable, Text, View, useColorScheme } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { getReaderTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { Skeleton } from "@ui/skeleton";
 import { fetchMobileApiJson, resolveMobileApiUrl } from "@/lib/api";
 import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
-import { allArticlesQueryKey } from "@modules/inbox/hooks/use-articles";
+import {
+  exploreArticlesQueryKey,
+  subscribedArticlesQueryKey,
+} from "@modules/inbox/hooks/use-articles";
 import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
 import { saveRecentArticle } from "@modules/recents/lib/store";
 import ArticleBody from "./components/article-body.dom";
@@ -23,6 +26,7 @@ const READER_SKELETON_PARAGRAPHS = [
   ["100%", "94%", "88%", "100%", "78%"],
   ["96%", "100%", "90%", "82%"],
 ] as const;
+const articleQueryKeys = [exploreArticlesQueryKey, subscribedArticlesQueryKey] as const;
 
 export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const colorScheme = useColorScheme();
@@ -33,6 +37,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const tabBarOcclusionHeight = getReaderTabBarOcclusionHeight(insets);
   const [isDomReady, setIsDomReady] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const viewedArticleIdRef = useRef<string | null>(null);
   const handleArticleReady = useCallback(() => {
     setIsDomReady(true);
   }, []);
@@ -54,10 +59,11 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   }, [articleId]);
 
   useEffect(() => {
-    if (!article) {
+    if (!article || viewedArticleIdRef.current === article.id) {
       return;
     }
 
+    viewedArticleIdRef.current = article.id;
     saveRecentArticle(article);
 
     const lastViewedAt = new Date().toISOString();
@@ -66,9 +72,8 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
       { method: "POST" },
     )
       .then(() => {
-        queryClient.setQueryData<InfiniteData<CursorListResponseDto>>(
-          allArticlesQueryKey,
-          (current) => {
+        for (const queryKey of articleQueryKeys) {
+          queryClient.setQueryData<InfiniteData<CursorListResponseDto>>(queryKey, (current) => {
             if (!current) {
               return current;
             }
@@ -82,12 +87,14 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
                 ),
               })),
             };
-          },
-        );
-        void queryClient.invalidateQueries({ queryKey: allArticlesQueryKey });
+          });
+        }
+        for (const queryKey of articleQueryKeys) {
+          void queryClient.invalidateQueries({ queryKey });
+        }
       })
       .catch(() => undefined);
-  }, [article?.id, queryClient]);
+  }, [article, queryClient]);
 
   if (isLoading) {
     return (

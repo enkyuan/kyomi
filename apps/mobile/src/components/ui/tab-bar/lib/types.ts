@@ -1,8 +1,5 @@
 import type { ViewStyle } from "react-native";
-import type {
-  KyomiSourceItem,
-  KyomiSourceKind,
-} from "../../../../../modules/tab-bar/src/KyomiNativeTabBar.types";
+import type { KyomiSourceItem, KyomiSourceKind } from "../../../../../modules/tab-bar";
 import type { SharedValue, AnimatedStyle } from "react-native-reanimated";
 import type { ComposedGesture, GestureType } from "react-native-gesture-handler";
 

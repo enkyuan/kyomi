@@ -3,21 +3,28 @@ import { mobileApiPrefetchKey } from "@lib/prefetch";
 
 const PAGE_LIMIT = 100;
 
-export function allArticlesPath(cursor?: string): string {
+function articlesQuery(cursor?: string): string {
   const query = new URLSearchParams({
     limit: String(PAGE_LIMIT),
     sort: "latest",
   });
   if (cursor) query.set("cursor", cursor);
-
-  return `/api/v1/articles/views/all?${query.toString()}`;
+  return query.toString();
 }
 
-export function allArticlesPrefetchKey(): string {
-  return mobileApiPrefetchKey(allArticlesPath());
+export function subscribedArticlesPath(cursor?: string): string {
+  return `/api/v1/articles?${articlesQuery(cursor)}`;
 }
 
-export function prefetchInitialAllArticles(): void {
-  const path = allArticlesPath();
+export function exploreArticlesPath(cursor?: string): string {
+  return `/api/v1/articles/views/all?${articlesQuery(cursor)}`;
+}
+
+export function exploreArticlesPrefetchKey(): string {
+  return mobileApiPrefetchKey(exploreArticlesPath());
+}
+
+export function prefetchInitialExploreArticles(): void {
+  const path = exploreArticlesPath();
   prefetchMobileApi(path, { prefetchKey: mobileApiPrefetchKey(path) });
 }

@@ -9,7 +9,7 @@ struct KyomiSource: Record {
   @Field var unreadCount: Int?
 }
 
-public final class KyomiTabBarProps: UIBaseViewProps {
+public final class TabBarProps: UIBaseViewProps {
   @Field var activeTab: String = "feeds"
   @Field var sources: [KyomiSource] = []
   @Field var selectedSourceId: String?

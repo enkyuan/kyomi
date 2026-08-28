@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = 'KyomiNativeTabBar'
+  s.name = 'TabBar'
   s.version = '1.0.0'
   s.summary = 'Kyomi native floating tab bar'
   s.description = 'Native floating tab bar for Kyomi mobile.'

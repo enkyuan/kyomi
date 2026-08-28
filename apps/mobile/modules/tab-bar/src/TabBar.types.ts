@@ -1,6 +1,6 @@
 import type { NativeSyntheticEvent, ViewProps } from "react-native";
 
-export type KyomiTab = "feeds" | "all";
+export type KyomiTab = "feeds" | "explore";
 export type KyomiSourceKind = "folder" | "feed";
 
 export type KyomiSourceItem = {
@@ -18,7 +18,7 @@ export type KyomiSourceSelectEvent = NativeSyntheticEvent<{
 }>;
 export type KyomiSearchQueryEvent = NativeSyntheticEvent<{ query: string }>;
 
-export type KyomiNativeTabBarProps = ViewProps & {
+export type TabBarProps = ViewProps & {
   readonly activeTab: KyomiTab;
   readonly sources: readonly KyomiSourceItem[];
   readonly selectedSourceId?: string;

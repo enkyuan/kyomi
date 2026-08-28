@@ -16,6 +16,8 @@ type ScrollHeaderLayoutProps = {
   scrollY: SharedValue<number>;
   /** Total header height including the safe-area inset, for content padding. */
   children: (args: { blurTarget: RefObject<View | null>; headerHeight: number }) => ReactNode;
+  /** Optional header supplied by the owning screen. */
+  header?: ReactNode;
 };
 
 /**
@@ -24,7 +26,7 @@ type ScrollHeaderLayoutProps = {
  * compose this so the header can't drift between them; each screen still owns
  * its own scroll model (the part that legitimately differs) via `scrollY`.
  */
-export function ScrollHeaderLayout({ children, scrollY, title }: ScrollHeaderLayoutProps) {
+export function ScrollHeaderLayout({ children, header, scrollY, title }: ScrollHeaderLayoutProps) {
   const insets = useSafeAreaInsets();
   const theme = getMobileSurfaceTheme(useColorScheme());
   const headerHeight = insets.top + TITLE_CONTENT_HEIGHT;
@@ -35,13 +37,15 @@ export function ScrollHeaderLayout({ children, scrollY, title }: ScrollHeaderLay
       <BlurTargetView ref={blurTarget} style={{ flex: 1 }}>
         {children({ blurTarget, headerHeight })}
       </BlurTargetView>
-      <HeaderSurface
-        blurTarget={blurTarget}
-        scrollY={scrollY}
-        style={{ left: 0, position: "absolute", right: 0, top: 0 }}
-      >
-        <Header surface="transparent" title={title} />
-      </HeaderSurface>
+      {header ?? (
+        <HeaderSurface
+          blurTarget={blurTarget}
+          scrollY={scrollY}
+          style={{ left: 0, position: "absolute", right: 0, top: 0 }}
+        >
+          <Header surface="transparent" title={title} />
+        </HeaderSurface>
+      )}
     </View>
   );
 }

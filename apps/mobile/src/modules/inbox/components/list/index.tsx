@@ -8,7 +8,7 @@ import { Skeleton } from "@ui/skeleton";
 import { COMPACT_NAV_HEIGHT } from "@ui/header";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
-import { useArticles } from "@modules/inbox/hooks/use-articles";
+import { type ArticleScope, useArticles } from "@modules/inbox/hooks/use-articles";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { feedItemTypography } from "@modules/inbox/lib/layout";
 import { prefetchReaderArticle } from "@modules/reader/lib/article-request";
@@ -22,6 +22,7 @@ const MAX_SKELETON_ROWS = 12;
 type ListProps = {
   ListEmptyComponent: ReactElement;
   ListHeaderComponent?: ReactElement | null;
+  scope: ArticleScope;
   scrollY: SharedValue<number>;
   topContentInset?: number;
 };
@@ -29,6 +30,7 @@ type ListProps = {
 export function List({
   ListEmptyComponent,
   ListHeaderComponent,
+  scope,
   scrollY,
   topContentInset = 0,
 }: ListProps) {
@@ -38,7 +40,7 @@ export function List({
   const scrollbarTopInset = insets.top + COMPACT_NAV_HEIGHT;
   const isIOS = Platform.OS === "ios";
 
-  const { items, isLoading, isFetchingNextPage, hasNextPage, fetchNextPage } = useArticles();
+  const { items, isLoading, isFetchingNextPage, hasNextPage, fetchNextPage } = useArticles(scope);
   const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
   const minimizeScrollHandler = useTabBarMinimizeScroll(scrollY);
 

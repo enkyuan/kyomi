@@ -1,2 +1,2 @@
-export { default as KyomiNativeTabBar } from "./src/KyomiNativeTabBarView";
-export * from "./src/KyomiNativeTabBar.types";
+export { default as TabBar } from "./src/TabBarView";
+export * from "./src/TabBar.types";

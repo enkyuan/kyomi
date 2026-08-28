@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { mobileApiPrefetchKey } from "../../../../apps/mobile/src/lib/prefetch-key";
+import { mobileApiPrefetchKey } from "../../../../apps/mobile/src/lib/prefetch";
 
 describe("mobile API prefetch keys", () => {
   test("uses the complete API path so distinct query variants cannot share a response", () => {

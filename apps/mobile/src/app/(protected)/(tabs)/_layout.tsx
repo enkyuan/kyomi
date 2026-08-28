@@ -17,7 +17,7 @@ export default function TabsLayout() {
         tabBar={(props) => <TabBarWithMinimize {...(props as unknown as TabBarProps)} />}
       >
         <Tabs.Screen name="(inbox)" options={{ title: "My feeds" }} />
-        <Tabs.Screen name="all" options={{ title: "All" }} />
+        <Tabs.Screen name="explore" options={{ title: "Explore" }} />
       </Tabs>
     </TabBarMinimizeProvider>
   );

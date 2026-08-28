@@ -1,26 +1,24 @@
-import { useCallback, useEffect, useState } from "react";
-import { Platform, StyleSheet, View } from "react-native";
+import { useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated from "react-native-reanimated";
-import { KyomiNativeTabBar } from "../../../../modules/tab-bar";
 import { CloseSearchButton, SearchButton } from "./components/search";
 import { TabBarPill } from "./components/pill";
+import { useAnimation } from "./hooks/use-animation";
 import { usePill } from "./hooks/use-pill";
 import { useSearch } from "./hooks/use-search";
-import { useAnimation } from "./hooks/use-animation";
 import { TAB_BAR_BOTTOM_PADDING, TAB_BAR_HORIZONTAL_PADDING } from "./lib/constants";
 import type { TabBarProps } from "./lib/types";
 
 export function TabBar({
   descriptors: _descriptors,
-  minimized = false,
+  minimized: _minimized = false,
   navigation,
   onSearchQueryChange,
-  onSearchSubmit,
-  onSelectSource,
+  onSelectSource: _onSelectSource,
   onTabChange,
-  selectedSourceId,
-  sources = [],
+  selectedSourceId: _selectedSourceId,
+  sources: _sources = [],
   state,
 }: TabBarProps) {
   const insets = useSafeAreaInsets();
@@ -44,44 +42,35 @@ export function TabBar({
     }
   }, [state, activeTab, setActiveTab]);
 
-  const handleTabPress = useCallback(
-    (index: number) => {
-      if (index > 1) {
-        return;
-      }
+  function handleTabPress(index: number) {
+    if (index > 1) {
+      return;
+    }
 
-      setActiveTab(index);
-      onTabChange?.(index);
+    setActiveTab(index);
+    onTabChange?.(index);
 
-      if (state && navigation) {
-        const route = state.routes[index];
-        if (route) {
-          const isFocused = state.index === index;
-          const event = navigation.emit({
-            canPreventDefault: true,
-            target: route.key,
-            type: "tabPress",
-          });
+    if (state && navigation) {
+      const route = state.routes[index];
+      if (route) {
+        const isFocused = state.index === index;
+        const event = navigation.emit({
+          canPreventDefault: true,
+          target: route.key,
+          type: "tabPress",
+        });
 
-          if (!isFocused && !event.defaultPrevented) {
-            navigation.navigate(route.name, route.params);
-          }
+        if (!isFocused && !event.defaultPrevented) {
+          navigation.navigate(route.name, route.params);
         }
       }
-    },
-    [navigation, onTabChange, setActiveTab, state],
-  );
+    }
+  }
 
-  const handleSearchQuery = useCallback(
-    (query: string) => {
-      if (Platform.OS !== "ios") {
-        setSearchQuery(query);
-      }
-
-      onSearchQueryChange?.(query);
-    },
-    [onSearchQueryChange],
-  );
+  function handleSearchQuery(query: string) {
+    setSearchQuery(query);
+    onSearchQueryChange?.(query);
+  }
 
   const { glowProgress, overflowX, overflowY, panGesture, pillPressed, touchX, touchY } = usePill();
 
@@ -104,27 +93,6 @@ export function TabBar({
     touchX: closeTouchX,
     touchY: closeTouchY,
   } = useSearch(toggleSearch, false);
-
-  if (Platform.OS === "ios") {
-    return (
-      <View pointerEvents="box-none" style={styles.nativeContainer}>
-        <KyomiNativeTabBar
-          activeTab={activeTab === 1 ? "all" : "feeds"}
-          minimized={isSearchActive ? false : minimized}
-          onSearchClose={toggleSearch}
-          onSearchPress={toggleSearch}
-          onSearchQueryChange={(event) => handleSearchQuery(event.nativeEvent.query)}
-          onSearchSubmit={(event) => onSearchSubmit?.(event.nativeEvent.query)}
-          onSelectSource={(event) => onSelectSource?.(event.nativeEvent)}
-          onSelectTab={(event) => handleTabPress(event.nativeEvent.tab === "all" ? 1 : 0)}
-          searchActive={isSearchActive}
-          selectedSourceId={selectedSourceId}
-          sources={sources}
-          style={StyleSheet.absoluteFill}
-        />
-      </View>
-    );
-  }
 
   return (
     <Animated.View
@@ -175,14 +143,6 @@ export default TabBar;
 export type { TabBarProps };
 
 const styles = StyleSheet.create({
-  nativeContainer: {
-    bottom: 0,
-    height: 120,
-    left: 0,
-    position: "absolute",
-    right: 0,
-    zIndex: 50,
-  },
   container: {
     alignItems: "flex-end",
     bottom: 0,

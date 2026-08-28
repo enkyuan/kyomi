@@ -1,6 +1,9 @@
 import { useMutation, useQueryClient, type InfiniteData } from "@tanstack/react-query";
 import { fetchMobileApiJson } from "@/lib/api";
-import { allArticlesQueryKey } from "@modules/inbox/hooks/use-articles";
+import {
+  exploreArticlesQueryKey,
+  subscribedArticlesQueryKey,
+} from "@modules/inbox/hooks/use-articles";
 import type { ArticleListItemDto, CursorListResponseDto } from "@kyomi/reader/schemas/article";
 
 type ArticleStatePatch = Partial<Pick<ArticleListItemDto, "isRead" | "isSaved">> & {
@@ -14,6 +17,7 @@ type UpdateArticleStateInput = {
 };
 
 type ArticleStateSnapshot = InfiniteData<CursorListResponseDto> | undefined;
+const articleQueryKeys = [exploreArticlesQueryKey, subscribedArticlesQueryKey] as const;
 
 async function updateArticleState({ itemId, patch }: UpdateArticleStateInput) {
   return fetchMobileApiJson<{ message: string }>(`/api/v1/articles/${encodeURIComponent(itemId)}`, {
@@ -29,30 +33,41 @@ export function useArticleStateMutation() {
   return useMutation({
     mutationFn: updateArticleState,
     onMutate: async ({ itemId, patch, removeFromList }) => {
-      await queryClient.cancelQueries({ queryKey: allArticlesQueryKey });
-      const snapshot = queryClient.getQueryData<ArticleStateSnapshot>(allArticlesQueryKey);
+      await Promise.all(
+        articleQueryKeys.map((queryKey) => queryClient.cancelQueries({ queryKey })),
+      );
+      const snapshots = articleQueryKeys.map((queryKey) => ({
+        queryKey,
+        snapshot: queryClient.getQueryData<ArticleStateSnapshot>(queryKey),
+      }));
 
-      queryClient.setQueryData<ArticleStateSnapshot>(allArticlesQueryKey, (current) => {
-        if (!current) return current;
+      for (const queryKey of articleQueryKeys) {
+        queryClient.setQueryData<ArticleStateSnapshot>(queryKey, (current) => {
+          if (!current) return current;
 
-        return {
-          ...current,
-          pages: current.pages.map((page) => ({
-            ...page,
-            items: removeFromList
-              ? page.items.filter((item) => item.id !== itemId)
-              : page.items.map((item) => (item.id === itemId ? { ...item, ...patch } : item)),
-          })),
-        };
-      });
+          return {
+            ...current,
+            pages: current.pages.map((page) => ({
+              ...page,
+              items: removeFromList
+                ? page.items.filter((item) => item.id !== itemId)
+                : page.items.map((item) => (item.id === itemId ? { ...item, ...patch } : item)),
+            })),
+          };
+        });
+      }
 
-      return { snapshot };
+      return { snapshots };
     },
     onError: (_error, _variables, context) => {
-      queryClient.setQueryData(allArticlesQueryKey, context?.snapshot);
+      for (const { queryKey, snapshot } of context?.snapshots ?? []) {
+        queryClient.setQueryData(queryKey, snapshot);
+      }
     },
     onSettled: () => {
-      void queryClient.invalidateQueries({ queryKey: allArticlesQueryKey });
+      for (const queryKey of articleQueryKeys) {
+        void queryClient.invalidateQueries({ queryKey });
+      }
     },
   });
 }

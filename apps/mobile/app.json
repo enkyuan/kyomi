@@ -23,6 +23,7 @@
       "bundleIdentifier": "com.anonymous.mobile",
       "deploymentTarget": "17.0",
       "infoPlist": {
+        "UIDesignRequiresCompatibility": true,
         "UIViewControllerBasedStatusBarAppearance": true
       }
     }

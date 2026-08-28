@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { fetchMobileApiJson } from "@/lib/api";
+import { subscribedFeedsQueryKey } from "@modules/inbox/hooks/use-subscribed-feeds";
 
 const DISCOVER_DEBOUNCE_MS = 260;
 const DISCOVER_RESULT_LIMIT = 50;
@@ -132,6 +133,7 @@ export function useFollowDiscoveredFeed() {
   return useMutation({
     mutationFn: followFeed,
     onSuccess: (_result, item) => {
+      void queryClient.invalidateQueries({ queryKey: subscribedFeedsQueryKey });
       queryClient.setQueriesData<DiscoveredFeed[]>({ queryKey: ["discover", "feeds"] }, (items) =>
         items?.map((current) =>
           current.url === item.url ? { ...current, isSubscribed: true } : current,

@@ -1,6 +1,7 @@
+import { Image } from "expo-image";
 import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
 import { useEffect, useMemo, useState } from "react";
-import { Image, useColorScheme, View } from "react-native";
+import { useColorScheme, View } from "react-native";
 import { RssIcon } from "@/components/icons/rss";
 import { resolveMobileApiUrl } from "@/lib/api";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
@@ -53,7 +54,7 @@ export function FeedFavicon({ faviconUrl, feedUrl, siteUrl, title, size = 22 }: 
             setLoadedFaviconUrl(null);
             setCandidateIndex((current) => Math.min(current + 1, candidateUrls.length));
           }}
-          resizeMode="contain"
+          contentFit="contain"
           source={{ uri: faviconSource }}
         />
       ) : null}

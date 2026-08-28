@@ -7,7 +7,7 @@ export default function InboxLayout() {
       <Stack.Screen
         name="index"
         options={
-          Platform.OS === "ios" ? { headerShown: false } : { headerShown: true, title: "Inbox" }
+          Platform.OS === "ios" ? { headerShown: false } : { headerShown: true, title: "My Feeds" }
         }
       />
       <Stack.Screen name="[article]" options={{ headerShown: false }} />

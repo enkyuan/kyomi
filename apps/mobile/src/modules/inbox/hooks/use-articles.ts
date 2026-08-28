@@ -1,15 +1,29 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 import { fetchMobileApiJson } from "@/lib/api";
-import { allArticlesPath, allArticlesPrefetchKey } from "@modules/inbox/lib/articles";
+import {
+  exploreArticlesPath,
+  exploreArticlesPrefetchKey,
+  subscribedArticlesPath,
+} from "@modules/inbox/lib/articles";
 import type { ArticleListItemDto, CursorListResponseDto } from "@kyomi/reader/schemas/article";
 
-export const allArticlesQueryKey = ["inbox", "articles", "all"] as const;
+export const subscribedArticlesQueryKey = ["inbox", "articles", "subscribed"] as const;
+export const exploreArticlesQueryKey = ["inbox", "articles", "explore"] as const;
 
-async function fetchAllArticles(cursor: string | undefined): Promise<CursorListResponseDto> {
-  return fetchMobileApiJson<CursorListResponseDto>(allArticlesPath(cursor), {
-    prefetchKey: cursor ? undefined : allArticlesPrefetchKey(),
-  });
+export type ArticleScope = "subscribed" | "explore";
+
+async function fetchArticles(
+  scope: ArticleScope,
+  cursor: string | undefined,
+): Promise<CursorListResponseDto> {
+  const isExplore = scope === "explore";
+  return fetchMobileApiJson<CursorListResponseDto>(
+    isExplore ? exploreArticlesPath(cursor) : subscribedArticlesPath(cursor),
+    {
+      prefetchKey: isExplore && !cursor ? exploreArticlesPrefetchKey() : undefined,
+    },
+  );
 }
 
 function dedupeById(pages: CursorListResponseDto[] | undefined): ArticleListItemDto[] {
@@ -23,10 +37,10 @@ function dedupeById(pages: CursorListResponseDto[] | undefined): ArticleListItem
   return Array.from(unique.values());
 }
 
-export function useArticles() {
+export function useArticles(scope: ArticleScope = "subscribed") {
   const query = useInfiniteQuery({
-    queryKey: allArticlesQueryKey,
-    queryFn: ({ pageParam }) => fetchAllArticles(pageParam),
+    queryKey: scope === "explore" ? exploreArticlesQueryKey : subscribedArticlesQueryKey,
+    queryFn: ({ pageParam }) => fetchArticles(scope, pageParam),
     initialPageParam: undefined as string | undefined,
     getNextPageParam: (lastPage) =>
       lastPage.has_more ? (lastPage.next_cursor ?? undefined) : undefined,
