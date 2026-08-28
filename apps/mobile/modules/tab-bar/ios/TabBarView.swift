@@ -9,11 +9,11 @@ public struct TabBarView: ExpoSwiftUI.View {
   @Environment(\.accessibilityReduceMotion)
   private var reduceMotion
 
+  @Environment(\.colorScheme)
+  private var colorScheme
+
   @FocusState
   var searchFocused: Bool
-
-  @Namespace
-  private var glassNamespace
 
   @State
   var searchText = ""
@@ -65,19 +65,27 @@ public struct TabBarView: ExpoSwiftUI.View {
     reduceMotion ? nil : .spring(response: 0.28, dampingFraction: 0.9)
   }
 
+  private var selectionPlatterFill: Color {
+    switch colorScheme {
+    case .dark:
+      Color.black.opacity(0.32)
+    case .light:
+      Color.white.opacity(0.42)
+    @unknown default:
+      Color.primary.opacity(0.16)
+    }
+  }
+
+  private var selectionPlatterHighlight: Color {
+    Color.white.opacity(colorScheme == .light ? 0.12 : 0.08)
+  }
+
   // MARK: - Navigation
 
   @ViewBuilder
   func mainCapsule(layout: Layout) -> some View {
     ZStack(alignment: .leading) {
-      if #available(iOS 26.0, *) {
-        GlassEffectContainer {
-          glassLayers(layout: layout)
-        }
-      } else {
-        glassLayers(layout: layout)
-      }
-
+      barSurface(layout: layout)
       navigationContents(layout: layout)
     }
     .frame(width: layout.mainWidth, height: layout.barHeight)
@@ -85,7 +93,7 @@ public struct TabBarView: ExpoSwiftUI.View {
     .accessibilityLabel("Kyomi navigation")
   }
 
-  private func glassLayers(layout: Layout) -> some View {
+  private func barSurface(layout: Layout) -> some View {
     ZStack(alignment: .leading) {
       Capsule()
         .fill(.clear)
@@ -94,7 +102,7 @@ public struct TabBarView: ExpoSwiftUI.View {
         .allowsHitTesting(false)
         .accessibilityHidden(true)
 
-      selectionGlass(layout: layout)
+      selectionSurface(layout: layout)
         .offset(x: layout.selectionX(for: props.activeTab))
     }
     .frame(width: layout.mainWidth, height: layout.barHeight)
@@ -129,23 +137,19 @@ public struct TabBarView: ExpoSwiftUI.View {
   }
 
   @ViewBuilder
-  func selectionGlass(layout: Layout) -> some View {
-    if #available(iOS 26.0, *) {
-      Capsule()
-        .fill(.clear)
-        .frame(width: layout.selectionWidth, height: layout.selectionHeight)
-        .glassEffect(.clear, in: Capsule())
-        .glassEffectID("selected-tab", in: glassNamespace)
-        .glassEffectTransition(.matchedGeometry)
-        .allowsHitTesting(false)
-        .accessibilityHidden(true)
-    } else {
-      Capsule()
-        .fill(.thinMaterial)
-        .frame(width: layout.selectionWidth, height: layout.selectionHeight)
-        .allowsHitTesting(false)
-        .accessibilityHidden(true)
-    }
+  func selectionSurface(layout: Layout) -> some View {
+    Capsule()
+      .fill(selectionPlatterFill)
+      .overlay {
+        Capsule()
+          .strokeBorder(selectionPlatterHighlight, lineWidth: 0.5)
+      }
+      .frame(
+        width: layout.selectionWidth,
+        height: layout.selectionHeight
+      )
+      .allowsHitTesting(false)
+      .accessibilityHidden(true)
   }
 
   func tabButton(
