@@ -54,7 +54,7 @@ export function List({
       : 6;
 
     return (
-      <View style={{ paddingTop: topContentInset }}>
+      <View style={{ paddingBottom: tabBarOcclusionHeight, paddingTop: topContentInset }}>
         {ListHeaderComponent}
         {Array.from({ length: rowCount }).map((_, index) => (
           <View className="relative" key={index}>
@@ -103,7 +103,11 @@ export function List({
     return (
       <Animated.ScrollView
         automaticallyAdjustsScrollIndicatorInsets={false}
-        contentContainerStyle={{ flexGrow: 1, paddingTop: topContentInset }}
+        contentContainerStyle={{
+          flexGrow: 1,
+          paddingBottom: tabBarOcclusionHeight,
+          paddingTop: topContentInset,
+        }}
         onScroll={minimizeScrollHandler}
         scrollEventThrottle={16}
         scrollIndicatorInsets={
@@ -121,7 +125,7 @@ export function List({
       ListHeaderComponent={ListHeaderComponent}
       automaticallyAdjustContentInsets={false}
       automaticallyAdjustsScrollIndicatorInsets={false}
-      contentContainerStyle={{ paddingTop: topContentInset }}
+      contentContainerStyle={{ paddingBottom: tabBarOcclusionHeight, paddingTop: topContentInset }}
       contentInsetAdjustmentBehavior="never"
       data={items}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
