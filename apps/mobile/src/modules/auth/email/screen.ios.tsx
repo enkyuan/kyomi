@@ -61,6 +61,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
     errorShakeOffset,
     handleDismiss,
     handleEmailChange,
+    handleEmailInvalidAlertChange,
     handleOtpChange,
     handleSendCode,
     handleUseDifferentEmail,
@@ -71,6 +72,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
     isSubmitting,
     otpValue,
     shouldReduceMotion,
+    showEmailInvalidAlert,
   } = useEmailAuth({ email, focusEmail, focusOtp, isPresented, onDismiss, otp });
 
   return (
@@ -148,10 +150,12 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 active={isEmailStep}
                 email={email}
                 emailFieldRef={emailFieldRef}
+                emailInvalidAlertPresented={showEmailInvalidAlert}
                 errorMessage={isEmailInvalid ? errorMessage : null}
                 errorShakeOffset={errorShakeOffset}
                 invalid={isEmailInvalid}
                 onEmailChange={handleEmailChange}
+                onEmailInvalidAlertChange={handleEmailInvalidAlertChange}
                 reducedMotion={shouldReduceMotion}
                 theme={theme}
               />

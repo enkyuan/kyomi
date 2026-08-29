@@ -36,6 +36,7 @@ export function useEmailAuth({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [invalidStep, setInvalidStep] = useState<"email" | "otp" | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [showEmailInvalidAlert, setShowEmailInvalidAlert] = useState(false);
   const {
     cancel: cancelErrorShake,
     offset: errorShakeOffset,
@@ -48,12 +49,18 @@ export function useEmailAuth({
     setIsSubmitting(false);
     setInvalidStep(null);
     setErrorMessage(null);
+    setShowEmailInvalidAlert(false);
     cancelErrorShake();
     setOtpValue("");
   }
 
-  function reportInvalid(nextInvalidStep: "email" | "otp", message?: string | null) {
+  function reportInvalid(
+    nextInvalidStep: "email" | "otp",
+    message?: string | null,
+    showEmailAlert = false,
+  ) {
     setInvalidStep(nextInvalidStep);
+    setShowEmailInvalidAlert(showEmailAlert);
     setErrorMessage(
       message ??
         (nextInvalidStep === "email"
@@ -75,6 +82,7 @@ export function useEmailAuth({
     setStep("email");
     setInvalidStep(null);
     setErrorMessage(null);
+    setShowEmailInvalidAlert(false);
     cancelErrorShake();
     setOtpValue("");
     otp.value = "";
@@ -84,15 +92,20 @@ export function useEmailAuth({
     if (invalidStep === "email" || errorMessage) {
       setInvalidStep(null);
       setErrorMessage(null);
+      setShowEmailInvalidAlert(false);
       cancelErrorShake();
     }
+  }
+
+  function handleEmailInvalidAlertChange(isPresented: boolean) {
+    if (!isPresented) setShowEmailInvalidAlert(false);
   }
 
   async function handleSendCode() {
     if (isSubmitting) return;
     const normalizedEmail = email.value.trim().toLowerCase();
     if (!isValidEmail(normalizedEmail)) {
-      reportInvalid("email", "Enter a valid email address.");
+      reportInvalid("email", "Enter a valid email address.", true);
       focusEmail?.();
       return;
     }
@@ -204,6 +217,7 @@ export function useEmailAuth({
     errorShakeOffset,
     handleDismiss,
     handleEmailChange,
+    handleEmailInvalidAlertChange,
     handleOtpChange,
     handleSendCode,
     handleUseDifferentEmail,
@@ -211,6 +225,7 @@ export function useEmailAuth({
     invalidStep,
     isEmailInvalid: invalidStep === "email",
     isEmailStep: step === "email",
+    showEmailInvalidAlert,
     isOtpInvalid: invalidStep === "otp",
     isSubmitting,
     otpValue,

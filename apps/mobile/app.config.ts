@@ -1,5 +1,15 @@
 import type { ConfigContext, ExpoConfig } from "expo/config";
 
+const localNetworkInfoPlist = process.env.EXPO_PUBLIC_AUTH_ORIGIN?.trim().startsWith("http://")
+  ? {
+      NSLocalNetworkUsageDescription:
+        "Kyomi connects to your local development server during development.",
+      NSAppTransportSecurity: {
+        NSAllowsLocalNetworking: true,
+      },
+    }
+  : {};
+
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   scheme: "kyomi",
@@ -23,6 +33,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     infoPlist: {
       UIDesignRequiresCompatibility: false,
       UIViewControllerBasedStatusBarAppearance: true,
+      ...localNetworkInfoPlist,
     },
   },
 });

@@ -1,4 +1,6 @@
 import {
+  Alert,
+  Button,
   HStack,
   Text,
   TextField,
@@ -48,10 +50,12 @@ type EmailFormStepProps = {
   active: boolean;
   email: ObservableStringState;
   emailFieldRef: RefObject<TextFieldRef | null>;
+  emailInvalidAlertPresented: boolean;
   errorMessage?: string | null;
   errorShakeOffset: number;
   invalid: boolean;
   onEmailChange: (value: string) => void;
+  onEmailInvalidAlertChange: (isPresented: boolean) => void;
   reducedMotion: boolean;
   theme: EmailStepTheme;
 };
@@ -60,91 +64,104 @@ export function EmailFormStep({
   active,
   email,
   emailFieldRef,
+  emailInvalidAlertPresented,
   errorMessage,
   errorShakeOffset,
   invalid,
   onEmailChange,
+  onEmailInvalidAlertChange,
   reducedMotion,
   theme,
 }: EmailFormStepProps) {
   return (
-    <VStack
-      alignment="leading"
-      modifiers={[
-        ...FULL_WIDTH,
-        ...(active ? [] : [frame({ height: 0, alignment: "topLeading" })]),
-        opacity(active ? 1 : 0),
-        scaleEffect(active || reducedMotion ? 1 : 0.96),
-        disabled(!active),
-        accessibilityHidden(!active),
-      ]}
+    <Alert
+      title="Email entered is not valid"
+      isPresented={emailInvalidAlertPresented}
+      onIsPresentedChange={onEmailInvalidAlertChange}
     >
-      <Text
-        modifiers={[
-          padding({ top: 20 }),
-          font({
-            family: FONT_FAMILIES.inter.bold,
-            size: FONT_SIZES.screenTitle,
-            weight: SWIFT_FONT_WEIGHTS.bold,
-          }),
-          foregroundStyle(theme.foreground),
-        ]}
-      >
-        Continue with Email
-      </Text>
+      <Alert.Trigger>
+        <VStack
+          alignment="leading"
+          modifiers={[
+            ...FULL_WIDTH,
+            ...(active ? [] : [frame({ height: 0, alignment: "topLeading" })]),
+            opacity(active ? 1 : 0),
+            scaleEffect(active || reducedMotion ? 1 : 0.96),
+            disabled(!active),
+            accessibilityHidden(!active),
+          ]}
+        >
+          <Text
+            modifiers={[
+              padding({ top: 20 }),
+              font({
+                family: FONT_FAMILIES.inter.bold,
+                size: FONT_SIZES.screenTitle,
+                weight: SWIFT_FONT_WEIGHTS.bold,
+              }),
+              foregroundStyle(theme.foreground),
+            ]}
+          >
+            Continue with Email
+          </Text>
 
-      <Text
-        modifiers={[
-          padding({ top: 2 }),
-          font({
-            family: FONT_FAMILIES.inter.medium,
-            size: FONT_SIZES.body,
-            weight: SWIFT_FONT_WEIGHTS.medium,
-          }),
-          foregroundStyle(theme.foreground),
-        ]}
-      >
-        Sign in or sign up to get started
-      </Text>
+          <Text
+            modifiers={[
+              padding({ top: 1 }),
+              font({
+                family: FONT_FAMILIES.inter.medium,
+                size: FONT_SIZES.bodyLarge,
+                weight: SWIFT_FONT_WEIGHTS.medium,
+              }),
+              foregroundStyle(theme.foreground),
+            ]}
+          >
+            Sign in or sign up to get started
+          </Text>
 
-      <TextField
-        ref={emailFieldRef}
-        text={email}
-        onTextChange={onEmailChange}
-        placeholder="you@example.com"
-        modifiers={[
-          textFieldStyle("plain"),
-          keyboardType("email-address"),
-          textContentType("emailAddress"),
-          textInputAutocapitalization("never"),
-          autocorrectionDisabled(),
-          font({ family: FONT_FAMILIES.inter.regular, size: FONT_SIZES.input }),
-          foregroundStyle(theme.foreground),
-          padding({ horizontal: 20 }),
-          ...FULL_WIDTH,
-          frame({ height: 52 }),
-          background(theme.input),
-          clipShape("capsule"),
-          strokeBorder({
-            color: invalid ? ERROR_COLOR : "clear",
-            style: { lineWidth: 2 },
-            shape: "capsule",
-          }),
-          offset({ x: invalid && !reducedMotion ? errorShakeOffset : 0 }),
-          animation(
-            reducedMotion ? REDUCED_MOTION_ERROR_TRANSITION : ERROR_SHAKE_ANIMATION,
-            errorShakeOffset,
-          ),
-          accessibilityLabel("Email address"),
-          accessibilityHint(
-            invalid
-              ? (errorMessage ?? "Check your email address and try again.")
-              : "Enter your email address.",
-          ),
-          padding({ top: 24 }),
-        ]}
-      />
-    </VStack>
+          <TextField
+            ref={emailFieldRef}
+            text={email}
+            onTextChange={onEmailChange}
+            placeholder="you@example.com"
+            modifiers={[
+              textFieldStyle("plain"),
+              keyboardType("email-address"),
+              textContentType("emailAddress"),
+              textInputAutocapitalization("never"),
+              autocorrectionDisabled(),
+              font({ family: FONT_FAMILIES.inter.regular, size: FONT_SIZES.input }),
+              foregroundStyle(theme.foreground),
+              padding({ horizontal: 20 }),
+              ...FULL_WIDTH,
+              frame({ height: 52 }),
+              background(theme.input),
+              clipShape("capsule"),
+              strokeBorder({
+                color: invalid ? ERROR_COLOR : "clear",
+                style: { lineWidth: 2 },
+                shape: "capsule",
+              }),
+              offset({ x: invalid && !reducedMotion ? errorShakeOffset : 0 }),
+              animation(
+                reducedMotion ? REDUCED_MOTION_ERROR_TRANSITION : ERROR_SHAKE_ANIMATION,
+                errorShakeOffset,
+              ),
+              accessibilityLabel("Email address"),
+              accessibilityHint(
+                invalid
+                  ? (errorMessage ?? "Check your email address and try again.")
+                  : "Enter your email address.",
+              ),
+              padding({ top: 24 }),
+            ]}
+          />
+        </VStack>
+      </Alert.Trigger>
+      <Alert.Actions>
+        <Button label="OK" role="default" />
+      </Alert.Actions>
+    </Alert>
   );
 }
 

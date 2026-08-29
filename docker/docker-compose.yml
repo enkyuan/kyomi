@@ -10,7 +10,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
-      - "${POSTGRES_PORT}:5432"
+      - "127.0.0.1:${POSTGRES_PORT}:5432"
     volumes:
       # PG 18+ stores data under /var/lib/postgresql/<major>/ (not .../data).
       - postgres_data:/var/lib/postgresql
@@ -29,7 +29,7 @@ services:
     restart: unless-stopped
     command: redis-server --appendonly yes
     ports:
-      - "${REDIS_PORT}:6379"
+      - "127.0.0.1:${REDIS_PORT}:6379"
     volumes:
       - redis_data:/data
     healthcheck:
@@ -50,9 +50,9 @@ services:
       - garage_data:/var/lib/garage/data
       - garage_meta:/var/lib/garage/meta
     ports:
-      - "${GARAGE_S3_PORT}:3900"
-      - "${GARAGE_RPC_PORT}:3901"
-      - "${GARAGE_WEB_PORT}:3902"
+      - "127.0.0.1:${GARAGE_S3_PORT}:3900"
+      - "127.0.0.1:${GARAGE_RPC_PORT}:3901"
+      - "127.0.0.1:${GARAGE_WEB_PORT}:3902"
     networks:
       - kyomi-network
 
@@ -64,7 +64,7 @@ services:
       MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
       MEILI_NO_ANALYTICS: "true"
     ports:
-      - "${MEILI_PORT}:7700"
+      - "127.0.0.1:${MEILI_PORT}:7700"
     volumes:
       - meili_data:/meili_data
     healthcheck:
