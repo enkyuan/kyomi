@@ -24,12 +24,8 @@ export type ResetPasswordFormValues = {
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-function normalizeEmail(value: string) {
-  return value.trim();
-}
-
 function getEmailError(value: string) {
-  const normalized = normalizeEmail(value);
+  const normalized = value.trim();
   if (!normalized) {
     return "Email is required";
   }

@@ -1,10 +1,11 @@
+import { mobileColors } from "@/theme/colors";
 import Svg, { Path, type SvgProps } from "react-native-svg";
 
 export type KyomiIconProps = Omit<SvgProps, "width" | "height"> & {
   size?: number;
 };
 
-export function KyomiIcon({ size = 24, fill = "#a8d480", ...props }: KyomiIconProps) {
+export function KyomiIcon({ size = 24, fill = mobileColors.matcha, ...props }: KyomiIconProps) {
   return (
     <Svg
       accessibilityElementsHidden

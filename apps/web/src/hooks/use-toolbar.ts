@@ -2,7 +2,7 @@
 
 import { toastManager } from "@kyomi/ui/toast";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
-import { useArticleActions } from "@modules/toolbar/hooks/use-article";
+import { useActions } from "@modules/toolbar/hooks/use-actions";
 import { useFloatingToolbar } from "@modules/toolbar/hooks/use-floating";
 import { useReaderDisplay } from "@modules/toolbar/hooks/use-display";
 import { useReaderExtract } from "@modules/toolbar/hooks/use-extract";
@@ -26,7 +26,7 @@ export function useReaderToolbar({
     item,
   });
   const floating = useFloatingToolbar({ itemId: item.id, readerFocusMode });
-  const articleActions = useArticleActions({ item, saveErrorScope: "reader.saved_state" });
+  const articleActions = useActions({ item, saveErrorScope: "reader.saved_state" });
 
   return {
     articleClassName: reader.articleClassName,

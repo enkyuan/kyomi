@@ -1,16 +1,17 @@
 import { Platform, type TextStyle } from "react-native";
 
+// Use the fonts' PostScript names so SwiftUI's Font.custom resolves each face.
 export const FONT_FAMILIES = {
   inter: {
-    regular: "Inter Variable",
-    medium: "Inter Variable Medium",
-    semibold: "Inter Variable SemiBold",
-    bold: "Inter Variable Bold",
+    regular: "Inter-Regular",
+    medium: "Inter-Medium",
+    semibold: "Inter-SemiBold",
+    bold: "Inter-Bold",
   },
   dmSans: {
-    regular: "DM Sans",
-    medium: "DM Sans Medium",
-    semibold: "DM Sans SemiBold",
+    regular: "DMSans-Regular",
+    medium: "DMSans-Medium",
+    semibold: "DMSans-SemiBold",
   },
 } as const;
 

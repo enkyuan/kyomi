@@ -8,6 +8,7 @@ apps/*/bun.lock
 packages/*/bun.lock
 tests/bun.lock
 dist
+.artifacts/react-doctor/
 build
 coverage
 .catalog-sync-logs/
@@ -30,9 +31,11 @@ packages/catalog/**/*.parquet
 packages/catalog/**/*.duckdb
 packages/catalog/**/*.db
 .gstack/
-.pi/
+.pi/*
+!/.pi/extensions/
+!/.pi/extensions/kyomi.ts
+/.pi/tasks/
 .poolside/
 /.superpowers/
 /.claude/launch.json
-.pi/
 .poolside/

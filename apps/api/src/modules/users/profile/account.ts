@@ -1,6 +1,6 @@
 import { and, eq, ne } from "drizzle-orm";
 import { users } from "@kyomi/db";
-import { normalizeEmail } from "@/lib/email";
+import { normalizeEmail } from "./email";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
 import type { UserProfileDto } from "./types";

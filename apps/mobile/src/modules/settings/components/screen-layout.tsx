@@ -10,7 +10,7 @@ export function SettingsScreenLayout({ children }: PropsWithChildren) {
 
   return (
     <ScrollView
-      contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}
+      contentInset={{ bottom: insets.bottom + 24 }}
       contentInsetAdjustmentBehavior="automatic"
       style={{ backgroundColor: theme.background, flex: 1 }}
     >

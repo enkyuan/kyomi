@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { fetchMobileApiJson } from "@/lib/api";
 
 type Folder = {
@@ -17,16 +17,13 @@ function comparePinned(a: Folder, b: Folder) {
   return bTime - aTime || a.name.localeCompare(b.name);
 }
 
+export const foldersQueryKey = ["folders"] as const;
+
 export function usePinnedFolders() {
-  const [folders, setFolders] = useState<Folder[]>([]);
+  const { data: folders = [] } = useQuery({
+    queryFn: () => fetchMobileApiJson<Folder[]>("/api/v1/folders"),
+    queryKey: foldersQueryKey,
+  });
 
-  useEffect(() => {
-    fetchMobileApiJson<Folder[]>("/api/v1/folders")
-      .then((folders) =>
-        setFolders(folders.filter((folder) => folder.isPinned).sort(comparePinned)),
-      )
-      .catch(() => undefined);
-  }, []);
-
-  return folders;
+  return folders.filter((folder) => folder.isPinned).sort(comparePinned);
 }

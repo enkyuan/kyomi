@@ -1,26 +1,46 @@
-import {
-  LiquidGlassContainerView,
-  LiquidGlassView,
-  isLiquidGlassSupported,
-} from "@callstack/liquid-glass";
-import { useEffect, useState, type ReactNode } from "react";
-import { MenuView, type MenuAction } from "@expo/ui/community/menu";
-import {
-  Pressable,
-  StyleSheet,
-  TextInput,
-  View,
-  useColorScheme,
-  useWindowDimensions,
-} from "react-native";
+import { useEffect, useRef, useState, type ReactElement } from "react";
+import { useColorScheme, useWindowDimensions } from "react-native";
+import { mobileColors } from "@/theme/colors";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
 import { SymbolView } from "expo-symbols";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import Animated, { useAnimatedStyle, useSharedValue, withSpring } from "react-native-reanimated";
 import { InboxIcon, MingcuteIcon, SwitcherIcon } from "@/components/icons";
-import { FONT_STYLES } from "@/theme/fonts";
 import { Album2FillNativeIcon, Album2LineNativeIcon } from "@kyomi/ui/icons/mingcute-native";
-import { TAB_BAR_BOTTOM_PADDING } from "./lib/constants";
+import {
+  Button,
+  GlassEffectContainer,
+  HStack,
+  Host,
+  Menu,
+  RNHostView,
+  Section,
+  Spacer,
+  TextField,
+  ZStack,
+  useNativeState,
+  type TextFieldRef,
+} from "@expo/ui/swift-ui";
+import {
+  accessibilityHidden,
+  accessibilityLabel,
+  accessibilityValue,
+  animation,
+  backgroundOverlay,
+  Animation,
+  buttonStyle,
+  clipShape,
+  disabled,
+  foregroundStyle,
+  frame,
+  glassEffect,
+  menuIndicator,
+  menuStyle,
+  offset,
+  opacity,
+  padding,
+  strokeBorder,
+} from "@expo/ui/swift-ui/modifiers";
+import { SELECTOR_RATIO, TAB_BAR_BOTTOM_PADDING } from "./lib/constants";
 import type { TabBarProps } from "./lib/types";
 
 const HORIZONTAL_PADDING = 16;
@@ -30,20 +50,22 @@ const COMPACT_MAIN_WIDTH = 150;
 const NORMAL_HEIGHT = 48;
 const COMPACT_HEIGHT = 44;
 const CONTENT_PADDING = 4;
-const SELECTOR_RATIO = 0.6;
 const SELECTION_INSET = 3;
-const FALLBACK_SURFACE_LIGHT = "rgba(245,245,247,0.88)";
-const FALLBACK_SURFACE_DARK = "rgba(36,36,36,0.96)";
 const SELECTION_PLATTER_LIGHT = "rgba(255,255,255,0.42)";
 const SELECTION_PLATTER_DARK = "rgba(0,0,0,0.32)";
 const SELECTION_HIGHLIGHT_LIGHT = "rgba(255,255,255,0.12)";
 const SELECTION_HIGHLIGHT_DARK = "rgba(255,255,255,0.08)";
 
+const GLASS = glassEffect({
+  glass: { interactive: true, variant: "regular" },
+  shape: "capsule",
+});
+const SPRING = Animation.spring({ duration: 0.45, bounce: 0.08 });
+
 export function TabBar({
   minimized = false,
   navigation,
   onSearchQueryChange,
-  onSearchSubmit,
   onSelectSource,
   onTabChange,
   selectedSourceId,
@@ -53,18 +75,48 @@ export function TabBar({
   const colorScheme = useColorScheme();
   const insets = useSafeAreaInsets();
   const { width: screenWidth } = useWindowDimensions();
-  const bottomPadding = Math.max(insets.bottom, TAB_BAR_BOTTOM_PADDING);
-  const [activeTab, setActiveTab] = useState(state?.index === 1 ? 1 : 0);
+  const [fallbackActiveTab, setFallbackActiveTab] = useState(state?.index === 1 ? 1 : 0);
   const [searchActive, setSearchActive] = useState(false);
-  const [query, setQuery] = useState("");
+  const searchText = useNativeState("");
+  const searchFieldRef = useRef<TextFieldRef>(null);
+  const activeTab = state ? (state.index === 1 ? 1 : 0) : fallbackActiveTab;
+  const isDark = colorScheme === "dark";
+  const bottomPadding = Math.max(insets.bottom, TAB_BAR_BOTTOM_PADDING);
+  const effectiveMinimized = searchActive ? false : minimized;
+  const height = effectiveMinimized ? COMPACT_HEIGHT : NORMAL_HEIGHT;
+  const availableWidth = Math.max(0, screenWidth - HORIZONTAL_PADDING * 2);
+  const actionSize = height;
+  const maximumMainWidth = Math.max(0, availableWidth - GAP - actionSize);
+  const preferredMainWidth = effectiveMinimized ? COMPACT_MAIN_WIDTH : NORMAL_MAIN_WIDTH;
+  const mainWidth = Math.min(preferredMainWidth, maximumMainWidth);
+  const searchWidth = Math.max(0, availableWidth - GAP - actionSize);
+  const scale = height / NORMAL_HEIGHT;
+  const tabIconSize = 25 * scale;
+  const selectorIconSize = 20 * scale;
+  const searchIconSize = 18 * scale;
+  const regularWidth = (mainWidth - CONTENT_PADDING * 2) / (2 + SELECTOR_RATIO);
+  const selectorWidth = regularWidth * SELECTOR_RATIO;
+  const selectionWidth = Math.max(0, regularWidth + 2 * (CONTENT_PADDING - SELECTION_INSET));
+  const selectionX = CONTENT_PADDING + regularWidth * (activeTab + 0.5) - selectionWidth / 2;
+  const selectionOffset = selectionX + selectionWidth / 2 - mainWidth / 2;
+  const iconColor = isDark ? "rgba(255,255,255,0.72)" : "rgba(0,0,0,0.72)";
+  const activeIconColor = mobileColors.matcha;
+  const searchIconColor = isDark ? "#98989d" : "#8e8e93";
+  const searchTextColor = isDark ? "#f5f5f7" : "#1c1c1e";
+  const selectionPlatterFill = isDark ? SELECTION_PLATTER_DARK : SELECTION_PLATTER_LIGHT;
+  const selectionPlatterHighlight = isDark ? SELECTION_HIGHLIGHT_DARK : SELECTION_HIGHLIGHT_LIGHT;
 
   useEffect(() => {
-    setActiveTab(state?.index === 1 ? 1 : 0);
-  }, [state?.index]);
+    if (searchActive) {
+      void searchFieldRef.current?.focus();
+    } else {
+      void searchFieldRef.current?.blur();
+    }
+  }, [searchActive]);
 
   function selectTab(index: number) {
     if (index > 1) return;
-    setActiveTab(index);
+    setFallbackActiveTab(index);
     onTabChange?.(index);
     void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => undefined);
 
@@ -81,292 +133,271 @@ export function TabBar({
     const next = !searchActive;
     setSearchActive(next);
     if (!next) {
-      setQuery("");
+      searchText.set("");
       onSearchQueryChange?.("");
     }
     void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => undefined);
   }
 
-  const isDark = colorScheme === "dark";
-  const effectiveMinimized = searchActive ? false : minimized;
-  const height = effectiveMinimized ? COMPACT_HEIGHT : NORMAL_HEIGHT;
-  const actionSize = height;
-  const availableWidth = Math.max(0, screenWidth - HORIZONTAL_PADDING * 2);
-  const maximumMainWidth = Math.max(0, availableWidth - GAP - actionSize);
-  const preferredMainWidth = effectiveMinimized ? COMPACT_MAIN_WIDTH : NORMAL_MAIN_WIDTH;
-  const mainWidth = Math.min(preferredMainWidth, maximumMainWidth);
-  const scale = height / NORMAL_HEIGHT;
-  const tabIconSize = 25 * scale;
-  const selectorIconSize = 20 * scale;
-  const searchIconSize = 18 * scale;
-  const closeIconSize = 16 * scale;
-  const regularWidth = (mainWidth - CONTENT_PADDING * 2) / (2 + SELECTOR_RATIO);
-  const selectorWidth = regularWidth * SELECTOR_RATIO;
-  const selectionWidth = Math.max(0, regularWidth + 2 * (CONTENT_PADDING - SELECTION_INSET));
-  const selectionX = CONTENT_PADDING + regularWidth * (activeTab + 0.5) - selectionWidth / 2;
-  const selectionXValue = useSharedValue(selectionX);
-  const selectionWidthValue = useSharedValue(selectionWidth);
-
-  useEffect(() => {
-    const spring = { damping: 24, stiffness: 260, mass: 0.8 };
-    selectionXValue.set(withSpring(selectionX, spring));
-    selectionWidthValue.set(withSpring(selectionWidth, spring));
-  }, [selectionWidth, selectionWidthValue, selectionX, selectionXValue]);
-
-  const selectionAnimatedStyle = useAnimatedStyle(() => ({
-    left: selectionXValue.get(),
-    width: selectionWidthValue.get(),
-  }));
-
-  const glassFallback = isLiquidGlassSupported
-    ? undefined
-    : isDark
-      ? FALLBACK_SURFACE_DARK
-      : FALLBACK_SURFACE_LIGHT;
-  const selectionPlatterFill = isDark ? SELECTION_PLATTER_DARK : SELECTION_PLATTER_LIGHT;
-  const selectionPlatterHighlight = isDark ? SELECTION_HIGHLIGHT_DARK : SELECTION_HIGHLIGHT_LIGHT;
-  const iconColor = isDark ? "rgba(255,255,255,0.72)" : "rgba(0,0,0,0.72)";
-  const searchIconColor = isDark ? "#98989d" : "#8e8e93";
-  const searchTextColor = isDark ? "#f5f5f7" : "#1c1c1e";
-
   return (
-    <View pointerEvents="box-none" style={[styles.container, { paddingBottom: bottomPadding }]}>
-      {searchActive ? (
-        <LiquidGlassView
-          effect="regular"
-          interactive
-          style={[
-            styles.searchField,
-            { backgroundColor: glassFallback, borderRadius: height / 2, height },
-          ]}
-        >
-          <SymbolView name="magnifyingglass" size={searchIconSize} tintColor={searchIconColor} />
-          <TextInput
-            accessibilityLabel="Search feeds or articles"
-            autoCapitalize="none"
-            autoCorrect={false}
-            onChangeText={(value) => {
-              setQuery(value);
-              onSearchQueryChange?.(value);
-            }}
-            onSubmitEditing={() => onSearchSubmit?.(query)}
-            placeholder="Search feeds or articles"
-            placeholderTextColor={searchIconColor}
-            returnKeyType="search"
-            style={[styles.searchInput, { color: searchTextColor }]}
-            value={query}
-          />
-        </LiquidGlassView>
-      ) : (
-        <LiquidGlassContainerView spacing={0} style={{ height, width: mainWidth }}>
-          <LiquidGlassView
-            effect="regular"
-            interactive
-            style={[styles.glass, { backgroundColor: glassFallback, borderRadius: height / 2 }]}
-          />
-          <Animated.View
-            pointerEvents="none"
-            style={[
-              styles.selection,
-              selectionAnimatedStyle,
-              {
-                backgroundColor: selectionPlatterFill,
-                borderColor: selectionPlatterHighlight,
-                borderRadius: (height - SELECTION_INSET * 2) / 2,
-                borderWidth: 0.5,
-                height: height - SELECTION_INSET * 2,
-                top: SELECTION_INSET,
-              },
-            ]}
-          />
-          <View style={[styles.navigationContents, { height, paddingHorizontal: CONTENT_PADDING }]}>
-            <TabButton
-              active={activeTab === 0}
-              label="Feeds"
-              onPress={() => selectTab(0)}
-              width={regularWidth}
-            >
-              <InboxIcon
-                fill={activeTab === 0 ? "#a8d480" : iconColor}
-                focused={activeTab === 0}
-                size={tabIconSize}
-              />
-            </TabButton>
-            <TabButton
-              active={activeTab === 1}
-              label="Explore articles"
-              onPress={() => selectTab(1)}
-              width={regularWidth}
-            >
-              <MingcuteIcon
-                fill={activeTab === 1 ? "#a8d480" : iconColor}
-                icon={activeTab === 1 ? Album2FillNativeIcon : Album2LineNativeIcon}
-                size={tabIconSize}
-              />
-            </TabButton>
-            <MenuView
-              actions={makeSourceActions(sources, selectedSourceId)}
-              onPressAction={({ nativeEvent }) => {
-                const source = sources.find((item) => item.id === nativeEvent.event);
-                if (!source) return;
-                void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => undefined);
-                onSelectSource?.({ id: source.id, kind: source.kind });
-              }}
-              style={[styles.sourceMenu, { width: selectorWidth }]}
-            >
-              <View
-                accessibilityHint="Opens folders and feeds"
-                accessibilityLabel="Choose source"
-                accessibilityRole="button"
-                style={styles.sourceButton}
-              >
-                <SwitcherIcon fill={iconColor} size={selectorIconSize} />
-              </View>
-            </MenuView>
-          </View>
-        </LiquidGlassContainerView>
-      )}
-      <Pressable
-        accessibilityHint={searchActive ? "Closes search" : "Opens search"}
-        accessibilityLabel={searchActive ? "Close search" : "Search"}
-        accessibilityRole="button"
-        onPress={toggleSearch}
-        style={[
-          styles.searchButton,
-          {
-            backgroundColor: glassFallback,
-            borderRadius: height / 2,
-            height: actionSize,
-            width: actionSize,
-          },
+    <Host
+      colorScheme={isDark ? "dark" : "light"}
+      matchContents={{ vertical: true }}
+      pointerEvents="box-none"
+      style={{
+        bottom: bottomPadding,
+        width: "100%",
+        left: 0,
+        paddingHorizontal: HORIZONTAL_PADDING,
+        position: "absolute",
+        right: 0,
+        zIndex: 50,
+      }}
+    >
+      <HStack
+        alignment="center"
+        modifiers={[
+          frame({ height, width: availableWidth }),
+          animation(SPRING, minimized),
+          animation(SPRING, searchActive),
         ]}
+        spacing={0}
       >
-        <LiquidGlassView
-          effect="regular"
-          interactive
-          style={[
-            StyleSheet.absoluteFill,
-            { backgroundColor: glassFallback, borderRadius: height / 2 },
-          ]}
-        />
-        <SymbolView
-          name={searchActive ? "xmark" : "magnifyingglass"}
-          size={searchActive ? closeIconSize : searchIconSize}
-          tintColor={isDark ? "rgba(255,255,255,0.82)" : "rgba(0,0,0,0.82)"}
-          weight="regular"
-        />
-      </Pressable>
-    </View>
+        <Spacer />
+        <HStack modifiers={[animation(SPRING, searchActive)]} spacing={GAP}>
+          <GlassEffectContainer spacing={0}>
+            <ZStack
+              alignment="center"
+              modifiers={[
+                frame({ height, width: searchActive ? searchWidth : mainWidth }),
+                GLASS,
+                animation(SPRING, minimized),
+                animation(SPRING, searchActive),
+              ]}
+            >
+              <ZStack
+                modifiers={[
+                  frame({
+                    height: height - SELECTION_INSET * 2,
+                    width: selectionWidth,
+                  }),
+                  backgroundOverlay({ color: selectionPlatterFill }),
+                  strokeBorder({ color: selectionPlatterHighlight, style: { lineWidth: 0.5 } }),
+                  clipShape("capsule"),
+                  offset({ x: selectionOffset }),
+                  opacity(searchActive ? 0 : 1),
+                  animation(SPRING, minimized),
+                  animation(SPRING, activeTab),
+                ]}
+              >
+                {null}
+              </ZStack>
+              <HStack
+                alignment="center"
+                modifiers={[
+                  frame({ height, width: mainWidth }),
+                  padding({ horizontal: CONTENT_PADDING }),
+                  opacity(searchActive ? 0 : 1),
+                  accessibilityHidden(searchActive),
+                  animation(SPRING, searchActive),
+                ]}
+                spacing={0}
+              >
+                <TabButton
+                  active={activeTab === 0}
+                  height={height}
+                  label="Feeds"
+                  onPress={() => selectTab(0)}
+                  width={regularWidth}
+                >
+                  <InboxIcon
+                    fill={activeTab === 0 ? activeIconColor : iconColor}
+                    focused={activeTab === 0}
+                    size={tabIconSize}
+                  />
+                </TabButton>
+                <TabButton
+                  active={activeTab === 1}
+                  height={height}
+                  label="Explore articles"
+                  onPress={() => selectTab(1)}
+                  width={regularWidth}
+                >
+                  <MingcuteIcon
+                    fill={activeTab === 1 ? activeIconColor : iconColor}
+                    icon={activeTab === 1 ? Album2FillNativeIcon : Album2LineNativeIcon}
+                    size={tabIconSize}
+                  />
+                </TabButton>
+                <Menu
+                  label={
+                    <RNHostView matchContents>
+                      <SwitcherIcon fill={iconColor} size={selectorIconSize} />
+                    </RNHostView>
+                  }
+                  modifiers={[
+                    frame({ height, width: selectorWidth }),
+                    buttonStyle("plain"),
+                    menuStyle("button"),
+                    menuIndicator("hidden"),
+                    accessibilityLabel("Choose source"),
+                    accessibilityValue("Opens folders and feeds"),
+                  ]}
+                >
+                  {renderSourceMenuItems(sources, selectedSourceId, onSelectSource)}
+                </Menu>
+              </HStack>
+              <HStack
+                alignment="center"
+                modifiers={[
+                  padding({ horizontal: 14 }),
+                  frame({ height, width: searchWidth }),
+                  opacity(searchActive ? 1 : 0),
+                  accessibilityHidden(!searchActive),
+                  animation(SPRING, searchActive),
+                ]}
+                spacing={8}
+              >
+                <ZStack alignment="center" modifiers={[frame({ height, width: 22 })]}>
+                  <RNHostView matchContents>
+                    <SymbolView name="magnifyingglass" size={18} tintColor={searchIconColor} />
+                  </RNHostView>
+                </ZStack>
+                <TextField
+                  autoFocus={false}
+                  onTextChange={(value) => {
+                    onSearchQueryChange?.(value);
+                  }}
+                  placeholder="Search feeds or articles"
+                  text={searchText}
+                  modifiers={[foregroundStyle(searchTextColor)]}
+                />
+              </HStack>
+            </ZStack>
+          </GlassEffectContainer>
+          <GlassEffectContainer spacing={0}>
+            <Button
+              onPress={toggleSearch}
+              modifiers={[
+                frame({ height: actionSize, width: actionSize }),
+                GLASS,
+                buttonStyle("plain"),
+                accessibilityLabel(searchActive ? "Close search" : "Search"),
+              ]}
+            >
+              <RNHostView matchContents>
+                <SymbolView
+                  name={searchActive ? "xmark" : "magnifyingglass"}
+                  size={searchActive ? 16 * scale : searchIconSize}
+                  tintColor={isDark ? "rgba(255,255,255,0.82)" : "rgba(0,0,0,0.82)"}
+                  weight="regular"
+                />
+              </RNHostView>
+            </Button>
+          </GlassEffectContainer>
+        </HStack>
+        <Spacer />
+      </HStack>
+    </Host>
   );
-}
-
-function makeSourceActions(
-  sources: TabBarProps["sources"],
-  selectedSourceId: string | undefined,
-): MenuAction[] {
-  const availableSources = sources ?? [];
-  if (availableSources.length === 0) {
-    return [{ attributes: { disabled: true }, id: "no-sources", title: "No sources available" }];
-  }
-
-  const folders = availableSources.filter((source) => source.kind === "folder");
-  const feeds = availableSources.filter((source) => source.kind === "feed");
-  return [
-    ...(folders.length > 0
-      ? [
-          {
-            displayInline: true,
-            subactions: folders.map((source) => toSourceAction(source, selectedSourceId)),
-            title: "Folders",
-          },
-        ]
-      : []),
-    ...(feeds.length > 0
-      ? [
-          {
-            displayInline: true,
-            subactions: feeds.map((source) => toSourceAction(source, selectedSourceId)),
-            title: "Feeds",
-          },
-        ]
-      : []),
-  ];
-}
-
-function toSourceAction(
-  source: NonNullable<TabBarProps["sources"]>[number],
-  selectedSourceId: string | undefined,
-): MenuAction {
-  return {
-    id: source.id,
-    image: source.kind === "folder" ? "folder" : "dot.radiowaves.left.and.right",
-    state: source.id === selectedSourceId ? "on" : "off",
-    title: source.title,
-  };
 }
 
 function TabButton({
   active,
   children,
+  height,
   label,
   onPress,
   width,
 }: {
   active: boolean;
-  children: ReactNode;
+  children: ReactElement;
+  height: number;
   label: string;
   onPress: () => void;
   width: number;
 }) {
   return (
-    <Pressable
-      accessibilityLabel={label}
-      accessibilityRole="button"
-      accessibilityState={{ selected: active }}
+    <Button
       onPress={onPress}
-      style={[styles.tabButton, { width }]}
+      modifiers={[
+        frame({ height, width }),
+        buttonStyle("plain"),
+        accessibilityLabel(label),
+        accessibilityValue(active ? "Selected" : ""),
+      ]}
     >
-      {children}
-    </Pressable>
+      <RNHostView matchContents>{children}</RNHostView>
+    </Button>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "flex-end",
-    bottom: 0,
-    flexDirection: "row",
-    justifyContent: "center",
-    gap: 10,
-    left: 0,
-    paddingHorizontal: HORIZONTAL_PADDING,
-    position: "absolute",
-    right: 0,
-    zIndex: 50,
-  },
-  glass: { ...StyleSheet.absoluteFill },
-  selection: { position: "absolute" },
-  navigationContents: {
-    alignItems: "center",
-    flexDirection: "row",
-    left: 0,
-    position: "absolute",
-    right: 0,
-    top: 0,
-  },
-  tabButton: { alignItems: "center", height: 44, justifyContent: "center" },
-  sourceMenu: { height: 44 },
-  sourceButton: { alignItems: "center", flex: 1, justifyContent: "center" },
-  searchField: {
-    alignItems: "center",
-    flex: 1,
-    flexDirection: "row",
-    gap: 8,
-    paddingHorizontal: 14,
-  },
-  searchInput: { ...FONT_STYLES.input, color: "#1c1c1e", flex: 1 },
-  searchButton: { alignItems: "center", justifyContent: "center", overflow: "hidden" },
-});
+type Source = NonNullable<TabBarProps["sources"]>[number];
 
-export default TabBar;
-export type { TabBarProps };
+function renderSourceMenuItems(
+  sources: readonly Source[],
+  selectedSourceId: string | undefined,
+  onSelectSource: TabBarProps["onSelectSource"],
+) {
+  if (sources.length === 0) {
+    return <Button label="No sources available" modifiers={[disabled(true)]} />;
+  }
+
+  const folders = sources.filter((source) => source.kind === "folder");
+  const feeds = sources.filter((source) => source.kind === "feed");
+  return (
+    <>
+      {folders.length > 0 ? (
+        <Section title="Folders">
+          {folders.map((source) => (
+            <SourceButton
+              key={source.id}
+              onSelectSource={onSelectSource}
+              selected={source.id === selectedSourceId}
+              source={source}
+            />
+          ))}
+        </Section>
+      ) : null}
+      {feeds.length > 0 ? (
+        <Section title="Feeds">
+          {feeds.map((source) => (
+            <SourceButton
+              key={source.id}
+              onSelectSource={onSelectSource}
+              selected={source.id === selectedSourceId}
+              source={source}
+            />
+          ))}
+        </Section>
+      ) : null}
+    </>
+  );
+}
+
+function SourceButton({
+  onSelectSource,
+  selected,
+  source,
+}: {
+  onSelectSource: TabBarProps["onSelectSource"];
+  selected: boolean;
+  source: Source;
+}) {
+  return (
+    <Button
+      label={source.title}
+      onPress={() => {
+        void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => undefined);
+        onSelectSource?.({ id: source.id, kind: source.kind });
+      }}
+      systemImage={
+        selected
+          ? "checkmark"
+          : source.kind === "folder"
+            ? "folder"
+            : "dot.radiowaves.left.and.right"
+      }
+    />
+  );
+}

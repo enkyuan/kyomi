@@ -3,8 +3,8 @@ import { Platform } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDerivedValue, useSharedValue } from "react-native-reanimated";
 import { CollapsingHeader, COMPACT_NAV_HEIGHT } from "@ui/header";
-import { ScrollHeaderLayout } from "@ui/header/scroll-layout";
-import { RecentHistoryList } from "./components/history-list";
+import { ScrollHeaderLayout } from "@ui/header/scroll/layout";
+import { RecentList } from "./components/list";
 
 export function RecentsScreen() {
   const insets = useSafeAreaInsets();
@@ -37,7 +37,7 @@ export function RecentsScreen() {
       title="Inbox"
     >
       {() => (
-        <RecentHistoryList
+        <RecentList
           headerHeight={headerHeight}
           onScrollBeginDrag={handleScrollBeginDrag}
           onScrollReset={handleScrollReset}

@@ -1,18 +1,15 @@
 import { BlurView } from "expo-blur";
 import type { PropsWithChildren, RefObject } from "react";
-import { View, type StyleProp, type ViewStyle } from "react-native";
+import { StyleSheet, View, type StyleProp, type ViewStyle } from "react-native";
 import Animated, {
   Extrapolation,
   interpolate,
   useAnimatedProps,
   type SharedValue,
 } from "react-native-reanimated";
+import { MATERIAL_FULL_PX, MATERIAL_START_PX, MAX_BLUR_INTENSITY } from "./surface.constants";
 
 const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
-
-const MATERIAL_START_PX = 4;
-const MATERIAL_FULL_PX = 16;
-const MAX_BLUR_INTENSITY = 50;
 
 type HeaderSurfaceProps = PropsWithChildren<{
   blurTarget: RefObject<View | null>;
@@ -39,7 +36,7 @@ export function HeaderSurface({ children, blurTarget, scrollY, style }: HeaderSu
         animatedProps={animatedProps}
         blurTarget={blurTarget}
         pointerEvents="none"
-        style={{ bottom: 0, left: 0, position: "absolute", right: 0, top: 0 }}
+        style={StyleSheet.absoluteFill}
         tint="systemThickMaterial"
       />
       {children}

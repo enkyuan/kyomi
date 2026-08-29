@@ -3,10 +3,9 @@ import { fetchMobileApiJson } from "@/lib/api";
 import { readerArticlePath, readerArticlePrefetchKey } from "../lib/article-request";
 import type { ReaderArticle } from "../lib/article";
 
-export const readerArticleQueryKey = (articleId: string) =>
-  ["reader", "article", articleId] as const;
+export const articleQueryKey = (articleId: string) => ["reader", "article", articleId] as const;
 
-export function useReaderArticle(articleId: string) {
+export function useArticle(articleId: string) {
   return useQuery({
     enabled: Boolean(articleId),
     queryFn: ({ signal }) =>
@@ -14,7 +13,7 @@ export function useReaderArticle(articleId: string) {
         prefetchKey: readerArticlePrefetchKey(articleId),
         signal,
       }),
-    queryKey: readerArticleQueryKey(articleId),
+    queryKey: articleQueryKey(articleId),
     staleTime: 60_000,
   });
 }

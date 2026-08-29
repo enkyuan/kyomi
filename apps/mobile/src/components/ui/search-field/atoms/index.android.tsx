@@ -51,13 +51,13 @@ export function SearchField({
   );
 
   useEffect(() => {
-    if (text.value !== value) {
-      text.value = value;
+    if (text.get() !== value) {
+      text.set(value);
     }
   }, [text, value]);
 
   const clear = () => {
-    text.value = "";
+    text.set("");
     onChangeText?.("");
     void fieldRef.current?.focus();
   };

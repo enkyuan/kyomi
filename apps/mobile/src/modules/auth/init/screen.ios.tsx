@@ -9,6 +9,8 @@ import {
   foregroundStyle,
   frame,
   lineLimit,
+  allowsTightening,
+  minimumScaleFactor,
   multilineTextAlignment,
   padding,
   tint,
@@ -16,6 +18,7 @@ import {
 import { useState } from "react";
 import { useColorScheme } from "react-native";
 import { AppleIcon, GoogleIcon, KyomiIcon } from "@/components/icons";
+import { mobileColors } from "@/theme/colors";
 import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { EmailSheet } from "@modules/auth/email/screen";
@@ -54,6 +57,8 @@ export function InitScreen() {
             padding({ top: 24 }),
             multilineTextAlignment("center"),
             lineLimit(2),
+            allowsTightening(true),
+            minimumScaleFactor(0.85),
             font({
               family: FONT_FAMILIES.inter.semibold,
               size: FONT_SIZES.hero,
@@ -73,7 +78,7 @@ export function InitScreen() {
             modifiers={[
               buttonStyle("glassProminent"),
               buttonBorderShape("capsule"),
-              tint("#a8d480"),
+              tint(mobileColors.matcha),
               padding({ vertical: 2 }),
               controlSize("extraLarge"),
               ...FULL_WIDTH,

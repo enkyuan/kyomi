@@ -116,6 +116,14 @@
             "eslint/complexity",
             "eslint/max-lines"
           ]
+        },
+        {
+          "files": [
+            "src/routes/-guards.ts"
+          ],
+          "rules": [
+            "react-doctor/clickjacking-redirect-risk"
+          ]
         }
       ]
     }

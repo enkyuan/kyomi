@@ -13,6 +13,7 @@ import {
 } from "@expo/ui/swift-ui";
 import {
   Animation,
+  accessibilityHidden,
   animation,
   background,
   buttonBorderShape,
@@ -22,11 +23,13 @@ import {
   font,
   foregroundStyle,
   frame,
+  hidden,
   labelStyle,
   padding,
   tint,
 } from "@expo/ui/swift-ui/modifiers";
 import { useCallback, useRef } from "react";
+import { mobileColors } from "@/theme/colors";
 import { EmailFormStep, OTPFormStep, type EmailStepTheme } from "./components/step-content.ios";
 import { useEmailAuth } from "./hooks/use-email-auth";
 import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
@@ -58,9 +61,9 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
   const focusOtp = useCallback(() => otpFieldRef.current?.focus(), []);
   const {
     errorMessage,
-    errorShakeOffset,
     handleDismiss,
     handleEmailChange,
+    handleErrorAlertChange,
     handleOtpChange,
     handleSendCode,
     handleUseDifferentEmail,
@@ -71,6 +74,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
     isSubmitting,
     otpValue,
     shouldReduceMotion,
+    showErrorAlert,
   } = useEmailAuth({ email, focusEmail, focusOtp, isPresented, onDismiss, otp });
 
   return (
@@ -79,6 +83,22 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
       onIsPresentedChange={(open) => !open && handleDismiss()}
       fitToContents
     >
+      <BottomSheet.Overlay>
+        <Button
+          label="Close"
+          systemImage="xmark"
+          onPress={handleDismiss}
+          modifiers={[
+            buttonStyle("bordered"),
+            buttonBorderShape("circle"),
+            controlSize("regular"),
+            labelStyle("iconOnly"),
+            foregroundStyle(theme.foreground),
+            font({ weight: SWIFT_FONT_WEIGHTS.semibold }),
+          ]}
+        />
+      </BottomSheet.Overlay>
+
       <VStack modifiers={FULL_WIDTH}>
         <HStack modifiers={[...FULL_WIDTH, padding({ top: 18, trailing: 18 })]}>
           <Spacer />
@@ -91,8 +111,8 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               buttonBorderShape("circle"),
               controlSize("regular"),
               labelStyle("iconOnly"),
-              foregroundStyle(theme.foreground),
-              font({ weight: SWIFT_FONT_WEIGHTS.semibold }),
+              accessibilityHidden(true),
+              hidden(),
             ]}
           />
         </HStack>
@@ -132,24 +152,25 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 active={isEmailStep}
                 email={email}
                 emailFieldRef={emailFieldRef}
+                errorAlertPresented={showErrorAlert && isEmailInvalid}
                 errorMessage={isEmailInvalid ? errorMessage : null}
-                errorShakeOffset={errorShakeOffset}
                 invalid={isEmailInvalid}
                 onEmailChange={handleEmailChange}
-                reducedMotion={shouldReduceMotion}
+                onErrorAlertChange={handleErrorAlertChange}
                 theme={theme}
               />
               <OTPFormStep
                 active={!isEmailStep}
                 email={email}
+                errorAlertPresented={showErrorAlert && isOtpInvalid}
                 errorMessage={isOtpInvalid ? errorMessage : null}
-                errorShakeOffset={errorShakeOffset}
                 invalid={isOtpInvalid}
+                onErrorAlertChange={handleErrorAlertChange}
+                onFocusOtp={focusOtp}
                 onOtpChange={handleOtpChange}
                 otp={otp}
                 otpFieldRef={otpFieldRef}
                 otpValue={otpValue}
-                reducedMotion={shouldReduceMotion}
                 theme={theme}
               />
             </ZStack>
@@ -161,15 +182,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               >
                 <ZStack modifiers={FULL_WIDTH}>
                   <Text
-                    modifiers={[
-                      ...CENTERED_LABEL,
-                      font({
-                        family: FONT_FAMILIES.inter.medium,
-                        size: FONT_SIZES.button,
-                        weight: SWIFT_FONT_WEIGHTS.medium,
-                      }),
-                      foregroundStyle(theme.foreground),
-                    ]}
+                    modifiers={[...CENTERED_LABEL, LABEL_FONT, foregroundStyle(theme.foreground)]}
                   >
                     Use a different email
                   </Text>
@@ -179,12 +192,18 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
           </VStack>
 
           <Button
-            onPress={isEmailStep ? handleSendCode : () => handleVerifyCode(otpValue)}
+            onPress={
+              isEmailStep
+                ? handleSendCode
+                : otpValue.length === 6
+                  ? () => handleVerifyCode(otpValue)
+                  : handleSendCode
+            }
             modifiers={[
               buttonStyle("glassProminent"),
               buttonBorderShape("capsule"),
-              tint("#a8d480"),
-              padding({ top: 24 }),
+              tint(mobileColors.matcha),
+              padding({ top: 18 }),
               controlSize("extraLarge"),
               ...FULL_WIDTH,
             ]}
@@ -202,7 +221,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 <Text
                   modifiers={[...CENTERED_LABEL, LABEL_FONT, foregroundStyle(theme.background)]}
                 >
-                  Continue
+                  {isEmailStep || otpValue.length === 6 ? "Continue" : "Resend email"}
                 </Text>
               )}
             </ZStack>

@@ -2,7 +2,7 @@
 
 import type { InboxItem } from "@modules/inbox/lib/articles/index";
 import type { ItemToolbarModel } from "../lib/types";
-import { useArticleActions } from "./use-article";
+import { useActions } from "./use-actions";
 
 export function useItemToolbarModel({
   item,
@@ -11,7 +11,7 @@ export function useItemToolbarModel({
   item: InboxItem;
   onReportBrokenArticle?: () => void;
 }): ItemToolbarModel {
-  const articleActions = useArticleActions({ item, saveErrorScope: "feed.item.saved_state" });
+  const articleActions = useActions({ item, saveErrorScope: "feed.item.saved_state" });
 
   return {
     toolbarProps: {

@@ -1,7 +1,7 @@
 import { Image } from "expo-image";
 import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
-import { useEffect, useMemo, useState } from "react";
-import { useColorScheme, View } from "react-native";
+import { useState } from "react";
+import { StyleSheet, useColorScheme, View } from "react-native";
 import { RssIcon } from "@/components/icons/rss";
 import { resolveMobileApiUrl } from "@/lib/api";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
@@ -15,24 +15,32 @@ export type FeedFaviconProps = {
 };
 
 export function FeedFavicon({ faviconUrl, feedUrl, siteUrl, title, size = 22 }: FeedFaviconProps) {
-  const candidateUrls = useMemo(
-    () =>
-      buildFaviconUrlCandidates(faviconUrl, siteUrl, feedUrl).map((url) =>
-        url.startsWith("/api/") ? resolveMobileApiUrl(url) : url,
-      ),
-    [faviconUrl, feedUrl, siteUrl],
+  const candidateUrls = buildFaviconUrlCandidates(faviconUrl, siteUrl, feedUrl).map((url) =>
+    url.startsWith("/api/") ? resolveMobileApiUrl(url) : url,
   );
-  const candidateKey = candidateUrls.join("\n");
+
+  return (
+    <FeedFaviconImage
+      candidateUrls={candidateUrls}
+      key={candidateUrls.join("\n")}
+      size={size}
+      title={title}
+    />
+  );
+}
+
+type FeedFaviconImageProps = {
+  candidateUrls: string[];
+  size: number;
+  title: string;
+};
+
+function FeedFaviconImage({ candidateUrls, size, title }: FeedFaviconImageProps) {
   const [candidateIndex, setCandidateIndex] = useState(0);
   const [loadedFaviconUrl, setLoadedFaviconUrl] = useState<string | null>(null);
   const { mutedForeground } = getMobileSurfaceTheme(useColorScheme());
   const faviconSource = candidateUrls[candidateIndex];
   const hasLoadedFavicon = faviconSource !== undefined && loadedFaviconUrl === faviconSource;
-
-  useEffect(() => {
-    setCandidateIndex(0);
-    setLoadedFaviconUrl(null);
-  }, [candidateKey]);
 
   return (
     <View
@@ -44,7 +52,6 @@ export function FeedFavicon({ faviconUrl, feedUrl, siteUrl, title, size = 22 }: 
       {faviconSource ? (
         <Image
           accessibilityElementsHidden
-          className="absolute inset-0 size-full"
           importantForAccessibility="no-hide-descendants"
           key={faviconSource}
           onLoad={() => {
@@ -56,6 +63,7 @@ export function FeedFavicon({ faviconUrl, feedUrl, siteUrl, title, size = 22 }: 
           }}
           contentFit="contain"
           source={{ uri: faviconSource }}
+          style={StyleSheet.absoluteFill}
         />
       ) : null}
     </View>
