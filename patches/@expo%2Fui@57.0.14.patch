@@ -1,0 +1,88 @@
+diff --git a/build/swift-ui/BottomSheet/index.d.ts b/build/swift-ui/BottomSheet/index.d.ts
+index d95c384a01b74fe410f430618d4ff4097e3bd1e5..fb8266da99ec1ba91263ac045d16e5a50468427b 100644
+--- a/build/swift-ui/BottomSheet/index.d.ts
++++ b/build/swift-ui/BottomSheet/index.d.ts
+@@ -34,5 +34,10 @@ export interface BottomSheetProps extends CommonViewModifierProps {
+  * `BottomSheet` presents content from the bottom of the screen.
+  */
+ declare function BottomSheet(props: BottomSheetProps): import("react/jsx-runtime").JSX.Element;
++declare namespace BottomSheet {
++    var Overlay: ({ children }: {
++        children: ReactNode;
++    }) => import("react/jsx-runtime").JSX.Element;
++}
+ export { BottomSheet };
+ //# sourceMappingURL=index.d.ts.map
+\ No newline at end of file
+diff --git a/ios/BottomSheetView.swift b/ios/BottomSheetView.swift
+index 29b1a3ad7a8dc653347899c514fc538f9f9433f3..eeeb3ee5b38750a27b987962776e76381306f8dd 100644
+--- a/ios/BottomSheetView.swift
++++ b/ios/BottomSheetView.swift
+@@ -70,12 +70,33 @@ struct BottomSheetView: ExpoSwiftUI.View {
+ 
+   @ViewBuilder
+   private func contentChildren() -> some View {
+-    ForEach(props.children?.withoutSlot("anchor") ?? [], id: \.id) { child in
++    ForEach(
++      props.children?.withoutSlot("anchor").filter { child in
++        guard let slot = child.childView as? SlotView else { return true }
++        return slot.props.name != "overlay"
++      } ?? [],
++      id: \.id
++    ) { child in
+       let view: any View = child.childView
+       AnyView(view)
+     }
+   }
+ 
++  @ViewBuilder
++  private var sheetContentWithOverlay: some View {
++    ZStack(alignment: .topTrailing) {
++      sheetContent
++
++      if let overlayView = props.children?.slot("overlay") {
++        overlayView
++          .padding(.top, 18)
++          .padding(.trailing, 18)
++      }
++    }
++    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
++    .ignoresSafeArea(.keyboard)
++  }
++
+   @ViewBuilder
+   private var sheetContent: some View {
+     if props.fitToContents {
+@@ -107,7 +128,7 @@ struct BottomSheetView: ExpoSwiftUI.View {
+       .sheet(isPresented: $isPresented, onDismiss: {
+         props.onDismiss()
+       }) {
+-        sheetContent
++        sheetContentWithOverlay
+       }
+       .onChange(of: isPresented, perform: { newIsPresented in
+         if props.isPresented == newIsPresented {
+diff --git a/src/swift-ui/BottomSheet/index.tsx b/src/swift-ui/BottomSheet/index.tsx
+index c6327bba32ced43c7b206c014eb93bf665ed6a38..3fce205b47862eff37c8e2f31e3504cdb4d1d0ad 100644
+--- a/src/swift-ui/BottomSheet/index.tsx
++++ b/src/swift-ui/BottomSheet/index.tsx
+@@ -54,6 +54,10 @@ const BottomSheetNativeView: ComponentType<NativeBottomSheetProps> = requireNati
+ /**
+  * `BottomSheet` presents content from the bottom of the screen.
+  */
++function BottomSheetOverlay({ children }: { children: ReactNode }) {
++  return <Slot name="overlay">{children}</Slot>;
++}
++
+ function BottomSheet(props: BottomSheetProps) {
+   const { modifiers, onIsPresentedChange, onDismiss, anchor, children, ...restProps } = props;
+   const [isMounted, setIsMounted] = useState(props.isPresented);
+@@ -84,4 +88,8 @@ function BottomSheet(props: BottomSheetProps) {
+   );
+ }
+ 
++namespace BottomSheet {
++  export const Overlay = BottomSheetOverlay;
++}
++
+ export { BottomSheet };

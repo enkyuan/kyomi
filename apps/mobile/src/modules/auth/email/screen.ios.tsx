@@ -79,6 +79,22 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
       onIsPresentedChange={(open) => !open && handleDismiss()}
       fitToContents
     >
+      <BottomSheet.Overlay>
+        <Button
+          label="Close"
+          systemImage="xmark"
+          onPress={handleDismiss}
+          modifiers={[
+            buttonStyle("bordered"),
+            buttonBorderShape("circle"),
+            controlSize("regular"),
+            labelStyle("iconOnly"),
+            foregroundStyle(theme.foreground),
+            font({ weight: SWIFT_FONT_WEIGHTS.semibold }),
+          ]}
+        />
+      </BottomSheet.Overlay>
+
       <VStack modifiers={FULL_WIDTH}>
         <HStack modifiers={[...FULL_WIDTH, padding({ top: 18, trailing: 18 })]}>
           <Spacer />
@@ -91,8 +107,8 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               buttonBorderShape("circle"),
               controlSize("regular"),
               labelStyle("iconOnly"),
-              foregroundStyle(theme.foreground),
-              font({ weight: SWIFT_FONT_WEIGHTS.semibold }),
+              accessibilityHidden(true),
+              hidden(),
             ]}
           />
         </HStack>
