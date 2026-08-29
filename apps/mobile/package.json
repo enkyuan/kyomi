@@ -72,5 +72,27 @@
   "devDependencies": {
     "@types/react": "~19.2.14",
     "typescript": "~6.0.3"
+  },
+  "reactDoctor": {
+    "ignore": {
+      "overrides": [
+        {
+          "files": [
+            "dist/**"
+          ],
+          "rules": [
+            "react-doctor/artifact-secret-leak"
+          ]
+        },
+        {
+          "files": [
+            "package.json"
+          ],
+          "rules": [
+            "react-doctor/expo-no-redundant-dependency"
+          ]
+        }
+      ]
+    }
   }
 }
