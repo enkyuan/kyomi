@@ -17,6 +17,9 @@
     "dev:api:host": "bun run --cwd apps/api dev:host",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
+    "doctor:baseline": "for project in @kyomi/web @kyomi/ui @kyomi/reader @kyomi/mobile; do echo \"--- $project ---\"; bunx react-doctor@latest . --project $project --no-dead-code --no-supply-chain --no-lint --score; done",
+    "doctor:debt": "mkdir -p .artifacts/react-doctor && for project in @kyomi/web @kyomi/ui @kyomi/reader @kyomi/mobile; do bunx react-doctor@latest . --project $project --no-supply-chain --blocking none --json --json-out .artifacts/react-doctor/${project#@kyomi/}.json; done",
+    "doctor": "bun run doctor:baseline",
     "fmt": "turbo run fmt",
     "fmt:check": "turbo run fmt:check",
     "typecheck": "turbo run typecheck && bun run typecheck:scripts",
@@ -88,5 +91,21 @@
       "oxlint --fix"
     ]
   },
-  "packageManager": "bun@1.3.14"
+  "packageManager": "bun@1.3.14",
+  "reactDoctor": {
+    "ignore": {
+      "overrides": [
+        {
+          "files": [
+            "dist/**",
+            ".output/**",
+            "build/**"
+          ],
+          "rules": [
+            "react-doctor/artifact-secret-leak"
+          ]
+        }
+      ]
+    }
+  }
 }
