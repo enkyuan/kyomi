@@ -16,6 +16,7 @@ import {
 import * as Haptics from "expo-haptics";
 import { SymbolView } from "expo-symbols";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import Animated, { useAnimatedStyle, useSharedValue, withSpring } from "react-native-reanimated";
 import { InboxIcon, MingcuteIcon, SwitcherIcon } from "@/components/icons";
 import { FONT_STYLES } from "@/theme/fonts";
 import { Album2FillNativeIcon, Album2LineNativeIcon } from "@kyomi/ui/icons/mingcute-native";
@@ -103,6 +104,20 @@ export function TabBar({
   const selectorWidth = regularWidth * SELECTOR_RATIO;
   const selectionWidth = Math.max(0, regularWidth + 2 * (CONTENT_PADDING - SELECTION_INSET));
   const selectionX = CONTENT_PADDING + regularWidth * (activeTab + 0.5) - selectionWidth / 2;
+  const selectionXValue = useSharedValue(selectionX);
+  const selectionWidthValue = useSharedValue(selectionWidth);
+
+  useEffect(() => {
+    const spring = { damping: 24, stiffness: 260, mass: 0.8 };
+    selectionXValue.set(withSpring(selectionX, spring));
+    selectionWidthValue.set(withSpring(selectionWidth, spring));
+  }, [selectionWidth, selectionWidthValue, selectionX, selectionXValue]);
+
+  const selectionAnimatedStyle = useAnimatedStyle(() => ({
+    left: selectionXValue.get(),
+    width: selectionWidthValue.get(),
+  }));
+
   const glassFallback = isLiquidGlassSupported
     ? undefined
     : isDark
@@ -130,7 +145,6 @@ export function TabBar({
             accessibilityLabel="Search feeds or articles"
             autoCapitalize="none"
             autoCorrect={false}
-            autoFocus
             onChangeText={(value) => {
               setQuery(value);
               onSearchQueryChange?.(value);
@@ -150,19 +164,18 @@ export function TabBar({
             interactive
             style={[styles.glass, { backgroundColor: glassFallback, borderRadius: height / 2 }]}
           />
-          <View
+          <Animated.View
             pointerEvents="none"
             style={[
               styles.selection,
+              selectionAnimatedStyle,
               {
                 backgroundColor: selectionPlatterFill,
                 borderColor: selectionPlatterHighlight,
                 borderRadius: (height - SELECTION_INSET * 2) / 2,
                 borderWidth: 0.5,
                 height: height - SELECTION_INSET * 2,
-                left: selectionX,
                 top: SELECTION_INSET,
-                width: selectionWidth,
               },
             ]}
           />
