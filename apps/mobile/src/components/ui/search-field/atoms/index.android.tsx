@@ -18,6 +18,7 @@ import {
   weight,
 } from "@expo/ui/jetpack-compose/modifiers";
 import { useEffect, useImperativeHandle, useRef } from "react";
+import { Keyboard } from "react-native";
 import { FONT_STYLES } from "@/theme/fonts";
 import {
   INPUT_COLOR,
@@ -63,7 +64,7 @@ export function SearchField({
   };
 
   return (
-    <Host ignoreSafeAreaKeyboardInsets style={{ flex: 1, height: "100%" }}>
+    <Host style={{ flex: 1, height: "100%" }}>
       <Row
         verticalAlignment="center"
         modifiers={[fillMaxWidth(), fillMaxHeight(), padding(16, 0, 6, 0)]}
@@ -77,6 +78,7 @@ export function SearchField({
             autoCorrectEnabled: false,
             imeAction: "search",
           }}
+          keyboardActions={{ onSearch: () => Keyboard.dismiss() }}
           onValueChange={onChangeText}
           singleLine
           textStyle={{ ...FONT_STYLES.bodyMedium, color: INPUT_COLOR }}

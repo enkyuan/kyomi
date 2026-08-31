@@ -1,4 +1,11 @@
-import { StyleSheet, TextInput, View } from "react-native";
+import {
+  Keyboard,
+  StyleSheet,
+  TextInput,
+  View,
+  type TextInput as TextInputInstance,
+} from "react-native";
+import type { RefObject } from "react";
 import {
   GestureDetector,
   type ComposedGesture,
@@ -35,8 +42,10 @@ const SEARCH_HALF_H = PILL_HEIGHT / 2;
 interface SearchButtonProps {
   readonly composedGesture: ComposedGesture | GestureType;
   readonly glowProgress: SharedValue<number>;
+  readonly inputRef: RefObject<TextInputInstance | null>;
   readonly isSearchActive: boolean;
   readonly onQueryChange?: (query: string) => void;
+  readonly onQuerySubmit?: (query: string) => void;
   readonly overflowX: SharedValue<number>;
   readonly overflowY: SharedValue<number>;
   readonly pressed: SharedValue<number>;
@@ -49,8 +58,10 @@ interface SearchButtonProps {
 export function SearchButton({
   composedGesture,
   glowProgress,
+  inputRef,
   isSearchActive,
   onQueryChange,
+  onQuerySubmit,
   overflowX,
   overflowY,
   pressed,
@@ -112,8 +123,13 @@ export function SearchButton({
               </Animated.View>
               <Animated.View style={[searchStyles.inputContainer, inputOpacity]}>
                 <TextInput
+                  ref={inputRef}
                   clearButtonMode="while-editing"
                   onChangeText={onQueryChange}
+                  onSubmitEditing={({ nativeEvent }) => {
+                    onQuerySubmit?.(nativeEvent.text);
+                    Keyboard.dismiss();
+                  }}
                   placeholder="Search feeds or articles…"
                   placeholderTextColor={COLORS.textSecondary}
                   pointerEvents={isSearchActive ? "auto" : "none"}

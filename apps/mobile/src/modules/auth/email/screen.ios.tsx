@@ -157,6 +157,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 invalid={isEmailInvalid}
                 onEmailChange={handleEmailChange}
                 onErrorAlertChange={handleErrorAlertChange}
+                onSubmit={handleSendCode}
                 theme={theme}
               />
               <OTPFormStep
@@ -168,6 +169,9 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 onErrorAlertChange={handleErrorAlertChange}
                 onFocusOtp={focusOtp}
                 onOtpChange={handleOtpChange}
+                onSubmit={() =>
+                  otpValue.length === 6 ? handleVerifyCode(otpValue) : handleSendCode()
+                }
                 otp={otp}
                 otpFieldRef={otpFieldRef}
                 otpValue={otpValue}

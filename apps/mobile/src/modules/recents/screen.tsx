@@ -3,7 +3,7 @@ import { Platform } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDerivedValue, useSharedValue } from "react-native-reanimated";
 import { CollapsingHeader, COMPACT_NAV_HEIGHT } from "@ui/header";
-import { ScrollHeaderLayout } from "@ui/header/scroll/layout";
+import { ScrollHeaderLayout } from "@ui/header/scroll-layout";
 import { RecentList } from "./components/list";
 
 export function RecentsScreen() {

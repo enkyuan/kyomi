@@ -141,6 +141,8 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               autoCapitalize="none"
               autoCorrect={false}
               onChangeText={handleEmailChange}
+              onSubmitEditing={handleSendCode}
+              returnKeyType="done"
               style={{
                 ...FONT_STYLES.input,
                 width: "100%",
@@ -159,7 +161,12 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               keyboardType="number-pad"
               autoCapitalize="none"
               autoCorrect={false}
+              maxLength={6}
               onChangeText={handleOtpChange}
+              onSubmitEditing={() =>
+                otp.value.length === 6 ? handleVerifyCode() : handleSendCode()
+              }
+              returnKeyType="done"
               style={{
                 ...FONT_STYLES.input,
                 width: "100%",

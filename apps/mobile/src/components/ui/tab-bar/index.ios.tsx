@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState, type ReactElement } from "react";
-import { useColorScheme, useWindowDimensions } from "react-native";
+import { useState, type ReactElement } from "react";
+import { Keyboard, useColorScheme, useWindowDimensions } from "react-native";
 import { mobileColors } from "@/theme/colors";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
@@ -18,7 +18,6 @@ import {
   TextField,
   ZStack,
   useNativeState,
-  type TextFieldRef,
 } from "@expo/ui/swift-ui";
 import {
   accessibilityHidden,
@@ -36,10 +35,13 @@ import {
   menuIndicator,
   menuStyle,
   offset,
+  onSubmit,
   opacity,
   padding,
   strokeBorder,
+  submitLabel,
 } from "@expo/ui/swift-ui/modifiers";
+import { useKeyboard } from "@hooks/use-keyboard";
 import { SELECTOR_RATIO, TAB_BAR_BOTTOM_PADDING } from "./lib/constants";
 import type { TabBarProps } from "./lib/types";
 
@@ -66,6 +68,7 @@ export function TabBar({
   minimized = false,
   navigation,
   onSearchQueryChange,
+  onSearchSubmit,
   onSelectSource,
   onTabChange,
   selectedSourceId,
@@ -74,14 +77,15 @@ export function TabBar({
 }: TabBarProps) {
   const colorScheme = useColorScheme();
   const insets = useSafeAreaInsets();
+  const { height: keyboardHeight } = useKeyboard();
   const { width: screenWidth } = useWindowDimensions();
   const [fallbackActiveTab, setFallbackActiveTab] = useState(state?.index === 1 ? 1 : 0);
   const [searchActive, setSearchActive] = useState(false);
   const searchText = useNativeState("");
-  const searchFieldRef = useRef<TextFieldRef>(null);
   const activeTab = state ? (state.index === 1 ? 1 : 0) : fallbackActiveTab;
   const isDark = colorScheme === "dark";
   const bottomPadding = Math.max(insets.bottom, TAB_BAR_BOTTOM_PADDING);
+  const bottomInset = keyboardHeight > 0 ? TAB_BAR_BOTTOM_PADDING : bottomPadding;
   const effectiveMinimized = searchActive ? false : minimized;
   const height = effectiveMinimized ? COMPACT_HEIGHT : NORMAL_HEIGHT;
   const availableWidth = Math.max(0, screenWidth - HORIZONTAL_PADDING * 2);
@@ -106,14 +110,6 @@ export function TabBar({
   const selectionPlatterFill = isDark ? SELECTION_PLATTER_DARK : SELECTION_PLATTER_LIGHT;
   const selectionPlatterHighlight = isDark ? SELECTION_HIGHLIGHT_DARK : SELECTION_HIGHLIGHT_LIGHT;
 
-  useEffect(() => {
-    if (searchActive) {
-      void searchFieldRef.current?.focus();
-    } else {
-      void searchFieldRef.current?.blur();
-    }
-  }, [searchActive]);
-
   function selectTab(index: number) {
     if (index > 1) return;
     setFallbackActiveTab(index);
@@ -131,6 +127,7 @@ export function TabBar({
 
   function toggleSearch() {
     const next = !searchActive;
+    if (!next) Keyboard.dismiss();
     setSearchActive(next);
     if (!next) {
       searchText.set("");
@@ -142,10 +139,11 @@ export function TabBar({
   return (
     <Host
       colorScheme={isDark ? "dark" : "light"}
+      ignoreSafeArea="all"
       matchContents={{ vertical: true }}
       pointerEvents="box-none"
       style={{
-        bottom: bottomPadding,
+        bottom: bottomInset + keyboardHeight,
         width: "100%",
         left: 0,
         paddingHorizontal: HORIZONTAL_PADDING,
@@ -247,32 +245,39 @@ export function TabBar({
                   {renderSourceMenuItems(sources, selectedSourceId, onSelectSource)}
                 </Menu>
               </HStack>
-              <HStack
-                alignment="center"
-                modifiers={[
-                  padding({ horizontal: 14 }),
-                  frame({ height, width: searchWidth }),
-                  opacity(searchActive ? 1 : 0),
-                  accessibilityHidden(!searchActive),
-                  animation(SPRING, searchActive),
-                ]}
-                spacing={8}
-              >
-                <ZStack alignment="center" modifiers={[frame({ height, width: 22 })]}>
-                  <RNHostView matchContents>
-                    <SymbolView name="magnifyingglass" size={18} tintColor={searchIconColor} />
-                  </RNHostView>
-                </ZStack>
-                <TextField
-                  autoFocus={false}
-                  onTextChange={(value) => {
-                    onSearchQueryChange?.(value);
-                  }}
-                  placeholder="Search feeds or articles"
-                  text={searchText}
-                  modifiers={[foregroundStyle(searchTextColor)]}
-                />
-              </HStack>
+              {searchActive ? (
+                <HStack
+                  alignment="center"
+                  modifiers={[
+                    padding({ horizontal: 14 }),
+                    frame({ height, width: searchWidth }),
+                    animation(SPRING, searchActive),
+                  ]}
+                  spacing={8}
+                >
+                  <ZStack alignment="center" modifiers={[frame({ height, width: 22 })]}>
+                    <RNHostView matchContents>
+                      <SymbolView name="magnifyingglass" size={18} tintColor={searchIconColor} />
+                    </RNHostView>
+                  </ZStack>
+                  <TextField
+                    autoFocus
+                    onTextChange={(value) => {
+                      onSearchQueryChange?.(value);
+                    }}
+                    placeholder="Search feeds or articles"
+                    text={searchText}
+                    modifiers={[
+                      foregroundStyle(searchTextColor),
+                      onSubmit(() => {
+                        onSearchSubmit?.(searchText.value);
+                        Keyboard.dismiss();
+                      }),
+                      submitLabel("search"),
+                    ]}
+                  />
+                </HStack>
+              ) : null}
             </ZStack>
           </GlassEffectContainer>
           <GlassEffectContainer spacing={0}>

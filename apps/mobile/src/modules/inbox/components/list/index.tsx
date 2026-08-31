@@ -6,7 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, { type SharedValue } from "react-native-reanimated";
 import { Skeleton } from "@ui/skeleton";
 import { COMPACT_NAV_HEIGHT } from "@ui/header";
-import type { InboxFilter } from "../../model";
+import type { InboxFilter } from "../../lib/model";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
 import { type ArticleScope, useArticles } from "@modules/inbox/hooks/use-articles";

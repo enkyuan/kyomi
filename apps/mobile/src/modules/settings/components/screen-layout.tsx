@@ -1,20 +1,14 @@
 import { type PropsWithChildren } from "react";
-import { ScrollView, useColorScheme } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { View, useColorScheme } from "react-native";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
-/** Scroll content for the Settings stack modal; the stack owns its centered title. */
+/** Background boundary; the native settings list owns scrolling. */
 export function SettingsScreenLayout({ children }: PropsWithChildren) {
-  const insets = useSafeAreaInsets();
   const theme = getMobileSurfaceTheme(useColorScheme());
 
   return (
-    <ScrollView
-      contentInset={{ bottom: insets.bottom + 24 }}
-      contentInsetAdjustmentBehavior="automatic"
-      style={{ backgroundColor: theme.background, flex: 1 }}
-    >
+    <View className="flex-1" style={{ backgroundColor: theme.background }}>
       {children}
-    </ScrollView>
+    </View>
   );
 }

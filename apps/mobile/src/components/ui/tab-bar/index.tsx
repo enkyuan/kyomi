@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { useEffect, useRef, useState } from "react";
+import { Keyboard, StyleSheet, TextInput, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated from "react-native-reanimated";
 import { CloseSearchButton, SearchButton } from "./components/search";
@@ -7,6 +7,7 @@ import { TabBarPill } from "./components/pill";
 import { useAnimation } from "./hooks/use-animation";
 import { usePill } from "./hooks/use-pill";
 import { useSearch } from "./hooks/use-search";
+import { useKeyboard } from "@hooks/use-keyboard";
 import { TAB_BAR_BOTTOM_PADDING, TAB_BAR_HORIZONTAL_PADDING } from "./lib/constants";
 import type { TabBarProps } from "./lib/types";
 
@@ -15,6 +16,7 @@ export function TabBar({
   minimized: _minimized = false,
   navigation,
   onSearchQueryChange,
+  onSearchSubmit,
   onSelectSource: _onSelectSource,
   onTabChange,
   selectedSourceId: _selectedSourceId,
@@ -22,8 +24,11 @@ export function TabBar({
   state,
 }: TabBarProps) {
   const insets = useSafeAreaInsets();
+  const { height: keyboardHeight } = useKeyboard();
   const bottomPadding = Math.max(insets.bottom, TAB_BAR_BOTTOM_PADDING);
+  const bottomInset = keyboardHeight > 0 ? TAB_BAR_BOTTOM_PADDING : bottomPadding;
   const [searchQuery, setSearchQuery] = useState("");
+  const searchInputRef = useRef<TextInput>(null);
 
   const currentIndex = state?.index === 1 ? 1 : 0;
 
@@ -35,6 +40,19 @@ export function TabBar({
     setActiveTab,
     toggleSearch,
   } = useAnimation(currentIndex);
+
+  useEffect(() => {
+    if (!isSearchActive) {
+      searchInputRef.current?.blur();
+      Keyboard.dismiss();
+      return;
+    }
+
+    const focusFrame = requestAnimationFrame(() => {
+      searchInputRef.current?.focus();
+    });
+    return () => cancelAnimationFrame(focusFrame);
+  }, [isSearchActive]);
 
   useEffect(() => {
     if (state && state.index !== activeTab && state.index < 2) {
@@ -97,7 +115,7 @@ export function TabBar({
   return (
     <Animated.View
       pointerEvents="box-none"
-      style={[styles.container, { paddingBottom: bottomPadding }]}
+      style={[styles.container, { bottom: keyboardHeight, paddingBottom: bottomInset }]}
     >
       <TabBarPill
         activeTab={activeTab}
@@ -115,8 +133,10 @@ export function TabBar({
       <SearchButton
         composedGesture={searchComposedGesture}
         glowProgress={searchGlowProgress}
+        inputRef={searchInputRef}
         isSearchActive={isSearchActive}
         onQueryChange={handleSearchQuery}
+        onQuerySubmit={onSearchSubmit}
         overflowX={searchOverflowX}
         overflowY={searchOverflowY}
         pressed={searchPressed}

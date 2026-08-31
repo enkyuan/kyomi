@@ -16,6 +16,5 @@ export { PlusIcon, type PlusIconProps } from "./plus";
 export { RecentsIcon, type RecentsIconProps } from "./recents";
 export { RssIcon, type RssIconProps } from "./rss";
 export { SearchIcon, type SearchIconProps } from "./search";
-export { SettingsIcon, type SettingsIconProps } from "./settings";
 export { ShareIcon, type ShareIconProps } from "./share";
 export { SwitcherIcon, type SwitcherIconProps } from "./switcher";

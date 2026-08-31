@@ -1,75 +1,60 @@
-import { Host } from "@expo/ui";
-import {
-  Box,
-  Button,
-  CircularProgressIndicator,
-  Column,
-  Shape,
-  Text,
-} from "@expo/ui/jetpack-compose";
-import { align, fillMaxWidth, height, padding, size } from "@expo/ui/jetpack-compose/modifiers";
+import { Button, Host } from "@expo/ui";
+import { CircularProgressIndicator, Column, Row, RNHostView, Text } from "@expo/ui/jetpack-compose";
+import { fillMaxWidth, height, size } from "@expo/ui/jetpack-compose/modifiers";
 import { useColorScheme } from "react-native";
-import { useLogout } from "./hooks/use-logout";
+import { List } from "./components/list";
 import { SettingsScreenLayout } from "./components/screen-layout";
+import { useLogout } from "./hooks/use-logout";
+import { MingcuteIcon } from "@/components/icons/mingcute";
+import { WaveHandFillNativeIcon } from "@kyomi/ui/icons/mingcute-native";
+import { mobileColors } from "@/theme/colors";
 import { FONT_STYLES } from "@/theme/fonts";
-
-const DESTRUCTIVE_THEMES = {
-  dark: {
-    destructive: "#ffb4ab",
-    destructiveContainer: "#93000a",
-  },
-  light: {
-    destructive: "#b3261e",
-    destructiveContainer: "#ffdad6",
-  },
-} as const;
-
-const BUTTON_LABEL_STYLE = FONT_STYLES.button;
+import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
 export function SettingsScreen() {
-  const colorScheme = useColorScheme();
-  const destructiveTheme = DESTRUCTIVE_THEMES[colorScheme === "dark" ? "dark" : "light"];
   const { confirmLogout, errorMessage, isLoggingOut } = useLogout();
+  const theme = getMobileSurfaceTheme(useColorScheme());
 
   return (
     <SettingsScreenLayout>
-      <Host matchContents={{ vertical: true }} style={{ width: "100%" }}>
-        <Column
-          verticalArrangement={{ spacedBy: 12 }}
-          modifiers={[fillMaxWidth(), padding(24, 24, 24, 24)]}
-        >
-          <Button
-            colors={{
-              containerColor: destructiveTheme.destructiveContainer,
-              contentColor: destructiveTheme.destructive,
-            }}
-            contentPadding={{ bottom: 14, top: 14 }}
-            enabled={!isLoggingOut}
-            onClick={confirmLogout}
-            shape={Shape.Pill({})}
-            modifiers={[fillMaxWidth()]}
-          >
-            <Box contentAlignment="center" modifiers={[fillMaxWidth(), height(22)]}>
-              {isLoggingOut ? (
-                <CircularProgressIndicator
-                  color={destructiveTheme.destructive}
-                  strokeWidth={2}
-                  modifiers={[size(20, 20)]}
-                />
-              ) : (
-                <Text modifiers={[align("center")]} style={BUTTON_LABEL_STYLE}>
-                  Log out
-                </Text>
-              )}
-            </Box>
-          </Button>
-          {errorMessage ? (
-            <Text color={destructiveTheme.destructive} style={FONT_STYLES.bodySmall}>
-              {errorMessage}
-            </Text>
-          ) : null}
-        </Column>
-      </Host>
+      <List>
+        <Host style={{ height: errorMessage ? 80 : 50, width: "100%" }}>
+          <Column verticalArrangement={{ spacedBy: 8 }}>
+            <Button
+              disabled={isLoggingOut}
+              onPress={confirmLogout}
+              style={{ backgroundColor: theme.card, borderRadius: 999, height: 50, width: "100%" }}
+              variant="filled"
+            >
+              <Row
+                horizontalArrangement={{ spacedBy: 12 }}
+                verticalAlignment="center"
+                modifiers={[fillMaxWidth(), height(22)]}
+              >
+                <RNHostView matchContents>
+                  <MingcuteIcon fill={theme.foreground} icon={WaveHandFillNativeIcon} size={20} />
+                </RNHostView>
+                {isLoggingOut ? (
+                  <CircularProgressIndicator
+                    color={theme.foreground}
+                    modifiers={[size(20, 20)]}
+                    strokeWidth={2}
+                  />
+                ) : (
+                  <Text color={theme.foreground} style={FONT_STYLES.body}>
+                    Log out
+                  </Text>
+                )}
+              </Row>
+            </Button>
+            {errorMessage ? (
+              <Text color={mobileColors.systemError} style={FONT_STYLES.bodySmall}>
+                {errorMessage}
+              </Text>
+            ) : null}
+          </Column>
+        </Host>
+      </List>
     </SettingsScreenLayout>
   );
 }

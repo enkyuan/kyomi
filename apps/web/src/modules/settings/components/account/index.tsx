@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckFill, CloseFill, Edit2Fill, User3Fill } from "@kyomi/ui/icons/mingcute";
+import { CheckFill, CloseFill, Edit2Fill, User3Fill, WaveHandFill } from "@kyomi/ui/icons/mingcute";
 import { useAuth } from "@integrations/better-auth/provider";
 import { Badge } from "@kyomi/ui/badge";
 import { Button } from "@kyomi/ui/button";
@@ -83,6 +83,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h3 className="text-base font-semibold text-foreground">Account</h3>
           <Button size="sm" variant="destructive-outline" onClick={() => void onLogout()}>
+            <WaveHandFill />
             Log out
           </Button>
         </div>

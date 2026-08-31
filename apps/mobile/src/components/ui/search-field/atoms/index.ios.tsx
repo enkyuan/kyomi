@@ -16,6 +16,7 @@ import {
   foregroundStyle,
   frame,
   labelStyle,
+  onSubmit,
   opacity,
   padding,
   submitLabel,
@@ -24,6 +25,7 @@ import {
   tint,
 } from "@expo/ui/swift-ui/modifiers";
 import { useEffect, useImperativeHandle, useRef } from "react";
+import { Keyboard } from "react-native";
 import { FONT_FAMILIES, FONT_SIZES } from "@/theme/fonts";
 import {
   INPUT_COLOR,
@@ -69,7 +71,7 @@ export function SearchField({
   };
 
   return (
-    <Host ignoreSafeArea="all" style={{ flex: 1, height: "100%" }}>
+    <Host ignoreSafeArea="container" style={{ flex: 1, height: "100%" }}>
       <HStack
         modifiers={[
           frame({ maxWidth: Infinity, height: SEARCH_FIELD_HEIGHT }),
@@ -87,6 +89,7 @@ export function SearchField({
             textInputAutocapitalization("never"),
             autocorrectionDisabled(),
             submitLabel("search"),
+            onSubmit(() => Keyboard.dismiss()),
             font({ family: FONT_FAMILIES.inter.regular, size: FONT_SIZES.bodyMedium }),
             foregroundStyle(INPUT_COLOR),
             tint(INPUT_COLOR),

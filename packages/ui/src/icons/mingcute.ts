@@ -68,6 +68,7 @@ export {
   UpFill,
   User3Fill,
   WarningFill,
+  WaveHandFill,
 } from "@mingcute/react";
 
 export type { IconProps } from "@mingcute/react";

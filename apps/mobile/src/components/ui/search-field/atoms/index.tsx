@@ -1,5 +1,6 @@
 import { Host, TextInput, type TextInputRef, useNativeState } from "@expo/ui";
 import { useEffect, useImperativeHandle, useRef } from "react";
+import { Keyboard } from "react-native";
 import { FONT_STYLES } from "@/theme/fonts";
 import {
   INPUT_COLOR,
@@ -44,6 +45,7 @@ export function SearchField({
         cursorColor={INPUT_COLOR}
         editable={editable}
         onChangeText={onChangeText}
+        onSubmitEditing={() => Keyboard.dismiss()}
         placeholder={placeholder}
         placeholderTextColor={PLACEHOLDER_COLOR}
         ref={fieldRef}

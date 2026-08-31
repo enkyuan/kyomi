@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Keyboard } from "react-native";
 import { useReducedMotion } from "react-native-reanimated";
 import { isValidEmail } from "@kyomi/reader/schemas/auth";
 import { authClient } from "@/lib/auth";
@@ -69,6 +70,7 @@ export function useEmailAuth({
   function handleDismiss() {
     if (!isMountedRef.current) return;
     isPresentedRef.current = false;
+    Keyboard.dismiss();
     reset();
     onDismiss();
   }
@@ -156,6 +158,7 @@ export function useEmailAuth({
             return;
           }
           isPresentedRef.current = false;
+          Keyboard.dismiss();
           onDismiss();
         },
         () => {

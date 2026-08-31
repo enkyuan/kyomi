@@ -21,10 +21,12 @@ import {
   foregroundStyle,
   frame,
   keyboardType,
+  onSubmit as onSubmitModifier,
   onTapGesture,
   opacity,
   padding,
   strokeBorder,
+  submitLabel,
   textContentType,
   textFieldStyle,
   textInputAutocapitalization,
@@ -49,6 +51,7 @@ type EmailFormStepProps = {
   invalid: boolean;
   onEmailChange: (value: string) => void;
   onErrorAlertChange: (isPresented: boolean) => void;
+  onSubmit: () => void;
   theme: EmailStepTheme;
 };
 
@@ -61,6 +64,7 @@ export function EmailFormStep({
   invalid,
   onEmailChange,
   onErrorAlertChange,
+  onSubmit,
   theme,
 }: EmailFormStepProps) {
   return (
@@ -112,6 +116,8 @@ export function EmailFormStep({
             modifiers={[
               textFieldStyle("plain"),
               keyboardType("email-address"),
+              onSubmitModifier(onSubmit),
+              submitLabel("done"),
               textContentType("emailAddress"),
               textInputAutocapitalization("never"),
               autocorrectionDisabled(),
@@ -151,6 +157,7 @@ type OTPFormStepProps = {
   invalid: boolean;
   onErrorAlertChange: (isPresented: boolean) => void;
   onFocusOtp: () => void;
+  onSubmit: () => void;
   onOtpChange: (value: string) => void;
   otp: ObservableStringState;
   otpFieldRef: RefObject<TextFieldRef | null>;
@@ -167,6 +174,7 @@ export function OTPFormStep({
   onErrorAlertChange,
   onFocusOtp,
   onOtpChange,
+  onSubmit,
   otp,
   otpFieldRef,
   otpValue,
@@ -258,6 +266,8 @@ export function OTPFormStep({
               modifiers={[
                 textFieldStyle("plain"),
                 keyboardType("numeric"),
+                onSubmitModifier(onSubmit),
+                submitLabel("done"),
                 textContentType("oneTimeCode"),
                 textInputAutocapitalization("never"),
                 autocorrectionDisabled(),

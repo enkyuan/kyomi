@@ -1,18 +1,17 @@
 import type { PropsWithChildren } from "react";
-import { View, useColorScheme, type StyleProp, type ViewStyle } from "react-native";
-import { Text, Host } from "@expo/ui";
+import { Text, View, useColorScheme, type StyleProp, type ViewStyle } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
-export const COMPACT_NAV_HEIGHT = 48;
+export const HEADER_CONTENT_HEIGHT = 48;
 
 // The title variant needs a taller strip than the tab-bar variant to seat a
 // large title; only that variant opts into the extra height, so the inbox's
 // tab-bar blur edge stays put.
 export const TITLE_CONTENT_HEIGHT = 60;
 
-type HeaderSurface = "default" | "transparent";
+export type HeaderSurface = "default" | "transparent";
 
 type HeaderProps = PropsWithChildren<{
   /**
@@ -33,7 +32,7 @@ export function Header({ children, style, surface = "default", title }: HeaderPr
   const insets = useSafeAreaInsets();
   const { background, foreground } = getMobileSurfaceTheme(useColorScheme());
 
-  const contentHeight = title ? TITLE_CONTENT_HEIGHT : COMPACT_NAV_HEIGHT;
+  const contentHeight = title ? TITLE_CONTENT_HEIGHT : HEADER_CONTENT_HEIGHT;
 
   return (
     <View
@@ -50,20 +49,16 @@ export function Header({ children, style, surface = "default", title }: HeaderPr
           pointerEvents="none"
           style={{ height: TITLE_CONTENT_HEIGHT }}
         >
-          <Host>
-            <Text
-              numberOfLines={1}
-              // Negative tracking keeps a large title from reading loose — Apple
-              // tightens tracking as type grows; a fixed 0 would look airy here.
-              textStyle={{
-                ...FONT_STYLES.navigationTitle,
-                color: foreground,
-                letterSpacing: -0.4,
-              }}
-            >
-              {title}
-            </Text>
-          </Host>
+          <Text
+            accessibilityRole="header"
+            allowFontScaling={false}
+            numberOfLines={1}
+            // Negative tracking keeps a large title from reading loose — Apple
+            // tightens tracking as type grows; a fixed 0 would look airy here.
+            style={[FONT_STYLES.navigationTitle, { color: foreground, letterSpacing: -0.4 }]}
+          >
+            {title}
+          </Text>
         </View>
       ) : (
         children
@@ -71,3 +66,13 @@ export function Header({ children, style, surface = "default", title }: HeaderPr
     </View>
   );
 }
+
+export {
+  CollapsingHeader,
+  HeaderActionButton,
+  COLLAPSE_DISTANCE,
+  COMPACT_NAV_HEIGHT,
+  EXPANDED_TITLE_HEIGHT,
+  type CollapsingHeaderProps,
+  type HeaderActionButtonProps,
+} from "./collapsing";

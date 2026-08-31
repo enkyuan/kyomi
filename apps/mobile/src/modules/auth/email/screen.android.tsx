@@ -178,7 +178,9 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                       keyboardType: "email",
                       capitalization: "none",
                       autoCorrectEnabled: false,
+                      imeAction: "done",
                     }}
+                    keyboardActions={{ onDone: () => handleSendCode() }}
                   >
                     <OutlinedTextField.Placeholder>
                       <Text style={FONT_STYLES.bodyMedium}>you@example.com</Text>
@@ -240,11 +242,19 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                     <BasicTextField
                       ref={otpFieldRef}
                       value={otp}
+                      maxLength={OTP_LENGTH}
                       onValueChange={handleOtpChange}
                       keyboardOptions={{
                         keyboardType: "number",
                         capitalization: "none",
                         autoCorrectEnabled: false,
+                        imeAction: "done",
+                      }}
+                      keyboardActions={{
+                        onDone: () =>
+                          otpValue.length === OTP_LENGTH
+                            ? handleVerifyCode(otpValue)
+                            : handleSendCode(),
                       }}
                       modifiers={[size(0, 0), semantics({ contentType: "one-time-code" })]}
                     />
