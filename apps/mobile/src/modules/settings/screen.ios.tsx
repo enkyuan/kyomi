@@ -15,10 +15,9 @@ import {
 import { Platform } from "react-native";
 import { useLogout } from "./hooks/use-logout";
 import { SettingsScreenLayout } from "./components/screen-layout";
+import { mobileColors } from "@/theme/colors";
 import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
 
-const DESTRUCTIVE_TINT = "#fb414a";
-const DESTRUCTIVE_FOREGROUND = "#ffffff";
 const LOG_OUT_BUTTON_STYLE =
   Number.parseInt(String(Platform.Version), 10) >= 26 ? "glassProminent" : "borderedProminent";
 const FULL_WIDTH = frame({ maxWidth: Infinity });
@@ -43,7 +42,7 @@ export function SettingsScreen() {
             modifiers={[
               buttonStyle(LOG_OUT_BUTTON_STYLE),
               buttonBorderShape("capsule"),
-              tint(DESTRUCTIVE_TINT),
+              tint(mobileColors.destructive),
               disabled(isLoggingOut),
               controlSize("extraLarge"),
               accessibilityLabel(isLoggingOut ? "Logging out" : "Log out"),
@@ -56,20 +55,27 @@ export function SettingsScreen() {
               {isLoggingOut ? (
                 <ProgressView
                   modifiers={[
-                    tint(DESTRUCTIVE_FOREGROUND),
+                    tint(mobileColors.destructiveForeground),
                     controlSize("regular"),
                     frame({ width: 20, height: 20 }),
                   ]}
                 />
               ) : (
-                <Text modifiers={[BUTTON_LABEL_FONT, foregroundStyle(DESTRUCTIVE_FOREGROUND)]}>
+                <Text
+                  modifiers={[
+                    BUTTON_LABEL_FONT,
+                    foregroundStyle(mobileColors.destructiveForeground),
+                  ]}
+                >
                   Log out
                 </Text>
               )}
             </ZStack>
           </Button>
           {errorMessage ? (
-            <Text modifiers={[ERROR_FONT, foregroundStyle("#ff453a")]}>{errorMessage}</Text>
+            <Text modifiers={[ERROR_FONT, foregroundStyle(mobileColors.systemError)]}>
+              {errorMessage}
+            </Text>
           ) : null}
         </VStack>
       </Host>

@@ -7,6 +7,7 @@ import { ReaderContent } from "@kyomi/reader/web";
 import { RssIcon } from "@kyomi/ui/icons/rss";
 import "@kyomi/reader/web/styles.css";
 import "@kyomi/ui/styles/reader.css";
+import { mobileColors } from "@/theme/colors";
 import { FONT_FAMILIES, FONT_WEIGHTS } from "@/theme/fonts";
 import { mobileReaderLayout } from "../lib/layout";
 import { readerCanvas } from "../lib/theme";
@@ -39,7 +40,7 @@ const MOBILE_READER_STYLES = String.raw`
     --reader-card: #ffffff;
     --foreground: var(--reader-foreground);
     --card: var(--reader-card);
-    --ring: #a1a1aa;
+    --ring: ${mobileColors.mutedIcon};
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -53,7 +54,7 @@ const MOBILE_READER_STYLES = String.raw`
   .mobile-reader[data-color-scheme="dark"] {
     --reader-background: ${readerCanvas.dark};
     --reader-foreground: #f7f7f7;
-    --reader-muted: #a1a1aa;
+    --reader-muted: ${mobileColors.mutedIcon};
     --reader-card: #292929;
     --ring: #71717a;
   }
@@ -71,7 +72,7 @@ const MOBILE_READER_STYLES = String.raw`
     gap: 0.5rem;
     margin: 0 0 ${mobileReaderLayout.source.marginBottomPx}px;
     color: var(--reader-muted);
-    font-family: "${FONT_FAMILIES.inter.medium}", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "${FONT_FAMILIES.inter.semibold}", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: ${mobileReaderLayout.source.fontSizePx}px;
     font-weight: ${FONT_WEIGHTS.semibold};
     letter-spacing: 0.01em;
@@ -170,7 +171,7 @@ const MOBILE_READER_STYLES = String.raw`
 
   .mobile-reader .reader-content .article-body [data-reader-search-match] {
     border-radius: 0.15em;
-    background: color-mix(in srgb, #a8d480 56%, transparent);
+    background: color-mix(in srgb, ${mobileColors.matcha} 56%, transparent);
     color: inherit;
   }
 `;
@@ -192,13 +193,8 @@ function ReaderSource({
   faviconUrls,
   feedTitle,
 }: Pick<ArticleBodyProps, "faviconUrls" | "feedTitle">) {
-  const faviconKey = faviconUrls.join("\n");
   const [faviconIndex, setFaviconIndex] = useState(0);
   const faviconUrl = faviconUrls[faviconIndex];
-
-  useEffect(() => {
-    setFaviconIndex(0);
-  }, [faviconKey]);
 
   return (
     <p className="mobile-reader__source">
@@ -359,7 +355,11 @@ export default function ArticleBody({
     >
       <style>{MOBILE_READER_STYLES}</style>
       <header className="mobile-reader__header">
-        <ReaderSource faviconUrls={faviconUrls} feedTitle={feedTitle} />
+        <ReaderSource
+          key={faviconUrls.join("\n")}
+          faviconUrls={faviconUrls}
+          feedTitle={feedTitle}
+        />
         <h1 className="mobile-reader__title">{title}</h1>
       </header>
       <article className="mobile-reader__content reader-content">

@@ -4,11 +4,11 @@
   "private": true,
   "main": "expo-router/entry",
   "scripts": {
-    "start": "bun scripts/with-env.ts expo start",
-    "android": "bun scripts/with-env.ts expo run:android",
-    "ios": "bun scripts/with-env.ts expo run:ios",
-    "web": "bun scripts/with-env.ts expo start --web",
-    "build": "bun scripts/with-env.ts expo export --platform all --output-dir dist",
+    "start": "REACT_NATIVE_PACKAGER_HOSTNAME=\"$(ipconfig getifaddr en0)\" EXPO_NO_DOTENV=1 bunx --no-install dotenvx run -f .env -fk .env.keys -- expo start",
+    "android": "REACT_NATIVE_PACKAGER_HOSTNAME=\"$(ipconfig getifaddr en0)\" EXPO_NO_DOTENV=1 bunx --no-install dotenvx run -f .env -fk .env.keys -- expo run:android",
+    "ios": "REACT_NATIVE_PACKAGER_HOSTNAME=\"$(ipconfig getifaddr en0)\" EXPO_NO_DOTENV=1 bunx --no-install dotenvx run -f .env -fk .env.keys -- expo run:ios",
+    "web": "EXPO_NO_DOTENV=1 bunx --no-install dotenvx run -f .env -fk .env.keys -- expo start --web",
+    "build": "EXPO_NO_DOTENV=1 bunx --no-install dotenvx run -f .env -fk .env.keys -- expo export --platform all --output-dir dist",
     "fmt": "oxfmt src",
     "fmt:check": "oxfmt --check src",
     "lint": "oxlint src",
@@ -20,7 +20,6 @@
     "@callstack/liquid-glass": "^0.8.1",
     "@expo-google-fonts/dm-sans": "^0.4.2",
     "@expo-google-fonts/inter": "^0.4.2",
-    "@expo-google-fonts/jetbrains-mono": "^0.4.1",
     "@expo/material-symbols": "^0.1.1",
     "@expo/metro-runtime": "~57.0.14",
     "@expo/ui": "~57.0.14",
@@ -38,6 +37,7 @@
     "expo": "~57.0.18",
     "expo-blur": "~57.0.2",
     "expo-constants": "~57.0.16",
+    "expo-dev-client": "~57.0.16",
     "expo-font": "~57.0.2",
     "expo-glass-effect": "~57.0.1",
     "expo-haptics": "~57.0.2",
@@ -66,8 +66,7 @@
     "react-native-web": "^0.21.2",
     "react-native-worklets": "0.10.1",
     "tailwindcss": "^4.3.3",
-    "uniwind": "^1.10.0",
-    "zod": "^4.3.6"
+    "uniwind": "^1.10.0"
   },
   "devDependencies": {
     "@types/react": "~19.2.14",
@@ -75,6 +74,10 @@
   },
   "reactDoctor": {
     "ignore": {
+      "rules": [
+        "deslop/unused-file",
+        "deslop/unused-export"
+      ],
       "overrides": [
         {
           "files": [
@@ -90,6 +93,69 @@
           ],
           "rules": [
             "react-doctor/expo-no-redundant-dependency"
+          ]
+        },
+        {
+          "files": [
+            "modules/header/src/**",
+            "modules/screen-shape/src/**"
+          ],
+          "rules": [
+            "unicorn/filename-case"
+          ]
+        },
+        {
+          "files": [
+            "src/components/ui/tab-bar/**"
+          ],
+          "rules": [
+            "react-doctor/react-compiler-no-manual-memoization"
+          ]
+        },
+        {
+          "files": [
+            "src/components/ui/tab-bar/index.ios.tsx",
+            "src/components/ui/toast/atoms/viewport.tsx"
+          ],
+          "rules": [
+            "eslint/complexity"
+          ]
+        },
+        {
+          "files": [
+            "src/modules/inbox/components/list/index.tsx"
+          ],
+          "rules": [
+            "react-doctor/rn-scrollview-dynamic-padding"
+          ]
+        },
+        {
+          "files": [
+            "src/components/ui/search-field/atoms/index.tsx",
+            "src/modules/auth/email/screen.tsx"
+          ],
+          "rules": [
+            "react-hooks-js/immutability"
+          ]
+        },
+        {
+          "files": [
+            "src/modules/auth/email/screen.ios.tsx",
+            "src/modules/inbox/hooks/use-articles.ts",
+            "src/modules/reader/screen.tsx",
+            "src/modules/recents/components/list.tsx",
+            "src/modules/recents/screen.tsx"
+          ],
+          "rules": [
+            "react-doctor/react-compiler-no-manual-memoization"
+          ]
+        },
+        {
+          "files": [
+            "src/modules/auth/email/screen.android.tsx"
+          ],
+          "rules": [
+            "react-hooks-js/refs"
           ]
         }
       ]

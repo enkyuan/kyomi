@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "react-native-reanimated";
-import { useErrorShake } from "./use-error-shake";
 import { isValidEmail } from "@kyomi/reader/schemas/auth";
 import { authClient } from "@/lib/auth";
+import { OTP_LENGTH } from "../constants";
 
-export const OTP_LENGTH = 6;
+export { OTP_LENGTH } from "../constants";
 
 type NativeStringState = {
+  set: (value: string) => void;
   value: string;
 };
 
@@ -36,12 +37,7 @@ export function useEmailAuth({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [invalidStep, setInvalidStep] = useState<"email" | "otp" | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [showEmailInvalidAlert, setShowEmailInvalidAlert] = useState(false);
-  const {
-    cancel: cancelErrorShake,
-    offset: errorShakeOffset,
-    trigger: triggerErrorShake,
-  } = useErrorShake(shouldReduceMotion);
+  const [showErrorAlert, setShowErrorAlert] = useState(false);
 
   function reset() {
     if (!isMountedRef.current) return;
@@ -49,25 +45,25 @@ export function useEmailAuth({
     setIsSubmitting(false);
     setInvalidStep(null);
     setErrorMessage(null);
-    setShowEmailInvalidAlert(false);
-    cancelErrorShake();
+    setShowErrorAlert(false);
     setOtpValue("");
   }
 
-  function reportInvalid(
-    nextInvalidStep: "email" | "otp",
-    message?: string | null,
-    showEmailAlert = false,
-  ) {
+  function reportInvalid(nextInvalidStep: "email" | "otp", message?: string | null) {
     setInvalidStep(nextInvalidStep);
-    setShowEmailInvalidAlert(showEmailAlert);
+    setShowErrorAlert(true);
     setErrorMessage(
       message ??
         (nextInvalidStep === "email"
           ? "Enter a valid email address."
           : "Invalid verification code."),
     );
-    triggerErrorShake();
+  }
+
+  function clearError() {
+    setInvalidStep(null);
+    setErrorMessage(null);
+    setShowErrorAlert(false);
   }
 
   function handleDismiss() {
@@ -80,60 +76,62 @@ export function useEmailAuth({
   function handleUseDifferentEmail() {
     shouldFocusEmailRef.current = true;
     setStep("email");
-    setInvalidStep(null);
-    setErrorMessage(null);
-    setShowEmailInvalidAlert(false);
-    cancelErrorShake();
+    clearError();
     setOtpValue("");
-    otp.value = "";
+    otp.set("");
   }
 
   function handleEmailChange() {
-    if (invalidStep === "email" || errorMessage) {
-      setInvalidStep(null);
-      setErrorMessage(null);
-      setShowEmailInvalidAlert(false);
-      cancelErrorShake();
-    }
+    if (invalidStep === "email" || errorMessage) clearError();
   }
 
-  function handleEmailInvalidAlertChange(isPresented: boolean) {
-    if (!isPresented) setShowEmailInvalidAlert(false);
+  function handleOtpChange(typedValue: string) {
+    const digitsOnly = typedValue.replace(/\D/g, "").slice(0, OTP_LENGTH);
+    if (invalidStep === "otp" || errorMessage) clearError();
+    if (digitsOnly !== typedValue) otp.set(digitsOnly);
+    setOtpValue(digitsOnly);
   }
 
-  async function handleSendCode() {
+  function handleErrorAlertChange(isPresented: boolean) {
+    if (!isPresented) setShowErrorAlert(false);
+  }
+
+  function handleSendCode() {
     if (isSubmitting) return;
     const normalizedEmail = email.value.trim().toLowerCase();
     if (!isValidEmail(normalizedEmail)) {
-      reportInvalid("email", "Enter a valid email address.", true);
+      reportInvalid("email", "Enter a valid email address.");
       focusEmail?.();
       return;
     }
     setIsSubmitting(true);
-    setInvalidStep(null);
-    setErrorMessage(null);
-    try {
-      const { error: sendError } = await authClient.emailOtp.sendVerificationOtp({
+    clearError();
+    void authClient.emailOtp
+      .sendVerificationOtp({
         email: normalizedEmail,
         type: "sign-in",
-      });
-      if (!isMountedRef.current || !isPresentedRef.current) return;
-      setIsSubmitting(false);
-      if (sendError) {
-        reportInvalid("email", sendError.message?.trim() || "Could not send sign-in code.");
-        focusEmail?.();
-        return;
-      }
-      setStep("otp");
-    } catch {
-      if (!isMountedRef.current || !isPresentedRef.current) return;
-      setIsSubmitting(false);
-      reportInvalid("email", "Unable to connect to server. Check your connection.");
-      focusEmail?.();
-    }
+      })
+      .then(
+        ({ error: sendError }: { error?: { message?: string } | null }) => {
+          if (!isMountedRef.current || !isPresentedRef.current) return;
+          setIsSubmitting(false);
+          if (sendError) {
+            reportInvalid("email", sendError.message?.trim() || "Could not send sign-in code.");
+            focusEmail?.();
+            return;
+          }
+          setStep("otp");
+        },
+        () => {
+          if (!isMountedRef.current || !isPresentedRef.current) return;
+          setIsSubmitting(false);
+          reportInvalid("email", "Unable to connect to server. Check your connection.");
+          focusEmail?.();
+        },
+      );
   }
 
-  async function handleVerifyCode(code: string) {
+  function handleVerifyCode(code: string) {
     if (isSubmitting) return;
     if (code.length !== OTP_LENGTH) {
       reportInvalid("otp", "Code must be 6 digits.");
@@ -142,44 +140,31 @@ export function useEmailAuth({
     }
     const normalizedEmail = email.value.trim().toLowerCase();
     setIsSubmitting(true);
-    setInvalidStep(null);
-    setErrorMessage(null);
-    try {
-      const { error: verifyError } = await authClient.signIn.emailOtp({
+    clearError();
+    void authClient.signIn
+      .emailOtp({
         email: normalizedEmail,
         otp: code,
-      });
-      if (!isMountedRef.current || !isPresentedRef.current) return;
-      setIsSubmitting(false);
-      if (verifyError) {
-        reportInvalid("otp", verifyError.message?.trim() || "Invalid verification code.");
-        focusOtp?.();
-        return;
-      }
-      isPresentedRef.current = false;
-      onDismiss();
-    } catch {
-      if (!isMountedRef.current || !isPresentedRef.current) return;
-      setIsSubmitting(false);
-      reportInvalid("otp", "Unable to connect to server. Check your connection.");
-      focusOtp?.();
-    }
-  }
-
-  function handleOtpChange(typedValue: string) {
-    const digitsOnly = typedValue.replace(/\D/g, "").slice(0, OTP_LENGTH);
-    if (invalidStep === "otp" || errorMessage) {
-      setInvalidStep(null);
-      setErrorMessage(null);
-      cancelErrorShake();
-    }
-    if (digitsOnly !== typedValue) {
-      otp.value = digitsOnly;
-    }
-    setOtpValue(digitsOnly);
-    if (digitsOnly.length === OTP_LENGTH) {
-      handleVerifyCode(digitsOnly);
-    }
+      })
+      .then(
+        ({ error: verifyError }: { error?: { message?: string } | null }) => {
+          if (!isMountedRef.current || !isPresentedRef.current) return;
+          setIsSubmitting(false);
+          if (verifyError) {
+            reportInvalid("otp", verifyError.message?.trim() || "Invalid verification code.");
+            focusOtp?.();
+            return;
+          }
+          isPresentedRef.current = false;
+          onDismiss();
+        },
+        () => {
+          if (!isMountedRef.current || !isPresentedRef.current) return;
+          setIsSubmitting(false);
+          reportInvalid("otp", "Unable to connect to server. Check your connection.");
+          focusOtp?.();
+        },
+      );
   }
 
   useEffect(() => {
@@ -195,12 +180,6 @@ export function useEmailAuth({
 
   useEffect(() => {
     if (!isPresented) return;
-    email.value = "";
-    otp.value = "";
-  }, [email, isPresented, otp]);
-
-  useEffect(() => {
-    if (!isPresented) return;
     if (step === "otp") {
       focusOtp?.();
       return;
@@ -212,24 +191,20 @@ export function useEmailAuth({
   }, [focusEmail, focusOtp, isPresented, step]);
 
   return {
-    cancelErrorShake,
     errorMessage,
-    errorShakeOffset,
     handleDismiss,
     handleEmailChange,
-    handleEmailInvalidAlertChange,
+    handleErrorAlertChange,
     handleOtpChange,
     handleSendCode,
     handleUseDifferentEmail,
     handleVerifyCode,
-    invalidStep,
     isEmailInvalid: invalidStep === "email",
     isEmailStep: step === "email",
-    showEmailInvalidAlert,
+    showErrorAlert,
     isOtpInvalid: invalidStep === "otp",
     isSubmitting,
     otpValue,
     shouldReduceMotion,
-    triggerErrorShake,
   };
 }

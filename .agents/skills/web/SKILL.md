@@ -12,8 +12,10 @@ Keep routes thin, behavior domain-owned, and browser/server boundaries explicit.
 1. Read `AGENTS.md`, `apps/web/README.md`, the closest route, the owning module, and its tests.
 2. Load `$architecture` before changing ownership, creating a shared surface, or moving code across
    domains or workspaces.
-3. Load `$packages` for changes to `packages/ui`, `packages/reader`, or another shared package.
-4. Add `$design`, `$security`, `$environment`, and `$testing` when their boundaries apply.
+3. Read [references/dependencies.md](references/dependencies.md) before using TanStack or evaluating
+   Coss UI; inspect the resolved package types and matching official docs before editing.
+4. Load `$packages` for changes to `packages/ui`, `packages/reader`, or another shared package.
+5. Add `$design`, `$security`, `$environment`, and `$testing` when their boundaries apply.
 
 ## Organize the web app
 

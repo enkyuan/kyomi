@@ -3,10 +3,9 @@ import {
   LiquidGlassView,
   isLiquidGlassSupported,
 } from "@callstack/liquid-glass";
-import { useEffect, useMemo, useSyncExternalStore, type ReactNode } from "react";
+import { useEffect, useSyncExternalStore, type ReactNode } from "react";
 import {
   ActivityIndicator,
-  Image,
   Platform,
   Pressable,
   StyleSheet,
@@ -14,10 +13,14 @@ import {
   View,
   useColorScheme,
   useWindowDimensions,
+  type StyleProp,
+  type ViewStyle,
 } from "react-native";
 import * as Haptics from "expo-haptics";
+import { Image } from "expo-image";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { FONT_STYLES, FONT_WEIGHTS } from "@/theme/fonts";
+import { mobileColors } from "@/theme/colors";
+import { FONT_FAMILIES, FONT_STYLES, FONT_WEIGHTS } from "@/theme/fonts";
 import { engine, hapticForToast, type RenderToast } from "../lib/manager";
 import type { Toast } from "../lib/model";
 import type { ToastColor } from "../lib/style";
@@ -42,7 +45,7 @@ const DEFAULT_ICON: Record<ToastSemantic, string> = {
 };
 
 const DEFAULT_TINT: Record<ToastSemantic, string> = {
-  error: "#ff453a",
+  error: mobileColors.systemError,
   info: "#0a84ff",
   none: "#8e8e93",
   success: "#30d158",
@@ -52,14 +55,11 @@ const DEFAULT_TINT: Record<ToastSemantic, string> = {
 export function ToastViewport() {
   const insets = useSafeAreaInsets();
   const snapshot = useSyncExternalStore(engine.subscribe, engine.getSnapshot, engine.getSnapshot);
-  const safeArea = useMemo(
-    () => ({ bottom: insets.bottom, top: insets.top }),
-    [insets.bottom, insets.top],
-  );
-
   useEffect(() => {
-    void engine.setDefaults({ safeArea });
-  }, [safeArea]);
+    void engine.setDefaults({
+      safeArea: { bottom: insets.bottom, top: insets.top },
+    });
+  }, [insets.bottom, insets.top]);
 
   return (
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
@@ -114,10 +114,9 @@ function ToastStack({
 
 function ToastCard({ item }: { item: RenderToast }) {
   const { toast } = item;
-  const scheme = useColorScheme();
+  const isDark = useColorScheme() === "dark";
   const { width } = useWindowDimensions();
   const semantic = toast.semantic ?? "none";
-  const isDark = scheme === "dark";
   const multiline = Boolean(toast.title) || toast.message.length > 64;
   const radius = toast.style?.cornerRadius ?? (multiline ? 22 : 99);
   const background =
@@ -126,29 +125,63 @@ function ToastCard({ item }: { item: RenderToast }) {
     resolveColor(toast.style?.foreground, isDark) ?? (isDark ? "#f5f5f5" : "#1a1a1a");
   const tint = resolveColor(toast.style?.tint, isDark) ?? DEFAULT_TINT[semantic];
   const effect = toast.style?.glass === "none" ? "none" : "regular";
-  const useGlass =
-    Platform.OS === "ios" && isLiquidGlassSupported && toast.style?.glass !== "solid";
+  const useGlass = shouldUseGlass(toast);
   const maxWidth = multiline ? Math.min(440, width - 40) : Math.min(340, width - 32);
-
-  useEffect(() => {
-    const haptic = hapticForToast(toast);
-    if (Platform.OS !== "ios" || haptic === "none") return;
-    const task =
-      haptic === "success"
-        ? Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success)
-        : haptic === "error"
-          ? Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error)
-          : haptic === "warning"
-            ? Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning)
-            : Haptics.selectionAsync();
-    void task.catch(() => undefined);
-  }, [toast]);
-
-  const surfaceStyle = [
+  const surfaceStyle: StyleProp<ViewStyle> = [
     styles.surface,
     { backgroundColor: background, borderRadius: radius, maxWidth },
   ];
+
+  useEffect(() => {
+    triggerToastHaptic(toast);
+  }, [toast]);
+
   const content = (
+    <ToastCardContent
+      foreground={foreground}
+      isDark={isDark}
+      item={item}
+      multiline={multiline}
+      surfaceStyle={surfaceStyle}
+      tint={tint}
+    />
+  );
+
+  return (
+    <ToastAnimatedContainer id={item.id} onSwipe={() => void engine.dismiss(item.id, "swipe")}>
+      {useGlass ? (
+        <LiquidGlassContainerView spacing={0} style={styles.glassContainer}>
+          <LiquidGlassView animated effect={effect} style={surfaceStyle}>
+            {content}
+          </LiquidGlassView>
+        </LiquidGlassContainerView>
+      ) : (
+        content
+      )}
+    </ToastAnimatedContainer>
+  );
+}
+
+type ToastCardContentProps = {
+  foreground: string;
+  isDark: boolean;
+  item: RenderToast;
+  multiline: boolean;
+  surfaceStyle: StyleProp<ViewStyle>;
+  tint: string;
+};
+
+function ToastCardContent({
+  foreground,
+  isDark,
+  item,
+  multiline,
+  surfaceStyle,
+  tint,
+}: ToastCardContentProps) {
+  const { toast } = item;
+
+  return (
     <Pressable
       accessibilityLabel={
         toast.semanticsLabel ?? [toast.title, toast.message].filter(Boolean).join(", ")
@@ -212,20 +245,24 @@ function ToastCard({ item }: { item: RenderToast }) {
       </View>
     </Pressable>
   );
+}
 
-  return (
-    <ToastAnimatedContainer id={item.id} onSwipe={() => void engine.dismiss(item.id, "swipe")}>
-      {useGlass ? (
-        <LiquidGlassContainerView spacing={0} style={styles.glassContainer}>
-          <LiquidGlassView animated effect={effect} style={surfaceStyle}>
-            {content}
-          </LiquidGlassView>
-        </LiquidGlassContainerView>
-      ) : (
-        content
-      )}
-    </ToastAnimatedContainer>
-  );
+function shouldUseGlass(toast: Toast): boolean {
+  return Platform.OS === "ios" && isLiquidGlassSupported && toast.style?.glass !== "solid";
+}
+
+function triggerToastHaptic(toast: Toast): void {
+  const haptic = hapticForToast(toast);
+  if (Platform.OS !== "ios" || haptic === "none") return;
+  const task =
+    haptic === "success"
+      ? Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success)
+      : haptic === "error"
+        ? Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error)
+        : haptic === "warning"
+          ? Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning)
+          : Haptics.selectionAsync();
+  void task.catch(() => undefined);
 }
 
 function ToastAnimatedContainer({
@@ -292,7 +329,11 @@ const styles = StyleSheet.create({
   avatar: { borderRadius: 13, height: 26, width: 26 },
   icon: { ...FONT_STYLES.otp, height: 26, textAlign: "center", width: 26 },
   textColumn: { flex: 1, minWidth: 0 },
-  title: { ...FONT_STYLES.bodyMedium, fontWeight: FONT_WEIGHTS.bold },
+  title: {
+    ...FONT_STYLES.bodyMedium,
+    fontFamily: FONT_FAMILIES.inter.bold,
+    fontWeight: FONT_WEIGHTS.bold,
+  },
   message: FONT_STYLES.bodyMediumMedium,
   action: {
     borderRadius: 99,
@@ -301,7 +342,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  actionLabel: { ...FONT_STYLES.bodySmall, color: "#fff", fontWeight: FONT_WEIGHTS.bold },
+  actionLabel: {
+    ...FONT_STYLES.bodySmall,
+    color: "#fff",
+    fontFamily: FONT_FAMILIES.inter.bold,
+    fontWeight: FONT_WEIGHTS.bold,
+  },
   progressTrack: {
     backgroundColor: "rgba(127,127,127,0.24)",
     borderRadius: 99,

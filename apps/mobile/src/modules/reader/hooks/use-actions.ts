@@ -3,14 +3,14 @@ import { useQueryClient } from "@tanstack/react-query";
 import { fetchMobileApiJson } from "@/lib/api";
 import { useArticleStateMutation } from "@modules/inbox/hooks/use-article-state";
 import { triggerSavedToggleHaptic } from "@utils/haptics";
-import { readerArticleQueryKey } from "./use-reader-article";
+import { articleQueryKey } from "./use-article";
 import type { ReaderArticle } from "../lib/article";
 
 function showActionError(message: string) {
   Alert.alert("Unable to update article", message);
 }
 
-export function useReaderActions(article: ReaderArticle | undefined) {
+export function useActions(article: ReaderArticle | undefined) {
   const queryClient = useQueryClient();
   const updateItem = useArticleStateMutation();
 
@@ -20,7 +20,7 @@ export function useReaderActions(article: ReaderArticle | undefined) {
     }
 
     const nextIsSaved = !article.isSaved;
-    const queryKey = readerArticleQueryKey(article.id);
+    const queryKey = articleQueryKey(article.id);
     const previousArticle = queryClient.getQueryData<ReaderArticle>(queryKey);
 
     void triggerSavedToggleHaptic(nextIsSaved);

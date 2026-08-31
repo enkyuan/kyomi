@@ -4,6 +4,7 @@ const localNetworkInfoPlist = process.env.EXPO_PUBLIC_AUTH_ORIGIN?.trim().starts
   ? {
       NSLocalNetworkUsageDescription:
         "Kyomi connects to your local development server during development.",
+      NSBonjourServices: ["_expo._tcp"],
       NSAppTransportSecurity: {
         NSAllowsLocalNetworking: true,
       },
@@ -23,7 +24,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   experiments: {
     reactCompiler: true,
   },
-  plugins: ["expo-router", "expo-secure-store", "expo-web-browser", "expo-font"],
+  plugins: ["expo-router", "expo-secure-store", "expo-web-browser", "expo-font", "expo-dev-client"],
   android: {
     package: "com.anonymous.mobile",
   },

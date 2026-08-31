@@ -27,6 +27,32 @@ files directly and follow the same routing.
 
 <!-- project-skills:end -->
 
+## Agent implementation framework
+
+For substantial implementation work, use this sequence before writing:
+
+1. Identify the owning app, package, domain, trust boundaries, and existing seam.
+2. Load the smallest applicable project skills from `.agents/skills/`.
+3. Read the workspace manifest, nearby implementation, callers/consumers, exports, and closest tests.
+4. For framework or native-platform APIs, inspect the resolved installed package and declarations, then retrieve the matching first-party documentation. Prefer page-level official Markdown or `llms.txt` indexes over broad crawls.
+5. State the owner, seam, affected checks, and any documentation/version mismatch before editing.
+
+Use installed types for callable API truth, official version-matched docs for recommended usage, Apple HIG/SwiftUI or Android Compose/Material 3 docs for native behavior, and Kyomi skills plus nearby code for ownership and product conventions. Do not copy vendor examples past Kyomi boundaries or add speculative files, packages, exports, or abstractions.
+
+For framework-sensitive changes, finish with:
+
+```text
+Documentation evidence
+- Owner/context: <skill, module, nearby pattern>
+- Runtime proof: <package/version; declarations or source inspected>
+- Official references: <2–4 URLs, accessed YYYY-MM-DD>
+- Applied contract: <API/platform rule used>
+- Kyomi divergence: <none or explicit reason>
+- Verification: <focused commands and result>
+```
+
+Pi guidance and guards support this workflow but cannot prove that documentation was read or prevent mutations from shell and external tools. Finish implementation through `$qa`.
+
 ## Learned User Preferences
 
 - Follow attached implementation plans exactly (do not edit the plan file); reuse existing plan to-dos and advance statuses in order—do not recreate them.

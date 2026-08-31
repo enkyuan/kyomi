@@ -14,7 +14,7 @@ import {
 import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
 import { saveRecentArticle } from "@modules/recents/lib/store";
 import ArticleBody from "./components/article-body.dom";
-import { useReaderArticle } from "./hooks/use-reader-article";
+import { useArticle } from "./hooks/use-article";
 import { getReaderCanvasColor, getReaderColorScheme } from "./lib/theme";
 import { FONT_STYLES } from "@/theme/fonts";
 import { mobileReaderLayout, mobileReaderSkeletonLayout } from "./lib/layout";
@@ -23,9 +23,27 @@ export type ReaderScreenProps = {
   readonly articleId: string;
 };
 
+const READER_TITLE_SKELETON_WIDTHS = ["100%", "88%", "64%"] as const;
 const READER_SKELETON_PARAGRAPHS = [
-  ["100%", "94%", "88%", "100%", "78%"],
-  ["96%", "100%", "90%", "82%"],
+  {
+    id: "paragraph-1",
+    lines: [
+      { id: "line-1", width: "100%" },
+      { id: "line-2", width: "94%" },
+      { id: "line-3", width: "88%" },
+      { id: "line-4", width: "100%" },
+      { id: "line-5", width: "78%" },
+    ],
+  },
+  {
+    id: "paragraph-2",
+    lines: [
+      { id: "line-1", width: "96%" },
+      { id: "line-2", width: "100%" },
+      { id: "line-3", width: "90%" },
+      { id: "line-4", width: "82%" },
+    ],
+  },
 ] as const;
 const articleQueryKeys = [exploreArticlesQueryKey, subscribedArticlesQueryKey] as const;
 
@@ -36,13 +54,13 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const readerColorScheme = getReaderColorScheme(colorScheme);
   const readerCanvasColor = getReaderCanvasColor(colorScheme);
   const tabBarOcclusionHeight = getReaderTabBarOcclusionHeight(insets);
-  const [isDomReady, setIsDomReady] = useState(false);
+  const [readyArticleId, setReadyArticleId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const viewedArticleIdRef = useRef<string | null>(null);
   const handleArticleReady = useCallback(() => {
-    setIsDomReady(true);
-  }, []);
-  const { data: article, error, isLoading, refetch } = useReaderArticle(articleId);
+    setReadyArticleId(articleId);
+  }, [articleId]);
+  const { data: article, error, isLoading, refetch } = useArticle(articleId);
   const faviconUrls = useMemo(
     () =>
       article
@@ -54,10 +72,6 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
         : [],
     [article?.feedFaviconUrl, article?.feedSiteUrl, article?.feedUrl, article?.link],
   );
-
-  useEffect(() => {
-    setIsDomReady(false);
-  }, [articleId]);
 
   useEffect(() => {
     if (!article || viewedArticleIdRef.current === article.id) {
@@ -109,6 +123,8 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
     );
   }
 
+  const isDomReady = readyArticleId === article?.id;
+
   if (!article) {
     return (
       <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
@@ -137,6 +153,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
     <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
       <View style={{ flex: 1 }}>
         <ArticleBody
+          key={article.id}
           colorScheme={readerColorScheme}
           bottomInset={tabBarOcclusionHeight}
           dom={{
@@ -206,30 +223,29 @@ function ReaderSkeleton({
               marginTop: mobileReaderLayout.source.marginBottomPx,
             }}
           >
-            {Array.from({ length: mobileReaderLayout.title.skeletonLines }, (_, index) => (
-              <Skeleton
-                key={index}
-                radius={4}
-                style={{
-                  height: mobileReaderSkeletonLayout.titleLineHeightPx,
-                  width: index === 0 ? "100%" : index === 1 ? "88%" : "64%",
-                }}
-                surfaceColor={surfaceColor}
-              />
-            ))}
+            {READER_TITLE_SKELETON_WIDTHS.slice(0, mobileReaderLayout.title.skeletonLines).map(
+              (width) => (
+                <Skeleton
+                  key={`title-${width}`}
+                  radius={4}
+                  style={{
+                    height: mobileReaderSkeletonLayout.titleLineHeightPx,
+                    width,
+                  }}
+                  surfaceColor={surfaceColor}
+                />
+              ),
+            )}
           </View>
         </View>
         <View style={{ gap: mobileReaderSkeletonLayout.paragraphGapPx }}>
-          {READER_SKELETON_PARAGRAPHS.map((paragraph, paragraphIndex) => (
-            <View
-              key={paragraphIndex}
-              style={{ gap: mobileReaderSkeletonLayout.bodyLineSpacingPx }}
-            >
-              {paragraph.map((width, lineIndex) => (
+          {READER_SKELETON_PARAGRAPHS.map((paragraph) => (
+            <View key={paragraph.id} style={{ gap: mobileReaderSkeletonLayout.bodyLineSpacingPx }}>
+              {paragraph.lines.map((line) => (
                 <Skeleton
-                  key={lineIndex}
+                  key={`${paragraph.id}-${line.id}`}
                   radius={4}
-                  style={{ height: mobileReaderSkeletonLayout.bodyLineHeightPx, width }}
+                  style={{ height: mobileReaderSkeletonLayout.bodyLineHeightPx, width: line.width }}
                   surfaceColor={surfaceColor}
                 />
               ))}

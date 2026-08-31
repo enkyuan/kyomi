@@ -51,3 +51,28 @@ Use official references alongside installed types:
   [Expo UI](https://docs.expo.dev/versions/v57.0.0/sdk/ui/)
 - [Expo Router](https://docs.expo.dev/versions/v57.0.0/sdk/router/)
 - [Better Auth Expo integration](https://better-auth.com/docs/integrations/expo)
+
+## Documentation-first framework sources
+
+Before editing framework, native, or platform-design code:
+
+1. Read `apps/mobile/package.json`, the installed declarations/source, the nearest owner skill, and
+   the existing component or route seam.
+2. Use the matching Expo SDK version. The current baseline is Expo SDK 57, so prefer the
+   [SDK 57 reference](https://docs.expo.dev/versions/v57.0.0/) over an unpinned latest example.
+3. For `@expo/ui`, start with the [Expo UI docs](https://docs.expo.dev/versions/v57.0.0/sdk/ui/)
+   and inspect the installed component/modifier declarations. Use universal components first;
+   isolate `@expo/ui/swift-ui` and `@expo/ui/jetpack-compose` imports in platform files.
+4. For styling, use [Uniwind](https://docs.uniwind.dev/) and its
+   [supported class names](https://docs.uniwind.dev/class-names). Keep runtime values and native
+   toolkit modifiers in their existing narrow exceptions.
+5. For a custom native capability, read [Expo Modules](https://docs.expo.dev/modules/overview/)
+   before writing Swift or Kotlin. Use a module only when Expo UI, Router, React Native, and the
+   existing app seam cannot meet a concrete requirement.
+6. For iOS presentation, consult [Apple HIG](https://developer.apple.com/design/human-interface-guidelines)
+   and the relevant [SwiftUI documentation](https://developer.apple.com/documentation/swiftui).
+   For Android presentation, consult [Compose design systems](https://developer.android.com/develop/ui/compose/designsystems),
+   [Material 3](https://developer.android.com/develop/ui/compose/designsystems/material3), and the
+   relevant adaptive-layout guidance.
+7. Record the installed version/type evidence, official URLs, applied native rule, any Kyomi
+   divergence, and focused checks in the completion report. Do not commit third-party docs.

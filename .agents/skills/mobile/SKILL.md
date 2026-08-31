@@ -11,13 +11,16 @@ Build one Kyomi product language with platform-native iOS and Android expression
 
 1. Read `AGENTS.md`, `apps/mobile/README.md`, `apps/mobile/app.json`, the nearest route and domain,
    relevant package exports, and any active mobile implementation plan.
-2. Inventory `apps/mobile/package.json`, actual imports, configuration, and installed package types
+2. Read [references/dependencies.md](references/dependencies.md) and retrieve the relevant official
+   Expo, Uniwind, Apple, or Android documentation before using a framework, native API, modifier,
+   platform file, module, or design behavior.
+3. Inventory `apps/mobile/package.json`, actual imports, configuration, and installed package types
    before selecting a library or assuming an SDK, component, modifier, or native-build capability.
    Package presence means the capability is available, not that product behavior is implemented.
-3. Prefer an active dependency or public `@kyomi/*` contract over adding an overlapping library.
-4. Treat `apps/mobile` as an evolving product, not a template. Add structure only for present
+4. Prefer an active dependency or public `@kyomi/*` contract over adding an overlapping library.
+5. Treat `apps/mobile` as an evolving product, not a template. Add structure only for present
    behavior and preserve decisions already established by an active plan.
-5. Load `$architecture` before adding a domain convention, native dependency, test runner, shared
+6. Load `$architecture` before adding a domain convention, native dependency, test runner, shared
    entrypoint, or platform-specific ownership. Add `$packages`, `$design`, `$security`,
    `$environment`, and `$testing` when their boundaries apply.
 

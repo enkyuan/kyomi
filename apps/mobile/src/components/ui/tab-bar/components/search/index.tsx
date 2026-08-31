@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import {
   GestureDetector,
@@ -60,14 +59,6 @@ export function SearchButton({
   touchY,
   value,
 }: SearchButtonProps) {
-  const inputRef = useRef<TextInput>(null);
-
-  useEffect(() => {
-    if (isSearchActive) {
-      inputRef.current?.focus();
-    }
-  }, [isSearchActive]);
-
   const searchHeight = useDerivedValue(() =>
     interpolate(searchProgress.get(), [0, 1], [PILL_HEIGHT, SEARCH_ACTIVE_HEIGHT], "clamp"),
   );
@@ -126,7 +117,6 @@ export function SearchButton({
                   placeholder="Search feeds or articles…"
                   placeholderTextColor={COLORS.textSecondary}
                   pointerEvents={isSearchActive ? "auto" : "none"}
-                  ref={inputRef}
                   returnKeyType="search"
                   selectionColor={COLORS.accentGreen}
                   style={searchStyles.input}

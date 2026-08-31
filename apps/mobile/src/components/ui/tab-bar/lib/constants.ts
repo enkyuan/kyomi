@@ -1,4 +1,5 @@
 import { Dimensions, Platform } from "react-native";
+import { mobileColors } from "@/theme/colors";
 import { interpolate } from "react-native-reanimated";
 
 // --- Layout ---
@@ -62,9 +63,9 @@ export const COLORS = {
   border: "rgba(255, 255, 255, 0.14)",
   glassGradientTop: "rgba(255, 255, 255, 0.12)",
   glassGradientBottom: "rgba(255, 255, 255, 0.04)",
-  accentGreen: "#a8d480",
+  accentGreen: mobileColors.matcha,
   iconDefault: "rgba(255, 255, 255, 0.7)",
-  iconActive: "#a8d480",
+  iconActive: mobileColors.matcha,
 } as const;
 
 export const SPRING = {

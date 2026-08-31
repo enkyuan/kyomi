@@ -2,11 +2,6 @@ import { z } from "zod";
 
 const emailFormatSchema = z.email({ error: "Enter a valid email address" });
 
-export function isValidEmail(value: string): boolean {
-  const trimmed = value.trim();
-  return trimmed.length > 0 && emailFormatSchema.safeParse(trimmed).success;
-}
-
 /** Lowercases a valid address; returns null when the input is not a valid email. */
 export function normalizeEmail(value: string): string | null {
   const trimmed = value.trim();

@@ -31,9 +31,11 @@ packages/catalog/**/*.parquet
 packages/catalog/**/*.duckdb
 packages/catalog/**/*.db
 .gstack/
-.pi/
+.pi/*
+!/.pi/extensions/
+!/.pi/extensions/kyomi.ts
+/.pi/tasks/
 .poolside/
 /.superpowers/
 /.claude/launch.json
-.pi/
 .poolside/

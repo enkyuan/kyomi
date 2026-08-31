@@ -2,9 +2,9 @@ import { Alert, Pressable, View } from "react-native";
 import { BookmarkIcon, MoreIcon, ShareIcon } from "@/components/icons";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
+import { mobileColors } from "@/theme/colors";
 import { useArticleActions } from "../../hooks/use-article-actions";
-
-const ACTION_ICON_SIZE = 19;
+import { ACTION_ICON_SIZE } from "./constants";
 
 export function ItemToolbar({ item }: { readonly item: ArticleListItemDto }) {
   const { hideArticle, isUpdating, openSource, reportBrokenArticle, shareArticle, toggleSaved } =
@@ -19,7 +19,7 @@ export function ItemToolbar({ item }: { readonly item: ArticleListItemDto }) {
     ]);
   };
 
-  const inactiveColor = "#a1a1aa";
+  const inactiveColor = mobileColors.mutedIcon;
 
   return (
     <View accessibilityRole="toolbar" className="flex-row items-center gap-1">

@@ -25,6 +25,8 @@ import { GlassMaterial } from "./glass-material";
 import { GlowOverlay } from "./glow-overlay";
 import { TabIcon } from "./tab-icon";
 
+const TAB_KEYS = ["inbox", "recents", "sources"] as const;
+
 const TAB_ICONS = [InboxIcon, RecentsIcon, SwitcherIcon];
 
 const HALF_W = PILL_WIDTH / 2;
@@ -90,7 +92,7 @@ export function TabBarPill({
                   icon={Icon}
                   index={index}
                   isActive={activeTab === index}
-                  key={index}
+                  key={TAB_KEYS[index]}
                   onPress={onTabPress}
                   pillPressed={pillPressed}
                   searchProgress={searchProgress}

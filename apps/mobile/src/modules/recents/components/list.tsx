@@ -1,7 +1,7 @@
 import { AnimatedLegendList } from "@legendapp/list/reanimated";
 import { router, useFocusEffect } from "expo-router";
 import { useCallback, useMemo, useRef, type ComponentRef } from "react";
-import { Platform, Pressable, Text, View } from "react-native";
+import { Platform, Pressable, Text, View, useWindowDimensions } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import type { SharedValue } from "react-native-reanimated";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
@@ -21,19 +21,19 @@ import { useRecentArticles } from "../lib/store";
 
 const ESTIMATED_ROW_SIZE = 116;
 
-type RecentHistoryListProps = {
+type RecentListProps = {
   headerHeight: number;
   onScrollBeginDrag: () => void;
   onScrollReset: () => void;
   scrollY: SharedValue<number>;
 };
 
-export function RecentHistoryList({
+export function RecentList({
   headerHeight,
   onScrollBeginDrag,
   onScrollReset,
   scrollY,
-}: RecentHistoryListProps) {
+}: RecentListProps) {
   const insets = useSafeAreaInsets();
   const articles = useRecentArticles();
   const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
@@ -156,14 +156,30 @@ function RecentHistoryItem({ article, isFirst }: { article: RecentArticle; isFir
 }
 
 function RecentHistoryEmptyState() {
+  const { width } = useWindowDimensions();
+  const emptyHorizontalInset = width * (32 / 390);
+
   return (
-    <View className="flex-1 items-center justify-center px-8 pb-24">
-      <Text className="text-center text-foreground" style={FONT_STYLES.screenTitle}>
-        No recently viewed articles
-      </Text>
-      <Text className="mt-2 text-center text-muted-foreground" style={FONT_STYLES.bodySmall}>
-        Open a feed item to keep it here for later.
-      </Text>
+    <View
+      className="flex-1 items-center justify-center pb-24"
+      style={{ paddingHorizontal: emptyHorizontalInset }}
+    >
+      <View className="w-full items-center">
+        <Text
+          className="text-center text-foreground"
+          numberOfLines={2}
+          style={FONT_STYLES.screenTitle}
+        >
+          No recently viewed articles
+        </Text>
+        <Text
+          className="mt-2 text-center text-muted-foreground"
+          numberOfLines={2}
+          style={FONT_STYLES.bodySmall}
+        >
+          Open a feed item to keep it here for later.
+        </Text>
+      </View>
     </View>
   );
 }

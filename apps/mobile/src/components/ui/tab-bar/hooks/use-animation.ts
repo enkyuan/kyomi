@@ -1,5 +1,4 @@
-import { useCallback, useState } from "react";
-import { Keyboard } from "react-native";
+import { useState } from "react";
 import { interpolate, useAnimatedStyle, useSharedValue, withSpring } from "react-native-reanimated";
 import { PILL_BORDER_RADIUS, PILL_HEIGHT, PILL_WIDTH, SPRING, TAB_BAR_GAP } from "../lib/constants";
 
@@ -8,14 +7,12 @@ export function useAnimation(initialTab = 0) {
   const [activeTab, setActiveTab] = useState(initialTab);
   const [isSearchActive, setIsSearchActive] = useState(false);
 
-  const toggleSearch = useCallback(() => {
+  function toggleSearch() {
     const opening = searchProgress.get() < 0.5;
-    if (!opening) {
-      Keyboard.dismiss();
-    }
+    // TODO: restore keyboard dismissal when search keyboard behavior is revisited.
     searchProgress.set(withSpring(opening ? 1 : 0, SPRING));
     setIsSearchActive(opening);
-  }, [searchProgress]);
+  }
 
   const pillAnimatedStyle = useAnimatedStyle(() => {
     const sp = searchProgress.get();

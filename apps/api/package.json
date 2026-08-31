@@ -4,7 +4,7 @@
   "private": true,
   "module": "src/index.ts",
   "scripts": {
-    "dev": "bunx --no-install dotenvx run -f ../../docker/.env.example -f ../../docker/.env -- docker compose --project-directory ../../docker logs -f api worker scheduler",
+    "dev": "bunx --no-install dotenvx run -f ../../docker/.env -f ../../docker/.env.example -fk ../../docker/.env.keys -- docker compose --project-directory ../../docker logs -f api worker scheduler",
     "dev:host": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun --watch src/app/boot/dev.ts",
     "start": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/entry.ts",
     "worker": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/worker.ts",

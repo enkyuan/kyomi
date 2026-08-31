@@ -1,11 +1,12 @@
 import { AnimatedLegendList } from "@legendapp/list/reanimated";
 import { router } from "expo-router";
-import { useMemo, type ReactElement } from "react";
+import { type ReactElement } from "react";
 import { Platform, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, { type SharedValue } from "react-native-reanimated";
 import { Skeleton } from "@ui/skeleton";
 import { COMPACT_NAV_HEIGHT } from "@ui/header";
+import type { InboxFilter } from "../../model";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
 import { type ArticleScope, useArticles } from "@modules/inbox/hooks/use-articles";
@@ -22,6 +23,7 @@ const MAX_SKELETON_ROWS = 12;
 type ListProps = {
   ListEmptyComponent: ReactElement;
   ListHeaderComponent?: ReactElement | null;
+  filter: InboxFilter;
   scope: ArticleScope;
   scrollY: SharedValue<number>;
   topContentInset?: number;
@@ -30,6 +32,7 @@ type ListProps = {
 export function List({
   ListEmptyComponent,
   ListHeaderComponent,
+  filter,
   scope,
   scrollY,
   topContentInset = 0,
@@ -41,7 +44,13 @@ export function List({
   const isIOS = Platform.OS === "ios";
 
   const { items, isLoading, isFetchingNextPage, hasNextPage, fetchNextPage } = useArticles(scope);
-  const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
+  const visibleItems =
+    filter === "unread"
+      ? items.filter((item) => !item.isRead)
+      : filter === "saved"
+        ? items.filter((item) => item.isSaved)
+        : items;
+  const sharedValues = { scrollOffset: scrollY };
   const minimizeScrollHandler = useTabBarMinimizeScroll(scrollY);
 
   if (isLoading) {
@@ -99,10 +108,11 @@ export function List({
     );
   }
 
-  if (items.length === 0) {
+  if (visibleItems.length === 0) {
     return (
       <Animated.ScrollView
         automaticallyAdjustsScrollIndicatorInsets={false}
+        contentInsetAdjustmentBehavior="never"
         contentContainerStyle={{
           flexGrow: 1,
           paddingBottom: tabBarOcclusionHeight,
@@ -127,7 +137,7 @@ export function List({
       automaticallyAdjustsScrollIndicatorInsets={false}
       contentContainerStyle={{ paddingBottom: tabBarOcclusionHeight, paddingTop: topContentInset }}
       contentInsetAdjustmentBehavior="never"
-      data={items}
+      data={visibleItems}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
       keyExtractor={(item: ArticleListItemDto) => item.id}
       onEndReached={() => {

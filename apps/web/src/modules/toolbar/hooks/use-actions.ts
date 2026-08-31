@@ -35,7 +35,7 @@ function showSavedToast(options: AnchoredToolbarActionOptions | undefined, isSav
   toastManager.add({ title, type });
 }
 
-export function useArticleActions({
+export function useActions({
   item,
   saveErrorScope,
 }: {

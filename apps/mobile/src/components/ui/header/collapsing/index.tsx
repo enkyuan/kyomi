@@ -3,12 +3,12 @@ import {
   Platform,
   Pressable,
   StyleSheet,
-  Text,
   useColorScheme,
   View,
   type StyleProp,
   type ViewStyle,
 } from "react-native";
+import { Host, Text } from "@expo/ui";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, {
   Extrapolation,
@@ -18,13 +18,11 @@ import Animated, {
   type SharedValue,
 } from "react-native-reanimated";
 import * as Haptics from "expo-haptics";
-import { GlassContainer, GlassView } from "expo-glass-effect";
+import { GlassView } from "expo-glass-effect";
 import { FONT_STYLES } from "@/theme/fonts";
+import { COMPACT_NAV_HEIGHT } from "../base";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
-
-export const COMPACT_NAV_HEIGHT = 48;
-export const COLLAPSE_DISTANCE = 52;
-export const EXPANDED_TITLE_HEIGHT = 44;
+import { ProgressiveBlur } from "@ui/liquid-glass/progressive-blur";
 
 const COMPACT_FADE_START = 24;
 const COMPACT_FADE_END = 46;
@@ -40,7 +38,7 @@ const EXPANDED_FADE_END = 48;
 export type HeaderActionButtonProps = {
   icon: ReactNode;
   label: string;
-  onPress: () => void;
+  onPress?: () => void;
   style?: StyleProp<ViewStyle>;
   disabled?: boolean;
 };
@@ -53,6 +51,34 @@ export function HeaderActionButton({
   style,
 }: HeaderActionButtonProps) {
   const isDark = useColorScheme() === "dark";
+
+  const buttonContent = (
+    <>
+      <GlassView
+        colorScheme={isDark ? "dark" : "light"}
+        glassEffectStyle="regular"
+        isInteractive
+        pointerEvents="none"
+        style={styles.glassButtonSurface}
+      />
+      <View className="z-[1] items-center justify-center">{icon}</View>
+    </>
+  );
+
+  if (!onPress) {
+    return (
+      <View
+        accessibilityLabel={label}
+        accessibilityRole="button"
+        accessibilityState={{ disabled }}
+        className="relative size-[38px] items-center justify-center overflow-hidden rounded-full"
+        pointerEvents="none"
+        style={[{ opacity: disabled ? 0.4 : 1 }, style]}
+      >
+        {buttonContent}
+      </View>
+    );
+  }
 
   const handlePress = () => {
     if (disabled) return;
@@ -70,22 +96,15 @@ export function HeaderActionButton({
       disabled={disabled}
       hitSlop={6}
       onPress={handlePress}
+      className="relative size-[38px] items-center justify-center overflow-hidden rounded-full"
       style={({ pressed }) => [
-        styles.actionButton,
         {
           opacity: pressed ? 0.72 : disabled ? 0.4 : 1,
         },
         style,
       ]}
     >
-      <GlassView
-        colorScheme={isDark ? "dark" : "light"}
-        glassEffectStyle="regular"
-        isInteractive
-        pointerEvents="none"
-        style={styles.glassButtonSurface}
-      />
-      <View style={styles.actionIconWrapper}>{icon}</View>
+      {buttonContent}
     </Pressable>
   );
 }
@@ -109,7 +128,9 @@ export function CollapsingHeader({
   title,
 }: CollapsingHeaderProps) {
   const insets = useSafeAreaInsets();
-  const { foreground } = getMobileSurfaceTheme(useColorScheme());
+  const colorScheme = useColorScheme();
+  const { foreground } = getMobileSurfaceTheme(colorScheme);
+  const isDark = colorScheme === "dark";
   const shouldReduceMotion = useReducedMotion();
 
   const totalHeaderHeight = insets.top + COMPACT_NAV_HEIGHT;
@@ -149,6 +170,15 @@ export function CollapsingHeader({
   });
 
   // Centered compact title animation: fades in at center as scroll continues
+  const headerBlurStyle = useAnimatedStyle(() => ({
+    opacity: interpolate(
+      Math.max(0, scrollY.value),
+      [COMPACT_FADE_START, COMPACT_FADE_END],
+      [0, 1],
+      Extrapolation.CLAMP,
+    ),
+  }));
+
   const compactTitleStyle = useAnimatedStyle(() => {
     const y = Math.max(0, scrollY.value);
     const opacity = interpolate(
@@ -187,6 +217,15 @@ export function CollapsingHeader({
         style,
       ]}
     >
+      <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, headerBlurStyle]}>
+        <ProgressiveBlur
+          direction="top"
+          intensity={32}
+          style={StyleSheet.absoluteFill}
+          tint={isDark ? "dark" : "light"}
+        />
+      </Animated.View>
+
       {/* Large Title (Inline on the Left, Vertically Centered with Actions) */}
       <Animated.View
         accessibilityRole="header"
@@ -200,14 +239,18 @@ export function CollapsingHeader({
           largeTitleStyle,
         ]}
       >
-        <Text
-          accessibilityLabel={title}
-          allowFontScaling={false}
-          numberOfLines={1}
-          style={[styles.expandedTitleText, FONT_STYLES.largeTitle, { color: foreground }]}
-        >
-          {title}
-        </Text>
+        <Host matchContents>
+          <Text
+            numberOfLines={1}
+            textStyle={{
+              ...FONT_STYLES.largeTitle,
+              ...styles.expandedTitleText,
+              color: foreground,
+            }}
+          >
+            {title}
+          </Text>
+        </Host>
       </Animated.View>
 
       {/* Absolutely Centered Compact Title (Fades In on Scroll) */}
@@ -224,19 +267,24 @@ export function CollapsingHeader({
           compactTitleStyle,
         ]}
       >
-        <Text
-          allowFontScaling={false}
-          numberOfLines={1}
-          style={[styles.compactTitleText, FONT_STYLES.compactTitle, { color: foreground }]}
-        >
-          {title}
-        </Text>
+        <Host matchContents>
+          <Text
+            numberOfLines={1}
+            textStyle={{
+              ...FONT_STYLES.compactTitle,
+              ...styles.compactTitleText,
+              color: foreground,
+            }}
+          >
+            {title}
+          </Text>
+        </Host>
       </Animated.View>
 
       {/* Trailing Action Controls (Inline on the Right with GlassContainer) */}
       {actions ? (
-        <GlassContainer
-          spacing={8}
+        <View
+          pointerEvents="box-none"
           style={[
             styles.actionsContainer,
             {
@@ -246,7 +294,7 @@ export function CollapsingHeader({
           ]}
         >
           {actions}
-        </GlassContainer>
+        </View>
       ) : null}
 
       {children}
@@ -259,20 +307,6 @@ export function CollapsingHeader({
 // ============================================================================
 
 const styles = StyleSheet.create({
-  actionButton: {
-    alignItems: "center",
-    borderRadius: 19,
-    height: 38,
-    justifyContent: "center",
-    overflow: "hidden",
-    position: "relative",
-    width: 38,
-  },
-  actionIconWrapper: {
-    alignItems: "center",
-    justifyContent: "center",
-    zIndex: 1,
-  },
   actionsContainer: {
     alignItems: "center",
     flexDirection: "row",

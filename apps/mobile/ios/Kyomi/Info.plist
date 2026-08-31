@@ -40,6 +40,10 @@
 	<true/>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>Kyomi connects to your local development server during development.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_expo._tcp</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

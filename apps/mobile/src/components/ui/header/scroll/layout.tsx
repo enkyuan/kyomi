@@ -3,8 +3,8 @@ import { useRef, type ReactNode, type RefObject } from "react";
 import { View, useColorScheme } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import type { SharedValue } from "react-native-reanimated";
-import { Header, TITLE_CONTENT_HEIGHT } from "@ui/header";
-import { HeaderSurface } from "@ui/header/surface";
+import { Header, TITLE_CONTENT_HEIGHT } from "../base";
+import { HeaderSurface } from "./surface";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
 type ScrollHeaderLayoutProps = {
