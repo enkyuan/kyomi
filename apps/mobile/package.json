@@ -5,6 +5,7 @@
   "main": "expo-router/entry",
   "scripts": {
     "start": "REACT_NATIVE_PACKAGER_HOSTNAME=\"$(ipconfig getifaddr en0)\" EXPO_NO_DOTENV=1 bunx --no-install dotenvx run -f .env -fk .env.keys -- expo start",
+    "start:tunnel": "EXPO_NO_DOTENV=1 bunx --no-install dotenvx run -f .env -fk .env.keys -- expo start --tunnel",
     "android": "REACT_NATIVE_PACKAGER_HOSTNAME=\"$(ipconfig getifaddr en0)\" EXPO_NO_DOTENV=1 bunx --no-install dotenvx run -f .env -fk .env.keys -- expo run:android",
     "ios": "REACT_NATIVE_PACKAGER_HOSTNAME=\"$(ipconfig getifaddr en0)\" EXPO_NO_DOTENV=1 bunx --no-install dotenvx run -f .env -fk .env.keys -- expo run:ios",
     "web": "EXPO_NO_DOTENV=1 bunx --no-install dotenvx run -f .env -fk .env.keys -- expo start --web",
