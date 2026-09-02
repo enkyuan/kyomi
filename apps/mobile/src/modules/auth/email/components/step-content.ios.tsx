@@ -231,8 +231,8 @@ type OTPFormStepProps = {
   errorMessage?: string | null;
   invalid: boolean;
   onErrorAlertChange: (isPresented: boolean) => void;
-  onFocusOtp: () => void;
-  onOtpChange: (value: string) => void;
+  onFocusOTP: () => void;
+  onOTPChange: (value: string) => void;
   onSubmit: () => void;
   otp: ObservableStringState;
   otpFieldRef: RefObject<TextFieldRef | null>;
@@ -246,8 +246,8 @@ export function OTPFormStep({
   errorMessage,
   invalid,
   onErrorAlertChange,
-  onFocusOtp,
-  onOtpChange,
+  onFocusOTP,
+  onOTPChange,
   onSubmit: handleSubmit,
   otp,
   otpFieldRef,
@@ -268,7 +268,7 @@ export function OTPFormStep({
         />
 
         <ZStack modifiers={[FULL_WIDTH, padding({ top: 24 })]}>
-          <HStack spacing={10} modifiers={[FULL_WIDTH, onTapGesture(onFocusOtp)]}>
+          <HStack spacing={10} modifiers={[FULL_WIDTH, onTapGesture(onFocusOTP)]}>
             {OTP_SLOTS.map((slot) => {
               const isCurrentSlot = otpValue.length === slot;
 
@@ -312,7 +312,7 @@ export function OTPFormStep({
           <TextField
             ref={otpFieldRef}
             text={otp}
-            onTextChange={onOtpChange}
+            onTextChange={onOTPChange}
             modifiers={[
               textFieldStyle("plain"),
               keyboardType("numeric"),

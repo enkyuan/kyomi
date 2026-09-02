@@ -28,6 +28,7 @@ import {
   clip,
   fillMaxWidth,
   height,
+  imePadding,
   padding,
   paddingAll,
   semantics,
@@ -39,6 +40,7 @@ import { useCallback, useRef } from "react";
 import { mobileColors } from "@/theme/colors";
 import { OTP_LENGTH, OTP_SLOTS } from "./constants";
 import { useEmailAuth } from "./hooks/use-auth";
+import { useKeyboard } from "@/hooks/use-keyboard";
 import { FONT_STYLES } from "@/theme/fonts";
 
 const BUTTON_LABEL_STYLE = FONT_STYLES.button;
@@ -65,24 +67,25 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
   const emailFieldRef = useRef<TextFieldRef>(null);
   const otpFieldRef = useRef<TextFieldRef>(null);
   const focusEmail = useCallback(() => emailFieldRef.current?.focus(), []);
-  const focusOtp = useCallback(() => otpFieldRef.current?.focus(), []);
+  const focusOTP = useCallback(() => otpFieldRef.current?.focus(), []);
+  const { dismissKeyboard } = useKeyboard();
   const {
     errorMessage,
     handleDismiss,
     handleEmailChange,
     handleErrorAlertChange,
-    handleOtpChange,
+    handleOTPChange,
     handleSendCode,
     handleUseDifferentEmail,
     handleVerifyCode,
     isEmailInvalid,
     isEmailStep,
-    isOtpInvalid,
+    isOTPInvalid,
     isSubmitting,
     otpValue,
     shouldReduceMotion,
     showErrorAlert,
-  } = useEmailAuth({ email, focusEmail, focusOtp, isPresented, onDismiss, otp });
+  } = useEmailAuth({ email, focusEmail, focusOTP, isPresented, onDismiss, otp });
 
   const stepEnterTransition = shouldReduceMotion
     ? REDUCED_MOTION_STEP_ENTER_TRANSITION
@@ -124,7 +127,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
         </AlertDialog>
       ) : null}
       <BottomSheet isPresented={isPresented} onDismiss={handleDismiss}>
-        <Column modifiers={[fillMaxWidth()]}>
+        <Column modifiers={[fillMaxWidth(), imePadding()]}>
           <Box modifiers={[fillMaxWidth(), paddingAll(16)]} contentAlignment="topEnd">
             <IconButton onClick={handleDismiss}>
               <Icon
@@ -136,7 +139,15 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
             </IconButton>
           </Box>
 
-          <Column horizontalAlignment="start" modifiers={[fillMaxWidth(), padding(24, 0, 24, 24)]}>
+          <Column
+            horizontalAlignment="start"
+            modifiers={[
+              fillMaxWidth(),
+              padding(24, 0, 24, 24),
+              imePadding(),
+              clickable(dismissKeyboard, { indication: false }),
+            ]}
+          >
             <Box
               contentAlignment="center"
               modifiers={[size(64, 64), background(theme.input), clip(Shapes.Circle)]}
@@ -223,13 +234,13 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                             clip(Shapes.RoundedCorner(14)),
                             border(
                               2,
-                              isOtpInvalid
+                              isOTPInvalid
                                 ? mobileColors.validationError
                                 : otpValue.length === slot
                                   ? mobileColors.matcha
                                   : "transparent",
                             ),
-                            clickable(focusOtp),
+                            clickable(focusOTP),
                           ]}
                         >
                           <Text style={FONT_STYLES.otp} color={theme.foreground}>
@@ -242,7 +253,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                       ref={otpFieldRef}
                       value={otp}
                       maxLength={OTP_LENGTH}
-                      onValueChange={handleOtpChange}
+                      onValueChange={handleOTPChange}
                       keyboardOptions={{
                         keyboardType: "number",
                         capitalization: "none",
@@ -286,7 +297,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               shape={Shape.Pill({})}
               colors={{ containerColor: mobileColors.matcha, contentColor: theme.background }}
               contentPadding={{ top: 14, bottom: 14 }}
-              modifiers={[fillMaxWidth(), padding(0, 24, 0, 0)]}
+              modifiers={[fillMaxWidth(), padding(0, 24, 8, 0)]}
             >
               <Box modifiers={[fillMaxWidth(), height(22)]} contentAlignment="center">
                 {isSubmitting ? (
