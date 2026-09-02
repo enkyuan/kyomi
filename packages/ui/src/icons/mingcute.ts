@@ -71,4 +71,5 @@ export {
   WaveHandFill,
 } from "@mingcute/react";
 
+export { LockLineNativeIcon } from "./mingcute-native";
 export type { IconProps } from "@mingcute/react";
