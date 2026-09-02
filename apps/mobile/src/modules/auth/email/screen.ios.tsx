@@ -36,6 +36,7 @@ import { mobileColors } from "@/theme/colors";
 import { LockLineNativeIcon } from "@kyomi/ui/icons/mingcute-native";
 import { MingcuteIcon } from "@/components/icons/mingcute";
 import { EmailFormStep, OTPFormStep, type EmailStepTheme } from "./components/steps.ios";
+import { OTP_LENGTH } from "./constants";
 import { useEmailAuth } from "./hooks/use-auth";
 import { useKeyboard } from "@/hooks/use-keyboard";
 import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
@@ -97,11 +98,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
       <Group modifiers={[presentationDetents(["large"])]}>
         <ZStack
           alignment="topTrailing"
-          modifiers={[
-            ...FULL_WIDTH,
-            padding({ top: 28, horizontal: 20 }),
-            onTapGesture(dismissKeyboard),
-          ]}
+          modifiers={[...FULL_WIDTH, padding({ top: 28, horizontal: 20 })]}
         >
           <VStack modifiers={[...FULL_WIDTH, frame({ maxHeight: Infinity })]}>
             <ScrollView
@@ -110,6 +107,10 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 frame({ maxHeight: Infinity }),
                 scrollDismissesKeyboard("automatic"),
                 padding({ bottom: 12 }),
+                // Tap-to-dismiss keyboard lives on the ScrollView (above the
+                // keyboard) rather than the ZStack so it cannot intercept
+                // OTP-suggestion banner taps that land in the keyboard window.
+                onTapGesture(dismissKeyboard),
               ]}
             >
               <VStack alignment="leading" modifiers={[...FULL_WIDTH, padding({ top: 36 })]}>
@@ -182,7 +183,9 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                       onFocusOTP={focusOTP}
                       onOTPChange={handleOTPChange}
                       onSubmit={() =>
-                        otpValue.length === 6 ? handleVerifyCode(otpValue) : handleSendCode()
+                        otp.value.length === OTP_LENGTH
+                          ? handleVerifyCode(otp.value)
+                          : handleSendCode()
                       }
                       otp={otp}
                       otpFieldRef={otpFieldRef}
@@ -221,8 +224,8 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               onPress={
                 isEmailStep
                   ? handleSendCode
-                  : otpValue.length === 6
-                    ? () => handleVerifyCode(otpValue)
+                  : otp.value.length === OTP_LENGTH
+                    ? () => handleVerifyCode(otp.value)
                     : handleSendCode
               }
               modifiers={[
@@ -247,7 +250,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                   <Text
                     modifiers={[...CENTERED_LABEL, LABEL_FONT, foregroundStyle(theme.background)]}
                   >
-                    {isEmailStep || otpValue.length === 6 ? "Continue" : "Resend email"}
+                    {isEmailStep || otpValue.length === OTP_LENGTH ? "Continue" : "Resend email"}
                   </Text>
                 )}
               </ZStack>
