@@ -97,7 +97,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
 
   const isEmailStep = step === "email";
   const isEmailInvalid = invalidStep === "email";
-  const isOtpInvalid = invalidStep === "otp";
+  const isOTPInvalid = invalidStep === "otp";
 
   function handleEmailChange() {
     if (isEmailInvalid) {
@@ -105,8 +105,8 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
     }
   }
 
-  function handleOtpChange() {
-    if (isOtpInvalid) {
+  function handleOTPChange() {
+    if (isOTPInvalid) {
       setInvalidStep(null);
     }
   }
@@ -162,7 +162,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               autoCapitalize="none"
               autoCorrect={false}
               maxLength={6}
-              onChangeText={handleOtpChange}
+              onChangeText={handleOTPChange}
               onSubmitEditing={() =>
                 otp.value.length === 6 ? handleVerifyCode() : handleSendCode()
               }
@@ -174,7 +174,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 paddingHorizontal: 20,
                 backgroundColor: theme.input,
                 borderWidth: 2,
-                borderColor: isOtpInvalid ? mobileColors.validationError : "transparent",
+                borderColor: isOTPInvalid ? mobileColors.validationError : "transparent",
                 borderRadius: 999,
               }}
             />

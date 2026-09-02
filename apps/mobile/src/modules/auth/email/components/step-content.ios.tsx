@@ -27,6 +27,7 @@ import {
   padding,
   strokeBorder,
   submitLabel,
+  tint,
   textContentType,
   textFieldStyle,
   textInputAutocapitalization,
@@ -230,8 +231,8 @@ type OTPFormStepProps = {
   errorMessage?: string | null;
   invalid: boolean;
   onErrorAlertChange: (isPresented: boolean) => void;
-  onFocusOtp: () => void;
-  onOtpChange: (value: string) => void;
+  onFocusOTP: () => void;
+  onOTPChange: (value: string) => void;
   onSubmit: () => void;
   otp: ObservableStringState;
   otpFieldRef: RefObject<TextFieldRef | null>;
@@ -245,8 +246,8 @@ export function OTPFormStep({
   errorMessage,
   invalid,
   onErrorAlertChange,
-  onFocusOtp,
-  onOtpChange,
+  onFocusOTP,
+  onOTPChange,
   onSubmit: handleSubmit,
   otp,
   otpFieldRef,
@@ -267,7 +268,7 @@ export function OTPFormStep({
         />
 
         <ZStack modifiers={[FULL_WIDTH, padding({ top: 24 })]}>
-          <HStack spacing={10} modifiers={[FULL_WIDTH, onTapGesture(onFocusOtp)]}>
+          <HStack spacing={10} modifiers={[FULL_WIDTH, onTapGesture(onFocusOTP)]}>
             {OTP_SLOTS.map((slot) => {
               const isCurrentSlot = otpValue.length === slot;
 
@@ -311,7 +312,7 @@ export function OTPFormStep({
           <TextField
             ref={otpFieldRef}
             text={otp}
-            onTextChange={onOtpChange}
+            onTextChange={onOTPChange}
             modifiers={[
               textFieldStyle("plain"),
               keyboardType("numeric"),
@@ -328,10 +329,11 @@ export function OTPFormStep({
                 invalid ? validationMessage : "Enter the verification code we sent.",
               ),
 
-              // Keep a real native TextField mounted and focusable so
-              // one-time-code AutoFill and the software keyboard work.
-              frame({ width: 1, height: 1 }),
-              opacity(0),
+              // Keep the real field full-sized and transparent so iOS can
+              // commit an autofilled code to the same native binding.
+              foregroundStyle("clear"),
+              tint("clear"),
+              frame({ maxWidth: Infinity, height: 52 }),
             ]}
           />
         </ZStack>

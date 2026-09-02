@@ -107,8 +107,5 @@
         }
       ]
     }
-  },
-  "patchedDependencies": {
-    "@expo/ui@57.0.15": "patches/@expo%2Fui@57.0.15.patch"
   }
 }

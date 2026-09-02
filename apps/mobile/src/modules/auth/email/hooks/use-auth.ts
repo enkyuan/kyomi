@@ -15,7 +15,7 @@ type NativeStringState = {
 type UseEmailAuthOptions = {
   readonly email: NativeStringState;
   readonly focusEmail?: () => void;
-  readonly focusOtp?: () => void;
+  readonly focusOTP?: () => void;
   readonly isPresented: boolean;
   readonly onDismiss: () => void;
   readonly otp: NativeStringState;
@@ -24,7 +24,7 @@ type UseEmailAuthOptions = {
 export function useEmailAuth({
   email,
   focusEmail,
-  focusOtp,
+  focusOTP,
   isPresented,
   onDismiss,
   otp,
@@ -34,7 +34,7 @@ export function useEmailAuth({
   const isMountedRef = useRef(true);
   const isPresentedRef = useRef(isPresented);
   const shouldFocusEmailRef = useRef(false);
-  const [otpValue, setOtpValue] = useState("");
+  const [otpValue, setOTPValue] = useState("");
   const [step, setStep] = useState<"email" | "otp">("email");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [invalidStep, setInvalidStep] = useState<"email" | "otp" | null>(null);
@@ -48,7 +48,7 @@ export function useEmailAuth({
     setInvalidStep(null);
     setErrorMessage(null);
     setShowErrorAlert(false);
-    setOtpValue("");
+    setOTPValue("");
   }
 
   function reportInvalid(nextInvalidStep: "email" | "otp", message?: string | null) {
@@ -80,7 +80,7 @@ export function useEmailAuth({
     shouldFocusEmailRef.current = true;
     setStep("email");
     clearError();
-    setOtpValue("");
+    setOTPValue("");
     otp.set("");
   }
 
@@ -88,11 +88,11 @@ export function useEmailAuth({
     if (invalidStep === "email" || errorMessage) clearError();
   }
 
-  function handleOtpChange(typedValue: string) {
+  function handleOTPChange(typedValue: string) {
     const digitsOnly = typedValue.replace(/\D/g, "").slice(0, OTP_LENGTH);
     if (invalidStep === "otp" || errorMessage) clearError();
     if (digitsOnly !== typedValue) otp.set(digitsOnly);
-    setOtpValue(digitsOnly);
+    setOTPValue(digitsOnly);
   }
 
   function handleErrorAlertChange(isPresented: boolean) {
@@ -138,7 +138,7 @@ export function useEmailAuth({
     if (isSubmitting) return;
     if (code.length !== OTP_LENGTH) {
       reportInvalid("otp", "Code must be 6 digits.");
-      focusOtp?.();
+      focusOTP?.();
       return;
     }
     const normalizedEmail = email.value.trim().toLowerCase();
@@ -155,7 +155,7 @@ export function useEmailAuth({
           setIsSubmitting(false);
           if (verifyError) {
             reportInvalid("otp", verifyError.message?.trim() || "Invalid verification code.");
-            focusOtp?.();
+            focusOTP?.();
             return;
           }
           isPresentedRef.current = false;
@@ -166,7 +166,7 @@ export function useEmailAuth({
           if (!isMountedRef.current || !isPresentedRef.current) return;
           setIsSubmitting(false);
           reportInvalid("otp", "Unable to connect to server. Check your connection.");
-          focusOtp?.();
+          focusOTP?.();
         },
       );
   }
@@ -185,28 +185,28 @@ export function useEmailAuth({
   useEffect(() => {
     if (!isPresented) return;
     if (step === "otp") {
-      focusOtp?.();
+      focusOTP?.();
       return;
     }
     if (shouldFocusEmailRef.current) {
       shouldFocusEmailRef.current = false;
       focusEmail?.();
     }
-  }, [focusEmail, focusOtp, isPresented, step]);
+  }, [focusEmail, focusOTP, isPresented, step]);
 
   return {
     errorMessage,
     handleDismiss,
     handleEmailChange,
     handleErrorAlertChange,
-    handleOtpChange,
+    handleOTPChange,
     handleSendCode,
     handleUseDifferentEmail,
     handleVerifyCode,
     isEmailInvalid: invalidStep === "email",
     isEmailStep: step === "email",
     showErrorAlert,
-    isOtpInvalid: invalidStep === "otp",
+    isOTPInvalid: invalidStep === "otp",
     isSubmitting,
     otpValue,
     shouldReduceMotion,
