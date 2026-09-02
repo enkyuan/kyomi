@@ -27,6 +27,7 @@ import {
   padding,
   strokeBorder,
   submitLabel,
+  tint,
   textContentType,
   textFieldStyle,
   textInputAutocapitalization,
@@ -328,10 +329,11 @@ export function OTPFormStep({
                 invalid ? validationMessage : "Enter the verification code we sent.",
               ),
 
-              // Keep a real native TextField mounted and focusable so
-              // one-time-code AutoFill and the software keyboard work.
-              frame({ width: 1, height: 1 }),
-              opacity(0),
+              // Keep the real field full-sized and transparent so iOS can
+              // commit an autofilled code to the same native binding.
+              foregroundStyle("clear"),
+              tint("clear"),
+              frame({ maxWidth: Infinity, height: 52 }),
             ]}
           />
         </ZStack>
