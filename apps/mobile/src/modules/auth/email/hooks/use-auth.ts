@@ -91,7 +91,10 @@ export function useEmailAuth({
   function handleOTPChange(typedValue: string) {
     const digitsOnly = typedValue.replace(/\D/g, "").slice(0, OTP_LENGTH);
     if (invalidStep === "otp" || errorMessage) clearError();
-    if (digitsOnly !== typedValue) otp.set(digitsOnly);
+    // Always sync native state — iOS OTP autofill delivers a clean digit
+    // string, so the conditional `otp.set` guard would skip the sync and the
+    // native TextField would revert to the stale bound value on re-render.
+    otp.set(digitsOnly);
     setOTPValue(digitsOnly);
   }
 

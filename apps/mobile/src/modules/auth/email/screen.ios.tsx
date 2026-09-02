@@ -32,7 +32,7 @@ import {
 } from "@expo/ui/swift-ui/modifiers";
 import { useCallback, useRef } from "react";
 import { mobileColors } from "@/theme/colors";
-import { EmailFormStep, OTPFormStep, type EmailStepTheme } from "./components/step-content.ios";
+import { EmailFormStep, OTPFormStep, type EmailStepTheme } from "./components/steps.ios";
 import { useEmailAuth } from "./hooks/use-auth";
 import { useKeyboard } from "@/hooks/use-keyboard";
 import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
