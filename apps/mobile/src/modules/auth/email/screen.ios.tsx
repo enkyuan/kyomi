@@ -4,6 +4,7 @@ import {
   Group,
   Image,
   ProgressView,
+  RNHostView,
   ScrollView,
   Text,
   type TextFieldRef,
@@ -32,6 +33,8 @@ import {
 } from "@expo/ui/swift-ui/modifiers";
 import { useCallback, useRef } from "react";
 import { mobileColors } from "@/theme/colors";
+import { LockLineNativeIcon } from "@kyomi/ui/icons/mingcute-native";
+import { MingcuteIcon } from "@/components/icons/mingcute";
 import { EmailFormStep, OTPFormStep, type EmailStepTheme } from "./components/steps.ios";
 import { useEmailAuth } from "./hooks/use-auth";
 import { useKeyboard } from "@/hooks/use-keyboard";
@@ -110,25 +113,43 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               ]}
             >
               <VStack alignment="leading" modifiers={[...FULL_WIDTH, padding({ top: 36 })]}>
-                <ZStack
-                  modifiers={[
-                    frame({ width: 64, height: 64 }),
-                    background(theme.input),
-                    clipShape("circle"),
-                  ]}
-                >
-                  <Image
-                    systemName="envelope"
+                {isEmailStep ? (
+                  <ZStack
                     modifiers={[
-                      font({
-                        family: FONT_FAMILIES.inter.semibold,
-                        size: FONT_SIZES.screenTitle,
-                        weight: SWIFT_FONT_WEIGHTS.semibold,
-                      }),
-                      foregroundStyle(theme.foreground),
+                      frame({ width: 64, height: 64 }),
+                      background(theme.input),
+                      clipShape("circle"),
                     ]}
-                  />
-                </ZStack>
+                  >
+                    <Image
+                      systemName="envelope"
+                      modifiers={[
+                        font({
+                          family: FONT_FAMILIES.inter.semibold,
+                          size: FONT_SIZES.screenTitle,
+                          weight: SWIFT_FONT_WEIGHTS.semibold,
+                        }),
+                        foregroundStyle(theme.foreground),
+                      ]}
+                    />
+                  </ZStack>
+                ) : (
+                  <ZStack
+                    modifiers={[
+                      frame({ width: 64, height: 64 }),
+                      background(theme.input),
+                      clipShape("circle"),
+                    ]}
+                  >
+                    <RNHostView matchContents>
+                      <MingcuteIcon
+                        icon={LockLineNativeIcon}
+                        size={FONT_SIZES.screenTitle}
+                        fill={theme.foreground}
+                      />
+                    </RNHostView>
+                  </ZStack>
+                )}
 
                 <VStack
                   modifiers={[
