@@ -77,6 +77,7 @@ Dynamic Type and Material typography.
 | ------------------------------------- | ------------------------------------- |
 | `bun run --cwd apps/mobile start`     | Start the Expo development server.    |
 | `bun run --cwd apps/mobile ios`       | Build and run on iOS.                 |
+| `bun run --cwd apps/mobile ios:device` | Build and run on a physical iOS device. |
 | `bun run --cwd apps/mobile android`   | Build and run on Android.             |
 | `bun run --cwd apps/mobile web`       | Start the web fallback.               |
 | `bun run --cwd apps/mobile build`     | Export iOS, Android, and web bundles. |

@@ -11,7 +11,7 @@ function getBrowserHash() {
   return window.location.hash;
 }
 
-export function useAuthReturnTarget(redirect: unknown) {
+export function useAuthRedirect(redirect: unknown) {
   const { hash: routerHash } = useLocation();
   const browserHash = useSyncExternalStore(subscribeToHashChange, getBrowserHash, () => routerHash);
 
