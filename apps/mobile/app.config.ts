@@ -24,7 +24,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   experiments: {
     reactCompiler: true,
   },
-  plugins: ["expo-router", "expo-secure-store", "expo-web-browser", "expo-font", "expo-dev-client"],
+  plugins: ["expo-router", "expo-secure-store", "expo-web-browser", "expo-font", "expo-image", "expo-dev-client"],
   android: {
     package: "com.anonymous.mobile",
   },

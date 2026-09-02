@@ -1,7 +1,7 @@
 import { Alert, Linking, Share } from "react-native";
 import { fetchMobileApiJson } from "@/lib/api";
 import { triggerSavedToggleHaptic } from "@/utils/haptics";
-import { useArticleStateMutation } from "@modules/inbox/hooks/use-article-state";
+import { useArticleStateMutation } from "@modules/inbox/hooks/use-state";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 
 function showActionError(message: string) {

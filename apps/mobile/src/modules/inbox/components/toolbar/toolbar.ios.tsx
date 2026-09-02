@@ -6,7 +6,7 @@ import { BookmarkIcon, MoreIcon, ShareIcon } from "@/components/icons";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import { mobileColors } from "@/theme/colors";
-import { useArticleActions } from "../../hooks/use-article-actions";
+import { useArticleActions } from "../../hooks/use-actions";
 import { ACTION_ICON_SIZE } from "./constants";
 const INACTIVE_COLOR = mobileColors.mutedIcon;
 

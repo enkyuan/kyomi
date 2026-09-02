@@ -41,6 +41,7 @@ export function useArticleStateMutation() {
         snapshot: queryClient.getQueryData<ArticleStateSnapshot>(queryKey),
       }));
 
+      // Update both lists immediately; restore snapshots if the request fails.
       for (const queryKey of articleQueryKeys) {
         queryClient.setQueryData<ArticleStateSnapshot>(queryKey, (current) => {
           if (!current) return current;

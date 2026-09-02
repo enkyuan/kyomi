@@ -14,7 +14,7 @@ import type { InboxFilter } from "./lib/model";
 import { EmptyState } from "@modules/inbox/components/empty-state";
 import { List } from "@modules/inbox/components/list";
 import { type ArticleScope } from "@modules/inbox/hooks/use-articles";
-import { useSubscribedFeeds } from "@modules/inbox/hooks/use-subscribed-feeds";
+import { useSubscribedFeeds } from "@modules/inbox/hooks/use-feeds";
 
 type InboxScreenProps = {
   scope?: ArticleScope;
@@ -37,6 +37,7 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
     subscribedFeeds.count === 0;
   const [filter, setFilter] = useState<InboxFilter>("all");
 
+  // Keep native menu imports out of the other platform bundle.
   const headerActions =
     Platform.OS === "ios" ? (
       (() => {

@@ -30,6 +30,7 @@ export function useEmailAuth({
   otp,
 }: UseEmailAuthOptions) {
   const shouldReduceMotion = useReducedMotion();
+  // Async results must not update a dismissed sheet.
   const isMountedRef = useRef(true);
   const isPresentedRef = useRef(isPresented);
   const shouldFocusEmailRef = useRef(false);

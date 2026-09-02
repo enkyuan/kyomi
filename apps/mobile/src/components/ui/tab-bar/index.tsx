@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Keyboard, StyleSheet, TextInput, View } from "react-native";
+import { Keyboard, StyleSheet, TextInput } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated from "react-native-reanimated";
 import { CloseSearchButton, SearchButton } from "./components/search";

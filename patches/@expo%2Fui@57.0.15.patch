@@ -46,7 +46,7 @@ index 29b1a3ad7a8dc653347899c514fc538f9f9433f3..eeeb3ee5b38750a27b987962776e7638
 +          .padding(.trailing, 18)
 +      }
 +    }
-+    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
++    .frame(maxWidth: .infinity, alignment: .topLeading)
 +    .ignoresSafeArea(.keyboard)
 +  }
 +

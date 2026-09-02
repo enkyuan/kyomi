@@ -55,7 +55,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const readerCanvasColor = getReaderCanvasColor(colorScheme);
   const tabBarOcclusionHeight = getReaderTabBarOcclusionHeight(insets);
   const [readyArticleId, setReadyArticleId] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  // Avoid sending duplicate view events while an article stays open.
   const viewedArticleIdRef = useRef<string | null>(null);
   const handleArticleReady = useCallback(() => {
     setReadyArticleId(articleId);
@@ -165,7 +165,6 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
           fontSizePx={mobileReaderLayout.body.fontSizePx}
           onReady={handleArticleReady}
           reader={article.reader.selected}
-          searchQuery={searchQuery}
           title={article.title}
         />
         {!isDomReady ? (

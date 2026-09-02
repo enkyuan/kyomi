@@ -33,13 +33,12 @@ import {
   semantics,
   Shapes,
   size,
-  tween,
   weight,
 } from "@expo/ui/jetpack-compose/modifiers";
 import { useCallback, useRef } from "react";
 import { mobileColors } from "@/theme/colors";
 import { OTP_LENGTH, OTP_SLOTS } from "./constants";
-import { useEmailAuth } from "./hooks/use-email-auth";
+import { useEmailAuth } from "./hooks/use-auth";
 import { FONT_STYLES } from "@/theme/fonts";
 
 const BUTTON_LABEL_STYLE = FONT_STYLES.button;

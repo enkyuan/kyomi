@@ -169,11 +169,6 @@ const MOBILE_READER_STYLES = String.raw`
     color: var(--reader-foreground);
   }
 
-  .mobile-reader .reader-content .article-body [data-reader-search-match] {
-    border-radius: 0.15em;
-    background: color-mix(in srgb, ${mobileColors.matcha} 56%, transparent);
-    color: inherit;
-  }
 `;
 
 type ArticleBodyProps = {
@@ -184,7 +179,6 @@ type ArticleBodyProps = {
   readonly fontSizePx: number;
   readonly onReady?: () => void;
   readonly reader: ReaderContentModel;
-  readonly searchQuery: string;
   readonly title: string;
   readonly dom?: DOMProps;
 };
@@ -218,80 +212,8 @@ function ReaderSource({
   );
 }
 
-function clearSearchMatches(root: HTMLElement) {
-  for (const match of root.querySelectorAll<HTMLElement>("[data-reader-search-match]")) {
-    const parent = match.parentNode;
-    if (!parent) {
-      continue;
-    }
-    while (match.firstChild) {
-      parent.insertBefore(match.firstChild, match);
-    }
-    match.remove();
-    parent.normalize();
-  }
-}
-
 function createReaderImageProxyUrl(sourceUrl: string): string {
   return resolveMobileApiUrl(`/api/reader-image?url=${encodeURIComponent(sourceUrl)}`);
-}
-
-function highlightSearchMatches(root: HTMLElement, query: string) {
-  const normalizedQuery = query.trim().toLocaleLowerCase();
-  if (!normalizedQuery) {
-    return [] as HTMLElement[];
-  }
-
-  const matches: HTMLElement[] = [];
-  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-    acceptNode(node) {
-      const parent = node.parentElement;
-      if (!parent || !node.nodeValue?.trim()) {
-        return NodeFilter.FILTER_REJECT;
-      }
-      if (parent.closest("mark, script, style, noscript")) {
-        return NodeFilter.FILTER_REJECT;
-      }
-      return NodeFilter.FILTER_ACCEPT;
-    },
-  });
-
-  const textNodes: Text[] = [];
-  let currentNode = walker.nextNode();
-  while (currentNode) {
-    textNodes.push(currentNode as Text);
-    currentNode = walker.nextNode();
-  }
-
-  for (const textNode of textNodes) {
-    const value = textNode.nodeValue ?? "";
-    const normalizedValue = value.toLocaleLowerCase();
-    if (!normalizedValue.includes(normalizedQuery)) {
-      continue;
-    }
-
-    const fragment = document.createDocumentFragment();
-    let index = 0;
-    let matchIndex = normalizedValue.indexOf(normalizedQuery, index);
-    while (matchIndex !== -1) {
-      if (matchIndex > index) {
-        fragment.append(value.slice(index, matchIndex));
-      }
-      const match = document.createElement("mark");
-      match.dataset.readerSearchMatch = "";
-      match.textContent = value.slice(matchIndex, matchIndex + normalizedQuery.length);
-      fragment.append(match);
-      matches.push(match);
-      index = matchIndex + normalizedQuery.length;
-      matchIndex = normalizedValue.indexOf(normalizedQuery, index);
-    }
-    if (index < value.length) {
-      fragment.append(value.slice(index));
-    }
-    textNode.replaceWith(fragment);
-  }
-
-  return matches;
 }
 
 export default function ArticleBody({
@@ -302,7 +224,6 @@ export default function ArticleBody({
   fontSizePx,
   onReady,
   reader,
-  searchQuery,
   title,
 }: ArticleBodyProps) {
   const didNotifyReady = useRef(false);
@@ -318,29 +239,6 @@ export default function ArticleBody({
 
     return () => window.cancelAnimationFrame(frameId);
   }, [onReady, reader]);
-
-  useEffect(() => {
-    const frameId = window.requestAnimationFrame(() => {
-      const root = document.querySelector<HTMLElement>(".mobile-reader .article-body");
-      if (!root) {
-        return;
-      }
-
-      clearSearchMatches(root);
-      const matches = highlightSearchMatches(root, searchQuery);
-      const firstMatch = matches[0];
-      if (firstMatch) {
-        firstMatch.scrollIntoView({
-          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-            ? "auto"
-            : "smooth",
-          block: "center",
-        });
-      }
-    });
-
-    return () => window.cancelAnimationFrame(frameId);
-  }, [reader, searchQuery]);
 
   return (
     <main

@@ -14,6 +14,7 @@ import {
 import {
   Animation,
   accessibilityHidden,
+  accessibilityLabel,
   animation,
   background,
   buttonBorderShape,
@@ -31,7 +32,7 @@ import {
 import { useCallback, useRef } from "react";
 import { mobileColors } from "@/theme/colors";
 import { EmailFormStep, OTPFormStep, type EmailStepTheme } from "./components/step-content.ios";
-import { useEmailAuth } from "./hooks/use-email-auth";
+import { useEmailAuth } from "./hooks/use-auth";
 import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
 
 const FULL_WIDTH = [frame({ maxWidth: Infinity })];
@@ -93,6 +94,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
             buttonBorderShape("circle"),
             controlSize("regular"),
             labelStyle("iconOnly"),
+            accessibilityLabel("Close"),
             foregroundStyle(theme.foreground),
             font({ weight: SWIFT_FONT_WEIGHTS.semibold }),
           ]}
@@ -162,7 +164,6 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               />
               <OTPFormStep
                 active={!isEmailStep}
-                email={email}
                 errorAlertPresented={showErrorAlert && isOtpInvalid}
                 errorMessage={isOtpInvalid ? errorMessage : null}
                 invalid={isOtpInvalid}
