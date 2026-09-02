@@ -37,7 +37,7 @@ import type { RefObject } from "react";
 import { mobileColors } from "@/theme/colors";
 import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
 
-import { OTP_SLOTS } from "../constants";
+import { OTP_LENGTH, OTP_SLOTS } from "../constants";
 
 const FULL_WIDTH = frame({ maxWidth: Infinity });
 const ZERO_SIZE = frame({ width: 0, height: 0 });
@@ -313,6 +313,7 @@ export function OTPFormStep({
             ref={otpFieldRef}
             text={otp}
             onTextChange={onOTPChange}
+            maxLength={OTP_LENGTH}
             modifiers={[
               textFieldStyle("plain"),
               keyboardType("numeric"),

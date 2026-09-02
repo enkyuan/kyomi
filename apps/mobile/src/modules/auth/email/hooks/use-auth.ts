@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Keyboard } from "react-native";
 import { useReducedMotion } from "react-native-reanimated";
+import { runOnJS } from "react-native-worklets";
 import { isValidEmail } from "@kyomi/reader/schemas/auth";
 import { authClient } from "@/lib/auth";
 import { OTP_LENGTH } from "../constants";
@@ -10,6 +11,7 @@ export { OTP_LENGTH } from "../constants";
 type NativeStringState = {
   set: (value: string) => void;
   value: string;
+  onChange: ((value: string) => void) | null;
 };
 
 type UseEmailAuthOptions = {
@@ -88,15 +90,50 @@ export function useEmailAuth({
     if (invalidStep === "email" || errorMessage) clearError();
   }
 
-  function handleOTPChange(typedValue: string) {
-    const digitsOnly = typedValue.replace(/\D/g, "").slice(0, OTP_LENGTH);
-    if (invalidStep === "otp" || errorMessage) clearError();
-    // Always sync native state — iOS OTP autofill delivers a clean digit
-    // string, so the conditional `otp.set` guard would skip the sync and the
-    // native TextField would revert to the stale bound value on re-render.
-    otp.set(digitsOnly);
-    setOTPValue(digitsOnly);
-  }
+  // React-side handler that clears stale errors and syncs the visual OTP
+  // slots with the latest digit string.  Invokable from a UI worklet via runOnJS.
+  const handleOTPChangeReactSide = useCallback(
+    (digitsOnly: string) => {
+      if (invalidStep === "otp" || errorMessage) clearError();
+      setOTPValue(digitsOnly);
+    },
+    [invalidStep, errorMessage, clearError, setOTPValue],
+  );
+
+  // Worklet callback for TextField.onTextChange / BasicTextField.onValueChange.
+  // Running on the UI thread lets us call otp.set() synchronously, which is
+  // critical for iOS OTP autofill: the oneTimeCode suggestion inserts the full
+  // code string in one shot, and any async gap can let the native binding
+  // revert to a stale value before the JS event loop picks up the change.
+  const handleOTPChange = useCallback(
+    (typedValue: string) => {
+      "worklet";
+      let digitsOnly: string;
+      if (typeof typedValue === "string") {
+        digitsOnly = typedValue.replace(/\D/g, "").slice(0, OTP_LENGTH);
+      } else {
+        digitsOnly = "";
+      }
+      otp.set(digitsOnly);
+      runOnJS(handleOTPChangeReactSide)(digitsOnly);
+    },
+    [otp, handleOTPChangeReactSide],
+  );
+
+  // Safety net: sync React state whenever the native ObservableState changes,
+  // regardless of how it was triggered (user typing, OTP autofill insertion,
+  // or programmatic set from another code path).  The worklet listener fires
+  // synchronously on the UI thread and schedules the React state update on
+  // JS — ensuring the visual slots always reflect the true native value.
+  useEffect(() => {
+    otp.onChange = (value: string) => {
+      "worklet";
+      runOnJS(setOTPValue)(value ?? "");
+    };
+    return () => {
+      otp.onChange = null;
+    };
+  }, [otp]);
 
   function handleErrorAlertChange(isPresented: boolean) {
     if (!isPresented) setShowErrorAlert(false);
