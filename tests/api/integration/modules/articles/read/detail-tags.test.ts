@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { toFeedArticleDetailDtoForTest } from "@modules/articles/read/detail";
+import { clipToDetail } from "@modules/articles/write/clips/detail";
 
 type FeedArticleDetailRawRow = Parameters<typeof toFeedArticleDetailDtoForTest>[0];
 
@@ -35,6 +36,52 @@ function rawDetailRow(overrides: Partial<FeedArticleDetailRawRow> = {}): FeedArt
     ...overrides,
   };
 }
+
+describe("article detail content", () => {
+  test("normalizes feed top-level markdown to match nested reader content", () => {
+    const item = toFeedArticleDetailDtoForTest(
+      rawDetailRow({
+        contentHtml: null,
+        contentText: null,
+        contentMarkdown: "## Release notes ##\n\n    const value = 1;",
+        contentSource: "feed_markdown",
+      }),
+    );
+
+    expect(item.contentMarkdown).toBe("## Release notes\n\n```\nconst value = 1;\n```");
+    expect(item.reader.original.content.contentMarkdown).toBe(item.contentMarkdown);
+  });
+
+  test("normalizes clip top-level markdown to match nested reader content", () => {
+    const item = clipToDetail({
+      id: "clip-1",
+      userId: "user-1",
+      url: "https://example.com/article",
+      title: "Article",
+      content: null,
+      contentHtml: null,
+      contentText: "## Release notes ##\n\n    const value = 1;",
+      contentMarkdown: "## Release notes ##\n\n    const value = 1;",
+      contentStatus: "ready",
+      contentSource: "feed_markdown",
+      extractionErrorCode: null,
+      extractionErrorMessage: null,
+      extractedContentHtml: null,
+      extractedContentText: null,
+      extractedContentStatus: "pending",
+      extractedContentError: null,
+      extractedContentUpdatedAt: null,
+      note: null,
+      isRead: false,
+      isSaved: false,
+      createdAt: new Date("2026-07-04T00:00:00.000Z"),
+      updatedAt: new Date("2026-07-04T00:00:00.000Z"),
+    });
+
+    expect(item.contentMarkdown).toBe("## Release notes\n\n```\nconst value = 1;\n```");
+    expect(item.reader.original.content.contentMarkdown).toBe(item.contentMarkdown);
+  });
+});
 
 describe("article detail categories", () => {
   test("preserves the feed-provided lead image for reader clients", () => {

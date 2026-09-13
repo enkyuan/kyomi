@@ -32,6 +32,19 @@ describe("createReaderDocument", () => {
     expect(document).toContain("Bold");
   });
 
+  test("renders KaTeX in the WebView document for backslash delimiters", () => {
+    const document = createReaderDocument({
+      reader: {
+        bodyKind: "markdown",
+        contentMarkdown: String.raw`Inline \(x^2\) and block \[y^2\]`,
+        contentBaseUrl: "https://example.com/",
+      },
+    });
+
+    expect(document).toContain('class="katex"');
+    expect(document).toContain('class="katex-display"');
+  });
+
   test("strips injected script content from article html (bridge script remains)", () => {
     const document = createReaderDocument({
       reader: {

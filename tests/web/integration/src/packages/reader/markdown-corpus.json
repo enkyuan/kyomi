@@ -1,0 +1,32 @@
+[
+  {
+    "name": "GFM table",
+    "source": "| A | B |\n| - | - |\n| 1 | 2 |",
+    "expectedHtml": "<table><thead><tr><th>A</th><th>B</th></tr></thead><tbody><tr><td>1</td><td>2</td></tr></tbody></table>"
+  },
+  {
+    "name": "fenced code language",
+    "source": "```ts\nconst value = 1;\n```",
+    "expectedHtml": "<pre><code class=\"language-ts\">const value = 1;</code></pre>"
+  },
+  {
+    "name": "raw inline HTML",
+    "source": "Use <code>AllocationRecord</code>.",
+    "expectedHtml": "<p>Use <code>AllocationRecord</code>.</p>"
+  },
+  {
+    "name": "relative URLs",
+    "source": "[docs](/guide)\n\n![graph](./graph.png)",
+    "expectedHtml": "<a href=\"https://example.com/guide\" rel=\"noopener noreferrer\" target=\"_blank\">docs</a>"
+  },
+  {
+    "name": "setext heading accepted delta",
+    "source": "Title\n=====",
+    "expectedHtml": "<p>Title\n=====</p>"
+  },
+  {
+    "name": "bare URL accepted delta",
+    "source": "Visit https://example.com/docs.",
+    "expectedHtml": "<p>Visit https://example.com/docs.</p>"
+  }
+]
