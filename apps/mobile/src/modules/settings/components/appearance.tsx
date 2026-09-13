@@ -74,7 +74,7 @@ export function AppearanceSection() {
               })}
             >
               <View className="min-h-24 flex-row items-center gap-4 p-3">
-                <View className="w-18 overflow-hidden rounded-2xl" style={{ aspectRatio: 88 / 70 }}>
+                <View className="w-18 overflow-hidden rounded-lg" style={{ aspectRatio: 88 / 70 }}>
                   <ThemePreview mode={option.mode} />
                 </View>
                 <View className="min-w-0 flex-1 gap-1">

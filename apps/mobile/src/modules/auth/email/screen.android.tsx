@@ -262,8 +262,8 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                       }}
                       keyboardActions={{
                         onDone: () =>
-                          otpValue.length === OTP_LENGTH
-                            ? handleVerifyCode(otpValue)
+                          otp.value.length === OTP_LENGTH
+                            ? handleVerifyCode(otp.value)
                             : handleSendCode(),
                       }}
                       modifiers={[size(0, 0), semantics({ contentType: "one-time-code" })]}
@@ -290,8 +290,8 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
               onClick={
                 isEmailStep
                   ? handleSendCode
-                  : otpValue.length === OTP_LENGTH
-                    ? () => handleVerifyCode(otpValue)
+                  : otp.value.length === OTP_LENGTH
+                    ? () => handleVerifyCode(otp.value)
                     : handleSendCode
               }
               shape={Shape.Pill({})}

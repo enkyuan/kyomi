@@ -90,34 +90,14 @@ export function useEmailAuth({
     if (invalidStep === "email" || errorMessage) clearError();
   }
 
-  // React-side handler that clears stale errors and syncs the visual OTP
-  // slots with the latest digit string.  Invokable from a UI worklet via runOnJS.
-  const handleOTPChangeReactSide = useCallback(
-    (digitsOnly: string) => {
-      if (invalidStep === "otp" || errorMessage) clearError();
-      setOTPValue(digitsOnly);
-    },
-    [invalidStep, errorMessage, clearError, setOTPValue],
-  );
-
-  // Worklet callback for TextField.onTextChange / BasicTextField.onValueChange.
-  // Running on the UI thread lets us call otp.set() synchronously, which is
-  // critical for iOS OTP autofill: the oneTimeCode suggestion inserts the full
-  // code string in one shot, and any async gap can let the native binding
-  // revert to a stale value before the JS event loop picks up the change.
   const handleOTPChange = useCallback(
     (typedValue: string) => {
-      "worklet";
-      let digitsOnly: string;
-      if (typeof typedValue === "string") {
-        digitsOnly = typedValue.replace(/\D/g, "").slice(0, OTP_LENGTH);
-      } else {
-        digitsOnly = "";
-      }
+      const digitsOnly = typedValue.replace(/\D/g, "").slice(0, OTP_LENGTH);
+      if (invalidStep === "otp" || errorMessage) clearError();
       otp.set(digitsOnly);
-      runOnJS(handleOTPChangeReactSide)(digitsOnly);
+      setOTPValue(digitsOnly);
     },
-    [otp, handleOTPChangeReactSide],
+    [clearError, errorMessage, invalidStep, otp],
   );
 
   // Safety net: sync React state whenever the native ObservableState changes,

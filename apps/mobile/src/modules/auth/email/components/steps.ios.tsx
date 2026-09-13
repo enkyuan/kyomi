@@ -22,7 +22,6 @@ import {
   frame,
   keyboardType,
   onSubmit,
-  onTapGesture,
   opacity,
   padding,
   strokeBorder,
@@ -202,7 +201,6 @@ export function EmailFormStep({
             foregroundStyle(theme.foreground),
 
             padding({ horizontal: 20 }),
-            FULL_WIDTH,
             frame({ height: 52 }),
             background(theme.input),
             clipShape("capsule"),
@@ -231,7 +229,6 @@ type OTPFormStepProps = {
   errorMessage?: string | null;
   invalid: boolean;
   onErrorAlertChange: (isPresented: boolean) => void;
-  onFocusOTP: () => void;
   onOTPChange: (value: string) => void;
   onSubmit: () => void;
   otp: ObservableStringState;
@@ -246,7 +243,6 @@ export function OTPFormStep({
   errorMessage,
   invalid,
   onErrorAlertChange,
-  onFocusOTP,
   onOTPChange,
   onSubmit: handleSubmit,
   otp,
@@ -268,7 +264,7 @@ export function OTPFormStep({
         />
 
         <ZStack modifiers={[FULL_WIDTH, padding({ top: 24 })]}>
-          <HStack spacing={10} modifiers={[FULL_WIDTH, onTapGesture(onFocusOTP)]}>
+          <HStack spacing={10} modifiers={[FULL_WIDTH]}>
             {OTP_SLOTS.map((slot) => {
               const isCurrentSlot = otpValue.length === slot;
 
@@ -311,6 +307,7 @@ export function OTPFormStep({
 
           <TextField
             ref={otpFieldRef}
+            autoFocus
             text={otp}
             onTextChange={onOTPChange}
             maxLength={OTP_LENGTH}
@@ -323,6 +320,11 @@ export function OTPFormStep({
               textInputAutocapitalization("never"),
               autocorrectionDisabled(),
 
+              font({
+                family: FONT_FAMILIES.inter.semibold,
+                size: FONT_SIZES.otp,
+              }),
+
               accessibilityLabel(
                 invalid ? "Invalid 6-digit verification code" : "6-digit verification code",
               ),
@@ -330,10 +332,13 @@ export function OTPFormStep({
                 invalid ? validationMessage : "Enter the verification code we sent.",
               ),
 
-              // Keep the real field full-sized and transparent so iOS can
-              // commit an autofilled code to the same native binding.
+              // Full-size transparent field — the real native input. The six
+              // digit boxes above are presentation only.
               foregroundStyle("clear"),
               tint("clear"),
+              background("clear"),
+              clipShape("capsule"),
+              padding({ horizontal: 20 }),
               frame({ maxWidth: Infinity, height: 52 }),
             ]}
           />

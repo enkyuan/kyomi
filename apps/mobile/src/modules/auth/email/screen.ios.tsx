@@ -25,7 +25,6 @@ import {
   foregroundStyle,
   frame,
   labelStyle,
-  onTapGesture,
   padding,
   presentationDetents,
   scrollDismissesKeyboard,
@@ -38,7 +37,6 @@ import { MingcuteIcon } from "@/components/icons/mingcute";
 import { EmailFormStep, OTPFormStep, type EmailStepTheme } from "./components/steps.ios";
 import { OTP_LENGTH } from "./constants";
 import { useEmailAuth } from "./hooks/use-auth";
-import { useKeyboard } from "@/hooks/use-keyboard";
 import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
 
 const FULL_WIDTH = [frame({ maxWidth: Infinity })];
@@ -66,7 +64,6 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
   const otpFieldRef = useRef<TextFieldRef>(null);
   const focusEmail = useCallback(() => emailFieldRef.current?.focus(), []);
   const focusOTP = useCallback(() => otpFieldRef.current?.focus(), []);
-  const { dismissKeyboard } = useKeyboard();
   const {
     errorMessage,
     handleDismiss,
@@ -98,7 +95,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
       <Group modifiers={[presentationDetents(["large"])]}>
         <ZStack
           alignment="topTrailing"
-          modifiers={[...FULL_WIDTH, padding({ top: 28, horizontal: 20 })]}
+          modifiers={[...FULL_WIDTH, padding({ top: 20, horizontal: 20 })]}
         >
           <VStack modifiers={[...FULL_WIDTH, frame({ maxHeight: Infinity })]}>
             <ScrollView
@@ -107,10 +104,6 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 frame({ maxHeight: Infinity }),
                 scrollDismissesKeyboard("automatic"),
                 padding({ bottom: 12 }),
-                // Tap-to-dismiss keyboard lives on the ScrollView (above the
-                // keyboard) rather than the ZStack so it cannot intercept
-                // OTP-suggestion banner taps that land in the keyboard window.
-                onTapGesture(dismissKeyboard),
               ]}
             >
               <VStack alignment="leading" modifiers={[...FULL_WIDTH, padding({ top: 36 })]}>
@@ -180,7 +173,6 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                       errorMessage={isOTPInvalid ? errorMessage : null}
                       invalid={isOTPInvalid}
                       onErrorAlertChange={handleErrorAlertChange}
-                      onFocusOTP={focusOTP}
                       onOTPChange={handleOTPChange}
                       onSubmit={() =>
                         otp.value.length === OTP_LENGTH
