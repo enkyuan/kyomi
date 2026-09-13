@@ -24,13 +24,20 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   experiments: {
     reactCompiler: true,
   },
-  plugins: ["expo-router", "expo-secure-store", "expo-web-browser", "expo-font", "expo-image", "expo-dev-client"],
+  plugins: [
+    "expo-router",
+    "expo-secure-store",
+    "expo-web-browser",
+    "expo-font",
+    "expo-image",
+    "expo-dev-client",
+  ],
   android: {
     package: "com.anonymous.mobile",
   },
   ios: {
     bundleIdentifier: "com.anonymous.mobile",
-    deploymentTarget: "17.0",
+    deploymentTarget: "26.0",
     infoPlist: {
       UIDesignRequiresCompatibility: false,
       UIViewControllerBasedStatusBarAppearance: true,
