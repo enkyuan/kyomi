@@ -25,7 +25,7 @@ uv.lock                       Locked environment
 - Keep dependencies in `pyproject.toml` and refresh `uv.lock` through uv. Never hand-edit the lock.
 - Keep generated exports, databases, Parquet files, caches, and virtual environments out of source
   organization and commits.
-- Preserve the JSONL export contract consumed by `scripts/catalog/import.ts`.
+- Preserve the JSONL export contract consumed by `apps/api/src/app/boot/catalog.ts`.
 - Keep normal app development independent of uv, Poetry, and catalog synchronization.
 - Keep the scheduled wrapper in `scripts/catalog/sync.ts`; preserve its lock and log behavior.
 
