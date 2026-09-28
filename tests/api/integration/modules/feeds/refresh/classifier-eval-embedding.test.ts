@@ -10,6 +10,8 @@ import {
 } from "./classifier-eval-scoring";
 import { CLASSIFIER_EVAL_FIXTURE, type ClassifierEvalCase } from "./classifier-eval-fixture";
 
+// BGE M3
+
 /**
  * Live comparison of the embedding classifier against the same fixture the keyword
  * classifier is scored against in `classifier-eval.test.ts`. This makes real Voyage API
@@ -23,13 +25,16 @@ import { CLASSIFIER_EVAL_FIXTURE, type ClassifierEvalCase } from "./classifier-e
  * pass/fail.
  */
 
-const apiKey = process.env.VOYAGE_API_KEY;
+const apiUrl = process.env.CLOUDFLARE_EMBEDDINGS_URL?.trim();
+const apiKey = process.env.CLOUDFLARE_EMBEDDINGS_TOKEN?.trim();
+const hasBgeM3 = Boolean(apiUrl && apiKey);
 
 async function runEmbeddingClassifier(
   cases: readonly ClassifierEvalCase[],
   config: EmbeddingClassifierConfig,
 ): Promise<Prediction[]> {
   const predictions: Prediction[] = [];
+
   for (const case_ of cases) {
     const result = await classifyItemEmbedding(
       {
@@ -45,26 +50,75 @@ async function runEmbeddingClassifier(
       },
       config,
     );
-    predictions.push({ case: case_, predicted: result.categories.map((c) => c.label) });
+
+    const predicted = result.categories.map((category) => category.label);
+    const expected = [...case_.expected].sort();
+    const actual = [...predicted].sort();
+
+    if (case_.id === "field-bandwagon-awit-awards") {
+      const debug = await classifyItemEmbedding(
+        {
+          feedTitle: case_.feedTitle,
+          feedDescription: case_.feedDescription,
+          feedUrl: case_.feedUrl,
+          feedSiteUrl: case_.feedSiteUrl,
+          sourceKind: case_.sourceKind,
+          itemTitle: case_.itemTitle,
+          itemSummary: case_.itemSummary,
+          itemContentText: case_.itemContentText,
+          itemUrl: case_.itemUrl,
+        },
+        { ...config, itemSimilarityThreshold: 0 },
+        3,
+      );
+
+      console.log(
+        `\n[Culture raw top 3] ${case_.id}: ${debug.categories
+          .map((category) => `${category.label}=${category.confidence.toFixed(3)}`)
+          .join(", ")}`,
+      );
+    }
+
+    if (expected.join("|") !== actual.join("|")) {
+      console.log(
+        [
+          `\n[BGE-M3 mismatch] ${case_.id}`,
+          `Expected: ${expected.join(", ")}`,
+          `Predicted: ${actual.join(", ") || "none"}`,
+          `Scores: ${
+            result.categories
+              .map((category) => `${category.label}=${category.confidence.toFixed(3)}`)
+              .join(", ") || "none"
+          }`,
+        ].join("\n"),
+      );
+    }
+
+    predictions.push({ case: case_, predicted });
   }
+
   return predictions;
 }
 
-describe.skipIf(!apiKey)("embedding classifier eval (live Voyage API)", () => {
-  test("prints scoreboard for the embedding classifier and compares against the keyword baseline", async () => {
-    const config: EmbeddingClassifierConfig = { apiKey: apiKey! };
+describe.skipIf(!hasBgeM3)("embedding classifier eval (live Cloudflare BGE-M3)", () => {
+  test("prints scoreboard for the BGE-M3 embedding classifier and compares against the keyword baseline", async () => {
+    const config: EmbeddingClassifierConfig = {
+      apiKey: apiKey!,
+      apiUrl: apiUrl!,
+      model: "@cf/baai/bge-m3",
+    };
     const predictions = await runEmbeddingClassifier(CLASSIFIER_EVAL_FIXTURE, config);
     const { perCategory, overall } = accumulateConfusion(predictions);
 
     console.log(`\n${renderScoreboard(perCategory, overall)}\n`);
     console.log(
       `Embedding classifier: F1=${f1(overall).toFixed(3)} P=${precision(overall).toFixed(3)} R=${recall(overall).toFixed(3)}\n` +
-        `Keyword classifier (from classifier-eval.test.ts): F1=0.909 P=0.926 R=0.893\n` +
+        `Run classifier-eval.test.ts separately to compare the current keyword scoreboard.\n` +
         `Compare these numbers to decide whether to promote the embedding classifier to the ` +
         `default read path, keep both writing in parallel for more data, or revisit the ` +
         `category cards / similarity thresholds.`,
     );
 
     expect(predictions.length).toBe(CLASSIFIER_EVAL_FIXTURE.length);
-  }, 30_000);
+  }, 60_000);
 });
