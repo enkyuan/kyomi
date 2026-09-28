@@ -18,9 +18,15 @@ export type EmbeddingClassifierConfig = {
   apiKey: string;
   model?: string;
   /** Override for tests; defaults to Voyage's public embeddings endpoint. */
+
+  /** Version used to distinguish stored Kyomi classifier assignments. */
+  assignmentModelId?: string;
+
   apiUrl?: string;
   /** Optional request timeout for best-effort callers that must not block user flows. */
   timeoutMs?: number;
+  /** Optional per-provider cutoff for article category similarity. */
+  itemSimilarityThreshold?: number;
 };
 
 const DEFAULT_VOYAGE_MODEL = EMBEDDING_CLASSIFIER_MODEL_ID;
@@ -132,7 +138,7 @@ function cacheKeyFor(config: EmbeddingClassifierConfig): string {
 
 export function embeddingModelInfo(config: EmbeddingClassifierConfig): ClassifierModelInfo {
   return {
-    modelId: config.model ?? EMBEDDING_CLASSIFIER_MODEL_ID,
+    modelId: config.assignmentModelId ?? config.model ?? EMBEDDING_CLASSIFIER_MODEL_ID,
     taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
     classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
   };
@@ -213,8 +219,10 @@ export async function classifyFeedEmbedding(
   if (!textEmbedding) {
     return { categories: [{ label: MISCELLANEOUS_CATEGORY_LABEL, confidence: 0.1 }] };
   }
+
+  const itemSimilarityThreshold = config.itemSimilarityThreshold ?? ITEM_SIMILARITY_THRESHOLD;
   const scored = scoreAgainstPrototypes(textEmbedding, prototypes).filter(
-    (entry) => entry.score >= FEED_SIMILARITY_THRESHOLD,
+    (entry) => entry.score >= itemSimilarityThreshold,
   );
   if (scored.length === 0) {
     // A feed always needs some label, mirroring the keyword classifier's feed-level
@@ -244,8 +252,9 @@ export async function classifyItemEmbedding(
   if (!textEmbedding) {
     return { categories: [] };
   }
+  const itemSimilarityThreshold = config.itemSimilarityThreshold ?? ITEM_SIMILARITY_THRESHOLD;
   const scored = scoreAgainstPrototypes(textEmbedding, prototypes).filter(
-    (entry) => entry.score >= ITEM_SIMILARITY_THRESHOLD,
+    (entry) => entry.score >= itemSimilarityThreshold,
   );
   return {
     categories: scored

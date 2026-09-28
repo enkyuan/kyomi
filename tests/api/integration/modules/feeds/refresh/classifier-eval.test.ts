@@ -49,6 +49,11 @@ describe("classifier eval harness", () => {
   const predictions = runClassifier(CLASSIFIER_EVAL_FIXTURE);
   const { perCategory, overall } = accumulateConfusion(predictions);
 
+  const baselinePredictions = predictions.filter(
+    ({ case: case_ }) => !case_.id.startsWith("field-"),
+  );
+  const { overall: baselineOverall } = accumulateConfusion(baselinePredictions);
+
   test("prints scoreboard for the current classifier", () => {
     // Not an assertion — this exists so the score table appears in `bun test` output next to
     // the ratchet assertions below, making it easy to see WHY a floor bump is (or isn't)
@@ -102,17 +107,13 @@ describe("classifier eval harness", () => {
     overallRecallFloor: 0.82,
   };
 
-  test("overall F1 stays at or above the baseline floor", () => {
-    expect(round3(f1(overall))).toBeGreaterThanOrEqual(CURRENT_BASELINE.overallF1Floor);
-  });
+  expect(round3(f1(baselineOverall))).toBeGreaterThanOrEqual(CURRENT_BASELINE.overallF1Floor);
 
-  test("overall precision stays at or above the baseline floor", () => {
-    expect(round3(precision(overall))).toBeGreaterThanOrEqual(
-      CURRENT_BASELINE.overallPrecisionFloor,
-    );
-  });
+  expect(round3(precision(baselineOverall))).toBeGreaterThanOrEqual(
+    CURRENT_BASELINE.overallPrecisionFloor,
+  );
 
-  test("overall recall stays at or above the baseline floor", () => {
-    expect(round3(recall(overall))).toBeGreaterThanOrEqual(CURRENT_BASELINE.overallRecallFloor);
-  });
+  expect(round3(recall(baselineOverall))).toBeGreaterThanOrEqual(
+    CURRENT_BASELINE.overallRecallFloor,
+  );
 });

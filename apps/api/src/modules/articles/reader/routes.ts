@@ -1,5 +1,5 @@
 import type { Elysia } from "elysia";
-import { env } from "@config/env";
+import { embeddingClassifierConfig } from "@config/embeddings";
 import { assertContentFieldBudget } from "@shared/http/content-budget";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { getArticleDetailForUser } from "../read/detail";
@@ -21,9 +21,7 @@ export function registerArticleEnrichmentRoutes(app: Elysia) {
       async (context) => {
         const { db, logger, params, userId } = v1HandlerContext(context);
         const result = await requestFullTextExtractionForUser(db, userId, params.articleId, {
-          embeddingClassifier: env.VOYAGE_API_KEY
-            ? { apiKey: env.VOYAGE_API_KEY, timeoutMs: 8000 }
-            : undefined,
+          embeddingClassifier: embeddingClassifierConfig(8000),
           logger,
         });
         if (result.ok) {

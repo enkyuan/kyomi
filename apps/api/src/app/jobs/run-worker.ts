@@ -3,6 +3,7 @@ import { db } from "@adapters/db/client";
 import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/schema-guard";
 import { logger } from "@adapters/logger";
 import { closeRedis, getRedis } from "@adapters/redis";
+import { embeddingClassifierConfig } from "@config/embeddings";
 import {
   consumeJobs,
   createHostRateLimiter,
@@ -62,7 +63,7 @@ async function handleWorkerJob(
           // Best-effort embedding classification runs alongside the keyword classifier when
           // a key is configured; absent means refresh proceeds with the keyword classifier
           // only, same fallback shape as MEILI_URL above.
-          embeddingClassifier: env.VOYAGE_API_KEY ? { apiKey: env.VOYAGE_API_KEY } : undefined,
+          embeddingClassifier: embeddingClassifierConfig(),
         },
       );
       const durationMs = Date.now() - startTime;
@@ -175,9 +176,7 @@ async function handleWorkerJob(
         job.payload.userId,
         job.payload.articleId,
         {
-          embeddingClassifier: env.VOYAGE_API_KEY
-            ? { apiKey: env.VOYAGE_API_KEY, timeoutMs: 8000 }
-            : undefined,
+          embeddingClassifier: embeddingClassifierConfig(8000),
           hostRateLimiter,
           logger,
           titleReplacement: {
