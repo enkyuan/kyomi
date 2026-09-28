@@ -637,16 +637,39 @@ function resolveBackfillClassifier(args: BackfillArgs): BackfillClassifier {
     return { method: "keyword", model: BACKFILL_CLASSIFIER_MODEL };
   }
 
-  const apiKey = process.env.VOYAGE_API_KEY?.trim();
-  if (!apiKey) {
-    throw new Error("VOYAGE_API_KEY is required when --classifier embedding is used");
+  const cloudflareUrl = process.env.CLOUDFLARE_EMBEDDINGS_URL?.trim();
+  const cloudflareToken = process.env.CLOUDFLARE_EMBEDDINGS_TOKEN?.trim();
+
+  if (cloudflareUrl && cloudflareToken) {
+    const embeddingConfig: EmbeddingClassifierConfig = {
+      apiKey: cloudflareToken,
+      apiUrl: cloudflareUrl,
+      model: "@cf/baai/bge-m3",
+      assignmentModelId: "@cf/baai/bge-m3/category-cards-v2",
+    };
+
+    return {
+      method: "embedding",
+      embeddingConfig,
+      model: embeddingModelInfo(embeddingConfig),
+    };
   }
-  const embeddingConfig: EmbeddingClassifierConfig = { apiKey };
-  return {
-    method: "embedding",
-    embeddingConfig,
-    model: embeddingModelInfo(embeddingConfig),
-  };
+
+  const voyageApiKey = process.env.VOYAGE_API_KEY?.trim();
+
+  if (voyageApiKey) {
+    const embeddingConfig: EmbeddingClassifierConfig = { apiKey: voyageApiKey };
+
+    return {
+      method: "embedding",
+      embeddingConfig,
+      model: embeddingModelInfo(embeddingConfig),
+    };
+  }
+
+  throw new Error(
+    "CLOUDFLARE_EMBEDDINGS_URL and CLOUDFLARE_EMBEDDINGS_TOKEN, or VOYAGE_API_KEY, is required when --classifier embedding is used",
+  );
 }
 
 export function inferFeedCategories(feed: BackfillFeedRow): {

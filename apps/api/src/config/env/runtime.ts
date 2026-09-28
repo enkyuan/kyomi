@@ -142,6 +142,10 @@ export const env = createEnv({
      * matching the MEILI_* pattern of "absent means fall back," not "absent means error."
      */
     VOYAGE_API_KEY: z.string().min(1).optional(),
+
+    // cloudflare
+    CLOUDFLARE_EMBEDDINGS_URL: z.string().url().optional(),
+    CLOUDFLARE_EMBEDDINGS_TOKEN: z.string().min(1).optional(),
     /**
      * Category read-path rollout gate. Keep keyword as the default while embedding rows are
      * collected and compared in parallel; switch to embedding after the promotion gate passes.
@@ -216,6 +220,9 @@ export const env = createEnv({
     FEED_ADMIN_USER_IDS: process.env.FEED_ADMIN_USER_IDS,
     FEED_ADMIN_SHARED_SECRET: process.env.FEED_ADMIN_SHARED_SECRET,
     VOYAGE_API_KEY: process.env.VOYAGE_API_KEY,
+    // runtimeEnv section
+    CLOUDFLARE_EMBEDDINGS_URL: process.env.CLOUDFLARE_EMBEDDINGS_URL,
+    CLOUDFLARE_EMBEDDINGS_TOKEN: process.env.CLOUDFLARE_EMBEDDINGS_TOKEN,
     CATEGORY_CLASSIFIER_READ_MODE: process.env.CATEGORY_CLASSIFIER_READ_MODE,
     FEATURE_GOOGLE_OAUTH: process.env.FEATURE_GOOGLE_OAUTH,
     FEATURE_ONBOARDING: process.env.FEATURE_ONBOARDING,
