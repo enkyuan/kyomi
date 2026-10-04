@@ -1,11 +1,12 @@
 import { beforeEach, describe, expect, mock, test } from "bun:test";
 
-mock.module("../../../../apps/mobile/src/components/ui/toast/atoms/viewport", () => ({
+mock.module("../../../../../../../apps/mobile/src/components/ui/toast/atoms/viewport", () => ({
   ToastViewport: () => null,
 }));
 
-const { toast } = await import("../../../../apps/mobile/src/components/ui/toast");
-const { engine } = await import("../../../../apps/mobile/src/components/ui/toast/lib/manager");
+const { toast } = await import("../../../../../../../apps/mobile/src/components/ui/toast");
+const { engine } =
+  await import("../../../../../../../apps/mobile/src/components/ui/toast/lib/manager");
 
 beforeEach(async () => {
   await toast.debugReset();

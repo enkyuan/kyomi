@@ -1,4 +1,4 @@
-import { authClient } from "./auth";
+import { authClient } from "@/lib/auth";
 
 export function useSessionGate() {
   const { data, isPending } = authClient.useSession();

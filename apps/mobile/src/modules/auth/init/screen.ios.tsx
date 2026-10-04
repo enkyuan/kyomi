@@ -5,6 +5,7 @@ import {
   buttonBorderShape,
   buttonStyle,
   controlSize,
+  disabled,
   font,
   foregroundStyle,
   frame,
@@ -22,6 +23,7 @@ import { mobileColors } from "@/theme/colors";
 import { FONT_FAMILIES, FONT_SIZES, SWIFT_FONT_WEIGHTS } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { EmailSheet } from "@modules/auth/email/screen";
+import { useOAuthSignIn } from "@modules/auth/oauth/hooks/use-oauth";
 
 const FULL_WIDTH = [frame({ maxWidth: Infinity })];
 const ICON_SLOT = [frame({ maxWidth: Infinity, alignment: "leading" }), padding({ leading: 20 })];
@@ -35,6 +37,7 @@ const LABEL_FONT = font({
 export function InitScreen() {
   const theme = getMobileSurfaceTheme(useColorScheme());
   const [isEmailSheetOpen, setIsEmailSheetOpen] = useState(false);
+  const google = useOAuthSignIn("google");
 
   return (
     <Host style={{ flex: 1 }}>
@@ -92,12 +95,13 @@ export function InitScreen() {
           </Button>
 
           <Button
-            onPress={() => {}}
+            onPress={google.signIn}
             modifiers={[
               buttonStyle("glass"),
               buttonBorderShape("capsule"),
               padding({ vertical: 2 }),
               controlSize("extraLarge"),
+              disabled(!google.isReady),
               ...FULL_WIDTH,
             ]}
           >

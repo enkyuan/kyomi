@@ -39,12 +39,19 @@ tests/
       shared/
     fixtures/               Shared non-test assets
     e2e/                    Wired extension point; add only for a real process journey
+  mobile/
+    integration/            Bun Test, mirroring apps/mobile/src
+      app/
+      components/
+      lib/
+      modules/<domain>/
 ```
 
 - Keep all TypeScript tests under `tests`; do not add `*.test.*`, `*.spec.*`, or `__tests__`
   directories beside production code.
 - Mirror `apps/web/src` below `tests/web/integration/src`.
 - Mirror `apps/api/src` below `tests/api/integration` when the API owns the behavior.
+- Mirror `apps/mobile/src` below `tests/mobile/integration`.
 - Put direct shared UI and reader package contracts under
   `tests/web/integration/src/packages/<package>`.
 - Put database schema behavior under `tests/api/integration/db`. Put worker behavior under the
@@ -77,12 +84,12 @@ tests/
 
 ## Use the owning runner
 
-| Owner                 | Location                    | Runner                                             |
-| --------------------- | --------------------------- | -------------------------------------------------- |
-| Web, UI, reader-web   | `tests/web/integration/src` | Vitest + Testing Library + jsdom                   |
-| API, database, worker | `tests/api/integration`     | Bun Test through the API environment               |
-| Mobile                | Not wired                   | Select and wire one runner through `$architecture` |
-| Catalog Python        | Not wired                   | Select one pytest layout through `$architecture`   |
+| Owner                 | Location                    | Runner                                           |
+| --------------------- | --------------------------- | ------------------------------------------------ |
+| Web, UI, reader-web   | `tests/web/integration/src` | Vitest + Testing Library + jsdom                 |
+| API, database, worker | `tests/api/integration`     | Bun Test through the API environment             |
+| Mobile                | `tests/mobile/integration`  | Bun Test (`bun run --cwd tests test:mobile`)     |
+| Catalog Python        | Not wired                   | Select one pytest layout through `$architecture` |
 
 Run focused web tests with:
 
