@@ -2560,8 +2560,6 @@ PODS:
     - Yoga
   - ScreenShape (1.0.0):
     - ExpoModulesCore
-  - TabBar (1.0.0):
-    - ExpoModulesCore
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -2688,7 +2686,6 @@ DEPENDENCIES:
   - "RNSVG (from `../../../node_modules/.bun/react-native-svg@15.15.4+c94dbb497cb325a9/node_modules/react-native-svg`)"
   - "RNWorklets (from `../../../node_modules/.bun/react-native-worklets@0.10.1+8ff225d12b7064b2/node_modules/react-native-worklets`)"
   - ScreenShape (from `../modules/screen-shape/ios`)
-  - TabBar (from `../modules/tab-bar/ios`)
   - "Yoga (from `../../../node_modules/.bun/react-native@0.86.3+c94dbb497cb325a9/node_modules/react-native/ReactCommon/yoga`)"
 
 SPEC REPOS:
@@ -2941,8 +2938,6 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/.bun/react-native-worklets@0.10.1+8ff225d12b7064b2/node_modules/react-native-worklets"
   ScreenShape:
     :path: "../modules/screen-shape/ios"
-  TabBar:
-    :path: "../modules/tab-bar/ios"
   Yoga:
     :path: "../../../node_modules/.bun/react-native@0.86.3+c94dbb497cb325a9/node_modules/react-native/ReactCommon/yoga"
 
@@ -3070,7 +3065,6 @@ SPEC CHECKSUMS:
   RNSVG: 3fe8590403ac9f107b4d14591bc6e54da4894e5c
   RNWorklets: ba1671d8b3319013b8e09fc786a2230a5b725ffb
   ScreenShape: 5b4a5ff898f67bcf48ac82272cf59d5ed8efe074
-  TabBar: dfa21c2c9b035c81654e734994909ec62db23d58
   Yoga: 18b74b3ade30bebc1904004dfaceae1dd02a330a
 
 PODFILE CHECKSUM: 1a950b5e68be952a1866283463142f98dc28bf6a
