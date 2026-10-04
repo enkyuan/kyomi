@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Alert, Platform } from "react-native";
 import { logClientError } from "@kyomi/reader/lib/errors";
 import { authClient, resolveAuthOrigin } from "@/lib/auth";
+import { useAuthCapabilities } from "@modules/auth/hooks/use-auth-capabilities";
 import { OAUTH_CLIENT_ID, OAUTH_REDIRECT_URI } from "../constants";
 
 type OAuthProvider = "google";
@@ -22,10 +23,15 @@ const discovery = {
 // `native` pins the registered URI in development and release builds alike.
 const redirectUri = makeRedirectUri({ native: OAUTH_REDIRECT_URI });
 
+// The API registers only the app's custom-scheme redirect, which the web fallback cannot
+// receive.
+const isSupportedPlatform = Platform.OS !== "web";
+
 export function useOAuthSignIn(provider: OAuthProvider) {
   // A fresh state per attempt makes the hook rebuild the request with a new PKCE verifier.
   const [state, setState] = useState(randomUUID);
   const [isPending, setIsPending] = useState(false);
+  const capabilities = useAuthCapabilities({ enabled: isSupportedPlatform });
   const [request, , promptAsync] = useAuthRequest(
     { clientId: OAUTH_CLIENT_ID, redirectUri, state, extraParams: { provider } },
     discovery,
@@ -82,7 +88,11 @@ export function useOAuthSignIn(provider: OAuthProvider) {
   }
 
   return {
-    isReady: request?.state === state && !isPending,
+    isReady:
+      isSupportedPlatform &&
+      capabilities.data?.[provider] === true &&
+      request?.state === state &&
+      !isPending,
     signIn,
   };
 }
