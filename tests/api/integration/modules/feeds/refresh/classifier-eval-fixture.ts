@@ -6,6 +6,9 @@
  * - a category-coverage case (one clearly positive + one deliberately adversarial per canonical
  *   category): captures the intent of each category so a future classifier that "wins" on
  *   average without covering a category shows up as a regression on the per-category F1.
+ * - a field case (a real-world headline a classifier missed): a held-out set scored on its own.
+ *   Never write category-card prototypes from these cases, or the embedding eval stops measuring
+ *   generalization.
  *
  * `expected` is the set of canonical labels a correct classifier should return. Empty array
  * means the classifier should abstain — that is a valid, load-bearing outcome (see the
@@ -14,7 +17,7 @@
  */
 export type ClassifierEvalCase = {
   id: string;
-  source: "regression" | "coverage";
+  source: "regression" | "coverage" | "field";
   itemTitle: string;
   itemSummary: string | null;
   itemContentText?: string | null;
@@ -165,7 +168,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   // - Real World Coverage -------------------------- Important
   {
     id: "field-zenesys-predictive-analytics-business",
-    source: "coverage",
+    source: "field",
     feedTitle: "Zenesys Technosys Blogs",
     feedDescription: null,
     feedUrl: "https://zenesys.com/",
@@ -180,7 +183,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-seattle-mayor-city-budget",
-    source: "coverage",
+    source: "field",
     feedTitle: "The Seattle Times Local Politics – The Seattle Times",
     feedDescription: "Seattle local-government, public-policy, and political reporting.",
     feedUrl: "https://www.seattletimes.com/seattle-news/politics/",
@@ -197,7 +200,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-coronado-school-board-endorsement",
-    source: "coverage",
+    source: "field",
     feedTitle: "Coronado Times",
     feedDescription: "Local Coronado news, community reporting, and election coverage.",
     feedUrl: "https://coronadotimes.com/",
@@ -213,7 +216,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-texas-senate-election-runoff",
-    source: "coverage",
+    source: "field",
     feedTitle: "Secretary of State Press Releases",
     feedDescription: "Official Texas election-administration notices and press releases.",
     feedUrl: "https://www.sos.state.tx.us/about/newsreleases/",
@@ -229,7 +232,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-n1clc-amateur-radio",
-    source: "coverage",
+    source: "field",
     feedTitle: "N1CLC",
     feedDescription: "Amateur radio, RF experimentation, and technology.",
     feedUrl: "https://n1clc.com/",
@@ -245,7 +248,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-motorsport-street-race",
-    source: "coverage",
+    source: "field",
     feedTitle: "Eventfinda » NZ Motorsport",
     feedDescription: "New Zealand motorsport events and race listings.",
     feedUrl: "https://www.eventfinda.co.nz/",
@@ -261,7 +264,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-visualist-art-workshop",
-    source: "coverage",
+    source: "field",
     feedTitle: "The Visualist",
     feedDescription: "Art workshops, exhibitions, calendars, and creative events.",
     feedUrl: "https://thevisualist.org/",
@@ -276,7 +279,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-hyndsight-time-series",
-    source: "coverage",
+    source: "field",
     feedTitle: "Hyndsight",
     feedDescription: "Statistics, forecasting, econometrics, and academic research.",
     feedUrl: "https://robjhyndman.com/",
@@ -292,7 +295,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-wisconsineye-clemency-board",
-    source: "coverage",
+    source: "field",
     feedTitle: "WisconsinEye",
     feedDescription: "State government, public policy, and civic affairs coverage.",
     feedUrl: "https://wiseye.org/",
@@ -307,7 +310,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-vscode-insiders-release",
-    source: "coverage",
+    source: "field",
     feedTitle: "Visual Studio Code - Code Editing. Redefined.",
     feedDescription: "Developer tooling and code editor updates.",
     feedUrl: "https://code.visualstudio.com/",
@@ -322,7 +325,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-techcrunch-ai-agents-google-home",
-    source: "coverage",
+    source: "field",
     feedTitle: "TechCrunch",
     feedDescription: "Technology industry news and startup coverage.",
     feedUrl: "https://techcrunch.com/",
@@ -339,7 +342,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-cryptonews-stablecoin-payments",
-    source: "coverage",
+    source: "field",
     feedTitle: "News - Cryptonews",
     feedDescription: "Cryptocurrency, financial markets, and digital-asset news.",
     feedUrl: "https://cryptonews.com/",
@@ -355,7 +358,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-va-telehealth-pain",
-    source: "coverage",
+    source: "field",
     feedTitle: "VA News",
     feedDescription: "Veterans healthcare and public-service news.",
     feedUrl: "https://news.va.gov/",
@@ -370,7 +373,7 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
   },
   {
     id: "field-bandwagon-awit-awards",
-    source: "coverage",
+    source: "field",
     feedTitle: "Bandwagon",
     feedDescription: "Music, artists, and entertainment-industry news.",
     feedUrl: "https://www.bandwagon.asia/",
