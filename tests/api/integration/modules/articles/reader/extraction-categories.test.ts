@@ -1,6 +1,11 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import { getTableName } from "drizzle-orm";
-import { resetPrototypeCache, type EmbeddingClassifierConfig } from "@kyomi/worker";
+import {
+  CATEGORY_CARDS_VERSION,
+  EMBEDDING_CLASSIFIER_MODEL_ID,
+  resetPrototypeCache,
+  type EmbeddingClassifierConfig,
+} from "@kyomi/worker";
 import { reclassifyExtractedFeedItem } from "@modules/articles/reader/extraction/workflow";
 import type { ArticleDetailDto } from "@modules/articles/types";
 
@@ -195,7 +200,7 @@ describe("reclassifyExtractedFeedItem", () => {
         expect.objectContaining({
           feedItemId: "item-1",
           provenance: "classifier",
-          modelId: "voyage-4",
+          modelId: `${EMBEDDING_CLASSIFIER_MODEL_ID}/${CATEGORY_CARDS_VERSION}`,
           taxonomyVersion: "v1",
           classifierMethod: "embedding",
         }),

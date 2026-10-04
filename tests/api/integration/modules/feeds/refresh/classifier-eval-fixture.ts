@@ -6,15 +6,19 @@
  * - a category-coverage case (one clearly positive + one deliberately adversarial per canonical
  *   category): captures the intent of each category so a future classifier that "wins" on
  *   average without covering a category shows up as a regression on the per-category F1.
+ * - a field case (a real-world headline a classifier missed): a held-out set scored on its own,
+ *   kept in classifier-eval-field-fixture.ts.
  *
  * `expected` is the set of canonical labels a correct classifier should return. Empty array
  * means the classifier should abstain — that is a valid, load-bearing outcome (see the
  * "Company news app updates" regression). Fixture cases must NOT depend on which classifier
  * implementation is under test.
  */
+import { CLASSIFIER_EVAL_FIELD_CASES } from "./classifier-eval-field-fixture";
+
 export type ClassifierEvalCase = {
   id: string;
-  source: "regression" | "coverage";
+  source: "regression" | "coverage" | "field";
   itemTitle: string;
   itemSummary: string | null;
   itemContentText?: string | null;
@@ -161,6 +165,8 @@ export const CLASSIFIER_EVAL_FIXTURE: readonly ClassifierEvalCase[] = [
     itemUrl: "https://kagi.com/changelog",
     expected: ["Technology"],
   },
+
+  ...CLASSIFIER_EVAL_FIELD_CASES,
 
   // ── Category coverage: AI & ML ───────────────────────────────────────────────
   {

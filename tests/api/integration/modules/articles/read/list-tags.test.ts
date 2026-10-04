@@ -6,6 +6,8 @@ import { toArticleListItemsForTest } from "@modules/articles/read/list/query";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
 import { articleListItemSchema } from "@modules/articles/schemas";
 
+const ACTIVE_EMBEDDING_MODEL_ID = "active-embedding-model";
+
 function rawRow(overrides: Partial<ArticleListRawRow> = {}): ArticleListRawRow {
   return {
     id: "item-1",
@@ -69,7 +71,7 @@ describe("article list item categories", () => {
   });
 
   test("category label SQL defaults to keyword classifier rows after explicit labels", () => {
-    const sql = renderSql(buildCategoryLabelsSql("keyword"));
+    const sql = renderSql(buildCategoryLabelsSql("keyword", ACTIVE_EMBEDDING_MODEL_ID));
 
     expect(sql).toContain('"feed_item_category_assignments"');
     expect(sql).toContain('"feed_category_assignments"');
@@ -89,7 +91,7 @@ describe("article list item categories", () => {
   });
 
   test("category label SQL can rank embedding rows ahead of keyword rows", () => {
-    const sql = renderSql(buildCategoryLabelsSql("embedding"));
+    const sql = renderSql(buildCategoryLabelsSql("embedding", ACTIVE_EMBEDDING_MODEL_ID));
 
     const explicitItem = sql.indexOf("THEN 0");
     const embeddingItem = sql.indexOf("= 'embedding' THEN 1");
@@ -107,7 +109,7 @@ describe("article list item categories", () => {
   });
 
   test("embedding category label SQL uses keyword rows only as fallback rows", () => {
-    const sql = renderSql(buildCategoryLabelsSql("embedding"));
+    const sql = renderSql(buildCategoryLabelsSql("embedding", ACTIVE_EMBEDDING_MODEL_ID));
 
     expect(sql).toContain("raw_item_sources.classifier_method IS DISTINCT FROM 'keyword'");
     expect(sql).toContain("FROM raw_item_sources AS embedding_item_sources");
@@ -118,18 +120,50 @@ describe("article list item categories", () => {
   });
 
   test("category label SQL only uses feed fallbacks when no item labels are eligible", () => {
-    const sql = renderSql(buildCategoryLabelsSql("embedding"));
+    const sql = renderSql(buildCategoryLabelsSql("embedding", ACTIVE_EMBEDDING_MODEL_ID));
 
     expect(sql).toContain("AND NOT EXISTS (SELECT 1 FROM item_sources)");
   });
 
   test("category label SQL suppresses classifier Miscellaneous rows from chips", () => {
-    const query = renderQuery(buildCategoryLabelsSql("embedding"));
+    const query = renderQuery(buildCategoryLabelsSql("embedding", ACTIVE_EMBEDDING_MODEL_ID));
 
     expect(query.params).toContain(MISCELLANEOUS_CATEGORY_LABEL);
     expect(query.sql).toMatch(/raw_item_sources\.label <> \$\d+/);
     expect(query.sql).toMatch(/raw_feed_sources\.label <> \$\d+/);
     expect(query.sql).toContain("assignment_provenance IS DISTINCT FROM 'classifier'");
+  });
+
+  test("embedding mode reads embedding rows only from the active model", () => {
+    // Writers replace only their own model's rows, so rows from a previous provider or card
+    // revision must never reach chips.
+    const query = renderQuery(buildCategoryLabelsSql("embedding", ACTIVE_EMBEDDING_MODEL_ID));
+
+    expect(query.params).toContain(ACTIVE_EMBEDDING_MODEL_ID);
+    expect(query.sql).toMatch(
+      /"feed_item_category_assignments"\."classifier_method" IS DISTINCT FROM 'embedding' OR "feed_item_category_assignments"\."model_id" = \$\d+/,
+    );
+    expect(query.sql).toMatch(
+      /"feed_category_assignments"\."classifier_method" IS DISTINCT FROM 'embedding' OR "feed_category_assignments"\."model_id" = \$\d+/,
+    );
+  });
+
+  test("embedding mode reads no embedding rows when no provider is configured", () => {
+    const sql = renderSql(buildCategoryLabelsSql("embedding", undefined));
+
+    expect(sql).toContain(
+      `AND "feed_item_category_assignments"."classifier_method" IS DISTINCT FROM 'embedding'`,
+    );
+    expect(sql).toContain(
+      `AND "feed_category_assignments"."classifier_method" IS DISTINCT FROM 'embedding'`,
+    );
+    expect(sql).not.toContain('"model_id"');
+  });
+
+  test("keyword mode SQL does not depend on the active embedding model", () => {
+    expect(renderQuery(buildCategoryLabelsSql("keyword", ACTIVE_EMBEDDING_MODEL_ID))).toEqual(
+      renderQuery(buildCategoryLabelsSql("keyword", undefined)),
+    );
   });
 
   test("category label SQL caps the DTO at two labels per item", () => {
