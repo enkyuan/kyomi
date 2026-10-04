@@ -11,6 +11,7 @@ import {
 } from "@kyomi/db";
 import { db, pool } from "@adapters/db/client";
 import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
+import { embeddingClassifierConfig } from "@config/embeddings";
 import {
   canonicalWinsOnConflictSql,
   classifyFeedCategories,
@@ -637,39 +638,21 @@ function resolveBackfillClassifier(args: BackfillArgs): BackfillClassifier {
     return { method: "keyword", model: BACKFILL_CLASSIFIER_MODEL };
   }
 
-  const cloudflareUrl = process.env.CLOUDFLARE_EMBEDDINGS_URL?.trim();
-  const cloudflareToken = process.env.CLOUDFLARE_EMBEDDINGS_TOKEN?.trim();
+  // Same provider selection as the worker, so backfilled rows carry the model id that refresh and
+  // extraction write and replace.
+  const embeddingConfig = embeddingClassifierConfig();
 
-  if (cloudflareUrl && cloudflareToken) {
-    const embeddingConfig: EmbeddingClassifierConfig = {
-      apiKey: cloudflareToken,
-      apiUrl: cloudflareUrl,
-      model: "@cf/baai/bge-m3",
-      assignmentModelId: "@cf/baai/bge-m3/category-cards-v2",
-    };
-
-    return {
-      method: "embedding",
-      embeddingConfig,
-      model: embeddingModelInfo(embeddingConfig),
-    };
+  if (!embeddingConfig) {
+    throw new Error(
+      "CLOUDFLARE_EMBEDDINGS_URL and CLOUDFLARE_EMBEDDINGS_TOKEN, or VOYAGE_API_KEY, is required when --classifier embedding is used",
+    );
   }
 
-  const voyageApiKey = process.env.VOYAGE_API_KEY?.trim();
-
-  if (voyageApiKey) {
-    const embeddingConfig: EmbeddingClassifierConfig = { apiKey: voyageApiKey };
-
-    return {
-      method: "embedding",
-      embeddingConfig,
-      model: embeddingModelInfo(embeddingConfig),
-    };
-  }
-
-  throw new Error(
-    "CLOUDFLARE_EMBEDDINGS_URL and CLOUDFLARE_EMBEDDINGS_TOKEN, or VOYAGE_API_KEY, is required when --classifier embedding is used",
-  );
+  return {
+    method: "embedding",
+    embeddingConfig,
+    model: embeddingModelInfo(embeddingConfig),
+  };
 }
 
 export function inferFeedCategories(feed: BackfillFeedRow): {

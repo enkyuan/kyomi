@@ -13,6 +13,10 @@ export const KEYWORD_CLASSIFIER_METHOD = "keyword";
 export const KEYWORD_CLASSIFIER_MODEL_ID = "keyword-v1";
 export const EMBEDDING_CLASSIFIER_METHOD = "embedding";
 export const EMBEDDING_CLASSIFIER_MODEL_ID = "voyage-4";
+// Workers AI BGE-M3, served through Kyomi's embeddings Worker. The provider model name can't be
+// bumped, so stored rows use a separate id that also names the category-card revision.
+export const CLOUDFLARE_EMBEDDING_MODEL = "@cf/baai/bge-m3";
+export const CLOUDFLARE_EMBEDDING_MODEL_ID = "@cf/baai/bge-m3/category-cards-v2";
 export const CLASSIFIER_TAXONOMY_VERSION = "v1";
 export { MISCELLANEOUS_CATEGORY_LABEL };
 
