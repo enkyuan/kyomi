@@ -13,12 +13,11 @@ vi.mock("@modules/folders/lib/api", () => ({
   listFolders: () => [],
 }));
 
-vi.mock("@modules/inbox/lib/route", () => ({
+vi.mock("@modules/inbox/lib/api", () => ({
   getInboxLoaderData: mocks.getInboxLoaderData,
 }));
 
 vi.mock("@modules/inbox/queries/options", () => ({
-  followedFeedsQueryKey: () => ["feeds", "followed"],
   prefetchInboxHotQueries: mocks.prefetchInboxHotQueries,
   prefetchInboxItemDetail: () => undefined,
 }));

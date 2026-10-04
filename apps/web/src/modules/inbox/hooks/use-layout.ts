@@ -4,9 +4,9 @@ import { useNavigate, useParams, useSearch } from "@tanstack/react-router";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
 import type { InboxMarkReadBehaviorDto } from "@kyomi/reader/schemas";
-import type { InboxPreferences } from "./use-inbox-data";
-import { getInboxItemIdFromSlug } from "../lib/articles/slug";
-import type { InboxFilter, InboxSort } from "../lib/articles/index";
+import type { InboxPreferences } from "./use-preferences";
+import { getInboxItemIdFromSlug } from "@modules/articles/lib/slug";
+import type { InboxFilter, InboxSort } from "@modules/articles/lib/api";
 import type { InboxRecapRailFolderBackTarget, InboxRecapRailSection } from "../lib/recap/index";
 
 const INBOX_DESKTOP_MIN_WIDTH_PX = 768;

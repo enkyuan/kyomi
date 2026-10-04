@@ -10,7 +10,7 @@ import {
 } from "@modules/folders/components/picker";
 import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import { SectionEmpty } from "../sections";
-import type { RecapTopViewedFeed } from "../types";
+import type { RecapTopViewedFeed } from "../../../lib/recap/types";
 import { formatRelativeTime, formatViewedCount } from "@modules/inbox/lib/recap/index";
 
 type FolderOption = { label: string; value: string };

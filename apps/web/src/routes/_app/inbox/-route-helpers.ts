@@ -1,15 +1,10 @@
 import type { QueryClient } from "@tanstack/react-query";
-import { listFollowedFeeds } from "@modules/feeds/lib/api";
-import { listFolders } from "@modules/folders/lib/api";
-import { getInboxItemIdFromSlug } from "@modules/inbox/lib/articles/slug";
+import { followedFeedsQueryOptions } from "@modules/feeds/queries/options";
+import { foldersQueryOptions } from "@modules/folders/queries/options";
+import { getInboxItemIdFromSlug } from "@modules/articles/lib/slug";
 import type { InboxSearch } from "@modules/inbox/lib/search";
-import {
-  followedFeedsQueryKey,
-  prefetchInboxItemDetail,
-  prefetchInboxHotQueries,
-} from "@modules/inbox/queries/options";
-import { getInboxLoaderData } from "@modules/inbox/lib/route";
-import { QUERY_TIMES } from "@lib/query/policies";
+import { prefetchInboxItemDetail, prefetchInboxHotQueries } from "@modules/inbox/queries/options";
+import { getInboxLoaderData } from "@modules/inbox/lib/api";
 
 export type InboxLoaderData = Awaited<ReturnType<typeof getInboxLoaderData>>;
 
@@ -26,22 +21,8 @@ type InboxRouteLoaderArgs = {
 export async function loadInboxRoute({ context, params, deps }: InboxRouteLoaderArgs) {
   const queryClient = context.queryClient;
   const routeItemId = getInboxItemIdFromSlug(params?.article);
-  void queryClient
-    .prefetchQuery({
-      queryKey: followedFeedsQueryKey(),
-      queryFn: () => listFollowedFeeds(),
-      staleTime: QUERY_TIMES.staticMetadataStale,
-      gcTime: QUERY_TIMES.staticMetadataGc,
-    })
-    .catch(() => undefined);
-  void queryClient
-    .prefetchQuery({
-      queryKey: ["folders"],
-      queryFn: () => listFolders(),
-      staleTime: QUERY_TIMES.staticMetadataStale,
-      gcTime: QUERY_TIMES.staticMetadataGc,
-    })
-    .catch(() => undefined);
+  void queryClient.prefetchQuery(followedFeedsQueryOptions()).catch(() => undefined);
+  void queryClient.prefetchQuery(foldersQueryOptions()).catch(() => undefined);
   const loaderData = await getInboxLoaderData();
   if (typeof loaderData.initialTimezoneOffsetMinutes === "number") {
     void prefetchInboxHotQueries(queryClient, {

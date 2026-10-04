@@ -3,7 +3,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import { AppearancePagePanel } from "@modules/settings";
+import { AppearancePagePanel } from "@modules/settings/components/appearance";
 
 const setInboxPreferencesMock = vi.fn();
 const resetInboxPreferencesMock = vi.fn();
@@ -22,7 +22,7 @@ Object.defineProperty(window, "matchMedia", {
   })),
 });
 
-vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
+vi.mock("@modules/inbox/hooks/use-preferences", () => ({
   useInboxPreferences: () => ({
     limits: { minFontSizePx: 14, maxFontSizePx: 20 },
     defaults: {
@@ -119,13 +119,9 @@ vi.mock("@kyomi/ui/group", () => ({
   GroupSeparator: () => <div />,
 }));
 
-vi.mock("@modules/settings", async () => {
-  const actual = await vi.importActual<typeof import("@modules/settings")>("@modules/settings");
-  return {
-    ...actual,
-    ThemeSwitcher: () => <div>theme-switcher</div>,
-  };
-});
+vi.mock("@modules/settings/components/appearance/theme-switcher", () => ({
+  ThemeSwitcher: () => <div>theme-switcher</div>,
+}));
 
 describe("AppearancePagePanel", () => {
   beforeEach(() => {

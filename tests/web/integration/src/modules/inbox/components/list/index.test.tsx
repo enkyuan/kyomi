@@ -6,7 +6,7 @@ import { describe, expect, test, vi } from "vitest";
 import { List } from "@modules/inbox/components/list";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 
-vi.mock("@hooks/use-viewport", () => ({
+vi.mock("@modules/inbox/hooks/use-viewport", () => ({
   useViewport: () => ({
     containerWidth: 640,
     viewportHeight: 720,
@@ -31,7 +31,7 @@ vi.mock("@modules/reader/components/toolbar", () => ({
   Toolbar: () => <div data-slot="reader-toolbar" />,
 }));
 
-vi.mock("@hooks/use-toolbar", () => ({
+vi.mock("@modules/reader/hooks/use-toolbar", () => ({
   useReaderToolbar: () => ({ toolbarProps: {} }),
 }));
 

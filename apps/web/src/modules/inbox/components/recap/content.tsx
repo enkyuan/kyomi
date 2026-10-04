@@ -2,8 +2,7 @@
 
 import { Folder2Fill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
-import { Folders } from "@modules/folders/components/recap/summary";
-import type { RecapFolder } from "@modules/folders/lib/types";
+import { Folders } from "@modules/inbox/components/recap/folders/summary";
 import type {
   InboxRecapRailFolderBackTarget,
   InboxRecapRailSection,
@@ -18,7 +17,7 @@ import {
 } from "./sections";
 import { TopSources } from "./sections/top-sources";
 import { WorthRevisiting } from "./sections/worth-revisiting";
-import type { RecapSavedItem, RecapTopViewedFeed } from "./types";
+import type { RecapFolder, RecapSavedItem, RecapTopViewedFeed } from "../../lib/recap/types";
 
 type RemoveFeedsToastOptions = {
   anchor?: HTMLElement | null;

@@ -4,8 +4,8 @@ import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import { BackToInboxButton, SearchBar } from "@modules/inbox/components/list/header";
 import { ReaderFontSizeControls } from "@modules/reader/components/toolbar";
-import { useReaderToolbar } from "@hooks/use-toolbar";
-import type { ToolbarModel } from "@modules/toolbar/lib/types";
+import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
+import type { ToolbarModel } from "@modules/reader/lib/toolbar";
 import { ReaderToolbar } from "./toolbar";
 
 const READER_HEADER_TOOLTIP_SIDE = "bottom";

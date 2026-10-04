@@ -10,7 +10,6 @@
       "@hooks/*": ["../../apps/web/src/hooks/*"],
       "@integrations/*": ["../../apps/web/src/integrations/*"],
       "@lib/*": ["../../apps/web/src/lib/*"],
-      "@utils/*": ["../../apps/web/src/utils/*"],
       "@tanstack/react-query": ["../../apps/web/node_modules/@tanstack/react-query"],
       "@tanstack/react-router": ["../../apps/web/node_modules/@tanstack/react-router"],
       "@tests/*": ["../*"],

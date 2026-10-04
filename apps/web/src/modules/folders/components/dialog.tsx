@@ -21,6 +21,7 @@ import { Input } from "@kyomi/ui/input";
 import { toastManager } from "@kyomi/ui/toast";
 import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { createFolder } from "@modules/folders/lib/api";
+import { queryKeys } from "@lib/query/keys";
 
 type CreateFolderDialogProps = {
   open?: boolean;
@@ -101,10 +102,10 @@ export function CreateFolderDialog({
       createFolder({ data: { name: folderName } }),
     onSuccess: async (folder) => {
       await queryClient.invalidateQueries({
-        queryKey: ["folders"],
+        queryKey: queryKeys.folders.all,
       });
       await queryClient.invalidateQueries({
-        queryKey: ["inbox", "recap"],
+        queryKey: queryKeys.inbox.recap,
       });
       setDialogOpen(false);
       toastManager.add({

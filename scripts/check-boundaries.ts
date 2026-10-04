@@ -151,8 +151,101 @@ function sourceFiles(root: string): string[] {
   return SOURCE_ROOTS.filter((path) => rootExists(root, path)).flatMap((path) => walk(root, path));
 }
 
+const WEB_SRC = "apps/web/src";
+const WEB_ALIASES: Record<string, string> = {
+  "@/": "",
+  "@modules/": "modules/",
+  "@hooks/": "hooks/",
+  "@lib/": "lib/",
+  "@integrations/": "integrations/",
+};
+// Shared web code sits below every domain module and must not reach back up.
+const WEB_SHARED_LAYERS = new Set(["hooks", "integrations", "lib"]);
+
+function resolveWebImport(file: string, specifier: string): string | null {
+  if (specifier.startsWith(".")) {
+    return join(file, "..", specifier);
+  }
+  for (const [alias, target] of Object.entries(WEB_ALIASES)) {
+    if (specifier.startsWith(alias)) {
+      return `${WEB_SRC}/${target}${specifier.slice(alias.length)}`;
+    }
+  }
+  return null;
+}
+
+function webModuleOf(path: string): string | null {
+  return path.match(/^apps\/web\/src\/modules\/([^/]+)/)?.[1] ?? null;
+}
+
+type WebModuleEdges = Map<string, Map<string, { file: string; specifier: string }>>;
+
+function webModuleReaches(edges: WebModuleEdges, from: string, to: string): boolean {
+  const pending = [from];
+  const seen = new Set<string>();
+  while (pending.length > 0) {
+    const current = pending.pop()!;
+    if (current === to) return true;
+    if (seen.has(current)) continue;
+    seen.add(current);
+    pending.push(...(edges.get(current)?.keys() ?? []));
+  }
+  return false;
+}
+
+function addWebModuleEdge(
+  edges: WebModuleEdges,
+  fromModule: string,
+  toModule: string,
+  importSite: { file: string; specifier: string },
+) {
+  const targets = edges.get(fromModule) ?? new Map();
+  if (!targets.has(toModule)) targets.set(toModule, importSite);
+  edges.set(fromModule, targets);
+}
+
+// Web domain modules may depend on each other in one direction only, including type imports.
+function checkWebModules(root: string, files: string[]): Violation[] {
+  const violations: Violation[] = [];
+  const edges: WebModuleEdges = new Map();
+
+  for (const file of files.filter((path) => path.startsWith(`${WEB_SRC}/`))) {
+    const layer = file.slice(WEB_SRC.length + 1).split("/")[0] ?? "";
+    const fromModule = webModuleOf(file);
+    for (const specifier of collectImports(root, file)) {
+      const target = resolveWebImport(file, specifier);
+      const toModule = target ? webModuleOf(target) : null;
+      if (!toModule || toModule === fromModule) continue;
+      if (WEB_SHARED_LAYERS.has(layer)) {
+        violations.push({
+          file,
+          specifier,
+          reason: "shared web code must not import domain modules",
+        });
+      } else if (fromModule) {
+        addWebModuleEdge(edges, fromModule, toModule, { file, specifier });
+      }
+    }
+  }
+
+  for (const [fromModule, targets] of edges) {
+    for (const [toModule, { file, specifier }] of targets) {
+      if (webModuleReaches(edges, toModule, fromModule)) {
+        violations.push({
+          file,
+          specifier,
+          reason: `web modules ${fromModule} and ${toModule} must not depend on each other in a cycle`,
+        });
+      }
+    }
+  }
+
+  return violations;
+}
+
 export function checkBoundaries(root = process.cwd()): Violation[] {
-  return sourceFiles(root).flatMap((file) => checkFile(root, file));
+  const files = sourceFiles(root);
+  return [...files.flatMap((file) => checkFile(root, file)), ...checkWebModules(root, files)];
 }
 
 if (import.meta.main) {

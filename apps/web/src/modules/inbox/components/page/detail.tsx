@@ -1,9 +1,10 @@
 "use client";
 
 import { useMemo, type ReactNode } from "react";
-import { Detail, type DetailHeaderState } from "@modules/reader/components/detail";
+import { Detail } from "@modules/reader/components/detail";
+import type { DetailHeaderState } from "@modules/reader/lib/detail";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
-import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
+import type { InboxPreferences } from "@modules/inbox/hooks/use-preferences";
 
 export function DetailSection({
   preferences,

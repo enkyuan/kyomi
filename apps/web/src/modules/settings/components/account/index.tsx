@@ -17,7 +17,7 @@ import {
   TableHeader,
   TableRow,
 } from "@kyomi/ui/table";
-import { useAccountPanel } from "@modules/settings/hooks/account";
+import { useAccountPanel } from "@modules/settings/hooks/use-account-panel";
 import { SettingHeading } from "../appearance/shared";
 
 export const accountSection = {

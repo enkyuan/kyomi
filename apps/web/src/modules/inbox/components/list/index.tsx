@@ -1,6 +1,6 @@
 "use client";
 
-import { useViewport } from "@hooks/use-viewport";
+import { useViewport } from "@modules/inbox/hooks/use-viewport";
 import { VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
 import { Badge } from "@kyomi/ui/badge";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
@@ -9,7 +9,7 @@ import { useElementScrollRestoration } from "@tanstack/react-router";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
 import { useRef } from "react";
 import { useHydrated } from "@hooks/use-hydrated";
-import type { InboxFilter, InboxItem, InboxSort } from "@modules/inbox/lib/articles/index";
+import type { InboxFilter, InboxItem, InboxSort } from "@modules/articles/lib/api";
 import type {
   ArticleDetailDto,
   InboxDensityDto,
@@ -24,7 +24,7 @@ import {
   type PinnedFolderFilter,
 } from "./header";
 import { Toolbar as ReaderToolbar } from "@modules/reader/components/toolbar";
-import { useReaderToolbar } from "@hooks/use-toolbar";
+import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 
 export type ListDisplayOptions = {
   readerFocusMode?: boolean;

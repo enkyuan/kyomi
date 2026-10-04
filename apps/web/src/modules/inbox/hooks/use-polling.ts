@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { hasActiveFeedRefresh } from "../queries/options";
+import { queryKeys } from "@lib/query/keys";
 
 export function usePolling(feeds: readonly { refreshStatus?: string | null }[] | null | undefined) {
   const queryClient = useQueryClient();
@@ -16,7 +17,7 @@ export function usePolling(feeds: readonly { refreshStatus?: string | null }[] |
 
     wasRefreshingFollowedFeedRef.current = hasRefreshingFollowedFeed;
 
-    void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
-    void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
+    void queryClient.invalidateQueries({ queryKey: queryKeys.inbox.items });
+    void queryClient.invalidateQueries({ queryKey: queryKeys.sidebar.inboxSummary });
   }, [hasRefreshingFollowedFeed, queryClient]);
 }

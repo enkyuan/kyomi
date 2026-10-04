@@ -10,14 +10,6 @@ import { ContentView } from "./content";
 
 const DETAIL_BACK_BUTTON_BLUR_OFFSET = 52;
 
-export type {
-  ArticleStepDirection,
-  DetailHeaderState,
-  DetailSurface,
-  DetailViewProps,
-  ReaderDetailState,
-} from "@modules/reader/lib/detail";
-
 // oxlint-disable-next-line eslint/complexity
 export function Detail({
   detailState,

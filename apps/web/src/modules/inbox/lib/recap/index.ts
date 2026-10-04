@@ -1,5 +1,5 @@
 import type { QueryClient } from "@tanstack/react-query";
-import { followedFeedsQueryKey, inboxRecapQueryKey } from "@modules/inbox/queries/options";
+import { queryKeys } from "@lib/query/keys";
 
 export const INBOX_RECAP_RAIL_SECTIONS = ["folders", "topSources", "worthRevisiting"] as const;
 export const INBOX_RECAP_RAIL_FOLDER_BACK_TARGETS = ["folders", "recap"] as const;
@@ -62,11 +62,11 @@ export function formatViewedCount(count: number) {
 
 export function invalidateRecapSurface(queryClient: QueryClient) {
   return Promise.all([
-    queryClient.invalidateQueries({ queryKey: inboxRecapQueryKey() }),
-    queryClient.invalidateQueries({ queryKey: ["folders"] }),
-    queryClient.invalidateQueries({ queryKey: followedFeedsQueryKey() }),
-    queryClient.invalidateQueries({ queryKey: ["feeds", "followed", "unread-counts"] }),
-    queryClient.invalidateQueries({ queryKey: ["inbox", "items"] }),
-    queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] }),
+    queryClient.invalidateQueries({ queryKey: queryKeys.inbox.recap }),
+    queryClient.invalidateQueries({ queryKey: queryKeys.folders.all }),
+    queryClient.invalidateQueries({ queryKey: queryKeys.feeds.followed }),
+    queryClient.invalidateQueries({ queryKey: queryKeys.feeds.followedUnreadCounts }),
+    queryClient.invalidateQueries({ queryKey: queryKeys.inbox.items }),
+    queryClient.invalidateQueries({ queryKey: queryKeys.sidebar.inboxSummary }),
   ]);
 }

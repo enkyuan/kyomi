@@ -25,7 +25,7 @@ import {
 } from "@kyomi/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
-import type { ToolbarProps } from "@modules/toolbar/lib/types";
+import type { ToolbarProps } from "@modules/reader/lib/toolbar";
 import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
 import { cn } from "@kyomi/ui/lib/utils";
 import { FontSizeTicker } from "./font-ticker";

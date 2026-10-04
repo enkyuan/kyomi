@@ -83,14 +83,14 @@ modules/<domain>/
   layouts/
   lib/
   queries/
-  services/
-  utils/
   page.tsx
-  index.ts
 ```
 
 Do not add every directory to every domain. Keep an area's primary component in `index.tsx` when the
-directory already supplies its context. Use module-root barrels only as intentional public surfaces.
+directory already supplies its context. Put a web module's server functions in `lib/api.ts`. Web
+modules depend on each other in one direction (`sidebar`, `settings`, `auth` -> `inbox` -> `reader`
+-> `articles` -> `feeds`, `folders`, `preferences`); put shared domain code in the lowest owning
+module instead of importing upward.
 
 For API modules, group by product domain and then by behavior:
 
@@ -242,8 +242,8 @@ Rules:
 - Import shared code through `@kyomi/*` package exports, not `packages/*/src` paths.
 - Do not import application source from packages.
 - Use the aliases owned by each workspace; aliases do not change ownership.
-- Prefer concrete paths across web domains when a barrel would create feeds, inbox, sidebar, or
-  reader cycles.
+- Import concrete paths across web domains instead of module-root barrels, and
+  `check:boundaries` rejects module cycles and shared code that imports a module.
 - Add `index.ts` only for a package entrypoint, a deliberate module surface, or an area's primary
   component. Do not add a barrel for one caller.
 

@@ -1,8 +1,8 @@
 "use client";
 
-import type { DetailHeaderState } from "@modules/reader/components/detail";
+import type { DetailHeaderState } from "@modules/reader/lib/detail";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
-import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
+import type { InboxPreferences } from "@modules/inbox/hooks/use-preferences";
 import { DetailSection } from "../detail";
 import { ArticleHeader } from "./header";
 
