@@ -51,6 +51,10 @@
         "@types/pg": "^8.15.5",
       },
     },
+    "apps/embeddings": {
+      "name": "@kyomi/embeddings",
+      "version": "0.0.0",
+    },
     "apps/mobile": {
       "name": "@kyomi/mobile",
       "version": "1.0.0",
@@ -707,6 +711,8 @@
     "@kyomi/catalog": ["@kyomi/catalog@workspace:packages/catalog"],
 
     "@kyomi/db": ["@kyomi/db@workspace:packages/db"],
+
+    "@kyomi/embeddings": ["@kyomi/embeddings@workspace:apps/embeddings"],
 
     "@kyomi/mobile": ["@kyomi/mobile@workspace:apps/mobile"],
 
