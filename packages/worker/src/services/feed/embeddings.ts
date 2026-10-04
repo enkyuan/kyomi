@@ -89,10 +89,22 @@ export async function embedTexts(
     const body = await response.text().catch(() => "");
     throw new Error(`Voyage embeddings request failed (${response.status}): ${body}`);
   }
-  const payload = (await response.json()) as VoyageEmbeddingsResponse;
+  const payload = (await response.json()) as Partial<VoyageEmbeddingsResponse>;
   // Voyage documents `data` as returned in the same order as `input`, but sorts by `index`
   // defensively in case a future API version reorders results for batching efficiency.
-  return [...payload.data].sort((a, b) => a.index - b.index).map((entry) => entry.embedding);
+  const entries = Array.isArray(payload.data)
+    ? [...payload.data].sort((a, b) => a.index - b.index)
+    : [];
+  // Anything but one entry per input, indexed 0..n-1, would attach vectors to the wrong text.
+  if (
+    entries.length !== texts.length ||
+    entries.some((entry, position) => entry.index !== position)
+  ) {
+    throw new Error(
+      `Embeddings response did not match the request: ${entries.length} vectors for ${texts.length} inputs`,
+    );
+  }
+  return entries.map((entry) => entry.embedding);
 }
 
 function cosineSimilarity(a: readonly number[], b: readonly number[]): number {
