@@ -9,10 +9,14 @@ export const CATEGORY_CLASSIFIER_PROVENANCE = "classifier";
 // relevant `*_MODEL_ID` when that classifier's scoring/embedding logic changes in a way that
 // could yield different labels for identical inputs; bump the shared taxonomy version when a
 // category is added/removed/renamed (both classifiers score against the same category set).
+// Embedding rows store `<provider model>/<CATEGORY_CARDS_VERSION>`, so a category-card edit bumps
+// that version instead of a model id.
 export const KEYWORD_CLASSIFIER_METHOD = "keyword";
 export const KEYWORD_CLASSIFIER_MODEL_ID = "keyword-v1";
 export const EMBEDDING_CLASSIFIER_METHOD = "embedding";
 export const EMBEDDING_CLASSIFIER_MODEL_ID = "voyage-4";
+// Workers AI BGE-M3, served through Kyomi's embeddings Worker.
+export const CLOUDFLARE_EMBEDDING_MODEL = "@cf/baai/bge-m3";
 export const CLASSIFIER_TAXONOMY_VERSION = "v1";
 export { MISCELLANEOUS_CATEGORY_LABEL };
 

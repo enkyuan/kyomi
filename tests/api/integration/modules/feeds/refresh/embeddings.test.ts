@@ -73,6 +73,30 @@ describe("embedTexts", () => {
     await expect(embedTexts(["a"], FAKE_CONFIG)).rejects.toThrow(/429/);
   });
 
+  test("rejects a response with fewer vectors than inputs", async () => {
+    globalThis.fetch = (async () =>
+      new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
+        status: 200,
+      })) as unknown as typeof fetch;
+
+    await expect(embedTexts(["a", "b"], FAKE_CONFIG)).rejects.toThrow(/1 vectors for 2 inputs/);
+  });
+
+  test("rejects a response whose indices skip an input", async () => {
+    globalThis.fetch = (async () =>
+      new Response(
+        JSON.stringify({
+          data: [
+            { embedding: UNIT_X, index: 0 },
+            { embedding: UNIT_Y, index: 0 },
+          ],
+        }),
+        { status: 200 },
+      )) as unknown as typeof fetch;
+
+    await expect(embedTexts(["a", "b"], FAKE_CONFIG)).rejects.toThrow(/did not match/);
+  });
+
   test("aborts requests when timeoutMs elapses", async () => {
     globalThis.fetch = (async (_url: string, init: RequestInit) =>
       new Promise<Response>((_resolve, reject) => {

@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "apps/api/**"
+      - "apps/embeddings/package.json"
       - "apps/web/**"
       - "packages/db/**"
       - "packages/reader/**"
@@ -22,6 +23,7 @@ on:
   pull_request:
     paths:
       - "apps/api/**"
+      - "apps/embeddings/package.json"
       - "apps/web/**"
       - "packages/db/**"
       - "packages/reader/**"

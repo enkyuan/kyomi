@@ -1,3 +1,4 @@
+import { activeEmbeddingModelId } from "@config/embeddings";
 import { env } from "@config/env";
 import {
   categories,
@@ -6,9 +7,29 @@ import {
   feedItems,
   MISCELLANEOUS_CATEGORY_LABEL,
 } from "@kyomi/db";
-import { sql, type SQL } from "drizzle-orm";
+import { sql, type AnyColumn, type SQL } from "drizzle-orm";
 
 export type CategoryClassifierReadMode = "keyword" | "embedding";
+
+/**
+ * Each classifier writer replaces only the rows under its own model id, so embedding rows from a
+ * previous provider or category-card revision are never cleaned up. Embedding mode reads only the
+ * configured model's rows so stale rows can't mix with or outrank current labels.
+ */
+function activeEmbeddingRowsSql(
+  readMode: CategoryClassifierReadMode,
+  embeddingModelId: string | undefined,
+  classifierMethod: AnyColumn,
+  modelId: AnyColumn,
+): SQL {
+  if (readMode !== "embedding") {
+    return sql``;
+  }
+  if (!embeddingModelId) {
+    return sql`AND ${classifierMethod} IS DISTINCT FROM 'embedding'`;
+  }
+  return sql`AND (${classifierMethod} IS DISTINCT FROM 'embedding' OR ${modelId} = ${embeddingModelId})`;
+}
 
 function itemCategorySourceRankSql(readMode: CategoryClassifierReadMode): SQL<number> {
   if (readMode === "embedding") {
@@ -47,12 +68,28 @@ function feedCategorySourceRankSql(readMode: CategoryClassifierReadMode): SQL<nu
 /**
  * Correlated subquery yielding up to two category labels per feed item, as a text[].
  * Item-level labels suppress feed-level fallbacks, and embedding mode treats keyword rows as
- * fallback rows instead of peer labels. The scalar subquery keeps article queries a single
- * round trip (no N+1).
+ * fallback rows instead of peer labels. Embedding mode reads only rows stamped with
+ * `embeddingModelId`, and no embedding rows when no provider is configured. The scalar subquery
+ * keeps article queries a single round trip (no N+1).
  */
-export function buildCategoryLabelsSql(readMode: CategoryClassifierReadMode): SQL<string[]> {
+export function buildCategoryLabelsSql(
+  readMode: CategoryClassifierReadMode,
+  embeddingModelId: string | undefined,
+): SQL<string[]> {
   const itemSourceRank = itemCategorySourceRankSql(readMode);
   const feedSourceRank = feedCategorySourceRankSql(readMode);
+  const itemEmbeddingRowsFilter = activeEmbeddingRowsSql(
+    readMode,
+    embeddingModelId,
+    feedItemCategoryAssignments.classifierMethod,
+    feedItemCategoryAssignments.modelId,
+  );
+  const feedEmbeddingRowsFilter = activeEmbeddingRowsSql(
+    readMode,
+    embeddingModelId,
+    feedCategoryAssignments.classifierMethod,
+    feedCategoryAssignments.modelId,
+  );
   const itemKeywordFallbackFilter =
     readMode === "embedding"
       ? sql`
@@ -98,6 +135,7 @@ export function buildCategoryLabelsSql(readMode: CategoryClassifierReadMode): SQ
     FROM ${feedItemCategoryAssignments}
     INNER JOIN ${categories} ON ${categories.id} = ${feedItemCategoryAssignments.categoryId}
     WHERE ${feedItemCategoryAssignments.feedItemId} = ${feedItems.id}
+      ${itemEmbeddingRowsFilter}
   ),
   item_sources AS (
     SELECT
@@ -124,6 +162,7 @@ export function buildCategoryLabelsSql(readMode: CategoryClassifierReadMode): SQ
     FROM ${feedCategoryAssignments}
     INNER JOIN ${categories} ON ${categories.id} = ${feedCategoryAssignments.categoryId}
     WHERE ${feedCategoryAssignments.feedId} = ${feedItems.feedId}
+      ${feedEmbeddingRowsFilter}
   ),
   feed_sources AS (
     SELECT
@@ -156,4 +195,7 @@ export function buildCategoryLabelsSql(readMode: CategoryClassifierReadMode): SQ
 )`;
 }
 
-export const categoryLabelsSql = buildCategoryLabelsSql(env.CATEGORY_CLASSIFIER_READ_MODE);
+export const categoryLabelsSql = buildCategoryLabelsSql(
+  env.CATEGORY_CLASSIFIER_READ_MODE,
+  activeEmbeddingModelId(),
+);

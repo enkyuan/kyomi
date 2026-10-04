@@ -30,6 +30,28 @@ const csvFromEnv = z.preprocess(
   z.array(z.string().min(1)),
 );
 
+const LOCAL_HOSTNAMES = new Set(["localhost", "127.0.0.1", "[::1]"]);
+
+/**
+ * An absolute https URL, or http on localhost. Other schemes fail validation, including a
+ * dotenvx `encrypted:` value that was loaded without its private key.
+ */
+export const httpsUrlFromEnv = z
+  .url({ protocol: /^https?$/, error: "must be an http(s) URL" })
+  .refine(
+    (value) => {
+      const url = new URL(value);
+      return url.protocol === "https:" || LOCAL_HOSTNAMES.has(url.hostname);
+    },
+    { error: "must use https unless it points at localhost" },
+  );
+
+/** The embeddings Worker's `/embed` route. */
+export const embeddingsWorkerUrlFromEnv = httpsUrlFromEnv.refine(
+  (value) => new URL(value).pathname.endsWith("/embed"),
+  { error: "must point at the Worker's /embed route" },
+);
+
 const nodeEnv =
   process.env.NODE_ENV === "development" ||
   process.env.NODE_ENV === "production" ||
@@ -42,7 +64,10 @@ if (skipEnvValidation && nodeEnv === "production") {
   throw new Error("SKIP_ENV_VALIDATION must not be enabled in production");
 }
 
-/** A feature flag and the credentials it requires only when the flag is enabled. */
+/**
+ * A feature flag and the credentials it requires only when the flag is enabled. A string setting
+ * used as the flag counts as enabled whenever it is set.
+ */
 type FeatureCredentialRule = {
   flag: string;
   credentials: readonly string[];
@@ -54,7 +79,14 @@ const FEATURE_CREDENTIAL_RULES: readonly FeatureCredentialRule[] = [
   { flag: "FEATURE_SOURCE_REDDIT", credentials: ["REDDIT_CLIENT_ID", "REDDIT_CLIENT_SECRET"] },
   { flag: "FEATURE_SOURCE_X", credentials: ["X_CLIENT_ID", "X_CLIENT_SECRET"] },
   { flag: "FEATURE_AI_ARTICLE_INTELLIGENCE", credentials: ["AI_PROVIDER", "AI_API_KEY"] },
+  // The embeddings Worker needs its URL and token together; either alone is a mistake.
+  { flag: "CLOUDFLARE_EMBEDDINGS_URL", credentials: ["CLOUDFLARE_EMBEDDINGS_TOKEN"] },
+  { flag: "CLOUDFLARE_EMBEDDINGS_TOKEN", credentials: ["CLOUDFLARE_EMBEDDINGS_URL"] },
 ];
+
+function isFlagEnabled(flag: unknown): boolean {
+  return flag === true || (typeof flag === "string" && flag !== "");
+}
 
 /**
  * Returns the credential keys that are missing given the enabled feature flags. A credential
@@ -65,7 +97,7 @@ export function findMissingFeatureCredentials(
 ): { flag: string; key: string }[] {
   const missing: { flag: string; key: string }[] = [];
   for (const rule of FEATURE_CREDENTIAL_RULES) {
-    if (value[rule.flag] !== true) {
+    if (!isFlagEnabled(value[rule.flag])) {
       continue;
     }
     for (const key of rule.credentials) {
@@ -143,8 +175,11 @@ export const env = createEnv({
      */
     VOYAGE_API_KEY: z.string().min(1).optional(),
 
-    // cloudflare
-    CLOUDFLARE_EMBEDDINGS_URL: z.string().url().optional(),
+    /**
+     * Kyomi's Cloudflare embeddings Worker (`apps/embeddings`): its `/embed` URL and bearer token.
+     * Takes precedence over VOYAGE_API_KEY when both values are set.
+     */
+    CLOUDFLARE_EMBEDDINGS_URL: embeddingsWorkerUrlFromEnv.optional(),
     CLOUDFLARE_EMBEDDINGS_TOKEN: z.string().min(1).optional(),
     /**
      * Category read-path rollout gate. Keep keyword as the default while embedding rows are
