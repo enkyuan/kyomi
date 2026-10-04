@@ -3,8 +3,8 @@ import {
   MAX_RECENT_ARTICLES,
   parseRecentArticles,
   recordRecentArticle,
-} from "../../../../apps/mobile/src/modules/recents/lib/history";
-import type { RecentArticle } from "../../../../apps/mobile/src/modules/recents/lib/history";
+} from "../../../../../../apps/mobile/src/modules/recents/lib/history";
+import type { RecentArticle } from "../../../../../../apps/mobile/src/modules/recents/lib/history";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 
 const article = (id: string, articleType: "feed" | "clip" = "feed"): ArticleListItemDto => ({

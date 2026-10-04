@@ -12,6 +12,7 @@ import { emailOTP } from "better-auth/plugins";
 import { resolveGoogleSocialProvider } from "./capabilities";
 import { resolveLocationFromAuthContext } from "./location";
 import { queueEmailOTP } from "./email-otp";
+import { oauth } from "./oauth";
 
 const defaultApiOrigin = `http://localhost:${env.PORT}`;
 const baseURL = resolveBetterAuthBaseUrl(env.BETTER_AUTH_URL ?? defaultApiOrigin, defaultApiOrigin);
@@ -51,6 +52,10 @@ export const auth = betterAuth({
       sendVerificationOTP: async ({ email, otp }) => {
         void queueEmailOTP({ to: email, otp });
       },
+    }),
+    oauth({
+      clientId: "kyomi-mobile",
+      redirectURIs: ["kyomi://oauth/callback"],
     }),
   ],
   socialProviders: resolveGoogleSocialProvider({

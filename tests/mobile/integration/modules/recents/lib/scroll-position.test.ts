@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   getRecentHistoryInitialOffset,
   resetRecentHistoryScroll,
-} from "../../../../apps/mobile/src/modules/recents/lib/scroll-position";
+} from "../../../../../../apps/mobile/src/modules/recents/lib/scroll-position";
 
 describe("recent history scroll position", () => {
   test("uses the native negative inset position for an iOS list at rest", () => {

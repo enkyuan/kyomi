@@ -7,10 +7,7 @@ import { getReaderTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styl
 import { Skeleton } from "@ui/skeleton";
 import { fetchMobileApiJson, resolveMobileApiUrl } from "@/lib/api";
 import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
-import {
-  exploreArticlesQueryKey,
-  subscribedArticlesQueryKey,
-} from "@modules/inbox/hooks/use-articles";
+import { articleListQueryKeys } from "@modules/articles/queries/keys";
 import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
 import { saveRecentArticle } from "@modules/recents/lib/store";
 import ArticleBody from "./components/article-body.dom";
@@ -45,7 +42,6 @@ const READER_SKELETON_PARAGRAPHS = [
     ],
   },
 ] as const;
-const articleQueryKeys = [exploreArticlesQueryKey, subscribedArticlesQueryKey] as const;
 
 export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const colorScheme = useColorScheme();
@@ -87,7 +83,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
       { method: "POST" },
     )
       .then(() => {
-        for (const queryKey of articleQueryKeys) {
+        for (const queryKey of articleListQueryKeys) {
           queryClient.setQueryData<InfiniteData<CursorListResponseDto>>(queryKey, (current) => {
             if (!current) {
               return current;
@@ -104,7 +100,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
             };
           });
         }
-        for (const queryKey of articleQueryKeys) {
+        for (const queryKey of articleListQueryKeys) {
           void queryClient.invalidateQueries({ queryKey });
         }
       })

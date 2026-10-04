@@ -1,9 +1,6 @@
 import { useMutation, useQueryClient, type InfiniteData } from "@tanstack/react-query";
 import { fetchMobileApiJson } from "@/lib/api";
-import {
-  exploreArticlesQueryKey,
-  subscribedArticlesQueryKey,
-} from "@modules/inbox/hooks/use-articles";
+import { articleListQueryKeys } from "@modules/articles/queries/keys";
 import type { ArticleListItemDto, CursorListResponseDto } from "@kyomi/reader/schemas/article";
 
 type ArticleStatePatch = Partial<Pick<ArticleListItemDto, "isRead" | "isSaved">> & {
@@ -17,7 +14,6 @@ type UpdateArticleStateInput = {
 };
 
 type ArticleStateSnapshot = InfiniteData<CursorListResponseDto> | undefined;
-const articleQueryKeys = [exploreArticlesQueryKey, subscribedArticlesQueryKey] as const;
 
 async function updateArticleState({ itemId, patch }: UpdateArticleStateInput) {
   return fetchMobileApiJson<{ message: string }>(`/api/v1/articles/${encodeURIComponent(itemId)}`, {
@@ -34,15 +30,15 @@ export function useArticleStateMutation() {
     mutationFn: updateArticleState,
     onMutate: async ({ itemId, patch, removeFromList }) => {
       await Promise.all(
-        articleQueryKeys.map((queryKey) => queryClient.cancelQueries({ queryKey })),
+        articleListQueryKeys.map((queryKey) => queryClient.cancelQueries({ queryKey })),
       );
-      const snapshots = articleQueryKeys.map((queryKey) => ({
+      const snapshots = articleListQueryKeys.map((queryKey) => ({
         queryKey,
         snapshot: queryClient.getQueryData<ArticleStateSnapshot>(queryKey),
       }));
 
       // Update both lists immediately; restore snapshots if the request fails.
-      for (const queryKey of articleQueryKeys) {
+      for (const queryKey of articleListQueryKeys) {
         queryClient.setQueryData<ArticleStateSnapshot>(queryKey, (current) => {
           if (!current) return current;
 
@@ -66,7 +62,7 @@ export function useArticleStateMutation() {
       }
     },
     onSettled: () => {
-      for (const queryKey of articleQueryKeys) {
+      for (const queryKey of articleListQueryKeys) {
         void queryClient.invalidateQueries({ queryKey });
       }
     },

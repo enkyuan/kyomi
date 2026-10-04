@@ -6,8 +6,6 @@ import { isValidEmail } from "@kyomi/reader/schemas/auth";
 import { authClient } from "@/lib/auth";
 import { OTP_LENGTH } from "../constants";
 
-export { OTP_LENGTH } from "../constants";
-
 type NativeStringState = {
   set: (value: string) => void;
   value: string;

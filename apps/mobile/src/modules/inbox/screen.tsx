@@ -4,13 +4,14 @@ import { Platform, useColorScheme, useWindowDimensions, View } from "react-nativ
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useSharedValue } from "react-native-reanimated";
 import { EmptyStateIcon } from "@/components/icons/empty-state";
+import { Badge } from "@/components/ui/badge";
 import { Host } from "@expo/ui";
 import { SymbolView } from "expo-symbols";
 import { MenuView } from "@expo/ui/community/menu";
 import { FilterIcon } from "@/components/icons/filter";
 import { CollapsingHeader, HeaderActionButton, COMPACT_NAV_HEIGHT } from "@ui/header";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
-import type { InboxFilter } from "./lib/model";
+import type { InboxFilter } from "./model";
 import { EmptyState } from "@modules/inbox/components/empty-state";
 import { List } from "@modules/inbox/components/list";
 import { type ArticleScope } from "@modules/inbox/hooks/use-articles";

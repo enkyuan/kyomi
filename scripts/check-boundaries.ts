@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync, statSync } from "node:fs";
-import { join, relative } from "node:path";
+import { dirname, join, normalize, relative } from "node:path";
 
 export const SOURCE_ROOTS = [
   "apps/api/src",
@@ -10,6 +10,18 @@ export const SOURCE_ROOTS = [
   "packages/db/src",
   "packages/reader/src",
 ];
+const MOBILE_SRC = "apps/mobile/src";
+const MOBILE_ALIASES: Record<string, string> = {
+  "@/": "",
+  "@modules/": "modules/",
+  "@hooks/": "hooks/",
+  "@lib/": "lib/",
+  "@ui/": "components/ui/",
+};
+// Shared mobile code sits below every domain module and must not reach back up.
+const MOBILE_SHARED_LAYERS = new Set(["components", "hooks", "lib", "theme"]);
+// Shared article code that inbox, reader, and recents build on.
+const MOBILE_ARTICLES_MODULE = "articles";
 const IMPORT_RE = /\bfrom\s+["']([^"']+)["']|import\s*\(\s*["']([^"']+)["']\s*\)/g;
 
 export type Violation = {
@@ -54,11 +66,44 @@ function collectImports(root: string, file: string): string[] {
   return imports;
 }
 
+function resolveMobileImport(file: string, specifier: string): string | null {
+  if (specifier.startsWith(".")) {
+    return normalize(join(dirname(file), specifier));
+  }
+  for (const [alias, target] of Object.entries(MOBILE_ALIASES)) {
+    if (specifier.startsWith(alias)) {
+      return `${MOBILE_SRC}/${target}${specifier.slice(alias.length)}`;
+    }
+  }
+  return null;
+}
+
+function mobileModuleOf(path: string): string | null {
+  return path.match(/^apps\/mobile\/src\/modules\/([^/]+)/)?.[1] ?? null;
+}
+
+function checkMobileLayering(file: string, specifier: string): string | null {
+  const target = resolveMobileImport(file, specifier);
+  const targetModule = target ? mobileModuleOf(target) : null;
+  if (!targetModule) {
+    return null;
+  }
+  const layer = file.slice(MOBILE_SRC.length + 1).split("/")[0] ?? "";
+  if (MOBILE_SHARED_LAYERS.has(layer)) {
+    return "shared mobile code must not import domain modules";
+  }
+  if (mobileModuleOf(file) === MOBILE_ARTICLES_MODULE && targetModule !== MOBILE_ARTICLES_MODULE) {
+    return "the mobile articles module must not import other domain modules";
+  }
+  return null;
+}
+
 function checkFile(root: string, file: string): Violation[] {
   const violations: Violation[] = [];
   const isPackageFile = file.startsWith("packages/");
   const isWorkerFile = file.startsWith("packages/worker/");
   const isRouteFile = file.startsWith("apps/api/src/modules/") && file.endsWith(".routes.ts");
+  const isMobileFile = file.startsWith(`${MOBILE_SRC}/`);
 
   for (const specifier of collectImports(root, file)) {
     if (
@@ -92,6 +137,10 @@ function checkFile(root: string, file: string): Violation[] {
         specifier,
         reason: "route handlers must not import package internals",
       });
+    }
+    const mobileLayeringViolation = isMobileFile ? checkMobileLayering(file, specifier) : null;
+    if (mobileLayeringViolation) {
+      violations.push({ file, specifier, reason: mobileLayeringViolation });
     }
   }
 

@@ -1,6 +1,6 @@
 import { Stack } from "expo-router/stack";
 import { useEffect, useRef } from "react";
-import { prefetchInitialExploreArticles } from "@modules/inbox/lib/articles";
+import { prefetchInitialExploreArticles } from "@modules/articles/lib/requests";
 import { useTheme } from "@ui/liquid-glass/hooks/use-theme";
 import { ProgressiveBlur } from "@ui/liquid-glass/progressive-blur";
 
