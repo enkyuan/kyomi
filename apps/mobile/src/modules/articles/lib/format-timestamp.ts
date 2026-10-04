@@ -31,7 +31,7 @@ function formatRelative(date: Date) {
   return formatCompactRelative(diffYears, "y");
 }
 
-export function formatInboxTimestamp(value: string) {
+export function formatArticleTimestamp(value: string) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return value;
   return formatRelative(date);

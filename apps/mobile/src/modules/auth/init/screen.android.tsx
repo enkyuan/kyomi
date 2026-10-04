@@ -15,6 +15,7 @@ import { AppleIcon, GoogleIcon, KyomiIcon } from "@/components/icons";
 import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { EmailSheet } from "@modules/auth/email/screen";
+import { useOAuthSignIn } from "@modules/auth/oauth/hooks/use-oauth";
 
 const ICON_SLOT = [align("centerStart"), padding(20, 0, 0, 0)];
 
@@ -24,6 +25,7 @@ export function InitScreen() {
   const theme = getMobileSurfaceTheme(useColorScheme());
   const buttonColors = { containerColor: theme.card, contentColor: theme.foreground };
   const [isEmailSheetOpen, setIsEmailSheetOpen] = useState(false);
+  const google = useOAuthSignIn("google");
 
   return (
     <Host style={{ flex: 1 }}>
@@ -59,7 +61,8 @@ export function InitScreen() {
           </Button>
 
           <Button
-            onClick={() => {}}
+            onClick={google.signIn}
+            enabled={google.isReady}
             shape={Shape.Pill({})}
             colors={buttonColors}
             contentPadding={{ top: 14, bottom: 14 }}

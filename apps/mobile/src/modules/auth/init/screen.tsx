@@ -5,6 +5,7 @@ import { AppleIcon, GoogleIcon, KyomiIcon } from "@/components/icons";
 import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { EmailSheet } from "@modules/auth/email/screen";
+import { useOAuthSignIn } from "@modules/auth/oauth/hooks/use-oauth";
 
 function ButtonLabel({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
@@ -18,6 +19,7 @@ function ButtonLabel({ icon, label }: { icon: React.ReactNode; label: string }) 
 export function InitScreen() {
   const theme = getMobileSurfaceTheme(useColorScheme());
   const [isEmailSheetOpen, setIsEmailSheetOpen] = useState(false);
+  const google = useOAuthSignIn("google");
 
   return (
     <Host style={{ flex: 1, backgroundColor: theme.background }}>
@@ -45,7 +47,8 @@ export function InitScreen() {
           <Button
             variant="outlined"
             style={{ width: "100%", backgroundColor: theme.card }}
-            onPress={() => {}}
+            disabled={!google.isReady}
+            onPress={google.signIn}
           >
             <ButtonLabel icon={<GoogleIcon size={20} />} label="Continue with Google" />
           </Button>

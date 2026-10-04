@@ -1,4 +1,6 @@
 PODS:
+  - EXApplication (57.0.3):
+    - ExpoModulesCore
   - EXConstants (57.0.17):
     - ExpoModulesCore
   - EXJSONUtils (57.0.1)
@@ -181,6 +183,8 @@ PODS:
   - ExpoAsset (57.0.16):
     - ExpoModulesCore
   - ExpoBlur (57.0.2):
+    - ExpoModulesCore
+  - ExpoCrypto (57.0.2):
     - ExpoModulesCore
   - ExpoDomWebView (57.0.1):
     - ExpoModulesCore
@@ -2556,9 +2560,12 @@ PODS:
     - Yoga
   - ScreenShape (1.0.0):
     - ExpoModulesCore
+  - TabBar (1.0.0):
+    - ExpoModulesCore
   - Yoga (0.0.0)
 
 DEPENDENCIES:
+  - "EXApplication (from `../../../node_modules/.bun/expo-application@57.0.3+756f1ceb25845392/node_modules/expo-application/ios`)"
   - "EXConstants (from `../../../node_modules/.bun/expo-constants@57.0.17+756f1ceb25845392/node_modules/expo-constants/ios`)"
   - "EXJSONUtils (from `../../../node_modules/.bun/expo-json-utils@57.0.1/node_modules/expo-json-utils/ios`)"
   - "EXManifests (from `../../../node_modules/.bun/expo-manifests@57.0.1+756f1ceb25845392/node_modules/expo-manifests/ios`)"
@@ -2569,6 +2576,7 @@ DEPENDENCIES:
   - "expo-dev-menu-interface (from `../../../node_modules/.bun/expo-dev-menu-interface@57.0.0+756f1ceb25845392/node_modules/expo-dev-menu-interface/ios`)"
   - "ExpoAsset (from `../../../node_modules/.bun/expo-asset@57.0.16+e72bc028bcd1b9b1/node_modules/expo-asset/ios`)"
   - "ExpoBlur (from `../../../node_modules/.bun/expo-blur@57.0.2+756f1ceb25845392/node_modules/expo-blur/ios`)"
+  - "ExpoCrypto (from `../../../node_modules/.bun/expo-crypto@57.0.2+756f1ceb25845392/node_modules/expo-crypto/ios`)"
   - "ExpoDomWebView (from `../../../node_modules/.bun/@expo+dom-webview@57.0.1+756f1ceb25845392/node_modules/@expo/dom-webview/ios`)"
   - "ExpoFileSystem (from `../../../node_modules/.bun/expo-file-system@57.0.6+a8acdc9048a89389/node_modules/expo-file-system/ios/ExpoFileSystem.podspec`)"
   - "ExpoFont (from `../../../node_modules/.bun/expo-font@57.0.3+756f1ceb25845392/node_modules/expo-font/ios/ExpoFont.podspec`)"
@@ -2680,6 +2688,7 @@ DEPENDENCIES:
   - "RNSVG (from `../../../node_modules/.bun/react-native-svg@15.15.4+c94dbb497cb325a9/node_modules/react-native-svg`)"
   - "RNWorklets (from `../../../node_modules/.bun/react-native-worklets@0.10.1+8ff225d12b7064b2/node_modules/react-native-worklets`)"
   - ScreenShape (from `../modules/screen-shape/ios`)
+  - TabBar (from `../modules/tab-bar/ios`)
   - "Yoga (from `../../../node_modules/.bun/react-native@0.86.3+c94dbb497cb325a9/node_modules/react-native/ReactCommon/yoga`)"
 
 SPEC REPOS:
@@ -2687,6 +2696,8 @@ SPEC REPOS:
     - MMKVCore
 
 EXTERNAL SOURCES:
+  EXApplication:
+    :path: "../../../node_modules/.bun/expo-application@57.0.3+756f1ceb25845392/node_modules/expo-application/ios"
   EXConstants:
     :path: "../../../node_modules/.bun/expo-constants@57.0.17+756f1ceb25845392/node_modules/expo-constants/ios"
   EXJSONUtils:
@@ -2707,6 +2718,8 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/.bun/expo-asset@57.0.16+e72bc028bcd1b9b1/node_modules/expo-asset/ios"
   ExpoBlur:
     :path: "../../../node_modules/.bun/expo-blur@57.0.2+756f1ceb25845392/node_modules/expo-blur/ios"
+  ExpoCrypto:
+    :path: "../../../node_modules/.bun/expo-crypto@57.0.2+756f1ceb25845392/node_modules/expo-crypto/ios"
   ExpoDomWebView:
     :path: "../../../node_modules/.bun/@expo+dom-webview@57.0.1+756f1ceb25845392/node_modules/@expo/dom-webview/ios"
   ExpoFileSystem:
@@ -2928,10 +2941,13 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/.bun/react-native-worklets@0.10.1+8ff225d12b7064b2/node_modules/react-native-worklets"
   ScreenShape:
     :path: "../modules/screen-shape/ios"
+  TabBar:
+    :path: "../modules/tab-bar/ios"
   Yoga:
     :path: "../../../node_modules/.bun/react-native@0.86.3+c94dbb497cb325a9/node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  EXApplication: a727f05eb8592f0bc764f6ab8d51eacc158652ec
   EXConstants: 799577d2516460afb4b57874d6823a62327ce5c7
   EXJSONUtils: 7a1683cfa2cbe6d11fca97097d51a496755b0287
   EXManifests: f9888c0bf5aaa6ddb7e3d4b224d6d54ac4ca84a4
@@ -2942,6 +2958,7 @@ SPEC CHECKSUMS:
   expo-dev-menu-interface: 7a59e803916fbfd1b96c75ff91ea8dddac7e722f
   ExpoAsset: bea9115098b9f4ddfb0456961c8a7d2779ccc8f5
   ExpoBlur: 69e67b4fbfed6f7325377af2aefa8aa4f00cd2af
+  ExpoCrypto: f392e5f076a4c11dbfa1a6046449747acec82711
   ExpoDomWebView: beaec034e51bd028428b98bb1f2633ab79c6d095
   ExpoFileSystem: cc500f33804065aacc7b3366007267b84deca8c8
   ExpoFont: d5b77d74f8d5d1a248de70955bfad847079e9074
@@ -3053,6 +3070,7 @@ SPEC CHECKSUMS:
   RNSVG: 3fe8590403ac9f107b4d14591bc6e54da4894e5c
   RNWorklets: ba1671d8b3319013b8e09fc786a2230a5b725ffb
   ScreenShape: 5b4a5ff898f67bcf48ac82272cf59d5ed8efe074
+  TabBar: dfa21c2c9b035c81654e734994909ec62db23d58
   Yoga: 18b74b3ade30bebc1904004dfaceae1dd02a330a
 
 PODFILE CHECKSUM: 1a950b5e68be952a1866283463142f98dc28bf6a

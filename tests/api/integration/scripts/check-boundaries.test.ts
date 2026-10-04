@@ -56,4 +56,41 @@ describe("check-boundaries", () => {
 
     expect(checkBoundaries(root)).toEqual([]);
   });
+
+  test("keeps shared mobile code from importing domain modules", async () => {
+    const root = await createFixture({
+      "apps/mobile/src/lib/invalid.ts":
+        'import { useArticles } from "@modules/inbox/hooks/use-articles";\n',
+    });
+    const [violation] = checkBoundaries(root);
+
+    expect(violation).toMatchObject({
+      file: "apps/mobile/src/lib/invalid.ts",
+      reason: "shared mobile code must not import domain modules",
+    });
+  });
+
+  test("keeps the mobile articles module below other domains", async () => {
+    const root = await createFixture({
+      "apps/mobile/src/modules/articles/lib/invalid.ts":
+        'import { saveRecentArticle } from "../../recents/lib/store";\n',
+    });
+    const [violation] = checkBoundaries(root);
+
+    expect(violation).toMatchObject({
+      file: "apps/mobile/src/modules/articles/lib/invalid.ts",
+      reason: "the mobile articles module must not import other domain modules",
+    });
+  });
+
+  test("allows mobile domains to build on the articles module", async () => {
+    const root = await createFixture({
+      "apps/mobile/src/modules/inbox/valid.ts":
+        'import { articleListQueryKeys } from "@modules/articles/queries/keys";\n',
+      "apps/mobile/src/modules/articles/lib/valid.ts":
+        'import { prefetchMobileApi } from "@/lib/api";\n',
+    });
+
+    expect(checkBoundaries(root)).toEqual([]);
+  });
 });
