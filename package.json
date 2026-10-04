@@ -23,7 +23,7 @@
     "fmt": "turbo run fmt",
     "fmt:check": "turbo run fmt:check",
     "typecheck": "turbo run typecheck && bun run typecheck:scripts",
-    "typecheck:app": "turbo run typecheck --filter=@kyomi/api --filter=@kyomi/web --filter=@kyomi/db --filter=@kyomi/worker --filter=@kyomi/ui --filter=@kyomi/reader --filter=@kyomi/mobile",
+    "typecheck:app": "turbo run typecheck --filter=@kyomi/api --filter=@kyomi/embeddings --filter=@kyomi/web --filter=@kyomi/db --filter=@kyomi/worker --filter=@kyomi/ui --filter=@kyomi/reader --filter=@kyomi/mobile",
     "typecheck:scripts": "tsgo -p scripts/tsconfig.json --noEmit",
     "test": "bun run test:web && bun run test:api",
     "test:api": "bun run --cwd tests test:api",
