@@ -76,6 +76,35 @@ describe("embedding requests at scale", () => {
     expect(vectors).toHaveLength(300);
   });
 
+  test("embedTexts caps long texts and splits requests by total size", async () => {
+    // Long articles must not add up past the provider's per-request token limit.
+    const requests = fakeEmbeddingsApi();
+    const texts = Array.from({ length: 40 }, (_, index) => `${index}`.padEnd(20_000, "x"));
+
+    const vectors = await embedTexts(texts, FAKE_CONFIG);
+
+    expect(vectors).toHaveLength(40);
+    expect(requests.map((input) => input.length)).toEqual([33, 7]);
+    for (const input of requests) {
+      expect(input.reduce((chars, text) => chars + text.length, 0)).toBeLessThanOrEqual(200_000);
+      expect(input.every((text) => text.length < 6_100 && text.includes("[truncated]"))).toBe(true);
+    }
+  });
+
+  test("embedTexts keeps capped text valid UTF-16 at both cuts", async () => {
+    const requests = fakeEmbeddingsApi();
+    // The emoji pairs straddle the head cut (index 4,500) and the tail cut (1,500 from the end).
+    const text = `${"a".repeat(4_499)}😀${"b".repeat(2_000)}😀${"c".repeat(1_499)}`;
+
+    await embedTexts([text], FAKE_CONFIG);
+
+    const [sent] = requests[0] ?? [];
+    expect(sent).toContain("[truncated]");
+    expect(sent).not.toMatch(
+      /[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?<![\uD800-\uDBFF])[\uDC00-\uDFFF]/,
+    );
+  });
+
   test("classifyItemEmbeddings keeps the results of requests that succeed", async () => {
     // Request 1 loads prototypes, request 2 embeds items 0-127, request 3 items 128-129.
     fakeEmbeddingsApi({ failRequest: 3 });

@@ -46,6 +46,12 @@ const FEED_SIMILARITY_THRESHOLD = 0.6;
 // Inputs per embeddings request. Larger batches go out as several requests, so a slow or failed
 // request costs one chunk and every request stays inside its timeout.
 const EMBEDDING_REQUEST_MAX_INPUTS = 128;
+// Characters per embeddings request. Even at one token per character this stays well under
+// Voyage's 320K-token per-request limit, so a batch of long articles can't fail as a whole.
+const EMBEDDING_REQUEST_MAX_CHARS = 200_000;
+// Per-text cap, the same head-and-tail cut the embeddings Worker applies, so both providers embed
+// the same text.
+const MAX_CHARS_PER_INPUT = 6_000;
 // Category prototypes are shared by every caller with the same provider, so their load uses this
 // timeout instead of a caller's short budget.
 const PROTOTYPE_REQUEST_TIMEOUT_MS = 60_000;
@@ -54,12 +60,45 @@ type VoyageEmbeddingsResponse = {
   data: Array<{ embedding: number[]; index: number }>;
 };
 
-function chunked<T>(values: readonly T[], size: number): T[][] {
-  const chunks: T[][] = [];
-  for (let start = 0; start < values.length; start += size) {
-    chunks.push(values.slice(start, start + size));
+function capText(text: string): string {
+  if (text.length <= MAX_CHARS_PER_INPUT) {
+    return text;
   }
-  return chunks;
+  // Drop a surrogate half left at either cut so the text stays valid UTF-16.
+  const head = text.slice(0, 4_500).replace(/[\uD800-\uDBFF]$/, "");
+  const tail = text.slice(-1_500).replace(/^[\uDC00-\uDFFF]/, "");
+  return `${head}\n\n[truncated]\n\n${tail}`;
+}
+
+/**
+ * Caps each text and groups items into requests of at most EMBEDDING_REQUEST_MAX_INPUTS texts and
+ * EMBEDDING_REQUEST_MAX_CHARS characters.
+ */
+function requestBatches<T>(
+  items: readonly T[],
+  textOf: (item: T) => string,
+): Array<{ items: T[]; texts: string[] }> {
+  const batches: Array<{ items: T[]; texts: string[] }> = [];
+  let current: { items: T[]; texts: string[] } = { items: [], texts: [] };
+  let chars = 0;
+  for (const item of items) {
+    const text = capText(textOf(item));
+    const full =
+      current.texts.length >= EMBEDDING_REQUEST_MAX_INPUTS ||
+      chars + text.length > EMBEDDING_REQUEST_MAX_CHARS;
+    if (current.texts.length > 0 && full) {
+      batches.push(current);
+      current = { items: [], texts: [] };
+      chars = 0;
+    }
+    current.items.push(item);
+    current.texts.push(text);
+    chars += text.length;
+  }
+  if (current.texts.length > 0) {
+    batches.push(current);
+  }
+  return batches;
 }
 
 async function requestEmbeddings(
@@ -110,17 +149,17 @@ async function requestEmbeddings(
 }
 
 /**
- * Embeds input strings, returning one vector per input in the same order. Sends up to
- * EMBEDDING_REQUEST_MAX_INPUTS strings per request (Voyage and the embeddings Worker both accept
- * arrays), so `timeoutMs` bounds each request rather than the whole batch.
+ * Embeds input strings, returning one vector per input in the same order. Texts are capped and
+ * sent in bounded requests (Voyage and the embeddings Worker both accept arrays), so `timeoutMs`
+ * bounds each request rather than the whole batch.
  */
 export async function embedTexts(
   texts: readonly string[],
   config: EmbeddingClassifierConfig,
 ): Promise<number[][]> {
   const vectors: number[][] = [];
-  for (const chunk of chunked(texts, EMBEDDING_REQUEST_MAX_INPUTS)) {
-    vectors.push(...(await requestEmbeddings(chunk, config)));
+  for (const batch of requestBatches(texts, (text) => text)) {
+    vectors.push(...(await requestEmbeddings(batch.texts, config)));
   }
   return vectors;
 }
@@ -323,9 +362,9 @@ export async function classifyItemEmbedding(
 }
 
 /**
- * Classifies items with one embeddings request per EMBEDDING_REQUEST_MAX_INPUTS items. Items in a
- * failed request are left out of the result so callers keep those items' existing labels; the
- * error is rethrown only when every request failed.
+ * Classifies items in bounded embeddings requests. Items in a failed request are left out of the
+ * result so callers keep those items' existing labels; the error is rethrown only when every
+ * request failed.
  */
 export async function classifyItemEmbeddings(
   inputs: readonly FeedItemEmbeddingBatchInput[],
@@ -339,15 +378,15 @@ export async function classifyItemEmbeddings(
   const prototypes = await loadCategoryPrototypes(config);
   const itemSimilarityThreshold = config.itemSimilarityThreshold ?? ITEM_SIMILARITY_THRESHOLD;
   let failure: unknown;
-  for (const chunk of chunked(inputs, EMBEDDING_REQUEST_MAX_INPUTS)) {
+  for (const batch of requestBatches(inputs, buildItemText)) {
     let textEmbeddings: number[][];
     try {
-      textEmbeddings = await requestEmbeddings(chunk.map(buildItemText), config);
+      textEmbeddings = await requestEmbeddings(batch.texts, config);
     } catch (error) {
       failure = error;
       continue;
     }
-    chunk.forEach((input, index) => {
+    batch.items.forEach((input, index) => {
       const textEmbedding = textEmbeddings[index];
       if (!textEmbedding) {
         results.set(input.id, { categories: [] });
