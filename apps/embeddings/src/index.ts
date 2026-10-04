@@ -24,7 +24,9 @@ type Env = {
 const EMBEDDING_MODEL = "@cf/baai/bge-m3";
 const MAX_CHARS_PER_INPUT = 6_000;
 const MAX_INPUTS_PER_BATCH = 8;
-// Feed refresh sends every parsed item in one request, and the feed parser keeps at most 500.
+// Workers AI calls in flight at once for one request.
+const MAX_CONCURRENT_BATCHES = 4;
+// The embeddings client sends at most 128 inputs per request; this bounds anything else.
 const MAX_INPUTS_PER_REQUEST = 512;
 
 const encoder = new TextEncoder();
@@ -121,32 +123,40 @@ export default {
     const cappedTexts = texts.map(capText);
     const data: Array<{ embedding: number[]; index: number }> = [];
 
+    async function embedBatch(start: number): Promise<void> {
+      const batch = cappedTexts.slice(start, start + MAX_INPUTS_PER_BATCH);
+
+      const result = await env.AI.run(EMBEDDING_MODEL, {
+        text: batch,
+      });
+      const embeddings = result.data;
+
+      // A short or malformed result would shift every later vector onto the wrong input.
+      if (
+        !Array.isArray(embeddings) ||
+        embeddings.length !== batch.length ||
+        !embeddings.every((embedding) => Array.isArray(embedding))
+      ) {
+        throw new Error(
+          `Workers AI returned ${Array.isArray(embeddings) ? embeddings.length : "no"} embeddings for ${batch.length} inputs`,
+        );
+      }
+
+      embeddings.forEach((embedding: number[], index) => {
+        data[start + index] = {
+          embedding,
+          index: start + index,
+        };
+      });
+    }
+
     try {
-      for (let start = 0; start < cappedTexts.length; start += MAX_INPUTS_PER_BATCH) {
-        const batch = cappedTexts.slice(start, start + MAX_INPUTS_PER_BATCH);
-
-        const result = await env.AI.run(EMBEDDING_MODEL, {
-          text: batch,
-        });
-        const embeddings = result.data;
-
-        // A short or malformed result would shift every later vector onto the wrong input.
-        if (
-          !Array.isArray(embeddings) ||
-          embeddings.length !== batch.length ||
-          !embeddings.every((embedding) => Array.isArray(embedding))
-        ) {
-          throw new Error(
-            `Workers AI returned ${Array.isArray(embeddings) ? embeddings.length : "no"} embeddings for ${batch.length} inputs`,
-          );
-        }
-
-        embeddings.forEach((embedding: number[], index) => {
-          data.push({
-            embedding,
-            index: start + index,
-          });
-        });
+      const batchStarts = Array.from(
+        { length: Math.ceil(cappedTexts.length / MAX_INPUTS_PER_BATCH) },
+        (_, batchIndex) => batchIndex * MAX_INPUTS_PER_BATCH,
+      );
+      for (let next = 0; next < batchStarts.length; next += MAX_CONCURRENT_BATCHES) {
+        await Promise.all(batchStarts.slice(next, next + MAX_CONCURRENT_BATCHES).map(embedBatch));
       }
     } catch (error) {
       console.error("Workers AI embedding failed", error);

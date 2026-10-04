@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, spyOn, test } from "bun:test";
 import { CLOUDFLARE_EMBEDDING_MODEL, embedTexts } from "@kyomi/worker";
-import worker from "../../../../cloudflare/src/index";
+import worker from "../../../../apps/embeddings/src/index";
 
 type WorkerEnv = Parameters<typeof worker.fetch>[1];
 
@@ -18,20 +18,34 @@ function articleTexts(count: number): string[] {
 }
 
 /** Workers AI stand-in that records each call and can fail or drop a vector on a given call. */
-function fakeAi(options: { failOnCall?: number; shortOnCall?: number; omitData?: boolean } = {}) {
+function fakeAi(
+  options: { failOnCall?: number; shortOnCall?: number; omitData?: boolean; delayMs?: number } = {},
+) {
   const calls: Array<{ model: string; text: string[] }> = [];
+  const concurrency = { inFlight: 0, max: 0 };
   return {
     calls,
+    concurrency,
     async run(model: string, input: { text: string[] }) {
       calls.push({ model, text: input.text });
-      if (calls.length === options.failOnCall) {
+      const call = calls.length;
+      if (call === options.failOnCall) {
         throw new Error("Workers AI capacity exceeded");
       }
-      if (options.omitData) {
-        return {};
+      concurrency.inFlight += 1;
+      concurrency.max = Math.max(concurrency.max, concurrency.inFlight);
+      try {
+        if (options.delayMs) {
+          await new Promise((resolve) => setTimeout(resolve, options.delayMs));
+        }
+        if (options.omitData) {
+          return {};
+        }
+        const data = input.text.map(vectorFor);
+        return { data: call === options.shortOnCall ? data.slice(0, -1) : data };
+      } finally {
+        concurrency.inFlight -= 1;
       }
-      const data = input.text.map(vectorFor);
-      return { data: calls.length === options.shortOnCall ? data.slice(0, -1) : data };
     },
   };
 }
@@ -131,7 +145,7 @@ describe("embeddings Worker request validation", () => {
     expect(ai.calls).toHaveLength(0);
   });
 
-  test("accepts the largest request refresh sends and rejects anything over the cap", async () => {
+  test("accepts up to 512 inputs and rejects anything over the cap", async () => {
     const ai = fakeAi();
     const env = { AI: ai, EMBEDDINGS_TOKEN: TOKEN };
 
@@ -191,17 +205,31 @@ describe("embeddings Worker responses", () => {
     expect(data).toEqual(texts.map((text, index) => ({ embedding: vectorFor(text), index })));
   });
 
+  test("runs up to four Workers AI batches at once", async () => {
+    const ai = fakeAi({ delayMs: 5 });
+
+    const response = await callWorker(embedRequest({ input: articleTexts(64) }), {
+      AI: ai,
+      EMBEDDINGS_TOKEN: TOKEN,
+    });
+
+    expect(response.status).toBe(200);
+    expect(ai.calls).toHaveLength(8);
+    expect(ai.concurrency.max).toBe(4);
+  });
+
   test("fails the whole request when any batch fails", async () => {
     const ai = fakeAi({ failOnCall: 2 });
 
-    const response = await callWorker(embedRequest({ input: articleTexts(20) }), {
+    // 40 inputs are five batches: the first four run together, so the fifth never starts.
+    const response = await callWorker(embedRequest({ input: articleTexts(40) }), {
       AI: ai,
       EMBEDDINGS_TOKEN: TOKEN,
     });
 
     expect(response.status).toBe(502);
     expect(await response.json()).toEqual({ error: "Embedding provider failed" });
-    expect(ai.calls).toHaveLength(2);
+    expect(ai.calls).toHaveLength(4);
   });
 
   test("fails instead of misaligning vectors when Workers AI returns a short batch", async () => {
