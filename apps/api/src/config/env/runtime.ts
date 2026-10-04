@@ -30,6 +30,12 @@ const csvFromEnv = z.preprocess(
   z.array(z.string().min(1)),
 );
 
+/**
+ * An absolute http(s) URL. Other schemes fail validation, including a dotenvx `encrypted:` value
+ * that was loaded without its private key.
+ */
+export const httpUrlFromEnv = z.url({ protocol: /^https?$/, error: "must be an http(s) URL" });
+
 const nodeEnv =
   process.env.NODE_ENV === "development" ||
   process.env.NODE_ENV === "production" ||
@@ -143,8 +149,11 @@ export const env = createEnv({
      */
     VOYAGE_API_KEY: z.string().min(1).optional(),
 
-    // cloudflare
-    CLOUDFLARE_EMBEDDINGS_URL: z.string().url().optional(),
+    /**
+     * Kyomi's Cloudflare embeddings Worker (`cloudflare/`): its `/embed` URL and bearer token.
+     * Takes precedence over VOYAGE_API_KEY when both values are set.
+     */
+    CLOUDFLARE_EMBEDDINGS_URL: httpUrlFromEnv.optional(),
     CLOUDFLARE_EMBEDDINGS_TOKEN: z.string().min(1).optional(),
     /**
      * Category read-path rollout gate. Keep keyword as the default while embedding rows are

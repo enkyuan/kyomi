@@ -1,5 +1,28 @@
 import { describe, expect, test } from "bun:test";
-import { findMissingFeatureCredentials } from "@config/env/runtime";
+import { findMissingFeatureCredentials, httpUrlFromEnv } from "@config/env/runtime";
+
+describe("env http(s) URL validation", () => {
+  test("accepts https Worker URLs and local http URLs", () => {
+    for (const value of [
+      "https://kyomi-embeddings.example.workers.dev/embed",
+      "http://localhost:8787/embed",
+    ]) {
+      expect(httpUrlFromEnv.safeParse(value).success).toBe(true);
+    }
+  });
+
+  test("rejects undecrypted dotenvx values and non-http schemes", () => {
+    for (const value of [
+      "encrypted:BAk0bTE2MvmlhtGKTPDt",
+      "localhost:8787/embed",
+      "javascript:alert(1)",
+      "ftp://example.com/embed",
+      "file:///etc/passwd",
+    ]) {
+      expect(httpUrlFromEnv.safeParse(value).success).toBe(false);
+    }
+  });
+});
 
 describe("env feature-flag credential validation", () => {
   test("disabled flags never require credentials", () => {
