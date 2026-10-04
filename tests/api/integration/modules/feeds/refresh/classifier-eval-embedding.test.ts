@@ -14,9 +14,9 @@ import { CLASSIFIER_EVAL_FIXTURE, type ClassifierEvalCase } from "./classifier-e
 
 /**
  * Live comparison of the embedding classifier against the same fixture the keyword
- * classifier is scored against in `classifier-eval.test.ts`. This makes real Voyage API
- * calls, so it's skipped entirely unless `VOYAGE_API_KEY` is set — CI stays green without a
- * key, and this becomes runnable the moment a key is configured (locally or as a CI secret).
+ * classifier is scored against in `classifier-eval.test.ts`. This makes real calls to the
+ * Cloudflare embeddings Worker, so it's skipped entirely unless `CLOUDFLARE_EMBEDDINGS_URL` and
+ * `CLOUDFLARE_EMBEDDINGS_TOKEN` are set. It reports the held-out field cases separately.
  *
  * This test deliberately has NO baseline-floor assertion: it exists to print a scoreboard
  * for side-by-side comparison, not to gate merges. The decision to promote the embedding
@@ -108,12 +108,21 @@ describe.skipIf(!hasBgeM3)("embedding classifier eval (live Cloudflare BGE-M3)",
       model: "@cf/baai/bge-m3",
     };
     const predictions = await runEmbeddingClassifier(CLASSIFIER_EVAL_FIXTURE, config);
-    const { perCategory, overall } = accumulateConfusion(predictions);
+    // Card prototypes are never written from field cases, so they measure generalization.
+    const sets = [
+      ["Regression + coverage cases", predictions.filter(({ case: c }) => c.source !== "field")],
+      ["Held-out field cases", predictions.filter(({ case: c }) => c.source === "field")],
+    ] as const;
 
-    console.log(`\n${renderScoreboard(perCategory, overall)}\n`);
+    for (const [name, subset] of sets) {
+      const { perCategory, overall } = accumulateConfusion(subset);
+      console.log(`\n${name}\n${renderScoreboard(perCategory, overall)}\n`);
+      console.log(
+        `${name}: F1=${f1(overall).toFixed(3)} P=${precision(overall).toFixed(3)} R=${recall(overall).toFixed(3)}`,
+      );
+    }
     console.log(
-      `Embedding classifier: F1=${f1(overall).toFixed(3)} P=${precision(overall).toFixed(3)} R=${recall(overall).toFixed(3)}\n` +
-        `Run classifier-eval.test.ts separately to compare the current keyword scoreboard.\n` +
+      `Run classifier-eval.test.ts separately to compare the current keyword scoreboard.\n` +
         `Compare these numbers to decide whether to promote the embedding classifier to the ` +
         `default read path, keep both writing in parallel for more data, or revisit the ` +
         `category cards / similarity thresholds.`,
