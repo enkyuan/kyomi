@@ -17,7 +17,7 @@ import {
   classifyFeedCategories,
   classifyFeedEmbedding,
   classifyItemCategories,
-  classifyItemEmbedding,
+  classifyItemEmbeddings,
   embeddingModelInfo,
   shouldSuppressFallback,
   syncInferredFeedCategories,
@@ -208,7 +208,10 @@ export function summarizeBackfill(stats: BackfillStats): string {
     `${action} (${stats.classifierMethod}/${stats.classifierModelId}): scanned ${stats.feedsScanned} feeds and ${stats.itemsScanned} items; ${verb} classifier categories for ${stats.feedsWithClassifierCategories} feeds and ${stats.itemsWithClassifierCategories} items. ` +
     `${assignmentSummary} ` +
     `Suppressed classifier feed fallback for ${stats.feedClassifierFallbacksSuppressed} broad feeds; item classifier abstained on ${stats.itemClassifierAbstentions} items. ` +
-    `${coverageVerb} coverage status for ${pluralize(stats.feedBackfillStatusesRecorded, "feed")}; ${pluralize(stats.feedsFailed, "feed")} failed.`
+    `${coverageVerb} coverage status for ${pluralize(stats.feedBackfillStatusesRecorded, "feed")}; ${pluralize(stats.feedsFailed, "feed")} failed` +
+    (stats.itemEmbeddingFailures > 0
+      ? `; ${pluralize(stats.itemEmbeddingFailures, "embedding failure")}.`
+      : ".")
   );
 }
 
@@ -715,34 +718,38 @@ export async function inferFeedEmbedding(
   };
 }
 
-export async function inferItemEmbedding(
+/** Embeds a page of one feed's items in one batched call; items whose request failed are absent. */
+export async function inferItemEmbeddings(
   feed: BackfillFeedRow,
-  item: BackfillItemRow,
+  items: ReadonlyArray<BackfillItemRow & { id: string }>,
   config: EmbeddingClassifierConfig,
-): Promise<InferredCategoryLabel[]> {
-  return (
-    await classifyItemEmbedding(
-      {
-        feedTitle: feed.title,
-        feedDescription: feed.description,
-        feedUrl: feed.url,
-        feedSiteUrl: feed.link,
-        sourceKind: feed.sourceKind,
-        itemTitle: item.title,
-        itemSummary: item.summary,
-        itemContentText: item.contentText,
-        itemUrl: item.link || item.canonicalUrl,
-      },
-      config,
-      MAX_CLASSIFIER_LABELS,
-    )
-  ).categories;
+): Promise<Map<string, InferredCategoryLabel[]>> {
+  const classifications = await classifyItemEmbeddings(
+    items.map((item) => ({
+      id: item.id,
+      feedTitle: feed.title,
+      feedDescription: feed.description,
+      feedUrl: feed.url,
+      feedSiteUrl: feed.link,
+      sourceKind: feed.sourceKind,
+      itemTitle: item.title,
+      itemSummary: item.summary,
+      itemContentText: item.contentText,
+      itemUrl: item.link || item.canonicalUrl,
+      maxLabels: MAX_CLASSIFIER_LABELS,
+    })),
+    config,
+  );
+  return new Map(
+    [...classifications].map(([id, classification]) => [id, classification.categories]),
+  );
 }
 
 /**
  * A failing embedding call (rate limit, transient network error) must not abort a bulk backfill
- * run that may be hours into processing thousands of items — it's counted and logged instead,
- * mirroring the online refresh path's best-effort handling of the same calls.
+ * run that may be hours into processing thousands of items, and must not be written as an
+ * abstention that deletes existing rows. It's counted, logged, and rethrown so only this feed is
+ * recorded as failed, which `--retry-failed` picks up later.
  */
 async function inferClassifierFeed(
   feed: BackfillFeedRow,
@@ -763,30 +770,43 @@ async function inferClassifierFeed(
       feedUrl: feed.url,
       error: error instanceof Error ? error.message : String(error),
     });
-    return { categories: [], suppressedFallback: false };
+    throw error;
   }
 }
 
-async function inferClassifierItem(
+async function inferClassifierItems(
   feed: BackfillFeedRow,
-  item: BackfillItemRow,
+  items: Array<BackfillItemRow & { id: string }>,
   classifier: BackfillClassifier,
   stats: BackfillStats,
-): Promise<InferredCategoryLabel[]> {
+  concurrency: number,
+): Promise<Array<{ id: string; inferredCategoryLabels: InferredCategoryLabel[] }>> {
   if (classifier.method === "keyword") {
-    return inferItemCategories(feed, item);
+    return mapWithConcurrency(items, concurrency, async (item) => ({
+      id: item.id,
+      inferredCategoryLabels: inferItemCategories(feed, item),
+    }));
   }
+  let labelsById: Map<string, InferredCategoryLabel[]>;
   try {
-    return await inferItemEmbedding(feed, item, classifier.embeddingConfig);
+    labelsById = await inferItemEmbeddings(feed, items, classifier.embeddingConfig);
   } catch (error) {
-    stats.itemEmbeddingFailures += 1;
+    labelsById = new Map();
     console.warn("[categories:backfill] item embedding classification failed", {
       feedUrl: feed.url,
-      itemUrl: item.link || item.canonicalUrl,
+      itemCount: items.length,
       error: error instanceof Error ? error.message : String(error),
     });
-    return [];
   }
+  const failedItems = items.length - labelsById.size;
+  if (failedItems > 0) {
+    stats.itemEmbeddingFailures += failedItems;
+    throw new Error(`Embedding classification failed for ${failedItems} of ${items.length} items`);
+  }
+  return items.map((item) => ({
+    id: item.id,
+    inferredCategoryLabels: labelsById.get(item.id) ?? [],
+  }));
 }
 
 function createProcessedFeedStats(): ProcessedFeedStats {
@@ -1150,16 +1170,21 @@ async function processFeed(
       break;
     }
 
-    const inferredItems = await mapWithConcurrency(items, args.concurrency, async (item) => {
+    const inferredItems = await inferClassifierItems(
+      feed,
+      items,
+      classifier,
+      stats,
+      args.concurrency,
+    );
+    for (const { inferredCategoryLabels } of inferredItems) {
       feedStats.itemsScanned += 1;
-      const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier, stats);
       if (inferredCategoryLabels.length > 0) {
         feedStats.itemsWithClassifierCategories += 1;
       } else {
         feedStats.itemClassifierAbstentions += 1;
       }
-      return { id: item.id, inferredCategoryLabels };
-    });
+    }
 
     if (args.apply) {
       // syncInferredFeedCategories unconditionally deletes+reinserts the feed's
@@ -1241,20 +1266,23 @@ async function processFeedBatch(
       feedStats.feedClassifierCategories = feedCategories.length;
       feedStats.feedClassifierFallbackSuppressed = suppressedFallback;
 
-      const inferredItems = await mapWithConcurrency(
-        itemsByFeedId.get(feed.id) ?? [],
-        concurrency,
-        async (item) => {
-          feedStats.itemsScanned += 1;
-          const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier, stats);
-          if (inferredCategoryLabels.length > 0) {
-            feedStats.itemsWithClassifierCategories += 1;
-          } else {
-            feedStats.itemClassifierAbstentions += 1;
-          }
-          return { id: item.id, feedId: feed.id, inferredCategoryLabels };
-        },
-      );
+      const inferredItems = (
+        await inferClassifierItems(
+          feed,
+          itemsByFeedId.get(feed.id) ?? [],
+          classifier,
+          stats,
+          concurrency,
+        )
+      ).map(({ id, inferredCategoryLabels }) => {
+        feedStats.itemsScanned += 1;
+        if (inferredCategoryLabels.length > 0) {
+          feedStats.itemsWithClassifierCategories += 1;
+        } else {
+          feedStats.itemClassifierAbstentions += 1;
+        }
+        return { id, feedId: feed.id, inferredCategoryLabels };
+      });
 
       processed.push({
         feed,

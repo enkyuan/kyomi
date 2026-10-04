@@ -6,7 +6,7 @@ import {
 } from "@kyomi/worker";
 import {
   inferFeedCategories,
-  inferItemEmbedding,
+  inferItemEmbeddings,
   inferItemCategories,
   mapWithConcurrency,
   nextItemBackfillBatchSize,
@@ -20,6 +20,7 @@ const FAKE_EMBEDDING_CONFIG: EmbeddingClassifierConfig = {
   apiUrl: "https://fake.voyage.test/v1/embeddings",
 };
 const UNIT_X = [1, 0, 0];
+const UNIT_Y = [0, 1, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
 
 beforeEach(() => {
@@ -175,43 +176,65 @@ describe("category backfill script", () => {
     expect(result.suppressedFallback).toBe(false);
   });
 
-  test("can classify item categories with the embedding classifier during backfill", async () => {
+  test("classifies a feed's items with the embedding classifier in one request", async () => {
+    const itemRequests: string[][] = [];
     globalThis.fetch = (async (url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = body.input.length > 1;
+      const isPrototypeCall = itemRequests.length === 0 && body.input.length > 2;
       if (isPrototypeCall) {
+        itemRequests.push([]);
         const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
         return new Response(
           JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
           { status: 200 },
         );
       }
-      return new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
-        status: 200,
-      });
+      itemRequests.push(body.input);
+      return new Response(
+        JSON.stringify({
+          data: body.input.map((_, index) => ({
+            embedding: index === 0 ? UNIT_X : UNIT_Y,
+            index,
+          })),
+        }),
+        { status: 200 },
+      );
     }) as unknown as typeof fetch;
 
-    const labels = (
-      await inferItemEmbedding(
+    const labelsById = await inferItemEmbeddings(
+      {
+        title: "Daily Links",
+        description: "A mixed collection of links.",
+        url: "https://example.com/feed.xml",
+        link: "https://example.com",
+        sourceKind: "rss",
+      },
+      [
         {
-          title: "Daily Links",
-          description: "A mixed collection of links.",
-          url: "https://example.com/feed.xml",
-          link: "https://example.com",
-          sourceKind: "rss",
-        },
-        {
+          id: "item-1",
           title: "A compiler engineer's guide to TypeScript infrastructure",
           summary: null,
           contentText: null,
           link: "https://example.com/compiler",
           canonicalUrl: "https://example.com/compiler",
         },
-        FAKE_EMBEDDING_CONFIG,
-      )
-    ).map((category) => category.label);
+        {
+          id: "item-2",
+          title: "Weekend reading",
+          summary: null,
+          contentText: null,
+          link: "https://example.com/weekend",
+          canonicalUrl: "https://example.com/weekend",
+        },
+      ],
+      FAKE_EMBEDDING_CONFIG,
+    );
 
-    expect(labels).toEqual(["Software Engineering"]);
+    expect(itemRequests.slice(1)).toHaveLength(1);
+    expect(labelsById.get("item-1")?.map((category) => category.label)).toEqual([
+      "Software Engineering",
+    ]);
+    expect(labelsById.get("item-2")).toEqual([]);
   });
 
   test("computes all-item and capped item backfill batches", () => {
@@ -280,7 +303,7 @@ describe("category backfill script", () => {
         itemsScanned: 4,
         itemsWithClassifierCategories: 1,
         itemClassifierAbstentions: 3,
-        itemEmbeddingFailures: 0,
+        itemEmbeddingFailures: 3,
         feedBackfillStatusesRecorded: 2,
         normalizedExistingAssignments: false,
         assignmentsScanned: 5,
@@ -291,7 +314,7 @@ describe("category backfill script", () => {
       `APPLIED (embedding/${EMBEDDING_CLASSIFIER_MODEL_ID}): scanned 2 feeds and 4 items; wrote classifier categories for 2 feeds and 1 items. ` +
         "Skipped existing assignment normalization. " +
         "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items. " +
-        "wrote coverage status for 2 feeds; 1 feed failed.",
+        "wrote coverage status for 2 feeds; 1 feed failed; 3 embedding failures.",
     );
   });
 });
