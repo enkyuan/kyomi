@@ -5,11 +5,11 @@ import type { useRouter } from "@tanstack/react-router";
 import type { QueryClient } from "@tanstack/react-query";
 import type { ArticleDetailDto, InboxMarkReadBehaviorDto } from "@kyomi/reader/schemas";
 import type { ArticleStepDirection } from "@modules/reader/lib/detail";
-import type { InboxItem } from "@modules/inbox/lib/articles/index";
+import type { InboxItem } from "@modules/articles/lib/api";
 import type { InboxRouteSearch, useInboxRouteState } from "@modules/inbox/hooks/use-layout";
 import { useMarkReadBehavior } from "@modules/inbox/hooks/use-layout";
-import { useRecordInboxItemView } from "@modules/inbox/hooks/use-inbox-data";
-import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
+import { useRecordInboxItemView } from "@modules/articles/hooks/use-item-state";
+import { buildInboxItemSlug } from "@modules/articles/lib/slug";
 import { prefetchInboxItemDetail } from "@modules/inbox/queries/options";
 
 export function useInboxSelectionNavigation({

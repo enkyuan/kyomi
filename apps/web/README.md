@@ -6,16 +6,21 @@ the web client. built with TanStack Start.
 
 ```text
 src/
-  app/           app shell and runtime effects.
-  hooks/         hooks shared across modules.
+  app/           app shell, runtime effects, and the pre-hydration shell script.
+  hooks/         hooks used by more than one module.
   integrations/  Better Auth, PostHog, and TanStack Query wiring.
-  lib/           app-local api, favicon, query, schema, shell, and theme helpers.
-  modules/       product domains: auth, feeds, folders, inbox, preferences, reader, settings, sidebar.
+  lib/           app-local api, auth, query (client, cache, shared keys), shell, and timezone helpers.
+  modules/       product domains: articles, auth, feeds, folders, inbox, preferences, reader, settings, sidebar.
   routes/        file-based TanStack Router routes and api handlers.
-  utils/         small helpers.
 ```
 
-feature code belongs in `src/modules/*` under its product domain. `src/hooks` is only for hooks used by more than one module.
+feature code belongs in `src/modules/*` under its product domain. modules depend on each other in one direction only:
+
+```text
+sidebar, settings, auth -> inbox -> reader -> articles -> feeds, folders, preferences
+```
+
+`src/lib`, `src/hooks`, and `src/integrations` sit below every module and never import one. `bun run check:boundaries` fails on a module cycle or an upward import. server functions live in `<module>/lib/api.ts`; query keys shared across modules live in `src/lib/query/keys.ts`.
 
 ## commands
 
@@ -31,13 +36,13 @@ feature code belongs in `src/modules/*` under its product domain. `src/hooks` is
 
 ## environment
 
-env is loaded with `dotenvx` from `docker/.env` and `apps/web/.env`. typed client env lives in `src/env.ts`.
+env is loaded with `dotenvx` from `docker/.env` and `apps/web/.env`. there is no typed web env schema yet; values are read where they are used.
 
 | variable | purpose |
 | --- | --- |
-| `SERVER_URL` | public origin for the web app. |
-| `API_ORIGIN` | backend api origin. |
-| `VITE_POSTHOG_KEY` | optional PostHog project key. |
+| `SERVER_URL` | public origin for the web app (set for Docker and CI; not read by web code yet). |
+| `API_ORIGIN` | backend api origin, read server-side in `src/lib/api.ts`. |
+| `VITE_POSTHOG_KEY` | optional PostHog project key, read in `src/integrations/posthog/provider.tsx`. |
 | `VITE_POSTHOG_HOST` | optional PostHog ingest host. |
 
 ## notes

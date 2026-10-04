@@ -1,24 +1,22 @@
 "use client";
 
-import type { QueryClient, QueryKey } from "@tanstack/react-query";
+import type { QueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@lib/query/keys";
 import type { DiscoverFeedResult, FollowedFeed } from "../lib/api";
-import { followedFeedsQueryKey } from "@modules/inbox/queries/options";
 
 export type FeedCacheSnapshot = {
   followedFeeds?: FollowedFeed[];
 };
 
-export type DiscoverFeedsSnapshot = Array<readonly [QueryKey, DiscoverFeedResult[] | undefined]>;
-
 export function getFollowedFeedsSnapshot(queryClient: QueryClient): FeedCacheSnapshot {
   return {
-    followedFeeds: queryClient.getQueryData<FollowedFeed[]>(followedFeedsQueryKey()),
+    followedFeeds: queryClient.getQueryData<FollowedFeed[]>(queryKeys.feeds.followed),
   };
 }
 
 export function restoreFeedCacheSnapshot(queryClient: QueryClient, snapshot?: FeedCacheSnapshot) {
   if (snapshot?.followedFeeds) {
-    queryClient.setQueryData(followedFeedsQueryKey(), snapshot.followedFeeds);
+    queryClient.setQueryData(queryKeys.feeds.followed, snapshot.followedFeeds);
   }
 }
 
@@ -26,7 +24,7 @@ function updateFollowedFeeds(
   queryClient: QueryClient,
   update: (feeds: FollowedFeed[]) => FollowedFeed[],
 ) {
-  queryClient.setQueryData<FollowedFeed[] | undefined>(followedFeedsQueryKey(), (current) =>
+  queryClient.setQueryData<FollowedFeed[] | undefined>(queryKeys.feeds.followed, (current) =>
     current ? update(current) : current,
   );
 }
@@ -41,13 +39,6 @@ export function applyPinnedState(feeds: FollowedFeed[], feedId: string, pinned: 
 
 export function applyPinnedFeedState(queryClient: QueryClient, feedId: string, pinned: boolean) {
   updateFollowedFeeds(queryClient, (feeds) => applyPinnedState(feeds, feedId, pinned));
-}
-
-export function removeFollowedFeeds(queryClient: QueryClient, feedIds: string[]) {
-  const deletedFeedIdSet = new Set(feedIds);
-  updateFollowedFeeds(queryClient, (feeds) =>
-    feeds.filter((feed) => !deletedFeedIdSet.has(feed.feedId)),
-  );
 }
 
 export function markDiscoverFeedSubscribed(
@@ -73,15 +64,13 @@ export function setDiscoverFeedSubscribed(
   );
 }
 
-export function getDiscoverFeedsSnapshot(queryClient: QueryClient): DiscoverFeedsSnapshot {
-  return queryClient.getQueriesData<DiscoverFeedResult[]>({ queryKey: ["discover", "feeds"] });
-}
-
-export function restoreDiscoverFeedsSnapshot(
-  queryClient: QueryClient,
-  snapshot?: DiscoverFeedsSnapshot,
-) {
-  for (const [queryKey, data] of snapshot ?? []) {
-    queryClient.setQueryData(queryKey, data);
-  }
+/** Refreshes feed, inbox, recap, and sidebar state after the followed set changes. */
+export function invalidateFeedAndInboxQueries(queryClient: QueryClient) {
+  void queryClient.invalidateQueries({ queryKey: queryKeys.feeds.all });
+  void queryClient.invalidateQueries({ queryKey: queryKeys.feeds.followed });
+  void queryClient.invalidateQueries({ queryKey: queryKeys.feeds.followedUnreadCounts });
+  void queryClient.invalidateQueries({ queryKey: queryKeys.inbox.items });
+  void queryClient.invalidateQueries({ queryKey: queryKeys.inbox.recap });
+  void queryClient.invalidateQueries({ queryKey: queryKeys.inbox.viewCount });
+  void queryClient.invalidateQueries({ queryKey: queryKeys.sidebar.inboxSummary });
 }

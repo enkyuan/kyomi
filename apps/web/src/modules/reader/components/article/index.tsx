@@ -1,13 +1,13 @@
 "use client";
 
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
-import { Timestamp } from "@modules/inbox/components/timestamp";
-import { Categories } from "@modules/feeds/components/item/categories";
-import { Source } from "@modules/feeds/components/item/source";
-import { getTypography } from "@modules/feeds/lib/layout";
+import { Timestamp } from "@modules/articles/components/timestamp";
+import { Categories } from "@modules/articles/components/categories";
+import { Source } from "@modules/articles/components/source";
+import { getTypography } from "@modules/articles/lib/typography";
 import { Toolbar } from "../toolbar";
-import { useReaderToolbar } from "@hooks/use-toolbar";
-import type { ToolbarModel } from "@modules/toolbar/lib/types";
+import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
+import type { ToolbarModel } from "@modules/reader/lib/toolbar";
 import { ReaderContent } from "@kyomi/reader/web";
 import { Button } from "@kyomi/ui/button";
 import { Spinner } from "@kyomi/ui/spinner";

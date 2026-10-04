@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@kyomi/ui/dialog";
-import { useSettingsLogout } from "@modules/settings/hooks/logout";
+import { useSettingsLogout } from "@modules/settings/hooks/use-logout";
 import { SettingsDialogRoutes } from "./routes";
 
 type SettingsDialogProps = {

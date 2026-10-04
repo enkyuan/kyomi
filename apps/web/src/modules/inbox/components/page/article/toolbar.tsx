@@ -4,7 +4,7 @@ import { DownFill, UpFill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
 import { Toolbar as ReaderToolbarRoot } from "@modules/reader/components/toolbar";
-import type { ToolbarModel } from "@modules/toolbar/lib/types";
+import type { ToolbarModel } from "@modules/reader/lib/toolbar";
 
 const EXPANDED_READER_TOOLBAR_WIDTH = "13.3125rem";
 const COLLAPSED_READER_TOOLBAR_WIDTH = "5.25rem";

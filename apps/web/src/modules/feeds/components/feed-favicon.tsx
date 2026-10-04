@@ -4,8 +4,8 @@ import { Rss2Fill } from "@kyomi/ui/icons/mingcute";
 import { Favicon, type FaviconShape } from "@kyomi/ui/favicon";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useCallback, useEffect, useState } from "react";
-import { useFavicon } from "@hooks/use-favicon";
-import { prewarmFaviconUrl } from "@lib/favicon/cache";
+import { useFavicon } from "@modules/feeds/hooks/use-favicon";
+import { prewarmFaviconUrl } from "@modules/feeds/lib/favicon/cache";
 
 type FeedFaviconPriority = "high" | "normal" | "low";
 

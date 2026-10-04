@@ -28,7 +28,7 @@ vi.mock("@tanstack/react-router", () => ({
   useRouter: () => mocks.router,
 }));
 
-vi.mock("@modules/inbox", () => ({
+vi.mock("@modules/inbox/lib/navigation", () => ({
   prefetchInboxFlow: mocks.prefetchInboxFlow,
 }));
 

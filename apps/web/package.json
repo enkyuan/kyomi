@@ -21,9 +21,7 @@
     "@kyomi/reader": "workspace:*",
     "@kyomi/ui": "workspace:*",
     "@kyomi/worker": "workspace:*",
-    "@modelcontextprotocol/sdk": "^1.30.0",
     "@posthog/react": "^1.10.4",
-    "@t3-oss/env-core": "^0.13.11",
     "@tailwindcss/vite": "^4.3.3",
     "@tanstack/react-form": "^1.33.5",
     "@tanstack/react-query": "^5.102.2",
@@ -98,7 +96,7 @@
         },
         {
           "files": [
-            "src/modules/sidebar/components/feed-favicon.tsx"
+            "src/modules/feeds/components/feed-favicon.tsx"
           ],
           "rules": [
             "react-doctor/no-adjust-state-on-prop-change"
@@ -106,8 +104,8 @@
         },
         {
           "files": [
-            "src/modules/folders/components/feeds/index.tsx",
-            "src/modules/folders/components/recap/expanded.tsx",
+            "src/modules/inbox/components/recap/folders/feeds.tsx",
+            "src/modules/inbox/components/recap/folders/expanded.tsx",
             "src/modules/inbox/components/recap/index.tsx",
             "src/modules/inbox/page.tsx"
           ],

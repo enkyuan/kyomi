@@ -36,6 +36,54 @@ describe("check-boundaries", () => {
     });
   });
 
+  test("keeps shared web code from importing domain modules", async () => {
+    const root = await createFixture({
+      "apps/web/src/lib/invalid.ts":
+        'import { prefetchInboxFlow } from "@modules/inbox/lib/navigation";\n',
+    });
+    const [violation] = checkBoundaries(root);
+
+    expect(violation).toMatchObject({
+      file: "apps/web/src/lib/invalid.ts",
+      reason: "shared web code must not import domain modules",
+    });
+  });
+
+  test("rejects web modules that depend on each other in a cycle", async () => {
+    const root = await createFixture({
+      "apps/web/src/modules/inbox/page.tsx": 'import { Detail } from "@modules/reader/detail";\n',
+      "apps/web/src/modules/reader/detail.tsx": 'import type { Filter } from "../inbox/search";\n',
+      "apps/web/src/modules/inbox/search.ts": "export type Filter = string;\n",
+    });
+
+    const violations = checkBoundaries(root)
+      .map(({ file, reason }) => ({ file, reason }))
+      .sort((left, right) => left.file.localeCompare(right.file));
+
+    expect(violations).toEqual([
+      {
+        file: "apps/web/src/modules/inbox/page.tsx",
+        reason: "web modules inbox and reader must not depend on each other in a cycle",
+      },
+      {
+        file: "apps/web/src/modules/reader/detail.tsx",
+        reason: "web modules reader and inbox must not depend on each other in a cycle",
+      },
+    ]);
+  });
+
+  test("allows one-way web module dependencies", async () => {
+    const root = await createFixture({
+      "apps/web/src/modules/inbox/page.tsx":
+        'import { Detail } from "@modules/reader/detail";\nimport { Source } from "@modules/articles/source";\n',
+      "apps/web/src/modules/reader/detail.tsx": 'import { Source } from "../articles/source";\n',
+      "apps/web/src/modules/articles/source.tsx": 'import { apiJson } from "@lib/api";\n',
+      "apps/web/src/app/shell.tsx": 'import { Page } from "@modules/inbox/page";\n',
+    });
+
+    expect(checkBoundaries(root)).toEqual([]);
+  });
+
   test("checks package roots for deep package imports", async () => {
     const root = await createFixture({
       "packages/reader/src/invalid.ts": 'import { button } from "@kyomi/ui/src/button";\n',

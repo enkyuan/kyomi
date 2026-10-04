@@ -4,8 +4,8 @@ import { Link } from "@tanstack/react-router";
 import { BookmarkFill, ExternalLinkLine, Fullscreen2Fill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/button";
 import type { InboxSearch } from "@modules/inbox/lib/search";
-import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
-import type { RecapSavedItem } from "../types";
+import { buildInboxItemSlug } from "@modules/articles/lib/slug";
+import type { RecapSavedItem } from "../../../lib/recap/types";
 import { formatRelativeTime } from "@modules/inbox/lib/recap/index";
 import { RailTooltip, RecapSection, SectionEmpty } from ".";
 

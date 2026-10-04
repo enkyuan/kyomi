@@ -67,13 +67,8 @@ vi.mock("@kyomi/ui/toast", () => ({
   },
 }));
 
-vi.mock("@modules/sidebar/components/feed-favicon", () => ({
+vi.mock("@modules/feeds/components/feed-favicon", () => ({
   FeedFavicon: ({ title }: { title?: string }) => <span>{title}</span>,
-}));
-
-vi.mock("@modules/inbox/queries/options", () => ({
-  followedFeedsQueryKey: () => ["feeds", "followed"],
-  invalidateFeedAndInboxQueries: vi.fn(),
 }));
 
 const platform: PlatformState = {

@@ -9,9 +9,8 @@ import {
   FolderPickerButton,
   TOP_SOURCE_FOLDER_BUTTON_CLASS,
 } from "@modules/folders/components/picker";
-import type { RecapFolder } from "@modules/folders/lib/types";
 import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
-import type { RecapTopViewedFeed } from "../types";
+import type { RecapFolder, RecapTopViewedFeed } from "../../../lib/recap/types";
 import { useSquircle } from "@kyomi/ui/lib/squircle";
 import { formatRelativeTime, formatViewedCount } from "@modules/inbox/lib/recap/index";
 import { RailTooltip, RecapSection, SectionEmpty } from ".";
