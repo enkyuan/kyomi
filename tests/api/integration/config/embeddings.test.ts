@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
 import {
+  CATEGORY_CARDS_VERSION,
   CLOUDFLARE_EMBEDDING_MODEL,
-  CLOUDFLARE_EMBEDDING_MODEL_ID,
   EMBEDDING_CLASSIFIER_MODEL_ID,
   embeddingModelInfo,
 } from "@kyomi/worker";
 import { activeEmbeddingModelId, embeddingClassifierConfig } from "@config/embeddings";
+
+const CLOUDFLARE_MODEL_ID = `${CLOUDFLARE_EMBEDDING_MODEL}/${CATEGORY_CARDS_VERSION}`;
+const VOYAGE_MODEL_ID = `${EMBEDDING_CLASSIFIER_MODEL_ID}/${CATEGORY_CARDS_VERSION}`;
 
 const CLOUDFLARE_ENV = {
   CLOUDFLARE_EMBEDDINGS_URL: "https://kyomi-embeddings.example.workers.dev/embed",
@@ -24,16 +27,15 @@ const NO_PROVIDER_ENV = {
 };
 
 describe("embeddingClassifierConfig", () => {
-  test("stamps Cloudflare rows with the card-versioned id instead of the model name", () => {
+  test("stamps Cloudflare rows with the provider model plus the card revision", () => {
     const config = embeddingClassifierConfig(undefined, CLOUDFLARE_ENV);
 
     expect(config).toEqual({
       apiKey: "cloudflare-token",
       apiUrl: "https://kyomi-embeddings.example.workers.dev/embed",
       model: CLOUDFLARE_EMBEDDING_MODEL,
-      assignmentModelId: CLOUDFLARE_EMBEDDING_MODEL_ID,
     });
-    expect(embeddingModelInfo(config!).modelId).toBe(CLOUDFLARE_EMBEDDING_MODEL_ID);
+    expect(embeddingModelInfo(config!).modelId).toBe(CLOUDFLARE_MODEL_ID);
   });
 
   test("keeps one model id whether or not a caller sets a timeout", () => {
@@ -57,11 +59,11 @@ describe("embeddingClassifierConfig", () => {
     expect(config?.apiKey).toBe("cloudflare-token");
   });
 
-  test("uses Voyage when only its key is set", () => {
+  test("uses Voyage, with the card revision in its id, when only its key is set", () => {
     const config = embeddingClassifierConfig(undefined, VOYAGE_ENV);
 
     expect(config).toEqual({ apiKey: "voyage-key" });
-    expect(embeddingModelInfo(config!).modelId).toBe(EMBEDDING_CLASSIFIER_MODEL_ID);
+    expect(embeddingModelInfo(config!).modelId).toBe(VOYAGE_MODEL_ID);
   });
 
   test("returns no provider when nothing is configured", () => {
@@ -71,8 +73,8 @@ describe("embeddingClassifierConfig", () => {
 
 describe("activeEmbeddingModelId", () => {
   test("names the model id each configured provider writes", () => {
-    expect(activeEmbeddingModelId(CLOUDFLARE_ENV)).toBe(CLOUDFLARE_EMBEDDING_MODEL_ID);
-    expect(activeEmbeddingModelId(VOYAGE_ENV)).toBe(EMBEDDING_CLASSIFIER_MODEL_ID);
+    expect(activeEmbeddingModelId(CLOUDFLARE_ENV)).toBe(CLOUDFLARE_MODEL_ID);
+    expect(activeEmbeddingModelId(VOYAGE_ENV)).toBe(VOYAGE_MODEL_ID);
   });
 
   test("is undefined when no provider is configured", () => {

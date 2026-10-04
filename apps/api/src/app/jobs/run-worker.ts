@@ -62,8 +62,9 @@ async function handleWorkerJob(
           refreshGeneration: job.payload.generation,
           // Best-effort embedding classification runs alongside the keyword classifier when
           // a key is configured; absent means refresh proceeds with the keyword classifier
-          // only, same fallback shape as MEILI_URL above.
-          embeddingClassifier: embeddingClassifierConfig(),
+          // only, same fallback shape as MEILI_URL above. The timeout bounds each embeddings
+          // request, so a stalled provider can't hold the refresh job indefinitely.
+          embeddingClassifier: embeddingClassifierConfig(30_000),
         },
       );
       const durationMs = Date.now() - startTime;

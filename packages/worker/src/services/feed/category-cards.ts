@@ -19,6 +19,12 @@ export type CategoryCard = {
   representativeTitles: readonly string[];
 };
 
+/**
+ * Revision of the cards below, stored in embedding rows' model id. Bump it whenever a card's
+ * description or titles change, because identical inputs can then get different labels.
+ */
+export const CATEGORY_CARDS_VERSION = "category-cards-v3";
+
 export const CATEGORY_CARDS: readonly CategoryCard[] = [
   {
     label: "Software Engineering",
@@ -30,7 +36,7 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
       "Git for Agents: a version-control tool built for AI coding workflows",
       "How Kubernetes changed the way we deploy microservices",
       "A practical guide to database indexing strategies",
-      "Code editor releases, IDE updates, and developer tool improvements",
+      "Neovim 0.11 adds built-in LSP completion",
     ],
   },
   {
@@ -43,7 +49,7 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
       "SearXNG: a free internet metasearch engine",
       "Kagi Changelog: new search filters and privacy features",
       "The rise of foldable phone hardware in 2026",
-      "Amateur radio, ham radio, RF antennas, wireless communications, and signal propagation",
+      "FCC proposes simpler licensing rules for amateur radio operators",
     ],
   },
   {
@@ -68,7 +74,7 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
       "New open-weights language model released with improved reasoning",
       "How transformer architectures changed natural language processing",
       "Researchers debate whether scaling laws will hold for the next generation of models",
-      "AI agents using tool calls and MCP servers to control connected devices",
+      "OpenAI adds Model Context Protocol support to its Agents SDK",
     ],
   },
   {
@@ -81,7 +87,7 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
       "Scientists discover guidance system for migratory songbirds",
       "New physics experiment challenges standard model predictions",
       "Researchers map neural circuits behind memory formation",
-      "Statistical forecasting and time-series analysis research",
+      "Statisticians warn that p-hacking still distorts published research",
     ],
   },
   {
@@ -94,7 +100,7 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
       "Why this founder pivoted after failing twice",
       "Venture capital funding slows in the enterprise SaaS market",
       "How a two-person startup became a unicorn",
-      "Predictive analytics for business strategy, operational planning, and revenue growth",
+      "Why more companies are hiring chief data officers",
     ],
   },
   {
@@ -107,7 +113,7 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
       "Federal Reserve signals interest rate cut amid economic slowdown",
       "How index funds outperform actively managed portfolios",
       "Crypto exchange faces regulatory scrutiny over reserves",
-      "Stablecoin payment networks, settlement infrastructure, and digital-asset treasury operations",
+      "Visa expands stablecoin settlement to more countries",
     ],
   },
   {
@@ -119,8 +125,8 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
       "Supreme Court ruling reshapes federal regulatory authority",
       "Local election results signal shift in voter priorities",
       "New trade policy sparks diplomatic tension",
-      "City budgets, municipal spending, council appropriations, and local government fiscal policy",
-      "School board elections, candidate endorsements, and local campaign materials",
+      "City council passes budget after weeks of debate over police funding",
+      "Voters reject school bond measure in low-turnout local election",
     ],
   },
   {
@@ -145,7 +151,7 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
       "The best podcasts of the year, according to critics",
       "Inside the making of a bestselling novel",
       "A retrospective on the album that defined a genre",
-      "Art workshops, open studios, exhibitions, and artist portfolio documentation",
+      "Gallery reopens with a retrospective of a local painter's work",
     ],
   },
   {
@@ -170,7 +176,7 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
       "How a new drug is changing treatment for chronic pain",
       "Public health officials warn of rising respiratory illness cases",
       "A clinical study links sleep quality to long-term heart health",
-      "Telehealth care, chronic pain treatment, and patients accessing healthcare remotely",
+      "Medicare extends coverage for virtual doctor visits",
     ],
   },
   {
@@ -204,9 +210,9 @@ export const CATEGORY_CARDS: readonly CategoryCard[] = [
     representativeTitles: [
       "Local team wins baseball league championship in extra innings",
       "A rookie quarterback's breakout season reshapes the playoff picture",
-      "A basketball team uses sports analytics to improve player performance and game strategy",
+      "How analytics transformed basketball strategy",
       "The business behind a major sports league's new media deal",
-      "Motorsport street race draws drivers, competitors, and spectators",
+      "IndyCar driver wins on a rain-soaked road course",
     ],
   },
   {

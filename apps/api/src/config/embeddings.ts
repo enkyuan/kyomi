@@ -1,6 +1,5 @@
 import {
   CLOUDFLARE_EMBEDDING_MODEL,
-  CLOUDFLARE_EMBEDDING_MODEL_ID,
   embeddingModelInfo,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
@@ -30,7 +29,6 @@ export function embeddingClassifierConfig(
       apiKey: cloudflareToken,
       apiUrl: cloudflareUrl,
       model: CLOUDFLARE_EMBEDDING_MODEL,
-      assignmentModelId: CLOUDFLARE_EMBEDDING_MODEL_ID,
       ...timeout,
     };
   }
