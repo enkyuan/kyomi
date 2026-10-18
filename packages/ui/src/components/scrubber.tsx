@@ -10,6 +10,7 @@ import {
   paintScrubber,
   rubberBand,
   SCRUBBER_MAX_PITCH,
+  SCRUBBER_MIN_WIDTH,
   type ScrubberLayout,
   type ScrubberMotion,
   type ScrubberRange,
@@ -314,7 +315,7 @@ export function Scrubber({
         className="relative mx-auto h-11 w-full cursor-pointer outline-none before:pointer-events-none before:absolute before:inset-y-0 before:-inset-x-3 before:rounded-lg has-focus-visible:before:ring-2 has-focus-visible:before:ring-ring"
         data-slot="scrubber-control"
         ref={controlRef}
-        style={{ maxWidth: last * SCRUBBER_MAX_PITCH }}
+        style={{ maxWidth: Math.max(last * SCRUBBER_MAX_PITCH, SCRUBBER_MIN_WIDTH) }}
         {...pointer}
       >
         <div aria-hidden className="absolute inset-0" data-slot="scrubber-field" ref={fieldRef}>

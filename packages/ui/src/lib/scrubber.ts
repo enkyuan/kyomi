@@ -13,6 +13,8 @@ export type ScrubberRange = readonly [start: number, end: number];
 export const SCRUBBER_MIN_PITCH = 6;
 /** Ticks never spread wider than this, so short lists stay compact and centred. */
 export const SCRUBBER_MAX_PITCH = 9;
+/** Narrowest control, so a one- or two-item scrubber keeps a 44px pointer target. */
+export const SCRUBBER_MIN_WIDTH = 44;
 /** Time constant for magnification and label smoothing, in milliseconds. */
 const SMOOTHING_MS = 90;
 /** Furthest a drag past either end can pull the field, in pixels. */
