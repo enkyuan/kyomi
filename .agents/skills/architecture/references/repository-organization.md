@@ -243,7 +243,7 @@ Rules:
 - Do not import application source from packages.
 - Use the aliases owned by each workspace; aliases do not change ownership.
 - Import concrete paths across web domains instead of module-root barrels, and
-  `check:boundaries` rejects module cycles and shared code that imports a module.
+  `check:boundaries` rejects upward imports, module cycles, and shared code that imports a module.
 - Add `index.ts` only for a package entrypoint, a deliberate module surface, or an area's primary
   component. Do not add a barrel for one caller.
 

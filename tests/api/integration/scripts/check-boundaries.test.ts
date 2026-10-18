@@ -49,27 +49,65 @@ describe("check-boundaries", () => {
     });
   });
 
-  test("rejects web modules that depend on each other in a cycle", async () => {
+  test("rejects a web module that imports a module above it, even without a cycle", async () => {
+    const root = await createFixture({
+      "apps/web/src/modules/feeds/list.tsx": 'import { Source } from "@modules/articles/source";\n',
+      "apps/web/src/modules/articles/source.tsx": 'import { apiJson } from "@lib/api";\n',
+    });
+
+    expect(checkBoundaries(root)).toEqual([
+      {
+        file: "apps/web/src/modules/feeds/list.tsx",
+        specifier: "@modules/articles/source",
+        reason:
+          "web module feeds must not import articles, which sits above it in the module stack",
+      },
+    ]);
+  });
+
+  test("reports the upward side of a cycle across tiers, type imports included", async () => {
     const root = await createFixture({
       "apps/web/src/modules/inbox/page.tsx": 'import { Detail } from "@modules/reader/detail";\n',
       "apps/web/src/modules/reader/detail.tsx": 'import type { Filter } from "../inbox/search";\n',
       "apps/web/src/modules/inbox/search.ts": "export type Filter = string;\n",
     });
 
-    const violations = checkBoundaries(root)
-      .map(({ file, reason }) => ({ file, reason }))
-      .sort((left, right) => left.file.localeCompare(right.file));
-
-    expect(violations).toEqual([
-      {
-        file: "apps/web/src/modules/inbox/page.tsx",
-        reason: "web modules inbox and reader must not depend on each other in a cycle",
-      },
+    expect(checkBoundaries(root).map(({ file, reason }) => ({ file, reason }))).toEqual([
       {
         file: "apps/web/src/modules/reader/detail.tsx",
-        reason: "web modules reader and inbox must not depend on each other in a cycle",
+        reason: "web module reader must not import inbox, which sits above it in the module stack",
       },
     ]);
+  });
+
+  test("rejects web modules in one tier that depend on each other in a cycle", async () => {
+    const root = await createFixture({
+      "apps/web/src/modules/sidebar/nav.tsx":
+        'import { Settings } from "@modules/settings/page";\n',
+      "apps/web/src/modules/settings/page.tsx": 'import { Nav } from "../sidebar/nav";\n',
+    });
+
+    const reasons = checkBoundaries(root)
+      .map(({ reason }) => reason)
+      .sort();
+
+    expect(reasons).toEqual([
+      "web modules settings and sidebar must not depend on each other in a cycle",
+      "web modules sidebar and settings must not depend on each other in a cycle",
+    ]);
+  });
+
+  test("requires every web module that imports or is imported to have a tier", async () => {
+    const root = await createFixture({
+      "apps/web/src/modules/billing/page.tsx":
+        'import { Source } from "@modules/articles/source";\n',
+    });
+    const [violation] = checkBoundaries(root);
+
+    expect(violation).toMatchObject({
+      file: "apps/web/src/modules/billing/page.tsx",
+      reason: "web module billing has no place in the module stack; add it to WEB_MODULE_TIERS",
+    });
   });
 
   test("allows one-way web module dependencies", async () => {
@@ -78,6 +116,9 @@ describe("check-boundaries", () => {
         'import { Detail } from "@modules/reader/detail";\nimport { Source } from "@modules/articles/source";\n',
       "apps/web/src/modules/reader/detail.tsx": 'import { Source } from "../articles/source";\n',
       "apps/web/src/modules/articles/source.tsx": 'import { apiJson } from "@lib/api";\n',
+      "apps/web/src/modules/sidebar/nav.tsx":
+        'import { Settings } from "@modules/settings/page";\n',
+      "apps/web/src/modules/settings/page.tsx": 'import { Page } from "@modules/inbox/page";\n',
       "apps/web/src/app/shell.tsx": 'import { Page } from "@modules/inbox/page";\n',
     });
 

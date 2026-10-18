@@ -161,6 +161,17 @@ const WEB_ALIASES: Record<string, string> = {
 };
 // Shared web code sits below every domain module and must not reach back up.
 const WEB_SHARED_LAYERS = new Set(["hooks", "integrations", "lib"]);
+// The web module stack, top to bottom. A module imports its own tier or the tiers below it.
+const WEB_MODULE_TIERS = [
+  ["sidebar", "settings", "auth"],
+  ["inbox"],
+  ["reader"],
+  ["articles"],
+  ["feeds", "folders", "preferences"],
+];
+const WEB_MODULE_TIER = new Map(
+  WEB_MODULE_TIERS.flatMap((modules, tier) => modules.map((name) => [name, tier] as const)),
+);
 
 function resolveWebImport(file: string, specifier: string): string | null {
   if (specifier.startsWith(".")) {
@@ -230,17 +241,34 @@ function checkWebModules(root: string, files: string[]): Violation[] {
 
   for (const [fromModule, targets] of edges) {
     for (const [toModule, { file, specifier }] of targets) {
-      if (webModuleReaches(edges, toModule, fromModule)) {
-        violations.push({
-          file,
-          specifier,
-          reason: `web modules ${fromModule} and ${toModule} must not depend on each other in a cycle`,
-        });
-      }
+      const reason = webModuleEdgeViolation(edges, fromModule, toModule);
+      if (reason) violations.push({ file, specifier, reason });
     }
   }
 
   return violations;
+}
+
+function webModuleEdgeViolation(
+  edges: WebModuleEdges,
+  fromModule: string,
+  toModule: string,
+): string | null {
+  const fromTier = WEB_MODULE_TIER.get(fromModule);
+  const toTier = WEB_MODULE_TIER.get(toModule);
+  if (fromTier === undefined || toTier === undefined) {
+    const unplaced = fromTier === undefined ? fromModule : toModule;
+    return `web module ${unplaced} has no place in the module stack; add it to WEB_MODULE_TIERS`;
+  }
+  if (toTier < fromTier) {
+    return `web module ${fromModule} must not import ${toModule}, which sits above it in the module stack`;
+  }
+  // Modules in one tier may import each other, but only in one direction. A cycle that crosses
+  // tiers always contains an upward import, which the rank check above already reports.
+  if (toTier === fromTier && webModuleReaches(edges, toModule, fromModule)) {
+    return `web modules ${fromModule} and ${toModule} must not depend on each other in a cycle`;
+  }
+  return null;
 }
 
 export function checkBoundaries(root = process.cwd()): Violation[] {
