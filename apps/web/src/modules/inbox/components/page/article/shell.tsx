@@ -47,7 +47,7 @@ export function ArticleShell({
     : () => <ArticleHeader item={null} onBackToList={onBackToList} />;
 
   return (
-    <section className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden [--inbox-header-height:3rem] md:min-h-0">
+    <section className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden md:min-h-0">
       <div className="min-h-0 min-w-0 flex-1">
         <DetailSection
           preferences={preferences}

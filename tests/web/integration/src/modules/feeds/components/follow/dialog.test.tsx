@@ -56,7 +56,7 @@ vi.mock("@modules/feeds/lib/opml", () => ({
   pollOpmlImportStatus: mocks.pollOpmlImportStatus,
 }));
 
-vi.mock("@kyomi/ui/toast", () => ({
+vi.mock("@kyomi/ui/components/toast", () => ({
   anchoredToastManager: {
     add: mocks.anchoredToastAdd,
   },

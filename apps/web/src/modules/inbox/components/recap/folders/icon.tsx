@@ -3,7 +3,8 @@
 import { createSquircleStyle } from "@kyomi/ui/lib/squircle";
 import { Folder2Fill } from "@kyomi/ui/icons/mingcute";
 
-const FOLDER_ICON_BADGE_SIZE_PX = 45;
+// Matches the rendered `size-9` box; a path built for another size distorts the corners.
+const FOLDER_ICON_BADGE_SIZE_PX = 36;
 
 const folderIconSquircleStyle = createSquircleStyle({
   width: FOLDER_ICON_BADGE_SIZE_PX,

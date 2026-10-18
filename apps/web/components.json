@@ -15,7 +15,7 @@
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils",
-    "ui": "@kyomi/ui",
+    "ui": "@kyomi/ui/components",
     "lib": "@/lib",
     "hooks": "@/hooks"
   },

@@ -2,11 +2,25 @@
 
 import { useViewport } from "@modules/inbox/hooks/use-viewport";
 import { VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
-import { Badge } from "@kyomi/ui/badge";
-import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
+import { Badge } from "@kyomi/ui/components/badge";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/components/scroll-area";
+import {
+  Empty,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
+} from "@kyomi/ui/components/empty";
 import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { useElementScrollRestoration } from "@tanstack/react-router";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+  springTransition,
+} from "@kyomi/ui/lib/motion";
 import { useRef } from "react";
 import { useHydrated } from "@hooks/use-hydrated";
 import type { InboxFilter, InboxItem, InboxSort } from "@modules/articles/lib/api";
@@ -131,9 +145,7 @@ export function List({
   const listHeaderRef = useRef<HTMLDivElement | null>(null);
   const listToolsRef = useRef<HTMLDivElement | null>(null);
   const prefersReducedMotion = useReducedMotion();
-  const scopeControlTransition = prefersReducedMotion
-    ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.28, bounce: 0 };
+  const scopeControlTransition = springTransition("standard", prefersReducedMotion);
 
   const { containerWidth: listContainerWidth, viewportHeight } = useViewport(listScrollRef, [
     inboxItems.length,
@@ -161,7 +173,7 @@ export function List({
       <ScrollAreaPrimitive.Root className="relative min-h-0 flex-1 overflow-hidden">
         <ScrollAreaPrimitive.Viewport
           ref={listScrollRef}
-          className="h-full overflow-x-hidden outline-none scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain"
+          className="h-full overflow-x-hidden outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain"
           data-scroll-restoration-id={INBOX_LIST_SCROLL_RESTORATION_ID}
           data-slot="scroll-area-viewport"
         >
@@ -193,7 +205,7 @@ export function List({
                             {isArticleScoped && selectedArticle && !isLoading ? (
                               <HeaderReaderToolbar item={selectedArticle} />
                             ) : feedLabel ? (
-                              <span className="relative inline-flex h-11 min-w-0 max-w-72 items-center overflow-hidden rounded-full bg-background px-4 text-base font-medium text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted *:relative">
+                              <span className="relative inline-flex h-11 min-w-0 max-w-72 items-center overflow-hidden rounded-full bg-muted-solid px-4 text-base font-medium text-muted-foreground *:relative">
                                 <span className="truncate">{feedLabel}</span>
                               </span>
                             ) : null}
@@ -256,15 +268,15 @@ export function List({
             ) : null}
             <div className={showEmptyState ? "flex flex-1 flex-col" : ""}>
               {showEmptyState ? (
-                <div className="flex flex-1 min-h-72 w-full flex-col items-center justify-center gap-5 px-5.5 py-10 text-center">
-                  <EmptyStateIcon className="size-40 shrink-0 sm:size-44" size={176} />
-                  <div className="w-full max-w-136 space-y-2">
-                    <p className="text-base font-semibold text-foreground">{emptyState.title}</p>
-                    <p className="mx-auto max-w-110 text-balance text-sm leading-6 text-muted-foreground">
-                      {emptyState.description}
-                    </p>
-                  </div>
-                </div>
+                <Empty className="w-full px-5.5" size="md">
+                  <EmptyHeader>
+                    <EmptyMedia variant="illustration">
+                      <EmptyStateIcon size={176} />
+                    </EmptyMedia>
+                    <EmptyTitle>{emptyState.title}</EmptyTitle>
+                    <EmptyDescription>{emptyState.description}</EmptyDescription>
+                  </EmptyHeader>
+                </Empty>
               ) : !isVirtualizerHostMounted ? (
                 inboxItems.length === 0 && !isLoading ? null : (
                   <SkeletonRows
@@ -315,7 +327,7 @@ function HeaderReaderToolbar({ item }: { item: ArticleDetailDto }) {
   const toolbar = useReaderToolbar({ item });
 
   return (
-    <div className="relative inline-flex h-11 min-w-0 max-w-96 items-center overflow-hidden rounded-full bg-background px-1.5 text-base font-medium text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted *:relative">
+    <div className="relative inline-flex h-11 min-w-0 max-w-96 items-center overflow-hidden rounded-full bg-muted-solid px-1.5 text-base font-medium text-muted-foreground *:relative">
       <ReaderToolbar {...toolbar.toolbarProps} />
     </div>
   );

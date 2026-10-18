@@ -2,7 +2,16 @@
 
 import { Link } from "@tanstack/react-router";
 import { AddFill, Rss2Fill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemMedia,
+  ItemTarget,
+  ItemTitle,
+} from "@kyomi/ui/components/item";
+import { Button } from "@kyomi/ui/components/button";
 import type { InboxSearch } from "@modules/inbox/lib/search";
 import {
   FolderPickerButton,
@@ -51,20 +60,23 @@ export function ExpandedTopSources({
         const currentFolder = folderOptions.find((folder) => folder.value === currentFolderId);
 
         return (
-          <div key={feed.feedId} className="min-w-0 rounded-2xl px-2 py-2 hover:bg-accent/70">
-            <div className="flex min-w-0 items-center gap-3">
-              <Link
-                className="min-w-0 flex flex-1 gap-3 outline-none"
-                to="/inbox"
-                search={(prev: InboxSearch) => ({
-                  ...prev,
-                  filter: "all" as const,
-                  feedId: feed.feedId,
-                  folderId: undefined,
-                  itemId: undefined,
-                  search: undefined,
-                })}
-              >
+          <Item key={feed.feedId}>
+            <ItemTarget
+              render={
+                <Link
+                  to="/inbox"
+                  search={(prev: InboxSearch) => ({
+                    ...prev,
+                    filter: "all" as const,
+                    feedId: feed.feedId,
+                    folderId: undefined,
+                    itemId: undefined,
+                    search: undefined,
+                  })}
+                />
+              }
+            >
+              <ItemMedia>
                 <FeedFavicon
                   className="size-10 shrink-0"
                   faviconUrl={feed.faviconUrl}
@@ -74,21 +86,19 @@ export function ExpandedTopSources({
                   squircleCornerRadius={8}
                   title={feed.title}
                 />
-                <span className="min-w-0 flex-1">
-                  <span className="block truncate font-semibold text-base leading-5">
-                    {feed.title}
-                  </span>
-                  <span className="block truncate text-muted-foreground text-sm">
-                    {formatViewedCount(feed.viewedItemCount)} · viewed{" "}
-                    {formatRelativeTime(feed.lastViewedAt)}
-                  </span>
-                  {currentFolder ? (
-                    <span className="block truncate text-muted-foreground text-xs">
-                      {currentFolder.label}
-                    </span>
-                  ) : null}
-                </span>
-              </Link>
+              </ItemMedia>
+              <ItemContent>
+                <ItemTitle>{feed.title}</ItemTitle>
+                <ItemDescription>
+                  {formatViewedCount(feed.viewedItemCount)} · viewed{" "}
+                  {formatRelativeTime(feed.lastViewedAt)}
+                </ItemDescription>
+                {currentFolder ? (
+                  <ItemDescription className="text-xs">{currentFolder.label}</ItemDescription>
+                ) : null}
+              </ItemContent>
+            </ItemTarget>
+            <ItemActions>
               {feed.isSubscribed && currentFolderId ? (
                 <FolderPickerButton
                   currentFolderId={currentFolderId}
@@ -113,15 +123,16 @@ export function ExpandedTopSources({
                   aria-label={`Follow ${feed.title}`}
                   className={TOP_SOURCE_FOLDER_BUTTON_CLASS}
                   loading={isFollowingFeed(feed.feedId)}
+                  shape="pill"
                   size="icon-xs"
-                  variant="ghost"
+                  variant="soft"
                   onClick={() => followFeed(feed)}
                 >
                   <AddFill />
                 </Button>
               ) : null}
-            </div>
-          </div>
+            </ItemActions>
+          </Item>
         );
       })}
     </div>

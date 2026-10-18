@@ -1,7 +1,7 @@
 "use client";
 
 import { Rss2Fill } from "@kyomi/ui/icons/mingcute";
-import { Favicon, type FaviconShape } from "@kyomi/ui/favicon";
+import { Favicon, type FaviconShape } from "@kyomi/ui/components/favicon";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useCallback, useEffect, useState } from "react";
 import { useFavicon } from "@modules/feeds/hooks/use-favicon";

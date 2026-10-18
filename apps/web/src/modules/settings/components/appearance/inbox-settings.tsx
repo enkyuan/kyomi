@@ -1,9 +1,15 @@
 "use client";
 
-import { Group, GroupSeparator } from "@kyomi/ui/group";
-import { Tabs, TabsList, TabsTab } from "@kyomi/ui/tabs";
-import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@kyomi/ui/select";
-import { Switch } from "@kyomi/ui/switch";
+import { Group, GroupSeparator } from "@kyomi/ui/components/group";
+import { Tabs, TabsList, TabsTab } from "@kyomi/ui/components/tabs";
+import {
+  Select,
+  SelectItem,
+  SelectPopup,
+  SelectTrigger,
+  SelectValue,
+} from "@kyomi/ui/components/select";
+import { Switch } from "@kyomi/ui/components/switch";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-preferences";
 import { SettingHeading, SettingSubHeading } from "./shared";
 

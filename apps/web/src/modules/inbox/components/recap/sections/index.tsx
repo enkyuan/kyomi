@@ -2,7 +2,7 @@
 
 import { FolderWarningFill } from "@kyomi/ui/icons/mingcute";
 import type { ReactElement, ReactNode } from "react";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/components/button";
 import {
   Empty,
   EmptyContent,
@@ -10,9 +10,9 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@kyomi/ui/empty";
-import { Skeleton } from "@kyomi/ui/skeleton";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+} from "@kyomi/ui/components/empty";
+import { Skeleton } from "@kyomi/ui/components/skeleton";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/components/tooltip";
 import { cn } from "@kyomi/ui/lib/utils";
 
 export const RECAP_SUMMARY_LAYOUT_CLASS =
@@ -63,15 +63,15 @@ export function SectionEmpty({
   action?: ReactNode;
 }) {
   return (
-    <Empty className="min-h-0 w-full gap-3 px-2 py-6 md:py-6">
-      <EmptyHeader className="gap-3">
+    <Empty className="w-full" size="sm">
+      <EmptyHeader>
         {icon ? (
-          <EmptyMedia className="mb-0 text-muted-foreground/80" variant="icon">
+          <EmptyMedia className="text-muted-foreground/80" variant="icon">
             {icon}
           </EmptyMedia>
         ) : null}
         <div>
-          <EmptyTitle className="text-sm">{title}</EmptyTitle>
+          <EmptyTitle>{title}</EmptyTitle>
           <EmptyDescription className="mx-auto max-w-full text-pretty line-clamp-2">
             {description}
           </EmptyDescription>
@@ -91,7 +91,7 @@ export function RecapSkeleton() {
         </div>
         <div className="space-y-3">
           {Array.from({ length: 3 }).map((_, index) => (
-            <div key={index} className="flex min-w-0 items-center gap-2.5 rounded-[15px] p-2">
+            <div key={index} className="flex min-w-0 items-center gap-2.5 rounded-2xl p-2">
               <Skeleton className="size-9 shrink-0 rounded-lg" />
               <div className="min-w-0 flex-1 space-y-1.5">
                 <Skeleton className="h-4 w-3/5" />
@@ -108,7 +108,7 @@ export function RecapSkeleton() {
         </div>
         <div className="space-y-2">
           {Array.from({ length: 4 }).map((_, index) => (
-            <div key={index} className="flex min-w-0 items-center gap-2.5 rounded-[15px] p-2">
+            <div key={index} className="flex min-w-0 items-center gap-2.5 rounded-2xl p-2">
               <Skeleton className="size-9 shrink-0 rounded-lg" />
               <div className="min-w-0 flex-1 space-y-1.5">
                 <Skeleton className="h-4 w-4/5" />
@@ -138,12 +138,12 @@ export function RecapSkeleton() {
 
 export function RecapError({ onRetry }: { onRetry: () => void }) {
   return (
-    <Empty className="h-full w-full flex-1 overflow-hidden px-6 py-10 md:py-10">
+    <Empty className="h-full w-full overflow-hidden" size="md">
       <EmptyHeader>
         <EmptyMedia variant="icon">
           <FolderWarningFill />
         </EmptyMedia>
-        <EmptyTitle className="text-base">Recap unavailable</EmptyTitle>
+        <EmptyTitle>Recap unavailable</EmptyTitle>
         <EmptyDescription>
           Folders, top sources, and saved reminders could not load right now.
         </EmptyDescription>

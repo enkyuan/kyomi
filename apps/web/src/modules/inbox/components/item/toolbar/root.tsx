@@ -1,37 +1,26 @@
 "use client";
 
 import type { CSSProperties, SyntheticEvent } from "react";
-import {
-  BookmarkFill,
-  BookmarkLine,
-  ExternalLinkLine,
-  HeadAiLine,
-  ShareForwardLine,
-} from "@kyomi/ui/icons/mingcute";
-import { Toolbar as ToolbarRoot, ToolbarGroup, ToolbarSeparator } from "@kyomi/ui/toolbar";
+import { BookmarkFill, BookmarkLine, ShareForwardLine } from "@kyomi/ui/icons/mingcute";
+import { Toolbar as ToolbarRoot, ToolbarGroup } from "@kyomi/ui/components/toolbar";
 import { cn } from "@kyomi/ui/lib/utils";
 import type { AnchoredToolbarAction, ToolbarSide } from "@modules/articles/lib/actions";
 import { ItemToolbarButton } from "./button";
 import { ItemToolbarMenu } from "./menu";
 
-export type ItemToolbarPresentation = "row" | "articleHeader";
-
 export type ItemToolbarProps = {
   isSaved: boolean;
   onCopyLink: (anchor?: HTMLButtonElement) => void;
   onHide: () => void;
-  onOpenAi?: (anchor?: HTMLButtonElement) => void;
   onOpenSource: (anchor?: HTMLButtonElement) => void;
   onReportBrokenArticle: () => void;
   onShareArticle: (anchor?: HTMLButtonElement) => void;
   onToggleSaved: AnchoredToolbarAction;
   className?: string;
   style?: CSSProperties;
-  presentation?: ItemToolbarPresentation;
 };
 
-const INBOX_ITEM_TOOLBAR_BASE_CLASS =
-  "justify-end gap-0 rounded-lg border border-border/80 bg-popover/95 p-0.5 text-popover-foreground shadow-md/10 transition-opacity duration-150";
+const INBOX_ITEM_TOOLBAR_BASE_CLASS = "justify-end gap-0 transition-opacity duration-150";
 const TOOLBAR_ICON_CLASS = "size-5";
 const ITEM_TOOLBAR_TOOLTIP_SIDE: ToolbarSide = "top";
 const ITEM_TOOLBAR_TOOLTIP_SIDE_OFFSET = 6;
@@ -44,22 +33,18 @@ export function ItemToolbar({
   className,
   style,
   isSaved,
-  onOpenAi,
   onCopyLink,
   onHide,
   onOpenSource,
   onReportBrokenArticle,
   onShareArticle,
   onToggleSaved,
-  presentation = "row",
 }: ItemToolbarProps) {
-  const isArticleHeader = presentation === "articleHeader";
-  const buttonClassName = isArticleHeader ? "rounded-full" : undefined;
-
   return (
     <ToolbarRoot
       className={cn(INBOX_ITEM_TOOLBAR_BASE_CLASS, className)}
       style={style}
+      variant="ghost"
       onClick={stopToolbarPropagation}
       onPointerDown={stopToolbarPropagation}
     >
@@ -67,7 +52,7 @@ export function ItemToolbar({
         <ItemToolbarButton
           label={isSaved ? "Remove from read later" : "Read later"}
           active={isSaved}
-          className={cn(buttonClassName, isSaved && "text-mizu")}
+          className={isSaved ? "text-mizu" : undefined}
           onClick={(anchor) =>
             onToggleSaved({
               anchor,
@@ -82,54 +67,15 @@ export function ItemToolbar({
             <BookmarkLine className={TOOLBAR_ICON_CLASS} />
           )}
         </ItemToolbarButton>
-        <ItemToolbarButton
-          label="Copy link"
-          className={buttonClassName}
-          copyFeedback
-          onClick={onCopyLink}
+        <ItemToolbarButton label="Copy link" copyFeedback onClick={onCopyLink} />
+        <ItemToolbarButton label="Share article" onClick={onShareArticle}>
+          <ShareForwardLine className={TOOLBAR_ICON_CLASS} />
+        </ItemToolbarButton>
+        <ItemToolbarMenu
+          onHide={onHide}
+          onOpenSource={onOpenSource}
+          onReportBrokenArticle={onReportBrokenArticle}
         />
-        {isArticleHeader ? (
-          <>
-            <ItemToolbarButton
-              label="Open source"
-              className={buttonClassName}
-              onClick={onOpenSource}
-            >
-              <ExternalLinkLine className={TOOLBAR_ICON_CLASS} />
-            </ItemToolbarButton>
-            <ToolbarSeparator
-              orientation="vertical"
-              className="mx-1 h-8 self-center bg-border/70 data-[orientation=vertical]:my-0"
-            />
-            {onOpenAi ? (
-              <ItemToolbarButton
-                label="Distill this article"
-                className={buttonClassName}
-                onClick={onOpenAi}
-              >
-                <HeadAiLine className={TOOLBAR_ICON_CLASS} />
-              </ItemToolbarButton>
-            ) : null}
-            <ItemToolbarButton
-              label="Share article"
-              className={buttonClassName}
-              onClick={onShareArticle}
-            >
-              <ShareForwardLine className={TOOLBAR_ICON_CLASS} />
-            </ItemToolbarButton>
-          </>
-        ) : (
-          <>
-            <ItemToolbarButton label="Share article" onClick={onShareArticle}>
-              <ShareForwardLine className={TOOLBAR_ICON_CLASS} />
-            </ItemToolbarButton>
-            <ItemToolbarMenu
-              onHide={onHide}
-              onOpenSource={onOpenSource}
-              onReportBrokenArticle={onReportBrokenArticle}
-            />
-          </>
-        )}
       </ToolbarGroup>
     </ToolbarRoot>
   );

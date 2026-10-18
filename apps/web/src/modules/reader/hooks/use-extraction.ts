@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { toastManager } from "@kyomi/ui/toast";
+import { toastManager } from "@kyomi/ui/components/toast";
 import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@kyomi/reader/schemas";
 import { extractInboxItemFullText } from "@modules/articles/lib/api";

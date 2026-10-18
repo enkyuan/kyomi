@@ -8,8 +8,8 @@ import {
   MoveFill,
 } from "@kyomi/ui/icons/mingcute";
 import { useMemo } from "react";
-import { Button } from "@kyomi/ui/button";
-import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
+import { Button } from "@kyomi/ui/components/button";
+import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/components/menu";
 import { cn } from "@kyomi/ui/lib/utils";
 import { RailTooltip } from "@modules/inbox/components/recap/sections";
 import {
@@ -19,8 +19,6 @@ import {
 
 type FolderOption = { label: string; value: string };
 const FOLDER_MOVE_SCROLL_THRESHOLD = 4;
-const FOLDER_MOVE_MAX_HEIGHT_CLASS =
-  "!max-h-[min(calc(--spacing(8)*4+--spacing(2)+1px),var(--available-height))]";
 
 export function FolderFeedActions({
   currentFolderId,
@@ -61,7 +59,7 @@ export function FolderFeedActions({
   const folderMenuItems = orderedFolders.map((folder) => (
     <MenuItem
       key={folder.value}
-      className="h-8 cursor-pointer rounded-full px-3 text-sm"
+      className="cursor-pointer"
       onClick={() => onMoveSelected(folder.value)}
     >
       <span className="min-w-0 flex-1 truncate">{folder.label}</span>
@@ -77,20 +75,19 @@ export function FolderFeedActions({
               <Button
                 className={FOLDER_ACTION_BUTTON_CLASS}
                 disabled={disabledBulkAction || orderedFolders.length === 0}
+                shape="pill"
                 variant="secondary"
               >
-                <MoveFill className="!mx-0 size-4" />
+                <MoveFill className="mx-0 size-4" />
                 Move
               </Button>
             }
           />
           <MenuPopup
             align="start"
-            className={cn(
-              "w-44 rounded-[20px] before:rounded-[19px]",
-              shouldScrollFolders && "overflow-hidden",
-            )}
-            contentClassName={shouldScrollFolders ? FOLDER_MOVE_MAX_HEIGHT_CLASS : undefined}
+            className="w-44"
+            maxVisibleItems={shouldScrollFolders ? FOLDER_MOVE_SCROLL_THRESHOLD : undefined}
+            shape="pill"
             side="top"
             sideOffset={6}
           >
@@ -106,7 +103,7 @@ export function FolderFeedActions({
           variant="secondary"
           onClick={onRemoveSelected}
         >
-          <Delete2Fill className="!mx-0 size-4" />
+          <Delete2Fill className="mx-0 size-4" />
           Remove
         </Button>
         <RailTooltip label="Export selected OPML">
@@ -114,10 +111,11 @@ export function FolderFeedActions({
             aria-label="Export selected OPML"
             className={FOLDER_ICON_BUTTON_CLASS}
             disabled={selectedCount === 0}
+            shape="pill"
             variant="outline"
             onClick={onExportSelected}
           >
-            <FileExportFill className="!mx-0 size-4" />
+            <FileExportFill className="mx-0 size-4" />
           </Button>
         </RailTooltip>
       </div>
@@ -129,29 +127,32 @@ export function FolderFeedActions({
       <Button
         className={FOLDER_ACTION_BUTTON_CLASS}
         disabled={!hasFeeds}
+        shape="pill"
         variant="secondary"
         onClick={onStartSelecting}
       >
-        <ListCheckFill className="!mx-0 size-4" />
+        <ListCheckFill className="mx-0 size-4" />
         Select
       </Button>
       <Button
         className={FOLDER_ACTION_BUTTON_CLASS}
         disabled={!hasFeeds}
+        shape="pill"
         variant="secondary"
         onClick={onExportFeeds}
       >
-        <FileExportFill className="!mx-0 size-4" />
+        <FileExportFill className="mx-0 size-4" />
         Export
       </Button>
       <RailTooltip label="Add sources">
         <Button
           aria-label="Add sources"
           className={FOLDER_ICON_BUTTON_CLASS}
+          shape="pill"
           variant="outline"
           onClick={onAddSources}
         >
-          <AddFill className="!mx-0 size-4" />
+          <AddFill className="mx-0 size-4" />
         </Button>
       </RailTooltip>
     </div>

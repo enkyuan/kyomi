@@ -1,10 +1,10 @@
 "use client";
 
 import { ExternalLinkLine, EyeCloseLine, More1Line, ReportLine } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
-import { Menu, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
-import { ToolbarButton } from "@kyomi/ui/toolbar";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+import { Button } from "@kyomi/ui/components/button";
+import { Menu, MenuPopup, MenuTrigger } from "@kyomi/ui/components/menu";
+import { ToolbarButton } from "@kyomi/ui/components/toolbar";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/components/tooltip";
 import { ItemToolbarMenuItem } from "./menu-item";
 
 const TOOLBAR_ICON_CLASS = "size-5";
@@ -30,9 +30,9 @@ export function ItemToolbarMenu({
                   aria-label="More"
                   render={
                     <Button
-                      className="size-10 rounded-xl text-muted-foreground hover:text-foreground sm:size-9"
+                      className="size-10 rounded-xl sm:size-9"
                       size="icon-lg"
-                      variant="ghost"
+                      variant="ghost-muted"
                       onClick={(event) => {
                         event.stopPropagation();
                       }}

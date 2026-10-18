@@ -1,6 +1,13 @@
 "use client";
 
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+  springTransition,
+} from "@kyomi/ui/lib/motion";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import { BackToInboxButton, SearchBar } from "@modules/inbox/components/list/header";
 import { ReaderFontSizeControls } from "@modules/reader/components/toolbar";
@@ -85,9 +92,7 @@ function SelectedArticleHeader({
 }) {
   const toolbar = useReaderToolbar({ item, readerFocusMode: true, autoExtract: false });
   const prefersReducedMotion = useReducedMotion();
-  const scopeControlTransition = prefersReducedMotion
-    ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.28, bounce: 0 };
+  const scopeControlTransition = springTransition("standard", prefersReducedMotion);
   const navCollapsedState = prefersReducedMotion
     ? undefined
     : { opacity: 0, scale: 0.96, filter: "blur(4px)" };
@@ -157,9 +162,7 @@ function SelectedHeaderControls({
   onBackToList: () => void;
 }) {
   const prefersReducedMotion = useReducedMotion();
-  const transition = prefersReducedMotion
-    ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.3, bounce: 0 };
+  const transition = springTransition("emphasized", prefersReducedMotion);
 
   return (
     <>

@@ -1,7 +1,7 @@
 "use client";
 
 import { FullscreenExit2Fill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/components/button";
 import { RailTooltip } from "../sections";
 
 export function ExpandedViewHeader({

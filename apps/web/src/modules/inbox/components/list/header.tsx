@@ -1,7 +1,15 @@
 "use client";
 
-import { Tabs, TabsList, TabsTab } from "@kyomi/ui/tabs";
-import { Menu, MenuTrigger, MenuPopup, MenuItem } from "@kyomi/ui/menu";
+import { Tabs, TabsList, TabsTab } from "@kyomi/ui/components/tabs";
+import {
+  Menu,
+  MenuItem,
+  MenuPopup,
+  MenuRadioGroup,
+  MenuRadioItem,
+  MenuSeparator,
+  MenuTrigger,
+} from "@kyomi/ui/components/menu";
 import {
   ArrowLeftFill,
   DownFill,
@@ -15,15 +23,19 @@ import {
   type IconProps,
   AsteriskFill,
 } from "@kyomi/ui/icons/mingcute";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "@kyomi/ui/lib/motion";
 import { useCallback, useRef, useState, type ComponentType, type RefObject } from "react";
 import type { InboxFilter, InboxSort } from "@modules/articles/lib/api";
 import { cn } from "@kyomi/ui/lib/utils";
 
 const ALL_FILTER_GROUP: InboxFilter[] = ["all", "saved", "recent"];
 const MAX_VISIBLE_FILTER_MENU_ITEMS = 4;
-const FILTER_MENU_MAX_HEIGHT_CLASS =
-  "!max-h-[min(calc(--spacing(9)*4+--spacing(4)+1px),var(--available-height))]";
 
 export type PinnedFolderFilter = {
   id: string;
@@ -97,7 +109,7 @@ export function FilterControl({
         return (
           <MenuItem
             key={item.value}
-            className="h-9 justify-between gap-2 rounded-[17px] px-3 font-medium text-base sm:h-9 sm:text-base"
+            className="justify-between gap-2"
             onClick={(event) => {
               event.stopPropagation();
               onFilterChange(item.value);
@@ -110,13 +122,11 @@ export function FilterControl({
           </MenuItem>
         );
       })}
-      {pinnedFolderMenuItems.length > 0 ? (
-        <hr className="mx-2 my-1 h-px border-0 bg-border/70" />
-      ) : null}
+      {pinnedFolderMenuItems.length > 0 ? <MenuSeparator className="bg-border/70" /> : null}
       {pinnedFolderMenuItems.map((folder) => (
         <MenuItem
           key={folder.id}
-          className="h-9 min-w-0 justify-between gap-2 rounded-[17px] px-3 font-medium text-base sm:h-9 sm:text-base"
+          className="min-w-0 justify-between gap-2"
           onClick={(event) => {
             event.stopPropagation();
             onFolderFilterChange?.(folder.id);
@@ -152,7 +162,7 @@ export function FilterControl({
             <Menu>
               <MenuTrigger
                 aria-label="Choose filter"
-                className="-me-0.5 inline-flex size-5 shrink-0 cursor-pointer items-center justify-center self-center rounded-full leading-none text-current outline-none transition-colors hover:bg-accent"
+                className="relative -me-0.5 inline-flex size-5 shrink-0 cursor-pointer items-center justify-center self-center rounded-full leading-none text-current outline-none transition-colors hover:bg-accent focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background pointer-coarse:after:absolute pointer-coarse:after:-inset-y-3 pointer-coarse:after:-start-1.5 pointer-coarse:after:-end-3"
                 onPointerDown={(event) => event.stopPropagation()}
                 onClick={(event) => event.stopPropagation()}
                 onKeyDown={(event) => {
@@ -166,11 +176,10 @@ export function FilterControl({
                 side="bottom"
                 sideOffset={6}
                 anchor={segmentedRef}
-                className={cn(
-                  "w-(--anchor-width) min-w-(--anchor-width) max-w-64 rounded-[22px]",
-                  shouldScrollMenu && "overflow-hidden",
-                )}
-                contentClassName={shouldScrollMenu ? FILTER_MENU_MAX_HEIGHT_CLASS : undefined}
+                className="w-(--anchor-width) min-w-(--anchor-width) max-w-64"
+                maxVisibleItems={shouldScrollMenu ? MAX_VISIBLE_FILTER_MENU_ITEMS : undefined}
+                shape="pill"
+                size="lg"
               >
                 {menuItems}
               </MenuPopup>
@@ -196,8 +205,7 @@ export function BackToInboxButton({
       onClick={onClick}
       className={cn(
         "relative inline-flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full text-muted-foreground outline-none transition-colors hover:text-foreground/70 focus-visible:ring-2 focus-visible:ring-ring [&>*]:relative",
-        variant === "pill" &&
-          "bg-background before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted",
+        variant === "pill" && "bg-muted-solid",
       )}
     >
       <ArrowLeftFill className="size-5" />
@@ -226,8 +234,7 @@ export function SearchBar({ variant = "pill" }: { variant?: "pill" | "transparen
         className={cn(
           "relative flex h-11 min-w-11 max-w-full items-center overflow-hidden rounded-full text-muted-foreground [&>*]:relative",
           expanded ? "w-[420px]" : "w-11",
-          variant === "pill" &&
-            "bg-background before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted",
+          variant === "pill" && "bg-muted-solid",
         )}
       >
         <button
@@ -286,27 +293,21 @@ export function SearchBar({ variant = "pill" }: { variant?: "pill" | "transparen
 function SortMenuItem({
   icon: Icon,
   label,
-  active,
-  onSelect,
+  value,
 }: {
   icon: ComponentType<IconProps>;
   label: string;
-  active: boolean;
-  onSelect: () => void;
+  value: InboxSort;
 }) {
   return (
-    <MenuItem
-      closeOnClick={false}
-      onClick={(event) => {
-        event.preventDefault();
-        onSelect();
-      }}
-      data-active={active || undefined}
-      className="flex h-9 cursor-pointer items-center justify-start gap-2 rounded-[17px] px-3 font-medium text-base text-muted-foreground sm:h-9 sm:text-base data-active:bg-background data-active:text-foreground data-active:shadow-sm/8 data-active:data-highlighted:bg-accent data-active:data-highlighted:text-accent-foreground"
+    <MenuRadioItem
+      className="cursor-pointer justify-start text-muted-foreground data-checked:bg-background data-checked:text-foreground data-checked:shadow-sm/8 data-checked:data-highlighted:bg-accent data-checked:data-highlighted:text-accent-foreground"
+      indicator="none"
+      value={value}
     >
       <Icon className="size-4 shrink-0" />
       <span>{label}</span>
-    </MenuItem>
+    </MenuRadioItem>
   );
 }
 
@@ -328,7 +329,7 @@ export function SortButton({
           <button
             type="button"
             aria-label="Sort"
-            className="relative inline-flex h-11 cursor-pointer select-none items-center gap-1.5 whitespace-nowrap rounded-full bg-background px-4 pe-3 font-medium text-base text-muted-foreground outline-none transition-colors hover:text-foreground/70 data-[popup-open]:text-foreground focus-visible:ring-2 focus-visible:ring-ring before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative"
+            className="relative inline-flex h-11 cursor-pointer select-none items-center gap-1.5 whitespace-nowrap rounded-full bg-muted-solid px-4 pe-3 font-medium text-base text-muted-foreground outline-none transition-colors hover:text-foreground/70 data-[popup-open]:text-foreground focus-visible:ring-2 focus-visible:ring-ring [&>*]:relative"
           />
         }
       >
@@ -341,17 +342,15 @@ export function SortButton({
         align="end"
         sideOffset={6}
         anchor={anchor}
-        className="w-(--anchor-width) min-w-(--anchor-width) rounded-[22px]"
+        className="w-(--anchor-width) min-w-(--anchor-width)"
+        shape="pill"
+        size="lg"
       >
-        {SORT_MENU.map((item) => (
-          <SortMenuItem
-            key={item.value}
-            icon={item.icon}
-            label={item.label}
-            active={sort === item.value}
-            onSelect={() => onSortChange(item.value)}
-          />
-        ))}
+        <MenuRadioGroup value={sort} onValueChange={(value: InboxSort) => onSortChange(value)}>
+          {SORT_MENU.map((item) => (
+            <SortMenuItem key={item.value} icon={item.icon} label={item.label} value={item.value} />
+          ))}
+        </MenuRadioGroup>
       </MenuPopup>
     </Menu>
   );

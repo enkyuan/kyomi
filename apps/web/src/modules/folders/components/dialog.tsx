@@ -3,7 +3,7 @@
 import { useReducer } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { AddFill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/components/button";
 import {
   Dialog as UiDialog,
   DialogClose,
@@ -14,11 +14,11 @@ import {
   DialogPopup,
   DialogTitle,
   DialogTrigger,
-} from "@kyomi/ui/dialog";
-import { Field, FieldError } from "@kyomi/ui/field";
-import { Form } from "@kyomi/ui/form";
-import { Input } from "@kyomi/ui/input";
-import { toastManager } from "@kyomi/ui/toast";
+} from "@kyomi/ui/components/dialog";
+import { Field, FieldError } from "@kyomi/ui/components/field";
+import { Form } from "@kyomi/ui/components/form";
+import { Input } from "@kyomi/ui/components/input";
+import { toastManager } from "@kyomi/ui/components/toast";
 import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { createFolder } from "@modules/folders/lib/api";
 import { queryKeys } from "@lib/query/keys";

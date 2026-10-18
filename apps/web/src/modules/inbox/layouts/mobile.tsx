@@ -1,6 +1,13 @@
 "use client";
 
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+  springTransition,
+} from "@kyomi/ui/lib/motion";
 import type { CSSProperties, ReactNode } from "react";
 import { INBOX_PANEL_SPACING_PX } from "../lib/layout/index";
 
@@ -13,9 +20,7 @@ export type MobileLayoutProps = {
 
 export function MobileLayout({ showDetail, direction, list, detail }: MobileLayoutProps) {
   const prefersReducedMotion = useReducedMotion();
-  const transition = prefersReducedMotion
-    ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.28, bounce: 0 };
+  const transition = springTransition("standard", prefersReducedMotion);
   const slideOffset = direction * 28;
 
   return (
