@@ -5,7 +5,7 @@ import { cn } from "@kyomi/ui/lib/utils";
 import { Categories } from "@modules/articles/components/categories";
 import { Source } from "@modules/articles/components/source";
 import { ItemInlineToolbar } from "./toolbar/inline";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/components/card";
 import { Timestamp } from "@modules/articles/components/timestamp";
 import { useTimestamp } from "@kyomi/ui/hooks/use-timestamp";
 import { usePretextLayout } from "@kyomi/ui/hooks/use-pretext";
@@ -138,13 +138,10 @@ export const Item = memo(function Item({
             />
           </span>
         </div>
-        <CardTitle className="min-w-0 font-semibold tracking-[-0.012em] text-foreground">
+        <CardTitle className="min-w-0 font-semibold tracking-title text-foreground">
           <p
             ref={titlePretext.ref}
-            className={cn(
-              "w-full font-semibold tracking-[-0.012em] text-foreground",
-              "line-clamp-2",
-            )}
+            className={cn("w-full font-semibold tracking-title text-foreground", "line-clamp-2")}
             style={{
               maxWidth: titlePretext.fittedWidth ? `${titlePretext.fittedWidth}px` : undefined,
               fontSize: `${titleFontSizePx}px`,

@@ -8,17 +8,23 @@ import {
   Fullscreen2Fill,
   ListCheckFill,
 } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
-import { useSquircle } from "@kyomi/ui/lib/squircle";
+import { Button } from "@kyomi/ui/components/button";
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemMedia,
+  ItemTarget,
+  ItemTitle,
+} from "@kyomi/ui/components/item";
 import type { RecapFolder } from "@modules/inbox/lib/recap/types";
 import { RailTooltip, RecapSection, SectionEmpty } from "@modules/inbox/components/recap/sections";
 import { formatFeedCount } from "@modules/inbox/lib/recap/index";
 import { FolderIconBadge } from "./icon";
 
 export const FOLDER_ACTION_BUTTON_CLASS =
-  "h-10 flex-1 gap-1.5 rounded-full px-4 font-semibold text-sm leading-none before:rounded-full transition-transform active:scale-[0.96] sm:h-10 sm:text-sm";
-export const FOLDER_ICON_BUTTON_CLASS =
-  "size-10 rounded-full px-0 before:rounded-full transition-transform active:scale-[0.96] sm:size-10";
+  "h-10 flex-1 gap-1.5 px-4 font-semibold text-sm leading-none sm:h-10 sm:text-sm";
+export const FOLDER_ICON_BUTTON_CLASS = "size-10 px-0 sm:size-10";
 
 export function FolderActions({
   exportingOpml = false,
@@ -34,7 +40,12 @@ export function FolderActions({
   return (
     <div className="mt-3 grid min-w-0 shrink-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)_2.5rem] gap-2 px-1">
       <RailTooltip label="Create folder">
-        <Button className={FOLDER_ACTION_BUTTON_CLASS} variant="secondary" onClick={onCreateFolder}>
+        <Button
+          className={FOLDER_ACTION_BUTTON_CLASS}
+          shape="pill"
+          variant="secondary"
+          onClick={onCreateFolder}
+        >
           <AddFill className="mx-0 size-4" />
           Add
         </Button>
@@ -43,6 +54,7 @@ export function FolderActions({
         <Button
           aria-label="Import OPML"
           className={FOLDER_ACTION_BUTTON_CLASS}
+          shape="pill"
           variant="secondary"
           onClick={onImportOpml}
         >
@@ -55,6 +67,7 @@ export function FolderActions({
           aria-label="Export OPML"
           className={FOLDER_ICON_BUTTON_CLASS}
           loading={exportingOpml}
+          shape="pill"
           variant="outline"
           onClick={onExportOpml}
         >
@@ -79,6 +92,7 @@ function FolderSummaryActions({
       <RailTooltip label="Manage folders">
         <Button
           className={FOLDER_ACTION_BUTTON_CLASS}
+          shape="pill"
           variant="secondary"
           onClick={onManageFolders}
         >
@@ -90,6 +104,7 @@ function FolderSummaryActions({
         <Button
           aria-label="Import OPML"
           className={FOLDER_ACTION_BUTTON_CLASS}
+          shape="pill"
           variant="secondary"
           onClick={onImportOpml}
         >
@@ -101,6 +116,7 @@ function FolderSummaryActions({
         <Button
           aria-label="Create folder"
           className={FOLDER_ICON_BUTTON_CLASS}
+          shape="pill"
           variant="outline"
           onClick={onAddFolder}
         >
@@ -118,24 +134,18 @@ function FolderSummaryItem({
   folder: RecapFolder;
   onSelect: (folder: RecapFolder) => void;
 }) {
-  const { ref, style } = useSquircle<HTMLButtonElement>(15, 1);
-
   return (
-    <button
-      ref={ref}
-      className="group flex min-h-10 w-full min-w-0 cursor-pointer items-center gap-2.5 p-2 text-left text-base outline-none transition-colors hover:bg-accent/70 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
-      style={style}
-      type="button"
-      onClick={() => onSelect(folder)}
-    >
-      <FolderIconBadge />
-      <span className="min-w-0 flex-1">
-        <span className="block truncate font-medium text-sm leading-5">{folder.name}</span>
-        <span className="block truncate text-muted-foreground text-xs leading-4">
-          {formatFeedCount(folder.feedCount)}
-        </span>
-      </span>
-    </button>
+    <Item shape="squircle" size="sm">
+      <ItemTarget render={<button type="button" onClick={() => onSelect(folder)} />}>
+        <ItemMedia>
+          <FolderIconBadge />
+        </ItemMedia>
+        <ItemContent>
+          <ItemTitle>{folder.name}</ItemTitle>
+          <ItemDescription>{formatFeedCount(folder.feedCount)}</ItemDescription>
+        </ItemContent>
+      </ItemTarget>
+    </Item>
   );
 }
 

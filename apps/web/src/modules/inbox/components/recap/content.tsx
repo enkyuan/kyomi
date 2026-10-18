@@ -1,7 +1,7 @@
 "use client";
 
 import { Folder2Fill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/components/button";
 import { Folders } from "@modules/inbox/components/recap/folders/summary";
 import type {
   InboxRecapRailFolderBackTarget,
@@ -131,7 +131,7 @@ export function RecapContent({
           description="Folders, top sources, and saved items will appear here as you read and organize feeds."
           icon={<Folder2Fill />}
           action={
-            <Button className="rounded-full before:rounded-full" size="sm" onClick={onCreateFolder}>
+            <Button shape="pill" size="sm" onClick={onCreateFolder}>
               Create folder
             </Button>
           }

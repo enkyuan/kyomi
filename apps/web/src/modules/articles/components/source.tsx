@@ -1,7 +1,11 @@
 "use client";
 
 import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
-import { PreviewCard, PreviewCardPopup, PreviewCardTrigger } from "@kyomi/ui/preview-card";
+import {
+  PreviewCard,
+  PreviewCardPopup,
+  PreviewCardTrigger,
+} from "@kyomi/ui/components/preview-card";
 import { getFeedSourceLabel } from "@modules/articles/lib/source-label";
 import { cn } from "@kyomi/ui/lib/utils";
 import { Link } from "@tanstack/react-router";

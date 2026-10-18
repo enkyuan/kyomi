@@ -8,17 +8,30 @@ import {
   SearchLine,
 } from "@kyomi/ui/icons/mingcute";
 import { useRef } from "react";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
-import { Command, CommandEmpty, CommandInput, CommandItem, CommandList } from "@kyomi/ui/command";
-import { Kbd } from "@kyomi/ui/kbd";
-import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+  springTransition,
+} from "@kyomi/ui/lib/motion";
+import {
+  Command,
+  CommandEmpty,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@kyomi/ui/components/command";
+import { Kbd } from "@kyomi/ui/components/kbd";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/components/scroll-area";
 import { useFeedback } from "@kyomi/ui/hooks/use-feedback";
 import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
 import type { DiscoverFeedResult } from "@modules/feeds/lib/api";
 
 export const DISCOVER_RESULTS_UI_CAP = 200;
 type FollowFeedHandler = (item: DiscoverFeedResult, anchor?: HTMLElement | null) => void;
-const FOLLOW_ACTION_ICON_TRANSITION = { type: "spring" as const, duration: 0.3, bounce: 0 };
+const FOLLOW_ACTION_ICON_TRANSITION = springTransition("emphasized");
 const FOLLOW_ACTION_ICON_STATE = {
   opacity: 1,
   scale: 1,

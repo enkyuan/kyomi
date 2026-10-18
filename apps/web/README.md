@@ -47,6 +47,6 @@ env is loaded with `dotenvx` from `docker/.env` and `apps/web/.env`. there is no
 
 ## notes
 
-- UI primitives come from `@kyomi/ui`.
+- UI primitives come from `@kyomi/ui/components/*` (see `packages/ui/README.md`).
 - article rendering comes from `@kyomi/reader`.
 - `src/routeTree.gen.ts` is generated; don't edit it by hand.

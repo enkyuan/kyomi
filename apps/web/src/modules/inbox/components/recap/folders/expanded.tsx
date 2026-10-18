@@ -10,8 +10,17 @@ import {
   PinFill,
   PinLine,
 } from "@kyomi/ui/icons/mingcute";
-import { createSquircleStyle, useSquircle } from "@kyomi/ui/lib/squircle";
-import { useState } from "react";
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemMedia,
+  ItemTarget,
+  ItemTitle,
+} from "@kyomi/ui/components/item";
+import { getSvgPath } from "@kyomi/ui/lib/squircle";
+import { type CSSProperties, useState } from "react";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -20,12 +29,12 @@ import {
   AlertDialogHeader,
   AlertDialogPopup,
   AlertDialogTitle,
-} from "@kyomi/ui/alert-dialog";
-import { Button } from "@kyomi/ui/button";
-import { Input } from "@kyomi/ui/input";
-import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/menu";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
-import { toastManager } from "@kyomi/ui/toast";
+} from "@kyomi/ui/components/alert-dialog";
+import { Button } from "@kyomi/ui/components/button";
+import { Input } from "@kyomi/ui/components/input";
+import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/components/menu";
+import { ScrollArea } from "@kyomi/ui/components/scroll-area";
+import { toastManager } from "@kyomi/ui/components/toast";
 import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import { deleteFolder, updateFolder, type Folder } from "@modules/folders/lib/api";
@@ -39,14 +48,19 @@ import { FolderIconBadge } from "./icon";
 import { FolderActions } from "./summary";
 import { queryKeys } from "@lib/query/keys";
 
-const FOLDER_MANAGE_BUTTON_SIZE_PX = 30;
+const FOLDER_MANAGE_BUTTON_RADIUS_PX = 7;
 
-const folderManageButtonSquircleStyle = createSquircleStyle({
-  width: FOLDER_MANAGE_BUTTON_SIZE_PX,
-  height: FOLDER_MANAGE_BUTTON_SIZE_PX,
-  cornerRadius: 7,
-  cornerSmoothing: 1,
-});
+const manageButtonSquirclePath = (size: number) =>
+  `path('${getSvgPath({ width: size, height: size, cornerRadius: FOLDER_MANAGE_BUTTON_RADIUS_PX, cornerSmoothing: 1 })}')`;
+
+// `icon-xs` buttons are 28px, then 24px from `sm`, so each breakpoint gets a path for its size.
+const folderManageButtonSquircleStyle = {
+  "--squircle": manageButtonSquirclePath(28),
+  "--squircle-sm": manageButtonSquirclePath(24),
+  borderRadius: FOLDER_MANAGE_BUTTON_RADIUS_PX,
+} as CSSProperties;
+const FOLDER_MANAGE_BUTTON_SQUIRCLE_CLASS =
+  "[clip-path:var(--squircle)] sm:[clip-path:var(--squircle-sm)]";
 
 type FolderOption = { label: string; value: string };
 type RemoveFeedsToastOptions = { anchor?: HTMLElement | null; feedName?: string };
@@ -54,15 +68,10 @@ type PinFolderVariables = { folderId: string; isPinned: boolean; name: string };
 type PinFolderContext = { previousFolders?: Folder[]; previousRecap?: InboxRecapDto };
 
 function ExpandedFolderRow({ children }: { children: React.ReactNode }) {
-  const { ref, style } = useSquircle<HTMLDivElement>(16, 1);
   return (
-    <div
-      ref={ref}
-      style={style}
-      className="group flex h-13 w-full min-w-0 items-center gap-2.5 px-2 text-base transition-colors hover:bg-accent/70"
-    >
+    <Item className="min-h-13" shape="squircle" size="sm">
       {children}
-    </div>
+    </Item>
   );
 }
 
@@ -281,6 +290,7 @@ export function ExpandedFolders({
                 />
                 <Button
                   aria-label="Save folder name"
+                  className={FOLDER_MANAGE_BUTTON_SQUIRCLE_CLASS}
                   data-squircle="7"
                   loading={renameMutation.isPending}
                   size="icon-xs"
@@ -292,6 +302,7 @@ export function ExpandedFolders({
                 </Button>
                 <Button
                   aria-label="Cancel rename"
+                  className={FOLDER_MANAGE_BUTTON_SQUIRCLE_CLASS}
                   data-squircle="7"
                   size="icon-xs"
                   style={folderManageButtonSquircleStyle}
@@ -303,65 +314,64 @@ export function ExpandedFolders({
               </ExpandedFolderRow>
             ) : (
               <ExpandedFolderRow key={folder.id}>
-                <button
-                  className="flex min-w-0 flex-1 items-center gap-2.5 rounded-xl text-left outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
-                  type="button"
-                  onClick={() => onSelectFolder(folder)}
+                <ItemTarget
+                  render={<button type="button" onClick={() => onSelectFolder(folder)} />}
                 >
-                  <FolderIconBadge />
-                  <span className="min-w-0 flex-1">
-                    <span className="block truncate font-medium text-sm leading-5">
-                      {folder.name}
-                    </span>
-                    <span className="block truncate text-muted-foreground text-xs leading-4">
-                      {formatFeedCount(folder.feedCount)}
-                    </span>
-                  </span>
-                </button>
-                <Menu>
-                  <MenuTrigger
-                    render={
-                      <Button
-                        aria-label={`Manage ${folder.name}`}
-                        data-squircle="7"
-                        size="icon-xs"
-                        style={folderManageButtonSquircleStyle}
-                        variant="ghost"
-                      >
-                        <More2Fill />
-                      </Button>
-                    }
-                  />
-                  <MenuPopup align="end" className="w-36">
-                    <MenuItem onClick={() => startEditing(folder)}>
-                      <Edit2Fill />
-                      Rename
-                    </MenuItem>
-                    <MenuItem
-                      disabled={pinMutation.isPending}
-                      onClick={() =>
-                        pinMutation.mutate({
-                          folderId: folder.id,
-                          isPinned: !folder.isPinned,
-                          name: folder.name,
-                        })
+                  <ItemMedia>
+                    <FolderIconBadge />
+                  </ItemMedia>
+                  <ItemContent>
+                    <ItemTitle>{folder.name}</ItemTitle>
+                    <ItemDescription>{formatFeedCount(folder.feedCount)}</ItemDescription>
+                  </ItemContent>
+                </ItemTarget>
+                <ItemActions>
+                  <Menu>
+                    <MenuTrigger
+                      render={
+                        <Button
+                          aria-label={`Manage ${folder.name}`}
+                          className={FOLDER_MANAGE_BUTTON_SQUIRCLE_CLASS}
+                          data-squircle="7"
+                          size="icon-xs"
+                          style={folderManageButtonSquircleStyle}
+                          variant="ghost"
+                        >
+                          <More2Fill />
+                        </Button>
                       }
-                    >
-                      {folder.isPinned ? (
-                        <PinFill className="opacity-100 text-amber-500" />
-                      ) : (
-                        <PinLine className="opacity-70 text-muted-foreground" />
-                      )}
-                      {folder.isPinned ? "Unpin" : "Pin"}
-                    </MenuItem>
-                    {!isDefaultFolder ? (
-                      <MenuItem variant="destructive" onClick={() => setDeleteTarget(folder)}>
-                        <span aria-hidden className="size-3" />
-                        Delete
+                    />
+                    <MenuPopup align="end" className="w-36">
+                      <MenuItem onClick={() => startEditing(folder)}>
+                        <Edit2Fill />
+                        Rename
                       </MenuItem>
-                    ) : null}
-                  </MenuPopup>
-                </Menu>
+                      <MenuItem
+                        disabled={pinMutation.isPending}
+                        onClick={() =>
+                          pinMutation.mutate({
+                            folderId: folder.id,
+                            isPinned: !folder.isPinned,
+                            name: folder.name,
+                          })
+                        }
+                      >
+                        {folder.isPinned ? (
+                          <PinFill className="opacity-100 text-amber-500" />
+                        ) : (
+                          <PinLine className="opacity-70 text-muted-foreground" />
+                        )}
+                        {folder.isPinned ? "Unpin" : "Pin"}
+                      </MenuItem>
+                      {!isDefaultFolder ? (
+                        <MenuItem variant="destructive" onClick={() => setDeleteTarget(folder)}>
+                          <span aria-hidden className="size-3" />
+                          Delete
+                        </MenuItem>
+                      ) : null}
+                    </MenuPopup>
+                  </Menu>
+                </ItemActions>
               </ExpandedFolderRow>
             );
           })}

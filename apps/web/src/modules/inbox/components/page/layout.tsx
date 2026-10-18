@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import type { RefObject } from "react";
 import type { useRouter } from "@tanstack/react-router";
-import type { TransitionProps } from "@kyomi/ui/transition";
+import type { TransitionProps } from "@kyomi/ui/components/transition";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-preferences";
 import type { useInboxRouteState, useResponsiveReaderMode } from "@modules/inbox/hooks/use-layout";

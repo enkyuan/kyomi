@@ -3,8 +3,12 @@
 import { startTransition, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
-import { CommandDialog, CommandDialogPortal, CommandDialogPrimitive } from "@kyomi/ui/command";
-import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
+import {
+  CommandDialog,
+  CommandDialogPortal,
+  CommandDialogPrimitive,
+} from "@kyomi/ui/components/command";
+import { anchoredToastManager, toastManager } from "@kyomi/ui/components/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";
 import {
   DISCOVER_SEARCH_RESULT_LIMIT,

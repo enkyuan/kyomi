@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type SyntheticEvent } from "react";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/components/button";
 import {
   Dialog,
   DialogClose,
@@ -11,12 +11,12 @@ import {
   DialogPanel,
   DialogPopup,
   DialogTitle,
-} from "@kyomi/ui/dialog";
-import { Checkbox } from "@kyomi/ui/checkbox";
-import { Field, FieldDescription, FieldLabel } from "@kyomi/ui/field";
-import { Form } from "@kyomi/ui/form";
-import { Input } from "@kyomi/ui/input";
-import { toastManager } from "@kyomi/ui/toast";
+} from "@kyomi/ui/components/dialog";
+import { Checkbox } from "@kyomi/ui/components/checkbox";
+import { Field, FieldDescription, FieldLabel } from "@kyomi/ui/components/field";
+import { Form } from "@kyomi/ui/components/form";
+import { Input } from "@kyomi/ui/components/input";
+import { toastManager } from "@kyomi/ui/components/toast";
 import {
   reportBrokenArticle,
   type InboxItem,

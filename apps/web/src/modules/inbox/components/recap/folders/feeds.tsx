@@ -2,9 +2,9 @@
 
 import { Refresh2Fill, Rss2Fill } from "@kyomi/ui/icons/mingcute";
 import { useEffect, useMemo, useState } from "react";
-import { Button } from "@kyomi/ui/button";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
-import { toastManager } from "@kyomi/ui/toast";
+import { Button } from "@kyomi/ui/components/button";
+import { ScrollArea } from "@kyomi/ui/components/scroll-area";
+import { toastManager } from "@kyomi/ui/components/toast";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import type { RecapFolder } from "@modules/inbox/lib/recap/types";
 import { SectionEmpty } from "@modules/inbox/components/recap/sections";
@@ -210,7 +210,8 @@ export function ExpandedFolderFeeds({
             {selectedFeeds.length === 1 ? "1 selected" : `${selectedFeeds.length} selected`}
           </span>
           <Button
-            className="h-7 rounded-full px-2.5 before:rounded-full"
+            className="h-7 px-2.5"
+            shape="pill"
             size="xs"
             variant="ghost"
             onClick={cancelSelecting}

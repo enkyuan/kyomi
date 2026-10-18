@@ -50,7 +50,7 @@ vi.mock("@modules/inbox/hooks/use-preferences", () => ({
   }),
 }));
 
-vi.mock("@kyomi/ui/button", () => ({
+vi.mock("@kyomi/ui/components/button", () => ({
   Button: ({ children, onClick }: { children: ReactNode; onClick?: () => void }) => (
     <button onClick={onClick} type="button">
       {children}
@@ -58,14 +58,14 @@ vi.mock("@kyomi/ui/button", () => ({
   ),
 }));
 
-vi.mock("@kyomi/ui/sidebar", () => ({
+vi.mock("@kyomi/ui/components/sidebar", () => ({
   SidebarMenuButton: ({ children }: { children: ReactNode }) => (
     <button type="button">{children}</button>
   ),
   SidebarMenuItem: ({ children }: { children: ReactNode }) => <div>{children}</div>,
 }));
 
-vi.mock("@kyomi/ui/select", () => ({
+vi.mock("@kyomi/ui/components/select", () => ({
   Select: ({
     children,
     items,
@@ -90,7 +90,7 @@ vi.mock("@kyomi/ui/select", () => ({
   SelectValue: () => null,
 }));
 
-vi.mock("@kyomi/ui/switch", () => ({
+vi.mock("@kyomi/ui/components/switch", () => ({
   Switch: ({
     checked,
     id,
@@ -106,7 +106,7 @@ vi.mock("@kyomi/ui/switch", () => ({
   ),
 }));
 
-vi.mock("@kyomi/ui/slider", () => ({
+vi.mock("@kyomi/ui/components/slider", () => ({
   SliderComfortable: ({ onChange }: { onChange?: (value: number) => void }) => (
     <button onClick={() => onChange?.(21)} type="button">
       font-size-slider
@@ -114,7 +114,7 @@ vi.mock("@kyomi/ui/slider", () => ({
   ),
 }));
 
-vi.mock("@kyomi/ui/group", () => ({
+vi.mock("@kyomi/ui/components/group", () => ({
   Group: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   GroupSeparator: () => <div />,
 }));
