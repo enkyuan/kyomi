@@ -1,0 +1,256 @@
+# Continuation of .circleci/config.yml. Every job is always part of the `ci`
+# workflow so `ci-summary` can be the one required check; a job whose area did
+# not change finishes in seconds without checking out or installing anything.
+#
+# Local equivalents: docs/ci-cd.md.
+version: 2.1
+
+parameters:
+  app:
+    type: boolean
+    default: false
+  docker:
+    type: boolean
+    default: false
+  catalog:
+    type: boolean
+    default: false
+
+executors:
+  bun:
+    docker:
+      - image: cimg/node:24
+    resource_class: medium
+  bun-services:
+    docker:
+      - image: cimg/node:24
+      - image: postgres:18-alpine
+        environment:
+          POSTGRES_DB: kyomi
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: admin
+      - image: redis:8-alpine
+      - image: getmeili/meilisearch:v1.15
+        environment:
+          MEILI_MASTER_KEY: vols-meili-dev-key
+          MEILI_NO_ANALYTICS: "true"
+    resource_class: medium
+  base:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+
+commands:
+  only-if:
+    description: Run `steps` when `condition` holds; otherwise finish immediately.
+    parameters:
+      condition:
+        type: boolean
+      steps:
+        type: steps
+    steps:
+      - when:
+          condition: << parameters.condition >>
+          steps: << parameters.steps >>
+      - unless:
+          condition: << parameters.condition >>
+          steps:
+            - run:
+                name: Nothing relevant changed
+                command: echo "No changes in this job's paths; skipping."
+
+  setup-bun:
+    description: Install the pinned Bun, restore its package cache, install the workspace.
+    steps:
+      - restore_cache:
+          keys:
+            - bun-v1-{{ arch }}-{{ checksum ".bun-version" }}-{{ checksum "bun.lock" }}
+            - bun-v1-{{ arch }}-{{ checksum ".bun-version" }}-
+      - run:
+          name: Install Bun
+          command: |
+            want="$(cat .bun-version)"
+            if [ "$("$HOME/.bun/bin/bun" --version 2>/dev/null)" != "$want" ]; then
+              curl -fsSL https://bun.sh/install | bash -s "bun-v${want}"
+            fi
+            echo 'export PATH="$HOME/.bun/bin:$PATH"' >> "$BASH_ENV"
+      - run:
+          name: Install dependencies
+          command: bun install --frozen-lockfile
+      - save_cache:
+          key: bun-v1-{{ arch }}-{{ checksum ".bun-version" }}-{{ checksum "bun.lock" }}
+          paths:
+            - ~/.bun
+      - run:
+          # oxfmt/oxlint are invoked via `bunx` from every workspace package.
+          # Installing them once here avoids turbo's parallel tasks racing to
+          # install the same tool into bunx's shared temp cache (ENOENT).
+          name: Prefetch bunx tools
+          command: |
+            bunx oxfmt --version
+            bunx oxlint --version
+
+jobs:
+  static-quality:
+    executor: bun
+    steps:
+      - only-if:
+          condition: << pipeline.parameters.app >>
+          steps:
+            - checkout
+            - setup-bun
+            # Turbo's local cache is content-hashed: packages whose inputs did
+            # not change replay their fmt/lint/typecheck result instead of rerunning.
+            - restore_cache:
+                keys:
+                  - turbo-static-v1-{{ .Branch }}-
+                  - turbo-static-v1-main-
+            - run:
+                name: Static quality (fmt, lint, boundaries, typecheck, drizzle drift)
+                command: bun run ci:static
+            - save_cache:
+                key: turbo-static-v1-{{ .Branch }}-{{ .Revision }}
+                paths:
+                  - .turbo
+
+  web-tests:
+    executor: bun
+    steps:
+      - only-if:
+          condition: << pipeline.parameters.app >>
+          steps:
+            - checkout
+            - setup-bun
+            - run:
+                name: Web integration tests
+                command: bun run ci:test:web
+
+  api-tests:
+    executor: bun-services
+    steps:
+      - only-if:
+          condition: << pipeline.parameters.app >>
+          steps:
+            - checkout
+            - setup-bun
+            - run:
+                name: Wait for Postgres, Redis and Meilisearch
+                command: |
+                  for port in 5432 6379 7700; do
+                    for _ in $(seq 60); do
+                      (echo > "/dev/tcp/127.0.0.1/$port") 2>/dev/null && break
+                      sleep 1
+                    done
+                  done
+                  for _ in $(seq 60); do
+                    curl -fsS http://127.0.0.1:7700/health && break
+                    sleep 1
+                  done
+            - run:
+                name: API integration tests
+                command: bun run ci:test:api
+
+  build:
+    executor: bun
+    steps:
+      - only-if:
+          condition: << pipeline.parameters.app >>
+          steps:
+            - checkout
+            - setup-bun
+            - run:
+                name: Build workspaces
+                command: bun run ci:build
+
+  # Image smoke builds are the slowest job and mostly fail on Dockerfile,
+  # .dockerignore or manifest changes, so a PR builds them only for those;
+  # main builds them after any app change.
+  docker-build:
+    executor: base
+    resource_class: medium
+    steps:
+      - when:
+          condition:
+            or:
+              - << pipeline.parameters.docker >>
+              - and:
+                  - << pipeline.parameters.app >>
+                  - equal: [main, << pipeline.git.branch >>]
+          steps:
+            - checkout
+            - setup_remote_docker
+            - run:
+                name: Build API and Web images
+                command: |
+                  bun_version="$(cat .bun-version)"
+                  docker build --build-arg BUN_VERSION="$bun_version" -f apps/api/Dockerfile -t kyomi-api:ci .
+                  docker build --build-arg BUN_VERSION="$bun_version" -f apps/web/Dockerfile -t kyomi-web:ci .
+      - unless:
+          condition:
+            or:
+              - << pipeline.parameters.docker >>
+              - and:
+                  - << pipeline.parameters.app >>
+                  - equal: [main, << pipeline.git.branch >>]
+          steps:
+            - run:
+                name: Nothing relevant changed
+                command: echo "No Docker-relevant changes; skipping."
+
+  catalog-typecheck:
+    docker:
+      - image: cimg/python:3.13-node
+    resource_class: medium
+    steps:
+      - only-if:
+          condition: << pipeline.parameters.catalog >>
+          steps:
+            - checkout
+            - run:
+                name: Install uv
+                command: |
+                  curl -LsSf https://astral.sh/uv/install.sh | sh
+                  echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$BASH_ENV"
+            - restore_cache:
+                keys:
+                  - uv-catalog-v1-{{ checksum "packages/catalog/uv.lock" }}
+            - setup-bun
+            - run:
+                name: Install catalog dependencies
+                command: bun run --cwd packages/catalog setup
+            - save_cache:
+                key: uv-catalog-v1-{{ checksum "packages/catalog/uv.lock" }}
+                paths:
+                  - ~/.cache/uv
+            - run:
+                name: Typecheck catalog
+                command: bun run --cwd packages/catalog typecheck
+
+  ci-summary:
+    executor: base
+    steps:
+      - run: echo "All required CI jobs passed."
+
+workflows:
+  ci:
+    jobs:
+      # Static checks are the cheapest and catch most failures, so the
+      # expensive jobs wait for them instead of burning credits in parallel.
+      - static-quality
+      - web-tests:
+          requires: [static-quality]
+      - api-tests:
+          requires: [static-quality]
+      - build:
+          requires: [static-quality]
+      - docker-build:
+          requires: [static-quality]
+      - catalog-typecheck
+      - ci-summary:
+          requires:
+            - static-quality
+            - web-tests
+            - api-tests
+            - build
+            - docker-build
+            - catalog-typecheck
