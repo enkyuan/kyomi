@@ -73,6 +73,8 @@ commands:
             if [ "$("$HOME/.bun/bin/bun" --version 2>/dev/null)" != "$want" ]; then
               curl -fsSL https://bun.sh/install | bash -s "bun-v${want}"
             fi
+            # The cache restores bun but not its bunx symlink.
+            ln -sf "$HOME/.bun/bin/bun" "$HOME/.bun/bin/bunx"
             echo 'export PATH="$HOME/.bun/bin:$PATH"' >> "$BASH_ENV"
       - run:
           name: Install dependencies
