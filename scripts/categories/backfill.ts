@@ -336,6 +336,12 @@ export async function mapWithConcurrency<T, R>(
   return results;
 }
 
+// Extracted text only once extraction finished, so backfill classifies from the same text that
+// extraction re-classification used instead of overwriting its labels from the thinner feed text.
+const readyExtractedContentTextSql = sql<string | null>`
+  CASE WHEN ${feedItems.extractedContentStatus} = 'ready' THEN ${feedItems.extractedContentText} END
+`;
+
 function loadItemsPage(feedId: string, limit: number, offset: number, recentDays: number | null) {
   const feedFilter = eq(feedItems.feedId, feedId);
   const whereClause = recentDays
@@ -351,6 +357,7 @@ function loadItemsPage(feedId: string, limit: number, offset: number, recentDays
       title: feedItems.title,
       summary: feedItems.summary,
       contentText: feedItems.contentText,
+      extractedContentText: readyExtractedContentTextSql,
       link: feedItems.link,
       canonicalUrl: feedItems.canonicalUrl,
     })
@@ -373,6 +380,7 @@ function loadItemsForFeeds(feedIds: string[]) {
       title: feedItems.title,
       summary: feedItems.summary,
       contentText: feedItems.contentText,
+      extractedContentText: readyExtractedContentTextSql,
       link: feedItems.link,
       canonicalUrl: feedItems.canonicalUrl,
     })
@@ -589,9 +597,15 @@ type BackfillItemRow = {
   title: string;
   summary: string | null;
   contentText: string | null;
+  /** Set only when source-page extraction is ready. */
+  extractedContentText?: string | null;
   link: string | null;
   canonicalUrl: string;
 };
+
+function classifierContentText(item: BackfillItemRow): string | null {
+  return item.extractedContentText || item.contentText;
+}
 
 type BackfillItemRecord = BackfillItemRow & {
   id: string;
@@ -681,7 +695,7 @@ export function inferItemCategories(
     sourceKind: feed.sourceKind,
     itemTitle: item.title,
     itemSummary: item.summary,
-    itemContentText: item.contentText,
+    itemContentText: classifierContentText(item),
     itemUrl: item.link || item.canonicalUrl,
   }).categories;
 }
@@ -724,7 +738,7 @@ export async function inferItemEmbedding(
         sourceKind: feed.sourceKind,
         itemTitle: item.title,
         itemSummary: item.summary,
-        itemContentText: item.contentText,
+        itemContentText: classifierContentText(item),
         itemUrl: item.link || item.canonicalUrl,
       },
       config,

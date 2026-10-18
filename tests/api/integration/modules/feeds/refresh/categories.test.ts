@@ -49,9 +49,7 @@ describe("runFeedRefresh category ingestion", () => {
       return response;
     });
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     // Explicit-provenance sync runs first, then the classifier sync (which finds explicit
@@ -108,9 +106,7 @@ describe("runFeedRefresh category ingestion", () => {
       return response;
     });
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     expect(fake.categories.some((row) => row.provenance === "feed")).toBe(false);

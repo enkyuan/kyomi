@@ -149,9 +149,7 @@ describe("runFeedRefresh HTML responses", () => {
       );
     });
 
-    const result = await runFeedRefresh(fake.db as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake.db as never, "feed-1");
 
     expect(result.ok).toBe(false);
     expect(result.permanent).toBe(true);
@@ -180,9 +178,7 @@ describe("runFeedRefresh HTML responses", () => {
         ),
     );
 
-    const result = await runFeedRefresh(fake.db as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake.db as never, "feed-1");
 
     expect(result.ok).toBe(false);
     expect(result.permanent).toBe(true);

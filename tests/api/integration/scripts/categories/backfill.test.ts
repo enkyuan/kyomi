@@ -149,6 +149,32 @@ describe("category backfill script", () => {
     expect(labels).toEqual(["Finance & Markets"]);
   });
 
+  test("classifies from ready extracted text instead of thin feed text", () => {
+    const feed = {
+      title: "Daily Links",
+      description: "A mixed collection of links.",
+      url: "https://example.com/feed.xml",
+      link: "https://example.com",
+      sourceKind: "rss",
+    };
+    const item = {
+      title: "Weekly notes",
+      summary: null,
+      contentText: "Read more",
+      link: "https://example.com/weekly-notes",
+      canonicalUrl: "https://example.com/weekly-notes",
+    };
+
+    expect(inferItemCategories(feed, item)).toEqual([]);
+    expect(
+      inferItemCategories(feed, {
+        ...item,
+        extractedContentText:
+          "Investors watch market prices, stock performance, crypto trading, and personal finance.",
+      }).map((category) => category.label),
+    ).toEqual(["Finance & Markets"]);
+  });
+
   test("suppresses broad feed classifier fallback during backfill", () => {
     const result = inferFeedCategories({
       title: "Hacker News",
