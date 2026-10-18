@@ -84,9 +84,19 @@ describe("Scrubber", () => {
       ({ left: 0, right: 100, top: 0, bottom: 44, width: 100, height: 44 }) as DOMRect;
 
     fireEvent.pointerMove(control, { clientX: 52 });
+    // Still item 5, so it is not reported again.
+    fireEvent.pointerMove(control, { clientX: 54 });
     fireEvent.pointerLeave(control);
 
     expect(onPreviewChange.mock.calls).toEqual([[5], [null]]);
+  });
+
+  test("keeps a 44px control when there are too few items to fill it", () => {
+    const { container } = render(<Scrubber aria-label="Timeline" count={1} />);
+    const control = container.querySelector<HTMLElement>("[data-slot=scrubber-control]");
+
+    expect(control?.style.maxWidth).toBe("44px");
+    expect(container.querySelectorAll("[data-slot=scrubber-tick]")).toHaveLength(1);
   });
 
   test("disables the slider when disabled", () => {
