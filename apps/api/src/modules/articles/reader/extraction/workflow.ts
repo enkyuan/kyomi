@@ -188,13 +188,12 @@ export async function reclassifyExtractedFeedItem(
       },
       remainingChipSlots + explicitLabels.length,
     );
-    // An abstention carries no new information, and these rows share the refresh classifier's
-    // model id, so writing it would erase the labels refresh assigned from the feed text.
-    if (keywordClassification.categories.length > 0) {
-      const keywordInferredLabels = keywordClassification.categories
-        .filter((category) => !explicitLabelSet.has(category.label))
-        .slice(0, remainingChipSlots);
-
+    const keywordInferredLabels = keywordClassification.categories
+      .filter((category) => !explicitLabelSet.has(category.label))
+      .slice(0, remainingChipSlots);
+    // No usable label carries no new information, and these rows share the refresh classifier's
+    // model id, so writing an empty set would erase the labels refresh assigned from feed text.
+    if (keywordInferredLabels.length > 0) {
       await syncItemInferences(
         database,
         {
@@ -234,13 +233,13 @@ export async function reclassifyExtractedFeedItem(
       config,
       remainingChipSlots + explicitLabels.length,
     );
-    // Same as the keyword pass: an abstention keeps the labels refresh already wrote.
-    if (classification.categories.length === 0) {
-      return;
-    }
     const inferredCategoryLabels = classification.categories
       .filter((category) => !explicitLabelSet.has(category.label))
       .slice(0, remainingChipSlots);
+    // Same as the keyword pass: no usable label keeps the labels refresh already wrote.
+    if (inferredCategoryLabels.length === 0) {
+      return;
+    }
 
     await syncItemInferences(
       database,

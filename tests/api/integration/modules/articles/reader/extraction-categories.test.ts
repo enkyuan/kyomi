@@ -232,6 +232,38 @@ describe("reclassifyExtractedFeedItem", () => {
     expect(fake.feedItemCategoryAssignments).toEqual(existing);
   });
 
+  test("keeps existing item rows when every category is already an explicit label", async () => {
+    const existing = [
+      { id: "keyword-1", feedItemId: "item-1", provenance: "classifier", modelId: "keyword-v1" },
+      { id: "embedding-1", feedItemId: "item-1", provenance: "classifier", modelId: "voyage-4" },
+    ];
+    const fake = createCategoryDb({
+      explicitLabels: ["Software Engineering"],
+      existingAssignments: existing,
+    });
+    globalThis.fetch = (async (_url: string, init: RequestInit) => {
+      const body = JSON.parse(init.body as string) as { input: string[] };
+      const embeddings = body.input.map((_, i) =>
+        body.input.length > 1 ? (i < 4 ? UNIT_X : ORTHOGONAL_Z) : UNIT_X,
+      );
+      return new Response(
+        JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
+        { status: 200 },
+      );
+    }) as unknown as typeof fetch;
+
+    await reclassifyExtractedFeedItem(
+      fake as never,
+      article(),
+      "Extracted full text about compilers, build systems, and package managers.",
+      { embeddingClassifier: FAKE_CONFIG },
+    );
+
+    expect(fake.deletes).toEqual([]);
+    expect(fake.categories).toEqual([]);
+    expect(fake.feedItemCategoryAssignments).toEqual(existing);
+  });
+
   test("embeds only the opening of long extracted text", async () => {
     const fake = createCategoryDb();
     const itemInputs: string[] = [];

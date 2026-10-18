@@ -336,11 +336,21 @@ export async function mapWithConcurrency<T, R>(
   return results;
 }
 
-// Extracted text only once extraction finished, so backfill classifies from the same text that
-// extraction re-classification used instead of overwriting its labels from the thinner feed text.
-const readyExtractedContentTextSql = sql<string | null>`
-  CASE WHEN ${feedItems.extractedContentStatus} = 'ready' THEN ${feedItems.extractedContentText} END
-`;
+/**
+ * Item columns both loaders select. Extracted text is read only once extraction finished, so
+ * backfill classifies from the same text extraction re-classification used instead of
+ * overwriting its labels from the thinner feed text.
+ */
+export const backfillItemColumns = {
+  title: feedItems.title,
+  summary: feedItems.summary,
+  contentText: feedItems.contentText,
+  extractedContentText: sql<string | null>`
+    CASE WHEN ${feedItems.extractedContentStatus} = 'ready' THEN ${feedItems.extractedContentText} END
+  `,
+  link: feedItems.link,
+  canonicalUrl: feedItems.canonicalUrl,
+};
 
 function loadItemsPage(feedId: string, limit: number, offset: number, recentDays: number | null) {
   const feedFilter = eq(feedItems.feedId, feedId);
@@ -352,15 +362,7 @@ function loadItemsPage(feedId: string, limit: number, offset: number, recentDays
     : feedFilter;
 
   return db
-    .select({
-      id: feedItems.id,
-      title: feedItems.title,
-      summary: feedItems.summary,
-      contentText: feedItems.contentText,
-      extractedContentText: readyExtractedContentTextSql,
-      link: feedItems.link,
-      canonicalUrl: feedItems.canonicalUrl,
-    })
+    .select({ id: feedItems.id, ...backfillItemColumns })
     .from(feedItems)
     .where(whereClause)
     .orderBy(desc(feedItems.publishedAt), desc(feedItems.id))
@@ -374,16 +376,7 @@ function loadItemsForFeeds(feedIds: string[]) {
   }
 
   return db
-    .select({
-      id: feedItems.id,
-      feedId: feedItems.feedId,
-      title: feedItems.title,
-      summary: feedItems.summary,
-      contentText: feedItems.contentText,
-      extractedContentText: readyExtractedContentTextSql,
-      link: feedItems.link,
-      canonicalUrl: feedItems.canonicalUrl,
-    })
+    .select({ id: feedItems.id, feedId: feedItems.feedId, ...backfillItemColumns })
     .from(feedItems)
     .where(inArray(feedItems.feedId, feedIds))
     .orderBy(feedItems.feedId, desc(feedItems.publishedAt), desc(feedItems.id));
@@ -603,8 +596,9 @@ type BackfillItemRow = {
   canonicalUrl: string;
 };
 
+// `??`, not `||`: a ready extraction with empty text is what extraction re-classified from.
 function classifierContentText(item: BackfillItemRow): string | null {
-  return item.extractedContentText || item.contentText;
+  return item.extractedContentText ?? item.contentText;
 }
 
 type BackfillItemRecord = BackfillItemRow & {

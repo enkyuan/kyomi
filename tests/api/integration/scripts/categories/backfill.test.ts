@@ -1,10 +1,12 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { PgDialect } from "drizzle-orm/pg-core";
 import {
   EMBEDDING_CLASSIFIER_MODEL_ID,
   resetPrototypeCache,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
 import {
+  backfillItemColumns,
   inferFeedCategories,
   inferItemEmbedding,
   inferItemCategories,
@@ -173,6 +175,23 @@ describe("category backfill script", () => {
           "Investors watch market prices, stock performance, crypto trading, and personal finance.",
       }).map((category) => category.label),
     ).toEqual(["Finance & Markets"]);
+    // A ready extraction with empty text is what extraction re-classified from, so it wins.
+    expect(
+      inferItemCategories(feed, {
+        ...item,
+        contentText:
+          "Investors watch market prices, stock performance, crypto trading, and finance.",
+        extractedContentText: "",
+      }),
+    ).toEqual([]);
+  });
+
+  test("loads extracted text only for items whose extraction is ready", () => {
+    const query = new PgDialect().sqlToQuery(backfillItemColumns.extractedContentText);
+
+    expect(query.sql).toContain(
+      `CASE WHEN "feed_items"."extracted_content_status" = 'ready' THEN "feed_items"."extracted_content_text" END`,
+    );
   });
 
   test("suppresses broad feed classifier fallback during backfill", () => {
