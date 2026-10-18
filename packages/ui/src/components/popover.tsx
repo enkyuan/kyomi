@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/only-export-components */
 "use client";
 
 import { Popover as PopoverPrimitive } from "@base-ui/react/popover";

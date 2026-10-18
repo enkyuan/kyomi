@@ -10,15 +10,7 @@ import {
   PinFill,
   PinLine,
 } from "@kyomi/ui/icons/mingcute";
-import {
-  Item,
-  ItemActions,
-  ItemContent,
-  ItemDescription,
-  ItemMedia,
-  ItemTarget,
-  ItemTitle,
-} from "@kyomi/ui/components/item";
+import { Item, ItemActions } from "@kyomi/ui/components/item";
 import { getSvgPath } from "@kyomi/ui/lib/squircle";
 import { type CSSProperties, useState } from "react";
 import {
@@ -42,10 +34,10 @@ import { applyFolderPinState } from "@modules/inbox/queries/cache";
 import type { RecapFolder } from "@modules/inbox/lib/recap/types";
 import type { InboxRecapDto } from "@modules/inbox/lib/recap/schema";
 import { SectionEmpty } from "@modules/inbox/components/recap/sections";
-import { formatFeedCount, invalidateRecapSurface } from "@modules/inbox/lib/recap/index";
+import { invalidateRecapSurface } from "@modules/inbox/lib/recap/index";
 import { ExpandedFolderFeeds } from "./feeds";
 import { FolderIconBadge } from "./icon";
-import { FolderActions } from "./summary";
+import { FolderActions, FolderItemTarget } from "./summary";
 import { queryKeys } from "@lib/query/keys";
 
 const FOLDER_MANAGE_BUTTON_RADIUS_PX = 7;
@@ -314,17 +306,7 @@ export function ExpandedFolders({
               </ExpandedFolderRow>
             ) : (
               <ExpandedFolderRow key={folder.id}>
-                <ItemTarget
-                  render={<button type="button" onClick={() => onSelectFolder(folder)} />}
-                >
-                  <ItemMedia>
-                    <FolderIconBadge />
-                  </ItemMedia>
-                  <ItemContent>
-                    <ItemTitle>{folder.name}</ItemTitle>
-                    <ItemDescription>{formatFeedCount(folder.feedCount)}</ItemDescription>
-                  </ItemContent>
-                </ItemTarget>
+                <FolderItemTarget folder={folder} onSelect={onSelectFolder} />
                 <ItemActions>
                   <Menu>
                     <MenuTrigger

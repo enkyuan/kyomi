@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/only-export-components */
 "use client";
 
 import { Menu as MenuPrimitive } from "@base-ui/react/menu";

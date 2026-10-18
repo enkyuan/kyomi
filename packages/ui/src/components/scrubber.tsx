@@ -209,7 +209,8 @@ export function Scrubber({
   const labelRef = useRef<HTMLDivElement>(null);
   const tickRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const separatorRefs = useRef<(HTMLSpanElement | null)[]>([]);
-  const motion = useRef<ScrubberMotion>(createScrubberMotion());
+  const [initialMotion] = useState(createScrubberMotion);
+  const motion = useRef<ScrubberMotion>(initialMotion);
   const reducedMotion = usePrefersReducedMotion();
   const width = useElementWidth(controlRef);
   const slots = slotCount(count, width);
@@ -258,12 +259,13 @@ export function Scrubber({
     return () => cancelAnimationFrame(state.frame);
   }, []);
 
+  const preview = useRef<number | null>(null);
   const onPreview = useCallback(
     (next: number | null) => {
-      setPreviewIndex((previous) => {
-        if (previous !== next) onPreviewChange?.(next);
-        return next;
-      });
+      if (preview.current === next) return;
+      preview.current = next;
+      setPreviewIndex(next);
+      onPreviewChange?.(next);
     },
     [onPreviewChange],
   );

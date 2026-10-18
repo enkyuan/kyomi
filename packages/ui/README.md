@@ -24,16 +24,16 @@ in `package.json`, so a file that is not exported is private.
 `styles/theme.css` holds every token. Primitives use them instead of arbitrary values; app code
 should reach for a primitive variant before restyling one.
 
-| Token | Utility | Use |
-| --- | --- | --- |
-| `--highlight` | `bg-highlight`, `text-highlight` | Current-position indicators (scrubber preview tick) |
-| `--muted-solid` | `bg-muted-solid` | Opaque muted chrome that floats over content |
-| `--muted-subtle` | `text-muted-subtle` | Placeholders, shortcuts, inactive tabs (muted at 72%) |
-| `--tracking-title` | `tracking-title` | Tight list and article titles (−0.012em) |
-| `--ease-out-quint` | `ease-out-quint` | Default UI ease-out: presses, popovers, label swaps |
-| `--ease-in-out-quart` | `ease-in-out-quart` | On-screen movement between two positions |
-| `--ease-standard` | `ease-standard` | Crossfades and blur reveals |
-| `--ease-drawer` | `ease-drawer` | Sheets and drawers (iOS curve) |
+| Token                 | Utility                          | Use                                                   |
+| --------------------- | -------------------------------- | ----------------------------------------------------- |
+| `--highlight`         | `bg-highlight`, `text-highlight` | Current-position indicators (scrubber preview tick)   |
+| `--muted-solid`       | `bg-muted-solid`                 | Opaque muted chrome that floats over content          |
+| `--muted-subtle`      | `text-muted-subtle`              | Placeholders, shortcuts, inactive tabs (muted at 72%) |
+| `--tracking-title`    | `tracking-title`                 | Tight list and article titles (−0.012em)              |
+| `--ease-out-quint`    | `ease-out-quint`                 | Default UI ease-out: presses, popovers, label swaps   |
+| `--ease-in-out-quart` | `ease-in-out-quart`              | On-screen movement between two positions              |
+| `--ease-standard`     | `ease-standard`                  | Crossfades and blur reveals                           |
+| `--ease-drawer`       | `ease-drawer`                    | Sheets and drawers (iOS curve)                        |
 
 Motion in JavaScript uses `springTransition(kind, prefersReducedMotion)` from
 `@kyomi/ui/lib/motion`: bounce-free springs (`quick` 0.24s, `standard` 0.28s, `emphasized` 0.3s)
@@ -65,9 +65,9 @@ that become instant under reduced motion. `EASE_OUT_QUINT` mirrors the CSS curve
 </ButtonGroup>
 ```
 
-`ButtonLabel` crossfades a changed label through a 2px blur and animates the button's width to the
-new text. It never animates on first render and swaps instantly under reduced motion. For arrow-key
-roving between segments, render the group as a toolbar:
+`ButtonLabel` crossfades a changed label through a 2px blur; the button's width snaps to the new
+text rather than tweening a layout property. It never animates on first render and swaps instantly
+under reduced motion. For arrow-key roving between segments, render the group as a toolbar:
 `<ButtonGroup render={<ToolbarPrimitive.Root />}>` with `ToolbarButton` children.
 
 ## Menu
