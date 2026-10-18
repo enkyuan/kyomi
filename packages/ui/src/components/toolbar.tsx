@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/only-export-components */
 "use client";
 
 import { Toolbar as ToolbarPrimitive } from "@base-ui/react/toolbar";

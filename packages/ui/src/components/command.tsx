@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/only-export-components */
 "use client";
 
 import { Dialog as CommandDialogPrimitive } from "@base-ui/react/dialog";

@@ -127,6 +127,27 @@ function FolderSummaryActions({
   );
 }
 
+/** The folder's icon, name, and feed count as the row's main button, which opens the folder. */
+export function FolderItemTarget({
+  folder,
+  onSelect,
+}: {
+  folder: RecapFolder;
+  onSelect: (folder: RecapFolder) => void;
+}) {
+  return (
+    <ItemTarget render={<button type="button" onClick={() => onSelect(folder)} />}>
+      <ItemMedia>
+        <FolderIconBadge />
+      </ItemMedia>
+      <ItemContent>
+        <ItemTitle>{folder.name}</ItemTitle>
+        <ItemDescription>{formatFeedCount(folder.feedCount)}</ItemDescription>
+      </ItemContent>
+    </ItemTarget>
+  );
+}
+
 function FolderSummaryItem({
   folder,
   onSelect,
@@ -136,15 +157,7 @@ function FolderSummaryItem({
 }) {
   return (
     <Item shape="squircle" size="sm">
-      <ItemTarget render={<button type="button" onClick={() => onSelect(folder)} />}>
-        <ItemMedia>
-          <FolderIconBadge />
-        </ItemMedia>
-        <ItemContent>
-          <ItemTitle>{folder.name}</ItemTitle>
-          <ItemDescription>{formatFeedCount(folder.feedCount)}</ItemDescription>
-        </ItemContent>
-      </ItemTarget>
+      <FolderItemTarget folder={folder} onSelect={onSelect} />
     </Item>
   );
 }

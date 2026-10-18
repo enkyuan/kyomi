@@ -5,7 +5,7 @@ import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { cn } from "../lib/utils";
 import { GroupSeparator, GroupText, groupVariants } from "./group";
 import { Spinner } from "./spinner";
@@ -212,8 +212,9 @@ export interface ButtonLabelProps extends React.ComponentProps<"span"> {
 }
 
 /**
- * Button text that crossfades through a light blur and morphs the button's width when it changes,
- * e.g. "Dark" ↔ "Light". The first render never animates; reduced motion swaps instantly.
+ * Button text that crossfades through a light blur when it changes, e.g. "Dark" ↔ "Light". The
+ * button's width snaps to the new text: tweening `width` would re-run layout on every frame. The
+ * first render never animates; reduced motion swaps instantly.
  */
 export function ButtonLabel({
   children,
@@ -224,43 +225,18 @@ export function ButtonLabel({
   const key =
     labelKey ??
     (typeof children === "string" || typeof children === "number" ? children : undefined);
-  const rootRef = useRef<HTMLSpanElement>(null);
-  const width = useRef(0);
   const previous = useRef<{ key: typeof key; node: React.ReactNode }>({ key, node: children });
   const [exiting, setExiting] = useState<{ id: number; node: React.ReactNode } | null>(null);
   const [generation, setGeneration] = useState(0);
   const exitCount = useRef(0);
 
-  useEffect(() => {
-    const root = rootRef.current;
-    if (!root) return;
-    const observer = new ResizeObserver(([entry]) => {
-      if (entry) width.current = entry.borderBoxSize[0]?.inlineSize ?? entry.contentRect.width;
-    });
-    observer.observe(root);
-    return () => observer.disconnect();
-  }, []);
-
   useLayoutEffect(() => {
     const last = previous.current;
-    if (key === undefined || last.key === key) {
-      previous.current = { key, node: children };
-      return;
-    }
     previous.current = { key, node: children };
-    const root = rootRef.current;
-    if (!root || prefersReducedMotion()) return;
+    if (key === undefined || last.key === key || prefersReducedMotion()) return;
     setGeneration((current) => current + 1);
     exitCount.current += 1;
     setExiting({ id: exitCount.current, node: last.node });
-    const from = width.current;
-    const to = root.getBoundingClientRect().width;
-    if (from > 0 && Math.abs(from - to) > 0.5) {
-      root.animate([{ width: `${from}px` }, { width: `${to}px` }], {
-        duration: 200,
-        easing: LABEL_EASING,
-      });
-    }
   }, [key, children]);
 
   return (
@@ -270,7 +246,6 @@ export function ButtonLabel({
         className,
       )}
       data-slot="button-label"
-      ref={rootRef}
       {...props}
     >
       <span

@@ -1,3 +1,4 @@
+/* oxlint-disable react-doctor/only-export-components */
 "use client";
 
 import { Tooltip as TooltipPrimitive } from "@base-ui/react/tooltip";

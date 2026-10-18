@@ -139,6 +139,10 @@ describe("ButtonLabel", () => {
     const ghost = screen.getByText("Dark");
     expect(ghost.closest("[aria-hidden]")).not.toBeNull();
     expect(animate).toHaveBeenCalled();
+    const animatedProperties = animate.mock.calls.flatMap(([keyframes]) =>
+      (keyframes as Keyframe[]).flatMap((frame) => Object.keys(frame)),
+    );
+    expect(animatedProperties).not.toContain("width");
   });
 
   test("swaps instantly when the user prefers reduced motion", () => {
