@@ -19,7 +19,6 @@ export default defineConfig({
       "@hooks": join(webSrc, "hooks"),
       "@integrations": join(webSrc, "integrations"),
       "@lib": join(webSrc, "lib"),
-      "@utils": join(webSrc, "utils"),
       src: webSrc,
     },
   },

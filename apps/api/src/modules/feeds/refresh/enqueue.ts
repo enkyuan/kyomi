@@ -1,6 +1,6 @@
 import { feeds } from "@kyomi/db";
 import { and, eq, notInArray, sql } from "drizzle-orm";
-import { publishJob } from "@adapters/queue/publish-job";
+import { publishJob } from "@adapters/queue/publish";
 import { getRedis } from "@adapters/redis";
 import type { db } from "@adapters/db/client";
 

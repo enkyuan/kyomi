@@ -5,12 +5,13 @@ import { Platform, Pressable, Text, View, useWindowDimensions } from "react-nati
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import type { SharedValue } from "react-native-reanimated";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
-import { useTabBarMinimize, useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
-import { FeedFavicon } from "@modules/inbox/components/feed-favicon";
-import { feedItemTypography } from "@modules/inbox/lib/layout";
-import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
+import { useOptionalTabBarMinimize, useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
+import { EmptyStateIcon } from "@/components/icons/empty-state";
+import { FeedFavicon } from "@modules/articles/components/feed-favicon";
+import { feedItemTypography } from "@modules/articles/lib/layout";
+import { formatArticleTimestamp } from "@modules/articles/lib/format-timestamp";
 import { FONT_STYLES } from "@/theme/fonts";
-import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
+import { getFeedSourceLabel } from "@modules/articles/lib/source-label";
 import type { RecentArticle } from "../lib/history";
 import {
   getRecentHistoryInitialOffset,
@@ -41,7 +42,7 @@ export function RecentList({
   const initialScrollOffset = getRecentHistoryInitialOffset(headerHeight, isIOS);
   const listRef = useRef<ComponentRef<typeof AnimatedLegendList<RecentArticle>>>(null);
   const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
-  const { reset: resetTabBarMinimize } = useTabBarMinimize();
+  const resetTabBarMinimize = useOptionalTabBarMinimize()?.reset;
   const minimizeScrollHandler = useTabBarMinimizeScroll(scrollY);
 
   useFocusEffect(
@@ -50,7 +51,7 @@ export function RecentList({
       // each visit starts at the latest viewed item rather than restoring a
       // previous reading position.
       onScrollReset();
-      resetTabBarMinimize();
+      resetTabBarMinimize?.();
       scrollY.set(initialScrollOffset);
       resetRecentHistoryScroll(
         listRef.current?.getNativeScrollRef() as NativeScrollable | undefined,
@@ -100,7 +101,7 @@ export function RecentList({
 function RecentHistoryItem({ article, isFirst }: { article: RecentArticle; isFirst: boolean }) {
   const { metaFontSizePx, titleFontSizePx, titleLineHeightPx } = feedItemTypography;
   const sourceLabel = getFeedSourceLabel(article.link, article.feedTitle);
-  const viewedLabel = `Viewed ${formatInboxTimestamp(article.viewedAt)}`;
+  const viewedLabel = `Viewed ${formatArticleTimestamp(article.viewedAt)}`;
 
   return (
     <View className="relative">
@@ -161,10 +162,11 @@ function RecentHistoryEmptyState() {
 
   return (
     <View
-      className="flex-1 items-center justify-center pb-24"
+      className="flex-1 items-center justify-center gap-5 pb-24"
       style={{ paddingHorizontal: emptyHorizontalInset }}
     >
-      <View className="w-full items-center">
+      <EmptyStateIcon size={176} />
+      <View className="w-full items-center gap-2">
         <Text
           className="text-center text-foreground"
           numberOfLines={2}
@@ -173,11 +175,12 @@ function RecentHistoryEmptyState() {
           No recently viewed articles
         </Text>
         <Text
-          className="mt-2 text-center text-muted-foreground"
+          className="text-center text-muted-foreground"
+          lineBreakStrategyIOS="standard"
           numberOfLines={2}
           style={FONT_STYLES.bodySmall}
         >
-          Open a feed item to keep it here for later.
+          Older saved posts and clips will surface here after they've been waiting a while.
         </Text>
       </View>
     </View>

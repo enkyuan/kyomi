@@ -3,8 +3,12 @@
 import { startTransition, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
-import { CommandDialog, CommandDialogPortal, CommandDialogPrimitive } from "@kyomi/ui/command";
-import { anchoredToastManager, toastManager } from "@kyomi/ui/toast";
+import {
+  CommandDialog,
+  CommandDialogPortal,
+  CommandDialogPrimitive,
+} from "@kyomi/ui/components/command";
+import { anchoredToastManager, toastManager } from "@kyomi/ui/components/toast";
 import { isPlatformModifierShortcut, type PlatformState } from "@hooks/use-platform";
 import {
   DISCOVER_SEARCH_RESULT_LIMIT,
@@ -20,15 +24,16 @@ import {
   pollOpmlImportStatus,
 } from "@modules/feeds/lib/opml";
 import {
+  invalidateFeedAndInboxQueries,
   markDiscoverFeedSubscribed,
   setDiscoverFeedSubscribed,
 } from "@modules/feeds/queries/cache";
-import { invalidateFeedAndInboxQueries } from "@modules/inbox/queries/options";
 import {
   DISCOVER_RESULTS_UI_CAP,
   FollowSourcesCommand,
   type FollowSourcesCommandState,
 } from "./command";
+import { queryKeys } from "@lib/query/keys";
 
 /** Cap list rows so opening the dialog never mounts thousands of command items in one commit. */
 const DISCOVER_QUERY_DEBOUNCE_MS = 260;
@@ -248,7 +253,7 @@ export function FollowSourcesDialog({
       markDiscoverFeedSubscribed(queryClient, { url: result.url, feedId: result.feedId });
       invalidateFeedAndInboxQueries(queryClient);
       await queryClient.invalidateQueries({
-        queryKey: ["folders"],
+        queryKey: queryKeys.folders.all,
       });
     },
     onError: (error, _variables, context) => {
@@ -345,7 +350,7 @@ export function FollowSourcesDialog({
           }
 
           invalidateFeedAndInboxQueries(queryClient);
-          await queryClient.invalidateQueries({ queryKey: ["folders"] });
+          await queryClient.invalidateQueries({ queryKey: queryKeys.folders.all });
 
           return finalStatus;
         } finally {

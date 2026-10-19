@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, mock, test } from "bun:test";
 import { getTableName, type SQL } from "drizzle-orm";
 import { PgDialect } from "drizzle-orm/pg-core";
-import { isNonRetryableFeedRefreshFailure } from "@app/jobs/refresh-errors";
+import { isNonRetryableFeedRefreshFailure } from "@app/jobs/classify";
 import { runFeedRefresh } from "@kyomi/worker";
 
 const originalFetch = globalThis.fetch;

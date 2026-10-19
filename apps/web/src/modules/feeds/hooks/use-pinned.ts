@@ -15,10 +15,10 @@ import {
   getFollowedFeedsSnapshot,
   restoreFeedCacheSnapshot,
 } from "../queries/cache";
+import { queryKeys } from "@lib/query/keys";
 
 export { applyPinnedState };
 
-const FOLLOWED_FEEDS_QUERY_KEY = ["feeds", "followed"] as const;
 const PINNED_FEED_IDS_STORAGE_KEY = "kyomi:pinned-feed-ids";
 const PINNED_FEED_IDS_MIGRATION_KEY_PREFIX = "kyomi:pinned-feed-ids:migrated:v1";
 const PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX = "kyomi:pinned-feed-ids:migration-started:v1";
@@ -119,7 +119,7 @@ export function usePinnedFeedIds() {
   const queryClient = useQueryClient();
   const migrationRunningForKeyRef = useRef<string | null>(null);
   const { data: followedFeedsData, isSuccess: isFollowedFeedsSuccess } = useQuery({
-    queryKey: FOLLOWED_FEEDS_QUERY_KEY,
+    queryKey: queryKeys.feeds.followed,
     queryFn: () => listFollowedFeeds(),
   });
 
@@ -127,7 +127,7 @@ export function usePinnedFeedIds() {
     mutationFn: ({ feedId, pinned }: { feedId: string; pinned: boolean }) =>
       updateFeedSubscription({ data: { feedId, isPinned: pinned } }),
     onMutate: async ({ feedId, pinned }) => {
-      await queryClient.cancelQueries({ queryKey: FOLLOWED_FEEDS_QUERY_KEY });
+      await queryClient.cancelQueries({ queryKey: queryKeys.feeds.followed });
       const snapshot = getFollowedFeedsSnapshot(queryClient);
       applyPinnedFeedState(queryClient, feedId, pinned);
       return { snapshot };
@@ -136,7 +136,7 @@ export function usePinnedFeedIds() {
       restoreFeedCacheSnapshot(queryClient, context?.snapshot);
     },
     onSettled: () => {
-      void queryClient.invalidateQueries({ queryKey: FOLLOWED_FEEDS_QUERY_KEY });
+      void queryClient.invalidateQueries({ queryKey: queryKeys.feeds.followed });
     },
   });
 
@@ -194,7 +194,7 @@ export function usePinnedFeedIds() {
         });
       }
       migrationRunningForKeyRef.current = null;
-      void queryClient.invalidateQueries({ queryKey: FOLLOWED_FEEDS_QUERY_KEY });
+      void queryClient.invalidateQueries({ queryKey: queryKeys.feeds.followed });
     });
   }, [followedFeedsData, isFollowedFeedsSuccess, queryClient, user?.id]);
 

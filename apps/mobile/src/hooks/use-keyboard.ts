@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Keyboard, Platform, type KeyboardEvent } from "react-native";
 
 export function useKeyboard() {
@@ -27,5 +27,9 @@ export function useKeyboard() {
     return () => subscriptions.forEach((subscription) => subscription.remove());
   }, []);
 
-  return { height, isVisible: height > 0 };
+  const dismissKeyboard = useCallback(() => {
+    Keyboard.dismiss();
+  }, []);
+
+  return { height, isVisible: height > 0, dismissKeyboard };
 }

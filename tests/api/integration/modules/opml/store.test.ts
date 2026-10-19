@@ -1,7 +1,7 @@
 import { describe, expect, mock, test } from "bun:test";
 import { AppError } from "@shared/errors/app";
-import { encodeOpmlFailureCursor } from "@modules/opml/failure-cursor";
-import { encodeOpmlImportCursor } from "@modules/opml/import-cursor";
+import { encodeOpmlFailureCursor } from "@modules/opml/cursor/failure";
+import { encodeOpmlImportCursor } from "@modules/opml/cursor/import";
 import {
   buildOpmlImportSummary,
   cancelPendingOpmlItems,

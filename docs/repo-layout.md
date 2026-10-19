@@ -17,7 +17,9 @@ This repository follows a monorepo shape modeled after larger production repos:
 
 ## Shared UI (`packages/ui`)
 
-- `src/*.tsx`: shadcn-style primitives (import `@kyomi/ui/button`, etc.).
+- `src/components/*.tsx`: shadcn/coss-style Base UI primitives (import `@kyomi/ui/components/button`, etc.); multi-file primitives live in `src/components/<name>/index.tsx`.
+- `src/hooks/`, `src/lib/`, `src/native/`: shared hooks, utilities (`@kyomi/ui/lib/motion`, `lib/utils`), and native-safe contracts.
+- `src/styles/`: `globals.css` entrypoint (`@kyomi/ui/globals.css`) plus token and CSS modules (`@kyomi/ui/styles/*`). See `packages/ui/README.md`.
 - `src/icons/`: product illustrations and empty-state artwork (`@kyomi/ui/icons/…`). See `src/icons/README.md` before adding new icons.
 
 ## Current Shared Baselines

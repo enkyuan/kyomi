@@ -28,13 +28,20 @@ apps/web/src/
     components/<area>/
     hooks/
     layouts/
-    lib/
-    queries/
-    services/
-    utils/
+    lib/                   Pure helpers, types, and `api.ts` server functions
+    queries/               Query options and cache helpers
     page.tsx
   routes/                  TanStack route files and API handlers
 ```
+
+Modules depend on each other in one direction only:
+
+```text
+sidebar, settings, auth -> inbox -> reader -> articles -> feeds, folders, preferences
+```
+
+`src/lib`, `src/hooks`, and `src/integrations` sit below every module and never import one.
+`bun run check:boundaries` fails on a module cycle (type imports included) or an upward import.
 
 - Add only the subdirectories a domain needs.
 - Keep `src/routes` focused on route definitions, loaders, validated search, guards, metadata, and
@@ -43,10 +50,13 @@ apps/web/src/
   reuse across domains is real.
 - Put cross-domain browser or isomorphic infrastructure in `src/lib/<capability>` and provider
   composition in `src/integrations/<provider>`.
+- Put code that several domains build on in the lowest module that owns it (`articles` for the
+  article entity) instead of importing upward.
+- Put query keys that several domains read or write, or that the hot cache persists, in
+  `src/lib/query/keys.ts`. Keep single-domain keys and query options in the module's `queries/`.
 - Keep hooks in the owning module. Use root `src/hooks` only for hooks with multiple domain
   consumers.
-- Prefer concrete cross-domain imports when a barrel would create an inbox, feeds, sidebar, reader,
-  or preferences cycle.
+- Import concrete module paths. Do not add module-root barrels.
 
 ## Name files and surfaces
 
@@ -59,6 +69,12 @@ apps/web/src/
 - Use `index.tsx` for an area's primary component once its directory supplies the context. Add
   `index.ts` only as an intentional surface, not a single-use barrel.
 - Name a single-hook file `use-<purpose>.ts`; keep exported hook symbols prefixed with `use`.
+- Name every other file for its function, not its call site: do not repeat the parent directory or
+  module (`app/shell.tsx`, `feeds/components/favicon.tsx`), avoid `shared`, `helpers`, `root`, or
+  `functions`, keep server functions in `api.ts`, and do not wrap a single file in a directory.
+  Read the Web naming rules in
+  [repository-organization.md](../architecture/references/repository-organization.md#web-naming)
+  before renaming, and move the mirrored test, `vi.mock` strings, and path mentions with the file.
 
 ## Preserve runtime and package boundaries
 
@@ -67,7 +83,7 @@ apps/web/src/
 - Keep secrets, filesystem work, privileged provider calls, and server-only dependencies behind a
   validated `createServerFn` or API boundary.
 - Do not import `@tanstack/react-start/server` from route files. Put server functions in the owning
-  module service and call them from loaders.
+  module's `lib/api.ts` (or `lib/<area>/api.ts`) and call them from loaders.
 - Import shared UI, icons, utilities, motion, and styles through `@kyomi/ui/*`.
 - Import article behavior through the appropriate `@kyomi/reader` entrypoint.
 - Import `LazyMotion`, `m`, `domAnimation`, or `domMax` from `@kyomi/ui/motion`; use `domMax` only

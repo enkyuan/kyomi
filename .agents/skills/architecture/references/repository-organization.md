@@ -9,6 +9,8 @@ Kyomi paradigms before applying general preferences.
 - [Placement rules](#placement-rules)
 - [Growth inside domains](#growth-inside-domains)
 - [Naming](#naming)
+  - [API naming](#api-naming)
+  - [Web naming](#web-naming)
 - [Imports and public surfaces](#imports-and-public-surfaces)
 - [Generated and platform artifacts](#generated-and-platform-artifacts)
 - [Review checklist](#review-checklist)
@@ -81,14 +83,14 @@ modules/<domain>/
   layouts/
   lib/
   queries/
-  services/
-  utils/
   page.tsx
-  index.ts
 ```
 
 Do not add every directory to every domain. Keep an area's primary component in `index.tsx` when the
-directory already supplies its context. Use module-root barrels only as intentional public surfaces.
+directory already supplies its context. Put a web module's server functions in `lib/api.ts`. Web
+modules depend on each other in one direction (`sidebar`, `settings`, `auth` -> `inbox` -> `reader`
+-> `articles` -> `feeds`, `folders`, `preferences`); put shared domain code in the lowest owning
+module instead of importing upward.
 
 For API modules, group by product domain and then by behavior:
 
@@ -124,13 +126,124 @@ Create only the roles the domain needs. Keep `routes.ts` as the HTTP boundary an
 - Use snake*case for Python modules and `test*\*.py` if Python tests are introduced.
 - Keep directories shallow and do not use numeric prefixes to force display order.
 
+### API naming
+
+`apps/api` follows the general rules above plus the rules below. They are modeled on cal.com's
+backend, where the directory carries the domain and the file name carries the role:
+`apps/api/v2/src/modules/<domain>/{controllers,services,inputs,outputs,guards}` with
+`<domain>.repository.ts`, and the tRPC `<procedure>.handler.ts` / `<procedure>.schema.ts` pairs
+under `packages/trpc/server/routers/viewer/<domain>/`. Kyomi has no DI container or classes, so the
+role is the basename (flat module directories, no `.controller.ts` suffix) and tests stay under
+`tests/api`.
+
+| Kyomi role file | cal.com analogue | Holds |
+| --- | --- | --- |
+| `routes.ts` | `*.controller.ts`, `_router.tsx` | Elysia HTTP boundary; validates, authenticates, delegates |
+| `schemas.ts`, `types.ts` | `inputs/`, `outputs/`, `*.schema.ts` | TypeBox wire contracts; DTO types |
+| `queries.ts` | `*.repository.ts` | Read-side SQL |
+| `operations.ts`, `mutations.ts` | `services/`, `*.handler.ts` | Behavior and writes |
+| `guard.ts`, `middleware.ts`, `plugin.ts` | `guards/`, `pipes/`, `decorators/` | Request interceptors and Elysia plugins |
+| `client.ts`, `instance.ts`, provider name (`meili.ts`, `pino.ts`) | `prisma/`, `redis/` modules | Outbound connections, configured SDK instances, and provider adapters |
+
+Rules:
+
+1. Name the file for its role in the request or job path; use a precise domain term when no role
+   word fits (`memberships.ts`, `cursor.ts`, `enrichment.ts`).
+2. Use one word. The path already supplies the domain, so drop any word the directories say
+   (`adapters/auth/otp.ts`, `shared/net/outbound.ts`, `app/jobs/health.ts`, `modules/opml/fetch.ts`).
+   When two files in one directory would differ only by a qualifier, group them under a directory
+   named for the shared noun and name each by its qualifier (`opml/cursor/failure.ts`,
+   `opml/cursor/import.ts`) instead of hyphenating. A hyphenated basename needs a reason that a
+   directory cannot carry.
+3. Do not repeat the immediate parent directory (`adapters/auth/instance.ts`, not `auth/auth.ts`).
+   Layer directories (`app`, `adapters`, `modules`, `shared`, `config`) are not domains and do not
+   count.
+4. Role words keep one meaning. `queries` is database reads, so querystring parsing is
+   `params.ts`, not `query.ts`; `schemas` is TypeBox, so a file of TypeBox schemas is never
+   `dto.ts`; avoid vague names such as `internal`, `stub`, `status`, `helpers`, `lib`, or `utils`
+   when a function-specific word exists (`persistence.ts`, `params.ts`, `mark.ts`).
+5. Do not wrap a single file in a directory (`recap/lib/types.ts` is `recap/types.ts`).
+6. In `app/boot`, name process entrypoints for their role (`server`, `worker`, `scheduler`, `dev`)
+   and operator scripts for one word of their `package.json` script key (`catalog:import` runs
+   `import.ts`, `category:audit` runs `audit.ts`); the README maps each script to its file. Update
+   `package.json`, the Dockerfile `CMD`, and compose commands together.
+7. Keep tool-mandated or path-sensitive names: `config/env/runtime.ts`, `config/version.ts`
+   (reads `../../package.json` relative to itself, so it stays in `src/config`), `src/index.ts`
+   (the package `module` entry), and `index.ts` only where an adapter or area is an intentional
+   surface.
+8. Tests mirror the source path and basename
+   (`tests/api/integration/<path under apps/api/src>/<basename>.test.ts`); behavior-spanning tests
+   (`detail-tags`, `process-roles`, schema SQL checks) sit under their owning directory. A rename
+   moves the mirror and updates `mock.module` strings, path-reading tests, and template imports in
+   the same change.
+
+Where API naming differs from web: no `use-*` hook files, no `index.tsx` primary-component files,
+no `components/hooks/lib/layouts` directory tiers, and no enforced module-stack ordering (web's
+`check:boundaries` tiers do not apply to API modules). API modules stay flat by role and are
+isolated by the `modules/<domain>` boundary and the `adapters`/`shared` direction instead.
+
+### Web naming
+
+`apps/web` follows the general rules above plus the rules below. They are derived from cal.com's
+`apps/web` (github.com/calcom/cal.com, now served from `calcom/cal.diy`; read 2026-10-18):
+`modules/<domain>/{components,hooks,views,lib}` hold product behavior, `app/**` route files use
+framework-mandated names (`page`, `layout`, `loading`, `error`, `route`) beside role files such as
+`actions.ts` and `skeleton.tsx`, page-level client components are `<name>-view.tsx`, and `lib/`
+files are named for what they do (`buildNonce`, `getThemeProviderProps`, `validateCsrfToken`,
+`core/http/error/http-error.ts`).
+cal.com spells components `PascalCase.tsx` and hooks `useCamelCase.ts`; Kyomi keeps kebab-case for
+every authored file (`use-*.ts` hooks, lowercase component files) and keeps tests under `tests/web`
+instead of beside source.
+
+| Kyomi file | cal.com analogue | Holds |
+| --- | --- | --- |
+| `page.tsx`, `layout.tsx` | `modules/<domain>/*-view.tsx`, `app/**/layout.tsx` | A module's page entry and layout composition |
+| `index.tsx` | `components/<Area>/index.tsx` | An area's primary component once its directory names it |
+| `use-<purpose>.ts` | `hooks/use<Purpose>.ts` | One hook; the file names the purpose, the symbol carries the module |
+| `api.ts` | `app/**/actions.ts` | `createServerFn` server functions and their client types |
+| `options.ts`, `cache.ts` | none (Kyomi's TanStack Query layer) | Query options and cache mutations |
+| `types.ts`, `constants.ts` | `types.ts`, `lib/constants.ts` | Shared types and constants for the directory |
+| `-loader.ts`, `-component.tsx` | `lib/<route>/getServerSideProps.ts` | Route-adjacent files the router ignores (`-` prefix) |
+| `hydration.ts`, `urls.ts`, a precise term | `lib/buildNonce.ts`, `lib/getThemeProviderProps.ts` | Named for the function the file performs |
+
+Rules:
+
+1. Name the file for what it does or the role it plays; a precise domain term beats a vague role
+   word. Avoid `shared`, `helpers`, `utils`, `root`, or `functions` when a function-specific name
+   exists (`headings.tsx`, `urls.ts`, `index.tsx`, `api.ts`).
+2. Do not repeat the immediate parent directory or the owning module in a source basename
+   (`app/shell.tsx`, `feeds/components/favicon.tsx`, `appearance/inbox.tsx`). Hook files are the
+   exception: `use-<purpose>.ts` names the purpose even when the module name is part of the symbol
+   (`preferences/hooks/use-preferences.ts`), and `sidebar/components/app-sidebar.tsx` keeps `app` to
+   stay distinct from the `@kyomi/ui` sidebar primitive.
+3. Keep basenames to about two semantic words (the `use-` prefix does not count); a third word is
+   acceptable only to avoid a collision.
+4. Role words keep one meaning. `queries/` is TanStack Query options, so a file that builds API
+   URLs is `urls.ts`, not `query.ts`. Server functions live in `api.ts` (`lib/api.ts`,
+   `lib/<area>/api.ts`), never in `functions.ts`.
+5. Do not wrap a single file in a directory (`detail/blur.tsx`, not `detail/chrome/blur.tsx`) and do
+   not use `index.ts` for a grab bag of constants unless the directory is an intentional surface
+   (`inbox/lib/recap/index.ts`, `inbox/lib/layout/index.ts`, and `modules/auth/index.ts`).
+6. Group files by capability, not by call site: query-client helpers live in `lib/query/`
+   (`lib/query/hydration.ts`), auth helpers in `lib/auth/`.
+7. Keep framework- and tool-mandated names: `routes/**` file names and `-` prefixed route-adjacent
+   files, `routeTree.gen.ts`, `router.tsx`, `styles.css`, `katex.d.ts`, `vite.config.ts`, and the
+   Start entry names. The service worker source is `service-worker.ts`; `vite.config.ts` reads it by
+   path, so rename it together with `package.json` scripts.
+8. Tests mirror the source path and basename
+   (`tests/web/integration/src/<path under apps/web/src>/<basename>.test.ts(x)`). A rename moves the
+   mirror in the same change and updates `vi.mock` and dynamic-import strings, `package.json`
+   `reactDoctor` file overrides, and path mentions in docs and comments.
+9. Do not add a `vi.mock` for a module path that does not exist; a stale mock silently stops
+   mocking after a move.
+
 ## Imports and public surfaces
 
 - Import shared code through `@kyomi/*` package exports, not `packages/*/src` paths.
 - Do not import application source from packages.
 - Use the aliases owned by each workspace; aliases do not change ownership.
-- Prefer concrete paths across web domains when a barrel would create feeds, inbox, sidebar, or
-  reader cycles.
+- Import concrete paths across web domains instead of module-root barrels, and
+  `check:boundaries` rejects upward imports, module cycles, and shared code that imports a module.
 - Add `index.ts` only for a package entrypoint, a deliberate module surface, or an area's primary
   component. Do not add a barrel for one caller.
 

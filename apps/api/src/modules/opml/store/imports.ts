@@ -2,7 +2,7 @@ import { and, desc, eq, inArray, lt, or, sql } from "drizzle-orm";
 import { opmlImports } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app";
-import { decodeOpmlImportCursor, encodeOpmlImportCursor } from "../import-cursor";
+import { decodeOpmlImportCursor, encodeOpmlImportCursor } from "../cursor/import";
 import { assertOpmlSourceAdmission } from "../parse";
 import type { OpmlImportCounters, OpmlImportStatus } from "../types";
 

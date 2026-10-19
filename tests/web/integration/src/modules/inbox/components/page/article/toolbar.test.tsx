@@ -1,14 +1,14 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
 import { ReaderToolbar } from "@modules/inbox/components/page/article/toolbar";
-import type { ToolbarModel, ToolbarProps } from "@modules/toolbar/lib/types";
+import type { ToolbarModel, ToolbarProps } from "@modules/reader/lib/toolbar";
 
 vi.mock("@kyomi/ui/hooks/use-media-query", () => ({
   useMediaQuery: () => false,
 }));
 
-vi.mock("@kyomi/ui/motion", async (importOriginal) => {
-  const motion = await importOriginal<typeof import("@kyomi/ui/motion")>();
+vi.mock("@kyomi/ui/lib/motion", async (importOriginal) => {
+  const motion = await importOriginal<typeof import("@kyomi/ui/lib/motion")>();
 
   return {
     ...motion,

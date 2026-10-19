@@ -1,22 +1,14 @@
 "use client";
 
-import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/scroll-area";
+import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/components/scroll-area";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
 import { readerViewportContentInsetClass, type DetailViewProps } from "@modules/reader/lib/detail";
 import { useEffect, useRef, useState } from "react";
-import { BlurLayer } from "./chrome/blur";
+import { BlurLayer } from "./blur";
 import { ContentView } from "./content";
 
 const DETAIL_BACK_BUTTON_BLUR_OFFSET = 52;
-
-export type {
-  ArticleStepDirection,
-  DetailHeaderState,
-  DetailSurface,
-  DetailViewProps,
-  ReaderDetailState,
-} from "@modules/reader/lib/detail";
 
 // oxlint-disable-next-line eslint/complexity
 export function Detail({
@@ -132,7 +124,7 @@ export function Detail({
       <ScrollAreaPrimitive.Root className="relative min-h-0 flex-1 overflow-hidden">
         <ScrollAreaPrimitive.Viewport
           ref={viewportRef}
-          className="h-full overflow-x-hidden outline-none scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain scroll-mask-b-from-88%"
+          className="h-full overflow-x-hidden outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain scroll-mask-b-from-88%"
           data-reader-detail-viewport=""
           data-slot="scroll-area-viewport"
         >

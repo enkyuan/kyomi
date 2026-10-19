@@ -5,7 +5,7 @@ import { Suspense, useReducer } from "react";
 import { Link } from "@tanstack/react-router";
 import { AddFill, Settings1Fill } from "@kyomi/ui/icons/mingcute";
 import { KyomiLogo, PremiumIcon } from "@kyomi/ui/icons";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
+import { ScrollArea } from "@kyomi/ui/components/scroll-area";
 import {
   Sidebar,
   SidebarFooter,
@@ -13,16 +13,16 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@kyomi/ui/sidebar";
+} from "@kyomi/ui/components/sidebar";
 import { cn } from "@kyomi/ui/lib/utils";
 import { lazyNamed } from "@lib/lazy-named";
-import { useScope } from "@hooks/use-scope";
+import { useScope } from "@modules/sidebar/hooks/use-scope";
 import { INBOX_PREVIOUS_FEED_ID_STATE_KEY } from "@modules/inbox/lib/layout/history";
 import { APP_SIDEBAR_WIDTH } from "../lib/constants";
-import { useAppSidebar } from "../hooks/app";
-import { usePinnedSection } from "../hooks/pinned";
-import { useInboxPrefetch } from "../hooks/inbox";
-import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
+import { useAppSidebar } from "../hooks/use-app-sidebar";
+import { usePinnedSection } from "../hooks/use-pinned-section";
+import { useInboxPrefetch } from "../hooks/use-inbox-prefetch";
+import { FeedFavicon } from "@modules/feeds/components/favicon";
 
 const FollowSourcesDialog = lazyNamed(
   () => import("@modules/feeds/components/follow/dialog"),
@@ -35,8 +35,8 @@ const SettingsDialog = lazyNamed(
 
 const CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS = cn(
   "size-10 justify-center rounded-full! p-0",
-  "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-border))]",
-  "active:scale-[0.96] active:bg-sidebar-accent active:text-sidebar-accent-foreground active:shadow-[0_0_0_1px_hsl(var(--sidebar-border))]",
+  "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_var(--sidebar-border)]",
+  "active:scale-[0.96] active:bg-sidebar-accent active:text-sidebar-accent-foreground active:shadow-[0_0_0_1px_var(--sidebar-border)]",
   "motion-reduce:active:scale-100",
   "group-data-[collapsible=icon]:size-10! group-data-[collapsible=icon]:p-0!",
 );

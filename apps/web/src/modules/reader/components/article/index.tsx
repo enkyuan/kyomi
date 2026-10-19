@@ -1,16 +1,23 @@
 "use client";
 
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
-import { Timestamp } from "@modules/inbox/components/timestamp";
-import { Categories } from "@modules/feeds/components/item/categories";
-import { Source } from "@modules/feeds/components/item/source";
-import { getTypography } from "@modules/feeds/lib/layout";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+  springTransition,
+} from "@kyomi/ui/lib/motion";
+import { Timestamp } from "@modules/articles/components/timestamp";
+import { Categories } from "@modules/articles/components/categories";
+import { Source } from "@modules/articles/components/source";
+import { getTypography } from "@modules/articles/lib/typography";
 import { Toolbar } from "../toolbar";
-import { useReaderToolbar } from "@hooks/use-toolbar";
-import type { ToolbarModel } from "@modules/toolbar/lib/types";
+import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
+import type { ToolbarModel } from "@modules/reader/lib/toolbar";
 import { ReaderContent } from "@kyomi/reader/web";
-import { Button } from "@kyomi/ui/button";
-import { Spinner } from "@kyomi/ui/spinner";
+import { Button } from "@kyomi/ui/components/button";
+import { Spinner } from "@kyomi/ui/components/spinner";
 import type {
   ArticleDetailDto,
   InboxDensityDto,
@@ -137,11 +144,7 @@ function FloatingReaderToolbar({
                       y: -12,
                     }
               }
-              transition={
-                prefersReducedMotion
-                  ? { duration: 0 }
-                  : { type: "spring", duration: 0.28, bounce: 0 }
-              }
+              transition={springTransition("standard", prefersReducedMotion)}
             >
               <Toolbar {...toolbar.toolbarProps} variant="floating" />
             </m.div>
@@ -215,7 +218,7 @@ function ReaderArticleHeader({
       />
       <div className="flex flex-wrap items-start justify-between gap-3">
         <p
-          className="min-w-0 flex-1 font-semibold tracking-[-0.012em] text-foreground"
+          className="min-w-0 flex-1 font-semibold tracking-title text-foreground"
           style={{
             fontSize: `${titleFontSizePx}px`,
             lineHeight: `${titleLineHeightPx}px`,

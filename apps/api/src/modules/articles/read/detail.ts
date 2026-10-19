@@ -8,6 +8,7 @@ import {
   buildArticleReaderDto,
   buildExtractedReaderViewFromDb,
   buildStoredReaderContent,
+  normalizeMarkdownFeedArtifacts,
 } from "../reader/content";
 import { articleIsReadSql } from "./sql";
 import { categoryLabelsSql } from "./labels";
@@ -62,7 +63,8 @@ function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto 
     legacyContent: decodeNullableText(row.content),
     contentHtml: row.contentHtml,
     contentText: decodeNullableText(row.contentText),
-    contentMarkdown: row.contentMarkdown,
+    contentMarkdown:
+      row.contentMarkdown === null ? null : normalizeMarkdownFeedArtifacts(row.contentMarkdown),
     contentStatus,
     contentSource,
     extractionErrorCode: row.extractionErrorCode,
@@ -96,7 +98,8 @@ function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto 
     imageUrl: row.imageUrl,
     contentHtml: row.contentHtml,
     contentText: decodeNullableText(row.contentText),
-    contentMarkdown: row.contentMarkdown,
+    contentMarkdown:
+      row.contentMarkdown === null ? null : normalizeMarkdownFeedArtifacts(row.contentMarkdown),
     contentStatus,
     contentSource,
     extractionErrorCode: row.extractionErrorCode,

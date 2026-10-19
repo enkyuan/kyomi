@@ -5,7 +5,7 @@ import { describe, expect, test, vi } from "vitest";
 import { Article } from "@modules/reader/components/article";
 import type { ArticleDetailDto, ReaderContentDto } from "@kyomi/reader/schemas";
 
-vi.mock("@modules/feeds/components/item/source", () => ({
+vi.mock("@modules/articles/components/source", () => ({
   Source: ({ feedTitle }: { feedTitle: string }) => <div>{feedTitle}</div>,
 }));
 
@@ -13,11 +13,7 @@ vi.mock("@kyomi/reader/web", () => ({
   ReaderContent: () => <div>Reader body</div>,
 }));
 
-vi.mock("@hooks/use-timestamp", () => ({
-  useTimestamp: () => {},
-}));
-
-vi.mock("@hooks/use-toolbar", () => ({
+vi.mock("@modules/reader/hooks/use-toolbar", () => ({
   useReaderToolbar: ({ item }: { item: ArticleDetailDto }) => ({
     articleClassName: "",
     articleStyle: {},

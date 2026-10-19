@@ -1,6 +1,5 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
 import { defineConfig, transformWithEsbuild } from "vite";
 import type { Plugin } from "vite";
 import { devtools } from "@tanstack/devtools-vite";
@@ -69,7 +68,7 @@ function staticAssetServiceWorkerPlugin(): Plugin {
         return;
       }
 
-      const serviceWorkerSource = await readFile("sw.plugin.ts", "utf8");
+      const serviceWorkerSource = await readFile("service-worker.ts", "utf8");
 
       const urls = Object.values(bundle)
         .filter((asset) => asset.fileName.startsWith("assets/"))
@@ -79,7 +78,7 @@ function staticAssetServiceWorkerPlugin(): Plugin {
       const version = createHash("sha256").update(urls.join("\n")).digest("hex").slice(0, 16);
 
       const source = (
-        await transformWithEsbuild(serviceWorkerSource, "sw.plugin.ts", {
+        await transformWithEsbuild(serviceWorkerSource, "service-worker.ts", {
           format: "iife",
           loader: "ts",
           target: "esnext",
@@ -119,7 +118,7 @@ const config = defineConfig(({ command }) => {
         "react",
         "react-dom",
         "@kyomi/ui/icons/mingcute",
-        "@kyomi/ui/motion",
+        "@kyomi/ui/lib/motion",
         "@tanstack/react-query",
         "@tanstack/react-router",
         "@tanstack/react-virtual",
@@ -160,9 +159,6 @@ const config = defineConfig(({ command }) => {
           }),
         ],
     resolve: {
-      alias: {
-        "@styles": fileURLToPath(new URL("./src/styles", import.meta.url)),
-      },
       dedupe: ["react", "react-dom"],
     },
   };

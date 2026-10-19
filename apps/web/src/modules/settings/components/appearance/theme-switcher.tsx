@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Field, FieldItem, FieldLabel } from "@kyomi/ui/field";
-import { Fieldset, FieldsetLegend } from "@kyomi/ui/fieldset";
-import { Radio, RadioGroup } from "@kyomi/ui/radio-group";
+import { Field, FieldItem, FieldLabel } from "@kyomi/ui/components/field";
+import { Fieldset, FieldsetLegend } from "@kyomi/ui/components/fieldset";
+import { Radio, RadioGroup } from "@kyomi/ui/components/radio-group";
 import { THEME_STORAGE_KEY } from "@lib/shell/keys";
 
 const items = [

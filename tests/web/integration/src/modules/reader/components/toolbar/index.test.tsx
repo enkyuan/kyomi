@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
 import { Toolbar } from "@modules/reader/components/toolbar";
-import type { ToolbarProps } from "@modules/toolbar/lib/types";
+import type { ToolbarProps } from "@modules/reader/lib/toolbar";
 
 vi.mock("@kyomi/ui/hooks/use-media-query", () => ({
   useMediaQuery: () => false,

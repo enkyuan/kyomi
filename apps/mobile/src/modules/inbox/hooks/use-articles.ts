@@ -5,11 +5,12 @@ import {
   exploreArticlesPath,
   exploreArticlesPrefetchKey,
   subscribedArticlesPath,
-} from "@modules/inbox/lib/articles";
+} from "@modules/articles/lib/requests";
+import {
+  exploreArticlesQueryKey,
+  subscribedArticlesQueryKey,
+} from "@modules/articles/queries/keys";
 import type { ArticleListItemDto, CursorListResponseDto } from "@kyomi/reader/schemas/article";
-
-export const subscribedArticlesQueryKey = ["inbox", "articles", "subscribed"] as const;
-export const exploreArticlesQueryKey = ["inbox", "articles", "explore"] as const;
 
 export type ArticleScope = "subscribed" | "explore";
 

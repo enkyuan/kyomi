@@ -5,7 +5,3 @@ export type OrganizationMembershipDto = {
   plan: string;
   role: string;
 };
-
-export type UserMembershipsResponseDto = {
-  items: OrganizationMembershipDto[];
-};

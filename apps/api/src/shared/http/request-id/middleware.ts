@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 import { SERVICE_NAME } from "@config/constants";
-import { propagateOrMintRequestId } from "@shared/utils/request-id";
+import { propagateOrMintRequestId } from "@shared/http/request-id/headers";
 
 /** Propagates or mints `x-request-id` on the response and exposes it on the context. */
 export const requestIdMiddleware = new Elysia({

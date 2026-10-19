@@ -3,19 +3,16 @@
 import { useMemo } from "react";
 import { useAuth } from "@integrations/better-auth/provider";
 import { READER_PREFERENCES_STORAGE_KEY } from "@lib/shell/keys";
-import { usePreferences } from "@hooks/use-preferences";
-import { getReaderPreferences, updateReaderPreferences } from "@modules/preferences/reader";
+import { usePreferences } from "@modules/preferences/hooks/use-preferences";
 import {
   DEFAULT_READER_PREFERENCES,
   getReaderPreferenceLimits,
+  getReaderPreferences,
   normalizeReaderPreferencePatch,
   sanitizeReaderPreferences,
-  type ReaderContentWidth,
-  type ReaderDefaultMode,
+  updateReaderPreferences,
   type ReaderPreferences,
 } from "../lib/preferences";
-
-export type { ReaderContentWidth, ReaderDefaultMode, ReaderPreferences };
 
 function readerPreferencesQueryKey(userId?: string) {
   return ["me", "preferences", "reader", userId ?? "anonymous"] as const;

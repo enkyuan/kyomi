@@ -4,14 +4,17 @@ import { useNavigate, useParams, useSearch } from "@tanstack/react-router";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
 import type { InboxMarkReadBehaviorDto } from "@kyomi/reader/schemas";
-import type { InboxPreferences } from "./use-inbox-data";
-import { getInboxItemIdFromSlug } from "../lib/articles/slug";
-import type { InboxFilter, InboxSort } from "../lib/articles/index";
+import type { InboxPreferences } from "./use-preferences";
+import { getInboxItemIdFromSlug } from "@modules/articles/lib/slug";
+import type { InboxFilter, InboxSort } from "@modules/articles/lib/api";
 import type { InboxRecapRailFolderBackTarget, InboxRecapRailSection } from "../lib/recap/index";
 
+// Both thresholds are measured content-column widths, not viewport breakpoints: the app shell
+// subtracts the sidebar column and its padding from the viewport, so they sit below `md` (800px)
+// and `xl` (1280px) on purpose. The viewport fallbacks below use the shared breakpoint names.
 const INBOX_DESKTOP_MIN_WIDTH_PX = 768;
-// Matches the `xl` breakpoint the recap rail used to key off of via a raw Tailwind `xl:flex`
-// class, now checked against the measured content column instead of raw viewport width.
+// The recap rail used to show from the `xl` viewport breakpoint; 1200px of content column is
+// roughly what remains of an `xl` viewport once the sidebar is laid out.
 const INBOX_RECAP_RAIL_MIN_CONTAINER_WIDTH_PX = 1200;
 
 type InboxItemLike = { id: string; isRead: boolean } | null;
@@ -35,7 +38,7 @@ type InboxRouteNavigateOptions = {
   replace?: boolean;
 };
 
-export type InboxLayoutVariant = "split" | "stacked";
+type InboxLayoutVariant = "split" | "stacked";
 
 function parseSearchFlag(value: string | undefined) {
   if (!value) {

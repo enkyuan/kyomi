@@ -1,10 +1,10 @@
 import { getRedis } from "@adapters/redis";
 import { logger } from "@adapters/logger";
 import { env } from "@config/env";
-import { createApp } from "../http/create-app";
+import { createApp } from "../http/app";
 import { listenWithRetry } from "../http/listen";
-import { runFeedRefreshSchedulerLoop } from "../jobs/refresh-scheduler";
-import { runWorkerLoop } from "../jobs/run-worker";
+import { runFeedRefreshSchedulerLoop } from "../jobs/scheduler";
+import { runWorkerLoop } from "../jobs/consumer";
 
 const controller = new AbortController();
 

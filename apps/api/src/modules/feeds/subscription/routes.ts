@@ -2,7 +2,7 @@ import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { enforceRateLimitForContext } from "@adapters/rate-limit/plugin";
 import { v1HandlerContext } from "@shared/http/v1/context";
-import { uuidParam } from "@shared/http/v1/stub";
+import { uuidParam } from "@shared/http/v1/params";
 import {
   bulkMoveFeedsToFolder,
   bulkUnsubscribeFromFeeds,
@@ -10,7 +10,7 @@ import {
   updateFeedSubscriptionSettings,
 } from "./mutations";
 import { getFeedDetailForUser, listSubscribedFeeds } from "../read/queries";
-import * as dto from "../dto";
+import * as dto from "../schemas";
 import { enqueueFeedRefresh } from "../refresh/enqueue";
 import { createOrSubscribeToFeed, subscribeToExistingFeed } from "./subscribe";
 

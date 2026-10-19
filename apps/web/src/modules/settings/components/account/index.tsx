@@ -2,12 +2,12 @@
 
 import { CheckFill, CloseFill, Edit2Fill, User3Fill, WaveHandFill } from "@kyomi/ui/icons/mingcute";
 import { useAuth } from "@integrations/better-auth/provider";
-import { Badge } from "@kyomi/ui/badge";
-import { Button } from "@kyomi/ui/button";
-import { Frame } from "@kyomi/ui/frame";
-import { Group } from "@kyomi/ui/group";
-import { Input } from "@kyomi/ui/input";
-import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/sidebar";
+import { Badge } from "@kyomi/ui/components/badge";
+import { Button } from "@kyomi/ui/components/button";
+import { Frame } from "@kyomi/ui/components/frame";
+import { Group } from "@kyomi/ui/components/group";
+import { Input } from "@kyomi/ui/components/input";
+import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 import {
   Table,
   TableBody,
@@ -16,9 +16,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@kyomi/ui/table";
-import { useAccountPanel } from "@modules/settings/hooks/account";
-import { SettingHeading } from "../appearance/shared";
+} from "@kyomi/ui/components/table";
+import { useAccountPanel } from "@modules/settings/hooks/use-account-panel";
+import { SettingHeading } from "../appearance/headings";
 
 export const accountSection = {
   description: "Manage your account details, connected accounts, and security settings.",
@@ -179,10 +179,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
                           {describeSessionDevice(sessionItem.userAgent).label}
                         </span>
                         {sessionItem.isCurrent ? (
-                          <Badge
-                            size="sm"
-                            className="text-petrol-green bg-petrol-green/20 border-transparent font-semibold tracking-wider"
-                          >
+                          <Badge className="font-semibold tracking-wider" size="sm" variant="mizu">
                             Current
                           </Badge>
                         ) : null}
