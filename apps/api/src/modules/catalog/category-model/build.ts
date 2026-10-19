@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, renameSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import {
   CANONICAL_CATEGORY_LABELS,
@@ -141,7 +141,11 @@ export async function buildCategoryModel(input: {
   });
   const report = crossValidateCategoryModel(examples, input.labels, input.options);
   const model = trainCategoryModel(examples, input.labels, input.version, input.options);
-  writeFileSync(WEIGHTS_MODULE_PATH, renderWeightsModule(model, examples.length, input.options));
+  // Written beside the target and renamed into place, so an interrupted or concurrent build
+  // never leaves the worker importing a truncated module; the last finished build wins.
+  const temporaryPath = `${WEIGHTS_MODULE_PATH}.${process.pid}.${Date.now()}.tmp`;
+  writeFileSync(temporaryPath, renderWeightsModule(model, examples.length, input.options));
+  renameSync(temporaryPath, WEIGHTS_MODULE_PATH);
   return {
     model,
     report,
