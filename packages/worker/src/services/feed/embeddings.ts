@@ -14,21 +14,19 @@ import type {
 } from "./classifier";
 import { MAX_CLASSIFIER_LABELS } from "./classifier";
 
+/** Kyomi's embeddings Worker (apps/embeddings), which serves BGE-M3 from Workers AI. */
 export type EmbeddingClassifierConfig = {
+  /** Bearer token for the Worker. */
   apiKey: string;
-  model?: string;
-  /** Embeddings endpoint; defaults to Voyage's public API. */
-  apiUrl?: string;
+  /** The Worker's `/embed` URL. */
+  apiUrl: string;
   /** Optional per-request timeout for best-effort callers that must not block user flows. */
   timeoutMs?: number;
-  /** Optional per-provider cutoff for article category similarity. */
+  /** Overrides the calibrated article cutoff; for evals and tests. */
   itemSimilarityThreshold?: number;
-  /** Optional per-provider cutoff for feed category similarity. */
+  /** Overrides the calibrated feed cutoff; for evals and tests. */
   feedSimilarityThreshold?: number;
-  /**
-   * Optional per-provider gap from the top score within which a second category is still
-   * admitted. Unset, every category over the cutoff qualifies.
-   */
+  /** Overrides the calibrated secondary-label margin; for evals and tests. */
   secondaryLabelMargin?: number;
 };
 
@@ -40,37 +38,31 @@ export type CategorySelectionRule = {
   secondaryMargin?: number;
 };
 
-const DEFAULT_VOYAGE_MODEL = EMBEDDING_CLASSIFIER_MODEL_ID;
-const DEFAULT_VOYAGE_API_URL = "https://api.voyageai.com/v1/embeddings";
-// Voyage defaults, tuned against tests/api/integration/modules/feeds/refresh/classifier-eval-fixture.ts
-// via classifier-eval-embedding.test.ts (live Voyage API). Other providers score on a different
-// scale and set their own cutoffs and secondary-label margin in the API's provider config.
-//
-// With no margin, a second category is admitted whenever it clears the cutoff. On Voyage a margin
-// didn't separate genuinely dual-topic headlines (e.g. "Congress debates AI regulation" ->
-// Politics & Policy + AI & ML, gap ~0.32) from single-topic ones with an adjacent runner-up (gap
-// ~0.29). BGE-M3's top two scores sit much closer (median gap 0.025), so a 0.02 margin there
-// halves the share of two-label articles for about six points of recall.
-const ITEM_SIMILARITY_THRESHOLD = 0.6;
-const FEED_SIMILARITY_THRESHOLD = 0.6;
+// Calibrated for BGE-M3 on the stored-article set with
+// tests/api/integration/modules/feeds/refresh/classifier-eval-sweep.test.ts; re-run that sweep when
+// the model or category cards change. BGE-M3 scores real articles at about 0.40-0.55 with a median
+// top-two gap of 0.025, so a second category needs to sit within a small margin of the first:
+// 0.02 halves the share of two-label articles for about six points of recall.
+const ITEM_SIMILARITY_THRESHOLD = 0.41;
+const FEED_SIMILARITY_THRESHOLD = 0.5;
+const SECONDARY_LABEL_MARGIN = 0.02;
 // Inputs per embeddings request. Larger batches go out as several requests, so a slow or failed
 // request costs one chunk and every request stays inside its timeout.
 const EMBEDDING_REQUEST_MAX_INPUTS = 128;
-// Characters per embeddings request. Even at one token per character this stays well under
-// Voyage's 320K-token per-request limit, so a batch of long articles can't fail as a whole.
+// Characters per embeddings request, so one request of long articles stays small.
 const EMBEDDING_REQUEST_MAX_CHARS = 200_000;
-// Per-text cap, the same head-and-tail cut the embeddings Worker applies, so both providers embed
-// the same text.
+// Per-text cap, the same head-and-tail cut the embeddings Worker applies, so the cache keys and
+// the Worker see the same text.
 const MAX_CHARS_PER_INPUT = 6_000;
-// Category prototypes are shared by every caller with the same provider, so their load uses this
-// timeout instead of a caller's short budget.
+// Category prototypes are shared by every caller, so their load uses this timeout instead of a
+// caller's short budget.
 const PROTOTYPE_REQUEST_TIMEOUT_MS = 60_000;
 // Characters of title, summary, and body embedded per article. The opening carries the topic;
 // later text is mostly related links, comments, and newsletter prompts that drag every
 // category's similarity down, so feed text and extracted full text are cut to the same head.
 const MAX_ITEM_TEXT_CHARS = 4_000;
 
-type VoyageEmbeddingsResponse = {
+type EmbeddingsResponse = {
   data: Array<{ embedding: number[]; index: number }>;
 };
 
@@ -122,25 +114,22 @@ async function requestEmbeddings(
   const controller = config.timeoutMs ? new AbortController() : null;
   const timeout = controller ? setTimeout(() => controller.abort(), config.timeoutMs) : null;
   try {
-    const response = await fetch(config.apiUrl ?? DEFAULT_VOYAGE_API_URL, {
+    const response = await fetch(config.apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${config.apiKey}`,
       },
       signal: controller?.signal,
-      body: JSON.stringify({
-        input: texts,
-        model: config.model ?? DEFAULT_VOYAGE_MODEL,
-      }),
+      body: JSON.stringify({ input: texts }),
     });
     if (!response.ok) {
       const body = await response.text().catch(() => "");
-      throw new Error(`Voyage embeddings request failed (${response.status}): ${body}`);
+      throw new Error(`Embeddings request failed (${response.status}): ${body}`);
     }
-    const payload = (await response.json()) as Partial<VoyageEmbeddingsResponse>;
-    // Voyage documents `data` as returned in the same order as `input`, but sorts by `index`
-    // defensively in case a future API version reorders results for batching efficiency.
+    const payload = (await response.json()) as Partial<EmbeddingsResponse>;
+    // The Worker returns `data` in input order; sorting by `index` keeps that true even if a
+    // future version reorders results.
     const entries = Array.isArray(payload.data)
       ? [...payload.data].sort((a, b) => a.index - b.index)
       : [];
@@ -164,8 +153,7 @@ async function requestEmbeddings(
 
 /**
  * Embeds input strings, returning one vector per input in the same order. Texts are capped and
- * sent in bounded requests (Voyage and the embeddings Worker both accept arrays), so `timeoutMs`
- * bounds each request rather than the whole batch.
+ * sent in bounded requests, so `timeoutMs` bounds each request rather than the whole batch.
  */
 export async function embedTexts(
   texts: readonly string[],
@@ -204,8 +192,8 @@ export type FeedItemEmbeddingBatchInput = FeedItemCategoryClassificationInput & 
 };
 
 /**
- * Per-config prototype cache. Embedding the ~70 category-card prototype texts costs one
- * Voyage call; caching by config identity (not globally) means tests that pass a fake
+ * Per-config prototype cache. Embedding the ~90 category-card prototype texts costs one
+ * Worker call; caching by config identity (not globally) means tests that pass a fake
  * apiUrl/apiKey never share a cache with production config, while a real worker process
  * only pays the embedding cost once per config across its whole lifetime.
  */
@@ -217,34 +205,36 @@ function apiKeyFingerprint(apiKey: string): string {
 
 // Leaves out timeoutMs: callers with different budgets share one prototype load.
 function cacheKeyFor(config: EmbeddingClassifierConfig): string {
-  return `${config.apiUrl ?? DEFAULT_VOYAGE_API_URL}::${config.model ?? DEFAULT_VOYAGE_MODEL}::${apiKeyFingerprint(config.apiKey)}`;
+  return `${config.apiUrl}::${apiKeyFingerprint(config.apiKey)}`;
 }
 
-/**
- * The provider's selection overrides, e.g. `item-0.41-feed-0.5-margin-0.02`, or undefined when it
- * uses the defaults.
- */
-function selectionRuleTag(config: EmbeddingClassifierConfig): string | undefined {
-  const parts = [
-    config.itemSimilarityThreshold === undefined ? null : `item-${config.itemSimilarityThreshold}`,
-    config.feedSimilarityThreshold === undefined ? null : `feed-${config.feedSimilarityThreshold}`,
-    config.secondaryLabelMargin === undefined ? null : `margin-${config.secondaryLabelMargin}`,
-  ].filter((part) => part !== null);
-  return parts.length > 0 ? parts.join("-") : undefined;
+function itemSelectionRule(config: EmbeddingClassifierConfig): CategorySelectionRule {
+  return {
+    minSimilarity: config.itemSimilarityThreshold ?? ITEM_SIMILARITY_THRESHOLD,
+    secondaryMargin: config.secondaryLabelMargin ?? SECONDARY_LABEL_MARGIN,
+  };
+}
+
+function feedSelectionRule(config: EmbeddingClassifierConfig): CategorySelectionRule {
+  return {
+    minSimilarity: config.feedSimilarityThreshold ?? FEED_SIMILARITY_THRESHOLD,
+    secondaryMargin: config.secondaryLabelMargin ?? SECONDARY_LABEL_MARGIN,
+  };
+}
+
+/** The selection rule in effect, e.g. `item-0.41-feed-0.5-margin-0.02`. */
+function selectionRuleTag(config: EmbeddingClassifierConfig): string {
+  const item = itemSelectionRule(config);
+  const feed = feedSelectionRule(config);
+  return `item-${item.minSimilarity}-feed-${feed.minSimilarity}-margin-${item.secondaryMargin}`;
 }
 
 export function embeddingModelInfo(config: EmbeddingClassifierConfig): ClassifierModelInfo {
   return {
-    // Names the card revision and any selection overrides as well as the provider model: either
-    // can yield different labels for identical inputs while the model name stays the same, and
-    // rows written under another revision or rule must not read as current or count as backfilled.
-    modelId: [
-      config.model ?? DEFAULT_VOYAGE_MODEL,
-      CATEGORY_CARDS_VERSION,
-      selectionRuleTag(config),
-    ]
-      .filter(Boolean)
-      .join("/"),
+    // Names the card revision and the selection rule as well as the model: either can yield
+    // different labels for identical inputs, and rows written under another revision or rule
+    // must not read as current or count as backfilled.
+    modelId: `${EMBEDDING_CLASSIFIER_MODEL_ID}/${CATEGORY_CARDS_VERSION}/${selectionRuleTag(config)}`,
     taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
     classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
   };
@@ -347,20 +337,6 @@ function buildItemText(input: FeedItemCategoryClassificationInput): string {
   }
   // Drop a high surrogate left at the cut so the text stays valid UTF-16.
   return text.slice(0, MAX_ITEM_TEXT_CHARS).replace(/[\uD800-\uDBFF]$/, "");
-}
-
-function itemSelectionRule(config: EmbeddingClassifierConfig): CategorySelectionRule {
-  return {
-    minSimilarity: config.itemSimilarityThreshold ?? ITEM_SIMILARITY_THRESHOLD,
-    secondaryMargin: config.secondaryLabelMargin,
-  };
-}
-
-function feedSelectionRule(config: EmbeddingClassifierConfig): CategorySelectionRule {
-  return {
-    minSimilarity: config.feedSimilarityThreshold ?? FEED_SIMILARITY_THRESHOLD,
-    secondaryMargin: config.secondaryLabelMargin,
-  };
 }
 
 function toCategoryClassification(scores: readonly CategoryScore[]): CategoryClassification {

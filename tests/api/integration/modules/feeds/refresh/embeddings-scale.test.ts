@@ -11,7 +11,7 @@ import {
 const originalFetch = globalThis.fetch;
 const FAKE_CONFIG: EmbeddingClassifierConfig = {
   apiKey: "test-key",
-  apiUrl: "https://fake.voyage.test/v1/embeddings",
+  apiUrl: "https://fake-embeddings.test/embed",
 };
 const UNIT_X = [1, 0, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
@@ -26,8 +26,8 @@ afterEach(() => {
 });
 
 describe("embedding requests at scale", () => {
-  // Cosine similarity 0.5 with UNIT_X: below the default 0.6 cutoff.
-  const PARTIAL_MATCH = [0.5, Math.sqrt(0.75), 0];
+  // Cosine similarity 0.35 with UNIT_X: below the default item and feed cutoffs.
+  const PARTIAL_MATCH = [0.35, Math.sqrt(1 - 0.35 ** 2), 0];
   const itemInput = {
     feedTitle: "Feed",
     feedDescription: null,
@@ -129,7 +129,7 @@ describe("embedding requests at scale", () => {
     const strict = await classifyItemEmbeddings(batchInputs(1), FAKE_CONFIG);
     const lenient = await classifyItemEmbeddings(batchInputs(1), {
       ...FAKE_CONFIG,
-      itemSimilarityThreshold: 0.4,
+      itemSimilarityThreshold: 0.3,
     });
 
     expect(strict.get("item-0")?.categories).toEqual([]);
@@ -150,11 +150,11 @@ describe("embedding requests at scale", () => {
 
     const itemKnobOnly = await classifyFeedEmbedding(feedInput, {
       ...FAKE_CONFIG,
-      itemSimilarityThreshold: 0.4,
+      itemSimilarityThreshold: 0.3,
     });
     const feedKnob = await classifyFeedEmbedding(feedInput, {
       ...FAKE_CONFIG,
-      feedSimilarityThreshold: 0.4,
+      feedSimilarityThreshold: 0.3,
     });
 
     expect(itemKnobOnly.categories).toEqual([{ label: "Miscellaneous", confidence: 0.1 }]);

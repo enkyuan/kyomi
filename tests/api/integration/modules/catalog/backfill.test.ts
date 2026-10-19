@@ -19,7 +19,7 @@ import {
 const originalFetch = globalThis.fetch;
 const FAKE_EMBEDDING_CONFIG: EmbeddingClassifierConfig = {
   apiKey: "test-key",
-  apiUrl: "https://fake.voyage.test/v1/embeddings",
+  apiUrl: "https://fake-embeddings.test/embed",
 };
 const UNIT_X = [1, 0, 0];
 const UNIT_Y = [0, 1, 0];
