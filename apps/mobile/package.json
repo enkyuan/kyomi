@@ -117,7 +117,6 @@
         },
         {
           "files": [
-            "src/components/ui/tab-bar/index.ios.tsx",
             "src/components/ui/toast/atoms/viewport.tsx"
           ],
           "rules": [

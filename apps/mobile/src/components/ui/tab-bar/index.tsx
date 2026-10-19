@@ -17,10 +17,7 @@ export function TabBar({
   navigation,
   onSearchQueryChange,
   onSearchSubmit,
-  onSelectSource: _onSelectSource,
   onTabChange,
-  selectedSourceId: _selectedSourceId,
-  sources: _sources = [],
   state,
 }: TabBarProps) {
   const insets = useSafeAreaInsets();

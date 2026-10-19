@@ -9,7 +9,7 @@ const EMPTY_HORIZONTAL_INSET_RATIO = 22 / 390;
 
 type EmptyStateProps = {
   asset: ReactNode;
-  description: string;
+  description: ReactNode;
   header: string;
   height: number;
   topContentInset: number;

@@ -162,10 +162,11 @@ function RecentHistoryEmptyState() {
 
   return (
     <View
-      className="flex-1 items-center justify-center pb-24"
+      className="flex-1 items-center justify-center gap-5 pb-24"
       style={{ paddingHorizontal: emptyHorizontalInset }}
     >
-      <View className="w-full items-center">
+      <EmptyStateIcon size={176} />
+      <View className="w-full items-center gap-2">
         <Text
           className="text-center text-foreground"
           numberOfLines={2}
@@ -174,11 +175,12 @@ function RecentHistoryEmptyState() {
           No recently viewed articles
         </Text>
         <Text
-          className="mt-2 text-center text-muted-foreground"
+          className="text-center text-muted-foreground"
+          lineBreakStrategyIOS="standard"
           numberOfLines={2}
           style={FONT_STYLES.bodySmall}
         >
-          Open a feed item to keep it here for later.
+          Older saved posts and clips will surface here after they've been waiting a while.
         </Text>
       </View>
     </View>

@@ -155,9 +155,21 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
           <EmptyState
             asset={<EmptyStateIcon size={176} />}
             description={
-              hasNoSubscribedFeeds
-                ? "Follow a feed to see its latest\nstories here."
-                : "New stories will show up here after\nfeeds publish or refresh."
+              hasNoSubscribedFeeds ? (
+                <>
+                  Add a new feed or check out{" "}
+                  <Badge
+                    size="default"
+                    style={{ transform: [{ translateY: 3 }] }}
+                    variant="secondary"
+                  >
+                    Explore
+                  </Badge>{" "}
+                  to get started.
+                </>
+              ) : (
+                "New stories will show up here after\nfeeds publish or refresh."
+              )
             }
             header={
               hasNoSubscribedFeeds

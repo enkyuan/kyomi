@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { ScrollView, Text, useColorScheme, View } from "react-native";
+import { Pressable, ScrollView, Text, useColorScheme, View } from "react-native";
+import { router } from "expo-router";
 import { SymbolView } from "expo-symbols";
 import { MingcuteIcon } from "@/components/icons/mingcute";
 import { FONT_STYLES } from "@/theme/fonts";
@@ -32,28 +33,35 @@ export function List({ footer }: SettingsListProps) {
             {group.map((item, itemIndex) => (
               <View key={item.id}>
                 {itemIndex > 0 ? <View className="ml-13 h-px bg-border/70" /> : null}
-                <View className="min-h-13 flex-row items-center gap-3 px-5 py-3">
-                  <MingcuteIcon
-                    fill={theme.foreground}
-                    icon={item.icon}
-                    size={20}
-                    style={{ transform: [{ translateY: -1 }] }}
-                  />
-                  <Text className="flex-1 text-foreground" style={FONT_STYLES.body}>
-                    {item.label}
-                  </Text>
-                  <SymbolView
-                    accessibilityElementsHidden
-                    name={{
-                      android: "chevron_right",
-                      ios: "chevron.forward",
-                      web: "chevron_right",
-                    }}
-                    size={16}
-                    tintColor={theme.mutedForeground}
-                    weight="regular"
-                  />
-                </View>
+                <Pressable
+                  accessibilityLabel={item.label}
+                  accessibilityRole="button"
+                  className="active:opacity-70"
+                  onPress={() => router.push(item.route as never)}
+                >
+                  <View className="min-h-13 flex-row items-center gap-3 px-5 py-3">
+                    <MingcuteIcon
+                      fill={theme.foreground}
+                      icon={item.icon}
+                      size={20}
+                      style={{ transform: [{ translateY: -1 }] }}
+                    />
+                    <Text className="flex-1 text-foreground" style={FONT_STYLES.body}>
+                      {item.label}
+                    </Text>
+                    <SymbolView
+                      accessibilityElementsHidden
+                      name={{
+                        android: "chevron_right",
+                        ios: "chevron.forward",
+                        web: "chevron_right",
+                      }}
+                      size={16}
+                      tintColor={theme.mutedForeground}
+                      weight="regular"
+                    />
+                  </View>
+                </Pressable>
               </View>
             ))}
           </View>

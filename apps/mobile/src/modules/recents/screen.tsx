@@ -6,9 +6,17 @@ import { CollapsingHeader, COMPACT_NAV_HEIGHT } from "@ui/header";
 import { ScrollHeaderLayout } from "@ui/header/scroll-layout";
 import { RecentList } from "./components/list";
 
-export function RecentsScreen() {
+type RecentsScreenProps = {
+  /** Renders the large-title collapsing header. Set to `false` when a
+   *  native Stack header already owns the title (e.g. pushed inside
+   *  another screen's modal). Defaults to `true` for the tab usage. */
+  readonly showHeader?: boolean;
+  readonly title?: string;
+};
+
+export function RecentsScreen({ showHeader = true, title = "Inbox" }: RecentsScreenProps = {}) {
   const insets = useSafeAreaInsets();
-  const headerHeight = insets.top + COMPACT_NAV_HEIGHT;
+  const headerHeight = showHeader ? insets.top + COMPACT_NAV_HEIGHT : 0;
   const contentInsetTop = Platform.OS === "ios" ? headerHeight : 0;
   const scrollY = useSharedValue(-contentInsetTop);
   const hasUserInteracted = useSharedValue(contentInsetTop === 0);
@@ -30,11 +38,12 @@ export function RecentsScreen() {
   const handleScrollReset = useCallback(() => {
     hasUserInteracted.set(contentInsetTop === 0);
   }, [contentInsetTop, hasUserInteracted]);
+
   return (
     <ScrollHeaderLayout
-      header={<CollapsingHeader scrollY={headerScrollY} title="Inbox" />}
+      header={showHeader ? <CollapsingHeader scrollY={headerScrollY} title={title} /> : <></>}
       scrollY={headerScrollY}
-      title="Inbox"
+      title={title}
     >
       {() => (
         <RecentList

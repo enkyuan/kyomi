@@ -194,7 +194,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 ? "Please wait…"
                 : isEmailStep || otp.value.length === 6
                   ? "Continue"
-                  : "Resend email"}
+                  : "Resend code"}
             </Text>
           </Button>
         </View>
