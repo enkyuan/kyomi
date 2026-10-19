@@ -8,7 +8,8 @@ apps/*/bun.lock
 packages/*/bun.lock
 tests/bun.lock
 dist
-.artifacts/react-doctor/
+.artifacts/
+.gradle/
 build
 coverage
 .catalog-sync-logs/
