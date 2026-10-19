@@ -1,4 +1,7 @@
-import { propagateOrMintRequestId, type MutableResponseHeaders } from "@shared/utils/request-id";
+import {
+  propagateOrMintRequestId,
+  type MutableResponseHeaders,
+} from "@shared/http/request-id/headers";
 import { requireAuth } from "../auth/require";
 
 /** Better Auth session: authenticated `userId` + propagated `requestId` (no org scope). */

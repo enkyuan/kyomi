@@ -2,8 +2,8 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
-import { Transition, type TransitionDirection } from "@kyomi/ui/transition";
+import { ScrollArea } from "@kyomi/ui/components/scroll-area";
+import { Transition, type TransitionDirection } from "@kyomi/ui/components/transition";
 import { useTransition } from "@modules/inbox/hooks/use-transition";
 import { listFollowedFeeds } from "@modules/feeds/lib/api";
 import { ExpandedFolders } from "@modules/inbox/components/recap/folders/expanded";
@@ -17,7 +17,7 @@ import { ExpandedTopSources } from "./top-sources";
 import type { RecapFolder, RecapSavedItem, RecapTopViewedFeed } from "../../../lib/recap/types";
 import { queryKeys } from "@lib/query/keys";
 
-export type RecapExpandedSection = InboxRecapRailSection;
+type RecapExpandedSection = InboxRecapRailSection;
 export type SelectedFolderBackTarget = InboxRecapRailFolderBackTarget;
 type RemoveFeedsToastOptions = {
   anchor?: HTMLElement | null;

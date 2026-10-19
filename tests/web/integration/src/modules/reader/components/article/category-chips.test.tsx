@@ -13,10 +13,6 @@ vi.mock("@kyomi/reader/web", () => ({
   ReaderContent: () => <div>Reader body</div>,
 }));
 
-vi.mock("@hooks/use-timestamp", () => ({
-  useTimestamp: () => {},
-}));
-
 vi.mock("@modules/reader/hooks/use-toolbar", () => ({
   useReaderToolbar: ({ item }: { item: ArticleDetailDto }) => ({
     articleClassName: "",

@@ -2,9 +2,9 @@
 
 import type { InboxItem } from "@modules/articles/lib/api";
 import { useActions } from "@modules/articles/hooks/use-actions";
-import type { ItemToolbarProps } from "../components/item/toolbar/root";
+import type { ItemToolbarProps } from "../components/item/toolbar";
 
-export type ItemToolbarModel = {
+type ItemToolbarModel = {
   toolbarProps: ItemToolbarProps;
 };
 

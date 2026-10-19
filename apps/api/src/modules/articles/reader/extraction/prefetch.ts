@@ -1,6 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { getRedis } from "@adapters/redis";
-import { publishJob } from "@adapters/queue/publish-job";
+import { publishJob } from "@adapters/queue/publish";
 import { feedItems } from "@kyomi/db";
 import { and, eq, inArray, isNull } from "drizzle-orm";
 import type { ArticleExtractionJob } from "@kyomi/worker";

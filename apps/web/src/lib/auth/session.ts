@@ -1,6 +1,6 @@
-export const SESSION_UNAVAILABLE_MESSAGE = "Unable to load your session. Try again.";
+const SESSION_UNAVAILABLE_MESSAGE = "Unable to load your session. Try again.";
 
-export type AuthenticatedSession = {
+type AuthenticatedSession = {
   session: {
     id: string;
     expiresAt: string;

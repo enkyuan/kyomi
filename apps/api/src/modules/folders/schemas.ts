@@ -1,5 +1,5 @@
 import { t } from "elysia";
-import { uuidParam } from "@shared/http/v1/stub";
+import { uuidParam } from "@shared/http/v1/params";
 
 export const folderResponse = t.Object({
   id: t.String(),

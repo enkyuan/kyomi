@@ -1,5 +1,5 @@
 import type { db } from "@adapters/db/client";
-import { publishJob } from "@adapters/queue/publish-job";
+import { publishJob } from "@adapters/queue/publish";
 import { getRedis } from "@adapters/redis";
 import { enqueueFeedRefresh } from "@modules/feeds/refresh/enqueue";
 import {
@@ -16,7 +16,7 @@ import {
   matchKnownFeedsForImport,
   publishKnownFeedRefreshCandidates,
   subscribeKnownOpmlItems,
-} from "./known-feeds";
+} from "./known";
 import { parseOpmlDocument } from "./parse";
 import { classifyOpmlItemError, computeOpmlRetryDelayMs, randomOpmlRetryJitter } from "./retry";
 import {
@@ -39,7 +39,7 @@ import {
   markOpmlTaskInProgress,
   recordOpmlTaskFailure,
   recordOpmlTaskSuccess,
-} from "./task-store";
+} from "./task";
 
 type DB = typeof db;
 type Logger = {

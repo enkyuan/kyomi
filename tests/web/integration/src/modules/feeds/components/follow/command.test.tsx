@@ -5,10 +5,6 @@ import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { FollowSourcesCommand } from "@modules/feeds/components/follow/command";
 import type { DiscoverFeedResult } from "@modules/feeds/lib/api";
 
-vi.mock("@modules/sidebar/components/feed-favicon", () => ({
-  FeedFavicon: ({ title }: { title?: string }) => <span>{title}</span>,
-}));
-
 const feed: DiscoverFeedResult = {
   id: "feed-1",
   title: "Biology Notes",

@@ -2,7 +2,7 @@ export const DEFAULT_AUTH_RETURN_TO = "/inbox";
 
 const AUTH_RETURN_TO_ORIGIN = "https://kyomi.invalid";
 
-export type AuthSearch = {
+type AuthSearch = {
   redirect?: string;
 };
 

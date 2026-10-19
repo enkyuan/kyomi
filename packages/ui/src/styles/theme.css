@@ -1,3 +1,12 @@
+/* Emitted as real custom properties so plain CSS and arbitrary values can use var(--ease-*). */
+@theme {
+  --tracking-title: -0.012em;
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
 /* Keep these in sync with BREAKPOINTS in packages/ui/src/hooks/use-media-query.ts. */
 @theme inline {
   --breakpoint-sm: 640px;
@@ -33,7 +42,6 @@
   --color-matcha-foreground: var(--matcha-foreground);
   --color-mizu: var(--mizu);
   --color-mizu-foreground: var(--mizu-foreground);
-  --color-petrol-green: var(--petrol-green);
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
   --color-accent-foreground: var(--accent-foreground);
@@ -48,6 +56,10 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  /* Semantic tokens generalized from apps/web (see packages/ui/README.md). */
+  --color-highlight: var(--highlight);
+  --color-muted-solid: var(--muted-solid);
+  --color-muted-subtle: var(--muted-subtle);
   --animate-skeleton: skeleton 2s -1s infinite linear;
   --animate-caret-blink: 1s ease-out infinite caret-blink;
 
@@ -96,6 +108,12 @@
   --secondary-foreground: var(--foreground);
   --muted: --alpha(var(--color-black) / 4%);
   --muted-foreground: color-mix(in oklab, var(--foreground) 58%, var(--background));
+  /* Placeholders, shortcuts, and inactive tabs: muted foreground at 72%. */
+  --muted-subtle: color-mix(in oklab, var(--muted-foreground) 72%, transparent);
+  /* Opaque equivalent of --muted composited over the page (sRGB, like alpha blending). */
+  --muted-solid: color-mix(in srgb, var(--background), var(--color-black) 4%);
+  /* Current-position indicators: scrubber preview tick, selection dots. */
+  --highlight: var(--color-amber-500);
   --accent: --alpha(var(--color-black) / 4%);
   --accent-foreground: var(--foreground);
   --destructive: var(--color-red-500);
@@ -139,6 +157,9 @@
   --secondary-foreground: var(--color-neutral-100);
   --muted: --alpha(var(--color-white) / 4%);
   --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-white));
+  --muted-subtle: color-mix(in oklab, var(--muted-foreground) 72%, transparent);
+  --muted-solid: color-mix(in srgb, var(--background), var(--color-white) 4%);
+  --highlight: var(--color-amber-400);
   --accent: --alpha(var(--color-white) / 4%);
   --accent-foreground: var(--color-neutral-100);
   --destructive: color-mix(in srgb, var(--color-red-500) 90%, var(--color-white));

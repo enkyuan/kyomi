@@ -2,8 +2,8 @@ import { isValidEmail } from "@kyomi/reader/schemas/auth";
 
 export * from "@kyomi/reader/schemas/auth";
 
-export type EmailOTPFormValues = { email: string };
-export type OtpFormValues = { otp: string };
+type EmailOTPFormValues = { email: string };
+type OtpFormValues = { otp: string };
 
 export function emailOtpFormValidator({ value }: { value: EmailOTPFormValues }) {
   const normalized = value.email.trim();

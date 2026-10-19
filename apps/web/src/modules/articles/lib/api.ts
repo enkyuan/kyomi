@@ -9,9 +9,9 @@ import {
   buildInboxListUrl,
   type InboxFilter,
   type InboxSort,
-} from "./query";
+} from "./urls";
 
-export type { InboxFilter, InboxSort } from "./query";
+export type { InboxFilter, InboxSort } from "./urls";
 
 let inboxSchemaModulePromise:
   | Promise<
@@ -91,11 +91,11 @@ export type InboxListPage = {
   hasMore: boolean;
 };
 
-export type InboxDetailResponse = {
+type InboxDetailResponse = {
   item: ArticleDetailDto | null;
 };
 
-export type UpdateInboxItemStateInput = {
+type UpdateInboxItemStateInput = {
   itemId: string;
   isRead?: boolean | null;
   isSaved?: boolean;

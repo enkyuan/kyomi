@@ -1,46 +1,66 @@
-export const SETTINGS_GROUPS = [
+import type { MingcuteNativeIcon } from "@kyomi/ui/icons/mingcute-native";
+import {
+  Bill2FillNativeIcon,
+  DocumentFillNativeIcon,
+  FileImportFillNativeIcon,
+  HeadAiFillNativeIcon,
+  Message3FillNativeIcon,
+  SwitchFillNativeIcon,
+  TimeDurationFillNativeIcon,
+} from "@kyomi/ui/icons/mingcute-native";
+
+type SettingsItem = {
+  readonly id: string;
+  readonly label: string;
+  readonly icon: MingcuteNativeIcon;
+  readonly route: string;
+};
+
+export const SETTINGS_GROUPS: readonly (readonly SettingsItem[])[] = [
   [
     {
-      id: "account",
-      label: "Account",
-      symbol: { android: "person", ios: "person", web: "person" },
-    },
-    {
-      id: "appearance",
-      label: "Appearance",
-      symbol: { android: "palette", ios: "paintbrush", web: "palette" },
-    },
-    {
-      id: "personalization",
-      label: "Personalization",
-      symbol: { android: "wand_shine", ios: "wand.and.stars", web: "wand_shine" },
-    },
-    {
-      id: "advanced",
-      label: "Advanced",
-      symbol: { android: "tune", ios: "slider.horizontal.3", web: "tune" },
-    },
-  ],
-  [
-    {
-      id: "billing",
-      label: "Billing",
-      symbol: { android: "credit_card", ios: "creditcard", web: "credit_card" },
-    },
-    {
-      id: "feedback",
-      label: "Feedback",
-      symbol: { android: "feedback", ios: "bubble.left", web: "feedback" },
+      id: "recently-visited",
+      label: "Recently Visited",
+      icon: TimeDurationFillNativeIcon,
+      route: "/(protected)/settings/recents",
     },
     {
       id: "import-opml",
       label: "Import OPML",
-      symbol: { android: "upload_file", ios: "arrow.down.doc", web: "upload_file" },
+      icon: FileImportFillNativeIcon,
+      route: "/(protected)/settings/import-opml",
     },
     {
-      id: "recently-viewed",
-      label: "Recently Viewed",
-      symbol: { android: "history", ios: "clock.arrow.circlepath", web: "history" },
+      id: "billing",
+      label: "Billing",
+      icon: Bill2FillNativeIcon,
+      route: "/(protected)/settings/billing",
     },
   ],
-] as const;
+  [
+    {
+      id: "personalization",
+      label: "Personalization",
+      icon: HeadAiFillNativeIcon,
+      route: "/(protected)/settings/personalization",
+    },
+    {
+      id: "reader",
+      label: "Reader",
+      icon: DocumentFillNativeIcon,
+      route: "/(protected)/settings/reader",
+    },
+    {
+      id: "advanced",
+      label: "Advanced",
+      icon: SwitchFillNativeIcon,
+      route: "/(protected)/settings/advanced",
+    },
+    {
+      id: "feedback",
+      label: "Feedback",
+      icon: Message3FillNativeIcon,
+      route: "/(protected)/settings/feedback",
+    },
+  ],
+];

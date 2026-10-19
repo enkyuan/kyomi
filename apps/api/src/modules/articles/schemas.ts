@@ -1,5 +1,5 @@
 import { t } from "elysia";
-import { uuidParam } from "@shared/http/v1/stub";
+import { uuidParam } from "@shared/http/v1/params";
 
 const TITLE_MAX_CHARS = 1_024;
 const NOTE_MAX_CHARS = 16_384;
@@ -42,20 +42,6 @@ const readerContentCommonProperties = {
   extractionErrorMessage: t.Union([t.String(), t.Null()]),
   shouldExtract: t.Boolean(),
 } as const;
-
-export const readerContentSchema = t.Object({
-  ...readerContentCommonProperties,
-  contentHtml: t.Union([t.String(), t.Null()]),
-  contentMarkdown: t.Union([t.String(), t.Null()]),
-  contentText: t.Union([t.String(), t.Null()]),
-  fallbackSummary: t.Union([t.String(), t.Null()]),
-  fallbackReason: t.Union([
-    t.Literal("extraction_failed"),
-    t.Literal("timeout"),
-    t.Literal("missing_content"),
-    t.Null(),
-  ]),
-});
 
 const readerFallbackReasonSchema = t.Union([
   t.Literal("extraction_failed"),

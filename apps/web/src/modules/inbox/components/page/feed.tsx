@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { Transition, type TransitionProps } from "@kyomi/ui/transition";
+import { Transition, type TransitionProps } from "@kyomi/ui/components/transition";
 
 export function Feed({
   detail,

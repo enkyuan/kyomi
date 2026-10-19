@@ -1,6 +1,6 @@
 import { env } from "@config/env";
 import { AppError } from "@shared/errors/app";
-import { normalizeLoopbackUrl } from "@shared/net/loopback-url";
+import { normalizeLoopbackUrl } from "@shared/net/loopback";
 
 export type FeedSearchDocument = {
   id: string;

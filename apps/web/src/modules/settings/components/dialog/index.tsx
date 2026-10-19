@@ -1,6 +1,6 @@
 "use client";
 
-import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@kyomi/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@kyomi/ui/components/dialog";
 import { useSettingsLogout } from "@modules/settings/hooks/use-logout";
 import { SettingsDialogRoutes } from "./routes";
 
@@ -17,7 +17,7 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
       {/*
        * Intentionally static at `md:` and stops there — this is a fixed-content settings form,
        * not a content-scaling surface, so it does not grow further at `2xl`/`3xl`/`4xl` the way
-       * the app shell (apps/web/src/app/app-shell.tsx) does. Do not re-flag this in a future
+       * the app shell (apps/web/src/app/shell.tsx) does. Do not re-flag this in a future
        * responsive audit.
        */}
       <DialogContent className="overflow-hidden p-0 md:max-h-135 md:max-w-205">

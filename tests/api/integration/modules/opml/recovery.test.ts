@@ -1,5 +1,5 @@
 import { describe, expect, mock, test } from "bun:test";
-import { reconcileImports } from "@app/jobs/import-dispatcher";
+import { reconcileImports } from "@app/jobs/dispatcher";
 
 /**
  * Drives reconcileImports through the real store functions with a fake Postgres-shaped db,

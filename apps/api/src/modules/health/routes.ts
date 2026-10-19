@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 import { getRedis } from "@adapters/redis";
-import { buildQueueHealthSnapshot } from "@app/jobs/queue-health";
+import { buildQueueHealthSnapshot } from "@app/jobs/health";
 import { databaseAdapterPlugin, requestObservationPlugin } from "@shared/http/stacks";
 import { buildReadinessPayload, getHealth } from "@modules/health/checks";
 

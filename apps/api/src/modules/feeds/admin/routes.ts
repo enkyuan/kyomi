@@ -1,11 +1,11 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
-import { uuidParam } from "@shared/http/v1/stub";
+import { uuidParam } from "@shared/http/v1/params";
 import { assertFeedAdminUser } from "./guard";
 import { adminDeleteGlobalFeed, adminUpdateGlobalFeed } from "./operations";
 import type { AdminUpdateGlobalFeedBody } from "../types";
-import * as dto from "../dto";
+import * as dto from "../schemas";
 
 export function registerFeedAdminRoutes(app: Elysia) {
   return app

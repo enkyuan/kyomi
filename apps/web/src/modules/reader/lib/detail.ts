@@ -8,7 +8,7 @@ import type {
 import type { ReaderContentWidth } from "./preferences";
 
 export type ArticleStepDirection = 1 | -1;
-export type DetailSurface = "browser" | "card";
+type DetailSurface = "browser" | "card";
 
 export type ReaderDetailState =
   | { status: "selected"; item: ArticleDetailDto }

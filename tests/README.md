@@ -8,6 +8,8 @@ integration and end-to-end suites for the monorepo.
 tests/
   api/
     integration/  Bun tests that mirror apps/api/src.
+  mobile/
+    integration/  Bun tests that mirror apps/mobile/src.
   web/
     integration/  Vitest/jsdom tests grouped by app, module, and package.
 ```
@@ -18,16 +20,17 @@ the api integration tree tracks `apps/api/src` closely so test ownership is obvi
 
 run from the repository root.
 
-| command | purpose |
-| --- | --- |
-| `bun run test` | run api and web integration. |
-| `bun run test:api` | run api integration. |
-| `bun run test:api:e2e` | run api end-to-end. |
-| `bun run test:web` | run web integration. |
-| `bun run test:web:e2e` | run web end-to-end. |
-| `bun run --cwd tests typecheck` | type-check. |
-| `bun run --cwd tests lint` | lint. |
-| `bun run --cwd tests fmt:check` | check formatting. |
+| command                           | purpose                      |
+| --------------------------------- | ---------------------------- |
+| `bun run test`                    | run api and web integration. |
+| `bun run test:api`                | run api integration.         |
+| `bun run test:api:e2e`            | run api end-to-end.          |
+| `bun run test:web`                | run web integration.         |
+| `bun run --cwd tests test:mobile` | run mobile integration.      |
+| `bun run test:web:e2e`            | run web end-to-end.          |
+| `bun run --cwd tests typecheck`   | type-check.                  |
+| `bun run --cwd tests lint`        | lint.                        |
+| `bun run --cwd tests fmt:check`   | check formatting.            |
 
 ## notes
 

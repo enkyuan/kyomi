@@ -7,10 +7,10 @@
     "build": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- vite build",
     "start": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun .output/server/index.mjs",
     "preview": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- vite preview",
-    "fmt": "oxfmt src vite.config.ts sw.plugin.ts",
-    "fmt:check": "oxfmt --check src vite.config.ts sw.plugin.ts",
-    "lint": "oxlint src vite.config.ts sw.plugin.ts",
-    "lint:fix": "oxlint --fix src vite.config.ts sw.plugin.ts",
+    "fmt": "oxfmt src vite.config.ts service-worker.ts",
+    "fmt:check": "oxfmt --check src vite.config.ts service-worker.ts",
+    "lint": "oxlint src vite.config.ts service-worker.ts",
+    "lint:fix": "oxlint --fix src vite.config.ts service-worker.ts",
     "routes:generate": "node scripts/generate-route-tree.mjs",
     "typecheck": "bun run routes:generate && tsgo -p tsconfig.json --noEmit"
   },
@@ -96,7 +96,7 @@
         },
         {
           "files": [
-            "src/modules/feeds/components/feed-favicon.tsx"
+            "src/modules/feeds/components/favicon.tsx"
           ],
           "rules": [
             "react-doctor/no-adjust-state-on-prop-change"

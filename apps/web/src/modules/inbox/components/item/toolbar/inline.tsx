@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import type { InboxItem } from "@modules/articles/lib/api";
-import { cn } from "@kyomi/ui/lib/utils";
 import { useItemToolbarModel } from "@modules/inbox/hooks/use-item-toolbar";
 import { ReportArticleDialog } from "../report-article";
-import { ItemToolbar } from "./root";
+import { ItemToolbar } from "./index";
 
 export function ItemInlineToolbar({ item, className }: { item: InboxItem; className?: string }) {
   const [reportOpen, setReportOpen] = useState(false);
@@ -16,10 +15,7 @@ export function ItemInlineToolbar({ item, className }: { item: InboxItem; classN
 
   return (
     <>
-      <ItemToolbar
-        {...toolbar.toolbarProps}
-        className={cn("border-0 bg-transparent p-0 text-muted-foreground shadow-none", className)}
-      />
+      <ItemToolbar {...toolbar.toolbarProps} className={className} />
       <ReportArticleDialog item={item} open={reportOpen} onOpenChange={setReportOpen} />
     </>
   );

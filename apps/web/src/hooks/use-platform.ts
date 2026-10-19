@@ -2,7 +2,7 @@
 
 import { useMemo, useSyncExternalStore } from "react";
 
-export type ClientPlatform = "mac" | "windows" | "linux" | "other";
+type ClientPlatform = "mac" | "windows" | "linux" | "other";
 
 /** Unicode symbols shown in shortcut hints (not the literal key names). */
 const MODIFIER_KEY_SYMBOL = {

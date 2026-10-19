@@ -1,7 +1,7 @@
 import { articleListItemSchema } from "@kyomi/reader/schemas";
 import { z } from "zod";
 
-export const inboxRecapFolderSchema = z.object({
+const inboxRecapFolderSchema = z.object({
   id: z.string(),
   name: z.string(),
   createdAt: z.string(),
@@ -14,7 +14,7 @@ export const inboxRecapFolderSchema = z.object({
   feedCount: z.number(),
 });
 
-export const inboxRecapTopViewedFeedSchema = z.object({
+const inboxRecapTopViewedFeedSchema = z.object({
   feedId: z.string(),
   title: z.string(),
   url: z.string(),
@@ -27,7 +27,7 @@ export const inboxRecapTopViewedFeedSchema = z.object({
   folderName: z.string().nullable(),
 });
 
-export const inboxRecapSavedItemSchema = articleListItemSchema.extend({
+const inboxRecapSavedItemSchema = articleListItemSchema.extend({
   savedAt: z.string(),
 });
 

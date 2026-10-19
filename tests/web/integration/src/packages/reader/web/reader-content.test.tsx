@@ -88,6 +88,45 @@ describe("ReaderContent", () => {
     expect(container.querySelector("p code")?.textContent).toBe("AllocationRecord");
   });
 
+  test("opens markdown links in a new tab with a safe relationship", () => {
+    const { container } = render(
+      <ReaderContent
+        reader={baseReader({ contentMarkdown: "[docs](https://example.com/docs)" })}
+      />,
+    );
+
+    const link = container.querySelector("a");
+    expect(link?.getAttribute("target")).toBe("_blank");
+    expect(link?.getAttribute("rel")).toBe("noopener noreferrer");
+  });
+
+  test("renders escaped math with backslash delimiters", async () => {
+    render(
+      <ReaderContent
+        reader={baseReader({ contentMarkdown: String.raw`Inline \(x^2\) and block \[y^2\]` })}
+      />,
+    );
+
+    await waitFor(() => {
+      expect(document.querySelectorAll(".katex").length).toBeGreaterThanOrEqual(2);
+    });
+  });
+
+  test("drops unsafe markdown destinations while keeping readable labels", () => {
+    const { container } = render(
+      <ReaderContent
+        reader={baseReader({
+          contentMarkdown: "[bad](javascript:alert(1))\n\n![unsafe](javascript:alert(1))",
+        })}
+      />,
+    );
+
+    expect(container.querySelector('a[href^="javascript:"]')).toBeNull();
+    expect(container.querySelector('img[src^="javascript:"]')).toBeNull();
+    expect(screen.getByText("bad")).toBeTruthy();
+    expect(screen.getByText("unsafe")).toBeTruthy();
+  });
+
   test("resolves relative markdown links and images against contentBaseUrl", () => {
     const { container } = render(
       <ReaderContent

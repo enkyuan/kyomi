@@ -1,5 +1,5 @@
 import { db, pool } from "@adapters/db/client";
-import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
+import { assertApiDatabaseReady } from "@adapters/db/preflight";
 import { feeds, opmlImportItems, opmlImports, users } from "@kyomi/db";
 import { count, eq, inArray } from "drizzle-orm";
 import {
@@ -9,7 +9,7 @@ import {
   insertOpmlImportItems,
   recordOpmlImportMaterialized,
 } from "@modules/opml/store";
-import { matchKnownFeedsForImport, subscribeKnownOpmlItems } from "@modules/opml/known-feeds";
+import { matchKnownFeedsForImport, subscribeKnownOpmlItems } from "@modules/opml/known";
 import { parseOpmlDocument } from "@modules/opml/parse";
 import { OPML_MATERIALIZE_CHUNK_SIZE } from "@modules/opml/constants";
 

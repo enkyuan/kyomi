@@ -3,10 +3,10 @@ import { t } from "elysia";
 import { enforceRateLimitForContext } from "@adapters/rate-limit/plugin";
 import { AppError } from "@shared/errors/app";
 import { v1HandlerContext } from "@shared/http/v1/context";
-import { taskIdParam } from "@shared/http/v1/stub";
+import { taskIdParam } from "@shared/http/v1/params";
 import { OPML_LEGACY_JSON_MAX_SOURCE_BYTES } from "./constants";
 import { exportOpmlForUser } from "./export";
-import { fetchOpmlDocumentFromUrl } from "./fetch-url";
+import { fetchOpmlDocumentFromUrl } from "./fetch";
 import { enqueueOpmlImport } from "./jobs";
 import {
   buildOpmlImportSummary,

@@ -24,10 +24,50 @@ env:
   NPM_REGISTRY_URL: https://npm.pkg.github.com
 
 jobs:
+  # Most pushes to main bump no package version, so there is nothing to
+  # publish. Checking the registry first skips the full re-verification
+  # (which CircleCI already ran for this commit) on those pushes.
+  plan:
+    name: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      publish: ${{ steps.versions.outputs.publish }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node package registry
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: ${{ env.NPM_REGISTRY_URL }}
+          scope: "@kyomi"
+
+      - name: Find unpublished package versions
+        id: versions
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          publish=false
+          for dir in packages/ui packages/reader; do
+            spec="$(node -p "const p = require('./${dir}/package.json'); p.name + '@' + p.version")"
+            if npm view "${spec}" version --registry="${NPM_REGISTRY_URL}" >/dev/null 2>&1; then
+              echo "${spec} is already published."
+            else
+              echo "${spec} is not published yet."
+              publish=true
+            fi
+          done
+          echo "publish=${publish}" >> "$GITHUB_OUTPUT"
+
   verify:
     name: verify
     runs-on: ubuntu-latest
     timeout-minutes: 35
+    needs:
+      - plan
+    if: ${{ needs.plan.outputs.publish == 'true' }}
     services:
       postgres:
         image: postgres:18-alpine

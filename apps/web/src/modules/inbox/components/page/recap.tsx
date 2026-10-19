@@ -1,6 +1,13 @@
 "use client";
 
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+  springTransition,
+} from "@kyomi/ui/lib/motion";
 import { InboxRecapCard } from "@modules/inbox/components/recap";
 import type { useInboxRouteState } from "@modules/inbox/hooks/use-layout";
 import type {
@@ -33,9 +40,7 @@ export function Recap({
   railFolderId?: string;
 }) {
   const prefersReducedMotion = useReducedMotion();
-  const transition = prefersReducedMotion
-    ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.28, bounce: 0 };
+  const transition = springTransition("standard", prefersReducedMotion);
 
   return (
     <LazyMotion features={domAnimation}>

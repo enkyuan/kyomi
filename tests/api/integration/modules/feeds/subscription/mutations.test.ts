@@ -7,7 +7,7 @@ import {
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
 } from "@modules/feeds/subscription/mutations";
-import { subscribeUserToFeed } from "@modules/feeds/subscription/internal";
+import { subscribeUserToFeed } from "@modules/feeds/subscription/persistence";
 
 describe("feeds.subscription.mutations", () => {
   test("unsubscribeFromFeed returns message when row deleted", async () => {
