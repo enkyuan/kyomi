@@ -6,6 +6,7 @@ import {
   feeds,
   feedItems,
 } from "@kyomi/db";
+import { activeEmbeddingModelId } from "@config/embeddings";
 import { buildCategoryLabelsSql } from "@modules/articles/read/labels";
 
 export type CategoryAuditFormat = "jsonl" | "summary";
@@ -196,6 +197,7 @@ export async function runCategoryAudit(
     return [];
   }
 
+  const embeddingModelId = activeEmbeddingModelId();
   const itemIdFilter = itemIdFilterSql(feedItemIds);
   const result = await database.execute(sql<CategoryAuditRow>`
     SELECT
@@ -208,8 +210,8 @@ export async function runCategoryAudit(
       ${feeds.title} AS feed_title,
       ${feeds.url} AS feed_url,
       ${explicitCategoryLabelsSql()} AS explicit_categories,
-      ${buildCategoryLabelsSql("keyword")} AS keyword_categories,
-      ${buildCategoryLabelsSql("embedding")} AS embedding_categories
+      ${buildCategoryLabelsSql("keyword", embeddingModelId)} AS keyword_categories,
+      ${buildCategoryLabelsSql("embedding", embeddingModelId)} AS embedding_categories
     FROM ${feedItems}
     INNER JOIN ${feeds} ON ${feeds.id} = ${feedItems.feedId}
     WHERE ${

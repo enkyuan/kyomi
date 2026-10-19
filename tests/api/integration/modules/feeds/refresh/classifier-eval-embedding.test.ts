@@ -1,70 +1,141 @@
-import { describe, expect, test } from "bun:test";
-import { classifyItemEmbedding, type EmbeddingClassifierConfig } from "@kyomi/worker";
+import { afterAll, beforeAll, describe, expect, test } from "bun:test";
+import { existsSync } from "node:fs";
+import {
+  classifyItemEmbeddings,
+  MAX_CLASSIFIER_LABELS,
+  scoreItemEmbeddings,
+  type EmbeddingClassifierConfig,
+} from "@kyomi/worker";
+import { embeddingClassifierConfig } from "@config/embeddings";
+import {
+  cachedEmbeddingsFetch,
+  embeddingsCacheFile,
+  embeddingsUpstreamFromEnv,
+} from "./embedding-cache";
 import {
   accumulateConfusion,
   f1,
   precision,
   recall,
   renderScoreboard,
+  round3,
   type Prediction,
 } from "./classifier-eval-scoring";
 import { CLASSIFIER_EVAL_FIXTURE, type ClassifierEvalCase } from "./classifier-eval-fixture";
+import { CLASSIFIER_EVAL_STORED_CASES } from "./classifier-eval-stored-fixture";
 
 /**
- * Live comparison of the embedding classifier against the same fixture the keyword
- * classifier is scored against in `classifier-eval.test.ts`. This makes real Voyage API
- * calls, so it's skipped entirely unless `VOYAGE_API_KEY` is set — CI stays green without a
- * key, and this becomes runnable the moment a key is configured (locally or as a CI secret).
+ * Live eval of the embedding classifier as production configures it for the Cloudflare BGE-M3
+ * Worker: the provider's own cutoffs and secondary-label margin from `embeddingClassifierConfig`,
+ * and MAX_CLASSIFIER_LABELS chip slots. Runs when the Worker credentials are set, or from the
+ * offline embeddings cache alone (see embedding-cache.ts) when `CLASSIFIER_EVAL_OFFLINE=1` is set,
+ * and is skipped otherwise. The offline run is opt-in because a cache left over from before a
+ * fixture edit is missing texts, and a cache miss without credentials fails the run.
  *
- * This test deliberately has NO baseline-floor assertion: it exists to print a scoreboard
- * for side-by-side comparison, not to gate merges. The decision to promote the embedding
- * classifier to the default (or to keep it parallel-write-only) is a product/engineering
- * call made by reading this scoreboard against classifier-eval.test.ts's, not an automated
- * pass/fail.
+ * The floors are a ratchet against a model, head, card, or rule change that silently mislabels or
+ * stops labeling articles: the earlier 0.6 card cutoff, for example, left 99% of stored articles
+ * unlabeled under BGE-M3. Raise them when a change genuinely improves the scores.
  */
 
-const apiKey = process.env.VOYAGE_API_KEY;
+const upstream = embeddingsUpstreamFromEnv();
+const cacheFile = embeddingsCacheFile("eval");
+const enabled =
+  Boolean(upstream) || (process.env.CLASSIFIER_EVAL_OFFLINE === "1" && existsSync(cacheFile));
+const config = embeddingClassifierConfig(undefined, {
+  CLOUDFLARE_EMBEDDINGS_URL: upstream?.url ?? "https://embeddings-cache.invalid/embed",
+  CLOUDFLARE_EMBEDDINGS_TOKEN: upstream?.token ?? "embeddings-cache",
+}) as EmbeddingClassifierConfig;
 
-async function runEmbeddingClassifier(
-  cases: readonly ClassifierEvalCase[],
-  config: EmbeddingClassifierConfig,
-): Promise<Prediction[]> {
-  const predictions: Prediction[] = [];
-  for (const case_ of cases) {
-    const result = await classifyItemEmbedding(
-      {
-        feedTitle: case_.feedTitle,
-        feedDescription: case_.feedDescription,
-        feedUrl: case_.feedUrl,
-        feedSiteUrl: case_.feedSiteUrl,
-        sourceKind: case_.sourceKind,
-        itemTitle: case_.itemTitle,
-        itemSummary: case_.itemSummary,
-        itemContentText: case_.itemContentText,
-        itemUrl: case_.itemUrl,
-      },
-      config,
-    );
-    predictions.push({ case: case_, predicted: result.categories.map((c) => c.label) });
-  }
-  return predictions;
+const FLOORS = {
+  stored: { f1: 0.65, maxAbstention: 0.15, clearTop1: 0.78 },
+  // Synthetic headlines; the head learned from real articles, so it is held to a lower floor.
+  regression: { f1: 0.6 },
+  field: { f1: 0.65 },
+};
+
+const originalFetch = globalThis.fetch;
+
+async function runEmbeddingClassifier(cases: readonly ClassifierEvalCase[]): Promise<Prediction[]> {
+  const inputs = cases.map((case_) => ({ ...case_, maxLabels: MAX_CLASSIFIER_LABELS }));
+  // In sequence, not in parallel: the cache doesn't coalesce concurrent misses, so the scoring
+  // pass for the mismatch log reads what classification already embedded.
+  const classifications = await classifyItemEmbeddings(inputs, config);
+  const scores = await scoreItemEmbeddings(inputs, config);
+  return cases.map((case_) => {
+    const predicted = (classifications.get(case_.id)?.categories ?? []).map((c) => c.label);
+    if ([...case_.expected].sort().join("|") !== [...predicted].sort().join("|")) {
+      const top3 = (scores.get(case_.id) ?? [])
+        .slice(0, 3)
+        .map((entry) => `${entry.label}=${entry.score.toFixed(3)}`)
+        .join(", ");
+      console.log(
+        `[mismatch] ${case_.id}: expected ${case_.expected.join(", ") || "none"}; predicted ${predicted.join(", ") || "none"}; top3 ${top3}`,
+      );
+    }
+    return { case: case_, predicted };
+  });
 }
 
-describe.skipIf(!apiKey)("embedding classifier eval (live Voyage API)", () => {
-  test("prints scoreboard for the embedding classifier and compares against the keyword baseline", async () => {
-    const config: EmbeddingClassifierConfig = { apiKey: apiKey! };
-    const predictions = await runEmbeddingClassifier(CLASSIFIER_EVAL_FIXTURE, config);
-    const { perCategory, overall } = accumulateConfusion(predictions);
+function report(name: string, predictions: readonly Prediction[]) {
+  const { perCategory, overall } = accumulateConfusion(predictions);
+  const abstention =
+    predictions.filter((prediction) => prediction.predicted.length === 0).length /
+    predictions.length;
+  console.log(`\n${name}\n${renderScoreboard(perCategory, overall)}`);
+  console.log(
+    `${name}: F1=${round3(f1(overall))} P=${round3(precision(overall))} R=${round3(recall(overall))} abstain=${round3(abstention)}`,
+  );
+  return { f1: f1(overall), abstention };
+}
 
-    console.log(`\n${renderScoreboard(perCategory, overall)}\n`);
-    console.log(
-      `Embedding classifier: F1=${f1(overall).toFixed(3)} P=${precision(overall).toFixed(3)} R=${recall(overall).toFixed(3)}\n` +
-        `Keyword classifier (from classifier-eval.test.ts): F1=0.909 P=0.926 R=0.893\n` +
-        `Compare these numbers to decide whether to promote the embedding classifier to the ` +
-        `default read path, keep both writing in parallel for more data, or revisit the ` +
-        `category cards / similarity thresholds.`,
+beforeAll(() => {
+  globalThis.fetch = cachedEmbeddingsFetch({ cacheFile, upstream, realFetch: originalFetch });
+});
+
+afterAll(() => {
+  globalThis.fetch = originalFetch;
+});
+
+describe.skipIf(!enabled)("embedding classifier eval (Cloudflare BGE-M3)", () => {
+  test("labels stored articles above the floors", async () => {
+    const result = report(
+      "Stored articles",
+      await runEmbeddingClassifier(CLASSIFIER_EVAL_STORED_CASES),
     );
 
-    expect(predictions.length).toBe(CLASSIFIER_EVAL_FIXTURE.length);
-  }, 30_000);
+    expect(result.f1).toBeGreaterThanOrEqual(FLOORS.stored.f1);
+    expect(result.abstention).toBeLessThanOrEqual(FLOORS.stored.maxAbstention);
+  }, 120_000);
+
+  test("puts an expected category first for clearly labeled stored articles", async () => {
+    const clear = CLASSIFIER_EVAL_STORED_CASES.filter(
+      (case_) => case_.expected.length > 0 && !case_.needsReview,
+    );
+    const scores = await scoreItemEmbeddings(clear, config);
+    const top1 =
+      clear.filter((case_) => case_.expected.includes(scores.get(case_.id)?.[0]?.label ?? ""))
+        .length / clear.length;
+    console.log(`Clearly labeled stored articles (${clear.length}): top-1 ${round3(top1)}`);
+
+    expect(top1).toBeGreaterThanOrEqual(FLOORS.stored.clearTop1);
+  }, 120_000);
+
+  test("keeps regression and coverage cases above their floor", async () => {
+    const result = report(
+      "Regression + coverage cases",
+      await runEmbeddingClassifier(CLASSIFIER_EVAL_FIXTURE.filter((c) => c.source !== "field")),
+    );
+
+    expect(result.f1).toBeGreaterThanOrEqual(FLOORS.regression.f1);
+  }, 120_000);
+
+  test("keeps held-out field cases above their floor", async () => {
+    // Never tuned on: the cutoffs were chosen on stored articles only.
+    const result = report(
+      "Held-out field cases",
+      await runEmbeddingClassifier(CLASSIFIER_EVAL_FIXTURE.filter((c) => c.source === "field")),
+    );
+
+    expect(result.f1).toBeGreaterThanOrEqual(FLOORS.field.f1);
+  }, 120_000);
 });

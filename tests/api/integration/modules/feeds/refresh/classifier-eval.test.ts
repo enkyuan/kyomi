@@ -47,14 +47,25 @@ function runClassifier(cases: readonly ClassifierEvalCase[]): Prediction[] {
 
 describe("classifier eval harness", () => {
   const predictions = runClassifier(CLASSIFIER_EVAL_FIXTURE);
-  const { perCategory, overall } = accumulateConfusion(predictions);
 
-  test("prints scoreboard for the current classifier", () => {
-    // Not an assertion — this exists so the score table appears in `bun test` output next to
+  // Field cases are a held-out set with their own floors, so they neither dilute nor hide
+  // behind the regression + coverage ratchet.
+  const baselinePredictions = predictions.filter(({ case: case_ }) => case_.source !== "field");
+  const fieldPredictions = predictions.filter(({ case: case_ }) => case_.source === "field");
+  const baseline = accumulateConfusion(baselinePredictions);
+  const field = accumulateConfusion(fieldPredictions);
+
+  test("prints scoreboards for the current classifier", () => {
+    // Not an assertion — this exists so the score tables appear in `bun test` output next to
     // the ratchet assertions below, making it easy to see WHY a floor bump is (or isn't)
     // warranted when swapping classifiers.
-    console.log(`\n${renderScoreboard(perCategory, overall)}\n`);
-    expect(predictions.length).toBe(CLASSIFIER_EVAL_FIXTURE.length);
+    console.log(
+      `\nRegression + coverage cases\n${renderScoreboard(baseline.perCategory, baseline.overall)}\n`,
+    );
+    console.log(`\nHeld-out field cases\n${renderScoreboard(field.perCategory, field.overall)}\n`);
+    expect(baselinePredictions.length + fieldPredictions.length).toBe(
+      CLASSIFIER_EVAL_FIXTURE.length,
+    );
   });
 
   test("session-regression cases all pass exactly", () => {
@@ -102,17 +113,36 @@ describe("classifier eval harness", () => {
     overallRecallFloor: 0.82,
   };
 
+  // Held-out field cases, measured on the keyword classifier: F1=0.333, P=0.75, R=0.214. These
+  // are real-world misses, so the floors record honest current performance (one extra false
+  // positive of slack) rather than a target.
+  const FIELD_BASELINE = {
+    overallF1Floor: 0.3,
+    overallPrecisionFloor: 0.6,
+    overallRecallFloor: 0.2,
+  };
+
   test("overall F1 stays at or above the baseline floor", () => {
-    expect(round3(f1(overall))).toBeGreaterThanOrEqual(CURRENT_BASELINE.overallF1Floor);
+    expect(round3(f1(baseline.overall))).toBeGreaterThanOrEqual(CURRENT_BASELINE.overallF1Floor);
   });
 
   test("overall precision stays at or above the baseline floor", () => {
-    expect(round3(precision(overall))).toBeGreaterThanOrEqual(
+    expect(round3(precision(baseline.overall))).toBeGreaterThanOrEqual(
       CURRENT_BASELINE.overallPrecisionFloor,
     );
   });
 
   test("overall recall stays at or above the baseline floor", () => {
-    expect(round3(recall(overall))).toBeGreaterThanOrEqual(CURRENT_BASELINE.overallRecallFloor);
+    expect(round3(recall(baseline.overall))).toBeGreaterThanOrEqual(
+      CURRENT_BASELINE.overallRecallFloor,
+    );
+  });
+
+  test("held-out field cases stay at or above their floors", () => {
+    expect(round3(f1(field.overall))).toBeGreaterThanOrEqual(FIELD_BASELINE.overallF1Floor);
+    expect(round3(precision(field.overall))).toBeGreaterThanOrEqual(
+      FIELD_BASELINE.overallPrecisionFloor,
+    );
+    expect(round3(recall(field.overall))).toBeGreaterThanOrEqual(FIELD_BASELINE.overallRecallFloor);
   });
 });

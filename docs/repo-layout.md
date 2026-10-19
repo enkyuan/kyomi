@@ -12,8 +12,10 @@ This repository follows a monorepo shape modeled after larger production repos:
 
 1. `apps/web` should contain route/view composition and UI wiring, not core domain rules.
 2. `apps/api` should contain transport/orchestration boundaries, not reusable business logic.
-3. Reusable logic should be promoted into `packages/*` once consumed by multiple app modules.
-4. Workspace-wide TypeScript baselines live in `packages/tsconfig`.
+3. `apps/embeddings` is the Cloudflare Worker that serves embeddings to the article classifier;
+   it should contain only its `/embed` HTTP contract.
+4. Reusable logic should be promoted into `packages/*` once consumed by multiple app modules.
+5. Workspace-wide TypeScript baselines live in `packages/tsconfig`.
 
 ## Shared UI (`packages/ui`)
 

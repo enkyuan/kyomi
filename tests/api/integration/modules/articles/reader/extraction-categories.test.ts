@@ -1,14 +1,17 @@
-import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "bun:test";
 import { getTableName } from "drizzle-orm";
-import { resetPrototypeCache, type EmbeddingClassifierConfig } from "@kyomi/worker";
+import { embeddingModelInfo, type EmbeddingClassifierConfig } from "@kyomi/worker";
 import { reclassifyExtractedFeedItem } from "@modules/articles/reader/extraction/workflow";
 import type { ArticleDetailDto } from "@modules/articles/types";
+import { FAKE_CATEGORY_MODEL } from "../../feeds/refresh/fake-category-model";
 
 const originalFetch = globalThis.fetch;
 const FAKE_CONFIG: EmbeddingClassifierConfig = {
   apiKey: "test-key",
-  apiUrl: "https://fake.voyage.test/v1/embeddings",
+  apiUrl: "https://fake-embeddings.test/embed",
+  categoryModel: FAKE_CATEGORY_MODEL,
 };
+const EMBEDDING_MODEL_ID = embeddingModelInfo(FAKE_CONFIG).modelId;
 
 const UNIT_X = [1, 0, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
@@ -106,13 +109,8 @@ function createCategoryDb(
   return db;
 }
 
-beforeEach(() => {
-  resetPrototypeCache();
-});
-
 afterEach(() => {
   globalThis.fetch = originalFetch;
-  resetPrototypeCache();
 });
 
 describe("reclassifyExtractedFeedItem", () => {
@@ -153,14 +151,6 @@ describe("reclassifyExtractedFeedItem", () => {
     const itemInputs: string[] = [];
     globalThis.fetch = (async (_url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = body.input.length > 1;
-      if (isPrototypeCall) {
-        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
-      }
       itemInputs.push(body.input[0] ?? "");
       return new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
         status: 200,
@@ -195,7 +185,7 @@ describe("reclassifyExtractedFeedItem", () => {
         expect.objectContaining({
           feedItemId: "item-1",
           provenance: "classifier",
-          modelId: "voyage-4",
+          modelId: EMBEDDING_MODEL_ID,
           taxonomyVersion: "v1",
           classifierMethod: "embedding",
         }),
@@ -203,7 +193,100 @@ describe("reclassifyExtractedFeedItem", () => {
     );
   });
 
-  test("clears classifier item rows without calling Voyage when explicit labels fill the chip slots", async () => {
+  test("keeps existing item rows when extracted text yields no categories", async () => {
+    const existing = [
+      { id: "keyword-1", feedItemId: "item-1", provenance: "classifier", modelId: "keyword-v1" },
+      {
+        id: "embedding-1",
+        feedItemId: "item-1",
+        provenance: "classifier",
+        modelId: EMBEDDING_MODEL_ID,
+      },
+    ];
+    const fake = createCategoryDb({ existingAssignments: existing });
+    globalThis.fetch = (async (_url: string, init: RequestInit) => {
+      const body = JSON.parse(init.body as string) as { input: string[] };
+      const embeddings = body.input.map(() => ORTHOGONAL_Z);
+      return new Response(
+        JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
+        { status: 200 },
+      );
+    }) as unknown as typeof fetch;
+
+    await reclassifyExtractedFeedItem(
+      fake as never,
+      article({ title: "Weekly notes", link: "https://example.com/weekly-notes" }),
+      "Thanks for reading. Leave a comment below.",
+      { embeddingClassifier: FAKE_CONFIG },
+    );
+
+    expect(fake.deletes).toEqual([]);
+    expect(fake.categories).toEqual([]);
+    expect(fake.feedItemCategoryAssignments).toEqual(existing);
+  });
+
+  test("keeps existing item rows when every category is already an explicit label", async () => {
+    const existing = [
+      { id: "keyword-1", feedItemId: "item-1", provenance: "classifier", modelId: "keyword-v1" },
+      {
+        id: "embedding-1",
+        feedItemId: "item-1",
+        provenance: "classifier",
+        modelId: EMBEDDING_MODEL_ID,
+      },
+    ];
+    const fake = createCategoryDb({
+      explicitLabels: ["Software Engineering"],
+      existingAssignments: existing,
+    });
+    globalThis.fetch = (async (_url: string, init: RequestInit) => {
+      const body = JSON.parse(init.body as string) as { input: string[] };
+      const embeddings = body.input.map(() => UNIT_X);
+      return new Response(
+        JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
+        { status: 200 },
+      );
+    }) as unknown as typeof fetch;
+
+    await reclassifyExtractedFeedItem(
+      fake as never,
+      article(),
+      "Extracted full text about compilers, build systems, and package managers.",
+      { embeddingClassifier: FAKE_CONFIG },
+    );
+
+    expect(fake.deletes).toEqual([]);
+    expect(fake.categories).toEqual([]);
+    expect(fake.feedItemCategoryAssignments).toEqual(existing);
+  });
+
+  test("embeds only the opening of long extracted text", async () => {
+    const fake = createCategoryDb();
+    const itemInputs: string[] = [];
+    globalThis.fetch = (async (_url: string, init: RequestInit) => {
+      const body = JSON.parse(init.body as string) as { input: string[] };
+      itemInputs.push(...body.input);
+      const embeddings = body.input.map(() => UNIT_X);
+      return new Response(
+        JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
+        { status: 200 },
+      );
+    }) as unknown as typeof fetch;
+
+    await reclassifyExtractedFeedItem(
+      fake as never,
+      article(),
+      `Compilers and build systems. ${"Body text. ".repeat(1_000)}Subscribe to our newsletter.`,
+      { embeddingClassifier: FAKE_CONFIG },
+    );
+
+    expect(itemInputs).toHaveLength(1);
+    expect(itemInputs[0]).toStartWith("Compiler maintainers rewrite package manager");
+    expect(itemInputs[0]!.length).toBeLessThanOrEqual(4_000);
+    expect(itemInputs[0]).not.toContain("Subscribe to our newsletter");
+  });
+
+  test("clears classifier item rows without calling the embeddings Worker when explicit labels fill the chip slots", async () => {
     const fake = createCategoryDb({ explicitLabels: ["AI & ML", "Business & Startups"] });
     let fetched = false;
     globalThis.fetch = (async () => {
@@ -224,12 +307,12 @@ describe("reclassifyExtractedFeedItem", () => {
     expect(fake.feedItemCategoryAssignments).toEqual([]);
   });
 
-  test("preserves existing item rows when Voyage classification fails", async () => {
+  test("preserves existing item rows when embedding classification fails", async () => {
     const existing = {
       id: "assignment-1",
       feedItemId: "item-1",
       provenance: "classifier",
-      modelId: "voyage-4",
+      modelId: EMBEDDING_MODEL_ID,
     };
     const fake = createCategoryDb({ existingAssignments: [existing] });
     const warnings: CapturedRow[] = [];

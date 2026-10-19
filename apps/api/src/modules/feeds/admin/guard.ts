@@ -10,8 +10,8 @@ function sharedSecretMatches(headers: Headers | undefined): boolean {
     return false;
   }
 
-  const configured = Buffer.from(configuredSecret);
-  const provided = Buffer.from(providedSecret);
+  const configured = new TextEncoder().encode(configuredSecret);
+  const provided = new TextEncoder().encode(providedSecret);
   return configured.length === provided.length && timingSafeEqual(configured, provided);
 }
 

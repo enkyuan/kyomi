@@ -2,9 +2,11 @@
 .github
 .turbo
 .DS_Store
-.env
-.env.*
-!.env.example
+# Env files hold dotenvx ciphertext that images can't decrypt. Bun auto-loads `.env` from the
+# working directory, so a copied file would feed `encrypted:` values to the app as config.
+**/.env
+**/.env.*
+!**/.env.example
 node_modules
 apps/*/node_modules
 packages/*/node_modules

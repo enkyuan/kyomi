@@ -10,12 +10,13 @@ import {
   toCategorySlug,
 } from "@kyomi/db";
 import { db } from "@adapters/db/client";
+import { embeddingClassifierConfig } from "@config/embeddings";
 import {
   canonicalWinsOnConflictSql,
   classifyFeedCategories,
   classifyFeedEmbedding,
   classifyItemCategories,
-  classifyItemEmbedding,
+  classifyItemEmbeddings,
   embeddingModelInfo,
   shouldSuppressFallback,
   syncInferredFeedCategories,
@@ -206,7 +207,10 @@ export function summarizeBackfill(stats: BackfillStats): string {
     `${action} (${stats.classifierMethod}/${stats.classifierModelId}): scanned ${stats.feedsScanned} feeds and ${stats.itemsScanned} items; ${verb} classifier categories for ${stats.feedsWithClassifierCategories} feeds and ${stats.itemsWithClassifierCategories} items. ` +
     `${assignmentSummary} ` +
     `Suppressed classifier feed fallback for ${stats.feedClassifierFallbacksSuppressed} broad feeds; item classifier abstained on ${stats.itemClassifierAbstentions} items. ` +
-    `${coverageVerb} coverage status for ${pluralize(stats.feedBackfillStatusesRecorded, "feed")}; ${pluralize(stats.feedsFailed, "feed")} failed.`
+    `${coverageVerb} coverage status for ${pluralize(stats.feedBackfillStatusesRecorded, "feed")}; ${pluralize(stats.feedsFailed, "feed")} failed` +
+    (stats.itemEmbeddingFailures > 0
+      ? `; ${pluralize(stats.itemEmbeddingFailures, "embedding failure")}.`
+      : ".")
   );
 }
 
@@ -335,6 +339,22 @@ export async function mapWithConcurrency<T, R>(
   return results;
 }
 
+/**
+ * Item columns both loaders select. Extracted text is read only once extraction finished, so
+ * backfill classifies from the same text extraction re-classification used instead of
+ * overwriting its labels from the thinner feed text.
+ */
+export const backfillItemColumns = {
+  title: feedItems.title,
+  summary: feedItems.summary,
+  contentText: feedItems.contentText,
+  extractedContentText: sql<string | null>`
+    CASE WHEN ${feedItems.extractedContentStatus} = 'ready' THEN ${feedItems.extractedContentText} END
+  `,
+  link: feedItems.link,
+  canonicalUrl: feedItems.canonicalUrl,
+};
+
 function loadItemsPage(feedId: string, limit: number, offset: number, recentDays: number | null) {
   const feedFilter = eq(feedItems.feedId, feedId);
   const whereClause = recentDays
@@ -345,14 +365,7 @@ function loadItemsPage(feedId: string, limit: number, offset: number, recentDays
     : feedFilter;
 
   return db
-    .select({
-      id: feedItems.id,
-      title: feedItems.title,
-      summary: feedItems.summary,
-      contentText: feedItems.contentText,
-      link: feedItems.link,
-      canonicalUrl: feedItems.canonicalUrl,
-    })
+    .select({ id: feedItems.id, ...backfillItemColumns })
     .from(feedItems)
     .where(whereClause)
     .orderBy(desc(feedItems.publishedAt), desc(feedItems.id))
@@ -366,15 +379,7 @@ function loadItemsForFeeds(feedIds: string[]) {
   }
 
   return db
-    .select({
-      id: feedItems.id,
-      feedId: feedItems.feedId,
-      title: feedItems.title,
-      summary: feedItems.summary,
-      contentText: feedItems.contentText,
-      link: feedItems.link,
-      canonicalUrl: feedItems.canonicalUrl,
-    })
+    .select({ id: feedItems.id, feedId: feedItems.feedId, ...backfillItemColumns })
     .from(feedItems)
     .where(inArray(feedItems.feedId, feedIds))
     .orderBy(feedItems.feedId, desc(feedItems.publishedAt), desc(feedItems.id));
@@ -588,9 +593,28 @@ type BackfillItemRow = {
   title: string;
   summary: string | null;
   contentText: string | null;
+  /** Set only when source-page extraction is ready. */
+  extractedContentText?: string | null;
   link: string | null;
   canonicalUrl: string;
 };
+
+// `??`, not `||`: a ready extraction with empty text is what extraction re-classified from.
+function classifierContentText(item: BackfillItemRow): string | null {
+  return item.extractedContentText ?? item.contentText;
+}
+
+/**
+ * Whether an applied backfill should replace this item's classifier rows. An abstention on ready
+ * extracted text is the same "no new information" extraction re-classification keeps labels for,
+ * so the labels refresh assigned stay instead of being synced away.
+ */
+export function syncsItemLabels(
+  item: BackfillItemRow,
+  inferredCategoryLabels: readonly InferredCategoryLabel[],
+): boolean {
+  return inferredCategoryLabels.length > 0 || item.extractedContentText == null;
+}
 
 type BackfillItemRecord = BackfillItemRow & {
   id: string;
@@ -636,11 +660,16 @@ function resolveBackfillClassifier(args: BackfillArgs): BackfillClassifier {
     return { method: "keyword", model: BACKFILL_CLASSIFIER_MODEL };
   }
 
-  const apiKey = process.env.VOYAGE_API_KEY?.trim();
-  if (!apiKey) {
-    throw new Error("VOYAGE_API_KEY is required when --classifier embedding is used");
+  // Same provider selection as the worker, so backfilled rows carry the model id that refresh and
+  // extraction write and replace.
+  const embeddingConfig = embeddingClassifierConfig();
+
+  if (!embeddingConfig) {
+    throw new Error(
+      "CLOUDFLARE_EMBEDDINGS_URL and CLOUDFLARE_EMBEDDINGS_TOKEN are required when --classifier embedding is used",
+    );
   }
-  const embeddingConfig: EmbeddingClassifierConfig = { apiKey };
+
   return {
     method: "embedding",
     embeddingConfig,
@@ -680,7 +709,7 @@ export function inferItemCategories(
     sourceKind: feed.sourceKind,
     itemTitle: item.title,
     itemSummary: item.summary,
-    itemContentText: item.contentText,
+    itemContentText: classifierContentText(item),
     itemUrl: item.link || item.canonicalUrl,
   }).categories;
 }
@@ -708,34 +737,38 @@ export async function inferFeedEmbedding(
   };
 }
 
-export async function inferItemEmbedding(
+/** Embeds a page of one feed's items in one batched call; items whose request failed are absent. */
+export async function inferItemEmbeddings(
   feed: BackfillFeedRow,
-  item: BackfillItemRow,
+  items: ReadonlyArray<BackfillItemRow & { id: string }>,
   config: EmbeddingClassifierConfig,
-): Promise<InferredCategoryLabel[]> {
-  return (
-    await classifyItemEmbedding(
-      {
-        feedTitle: feed.title,
-        feedDescription: feed.description,
-        feedUrl: feed.url,
-        feedSiteUrl: feed.link,
-        sourceKind: feed.sourceKind,
-        itemTitle: item.title,
-        itemSummary: item.summary,
-        itemContentText: item.contentText,
-        itemUrl: item.link || item.canonicalUrl,
-      },
-      config,
-      MAX_CLASSIFIER_LABELS,
-    )
-  ).categories;
+): Promise<Map<string, InferredCategoryLabel[]>> {
+  const classifications = await classifyItemEmbeddings(
+    items.map((item) => ({
+      id: item.id,
+      feedTitle: feed.title,
+      feedDescription: feed.description,
+      feedUrl: feed.url,
+      feedSiteUrl: feed.link,
+      sourceKind: feed.sourceKind,
+      itemTitle: item.title,
+      itemSummary: item.summary,
+      itemContentText: classifierContentText(item),
+      itemUrl: item.link || item.canonicalUrl,
+      maxLabels: MAX_CLASSIFIER_LABELS,
+    })),
+    config,
+  );
+  return new Map(
+    [...classifications].map(([id, classification]) => [id, classification.categories]),
+  );
 }
 
 /**
  * A failing embedding call (rate limit, transient network error) must not abort a bulk backfill
- * run that may be hours into processing thousands of items — it's counted and logged instead,
- * mirroring the online refresh path's best-effort handling of the same calls.
+ * run that may be hours into processing thousands of items, and must not be written as an
+ * abstention that deletes existing rows. It's counted, logged, and rethrown so only this feed is
+ * recorded as failed, which `--retry-failed` picks up later.
  */
 async function inferClassifierFeed(
   feed: BackfillFeedRow,
@@ -756,30 +789,43 @@ async function inferClassifierFeed(
       feedUrl: feed.url,
       error: error instanceof Error ? error.message : String(error),
     });
-    return { categories: [], suppressedFallback: false };
+    throw error;
   }
 }
 
-async function inferClassifierItem(
+async function inferClassifierItems(
   feed: BackfillFeedRow,
-  item: BackfillItemRow,
+  items: Array<BackfillItemRow & { id: string }>,
   classifier: BackfillClassifier,
   stats: BackfillStats,
-): Promise<InferredCategoryLabel[]> {
+  concurrency: number,
+): Promise<Array<{ id: string; inferredCategoryLabels: InferredCategoryLabel[] }>> {
   if (classifier.method === "keyword") {
-    return inferItemCategories(feed, item);
+    return mapWithConcurrency(items, concurrency, async (item) => ({
+      id: item.id,
+      inferredCategoryLabels: inferItemCategories(feed, item),
+    }));
   }
+  let labelsById: Map<string, InferredCategoryLabel[]>;
   try {
-    return await inferItemEmbedding(feed, item, classifier.embeddingConfig);
+    labelsById = await inferItemEmbeddings(feed, items, classifier.embeddingConfig);
   } catch (error) {
-    stats.itemEmbeddingFailures += 1;
+    labelsById = new Map();
     console.warn("[categories:backfill] item embedding classification failed", {
       feedUrl: feed.url,
-      itemUrl: item.link || item.canonicalUrl,
+      itemCount: items.length,
       error: error instanceof Error ? error.message : String(error),
     });
-    return [];
   }
+  const failedItems = items.length - labelsById.size;
+  if (failedItems > 0) {
+    stats.itemEmbeddingFailures += failedItems;
+    throw new Error(`Embedding classification failed for ${failedItems} of ${items.length} items`);
+  }
+  return items.map((item) => ({
+    id: item.id,
+    inferredCategoryLabels: labelsById.get(item.id) ?? [],
+  }));
 }
 
 function createProcessedFeedStats(): ProcessedFeedStats {
@@ -1143,16 +1189,25 @@ async function processFeed(
       break;
     }
 
-    const inferredItems = await mapWithConcurrency(items, args.concurrency, async (item) => {
+    const inferredItems = await inferClassifierItems(
+      feed,
+      items,
+      classifier,
+      stats,
+      args.concurrency,
+    );
+    for (const { inferredCategoryLabels } of inferredItems) {
       feedStats.itemsScanned += 1;
-      const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier, stats);
       if (inferredCategoryLabels.length > 0) {
         feedStats.itemsWithClassifierCategories += 1;
       } else {
         feedStats.itemClassifierAbstentions += 1;
       }
-      return { id: item.id, inferredCategoryLabels };
-    });
+    }
+    const itemsById = new Map(items.map((item) => [item.id, item]));
+    const syncedItems = inferredItems.filter(({ id, inferredCategoryLabels }) =>
+      syncsItemLabels(itemsById.get(id)!, inferredCategoryLabels),
+    );
 
     if (args.apply) {
       // syncInferredFeedCategories unconditionally deletes+reinserts the feed's
@@ -1165,7 +1220,7 @@ async function processFeed(
         {
           feedId: feed.id,
           feedCategories: [],
-          items: inferredItems,
+          items: syncedItems,
           model: classifier.model,
         },
         now,
@@ -1234,25 +1289,26 @@ async function processFeedBatch(
       feedStats.feedClassifierCategories = feedCategories.length;
       feedStats.feedClassifierFallbackSuppressed = suppressedFallback;
 
-      const inferredItems = await mapWithConcurrency(
-        itemsByFeedId.get(feed.id) ?? [],
-        concurrency,
-        async (item) => {
-          feedStats.itemsScanned += 1;
-          const inferredCategoryLabels = await inferClassifierItem(feed, item, classifier, stats);
-          if (inferredCategoryLabels.length > 0) {
-            feedStats.itemsWithClassifierCategories += 1;
-          } else {
-            feedStats.itemClassifierAbstentions += 1;
-          }
-          return { id: item.id, feedId: feed.id, inferredCategoryLabels };
-        },
-      );
+      const batchItems = itemsByFeedId.get(feed.id) ?? [];
+      const batchItemsById = new Map(batchItems.map((item) => [item.id, item]));
+      const inferredItems = (
+        await inferClassifierItems(feed, batchItems, classifier, stats, concurrency)
+      ).map(({ id, inferredCategoryLabels }) => {
+        feedStats.itemsScanned += 1;
+        if (inferredCategoryLabels.length > 0) {
+          feedStats.itemsWithClassifierCategories += 1;
+        } else {
+          feedStats.itemClassifierAbstentions += 1;
+        }
+        return { id, feedId: feed.id, inferredCategoryLabels };
+      });
 
       processed.push({
         feed,
         feedCategories,
-        items: inferredItems,
+        items: inferredItems.filter(({ id, inferredCategoryLabels }) =>
+          syncsItemLabels(batchItemsById.get(id)!, inferredCategoryLabels),
+        ),
         stats: feedStats,
       });
     } catch (error) {

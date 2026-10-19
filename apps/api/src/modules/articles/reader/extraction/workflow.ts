@@ -191,15 +191,18 @@ export async function reclassifyExtractedFeedItem(
     const keywordInferredLabels = keywordClassification.categories
       .filter((category) => !explicitLabelSet.has(category.label))
       .slice(0, remainingChipSlots);
-
-    await syncItemInferences(
-      database,
-      {
-        items: [{ id: article.id, inferredCategoryLabels: keywordInferredLabels }],
-        model: KEYWORD_EXTRACTED_ITEM_CLASSIFIER_MODEL,
-      },
-      new Date(),
-    );
+    // No usable label carries no new information, and these rows share the refresh classifier's
+    // model id, so writing an empty set would erase the labels refresh assigned from feed text.
+    if (keywordInferredLabels.length > 0) {
+      await syncItemInferences(
+        database,
+        {
+          items: [{ id: article.id, inferredCategoryLabels: keywordInferredLabels }],
+          model: KEYWORD_EXTRACTED_ITEM_CLASSIFIER_MODEL,
+        },
+        new Date(),
+      );
+    }
   } catch (error) {
     options.logger?.warn?.("articles.extract_full_text.categories_reclassify_failed", {
       articleId: article.id,
@@ -233,6 +236,10 @@ export async function reclassifyExtractedFeedItem(
     const inferredCategoryLabels = classification.categories
       .filter((category) => !explicitLabelSet.has(category.label))
       .slice(0, remainingChipSlots);
+    // Same as the keyword pass: no usable label keeps the labels refresh already wrote.
+    if (inferredCategoryLabels.length === 0) {
+      return;
+    }
 
     await syncItemInferences(
       database,

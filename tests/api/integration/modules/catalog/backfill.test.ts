@@ -1,34 +1,30 @@
-import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "bun:test";
+import { PgDialect } from "drizzle-orm/pg-core";
+import { EMBEDDING_CLASSIFIER_MODEL_ID, type EmbeddingClassifierConfig } from "@kyomi/worker";
 import {
-  EMBEDDING_CLASSIFIER_MODEL_ID,
-  resetPrototypeCache,
-  type EmbeddingClassifierConfig,
-} from "@kyomi/worker";
-import {
+  backfillItemColumns,
   inferFeedCategories,
-  inferItemEmbedding,
+  inferItemEmbeddings,
   inferItemCategories,
   mapWithConcurrency,
   nextItemBackfillBatchSize,
   parseBackfillArgs,
   summarizeBackfill,
+  syncsItemLabels,
 } from "../../../../../apps/api/src/modules/catalog/backfill";
+import { FAKE_CATEGORY_MODEL } from "../feeds/refresh/fake-category-model";
 
 const originalFetch = globalThis.fetch;
 const FAKE_EMBEDDING_CONFIG: EmbeddingClassifierConfig = {
   apiKey: "test-key",
-  apiUrl: "https://fake.voyage.test/v1/embeddings",
+  apiUrl: "https://fake-embeddings.test/embed",
+  categoryModel: FAKE_CATEGORY_MODEL,
 };
 const UNIT_X = [1, 0, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
 
-beforeEach(() => {
-  resetPrototypeCache();
-});
-
 afterEach(() => {
   globalThis.fetch = originalFetch;
-  resetPrototypeCache();
 });
 
 describe("category backfill script", () => {
@@ -149,6 +145,70 @@ describe("category backfill script", () => {
     expect(labels).toEqual(["Finance & Markets"]);
   });
 
+  test("classifies from ready extracted text instead of thin feed text", () => {
+    const feed = {
+      title: "Daily Links",
+      description: "A mixed collection of links.",
+      url: "https://example.com/feed.xml",
+      link: "https://example.com",
+      sourceKind: "rss",
+    };
+    const item = {
+      title: "Weekly notes",
+      summary: null,
+      contentText: "Read more",
+      link: "https://example.com/weekly-notes",
+      canonicalUrl: "https://example.com/weekly-notes",
+    };
+
+    expect(inferItemCategories(feed, item)).toEqual([]);
+    expect(
+      inferItemCategories(feed, {
+        ...item,
+        extractedContentText:
+          "Investors watch market prices, stock performance, crypto trading, and personal finance.",
+      }).map((category) => category.label),
+    ).toEqual(["Finance & Markets"]);
+    // A ready extraction with empty text is what extraction re-classified from, so it wins.
+    expect(
+      inferItemCategories(feed, {
+        ...item,
+        contentText:
+          "Investors watch market prices, stock performance, crypto trading, and finance.",
+        extractedContentText: "",
+      }),
+    ).toEqual([]);
+  });
+
+  test("keeps refresh labels when backfill abstains on ready extracted text", () => {
+    const item = {
+      title: "Weekly notes",
+      summary: null,
+      contentText: "Read more",
+      link: "https://example.com/weekly-notes",
+      canonicalUrl: "https://example.com/weekly-notes",
+    };
+    const label = { label: "Finance & Markets", confidence: 0.9 };
+
+    // An abstention on ready extracted text leaves the item's existing rows alone.
+    expect(syncsItemLabels({ ...item, extractedContentText: "Thin page text" }, [])).toBe(false);
+    expect(syncsItemLabels({ ...item, extractedContentText: "" }, [])).toBe(false);
+    // New labels, or a classification from feed text, still replace them.
+    expect(syncsItemLabels({ ...item, extractedContentText: "Thin page text" }, [label])).toBe(
+      true,
+    );
+    expect(syncsItemLabels({ ...item, extractedContentText: null }, [])).toBe(true);
+    expect(syncsItemLabels(item, [])).toBe(true);
+  });
+
+  test("loads extracted text only for items whose extraction is ready", () => {
+    const query = new PgDialect().sqlToQuery(backfillItemColumns.extractedContentText);
+
+    expect(query.sql).toContain(
+      `CASE WHEN "feed_items"."extracted_content_status" = 'ready' THEN "feed_items"."extracted_content_text" END`,
+    );
+  });
+
   test("suppresses broad feed classifier fallback during backfill", () => {
     const result = inferFeedCategories({
       title: "Hacker News",
@@ -175,43 +235,56 @@ describe("category backfill script", () => {
     expect(result.suppressedFallback).toBe(false);
   });
 
-  test("can classify item categories with the embedding classifier during backfill", async () => {
+  test("classifies a feed's items with the embedding classifier in one request", async () => {
+    const itemRequests: string[][] = [];
     globalThis.fetch = (async (url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = body.input.length > 1;
-      if (isPrototypeCall) {
-        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
-      }
-      return new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
-        status: 200,
-      });
+      itemRequests.push(body.input);
+      return new Response(
+        JSON.stringify({
+          data: body.input.map((_, index) => ({
+            embedding: index === 0 ? UNIT_X : ORTHOGONAL_Z,
+            index,
+          })),
+        }),
+        { status: 200 },
+      );
     }) as unknown as typeof fetch;
 
-    const labels = (
-      await inferItemEmbedding(
+    const labelsById = await inferItemEmbeddings(
+      {
+        title: "Daily Links",
+        description: "A mixed collection of links.",
+        url: "https://example.com/feed.xml",
+        link: "https://example.com",
+        sourceKind: "rss",
+      },
+      [
         {
-          title: "Daily Links",
-          description: "A mixed collection of links.",
-          url: "https://example.com/feed.xml",
-          link: "https://example.com",
-          sourceKind: "rss",
-        },
-        {
+          id: "item-1",
           title: "A compiler engineer's guide to TypeScript infrastructure",
           summary: null,
           contentText: null,
           link: "https://example.com/compiler",
           canonicalUrl: "https://example.com/compiler",
         },
-        FAKE_EMBEDDING_CONFIG,
-      )
-    ).map((category) => category.label);
+        {
+          id: "item-2",
+          title: "Weekend reading",
+          summary: null,
+          contentText: null,
+          link: "https://example.com/weekend",
+          canonicalUrl: "https://example.com/weekend",
+        },
+      ],
+      FAKE_EMBEDDING_CONFIG,
+    );
 
-    expect(labels).toEqual(["Software Engineering"]);
+    expect(itemRequests).toHaveLength(1);
+    expect(labelsById.get("item-1")?.map((category) => category.label)).toEqual([
+      "Software Engineering",
+    ]);
+    expect(labelsById.get("item-2")).toEqual([]);
   });
 
   test("computes all-item and capped item backfill batches", () => {
@@ -280,7 +353,7 @@ describe("category backfill script", () => {
         itemsScanned: 4,
         itemsWithClassifierCategories: 1,
         itemClassifierAbstentions: 3,
-        itemEmbeddingFailures: 0,
+        itemEmbeddingFailures: 3,
         feedBackfillStatusesRecorded: 2,
         normalizedExistingAssignments: false,
         assignmentsScanned: 5,
@@ -291,7 +364,7 @@ describe("category backfill script", () => {
       `APPLIED (embedding/${EMBEDDING_CLASSIFIER_MODEL_ID}): scanned 2 feeds and 4 items; wrote classifier categories for 2 feeds and 1 items. ` +
         "Skipped existing assignment normalization. " +
         "Suppressed classifier feed fallback for 1 broad feeds; item classifier abstained on 3 items. " +
-        "wrote coverage status for 2 feeds; 1 feed failed.",
+        "wrote coverage status for 2 feeds; 1 feed failed; 3 embedding failures.",
     );
   });
 });

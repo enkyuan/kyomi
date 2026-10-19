@@ -71,17 +71,6 @@ type ResolvedRefreshDocument =
       failureClass: HtmlFeedFailureClass;
     };
 
-export function shouldEnrichInsertedItems(input: { userId: string; reason?: string }): boolean {
-  if (
-    input.userId === "system" &&
-    (input.reason === "scheduled" || input.reason === "global_scheduled")
-  ) {
-    return false;
-  }
-
-  return true;
-}
-
 function isPermanentHttpStatus(status: number | undefined): boolean {
   // 4xx failures other than 408 (Request Timeout) and 429 (Too Many Requests)
   // will not resolve on retry — back off aggressively.
@@ -399,10 +388,9 @@ function classifyFeedLevel(input: {
 }
 
 /**
- * Classifies item-level categories for every item after enrichment. Explicit source
- * categories still win at read time; classifier labels only fill remaining chip slots.
- * Must run after article enrichment so items with a thin/empty RSS summary are scored
- * against the fetched article text instead of an empty string.
+ * Classifies item-level categories from the feed's own text. Explicit source categories still
+ * win at read time; classifier labels only fill remaining chip slots. Items whose feed text is
+ * thin are re-classified from the source page once an article.extract job fetches it.
  */
 function classifyItemLevel(input: {
   feed: { url: string; link: string | null; sourceKind: string | null };
@@ -571,9 +559,15 @@ async function tryItemEmbedding(
       config,
     );
 
+    let failedItems = 0;
     for (const { item, explicitLabels, remainingChipSlots } of candidates) {
       const classification = classifications.get(item.id);
-      const inferredCategoryLabels = (classification?.categories ?? [])
+      if (!classification) {
+        // Its embeddings request failed; leaving it out keeps the item's existing labels.
+        failedItems += 1;
+        continue;
+      }
+      const inferredCategoryLabels = classification.categories
         .filter((category) => !explicitLabels.includes(category.label))
         .slice(0, remainingChipSlots);
       stats.itemClassifierLabels += inferredCategoryLabels.length;
@@ -581,6 +575,14 @@ async function tryItemEmbedding(
         stats.itemClassifierAbstentions += 1;
       }
       results.set(item.id, inferredCategoryLabels);
+    }
+    if (failedItems > 0) {
+      stats.itemClassifierFailures += failedItems;
+      console.warn("[ingestion] item embedding classification failed for part of the batch", {
+        feedUrl: input.feed.url,
+        itemCount: candidates.length,
+        failedItems,
+      });
     }
   } catch (error) {
     stats.itemClassifierFailures += candidates.length;
@@ -675,7 +677,6 @@ export async function runFeedRefresh(
   feedId: string,
   searchSync?: SearchSyncConfig,
   options?: {
-    enrichArticles?: boolean;
     hostRateLimiter?: HostRateLimiter;
     embeddingClassifier?: EmbeddingClassifierConfig;
     refreshGeneration?: number;
