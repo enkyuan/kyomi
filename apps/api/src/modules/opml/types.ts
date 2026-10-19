@@ -15,10 +15,6 @@ export type OpmlImportCounters = {
   cancelled: number;
 };
 
-export type OpmlImportSummary = OpmlImportCounters & {
-  failures: OpmlUrlFailure[];
-};
-
 export type OpmlTaskMeta = {
   taskId: string;
   userId: string;
@@ -34,17 +30,6 @@ export type OpmlTaskMeta = {
 export type OpmlTaskState = OpmlTaskMeta & {
   counters: OpmlImportCounters;
   failures: OpmlUrlFailure[];
-};
-
-export type OpmlTaskListItem = {
-  taskId: string;
-  status: OpmlImportStatus;
-  createdAt: string;
-  completedAt: string | null;
-  summary: Pick<
-    OpmlImportSummary,
-    "subscribed" | "alreadySubscribed" | "failed" | "totalUrls"
-  > | null;
 };
 
 export type ParsedOpmlFeed = {

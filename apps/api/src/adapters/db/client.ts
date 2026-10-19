@@ -2,7 +2,7 @@ import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool, type PoolConfig } from "pg";
 import * as schema from "@kyomi/db";
 import { env } from "@config/env";
-import { normalizeLoopbackUrl } from "@shared/net/loopback-url";
+import { normalizeLoopbackUrl } from "@shared/net/loopback";
 
 declare global {
   var __kyomiApiDbPool: Pool | undefined;

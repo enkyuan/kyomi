@@ -8,7 +8,7 @@ import {
 } from "@kyomi/db";
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
-import { assertContentFieldBudget } from "@shared/http/content-budget";
+import { assertContentFieldBudget } from "@shared/http/budget";
 import { type ClipUpdateBody, updateArticleClipForUser } from "./clips/operations";
 import type { ArticleUpdateBody } from "../types";
 

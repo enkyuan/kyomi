@@ -1,10 +1,10 @@
 import { assertHttpOrHttpsUrl } from "./normalize";
-import { BlockedOutboundUrlError } from "@shared/net/outbound-policy";
+import { BlockedOutboundUrlError } from "@shared/net/outbound";
 import {
   TooManyRedirectsError,
   fetchWithSafeRedirects,
   readResponseBodyWithByteLimit,
-} from "@shared/net/safe-fetch";
+} from "@shared/net/fetch";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_BYTES = 2 * 1024 * 1024;

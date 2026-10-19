@@ -1,6 +1,6 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
-import { publishJob } from "@adapters/queue/publish-job";
+import { publishJob } from "@adapters/queue/publish";
 import { getRedis } from "@adapters/redis";
 import { JOBS_DEAD_LETTER_STREAM_KEY, parseJobMessageFields } from "@kyomi/worker";
 import { v1HandlerContext } from "@shared/http/v1/context";

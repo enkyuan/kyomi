@@ -1,11 +1,11 @@
 import type { FetchArticleDocumentResult } from "../content";
-import { assertHttpOrHttpsUrl } from "@shared/net/http-url";
-import { BlockedOutboundUrlError } from "@shared/net/outbound-policy";
+import { assertHttpOrHttpsUrl } from "@shared/net/http";
+import { BlockedOutboundUrlError } from "@shared/net/outbound";
 import {
   TooManyRedirectsError,
   fetchWithSafeRedirects,
   readResponseBodyWithByteLimit,
-} from "@shared/net/safe-fetch";
+} from "@shared/net/fetch";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_HTML_BYTES = 3 * 1024 * 1024;

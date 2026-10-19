@@ -1,5 +1,5 @@
 import { AppError } from "@shared/errors/app";
-import type { ArticleSort } from "@modules/articles/query";
+import type { ArticleSort } from "@modules/articles/params";
 import type { ArticleListItemDto } from "@modules/articles/types";
 
 const PREFIX = "m1.";

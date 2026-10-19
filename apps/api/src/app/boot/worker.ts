@@ -1,5 +1,5 @@
 import { logger } from "@adapters/logger";
-import { runWorkerLoop } from "../jobs/run-worker";
+import { runWorkerLoop } from "../jobs/consumer";
 
 const controller = new AbortController();
 

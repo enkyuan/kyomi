@@ -1,22 +1,22 @@
 import { describe, expect, mock, test } from "bun:test";
 
 /**
- * Drives jobs.ts through the real @modules/opml/store and @modules/opml/known-feeds functions
+ * Drives jobs.ts through the real @modules/opml/store and @modules/opml/known functions
  * with fake Postgres-shaped db objects, rather than mock.module(...) on those two modules:
  * mock.module's replacement is process-wide and not reliably undone by mock.restore() once the
  * suite has enough files (confirmed by reproducing the leak at ~50 files) -- it corrupted
- * store.test.ts's and known-feeds.test.ts's real-implementation tests depending on run order.
+ * store.test.ts's and known.test.ts's real-implementation tests depending on run order.
  *
- * @adapters/queue/publish-job is left unmocked for the same reason: import-dispatcher.ts
- * (exercised unmocked by recovery.test.ts and import-dispatcher.test.ts) imports the real
+ * @adapters/queue/publish is left unmocked for the same reason: dispatcher.ts
+ * (exercised unmocked by recovery.test.ts and dispatcher.test.ts) imports the real
  * publishJob, so mocking it here leaked into those files' real-implementation assertions about
  * how the real publishJob behaves against a fake redis client. getRedis() (from @adapters/redis,
  * confirmed safe -- no other file imports it unmocked) is mocked instead to return a fake redis
  * with a controllable .xadd, the same technique recovery.test.ts and
- * import-dispatcher.test.ts already use.
+ * dispatcher.test.ts already use.
  *
  * @modules/feeds/subscription/subscribe, @modules/feeds/refresh/enqueue, and
- * @modules/opml/task-store have no other file importing them unmocked, so those three stay
+ * @modules/opml/task have no other file importing them unmocked, so those three stay
  * mocked here.
  */
 const createOrSubscribeToFeedMock = mock(async () => ({
@@ -43,25 +43,10 @@ mock.module("@modules/feeds/refresh/enqueue", () => ({
   enqueueBatchFeedRefresh: mock(async () => ({ accepted: true, count: 0, failedCount: 0 })),
   enqueueFeedRefresh: enqueueFeedRefreshMock,
 }));
-mock.module("@modules/opml/task-store", () => ({
-  buildOpmlSummary: mock(() => ({
-    totalUrls: 0,
-    completed: 0,
-    subscribed: 0,
-    alreadySubscribed: 0,
-    failed: 0,
-    cancelled: 0,
-    failures: [],
-  })),
-  cancelOpmlTask: mock(async () => undefined),
-  deleteOpmlTask: mock(async () => true),
+mock.module("@modules/opml/task", () => ({
   failOpmlTask: mock(async () => undefined),
   getOpmlTask: mock(async () => null),
-  getOpmlTaskOwner: mock(async () => null),
-  initializeOpmlTask: mock(async () => undefined),
   isOpmlTaskCancelled: mock(async () => false),
-  isTerminalOpmlStatus: mock(() => false),
-  listActiveOpmlTasksForUser: mock(async () => []),
   markOpmlTaskInProgress: mock(async () => undefined),
   recordOpmlTaskSuccess: recordOpmlTaskSuccessMock,
   recordOpmlTaskFailure: mock(async () => undefined),
