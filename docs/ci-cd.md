@@ -1,6 +1,6 @@
 # CI/CD
 
-Kyomi's PR and `main` CI runs on CircleCI (`.circleci/`). GitHub Actions keeps only the jobs that need the repository's `GITHUB_TOKEN`: package delivery and the react-doctor PR comment. Both are free on GitHub-hosted runners because the repository is public.
+Kyomi's PR and `main` CI runs on CircleCI (`.circleci/`). GitHub Actions keeps only the react-doctor PR comment, which needs the repository's `GITHUB_TOKEN` and is free on GitHub-hosted runners because the repository is public.
 
 ## Pipelines
 
@@ -8,7 +8,6 @@ Kyomi's PR and `main` CI runs on CircleCI (`.circleci/`). GitHub Actions keeps o
 | --- | --- | --- | --- |
 | CircleCI | `.circleci/config.yml` | Every pipeline | Setup job: diffs the change against `main` (or the previous commit on `main`) and continues with only the areas it touches. |
 | CircleCI | `.circleci/continue.yml` | Continued from setup | The `ci` workflow: the monorepo quality gate. |
-| GitHub Actions | `delivery.publish.yml` | Pushes to `main`, `v*` tags, manual dispatch | Publishes `@kyomi/ui` and `@kyomi/reader` to GitHub Packages when their version is new. |
 | GitHub Actions | `rd.check.yml` | Pull requests and `main`, except docs/catalog-only changes | react-doctor report on the PR. |
 
 ## What runs for a change
@@ -56,8 +55,6 @@ A commit message containing `[ci skip]` or `[skip ci]` starts no pipeline.
 | `build` | Turbo workspace builds and the breakpoint CSS check. | `bun run ci:build` |
 | `docker-build` | Local API and Web image build smoke. | `bun run ci:docker:build` |
 | `catalog-typecheck` | Catalog dependency sync and `ty` typecheck. | `bun run --cwd packages/catalog setup && bun run --cwd packages/catalog typecheck` |
-| `plan` (delivery) | Skips delivery when no package version is new. | `npm view <name>@<version>` |
-| `verify` (delivery) | CI-grade verification before publishing packages. | `bun run ci:static && bun run ci:test:web && bun run ci:test:api && bun run ci:build` |
 
 ## Runtime Versions
 
@@ -67,7 +64,7 @@ A commit message containing `[ci skip]` or `[skip ci]` starts no pipeline.
 
 ## Services
 
-`api-tests` (CircleCI secondary containers) and delivery `verify` (GitHub service containers) use:
+`api-tests` runs these as CircleCI secondary containers:
 
 - `postgres:18-alpine`
 - `redis:8-alpine`
@@ -75,9 +72,9 @@ A commit message containing `[ci skip]` or `[skip ci]` starts no pipeline.
 
 No secrets are required for PR CI. The helper script `scripts/ci/prepare-env.ts` resets env files from checked-in examples under `CI=true`, creates missing local env files from those examples, and preserves existing local env files unless `KYOMI_FORCE_PREPARE_ENV=1` is set.
 
-## Delivery
+## Package publishing
 
-Delivery publishes `@kyomi/ui` and `@kyomi/reader` to GitHub Packages (`https://npm.pkg.github.com`) when the version in their `package.json` is not yet published. It uses the protected `delivery` environment and the built-in `GITHUB_TOKEN`; it does not deploy to production.
+`@kyomi/ui`, `@kyomi/reader` and the other workspace packages are `private` and are consumed only through `workspace:*` links, so nothing is published to a registry. GitHub Packages scopes npm packages to the repository owner's account (`@enkyuan`), so publishing them would need either a scope rename or publish-time renaming, plus a published `@kyomi/worker` for `@kyomi/reader`.
 
 ## Debugging Failures
 
