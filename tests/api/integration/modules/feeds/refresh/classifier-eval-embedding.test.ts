@@ -3,7 +3,6 @@ import { existsSync } from "node:fs";
 import {
   classifyItemEmbeddings,
   MAX_CLASSIFIER_LABELS,
-  resetPrototypeCache,
   scoreItemEmbeddings,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
@@ -46,7 +45,7 @@ const config = embeddingClassifierConfig(undefined, {
 
 const FLOORS = {
   stored: { f1: 0.65, maxAbstention: 0.15, clearTop1: 0.78 },
-  // Synthetic headlines written against the category cards; the head learned from real articles.
+  // Synthetic headlines; the head learned from real articles, so it is held to a lower floor.
   regression: { f1: 0.6 },
   field: { f1: 0.65 },
 };
@@ -88,12 +87,10 @@ function report(name: string, predictions: readonly Prediction[]) {
 
 beforeAll(() => {
   globalThis.fetch = cachedEmbeddingsFetch({ cacheFile, upstream, realFetch: originalFetch });
-  resetPrototypeCache();
 });
 
 afterAll(() => {
   globalThis.fetch = originalFetch;
-  resetPrototypeCache();
 });
 
 describe.skipIf(!enabled)("embedding classifier eval (Cloudflare BGE-M3)", () => {

@@ -1,10 +1,6 @@
-import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "bun:test";
 import { PgDialect } from "drizzle-orm/pg-core";
-import {
-  EMBEDDING_CLASSIFIER_MODEL_ID,
-  resetPrototypeCache,
-  type EmbeddingClassifierConfig,
-} from "@kyomi/worker";
+import { EMBEDDING_CLASSIFIER_MODEL_ID, type EmbeddingClassifierConfig } from "@kyomi/worker";
 import {
   backfillItemColumns,
   inferFeedCategories,
@@ -26,13 +22,8 @@ const FAKE_EMBEDDING_CONFIG: EmbeddingClassifierConfig = {
 const UNIT_X = [1, 0, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
 
-beforeEach(() => {
-  resetPrototypeCache();
-});
-
 afterEach(() => {
   globalThis.fetch = originalFetch;
-  resetPrototypeCache();
 });
 
 describe("category backfill script", () => {

@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import {
   MAX_CLASSIFIER_LABELS,
-  resetPrototypeCache,
+  MISCELLANEOUS_CATEGORY_LABEL,
   scoreFeedEmbedding,
   scoreItemEmbeddings,
   selectCategories,
@@ -37,8 +37,11 @@ import {
  * cases as further checks.
  *
  * Optional inputs (JSONL, one object per line, never committed):
- * - CLASSIFIER_SWEEP_FEEDS: feeds with publisher-declared categories, `{ feedTitle,
- *   feedDescription, feedUrl, feedSiteUrl, labels }`, to sweep the feed floor against weak labels.
+ * - CLASSIFIER_SWEEP_FEEDS: feeds with publisher-declared categories, `{ feedId, feedTitle,
+ *   feedDescription, feedUrl, feedSiteUrl, labels, items }`, where `items` are the feed's recent
+ *   articles (`{ id, itemTitle, itemSummary, itemContentText, itemUrl }`, newest first, none from
+ *   the head's training labels). Compares scoring the feed text with scoring its articles, and
+ *   sweeps the feed rule against those weak labels.
  * - CLASSIFIER_COVERAGE_SAMPLE: stored articles with their existing labels, to replay the rules
  *   and report how many articles would show no category. CLASSIFIER_SWEEP_RULE ("floor,margin")
  *   adds an article rule to every table and to that replay.
@@ -56,12 +59,29 @@ const CHOSEN_RULE: CategorySelectionRule | undefined = CHOSEN && {
   minSimilarity: CHOSEN[0]!,
   secondaryMargin: CHOSEN[1],
 };
-// Article rules are on the head's probability scale, feed rules on the cards' cosine scale.
+// Article and feed rules are both on the head's probability scale.
 const FLOORS = Array.from({ length: 56 }, (_, i) => round3(0.05 + i * 0.01));
 const MARGINS = [...Array.from({ length: 9 }, (_, i) => round3(i * 0.05)), undefined];
-const FEED_FLOORS = Array.from({ length: 21 }, (_, i) => round3(0.3 + i * 0.02));
+const FEED_FLOORS = Array.from({ length: 9 }, (_, i) => round3(i * 0.05));
+const FEED_MARGINS = [0, 0.05, 0.1, 0.2];
 
 type Scored = { case: ClassifierEvalCase; scores: CategoryScore[] };
+
+type FeedRow = {
+  feedId: string;
+  feedTitle: string;
+  feedDescription: string | null;
+  feedUrl: string;
+  feedSiteUrl: string | null;
+  labels: string[];
+  items: Array<{
+    id: string;
+    itemTitle: string;
+    itemSummary: string | null;
+    itemContentText: string | null;
+    itemUrl: string | null;
+  }>;
+};
 
 type CoverageRow = {
   id: string;
@@ -129,6 +149,19 @@ function row(summary: ReturnType<typeof summarize>): string {
   ].join("  ");
 }
 
+/** Each category's mean score over several score lists, best first. */
+function meanScores(lists: ReadonlyArray<readonly CategoryScore[]>): CategoryScore[] {
+  const sums = new Map<string, number>();
+  for (const list of lists) {
+    for (const entry of list) {
+      sums.set(entry.label, (sums.get(entry.label) ?? 0) + entry.score);
+    }
+  }
+  return [...sums]
+    .map(([label, sum]) => ({ label, score: sum / lists.length }))
+    .sort((a, b) => b.score - a.score);
+}
+
 function percentile(values: readonly number[], p: number): number {
   const sorted = [...values].sort((a, b) => a - b);
   return sorted[Math.min(sorted.length - 1, Math.floor(p * sorted.length))]!;
@@ -159,12 +192,10 @@ beforeAll(() => {
     upstream,
     realFetch: originalFetch,
   });
-  resetPrototypeCache();
 });
 
 afterAll(() => {
   globalThis.fetch = originalFetch;
-  resetPrototypeCache();
 });
 
 describe.skipIf(!enabled)("embedding classifier threshold sweep (BGE-M3)", () => {
@@ -249,39 +280,127 @@ describe.skipIf(!enabled)("embedding classifier threshold sweep (BGE-M3)", () =>
   }, 300_000);
 
   test.skipIf(!process.env.CLASSIFIER_SWEEP_FEEDS)(
-    "sweeps the feed floor against publisher-declared categories",
+    "compares feed scoring and sweeps the feed rule against publisher-declared categories",
     async () => {
-      const feeds = readJsonl<{
-        feedTitle: string;
-        feedDescription: string | null;
-        feedUrl: string;
-        feedSiteUrl: string | null;
-        labels: string[];
-      }>(process.env.CLASSIFIER_SWEEP_FEEDS!);
+      const feeds = readJsonl<FeedRow>(process.env.CLASSIFIER_SWEEP_FEEDS!);
+      const feedInput = (feed: FeedRow) => ({
+        feedTitle: feed.feedTitle,
+        feedDescription: feed.feedDescription,
+        feedUrl: feed.feedUrl,
+        feedSiteUrl: feed.feedSiteUrl,
+        sourceKind: "rss",
+      });
       await prewarmFeedTexts(feeds);
-      const scored = [];
+      const textScores = new Map<string, CategoryScore[]>();
       for (const feed of feeds) {
-        scored.push({
-          labels: feed.labels,
-          scores: await scoreFeedEmbedding({ ...feed, sourceKind: "rss" }, config),
-        });
+        textScores.set(feed.feedId, await scoreFeedEmbedding(feedInput(feed), config));
       }
-      console.log(
-        `\nFeeds (${feeds.length}) with publisher categories (weak labels)\nfloor  top-1 hit when labeled  labeled share`,
+      const itemScores = await scoreItemEmbeddings(
+        feeds.flatMap((feed) => feed.items.map((item) => ({ ...feedInput(feed), ...item }))),
+        config,
       );
-      for (const minSimilarity of FEED_FLOORS) {
-        const picked = scored.map((feed) => ({
-          labels: feed.labels,
-          selected: selectCategories(feed.scores, { minSimilarity }, MAX_CLASSIFIER_LABELS),
-        }));
-        const labeled = picked.filter((feed) => feed.selected.length > 0);
-        const hits = labeled.filter((feed) => feed.labels.includes(feed.selected[0]!.label));
+      const articleMean = (feed: FeedRow, count: number) =>
+        meanScores(
+          feed.items
+            .slice(0, count)
+            .flatMap((item) => (itemScores.has(item.id) ? [itemScores.get(item.id)!] : [])),
+        );
+      const methods: Array<[string, (feed: FeedRow) => CategoryScore[]]> = [
+        ["A: feed text", (feed) => textScores.get(feed.feedId)!],
+        ...[5, 20].map((count): [string, (feed: FeedRow) => CategoryScore[]] => [
+          `B: mean of ${count} recent articles`,
+          (feed) => articleMean(feed, count),
+        ]),
+        [
+          "A+B: mean of A and B@20",
+          (feed) => meanScores([textScores.get(feed.feedId)!, articleMean(feed, 20)]),
+        ],
+      ];
+
+      // Miscellaneous-only feeds can't score a hit: the head has no Miscellaneous class.
+      const topical = feeds.filter((feed) => feed.labels.some((l) => l !== "Miscellaneous"));
+      const hit = (feed: FeedRow, scores: readonly CategoryScore[]) =>
+        scores[0] !== undefined && feed.labels.includes(scores[0].label);
+      console.log(
+        `\nFeeds (${topical.length} with a topical publisher category, ${feeds.reduce((n, f) => n + f.items.length, 0)} recent articles)\nmethod                        top-1  top-2 any`,
+      );
+      for (const [name, score] of methods) {
+        const scored = topical.map((feed) => ({ feed, scores: score(feed) }));
+        const top1 = scored.filter(({ feed, scores }) => hit(feed, scores)).length;
+        const top2 = scored.filter(({ feed, scores }) =>
+          scores.slice(0, 2).some((entry) => feed.labels.includes(entry.label)),
+        ).length;
         console.log(
-          `${minSimilarity.toFixed(2)}   ${round3(hits.length / Math.max(1, labeled.length)).toFixed(3)}                    ${round3(labeled.length / picked.length).toFixed(3)}`,
+          `${name.padEnd(30)}${round3(top1 / topical.length).toFixed(3)}  ${round3(top2 / topical.length).toFixed(3)}`,
+        );
+      }
+      const [baseline, ...others] = methods;
+      for (const [name, score] of others) {
+        const onlyBaseline = topical.filter(
+          (feed) => hit(feed, baseline![1](feed)) && !hit(feed, score(feed)),
+        ).length;
+        const onlyOther = topical.filter(
+          (feed) => !hit(feed, baseline![1](feed)) && hit(feed, score(feed)),
+        ).length;
+        console.log(
+          `paired: right only under ${baseline![0]} ${onlyBaseline}, only under ${name} ${onlyOther}`,
+        );
+      }
+
+      // The production rule: below the floor a feed falls back to Miscellaneous.
+      console.log(
+        `\nFeed rule on A (${feeds.length} feeds; a fallback is right only for Miscellaneous feeds)\nrule                        labeled  top-1 when labeled  shown top-1 right  2-label  label precision`,
+      );
+      const feedRules = [
+        DEFAULT_FEED_SELECTION_RULE,
+        ...FEED_FLOORS.flatMap((minSimilarity) =>
+          FEED_MARGINS.map((secondaryMargin) => ({ minSimilarity, secondaryMargin })),
+        ),
+      ];
+      for (const rule of feedRules) {
+        let labeled = 0;
+        let labeledHits = 0;
+        let shownHits = 0;
+        let twoLabels = 0;
+        let shown = 0;
+        let shownRight = 0;
+        for (const feed of feeds) {
+          const selected = selectCategories(
+            textScores.get(feed.feedId)!,
+            rule,
+            MAX_CLASSIFIER_LABELS,
+          ).map((entry) => entry.label);
+          const labels = selected.length > 0 ? selected : [MISCELLANEOUS_CATEGORY_LABEL];
+          if (selected.length > 0) {
+            labeled += 1;
+            labeledHits += feed.labels.includes(selected[0]!) ? 1 : 0;
+          }
+          shownHits += feed.labels.includes(labels[0]!) ? 1 : 0;
+          twoLabels += labels.length > 1 ? 1 : 0;
+          shown += labels.length;
+          shownRight += labels.filter((label) => feed.labels.includes(label)).length;
+        }
+        console.log(
+          [
+            describeRule(rule).padEnd(26),
+            round3(labeled / feeds.length)
+              .toFixed(3)
+              .padEnd(7),
+            round3(labeledHits / Math.max(1, labeled))
+              .toFixed(3)
+              .padEnd(18),
+            round3(shownHits / feeds.length)
+              .toFixed(3)
+              .padEnd(17),
+            round3(twoLabels / feeds.length)
+              .toFixed(3)
+              .padEnd(7),
+            round3(shownRight / shown).toFixed(3),
+          ].join("  "),
         );
       }
     },
-    300_000,
+    1_200_000,
   );
 
   test.skipIf(!process.env.CLASSIFIER_COVERAGE_SAMPLE)(
@@ -304,6 +423,8 @@ describe.skipIf(!enabled)("embedding classifier threshold sweep (BGE-M3)", () =>
       const report = (name: string, rule: CategorySelectionRule) => {
         let itemAbstain = 0;
         let unlabeled = 0;
+        let fromFeed = 0;
+        let fromFeedFallback = 0;
         for (const r of rows) {
           const item = selectCategories(itemScores.get(r.id) ?? [], rule, MAX_CLASSIFIER_LABELS);
           if (item.length === 0) {
@@ -326,9 +447,18 @@ describe.skipIf(!enabled)("embedding classifier threshold sweep (BGE-M3)", () =>
           if (!shown) {
             unlabeled += 1;
           }
+          // Nothing above the feed's embedding label: the article shows it, and a feed below the
+          // feed floor shows the Miscellaneous fallback.
+          if (
+            r.explicitItem.length + item.length + r.keywordItem.length + r.explicitFeed.length ===
+            0
+          ) {
+            fromFeed += 1;
+            fromFeedFallback += feed.length === 0 ? 1 : 0;
+          }
         }
         console.log(
-          `${name.padEnd(34)} item abstain ${round3(itemAbstain / rows.length).toFixed(3)}  unlabeled at read ${round3(unlabeled / rows.length).toFixed(3)}`,
+          `${name.padEnd(34)} item abstain ${round3(itemAbstain / rows.length).toFixed(3)}  unlabeled at read ${round3(unlabeled / rows.length).toFixed(3)}  feed label shown ${round3(fromFeed / rows.length).toFixed(3)} (Miscellaneous ${round3(fromFeedFallback / rows.length).toFixed(3)})`,
         );
       };
       const keywordUnlabeled = rows.filter(
@@ -341,6 +471,17 @@ describe.skipIf(!enabled)("embedding classifier threshold sweep (BGE-M3)", () =>
       ).length;
       console.log(
         `\nCoverage over ${rows.length} stored articles (${feedRows.length} feeds)\n${"keyword read mode".padEnd(34)} unlabeled at read ${round3(keywordUnlabeled / rows.length).toFixed(3)}`,
+      );
+      const fallbackFeeds = feedRows.filter(
+        (feed) =>
+          selectCategories(
+            feedScores.get(feed.feedId) ?? [],
+            DEFAULT_FEED_SELECTION_RULE,
+            MAX_CLASSIFIER_LABELS,
+          ).length === 0,
+      ).length;
+      console.log(
+        `feeds on the Miscellaneous fallback (${describeRule(DEFAULT_FEED_SELECTION_RULE)}): ${round3(fallbackFeeds / feedRows.length).toFixed(3)}`,
       );
       report(`embedding, ${describeRule(PRODUCTION_RULE)}`, PRODUCTION_RULE);
       if (CHOSEN_RULE) {

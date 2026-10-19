@@ -5,8 +5,8 @@ import type { ClassifierEvalCase } from "./classifier-eval-fixture";
  * Stored-article calibration set: real articles sampled from a local Kyomi database (2026-10),
  * stratified across the 17 categories, with drafted labels. Text is trimmed to the opening the
  * classifier sees first. Cases marked `needsReview` were ambiguous or thin when labeled and
- * should be spot-checked before their labels are trusted. Never write category-card prototypes
- * from these cases.
+ * should be spot-checked before their labels are trusted. Never add these cases to the category
+ * head's training labels.
  */
 export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
   {
