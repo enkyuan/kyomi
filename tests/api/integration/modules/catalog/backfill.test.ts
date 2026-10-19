@@ -14,6 +14,7 @@ import {
   nextItemBackfillBatchSize,
   parseBackfillArgs,
   summarizeBackfill,
+  syncsItemLabels,
 } from "../../../../../apps/api/src/modules/catalog/backfill";
 
 const originalFetch = globalThis.fetch;
@@ -184,6 +185,27 @@ describe("category backfill script", () => {
         extractedContentText: "",
       }),
     ).toEqual([]);
+  });
+
+  test("keeps refresh labels when backfill abstains on ready extracted text", () => {
+    const item = {
+      title: "Weekly notes",
+      summary: null,
+      contentText: "Read more",
+      link: "https://example.com/weekly-notes",
+      canonicalUrl: "https://example.com/weekly-notes",
+    };
+    const label = { label: "Finance & Markets", confidence: 0.9 };
+
+    // An abstention on ready extracted text leaves the item's existing rows alone.
+    expect(syncsItemLabels({ ...item, extractedContentText: "Thin page text" }, [])).toBe(false);
+    expect(syncsItemLabels({ ...item, extractedContentText: "" }, [])).toBe(false);
+    // New labels, or a classification from feed text, still replace them.
+    expect(syncsItemLabels({ ...item, extractedContentText: "Thin page text" }, [label])).toBe(
+      true,
+    );
+    expect(syncsItemLabels({ ...item, extractedContentText: null }, [])).toBe(true);
+    expect(syncsItemLabels(item, [])).toBe(true);
   });
 
   test("loads extracted text only for items whose extraction is ready", () => {

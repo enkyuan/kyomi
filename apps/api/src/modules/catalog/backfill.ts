@@ -600,6 +600,18 @@ function classifierContentText(item: BackfillItemRow): string | null {
   return item.extractedContentText ?? item.contentText;
 }
 
+/**
+ * Whether an applied backfill should replace this item's classifier rows. An abstention on ready
+ * extracted text is the same "no new information" extraction re-classification keeps labels for,
+ * so the labels refresh assigned stay instead of being synced away.
+ */
+export function syncsItemLabels(
+  item: BackfillItemRow,
+  inferredCategoryLabels: readonly InferredCategoryLabel[],
+): boolean {
+  return inferredCategoryLabels.length > 0 || item.extractedContentText == null;
+}
+
 type BackfillItemRecord = BackfillItemRow & {
   id: string;
   feedId: string;
@@ -1159,8 +1171,11 @@ async function processFeed(
       } else {
         feedStats.itemClassifierAbstentions += 1;
       }
-      return { id: item.id, inferredCategoryLabels };
+      return syncsItemLabels(item, inferredCategoryLabels)
+        ? { id: item.id, inferredCategoryLabels }
+        : null;
     });
+    const syncedItems = inferredItems.filter((entry) => entry !== null);
 
     if (args.apply) {
       // syncInferredFeedCategories unconditionally deletes+reinserts the feed's
@@ -1173,7 +1188,7 @@ async function processFeed(
         {
           feedId: feed.id,
           feedCategories: [],
-          items: inferredItems,
+          items: syncedItems,
           model: classifier.model,
         },
         now,
@@ -1253,14 +1268,16 @@ async function processFeedBatch(
           } else {
             feedStats.itemClassifierAbstentions += 1;
           }
-          return { id: item.id, feedId: feed.id, inferredCategoryLabels };
+          return syncsItemLabels(item, inferredCategoryLabels)
+            ? { id: item.id, feedId: feed.id, inferredCategoryLabels }
+            : null;
         },
       );
 
       processed.push({
         feed,
         feedCategories,
-        items: inferredItems,
+        items: inferredItems.filter((entry) => entry !== null),
         stats: feedStats,
       });
     } catch (error) {
