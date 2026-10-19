@@ -258,7 +258,6 @@ describe("runFeedRefresh HTML autodiscovery", () => {
     );
 
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
       refreshGeneration: 3,
     });
 
@@ -288,7 +287,6 @@ describe("runFeedRefresh HTML autodiscovery", () => {
     );
 
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
       refreshGeneration: 3,
     });
 
@@ -356,9 +354,7 @@ describe("runFeedRefresh HTML autodiscovery", () => {
       throw new Error(`unexpected fetch: ${url}`);
     });
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     expect(result.itemCount).toBe(1);
@@ -396,9 +392,7 @@ describe("runFeedRefresh HTML autodiscovery", () => {
       );
     });
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     const feedUpdate = lastUpdateForTable(fake.updates, "feeds");
@@ -422,9 +416,7 @@ describe("runFeedRefresh HTML autodiscovery", () => {
       ),
     );
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result).toMatchObject({
       ok: false,
@@ -459,9 +451,7 @@ describe("runFeedRefresh HTML autodiscovery", () => {
       response(body, "https://93.184.216.34/feed.xml", "text/html"),
     );
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(false);
     expect(result.failureClass).toBe(failureClass);
@@ -483,9 +473,7 @@ describe("runFeedRefresh HTML autodiscovery", () => {
       );
     });
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(fetchCount).toBe(1);
     expect(result.ok).toBe(false);
@@ -515,9 +503,7 @@ describe("runFeedRefresh HTML autodiscovery", () => {
       );
     });
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(seen).toEqual(["https://93.184.216.34/", "https://93.184.216.34/feed.xml"]);
     expect(result.ok).toBe(false);

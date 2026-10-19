@@ -55,6 +55,10 @@ const MAX_CHARS_PER_INPUT = 6_000;
 // Category prototypes are shared by every caller with the same provider, so their load uses this
 // timeout instead of a caller's short budget.
 const PROTOTYPE_REQUEST_TIMEOUT_MS = 60_000;
+// Characters of title, summary, and body embedded per article. The opening carries the topic;
+// later text is mostly related links, comments, and newsletter prompts that drag every
+// category's similarity down, so feed text and extracted full text are cut to the same head.
+const MAX_ITEM_TEXT_CHARS = 4_000;
 
 type VoyageEmbeddingsResponse = {
   data: Array<{ embedding: number[]; index: number }>;
@@ -305,7 +309,14 @@ function buildFeedText(input: FeedCategoryClassificationInput): string {
 }
 
 function buildItemText(input: FeedItemCategoryClassificationInput): string {
-  return [input.itemTitle, input.itemSummary, input.itemContentText].filter(Boolean).join(". ");
+  const text = [input.itemTitle, input.itemSummary, input.itemContentText]
+    .filter(Boolean)
+    .join(". ");
+  if (text.length <= MAX_ITEM_TEXT_CHARS) {
+    return text;
+  }
+  // Drop a high surrogate left at the cut so the text stays valid UTF-16.
+  return text.slice(0, MAX_ITEM_TEXT_CHARS).replace(/[\uD800-\uDBFF]$/, "");
 }
 
 export async function classifyFeedEmbedding(

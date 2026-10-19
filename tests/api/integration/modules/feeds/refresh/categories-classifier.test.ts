@@ -37,9 +37,7 @@ describe("runFeedRefresh classifier fallback", () => {
       return response;
     });
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     expect(labelsForAssignments(fake.feedCategoryAssignments, fake.categories)).toContain(
@@ -87,9 +85,7 @@ describe("runFeedRefresh classifier fallback", () => {
       return response;
     });
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     expect(labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories)).toContain(
@@ -143,9 +139,7 @@ describe("runFeedRefresh classifier fallback", () => {
       return response;
     });
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     expect(fake.feedCategoryAssignments.some((row) => row.provenance === "classifier")).toBe(false);
@@ -204,9 +198,7 @@ describe("runFeedRefresh classifier fallback", () => {
       return response;
     });
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     const itemLabels = labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories);
@@ -267,7 +259,6 @@ describe("runFeedRefresh classifier fallback", () => {
     }) as unknown as typeof fetch;
 
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
       embeddingClassifier: {
         apiKey: "test-key",
         apiUrl: "https://fake.voyage.test/v1/embeddings",
@@ -305,9 +296,7 @@ describe("runFeedRefresh classifier fallback", () => {
     });
     globalThis.fetch = mockFetch(() => new Response(null, { status: 304 }));
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     expect(result.notModified).toBe(true);
@@ -340,9 +329,7 @@ describe("runFeedRefresh classifier fallback", () => {
     });
     globalThis.fetch = mockFetch(() => new Response(null, { status: 304 }));
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     expect(result.notModified).toBe(true);
@@ -377,9 +364,7 @@ describe("runFeedRefresh classifier fallback", () => {
     });
     globalThis.fetch = mockFetch(() => new Response(null, { status: 304 }));
 
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
+    const result = await runFeedRefresh(fake as never, "feed-1");
 
     expect(result.ok).toBe(true);
     expect(result.notModified).toBe(true);

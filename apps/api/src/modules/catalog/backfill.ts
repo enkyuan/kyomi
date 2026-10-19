@@ -339,6 +339,22 @@ export async function mapWithConcurrency<T, R>(
   return results;
 }
 
+/**
+ * Item columns both loaders select. Extracted text is read only once extraction finished, so
+ * backfill classifies from the same text extraction re-classification used instead of
+ * overwriting its labels from the thinner feed text.
+ */
+export const backfillItemColumns = {
+  title: feedItems.title,
+  summary: feedItems.summary,
+  contentText: feedItems.contentText,
+  extractedContentText: sql<string | null>`
+    CASE WHEN ${feedItems.extractedContentStatus} = 'ready' THEN ${feedItems.extractedContentText} END
+  `,
+  link: feedItems.link,
+  canonicalUrl: feedItems.canonicalUrl,
+};
+
 function loadItemsPage(feedId: string, limit: number, offset: number, recentDays: number | null) {
   const feedFilter = eq(feedItems.feedId, feedId);
   const whereClause = recentDays
@@ -349,14 +365,7 @@ function loadItemsPage(feedId: string, limit: number, offset: number, recentDays
     : feedFilter;
 
   return db
-    .select({
-      id: feedItems.id,
-      title: feedItems.title,
-      summary: feedItems.summary,
-      contentText: feedItems.contentText,
-      link: feedItems.link,
-      canonicalUrl: feedItems.canonicalUrl,
-    })
+    .select({ id: feedItems.id, ...backfillItemColumns })
     .from(feedItems)
     .where(whereClause)
     .orderBy(desc(feedItems.publishedAt), desc(feedItems.id))
@@ -370,15 +379,7 @@ function loadItemsForFeeds(feedIds: string[]) {
   }
 
   return db
-    .select({
-      id: feedItems.id,
-      feedId: feedItems.feedId,
-      title: feedItems.title,
-      summary: feedItems.summary,
-      contentText: feedItems.contentText,
-      link: feedItems.link,
-      canonicalUrl: feedItems.canonicalUrl,
-    })
+    .select({ id: feedItems.id, feedId: feedItems.feedId, ...backfillItemColumns })
     .from(feedItems)
     .where(inArray(feedItems.feedId, feedIds))
     .orderBy(feedItems.feedId, desc(feedItems.publishedAt), desc(feedItems.id));
@@ -592,9 +593,16 @@ type BackfillItemRow = {
   title: string;
   summary: string | null;
   contentText: string | null;
+  /** Set only when source-page extraction is ready. */
+  extractedContentText?: string | null;
   link: string | null;
   canonicalUrl: string;
 };
+
+// `??`, not `||`: a ready extraction with empty text is what extraction re-classified from.
+function classifierContentText(item: BackfillItemRow): string | null {
+  return item.extractedContentText ?? item.contentText;
+}
 
 type BackfillItemRecord = BackfillItemRow & {
   id: string;
@@ -689,7 +697,7 @@ export function inferItemCategories(
     sourceKind: feed.sourceKind,
     itemTitle: item.title,
     itemSummary: item.summary,
-    itemContentText: item.contentText,
+    itemContentText: classifierContentText(item),
     itemUrl: item.link || item.canonicalUrl,
   }).categories;
 }
@@ -733,7 +741,7 @@ export async function inferItemEmbeddings(
       sourceKind: feed.sourceKind,
       itemTitle: item.title,
       itemSummary: item.summary,
-      itemContentText: item.contentText,
+      itemContentText: classifierContentText(item),
       itemUrl: item.link || item.canonicalUrl,
       maxLabels: MAX_CLASSIFIER_LABELS,
     })),

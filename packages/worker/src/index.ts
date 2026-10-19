@@ -31,7 +31,6 @@ export {
   runFeedRefresh,
   discoverFeedUrlFromHtml,
   parseFeedDocument,
-  shouldEnrichInsertedItems,
   CATEGORY_CLASSIFIER_PROVENANCE,
   MISCELLANEOUS_CATEGORY_LABEL,
   classifyFeedCategories,
