@@ -1,9 +1,8 @@
-import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "bun:test";
 import {
   classifyFeedEmbedding,
   classifyItemEmbeddings,
   embedTexts,
-  resetPrototypeCache,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
 import { FAKE_CATEGORY_MODEL } from "./fake-category-model";
@@ -15,20 +14,12 @@ const FAKE_CONFIG: EmbeddingClassifierConfig = {
   categoryModel: FAKE_CATEGORY_MODEL,
 };
 const UNIT_X = [1, 0, 0];
-const ORTHOGONAL_Z = [0, 0, 1];
-
-beforeEach(() => {
-  resetPrototypeCache();
-});
 
 afterEach(() => {
   globalThis.fetch = originalFetch;
-  resetPrototypeCache();
 });
 
 describe("embedding requests at scale", () => {
-  // Cosine similarity 0.35 with UNIT_X: below the default feed cutoff.
-  const PARTIAL_MATCH = [0.35, Math.sqrt(1 - 0.35 ** 2), 0];
   // Halfway between Software Engineering and no category: the fake head gives it about 0.5.
   const HALF_MATCH = [1, 0, 1];
   const feedInput = {
@@ -49,13 +40,8 @@ describe("embedding requests at scale", () => {
     itemUrl: null,
   };
 
-  /**
-   * Embeds every text as `itemVector`, except that with `prototypeLoadFirst` the first request
-   * answers a feed's category-card prototype load.
-   */
-  function fakeEmbeddingsApi(
-    options: { itemVector?: number[]; failRequest?: number; prototypeLoadFirst?: boolean } = {},
-  ) {
+  /** Embeds every text as `itemVector`, failing request number `failRequest`. */
+  function fakeEmbeddingsApi(options: { itemVector?: number[]; failRequest?: number } = {}) {
     const requests: string[][] = [];
     globalThis.fetch = (async (_url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
@@ -63,13 +49,8 @@ describe("embedding requests at scale", () => {
       if (requests.length === options.failRequest) {
         return new Response("rate limited", { status: 429 });
       }
-      const isPrototypeLoad = options.prototypeLoadFirst === true && requests.length === 1;
       const data = body.input.map((_, index) => ({
-        embedding: isPrototypeLoad
-          ? index < 4
-            ? UNIT_X
-            : ORTHOGONAL_Z
-          : (options.itemVector ?? UNIT_X),
+        embedding: options.itemVector ?? UNIT_X,
         index,
       }));
       return new Response(JSON.stringify({ data }), { status: 200 });
@@ -156,58 +137,21 @@ describe("embedding requests at scale", () => {
     ]);
   });
 
-  test("classifyFeedEmbedding uses the feed threshold, not the item threshold", async () => {
-    fakeEmbeddingsApi({ itemVector: PARTIAL_MATCH, prototypeLoadFirst: true });
+  test("classifyFeedEmbedding uses the feed floor, not the item floor", async () => {
+    fakeEmbeddingsApi({ itemVector: HALF_MATCH });
 
     const itemKnobOnly = await classifyFeedEmbedding(feedInput, {
       ...FAKE_CONFIG,
-      itemMinProbability: 0.01,
+      itemMinProbability: 0.9,
     });
     const feedKnob = await classifyFeedEmbedding(feedInput, {
       ...FAKE_CONFIG,
-      feedSimilarityThreshold: 0.3,
+      feedMinProbability: 0.6,
     });
 
-    expect(itemKnobOnly.categories).toEqual([{ label: "Miscellaneous", confidence: 0.1 }]);
-    expect(feedKnob.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
-  });
-
-  test("callers with different timeouts share one prototype load", async () => {
-    const requests = fakeEmbeddingsApi({ prototypeLoadFirst: true });
-
-    await classifyFeedEmbedding(feedInput, { ...FAKE_CONFIG, timeoutMs: 8_000 });
-    await classifyFeedEmbedding(feedInput, FAKE_CONFIG);
-
-    expect(requests.filter((input) => input.length > 1)).toHaveLength(1);
-  });
-
-  test("a caller that gives up leaves the prototype load warming the cache", async () => {
-    let releasePrototypes!: () => void;
-    const prototypesReleased = new Promise<void>((resolve) => {
-      releasePrototypes = resolve;
-    });
-    let prototypeLoads = 0;
-    globalThis.fetch = (async (_url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeLoad = body.input.length > 1;
-      if (isPrototypeLoad) {
-        prototypeLoads += 1;
-        await prototypesReleased;
-      }
-      const data = body.input.map((_, index) => ({
-        embedding: isPrototypeLoad && index >= 4 ? ORTHOGONAL_Z : UNIT_X,
-        index,
-      }));
-      return new Response(JSON.stringify({ data }), { status: 200 });
-    }) as unknown as typeof fetch;
-
-    await expect(
-      classifyFeedEmbedding(feedInput, { ...FAKE_CONFIG, timeoutMs: 10 }),
-    ).rejects.toThrow(/not ready within 10ms/);
-    releasePrototypes();
-    const result = await classifyFeedEmbedding(feedInput, FAKE_CONFIG);
-
-    expect(prototypeLoads).toBe(1);
-    expect(result.categories[0]?.label).toBe("Software Engineering");
+    expect(itemKnobOnly.categories.map((category) => category.label)).toEqual([
+      "Software Engineering",
+    ]);
+    expect(feedKnob.categories).toEqual([{ label: "Miscellaneous", confidence: 0.1 }]);
   });
 });

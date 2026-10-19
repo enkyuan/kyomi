@@ -1,8 +1,8 @@
 import type { ClassifierEvalCase } from "./classifier-eval-fixture";
 
 /**
- * Held-out field cases: real-world headlines a classifier missed, scored on their own. Never
- * write category-card prototypes from these cases, or the embedding eval stops measuring
+ * Held-out field cases: real-world headlines a classifier missed, scored on their own. Never add
+ * these cases to the category head's training labels, or the embedding eval stops measuring
  * generalization.
  */
 export const CLASSIFIER_EVAL_FIELD_CASES: readonly ClassifierEvalCase[] = [

@@ -1,15 +1,11 @@
 import { describe, expect, test } from "bun:test";
-import {
-  CATEGORY_CARDS_VERSION,
-  EMBEDDING_CLASSIFIER_MODEL_ID,
-  embeddingModelInfo,
-} from "@kyomi/worker";
+import { EMBEDDING_CLASSIFIER_MODEL_ID, embeddingModelInfo } from "@kyomi/worker";
 import { activeEmbeddingModelId, embeddingClassifierConfig } from "@config/embeddings";
 
-// Rows name the model, the article head, the card revision, and the selection rule they were
-// written under: `<model>/<head>/<cards>/<rule>`.
+// Rows name the model, the category head, and the selection rule they were written under:
+// `<model>/<head>/<rule>`.
 const MODEL_ID_PATTERN = new RegExp(
-  `^${EMBEDDING_CLASSIFIER_MODEL_ID.replaceAll("/", "\\/")}\\/[^/]+\\/${CATEGORY_CARDS_VERSION}\\/item-`,
+  `^${EMBEDDING_CLASSIFIER_MODEL_ID.replaceAll("/", "\\/")}\\/[^/]+\\/item-`,
 );
 
 const WORKER_ENV = {

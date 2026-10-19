@@ -13,7 +13,7 @@ export type CategoryClassifierReadMode = "keyword" | "embedding";
 
 /**
  * Each classifier writer replaces only the rows under its own model id, so embedding rows from a
- * previous provider or category-card revision are never cleaned up. Embedding mode reads only the
+ * previous provider, head, or selection rule are never cleaned up. Embedding mode reads only the
  * configured model's rows so stale rows can't mix with or outrank current labels.
  */
 function activeEmbeddingRowsSql(

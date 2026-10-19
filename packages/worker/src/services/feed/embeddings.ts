@@ -1,6 +1,4 @@
-import { createHash } from "node:crypto";
-import { MISCELLANEOUS_CATEGORY_LABEL } from "@kyomi/db";
-import { CATEGORY_CARDS, CATEGORY_CARDS_VERSION } from "./category-cards";
+import { CANONICAL_CATEGORY_LABELS, MISCELLANEOUS_CATEGORY_LABEL } from "@kyomi/db";
 import { decodeCategoryModel, scoreWithCategoryModel, type CategoryModel } from "./category-model";
 import { CATEGORY_MODEL_WEIGHTS } from "./category-model-weights";
 import type { ClassifierModelInfo } from "./categories";
@@ -30,16 +28,13 @@ export type EmbeddingClassifierConfig = {
   itemMinProbability?: number;
   /** Overrides the article head's secondary-label margin; for evals and tests. */
   itemSecondaryMargin?: number;
-  /** Overrides the calibrated feed cutoff; for evals and tests. */
-  feedSimilarityThreshold?: number;
-  /** Overrides the calibrated feed secondary-label margin; for evals and tests. */
+  /** Overrides the feed head's minimum probability; for evals and tests. */
+  feedMinProbability?: number;
+  /** Overrides the feed head's secondary-label margin; for evals and tests. */
   feedSecondaryMargin?: number;
 };
 
-/**
- * A category's score for a text, best first: the trained head's probability for an article, the
- * best cosine over the category's card prototypes for a feed.
- */
+/** A category's probability under the trained head for a text, best first. */
 export type CategoryScore = { label: string; score: number };
 
 export type CategorySelectionRule = {
@@ -52,10 +47,13 @@ export type CategorySelectionRule = {
 // gives it at least ITEM_MIN_PROBABILITY, and a second one only within ITEM_SECONDARY_MARGIN of it.
 const ITEM_MIN_PROBABILITY = 0.18;
 const ITEM_SECONDARY_MARGIN = 0.4;
-// Feeds still score against the category cards: calibrated for BGE-M3 cosines with
-// tests/api/integration/modules/feeds/refresh/classifier-eval-sweep.test.ts.
-const FEED_SIMILARITY_THRESHOLD = 0.5;
-const FEED_SECONDARY_MARGIN = 0.02;
+// Feeds: the same head scores a feed's title and description. Calibrated against
+// publisher-declared feed categories with
+// tests/api/integration/modules/feeds/refresh/classifier-eval-sweep.test.ts: no higher floor
+// keeps every label it gets right, and a second label within FEED_SECONDARY_MARGIN is nearly as
+// often right as the first. A feed below the floor falls back to Miscellaneous.
+const FEED_MIN_PROBABILITY = 0.1;
+const FEED_SECONDARY_MARGIN = 0.05;
 // Inputs per embeddings request. Larger batches go out as several requests, so a slow or failed
 // request costs one chunk and every request stays inside its timeout.
 const EMBEDDING_REQUEST_MAX_INPUTS = 128;
@@ -64,9 +62,6 @@ const EMBEDDING_REQUEST_MAX_CHARS = 200_000;
 // Per-text cap, the same head-and-tail cut the embeddings Worker applies, so the cache keys and
 // the Worker see the same text.
 const MAX_CHARS_PER_INPUT = 6_000;
-// Category prototypes are shared by every caller, so their load uses this timeout instead of a
-// caller's short budget.
-const PROTOTYPE_REQUEST_TIMEOUT_MS = 60_000;
 // Characters of title, summary, and body embedded per article. The opening carries the topic;
 // later text is mostly related links, comments, and newsletter prompts that drag every
 // category's similarity down, so feed text and extracted full text are cut to the same head.
@@ -176,47 +171,10 @@ export async function embedTexts(
   return vectors;
 }
 
-function cosineSimilarity(a: readonly number[], b: readonly number[]): number {
-  let dot = 0;
-  let normA = 0;
-  let normB = 0;
-  for (let i = 0; i < a.length; i += 1) {
-    dot += a[i]! * b[i]!;
-    normA += a[i]! * a[i]!;
-    normB += b[i]! * b[i]!;
-  }
-  if (normA === 0 || normB === 0) {
-    return 0;
-  }
-  return dot / (Math.sqrt(normA) * Math.sqrt(normB));
-}
-
-type CategoryPrototypes = {
-  label: string;
-  prototypeEmbeddings: number[][];
-};
-
 export type FeedItemEmbeddingBatchInput = FeedItemCategoryClassificationInput & {
   id: string;
   maxLabels?: number;
 };
-
-/**
- * Per-config prototype cache. Embedding the ~90 category-card prototype texts costs one
- * Worker call; caching by config identity (not globally) means tests that pass a fake
- * apiUrl/apiKey never share a cache with production config, while a real worker process
- * only pays the embedding cost once per config across its whole lifetime.
- */
-const prototypeCache = new Map<string, Promise<CategoryPrototypes[]>>();
-
-function apiKeyFingerprint(apiKey: string): string {
-  return createHash("sha256").update(apiKey).digest("hex").slice(0, 12);
-}
-
-// Leaves out timeoutMs: callers with different budgets share one prototype load.
-function cacheKeyFor(config: EmbeddingClassifierConfig): string {
-  return `${config.apiUrl}::${apiKeyFingerprint(config.apiKey)}`;
-}
 
 /** The production article and feed rules, for evals that replay them. */
 export const DEFAULT_ITEM_SELECTION_RULE: CategorySelectionRule = {
@@ -224,7 +182,7 @@ export const DEFAULT_ITEM_SELECTION_RULE: CategorySelectionRule = {
   secondaryMargin: ITEM_SECONDARY_MARGIN,
 };
 export const DEFAULT_FEED_SELECTION_RULE: CategorySelectionRule = {
-  minSimilarity: FEED_SIMILARITY_THRESHOLD,
+  minSimilarity: FEED_MIN_PROBABILITY,
   secondaryMargin: FEED_SECONDARY_MARGIN,
 };
 
@@ -237,7 +195,7 @@ function itemSelectionRule(config: EmbeddingClassifierConfig): CategorySelection
 
 function feedSelectionRule(config: EmbeddingClassifierConfig): CategorySelectionRule {
   return {
-    minSimilarity: config.feedSimilarityThreshold ?? FEED_SIMILARITY_THRESHOLD,
+    minSimilarity: config.feedMinProbability ?? FEED_MIN_PROBABILITY,
     secondaryMargin: config.feedSecondaryMargin ?? FEED_SECONDARY_MARGIN,
   };
 }
@@ -261,93 +219,13 @@ function selectionRuleTag(config: EmbeddingClassifierConfig): string {
 
 export function embeddingModelInfo(config: EmbeddingClassifierConfig): ClassifierModelInfo {
   return {
-    // Names the article head, the card revision, and the selection rule as well as the model: any
-    // of them can yield different labels for identical inputs, and rows written under another one
-    // must not read as current or count as backfilled.
-    modelId: `${EMBEDDING_CLASSIFIER_MODEL_ID}/${categoryModelFor(config).version}/${CATEGORY_CARDS_VERSION}/${selectionRuleTag(config)}`,
+    // Names the head and the selection rule as well as the model: any of them can yield different
+    // labels for identical inputs, and rows written under another one must not read as current or
+    // count as backfilled.
+    modelId: `${EMBEDDING_CLASSIFIER_MODEL_ID}/${categoryModelFor(config).version}/${selectionRuleTag(config)}`,
     taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
     classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
   };
-}
-
-function withTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
-  return new Promise<T>((resolve, reject) => {
-    const timer = setTimeout(
-      () => reject(new Error(`Category prototypes were not ready within ${timeoutMs}ms`)),
-      timeoutMs,
-    );
-    promise.then(
-      (value) => {
-        clearTimeout(timer);
-        resolve(value);
-      },
-      (error: unknown) => {
-        clearTimeout(timer);
-        reject(error);
-      },
-    );
-  });
-}
-
-/**
- * Loads prototypes under their own timeout. A caller with a shorter `timeoutMs` stops waiting at
- * its own deadline, but the load keeps running and warms the cache for the next call.
- */
-async function loadCategoryPrototypes(
-  config: EmbeddingClassifierConfig,
-): Promise<CategoryPrototypes[]> {
-  const key = cacheKeyFor(config);
-  let cached = prototypeCache.get(key);
-  if (!cached) {
-    cached = (async () => {
-      const allTexts = CATEGORY_CARDS.flatMap((card) => [
-        card.description,
-        ...card.representativeTitles,
-      ]);
-      const allEmbeddings = await embedTexts(allTexts, {
-        ...config,
-        timeoutMs: PROTOTYPE_REQUEST_TIMEOUT_MS,
-      });
-      let cursor = 0;
-      return CATEGORY_CARDS.map((card) => {
-        const count = 1 + card.representativeTitles.length;
-        const prototypeEmbeddings = allEmbeddings.slice(cursor, cursor + count);
-        cursor += count;
-        return { label: card.label, prototypeEmbeddings };
-      });
-    })();
-    prototypeCache.set(key, cached);
-    cached.catch(() => {
-      if (prototypeCache.get(key) === cached) {
-        prototypeCache.delete(key);
-      }
-    });
-  }
-  return config.timeoutMs ? withTimeout(cached, config.timeoutMs) : cached;
-}
-
-/** Test-only escape hatch: forces the next call to re-embed prototypes instead of reusing the cache. */
-export function resetPrototypeCache(): void {
-  prototypeCache.clear();
-}
-
-function scoreAgainstPrototypes(
-  textEmbedding: number[],
-  categories: readonly CategoryPrototypes[],
-): CategoryScore[] {
-  return categories
-    .map((category) => ({
-      label: category.label,
-      // Max, not mean: a title matching ANY one of a category's prototypes (its description
-      // OR any single representative title) is a legitimate hit — averaging would penalize a
-      // category whose other prototypes are topically distant from this particular article.
-      score: Math.max(
-        ...category.prototypeEmbeddings.map((prototype) =>
-          cosineSimilarity(textEmbedding, prototype),
-        ),
-      ),
-    }))
-    .sort((a, b) => b.score - a.score);
 }
 
 function toConfidence(similarity: number): number {
@@ -402,14 +280,14 @@ export function selectCategories(
     .slice(0, maxLabels);
 }
 
-/** Scores a feed's title and description against every category, best first. */
+/** Scores a feed's title and description with the trained head, best first. */
 export async function scoreFeedEmbedding(
   input: FeedCategoryClassificationInput,
   config: EmbeddingClassifierConfig,
 ): Promise<CategoryScore[]> {
-  const prototypes = await loadCategoryPrototypes(config);
+  const model = categoryModelFor(config);
   const [textEmbedding] = await embedTexts([buildFeedText(input)], config);
-  return textEmbedding ? scoreAgainstPrototypes(textEmbedding, prototypes) : [];
+  return textEmbedding ? scoreWithCategoryModel(model, textEmbedding) : [];
 }
 
 /**
@@ -487,7 +365,7 @@ export async function classifyItemEmbedding(
   // article legitimately spans. Callers with a real slot budget (e.g. refresh.ts) pass their
   // own maxLabels; this default only governs raw classification (e.g. eval harnesses), so it
   // should let every category that clears the threshold through rather than truncate early.
-  maxLabels: number = CATEGORY_CARDS.length,
+  maxLabels: number = CANONICAL_CATEGORY_LABELS.length,
 ): Promise<CategoryClassification> {
   const scores = await scoreItemEmbeddings([{ ...input, id: "item" }], config);
   return toCategoryClassification(
@@ -513,7 +391,7 @@ export async function classifyItemEmbeddings(
       results.set(
         input.id,
         toCategoryClassification(
-          selectCategories(itemScores, rule, input.maxLabels ?? CATEGORY_CARDS.length),
+          selectCategories(itemScores, rule, input.maxLabels ?? CANONICAL_CATEGORY_LABELS.length),
         ),
       );
     }

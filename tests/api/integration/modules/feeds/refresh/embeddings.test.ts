@@ -1,10 +1,9 @@
-import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "bun:test";
 import {
   classifyFeedEmbedding,
   classifyItemEmbedding,
   classifyItemEmbeddings,
   embedTexts,
-  resetPrototypeCache,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
 import { FAKE_CATEGORY_MODEL } from "./fake-category-model";
@@ -18,20 +17,15 @@ const FAKE_CONFIG: EmbeddingClassifierConfig = {
 
 /**
  * Deterministic 3-dimensional "embeddings" — real BGE-M3 vectors are much higher-dimensional, but
- * a small hand-computable space, with FAKE_CATEGORY_MODEL as the article head, is enough to verify
+ * a small hand-computable space, with FAKE_CATEGORY_MODEL as the category head, is enough to verify
  * the scoring, threshold, and fallback logic without needing real semantics.
  */
 const UNIT_X = [1, 0, 0];
 const UNIT_Y = [0, 1, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
 
-beforeEach(() => {
-  resetPrototypeCache();
-});
-
 afterEach(() => {
   globalThis.fetch = originalFetch;
-  resetPrototypeCache();
 });
 
 describe("embedTexts", () => {
@@ -142,7 +136,7 @@ const ARTICLE = {
 };
 
 describe("classifyItemEmbedding", () => {
-  test("embeds a batch of articles in one request, with no category-card prototypes", async () => {
+  test("embeds a batch of articles in one request", async () => {
     const requests = fakeWorker((text) => (text.startsWith("First") ? UNIT_X : ORTHOGONAL_Z));
 
     const result = await classifyItemEmbeddings(
@@ -213,93 +207,47 @@ describe("classifyItemEmbedding", () => {
   });
 });
 
-describe("category prototypes", () => {
+describe("classifyFeedEmbedding", () => {
   const FEED = {
     feedTitle: "Some feed",
-    feedDescription: null,
+    feedDescription: "Notes on building software",
     feedUrl: "https://example.com/rss",
     feedSiteUrl: "https://example.com",
     sourceKind: "rss",
   };
-  // The first 4 prototypes (Software Engineering's description and titles) match UNIT_X.
-  const prototypesThenUnitX = (_text: string, index: number, inputs: string[]) =>
-    inputs.length > 1 ? (index < 4 ? UNIT_X : ORTHOGONAL_Z) : UNIT_X;
 
-  test("are embedded once across calls with the same config", async () => {
-    const requests = fakeWorker(prototypesThenUnitX);
+  test("scores the feed's title and description with the head in one request", async () => {
+    const requests = fakeWorker(() => UNIT_X);
 
-    await classifyFeedEmbedding(FEED, FAKE_CONFIG);
-    await classifyFeedEmbedding({ ...FEED, feedTitle: "Another feed" }, FAKE_CONFIG);
-
-    expect(requests.filter((inputs) => inputs.length > 1)).toHaveLength(1);
-  });
-
-  test("are not shared across API keys", async () => {
-    const requests = fakeWorker(prototypesThenUnitX);
-
-    await classifyFeedEmbedding(FEED, { ...FAKE_CONFIG, apiKey: "first-account-key" });
-    await classifyFeedEmbedding(FEED, { ...FAKE_CONFIG, apiKey: "second-account-key" });
-
-    expect(requests.filter((inputs) => inputs.length > 1)).toHaveLength(2);
-  });
-
-  test("are loaded again after a failed load", async () => {
-    let failNextPrototypeLoad = true;
-    let prototypeLoads = 0;
-    globalThis.fetch = (async (_url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      if (body.input.length > 1) {
-        prototypeLoads += 1;
-        if (failNextPrototypeLoad) {
-          failNextPrototypeLoad = false;
-          return new Response("temporary outage", { status: 503 });
-        }
-      }
-      const data = body.input.map((text, index) => ({
-        embedding: prototypesThenUnitX(text, index, body.input),
-        index,
-      }));
-      return new Response(JSON.stringify({ data }), { status: 200 });
-    }) as unknown as typeof fetch;
-
-    await expect(classifyFeedEmbedding(FEED, FAKE_CONFIG)).rejects.toThrow(/503/);
     const result = await classifyFeedEmbedding(FEED, FAKE_CONFIG);
 
-    expect(prototypeLoads).toBe(2);
+    expect(requests).toEqual([["Some feed. Notes on building software"]]);
+    expect(result.categories).toHaveLength(1);
     expect(result.categories[0]?.label).toBe("Software Engineering");
+    expect(result.categories[0]?.confidence).toBeGreaterThan(0.9);
   });
-});
 
-describe("classifyFeedEmbedding", () => {
-  test("falls back to Miscellaneous at low confidence when nothing clears the threshold", async () => {
-    globalThis.fetch = (async (url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = body.input.length > 1;
-      if (isPrototypeCall) {
-        const embeddings = body.input.map(() => UNIT_Y);
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
-      }
-      return new Response(JSON.stringify({ data: [{ embedding: ORTHOGONAL_Z, index: 0 }] }), {
-        status: 200,
-      });
-    }) as unknown as typeof fetch;
+  test("falls back to Miscellaneous at low confidence when nothing clears the floor", async () => {
+    fakeWorker(() => ORTHOGONAL_Z);
 
-    const result = await classifyFeedEmbedding(
-      {
-        feedTitle: "Some obscure feed",
-        feedDescription: null,
-        feedUrl: "https://example.com/rss",
-        feedSiteUrl: "https://example.com",
-        sourceKind: "rss",
-      },
-      FAKE_CONFIG,
-    );
+    const result = await classifyFeedEmbedding(FEED, FAKE_CONFIG);
 
     // Unlike item-level classification, a feed must always resolve to some label — this is
     // the same discipline as the keyword classifier's feed-level `allowGeneralFallback: true`.
     expect(result.categories).toEqual([{ label: "Miscellaneous", confidence: 0.1 }]);
+  });
+
+  test("admits a second category only within the feed secondary margin", async () => {
+    // About 0.57 Software Engineering and 0.42 Technology.
+    fakeWorker(() => [1, 0.95, 0]);
+
+    const narrow = await classifyFeedEmbedding(FEED, FAKE_CONFIG);
+    const wide = await classifyFeedEmbedding(FEED, { ...FAKE_CONFIG, feedSecondaryMargin: 0.2 });
+
+    expect(narrow.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
+    expect(wide.categories.map((category) => category.label)).toEqual([
+      "Software Engineering",
+      "Technology",
+    ]);
   });
 });

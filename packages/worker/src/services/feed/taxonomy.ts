@@ -9,8 +9,8 @@ export const CATEGORY_CLASSIFIER_PROVENANCE = "classifier";
 // relevant `*_MODEL_ID` when that classifier's scoring/embedding logic changes in a way that
 // could yield different labels for identical inputs; bump the shared taxonomy version when a
 // category is added/removed/renamed (both classifiers score against the same category set).
-// Embedding rows store `<model>/<CATEGORY_CARDS_VERSION>/<selection rule>`, so a category-card or
-// cutoff change gets new rows without a model id bump.
+// Embedding rows store `<model>/<head version>/<selection rule>`, so retraining the head or
+// changing a cutoff gets new rows without a model id bump.
 export const KEYWORD_CLASSIFIER_METHOD = "keyword";
 export const KEYWORD_CLASSIFIER_MODEL_ID = "keyword-v1";
 export const EMBEDDING_CLASSIFIER_METHOD = "embedding";
