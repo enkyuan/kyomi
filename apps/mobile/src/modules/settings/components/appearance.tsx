@@ -1,45 +1,17 @@
 import { useEffect, useState } from "react";
-import {
-  Appearance as NativeAppearance,
-  Platform,
-  Pressable,
-  Text,
-  useColorScheme,
-  View,
-} from "react-native";
+import { Pressable, Text, useColorScheme, View } from "react-native";
 import { SymbolView } from "expo-symbols";
 import Svg, { Circle, Path } from "react-native-svg";
-import { createAppStorage } from "@lib/storage";
 import { FONT_STYLES } from "@/theme/fonts";
+import { applyThemeMode, readThemeMode, saveThemeMode, type ThemeMode } from "@/theme/mode";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { SettingsSection } from "./section";
-
-const THEME_MODE_KEY = "mode";
-const appearanceStorage = createAppStorage("appearance");
 
 const THEME_OPTIONS = [
   { description: "Use device settings", label: "System", mode: "system" },
   { description: "Always use light mode.", label: "Light", mode: "light" },
   { description: "Always use dark mode.", label: "Dark", mode: "dark" },
 ] as const;
-
-type ThemeMode = (typeof THEME_OPTIONS)[number]["mode"];
-
-function readThemeMode(): ThemeMode {
-  const stored = appearanceStorage.getString(THEME_MODE_KEY);
-  return stored === "light" || stored === "dark" ? stored : "system";
-}
-
-function applyThemeMode(mode: ThemeMode) {
-  if (Platform.OS === "web") {
-    if (typeof document !== "undefined") {
-      document.documentElement.style.colorScheme = mode === "system" ? "" : mode;
-    }
-    return;
-  }
-
-  NativeAppearance.setColorScheme(mode === "system" ? "unspecified" : mode);
-}
 
 export function AppearanceSection() {
   const colorScheme = useColorScheme();
@@ -63,7 +35,7 @@ export function AppearanceSection() {
               accessibilityState={{ selected: isSelected }}
               key={option.mode}
               onPress={() => {
-                appearanceStorage.set(THEME_MODE_KEY, option.mode);
+                saveThemeMode(option.mode);
                 setMode(option.mode);
               }}
               style={({ pressed }) => ({

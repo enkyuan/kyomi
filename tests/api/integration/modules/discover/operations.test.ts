@@ -99,8 +99,7 @@ describe("discover feeds", () => {
         },
       ]),
     );
-    const orderBy = mock(() => ({ limit: mock(() => Promise.resolve(where())) }));
-    const leftJoin = mock(() => ({ where: mock(() => ({ orderBy })) }));
+    const leftJoin = mock(() => ({ where }));
     const from = mock(() => ({ leftJoin }));
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof searchFeeds>[0];
@@ -189,8 +188,7 @@ describe("discover feeds", () => {
         },
       ]),
     );
-    const orderBy = mock(() => ({ limit: mock(() => Promise.resolve(where())) }));
-    const leftJoin = mock(() => ({ where: mock(() => ({ orderBy })) }));
+    const leftJoin = mock(() => ({ where }));
     const from = mock(() => ({ leftJoin }));
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof searchFeeds>[0];
