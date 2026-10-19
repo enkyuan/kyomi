@@ -1,3 +1,4 @@
+/* oxlint-disable max-lines */
 import type { ClassifierEvalCase } from "./classifier-eval-fixture";
 
 /**

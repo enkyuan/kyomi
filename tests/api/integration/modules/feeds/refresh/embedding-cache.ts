@@ -79,8 +79,11 @@ export function cachedEmbeddingsFetch(options: {
         `${misses.length} texts are missing from ${options.cacheFile}; set CLOUDFLARE_EMBEDDINGS_URL and CLOUDFLARE_EMBEDDINGS_TOKEN to fill the cache`,
       );
     }
+    // One batch at a time on purpose: the Worker already fans each request out to Workers AI,
+    // and a cache fill is a one-off that shouldn't flood a shared free-tier deployment.
     for (let start = 0; start < misses.length; start += UPSTREAM_BATCH_SIZE) {
       const batch = misses.slice(start, start + UPSTREAM_BATCH_SIZE);
+      // oxlint-disable-next-line react-doctor/async-await-in-loop -- sequential by design, see above
       const response = await realFetch(options.upstream.url, {
         method: "POST",
         headers: {
