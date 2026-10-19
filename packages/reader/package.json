@@ -1,5 +1,6 @@
 {
   "name": "@kyomi/reader",
+  "private": true,
   "version": "0.1.0",
   "description": "Kyomi reader rendering primitives for web and native surfaces.",
   "author": "enkyuan <yuan.enkng@gmail.com>",
@@ -9,9 +10,6 @@
     "type": "git",
     "url": "https://github.com/enkyuan/kyomi.git",
     "directory": "packages/reader"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "exports": {
     ".": "./src/core/index.ts",

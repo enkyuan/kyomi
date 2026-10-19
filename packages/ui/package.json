@@ -1,5 +1,6 @@
 {
   "name": "@kyomi/ui",
+  "private": true,
   "version": "0.1.0",
   "description": "Kyomi design system: Base UI primitives, tokens, icons, and motion.",
   "repository": {
@@ -28,9 +29,6 @@
     "./native/theme": "./src/native/theme.ts",
     "./globals.css": "./src/styles/globals.css",
     "./styles/*": "./src/styles/*"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "fmt": "oxfmt src",
