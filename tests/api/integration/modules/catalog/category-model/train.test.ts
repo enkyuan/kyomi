@@ -50,6 +50,8 @@ describe("crossValidateCategoryModel", () => {
 
     expect(report.top1).toBeGreaterThan(0.9);
     expect(report.clearTop1).toBeGreaterThan(0.9);
-    expect(report.rules[0]!.f1).toBeGreaterThanOrEqual(report.rules.at(-1)!.f1);
+    for (let index = 1; index < report.rules.length; index += 1) {
+      expect(report.rules[index - 1]!.f1).toBeGreaterThanOrEqual(report.rules[index]!.f1);
+    }
   });
 });
