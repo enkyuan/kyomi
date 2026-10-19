@@ -666,7 +666,7 @@ function resolveBackfillClassifier(args: BackfillArgs): BackfillClassifier {
 
   if (!embeddingConfig) {
     throw new Error(
-      "CLOUDFLARE_EMBEDDINGS_URL and CLOUDFLARE_EMBEDDINGS_TOKEN, or VOYAGE_API_KEY, is required when --classifier embedding is used",
+      "CLOUDFLARE_EMBEDDINGS_URL and CLOUDFLARE_EMBEDDINGS_TOKEN are required when --classifier embedding is used",
     );
   }
 

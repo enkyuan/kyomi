@@ -1,5 +1,5 @@
 /**
- * Kyomi embeddings Worker: a Voyage-compatible `POST /embed` endpoint backed by Workers AI
+ * Kyomi embeddings Worker: a `POST /embed` endpoint backed by Workers AI
  * BGE-M3. The article category classifier (packages/worker) calls it through the API's
  * CLOUDFLARE_EMBEDDINGS_URL and CLOUDFLARE_EMBEDDINGS_TOKEN.
  *
@@ -163,7 +163,7 @@ export default {
       return Response.json({ error: "Embedding provider failed" }, { status: 502 });
     }
 
-    // This matches the response shape Kyomi already expects from Voyage.
+    // One `{ embedding, index }` entry per input, the shape @kyomi/worker's client reads.
     return Response.json({ data });
   },
 };

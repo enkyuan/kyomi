@@ -2,7 +2,6 @@ import { afterAll, beforeAll, describe, expect, test } from "bun:test";
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import {
-  CLOUDFLARE_EMBEDDING_MODEL,
   MAX_CLASSIFIER_LABELS,
   resetPrototypeCache,
   scoreFeedEmbedding,
@@ -46,9 +45,9 @@ const upstream = embeddingsUpstreamFromEnv();
 const config: EmbeddingClassifierConfig = {
   apiKey: upstream?.token ?? "embeddings-cache",
   apiUrl: upstream?.url ?? "https://embeddings-cache.invalid/embed",
-  model: CLOUDFLARE_EMBEDDING_MODEL,
 };
-const CURRENT_RULE: CategorySelectionRule = { minSimilarity: 0.6 };
+// The pre-calibration cutoff, kept as a baseline row in every table.
+const PREVIOUS_RULE: CategorySelectionRule = { minSimilarity: 0.6 };
 const CHOSEN = process.env.CLASSIFIER_SWEEP_RULE?.split(",").map(Number);
 const CHOSEN_RULE: CategorySelectionRule | undefined = CHOSEN && {
   minSimilarity: CHOSEN[0]!,
@@ -151,7 +150,7 @@ async function scoreCases(cases: readonly ClassifierEvalCase[]): Promise<Scored[
 
 beforeAll(() => {
   globalThis.fetch = cachedEmbeddingsFetch({
-    cacheFile: embeddingsCacheFile(CLOUDFLARE_EMBEDDING_MODEL, "eval"),
+    cacheFile: embeddingsCacheFile("eval"),
     upstream,
     realFetch: originalFetch,
   });
@@ -170,10 +169,7 @@ describe.skipIf(!enabled)("embedding classifier threshold sweep (BGE-M3)", () =>
     const stored = await scoreCases(CLASSIFIER_EVAL_STORED_CASES);
     expect(stored.every((entry) => entry.scores.length > 0)).toBe(true);
 
-    const top3Path = join(
-      dirname(embeddingsCacheFile(CLOUDFLARE_EMBEDDING_MODEL, "eval")),
-      "top3-stored.jsonl",
-    );
+    const top3Path = join(dirname(embeddingsCacheFile("eval")), "top3-stored.jsonl");
     writeFileSync(
       top3Path,
       stored
@@ -216,7 +212,7 @@ describe.skipIf(!enabled)("embedding classifier threshold sweep (BGE-M3)", () =>
     for (const summary of summaries.slice(0, 15)) {
       console.log(row(summary));
     }
-    console.log(`\nCurrent rule\n${header}\n${row(summarize(stored, CURRENT_RULE))}`);
+    console.log(`\nPrevious rule\n${header}\n${row(summarize(stored, PREVIOUS_RULE))}`);
     for (const secondaryMargin of [undefined, 0.02, 0.04, 0.06]) {
       const byFloor = summaries
         .filter((s) => s.rule.secondaryMargin === secondaryMargin)
@@ -241,7 +237,7 @@ describe.skipIf(!enabled)("embedding classifier threshold sweep (BGE-M3)", () =>
       ["Held-out field", CLASSIFIER_EVAL_FIXTURE.filter((c) => c.source === "field")],
     ] as const) {
       const scored = await scoreCases(cases);
-      for (const rule of [CURRENT_RULE, best.rule, ...(CHOSEN_RULE ? [CHOSEN_RULE] : [])]) {
+      for (const rule of [PREVIOUS_RULE, best.rule, ...(CHOSEN_RULE ? [CHOSEN_RULE] : [])]) {
         const summary = summarize(scored, rule);
         console.log(
           `\n${name} (${cases.length}), ${describeRule(rule)}: P ${round3(precision(summary.overall))} R ${round3(recall(summary.overall))} F1 ${round3(summary.microF1)} abstain ${round3(summary.abstention)}`,
@@ -290,7 +286,7 @@ describe.skipIf(!enabled)("embedding classifier threshold sweep (BGE-M3)", () =>
     "replays the rules over stored articles to measure coverage",
     async () => {
       globalThis.fetch = cachedEmbeddingsFetch({
-        cacheFile: embeddingsCacheFile(CLOUDFLARE_EMBEDDING_MODEL, "coverage"),
+        cacheFile: embeddingsCacheFile("coverage"),
         upstream,
         realFetch: originalFetch,
       });
@@ -348,7 +344,7 @@ describe.skipIf(!enabled)("embedding classifier threshold sweep (BGE-M3)", () =>
       console.log(
         `\nCoverage over ${rows.length} stored articles (${feedRows.length} feeds)\n${"keyword read mode".padEnd(34)} unlabeled at read ${round3(keywordUnlabeled / rows.length).toFixed(3)}`,
       );
-      report(`embedding, ${describeRule(CURRENT_RULE)}`, CURRENT_RULE);
+      report(`embedding, ${describeRule(PREVIOUS_RULE)}`, PREVIOUS_RULE);
       report(`embedding, ${describeRule(best.rule)}`, best.rule);
       if (CHOSEN_RULE) {
         const rule = CHOSEN_RULE;

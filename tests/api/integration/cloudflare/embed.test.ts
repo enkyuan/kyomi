@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, spyOn, test } from "bun:test";
-import { CLOUDFLARE_EMBEDDING_MODEL, embedTexts } from "@kyomi/worker";
+import { EMBEDDING_CLASSIFIER_MODEL_ID, embedTexts } from "@kyomi/worker";
 import worker from "../../../../apps/embeddings/src/index";
 
 type WorkerEnv = Parameters<typeof worker.fetch>[1];
@@ -185,7 +185,7 @@ describe("embeddings Worker responses", () => {
 
     expect(response.status).toBe(200);
     expect(await response.json()).toEqual({ data: [{ embedding: vectorFor("hello"), index: 0 }] });
-    expect(ai.calls).toEqual([{ model: CLOUDFLARE_EMBEDDING_MODEL, text: ["hello"] }]);
+    expect(ai.calls).toEqual([{ model: EMBEDDING_CLASSIFIER_MODEL_ID, text: ["hello"] }]);
   });
 
   test("batches inputs by eight and keeps every vector on its own input", async () => {
@@ -257,7 +257,7 @@ describe("embedTexts against the embeddings Worker", () => {
       worker.fetch(new Request(input, init), env)) as unknown as typeof fetch;
   }
 
-  const config = { apiKey: TOKEN, apiUrl: EMBED_URL, model: CLOUDFLARE_EMBEDDING_MODEL };
+  const config = { apiKey: TOKEN, apiUrl: EMBED_URL };
 
   test("returns one vector per text, in order, across Worker batches", async () => {
     routeFetchToWorker({ AI: fakeAi(), EMBEDDINGS_TOKEN: TOKEN });

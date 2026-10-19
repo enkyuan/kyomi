@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
-import { CATEGORY_CARDS_VERSION } from "@kyomi/worker";
+import { CATEGORY_CARDS_VERSION, EMBEDDING_CLASSIFIER_MODEL_ID } from "@kyomi/worker";
 
 /**
  * Offline embeddings for the live classifier evals. Vectors are stored under the gitignored
@@ -30,8 +30,8 @@ function decodeVector(encoded: string): number[] {
   return Array.from(new Float32Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 4));
 }
 
-export function embeddingsCacheFile(model: string, name: string): string {
-  const modelDir = model.replace(/[^a-z0-9.-]+/gi, "_");
+export function embeddingsCacheFile(name: string): string {
+  const modelDir = EMBEDDING_CLASSIFIER_MODEL_ID.replace(/[^a-z0-9.-]+/gi, "_");
   return join(
     REPO_ROOT,
     ".artifacts",

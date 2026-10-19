@@ -11,11 +11,11 @@ import {
 const originalFetch = globalThis.fetch;
 const FAKE_CONFIG: EmbeddingClassifierConfig = {
   apiKey: "test-key",
-  apiUrl: "https://fake.voyage.test/v1/embeddings",
+  apiUrl: "https://fake-embeddings.test/embed",
 };
 
 /**
- * Deterministic 3-dimensional "embeddings" — real Voyage vectors are much higher-dimensional,
+ * Deterministic 3-dimensional "embeddings" — real BGE-M3 vectors are much higher-dimensional,
  * but cosine similarity is dimension-agnostic, so a small hand-computable space is enough to
  * verify the classifier's scoring/threshold/fallback logic without needing real semantics.
  */

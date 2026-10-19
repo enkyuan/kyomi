@@ -169,15 +169,10 @@ export const env = createEnv({
     /** Shared secret accepted in `x-feed-admin-secret` as a backup admin control plane. */
     FEED_ADMIN_SHARED_SECRET: z.string().min(1).optional(),
     /**
-     * Voyage AI API key for the embedding-based article classifier. Leave unset to run feed
-     * refresh with only the deterministic keyword classifier — no FEATURE_* flag gates this,
-     * matching the MEILI_* pattern of "absent means fall back," not "absent means error."
-     */
-    VOYAGE_API_KEY: z.string().min(1).optional(),
-
-    /**
-     * Kyomi's Cloudflare embeddings Worker (`apps/embeddings`): its `/embed` URL and bearer token.
-     * Takes precedence over VOYAGE_API_KEY when both values are set.
+     * Kyomi's Cloudflare embeddings Worker (`apps/embeddings`): its `/embed` URL and bearer token,
+     * for the embedding-based article classifier. Leave both unset to run feed refresh with only
+     * the deterministic keyword classifier; no FEATURE_* flag gates this, matching the MEILI_*
+     * pattern of "absent means fall back," not "absent means error."
      */
     CLOUDFLARE_EMBEDDINGS_URL: embeddingsWorkerUrlFromEnv.optional(),
     CLOUDFLARE_EMBEDDINGS_TOKEN: z.string().min(1).optional(),
@@ -254,7 +249,6 @@ export const env = createEnv({
     FEED_FETCH_HOST_RETRY_DELAY_MS: process.env.FEED_FETCH_HOST_RETRY_DELAY_MS,
     FEED_ADMIN_USER_IDS: process.env.FEED_ADMIN_USER_IDS,
     FEED_ADMIN_SHARED_SECRET: process.env.FEED_ADMIN_SHARED_SECRET,
-    VOYAGE_API_KEY: process.env.VOYAGE_API_KEY,
     // runtimeEnv section
     CLOUDFLARE_EMBEDDINGS_URL: process.env.CLOUDFLARE_EMBEDDINGS_URL,
     CLOUDFLARE_EMBEDDINGS_TOKEN: process.env.CLOUDFLARE_EMBEDDINGS_TOKEN,

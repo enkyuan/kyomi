@@ -2,7 +2,6 @@ import { afterAll, beforeAll, describe, expect, test } from "bun:test";
 import { existsSync } from "node:fs";
 import {
   classifyItemEmbeddings,
-  CLOUDFLARE_EMBEDDING_MODEL,
   MAX_CLASSIFIER_LABELS,
   resetPrototypeCache,
   scoreItemEmbeddings,
@@ -33,17 +32,16 @@ import { CLASSIFIER_EVAL_STORED_CASES } from "./classifier-eval-stored-fixture";
  * embeddings cache (see embedding-cache.ts) already holds every text, and is skipped otherwise.
  *
  * The floors are a ratchet against a provider, card, or threshold change that silently stops
- * labeling articles: the Voyage-tuned 0.6 cutoff, for example, left 99% of stored articles
+ * labeling articles: the earlier 0.6 cutoff, for example, left 99% of stored articles
  * unlabeled under BGE-M3. Raise them when a change genuinely improves the scores.
  */
 
 const upstream = embeddingsUpstreamFromEnv();
-const cacheFile = embeddingsCacheFile(CLOUDFLARE_EMBEDDING_MODEL, "eval");
+const cacheFile = embeddingsCacheFile("eval");
 const enabled = Boolean(upstream) || existsSync(cacheFile);
 const config = embeddingClassifierConfig(undefined, {
   CLOUDFLARE_EMBEDDINGS_URL: upstream?.url ?? "https://embeddings-cache.invalid/embed",
   CLOUDFLARE_EMBEDDINGS_TOKEN: upstream?.token ?? "embeddings-cache",
-  VOYAGE_API_KEY: undefined,
 }) as EmbeddingClassifierConfig;
 
 const FLOORS = {
