@@ -62,11 +62,11 @@ export function useEmailAuth({
     );
   }
 
-  function clearError() {
+  const clearError = useCallback(() => {
     setInvalidStep(null);
     setErrorMessage(null);
     setShowErrorAlert(false);
-  }
+  }, []);
 
   function handleDismiss() {
     if (!isMountedRef.current) return;
