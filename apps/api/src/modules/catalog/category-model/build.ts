@@ -103,10 +103,18 @@ export async function buildCategoryModel(input: {
   model: CategoryModel;
   report: CrossValidationReport;
   examples: number;
-  missing: number;
 }> {
   const trainingLabels = loadTrainingLabels();
   const articles = await loadTrainingArticles(trainingLabels.map((label) => label.id));
+  // A database without some labeled articles (a partial local copy, a restore, a prune) would
+  // train a head on a skewed subset and still overwrite the committed weights, so refuse first.
+  const loaded = new Set(articles.map((article) => article.id));
+  const missingIds = trainingLabels.map((label) => label.id).filter((id) => !loaded.has(id));
+  if (missingIds.length > 0) {
+    throw new Error(
+      `${missingIds.length} of ${trainingLabels.length} labeled training articles are not in this database (first: ${missingIds.slice(0, 5).join(", ")}); train against a database that has all of them`,
+    );
+  }
   const vectors = new Map<string, number[]>();
   for (let start = 0; start < articles.length; start += EMBED_BATCH) {
     const batch = await embedItemVectors(articles.slice(start, start + EMBED_BATCH), input.config);
@@ -150,7 +158,6 @@ export async function buildCategoryModel(input: {
     model,
     report,
     examples: examples.length,
-    missing: trainingLabels.length - articles.length,
   };
 }
 

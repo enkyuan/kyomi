@@ -18,7 +18,7 @@ if (!config) {
 
 try {
   await assertApiDatabaseReady({ commandName: "category:train", ensureSchema: false });
-  const { examples, missing, report } = await buildCategoryModel({
+  const { examples, report } = await buildCategoryModel({
     config,
     labels: CATEGORY_MODEL_LABELS,
     version,
@@ -35,7 +35,7 @@ try {
     );
   }
   console.log(
-    `Trained ${version} on ${examples} labeled articles${missing > 0 ? ` (${missing} not found in this database)` : ""}; wrote packages/worker/src/services/feed/category-model-weights.ts`,
+    `Trained ${version} on ${examples} labeled articles; wrote packages/worker/src/services/feed/category-model-weights.ts`,
   );
 } finally {
   await pool.end();
