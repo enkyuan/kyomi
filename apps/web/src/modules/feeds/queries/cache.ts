@@ -4,7 +4,7 @@ import type { QueryClient } from "@tanstack/react-query";
 import { queryKeys } from "@lib/query/keys";
 import type { DiscoverFeedResult, FollowedFeed } from "../lib/api";
 
-export type FeedCacheSnapshot = {
+type FeedCacheSnapshot = {
   followedFeeds?: FollowedFeed[];
 };
 

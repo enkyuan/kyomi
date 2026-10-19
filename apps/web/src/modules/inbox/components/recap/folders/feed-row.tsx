@@ -12,7 +12,7 @@ import {
   ItemTitle,
 } from "@kyomi/ui/components/item";
 import { cn } from "@kyomi/ui/lib/utils";
-import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
+import { FeedFavicon } from "@modules/feeds/components/favicon";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import { FolderPickerButton } from "@modules/folders/components/picker";
 import type { InboxSearch } from "@modules/inbox/lib/search";

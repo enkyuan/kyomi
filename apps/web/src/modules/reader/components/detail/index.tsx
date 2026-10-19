@@ -5,7 +5,7 @@ import { cn } from "@kyomi/ui/lib/utils";
 import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
 import { readerViewportContentInsetClass, type DetailViewProps } from "@modules/reader/lib/detail";
 import { useEffect, useRef, useState } from "react";
-import { BlurLayer } from "./chrome/blur";
+import { BlurLayer } from "./blur";
 import { ContentView } from "./content";
 
 const DETAIL_BACK_BUTTON_BLUR_OFFSET = 52;

@@ -11,7 +11,7 @@ import {
 import type { CSSProperties, ReactNode } from "react";
 import { INBOX_PANEL_SPACING_PX } from "../lib/layout/index";
 
-export type MobileLayoutProps = {
+type MobileLayoutProps = {
   showDetail: boolean;
   direction: 1 | -1;
   list: ReactNode;

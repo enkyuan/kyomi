@@ -38,7 +38,7 @@ type InboxRouteNavigateOptions = {
   replace?: boolean;
 };
 
-export type InboxLayoutVariant = "split" | "stacked";
+type InboxLayoutVariant = "split" | "stacked";
 
 function parseSearchFlag(value: string | undefined) {
   if (!value) {

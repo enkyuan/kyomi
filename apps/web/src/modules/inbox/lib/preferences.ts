@@ -10,7 +10,7 @@ import { getUserPreferences, updateUserPreferences } from "@modules/preferences/
 const MIN_INBOX_FONT_SIZE_PX = 14;
 const MAX_INBOX_FONT_SIZE_PX = 20;
 
-export type InboxPreferences = InboxPreferencesDto;
+type InboxPreferences = InboxPreferencesDto;
 
 export const DEFAULT_INBOX_PREFERENCES: InboxPreferences = {
   inboxDefaultView: "my-feed",

@@ -67,7 +67,7 @@ vi.mock("@kyomi/ui/components/toast", () => ({
   },
 }));
 
-vi.mock("@modules/feeds/components/feed-favicon", () => ({
+vi.mock("@modules/feeds/components/favicon", () => ({
   FeedFavicon: ({ title }: { title?: string }) => <span>{title}</span>,
 }));
 

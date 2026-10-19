@@ -9,7 +9,7 @@ import { lazyNamed } from "@lib/lazy-named";
 import { usePlatform } from "@hooks/use-platform";
 import { useTransition } from "@modules/inbox/hooks/use-transition";
 import { exportOpml } from "@modules/feeds/lib/api";
-import { CreateFolderDialog } from "@modules/folders/components/dialog";
+import { CreateFolderDialog } from "@modules/folders/components/create-dialog";
 import type { useInboxRouteState } from "@modules/inbox/hooks/use-layout";
 import { inboxRecapQueryOptions } from "@modules/inbox/queries/options";
 import { RecapContent } from "./content";

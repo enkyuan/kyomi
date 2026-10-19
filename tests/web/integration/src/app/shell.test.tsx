@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import { AppShell } from "@/app/app-shell";
+import { AppShell } from "@/app/shell";
 
 // AppSidebar does data fetching, lazy dialogs, and router-aware links — none of that is relevant
 // to the shell's own width behavior, so it's stubbed out here.

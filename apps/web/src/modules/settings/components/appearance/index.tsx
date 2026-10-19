@@ -3,7 +3,7 @@
 import { BrushFill } from "@kyomi/ui/icons/mingcute";
 import { Button } from "@kyomi/ui/components/button";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
-import { InboxAppearanceSettings } from "./inbox-settings";
+import { InboxAppearanceSettings } from "./inbox";
 import { ThemeSwitcher } from "./theme-switcher";
 import { useAppearancePanel } from "@modules/settings/hooks/use-appearance-panel";
 

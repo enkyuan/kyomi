@@ -1,5 +1,5 @@
 import type { InboxFilter, InboxSort } from "@modules/articles/lib/api";
-import { normalizeInboxSort } from "@modules/articles/lib/query";
+import { normalizeInboxSort } from "@modules/articles/lib/urls";
 import {
   isInboxRecapRailFolderBackTarget,
   isInboxRecapRailSection,

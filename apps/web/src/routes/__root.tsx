@@ -20,7 +20,7 @@ import { NotFoundPage } from "@/app/not-found";
 import { getAuthRecoveryAction, LOGIN_RECOVERY_ACTION } from "@lib/recovery";
 import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/components/toast";
 import PostHogProvider from "@integrations/posthog/provider";
-import { getAuthBootstrapState } from "@lib/auth/functions";
+import { getAuthBootstrapState } from "@lib/auth/api";
 import type { AuthCapabilities } from "@lib/auth/capabilities";
 import type { AvailableAuthSessionState } from "@lib/auth/session";
 import { SHELL_INIT_SCRIPT } from "@/app/shell-init";

@@ -1,6 +1,6 @@
 import type React from "react";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
-import type { AnchoredToolbarAction, ToolbarSide } from "@modules/articles/lib/actions";
+import type { AnchoredToolbarAction, ToolbarSide } from "@modules/articles/lib/types";
 import type { ReaderMode } from "./mode";
 import type { ReaderContentWidth } from "./preferences";
 

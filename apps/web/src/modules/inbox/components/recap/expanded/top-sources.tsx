@@ -17,7 +17,7 @@ import {
   FolderPickerButton,
   TOP_SOURCE_FOLDER_BUTTON_CLASS,
 } from "@modules/folders/components/picker";
-import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
+import { FeedFavicon } from "@modules/feeds/components/favicon";
 import { SectionEmpty } from "../sections";
 import type { RecapTopViewedFeed } from "../../../lib/recap/types";
 import { formatRelativeTime, formatViewedCount } from "@modules/inbox/lib/recap/index";

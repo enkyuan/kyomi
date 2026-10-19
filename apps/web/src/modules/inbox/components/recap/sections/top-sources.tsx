@@ -9,7 +9,7 @@ import {
   FolderPickerButton,
   TOP_SOURCE_FOLDER_BUTTON_CLASS,
 } from "@modules/folders/components/picker";
-import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
+import { FeedFavicon } from "@modules/feeds/components/favicon";
 import type { RecapFolder, RecapTopViewedFeed } from "../../../lib/recap/types";
 import {
   Item,

@@ -26,7 +26,7 @@ import {
 import { Kbd } from "@kyomi/ui/components/kbd";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/components/scroll-area";
 import { useFeedback } from "@kyomi/ui/hooks/use-feedback";
-import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
+import { FeedFavicon } from "@modules/feeds/components/favicon";
 import type { DiscoverFeedResult } from "@modules/feeds/lib/api";
 
 export const DISCOVER_RESULTS_UI_CAP = 200;

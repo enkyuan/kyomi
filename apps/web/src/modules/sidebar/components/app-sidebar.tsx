@@ -22,7 +22,7 @@ import { APP_SIDEBAR_WIDTH } from "../lib/constants";
 import { useAppSidebar } from "../hooks/use-app-sidebar";
 import { usePinnedSection } from "../hooks/use-pinned-section";
 import { useInboxPrefetch } from "../hooks/use-inbox-prefetch";
-import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
+import { FeedFavicon } from "@modules/feeds/components/favicon";
 
 const FollowSourcesDialog = lazyNamed(
   () => import("@modules/feeds/components/follow/dialog"),

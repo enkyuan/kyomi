@@ -3,7 +3,7 @@ import {
   buildArticlesUrl,
   buildInboxListUrl,
   normalizeInboxSort,
-} from "@modules/articles/lib/query";
+} from "@modules/articles/lib/urls";
 
 describe("inbox query URLs", () => {
   test("uses subscribed feed articles for My Feed without a day window", () => {

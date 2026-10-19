@@ -33,7 +33,7 @@ describe("loadInboxRoute", () => {
     const queryClient = {
       prefetchQuery: vi.fn(() => neverSettles),
     };
-    const { loadInboxRoute } = await import("src/routes/_app/inbox/-route-helpers");
+    const { loadInboxRoute } = await import("src/routes/_app/inbox/-loader");
 
     const loaderPromise = loadInboxRoute({
       context: { queryClient: queryClient as never },

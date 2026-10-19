@@ -10,7 +10,7 @@ type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
 type InboxItemsInfiniteData = InfiniteData<InboxListPage>;
 type InboxDetailData = { item: ArticleDetailDto | null };
 
-export type InboxItemCacheSnapshot = {
+type InboxItemCacheSnapshot = {
   detail?: InboxDetailData;
   items: Array<readonly [QueryKey, InboxItemsInfiniteData | undefined]>;
 };

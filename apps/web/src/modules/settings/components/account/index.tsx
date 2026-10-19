@@ -18,7 +18,7 @@ import {
   TableRow,
 } from "@kyomi/ui/components/table";
 import { useAccountPanel } from "@modules/settings/hooks/use-account-panel";
-import { SettingHeading } from "../appearance/shared";
+import { SettingHeading } from "../appearance/headings";
 
 export const accountSection = {
   description: "Manage your account details, connected accounts, and security settings.",

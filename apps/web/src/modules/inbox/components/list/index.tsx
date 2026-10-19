@@ -40,7 +40,7 @@ import {
 import { Toolbar as ReaderToolbar } from "@modules/reader/components/toolbar";
 import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 
-export type ListDisplayOptions = {
+type ListDisplayOptions = {
   readerFocusMode?: boolean;
   showFavicons: boolean;
 };

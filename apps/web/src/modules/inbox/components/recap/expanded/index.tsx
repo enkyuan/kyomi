@@ -17,7 +17,7 @@ import { ExpandedTopSources } from "./top-sources";
 import type { RecapFolder, RecapSavedItem, RecapTopViewedFeed } from "../../../lib/recap/types";
 import { queryKeys } from "@lib/query/keys";
 
-export type RecapExpandedSection = InboxRecapRailSection;
+type RecapExpandedSection = InboxRecapRailSection;
 export type SelectedFolderBackTarget = InboxRecapRailFolderBackTarget;
 type RemoveFeedsToastOptions = {
   anchor?: HTMLElement | null;

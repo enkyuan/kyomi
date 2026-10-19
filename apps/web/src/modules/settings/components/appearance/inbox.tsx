@@ -11,7 +11,7 @@ import {
 } from "@kyomi/ui/components/select";
 import { Switch } from "@kyomi/ui/components/switch";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-preferences";
-import { SettingHeading, SettingSubHeading } from "./shared";
+import { SettingHeading, SettingSubHeading } from "./headings";
 
 const INBOX_TEXT_SCALE_OPTIONS = [
   { label: "sm", value: "sm", fontSizePx: 14 },

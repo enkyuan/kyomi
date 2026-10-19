@@ -21,7 +21,7 @@ import {
   unavailableAuthSessionState,
 } from "@lib/auth/session";
 
-export type AuthBootstrapState = {
+type AuthBootstrapState = {
   authState: AuthSessionState;
   authCapabilities: AuthCapabilities;
 };

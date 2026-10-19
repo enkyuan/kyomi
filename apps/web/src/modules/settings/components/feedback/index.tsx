@@ -6,7 +6,7 @@ import { Button } from "@kyomi/ui/components/button";
 import { Form } from "@kyomi/ui/components/form";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/components/scroll-area";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
-import { SettingHeading } from "../appearance/shared";
+import { SettingHeading } from "../appearance/headings";
 
 export const feedbackSection = {
   description: "Tell us what feels off, what is missing, or what you want next.",

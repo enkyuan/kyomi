@@ -38,7 +38,7 @@ describe("createSafeHydrate stream reading", () => {
   });
 
   test("does not call queryHydrate with undefined when the stream ends", async () => {
-    const { createSafeHydrate } = await import("@lib/ssr-query-hydration");
+    const { createSafeHydrate } = await import("@lib/query/hydration");
     const chunk1 = { queries: [{ queryHash: "a" }], mutations: [] };
     const reader = createMockReader([chunk1]);
     const qc = mockQueryClient();
@@ -54,7 +54,7 @@ describe("createSafeHydrate stream reading", () => {
   });
 
   test("hydrates all chunks then stops cleanly at end-of-stream", async () => {
-    const { createSafeHydrate } = await import("@lib/ssr-query-hydration");
+    const { createSafeHydrate } = await import("@lib/query/hydration");
     const chunk1 = { queries: [{ queryHash: "a" }], mutations: [] };
     const chunk2 = { queries: [{ queryHash: "b" }], mutations: [] };
     const reader = createMockReader([chunk1, chunk2]);
@@ -73,7 +73,7 @@ describe("createSafeHydrate stream reading", () => {
   });
 
   test("hydrates dehydratedQueryClient when no queryStream is present", async () => {
-    const { createSafeHydrate } = await import("@lib/ssr-query-hydration");
+    const { createSafeHydrate } = await import("@lib/query/hydration");
     const dehydratedQueryClient = { queries: [{ queryHash: "x" }], mutations: [] };
     const qc = mockQueryClient();
 
@@ -84,7 +84,7 @@ describe("createSafeHydrate stream reading", () => {
   });
 
   test("handles an empty queryStream gracefully (done on first read)", async () => {
-    const { createSafeHydrate } = await import("@lib/ssr-query-hydration");
+    const { createSafeHydrate } = await import("@lib/query/hydration");
     const reader = createMockReader([]);
     const qc = mockQueryClient();
 
@@ -100,7 +100,7 @@ describe("createSafeHydrate stream reading", () => {
   });
 
   test("calls ogHydrate when provided", async () => {
-    const { createSafeHydrate } = await import("@lib/ssr-query-hydration");
+    const { createSafeHydrate } = await import("@lib/query/hydration");
     const ogHydrate = vi.fn(async (_d: unknown) => {});
     const qc = mockQueryClient();
 

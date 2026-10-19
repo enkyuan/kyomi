@@ -69,6 +69,12 @@ sidebar, settings, auth -> inbox -> reader -> articles -> feeds, folders, prefer
 - Use `index.tsx` for an area's primary component once its directory supplies the context. Add
   `index.ts` only as an intentional surface, not a single-use barrel.
 - Name a single-hook file `use-<purpose>.ts`; keep exported hook symbols prefixed with `use`.
+- Name every other file for its function, not its call site: do not repeat the parent directory or
+  module (`app/shell.tsx`, `feeds/components/favicon.tsx`), avoid `shared`, `helpers`, `root`, or
+  `functions`, keep server functions in `api.ts`, and do not wrap a single file in a directory.
+  Read the Web naming rules in
+  [repository-organization.md](../architecture/references/repository-organization.md#web-naming)
+  before renaming, and move the mirrored test, `vi.mock` strings, and path mentions with the file.
 
 ## Preserve runtime and package boundaries
 

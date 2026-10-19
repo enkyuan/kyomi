@@ -1,6 +1,6 @@
 "use client";
 
-import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
+import { FeedFavicon } from "@modules/feeds/components/favicon";
 import {
   PreviewCard,
   PreviewCardPopup,

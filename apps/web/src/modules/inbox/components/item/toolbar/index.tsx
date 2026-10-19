@@ -4,7 +4,7 @@ import type { CSSProperties, SyntheticEvent } from "react";
 import { BookmarkFill, BookmarkLine, ShareForwardLine } from "@kyomi/ui/icons/mingcute";
 import { Toolbar as ToolbarRoot, ToolbarGroup } from "@kyomi/ui/components/toolbar";
 import { cn } from "@kyomi/ui/lib/utils";
-import type { AnchoredToolbarAction, ToolbarSide } from "@modules/articles/lib/actions";
+import type { AnchoredToolbarAction, ToolbarSide } from "@modules/articles/lib/types";
 import { ItemToolbarButton } from "./button";
 import { ItemToolbarMenu } from "./menu";
 

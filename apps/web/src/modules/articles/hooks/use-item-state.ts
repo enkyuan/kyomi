@@ -10,7 +10,7 @@ import {
 } from "../queries/cache";
 import { queryKeys } from "@lib/query/keys";
 
-export type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">> & {
+type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">> & {
   isHidden?: boolean;
 };
 
