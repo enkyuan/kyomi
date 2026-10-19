@@ -9,7 +9,6 @@ export {
   syncItemInferences,
   type ClassifierModelInfo,
 } from "./categories";
-export { CATEGORY_CARDS_VERSION } from "./category-cards";
 export {
   CATEGORY_CLASSIFIER_PROVENANCE,
   CLASSIFIER_TAXONOMY_VERSION,
@@ -42,7 +41,6 @@ export {
   embeddingModelInfo,
   embedItemVectors,
   embedTexts,
-  resetPrototypeCache,
   scoreFeedEmbedding,
   scoreItemEmbeddings,
   selectCategories,

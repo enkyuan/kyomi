@@ -1,13 +1,13 @@
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
-import { CATEGORY_CARDS_VERSION, EMBEDDING_CLASSIFIER_MODEL_ID } from "@kyomi/worker";
+import { EMBEDDING_CLASSIFIER_MODEL_ID } from "@kyomi/worker";
 
 /**
  * Offline embeddings for the live classifier evals. Vectors are stored under the gitignored
- * `.artifacts/embeddings/<model>/<CATEGORY_CARDS_VERSION>/`, keyed by a hash of the exact text the
- * classifier sent, so sweeps and evals re-run without calling the provider. A card revision gets
- * a fresh directory because its prototype texts change.
+ * `.artifacts/embeddings/<model>/`, keyed by a hash of the exact text the classifier sent, so
+ * sweeps and evals re-run without calling the provider. A vector depends only on the model and
+ * the text, so retraining the category head or changing a selection rule reuses the cache.
  */
 
 const REPO_ROOT = resolve(import.meta.dir, "../../../../../..");
@@ -32,14 +32,7 @@ function decodeVector(encoded: string): number[] {
 
 export function embeddingsCacheFile(name: string): string {
   const modelDir = EMBEDDING_CLASSIFIER_MODEL_ID.replace(/[^a-z0-9.-]+/gi, "_");
-  return join(
-    REPO_ROOT,
-    ".artifacts",
-    "embeddings",
-    modelDir,
-    CATEGORY_CARDS_VERSION,
-    `${name}.json`,
-  );
+  return join(REPO_ROOT, ".artifacts", "embeddings", modelDir, `${name}.json`);
 }
 
 /**

@@ -1,10 +1,6 @@
-import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "bun:test";
 import { getTableName } from "drizzle-orm";
-import {
-  embeddingModelInfo,
-  resetPrototypeCache,
-  type EmbeddingClassifierConfig,
-} from "@kyomi/worker";
+import { embeddingModelInfo, type EmbeddingClassifierConfig } from "@kyomi/worker";
 import { reclassifyExtractedFeedItem } from "@modules/articles/reader/extraction/workflow";
 import type { ArticleDetailDto } from "@modules/articles/types";
 import { FAKE_CATEGORY_MODEL } from "../../feeds/refresh/fake-category-model";
@@ -113,13 +109,8 @@ function createCategoryDb(
   return db;
 }
 
-beforeEach(() => {
-  resetPrototypeCache();
-});
-
 afterEach(() => {
   globalThis.fetch = originalFetch;
-  resetPrototypeCache();
 });
 
 describe("reclassifyExtractedFeedItem", () => {
@@ -160,14 +151,6 @@ describe("reclassifyExtractedFeedItem", () => {
     const itemInputs: string[] = [];
     globalThis.fetch = (async (_url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = body.input.length > 1;
-      if (isPrototypeCall) {
-        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
-      }
       itemInputs.push(body.input[0] ?? "");
       return new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
         status: 200,
@@ -223,9 +206,7 @@ describe("reclassifyExtractedFeedItem", () => {
     const fake = createCategoryDb({ existingAssignments: existing });
     globalThis.fetch = (async (_url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
-      const embeddings = body.input.map((_, i) =>
-        body.input.length > 1 ? (i < 4 ? UNIT_X : ORTHOGONAL_Z) : ORTHOGONAL_Z,
-      );
+      const embeddings = body.input.map(() => ORTHOGONAL_Z);
       return new Response(
         JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
         { status: 200 },
@@ -260,9 +241,7 @@ describe("reclassifyExtractedFeedItem", () => {
     });
     globalThis.fetch = (async (_url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
-      const embeddings = body.input.map((_, i) =>
-        body.input.length > 1 ? (i < 4 ? UNIT_X : ORTHOGONAL_Z) : UNIT_X,
-      );
+      const embeddings = body.input.map(() => UNIT_X);
       return new Response(
         JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
         { status: 200 },
@@ -286,10 +265,8 @@ describe("reclassifyExtractedFeedItem", () => {
     const itemInputs: string[] = [];
     globalThis.fetch = (async (_url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
-      if (body.input.length === 1) {
-        itemInputs.push(body.input[0] ?? "");
-      }
-      const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
+      itemInputs.push(...body.input);
+      const embeddings = body.input.map(() => UNIT_X);
       return new Response(
         JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
         { status: 200 },
