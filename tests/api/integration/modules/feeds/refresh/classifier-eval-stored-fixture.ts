@@ -4,9 +4,9 @@ import type { ClassifierEvalCase } from "./classifier-eval-fixture";
 /**
  * Stored-article calibration set: real articles sampled from a local Kyomi database (2026-10),
  * stratified across the 17 categories, with drafted labels. Text is trimmed to the opening the
- * classifier sees first. Cases marked `needsReview` were ambiguous or thin when labeled and
- * should be spot-checked before their labels are trusted. Never add these cases to the category
- * head's training labels.
+ * classifier sees first. Every case was spot-checked on 2026-10-19; topics the taxonomy has no
+ * category for (religion, pets, hobbies, home decor, weddings, beauty) expect no label. Never add
+ * these cases to the category head's training labels.
  */
 export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
   {
@@ -39,8 +39,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "Fall 2020 Issue Out Now Conscious Lifestyle Magazine Share: 288 0 8 Digital Edition: Order Now Collectors Edition Print Issue: Coming Soon! THE KEYS TO VITALITY By Dr. Ben Reebs Learn the timeless keys to health, longevity, and vitality that transcend all health fads and hype. GLUTATHIONE: THE ULTIMATE ANTIOXIDANT By Dr. Nayan Patel Glutathione is all the rage right now and for good reason—research has shown it is essential to vibrant health. RECIPE: ORGANIC VEGAN TWIX BARS",
     itemUrl: "https://www.consciouslifestylemag.com/fall-2020-issue-out-now/",
-    expected: [],
-    needsReview: true,
+    expected: ["Health & Medicine"],
     note: "Magazine issue announcement; health/spiritual contents",
   },
   {
@@ -76,7 +75,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Dressmakers and their job Recently I was asked the question I love and hate: ‘So, what are you doing?’ It’s always easier to answer this question if your job title is your job, even if the title doesn’t cover your contribution to your community and the world. As sewists, many of us have the added problem of almost feeling ashamed of the answer. When I tell people I do dressmaking, usual reaction is: ‘Oh, it’s the dying art…’ ; ‘Really, is anyone still doing this?’ or even",
     itemUrl: "https://sewfitstyle.blogspot.com/2018/11/dressmaking-work-that-matters-for.html",
     expected: ["Personal & Essays"],
-    needsReview: true,
     note: "Personal essay on dressmaking as a job; could be none or Work",
   },
   {
@@ -95,7 +93,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://waiteendurance.com/2019/09/20/nutrition-periodization-for-endurance-performance/",
     expected: ["Sports", "Health & Medicine"],
-    needsReview: true,
     note: "Sports nutrition: Sports vs Health & Medicine",
   },
   {
@@ -115,7 +112,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://malibuluxuryrealty.com/malibu-district-29-water-infrastructure-emergency-planning/",
     expected: ["World & Society", "Politics & Policy"],
-    needsReview: true,
     note: "Local water infrastructure update; local news vs government",
   },
   {
@@ -166,7 +162,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText: null,
     itemUrl: "https://www.quadrant2design.com/exhibiting-in-uk-from-abroad/",
     expected: ["Business & Startups"],
-    needsReview: true,
     note: "Empty text; title-only trade show guide",
   },
   {
@@ -184,7 +179,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "One voucher per person The post Sora York Afternoon Tea with a Cocktail appeared first on Yorkshire Food Guide .",
     itemUrl: "https://yorkshirefoodguide.co.uk/book/sora-york-afternoon-tea-offer/",
     expected: ["Food & Travel"],
-    needsReview: true,
     note: "Thin promo voucher listing; could be none",
   },
   {
@@ -255,7 +249,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "No one has more reason to hate AI than me. It has cost me two jobs and made my life difficult. However, I am also a user of it magically and otherwise. This has put me at odds with those who are trying to rationalise their terror of technology as magic or other issues. In most cases, showing ignorance of how it works and its impact. The technology, as it exists now, however clever, is like an autocorrect. It uses existing data to guess what the next line in the word should",
     itemUrl: "https://www.nickfarrell.it/ai-does-not-mean-the-death-of-creativity/",
     expected: ["AI & ML", "Personal & Essays"],
-    needsReview: true,
     note: "Personal essay on AI and occult creativity; AI vs Personal",
   },
   {
@@ -274,7 +267,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "http://sylvestercustomcabinetry.com/blog/2020/9/30/home-office-design-and-organization",
     expected: ["Design & UX"],
-    needsReview: true,
     note: "Home organization/cabinetry marketing; Design vs none",
   },
   {
@@ -328,7 +320,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "A Mercy For Animals investigation has exposed how fully conscious, newly hatched chicks are ground up alive by the egg industry. The footage was captured at a hatchery in Brazil in 2026, but chick culling is not limited to this facility—or to Brazil. Every year, around 7 billion newly hatched chicks are killed worldwide simply because the egg industry does not consider them profitable. The shocking undercover footage offers a rare look inside a system most people never see.",
     itemUrl: "https://mercyforanimals.org/blog/chick-culling-egg-industry-brazil/",
     expected: ["World & Society"],
-    needsReview: true,
     note: "Animal welfare investigation; no clean fit, maybe Food",
   },
   {
@@ -363,7 +354,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://bendbulletin.com/2026/09/14/guest-column-targeted-grazing-is-not-a-good-answer-for-wildfire/",
     expected: ["Climate & Environment", "Politics & Policy"],
-    needsReview: true,
     note: "Wildfire grazing op-ed citing farm bill; Politics secondary uncertain",
   },
   {
@@ -400,7 +390,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.theunionjournal.com/pitata-revolutionizing-magic-through-technology-innovation-and-intelligent-design/",
     expected: ["Technology", "Culture & Media"],
-    needsReview: true,
     note: "Promotional piece on magic tech props",
   },
   {
@@ -432,7 +421,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText: "Limba Română",
     itemUrl: "https://moldcell.md/rom/primesti-100-lei-la-prima-plata",
     expected: ["Finance & Markets"],
-    needsReview: true,
     note: "Romanian promo, text empty; finance offer vs none",
   },
   {
@@ -469,7 +457,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://animalchanneler.blogspot.com/2023/02/channeled-messages-from-whale-shark-for.html",
     expected: [],
-    needsReview: true,
     note: "New-age spiritual channeling; none vs Personal & Essays",
   },
   {
@@ -535,8 +522,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "Are you preparing for CFA I, CFA II, or CFA III exams? Analyst Prep’s highly-ranked CFA test prep platform may be just what you need to ensure that you pass with flying colors. The same is true for those studying for an FRM exam. FRM part I and FRM part II study programs are offered […] The post Analyst Prep Promo Codes (CFA & FRM Discounts) appeared first on CRUSH The Financial Analyst Exam .",
     itemUrl: "https://crushthefinancialanalystexam.com/analyst-prep-promo-codes/",
-    expected: ["Education & Work"],
-    needsReview: true,
+    expected: ["Education & Work", "Finance & Markets"],
     note: "Promo-code post for exam prep; could be none",
   },
   {
@@ -571,7 +557,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.easypromosapp.com/blog/en/instagram-giveaway-platform-for-brands-and-agencies/",
     expected: ["Business & Startups"],
-    needsReview: true,
     note: "Promotional marketing platform pitch; Business vs Technology",
   },
   {
@@ -590,7 +575,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "HAL - 2001 As I wait in trepidation for the November 4, 2025 Federal Budget, I wonder what it will say about AI – the inevitable topic “du jour”. The copyright cabal, or at least two of its least credible but most whiny and vocal members, have made it clear that they want the Government to: … amend the Copyright Act to clarify fair dealing for education, make tariffs set by the Copyright Board of Canada mandatory and enforceable, and ensure statutory damages are available to",
     itemUrl: "http://www.blogger.com/feeds/20803105/posts/default/4201170691733430457",
     expected: ["AI & ML", "Politics & Policy"],
-    needsReview: true,
     note: "AI copyright policy; AI vs Politics primary ambiguous",
   },
   {
@@ -642,7 +626,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "On our geocaching podcast today, we have a long-distance chat with Tentmantent about PinPoint, the UK geocaching magazine. We also share an article about a type of puzzle that many geocache creators like, the fourth installment of Tales From The Campfire, feedback on pronunciation and much more. Listen To The Show (34:32) Show Discussion: Please chat about the show by commenting on this post below. Show Images: Go to the Flickr set for the show Links mentioned in the show",
     itemUrl: "https://www.podcacher.com/show-937-0-update-from-tentmantent-about-pinpoint/",
     expected: [],
-    needsReview: true,
     note: "Geocaching hobby podcast; none vs Sports/Travel",
   },
   {
@@ -691,7 +674,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Running a business often comes down to timing more than anything else. You can have strong sales on paper yet still feel cash flow pressure simply because customers are slow to pay. This cash flow pressure can wreak havoc on business owners who are not prepared, and it’s a common challenge. The Federal Reserve’s 2026 […] The post What is Debt Factoring? appeared first on altLINE .",
     itemUrl: "https://altline.sobanco.com/what-is-debt-factoring/",
     expected: ["Finance & Markets"],
-    needsReview: true,
     note: "Business financing; Finance vs Business ambiguous",
   },
   {
@@ -726,7 +708,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       'This article was first published on FlagShip Courier Solutions ">FlagShip Courier Solutions. As we step further into 2026, sustainability is no longer an option, it is a necessity to find ways to be more environmentally conscious. Every little enhancement matters . Customers expect businesses to take meaningful action toward reducing environmental impact, and sustainable shipping solutions are a critical area where these efforts can shine. For Canadian small and medium-sized',
     itemUrl: "https://www.flagshipcompany.com/blog/shipping-tips/sustainable-shipping/",
     expected: ["Business & Startups", "Climate & Environment"],
-    needsReview: true,
     note: "Courier marketing on sustainability; business vs environment",
   },
   {
@@ -776,7 +757,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Sprouts 2025 was a big one for us! We broke a lot of records: Most talks: 13 Most student talks: 11 Most submitted computer players: 6 (The previous record was 2!) Most participants in the human tournament: 16 Other exciting things that happened: The computer player tournament was a real competition this year! All six submitted players seemed better than the Gorgons players that came in last year. You can try playing against them ! (I can say that about the Gorgons players",
     itemUrl: "http://www.blogger.com/feeds/49096384337620230/posts/default/3105154750375795101",
     expected: ["Science & Research"],
-    needsReview: true,
     note: "Combinatorial game theory conference; math vs games",
   },
   {
@@ -809,7 +789,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Featuring Bash the Trash provides a range of virtual programming focusing on music, science, and culture. You can build musical instruments from reused materials with your students while learning about sustainability; discover the science of sound and vibrations; explore Native storytelling through shadow puppets… and so much more. We’ve been providing educational services or 35+ years – experienced and flexible! Contact us and let’s chat about what you are looking for. Why",
     itemUrl: "https://artseveryday.org/arts-culture-spotlight-bash-the-trash/",
     expected: ["Education & Work", "Culture & Media"],
-    needsReview: true,
     note: "School arts/science programming promo",
   },
   {
@@ -826,8 +805,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "Blog Post Written By: Melrose Michaels In 2016 OnlyFans told two of its earliest referral partners that their five percent commission was for life. According to a proposed class action filed on August 12, 2026 one of those creators watched a monthly check fall from over $3,300 to forty cents. Nothing has been proven in court and this case could be dismissed or fought for years, so treat the numbers as allegations rather than findings. Most of the coverage handled this as one",
     itemUrl: "https://www.sexworkceo.com/post/onlyfans-referral-lawsuit-lifetime-affiliate",
-    expected: ["Business & Startups", "Politics & Policy"],
-    needsReview: true,
+    expected: ["Business & Startups"],
     note: "Creator affiliate lawsuit; Business vs courts/policy",
   },
   {
@@ -845,8 +823,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "A young man who laundered $3.5 million for a crime syndicate dubbed the Crypto Kids has been sentenced to 70 months by a federal judge in the United States District Court for the District of Columbia. Investigators said the group formed through online gaming platforms and squandered its loot on an extravagant lifestyle. The U.S. Attorney said the multi-state enterprise scammed more than $263 million in cryptocurrency from investors. 1. Introduction On December 8, 2025, the",
     itemUrl:
       "https://www.claytonrice.com/money-cleaner-for-crypto-kids-sentenced-for-enterprise-crime/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=money-cleaner-for-crypto-kids-sentenced-for-enterprise-crime",
-    expected: ["World & Society", "Security & Privacy"],
-    needsReview: true,
+    expected: ["World & Society"],
     note: "Crypto theft laundering sentencing; crime vs security",
   },
   {
@@ -865,7 +842,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://cellobello.org/cello-blog/artistic-vision/perform-like-a-champion-the-power-of-acting-as-if/",
     expected: ["Culture & Media"],
-    needsReview: true,
     note: "Musician mindset advice; Culture & Media vs Personal & Essays",
   },
   {
@@ -902,7 +878,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://medium.com/ratemyservice-release-notes/personalising-webforms-42350485b8bf?source=rss-e8f71de5f722------2",
     expected: ["Technology"],
-    needsReview: true,
     note: "Survey SaaS feature update; technology vs business",
   },
   {
@@ -970,7 +945,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.marinerfinance.com/blog/personal-loan/customer-story-sally-palermo-skydiving/",
     expected: ["Finance & Markets"],
-    needsReview: true,
     note: "Lender marketing story about loan for skydiving",
   },
   {
@@ -1023,7 +997,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Een halve courgette, drie aardappels en dat bakje andijviestamppot waarvan je zondag écht dacht dat je het maandag als lunch zou eten. Restjes bewaren doen we met de beste bedoelingen, maar een paar dagen later belanden ze alsnog opvallend vaak in de prullenbak. Tijdens de Verspillingsvrije Week komt Bimi daarom met een AI-tool die moet voorkomen dat je voor de derde keer hetzelfde bord eten opwarmt: Leftover Booster. De Bimi Leftover Booster bedenkt op basis van wat er nog",
     itemUrl: "https://www.culy.nl/nieuws/bimi-leftover-booster/",
     expected: ["Food & Travel", "AI & ML"],
-    needsReview: true,
     note: "Dutch text; AI recipe tool for leftovers",
   },
   {
@@ -1058,7 +1031,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Welcome to Press This, the WordPress community podcast from WMR. Each episode features guests from around the community and discussions of the largest issues facing WordPress developers. The following is a transcription of the original recording . Powered by RedCircle Doc Pop: You’re listening to Press This, a WordPress community podcast on WMR. Each week we spotlight members of the WordPress community. I’m your host, Doc Pop. I support the WordPress community through my",
     itemUrl: "https://torquemag.io/2024/04/press-this-can-ai-make-the-web-more-accessible/",
     expected: ["AI & ML", "Design & UX"],
-    needsReview: true,
     note: "AI for web accessibility; AI vs Design vs Software",
   },
   {
@@ -1077,7 +1049,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Greetings, programs. Once again, I'm a bit behind on these posts, but I just got back from two weeks of travel and I'm so happy to be home for a while. My last trip was pretty stressful. On the way out, our plane blew a tire (or tires) which required an emergency landing in Dallas (which is where we were scheduled to stop anyway). Everything ended up fine, but as I said, stressful. Then coming home we were minutes from our destination when the pilot had to turn around due to",
     itemUrl: "https://www.raymondcamden.com/2026/08/23/links-for-you-82326",
     expected: ["Software Engineering"],
-    needsReview: true,
     note: "Link roundup with personal travel intro",
   },
   {
@@ -1145,7 +1116,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "2019 Landscape Projects - Bend Backyard Make-over During the winter of 2018/2019 a wonderful family contacted me to make-over their backyard, they had an old paver patio that had warped over the years and some lawn. The clients hired me to help them create a more functional, modern backyard with kitchen, fire pit, dining area and water feature. Before: A tired backyard with a warped old paver patio and a not very functional lawn and surrounding beds. After: A modern",
     itemUrl: "http://carlsengdesigns.blogspot.com/2020/01/2019-landscape-projects-bend.html",
     expected: ["Design & UX"],
-    needsReview: true,
     note: "Landscape design portfolio; could be none",
   },
   {
@@ -1199,7 +1169,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Choosing a learning management system shouldn’t feel like a second job. But for plenty of teams, that’s precisely what it becomes. You sign up full of good intentions. Then week one disappears into setup. Week two, you’re deep in an admin dashboard that looks like a cockpit, hunting through LMS tools for the one button that assigns a course. By week three? Your “quick training rollout” you promised has quietly become a project of its own. Including a plan to manage, three",
     itemUrl: "https://www.talentlms.com/blog/easy-to-use-lms/",
     expected: ["Education & Work", "Technology"],
-    needsReview: true,
     note: "LMS software roundup; education vs technology",
   },
   {
@@ -1269,7 +1238,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Hosting an event is a long process, takes time and money. Everything from corporate conference to product launch, networking mixer to gala, awards ceremony, nonprofit fundraiser to private celebration—everything is planned and done in order to make sure it’s an experience you’re sure to remember. What happens after the event is over however, many businesses find that the money they’ve spent on a product in the event only lives on in the memory of your guests. Professional",
     itemUrl: "https://www.laphototeam.com/professional-event-photography-long-term-brand-value/",
     expected: ["Business & Startups"],
-    needsReview: true,
     note: "Photography vendor marketing piece",
   },
   {
@@ -1287,7 +1255,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "For centuries, humanity has been drawn to the water. That pull—the freedom, the adventure, the tranquility—is often crystallized in a ... Read more",
     itemUrl: "https://marinediesel.co.in/naval-architect/",
     expected: ["Education & Work"],
-    needsReview: true,
     note: "Thin text; careers guide for naval architects",
   },
   {
@@ -1306,7 +1273,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.personalinjurysandiego.org/practice-areas/defective-motorcycle-parts-product-liability-california/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=defective-motorcycle-parts-product-liability-california",
     expected: ["Politics & Policy"],
-    needsReview: true,
     note: "Law-firm marketing on product liability; legal fit weak",
   },
   {
@@ -1341,8 +1307,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "By Bryan Sheffield, Wonderful Machine Each month, we analyze a recent cost estimate, contract, or purchase order and present it in the form of a Pricing & Negotiating article. Redacting the names of the photographer and client allows us to share useful information that would otherwise be confidential. You can learn more about how we can help you with Pricing & Negotiating on the Consulting Services page of our website. Concept: Still-life and lifestyle photography of talent",
     itemUrl:
       "https://www.aphotoeditor.com/2026/07/16/pricing-negotiating-photographer-loses-259k-photoshoot-to-ai/",
-    expected: ["Business & Startups"],
-    needsReview: true,
+    expected: ["Business & Startups", "AI & ML"],
     note: "Photography pricing/business; AI angle mostly in title",
   },
   {
@@ -1362,7 +1327,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.blockchainresearchlab.org/2025/01/16/how-the-rising-popularity-of-cryptocurrency-influences-gambling-addiction-treatment-and-prevention-an-in-person-workshop-in-zurich-switzerland/",
     expected: ["Health & Medicine", "Finance & Markets"],
-    needsReview: true,
     note: "Gambling addiction and crypto workshop; Health vs Finance",
   },
   {
@@ -1414,7 +1378,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Parking on Calle Ramón Gallud in central Torrevieja will be limited to a maximum of two hours during working days from Tuesday, September 15. The restriction will apply between 8am and 8pm, while parking outside those hours will remain unrestricted. The two-hour limit will not apply on non-working days. Local Police councillor Federico Alarcón said the measure was intended to increase the turnover of vehicles along one of the city centre’s main shopping and service streets.",
     itemUrl: "https://theleader.info/2026/09/15/two-hour-parking-limit-introduced-on-ramon-gallud/",
     expected: ["Politics & Policy", "World & Society"],
-    needsReview: true,
     note: "Local council parking rule; Politics vs local news",
   },
   {
@@ -1483,7 +1446,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Start Your Day with Intention Today is a fresh start, and every small step you take moves you forward. Trust yourself, stay present, and let your light guide the day... Stay golden, my friends. Manifest tomorrow's reality... ✨ I'll meet you there. [ ] [ ]",
     itemUrl: "https://www.indiefilmprofessor.com/post/daily-affirmation-with-laura-vance",
     expected: ["Personal & Essays"],
-    needsReview: true,
     note: "Daily affirmation post; borderline none",
   },
   {
@@ -1518,7 +1480,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "The angels call for our veneration and awe as part of God’s creation. Part of the destructive modernism of the 1970s included advice to Catholic school teachers that they should not talk to children about angels. This wrought lasting damage which continues to need rectifying. We should include in our prayers a heartfelt recourse to our own Guardian Angels. The Archangel Gabriel “God is my strength” would be terrifying were he to appear to any of us. Our Lady was “troubled”",
     itemUrl: "https://the-hermeneutic-of-continuity.blogspot.com/2023/03/saint-gabriel.html",
     expected: [],
-    needsReview: true,
     note: "Catholic devotional post; no religion label fits",
   },
   {
@@ -1619,7 +1580,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       'The Florida Manatee (Trichechus manatus latirostris) is a subspecies of the West Indian Manatee. The other subspecies is the Antillean Manatee, Trichechus manatus manatus. The distinction is that only the Florida Manatee has to deal with cold water in winter. It does so by migrating inland to "warm water refugia" like freshwater springs. The Florida Manatee is also a little bigger than the Antillean Manatee, which might be another cold adaptation. Development in Florida has',
     itemUrl: "http://jimbodouglass.blogspot.com/2026/01/manatees-warming-inland-wind-addicts.html",
     expected: ["Climate & Environment"],
-    needsReview: true,
     note: "Personal blog: manatee conservation plus kitesurfing",
   },
   {
@@ -1706,7 +1666,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "With the release of their latest sustainability report , Choice Hotels has made measurable progress toward their cage-free commitment, though they have yet to fully meet their original goals. The company reports that 52% of their global hotel portfolio aligns with its cage-free commitment —an increase from last year, but far short of what’s needed to meet their original 2025 promise. This progress is no accident—it is the direct result of our Choice Hotels Chickens Out",
     itemUrl: "https://mercyforanimals.org/blog/choice-hotels-cage-free-progress/",
     expected: ["World & Society", "Business & Startups"],
-    needsReview: true,
     note: "Animal welfare campaign vs corporation",
   },
   {
@@ -1740,7 +1699,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "In this episode of Theologically Driven, host Phil Cecil sits down with Dr. Ryan Meyer to explore one of the most challenging topics in New Testament studies: Paul’s view of slavery. Before diving into Paul’s letters, Dr. Meyer lays essential groundwork by unpacking what slavery actually looked like in the first-century Greco-Roman world — and […] The post Slavery in the Greco-Roman World appeared first on Detroit Baptist Theological Seminary .",
     itemUrl: "https://dbts.edu/2026/05/28/slavery-in-the-greco-roman-world/",
     expected: ["World & Society"],
-    needsReview: true,
     note: "Theology podcast on ancient slavery; no clear fit",
   },
   {
@@ -1811,7 +1769,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "I am so sorry, im a little ashamed when I saw my last post was almost over a year ago. Well take a deep breathe...I’m still healthy and happy and going strong. I recovered after 2 treatment of soul solumedral (IV STERIOD). The treatments sucked and I was grateful for them. I ended up losing about 15% FEV1 which just took some getting used to. I’m still at 74-77% but I haven’t hit the 90% since the rejection. I was so scared I was not going to around for my 10 yr transplant",
     itemUrl: "http://jamiebug.blogspot.com/2019/01/eleven-years.html",
     expected: ["Health & Medicine", "Personal & Essays"],
-    needsReview: true,
     note: "Personal health blog; Health vs Personal ambiguous",
   },
   {
@@ -1845,7 +1802,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Key updates from Yelp’s 2026 Spring Product Release: The new AI-powered Yelp Assistant is redefining local discovery and helping you get things done by delivering reliable answers, recommendations, and seamless booking—from restaurant reservations to service appointments—all in one conversation. New integrations with Vagaro, Zocdoc, and Calendly make it easier to book, schedule, and order directly through Yelp. AI-powered Menu Vision is more visual and detail-rich, bringing",
     itemUrl: "https://blog.yelp.com/news/spring-product-release-2026/",
     expected: ["Technology", "AI & ML"],
-    needsReview: true,
     note: "AI-powered app feature release: Technology vs AI & ML",
   },
   {
@@ -1862,8 +1818,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "Nuts Writer: Stuart Lloyd Gould Nuts 1 The first of Stuarts books, introducing my main characters; Cyril the Squirrel, Eva the Beaver, Dave, Marmite and Treacle the Cats, Crispin the Chicken,Knox the Fox, Lee and Kai the Mice, Molly the Mole, Walter the Otter, Al the Owl, Rae the Racoon and Diesel the Weasel. So we meet the characters and then go on an adventure. Nuts 2 Who stole Cyril’s Nuts and how can he get them back! So with his friends Eva the Beaver, Knox the Fox,",
     itemUrl: "https://comicscene.org/2026/07/10/nuts-1-2-10-each/",
-    expected: [],
-    needsReview: true,
+    expected: ["Culture & Media"],
     note: "Comic book product listing; could be Culture & Media",
   },
   {
@@ -1902,7 +1857,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://elizabethannedesigns.com/2025/12/01/casablanca-bridals-confidence-campaign-a-masterclass-in-styling-intention-and-design/",
     expected: [],
-    needsReview: true,
     note: "Bridal fashion campaign; fashion is none, maybe Culture & Media",
   },
   {
@@ -1938,7 +1892,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.thehindu.com/opinion/op-ed/us-tariffs-are-not-what-is-holding-back-indian-research/article71439924.ece",
     expected: ["Science & Research", "Politics & Policy"],
-    needsReview: true,
     note: "Thin text; research investment vs trade policy opinion",
   },
   {
@@ -1992,7 +1945,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "The surveillance state costs money, people! Well, tell that to president Trump. On Thursday, he slapped a 100 percent tariff — he sure loves round numbers and levying imports — on larger foreign-made drones. Trump claimed that this “bolsters national security.” But, ironically, it could be undermining domestic security — at least according to surveillance-happy police departments who’ve gotten used to overlooking their subjects from above , according to a roundup of",
     itemUrl: "https://futurism.com/robots-and-machines/surveillance-piolice-trump-tariffs-drones",
     expected: ["Politics & Policy", "Security & Privacy"],
-    needsReview: true,
     note: "Tariffs vs police drone surveillance; Politics vs Security",
   },
   {
@@ -2011,7 +1963,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Financial crime compliance (FCC) is in the middle of a generational shift — one unlike anything the industry has experienced since the post‑9/11 regulatory overhaul. But this time, the catalyst isn’t regulation. It’s the structural mismatch between decades‑old, labor‑scaled operating models and the real‑time, high‑velocity financial system they’re expected to protect. AI has become the engine of this transformation. And nowhere is the impact more profound — or more",
     itemUrl: "https://www.workfusion.com/blog/how-ai-is-reshaping-financial-crime-compliance-work/",
     expected: ["AI & ML", "Finance & Markets"],
-    needsReview: true,
     note: "AI in financial crime compliance; workforce angle too",
   },
   {
@@ -2047,7 +1998,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://worldupdatedaily.blogspot.com/2020/05/china-pulls-no-punches-in-coronavirus.html",
     expected: ["World & Society", "Politics & Policy"],
-    needsReview: true,
     note: "China coronavirus politics; World vs Politics vs Health",
   },
   {
@@ -2065,7 +2015,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "By now, we all have heard or read news about potholes in Bangalore causing massive issues, or that roads being dug up in Mumbai have actually doubled the traffic, or the massive waste and sewage disposal on the side of the road in Kolkata is eating up walkable spaces. These issues aren’t outliers, and are neither specific to these cities. It’s a problem that the whole country suffers from, while only a fair few, owing to their metropolitan or urban status, get highlighted.",
     itemUrl: "https://strate.in/urban-planning-in-india-poor-city-design-living-standards/",
     expected: ["Design & UX", "World & Society"],
-    needsReview: true,
     note: "Urban planning critique; design vs society",
   },
   {
@@ -2133,7 +2082,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "What a year! I feel like a broken record but every year seems better than the last! I’d say that 2018 was easily the best year for my blog, the best year career-wise, and my best year personally with the Prince. Additionally, I finally feel settled in Hamburg – I’ve joined a few different organizations and have a solid friend group here. I always feel like my travels will never live up to the previous year. Yet, it seems to get even crazier! I might not have visited many new",
     itemUrl: "https://www.wayfaringwithwagner.com/looking-back-on-2018-2/",
     expected: ["Personal & Essays", "Food & Travel"],
-    needsReview: true,
     note: "Travel blog year-in-review; personal vs travel",
   },
   {
@@ -2185,7 +2133,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.bwmonline.com/sector-watch/healthcare/accelerating-molecules-to-medicines-a-leaders-blueprint-for-pharma/",
     expected: ["Business & Startups", "Health & Medicine"],
-    needsReview: true,
     note: "Pharma executive profile; Business vs Health",
   },
   {
@@ -2221,7 +2168,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Key updates from Yelp’s 2025 Fall Product Release: The new Yelp Assistant uses AI to instantly answer any question you have about a restaurant, bar, local attraction, retailer, and more. A new AI-powered feature, Menu Vision , makes it easier to decide what to order by letting you point your phone at a menu to see photos, reviews, and details for dishes. Two new AI-powered call answering solutions— Yelp Host and Yelp Receptionist —help restaurants and local businesses manage",
     itemUrl: "https://blog.yelp.com/news/fall-product-release-2025/",
     expected: ["AI & ML", "Technology"],
-    needsReview: true,
     note: "Yelp AI features; AI & ML vs Technology",
   },
   {
@@ -2255,7 +2201,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://africachess.net/reflections-on-the-2024-sa-closed-final-from-dr-cm-lyndon-bouah/",
     expected: ["Sports"],
-    needsReview: true,
     note: "Chess reflections; title-only text",
   },
   {
@@ -2289,8 +2234,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "Although the summer season is coming to a close, visitors are still coming to Cape Cod National Seashore to enjoy its abundant recreational opportunities, and for rest and rejuvenation. We want to remind our visitors that our seashore lifeguards end their season on Labor Day, September 4. https://www.nps.gov/caco/learn/news/beach-safety-fall-2017.htm",
     itemUrl: "https://www.nps.gov/caco/learn/news/beach-safety-fall-2017.htm",
-    expected: ["World & Society"],
-    needsReview: true,
+    expected: ["Food & Travel"],
     note: "Park beach safety notice; World vs Travel",
   },
   {
@@ -2309,7 +2253,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Marking a Social Security Milestone August 14, 2015 is the 80th anniversary of Social Security. Few Americans working today can remember a time when Social Security wasn’t part of the social fabric of America. Since the Social Security retirement program was enacted under Franklin Delano Roosevelt in 1935, it has expanded in important ways. In 1939, benefits for dependent survivors of wage earners were added. And in 1956, disability insurance benefits were added. Today, as",
     itemUrl: "https://www.kathleenflynnlaw.com/social-securitys-80th-anniversity/",
     expected: ["Politics & Policy"],
-    needsReview: true,
     note: "Social Security history plus law-firm testimonial",
   },
   {
@@ -2375,8 +2318,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "As I ponder the MoU and its rationale among the counselling authorities, I am reminded that the basic philosophy about gender identity comes from a subtle reframing of what it is to be human according to our Society “social justice” perspectives. Contemporary gender ideology increasingly treats the physical body as incidental and something to be overridden by internal identity rather than integrated and accepted. This shift is not just philosophical. It is reflected in",
     itemUrl: "https://eating-disorders.org.uk/pronouns-and-the-law/",
-    expected: ["World & Society", "Health & Medicine"],
-    needsReview: true,
+    expected: ["World & Society", "Politics & Policy"],
     note: "Gender therapy MoU opinion; Society vs Policy vs Health",
   },
   {
@@ -2495,7 +2437,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Oil pump issues are among the most critical challenges encountered in marine engines today. Marine Diesel Oil Pump Issues can rapidly escalate, ... Read more",
     itemUrl: "https://marinediesel.co.in/marine-diesel-oil-pump-issues/",
     expected: [],
-    needsReview: true,
     note: "Marine engineering maintenance how-to; no clear label",
   },
   {
@@ -2532,7 +2473,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.gatherevents.com/gatherblog/moody-mexican-beach-wedding-at-hotel-panamera",
     expected: [],
-    needsReview: true,
     note: "Destination wedding feature; none vs Food & Travel",
   },
   {
@@ -2550,7 +2490,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "What we call our dogs matters more than we think. Here's why shifting from judgment to observation can make all the difference—for your dog, your community, and the families we’re trying to help. Let’s just say it—most of us have been there. You’re tired. You’re frustrated. You’ve said the same cue seventeen times. And out comes something like: “He’s being dominant.” “She’s just dramatic.” “He’s such a jerk sometimes.” I’ve said it too. More than once. But here’s something I",
     itemUrl: "http://missbehaviortraining.com/blog/words",
     expected: [],
-    needsReview: true,
     note: "Dog behavior/training; no fitting label",
   },
   {
@@ -2568,8 +2507,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Introduction In today’s data-driven organizations, managing the full lifecycle of information is critical — not just for efficiency, but for compliance and risk reduction. Microsoft Purview Records Management enables organizations to automate how content is classified, retained, and permanently disposed of — in line with legal, regulatory, and business requirements. One key feature within this capability is Pending Dispositions — the final checkpoint before data is",
     itemUrl:
       "https://abouconde.com/2025/10/31/%f0%9f%a7%ad-understanding-pending-dispositions-in-microsoft-purview-records-management/",
-    expected: ["Technology"],
-    needsReview: true,
+    expected: ["Technology", "Security & Privacy"],
     note: "Microsoft Purview admin; Technology vs Software Engineering/Security",
   },
   {
@@ -2640,7 +2578,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.thedronegirl.com/2026/09/03/amelia-dronehart-relaunch-kara-murphy-women-in-drones/",
     expected: ["Technology"],
-    needsReview: true,
     note: "Women-in-drones community; technology vs work",
   },
   {
@@ -2657,8 +2594,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "Updated: February 27, 2026 Category: Transformation Not many people switch straight from a Silicon Valley powerhouse to a global insurance firm based in Germany. Now I am not sure whether that makes me brave or foolish, but it gives me a rare perspective on the life of architects at two far ends of the spectrum. Most employees of traditional companies only know the other side from what I call “digital travel brochures”, which show the digital equivalent of endless, isolated,",
     itemUrl: "https://architectelevator.com/transformation/digital-grass-greener/",
-    expected: ["Business & Startups"],
-    needsReview: true,
+    expected: ["Software Engineering", "Business & Startups"],
     note: "Corporate work-culture essay; business vs work vs personal",
   },
   {
@@ -2913,7 +2849,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "The Beauty and Darkness Kickstarter is ending soon: Link: Campaign on Kickstarter",
     itemUrl: "http://www.blogger.com/feeds/3685013891999261791/posts/default/4006681555097055772",
     expected: ["Culture & Media"],
-    needsReview: true,
     note: "Thin Kickstarter notice for tabletop game",
   },
   {
@@ -3000,8 +2935,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "As the summer sun brings outdoor adventures and sports activities, ensuring you have the right equipment can make all the difference between a good time and a great one. Whether you’re gearing up for a beach volleyball game, hosting a BBQ in the park or your backyard, or honing a new skill, our current best sellers are sure to meet your needs. Let’s take a closer look at some of our standout products that are perfect for this summer season. 1. Champions Volleyball &",
     itemUrl: "https://badensports.ca/blogs/news/summer-essentials-badens-current-best-sellers",
-    expected: [],
-    needsReview: true,
+    expected: ["Sports"],
     note: "Sports gear best-seller product listing",
   },
   {
@@ -3021,7 +2955,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.streetmusclemag.com/tech-stories/pro-touring-floater-kit-strange-engineerings-axle-saver/",
     expected: [],
-    needsReview: true,
     note: "Automotive parts product piece; hobby, no clear label",
   },
   {
@@ -3139,7 +3072,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Police questioning can feel overwhelming. Your heart races. Your mind spins through what you should say. Officers lean in, asking “just a few questions” to “clear things up.” But here’s what you need to know: you have powerful constitutional protections for your rights during police questioning, and using them isn’t suspicious, it’s smart. Your Constitutional Rights When Police Ask Questions The moment police want to question you, specific rights kick in. You don’t have to",
     itemUrl: "https://www.deweybrinkleylaw.com/criminal-defense-rights-during-police-questioning/",
     expected: ["Politics & Policy"],
-    needsReview: true,
     note: "Law firm explainer on rights; policy vs crime/society",
   },
   {
@@ -3157,8 +3089,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "The Archaeological Site in Wanggung-ri refers to the remains of a Baekje-era palace and temple in Wanggung-ri, Wanggung-myeon, Iksan, South Korea. In 2015, it was made a UNESCO World Heritage Site, as part of the item Baekje Historic Areas. Thanks to Ms Ainu. Stamp used. Extreme Right- 2010: Saekdongeolgul (Visit Korea). Center- 1991:Korean Mouth Organ.",
     itemUrl: "https://nagi7.blogspot.com/2025/04/south-korea-wanggung-ri.html",
-    expected: [],
-    needsReview: true,
+    expected: ["Food & Travel"],
     note: "Postcard collecting hobby; could be Food & Travel",
   },
   {
@@ -3176,7 +3107,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Why the Heat Wave Makes a Natural Swimming Pool in Delhi NCR More Than an Amenity A natural swimming pool in Delhi NCR this summer is not the same conversation it was even three years ago. El Nino has changed the numbers. June temperatures across Delhi NCR touched 46 degrees this year, and what the forecasts say about the summers ahead is not reassuring. I have been in this work since 1999, building pools and water features in RCC across Northern India, and what I notice now",
     itemUrl: "https://greenevolutions.com/what-el-nino-teaches-us-about/",
     expected: ["Climate & Environment"],
-    needsReview: true,
     note: "Pool builder marketing tied to heatwave; Climate vs Design",
   },
   {
@@ -3212,7 +3142,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://westernhillsheating.com/blog/how-to-keep-energy-bills-low-this-heating-season-in-west-harrison-in",
     expected: [],
-    needsReview: true,
     note: "HVAC company home-tips post; borderline energy/personal finance",
   },
   {
@@ -3230,7 +3159,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "fitchburg students visit groton hill As part of our ongoing partnership with Fitchburg Memorial and Longsjo Middle Schools, we invited string students from both schools to participate in a special workshop and performance right here at Groton Hill. The day included a guided tour of the facility, ensemble rehearsals, and a live recording session in […] The post Community Engagement: Fitchburg Students Visit Groton Hill appeared first on Groton Hill Music Center .",
     itemUrl: "https://grotonhill.org/community-engagement-fitchburg-students-visit-groton-hill/",
     expected: ["Culture & Media", "Education & Work"],
-    needsReview: true,
     note: "Music center student outreach; Culture vs Education",
   },
   {
@@ -3249,7 +3177,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "http://www.thenewbookpress.com/blog/files/ef26164d1545caf1f6172ca142c0a7ff-107.html#unique-entry-id-107",
     expected: ["Education & Work", "Culture & Media"],
-    needsReview: true,
     note: "Shakespeare schooling; Education vs Culture ambiguous",
   },
   {
@@ -3317,7 +3244,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Update: The Senate Commerce Committee voted to advance this bill on August 5, 2026. EFF continues to oppose the bill, which still needs approval from the full Senate. The Senate Commerce Committee is poised to consider the Youth AI Privacy Act , a bill that would require AI companies to create kids-only privacy rules and implement so-called “safe design features,” which would — like three other bills under consideration this week—require more data collection and make it",
     itemUrl: "https://www.eff.org/deeplinks/2026/08/youth-ai-privacy-acts-privacy-paradox",
     expected: ["Security & Privacy", "Politics & Policy"],
-    needsReview: true,
     note: "AI privacy bill; privacy vs policy vs AI",
   },
   {
@@ -3335,7 +3261,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText: null,
     itemUrl: "http://fictionaddictionfix.blogspot.com/2022/09/winners-choice-of-any-christian.html",
     expected: ["Culture & Media"],
-    needsReview: true,
     note: "Book giveaway, empty text",
   },
   {
@@ -3386,7 +3311,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       ">> Grab your free calendar planning packwww.TrySproutFree.com In this episode of 'The Multifamily Mix', Marci and Barbara of Sprout Marketing discuss creative ideas for 12 resident events to be held in March, featuring a range of themes and activities. The episode also includes suggestions on how to involve local businesses in the events to foster community connections. Additionally, they mention several opportunities for virtual events to cater to different resident",
     itemUrl: "https://watchyourbusinesssprout.com/sprout-marketing-blog/mix-podcast/9",
     expected: ["Business & Startups"],
-    needsReview: true,
     note: "Property management resident events marketing podcast",
   },
   {
@@ -3404,7 +3328,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Gated video content is media that requires viewers to complete a specific action, submitting contact information, making a payment, or verifying their identity, to gain access. The three most common video gates are video lead capture, video paywall, and business access control. Each video gate serves a different goal and requires different tools. A marketing team using video lead capture to gate a webinar needs a different solution than a course creator running a video",
     itemUrl: "https://sproutvideo.com/blog/gated-video-content.html",
     expected: ["Business & Startups"],
-    needsReview: true,
     note: "Video gating marketing guide; business vs technology",
   },
   {
@@ -3475,8 +3398,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Rejuvenate Your Skin and Achieve Natural-Looking Results with Botox® and Fillers Near You in Pittsburgh Whether you’ve been considering dermal fillers for a while or are just now learning about all they have to offer, there’s no doubt you have plenty of options when it comes to what injectable you use to treat your skin. […] The post Everything You Need to Know About Sculptra® Dermal Fillers first appeared on Cosmetic Laser Centers .",
     itemUrl:
       "https://www.cosmeticlasercenters.com/2023/01/04/everything-you-need-to-know-about-sculptra-dermal-fillers/",
-    expected: [],
-    needsReview: true,
+    expected: ["Health & Medicine"],
     note: "Cosmetic filler clinic promo; none vs Health",
   },
   {
@@ -3528,7 +3450,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Sunscreen provides essential protection for our skin against harmful UV rays. However, when it comes to men’s skin, there are The post Sunscreen For Men: Breaking Myths And Embracing Sun Safety appeared first on Black Girl Sunscreen .",
     itemUrl: "https://blackgirlsunscreen.com/essential-sunscreen-for-men/",
     expected: ["Health & Medicine"],
-    needsReview: true,
     note: "Sunscreen brand post; health vs beauty (none)",
   },
   {
@@ -3647,7 +3568,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.wigwamstorage.co.uk/self-storage-for-charities-and-community-groups-a-practical-guide/",
     expected: [],
-    needsReview: true,
     note: "Storage company content marketing; none vs World & Society",
   },
   {
@@ -3666,7 +3586,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://vernalaw.com/law-business-podcast-episode-41-talking-cannabis-with-shad-ewart/",
     expected: ["Business & Startups", "Education & Work"],
-    needsReview: true,
     note: "Cannabis industry and college programs; business vs education",
   },
   {
@@ -3684,7 +3603,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://arstechnica.com/space/2026/08/trump-calls-for-creation-of-a-space-academy-to-train-future-nasa-leaders/",
     expected: ["Politics & Policy", "Science & Research"],
-    needsReview: true,
     note: "Space academy executive order; Politics vs Science",
   },
   {
@@ -3720,7 +3638,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Best Websites to Download Free PC Games – 2026 Guide Playing games on PC can be a great way to fun and spend time with friends. However, get free games for PC online is not an easy way. Many games websites claim to offer free games, but many provide malware files, unwanted files, and fake download buttons. This is why it is so crucial to find trusted legal website when downloading games. The good news for you is that you don’t need to spend money to get PC games. There are",
     itemUrl: "https://www.blogger.com/feeds/401322862646000939/posts/default/1264646612175068952",
     expected: ["Culture & Media"],
-    needsReview: true,
     note: "SEO free-games download list; Culture vs Technology",
   },
   {
@@ -3755,7 +3672,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Some really nice ones. Filed for future reference. Killzone Shadow Fall - Sound Design Behind The Scenes - PS4 Star Marine: Audio Update The Sound Design of Battlefield 3 - Game Informer The Sounds of Monsters in Borderlands 2 Skyrim's Sound Design The Sound Design of Mass Effect 3 Sound Design of Halo 4 Making Batman: Arkham City - Sound Effects The Terrifying Sound Design of Dead Space 3: Kill Screen Episode 5 Arma III - Marksmen DLC Developer Diary: Weapons & Platform",
     itemUrl: "https://www.catnapgames.com/2015/09/13/13-interesting-sound-design-videos/",
     expected: ["Culture & Media"],
-    needsReview: true,
     note: "Game sound design links; Culture vs Design",
   },
   {
@@ -3791,7 +3707,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.90min.com/charly-launches-2025-heritage-collection-celebrating-mexico-football-culture?utm_source=RSS",
     expected: ["Sports"],
-    needsReview: true,
     note: "Jersey collection launch; product/fashion vs Sports",
   },
   {
@@ -3826,7 +3741,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "We depend upon records to reveal the “truth” about the past. Yet sometimes records have anomalies. Some are amusing or humorous. Some are interesting or weird. Some are peculiar or suspicious. Some are infuriating, or downright laughable. Records say the darnedest things ! Kenneth H. Rich was the undertaker. He was also the decedent. Weird. After 30 years as an undertaker, Kenneth retired just 7 weeks before his doctor started treating him for interstitial nephritis . Less",
     itemUrl: "http://www.blogger.com/feeds/5512311610334754148/posts/default/792895766825671475",
     expected: [],
-    needsReview: true,
     note: "Genealogy hobby post; no fitting label",
   },
   {
@@ -3925,8 +3839,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "Because your year doesn’t need fixing. It needs intention. Every January, we’re told to reinvent ourselves. New goals. New habits. New rules. A better version. A shinier version. A more productive version. And honestly? That’s exhausting. At Wicked Good, we don’t believe the new year is about becoming someone else. We believe it’s about returning to yourself . Not through pressure. Not through hustle. But through ritual. Because rituals stick where resolutions fail. Why",
     itemUrl: "https://wicked-good.co/blogs/clean-perfume/new-year-ritual-not-resolution",
-    expected: [],
-    needsReview: true,
+    expected: ["Personal & Essays"],
     note: "Perfume brand essay on rituals; none vs Personal & Essays",
   },
   {
@@ -3964,7 +3877,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://soundcloud.com/adbinstitute/asia-groundwork-post-pandemic-infrastructure-fairer-land-use",
     expected: ["Politics & Policy"],
-    needsReview: true,
     note: "Asian infrastructure land use policy podcast; Policy vs Society",
   },
   {
@@ -3985,7 +3897,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://radaronline.com/p/savannah-guthrie-today-studio-security-breach-nancy-missing/",
     expected: ["Culture & Media", "World & Society"],
-    needsReview: true,
     note: "Celebrity news with crime angle; Culture vs World",
   },
   {
@@ -4023,7 +3934,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Redefining Your Outdoor Space with Stylish Trends Your patio is more than just an extension of your home; it’s where some of the best memories are made. From quiet coffee mornings to lively family barbecues, the right outdoor furniture can transform this space into a haven. Keeping up with the latest trends helps you create a patio that’s not only functional but also a reflection of your style. Outdoor living in Ottawa comes with unique challenges. The furniture you choose",
     itemUrl: "https://patiocomfort.ca/5-outdoor-furniture-trends-to-elevate-your-patio-in-ottawa/",
     expected: [],
-    needsReview: true,
     note: "Patio furniture trends marketing; possibly Design & UX",
   },
   {
@@ -4140,7 +4050,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "The 73 cm Problem That Is Hurting Millions of Workers Walk into virtually any conventional office in Dubai, Abu Dhabi, or Sharjah, and you will find the same piece of furniture repeated from one end of the floor to the other: a desk standing precisely 73 to 75 centimeters from the ground. This dimension was not derived from biomechanical research or population-wide anthropometric studies. It emerged from the manufacturing constraints of mid-twentieth century furniture",
     itemUrl: "https://officemaster.ae/why-standard-desk-heights-fail-office-workers/",
     expected: ["Health & Medicine"],
-    needsReview: true,
     note: "Office ergonomics marketing; health vs workplace vs design",
   },
   {
@@ -4192,7 +4101,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "We are thrilled to announce the successful completion of two remarkable projects, the Lotte Hotel Busan and Tomlinson Heights Residences,...",
     itemUrl: "https://www.miajadesigngroup.com/post/miaja-september-news",
     expected: ["Design & UX"],
-    needsReview: true,
     note: "Thin design firm newsletter; design vs business",
   },
   {
@@ -4210,7 +4118,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "A successful outdoor kitchen isn’t necessarily the biggest one; it’s the one that uses available space effectively. The right dimensions make cooking easier, prevent traffic bottlenecks, and give guests enough room to gather without crowding the person at the grill. Because every patio, deck, and backyard is different, your layout should be designed around your […] The post Outdoor Kitchen Dimensions: How Much Space Do You Need? appeared first on Werever Outdoor Cabinets .",
     itemUrl: "https://werever.com/outdoor-kitchen-dimensions-how-much-space-do-you-need/",
     expected: ["Design & UX"],
-    needsReview: true,
     note: "Outdoor kitchen layout marketing; Design vs none",
   },
   {
@@ -4229,7 +4136,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.longfence.com/blog/top-3-security-fencing-solutions-for-commercial-property/",
     expected: [],
-    needsReview: true,
     note: "Physical security fencing marketing; not cybersecurity",
   },
   {
@@ -4315,7 +4221,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.personalinjurysandiego.org/practice-areas/motorcycle-accident-statute-of-limitations-california/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=motorcycle-accident-statute-of-limitations-california",
     expected: ["Politics & Policy"],
-    needsReview: true,
     note: "Law-firm marketing on statute of limitations",
   },
   {
@@ -4350,7 +4255,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://actoydesign.com/2020/07/02/sergeant-kreel-custom-figure-6-star-wars-black-series/",
     expected: [],
-    needsReview: true,
     note: "Custom action figure hobby; none vs Culture & Media",
   },
   {
@@ -4404,7 +4308,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "The JConcepts race team continues to stay red hot on tracks around the globe in the final weekend of racing in August. Read about what tracks we were winning at in this new edition of the Race Team Update! We start this week’s report out west in sunny California. Last weekend SDRC in San Diego held Round 2 of their Summer Series, and team driver Connor Esbeck competed in four classes with much success! 13.5 Stadium Truck = 1st place Expert 13.5 4wd Buggy = 1st place Expert",
     itemUrl: "https://blog.jconcepts.net/2026/09/race-team-update-august-2026-week-4/",
     expected: ["Sports"],
-    needsReview: true,
     note: "RC car racing team update; Sports vs hobby",
   },
   {
@@ -4474,7 +4377,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "CLNCC Zoom Meeting Time : Tues day 7:00 PM January 21, 2025 Topics: General Membership Meeting Location: Zoom The CLNCC Zoom Meeting,7:00 Tues 21 Jan 2025, will be a General Membership Meeting. Join us live via zoom! ~ *~",
     itemUrl: "http://www.blogger.com/feeds/32087412/posts/default/5740114945244713002",
     expected: ["World & Society"],
-    needsReview: true,
     note: "Community group meeting notice; could be none",
   },
   {
@@ -4492,7 +4394,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Today on the podcast, it’s me, myself and I talking about my recent trip to Carmel, California, the future of cosmetics, and the launch of Brian’s latest project! Listen on Apple Podcasts Listen on Spotify The post Biostimulator Abs appeared first on PaleOMG .",
     itemUrl: "https://paleomg.com/biostimulator-abs/",
     expected: [],
-    needsReview: true,
     note: "Thin podcast blurb on travel and cosmetics",
   },
   {
@@ -4511,7 +4412,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://yearofpolygamy.com/uncategorized/episode-129-apostle-vs-apostle-the-1900-1920-transition/",
     expected: ["World & Society"],
-    needsReview: true,
     note: "LDS polygamy history podcast; religion/history fit",
   },
   {
@@ -4614,7 +4514,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.palermostreetfood.com/blog/2023/10/10/the-strange-history-of-the-bad-palermitan-women",
     expected: ["Food & Travel"],
-    needsReview: true,
     note: "Palermo local history; Travel vs Culture",
   },
   {
@@ -4699,7 +4598,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Not sure when to start decorating for fall? This simple four-week timeline breaks it into easy, doable steps so your home eases into the season without any overwhelm. So when should you really start decorating for fall? For most of us, it comes down to personal timing rather than a rule. If you like to... The post The Smart Girl’s Guide To Easy Fall Decorating + 4-Week Printable Planning Guide appeared first on StoneGable .",
     itemUrl: "https://stonegableblog.com/fall-decorating-timeline/",
     expected: [],
-    needsReview: true,
     note: "Home decorating how-to; none vs Design & UX",
   },
   {
@@ -4718,7 +4616,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "http://linda-family-tree.blogspot.com/2022/04/frederick-charles-newman-come-out-come.html",
     expected: ["Personal & Essays"],
-    needsReview: true,
     note: "Genealogy hobby post; could be none",
   },
   {
@@ -4802,7 +4699,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Devin Lehman is the Product Manager for Gaia GPS. Join him in planning and going on a backcountry ski tour, and to learn how to use Gaia GPS for your winter backcountry excursions. I’m a backcountry snowboarder who happens to work in tech. It’s a lame joke I’ve told coworkers over the past decade. (And it’s a joke that needs no explanation to my coworkers at Gaia GPS.) So when winter swung into central Oregon and the avalanche forecast looked promising, I jumped on the",
     itemUrl: "https://blog.gaiagps.com/how-to-plan-a-backcountry-ski-tour/",
     expected: ["Sports", "Technology"],
-    needsReview: true,
     note: "Backcountry ski tour planning via GPS app",
   },
   {
@@ -5044,7 +4940,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.thegoodlawgroup.com/blog/cancer-survivors-social-security-disability-benefits/",
     expected: ["Health & Medicine", "Politics & Policy"],
-    needsReview: true,
     note: "Disability benefits for cancer survivors; health vs policy",
   },
   {
@@ -5096,7 +4991,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Per Book, Inc P&P The post Relish North East and Yorkshire Cookbook Volume 3 appeared first on Yorkshire Food Guide .",
     itemUrl: "https://yorkshirefoodguide.co.uk/book/relish-north-east-yorkshire-cookbook/",
     expected: ["Food & Travel"],
-    needsReview: true,
     note: "Cookbook product listing, thin text",
   },
   {
@@ -5115,7 +5009,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.sonodrum.co/blogs/magazine/how-to-choose-the-right-steel-tongue-drum-for-your-music-journey",
     expected: ["Culture & Media"],
-    needsReview: true,
     note: "Instrument buying guide; Culture vs none",
   },
   {
@@ -5135,7 +5028,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://collectiveinfotech.blogspot.com/2026/09/new-balance-supercomp-rebel-review.html",
     expected: ["Sports"],
-    needsReview: true,
     note: "Running shoe review; Sports vs product review",
   },
   {
@@ -5187,7 +5079,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.northkoreatech.org/2024/01/06/north-korea-upgrades-its-android-security-says-report/",
     expected: ["Technology", "Security & Privacy"],
-    needsReview: true,
     note: "NK phone OS mandate; Technology vs Security/surveillance",
   },
   {
@@ -5292,7 +5183,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       'Yesterday, Sunday, was the last day of the first international CGT conference in Japan. Here are my summaries of the talks: Kentaro Hoshi: "Evolution of ANI (Artificial Narrow Intelligence) in Shogi and Social Adaptation: A case study for Symbiosis in the era of ASI (Artificial Super Intelligence)" Kentaro talked about Shogi and play has evolved in the past thirty years. Prior to the modern age, people had to move to Tokyo in order to be near other players and learn to play',
     itemUrl: "http://www.blogger.com/feeds/49096384337620230/posts/default/4567652408294965218",
     expected: ["Science & Research"],
-    needsReview: true,
     note: "CGT conference talk summaries; math research vs games",
   },
   {
@@ -5361,7 +5251,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "High Security Locks and Lock Brands High-security locks provide increased protection against attacks. Common, inexpensive locks can easily be thwarted by experienced criminals with a minimal background in lock picking. If you use child seats in the car to protect your children, safes to protect your valuables, and insurance to protect your vehicle, why wouldn’t you invest in high security locks to keep your house protected against break-ins and theft? High-Security Lock",
     itemUrl: "https://www.glendale-locksmith24.com/high-security-locks/",
     expected: [],
-    needsReview: true,
     note: "Locksmith physical locks article; not cybersecurity",
   },
   {
@@ -5380,7 +5269,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://thewindowblindconnection.com/wood-blinds/environmental-impact-of-wood-blinds-in-simi-valley-california/",
     expected: ["Climate & Environment"],
-    needsReview: true,
     note: "Blinds vendor marketing framed as sustainability; could be none",
   },
   {
@@ -5431,7 +5319,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Most dog breeds can be expected to live from 12 to 15 years on average. Depending on genetics, the living conditions, and the love that a shih tzu receives the average life span may be just as long as many other dog breeds. A typical shih tzu will live on average for 13 years. By the time the shih tzu reaches the age of 10, it is considered a senior citizen. This means biannual checks with the vet to help maintain their health. When shih tzus reach this advanced age, they",
     itemUrl: "https://shihtzuworld.com/oldest-shihtzu/",
     expected: [],
-    needsReview: true,
     note: "Pet care article; no fitting label",
   },
   {
@@ -5482,7 +5369,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Memorial Day Fireworks detonate above Mount Rushmore National Memorial, July 3. Approximately 30,000 people came to the memorial for the 2008 Independence Day Celebration. (U.S. Air Force photo/Senior Airman Marc I. Lane) As Memorial Day approaches in the U.S., our readers inquire about its meaning and history. We created this fun quiz [...]",
     itemUrl: "https://www.protocolww.com/memorial-day-2/",
     expected: ["World & Society"],
-    needsReview: true,
     note: "Memorial Day history quiz, thin; World vs Culture",
   },
   {
@@ -5535,7 +5421,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://techcrunch.com/2026/09/08/google-deepmind-alumni-are-building-tools-to-accelerate-fusion-power-for-the-grid/",
     expected: ["Climate & Environment", "Business & Startups"],
-    needsReview: true,
     note: "Fusion startup story; climate vs business vs AI",
   },
   {
@@ -5587,7 +5472,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "September Energy Reset: It’s Not Just for the Kids Is anyone else getting that “back to school, back to routine” feeling? New term. New notebooks. New routines. And after the lovely looseness of summer, September always feels like a natural opportunity to get yourself back into a rhythm too. But if your first thought is […] Source",
     itemUrl: "https://pilateshuddersfield.co.uk/energy_reset/",
     expected: ["Health & Medicine"],
-    needsReview: true,
     note: "Wellness blog; health vs personal essay",
   },
   {
@@ -5622,8 +5506,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText:
       "Somewhere between dusk and dream, the mushrooms gathered. The forest felt… off. The birds were forgetting their songs, and the soil didn’t hum the way it used to. Something was missing. They decided it was time for a ball. Not just any gathering, but a true celebration—a dance to lift the spirits of the woods. But a ball like this would require very specific decor: platters adorned with mushrooms, bowls shaped by hand and moonlight, and—most importantly—brand new mugs.",
     itemUrl: "https://www.leewolfepottery.com/blogs/news/the-mushroom-ball-collection",
-    expected: [],
-    needsReview: true,
+    expected: ["Culture & Media"],
     note: "Pottery collection listing; none vs Culture & Media",
   },
   {
@@ -5642,8 +5525,7 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Healthcare professionals work demanding jobs that can routinely leave them vulnerable to significant risks. Workplace injuries are a widespread reality across the industry and nation, so it’s possible for medical staff to get hurt at work in California. If you sustain healthcare worker injuries at Orange County hospitals , for example, workers’ compensation for nurses and medical staff should be available. If you need to file for benefits, turn to a workplace injury lawyer",
     itemUrl:
       "https://www.canlaslaw.com/blog/healthcare-worker-injuries-at-orange-county-hospitals-work-comp-for-nurses-and-medical-staff/",
-    expected: ["Education & Work"],
-    needsReview: true,
+    expected: ["Education & Work", "Health & Medicine"],
     note: "Workers comp for healthcare staff; work vs health vs law",
   },
   {
@@ -5678,7 +5560,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "When patients search for a dentist today, the process often begins with a question. As AI search becomes part of everyday browsing, patients increasingly begin by asking a question and reviewing the AI-generated answer, such as from ChatGPT or Google AI Overviews.",
     itemUrl: "https://blog.titanwebagency.com/google-maps-vs-ai-search",
     expected: ["Business & Startups", "AI & ML"],
-    needsReview: true,
     note: "Dental marketing for AI search; Business vs AI",
   },
   {
@@ -5715,7 +5596,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       'For a little more than a month now I\'ve been back to work on a "new normal" basis, getting caught up on reviews and figuring out how to most comfortably & efficiently work in the all-new studio. Viewer reaction to the new format has been shockingly positive . I, myself, have felt perfectly comfortable being in front of the camera again, though I do yet need to work on physical access to review subjects from behind the filming rig when doing the traditional close-up shots.',
     itemUrl: "https://www.jangbricks.com/2020/03/recovery-update.html",
     expected: ["Personal & Essays"],
-    needsReview: true,
     note: "LEGO YouTuber personal update; maybe Culture & Media",
   },
   {
@@ -5765,7 +5645,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemContentText: "HT: Fr. Z Syndicated by Atom",
     itemUrl: "http://www.blogger.com/feeds/25740524/posts/default/917577632034762377",
     expected: [],
-    needsReview: true,
     note: "Empty text; religious blog repost",
   },
   {
@@ -5784,7 +5663,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.chaichuntea.com/blogs/post/diwali-gifting-sorted-elegant-tea-collections-to-impress-everyone",
     expected: ["Food & Travel"],
-    needsReview: true,
     note: "Promotional tea gifting post; Food vs none",
   },
   {
@@ -5889,7 +5767,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.foodturkey.com.tr/2026/04/13/ifpa-launches-2026-eu-policy-agenda-to-boost-fruit-and-vegetable-consumption-and-strengthen-europes-fresh-produce-and-floral-sectors/",
     expected: ["Food & Travel", "Politics & Policy"],
-    needsReview: true,
     note: "Produce industry EU policy agenda; Food vs Politics",
   },
   {
@@ -5907,7 +5784,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "Omno, the Singaporean wellness and beauty brand, has arrived in Malaysia with a grand launch event at Else Hotel, Kuala Lumpur. With Omno's range of eco-conscious products helps elevate your self-care routine that embraces a lifestyle that celebrates the perfect balance between beauty and sustainability. Introducing Omno's signature scents: Solace, Moonatic, and Odyssey. Each fragrance is meticulously curated to capture the essence of our Southeast Asian heritage with a",
     itemUrl: "https://www.blogger.com/feeds/2605901670473996820/posts/default/7544049038960692664",
     expected: [],
-    needsReview: true,
     note: "Beauty brand launch; none vs Business & Startups",
   },
   {
@@ -5941,7 +5817,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
       "This guide covers moving and buying a house in Alaska. The decision to move your family to Alaska, like any significant life decision, is subjective and depends on various factors. Moving and buying a house in Alaska is a big move. Moving to Alaska can be quite a lifestyle shift, especially if you’re from a more urban or temperate location. John Strange, a senior loan officer at GCA Mortgage Forums Mortgage Group says the following about moving and buying a house in Alaska:",
     itemUrl: "https://gcaforums.com/buying-a-house-in-alaska/",
     expected: ["Finance & Markets"],
-    needsReview: true,
     note: "Relocation/home-buying guide; Finance vs Travel",
   },
   {
@@ -5959,7 +5834,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://www.thehindu.com/opinion/op-ed/when-life-strips-away-titles/article71438864.ece",
     expected: ["Personal & Essays"],
-    needsReview: true,
     note: "Thin opinion text; personal reflection assumed",
   },
   {
@@ -5978,7 +5852,6 @@ export const CLASSIFIER_EVAL_STORED_CASES: readonly ClassifierEvalCase[] = [
     itemUrl:
       "https://meganrobinsonphoto.com/modern-garden-party-wedding-at-montage-deer-valley/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=modern-garden-party-wedding-at-montage-deer-valley",
     expected: [],
-    needsReview: true,
     note: "Wedding design feature; none vs Design & UX",
   },
   {
