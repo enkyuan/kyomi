@@ -7,7 +7,8 @@ import {
 } from "@kyomi/worker";
 import { activeEmbeddingModelId, embeddingClassifierConfig } from "@config/embeddings";
 
-const CLOUDFLARE_MODEL_ID = `${CLOUDFLARE_EMBEDDING_MODEL}/${CATEGORY_CARDS_VERSION}`;
+// BGE-M3 overrides the selection rule, so its rows also name the rule they were written under.
+const CLOUDFLARE_MODEL_ID = `${CLOUDFLARE_EMBEDDING_MODEL}/${CATEGORY_CARDS_VERSION}/item-0.41-feed-0.5-margin-0.02`;
 const VOYAGE_MODEL_ID = `${EMBEDDING_CLASSIFIER_MODEL_ID}/${CATEGORY_CARDS_VERSION}`;
 
 const CLOUDFLARE_ENV = {
@@ -36,6 +37,21 @@ describe("embeddingClassifierConfig", () => {
       model: CLOUDFLARE_EMBEDDING_MODEL,
     });
     expect(embeddingModelInfo(config!).modelId).toBe(CLOUDFLARE_MODEL_ID);
+  });
+
+  test("gives rows written under another selection rule a different model id", () => {
+    const calibrated = embeddingClassifierConfig(undefined, CLOUDFLARE_ENV)!;
+
+    expect(embeddingModelInfo({ ...calibrated, itemSimilarityThreshold: 0.6 }).modelId).not.toBe(
+      embeddingModelInfo(calibrated).modelId,
+    );
+    expect(
+      embeddingModelInfo({
+        apiKey: calibrated.apiKey,
+        apiUrl: calibrated.apiUrl,
+        model: calibrated.model,
+      }).modelId,
+    ).toBe(`${CLOUDFLARE_EMBEDDING_MODEL}/${CATEGORY_CARDS_VERSION}`);
   });
 
   test("gives BGE-M3 its own calibrated cutoffs and secondary-label margin", () => {

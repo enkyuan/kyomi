@@ -220,11 +220,31 @@ function cacheKeyFor(config: EmbeddingClassifierConfig): string {
   return `${config.apiUrl ?? DEFAULT_VOYAGE_API_URL}::${config.model ?? DEFAULT_VOYAGE_MODEL}::${apiKeyFingerprint(config.apiKey)}`;
 }
 
+/**
+ * The provider's selection overrides, e.g. `item-0.41-feed-0.5-margin-0.02`, or undefined when it
+ * uses the defaults.
+ */
+function selectionRuleTag(config: EmbeddingClassifierConfig): string | undefined {
+  const parts = [
+    config.itemSimilarityThreshold === undefined ? null : `item-${config.itemSimilarityThreshold}`,
+    config.feedSimilarityThreshold === undefined ? null : `feed-${config.feedSimilarityThreshold}`,
+    config.secondaryLabelMargin === undefined ? null : `margin-${config.secondaryLabelMargin}`,
+  ].filter((part) => part !== null);
+  return parts.length > 0 ? parts.join("-") : undefined;
+}
+
 export function embeddingModelInfo(config: EmbeddingClassifierConfig): ClassifierModelInfo {
   return {
-    // Names the card revision as well as the provider model, because a card change can yield
-    // different labels for identical inputs while the model name stays the same.
-    modelId: `${config.model ?? DEFAULT_VOYAGE_MODEL}/${CATEGORY_CARDS_VERSION}`,
+    // Names the card revision and any selection overrides as well as the provider model: either
+    // can yield different labels for identical inputs while the model name stays the same, and
+    // rows written under another revision or rule must not read as current or count as backfilled.
+    modelId: [
+      config.model ?? DEFAULT_VOYAGE_MODEL,
+      CATEGORY_CARDS_VERSION,
+      selectionRuleTag(config),
+    ]
+      .filter(Boolean)
+      .join("/"),
     taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
     classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
   };
