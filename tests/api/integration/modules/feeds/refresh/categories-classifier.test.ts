@@ -226,7 +226,7 @@ describe("runFeedRefresh classifier fallback", () => {
       },
     });
     globalThis.fetch = (async (url: string) => {
-      if (url === "https://fake.voyage.test/v1/embeddings") {
+      if (url === "https://fake-embeddings.test/embed") {
         return new Response("rate limited", { status: 429 });
       }
       const response = new Response(
@@ -261,7 +261,7 @@ describe("runFeedRefresh classifier fallback", () => {
     const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
       embeddingClassifier: {
         apiKey: "test-key",
-        apiUrl: "https://fake.voyage.test/v1/embeddings",
+        apiUrl: "https://fake-embeddings.test/embed",
       },
     });
 

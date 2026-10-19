@@ -8,6 +8,8 @@
  *   average without covering a category shows up as a regression on the per-category F1.
  * - a field case (a real-world headline a classifier missed): a held-out set scored on its own,
  *   kept in classifier-eval-field-fixture.ts.
+ * - a stored case (a sampled real article with a drafted label): the embedding calibration set,
+ *   kept in classifier-eval-stored-fixture.ts and scored on its own.
  *
  * `expected` is the set of canonical labels a correct classifier should return. Empty array
  * means the classifier should abstain — that is a valid, load-bearing outcome (see the
@@ -18,7 +20,7 @@ import { CLASSIFIER_EVAL_FIELD_CASES } from "./classifier-eval-field-fixture";
 
 export type ClassifierEvalCase = {
   id: string;
-  source: "regression" | "coverage" | "field";
+  source: "regression" | "coverage" | "field" | "stored";
   itemTitle: string;
   itemSummary: string | null;
   itemContentText?: string | null;
@@ -29,6 +31,8 @@ export type ClassifierEvalCase = {
   feedSiteUrl: string | null;
   sourceKind: string | null;
   expected: readonly string[];
+  /** The drafted label was ambiguous or the text thin; spot-check before trusting it. */
+  needsReview?: boolean;
   note?: string;
 };
 

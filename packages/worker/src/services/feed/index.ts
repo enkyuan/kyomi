@@ -13,7 +13,6 @@ export { CATEGORY_CARDS_VERSION } from "./category-cards";
 export {
   CATEGORY_CLASSIFIER_PROVENANCE,
   CLASSIFIER_TAXONOMY_VERSION,
-  CLOUDFLARE_EMBEDDING_MODEL,
   EMBEDDING_CLASSIFIER_METHOD,
   EMBEDDING_CLASSIFIER_MODEL_ID,
   KEYWORD_CLASSIFIER_METHOD,
@@ -43,6 +42,11 @@ export {
   embeddingModelInfo,
   embedTexts,
   resetPrototypeCache,
+  scoreFeedEmbedding,
+  scoreItemEmbeddings,
+  selectCategories,
+  type CategoryScore,
+  type CategorySelectionRule,
   type EmbeddingClassifierConfig,
   type FeedItemEmbeddingBatchInput,
 } from "./embeddings";

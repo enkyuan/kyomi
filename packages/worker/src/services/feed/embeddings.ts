@@ -14,53 +14,55 @@ import type {
 } from "./classifier";
 import { MAX_CLASSIFIER_LABELS } from "./classifier";
 
+/** Kyomi's embeddings Worker (apps/embeddings), which serves BGE-M3 from Workers AI. */
 export type EmbeddingClassifierConfig = {
+  /** Bearer token for the Worker. */
   apiKey: string;
-  model?: string;
-  /** Embeddings endpoint; defaults to Voyage's public API. */
-  apiUrl?: string;
+  /** The Worker's `/embed` URL. */
+  apiUrl: string;
   /** Optional per-request timeout for best-effort callers that must not block user flows. */
   timeoutMs?: number;
-  /** Optional per-provider cutoff for article category similarity. */
+  /** Overrides the calibrated article cutoff; for evals and tests. */
   itemSimilarityThreshold?: number;
-  /** Optional per-provider cutoff for feed category similarity. */
+  /** Overrides the calibrated feed cutoff; for evals and tests. */
   feedSimilarityThreshold?: number;
+  /** Overrides the calibrated secondary-label margin; for evals and tests. */
+  secondaryLabelMargin?: number;
 };
 
-const DEFAULT_VOYAGE_MODEL = EMBEDDING_CLASSIFIER_MODEL_ID;
-const DEFAULT_VOYAGE_API_URL = "https://api.voyageai.com/v1/embeddings";
-// Empirically tuned against tests/api/integration/modules/feeds/refresh/classifier-eval-fixture.ts
-// via classifier-eval-embedding.test.ts (live Voyage API). Re-validate against that fixture if
-// the model, category cards, or fixture change materially.
-//
-// A relative-margin secondary-label rule (admit a second category within some gap of the top
-// score) was tried and reverted: genuinely dual-topic articles (e.g. "Congress debates AI
-// regulation" -> Politics & Policy + AI & ML, gap ~0.32) and single-topic articles with a
-// semantically adjacent runner-up (e.g. "Anthropic releases new Claude model" wrongly picking
-// up Software Engineering, gap ~0.29) produce the same gap sizes -- no margin value separates
-// them without hand-tuning per category pair against this ~30-item fixture, which is
-// overfitting, not a real fix. A single absolute threshold with no secondary-label margin is
-// the simplest rule that doesn't require that per-pair tuning.
-const ITEM_SIMILARITY_THRESHOLD = 0.6;
-const FEED_SIMILARITY_THRESHOLD = 0.6;
+/** A category's similarity to a text: its best cosine over the category's prototypes. */
+export type CategoryScore = { label: string; score: number };
+
+export type CategorySelectionRule = {
+  minSimilarity: number;
+  secondaryMargin?: number;
+};
+
+// Calibrated for BGE-M3 on the stored-article set with
+// tests/api/integration/modules/feeds/refresh/classifier-eval-sweep.test.ts; re-run that sweep when
+// the model or category cards change. BGE-M3 scores real articles at about 0.40-0.55 with a median
+// top-two gap of 0.025, so a second category needs to sit within a small margin of the first:
+// 0.02 halves the share of two-label articles for about six points of recall.
+const ITEM_SIMILARITY_THRESHOLD = 0.41;
+const FEED_SIMILARITY_THRESHOLD = 0.5;
+const SECONDARY_LABEL_MARGIN = 0.02;
 // Inputs per embeddings request. Larger batches go out as several requests, so a slow or failed
 // request costs one chunk and every request stays inside its timeout.
 const EMBEDDING_REQUEST_MAX_INPUTS = 128;
-// Characters per embeddings request. Even at one token per character this stays well under
-// Voyage's 320K-token per-request limit, so a batch of long articles can't fail as a whole.
+// Characters per embeddings request, so one request of long articles stays small.
 const EMBEDDING_REQUEST_MAX_CHARS = 200_000;
-// Per-text cap, the same head-and-tail cut the embeddings Worker applies, so both providers embed
-// the same text.
+// Per-text cap, the same head-and-tail cut the embeddings Worker applies, so the cache keys and
+// the Worker see the same text.
 const MAX_CHARS_PER_INPUT = 6_000;
-// Category prototypes are shared by every caller with the same provider, so their load uses this
-// timeout instead of a caller's short budget.
+// Category prototypes are shared by every caller, so their load uses this timeout instead of a
+// caller's short budget.
 const PROTOTYPE_REQUEST_TIMEOUT_MS = 60_000;
 // Characters of title, summary, and body embedded per article. The opening carries the topic;
 // later text is mostly related links, comments, and newsletter prompts that drag every
 // category's similarity down, so feed text and extracted full text are cut to the same head.
 const MAX_ITEM_TEXT_CHARS = 4_000;
 
-type VoyageEmbeddingsResponse = {
+type EmbeddingsResponse = {
   data: Array<{ embedding: number[]; index: number }>;
 };
 
@@ -112,25 +114,22 @@ async function requestEmbeddings(
   const controller = config.timeoutMs ? new AbortController() : null;
   const timeout = controller ? setTimeout(() => controller.abort(), config.timeoutMs) : null;
   try {
-    const response = await fetch(config.apiUrl ?? DEFAULT_VOYAGE_API_URL, {
+    const response = await fetch(config.apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${config.apiKey}`,
       },
       signal: controller?.signal,
-      body: JSON.stringify({
-        input: texts,
-        model: config.model ?? DEFAULT_VOYAGE_MODEL,
-      }),
+      body: JSON.stringify({ input: texts }),
     });
     if (!response.ok) {
       const body = await response.text().catch(() => "");
-      throw new Error(`Voyage embeddings request failed (${response.status}): ${body}`);
+      throw new Error(`Embeddings request failed (${response.status}): ${body}`);
     }
-    const payload = (await response.json()) as Partial<VoyageEmbeddingsResponse>;
-    // Voyage documents `data` as returned in the same order as `input`, but sorts by `index`
-    // defensively in case a future API version reorders results for batching efficiency.
+    const payload = (await response.json()) as Partial<EmbeddingsResponse>;
+    // The Worker returns `data` in input order; sorting by `index` keeps that true even if a
+    // future version reorders results.
     const entries = Array.isArray(payload.data)
       ? [...payload.data].sort((a, b) => a.index - b.index)
       : [];
@@ -154,8 +153,7 @@ async function requestEmbeddings(
 
 /**
  * Embeds input strings, returning one vector per input in the same order. Texts are capped and
- * sent in bounded requests (Voyage and the embeddings Worker both accept arrays), so `timeoutMs`
- * bounds each request rather than the whole batch.
+ * sent in bounded requests, so `timeoutMs` bounds each request rather than the whole batch.
  */
 export async function embedTexts(
   texts: readonly string[],
@@ -194,8 +192,8 @@ export type FeedItemEmbeddingBatchInput = FeedItemCategoryClassificationInput & 
 };
 
 /**
- * Per-config prototype cache. Embedding the ~70 category-card prototype texts costs one
- * Voyage call; caching by config identity (not globally) means tests that pass a fake
+ * Per-config prototype cache. Embedding the ~90 category-card prototype texts costs one
+ * Worker call; caching by config identity (not globally) means tests that pass a fake
  * apiUrl/apiKey never share a cache with production config, while a real worker process
  * only pays the embedding cost once per config across its whole lifetime.
  */
@@ -207,14 +205,36 @@ function apiKeyFingerprint(apiKey: string): string {
 
 // Leaves out timeoutMs: callers with different budgets share one prototype load.
 function cacheKeyFor(config: EmbeddingClassifierConfig): string {
-  return `${config.apiUrl ?? DEFAULT_VOYAGE_API_URL}::${config.model ?? DEFAULT_VOYAGE_MODEL}::${apiKeyFingerprint(config.apiKey)}`;
+  return `${config.apiUrl}::${apiKeyFingerprint(config.apiKey)}`;
+}
+
+function itemSelectionRule(config: EmbeddingClassifierConfig): CategorySelectionRule {
+  return {
+    minSimilarity: config.itemSimilarityThreshold ?? ITEM_SIMILARITY_THRESHOLD,
+    secondaryMargin: config.secondaryLabelMargin ?? SECONDARY_LABEL_MARGIN,
+  };
+}
+
+function feedSelectionRule(config: EmbeddingClassifierConfig): CategorySelectionRule {
+  return {
+    minSimilarity: config.feedSimilarityThreshold ?? FEED_SIMILARITY_THRESHOLD,
+    secondaryMargin: config.secondaryLabelMargin ?? SECONDARY_LABEL_MARGIN,
+  };
+}
+
+/** The selection rule in effect, e.g. `item-0.41-feed-0.5-margin-0.02`. */
+function selectionRuleTag(config: EmbeddingClassifierConfig): string {
+  const item = itemSelectionRule(config);
+  const feed = feedSelectionRule(config);
+  return `item-${item.minSimilarity}-feed-${feed.minSimilarity}-margin-${item.secondaryMargin}`;
 }
 
 export function embeddingModelInfo(config: EmbeddingClassifierConfig): ClassifierModelInfo {
   return {
-    // Names the card revision as well as the provider model, because a card change can yield
-    // different labels for identical inputs while the model name stays the same.
-    modelId: `${config.model ?? DEFAULT_VOYAGE_MODEL}/${CATEGORY_CARDS_VERSION}`,
+    // Names the card revision and the selection rule as well as the model: either can yield
+    // different labels for identical inputs, and rows written under another revision or rule
+    // must not read as current or count as backfilled.
+    modelId: `${EMBEDDING_CLASSIFIER_MODEL_ID}/${CATEGORY_CARDS_VERSION}/${selectionRuleTag(config)}`,
     taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
     classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
   };
@@ -284,7 +304,7 @@ export function resetPrototypeCache(): void {
 function scoreAgainstPrototypes(
   textEmbedding: number[],
   categories: readonly CategoryPrototypes[],
-): Array<{ label: string; score: number }> {
+): CategoryScore[] {
   return categories
     .map((category) => ({
       label: category.label,
@@ -319,31 +339,101 @@ function buildItemText(input: FeedItemCategoryClassificationInput): string {
   return text.slice(0, MAX_ITEM_TEXT_CHARS).replace(/[\uD800-\uDBFF]$/, "");
 }
 
+function toCategoryClassification(scores: readonly CategoryScore[]): CategoryClassification {
+  return {
+    categories: scores.map((entry) => ({
+      label: entry.label,
+      confidence: toConfidence(entry.score),
+    })),
+  };
+}
+
+/**
+ * Picks labels from category scores sorted high to low. The top category is kept when it
+ * clears `minSimilarity`. Each further category must also clear it and sit within
+ * `secondaryMargin` of the top score, so a semantically adjacent runner-up doesn't ride along
+ * on a single-topic text. Without a margin every category over the floor qualifies.
+ */
+export function selectCategories(
+  scores: readonly CategoryScore[],
+  rule: CategorySelectionRule,
+  maxLabels: number,
+): CategoryScore[] {
+  const [top] = scores;
+  if (!top || top.score < rule.minSimilarity) {
+    return [];
+  }
+  const margin = rule.secondaryMargin ?? Number.POSITIVE_INFINITY;
+  return scores
+    .filter(
+      (entry, index) =>
+        index === 0 || (entry.score >= rule.minSimilarity && top.score - entry.score <= margin),
+    )
+    .slice(0, maxLabels);
+}
+
+/** Scores a feed's title and description against every category, best first. */
+export async function scoreFeedEmbedding(
+  input: FeedCategoryClassificationInput,
+  config: EmbeddingClassifierConfig,
+): Promise<CategoryScore[]> {
+  const prototypes = await loadCategoryPrototypes(config);
+  const [textEmbedding] = await embedTexts([buildFeedText(input)], config);
+  return textEmbedding ? scoreAgainstPrototypes(textEmbedding, prototypes) : [];
+}
+
+/**
+ * Scores items against every category, best first, in bounded embeddings requests. Items in a
+ * failed request are left out of the result; the error is rethrown only when every request
+ * failed.
+ */
+export async function scoreItemEmbeddings(
+  inputs: ReadonlyArray<FeedItemCategoryClassificationInput & { id: string }>,
+  config: EmbeddingClassifierConfig,
+): Promise<Map<string, CategoryScore[]>> {
+  const results = new Map<string, CategoryScore[]>();
+  if (inputs.length === 0) {
+    return results;
+  }
+
+  const prototypes = await loadCategoryPrototypes(config);
+  let failure: unknown;
+  for (const batch of requestBatches(inputs, buildItemText)) {
+    let textEmbeddings: number[][];
+    try {
+      textEmbeddings = await requestEmbeddings(batch.texts, config);
+    } catch (error) {
+      failure = error;
+      continue;
+    }
+    batch.items.forEach((input, index) => {
+      const textEmbedding = textEmbeddings[index];
+      results.set(input.id, textEmbedding ? scoreAgainstPrototypes(textEmbedding, prototypes) : []);
+    });
+  }
+
+  if (results.size === 0 && failure !== undefined) {
+    throw failure;
+  }
+  return results;
+}
+
 export async function classifyFeedEmbedding(
   input: FeedCategoryClassificationInput,
   config: EmbeddingClassifierConfig,
 ): Promise<CategoryClassification> {
-  const prototypes = await loadCategoryPrototypes(config);
-  const [textEmbedding] = await embedTexts([buildFeedText(input)], config);
-  if (!textEmbedding) {
-    return { categories: [{ label: MISCELLANEOUS_CATEGORY_LABEL, confidence: 0.1 }] };
-  }
-
-  const feedSimilarityThreshold = config.feedSimilarityThreshold ?? FEED_SIMILARITY_THRESHOLD;
-  const scored = scoreAgainstPrototypes(textEmbedding, prototypes).filter(
-    (entry) => entry.score >= feedSimilarityThreshold,
+  const selected = selectCategories(
+    await scoreFeedEmbedding(input, config),
+    feedSelectionRule(config),
+    MAX_CLASSIFIER_LABELS,
   );
-  if (scored.length === 0) {
+  if (selected.length === 0) {
     // A feed always needs some label, mirroring the keyword classifier's feed-level
     // `allowGeneralFallback: true` — unlike an individual article, a feed cannot simply
     // abstain, or it would show no categorization at all in the UI indefinitely.
     return { categories: [{ label: MISCELLANEOUS_CATEGORY_LABEL, confidence: 0.1 }] };
   }
-  return {
-    categories: scored
-      .slice(0, MAX_CLASSIFIER_LABELS)
-      .map((entry) => ({ label: entry.label, confidence: toConfidence(entry.score) })),
-  };
+  return toCategoryClassification(selected);
 }
 
 export async function classifyItemEmbedding(
@@ -356,20 +446,10 @@ export async function classifyItemEmbedding(
   // should let every category that clears the threshold through rather than truncate early.
   maxLabels: number = CATEGORY_CARDS.length,
 ): Promise<CategoryClassification> {
-  const prototypes = await loadCategoryPrototypes(config);
-  const [textEmbedding] = await embedTexts([buildItemText(input)], config);
-  if (!textEmbedding) {
-    return { categories: [] };
-  }
-  const itemSimilarityThreshold = config.itemSimilarityThreshold ?? ITEM_SIMILARITY_THRESHOLD;
-  const scored = scoreAgainstPrototypes(textEmbedding, prototypes).filter(
-    (entry) => entry.score >= itemSimilarityThreshold,
+  const scores = await scoreItemEmbeddings([{ ...input, id: "item" }], config);
+  return toCategoryClassification(
+    selectCategories(scores.get("item") ?? [], itemSelectionRule(config), maxLabels),
   );
-  return {
-    categories: scored
-      .slice(0, maxLabels)
-      .map((entry) => ({ label: entry.label, confidence: toConfidence(entry.score) })),
-  };
 }
 
 /**
@@ -381,42 +461,19 @@ export async function classifyItemEmbeddings(
   inputs: readonly FeedItemEmbeddingBatchInput[],
   config: EmbeddingClassifierConfig,
 ): Promise<Map<string, CategoryClassification>> {
+  const scores = await scoreItemEmbeddings(inputs, config);
+  const rule = itemSelectionRule(config);
   const results = new Map<string, CategoryClassification>();
-  if (inputs.length === 0) {
-    return results;
-  }
-
-  const prototypes = await loadCategoryPrototypes(config);
-  const itemSimilarityThreshold = config.itemSimilarityThreshold ?? ITEM_SIMILARITY_THRESHOLD;
-  let failure: unknown;
-  for (const batch of requestBatches(inputs, buildItemText)) {
-    let textEmbeddings: number[][];
-    try {
-      textEmbeddings = await requestEmbeddings(batch.texts, config);
-    } catch (error) {
-      failure = error;
-      continue;
-    }
-    batch.items.forEach((input, index) => {
-      const textEmbedding = textEmbeddings[index];
-      if (!textEmbedding) {
-        results.set(input.id, { categories: [] });
-        return;
-      }
-
-      const scored = scoreAgainstPrototypes(textEmbedding, prototypes).filter(
-        (entry) => entry.score >= itemSimilarityThreshold,
+  for (const input of inputs) {
+    const itemScores = scores.get(input.id);
+    if (itemScores) {
+      results.set(
+        input.id,
+        toCategoryClassification(
+          selectCategories(itemScores, rule, input.maxLabels ?? CATEGORY_CARDS.length),
+        ),
       );
-      results.set(input.id, {
-        categories: scored
-          .slice(0, input.maxLabels ?? CATEGORY_CARDS.length)
-          .map((entry) => ({ label: entry.label, confidence: toConfidence(entry.score) })),
-      });
-    });
-  }
-
-  if (results.size === 0 && failure !== undefined) {
-    throw failure;
+    }
   }
   return results;
 }
