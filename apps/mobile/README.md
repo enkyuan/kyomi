@@ -108,6 +108,22 @@ Docker publishes only the API port to the host network; Postgres, Redis, Garage,
 remain bound to loopback. On the iPhone, enable Kyomi under Settings → Privacy & Security → Local
 Network if iOS asks for permission.
 
+### Any-network development (tunnel mode)
+
+Shared networks (campus, office, hotel) commonly block device-to-device traffic, which breaks the
+LAN defaults above for both Metro and the API. Tunnel both hops instead:
+
+1. Start Metro with `bun run --cwd apps/mobile start:tunnel` (no `REACT_NATIVE_PACKAGER_HOSTNAME`
+   override, so the Expo tunnel is used) and open the QR code or printed `exp+kyomi://` URL in the
+   installed development build. Works on any Wi-Fi or cellular.
+2. Expose the API through a tunnel with a **stable** origin so `EXPO_PUBLIC_AUTH_ORIGIN` is set
+   once and never requires a rebuild per network:
+   - Tailscale on the Mac and iPhone, then use the Mac's tailnet IP:
+     `bun run dotenvx set EXPO_PUBLIC_AUTH_ORIGIN "http://$(tailscale ip -4):8000" -f apps/mobile/.env.local -fk apps/mobile/.env.keys`;
+   - or a static-domain ngrok endpoint (`ngrok http 8000 --domain=<your-domain>.ngrok-free.app`).
+3. Rebuild the development build once after changing `.env.local` — `EXPO_PUBLIC_*` values are inlined at
+   bundle time.
+
 Run the API while using those defaults. Use an HTTPS development URL and an Expo development build
 for stable password-reset callbacks. Expo Go's callback URL is not a stable application identity.
 Release builds reject a non-HTTPS authentication origin.

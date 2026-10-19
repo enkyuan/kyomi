@@ -6,6 +6,7 @@ FROM oven/bun:${BUN_VERSION}-alpine AS deps
 WORKDIR /app
 
 COPY .bun-version bun.lock package.json turbo.json ./
+COPY patches/ patches/
 COPY apps/api/package.json apps/api/package.json
 COPY apps/mobile/package.json apps/mobile/package.json
 COPY apps/web/package.json apps/web/package.json
