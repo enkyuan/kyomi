@@ -7,11 +7,13 @@ import {
 } from "@kyomi/worker";
 import { reclassifyExtractedFeedItem } from "@modules/articles/reader/extraction/workflow";
 import type { ArticleDetailDto } from "@modules/articles/types";
+import { FAKE_CATEGORY_MODEL } from "../../feeds/refresh/fake-category-model";
 
 const originalFetch = globalThis.fetch;
 const FAKE_CONFIG: EmbeddingClassifierConfig = {
   apiKey: "test-key",
   apiUrl: "https://fake-embeddings.test/embed",
+  categoryModel: FAKE_CATEGORY_MODEL,
 };
 const EMBEDDING_MODEL_ID = embeddingModelInfo(FAKE_CONFIG).modelId;
 
@@ -222,7 +224,7 @@ describe("reclassifyExtractedFeedItem", () => {
     globalThis.fetch = (async (_url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
       const embeddings = body.input.map((_, i) =>
-        body.input.length > 1 ? (i < 4 ? UNIT_X : ORTHOGONAL_Z) : [0, 1, 0],
+        body.input.length > 1 ? (i < 4 ? UNIT_X : ORTHOGONAL_Z) : ORTHOGONAL_Z,
       );
       return new Response(
         JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),

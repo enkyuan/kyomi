@@ -1,17 +1,18 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import {
   classifyFeedEmbedding,
-  classifyItemEmbedding,
   classifyItemEmbeddings,
   embedTexts,
   resetPrototypeCache,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
+import { FAKE_CATEGORY_MODEL } from "./fake-category-model";
 
 const originalFetch = globalThis.fetch;
 const FAKE_CONFIG: EmbeddingClassifierConfig = {
   apiKey: "test-key",
   apiUrl: "https://fake-embeddings.test/embed",
+  categoryModel: FAKE_CATEGORY_MODEL,
 };
 const UNIT_X = [1, 0, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
@@ -26,8 +27,17 @@ afterEach(() => {
 });
 
 describe("embedding requests at scale", () => {
-  // Cosine similarity 0.35 with UNIT_X: below the default item and feed cutoffs.
+  // Cosine similarity 0.35 with UNIT_X: below the default feed cutoff.
   const PARTIAL_MATCH = [0.35, Math.sqrt(1 - 0.35 ** 2), 0];
+  // Halfway between Software Engineering and no category: the fake head gives it about 0.5.
+  const HALF_MATCH = [1, 0, 1];
+  const feedInput = {
+    feedTitle: "Feed",
+    feedDescription: null,
+    feedUrl: "https://example.com/feed",
+    feedSiteUrl: "https://example.com",
+    sourceKind: "rss",
+  };
   const itemInput = {
     feedTitle: "Feed",
     feedDescription: null,
@@ -39,8 +49,13 @@ describe("embedding requests at scale", () => {
     itemUrl: null,
   };
 
-  /** The first request answers the prototype load; later ones embed every item as `itemVector`. */
-  function fakeEmbeddingsApi(options: { itemVector?: number[]; failRequest?: number } = {}) {
+  /**
+   * Embeds every text as `itemVector`, except that with `prototypeLoadFirst` the first request
+   * answers a feed's category-card prototype load.
+   */
+  function fakeEmbeddingsApi(
+    options: { itemVector?: number[]; failRequest?: number; prototypeLoadFirst?: boolean } = {},
+  ) {
     const requests: string[][] = [];
     globalThis.fetch = (async (_url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
@@ -48,7 +63,7 @@ describe("embedding requests at scale", () => {
       if (requests.length === options.failRequest) {
         return new Response("rate limited", { status: 429 });
       }
-      const isPrototypeLoad = requests.length === 1;
+      const isPrototypeLoad = options.prototypeLoadFirst === true && requests.length === 1;
       const data = body.input.map((_, index) => ({
         embedding: isPrototypeLoad
           ? index < 4
@@ -106,8 +121,8 @@ describe("embedding requests at scale", () => {
   });
 
   test("classifyItemEmbeddings keeps the results of requests that succeed", async () => {
-    // Request 1 loads prototypes, request 2 embeds items 0-127, request 3 items 128-129.
-    fakeEmbeddingsApi({ failRequest: 3 });
+    // Request 1 embeds items 0-127, request 2 items 128-129.
+    fakeEmbeddingsApi({ failRequest: 2 });
 
     const results = await classifyItemEmbeddings(batchInputs(130), FAKE_CONFIG);
 
@@ -118,18 +133,21 @@ describe("embedding requests at scale", () => {
   });
 
   test("classifyItemEmbeddings throws when every request fails", async () => {
-    fakeEmbeddingsApi({ failRequest: 2 });
+    fakeEmbeddingsApi({ failRequest: 1 });
 
     await expect(classifyItemEmbeddings(batchInputs(3), FAKE_CONFIG)).rejects.toThrow(/429/);
   });
 
-  test("classifyItemEmbeddings applies itemSimilarityThreshold", async () => {
-    fakeEmbeddingsApi({ itemVector: PARTIAL_MATCH });
+  test("classifyItemEmbeddings applies itemMinProbability", async () => {
+    fakeEmbeddingsApi({ itemVector: HALF_MATCH });
 
-    const strict = await classifyItemEmbeddings(batchInputs(1), FAKE_CONFIG);
+    const strict = await classifyItemEmbeddings(batchInputs(1), {
+      ...FAKE_CONFIG,
+      itemMinProbability: 0.6,
+    });
     const lenient = await classifyItemEmbeddings(batchInputs(1), {
       ...FAKE_CONFIG,
-      itemSimilarityThreshold: 0.3,
+      itemMinProbability: 0.4,
     });
 
     expect(strict.get("item-0")?.categories).toEqual([]);
@@ -139,18 +157,11 @@ describe("embedding requests at scale", () => {
   });
 
   test("classifyFeedEmbedding uses the feed threshold, not the item threshold", async () => {
-    fakeEmbeddingsApi({ itemVector: PARTIAL_MATCH });
-    const feedInput = {
-      feedTitle: "Feed",
-      feedDescription: null,
-      feedUrl: "https://example.com/feed",
-      feedSiteUrl: "https://example.com",
-      sourceKind: "rss",
-    };
+    fakeEmbeddingsApi({ itemVector: PARTIAL_MATCH, prototypeLoadFirst: true });
 
     const itemKnobOnly = await classifyFeedEmbedding(feedInput, {
       ...FAKE_CONFIG,
-      itemSimilarityThreshold: 0.3,
+      itemMinProbability: 0.01,
     });
     const feedKnob = await classifyFeedEmbedding(feedInput, {
       ...FAKE_CONFIG,
@@ -162,10 +173,10 @@ describe("embedding requests at scale", () => {
   });
 
   test("callers with different timeouts share one prototype load", async () => {
-    const requests = fakeEmbeddingsApi();
+    const requests = fakeEmbeddingsApi({ prototypeLoadFirst: true });
 
-    await classifyItemEmbedding(itemInput, { ...FAKE_CONFIG, timeoutMs: 8_000 });
-    await classifyItemEmbedding(itemInput, FAKE_CONFIG);
+    await classifyFeedEmbedding(feedInput, { ...FAKE_CONFIG, timeoutMs: 8_000 });
+    await classifyFeedEmbedding(feedInput, FAKE_CONFIG);
 
     expect(requests.filter((input) => input.length > 1)).toHaveLength(1);
   });
@@ -191,10 +202,10 @@ describe("embedding requests at scale", () => {
     }) as unknown as typeof fetch;
 
     await expect(
-      classifyItemEmbedding(itemInput, { ...FAKE_CONFIG, timeoutMs: 10 }),
+      classifyFeedEmbedding(feedInput, { ...FAKE_CONFIG, timeoutMs: 10 }),
     ).rejects.toThrow(/not ready within 10ms/);
     releasePrototypes();
-    const result = await classifyItemEmbedding(itemInput, FAKE_CONFIG);
+    const result = await classifyFeedEmbedding(feedInput, FAKE_CONFIG);
 
     expect(prototypeLoads).toBe(1);
     expect(result.categories[0]?.label).toBe("Software Engineering");

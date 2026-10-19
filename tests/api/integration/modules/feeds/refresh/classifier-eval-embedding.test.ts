@@ -31,8 +31,8 @@ import { CLASSIFIER_EVAL_STORED_CASES } from "./classifier-eval-stored-fixture";
  * and MAX_CLASSIFIER_LABELS chip slots. Runs when the Worker credentials are set or the offline
  * embeddings cache (see embedding-cache.ts) already holds every text, and is skipped otherwise.
  *
- * The floors are a ratchet against a provider, card, or threshold change that silently stops
- * labeling articles: the earlier 0.6 cutoff, for example, left 99% of stored articles
+ * The floors are a ratchet against a model, head, card, or rule change that silently mislabels or
+ * stops labeling articles: the earlier 0.6 card cutoff, for example, left 99% of stored articles
  * unlabeled under BGE-M3. Raise them when a change genuinely improves the scores.
  */
 
@@ -45,9 +45,10 @@ const config = embeddingClassifierConfig(undefined, {
 }) as EmbeddingClassifierConfig;
 
 const FLOORS = {
-  stored: { f1: 0.43, maxAbstention: 0.15 },
-  regression: { f1: 0.7 },
-  field: { f1: 0.5 },
+  stored: { f1: 0.65, maxAbstention: 0.15, clearTop1: 0.78 },
+  // Synthetic headlines written against the category cards; the head learned from real articles.
+  regression: { f1: 0.6 },
+  field: { f1: 0.65 },
 };
 
 const originalFetch = globalThis.fetch;
@@ -104,6 +105,19 @@ describe.skipIf(!enabled)("embedding classifier eval (Cloudflare BGE-M3)", () =>
 
     expect(result.f1).toBeGreaterThanOrEqual(FLOORS.stored.f1);
     expect(result.abstention).toBeLessThanOrEqual(FLOORS.stored.maxAbstention);
+  }, 120_000);
+
+  test("puts an expected category first for clearly labeled stored articles", async () => {
+    const clear = CLASSIFIER_EVAL_STORED_CASES.filter(
+      (case_) => case_.expected.length > 0 && !case_.needsReview,
+    );
+    const scores = await scoreItemEmbeddings(clear, config);
+    const top1 =
+      clear.filter((case_) => case_.expected.includes(scores.get(case_.id)?.[0]?.label ?? ""))
+        .length / clear.length;
+    console.log(`Clearly labeled stored articles (${clear.length}): top-1 ${round3(top1)}`);
+
+    expect(top1).toBeGreaterThanOrEqual(FLOORS.stored.clearTop1);
   }, 120_000);
 
   test("keeps regression and coverage cases above their floor", async () => {
