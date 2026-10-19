@@ -43,6 +43,11 @@ export {
   embeddingModelInfo,
   embedTexts,
   resetPrototypeCache,
+  scoreFeedEmbedding,
+  scoreItemEmbeddings,
+  selectCategories,
+  type CategoryScore,
+  type CategorySelectionRule,
   type EmbeddingClassifierConfig,
   type FeedItemEmbeddingBatchInput,
 } from "./embeddings";
