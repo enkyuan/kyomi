@@ -20,10 +20,12 @@ import {
 } from "@expo-google-fonts/dm-sans";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { persister, queryClient } from "@lib/query/client";
-import { useSessionGate } from "@lib/session";
+import { useSessionGate } from "@modules/auth/hooks/use-session-gate";
 import { FONT_FAMILIES } from "@/theme/fonts";
+import { restoreThemeMode } from "@/theme/mode";
 
 SplashScreen.preventAutoHideAsync();
+restoreThemeMode();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();

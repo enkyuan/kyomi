@@ -1,8 +1,8 @@
 "use client";
 
-import type { DetailHeaderState } from "@modules/reader/components/detail";
+import type { DetailHeaderState } from "@modules/reader/lib/detail";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
-import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
+import type { InboxPreferences } from "@modules/inbox/hooks/use-preferences";
 import { DetailSection } from "../detail";
 import { ArticleHeader } from "./header";
 
@@ -47,7 +47,7 @@ export function ArticleShell({
     : () => <ArticleHeader item={null} onBackToList={onBackToList} />;
 
   return (
-    <section className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden [--inbox-header-height:3rem] md:min-h-0">
+    <section className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden md:min-h-0">
       <div className="min-h-0 min-w-0 flex-1">
         <DetailSection
           preferences={preferences}

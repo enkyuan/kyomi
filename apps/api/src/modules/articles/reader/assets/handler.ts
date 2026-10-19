@@ -2,8 +2,8 @@ import {
   cancelResponseBody,
   readResponseBytesWithByteLimit,
 } from "@kyomi/worker/lib/response-body";
-import { assertHttpOrHttpsUrl } from "@shared/net/http-url";
-import { fetchWithSafeRedirects } from "@shared/net/safe-fetch";
+import { assertHttpOrHttpsUrl } from "@shared/net/http";
+import { fetchWithSafeRedirects } from "@shared/net/fetch";
 
 const READER_IMAGE_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24;
 const READER_IMAGE_CACHE_STALE_SECONDS = 60 * 60 * 24 * 7;

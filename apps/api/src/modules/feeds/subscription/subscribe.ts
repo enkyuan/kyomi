@@ -14,7 +14,7 @@ import {
   upsertFeedRecord,
   type FaviconEnrichment,
   type SubscriptionInsertOptions,
-} from "./internal";
+} from "./persistence";
 
 type DB = typeof db;
 

@@ -5,25 +5,22 @@ import { useRouter } from "@tanstack/react-router";
 import {
   InboxPreferencesBootstrapProvider,
   type InboxPreferences,
-  dedupePagedInboxItemsById,
-  useInboxItemStateMutation,
   useInboxPreferences,
-  useInboxQueries,
-} from "@modules/inbox/hooks/use-inbox-data";
+} from "@modules/inbox/hooks/use-preferences";
+import { dedupePagedInboxItemsById, useInboxQueries } from "@modules/inbox/hooks/use-queries";
+import { useInboxItemStateMutation } from "@modules/articles/hooks/use-item-state";
 import {
   useInboxRouteState,
   useRecapRailVisibility,
   useResponsiveReaderMode,
 } from "@modules/inbox/hooks/use-layout";
-import { useTimezone } from "@hooks/use-timezone";
-import { useTransition } from "@hooks/use-transition";
-import { useViewport } from "@hooks/use-viewport";
-import { QUERY_TIMES } from "@lib/query/policies";
+import { useTimezone } from "@modules/inbox/hooks/use-timezone";
+import { useTransition } from "@modules/inbox/hooks/use-transition";
+import { useViewport } from "@modules/inbox/hooks/use-viewport";
 import { writeShellStateSnapshot } from "@lib/shell/state";
-import { listFollowedFeeds } from "@modules/feeds/lib/api";
-import { listFolders } from "@modules/folders/lib/api";
+import { followedFeedsQueryOptions } from "@modules/feeds/queries/options";
+import { foldersQueryOptions } from "@modules/folders/queries/options";
 import {
-  followedFeedsQueryKey,
   getFeedRefreshPollInterval,
   prefetchInboxSegmentedControlTarget,
 } from "@modules/inbox/queries/options";
@@ -106,22 +103,11 @@ function InboxPageContent({
     timezoneOffsetMinutes,
   });
   const { isSuccess: isFollowedFeedsSuccess, data: followedFeedsData } = useQuery({
-    queryKey: followedFeedsQueryKey(),
-    queryFn: () => listFollowedFeeds(),
-    staleTime: QUERY_TIMES.staticMetadataStale,
-    gcTime: QUERY_TIMES.staticMetadataGc,
-    refetchInterval: (query) =>
-      getFeedRefreshPollInterval(
-        query.state.data as Awaited<ReturnType<typeof listFollowedFeeds>> | undefined,
-      ),
+    ...followedFeedsQueryOptions(),
+    refetchInterval: (query) => getFeedRefreshPollInterval(query.state.data),
     refetchIntervalInBackground: false,
   });
-  const { data: foldersData } = useQuery({
-    queryKey: ["folders"],
-    queryFn: () => listFolders(),
-    staleTime: QUERY_TIMES.staticMetadataStale,
-    gcTime: QUERY_TIMES.staticMetadataGc,
-  });
+  const { data: foldersData } = useQuery(foldersQueryOptions());
   usePolling(followedFeedsData);
   const hasNoFollowedFeeds = isFollowedFeedsSuccess && (followedFeedsData?.length ?? 0) === 0;
   const pinnedFolders = useMemo(

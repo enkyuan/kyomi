@@ -16,8 +16,13 @@ import {
 import { scheduleOnRN } from "react-native-worklets";
 
 export const MIN_SCROLL_Y = 24;
-export const COLLAPSE_DISTANCE = 28;
-export const EXPAND_DISTANCE = 18;
+// Lower thresholds commit to a direction faster: Apple's own scroll-driven
+// chrome (e.g. Safari's compact toolbar) reacts within the first few points
+// of directional scroll rather than waiting for an accumulated run, so the
+// collapse/expand reads as an immediate response to intent, not a delayed
+// snap after a pause.
+export const COLLAPSE_DISTANCE = 10;
+export const EXPAND_DISTANCE = 6;
 
 // This is intentionally a boolean boundary, not an animated progress value.
 // SwiftUI owns the presentation animation after React receives a transition.
@@ -84,8 +89,26 @@ export function useTabBarMinimize() {
   return context;
 }
 
+/**
+ * Same as `useTabBarMinimize`, but returns `null` outside a
+ * `TabBarMinimizeProvider` instead of throwing. Use this for screens that
+ * are reused both inside the tab bar's tree and elsewhere (e.g. pushed into
+ * a modal with no tab bar to minimize).
+ */
+export function useOptionalTabBarMinimize() {
+  return useContext(MinimizeContext);
+}
+
 export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
-  const { accumulatedDistance, direction, lastScrollY, minimizedSV } = useTabBarMinimize();
+  // Optional: this scroll handler is shared by screens that may render
+  // outside the tab bar's tree (e.g. Recents reused inside the settings
+  // modal, which has no tab bar to minimize). In that case, skip the
+  // minimize bookkeeping and only keep `scrollY` in sync for the header.
+  const context = useOptionalTabBarMinimize();
+  const accumulatedDistance = context?.accumulatedDistance;
+  const direction = context?.direction;
+  const lastScrollY = context?.lastScrollY;
+  const minimizedSV = context?.minimizedSV;
 
   return useAnimatedScrollHandler(
     {
@@ -93,6 +116,8 @@ export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
         "worklet";
         const y = event.contentOffset.y;
         scrollY.set(y);
+
+        if (!accumulatedDistance || !direction || !lastScrollY || !minimizedSV) return;
 
         const delta = y - lastScrollY.get();
         lastScrollY.set(y);

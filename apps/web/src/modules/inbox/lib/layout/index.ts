@@ -1,5 +1,5 @@
 import type { InboxDensityDto } from "@kyomi/reader/schemas";
-import type { TransitionOffset } from "@kyomi/ui/transition";
+import type { TransitionOffset } from "@kyomi/ui/components/transition";
 
 export const INBOX_PANEL_SPACING_PX = 4;
 

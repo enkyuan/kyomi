@@ -1,4 +1,4 @@
-export * from "./auth";
+export * from "./instance";
 export * from "./capabilities";
 export * from "./location";
-export * from "./email-otp";
+export * from "./otp";

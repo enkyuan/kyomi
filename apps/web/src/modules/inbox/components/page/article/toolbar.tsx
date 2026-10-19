@@ -1,10 +1,10 @@
 "use client";
 
 import { DownFill, UpFill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+import { Button } from "@kyomi/ui/components/button";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/components/tooltip";
 import { Toolbar as ReaderToolbarRoot } from "@modules/reader/components/toolbar";
-import type { ToolbarModel } from "@modules/toolbar/lib/types";
+import type { ToolbarModel } from "@modules/reader/lib/toolbar";
 
 const EXPANDED_READER_TOOLBAR_WIDTH = "13.3125rem";
 const COLLAPSED_READER_TOOLBAR_WIDTH = "5.25rem";
@@ -39,17 +39,18 @@ export function ReaderToolbar(props: ReaderToolbarProps) {
     return (
       <nav
         aria-label="Article navigation"
-        className="relative flex h-11 w-21 shrink-0 items-center justify-center gap-1 overflow-hidden rounded-full bg-background p-1 text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative"
+        className="relative flex h-11 w-21 shrink-0 items-center justify-center gap-1 overflow-hidden rounded-full bg-muted-solid p-1 text-muted-foreground [&>*]:relative"
       >
         <Tooltip>
           <TooltipTrigger
             render={
               <Button
                 aria-label="Previous article"
-                className="size-9 rounded-full text-muted-foreground transition-colors hover:text-foreground"
+                className="size-9"
                 disabled={!props.canSelectPreviousItem}
+                shape="pill"
                 size="icon-lg"
-                variant="ghost"
+                variant="ghost-muted"
                 onClick={(event) => {
                   event.preventDefault();
                   event.stopPropagation();
@@ -73,10 +74,11 @@ export function ReaderToolbar(props: ReaderToolbarProps) {
             render={
               <Button
                 aria-label="Next article"
-                className="size-9 rounded-full text-muted-foreground transition-colors hover:text-foreground"
+                className="size-9"
                 disabled={!props.canSelectNextItem}
+                shape="pill"
                 size="icon-lg"
-                variant="ghost"
+                variant="ghost-muted"
                 onClick={(event) => {
                   event.preventDefault();
                   event.stopPropagation();
@@ -101,7 +103,7 @@ export function ReaderToolbar(props: ReaderToolbarProps) {
 
   return (
     <div
-      className="relative inline-flex h-11 min-w-0 shrink-0 origin-left items-center overflow-hidden rounded-full bg-background p-1 font-medium text-base text-muted-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative"
+      className="relative inline-flex h-11 min-w-0 shrink-0 origin-left items-center overflow-hidden rounded-full bg-muted-solid p-1 font-medium text-base text-muted-foreground [&>*]:relative"
       style={{
         width: props.collapsed ? COLLAPSED_READER_TOOLBAR_WIDTH : EXPANDED_READER_TOOLBAR_WIDTH,
       }}

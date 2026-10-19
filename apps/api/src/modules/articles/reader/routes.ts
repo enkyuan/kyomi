@@ -1,6 +1,6 @@
 import type { Elysia } from "elysia";
 import { embeddingClassifierConfig } from "@config/embeddings";
-import { assertContentFieldBudget } from "@shared/http/content-budget";
+import { assertContentFieldBudget } from "@shared/http/budget";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { getArticleDetailForUser } from "../read/detail";
 import { resolveEnhancementContent, summarizeContent, translateContent } from "./enrichment";

@@ -4,10 +4,11 @@ import {
   getInboxItems,
   getSidebarInboxCounts,
   type InboxFilter,
-  type InboxItem,
+  type InboxListPage,
   type InboxSort,
-} from "../lib/articles/index";
+} from "@modules/articles/lib/api";
 import { getInboxRecap } from "../lib/recap/api";
+import { queryKeys } from "@lib/query/keys";
 import { getTimezoneOffsetMinutes, QUERY_TIMES } from "@lib/query/policies";
 
 const DEFAULT_INBOX_FILTER: InboxFilter = "my-feed";
@@ -32,13 +33,6 @@ export function getFeedRefreshPollInterval(
     ? ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS
     : IDLE_FEED_REFRESH_POLL_INTERVAL_MS;
 }
-
-export type InboxListPage = {
-  items: InboxItem[];
-  total: number;
-  nextCursor: string | null;
-  hasMore: boolean;
-};
 
 function normalizeInboxListPage(page: unknown): InboxListPage | undefined {
   if (!page || typeof page !== "object") {
@@ -72,14 +66,6 @@ export type InboxQueryScope = {
   timezoneOffsetMinutes?: number;
 };
 
-export function followedFeedsQueryKey() {
-  return ["feeds", "followed"] as const;
-}
-
-function followedFeedsUnreadCountsQueryKey() {
-  return ["feeds", "followed", "unread-counts"] as const;
-}
-
 function inboxItemsQueryKey({
   filter = DEFAULT_INBOX_FILTER,
   search,
@@ -90,8 +76,7 @@ function inboxItemsQueryKey({
   timezoneOffsetMinutes,
 }: InboxQueryScope = {}) {
   return [
-    "inbox",
-    "items",
+    ...queryKeys.inbox.items,
     INBOX_LIST_QUERY_VERSION,
     filter,
     search,
@@ -103,16 +88,8 @@ function inboxItemsQueryKey({
   ] as const;
 }
 
-function inboxDetailQueryKey(itemId: string | undefined) {
-  return ["inbox", "item-detail", itemId] as const;
-}
-
-export function inboxRecapQueryKey() {
-  return ["inbox", "recap"] as const;
-}
-
 function sidebarInboxSummaryQueryKey(timezoneOffsetMinutes = getTimezoneOffsetMinutes()) {
-  return ["sidebar", "inbox-summary", "global", timezoneOffsetMinutes] as const;
+  return [...queryKeys.sidebar.inboxSummary, "global", timezoneOffsetMinutes] as const;
 }
 
 export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
@@ -162,7 +139,7 @@ export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
 
 export function inboxDetailQueryOptions(itemId: string | undefined) {
   return {
-    queryKey: inboxDetailQueryKey(itemId),
+    queryKey: queryKeys.inbox.itemDetail(itemId),
     enabled: Boolean(itemId),
     retry: 1,
     queryFn: () => {
@@ -200,7 +177,7 @@ export async function prefetchInboxItemDetail(
 
 export function inboxRecapQueryOptions(limit = 5) {
   return {
-    queryKey: inboxRecapQueryKey(),
+    queryKey: queryKeys.inbox.recap,
     queryFn: () => getInboxRecap({ data: { limit } }),
     staleTime: QUERY_TIMES.countsStale,
     gcTime: QUERY_TIMES.listGc,
@@ -221,16 +198,6 @@ function sidebarInboxSummaryQueryOptions(
     gcTime: QUERY_TIMES.countsGc,
     refetchOnWindowFocus: true,
   };
-}
-
-export function invalidateFeedAndInboxQueries(queryClient: QueryClient) {
-  void queryClient.invalidateQueries({ queryKey: ["feeds"] });
-  void queryClient.invalidateQueries({ queryKey: followedFeedsQueryKey() });
-  void queryClient.invalidateQueries({ queryKey: followedFeedsUnreadCountsQueryKey() });
-  void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
-  void queryClient.invalidateQueries({ queryKey: inboxRecapQueryKey() });
-  void queryClient.invalidateQueries({ queryKey: ["inbox", "view-count"] });
-  void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
 }
 
 export async function prefetchInboxSegmentedControlTarget(

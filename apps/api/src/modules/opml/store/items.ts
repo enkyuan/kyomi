@@ -9,7 +9,7 @@ import {
   OPML_ITEM_MAX_ATTEMPTS,
   OPML_MATERIALIZE_CHUNK_SIZE,
 } from "../constants";
-import { decodeOpmlFailureCursor, encodeOpmlFailureCursor } from "../failure-cursor";
+import { decodeOpmlFailureCursor, encodeOpmlFailureCursor } from "../cursor/failure";
 import type { ParsedOpmlFeed } from "../types";
 
 const OPML_FAILURE_PAGE_DEFAULT_LIMIT = 50;

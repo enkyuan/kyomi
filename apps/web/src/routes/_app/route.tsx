@@ -1,5 +1,5 @@
 import { Outlet, createFileRoute, type ErrorComponentProps } from "@tanstack/react-router";
-import { AppShell } from "@/app/app-shell";
+import { AppShell } from "@/app/shell";
 import { RouteErrorPage } from "@/app/error";
 import { NotFoundPage } from "@/app/not-found";
 import { INBOX_RECOVERY_ACTION } from "@lib/recovery";

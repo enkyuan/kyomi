@@ -117,7 +117,7 @@ export const env = createEnv({
     /**
      * Pre-parse HTTP transport ceiling. Sized to accommodate the durable OPML plan's 32 MiB raw
      * XML route; article/content routes stay bounded by their own, much smaller field/aggregate
-     * budgets in @shared/http/content-budget regardless of this value.
+     * budgets in @shared/http/budget regardless of this value.
      */
     API_MAX_REQUEST_BODY_BYTES: z.coerce
       .number()

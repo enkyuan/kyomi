@@ -1,6 +1,6 @@
 import { SHELL_STATE_STORAGE_KEY } from "@lib/shell/keys";
 
-export type ShellStateSnapshot = {
+type ShellStateSnapshot = {
   inboxFilter?: string;
   inboxLayout?: string;
   selectedItemId?: string | null;

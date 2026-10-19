@@ -37,4 +37,4 @@ COPY packages/worker packages/worker
 WORKDIR /app/apps/api
 EXPOSE 8000
 
-CMD ["bun", "src/app/boot/entry.ts"]
+CMD ["bun", "src/app/boot/server.ts"]

@@ -18,10 +18,6 @@ export type SubscribedFeedListItemDto = {
   subscribedAt: string;
 };
 
-export type SubscribedFeedsResponseDto = {
-  items: SubscribedFeedListItemDto[];
-};
-
 /** Response for `POST /feeds` and `POST /feeds/:feedId/subscribe`. */
 export type FeedSubscribeResultDto = {
   feedId: string;

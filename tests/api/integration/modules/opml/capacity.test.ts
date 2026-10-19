@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import type { db } from "@adapters/db/client";
 import { parseOpmlDocument } from "@modules/opml/parse";
 import { insertOpmlImportItems, opmlImportItemId } from "@modules/opml/store";
-import { subscribeKnownOpmlItems } from "@modules/opml/known-feeds";
+import { subscribeKnownOpmlItems } from "@modules/opml/known";
 import { buildOpml } from "./fixtures";
 
 /**

@@ -6,6 +6,7 @@ import {
   buildArticleReaderDto,
   buildExtractedReaderViewFromDb,
   buildStoredReaderContent,
+  normalizeMarkdownFeedArtifacts,
   type ExtractedContentStatus,
 } from "@modules/articles/reader/content";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./constants";
@@ -43,7 +44,8 @@ export function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDeta
     legacyContent: row.content,
     contentHtml: row.contentHtml,
     contentText: row.contentText,
-    contentMarkdown: row.contentMarkdown,
+    contentMarkdown:
+      row.contentMarkdown === null ? null : normalizeMarkdownFeedArtifacts(row.contentMarkdown),
     contentStatus: row.contentStatus as ArticleDetailDto["contentStatus"] | null,
     contentSource: row.contentSource as ArticleDetailDto["contentSource"] | null,
     extractionErrorCode: row.extractionErrorCode,
@@ -71,7 +73,8 @@ export function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDeta
     imageUrl: null,
     contentHtml: row.contentHtml,
     contentText: row.contentText,
-    contentMarkdown: row.contentMarkdown,
+    contentMarkdown:
+      row.contentMarkdown === null ? null : normalizeMarkdownFeedArtifacts(row.contentMarkdown),
     contentStatus: (row.contentStatus as ArticleDetailDto["contentStatus"]) ?? "pending",
     contentSource: (row.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
     extractionErrorCode: row.extractionErrorCode,

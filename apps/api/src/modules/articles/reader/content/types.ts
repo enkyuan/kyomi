@@ -13,8 +13,6 @@ export type ArticleContentSource =
 
 export type ArticleReaderStatus = Exclude<ArticleContentStatus, "pending">;
 
-export type ArticleReaderSource = ArticleContentSource;
-
 export type ArticleReaderBodyKind = "html" | "markdown" | "text" | "fallback";
 
 export type ArticleReaderFallbackReason = "extraction_failed" | "timeout" | "missing_content";

@@ -1,4 +1,4 @@
-import type { ArticleSort } from "@modules/articles/query";
+import type { ArticleSort } from "@modules/articles/params";
 import type { ArticleListItemDto } from "@modules/articles/types";
 
 export type RecentlyViewedItem = Omit<ArticleListItemDto, "lastViewedAt"> & {

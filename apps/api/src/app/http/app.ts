@@ -1,0 +1,22 @@
+import { Elysia } from "elysia";
+import { registerErrorHandlers } from "../setup/errors";
+import { registerLifecycle } from "../setup/lifecycle";
+import { registerPlugins } from "../setup/plugins";
+import { registerRoutes } from "./router";
+
+/**
+ * HTTP API on Bun/Elysia — global plugins, lifecycle, errors, route tree.
+ * global plugins → lifespan → exception handling → router tree.
+ */
+export function createApp() {
+  const app = new Elysia({
+    name: "@kyomi/api",
+  });
+
+  registerPlugins(app);
+  registerLifecycle(app);
+  registerErrorHandlers(app);
+  registerRoutes(app);
+
+  return app;
+}

@@ -1,7 +1,7 @@
 import type { Elysia } from "elysia";
-import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/schema-guard";
+import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/guard";
 import { env } from "@config/env";
-import { shutdownAdapters } from "@adapters/lifecycle";
+import { shutdownAdapters } from "@adapters/shutdown";
 import { logger } from "@adapters/logger";
 import { parseFeedAdminUserIds } from "@modules/feeds/admin/allowlist";
 

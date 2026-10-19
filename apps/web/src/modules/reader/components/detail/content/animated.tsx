@@ -1,7 +1,14 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+  springTransition,
+} from "@kyomi/ui/lib/motion";
 
 const ARTICLE_REEL_OFFSET = 56;
 
@@ -30,9 +37,7 @@ export function AnimatedContent({
   children: ReactNode;
 }) {
   const prefersReducedMotion = useReducedMotion();
-  const articleReelTransition = prefersReducedMotion
-    ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.3, bounce: 0 };
+  const articleReelTransition = springTransition("emphasized", prefersReducedMotion);
 
   return (
     <LazyMotion features={domAnimation}>

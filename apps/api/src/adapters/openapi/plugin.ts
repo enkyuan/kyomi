@@ -1,6 +1,6 @@
 import { swagger } from "@elysiajs/swagger";
 import { Elysia } from "elysia";
-import { API_PACKAGE_VERSION } from "@config/package-info";
+import { API_PACKAGE_VERSION } from "@config/version";
 
 export const openapiPlugin = new Elysia({
   name: "openapi.plugin",

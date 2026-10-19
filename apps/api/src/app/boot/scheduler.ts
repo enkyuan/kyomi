@@ -1,8 +1,8 @@
 import { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { closeRedis, getRedis } from "@adapters/redis";
-import { runImportDispatcherLoop } from "../jobs/import-dispatcher";
-import { runFeedRefreshSchedulerLoop } from "../jobs/refresh-scheduler";
+import { runImportDispatcherLoop } from "../jobs/dispatcher";
+import { runFeedRefreshSchedulerLoop } from "../jobs/scheduler";
 
 const controller = new AbortController();
 

@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 import { QueryClient } from "@tanstack/react-query";
-import type { InboxListPage } from "@modules/inbox/queries/options";
+import type { InboxListPage } from "@modules/articles/lib/api";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import { dropCorruptInboxItemQueries, prepareHotCacheState } from "@lib/query/cache";
 

@@ -8,9 +8,7 @@
       "@modules/*": ["./src/modules/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@integrations/*": ["./src/integrations/*"],
-      "@lib/*": ["./src/lib/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@kyomi/ui/*": ["../../packages/ui/src/*"]
+      "@lib/*": ["./src/lib/*"]
     },
     "types": ["vite/client", "bun"],
     "noUnusedParameters": false

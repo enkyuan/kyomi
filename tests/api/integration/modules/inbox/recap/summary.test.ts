@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { createApp } from "@app/http/create-app";
+import { createApp } from "@app/http/app";
 import { normalizeRecapLimitForTest } from "@modules/inbox/recap/summary";
 
 describe("inbox recap summary", () => {

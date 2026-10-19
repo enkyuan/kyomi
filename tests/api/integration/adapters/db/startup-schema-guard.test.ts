@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { findMissingRequiredIndexes, findMissingRequiredTables } from "@adapters/db/schema-guard";
+import { findMissingRequiredIndexes, findMissingRequiredTables } from "@adapters/db/guard";
 
 describe("findMissingRequiredTables", () => {
   test("returns missing sentinel tables", () => {

@@ -1,9 +1,9 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
-import { uuidParam } from "@shared/http/v1/stub";
-import * as dto from "../dto";
-import { markAllArticlesReadInFeed } from "./status";
+import { uuidParam } from "@shared/http/v1/params";
+import * as dto from "../schemas";
+import { markAllArticlesReadInFeed } from "./mark";
 
 export function registerFeedReadRoutes(app: Elysia) {
   return app.put(
