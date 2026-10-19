@@ -7,17 +7,19 @@ import {
   resetPrototypeCache,
   type EmbeddingClassifierConfig,
 } from "@kyomi/worker";
+import { FAKE_CATEGORY_MODEL } from "./fake-category-model";
 
 const originalFetch = globalThis.fetch;
 const FAKE_CONFIG: EmbeddingClassifierConfig = {
   apiKey: "test-key",
   apiUrl: "https://fake-embeddings.test/embed",
+  categoryModel: FAKE_CATEGORY_MODEL,
 };
 
 /**
- * Deterministic 3-dimensional "embeddings" — real BGE-M3 vectors are much higher-dimensional,
- * but cosine similarity is dimension-agnostic, so a small hand-computable space is enough to
- * verify the classifier's scoring/threshold/fallback logic without needing real semantics.
+ * Deterministic 3-dimensional "embeddings" — real BGE-M3 vectors are much higher-dimensional, but
+ * a small hand-computable space, with FAKE_CATEGORY_MODEL as the article head, is enough to verify
+ * the scoring, threshold, and fallback logic without needing real semantics.
  */
 const UNIT_X = [1, 0, 0];
 const UNIT_Y = [0, 1, 0];
@@ -109,260 +111,161 @@ describe("embedTexts", () => {
   });
 });
 
-describe("classifyItemEmbedding", () => {
-  test("batches multiple item texts in one embeddings request after prototypes are cached", async () => {
-    const inputs: string[][] = [];
-    globalThis.fetch = (async (_url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      inputs.push(body.input);
-      if (inputs.length === 1) {
-        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
-      }
+/** Answers every embeddings request with `vectorFor(text)` and records each request's inputs. */
+function fakeWorker(vectorFor: (text: string, index: number, inputs: string[]) => number[]) {
+  const requests: string[][] = [];
+  globalThis.fetch = (async (_url: string, init: RequestInit) => {
+    const body = JSON.parse(init.body as string) as { input: string[] };
+    requests.push(body.input);
+    return new Response(
+      JSON.stringify({
+        data: body.input.map((text, index) => ({
+          embedding: vectorFor(text, index, body.input),
+          index,
+        })),
+      }),
+      { status: 200 },
+    );
+  }) as unknown as typeof fetch;
+  return requests;
+}
 
-      expect(body.input).toEqual(["First item. Detailed body", "Second item. Other body"]);
-      return new Response(
-        JSON.stringify({
-          data: [
-            { embedding: UNIT_X, index: 0 },
-            { embedding: UNIT_Y, index: 1 },
-          ],
-        }),
-        { status: 200 },
-      );
-    }) as unknown as typeof fetch;
+const ARTICLE = {
+  feedTitle: "Hacker News",
+  feedDescription: null,
+  feedUrl: "https://news.ycombinator.com/rss",
+  feedSiteUrl: "https://news.ycombinator.com",
+  sourceKind: "rss",
+  itemTitle: "Some article",
+  itemSummary: null,
+  itemUrl: null,
+};
+
+describe("classifyItemEmbedding", () => {
+  test("embeds a batch of articles in one request, with no category-card prototypes", async () => {
+    const requests = fakeWorker((text) => (text.startsWith("First") ? UNIT_X : ORTHOGONAL_Z));
 
     const result = await classifyItemEmbeddings(
       [
         {
+          ...ARTICLE,
           id: "item-1",
-          feedTitle: "Feed",
-          feedDescription: null,
-          feedUrl: "https://example.com/feed",
-          feedSiteUrl: "https://example.com",
-          sourceKind: "rss",
           itemTitle: "First item",
-          itemSummary: null,
           itemContentText: "Detailed body",
-          itemUrl: "https://example.com/1",
           maxLabels: 1,
         },
         {
+          ...ARTICLE,
           id: "item-2",
-          feedTitle: "Feed",
-          feedDescription: null,
-          feedUrl: "https://example.com/feed",
-          feedSiteUrl: "https://example.com",
-          sourceKind: "rss",
           itemTitle: "Second item",
-          itemSummary: null,
           itemContentText: "Other body",
-          itemUrl: "https://example.com/2",
           maxLabels: 1,
         },
       ],
       FAKE_CONFIG,
     );
 
-    expect(inputs).toHaveLength(2);
+    expect(requests).toEqual([["First item. Detailed body", "Second item. Other body"]]);
     expect(result.get("item-1")?.categories[0]?.label).toBe("Software Engineering");
     expect(result.get("item-2")?.categories).toEqual([]);
   });
 
-  test("returns categories above the similarity threshold, sorted by score", async () => {
-    // First call embeds all category-card prototypes; second call embeds the item text.
-    // CATEGORY_CARDS order is deterministic (defined in category-cards.ts), so the first
-    // card's prototypes get UNIT_X (perfect match), everything else gets ORTHOGONAL_Z (no
-    // match) — the item embedding is UNIT_X, so only the first card should score above 0.
-    globalThis.fetch = (async (url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = body.input.length > 1;
-      if (isPrototypeCall) {
-        // First 4 prototypes (Software Engineering's description + 3 titles) get UNIT_X;
-        // everything else gets an orthogonal vector so it never matches.
-        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
-      }
-      return new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
-        status: 200,
-      });
-    }) as unknown as typeof fetch;
+  test("returns the head's top category with its probability as confidence", async () => {
+    fakeWorker(() => UNIT_X);
 
-    const result = await classifyItemEmbedding(
-      {
-        feedTitle: "Hacker News",
-        feedDescription: null,
-        feedUrl: "https://news.ycombinator.com/rss",
-        feedSiteUrl: "https://news.ycombinator.com",
-        sourceKind: "rss",
-        itemTitle: "Some article",
-        itemSummary: null,
-        itemUrl: null,
-      },
-      FAKE_CONFIG,
-    );
+    const result = await classifyItemEmbedding(ARTICLE, FAKE_CONFIG);
 
     expect(result.categories).toHaveLength(1);
     expect(result.categories[0]?.label).toBe("Software Engineering");
     expect(result.categories[0]?.confidence).toBeGreaterThan(0.9);
   });
 
-  test("abstains (returns no categories) when nothing clears the similarity threshold", async () => {
-    globalThis.fetch = (async (url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = body.input.length > 1;
-      if (isPrototypeCall) {
-        const embeddings = body.input.map(() => UNIT_Y);
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
-      }
-      // Item embedding orthogonal to every prototype: cosine similarity is 0, well below
-      // the item threshold.
-      return new Response(JSON.stringify({ data: [{ embedding: ORTHOGONAL_Z, index: 0 }] }), {
-        status: 200,
-      });
-    }) as unknown as typeof fetch;
+  test("abstains when the head puts its weight on no category", async () => {
+    fakeWorker(() => ORTHOGONAL_Z);
 
-    const result = await classifyItemEmbedding(
-      {
-        feedTitle: "Hacker News",
-        feedDescription: null,
-        feedUrl: "https://news.ycombinator.com/rss",
-        feedSiteUrl: "https://news.ycombinator.com",
-        sourceKind: "rss",
-        itemTitle: "Some unrelated article",
-        itemSummary: null,
-        itemUrl: null,
-      },
-      FAKE_CONFIG,
-    );
+    const result = await classifyItemEmbedding(ARTICLE, FAKE_CONFIG);
 
     // Item-level classification must be able to abstain entirely — the same discipline the
     // keyword classifier's `allowGeneralFallback: false` enforces at item level.
     expect(result.categories).toEqual([]);
   });
 
-  test("caches category prototypes across calls with the same config", async () => {
-    let prototypeCallCount = 0;
-    globalThis.fetch = (async (url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = body.input.length > 1;
-      if (isPrototypeCall) {
-        prototypeCallCount += 1;
-        const embeddings = body.input.map(() => ORTHOGONAL_Z);
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
-      }
-      return new Response(JSON.stringify({ data: [{ embedding: ORTHOGONAL_Z, index: 0 }] }), {
-        status: 200,
-      });
-    }) as unknown as typeof fetch;
+  test("admits a second category only within the secondary margin of the first", async () => {
+    // Close to both the Software Engineering and Technology axes: about 0.57 and 0.42.
+    fakeWorker(() => [1, 0.95, 0]);
 
-    const input = {
-      feedTitle: "Hacker News",
-      feedDescription: null,
-      feedUrl: "https://news.ycombinator.com/rss",
-      feedSiteUrl: "https://news.ycombinator.com",
-      sourceKind: "rss",
-      itemTitle: "First article",
-      itemSummary: null,
-      itemUrl: null,
-    };
-    await classifyItemEmbedding(input, FAKE_CONFIG);
-    await classifyItemEmbedding({ ...input, itemTitle: "Second article" }, FAKE_CONFIG);
-
-    // Prototypes should only be embedded once across both calls, not once per call.
-    expect(prototypeCallCount).toBe(1);
-  });
-
-  test("does not share cached category prototypes across API keys", async () => {
-    let prototypeCallCount = 0;
-    globalThis.fetch = (async (url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = body.input.length > 1;
-      if (isPrototypeCall) {
-        prototypeCallCount += 1;
-        const embeddings = body.input.map(() => ORTHOGONAL_Z);
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
-      }
-      return new Response(JSON.stringify({ data: [{ embedding: ORTHOGONAL_Z, index: 0 }] }), {
-        status: 200,
-      });
-    }) as unknown as typeof fetch;
-
-    const input = {
-      feedTitle: "Hacker News",
-      feedDescription: null,
-      feedUrl: "https://news.ycombinator.com/rss",
-      feedSiteUrl: "https://news.ycombinator.com",
-      sourceKind: "rss",
-      itemTitle: "First article",
-      itemSummary: null,
-      itemUrl: null,
-    };
-    await classifyItemEmbedding(input, {
+    const wide = await classifyItemEmbedding(ARTICLE, {
       ...FAKE_CONFIG,
-      apiKey: "first-account-key",
+      itemMinProbability: 0.1,
+      itemSecondaryMargin: 0.3,
     });
-    await classifyItemEmbedding(input, {
+    const narrow = await classifyItemEmbedding(ARTICLE, {
       ...FAKE_CONFIG,
-      apiKey: "second-account-key",
+      itemMinProbability: 0.1,
+      itemSecondaryMargin: 0.05,
     });
 
-    expect(prototypeCallCount).toBe(2);
+    expect(wide.categories.map((category) => category.label)).toEqual([
+      "Software Engineering",
+      "Technology",
+    ]);
+    expect(narrow.categories.map((category) => category.label)).toEqual(["Software Engineering"]);
+  });
+});
+
+describe("category prototypes", () => {
+  const FEED = {
+    feedTitle: "Some feed",
+    feedDescription: null,
+    feedUrl: "https://example.com/rss",
+    feedSiteUrl: "https://example.com",
+    sourceKind: "rss",
+  };
+  // The first 4 prototypes (Software Engineering's description and titles) match UNIT_X.
+  const prototypesThenUnitX = (_text: string, index: number, inputs: string[]) =>
+    inputs.length > 1 ? (index < 4 ? UNIT_X : ORTHOGONAL_Z) : UNIT_X;
+
+  test("are embedded once across calls with the same config", async () => {
+    const requests = fakeWorker(prototypesThenUnitX);
+
+    await classifyFeedEmbedding(FEED, FAKE_CONFIG);
+    await classifyFeedEmbedding({ ...FEED, feedTitle: "Another feed" }, FAKE_CONFIG);
+
+    expect(requests.filter((inputs) => inputs.length > 1)).toHaveLength(1);
   });
 
-  test("evicts failed prototype cache entries so a later call can retry", async () => {
-    let prototypeCallCount = 0;
-    let failNextPrototypeCall = true;
-    globalThis.fetch = (async (url: string, init: RequestInit) => {
+  test("are not shared across API keys", async () => {
+    const requests = fakeWorker(prototypesThenUnitX);
+
+    await classifyFeedEmbedding(FEED, { ...FAKE_CONFIG, apiKey: "first-account-key" });
+    await classifyFeedEmbedding(FEED, { ...FAKE_CONFIG, apiKey: "second-account-key" });
+
+    expect(requests.filter((inputs) => inputs.length > 1)).toHaveLength(2);
+  });
+
+  test("are loaded again after a failed load", async () => {
+    let failNextPrototypeLoad = true;
+    let prototypeLoads = 0;
+    globalThis.fetch = (async (_url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = body.input.length > 1;
-      if (isPrototypeCall) {
-        prototypeCallCount += 1;
-        if (failNextPrototypeCall) {
-          failNextPrototypeCall = false;
+      if (body.input.length > 1) {
+        prototypeLoads += 1;
+        if (failNextPrototypeLoad) {
+          failNextPrototypeLoad = false;
           return new Response("temporary outage", { status: 503 });
         }
-        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
       }
-      return new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
-        status: 200,
-      });
+      const data = body.input.map((text, index) => ({
+        embedding: prototypesThenUnitX(text, index, body.input),
+        index,
+      }));
+      return new Response(JSON.stringify({ data }), { status: 200 });
     }) as unknown as typeof fetch;
 
-    const input = {
-      feedTitle: "Hacker News",
-      feedDescription: null,
-      feedUrl: "https://news.ycombinator.com/rss",
-      feedSiteUrl: "https://news.ycombinator.com",
-      sourceKind: "rss",
-      itemTitle: "Some article",
-      itemSummary: null,
-      itemUrl: null,
-    };
+    await expect(classifyFeedEmbedding(FEED, FAKE_CONFIG)).rejects.toThrow(/503/);
+    const result = await classifyFeedEmbedding(FEED, FAKE_CONFIG);
 
-    await expect(classifyItemEmbedding(input, FAKE_CONFIG)).rejects.toThrow(/503/);
-    const result = await classifyItemEmbedding(input, FAKE_CONFIG);
-
-    expect(prototypeCallCount).toBe(2);
+    expect(prototypeLoads).toBe(2);
     expect(result.categories[0]?.label).toBe("Software Engineering");
   });
 });

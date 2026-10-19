@@ -6,8 +6,11 @@ import {
 } from "@kyomi/worker";
 import { activeEmbeddingModelId, embeddingClassifierConfig } from "@config/embeddings";
 
-// Rows name the card revision and the calibrated selection rule they were written under.
-const MODEL_ID = `${EMBEDDING_CLASSIFIER_MODEL_ID}/${CATEGORY_CARDS_VERSION}/item-0.41-feed-0.5-margin-0.02`;
+// Rows name the model, the article head, the card revision, and the selection rule they were
+// written under: `<model>/<head>/<cards>/<rule>`.
+const MODEL_ID_PATTERN = new RegExp(
+  `^${EMBEDDING_CLASSIFIER_MODEL_ID.replaceAll("/", "\\/")}\\/[^/]+\\/${CATEGORY_CARDS_VERSION}\\/item-`,
+);
 
 const WORKER_ENV = {
   CLOUDFLARE_EMBEDDINGS_URL: "https://kyomi-embeddings.example.workers.dev/embed",
@@ -26,13 +29,13 @@ describe("embeddingClassifierConfig", () => {
       apiKey: "cloudflare-token",
       apiUrl: "https://kyomi-embeddings.example.workers.dev/embed",
     });
-    expect(embeddingModelInfo(config!).modelId).toBe(MODEL_ID);
+    expect(embeddingModelInfo(config!).modelId).toMatch(MODEL_ID_PATTERN);
   });
 
   test("gives rows written under another selection rule a different model id", () => {
     const config = embeddingClassifierConfig(undefined, WORKER_ENV)!;
 
-    expect(embeddingModelInfo({ ...config, itemSimilarityThreshold: 0.6 }).modelId).not.toBe(
+    expect(embeddingModelInfo({ ...config, itemMinProbability: 0.99 }).modelId).not.toBe(
       embeddingModelInfo(config).modelId,
     );
   });
@@ -62,7 +65,7 @@ describe("embeddingClassifierConfig", () => {
 
 describe("activeEmbeddingModelId", () => {
   test("names the model id the configured Worker writes", () => {
-    expect(activeEmbeddingModelId(WORKER_ENV)).toBe(MODEL_ID);
+    expect(activeEmbeddingModelId(WORKER_ENV)).toMatch(MODEL_ID_PATTERN);
   });
 
   test("is undefined when no Worker is configured", () => {

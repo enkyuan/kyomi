@@ -14,6 +14,7 @@
     "category:backfill": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/backfill.ts",
     "category:report": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/report.ts",
     "category:audit": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/audit.ts",
+    "category:train": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/train.ts",
     "content:sanitizer": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/sanitizer.ts",
     "fmt": "oxfmt src",
     "fmt:check": "oxfmt --check src",

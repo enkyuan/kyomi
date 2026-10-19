@@ -40,16 +40,27 @@ export {
   classifyItemEmbedding,
   classifyItemEmbeddings,
   embeddingModelInfo,
+  embedItemVectors,
   embedTexts,
   resetPrototypeCache,
   scoreFeedEmbedding,
   scoreItemEmbeddings,
   selectCategories,
+  DEFAULT_FEED_SELECTION_RULE,
+  DEFAULT_ITEM_SELECTION_RULE,
   type CategoryScore,
   type CategorySelectionRule,
   type EmbeddingClassifierConfig,
   type FeedItemEmbeddingBatchInput,
 } from "./embeddings";
+export {
+  decodeCategoryModel,
+  encodeCategoryModel,
+  NO_CATEGORY_CLASS,
+  scoreWithCategoryModel,
+  type CategoryModel,
+  type EncodedCategoryModel,
+} from "./category-model";
 export { buildArticleIdentity, normalizeArticleUrl } from "../../lib/article-identity";
 export { decodeHtmlEntities } from "../../lib/html-entities";
 export type {

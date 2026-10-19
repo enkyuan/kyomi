@@ -16,14 +16,15 @@ import {
   summarizeBackfill,
   syncsItemLabels,
 } from "../../../../../apps/api/src/modules/catalog/backfill";
+import { FAKE_CATEGORY_MODEL } from "../feeds/refresh/fake-category-model";
 
 const originalFetch = globalThis.fetch;
 const FAKE_EMBEDDING_CONFIG: EmbeddingClassifierConfig = {
   apiKey: "test-key",
   apiUrl: "https://fake-embeddings.test/embed",
+  categoryModel: FAKE_CATEGORY_MODEL,
 };
 const UNIT_X = [1, 0, 0];
-const UNIT_Y = [0, 1, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
 
 beforeEach(() => {
@@ -247,20 +248,11 @@ describe("category backfill script", () => {
     const itemRequests: string[][] = [];
     globalThis.fetch = (async (url: string, init: RequestInit) => {
       const body = JSON.parse(init.body as string) as { input: string[] };
-      const isPrototypeCall = itemRequests.length === 0 && body.input.length > 2;
-      if (isPrototypeCall) {
-        itemRequests.push([]);
-        const embeddings = body.input.map((_, i) => (i < 4 ? UNIT_X : ORTHOGONAL_Z));
-        return new Response(
-          JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-          { status: 200 },
-        );
-      }
       itemRequests.push(body.input);
       return new Response(
         JSON.stringify({
           data: body.input.map((_, index) => ({
-            embedding: index === 0 ? UNIT_X : UNIT_Y,
+            embedding: index === 0 ? UNIT_X : ORTHOGONAL_Z,
             index,
           })),
         }),
@@ -297,7 +289,7 @@ describe("category backfill script", () => {
       FAKE_EMBEDDING_CONFIG,
     );
 
-    expect(itemRequests.slice(1)).toHaveLength(1);
+    expect(itemRequests).toHaveLength(1);
     expect(labelsById.get("item-1")?.map((category) => category.label)).toEqual([
       "Software Engineering",
     ]);
