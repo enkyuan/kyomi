@@ -28,8 +28,10 @@ import { CLASSIFIER_EVAL_STORED_CASES } from "./classifier-eval-stored-fixture";
 /**
  * Live eval of the embedding classifier as production configures it for the Cloudflare BGE-M3
  * Worker: the provider's own cutoffs and secondary-label margin from `embeddingClassifierConfig`,
- * and MAX_CLASSIFIER_LABELS chip slots. Runs when the Worker credentials are set or the offline
- * embeddings cache (see embedding-cache.ts) already holds every text, and is skipped otherwise.
+ * and MAX_CLASSIFIER_LABELS chip slots. Runs when the Worker credentials are set, or from the
+ * offline embeddings cache alone (see embedding-cache.ts) when `CLASSIFIER_EVAL_OFFLINE=1` is set,
+ * and is skipped otherwise. The offline run is opt-in because a cache left over from before a
+ * fixture edit is missing texts, and a cache miss without credentials fails the run.
  *
  * The floors are a ratchet against a provider, card, or threshold change that silently stops
  * labeling articles: the earlier 0.6 cutoff, for example, left 99% of stored articles
@@ -38,7 +40,8 @@ import { CLASSIFIER_EVAL_STORED_CASES } from "./classifier-eval-stored-fixture";
 
 const upstream = embeddingsUpstreamFromEnv();
 const cacheFile = embeddingsCacheFile("eval");
-const enabled = Boolean(upstream) || existsSync(cacheFile);
+const enabled =
+  Boolean(upstream) || (process.env.CLASSIFIER_EVAL_OFFLINE === "1" && existsSync(cacheFile));
 const config = embeddingClassifierConfig(undefined, {
   CLOUDFLARE_EMBEDDINGS_URL: upstream?.url ?? "https://embeddings-cache.invalid/embed",
   CLOUDFLARE_EMBEDDINGS_TOKEN: upstream?.token ?? "embeddings-cache",
@@ -54,10 +57,10 @@ const originalFetch = globalThis.fetch;
 
 async function runEmbeddingClassifier(cases: readonly ClassifierEvalCase[]): Promise<Prediction[]> {
   const inputs = cases.map((case_) => ({ ...case_, maxLabels: MAX_CLASSIFIER_LABELS }));
-  const [classifications, scores] = await Promise.all([
-    classifyItemEmbeddings(inputs, config),
-    scoreItemEmbeddings(inputs, config),
-  ]);
+  // In sequence, not in parallel: the cache doesn't coalesce concurrent misses, so the scoring
+  // pass for the mismatch log reads what classification already embedded.
+  const classifications = await classifyItemEmbeddings(inputs, config);
+  const scores = await scoreItemEmbeddings(inputs, config);
   return cases.map((case_) => {
     const predicted = (classifications.get(case_.id)?.categories ?? []).map((c) => c.label);
     if ([...case_.expected].sort().join("|") !== [...predicted].sort().join("|")) {
