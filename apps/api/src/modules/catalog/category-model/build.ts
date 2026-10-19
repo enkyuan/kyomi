@@ -114,6 +114,14 @@ export async function buildCategoryModel(input: {
       vectors.set(id, vector);
     }
   }
+  // embedItemVectors keeps the batches that succeed; a model trained on that subset would ship
+  // silently skewed, so a build needs every loaded article embedded.
+  const unembedded = articles.length - vectors.size;
+  if (unembedded > 0) {
+    throw new Error(
+      `${unembedded} of ${articles.length} training articles failed to embed; retry the build`,
+    );
+  }
   const feedIdOf = new Map(articles.map((article) => [article.id, article.feedId]));
   const examples = trainingLabels.flatMap((label) => {
     const vector = vectors.get(label.id);
@@ -138,7 +146,7 @@ export async function buildCategoryModel(input: {
     model,
     report,
     examples: examples.length,
-    missing: trainingLabels.length - examples.length,
+    missing: trainingLabels.length - articles.length,
   };
 }
 
