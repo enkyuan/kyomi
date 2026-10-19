@@ -30,12 +30,21 @@ describe("embeddingClassifierConfig", () => {
   test("stamps Cloudflare rows with the provider model plus the card revision", () => {
     const config = embeddingClassifierConfig(undefined, CLOUDFLARE_ENV);
 
-    expect(config).toEqual({
+    expect(config).toMatchObject({
       apiKey: "cloudflare-token",
       apiUrl: "https://kyomi-embeddings.example.workers.dev/embed",
       model: CLOUDFLARE_EMBEDDING_MODEL,
     });
     expect(embeddingModelInfo(config!).modelId).toBe(CLOUDFLARE_MODEL_ID);
+  });
+
+  test("gives BGE-M3 its own calibrated cutoffs and secondary-label margin", () => {
+    const config = embeddingClassifierConfig(undefined, CLOUDFLARE_ENV);
+
+    // BGE-M3 scores real articles around 0.40-0.55; the 0.6 Voyage default labels almost none.
+    expect(config?.itemSimilarityThreshold).toBeLessThan(0.6);
+    expect(config?.feedSimilarityThreshold).toBeLessThan(0.6);
+    expect(config?.secondaryLabelMargin).toBeGreaterThan(0);
   });
 
   test("keeps one model id whether or not a caller sets a timeout", () => {
@@ -59,7 +68,7 @@ describe("embeddingClassifierConfig", () => {
     expect(config?.apiKey).toBe("cloudflare-token");
   });
 
-  test("uses Voyage, with the card revision in its id, when only its key is set", () => {
+  test("uses Voyage, with the card revision in its id and the default cutoffs, when only its key is set", () => {
     const config = embeddingClassifierConfig(undefined, VOYAGE_ENV);
 
     expect(config).toEqual({ apiKey: "voyage-key" });

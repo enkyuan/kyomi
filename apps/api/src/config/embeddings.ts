@@ -5,6 +5,19 @@ import {
 } from "@kyomi/worker";
 import { env } from "@config/env";
 
+/**
+ * BGE-M3 scores real articles at about 0.40-0.55 with a median top-two gap of 0.025, so the 0.6
+ * defaults in @kyomi/worker (tuned for Voyage on headline fixtures) leave ~99% of articles
+ * unlabeled. Calibrated on the stored-article set with
+ * tests/api/integration/modules/feeds/refresh/classifier-eval-sweep.test.ts; re-run that sweep
+ * when the model or category cards change.
+ */
+const CLOUDFLARE_BGE_M3_THRESHOLDS = {
+  itemSimilarityThreshold: 0.41,
+  feedSimilarityThreshold: 0.5,
+  secondaryLabelMargin: 0.02,
+} satisfies Partial<EmbeddingClassifierConfig>;
+
 type EmbeddingProviderEnv = Pick<
   typeof env,
   "CLOUDFLARE_EMBEDDINGS_URL" | "CLOUDFLARE_EMBEDDINGS_TOKEN" | "VOYAGE_API_KEY"
@@ -29,6 +42,7 @@ export function embeddingClassifierConfig(
       apiKey: cloudflareToken,
       apiUrl: cloudflareUrl,
       model: CLOUDFLARE_EMBEDDING_MODEL,
+      ...CLOUDFLARE_BGE_M3_THRESHOLDS,
       ...timeout,
     };
   }
