@@ -1,6 +1,8 @@
 import { createHash } from "node:crypto";
 import { MISCELLANEOUS_CATEGORY_LABEL } from "@kyomi/db";
 import { CATEGORY_CARDS, CATEGORY_CARDS_VERSION } from "./category-cards";
+import { decodeCategoryModel, scoreWithCategoryModel, type CategoryModel } from "./category-model";
+import { CATEGORY_MODEL_WEIGHTS } from "./category-model-weights";
 import type { ClassifierModelInfo } from "./categories";
 import {
   CLASSIFIER_TAXONOMY_VERSION,
@@ -22,15 +24,22 @@ export type EmbeddingClassifierConfig = {
   apiUrl: string;
   /** Optional per-request timeout for best-effort callers that must not block user flows. */
   timeoutMs?: number;
-  /** Overrides the calibrated article cutoff; for evals and tests. */
-  itemSimilarityThreshold?: number;
+  /** Overrides the trained article head; for tests. */
+  categoryModel?: CategoryModel;
+  /** Overrides the article head's minimum probability; for evals and tests. */
+  itemMinProbability?: number;
+  /** Overrides the article head's secondary-label margin; for evals and tests. */
+  itemSecondaryMargin?: number;
   /** Overrides the calibrated feed cutoff; for evals and tests. */
   feedSimilarityThreshold?: number;
-  /** Overrides the calibrated secondary-label margin; for evals and tests. */
-  secondaryLabelMargin?: number;
+  /** Overrides the calibrated feed secondary-label margin; for evals and tests. */
+  feedSecondaryMargin?: number;
 };
 
-/** A category's similarity to a text: its best cosine over the category's prototypes. */
+/**
+ * A category's score for a text, best first: the trained head's probability for an article, the
+ * best cosine over the category's card prototypes for a feed.
+ */
 export type CategoryScore = { label: string; score: number };
 
 export type CategorySelectionRule = {
@@ -38,14 +47,15 @@ export type CategorySelectionRule = {
   secondaryMargin?: number;
 };
 
-// Calibrated for BGE-M3 on the stored-article set with
-// tests/api/integration/modules/feeds/refresh/classifier-eval-sweep.test.ts; re-run that sweep when
-// the model or category cards change. BGE-M3 scores real articles at about 0.40-0.55 with a median
-// top-two gap of 0.025, so a second category needs to sit within a small margin of the first:
-// 0.02 halves the share of two-label articles for about six points of recall.
-const ITEM_SIMILARITY_THRESHOLD = 0.41;
+// Articles: chosen by 5-fold cross-validation on the training articles behind the head (see
+// apps/api/src/modules/catalog/category-model). An article takes its top category when the head
+// gives it at least ITEM_MIN_PROBABILITY, and a second one only within ITEM_SECONDARY_MARGIN of it.
+const ITEM_MIN_PROBABILITY = 0.18;
+const ITEM_SECONDARY_MARGIN = 0.4;
+// Feeds still score against the category cards: calibrated for BGE-M3 cosines with
+// tests/api/integration/modules/feeds/refresh/classifier-eval-sweep.test.ts.
 const FEED_SIMILARITY_THRESHOLD = 0.5;
-const SECONDARY_LABEL_MARGIN = 0.02;
+const FEED_SECONDARY_MARGIN = 0.02;
 // Inputs per embeddings request. Larger batches go out as several requests, so a slow or failed
 // request costs one chunk and every request stays inside its timeout.
 const EMBEDDING_REQUEST_MAX_INPUTS = 128;
@@ -208,33 +218,53 @@ function cacheKeyFor(config: EmbeddingClassifierConfig): string {
   return `${config.apiUrl}::${apiKeyFingerprint(config.apiKey)}`;
 }
 
+/** The production article and feed rules, for evals that replay them. */
+export const DEFAULT_ITEM_SELECTION_RULE: CategorySelectionRule = {
+  minSimilarity: ITEM_MIN_PROBABILITY,
+  secondaryMargin: ITEM_SECONDARY_MARGIN,
+};
+export const DEFAULT_FEED_SELECTION_RULE: CategorySelectionRule = {
+  minSimilarity: FEED_SIMILARITY_THRESHOLD,
+  secondaryMargin: FEED_SECONDARY_MARGIN,
+};
+
 function itemSelectionRule(config: EmbeddingClassifierConfig): CategorySelectionRule {
   return {
-    minSimilarity: config.itemSimilarityThreshold ?? ITEM_SIMILARITY_THRESHOLD,
-    secondaryMargin: config.secondaryLabelMargin ?? SECONDARY_LABEL_MARGIN,
+    minSimilarity: config.itemMinProbability ?? ITEM_MIN_PROBABILITY,
+    secondaryMargin: config.itemSecondaryMargin ?? ITEM_SECONDARY_MARGIN,
   };
 }
 
 function feedSelectionRule(config: EmbeddingClassifierConfig): CategorySelectionRule {
   return {
     minSimilarity: config.feedSimilarityThreshold ?? FEED_SIMILARITY_THRESHOLD,
-    secondaryMargin: config.secondaryLabelMargin ?? SECONDARY_LABEL_MARGIN,
+    secondaryMargin: config.feedSecondaryMargin ?? FEED_SECONDARY_MARGIN,
   };
 }
 
-/** The selection rule in effect, e.g. `item-0.41-feed-0.5-margin-0.02`. */
+let defaultCategoryModel: CategoryModel | undefined;
+
+function categoryModelFor(config: EmbeddingClassifierConfig): CategoryModel {
+  if (config.categoryModel) {
+    return config.categoryModel;
+  }
+  defaultCategoryModel ??= decodeCategoryModel(CATEGORY_MODEL_WEIGHTS);
+  return defaultCategoryModel;
+}
+
+/** The selection rule in effect, e.g. `item-0.2-0.3-feed-0.5-0.02`. */
 function selectionRuleTag(config: EmbeddingClassifierConfig): string {
   const item = itemSelectionRule(config);
   const feed = feedSelectionRule(config);
-  return `item-${item.minSimilarity}-feed-${feed.minSimilarity}-margin-${item.secondaryMargin}`;
+  return `item-${item.minSimilarity}-${item.secondaryMargin}-feed-${feed.minSimilarity}-${feed.secondaryMargin}`;
 }
 
 export function embeddingModelInfo(config: EmbeddingClassifierConfig): ClassifierModelInfo {
   return {
-    // Names the card revision and the selection rule as well as the model: either can yield
-    // different labels for identical inputs, and rows written under another revision or rule
+    // Names the article head, the card revision, and the selection rule as well as the model: any
+    // of them can yield different labels for identical inputs, and rows written under another one
     // must not read as current or count as backfilled.
-    modelId: `${EMBEDDING_CLASSIFIER_MODEL_ID}/${CATEGORY_CARDS_VERSION}/${selectionRuleTag(config)}`,
+    modelId: `${EMBEDDING_CLASSIFIER_MODEL_ID}/${categoryModelFor(config).version}/${CATEGORY_CARDS_VERSION}/${selectionRuleTag(config)}`,
     taxonomyVersion: CLASSIFIER_TAXONOMY_VERSION,
     classifierMethod: EMBEDDING_CLASSIFIER_METHOD,
   };
@@ -383,20 +413,15 @@ export async function scoreFeedEmbedding(
 }
 
 /**
- * Scores items against every category, best first, in bounded embeddings requests. Items in a
- * failed request are left out of the result; the error is rethrown only when every request
+ * Embeds items' title, summary, and opening text in bounded requests, returning each item's vector
+ * by id. Items in a failed request are left out; the error is rethrown only when every request
  * failed.
  */
-export async function scoreItemEmbeddings(
+export async function embedItemVectors(
   inputs: ReadonlyArray<FeedItemCategoryClassificationInput & { id: string }>,
   config: EmbeddingClassifierConfig,
-): Promise<Map<string, CategoryScore[]>> {
-  const results = new Map<string, CategoryScore[]>();
-  if (inputs.length === 0) {
-    return results;
-  }
-
-  const prototypes = await loadCategoryPrototypes(config);
+): Promise<Map<string, number[]>> {
+  const vectors = new Map<string, number[]>();
   let failure: unknown;
   for (const batch of requestBatches(inputs, buildItemText)) {
     let textEmbeddings: number[][];
@@ -407,15 +432,33 @@ export async function scoreItemEmbeddings(
       continue;
     }
     batch.items.forEach((input, index) => {
-      const textEmbedding = textEmbeddings[index];
-      results.set(input.id, textEmbedding ? scoreAgainstPrototypes(textEmbedding, prototypes) : []);
+      const vector = textEmbeddings[index];
+      if (vector) {
+        vectors.set(input.id, vector);
+      }
     });
   }
-
-  if (results.size === 0 && failure !== undefined) {
+  if (vectors.size === 0 && failure !== undefined) {
     throw failure;
   }
-  return results;
+  return vectors;
+}
+
+/**
+ * Scores items with the trained article head, best first, in bounded embeddings requests. Items
+ * in a failed request are left out of the result; the error is rethrown only when every request
+ * failed.
+ */
+export async function scoreItemEmbeddings(
+  inputs: ReadonlyArray<FeedItemCategoryClassificationInput & { id: string }>,
+  config: EmbeddingClassifierConfig,
+): Promise<Map<string, CategoryScore[]>> {
+  if (inputs.length === 0) {
+    return new Map();
+  }
+  const model = categoryModelFor(config);
+  const vectors = await embedItemVectors(inputs, config);
+  return new Map([...vectors].map(([id, vector]) => [id, scoreWithCategoryModel(model, vector)]));
 }
 
 export async function classifyFeedEmbedding(

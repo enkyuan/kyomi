@@ -6,6 +6,7 @@ import {
   mockFetch,
   restoreFetch,
 } from "./category-test-helpers";
+import { FAKE_CATEGORY_MODEL } from "./fake-category-model";
 
 afterEach(restoreFetch);
 
@@ -262,6 +263,7 @@ describe("runFeedRefresh classifier fallback", () => {
       embeddingClassifier: {
         apiKey: "test-key",
         apiUrl: "https://fake-embeddings.test/embed",
+        categoryModel: FAKE_CATEGORY_MODEL,
       },
     });
 
