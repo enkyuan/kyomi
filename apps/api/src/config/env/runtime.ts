@@ -177,10 +177,12 @@ export const env = createEnv({
     CLOUDFLARE_EMBEDDINGS_URL: embeddingsWorkerUrlFromEnv.optional(),
     CLOUDFLARE_EMBEDDINGS_TOKEN: z.string().min(1).optional(),
     /**
-     * Category read-path rollout gate. Keep keyword as the default while embedding rows are
-     * collected and compared in parallel; switch to embedding after the promotion gate passes.
+     * Category read path. Embedding (the default) shows the trained head's labels for the active
+     * embedding model and falls back to keyword rows wherever an article has none, so it never
+     * shows less than keyword; with no embeddings provider configured it reads keyword rows only.
+     * On the 345-article stored eval set the head scores F1 0.687 against keyword's 0.345.
      */
-    CATEGORY_CLASSIFIER_READ_MODE: z.enum(["keyword", "embedding"]).default("keyword"),
+    CATEGORY_CLASSIFIER_READ_MODE: z.enum(["keyword", "embedding"]).default("embedding"),
 
     // Platform-expansion feature flags. All default false; a flag's credentials are only
     // required when it is enabled (see createFinalSchema below).
