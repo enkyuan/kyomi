@@ -3,7 +3,7 @@ import { routeTree } from "./routeTree.gen";
 
 import { setupRouterSsrQueryIntegration } from "@tanstack/react-router-ssr-query";
 import { getContext } from "@lib/query/client";
-import { createSafeHydrate } from "@lib/ssr-query-hydration";
+import { createSafeHydrate } from "@lib/query/hydration";
 
 export function getRouter() {
   const context = getContext();

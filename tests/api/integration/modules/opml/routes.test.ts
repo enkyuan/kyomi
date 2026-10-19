@@ -182,31 +182,38 @@ describe("opml.routes", () => {
   });
 
   test("stores the resolved remote URL as sourceUrl for from-url imports", async () => {
-    mock.module("@modules/opml/fetch-url", () => ({
+    // mock.module is process-wide and file order is filesystem-dependent, so put the real
+    // module back afterwards or fetch.test.ts would see the stub.
+    const realOpmlFetch = { ...(await import("@modules/opml/fetch")) };
+    mock.module("@modules/opml/fetch", () => ({
       fetchOpmlDocumentFromUrl: mock(async () => ({
         xml: "<opml><body/></opml>",
         finalUrl: "https://example.com/final.opml",
         filename: "final.opml",
       })),
     }));
-    const { registerOpmlRoutes: register } = await import("@modules/opml/routes");
-    const { app, routes } = createRouteRecorder();
-    register(app as never);
-    const fromUrlRoute = routes.find(
-      (r) => r.method === "post" && r.path === "/opml/imports/from-url",
-    );
-    const handler = fromUrlRoute?.handler as (context: unknown) => Promise<unknown>;
+    try {
+      const { registerOpmlRoutes: register } = await import("@modules/opml/routes");
+      const { app, routes } = createRouteRecorder();
+      register(app as never);
+      const fromUrlRoute = routes.find(
+        (r) => r.method === "post" && r.path === "/opml/imports/from-url",
+      );
+      const handler = fromUrlRoute?.handler as (context: unknown) => Promise<unknown>;
 
-    await handler(fakeHandlerContext({ body: { url: "https://example.com/original.opml" } }));
+      await handler(fakeHandlerContext({ body: { url: "https://example.com/original.opml" } }));
 
-    expect(enqueueOpmlImportMock).toHaveBeenCalledWith(
-      {},
-      "user-1",
-      "<opml><body/></opml>",
-      expect.anything(),
-      "final.opml",
-      "https://example.com/final.opml",
-    );
+      expect(enqueueOpmlImportMock).toHaveBeenCalledWith(
+        {},
+        "user-1",
+        "<opml><body/></opml>",
+        expect.anything(),
+        "final.opml",
+        "https://example.com/final.opml",
+      );
+    } finally {
+      mock.module("@modules/opml/fetch", () => realOpmlFetch);
+    }
   });
 
   test("status route reads counters from the durable store without a failures fan-out", async () => {

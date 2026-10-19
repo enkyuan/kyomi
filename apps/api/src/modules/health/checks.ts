@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { API_PACKAGE_VERSION } from "@config/package-info";
+import { API_PACKAGE_VERSION } from "@config/version";
 import { SERVICE_NAME } from "@config/constants";
 import type { db } from "@adapters/db/client";
 import { HEALTH_STATUS } from "./constants";

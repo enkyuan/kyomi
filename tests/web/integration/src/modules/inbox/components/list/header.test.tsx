@@ -13,9 +13,11 @@ describe("SortButton", () => {
     expect(screen.queryByText("Newest")).toBeNull();
 
     fireEvent.click(trigger);
-    fireEvent.click(await screen.findByRole("menuitem", { name: "Latest" }));
+    const latest = await screen.findByRole("menuitemradio", { name: "Latest" });
+    expect(latest.getAttribute("aria-checked")).toBe("true");
+    fireEvent.click(screen.getByRole("menuitemradio", { name: "Oldest" }));
 
-    expect(onSortChange).toHaveBeenCalledWith("latest");
+    expect(onSortChange).toHaveBeenCalledWith("oldest");
   });
 });
 
@@ -74,6 +76,21 @@ describe("FilterControl", () => {
     );
   });
 
+  test("shows a focus ring and a coarse-pointer hit area on the filter trigger", () => {
+    render(
+      <FilterControl
+        filter="all"
+        pinnedFolders={[]}
+        onFilterChange={vi.fn()}
+        onFolderFilterChange={vi.fn()}
+      />,
+    );
+
+    const trigger = screen.getByRole("button", { name: "Choose filter" });
+    expect(trigger.className).toContain("focus-visible:ring-2");
+    expect(trigger.className).toContain("pointer-coarse:after:-inset-y-3");
+  });
+
   test("labels an active pinned folder", () => {
     render(
       <FilterControl
@@ -118,7 +135,14 @@ describe("FilterControl", () => {
 
       expect(menuPopup?.className).not.toMatch(/(^|\s)p-1(\s|$)/);
       expect(menuContent).toBeTruthy();
-      expect(menuContent?.className).toContain("max-h-[min(calc(--spacing(9)*4");
+      expect(menuPopup?.getAttribute("data-menu-shape")).toBe("pill");
+      expect(menuPopup?.getAttribute("data-menu-size")).toBe("lg");
+      expect(menuContent?.className).toContain(
+        "max-h-[min(calc(var(--menu-item-height)*var(--menu-max-items)",
+      );
+      expect((menuContent as HTMLElement | null)?.style.getPropertyValue("--menu-max-items")).toBe(
+        "4",
+      );
       expect(menuContent?.className).not.toContain("overflow-y-auto");
       expect(menuContent?.querySelector('[data-slot="scroll-area-viewport"]')).toBeTruthy();
     });

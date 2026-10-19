@@ -2,14 +2,14 @@
 
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Suspense, useCallback, useReducer, type Dispatch } from "react";
-import { Transition, type TransitionDirection } from "@kyomi/ui/transition";
-import { toastManager } from "@kyomi/ui/toast";
+import { Transition, type TransitionDirection } from "@kyomi/ui/components/transition";
+import { toastManager } from "@kyomi/ui/components/toast";
 import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { lazyNamed } from "@lib/lazy-named";
 import { usePlatform } from "@hooks/use-platform";
-import { useTransition } from "@hooks/use-transition";
+import { useTransition } from "@modules/inbox/hooks/use-transition";
 import { exportOpml } from "@modules/feeds/lib/api";
-import { CreateFolderDialog } from "@modules/folders/components/dialog";
+import { CreateFolderDialog } from "@modules/folders/components/create-dialog";
 import type { useInboxRouteState } from "@modules/inbox/hooks/use-layout";
 import { inboxRecapQueryOptions } from "@modules/inbox/queries/options";
 import { RecapContent } from "./content";
@@ -24,12 +24,12 @@ import {
   useMoveRecapFeedMutation,
   useRemoveRecapFeedsMutation,
   useUnsaveRecapItemMutation,
-} from "./mutations";
+} from "../../hooks/use-recap-mutations";
 import {
   getRecapScreenKey,
   RECAP_NAVIGATION_TRANSITION,
   RECAP_TRANSITION_OFFSET,
-} from "./screen-key";
+} from "../../lib/recap/screen-key";
 
 const FollowSourcesDialog = lazyNamed(
   () => import("@modules/feeds/components/follow/dialog"),

@@ -16,7 +16,7 @@ tests, and documentation.
 | `apps/api/.env` and `.env.example`   | Host-side API, worker, scheduler, and provider configuration |
 | `apps/api/src/config/env/runtime.ts` | Typed server parsing, defaults, and paired-value validation  |
 | `apps/web/.env` and `.env.example`   | Web server and intentionally public browser configuration    |
-| `apps/web/src/env.ts`                | Typed web environment values                                 |
+| `apps/web/src/lib/api.ts`            | Web server reads (`API_ORIGIN`); no typed web schema yet     |
 | `packages/db/drizzle.config.ts`      | Database URL resolution for Drizzle commands                 |
 | `scripts/ci/prepare-env.ts`          | Deterministic CI placeholders                                |
 | `docker/docker-compose.yml`          | Container injection and infrastructure defaults              |

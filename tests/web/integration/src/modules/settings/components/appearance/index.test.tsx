@@ -3,7 +3,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import { AppearancePagePanel } from "@modules/settings";
+import { AppearancePagePanel } from "@modules/settings/components/appearance";
 
 const setInboxPreferencesMock = vi.fn();
 const resetInboxPreferencesMock = vi.fn();
@@ -22,7 +22,7 @@ Object.defineProperty(window, "matchMedia", {
   })),
 });
 
-vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
+vi.mock("@modules/inbox/hooks/use-preferences", () => ({
   useInboxPreferences: () => ({
     limits: { minFontSizePx: 14, maxFontSizePx: 20 },
     defaults: {
@@ -50,7 +50,7 @@ vi.mock("@modules/inbox/hooks/use-inbox-data", () => ({
   }),
 }));
 
-vi.mock("@kyomi/ui/button", () => ({
+vi.mock("@kyomi/ui/components/button", () => ({
   Button: ({ children, onClick }: { children: ReactNode; onClick?: () => void }) => (
     <button onClick={onClick} type="button">
       {children}
@@ -58,14 +58,14 @@ vi.mock("@kyomi/ui/button", () => ({
   ),
 }));
 
-vi.mock("@kyomi/ui/sidebar", () => ({
+vi.mock("@kyomi/ui/components/sidebar", () => ({
   SidebarMenuButton: ({ children }: { children: ReactNode }) => (
     <button type="button">{children}</button>
   ),
   SidebarMenuItem: ({ children }: { children: ReactNode }) => <div>{children}</div>,
 }));
 
-vi.mock("@kyomi/ui/select", () => ({
+vi.mock("@kyomi/ui/components/select", () => ({
   Select: ({
     children,
     items,
@@ -90,7 +90,7 @@ vi.mock("@kyomi/ui/select", () => ({
   SelectValue: () => null,
 }));
 
-vi.mock("@kyomi/ui/switch", () => ({
+vi.mock("@kyomi/ui/components/switch", () => ({
   Switch: ({
     checked,
     id,
@@ -106,7 +106,7 @@ vi.mock("@kyomi/ui/switch", () => ({
   ),
 }));
 
-vi.mock("@kyomi/ui/slider", () => ({
+vi.mock("@kyomi/ui/components/slider", () => ({
   SliderComfortable: ({ onChange }: { onChange?: (value: number) => void }) => (
     <button onClick={() => onChange?.(21)} type="button">
       font-size-slider
@@ -114,18 +114,14 @@ vi.mock("@kyomi/ui/slider", () => ({
   ),
 }));
 
-vi.mock("@kyomi/ui/group", () => ({
+vi.mock("@kyomi/ui/components/group", () => ({
   Group: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   GroupSeparator: () => <div />,
 }));
 
-vi.mock("@modules/settings", async () => {
-  const actual = await vi.importActual<typeof import("@modules/settings")>("@modules/settings");
-  return {
-    ...actual,
-    ThemeSwitcher: () => <div>theme-switcher</div>,
-  };
-});
+vi.mock("@modules/settings/components/appearance/theme-switcher", () => ({
+  ThemeSwitcher: () => <div>theme-switcher</div>,
+}));
 
 describe("AppearancePagePanel", () => {
   beforeEach(() => {

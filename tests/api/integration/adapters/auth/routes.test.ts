@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, mock, test } from "bun:test";
 import { auth } from "@adapters/auth";
 import { AUTH_CAPABILITIES_HEADER } from "@adapters/auth/capabilities";
-import { createApp } from "@app/http/create-app";
+import { createApp } from "@app/http/app";
 
 type MutableAuth = {
   handler: typeof auth.handler;

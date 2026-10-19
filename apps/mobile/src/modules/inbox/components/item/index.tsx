@@ -1,12 +1,12 @@
 import { Pressable, Text, useWindowDimensions, View } from "react-native";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
-import { feedItemTypography } from "@modules/inbox/lib/layout";
-import { formatInboxTimestamp } from "@modules/inbox/utils/format-timestamp";
-import { getFeedSourceLabel } from "@modules/inbox/utils/source-label";
+import { FeedFavicon } from "@modules/articles/components/feed-favicon";
+import { feedItemTypography } from "@modules/articles/lib/layout";
+import { formatArticleTimestamp } from "@modules/articles/lib/format-timestamp";
+import { getFeedSourceLabel } from "@modules/articles/lib/source-label";
 import { Badge } from "../../../../components/ui/badge";
 import { ItemToolbar } from "../toolbar/toolbar";
 import { FONT_STYLES } from "@/theme/fonts";
-import { FeedFavicon } from "../feed-favicon";
 
 export type ItemProps = {
   readonly item: ArticleListItemDto;
@@ -59,7 +59,7 @@ export function Item({ item, isFirst, onPress, onPressIn }: ItemProps) {
               className="shrink-0 text-muted-foreground/80"
               style={[FONT_STYLES.meta, { fontSize: metaFontSizePx }]}
             >
-              {formatInboxTimestamp(item.publishedAt)}
+              {formatArticleTimestamp(item.publishedAt)}
             </Text>
           </View>
 

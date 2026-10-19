@@ -1,7 +1,7 @@
 import type { DehydratedState, InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
 import { dehydrate, hydrate } from "@tanstack/react-query";
-import type { InboxListPage } from "@modules/inbox/queries/options";
 import { articleDetailSchema } from "@kyomi/reader/schemas";
+import { queryKeys } from "./keys";
 
 const HOT_CACHE_KEY = "kyomi:hot-query-cache:v2";
 const HOT_CACHE_LEGACY_KEY = "kyomi:hot-query-cache:v1";
@@ -13,6 +13,9 @@ const PERSIST_THROTTLE_MS = 1_000;
 const HOT_CACHE_MAX_INBOX_LISTS = 8;
 const HOT_CACHE_MAX_ITEM_DETAILS = 20;
 
+/** The hot cache only relies on a persisted inbox list page carrying an `items` array. */
+type HotInboxListPage = { items: unknown[] };
+
 type PersistedHotCache = {
   savedAt: number;
   state: DehydratedState;
@@ -22,15 +25,21 @@ let hasHydrated = false;
 let persistTimer: number | undefined;
 let pendingPersist: Promise<void> | undefined;
 
+const HOT_QUERY_KEY_PREFIXES: readonly QueryKey[] = [
+  queryKeys.folders.all,
+  queryKeys.feeds.followed,
+  queryKeys.inbox.items,
+  queryKeys.inbox.itemDetails,
+  queryKeys.inbox.viewCount,
+  queryKeys.sidebar.inboxSummary,
+];
+
+function hasQueryKeyPrefix(queryKey: QueryKey, prefix: QueryKey) {
+  return prefix.every((part, index) => queryKey[index] === part);
+}
+
 function isHotQueryKey(queryKey: QueryKey) {
-  const [family, scope] = queryKey;
-  return (
-    family === "folders" ||
-    (family === "feeds" && scope === "followed") ||
-    (family === "inbox" &&
-      (scope === "items" || scope === "item-detail" || scope === "view-count")) ||
-    (family === "sidebar" && scope === "inbox-summary")
-  );
+  return HOT_QUERY_KEY_PREFIXES.some((prefix) => hasQueryKeyPrefix(queryKey, prefix));
 }
 
 function isSuccessfulHotQuery(query: { state: { status: string }; queryKey: QueryKey }) {
@@ -132,26 +141,27 @@ function removeLegacyLocalStorageCache() {
   }
 }
 
-function isValidInboxListPage(page: unknown): page is InboxListPage {
+function isValidInboxListPage(page: unknown): page is HotInboxListPage {
   if (!page || typeof page !== "object") {
     return false;
   }
-  const candidate = page as Partial<InboxListPage>;
+  const candidate = page as Partial<HotInboxListPage>;
   return Array.isArray(candidate.items);
 }
 
 type DehydratedHotQuery = DehydratedState["queries"][number];
 
 function isInboxQueryScope(query: DehydratedHotQuery, scope: "items" | "item-detail") {
-  return query.queryKey[0] === "inbox" && query.queryKey[1] === scope;
+  const prefix = scope === "items" ? queryKeys.inbox.items : queryKeys.inbox.itemDetails;
+  return hasQueryKeyPrefix(query.queryKey, prefix);
 }
 
-function isValidInfiniteInboxListData(data: unknown): data is InfiniteData<InboxListPage> {
+function isValidInfiniteInboxListData(data: unknown): data is InfiniteData<HotInboxListPage> {
   if (!data || typeof data !== "object") {
     return false;
   }
 
-  const candidate = data as Partial<InfiniteData<InboxListPage>>;
+  const candidate = data as Partial<InfiniteData<HotInboxListPage>>;
   return (
     Array.isArray(candidate.pages) &&
     candidate.pages.length > 0 &&
@@ -168,7 +178,7 @@ function newestQueries(queries: DehydratedHotQuery[], limit: number) {
 }
 
 function retainInboxListFirstPage(query: DehydratedHotQuery): DehydratedHotQuery {
-  const data = query.state.data as InfiniteData<InboxListPage>;
+  const data = query.state.data as InfiniteData<HotInboxListPage>;
 
   return {
     ...query,
@@ -206,8 +216,8 @@ export function prepareHotCacheState(state: DehydratedState): DehydratedState {
 }
 
 export function dropCorruptInboxItemQueries(queryClient: QueryClient) {
-  for (const query of queryClient.getQueryCache().findAll({ queryKey: ["inbox", "items"] })) {
-    const data = query.state.data as InfiniteData<InboxListPage> | undefined;
+  for (const query of queryClient.getQueryCache().findAll({ queryKey: queryKeys.inbox.items })) {
+    const data = query.state.data as InfiniteData<HotInboxListPage> | undefined;
     if (!data?.pages?.length) {
       continue;
     }
@@ -216,7 +226,9 @@ export function dropCorruptInboxItemQueries(queryClient: QueryClient) {
     }
   }
 
-  for (const query of queryClient.getQueryCache().findAll({ queryKey: ["inbox", "item-detail"] })) {
+  for (const query of queryClient
+    .getQueryCache()
+    .findAll({ queryKey: queryKeys.inbox.itemDetails })) {
     const itemId = query.queryKey[2];
     const parsed = articleDetailSchema.safeParse(query.state.data);
     if (!parsed.success || parsed.data.id !== itemId) {

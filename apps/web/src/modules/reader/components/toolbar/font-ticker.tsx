@@ -1,7 +1,14 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+  springTransition,
+} from "@kyomi/ui/lib/motion";
 
 function useTickerDirection(value: number) {
   const previousValueRef = useRef(value);
@@ -51,11 +58,7 @@ export function FontSizeTicker({ value }: { value: number }) {
                     ? undefined
                     : { opacity: 0, y: direction > 0 ? -8 : 8 }
                 }
-                transition={
-                  prefersReducedMotion
-                    ? { duration: 0 }
-                    : { type: "spring", duration: 0.24, bounce: 0 }
-                }
+                transition={springTransition("quick", prefersReducedMotion)}
               >
                 {digit}
               </m.span>

@@ -1,10 +1,10 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1/context";
-import { uuidParam } from "@shared/http/v1/stub";
+import { uuidParam } from "@shared/http/v1/params";
 import { listFeedRefreshStatusesForUser } from "../read/queries";
 import { assertUserSubscribedToFeed } from "../subscription/mutations";
-import * as dto from "../dto";
+import * as dto from "../schemas";
 import { enqueueBatchFeedRefresh, enqueueFeedRefresh } from "./enqueue";
 import { listRefreshableFeedIdsForUser } from "./selection";
 

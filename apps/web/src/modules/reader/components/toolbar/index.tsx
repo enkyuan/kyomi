@@ -15,17 +15,24 @@ import {
   TextLine,
   Translate2Line,
 } from "@kyomi/ui/icons/mingcute";
-import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "@kyomi/ui/motion";
-import { Button } from "@kyomi/ui/button";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+  springTransition,
+} from "@kyomi/ui/lib/motion";
+import { Button } from "@kyomi/ui/components/button";
 import {
   Toolbar as ToolbarRoot,
   ToolbarButton,
   ToolbarGroup,
   ToolbarSeparator,
-} from "@kyomi/ui/toolbar";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/tooltip";
+} from "@kyomi/ui/components/toolbar";
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/components/tooltip";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
-import type { ToolbarProps } from "@modules/toolbar/lib/types";
+import type { ToolbarProps } from "@modules/reader/lib/toolbar";
 import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
 import { cn } from "@kyomi/ui/lib/utils";
 import { FontSizeTicker } from "./font-ticker";
@@ -66,9 +73,7 @@ export function Toolbar({
   const tooltipSideOffset = variant === "floating" ? 10 : 8;
   const useLargeControls = controlSize === "large";
   const compactReaderFocusMode = readerFocusMode && readerFocusVariant === "compact";
-  const actionTransition = prefersReducedMotion
-    ? { duration: 0 }
-    : { type: "spring" as const, duration: 0.3, bounce: 0 };
+  const actionTransition = springTransition("emphasized", prefersReducedMotion);
   const actionMotionProps = {
     initial: prefersReducedMotion ? false : { opacity: 0, scale: 0.92, filter: "blur(4px)" },
     animate: { opacity: 1, scale: 1, filter: "blur(0px)" },
@@ -81,11 +86,10 @@ export function Toolbar({
       <ToolbarRoot
         aria-label="Reader tools"
         className={cn(
-          "min-w-0 gap-1 border-0 p-0 text-muted-foreground shadow-none",
-          variant === "inline"
-            ? "bg-transparent"
-            : "reader-floating-toolbar rounded-xl px-1.5 py-1",
+          "min-w-0",
+          variant !== "inline" && "reader-floating-toolbar rounded-xl px-1.5 py-1",
         )}
+        variant="ghost"
       >
         <ToolbarGroup className="min-w-0 gap-1">
           <ReaderToolbarButton
@@ -181,10 +185,7 @@ export function Toolbar({
               {...actionMotionProps}
               key="secondary-actions"
             >
-              <ToolbarSeparator
-                className="mx-1 hidden h-9 w-px self-center bg-border/70 data-[orientation=vertical]:my-0 sm:block"
-                orientation="vertical"
-              />
+              <ToolbarSeparator className="hidden h-9 sm:block" inset orientation="vertical" />
               <ToolbarGroup className="gap-1">
                 {!readerFocusMode ? (
                   <ReaderToolbarButton
@@ -249,7 +250,8 @@ export function ReaderFontSizeControls({
   return (
     <ToolbarRoot
       aria-label="Reader font size"
-      className="relative h-11 min-w-0 items-center gap-1 overflow-hidden rounded-full border-0 bg-background p-1 text-muted-foreground shadow-none before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-muted [&>*]:relative"
+      className="min-w-0 overflow-hidden [&>*]:relative"
+      variant="pill"
     >
       <ReaderFontSizeControlGroup
         canDecreaseFont={canDecreaseFont}
@@ -357,15 +359,15 @@ function ReaderToolbarButton({
             render={
               <Button
                 className={cn(
-                  "rounded-full text-muted-foreground transition-[color,background-color,transform] hover:text-foreground data-pressed:text-foreground",
                   large && "size-9 [&_svg]:size-5!",
                   active && "bg-accent/50 text-foreground",
                   active && activeClassName,
                   className,
                 )}
                 disabled={disabled}
+                shape="pill"
                 size={large ? "icon-lg" : "icon-sm"}
-                variant="ghost"
+                variant="ghost-muted"
                 onClick={(event) => {
                   event.preventDefault();
                   event.stopPropagation();

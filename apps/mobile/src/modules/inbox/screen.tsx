@@ -4,17 +4,18 @@ import { Platform, useColorScheme, useWindowDimensions, View } from "react-nativ
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useSharedValue } from "react-native-reanimated";
 import { EmptyStateIcon } from "@/components/icons/empty-state";
+import { Badge } from "@/components/ui/badge";
 import { Host } from "@expo/ui";
 import { SymbolView } from "expo-symbols";
 import { MenuView } from "@expo/ui/community/menu";
 import { FilterIcon } from "@/components/icons/filter";
 import { CollapsingHeader, HeaderActionButton, COMPACT_NAV_HEIGHT } from "@ui/header";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
-import type { InboxFilter } from "./lib/model";
+import type { InboxFilter } from "./model";
 import { EmptyState } from "@modules/inbox/components/empty-state";
 import { List } from "@modules/inbox/components/list";
 import { type ArticleScope } from "@modules/inbox/hooks/use-articles";
-import { useSubscribedFeeds } from "@modules/inbox/hooks/use-subscribed-feeds";
+import { useSubscribedFeeds } from "@modules/inbox/hooks/use-feeds";
 
 type InboxScreenProps = {
   scope?: ArticleScope;
@@ -37,6 +38,7 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
     subscribedFeeds.count === 0;
   const [filter, setFilter] = useState<InboxFilter>("all");
 
+  // Keep native menu imports out of the other platform bundle.
   const headerActions =
     Platform.OS === "ios" ? (
       (() => {
@@ -153,9 +155,21 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
           <EmptyState
             asset={<EmptyStateIcon size={176} />}
             description={
-              hasNoSubscribedFeeds
-                ? "Follow a feed to see its latest\nstories here."
-                : "New stories will show up here after\nfeeds publish or refresh."
+              hasNoSubscribedFeeds ? (
+                <>
+                  Add a new feed or check out{" "}
+                  <Badge
+                    size="default"
+                    style={{ transform: [{ translateY: 3 }] }}
+                    variant="secondary"
+                  >
+                    Explore
+                  </Badge>{" "}
+                  to get started.
+                </>
+              ) : (
+                "New stories will show up here after\nfeeds publish or refresh."
+              )
             }
             header={
               hasNoSubscribedFeeds

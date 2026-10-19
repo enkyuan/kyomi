@@ -1,4 +1,4 @@
-import { assertHttpOrHttpsUrl as assertSharedHttpOrHttpsUrl } from "@shared/net/http-url";
+import { assertHttpOrHttpsUrl as assertSharedHttpOrHttpsUrl } from "@shared/net/http";
 
 /**
  * Canonical feed URL for deduplication (lowercase host, strip hash, trim trailing slash on path).

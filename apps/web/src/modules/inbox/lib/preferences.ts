@@ -5,11 +5,12 @@ import type {
   InboxTimestampDisplayDto,
   InboxTimestampHourCycleDto,
 } from "@kyomi/reader/schemas";
+import { getUserPreferences, updateUserPreferences } from "@modules/preferences/lib/api";
 
 const MIN_INBOX_FONT_SIZE_PX = 14;
 const MAX_INBOX_FONT_SIZE_PX = 20;
 
-export type InboxPreferences = InboxPreferencesDto;
+type InboxPreferences = InboxPreferencesDto;
 
 export const DEFAULT_INBOX_PREFERENCES: InboxPreferences = {
   inboxDefaultView: "my-feed",
@@ -101,4 +102,16 @@ export function getInboxPreferenceLimits() {
     minFontSizePx: MIN_INBOX_FONT_SIZE_PX,
     maxFontSizePx: MAX_INBOX_FONT_SIZE_PX,
   };
+}
+
+export async function getInboxPreferences(): Promise<InboxPreferences> {
+  return sanitizeInboxPreferences(await getUserPreferences());
+}
+
+export async function updateInboxPreferences({
+  data,
+}: {
+  data: Partial<InboxPreferences>;
+}): Promise<InboxPreferences> {
+  return sanitizeInboxPreferences(await updateUserPreferences({ data }));
 }

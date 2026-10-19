@@ -1,4 +1,4 @@
-import { buildQueueHealthSnapshot } from "@app/jobs/queue-health";
+import { buildQueueHealthSnapshot } from "@app/jobs/health";
 import { getRedis, closeRedis } from "@adapters/redis";
 
 try {

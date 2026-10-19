@@ -3,16 +3,23 @@
 import { Link } from "@tanstack/react-router";
 import { AddFill, Fullscreen2Fill, Rss2Fill } from "@kyomi/ui/icons/mingcute";
 import { useMemo } from "react";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/components/button";
 import type { InboxSearch } from "@modules/inbox/lib/search";
 import {
   FolderPickerButton,
   TOP_SOURCE_FOLDER_BUTTON_CLASS,
 } from "@modules/folders/components/picker";
-import type { RecapFolder } from "@modules/folders/lib/types";
-import { FeedFavicon } from "@modules/feeds/components/feed-favicon";
-import type { RecapTopViewedFeed } from "../types";
-import { useSquircle } from "@kyomi/ui/lib/squircle";
+import { FeedFavicon } from "@modules/feeds/components/favicon";
+import type { RecapFolder, RecapTopViewedFeed } from "../../../lib/recap/types";
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemMedia,
+  ItemTarget,
+  ItemTitle,
+} from "@kyomi/ui/components/item";
 import { formatRelativeTime, formatViewedCount } from "@modules/inbox/lib/recap/index";
 import { RailTooltip, RecapSection, SectionEmpty } from ".";
 
@@ -37,40 +44,43 @@ function TopSourceRow({
   moveFeed: (feedId: string, folderId: string) => void;
   movingFeedId: string | null;
 }) {
-  const { ref, style } = useSquircle<HTMLDivElement>(15, 1);
-
   return (
-    <div ref={ref} style={style} className="min-w-0 p-2 hover:bg-accent/70">
-      <div className="flex min-w-0 items-center gap-2.5">
-        <Link
-          className="min-w-0 flex flex-1 gap-2.5 outline-none"
-          to="/inbox"
-          search={(prev: InboxSearch) => ({
-            ...prev,
-            filter: "all" as const,
-            feedId: feed.feedId,
-            folderId: undefined,
-            itemId: undefined,
-            search: undefined,
-          })}
-        >
+    <Item shape="squircle" size="sm">
+      <ItemTarget
+        render={
+          <Link
+            to="/inbox"
+            search={(prev: InboxSearch) => ({
+              ...prev,
+              filter: "all" as const,
+              feedId: feed.feedId,
+              folderId: undefined,
+              itemId: undefined,
+              search: undefined,
+            })}
+          />
+        }
+      >
+        <ItemMedia>
           <FeedFavicon
             className="size-9 shrink-0"
             faviconUrl={feed.faviconUrl}
             feedUrl={feed.url}
             shape="squircle"
             siteUrl={feed.siteUrl}
-            squircleCornerRadius={7}
+            squircleCornerRadius={8}
             title={feed.title}
           />
-          <span className="min-w-0 flex-1">
-            <span className="block truncate font-semibold text-sm leading-5">{feed.title}</span>
-            <span className="block truncate text-muted-foreground text-xs leading-4">
-              {formatViewedCount(feed.viewedItemCount)} · viewed{" "}
-              {formatRelativeTime(feed.lastViewedAt)}
-            </span>
-          </span>
-        </Link>
+        </ItemMedia>
+        <ItemContent>
+          <ItemTitle>{feed.title}</ItemTitle>
+          <ItemDescription>
+            {formatViewedCount(feed.viewedItemCount)} · viewed{" "}
+            {formatRelativeTime(feed.lastViewedAt)}
+          </ItemDescription>
+        </ItemContent>
+      </ItemTarget>
+      <ItemActions>
         {feed.isSubscribed && currentFolderId ? (
           <FolderPickerButton
             currentFolderId={currentFolderId}
@@ -95,15 +105,16 @@ function TopSourceRow({
             aria-label={`Follow ${feed.title}`}
             className={TOP_SOURCE_FOLDER_BUTTON_CLASS}
             loading={isFollowingFeed(feed.feedId)}
+            shape="pill"
             size="icon-xs"
-            variant="ghost"
+            variant="soft"
             onClick={() => followFeed(feed)}
           >
             <AddFill />
           </Button>
         ) : null}
-      </div>
-    </div>
+      </ItemActions>
+    </Item>
   );
 }
 

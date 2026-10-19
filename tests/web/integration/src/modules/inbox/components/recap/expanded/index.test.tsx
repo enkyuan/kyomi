@@ -11,13 +11,13 @@ import {
   RecapExpandedView,
   type SelectedFolderBackTarget,
 } from "@modules/inbox/components/recap/expanded";
-import type { RecapFolder } from "@modules/folders/lib/types";
+import type { RecapFolder } from "@modules/inbox/lib/recap/types";
 
-vi.mock("@kyomi/ui/transition", () => ({
+vi.mock("@kyomi/ui/components/transition", () => ({
   Transition: ({ children }: { children: ReactNode }) => <>{children}</>,
 }));
 
-vi.mock("@hooks/use-transition", () => ({
+vi.mock("@modules/inbox/hooks/use-transition", () => ({
   useTransition: () => ({}),
 }));
 
@@ -25,11 +25,7 @@ vi.mock("@modules/feeds/lib/api", () => ({
   listFollowedFeeds: vi.fn().mockResolvedValue([]),
 }));
 
-vi.mock("@modules/inbox/queries/options", () => ({
-  followedFeedsQueryKey: () => ["feeds", "followed"],
-}));
-
-vi.mock("@modules/folders/components/recap/expanded", () => ({
+vi.mock("@modules/inbox/components/recap/folders/expanded", () => ({
   ExpandedFolders: ({ selectedFolder }: { selectedFolder: RecapFolder | null }) => (
     <div>{selectedFolder?.name ?? "Folders"}</div>
   ),

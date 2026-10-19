@@ -5,7 +5,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { useAuth } from "@integrations/better-auth/provider";
 import { clearHotQueryCache } from "@lib/query/cache";
-import { prefetchInboxFlow } from "@modules/inbox";
+import { prefetchInboxFlow } from "@modules/inbox/lib/navigation";
 
 const SERVICE_WORKER_URL = "/sw.js";
 

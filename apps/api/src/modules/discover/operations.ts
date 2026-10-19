@@ -1,0 +1,337 @@
+import { and, asc, eq, ilike, inArray, or, sql } from "drizzle-orm";
+import { feedSubscriptions, feeds } from "@kyomi/db";
+import type { db } from "@adapters/db/client";
+import { isMeiliConfigured, searchFeedSearchDocuments } from "@adapters/search/meili";
+import type { AppLogger } from "@adapters/logger";
+import { AppError } from "@shared/errors/app";
+import { decodeNullableText, decodeText } from "@shared/text/entities";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "./feed/normalize";
+import { resolveRemoteFeed } from "./feed/resolve/remote";
+import type { FeedPreviewDto, FeedSearchResultDto } from "./types";
+
+type DB = typeof db;
+
+const SEARCH_DEDUPE_SCAN_FACTOR = 4;
+const SEARCH_DEDUPE_SCAN_LIMIT = 200;
+
+function normalizeExistingFeedLookupUrl(rawUrl: string): string | null {
+  try {
+    return normalizeFeedUrl(assertHttpOrHttpsUrl(rawUrl).href);
+  } catch {
+    return null;
+  }
+}
+
+function getSearchScanLimit(limit: number): number {
+  return Math.min(Math.max(limit * SEARCH_DEDUPE_SCAN_FACTOR, limit), SEARCH_DEDUPE_SCAN_LIMIT);
+}
+
+function normalizeSearchUrl(rawUrl: string | null | undefined): URL | null {
+  if (!rawUrl) {
+    return null;
+  }
+  try {
+    return new URL(normalizeFeedUrl(assertHttpOrHttpsUrl(rawUrl).href));
+  } catch {
+    return null;
+  }
+}
+
+function normalizeSearchText(value: string | null | undefined): string {
+  return value?.trim().toLowerCase().replace(/\s+/g, " ") ?? "";
+}
+
+function getFeedSearchDedupeKeys(result: FeedSearchResultDto): string[] {
+  const feedUrl = normalizeSearchUrl(result.url);
+  const linkUrl = normalizeSearchUrl(result.link);
+  const title = normalizeSearchText(result.title);
+  const keys: string[] = [];
+
+  if (feedUrl) {
+    keys.push(`url:${feedUrl.href}`);
+  }
+
+  if (title) {
+    const sourceUrl = linkUrl ?? feedUrl;
+    if (sourceUrl) {
+      keys.push(`source-title:${sourceUrl.origin}:${title}`);
+    }
+    if (linkUrl) {
+      keys.push(`link-title:${linkUrl.href}:${title}`);
+    }
+  }
+
+  return keys;
+}
+
+function dedupeFeedSearchResults(
+  results: FeedSearchResultDto[],
+  limit: number,
+): { items: FeedSearchResultDto[]; duplicateCount: number } {
+  const items: FeedSearchResultDto[] = [];
+  const indexByKey = new Map<string, number>();
+  let duplicateCount = 0;
+
+  for (const result of results) {
+    const keys = getFeedSearchDedupeKeys(result);
+    const existingIndex = keys
+      .map((key) => indexByKey.get(key))
+      .find((index): index is number => index !== undefined);
+
+    if (existingIndex !== undefined) {
+      duplicateCount += 1;
+      if (result.isSubscribed && !items[existingIndex]?.isSubscribed) {
+        items[existingIndex] = result;
+      }
+      continue;
+    }
+
+    const nextIndex = items.length;
+    items.push(result);
+    for (const key of keys) {
+      indexByKey.set(key, nextIndex);
+    }
+
+    if (items.length >= limit) {
+      break;
+    }
+  }
+
+  return { items, duplicateCount };
+}
+
+async function previewExistingFeedByUrl(
+  database: DB,
+  userId: string,
+  rawUrl: string,
+): Promise<FeedPreviewDto | null> {
+  const normalizedUrl = normalizeExistingFeedLookupUrl(rawUrl);
+  if (!normalizedUrl) {
+    return null;
+  }
+
+  const rows = await database
+    .select({
+      id: feeds.id,
+      url: feeds.url,
+      title: feeds.title,
+      description: feeds.description,
+      link: feeds.link,
+      faviconUrl: feeds.faviconUrl,
+      isSubscribed: sql<boolean>`CASE WHEN ${feedSubscriptions.id} IS NULL THEN false ELSE true END`,
+    })
+    .from(feeds)
+    .leftJoin(
+      feedSubscriptions,
+      and(eq(feedSubscriptions.feedId, feeds.id), eq(feedSubscriptions.userId, userId)),
+    )
+    .where(eq(feeds.url, normalizedUrl))
+    .limit(1);
+  const existing = rows[0];
+  if (!existing) {
+    return null;
+  }
+
+  return {
+    id: existing.id,
+    url: existing.url,
+    title: decodeText(existing.title),
+    description: decodeNullableText(existing.description) ?? "",
+    link: existing.link,
+    faviconUrl: existing.faviconUrl,
+    isSubscribed: existing.isSubscribed,
+  };
+}
+
+export async function previewFeedFromUrl(
+  database: DB,
+  userId: string,
+  rawUrl: string,
+): Promise<FeedPreviewDto> {
+  const existingPreview = await previewExistingFeedByUrl(database, userId, rawUrl);
+  if (existingPreview) {
+    return existingPreview;
+  }
+
+  const resolved = await resolveRemoteFeed(rawUrl);
+
+  const existingRows = await database
+    .select({ id: feeds.id, faviconUrl: feeds.faviconUrl })
+    .from(feeds)
+    .where(eq(feeds.url, resolved.canonicalUrl))
+    .limit(1);
+  const existingFeed = existingRows[0];
+
+  let isSubscribed = false;
+  if (existingFeed) {
+    const subRows = await database
+      .select({ id: feedSubscriptions.id })
+      .from(feedSubscriptions)
+      .where(
+        and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.feedId, existingFeed.id)),
+      )
+      .limit(1);
+    isSubscribed = subRows.length > 0;
+  }
+
+  // Keep preview snappy: avoid blocking on remote favicon probing.
+  const favicon = existingFeed?.faviconUrl ?? resolved.iconUrl ?? null;
+
+  return {
+    id: existingFeed?.id ?? null,
+    url: resolved.canonicalUrl,
+    title: decodeText(resolved.title),
+    description: decodeText(resolved.description),
+    link: resolved.link,
+    faviconUrl: favicon,
+    isSubscribed,
+  };
+}
+
+export async function searchFeeds(
+  database: DB,
+  userId: string,
+  rawQuery: string,
+  limit = 20,
+  logger?: AppLogger,
+): Promise<FeedSearchResultDto[]> {
+  const query = rawQuery.trim();
+  if (!query) {
+    return [];
+  }
+
+  const safeLimit = Math.min(Math.max(limit, 1), 50);
+  const scanLimit = getSearchScanLimit(safeLimit);
+  if (isMeiliConfigured()) {
+    try {
+      const hits = await searchFeedSearchDocuments(query, scanLimit);
+      if (hits.length === 0) {
+        return [];
+      }
+      const hitIds = hits.map((hit) => hit.id);
+      const rows = await database
+        .select({
+          id: feeds.id,
+          url: feeds.url,
+          title: feeds.title,
+          description: feeds.description,
+          link: feeds.link,
+          faviconUrl: feeds.faviconUrl,
+          isSubscribed: sql<boolean>`CASE WHEN ${feedSubscriptions.id} IS NULL THEN false ELSE true END`,
+        })
+        .from(feeds)
+        .leftJoin(
+          feedSubscriptions,
+          and(eq(feedSubscriptions.feedId, feeds.id), eq(feedSubscriptions.userId, userId)),
+        )
+        .where(inArray(feeds.id, hitIds));
+      const rowsById = new Map(rows.map((row) => [row.id, row]));
+      const results = hits.map((hit) => {
+        const row = rowsById.get(hit.id);
+        if (!row) {
+          return {
+            id: null,
+            url: hit.url,
+            title: decodeText(hit.title),
+            description: decodeNullableText(hit.description),
+            link: hit.link,
+            faviconUrl: hit.faviconUrl ?? null,
+            isSubscribed: false,
+          };
+        }
+        return {
+          id: row.id,
+          url: row.url,
+          title: decodeText(row.title),
+          description: decodeNullableText(row.description),
+          link: row.link,
+          faviconUrl: row.faviconUrl ?? null,
+          isSubscribed: row.isSubscribed,
+        };
+      });
+      const staleHitCount = hits.reduce(
+        (count, hit) => (rowsById.has(hit.id) ? count : count + 1),
+        0,
+      );
+      if (staleHitCount > 0) {
+        logger?.warn("discover.search.meili_stale_hits", {
+          userId,
+          query,
+          limit: safeLimit,
+          staleHitCount,
+        });
+      }
+      const deduped = dedupeFeedSearchResults(results, safeLimit);
+      if (deduped.duplicateCount > 0) {
+        logger?.info("discover.search.deduped", {
+          userId,
+          query,
+          duplicateCount: deduped.duplicateCount,
+          returnedCount: deduped.items.length,
+          scannedCount: results.length,
+          source: "meili",
+        });
+      }
+      return deduped.items;
+    } catch (error) {
+      logger?.warn("discover.search.meili_fallback", {
+        userId,
+        query,
+        limit: scanLimit,
+        error: error instanceof Error ? error.message : String(error),
+        errorCode: error instanceof AppError ? error.code : undefined,
+      });
+      return [];
+    }
+  }
+
+  const pattern = `%${query}%`;
+  const subscriptionJoin = and(
+    eq(feedSubscriptions.feedId, feeds.id),
+    eq(feedSubscriptions.userId, userId),
+  );
+
+  const rows = await database
+    .select({
+      id: feeds.id,
+      url: feeds.url,
+      title: feeds.title,
+      description: feeds.description,
+      link: feeds.link,
+      faviconUrl: feeds.faviconUrl,
+      isSubscribed: sql<boolean>`CASE WHEN ${feedSubscriptions.id} IS NULL THEN false ELSE true END`,
+      score: sql<number>`
+        CASE
+          WHEN lower(${feeds.title}) = lower(${query}) THEN 0
+          WHEN lower(${feeds.url}) = lower(${query}) THEN 1
+          WHEN ${feedSubscriptions.id} IS NOT NULL THEN 2
+          WHEN lower(${feeds.title}) LIKE lower(${pattern}) THEN 3
+          ELSE 4
+        END
+      `.as("score"),
+    })
+    .from(feeds)
+    .leftJoin(feedSubscriptions, subscriptionJoin)
+    .where(or(ilike(feeds.title, pattern), ilike(feeds.url, pattern)))
+    .orderBy(sql`score`, asc(feeds.title))
+    .limit(scanLimit);
+
+  const results = rows.map(({ score: _score, ...row }) => ({
+    ...row,
+    title: decodeText(row.title),
+    description: decodeNullableText(row.description),
+    faviconUrl: row.faviconUrl,
+  }));
+  const deduped = dedupeFeedSearchResults(results, safeLimit);
+  if (deduped.duplicateCount > 0) {
+    logger?.info("discover.search.deduped", {
+      userId,
+      query,
+      duplicateCount: deduped.duplicateCount,
+      returnedCount: deduped.items.length,
+      scannedCount: results.length,
+      source: "database",
+    });
+  }
+  return deduped.items;
+}

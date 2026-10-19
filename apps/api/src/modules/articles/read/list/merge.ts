@@ -1,4 +1,4 @@
-import type { ArticleSort } from "@modules/articles/query";
+import type { ArticleSort } from "@modules/articles/params";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { encodeMergedListCursorFromItem } from "./cursor";
 
@@ -48,15 +48,6 @@ export function mergeArticleItemsByDate(
 ): ArticleListItemDto[] {
   const cap = Math.min(Math.max(limit, 1), 200);
   return mergeArticleListsSortedDesc(parts).slice(0, cap);
-}
-
-export function mergedFeedClipResponse(items: ArticleListItemDto[]): ArticlesCursorListResponseDto {
-  return {
-    items,
-    next_cursor: null,
-    has_more: false,
-    total_count: null,
-  };
 }
 
 export function mergedFeedClipResponsePaged(

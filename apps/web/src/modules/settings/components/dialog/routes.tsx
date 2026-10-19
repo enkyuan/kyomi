@@ -17,8 +17,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@kyomi/ui/breadcrumb";
-import { ScrollArea } from "@kyomi/ui/scroll-area";
+} from "@kyomi/ui/components/breadcrumb";
+import { ScrollArea } from "@kyomi/ui/components/scroll-area";
 import {
   Sidebar,
   SidebarContent,
@@ -26,8 +26,8 @@ import {
   SidebarGroupContent,
   SidebarMenu,
   SidebarProvider,
-} from "@kyomi/ui/sidebar";
-import { Separator } from "@kyomi/ui/separator";
+} from "@kyomi/ui/components/sidebar";
+import { Separator } from "@kyomi/ui/components/separator";
 import { AccountPageNav, AccountPagePanel, accountSection } from "../account";
 import { AdvancedPageNav, AdvancedPagePanel, advancedSection } from "../advanced";
 import { AppearancePageNav, AppearancePagePanel, appearanceSection } from "../appearance";

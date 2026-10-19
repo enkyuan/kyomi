@@ -2,10 +2,18 @@
 
 import { Link } from "@tanstack/react-router";
 import { BookmarkFill, ExternalLinkLine, Fullscreen2Fill } from "@kyomi/ui/icons/mingcute";
-import { Button } from "@kyomi/ui/button";
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemTarget,
+  ItemTitle,
+} from "@kyomi/ui/components/item";
+import { Button } from "@kyomi/ui/components/button";
 import type { InboxSearch } from "@modules/inbox/lib/search";
-import { buildInboxItemSlug } from "@modules/inbox/lib/articles/slug";
-import type { RecapSavedItem } from "../types";
+import { buildInboxItemSlug } from "@modules/articles/lib/slug";
+import type { RecapSavedItem } from "../../../lib/recap/types";
 import { formatRelativeTime } from "@modules/inbox/lib/recap/index";
 import { RailTooltip, RecapSection, SectionEmpty } from ".";
 
@@ -46,63 +54,65 @@ export function WorthRevisiting({
       ) : (
         <div className="space-y-3">
           {visibleItems.map((item) => (
-            <div
-              key={item.id}
-              className="group relative min-w-0 rounded-xl px-2 py-2 hover:bg-accent/70"
-            >
-              <Link
-                aria-label={item.title}
-                className="absolute inset-0 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background"
-                params={{ article: buildInboxItemSlug(item) }}
-                search={(prev: InboxSearch) => ({
-                  ...prev,
-                  itemId: undefined,
-                })}
-                to="/inbox/$article"
-              />
-              <span className="pointer-events-none relative block min-w-0">
-                <span className="block truncate font-semibold text-sm leading-5">{item.title}</span>
-              </span>
-              <div className="mt-1 flex min-w-0 items-center gap-1">
-                <span className="pointer-events-none min-w-0 flex-1 truncate text-muted-foreground text-sm">
-                  {item.feedTitle} · saved {formatRelativeTime(item.savedAt)}
-                </span>
-                <div
-                  className="relative z-10 flex shrink-0 items-center gap-0.5 text-muted-foreground opacity-70 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
-                  onClick={(event) => event.stopPropagation()}
+            <Item key={item.id} size="sm">
+              <ItemContent>
+                <ItemTarget
+                  aria-label={item.title}
+                  render={
+                    <Link
+                      params={{ article: buildInboxItemSlug(item) }}
+                      search={(prev: InboxSearch) => ({
+                        ...prev,
+                        itemId: undefined,
+                      })}
+                      to="/inbox/$article"
+                    />
+                  }
                 >
-                  <RailTooltip label="Open original">
-                    <Button
-                      aria-label={`Open original for ${item.title}`}
-                      render={
-                        <a
-                          aria-label={`Open original for ${item.title}`}
-                          href={item.link}
-                          rel="noreferrer"
-                          target="_blank"
-                        />
-                      }
-                      size="icon-xs"
-                      variant="ghost"
-                    >
-                      <ExternalLinkLine />
-                    </Button>
-                  </RailTooltip>
-                  <RailTooltip label="Unsave">
-                    <Button
-                      aria-label={`Unsave ${item.title}`}
-                      className="text-mizu"
-                      loading={unsavingItemId === item.id}
-                      size="icon-xs"
-                      variant="ghost"
-                      onClick={() => onUnsave(item.id)}
-                    >
-                      <BookmarkFill />
-                    </Button>
-                  </RailTooltip>
+                  <ItemTitle>{item.title}</ItemTitle>
+                </ItemTarget>
+                <div className="mt-1 flex min-w-0 items-center gap-1">
+                  <ItemDescription className="min-w-0 flex-1">
+                    {item.feedTitle} · saved {formatRelativeTime(item.savedAt)}
+                  </ItemDescription>
+                  <ItemActions
+                    className="text-muted-foreground"
+                    reveal
+                    onClick={(event) => event.stopPropagation()}
+                  >
+                    <RailTooltip label="Open original">
+                      <Button
+                        aria-label={`Open original for ${item.title}`}
+                        render={
+                          <a
+                            aria-label={`Open original for ${item.title}`}
+                            href={item.link}
+                            rel="noreferrer"
+                            target="_blank"
+                          />
+                        }
+                        size="icon-xs"
+                        variant="ghost"
+                      >
+                        <ExternalLinkLine />
+                      </Button>
+                    </RailTooltip>
+                    <RailTooltip label="Unsave">
+                      <Button
+                        aria-label={`Unsave ${item.title}`}
+                        className="text-mizu"
+                        loading={unsavingItemId === item.id}
+                        size="icon-xs"
+                        variant="ghost"
+                        onClick={() => onUnsave(item.id)}
+                      >
+                        <BookmarkFill />
+                      </Button>
+                    </RailTooltip>
+                  </ItemActions>
                 </div>
-              </div>
-            </div>
+              </ItemContent>
+            </Item>
           ))}
         </div>
       )}

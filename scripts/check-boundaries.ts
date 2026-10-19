@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync, statSync } from "node:fs";
-import { join, relative } from "node:path";
+import { dirname, join, normalize, relative } from "node:path";
 
 export const SOURCE_ROOTS = [
   "apps/api/src",
@@ -10,6 +10,18 @@ export const SOURCE_ROOTS = [
   "packages/db/src",
   "packages/reader/src",
 ];
+const MOBILE_SRC = "apps/mobile/src";
+const MOBILE_ALIASES: Record<string, string> = {
+  "@/": "",
+  "@modules/": "modules/",
+  "@hooks/": "hooks/",
+  "@lib/": "lib/",
+  "@ui/": "components/ui/",
+};
+// Shared mobile code sits below every domain module and must not reach back up.
+const MOBILE_SHARED_LAYERS = new Set(["components", "hooks", "lib", "theme"]);
+// Shared article code that inbox, reader, and recents build on.
+const MOBILE_ARTICLES_MODULE = "articles";
 const IMPORT_RE = /\bfrom\s+["']([^"']+)["']|import\s*\(\s*["']([^"']+)["']\s*\)/g;
 
 export type Violation = {
@@ -54,11 +66,44 @@ function collectImports(root: string, file: string): string[] {
   return imports;
 }
 
+function resolveMobileImport(file: string, specifier: string): string | null {
+  if (specifier.startsWith(".")) {
+    return normalize(join(dirname(file), specifier));
+  }
+  for (const [alias, target] of Object.entries(MOBILE_ALIASES)) {
+    if (specifier.startsWith(alias)) {
+      return `${MOBILE_SRC}/${target}${specifier.slice(alias.length)}`;
+    }
+  }
+  return null;
+}
+
+function mobileModuleOf(path: string): string | null {
+  return path.match(/^apps\/mobile\/src\/modules\/([^/]+)/)?.[1] ?? null;
+}
+
+function checkMobileLayering(file: string, specifier: string): string | null {
+  const target = resolveMobileImport(file, specifier);
+  const targetModule = target ? mobileModuleOf(target) : null;
+  if (!targetModule) {
+    return null;
+  }
+  const layer = file.slice(MOBILE_SRC.length + 1).split("/")[0] ?? "";
+  if (MOBILE_SHARED_LAYERS.has(layer)) {
+    return "shared mobile code must not import domain modules";
+  }
+  if (mobileModuleOf(file) === MOBILE_ARTICLES_MODULE && targetModule !== MOBILE_ARTICLES_MODULE) {
+    return "the mobile articles module must not import other domain modules";
+  }
+  return null;
+}
+
 function checkFile(root: string, file: string): Violation[] {
   const violations: Violation[] = [];
   const isPackageFile = file.startsWith("packages/");
   const isWorkerFile = file.startsWith("packages/worker/");
   const isRouteFile = file.startsWith("apps/api/src/modules/") && file.endsWith(".routes.ts");
+  const isMobileFile = file.startsWith(`${MOBILE_SRC}/`);
 
   for (const specifier of collectImports(root, file)) {
     if (
@@ -93,6 +138,10 @@ function checkFile(root: string, file: string): Violation[] {
         reason: "route handlers must not import package internals",
       });
     }
+    const mobileLayeringViolation = isMobileFile ? checkMobileLayering(file, specifier) : null;
+    if (mobileLayeringViolation) {
+      violations.push({ file, specifier, reason: mobileLayeringViolation });
+    }
   }
 
   return violations;
@@ -102,8 +151,129 @@ function sourceFiles(root: string): string[] {
   return SOURCE_ROOTS.filter((path) => rootExists(root, path)).flatMap((path) => walk(root, path));
 }
 
+const WEB_SRC = "apps/web/src";
+const WEB_ALIASES: Record<string, string> = {
+  "@/": "",
+  "@modules/": "modules/",
+  "@hooks/": "hooks/",
+  "@lib/": "lib/",
+  "@integrations/": "integrations/",
+};
+// Shared web code sits below every domain module and must not reach back up.
+const WEB_SHARED_LAYERS = new Set(["hooks", "integrations", "lib"]);
+// The web module stack, top to bottom. A module imports its own tier or the tiers below it.
+const WEB_MODULE_TIERS = [
+  ["sidebar", "settings", "auth"],
+  ["inbox"],
+  ["reader"],
+  ["articles"],
+  ["feeds", "folders", "preferences"],
+];
+const WEB_MODULE_TIER = new Map(
+  WEB_MODULE_TIERS.flatMap((modules, tier) => modules.map((name) => [name, tier] as const)),
+);
+
+function resolveWebImport(file: string, specifier: string): string | null {
+  if (specifier.startsWith(".")) {
+    return join(file, "..", specifier);
+  }
+  for (const [alias, target] of Object.entries(WEB_ALIASES)) {
+    if (specifier.startsWith(alias)) {
+      return `${WEB_SRC}/${target}${specifier.slice(alias.length)}`;
+    }
+  }
+  return null;
+}
+
+function webModuleOf(path: string): string | null {
+  return path.match(/^apps\/web\/src\/modules\/([^/]+)/)?.[1] ?? null;
+}
+
+type WebModuleEdges = Map<string, Map<string, { file: string; specifier: string }>>;
+
+function webModuleReaches(edges: WebModuleEdges, from: string, to: string): boolean {
+  const pending = [from];
+  const seen = new Set<string>();
+  while (pending.length > 0) {
+    const current = pending.pop()!;
+    if (current === to) return true;
+    if (seen.has(current)) continue;
+    seen.add(current);
+    pending.push(...(edges.get(current)?.keys() ?? []));
+  }
+  return false;
+}
+
+function addWebModuleEdge(
+  edges: WebModuleEdges,
+  fromModule: string,
+  toModule: string,
+  importSite: { file: string; specifier: string },
+) {
+  const targets = edges.get(fromModule) ?? new Map();
+  if (!targets.has(toModule)) targets.set(toModule, importSite);
+  edges.set(fromModule, targets);
+}
+
+// Web domain modules may depend on each other in one direction only, including type imports.
+function checkWebModules(root: string, files: string[]): Violation[] {
+  const violations: Violation[] = [];
+  const edges: WebModuleEdges = new Map();
+
+  for (const file of files.filter((path) => path.startsWith(`${WEB_SRC}/`))) {
+    const layer = file.slice(WEB_SRC.length + 1).split("/")[0] ?? "";
+    const fromModule = webModuleOf(file);
+    for (const specifier of collectImports(root, file)) {
+      const target = resolveWebImport(file, specifier);
+      const toModule = target ? webModuleOf(target) : null;
+      if (!toModule || toModule === fromModule) continue;
+      if (WEB_SHARED_LAYERS.has(layer)) {
+        violations.push({
+          file,
+          specifier,
+          reason: "shared web code must not import domain modules",
+        });
+      } else if (fromModule) {
+        addWebModuleEdge(edges, fromModule, toModule, { file, specifier });
+      }
+    }
+  }
+
+  for (const [fromModule, targets] of edges) {
+    for (const [toModule, { file, specifier }] of targets) {
+      const reason = webModuleEdgeViolation(edges, fromModule, toModule);
+      if (reason) violations.push({ file, specifier, reason });
+    }
+  }
+
+  return violations;
+}
+
+function webModuleEdgeViolation(
+  edges: WebModuleEdges,
+  fromModule: string,
+  toModule: string,
+): string | null {
+  const fromTier = WEB_MODULE_TIER.get(fromModule);
+  const toTier = WEB_MODULE_TIER.get(toModule);
+  if (fromTier === undefined || toTier === undefined) {
+    const unplaced = fromTier === undefined ? fromModule : toModule;
+    return `web module ${unplaced} has no place in the module stack; add it to WEB_MODULE_TIERS`;
+  }
+  if (toTier < fromTier) {
+    return `web module ${fromModule} must not import ${toModule}, which sits above it in the module stack`;
+  }
+  // Modules in one tier may import each other, but only in one direction. A cycle that crosses
+  // tiers always contains an upward import, which the rank check above already reports.
+  if (toTier === fromTier && webModuleReaches(edges, toModule, fromModule)) {
+    return `web modules ${fromModule} and ${toModule} must not depend on each other in a cycle`;
+  }
+  return null;
+}
+
 export function checkBoundaries(root = process.cwd()): Violation[] {
-  return sourceFiles(root).flatMap((file) => checkFile(root, file));
+  const files = sourceFiles(root);
+  return [...files.flatMap((file) => checkFile(root, file)), ...checkWebModules(root, files)];
 }
 
 if (import.meta.main) {

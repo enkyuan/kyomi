@@ -3,10 +3,10 @@
 import { useCallback, useMemo } from "react";
 import type { useRouter } from "@tanstack/react-router";
 import { List } from "@modules/inbox/components/list";
-import type { InboxPreferences } from "@modules/inbox/hooks/use-inbox-data";
+import type { InboxPreferences } from "@modules/inbox/hooks/use-preferences";
 import type { useInboxRouteState } from "@modules/inbox/hooks/use-layout";
 import { getPreviousInboxFeedId } from "@modules/inbox/lib/layout/history";
-import type { InboxFilter, InboxItem } from "@modules/inbox/lib/articles/index";
+import type { InboxFilter, InboxItem } from "@modules/articles/lib/api";
 import type { Folder } from "@modules/folders/lib/api";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 

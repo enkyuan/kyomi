@@ -3,11 +3,12 @@ import type {
   ReaderDefaultModeDto,
   ReaderPreferencesDto,
 } from "@kyomi/reader/schemas";
+import { getUserPreferences, updateUserPreferences } from "@modules/preferences/lib/api";
 
 const MIN_FONT_SIZE_PX = 14;
 const MAX_FONT_SIZE_PX = 22;
 
-export type ReaderDefaultMode = ReaderDefaultModeDto;
+type ReaderDefaultMode = ReaderDefaultModeDto;
 export type ReaderContentWidth = ReaderContentWidthDto;
 export type ReaderPreferences = ReaderPreferencesDto;
 
@@ -20,7 +21,7 @@ export const DEFAULT_READER_PREFERENCES: ReaderPreferences = {
   showImages: true,
 };
 
-export function clampReaderFontSize(value: unknown): number {
+function clampReaderFontSize(value: unknown): number {
   if (typeof value !== "number" || Number.isNaN(value)) {
     return DEFAULT_READER_PREFERENCES.fontSizePx;
   }
@@ -77,4 +78,16 @@ export function normalizeReaderPreferencePatch(
 
 export function getReaderPreferenceLimits() {
   return { minFontSizePx: MIN_FONT_SIZE_PX, maxFontSizePx: MAX_FONT_SIZE_PX };
+}
+
+export async function getReaderPreferences(): Promise<ReaderPreferences> {
+  return sanitizeReaderPreferences(await getUserPreferences());
+}
+
+export async function updateReaderPreferences({
+  data,
+}: {
+  data: Partial<ReaderPreferences>;
+}): Promise<ReaderPreferences> {
+  return sanitizeReaderPreferences(await updateUserPreferences({ data }));
 }

@@ -6,9 +6,9 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
 import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
-import { prefetchInboxFlow } from "@modules/inbox";
+import { prefetchInboxFlow } from "@modules/inbox/lib/navigation";
 import { useAuth } from "@integrations/better-auth/provider";
-import { Button } from "@kyomi/ui/button";
+import { Button } from "@kyomi/ui/components/button";
 import {
   Card,
   CardAction,
@@ -16,13 +16,13 @@ import {
   CardHeader,
   CardPanel,
   CardTitle,
-} from "@kyomi/ui/card";
-import { Form } from "@kyomi/ui/form";
-import { Field, FieldError, FieldLabel } from "@kyomi/ui/field";
-import { Input } from "@kyomi/ui/input";
-import { OTPField, OTPFieldInput, OTPFieldSeparator } from "@kyomi/ui/otp-field";
-import { Spinner } from "@kyomi/ui/spinner";
-import { toastManager } from "@kyomi/ui/toast";
+} from "@kyomi/ui/components/card";
+import { Form } from "@kyomi/ui/components/form";
+import { Field, FieldError, FieldLabel } from "@kyomi/ui/components/field";
+import { Input } from "@kyomi/ui/components/input";
+import { OTPField, OTPFieldInput, OTPFieldSeparator } from "@kyomi/ui/components/otp-field";
+import { Spinner } from "@kyomi/ui/components/spinner";
+import { toastManager } from "@kyomi/ui/components/toast";
 import {
   emailOtpDefaultValues,
   emailOtpFormValidator,

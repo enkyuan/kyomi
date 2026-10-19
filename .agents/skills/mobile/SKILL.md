@@ -47,6 +47,7 @@ apps/mobile/src/
     components/<area>/
     hooks/
     lib/
+    queries/                     Query keys the domain owns
     services/
     model.ts
     screen.tsx                   Required default or non-native fallback
@@ -57,6 +58,10 @@ apps/mobile/src/
   hooks/                         Hooks reused by multiple mobile domains
   theme/                         App-level platform color and presentation adapters
 ```
+
+`modules/articles` owns article code that inbox, reader, and recents share: request paths,
+query keys, favicon, and list formatting. It must not import other domains, and shared layers
+must not import any domain; `bun run check:boundaries` enforces both.
 
 - Do not create directories until a real responsibility exists.
 - Keep route files focused on navigation, route parameters, layout composition, and rendering the
@@ -154,8 +159,8 @@ using a mobile dependency.
 
 ## Verify
 
-1. Note that no mobile test runner is currently wired. Use `$architecture` and `$testing` before
-   introducing the first runner or mobile test tree.
+1. Run `bun run --cwd tests test:mobile` for logic covered under `tests/mobile/integration`, which
+   mirrors `apps/mobile/src`. Pair with `$testing` before adding new mobile tests.
 2. Run `bun run --cwd apps/mobile typecheck`, `lint`, and `fmt:check`.
 3. Run `bunx expo install --check` when the Expo or React Native dependency graph changes.
 4. Bundle or run every affected platform. Platform-specific imports require both iOS and Android

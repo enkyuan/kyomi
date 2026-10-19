@@ -1,4 +1,4 @@
-import { hapticFor, maxLinesFor, durationFor, DEFAULT_CONFIG, type ToastConfig } from "./config";
+import { DEFAULT_CONFIG, durationFor, hapticFor, type ToastConfig } from "./config";
 import { nextActionId, nextToastId } from "./ids";
 import { effectiveMaxLines, effectiveTitleMaxLines, type Toast, type ToastAction } from "./model";
 import type { ToastDismissReason, ToastEvent } from "./types";

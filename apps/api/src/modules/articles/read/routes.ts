@@ -11,7 +11,7 @@ import {
 } from "./counts";
 import { getArticleDetailForUser } from "./detail";
 import { listAllArticlesForUser, listArticlesForUser } from "./list/query";
-import { parseArticlesListQuery, parseMergedViewListQuery, parseOptionalIsoDate } from "../query";
+import { parseArticlesListQuery, parseMergedViewListQuery, parseOptionalIsoDate } from "../params";
 import {
   articleDetailSchema,
   articleIdParamsSchema,
