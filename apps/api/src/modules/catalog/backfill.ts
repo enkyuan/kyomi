@@ -604,6 +604,18 @@ function classifierContentText(item: BackfillItemRow): string | null {
   return item.extractedContentText ?? item.contentText;
 }
 
+/**
+ * Whether an applied backfill should replace this item's classifier rows. An abstention on ready
+ * extracted text is the same "no new information" extraction re-classification keeps labels for,
+ * so the labels refresh assigned stay instead of being synced away.
+ */
+export function syncsItemLabels(
+  item: BackfillItemRow,
+  inferredCategoryLabels: readonly InferredCategoryLabel[],
+): boolean {
+  return inferredCategoryLabels.length > 0 || item.extractedContentText == null;
+}
+
 type BackfillItemRecord = BackfillItemRow & {
   id: string;
   feedId: string;
@@ -1192,6 +1204,10 @@ async function processFeed(
         feedStats.itemClassifierAbstentions += 1;
       }
     }
+    const itemsById = new Map(items.map((item) => [item.id, item]));
+    const syncedItems = inferredItems.filter(({ id, inferredCategoryLabels }) =>
+      syncsItemLabels(itemsById.get(id)!, inferredCategoryLabels),
+    );
 
     if (args.apply) {
       // syncInferredFeedCategories unconditionally deletes+reinserts the feed's
@@ -1204,7 +1220,7 @@ async function processFeed(
         {
           feedId: feed.id,
           feedCategories: [],
-          items: inferredItems,
+          items: syncedItems,
           model: classifier.model,
         },
         now,
@@ -1273,14 +1289,10 @@ async function processFeedBatch(
       feedStats.feedClassifierCategories = feedCategories.length;
       feedStats.feedClassifierFallbackSuppressed = suppressedFallback;
 
+      const batchItems = itemsByFeedId.get(feed.id) ?? [];
+      const batchItemsById = new Map(batchItems.map((item) => [item.id, item]));
       const inferredItems = (
-        await inferClassifierItems(
-          feed,
-          itemsByFeedId.get(feed.id) ?? [],
-          classifier,
-          stats,
-          concurrency,
-        )
+        await inferClassifierItems(feed, batchItems, classifier, stats, concurrency)
       ).map(({ id, inferredCategoryLabels }) => {
         feedStats.itemsScanned += 1;
         if (inferredCategoryLabels.length > 0) {
@@ -1294,7 +1306,9 @@ async function processFeedBatch(
       processed.push({
         feed,
         feedCategories,
-        items: inferredItems,
+        items: inferredItems.filter(({ id, inferredCategoryLabels }) =>
+          syncsItemLabels(batchItemsById.get(id)!, inferredCategoryLabels),
+        ),
         stats: feedStats,
       });
     } catch (error) {
