@@ -19,8 +19,14 @@ export function MenuTrigger({
   children,
   ...props
 }: MenuPrimitive.Trigger.Props): React.ReactElement {
+  // Menus open on mousedown, so the press scale of a Button trigger would shrink the anchor while
+  // the popup measures it and the popup would shift when the pointer is released.
   return (
-    <MenuPrimitive.Trigger className={className} data-slot="menu-trigger" {...props}>
+    <MenuPrimitive.Trigger
+      className={cn("data-popup-open:scale-100!", className)}
+      data-slot="menu-trigger"
+      {...props}
+    >
       {children}
     </MenuPrimitive.Trigger>
   );
@@ -89,7 +95,7 @@ export function MenuPopup({
       >
         <MenuPrimitive.Popup
           className={cn(
-            "relative flex not-[class*='w-']:min-w-32 origin-(--transform-origin) rounded-(--menu-radius) border border-border bg-popover not-dark:bg-clip-padding shadow-lg/5 outline-none before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--menu-radius)-1px)] before:shadow-[0_1px_--theme(--color-black/4%)] focus:outline-none dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
+            "relative flex not-[class*='w-']:min-w-32 origin-(--transform-origin) rounded-(--menu-radius) border border-border bg-popover not-dark:bg-clip-padding shadow-lg/5 outline-none transition-[scale,opacity] duration-150 ease-out-quint data-ending-style:scale-95 data-starting-style:scale-95 data-ending-style:opacity-0 data-starting-style:opacity-0 data-ending-style:duration-100 motion-reduce:transition-none before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--menu-radius)-1px)] before:shadow-[0_1px_--theme(--color-black/4%)] focus:outline-none dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
             menuPopupVariants({ shape, size }),
             maxVisibleItems !== undefined && "overflow-hidden",
             className,
@@ -119,7 +125,7 @@ export function MenuPopup({
             >
               <div className="w-full p-1">{children}</div>
             </ScrollAreaPrimitive.Viewport>
-            <ScrollBar className="absolute inset-y-0 end-0 z-10 m-0" orientation="vertical" />
+            <ScrollBar className="absolute inset-y-0 end-0 z-10" orientation="vertical" />
             <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
           </ScrollAreaPrimitive.Root>
         </MenuPrimitive.Popup>

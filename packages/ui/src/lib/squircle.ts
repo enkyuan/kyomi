@@ -33,6 +33,7 @@ export function useSquircle<T extends HTMLElement = HTMLElement>(
   cornerSmoothing = 1,
 ) {
   const ref = useRef<T | null>(null);
+  const lastSize = useRef({ width: 0, height: 0 });
   const [style, setStyle] = useState<CSSProperties>({
     borderRadius: cornerRadius,
   });
@@ -41,9 +42,18 @@ export function useSquircle<T extends HTMLElement = HTMLElement>(
     const element = ref.current;
     if (!element) return;
 
+    lastSize.current = { width: 0, height: 0 };
+
     const update = () => {
       const { offsetWidth, offsetHeight } = element;
-      if (offsetWidth > 0 && offsetHeight > 0) {
+      const { width, height } = lastSize.current;
+      // The ResizeObserver also fires once on observe(); skip the identical re-render.
+      if (
+        offsetWidth > 0 &&
+        offsetHeight > 0 &&
+        (offsetWidth !== width || offsetHeight !== height)
+      ) {
+        lastSize.current = { width: offsetWidth, height: offsetHeight };
         setStyle(
           createSquircleStyle({
             width: offsetWidth,
