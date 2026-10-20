@@ -38,6 +38,15 @@ should reach for a primitive variant before restyling one.
 Motion in JavaScript uses `springTransition(kind, prefersReducedMotion)` from
 `@kyomi/ui/lib/motion`: bounce-free springs (`quick` 0.24s, `standard` 0.28s, `emphasized` 0.3s)
 that become instant under reduced motion. `EASE_OUT_QUINT` mirrors the CSS curve for WAAPI.
+`controlSwapMotion(prefersReducedMotion)` is the one enter/exit recipe for controls swapped in or out
+of a toolbar or header (a slight scale and blur, never from zero); spread it onto the `m.*` element.
+
+`ScrollBar` is a macOS-style overlay scrollbar (styles in `styles/scrollbar.css`; thumb and track
+colours are `--scrollbar-*` tokens in `theme.css`, while `--scrollbar-track-size` lives in
+`scrollbar.css` because `ScrollArea`'s `scrollbarGutter` padding reads it too).
+`placement="viewport"` portals the track to `body` and pins it to the window edge, so panes sharing
+a row show their scrollbar in one place; use it instead of `position: fixed` inside the page, which
+a transformed or filtered ancestor would relocate.
 
 ## Button
 
@@ -52,7 +61,9 @@ that become instant under reduced motion. `EASE_OUT_QUINT` mirrors the CSS curve
 
 - `variant="attached"` (default) joins segments into one bordered control.
 - `variant="split"` keeps each segment a separate pill: capsule outer ends, `rounded-sm` inner
-  corners, and a 3px gap, like a theme and language switcher.
+  corners, and a 3px gap, like a theme and language switcher. The inbox list header's
+  `SplitSegment` (`apps/web/.../list/split.tsx`) overrides the inner radius to 6px and reads
+  `--split-h` / `--split-fill` from its group.
 
 ```tsx
 <ButtonGroup aria-label="Theme and language" variant="split">
@@ -71,6 +82,10 @@ under reduced motion. For arrow-key roving between segments, render the group as
 `<ButtonGroup render={<ToolbarPrimitive.Root />}>` with `ToolbarButton` children.
 
 ## Menu
+
+`MenuPopup` animates open and close (scale 0.95 and fade from `--transform-origin`, none under
+reduced motion). `MenuTrigger` keeps `scale(1)` while its popup is open: menus open on mousedown, so
+a `Button` trigger's press scale would shrink the anchor while the popup measures it.
 
 `MenuPopup` keeps its geometry in CSS variables so nested corners stay concentric (popup radius =
 item radius + 4px padding + 1px border):

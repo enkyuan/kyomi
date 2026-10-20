@@ -33,7 +33,7 @@ Build a coherent reading experience across web and mobile without erasing platfo
   main-column content, not sidebar placement.
 - Use line Mingcute icons by default and filled icons for active persisted state. Give actions
   tooltips where labels are not visible.
-- Use `@kyomi/ui/motion` and lazy Motion features. Prefer CSS for simple local state changes and
+- Use `@kyomi/ui/lib/motion` and lazy Motion features. Prefer CSS for simple local state changes and
   Motion for coordinated presence, layout, gesture, or scroll behavior.
 - Keep motion purposeful, interruptible when intent can reverse, frequency-aware, and inexpensive.
 - Preserve outside-only focus halos without clipping and keep nested control geometry concentric.

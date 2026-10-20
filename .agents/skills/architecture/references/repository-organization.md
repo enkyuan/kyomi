@@ -21,7 +21,7 @@ Kyomi paradigms before applying general preferences.
 apps/
   web/
     src/
-      app/                    App shell and runtime effects
+      app/                    App shell, runtime effects, and router-wide error and not-found pages
       integrations/           Better Auth, PostHog, and TanStack Query wiring
       lib/                     Cross-domain web infrastructure
       modules/<domain>/        Product features grouped by domain

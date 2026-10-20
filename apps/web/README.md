@@ -6,7 +6,7 @@ the web client. built with TanStack Start.
 
 ```text
 src/
-  app/           app shell, runtime effects, and the pre-hydration shell script.
+  app/           app shell, runtime effects, router-wide error and not-found pages, and the pre-hydration shell script.
   hooks/         hooks used by more than one module.
   integrations/  Better Auth, PostHog, and TanStack Query wiring.
   lib/           app-local api, auth, query (client, cache, shared keys), shell, and timezone helpers.

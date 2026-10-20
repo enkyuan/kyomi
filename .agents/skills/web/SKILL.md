@@ -21,7 +21,7 @@ Keep routes thin, behavior domain-owned, and browser/server boundaries explicit.
 
 ```text
 apps/web/src/
-  app/                    App shell and runtime effects
+  app/                    App shell, runtime effects, and router-wide error and not-found pages
   integrations/           Better Auth, PostHog, and TanStack Query providers
   lib/<capability>/        Infrastructure used across domains
   modules/<domain>/        Product behavior grouped by domain
@@ -86,8 +86,8 @@ sidebar, settings, auth -> inbox -> reader -> articles -> feeds, folders, prefer
   module's `lib/api.ts` (or `lib/<area>/api.ts`) and call them from loaders.
 - Import shared UI, icons, utilities, motion, and styles through `@kyomi/ui/*`.
 - Import article behavior through the appropriate `@kyomi/reader` entrypoint.
-- Import `LazyMotion`, `m`, `domAnimation`, or `domMax` from `@kyomi/ui/motion`; use `domMax` only
-  when layout animation is required.
+- Import `LazyMotion`, `m`, `domAnimation`, or `domMax` from `@kyomi/ui/lib/motion`; use `domMax`
+  only when layout animation is required.
 - Prefer Tailwind utilities over inline styles for small layout and typography changes.
 - Keep the navigation sidebar on the left at every breakpoint. Change reader columns, not sidebar
   placement, for tablet layouts.
