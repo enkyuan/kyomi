@@ -25,8 +25,21 @@ vi.mock("@kyomi/ui/components/scroll-area", () => ({
       </div>
     ),
   },
-  ScrollBar: ({ orientation, ...props }: { orientation: string; className?: string }) => (
-    <div data-orientation={orientation} data-slot="scroll-area-scrollbar" {...props} />
+  ScrollBar: ({
+    orientation,
+    placement,
+    ...props
+  }: {
+    orientation: string;
+    placement?: string;
+    className?: string;
+  }) => (
+    <div
+      data-orientation={orientation}
+      data-placement={placement}
+      data-slot="scroll-area-scrollbar"
+      {...props}
+    />
   ),
 }));
 
@@ -131,12 +144,18 @@ describe("Detail scrollbar surface", () => {
     delete (HTMLElement.prototype as { scrollTo?: unknown }).scrollTo;
   });
 
+  // Value: protects=the reader scrollbar asks for placement="viewport" on both surfaces so it pins to the window edge;
+  //   fails_when=the placement prop is dropped on either surface, so the track follows the pane instead of the window;
+  //   why_new=strengthens these tests: the ScrollBar mock swallowed placement, so only class and slot were asserted;
+  //   seam=none; no_claim=real portalling and fixed positioning (ScrollBar is mocked; ScrollBar's own test covers that).
   test("renders the reader scrollbar for the browser viewport surface", () => {
     const { container } = renderDetail();
     const scrollbar = container.querySelector('[aria-label="Reader scrollbar"]');
 
     expect(scrollbar?.getAttribute("data-slot")).toBe("scroll-area-scrollbar");
     expect(scrollbar?.className).toContain("z-50");
+    expect(scrollbar?.getAttribute("data-orientation")).toBe("vertical");
+    expect(scrollbar?.getAttribute("data-placement")).toBe("viewport");
   });
 
   test("renders the reader scrollbar for the card surface", () => {
@@ -145,5 +164,7 @@ describe("Detail scrollbar surface", () => {
 
     expect(scrollbar?.getAttribute("data-slot")).toBe("scroll-area-scrollbar");
     expect(scrollbar?.className).toContain("z-50");
+    expect(scrollbar?.getAttribute("data-orientation")).toBe("vertical");
+    expect(scrollbar?.getAttribute("data-placement")).toBe("viewport");
   });
 });

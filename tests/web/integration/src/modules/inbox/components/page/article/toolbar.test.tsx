@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
 import { ReaderToolbar } from "@modules/inbox/components/page/article/toolbar";
 import type { ToolbarModel, ToolbarProps } from "@modules/reader/lib/toolbar";
@@ -34,7 +34,6 @@ function toolbarProps(): ToolbarProps {
     onCycleContentWidth: vi.fn(),
     onDecreaseFontSize: vi.fn(),
     onIncreaseFontSize: vi.fn(),
-    onOpenAi: vi.fn(),
     onOpenOriginal: vi.fn(),
     onShareArticle: vi.fn(),
     onToggleMode: vi.fn(),
@@ -63,7 +62,7 @@ function renderToolbar(collapsed: boolean) {
 
 describe("article reader toolbar", () => {
   test.each([
-    [false, "13.3125rem"],
+    [false, "10.25rem"],
     [true, "5.25rem"],
   ])("keeps %s state edge controls concentric", async (collapsed, expectedWidth) => {
     const shell = renderToolbar(collapsed);
@@ -72,6 +71,10 @@ describe("article reader toolbar", () => {
     expect(shell.className).toMatch(/(?:^|\s)p-1(?:\s|$)/);
     expect(shell.className).not.toContain("px-1.5");
     expect(screen.getByRole("button", { name: "Read later" }).className).toContain("size-9");
+    // The width is derived from the control count, so a added or removed control must move it.
+    expect(
+      within(screen.getByRole("toolbar", { name: "Reader tools" })).getAllByRole("button"),
+    ).toHaveLength(collapsed ? 2 : 4);
     await waitFor(() => expect(shell.style.width).toBe(expectedWidth));
   });
 });

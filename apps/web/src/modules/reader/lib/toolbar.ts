@@ -20,7 +20,6 @@ export type ToolbarProps = {
   onIncreaseFontSize: () => void;
   onTranslateArticle: () => void;
   onOpenOriginal: () => void;
-  onOpenAi: () => void;
   onShareArticle: () => void;
   variant?: "inline" | "floating";
   controlSize?: "default" | "large";
