@@ -97,6 +97,29 @@ export function logApiNetworkError(method: string, path: string, error: unknown)
   console.error(`[api] ${method} ${path} -> network error: ${formatErrorForLog(error)}`);
 }
 
+// 5xx codes whose API message tells the user what to fix (their own OPML or feed URL); every other 5xx
+// message names server internals (`Meilisearch search failed (503)`) and stays behind the generic text.
+const USER_ACTIONABLE_SERVER_ERROR_CODES = new Set([
+  "FEED_FETCH_FAILED",
+  "FEED_PARSE_FAILED",
+  "OPML_URL_FETCH_FAILED",
+  "OPML_URL_FETCH_TIMEOUT",
+  "OPML_URL_HTTP_ERROR",
+  "OPML_URL_TLS_FAILED",
+  "OPML_URL_TOO_MANY_REDIRECTS",
+]);
+
+async function isUserActionableServerError(response: Response) {
+  try {
+    const body: unknown = await response.json();
+    const error = typeof body === "object" && body !== null ? Reflect.get(body, "error") : null;
+    const code = typeof error === "object" && error !== null ? Reflect.get(error, "code") : null;
+    return typeof code === "string" && USER_ACTIONABLE_SERVER_ERROR_CODES.has(code);
+  } catch {
+    return false;
+  }
+}
+
 export async function apiJson<T>(path: string, init?: RequestInit) {
   const url = resolveApiUrl(path);
   const method = init?.method?.toUpperCase() ?? "GET";
@@ -111,9 +134,16 @@ export async function apiJson<T>(path: string, init?: RequestInit) {
   }
 
   if (!response.ok) {
+    const curated = response.status < 500 || (await isUserActionableServerError(response.clone()));
     const summary = await readResponseErrorSummary(response);
     logApiResponseError(method, apiPath, response.status, summary);
-    throw new Error(getUserSafeErrorMessage(summary, apiFailureUserMessage(response.status)));
+    // A 5xx body is user text only for the actionable codes above; anything else could name
+    // server internals, so users get the generic message.
+    throw new Error(
+      curated
+        ? getUserSafeErrorMessage(summary, apiFailureUserMessage(response.status))
+        : apiFailureUserMessage(response.status),
+    );
   }
 
   try {

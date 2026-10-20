@@ -1,5 +1,8 @@
 import { createRouter as createTanStackRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
+import { DefaultErrorPage } from "./app/error";
+import { DefaultNotFoundPage } from "./app/not-found";
+import { captureRouteError } from "@integrations/posthog/capture";
 
 import { setupRouterSsrQueryIntegration } from "@tanstack/react-router-ssr-query";
 import { getContext } from "@lib/query/client";
@@ -14,6 +17,9 @@ export function getRouter() {
     scrollRestoration: true,
     defaultPreload: "intent",
     defaultPreloadStaleTime: 0,
+    defaultErrorComponent: DefaultErrorPage,
+    defaultNotFoundComponent: DefaultNotFoundPage,
+    defaultOnCatch: captureRouteError,
   });
 
   // Capture the original hydrate (default: undefined) before the SSR query
