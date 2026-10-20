@@ -38,6 +38,7 @@ import {
   SortButton,
   type PinnedFolderFilter,
 } from "./header";
+import { BlurLayer } from "@modules/reader/components/detail/blur";
 import { Toolbar as ReaderToolbar } from "@modules/reader/components/toolbar";
 import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 
@@ -184,6 +185,14 @@ export function List({
               showEmptyState ? "flex h-full min-h-full flex-col" : "flex min-h-full flex-col"
             }
           >
+            {onFilterChange && !showEmptyState ? (
+              // Zero-height and sticky so the layer sits at the viewport top and inherits the
+              // viewport's scroll variables; its opacity follows the scroll offset directly, so
+              // it needs no timing or easing of its own.
+              <div aria-hidden="true" className="sticky top-0 z-10 h-0 shrink-0">
+                <BlurLayer topOffset={0} />
+              </div>
+            ) : null}
             {onFilterChange ? (
               <div
                 ref={listHeaderRef}
