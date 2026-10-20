@@ -1,5 +1,10 @@
 import { afterEach, beforeEach, describe, expect, mock, test } from "bun:test";
-import { createArticleClip } from "@modules/articles/write/clips/operations";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/worker/sanitization";
+import { getClipDetailForUser } from "@modules/articles/write/clips/detail";
+import {
+  createArticleClip,
+  updateArticleClipForUser,
+} from "@modules/articles/write/clips/operations";
 
 const originalFetch = globalThis.fetch;
 
@@ -195,5 +200,100 @@ describe("createArticleClip", () => {
         content: "a".repeat(1024 * 1024),
       }),
     ).resolves.toMatchObject({ title: "My title" });
+  });
+});
+
+const RAW_COLUMNS = ["contentRaw", "extractedContentRaw"];
+
+function selectingDb(row: Record<string, unknown>) {
+  const selected: Record<string, unknown>[] = [];
+  const updates: Record<string, unknown>[] = [];
+  const db = {
+    selected,
+    updates,
+    select: (fields: Record<string, unknown>) => {
+      selected.push(fields);
+      return { from: () => ({ where: () => ({ limit: () => Promise.resolve([row]) }) }) };
+    },
+    update: () => ({
+      set: (patch: Record<string, unknown>) => {
+        updates.push(patch);
+        return { where: () => Promise.resolve() };
+      },
+    }),
+  };
+  return db;
+}
+
+describe("clip raw source", () => {
+  test("create compiles HTML content, keeps the raw body, and never returns raw columns", async () => {
+    const content = `<p>Read <a href="/docs">the docs</a>.</p><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Talk"></iframe>`;
+    const returning = mock((fields: Record<string, unknown>) => {
+      expect(Object.keys(fields)).not.toContain("contentRaw");
+      expect(Object.keys(fields)).not.toContain("extractedContentRaw");
+      return Promise.resolve([pendingClipRow({ content, contentStatus: "ready" })]);
+    });
+    const values = mock((row: Record<string, unknown>) => {
+      expect(row.contentRaw).toBe(content);
+      expect(row.contentSanitizerVersion).toBe(ARTICLE_HTML_SANITIZER_VERSION);
+      expect(String(row.contentHtml)).toContain('href="https://example.com/docs"');
+      expect(String(row.contentHtml)).toContain('data-kyomi-embed="youtube"');
+      expect(String(row.contentHtml)).not.toContain("<iframe");
+      return { returning };
+    });
+    const fakeDb = { insert: mock(() => ({ values })) } as unknown as Parameters<
+      typeof createArticleClip
+    >[0];
+
+    await createArticleClip(fakeDb, "user_1", {
+      url: "https://example.com/article",
+      title: "Docs",
+      content,
+    });
+
+    expect(values).toHaveBeenCalledTimes(1);
+    expect(returning).toHaveBeenCalledTimes(1);
+  });
+
+  test("update compiles client HTML and stores it as raw source", async () => {
+    const db = selectingDb(pendingClipRow());
+    const contentHtml = `<p data-kyomi-url="javascript:alert(1)">Clipped <img src="data:image/gif;base64,R0" data-src="hero.png" alt="Hero"></p>`;
+
+    const updated = await updateArticleClipForUser(db as never, "user_1", "clip_1", {
+      contentHtml,
+    });
+
+    expect(updated).toBe(true);
+    for (const fields of db.selected) {
+      expect(Object.keys(fields)).not.toEqual(expect.arrayContaining(RAW_COLUMNS));
+    }
+    const patch = db.updates[0]!;
+    expect(patch.contentRaw).toBe(contentHtml);
+    expect(patch.contentSanitizerVersion).toBe(ARTICLE_HTML_SANITIZER_VERSION);
+    expect(String(patch.contentHtml)).toContain('src="https://example.com/hero.png"');
+    expect(String(patch.contentHtml)).not.toContain("data-kyomi-url");
+  });
+
+  test("update that leaves contentHtml alone does not touch the raw columns", async () => {
+    const db = selectingDb(pendingClipRow());
+
+    await updateArticleClipForUser(db as never, "user_1", "clip_1", { note: "Later" });
+
+    expect(db.updates[0]).not.toHaveProperty("contentRaw");
+    expect(db.updates[0]).not.toHaveProperty("contentSanitizerVersion");
+  });
+
+  test("clip detail selects explicit columns and serializes no raw source", async () => {
+    const db = selectingDb(
+      pendingClipRow({ contentRaw: "<p>RAW-MARKER</p>", extractedContentRaw: "<p>RAW-MARKER</p>" }),
+    );
+
+    const detail = await getClipDetailForUser(db as never, "user_1", "clip_1");
+
+    expect(Object.keys(db.selected[0]!)).not.toEqual(expect.arrayContaining(["contentRaw"]));
+    expect(Object.keys(db.selected[0]!)).not.toEqual(
+      expect.arrayContaining(["extractedContentRaw"]),
+    );
+    expect(JSON.stringify(detail)).not.toContain("RAW-MARKER");
   });
 });

@@ -14,6 +14,7 @@
   "exports": {
     ".": "./src/core/index.ts",
     "./core": "./src/core/index.ts",
+    "./document": "./src/core/document/index.ts",
     "./sanitization": "./src/sanitization/index.ts",
     "./web": "./src/web/index.ts",
     "./web/styles.css": "./src/web/styles.css",

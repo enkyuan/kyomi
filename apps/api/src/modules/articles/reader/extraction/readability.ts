@@ -1,12 +1,19 @@
 import { Readability } from "@mozilla/readability";
 import { parseHTML } from "linkedom";
 import type { HostRateLimiter } from "@kyomi/worker";
-import { processArticleHtml } from "../content";
+import { processIngestedArticleHtml } from "../content";
 import type { ArticleExtractionCandidate } from "../content";
 import { fetchArticleDocument } from "./fetch";
 
 type ArticleExtractionResult =
-  | { ok: true; content: ArticleExtractionCandidate; finalUrl: string; sanitizerVersion: string }
+  | {
+      ok: true;
+      content: ArticleExtractionCandidate;
+      finalUrl: string;
+      sanitizerVersion: string;
+      /** Readability output before compiling; stored for recompiles and never served. */
+      rawHtml: string;
+    }
   | { ok: false; errorCode: string; errorMessage: string };
 
 function wordCount(input: string): number {
@@ -59,6 +66,22 @@ function normalizeReadabilityPreformattedProse(html: string): string {
   }
 
   return document.body.innerHTML;
+}
+
+/**
+ * Compiles Readability output the same way for fresh extractions and for recompiling a stored
+ * raw body.
+ */
+export function compileExtractedHtml(
+  rawHtml: string,
+  options: {
+    baseUrl: string | null;
+    title?: string | null;
+    byline?: string | null;
+    excerpt?: string | null;
+  },
+) {
+  return processIngestedArticleHtml(normalizeReadabilityPreformattedProse(rawHtml), options);
 }
 
 function looksLikeNonArticlePage(url: URL): boolean {
@@ -121,12 +144,11 @@ export function extractArticleContentFromHtml(input: {
     };
   }
 
-  const processed = processArticleHtml(normalizeReadabilityPreformattedProse(article.content), {
+  const processed = compileExtractedHtml(article.content, {
     baseUrl: finalUrl.href,
     title: article.title?.trim() || null,
     byline: article.byline?.trim() || null,
     excerpt: article.excerpt?.trim() || null,
-    sanitizerVersion: null,
   });
   const contentHtml = processed.html;
   const contentText = processed.text;
@@ -143,6 +165,7 @@ export function extractArticleContentFromHtml(input: {
     ok: true,
     finalUrl: finalUrl.href,
     sanitizerVersion: processed.sanitizerVersion,
+    rawHtml: article.content,
     content: {
       title: article.title?.trim() || null,
       byline: article.byline?.trim() || null,

@@ -1,0 +1,22 @@
+<p>Ruby 3.4 makes frozen string literals the default in more places. Here is the smallest example.</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hello, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<p>And the equivalent Python, highlighted by a Liquid tag:</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">"</span><span class="p">)</span></code></pre></figure>
+<p>Install it with <abbr title="Ruby Version Manager">RVM</abbr> or rbenv. The old advice to <del>pin 2.7</del> <ins>use 3.4</ins> still applies to CI images<sup id="fnref:ci" role="doc-noteref"><a href="#fn:ci" class="footnote" rel="footnote">1</a></sup>.</p>
+<dl>
+  <dt>Gem</dt>
+  <dd>A packaged Ruby library.</dd>
+  <dt>Bundler</dt>
+  <dd>The tool that resolves and installs gems for a project.</dd>
+</dl>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:ci" role="doc-endnote">
+      <p>Most hosted runners ship an older default Ruby. <a href="#fnref:ci" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>

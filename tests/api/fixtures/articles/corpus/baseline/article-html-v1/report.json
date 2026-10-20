@@ -1,0 +1,305 @@
+{
+  "sanitizerVersion": "article-html-v1",
+  "summary": {
+    "passed": 78,
+    "total": 176
+  },
+  "fixtures": {
+    "wordpress-gutenberg": {
+      "passed": 3,
+      "total": 11,
+      "checks": {
+        "bold": false,
+        "italic": false,
+        "strike": false,
+        "srcset": false,
+        "dimensions": true,
+        "caption": true,
+        "pullquote-cite": false,
+        "code-lang": false,
+        "footnote-ref": false,
+        "footnote-target": false,
+        "media-text": true
+      }
+    },
+    "wordpress-embeds": {
+      "passed": 4,
+      "total": 8,
+      "checks": {
+        "youtube": false,
+        "x": false,
+        "vimeo": false,
+        "spotify": false,
+        "no-iframe": true,
+        "no-script": true,
+        "caption": true,
+        "tweet-text": true
+      }
+    },
+    "ghost-cards": {
+      "passed": 7,
+      "total": 11,
+      "checks": {
+        "srcset": false,
+        "dimensions": true,
+        "video": false,
+        "video-preload": false,
+        "no-autoplay": true,
+        "audio": false,
+        "no-button": true,
+        "no-svg": true,
+        "bookmark": true,
+        "callout": true,
+        "toggle": true
+      }
+    },
+    "substack-post": {
+      "passed": 4,
+      "total": 8,
+      "checks": {
+        "picture": false,
+        "footnote-ref": false,
+        "footnote-target": false,
+        "caption": true,
+        "no-input": true,
+        "no-form": true,
+        "no-cta": false,
+        "pullquote": true
+      }
+    },
+    "medium-post": {
+      "passed": 3,
+      "total": 6,
+      "checks": {
+        "image-src-from-srcset": false,
+        "picture": false,
+        "caption": true,
+        "no-placeholder": false,
+        "code": true,
+        "quote": true
+      }
+    },
+    "hugo-chroma": {
+      "passed": 0,
+      "total": 6,
+      "checks": {
+        "kbd": false,
+        "rust": false,
+        "go": false,
+        "highlighted-line": false,
+        "footnote-ref": false,
+        "footnote-target": false
+      }
+    },
+    "jekyll-rouge": {
+      "passed": 1,
+      "total": 9,
+      "checks": {
+        "ruby": false,
+        "python": false,
+        "dl": false,
+        "dd": false,
+        "del": false,
+        "ins": false,
+        "abbr": true,
+        "footnote-ref": false,
+        "footnote-target": false
+      }
+    },
+    "mkdocs-admonitions": {
+      "passed": 5,
+      "total": 6,
+      "checks": {
+        "details": true,
+        "admonition": true,
+        "filename": false,
+        "no-input": true,
+        "second-tab": true,
+        "no-code-line-anchors": true
+      }
+    },
+    "docusaurus-docs": {
+      "passed": 2,
+      "total": 6,
+      "checks": {
+        "code-lang": false,
+        "no-button": true,
+        "no-inline-style": false,
+        "heading-anchor": false,
+        "in-page-link": false,
+        "admonition": true
+      }
+    },
+    "arxiv-latexml": {
+      "passed": 1,
+      "total": 8,
+      "checks": {
+        "msubsup": false,
+        "mtable": false,
+        "mroot": false,
+        "figure-img": true,
+        "citation-link": false,
+        "bib-target": false,
+        "equation-link": false,
+        "cite": false
+      }
+    },
+    "katex-blog": {
+      "passed": 6,
+      "total": 6,
+      "checks": {
+        "katex-mathml": true,
+        "display-tex": true,
+        "inline-tex": true,
+        "currency": true,
+        "snake-case": true,
+        "align-env": true
+      }
+    },
+    "news-embeds": {
+      "passed": 4,
+      "total": 12,
+      "checks": {
+        "youtube": false,
+        "x": false,
+        "instagram": false,
+        "tiktok": false,
+        "bluesky": false,
+        "mastodon": false,
+        "video": false,
+        "audio": false,
+        "no-iframe": true,
+        "no-script": true,
+        "no-autoplay": true,
+        "no-ad-slot": true
+      }
+    },
+    "github-release": {
+      "passed": 4,
+      "total": 8,
+      "checks": {
+        "code-lang": false,
+        "details": true,
+        "kbd": false,
+        "task-checked": false,
+        "task-open": false,
+        "no-input": true,
+        "emoji": true,
+        "no-copy-feedback": true
+      }
+    },
+    "tufte-sidenotes": {
+      "passed": 3,
+      "total": 9,
+      "checks": {
+        "sidenote": true,
+        "marginnote": true,
+        "no-input": true,
+        "blockquote-footer": false,
+        "q": false,
+        "small": false,
+        "time": false,
+        "footnote-ref": false,
+        "footnote-target": false
+      }
+    },
+    "newsletter-chrome": {
+      "passed": 4,
+      "total": 8,
+      "checks": {
+        "aside": false,
+        "aside-text": true,
+        "no-cta": false,
+        "no-subscribe-button": false,
+        "no-svg-title": true,
+        "no-footer": false,
+        "no-nav": true,
+        "no-toc": true
+      }
+    },
+    "data-tables": {
+      "passed": 5,
+      "total": 7,
+      "checks": {
+        "caption": false,
+        "tfoot": false,
+        "colspan": true,
+        "rowspan": true,
+        "row-header": true,
+        "cell-list": true,
+        "cell-image": true
+      }
+    },
+    "rtl-multilingual": {
+      "passed": 0,
+      "total": 6,
+      "checks": {
+        "rtl-ar": false,
+        "rtl-he": false,
+        "ruby": false,
+        "bdi": false,
+        "wbr": false,
+        "lang-fr": false
+      }
+    },
+    "lazy-images": {
+      "passed": 1,
+      "total": 7,
+      "checks": {
+        "data-src": false,
+        "data-srcset": false,
+        "noscript-fallback": false,
+        "data-lazy-src": false,
+        "picture-avif": false,
+        "dimensions": true,
+        "no-placeholder": false
+      }
+    },
+    "code-zoo": {
+      "passed": 2,
+      "total": 11,
+      "checks": {
+        "lang-class": false,
+        "brush": false,
+        "hljs-class": false,
+        "prism-lines": false,
+        "data-language": false,
+        "caption-filename": false,
+        "codepen": false,
+        "gist": false,
+        "codesandbox": false,
+        "no-iframe": true,
+        "no-script": true
+      }
+    },
+    "hostile-markup": {
+      "passed": 19,
+      "total": 23,
+      "checks": {
+        "no-forged-hint": true,
+        "no-forged-embed-attr": true,
+        "no-forged-element": true,
+        "no-forged-lang": true,
+        "no-raw-clobber-id": true,
+        "prefixed-id": false,
+        "no-name": true,
+        "no-handlers": true,
+        "no-js-srcset": true,
+        "no-data-poster": true,
+        "no-autoplay": true,
+        "no-js-href": true,
+        "fragment-link": false,
+        "no-annotation-xml": true,
+        "no-maction": true,
+        "no-script": true,
+        "no-iframe": true,
+        "no-object": true,
+        "no-style-attr": true,
+        "no-form": true,
+        "no-svg-text": false,
+        "no-button-text": false,
+        "tail": true
+      }
+    }
+  }
+}

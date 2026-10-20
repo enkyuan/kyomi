@@ -1,3 +1,4 @@
+import { isArticleFragmentHref } from "@kyomi/worker/sanitization";
 import { normalizeSafeHttpUrl } from "../../core/url";
 
 export type ReaderImageUrlTransformer = (url: string) => string | null | undefined;
@@ -19,7 +20,7 @@ export function resolveRelativeAssetUrls(
 
   for (const link of tpl.content.querySelectorAll("a[href]")) {
     const href = link.getAttribute("href");
-    if (!href) {
+    if (!href || isArticleFragmentHref(href)) {
       continue;
     }
     const normalized = normalizeSafeHttpUrl(href, normalizedBase);

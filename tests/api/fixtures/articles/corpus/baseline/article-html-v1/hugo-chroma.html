@@ -1,0 +1,23 @@
+<p>Stop a runaway build with Ctrl+C, then read the error from the top.</p>
+<div class="highlight"><pre><code class="language-rust"><span><span><span>fn</span> <span>main</span><span>()</span><span> </span><span>{</span>
+</span></span><span><span><span>    </span><span>println!</span><span>(</span><span>"hello"</span><span>);</span>
+</span></span><span><span><span>}</span></span></span></code></pre></div>
+<p>The same program in Go, with line numbers:</p>
+<div class="highlight"><div>
+<table><tbody><tr><td>
+<pre><code><span>1
+</span><span>2
+</span></code></pre></td>
+<td>
+<pre><code class="language-go"><span><span><span>package</span> <span>main</span>
+</span></span><span><span><span>func</span> <span>main</span><span>()</span> <span>{}</span></span></span></code></pre></td></tr></tbody></table>
+</div>
+</div><p>Rust reports the first error it can explain, not the first error it finds<sup><a href="https://hugo.example/posts/reading-errors/#fn:1">1</a></sup>.</p>
+<div>
+<hr>
+<ol>
+<li>
+<p>This is a simplification of how the borrow checker orders diagnostics.&nbsp;<a href="https://hugo.example/posts/reading-errors/#fnref:1">↩︎</a></p>
+</li>
+</ol>
+</div>

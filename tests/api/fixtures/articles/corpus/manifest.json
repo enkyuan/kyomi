@@ -1,0 +1,1045 @@
+{
+  "$comment": "Authored fidelity checks. Each check states the sanitizer v2 contract; the v1 result for every check is generated into baseline-v1/report.json.",
+  "fixtures": [
+    {
+      "name": "wordpress-gutenberg",
+      "archetype": "WordPress block editor",
+      "baseUrl": "https://blog.wp.example/2026/10/offline-sync/",
+      "title": "Offline sync",
+      "checks": [
+        {
+          "id": "bold",
+          "assert": "present",
+          "selector": "b"
+        },
+        {
+          "id": "italic",
+          "assert": "present",
+          "selector": "i"
+        },
+        {
+          "id": "strike",
+          "assert": "present",
+          "selector": "s"
+        },
+        {
+          "id": "srcset",
+          "assert": "present",
+          "selector": "img[srcset*='sync-diagram-2048x1152.png']"
+        },
+        {
+          "id": "dimensions",
+          "assert": "present",
+          "selector": "img[width='1024'][height='576']"
+        },
+        {
+          "id": "caption",
+          "assert": "present",
+          "selector": "figcaption"
+        },
+        {
+          "id": "pullquote-cite",
+          "assert": "present",
+          "selector": "blockquote cite"
+        },
+        {
+          "id": "code-lang",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='Bash']"
+        },
+        {
+          "id": "footnote-ref",
+          "assert": "present",
+          "selector": "a[href='#kyomi-f1a2']"
+        },
+        {
+          "id": "footnote-target",
+          "assert": "present",
+          "selector": "[id='kyomi-f1a2']"
+        },
+        {
+          "id": "media-text",
+          "assert": "text",
+          "value": "mostly by deleting code"
+        }
+      ]
+    },
+    {
+      "name": "wordpress-embeds",
+      "archetype": "WordPress oEmbed blocks",
+      "baseUrl": "https://blog.wp.example/2026/10/importer/",
+      "title": "Importer",
+      "checks": [
+        {
+          "id": "youtube",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='youtube'][data-kyomi-url='https://www.youtube.com/watch?v=dQw4w9WgXcQ']"
+        },
+        {
+          "id": "x",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='x'][data-kyomi-url='https://x.com/exampledev/status/1840000000000000000']"
+        },
+        {
+          "id": "vimeo",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='vimeo'][data-kyomi-url='https://vimeo.com/76979871']"
+        },
+        {
+          "id": "spotify",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='spotify'][data-kyomi-url='https://open.spotify.com/episode/7makk4oTQel546B0PZlDM5']"
+        },
+        {
+          "id": "no-iframe",
+          "assert": "absent",
+          "selector": "iframe"
+        },
+        {
+          "id": "no-script",
+          "assert": "absent",
+          "selector": "script"
+        },
+        {
+          "id": "caption",
+          "assert": "text",
+          "value": "The importer, start to finish."
+        },
+        {
+          "id": "tweet-text",
+          "assert": "text",
+          "value": "ten thousand feeds"
+        }
+      ]
+    },
+    {
+      "name": "ghost-cards",
+      "archetype": "Ghost cards",
+      "baseUrl": "https://ghost.example/static-docs/",
+      "title": "Static docs",
+      "checks": [
+        {
+          "id": "srcset",
+          "assert": "present",
+          "selector": "img[srcset*='size/w1000']"
+        },
+        {
+          "id": "dimensions",
+          "assert": "present",
+          "selector": "img[width='2000'][height='1125']"
+        },
+        {
+          "id": "video",
+          "assert": "present",
+          "selector": "video[src='https://ghost.example/content/media/2026/10/demo.mp4']"
+        },
+        {
+          "id": "video-preload",
+          "assert": "present",
+          "selector": "video[preload='none']"
+        },
+        {
+          "id": "no-autoplay",
+          "assert": "absent",
+          "selector": "[autoplay]"
+        },
+        {
+          "id": "audio",
+          "assert": "present",
+          "selector": "audio[src='https://ghost.example/content/media/2026/10/interview.mp3']"
+        },
+        {
+          "id": "no-button",
+          "assert": "absent",
+          "selector": "button"
+        },
+        {
+          "id": "no-svg",
+          "assert": "absent",
+          "selector": "svg"
+        },
+        {
+          "id": "bookmark",
+          "assert": "text",
+          "value": "Static builds guide"
+        },
+        {
+          "id": "callout",
+          "assert": "text",
+          "value": "two thirds"
+        },
+        {
+          "id": "toggle",
+          "assert": "text",
+          "value": "built at deploy time"
+        }
+      ]
+    },
+    {
+      "name": "substack-post",
+      "archetype": "Substack post",
+      "baseUrl": "https://writer.substack.example/p/notes-on-latency",
+      "title": "Notes on latency",
+      "checks": [
+        {
+          "id": "picture",
+          "assert": "present",
+          "selector": "picture source[type='image/webp'][srcset]"
+        },
+        {
+          "id": "footnote-ref",
+          "assert": "present",
+          "selector": "a[href='#kyomi-footnote-1']"
+        },
+        {
+          "id": "footnote-target",
+          "assert": "present",
+          "selector": "[id='kyomi-footnote-1']"
+        },
+        {
+          "id": "caption",
+          "assert": "present",
+          "selector": "figcaption"
+        },
+        {
+          "id": "no-input",
+          "assert": "absent",
+          "selector": "input"
+        },
+        {
+          "id": "no-form",
+          "assert": "absent",
+          "selector": "form"
+        },
+        {
+          "id": "no-cta",
+          "assert": "no-text",
+          "value": "Thanks for reading! Subscribe"
+        },
+        {
+          "id": "pullquote",
+          "assert": "text",
+          "value": "the tail is most of it"
+        }
+      ]
+    },
+    {
+      "name": "medium-post",
+      "archetype": "Medium post",
+      "baseUrl": "https://medium.example/@writer/replacing-the-cache-3f2a",
+      "title": "Replacing the cache",
+      "checks": [
+        {
+          "id": "image-src-from-srcset",
+          "assert": "present",
+          "selector": "img[src^='https://miro.medium.example/']"
+        },
+        {
+          "id": "picture",
+          "assert": "present",
+          "selector": "picture source[srcset]"
+        },
+        {
+          "id": "caption",
+          "assert": "present",
+          "selector": "figcaption"
+        },
+        {
+          "id": "no-placeholder",
+          "assert": "no-text",
+          "value": "Press enter or click to view image in full size"
+        },
+        {
+          "id": "code",
+          "assert": "text",
+          "value": "cache.set(\"user:42\", profile);"
+        },
+        {
+          "id": "quote",
+          "assert": "text",
+          "value": "Every network hop you remove"
+        }
+      ]
+    },
+    {
+      "name": "hugo-chroma",
+      "archetype": "Hugo with Chroma",
+      "baseUrl": "https://hugo.example/posts/reading-errors/",
+      "title": "Reading errors",
+      "checks": [
+        {
+          "id": "kbd",
+          "assert": "present",
+          "selector": "kbd"
+        },
+        {
+          "id": "rust",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='rust']"
+        },
+        {
+          "id": "go",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='go']"
+        },
+        {
+          "id": "highlighted-line",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lines='2']"
+        },
+        {
+          "id": "footnote-ref",
+          "assert": "present",
+          "selector": "a[href='#kyomi-fn-1']"
+        },
+        {
+          "id": "footnote-target",
+          "assert": "present",
+          "selector": "[id='kyomi-fn-1']"
+        }
+      ]
+    },
+    {
+      "name": "jekyll-rouge",
+      "archetype": "Jekyll with Rouge and kramdown",
+      "baseUrl": "https://jekyll.example/2026/10/12/frozen-strings.html",
+      "title": "Frozen strings",
+      "checks": [
+        {
+          "id": "ruby",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='ruby']"
+        },
+        {
+          "id": "python",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='python']"
+        },
+        {
+          "id": "dl",
+          "assert": "present",
+          "selector": "dl dt"
+        },
+        {
+          "id": "dd",
+          "assert": "present",
+          "selector": "dl dd"
+        },
+        {
+          "id": "del",
+          "assert": "present",
+          "selector": "del"
+        },
+        {
+          "id": "ins",
+          "assert": "present",
+          "selector": "ins"
+        },
+        {
+          "id": "abbr",
+          "assert": "present",
+          "selector": "abbr[title='Ruby Version Manager']"
+        },
+        {
+          "id": "footnote-ref",
+          "assert": "present",
+          "selector": "a[href='#kyomi-fn-ci']"
+        },
+        {
+          "id": "footnote-target",
+          "assert": "present",
+          "selector": "[id='kyomi-fn-ci']"
+        }
+      ]
+    },
+    {
+      "name": "mkdocs-admonitions",
+      "archetype": "MkDocs Material",
+      "baseUrl": "https://docs.mkdocs.example/guide/install/",
+      "title": "Install",
+      "checks": [
+        {
+          "id": "details",
+          "assert": "present",
+          "selector": "details summary"
+        },
+        {
+          "id": "admonition",
+          "assert": "text",
+          "value": "Back up your configuration"
+        },
+        {
+          "id": "filename",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='bash'][data-kyomi-filename='install.sh']"
+        },
+        {
+          "id": "no-input",
+          "assert": "absent",
+          "selector": "input"
+        },
+        {
+          "id": "second-tab",
+          "assert": "text",
+          "value": "uv add example-tool"
+        },
+        {
+          "id": "no-code-line-anchors",
+          "assert": "absent",
+          "selector": "pre a"
+        }
+      ]
+    },
+    {
+      "name": "docusaurus-docs",
+      "archetype": "Docusaurus",
+      "baseUrl": "https://docs.docusaurus.example/docs/configuration",
+      "title": "Site settings",
+      "checks": [
+        {
+          "id": "code-lang",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='ts'][data-kyomi-filename='docusaurus.config.ts']"
+        },
+        {
+          "id": "no-button",
+          "assert": "absent",
+          "selector": "button"
+        },
+        {
+          "id": "no-inline-style",
+          "assert": "absent",
+          "selector": "[style]"
+        },
+        {
+          "id": "heading-anchor",
+          "assert": "present",
+          "selector": "h2[id='kyomi-config']"
+        },
+        {
+          "id": "in-page-link",
+          "assert": "present",
+          "selector": "a[href='#kyomi-config']"
+        },
+        {
+          "id": "admonition",
+          "assert": "text",
+          "value": "validate the file without building"
+        }
+      ]
+    },
+    {
+      "name": "arxiv-latexml",
+      "archetype": "arXiv HTML (LaTeXML)",
+      "baseUrl": "https://arxiv.example/html/2610.01234v1/",
+      "title": "Residual scaling",
+      "checks": [
+        {
+          "id": "msubsup",
+          "assert": "present",
+          "selector": "math msubsup"
+        },
+        {
+          "id": "mtable",
+          "assert": "present",
+          "selector": "math mtable mtr mtd"
+        },
+        {
+          "id": "mroot",
+          "assert": "present",
+          "selector": "math mroot"
+        },
+        {
+          "id": "figure-img",
+          "assert": "present",
+          "selector": "img[src='https://arxiv.example/html/2610.01234v1/x1.png']"
+        },
+        {
+          "id": "citation-link",
+          "assert": "present",
+          "selector": "a[href='#kyomi-bib-bib3']"
+        },
+        {
+          "id": "bib-target",
+          "assert": "present",
+          "selector": "[id='kyomi-bib-bib3']"
+        },
+        {
+          "id": "equation-link",
+          "assert": "present",
+          "selector": "a[href='#kyomi-s1-e1']"
+        },
+        {
+          "id": "cite",
+          "assert": "present",
+          "selector": "cite"
+        }
+      ]
+    },
+    {
+      "name": "katex-blog",
+      "archetype": "Blog with prerendered KaTeX",
+      "baseUrl": "https://mathblog.example/posts/euler/",
+      "title": "Euler",
+      "checks": [
+        {
+          "id": "katex-mathml",
+          "assert": "present",
+          "selector": "math msup"
+        },
+        {
+          "id": "display-tex",
+          "assert": "text",
+          "value": "$$\\int_0^1 x\\,dx = \\tfrac12$$"
+        },
+        {
+          "id": "inline-tex",
+          "assert": "text",
+          "value": "\\(a^2+b^2=c^2\\)"
+        },
+        {
+          "id": "currency",
+          "assert": "text",
+          "value": "$5 a month or $50 a year"
+        },
+        {
+          "id": "snake-case",
+          "assert": "text",
+          "value": "snake_case"
+        },
+        {
+          "id": "align-env",
+          "assert": "text",
+          "value": "\\begin{align}"
+        }
+      ]
+    },
+    {
+      "name": "news-embeds",
+      "archetype": "News article with social embeds",
+      "baseUrl": "https://news.example/2026/10/20/launch-day/",
+      "title": "Launch day",
+      "checks": [
+        {
+          "id": "youtube",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='youtube'][data-kyomi-url='https://www.youtube.com/watch?v=M7lc1UVf-VE']"
+        },
+        {
+          "id": "x",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='x'][data-kyomi-url='https://x.com/exampleco/status/1847000000000000001']"
+        },
+        {
+          "id": "instagram",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='instagram'][data-kyomi-url='https://www.instagram.com/p/C0abc123XYZ/']"
+        },
+        {
+          "id": "tiktok",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='tiktok'][data-kyomi-url='https://www.tiktok.com/@examplecreator/video/7300000000000000000']"
+        },
+        {
+          "id": "bluesky",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='bluesky'][data-kyomi-url='https://bsky.app/profile/did:plc:abc123example/post/3kxyzexample']"
+        },
+        {
+          "id": "mastodon",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='mastodon'][data-kyomi-url='https://mastodon.social/@example/111111111111111111']"
+        },
+        {
+          "id": "video",
+          "assert": "present",
+          "selector": "video[src='https://news.example/media/2026/10/backstage.mp4'][poster='https://news.example/media/2026/10/backstage.jpg']"
+        },
+        {
+          "id": "audio",
+          "assert": "present",
+          "selector": "audio[src='https://news.example/media/2026/10/interview.mp3']"
+        },
+        {
+          "id": "no-iframe",
+          "assert": "absent",
+          "selector": "iframe"
+        },
+        {
+          "id": "no-script",
+          "assert": "absent",
+          "selector": "script"
+        },
+        {
+          "id": "no-autoplay",
+          "assert": "absent",
+          "selector": "[autoplay]"
+        },
+        {
+          "id": "no-ad-slot",
+          "assert": "absent",
+          "selector": "a[href^='https://ads.example']"
+        }
+      ]
+    },
+    {
+      "name": "github-release",
+      "archetype": "GitHub release notes",
+      "baseUrl": "https://github.example/example/tool/releases/tag/v2.0.0",
+      "title": "v2.0.0",
+      "checks": [
+        {
+          "id": "code-lang",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='js']"
+        },
+        {
+          "id": "details",
+          "assert": "present",
+          "selector": "details summary"
+        },
+        {
+          "id": "kbd",
+          "assert": "present",
+          "selector": "kbd"
+        },
+        {
+          "id": "task-checked",
+          "assert": "present",
+          "selector": "li[data-kyomi-checked='true']"
+        },
+        {
+          "id": "task-open",
+          "assert": "present",
+          "selector": "li[data-kyomi-checked='false']"
+        },
+        {
+          "id": "no-input",
+          "assert": "absent",
+          "selector": "input"
+        },
+        {
+          "id": "emoji",
+          "assert": "text",
+          "value": "🎉"
+        },
+        {
+          "id": "no-copy-feedback",
+          "assert": "no-text",
+          "value": "Copied!"
+        }
+      ]
+    },
+    {
+      "name": "tufte-sidenotes",
+      "archetype": "Tufte CSS and pandoc footnotes",
+      "baseUrl": "https://essays.example/on-margins/",
+      "title": "On margins",
+      "checks": [
+        {
+          "id": "sidenote",
+          "assert": "text",
+          "value": "A wide margin gives notes a place to live"
+        },
+        {
+          "id": "marginnote",
+          "assert": "text",
+          "value": "An unnumbered margin note."
+        },
+        {
+          "id": "no-input",
+          "assert": "absent",
+          "selector": "input"
+        },
+        {
+          "id": "blockquote-footer",
+          "assert": "present",
+          "selector": "blockquote footer cite"
+        },
+        {
+          "id": "q",
+          "assert": "present",
+          "selector": "q"
+        },
+        {
+          "id": "small",
+          "assert": "present",
+          "selector": "small"
+        },
+        {
+          "id": "time",
+          "assert": "present",
+          "selector": "time[datetime='2026-10-20']"
+        },
+        {
+          "id": "footnote-ref",
+          "assert": "present",
+          "selector": "a[href='#kyomi-fn1']"
+        },
+        {
+          "id": "footnote-target",
+          "assert": "present",
+          "selector": "[id='kyomi-fn1']"
+        }
+      ]
+    },
+    {
+      "name": "newsletter-chrome",
+      "archetype": "Newsletter with page chrome",
+      "baseUrl": "https://newsletter.example/issues/42",
+      "title": "Issue 42: Smaller queues",
+      "checks": [
+        {
+          "id": "aside",
+          "assert": "present",
+          "selector": "aside"
+        },
+        {
+          "id": "aside-text",
+          "assert": "text",
+          "value": "An editorial aside worth keeping"
+        },
+        {
+          "id": "no-cta",
+          "assert": "no-text",
+          "value": "Join 10,000 readers"
+        },
+        {
+          "id": "no-subscribe-button",
+          "assert": "no-text",
+          "value": "Subscribe"
+        },
+        {
+          "id": "no-svg-title",
+          "assert": "no-text",
+          "value": "X logo"
+        },
+        {
+          "id": "no-footer",
+          "assert": "no-text",
+          "value": "Manage preferences"
+        },
+        {
+          "id": "no-nav",
+          "assert": "absent",
+          "selector": "nav"
+        },
+        {
+          "id": "no-toc",
+          "assert": "absent",
+          "selector": "a[href='#kyomi-queues']"
+        }
+      ]
+    },
+    {
+      "name": "data-tables",
+      "archetype": "Data tables",
+      "baseUrl": "https://data.example/reports/q3-revenue",
+      "title": "Q3 revenue",
+      "checks": [
+        {
+          "id": "caption",
+          "assert": "present",
+          "selector": "table caption"
+        },
+        {
+          "id": "tfoot",
+          "assert": "present",
+          "selector": "table tfoot"
+        },
+        {
+          "id": "colspan",
+          "assert": "present",
+          "selector": "th[colspan='2']"
+        },
+        {
+          "id": "rowspan",
+          "assert": "present",
+          "selector": "th[rowspan='2']"
+        },
+        {
+          "id": "row-header",
+          "assert": "present",
+          "selector": "th[scope='row']"
+        },
+        {
+          "id": "cell-list",
+          "assert": "present",
+          "selector": "td ul li"
+        },
+        {
+          "id": "cell-image",
+          "assert": "present",
+          "selector": "td img[width='120'][height='24']"
+        }
+      ]
+    },
+    {
+      "name": "rtl-multilingual",
+      "archetype": "Multilingual and right-to-left",
+      "baseUrl": "https://intl.example/blog/scripts/",
+      "title": "Scripts",
+      "checks": [
+        {
+          "id": "rtl-ar",
+          "assert": "present",
+          "selector": "p[lang='ar'][dir='rtl']"
+        },
+        {
+          "id": "rtl-he",
+          "assert": "present",
+          "selector": "p[lang='he'][dir='rtl']"
+        },
+        {
+          "id": "ruby",
+          "assert": "present",
+          "selector": "ruby rt"
+        },
+        {
+          "id": "bdi",
+          "assert": "present",
+          "selector": "bdi"
+        },
+        {
+          "id": "wbr",
+          "assert": "present",
+          "selector": "wbr"
+        },
+        {
+          "id": "lang-fr",
+          "assert": "present",
+          "selector": "blockquote[lang='fr']"
+        }
+      ]
+    },
+    {
+      "name": "lazy-images",
+      "archetype": "Lazy-loaded images",
+      "baseUrl": "https://lazy.example/articles/coast-trip",
+      "title": "Coast trip",
+      "checks": [
+        {
+          "id": "data-src",
+          "assert": "present",
+          "selector": "img[src='https://lazy.example/img/one.jpg']"
+        },
+        {
+          "id": "data-srcset",
+          "assert": "present",
+          "selector": "img[srcset*='one-1600.jpg']"
+        },
+        {
+          "id": "noscript-fallback",
+          "assert": "present",
+          "selector": "img[src='https://lazy.example/img/two.jpg']"
+        },
+        {
+          "id": "data-lazy-src",
+          "assert": "present",
+          "selector": "img[src='https://lazy.example/img/three.jpg']"
+        },
+        {
+          "id": "picture-avif",
+          "assert": "present",
+          "selector": "picture source[type='image/avif']"
+        },
+        {
+          "id": "dimensions",
+          "assert": "present",
+          "selector": "img[width='640'][height='480']"
+        },
+        {
+          "id": "no-placeholder",
+          "assert": "absent",
+          "selector": "img[src*='placeholder']"
+        }
+      ]
+    },
+    {
+      "name": "code-zoo",
+      "archetype": "Code language hints",
+      "baseUrl": "https://code.example/notes/language-hints",
+      "title": "Language hints",
+      "checks": [
+        {
+          "id": "lang-class",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='go']"
+        },
+        {
+          "id": "brush",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='php']"
+        },
+        {
+          "id": "hljs-class",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='elixir']"
+        },
+        {
+          "id": "prism-lines",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lines='2-3']"
+        },
+        {
+          "id": "data-language",
+          "assert": "present",
+          "selector": "pre[data-kyomi-lang='haskell']"
+        },
+        {
+          "id": "caption-filename",
+          "assert": "present",
+          "selector": "pre[data-kyomi-filename='server.ts']"
+        },
+        {
+          "id": "codepen",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='codepen'][data-kyomi-url='https://codepen.io/example/pen/abcXYZ']"
+        },
+        {
+          "id": "gist",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='github-gist'][data-kyomi-url='https://gist.github.com/example/0123456789abcdef0123456789abcdef']"
+        },
+        {
+          "id": "codesandbox",
+          "assert": "present",
+          "selector": "figure[data-kyomi-embed='codesandbox'][data-kyomi-url='https://codesandbox.io/s/xyz123']"
+        },
+        {
+          "id": "no-iframe",
+          "assert": "absent",
+          "selector": "iframe"
+        },
+        {
+          "id": "no-script",
+          "assert": "absent",
+          "selector": "script"
+        }
+      ]
+    },
+    {
+      "name": "hostile-markup",
+      "archetype": "Hostile markup",
+      "baseUrl": "https://hostile.example/post",
+      "title": "Hostile",
+      "checks": [
+        {
+          "id": "no-forged-hint",
+          "assert": "absent",
+          "selector": "[data-kyomi-url^='javascript']"
+        },
+        {
+          "id": "no-forged-embed-attr",
+          "assert": "absent",
+          "selector": "p[data-kyomi-embed]"
+        },
+        {
+          "id": "no-forged-element",
+          "assert": "absent",
+          "selector": "kyomi-embed"
+        },
+        {
+          "id": "no-forged-lang",
+          "assert": "absent",
+          "selector": "[data-kyomi-lang]"
+        },
+        {
+          "id": "no-raw-clobber-id",
+          "assert": "absent",
+          "selector": "[id='location'], [id='__proto__']"
+        },
+        {
+          "id": "prefixed-id",
+          "assert": "present",
+          "selector": "[id='kyomi-location']"
+        },
+        {
+          "id": "no-name",
+          "assert": "absent",
+          "selector": "[name]"
+        },
+        {
+          "id": "no-handlers",
+          "assert": "absent",
+          "selector": "[onerror]"
+        },
+        {
+          "id": "no-js-srcset",
+          "assert": "absent",
+          "selector": "[srcset*='javascript']"
+        },
+        {
+          "id": "no-data-poster",
+          "assert": "absent",
+          "selector": "[poster^='data:']"
+        },
+        {
+          "id": "no-autoplay",
+          "assert": "absent",
+          "selector": "[autoplay]"
+        },
+        {
+          "id": "no-js-href",
+          "assert": "absent",
+          "selector": "[href^='javascript']"
+        },
+        {
+          "id": "fragment-link",
+          "assert": "present",
+          "selector": "a[href='#kyomi-location']"
+        },
+        {
+          "id": "no-annotation-xml",
+          "assert": "absent",
+          "selector": "annotation-xml"
+        },
+        {
+          "id": "no-maction",
+          "assert": "absent",
+          "selector": "maction"
+        },
+        {
+          "id": "no-script",
+          "assert": "absent",
+          "selector": "script"
+        },
+        {
+          "id": "no-iframe",
+          "assert": "absent",
+          "selector": "iframe"
+        },
+        {
+          "id": "no-object",
+          "assert": "absent",
+          "selector": "object, embed"
+        },
+        {
+          "id": "no-style-attr",
+          "assert": "absent",
+          "selector": "p[style]"
+        },
+        {
+          "id": "no-form",
+          "assert": "absent",
+          "selector": "form, input, button"
+        },
+        {
+          "id": "no-svg-text",
+          "assert": "no-text",
+          "value": "svg label text"
+        },
+        {
+          "id": "no-button-text",
+          "assert": "no-text",
+          "value": "Send credentials"
+        },
+        {
+          "id": "tail",
+          "assert": "text",
+          "value": "The end of the hostile fixture."
+        }
+      ]
+    }
+  ]
+}

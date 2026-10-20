@@ -1,0 +1,7 @@
+<div><section><div><div><div>
+<p>We replaced a distributed cache with an in-process <strong>LRU</strong> and a short <em>TTL</em>. The <code>get</code> path got four times faster.</p>
+<figure><div><span>Press enter or click to view image in full size</span><div><img alt="" width="700" height="394" loading="eager" decoding="async"></div></div><figcaption>Cache hit rate in the week after the change.</figcaption></figure>
+<pre><span>const cache = new Map();<br>cache.set("user:42", profile);<br>cache.get("user:42");</span></pre>
+<blockquote><p><em>Every network hop you remove is latency you never have to explain.</em></p></blockquote>
+<p>The trade-off is staleness, which we bound with the TTL.</p>
+</div></div></div></section></div>

@@ -1,5 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { articleClips } from "@kyomi/db";
+import { clipReadColumns, type ClipReadRow } from "./columns";
 import { and, eq } from "drizzle-orm";
 import type { ArticleDetailDto, ArticleListItemDto } from "@modules/articles/types";
 import {
@@ -13,7 +14,7 @@ import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./constants";
 
 type DB = typeof db;
 
-function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemDto {
+function clipToListItem(row: ClipReadRow): ArticleListItemDto {
   return {
     id: row.id,
     title: row.title,
@@ -33,7 +34,7 @@ function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemD
   };
 }
 
-export function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDetailDto {
+export function clipToDetail(row: ClipReadRow): ArticleDetailDto {
   const base = clipToListItem(row);
   const extractedStatus = (row.extractedContentStatus as ExtractedContentStatus) ?? "pending";
   const readerOriginal = buildStoredReaderContent({
@@ -89,7 +90,7 @@ export async function getClipDetailForUser(
   clipId: string,
 ): Promise<ArticleDetailDto | null> {
   const rows = await database
-    .select()
+    .select(clipReadColumns)
     .from(articleClips)
     .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)))
     .limit(1);

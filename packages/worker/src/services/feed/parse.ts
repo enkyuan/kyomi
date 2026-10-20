@@ -366,7 +366,9 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
     const contentText =
       typeof record.content_text === "string" ? record.content_text.trim() || null : null;
     const rawCandidate = contentHtml ?? contentText;
-    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate));
+    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate), {
+      baseUrl: itemLink,
+    });
     const imageUrl = extractImageUrl(contentHtml, itemLink);
     const publishedAt = parsePublishedAt(record.date_published, now);
     items.push({
@@ -432,7 +434,9 @@ function parseRssDocument(
     const canonicalUrl = normalizeArticleUrl(itemLink);
     const stableIdentity = rawText(record.guid) ?? canonicalUrl;
     const rawCandidate = rawText(record["content:encoded"]) ?? rawText(record.description);
-    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate));
+    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate), {
+      baseUrl: itemLink,
+    });
     const imageUrl = extractImageUrl(
       rawText(record["content:encoded"]) ?? rawText(record.description),
       itemLink,
@@ -498,7 +502,9 @@ function parseAtomDocument(
     const canonicalUrl = normalizeArticleUrl(itemLink);
     const stableIdentity = rawText(record.id) ?? canonicalUrl;
     const rawCandidate = rawText(record.content) ?? rawText(record.summary);
-    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate));
+    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate), {
+      baseUrl: itemLink,
+    });
     const imageUrl = extractImageUrl(rawText(record.content) ?? rawText(record.summary), itemLink);
     const summary = summarizeText(
       rawText(record.summary) ?? storedContent.content ?? boundedSummarySource(rawCandidate),

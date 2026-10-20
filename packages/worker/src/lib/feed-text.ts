@@ -1,5 +1,6 @@
 import { decodeHtmlEntities } from "./html-entities";
-import { sanitizeArticleHtmlFragment } from "../sanitization";
+import { compileArticleHtml } from "../document";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "../sanitization";
 import type { ParsedFeedItem } from "../services/feed/types";
 
 function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
@@ -26,12 +27,12 @@ function stripTags(html: string): string {
   );
 }
 
-function sanitizeStoredContent(value: string | null): string | null {
+function sanitizeStoredContent(value: string | null, baseUrl: string | null): string | null {
   if (!value) {
     return null;
   }
   const sanitized = looksLikeHtml(value)
-    ? sanitizeArticleHtmlFragment(value).trim()
+    ? compileArticleHtml(value, { baseUrl }).html
     : value
         .replace(/<script[\s\S]*?<\/script>/gi, " ")
         .replace(/<style[\s\S]*?<\/style>/gi, " ")
@@ -83,12 +84,19 @@ function htmlLooksLikeWrappedMarkdown(value: string): boolean {
   return !/<(h[1-6]|ul|ol|li|blockquote|pre|table|thead|tbody|tr|th|td|hr|code)\b/i.test(value);
 }
 
+/**
+ * Compiles a feed item's body at ingest. `baseUrl` is the item link, so relative URLs and in-page
+ * anchors resolve against the article rather than the feed.
+ */
 function buildStoredFeedContent(
   value: string | null,
+  options?: { baseUrl?: string | null },
 ): Pick<
   ParsedFeedItem,
   | "content"
   | "contentHtml"
+  | "contentRaw"
+  | "contentSanitizerVersion"
   | "contentText"
   | "contentMarkdown"
   | "contentStatus"
@@ -96,11 +104,14 @@ function buildStoredFeedContent(
   | "extractionErrorCode"
   | "extractionErrorMessage"
 > {
-  const sanitized = sanitizeStoredContent(value);
+  const sanitized = sanitizeStoredContent(value, options?.baseUrl ?? null);
+  const contentRaw = value?.trim() ? value : null;
   if (!sanitized) {
     return {
       content: null,
       contentHtml: null,
+      contentRaw,
+      contentSanitizerVersion: null,
       contentText: null,
       contentMarkdown: null,
       contentStatus: "pending",
@@ -116,6 +127,8 @@ function buildStoredFeedContent(
       return {
         content: sanitized,
         contentHtml: null,
+        contentRaw,
+        contentSanitizerVersion: null,
         contentText: htmlText,
         contentMarkdown: htmlText,
         contentStatus: "ready",
@@ -127,6 +140,8 @@ function buildStoredFeedContent(
     return {
       content: sanitized,
       contentHtml: sanitized,
+      contentRaw,
+      contentSanitizerVersion: ARTICLE_HTML_SANITIZER_VERSION,
       contentText: stripTags(sanitized),
       contentMarkdown: null,
       contentStatus: "ready",
@@ -140,6 +155,8 @@ function buildStoredFeedContent(
     return {
       content: sanitized,
       contentHtml: null,
+      contentRaw,
+      contentSanitizerVersion: null,
       contentText: sanitized,
       contentMarkdown: sanitized,
       contentStatus: "ready",
@@ -152,6 +169,8 @@ function buildStoredFeedContent(
   return {
     content: sanitized,
     contentHtml: null,
+    contentRaw,
+    contentSanitizerVersion: null,
     contentText: sanitized,
     contentMarkdown: null,
     contentStatus: "partial",

@@ -1,8 +1,10 @@
 import {
   ARTICLE_HTML_SANITIZER_VERSION,
+  isArticleFragmentHref,
   normalizeSanitizedArticleRoot,
   sanitizeArticleHtmlFragment,
 } from "@kyomi/worker/sanitization";
+import { compileArticleHtml, type CompileDiagnostics } from "@kyomi/worker/document";
 import { JSDOM } from "jsdom";
 
 export { ARTICLE_HTML_SANITIZER_VERSION };
@@ -45,7 +47,7 @@ function resolveRelativeAssetUrls(root: ParentNode, baseUrl?: string | null): vo
 
   for (const link of root.querySelectorAll("a[href]")) {
     const href = link.getAttribute("href");
-    if (!href) {
+    if (!href || isArticleFragmentHref(href)) {
       continue;
     }
     const normalized = normalizeSafeHttpUrl(href, resolvedBase);
@@ -434,6 +436,23 @@ export function processArticleHtml(
     sanitizerVersion: ARTICLE_HTML_SANITIZER_VERSION,
     coreSanitizerRan,
   };
+}
+
+/**
+ * Ingest path for untrusted HTML (extraction output, clip bodies): compile once with the worker
+ * compiler, then run the stored-HTML cleanup and text extraction on the result. Read paths call
+ * `processArticleHtml` / `sanitizeArticleHtml` instead, which only re-apply the policy.
+ */
+export function processIngestedArticleHtml(
+  raw: string,
+  options?: Omit<ArticleHtmlProcessingOptions, "sanitizerVersion">,
+): ProcessedArticleHtml & { diagnostics: CompileDiagnostics } {
+  const compiled = compileArticleHtml(raw, { baseUrl: options?.baseUrl });
+  const processed = processArticleHtml(compiled.html, {
+    ...options,
+    sanitizerVersion: compiled.sanitizerVersion,
+  });
+  return { ...processed, diagnostics: compiled.diagnostics };
 }
 
 export function sanitizeArticleHtml(
