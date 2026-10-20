@@ -70,6 +70,7 @@ export function TabsList({
                 : "-z-1 rounded-md bg-background shadow-sm/5 dark:bg-input",
           )}
           data-slot="tab-indicator"
+          renderBeforeHydration
         />
       </TabsPrimitive.List>
     </TabsListContext.Provider>

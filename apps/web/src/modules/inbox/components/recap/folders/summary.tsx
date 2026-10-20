@@ -194,8 +194,7 @@ export function Folders({
           description="Create a folder to group feeds."
           icon={<Folder2Fill />}
           action={
-            <Button size="sm" onClick={onCreateFolder}>
-              <AddFill />
+            <Button shape="pill" size="sm" onClick={onCreateFolder}>
               Create folder
             </Button>
           }

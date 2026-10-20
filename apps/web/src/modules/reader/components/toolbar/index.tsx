@@ -7,7 +7,6 @@ import {
   BookmarkLine,
   RectangleLine,
   ExternalLinkLine,
-  HeadAiLine,
   ShareForwardLine,
   SquareLine,
   MinimizeFill,
@@ -18,6 +17,7 @@ import {
 import {
   AnimatePresence,
   LazyMotion,
+  controlSwapMotion,
   domAnimation,
   m,
   useReducedMotion,
@@ -59,7 +59,6 @@ export function Toolbar({
   onIncreaseFontSize,
   onTranslateArticle,
   onOpenOriginal,
-  onOpenAi,
   onShareArticle,
   variant = "inline",
   controlSize = "default",
@@ -75,9 +74,7 @@ export function Toolbar({
   const compactReaderFocusMode = readerFocusMode && readerFocusVariant === "compact";
   const actionTransition = springTransition("emphasized", prefersReducedMotion);
   const actionMotionProps = {
-    initial: prefersReducedMotion ? false : { opacity: 0, scale: 0.92, filter: "blur(4px)" },
-    animate: { opacity: 1, scale: 1, filter: "blur(0px)" },
-    exit: prefersReducedMotion ? undefined : { opacity: 0, scale: 0.92, filter: "blur(4px)" },
+    ...controlSwapMotion(prefersReducedMotion),
     transition: actionTransition,
   };
 
@@ -136,6 +133,22 @@ export function Toolbar({
               </ReaderToolbarButton>
             </m.div>
           ) : null}
+          <AnimatePresence initial={false} mode="popLayout">
+            {readerFocusMode && !compactReaderFocusMode ? (
+              <m.div layout className="flex" {...actionMotionProps} key="share-article">
+                <ReaderToolbarButton
+                  label="Share article"
+                  onClick={onShareArticle}
+                  tooltipSide={tooltipSide}
+                  tooltipCollisionAvoidance={tooltipCollisionAvoidance}
+                  tooltipSideOffset={tooltipSideOffset}
+                  large={useLargeControls}
+                >
+                  <ShareForwardLine />
+                </ReaderToolbarButton>
+              </m.div>
+            ) : null}
+          </AnimatePresence>
           {!readerFocusMode ? (
             <ReaderToolbarButton
               label={
@@ -178,7 +191,7 @@ export function Toolbar({
           />
         )}
         <AnimatePresence initial={false} mode="popLayout">
-          {compactReaderFocusMode ? null : (
+          {readerFocusMode ? null : (
             <m.div
               layout
               className="flex items-center"
@@ -187,40 +200,16 @@ export function Toolbar({
             >
               <ToolbarSeparator className="hidden h-9 sm:block" inset orientation="vertical" />
               <ToolbarGroup className="gap-1">
-                {!readerFocusMode ? (
-                  <ReaderToolbarButton
-                    label="Open source"
-                    onClick={onOpenOriginal}
-                    tooltipSide={tooltipSide}
-                    tooltipCollisionAvoidance={tooltipCollisionAvoidance}
-                    tooltipSideOffset={tooltipSideOffset}
-                    large={useLargeControls}
-                  >
-                    <ExternalLinkLine />
-                  </ReaderToolbarButton>
-                ) : null}
                 <ReaderToolbarButton
-                  label="Distill this article"
-                  onClick={onOpenAi}
+                  label="Open source"
+                  onClick={onOpenOriginal}
                   tooltipSide={tooltipSide}
                   tooltipCollisionAvoidance={tooltipCollisionAvoidance}
                   tooltipSideOffset={tooltipSideOffset}
                   large={useLargeControls}
                 >
-                  <HeadAiLine />
+                  <ExternalLinkLine />
                 </ReaderToolbarButton>
-                {readerFocusMode ? (
-                  <ReaderToolbarButton
-                    label="Share article"
-                    onClick={onShareArticle}
-                    tooltipSide={tooltipSide}
-                    tooltipCollisionAvoidance={tooltipCollisionAvoidance}
-                    tooltipSideOffset={tooltipSideOffset}
-                    large={useLargeControls}
-                  >
-                    <ShareForwardLine />
-                  </ReaderToolbarButton>
-                ) : null}
               </ToolbarGroup>
             </m.div>
           )}

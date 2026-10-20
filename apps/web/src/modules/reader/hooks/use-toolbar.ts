@@ -65,13 +65,6 @@ export function useReaderToolbar({
           fontSizePx: Math.min(reader.limits.maxFontSizePx, reader.preferences.fontSizePx + 1),
         });
       },
-      onOpenAi: () => {
-        toastManager.add({
-          title: "AI tools coming soon",
-          description: "This button is reserved for article-side LLM actions.",
-          type: "info",
-        });
-      },
       onOpenOriginal: () => {
         articleActions.openSource({ newTab: reader.preferences.openLinksInNewTab });
       },

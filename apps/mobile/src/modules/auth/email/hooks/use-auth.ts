@@ -12,6 +12,12 @@ type NativeStringState = {
   onChange: ((value: string) => void) | null;
 };
 
+// `onChange` is documented as a property you assign to attach and clear with `null`. React
+// Compiler cannot model that write to a shared native object, so keep it out of the hook body.
+function setOnChange(state: NativeStringState, listener: NativeStringState["onChange"]) {
+  state.onChange = listener;
+}
+
 type UseEmailAuthOptions = {
   readonly email: NativeStringState;
   readonly focusEmail?: () => void;
@@ -104,13 +110,11 @@ export function useEmailAuth({
   // synchronously on the UI thread and schedules the React state update on
   // JS — ensuring the visual slots always reflect the true native value.
   useEffect(() => {
-    otp.onChange = (value: string) => {
+    setOnChange(otp, (value: string) => {
       "worklet";
       runOnJS(setOTPValue)(value ?? "");
-    };
-    return () => {
-      otp.onChange = null;
-    };
+    });
+    return () => setOnChange(otp, null);
   }, [otp]);
 
   function handleErrorAlertChange(isPresented: boolean) {
