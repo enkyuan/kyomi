@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb);
+  scrollbar-color: var(--scrollbar-thumb) transparent;
 }
 
 *::-webkit-scrollbar {
@@ -33,32 +33,82 @@
   display: none;
 }
 
-/* Base UI scroll-area scrollbars — thin and hidden at rest, expand on hover over the scrollbar */
+/*
+ * macOS overlay scrollbar for Base UI scroll areas, rendered the same in every browser.
+ * Modelled on MinJieLiu/mac-scrollbar (no dependency): a translucent pill thumb that fades in while
+ * scrolling or when the pointer reaches the edge, widens under the pointer, and reveals a faint
+ * track with a hairline edge. Layout stays in `scroll-bar.tsx`; tokens live in `theme.css`.
+ */
+/* Read by the scrollbar and by `ScrollArea`'s `scrollbarGutter` padding, so content clears the track. */
+:root {
+  --scrollbar-track-size: 0.875rem;
+}
+
 [data-slot="scroll-area-scrollbar"] {
-  opacity: 1;
+  box-sizing: border-box;
+  padding: 3px;
+  opacity: 0;
   transition:
-    width 300ms 300ms,
-    height 300ms 300ms;
+    opacity 400ms var(--ease-out-quint) 300ms,
+    padding 150ms var(--ease-out-quint);
 }
 
 [data-slot="scroll-area-scrollbar"][data-orientation="vertical"] {
-  width: 2px;
+  width: var(--scrollbar-track-size);
 }
 
 [data-slot="scroll-area-scrollbar"][data-orientation="horizontal"] {
-  height: 2px;
+  height: var(--scrollbar-track-size);
 }
 
-[data-slot="scroll-area-scrollbar"]:hover {
-  transition:
-    width 150ms 0ms,
-    height 150ms 0ms;
+[data-slot="scroll-area-scrollbar"][data-scrolling],
+[data-slot="scroll-area-scrollbar"]:hover,
+[data-slot="scroll-area-scrollbar"]:active {
+  opacity: 1;
+  transition-delay: 0ms, 0ms;
+  transition-duration: 120ms, 150ms;
 }
 
-[data-slot="scroll-area-scrollbar"][data-orientation="vertical"]:hover {
-  width: 6px;
+[data-slot="scroll-area-scrollbar"][data-orientation="vertical"]:hover,
+[data-slot="scroll-area-scrollbar"][data-orientation="vertical"]:active {
+  padding-inline: 2px;
 }
 
-[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"]:hover {
-  height: 6px;
+[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"]:hover,
+[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"]:active {
+  padding-block: 2px;
+}
+
+[data-slot="scroll-area-scrollbar"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--scrollbar-track);
+  opacity: 0;
+  transition: opacity 150ms var(--ease-out-quint);
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="vertical"]::before {
+  border-inline-start: 1px solid var(--scrollbar-track-edge);
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"]::before {
+  border-block-start: 1px solid var(--scrollbar-track-edge);
+}
+
+[data-slot="scroll-area-scrollbar"]:hover::before,
+[data-slot="scroll-area-scrollbar"]:active::before {
+  opacity: 1;
+}
+
+[data-slot="scroll-area-thumb"] {
+  border-radius: 9999px;
+  background-color: var(--scrollbar-thumb);
+  transition: background-color 150ms var(--ease-out-quint);
+}
+
+[data-slot="scroll-area-scrollbar"]:hover [data-slot="scroll-area-thumb"],
+[data-slot="scroll-area-scrollbar"]:active [data-slot="scroll-area-thumb"] {
+  background-color: var(--scrollbar-thumb-hover);
 }

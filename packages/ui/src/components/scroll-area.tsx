@@ -25,7 +25,8 @@ export function ScrollArea({
           scrollFade &&
             (scrollFadeClassName ??
               "data-has-overflow-y:scroll-mask-y-edge-6 data-has-overflow-x:scroll-mask-x-edge-6"),
-          scrollbarGutter && "data-has-overflow-y:pe-2.5 data-has-overflow-x:pb-2.5",
+          scrollbarGutter &&
+            "data-has-overflow-y:pe-(--scrollbar-track-size) data-has-overflow-x:pb-(--scrollbar-track-size)",
         )}
         data-slot="scroll-area-viewport"
       >
