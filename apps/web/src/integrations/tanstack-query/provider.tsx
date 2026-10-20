@@ -43,7 +43,7 @@ export default function TanstackQueryProvider({
       cancelled = true;
       unsubscribe?.();
     };
-  }, [sessionStatus]);
+  }, [queryClient, sessionStatus]);
 
   return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
 }
