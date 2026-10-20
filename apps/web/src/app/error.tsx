@@ -1,55 +1,58 @@
 "use client";
 
-import { Link, type ErrorComponentProps, useRouter } from "@tanstack/react-router";
-import { Button } from "@kyomi/ui/components/button";
+import { useRouter, type ErrorComponentProps } from "@tanstack/react-router";
 import {
-  Empty,
   EmptyContent,
   EmptyDescription,
   EmptyHeader,
   EmptyTitle,
 } from "@kyomi/ui/components/empty";
 import { KyomiLogo } from "@kyomi/ui/icons";
+import { getUserSafeErrorMessage } from "@kyomi/reader/lib/errors";
 import type { RouteRecoveryAction } from "@lib/recovery";
+import {
+  RecoveryButton,
+  RecoverySurface,
+  useRecoveryContext,
+  type RecoveryLayout,
+} from "./recovery";
+
+const FALLBACK_MESSAGE = "The page lost its place for a moment.";
+
+/** This page has no retry, so drop the "Try again." hint that shared error messages end with. */
+const withoutRetryHint = (message: string) => message.replace(/\.\s+Try again\.?$/i, ".");
 
 export function RouteErrorPage({
   error,
   recoveryAction,
   reset,
-}: ErrorComponentProps & { recoveryAction?: RouteRecoveryAction }) {
+  layout = "page",
+}: ErrorComponentProps & { recoveryAction: RouteRecoveryAction; layout?: RecoveryLayout }) {
   const router = useRouter();
-  const message =
-    error instanceof Error && error.message.trim()
-      ? error.message
-      : "The page lost its place for a moment.";
-  const retry = () => {
+  // Raw messages can carry server internals; only known-safe ones reach the page.
+  const message = withoutRetryHint(getUserSafeErrorMessage(error, FALLBACK_MESSAGE));
+  // Linking to the page that failed would not remount its error boundary, so recover in place.
+  const recoverInPlace = (event: React.MouseEvent) => {
+    if (router.state.location.pathname !== recoveryAction.to) return;
+    event.preventDefault();
     void router.invalidate().then(reset, reset);
   };
 
   return (
-    <main className="flex min-h-svh bg-background text-foreground">
-      <Empty size="page">
-        <EmptyHeader>
-          <KyomiLogo size={28} className="mb-5 size-7 text-matcha" />
-          <EmptyTitle>We lost the plot</EmptyTitle>
-          <EmptyDescription className="max-w-sm text-balance">{message}</EmptyDescription>
-        </EmptyHeader>
-        <EmptyContent className="gap-2">
-          <Button className="w-28 max-sm:w-full" shape="pill" onClick={retry}>
-            Try again
-          </Button>
-          {recoveryAction ? (
-            <Button
-              className="w-28 max-sm:w-full"
-              render={<Link to={recoveryAction.to} />}
-              shape="pill"
-              variant="outline"
-            >
-              {recoveryAction.label}
-            </Button>
-          ) : null}
-        </EmptyContent>
-      </Empty>
-    </main>
+    <RecoverySurface layout={layout}>
+      <EmptyHeader>
+        <KyomiLogo size={28} className="mb-5 size-7 text-matcha" />
+        <EmptyTitle>We lost the plot</EmptyTitle>
+        <EmptyDescription className="max-w-sm text-balance">{message}</EmptyDescription>
+      </EmptyHeader>
+      <EmptyContent>
+        <RecoveryButton onClick={recoverInPlace} recoveryAction={recoveryAction} />
+      </EmptyContent>
+    </RecoverySurface>
   );
+}
+
+/** The router-wide error page: contextual layout and recovery action, no per-route wiring. */
+export function DefaultErrorPage(props: ErrorComponentProps) {
+  return <RouteErrorPage {...props} {...useRecoveryContext()} />;
 }

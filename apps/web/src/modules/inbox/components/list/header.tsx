@@ -1,5 +1,6 @@
 "use client";
 
+import { ButtonGroup, ButtonLabel } from "@kyomi/ui/components/button";
 import { Tabs, TabsList, TabsTab } from "@kyomi/ui/components/tabs";
 import {
   Menu,
@@ -33,6 +34,7 @@ import {
 import { useCallback, useRef, useState, type ComponentType, type RefObject } from "react";
 import type { InboxFilter, InboxSort } from "@modules/articles/lib/api";
 import { cn } from "@kyomi/ui/lib/utils";
+import { SplitSegment } from "./split";
 
 const ALL_FILTER_GROUP: InboxFilter[] = ["all", "saved", "recent"];
 const MAX_VISIBLE_FILTER_MENU_ITEMS = 4;
@@ -148,28 +150,40 @@ export function FilterControl({
         value={segmentValue}
         onValueChange={(v) => onFilterChange(v as InboxFilter)}
       >
-        <TabsList variant="pill">
+        <TabsList
+          className="has-[[data-variant=split][data-split-active]]:**:data-[slot=tab-indicator]:opacity-0 **:data-[slot=tab-indicator]:transition-[width,translate,opacity]"
+          variant="pill"
+        >
           <TabsTab value="my-feed">My Feed</TabsTab>
-          <TabsTab
-            value={segmentValue === "my-feed" ? "all" : segmentValue}
-            className="gap-1.5 pe-2.5"
-            render={<div />}
-            nativeButton={false}
+          {/* The tab and the menu trigger are siblings: a control nested in a tab is not reachable
+              or announced reliably. The group draws them as one split pill. */}
+          <ButtonGroup
+            className="[--split-fill:transparent] [--split-h:2.25rem] data-split-active:[--split-fill:var(--background)] gap-0.75 text-muted-foreground hover:text-foreground/70 data-split-active:text-foreground"
+            data-split-active={segmentValue === "my-feed" ? undefined : ""}
+            variant="split"
           >
-            <span className="max-w-32 truncate leading-none sm:max-w-44">
-              {activeAllGroupLabel}
-            </span>
+            <TabsTab
+              value={segmentValue === "my-feed" ? "all" : segmentValue}
+              className="rounded-s-[calc(var(--split-h)/2)] rounded-e-[6px] px-0 text-inherit hover:text-inherit data-active:text-inherit"
+              nativeButton={false}
+            >
+              <SplitSegment className="ps-4 pe-1.5" edge="start" render={<span />}>
+                <ButtonLabel className="max-w-32 *:min-w-0 *:truncate sm:max-w-44">
+                  {activeAllGroupLabel}
+                </ButtonLabel>
+              </SplitSegment>
+            </TabsTab>
             <Menu>
               <MenuTrigger
-                aria-label="Choose filter"
-                className="relative -me-0.5 inline-flex size-5 shrink-0 cursor-pointer items-center justify-center self-center rounded-full leading-none text-current outline-none transition-colors hover:bg-accent focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background pointer-coarse:after:absolute pointer-coarse:after:-inset-y-3 pointer-coarse:after:-start-1.5 pointer-coarse:after:-end-3"
-                onPointerDown={(event) => event.stopPropagation()}
-                onClick={(event) => event.stopPropagation()}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") event.stopPropagation();
-                }}
+                render={
+                  <SplitSegment
+                    aria-label="Choose filter"
+                    className="w-7.5 justify-end ps-0 pe-3"
+                    edge="end"
+                  />
+                }
               >
-                <DownFill className="size-3" />
+                <DownFill className="mx-0 size-3" />
               </MenuTrigger>
               <MenuPopup
                 align="center"
@@ -184,7 +198,7 @@ export function FilterControl({
                 {menuItems}
               </MenuPopup>
             </Menu>
-          </TabsTab>
+          </ButtonGroup>
         </TabsList>
       </Tabs>
     </div>
@@ -325,18 +339,21 @@ export function SortButton({
   return (
     <Menu>
       <MenuTrigger
+        nativeButton={false}
         render={
-          <button
-            type="button"
+          <ButtonGroup
             aria-label="Sort"
-            className="relative inline-flex h-11 cursor-pointer select-none items-center gap-1.5 whitespace-nowrap rounded-full bg-muted-solid px-4 pe-3 font-medium text-base text-muted-foreground outline-none transition-colors hover:text-foreground/70 data-[popup-open]:text-foreground focus-visible:ring-2 focus-visible:ring-ring [&>*]:relative"
+            className="[--split-fill:var(--muted-solid)] [--split-h:2.75rem] h-(--split-h) cursor-pointer select-none rounded-full font-medium text-base text-muted-foreground outline-none transition-colors hover:text-foreground/70 data-popup-open:text-foreground focus-visible:ring-2 focus-visible:ring-ring"
+            variant="split"
           />
         }
       >
-        <span className="leading-none">{activeLabel}</span>
-        <span className="-me-0.5 inline-flex size-5 shrink-0 items-center justify-center self-center rounded-full leading-none transition-colors hover:bg-accent">
-          <DownFill className="size-3" />
-        </span>
+        <SplitSegment className="ps-4 pe-1.5" edge="start" render={<span />}>
+          {activeLabel}
+        </SplitSegment>
+        <SplitSegment className="w-8.5 justify-end ps-0 pe-4" edge="end" render={<span />}>
+          <DownFill className="mx-0 size-3" />
+        </SplitSegment>
       </MenuTrigger>
       <MenuPopup
         align="end"

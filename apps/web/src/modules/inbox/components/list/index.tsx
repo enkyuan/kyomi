@@ -17,6 +17,7 @@ import {
   AnimatePresence,
   LazyMotion,
   domAnimation,
+  controlSwapMotion,
   m,
   useReducedMotion,
   springTransition,
@@ -37,6 +38,7 @@ import {
   SortButton,
   type PinnedFolderFilter,
 } from "./header";
+import { BlurLayer } from "@modules/reader/components/detail/blur";
 import { Toolbar as ReaderToolbar } from "@modules/reader/components/toolbar";
 import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 
@@ -146,6 +148,7 @@ export function List({
   const listToolsRef = useRef<HTMLDivElement | null>(null);
   const prefersReducedMotion = useReducedMotion();
   const scopeControlTransition = springTransition("standard", prefersReducedMotion);
+  const controlSwap = controlSwapMotion(prefersReducedMotion);
 
   const { containerWidth: listContainerWidth, viewportHeight } = useViewport(listScrollRef, [
     inboxItems.length,
@@ -182,6 +185,14 @@ export function List({
               showEmptyState ? "flex h-full min-h-full flex-col" : "flex min-h-full flex-col"
             }
           >
+            {onFilterChange && !showEmptyState ? (
+              // Zero-height and sticky so the layer sits at the viewport top and inherits the
+              // viewport's scroll variables; its opacity follows the scroll offset directly, so
+              // it needs no timing or easing of its own.
+              <div aria-hidden="true" className="sticky top-0 z-10 h-0 shrink-0">
+                <BlurLayer topOffset={0} />
+              </div>
+            ) : null}
             {onFilterChange ? (
               <div
                 ref={listHeaderRef}
@@ -196,9 +207,7 @@ export function List({
                           <m.div
                             key="scoped-header"
                             className="flex min-w-0 items-center gap-2"
-                            initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.92 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.96 }}
+                            {...controlSwap}
                             transition={scopeControlTransition}
                           >
                             <BackToInboxButton onClick={backAction} />
@@ -214,9 +223,7 @@ export function List({
                           <m.div
                             key="filter-tabs"
                             layout
-                            initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.98 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.98 }}
+                            {...controlSwap}
                             transition={scopeControlTransition}
                           >
                             <FilterControl
@@ -315,7 +322,7 @@ export function List({
             aria-label="Inbox list scrollbar"
             className="z-50"
             orientation="vertical"
-            style={{ position: "fixed", top: 0, bottom: 0, insetInlineEnd: 0 }}
+            placement="viewport"
           />
         ) : null}
       </ScrollAreaPrimitive.Root>

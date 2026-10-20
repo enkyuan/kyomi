@@ -76,7 +76,7 @@ describe("FilterControl", () => {
     );
   });
 
-  test("shows a focus ring and a coarse-pointer hit area on the filter trigger", () => {
+  test("keeps the button focus ring and coarse-pointer hit area on the filter trigger", () => {
     render(
       <FilterControl
         filter="all"
@@ -88,7 +88,26 @@ describe("FilterControl", () => {
 
     const trigger = screen.getByRole("button", { name: "Choose filter" });
     expect(trigger.className).toContain("focus-visible:ring-2");
-    expect(trigger.className).toContain("pointer-coarse:after:-inset-y-3");
+    expect(trigger.className).toContain("pointer-coarse:after:min-h-11");
+  });
+
+  test("keeps My Feed and the All button group as tabs", () => {
+    const onFilterChange = vi.fn();
+
+    render(<FilterControl filter="my-feed" pinnedFolders={[]} onFilterChange={onFilterChange} />);
+
+    const myFeed = screen.getByRole("tab", { name: "My Feed" });
+    const all = screen.getByRole("tab", { name: /^All/ });
+    expect(myFeed.getAttribute("aria-selected")).toBe("true");
+    expect(all.getAttribute("aria-selected")).toBe("false");
+    expect(all.querySelector('[data-slot="button"]')).toBeTruthy();
+    const chooser = screen.getByRole("button", { name: "Choose filter" });
+    expect(all.contains(chooser)).toBe(false);
+    expect(all.closest('[data-variant="split"]')?.contains(chooser)).toBe(true);
+
+    fireEvent.click(all);
+
+    expect(onFilterChange).toHaveBeenCalledWith("all");
   });
 
   test("labels an active pinned folder", () => {

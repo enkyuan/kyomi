@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
 
 import { act, cleanup, render, screen, waitFor } from "@testing-library/react";
+import { QueryClient } from "@tanstack/react-query";
 import { afterEach, describe, expect, test, vi } from "vitest";
 
 const mocks = vi.hoisted(() => ({
@@ -41,7 +42,7 @@ describe("TanstackQueryProvider", () => {
     expect(mocks.hydrateHotQueryCache).not.toHaveBeenCalled();
 
     render(
-      <TanstackQueryProvider sessionStatus="authenticated">
+      <TanstackQueryProvider queryClient={new QueryClient()} sessionStatus="authenticated">
         <div>Query provider ready</div>
       </TanstackQueryProvider>,
     );
@@ -68,7 +69,7 @@ describe("TanstackQueryProvider", () => {
       await import("../../../../../../apps/web/src/integrations/tanstack-query/provider");
 
     render(
-      <TanstackQueryProvider sessionStatus="anonymous">
+      <TanstackQueryProvider queryClient={new QueryClient()} sessionStatus="anonymous">
         <div>Guest query provider ready</div>
       </TanstackQueryProvider>,
     );

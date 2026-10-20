@@ -8,6 +8,7 @@ import {
   SearchLine,
 } from "@kyomi/ui/icons/mingcute";
 import { useRef } from "react";
+import { useSquircle } from "@kyomi/ui/lib/squircle";
 import {
   AnimatePresence,
   LazyMotion,
@@ -30,6 +31,9 @@ import { FeedFavicon } from "@modules/feeds/components/favicon";
 import type { DiscoverFeedResult } from "@modules/feeds/lib/api";
 
 export const DISCOVER_RESULTS_UI_CAP = 200;
+// Concentric to the dialog in command.css: 24px radius - 1px border - 8px inset.
+const SEARCH_FIELD_RADIUS_PX = 15;
+const SEARCH_FIELD_CORNER_SMOOTHING = 0.6;
 type FollowFeedHandler = (item: DiscoverFeedResult, anchor?: HTMLElement | null) => void;
 const FOLLOW_ACTION_ICON_TRANSITION = springTransition("emphasized");
 const FOLLOW_ACTION_ICON_STATE = {
@@ -107,8 +111,13 @@ function CommandSearch({
   onQueryChange: (query: string) => void;
   onStartOpmlImport: (url: string) => void;
 }) {
+  const squircle = useSquircle<HTMLDivElement>(
+    SEARCH_FIELD_RADIUS_PX,
+    SEARCH_FIELD_CORNER_SMOOTHING,
+  );
+
   return (
-    <div className="kyomi-command-search">
+    <div ref={squircle.ref} className="kyomi-command-search" style={squircle.style}>
       <SearchLine className="kyomi-command-search-icon" />
       <CommandInput
         placeholder="Search feeds or paste a feed URL..."

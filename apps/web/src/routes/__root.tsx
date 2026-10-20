@@ -1,23 +1,16 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react-doctor/only-export-components */
 /* eslint-disable react-doctor/no-danger */
-import {
-  HeadContent,
-  Outlet,
-  Scripts,
-  createRootRouteWithContext,
-  type ErrorComponentProps,
-} from "@tanstack/react-router";
+import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanstack/react-router";
 import { Agentation } from "agentation";
 import { useEffect } from "react";
 import type { QueryClient } from "@tanstack/react-query";
 import interLatinWoff2Url from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
 import AuthProvider from "@integrations/better-auth/provider";
 import TanstackQueryProvider from "@integrations/tanstack-query/provider";
-import { RouteErrorPage } from "@/app/error";
+import { DefaultErrorPage } from "@/app/error";
 import { AppRuntimeEffects } from "@/app/runtime-effects";
-import { NotFoundPage } from "@/app/not-found";
-import { getAuthRecoveryAction, LOGIN_RECOVERY_ACTION } from "@lib/recovery";
+import { DefaultNotFoundPage } from "@/app/not-found";
 import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/components/toast";
 import PostHogProvider from "@integrations/posthog/provider";
 import { getAuthBootstrapState } from "@lib/auth/api";
@@ -116,24 +109,12 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
   }),
   shellComponent: RootDocument,
   component: () => <Outlet />,
-  errorComponent: RootRouteErrorPage,
-  notFoundComponent: RootNotFoundPage,
+  errorComponent: DefaultErrorPage,
+  notFoundComponent: DefaultNotFoundPage,
 });
 
-function RootRouteErrorPage(props: ErrorComponentProps) {
-  return <RouteErrorPage {...props} />;
-}
-
-function RootNotFoundPage() {
-  const loaderData = Route.useLoaderData() as RootLoaderData;
-  return (
-    <NotFoundPage
-      recoveryAction={getAuthRecoveryAction(loaderData.authState) ?? LOGIN_RECOVERY_ACTION}
-    />
-  );
-}
-
 function RootDocument({ children }: { children: React.ReactNode }) {
+  const { queryClient } = Route.useRouteContext();
   const loaderData = Route.useLoaderData() as RootLoaderData | undefined;
   const initialSession =
     loaderData?.authState.status === "authenticated" ? loaderData.authState.session : null;
@@ -195,7 +176,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <PostHogProvider>
           <ToastProvider>
             <AnchoredToastProvider>
-              <TanstackQueryProvider sessionStatus={loaderData?.authState.status}>
+              <TanstackQueryProvider
+                queryClient={queryClient}
+                sessionStatus={loaderData?.authState.status}
+              >
                 <AuthProvider initialSession={initialSession}>
                   <AppRuntimeEffects />
                   {children}
