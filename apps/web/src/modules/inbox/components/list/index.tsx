@@ -22,6 +22,7 @@ import {
   useReducedMotion,
   springTransition,
 } from "@kyomi/ui/lib/motion";
+import { cn } from "@kyomi/ui/lib/utils";
 import { useRef } from "react";
 import { useHydrated } from "@hooks/use-hydrated";
 import type { InboxFilter, InboxItem, InboxSort } from "@modules/articles/lib/api";
@@ -52,6 +53,7 @@ const EMPTY_STATE_BODY_COPY =
 
 const EMPTY_PINNED_FOLDERS: PinnedFolderFilter[] = [];
 const INBOX_LIST_SCROLL_RESTORATION_ID = "inbox-list";
+const SCROLL_OFFSET_INHERIT = "[--scroll-area-overflow-y-start:inherit]";
 
 function getEmptyStateCopy(filter: InboxFilter) {
   switch (filter) {
@@ -181,15 +183,22 @@ export function List({
           data-slot="scroll-area-viewport"
         >
           <div
-            className={
-              showEmptyState ? "flex h-full min-h-full flex-col" : "flex min-h-full flex-col"
-            }
+            className={cn(
+              "flex min-h-full flex-col",
+              // Base UI registers this variable as non-inherited, so each level down to the blur
+              // layer opts in to the viewport's value.
+              SCROLL_OFFSET_INHERIT,
+              showEmptyState && "h-full",
+            )}
           >
             {onFilterChange && !showEmptyState ? (
               // Zero-height and sticky so the layer sits at the viewport top and inherits the
               // viewport's scroll variables; its opacity follows the scroll offset directly, so
               // it needs no timing or easing of its own.
-              <div aria-hidden="true" className="sticky top-0 z-10 h-0 shrink-0">
+              <div
+                aria-hidden="true"
+                className={cn("sticky top-0 z-10 h-0 shrink-0", SCROLL_OFFSET_INHERIT)}
+              >
                 <BlurLayer topOffset={0} />
               </div>
             ) : null}
