@@ -5,6 +5,8 @@ import type { CSSProperties } from "react";
 const DETAIL_BLUR_HEIGHT_PX = 64;
 const DETAIL_BLUR_FEATHER_PX = 8;
 const DETAIL_BLUR_OPACITY_STYLE = {
+  // Base UI registers the scroll variable as non-inherited, so opt in to the parent's value.
+  "--scroll-area-overflow-y-start": "inherit",
   opacity: "clamp(0, calc(var(--scroll-area-overflow-y-start) / 24px), 1)",
 } as CSSProperties;
 const DETAIL_BLUR_STRIPS = [
