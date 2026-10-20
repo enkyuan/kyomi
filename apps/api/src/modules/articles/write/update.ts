@@ -9,14 +9,47 @@ import {
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { assertContentFieldBudget } from "@shared/http/budget";
+import {
+  ARTICLE_HTML_SANITIZER_VERSION,
+  processIngestedArticleHtml,
+} from "@modules/articles/reader/content";
 import { type ClipUpdateBody, updateArticleClipForUser } from "./clips/operations";
 import type { ArticleUpdateBody } from "../types";
 
 type DB = typeof db;
 
+/**
+ * Client-supplied HTML is untrusted: compile it like any ingested body and keep the original as
+ * raw source, so the stored sanitizer version always describes compiler output.
+ */
+function compileReplacementHtml(
+  value: string | null | undefined,
+  article: { link: string; title: string },
+): {
+  contentHtml: string | null;
+  contentRaw: string | null;
+  contentSanitizerVersion: string | null;
+} {
+  const raw = value?.trim() ? value : null;
+  if (!raw) {
+    return { contentHtml: null, contentRaw: null, contentSanitizerVersion: null };
+  }
+  const compiled = processIngestedArticleHtml(raw, { baseUrl: article.link, title: article.title });
+  return {
+    contentHtml: compiled.html || null,
+    contentRaw: raw,
+    contentSanitizerVersion: ARTICLE_HTML_SANITIZER_VERSION,
+  };
+}
+
 async function getFeedArticleOrThrow(database: DB, articleId: string) {
   const rows = await database
-    .select({ id: feedItems.id, feedId: feedItems.feedId })
+    .select({
+      id: feedItems.id,
+      feedId: feedItems.feedId,
+      link: feedItems.link,
+      title: feedItems.title,
+    })
     .from(feedItems)
     .where(eq(feedItems.id, articleId))
     .limit(1);
@@ -53,15 +86,18 @@ export async function updateArticleForUser(
     { name: "contentMarkdown", value: body.contentMarkdown },
   ]);
 
-  await getFeedArticleOrThrow(database, articleId);
+  const article = await getFeedArticleOrThrow(database, articleId);
 
   const now = new Date();
 
   if (hasContentFields) {
+    const html = Object.hasOwn(body, "contentHtml")
+      ? compileReplacementHtml(body.contentHtml, article)
+      : {};
     await database
       .update(feedItems)
       .set({
-        contentHtml: Object.hasOwn(body, "contentHtml") ? body.contentHtml : undefined,
+        ...html,
         contentText: Object.hasOwn(body, "contentText") ? body.contentText : undefined,
         contentMarkdown: Object.hasOwn(body, "contentMarkdown") ? body.contentMarkdown : undefined,
         contentStatus: Object.hasOwn(body, "contentStatus") ? body.contentStatus : undefined,

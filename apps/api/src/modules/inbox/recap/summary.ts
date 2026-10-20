@@ -176,8 +176,19 @@ async function listOldestSavedClips(
   userId: string,
   limit: number,
 ): Promise<InboxRecapSavedItemDto[]> {
+  // Metadata only: clip rows also carry raw and rendered article bodies the recap never shows.
   const rows = await database
-    .select()
+    .select({
+      id: articleClips.id,
+      title: articleClips.title,
+      url: articleClips.url,
+      note: articleClips.note,
+      createdAt: articleClips.createdAt,
+      isRead: articleClips.isRead,
+      isSaved: articleClips.isSaved,
+      lastViewedAt: articleClips.lastViewedAt,
+      savedAt: articleClips.savedAt,
+    })
     .from(articleClips)
     .where(
       and(

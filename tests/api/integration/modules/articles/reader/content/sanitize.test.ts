@@ -280,6 +280,21 @@ describe("articles.sanitize.content – policy v2", () => {
     expect(sanitized).toMatch(/<img src="https:\/\/cdn\.example\/b\.png" alt="b" loading="lazy"/);
   });
 
+  test("drops image dimensions that would reserve an implausible box", () => {
+    const sanitized = sanitizeArticleHtml(
+      `<img src="https://cdn.example/a.png" alt="tall" width="1" height="99999">
+       <img src="https://cdn.example/b.png" alt="ok" width="800" height="6000">
+       <img src="https://cdn.example/c.png" alt="zero" width="0" height="400">
+       <img src="https://cdn.example/d.png" alt="pixel" width="1" height="1">`,
+      { baseUrl },
+    );
+
+    expect(sanitized).toMatch(/alt="tall"(?![^>]*(?:width|height)=)/);
+    expect(sanitized).toMatch(/alt="ok" width="800" height="6000"/);
+    expect(sanitized).toMatch(/alt="zero"(?![^>]*(?:width|height)=)/);
+    expect(sanitized).toMatch(/alt="pixel" width="1" height="1"/);
+  });
+
   test("caps srcset at eight candidates", () => {
     const candidates = Array.from(
       { length: 12 },

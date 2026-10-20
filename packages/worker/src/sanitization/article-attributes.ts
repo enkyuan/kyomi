@@ -12,6 +12,9 @@ import { ARTICLE_EMBED_PROVIDERS, ARTICLE_MATHML_TAGS } from "./article-policy";
 const KYOMI_ANCHOR = /^kyomi-[a-z0-9][a-z0-9-]{0,63}$/;
 const KYOMI_FRAGMENT = /^#kyomi-[a-z0-9][a-z0-9-]{0,63}$/;
 const MAX_SRCSET_CANDIDATES = 8;
+/** Renderers reserve space from `width`/`height`; outside these bounds the box would be absurd. */
+const MAX_DIMENSION = 16_384;
+const MAX_ASPECT_RATIO = 20;
 
 const STYLE_ALLOWED_TAGS = new Set<string>(["span", ...ARTICLE_MATHML_TAGS]);
 const MEDIA_TAGS = new Set(["video", "audio"]);
@@ -77,6 +80,24 @@ export function sanitizeSrcset(value: string): string | null {
   return kept.length > 0 ? kept.join(", ") : null;
 }
 
+/**
+ * Drops declared dimensions that would make the reader reserve a nonsensical box, such as
+ * `width="1" height="99999"` stretched to full column width.
+ */
+function dropImplausibleDimensions(element: Element): void {
+  const declared = ["width", "height"].filter((name) => element.hasAttribute(name));
+  const values = declared.map((name) => Number(element.getAttribute(name)));
+  const outOfRange = values.some((value) => value < 1 || value > MAX_DIMENSION);
+  const [width, height] = values;
+  const extremeRatio =
+    values.length === 2 && Math.max(width! / height!, height! / width!) > MAX_ASPECT_RATIO;
+  // The pair is only meaningful together: one bad value would leave a misleading partner behind.
+  if (outOfRange || extremeRatio) {
+    element.removeAttribute("width");
+    element.removeAttribute("height");
+  }
+}
+
 export function normalizeElementAttributes(element: Element): void {
   const tag = element.tagName.toLowerCase();
 
@@ -92,6 +113,8 @@ export function normalizeElementAttributes(element: Element): void {
       element.removeAttribute(attr.name);
     }
   }
+
+  dropImplausibleDimensions(element);
 
   const srcset = element.getAttribute("srcset");
   if (srcset !== null) {
