@@ -155,7 +155,12 @@ export function Detail({
         </ScrollAreaPrimitive.Viewport>
         {selectedItem && !isBrowserSurface ? <BlurLayer topOffset={blurTopOffset} /> : null}
         {selectedItem ? (
-          <ScrollBar aria-label="Reader scrollbar" className="z-50" orientation="vertical" />
+          <ScrollBar
+            aria-label="Reader scrollbar"
+            className="z-50"
+            orientation="vertical"
+            placement="viewport"
+          />
         ) : null}
       </ScrollAreaPrimitive.Root>
     </section>
