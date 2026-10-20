@@ -1,15 +1,19 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import { RouteErrorPage } from "@/app/error";
-import { NotFoundPage } from "@/app/not-found";
+import { DefaultErrorPage, RouteErrorPage } from "@/app/error";
+import { DefaultNotFoundPage, NotFoundPage } from "@/app/not-found";
 import {
   getAuthRecoveryAction,
+  getPathRecoveryAction,
   INBOX_RECOVERY_ACTION,
   LOGIN_RECOVERY_ACTION,
 } from "@/lib/recovery";
 
 const mocks = vi.hoisted(() => ({
+  authState: undefined as { status: "authenticated" | "anonymous" } | undefined,
   invalidate: vi.fn(),
+  matchIds: [] as string[],
+  pathname: "/inbox/item-1",
 }));
 
 vi.mock("@tanstack/react-router", async () => {
@@ -20,44 +24,93 @@ vi.mock("@tanstack/react-router", async () => {
       HTMLAnchorElement,
       React.AnchorHTMLAttributes<HTMLAnchorElement> & { to: string }
     >(({ to, ...props }, ref) => React.createElement("a", { ...props, href: to, ref })),
-    useRouter: () => ({ invalidate: mocks.invalidate }),
+    useLocation: ({ select }: { select: (location: { pathname: string }) => unknown }) =>
+      select({ pathname: mocks.pathname }),
+    useMatches: ({ select }: { select: (matches: { routeId: string }[]) => unknown }) =>
+      select(mocks.matchIds.map((routeId) => ({ routeId }))),
+    useRouteContext: ({ select }: { select: (context: unknown) => unknown }) =>
+      select(mocks.authState ? { authState: mocks.authState } : undefined),
+    useRouter: () => ({
+      invalidate: mocks.invalidate,
+      state: { location: { pathname: mocks.pathname } },
+    }),
   };
 });
 
 beforeEach(() => {
   mocks.invalidate.mockReset();
   mocks.invalidate.mockResolvedValue(undefined);
+  mocks.pathname = "/inbox/item-1";
+  mocks.authState = undefined;
+  mocks.matchIds = [];
 });
 
 describe("RouteErrorPage", () => {
-  test("invalidates the failed route before resetting its boundary", async () => {
-    const reset = vi.fn();
+  test.each([
+    [INBOX_RECOVERY_ACTION, "Back to inbox", "/inbox"],
+    [LOGIN_RECOVERY_ACTION, "Go to login", "/"],
+  ] as const)("offers only the contextual recovery action (%#)", (recoveryAction, label, href) => {
+    render(
+      <RouteErrorPage
+        error={new Error("Feed failed")}
+        reset={vi.fn()}
+        recoveryAction={recoveryAction}
+      />,
+    );
 
-    render(<RouteErrorPage error={new Error("Route failed")} reset={reset} />);
-    fireEvent.click(screen.getByRole("button", { name: "Try again" }));
+    const action = screen.getByRole("link", { name: label });
+    expect(action.getAttribute("href")).toBe(href);
+    expect(screen.queryByRole("button")).toBeNull();
+    expect(screen.getAllByRole("link")).toHaveLength(1);
+  });
+
+  test("recovers in place when the failed page is the recovery target", async () => {
+    const reset = vi.fn();
+    mocks.pathname = "/inbox";
+
+    render(
+      <RouteErrorPage
+        error={new Error("Feed failed")}
+        recoveryAction={INBOX_RECOVERY_ACTION}
+        reset={reset}
+      />,
+    );
+    fireEvent.click(screen.getByRole("link", { name: "Back to inbox" }));
 
     expect(mocks.invalidate).toHaveBeenCalledOnce();
     await waitFor(() => expect(reset).toHaveBeenCalledOnce());
   });
 
-  test("resets the boundary when route invalidation reports another failure", async () => {
+  test("navigates normally when the failed page is elsewhere", () => {
     const reset = vi.fn();
-    mocks.invalidate.mockRejectedValueOnce(new Error("Still unavailable"));
 
-    render(<RouteErrorPage error={new Error("Route failed")} reset={reset} />);
-    fireEvent.click(screen.getByRole("button", { name: "Try again" }));
+    render(
+      <RouteErrorPage
+        error={new Error("Feed failed")}
+        recoveryAction={INBOX_RECOVERY_ACTION}
+        reset={reset}
+      />,
+    );
+    fireEvent.click(screen.getByRole("link", { name: "Back to inbox" }));
 
-    await waitFor(() => expect(reset).toHaveBeenCalledOnce());
+    expect(mocks.invalidate).not.toHaveBeenCalled();
+    expect(reset).not.toHaveBeenCalled();
   });
 
-  test("keeps root session failures retry-only", () => {
-    render(<RouteErrorPage error={new Error("Unable to load your session.")} reset={vi.fn()} />);
+  test("drops the retry hint the page cannot act on", () => {
+    render(
+      <RouteErrorPage
+        error={new Error("Unable to load your session. Try again.")}
+        recoveryAction={LOGIN_RECOVERY_ACTION}
+        reset={vi.fn()}
+      />,
+    );
 
-    expect(screen.getByRole("button", { name: "Try again" })).toBeTruthy();
-    expect(screen.queryByRole("link")).toBeNull();
+    expect(screen.getByText("Unable to load your session.")).toBeTruthy();
+    expect(screen.queryByText(/try again/i)).toBeNull();
   });
 
-  test("uses the recovery action supplied by a protected route", () => {
+  test("styles the recovery action as the primary button", () => {
     render(
       <RouteErrorPage
         error={new Error("Feed failed")}
@@ -66,7 +119,64 @@ describe("RouteErrorPage", () => {
       />,
     );
 
+    expect(screen.getByRole("link", { name: "Back to inbox" }).className).toContain("bg-primary");
+  });
+});
+
+describe("error page context", () => {
+  const defaultErrorProps = { error: new Error("Feed failed"), reset: vi.fn() };
+
+  test("keeps the app shell for failures under it", () => {
+    mocks.matchIds = ["__root__", "/_app", "/_app/inbox"];
+    mocks.authState = { status: "authenticated" };
+
+    render(<DefaultErrorPage {...defaultErrorProps} />);
+
+    expect(screen.queryByRole("main")).toBeNull();
     expect(screen.getByRole("link", { name: "Back to inbox" }).getAttribute("href")).toBe("/inbox");
+  });
+
+  test("takes over the page outside the shell", () => {
+    mocks.matchIds = ["__root__", "/"];
+    mocks.pathname = "/";
+    mocks.authState = { status: "anonymous" };
+
+    render(<DefaultErrorPage {...defaultErrorProps} />);
+
+    expect(screen.getByRole("main")).toBeTruthy();
+    expect(screen.getByRole("link", { name: "Go to login" }).getAttribute("href")).toBe("/");
+  });
+
+  test("follows the failing area when the session lookup itself failed", () => {
+    mocks.matchIds = ["__root__"];
+    mocks.pathname = "/inbox/some-article";
+
+    render(<DefaultErrorPage {...defaultErrorProps} />);
+
+    expect(screen.getByRole("link", { name: "Back to inbox" }).getAttribute("href")).toBe("/inbox");
+  });
+
+  test("never shows a raw server message", () => {
+    render(
+      <RouteErrorPage
+        error={new Error("HTTP 500 at https://internal.example/api/feeds")}
+        recoveryAction={INBOX_RECOVERY_ACTION}
+        reset={vi.fn()}
+      />,
+    );
+
+    expect(screen.queryByText(/internal\.example/)).toBeNull();
+    expect(screen.getByText("The page lost its place for a moment.")).toBeTruthy();
+  });
+
+  test("renders the not-found page in the shell too", () => {
+    mocks.matchIds = ["__root__", "/_app"];
+    mocks.authState = { status: "authenticated" };
+
+    render(<DefaultNotFoundPage />);
+
+    expect(screen.queryByRole("main")).toBeNull();
+    expect(screen.getByRole("link", { name: "Back to inbox" })).toBeTruthy();
   });
 });
 
@@ -90,5 +200,13 @@ describe("NotFoundPage", () => {
         session: { session: {} as never, user: {} as never },
       }),
     ).toBe(INBOX_RECOVERY_ACTION);
+  });
+
+  test("falls back to the failing area when authentication is unknown", () => {
+    expect(getPathRecoveryAction("/inbox")).toBe(INBOX_RECOVERY_ACTION);
+    expect(getPathRecoveryAction("/inbox/some-article")).toBe(INBOX_RECOVERY_ACTION);
+    expect(getPathRecoveryAction("/")).toBe(LOGIN_RECOVERY_ACTION);
+    expect(getPathRecoveryAction("/register")).toBe(LOGIN_RECOVERY_ACTION);
+    expect(getPathRecoveryAction("/inboxes")).toBe(LOGIN_RECOVERY_ACTION);
   });
 });
