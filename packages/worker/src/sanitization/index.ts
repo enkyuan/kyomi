@@ -10,7 +10,9 @@ export {
   isArticleFragmentHref,
   isAllowedArticleClassToken,
   normalizeSanitizedArticleRoot,
+  parseSrcset,
   sanitizeArticleHtmlFragment,
   sanitizeSrcset,
+  serializeSrcset,
   stripReservedArticleMarkup,
 } from "./article-html";

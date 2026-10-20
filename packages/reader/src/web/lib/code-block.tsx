@@ -53,8 +53,16 @@ function classListFenceLanguage(classList: DOMTokenList): string | undefined {
   return undefined;
 }
 
+/**
+ * The compiler records the source's language hint on `pre[data-kyomi-lang]` before the class
+ * filter drops highlighter markup, so it wins over whatever `language-*` class survived.
+ */
 function extractFenceLanguage(pre: HTMLPreElement, code: HTMLElement): string | undefined {
-  return classListFenceLanguage(code.classList) ?? classListFenceLanguage(pre.classList);
+  return (
+    pre.getAttribute("data-kyomi-lang")?.trim() ||
+    classListFenceLanguage(code.classList) ||
+    classListFenceLanguage(pre.classList)
+  );
 }
 
 function languageClassFromClassName(className: string): string | undefined {
@@ -244,15 +252,24 @@ function ensurePreCode(pre: HTMLPreElement): HTMLElement {
   return nextCode;
 }
 
-function createCodeBlockChrome(labelText: string) {
+/** Shows the source's filename when it named one (its extension already implies the language). */
+function createCodeBlockChrome(languageLabel: string, filename: string | undefined) {
   const chrome = document.createElement("div");
   chrome.className = "reader-code-chrome";
   chrome.setAttribute("role", "group");
-  chrome.setAttribute("aria-label", `Code sample (${labelText})`);
+  chrome.setAttribute(
+    "aria-label",
+    filename ? `Code sample (${filename}, ${languageLabel})` : `Code sample (${languageLabel})`,
+  );
 
   const labelEl = document.createElement("span");
-  labelEl.className = "reader-code-lang-label";
-  labelEl.textContent = labelText;
+  labelEl.className = filename
+    ? "reader-code-lang-label reader-code-filename"
+    : "reader-code-lang-label";
+  labelEl.textContent = filename ?? languageLabel;
+  if (filename) {
+    labelEl.title = filename;
+  }
 
   const host = document.createElement("div");
   host.className = "reader-code-copy-host";
@@ -285,7 +302,8 @@ function enhancePreCodeBlock(pre: HTMLPreElement): void {
   }
   parent.insertBefore(wrapper, pre);
 
-  const { chrome, host } = createCodeBlockChrome(detection.label);
+  const filename = pre.getAttribute("data-kyomi-filename")?.trim() || undefined;
+  const { chrome, host } = createCodeBlockChrome(detection.label, filename);
   wrapper.appendChild(chrome);
   wrapper.appendChild(pre);
 

@@ -22,7 +22,8 @@
   background-color: color-mix(in oklab, var(--matcha) 28%, transparent);
 }
 
-.reader-content .article-body :is(mark, .highlight) {
+/* Inline highlights only: GitHub, Jekyll, and Hugo name their code wrappers `div.highlight`. */
+.reader-content .article-body :is(mark, span.highlight) {
   background-color: color-mix(in oklab, var(--matcha) 42%, transparent);
   color: inherit;
 }

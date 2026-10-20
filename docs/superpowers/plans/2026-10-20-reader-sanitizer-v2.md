@@ -243,8 +243,24 @@ counts drops by tag in the shape of the document model's `droppedElements`.
      `source_url`) and, through the full path, strips forged hints before stamping v2.
    - Follow-up for the next version bump: the backfill should recompile rows that have raw source
      instead of re-sanitizing their stored HTML.
-7. **Reader.** Update `string-prep`, `url-resolve`, `code-block`, and the CSS. Extend
-   `web/render-html.test.tsx`.
+7. **Reader.** Done 2026-10-20.
+   - `string-prep.ts` keeps `width`/`height`; with `height: auto` the browser reserves the image box
+     before load, and small declared sizes now classify inline images.
+   - `url-resolve.ts` sends `img[src]`, every `srcset` candidate (on `img` and `picture > source`), and
+     `video[poster]` through `transformImageUrl`; video and audio files are resolved only. A
+     transformer returning `null` keeps the original URL; a non-http result drops it.
+   - `code-block.tsx` reads `data-kyomi-lang` before class hints and shows `data-kyomi-filename` in
+     the chrome (monospace, ellipsized; the aria-label keeps both filename and language).
+     Highlighted lines are not rendered yet; that lands with Shiki (plan 0b).
+   - `packages/ui/src/styles/reader.css` styles `kbd` (matches the `Kbd` primitive), `s`/`del`/`ins`,
+     `q`, `small`, `rt`, definition lists, quote footers, asides, table `caption` and `tfoot`,
+     publisher column `align`, tabular numbers in cells, task-list checkboxes drawn from
+     `data-kyomi-checked` (with CSS alt text for screen readers), `video`/`audio`, and wrapping
+     embed links.
+   - Fixed in passing: `:is(mark, .highlight)` painted GitHub, Jekyll, and Hugo `div.highlight` code
+     wrappers with the highlighter colour; it is now `:is(mark, span.highlight)` in both stylesheets.
+   - Checked visually in light and dark against compiled corpus output. Tufte sidenotes still run
+     inline; margin placement belongs to the Phase 1 renderer.
 8. **Docs.** Update the reader README and mark passes 2–6, 8, 9 as shipped in the compiler doc.
 9. **QA.** Run the focused suites, typecheck, lint, and format for `packages/worker`,
    `packages/reader`, `packages/db`, and `apps/api`; build `apps/web`; then manually check light and

@@ -49,7 +49,8 @@
   background-color: color-mix(in oklab, var(--matcha) 28%, transparent);
 }
 
-.reader-content .article-body :is(mark, .highlight) {
+/* Inline highlights only: GitHub, Jekyll, and Hugo name their code wrappers `div.highlight`. */
+.reader-content .article-body :is(mark, span.highlight) {
   background-color: color-mix(in oklab, var(--matcha) 42%, transparent);
   color: inherit;
 }
@@ -958,4 +959,187 @@
 
 .reader-content .article-body[data-reader-layout-mode="fidelity"] figcaption {
   width: min(100%, 56rem);
+}
+
+/*
+ * Sanitizer v2 elements. Publisher semantics that used to be flattened now reach the reader, so
+ * each gets a quiet, type-led treatment that matches the surrounding article rhythm.
+ */
+
+/* Mirrors the `Kbd` primitive so shortcuts read the same in articles and app chrome. */
+.reader-content .article-body kbd {
+  display: inline-block;
+  min-width: 1.25rem;
+  padding: 0 0.3em;
+  border-radius: 4px;
+  background: var(--muted);
+  color: var(--muted-foreground);
+  font-family: var(--font-sans);
+  font-size: 0.75em;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+  vertical-align: 0.1em;
+}
+
+.reader-content .article-body :is(s, del) {
+  text-decoration-line: line-through;
+  text-decoration-color: color-mix(in srgb, var(--foreground) 45%, transparent);
+}
+
+.reader-content .article-body del {
+  color: color-mix(in srgb, var(--foreground) 62%, transparent);
+}
+
+.reader-content .article-body ins {
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in oklab, var(--matcha) 70%, transparent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+.reader-content .article-body q {
+  quotes: auto;
+}
+
+.reader-content .article-body small {
+  font-size: 0.85em;
+  color: color-mix(in srgb, var(--foreground) 70%, transparent);
+}
+
+.reader-content .article-body rt {
+  font-size: 0.6em;
+}
+
+.reader-content .article-body dl {
+  margin: 1rem 0;
+}
+
+.reader-content .article-body dt {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.reader-content .article-body dd {
+  margin: 0.2rem 0 0;
+  padding-left: 1.4rem;
+}
+
+.reader-content .article-body dd + dt {
+  margin-top: 0.75rem;
+}
+
+.reader-content .article-body blockquote > footer {
+  margin-top: 0.5rem;
+  font-size: 0.9em;
+  color: color-mix(in srgb, var(--foreground) 62%, transparent);
+}
+
+/* Editorial asides (notes, pull-outs) sit on a quiet surface rather than a quote rule. */
+.reader-content .article-body aside {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--foreground) 4%, transparent);
+  font-size: 0.95em;
+}
+
+.reader-content .article-body aside > :first-child {
+  margin-top: 0;
+}
+
+.reader-content .article-body aside > :last-child {
+  margin-bottom: 0;
+}
+
+.reader-content .article-body caption {
+  caption-side: top;
+  padding-bottom: 0.5rem;
+  text-align: start;
+  text-wrap: pretty;
+  color: color-mix(in srgb, var(--foreground) 68%, transparent);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.reader-content .article-body tfoot :is(th, td) {
+  border-top-width: 2px;
+  font-weight: 600;
+}
+
+.reader-content .article-body :is(td, th) {
+  font-variant-numeric: tabular-nums;
+}
+
+/* The base cell rule sets `text-align: left`; honour the publisher's column alignment. */
+.reader-content .article-body :is(th, td)[align="center"] {
+  text-align: center;
+}
+
+.reader-content .article-body :is(th, td)[align="right"] {
+  text-align: right;
+}
+
+/* Task lists: the checkbox input is dropped at ingest, so its state is drawn from the item. */
+.reader-content .article-body li[data-kyomi-checked] {
+  list-style: none;
+}
+
+.reader-content .article-body li[data-kyomi-checked]::before {
+  content: "";
+  content: "" / "Not done, ";
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-inline: -1.35em 0.5em;
+  border: 1.5px solid color-mix(in srgb, var(--foreground) 40%, transparent);
+  border-radius: 3px;
+  vertical-align: -0.1em;
+}
+
+.reader-content .article-body li[data-kyomi-checked="true"]::before {
+  content: "" / "Done, ";
+  border-color: var(--foreground);
+  background-color: var(--foreground);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2 5 8.5l4.5-5' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+.dark .reader-content .article-body li[data-kyomi-checked="true"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2 5 8.5l4.5-5' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Direct media share the image frame's radius and hairline outline. */
+.reader-content .article-body video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 6px;
+  outline: 1px solid oklch(0 0 0 / 0.1);
+  outline-offset: -1px;
+  background: oklch(0 0 0);
+}
+
+.dark .reader-content .article-body video {
+  outline-color: oklch(1 0 0 / 0.1);
+}
+
+.reader-content .article-body audio {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* Embeds are plain links until click-to-load players land; long post URLs must wrap. */
+.reader-content .article-body figure[data-kyomi-embed] a {
+  overflow-wrap: anywhere;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-filename {
+  overflow: hidden;
+  font-family: var(--font-mono);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

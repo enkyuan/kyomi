@@ -134,8 +134,6 @@ function normalizeFigureContent(html: string): string {
       continue;
     }
     for (const img of figure.querySelectorAll("img")) {
-      img.removeAttribute("width");
-      img.removeAttribute("height");
       const alt = img.getAttribute("alt") ?? "";
       if (isMediumImagePlaceholderText(alt)) {
         img.setAttribute("alt", "");
@@ -149,9 +147,9 @@ function normalizeFigureContent(html: string): string {
     }
   }
 
+  // `width`/`height` stay: with `height: auto` they give the browser the aspect ratio to reserve
+  // before the image loads, so the article does not shift.
   for (const img of tpl.content.querySelectorAll("img")) {
-    img.removeAttribute("width");
-    img.removeAttribute("height");
     if (isMediumImagePlaceholderText(img.getAttribute("alt") ?? "")) {
       img.setAttribute("alt", "");
       img.removeAttribute("title");

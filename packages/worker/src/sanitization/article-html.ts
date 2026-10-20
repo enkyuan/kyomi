@@ -30,6 +30,7 @@ export {
 } from "./article-policy";
 export { isArticleFragmentHref, sanitizeSrcset } from "./article-attributes";
 export { stripReservedArticleMarkup } from "./reserved";
+export { parseSrcset, serializeSrcset } from "./srcset";
 export { filterArticleClassAttr, isAllowedArticleClassToken } from "./article-classes";
 
 /** Elements that are meaningful without children, so empty-element cleanup keeps them. */
