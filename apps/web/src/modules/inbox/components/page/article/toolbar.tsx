@@ -6,8 +6,12 @@ import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/components/tool
 import { Toolbar as ReaderToolbarRoot } from "@modules/reader/components/toolbar";
 import type { ToolbarModel } from "@modules/reader/lib/toolbar";
 
-const EXPANDED_READER_TOOLBAR_WIDTH = "13.3125rem";
-const COLLAPSED_READER_TOOLBAR_WIDTH = "5.25rem";
+/** Width of a toolbar holding `buttons` size-9 buttons, gap-1 apart, inside p-1 padding. */
+const toolbarWidth = (buttons: number) => `${buttons * 2.25 + (buttons - 1) * 0.25 + 0.5}rem`;
+/** Read later, translate, open source, share. */
+const EXPANDED_READER_TOOLBAR_WIDTH = toolbarWidth(4);
+/** Read later, open source. */
+const COLLAPSED_READER_TOOLBAR_WIDTH = toolbarWidth(2);
 const STEP_CONTROL_TOOLTIP_SIDE = "bottom";
 const STEP_CONTROL_TOOLTIP_SIDE_OFFSET = 8;
 const STEP_CONTROL_TOOLTIP_COLLISION_AVOIDANCE = {

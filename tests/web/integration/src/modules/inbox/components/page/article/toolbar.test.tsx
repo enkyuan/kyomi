@@ -34,7 +34,6 @@ function toolbarProps(): ToolbarProps {
     onCycleContentWidth: vi.fn(),
     onDecreaseFontSize: vi.fn(),
     onIncreaseFontSize: vi.fn(),
-    onOpenAi: vi.fn(),
     onOpenOriginal: vi.fn(),
     onShareArticle: vi.fn(),
     onToggleMode: vi.fn(),
@@ -63,7 +62,7 @@ function renderToolbar(collapsed: boolean) {
 
 describe("article reader toolbar", () => {
   test.each([
-    [false, "13.3125rem"],
+    [false, "10.25rem"],
     [true, "5.25rem"],
   ])("keeps %s state edge controls concentric", async (collapsed, expectedWidth) => {
     const shell = renderToolbar(collapsed);
