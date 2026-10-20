@@ -100,6 +100,31 @@ function renderFolders(visibleFolders = folders) {
 }
 
 describe("recap folders summary", () => {
+  // Value: protects=the zero-folders state offers one icon-free pill primary Create folder action wired to onCreateFolder (icon-free and pill by explicit design request);
+  //   fails_when=the button is unwired, loses shape="pill" or the primary variant, or regains the plus icon;
+  //   why_new=no existing test renders the empty state, only the populated compact action row;
+  //   seam=none; no_claim=real tooltip and section layout (RailTooltip and RecapSection are mocked).
+  test("offers a single pill primary Create folder action with no icon when there are no folders", () => {
+    const { onCreateFolder, onExpand, onImportOpml } = renderFolders([]);
+
+    expect(screen.getByText("No folders yet")).toBeTruthy();
+    expect(screen.queryByRole("button", { name: "View folders" })).toBeNull();
+    expect(screen.queryByRole("button", { name: /Manage/ })).toBeNull();
+    expect(screen.queryByRole("button", { name: "Import OPML" })).toBeNull();
+
+    const createButton = screen.getByRole("button", { name: "Create folder" });
+    expect(createButton.getAttribute("data-slot")).toBe("button");
+    expect(createButton.className).toContain("rounded-full");
+    expect(createButton.className).toContain("bg-primary");
+    expect(createButton.querySelector("svg")).toBeNull();
+
+    fireEvent.click(createButton);
+
+    expect(onCreateFolder).toHaveBeenCalledTimes(1);
+    expect(onExpand).not.toHaveBeenCalled();
+    expect(onImportOpml).not.toHaveBeenCalled();
+  });
+
   test("opens folder feeds from a compact folder row without opening the folder manager", () => {
     const { onExpand, onSelectFolder } = renderFolders();
     const techRow = screen.getByText("Tech").closest("button");

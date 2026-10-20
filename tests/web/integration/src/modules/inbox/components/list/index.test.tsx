@@ -48,12 +48,29 @@ vi.mock("@kyomi/ui/components/scroll-area", () => ({
       </div>
     ),
   },
-  ScrollBar: ({ orientation, ...props }: { orientation: string; className?: string }) => (
-    <div data-orientation={orientation} data-slot="scroll-area-scrollbar" {...props} />
+  ScrollBar: ({
+    orientation,
+    placement,
+    ...props
+  }: {
+    orientation: string;
+    placement?: string;
+    className?: string;
+  }) => (
+    <div
+      data-orientation={orientation}
+      data-placement={placement}
+      data-slot="scroll-area-scrollbar"
+      {...props}
+    />
   ),
 }));
 
 describe("List scrollbar surface", () => {
+  // Value: protects=the inbox list scrollbar asks for placement="viewport" so it pins to the window edge beside the reader scrollbar;
+  //   fails_when=the placement prop is dropped or reverted to the inline position: fixed style, so the track follows its pane;
+  //   why_new=strengthens this test: the ScrollBar mock swallowed placement, so only class and slot were asserted;
+  //   seam=none; no_claim=real portalling and fixed positioning (ScrollBar is mocked; ScrollBar's own test covers that).
   test("renders the inbox list scrollbar on the browser viewport surface", () => {
     const { container } = render(
       <List
@@ -79,6 +96,8 @@ describe("List scrollbar surface", () => {
 
     expect(scrollbar?.getAttribute("data-slot")).toBe("scroll-area-scrollbar");
     expect(scrollbar?.className).toContain("z-50");
+    expect(scrollbar?.getAttribute("data-orientation")).toBe("vertical");
+    expect(scrollbar?.getAttribute("data-placement")).toBe("viewport");
   });
 
   test("does not render the browser scrollbar while the list pane is hidden", () => {

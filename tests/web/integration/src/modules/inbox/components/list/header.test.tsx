@@ -76,7 +76,11 @@ describe("FilterControl", () => {
     );
   });
 
-  test("shows a focus ring and a coarse-pointer hit area on the filter trigger", () => {
+  // Value: protects=the Choose filter trigger keeps data-slot="button" (SplitSegment restores what MenuTrigger overwrites) so the split group shapes it;
+  //   fails_when=SplitSegment stops re-setting data-slot after MenuTrigger or the trigger loses its focus ring;
+  //   why_new=strengthens this test: the old class checks passed even when the trigger's data-slot was clobbered;
+  //   seam=none; no_claim=real split-group styling or touch hit areas (jsdom has no CSS or pointer type; only the slot hook and focus ring token are asserted).
+  test("keeps the button slot and focus ring on the filter trigger", () => {
     render(
       <FilterControl
         filter="all"
@@ -87,8 +91,24 @@ describe("FilterControl", () => {
     );
 
     const trigger = screen.getByRole("button", { name: "Choose filter" });
+    expect(trigger.getAttribute("data-slot")).toBe("button");
     expect(trigger.className).toContain("focus-visible:ring-2");
-    expect(trigger.className).toContain("pointer-coarse:after:-inset-y-3");
+  });
+
+  test("keeps My Feed and the All button group as tabs", () => {
+    const onFilterChange = vi.fn();
+
+    render(<FilterControl filter="my-feed" pinnedFolders={[]} onFilterChange={onFilterChange} />);
+
+    const myFeed = screen.getByRole("tab", { name: "My Feed" });
+    const all = screen.getByRole("tab", { name: /^All/ });
+    expect(myFeed.getAttribute("aria-selected")).toBe("true");
+    expect(all.getAttribute("aria-selected")).toBe("false");
+    expect(all.querySelector('[data-slot="button"]')).toBeTruthy();
+
+    fireEvent.click(all);
+
+    expect(onFilterChange).toHaveBeenCalledWith("all");
   });
 
   test("labels an active pinned folder", () => {

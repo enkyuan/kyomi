@@ -251,7 +251,7 @@ export function VirtualizedRows({
           <div
             key={virtualRow.key}
             ref={virtualizer.measureElement}
-            className="group/inbox-row absolute left-0 top-0 w-full"
+            className="group/inbox-row absolute left-0 top-0 w-full [@media(hover:hover)]:has-[[data-slot=card]:hover]:[&+div_[data-slot=inbox-item-separator]]:opacity-0"
             data-index={virtualRow.index}
             style={{
               transform: `translateY(${virtualRow.start}px)`,
