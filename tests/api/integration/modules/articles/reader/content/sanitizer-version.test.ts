@@ -1,7 +1,9 @@
 import { describe, expect, test } from "bun:test";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/worker/sanitization";
+import { compileArticleHtml } from "@kyomi/worker/document";
 import {
   buildExtractedReaderViewFromDb,
+  buildStoredReaderContent,
   processArticleHtml,
 } from "@modules/articles/reader/content";
 
@@ -117,5 +119,72 @@ describe("buildExtractedReaderViewFromDb sanitizer-version trust", () => {
       extractedContentSanitizerVersion: ARTICLE_HTML_SANITIZER_VERSION,
     });
     expect(reader?.contentHtml).toContain("Already clean.");
+  });
+});
+
+describe("compiler hints on the read path", () => {
+  const HINTED =
+    '<pre data-kyomi-lang="ts"><code>x</code></pre><p><a href="#kyomi-fn-1">1</a></p><p id="kyomi-fn-1">Note</p>';
+
+  function storedFeedInput(contentHtml: string, contentSanitizerVersion: string | null) {
+    return {
+      articleType: "feed" as const,
+      title: "Article",
+      summary: null,
+      contentBaseUrl: "https://example.com/posts/entry",
+      legacyContent: null,
+      contentHtml,
+      contentSanitizerVersion,
+      contentText: null,
+      contentMarkdown: null,
+      contentStatus: "ready" as const,
+      contentSource: "feed_html" as const,
+      extractionErrorCode: null,
+      extractionErrorMessage: null,
+    };
+  }
+
+  test("the full path strips hints unless the caller trusts them", () => {
+    expect(processArticleHtml(HINTED, { sanitizerVersion: null }).html).not.toContain("data-kyomi");
+    expect(
+      processArticleHtml(HINTED, { sanitizerVersion: null, trustCompilerHints: true }).html,
+    ).toContain('data-kyomi-lang="ts"');
+  });
+
+  test("the current-version fast path keeps hints", () => {
+    const html = processArticleHtml(HINTED, {
+      sanitizerVersion: ARTICLE_HTML_SANITIZER_VERSION,
+    }).html;
+
+    expect(html).toContain('data-kyomi-lang="ts"');
+    expect(html).toContain('<a href="#kyomi-fn-1">1</a>');
+  });
+
+  test("stored reader content trusts hints only on rows stored at the current version", () => {
+    const compiled = compileArticleHtml(
+      '<div class="language-ts"><pre><code>x</code></pre></div><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>',
+      { baseUrl: "https://example.com/posts/entry" },
+    ).html;
+
+    const current = buildStoredReaderContent(
+      storedFeedInput(compiled, ARTICLE_HTML_SANITIZER_VERSION),
+    );
+    const legacy = buildStoredReaderContent(storedFeedInput(compiled, null));
+
+    expect(current.contentHtml).toContain('data-kyomi-lang="ts"');
+    expect(current.contentHtml).toContain('data-kyomi-embed="youtube"');
+    expect(legacy.contentHtml).not.toContain("data-kyomi");
+  });
+
+  test("reads never run the compiler", () => {
+    const stored = buildStoredReaderContent(
+      storedFeedInput(
+        '<p>Video</p><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe><img src="data:image/gif;base64,R0" data-src="/a.png" alt="">',
+        ARTICLE_HTML_SANITIZER_VERSION,
+      ),
+    );
+
+    expect(stored.contentHtml).not.toContain("data-kyomi-embed");
+    expect(stored.contentHtml).not.toContain("/a.png");
   });
 });

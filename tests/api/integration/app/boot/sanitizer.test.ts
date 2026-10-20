@@ -1,8 +1,10 @@
 import { describe, expect, test } from "bun:test";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/worker/sanitization";
 import {
+  BACKFILL_SCOPES,
   parseBackfillSanitizerVersionArgs,
   processSanitizerVersionRow,
+  runSanitizerVersionBackfillScope,
 } from "../../../../../apps/api/src/app/boot/sanitizer";
 
 describe("backfill-sanitizer-version arg parsing", () => {
@@ -105,5 +107,68 @@ describe("processSanitizerVersionRow", () => {
     });
     expect(result.skipped).toBe(false);
     expect(result.html).not.toContain("onclick");
+  });
+});
+
+describe("sanitizer backfill base URLs", () => {
+  test("processSanitizerVersionRow resolves relative URLs and drops forged hints", () => {
+    const result = processSanitizerVersionRow({
+      html: '<p data-kyomi-url="https://evil.example/">See <a href="../about">about</a> <img src="img/a.png" alt=""></p>',
+      sanitizerVersion: null,
+      baseUrl: "https://example.com/posts/entry",
+    });
+
+    expect(result).toMatchObject({ skipped: false, failed: false });
+    const html = "html" in result ? result.html : "";
+    expect(html).toContain('href="https://example.com/about"');
+    expect(html).toContain('src="https://example.com/posts/img/a.png"');
+    expect(html).not.toContain("data-kyomi");
+  });
+
+  test("each scope passes the row's article URL to the reprocessing step", async () => {
+    const rows = [
+      {
+        id: "item-1",
+        html: '<p><a href="/next">Next</a></p>',
+        sanitizerVersion: null,
+        baseUrl: "https://example.com/posts/one",
+      },
+    ];
+    const updates: Record<string, unknown>[] = [];
+    let selected: Record<string, unknown> | null = null;
+    const page = (result: unknown[]) => ({
+      from: () => ({
+        where: () => ({ orderBy: () => ({ limit: () => Promise.resolve(result) }) }),
+      }),
+    });
+    let served = false;
+    const database = {
+      select: (fields: Record<string, unknown>) => {
+        selected = fields;
+        const result = served ? [] : rows;
+        served = true;
+        return page(result);
+      },
+      update: () => ({
+        set: (patch: Record<string, unknown>) => {
+          updates.push(patch);
+          return { where: () => Promise.resolve() };
+        },
+      }),
+    };
+
+    for (const scope of BACKFILL_SCOPES) {
+      served = false;
+      updates.length = 0;
+      await runSanitizerVersionBackfillScope(database as never, scope, {
+        apply: true,
+        batchSize: 10,
+        sleepMs: 0,
+      });
+
+      expect(Object.keys(selected ?? {})).toContain("baseUrl");
+      const html = String(updates[0]?.contentHtml ?? updates[0]?.extractedContentHtml);
+      expect(html).toContain('href="https://example.com/next"');
+    }
   });
 });

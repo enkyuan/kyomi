@@ -17,7 +17,13 @@ import {
 
 type HtmlSanitizer = (
   html: string,
-  options: { baseUrl: string | null; title: string; byline: null; excerpt: string | null },
+  options: {
+    baseUrl: string | null;
+    title: string;
+    byline: null;
+    excerpt: string | null;
+    trustCompilerHints: boolean;
+  },
 ) => string;
 
 /**
@@ -30,6 +36,8 @@ const INGEST_SANITIZER: HtmlSanitizer = (html, options) =>
 
 type ReaderArticleInput = {
   articleType: "feed" | "clip";
+  /** Sanitizer version stored with `contentHtml`; only a current version marks it as compiled. */
+  contentSanitizerVersion?: string | null;
   title: string;
   summary: string | null;
   contentBaseUrl: string | null;
@@ -157,11 +165,13 @@ function contentFromLegacy(input: ReaderArticleInput, sanitize: HtmlSanitizer) {
 
   const baseUrl = safeHttpBaseUrl(input.contentBaseUrl);
   if (looksLikeHtml(legacy)) {
+    // Legacy `content` has no stored version of its own (clips keep client input there).
     const html = sanitize(legacy, {
       baseUrl,
       title: input.title,
       byline: null,
       excerpt: input.summary,
+      trustCompilerHints: false,
     });
     if (!html) {
       const text = htmlToText(legacy).trim();
@@ -232,6 +242,7 @@ function buildStoredBody(input: ReaderArticleInput, sanitize: HtmlSanitizer = RE
       title: input.title,
       byline: null,
       excerpt: input.summary,
+      trustCompilerHints: input.contentSanitizerVersion === ARTICLE_HTML_SANITIZER_VERSION,
     });
     if (!html) {
       const rawCandidate = input.contentText?.trim() ?? htmlToText(input.contentHtml).trim();

@@ -12,4 +12,5 @@ export {
   normalizeSanitizedArticleRoot,
   sanitizeArticleHtmlFragment,
   sanitizeSrcset,
+  stripReservedArticleMarkup,
 } from "./article-html";

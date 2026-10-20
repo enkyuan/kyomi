@@ -341,7 +341,7 @@ describe("articles.sanitize.content – policy v2", () => {
        <figure data-kyomi-embed="myspace" data-kyomi-url="javascript:alert(1)"><a href="https://example.org/">Post</a></figure>
        <p data-kyomi-embed="youtube" data-kyomi-url="https://www.youtube.com/watch?v=abc">Misplaced</p>
        <ul><li data-kyomi-checked="true">Done</li><li data-kyomi-checked="maybe">Unknown</li></ul>`,
-      { baseUrl },
+      { baseUrl, trustCompilerHints: true },
     );
 
     expect(sanitized).toContain(
@@ -356,6 +356,17 @@ describe("articles.sanitize.content – policy v2", () => {
     expect(sanitized).toContain('<li data-kyomi-checked="true">Done</li><li>Unknown</li>');
   });
 
+  test("drops every compiler hint from HTML that is not trusted compiler output", () => {
+    const sanitized = sanitizeArticleHtml(
+      `<pre data-kyomi-lang="ts"><code>a</code></pre><figure data-kyomi-embed="youtube" data-kyomi-url="https://www.youtube.com/watch?v=abc"><a href="https://www.youtube.com/watch?v=abc">v</a></figure><kyomi-embed>forged</kyomi-embed>`,
+      { baseUrl },
+    );
+
+    expect(sanitized).not.toContain("data-kyomi");
+    expect(sanitized).not.toContain("kyomi-embed");
+    expect(sanitized).toContain("forged");
+  });
+
   test("keeps MathML layout and drops HTML-carrying MathML elements", () => {
     const sanitized = sanitizeArticleHtml(
       `<math display="block"><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mroot><mi>n</mi><mn>3</mn></mroot>
@@ -367,7 +378,9 @@ describe("articles.sanitize.content – policy v2", () => {
 
     expect(sanitized).toContain('<math display="block"><msubsup>');
     expect(sanitized).toContain("<mroot><mi>n</mi><mn>3</mn></mroot>");
-    expect(sanitized).toContain("<mtable><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mspace></mspace>");
+    expect(sanitized).toContain(
+      "<mtable><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mspace></mspace>",
+    );
     expect(sanitized).not.toMatch(/annotation-xml|maction/);
   });
 

@@ -1,7 +1,7 @@
 import { db, pool } from "@adapters/db/client";
 import { assertApiDatabaseReady } from "@adapters/db/preflight";
 import { articleClips, articleExtractionCache, feedItems } from "@kyomi/db";
-import { and, asc, eq, gt, isNotNull, isNull, ne, or } from "drizzle-orm";
+import { and, asc, eq, gt, isNotNull, isNull, ne, or, sql } from "drizzle-orm";
 import {
   ARTICLE_HTML_SANITIZER_VERSION,
   processArticleHtml,
@@ -133,7 +133,13 @@ function sleep(ms: number): Promise<void> {
 }
 
 type DB = typeof db;
-type StaleRow = { id: string; html: string | null; sanitizerVersion: string | null };
+/** `baseUrl` is the article URL, so relative links and images in stored HTML resolve correctly. */
+type StaleRow = {
+  id: string;
+  html: string | null;
+  sanitizerVersion: string | null;
+  baseUrl: string | null;
+};
 
 /** One scope's read-page + update, isolated per table so each stays type-safe and simple. */
 type ScopeRunner = {
@@ -168,6 +174,7 @@ const SCOPE_RUNNERS: Record<BackfillScope, ScopeRunner> = {
           id: feedItems.id,
           html: feedItems.contentHtml,
           sanitizerVersion: feedItems.contentSanitizerVersion,
+          baseUrl: feedItems.link,
         })
         .from(feedItems)
         .where(
@@ -203,6 +210,7 @@ const SCOPE_RUNNERS: Record<BackfillScope, ScopeRunner> = {
           id: feedItems.id,
           html: feedItems.extractedContentHtml,
           sanitizerVersion: feedItems.extractedContentSanitizerVersion,
+          baseUrl: feedItems.link,
         })
         .from(feedItems)
         .where(
@@ -238,6 +246,7 @@ const SCOPE_RUNNERS: Record<BackfillScope, ScopeRunner> = {
           id: articleClips.id,
           html: articleClips.contentHtml,
           sanitizerVersion: articleClips.contentSanitizerVersion,
+          baseUrl: articleClips.url,
         })
         .from(articleClips)
         .where(
@@ -273,6 +282,7 @@ const SCOPE_RUNNERS: Record<BackfillScope, ScopeRunner> = {
           id: articleClips.id,
           html: articleClips.extractedContentHtml,
           sanitizerVersion: articleClips.extractedContentSanitizerVersion,
+          baseUrl: articleClips.url,
         })
         .from(articleClips)
         .where(
@@ -308,6 +318,7 @@ const SCOPE_RUNNERS: Record<BackfillScope, ScopeRunner> = {
           id: articleExtractionCache.id,
           html: articleExtractionCache.contentHtml,
           sanitizerVersion: articleExtractionCache.sanitizerVersion,
+          baseUrl: sql<string>`coalesce(${articleExtractionCache.finalUrl}, ${articleExtractionCache.sourceUrl})`,
         })
         .from(articleExtractionCache)
         .where(
@@ -373,6 +384,7 @@ export async function runSanitizerVersionBackfillScope(
       const processed = processSanitizerVersionRow({
         html: row.html,
         sanitizerVersion: row.sanitizerVersion,
+        baseUrl: row.baseUrl,
       });
 
       if (processed.skipped) {

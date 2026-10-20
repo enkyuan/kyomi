@@ -29,6 +29,7 @@ export {
   ARTICLE_HTML_TAG_ATTRS,
 } from "./article-policy";
 export { isArticleFragmentHref, sanitizeSrcset } from "./article-attributes";
+export { stripReservedArticleMarkup } from "./reserved";
 export { filterArticleClassAttr, isAllowedArticleClassToken } from "./article-classes";
 
 /** Elements that are meaningful without children, so empty-element cleanup keeps them. */

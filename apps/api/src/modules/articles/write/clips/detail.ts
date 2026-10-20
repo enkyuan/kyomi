@@ -44,6 +44,7 @@ export function clipToDetail(row: ClipReadRow): ArticleDetailDto {
     contentBaseUrl: row.url,
     legacyContent: row.content,
     contentHtml: row.contentHtml,
+    contentSanitizerVersion: row.contentSanitizerVersion,
     contentText: row.contentText,
     contentMarkdown:
       row.contentMarkdown === null ? null : normalizeMarkdownFeedArtifacts(row.contentMarkdown),

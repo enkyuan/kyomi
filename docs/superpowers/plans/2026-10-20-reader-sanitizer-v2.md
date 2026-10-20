@@ -231,8 +231,18 @@ counts drops by tag in the shape of the document model's `droppedElements`.
      bodies, in `detail.ts`, `operations.ts`, and `read/list/views.ts`.
    - Deploy order: migrations 0040 and 0041 must run before this code, since refresh and extraction
      now write the new columns.
-6. **Read path.** Make the stored path policy-only and make the backfill pass `baseUrl`. Extend
-   `sanitizer-version.test.ts` and `app/boot/sanitizer.test.ts`.
+6. **Read path.** Done 2026-10-20.
+   - Reads never run the compiler. They re-apply the policy, and on the full path they now also strip
+     `data-kyomi-*` and `kyomi-*` markup (`stripReservedArticleMarkup`, shared with pass 2) unless
+     the caller passes `trustCompilerHints`. Pre-v2 clips stored raw client HTML in
+     `content_html`, so without this, well-formed forged hints in old rows would have survived.
+   - `buildStoredReaderContent` trusts hints only when the row's `contentSanitizerVersion` is current
+     (feed detail now selects it; clip detail passes it). Legacy `content` is never trusted. The
+     current-version fast path for extracted content keeps hints; stale rows are stripped.
+   - The backfill passes each row's article URL (`link`, clip `url`, cache `final_url` or
+     `source_url`) and, through the full path, strips forged hints before stamping v2.
+   - Follow-up for the next version bump: the backfill should recompile rows that have raw source
+     instead of re-sanitizing their stored HTML.
 7. **Reader.** Update `string-prep`, `url-resolve`, `code-block`, and the CSS. Extend
    `web/render-html.test.tsx`.
 8. **Docs.** Update the reader README and mark passes 2–6, 8, 9 as shipped in the compiler doc.

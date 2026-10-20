@@ -25,6 +25,8 @@ function renderFeedItem(fixture: CorpusFixture, raw: string): string {
     title: fixture.title,
     byline: null,
     excerpt: null,
+    // A compiled row is stored with the current version, which is what the read path trusts.
+    trustCompilerHints: true,
   });
 }
 
