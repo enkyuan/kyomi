@@ -95,43 +95,35 @@ export function Login({ redirect }: { redirect?: string }) {
       onSubmit: otpFormValidator,
     },
     onSubmit: async ({ value }) => {
-      await toastManager.promise(
-        (async () => {
-          const result = await authClient.signIn.emailOtp({
-            email,
-            otp: value.otp,
-            callbackURL: returnTo,
-          });
+      try {
+        const result = await authClient.signIn.emailOtp({
+          email,
+          otp: value.otp,
+          callbackURL: returnTo,
+        });
 
-          if (result.error) {
-            throw new Error(result.error.message?.trim() || "Invalid code");
-          }
+        if (result.error) {
+          throw new Error(result.error.message?.trim() || "Invalid code");
+        }
 
-          await Promise.all([router.invalidate(), prefetchInboxFlow(router, queryClient)]);
-          await router.navigate({ href: returnTo });
-        })(),
-        {
-          error: (error) => {
-            logClientError("auth.verify_otp", error);
-            return {
-              description: getUserSafeErrorMessage(error, "Invalid code"),
-              title: "Verification failed",
-              type: "error",
-            };
-          },
-          loading: {
-            description: "Verifying your sign-in code.",
-            timeout: 0,
-            title: "Verifying…",
-            type: "loading",
-          },
-          success: {
-            description: "Redirecting to your inbox.",
-            title: "Logged in",
-            type: "success",
-          },
-        },
-      );
+        await Promise.all([router.invalidate(), prefetchInboxFlow(router, queryClient)]);
+        toastManager.add({
+          description: "Redirecting to your inbox.",
+          title: "Logged in",
+          type: "success",
+        });
+      } catch (error) {
+        logClientError("auth.verify_otp", error);
+        toastManager.add({
+          description: getUserSafeErrorMessage(error, "Invalid code"),
+          title: "Verification failed",
+          type: "error",
+        });
+        return;
+      }
+
+      // Outside the try: a navigation problem is not a failed verification.
+      await router.navigate({ href: returnTo });
     },
   });
 
@@ -244,7 +236,7 @@ export function Login({ redirect }: { redirect?: string }) {
                 <emailForm.Subscribe selector={(state) => [state.isSubmitting]}>
                   {([isSubmitting]) => (
                     <Button className="w-full" type="submit" loading={Boolean(isSubmitting)}>
-                      {isSubmitting ? "Sending code…" : "Continue"}
+                      Continue
                     </Button>
                   )}
                 </emailForm.Subscribe>
@@ -330,7 +322,7 @@ export function Login({ redirect }: { redirect?: string }) {
                 <otpForm.Subscribe selector={(state) => [state.isSubmitting]}>
                   {([isSubmitting]) => (
                     <Button className="w-full" type="submit" loading={Boolean(isSubmitting)}>
-                      {isSubmitting ? "Verifying…" : "Continue"}
+                      Continue
                     </Button>
                   )}
                 </otpForm.Subscribe>
