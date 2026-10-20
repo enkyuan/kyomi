@@ -40,3 +40,10 @@ src/
 - `core` and `webview` must not import React.
 - `web` expects React as a peer dependency.
 - `sanitization` must stay browser-safe — no JSDOM or Node-only modules.
+- article HTML is compiled once at ingest by `@kyomi/worker/document`. the web renderer re-applies
+  the policy only and reads the compiler's hints instead of re-deriving them: `pre[data-kyomi-lang]`
+  and `[data-kyomi-filename]` label code blocks, `figure[data-kyomi-embed][data-kyomi-url]` marks
+  an embed, `li[data-kyomi-checked]` carries task-list state, and `#kyomi-*` links are in-page.
+- `transformImageUrl` receives every image request (`src`, each `srcset` candidate, `video[poster]`).
+  returning `null` keeps the original URL; a non-http result drops it. media files are not
+  transformed.

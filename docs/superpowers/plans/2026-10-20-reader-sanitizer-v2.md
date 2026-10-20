@@ -261,10 +261,16 @@ counts drops by tag in the shape of the document model's `droppedElements`.
      wrappers with the highlighter colour; it is now `:is(mark, span.highlight)` in both stylesheets.
    - Checked visually in light and dark against compiled corpus output. Tufte sidenotes still run
      inline; margin placement belongs to the Phase 1 renderer.
-8. **Docs.** Update the reader README and mark passes 2–6, 8, 9 as shipped in the compiler doc.
-9. **QA.** Run the focused suites, typecheck, lint, and format for `packages/worker`,
-   `packages/reader`, `packages/db`, and `apps/api`; build `apps/web`; then manually check light and
-   dark themes, narrow and wide layouts, and mobile Expo DOM against the fixtures.
+8. **Docs.** Done 2026-10-20: the compiler doc marks passes 2–6, 8, and 9 as shipped with their
+   Phase 0 deviations; the reader and worker READMEs and the `$packages` reader and worker
+   references describe the ingest-only compiler, the hint contract, and the image transformer.
+9. **QA.** Done 2026-10-20. `bun run fmt:check`, `lint`, `check:boundaries`, `typecheck:app`, and
+   `test` (web 359, API 777) pass, and `scripts/ci/drizzle-drift.ts` is clean. `bun run build`
+   builds web; the mobile export failed only on a stale Metro cache pointing at another session's
+   scratch copy of the repo, and `expo export --clear` builds all platforms and the reader DOM
+   component. `linkedom` is absent from both client bundles. Not verified: the live web app and
+   Expo DOM reader against real feeds, and narrow layouts (styles were checked on a static page in
+   light and dark).
 
 ## Security Review
 

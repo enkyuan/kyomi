@@ -28,7 +28,9 @@ src/
 - Inspect article DOM conservatively and add explicit `data-*` markers for enhancement.
 - Avoid broad structural selectors such as `:has(...)` when they can match whole-article wrappers.
 - Trust explicit fence or `language-*` and `lang-*` hints for code highlighting. Do not aggressively
-  auto-detect unknown snippets.
+  auto-detect unknown snippets. Prefer the compiler's `pre[data-kyomi-lang]` hint when present.
+- Read compiler hints (`data-kyomi-*`, `#kyomi-*` anchors) from article HTML; do not re-derive embed,
+  code, or anchor structure in the renderer.
 - Keep reader preference preview and persistence on one synchronized value path.
 - Keep the vanilla DOM copy control class `reader-code-copy-button`, with ghost styling and
   concentric radii in reader styles rather than a shadcn button.
