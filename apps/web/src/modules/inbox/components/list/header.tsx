@@ -158,13 +158,13 @@ export function FilterControl({
           {/* The tab and the menu trigger are siblings: a control nested in a tab is not reachable
               or announced reliably. The group draws them as one split pill. */}
           <ButtonGroup
-            className="[--split-fill:transparent] [--split-h:2.25rem] data-split-active:[--split-fill:var(--background)] gap-0.75"
+            className="[--split-fill:transparent] [--split-h:2.25rem] data-split-active:[--split-fill:var(--background)] gap-0.75 text-muted-foreground hover:text-foreground/70 data-split-active:text-foreground"
             data-split-active={segmentValue === "my-feed" ? undefined : ""}
             variant="split"
           >
             <TabsTab
               value={segmentValue === "my-feed" ? "all" : segmentValue}
-              className="rounded-s-[calc(var(--split-h)/2)] rounded-e-[6px] px-0"
+              className="rounded-s-[calc(var(--split-h)/2)] rounded-e-[6px] px-0 text-inherit hover:text-inherit data-active:text-inherit"
               nativeButton={false}
             >
               <SplitSegment className="ps-4 pe-1.5" edge="start" render={<span />}>
