@@ -151,21 +151,28 @@ export function FilterControl({
         onValueChange={(v) => onFilterChange(v as InboxFilter)}
       >
         <TabsList
-          className="has-[[data-variant=split][data-active]]:**:data-[slot=tab-indicator]:opacity-0 **:data-[slot=tab-indicator]:transition-[width,translate,opacity]"
+          className="has-[[data-variant=split][data-split-active]]:**:data-[slot=tab-indicator]:opacity-0 **:data-[slot=tab-indicator]:transition-[width,translate,opacity]"
           variant="pill"
         >
           <TabsTab value="my-feed">My Feed</TabsTab>
-          <TabsTab
-            value={segmentValue === "my-feed" ? "all" : segmentValue}
-            className="[--split-fill:transparent] [--split-h:2.25rem] data-active:[--split-fill:var(--background)] gap-0.75 px-0"
-            render={<ButtonGroup variant="split" />}
-            nativeButton={false}
+          {/* The tab and the menu trigger are siblings: a control nested in a tab is not reachable
+              or announced reliably. The group draws them as one split pill. */}
+          <ButtonGroup
+            className="[--split-fill:transparent] [--split-h:2.25rem] data-split-active:[--split-fill:var(--background)] gap-0.75"
+            data-split-active={segmentValue === "my-feed" ? undefined : ""}
+            variant="split"
           >
-            <SplitSegment className="ps-4 pe-1.5" edge="start" render={<span />}>
-              <ButtonLabel className="max-w-32 *:min-w-0 *:truncate sm:max-w-44">
-                {activeAllGroupLabel}
-              </ButtonLabel>
-            </SplitSegment>
+            <TabsTab
+              value={segmentValue === "my-feed" ? "all" : segmentValue}
+              className="rounded-s-[calc(var(--split-h)/2)] rounded-e-[6px] px-0"
+              nativeButton={false}
+            >
+              <SplitSegment className="ps-4 pe-1.5" edge="start" render={<span />}>
+                <ButtonLabel className="max-w-32 *:min-w-0 *:truncate sm:max-w-44">
+                  {activeAllGroupLabel}
+                </ButtonLabel>
+              </SplitSegment>
+            </TabsTab>
             <Menu>
               <MenuTrigger
                 render={
@@ -175,11 +182,6 @@ export function FilterControl({
                     edge="end"
                   />
                 }
-                onPointerDown={(event) => event.stopPropagation()}
-                onClick={(event) => event.stopPropagation()}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") event.stopPropagation();
-                }}
               >
                 <DownFill className="mx-0 size-3" />
               </MenuTrigger>
@@ -196,7 +198,7 @@ export function FilterControl({
                 {menuItems}
               </MenuPopup>
             </Menu>
-          </TabsTab>
+          </ButtonGroup>
         </TabsList>
       </Tabs>
     </div>

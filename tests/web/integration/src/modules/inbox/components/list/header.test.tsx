@@ -101,6 +101,9 @@ describe("FilterControl", () => {
     expect(myFeed.getAttribute("aria-selected")).toBe("true");
     expect(all.getAttribute("aria-selected")).toBe("false");
     expect(all.querySelector('[data-slot="button"]')).toBeTruthy();
+    const chooser = screen.getByRole("button", { name: "Choose filter" });
+    expect(all.contains(chooser)).toBe(false);
+    expect(all.closest('[data-variant="split"]')?.contains(chooser)).toBe(true);
 
     fireEvent.click(all);
 

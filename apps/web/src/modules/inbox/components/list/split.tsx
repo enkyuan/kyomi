@@ -21,7 +21,7 @@ export function SplitSegment({
   return (
     <Button
       className={cn(
-        "h-(--split-h) bg-(--split-fill) text-base text-inherit transition-[color,background-color,box-shadow] hover:bg-(--split-fill) in-data-active:shadow-sm/8 data-pressed:bg-(--split-fill) sm:h-(--split-h) sm:text-base",
+        "h-(--split-h) bg-(--split-fill) text-base text-inherit transition-[color,background-color,box-shadow] hover:bg-(--split-fill) in-data-active:shadow-sm/8 in-data-split-active:shadow-sm/8 data-pressed:bg-(--split-fill) sm:h-(--split-h) sm:text-base",
         edge === "start"
           ? "rounded-s-[calc(var(--split-h)/2)]! rounded-e-[6px]!"
           : "rounded-s-[6px]! rounded-e-[calc(var(--split-h)/2)]!",
