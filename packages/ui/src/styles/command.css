@@ -41,8 +41,11 @@
   min-height: 0;
   flex-direction: column;
   overflow: hidden;
+  --kyomi-command-radius: 1.5rem;
+  --kyomi-command-search-inset: 0.5rem;
+
   border: 1px solid var(--border);
-  border-radius: 1rem;
+  border-radius: var(--kyomi-command-radius);
   background: var(--popover);
   color: var(--popover-foreground);
 }
@@ -51,17 +54,25 @@
   height: min(34rem, calc(100vh - 8rem));
 }
 
+/*
+ * A squircle field inset in the dialog. Its corner radius is concentric to the dialog's
+ * (dialog radius - 1px border - inset) and is passed to `useSquircle` in `command.tsx`, which
+ * clips the field, so the focus state is a fill change: an outside ring would be clipped.
+ */
 .kyomi-command-search {
   display: flex;
-  min-height: 4rem;
+  min-height: 3.5rem;
+  flex-shrink: 0;
   align-items: center;
   gap: 0.75rem;
-  border-bottom: 1px solid var(--border);
+  margin: var(--kyomi-command-search-inset);
+  background: color-mix(in srgb, var(--foreground) 6%, transparent);
   padding-inline: 1rem;
+  transition: background-color 150ms var(--ease-out-quint);
 }
 
-.kyomi-command:not([data-has-search-query="true"]) .kyomi-command-search {
-  border-bottom-color: transparent;
+.kyomi-command-search:focus-within {
+  background: color-mix(in srgb, var(--foreground) 9%, transparent);
 }
 
 .kyomi-command-search-icon {
