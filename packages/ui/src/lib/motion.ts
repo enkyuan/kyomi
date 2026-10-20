@@ -43,3 +43,20 @@ export function springTransition(
 
 /** Mirrors `--ease-out-quint` in `styles/theme.css` for Motion and WAAPI. */
 export const EASE_OUT_QUINT = [0.23, 1, 0.32, 1] as const;
+
+/**
+ * Enter and exit states for a control swapped in or out of a toolbar or header (filter tabs, back
+ * and reader controls, step navigation). One recipe everywhere: a slight scale and blur, never from
+ * zero, so the same swap reads the same in the feed and the article.
+ */
+export const CONTROL_SWAP_HIDDEN = { opacity: 0, scale: 0.96, filter: "blur(4px)" } as const;
+export const CONTROL_SWAP_SHOWN = { opacity: 1, scale: 1, filter: "blur(0px)" } as const;
+
+/** `initial`/`animate`/`exit` for a swapped control; no movement under reduced motion. */
+export function controlSwapMotion(prefersReducedMotion: boolean | null = false) {
+  return {
+    initial: prefersReducedMotion ? (false as const) : CONTROL_SWAP_HIDDEN,
+    animate: CONTROL_SWAP_SHOWN,
+    exit: prefersReducedMotion ? undefined : CONTROL_SWAP_HIDDEN,
+  };
+}

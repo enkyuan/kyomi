@@ -17,6 +17,7 @@ import {
   AnimatePresence,
   LazyMotion,
   domAnimation,
+  controlSwapMotion,
   m,
   useReducedMotion,
   springTransition,
@@ -146,6 +147,7 @@ export function List({
   const listToolsRef = useRef<HTMLDivElement | null>(null);
   const prefersReducedMotion = useReducedMotion();
   const scopeControlTransition = springTransition("standard", prefersReducedMotion);
+  const controlSwap = controlSwapMotion(prefersReducedMotion);
 
   const { containerWidth: listContainerWidth, viewportHeight } = useViewport(listScrollRef, [
     inboxItems.length,
@@ -196,9 +198,7 @@ export function List({
                           <m.div
                             key="scoped-header"
                             className="flex min-w-0 items-center gap-2"
-                            initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.92 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.96 }}
+                            {...controlSwap}
                             transition={scopeControlTransition}
                           >
                             <BackToInboxButton onClick={backAction} />
@@ -214,9 +214,7 @@ export function List({
                           <m.div
                             key="filter-tabs"
                             layout
-                            initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.98 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.98 }}
+                            {...controlSwap}
                             transition={scopeControlTransition}
                           >
                             <FilterControl
@@ -315,7 +313,7 @@ export function List({
             aria-label="Inbox list scrollbar"
             className="z-50"
             orientation="vertical"
-            style={{ position: "fixed", top: 0, bottom: 0, insetInlineEnd: 0 }}
+            placement="viewport"
           />
         ) : null}
       </ScrollAreaPrimitive.Root>

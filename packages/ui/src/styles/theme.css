@@ -139,8 +139,10 @@
   --sidebar-accent-foreground: var(--foreground);
   --sidebar-border: --alpha(var(--color-black) / 6%);
   --sidebar-ring: var(--color-neutral-400);
-  --scrollbar-thumb: var(--color-neutral-300);
-  --scrollbar-thumb-hover: var(--color-neutral-400);
+  --scrollbar-thumb: --alpha(var(--color-black) / 36%);
+  --scrollbar-thumb-hover: --alpha(var(--color-black) / 56%);
+  --scrollbar-track: --alpha(var(--color-black) / 3%);
+  --scrollbar-track-edge: --alpha(var(--color-black) / 8%);
   color-scheme: dark;
 }
 
@@ -182,6 +184,8 @@
   --sidebar-accent-foreground: var(--color-neutral-100);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--color-neutral-400);
-  --scrollbar-thumb: var(--color-neutral-600);
-  --scrollbar-thumb-hover: var(--color-neutral-500);
+  --scrollbar-thumb: --alpha(var(--color-white) / 36%);
+  --scrollbar-thumb-hover: --alpha(var(--color-white) / 56%);
+  --scrollbar-track: --alpha(var(--color-white) / 4%);
+  --scrollbar-track-edge: --alpha(var(--color-white) / 8%);
 }

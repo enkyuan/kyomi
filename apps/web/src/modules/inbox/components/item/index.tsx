@@ -2,6 +2,7 @@
 
 import { memo, type KeyboardEvent } from "react";
 import { cn } from "@kyomi/ui/lib/utils";
+import { useSquircle } from "@kyomi/ui/lib/squircle";
 import { Categories } from "@modules/articles/components/categories";
 import { Source } from "@modules/articles/components/source";
 import { ItemInlineToolbar } from "./toolbar/inline";
@@ -16,6 +17,8 @@ import type { InboxFilter, InboxItem } from "@modules/articles/lib/api";
 const ITEM_INSET_CLASS = "mx-10.5";
 const ITEM_GUTTER_CLASS = "px-0";
 const ITEM_SEPARATOR_CLASS = "left-0 right-0";
+const ITEM_HOVER_RADIUS_PX = 20;
+const ITEM_HOVER_CORNER_SMOOTHING = 0.6;
 
 export const Item = memo(function Item({
   item,
@@ -64,6 +67,10 @@ export const Item = memo(function Item({
     maxLines: summaryMaxLines,
     containerWidth,
   });
+  const hoverSurface = useSquircle<HTMLSpanElement>(
+    ITEM_HOVER_RADIUS_PX,
+    ITEM_HOVER_CORNER_SMOOTHING,
+  );
   const selectItem = () => {
     onSelect(item);
   };
@@ -84,7 +91,7 @@ export const Item = memo(function Item({
     <Card
       aria-label={item.title || "Untitled article"}
       className={cn(
-        "group/inbox-item relative w-auto cursor-pointer gap-0 overflow-visible rounded-none border-0 bg-transparent text-left shadow-none outline-none before:hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background",
+        "group/inbox-item relative isolate w-auto cursor-pointer gap-0 overflow-visible rounded-none border-0 bg-transparent text-left shadow-none outline-none before:hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background",
         ITEM_INSET_CLASS,
       )}
       onClick={selectItem}
@@ -94,13 +101,20 @@ export const Item = memo(function Item({
       role="button"
       tabIndex={0}
     >
+      <span
+        ref={hoverSurface.ref}
+        aria-hidden="true"
+        className="pointer-events-none absolute -inset-x-5 inset-y-0 -z-10 bg-accent opacity-0 transition-opacity duration-150 ease-out-quint group-hover/inbox-item:opacity-100"
+        style={hoverSurface.style}
+      />
       {!isFirst ? (
         <span
           aria-hidden="true"
           className={cn(
-            "pointer-events-none absolute top-0 h-px bg-border/70",
+            "pointer-events-none absolute top-0 h-px bg-border/70 transition-opacity duration-150 ease-out-quint group-hover/inbox-item:opacity-0",
             ITEM_SEPARATOR_CLASS,
           )}
+          data-slot="inbox-item-separator"
         />
       ) : null}
       {showBottomSeparator ? (

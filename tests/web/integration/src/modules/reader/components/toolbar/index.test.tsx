@@ -19,7 +19,6 @@ function toolbarProps(overrides: Partial<ToolbarProps> = {}): ToolbarProps {
     onCycleContentWidth: vi.fn(),
     onDecreaseFontSize: vi.fn(),
     onIncreaseFontSize: vi.fn(),
-    onOpenAi: vi.fn(),
     onOpenOriginal: vi.fn(),
     onShareArticle: vi.fn(),
     onToggleMode: vi.fn(),
@@ -64,5 +63,13 @@ describe("reader toolbar", () => {
 
     const button = screen.getByRole("button", { name: "Read later" });
     expect(button.className).toContain("[&_svg]:size-5!");
+  });
+
+  test("drops the distill action and keeps share ahead of the separator in focus mode", () => {
+    render(<Toolbar {...toolbarProps({ readerFocusMode: true })} />);
+
+    expect(screen.queryByRole("button", { name: "Distill this article" })).toBeNull();
+    expect(screen.getByRole("button", { name: "Share article" })).toBeTruthy();
+    expect(screen.queryByRole("separator")).toBeNull();
   });
 });

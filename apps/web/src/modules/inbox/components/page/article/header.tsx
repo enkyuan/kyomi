@@ -3,6 +3,7 @@
 import {
   AnimatePresence,
   LazyMotion,
+  controlSwapMotion,
   domAnimation,
   m,
   useReducedMotion,
@@ -22,8 +23,6 @@ const READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE = {
   align: "shift",
   fallbackAxisSide: "none",
 } as const;
-
-const NAV_EXPANDED_STATE = { opacity: 1, scale: 1, filter: "blur(0px)" };
 
 export function ArticleHeader({
   item,
@@ -93,9 +92,7 @@ function SelectedArticleHeader({
   const toolbar = useReaderToolbar({ item, readerFocusMode: true, autoExtract: false });
   const prefersReducedMotion = useReducedMotion();
   const scopeControlTransition = springTransition("standard", prefersReducedMotion);
-  const navCollapsedState = prefersReducedMotion
-    ? undefined
-    : { opacity: 0, scale: 0.96, filter: "blur(4px)" };
+  const controlSwap = controlSwapMotion(prefersReducedMotion);
 
   return (
     <div
@@ -130,9 +127,7 @@ function SelectedArticleHeader({
             {!readerControlsCollapsed ? (
               <m.div
                 key="article-navigation"
-                initial={navCollapsedState}
-                animate={NAV_EXPANDED_STATE}
-                exit={navCollapsedState}
+                {...controlSwap}
                 className="flex w-21 shrink-0 origin-right justify-end overflow-hidden"
                 transition={scopeControlTransition}
               >

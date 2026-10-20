@@ -39,7 +39,6 @@ vi.mock("@modules/reader/hooks/use-toolbar", () => ({
       onCycleContentWidth: () => {},
       onDecreaseFontSize: () => {},
       onIncreaseFontSize: () => {},
-      onOpenAi: () => {},
       onOpenOriginal: () => {},
       onShareArticle: () => {},
       onToggleMode: () => {},
