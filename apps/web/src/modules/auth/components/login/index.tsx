@@ -107,12 +107,12 @@ export function Login({ redirect }: { redirect?: string }) {
         }
 
         await Promise.all([router.invalidate(), prefetchInboxFlow(router, queryClient)]);
+        await router.navigate({ href: returnTo });
         toastManager.add({
           description: "Redirecting to your inbox.",
           title: "Logged in",
           type: "success",
         });
-        await router.navigate({ href: returnTo });
       } catch (error) {
         logClientError("auth.verify_otp", error);
         toastManager.add({
