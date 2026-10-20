@@ -134,6 +134,7 @@ function RootNotFoundPage() {
 }
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+  const { queryClient } = Route.useRouteContext();
   const loaderData = Route.useLoaderData() as RootLoaderData | undefined;
   const initialSession =
     loaderData?.authState.status === "authenticated" ? loaderData.authState.session : null;
@@ -195,7 +196,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <PostHogProvider>
           <ToastProvider>
             <AnchoredToastProvider>
-              <TanstackQueryProvider sessionStatus={loaderData?.authState.status}>
+              <TanstackQueryProvider
+                queryClient={queryClient}
+                sessionStatus={loaderData?.authState.status}
+              >
                 <AuthProvider initialSession={initialSession}>
                   <AppRuntimeEffects />
                   {children}
