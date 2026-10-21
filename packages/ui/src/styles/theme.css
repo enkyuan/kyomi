@@ -90,11 +90,9 @@
   --font-heading: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-reader: "DM Sans", var(--font-sans);
   --font-mono:
-    "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  --font-code:
     "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     monospace;
+  --font-code: var(--font-mono);
   --radius: 0.625rem;
   --background: oklch(0.971 0.005 78.298);
   --foreground: color-mix(in oklab, var(--color-neutral-800) 92%, var(--background));
