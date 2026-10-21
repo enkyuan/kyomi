@@ -7,10 +7,37 @@ import type {
   ExtractedContentStatus,
 } from "./types";
 import { normalizeMarkdownFeedArtifacts } from "./markdown";
-import { htmlToText, processArticleHtml, sanitizeArticleHtml } from "./sanitize";
+import {
+  ARTICLE_HTML_SANITIZER_VERSION,
+  htmlToText,
+  processArticleHtml,
+  processIngestedArticleHtml,
+  sanitizeArticleHtml,
+} from "./sanitize";
+
+type HtmlSanitizer = (
+  html: string,
+  options: {
+    baseUrl: string | null;
+    title: string;
+    byline: null;
+    excerpt: string | null;
+    trustCompilerHints: boolean;
+  },
+) => string;
+
+/**
+ * Write paths compile untrusted HTML once; read paths re-apply only the policy, because the
+ * compiler's first pass would strip the `data-kyomi-*` hints it wrote on ingest.
+ */
+const READ_SANITIZER: HtmlSanitizer = sanitizeArticleHtml;
+const INGEST_SANITIZER: HtmlSanitizer = (html, options) =>
+  processIngestedArticleHtml(html, options).html;
 
 type ReaderArticleInput = {
   articleType: "feed" | "clip";
+  /** Sanitizer version stored with `contentHtml`; only a current version marks it as compiled. */
+  contentSanitizerVersion?: string | null;
   title: string;
   summary: string | null;
   contentBaseUrl: string | null;
@@ -130,7 +157,7 @@ function looksLikeSummaryEcho(content: string, summary: string): boolean {
   return content.includes(summary) || summary.includes(content);
 }
 
-function contentFromLegacy(input: ReaderArticleInput) {
+function contentFromLegacy(input: ReaderArticleInput, sanitize: HtmlSanitizer) {
   const legacy = input.legacyContent?.trim();
   if (!legacy) {
     return null;
@@ -138,11 +165,13 @@ function contentFromLegacy(input: ReaderArticleInput) {
 
   const baseUrl = safeHttpBaseUrl(input.contentBaseUrl);
   if (looksLikeHtml(legacy)) {
-    const html = sanitizeArticleHtml(legacy, {
+    // Legacy `content` has no stored version of its own (clips keep client input there).
+    const html = sanitize(legacy, {
       baseUrl,
       title: input.title,
       byline: null,
       excerpt: input.summary,
+      trustCompilerHints: false,
     });
     if (!html) {
       const text = htmlToText(legacy).trim();
@@ -204,15 +233,16 @@ function contentFromLegacy(input: ReaderArticleInput) {
   };
 }
 
-function buildStoredBody(input: ReaderArticleInput) {
+function buildStoredBody(input: ReaderArticleInput, sanitize: HtmlSanitizer = READ_SANITIZER) {
   // Canonical body-kind inference lives on the server. Clients render this result as-is.
   const baseUrl = safeHttpBaseUrl(input.contentBaseUrl);
   if (input.contentHtml?.trim()) {
-    const html = sanitizeArticleHtml(input.contentHtml, {
+    const html = sanitize(input.contentHtml, {
       baseUrl,
       title: input.title,
       byline: null,
       excerpt: input.summary,
+      trustCompilerHints: input.contentSanitizerVersion === ARTICLE_HTML_SANITIZER_VERSION,
     });
     if (!html) {
       const rawCandidate = input.contentText?.trim() ?? htmlToText(input.contentHtml).trim();
@@ -282,13 +312,17 @@ function buildStoredBody(input: ReaderArticleInput) {
     };
   }
 
-  return contentFromLegacy(input);
+  return contentFromLegacy(input, sanitize);
 }
 
-export function buildStoredContentRecord(input: ReaderArticleInput): ArticleStoredContentDto {
-  const body = buildStoredBody(input);
+/** Write-time record for a clip: HTML is compiled, and its sanitizer version is stamped. */
+export function buildStoredContentRecord(
+  input: ReaderArticleInput,
+): ArticleStoredContentDto & { contentSanitizerVersion: string | null } {
+  const body = buildStoredBody(input, INGEST_SANITIZER);
   if (body) {
     return {
+      contentSanitizerVersion: body.contentHtml ? ARTICLE_HTML_SANITIZER_VERSION : null,
       contentHtml: body.contentHtml,
       contentText: body.contentText,
       contentMarkdown: body.contentMarkdown,
@@ -301,6 +335,7 @@ export function buildStoredContentRecord(input: ReaderArticleInput): ArticleStor
 
   if (input.summary?.trim()) {
     return {
+      contentSanitizerVersion: null,
       contentHtml: null,
       contentText: null,
       contentMarkdown: null,
@@ -312,6 +347,7 @@ export function buildStoredContentRecord(input: ReaderArticleInput): ArticleStor
   }
 
   return {
+    contentSanitizerVersion: null,
     contentHtml: null,
     contentText: null,
     contentMarkdown: null,

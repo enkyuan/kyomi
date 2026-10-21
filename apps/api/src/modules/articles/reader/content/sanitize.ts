@@ -1,8 +1,11 @@
 import {
   ARTICLE_HTML_SANITIZER_VERSION,
+  isArticleFragmentHref,
   normalizeSanitizedArticleRoot,
   sanitizeArticleHtmlFragment,
+  stripReservedArticleMarkup,
 } from "@kyomi/worker/sanitization";
+import { compileArticleHtml, type CompileDiagnostics } from "@kyomi/worker/document";
 import { JSDOM } from "jsdom";
 
 export { ARTICLE_HTML_SANITIZER_VERSION };
@@ -45,7 +48,7 @@ function resolveRelativeAssetUrls(root: ParentNode, baseUrl?: string | null): vo
 
   for (const link of root.querySelectorAll("a[href]")) {
     const href = link.getAttribute("href");
-    if (!href) {
+    if (!href || isArticleFragmentHref(href)) {
       continue;
     }
     const normalized = normalizeSafeHttpUrl(href, resolvedBase);
@@ -374,6 +377,11 @@ export type ArticleHtmlProcessingOptions = {
   byline?: string | null;
   excerpt?: string | null;
   sanitizerVersion?: string | null;
+  /**
+   * Keep `data-kyomi-*` hints on the full path. Set only for HTML known to be compiler output
+   * (a row whose stored sanitizer version is current); anything else may carry forged hints.
+   */
+  trustCompilerHints?: boolean;
   instrumentation?: ArticleHtmlProcessingInstrumentation;
 };
 
@@ -403,6 +411,9 @@ export function processArticleHtml(
   if (coreSanitizerRan) {
     options?.instrumentation?.onCoreSanitizerRun?.();
     const preDom = new JSDOM(`<body>${html}</body>`);
+    if (!options?.trustCompilerHints) {
+      stripReservedArticleMarkup(preDom.window.document.body);
+    }
     resolveRelativeAssetUrls(preDom.window.document.body, options?.baseUrl);
     clean = sanitizeArticleHtmlFragment(preDom.window.document.body.innerHTML);
   }
@@ -436,6 +447,23 @@ export function processArticleHtml(
   };
 }
 
+/**
+ * Ingest path for untrusted HTML (extraction output, clip bodies): compile once with the worker
+ * compiler, then run the stored-HTML cleanup and text extraction on the result. Read paths call
+ * `processArticleHtml` / `sanitizeArticleHtml` instead, which only re-apply the policy.
+ */
+export function processIngestedArticleHtml(
+  raw: string,
+  options?: Omit<ArticleHtmlProcessingOptions, "sanitizerVersion">,
+): ProcessedArticleHtml & { diagnostics: CompileDiagnostics } {
+  const compiled = compileArticleHtml(raw, { baseUrl: options?.baseUrl });
+  const processed = processArticleHtml(compiled.html, {
+    ...options,
+    sanitizerVersion: compiled.sanitizerVersion,
+  });
+  return { ...processed, diagnostics: compiled.diagnostics };
+}
+
 export function sanitizeArticleHtml(
   html: string,
   options?: {
@@ -443,6 +471,7 @@ export function sanitizeArticleHtml(
     title?: string | null;
     byline?: string | null;
     excerpt?: string | null;
+    trustCompilerHints?: boolean;
   },
 ): string {
   return processArticleHtml(html, { ...options, sanitizerVersion: null }).html;

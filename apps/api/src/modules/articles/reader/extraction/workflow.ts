@@ -4,7 +4,10 @@ import { publishJob } from "@adapters/queue/publish";
 import { categories, feedItemCategoryAssignments } from "@kyomi/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize";
 import { and, eq, ne } from "drizzle-orm";
-import { processArticleHtml } from "@modules/articles/reader/content";
+import {
+  ARTICLE_HTML_SANITIZER_VERSION,
+  processArticleHtml,
+} from "@modules/articles/reader/content";
 import { getArticleDetailForUser } from "@modules/articles/read/detail";
 import type { ArticleDetailDto } from "@modules/articles/types";
 import {
@@ -30,7 +33,7 @@ import {
   upsertReadyExtractionCache,
 } from "./cache";
 import { persistExtracted, persistPendingExtracted } from "./persistence";
-import { extractArticleContentFromUrl } from "./readability";
+import { compileExtractedHtml, extractArticleContentFromUrl } from "./readability";
 
 type DB = typeof db;
 type ExtractionLogger = {
@@ -82,25 +85,29 @@ async function applyFreshExtractionCache(
   }
 
   if (cached.kind === "ready") {
-    // A cache row written before sanitizer versioning (or with a stale version) is
-    // untrusted; reprocess it once here rather than persisting it as already-current.
-    const processed = processArticleHtml(cached.html, {
-      sanitizerVersion: cached.sanitizerVersion,
-    });
+    // A stale cache row is recompiled from its raw Readability output when it has one, so it
+    // gains the current compiler; older rows without raw source are only re-sanitized.
+    const stale = cached.sanitizerVersion !== ARTICLE_HTML_SANITIZER_VERSION;
+    const processed =
+      stale && cached.rawHtml
+        ? compileExtractedHtml(cached.rawHtml, { baseUrl: cached.finalUrl })
+        : processArticleHtml(cached.html, { sanitizerVersion: cached.sanitizerVersion });
+    const text = stale && cached.rawHtml ? processed.text : cached.text;
     await persistExtracted(
       database,
       article,
       {
         kind: "ready",
         html: processed.html,
-        text: cached.text,
+        text,
         sanitizerVersion: processed.sanitizerVersion,
+        raw: cached.rawHtml,
         title: null,
       },
       options.titleReplacement,
     );
     if (article.articleType === "feed") {
-      await reclassifyExtractedFeedItem(database, article, cached.text, options);
+      await reclassifyExtractedFeedItem(database, article, text, options);
     }
     const updatedArticle = await getArticleDetailForUser(database, userId, article.id);
     return { ok: true, status: "ready", article: updatedArticle };
@@ -419,6 +426,7 @@ export async function runArticleExtractionForUser(
     html,
     text,
     sanitizerVersion: extracted.sanitizerVersion,
+    rawHtml: extracted.rawHtml,
   });
 
   await persistExtracted(
@@ -429,6 +437,7 @@ export async function runArticleExtractionForUser(
       html,
       text,
       sanitizerVersion: extracted.sanitizerVersion,
+      raw: extracted.rawHtml,
       title: extracted.content.title,
     },
     options.titleReplacement,

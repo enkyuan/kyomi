@@ -1,0 +1,305 @@
+{
+  "sanitizerVersion": "article-html-v2",
+  "summary": {
+    "passed": 176,
+    "total": 176
+  },
+  "fixtures": {
+    "wordpress-gutenberg": {
+      "passed": 11,
+      "total": 11,
+      "checks": {
+        "bold": true,
+        "italic": true,
+        "strike": true,
+        "srcset": true,
+        "dimensions": true,
+        "caption": true,
+        "pullquote-cite": true,
+        "code-lang": true,
+        "footnote-ref": true,
+        "footnote-target": true,
+        "media-text": true
+      }
+    },
+    "wordpress-embeds": {
+      "passed": 8,
+      "total": 8,
+      "checks": {
+        "youtube": true,
+        "x": true,
+        "vimeo": true,
+        "spotify": true,
+        "no-iframe": true,
+        "no-script": true,
+        "caption": true,
+        "tweet-text": true
+      }
+    },
+    "ghost-cards": {
+      "passed": 11,
+      "total": 11,
+      "checks": {
+        "srcset": true,
+        "dimensions": true,
+        "video": true,
+        "video-preload": true,
+        "no-autoplay": true,
+        "audio": true,
+        "no-button": true,
+        "no-svg": true,
+        "bookmark": true,
+        "callout": true,
+        "toggle": true
+      }
+    },
+    "substack-post": {
+      "passed": 8,
+      "total": 8,
+      "checks": {
+        "picture": true,
+        "footnote-ref": true,
+        "footnote-target": true,
+        "caption": true,
+        "no-input": true,
+        "no-form": true,
+        "no-cta": true,
+        "pullquote": true
+      }
+    },
+    "medium-post": {
+      "passed": 6,
+      "total": 6,
+      "checks": {
+        "image-src-from-srcset": true,
+        "picture": true,
+        "caption": true,
+        "no-placeholder": true,
+        "code": true,
+        "quote": true
+      }
+    },
+    "hugo-chroma": {
+      "passed": 6,
+      "total": 6,
+      "checks": {
+        "kbd": true,
+        "rust": true,
+        "go": true,
+        "highlighted-line": true,
+        "footnote-ref": true,
+        "footnote-target": true
+      }
+    },
+    "jekyll-rouge": {
+      "passed": 9,
+      "total": 9,
+      "checks": {
+        "ruby": true,
+        "python": true,
+        "dl": true,
+        "dd": true,
+        "del": true,
+        "ins": true,
+        "abbr": true,
+        "footnote-ref": true,
+        "footnote-target": true
+      }
+    },
+    "mkdocs-admonitions": {
+      "passed": 6,
+      "total": 6,
+      "checks": {
+        "details": true,
+        "admonition": true,
+        "filename": true,
+        "no-input": true,
+        "second-tab": true,
+        "no-code-line-anchors": true
+      }
+    },
+    "docusaurus-docs": {
+      "passed": 6,
+      "total": 6,
+      "checks": {
+        "code-lang": true,
+        "no-button": true,
+        "no-inline-style": true,
+        "heading-anchor": true,
+        "in-page-link": true,
+        "admonition": true
+      }
+    },
+    "arxiv-latexml": {
+      "passed": 8,
+      "total": 8,
+      "checks": {
+        "msubsup": true,
+        "mtable": true,
+        "mroot": true,
+        "figure-img": true,
+        "citation-link": true,
+        "bib-target": true,
+        "equation-link": true,
+        "cite": true
+      }
+    },
+    "katex-blog": {
+      "passed": 6,
+      "total": 6,
+      "checks": {
+        "katex-mathml": true,
+        "display-tex": true,
+        "inline-tex": true,
+        "currency": true,
+        "snake-case": true,
+        "align-env": true
+      }
+    },
+    "news-embeds": {
+      "passed": 12,
+      "total": 12,
+      "checks": {
+        "youtube": true,
+        "x": true,
+        "instagram": true,
+        "tiktok": true,
+        "bluesky": true,
+        "mastodon": true,
+        "video": true,
+        "audio": true,
+        "no-iframe": true,
+        "no-script": true,
+        "no-autoplay": true,
+        "no-ad-slot": true
+      }
+    },
+    "github-release": {
+      "passed": 8,
+      "total": 8,
+      "checks": {
+        "code-lang": true,
+        "details": true,
+        "kbd": true,
+        "task-checked": true,
+        "task-open": true,
+        "no-input": true,
+        "emoji": true,
+        "no-copy-feedback": true
+      }
+    },
+    "tufte-sidenotes": {
+      "passed": 9,
+      "total": 9,
+      "checks": {
+        "sidenote": true,
+        "marginnote": true,
+        "no-input": true,
+        "blockquote-footer": true,
+        "q": true,
+        "small": true,
+        "time": true,
+        "footnote-ref": true,
+        "footnote-target": true
+      }
+    },
+    "newsletter-chrome": {
+      "passed": 8,
+      "total": 8,
+      "checks": {
+        "aside": true,
+        "aside-text": true,
+        "no-cta": true,
+        "no-subscribe-button": true,
+        "no-svg-title": true,
+        "no-footer": true,
+        "no-nav": true,
+        "no-toc": true
+      }
+    },
+    "data-tables": {
+      "passed": 7,
+      "total": 7,
+      "checks": {
+        "caption": true,
+        "tfoot": true,
+        "colspan": true,
+        "rowspan": true,
+        "row-header": true,
+        "cell-list": true,
+        "cell-image": true
+      }
+    },
+    "rtl-multilingual": {
+      "passed": 6,
+      "total": 6,
+      "checks": {
+        "rtl-ar": true,
+        "rtl-he": true,
+        "ruby": true,
+        "bdi": true,
+        "wbr": true,
+        "lang-fr": true
+      }
+    },
+    "lazy-images": {
+      "passed": 7,
+      "total": 7,
+      "checks": {
+        "data-src": true,
+        "data-srcset": true,
+        "noscript-fallback": true,
+        "data-lazy-src": true,
+        "picture-avif": true,
+        "dimensions": true,
+        "no-placeholder": true
+      }
+    },
+    "code-zoo": {
+      "passed": 11,
+      "total": 11,
+      "checks": {
+        "lang-class": true,
+        "brush": true,
+        "hljs-class": true,
+        "prism-lines": true,
+        "data-language": true,
+        "caption-filename": true,
+        "codepen": true,
+        "gist": true,
+        "codesandbox": true,
+        "no-iframe": true,
+        "no-script": true
+      }
+    },
+    "hostile-markup": {
+      "passed": 23,
+      "total": 23,
+      "checks": {
+        "no-forged-hint": true,
+        "no-forged-embed-attr": true,
+        "no-forged-element": true,
+        "no-forged-lang": true,
+        "no-raw-clobber-id": true,
+        "prefixed-id": true,
+        "no-name": true,
+        "no-handlers": true,
+        "no-js-srcset": true,
+        "no-data-poster": true,
+        "no-autoplay": true,
+        "no-js-href": true,
+        "fragment-link": true,
+        "no-annotation-xml": true,
+        "no-maction": true,
+        "no-script": true,
+        "no-iframe": true,
+        "no-object": true,
+        "no-style-attr": true,
+        "no-form": true,
+        "no-svg-text": true,
+        "no-button-text": true,
+        "tail": true
+      }
+    }
+  }
+}

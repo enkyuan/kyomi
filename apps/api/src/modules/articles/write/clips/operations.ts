@@ -8,12 +8,17 @@ import { and, asc, desc, eq, gt, gte, ilike, lt, or, type SQL } from "drizzle-or
 import { AppError } from "@shared/errors/app";
 import { assertContentFieldBudget } from "@shared/http/budget";
 import type { ArticleSort } from "@modules/articles/params";
-import { buildStoredContentRecord } from "@modules/articles/reader/content";
+import {
+  ARTICLE_HTML_SANITIZER_VERSION,
+  buildStoredContentRecord,
+  processIngestedArticleHtml,
+} from "@modules/articles/reader/content";
 import type {
   ArticleDetailDto,
   ArticleListItemDto,
   ArticlesCursorListResponseDto,
 } from "@modules/articles/types";
+import { clipReadColumns, type ClipReadRow } from "./columns";
 import { clipToDetail } from "./detail";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./constants";
 
@@ -41,7 +46,7 @@ export type ListClipsOptions = {
 
 type ClipCursor = { publishedAt: Date; id: string; isRead?: boolean };
 
-function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemDto {
+function clipToListItem(row: ClipReadRow): ArticleListItemDto {
   return {
     id: row.id,
     title: row.title,
@@ -131,16 +136,29 @@ function assertClipUpdateHasFields(body: ClipUpdateBody): void {
   }
 }
 
-function resolveClipUpdateValues(
-  body: ClipUpdateBody,
-  prev: typeof articleClips.$inferSelect,
-  now: Date,
-) {
+function resolveClipHtml(
+  value: string | null | undefined,
+  prev: ClipReadRow,
+): { contentHtml: string | null; contentRaw: string | null; version: string | null } {
+  const raw = value?.trim() ? value : null;
+  if (!raw) {
+    return { contentHtml: null, contentRaw: null, version: null };
+  }
+  const compiled = processIngestedArticleHtml(raw, { baseUrl: prev.url, title: prev.title });
+  return {
+    contentHtml: compiled.html || null,
+    contentRaw: raw,
+    version: ARTICLE_HTML_SANITIZER_VERSION,
+  };
+}
+
+function resolveClipUpdateValues(body: ClipUpdateBody, prev: ClipReadRow, now: Date) {
   const title =
     Object.hasOwn(body, "title") && typeof body.title === "string"
       ? body.title.trim() || prev.title
       : prev.title;
-  const contentHtml = Object.hasOwn(body, "contentHtml") ? body.contentHtml : prev.contentHtml;
+  // Client-provided HTML is untrusted: compile it once here and keep the original as raw source.
+  const html = Object.hasOwn(body, "contentHtml") ? resolveClipHtml(body.contentHtml, prev) : null;
   const contentText = Object.hasOwn(body, "contentText") ? body.contentText : prev.contentText;
   const contentMarkdown = Object.hasOwn(body, "contentMarkdown")
     ? body.contentMarkdown
@@ -167,7 +185,8 @@ function resolveClipUpdateValues(
     title,
     note: Object.hasOwn(body, "note") ? body.note : prev.note,
     content: Object.hasOwn(body, "content") ? body.content : prev.content,
-    contentHtml,
+    contentHtml: html ? html.contentHtml : prev.contentHtml,
+    ...(html ? { contentRaw: html.contentRaw, contentSanitizerVersion: html.version } : {}),
     contentText,
     contentMarkdown,
     contentStatus,
@@ -225,6 +244,8 @@ export async function createArticleClip(
       title,
       content,
       contentHtml: stored.contentHtml,
+      contentRaw: content,
+      contentSanitizerVersion: stored.contentSanitizerVersion,
       contentText: stored.contentText,
       contentMarkdown: stored.contentMarkdown,
       contentStatus: stored.contentStatus,
@@ -238,7 +259,7 @@ export async function createArticleClip(
       createdAt: now,
       updatedAt: now,
     })
-    .returning();
+    .returning(clipReadColumns);
 
   const r = inserted[0];
   if (!r) {
@@ -305,7 +326,7 @@ export async function updateArticleClipForUser(
   ]);
 
   const existing = await database
-    .select()
+    .select(clipReadColumns)
     .from(articleClips)
     .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)))
     .limit(1);
@@ -324,6 +345,9 @@ export async function updateArticleClipForUser(
       note: next.note,
       content: next.content,
       contentHtml: next.contentHtml,
+      ...(next.contentRaw !== undefined
+        ? { contentRaw: next.contentRaw, contentSanitizerVersion: next.contentSanitizerVersion }
+        : {}),
       contentText: next.contentText,
       contentMarkdown: next.contentMarkdown,
       contentStatus: next.contentStatus,
@@ -403,7 +427,7 @@ async function listClipRows(
   userId: string,
   opts: ListClipsOptions,
   take: number,
-): Promise<(typeof articleClips.$inferSelect)[]> {
+): Promise<ClipReadRow[]> {
   const sort = opts.sort ?? "latest";
   const filters: SQL[] = [eq(articleClips.userId, userId)];
   if (opts.isRead === true) {
@@ -457,7 +481,7 @@ async function listClipRows(
   }
 
   return database
-    .select()
+    .select(clipReadColumns)
     .from(articleClips)
     .where(and(...filters))
     .orderBy(...clipOrderByForSort(sort))

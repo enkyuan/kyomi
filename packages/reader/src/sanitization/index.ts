@@ -1,11 +1,16 @@
 export {
+  ARTICLE_EMBED_PROVIDERS,
   ARTICLE_HTML_ALLOWED_ATTR,
   ARTICLE_HTML_ALLOWED_TAGS,
   ARTICLE_HTML_DROP_CONTENT_TAGS,
   ARTICLE_HTML_FORBID_TAGS,
   ARTICLE_HTML_SANITIZER_VERSION,
+  ARTICLE_HTML_TAG_ATTRS,
   filterArticleClassAttr,
+  isArticleFragmentHref,
   isAllowedArticleClassToken,
   normalizeSanitizedArticleRoot,
   sanitizeArticleHtmlFragment,
+  sanitizeSrcset,
+  stripReservedArticleMarkup,
 } from "@kyomi/worker/sanitization";

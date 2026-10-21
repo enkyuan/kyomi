@@ -1,0 +1,8 @@
+<div><div dir="auto">
+<p>Tail latency is what users remember. The median tells you how the system feels on a good day; the ninety-ninth percentile tells you how it feels on the day someone decides to cancel<a id="kyomi-footnote-anchor-1" href="#kyomi-footnote-1" target="_self">1</a>.</p>
+<div><figure><a target="_blank" href="https://substackcdn.example/image/fetch/f_auto/https%3A%2F%2Fbucket.example%2Flatency.png"><div><picture><source type="image/webp" srcset="https://substackcdn.example/image/fetch/w_424,f_webp/latency.png 424w, https://substackcdn.example/image/fetch/w_848,f_webp/latency.png 848w, https://substackcdn.example/image/fetch/w_1456,f_webp/latency.png 1456w" sizes="100vw"><img decoding="async" src="https://substackcdn.example/image/fetch/w_1456,f_auto/latency.png" width="1456" height="816" alt="Latency chart" srcset="https://substackcdn.example/image/fetch/w_424,f_auto/latency.png 424w, https://substackcdn.example/image/fetch/w_1456,f_auto/latency.png 1456w" sizes="100vw" loading="lazy"></picture></div></a><figcaption>p50 and p99 latency over one week of traffic.</figcaption></figure></div>
+<div class="pullquote"><p>Latency is a feature, and the tail is most of it.</p></div>
+<p>The fix was boring: a <em>bounded</em> queue and a timeout that actually fires.</p>
+
+<div><a id="kyomi-footnote-1" href="#kyomi-footnote-anchor-1" target="_self">1</a><div><p>Measured on a mid-range Android phone over a congested network.</p></div></div>
+</div></div>

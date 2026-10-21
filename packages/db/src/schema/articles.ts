@@ -36,6 +36,11 @@ export const feedItems = pgTable(
     extractionErrorMessage: text("extraction_error_message"),
     /** Sanitizer version that produced `content_html`; null means untrusted/never processed. */
     contentSanitizerVersion: text("content_sanitizer_version"),
+    /**
+     * Feed body as received, before any sanitizer pass, so a newer compiler can rebuild
+     * `content_html`. Untrusted; never serialize to clients. Stored with lz4 compression.
+     */
+    contentRaw: text("content_raw"),
     /** Source-page full text (Readability); separate from feed-provided content fields. */
     extractedContentHtml: text("extracted_content_html"),
     extractedContentText: text("extracted_content_text"),
@@ -44,6 +49,8 @@ export const feedItems = pgTable(
     extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
     /** Sanitizer version that produced `extracted_content_html`; null means untrusted. */
     extractedContentSanitizerVersion: text("extracted_content_sanitizer_version"),
+    /** Readability output before sanitizing, kept for recompiles. Untrusted; never serialize. */
+    extractedContentRaw: text("extracted_content_raw"),
     imageUrl: text("image_url"),
     // Source parity for non-RSS items. Items still belong to a `feeds` row (feed_id stays
     // NOT NULL); these record the concrete platform identity and normalized author/language.
@@ -127,12 +134,16 @@ export const articleClips = pgTable(
     extractionErrorCode: text("extraction_error_code"),
     extractionErrorMessage: text("extraction_error_message"),
     contentSanitizerVersion: text("content_sanitizer_version"),
+    /** Client-provided clip HTML before sanitizing, kept for recompiles. Untrusted; never serialize. */
+    contentRaw: text("content_raw"),
     extractedContentHtml: text("extracted_content_html"),
     extractedContentText: text("extracted_content_text"),
     extractedContentStatus: text("extracted_content_status").notNull().default("pending"),
     extractedContentError: text("extracted_content_error"),
     extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
     extractedContentSanitizerVersion: text("extracted_content_sanitizer_version"),
+    /** Readability output before sanitizing, kept for recompiles. Untrusted; never serialize. */
+    extractedContentRaw: text("extracted_content_raw"),
     note: text("note"),
     isRead: boolean("is_read").notNull().default(false),
     isSaved: boolean("is_saved").notNull().default(true),
@@ -170,6 +181,8 @@ export const articleExtractionCache = pgTable(
     contentHtml: text("content_html"),
     contentText: text("content_text"),
     sanitizerVersion: text("sanitizer_version"),
+    /** Readability output before sanitizing, kept for recompiles. Untrusted; never serialize. */
+    rawHtml: text("raw_html"),
     status: text("status").notNull(),
     errorCode: text("error_code"),
     errorMessage: text("error_message"),

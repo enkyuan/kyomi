@@ -62,6 +62,10 @@ export type ParsedFeedItem = {
   summary: string | null;
   content: string | null;
   contentHtml: string | null;
+  /** Feed body as received, before compiling; stored for recompiles and never served. */
+  contentRaw: string | null;
+  /** Sanitizer version that produced `contentHtml`; null when the body is not HTML. */
+  contentSanitizerVersion: string | null;
   contentText: string | null;
   contentMarkdown: string | null;
   contentStatus: "ready" | "partial" | "failed" | "pending";

@@ -25,6 +25,7 @@ type FeedArticleDetailRawRow = {
   imageUrl: string | null;
   content: string | null;
   contentHtml: string | null;
+  contentSanitizerVersion: string | null;
   contentText: string | null;
   contentMarkdown: string | null;
   contentStatus: ArticleDetailDto["contentStatus"] | string | null;
@@ -62,6 +63,7 @@ function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto 
     contentBaseUrl: row.link,
     legacyContent: decodeNullableText(row.content),
     contentHtml: row.contentHtml,
+    contentSanitizerVersion: row.contentSanitizerVersion,
     contentText: decodeNullableText(row.contentText),
     contentMarkdown:
       row.contentMarkdown === null ? null : normalizeMarkdownFeedArtifacts(row.contentMarkdown),
@@ -144,6 +146,7 @@ async function getFeedArticleDetailForUser(
       imageUrl: feedItems.imageUrl,
       content: feedItems.content,
       contentHtml: feedItems.contentHtml,
+      contentSanitizerVersion: feedItems.contentSanitizerVersion,
       contentText: feedItems.contentText,
       contentMarkdown: feedItems.contentMarkdown,
       contentStatus: feedItems.contentStatus,

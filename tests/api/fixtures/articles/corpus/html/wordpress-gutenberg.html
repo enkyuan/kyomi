@@ -1,0 +1,21 @@
+<div class="entry-content wp-block-post-content is-layout-flow">
+  <p>Offline sync shipped this week. The client now keeps a <b>local journal</b> of every edit, replays it when the network returns, and marks <i>conflicted</i> rows instead of overwriting them. The old <s>last-write-wins</s> policy is gone.</p>
+  <figure class="wp-block-image alignwide size-large">
+    <img fetchpriority="high" decoding="async" width="1024" height="576" src="/wp-content/uploads/2026/10/sync-diagram-1024x576.png" alt="Diagram of the sync journal" class="wp-image-812" srcset="/wp-content/uploads/2026/10/sync-diagram-1024x576.png 1024w, /wp-content/uploads/2026/10/sync-diagram-2048x1152.png 2048w, /wp-content/uploads/2026/10/sync-diagram-300x169.png 300w" sizes="(max-width: 1024px) 100vw, 1024px" />
+    <figcaption class="wp-element-caption">Edits flow from the local journal to the server, then fan out to other devices.</figcaption>
+  </figure>
+  <h2 class="wp-block-heading" id="what-changed">What changed</h2>
+  <figure class="wp-block-gallery has-nested-images columns-2 is-cropped wp-block-gallery-1 is-layout-flex">
+    <figure class="wp-block-image size-large"><img decoding="async" width="800" height="600" src="/wp-content/uploads/2026/10/before.png" alt="Before: a spinner on every save" /></figure>
+    <figure class="wp-block-image size-large"><img decoding="async" width="800" height="600" src="/wp-content/uploads/2026/10/after.png" alt="After: saves appear instantly" /></figure>
+    <figcaption class="blocks-gallery-caption wp-element-caption">Saving before and after the journal.</figcaption>
+  </figure>
+  <div class="wp-block-media-text alignwide is-stacked-on-mobile">
+    <figure class="wp-block-media-text__media"><img decoding="async" width="600" height="600" src="/wp-content/uploads/2026/10/team.jpg" alt="The sync team" /></figure>
+    <div class="wp-block-media-text__content"><p>Three people built this over two quarters, mostly by deleting code.</p></div>
+  </div>
+  <figure class="wp-block-pullquote"><blockquote><p>The fastest request is the one you never wait for.</p><cite>Sync team notes</cite></blockquote></figure>
+  <pre class="wp-block-code" data-lang="Bash"><code>npm run sync -- --dry-run</code></pre>
+  <p>Conflict handling follows the approach in our earlier post<sup data-fn="f1a2" class="fn"><a href="#f1a2" id="f1a2-link">1</a></sup>.</p>
+  <ol class="wp-block-footnotes"><li id="f1a2">See the March post on vector clocks. <a href="#f1a2-link" aria-label="Jump to footnote reference 1">↩︎</a></li></ol>
+</div>

@@ -281,6 +281,20 @@
       "when": 1785697478566,
       "tag": "0039_lame_lilith",
       "breakpoints": true
+    },
+    {
+      "idx": 40,
+      "version": "7",
+      "when": 1792530125749,
+      "tag": "0040_raw_source_columns",
+      "breakpoints": true
+    },
+    {
+      "idx": 41,
+      "version": "7",
+      "when": 1792530134439,
+      "tag": "0041_raw_source_lz4",
+      "breakpoints": true
     }
   ]
 }

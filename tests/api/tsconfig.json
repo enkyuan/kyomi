@@ -16,6 +16,7 @@
       "@kyomi/worker": ["../../packages/worker/src/index.ts"],
       "@kyomi/worker/queue": ["../../packages/worker/src/services/queue/index.ts"],
       "@kyomi/worker/sanitization": ["../../packages/worker/src/sanitization/index.ts"],
+      "@kyomi/worker/document": ["../../packages/worker/src/document/index.ts"],
       "@kyomi/worker/ingestion": ["../../packages/worker/src/services/feed/index.ts"],
       "@kyomi/worker/favicon": ["../../packages/worker/src/services/favicon/index.ts"],
       "@kyomi/worker/favicon/browser": ["../../packages/worker/src/services/favicon/proxy-url.ts"],

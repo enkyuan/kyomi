@@ -6,6 +6,7 @@
     ".": "./src/index.ts",
     "./queue": "./src/services/queue/index.ts",
     "./sanitization": "./src/sanitization/index.ts",
+    "./document": "./src/document/index.ts",
     "./ingestion": "./src/services/feed/index.ts",
     "./favicon": "./src/services/favicon/index.ts",
     "./favicon/browser": "./src/services/favicon/proxy-url.ts",
@@ -25,6 +26,7 @@
     "drizzle-orm": "^0.45.2",
     "fast-xml-parser": "^5.5.10",
     "ioredis": "^5.6.0",
+    "linkedom": "^0.18.12",
     "neosanitize": "^0.3.0",
     "pg": "^8.16.3"
   }

@@ -4,9 +4,11 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, test } from "vitest";
 import {
+  ARTICLE_EMBED_PROVIDERS,
   normalizeSanitizedArticleRoot,
   sanitizeArticleHtmlFragment,
 } from "@kyomi/worker/sanitization";
+import { readerEmbedProviderSchema } from "@kyomi/reader/document";
 import { sanitizeReaderArticleHtml } from "@kyomi/reader/web";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "../../../../../../..");
@@ -28,6 +30,14 @@ const fixtures: Record<string, string> = {
   image: `<img src="https://example.com/x.png" alt="alt text" width="100" height="50"/>`,
   relativeUrl: `<a href="https://example.com/relative/path">link</a><img src="https://example.com/relative/img.png" alt=""/>`,
   emptyWrapper: `<div><p></p><span>  </span></div>`,
+  v2Semantics: `<p lang="en" dir="ltr"><b>b</b> <i>i</i> <s>s</s> <kbd>K</kbd> <q>q</q> <time datetime="2026-10-20">t</time></p><dl><dt>T</dt><dd>D</dd></dl><ruby>漢<rt>かん</rt></ruby>`,
+  v2Tables: `<table><caption>C</caption><tbody><tr><td align="right" colspan="2">1</td><td></td></tr></tbody><tfoot><tr><td>F</td></tr></tfoot></table>`,
+  v2Images: `<picture><source type="image/webp" srcset="https://cdn.example/w_1,f_webp/a.png 1x, javascript:alert(1) 2x"><img src="https://cdn.example/a.png" alt="" width="10" height="5" srcset="https://cdn.example/a@2x.png 2x"></picture>`,
+  v2Media: `<video src="https://media.example/v.mp4" autoplay muted poster="data:text/html,x"></video><audio><source src="https://media.example/a.mp3" type="audio/mpeg"></audio><video src="javascript:alert(1)"></video>`,
+  v2Anchors: `<p><a href="#kyomi-fn-1">1</a> <a href="#raw">raw</a></p><h2 id="location">x</h2><a id="kyomi-fnref-1"></a>`,
+  v2Hints: `<pre data-kyomi-lang="ts" data-kyomi-lines="2"><code>a</code></pre><figure data-kyomi-embed="youtube" data-kyomi-url="https://www.youtube.com/watch?v=abc"><a href="https://www.youtube.com/watch?v=abc">v</a></figure><p data-kyomi-embed="x">p</p><li data-kyomi-checked="maybe">l</li>`,
+  v2Math: `<math display="block"><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mtable><mtr><mtd><mn>1</mn></mtd></mtr></mtable></math><math><annotation-xml encoding="text/html"><b>h</b></annotation-xml><maction><mi>z</mi></maction></math>`,
+  v2Aside: `<aside class="note promo"><p>A</p></aside><blockquote><p>Q</p><footer>Author</footer></blockquote>`,
 };
 
 describe("sanitization policy parity", () => {
@@ -55,6 +65,10 @@ describe("sanitization policy parity", () => {
     expect(() =>
       readFileSync(join(repoRoot, "packages/reader/src/sanitization/article-html.ts"), "utf8"),
     ).toThrow();
+  });
+
+  test("the policy's embed providers match the reader document model", () => {
+    expect([...ARTICLE_EMBED_PROVIDERS]).toEqual(readerEmbedProviderSchema.options);
   });
 
   for (const [name, html] of Object.entries(fixtures)) {

@@ -11,6 +11,7 @@ src/
     feed/           Fetch, parse, enrich, classify, and refresh behavior
     favicon/        SSRF-safe resolution and browser proxy URLs
   sanitization/     Browser-safe article HTML policy
+  document/         Node-only ingest compiler and its passes (linkedom)
   lib/              Article identity, safe URLs, entities, and feed text
 ```
 
@@ -22,6 +23,12 @@ src/
   per-host limits.
 - Keep server-side favicon fetching separate from the browser-safe proxy URL export.
 - Keep `sanitization` browser-safe. Do not import Redis, database, queue, JSDOM, or API modules.
+  `document` may import `sanitization`, never the reverse.
+- Compile untrusted article HTML once, at ingest, with `compileArticleHtml`. Read paths re-apply only
+  the policy; never run compiler passes on stored HTML, because pass 2 strips the compiler's own
+  `data-kyomi-*` hints.
+- Changing the policy or a pass's output bumps `ARTICLE_HTML_SANITIZER_VERSION` and needs a
+  recorded corpus baseline (`tests/api/fixtures/articles/corpus/README.md`).
 - Never import `apps/api` internals from this package.
 - Export only stable contracts through declared `@kyomi/worker` subpaths.
 - Preserve job compatibility deliberately during producer/consumer rollouts. Define retirement

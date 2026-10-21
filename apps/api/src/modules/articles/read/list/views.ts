@@ -5,6 +5,7 @@ import { AppError } from "@shared/errors/app";
 import type { ArticleSort } from "@modules/articles/params";
 import type { ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { listClipsForUser } from "@modules/articles/write/clips/operations";
+import { clipReadColumns, type ClipReadRow } from "@modules/articles/write/clips/columns";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "@modules/articles/write/clips/constants";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
@@ -268,7 +269,7 @@ function recentFeedRowToItem(row: {
   };
 }
 
-function recentClipRowToItem(row: typeof articleClips.$inferSelect): RecentlyViewedItem {
+function recentClipRowToItem(row: ClipReadRow): RecentlyViewedItem {
   return {
     id: row.id,
     title: row.title,
@@ -347,7 +348,7 @@ async function listRecentlyViewedClipItems(
   pushRecentClipCursorFilter(filters, sort, cursor);
 
   const rows = await database
-    .select()
+    .select(clipReadColumns)
     .from(articleClips)
     .where(and(...filters))
     .orderBy(...recentClipOrderBy(sort))

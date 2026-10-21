@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { parseFeedDocument } from "@kyomi/worker";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/worker/sanitization";
 
 function repeatEntity(entity: string, count: number): string {
   return Array.from({ length: count }, () => entity).join("");
@@ -193,7 +194,7 @@ describe("parseFeedDocument", () => {
     expect(item?.contentHtml).toContain("<figure>");
     expect(item?.contentHtml).toContain("<figcaption>Chart caption</figcaption>");
     expect(item?.contentHtml).toContain("<table>");
-    expect(item?.contentHtml).toContain("<pre><code");
+    expect(item?.contentHtml).toContain('<pre data-kyomi-lang="ts"><code');
     expect(item?.contentHtml).toContain("const answer = 42;");
     expect(item?.contentText).toContain("Important source paragraph.");
     expect(item?.contentText).toContain("Metric");
@@ -203,6 +204,61 @@ describe("parseFeedDocument", () => {
     expect(item?.contentHtml).not.toContain("<script");
     expect(item?.contentHtml).not.toContain("<form");
     expect(item?.contentHtml).not.toContain("<iframe");
+  });
+
+  test("compiles item HTML against the item link and keeps the raw body", () => {
+    const body = `<p data-kyomi-url="javascript:alert(1)">See note<sup><a href="#fn1">1</a></sup>.</p>
+      <img src="data:image/gif;base64,R0" data-src="images/chart.png" alt="Chart">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Talk"></iframe>
+      <ol><li id="fn1">The note.</li></ol>`;
+    const parsed = parseFeedDocument(
+      `<?xml version="1.0"?>
+      <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+        <channel>
+          <title>Compiled feed</title>
+          <link>https://example.com/</link>
+          <description>Updates</description>
+          <item>
+            <title>Compiled article</title>
+            <link>https://example.com/posts/compiled/</link>
+            <guid>compiled-1</guid>
+            <content:encoded><![CDATA[${body}]]></content:encoded>
+          </item>
+          <item>
+            <title>Markdown article</title>
+            <link>https://example.com/posts/markdown/</link>
+            <guid>markdown-1</guid>
+            <description>## Heading
+
+- one
+- two
+
+\`\`\`ts
+const x = 1;
+\`\`\`</description>
+          </item>
+        </channel>
+      </rss>`,
+      "feed-1",
+      "https://example.com/feed.xml",
+    );
+
+    const html = parsed.items[0];
+    expect(html?.contentSanitizerVersion).toBe(ARTICLE_HTML_SANITIZER_VERSION);
+    expect(html?.contentRaw).toBe(body);
+    expect(html?.contentHtml).toContain(
+      'src="https://example.com/posts/compiled/images/chart.png"',
+    );
+    expect(html?.contentHtml).toContain('<a href="#kyomi-fn1">1</a>');
+    expect(html?.contentHtml).toContain('id="kyomi-fn1"');
+    expect(html?.contentHtml).toContain('data-kyomi-embed="youtube"');
+    expect(html?.contentHtml).not.toContain("javascript:");
+    expect(html?.contentHtml).not.toContain("<iframe");
+
+    const markdown = parsed.items[1];
+    expect(markdown?.contentSource).toBe("feed_markdown");
+    expect(markdown?.contentSanitizerVersion).toBeNull();
+    expect(markdown?.contentRaw).toContain("## Heading");
   });
 
   test("extracts Atom feed and entry categories", () => {

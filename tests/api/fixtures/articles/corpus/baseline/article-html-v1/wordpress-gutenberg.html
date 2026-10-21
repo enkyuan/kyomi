@@ -1,0 +1,21 @@
+<div class="entry-content wp-block-post-content">
+  <p>Offline sync shipped this week. The client now keeps a local journal of every edit, replays it when the network returns, and marks conflicted rows instead of overwriting them. The old last-write-wins policy is gone.</p>
+  <figure class="wp-block-image alignwide">
+    <img width="1024" height="576" src="https://blog.wp.example/wp-content/uploads/2026/10/sync-diagram-1024x576.png" alt="Diagram of the sync journal" class="wp-image-812" loading="lazy" decoding="async">
+    <figcaption class="wp-element-caption">Edits flow from the local journal to the server, then fan out to other devices.</figcaption>
+  </figure>
+  <h2 class="wp-block-heading">What changed</h2>
+  <figure class="wp-block-gallery has-nested-images wp-block-gallery-1">
+    <figure class="wp-block-image"><img width="800" height="600" src="https://blog.wp.example/wp-content/uploads/2026/10/before.png" alt="Before: a spinner on every save" loading="lazy" decoding="async"></figure>
+    <figure class="wp-block-image"><img width="800" height="600" src="https://blog.wp.example/wp-content/uploads/2026/10/after.png" alt="After: saves appear instantly" loading="lazy" decoding="async"></figure>
+    <figcaption class="wp-element-caption">Saving before and after the journal.</figcaption>
+  </figure>
+  <div class="wp-block-media-text alignwide">
+    <figure class="wp-block-media-text__media"><img width="600" height="600" src="https://blog.wp.example/wp-content/uploads/2026/10/team.jpg" alt="The sync team" loading="lazy" decoding="async"></figure>
+    <div class="wp-block-media-text__content"><p>Three people built this over two quarters, mostly by deleting code.</p></div>
+  </div>
+  <figure class="wp-block-pullquote"><blockquote><p>The fastest request is the one you never wait for.</p>Sync team notes</blockquote></figure>
+  <pre class="wp-block-code"><code>npm run sync -- --dry-run</code></pre>
+  <p>Conflict handling follows the approach in our earlier post<sup><a href="https://blog.wp.example/2026/10/offline-sync/#f1a2">1</a></sup>.</p>
+  <ol class="wp-block-footnotes"><li>See the March post on vector clocks. <a href="https://blog.wp.example/2026/10/offline-sync/#f1a2-link">↩︎</a></li></ol>
+</div>
