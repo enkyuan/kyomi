@@ -1,6 +1,6 @@
 "use client";
 
-import { Refresh2Fill, Rss2Fill } from "@kyomi/ui/icons/mingcute";
+import { RefreshCwIcon, RssIcon } from "@kyomi/ui/icons/blode";
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@kyomi/ui/components/button";
 import { ScrollArea } from "@kyomi/ui/components/scroll-area";
@@ -168,7 +168,7 @@ export function ExpandedFolderFeeds({
         <SectionEmpty
           title="Loading feeds"
           description="Collecting sources in this folder."
-          icon={<Refresh2Fill className="animate-spin" />}
+          icon={<RefreshCwIcon className="animate-spin" />}
         />
       </div>
     );
@@ -181,7 +181,7 @@ export function ExpandedFolderFeeds({
           <SectionEmpty
             title="No feeds here"
             description="Add some sources to get started."
-            icon={<Rss2Fill />}
+            icon={<RssIcon />}
           />
         </div>
         <FolderFeedActions

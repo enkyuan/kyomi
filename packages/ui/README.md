@@ -10,7 +10,7 @@ src/
   components/<name>.tsx    One primitive per file          @kyomi/ui/components/<name>
   components/<name>/       Multi-file primitive (index.tsx) @kyomi/ui/components/sidebar | slider | toast
   hooks/use-*.ts           Presentation hooks              @kyomi/ui/hooks/<name>
-  icons/                   Kyomi artwork + Mingcute        @kyomi/ui/icons, @kyomi/ui/icons/<name>
+  icons/                   Kyomi artwork + Blode           @kyomi/ui/icons, @kyomi/ui/icons/<name>
   lib/                     Utilities and engines           @kyomi/ui/lib/utils | motion | squircle | scrubber
   native/                  Native-safe contracts           @kyomi/ui/native/theme | motion
   styles/                  globals.css + token modules     @kyomi/ui/globals.css, @kyomi/ui/styles/<file>.css

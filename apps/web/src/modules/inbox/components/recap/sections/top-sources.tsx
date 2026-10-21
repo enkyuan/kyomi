@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { AddFill, Fullscreen2Fill, Rss2Fill } from "@kyomi/ui/icons/mingcute";
+import { Maximize2Icon, PlusIcon, RssIcon } from "@kyomi/ui/icons/blode";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/components/button";
 import type { InboxSearch } from "@modules/inbox/lib/search";
@@ -110,7 +110,7 @@ function TopSourceRow({
             variant="soft"
             onClick={() => followFeed(feed)}
           >
-            <AddFill />
+            <PlusIcon />
           </Button>
         ) : null}
       </ItemActions>
@@ -152,7 +152,7 @@ export function TopSources({
               variant="ghost"
               onClick={onExpand}
             >
-              <Fullscreen2Fill />
+              <Maximize2Icon />
             </Button>
           </RailTooltip>
         ) : null
@@ -163,7 +163,7 @@ export function TopSources({
         <SectionEmpty
           title="No viewed sources"
           description="Open a few posts to build this list."
-          icon={<Rss2Fill />}
+          icon={<RssIcon />}
         />
       ) : (
         <div className="space-y-2">

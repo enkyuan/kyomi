@@ -1,6 +1,6 @@
 "use client";
 
-import { FolderWarningFill } from "@kyomi/ui/icons/mingcute";
+import { TriangleAlertIcon } from "@kyomi/ui/icons/blode";
 import type { ReactElement, ReactNode } from "react";
 import { Button } from "@kyomi/ui/components/button";
 import {
@@ -141,7 +141,7 @@ export function RecapError({ onRetry }: { onRetry: () => void }) {
     <Empty className="h-full w-full overflow-hidden" size="md">
       <EmptyHeader>
         <EmptyMedia variant="icon">
-          <FolderWarningFill />
+          <TriangleAlertIcon />
         </EmptyMedia>
         <EmptyTitle>Recap unavailable</EmptyTitle>
         <EmptyDescription>

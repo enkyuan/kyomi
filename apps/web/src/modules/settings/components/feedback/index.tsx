@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Message3Fill } from "@kyomi/ui/icons/mingcute";
+import { MessageCircleIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import { Form } from "@kyomi/ui/components/form";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/components/scroll-area";
@@ -10,7 +10,7 @@ import { SettingHeading } from "../appearance/headings";
 
 export const feedbackSection = {
   description: "Tell us what feels off, what is missing, or what you want next.",
-  icon: Message3Fill,
+  icon: MessageCircleIcon,
   name: "Feedback",
 } as const;
 
@@ -23,7 +23,7 @@ export function FeedbackPageNav({ isActive, onSelect }: FeedbackPageNavProps) {
   return (
     <SidebarMenuItem>
       <SidebarMenuButton isActive={isActive} onClick={onSelect}>
-        <Message3Fill />
+        <MessageCircleIcon />
         <span>{feedbackSection.name}</span>
       </SidebarMenuButton>
     </SidebarMenuItem>

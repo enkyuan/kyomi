@@ -20,11 +20,22 @@ const COPY_MOUNTED = "data-reader-copy-mounted";
 const BUTTON_ICON_SIZE = 12;
 const BUTTON_ICON_PADDING = 16;
 
-// SVG paths (Mingcute-style), viewBox 0 0 24 24.
-const COPY_ICON_PATH =
-  "M9 2a2 2 0 0 0-2 2v2h2V4h11v11h-2v2h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM4 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z";
-const CHECK_ICON_PATH =
-  "M21.546 5.111a1.5 1.5 0 0 1 0 2.121L10.303 18.475a1.6 1.6 0 0 1-2.263 0L2.454 12.89a1.5 1.5 0 1 1 2.121-2.121l4.596 4.596L19.424 5.111a1.5 1.5 0 0 1 2.122 0";
+type IconShape = {
+  readonly tag: "path" | "rect";
+  readonly attrs: Readonly<Record<string, string>>;
+};
+
+// Blode Icons (MIT) `CopyIcon` and `CheckIcon` geometry, stroked on a 24px grid.
+const COPY_ICON_SHAPES: readonly IconShape[] = [
+  { tag: "rect", attrs: { x: "9", y: "9", width: "11", height: "11", rx: "2" } },
+  {
+    tag: "path",
+    attrs: {
+      d: "M5 15H4c-1.1046 0-2-.8954-2-2V4c0-1.1046.8954-2 2-2h9c1.1046 0 2 .8954 2 2v1",
+    },
+  },
+];
+const CHECK_ICON_SHAPES: readonly IconShape[] = [{ tag: "path", attrs: { d: "M20 6 9 17l-5-5" } }];
 
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("graphql", graphql);
@@ -160,16 +171,24 @@ function normalizeStandaloneCodeElements(container: HTMLElement): void {
   }
 }
 
-function makeSvgIcon(pathD: string): SVGSVGElement {
+function makeSvgIcon(shapes: readonly IconShape[]): SVGSVGElement {
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("viewBox", "0 0 24 24");
   svg.setAttribute("width", String(BUTTON_ICON_SIZE));
   svg.setAttribute("height", String(BUTTON_ICON_SIZE));
   svg.setAttribute("aria-hidden", "true");
-  svg.setAttribute("fill", "currentColor");
-  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  path.setAttribute("d", pathD);
-  svg.appendChild(path);
+  svg.setAttribute("fill", "none");
+  svg.setAttribute("stroke", "currentColor");
+  svg.setAttribute("stroke-width", "2");
+  svg.setAttribute("stroke-linecap", "round");
+  svg.setAttribute("stroke-linejoin", "round");
+  for (const { tag, attrs } of shapes) {
+    const shape = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (const [name, value] of Object.entries(attrs)) {
+      shape.setAttribute(name, value);
+    }
+    svg.appendChild(shape);
+  }
   return svg;
 }
 
@@ -185,10 +204,10 @@ function mountCopyButton(host: HTMLElement, text: string): void {
   button.style.setProperty("--rcb-icon-size", `${BUTTON_ICON_SIZE}px`);
   button.style.setProperty("--rcb-button-size", `${BUTTON_ICON_SIZE + BUTTON_ICON_PADDING}px`);
 
-  const copyIcon = makeSvgIcon(COPY_ICON_PATH);
+  const copyIcon = makeSvgIcon(COPY_ICON_SHAPES);
   copyIcon.setAttribute("class", "rcb-icon rcb-icon-copy");
 
-  const checkIcon = makeSvgIcon(CHECK_ICON_PATH);
+  const checkIcon = makeSvgIcon(CHECK_ICON_SHAPES);
   checkIcon.setAttribute("class", "rcb-icon rcb-icon-check");
 
   button.appendChild(copyIcon);

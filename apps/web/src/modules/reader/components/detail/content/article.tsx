@@ -1,6 +1,6 @@
 "use client";
 
-import { LeftFill } from "@kyomi/ui/icons/mingcute";
+import { ChevronLeftIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import type {
   ArticleDetailDto,
@@ -41,7 +41,7 @@ export function ArticleContent({
           onClick={onBackToList}
           aria-label="Back to feed"
         >
-          <LeftFill className="size-4" />
+          <ChevronLeftIcon className="size-4" />
           <span className="hidden md:inline">Back to feed</span>
         </Button>
       ) : null}

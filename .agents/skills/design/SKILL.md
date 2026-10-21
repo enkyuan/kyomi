@@ -31,7 +31,7 @@ Build a coherent reading experience across web and mobile without erasing platfo
 - Show form validation per field and only when relevant.
 - Keep the app navigation sidebar on the left at every breakpoint. Tablet reader layouts may change
   main-column content, not sidebar placement.
-- Use line Mingcute icons by default and filled icons for active persisted state. Give actions
+- Use line Blode icons by default and `*FilledIcon` variants for active persisted state. Give actions
   tooltips where labels are not visible.
 - Use `@kyomi/ui/motion` and lazy Motion features. Prefer CSS for simple local state changes and
   Motion for coordinated presence, layout, gesture, or scroll behavior.

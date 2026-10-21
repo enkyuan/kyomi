@@ -1,6 +1,6 @@
 "use client";
 
-import { HeadAiFill } from "@kyomi/ui/icons/mingcute";
+import { BrainIcon } from "@kyomi/ui/icons/blode";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 
 export const personalizationSection = {
@@ -16,7 +16,7 @@ export function PersonalizationPageNav({ isActive, onSelect }: PersonalizationPa
   return (
     <SidebarMenuItem>
       <SidebarMenuButton isActive={isActive} onClick={onSelect}>
-        <HeadAiFill />
+        <BrainIcon />
         <span>{personalizationSection.name}</span>
       </SidebarMenuButton>
     </SidebarMenuItem>

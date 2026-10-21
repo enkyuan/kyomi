@@ -9,10 +9,18 @@ Product SVG icons and illustrations.
 3. re-export from `index.ts`.
 4. import as `@kyomi/ui/icons/name` or from `@kyomi/ui/icons`.
 
+## Web icons (Blode)
+
+`@kyomi/ui/icons/blode` re-exports the `blode-icons-react` (MIT) icons Kyomi web uses, plus
+`IconProps`. Add an icon by exporting it there, preferring the `*Icon` name. Blode icons are stroke
+based and Lucide-compatible (`size`, `color`, `strokeWidth`, `absoluteStrokeWidth`). Use the line
+icon by default and the `*FilledIcon` variant for a genuinely persisted state (saved, pinned,
+active mode). Inside `packages/ui`, components import from `blode-icons-react` directly.
+
 ## Native Mingcute data
 
 `@kyomi/ui/icons/mingcute-native` exposes the renderer-neutral path data used by native Kyomi
-surfaces. The paths are copied from `@mingcute/react@1.4.1`, which is distributed under the
+surfaces (the SwiftUI tab bar and settings rows cannot draw strokes, so they stay on fill glyphs). The paths are copied from `@mingcute/react@1.4.1`, which is distributed under the
 Apache-2.0 license. Keep `fillRule` metadata when adding paths so native renderers preserve the
 upstream geometry.
 
@@ -29,4 +37,4 @@ SVG bridge. Do not redraw, recolor, or replace the mark with Mingcute.
 
 - Keep SVG markup, props, and theme handling in the same web module.
 - Use `"use client"` only when an icon reads DOM state or uses effects.
-- Product illustrations belong here. General UI icons come from the app's icon library.
+- Product illustrations belong here. General UI icons come from Blode via `@kyomi/ui/icons/blode`.

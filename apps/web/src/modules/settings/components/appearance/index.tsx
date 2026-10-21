@@ -1,6 +1,6 @@
 "use client";
 
-import { BrushFill } from "@kyomi/ui/icons/mingcute";
+import { BrushIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 import { InboxAppearanceSettings } from "./inbox";
@@ -9,7 +9,7 @@ import { useAppearancePanel } from "@modules/settings/hooks/use-appearance-panel
 
 export const appearanceSection = {
   description: "Adjust theme and inbox presentation.",
-  icon: BrushFill,
+  icon: BrushIcon,
   name: "Appearance",
 } as const;
 
@@ -24,7 +24,7 @@ export function AppearancePageNav({ isActive, onSelect }: AppearancePageNavProps
   return (
     <SidebarMenuItem>
       <SidebarMenuButton isActive={isActive} onClick={onSelect}>
-        <BrushFill />
+        <BrushIcon />
         <span>{appearanceSection.name}</span>
       </SidebarMenuButton>
     </SidebarMenuItem>

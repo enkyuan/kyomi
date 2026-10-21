@@ -1,11 +1,11 @@
 "use client";
 
-import { SwitchFill } from "@kyomi/ui/icons/mingcute";
+import { ToggleIcon } from "@kyomi/ui/icons/blode";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 
 export const advancedSection = {
   description: "Update advanced preferences and account-level controls.",
-  icon: SwitchFill,
+  icon: ToggleIcon,
   name: "Advanced",
 } as const;
 
@@ -18,7 +18,7 @@ export function AdvancedPageNav({ isActive, onSelect }: AdvancedPageNavProps) {
   return (
     <SidebarMenuItem>
       <SidebarMenuButton isActive={isActive} onClick={onSelect}>
-        <SwitchFill />
+        <ToggleIcon />
         <span>{advancedSection.name}</span>
       </SidebarMenuButton>
     </SidebarMenuItem>

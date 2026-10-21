@@ -2,21 +2,21 @@
 
 import type { ToastObject } from "@base-ui/react/toast";
 import {
-  AlertFill,
-  CheckCircleFill,
-  InformationFill,
-  LoadingFill,
-  WarningFill,
-} from "@mingcute/react";
+  CircleAlertIcon,
+  CircleCheckIcon,
+  InfoIcon,
+  LoaderCircleIcon,
+  TriangleAlertIcon,
+} from "blode-icons-react";
 import type React from "react";
 import { cn } from "../../lib/utils";
 
 const TOAST_ICONS = {
-  error: AlertFill,
-  info: InformationFill,
-  loading: LoadingFill,
-  success: CheckCircleFill,
-  warning: WarningFill,
+  error: CircleAlertIcon,
+  info: InfoIcon,
+  loading: LoaderCircleIcon,
+  success: CircleCheckIcon,
+  warning: TriangleAlertIcon,
 } as const;
 
 type ToastProgressData = {
@@ -105,41 +105,26 @@ export function ToastStatusIcon({
     return null;
   }
 
-  const iconColor = toastMingcuteIconColor(toast.type);
-  const iconClass = toastMingcuteIconClassName(toast.type);
-
   return (
     <div
       className="[&>svg]:h-lh [&>svg]:w-4 [&_svg]:pointer-events-none [&_svg]:shrink-0"
       data-slot="toast-icon"
     >
-      <Icon className={cn("h-4 w-4 shrink-0", iconClass)} color={iconColor} />
+      <Icon className={cn("h-4 w-4 shrink-0", toastIconClassName(toast.type))} />
     </div>
   );
 }
 
-/**
- * Mingcute icons set `style={{ color: "currentColor" }}` on the root SVG, which wins over
- * `text-*` utilities and resolves `currentColor` from the toast surface (popover text), so
- * semantic tints never apply. Pass explicit theme colors via the `color` prop instead.
- */
-function toastMingcuteIconColor(type: string | undefined): string {
-  switch (type) {
-    case "error":
-      return "var(--color-destructive)";
-    case "success":
-      return "var(--color-success)";
-    case "info":
-      return "var(--color-info)";
-    case "warning":
-      return "var(--color-warning)";
-    case "loading":
-      return "var(--color-muted-foreground)";
-    default:
-      return "var(--color-muted-foreground)";
-  }
-}
+const TOAST_ICON_CLASS_NAMES = {
+  error: "text-destructive",
+  info: "text-info",
+  loading: "animate-spin text-muted-foreground opacity-90",
+  success: "text-success",
+  warning: "text-warning",
+} as const;
 
-function toastMingcuteIconClassName(type: string | undefined): string {
-  return type === "loading" ? "animate-spin opacity-90" : "";
+function toastIconClassName(type: string | undefined): string {
+  return (
+    TOAST_ICON_CLASS_NAMES[type as keyof typeof TOAST_ICON_CLASS_NAMES] ?? "text-muted-foreground"
+  );
 }

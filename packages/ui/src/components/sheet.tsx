@@ -3,7 +3,7 @@
 import { Dialog as SheetPrimitive } from "@base-ui/react/dialog";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
-import { CloseFill } from "@mingcute/react";
+import { XIcon } from "blode-icons-react";
 import type React from "react";
 import { cn } from "../lib/utils";
 import { Button } from "./button";
@@ -107,7 +107,7 @@ export function SheetPopup({
               render={<Button size="icon" variant="ghost" />}
               {...closeProps}
             >
-              <CloseFill />
+              <XIcon />
             </SheetPrimitive.Close>
           )}
         </SheetPrimitive.Popup>
