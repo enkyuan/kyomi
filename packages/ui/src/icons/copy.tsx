@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { CheckFill, Copy2Line } from "@mingcute/react";
+import { Checkmark1Icon, CopyIcon as CopyGlyphIcon } from "blode-icons-react";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 
 const COPY_ICON_TRANSITION = { type: "spring" as const, duration: 0.3, bounce: 0 };
@@ -23,7 +23,7 @@ export type CopyIconProps = {
 
 export function CopyIcon({ isCopied, className }: CopyIconProps): React.ReactElement {
   const prefersReducedMotion = useReducedMotion();
-  const Icon = isCopied ? CheckFill : Copy2Line;
+  const Icon = isCopied ? Checkmark1Icon : CopyGlyphIcon;
 
   return (
     <LazyMotion features={domAnimation}>

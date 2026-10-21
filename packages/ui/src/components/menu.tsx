@@ -2,7 +2,7 @@
 "use client";
 
 import { Menu as MenuPrimitive } from "@base-ui/react/menu";
-import { RightFill } from "@mingcute/react";
+import { ChevronRightIcon } from "blode-icons-react";
 import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
 import { cn } from "../lib/utils";
@@ -357,7 +357,7 @@ export function MenuSubTrigger({
       {...props}
     >
       {children}
-      <RightFill className="ms-auto -me-0.5 opacity-80" />
+      <ChevronRightIcon className="ms-auto -me-0.5 opacity-80" />
     </MenuPrimitive.SubmenuTrigger>
   );
 }

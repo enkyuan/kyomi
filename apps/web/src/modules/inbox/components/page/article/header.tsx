@@ -9,13 +9,19 @@ import {
   useReducedMotion,
   springTransition,
 } from "@kyomi/ui/lib/motion";
+import { cn } from "@kyomi/ui/lib/utils";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import { BackToInboxButton, SearchBar } from "@modules/inbox/components/list/header";
+import { BarBlur, SCROLL_OFFSET_INHERIT } from "@modules/reader/components/detail/blur";
 import { ReaderFontSizeControls } from "@modules/reader/components/toolbar";
 import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 import type { ToolbarModel } from "@modules/reader/lib/toolbar";
 import { ReaderToolbar } from "./toolbar";
 
+const ARTICLE_HEADER_CLASS = cn(
+  "sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 py-4.5 isolate",
+  SCROLL_OFFSET_INHERIT,
+);
 const READER_HEADER_TOOLTIP_SIDE = "bottom";
 const READER_HEADER_FONT_TOOLTIP_SIDE_OFFSET = 12;
 const READER_HEADER_TOOLTIP_COLLISION_AVOIDANCE = {
@@ -60,10 +66,8 @@ export function ArticleHeader({
 
 function ArticleHeaderShell({ onBackToList }: { onBackToList: () => void }) {
   return (
-    <div
-      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 py-4.5 isolate"
-      data-slot="inbox-article-header"
-    >
+    <div className={ARTICLE_HEADER_CLASS} data-slot="inbox-article-header">
+      <BarBlur />
       <div className="flex min-w-0 items-center gap-2">
         <BackToInboxButton onClick={onBackToList} />
       </div>
@@ -95,10 +99,8 @@ function SelectedArticleHeader({
   const controlSwap = controlSwapMotion(prefersReducedMotion);
 
   return (
-    <div
-      className="sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 bg-transparent px-5.5 py-4.5 isolate"
-      data-slot="inbox-article-header"
-    >
+    <div className={ARTICLE_HEADER_CLASS} data-slot="inbox-article-header">
+      <BarBlur />
       <LazyMotion features={domAnimation}>
         <m.div
           layout

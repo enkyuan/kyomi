@@ -12,18 +12,18 @@ import {
   MenuTrigger,
 } from "@kyomi/ui/components/menu";
 import {
-  ArrowLeftFill,
-  DownFill,
-  BookmarkFill,
-  Folder2Fill,
-  TimeDurationFill,
-  SearchLine,
-  CloseLine,
-  SortDescendingFill,
-  SortAscendingFill,
+  ArrowLeftIcon,
+  AsteriskIcon,
+  BookmarkFilledIcon,
+  ChevronTriangleDownMediumFilledIcon,
+  ClockIcon,
+  FilterAscIcon,
+  FilterDescIcon,
+  FolderIcon,
   type IconProps,
-  AsteriskFill,
-} from "@kyomi/ui/icons/mingcute";
+  SearchIcon,
+  XIcon,
+} from "@kyomi/ui/icons/blode";
 import {
   AnimatePresence,
   LazyMotion,
@@ -51,9 +51,9 @@ const ALL_FILTER_MENU: {
   label: string;
   icon: ComponentType<IconProps>;
 }[] = [
-  { value: "all", label: "All", icon: AsteriskFill },
-  { value: "saved", label: "Saved", icon: BookmarkFill },
-  { value: "recent", label: "Recent", icon: TimeDurationFill },
+  { value: "all", label: "All", icon: AsteriskIcon },
+  { value: "saved", label: "Saved", icon: BookmarkFilledIcon },
+  { value: "recent", label: "Recent", icon: ClockIcon },
 ];
 
 const SORT_MENU: {
@@ -61,8 +61,8 @@ const SORT_MENU: {
   label: string;
   icon: ComponentType<IconProps>;
 }[] = [
-  { value: "latest", label: "Latest", icon: SortDescendingFill },
-  { value: "oldest", label: "Oldest", icon: SortAscendingFill },
+  { value: "latest", label: "Latest", icon: FilterDescIcon },
+  { value: "oldest", label: "Oldest", icon: FilterAscIcon },
 ];
 
 export const DEFAULT_SORT: InboxSort = "latest";
@@ -135,7 +135,7 @@ export function FilterControl({
           }}
         >
           <span className="flex min-w-0 max-w-full items-center gap-2">
-            <Folder2Fill className="size-4 shrink-0" />
+            <FolderIcon className="size-4 shrink-0" />
             <span className="min-w-0 max-w-32 truncate sm:max-w-44">{folder.name}</span>
           </span>
         </MenuItem>
@@ -178,12 +178,12 @@ export function FilterControl({
                 render={
                   <SplitSegment
                     aria-label="Choose filter"
-                    className="w-7.5 justify-end ps-0 pe-3"
+                    className="w-7.5 justify-end ps-0 pe-1.5"
                     edge="end"
                   />
                 }
               >
-                <DownFill className="mx-0 size-3" />
+                <ChevronTriangleDownMediumFilledIcon className="mx-0 size-6" />
               </MenuTrigger>
               <MenuPopup
                 align="center"
@@ -222,7 +222,7 @@ export function BackToInboxButton({
         variant === "pill" && "bg-muted-solid",
       )}
     >
-      <ArrowLeftFill className="size-5" />
+      <ArrowLeftIcon className="size-5" />
     </button>
   );
 }
@@ -259,7 +259,7 @@ export function SearchBar({ variant = "pill" }: { variant?: "pill" | "transparen
           tabIndex={expanded ? -1 : 0}
           className="inline-flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full text-current outline-none transition-colors hover:text-foreground/70 focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none"
         >
-          <SearchLine className="size-5" />
+          <SearchIcon className="size-5" />
         </button>
         <AnimatePresence initial={false}>
           {expanded ? (
@@ -293,7 +293,7 @@ export function SearchBar({ variant = "pill" }: { variant?: "pill" | "transparen
                 className="inline-flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full text-muted-foreground outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring"
               >
                 <span className="inline-flex size-5 items-center justify-center rounded-full transition-colors hover:bg-accent">
-                  <CloseLine className="size-4" />
+                  <XIcon className="size-4" />
                 </span>
               </button>
             </m.div>
@@ -351,8 +351,8 @@ export function SortButton({
         <SplitSegment className="ps-4 pe-1.5" edge="start" render={<span />}>
           {activeLabel}
         </SplitSegment>
-        <SplitSegment className="w-8.5 justify-end ps-0 pe-4" edge="end" render={<span />}>
-          <DownFill className="mx-0 size-3" />
+        <SplitSegment className="w-8.5 justify-end ps-0 pe-2.5" edge="end" render={<span />}>
+          <ChevronTriangleDownMediumFilledIcon className="mx-0 size-6" />
         </SplitSegment>
       </MenuTrigger>
       <MenuPopup

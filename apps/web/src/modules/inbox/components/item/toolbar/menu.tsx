@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLinkLine, EyeCloseLine, More1Line, ReportLine } from "@kyomi/ui/icons/mingcute";
+import { EllipsisIcon, ExternalLinkIcon, EyeOffIcon, FlagIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import { Menu, MenuPopup, MenuTrigger } from "@kyomi/ui/components/menu";
 import { ToolbarButton } from "@kyomi/ui/components/toolbar";
@@ -39,7 +39,7 @@ export function ItemToolbarMenu({
                     />
                   }
                 >
-                  <More1Line className={TOOLBAR_ICON_CLASS} />
+                  <EllipsisIcon className={TOOLBAR_ICON_CLASS} />
                 </ToolbarButton>
               }
             />
@@ -49,13 +49,13 @@ export function ItemToolbarMenu({
       </Tooltip>
       <MenuPopup align="end" sideOffset={8} className="min-w-48 rounded-xl before:rounded-[11px]">
         <ItemToolbarMenuItem label="Open source" onClick={onOpenSource}>
-          <ExternalLinkLine />
+          <ExternalLinkIcon />
         </ItemToolbarMenuItem>
         <ItemToolbarMenuItem label="Not interested" onClick={onHide}>
-          <EyeCloseLine />
+          <EyeOffIcon />
         </ItemToolbarMenuItem>
         <ItemToolbarMenuItem label="Report broken article" onClick={onReportBrokenArticle}>
-          <ReportLine />
+          <FlagIcon />
         </ItemToolbarMenuItem>
       </MenuPopup>
     </Menu>

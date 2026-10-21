@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { BookmarkFill, ExternalLinkLine, Fullscreen2Fill } from "@kyomi/ui/icons/mingcute";
+import { BookmarkFilledIcon, ExternalLinkIcon, Maximize2Icon } from "@kyomi/ui/icons/blode";
 import {
   Item,
   ItemActions,
@@ -38,7 +38,7 @@ export function WorthRevisiting({
         items.length > WORTH_REVISITING_DISPLAY_LIMIT ? (
           <RailTooltip label="View saved items">
             <Button aria-label="View saved items" size="icon-xs" variant="ghost" onClick={onExpand}>
-              <Fullscreen2Fill />
+              <Maximize2Icon />
             </Button>
           </RailTooltip>
         ) : null
@@ -49,7 +49,7 @@ export function WorthRevisiting({
         <SectionEmpty
           title="Nothing to revisit yet"
           description="Older saved posts and clips will surface here after they've been waiting a while."
-          icon={<BookmarkFill />}
+          icon={<BookmarkFilledIcon />}
         />
       ) : (
         <div className="space-y-3">
@@ -94,7 +94,7 @@ export function WorthRevisiting({
                         size="icon-xs"
                         variant="ghost"
                       >
-                        <ExternalLinkLine />
+                        <ExternalLinkIcon />
                       </Button>
                     </RailTooltip>
                     <RailTooltip label="Unsave">
@@ -106,7 +106,7 @@ export function WorthRevisiting({
                         variant="ghost"
                         onClick={() => onUnsave(item.id)}
                       >
-                        <BookmarkFill />
+                        <BookmarkFilledIcon />
                       </Button>
                     </RailTooltip>
                   </ItemActions>

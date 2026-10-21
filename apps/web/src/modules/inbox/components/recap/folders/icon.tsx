@@ -1,7 +1,7 @@
 "use client";
 
 import { createSquircleStyle } from "@kyomi/ui/lib/squircle";
-import { Folder2Fill } from "@kyomi/ui/icons/mingcute";
+import { FolderFilledIcon } from "@kyomi/ui/icons/blode";
 
 // Matches the rendered `size-9` box; a path built for another size distorts the corners.
 const FOLDER_ICON_BADGE_SIZE_PX = 36;
@@ -21,7 +21,7 @@ export function FolderIconBadge() {
       data-squircle="8"
       style={folderIconSquircleStyle}
     >
-      <Folder2Fill className="block size-4 shrink-0" />
+      <FolderFilledIcon className="block size-4 shrink-0" />
     </span>
   );
 }

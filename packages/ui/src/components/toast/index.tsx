@@ -9,6 +9,7 @@ import { cn } from "../../lib/utils";
 import { AnchoredToasts } from "./anchored";
 import { anchoredToastManager } from "./manager";
 import { ToastStatusIcon } from "./status-icon";
+import { ToastDescription, ToastTitle } from "./text";
 
 const TOAST_LAYER_Z_INDEX = 60;
 const TOAST_VIEWPORT_STYLE = {
@@ -108,10 +109,11 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
                   <ToastStatusIcon toast={toast} />
 
                   <div className="flex flex-col gap-0.5">
-                    <Toast.Title className="font-medium" data-slot="toast-title" />
-                    <Toast.Description
+                    <ToastTitle className="font-medium" data-slot="toast-title" toast={toast} />
+                    <ToastDescription
                       className="text-muted-foreground"
                       data-slot="toast-description"
+                      toast={toast}
                     />
                   </div>
                 </div>

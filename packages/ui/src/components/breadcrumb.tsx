@@ -2,7 +2,7 @@
 
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
-import { More1Fill, RightFill } from "@mingcute/react";
+import { ChevronRightIcon, EllipsisIcon } from "blode-icons-react";
 import type * as React from "react";
 import { cn } from "../lib/utils";
 
@@ -83,7 +83,7 @@ export function BreadcrumbSeparator({
       role="presentation"
       {...props}
     >
-      {children ?? <RightFill />}
+      {children ?? <ChevronRightIcon />}
     </li>
   );
 }
@@ -100,7 +100,7 @@ export function BreadcrumbEllipsis({
       role="presentation"
       {...props}
     >
-      <More1Fill className="size-4" />
+      <EllipsisIcon className="size-4" />
       <span className="sr-only">More</span>
     </span>
   );

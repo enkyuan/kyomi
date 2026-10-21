@@ -1,12 +1,12 @@
 "use client";
 
 import {
-  AddFill,
-  Delete2Fill,
-  FileExportFill,
-  ListCheckFill,
-  MoveFill,
-} from "@kyomi/ui/icons/mingcute";
+  ChecklistIcon,
+  FileArrowRightOutIcon,
+  MoveIcon,
+  PlusIcon,
+  Trash2Icon,
+} from "@kyomi/ui/icons/blode";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/components/button";
 import { Menu, MenuItem, MenuPopup, MenuTrigger } from "@kyomi/ui/components/menu";
@@ -78,7 +78,7 @@ export function FolderFeedActions({
                 shape="pill"
                 variant="secondary"
               >
-                <MoveFill className="mx-0 size-4" />
+                <MoveIcon className="mx-0 size-4" />
                 Move
               </Button>
             }
@@ -103,7 +103,7 @@ export function FolderFeedActions({
           variant="secondary"
           onClick={onRemoveSelected}
         >
-          <Delete2Fill className="mx-0 size-4" />
+          <Trash2Icon className="mx-0 size-4" />
           Remove
         </Button>
         <RailTooltip label="Export selected OPML">
@@ -115,7 +115,7 @@ export function FolderFeedActions({
             variant="outline"
             onClick={onExportSelected}
           >
-            <FileExportFill className="mx-0 size-4" />
+            <FileArrowRightOutIcon className="mx-0 size-4" />
           </Button>
         </RailTooltip>
       </div>
@@ -131,7 +131,7 @@ export function FolderFeedActions({
         variant="secondary"
         onClick={onStartSelecting}
       >
-        <ListCheckFill className="mx-0 size-4" />
+        <ChecklistIcon className="mx-0 size-4" />
         Select
       </Button>
       <Button
@@ -141,7 +141,7 @@ export function FolderFeedActions({
         variant="secondary"
         onClick={onExportFeeds}
       >
-        <FileExportFill className="mx-0 size-4" />
+        <FileArrowRightOutIcon className="mx-0 size-4" />
         Export
       </Button>
       <RailTooltip label="Add sources">
@@ -152,7 +152,7 @@ export function FolderFeedActions({
           variant="outline"
           onClick={onAddSources}
         >
-          <AddFill className="mx-0 size-4" />
+          <PlusIcon className="mx-0 size-4" />
         </Button>
       </RailTooltip>
     </div>

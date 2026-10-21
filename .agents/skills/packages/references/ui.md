@@ -12,7 +12,7 @@ src/
   components/<name>.tsx    Flat primitives, imported as `@kyomi/ui/components/<name>`
   components/<name>/       Multi-file primitive: `index.tsx` plus its parts, hooks, and state
   hooks/use-*.ts           Shared presentation hooks (`@kyomi/ui/hooks/*`)
-  icons/                   Kyomi artwork and the Mingcute export (`@kyomi/ui/icons/*`)
+  icons/                   Kyomi artwork and the Blode export (`@kyomi/ui/icons/*`)
   lib/                     Utilities and the Lazy Motion boundary (`@kyomi/ui/lib/motion`)
   native/                  Native-safe theme and motion contracts
   styles/                  `globals.css` entrypoint, `theme.css` tokens, CSS modules
@@ -31,7 +31,7 @@ Read `packages/ui/README.md` for the token set and primitive conventions.
 - Let each app own its Tailwind or Uniwind entrypoint. Mobile opts into native-compatible modules
   rather than importing the whole web stylesheet.
 - Keep frontend presentation dependencies here when apps should not depend on them directly,
-  including Mingcute, motion, squircle, and command primitives.
+  including Blode icons, motion, squircle, and command primitives.
 - Export motion through `@kyomi/ui/lib/motion` and keep app imports lazy.
 - Express shape, size, and motion through the semantic tokens in `styles/theme.css` (radius ramp,
   control heights, `--ease-*`, `--duration-*`, `--highlight`); avoid arbitrary values in primitives.

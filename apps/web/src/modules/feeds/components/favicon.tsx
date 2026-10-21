@@ -1,6 +1,6 @@
 "use client";
 
-import { Rss2Fill } from "@kyomi/ui/icons/mingcute";
+import { RssIcon } from "@kyomi/ui/icons/blode";
 import { Favicon, type FaviconShape } from "@kyomi/ui/components/favicon";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useCallback, useEffect, useState } from "react";
@@ -79,7 +79,7 @@ export function FeedFavicon({
       className={cn("bg-card/85", className)}
       cornerRadius={squircleCornerRadius}
       cornerSmoothing={squircleCornerSmoothing}
-      fallback={<Rss2Fill className="size-full" />}
+      fallback={<RssIcon className="size-full" />}
       imageKey={faviconUrl ?? undefined}
       imageProps={{
         decoding: "async",

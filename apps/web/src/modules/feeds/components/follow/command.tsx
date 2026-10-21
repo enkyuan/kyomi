@@ -1,12 +1,12 @@
 "use client";
 
 import {
-  AddCircleFill,
-  CheckCircleFill,
-  CornerDownLeftFill,
-  RssFill,
-  SearchLine,
-} from "@kyomi/ui/icons/mingcute";
+  CircleCheckFilledIcon,
+  CornerDownLeftIcon,
+  PlusCircleFilledIcon,
+  RssIcon,
+  SearchIcon,
+} from "@kyomi/ui/icons/blode";
 import { useRef } from "react";
 import { useSquircle } from "@kyomi/ui/lib/squircle";
 import {
@@ -118,7 +118,7 @@ function CommandSearch({
 
   return (
     <div ref={squircle.ref} className="kyomi-command-search" style={squircle.style}>
-      <SearchLine className="kyomi-command-search-icon" />
+      <SearchIcon className="kyomi-command-search-icon" />
       <CommandInput
         placeholder="Search feeds or paste a feed URL..."
         value={query}
@@ -133,7 +133,7 @@ function CommandSearch({
           onClick={() => onStartOpmlImport(opmlImportUrl)}
         >
           Import
-          <CornerDownLeftFill aria-hidden className="size-3.5" />
+          <CornerDownLeftIcon aria-hidden className="size-3.5" />
         </button>
       ) : null}
     </div>
@@ -198,7 +198,7 @@ function CommandResults({
 function CommandLoading() {
   return (
     <CommandItem disabled value="searching">
-      <RssFill className="kyomi-command-item-icon" />
+      <RssIcon className="kyomi-command-item-icon" />
       <span>Searching feeds...</span>
     </CommandItem>
   );
@@ -281,7 +281,7 @@ function CommandResultItem({
 
 function FollowActionIcon({ isFollowing }: { isFollowing: boolean }) {
   const prefersReducedMotion = useReducedMotion();
-  const Icon = isFollowing ? CheckCircleFill : AddCircleFill;
+  const Icon = isFollowing ? CircleCheckFilledIcon : PlusCircleFilledIcon;
 
   return (
     <LazyMotion features={domAnimation}>

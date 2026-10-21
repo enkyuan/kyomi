@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckFill, CloseFill, Edit2Fill, User3Fill, WaveHandFill } from "@kyomi/ui/icons/mingcute";
+import { CheckIcon, HandIcon, PencilIcon, UserIcon, XIcon } from "@kyomi/ui/icons/blode";
 import { useAuth } from "@integrations/better-auth/provider";
 import { Badge } from "@kyomi/ui/components/badge";
 import { Button } from "@kyomi/ui/components/button";
@@ -22,7 +22,7 @@ import { SettingHeading } from "../appearance/headings";
 
 export const accountSection = {
   description: "Manage your account details, connected accounts, and security settings.",
-  icon: User3Fill,
+  icon: UserIcon,
   name: "Account",
 } as const;
 
@@ -43,7 +43,7 @@ export function AccountPageNav({ isActive, onSelect }: AccountPageNavProps) {
         onClick={onSelect}
         tooltip={user?.email || accountSection.name}
       >
-        <User3Fill />
+        <UserIcon />
         <span>{accountSection.name}</span>
       </SidebarMenuButton>
     </SidebarMenuItem>
@@ -83,7 +83,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h3 className="text-base font-semibold text-foreground">Account</h3>
           <Button size="sm" variant="destructive-outline" onClick={() => void onLogout()}>
-            <WaveHandFill />
+            <HandIcon />
             Log out
           </Button>
         </div>
@@ -113,7 +113,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
                     size="icon"
                     variant="outline"
                   >
-                    <CheckFill />
+                    <CheckIcon />
                   </Button>
                 </div>
                 <div>
@@ -123,7 +123,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
                     size="icon"
                     variant="destructive-outline"
                   >
-                    <CloseFill />
+                    <XIcon />
                   </Button>
                 </div>
               </Group>
@@ -138,7 +138,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
                   size="icon-xs"
                   variant="ghost"
                 >
-                  <Edit2Fill />
+                  <PencilIcon />
                 </Button>
               </>
             )}

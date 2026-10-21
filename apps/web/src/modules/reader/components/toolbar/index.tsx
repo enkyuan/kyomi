@@ -2,18 +2,18 @@
 
 import type React from "react";
 import {
-  AddFill,
-  BookmarkFill,
-  BookmarkLine,
-  RectangleLine,
-  ExternalLinkLine,
-  ShareForwardLine,
-  SquareLine,
-  MinimizeFill,
-  TextFill,
-  TextLine,
-  Translate2Line,
-} from "@kyomi/ui/icons/mingcute";
+  ArrowShareRightIcon,
+  BookmarkFilledIcon,
+  BookmarkIcon,
+  ExternalLinkIcon,
+  FormRectangleIcon,
+  LanguagesIcon,
+  MinusIcon,
+  PlusIcon,
+  SquareIcon,
+  TextFilledIcon,
+  TextIcon,
+} from "@kyomi/ui/icons/blode";
 import {
   AnimatePresence,
   LazyMotion,
@@ -30,12 +30,12 @@ import {
   ToolbarGroup,
   ToolbarSeparator,
 } from "@kyomi/ui/components/toolbar";
+import { TextMorph } from "@kyomi/ui/components/text-morph";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/components/tooltip";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
 import type { ToolbarProps } from "@modules/reader/lib/toolbar";
 import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
 import { cn } from "@kyomi/ui/lib/utils";
-import { FontSizeTicker } from "./font-ticker";
 
 const CONTENT_WIDTH_LABELS: Record<ReaderContentWidth, string> = {
   narrow: "Narrow",
@@ -101,7 +101,7 @@ export function Toolbar({
             large={useLargeControls}
             activeClassName="text-mizu"
           >
-            {isSaved ? <BookmarkFill /> : <BookmarkLine />}
+            {isSaved ? <BookmarkFilledIcon /> : <BookmarkIcon />}
           </ReaderToolbarButton>
           <AnimatePresence initial={false} mode="popLayout">
             {readerFocusMode && !compactReaderFocusMode ? (
@@ -114,7 +114,7 @@ export function Toolbar({
                   tooltipSideOffset={tooltipSideOffset}
                   large={useLargeControls}
                 >
-                  <Translate2Line />
+                  <LanguagesIcon />
                 </ReaderToolbarButton>
               </m.div>
             ) : null}
@@ -129,7 +129,7 @@ export function Toolbar({
                 tooltipSideOffset={tooltipSideOffset}
                 large={useLargeControls}
               >
-                <ExternalLinkLine />
+                <ExternalLinkIcon />
               </ReaderToolbarButton>
             </m.div>
           ) : null}
@@ -144,7 +144,7 @@ export function Toolbar({
                   tooltipSideOffset={tooltipSideOffset}
                   large={useLargeControls}
                 >
-                  <ShareForwardLine />
+                  <ArrowShareRightIcon />
                 </ReaderToolbarButton>
               </m.div>
             ) : null}
@@ -162,7 +162,7 @@ export function Toolbar({
               tooltipSideOffset={tooltipSideOffset}
               large={useLargeControls}
             >
-              {activeMode === "extracted" ? <TextFill /> : <TextLine />}
+              {activeMode === "extracted" ? <TextFilledIcon /> : <TextIcon />}
             </ReaderToolbarButton>
           ) : null}
           {!readerFocusMode && !isMobile ? (
@@ -174,7 +174,7 @@ export function Toolbar({
               tooltipSideOffset={tooltipSideOffset}
               large={useLargeControls}
             >
-              {contentWidth === "narrow" ? <SquareLine /> : <RectangleLine />}
+              {contentWidth === "narrow" ? <SquareIcon /> : <FormRectangleIcon />}
             </ReaderToolbarButton>
           ) : null}
         </ToolbarGroup>
@@ -208,7 +208,7 @@ export function Toolbar({
                   tooltipSideOffset={tooltipSideOffset}
                   large={useLargeControls}
                 >
-                  <ExternalLinkLine />
+                  <ExternalLinkIcon />
                 </ReaderToolbarButton>
               </ToolbarGroup>
             </m.div>
@@ -286,11 +286,16 @@ function ReaderFontSizeControlGroup({
         tooltipCollisionAvoidance={tooltipCollisionAvoidance}
         tooltipSideOffset={tooltipSideOffset}
       >
-        <MinimizeFill />
+        <MinusIcon />
       </ReaderToolbarButton>
       <Tooltip>
         <TooltipTrigger render={<span className="inline-flex h-full items-center" />}>
-          <FontSizeTicker value={fontSizePx} />
+          <span
+            aria-label={`Font size ${fontSizePx}`}
+            className="flex min-w-7 items-center justify-center px-0.5 text-xs font-medium leading-none text-muted-foreground tabular-nums"
+          >
+            <TextMorph>{String(fontSizePx)}</TextMorph>
+          </span>
         </TooltipTrigger>
         <TooltipPopup
           collisionAvoidance={tooltipCollisionAvoidance}
@@ -308,7 +313,7 @@ function ReaderFontSizeControlGroup({
         tooltipCollisionAvoidance={tooltipCollisionAvoidance}
         tooltipSideOffset={tooltipSideOffset}
       >
-        <AddFill />
+        <PlusIcon />
       </ReaderToolbarButton>
     </ToolbarGroup>
   );

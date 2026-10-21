@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { BookmarkFill, ExternalLinkLine } from "@kyomi/ui/icons/mingcute";
+import { BookmarkFilledIcon, ExternalLinkIcon } from "@kyomi/ui/icons/blode";
 import {
   Item,
   ItemActions,
@@ -32,7 +32,7 @@ export function ExpandedSavedItems({
         <SectionEmpty
           title="Nothing to revisit yet"
           description="Older saved posts and clips will surface here after they've been waiting a while."
-          icon={<BookmarkFill />}
+          icon={<BookmarkFilledIcon />}
         />
       </div>
     );
@@ -77,7 +77,7 @@ export function ExpandedSavedItems({
                     size="icon-xs"
                     variant="ghost"
                   >
-                    <ExternalLinkLine />
+                    <ExternalLinkIcon />
                   </Button>
                 </RailTooltip>
                 <RailTooltip label="Unsave">
@@ -89,7 +89,7 @@ export function ExpandedSavedItems({
                     variant="ghost"
                     onClick={() => onUnsave(item.id)}
                   >
-                    <BookmarkFill />
+                    <BookmarkFilledIcon />
                   </Button>
                 </RailTooltip>
               </ItemActions>
