@@ -15,6 +15,7 @@ import {
   parseAuthCapabilities,
   type AuthCapabilities,
 } from "@lib/auth/capabilities";
+import { STATUS_ERROR_HEADER, toErrorStatus } from "@lib/status";
 import {
   classifyAuthSessionPayload,
   type AuthSessionState,
@@ -24,6 +25,8 @@ import {
 type AuthBootstrapState = {
   authState: AuthSessionState;
   authCapabilities: AuthCapabilities;
+  /** Set when the server entry re-renders a failed request: the status the root route must show. */
+  errorStatus?: number;
 };
 
 async function fetchAuthBootstrapStateFromHeaders(headers: Headers): Promise<AuthBootstrapState> {
@@ -73,10 +76,23 @@ async function fetchAuthBootstrapStateFromHeaders(headers: Headers): Promise<Aut
   }
 }
 
-export const getAuthBootstrapState = createServerFn({ method: "POST" }).handler(async () => {
-  const headers = getRequestHeaders();
-  return fetchAuthBootstrapStateFromHeaders(headers);
-});
+export const getAuthBootstrapState = createServerFn({ method: "POST" }).handler(
+  async (): Promise<AuthBootstrapState> => {
+    const headers = getRequestHeaders();
+    const errorStatus = toErrorStatus(Number(headers.get(STATUS_ERROR_HEADER)));
+
+    // The failure being rendered may be the API itself, so skip its session lookup.
+    if (errorStatus) {
+      return {
+        authState: unavailableAuthSessionState(),
+        authCapabilities: DEFAULT_AUTH_CAPABILITIES,
+        errorStatus,
+      };
+    }
+
+    return fetchAuthBootstrapStateFromHeaders(headers);
+  },
+);
 
 export const updateUserEmail = createServerFn({ method: "POST" })
   .validator((input: { email: string }) => input)

@@ -2,6 +2,7 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, test, vi } from "vitest";
 import { DefaultErrorPage, RouteErrorPage } from "@/app/error";
 import { DefaultNotFoundPage, NotFoundPage } from "@/app/not-found";
+import { HttpStatusError } from "@lib/status";
 import {
   getAuthRecoveryAction,
   getPathRecoveryAction,
@@ -120,6 +121,62 @@ describe("RouteErrorPage", () => {
     );
 
     expect(screen.getByRole("link", { name: "Back to inbox" }).className).toContain("bg-primary");
+  });
+});
+
+describe("RouteErrorPage status copy", () => {
+  function renderStatus(error: unknown) {
+    return render(
+      <RouteErrorPage
+        error={error as Error}
+        reset={vi.fn()}
+        recoveryAction={INBOX_RECOVERY_ACTION}
+      />,
+    );
+  }
+
+  test.each([
+    [401, "Session ended"],
+    [403, "No entry"],
+    [429, "Easy there"],
+    [502, "We lost the plot"],
+    [503, "We lost the plot"],
+    [504, "We lost the plot"],
+  ] as const)("shows fixed copy for a %i", (status, title) => {
+    renderStatus(new HttpStatusError(status, "Internal detail from the server"));
+
+    expect(screen.getByText(title)).toBeTruthy();
+    expect(screen.queryByText(/internal detail/i)).toBeNull();
+    expect(screen.getByRole("link", { name: "Back to inbox" })).toBeTruthy();
+  });
+
+  test.each([
+    ["a status error", new HttpStatusError(404, "That item could not be found.")],
+    ["a thrown response", new Response(null, { status: 404 })],
+    ["a router not-found", { isNotFound: true }],
+  ])("renders the not-found page for %s", (_name, error) => {
+    renderStatus(error);
+
+    expect(screen.getByText("Page not found")).toBeTruthy();
+    expect(screen.queryByText("We lost the plot")).toBeNull();
+    expect(screen.getByRole("link", { name: "Back to inbox" })).toBeTruthy();
+  });
+
+  test("keeps the safe message for statuses without their own copy", () => {
+    renderStatus(new HttpStatusError(409, "That change conflicts with the current state."));
+
+    expect(screen.getByText("We lost the plot")).toBeTruthy();
+    expect(screen.getByText("That change conflicts with the current state.")).toBeTruthy();
+  });
+
+  test("keeps the not-found page in the shell too", () => {
+    mocks.matchIds = ["__root__", "/_app"];
+    mocks.authState = { status: "authenticated" };
+
+    render(<DefaultErrorPage error={new HttpStatusError(404)} reset={vi.fn()} />);
+
+    expect(screen.getByText("Page not found")).toBeTruthy();
+    expect(screen.queryByRole("main")).toBeNull();
   });
 });
 
