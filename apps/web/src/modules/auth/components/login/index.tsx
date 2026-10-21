@@ -120,7 +120,6 @@ export function Login({ redirect }: { redirect?: string }) {
           title: "Verification failed",
           type: "error",
         });
-        throw error;
       }
     },
   });
@@ -280,6 +279,7 @@ export function Login({ redirect }: { redirect?: string }) {
                         <OTPField
                           aria-label="Verification code"
                           length={6}
+                          autoSubmit
                           value={field.state.value}
                           onValueChange={(val) => field.handleChange(val)}
                         >
