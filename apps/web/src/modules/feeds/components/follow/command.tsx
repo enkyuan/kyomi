@@ -1,9 +1,9 @@
 "use client";
 
 import {
-  CircleCheckIcon,
+  CircleCheckFilledIcon,
   CornerDownLeftIcon,
-  PlusCircleIcon,
+  PlusCircleFilledIcon,
   RssIcon,
   SearchIcon,
 } from "@kyomi/ui/icons/blode";
@@ -281,7 +281,7 @@ function CommandResultItem({
 
 function FollowActionIcon({ isFollowing }: { isFollowing: boolean }) {
   const prefersReducedMotion = useReducedMotion();
-  const Icon = isFollowing ? CircleCheckIcon : PlusCircleIcon;
+  const Icon = isFollowing ? CircleCheckFilledIcon : PlusCircleFilledIcon;
 
   return (
     <LazyMotion features={domAnimation}>
