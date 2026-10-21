@@ -8,7 +8,7 @@ import {
   ExternalLinkIcon,
   FormRectangleIcon,
   LanguagesIcon,
-  MinimizeIcon,
+  MinusIcon,
   PlusIcon,
   SquareIcon,
   TextFilledIcon,
@@ -286,7 +286,7 @@ function ReaderFontSizeControlGroup({
         tooltipCollisionAvoidance={tooltipCollisionAvoidance}
         tooltipSideOffset={tooltipSideOffset}
       >
-        <MinimizeIcon />
+        <MinusIcon />
       </ReaderToolbarButton>
       <Tooltip>
         <TooltipTrigger render={<span className="inline-flex h-full items-center" />}>

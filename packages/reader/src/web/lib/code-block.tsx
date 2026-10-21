@@ -25,7 +25,7 @@ type IconShape = {
   readonly attrs: Readonly<Record<string, string>>;
 };
 
-// Blode Icons (MIT) `CopyIcon` and `CheckIcon` geometry, stroked on a 24px grid.
+// Blode Icons (MIT) `CopyIcon` and `Checkmark1Icon` geometry, stroked on a 24px grid.
 const COPY_ICON_SHAPES: readonly IconShape[] = [
   { tag: "rect", attrs: { x: "9", y: "9", width: "11", height: "11", rx: "2" } },
   {
@@ -35,7 +35,9 @@ const COPY_ICON_SHAPES: readonly IconShape[] = [
     },
   },
 ];
-const CHECK_ICON_SHAPES: readonly IconShape[] = [{ tag: "path", attrs: { d: "M20 6 9 17l-5-5" } }];
+const CHECK_ICON_SHAPES: readonly IconShape[] = [
+  { tag: "path", attrs: { d: "M5 12.75 10 19l9-14" } },
+];
 
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("graphql", graphql);

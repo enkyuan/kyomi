@@ -30,7 +30,7 @@ export {
   Maximize2Icon,
   MessageCircleIcon,
   Minimize2Icon,
-  MinimizeIcon,
+  MinusIcon,
   MoveIcon,
   PencilIcon,
   PinFilledIcon,
