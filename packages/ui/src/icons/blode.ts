@@ -23,6 +23,7 @@ export {
   FilterAscIcon,
   FilterDescIcon,
   FlagIcon,
+  FolderFilledIcon,
   FolderIcon,
   FormRectangleIcon,
   HandIcon,
