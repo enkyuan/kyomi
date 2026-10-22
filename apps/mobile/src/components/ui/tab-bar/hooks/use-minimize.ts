@@ -4,7 +4,6 @@ import {
   useCallback,
   useContext,
   useMemo,
-  useRef,
   useState,
   type PropsWithChildren,
 } from "react";
@@ -24,7 +23,58 @@ export const MIN_SCROLL_Y = 24;
 export const COLLAPSE_DISTANCE = 10;
 export const EXPAND_DISTANCE = 6;
 
-type Tracking = { distance: number; direction: number; lastY: number; minimized: boolean };
+/**
+ * Direction bookkeeping for scroll offsets that arrive on the JS thread. The state is closed over
+ * rather than held in a ref or a mutable object, so nothing React Compiler tracks is mutated.
+ */
+function createOffsetTracker() {
+  let distance = 0;
+  let direction = 0;
+  let lastY = 0;
+  let minimized = false;
+
+  return {
+    /** Records the published state, which another thread may have decided. */
+    sync(next: boolean) {
+      minimized = next;
+    },
+    reset() {
+      distance = 0;
+      direction = 0;
+      lastY = 0;
+      minimized = false;
+    },
+    track(y: number, setMinimized: (next: boolean) => void) {
+      const delta = y - lastY;
+      lastY = y;
+
+      if (y <= MIN_SCROLL_Y) {
+        distance = 0;
+        direction = 0;
+        if (minimized) setMinimized(false);
+        return;
+      }
+
+      const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : direction;
+      if (nextDirection === 0) return;
+
+      if (nextDirection !== direction) {
+        direction = nextDirection;
+        distance = 0;
+      }
+
+      distance += Math.abs(delta);
+
+      if (nextDirection === 1 && distance >= COLLAPSE_DISTANCE) {
+        distance = 0;
+        if (!minimized) setMinimized(true);
+      } else if (nextDirection === -1 && distance >= EXPAND_DISTANCE) {
+        distance = 0;
+        if (minimized) setMinimized(false);
+      }
+    },
+  };
+}
 
 // This is intentionally a boolean boundary, not an animated progress value.
 // SwiftUI owns the presentation animation after React receives a transition.
@@ -57,12 +107,15 @@ export function TabBarMinimizeProvider({ children }: PropsWithChildren) {
   const lastScrollY = useSharedValue(0);
   const accumulatedDistance = useSharedValue(0);
   const direction = useSharedValue(0);
-  const tracking = useRef<Tracking>({ distance: 0, direction: 0, lastY: 0, minimized: false });
+  const [tracker] = useState(createOffsetTracker);
 
-  const publishMinimized = useCallback((next: boolean) => {
-    tracking.current.minimized = next;
-    setMinimizedState(next);
-  }, []);
+  const publishMinimized = useCallback(
+    (next: boolean) => {
+      tracker.sync(next);
+      setMinimizedState(next);
+    },
+    [tracker],
+  );
 
   // A transition is published from exactly one thread, straight to React. Echoing the shared
   // value back through an animated reaction would deliver a stale value after a quick reversal
@@ -76,47 +129,18 @@ export function TabBarMinimizeProvider({ children }: PropsWithChildren) {
   );
 
   const trackOffset = useCallback(
-    (y: number) => {
-      const state = tracking.current;
-      const delta = y - state.lastY;
-      state.lastY = y;
-
-      if (y <= MIN_SCROLL_Y) {
-        state.distance = 0;
-        state.direction = 0;
-        if (state.minimized) setMinimized(false);
-        return;
-      }
-
-      const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : state.direction;
-      if (nextDirection === 0) return;
-
-      if (nextDirection !== state.direction) {
-        state.direction = nextDirection;
-        state.distance = 0;
-      }
-
-      state.distance += Math.abs(delta);
-
-      if (nextDirection === 1 && state.distance >= COLLAPSE_DISTANCE) {
-        state.distance = 0;
-        if (!state.minimized) setMinimized(true);
-      } else if (nextDirection === -1 && state.distance >= EXPAND_DISTANCE) {
-        state.distance = 0;
-        if (state.minimized) setMinimized(false);
-      }
-    },
-    [setMinimized],
+    (y: number) => tracker.track(y, setMinimized),
+    [setMinimized, tracker],
   );
 
   const reset = useCallback(() => {
-    tracking.current = { distance: 0, direction: 0, lastY: 0, minimized: false };
+    tracker.reset();
     minimizedSV.set(false);
     lastScrollY.set(0);
     accumulatedDistance.set(0);
     direction.set(0);
     setMinimizedState(false);
-  }, [accumulatedDistance, direction, lastScrollY, minimizedSV]);
+  }, [accumulatedDistance, direction, lastScrollY, minimizedSV, tracker]);
 
   const controls = useMemo<MinimizeControls>(
     () => ({
@@ -180,7 +204,13 @@ export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
         const y = event.contentOffset.y;
         scrollY.set(y);
 
-        if (!accumulatedDistance || !direction || !lastScrollY || !minimizedSV || !publishMinimized) {
+        if (
+          !accumulatedDistance ||
+          !direction ||
+          !lastScrollY ||
+          !minimizedSV ||
+          !publishMinimized
+        ) {
           return;
         }
 
