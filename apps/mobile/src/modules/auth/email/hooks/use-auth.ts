@@ -206,15 +206,14 @@ export function useEmailAuth({
 
   useEffect(() => {
     if (!isPresented) return;
-    if (step === "otp") {
-      focusOTP?.();
-      return;
-    }
+    // The code field is not focused programmatically: iOS only inserts a tapped
+    // one-time-code suggestion into a field the user focused, so entry starts with a tap.
+    if (step === "otp") return;
     if (shouldFocusEmailRef.current) {
       shouldFocusEmailRef.current = false;
       focusEmail?.();
     }
-  }, [focusEmail, focusOTP, isPresented, step]);
+  }, [focusEmail, isPresented, step]);
 
   return {
     errorMessage,
