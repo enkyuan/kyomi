@@ -61,8 +61,9 @@ struct TabBarLayout: Equatable {
   let addX: CGFloat
   /// Minimized: only the two buttons remain, the capsule is hidden.
   let showsMain: Bool
-  /// Searching: the add button yields its space to the search field.
+  /// Searching: the field takes the leading edge and the close button takes the add button's place.
   let showsAdd: Bool
+  let showsSearchButton: Bool
   /// Whole-point widths of the tab segments followed by the switcher segment.
   /// `UISegmentedControl` floors fractional widths, so the icons and the
   /// selection lens share these values.
@@ -77,6 +78,7 @@ struct TabBarLayout: Equatable {
     buttonScale = buttonSize / TabBarMetrics.height
     showsMain = !compact
     showsAdd = !searchActive
+    showsSearchButton = !searchActive
 
     let inset = TabBarMetrics.edgeInset
     let gap = TabBarMetrics.gap
@@ -90,7 +92,7 @@ struct TabBarLayout: Equatable {
     addX = containerWidth - inset - buttonSize
     if searchActive {
       mainWidth = max(0, availableWidth - buttonSize - gap)
-      mainX = inset + buttonSize + gap
+      mainX = inset
     } else {
       mainWidth = tabsWidth
       mainX = (containerWidth - tabsWidth) / 2

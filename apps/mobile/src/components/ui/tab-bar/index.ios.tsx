@@ -102,7 +102,7 @@ export function TabBar({
       onSwitcherPress={() => router.push("/(protected)/switcher")}
       onTabPress={handleTabPress}
       searchIcon={SEARCH_ICON}
-      searchPlaceholder="Search feeds or articles"
+      searchPlaceholder="Search articles"
       selectedIndex={selectedIndex}
       style={{
         bottom,

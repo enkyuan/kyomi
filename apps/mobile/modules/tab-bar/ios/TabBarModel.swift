@@ -84,7 +84,7 @@ final class TabBarModel: ObservableObject {
   func isInteractive(at point: CGPoint) -> Bool {
     let mainShown = !minimized || searchActive
     return (mainShown && mainFrame.contains(point))
-      || actionFrame.contains(point)
-      || (!searchActive && addFrame.contains(point))
+      || (!searchActive && actionFrame.contains(point))
+      || addFrame.contains(point)
   }
 }

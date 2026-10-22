@@ -1,12 +1,9 @@
 import { Stack } from "expo-router/stack";
 import { useEffect, useRef } from "react";
 import { prefetchInitialExploreArticles } from "@modules/articles/lib/requests";
-import { useTheme } from "@ui/liquid-glass/hooks/use-theme";
-import { ProgressiveBlur } from "@ui/liquid-glass/progressive-blur";
 
 export default function AppLayout() {
   const hasPrefetchedRef = useRef(false);
-  const { scheme } = useTheme();
 
   useEffect(() => {
     if (hasPrefetchedRef.current) return;
@@ -15,29 +12,12 @@ export default function AppLayout() {
     prefetchInitialExploreArticles();
   }, []);
 
-  const blurHeader = {
-    title: "",
-    headerShown: true,
-    headerBackVisible: false,
-    headerTransparent: true,
-    headerShadowVisible: false,
-    headerBlurEffect: "none" as const,
-    headerBackground: () => <ProgressiveBlur direction="top" tint={scheme} style={{ flex: 1 }} />,
-  } as const;
-
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="(tabs)" />
 
-      <Stack.Screen
-        name="settings"
-        options={{
-          ...blurHeader,
-          headerTitle: () => null,
-          presentation: "modal",
-          title: "Settings",
-        }}
-      />
+      {/* The settings stack owns its header (Stack.Toolbar needs the nested one), so this stays off. */}
+      <Stack.Screen name="settings" options={{ presentation: "modal" }} />
     </Stack>
   );
 }

@@ -54,25 +54,34 @@ struct TabBarContent: View {
               }
           }
 
-          searchButton(layout)
-            .glassEffectID("search", in: glassNamespace)
-            .position(x: layout.searchX + layout.buttonSize / 2, y: centerY)
-            .onGeometryChange(for: CGRect.self) { proxy in
-              proxy.frame(in: .named(Self.coordinateSpace))
-            } action: { frame in
-              model.actionFrame = frame
-            }
-
-          if layout.showsAdd {
-            addButton(layout)
-              .glassEffectID("add", in: glassNamespace)
+          if layout.showsSearchButton {
+            searchButton(layout)
+              .glassEffectID("search", in: glassNamespace)
               .glassEffectTransition(.materialize)
-              .position(x: layout.addX + layout.buttonSize / 2, y: centerY)
+              .position(x: layout.searchX + layout.buttonSize / 2, y: centerY)
               .onGeometryChange(for: CGRect.self) { proxy in
                 proxy.frame(in: .named(Self.coordinateSpace))
               } action: { frame in
-                model.addFrame = frame
+                model.actionFrame = frame
               }
+          }
+
+          // The add button and the close button share one glass identity, so the trailing
+          // button morphs between them as search opens and closes.
+          Group {
+            if layout.showsAdd {
+              addButton(layout)
+            } else {
+              closeButton(layout)
+            }
+          }
+          .glassEffectID("trailing", in: glassNamespace)
+          .glassEffectTransition(.materialize)
+          .position(x: layout.addX + layout.buttonSize / 2, y: centerY)
+          .onGeometryChange(for: CGRect.self) { proxy in
+            proxy.frame(in: .named(Self.coordinateSpace))
+          } action: { frame in
+            model.addFrame = frame
           }
         }
       }
@@ -204,24 +213,31 @@ struct TabBarContent: View {
     Button {
       model.toggleSearch()
     } label: {
-      Group {
-        if model.searchActive {
-          Image(systemName: "xmark")
-            .font(.system(size: TabBarMetrics.closeIconSize * layout.buttonScale))
-            .foregroundStyle(Self.actionIconColor)
-        } else {
-          searchGlyph(
-            size: TabBarMetrics.searchIconSize * layout.buttonScale,
-            color: Self.actionIconColor
-          )
-        }
-      }
+      searchGlyph(
+        size: TabBarMetrics.searchIconSize * layout.buttonScale,
+        color: Self.actionIconColor
+      )
       .frame(width: layout.buttonSize, height: layout.buttonSize)
       .contentShape(.circle)
     }
     .buttonStyle(.plain)
     .glassEffect(.regular.interactive(), in: .circle)
-    .accessibilityLabel(model.searchActive ? "Close search" : "Search")
+    .accessibilityLabel("Search articles")
+  }
+
+  private func closeButton(_ layout: TabBarLayout) -> some View {
+    Button {
+      model.toggleSearch()
+    } label: {
+      Image(systemName: "xmark")
+        .font(.system(size: TabBarMetrics.closeIconSize * layout.buttonScale))
+        .foregroundStyle(Self.actionIconColor)
+        .frame(width: layout.buttonSize, height: layout.buttonSize)
+        .contentShape(.circle)
+    }
+    .buttonStyle(.plain)
+    .glassEffect(.regular.interactive(), in: .circle)
+    .accessibilityLabel("Close search")
   }
 
   private func addButton(_ layout: TabBarLayout) -> some View {
