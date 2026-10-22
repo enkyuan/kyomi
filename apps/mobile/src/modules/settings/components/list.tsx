@@ -38,9 +38,7 @@ export function List({ footer, lastGroupAction }: SettingsListProps) {
           >
             {group.map((item, itemIndex) => (
               <View key={item.id}>
-                {itemIndex > 0 ? (
-                  <View className={`h-px bg-border/70 ${item.icon ? "ml-13" : "ml-5"}`} />
-                ) : null}
+                {itemIndex > 0 ? <View className="ml-13 h-px bg-border/70" /> : null}
                 <Pressable
                   accessibilityLabel={item.label}
                   accessibilityRole="button"
