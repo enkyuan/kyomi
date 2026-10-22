@@ -3,7 +3,9 @@ import {
   createElement,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
+  useRef,
   useState,
   type PropsWithChildren,
 } from "react";
@@ -275,45 +277,60 @@ export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
 
 /**
  * Scroll offsets reported by a native list (`onScroll` of `ArticleListView`) feed the same
- * direction bookkeeping as `useTabBarMinimizeScroll`, which expects Reanimated scroll events.
+ * direction rules as `useTabBarMinimizeScroll`, which runs as a worklet on Reanimated scroll events.
+ * These events arrive on the JS thread, so the bookkeeping lives in a ref: reading a shared value
+ * written since the last read blocks JS on a synchronous round-trip to the UI thread, and this
+ * runs on every scroll event.
  */
 export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
   const context = useOptionalTabBarMinimize();
+  const minimized = context?.minimized ?? false;
+  const minimizedSV = context?.minimizedSV;
+  const tracking = useRef({ distance: 0, direction: 0, lastY: 0, minimized });
+  // The provider can reset the bar (for example on a tab change), so follow its published state.
+  useEffect(() => {
+    tracking.current.minimized = minimized;
+  }, [minimized]);
 
   return useCallback(
     (y: number) => {
       scrollY.set(y);
-      if (!context) return;
+      if (!minimizedSV) return;
 
-      const { accumulatedDistance, direction, lastScrollY, minimizedSV } = context;
-      const delta = y - lastScrollY.get();
-      lastScrollY.set(y);
+      const state = tracking.current;
+      const setMinimized = (next: boolean) => {
+        if (state.minimized === next) return;
+        state.minimized = next;
+        minimizedSV.set(next);
+      };
+      const delta = y - state.lastY;
+      state.lastY = y;
 
       if (y <= MIN_SCROLL_Y) {
-        accumulatedDistance.set(0);
-        direction.set(0);
-        if (minimizedSV.get()) minimizedSV.set(false);
+        state.distance = 0;
+        state.direction = 0;
+        setMinimized(false);
         return;
       }
 
-      const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : direction.get();
+      const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : state.direction;
       if (nextDirection === 0) return;
 
-      if (nextDirection !== direction.get()) {
-        direction.set(nextDirection);
-        accumulatedDistance.set(0);
+      if (nextDirection !== state.direction) {
+        state.direction = nextDirection;
+        state.distance = 0;
       }
 
-      accumulatedDistance.set(accumulatedDistance.get() + Math.abs(delta));
+      state.distance += Math.abs(delta);
 
-      if (nextDirection === 1 && accumulatedDistance.get() >= COLLAPSE_DISTANCE) {
-        accumulatedDistance.set(0);
-        if (!minimizedSV.get()) minimizedSV.set(true);
-      } else if (nextDirection === -1 && accumulatedDistance.get() >= EXPAND_DISTANCE) {
-        accumulatedDistance.set(0);
-        if (minimizedSV.get()) minimizedSV.set(false);
+      if (nextDirection === 1 && state.distance >= COLLAPSE_DISTANCE) {
+        state.distance = 0;
+        setMinimized(true);
+      } else if (nextDirection === -1 && state.distance >= EXPAND_DISTANCE) {
+        state.distance = 0;
+        setMinimized(false);
       }
     },
-    [context, scrollY],
+    [minimizedSV, scrollY],
   );
 }
