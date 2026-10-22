@@ -1,6 +1,6 @@
 "use client";
 
-import { LeftFill, RightFill, SelectorVerticalFill } from "@mingcute/react";
+import { ChevronLeftIcon, ChevronRightIcon, ChevronsUpDownIcon } from "blode-icons-react";
 import type * as React from "react";
 import { DayPicker } from "react-day-picker";
 import { cn } from "../lib/utils";
@@ -70,17 +70,25 @@ export function Calendar({
     }): React.ReactElement => {
       if (orientation === "left") {
         return (
-          <LeftFill className={cn(className, "rtl:rotate-180")} {...props} aria-hidden="true" />
+          <ChevronLeftIcon
+            className={cn(className, "rtl:rotate-180")}
+            {...props}
+            aria-hidden="true"
+          />
         );
       }
 
       if (orientation === "right") {
         return (
-          <RightFill className={cn(className, "rtl:rotate-180")} {...props} aria-hidden="true" />
+          <ChevronRightIcon
+            className={cn(className, "rtl:rotate-180")}
+            {...props}
+            aria-hidden="true"
+          />
         );
       }
 
-      return <SelectorVerticalFill className={className} {...props} aria-hidden="true" />;
+      return <ChevronsUpDownIcon className={className} {...props} aria-hidden="true" />;
     },
   };
 

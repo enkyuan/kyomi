@@ -1,6 +1,9 @@
 "use client";
 
-import { DownFill, UpFill } from "@kyomi/ui/icons/mingcute";
+import {
+  ChevronTriangleDownMediumFilledIcon,
+  ChevronTriangleUpMediumFilledIcon,
+} from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/components/tooltip";
 import { Toolbar as ReaderToolbarRoot } from "@modules/reader/components/toolbar";
@@ -63,7 +66,7 @@ export function ReaderToolbar(props: ReaderToolbarProps) {
               />
             }
           >
-            <UpFill className="size-4" />
+            <ChevronTriangleUpMediumFilledIcon className="mx-0 size-6" />
           </TooltipTrigger>
           <TooltipPopup
             collisionAvoidance={STEP_CONTROL_TOOLTIP_COLLISION_AVOIDANCE}
@@ -91,7 +94,7 @@ export function ReaderToolbar(props: ReaderToolbarProps) {
               />
             }
           >
-            <DownFill className="size-4" />
+            <ChevronTriangleDownMediumFilledIcon className="mx-0 size-6" />
           </TooltipTrigger>
           <TooltipPopup
             collisionAvoidance={STEP_CONTROL_TOOLTIP_COLLISION_AVOIDANCE}

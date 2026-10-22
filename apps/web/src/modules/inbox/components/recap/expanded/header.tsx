@@ -1,6 +1,6 @@
 "use client";
 
-import { FullscreenExit2Fill } from "@kyomi/ui/icons/mingcute";
+import { Minimize2Icon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import { RailTooltip } from "../sections";
 
@@ -18,7 +18,7 @@ export function ExpandedViewHeader({
       <h3 className="min-w-0 truncate font-semibold text-base">{title}</h3>
       <RailTooltip label={backLabel}>
         <Button aria-label={backLabel} size="icon-xs" variant="ghost" onClick={onBack}>
-          <FullscreenExit2Fill />
+          <Minimize2Icon />
         </Button>
       </RailTooltip>
     </div>

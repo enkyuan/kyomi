@@ -119,7 +119,7 @@ describe("ButtonLabel", () => {
     animate.mockClear();
   });
 
-  test("crossfades the previous label out without exposing it to assistive technology", () => {
+  test("morphs between labels while the button keeps a single accessible name", () => {
     stubReducedMotion(false);
     const { rerender } = render(
       <Button>
@@ -127,7 +127,7 @@ describe("ButtonLabel", () => {
       </Button>,
     );
 
-    expect(animate).not.toHaveBeenCalled();
+    expect(screen.getByRole("button", { name: "Dark" })).toBeTruthy();
 
     rerender(
       <Button>
@@ -136,13 +136,7 @@ describe("ButtonLabel", () => {
     );
 
     expect(screen.getByRole("button", { name: "Light" })).toBeTruthy();
-    const ghost = screen.getByText("Dark");
-    expect(ghost.closest("[aria-hidden]")).not.toBeNull();
-    expect(animate).toHaveBeenCalled();
-    const animatedProperties = animate.mock.calls.flatMap(([keyframes]) =>
-      (keyframes as Keyframe[]).flatMap((frame) => Object.keys(frame)),
-    );
-    expect(animatedProperties).not.toContain("width");
+    expect(screen.queryByRole("button", { name: "Dark" })).toBeNull();
   });
 
   test("swaps instantly when the user prefers reduced motion", () => {

@@ -4,7 +4,7 @@
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import type { VariantProps } from "class-variance-authority";
-import { LayoutLeftFill } from "@mingcute/react";
+import { PanelLeftIcon } from "blode-icons-react";
 import * as React from "react";
 import { Button } from "../button";
 import { Input } from "../input";
@@ -144,7 +144,7 @@ export function SidebarTrigger({
       variant="ghost"
       {...props}
     >
-      <LayoutLeftFill />
+      <PanelLeftIcon />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );

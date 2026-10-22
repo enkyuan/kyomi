@@ -113,11 +113,15 @@ const config = defineConfig(({ command }) => {
         },
       },
     },
+    ssr: {
+      // blode-icons-react ships extensionless ESM re-exports that Node cannot load externally.
+      noExternal: ["blode-icons-react"],
+    },
     optimizeDeps: {
       include: [
         "react",
         "react-dom",
-        "@kyomi/ui/icons/mingcute",
+        "@kyomi/ui/icons/blode",
         "@kyomi/ui/lib/motion",
         "@tanstack/react-query",
         "@tanstack/react-router",

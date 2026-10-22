@@ -2,14 +2,14 @@
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import {
-  CheckFill,
-  CloseFill,
-  Edit2Fill,
-  Folder2Fill,
-  More2Fill,
-  PinFill,
-  PinLine,
-} from "@kyomi/ui/icons/mingcute";
+  CheckIcon,
+  EllipsisVerticalIcon,
+  FolderIcon,
+  PencilIcon,
+  PinFilledIcon,
+  PinIcon,
+  XIcon,
+} from "@kyomi/ui/icons/blode";
 import { Item, ItemActions } from "@kyomi/ui/components/item";
 import { getSvgPath } from "@kyomi/ui/lib/squircle";
 import { type CSSProperties, useState } from "react";
@@ -240,7 +240,7 @@ export function ExpandedFolders({
           <SectionEmpty
             title="No folders yet"
             description="Create a folder to group feeds."
-            icon={<Folder2Fill />}
+            icon={<FolderIcon />}
           />
         </div>
         <FolderActions
@@ -290,7 +290,7 @@ export function ExpandedFolders({
                   variant="ghost"
                   onClick={() => submitRename(folder)}
                 >
-                  <CheckFill />
+                  <CheckIcon />
                 </Button>
                 <Button
                   aria-label="Cancel rename"
@@ -301,7 +301,7 @@ export function ExpandedFolders({
                   variant="ghost"
                   onClick={cancelEditing}
                 >
-                  <CloseFill />
+                  <XIcon />
                 </Button>
               </ExpandedFolderRow>
             ) : (
@@ -319,13 +319,13 @@ export function ExpandedFolders({
                           style={folderManageButtonSquircleStyle}
                           variant="ghost"
                         >
-                          <More2Fill />
+                          <EllipsisVerticalIcon />
                         </Button>
                       }
                     />
                     <MenuPopup align="end" className="w-36">
                       <MenuItem onClick={() => startEditing(folder)}>
-                        <Edit2Fill />
+                        <PencilIcon />
                         Rename
                       </MenuItem>
                       <MenuItem
@@ -339,9 +339,9 @@ export function ExpandedFolders({
                         }
                       >
                         {folder.isPinned ? (
-                          <PinFill className="opacity-100 text-amber-500" />
+                          <PinFilledIcon className="opacity-100 text-amber-500" />
                         ) : (
-                          <PinLine className="opacity-70 text-muted-foreground" />
+                          <PinIcon className="opacity-70 text-muted-foreground" />
                         )}
                         {folder.isPinned ? "Unpin" : "Pin"}
                       </MenuItem>

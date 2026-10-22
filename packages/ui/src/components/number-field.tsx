@@ -2,7 +2,7 @@
 "use client";
 
 import { NumberField as NumberFieldPrimitive } from "@base-ui/react/number-field";
-import { AddFill, MinusCircleFill } from "@mingcute/react";
+import { CircleMinusIcon, PlusIcon } from "blode-icons-react";
 import { use } from "react";
 import * as React from "react";
 import { cn } from "../lib/utils";
@@ -68,7 +68,7 @@ export function NumberFieldDecrement({
       data-slot="number-field-decrement"
       {...props}
     >
-      <MinusCircleFill />
+      <CircleMinusIcon />
     </NumberFieldPrimitive.Decrement>
   );
 }
@@ -86,7 +86,7 @@ export function NumberFieldIncrement({
       data-slot="number-field-increment"
       {...props}
     >
-      <AddFill />
+      <PlusIcon />
     </NumberFieldPrimitive.Increment>
   );
 }

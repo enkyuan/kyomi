@@ -7,6 +7,7 @@ import type React from "react";
 import { buttonVariants } from "../button";
 import { cn } from "../../lib/utils";
 import { ToastStatusIcon } from "./status-icon";
+import { ToastDescription, ToastTitle } from "./text";
 import { getAnchorRect, type AnchoredToastData, type AnchorRect } from "./utils";
 
 const ANCHORED_TOAST_VIEWPORT_STYLE = {
@@ -109,7 +110,7 @@ function AnchoredToastItem({
       >
         {tooltipStyle ? (
           <Toast.Content className="pointer-events-auto px-2 py-1">
-            <Toast.Title data-slot="toast-title" />
+            <ToastTitle data-slot="toast-title" maxMorphChars={36} toast={toast} />
           </Toast.Content>
         ) : (
           <Toast.Content className="pointer-events-auto flex items-center justify-between gap-1.5 overflow-hidden px-3.5 py-3 text-sm">
@@ -117,10 +118,17 @@ function AnchoredToastItem({
               <ToastStatusIcon toast={toast} />
 
               <div className="flex flex-col gap-0.5">
-                <Toast.Title className="font-medium" data-slot="toast-title" />
-                <Toast.Description
+                <ToastTitle
+                  className="font-medium"
+                  data-slot="toast-title"
+                  maxMorphChars={28}
+                  toast={toast}
+                />
+                <ToastDescription
                   className="text-muted-foreground"
                   data-slot="toast-description"
+                  maxMorphChars={28}
+                  toast={toast}
                 />
               </div>
             </div>

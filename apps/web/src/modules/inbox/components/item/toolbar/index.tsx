@@ -1,7 +1,7 @@
 "use client";
 
 import type { CSSProperties, SyntheticEvent } from "react";
-import { BookmarkFill, BookmarkLine, ShareForwardLine } from "@kyomi/ui/icons/mingcute";
+import { ArrowShareRightIcon, BookmarkFilledIcon, BookmarkIcon } from "@kyomi/ui/icons/blode";
 import { Toolbar as ToolbarRoot, ToolbarGroup } from "@kyomi/ui/components/toolbar";
 import { cn } from "@kyomi/ui/lib/utils";
 import type { AnchoredToolbarAction, ToolbarSide } from "@modules/articles/lib/types";
@@ -62,14 +62,14 @@ export function ItemToolbar({
           }
         >
           {isSaved ? (
-            <BookmarkFill className={TOOLBAR_ICON_CLASS} />
+            <BookmarkFilledIcon className={TOOLBAR_ICON_CLASS} />
           ) : (
-            <BookmarkLine className={TOOLBAR_ICON_CLASS} />
+            <BookmarkIcon className={TOOLBAR_ICON_CLASS} />
           )}
         </ItemToolbarButton>
         <ItemToolbarButton label="Copy link" copyFeedback onClick={onCopyLink} />
         <ItemToolbarButton label="Share article" onClick={onShareArticle}>
-          <ShareForwardLine className={TOOLBAR_ICON_CLASS} />
+          <ArrowShareRightIcon className={TOOLBAR_ICON_CLASS} />
         </ItemToolbarButton>
         <ItemToolbarMenu
           onHide={onHide}

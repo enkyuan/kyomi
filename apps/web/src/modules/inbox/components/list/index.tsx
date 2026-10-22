@@ -39,7 +39,7 @@ import {
   SortButton,
   type PinnedFolderFilter,
 } from "./header";
-import { BlurLayer } from "@modules/reader/components/detail/blur";
+import { BarBlur, SCROLL_OFFSET_INHERIT } from "@modules/reader/components/detail/blur";
 import { Toolbar as ReaderToolbar } from "@modules/reader/components/toolbar";
 import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 
@@ -53,8 +53,6 @@ const EMPTY_STATE_BODY_COPY =
 
 const EMPTY_PINNED_FOLDERS: PinnedFolderFilter[] = [];
 const INBOX_LIST_SCROLL_RESTORATION_ID = "inbox-list";
-const SCROLL_OFFSET_INHERIT = "[--scroll-area-overflow-y-start:inherit]";
-
 function getEmptyStateCopy(filter: InboxFilter) {
   switch (filter) {
     case "my-feed":
@@ -191,23 +189,16 @@ export function List({
               showEmptyState && "h-full",
             )}
           >
-            {onFilterChange && !showEmptyState ? (
-              // Zero-height and sticky so the layer sits at the viewport top and inherits the
-              // viewport's scroll variables; its opacity follows the scroll offset directly, so
-              // it needs no timing or easing of its own.
-              <div
-                aria-hidden="true"
-                className={cn("sticky top-0 z-10 h-0 shrink-0", SCROLL_OFFSET_INHERIT)}
-              >
-                <BlurLayer topOffset={0} />
-              </div>
-            ) : null}
             {onFilterChange ? (
               <div
                 ref={listHeaderRef}
-                className="isolate sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-5.5 py-4.5"
+                className={cn(
+                  "isolate sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-5.5 py-4.5",
+                  SCROLL_OFFSET_INHERIT,
+                )}
                 data-slot="inbox-list-header"
               >
+                {showEmptyState ? null : <BarBlur />}
                 <div className="flex min-w-0 items-center gap-2">
                   <LazyMotion features={domAnimation}>
                     <m.div className="inline-flex shrink-0">

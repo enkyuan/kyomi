@@ -2,7 +2,7 @@
 
 import { useReducer } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { AddFill } from "@kyomi/ui/icons/mingcute";
+import { PlusIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import {
   Dialog as UiDialog,
@@ -142,7 +142,7 @@ export function CreateFolderDialog({
             />
           }
         >
-          <AddFill aria-hidden="true" className="size-3" />
+          <PlusIcon aria-hidden="true" className="size-3" />
         </DialogTrigger>
       ) : null}
       <DialogPopup className="sm:max-w-sm">

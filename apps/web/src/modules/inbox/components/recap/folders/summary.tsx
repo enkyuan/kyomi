@@ -1,13 +1,13 @@
 "use client";
 
 import {
-  AddFill,
-  FileExportFill,
-  FileImportFill,
-  Folder2Fill,
-  Fullscreen2Fill,
-  ListCheckFill,
-} from "@kyomi/ui/icons/mingcute";
+  ChecklistIcon,
+  FileArrowLeftInIcon,
+  FileArrowRightOutIcon,
+  FolderIcon,
+  Maximize2Icon,
+  PlusIcon,
+} from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import {
   Item,
@@ -46,7 +46,7 @@ export function FolderActions({
           variant="secondary"
           onClick={onCreateFolder}
         >
-          <AddFill className="mx-0 size-4" />
+          <PlusIcon className="mx-0 size-4" />
           Add
         </Button>
       </RailTooltip>
@@ -58,7 +58,7 @@ export function FolderActions({
           variant="secondary"
           onClick={onImportOpml}
         >
-          <FileImportFill className="mx-0 size-4" />
+          <FileArrowLeftInIcon className="mx-0 size-4" />
           Import
         </Button>
       </RailTooltip>
@@ -71,7 +71,7 @@ export function FolderActions({
           variant="outline"
           onClick={onExportOpml}
         >
-          <FileExportFill className="mx-0 size-4" />
+          <FileArrowRightOutIcon className="mx-0 size-4" />
         </Button>
       </RailTooltip>
     </div>
@@ -96,7 +96,7 @@ function FolderSummaryActions({
           variant="secondary"
           onClick={onManageFolders}
         >
-          <ListCheckFill className="mx-0 size-4" />
+          <ChecklistIcon className="mx-0 size-4" />
           Manage
         </Button>
       </RailTooltip>
@@ -108,7 +108,7 @@ function FolderSummaryActions({
           variant="secondary"
           onClick={onImportOpml}
         >
-          <FileImportFill className="mx-0 size-4" />
+          <FileArrowLeftInIcon className="mx-0 size-4" />
           Import
         </Button>
       </RailTooltip>
@@ -120,7 +120,7 @@ function FolderSummaryActions({
           variant="outline"
           onClick={onAddFolder}
         >
-          <AddFill className="mx-0 size-4" />
+          <PlusIcon className="mx-0 size-4" />
         </Button>
       </RailTooltip>
     </div>
@@ -181,7 +181,7 @@ export function Folders({
         folders.length > 0 ? (
           <RailTooltip label="View folders">
             <Button aria-label="View folders" size="icon-xs" variant="ghost" onClick={onExpand}>
-              <Fullscreen2Fill />
+              <Maximize2Icon />
             </Button>
           </RailTooltip>
         ) : null
@@ -192,7 +192,7 @@ export function Folders({
         <SectionEmpty
           title="No folders yet"
           description="Create a folder to group feeds."
-          icon={<Folder2Fill />}
+          icon={<FolderIcon />}
           action={
             <Button shape="pill" size="sm" onClick={onCreateFolder}>
               Create folder

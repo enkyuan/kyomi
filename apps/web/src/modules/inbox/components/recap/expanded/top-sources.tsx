@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { AddFill, Rss2Fill } from "@kyomi/ui/icons/mingcute";
+import { PlusIcon, RssIcon } from "@kyomi/ui/icons/blode";
 import {
   Item,
   ItemActions,
@@ -45,7 +45,7 @@ export function ExpandedTopSources({
         <SectionEmpty
           title="No viewed sources"
           description="Open a few posts to build this list."
-          icon={<Rss2Fill />}
+          icon={<RssIcon />}
         />
       </div>
     );
@@ -128,7 +128,7 @@ export function ExpandedTopSources({
                   variant="soft"
                   onClick={() => followFeed(feed)}
                 >
-                  <AddFill />
+                  <PlusIcon />
                 </Button>
               ) : null}
             </ItemActions>

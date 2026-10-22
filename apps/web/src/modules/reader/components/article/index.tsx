@@ -218,7 +218,7 @@ function ReaderArticleHeader({
       />
       <div className="flex flex-wrap items-start justify-between gap-3">
         <p
-          className="min-w-0 flex-1 font-semibold tracking-title text-foreground"
+          className="min-w-0 flex-1 font-semibold tracking-title text-(--reader-ink-strong)"
           style={{
             fontSize: `${titleFontSizePx}px`,
             lineHeight: `${titleLineHeightPx}px`,

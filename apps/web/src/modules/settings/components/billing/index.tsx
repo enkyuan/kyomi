@@ -1,6 +1,6 @@
 "use client";
 
-import { Bill2Fill } from "@kyomi/ui/icons/mingcute";
+import { ReceiptBillIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 
@@ -18,7 +18,7 @@ export function BillingPageNav({ isActive, onSelect }: BillingPageNavProps) {
   return (
     <SidebarMenuItem>
       <SidebarMenuButton isActive={isActive} onClick={onSelect}>
-        <Bill2Fill />
+        <ReceiptBillIcon />
         <span>{billingSection.name}</span>
       </SidebarMenuButton>
     </SidebarMenuItem>

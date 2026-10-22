@@ -1,6 +1,6 @@
 "use client";
 
-import { AddFill, CheckFill } from "@kyomi/ui/icons/mingcute";
+import { CheckIcon, PlusIcon } from "@kyomi/ui/icons/blode";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/components/button";
 import {
@@ -35,7 +35,7 @@ export function FolderPickerButton({
 }) {
   const isFollowMode = mode === "follow";
   const isFiled = !isFollowMode && currentFolderName !== "Unsorted";
-  const Icon = isFiled ? CheckFill : AddFill;
+  const Icon = isFiled ? CheckIcon : PlusIcon;
   const orderedFolders = useMemo(() => {
     const unsortedFolder = folders.find((folder) => folder.label === "Unsorted");
     if (!unsortedFolder) {

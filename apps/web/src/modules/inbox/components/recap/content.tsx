@@ -1,6 +1,6 @@
 "use client";
 
-import { Folder2Fill } from "@kyomi/ui/icons/mingcute";
+import { FolderIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import { Folders } from "@modules/inbox/components/recap/folders/summary";
 import type {
@@ -129,7 +129,7 @@ export function RecapContent({
         <SectionEmpty
           title="Nothing here yet"
           description="Folders, top sources, and saved items will appear here as you read and organize feeds."
-          icon={<Folder2Fill />}
+          icon={<FolderIcon />}
           action={
             <Button shape="pill" size="sm" onClick={onCreateFolder}>
               Create folder
