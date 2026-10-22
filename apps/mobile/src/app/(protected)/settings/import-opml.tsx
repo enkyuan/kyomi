@@ -1,5 +1,6 @@
 import { Text, useColorScheme, useWindowDimensions, View } from "react-native";
-import { EmptyStateIcon } from "@/components/icons/empty-state";
+import { FileArrowLeftInNativeIcon } from "@kyomi/ui/icons/blode-native";
+import { BlodeIcon } from "@/components/icons/blode";
 import { SettingsDetailToolbar } from "@modules/settings/components/detail-toolbar";
 import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
@@ -14,7 +15,7 @@ export default function ImportOpmlRoute() {
         className="flex-1 items-center justify-center gap-5 pb-24"
         style={{ backgroundColor: theme.background, paddingHorizontal: width * (32 / 390) }}
       >
-        <EmptyStateIcon size={176} />
+        <BlodeIcon color={theme.mutedForeground} icon={FileArrowLeftInNativeIcon} size={64} />
         <View className="w-full items-center gap-2">
           <Text
             className="text-center"
