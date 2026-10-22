@@ -9,6 +9,9 @@ import { SETTINGS_GROUPS } from "../lib/items";
 import { AppearanceSection } from "./appearance";
 import { SettingsSection } from "./section";
 
+/** Icon slot of a settings row, kept even when the row has no icon. */
+const ROW_ICON_SIZE = 20;
+
 type SettingsListProps = {
   readonly footer?: ReactNode;
 };
@@ -32,9 +35,7 @@ export function List({ footer }: SettingsListProps) {
           >
             {group.map((item, itemIndex) => (
               <View key={item.id}>
-                {itemIndex > 0 ? (
-                  <View className={`h-px bg-border/70 ${item.icon ? "ml-13" : "ml-5"}`} />
-                ) : null}
+                {itemIndex > 0 ? <View className="ml-13 h-px bg-border/70" /> : null}
                 <Pressable
                   accessibilityLabel={item.label}
                   accessibilityRole="button"
@@ -46,10 +47,13 @@ export function List({ footer }: SettingsListProps) {
                       <BlodeIcon
                         color={theme.foreground}
                         icon={item.icon}
-                        size={20}
+                        size={ROW_ICON_SIZE}
                         style={{ transform: [{ translateY: -1 }] }}
                       />
-                    ) : null}
+                    ) : (
+                      // Rows without an icon keep its slot so labels align as on web.
+                      <View style={{ height: ROW_ICON_SIZE, width: ROW_ICON_SIZE }} />
+                    )}
                     <Text className="flex-1 text-foreground" style={FONT_STYLES.body}>
                       {item.label}
                     </Text>

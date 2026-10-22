@@ -31,7 +31,9 @@ export function SettingsScreen() {
                 opacity: pressed || isLoggingOut ? 0.72 : 1,
               })}
             >
-              <View className="w-full flex-row items-center justify-center gap-3 px-5">
+              <View className="w-full flex-row items-center gap-3 px-5">
+                {/* Keeps the icon slot, so the label sits where the other rows' labels do. */}
+                <View style={{ height: 20, width: 20 }} />
                 {isLoggingOut ? (
                   <ActivityIndicator color={theme.foreground} size={20} />
                 ) : (
