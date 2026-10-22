@@ -3,7 +3,6 @@ import UIKit
 
 final class TabBarView: ExpoView {
   let onTabPress = EventDispatcher()
-  let onSwitcherPress = EventDispatcher()
   let onAddPress = EventDispatcher()
   let onSearchActiveChange = EventDispatcher()
   let onSearchQueryChange = EventDispatcher()
@@ -22,9 +21,6 @@ final class TabBarView: ExpoView {
 
     model.onTabPress = { [weak self] index in
       self?.onTabPress(["index": index])
-    }
-    model.onSwitcherPress = { [weak self] in
-      self?.onSwitcherPress()
     }
     model.onAddPress = { [weak self] in
       self?.onAddPress()

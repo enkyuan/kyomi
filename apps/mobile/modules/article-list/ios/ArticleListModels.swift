@@ -127,6 +127,9 @@ struct ListStyleRecord: Record {
 }
 
 struct ArticleListStyle {
+  static let faviconSize: CGFloat = 22
+  static let faviconPlaceholderSize: CGFloat = faviconSize * 0.6
+
   var foreground: Color
   var mutedForeground: Color
   var border: Color
@@ -145,11 +148,14 @@ struct ArticleListStyle {
   var badgeHeight: CGFloat
   var summaryMaxLines: Int
   var actionIconSize: CGFloat
-  var bookmarkIcon: TabBarIcon
-  var bookmarkFilledIcon: TabBarIcon
-  var shareIcon: TabBarIcon
-  var moreIcon: TabBarIcon
-  var rssIcon: TabBarIcon
+  /// Row glyphs, rasterized once per theme: every row shows them, and filling their vector
+  /// outlines again for each row that scrolls in was the costliest part of building a row.
+  var bookmarkIcon: UIImage
+  var bookmarkFilledIcon: UIImage
+  var shareIcon: UIImage
+  var moreIcon: UIImage
+  /// Favicon placeholder, drawn at `faviconPlaceholderSize`.
+  var rssIcon: UIImage
   var continueLabel: String
   var emptySummary: String
 
@@ -171,11 +177,12 @@ struct ArticleListStyle {
     badgeHeight = CGFloat(record.badgeHeight)
     summaryMaxLines = record.summaryMaxLines
     actionIconSize = CGFloat(record.actionIconSize)
-    bookmarkIcon = record.bookmarkIcon.icon
-    bookmarkFilledIcon = record.bookmarkFilledIcon.icon
-    shareIcon = record.shareIcon.icon
-    moreIcon = record.moreIcon.icon
-    rssIcon = record.rssIcon.icon
+    let actionSize = actionIconSize
+    bookmarkIcon = record.bookmarkIcon.icon.templateImage(size: actionSize)
+    bookmarkFilledIcon = record.bookmarkFilledIcon.icon.templateImage(size: actionSize)
+    shareIcon = record.shareIcon.icon.templateImage(size: actionSize)
+    moreIcon = record.moreIcon.icon.templateImage(size: actionSize)
+    rssIcon = record.rssIcon.icon.templateImage(size: Self.faviconPlaceholderSize)
     continueLabel = record.continueLabel
     emptySummary = record.emptySummary
   }

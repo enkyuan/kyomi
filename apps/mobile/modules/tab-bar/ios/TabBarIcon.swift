@@ -1,5 +1,6 @@
 import CoreGraphics
 import SwiftUI
+import UIKit
 
 /// Vector icon geometry received from `@kyomi/ui`, parsed once when the prop
 /// arrives so drawing never re-reads SVG path data.
@@ -58,6 +59,33 @@ public struct TabBarIcon {
     return rotate.concatenating(CGAffineTransform(translationX: box.midX - bounds.midX, y: box.midY - bounds.midY))
   }
 
+  /// The glyph rasterized once into a template image `size` points square, for views that show the
+  /// same icon many times (list rows). A `TabBarIconView` fills its vector outline on every render,
+  /// which a scrolling list pays again for each row that appears; an image is only composited.
+  public func templateImage(size: CGFloat) -> UIImage {
+    let format = UIGraphicsImageRendererFormat.preferred()
+    format.opaque = false
+    let rect = CGRect(x: 0, y: 0, width: size, height: size)
+    let scale = min(size / viewBox.width, size / viewBox.height)
+    let fit = CGAffineTransform(
+      a: scale,
+      b: 0,
+      c: 0,
+      d: scale,
+      tx: rect.midX - viewBox.midX * scale,
+      ty: rect.midY - viewBox.midY * scale
+    )
+    let image = UIGraphicsImageRenderer(bounds: rect, format: format).image { context in
+      let cg = context.cgContext
+      cg.setFillColor(UIColor.black.cgColor)
+      for layer in layers {
+        cg.addPath(layer.outline.applying(transform).applying(fit).cgPath)
+        cg.fillPath(using: layer.evenOdd ? .evenOdd : .winding)
+      }
+    }
+    return image.withRenderingMode(.alwaysTemplate)
+  }
+
   private static func parseViewBox(_ value: String) -> CGRect {
     let numbers = value
       .split(whereSeparator: { $0 == " " || $0 == "," })
@@ -103,14 +131,16 @@ private struct ViewBoxShape: Shape {
 
   func path(in rect: CGRect) -> SwiftUI.Path {
     let scale = min(rect.width / viewBox.width, rect.height / viewBox.height)
-    return outline.applying(transform).applying(
-      CGAffineTransform(
-        a: scale,
-        b: 0,
-        c: 0,
-        d: scale,
-        tx: rect.midX - viewBox.midX * scale,
-        ty: rect.midY - viewBox.midY * scale
+    return outline.applying(
+      transform.concatenating(
+        CGAffineTransform(
+          a: scale,
+          b: 0,
+          c: 0,
+          d: scale,
+          tx: rect.midX - viewBox.midX * scale,
+          ty: rect.midY - viewBox.midY * scale
+        )
       )
     )
   }

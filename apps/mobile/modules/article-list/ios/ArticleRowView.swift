@@ -1,5 +1,4 @@
 import SwiftUI
-import TabBar
 import UIKit
 
 /// One list row. It mirrors the React Native `Item` and `RecentHistoryItem` layouts point for point:
@@ -122,8 +121,9 @@ struct ArticleRowView: View {
     .accessibilityElement(children: .contain)
   }
 
-  private func actionIcon(_ icon: TabBarIcon, color: Color) -> some View {
-    TabBarIconView(icon: icon, size: style.actionIconSize, color: color)
+  private func actionIcon(_ icon: UIImage, color: Color) -> some View {
+    Image(uiImage: icon)
+      .foregroundStyle(color)
       .frame(width: 48, height: 48)
       .contentShape(Circle())
   }
@@ -153,7 +153,13 @@ struct ArticleRowView: View {
   private func sourceRow(time: String?) -> some View {
     HStack(spacing: 16) {
       HStack(spacing: 12) {
-        FaviconView(urls: row.faviconUrls, size: 22, placeholder: style.rssIcon, tint: style.mutedForeground, background: style.card)
+        FaviconView(
+          urls: row.faviconUrls,
+          size: ArticleListStyle.faviconSize,
+          placeholder: style.rssIcon,
+          tint: style.mutedForeground,
+          background: style.card
+        )
           .accessibilityHidden(true)
         ListText(row.sourceLabel, font: style.metaFont, color: style.mutedForeground.opacity(0.95), lines: 1)
           .frame(maxWidth: .infinity, alignment: .leading)
@@ -221,13 +227,13 @@ struct ActionPressStyle: ButtonStyle {
 struct FaviconView: View {
   let urls: [URL]
   let size: CGFloat
-  let placeholder: TabBarIcon
+  let placeholder: UIImage
   let tint: Color
   let background: Color
 
   @State private var image: UIImage?
 
-  init(urls: [URL], size: CGFloat, placeholder: TabBarIcon, tint: Color, background: Color) {
+  init(urls: [URL], size: CGFloat, placeholder: UIImage, tint: Color, background: Color) {
     self.urls = urls
     self.size = size
     self.placeholder = placeholder
@@ -241,7 +247,7 @@ struct FaviconView: View {
       if let image {
         Image(uiImage: image).resizable().scaledToFit()
       } else {
-        TabBarIconView(icon: placeholder, size: size * 0.6, color: tint)
+        Image(uiImage: placeholder).foregroundStyle(tint)
       }
     }
     .frame(width: size, height: size)

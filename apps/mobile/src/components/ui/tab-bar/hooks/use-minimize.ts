@@ -3,14 +3,12 @@ import {
   createElement,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
   useRef,
   useState,
   type PropsWithChildren,
 } from "react";
 import {
-  useAnimatedReaction,
   useAnimatedScrollHandler,
   useSharedValue,
   type SharedValue,
@@ -26,79 +24,103 @@ export const MIN_SCROLL_Y = 24;
 export const COLLAPSE_DISTANCE = 10;
 export const EXPAND_DISTANCE = 6;
 
+type Tracking = { distance: number; direction: number; lastY: number; minimized: boolean };
+
 // This is intentionally a boolean boundary, not an animated progress value.
 // SwiftUI owns the presentation animation after React receives a transition.
-type MinimizeContextValue = {
-  readonly minimized: boolean;
+//
+// The controls never change identity, so scroll hooks (and the lists that call them) do not
+// re-render when the bar minimizes. Only `TabBarWithMinimize` subscribes to the boolean.
+type MinimizeControls = {
   readonly minimizedSV: SharedValue<boolean>;
   readonly lastScrollY: SharedValue<number>;
   readonly accumulatedDistance: SharedValue<number>;
   readonly direction: SharedValue<number>;
+  /** Bookkeeping for scroll events that arrive on the JS thread (native lists). */
+  readonly tracking: { current: Tracking };
+  /** Publishes a transition decided on the JS thread. */
+  readonly setMinimized: (next: boolean) => void;
+  /** Publishes a transition decided by a worklet; runs on the JS thread. */
+  readonly publishMinimized: (next: boolean) => void;
   readonly reset: () => void;
 };
 
-const MinimizeContext = createContext<MinimizeContextValue | null>(null);
+const MinimizeControlsContext = createContext<MinimizeControls | null>(null);
+const MinimizedContext = createContext(false);
 
 export function TabBarMinimizeProvider({ children }: PropsWithChildren) {
-  const [minimized, setMinimized] = useState(false);
+  const [minimized, setMinimizedState] = useState(false);
   const minimizedSV = useSharedValue(false);
   const lastScrollY = useSharedValue(0);
   const accumulatedDistance = useSharedValue(0);
   const direction = useSharedValue(0);
+  const tracking = useRef<Tracking>({ distance: 0, direction: 0, lastY: 0, minimized: false });
 
   const publishMinimized = useCallback((next: boolean) => {
-    setMinimized((current) => (current === next ? current : next));
+    tracking.current.minimized = next;
+    setMinimizedState(next);
   }, []);
 
-  useAnimatedReaction(
-    () => minimizedSV.get(),
-    (next, previous) => {
-      if (next !== previous) {
-        scheduleOnRN(publishMinimized, next);
-      }
+  // A transition is published from exactly one thread, straight to React. Echoing the shared
+  // value back through an animated reaction would deliver a stale value after a quick reversal
+  // and flap the bar.
+  const setMinimized = useCallback(
+    (next: boolean) => {
+      publishMinimized(next);
+      minimizedSV.set(next);
     },
-    [publishMinimized],
+    [minimizedSV, publishMinimized],
   );
 
   const reset = useCallback(() => {
+    tracking.current = { distance: 0, direction: 0, lastY: 0, minimized: false };
     minimizedSV.set(false);
     lastScrollY.set(0);
     accumulatedDistance.set(0);
     direction.set(0);
-    setMinimized(false);
+    setMinimizedState(false);
   }, [accumulatedDistance, direction, lastScrollY, minimizedSV]);
 
-  const value = useMemo<MinimizeContextValue>(
+  const controls = useMemo<MinimizeControls>(
     () => ({
       accumulatedDistance,
       direction,
       lastScrollY,
-      minimized,
       minimizedSV,
+      publishMinimized,
       reset,
+      setMinimized,
+      tracking,
     }),
-    [accumulatedDistance, direction, lastScrollY, minimized, minimizedSV, reset],
+    [
+      accumulatedDistance,
+      direction,
+      lastScrollY,
+      minimizedSV,
+      publishMinimized,
+      reset,
+      setMinimized,
+    ],
   );
 
-  return createElement(MinimizeContext, { value }, children);
+  return createElement(
+    MinimizeControlsContext,
+    { value: controls },
+    createElement(MinimizedContext, { value: minimized }, children),
+  );
 }
 
-export function useTabBarMinimize() {
-  const context = useContext(MinimizeContext);
-  if (!context) {
-    throw new Error("useTabBarMinimize must be used within TabBarMinimizeProvider");
-  }
-  return context;
+/** Whether the bar is minimized. Subscribes to every transition, so use it only where it renders. */
+export function useTabBarMinimized() {
+  return useContext(MinimizedContext);
 }
 
 /**
- * Same as `useTabBarMinimize`, but returns `null` outside a
- * `TabBarMinimizeProvider` instead of throwing. Use this for screens that
- * are reused both inside the tab bar's tree and elsewhere (e.g. pushed into
- * a modal with no tab bar to minimize).
+ * Returns `null` outside a `TabBarMinimizeProvider`. Screens are reused both inside the tab bar's
+ * tree and elsewhere (e.g. pushed into a modal with no tab bar to minimize).
  */
 export function useOptionalTabBarMinimize() {
-  return useContext(MinimizeContext);
+  return useContext(MinimizeControlsContext);
 }
 
 export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
@@ -111,6 +133,7 @@ export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
   const direction = context?.direction;
   const lastScrollY = context?.lastScrollY;
   const minimizedSV = context?.minimizedSV;
+  const publishMinimized = context?.publishMinimized;
 
   return useAnimatedScrollHandler(
     {
@@ -119,7 +142,15 @@ export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
         const y = event.contentOffset.y;
         scrollY.set(y);
 
-        if (!accumulatedDistance || !direction || !lastScrollY || !minimizedSV) return;
+        if (!accumulatedDistance || !direction || !lastScrollY || !minimizedSV || !publishMinimized) {
+          return;
+        }
+
+        const setMinimized = (next: boolean) => {
+          if (minimizedSV.get() === next) return;
+          minimizedSV.set(next);
+          scheduleOnRN(publishMinimized, next);
+        };
 
         const delta = y - lastScrollY.get();
         lastScrollY.set(y);
@@ -127,7 +158,7 @@ export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
         if (y <= MIN_SCROLL_Y) {
           accumulatedDistance.set(0);
           direction.set(0);
-          if (minimizedSV.get()) minimizedSV.set(false);
+          setMinimized(false);
           return;
         }
 
@@ -143,52 +174,42 @@ export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
 
         if (nextDirection === 1 && accumulatedDistance.get() >= COLLAPSE_DISTANCE) {
           accumulatedDistance.set(0);
-          if (!minimizedSV.get()) minimizedSV.set(true);
+          setMinimized(true);
         } else if (nextDirection === -1 && accumulatedDistance.get() >= EXPAND_DISTANCE) {
           accumulatedDistance.set(0);
-          if (minimizedSV.get()) minimizedSV.set(false);
+          setMinimized(false);
         }
       },
     },
-    [accumulatedDistance, direction, lastScrollY, minimizedSV, scrollY],
+    [accumulatedDistance, direction, lastScrollY, minimizedSV, publishMinimized, scrollY],
   );
 }
 
 /**
  * Scroll offsets reported by a native list (`onScroll` of `ArticleListView`) feed the same
  * direction rules as `useTabBarMinimizeScroll`, which runs as a worklet on Reanimated scroll events.
- * These events arrive on the JS thread, so the bookkeeping lives in a ref: reading a shared value
- * written since the last read blocks JS on a synchronous round-trip to the UI thread, and this
- * runs on every scroll event.
+ * These events arrive on the JS thread, so the bookkeeping lives in a ref the provider owns (and
+ * resets): reading a shared value written since the last read blocks JS on a synchronous round-trip
+ * to the UI thread, and this runs on every scroll event. A transition goes straight to React; it
+ * does not detour through the UI thread and back before the bar can start moving.
  */
 export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
-  const context = useOptionalTabBarMinimize();
-  const minimized = context?.minimized ?? false;
-  const minimizedSV = context?.minimizedSV;
-  const tracking = useRef({ distance: 0, direction: 0, lastY: 0, minimized });
-  // The provider can reset the bar (for example on a tab change), so follow its published state.
-  useEffect(() => {
-    tracking.current.minimized = minimized;
-  }, [minimized]);
+  const controls = useOptionalTabBarMinimize();
 
   return useCallback(
     (y: number) => {
       scrollY.set(y);
-      if (!minimizedSV) return;
+      if (!controls) return;
 
+      const { setMinimized, tracking } = controls;
       const state = tracking.current;
-      const setMinimized = (next: boolean) => {
-        if (state.minimized === next) return;
-        state.minimized = next;
-        minimizedSV.set(next);
-      };
       const delta = y - state.lastY;
       state.lastY = y;
 
       if (y <= MIN_SCROLL_Y) {
         state.distance = 0;
         state.direction = 0;
-        setMinimized(false);
+        if (state.minimized) setMinimized(false);
         return;
       }
 
@@ -204,12 +225,12 @@ export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
 
       if (nextDirection === 1 && state.distance >= COLLAPSE_DISTANCE) {
         state.distance = 0;
-        setMinimized(true);
+        if (!state.minimized) setMinimized(true);
       } else if (nextDirection === -1 && state.distance >= EXPAND_DISTANCE) {
         state.distance = 0;
-        setMinimized(false);
+        if (state.minimized) setMinimized(false);
       }
     },
-    [minimizedSV, scrollY],
+    [controls, scrollY],
   );
 }

@@ -90,8 +90,11 @@ struct TabBarLayout: Equatable {
     // expanded buttons, which also keeps the tab segments from reflowing.
     let sideReserve = (TabBarMetrics.height + gap) * 2
     let tabsWidth = min(TabBarMetrics.mainWidth, max(0, availableWidth - sideReserve))
-    searchX = inset
-    addX = containerWidth - inset - buttonSize
+    // The buttons shrink about their centres, so their glyphs scale in place instead of sliding
+    // toward the screen edges while the glass contracts.
+    let buttonInset = (TabBarMetrics.height - buttonSize) / 2
+    searchX = inset + buttonInset
+    addX = containerWidth - inset - TabBarMetrics.height + buttonInset
     if searchActive {
       mainWidth = max(0, availableWidth - buttonSize - gap)
       mainX = inset

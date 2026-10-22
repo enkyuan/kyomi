@@ -11,7 +11,7 @@ public class TabBarModule: Module {
     Constant("keyboardGap") { Double(TabBarMetrics.keyboardGap) }
 
     View(TabBarView.self) {
-      Events("onTabPress", "onSwitcherPress", "onAddPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit")
+      Events("onTabPress", "onAddPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit")
 
       Prop("tabs") { (view: TabBarView, tabs: [TabItemRecord]) in
         view.model.tabs = tabs.map(\.item)
@@ -82,11 +82,12 @@ struct TabItemRecord: Record {
 }
 
 struct SwitcherRecord: Record {
+  @Field var title: String = ""
   @Field var label: String = ""
   @Field var hint: String = ""
   @Field var icon: IconRecord = IconRecord()
 
   var switcher: TabBarSwitcher {
-    TabBarSwitcher(label: label, hint: hint, icon: icon.icon)
+    TabBarSwitcher(title: title, label: label, hint: hint, icon: icon.icon)
   }
 }

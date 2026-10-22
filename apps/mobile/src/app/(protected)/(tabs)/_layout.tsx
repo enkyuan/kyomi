@@ -1,10 +1,10 @@
 import { Tabs } from "expo-router/tabs";
 import { TabBar, type TabBarProps } from "@ui/tab-bar";
 import { ToastViewport } from "@ui/toast";
-import { TabBarMinimizeProvider, useTabBarMinimize } from "@ui/tab-bar/hooks/use-minimize";
+import { TabBarMinimizeProvider, useTabBarMinimized } from "@ui/tab-bar/hooks/use-minimize";
 
 function TabBarWithMinimize(props: TabBarProps) {
-  const { minimized } = useTabBarMinimize();
+  const minimized = useTabBarMinimized();
   return <TabBar {...props} minimized={minimized} />;
 }
 

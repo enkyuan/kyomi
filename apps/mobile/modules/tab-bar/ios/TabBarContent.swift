@@ -11,9 +11,12 @@ struct TabBarContent: View {
   /// Ties each glass shape to an identity so a hidden one materializes in and out, as the
   /// system tab bar's glass does, instead of fading its content over a stuck glass layer.
   @Namespace private var glassNamespace
+  /// Pairs the tab capsule with the switcher sheet so the sheet zooms out of the bar and back.
+  @Namespace private var sheetNamespace
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
   private nonisolated static let coordinateSpace = "KyomiTabBar"
+  private static let switcherSheetID = "switcherSheet"
   private static let inactiveIconColor = Color.primary.opacity(0.72)
   private static let actionIconColor = Color.primary.opacity(0.82)
   private static let searchFieldIconColor = Color(
@@ -99,6 +102,12 @@ struct TabBarContent: View {
     .coordinateSpace(.named(Self.coordinateSpace))
     .animation(minimizeTransition, value: model.minimized)
     .animation(transition, value: model.searchActive)
+    .sheet(isPresented: $model.switcherPresented) {
+      if let switcher = model.switcher {
+        TabBarSwitcherSheet(switcher: switcher)
+          .navigationTransition(.zoom(sourceID: Self.switcherSheetID, in: sheetNamespace))
+      }
+    }
     .onChange(of: model.searchActive) { _, active in
       if !active { searchFocused = false }
     }
@@ -120,6 +129,8 @@ struct TabBarContent: View {
     }
     .frame(width: layout.mainWidth, height: layout.barHeight)
     .glassEffect(.regular.interactive(), in: .capsule)
+    // The whole capsule, not just the switcher slot, is the source: the bar expands into the sheet.
+    .matchedTransitionSource(id: Self.switcherSheetID, in: sheetNamespace)
   }
 
   /// The tabs share one segmented control, which supplies the selection lens. The switcher sits
@@ -213,11 +224,9 @@ struct TabBarContent: View {
     Button {
       model.toggleSearch()
     } label: {
-      searchGlyph(
-        size: TabBarMetrics.searchIconSize * layout.buttonScale,
-        color: Self.actionIconColor
-      )
-      .frame(width: layout.buttonSize, height: layout.buttonSize)
+      searchGlyph(size: TabBarMetrics.searchIconSize, color: Self.actionIconColor)
+        .scaleEffect(layout.buttonScale)
+        .frame(width: layout.buttonSize, height: layout.buttonSize)
       .contentShape(.circle)
     }
     .buttonStyle(.plain)
@@ -230,8 +239,9 @@ struct TabBarContent: View {
       model.toggleSearch()
     } label: {
       Image(systemName: "xmark")
-        .font(.system(size: TabBarMetrics.closeIconSize * layout.buttonScale))
+        .font(.system(size: TabBarMetrics.closeIconSize))
         .foregroundStyle(Self.actionIconColor)
+        .scaleEffect(layout.buttonScale)
         .frame(width: layout.buttonSize, height: layout.buttonSize)
         .contentShape(.circle)
     }
@@ -246,17 +256,14 @@ struct TabBarContent: View {
     } label: {
       Group {
         if let icon = model.addIcon {
-          TabBarIconView(
-            icon: icon,
-            size: TabBarMetrics.addIconSize * layout.buttonScale,
-            color: model.addIconColor
-          )
+          TabBarIconView(icon: icon, size: TabBarMetrics.addIconSize, color: model.addIconColor)
         } else {
           Image(systemName: "plus")
-            .font(.system(size: TabBarMetrics.addIconSize * layout.buttonScale, weight: .semibold))
+            .font(.system(size: TabBarMetrics.addIconSize, weight: .semibold))
             .foregroundStyle(model.addIconColor)
         }
       }
+      .scaleEffect(layout.buttonScale)
       .frame(width: layout.buttonSize, height: layout.buttonSize)
       .contentShape(.circle)
     }

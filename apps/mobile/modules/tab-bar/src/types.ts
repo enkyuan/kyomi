@@ -22,8 +22,10 @@ export type TabBarItem = {
   readonly selectedIcon: TabBarIcon;
 };
 
-/** The narrower slot after the tabs. It redirects to another view instead of selecting a tab. */
+/** The narrower slot after the tabs. It opens a sheet, zoomed out of the bar, instead of selecting a tab. */
 export type TabBarSwitcher = {
+  /** Title of the sheet the switcher opens. */
+  readonly title: string;
   readonly label: string;
   readonly hint: string;
   readonly icon: TabBarIcon;
@@ -44,7 +46,6 @@ export type TabBarViewProps = ViewProps & {
   readonly searchPlaceholder?: string;
   /** Fires on every press, including one on the selected tab. */
   readonly onTabPress?: (event: NativeSyntheticEvent<{ index: number }>) => void;
-  readonly onSwitcherPress?: () => void;
   readonly onAddPress?: () => void;
   readonly onSearchActiveChange?: (event: NativeSyntheticEvent<{ active: boolean }>) => void;
   readonly onSearchQueryChange?: (event: NativeSyntheticEvent<{ query: string }>) => void;

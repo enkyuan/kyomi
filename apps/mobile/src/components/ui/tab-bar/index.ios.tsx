@@ -1,4 +1,3 @@
-import { router } from "expo-router";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import type { NativeSyntheticEvent } from "react-native";
 import {
@@ -58,6 +57,7 @@ const SEARCH_ICON = toTabBarIcon(PageTextSearchNativeIcon);
 const ADD_ICON = toTabBarIcon(PlusNativeIcon);
 
 const SWITCHER: TabBarSwitcher = {
+  title: "Sources",
   label: "Choose source",
   hint: "Opens folders and feeds",
   icon: toTabBarIcon(ChevronGrabberVerticalNativeIcon),
@@ -99,7 +99,6 @@ export function TabBar({
       onAddPress={onAddPress}
       onSearchQueryChange={({ nativeEvent }) => onSearchQueryChange?.(nativeEvent.query)}
       onSearchSubmit={({ nativeEvent }) => onSearchSubmit?.(nativeEvent.query)}
-      onSwitcherPress={() => router.push("/(protected)/switcher")}
       onTabPress={handleTabPress}
       searchIcon={SEARCH_ICON}
       searchPlaceholder="Search articles"

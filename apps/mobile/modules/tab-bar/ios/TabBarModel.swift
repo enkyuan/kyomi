@@ -9,6 +9,8 @@ struct TabBarItem: Identifiable {
 }
 
 struct TabBarSwitcher {
+  /// Title of the sheet the switcher opens.
+  let title: String
   let label: String
   let hint: String
   let icon: TabBarIcon
@@ -28,6 +30,7 @@ final class TabBarModel: ObservableObject {
   @Published var selectedIndex = 0
   @Published var minimized = false
   @Published var searchActive = false
+  @Published var switcherPresented = false
   @Published var searchQuery = "" {
     didSet {
       if searchQuery != oldValue { onSearchQueryChange(searchQuery) }
@@ -43,7 +46,6 @@ final class TabBarModel: ObservableObject {
   var addFrame = CGRect.zero
 
   var onTabPress: @MainActor (Int) -> Void = { _ in }
-  var onSwitcherPress: @MainActor () -> Void = {}
   var onAddPress: @MainActor () -> Void = {}
   var onSearchActiveChange: @MainActor (Bool) -> Void = { _ in }
   var onSearchQueryChange: @MainActor (String) -> Void = { _ in }
@@ -61,7 +63,7 @@ final class TabBarModel: ObservableObject {
   }
 
   func pressSwitcher() {
-    onSwitcherPress()
+    switcherPresented = true
   }
 
   func pressAdd() {
