@@ -14,7 +14,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.reader-content {
+/* Only the article text takes the reading face; the header, badges, and banners around it keep the app
+   face so they match the feed. */
+.reader-content .article-body {
   font-family: var(--font-reader);
 }
 
@@ -36,13 +38,50 @@
     0 2px 8px color-mix(in srgb, black 14%, transparent);
 }
 
-.reader-content .article-body :is(p, span, a) {
+/* Code keeps its own face: highlight.js spans inside code blocks must not pick up the text face. */
+.reader-content .article-body :is(p, span, a):not(:where(pre, code, kbd, samp, tt) *) {
   font-family: var(--font-reader);
 }
 
+/* Paper: warm ink, book-like leading, ragged edges without orphans. */
 .reader-content .article-body {
   font-size: var(--reader-font-size, 1rem);
-  color: color-mix(in srgb, var(--foreground) 92%, transparent);
+  line-height: 1.7;
+  color: var(--reader-ink);
+  text-wrap: pretty;
+}
+
+/* Grain: one small tile of fractal noise (dark specks on light, warm specks on dark) laid over the
+   whole reader pane, text and blur veil included. The tile shifts the pane's overall tone slightly, so
+   the overlay fades to nothing toward the left and right edges and never forms a seam against the
+   neighbouring rail or list. A static raster with no blend mode, so scrolling pays nothing for it.
+   The pane needs `relative`; the scrollbar (z-50) stays above it. */
+.reader-paper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 25;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .24 0 0 0 0 .18 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.07'/%3E%3C/svg%3E");
+  background-size: 192px 192px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 96px,
+    black calc(100% - 96px),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 96px,
+    black calc(100% - 96px),
+    transparent
+  );
+}
+
+.dark .reader-paper::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .95 0 0 0 0 .9 0 0 0 0 .82 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.05'/%3E%3C/svg%3E");
 }
 
 .reader-content .article-body ::selection {
@@ -76,11 +115,13 @@
 }
 
 .reader-content .article-body :is(h1, h2, h3, h4, h5, h6) {
-  margin: 1.75rem 0 0.75rem;
-  font-family: var(--font-sans);
+  margin: 1.75em 0 0.5em;
+  font-family: var(--font-reader);
   font-weight: 600;
   line-height: 1.2;
-  color: var(--foreground);
+  letter-spacing: var(--tracking-title);
+  text-wrap: balance;
+  color: var(--reader-ink-strong);
 }
 
 .reader-content .article-body h1 {
@@ -95,8 +136,9 @@
   font-size: 1.25em;
 }
 
+/* Em, not rem: the gap between blocks follows the reader's font-size preference. */
 .reader-content .article-body :is(p, ul, ol, blockquote, pre, table, figure, hr) {
-  margin: 1rem 0;
+  margin: 1.1em 0;
 }
 
 .reader-content .article-body :is(ul, ol) {
@@ -110,7 +152,7 @@
 .reader-content .article-body blockquote {
   border-left: 3px solid color-mix(in srgb, var(--foreground) 18%, transparent);
   padding-left: 1rem;
-  color: color-mix(in srgb, var(--foreground) 78%, transparent);
+  color: color-mix(in oklab, var(--reader-ink) 80%, transparent);
 }
 
 .reader-content .article-body :is(code, pre, kbd, samp, tt) {

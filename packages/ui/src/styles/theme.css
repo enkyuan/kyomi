@@ -88,7 +88,8 @@
 :root {
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-reader: "DM Sans", var(--font-sans);
+  --font-reader:
+    "Newsreader Variable", "Iowan Old Style", Charter, "Bitstream Charter", Georgia, serif;
   --font-mono:
     "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     monospace;
@@ -111,21 +112,31 @@
   /* Opaque equivalent of --muted composited over the page (sRGB, like alpha blending). */
   --muted-solid: color-mix(in srgb, var(--background), var(--color-black) 4%);
   /* Current-position indicators: scrubber preview tick, selection dots. */
-  --highlight: var(--color-amber-500);
+  --highlight: var(--color-yamabuki-400);
   --accent: --alpha(var(--color-black) / 4%);
   --accent-foreground: var(--foreground);
-  --destructive: var(--color-red-500);
-  --destructive-foreground: var(--color-red-700);
-  --info: var(--color-blue-500);
-  --info-foreground: var(--color-blue-700);
-  --success: var(--color-emerald-500);
-  --success-foreground: var(--color-emerald-700);
+  /* Roles follow the palette in palette.css: madder red stops, indigo informs, young leaf confirms,
+     kerria gold cautions. */
+  --destructive: var(--color-akane-500);
+  --destructive-foreground: var(--color-akane-700);
+  --info: var(--color-ai-500);
+  --info-foreground: var(--color-ai-700);
+  --success: var(--color-matcha-500);
+  --success-foreground: var(--color-matcha-700);
   --matcha: oklch(0.819 0.121 131.147);
   --matcha-foreground: oklch(0.24 0.045 132);
   --mizu: oklch(0.788 0.073 210.53);
   --mizu-foreground: oklch(0.47 0.073 210.53);
-  --warning: var(--color-amber-500);
-  --warning-foreground: var(--color-amber-700);
+  --warning: var(--color-yamabuki-400);
+  --warning-foreground: var(--color-yamabuki-700);
+  /* Reader ink: sumi with a trace of warmth, a step softer than --foreground so long reads sit
+     on the page instead of glaring. Headings take the stronger ink. */
+  --reader-ink: oklch(0.285 0.011 72);
+  --reader-ink-strong: oklch(0.22 0.012 72);
+  /* Backdrop brightness behind blurred bars (BarBlur): only dark mode dims, so light stays clear. */
+  --bar-blur-dim: 1;
+  /* Colour left in content behind a blurred bar, per overlapping strip; both themes. */
+  --bar-blur-saturate: 0.5;
   --input: --alpha(var(--color-black) / 10%);
   --border: --alpha(var(--color-black) / 8%);
   --ring: var(--color-neutral-400);
@@ -159,18 +170,21 @@
   --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-white));
   --muted-subtle: color-mix(in oklab, var(--muted-foreground) 72%, transparent);
   --muted-solid: color-mix(in srgb, var(--background), var(--color-white) 4%);
-  --highlight: var(--color-amber-400);
+  --highlight: var(--color-yamabuki-300);
   --accent: --alpha(var(--color-white) / 4%);
   --accent-foreground: var(--color-neutral-100);
-  --destructive: color-mix(in srgb, var(--color-red-500) 90%, var(--color-white));
-  --destructive-foreground: var(--color-red-400);
-  --info: var(--color-blue-500);
-  --info-foreground: var(--color-blue-400);
-  --success: var(--color-emerald-500);
-  --success-foreground: var(--color-emerald-400);
+  --destructive: color-mix(in srgb, var(--color-akane-500) 90%, var(--color-white));
+  --destructive-foreground: var(--color-akane-400);
+  --info: var(--color-ai-500);
+  --info-foreground: var(--color-ai-400);
+  --success: var(--color-matcha-500);
+  --success-foreground: var(--color-matcha-400);
   --mizu-foreground: var(--color-mizu);
-  --warning: var(--color-amber-500);
-  --warning-foreground: var(--color-amber-400);
+  --warning: var(--color-yamabuki-400);
+  --warning-foreground: var(--color-yamabuki-300);
+  --reader-ink: oklch(0.885 0.009 80);
+  --reader-ink-strong: oklch(0.935 0.007 80);
+  --bar-blur-dim: 0.84;
   --input: --alpha(var(--color-white) / 8%);
   --border: var(--input);
   --ring: var(--color-neutral-500);

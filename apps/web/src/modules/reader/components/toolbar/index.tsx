@@ -30,12 +30,12 @@ import {
   ToolbarGroup,
   ToolbarSeparator,
 } from "@kyomi/ui/components/toolbar";
+import { TextMorph } from "@kyomi/ui/components/text-morph";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/components/tooltip";
 import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
 import type { ToolbarProps } from "@modules/reader/lib/toolbar";
 import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
 import { cn } from "@kyomi/ui/lib/utils";
-import { FontSizeTicker } from "./font-ticker";
 
 const CONTENT_WIDTH_LABELS: Record<ReaderContentWidth, string> = {
   narrow: "Narrow",
@@ -290,7 +290,12 @@ function ReaderFontSizeControlGroup({
       </ReaderToolbarButton>
       <Tooltip>
         <TooltipTrigger render={<span className="inline-flex h-full items-center" />}>
-          <FontSizeTicker value={fontSizePx} />
+          <span
+            aria-label={`Font size ${fontSizePx}`}
+            className="flex min-w-7 items-center justify-center px-0.5 text-xs font-medium leading-none text-muted-foreground tabular-nums"
+          >
+            <TextMorph>{String(fontSizePx)}</TextMorph>
+          </span>
         </TooltipTrigger>
         <TooltipPopup
           collisionAvoidance={tooltipCollisionAvoidance}

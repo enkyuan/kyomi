@@ -25,6 +25,7 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
+    setupFiles: [join(testsWebRoot, "setup.ts")],
     include: [
       join(testsWebRoot, "integration/**/*.{test,spec}.{ts,tsx}"),
       join(testsWebRoot, "e2e/**/*.{test,spec}.{ts,tsx}"),

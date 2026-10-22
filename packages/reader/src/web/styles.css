@@ -5,11 +5,11 @@
   --matcha: oklch(0.819 0.121 131.147);
 }
 
-.reader-content {
+.reader-content .article-body {
   font-family: var(--font-reader);
 }
 
-.reader-content :is(p, span, a) {
+.reader-content .article-body :is(p, span, a):not(:where(pre, code, kbd, samp, tt) *) {
   font-family: var(--font-reader);
 }
 

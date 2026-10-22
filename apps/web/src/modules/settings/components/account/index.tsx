@@ -108,6 +108,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
                 />
                 <div>
                   <Button
+                    aria-label="Save email"
                     loading={updateEmailMutation.isPending}
                     onClick={() => void handleSaveEmail()}
                     size="icon"
@@ -118,6 +119,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
                 </div>
                 <div>
                   <Button
+                    aria-label="Cancel editing email"
                     disabled={updateEmailMutation.isPending}
                     onClick={handleCancelEditEmail}
                     size="icon"

@@ -115,7 +115,7 @@ export function Detail({
   return (
     <section
       className={cn(
-        "flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden md:min-h-0",
+        "reader-paper relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden md:min-h-0",
         isBrowserSurface
           ? "rounded-none border-0 bg-transparent text-foreground"
           : "rounded-2xl border border-border bg-card text-card-foreground shadow-sm/5 supports-[-webkit-touch-callout:none]:rounded-[1.75rem]",

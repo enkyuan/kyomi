@@ -1,0 +1,116 @@
+/*
+ * Iro: the Kyomi palette, after the traditional colours of Japan
+ * (https://en.wikipedia.org/wiki/Traditional_colors_of_Japan).
+ *
+ * Every family holds one OKLCH hue, anchored to the dyes named beside it, across all eleven steps, and the
+ * steps share one lightness ladder, so 700 reads at 5.6:1 or better on the paper background and 300 at 10:1
+ * or better on the dark one in every family. Chroma is a share of the sRGB gamut maximum (warm dyes about
+ * 60-80%, cool pigments about 52-58%): reds and golds stay vivid, blues and violets stay quiet, as in the
+ * originals. Greys and blacks (sumi) stay in theme.css; semantic roles (success, info, warning,
+ * destructive, highlight) are mapped there.
+ */
+@theme {
+  /* 桜 sakura: hue 8, 60% of gamut; Momo-iro, Kōbai-iro, Benifuji */
+  --color-sakura-50: oklch(0.972 0.009 8);
+  --color-sakura-100: oklch(0.94 0.019 8);
+  --color-sakura-200: oklch(0.89 0.036 8);
+  --color-sakura-300: oklch(0.819 0.063 8);
+  --color-sakura-400: oklch(0.73 0.104 8);
+  --color-sakura-500: oklch(0.65 0.148 8);
+  --color-sakura-600: oklch(0.57 0.137 8);
+  --color-sakura-700: oklch(0.49 0.118 8);
+  --color-sakura-800: oklch(0.41 0.099 8);
+  --color-sakura-900: oklch(0.33 0.08 8);
+  --color-sakura-950: oklch(0.24 0.06 8);
+
+  /* 茜 akane: hue 27, 80% of gamut; Akabeni, Ginshu, Karakurenai */
+  --color-akane-50: oklch(0.972 0.011 27);
+  --color-akane-100: oklch(0.94 0.024 27);
+  --color-akane-200: oklch(0.89 0.046 27);
+  --color-akane-300: oklch(0.819 0.081 27);
+  --color-akane-400: oklch(0.73 0.133 27);
+  --color-akane-500: oklch(0.65 0.189 27);
+  --color-akane-600: oklch(0.57 0.186 27);
+  --color-akane-700: oklch(0.49 0.16 27);
+  --color-akane-800: oklch(0.41 0.134 27);
+  --color-akane-900: oklch(0.33 0.109 27);
+  --color-akane-950: oklch(0.24 0.081 27);
+
+  /* 柿 kaki: hue 50, 76% of gamut; Kanzō-iro, Beni'ukon, Kohaku-iro */
+  --color-kaki-50: oklch(0.972 0.012 50);
+  --color-kaki-100: oklch(0.94 0.026 50);
+  --color-kaki-200: oklch(0.89 0.049 50);
+  --color-kaki-300: oklch(0.819 0.086 50);
+  --color-kaki-400: oklch(0.73 0.139 50);
+  --color-kaki-500: oklch(0.65 0.131 50);
+  --color-kaki-600: oklch(0.57 0.115 50);
+  --color-kaki-700: oklch(0.49 0.099 50);
+  --color-kaki-800: oklch(0.41 0.083 50);
+  --color-kaki-900: oklch(0.33 0.068 50);
+  --color-kaki-950: oklch(0.24 0.051 50);
+
+  /* 山吹 yamabuki: hue 76, 80% of gamut; Yamabuki-iro, Tō'ō, Kuchinashi */
+  --color-yamabuki-50: oklch(0.972 0.018 76);
+  --color-yamabuki-100: oklch(0.94 0.04 76);
+  --color-yamabuki-200: oklch(0.89 0.076 76);
+  --color-yamabuki-300: oklch(0.819 0.13 76);
+  --color-yamabuki-400: oklch(0.73 0.123 76);
+  --color-yamabuki-500: oklch(0.65 0.11 76);
+  --color-yamabuki-600: oklch(0.57 0.096 76);
+  --color-yamabuki-700: oklch(0.49 0.083 76);
+  --color-yamabuki-800: oklch(0.41 0.07 76);
+  --color-yamabuki-900: oklch(0.33 0.057 76);
+  --color-yamabuki-950: oklch(0.24 0.042 76);
+
+  /* 抹茶 matcha: hue 131.147, 54% of gamut; Usumo'egi, Mo'egi, Wakatake-iro */
+  --color-matcha-50: oklch(0.972 0.033 131.1);
+  --color-matcha-100: oklch(0.94 0.077 131.1);
+  --color-matcha-200: oklch(0.89 0.132 131.1);
+  --color-matcha-300: oklch(0.819 0.121 131.1);
+  --color-matcha-400: oklch(0.73 0.108 131.1);
+  --color-matcha-500: oklch(0.65 0.096 131.1);
+  --color-matcha-600: oklch(0.57 0.085 131.1);
+  --color-matcha-700: oklch(0.49 0.073 131.1);
+  --color-matcha-800: oklch(0.41 0.061 131.1);
+  --color-matcha-900: oklch(0.33 0.05 131.1);
+  --color-matcha-950: oklch(0.24 0.037 131.1);
+
+  /* 水 mizu: hue 210.53, 54% of gamut; Asagi-iro, Mizu-iro, Hanaasagi */
+  --color-mizu-50: oklch(0.972 0.013 210.5);
+  --color-mizu-100: oklch(0.94 0.028 210.5);
+  --color-mizu-200: oklch(0.89 0.052 210.5);
+  --color-mizu-300: oklch(0.819 0.076 210.5);
+  --color-mizu-400: oklch(0.73 0.068 210.5);
+  --color-mizu-500: oklch(0.65 0.06 210.5);
+  --color-mizu-600: oklch(0.57 0.053 210.5);
+  --color-mizu-700: oklch(0.49 0.046 210.5);
+  --color-mizu-800: oklch(0.41 0.038 210.5);
+  --color-mizu-900: oklch(0.33 0.031 210.5);
+  --color-mizu-950: oklch(0.24 0.023 210.5);
+
+  /* 藍 ai: hue 255, 58% of gamut; Gunjō-iro, Ruri-iro, Konjō-iro */
+  --color-ai-50: oklch(0.972 0.008 255);
+  --color-ai-100: oklch(0.94 0.017 255);
+  --color-ai-200: oklch(0.89 0.032 255);
+  --color-ai-300: oklch(0.819 0.053 255);
+  --color-ai-400: oklch(0.73 0.083 255);
+  --color-ai-500: oklch(0.65 0.11 255);
+  --color-ai-600: oklch(0.57 0.109 255);
+  --color-ai-700: oklch(0.49 0.094 255);
+  --color-ai-800: oklch(0.41 0.079 255);
+  --color-ai-900: oklch(0.33 0.064 255);
+  --color-ai-950: oklch(0.24 0.048 255);
+
+  /* 藤 fuji: hue 310, 52% of gamut; Fuji-iro, Fujimurasaki, Shion-iro */
+  --color-fuji-50: oklch(0.972 0.009 310);
+  --color-fuji-100: oklch(0.94 0.02 310);
+  --color-fuji-200: oklch(0.89 0.037 310);
+  --color-fuji-300: oklch(0.819 0.064 310);
+  --color-fuji-400: oklch(0.73 0.098 310);
+  --color-fuji-500: oklch(0.65 0.132 310);
+  --color-fuji-600: oklch(0.57 0.15 310);
+  --color-fuji-700: oklch(0.49 0.129 310);
+  --color-fuji-800: oklch(0.41 0.108 310);
+  --color-fuji-900: oklch(0.33 0.088 310);
+  --color-fuji-950: oklch(0.24 0.065 310);
+}

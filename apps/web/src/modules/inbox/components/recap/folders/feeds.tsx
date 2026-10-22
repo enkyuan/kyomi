@@ -4,6 +4,7 @@ import { RefreshCwIcon, RssIcon } from "@kyomi/ui/icons/blode";
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@kyomi/ui/components/button";
 import { ScrollArea } from "@kyomi/ui/components/scroll-area";
+import { TextMorph } from "@kyomi/ui/components/text-morph";
 import { toastManager } from "@kyomi/ui/components/toast";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
 import type { RecapFolder } from "@modules/inbox/lib/recap/types";
@@ -207,7 +208,9 @@ export function ExpandedFolderFeeds({
       {isSelecting ? (
         <div className="mb-2 flex h-7 shrink-0 items-center justify-between gap-2 px-5">
           <span className="min-w-0 truncate text-muted-foreground text-sm">
-            {selectedFeeds.length === 1 ? "1 selected" : `${selectedFeeds.length} selected`}
+            <TextMorph>
+              {selectedFeeds.length === 1 ? "1 selected" : `${selectedFeeds.length} selected`}
+            </TextMorph>
           </span>
           <Button
             className="h-7 px-2.5"

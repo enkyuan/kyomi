@@ -5,10 +5,10 @@ import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
 import type * as React from "react";
-import { useLayoutEffect, useRef, useState } from "react";
 import { cn } from "../lib/utils";
 import { GroupSeparator, GroupText, groupVariants } from "./group";
 import { Spinner } from "./spinner";
+import { TextMorph } from "./text-morph";
 
 export const buttonVariants = cva(
   "relative inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-lg border font-medium text-base outline-none transition-[box-shadow,scale] duration-150 ease-out-quint before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-64 data-loading:select-none data-loading:text-transparent sm:text-sm [&_svg:not([class*='opacity-'])]:opacity-80 [&_svg:not([class*='size-'])]:size-4.5 sm:[&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg:not([class*='mx-'])]:-mx-0.5 [&_svg]:shrink-0",
@@ -198,47 +198,19 @@ export function ButtonGroup({
 
 export { GroupSeparator as ButtonGroupSeparator, GroupText as ButtonGroupText };
 
-const LABEL_EASING = "cubic-bezier(0.23, 1, 0.32, 1)";
-
-function prefersReducedMotion(): boolean {
-  return (
-    typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  );
-}
-
-export interface ButtonLabelProps extends React.ComponentProps<"span"> {
-  /** Identity of the label. Defaults to the text content when `children` is a string or number. */
-  labelKey?: string | number;
+export interface ButtonLabelProps extends Omit<React.ComponentProps<"span">, "children"> {
+  children: string | number;
 }
 
 /**
- * Button text that crossfades through a light blur when it changes, e.g. "Dark" ↔ "Light". The
- * button's width snaps to the new text: tweening `width` would re-run layout on every frame. The
- * first render never animates; reduced motion swaps instantly.
+ * Button text that morphs in place when it changes, e.g. "Dark" ↔ "Light": shared letters glide and
+ * the rest fade. The first render never animates and reduced motion swaps instantly.
  */
 export function ButtonLabel({
   children,
-  labelKey,
   className,
   ...props
 }: ButtonLabelProps): React.ReactElement {
-  const key =
-    labelKey ??
-    (typeof children === "string" || typeof children === "number" ? children : undefined);
-  const previous = useRef<{ key: typeof key; node: React.ReactNode }>({ key, node: children });
-  const [exiting, setExiting] = useState<{ id: number; node: React.ReactNode } | null>(null);
-  const [generation, setGeneration] = useState(0);
-  const exitCount = useRef(0);
-
-  useLayoutEffect(() => {
-    const last = previous.current;
-    previous.current = { key, node: children };
-    if (key === undefined || last.key === key || prefersReducedMotion()) return;
-    setGeneration((current) => current + 1);
-    exitCount.current += 1;
-    setExiting({ id: exitCount.current, node: last.node });
-  }, [key, children]);
-
   return (
     <span
       className={cn(
@@ -248,62 +220,7 @@ export function ButtonLabel({
       data-slot="button-label"
       {...props}
     >
-      <span
-        className={cn(
-          generation > 0 &&
-            "transition-[opacity,filter] duration-200 ease-out-quint starting:opacity-0 starting:blur-[2px]",
-        )}
-        key={generation}
-      >
-        {children}
-      </span>
-      {exiting ? (
-        <ButtonLabelExit
-          key={exiting.id}
-          onDone={() => setExiting((current) => (current?.id === exiting.id ? null : current))}
-        >
-          {exiting.node}
-        </ButtonLabelExit>
-      ) : null}
-    </span>
-  );
-}
-
-function ButtonLabelExit({
-  children,
-  onDone,
-}: {
-  children: React.ReactNode;
-  onDone: () => void;
-}): React.ReactElement {
-  const ref = useRef<HTMLSpanElement>(null);
-  const done = useRef(onDone);
-  useLayoutEffect(() => {
-    done.current = onDone;
-  });
-  useLayoutEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-    const fade = node.animate(
-      [
-        { opacity: 1, filter: "blur(0px)" },
-        { opacity: 0, filter: "blur(2px)" },
-      ],
-      { duration: 150, easing: LABEL_EASING, fill: "forwards" },
-    );
-    fade.finished.then(
-      () => done.current(),
-      () => {},
-    );
-    return () => fade.cancel();
-  }, []);
-  return (
-    <span
-      aria-hidden
-      className="pointer-events-none absolute inset-0 flex items-center justify-center"
-      ref={ref}
-    >
-      {children}
+      <TextMorph>{children}</TextMorph>
     </span>
   );
 }

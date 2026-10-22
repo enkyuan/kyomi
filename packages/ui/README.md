@@ -24,20 +24,53 @@ in `package.json`, so a file that is not exported is private.
 `styles/theme.css` holds every token. Primitives use them instead of arbitrary values; app code
 should reach for a primitive variant before restyling one.
 
-| Token                 | Utility                          | Use                                                   |
-| --------------------- | -------------------------------- | ----------------------------------------------------- |
-| `--highlight`         | `bg-highlight`, `text-highlight` | Current-position indicators (scrubber preview tick)   |
-| `--muted-solid`       | `bg-muted-solid`                 | Opaque muted chrome that floats over content          |
-| `--muted-subtle`      | `text-muted-subtle`              | Placeholders, shortcuts, inactive tabs (muted at 72%) |
-| `--tracking-title`    | `tracking-title`                 | Tight list and article titles (−0.012em)              |
-| `--ease-out-quint`    | `ease-out-quint`                 | Default UI ease-out: presses, popovers, label swaps   |
-| `--ease-in-out-quart` | `ease-in-out-quart`              | On-screen movement between two positions              |
-| `--ease-standard`     | `ease-standard`                  | Crossfades and blur reveals                           |
-| `--ease-drawer`       | `ease-drawer`                    | Sheets and drawers (iOS curve)                        |
+| Token                 | Utility                          | Use                                                     |
+| --------------------- | -------------------------------- | ------------------------------------------------------- |
+| `--highlight`         | `bg-highlight`, `text-highlight` | Current-position indicators (scrubber preview tick)     |
+| `--reader-ink`        | (reader CSS only)                | Warm sumi ink for article text; headings use `-strong`  |
+| `--bar-blur-dim`      | (`BarBlur` only)                 | Backdrop brightness behind blurred bars; dark mode only |
+| `--muted-solid`       | `bg-muted-solid`                 | Opaque muted chrome that floats over content            |
+| `--muted-subtle`      | `text-muted-subtle`              | Placeholders, shortcuts, inactive tabs (muted at 72%)   |
+| `--tracking-title`    | `tracking-title`                 | Tight list and article titles (−0.012em)                |
+| `--ease-out-quint`    | `ease-out-quint`                 | Default UI ease-out: presses, popovers, label swaps     |
+| `--ease-in-out-quart` | `ease-in-out-quart`              | On-screen movement between two positions                |
+| `--ease-standard`     | `ease-standard`                  | Crossfades and blur reveals                             |
+| `--ease-drawer`       | `ease-drawer`                    | Sheets and drawers (iOS curve)                          |
+
+### Palette (iro)
+
+`styles/palette.css` holds eight eleven-step ramps named for traditional Japanese dyes, so any
+component can reach for `bg-akane-100`, `text-ai-700`, `border-fuji-300`. Steps share one lightness
+ladder across families (700 is 5.6:1 or better on the paper background, 300 is 10:1 or better on the
+dark one) and each family keeps a constant hue.
+
+| Family     | Hue | Reads as                  | Default role                  |
+| ---------- | --- | ------------------------- | ----------------------------- |
+| `sakura`   | 8   | cherry blossom, soft pink | favourite, gentle emphasis    |
+| `akane`    | 27  | madder red                | `destructive`                 |
+| `kaki`     | 50  | persimmon, autumn orange  | energy, unread                |
+| `yamabuki` | 76  | kerria gold               | `warning`, `highlight`        |
+| `matcha`   | 131 | young leaf                | `success`, brand (`--matcha`) |
+| `mizu`     | 211 | water                     | saved (`--mizu`)              |
+| `ai`       | 255 | indigo                    | `info`                        |
+| `fuji`     | 310 | wisteria                  | special, AI, tags             |
+
+Greys and blacks (sumi) are untouched. Use the semantic token (`bg-destructive`, `text-info-foreground`)
+when the colour carries meaning, and a ramp step when it only decorates (charts, tags, folders).
 
 Motion in JavaScript uses `springTransition(kind, prefersReducedMotion)` from
 `@kyomi/ui/lib/motion`: bounce-free springs (`quick` 0.24s, `standard` 0.28s, `emphasized` 0.3s)
 that become instant under reduced motion. `EASE_OUT_QUINT` mirrors the CSS curve for WAAPI.
+
+## TextMorph
+
+`TextMorph` (`@kyomi/ui/components/text-morph`) wraps [Torph](https://torph.lochie.me): when its text
+changes, shared letters glide to their new place, the rest fade, and numbers roll by place value. It
+runs 240ms on the `--ease-out-quint` curve, skips the first render, and swaps instantly under reduced
+motion. `ButtonLabel`, toast titles and descriptions, the reader's font-size readout, and the feed
+selection count use it. Torph lays text out on one line and accepts text only, so keep it to short
+labels: toasts morph text up to 40 characters (28 in anchored cards) and leave longer text wrapping
+as plain text. Do not use it in long lists or for values that change while dragging.
 
 ## Button
 
