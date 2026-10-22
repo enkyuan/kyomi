@@ -1,5 +1,6 @@
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import type { NativeSyntheticEvent } from "react-native";
+import Animated, { useAnimatedProps } from "react-native-reanimated";
 import {
   BLODE_STROKE_WIDTH,
   ChevronGrabberVerticalNativeIcon,
@@ -12,6 +13,7 @@ import {
   type BlodeNativeIcon,
 } from "@kyomi/ui/icons/blode-native";
 import { useKeyboard } from "@hooks/use-keyboard";
+import { useOptionalTabBarMinimize } from "./hooks/use-minimize";
 import { mobileColors } from "@/theme/colors";
 import {
   TabBarView,
@@ -63,9 +65,11 @@ const SWITCHER: TabBarSwitcher = {
   icon: toTabBarIcon(ChevronGrabberVerticalNativeIcon),
 };
 
+// Animated so the scroll worklet's `minimized` reaches the native bar from the UI thread.
+const AnimatedTabBarView = Animated.createAnimatedComponent(TabBarView);
+
 /** Floating tab bar drawn natively in SwiftUI by the local `tab-bar` module. */
 export function TabBar({
-  minimized = false,
   navigation,
   onAddPress,
   onSearchQueryChange,
@@ -74,6 +78,10 @@ export function TabBar({
   state,
 }: TabBarProps) {
   const { height: keyboardHeight } = useKeyboard();
+  const minimizedSV = useOptionalTabBarMinimize()?.minimizedSV;
+  // Committed on the UI thread the moment the scroll worklet decides, with no JS round trip and no
+  // re-render; SwiftUI animates the change.
+  const animatedProps = useAnimatedProps(() => ({ minimized: minimizedSV?.get() ?? false }));
   const selectedIndex = Math.min(Math.max(state?.index ?? 0, 0), TABS.length - 1);
   // The bar rests on the screen edge and keeps `keyboardGap` above the keyboard.
   const bottom =
@@ -91,11 +99,11 @@ export function TabBar({
   }
 
   return (
-    <TabBarView
+    <AnimatedTabBarView
       activeTintColor={mobileColors.matcha}
       addIcon={ADD_ICON}
       addIconColor={kyomiNativeBrand.matcha.onColor}
-      minimized={minimized}
+      animatedProps={animatedProps}
       onAddPress={onAddPress}
       onSearchQueryChange={({ nativeEvent }) => onSearchQueryChange?.(nativeEvent.query)}
       onSearchSubmit={({ nativeEvent }) => onSearchSubmit?.(nativeEvent.query)}
@@ -103,13 +111,9 @@ export function TabBar({
       searchIcon={SEARCH_ICON}
       searchPlaceholder="Search articles"
       selectedIndex={selectedIndex}
-      style={{
-        bottom,
-        height: tabBarMetrics.containerHeight,
-        left: 0,
-        position: "absolute",
-        right: 0,
-      }}
+      // Spans the screen so the switcher sheet can grow out of the bar; touches outside the bar
+      // pass through natively. Screens reserve only the bar itself (`getTabBarOcclusionHeight`).
+      style={{ bottom, left: 0, position: "absolute", right: 0, top: 0 }}
       switcher={SWITCHER}
       tabs={TABS}
     />

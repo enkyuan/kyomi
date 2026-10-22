@@ -4,15 +4,16 @@ import {
   useCallback,
   useContext,
   useMemo,
-  useState,
   type PropsWithChildren,
 } from "react";
+import type { NativeSyntheticEvent } from "react-native";
 import {
   useAnimatedScrollHandler,
+  useEvent,
+  useHandler,
   useSharedValue,
   type SharedValue,
 } from "react-native-reanimated";
-import { scheduleOnRN } from "react-native-worklets";
 
 export const MIN_SCROLL_Y = 24;
 // Lower thresholds commit to a direction faster: Apple's own scroll-driven
@@ -24,123 +25,43 @@ export const COLLAPSE_DISTANCE = 10;
 export const EXPAND_DISTANCE = 6;
 
 /**
- * Direction bookkeeping for scroll offsets that arrive on the JS thread. The state is closed over
- * rather than held in a ref or a mutable object, so nothing React Compiler tracks is mutated.
+ * Offsets past the end of the content are rubber-banding: the bounce reverses direction without
+ * the user asking for the bar, so they count as resting at the end.
  */
-function createOffsetTracker() {
-  let distance = 0;
-  let direction = 0;
-  let lastY = 0;
-  let minimized = false;
-
-  return {
-    /** Records the published state, which another thread may have decided. */
-    sync(next: boolean) {
-      minimized = next;
-    },
-    reset() {
-      distance = 0;
-      direction = 0;
-      lastY = 0;
-      minimized = false;
-    },
-    track(y: number, setMinimized: (next: boolean) => void) {
-      const delta = y - lastY;
-      lastY = y;
-
-      if (y <= MIN_SCROLL_Y) {
-        distance = 0;
-        direction = 0;
-        if (minimized) setMinimized(false);
-        return;
-      }
-
-      const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : direction;
-      if (nextDirection === 0) return;
-
-      if (nextDirection !== direction) {
-        direction = nextDirection;
-        distance = 0;
-      }
-
-      distance += Math.abs(delta);
-
-      if (nextDirection === 1 && distance >= COLLAPSE_DISTANCE) {
-        distance = 0;
-        if (!minimized) setMinimized(true);
-      } else if (nextDirection === -1 && distance >= EXPAND_DISTANCE) {
-        distance = 0;
-        if (minimized) setMinimized(false);
-      }
-    },
-  };
+function clampOverscroll(y: number, maxY: number) {
+  "worklet";
+  return Math.min(y, Math.max(maxY, 0));
 }
 
 // This is intentionally a boolean boundary, not an animated progress value.
-// SwiftUI owns the presentation animation after React receives a transition.
+// SwiftUI owns the presentation animation once the bar's `minimized` prop flips.
 //
-// The controls never change identity, so scroll hooks (and the lists that call them) do not
-// re-render when the bar minimizes. Only `TabBarWithMinimize` subscribes to the boolean.
+// Every list feeds its offsets to a worklet on the UI thread, and the bar reads `minimizedSV`
+// through animated props, so a transition reaches the native bar without touching the JS thread:
+// a busy JS thread (paging, rendering) can no longer delay the bar. Nothing re-renders on a
+// transition, and the controls never change identity.
 type MinimizeControls = {
   readonly minimizedSV: SharedValue<boolean>;
   readonly lastScrollY: SharedValue<number>;
   readonly accumulatedDistance: SharedValue<number>;
   readonly direction: SharedValue<number>;
-  /**
-   * Feeds one scroll offset from the JS thread (native lists) through the direction rules. The
-   * bookkeeping stays inside the provider's callbacks, so no ref is read while rendering.
-   */
-  readonly trackOffset: (y: number) => void;
-  /** Publishes a transition decided on the JS thread. */
-  readonly setMinimized: (next: boolean) => void;
-  /** Publishes a transition decided by a worklet; runs on the JS thread. */
-  readonly publishMinimized: (next: boolean) => void;
   readonly reset: () => void;
 };
 
 const MinimizeControlsContext = createContext<MinimizeControls | null>(null);
-const MinimizedContext = createContext(false);
 
 export function TabBarMinimizeProvider({ children }: PropsWithChildren) {
-  const [minimized, setMinimizedState] = useState(false);
   const minimizedSV = useSharedValue(false);
   const lastScrollY = useSharedValue(0);
   const accumulatedDistance = useSharedValue(0);
   const direction = useSharedValue(0);
-  const [tracker] = useState(createOffsetTracker);
-
-  const publishMinimized = useCallback(
-    (next: boolean) => {
-      tracker.sync(next);
-      setMinimizedState(next);
-    },
-    [tracker],
-  );
-
-  // A transition is published from exactly one thread, straight to React. Echoing the shared
-  // value back through an animated reaction would deliver a stale value after a quick reversal
-  // and flap the bar.
-  const setMinimized = useCallback(
-    (next: boolean) => {
-      publishMinimized(next);
-      minimizedSV.set(next);
-    },
-    [minimizedSV, publishMinimized],
-  );
-
-  const trackOffset = useCallback(
-    (y: number) => tracker.track(y, setMinimized),
-    [setMinimized, tracker],
-  );
 
   const reset = useCallback(() => {
-    tracker.reset();
     minimizedSV.set(false);
     lastScrollY.set(0);
     accumulatedDistance.set(0);
     direction.set(0);
-    setMinimizedState(false);
-  }, [accumulatedDistance, direction, lastScrollY, minimizedSV, tracker]);
+  }, [accumulatedDistance, direction, lastScrollY, minimizedSV]);
 
   const controls = useMemo<MinimizeControls>(
     () => ({
@@ -148,33 +69,12 @@ export function TabBarMinimizeProvider({ children }: PropsWithChildren) {
       direction,
       lastScrollY,
       minimizedSV,
-      publishMinimized,
       reset,
-      setMinimized,
-      trackOffset,
     }),
-    [
-      accumulatedDistance,
-      direction,
-      lastScrollY,
-      minimizedSV,
-      publishMinimized,
-      reset,
-      setMinimized,
-      trackOffset,
-    ],
+    [accumulatedDistance, direction, lastScrollY, minimizedSV, reset],
   );
 
-  return createElement(
-    MinimizeControlsContext,
-    { value: controls },
-    createElement(MinimizedContext, { value: minimized }, children),
-  );
-}
-
-/** Whether the bar is minimized. Subscribes to every transition, so use it only where it renders. */
-export function useTabBarMinimized() {
-  return useContext(MinimizedContext);
+  return createElement(MinimizeControlsContext, { value: controls }, children);
 }
 
 /**
@@ -185,91 +85,124 @@ export function useOptionalTabBarMinimize() {
   return useContext(MinimizeControlsContext);
 }
 
-export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
-  // Optional: this scroll handler is shared by screens that may render
-  // outside the tab bar's tree (e.g. Recents reused inside the settings
-  // modal, which has no tab bar to minimize). In that case, skip the
-  // minimize bookkeeping and only keep `scrollY` in sync for the header.
+/**
+ * The direction rules as a worklet: `y` is the scroll offset with overscroll already clamped.
+ * Optional: scroll handlers are shared by screens that may render outside the tab bar's tree (e.g.
+ * Recents reused inside the settings modal, which has no tab bar to minimize). There the worklet
+ * does nothing and the caller only keeps `scrollY` in sync for the header.
+ */
+function useMinimizeTracker() {
   const context = useOptionalTabBarMinimize();
   const accumulatedDistance = context?.accumulatedDistance;
   const direction = context?.direction;
   const lastScrollY = context?.lastScrollY;
   const minimizedSV = context?.minimizedSV;
-  const publishMinimized = context?.publishMinimized;
+
+  return useCallback(
+    (y: number) => {
+      "worklet";
+      if (!accumulatedDistance || !direction || !lastScrollY || !minimizedSV) return;
+
+      const setMinimized = (next: boolean) => {
+        if (minimizedSV.get() !== next) minimizedSV.set(next);
+      };
+
+      const delta = y - lastScrollY.get();
+      lastScrollY.set(y);
+
+      if (y <= MIN_SCROLL_Y) {
+        accumulatedDistance.set(0);
+        direction.set(0);
+        setMinimized(false);
+        return;
+      }
+
+      const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : direction.get();
+      if (nextDirection === 0) return;
+
+      if (nextDirection !== direction.get()) {
+        direction.set(nextDirection);
+        accumulatedDistance.set(0);
+      }
+
+      accumulatedDistance.set(accumulatedDistance.get() + Math.abs(delta));
+
+      if (nextDirection === 1 && accumulatedDistance.get() >= COLLAPSE_DISTANCE) {
+        accumulatedDistance.set(0);
+        setMinimized(true);
+      } else if (nextDirection === -1 && accumulatedDistance.get() >= EXPAND_DISTANCE) {
+        accumulatedDistance.set(0);
+        setMinimized(false);
+      }
+    },
+    [accumulatedDistance, direction, lastScrollY, minimizedSV],
+  );
+}
+
+export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
+  const track = useMinimizeTracker();
 
   return useAnimatedScrollHandler(
     {
       onScroll(event) {
         "worklet";
-        const y = event.contentOffset.y;
-        scrollY.set(y);
-
-        if (
-          !accumulatedDistance ||
-          !direction ||
-          !lastScrollY ||
-          !minimizedSV ||
-          !publishMinimized
-        ) {
-          return;
-        }
-
-        const setMinimized = (next: boolean) => {
-          if (minimizedSV.get() === next) return;
-          minimizedSV.set(next);
-          scheduleOnRN(publishMinimized, next);
-        };
-
-        const delta = y - lastScrollY.get();
-        lastScrollY.set(y);
-
-        if (y <= MIN_SCROLL_Y) {
-          accumulatedDistance.set(0);
-          direction.set(0);
-          setMinimized(false);
-          return;
-        }
-
-        const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : direction.get();
-        if (nextDirection === 0) return;
-
-        if (nextDirection !== direction.get()) {
-          direction.set(nextDirection);
-          accumulatedDistance.set(0);
-        }
-
-        accumulatedDistance.set(accumulatedDistance.get() + Math.abs(delta));
-
-        if (nextDirection === 1 && accumulatedDistance.get() >= COLLAPSE_DISTANCE) {
-          accumulatedDistance.set(0);
-          setMinimized(true);
-        } else if (nextDirection === -1 && accumulatedDistance.get() >= EXPAND_DISTANCE) {
-          accumulatedDistance.set(0);
-          setMinimized(false);
-        }
+        scrollY.set(event.contentOffset.y);
+        track(
+          clampOverscroll(
+            event.contentOffset.y,
+            event.contentSize.height + event.contentInset.bottom - event.layoutMeasurement.height,
+          ),
+        );
       },
     },
-    [accumulatedDistance, direction, lastScrollY, minimizedSV, publishMinimized, scrollY],
+    [scrollY, track],
   );
 }
 
-/**
- * Scroll offsets reported by a native list (`onScroll` of `ArticleListView`) feed the same
- * direction rules as `useTabBarMinimizeScroll`, which runs as a worklet on Reanimated scroll events.
- * These events arrive on the JS thread, so the bookkeeping lives in a ref the provider owns (and
- * resets) behind `trackOffset`: reading a shared value written since the last read blocks JS on a synchronous round-trip
- * to the UI thread, and this runs on every scroll event. A transition goes straight to React; it
- * does not detour through the UI thread and back before the bar can start moving.
- */
-export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
-  const trackOffset = useOptionalTabBarMinimize()?.trackOffset;
+type NativeListScrollEvent = { y: number; maxY: number };
 
-  return useCallback(
-    (y: number) => {
-      scrollY.set(y);
-      trackOffset?.(y);
+type NativeListScrollOptions = {
+  /** Added to every offset, e.g. a top content inset the list rests beneath. */
+  readonly offset?: number;
+  /** Runs on the UI thread with each offset after `offset` is applied. */
+  readonly onScroll?: (y: number) => void;
+};
+
+/**
+ * `onScroll` for `ArticleListView` (wrapped with `Animated.createAnimatedComponent`). Reanimated
+ * receives the native view's scroll event on the UI thread, as it does a `ScrollView`'s, so the
+ * header tracks every frame and the direction rules decide there; no offset crosses to JS.
+ */
+export function useTabBarMinimizeNativeScroll(
+  scrollY: SharedValue<number>,
+  { offset = 0, onScroll: onOffset }: NativeListScrollOptions = {},
+) {
+  const track = useMinimizeTracker();
+  // Neither the handler nor the captured callback may be named `onScroll`: the Worklets Babel
+  // plugin declares a worklet method under its own name, which then collides with a captured
+  // binding of the same name ("Duplicate declaration") and fails the bundle.
+  const handlers = useMemo(
+    () => ({
+      handleScroll: (event: NativeListScrollEvent) => {
+        "worklet";
+        const y = event.y + offset;
+        scrollY.set(y);
+        onOffset?.(y);
+        track(clampOverscroll(y, event.maxY + offset));
+      },
+    }),
+    [offset, onOffset, scrollY, track],
+  );
+  const { doDependenciesDiffer } = useHandler(handlers, [offset, onOffset, scrollY, track]);
+
+  // Reanimated hands the worklet the event's payload; the type names the event JS would see.
+  return useEvent<NativeSyntheticEvent<NativeListScrollEvent>>(
+    (event) => {
+      "worklet";
+      handlers.handleScroll(event);
     },
-    [scrollY, trackOffset],
+    ["onScroll"],
+    doDependenciesDiffer,
   );
 }
 

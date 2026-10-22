@@ -1,13 +1,17 @@
 import { router, useFocusEffect } from "expo-router";
 import { useCallback, useMemo, useState } from "react";
-import { type NativeSyntheticEvent } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import type { SharedValue } from "react-native-reanimated";
+import { useSharedValue, type SharedValue } from "react-native-reanimated";
+import { scheduleOnRN } from "react-native-worklets";
 import { ArticleListView } from "../../../../modules/article-list";
+import { useNativeListSync } from "@modules/articles/hooks/use-native-list-sync";
 import { useArticleListStyle } from "@modules/articles/lib/list-style";
 import { toRecentRow } from "../lib/rows";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
-import { useOptionalTabBarMinimize, useTabBarMinimizeOffset } from "@ui/tab-bar/hooks/use-minimize";
+import {
+  useOptionalTabBarMinimize,
+  useTabBarMinimizeNativeScroll,
+} from "@ui/tab-bar/hooks/use-minimize";
 import { filterRecentArticles, type RecentRange } from "../lib/range";
 import { useRecentArticles } from "../lib/store";
 import { RecentHistoryEmptyState } from "./empty-state";
@@ -32,10 +36,13 @@ export function RecentList({
   const allArticles = useRecentArticles();
   const articles = useMemo(() => filterRecentArticles(allArticles, range), [allArticles, range]);
   const rows = useMemo(() => articles.map(toRecentRow), [articles]);
+  const listRef = useNativeListSync(rows);
   const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
   const listStyle = useArticleListStyle();
   const resetTabBarMinimize = useOptionalTabBarMinimize()?.reset;
-  const minimizeOffset = useTabBarMinimizeOffset(scrollY);
+  // Set once the list leaves its resting offset, so `onScrollBeginDrag` crosses to JS once per visit
+  // rather than on every scroll frame.
+  const hasLeftRest = useSharedValue(false);
   // Without a header of our own (pushed under a native stack header) UIKit insets the list itself.
   const insetsAutomatically = headerHeight === 0;
   const [scrollToTopToken, setScrollToTopToken] = useState(0);
@@ -46,20 +53,30 @@ export function RecentList({
       // the latest viewed item rather than restoring a previous reading position.
       onScrollReset();
       resetTabBarMinimize?.();
+      hasLeftRest.set(false);
       if (insetsAutomatically) return;
       scrollY.set(-headerHeight);
       setScrollToTopToken((token) => token + 1);
-    }, [headerHeight, insetsAutomatically, onScrollReset, resetTabBarMinimize, scrollY]),
+    }, [
+      hasLeftRest,
+      headerHeight,
+      insetsAutomatically,
+      onScrollReset,
+      resetTabBarMinimize,
+      scrollY,
+    ]),
   );
 
-  const handleScroll = useCallback(
-    (event: NativeSyntheticEvent<{ y: number }>) => {
-      const { y } = event.nativeEvent;
-      if (Math.abs(y + headerHeight) > 1) onScrollBeginDrag();
-      minimizeOffset(y);
+  const handleRestOffset = useCallback(
+    (y: number) => {
+      "worklet";
+      if (hasLeftRest.get() || Math.abs(y + headerHeight) <= 1) return;
+      hasLeftRest.set(true);
+      scheduleOnRN(onScrollBeginDrag);
     },
-    [headerHeight, minimizeOffset, onScrollBeginDrag],
+    [hasLeftRest, headerHeight, onScrollBeginDrag],
   );
+  const handleScroll = useTabBarMinimizeNativeScroll(scrollY, { onScroll: handleRestOffset });
 
   if (rows.length === 0) {
     return <RecentHistoryEmptyState />;
@@ -77,7 +94,7 @@ export function RecentList({
         })
       }
       onScroll={handleScroll}
-      rows={rows}
+      ref={listRef}
       scrollIndicatorInset={{ bottom: tabBarOcclusionHeight, top: headerHeight }}
       scrollToTopToken={scrollToTopToken}
       style={{ flex: 1 }}

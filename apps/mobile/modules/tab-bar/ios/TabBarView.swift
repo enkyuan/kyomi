@@ -37,6 +37,10 @@ final class TabBarView: ExpoView {
     model.onSearchSubmit = { [weak self] query in
       self?.onSearchSubmit(["query": query])
     }
+    // While the switcher sheet is open, VoiceOver stays inside it, as it does in a system sheet.
+    model.onSwitcherPresentedChange = { [weak self] presented in
+      self?.accessibilityViewIsModal = presented
+    }
   }
 
   override func layoutSubviews() {
@@ -44,7 +48,7 @@ final class TabBarView: ExpoView {
     hostingView.frame = bounds
   }
 
-  // Only the capsule and the search button take touches.
+  // Only the capsule and the search and add buttons take touches.
   override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
     let view = super.hitTest(point, with: event)
     return view === self ? nil : view
