@@ -1,10 +1,10 @@
 import {
+  BlankPagePortraitNativeIcon,
   BrainNativeIcon,
   ClockNativeIcon,
   FileArrowLeftInNativeIcon,
   MessageCircleNativeIcon,
   ReceiptBillNativeIcon,
-  TextNativeIcon,
   ToggleNativeIcon,
   type BlodeNativeIcon,
 } from "@kyomi/ui/icons/blode-native";
@@ -47,7 +47,7 @@ export const SETTINGS_GROUPS: readonly (readonly SettingsItem[])[] = [
     {
       id: "reader",
       label: "Reader",
-      icon: TextNativeIcon,
+      icon: BlankPagePortraitNativeIcon,
       route: "/(protected)/settings/reader",
     },
     {

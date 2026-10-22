@@ -13,6 +13,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 /** Blode export name, without the `Icon` suffix, for every icon native code uses. */
 const ICONS = [
   "ArrowShareRight",
+  "BlankPagePortrait",
   "Bookmark",
   "BookmarkFilled",
   "Brain",
