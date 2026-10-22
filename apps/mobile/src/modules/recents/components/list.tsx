@@ -18,6 +18,7 @@ import {
   resetRecentHistoryScroll,
   type NativeScrollable,
 } from "../lib/scroll-position";
+import { filterRecentArticles, type RecentRange } from "../lib/range";
 import { useRecentArticles } from "../lib/store";
 
 const ESTIMATED_ROW_SIZE = 116;
@@ -26,6 +27,7 @@ type RecentListProps = {
   headerHeight: number;
   onScrollBeginDrag: () => void;
   onScrollReset: () => void;
+  range?: RecentRange;
   scrollY: SharedValue<number>;
 };
 
@@ -33,12 +35,16 @@ export function RecentList({
   headerHeight,
   onScrollBeginDrag,
   onScrollReset,
+  range = "all",
   scrollY,
 }: RecentListProps) {
   const insets = useSafeAreaInsets();
-  const articles = useRecentArticles();
+  const allArticles = useRecentArticles();
+  const articles = useMemo(() => filterRecentArticles(allArticles, range), [allArticles, range]);
   const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
   const isIOS = Platform.OS === "ios";
+  // Without a header of our own (pushed under a native stack header) iOS insets the list itself.
+  const insetsAutomatically = isIOS && headerHeight === 0;
   const initialScrollOffset = getRecentHistoryInitialOffset(headerHeight, isIOS);
   const listRef = useRef<ComponentRef<typeof AnimatedLegendList<RecentArticle>>>(null);
   const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
@@ -52,18 +58,19 @@ export function RecentList({
       // previous reading position.
       onScrollReset();
       resetTabBarMinimize?.();
+      if (insetsAutomatically) return;
       scrollY.set(initialScrollOffset);
       resetRecentHistoryScroll(
         listRef.current?.getNativeScrollRef() as NativeScrollable | undefined,
         initialScrollOffset,
       );
-    }, [initialScrollOffset, onScrollReset, resetTabBarMinimize, scrollY]),
+    }, [initialScrollOffset, insetsAutomatically, onScrollReset, resetTabBarMinimize, scrollY]),
   );
 
   return (
     <AnimatedLegendList
-      automaticallyAdjustContentInsets={false}
-      automaticallyAdjustsScrollIndicatorInsets={false}
+      automaticallyAdjustContentInsets={insetsAutomatically}
+      automaticallyAdjustsScrollIndicatorInsets={insetsAutomatically}
       contentContainerStyle={
         isIOS
           ? {
@@ -77,7 +84,7 @@ export function RecentList({
             }
       }
       contentInset={isIOS ? { bottom: tabBarOcclusionHeight, top: headerHeight } : undefined}
-      contentInsetAdjustmentBehavior="never"
+      contentInsetAdjustmentBehavior={insetsAutomatically ? "automatic" : "never"}
       data={articles}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
       initialScrollOffset={isIOS ? initialScrollOffset : undefined}

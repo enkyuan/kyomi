@@ -26,10 +26,7 @@ export default function SettingsLayout() {
         name="index"
         options={{ ...blurHeader, headerBackVisible: false, title: "Settings" }}
       />
-      <Stack.Screen
-        name="recents"
-        options={{ ...blurHeader, headerTitle: "Recents", title: "Recents" }}
-      />
+      <Stack.Screen name="recents" options={blurHeader} />
       <Stack.Screen name="import-opml" options={blurHeader} />
       <Stack.Screen name="billing" options={blurHeader} />
       <Stack.Screen name="personalization" options={blurHeader} />
