@@ -105,7 +105,6 @@ export function List({
       contentInset={{ bottom: tabBarOcclusionHeight, top: topContentInset }}
       endReachedThreshold={NEAR_END_THRESHOLD}
       hasMore={hasNextPage}
-      isFetchingMore={isFetchingNextPage}
       listStyle={listStyle}
       onEndReached={handleEndReached}
       onRowAction={({ nativeEvent }) =>

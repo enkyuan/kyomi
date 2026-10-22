@@ -8,7 +8,6 @@ import UIKit
 /// What the list layout reads when it asks for each item's separators.
 final class ListChrome: @unchecked Sendable {
   var separatorColor: UIColor = .separator
-  var rowCount = 0
 }
 
 final class ArticleListView: ExpoView, UICollectionViewDelegate {
@@ -26,7 +25,6 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   private var style: ArticleListStyle?
 
   private var hasMore = false
-  private var isFetching = false
   private var endReachedThreshold: CGFloat = 0.5
   /// Row count an end-reached event was already sent for, so one page triggers one fetch.
   private var endReachedRowCount = -1
@@ -39,7 +37,8 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     let chrome = ListChrome()
     self.chrome = chrome
     // The system list layout draws the dividers: between rows only, inset to the rows' 20pt text
-    // margin like every iOS list, rather than edge to edge.
+    // margin like every iOS list, rather than edge to edge. Each row draws the divider above it
+    // (none on the first), so appending a page never changes a row already on screen.
     let layout = UICollectionViewCompositionalLayout { _, environment in
       var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
       configuration.showsSeparators = true
@@ -47,9 +46,9 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
       configuration.itemSeparatorHandler = { indexPath, sectionSeparator in
         var separator = sectionSeparator
         separator.color = chrome.separatorColor
-        separator.topSeparatorVisibility = .hidden
-        separator.bottomSeparatorVisibility = indexPath.item >= chrome.rowCount - 1 ? .hidden : .visible
-        separator.bottomSeparatorInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        separator.bottomSeparatorVisibility = .hidden
+        separator.topSeparatorVisibility = indexPath.item == 0 ? .hidden : .visible
+        separator.topSeparatorInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
         return separator
       }
       return NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: environment)
@@ -98,9 +97,6 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   // Props arrive one at a time, so related values are collected and applied together.
   var contentInset: ListInsetsRecord?
   var indicatorInset: ListInsetsRecord?
-  var pagingHasMore = false
-  var pagingIsFetching = false
-  var pagingThreshold = 0.5
 
   func applyInsets() {
     let content = contentInset
@@ -113,14 +109,9 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     )
   }
 
-  func applyPaging() {
-    setPaging(hasMore: pagingHasMore, isFetching: pagingIsFetching, threshold: pagingThreshold)
-  }
-
   func setRows(_ models: [ArticleRowModel]) {
     let previous = rowsById
     rows = models
-    chrome.rowCount = models.count
     rowsById = Dictionary(models.map { ($0.id, $0) }, uniquingKeysWith: { _, last in last })
     applySnapshot(changedIds: models.compactMap { previous[$0.id] != nil && previous[$0.id] != $0 ? $0.id : nil })
   }
@@ -132,9 +123,12 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     applySnapshot(changedIds: rows.map(\.id))
   }
 
-  func setPaging(hasMore: Bool, isFetching: Bool, threshold: Double) {
+  func setHasMore(_ hasMore: Bool) {
     self.hasMore = hasMore
-    self.isFetching = isFetching
+    checkEndReached()
+  }
+
+  func setEndReachedThreshold(_ threshold: Double) {
     endReachedThreshold = CGFloat(threshold)
     checkEndReached()
   }
@@ -176,8 +170,6 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     if !reconfigure.isEmpty { snapshot.reconfigureItems(reconfigure) }
     dataSource.apply(snapshot, animatingDifferences: false) { [weak self] in
       guard let self else { return }
-      // The last row's separator moves when a page arrives.
-      self.collectionView.collectionViewLayout.invalidateLayout()
       // A list shorter than the screen can never be scrolled, so it asks for its next page itself.
       // Scrolling lists wait for the user: cells are self-sized, so content height is only an
       // estimate until rows have been laid out.
@@ -197,8 +189,9 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   }
 
   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-    // A failed page fetch retries once the user scrolls again.
-    if !isFetching { endReachedRowCount = -1 }
+    // A failed page fetch retries once the user scrolls again; JS ignores the event while a
+    // fetch is still in flight.
+    endReachedRowCount = -1
   }
 
   func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -210,7 +203,7 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   }
 
   private func checkEndReached() {
-    guard hasMore, !isFetching, !rows.isEmpty, collectionView.bounds.height > 0 else { return }
+    guard hasMore, !rows.isEmpty, collectionView.bounds.height > 0 else { return }
     let visibleBottom = collectionView.contentOffset.y + collectionView.bounds.height - collectionView.contentInset.bottom
     let remaining = collectionView.contentSize.height - visibleBottom
     guard remaining < endReachedThreshold * collectionView.bounds.height else { return }

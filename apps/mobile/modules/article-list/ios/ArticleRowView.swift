@@ -267,11 +267,14 @@ private nonisolated(unsafe) let faviconCache: NSCache<NSURL, UIImage> = {
   return cache
 }()
 
+/// Loads favicons once per URL. Rows from the same feed share one request, and images are decoded
+/// off the main thread, so a favicon arriving mid-scroll costs the main thread nothing but a draw.
 @MainActor
 final class FaviconStore {
   static let shared = FaviconStore()
 
   private var failed = Set<URL>()
+  private var inFlight: [URL: Task<UIImage?, Never>] = [:]
 
   nonisolated static func cachedImage(for url: URL) -> UIImage? {
     faviconCache.object(forKey: url as NSURL)
@@ -280,15 +283,24 @@ final class FaviconStore {
   func image(for url: URL) async -> UIImage? {
     if let cached = Self.cachedImage(for: url) { return cached }
     if failed.contains(url) { return nil }
-    guard
-      let (data, response) = try? await URLSession.shared.data(from: url),
-      (response as? HTTPURLResponse).map({ (200..<300).contains($0.statusCode) }) ?? true,
-      let image = UIImage(data: data)
-    else {
-      failed.insert(url)
-      return nil
+    if let task = inFlight[url] { return await task.value }
+
+    let task = Task.detached(priority: .utility) { () -> UIImage? in
+      guard
+        let (data, response) = try? await URLSession.shared.data(from: url),
+        (response as? HTTPURLResponse).map({ (200..<300).contains($0.statusCode) }) ?? true,
+        let image = await UIImage(data: data)?.byPreparingForDisplay()
+      else { return nil }
+      return image
     }
-    faviconCache.setObject(image, forKey: url as NSURL)
+    inFlight[url] = task
+    let image = await task.value
+    inFlight[url] = nil
+    if let image {
+      faviconCache.setObject(image, forKey: url as NSURL)
+    } else {
+      failed.insert(url)
+    }
     return image
   }
 }

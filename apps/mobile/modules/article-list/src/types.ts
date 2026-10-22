@@ -76,9 +76,11 @@ export type ArticleListViewProps = ViewProps & {
   readonly scrollIndicatorInset?: ArticleListInsets;
   /** Let UIKit inset the list under a native navigation header instead of `contentInset`. */
   readonly adjustsInsetsAutomatically?: boolean;
-  /** More pages exist; `onEndReached` fires while this is true and nothing is fetching. */
+  /**
+   * More pages exist; `onEndReached` fires once per page while this is true. Fetch state stays in
+   * JS: every prop change re-sends all props, `rows` included, so it is not mirrored here.
+   */
   readonly hasMore?: boolean;
-  readonly isFetchingMore?: boolean;
   /** Distance from the end, in viewport heights, that triggers the next page. */
   readonly endReachedThreshold?: number;
   /** Scrolls to the top whenever the value changes. */

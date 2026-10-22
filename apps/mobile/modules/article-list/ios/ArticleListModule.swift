@@ -35,18 +35,11 @@ public class ArticleListModule: Module {
       }
 
       Prop("hasMore") { (view: ArticleListView, hasMore: Bool?) in
-        view.pagingHasMore = hasMore ?? false
-        view.applyPaging()
-      }
-
-      Prop("isFetchingMore") { (view: ArticleListView, fetching: Bool?) in
-        view.pagingIsFetching = fetching ?? false
-        view.applyPaging()
+        view.setHasMore(hasMore ?? false)
       }
 
       Prop("endReachedThreshold") { (view: ArticleListView, threshold: Double?) in
-        view.pagingThreshold = threshold ?? 0.5
-        view.applyPaging()
+        view.setEndReachedThreshold(threshold ?? 0.5)
       }
 
       Prop("scrollToTopToken") { (view: ArticleListView, token: Int?) in
