@@ -4,7 +4,7 @@ import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import { mobileColors } from "@/theme/colors";
 import { useArticleActions } from "../../hooks/use-actions";
-import { ACTION_ICON_SIZE } from "./constants";
+import { ACTION_ICON_SIZE } from "@modules/articles/lib/layout";
 
 export function ItemToolbar({ item }: { readonly item: ArticleListItemDto }) {
   const { hideArticle, isUpdating, openSource, reportBrokenArticle, shareArticle, toggleSaved } =

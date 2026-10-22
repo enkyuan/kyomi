@@ -11,11 +11,10 @@ import {
 } from "@kyomi/ui/icons/blode-native";
 import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import type { ArticleListIcon, ArticleListStyle } from "../../../../modules/article-list";
-import { feedItemTypography } from "@modules/articles/lib/layout";
 import { mobileColors } from "@/theme/colors";
 import { FONT_STYLES } from "@/theme/fonts";
 import { useTheme } from "@ui/liquid-glass/hooks/use-theme";
-import { ACTION_ICON_SIZE } from "@modules/inbox/components/toolbar/constants";
+import { ACTION_ICON_SIZE, feedItemTypography } from "./layout";
 
 function toListIcon(icon: BlodeNativeIcon): ArticleListIcon {
   return {
