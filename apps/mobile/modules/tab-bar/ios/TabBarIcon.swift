@@ -13,12 +13,13 @@ struct TabBarIcon {
 
   let viewBox: CGRect
   let layers: [Layer]
-  /// Clockwise rotation about the icon's centre, in degrees.
-  let rotation: Double
+  /// Transform that rotates clockwise about the viewBox centre, then re-centres the rotated glyph.
+  /// A pointed glyph's bounds move when it turns, so rotating about the viewBox centre alone leaves it off-centre.
+  let transform: CGAffineTransform
 
   init(viewBox: String, rotation: Double = 0, paths: [(d: String, evenOdd: Bool, strokeWidth: CGFloat?)]) {
-    self.viewBox = Self.parseViewBox(viewBox)
-    self.rotation = rotation
+    let box = Self.parseViewBox(viewBox)
+    self.viewBox = box
     layers = paths.map {
       Layer(
         path: SwiftUI.Path(SVGPathParser.path(from: $0.d)),
@@ -26,6 +27,19 @@ struct TabBarIcon {
         strokeWidth: $0.strokeWidth
       )
     }
+    transform = Self.centeredRotation(degrees: rotation, in: box, layers: layers)
+  }
+
+  private static func centeredRotation(degrees: Double, in box: CGRect, layers: [Layer]) -> CGAffineTransform {
+    guard degrees != 0 else { return .identity }
+    let rotate = CGAffineTransform(translationX: box.midX, y: box.midY)
+      .rotated(by: degrees * .pi / 180)
+      .translatedBy(x: -box.midX, y: -box.midY)
+    let bounds = layers
+      .map { $0.path.cgPath.copy(using: [rotate])?.boundingBoxOfPath ?? .null }
+      .reduce(CGRect.null) { $0.union($1) }
+    guard !bounds.isNull else { return rotate }
+    return rotate.translatedBy(x: box.midX - bounds.midX, y: box.midY - bounds.midY)
   }
 
   private static func parseViewBox(_ value: String) -> CGRect {
@@ -50,11 +64,10 @@ struct TabBarIconView: View {
     ZStack {
       ForEach(icon.layers.indices, id: \.self) { index in
         let layer = icon.layers[index]
-        ViewBoxShape(path: layer.path, viewBox: icon.viewBox, strokeWidth: layer.strokeWidth)
+        ViewBoxShape(path: layer.path, viewBox: icon.viewBox, transform: icon.transform, strokeWidth: layer.strokeWidth)
           .fill(color, style: FillStyle(eoFill: layer.evenOdd))
       }
     }
-    .rotationEffect(.degrees(icon.rotation))
     .frame(width: size, height: size)
     .accessibilityHidden(true)
   }
@@ -65,11 +78,12 @@ struct TabBarIconView: View {
 private struct ViewBoxShape: Shape {
   let path: SwiftUI.Path
   let viewBox: CGRect
+  let transform: CGAffineTransform
   let strokeWidth: CGFloat?
 
   func path(in rect: CGRect) -> SwiftUI.Path {
     let scale = min(rect.width / viewBox.width, rect.height / viewBox.height)
-    let scaled = path.applying(
+    let scaled = path.applying(transform).applying(
       CGAffineTransform(
         a: scale,
         b: 0,
