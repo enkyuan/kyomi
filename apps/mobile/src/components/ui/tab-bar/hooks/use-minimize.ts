@@ -151,3 +151,48 @@ export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
     [accumulatedDistance, direction, lastScrollY, minimizedSV, scrollY],
   );
 }
+
+/**
+ * Scroll offsets reported by a native list (`onScroll` of `ArticleListView`) feed the same
+ * direction bookkeeping as `useTabBarMinimizeScroll`, which expects Reanimated scroll events.
+ */
+export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
+  const context = useOptionalTabBarMinimize();
+
+  return useCallback(
+    (y: number) => {
+      scrollY.set(y);
+      if (!context) return;
+
+      const { accumulatedDistance, direction, lastScrollY, minimizedSV } = context;
+      const delta = y - lastScrollY.get();
+      lastScrollY.set(y);
+
+      if (y <= MIN_SCROLL_Y) {
+        accumulatedDistance.set(0);
+        direction.set(0);
+        if (minimizedSV.get()) minimizedSV.set(false);
+        return;
+      }
+
+      const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : direction.get();
+      if (nextDirection === 0) return;
+
+      if (nextDirection !== direction.get()) {
+        direction.set(nextDirection);
+        accumulatedDistance.set(0);
+      }
+
+      accumulatedDistance.set(accumulatedDistance.get() + Math.abs(delta));
+
+      if (nextDirection === 1 && accumulatedDistance.get() >= COLLAPSE_DISTANCE) {
+        accumulatedDistance.set(0);
+        if (!minimizedSV.get()) minimizedSV.set(true);
+      } else if (nextDirection === -1 && accumulatedDistance.get() >= EXPAND_DISTANCE) {
+        accumulatedDistance.set(0);
+        if (minimizedSV.get()) minimizedSV.set(false);
+      }
+    },
+    [context, scrollY],
+  );
+}

@@ -1,12 +1,11 @@
 import { AnimatedLegendList } from "@legendapp/list/reanimated";
 import { router, useFocusEffect } from "expo-router";
 import { useCallback, useMemo, useRef, type ComponentRef } from "react";
-import { Platform, Pressable, Text, View, useWindowDimensions } from "react-native";
+import { Platform, Pressable, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import type { SharedValue } from "react-native-reanimated";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { useOptionalTabBarMinimize, useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
-import { EmptyStateIcon } from "@/components/icons/empty-state";
 import { FeedFavicon } from "@modules/articles/components/feed-favicon";
 import { feedItemTypography } from "@modules/articles/lib/layout";
 import { formatArticleTimestamp } from "@modules/articles/lib/format-timestamp";
@@ -20,6 +19,7 @@ import {
 } from "../lib/scroll-position";
 import { filterRecentArticles, type RecentRange } from "../lib/range";
 import { useRecentArticles } from "../lib/store";
+import { RecentHistoryEmptyState } from "./empty-state";
 
 const ESTIMATED_ROW_SIZE = 116;
 
@@ -159,37 +159,6 @@ function RecentHistoryItem({ article, isFirst }: { article: RecentArticle; isFir
           </Text>
         </View>
       </Pressable>
-    </View>
-  );
-}
-
-function RecentHistoryEmptyState() {
-  const { width } = useWindowDimensions();
-  const emptyHorizontalInset = width * (32 / 390);
-
-  return (
-    <View
-      className="flex-1 items-center justify-center gap-5 pb-24"
-      style={{ paddingHorizontal: emptyHorizontalInset }}
-    >
-      <EmptyStateIcon size={176} />
-      <View className="w-full items-center gap-2">
-        <Text
-          className="text-center text-foreground"
-          numberOfLines={2}
-          style={FONT_STYLES.screenTitle}
-        >
-          No recently viewed articles
-        </Text>
-        <Text
-          className="text-center text-muted-foreground"
-          lineBreakStrategyIOS="standard"
-          numberOfLines={2}
-          style={FONT_STYLES.bodySmall}
-        >
-          Older saved posts and clips will surface here after they've been waiting a while.
-        </Text>
-      </View>
     </View>
   );
 }

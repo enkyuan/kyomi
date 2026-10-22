@@ -3,7 +3,7 @@ import SwiftUI
 
 /// Vector icon geometry received from `@kyomi/ui`, parsed once when the prop
 /// arrives so drawing never re-reads SVG path data.
-struct TabBarIcon {
+public struct TabBarIcon {
   struct Layer {
     let path: SwiftUI.Path
     let evenOdd: Bool
@@ -17,7 +17,7 @@ struct TabBarIcon {
   /// A pointed glyph's bounds move when it turns, so rotating about the viewBox centre alone leaves it off-centre.
   let transform: CGAffineTransform
 
-  init(viewBox: String, rotation: Double = 0, paths: [(d: String, evenOdd: Bool, strokeWidth: CGFloat?)]) {
+  public init(viewBox: String, rotation: Double = 0, paths: [(d: String, evenOdd: Bool, strokeWidth: CGFloat?)]) {
     let box = Self.parseViewBox(viewBox)
     self.viewBox = box
     layers = paths.map {
@@ -58,12 +58,18 @@ struct TabBarIcon {
 
 /// Draws a `TabBarIcon` aspect-fit inside a square, matching SVG's default
 /// `xMidYMid meet` viewBox behavior.
-struct TabBarIconView: View {
+public struct TabBarIconView: View {
   let icon: TabBarIcon
   let size: CGFloat
   let color: Color
 
-  var body: some View {
+  public init(icon: TabBarIcon, size: CGFloat, color: Color) {
+    self.icon = icon
+    self.size = size
+    self.color = color
+  }
+
+  public var body: some View {
     ZStack {
       ForEach(icon.layers.indices, id: \.self) { index in
         let layer = icon.layers[index]
