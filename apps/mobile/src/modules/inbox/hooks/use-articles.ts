@@ -57,5 +57,7 @@ export function useArticles(scope: ArticleScope = "subscribed") {
     isFetchingNextPage: query.isFetchingNextPage,
     hasNextPage: query.hasNextPage,
     fetchNextPage: query.fetchNextPage,
+    /** Pages fetched so far; it grows with every page, whether or not its items survive a filter. */
+    pageCount: query.data?.pages.length ?? 0,
   };
 }

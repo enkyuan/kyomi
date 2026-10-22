@@ -21,6 +21,32 @@ function sameRow(a: ArticleListRow, b: ArticleListRow) {
   );
 }
 
+/** Where a paged list stands, as the query reports it. */
+export type ListPaging = {
+  readonly hasMore: boolean;
+  readonly isLoadingMore: boolean;
+  /** Pages fetched so far; it must grow with every page, including one that adds no visible row. */
+  readonly pageCount: number;
+};
+
+/** The operation that moves the native list's paging from `previous` to `next`, if they differ. */
+export function diffPaging(previous: ListPaging | null, next: ListPaging): ArticleListOp | null {
+  if (
+    previous !== null &&
+    previous.hasMore === next.hasMore &&
+    previous.isLoadingMore === next.isLoadingMore &&
+    previous.pageCount === next.pageCount
+  ) {
+    return null;
+  }
+  return {
+    hasMore: next.hasMore,
+    isLoadingMore: next.isLoadingMore,
+    pageCount: next.pageCount,
+    type: "paging",
+  };
+}
+
 /**
  * The operations that turn the rows the native list holds (`previous`, or `null` for a list that
  * holds none) into `next`. A page appended, a row edited or removed in place cost one operation

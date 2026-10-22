@@ -1,5 +1,8 @@
 import { describe, expect, test } from "bun:test";
-import { diffRows } from "../../../../../../apps/mobile/src/modules/articles/lib/list-sync";
+import {
+  diffPaging,
+  diffRows,
+} from "../../../../../../apps/mobile/src/modules/articles/lib/list-sync";
 import type { ArticleListRow } from "../../../../../../apps/mobile/modules/article-list";
 
 const row = (id: string, overrides: Partial<ArticleListRow> = {}): ArticleListRow => ({
@@ -106,5 +109,46 @@ describe("diffRows", () => {
     expect(diffRows([a], [a, row("a", { title: "again" })], 2)).toEqual([
       { epoch: 2, rows: expect.any(Array), type: "reset" },
     ]);
+  });
+});
+
+describe("diffPaging", () => {
+  const paging = { hasMore: true, isLoadingMore: false, pageCount: 1 };
+
+  test("sends the paging state to a list that has none", () => {
+    expect(diffPaging(null, paging)).toEqual({
+      hasMore: true,
+      isLoadingMore: false,
+      pageCount: 1,
+      type: "paging",
+    });
+  });
+
+  test("sends nothing while paging is unchanged, even for a rebuilt object", () => {
+    expect(diffPaging(paging, { ...paging })).toBeNull();
+  });
+
+  test("reports a fetch starting", () => {
+    expect(diffPaging(paging, { ...paging, isLoadingMore: true })).toEqual({
+      hasMore: true,
+      isLoadingMore: true,
+      pageCount: 1,
+      type: "paging",
+    });
+  });
+
+  test("reports a page that arrived, which re-arms the end trigger even if no row shows", () => {
+    const loading = { ...paging, isLoadingMore: true };
+
+    expect(diffPaging(loading, { hasMore: true, isLoadingMore: false, pageCount: 2 })).toEqual({
+      hasMore: true,
+      isLoadingMore: false,
+      pageCount: 2,
+      type: "paging",
+    });
+  });
+
+  test("reports the last page", () => {
+    expect(diffPaging(paging, { ...paging, hasMore: false })).toMatchObject({ hasMore: false });
   });
 });

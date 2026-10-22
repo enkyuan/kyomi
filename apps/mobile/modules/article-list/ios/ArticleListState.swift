@@ -10,11 +10,14 @@ enum ArticleListOp: Sendable {
   /// Replaces the content of listed rows; ids that are not listed are ignored.
   case update(rows: [ArticleRowModel])
   case remove(ids: [String])
+  /// Where paging stands. It travels with the rows so the list never sees one without the other:
+  /// a page counted before its rows arrive would look like a page that added nothing.
+  case paging(ArticleListPaging)
 }
 
 extension ArticleListOp: Decodable {
   private enum CodingKeys: String, CodingKey {
-    case type, epoch, rows, ids, scrollToTop
+    case type, epoch, rows, ids, scrollToTop, pageCount, hasMore, isLoadingMore
   }
 
   init(from decoder: any Decoder) throws {
@@ -32,6 +35,13 @@ extension ArticleListOp: Decodable {
       self = .update(rows: try container.decode([ArticleRowWire].self, forKey: .rows).map(\.model))
     case "remove":
       self = .remove(ids: try container.decode([String].self, forKey: .ids))
+    case "paging":
+      self = .paging(
+        ArticleListPaging(
+          pageCount: try container.decode(Int.self, forKey: .pageCount),
+          hasMore: try container.decode(Bool.self, forKey: .hasMore),
+          isLoadingMore: try container.decode(Bool.self, forKey: .isLoadingMore)
+        ))
     default:
       throw DecodingError.dataCorruptedError(
         forKey: .type, in: container, debugDescription: "Unknown article list operation")
@@ -39,18 +49,30 @@ extension ArticleListOp: Decodable {
   }
 }
 
-/// The rows the list shows, in order. It only ever changes through `reduce`, on the worker queue;
-/// the main thread receives finished copies.
+/// Paging as JavaScript's query reports it. The list reads it to decide when to ask for a page and
+/// whether to show the loading footer; the fetching itself stays in JavaScript.
+struct ArticleListPaging: Equatable, Sendable {
+  /// Pages fetched so far. It grows by one for every page that arrives, including one whose rows
+  /// are all filtered out, so each page re-arms the end trigger.
+  var pageCount = 0
+  var hasMore = false
+  var isLoadingMore = false
+}
+
+/// What the list shows. It only ever changes through `reduce`, on the worker queue; the main thread
+/// receives finished copies.
 struct ArticleListState: Sendable {
   /// Row ids in display order, each listed once.
   private(set) var ids: [String] = []
   private(set) var rows: [String: ArticleRowModel] = [:]
   private(set) var epoch = -1
+  private(set) var paging = ArticleListPaging()
 
   /// Applies `ops` in order. Returns what the main thread must present, or `nil` when nothing in
   /// the list changed (an update that repeats a row's content, a remove of unknown ids).
   mutating func reduce(_ ops: [ArticleListOp]) -> ArticleListPresentation? {
-    var didChange = false
+    var didChangeRows = false
+    var didChangePaging = false
     var didReset = false
     var scrollToTop = false
     // Rows that stay in the list with new content. A row written twice in one batch may be
@@ -72,7 +94,7 @@ struct ArticleListState: Sendable {
         ids = nextIds
         rows = nextRows
         self.epoch = epoch
-        didChange = true
+        didChangeRows = true
         didReset = true
         scrollToTop = top
 
@@ -81,10 +103,10 @@ struct ArticleListState: Sendable {
           switch rows.updateValue(row, forKey: row.id) {
           case nil:
             ids.append(row.id)
-            didChange = true
+            didChangeRows = true
           case let old? where old != row:
             changed.insert(row.id)
-            didChange = true
+            didChangeRows = true
           default:
             break
           }
@@ -95,7 +117,7 @@ struct ArticleListState: Sendable {
           guard let old = rows[row.id], old != row else { continue }
           rows[row.id] = row
           changed.insert(row.id)
-          didChange = true
+          didChangeRows = true
         }
 
       case let .remove(removedIds):
@@ -104,14 +126,20 @@ struct ArticleListState: Sendable {
         ids.removeAll { gone.contains($0) }
         for id in gone { rows[id] = nil }
         changed.subtract(gone)
-        didChange = true
+        didChangeRows = true
+
+      case let .paging(next):
+        guard next != paging else { continue }
+        paging = next
+        didChangePaging = true
       }
     }
 
-    guard didChange else { return nil }
+    guard didChangeRows || didChangePaging else { return nil }
     return ArticleListPresentation(
       state: self,
       reconfiguredIds: Array(changed),
+      didChangeRows: didChangeRows,
       didReset: didReset,
       scrollToTop: scrollToTop
     )
@@ -123,7 +151,10 @@ struct ArticleListPresentation: Sendable {
   let state: ArticleListState
   /// Listed rows whose content changed, to reconfigure in place.
   let reconfiguredIds: [String]
-  /// The batch replaced every row, so paging starts over.
+  /// Rows were added, removed, replaced or edited, so the snapshot needs applying. A batch that
+  /// only moved paging skips the diff.
+  let didChangeRows: Bool
+  /// The batch replaced every row.
   let didReset: Bool
   let scrollToTop: Bool
 }

@@ -38,12 +38,8 @@ public class ArticleListModule: Module {
         view.setAdjustsInsetsAutomatically(automatic ?? false)
       }
 
-      Prop("hasMore") { (view: ArticleListView, hasMore: Bool?) in
-        view.setHasMore(hasMore ?? false)
-      }
-
-      Prop("endReachedThreshold") { (view: ArticleListView, threshold: Double?) in
-        view.setEndReachedThreshold(threshold ?? 0.5)
+      Prop("endReachedDistance") { (view: ArticleListView, rows: Int?) in
+        view.setEndReachedDistance(rows ?? 5)
       }
 
       Prop("scrollToTopToken") { (view: ArticleListView, token: Int?) in

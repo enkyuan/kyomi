@@ -9,6 +9,8 @@ import UIKit
 /// What the list layout reads when it asks for each item's separators.
 final class ListChrome: @unchecked Sendable {
   var separatorColor: UIColor = .separator
+  /// The list ends in a loading footer while the next page is on its way.
+  var showsFooter = false
 }
 
 final class ArticleListView: ExpoView, UICollectionViewDelegate {
@@ -25,10 +27,11 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   private var state = ArticleListState()
   private var style: ArticleListStyle?
 
-  private var hasMore = false
-  private var endReachedThreshold: CGFloat = 0.5
-  /// Row count an end-reached event was already sent for, so one page triggers one fetch.
-  private var endReachedRowCount = -1
+  /// How many rows from the last one the list asks for the next page. Counting rows, not points,
+  /// keeps the trigger exact while cells are still self-sizing and `contentSize` is an estimate.
+  private var endReachedDistance = 5
+  /// The page an end-reached event was already sent for, so one page triggers one fetch.
+  private var endReachedKey: EndReachedKey?
   private var contentInsetTop: CGFloat = 0
   private var hasPositionedInitialOffset = false
   private var scrollToTopToken: Int?
@@ -43,6 +46,7 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
       var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
       configuration.showsSeparators = true
       configuration.backgroundColor = .clear
+      configuration.footerMode = chrome.showsFooter ? .supplementary : .none
       configuration.itemSeparatorHandler = { indexPath, sectionSeparator in
         var separator = sectionSeparator
         separator.color = chrome.separatorColor
@@ -80,6 +84,14 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     dataSource = UICollectionViewDiffableDataSource<Int, String>(collectionView: collectionView) {
       collectionView, indexPath, id in
       collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: id)
+    }
+    let footerRegistration = UICollectionView.SupplementaryRegistration<ArticleListFooterView>(
+      elementKind: UICollectionView.elementKindSectionFooter
+    ) { [weak self] footer, _, _ in
+      footer.setColor(self?.style?.loadingColor ?? .secondaryLabel)
+    }
+    dataSource?.supplementaryViewProvider = { collectionView, _, indexPath in
+      collectionView.dequeueConfiguredReusableSupplementary(using: footerRegistration, for: indexPath)
     }
   }
 
@@ -123,10 +135,21 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   /// Shows a state the pipeline has finished reducing.
   private func present(_ presentation: ArticleListPresentation) {
     state = presentation.state
-    // A new data set starts paging over: its end has not been reported yet.
-    if presentation.didReset { endReachedRowCount = -1 }
-    applySnapshot(reconfiguring: presentation.reconfiguredIds)
-    if presentation.scrollToTop { scrollToTop() }
+    updateFooter()
+    if presentation.didChangeRows {
+      applySnapshot(reconfiguring: presentation.reconfiguredIds)
+      if presentation.scrollToTop { scrollToTop() }
+    } else {
+      // Paging moved without rows: a page that added none may leave the end in view.
+      checkVisibleEnd()
+    }
+  }
+
+  private func updateFooter() {
+    let showsFooter = state.paging.hasMore && state.paging.isLoadingMore
+    guard chrome.showsFooter != showsFooter else { return }
+    chrome.showsFooter = showsFooter
+    collectionView.collectionViewLayout.invalidateLayout()
   }
 
   func setStyle(_ next: ArticleListStyle) {
@@ -140,14 +163,9 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     applySnapshot(reconfiguring: visibleIds)
   }
 
-  func setHasMore(_ hasMore: Bool) {
-    self.hasMore = hasMore
-    checkEndReached()
-  }
-
-  func setEndReachedThreshold(_ threshold: Double) {
-    endReachedThreshold = CGFloat(threshold)
-    checkEndReached()
+  func setEndReachedDistance(_ rows: Int) {
+    endReachedDistance = max(rows, 0)
+    checkVisibleEnd()
   }
 
   func setInsets(top: CGFloat, bottom: CGFloat, indicatorTop: CGFloat, indicatorBottom: CGFloat) {
@@ -188,13 +206,9 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
       snapshot.appendItems(state.ids)
       if !reconfiguredIds.isEmpty { snapshot.reconfigureItems(reconfiguredIds) }
       dataSource.apply(snapshot, animatingDifferences: false) { [weak self] in
-        guard let self else { return }
-        // A list shorter than the screen can never be scrolled, so it asks for its next page itself.
-        // Scrolling lists wait for the user: cells are self-sized, so content height is only an
-        // estimate until rows have been laid out.
-        if self.collectionView.contentSize.height <= self.collectionView.bounds.height {
-          self.checkEndReached()
-        }
+        // Rows that were already on screen are not displayed again, so a list that is still short
+        // after a filter, or a page that changed nothing, asks for its next page here.
+        self?.checkVisibleEnd()
       }
     }
   }
@@ -205,13 +219,20 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   /// thread, so the header and the tab bar follow the list without crossing to JS.
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     emitScroll(scrollView)
-    if scrollView.isTracking || scrollView.isDecelerating { checkEndReached() }
   }
 
   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
     // A failed page fetch retries once the user scrolls again; JS ignores the event while a
-    // fetch is still in flight.
-    endReachedRowCount = -1
+    // fetch is still in flight. A drag that starts at the end shows no new row, so it checks itself.
+    endReachedKey = nil
+    checkVisibleEnd()
+  }
+
+  func collectionView(
+    _ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell,
+    forItemAt indexPath: IndexPath
+  ) {
+    checkEndReached(lastVisibleItem: indexPath.item)
   }
 
   func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -228,14 +249,31 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     onScroll(["y": scrollView.contentOffset.y, "maxY": maxY])
   }
 
-  private func checkEndReached() {
+  // MARK: Paging
+
+  /// Which page the list last asked for. The epoch restarts it for a new data set; the page count
+  /// advances with every page that arrives, so a page whose rows were all filtered out still lets
+  /// the list ask for the next one.
+  private struct EndReachedKey: Equatable {
+    let epoch: Int
+    let pageCount: Int
+  }
+
+  private func checkVisibleEnd() {
+    guard let lastVisible = collectionView.indexPathsForVisibleItems.map(\.item).max() else { return }
+    checkEndReached(lastVisibleItem: lastVisible)
+  }
+
+  /// Asks for the next page once a row within `endReachedDistance` of the last is on screen: once
+  /// per page, and not while a page is already loading.
+  private func checkEndReached(lastVisibleItem: Int) {
+    let paging = state.paging
     let rowCount = state.ids.count
-    guard hasMore, rowCount > 0, collectionView.bounds.height > 0 else { return }
-    let visibleBottom = collectionView.contentOffset.y + collectionView.bounds.height - collectionView.contentInset.bottom
-    let remaining = collectionView.contentSize.height - visibleBottom
-    guard remaining < endReachedThreshold * collectionView.bounds.height else { return }
-    guard endReachedRowCount != rowCount else { return }
-    endReachedRowCount = rowCount
+    guard paging.hasMore, !paging.isLoadingMore, rowCount > 0 else { return }
+    guard lastVisibleItem >= rowCount - 1 - endReachedDistance else { return }
+    let key = EndReachedKey(epoch: state.epoch, pageCount: paging.pageCount)
+    guard endReachedKey != key else { return }
+    endReachedKey = key
     onEndReached()
   }
 }

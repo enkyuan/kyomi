@@ -138,6 +138,8 @@ struct ArticleListStyle {
   var border: Color
   /// The list draws its separators itself, in this colour.
   var separatorColor: UIColor
+  /// The loading footer's spinner.
+  var loadingColor: UIColor
   var secondary: Color
   var card: Color
   var mutedIcon: Color
@@ -167,6 +169,7 @@ struct ArticleListStyle {
     mutedForeground = Color(uiColor: record.mutedForeground)
     border = Color(uiColor: record.border)
     separatorColor = record.border
+    loadingColor = record.mutedForeground
     secondary = Color(uiColor: record.secondary)
     card = Color(uiColor: record.card)
     mutedIcon = Color(uiColor: record.mutedIcon)
