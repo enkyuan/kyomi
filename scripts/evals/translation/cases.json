@@ -1,0 +1,26 @@
+{
+  "description": "Article translation provider eval. Article bodies stay in the local database; this file holds only feed_items ids, drawn one per feed and stratified by HTML shape (seed kyomi-eval-1).",
+  "languages": ["ja", "es", "de", "zh-Hans"],
+  "articles": [
+    { "id": "46168859-5fe5-5ccf-968d-c6e7bc2300be", "stratum": "code" },
+    { "id": "7bc857b3-04b5-58c1-9328-25cfb1ba731f", "stratum": "code" },
+    { "id": "28445d56-31c8-5e27-9ddc-e7f44bcfdf0e", "stratum": "code" },
+    { "id": "ee5e37b0-3332-5c61-9d2c-fd6af356e676", "stratum": "code" },
+    { "id": "ae118a6a-7cf6-5b6e-b00f-4b8268515661", "stratum": "images" },
+    { "id": "6cb545fc-61b3-595b-aa34-b96d611bf385", "stratum": "images" },
+    { "id": "0d3c1c36-8478-56ee-bdda-8f1a76a5b8c8", "stratum": "images" },
+    { "id": "ad179600-ec6e-57e1-9ef1-06403b8daf76", "stratum": "lists" },
+    { "id": "acabf583-77e8-5297-bfc5-7adb366e04e7", "stratum": "lists" },
+    { "id": "96df5a31-71ae-5f4d-be5c-43fbabbae82b", "stratum": "lists" },
+    { "id": "2202fc8a-50c3-56a0-8103-09d9c94f50d5", "stratum": "long-prose" },
+    { "id": "16f67178-fa28-51cb-aae3-41739ed5c255", "stratum": "long-prose" },
+    { "id": "d790a699-6579-555b-9a0c-2e5085890316", "stratum": "long-prose" },
+    { "id": "4267e846-f2f9-5638-b927-a1d9820bd453", "stratum": "mixed-script" },
+    { "id": "b25cae3d-8ee0-5c2c-9c45-a5430f116b8d", "stratum": "non-english", "sourceLang": "ja" },
+    { "id": "006ed362-c0e3-52fd-9cce-568096eab1ff", "stratum": "short-prose" },
+    { "id": "7c8dd240-6de6-5fbb-b1ef-64f488038a4c", "stratum": "short-prose" },
+    { "id": "91be1d34-8821-524a-b847-7b828a585aa9", "stratum": "table" },
+    { "id": "05635ba4-5af6-50d0-9545-c7d4f0c5a51d", "stratum": "table" },
+    { "id": "157a34e9-05cd-5873-891c-9616029f0c1d", "stratum": "table" }
+  ]
+}

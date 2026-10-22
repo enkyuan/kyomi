@@ -43,3 +43,14 @@ packages/catalog/**/*.db
 
 # chunk local pool state
 .chunk/*-pool.json
+
+# Eval runs: keep cases, runner and summaries; translations, traces and reports stay local
+.claude/hillclimb/**/traces/
+.claude/hillclimb/**/ref/
+.claude/hillclimb/**/results.jsonl
+.claude/hillclimb/**/errors.jsonl
+.claude/hillclimb/**/progress.txt
+.claude/hillclimb/**/report.html
+.claude/hillclimb/**/state.json
+.claude/hillclimb/**/trajectory/
+.claude/hillclimb/translation-*/
