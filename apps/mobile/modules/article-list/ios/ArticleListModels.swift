@@ -26,8 +26,6 @@ struct ArticleRowModel: Equatable, Identifiable {
   let isSaved: Bool
   /// The article was opened before, so it shows the "Continue reading" badge.
   let isContinuing: Bool
-  /// The first row draws no divider above it. Set by the list, since it depends on position.
-  var isFirst = false
 }
 
 struct ArticleRowRecord: Record {
@@ -61,19 +59,16 @@ struct ArticleRowRecord: Record {
 // MARK: - Style
 
 /// A font resolved by JavaScript from the shared theme, so rows match the React Native screens.
+/// Font lookup and leading are computed once; rows read them on every scroll-time layout.
 struct ListFont {
-  let family: String
-  let size: CGFloat
-  let lineHeight: CGFloat
-
-  var font: Font {
-    UIFont(name: family, size: size) != nil ? .custom(family, fixedSize: size) : .system(size: size)
-  }
-
+  let font: Font
   /// Extra leading React Native adds around each line to reach `lineHeight`.
-  var leading: CGFloat {
-    let natural = (UIFont(name: family, size: size) ?? .systemFont(ofSize: size)).lineHeight
-    return max(0, lineHeight - natural)
+  let leading: CGFloat
+
+  init(family: String, size: CGFloat, lineHeight: CGFloat) {
+    let resolved = UIFont(name: family, size: size)
+    font = resolved != nil ? .custom(family, fixedSize: size) : .system(size: size)
+    leading = max(0, lineHeight - (resolved ?? .systemFont(ofSize: size)).lineHeight)
   }
 }
 
@@ -135,6 +130,8 @@ struct ArticleListStyle {
   var foreground: Color
   var mutedForeground: Color
   var border: Color
+  /// The list draws its separators itself, in this colour.
+  var separatorColor: UIColor
   var secondary: Color
   var card: Color
   var mutedIcon: Color
@@ -160,6 +157,7 @@ struct ArticleListStyle {
     foreground = Color(uiColor: record.foreground)
     mutedForeground = Color(uiColor: record.mutedForeground)
     border = Color(uiColor: record.border)
+    separatorColor = record.border
     secondary = Color(uiColor: record.secondary)
     card = Color(uiColor: record.card)
     mutedIcon = Color(uiColor: record.mutedIcon)

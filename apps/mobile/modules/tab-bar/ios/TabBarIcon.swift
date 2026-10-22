@@ -9,6 +9,19 @@ public struct TabBarIcon {
     let evenOdd: Bool
     /// Stroke width in viewBox units for line glyphs, or nil for a filled path.
     let strokeWidth: CGFloat?
+    /// What gets filled: the stroked outline of a line glyph (round caps and joins), or the path itself.
+    /// Stroking is the expensive part of drawing an icon, so it happens once here, in viewBox
+    /// units, rather than on every layout pass. A uniform scale commutes with stroking.
+    let outline: SwiftUI.Path
+
+    init(path: SwiftUI.Path, evenOdd: Bool, strokeWidth: CGFloat?) {
+      self.path = path
+      self.evenOdd = evenOdd
+      self.strokeWidth = strokeWidth
+      outline = strokeWidth.map {
+        path.strokedPath(StrokeStyle(lineWidth: $0, lineCap: .round, lineJoin: .round))
+      } ?? path
+    }
   }
 
   let viewBox: CGRect
@@ -73,7 +86,7 @@ public struct TabBarIconView: View {
     ZStack {
       ForEach(icon.layers.indices, id: \.self) { index in
         let layer = icon.layers[index]
-        ViewBoxShape(path: layer.path, viewBox: icon.viewBox, transform: icon.transform, strokeWidth: layer.strokeWidth)
+        ViewBoxShape(outline: layer.outline, viewBox: icon.viewBox, transform: icon.transform)
           .fill(color, style: FillStyle(eoFill: layer.evenOdd))
       }
     }
@@ -82,17 +95,15 @@ public struct TabBarIconView: View {
   }
 }
 
-/// Scales a path into `rect`. Line glyphs (a `strokeWidth`) come back as their stroked outline,
-/// with round caps and joins, so the tab bar fills every glyph the same way.
+/// Scales a layer's outline into `rect`, aspect-fit like SVG's default `xMidYMid meet`.
 private struct ViewBoxShape: Shape {
-  let path: SwiftUI.Path
+  let outline: SwiftUI.Path
   let viewBox: CGRect
   let transform: CGAffineTransform
-  let strokeWidth: CGFloat?
 
   func path(in rect: CGRect) -> SwiftUI.Path {
     let scale = min(rect.width / viewBox.width, rect.height / viewBox.height)
-    let scaled = path.applying(transform).applying(
+    return outline.applying(transform).applying(
       CGAffineTransform(
         a: scale,
         b: 0,
@@ -102,8 +113,6 @@ private struct ViewBoxShape: Shape {
         ty: rect.midY - viewBox.midY * scale
       )
     )
-    guard let strokeWidth else { return scaled }
-    return scaled.strokedPath(StrokeStyle(lineWidth: strokeWidth * scale, lineCap: .round, lineJoin: .round))
   }
 }
 

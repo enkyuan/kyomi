@@ -4,6 +4,7 @@ import UIKit
 
 /// One list row. It mirrors the React Native `Item` and `RecentHistoryItem` layouts point for point:
 /// 20pt side padding, the same gaps and the same type scale, all fed from the shared JS theme.
+/// Row dividers belong to the list layout (native separators), not to the row.
 struct ArticleRowView: View {
   let row: ArticleRowModel
   let style: ArticleListStyle
@@ -17,11 +18,6 @@ struct ArticleRowView: View {
       }
     }
     .frame(maxWidth: .infinity, alignment: .leading)
-    .overlay(alignment: .top) {
-      if !row.isFirst {
-        Rectangle().fill(style.border).frame(height: 1)
-      }
-    }
   }
 
   // MARK: Article

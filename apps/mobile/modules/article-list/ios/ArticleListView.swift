@@ -5,6 +5,12 @@ import UIKit
 /// A `UICollectionView` of SwiftUI rows. Virtualisation, cell reuse, self-sizing and diffing are all
 /// UIKit's, so memory stays flat however far the list has paged. React Native only supplies row
 /// data and the theme; scrolling, paging and touches never wait on the JS thread.
+/// What the list layout reads when it asks for each item's separators.
+final class ListChrome: @unchecked Sendable {
+  var separatorColor: UIColor = .separator
+  var rowCount = 0
+}
+
 final class ArticleListView: ExpoView, UICollectionViewDelegate {
   let onEndReached = EventDispatcher()
   let onScroll = EventDispatcher()
@@ -13,6 +19,7 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   let onRowAction = EventDispatcher()
 
   private let collectionView: UICollectionView
+  private let chrome: ListChrome
   private var dataSource: UICollectionViewDiffableDataSource<Int, String>?
   private var rows: [ArticleRowModel] = []
   private var rowsById: [String: ArticleRowModel] = [:]
@@ -29,13 +36,25 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   private var scrollToTopToken: Int?
 
   required init(appContext: AppContext? = nil) {
-    var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
-    configuration.showsSeparators = false
-    configuration.backgroundColor = .clear
-    collectionView = UICollectionView(
-      frame: .zero,
-      collectionViewLayout: UICollectionViewCompositionalLayout.list(using: configuration)
-    )
+    let chrome = ListChrome()
+    self.chrome = chrome
+    // The system list layout draws the dividers: between rows only, inset to the rows' 20pt text
+    // margin like every iOS list, rather than edge to edge.
+    let layout = UICollectionViewCompositionalLayout { _, environment in
+      var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+      configuration.showsSeparators = true
+      configuration.backgroundColor = .clear
+      configuration.itemSeparatorHandler = { indexPath, sectionSeparator in
+        var separator = sectionSeparator
+        separator.color = chrome.separatorColor
+        separator.topSeparatorVisibility = .hidden
+        separator.bottomSeparatorVisibility = indexPath.item >= chrome.rowCount - 1 ? .hidden : .visible
+        separator.bottomSeparatorInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        return separator
+      }
+      return NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: environment)
+    }
+    collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     super.init(appContext: appContext)
 
     backgroundColor = .clear
@@ -99,17 +118,17 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   }
 
   func setRows(_ models: [ArticleRowModel]) {
-    var next = models
-    for index in next.indices { next[index].isFirst = index == 0 }
-
     let previous = rowsById
-    rows = next
-    rowsById = Dictionary(next.map { ($0.id, $0) }, uniquingKeysWith: { _, last in last })
-    applySnapshot(changedIds: next.compactMap { previous[$0.id] != nil && previous[$0.id] != $0 ? $0.id : nil })
+    rows = models
+    chrome.rowCount = models.count
+    rowsById = Dictionary(models.map { ($0.id, $0) }, uniquingKeysWith: { _, last in last })
+    applySnapshot(changedIds: models.compactMap { previous[$0.id] != nil && previous[$0.id] != $0 ? $0.id : nil })
   }
 
   func setStyle(_ next: ArticleListStyle) {
     style = next
+    chrome.separatorColor = next.separatorColor
+    collectionView.collectionViewLayout.invalidateLayout()
     applySnapshot(changedIds: rows.map(\.id))
   }
 
@@ -156,7 +175,13 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     let reconfigure = changedIds.filter { existing.contains($0) && seen.contains($0) }
     if !reconfigure.isEmpty { snapshot.reconfigureItems(reconfigure) }
     dataSource.apply(snapshot, animatingDifferences: false) { [weak self] in
-      self?.checkEndReached()
+      guard let self else { return }
+      // The last row's separator moves when a page arrives.
+      self.collectionView.collectionViewLayout.invalidateLayout()
+      // A list shorter than the screen can never be scrolled, so it asks for its next page itself.
+      // Scrolling lists wait for the user: cells are self-sized, so content height is only an
+      // estimate until rows have been laid out.
+      if self.collectionView.contentSize.height <= self.collectionView.bounds.height { self.checkEndReached() }
     }
   }
 
@@ -168,7 +193,7 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
       lastScrollEvent = now
       onScroll(["y": scrollView.contentOffset.y])
     }
-    checkEndReached()
+    if scrollView.isTracking || scrollView.isDecelerating { checkEndReached() }
   }
 
   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
