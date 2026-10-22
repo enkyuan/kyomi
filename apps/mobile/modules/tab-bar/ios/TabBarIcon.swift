@@ -13,9 +13,12 @@ struct TabBarIcon {
 
   let viewBox: CGRect
   let layers: [Layer]
+  /// Clockwise rotation about the icon's centre, in degrees.
+  let rotation: Double
 
-  init(viewBox: String, paths: [(d: String, evenOdd: Bool, strokeWidth: CGFloat?)]) {
+  init(viewBox: String, rotation: Double = 0, paths: [(d: String, evenOdd: Bool, strokeWidth: CGFloat?)]) {
     self.viewBox = Self.parseViewBox(viewBox)
+    self.rotation = rotation
     layers = paths.map {
       Layer(
         path: SwiftUI.Path(SVGPathParser.path(from: $0.d)),
@@ -51,6 +54,7 @@ struct TabBarIconView: View {
           .fill(color, style: FillStyle(eoFill: layer.evenOdd))
       }
     }
+    .rotationEffect(.degrees(icon.rotation))
     .frame(width: size, height: size)
     .accessibilityHidden(true)
   }

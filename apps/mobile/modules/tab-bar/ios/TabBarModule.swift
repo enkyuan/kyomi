@@ -53,10 +53,12 @@ struct IconPathRecord: Record {
 
 struct IconRecord: Record {
   @Field var viewBox: String = "0 0 24 24"
+  /// Clockwise rotation in degrees.
+  @Field var rotation: Double = 0
   @Field var paths: [IconPathRecord] = []
 
   var icon: TabBarIcon {
-    TabBarIcon(viewBox: viewBox, paths: paths.map { (d: $0.d, evenOdd: $0.fillRule == "evenodd", strokeWidth: $0.strokeWidth.map { CGFloat($0) }) })
+    TabBarIcon(viewBox: viewBox, rotation: rotation, paths: paths.map { (d: $0.d, evenOdd: $0.fillRule == "evenodd", strokeWidth: $0.strokeWidth.map { CGFloat($0) }) })
   }
 }
 

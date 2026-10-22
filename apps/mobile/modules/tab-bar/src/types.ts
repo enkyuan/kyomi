@@ -10,6 +10,8 @@ export type TabBarIconPath = {
 /** SVG geometry drawn natively, in the shape of `@kyomi/ui` native icons. */
 export type TabBarIcon = {
   readonly viewBox: string;
+  /** Clockwise rotation about the icon's centre, in degrees. */
+  readonly rotation?: number;
   readonly paths: readonly TabBarIconPath[];
 };
 

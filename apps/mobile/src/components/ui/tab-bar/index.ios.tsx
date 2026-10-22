@@ -22,9 +22,10 @@ import {
 import type { TabBarProps } from "./lib/types";
 
 /** Maps Blode geometry to the native bar: line glyphs carry their stroke width, filled ones none. */
-function toTabBarIcon(icon: BlodeNativeIcon): TabBarIcon {
+function toTabBarIcon(icon: BlodeNativeIcon, rotation?: number): TabBarIcon {
   return {
     viewBox: icon.viewBox,
+    rotation,
     paths: icon.paths.map((path) => ({
       d: path.d,
       fillRule: path.fillRule,
@@ -32,6 +33,9 @@ function toTabBarIcon(icon: BlodeNativeIcon): TabBarIcon {
     })),
   };
 }
+
+/** The compass pointer is drawn pointing up; tilt it to the right like a compass needle. */
+const EXPLORE_ICON_TILT = 45;
 
 const TABS: readonly TabBarItem[] = [
   {
@@ -43,8 +47,8 @@ const TABS: readonly TabBarItem[] = [
   {
     key: "explore",
     label: "Explore articles",
-    icon: toTabBarIcon(CompassPointerNativeIcon),
-    selectedIcon: toTabBarIcon(CompassPointerFilledNativeIcon),
+    icon: toTabBarIcon(CompassPointerNativeIcon, EXPLORE_ICON_TILT),
+    selectedIcon: toTabBarIcon(CompassPointerFilledNativeIcon, EXPLORE_ICON_TILT),
   },
 ];
 
