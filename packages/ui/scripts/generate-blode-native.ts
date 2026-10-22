@@ -15,6 +15,7 @@ const ICONS = [
   "ArrowShareRight",
   "Bookmark",
   "BookmarkFilled",
+  "Brain",
   "ChevronGrabberVertical",
   "ChevronsUpDown",
   "Clock",
@@ -28,11 +29,14 @@ const ICONS = [
   "InboxFilled",
   "Lock",
   "MagnifyingGlass",
+  "MessageCircle",
   "PageTextSearch",
   "Plus",
   "ReceiptBill",
   "Rss",
   "Search",
+  "Text",
+  "Toggle",
   "X",
 ] as const;
 
@@ -55,6 +59,31 @@ type GeneratedPath = {
 
 function attribute(source: string, name: string): string | undefined {
   return new RegExp(`(?:^|\\s)${name}="([^"]*)"`).exec(source)?.[1];
+}
+
+function number(source: string, name: string): number {
+  const value = Number(attribute(source, name));
+  if (Number.isNaN(value)) throw new Error(`missing or invalid ${name} on <${source.trim()}>`);
+  return value;
+}
+
+/** Turns the shapes Blode draws besides `<path>` into path data, so renderers only need paths. */
+function shapeToPath(tag: string, attributes: string): string | undefined {
+  if (tag === "circle") {
+    const [cx, cy, r] = [
+      number(attributes, "cx"),
+      number(attributes, "cy"),
+      number(attributes, "r"),
+    ];
+    return `M${cx - r} ${cy}A${r} ${r} 0 1 0 ${cx + r} ${cy}A${r} ${r} 0 1 0 ${cx - r} ${cy}Z`;
+  }
+  if (tag === "rect") {
+    const [x, y] = [number(attributes, "x"), number(attributes, "y")];
+    const [w, h] = [number(attributes, "width"), number(attributes, "height")];
+    const r = Math.min(Number(attribute(attributes, "rx") ?? 0), w / 2, h / 2);
+    return `M${x + r} ${y}H${x + w - r}A${r} ${r} 0 0 1 ${x + w} ${y + r}V${y + h - r}A${r} ${r} 0 0 1 ${x + w - r} ${y + h}H${x + r}A${r} ${r} 0 0 1 ${x} ${y + h - r}V${y + r}A${r} ${r} 0 0 1 ${x + r} ${y}Z`;
+  }
+  return undefined;
 }
 
 function readMarkup(name: string): { markup: string; strictRoot: boolean } {
@@ -82,8 +111,10 @@ function extractPaths(name: string): GeneratedPath[] {
   if (tags.length === 0) throw new Error(`${name} rendered no shapes`);
 
   return tags.map(([, tag, attributes]) => {
-    if (tag !== "path") throw new Error(`${name} renders <${tag}>; only <path> is supported`);
-    const d = attribute(attributes, "d");
+    const d = tag === "path" ? attribute(attributes, "d") : shapeToPath(tag, attributes);
+    if (tag !== "path" && !d) {
+      throw new Error(`${name} renders <${tag}>; only path, rect and circle are supported`);
+    }
     if (!d) throw new Error(`${name} has a path without data`);
 
     const isStroke = attribute(attributes, "stroke") === "currentColor";

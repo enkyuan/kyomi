@@ -1,57 +1,43 @@
-import { ActivityIndicator, Pressable, Text, useColorScheme, View } from "react-native";
-import { List } from "./components/list";
+import { ActivityIndicator, Pressable, Text, View } from "react-native";
+import { List, ROW_ICON_SIZE } from "./components/list";
 import { SettingsScreenLayout } from "./components/screen-layout";
 import { useLogout } from "./hooks/use-logout";
 import { mobileColors } from "@/theme/colors";
 import { FONT_STYLES } from "@/theme/fonts";
-import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
 export function SettingsScreen() {
   const { confirmLogout, errorMessage, isLoggingOut } = useLogout();
-  const theme = getMobileSurfaceTheme(useColorScheme());
 
   return (
     <SettingsScreenLayout>
       <List
         footer={
-          <View className="gap-2">
-            <Pressable
-              accessibilityLabel={isLoggingOut ? "Logging out" : "Log out"}
-              accessibilityRole="button"
-              accessibilityState={{ disabled: isLoggingOut }}
-              disabled={isLoggingOut}
-              onPress={confirmLogout}
-              style={({ pressed }) => ({
-                alignItems: "center",
-                alignSelf: "stretch",
-                backgroundColor: theme.card,
-                borderRadius: 999,
-                height: 50,
-                justifyContent: "center",
-                opacity: pressed || isLoggingOut ? 0.72 : 1,
-              })}
-            >
-              <View className="w-full flex-row items-center gap-3 px-5">
-                {/* Keeps the icon slot, so the label sits where the other rows' labels do. */}
-                <View style={{ height: 20, width: 20 }} />
-                {isLoggingOut ? (
-                  <ActivityIndicator color={theme.foreground} size={20} />
-                ) : (
-                  <Text
-                    className="text-foreground"
-                    style={[FONT_STYLES.body, { transform: [{ translateY: -1 }] }]}
-                  >
-                    Log out
-                  </Text>
-                )}
-              </View>
-            </Pressable>
-            {errorMessage ? (
-              <Text selectable style={{ ...FONT_STYLES.error, color: mobileColors.systemError }}>
-                {errorMessage}
-              </Text>
-            ) : null}
-          </View>
+          errorMessage ? (
+            <Text selectable style={{ ...FONT_STYLES.error, color: mobileColors.systemError }}>
+              {errorMessage}
+            </Text>
+          ) : null
+        }
+        lastGroupAction={
+          <Pressable
+            accessibilityLabel={isLoggingOut ? "Logging out" : "Log out"}
+            accessibilityRole="button"
+            accessibilityState={{ disabled: isLoggingOut }}
+            className="active:opacity-70"
+            disabled={isLoggingOut}
+            onPress={confirmLogout}
+            style={{ opacity: isLoggingOut ? 0.72 : 1 }}
+          >
+            <View className="min-h-13 flex-row items-center gap-3 px-5 py-3">
+              {/* No icon, but its slot, so the label lines up with the rows above. */}
+              <View style={{ height: ROW_ICON_SIZE, width: ROW_ICON_SIZE }} />
+              {isLoggingOut ? (
+                <ActivityIndicator color={mobileColors.destructive} size={20} />
+              ) : (
+                <Text style={[FONT_STYLES.body, { color: mobileColors.destructive }]}>Log out</Text>
+              )}
+            </View>
+          </Pressable>
         }
       />
     </SettingsScreenLayout>

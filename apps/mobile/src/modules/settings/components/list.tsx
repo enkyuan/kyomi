@@ -9,14 +9,17 @@ import { SETTINGS_GROUPS } from "../lib/items";
 import { AppearanceSection } from "./appearance";
 import { SettingsSection } from "./section";
 
-/** Icon slot of a settings row, kept even when the row has no icon. */
-const ROW_ICON_SIZE = 20;
+/** Icon slot of a settings row; action rows without an icon reserve it so labels align. */
+export const ROW_ICON_SIZE = 20;
 
 type SettingsListProps = {
+  /** Rendered below the cards, for example an error message. */
   readonly footer?: ReactNode;
+  /** A row appended to the last group's card, after a divider, such as Log out. */
+  readonly lastGroupAction?: ReactNode;
 };
 
-export function List({ footer }: SettingsListProps) {
+export function List({ footer, lastGroupAction }: SettingsListProps) {
   const theme = getMobileSurfaceTheme(useColorScheme());
 
   return (
@@ -43,17 +46,12 @@ export function List({ footer }: SettingsListProps) {
                   onPress={() => router.push(item.route as never)}
                 >
                   <View className="min-h-13 flex-row items-center gap-3 px-5 py-3">
-                    {item.icon ? (
-                      <BlodeIcon
-                        color={theme.foreground}
-                        icon={item.icon}
-                        size={ROW_ICON_SIZE}
-                        style={{ transform: [{ translateY: -1 }] }}
-                      />
-                    ) : (
-                      // Rows without an icon keep its slot so labels align as on web.
-                      <View style={{ height: ROW_ICON_SIZE, width: ROW_ICON_SIZE }} />
-                    )}
+                    <BlodeIcon
+                      color={theme.foreground}
+                      icon={item.icon}
+                      size={ROW_ICON_SIZE}
+                      style={{ transform: [{ translateY: -1 }] }}
+                    />
                     <Text className="flex-1 text-foreground" style={FONT_STYLES.body}>
                       {item.label}
                     </Text>
@@ -72,6 +70,12 @@ export function List({ footer }: SettingsListProps) {
                 </Pressable>
               </View>
             ))}
+            {index === SETTINGS_GROUPS.length - 1 && lastGroupAction ? (
+              <View>
+                <View className="ml-13 h-px bg-border/70" />
+                {lastGroupAction}
+              </View>
+            ) : null}
           </View>
         );
 

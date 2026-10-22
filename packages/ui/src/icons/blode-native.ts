@@ -49,6 +49,16 @@ export const BookmarkFilledNativeIcon: BlodeNativeIcon = {
   ],
 };
 
+export const BrainNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M4.3368 11.0002A3.486 3.486 0 0 1 4 9.5002c0-1.7632 1.3038-3.222 3-3.4646M19.6632 11.0002a3.486 3.486 0 0 0 .3368-1.5c0-1.7632-1.3039-3.222-3-3.4646M7 16.8295a3 3 0 0 1-1 .1707c-1.6569 0-3-1.3432-3-3 0-1.3062.8348-2.4175 2-2.8293M17 16.8295a3 3 0 0 0 1 .1707c1.6569 0 3-1.3432 3-3 0-1.3062-.8348-2.4175-2-2.8293M12 5.5C12 4.1193 10.8807 3 9.5 3S7 4.1193 7 5.5c0 .563.186 1.0824.5 1.5002M12 5.5C12 4.1193 13.1193 3 14.5 3S17 4.1193 17 5.5c0 .563-.186 1.0824-.5 1.5002M12 5.5v12M12 17.5c0 1.933-1.567 3.5-3.5 3.5S5 19.433 5 17.5M19 17.5c0 1.933-1.567 3.5-3.5 3.5S12 19.433 12 17.5",
+      stroke: { linecap: "round" },
+    },
+  ],
+};
+
 export const ChevronGrabberVerticalNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [
@@ -220,6 +230,16 @@ export const MagnifyingGlassNativeIcon: BlodeNativeIcon = {
   ],
 };
 
+export const MessageCircleNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M12 20.5c4.9706 0 9-3.8056 9-8.5s-4.0294-8.5-9-8.5S3 7.3056 3 12c0 1.4501.3845 2.8153 1.0624 4.0098.4342.7651.7015 1.6473.452 2.4909C4.3651 19.0049 4.1905 19.5036 4 20c.8266-.051 1.6212-.1542 2.3943-.3119.7617-.1553 1.5526-.0606 2.2804.2129 1.0287.3865 2.1507.599 3.3253.599Z",
+      stroke: { linejoin: "round" },
+    },
+  ],
+};
+
 export const PageTextSearchNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [
@@ -262,6 +282,22 @@ export const SearchNativeIcon: BlodeNativeIcon = {
       d: "m20 20-3.95-3.95M18 11c0 3.866-3.134 7-7 7s-7-3.134-7-7 3.134-7 7-7 7 3.134 7 7Z",
       stroke: { linecap: "round" },
     },
+  ],
+};
+
+export const TextNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [{ d: "M4 5h16M4 12h8m-8 7h16", stroke: { linecap: "round", linejoin: "round" } }],
+};
+
+export const ToggleNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M8.5 5H15.5A7 7 0 0 1 22.5 12V12A7 7 0 0 1 15.5 19H8.5A7 7 0 0 1 1.5 12V12A7 7 0 0 1 8.5 5Z",
+      stroke: {},
+    },
+    { d: "M5.5 12A3 3 0 1 0 11.5 12A3 3 0 1 0 5.5 12Z" },
   ],
 };
 
