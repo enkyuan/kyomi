@@ -32,7 +32,9 @@ export function List({ footer }: SettingsListProps) {
           >
             {group.map((item, itemIndex) => (
               <View key={item.id}>
-                {itemIndex > 0 ? <View className="ml-13 h-px bg-border/70" /> : null}
+                {itemIndex > 0 ? (
+                  <View className={`h-px bg-border/70 ${item.icon ? "ml-13" : "ml-5"}`} />
+                ) : null}
                 <Pressable
                   accessibilityLabel={item.label}
                   accessibilityRole="button"
@@ -40,12 +42,14 @@ export function List({ footer }: SettingsListProps) {
                   onPress={() => router.push(item.route as never)}
                 >
                   <View className="min-h-13 flex-row items-center gap-3 px-5 py-3">
-                    <BlodeIcon
-                      color={theme.foreground}
-                      icon={item.icon}
-                      size={20}
-                      style={{ transform: [{ translateY: -1 }] }}
-                    />
+                    {item.icon ? (
+                      <BlodeIcon
+                        color={theme.foreground}
+                        icon={item.icon}
+                        size={20}
+                        style={{ transform: [{ translateY: -1 }] }}
+                      />
+                    ) : null}
                     <Text className="flex-1 text-foreground" style={FONT_STYLES.body}>
                       {item.label}
                     </Text>

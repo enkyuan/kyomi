@@ -27,7 +27,9 @@ enum TabBarMetrics {
   static let switcherWidthRatio: CGFloat = 0.6
 
   static let tabIconSize = 25 * scale
-  static let switcherIconSize = 20 * scale
+  /// Drawn at the tab icons' scale so its 2-unit stroke renders at the same weight; the chevron
+  /// glyph is smaller than the tab glyphs inside its box, which is what keeps it secondary.
+  static let switcherIconSize = tabIconSize
   static let searchIconSize = 18 * scale
   static let addIconSize = 20 * scale
   static let closeIconSize = 16 * scale

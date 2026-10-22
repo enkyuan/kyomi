@@ -29,7 +29,7 @@ export default function AppLayout() {
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="(tabs)" />
 
-      <Stack.Screen name="settings" options={{ ...blurHeader, presentation: "modal" }} />
+      <Stack.Screen name="settings" options={{ ...blurHeader, presentation: "modal", title: "" }} />
     </Stack>
   );
 }

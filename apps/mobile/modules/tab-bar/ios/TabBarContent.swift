@@ -8,6 +8,9 @@ import UIKit
 struct TabBarContent: View {
   @ObservedObject var model: TabBarModel
   @FocusState private var searchFocused: Bool
+  /// Ties each glass shape to an identity so a hidden one materializes in and out, as the
+  /// system tab bar's glass does, instead of fading its content over a stuck glass layer.
+  @Namespace private var glassNamespace
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
   private nonisolated static let coordinateSpace = "KyomiTabBar"
@@ -39,15 +42,20 @@ struct TabBarContent: View {
       // One container so the glass shapes render together and morph as they move.
       GlassEffectContainer(spacing: 0) {
         ZStack(alignment: .topLeading) {
-          capsule(layout)
-            .position(x: layout.mainX + layout.mainWidth / 2, y: centerY)
-            .onGeometryChange(for: CGRect.self) { proxy in
-              proxy.frame(in: .named(Self.coordinateSpace))
-            } action: { frame in
-              model.mainFrame = frame
-            }
+          if layout.showsMain {
+            capsule(layout)
+              .glassEffectID("capsule", in: glassNamespace)
+              .glassEffectTransition(.materialize)
+              .position(x: layout.mainX + layout.mainWidth / 2, y: centerY)
+              .onGeometryChange(for: CGRect.self) { proxy in
+                proxy.frame(in: .named(Self.coordinateSpace))
+              } action: { frame in
+                model.mainFrame = frame
+              }
+          }
 
           searchButton(layout)
+            .glassEffectID("search", in: glassNamespace)
             .position(x: layout.searchX + layout.buttonSize / 2, y: centerY)
             .onGeometryChange(for: CGRect.self) { proxy in
               proxy.frame(in: .named(Self.coordinateSpace))
@@ -55,13 +63,17 @@ struct TabBarContent: View {
               model.actionFrame = frame
             }
 
-          addButton(layout)
-            .position(x: layout.addX + layout.buttonSize / 2, y: centerY)
-            .onGeometryChange(for: CGRect.self) { proxy in
-              proxy.frame(in: .named(Self.coordinateSpace))
-            } action: { frame in
-              model.addFrame = frame
-            }
+          if layout.showsAdd {
+            addButton(layout)
+              .glassEffectID("add", in: glassNamespace)
+              .glassEffectTransition(.materialize)
+              .position(x: layout.addX + layout.buttonSize / 2, y: centerY)
+              .onGeometryChange(for: CGRect.self) { proxy in
+                proxy.frame(in: .named(Self.coordinateSpace))
+              } action: { frame in
+                model.addFrame = frame
+              }
+          }
         }
       }
       // Hold the bar in a band as tall as the expanded capsule so the minimized buttons
@@ -92,11 +104,6 @@ struct TabBarContent: View {
     }
     .frame(width: layout.mainWidth, height: layout.barHeight)
     .glassEffect(.regular.interactive(), in: .capsule)
-    // Minimizing leaves only the buttons: the capsule shrinks toward the centre and fades.
-    .scaleEffect(layout.showsMain ? 1 : 0.5)
-    .opacity(layout.showsMain ? 1 : 0)
-    .allowsHitTesting(layout.showsMain)
-    .accessibilityHidden(!layout.showsMain)
   }
 
   private func tabs(_ layout: TabBarLayout) -> some View {
@@ -239,11 +246,6 @@ struct TabBarContent: View {
     }
     .buttonStyle(.plain)
     .glassEffect(.regular.tint(model.activeTint).interactive(), in: .circle)
-    // Searching gives the add button's space to the field.
-    .scaleEffect(layout.showsAdd ? 1 : 0.5)
-    .opacity(layout.showsAdd ? 1 : 0)
-    .allowsHitTesting(layout.showsAdd)
-    .accessibilityHidden(!layout.showsAdd)
     .accessibilityLabel("Add")
   }
 }

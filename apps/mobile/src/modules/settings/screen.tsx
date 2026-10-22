@@ -2,8 +2,6 @@ import { ActivityIndicator, Pressable, Text, useColorScheme, View } from "react-
 import { List } from "./components/list";
 import { SettingsScreenLayout } from "./components/screen-layout";
 import { useLogout } from "./hooks/use-logout";
-import { BlodeIcon } from "@/components/icons/blode";
-import { HandFilledNativeIcon } from "@kyomi/ui/icons/blode-native";
 import { mobileColors } from "@/theme/colors";
 import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
@@ -33,13 +31,7 @@ export function SettingsScreen() {
                 opacity: pressed || isLoggingOut ? 0.72 : 1,
               })}
             >
-              <View className="w-full flex-row items-center gap-3 px-5">
-                <BlodeIcon
-                  color={theme.foreground}
-                  icon={HandFilledNativeIcon}
-                  size={20}
-                  style={{ transform: [{ translateY: -1 }] }}
-                />
+              <View className="w-full flex-row items-center justify-center gap-3 px-5">
                 {isLoggingOut ? (
                   <ActivityIndicator color={theme.foreground} size={20} />
                 ) : (
