@@ -3,7 +3,6 @@ import {
   createElement,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
   useRef,
   useState,
@@ -278,38 +277,28 @@ export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
 /**
  * Scroll offsets reported by a native list (`onScroll` of `ArticleListView`) feed the same
  * direction rules as `useTabBarMinimizeScroll`, which runs as a worklet on Reanimated scroll events.
- * These events arrive on the JS thread, so the bookkeeping lives in a ref: reading a shared value
- * written since the last read blocks JS on a synchronous round-trip to the UI thread, and this
- * runs on every scroll event.
+ * These events arrive on the JS thread, so the bookkeeping lives in a ref the provider owns (and
+ * resets): reading a shared value written since the last read blocks JS on a synchronous round-trip
+ * to the UI thread, and this runs on every scroll event. A transition goes straight to React; it
+ * does not detour through the UI thread and back before the bar can start moving.
  */
 export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
-  const context = useOptionalTabBarMinimize();
-  const minimized = context?.minimized ?? false;
-  const minimizedSV = context?.minimizedSV;
-  const tracking = useRef({ distance: 0, direction: 0, lastY: 0, minimized });
-  // The provider can reset the bar (for example on a tab change), so follow its published state.
-  useEffect(() => {
-    tracking.current.minimized = minimized;
-  }, [minimized]);
+  const controls = useOptionalTabBarMinimize();
 
   return useCallback(
     (y: number) => {
       scrollY.set(y);
-      if (!minimizedSV) return;
+      if (!controls) return;
 
+      const { setMinimized, tracking } = controls;
       const state = tracking.current;
-      const setMinimized = (next: boolean) => {
-        if (state.minimized === next) return;
-        state.minimized = next;
-        minimizedSV.set(next);
-      };
       const delta = y - state.lastY;
       state.lastY = y;
 
       if (y <= MIN_SCROLL_Y) {
         state.distance = 0;
         state.direction = 0;
-        setMinimized(false);
+        if (state.minimized) setMinimized(false);
         return;
       }
 
@@ -325,12 +314,12 @@ export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
 
       if (nextDirection === 1 && state.distance >= COLLAPSE_DISTANCE) {
         state.distance = 0;
-        setMinimized(true);
+        if (!state.minimized) setMinimized(true);
       } else if (nextDirection === -1 && state.distance >= EXPAND_DISTANCE) {
         state.distance = 0;
-        setMinimized(false);
+        if (state.minimized) setMinimized(false);
       }
     },
-    [minimizedSV, scrollY],
+    [controls, scrollY],
   );
 }
