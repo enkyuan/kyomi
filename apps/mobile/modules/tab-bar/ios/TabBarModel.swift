@@ -71,6 +71,11 @@ final class TabBarModel: ObservableObject {
     onAddPress()
   }
 
+  func pressAdd() {
+    feedback.impactOccurred()
+    onAddPress()
+  }
+
   func toggleSearch() {
     feedback.impactOccurred()
     searchActive.toggle()

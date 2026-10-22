@@ -25,6 +25,9 @@ final class TabBarView: ExpoView {
     model.onAddPress = { [weak self] in
       self?.onAddPress()
     }
+    model.onAddPress = { [weak self] in
+      self?.onAddPress()
+    }
     model.onSearchActiveChange = { [weak self] active in
       self?.onSearchActiveChange(["active": active])
     }
