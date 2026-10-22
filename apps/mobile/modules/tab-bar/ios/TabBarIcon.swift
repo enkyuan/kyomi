@@ -118,7 +118,6 @@ public struct TabBarIconView: View {
           .fill(color, style: FillStyle(eoFill: layer.evenOdd))
       }
     }
-    .rotationEffect(.degrees(icon.rotation))
     .frame(width: size, height: size)
     .accessibilityHidden(true)
   }
