@@ -63,30 +63,51 @@ export type ArticleListRow = {
 
 export type ArticleListRowAction = "toggleSaved" | "share" | "openSource" | "hide" | "report";
 
+/**
+ * A change to the rows the list shows. Rows are not a prop: Fabric converts every prop again on
+ * each update to any prop, so the list is fed through `ArticleListHandle.applyOps` instead.
+ */
+export type ArticleListOp =
+  /** Replaces every row. `epoch` must grow with each reset. */
+  | {
+      readonly type: "reset";
+      readonly epoch: number;
+      readonly rows: readonly ArticleListRow[];
+      readonly scrollToTop?: boolean;
+    }
+  /** Adds rows after the last one; a row whose id is already listed is updated in place. */
+  | { readonly type: "append"; readonly rows: readonly ArticleListRow[] }
+  /** Replaces the content of listed rows; ids that are not listed are ignored. */
+  | { readonly type: "update"; readonly rows: readonly ArticleListRow[] }
+  | { readonly type: "remove"; readonly ids: readonly string[] };
+
+/** What a ref to `ArticleListView` exposes. */
+export type ArticleListHandle = {
+  /** `payload` is `JSON.stringify` of an `ArticleListOp[]`, applied in order. */
+  readonly applyOps: (payload: string) => Promise<void>;
+};
+
 export type ArticleListInsets = {
   readonly top: number;
   readonly bottom: number;
 };
 
 export type ArticleListViewProps = ViewProps & {
-  readonly rows: readonly ArticleListRow[];
   readonly listStyle: ArticleListStyle;
   /** Space the content keeps clear of the floating header and tab bar. */
   readonly contentInset?: ArticleListInsets;
   readonly scrollIndicatorInset?: ArticleListInsets;
   /** Let UIKit inset the list under a native navigation header instead of `contentInset`. */
   readonly adjustsInsetsAutomatically?: boolean;
-  /**
-   * More pages exist; `onEndReached` fires once per page while this is true. Fetch state stays in
-   * JS: every prop change re-sends all props, `rows` included, so it is not mirrored here.
-   */
+  /** More pages exist; `onEndReached` fires once per page while this is true. */
   readonly hasMore?: boolean;
   /** Distance from the end, in viewport heights, that triggers the next page. */
   readonly endReachedThreshold?: number;
   /** Scrolls to the top whenever the value changes. */
   readonly scrollToTopToken?: number;
   readonly onEndReached?: () => void;
-  readonly onScroll?: (event: NativeSyntheticEvent<{ y: number }>) => void;
+  /** `maxY` is the resting offset at the end of the list; larger offsets are overscroll. */
+  readonly onScroll?: (event: NativeSyntheticEvent<{ y: number; maxY: number }>) => void;
   readonly onRowPress?: (event: NativeSyntheticEvent<{ id: string }>) => void;
   readonly onRowPressIn?: (event: NativeSyntheticEvent<{ id: string }>) => void;
   readonly onRowAction?: (

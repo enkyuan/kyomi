@@ -3,8 +3,9 @@ import SwiftUI
 import UIKit
 
 /// A `UICollectionView` of SwiftUI rows. Virtualisation, cell reuse, self-sizing and diffing are all
-/// UIKit's, so memory stays flat however far the list has paged. React Native only supplies row
-/// data and the theme; scrolling, paging and touches never wait on the JS thread.
+/// UIKit's, so memory stays flat however far the list has paged. React Native supplies the theme
+/// and a stream of row operations (`applyOps`), which `ArticleRowPipeline` reduces off the main
+/// thread; scrolling, paging and touches never wait on the JS thread.
 /// What the list layout reads when it asks for each item's separators.
 final class ListChrome: @unchecked Sendable {
   var separatorColor: UIColor = .separator
@@ -20,15 +21,14 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   private let collectionView: UICollectionView
   private let chrome: ListChrome
   private var dataSource: UICollectionViewDiffableDataSource<Int, String>?
-  private var rows: [ArticleRowModel] = []
-  private var rowsById: [String: ArticleRowModel] = [:]
+  /// The rows on screen, replaced whole by each presentation from the pipeline.
+  private var state = ArticleListState()
   private var style: ArticleListStyle?
 
   private var hasMore = false
   private var endReachedThreshold: CGFloat = 0.5
   /// Row count an end-reached event was already sent for, so one page triggers one fetch.
   private var endReachedRowCount = -1
-  private var lastScrollEvent: CFTimeInterval = 0
   private var contentInsetTop: CGFloat = 0
   private var hasPositionedInitialOffset = false
   private var scrollToTopToken: Int?
@@ -67,13 +67,15 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
 
     let registration = UICollectionView.CellRegistration<UICollectionViewListCell, String> {
       [weak self] cell, _, id in
-      cell.backgroundConfiguration = .clear()
-      cell.automaticallyUpdatesBackgroundConfiguration = false
-      guard let self, let row = self.rowsById[id], let style = self.style else { return }
-      cell.contentConfiguration = UIHostingConfiguration {
-        ArticleRowView(row: row, style: style, actions: self.rowActions)
+      ArticleListSignpost.measure("cell.configure") {
+        cell.backgroundConfiguration = .clear()
+        cell.automaticallyUpdatesBackgroundConfiguration = false
+        guard let self, let row = self.state.rows[id], let style = self.style else { return }
+        cell.contentConfiguration = UIHostingConfiguration {
+          ArticleRowView(row: row, style: style, actions: self.rowActions)
+        }
+        .margins(.all, 0)
       }
-      .margins(.all, 0)
     }
     dataSource = UICollectionViewDiffableDataSource<Int, String>(collectionView: collectionView) {
       collectionView, indexPath, id in
@@ -84,6 +86,10 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   override func layoutSubviews() {
     super.layoutSubviews()
     collectionView.frame = bounds
+  }
+
+  private lazy var pipeline = ArticleRowPipeline { [weak self] presentation in
+    self?.present(presentation)
   }
 
   private lazy var rowActions = ArticleRowActions(
@@ -109,18 +115,29 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     )
   }
 
-  func setRows(_ models: [ArticleRowModel]) {
-    let previous = rowsById
-    rows = models
-    rowsById = Dictionary(models.map { ($0.id, $0) }, uniquingKeysWith: { _, last in last })
-    applySnapshot(changedIds: models.compactMap { previous[$0.id] != nil && previous[$0.id] != $0 ? $0.id : nil })
+  /// Queues a JSON array of `ArticleListOp`; the pipeline decodes and reduces it off this thread.
+  func applyOps(_ payload: String) {
+    pipeline.submit(payload)
+  }
+
+  /// Shows a state the pipeline has finished reducing.
+  private func present(_ presentation: ArticleListPresentation) {
+    state = presentation.state
+    // A new data set starts paging over: its end has not been reported yet.
+    if presentation.didReset { endReachedRowCount = -1 }
+    applySnapshot(reconfiguring: presentation.reconfiguredIds)
+    if presentation.scrollToTop { scrollToTop() }
   }
 
   func setStyle(_ next: ArticleListStyle) {
     style = next
     chrome.separatorColor = next.separatorColor
     collectionView.collectionViewLayout.invalidateLayout()
-    applySnapshot(changedIds: rows.map(\.id))
+    // Cells read the current style when they are configured, so only the ones on screen are stale.
+    let visibleIds = collectionView.indexPathsForVisibleItems.compactMap {
+      dataSource?.itemIdentifier(for: $0)
+    }
+    applySnapshot(reconfiguring: visibleIds)
   }
 
   func setHasMore(_ hasMore: Bool) {
@@ -153,38 +170,41 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   func setScrollToTopToken(_ token: Int) {
     defer { scrollToTopToken = token }
     guard let previous = scrollToTopToken, previous != token else { return }
+    scrollToTop()
+  }
+
+  private func scrollToTop() {
     let top = -collectionView.adjustedContentInset.top
     collectionView.setContentOffset(CGPoint(x: 0, y: top), animated: false)
   }
 
-  private func applySnapshot(changedIds: [String]) {
+  /// Applies `state` to the list. Ids are unique (the reducer guarantees it, as the data source
+  /// requires) and `reconfiguredIds` are all listed, so neither needs checking here.
+  private func applySnapshot(reconfiguring reconfiguredIds: [String]) {
     guard let dataSource else { return }
-    var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
-    snapshot.appendSections([0])
-    // Identifiers must be unique; a repeated id would trap the data source.
-    var seen = Set<String>()
-    let ids = rows.map(\.id).filter { seen.insert($0).inserted }
-    snapshot.appendItems(ids)
-    let existing = Set(dataSource.snapshot().itemIdentifiers)
-    let reconfigure = changedIds.filter { existing.contains($0) && seen.contains($0) }
-    if !reconfigure.isEmpty { snapshot.reconfigureItems(reconfigure) }
-    dataSource.apply(snapshot, animatingDifferences: false) { [weak self] in
-      guard let self else { return }
-      // A list shorter than the screen can never be scrolled, so it asks for its next page itself.
-      // Scrolling lists wait for the user: cells are self-sized, so content height is only an
-      // estimate until rows have been laid out.
-      if self.collectionView.contentSize.height <= self.collectionView.bounds.height { self.checkEndReached() }
+    ArticleListSignpost.measure("snapshot.apply") {
+      var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
+      snapshot.appendSections([0])
+      snapshot.appendItems(state.ids)
+      if !reconfiguredIds.isEmpty { snapshot.reconfigureItems(reconfiguredIds) }
+      dataSource.apply(snapshot, animatingDifferences: false) { [weak self] in
+        guard let self else { return }
+        // A list shorter than the screen can never be scrolled, so it asks for its next page itself.
+        // Scrolling lists wait for the user: cells are self-sized, so content height is only an
+        // estimate until rows have been laid out.
+        if self.collectionView.contentSize.height <= self.collectionView.bounds.height {
+          self.checkEndReached()
+        }
+      }
     }
   }
 
   // MARK: Scrolling
 
+  /// Every frame, at the display's rate (120Hz on ProMotion): Reanimated takes the event on the UI
+  /// thread, so the header and the tab bar follow the list without crossing to JS.
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    let now = CACurrentMediaTime()
-    if now - lastScrollEvent >= 1.0 / 60.0 {
-      lastScrollEvent = now
-      onScroll(["y": scrollView.contentOffset.y])
-    }
+    emitScroll(scrollView)
     if scrollView.isTracking || scrollView.isDecelerating { checkEndReached() }
   }
 
@@ -195,20 +215,27 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   }
 
   func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-    onScroll(["y": scrollView.contentOffset.y])
+    emitScroll(scrollView)
   }
 
   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-    if !decelerate { onScroll(["y": scrollView.contentOffset.y]) }
+    if !decelerate { emitScroll(scrollView) }
+  }
+
+  /// `maxY` is the offset at which the list rests at its end; offsets past it are rubber-banding.
+  private func emitScroll(_ scrollView: UIScrollView) {
+    let maxY = scrollView.contentSize.height + scrollView.adjustedContentInset.bottom - scrollView.bounds.height
+    onScroll(["y": scrollView.contentOffset.y, "maxY": maxY])
   }
 
   private func checkEndReached() {
-    guard hasMore, !rows.isEmpty, collectionView.bounds.height > 0 else { return }
+    let rowCount = state.ids.count
+    guard hasMore, rowCount > 0, collectionView.bounds.height > 0 else { return }
     let visibleBottom = collectionView.contentOffset.y + collectionView.bounds.height - collectionView.contentInset.bottom
     let remaining = collectionView.contentSize.height - visibleBottom
     guard remaining < endReachedThreshold * collectionView.bounds.height else { return }
-    guard endReachedRowCount != rows.count else { return }
-    endReachedRowCount = rows.count
+    guard endReachedRowCount != rowCount else { return }
+    endReachedRowCount = rowCount
     onEndReached()
   }
 }

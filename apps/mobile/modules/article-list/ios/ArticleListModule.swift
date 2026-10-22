@@ -12,8 +12,12 @@ public class ArticleListModule: Module {
     View(ArticleListView.self) {
       Events("onEndReached", "onScroll", "onRowPress", "onRowPressIn", "onRowAction")
 
-      Prop("rows") { (view: ArticleListView, rows: [ArticleRowRecord]) in
-        view.setRows(rows.map(\.model))
+      // Rows are not a prop: Fabric hands every prop to the view on every update, so a prop that
+      // grows with the list would be converted again on each change to any other prop. JavaScript
+      // sends row operations instead; the view function runs on the main queue, so it only queues
+      // the payload for the pipeline.
+      AsyncFunction("applyOps") { (view: ArticleListView, payload: String) in
+        view.applyOps(payload)
       }
 
       Prop("listStyle") { (view: ArticleListView, style: ListStyleRecord) in

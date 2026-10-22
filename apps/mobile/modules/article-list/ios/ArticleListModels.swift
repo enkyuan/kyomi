@@ -13,7 +13,7 @@ enum ArticleRowKind: String {
 }
 
 /// One list row, already formatted by JavaScript so native never owns copy or date logic.
-struct ArticleRowModel: Equatable, Identifiable {
+struct ArticleRowModel: Equatable, Identifiable, Sendable {
   let id: String
   let kind: ArticleRowKind
   let sourceLabel: String
@@ -28,17 +28,20 @@ struct ArticleRowModel: Equatable, Identifiable {
   let isContinuing: Bool
 }
 
-struct ArticleRowRecord: Record {
-  @Field var id: String = ""
-  @Field var kind: String = "article"
-  @Field var sourceLabel: String = ""
-  @Field var timeLabel: String = ""
-  @Field var title: String = ""
-  @Field var summary: String = ""
-  @Field var faviconUrls: [String] = []
-  @Field var feedTitle: String = ""
-  @Field var isSaved: Bool = false
-  @Field var isContinuing: Bool = false
+/// A row as JavaScript serialises it into a list operation (`ArticleListRow` in `types.ts`).
+/// Decoded with `Decodable` on the worker queue; an Expo `Record` would reflect over every field of
+/// every row on the main thread.
+struct ArticleRowWire: Decodable {
+  let id: String
+  let kind: String
+  let sourceLabel: String
+  let timeLabel: String
+  let title: String
+  let summary: String?
+  let faviconUrls: [String]
+  let feedTitle: String
+  let isSaved: Bool?
+  let isContinuing: Bool?
 
   var model: ArticleRowModel {
     ArticleRowModel(
@@ -47,11 +50,11 @@ struct ArticleRowRecord: Record {
       sourceLabel: sourceLabel,
       timeLabel: timeLabel,
       title: title,
-      summary: summary,
+      summary: summary ?? "",
       faviconUrls: faviconUrls.compactMap(URL.init(string:)),
       feedTitle: feedTitle,
-      isSaved: isSaved,
-      isContinuing: isContinuing
+      isSaved: isSaved ?? false,
+      isContinuing: isContinuing ?? false
     )
   }
 }
