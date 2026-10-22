@@ -31,7 +31,7 @@ export function ItemToolbar({ item }: { readonly item: ArticleListItemDto }) {
         onPress={toggleSaved}
       >
         <BookmarkIcon
-          fill={item.isSaved ? kyomiNativeBrand.mizu.color : inactiveColor}
+          color={item.isSaved ? kyomiNativeBrand.mizu.color : inactiveColor}
           focused={item.isSaved}
           size={ACTION_ICON_SIZE}
         />
@@ -42,7 +42,7 @@ export function ItemToolbar({ item }: { readonly item: ArticleListItemDto }) {
         className="size-12 items-center justify-center rounded-full active:bg-secondary"
         onPress={shareArticle}
       >
-        <ShareIcon fill={inactiveColor} size={ACTION_ICON_SIZE} />
+        <ShareIcon color={inactiveColor} size={ACTION_ICON_SIZE} />
       </Pressable>
       <Pressable
         accessibilityLabel="More article actions"
@@ -50,7 +50,7 @@ export function ItemToolbar({ item }: { readonly item: ArticleListItemDto }) {
         className="size-12 items-center justify-center rounded-full active:bg-secondary"
         onPress={showMoreActions}
       >
-        <MoreIcon fill={inactiveColor} size={ACTION_ICON_SIZE} />
+        <MoreIcon color={inactiveColor} size={ACTION_ICON_SIZE} />
       </Pressable>
     </View>
   );

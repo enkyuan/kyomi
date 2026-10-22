@@ -8,7 +8,7 @@ controls to SwiftUI on iOS and Material 3 Expressive Jetpack Compose on Android.
 ```text
 src/
   app/                 Route composition only.
-  components/          Narrow React Native bridges, including Mingcute SVG rendering.
+  components/          Narrow React Native bridges, including Blode SVG rendering.
   hooks/               Mobile platform and accessibility hooks.
   integrations/        Runtime SDK adapters, including the Better Auth provider.
   lib/                 App-wide clients and runtime configuration.
@@ -17,7 +17,7 @@ src/
 
 The inbox has one shared `Host` + `List` screen tree. Its small `row.ios.tsx` and
 `row.android.tsx` seams own only native modifiers, animation parameters, and the view-host detail
-needed for the Mingcute SVG. Full platform screen forks require a demonstrated API or hierarchy
+needed for the Blode SVG. Full platform screen forks require a demonstrated API or hierarchy
 gap.
 
 Authentication reuses the web app's runtime-neutral contracts through `@kyomi/auth`: field
@@ -37,7 +37,7 @@ one controller model but use paired renderers:
 
 Password reset remains gated by the same `x-kyomi-auth-capabilities` response header as web. Google
 OAuth is intentionally unavailable in mobile until its callback and distribution contract are
-enabled. The button uses Google's official Super G from `@kyomi/ui/icons/google`, not Mingcute.
+enabled. The button uses Google's official Super G from `@kyomi/ui/icons/google`, not a Blode icon.
 
 Auth follows the same domain-oriented shape as web:
 
@@ -61,11 +61,11 @@ Mobile consumes renderer-neutral contracts through public `@kyomi/ui` subpaths:
 
 - `@kyomi/ui/native/theme` for the proven matcha accent;
 - `@kyomi/ui/native/motion` for one-to-one visible effect and reduced-motion semantics;
-- `@kyomi/ui/icons/mingcute-native` for Mingcute path geometry.
+- `@kyomi/ui/icons/blode-native` for generated Blode path geometry (fill and stroke paths).
 - `@kyomi/ui/icons/google` for the official shared Google brand asset.
 
 SwiftUI and Compose own timing, easing, springs, controls, accessibility, and press feedback.
-Mobile does not import the browser motion wrapper, DOM Mingcute components, or browser CSS.
+Mobile does not import the browser motion wrapper, DOM Blode components, or browser CSS.
 Instead, `src/global.css` translates the shared semantic color roles into a native-safe Uniwind
 theme. The mobile root loads the same Inter, DM Sans, and JetBrains Mono families as web; React
 Native surfaces opt into them through named utilities while SwiftUI and Compose retain native
@@ -132,7 +132,7 @@ Release builds reject a non-HTTPS authentication origin.
 
 Kyomi is quiet at rest and expressive in response. Inbox rows stay contiguous, flat, and
 content-led. Android expression comes from ripple, overscroll, typography, tonal response, and
-native motion—not resting cards. Mingcute remains bare and unboxed. Matcha is a restrained accent
+native motion—not resting cards. Blode icons remain bare and unboxed. Matcha is a restrained accent
 and low-alpha selected surface.
 
 ## Current limits

@@ -13,7 +13,7 @@ contracts from `packages/ui`.
 universal root exports from `@expo/ui`, which delegate controls and layout to SwiftUI or Compose.
 Platform files are selective seams for native animation parameters and React Native view hosting;
 they do not duplicate screen hierarchy. `packages/ui` shares the matcha brand accent, one
-renderer-neutral Mingcute RSS path, and exact motion-effect semantics. SwiftUI and Compose retain
+renderer-neutral Blode RSS path, and exact motion-effect semantics. SwiftUI and Compose retain
 their own curves, physics, press feedback, typography, accessibility, and system surfaces.
 
 **Design posture:** Quiet at rest, expressive in response. Kyomi's web and mobile products share a
@@ -34,11 +34,11 @@ The prior Office Hours choices are resolved as follows:
 - Use universal `@expo/ui` first. Introduce an iOS or Android component fork only when the installed
   SDK's public types or live behavior demonstrate a real gap.
 - Preserve a strong platform identity and strong Kyomi parity at the same time:
-  - **Shared:** information hierarchy, matcha accent, Mingcute geometry, motion intent, visible
+  - **Shared:** information hierarchy, matcha accent, Blode geometry, motion intent, visible
     effect category, reduced-motion result, empty/loading/error vocabulary when those states land.
   - **Platform-owned:** navigation chrome, controls, system typography, semantic surfaces, press
     feedback, overscroll, animation timing, easing, springs, accessibility behavior.
-- Mingcute remains the icon language. Do not map icon names to SF Symbols or Material Symbols.
+- Blode remains the icon language. Do not map icon names to SF Symbols or Material Symbols.
 - Animation **types and visible outcomes are one-to-one**. Their native curve/physics values are
   deliberately not one-to-one.
 - The first scaffold renders representative local articles only. Auth, networking, persistence,
@@ -55,9 +55,9 @@ The prior Office Hours choices are resolved as follows:
   required behavior and the gap is documented.
 - Import shared code only through public `@kyomi/*` exports. Remove aliases that point directly at
   `packages/ui/src`.
-- Do not import the browser `@kyomi/ui/motion`, DOM Mingcute React components, CSS, web fonts,
+- Do not import the browser `@kyomi/ui/motion`, DOM Blode React components, CSS, web fonts,
   web radii, or web surface palette into the native graph.
-- Share Mingcute path data, not a web React component. Render it with `react-native-svg` inside the
+- Share Blode path data, not a web React component. Render it with `react-native-svg` inside the
   narrow React Native host boundary required by `@expo/ui`.
 - Initial renderer-neutral package scope is deliberately small:
   - matcha accent only;
@@ -73,10 +73,10 @@ The prior Office Hours choices are resolved as follows:
     green outline;
   - Android Expressive appears through ripple, overscroll, native typography, tonal response, and
     motion—not cards;
-  - Mingcute icons are bare and unboxed; line icons are the default;
+  - Blode icons are bare and unboxed; line icons are the default;
   - visible hierarchy is source → title → summary, with a compact timestamp where useful;
   - system typography and semantic native surfaces are mandatory.
-- The Mingcute RSS icon is decorative when the source is also visible. A row is one accessible
+- The Blode RSS icon is decorative when the source is also visible. A row is one accessible
   target, avoiding duplicate VoiceOver/TalkBack stops.
 - Reduce Motion changes the selection surface immediately; it does not leave a zero-duration
   spatial transform.
@@ -118,13 +118,13 @@ packages/ui
     └─ matcha values only; no React, DOM, CSS, or native runtime import
   src/native/motion.ts
     └─ intent → exact normal/reduced visual outcome; no timing or physics
-  src/icons/mingcute-native.ts
+  src/icons/blode-native.ts
     └─ renderer-neutral 24×24 RSS path objects with fill-rule support
 
 apps/mobile
   src/app/
     └─ Expo Router route composition only
-  src/components/mingcute-icon.tsx
+  src/components/blode-icon.tsx
     └─ react-native-svg renderer consuming @kyomi/ui path data
   src/hooks/use-reduced-motion.ts
     └─ AccessibilityInfo subscription
@@ -140,14 +140,14 @@ screen.tsx
        └─ row.<platform>.tsx
             ├─ consumes the same row props and resolved visual effect
             ├─ owns native timing/physics only
-            └─ hosts the same Mingcute geometry
+            └─ hosts the same Blode geometry
 ```
 
 Dependency direction:
 
 ```text
 apps/mobile → @kyomi/ui/native/*
-apps/mobile → @kyomi/ui/icons/mingcute-native
+apps/mobile → @kyomi/ui/icons/blode-native
 packages/ui native contracts → no app, React, DOM, CSS, or native runtime
 ```
 
@@ -172,7 +172,7 @@ The scaffold is acceptable only when all of the following are true on both platf
 5. iOS retains native navigation, list behavior, system typography, press feedback, and native
    motion without copying the web background or radii.
 6. The same source, title, summary, timestamp, and RSS icon are present in the same hierarchy.
-7. The RSS icon is an unboxed Mingcute line icon and not a separate accessibility stop.
+7. The RSS icon is an unboxed Blode line icon and not a separate accessibility stop.
 8. Long sources, two-line titles/summaries, large text, dark mode, Reduce Motion, and interrupted
    repeated taps remain usable.
 9. Documentation labels such as “Shared product language” never appear inside the app UI.
@@ -306,7 +306,7 @@ Acceptance:
 
 - Create: `packages/ui/src/native/theme.ts`
 - Create: `packages/ui/src/native/motion.ts`
-- Create: `packages/ui/src/icons/mingcute-native.ts`
+- Create: `packages/ui/src/icons/blode-native.ts`
 - Modify: `packages/ui/src/icons/README.md`
 - Modify: `packages/ui/package.json`
 - Create: `tests/web/integration/src/packages/ui/native-contracts.test.ts`
@@ -323,18 +323,18 @@ export const kyomiNativeBrand: {
   };
 };
 
-// @kyomi/ui/icons/mingcute-native
-export type MingcuteNativePath = {
+// @kyomi/ui/icons/blode-native
+export type BlodeNativePath = {
   readonly d: string;
   readonly fillRule?: "evenodd" | "nonzero";
 };
 
-export type MingcuteNativeIcon = {
+export type BlodeNativeIcon = {
   readonly viewBox: "0 0 24 24";
-  readonly paths: readonly MingcuteNativePath[];
+  readonly paths: readonly BlodeNativePath[];
 };
 
-export const Rss2LineNativeIcon: MingcuteNativeIcon;
+export const RssNativeIcon: BlodeNativeIcon;
 
 // @kyomi/ui/native/motion
 export type NativeMotionIntent = "selection-change";
@@ -367,13 +367,13 @@ export function resolveNativeMotionEffect(
 
   ```json
   {
-    "./icons/mingcute-native": "./src/icons/mingcute-native.ts",
+    "./icons/blode-native": "./src/icons/blode-native.ts",
     "./native/motion": "./src/native/motion.ts",
     "./native/theme": "./src/native/theme.ts"
   }
   ```
 
-- [x] Record Mingcute provenance and Apache-2.0 licensing in the icon README. Preserve path
+- [x] Record Blode provenance and MIT licensing in the icon README. Preserve path
       `fillRule` data rather than flattening icons to `string[]`.
 - [x] Add `apps/mobile/src` to the source roots scanned by `scripts/check-boundaries.ts`.
 - [x] Run the focused contract test and confirm GREEN.
@@ -381,7 +381,7 @@ export function resolveNativeMotionEffect(
 
   ```bash
   bun -e 'await Promise.all([
-    import("@kyomi/ui/icons/mingcute-native"),
+    import("@kyomi/ui/icons/blode-native"),
     import("@kyomi/ui/native/motion"),
     import("@kyomi/ui/native/theme"),
   ])'
@@ -399,7 +399,7 @@ Acceptance:
 
 - Modify: `apps/mobile/src/app/_layout.tsx`
 - Modify: `apps/mobile/src/app/index.tsx`
-- Create: `apps/mobile/src/components/mingcute-icon.tsx`
+- Create: `apps/mobile/src/components/blode-icon.tsx`
 - Create: `apps/mobile/src/hooks/use-reduced-motion.ts`
 - Create: `apps/mobile/src/modules/inbox/model.ts`
 - Create: `apps/mobile/src/modules/inbox/screen.tsx`
@@ -436,7 +436,7 @@ type InboxRowProps = {
       names from older examples.
 - [x] Create three representative article fixtures with realistic source/title/summary/timestamp
       copy. Do not render architectural explanation or wireframe annotations as product content.
-- [x] Implement `MingcuteIcon` with `react-native-svg`:
+- [x] Implement `BlodeIcon` with `react-native-svg`:
   - consumes the public renderer-neutral icon object;
   - forwards `fillRule`;
   - defaults to the current text/secondary color;
@@ -457,7 +457,7 @@ type InboxRowProps = {
 - [x] Implement `row.ios.tsx` and `row.android.tsx` with the exact same props and visible hierarchy.
       Their differences are limited to:
   - the native modifier/API necessary for the platform;
-  - the `RNHostView` placement required to host the Mingcute SVG;
+  - the `RNHostView` placement required to host the Blode SVG;
   - native animation timing/physics for the resolved effect;
   - native semantic color/type APIs.
 - [x] In both native row variants:
@@ -480,7 +480,7 @@ Static acceptance:
 - Both platform row variants consume the same shared effect resolver.
 - `rg` finds no `className`, Uniwind import, direct `packages/ui/src` alias, DOM UI import, SF
   Symbol, or Material Symbol in `apps/mobile/src`.
-- The same Mingcute path and same selection alpha reach iOS, Android, and web.
+- The same Blode path and same selection alpha reach iOS, Android, and web.
 
 ## Task 4: Regenerate native projects from the upgraded config
 
@@ -585,7 +585,7 @@ On both platforms, verify:
 - [ ] native navigation chrome and safe-area behavior;
 - [ ] contiguous flat rows with no card gaps/outlines/shadows/elevation/asymmetric shapes;
 - [ ] source → title → summary hierarchy and readable timestamp;
-- [ ] bare Mingcute RSS line icon;
+- [ ] bare Blode RSS line icon;
 - [ ] one row accessibility target with the icon decorative;
 - [ ] low-alpha matcha selection surface;
 - [ ] platform-native press response (iOS highlight, Android ripple);
@@ -611,7 +611,7 @@ static/bundle proof separately from missing live proof.
   - one universal native screen tree;
   - selective platform row/motion/host seams;
   - shared native-safe package subpaths;
-  - Mingcute path-data approach;
+  - Blode path-data approach;
   - shared effect vs platform physics boundary;
   - “quiet at rest, expressive in response” visual rule;
   - local run/check commands;
@@ -638,7 +638,7 @@ static/bundle proof separately from missing live proof.
 - `apps/mobile` uses one universal inbox screen tree and no full platform screen fork.
 - SwiftUI renders the iOS controls; Material 3 Expressive Compose renders the Android controls.
 - Platform seams are limited to proven host/modifier and native animation differences.
-- Mingcute remains visible on both platforms through shared renderer-neutral geometry.
+- Blode remains visible on both platforms through shared renderer-neutral geometry.
 - Shared contracts contain exact matcha and selection effect semantics, with no shared physics.
 - Normal and reduced selection outcomes are exhaustively mapped on both platforms.
 - The resting design is flat/list-first and visually consistent with Kyomi web's product language.
@@ -659,7 +659,7 @@ These are intentionally outside the scaffold and require their own plans:
 - real inbox queries, cache, offline behavior, and persistence;
 - reader rendering and content security boundary;
 - production-scale list virtualization/device benchmarks;
-- persisted actions and Mingcute line/fill state pairs;
+- persisted actions and Blode line/fill state pairs;
 - additional motion intents driven by real interactions;
 - tabs, notifications, deep-link behavior, and app-store delivery.
 
@@ -669,7 +669,7 @@ These are intentionally outside the scaffold and require their own plans:
 | ------------------ | -----: | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Plan Tune          |      1 | CLEAR   | Prior answers locked the review scope, builder mode, platform/native strategy, and parity posture.                                                                            |
 | Engineering Review |      1 | CLEAR   | Resolved six execution gaps: universal tree, enforceable motion outcomes, export-map proof, lock ownership, atomic template removal/clean prebuild, and durable bundles.      |
-| Design Review      |      1 | CLEAR   | Score improved from 5/10 to 9/10 by removing Android cardification, preserving source-first hierarchy, constraining matcha/Mingcute, and defining accessibility/state checks. |
+| Design Review      |      1 | CLEAR   | Score improved from 5/10 to 9/10 by removing Android cardification, preserving source-first hierarchy, constraining matcha/Blode, and defining accessibility/state checks. |
 | CEO Review         |      0 | NOT RUN | Not requested; Office Hours product decisions were already answered inline.                                                                                                   |
 | DevEx Review       |      0 | NOT RUN | Not requested; command and package-boundary concerns were covered by engineering review.                                                                                      |
 

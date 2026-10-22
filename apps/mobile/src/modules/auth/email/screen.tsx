@@ -115,7 +115,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
     <BottomSheet isPresented={isPresented} onDismiss={handleDismiss}>
       <View style={{ width: "100%", padding: 16, alignItems: "flex-end" }}>
         <Pressable accessibilityLabel="Close" accessibilityRole="button" onPress={handleDismiss}>
-          <CloseIcon fill={theme.foreground} size={22} />
+          <CloseIcon color={theme.foreground} size={22} />
         </Pressable>
       </View>
 

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 import type { DOMProps } from "expo/dom";
 import type { ReaderContent as ReaderContentModel } from "@kyomi/reader";
 import { ReaderContent } from "@kyomi/reader/web";
-import { RssIcon } from "@kyomi/ui/icons/rss";
+import { RssIcon } from "@kyomi/ui/icons/blode";
 import "@kyomi/reader/web/styles.css";
 import "@kyomi/ui/styles/reader.css";
 import { mobileColors } from "@/theme/colors";

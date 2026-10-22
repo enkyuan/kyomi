@@ -3,6 +3,8 @@ import type { ColorValue, NativeSyntheticEvent, ViewProps } from "react-native";
 export type TabBarIconPath = {
   readonly d: string;
   readonly fillRule?: "evenodd" | "nonzero";
+  /** Stroke width in viewBox units for a line glyph (round caps and joins); omit to fill. */
+  readonly strokeWidth?: number;
 };
 
 /** SVG geometry drawn natively, in the shape of `@kyomi/ui` native icons. */

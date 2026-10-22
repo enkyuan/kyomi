@@ -1,13 +1,5 @@
-export { CloseIcon, type CloseIconProps } from "./close";
 export { CopyIcon, type CopyIconProps } from "./copy";
 export { EmptyState, EmptyStateIcon, EmptyStateLight, type EmptyStateProps } from "./empty-state";
 export { GoogleIcon, type GoogleIconProps } from "./google";
-export { InboxIcon, type InboxIconProps } from "./inbox";
 export { KyomiLogo, type KyomiLogoProps } from "./kyomi";
-export { MailIcon, type MailIconProps } from "./mail";
-export { PlusIcon, type PlusIconProps } from "./plus";
 export { PremiumIcon, type PremiumIconProps } from "./premium";
-export { RecentsIcon, type RecentsIconProps } from "./recents";
-export { RssIcon, type RssIconProps } from "./rss";
-export { SearchIcon, type SearchIconProps } from "./search";
-export { SwitcherIcon, type SwitcherIconProps } from "./switcher";

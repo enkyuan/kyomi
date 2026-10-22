@@ -1,23 +1,8 @@
-import { CloseIconGeometry } from "@kyomi/ui/icons/close";
-import Svg, { Path, type SvgProps } from "react-native-svg";
+import { XNativeIcon } from "@kyomi/ui/icons/blode-native";
+import { BlodeIcon, type BlodeIconProps } from "./blode";
 
-export type CloseIconProps = Omit<SvgProps, "width" | "height"> & {
-  size?: number;
-};
+export type CloseIconProps = Omit<BlodeIconProps, "icon">;
 
-export function CloseIcon({ size = 20, fill = "currentColor", ...props }: CloseIconProps) {
-  return (
-    <Svg
-      accessibilityElementsHidden
-      importantForAccessibility="no-hide-descendants"
-      height={size}
-      viewBox={CloseIconGeometry.viewBox}
-      width={size}
-      {...props}
-    >
-      {CloseIconGeometry.paths.map((path) => (
-        <Path d={path.d} fill={fill} key={path.d} />
-      ))}
-    </Svg>
-  );
+export function CloseIcon(props: CloseIconProps) {
+  return <BlodeIcon icon={XNativeIcon} {...props} />;
 }

@@ -2,8 +2,8 @@ import { ActivityIndicator, Pressable, Text, useColorScheme, View } from "react-
 import { List } from "./components/list";
 import { SettingsScreenLayout } from "./components/screen-layout";
 import { useLogout } from "./hooks/use-logout";
-import { MingcuteIcon } from "@/components/icons/mingcute";
-import { WaveHandFillNativeIcon } from "@kyomi/ui/icons/mingcute-native";
+import { BlodeIcon } from "@/components/icons/blode";
+import { HandFilledNativeIcon } from "@kyomi/ui/icons/blode-native";
 import { mobileColors } from "@/theme/colors";
 import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
@@ -34,9 +34,9 @@ export function SettingsScreen() {
               })}
             >
               <View className="w-full flex-row items-center gap-3 px-5">
-                <MingcuteIcon
-                  fill={theme.foreground}
-                  icon={WaveHandFillNativeIcon}
+                <BlodeIcon
+                  color={theme.foreground}
+                  icon={HandFilledNativeIcon}
                   size={20}
                   style={{ transform: [{ translateY: -1 }] }}
                 />

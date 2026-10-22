@@ -1,21 +1,8 @@
-import { SwitcherIconGeometry } from "@kyomi/ui/icons/switcher";
-import Svg, { Path, type SvgProps } from "react-native-svg";
+import { ChevronsUpDownNativeIcon } from "@kyomi/ui/icons/blode-native";
+import { BlodeIcon, type BlodeIconProps } from "./blode";
 
-export type SwitcherIconProps = Omit<SvgProps, "width" | "height"> & {
-  size?: number;
-};
+export type SwitcherIconProps = Omit<BlodeIconProps, "icon">;
 
-export function SwitcherIcon({ size = 20, fill = "currentColor", ...props }: SwitcherIconProps) {
-  return (
-    <Svg
-      accessibilityElementsHidden
-      importantForAccessibility="no-hide-descendants"
-      height={size}
-      viewBox={SwitcherIconGeometry.viewBox}
-      width={size}
-      {...props}
-    >
-      <Path d={SwitcherIconGeometry.d} fill={fill} />
-    </Svg>
-  );
+export function SwitcherIcon(props: SwitcherIconProps) {
+  return <BlodeIcon icon={ChevronsUpDownNativeIcon} {...props} />;
 }

@@ -7,14 +7,22 @@ struct TabBarIcon {
   struct Layer {
     let path: SwiftUI.Path
     let evenOdd: Bool
+    /// Stroke width in viewBox units for line glyphs, or nil for a filled path.
+    let strokeWidth: CGFloat?
   }
 
   let viewBox: CGRect
   let layers: [Layer]
 
-  init(viewBox: String, paths: [(d: String, evenOdd: Bool)]) {
+  init(viewBox: String, paths: [(d: String, evenOdd: Bool, strokeWidth: CGFloat?)]) {
     self.viewBox = Self.parseViewBox(viewBox)
-    layers = paths.map { Layer(path: SwiftUI.Path(SVGPathParser.path(from: $0.d)), evenOdd: $0.evenOdd) }
+    layers = paths.map {
+      Layer(
+        path: SwiftUI.Path(SVGPathParser.path(from: $0.d)),
+        evenOdd: $0.evenOdd,
+        strokeWidth: $0.strokeWidth
+      )
+    }
   }
 
   private static func parseViewBox(_ value: String) -> CGRect {
@@ -39,7 +47,7 @@ struct TabBarIconView: View {
     ZStack {
       ForEach(icon.layers.indices, id: \.self) { index in
         let layer = icon.layers[index]
-        ViewBoxShape(path: layer.path, viewBox: icon.viewBox)
+        ViewBoxShape(path: layer.path, viewBox: icon.viewBox, strokeWidth: layer.strokeWidth)
           .fill(color, style: FillStyle(eoFill: layer.evenOdd))
       }
     }
@@ -48,13 +56,16 @@ struct TabBarIconView: View {
   }
 }
 
+/// Scales a path into `rect`. Line glyphs (a `strokeWidth`) come back as their stroked outline,
+/// with round caps and joins, so the tab bar fills every glyph the same way.
 private struct ViewBoxShape: Shape {
   let path: SwiftUI.Path
   let viewBox: CGRect
+  let strokeWidth: CGFloat?
 
   func path(in rect: CGRect) -> SwiftUI.Path {
     let scale = min(rect.width / viewBox.width, rect.height / viewBox.height)
-    return path.applying(
+    let scaled = path.applying(
       CGAffineTransform(
         a: scale,
         b: 0,
@@ -64,6 +75,8 @@ private struct ViewBoxShape: Shape {
         ty: rect.midY - viewBox.midY * scale
       )
     )
+    guard let strokeWidth else { return scaled }
+    return scaled.strokedPath(StrokeStyle(lineWidth: strokeWidth * scale, lineCap: .round, lineJoin: .round))
   }
 }
 

@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { Pressable, ScrollView, Text, useColorScheme, View } from "react-native";
 import { router } from "expo-router";
 import { SymbolView } from "expo-symbols";
-import { MingcuteIcon } from "@/components/icons/mingcute";
+import { BlodeIcon } from "@/components/icons/blode";
 import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import { SETTINGS_GROUPS } from "../lib/items";
@@ -40,8 +40,8 @@ export function List({ footer }: SettingsListProps) {
                   onPress={() => router.push(item.route as never)}
                 >
                   <View className="min-h-13 flex-row items-center gap-3 px-5 py-3">
-                    <MingcuteIcon
-                      fill={theme.foreground}
+                    <BlodeIcon
+                      color={theme.foreground}
                       icon={item.icon}
                       size={20}
                       style={{ transform: [{ translateY: -1 }] }}

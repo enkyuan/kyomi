@@ -24,7 +24,7 @@ export function ItemToolbar({ item }: { readonly item: ArticleListItemDto }) {
         onPress={toggleSaved}
       >
         <BookmarkIcon
-          fill={item.isSaved ? kyomiNativeBrand.mizu.color : INACTIVE_COLOR}
+          color={item.isSaved ? kyomiNativeBrand.mizu.color : INACTIVE_COLOR}
           focused={item.isSaved}
           size={ACTION_ICON_SIZE}
         />
@@ -35,7 +35,7 @@ export function ItemToolbar({ item }: { readonly item: ArticleListItemDto }) {
         className="size-12 items-center justify-center rounded-full active:bg-secondary"
         onPress={shareArticle}
       >
-        <ShareIcon fill={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
+        <ShareIcon color={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
       </Pressable>
       <View className="size-12 shrink-0">
         <Host ignoreSafeArea="all" style={styles.menuHost}>
@@ -46,7 +46,7 @@ export function ItemToolbar({ item }: { readonly item: ArticleListItemDto }) {
                   className="size-12 items-center justify-center rounded-full"
                   pointerEvents="none"
                 >
-                  <MoreIcon fill={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
+                  <MoreIcon color={INACTIVE_COLOR} size={ACTION_ICON_SIZE} />
                 </View>
               </RNHostView>
             }

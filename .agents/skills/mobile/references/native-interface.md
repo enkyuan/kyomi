@@ -14,7 +14,7 @@ and any active mobile design plan before choosing presentation. Preserve intent,
 | Color             | Proven brand accents and semantic roles                    | System semantic surfaces and labels; apply Kyomi accents selectively | Material dynamic or seeded color roles; apply Kyomi accents selectively |
 | Typography        | Reading hierarchy and emphasis                             | Dynamic Type text styles                                             | Material 3 type roles and font scaling                                  |
 | Shape and density | Relative emphasis and grouping                             | Native SwiftUI containers and continuous platform geometry           | Material 3 Expressive shape scale, spacing, and adaptive layout         |
-| Icons             | Kyomi's semantic icon and persisted-state rules            | Use the project-selected native-safe Mingcute renderer when required | Use the same project-selected Mingcute geometry when required           |
+| Icons             | Kyomi's semantic icon and persisted-state rules            | Use the project-selected native-safe Blode renderer when required | Use the same project-selected Blode geometry when required           |
 | Motion            | Named intent, effect category, and reduced-motion fallback | Translate through SwiftUI animation                                  | Translate through Compose motion                                        |
 
 Do not copy web hex tables, Tailwind classes, fixed desktop dimensions, hover behavior, or radius
@@ -72,7 +72,7 @@ and [Android's Material 3 Compose guidance](https://developer.android.com/develo
 - Keep SwiftUI and Compose component trees independent but give paired renderers identical public
   props, state transitions, analytics meaning, and error behavior.
 - Follow Kyomi's icon rule: line icons for ordinary actions and filled icons only for persisted
-  state. A generic Expo skill's symbol preference does not override the project-selected Mingcute
+  state. A generic Expo skill's symbol preference does not override the project-selected Blode
   contract.
 - Keep native list performance as a measured boundary. Profile representative inbox sizes on
   devices before treating JSX-generated native list items as production virtualization.

@@ -1,37 +1,56 @@
 import { router } from "expo-router";
 import type { NativeSyntheticEvent } from "react-native";
-import { InboxIconGeometry } from "@kyomi/ui/icons/inbox";
-import { Album2FillNativeIcon, Album2LineNativeIcon } from "@kyomi/ui/icons/mingcute-native";
-import { SwitcherIconGeometry } from "@kyomi/ui/icons/switcher";
+import {
+  AlbumsFilledNativeIcon,
+  AlbumsNativeIcon,
+  BLODE_STROKE_WIDTH,
+  ChevronsUpDownNativeIcon,
+  InboxFilledNativeIcon,
+  InboxNativeIcon,
+  type BlodeNativeIcon,
+} from "@kyomi/ui/icons/blode-native";
 import { useKeyboard } from "@hooks/use-keyboard";
 import { mobileColors } from "@/theme/colors";
 import {
   TabBarView,
   tabBarMetrics,
+  type TabBarIcon,
   type TabBarItem,
   type TabBarSwitcher,
 } from "../../../../modules/tab-bar";
 import type { TabBarProps } from "./lib/types";
 
+/** Maps Blode geometry to the native bar: line glyphs carry their stroke width, filled ones none. */
+function toTabBarIcon(icon: BlodeNativeIcon): TabBarIcon {
+  return {
+    viewBox: icon.viewBox,
+    paths: icon.paths.map((path) => ({
+      d: path.d,
+      fillRule: path.fillRule,
+      strokeWidth: path.stroke ? BLODE_STROKE_WIDTH : undefined,
+    })),
+  };
+}
+
 const TABS: readonly TabBarItem[] = [
   {
     key: "inbox",
     label: "Feeds",
-    icon: { viewBox: InboxIconGeometry.viewBox, paths: [InboxIconGeometry.line] },
-    selectedIcon: { viewBox: InboxIconGeometry.viewBox, paths: [InboxIconGeometry.fill] },
+    icon: toTabBarIcon(InboxNativeIcon),
+    selectedIcon: toTabBarIcon(InboxFilledNativeIcon),
   },
   {
     key: "explore",
     label: "Explore articles",
-    icon: Album2LineNativeIcon,
-    selectedIcon: Album2FillNativeIcon,
+    icon: toTabBarIcon(AlbumsNativeIcon),
+    selectedIcon: toTabBarIcon(AlbumsFilledNativeIcon),
   },
 ];
 
 const SWITCHER: TabBarSwitcher = {
   label: "Choose source",
   hint: "Opens folders and feeds",
-  icon: { viewBox: SwitcherIconGeometry.viewBox, paths: [{ d: SwitcherIconGeometry.d }] },
+  icon: toTabBarIcon(ChevronsUpDownNativeIcon),
 };
 
 /** Floating tab bar drawn natively in SwiftUI by the local `tab-bar` module. */

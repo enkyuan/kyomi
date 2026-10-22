@@ -22,7 +22,7 @@ import {
 
 interface TabIconProps {
   readonly glowProgress: SharedValue<number>;
-  readonly icon: ComponentType<{ fill?: string; focused?: boolean; size?: number }>;
+  readonly icon: ComponentType<{ color?: string; focused?: boolean; size?: number }>;
   readonly index: number;
   readonly isActive: boolean;
   readonly onPress: (index: number) => void;
@@ -93,7 +93,7 @@ export function TabIcon({
         style={[styles.container, width ? { flex: 0, width } : null, iconAnimatedStyle]}
       >
         <View style={styles.iconWrapper}>
-          <Icon fill={iconColor} focused={isActive} size={iconSize} />
+          <Icon color={iconColor} focused={isActive} size={iconSize} />
         </View>
       </Animated.View>
     </GestureDetector>

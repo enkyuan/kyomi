@@ -43,6 +43,8 @@ public class TabBarModule: Module {
 struct IconPathRecord: Record {
   @Field var d: String = ""
   @Field var fillRule: String? = nil
+  /// Set for line glyphs, in viewBox units; omitted for filled paths.
+  @Field var strokeWidth: Double? = nil
 }
 
 struct IconRecord: Record {
@@ -50,7 +52,7 @@ struct IconRecord: Record {
   @Field var paths: [IconPathRecord] = []
 
   var icon: TabBarIcon {
-    TabBarIcon(viewBox: viewBox, paths: paths.map { (d: $0.d, evenOdd: $0.fillRule == "evenodd") })
+    TabBarIcon(viewBox: viewBox, paths: paths.map { (d: $0.d, evenOdd: $0.fillRule == "evenodd", strokeWidth: $0.strokeWidth.map { CGFloat($0) }) })
   }
 }
 

@@ -1,28 +1,10 @@
-import { InboxIconGeometry } from "@kyomi/ui/icons/inbox";
-import Svg, { Path, type SvgProps } from "react-native-svg";
+import { InboxFilledNativeIcon, InboxNativeIcon } from "@kyomi/ui/icons/blode-native";
+import { BlodeIcon, type BlodeIconProps } from "./blode";
 
-export type InboxIconProps = Omit<SvgProps, "width" | "height"> & {
-  size?: number;
-  focused?: boolean;
+export type InboxIconProps = Omit<BlodeIconProps, "icon"> & {
+  readonly focused?: boolean;
 };
 
-export function InboxIcon({
-  size = 20,
-  fill = "currentColor",
-  focused = false,
-  ...props
-}: InboxIconProps) {
-  const path = focused ? InboxIconGeometry.fill : InboxIconGeometry.line;
-  return (
-    <Svg
-      accessibilityElementsHidden
-      importantForAccessibility="no-hide-descendants"
-      height={size}
-      viewBox={InboxIconGeometry.viewBox}
-      width={size}
-      {...props}
-    >
-      <Path d={path.d} fill={fill} />
-    </Svg>
-  );
+export function InboxIcon({ focused = false, ...props }: InboxIconProps) {
+  return <BlodeIcon icon={focused ? InboxFilledNativeIcon : InboxNativeIcon} {...props} />;
 }
