@@ -6,18 +6,17 @@
  * Run with `bun run icons:native` after changing `ICONS`.
  */
 import * as Blode from "blode-icons-react";
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
 /** Blode export name, without the `Icon` suffix, for every icon native code uses. */
 const ICONS = [
-  "Albums",
-  "AlbumsFilled",
   "ArrowShareRight",
   "Bookmark",
   "BookmarkFilled",
   "BrainFilled",
+  "ChevronGrabberVertical",
   "ChevronsUpDown",
   "ClockFilled",
   "Ellipsis",
@@ -31,6 +30,7 @@ const ICONS = [
   "Inbox",
   "InboxFilled",
   "Lock",
+  "MagnifyingGlass",
   "MessageCircleFilled",
   "ReceiptBillFilled",
   "Rss",
@@ -38,6 +38,17 @@ const ICONS = [
   "ToggleFilled",
   "X",
 ] as const;
+
+/**
+ * Icons newer than (or revised since) the installed `blode-icons-react`, taken from Blode's own SVG
+ * downloads in `scripts/svg`. Drop an entry once the package ships it and move it to `ICONS`.
+ */
+const SVG_FILES = {
+  CompassPointer: "svg/compass-pointer.svg",
+  CompassPointerFilled: "svg/compass-pointer-filled.svg",
+  LayoutAlignBottom: "svg/layout-align-bottom.svg",
+  LayoutAlignBottomFilled: "svg/layout-align-bottom-filled.svg",
+} as const;
 
 type GeneratedPath = {
   d: string;
@@ -49,27 +60,41 @@ function attribute(source: string, name: string): string | undefined {
   return new RegExp(`(?:^|\\s)${name}="([^"]*)"`).exec(source)?.[1];
 }
 
-function extractPaths(name: string): GeneratedPath[] {
-  const component = (Blode as Record<string, unknown>)[`${name}Icon`];
-  if (!component) throw new Error(`blode-icons-react has no ${name}Icon`);
-
-  const markup = renderToStaticMarkup(createElement(component as never));
-  const svg = /<svg\s([^>]*)>/.exec(markup)?.[1] ?? "";
-  if (attribute(svg, "viewBox") !== "0 0 24 24" || attribute(svg, "stroke-width") !== "2") {
-    throw new Error(`${name}Icon: expected a 24x24 icon with stroke-width 2, got <svg ${svg}>`);
+function readMarkup(name: string): { markup: string; strictRoot: boolean } {
+  if (name in SVG_FILES) {
+    const file = SVG_FILES[name as keyof typeof SVG_FILES];
+    return { markup: readFileSync(new URL(file, import.meta.url), "utf8"), strictRoot: false };
   }
 
-  const tags = [...markup.matchAll(/<(\w+)\s([^>]*)>/g)].filter((match) => match[1] !== "svg");
-  if (tags.length === 0) throw new Error(`${name}Icon rendered no shapes`);
+  const component = (Blode as Record<string, unknown>)[`${name}Icon`];
+  if (!component) throw new Error(`blode-icons-react has no ${name}Icon`);
+  return { markup: renderToStaticMarkup(createElement(component as never)), strictRoot: true };
+}
+
+function extractPaths(name: string): GeneratedPath[] {
+  const { markup, strictRoot } = readMarkup(name);
+  const svg = /<svg\s([^>]*)>/.exec(markup)?.[1] ?? "";
+  if (attribute(svg, "viewBox") !== "0 0 24 24") {
+    throw new Error(`${name}: expected a 24x24 icon, got <svg ${svg}>`);
+  }
+  if (strictRoot && attribute(svg, "stroke-width") !== "2") {
+    throw new Error(`${name}: expected stroke-width 2, got <svg ${svg}>`);
+  }
+
+  const tags = [...markup.matchAll(/<(\w+)\s([^>]*?)\/?>/g)].filter((match) => match[1] !== "svg");
+  if (tags.length === 0) throw new Error(`${name} rendered no shapes`);
 
   return tags.map(([, tag, attributes]) => {
-    if (tag !== "path") throw new Error(`${name}Icon renders <${tag}>; only <path> is supported`);
+    if (tag !== "path") throw new Error(`${name} renders <${tag}>; only <path> is supported`);
     const d = attribute(attributes, "d");
-    if (!d) throw new Error(`${name}Icon has a path without data`);
+    if (!d) throw new Error(`${name} has a path without data`);
 
     const isStroke = attribute(attributes, "stroke") === "currentColor";
     const isFill = attribute(attributes, "fill") === "currentColor";
-    if (isStroke === isFill) throw new Error(`${name}Icon has a path that is both or neither`);
+    if (isStroke === isFill) throw new Error(`${name} has a path that is both or neither`);
+    if (isStroke && !strictRoot && attribute(attributes, "stroke-width") !== "2") {
+      throw new Error(`${name} has a stroke that is not 2 wide`);
+    }
 
     const path: GeneratedPath = { d };
     if (attribute(attributes, "fill-rule") === "evenodd") path.fillRule = "evenodd";
@@ -82,7 +107,9 @@ function extractPaths(name: string): GeneratedPath[] {
   });
 }
 
-const entries = ICONS.map((name) => {
+const NAMES = [...ICONS, ...Object.keys(SVG_FILES)].toSorted();
+
+const entries = NAMES.map((name) => {
   const body = extractPaths(name)
     .map((path) => `    ${JSON.stringify(path)},`)
     .join("\n");
@@ -115,4 +142,4 @@ const viewBox = "0 0 24 24" as const;
 
 ${entries.join("\n")}`,
 );
-console.log(`Wrote ${ICONS.length} icons`);
+console.log(`Wrote ${NAMES.length} icons`);

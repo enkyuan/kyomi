@@ -20,6 +20,8 @@ struct TabBarSwitcher {
 final class TabBarModel: ObservableObject {
   @Published var tabs: [TabBarItem] = []
   @Published var switcher: TabBarSwitcher?
+  /// Magnifying glass drawn in the search button and field; falls back to the SF Symbol.
+  @Published var searchIcon: TabBarIcon?
   @Published var selectedIndex = 0
   @Published var minimized = false
   @Published var searchActive = false

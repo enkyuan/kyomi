@@ -1,12 +1,13 @@
 import { router } from "expo-router";
 import type { NativeSyntheticEvent } from "react-native";
 import {
-  AlbumsFilledNativeIcon,
-  AlbumsNativeIcon,
   BLODE_STROKE_WIDTH,
-  ChevronsUpDownNativeIcon,
-  InboxFilledNativeIcon,
-  InboxNativeIcon,
+  ChevronGrabberVerticalNativeIcon,
+  CompassPointerFilledNativeIcon,
+  CompassPointerNativeIcon,
+  LayoutAlignBottomFilledNativeIcon,
+  LayoutAlignBottomNativeIcon,
+  MagnifyingGlassNativeIcon,
   type BlodeNativeIcon,
 } from "@kyomi/ui/icons/blode-native";
 import { useKeyboard } from "@hooks/use-keyboard";
@@ -36,21 +37,23 @@ const TABS: readonly TabBarItem[] = [
   {
     key: "inbox",
     label: "Feeds",
-    icon: toTabBarIcon(InboxNativeIcon),
-    selectedIcon: toTabBarIcon(InboxFilledNativeIcon),
+    icon: toTabBarIcon(LayoutAlignBottomNativeIcon),
+    selectedIcon: toTabBarIcon(LayoutAlignBottomFilledNativeIcon),
   },
   {
     key: "explore",
     label: "Explore articles",
-    icon: toTabBarIcon(AlbumsNativeIcon),
-    selectedIcon: toTabBarIcon(AlbumsFilledNativeIcon),
+    icon: toTabBarIcon(CompassPointerNativeIcon),
+    selectedIcon: toTabBarIcon(CompassPointerFilledNativeIcon),
   },
 ];
+
+const SEARCH_ICON = toTabBarIcon(MagnifyingGlassNativeIcon);
 
 const SWITCHER: TabBarSwitcher = {
   label: "Choose source",
   hint: "Opens folders and feeds",
-  icon: toTabBarIcon(ChevronsUpDownNativeIcon),
+  icon: toTabBarIcon(ChevronGrabberVerticalNativeIcon),
 };
 
 /** Floating tab bar drawn natively in SwiftUI by the local `tab-bar` module. */
@@ -87,6 +90,7 @@ export function TabBar({
       onSearchSubmit={({ nativeEvent }) => onSearchSubmit?.(nativeEvent.query)}
       onSwitcherPress={() => router.push("/(protected)/switcher")}
       onTabPress={handleTabPress}
+      searchIcon={SEARCH_ICON}
       searchPlaceholder="Search feeds or articles"
       selectedIndex={selectedIndex}
       style={{

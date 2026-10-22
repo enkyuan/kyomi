@@ -141,9 +141,7 @@ struct TabBarContent: View {
 
   private func searchField(_ layout: TabBarLayout) -> some View {
     HStack(spacing: TabBarMetrics.searchFieldSpacing) {
-      Image(systemName: "magnifyingglass")
-        .font(.system(size: TabBarMetrics.searchIconSize))
-        .foregroundStyle(Self.searchFieldIconColor)
+      searchGlyph(size: TabBarMetrics.searchIconSize, color: Self.searchFieldIconColor)
         .frame(width: TabBarMetrics.searchFieldIconWidth)
         .accessibilityHidden(true)
 
@@ -160,20 +158,32 @@ struct TabBarContent: View {
     .frame(width: layout.mainWidth, height: layout.barHeight)
   }
 
+  @ViewBuilder
+  private func searchGlyph(size: CGFloat, color: Color) -> some View {
+    if let icon = model.searchIcon {
+      TabBarIconView(icon: icon, size: size, color: color)
+    } else {
+      Image(systemName: "magnifyingglass")
+        .font(.system(size: size))
+        .foregroundStyle(color)
+    }
+  }
+
   private func actionButton(_ layout: TabBarLayout) -> some View {
     Button {
       model.toggleSearch()
     } label: {
-      Image(systemName: model.searchActive ? "xmark" : "magnifyingglass")
-        .font(
-          .system(
-            size: (model.searchActive ? TabBarMetrics.closeIconSize : TabBarMetrics.searchIconSize)
-              * layout.iconScale
-          )
-        )
-        .foregroundStyle(Self.actionIconColor)
-        .frame(width: layout.actionSize, height: layout.actionSize)
-        .contentShape(.circle)
+      Group {
+        if model.searchActive {
+          Image(systemName: "xmark")
+            .font(.system(size: TabBarMetrics.closeIconSize * layout.iconScale))
+            .foregroundStyle(Self.actionIconColor)
+        } else {
+          searchGlyph(size: TabBarMetrics.searchIconSize * layout.iconScale, color: Self.actionIconColor)
+        }
+      }
+      .frame(width: layout.actionSize, height: layout.actionSize)
+      .contentShape(.circle)
     }
     .buttonStyle(.plain)
     .glassEffect(.regular.interactive(), in: .circle)

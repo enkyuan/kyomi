@@ -25,6 +25,10 @@ public class TabBarModule: Module {
         view.model.switcher = switcher?.switcher
       }
 
+      Prop("searchIcon") { (view: TabBarView, icon: IconRecord?) in
+        view.model.searchIcon = icon?.icon
+      }
+
       Prop("minimized") { (view: TabBarView, minimized: Bool?) in
         view.model.minimized = minimized ?? false
       }

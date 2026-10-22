@@ -31,6 +31,8 @@ export type TabBarViewProps = ViewProps & {
   readonly tabs: readonly TabBarItem[];
   readonly selectedIndex: number;
   readonly switcher?: TabBarSwitcher;
+  /** Magnifying glass for the search button and field; omit to use the SF Symbol. */
+  readonly searchIcon?: TabBarIcon;
   readonly minimized?: boolean;
   readonly activeTintColor?: ColorValue;
   readonly searchPlaceholder?: string;
