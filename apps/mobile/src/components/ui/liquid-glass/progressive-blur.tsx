@@ -18,11 +18,12 @@ type Props = ViewProps & {
  * Progressive (gradient) blur: one BlurView alpha-masked by an eased
  * gradient, so the material fades continuously with no layer seams —
  * full strength through the first 30%, easing to nothing at the far
- * edge. A soft gradient scrim keeps overlaid chrome legible.
+ * edge. A gradient scrim, densest where the chrome sits, tones down bright text and imagery
+ * that the blur alone leaves too contrasty, so overlaid chrome stays legible over any content.
  */
 export function ProgressiveBlur({
   style,
-  intensity = 40,
+  intensity = 64,
   direction = "top",
   tint = "dark",
   ...rest
@@ -52,7 +53,7 @@ export function ProgressiveBlur({
           left: 0,
           right: 0,
           bottom: 0,
-          experimental_backgroundImage: `linear-gradient(to ${toEdge}, rgba(${rgb},0.70) 0%, rgba(${rgb},0.32) 42%, rgba(${rgb},0.08) 68%, rgba(${rgb},0) 88%)`,
+          experimental_backgroundImage: `linear-gradient(to ${toEdge}, rgba(${rgb},0.84) 0%, rgba(${rgb},0.64) 34%, rgba(${rgb},0.32) 60%, rgba(${rgb},0.1) 80%, rgba(${rgb},0) 98%)`,
         }}
       />
     </View>

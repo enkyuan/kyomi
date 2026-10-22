@@ -13,7 +13,9 @@ enum TabBarMetrics {
   static let scale = systemHeight / designHeight
 
   static let height = designHeight * scale
-  static let compactHeight = 44 * scale
+  /// Button size while minimized, about two thirds of the expanded bar, so the bar recedes
+  /// without becoming a hard-to-hit target.
+  static let compactHeight = 31 * scale
   static let mainWidth = 168 * scale
   /// Distance from the screen's side and bottom edges (system: 21pt).
   static let edgeInset = 16 * scale
