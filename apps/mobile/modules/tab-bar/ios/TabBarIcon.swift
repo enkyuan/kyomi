@@ -143,6 +143,8 @@ private struct ViewBoxShape: Shape {
         )
       )
     )
+    guard let strokeWidth else { return scaled }
+    return scaled.strokedPath(StrokeStyle(lineWidth: strokeWidth * scale, lineCap: .round, lineJoin: .round))
   }
 }
 
