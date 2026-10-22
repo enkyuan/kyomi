@@ -35,12 +35,17 @@ export type TabBarViewProps = ViewProps & {
   readonly switcher?: TabBarSwitcher;
   /** Magnifying glass for the search button and field; omit to use the SF Symbol. */
   readonly searchIcon?: TabBarIcon;
+  /** Plus for the add button at the trailing edge; omit to use the SF Symbol. */
+  readonly addIcon?: TabBarIcon;
+  /** Colour of the plus drawn on the tinted (`activeTintColor`) add button. */
+  readonly addIconColor?: ColorValue;
   readonly minimized?: boolean;
   readonly activeTintColor?: ColorValue;
   readonly searchPlaceholder?: string;
   /** Fires on every press, including one on the selected tab. */
   readonly onTabPress?: (event: NativeSyntheticEvent<{ index: number }>) => void;
   readonly onSwitcherPress?: () => void;
+  readonly onAddPress?: () => void;
   readonly onSearchActiveChange?: (event: NativeSyntheticEvent<{ active: boolean }>) => void;
   readonly onSearchQueryChange?: (event: NativeSyntheticEvent<{ query: string }>) => void;
   readonly onSearchSubmit?: (event: NativeSyntheticEvent<{ query: string }>) => void;

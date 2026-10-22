@@ -11,7 +11,7 @@ public class TabBarModule: Module {
     Constant("keyboardGap") { Double(TabBarMetrics.keyboardGap) }
 
     View(TabBarView.self) {
-      Events("onTabPress", "onSwitcherPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit")
+      Events("onTabPress", "onSwitcherPress", "onAddPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit")
 
       Prop("tabs") { (view: TabBarView, tabs: [TabItemRecord]) in
         view.model.tabs = tabs.map(\.item)
@@ -27,6 +27,14 @@ public class TabBarModule: Module {
 
       Prop("searchIcon") { (view: TabBarView, icon: IconRecord?) in
         view.model.searchIcon = icon?.icon
+      }
+
+      Prop("addIcon") { (view: TabBarView, icon: IconRecord?) in
+        view.model.addIcon = icon?.icon
+      }
+
+      Prop("addIconColor") { (view: TabBarView, color: UIColor?) in
+        view.model.addIconColor = color.map { Color(uiColor: $0) } ?? Color.black.opacity(0.85)
       }
 
       Prop("minimized") { (view: TabBarView, minimized: Bool?) in

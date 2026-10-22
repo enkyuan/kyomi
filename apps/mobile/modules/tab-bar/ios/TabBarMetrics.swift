@@ -15,7 +15,6 @@ enum TabBarMetrics {
   static let height = designHeight * scale
   static let compactHeight = 44 * scale
   static let mainWidth = 168 * scale
-  static let compactMainWidth = 150 * scale
   /// Distance from the screen's side and bottom edges (system: 21pt).
   static let edgeInset = 16 * scale
   static let gap = 10 * scale
@@ -30,6 +29,7 @@ enum TabBarMetrics {
   static let tabIconSize = 25 * scale
   static let switcherIconSize = 20 * scale
   static let searchIconSize = 18 * scale
+  static let addIconSize = 20 * scale
   static let closeIconSize = 16 * scale
   static let searchFieldPadding = 14 * scale
   static let searchFieldSpacing = 8 * scale
@@ -41,12 +41,24 @@ enum TabBarMetrics {
   static let containerHeight = height + edgeInset
 }
 
-/// Resolved geometry for one state of the bar.
+/// Resolved geometry for one state of the bar: a search button at the leading edge, the tab capsule
+/// centred between the buttons, and an add button at the trailing edge, as in the iOS 26 tab bar.
 struct TabBarLayout: Equatable {
+  let containerWidth: CGFloat
+  /// Height of the tab capsule (the buttons use `buttonSize`).
   let barHeight: CGFloat
+  /// Diameter of the search and add buttons. They shrink while the bar is minimized.
+  let buttonSize: CGFloat
+  /// `buttonSize` relative to the expanded height, for scaling button glyphs.
+  let buttonScale: CGFloat
   let mainWidth: CGFloat
-  let actionSize: CGFloat
-  let iconScale: CGFloat
+  let mainX: CGFloat
+  let searchX: CGFloat
+  let addX: CGFloat
+  /// Minimized: only the two buttons remain, the capsule is hidden.
+  let showsMain: Bool
+  /// Searching: the add button yields its space to the search field.
+  let showsAdd: Bool
   /// Whole-point widths of the tab segments followed by the switcher segment.
   /// `UISegmentedControl` floors fractional widths, so the icons and the
   /// selection lens share these values.
@@ -54,15 +66,31 @@ struct TabBarLayout: Equatable {
   let segmentHeight: CGFloat
 
   init(containerWidth: CGFloat, tabCount: Int, hasSwitcher: Bool, minimized: Bool, searchActive: Bool) {
+    self.containerWidth = containerWidth
     let compact = minimized && !searchActive
-    barHeight = compact ? TabBarMetrics.compactHeight : TabBarMetrics.height
-    actionSize = barHeight
-    iconScale = barHeight / TabBarMetrics.height
+    barHeight = TabBarMetrics.height
+    buttonSize = compact ? TabBarMetrics.compactHeight : TabBarMetrics.height
+    buttonScale = buttonSize / TabBarMetrics.height
+    showsMain = !compact
+    showsAdd = !searchActive
 
-    let availableWidth = max(0, containerWidth - TabBarMetrics.edgeInset * 2)
-    let maximumMainWidth = max(0, availableWidth - TabBarMetrics.gap - actionSize)
-    let tabsWidth = min(compact ? TabBarMetrics.compactMainWidth : TabBarMetrics.mainWidth, maximumMainWidth)
-    mainWidth = searchActive ? maximumMainWidth : tabsWidth
+    let inset = TabBarMetrics.edgeInset
+    let gap = TabBarMetrics.gap
+    let availableWidth = max(0, containerWidth - inset * 2)
+
+    // The capsule keeps its size when the bar minimizes (it only hides), so size it for the
+    // expanded buttons, which also keeps the tab segments from reflowing.
+    let sideReserve = (TabBarMetrics.height + gap) * 2
+    let tabsWidth = min(TabBarMetrics.mainWidth, max(0, availableWidth - sideReserve))
+    searchX = inset
+    addX = containerWidth - inset - buttonSize
+    if searchActive {
+      mainWidth = max(0, availableWidth - buttonSize - gap)
+      mainX = inset + buttonSize + gap
+    } else {
+      mainWidth = tabsWidth
+      mainX = (containerWidth - tabsWidth) / 2
+    }
 
     // Inset the control so its lens sits `selectionInset` from the capsule.
     // UISegmentedControl sizes itself in whole points, so round its height.

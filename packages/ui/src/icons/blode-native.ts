@@ -261,6 +261,21 @@ export const MessageCircleFilledNativeIcon: BlodeNativeIcon = {
   ],
 };
 
+export const PageTextSearchNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M9.5 21H8c-1.6569 0-3-1.3431-3-3V6c0-1.6569 1.3431-3 3-3h8c1.6569 0 3 1.3431 3 3v4m0 9.9495c.6186-.6313 1-1.4958 1-2.4495 0-1.933-1.567-3.5-3.5-3.5S13 15.567 13 17.5s1.567 3.5 3.5 3.5c.9793 0 1.8647-.4022 2.5-1.0505m0 0L20.5 21.5M9 7h6m-6 4h3",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
+export const PlusNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [{ d: "M12 4v8m0 0v8m0-8H4m8 0h8", stroke: { linecap: "round" } }],
+};
+
 export const ReceiptBillFilledNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [

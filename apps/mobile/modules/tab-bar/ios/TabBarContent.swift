@@ -1,9 +1,10 @@
 import SwiftUI
 import UIKit
 
-/// Kyomi's floating tab bar: a Liquid Glass capsule holding the tabs and the
-/// narrower switcher, and a separate search button that turns the capsule
-/// into a search field.
+/// Kyomi's floating tab bar, laid out like the iOS 26 system bar: a search button at the leading
+/// edge, a Liquid Glass capsule of tabs and the narrower switcher centred between the buttons, and
+/// a matcha add button at the trailing edge. Searching turns the capsule into a search field;
+/// minimizing hides the capsule and leaves only the two buttons.
 struct TabBarContent: View {
   @ObservedObject var model: TabBarModel
   @FocusState private var searchFocused: Bool
@@ -33,15 +34,38 @@ struct TabBarContent: View {
         minimized: model.minimized,
         searchActive: model.searchActive
       )
+      let centerY = TabBarMetrics.height / 2
 
+      // One container so the glass shapes render together and morph as they move.
       GlassEffectContainer(spacing: 0) {
-        HStack(spacing: TabBarMetrics.gap) {
+        ZStack(alignment: .topLeading) {
           capsule(layout)
-          actionButton(layout)
+            .position(x: layout.mainX + layout.mainWidth / 2, y: centerY)
+            .onGeometryChange(for: CGRect.self) { proxy in
+              proxy.frame(in: .named(Self.coordinateSpace))
+            } action: { frame in
+              model.mainFrame = frame
+            }
+
+          searchButton(layout)
+            .position(x: layout.searchX + layout.buttonSize / 2, y: centerY)
+            .onGeometryChange(for: CGRect.self) { proxy in
+              proxy.frame(in: .named(Self.coordinateSpace))
+            } action: { frame in
+              model.actionFrame = frame
+            }
+
+          addButton(layout)
+            .position(x: layout.addX + layout.buttonSize / 2, y: centerY)
+            .onGeometryChange(for: CGRect.self) { proxy in
+              proxy.frame(in: .named(Self.coordinateSpace))
+            } action: { frame in
+              model.addFrame = frame
+            }
         }
       }
-      // Hold the bar in a band as tall as the expanded capsule so a minimized
-      // bar shrinks around its center, as the system tab bar does.
+      // Hold the bar in a band as tall as the expanded capsule so the minimized buttons
+      // shrink around their centres.
       .frame(width: proxy.size.width, height: TabBarMetrics.height)
     }
     .coordinateSpace(.named(Self.coordinateSpace))
@@ -68,11 +92,11 @@ struct TabBarContent: View {
     }
     .frame(width: layout.mainWidth, height: layout.barHeight)
     .glassEffect(.regular.interactive(), in: .capsule)
-    .onGeometryChange(for: CGRect.self) { proxy in
-      proxy.frame(in: .named(Self.coordinateSpace))
-    } action: { frame in
-      model.mainFrame = frame
-    }
+    // Minimizing leaves only the buttons: the capsule shrinks toward the centre and fades.
+    .scaleEffect(layout.showsMain ? 1 : 0.5)
+    .opacity(layout.showsMain ? 1 : 0)
+    .allowsHitTesting(layout.showsMain)
+    .accessibilityHidden(!layout.showsMain)
   }
 
   private func tabs(_ layout: TabBarLayout) -> some View {
@@ -104,7 +128,7 @@ struct TabBarContent: View {
           let isSelected = index == model.selectedIndex
           TabBarIconView(
             icon: isSelected ? tab.selectedIcon : tab.icon,
-            size: TabBarMetrics.tabIconSize * layout.iconScale,
+            size: TabBarMetrics.tabIconSize,
             color: isSelected ? model.activeTint : Self.inactiveIconColor
           )
           .frame(width: layout.segmentWidths[index], height: layout.segmentHeight)
@@ -128,7 +152,7 @@ struct TabBarContent: View {
     } label: {
       TabBarIconView(
         icon: switcher.icon,
-        size: TabBarMetrics.switcherIconSize * layout.iconScale,
+        size: TabBarMetrics.switcherIconSize,
         color: Self.inactiveIconColor
       )
       .frame(width: width, height: layout.segmentHeight)
@@ -169,29 +193,57 @@ struct TabBarContent: View {
     }
   }
 
-  private func actionButton(_ layout: TabBarLayout) -> some View {
+  private func searchButton(_ layout: TabBarLayout) -> some View {
     Button {
       model.toggleSearch()
     } label: {
       Group {
         if model.searchActive {
           Image(systemName: "xmark")
-            .font(.system(size: TabBarMetrics.closeIconSize * layout.iconScale))
+            .font(.system(size: TabBarMetrics.closeIconSize * layout.buttonScale))
             .foregroundStyle(Self.actionIconColor)
         } else {
-          searchGlyph(size: TabBarMetrics.searchIconSize * layout.iconScale, color: Self.actionIconColor)
+          searchGlyph(
+            size: TabBarMetrics.searchIconSize * layout.buttonScale,
+            color: Self.actionIconColor
+          )
         }
       }
-      .frame(width: layout.actionSize, height: layout.actionSize)
+      .frame(width: layout.buttonSize, height: layout.buttonSize)
       .contentShape(.circle)
     }
     .buttonStyle(.plain)
     .glassEffect(.regular.interactive(), in: .circle)
     .accessibilityLabel(model.searchActive ? "Close search" : "Search")
-    .onGeometryChange(for: CGRect.self) { proxy in
-      proxy.frame(in: .named(Self.coordinateSpace))
-    } action: { frame in
-      model.actionFrame = frame
+  }
+
+  private func addButton(_ layout: TabBarLayout) -> some View {
+    Button {
+      model.pressAdd()
+    } label: {
+      Group {
+        if let icon = model.addIcon {
+          TabBarIconView(
+            icon: icon,
+            size: TabBarMetrics.addIconSize * layout.buttonScale,
+            color: model.addIconColor
+          )
+        } else {
+          Image(systemName: "plus")
+            .font(.system(size: TabBarMetrics.addIconSize * layout.buttonScale, weight: .semibold))
+            .foregroundStyle(model.addIconColor)
+        }
+      }
+      .frame(width: layout.buttonSize, height: layout.buttonSize)
+      .contentShape(.circle)
     }
+    .buttonStyle(.plain)
+    .glassEffect(.regular.tint(model.activeTint).interactive(), in: .circle)
+    // Searching gives the add button's space to the field.
+    .scaleEffect(layout.showsAdd ? 1 : 0.5)
+    .opacity(layout.showsAdd ? 1 : 0)
+    .allowsHitTesting(layout.showsAdd)
+    .accessibilityHidden(!layout.showsAdd)
+    .accessibilityLabel("Add")
   }
 }

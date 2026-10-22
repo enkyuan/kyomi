@@ -1,4 +1,5 @@
 import { router } from "expo-router";
+import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import type { NativeSyntheticEvent } from "react-native";
 import {
   BLODE_STROKE_WIDTH,
@@ -7,7 +8,8 @@ import {
   CompassPointerNativeIcon,
   LayoutAlignBottomFilledNativeIcon,
   LayoutAlignBottomNativeIcon,
-  MagnifyingGlassNativeIcon,
+  PageTextSearchNativeIcon,
+  PlusNativeIcon,
   type BlodeNativeIcon,
 } from "@kyomi/ui/icons/blode-native";
 import { useKeyboard } from "@hooks/use-keyboard";
@@ -52,7 +54,8 @@ const TABS: readonly TabBarItem[] = [
   },
 ];
 
-const SEARCH_ICON = toTabBarIcon(MagnifyingGlassNativeIcon);
+const SEARCH_ICON = toTabBarIcon(PageTextSearchNativeIcon);
+const ADD_ICON = toTabBarIcon(PlusNativeIcon);
 
 const SWITCHER: TabBarSwitcher = {
   label: "Choose source",
@@ -64,6 +67,7 @@ const SWITCHER: TabBarSwitcher = {
 export function TabBar({
   minimized = false,
   navigation,
+  onAddPress,
   onSearchQueryChange,
   onSearchSubmit,
   onTabChange,
@@ -89,7 +93,10 @@ export function TabBar({
   return (
     <TabBarView
       activeTintColor={mobileColors.matcha}
+      addIcon={ADD_ICON}
+      addIconColor={kyomiNativeBrand.matcha.onColor}
       minimized={minimized}
+      onAddPress={onAddPress}
       onSearchQueryChange={({ nativeEvent }) => onSearchQueryChange?.(nativeEvent.query)}
       onSearchSubmit={({ nativeEvent }) => onSearchSubmit?.(nativeEvent.query)}
       onSwitcherPress={() => router.push("/(protected)/switcher")}

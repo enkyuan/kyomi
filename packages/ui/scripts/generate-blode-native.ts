@@ -32,6 +32,8 @@ const ICONS = [
   "Lock",
   "MagnifyingGlass",
   "MessageCircleFilled",
+  "PageTextSearch",
+  "Plus",
   "ReceiptBillFilled",
   "Rss",
   "Search",

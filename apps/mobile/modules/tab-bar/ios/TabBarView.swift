@@ -4,6 +4,7 @@ import UIKit
 final class TabBarView: ExpoView {
   let onTabPress = EventDispatcher()
   let onSwitcherPress = EventDispatcher()
+  let onAddPress = EventDispatcher()
   let onSearchActiveChange = EventDispatcher()
   let onSearchQueryChange = EventDispatcher()
   let onSearchSubmit = EventDispatcher()
@@ -24,6 +25,9 @@ final class TabBarView: ExpoView {
     }
     model.onSwitcherPress = { [weak self] in
       self?.onSwitcherPress()
+    }
+    model.onAddPress = { [weak self] in
+      self?.onAddPress()
     }
     model.onSearchActiveChange = { [weak self] active in
       self?.onSearchActiveChange(["active": active])

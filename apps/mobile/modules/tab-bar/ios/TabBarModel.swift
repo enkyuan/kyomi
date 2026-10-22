@@ -22,6 +22,9 @@ final class TabBarModel: ObservableObject {
   @Published var switcher: TabBarSwitcher?
   /// Magnifying glass drawn in the search button and field; falls back to the SF Symbol.
   @Published var searchIcon: TabBarIcon?
+  /// Plus drawn in the add button; falls back to the SF Symbol.
+  @Published var addIcon: TabBarIcon?
+  @Published var addIconColor = Color.black.opacity(0.85)
   @Published var selectedIndex = 0
   @Published var minimized = false
   @Published var searchActive = false
@@ -37,9 +40,11 @@ final class TabBarModel: ObservableObject {
   /// space. Touches anywhere else pass through to the content underneath.
   var mainFrame = CGRect.zero
   var actionFrame = CGRect.zero
+  var addFrame = CGRect.zero
 
   var onTabPress: @MainActor (Int) -> Void = { _ in }
   var onSwitcherPress: @MainActor () -> Void = {}
+  var onAddPress: @MainActor () -> Void = {}
   var onSearchActiveChange: @MainActor (Bool) -> Void = { _ in }
   var onSearchQueryChange: @MainActor (String) -> Void = { _ in }
   var onSearchSubmit: @MainActor (String) -> Void = { _ in }
@@ -60,6 +65,11 @@ final class TabBarModel: ObservableObject {
     onSwitcherPress()
   }
 
+  func pressAdd() {
+    feedback.impactOccurred()
+    onAddPress()
+  }
+
   func toggleSearch() {
     feedback.impactOccurred()
     searchActive.toggle()
@@ -72,6 +82,9 @@ final class TabBarModel: ObservableObject {
   }
 
   func isInteractive(at point: CGPoint) -> Bool {
-    mainFrame.contains(point) || actionFrame.contains(point)
+    let mainShown = !minimized || searchActive
+    return (mainShown && mainFrame.contains(point))
+      || actionFrame.contains(point)
+      || (!searchActive && addFrame.contains(point))
   }
 }
