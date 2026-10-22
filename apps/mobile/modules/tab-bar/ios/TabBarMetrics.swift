@@ -64,10 +64,12 @@ struct TabBarLayout: Equatable {
   /// Searching: the field takes the leading edge and the close button takes the add button's place.
   let showsAdd: Bool
   let showsSearchButton: Bool
-  /// Whole-point widths of the tab segments followed by the switcher segment.
-  /// `UISegmentedControl` floors fractional widths, so the icons and the
-  /// selection lens share these values.
+  /// Whole-point widths of the tab segments. `UISegmentedControl` floors
+  /// fractional widths, so the icons and the selection lens share these values.
   let segmentWidths: [CGFloat]
+  /// Width of the switcher slot after the tabs. It is not a segment of the control, so the
+  /// selection lens can never land on it. Zero without a switcher.
+  let switcherWidth: CGFloat
   let segmentHeight: CGFloat
 
   init(containerWidth: CGFloat, tabCount: Int, hasSwitcher: Bool, minimized: Bool, searchActive: Bool) {
@@ -105,13 +107,11 @@ struct TabBarLayout: Equatable {
     let controlWidth = max(0, tabsWidth - controlInset * 2)
     let units = CGFloat(tabCount) + (hasSwitcher ? TabBarMetrics.switcherWidthRatio : 0)
     let tabWidth = units > 0 ? (controlWidth / units).rounded(.down) : 0
-    var widths = Array(repeating: tabWidth, count: tabCount)
-    if hasSwitcher {
-      widths.append((controlWidth - tabWidth * CGFloat(tabCount)).rounded(.down))
-    }
-    segmentWidths = widths
+    segmentWidths = Array(repeating: tabWidth, count: tabCount)
+    switcherWidth = hasSwitcher ? (controlWidth - tabWidth * CGFloat(tabCount)).rounded(.down) : 0
   }
 
+  /// Width of the segmented control, which spans the tabs only.
   var segmentsWidth: CGFloat {
     segmentWidths.reduce(0, +)
   }

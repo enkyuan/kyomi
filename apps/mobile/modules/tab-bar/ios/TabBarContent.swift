@@ -120,60 +120,46 @@ struct TabBarContent: View {
     }
     .frame(width: layout.mainWidth, height: layout.barHeight)
     .glassEffect(.regular.interactive(), in: .capsule)
-    .overlay(alignment: .leading) {
-      switcherOverlay(layout)
-    }
   }
 
-  /// The switcher sits above the capsule's glass instead of inside it. It opens another screen
-  /// rather than selecting a tab, so it must not get the tab selection lens or the interactive
-  /// glass press, which both mean "this is where you are". It answers a touch with its own feedback.
-  @ViewBuilder
-  private func switcherOverlay(_ layout: TabBarLayout) -> some View {
-    let switcherIndex = model.tabs.count
-    if !model.searchActive, let switcher = model.switcher, layout.segmentWidths.indices.contains(switcherIndex) {
-      let start = (layout.mainWidth - layout.segmentsWidth) / 2
-      let offset = start + layout.segmentWidths.prefix(switcherIndex).reduce(0, +)
-      switcherButton(switcher, width: layout.segmentWidths[switcherIndex], layout: layout)
-        .padding(.leading, offset)
-    }
-  }
-
+  /// The tabs share one segmented control, which supplies the selection lens. The switcher sits
+  /// beside the control rather than in it: it opens another screen instead of selecting a tab, so
+  /// the lens, which means "this is where you are", must never land on it. Its glyph is still
+  /// drawn on the glass like the tab glyphs, so the row reads as one set of icons.
   private func tabs(_ layout: TabBarLayout) -> some View {
-    let switcherIndex = model.tabs.count
+    HStack(spacing: 0) {
+      ZStack {
+        TabSelector(
+          segmentWidths: layout.segmentWidths,
+          height: layout.segmentHeight,
+          selectedIndex: model.selectedIndex,
+          onSelect: { model.select($0) }
+        )
+        .accessibilityHidden(true)
 
-    return ZStack {
-      // The control's switcher segment ignores touches, which fall through to `switcherOverlay`.
-      TabSelector(
-        segmentWidths: layout.segmentWidths,
-        height: layout.segmentHeight,
-        selectedIndex: model.selectedIndex,
-        deadIndices: model.switcher == nil ? [] : [switcherIndex],
-        onSelect: { model.select($0) }
-      )
-      .accessibilityHidden(true)
-
-      HStack(spacing: 0) {
-        ForEach(Array(model.tabs.enumerated()), id: \.element.id) { index, tab in
-          let isSelected = index == model.selectedIndex
-          TabBarIconView(
-            icon: isSelected ? tab.selectedIcon : tab.icon,
-            size: TabBarMetrics.tabIconSize,
-            color: isSelected ? model.activeTint : Self.inactiveIconColor
-          )
-          .frame(width: layout.segmentWidths[index], height: layout.segmentHeight)
-          .accessibilityElement()
-          .accessibilityLabel(tab.label)
-          .accessibilityAddTraits(isSelected ? [.isButton, .isSelected] : .isButton)
-          .accessibilityAction { model.select(index) }
+        HStack(spacing: 0) {
+          ForEach(Array(model.tabs.enumerated()), id: \.element.id) { index, tab in
+            let isSelected = index == model.selectedIndex
+            TabBarIconView(
+              icon: isSelected ? tab.selectedIcon : tab.icon,
+              size: TabBarMetrics.tabIconSize,
+              color: isSelected ? model.activeTint : Self.inactiveIconColor
+            )
+            .frame(width: layout.segmentWidths[index], height: layout.segmentHeight)
+            .accessibilityElement()
+            .accessibilityLabel(tab.label)
+            .accessibilityAddTraits(isSelected ? [.isButton, .isSelected] : .isButton)
+            .accessibilityAction { model.select(index) }
+          }
         }
-        if model.switcher != nil, layout.segmentWidths.indices.contains(switcherIndex) {
-          Color.clear.frame(width: layout.segmentWidths[switcherIndex])
-        }
+        .allowsHitTesting(false)
       }
-      .allowsHitTesting(false)
+      .frame(width: layout.segmentsWidth, height: layout.segmentHeight)
+
+      if let switcher = model.switcher, layout.switcherWidth > 0 {
+        switcherButton(switcher, width: layout.switcherWidth, layout: layout)
+      }
     }
-    .frame(width: layout.segmentsWidth, height: layout.segmentHeight)
   }
 
   private func switcherButton(_ switcher: TabBarSwitcher, width: CGFloat, layout: TabBarLayout) -> some View {
@@ -281,7 +267,8 @@ struct TabBarContent: View {
 }
 
 /// Touch feedback for the switcher: the glyph dips and shrinks on touch-down, instantly, and
-/// settles back without bounce on release, with a soft tap. No selection lens, no tint.
+/// settles back without bounce on release, with a soft tap. No selection lens, no tint. The tap is
+/// the switcher's only haptic, so `TabBarModel.pressSwitcher` does not add its own.
 private struct SwitcherPressStyle: ButtonStyle {
   let reduceMotion: Bool
 

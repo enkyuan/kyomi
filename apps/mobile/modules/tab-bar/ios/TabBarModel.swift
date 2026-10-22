@@ -61,7 +61,6 @@ final class TabBarModel: ObservableObject {
   }
 
   func pressSwitcher() {
-    feedback.impactOccurred()
     onSwitcherPress()
   }
 
