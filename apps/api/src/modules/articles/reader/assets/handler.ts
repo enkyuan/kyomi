@@ -9,11 +9,18 @@ const READER_IMAGE_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24;
 const READER_IMAGE_CACHE_STALE_SECONDS = 60 * 60 * 24 * 7;
 const READER_IMAGE_MAX_BYTES = 8 * 1024 * 1024;
 const READER_IMAGE_TIMEOUT_MS = 8_000;
+// Upstream bytes are attacker-controlled. If a proxied response is opened as a top-level
+// document (for example an SVG with <script>), this sandboxes it into an opaque origin with no
+// script or network access. <img> rendering is unaffected.
+const READER_IMAGE_CONTENT_SECURITY_POLICY =
+  "default-src 'none'; img-src data:; style-src 'unsafe-inline'; sandbox";
 
 function imageHitHeaders(contentType: string) {
   return {
     "Cache-Control": `public, max-age=${READER_IMAGE_CACHE_MAX_AGE_SECONDS}, stale-while-revalidate=${READER_IMAGE_CACHE_STALE_SECONDS}`,
+    "Content-Security-Policy": READER_IMAGE_CONTENT_SECURITY_POLICY,
     "Content-Type": contentType,
+    "X-Content-Type-Options": "nosniff",
   };
 }
 
