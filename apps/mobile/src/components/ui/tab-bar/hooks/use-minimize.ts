@@ -283,43 +283,13 @@ export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
  * does not detour through the UI thread and back before the bar can start moving.
  */
 export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
-  const controls = useOptionalTabBarMinimize();
+  const trackOffset = useOptionalTabBarMinimize()?.trackOffset;
 
   return useCallback(
     (y: number) => {
       scrollY.set(y);
-      if (!controls) return;
-
-      const { setMinimized, tracking } = controls;
-      const state = tracking.current;
-      const delta = y - state.lastY;
-      state.lastY = y;
-
-      if (y <= MIN_SCROLL_Y) {
-        state.distance = 0;
-        state.direction = 0;
-        if (state.minimized) setMinimized(false);
-        return;
-      }
-
-      const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : state.direction;
-      if (nextDirection === 0) return;
-
-      if (nextDirection !== state.direction) {
-        state.direction = nextDirection;
-        state.distance = 0;
-      }
-
-      state.distance += Math.abs(delta);
-
-      if (nextDirection === 1 && state.distance >= COLLAPSE_DISTANCE) {
-        state.distance = 0;
-        if (!state.minimized) setMinimized(true);
-      } else if (nextDirection === -1 && state.distance >= EXPAND_DISTANCE) {
-        state.distance = 0;
-        if (state.minimized) setMinimized(false);
-      }
+      trackOffset?.(y);
     },
-    [controls, scrollY],
+    [scrollY, trackOffset],
   );
 }
