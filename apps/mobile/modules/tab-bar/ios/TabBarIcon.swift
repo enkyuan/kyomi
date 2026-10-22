@@ -30,16 +30,19 @@ struct TabBarIcon {
     transform = Self.centeredRotation(degrees: rotation, in: box, layers: layers)
   }
 
+  /// Rotates about the viewBox centre, then centres the rotated bounds. A pointed glyph's bounds
+  /// move when it turns, so rotating about the viewBox centre alone leaves it off-centre.
   private static func centeredRotation(degrees: Double, in box: CGRect, layers: [Layer]) -> CGAffineTransform {
     guard degrees != 0 else { return .identity }
     let rotate = CGAffineTransform(translationX: box.midX, y: box.midY)
       .rotated(by: degrees * .pi / 180)
       .translatedBy(x: -box.midX, y: -box.midY)
     let bounds = layers
-      .map { $0.path.cgPath.copy(using: [rotate])?.boundingBoxOfPath ?? .null }
+      .map { $0.path.applying(rotate).cgPath.boundingBoxOfPath }
       .reduce(CGRect.null) { $0.union($1) }
     guard !bounds.isNull else { return rotate }
-    return rotate.translatedBy(x: box.midX - bounds.midX, y: box.midY - bounds.midY)
+    // Shift after rotating; `translatedBy` would apply the shift before it, inside the rotated frame.
+    return rotate.concatenating(CGAffineTransform(translationX: box.midX - bounds.midX, y: box.midY - bounds.midY))
   }
 
   private static func parseViewBox(_ value: String) -> CGRect {
