@@ -36,8 +36,11 @@ type MinimizeControls = {
   readonly lastScrollY: SharedValue<number>;
   readonly accumulatedDistance: SharedValue<number>;
   readonly direction: SharedValue<number>;
-  /** Bookkeeping for scroll events that arrive on the JS thread (native lists). */
-  readonly tracking: { current: Tracking };
+  /**
+   * Feeds one scroll offset from the JS thread (native lists) through the direction rules. The
+   * bookkeeping stays inside the provider's callbacks, so no ref is read while rendering.
+   */
+  readonly trackOffset: (y: number) => void;
   /** Publishes a transition decided on the JS thread. */
   readonly setMinimized: (next: boolean) => void;
   /** Publishes a transition decided by a worklet; runs on the JS thread. */
@@ -72,6 +75,40 @@ export function TabBarMinimizeProvider({ children }: PropsWithChildren) {
     [minimizedSV, publishMinimized],
   );
 
+  const trackOffset = useCallback(
+    (y: number) => {
+      const state = tracking.current;
+      const delta = y - state.lastY;
+      state.lastY = y;
+
+      if (y <= MIN_SCROLL_Y) {
+        state.distance = 0;
+        state.direction = 0;
+        if (state.minimized) setMinimized(false);
+        return;
+      }
+
+      const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : state.direction;
+      if (nextDirection === 0) return;
+
+      if (nextDirection !== state.direction) {
+        state.direction = nextDirection;
+        state.distance = 0;
+      }
+
+      state.distance += Math.abs(delta);
+
+      if (nextDirection === 1 && state.distance >= COLLAPSE_DISTANCE) {
+        state.distance = 0;
+        if (!state.minimized) setMinimized(true);
+      } else if (nextDirection === -1 && state.distance >= EXPAND_DISTANCE) {
+        state.distance = 0;
+        if (state.minimized) setMinimized(false);
+      }
+    },
+    [setMinimized],
+  );
+
   const reset = useCallback(() => {
     tracking.current = { distance: 0, direction: 0, lastY: 0, minimized: false };
     minimizedSV.set(false);
@@ -90,7 +127,7 @@ export function TabBarMinimizeProvider({ children }: PropsWithChildren) {
       publishMinimized,
       reset,
       setMinimized,
-      tracking,
+      trackOffset,
     }),
     [
       accumulatedDistance,
@@ -100,6 +137,7 @@ export function TabBarMinimizeProvider({ children }: PropsWithChildren) {
       publishMinimized,
       reset,
       setMinimized,
+      trackOffset,
     ],
   );
 
@@ -189,48 +227,18 @@ export function useTabBarMinimizeScroll(scrollY: SharedValue<number>) {
  * Scroll offsets reported by a native list (`onScroll` of `ArticleListView`) feed the same
  * direction rules as `useTabBarMinimizeScroll`, which runs as a worklet on Reanimated scroll events.
  * These events arrive on the JS thread, so the bookkeeping lives in a ref the provider owns (and
- * resets): reading a shared value written since the last read blocks JS on a synchronous round-trip
+ * resets) behind `trackOffset`: reading a shared value written since the last read blocks JS on a synchronous round-trip
  * to the UI thread, and this runs on every scroll event. A transition goes straight to React; it
  * does not detour through the UI thread and back before the bar can start moving.
  */
 export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
-  const controls = useOptionalTabBarMinimize();
+  const trackOffset = useOptionalTabBarMinimize()?.trackOffset;
 
   return useCallback(
     (y: number) => {
       scrollY.set(y);
-      if (!controls) return;
-
-      const { setMinimized, tracking } = controls;
-      const state = tracking.current;
-      const delta = y - state.lastY;
-      state.lastY = y;
-
-      if (y <= MIN_SCROLL_Y) {
-        state.distance = 0;
-        state.direction = 0;
-        if (state.minimized) setMinimized(false);
-        return;
-      }
-
-      const nextDirection = delta > 0 ? 1 : delta < 0 ? -1 : state.direction;
-      if (nextDirection === 0) return;
-
-      if (nextDirection !== state.direction) {
-        state.direction = nextDirection;
-        state.distance = 0;
-      }
-
-      state.distance += Math.abs(delta);
-
-      if (nextDirection === 1 && state.distance >= COLLAPSE_DISTANCE) {
-        state.distance = 0;
-        if (!state.minimized) setMinimized(true);
-      } else if (nextDirection === -1 && state.distance >= EXPAND_DISTANCE) {
-        state.distance = 0;
-        if (state.minimized) setMinimized(false);
-      }
+      trackOffset?.(y);
     },
-    [controls, scrollY],
+    [scrollY, trackOffset],
   );
 }
