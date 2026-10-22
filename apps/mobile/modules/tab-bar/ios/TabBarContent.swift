@@ -120,23 +120,30 @@ struct TabBarContent: View {
     }
     .frame(width: layout.mainWidth, height: layout.barHeight)
     .glassEffect(.regular.interactive(), in: .capsule)
+    .overlay(alignment: .leading) {
+      switcherOverlay(layout)
+    }
+  }
+
+  /// The switcher sits above the capsule's glass instead of inside it. It opens another screen
+  /// rather than selecting a tab, so it must not get the tab selection lens or the interactive
+  /// glass press, which both mean "this is where you are". It answers a touch with its own feedback.
+  @ViewBuilder
+  private func switcherOverlay(_ layout: TabBarLayout) -> some View {
+    let switcherIndex = model.tabs.count
+    if !model.searchActive, let switcher = model.switcher, layout.segmentWidths.indices.contains(switcherIndex) {
+      let start = (layout.mainWidth - layout.segmentsWidth) / 2
+      let offset = start + layout.segmentWidths.prefix(switcherIndex).reduce(0, +)
+      switcherButton(switcher, width: layout.segmentWidths[switcherIndex], layout: layout)
+        .padding(.leading, offset)
+    }
   }
 
   private func tabs(_ layout: TabBarLayout) -> some View {
     let switcherIndex = model.tabs.count
 
     return ZStack {
-      // Behind the control: its switcher segment ignores touches, so a tap
-      // there reaches this button instead of moving the selection.
-      HStack(spacing: 0) {
-        Color.clear
-          .frame(width: layout.segmentWidths.prefix(switcherIndex).reduce(0, +))
-          .allowsHitTesting(false)
-        if let switcher = model.switcher, layout.segmentWidths.indices.contains(switcherIndex) {
-          switcherButton(switcher, width: layout.segmentWidths[switcherIndex], layout: layout)
-        }
-      }
-
+      // The control's switcher segment ignores touches, which fall through to `switcherOverlay`.
       TabSelector(
         segmentWidths: layout.segmentWidths,
         height: layout.segmentHeight,
@@ -181,7 +188,7 @@ struct TabBarContent: View {
       .frame(width: width, height: layout.segmentHeight)
       .contentShape(.rect)
     }
-    .buttonStyle(.plain)
+    .buttonStyle(SwitcherPressStyle(reduceMotion: reduceMotion))
     .accessibilityLabel(switcher.label)
     .accessibilityHint(switcher.hint)
   }
@@ -270,5 +277,24 @@ struct TabBarContent: View {
     .buttonStyle(.plain)
     .glassEffect(.regular.tint(model.activeTint).interactive(), in: .circle)
     .accessibilityLabel("Add")
+  }
+}
+
+/// Touch feedback for the switcher: the glyph dips and shrinks on touch-down, instantly, and
+/// settles back without bounce on release, with a soft tap. No selection lens, no tint.
+private struct SwitcherPressStyle: ButtonStyle {
+  let reduceMotion: Bool
+
+  func makeBody(configuration: Configuration) -> some View {
+    configuration.label
+      .scaleEffect(configuration.isPressed && !reduceMotion ? 0.9 : 1)
+      .opacity(configuration.isPressed ? 0.55 : 1)
+      .animation(
+        configuration.isPressed ? .easeOut(duration: 0.1) : .spring(duration: 0.3, bounce: 0),
+        value: configuration.isPressed
+      )
+      .sensoryFeedback(.impact(flexibility: .soft), trigger: configuration.isPressed) { _, pressed in
+        pressed
+      }
   }
 }
