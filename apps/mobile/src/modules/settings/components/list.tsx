@@ -79,23 +79,32 @@ export function List({ footer, lastGroupAction }: SettingsListProps) {
           </View>
         );
 
-        return index === 0 ? (
-          <SettingsSection
-            description="Manage your account and billing"
-            header="Account"
-            key="account-section"
-          >
-            {groupCard}
-          </SettingsSection>
-        ) : (
-          <SettingsSection
-            description="Customize your app experience"
-            header="Preferences"
-            key="preferences-section"
-          >
-            {groupCard}
-          </SettingsSection>
-        );
+        if (index === 0) {
+          return (
+            <SettingsSection
+              description="Manage your account and billing"
+              header="Account"
+              key="account-section"
+            >
+              {groupCard}
+            </SettingsSection>
+          );
+        }
+
+        if (index === 1) {
+          return (
+            <SettingsSection
+              description="Customize your app experience"
+              header="Preferences"
+              key="preferences-section"
+            >
+              {groupCard}
+            </SettingsSection>
+          );
+        }
+
+        // Support and session actions sit in their own card, without a section header.
+        return groupCard;
       })}
       {footer}
     </ScrollView>

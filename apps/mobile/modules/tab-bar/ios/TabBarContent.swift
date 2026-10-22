@@ -28,6 +28,13 @@ struct TabBarContent: View {
     reduceMotion ? .easeOut(duration: 0.16) : .spring(duration: 0.45, bounce: 0.08)
   }
 
+  /// Minimizing follows scroll direction, which changes often and mid-motion, so it uses a short,
+  /// critically damped spring: it responds at once, never overshoots, and retargets from its
+  /// current value when the scroll reverses (bounce is reserved for momentum from a flick).
+  private var minimizeTransition: Animation {
+    reduceMotion ? .easeOut(duration: 0.16) : .spring(duration: 0.28, bounce: 0)
+  }
+
   var body: some View {
     GeometryReader { proxy in
       let layout = TabBarLayout(
@@ -90,7 +97,7 @@ struct TabBarContent: View {
       .frame(width: proxy.size.width, height: TabBarMetrics.height)
     }
     .coordinateSpace(.named(Self.coordinateSpace))
-    .animation(transition, value: model.minimized)
+    .animation(minimizeTransition, value: model.minimized)
     .animation(transition, value: model.searchActive)
     .onChange(of: model.searchActive) { _, active in
       if !active { searchFocused = false }

@@ -56,6 +56,8 @@ export const SETTINGS_GROUPS: readonly (readonly SettingsItem[])[] = [
       icon: ToggleNativeIcon,
       route: "/(protected)/settings/advanced",
     },
+  ],
+  [
     {
       id: "feedback",
       label: "Feedback",
