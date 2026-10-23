@@ -10,8 +10,6 @@ type SettingsDetailToolbarProps = {
   /**
    * When set, renders a custom left-aligned title view instead of relying on
    * the native Stack.Screen `title` (which is centered by default on iOS).
-   * Omit this to let the native centered title show through — e.g. for
-   * Recents, which wants a genuinely centered header.
    */
   readonly title?: string;
 };

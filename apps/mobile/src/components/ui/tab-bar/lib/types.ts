@@ -25,6 +25,7 @@ export interface TabBarProps {
   readonly descriptors?: Record<string, unknown>;
   readonly navigation?: TabBarNavigation;
   readonly onTabChange?: (index: number) => void;
+  readonly onAddPress?: () => void;
   readonly onSearchQueryChange?: (query: string) => void;
   readonly onSearchSubmit?: (query: string) => void;
   readonly minimized?: boolean;

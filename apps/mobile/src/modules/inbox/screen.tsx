@@ -127,7 +127,7 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
           style={{ height: 38, width: 38 }}
         >
           <HeaderActionButton
-            icon={<FilterIcon fill={theme.foreground} size={18} />}
+            icon={<FilterIcon color={theme.foreground} size={18} />}
             label="Filters"
           />
         </MenuView>

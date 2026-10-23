@@ -1,20 +1,89 @@
 import CoreGraphics
 import SwiftUI
+import UIKit
 
 /// Vector icon geometry received from `@kyomi/ui`, parsed once when the prop
 /// arrives so drawing never re-reads SVG path data.
-struct TabBarIcon {
+public struct TabBarIcon {
   struct Layer {
     let path: SwiftUI.Path
     let evenOdd: Bool
+    /// Stroke width in viewBox units for line glyphs, or nil for a filled path.
+    let strokeWidth: CGFloat?
+    /// What gets filled: the stroked outline of a line glyph (round caps and joins), or the path itself.
+    /// Stroking is the expensive part of drawing an icon, so it happens once here, in viewBox
+    /// units, rather than on every layout pass. A uniform scale commutes with stroking.
+    let outline: SwiftUI.Path
+
+    init(path: SwiftUI.Path, evenOdd: Bool, strokeWidth: CGFloat?) {
+      self.path = path
+      self.evenOdd = evenOdd
+      self.strokeWidth = strokeWidth
+      outline = strokeWidth.map {
+        path.strokedPath(StrokeStyle(lineWidth: $0, lineCap: .round, lineJoin: .round))
+      } ?? path
+    }
   }
 
   let viewBox: CGRect
   let layers: [Layer]
+  /// Transform that rotates clockwise about the viewBox centre, then re-centres the rotated glyph.
+  /// A pointed glyph's bounds move when it turns, so rotating about the viewBox centre alone leaves it off-centre.
+  let transform: CGAffineTransform
 
-  init(viewBox: String, paths: [(d: String, evenOdd: Bool)]) {
-    self.viewBox = Self.parseViewBox(viewBox)
-    layers = paths.map { Layer(path: SwiftUI.Path(SVGPathParser.path(from: $0.d)), evenOdd: $0.evenOdd) }
+  public init(viewBox: String, rotation: Double = 0, paths: [(d: String, evenOdd: Bool, strokeWidth: CGFloat?)]) {
+    let box = Self.parseViewBox(viewBox)
+    self.viewBox = box
+    layers = paths.map {
+      Layer(
+        path: SwiftUI.Path(SVGPathParser.path(from: $0.d)),
+        evenOdd: $0.evenOdd,
+        strokeWidth: $0.strokeWidth
+      )
+    }
+    transform = Self.centeredRotation(degrees: rotation, in: box, layers: layers)
+  }
+
+  /// Rotates about the viewBox centre, then centres the rotated bounds. A pointed glyph's bounds
+  /// move when it turns, so rotating about the viewBox centre alone leaves it off-centre.
+  private static func centeredRotation(degrees: Double, in box: CGRect, layers: [Layer]) -> CGAffineTransform {
+    guard degrees != 0 else { return .identity }
+    let rotate = CGAffineTransform(translationX: box.midX, y: box.midY)
+      .rotated(by: degrees * .pi / 180)
+      .translatedBy(x: -box.midX, y: -box.midY)
+    let bounds = layers
+      .map { $0.path.applying(rotate).cgPath.boundingBoxOfPath }
+      .reduce(CGRect.null) { $0.union($1) }
+    guard !bounds.isNull else { return rotate }
+    // Shift after rotating; `translatedBy` would apply the shift before it, inside the rotated frame.
+    return rotate.concatenating(CGAffineTransform(translationX: box.midX - bounds.midX, y: box.midY - bounds.midY))
+  }
+
+  /// The glyph rasterized once into a template image `size` points square, for views that show the
+  /// same icon many times (list rows). A `TabBarIconView` fills its vector outline on every render,
+  /// which a scrolling list pays again for each row that appears; an image is only composited.
+  public func templateImage(size: CGFloat) -> UIImage {
+    let format = UIGraphicsImageRendererFormat.preferred()
+    format.opaque = false
+    let rect = CGRect(x: 0, y: 0, width: size, height: size)
+    let scale = min(size / viewBox.width, size / viewBox.height)
+    let fit = CGAffineTransform(
+      a: scale,
+      b: 0,
+      c: 0,
+      d: scale,
+      tx: rect.midX - viewBox.midX * scale,
+      ty: rect.midY - viewBox.midY * scale
+    )
+    let image = UIGraphicsImageRenderer(bounds: rect, format: format).image { context in
+      let cg = context.cgContext
+      cg.setFillColor(UIColor.black.cgColor)
+      for layer in layers {
+        cg.addPath(layer.outline.applying(transform).applying(fit).cgPath)
+        cg.fillPath(using: layer.evenOdd ? .evenOdd : .winding)
+      }
+    }
+    return image.withRenderingMode(.alwaysTemplate)
   }
 
   private static func parseViewBox(_ value: String) -> CGRect {
@@ -30,16 +99,22 @@ struct TabBarIcon {
 
 /// Draws a `TabBarIcon` aspect-fit inside a square, matching SVG's default
 /// `xMidYMid meet` viewBox behavior.
-struct TabBarIconView: View {
+public struct TabBarIconView: View {
   let icon: TabBarIcon
   let size: CGFloat
   let color: Color
 
-  var body: some View {
+  public init(icon: TabBarIcon, size: CGFloat, color: Color) {
+    self.icon = icon
+    self.size = size
+    self.color = color
+  }
+
+  public var body: some View {
     ZStack {
       ForEach(icon.layers.indices, id: \.self) { index in
         let layer = icon.layers[index]
-        ViewBoxShape(path: layer.path, viewBox: icon.viewBox)
+        ViewBoxShape(outline: layer.outline, viewBox: icon.viewBox, transform: icon.transform)
           .fill(color, style: FillStyle(eoFill: layer.evenOdd))
       }
     }
@@ -48,20 +123,24 @@ struct TabBarIconView: View {
   }
 }
 
+/// Scales a layer's outline into `rect`, aspect-fit like SVG's default `xMidYMid meet`.
 private struct ViewBoxShape: Shape {
-  let path: SwiftUI.Path
+  let outline: SwiftUI.Path
   let viewBox: CGRect
+  let transform: CGAffineTransform
 
   func path(in rect: CGRect) -> SwiftUI.Path {
     let scale = min(rect.width / viewBox.width, rect.height / viewBox.height)
-    return path.applying(
-      CGAffineTransform(
-        a: scale,
-        b: 0,
-        c: 0,
-        d: scale,
-        tx: rect.midX - viewBox.midX * scale,
-        ty: rect.midY - viewBox.midY * scale
+    return outline.applying(
+      transform.concatenating(
+        CGAffineTransform(
+          a: scale,
+          b: 0,
+          c: 0,
+          d: scale,
+          tx: rect.midX - viewBox.midX * scale,
+          ty: rect.midY - viewBox.midY * scale
+        )
       )
     )
   }

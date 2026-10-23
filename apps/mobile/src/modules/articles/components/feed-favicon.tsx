@@ -48,7 +48,7 @@ function FeedFaviconImage({ candidateUrls, size, title }: FeedFaviconImageProps)
       className="items-center justify-center overflow-hidden rounded-sm bg-card/85"
       style={{ width: size, height: size }}
     >
-      {!hasLoadedFavicon ? <RssIcon fill={mutedForeground} size={size * 0.6} /> : null}
+      {!hasLoadedFavicon ? <RssIcon color={mutedForeground} size={size * 0.6} /> : null}
       {faviconSource ? (
         <Image
           accessibilityElementsHidden

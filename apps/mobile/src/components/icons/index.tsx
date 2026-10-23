@@ -1,11 +1,11 @@
 export { AppleIcon, type AppleIconProps } from "./apple";
+export { BlodeIcon, type BlodeIconProps } from "./blode";
 export { BookmarkIcon, type BookmarkIconProps } from "./bookmark";
 export { CloseIcon, type CloseIconProps } from "./close";
 export { FilterIcon, type FilterIconProps } from "./filter";
 export { GoogleIcon, type GoogleIconProps } from "./google";
 export { InboxIcon, type InboxIconProps } from "./inbox";
 export { KyomiIcon, type KyomiIconProps } from "./kyomi";
-export { MingcuteIcon, type MingcuteIconProps } from "./mingcute";
 export { MoreIcon, type MoreIconProps } from "./more";
 export { RecentsIcon, type RecentsIconProps } from "./recents";
 export { RssIcon, type RssIconProps } from "./rss";

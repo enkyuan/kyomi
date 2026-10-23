@@ -1,23 +1,8 @@
-import { ShareForwardLineNativeIcon } from "@kyomi/ui/icons/mingcute-native";
-import Svg, { Path, type SvgProps } from "react-native-svg";
+import { ArrowShareRightNativeIcon } from "@kyomi/ui/icons/blode-native";
+import { BlodeIcon, type BlodeIconProps } from "./blode";
 
-export type ShareIconProps = Omit<SvgProps, "width" | "height" | "viewBox"> & {
-  readonly size?: number;
-};
+export type ShareIconProps = Omit<BlodeIconProps, "icon">;
 
-export function ShareIcon({ size = 20, fill = "currentColor", ...props }: ShareIconProps) {
-  return (
-    <Svg
-      accessibilityElementsHidden
-      height={size}
-      importantForAccessibility="no-hide-descendants"
-      viewBox={ShareForwardLineNativeIcon.viewBox}
-      width={size}
-      {...props}
-    >
-      {ShareForwardLineNativeIcon.paths.map((path) => (
-        <Path d={path.d} fill={fill} fillRule={path.fillRule} key={path.d} />
-      ))}
-    </Svg>
-  );
+export function ShareIcon(props: ShareIconProps) {
+  return <BlodeIcon icon={ArrowShareRightNativeIcon} {...props} />;
 }

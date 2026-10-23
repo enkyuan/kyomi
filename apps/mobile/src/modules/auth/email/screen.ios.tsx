@@ -32,8 +32,8 @@ import {
 } from "@expo/ui/swift-ui/modifiers";
 import { useCallback, useRef } from "react";
 import { mobileColors } from "@/theme/colors";
-import { LockLineNativeIcon } from "@kyomi/ui/icons/mingcute-native";
-import { MingcuteIcon } from "@/components/icons/mingcute";
+import { LockNativeIcon } from "@kyomi/ui/icons/blode-native";
+import { BlodeIcon } from "@/components/icons/blode";
 import { EmailFormStep, OTPFormStep, type EmailStepTheme } from "./components/steps.ios";
 import { OTP_LENGTH } from "./constants";
 import { useEmailAuth } from "./hooks/use-auth";
@@ -136,10 +136,10 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                     ]}
                   >
                     <RNHostView matchContents>
-                      <MingcuteIcon
-                        icon={LockLineNativeIcon}
+                      <BlodeIcon
+                        color={theme.foreground}
+                        icon={LockNativeIcon}
                         size={FONT_SIZES.screenTitle}
-                        fill={theme.foreground}
                       />
                     </RNHostView>
                   </ZStack>

@@ -33,6 +33,7 @@
     "test:web:integration": "bun run --cwd tests test:web:integration",
     "test:web:e2e": "bun run --cwd tests test:web:e2e",
     "check:boundaries": "bun scripts/check-boundaries.ts",
+    "eval:translation": "bun scripts/evals/translation/run-eval.mjs",
     "check:env": "bunx --no-install dotenvx ext precommit",
     "env:encrypt": "bunx --no-install dotenvx encrypt -f docker/.env apps/api/.env apps/web/.env --no-create",
     "ci:static": "bun run check:env && bun scripts/ci/prepare-env.ts && SKIP_ENV_VALIDATION=true bun run fmt:check && SKIP_ENV_VALIDATION=true bun run lint && SKIP_ENV_VALIDATION=true bun run check:boundaries && SKIP_ENV_VALIDATION=true bun run typecheck:app && bun scripts/ci/drizzle-drift.ts",

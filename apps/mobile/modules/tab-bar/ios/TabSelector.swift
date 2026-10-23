@@ -12,9 +12,6 @@ struct TabSelector: UIViewRepresentable {
   var segmentWidths: [CGFloat]
   var height: CGFloat
   var selectedIndex: Int
-  /// Segments that never take the selection. Touches that begin on them fall
-  /// through to the views behind the control.
-  var deadIndices: Set<Int>
   var onSelect: (Int) -> Void
 
   func makeCoordinator() -> Coordinator {
@@ -64,7 +61,6 @@ struct TabSelector: UIViewRepresentable {
 
   private func needsConfiguration(_ control: TabSegmentedControl) -> Bool {
     control.numberOfSegments != segmentWidths.count
-      || control.deadIndices != deadIndices
       || segmentWidths.indices.contains { control.widthForSegment(at: $0) != segmentWidths[$0] }
   }
 
@@ -78,7 +74,6 @@ struct TabSelector: UIViewRepresentable {
     for (index, width) in segmentWidths.enumerated() {
       control.setWidth(width, forSegmentAt: index)
     }
-    control.deadIndices = deadIndices
   }
 
   /// The selection platter tint from Kyomi's original bar.
@@ -105,22 +100,13 @@ struct TabSelector: UIViewRepresentable {
     /// Fires when a drag across the control lands on another segment.
     @objc func valueChanged(_ control: TabSegmentedControl) {
       let index = control.selectedSegmentIndex
-      guard index >= 0, !parent.deadIndices.contains(index) else {
-        // A drag that ends on the switcher leaves the selection where it was.
-        UIView.performWithoutAnimation {
-          control.selectedSegmentIndex = committedIndex
-          control.layoutIfNeeded()
-        }
-        return
-      }
-      guard index != committedIndex else { return }
+      guard index >= 0, index != committedIndex else { return }
       commit(index)
     }
   }
 }
 
 final class TabSegmentedControl: UISegmentedControl {
-  var deadIndices: Set<Int> = []
   /// Called when a touch selects a segment, and when a tap lands on the
   /// segment that is already selected.
   var onPress: ((Int) -> Void)?
@@ -147,8 +133,7 @@ final class TabSegmentedControl: UISegmentedControl {
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     reselectCandidate = nil
     if let touch = touches.first,
-      let index = segmentIndex(at: touch.location(in: self).x),
-      !deadIndices.contains(index)
+      let index = segmentIndex(at: touch.location(in: self).x)
     {
       if selectedSegmentIndex == index {
         reselectCandidate = index
@@ -177,13 +162,6 @@ final class TabSegmentedControl: UISegmentedControl {
   override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
     reselectCandidate = nil
     super.touchesCancelled(touches, with: event)
-  }
-
-  override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-    if let index = segmentIndex(at: point.x), deadIndices.contains(index) {
-      return nil
-    }
-    return super.hitTest(point, with: event)
   }
 
   private func segmentIndex(at x: CGFloat) -> Int? {

@@ -1,4 +1,7 @@
 PODS:
+  - ArticleList (1.0.0):
+    - ExpoModulesCore
+    - TabBar
   - EXApplication (57.0.3):
     - ExpoModulesCore
   - EXConstants (57.0.17):
@@ -2565,6 +2568,7 @@ PODS:
   - Yoga (0.0.0)
 
 DEPENDENCIES:
+  - ArticleList (from `../modules/article-list/ios`)
   - "EXApplication (from `../../../node_modules/.bun/expo-application@57.0.3+756f1ceb25845392/node_modules/expo-application/ios`)"
   - "EXConstants (from `../../../node_modules/.bun/expo-constants@57.0.17+756f1ceb25845392/node_modules/expo-constants/ios`)"
   - "EXJSONUtils (from `../../../node_modules/.bun/expo-json-utils@57.0.1/node_modules/expo-json-utils/ios`)"
@@ -2696,6 +2700,8 @@ SPEC REPOS:
     - MMKVCore
 
 EXTERNAL SOURCES:
+  ArticleList:
+    :path: "../modules/article-list/ios"
   EXApplication:
     :path: "../../../node_modules/.bun/expo-application@57.0.3+756f1ceb25845392/node_modules/expo-application/ios"
   EXConstants:
@@ -2947,6 +2953,7 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/.bun/react-native@0.86.3+c94dbb497cb325a9/node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  ArticleList: 504e73d6175fc45a66ef8094591343bbf9cc937f
   EXApplication: a727f05eb8592f0bc764f6ab8d51eacc158652ec
   EXConstants: 799577d2516460afb4b57874d6823a62327ce5c7
   EXJSONUtils: 7a1683cfa2cbe6d11fca97097d51a496755b0287

@@ -119,7 +119,7 @@ export function SearchButton({
               style={[searchStyles.container, heightStyle]}
             >
               <Animated.View style={iconStyle}>
-                <SearchIcon fill={COLORS.iconDefault} size={SEARCH_ICON_SIZE} />
+                <SearchIcon color={COLORS.iconDefault} size={SEARCH_ICON_SIZE} />
               </Animated.View>
               <Animated.View style={[searchStyles.inputContainer, inputOpacity]}>
                 <TextInput
@@ -245,7 +245,7 @@ export function CloseSearchButton({
         <Animated.View style={[closeStyles.button, glassStyle, heightStyle]}>
           <GlassMaterial borderRadius={SEARCH_ACTIVE_RADIUS} style={closeStyles.material}>
             <View style={closeStyles.iconCenter}>
-              <CloseIcon fill={COLORS.iconDefault} size={SEARCH_ICON_SIZE} />
+              <CloseIcon color={COLORS.iconDefault} size={SEARCH_ICON_SIZE} />
             </View>
           </GlassMaterial>
           <GlowOverlay

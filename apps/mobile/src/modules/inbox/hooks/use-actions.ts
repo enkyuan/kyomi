@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useRef } from "react";
 import { Alert, Linking, Share } from "react-native";
 import { fetchMobileApiJson } from "@/lib/api";
 import { triggerSavedToggleHaptic } from "../lib/haptics";
@@ -8,9 +9,9 @@ function showActionError(message: string) {
   Alert.alert("Unable to update article", message);
 }
 
-export function useArticleActions(item: ArticleListItemDto) {
-  const updateItem = useArticleStateMutation();
+type ArticleStateMutation = ReturnType<typeof useArticleStateMutation>;
 
+function createArticleActions(item: ArticleListItemDto, updateItem: ArticleStateMutation) {
   const toggleSaved = () => {
     const nextIsSaved = !item.isSaved;
     void triggerSavedToggleHaptic(nextIsSaved);
@@ -53,12 +54,47 @@ export function useArticleActions(item: ArticleListItemDto) {
       .catch(() => showActionError("Unable to send the report."));
   };
 
-  return {
-    hideArticle,
-    isUpdating: updateItem.isPending,
-    openSource,
-    reportBrokenArticle,
-    shareArticle,
-    toggleSaved,
-  };
+  return { hideArticle, openSource, reportBrokenArticle, shareArticle, toggleSaved };
+}
+
+export function useArticleActions(item: ArticleListItemDto) {
+  const updateItem = useArticleStateMutation();
+
+  return { ...createArticleActions(item, updateItem), isUpdating: updateItem.isPending };
+}
+
+export type ArticleRowAction = "hide" | "openSource" | "report" | "share" | "toggleSaved";
+
+/**
+ * Actions for a native list, which reports `(id, action)` instead of rendering one React toolbar
+ * per row. Items and the mutation are read through refs so the handler stays stable across pages.
+ */
+export function useArticleRowActions(items: readonly ArticleListItemDto[]) {
+  const updateItem = useArticleStateMutation();
+  const itemsRef = useRef(items);
+  const mutationRef = useRef(updateItem);
+
+  useEffect(() => {
+    itemsRef.current = items;
+    mutationRef.current = updateItem;
+  });
+
+  return useCallback((id: string, action: ArticleRowAction) => {
+    const item = itemsRef.current.find((candidate) => candidate.id === id);
+    if (!item) return;
+
+    const actions = createArticleActions(item, mutationRef.current);
+    switch (action) {
+      case "hide":
+        return actions.hideArticle();
+      case "openSource":
+        return actions.openSource();
+      case "report":
+        return actions.reportBrokenArticle();
+      case "share":
+        return actions.shareArticle();
+      case "toggleSaved":
+        return actions.toggleSaved();
+    }
+  }, []);
 }

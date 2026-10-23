@@ -11,7 +11,7 @@ public class TabBarModule: Module {
     Constant("keyboardGap") { Double(TabBarMetrics.keyboardGap) }
 
     View(TabBarView.self) {
-      Events("onTabPress", "onSwitcherPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit")
+      Events("onTabPress", "onAddPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit")
 
       Prop("tabs") { (view: TabBarView, tabs: [TabItemRecord]) in
         view.model.tabs = tabs.map(\.item)
@@ -23,6 +23,18 @@ public class TabBarModule: Module {
 
       Prop("switcher") { (view: TabBarView, switcher: SwitcherRecord?) in
         view.model.switcher = switcher?.switcher
+      }
+
+      Prop("searchIcon") { (view: TabBarView, icon: IconRecord?) in
+        view.model.searchIcon = icon?.icon
+      }
+
+      Prop("addIcon") { (view: TabBarView, icon: IconRecord?) in
+        view.model.addIcon = icon?.icon
+      }
+
+      Prop("addIconColor") { (view: TabBarView, color: UIColor?) in
+        view.model.addIconColor = color.map { Color(uiColor: $0) } ?? Color.black.opacity(0.85)
       }
 
       Prop("minimized") { (view: TabBarView, minimized: Bool?) in
@@ -43,14 +55,18 @@ public class TabBarModule: Module {
 struct IconPathRecord: Record {
   @Field var d: String = ""
   @Field var fillRule: String? = nil
+  /// Set for line glyphs, in viewBox units; omitted for filled paths.
+  @Field var strokeWidth: Double? = nil
 }
 
 struct IconRecord: Record {
   @Field var viewBox: String = "0 0 24 24"
+  /// Clockwise rotation in degrees.
+  @Field var rotation: Double = 0
   @Field var paths: [IconPathRecord] = []
 
   var icon: TabBarIcon {
-    TabBarIcon(viewBox: viewBox, paths: paths.map { (d: $0.d, evenOdd: $0.fillRule == "evenodd") })
+    TabBarIcon(viewBox: viewBox, rotation: rotation, paths: paths.map { (d: $0.d, evenOdd: $0.fillRule == "evenodd", strokeWidth: $0.strokeWidth.map { CGFloat($0) }) })
   }
 }
 
@@ -66,11 +82,12 @@ struct TabItemRecord: Record {
 }
 
 struct SwitcherRecord: Record {
+  @Field var title: String = ""
   @Field var label: String = ""
   @Field var hint: String = ""
   @Field var icon: IconRecord = IconRecord()
 
   var switcher: TabBarSwitcher {
-    TabBarSwitcher(label: label, hint: hint, icon: icon.icon)
+    TabBarSwitcher(title: title, label: label, hint: hint, icon: icon.icon)
   }
 }

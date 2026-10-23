@@ -22,3 +22,6 @@ function getTypography() {
 }
 
 export const feedItemTypography = getTypography();
+
+/** Side of the icons in a feed item's action row (save, share, more). */
+export const ACTION_ICON_SIZE = 19;

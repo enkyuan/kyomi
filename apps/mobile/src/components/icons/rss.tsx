@@ -1,21 +1,8 @@
-import { RssIconGeometry } from "@kyomi/ui/icons/rss";
-import Svg, { Path, type SvgProps } from "react-native-svg";
+import { RssNativeIcon } from "@kyomi/ui/icons/blode-native";
+import { BlodeIcon, type BlodeIconProps } from "./blode";
 
-export type RssIconProps = Omit<SvgProps, "width" | "height"> & {
-  size?: number;
-};
+export type RssIconProps = Omit<BlodeIconProps, "icon">;
 
-export function RssIcon({ size = 20, fill = "currentColor", ...props }: RssIconProps) {
-  return (
-    <Svg
-      accessibilityElementsHidden
-      importantForAccessibility="no-hide-descendants"
-      height={size}
-      viewBox={RssIconGeometry.viewBox}
-      width={size}
-      {...props}
-    >
-      <Path d={RssIconGeometry.fill.d} fill={fill} />
-    </Svg>
-  );
+export function RssIcon(props: RssIconProps) {
+  return <BlodeIcon icon={RssNativeIcon} {...props} />;
 }

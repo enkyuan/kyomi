@@ -1,18 +1,18 @@
-import type { MingcuteNativeIcon } from "@kyomi/ui/icons/mingcute-native";
 import {
-  Bill2FillNativeIcon,
-  DocumentFillNativeIcon,
-  FileImportFillNativeIcon,
-  HeadAiFillNativeIcon,
-  Message3FillNativeIcon,
-  SwitchFillNativeIcon,
-  TimeDurationFillNativeIcon,
-} from "@kyomi/ui/icons/mingcute-native";
+  BlankPagePortraitNativeIcon,
+  BrainNativeIcon,
+  ClockNativeIcon,
+  FileArrowLeftInNativeIcon,
+  MessageCircleNativeIcon,
+  ReceiptBillNativeIcon,
+  ToggleNativeIcon,
+  type BlodeNativeIcon,
+} from "@kyomi/ui/icons/blode-native";
 
 type SettingsItem = {
   readonly id: string;
   readonly label: string;
-  readonly icon: MingcuteNativeIcon;
+  readonly icon: BlodeNativeIcon;
   readonly route: string;
 };
 
@@ -21,19 +21,19 @@ export const SETTINGS_GROUPS: readonly (readonly SettingsItem[])[] = [
     {
       id: "recently-visited",
       label: "Recently Visited",
-      icon: TimeDurationFillNativeIcon,
+      icon: ClockNativeIcon,
       route: "/(protected)/settings/recents",
     },
     {
       id: "import-opml",
       label: "Import OPML",
-      icon: FileImportFillNativeIcon,
+      icon: FileArrowLeftInNativeIcon,
       route: "/(protected)/settings/import-opml",
     },
     {
       id: "billing",
       label: "Billing",
-      icon: Bill2FillNativeIcon,
+      icon: ReceiptBillNativeIcon,
       route: "/(protected)/settings/billing",
     },
   ],
@@ -41,25 +41,27 @@ export const SETTINGS_GROUPS: readonly (readonly SettingsItem[])[] = [
     {
       id: "personalization",
       label: "Personalization",
-      icon: HeadAiFillNativeIcon,
+      icon: BrainNativeIcon,
       route: "/(protected)/settings/personalization",
     },
     {
       id: "reader",
       label: "Reader",
-      icon: DocumentFillNativeIcon,
+      icon: BlankPagePortraitNativeIcon,
       route: "/(protected)/settings/reader",
     },
     {
       id: "advanced",
       label: "Advanced",
-      icon: SwitchFillNativeIcon,
+      icon: ToggleNativeIcon,
       route: "/(protected)/settings/advanced",
     },
+  ],
+  [
     {
       id: "feedback",
       label: "Feedback",
-      icon: Message3FillNativeIcon,
+      icon: MessageCircleNativeIcon,
       route: "/(protected)/settings/feedback",
     },
   ],

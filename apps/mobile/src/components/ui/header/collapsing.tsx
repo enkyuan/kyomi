@@ -19,12 +19,17 @@ import Animated, {
 } from "react-native-reanimated";
 import * as Haptics from "expo-haptics";
 import { GlassContainer, GlassView } from "expo-glass-effect";
+import { ProgressiveBlur, CHROME_BLUR_BLEED } from "@ui/liquid-glass/progressive-blur";
+import { useTheme } from "@ui/liquid-glass/hooks/use-theme";
 import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
 export const COMPACT_NAV_HEIGHT = 48;
 export const COLLAPSE_DISTANCE = 52;
 export const EXPANDED_TITLE_HEIGHT = 44;
+
+/** Scroll offset over which the blur behind the header fades in, so it reads as content slides under. */
+const BLUR_FADE_END = 16;
 
 const COMPACT_FADE_START = 24;
 const COMPACT_FADE_END = 46;
@@ -130,9 +135,20 @@ export function CollapsingHeader({
 }: CollapsingHeaderProps) {
   const insets = useSafeAreaInsets();
   const { foreground } = getMobileSurfaceTheme(useColorScheme());
+  const { scheme } = useTheme();
   const shouldReduceMotion = useReducedMotion();
 
   const totalHeaderHeight = insets.top + COMPACT_NAV_HEIGHT;
+
+  // Progressive blur behind the chrome once content scrolls under it, for title and action contrast.
+  const blurStyle = useAnimatedStyle(() => ({
+    opacity: interpolate(
+      Math.max(0, scrollY.value),
+      [0, BLUR_FADE_END],
+      [0, 1],
+      Extrapolation.CLAMP,
+    ),
+  }));
 
   // Large title animation: inline on the left, fades out and translates up on scroll
   const largeTitleStyle = useAnimatedStyle(() => {
@@ -207,6 +223,22 @@ export function CollapsingHeader({
         style,
       ]}
     >
+      <Animated.View
+        pointerEvents="none"
+        style={[
+          {
+            height: totalHeaderHeight + CHROME_BLUR_BLEED,
+            left: 0,
+            position: "absolute",
+            right: 0,
+            top: 0,
+          },
+          blurStyle,
+        ]}
+      >
+        <ProgressiveBlur direction="top" style={{ flex: 1 }} tint={scheme} />
+      </Animated.View>
+
       {/* Large Title (Inline on the Left, Vertically Centered with Actions) */}
       <Animated.View
         accessibilityRole="header"

@@ -1,12 +1,11 @@
 import { AnimatedLegendList } from "@legendapp/list/reanimated";
 import { router, useFocusEffect } from "expo-router";
 import { useCallback, useMemo, useRef, type ComponentRef } from "react";
-import { Platform, Pressable, Text, View, useWindowDimensions } from "react-native";
+import { Platform, Pressable, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import type { SharedValue } from "react-native-reanimated";
 import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { useOptionalTabBarMinimize, useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
-import { EmptyStateIcon } from "@/components/icons/empty-state";
 import { FeedFavicon } from "@modules/articles/components/feed-favicon";
 import { feedItemTypography } from "@modules/articles/lib/layout";
 import { formatArticleTimestamp } from "@modules/articles/lib/format-timestamp";
@@ -18,7 +17,9 @@ import {
   resetRecentHistoryScroll,
   type NativeScrollable,
 } from "../lib/scroll-position";
+import { filterRecentArticles, type RecentRange } from "../lib/range";
 import { useRecentArticles } from "../lib/store";
+import { RecentHistoryEmptyState } from "./empty-state";
 
 const ESTIMATED_ROW_SIZE = 116;
 
@@ -26,6 +27,7 @@ type RecentListProps = {
   headerHeight: number;
   onScrollBeginDrag: () => void;
   onScrollReset: () => void;
+  range?: RecentRange;
   scrollY: SharedValue<number>;
 };
 
@@ -33,12 +35,16 @@ export function RecentList({
   headerHeight,
   onScrollBeginDrag,
   onScrollReset,
+  range = "all",
   scrollY,
 }: RecentListProps) {
   const insets = useSafeAreaInsets();
-  const articles = useRecentArticles();
+  const allArticles = useRecentArticles();
+  const articles = useMemo(() => filterRecentArticles(allArticles, range), [allArticles, range]);
   const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
   const isIOS = Platform.OS === "ios";
+  // Without a header of our own (pushed under a native stack header) iOS insets the list itself.
+  const insetsAutomatically = isIOS && headerHeight === 0;
   const initialScrollOffset = getRecentHistoryInitialOffset(headerHeight, isIOS);
   const listRef = useRef<ComponentRef<typeof AnimatedLegendList<RecentArticle>>>(null);
   const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
@@ -52,18 +58,19 @@ export function RecentList({
       // previous reading position.
       onScrollReset();
       resetTabBarMinimize?.();
+      if (insetsAutomatically) return;
       scrollY.set(initialScrollOffset);
       resetRecentHistoryScroll(
         listRef.current?.getNativeScrollRef() as NativeScrollable | undefined,
         initialScrollOffset,
       );
-    }, [initialScrollOffset, onScrollReset, resetTabBarMinimize, scrollY]),
+    }, [initialScrollOffset, insetsAutomatically, onScrollReset, resetTabBarMinimize, scrollY]),
   );
 
   return (
     <AnimatedLegendList
-      automaticallyAdjustContentInsets={false}
-      automaticallyAdjustsScrollIndicatorInsets={false}
+      automaticallyAdjustContentInsets={insetsAutomatically}
+      automaticallyAdjustsScrollIndicatorInsets={insetsAutomatically}
       contentContainerStyle={
         isIOS
           ? {
@@ -77,7 +84,7 @@ export function RecentList({
             }
       }
       contentInset={isIOS ? { bottom: tabBarOcclusionHeight, top: headerHeight } : undefined}
-      contentInsetAdjustmentBehavior="never"
+      contentInsetAdjustmentBehavior={insetsAutomatically ? "automatic" : "never"}
       data={articles}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
       initialScrollOffset={isIOS ? initialScrollOffset : undefined}
@@ -152,37 +159,6 @@ function RecentHistoryItem({ article, isFirst }: { article: RecentArticle; isFir
           </Text>
         </View>
       </Pressable>
-    </View>
-  );
-}
-
-function RecentHistoryEmptyState() {
-  const { width } = useWindowDimensions();
-  const emptyHorizontalInset = width * (32 / 390);
-
-  return (
-    <View
-      className="flex-1 items-center justify-center gap-5 pb-24"
-      style={{ paddingHorizontal: emptyHorizontalInset }}
-    >
-      <EmptyStateIcon size={176} />
-      <View className="w-full items-center gap-2">
-        <Text
-          className="text-center text-foreground"
-          numberOfLines={2}
-          style={FONT_STYLES.screenTitle}
-        >
-          No recently viewed articles
-        </Text>
-        <Text
-          className="text-center text-muted-foreground"
-          lineBreakStrategyIOS="standard"
-          numberOfLines={2}
-          style={FONT_STYLES.bodySmall}
-        >
-          Older saved posts and clips will surface here after they've been waiting a while.
-        </Text>
-      </View>
     </View>
   );
 }
