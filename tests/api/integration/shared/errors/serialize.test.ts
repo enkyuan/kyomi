@@ -23,9 +23,10 @@ describe("serializeError", () => {
   test("errors with cause recursively unwrap the chain", () => {
     const root = new Error("connection refused");
     root.name = "DatabaseError";
-    const outer = new Error("Failed query: SELECT * FROM huge_sql_string_truncated");
+    const outer = new Error("Failed query: SELECT * FROM huge_sql_string_truncated", {
+      cause: root,
+    });
     outer.name = "DrizzleQueryError";
-    (outer as Record<string, unknown>).cause = root;
 
     const result = serializeError(outer);
     expect(result).toEqual({
@@ -41,12 +42,10 @@ describe("serializeError", () => {
   test("nested cause chains are fully unwrapped", () => {
     const inner = new Error("root cause");
     inner.name = "InnerError";
-    const middle = new Error("wrapped middle");
+    const middle = new Error("wrapped middle", { cause: inner });
     middle.name = "MiddleError";
-    (middle as Record<string, unknown>).cause = inner;
-    const outer = new Error("outer wrapper");
+    const outer = new Error("outer wrapper", { cause: middle });
     outer.name = "OuterError";
-    (outer as Record<string, unknown>).cause = middle;
 
     const result = serializeError(outer);
     expect((result as Record<string, unknown>).cause).toEqual({
@@ -96,9 +95,8 @@ describe("serializeError", () => {
       detail: undefined,
       table: "opml_import_items",
     });
-    const drizzleError = new Error("Failed query: <2000 chars of SQL...>");
+    const drizzleError = new Error("Failed query: <2000 chars of SQL...>", { cause: pgError });
     drizzleError.name = "DrizzleQueryError";
-    (drizzleError as Record<string, unknown>).cause = pgError;
 
     const result = serializeError(drizzleError);
     expect(result).toEqual({
