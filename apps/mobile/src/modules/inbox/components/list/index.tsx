@@ -11,6 +11,7 @@ import { useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
 import { type ArticleScope, useArticles } from "@modules/inbox/hooks/use-articles";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { useEmptyPage } from "@modules/inbox/hooks/use-empty-page";
+import { usePullToRefresh } from "@modules/inbox/hooks/use-pull-to-refresh";
 import { prefetchReaderArticle } from "@modules/articles/lib/requests";
 import { Item } from "../item";
 import { ESTIMATED_ROW_SIZE, ListSkeleton } from "./skeleton";
@@ -50,6 +51,7 @@ export function List({
     isError,
     pageCount,
   } = useArticles(scope);
+  const pullToRefresh = usePullToRefresh(refetch);
   const visibleItems =
     filter === "unread"
       ? items.filter((item) => !item.isRead)
@@ -90,11 +92,12 @@ export function List({
           paddingTop: topContentInset,
         }}
         refreshControl={
+          // The scroll view starts at the screen's top edge and the header is padding over it, so
+          // the spinner is offset to sit below the header, as LegendList's own is.
           <RefreshControl
-            refreshing={isRefetching}
-            onRefresh={() => {
-              void refetch();
-            }}
+            onRefresh={pullToRefresh.onRefresh}
+            progressViewOffset={topContentInset}
+            refreshing={pullToRefresh.refreshing}
           />
         }
         onScroll={minimizeScrollHandler}
@@ -117,10 +120,8 @@ export function List({
       contentContainerStyle={{ paddingBottom: tabBarOcclusionHeight, paddingTop: topContentInset }}
       contentInsetAdjustmentBehavior="never"
       data={visibleItems}
-      onRefresh={() => {
-        void refetch();
-      }}
-      refreshing={isRefetching}
+      onRefresh={pullToRefresh.onRefresh}
+      refreshing={pullToRefresh.refreshing}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
       keyExtractor={(item: ArticleListItemDto) => item.id}
       onEndReached={() => {
