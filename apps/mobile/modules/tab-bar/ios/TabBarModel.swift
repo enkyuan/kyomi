@@ -71,8 +71,9 @@ final class TabBarModel {
       if searchQuery != oldValue { onSearchQueryChange(searchQuery) }
     }
   }
-  /// The add composer: the add button's glass grown into a card that takes a feed address to
-  /// import or words to search for, with the folder to file the feed in.
+  /// The add composer: the add button's glass widened into a field that takes a feed address to
+  /// import or words to search for, with the feeds found listed over the screen behind it, each
+  /// with its own folder and Follow (or Import) button.
   var composerActive = false
   var composerQuery = "" {
     didSet {
@@ -80,13 +81,7 @@ final class TabBarModel {
     }
   }
   var composerKind = ComposerKind.follow
-  var composerFeeds: [ComposerFeed] = [] {
-    didSet {
-      if !composerFeeds.contains(where: { $0.id == composerSelection }) {
-        composerSelection = composerFeeds.first(where: { !$0.isSubscribed })?.id ?? composerFeeds.first?.id
-      }
-    }
-  }
+  var composerFeeds: [ComposerFeed] = []
   var composerFolders: [ComposerFolder] = []
   var composerMessage: String?
   var composerStatus = ComposerStatus.idle {
@@ -94,10 +89,10 @@ final class TabBarModel {
       if composerStatus == .done, composerActive { toggleComposer() }
     }
   }
-  /// The feed Follow acts on; Import always acts on the one previewed.
-  var composerSelection: String?
-  /// The folder the feed is filed in; nil leaves it unsorted.
-  var composerFolderID: String?
+  /// The folder each listed feed is filed in, by feed id; a feed without one is left unsorted.
+  var composerFolderIDs: [String: String] = [:]
+  /// The feed whose button was pressed while the submit is in flight.
+  private(set) var composerSubmittingID: String?
   var searchPlaceholder = "Search"
   var activeTint = Color.accentColor
   /// Bumped by a press that commits something worth feeling: switching tabs, or adding. Re-tapping
@@ -140,34 +135,37 @@ final class TabBarModel {
     composerActive.toggle()
     if !composerActive {
       composerQuery = ""
-      composerFolderID = nil
+      composerFolderIDs = [:]
     }
     onComposerActiveChange(composerActive)
   }
 
-  /// Rows the card lists: the feeds found, or one line of message when there are none.
-  var composerListedRows: Int {
-    composerFeeds.isEmpty ? (composerMessage == nil ? 0 : 1) : composerFeeds.count
+  func composerFolderID(for feed: ComposerFeed) -> String? {
+    composerFolderIDs[feed.id]
   }
 
-  /// The feed the primary button acts on, if it can act yet.
-  var composerTarget: ComposerFeed? {
-    composerFeeds.first { $0.id == composerSelection } ?? composerFeeds.first
+  func setComposerFolderID(_ folderID: String?, for feed: ComposerFeed) {
+    composerFolderIDs[feed.id] = folderID
   }
 
-  var composerCanSubmit: Bool {
-    guard composerStatus != .submitting else { return false }
-    let query = composerQuery.trimmingCharacters(in: .whitespacesAndNewlines)
-    switch composerKind {
-    case .import: return !query.isEmpty
-    case .follow: return composerTarget.map { !$0.isSubscribed } ?? false
+  func canSubmitComposer(_ feed: ComposerFeed) -> Bool {
+    composerStatus != .submitting && !feed.isSubscribed
+  }
+
+  /// Follows or imports `feed`; the keyboard's return key, which names none, acts on the first feed
+  /// not yet followed, or on the typed address when nothing has been previewed.
+  func submitComposer(_ feed: ComposerFeed? = nil) {
+    guard composerStatus != .submitting else { return }
+    if let target = feed ?? composerFeeds.first(where: { !$0.isSubscribed }) {
+      guard !target.isSubscribed else { return }
+      composerSubmittingID = target.id
+      onComposerSubmit(target.feedID ?? "", target.url, composerFolderIDs[target.id] ?? "")
+      return
     }
-  }
-
-  func submitComposer() {
-    guard composerCanSubmit else { return }
-    let feed = composerKind == .import ? composerFeeds.first : composerTarget
-    onComposerSubmit(feed?.feedID ?? "", feed?.url ?? composerQuery, composerFolderID ?? "")
+    let query = composerQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+    guard composerKind == .import, !query.isEmpty, composerFeeds.isEmpty else { return }
+    composerSubmittingID = nil
+    onComposerSubmit("", query, "")
   }
 
   func toggleSearch() {
@@ -183,6 +181,8 @@ final class TabBarModel {
   /// Constant-time: hit testing runs for every touch on the full-screen host.
   func isInteractive(at point: CGPoint) -> Bool {
     if switcherPresented { return true }
+    // The composer's results and the screen behind them take every touch, so a tap outside closes it.
+    if composerActive { return true }
     let mainShown = !minimized && !searchActive
     return (mainShown && mainFrame.contains(point))
       || actionFrame.contains(point)

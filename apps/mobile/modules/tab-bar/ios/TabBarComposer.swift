@@ -1,159 +1,163 @@
 import SwiftUI
 
-/// What the add composer shows once the add button's glass has grown into a card: the address or
-/// words to search for, the feeds found, and a bottom row with the folder to file the feed in and
-/// the primary button, Import for a typed address and Follow for a search. It brings no background
-/// of its own; the glass is the card.
+/// What the add composer lays behind its field: the screen blurred from the top down, and over it
+/// the feeds found, nearest the field, each with the folder to file it in and its own Follow (or
+/// Import) button. Tapping the blur outside the list closes the composer.
 struct TabBarComposer: View {
   @Bindable var model: TabBarModel
-  var focus: FocusState<Bool>.Binding
+  let container: CGSize
+  /// Top of the field in the bar's coordinates; the list ends a gap above it.
+  let fieldTop: CGFloat
+  let safeTop: CGFloat
 
   var body: some View {
-    VStack(spacing: TabBarMetrics.composerSpacing) {
-      field
+    ZStack(alignment: .bottom) {
+      backdrop
       results
-      HStack(spacing: 8) {
-        folderMenu
-        Spacer(minLength: 0)
-        primaryButton
-      }
-      .frame(height: TabBarMetrics.composerRowHeight)
+        .padding(.bottom, container.height - fieldTop + TabBarMetrics.composerResultsGap)
     }
-    .padding(TabBarMetrics.composerPadding)
+    .frame(width: container.width, height: container.height)
+    .animation(.easeOut(duration: 0.2), value: model.composerFeeds)
     .accessibilityElement(children: .contain)
     .accessibilityLabel("Add a feed")
     .accessibilityAction(.escape) { model.toggleComposer() }
   }
 
-  private var field: some View {
-    HStack(spacing: 8) {
-      TextField("Feed address or search", text: $model.composerQuery)
-        .focused(focus)
-        .keyboardType(.webSearch)
-        .submitLabel(.go)
-        .textInputAutocapitalization(.never)
-        .autocorrectionDisabled()
-        .onSubmit { model.submitComposer() }
-
-      if model.composerStatus == .loading {
-        ProgressView()
-      }
-
-      Button {
-        model.toggleComposer()
-      } label: {
-        Image(systemName: "xmark")
-          .font(.system(size: 13, weight: .bold))
-          .foregroundStyle(.secondary)
-          .frame(width: 30, height: 30)
-          .background(.fill.tertiary, in: .circle)
-          .contentShape(.circle)
-      }
-      .buttonStyle(.plain)
-      .accessibilityLabel("Close")
-    }
-    .frame(height: TabBarMetrics.composerRowHeight)
+  /// Blurs and tones down what is behind, most where the list sits and not at all at the top, so
+  /// the list reads over any content.
+  private var backdrop: some View {
+    Rectangle()
+      .fill(.regularMaterial)
+      .mask(
+        LinearGradient(
+          stops: [
+            .init(color: .clear, location: 0),
+            .init(color: .black, location: 0.45),
+            .init(color: .black, location: 1),
+          ],
+          startPoint: .top,
+          endPoint: .bottom
+        )
+      )
+      .contentShape(.rect)
+      .onTapGesture { model.toggleComposer() }
+      .accessibilityHidden(true)
   }
 
   @ViewBuilder
   private var results: some View {
-    if model.composerFeeds.isEmpty, let message = model.composerMessage {
-      Text(message)
-        .font(.footnote)
-        .foregroundStyle(.secondary)
-        .frame(maxWidth: .infinity, minHeight: TabBarMetrics.composerResultHeight, alignment: .leading)
-    } else if !model.composerFeeds.isEmpty {
-      ScrollView {
-        LazyVStack(spacing: 0) {
-          ForEach(model.composerFeeds) { feed in
-            row(feed)
-          }
-        }
+    let available = max(0, fieldTop - safeTop - TabBarMetrics.composerResultsGap * 2)
+    if model.composerFeeds.isEmpty {
+      if let message = model.composerMessage {
+        Text(message)
+          .font(.footnote)
+          .foregroundStyle(.secondary)
+          .frame(maxWidth: .infinity, alignment: .leading)
+          .padding(.horizontal, TabBarMetrics.composerInset + 12)
+          .transition(.opacity)
       }
-      .scrollIndicators(.hidden)
-      .frame(height: CGFloat(min(model.composerFeeds.count, TabBarMetrics.composerMaxResults)) * TabBarMetrics.composerResultHeight)
+    } else {
+      // A short list sits at the field and a long one scrolls, ending at the field.
+      ViewThatFits(in: .vertical) {
+        list
+        ScrollView {
+          list
+        }
+        .scrollIndicators(.hidden)
+        .defaultScrollAnchor(.bottom)
+      }
+      .frame(maxHeight: available)
     }
+  }
+
+  private var list: some View {
+    VStack(spacing: 0) {
+      ForEach(model.composerFeeds) { feed in
+        row(feed)
+          .transition(.opacity)
+      }
+    }
+    .padding(.horizontal, TabBarMetrics.composerInset + 12)
   }
 
   private func row(_ feed: ComposerFeed) -> some View {
-    let selected = model.composerKind == .follow && feed.id == model.composerTarget?.id
-    return Button {
-      model.composerSelection = feed.id
-    } label: {
-      HStack(spacing: 12) {
-        AsyncImage(url: feed.faviconURL) { image in
-          image.resizable().scaledToFit()
-        } placeholder: {
-          Image(systemName: "dot.radiowaves.up.forward").foregroundStyle(.secondary)
-        }
-        .frame(width: 28, height: 28)
-        .clipShape(.rect(cornerRadius: 6))
+    HStack(spacing: 12) {
+      AsyncImage(url: feed.faviconURL) { image in
+        image.resizable().scaledToFit()
+      } placeholder: {
+        Image(systemName: "dot.radiowaves.up.forward").foregroundStyle(.secondary)
+      }
+      .frame(width: 36, height: 36)
+      .clipShape(.rect(cornerRadius: 8))
 
-        VStack(alignment: .leading, spacing: 2) {
-          Text(feed.title).font(.subheadline.weight(.semibold)).lineLimit(1)
-          Text(feed.detail ?? feed.url).font(.caption).foregroundStyle(.secondary).lineLimit(1)
-        }
-        Spacer(minLength: 0)
-
-        if feed.isSubscribed {
-          Text("Following").font(.caption).foregroundStyle(.secondary)
-        } else if selected {
-          Image(systemName: "checkmark.circle.fill").foregroundStyle(model.activeTint)
+      VStack(alignment: .leading, spacing: 2) {
+        Text(feed.title).font(.subheadline.weight(.semibold)).lineLimit(1)
+        Text(feed.detail ?? feed.url).font(.caption).foregroundStyle(.secondary).lineLimit(1)
+        if !feed.isSubscribed, !model.composerFolders.isEmpty {
+          folderMenu(feed)
         }
       }
-      .frame(height: TabBarMetrics.composerResultHeight)
-      .contentShape(.rect)
+      Spacer(minLength: 0)
+
+      if feed.isSubscribed {
+        Text("Following").font(.footnote).foregroundStyle(.secondary)
+      } else {
+        actionButton(feed)
+      }
     }
-    .buttonStyle(.plain)
-    .accessibilityAddTraits(selected ? .isSelected : [])
+    .frame(height: TabBarMetrics.composerResultHeight)
+    .accessibilityElement(children: .contain)
   }
 
-  private var folderMenu: some View {
-    let name = model.composerFolders.first { $0.id == model.composerFolderID }?.name ?? "Unsorted"
+  /// Text only, in the foreground colour, with no button chrome.
+  private func folderMenu(_ feed: ComposerFeed) -> some View {
+    let selection = Binding(
+      get: { model.composerFolderID(for: feed) },
+      set: { model.setComposerFolderID($0, for: feed) }
+    )
+    let name = model.composerFolders.first { $0.id == selection.wrappedValue }?.name ?? "Unsorted"
     return Menu {
-      Picker("Folder", selection: $model.composerFolderID) {
+      Picker("Folder", selection: selection) {
         Label("Unsorted", systemImage: "tray").tag(String?.none)
         ForEach(model.composerFolders) { folder in
           Label(folder.name, systemImage: "folder").tag(String?.some(folder.id))
         }
       }
     } label: {
-      HStack(spacing: 6) {
-        Image(systemName: "folder")
+      HStack(spacing: 4) {
         Text(name).lineLimit(1)
-        Image(systemName: "chevron.down").font(.caption2.weight(.bold))
+        Image(systemName: "chevron.down").font(.system(size: 9, weight: .bold))
       }
-      .font(.system(size: 15, weight: .medium))
-      .foregroundStyle(.primary.opacity(0.82))
-      .padding(.horizontal, 14)
-      .frame(height: 40)
-      .background(.fill.tertiary, in: .capsule)
+      .font(.footnote.weight(.medium))
+      .foregroundStyle(.primary)
+      .contentShape(.rect)
     }
+    .buttonStyle(.plain)
     .accessibilityLabel("Folder, \(name)")
   }
 
-  private var primaryButton: some View {
-    let enabled = model.composerCanSubmit
+  private func actionButton(_ feed: ComposerFeed) -> some View {
+    let enabled = model.canSubmitComposer(feed)
+    let submitting = model.composerStatus == .submitting && model.composerSubmittingID == feed.id
     return Button {
-      model.submitComposer()
+      model.submitComposer(feed)
     } label: {
       ZStack {
         Text(model.composerKind == .import ? "Import" : "Follow")
-          .contentTransition(.opacity)
-          .opacity(model.composerStatus == .submitting ? 0 : 1)
-        if model.composerStatus == .submitting {
+          .opacity(submitting ? 0 : 1)
+        if submitting {
           ProgressView().tint(model.addIconColor)
         }
       }
-      .font(.system(size: 17, weight: .semibold))
+      .font(.system(size: 15, weight: .semibold))
       .foregroundStyle(model.addIconColor)
-      .padding(.horizontal, 22)
-      .frame(height: 44)
+      .padding(.horizontal, 18)
+      .frame(height: 36)
       .background(model.activeTint, in: .capsule)
-      .opacity(enabled || model.composerStatus == .submitting ? 1 : 0.4)
+      .opacity(enabled || submitting ? 1 : 0.4)
+      .contentShape(.capsule)
     }
     .buttonStyle(.plain)
     .disabled(!enabled)
-    .animation(.easeOut(duration: 0.18), value: model.composerKind)
   }
 }

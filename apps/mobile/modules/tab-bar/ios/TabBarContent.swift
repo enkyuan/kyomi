@@ -103,8 +103,7 @@ struct TabBarContent: View {
         hasSwitcher: model.switcher != nil,
         minimized: model.minimized,
         searchActive: model.searchActive,
-        composerHeight: model.composerActive
-          ? TabBarMetrics.composerHeight(listedRows: model.composerListedRows) : nil,
+        composing: model.composerActive,
         reduceMotion: reduceMotion,
         sheetPresented: model.switcherPresented,
         keyboardInset: keyboardInset
@@ -113,6 +112,17 @@ struct TabBarContent: View {
 
       ZStack(alignment: .topLeading) {
         scrim(sheet)
+
+        // The composer's results sit behind the bar, over the screen it blurs.
+        if model.composerActive {
+          TabBarComposer(
+            model: model,
+            container: container,
+            fieldTop: layout.trailingRect.minY,
+            safeTop: model.safeTop
+          )
+          .transition(.opacity)
+        }
 
         // One container so the glass shapes render together and morph as they move.
         GlassEffectContainer(spacing: 0) {
@@ -143,7 +153,7 @@ struct TabBarContent: View {
             if layout.showsButtons {
               // The search button and the field are one view, so its glass widens from the
               // leading edge and narrows back with nothing inserted or removed to be matched up.
-              // The composer covers its place, so it materializes out like the capsule does.
+              // The composer's field widens over its place, so it materializes out like the capsule does.
               if layout.showsSearch {
                 searchSurface(layout)
                   .onGeometryChange(for: CGRect.self) { proxy in
@@ -156,7 +166,7 @@ struct TabBarContent: View {
                   .position(x: layout.searchRect.midX, y: layout.searchRect.midY)
               }
 
-              // One surface for the add button, the search close button and the composer card, so
+              // One surface for the add button, the search close button and the composer field, so
               // each is the same glass changing frame, and none is inserted or removed.
               trailingSurface(layout)
                 .onGeometryChange(for: CGRect.self) { proxy in
@@ -177,7 +187,6 @@ struct TabBarContent: View {
     .animation(minimizeTransition, value: model.minimized)
     .animation(transition, value: model.searchActive)
     .animation(transition, value: model.composerActive)
-    .animation(transition, value: model.composerListedRows)
     // Opening search focuses the field. It mounts while its text is still fading in, and a view
     // that is not visible yet can refuse focus, so ask again once the fade is under way. Closing
     // drops the keyboard with the glass.
@@ -413,49 +422,62 @@ struct TabBarContent: View {
     }
   }
 
+  /// The add button, the search close button and the composer's field are one glass. Composing
+  /// widens it leftward as searching widens the search button rightward: the glyph keeps the
+  /// button's place in the end cap and turns into the close button, and the field's text sits
+  /// beside it.
   private func trailingSurface(_ layout: TabBarLayout) -> some View {
     let searching = model.searchActive
     let composing = model.composerActive
+    let closing = searching || composing
     let rect = layout.trailingRect
-    let shape = RoundedRectangle(
-      cornerRadius: composing ? TabBarMetrics.composerCornerRadius : layout.buttonSize / 2,
-      style: .continuous
-    )
 
-    return ZStack(alignment: .bottomTrailing) {
+    return ZStack(alignment: .trailing) {
       if composing {
-        TabBarComposer(model: model, focus: $composerFocused)
-          .frame(width: rect.width, height: rect.height)
-          .transition(searchFieldTransition)
-      } else {
-        Button {
-          if searching { model.toggleSearch() } else { model.toggleComposer() }
-        } label: {
-          Group {
-            if let icon = model.addIcon {
-              TabBarIconView(
-                icon: icon,
-                size: TabBarMetrics.addIconSize,
-                color: searching ? Self.actionIconColor : model.addIconColor
-              )
-            } else {
-              Image(systemName: "plus")
-                .font(.system(size: TabBarMetrics.addIconSize, weight: .semibold))
-                .foregroundStyle(searching ? Self.actionIconColor : model.addIconColor)
-            }
+        HStack(spacing: 8) {
+          TextField("Feed address or search", text: $model.composerQuery)
+            .focused($composerFocused)
+            .keyboardType(.webSearch)
+            .submitLabel(.go)
+            .textInputAutocapitalization(.never)
+            .autocorrectionDisabled()
+            .onSubmit { model.submitComposer() }
+
+          if model.composerStatus == .loading {
+            ProgressView()
           }
-          .rotationEffect(.degrees(searching ? 45 : 0))
-          .scaleEffect(layout.buttonScale)
-          .frame(width: layout.buttonSize, height: layout.buttonSize)
-          .contentShape(.circle)
         }
-        .buttonStyle(.plain)
-        .accessibilityLabel(searching ? "Close search" : "Add feed")
-        .transition(.asymmetric(insertion: .opacity.animation(.easeOut(duration: 0.15).delay(0.1)), removal: .opacity.animation(.easeOut(duration: 0.08))))
+        .padding(.leading, TabBarMetrics.searchFieldPadding)
+        .padding(.trailing, layout.buttonSize)
+        .transition(searchFieldTransition)
       }
+
+      Button {
+        if searching { model.toggleSearch() } else { model.toggleComposer() }
+      } label: {
+        Group {
+          if let icon = model.addIcon {
+            TabBarIconView(
+              icon: icon,
+              size: TabBarMetrics.addIconSize,
+              color: closing ? Self.actionIconColor : model.addIconColor
+            )
+          } else {
+            Image(systemName: "plus")
+              .font(.system(size: TabBarMetrics.addIconSize, weight: .semibold))
+              .foregroundStyle(closing ? Self.actionIconColor : model.addIconColor)
+          }
+        }
+        .rotationEffect(.degrees(closing ? 45 : 0))
+        .scaleEffect(layout.buttonScale)
+        .frame(width: layout.buttonSize, height: layout.buttonSize)
+        .contentShape(.circle)
+      }
+      .buttonStyle(.plain)
+      .accessibilityLabel(searching ? "Close search" : composing ? "Close" : "Add feed")
     }
-    .frame(width: rect.width, height: rect.height, alignment: .bottomTrailing)
-    .clipShape(shape)
-    .glassEffect(composing ? .regular : .regular.tint(searching ? nil : model.activeTint).interactive(), in: shape)
+    .frame(width: rect.width, height: rect.height, alignment: .trailing)
+    .clipShape(.capsule)
+    .glassEffect(composing ? .regular : .regular.tint(searching ? nil : model.activeTint).interactive(), in: .capsule)
   }
 }
