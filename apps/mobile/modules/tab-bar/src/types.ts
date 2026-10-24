@@ -51,6 +51,8 @@ export type TabBarViewProps = ViewProps & {
   readonly switcher?: TabBarSwitcher;
   /** Magnifying glass for the search button and field; omit to use the SF Symbol. */
   readonly searchIcon?: TabBarIcon;
+  /** Magnifying glass for the add composer's field; omit to use the SF Symbol. */
+  readonly composerIcon?: TabBarIcon;
   /** Plus for the add button at the trailing edge; omit to use the SF Symbol. */
   readonly addIcon?: TabBarIcon;
   /** Colour of the plus drawn on the tinted (`activeTintColor`) add button. */

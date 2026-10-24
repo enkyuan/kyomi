@@ -8,6 +8,7 @@ import {
   CompassPointerNativeIcon,
   LayoutAlignBottomFilledNativeIcon,
   LayoutAlignBottomNativeIcon,
+  MagnifyingGlassNativeIcon,
   PageTextSearchNativeIcon,
   PlusNativeIcon,
   type BlodeNativeIcon,
@@ -54,6 +55,7 @@ const TABS: readonly TabBarItem[] = [
 ];
 
 const SEARCH_ICON = toTabBarIcon(PageTextSearchNativeIcon);
+const COMPOSER_ICON = toTabBarIcon(MagnifyingGlassNativeIcon);
 const ADD_ICON = toTabBarIcon(PlusNativeIcon);
 
 const SWITCHER: TabBarSwitcher = {
@@ -99,6 +101,7 @@ export function TabBar({
       addIconColor={kyomiNativeBrand.matcha.onColor}
       animatedProps={animatedProps}
       composerFeeds={composer?.feeds}
+      composerIcon={COMPOSER_ICON}
       composerFolders={composer?.folders}
       composerKind={composer?.kind}
       composerMessage={composer?.message ?? undefined}

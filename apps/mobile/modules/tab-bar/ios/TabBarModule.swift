@@ -32,6 +32,10 @@ public class TabBarModule: Module {
         view.model.searchIcon = icon?.icon
       }
 
+      Prop("composerIcon") { (view: TabBarView, icon: IconRecord?) in
+        view.model.composerIcon = icon?.icon
+      }
+
       Prop("addIcon") { (view: TabBarView, icon: IconRecord?) in
         view.model.addIcon = icon?.icon
       }

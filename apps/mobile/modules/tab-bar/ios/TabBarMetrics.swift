@@ -84,13 +84,16 @@ struct TabBarLayout: Equatable {
   /// Frame of the tab capsule's glass.
   let mainWidth: CGFloat
   let mainX: CGFloat
-  /// The leading element: the search button, or the field it widens into while searching or adding.
-  /// They share one glass, so this is the frame that glass moves between.
+  /// The leading element: the search button, or the field it widens into while searching. They share
+  /// one glass, so this is the frame that glass moves between. The composer's field takes the same
+  /// frame with a glass of its own.
   let searchRect: CGRect
   /// The trailing element: the add button, or the close button it becomes beside the field.
   let trailingRect: CGRect
   /// Minimized, searching or composing: the capsule is hidden.
   let showsMain: Bool
+  /// Composing covers the search button's place with a field of its own, so it leaves like the capsule.
+  let showsSearch: Bool
   /// The open sheet covers both buttons' places, so they are gone while it is presented.
   let showsButtons: Bool
   /// Whole-point widths of the tab segments. `UISegmentedControl` floors
@@ -122,6 +125,7 @@ struct TabBarLayout: Equatable {
     buttonSize = compact && !reduceMotion ? TabBarMetrics.compactHeight : TabBarMetrics.height
     buttonScale = buttonSize / TabBarMetrics.height
     showsMain = !minimized && !fielding
+    showsSearch = !composing
     showsButtons = !sheetPresented
 
     let inset = TabBarMetrics.edgeInset

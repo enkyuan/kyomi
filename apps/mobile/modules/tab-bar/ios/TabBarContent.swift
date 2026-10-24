@@ -153,17 +153,29 @@ struct TabBarContent: View {
             if layout.showsButtons {
               // The search button and the field are one view, so its glass widens from the
               // leading edge and narrows back with nothing inserted or removed to be matched up.
-              // The add composer's field is the same view: it takes the field's place and the
-              // keyboard, with its own text.
-              searchSurface(layout)
-                .onGeometryChange(for: CGRect.self) { proxy in
-                  proxy.frame(in: .named(Self.coordinateSpace))
-                } action: { frame in
-                  model.actionFrame = frame
-                }
-                .glassEffectID("search", in: glassNamespace)
-                .glassEffectTransition(.materialize)
-                .position(x: layout.searchRect.midX, y: layout.searchRect.midY)
+              // The composer covers its place, so it materializes out like the capsule does.
+              if layout.showsSearch {
+                searchSurface(layout)
+                  .onGeometryChange(for: CGRect.self) { proxy in
+                    proxy.frame(in: .named(Self.coordinateSpace))
+                  } action: { frame in
+                    model.actionFrame = frame
+                  }
+                  .glassEffectID("search", in: glassNamespace)
+                  .glassEffectTransition(.materialize)
+                  .position(x: layout.searchRect.midX, y: layout.searchRect.midY)
+              }
+
+              // The add composer's field is its own glass, rising from the screen's bottom edge to
+              // the field's place instead of growing out of the search button. The identity glass
+              // transition leaves the move to `transition`.
+              if model.composerActive {
+                composerSurface(layout)
+                  .glassEffectID("composer", in: glassNamespace)
+                  .glassEffectTransition(.identity)
+                  .transition(.move(edge: .bottom))
+                  .position(x: layout.searchRect.midX, y: layout.searchRect.midY)
+              }
 
               // One surface for the add button and the close button beside the field, so each is
               // the same glass changing frame, and none is inserted or removed.
@@ -373,16 +385,13 @@ struct TabBarContent: View {
     .accessibilityHint(switcher.hint)
   }
 
-  /// A capsule as wide as it is tall is the search button; widened, it is the field, which takes
-  /// either search's query or the add composer's, since both are the same native field. The glyph
-  /// keeps the button's centre in both, so it never slides, and the field's text sits beside it. The
-  /// glass is interactive only as a button.
+  /// A capsule as wide as it is tall is the search button; widened, it is the field. The glyph keeps
+  /// the button's centre in both, so it never slides, and the field's text sits beside it. The glass
+  /// is interactive only as a button.
   private func searchSurface(_ layout: TabBarLayout) -> some View {
     let searching = model.searchActive
-    let composing = model.composerActive
-    let fielding = searching || composing
     let rect = layout.searchRect
-    let glyphScale = fielding ? TabBarMetrics.fieldHeight / TabBarMetrics.height : layout.buttonScale
+    let glyphScale = searching ? TabBarMetrics.fieldHeight / TabBarMetrics.height : layout.buttonScale
     return ZStack(alignment: .leading) {
       if searching {
         TabBarField(
@@ -396,45 +405,70 @@ struct TabBarContent: View {
         .padding(.leading, TabBarMetrics.fieldTextInset)
         .padding(.trailing, TabBarMetrics.fieldTextTrailing)
         .transition(searchFieldTransition)
-      } else if composing {
-        HStack(spacing: 8) {
-          TabBarField(
-            text: $model.composerQuery,
-            focused: $composerFocused,
-            placeholder: "Search or paste a feed address",
-            returnKey: .go,
-            keyboard: .webSearch
-          ) {
-            model.submitComposer()
-          }
-          if model.composerStatus == .loading {
-            ProgressView()
-          }
-        }
-        .padding(.leading, TabBarMetrics.fieldTextInset)
-        .padding(.trailing, TabBarMetrics.fieldTextTrailing)
-        .transition(searchFieldTransition)
       }
 
       Button {
         model.toggleSearch()
       } label: {
-        searchGlyph(fielding ? Self.searchFieldIconColor : Self.actionIconColor)
+        searchGlyph(searching ? Self.searchFieldIconColor : Self.actionIconColor)
           .scaleEffect(glyphScale)
           .frame(width: rect.height, height: rect.height)
           .contentShape(.circle)
       }
       .buttonStyle(.plain)
-      .allowsHitTesting(!fielding)
+      .allowsHitTesting(!searching)
       .accessibilityLabel("Search articles")
-      .accessibilityHidden(fielding)
+      .accessibilityHidden(searching)
     }
     .frame(width: rect.width, height: rect.height, alignment: .leading)
     .clipShape(.capsule)
-    .glassEffect(fielding ? .regular : .regular.interactive(), in: .capsule)
+    .glassEffect(searching ? .regular : .regular.interactive(), in: .capsule)
+  }
+
+  /// The add composer's field: the search field's size, glyph and native text field, with its own
+  /// glass.
+  private func composerSurface(_ layout: TabBarLayout) -> some View {
+    let rect = layout.searchRect
+    let glyphScale = TabBarMetrics.fieldHeight / TabBarMetrics.height
+    return ZStack(alignment: .leading) {
+      HStack(spacing: 8) {
+        TabBarField(
+          text: $model.composerQuery,
+          focused: $composerFocused,
+          placeholder: "Search or paste a URL",
+          returnKey: .go,
+          keyboard: .webSearch
+        ) {
+          model.submitComposer()
+        }
+        if model.composerStatus == .loading {
+          ProgressView()
+        }
+      }
+      .padding(.leading, TabBarMetrics.fieldTextInset)
+      .padding(.trailing, TabBarMetrics.fieldTextTrailing)
+      .transition(searchFieldTransition)
+
+      Group {
+        if let icon = model.composerIcon {
+          TabBarIconView(icon: icon, size: TabBarMetrics.searchIconSize, color: Self.searchFieldIconColor)
+        } else {
+          Image(systemName: "magnifyingglass")
+            .font(.system(size: TabBarMetrics.searchIconSize))
+            .foregroundStyle(Self.searchFieldIconColor)
+        }
+      }
+      .scaleEffect(glyphScale)
+      .frame(width: rect.height, height: rect.height)
+      .allowsHitTesting(false)
+      .accessibilityHidden(true)
+    }
+    .frame(width: rect.width, height: rect.height, alignment: .leading)
+    .clipShape(.capsule)
+    .glassEffect(.regular, in: .capsule)
     .accessibilityElement(children: .contain)
-    .accessibilityLabel(composing ? "Add a feed" : "")
-    .accessibilityAction(.escape) { if composing { model.toggleComposer() } }
+    .accessibilityLabel("Add a feed")
+    .accessibilityAction(.escape) { model.toggleComposer() }
   }
 
   @ViewBuilder

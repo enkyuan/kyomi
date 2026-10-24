@@ -52,6 +52,8 @@ final class TabBarModel {
   var switcher: TabBarSwitcher?
   /// Magnifying glass drawn in the search button and field; falls back to the SF Symbol.
   var searchIcon: TabBarIcon?
+  /// Magnifying glass drawn in the composer's field; falls back to the SF Symbol.
+  var composerIcon: TabBarIcon?
   /// Plus drawn in the add button; falls back to the SF Symbol.
   var addIcon: TabBarIcon?
   var addIconColor = Color.black.opacity(0.85)
@@ -89,8 +91,6 @@ final class TabBarModel {
       if composerStatus == .done, composerActive { toggleComposer() }
     }
   }
-  /// The folder each listed feed is filed in, by feed id; a feed without one is left unsorted.
-  var composerFolderIDs: [String: String] = [:]
   /// The feed whose button was pressed while the submit is in flight.
   private(set) var composerSubmittingID: String?
   var searchPlaceholder = "Search"
@@ -135,31 +135,22 @@ final class TabBarModel {
     composerActive.toggle()
     if !composerActive {
       composerQuery = ""
-      composerFolderIDs = [:]
     }
     onComposerActiveChange(composerActive)
-  }
-
-  func composerFolderID(for feed: ComposerFeed) -> String? {
-    composerFolderIDs[feed.id]
-  }
-
-  func setComposerFolderID(_ folderID: String?, for feed: ComposerFeed) {
-    composerFolderIDs[feed.id] = folderID
   }
 
   func canSubmitComposer(_ feed: ComposerFeed) -> Bool {
     composerStatus != .submitting && !feed.isSubscribed
   }
 
-  /// Follows or imports `feed`; the keyboard's return key, which names none, acts on the first feed
-  /// not yet followed, or on the typed address when nothing has been previewed.
-  func submitComposer(_ feed: ComposerFeed? = nil) {
+  /// Follows or imports `feed` into `folderID`; the keyboard's return key, which names neither, acts
+  /// on the first feed not yet followed, or on the typed address when nothing has been previewed.
+  func submitComposer(_ feed: ComposerFeed? = nil, folderID: String? = nil) {
     guard composerStatus != .submitting else { return }
     if let target = feed ?? composerFeeds.first(where: { !$0.isSubscribed }) {
       guard !target.isSubscribed else { return }
       composerSubmittingID = target.id
-      onComposerSubmit(target.feedID ?? "", target.url, composerFolderIDs[target.id] ?? "")
+      onComposerSubmit(target.feedID ?? "", target.url, folderID ?? "")
       return
     }
     let query = composerQuery.trimmingCharacters(in: .whitespacesAndNewlines)
