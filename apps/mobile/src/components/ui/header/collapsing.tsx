@@ -14,6 +14,7 @@ import Animated, {
   Extrapolation,
   interpolate,
   useAnimatedStyle,
+  useReducedMotion,
   type SharedValue,
 } from "react-native-reanimated";
 import * as Haptics from "expo-haptics";
@@ -22,7 +23,6 @@ import { ProgressiveBlur, CHROME_BLUR_BLEED } from "@ui/liquid-glass/progressive
 import { useTheme } from "@ui/liquid-glass/hooks/use-theme";
 import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
-import { useTitleScrollStyles } from "./title-scroll";
 
 export const COMPACT_NAV_HEIGHT = 48;
 export const COLLAPSE_DISTANCE = 52;
@@ -30,6 +30,13 @@ export const EXPANDED_TITLE_HEIGHT = 44;
 
 /** Scroll offset over which the blur behind the header fades in, so it reads as content slides under. */
 const BLUR_FADE_END = 16;
+
+const COMPACT_FADE_START = 24;
+const COMPACT_FADE_END = 46;
+
+const EXPANDED_FADE_START = 0;
+const EXPANDED_FADE_MID = 28;
+const EXPANDED_FADE_END = 48;
 
 // ============================================================================
 // Header Action Button (Native Liquid Glass Pill)
@@ -113,8 +120,7 @@ export function HeaderActionButton({
 // ============================================================================
 
 export type CollapsingHeaderProps = PropsWithChildren<{
-  /** Omitted when a shared title (`SharedHeaderTitle`) draws it above the screens. */
-  title?: string;
+  title: string;
   scrollY: SharedValue<number>;
   actions?: ReactNode;
   style?: StyleProp<ViewStyle>;
@@ -130,6 +136,7 @@ export function CollapsingHeader({
   const insets = useSafeAreaInsets();
   const { foreground } = getMobileSurfaceTheme(useColorScheme());
   const { scheme } = useTheme();
+  const shouldReduceMotion = useReducedMotion();
 
   const totalHeaderHeight = insets.top + COMPACT_NAV_HEIGHT;
 
@@ -143,7 +150,66 @@ export function CollapsingHeader({
     ),
   }));
 
-  const { compactTitleStyle, largeTitleStyle } = useTitleScrollStyles(scrollY);
+  // Large title animation: inline on the left, fades out and translates up on scroll
+  const largeTitleStyle = useAnimatedStyle(() => {
+    const y = Math.max(0, scrollY.value);
+    const opacity = interpolate(
+      y,
+      [EXPANDED_FADE_START, EXPANDED_FADE_MID, EXPANDED_FADE_END],
+      [1, 0.35, 0],
+      Extrapolation.CLAMP,
+    );
+
+    if (shouldReduceMotion) {
+      return { opacity };
+    }
+
+    const translateY = interpolate(
+      y,
+      [EXPANDED_FADE_START, EXPANDED_FADE_END],
+      [0, -8],
+      Extrapolation.CLAMP,
+    );
+
+    const scale = interpolate(
+      y,
+      [EXPANDED_FADE_START, EXPANDED_FADE_END],
+      [1, 0.96],
+      Extrapolation.CLAMP,
+    );
+
+    return {
+      opacity,
+      transform: [{ translateY }, { scale }],
+    };
+  });
+
+  // Centered compact title animation: fades in at center as scroll continues
+  const compactTitleStyle = useAnimatedStyle(() => {
+    const y = Math.max(0, scrollY.value);
+    const opacity = interpolate(
+      y,
+      [COMPACT_FADE_START, COMPACT_FADE_END],
+      [0, 1],
+      Extrapolation.CLAMP,
+    );
+
+    if (shouldReduceMotion) {
+      return { opacity };
+    }
+
+    const translateY = interpolate(
+      y,
+      [COMPACT_FADE_START, COMPACT_FADE_END],
+      [3, 0],
+      Extrapolation.CLAMP,
+    );
+
+    return {
+      opacity,
+      transform: [{ translateY }],
+    };
+  });
 
   return (
     <View
@@ -173,55 +239,51 @@ export function CollapsingHeader({
         <ProgressiveBlur direction="top" style={{ flex: 1 }} tint={scheme} />
       </Animated.View>
 
-      {title ? (
-        <>
-          {/* Large Title (Inline on the Left, Vertically Centered with Actions) */}
-          <Animated.View
-            accessibilityRole="header"
-            pointerEvents="none"
-            style={[
-              styles.largeTitleContainer,
-              {
-                bottom: 0,
-                height: COMPACT_NAV_HEIGHT,
-              },
-              largeTitleStyle,
-            ]}
-          >
-            <Text
-              accessibilityLabel={title}
-              allowFontScaling={false}
-              numberOfLines={1}
-              style={[styles.expandedTitleText, FONT_STYLES.largeTitle, { color: foreground }]}
-            >
-              {title}
-            </Text>
-          </Animated.View>
+      {/* Large Title (Inline on the Left, Vertically Centered with Actions) */}
+      <Animated.View
+        accessibilityRole="header"
+        pointerEvents="none"
+        style={[
+          styles.largeTitleContainer,
+          {
+            bottom: 0,
+            height: COMPACT_NAV_HEIGHT,
+          },
+          largeTitleStyle,
+        ]}
+      >
+        <Text
+          accessibilityLabel={title}
+          allowFontScaling={false}
+          numberOfLines={1}
+          style={[styles.expandedTitleText, FONT_STYLES.largeTitle, { color: foreground }]}
+        >
+          {title}
+        </Text>
+      </Animated.View>
 
-          {/* Absolutely Centered Compact Title (Fades In on Scroll) */}
-          <Animated.View
-            accessibilityElementsHidden
-            importantForAccessibility="no-hide-descendants"
-            pointerEvents="none"
-            style={[
-              styles.compactTitleContainer,
-              {
-                bottom: 0,
-                height: COMPACT_NAV_HEIGHT,
-              },
-              compactTitleStyle,
-            ]}
-          >
-            <Text
-              allowFontScaling={false}
-              numberOfLines={1}
-              style={[styles.compactTitleText, FONT_STYLES.compactTitle, { color: foreground }]}
-            >
-              {title}
-            </Text>
-          </Animated.View>
-        </>
-      ) : null}
+      {/* Absolutely Centered Compact Title (Fades In on Scroll) */}
+      <Animated.View
+        accessibilityElementsHidden
+        importantForAccessibility="no-hide-descendants"
+        pointerEvents="none"
+        style={[
+          styles.compactTitleContainer,
+          {
+            bottom: 0,
+            height: COMPACT_NAV_HEIGHT,
+          },
+          compactTitleStyle,
+        ]}
+      >
+        <Text
+          allowFontScaling={false}
+          numberOfLines={1}
+          style={[styles.compactTitleText, FONT_STYLES.compactTitle, { color: foreground }]}
+        >
+          {title}
+        </Text>
+      </Animated.View>
 
       {/* Trailing Action Controls (Inline on the Right with GlassContainer) */}
       {actions ? (

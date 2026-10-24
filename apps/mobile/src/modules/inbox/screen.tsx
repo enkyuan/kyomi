@@ -10,7 +10,6 @@ import { SymbolView } from "expo-symbols";
 import { MenuView } from "@expo/ui/community/menu";
 import { FilterIcon } from "@/components/icons/filter";
 import { CollapsingHeader, HeaderActionButton, COMPACT_NAV_HEIGHT } from "@ui/header";
-import { useSharedHeaderTitle } from "@ui/header/shared-title";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import type { InboxFilter } from "./model";
 import { EmptyState } from "@modules/inbox/components/empty-state";
@@ -32,8 +31,6 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
   const topContentInset = insets.top + COMPACT_NAV_HEIGHT + 14;
   const subscribedFeeds = useSubscribedFeeds(scope === "subscribed");
   const screenTitle = title ?? (scope === "explore" ? "Explore" : "My Feeds");
-  // On iOS the title is drawn once above the tabs; elsewhere the header keeps its own.
-  const drawsSharedTitle = useSharedHeaderTitle(screenTitle, scrollY);
   const hasNoSubscribedFeeds =
     scope === "subscribed" &&
     !subscribedFeeds.isLoading &&
@@ -191,11 +188,7 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
         scrollY={scrollY}
         topContentInset={topContentInset}
       />
-      <CollapsingHeader
-        actions={headerActions}
-        scrollY={scrollY}
-        title={drawsSharedTitle ? undefined : screenTitle}
-      />
+      <CollapsingHeader actions={headerActions} scrollY={scrollY} title={screenTitle} />
     </View>
   );
 }
