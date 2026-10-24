@@ -191,6 +191,7 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
       <CollapsingHeader
         actions={headerActions}
         group="inbox"
+        order={scope === "explore" ? 1 : 0}
         scrollY={scrollY}
         title={screenTitle}
       />

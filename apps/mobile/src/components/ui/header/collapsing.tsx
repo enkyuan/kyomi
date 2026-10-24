@@ -121,6 +121,8 @@ export type CollapsingHeaderProps = PropsWithChildren<{
    * taking over cross-fades from the title of the one it replaces.
    */
   group?: string;
+  /** Position among the group's headers (tab order); a handover slides towards the higher one. */
+  order?: number;
   style?: StyleProp<ViewStyle>;
 }>;
 
@@ -128,6 +130,7 @@ export function CollapsingHeader({
   actions,
   children,
   group,
+  order = 0,
   scrollY,
   style,
   title,
@@ -149,7 +152,7 @@ export function CollapsingHeader({
   }));
 
   const { compactTitleStyle, ghostCompactStyle, ghostLargeStyle, ghostTitle, largeTitleStyle } =
-    useTitleStyles({ group, scrollY, title });
+    useTitleStyles({ group, order, scrollY, title });
 
   return (
     <View
