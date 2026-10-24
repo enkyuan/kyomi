@@ -31,6 +31,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     "expo-font",
     "expo-image",
     "expo-dev-client",
+    "expo-splash-screen",
   ],
   android: {
     package: "com.anonymous.mobile",
