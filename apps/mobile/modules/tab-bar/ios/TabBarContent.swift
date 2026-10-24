@@ -124,7 +124,6 @@ struct TabBarContent: View {
                 model.mainFrame = frame
               }
               .glassEffectID("capsule", in: glassNamespace)
-              .glassEffectTransition(.materialize)
               .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
 
             // The open sheet covers both buttons' places; they materialize out into its glass.
@@ -226,8 +225,8 @@ struct TabBarContent: View {
     // container renders, which left a shrunken capsule behind with the chevron outside it.
     .scaleEffect(compact && !reduceMotion ? 0.86 : 1)
     .opacity(compact ? 0 : 1)
-    // Opening search clears the capsule quickly, so none of it shows through the translucent field
-    // growing over it; closing brings it back on the root spring.
+    // Opening search clears the capsule's glyphs quickly, so they don't show through the
+    // translucent field growing over them; closing brings them back on the root spring.
     .animation(model.searchActive && !reduceMotion ? .easeOut(duration: 0.1) : transition, value: model.searchActive)
     // `identity` keeps the capsule mounted while it has no glass, so a quick scroll reversal
     // retargets the same view instead of stacking an interrupted removal under a new insertion.
