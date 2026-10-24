@@ -104,24 +104,19 @@ struct TabBarContent: View {
             // The capsule stays mounted while minimized and only its glass and glyphs go away.
             // Inserting and removing it on every scroll reversal left interrupted removal
             // transitions of the same glass identity in flight, which the container morphed into
-            // the add button, chevron and all. Searching is a discrete choice, so it does remove
-            // the capsule: under its own glass identity it materializes out beside the field's
-            // glass and back in on close, and its glyphs travel with the glass instead of
-            // cross-fading with the field.
-            if !model.searchActive {
-              let capsuleFrame = model.switcherPresented
-                ? sheet.frame(top: sheet.top(sheetDetent, drag: sheetDrag))
-                : layout.mainRect
-              capsule(layout, sheet: sheet, frame: capsuleFrame)
-                .onGeometryChange(for: CGRect.self) { proxy in
-                  proxy.frame(in: .named(Self.coordinateSpace))
-                } action: { frame in
-                  model.mainFrame = frame
-                }
-                .glassEffectID("capsule", in: glassNamespace)
-                .glassEffectTransition(.materialize)
-                .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
-            }
+            // the add button, chevron and all. Searching hides it the same way, so on close it
+            // materializes back in place, settling with the bar as the keyboard leaves, rather than
+            // being inserted mid-slide and arriving from the screen's edge.
+            let capsuleFrame = model.switcherPresented
+              ? sheet.frame(top: sheet.top(sheetDetent, drag: sheetDrag))
+              : layout.mainRect
+            capsule(layout, sheet: sheet, frame: capsuleFrame)
+              .onGeometryChange(for: CGRect.self) { proxy in
+                proxy.frame(in: .named(Self.coordinateSpace))
+              } action: { frame in
+                model.mainFrame = frame
+              }
+              .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
 
             // The search button and the field share one glass identity, so the button's glass
             // grows into the field from the leading edge and contracts back into the button.

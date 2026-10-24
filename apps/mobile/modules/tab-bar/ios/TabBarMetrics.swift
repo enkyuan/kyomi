@@ -81,7 +81,7 @@ struct TabBarLayout: Equatable {
   /// The leading element: the search button, or the search field it grows into while searching.
   /// They share one glass, so this is the frame that glass moves between.
   let searchRect: CGRect
-  /// Minimized: only the two buttons remain, the capsule is hidden.
+  /// Minimized or searching: the capsule is hidden.
   let showsMain: Bool
   let showsSearchButton: Bool
   let showsTrailing: Bool
@@ -110,7 +110,8 @@ struct TabBarLayout: Equatable {
     barHeight = TabBarMetrics.height
     buttonSize = compact && !reduceMotion ? TabBarMetrics.compactHeight : TabBarMetrics.height
     buttonScale = buttonSize / TabBarMetrics.height
-    showsMain = !compact
+    // Searching hides the capsule like minimizing does: it stays mounted, without its glass.
+    showsMain = !minimized && !searchActive
     // The open sheet covers both buttons' places; they materialize out into its glass.
     showsSearchButton = !sheetPresented
     showsTrailing = !sheetPresented
