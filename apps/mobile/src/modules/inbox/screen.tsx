@@ -188,13 +188,7 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
         scrollY={scrollY}
         topContentInset={topContentInset}
       />
-      <CollapsingHeader
-        actions={headerActions}
-        group="inbox"
-        order={scope === "explore" ? 1 : 0}
-        scrollY={scrollY}
-        title={screenTitle}
-      />
+      <CollapsingHeader actions={headerActions} scrollY={scrollY} title={screenTitle} />
     </View>
   );
 }
