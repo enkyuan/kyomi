@@ -34,10 +34,6 @@ enum TabBarMetrics {
   static let switcherIconSize = tabIconSize
   static let searchIconSize = 18 * scale
   static let addIconSize = 20 * scale
-  /// The field's text starts this far from its leading edge, beside the glyph, and stops
-  /// `searchFieldPadding` short of the trailing one.
-  static let searchFieldTextInset = 44 * scale
-  static let searchFieldPadding = 14 * scale
 
   /// Space kept between the bar and the keyboard while it is visible.
   static let keyboardGap = 12 * scale
@@ -62,10 +58,14 @@ enum TabBarMetrics {
   /// detent may overshoot a little.
   static let sheetFlickVelocity: CGFloat = 500
 
-  /// The add composer: the add button's glass widened into a one-line field. The side and keyboard
-  /// gaps match, and are tighter than the resting bar's.
-  static let composerInset: CGFloat = 12
-  /// Height of a feed in the results overlay, and the space kept between the overlay and the field.
+  /// Search and the add composer replace the bar with a native-sized field and a close button, both
+  /// this tall: the height of the toolbar search field the system draws, not of the tab bar.
+  static let fieldHeight: CGFloat = 48
+  /// The field's text starts this far from its leading edge, beside the glyph, and stops
+  /// `fieldTextTrailing` short of the trailing one.
+  static let fieldTextInset: CGFloat = 44
+  static let fieldTextTrailing: CGFloat = 12
+  /// Height of a feed in the composer's results, and the space kept between them and the field.
   static let composerResultHeight: CGFloat = 76
   static let composerResultsGap: CGFloat = 12
 }
@@ -84,15 +84,13 @@ struct TabBarLayout: Equatable {
   /// Frame of the tab capsule's glass.
   let mainWidth: CGFloat
   let mainX: CGFloat
-  /// The leading element: the search button, or the search field it widens into while searching.
+  /// The leading element: the search button, or the field it widens into while searching or adding.
   /// They share one glass, so this is the frame that glass moves between.
   let searchRect: CGRect
-  /// The trailing element: the add (or, searching, close) button, or the composer field it widens into.
+  /// The trailing element: the add button, or the close button it becomes beside the field.
   let trailingRect: CGRect
   /// Minimized, searching or composing: the capsule is hidden.
   let showsMain: Bool
-  /// Composing covers the search button's place, so it leaves like the capsule does.
-  let showsSearch: Bool
   /// The open sheet covers both buttons' places, so they are gone while it is presented.
   let showsButtons: Bool
   /// Whole-point widths of the tab segments. `UISegmentedControl` floors
@@ -118,21 +116,21 @@ struct TabBarLayout: Equatable {
     keyboardInset: CGFloat = 0
   ) {
     let containerWidth = containerSize.width
-    let compact = minimized && !searchActive && !composing
+    let fielding = searchActive || composing
+    let compact = minimized && !fielding
     barHeight = TabBarMetrics.height
     buttonSize = compact && !reduceMotion ? TabBarMetrics.compactHeight : TabBarMetrics.height
     buttonScale = buttonSize / TabBarMetrics.height
-    showsMain = !minimized && !searchActive && !composing
+    showsMain = !minimized && !fielding
     showsButtons = !sheetPresented
-    showsSearch = !composing
 
     let inset = TabBarMetrics.edgeInset
     let gap = TabBarMetrics.gap
     let availableWidth = max(0, containerWidth - inset * 2)
-    // The bar rests `edgeInset` above the bottom of its band, or `keyboardGap` above the keyboard;
-    // the composer's field sits `composerInset` above it, as far from the keyboard as from the sides.
-    let keyboardGap = composing ? TabBarMetrics.composerInset : TabBarMetrics.keyboardGap
-    barMidY = containerSize.height - max(inset, keyboardInset + keyboardGap) - barHeight / 2
+    // The bar rests `edgeInset` above the bottom of its band, or `keyboardGap` above the keyboard.
+    // The field is shorter than the bar, so it keeps the same gap below it rather than the same centre.
+    let rowHeight = fielding ? TabBarMetrics.fieldHeight : barHeight
+    barMidY = containerSize.height - max(inset, keyboardInset + TabBarMetrics.keyboardGap) - rowHeight / 2
 
     // The capsule keeps its size when the bar minimizes (it only hides), so size it for the
     // expanded buttons, which also keeps the tab segments from reflowing.
@@ -144,27 +142,21 @@ struct TabBarLayout: Equatable {
     let addX = containerWidth - inset - TabBarMetrics.height + buttonInset
     mainWidth = tabsWidth
     mainX = (containerWidth - tabsWidth) / 2
-    // Composing, the add button's glass widens leftward into the field, which ends as far from the
-    // side as it rests from the keyboard.
-    if composing {
-      trailingRect = CGRect(
-        x: TabBarMetrics.composerInset,
-        y: barMidY - barHeight / 2,
-        width: max(0, containerWidth - TabBarMetrics.composerInset * 2),
-        height: barHeight
+    // Searching or composing, the add button's glass becomes the close button at the trailing edge,
+    // and the search button's glass widens to the field, ending a gap short of it.
+    if fielding {
+      let size = TabBarMetrics.fieldHeight
+      trailingRect = CGRect(x: containerWidth - inset - size, y: barMidY - size / 2, width: size, height: size)
+      searchRect = CGRect(
+        x: inset,
+        y: barMidY - size / 2,
+        width: max(0, availableWidth - size - gap),
+        height: size
       )
     } else {
       trailingRect = CGRect(x: addX, y: barMidY - buttonSize / 2, width: buttonSize, height: buttonSize)
+      searchRect = CGRect(x: inset + buttonInset, y: barMidY - buttonSize / 2, width: buttonSize, height: buttonSize)
     }
-    // Searching, the button's glass widens to the field, ending a gap short of the close button.
-    searchRect = searchActive
-      ? CGRect(
-        x: inset,
-        y: barMidY - barHeight / 2,
-        width: max(0, availableWidth - barHeight - gap),
-        height: barHeight
-      )
-      : CGRect(x: inset + buttonInset, y: barMidY - buttonSize / 2, width: buttonSize, height: buttonSize)
     // Inset the control so its lens sits `selectionInset` from the capsule.
     // UISegmentedControl sizes itself in whole points, so round its height.
     let controlInset = TabBarMetrics.selectionInset - TabBarMetrics.segmentLensInset

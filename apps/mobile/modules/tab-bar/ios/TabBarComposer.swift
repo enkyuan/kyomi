@@ -23,25 +23,37 @@ struct TabBarComposer: View {
     .accessibilityAction(.escape) { model.toggleComposer() }
   }
 
-  /// Blurs and tones down what is behind, most where the list sits and not at all at the top, so
-  /// the list reads over any content.
+  /// The app's background colour (`--background` in the mobile theme), so the list sits on the same
+  /// ground as the screens it covers.
+  private static let background = Color(
+    uiColor: UIColor { traits in
+      traits.userInterfaceStyle == .dark
+        ? UIColor(red: 0x16 / 255, green: 0x16 / 255, blue: 0x16 / 255, alpha: 1)
+        : UIColor(red: 0xF7 / 255, green: 0xF5 / 255, blue: 0xF1 / 255, alpha: 1)
+    }
+  )
+
+  /// Covers what is behind with the app's background, over a blur for the soft first stretch, so
+  /// the feed never shows through the list. It fades out only toward the top, above the list.
   private var backdrop: some View {
-    Rectangle()
-      .fill(.regularMaterial)
-      .mask(
-        LinearGradient(
-          stops: [
-            .init(color: .clear, location: 0),
-            .init(color: .black, location: 0.45),
-            .init(color: .black, location: 1),
-          ],
-          startPoint: .top,
-          endPoint: .bottom
-        )
+    ZStack {
+      Rectangle().fill(.regularMaterial)
+      Self.background.opacity(0.94)
+    }
+    .mask(
+      LinearGradient(
+        stops: [
+          .init(color: .clear, location: 0),
+          .init(color: .black, location: 0.28),
+          .init(color: .black, location: 1),
+        ],
+        startPoint: .top,
+        endPoint: .bottom
       )
-      .contentShape(.rect)
-      .onTapGesture { model.toggleComposer() }
-      .accessibilityHidden(true)
+    )
+    .contentShape(.rect)
+    .onTapGesture { model.toggleComposer() }
+    .accessibilityHidden(true)
   }
 
   @ViewBuilder
@@ -53,7 +65,7 @@ struct TabBarComposer: View {
           .font(.footnote)
           .foregroundStyle(.secondary)
           .frame(maxWidth: .infinity, alignment: .leading)
-          .padding(.horizontal, TabBarMetrics.composerInset + 12)
+          .padding(.horizontal, TabBarMetrics.edgeInset)
           .transition(.opacity)
       }
     } else {
@@ -77,7 +89,7 @@ struct TabBarComposer: View {
           .transition(.opacity)
       }
     }
-    .padding(.horizontal, TabBarMetrics.composerInset + 12)
+    .padding(.horizontal, TabBarMetrics.edgeInset)
   }
 
   private func row(_ feed: ComposerFeed) -> some View {
