@@ -65,7 +65,6 @@ describe("actions", () => {
 
     engine.debugEmit({
       actionId: firstActionId,
-      event: "actionTapped",
       id: handle.id,
       kind: "action",
       reason: "unknown",
@@ -182,7 +181,7 @@ describe("lifecycle", () => {
 
   test("unknown lifecycle ids are ignored", () => {
     expect(() =>
-      engine.debugEmit({ event: "dismissed", id: "lt_nope", kind: "dismissed", reason: "unknown" }),
+      engine.debugEmit({ id: "lt_nope", kind: "dismissed", reason: "unknown" }),
     ).not.toThrow();
   });
 });
