@@ -15,10 +15,9 @@ src/
   modules/             Product domains with universal screens and selective platform seams.
 ```
 
-The inbox has one shared `Host` + `List` screen tree. Its small `row.ios.tsx` and
-`row.android.tsx` seams own only native modifiers, animation parameters, and the view-host detail
-needed for the Blode SVG. Full platform screen forks require a demonstrated API or hierarchy
-gap.
+Inbox and Recents share query, filtering, and row-formatting logic. iOS renders articles through
+the local `article-list` Expo module, using a UIKit collection view with SwiftUI rows. Android and
+the web fallback use Legend List with React Native rows. The list contracts are described below.
 
 Authentication reuses the web app's runtime-neutral contracts through `@kyomi/auth`: field
 defaults and validators, safe return targets, session classification, and capability parsing.
@@ -145,3 +144,41 @@ and low-alpha selected surface.
   Links before distribution so another installed app cannot claim password-reset or OAuth
   callbacks.
 - `com.anonymous.mobile` is retained on both platforms and must be replaced before distribution.
+
+## Article lists
+
+On iOS, `modules/article-list` hosts a UIKit collection view with reusable SwiftUI article rows.
+Android and the web fallback use Legend List. Article queries, filters, actions, and row formatting
+remain in TypeScript under `src/modules/articles` and `src/modules/inbox`.
+
+- `useNativeListSync` serializes incremental row operations and paging together, coalesces pending
+  state, and retries one failed delivery with a full reset. A scope/filter change resets to the top.
+- Native updates preserve the first surviving visible article and its offset. Content-only edits
+  reconfigure the existing snapshot; insertions, removals, and reorderings update its identifiers.
+- Pull to refresh uses the query's refetch state on every renderer, including empty lists. A page
+  hidden entirely by a local filter advances to the next page until an article appears, the server
+  is exhausted, or a request fails. Empty-page errors wait for an explicit refresh; populated native
+  lists retry failed paging on the next drag.
+- The native handle offers `scrollToItem(id, animated)` and `scrollToOffset(offset, animated)`.
+  `onVisibleItemsChange` reports visible IDs in display order only when that set changes. Ordinary
+  header/tab-bar scroll effects stay on the Reanimated UI thread.
+- Native favicons share decoded thumbnails and in-flight requests. Failed URLs expire after 30
+  seconds; changing a row's favicon URLs resets its image identity.
+
+The native list is a vertical article/Recents renderer, not a general Legend List replacement.
+There are no current consumers for grids, horizontal lists, sticky sections, or chat/end anchoring.
+The inbox does not currently supply a list header; its collapsing header is a separate overlay.
+
+Use `bun run --cwd tests test:mobile` for the TypeScript contracts. On macOS this also compiles and
+executes the production Foundation-only Swift row models, reducer, and asynchronous pipeline; other platforms skip that test.
+The SwiftUI/Expo bridge still requires an iOS development build. Instruments points of interest in
+`ArticleListSignpost` distinguish decoding/reduction, snapshot application, and cell configuration.
+These counters are measurement hooks, not evidence of a frame-rate improvement by themselves.
+
+Implementation references (accessed 2026-10-24):
+[Expo view functions and lifecycle](https://docs.expo.dev/modules/module-api/),
+[Apple collection-view performance](https://developer.apple.com/videos/play/wwdc2021/10252/), and
+[SwiftUI fonts relative to text styles](https://developer.apple.com/documentation/swiftui/font/custom(_:size:relativeto:)).
+The bridge was checked against ExpoModulesCore 57.0.24, and native compilation uses Xcode 27.1.
+The explicit `.runOnQueue(.main)` follows the installed API rather than relying on documentation's
+default-queue statement. A native development build is required after these changes.

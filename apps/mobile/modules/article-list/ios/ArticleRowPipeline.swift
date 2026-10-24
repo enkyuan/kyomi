@@ -13,7 +13,7 @@ final class ArticleRowPipeline: Sendable {
   private let signal: AsyncStream<Void>.Continuation
   private let worker: Task<Void, Never>
 
-  init(present: @escaping @MainActor @Sendable (ArticleListPresentation) -> Void) {
+  init(present: @escaping @MainActor @Sendable (ArticleListPresentation) async -> Void) {
     let (signals, signal) = AsyncStream.makeStream(of: Void.self, bufferingPolicy: .bufferingNewest(1))
     let inbox = Inbox()
     self.inbox = inbox

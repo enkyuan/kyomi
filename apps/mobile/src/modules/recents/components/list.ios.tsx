@@ -36,7 +36,7 @@ export function RecentList({
   const allArticles = useRecentArticles();
   const articles = useMemo(() => filterRecentArticles(allArticles, range), [allArticles, range]);
   const rows = useMemo(() => articles.map(toRecentRow), [articles]);
-  const listRef = useNativeListSync(rows);
+  const listRef = useNativeListSync(rows, undefined, `recents:${range}`);
   const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
   const listStyle = useArticleListStyle();
   const resetTabBarMinimize = useOptionalTabBarMinimize()?.reset;

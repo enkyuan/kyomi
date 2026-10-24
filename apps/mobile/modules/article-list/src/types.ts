@@ -55,8 +55,9 @@ export type ArticleListRow = {
   readonly timeLabel: string;
   readonly title: string;
   readonly summary?: string;
-  readonly faviconUrls: readonly string[];
+  /** Retained on the wire for existing native development builds. Display uses sourceLabel. */
   readonly feedTitle: string;
+  readonly faviconUrls: readonly string[];
   readonly isSaved?: boolean;
   readonly isContinuing?: boolean;
 };
@@ -96,6 +97,10 @@ export type ArticleListOp =
 export type ArticleListHandle = {
   /** `payload` is `JSON.stringify` of an `ArticleListOp[]`, applied in order. */
   readonly applyOps: (payload: string) => Promise<void>;
+  /** Scroll to an article by stable ID. Returns false when it is not loaded. */
+  readonly scrollToItem: (id: string, animated: boolean) => Promise<boolean>;
+  /** Native content offset, including negative top-inset positions. */
+  readonly scrollToOffset: (offset: number, animated: boolean) => Promise<void>;
 };
 
 export type ArticleListInsets = {
@@ -105,6 +110,10 @@ export type ArticleListInsets = {
 
 export type ArticleListViewProps = ViewProps & {
   readonly listStyle: ArticleListStyle;
+  readonly refreshing?: boolean;
+  readonly onRefresh?: () => void;
+  /** Emitted only when visible IDs change, in display order. */
+  readonly onVisibleItemsChange?: (event: NativeSyntheticEvent<{ ids: string[] }>) => void;
   /** Space the content keeps clear of the floating header and tab bar. */
   readonly contentInset?: ArticleListInsets;
   readonly scrollIndicatorInset?: ArticleListInsets;

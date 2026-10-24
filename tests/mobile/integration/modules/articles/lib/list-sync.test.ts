@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import {
+  createListSync,
   diffPaging,
   diffRows,
 } from "../../../../../../apps/mobile/src/modules/articles/lib/list-sync";
@@ -150,5 +151,143 @@ describe("diffPaging", () => {
 
   test("reports the last page", () => {
     expect(diffPaging(paging, { ...paging, hasMore: false })).toMatchObject({ hasMore: false });
+  });
+});
+
+const tick = () => new Promise<void>((resolve) => setTimeout(resolve, 0));
+
+describe("native list delivery", () => {
+  test("serializes batches and coalesces updates received while a send is pending", async () => {
+    const sent: unknown[][] = [];
+    let release: (() => void) | undefined;
+    const sync = createListSync(
+      async (payload) => {
+        sent.push(JSON.parse(payload));
+        if (sent.length === 1)
+          await new Promise<void>((resolve) => {
+            release = resolve;
+          });
+      },
+      () => {},
+    );
+    const a = row("a");
+    sync.update([a]);
+    sync.update([a, row("b")]);
+    sync.update([a, row("b"), row("c")]);
+    expect(sent).toHaveLength(1);
+    release?.();
+    await tick();
+    expect(sent).toHaveLength(2);
+    expect(sent[1]).toEqual([{ type: "append", rows: [row("b"), row("c")] }]);
+    sync.dispose();
+  });
+
+  test("recovers a rejected delivery with a full reset, without an unhandled rejection", async () => {
+    const sent: { type: string }[][] = [];
+    const errors: unknown[] = [];
+    const sync = createListSync(
+      async (payload) => {
+        sent.push(JSON.parse(payload));
+        if (sent.length === 1) throw new Error("view unavailable");
+      },
+      (error) => errors.push(error),
+    );
+    sync.update([row("a")]);
+    await tick();
+    expect(errors).toHaveLength(1);
+    expect(sent).toHaveLength(2);
+    expect(sent[1]?.[0]?.type).toBe("reset");
+    sync.update([row("a"), row("b")]);
+    await tick();
+    expect(sent[2]?.[0]?.type).toBe("append");
+    sync.dispose();
+  });
+
+  test("bounds retries when the native view continues rejecting", async () => {
+    let calls = 0;
+    const sync = createListSync(
+      async () => {
+        calls++;
+        throw new Error("gone");
+      },
+      () => {},
+    );
+    sync.update([row("a")]);
+    await tick();
+    expect(calls).toBe(2);
+    sync.dispose();
+  });
+
+  test("resets and scrolls to top when filter changes even when IDs overlap", async () => {
+    const sent: unknown[][] = [];
+    const sync = createListSync(
+      async (payload) => {
+        sent.push(JSON.parse(payload));
+      },
+      () => {},
+    );
+    const rows = [row("a")];
+    sync.update(rows, undefined, "all");
+    await tick();
+    sync.update(rows, undefined, "saved");
+    await tick();
+    expect(sent[1]?.[0]).toMatchObject({ type: "reset", scrollToTop: true, rows });
+    sync.dispose();
+  });
+
+  test("retains a dataset change across a rejected reset", async () => {
+    const sent: unknown[][] = [];
+    const sync = createListSync(
+      async (payload) => {
+        sent.push(JSON.parse(payload));
+        if (sent.length === 2) throw new Error("temporary failure");
+      },
+      () => {},
+    );
+    sync.update([row("a")], undefined, "all");
+    await tick();
+    sync.update([row("a")], undefined, "saved");
+    await tick();
+    expect(sent[2]?.[0]).toMatchObject({ type: "reset", scrollToTop: true });
+    sync.dispose();
+  });
+
+  test("clears paging when switching to an unpaged dataset", async () => {
+    const sent: unknown[][] = [];
+    const sync = createListSync(
+      async (payload) => {
+        sent.push(JSON.parse(payload));
+      },
+      () => {},
+    );
+    const rows = [row("a")];
+    sync.update(rows, { hasMore: true, isLoadingMore: true, pageCount: 1 });
+    await tick();
+    sync.update(rows);
+    await tick();
+    expect(sent[1]).toEqual([
+      { type: "paging", hasMore: false, isLoadingMore: false, pageCount: 0 },
+    ]);
+    sync.dispose();
+  });
+
+  test("stops queued work when a view unmounts", async () => {
+    let calls = 0;
+    let release: (() => void) | undefined;
+    const sync = createListSync(
+      async () => {
+        calls++;
+        await new Promise<void>((resolve) => {
+          release = resolve;
+        });
+      },
+      () => {},
+    );
+    sync.update([row("a")]);
+    sync.update([row("b")]);
+    sync.dispose();
+    release?.();
+    await tick();
+    expect(calls).toBe(1);
   });
 });

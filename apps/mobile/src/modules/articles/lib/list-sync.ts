@@ -14,7 +14,6 @@ function sameRow(a: ArticleListRow, b: ArticleListRow) {
       a.timeLabel === b.timeLabel &&
       a.title === b.title &&
       a.summary === b.summary &&
-      a.feedTitle === b.feedTitle &&
       a.isSaved === b.isSaved &&
       a.isContinuing === b.isContinuing &&
       sameList(a.faviconUrls, b.faviconUrls))
@@ -91,4 +90,73 @@ export function diffRows(
   if (updated.length > 0) ops.push({ rows: updated, type: "update" });
   if (appended.length > 0) ops.push({ rows: appended, type: "append" });
   return ops;
+}
+
+/** Serial delivery with one latest desired state; rejected batches recover with a full reset. */
+export function createListSync(
+  send: (payload: string) => Promise<void>,
+  onError: (error: unknown) => void,
+) {
+  type Desired = { rows: readonly ArticleListRow[]; paging?: ListPaging; dataset: string };
+  let desired: Desired | undefined;
+  let accepted: Desired | undefined;
+  let running = false;
+  let disposed = false;
+  let epoch = 0;
+
+  let acceptedDataset: string | undefined;
+
+  async function deliver(next: Desired) {
+    const changedDataset = acceptedDataset !== undefined && acceptedDataset !== next.dataset;
+    const ops = diffRows(changedDataset ? null : (accepted?.rows ?? null), next.rows, epoch + 1);
+    if (ops[0]?.type === "reset") {
+      epoch += 1;
+      if (changedDataset) ops[0] = { ...ops[0], scrollToTop: true };
+    }
+    const paging = next.paging ?? { hasMore: false, isLoadingMore: false, pageCount: 0 };
+    const pagingOp = diffPaging(accepted?.paging ?? null, paging);
+    if (pagingOp) ops.push(pagingOp);
+    try {
+      if (ops.length > 0) await send(JSON.stringify(ops));
+      accepted = { ...next, paging };
+      acceptedDataset = next.dataset;
+      return true;
+    } catch (error) {
+      accepted = undefined;
+      onError(error);
+      return false;
+    }
+  }
+
+  async function flush() {
+    if (running || disposed) return;
+    running = true;
+    let failures = 0;
+    try {
+      while (desired && !disposed) {
+        const next = desired;
+        desired = undefined;
+        if (await deliver(next)) {
+          failures = 0;
+          continue;
+        }
+        // One immediate full-state recovery; further updates or a remount may retry later.
+        if (++failures > 1) break;
+        desired ??= next;
+      }
+    } finally {
+      running = false;
+    }
+  }
+
+  return {
+    update(rows: readonly ArticleListRow[], paging?: ListPaging, dataset = "default") {
+      desired = { rows, paging, dataset };
+      void flush();
+    },
+    dispose() {
+      disposed = true;
+      desired = undefined;
+    },
+  };
 }

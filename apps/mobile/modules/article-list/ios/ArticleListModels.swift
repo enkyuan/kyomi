@@ -22,7 +22,6 @@ struct ArticleRowModel: Equatable, Identifiable, Sendable {
   let title: String
   let summary: String
   let faviconUrls: [URL]
-  let feedTitle: String
   let isSaved: Bool
   /// The article was opened before, so it shows the "Continue reading" badge.
   let isContinuing: Bool
@@ -39,7 +38,6 @@ struct ArticleRowWire: Decodable {
   let title: String
   let summary: String?
   let faviconUrls: [String]
-  let feedTitle: String
   let isSaved: Bool?
   let isContinuing: Bool?
 
@@ -52,7 +50,6 @@ struct ArticleRowWire: Decodable {
       title: title,
       summary: summary ?? "",
       faviconUrls: faviconUrls.compactMap(URL.init(string:)),
-      feedTitle: feedTitle,
       isSaved: isSaved ?? false,
       isContinuing: isContinuing ?? false
     )
@@ -70,7 +67,7 @@ struct ListFont {
 
   init(family: String, size: CGFloat, lineHeight: CGFloat) {
     let resolved = UIFont(name: family, size: size)
-    font = resolved != nil ? .custom(family, fixedSize: size) : .system(size: size)
+    font = resolved != nil ? .custom(family, size: size, relativeTo: .body) : .system(size: size)
     leading = max(0, lineHeight - (resolved ?? .systemFont(ofSize: size)).lineHeight)
   }
 }

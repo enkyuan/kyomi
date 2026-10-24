@@ -73,7 +73,7 @@ struct ArticleListState: Sendable {
   mutating func reduce(_ ops: [ArticleListOp]) -> ArticleListPresentation? {
     var didChangeRows = false
     var didChangePaging = false
-    var didReset = false
+    var didChangeStructure = false
     var scrollToTop = false
     // Rows that stay in the list with new content. A row written twice in one batch may be
     // reconfigured without needing it; one that needs it is never missed.
@@ -91,11 +91,11 @@ struct ArticleListState: Sendable {
         }
         changed = changed.filter { nextRows[$0] != nil }
         for id in nextIds where rows[id] != nil && rows[id] != nextRows[id] { changed.insert(id) }
+        didChangeStructure = didChangeStructure || ids != nextIds
         ids = nextIds
         rows = nextRows
         self.epoch = epoch
         didChangeRows = true
-        didReset = true
         scrollToTop = top
 
       case let .append(newRows):
@@ -103,6 +103,7 @@ struct ArticleListState: Sendable {
           switch rows.updateValue(row, forKey: row.id) {
           case nil:
             ids.append(row.id)
+            didChangeStructure = true
             didChangeRows = true
           case let old? where old != row:
             changed.insert(row.id)
@@ -123,6 +124,7 @@ struct ArticleListState: Sendable {
       case let .remove(removedIds):
         let gone = Set(removedIds).filter { rows[$0] != nil }
         guard !gone.isEmpty else { continue }
+        didChangeStructure = true
         ids.removeAll { gone.contains($0) }
         for id in gone { rows[id] = nil }
         changed.subtract(gone)
@@ -140,7 +142,7 @@ struct ArticleListState: Sendable {
       state: self,
       reconfiguredIds: Array(changed),
       didChangeRows: didChangeRows,
-      didReset: didReset,
+      didChangeStructure: didChangeStructure,
       scrollToTop: scrollToTop
     )
   }
@@ -154,7 +156,7 @@ struct ArticleListPresentation: Sendable {
   /// Rows were added, removed, replaced or edited, so the snapshot needs applying. A batch that
   /// only moved paging skips the diff.
   let didChangeRows: Bool
-  /// The batch replaced every row.
-  let didReset: Bool
+  /// IDs were inserted, deleted or reordered. Content-only edits reuse the existing snapshot.
+  let didChangeStructure: Bool
   let scrollToTop: Bool
 }

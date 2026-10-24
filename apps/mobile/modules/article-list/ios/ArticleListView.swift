@@ -2,20 +2,20 @@ import ExpoModulesCore
 import SwiftUI
 import UIKit
 
-/// A `UICollectionView` of SwiftUI rows. Virtualisation, cell reuse, self-sizing and diffing are all
-/// UIKit's, so memory stays flat however far the list has paged. React Native supplies the theme
-/// and a stream of row operations (`applyOps`), which `ArticleRowPipeline` reduces off the main
-/// thread; scrolling, paging and touches never wait on the JS thread.
-/// What the list layout reads when it asks for each item's separators.
+/// Layout chrome read by the collection view's section provider on the main thread.
 final class ListChrome: @unchecked Sendable {
   var separatorColor: UIColor = .separator
   /// The list ends in a loading footer while the next page is on its way.
   var showsFooter = false
 }
 
+/// UIKit recycles the visible SwiftUI cells; loaded row models remain retained. Row operations are
+/// decoded off the main thread, while paging and actions call back into the TypeScript owner.
 final class ArticleListView: ExpoView, UICollectionViewDelegate {
   let onEndReached = EventDispatcher()
   let onScroll = EventDispatcher()
+  let onRefresh = EventDispatcher()
+  let onVisibleItemsChange = EventDispatcher()
   let onRowPress = EventDispatcher()
   let onRowPressIn = EventDispatcher()
   let onRowAction = EventDispatcher()
@@ -32,7 +32,10 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   private var endReachedDistance = 5
   /// The page an end-reached event was already sent for, so one page triggers one fetch.
   private var endReachedKey: EndReachedKey?
-  private var contentInsetTop: CGFloat = 0
+  private let refreshControl = UIRefreshControl()
+  private var styleRecord: NSDictionary?
+  private var visibleIds: [String] = []
+  private var visibilityScheduled = false
   private var hasPositionedInitialOffset = false
   private var scrollToTopToken: Int?
 
@@ -68,6 +71,7 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     collectionView.contentInsetAdjustmentBehavior = .never
     collectionView.automaticallyAdjustsScrollIndicatorInsets = false
     addSubview(collectionView)
+    refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
 
     let registration = UICollectionView.CellRegistration<UICollectionViewListCell, String> {
       [weak self] cell, _, id in
@@ -76,7 +80,7 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
         cell.automaticallyUpdatesBackgroundConfiguration = false
         guard let self, let row = self.state.rows[id], let style = self.style else { return }
         cell.contentConfiguration = UIHostingConfiguration {
-          ArticleRowView(row: row, style: style, actions: self.rowActions)
+          ArticleRowView(row: row, style: style, actions: self.rowActions).id(row.id)
         }
         .margins(.all, 0)
       }
@@ -97,11 +101,14 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
 
   override func layoutSubviews() {
     super.layoutSubviews()
+    let anchor = collectionView.bounds.size != bounds.size ? captureAnchor() : nil
     collectionView.frame = bounds
+    if anchor != nil { collectionView.layoutIfNeeded(); restoreAnchor(anchor) }
+    reportVisibleItems()
   }
 
   private lazy var pipeline = ArticleRowPipeline { [weak self] presentation in
-    self?.present(presentation)
+    await self?.present(presentation)
   }
 
   private lazy var rowActions = ArticleRowActions(
@@ -112,7 +119,7 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
 
   // MARK: Props
 
-  // Props arrive one at a time, so related values are collected and applied together.
+  // Props arrive one at a time and are applied together by OnViewDidUpdateProps.
   var contentInset: ListInsetsRecord?
   var indicatorInset: ListInsetsRecord?
 
@@ -132,17 +139,81 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     pipeline.submit(payload)
   }
 
+  /// Capture an ID, not an index: insertions and deletions above it must not move the article.
+  private func captureAnchor(in rows: [String: ArticleRowModel]? = nil) -> (id: String, offset: CGFloat)? {
+    guard collectionView.contentOffset.y > -collectionView.adjustedContentInset.top + 1,
+      let source = dataSource else { return nil }
+    for index in collectionView.indexPathsForVisibleItems.sorted() {
+      guard let id = source.itemIdentifier(for: index),
+        let frame = collectionView.layoutAttributesForItem(at: index)?.frame,
+        rows == nil || rows?[id] != nil else { continue }
+      return (id, frame.minY - collectionView.contentOffset.y)
+    }
+    return nil
+  }
+
+  private func restoreAnchor(_ anchor: (id: String, offset: CGFloat)?) {
+    guard let anchor, let index = dataSource?.indexPath(for: anchor.id),
+      let frame = collectionView.layoutAttributesForItem(at: index)?.frame else { return }
+    setOffset(frame.minY - anchor.offset, animated: false)
+  }
+
   /// Shows a state the pipeline has finished reducing.
-  private func present(_ presentation: ArticleListPresentation) {
+  private func present(_ presentation: ArticleListPresentation) async {
+    let anchor = presentation.scrollToTop ? nil : captureAnchor(in: presentation.state.rows)
     state = presentation.state
     updateFooter()
     if presentation.didChangeRows {
-      applySnapshot(reconfiguring: presentation.reconfiguredIds)
-      if presentation.scrollToTop { scrollToTop() }
+      await withCheckedContinuation { continuation in
+        applySnapshot(reconfiguring: presentation.reconfiguredIds,
+          structural: presentation.didChangeStructure) { [weak self] in
+          if let self {
+            self.collectionView.layoutIfNeeded()
+            if presentation.scrollToTop { self.scrollToTop() }
+            else { self.restoreAnchor(anchor) }
+            self.reportVisibleItems()
+          }
+          continuation.resume()
+        }
+      }
     } else {
-      // Paging moved without rows: a page that added none may leave the end in view.
       checkVisibleEnd()
     }
+  }
+
+  @objc private func refresh() { onRefresh() }
+
+  func setRefreshEnabled(_ enabled: Bool) {
+    guard enabled != (collectionView.refreshControl != nil) else { return }
+    collectionView.refreshControl = enabled ? refreshControl : nil
+  }
+
+  func setRefreshing(_ refreshing: Bool) {
+    if refreshing { if !refreshControl.isRefreshing { refreshControl.beginRefreshing() } }
+    else { refreshControl.endRefreshing() }
+  }
+
+  @discardableResult
+  func scrollToItem(_ id: String, animated: Bool) -> Bool {
+    guard let index = dataSource?.indexPath(for: id) else { return false }
+    collectionView.scrollToItem(at: index, at: .top, animated: animated)
+    return true
+  }
+
+  func setOffset(_ y: CGFloat, animated: Bool) {
+    let top = -collectionView.adjustedContentInset.top
+    let bottom = max(top, collectionView.contentSize.height
+      + collectionView.adjustedContentInset.bottom - collectionView.bounds.height)
+    collectionView.setContentOffset(CGPoint(x: 0, y: min(bottom, max(top, y))), animated: animated)
+  }
+
+  private func reportVisibleItems() {
+    let ids = collectionView.indexPathsForVisibleItems.sorted().compactMap {
+      dataSource?.itemIdentifier(for: $0)
+    }
+    guard ids != visibleIds else { return }
+    visibleIds = ids
+    onVisibleItemsChange(["ids": ids])
   }
 
   private func updateFooter() {
@@ -152,15 +223,23 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     collectionView.collectionViewLayout.invalidateLayout()
   }
 
-  func setStyle(_ next: ArticleListStyle) {
+  func setStyle(_ record: ListStyleRecord) {
+    let values = record.toDictionary(appContext: nil) as NSDictionary
+    guard styleRecord?.isEqual(values) != true else { return }
+    styleRecord = values
+    let anchor = captureAnchor()
+    let next = ArticleListStyle(record)
     style = next
     chrome.separatorColor = next.separatorColor
+    refreshControl.tintColor = next.loadingColor
     collectionView.collectionViewLayout.invalidateLayout()
-    // Cells read the current style when they are configured, so only the ones on screen are stale.
-    let visibleIds = collectionView.indexPathsForVisibleItems.compactMap {
+    let visible = collectionView.indexPathsForVisibleItems.compactMap {
       dataSource?.itemIdentifier(for: $0)
     }
-    applySnapshot(reconfiguring: visibleIds)
+    applySnapshot(reconfiguring: visible, structural: false) { [weak self] in
+      self?.collectionView.layoutIfNeeded()
+      self?.restoreAnchor(anchor)
+    }
   }
 
   func setEndReachedDistance(_ rows: Int) {
@@ -169,14 +248,17 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
   }
 
   func setInsets(top: CGFloat, bottom: CGFloat, indicatorTop: CGFloat, indicatorBottom: CGFloat) {
-    let wasAtRest = collectionView.contentOffset.y <= -collectionView.contentInset.top + 0.5
-    collectionView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: bottom, right: 0)
-    collectionView.verticalScrollIndicatorInsets = UIEdgeInsets(top: indicatorTop, left: 0, bottom: indicatorBottom, right: 0)
-    contentInsetTop = top
-    // The list opens, and keeps resting, beneath the floating header.
-    if !hasPositionedInitialOffset || wasAtRest {
+    let content = UIEdgeInsets(top: top, left: 0, bottom: bottom, right: 0)
+    let indicator = UIEdgeInsets(top: indicatorTop, left: 0, bottom: indicatorBottom, right: 0)
+    let wasAtRest = collectionView.contentOffset.y <= -collectionView.adjustedContentInset.top + 0.5
+    let changed = collectionView.contentInset != content
+    if changed { collectionView.contentInset = content }
+    if collectionView.verticalScrollIndicatorInsets != indicator {
+      collectionView.verticalScrollIndicatorInsets = indicator
+    }
+    if !hasPositionedInitialOffset || (changed && wasAtRest) {
       hasPositionedInitialOffset = true
-      collectionView.contentOffset = CGPoint(x: 0, y: -top)
+      collectionView.contentOffset = CGPoint(x: 0, y: -collectionView.adjustedContentInset.top)
     }
   }
 
@@ -198,16 +280,20 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
 
   /// Applies `state` to the list. Ids are unique (the reducer guarantees it, as the data source
   /// requires) and `reconfiguredIds` are all listed, so neither needs checking here.
-  private func applySnapshot(reconfiguring reconfiguredIds: [String]) {
-    guard let dataSource else { return }
+  private func applySnapshot(reconfiguring reconfiguredIds: [String], structural: Bool = true,
+    completion: (() -> Void)? = nil) {
+    guard let dataSource else { completion?(); return }
     ArticleListSignpost.measure("snapshot.apply") {
-      var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
-      snapshot.appendSections([0])
-      snapshot.appendItems(state.ids)
+      var snapshot = structural ? NSDiffableDataSourceSnapshot<Int, String>() : dataSource.snapshot()
+      if structural {
+        snapshot.appendSections([0])
+        snapshot.appendItems(state.ids)
+      }
       if !reconfiguredIds.isEmpty { snapshot.reconfigureItems(reconfiguredIds) }
       dataSource.apply(snapshot, animatingDifferences: false) { [weak self] in
         // Rows that were already on screen are not displayed again, so a list that is still short
         // after a filter, or a page that changed nothing, asks for its next page here.
+        completion?()
         self?.checkVisibleEnd()
       }
     }
@@ -233,6 +319,21 @@ final class ArticleListView: ExpoView, UICollectionViewDelegate {
     forItemAt indexPath: IndexPath
   ) {
     checkEndReached(lastVisibleItem: indexPath.item)
+    scheduleVisibilityReport()
+  }
+
+  func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell,
+    forItemAt indexPath: IndexPath) {
+    scheduleVisibilityReport()
+  }
+
+  private func scheduleVisibilityReport() {
+    guard !visibilityScheduled else { return }
+    visibilityScheduled = true
+    DispatchQueue.main.async { [weak self] in
+      self?.visibilityScheduled = false
+      self?.reportVisibleItems()
+    }
   }
 
   func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
