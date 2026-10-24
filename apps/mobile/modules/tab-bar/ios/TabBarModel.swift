@@ -16,6 +16,31 @@ struct TabBarSwitcher {
   let icon: TabBarIcon
 }
 
+/// A feed the add composer offers to follow, or the one it previews to import.
+struct ComposerFeed: Identifiable, Equatable {
+  let id: String
+  /// Set for a feed Kyomi already knows; it is followed by id rather than by address.
+  let feedID: String?
+  let url: String
+  let title: String
+  let detail: String?
+  let faviconURL: URL?
+  let isSubscribed: Bool
+}
+
+struct ComposerFolder: Identifiable, Equatable {
+  let id: String
+  let name: String
+}
+
+enum ComposerKind: String {
+  case `import`, follow
+}
+
+enum ComposerStatus: String {
+  case idle, loading, submitting, done, failed
+}
+
 /// State shared between React Native props, the SwiftUI bar, and the events
 /// sent back to JavaScript. Observation tracks each property separately, so a
 /// view re-renders only for what it reads: typing a search query redraws the
@@ -27,6 +52,8 @@ final class TabBarModel {
   var switcher: TabBarSwitcher?
   /// Magnifying glass drawn in the search button and field; falls back to the SF Symbol.
   var searchIcon: TabBarIcon?
+  /// Magnifying glass drawn in the composer's field; falls back to the SF Symbol.
+  var composerIcon: TabBarIcon?
   /// Plus drawn in the add button; falls back to the SF Symbol.
   var addIcon: TabBarIcon?
   var addIconColor = Color.black.opacity(0.85)
@@ -46,6 +73,26 @@ final class TabBarModel {
       if searchQuery != oldValue { onSearchQueryChange(searchQuery) }
     }
   }
+  /// The add composer: the add button's glass widened into a field that takes a feed address to
+  /// import or words to search for, with the feeds found listed over the screen behind it, each
+  /// with its own folder and Follow (or Import) button.
+  var composerActive = false
+  var composerQuery = "" {
+    didSet {
+      if composerQuery != oldValue { onComposerQueryChange(composerQuery) }
+    }
+  }
+  var composerKind = ComposerKind.follow
+  var composerFeeds: [ComposerFeed] = []
+  var composerFolders: [ComposerFolder] = []
+  var composerMessage: String?
+  var composerStatus = ComposerStatus.idle {
+    didSet {
+      if composerStatus == .done, composerActive { toggleComposer() }
+    }
+  }
+  /// The feed whose button was pressed while the submit is in flight.
+  private(set) var composerSubmittingID: String?
   var searchPlaceholder = "Search"
   var activeTint = Color.accentColor
   /// Bumped by a press that commits something worth feeling: switching tabs, or adding. Re-tapping
@@ -63,7 +110,9 @@ final class TabBarModel {
   @ObservationIgnored var addFrame = CGRect.zero
 
   @ObservationIgnored var onTabPress: @MainActor (Int) -> Void = { _ in }
-  @ObservationIgnored var onAddPress: @MainActor () -> Void = {}
+  @ObservationIgnored var onComposerActiveChange: @MainActor (Bool) -> Void = { _ in }
+  @ObservationIgnored var onComposerQueryChange: @MainActor (String) -> Void = { _ in }
+  @ObservationIgnored var onComposerSubmit: @MainActor (String, String, String) -> Void = { _, _, _ in }
   @ObservationIgnored var onSearchActiveChange: @MainActor (Bool) -> Void = { _ in }
   @ObservationIgnored var onSearchQueryChange: @MainActor (String) -> Void = { _ in }
   @ObservationIgnored var onSearchSubmit: @MainActor (String) -> Void = { _ in }
@@ -81,10 +130,33 @@ final class TabBarModel {
     onTabPress(index)
   }
 
-
-  func pressAdd() {
+  func toggleComposer() {
     pressFeedback += 1
-    onAddPress()
+    composerActive.toggle()
+    if !composerActive {
+      composerQuery = ""
+    }
+    onComposerActiveChange(composerActive)
+  }
+
+  func canSubmitComposer(_ feed: ComposerFeed) -> Bool {
+    composerStatus != .submitting && !feed.isSubscribed
+  }
+
+  /// Follows or imports `feed` into `folderID`; the keyboard's return key, which names neither, acts
+  /// on the first feed not yet followed, or on the typed address when nothing has been previewed.
+  func submitComposer(_ feed: ComposerFeed? = nil, folderID: String? = nil) {
+    guard composerStatus != .submitting else { return }
+    if let target = feed ?? composerFeeds.first(where: { !$0.isSubscribed }) {
+      guard !target.isSubscribed else { return }
+      composerSubmittingID = target.id
+      onComposerSubmit(target.feedID ?? "", target.url, folderID ?? "")
+      return
+    }
+    let query = composerQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+    guard composerKind == .import, !query.isEmpty, composerFeeds.isEmpty else { return }
+    composerSubmittingID = nil
+    onComposerSubmit("", query, "")
   }
 
   func toggleSearch() {
@@ -100,9 +172,11 @@ final class TabBarModel {
   /// Constant-time: hit testing runs for every touch on the full-screen host.
   func isInteractive(at point: CGPoint) -> Bool {
     if switcherPresented { return true }
-    let mainShown = !minimized || searchActive
+    // The composer's results and the screen behind them take every touch, so a tap outside closes it.
+    if composerActive { return true }
+    let mainShown = !minimized && !searchActive
     return (mainShown && mainFrame.contains(point))
-      || (!searchActive && actionFrame.contains(point))
+      || actionFrame.contains(point)
       || addFrame.contains(point)
   }
 }

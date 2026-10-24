@@ -4,55 +4,44 @@ import UIKit
 
 /// Vector icon geometry received from `@kyomi/ui`, parsed once when the prop
 /// arrives so drawing never re-reads SVG path data.
-public struct TabBarIcon {
+public struct TabBarIcon: Sendable {
   struct Layer {
-    let path: SwiftUI.Path
-    let evenOdd: Bool
-    /// Stroke width in viewBox units for line glyphs, or nil for a filled path.
-    let strokeWidth: CGFloat?
-    /// What gets filled: the stroked outline of a line glyph (round caps and joins), or the path itself.
-    /// Stroking is the expensive part of drawing an icon, so it happens once here, in viewBox
+    /// What gets filled: the stroked outline of a line glyph (round caps and joins), or the path
+    /// itself. Stroking is the expensive part of drawing an icon, so it happens once, in viewBox
     /// units, rather than on every layout pass. A uniform scale commutes with stroking.
     let outline: SwiftUI.Path
-
-    init(path: SwiftUI.Path, evenOdd: Bool, strokeWidth: CGFloat?) {
-      self.path = path
-      self.evenOdd = evenOdd
-      self.strokeWidth = strokeWidth
-      outline = strokeWidth.map {
-        path.strokedPath(StrokeStyle(lineWidth: $0, lineCap: .round, lineJoin: .round))
-      } ?? path
-    }
+    let evenOdd: Bool
   }
 
   let viewBox: CGRect
   let layers: [Layer]
-  /// Transform that rotates clockwise about the viewBox centre, then re-centres the rotated glyph.
-  /// A pointed glyph's bounds move when it turns, so rotating about the viewBox centre alone leaves it off-centre.
+  /// Rotates clockwise about the viewBox centre, then re-centres the rotated glyph. A pointed
+  /// glyph's bounds move when it turns, so rotating about the viewBox centre alone leaves it
+  /// off-centre.
   let transform: CGAffineTransform
 
   public init(viewBox: String, rotation: Double = 0, paths: [(d: String, evenOdd: Bool, strokeWidth: CGFloat?)]) {
     let box = Self.parseViewBox(viewBox)
+    let parsed = paths.map { SwiftUI.Path(SVGPathParser.path(from: $0.d)) }
     self.viewBox = box
-    layers = paths.map {
+    transform = Self.centeredRotation(degrees: rotation, in: box, paths: parsed)
+    layers = zip(paths, parsed).map { source, path in
       Layer(
-        path: SwiftUI.Path(SVGPathParser.path(from: $0.d)),
-        evenOdd: $0.evenOdd,
-        strokeWidth: $0.strokeWidth
+        outline: source.strokeWidth.map {
+          path.strokedPath(StrokeStyle(lineWidth: $0, lineCap: .round, lineJoin: .round))
+        } ?? path,
+        evenOdd: source.evenOdd
       )
     }
-    transform = Self.centeredRotation(degrees: rotation, in: box, layers: layers)
   }
 
-  /// Rotates about the viewBox centre, then centres the rotated bounds. A pointed glyph's bounds
-  /// move when it turns, so rotating about the viewBox centre alone leaves it off-centre.
-  private static func centeredRotation(degrees: Double, in box: CGRect, layers: [Layer]) -> CGAffineTransform {
+  private static func centeredRotation(degrees: Double, in box: CGRect, paths: [SwiftUI.Path]) -> CGAffineTransform {
     guard degrees != 0 else { return .identity }
     let rotate = CGAffineTransform(translationX: box.midX, y: box.midY)
       .rotated(by: degrees * .pi / 180)
       .translatedBy(x: -box.midX, y: -box.midY)
-    let bounds = layers
-      .map { $0.path.applying(rotate).cgPath.boundingBoxOfPath }
+    let bounds = paths
+      .map { $0.applying(rotate).cgPath.boundingBoxOfPath }
       .reduce(CGRect.null) { $0.union($1) }
     guard !bounds.isNull else { return rotate }
     // Shift after rotating; `translatedBy` would apply the shift before it, inside the rotated frame.
@@ -66,8 +55,22 @@ public struct TabBarIcon {
     let format = UIGraphicsImageRendererFormat.preferred()
     format.opaque = false
     let rect = CGRect(x: 0, y: 0, width: size, height: size)
-    let scale = min(size / viewBox.width, size / viewBox.height)
-    let fit = CGAffineTransform(
+    let placement = transform.concatenating(fit(in: rect))
+    let image = UIGraphicsImageRenderer(bounds: rect, format: format).image { context in
+      let cg = context.cgContext
+      cg.setFillColor(UIColor.black.cgColor)
+      for layer in layers {
+        cg.addPath(layer.outline.applying(placement).cgPath)
+        cg.fillPath(using: layer.evenOdd ? .evenOdd : .winding)
+      }
+    }
+    return image.withRenderingMode(.alwaysTemplate)
+  }
+
+  /// Scales and centres the viewBox in `rect`, aspect-fit like SVG's default `xMidYMid meet`.
+  func fit(in rect: CGRect) -> CGAffineTransform {
+    let scale = min(rect.width / viewBox.width, rect.height / viewBox.height)
+    return CGAffineTransform(
       a: scale,
       b: 0,
       c: 0,
@@ -75,15 +78,6 @@ public struct TabBarIcon {
       tx: rect.midX - viewBox.midX * scale,
       ty: rect.midY - viewBox.midY * scale
     )
-    let image = UIGraphicsImageRenderer(bounds: rect, format: format).image { context in
-      let cg = context.cgContext
-      cg.setFillColor(UIColor.black.cgColor)
-      for layer in layers {
-        cg.addPath(layer.outline.applying(transform).applying(fit).cgPath)
-        cg.fillPath(using: layer.evenOdd ? .evenOdd : .winding)
-      }
-    }
-    return image.withRenderingMode(.alwaysTemplate)
   }
 
   private static func parseViewBox(_ value: String) -> CGRect {
@@ -114,7 +108,7 @@ public struct TabBarIconView: View {
     ZStack {
       ForEach(icon.layers.indices, id: \.self) { index in
         let layer = icon.layers[index]
-        ViewBoxShape(outline: layer.outline, viewBox: icon.viewBox, transform: icon.transform)
+        ViewBoxShape(outline: layer.outline, icon: icon)
           .fill(color, style: FillStyle(eoFill: layer.evenOdd))
       }
     }
@@ -123,26 +117,13 @@ public struct TabBarIconView: View {
   }
 }
 
-/// Scales a layer's outline into `rect`, aspect-fit like SVG's default `xMidYMid meet`.
+/// Scales a layer's outline into `rect`.
 private struct ViewBoxShape: Shape {
   let outline: SwiftUI.Path
-  let viewBox: CGRect
-  let transform: CGAffineTransform
+  let icon: TabBarIcon
 
   func path(in rect: CGRect) -> SwiftUI.Path {
-    let scale = min(rect.width / viewBox.width, rect.height / viewBox.height)
-    return outline.applying(
-      transform.concatenating(
-        CGAffineTransform(
-          a: scale,
-          b: 0,
-          c: 0,
-          d: scale,
-          tx: rect.midX - viewBox.midX * scale,
-          ty: rect.midY - viewBox.midY * scale
-        )
-      )
-    )
+    outline.applying(icon.transform.concatenating(icon.fit(in: rect)))
   }
 }
 

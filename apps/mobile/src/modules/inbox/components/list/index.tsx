@@ -11,6 +11,7 @@ import { useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
 import { type ArticleScope, useArticles } from "@modules/inbox/hooks/use-articles";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { useEmptyPage } from "@modules/inbox/hooks/use-empty-page";
+import { usePullToRefresh } from "@modules/inbox/hooks/use-pull-to-refresh";
 import { prefetchReaderArticle } from "@modules/articles/lib/requests";
 import { Item } from "../item";
 import { ESTIMATED_ROW_SIZE, ListSkeleton } from "./skeleton";
@@ -36,7 +37,12 @@ export function List({
 }: ListProps) {
   const insets = useSafeAreaInsets();
   const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
-  const scrollbarTopInset = insets.top + COMPACT_NAV_HEIGHT;
+  // The list's frame starts where the header ends, with its content still scrolling out under the
+  // header (`overflow: visible`). The native refresh control sits at the top of the frame, so
+  // pulling reveals its spinner below the header instead of behind the status bar.
+  const headerHeight = insets.top + COMPACT_NAV_HEIGHT;
+  const frameStyle = { marginTop: headerHeight, overflow: "visible" } as const;
+  const contentTopInset = Math.max(0, topContentInset - headerHeight);
   const isIOS = Platform.OS === "ios";
 
   const {
@@ -50,6 +56,7 @@ export function List({
     isError,
     pageCount,
   } = useArticles(scope);
+  const pullToRefresh = usePullToRefresh(refetch);
   const visibleItems =
     filter === "unread"
       ? items.filter((item) => !item.isRead)
@@ -87,21 +94,18 @@ export function List({
         contentContainerStyle={{
           flexGrow: 1,
           paddingBottom: tabBarOcclusionHeight,
-          paddingTop: topContentInset,
+          paddingTop: contentTopInset,
         }}
         refreshControl={
           <RefreshControl
-            refreshing={isRefetching}
-            onRefresh={() => {
-              void refetch();
-            }}
+            onRefresh={pullToRefresh.onRefresh}
+            refreshing={pullToRefresh.refreshing}
           />
         }
         onScroll={minimizeScrollHandler}
         scrollEventThrottle={16}
-        scrollIndicatorInsets={
-          isIOS ? { bottom: tabBarOcclusionHeight, top: scrollbarTopInset } : undefined
-        }
+        scrollIndicatorInsets={isIOS ? { bottom: tabBarOcclusionHeight } : undefined}
+        style={frameStyle}
       >
         {ListHeaderComponent}
         {ListEmptyComponent}
@@ -114,13 +118,11 @@ export function List({
       ListHeaderComponent={ListHeaderComponent}
       automaticallyAdjustContentInsets={false}
       automaticallyAdjustsScrollIndicatorInsets={false}
-      contentContainerStyle={{ paddingBottom: tabBarOcclusionHeight, paddingTop: topContentInset }}
+      contentContainerStyle={{ paddingBottom: tabBarOcclusionHeight, paddingTop: contentTopInset }}
       contentInsetAdjustmentBehavior="never"
       data={visibleItems}
-      onRefresh={() => {
-        void refetch();
-      }}
-      refreshing={isRefetching}
+      onRefresh={pullToRefresh.onRefresh}
+      refreshing={pullToRefresh.refreshing}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
       keyExtractor={(item: ArticleListItemDto) => item.id}
       onEndReached={() => {
@@ -144,10 +146,9 @@ export function List({
         />
       )}
       recycleItems
-      scrollIndicatorInsets={
-        isIOS ? { bottom: tabBarOcclusionHeight, top: scrollbarTopInset } : undefined
-      }
+      scrollIndicatorInsets={isIOS ? { bottom: tabBarOcclusionHeight } : undefined}
       sharedValues={sharedValues}
+      style={frameStyle}
     />
   );
 }

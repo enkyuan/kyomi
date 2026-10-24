@@ -31,12 +31,28 @@ export type TabBarSwitcher = {
   readonly icon: TabBarIcon;
 };
 
+/** A feed the add composer offers to follow, or the one it previews to import. */
+export type TabBarComposerFeed = {
+  readonly id: string;
+  /** Set for a feed Kyomi already knows; the composer follows it by id instead of by address. */
+  readonly feedId?: string;
+  readonly url: string;
+  readonly title: string;
+  readonly detail?: string;
+  readonly faviconUrl?: string;
+  readonly isSubscribed: boolean;
+};
+
+export type TabBarComposerFolder = { readonly id: string; readonly name: string };
+
 export type TabBarViewProps = ViewProps & {
   readonly tabs: readonly TabBarItem[];
   readonly selectedIndex: number;
   readonly switcher?: TabBarSwitcher;
   /** Magnifying glass for the search button and field; omit to use the SF Symbol. */
   readonly searchIcon?: TabBarIcon;
+  /** Magnifying glass for the add composer's field; omit to use the SF Symbol. */
+  readonly composerIcon?: TabBarIcon;
   /** Plus for the add button at the trailing edge; omit to use the SF Symbol. */
   readonly addIcon?: TabBarIcon;
   /** Colour of the plus drawn on the tinted (`activeTintColor`) add button. */
@@ -46,7 +62,18 @@ export type TabBarViewProps = ViewProps & {
   readonly searchPlaceholder?: string;
   /** Fires on every press, including one on the selected tab. */
   readonly onTabPress?: (event: NativeSyntheticEvent<{ index: number }>) => void;
-  readonly onAddPress?: () => void;
+  /** What the primary button of the add composer does: import a typed address, or follow a search result. */
+  readonly composerKind?: "import" | "follow";
+  readonly composerFeeds?: readonly TabBarComposerFeed[];
+  readonly composerFolders?: readonly TabBarComposerFolder[];
+  /** `done` closes the composer; `failed` shows `composerMessage`. */
+  readonly composerStatus?: "idle" | "loading" | "submitting" | "done" | "failed";
+  readonly composerMessage?: string;
+  readonly onComposerActiveChange?: (event: NativeSyntheticEvent<{ active: boolean }>) => void;
+  readonly onComposerQueryChange?: (event: NativeSyntheticEvent<{ query: string }>) => void;
+  readonly onComposerSubmit?: (
+    event: NativeSyntheticEvent<{ feedId: string; url: string; folderId: string }>,
+  ) => void;
   readonly onSearchActiveChange?: (event: NativeSyntheticEvent<{ active: boolean }>) => void;
   readonly onSearchQueryChange?: (event: NativeSyntheticEvent<{ query: string }>) => void;
   readonly onSearchSubmit?: (event: NativeSyntheticEvent<{ query: string }>) => void;
