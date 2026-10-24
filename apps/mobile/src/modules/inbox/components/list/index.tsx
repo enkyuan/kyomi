@@ -37,7 +37,12 @@ export function List({
 }: ListProps) {
   const insets = useSafeAreaInsets();
   const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
-  const scrollbarTopInset = insets.top + COMPACT_NAV_HEIGHT;
+  // The list's frame starts where the header ends, with its content still scrolling out under the
+  // header (`overflow: visible`). The native refresh control sits at the top of the frame, so
+  // pulling reveals its spinner below the header instead of behind the status bar.
+  const headerHeight = insets.top + COMPACT_NAV_HEIGHT;
+  const frameStyle = { marginTop: headerHeight, overflow: "visible" } as const;
+  const contentTopInset = Math.max(0, topContentInset - headerHeight);
   const isIOS = Platform.OS === "ios";
 
   const {
@@ -89,22 +94,18 @@ export function List({
         contentContainerStyle={{
           flexGrow: 1,
           paddingBottom: tabBarOcclusionHeight,
-          paddingTop: topContentInset,
+          paddingTop: contentTopInset,
         }}
         refreshControl={
-          // The scroll view starts at the screen's top edge and the header is padding over it, so
-          // the spinner is offset to sit below the header, as LegendList's own is.
           <RefreshControl
             onRefresh={pullToRefresh.onRefresh}
-            progressViewOffset={topContentInset}
             refreshing={pullToRefresh.refreshing}
           />
         }
         onScroll={minimizeScrollHandler}
         scrollEventThrottle={16}
-        scrollIndicatorInsets={
-          isIOS ? { bottom: tabBarOcclusionHeight, top: scrollbarTopInset } : undefined
-        }
+        scrollIndicatorInsets={isIOS ? { bottom: tabBarOcclusionHeight } : undefined}
+        style={frameStyle}
       >
         {ListHeaderComponent}
         {ListEmptyComponent}
@@ -117,7 +118,7 @@ export function List({
       ListHeaderComponent={ListHeaderComponent}
       automaticallyAdjustContentInsets={false}
       automaticallyAdjustsScrollIndicatorInsets={false}
-      contentContainerStyle={{ paddingBottom: tabBarOcclusionHeight, paddingTop: topContentInset }}
+      contentContainerStyle={{ paddingBottom: tabBarOcclusionHeight, paddingTop: contentTopInset }}
       contentInsetAdjustmentBehavior="never"
       data={visibleItems}
       onRefresh={pullToRefresh.onRefresh}
@@ -145,10 +146,9 @@ export function List({
         />
       )}
       recycleItems
-      scrollIndicatorInsets={
-        isIOS ? { bottom: tabBarOcclusionHeight, top: scrollbarTopInset } : undefined
-      }
+      scrollIndicatorInsets={isIOS ? { bottom: tabBarOcclusionHeight } : undefined}
       sharedValues={sharedValues}
+      style={frameStyle}
     />
   );
 }
