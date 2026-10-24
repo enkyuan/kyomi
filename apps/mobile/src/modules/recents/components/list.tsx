@@ -112,7 +112,7 @@ function RecentHistoryItem({ article, isFirst }: { article: RecentArticle; isFir
 
   return (
     <View className="relative">
-      {!isFirst ? <View className="absolute top-0 right-0 left-0 h-px bg-border/70" /> : null}
+      {!isFirst ? <View className="absolute top-0 right-5 left-5 h-px bg-border/70" /> : null}
       <Pressable
         accessibilityLabel={`${article.title}. ${viewedLabel}`}
         accessibilityRole="button"

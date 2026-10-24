@@ -3,13 +3,18 @@ import UIKit
 
 /// Kyomi's floating tab bar, laid out like the iOS 26 system bar: a search button at the leading
 /// edge, a Liquid Glass capsule of tabs and the narrower switcher centred between the buttons, and
-/// a matcha add button at the trailing edge. Searching turns the capsule into a search field;
-/// minimizing hides the capsule and leaves only the two buttons; the switcher grows the capsule's
-/// glass into a sheet, with a sheet's detents, drag, dimming and dismissal, and contracts it back.
+/// a matcha add button at the trailing edge. Searching grows the search button's own glass into the
+/// field while the add button turns into the close button; the capsule dematerializes meanwhile and
+/// materializes again on close. Minimizing hides the capsule and leaves only the two buttons; the
+/// switcher grows the capsule's glass into a sheet, with a sheet's detents, drag, dimming and
+/// dismissal, and contracts it back.
 struct TabBarContent: View {
   @Bindable var model: TabBarModel
   @FocusState private var searchFocused: Bool
   @State private var sheetDetent = SwitcherSheetDetent.medium
+  /// The field's glyph and text arrive a beat after its glass has started to grow, and leave with
+  /// the glass at once on close, so nothing cross-fades with the tabs coming back.
+  @State private var searchContentVisible = false
   /// Vertical drag on the open sheet; its top edge follows the finger 1:1.
   @State private var sheetDrag: CGFloat = 0
   /// VoiceOver lands on the sheet's title as it opens.
@@ -29,14 +34,16 @@ struct TabBarContent: View {
         : UIColor(red: 0x8E / 255, green: 0x8E / 255, blue: 0x93 / 255, alpha: 1)
     }
   )
-  /// Search morphs the capsule's glass, and the user can reverse it mid-flight; a spring retargets
-  /// from the glass's current frame instead of restarting. A tap carries no momentum, so it does
-  /// not overshoot. With Reduce Motion the glass takes its new shape at once and only the field
-  /// cross-fades in (`searchFieldTransition`).
+  /// Search grows the search button's glass into the field, and the user can reverse it
+  /// mid-flight; a spring retargets from the glass's current frame instead of restarting. A tap
+  /// carries no momentum, so it does not overshoot. With Reduce Motion the glass takes its new
+  /// shape at once and only the field's content fades in (`searchContentAnimation`).
   private var transition: Animation? {
     reduceMotion ? nil : .spring(duration: 0.38, bounce: 0)
   }
-  private static let searchFieldTransition = AnyTransition.opacity.animation(.easeOut(duration: 0.2))
+  private var searchContentAnimation: Animation? {
+    searchContentVisible ? .easeOut(duration: reduceMotion ? 0.15 : 0.2).delay(reduceMotion ? 0 : 0.08) : nil
+  }
   /// One shape for the capsule and the sheet, so the glass only changes frame as it morphs: corners
   /// that follow the display's where they meet them, never tighter than the capsule's, or the
   /// sheet's top corners once it opens. Only the minimum changes, so the corners animate with it.
@@ -97,48 +104,57 @@ struct TabBarContent: View {
             // The capsule stays mounted while minimized and only its glass and glyphs go away.
             // Inserting and removing it on every scroll reversal left interrupted removal
             // transitions of the same glass identity in flight, which the container morphed into
-            // the add button, chevron and all.
-            let capsuleFrame = model.switcherPresented
-              ? sheet.frame(top: sheet.top(sheetDetent, drag: sheetDrag))
-              : layout.mainRect
-            capsule(layout, sheet: sheet, frame: capsuleFrame)
-              .onGeometryChange(for: CGRect.self) { proxy in
-                proxy.frame(in: .named(Self.coordinateSpace))
-              } action: { frame in
-                model.mainFrame = frame
-              }
-              .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
-
-            if layout.showsSearchButton {
-              searchButton(layout)
+            // the add button, chevron and all. Searching is a discrete choice, so it does remove
+            // the capsule: under its own glass identity it materializes out beside the field's
+            // glass and back in on close, and its glyphs travel with the glass instead of
+            // cross-fading with the field.
+            if !model.searchActive {
+              let capsuleFrame = model.switcherPresented
+                ? sheet.frame(top: sheet.top(sheetDetent, drag: sheetDrag))
+                : layout.mainRect
+              capsule(layout, sheet: sheet, frame: capsuleFrame)
                 .onGeometryChange(for: CGRect.self) { proxy in
                   proxy.frame(in: .named(Self.coordinateSpace))
                 } action: { frame in
-                  model.actionFrame = frame
+                  model.mainFrame = frame
                 }
-                .glassEffectID("search", in: glassNamespace)
+                .glassEffectID("capsule", in: glassNamespace)
                 .glassEffectTransition(.materialize)
-                .position(x: layout.searchX + layout.buttonSize / 2, y: layout.barMidY)
+                .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
             }
 
-            // The add button and the close button share one glass identity, so the trailing
-            // button morphs between them as search opens and closes.
-            if layout.showsTrailing {
+            // The search button and the field share one glass identity, so the button's glass
+            // grows into the field from the leading edge and contracts back into the button.
+            if layout.showsSearchButton {
               Group {
-                if layout.showsAdd {
-                  addButton(layout)
+                if model.searchActive {
+                  searchField(layout)
                 } else {
-                  closeButton(layout)
+                  searchButton(layout)
                 }
               }
               .onGeometryChange(for: CGRect.self) { proxy in
                 proxy.frame(in: .named(Self.coordinateSpace))
               } action: { frame in
-                model.addFrame = frame
+                model.actionFrame = frame
               }
-              .glassEffectID("trailing", in: glassNamespace)
+              .glassEffectID("search", in: glassNamespace)
               .glassEffectTransition(.materialize)
-              .position(x: layout.addX + layout.buttonSize / 2, y: layout.barMidY)
+              .position(x: layout.searchRect.midX, y: layout.searchRect.midY)
+            }
+
+            // One button turns from add into close and back: the glass loses its tint and the plus
+            // turns a quarter of the way round into a cross.
+            if layout.showsTrailing {
+              trailingButton(layout)
+                .onGeometryChange(for: CGRect.self) { proxy in
+                  proxy.frame(in: .named(Self.coordinateSpace))
+                } action: { frame in
+                  model.addFrame = frame
+                }
+                .glassEffectID("trailing", in: glassNamespace)
+                .glassEffectTransition(.materialize)
+                .position(x: layout.addX + layout.buttonSize / 2, y: layout.barMidY)
             }
           }
         }
@@ -149,6 +165,7 @@ struct TabBarContent: View {
     .animation(minimizeTransition, value: model.minimized)
     .animation(transition, value: model.searchActive)
     .onChange(of: model.searchActive) { _, active in
+      searchContentVisible = active
       if !active { searchFocused = false }
     }
     .sensoryFeedback(.impact(weight: .light), trigger: model.pressFeedback)
@@ -180,15 +197,9 @@ struct TabBarContent: View {
       tabs(layout)
         .frame(width: layout.mainWidth, height: layout.barHeight)
         .frame(maxHeight: .infinity, alignment: .bottom)
-        .opacity(model.searchActive || presented ? 0 : 1)
-        .allowsHitTesting(!model.searchActive && !presented)
-        .accessibilityHidden(model.searchActive || presented)
-
-      if model.searchActive {
-        searchField(layout)
-          .frame(maxHeight: .infinity)
-          .transition(Self.searchFieldTransition)
-      }
+        .opacity(presented ? 0 : 1)
+        .allowsHitTesting(!presented)
+        .accessibilityHidden(presented)
 
       // Glass at the medium detent, opaque at the large one, crossing over as the sheet is dragged
       // between them, and back to glass as it contracts into the capsule. Drawn inside the glass,
@@ -349,7 +360,10 @@ struct TabBarContent: View {
         .onAppear { searchFocused = true }
     }
     .padding(.horizontal, TabBarMetrics.searchFieldPadding)
-    .frame(width: layout.mainWidth, height: layout.barHeight)
+    .opacity(searchContentVisible ? 1 : 0)
+    .animation(searchContentAnimation, value: searchContentVisible)
+    .frame(width: layout.searchRect.width, height: layout.searchRect.height)
+    .glassEffect(.regular, in: Self.glassShape(sheet: false))
   }
 
   @ViewBuilder
@@ -377,41 +391,31 @@ struct TabBarContent: View {
     .accessibilityLabel("Search articles")
   }
 
-  private func closeButton(_ layout: TabBarLayout) -> some View {
-    Button {
-      model.toggleSearch()
-    } label: {
-      Image(systemName: "xmark")
-        .font(.system(size: TabBarMetrics.closeIconSize))
-        .foregroundStyle(Self.actionIconColor)
-        .scaleEffect(layout.buttonScale)
-        .frame(width: layout.buttonSize, height: layout.buttonSize)
-        .contentShape(.circle)
-    }
-    .buttonStyle(.plain)
-    .glassEffect(.regular.interactive(), in: .circle)
-    .accessibilityLabel("Close search")
-  }
-
-  private func addButton(_ layout: TabBarLayout) -> some View {
-    Button {
-      model.pressAdd()
+  private func trailingButton(_ layout: TabBarLayout) -> some View {
+    let searching = model.searchActive
+    return Button {
+      if searching { model.toggleSearch() } else { model.pressAdd() }
     } label: {
       Group {
         if let icon = model.addIcon {
-          TabBarIconView(icon: icon, size: TabBarMetrics.addIconSize, color: model.addIconColor)
+          TabBarIconView(
+            icon: icon,
+            size: TabBarMetrics.addIconSize,
+            color: searching ? Self.actionIconColor : model.addIconColor
+          )
         } else {
           Image(systemName: "plus")
             .font(.system(size: TabBarMetrics.addIconSize, weight: .semibold))
-            .foregroundStyle(model.addIconColor)
+            .foregroundStyle(searching ? Self.actionIconColor : model.addIconColor)
         }
       }
+      .rotationEffect(.degrees(searching ? 45 : 0))
       .scaleEffect(layout.buttonScale)
       .frame(width: layout.buttonSize, height: layout.buttonSize)
       .contentShape(.circle)
     }
     .buttonStyle(.plain)
-    .glassEffect(.regular.tint(model.activeTint).interactive(), in: .circle)
-    .accessibilityLabel("Add")
+    .glassEffect(.regular.tint(searching ? nil : model.activeTint).interactive(), in: .circle)
+    .accessibilityLabel(searching ? "Close search" : "Add")
   }
 }

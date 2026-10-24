@@ -34,7 +34,6 @@ enum TabBarMetrics {
   static let switcherIconSize = tabIconSize
   static let searchIconSize = 18 * scale
   static let addIconSize = 20 * scale
-  static let closeIconSize = 16 * scale
   static let searchFieldPadding = 14 * scale
   static let searchFieldSpacing = 8 * scale
   static let searchFieldIconWidth = 22 * scale
@@ -78,12 +77,12 @@ struct TabBarLayout: Equatable {
   /// Frame of the capsule's glass: the tab capsule or the search field.
   let mainWidth: CGFloat
   let mainX: CGFloat
-  let searchX: CGFloat
   let addX: CGFloat
+  /// The leading element: the search button, or the search field it grows into while searching.
+  /// They share one glass, so this is the frame that glass moves between.
+  let searchRect: CGRect
   /// Minimized: only the two buttons remain, the capsule is hidden.
   let showsMain: Bool
-  /// Searching: the field takes the leading edge and the close button takes the add button's place.
-  let showsAdd: Bool
   let showsSearchButton: Bool
   let showsTrailing: Bool
   /// Whole-point widths of the tab segments. `UISegmentedControl` floors
@@ -112,9 +111,8 @@ struct TabBarLayout: Equatable {
     buttonSize = compact && !reduceMotion ? TabBarMetrics.compactHeight : TabBarMetrics.height
     buttonScale = buttonSize / TabBarMetrics.height
     showsMain = !compact
-    showsAdd = !searchActive
     // The open sheet covers both buttons' places; they materialize out into its glass.
-    showsSearchButton = !searchActive && !sheetPresented
+    showsSearchButton = !sheetPresented
     showsTrailing = !sheetPresented
 
     let inset = TabBarMetrics.edgeInset
@@ -130,15 +128,18 @@ struct TabBarLayout: Equatable {
     // The buttons shrink about their centres, so their glyphs scale in place instead of sliding
     // toward the screen edges while the glass contracts.
     let buttonInset = (TabBarMetrics.height - buttonSize) / 2
-    searchX = inset + buttonInset
     addX = containerWidth - inset - TabBarMetrics.height + buttonInset
-    if searchActive {
-      mainWidth = max(0, availableWidth - buttonSize - gap)
-      mainX = inset
-    } else {
-      mainWidth = tabsWidth
-      mainX = (containerWidth - tabsWidth) / 2
-    }
+    mainWidth = tabsWidth
+    mainX = (containerWidth - tabsWidth) / 2
+    // Searching, the button's glass grows to the field, ending a gap short of the close button.
+    searchRect = searchActive
+      ? CGRect(
+        x: inset,
+        y: barMidY - barHeight / 2,
+        width: max(0, availableWidth - barHeight - gap),
+        height: barHeight
+      )
+      : CGRect(x: inset + buttonInset, y: barMidY - buttonSize / 2, width: buttonSize, height: buttonSize)
     // Inset the control so its lens sits `selectionInset` from the capsule.
     // UISegmentedControl sizes itself in whole points, so round its height.
     let controlInset = TabBarMetrics.selectionInset - TabBarMetrics.segmentLensInset

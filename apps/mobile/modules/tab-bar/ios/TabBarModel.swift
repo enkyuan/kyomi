@@ -100,9 +100,9 @@ final class TabBarModel {
   /// Constant-time: hit testing runs for every touch on the full-screen host.
   func isInteractive(at point: CGPoint) -> Bool {
     if switcherPresented { return true }
-    let mainShown = !minimized || searchActive
+    let mainShown = !minimized && !searchActive
     return (mainShown && mainFrame.contains(point))
-      || (!searchActive && actionFrame.contains(point))
+      || actionFrame.contains(point)
       || addFrame.contains(point)
   }
 }
