@@ -70,8 +70,6 @@ enum TabBarMetrics {
   /// Height of a feed in the composer's results, and the space kept between them and the field.
   static let composerResultHeight: CGFloat = 76
   static let composerResultsGap: CGFloat = 12
-  /// Height of the blur at the results' top edge (`CHROME_BLUR_BLEED` in `progressive-blur.tsx`).
-  static let composerBlurBleed: CGFloat = 44
 }
 
 /// Resolved geometry for one state of the bar: a search button at the leading edge, the tab capsule

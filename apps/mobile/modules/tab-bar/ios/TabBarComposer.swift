@@ -27,23 +27,21 @@ struct TabBarComposer: View {
 
   private var field: CGRect { fieldLayout.searchRect }
   private var close: CGRect { fieldLayout.trailingRect }
-  /// The list ends a gap above the field and starts a gap below the status bar.
-  private var listBottom: CGFloat { field.minY - TabBarMetrics.composerResultsGap }
-  private var listHeight: CGFloat { max(0, listBottom - safeTop - TabBarMetrics.composerResultsGap) }
+  /// At rest the list sits between a gap below the status bar and a gap above the field.
+  private var listTop: CGFloat { safeTop + TabBarMetrics.composerResultsGap }
+  private var listBottomInset: CGFloat { container.height - field.minY + TabBarMetrics.composerResultsGap }
+  private var listHeight: CGFloat { max(0, container.height - listTop - listBottomInset) }
 
   var body: some View {
     ZStack(alignment: .topLeading) {
-      // The background ends above the field, so the field floats over the screen as the search
-      // field does.
       Self.background
-        .frame(height: listBottom)
       Color.clear
         .contentShape(.rect)
         .onTapGesture { model.toggleComposer() }
         .accessibilityHidden(true)
 
       results
-        .frame(width: container.width, height: listBottom, alignment: .bottom)
+        .frame(width: container.width, height: container.height, alignment: .top)
 
       GlassEffectContainer(spacing: 0) {
         // Each child is positioned over the whole container, so they need a stack to share it.
@@ -126,9 +124,10 @@ struct TabBarComposer: View {
     if model.composerFeeds.isEmpty {
       emptyState
     } else {
-      // The scroll view runs from the screen's top edge to the field, so rows leave through the
-      // status bar, fading into the background as they rise, with no cut edge to see. A short list
-      // rests on the field, and a long one opens on its last row.
+      // The scroll view fills the screen, under the status bar above and behind the field below,
+      // so rows leave through both without a cut edge. Margins hold the first row below the status
+      // bar and the last above the field when the list is at its ends. A short list rests on the
+      // field, and a long one opens on its last row.
       ScrollView {
         VStack(spacing: 0) {
           Spacer(minLength: 0)
@@ -136,16 +135,23 @@ struct TabBarComposer: View {
             row(feed)
           }
         }
-        .frame(minHeight: listBottom)
+        .frame(minHeight: listHeight)
         .padding(.horizontal, TabBarMetrics.edgeInset)
+        .background {
+          Color.clear
+            .contentShape(.rect)
+            .onTapGesture { model.toggleComposer() }
+        }
       }
+      .contentMargins(.top, listTop, for: .scrollContent)
+      .contentMargins(.bottom, listBottomInset, for: .scrollContent)
       .scrollIndicators(.hidden)
       .scrollBounceBehavior(.basedOnSize)
       .scrollPosition($position)
       .onChange(of: model.composerFeeds) { position.scrollTo(edge: .bottom) }
       .overlay(alignment: .top) {
         TopFade(background: Self.background)
-          .frame(height: safeTop + TabBarMetrics.composerResultsGap + TabBarMetrics.composerBlurBleed)
+          .frame(height: listTop)
           .allowsHitTesting(false)
       }
     }
@@ -167,6 +173,7 @@ struct TabBarComposer: View {
     }
     .frame(maxWidth: .infinity)
     .frame(height: listHeight)
+    .padding(.top, listTop)
   }
 
   private func row(_ feed: ComposerFeed) -> some View {
