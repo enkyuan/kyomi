@@ -40,7 +40,7 @@ export function EmptyState({
         <Text
           numberOfLines={1}
           style={{
-            ...FONT_STYLES.sectionTitle,
+            ...FONT_STYLES.screenTitle,
             color: theme.foreground,
             textAlign: "center",
           }}
@@ -49,7 +49,7 @@ export function EmptyState({
         </Text>
         <Text
           style={{
-            ...FONT_STYLES.bodyLarge,
+            ...FONT_STYLES.bodySmall,
             color: theme.mutedForeground,
             textAlign: "center",
           }}

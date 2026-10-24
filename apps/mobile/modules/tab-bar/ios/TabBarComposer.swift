@@ -1,14 +1,15 @@
 import SwiftUI
 
-/// What the add composer lays behind its field: the app's background over the screen, and on it the
-/// feeds found, nearest the field. Each has one button: it follows or imports the feed, asking which
-/// folder to file it in when there are folders. Tapping the background outside the list closes the
-/// composer.
+/// The add composer: a layer over the whole screen, the bar included, that brings its own
+/// background, search field and close button, so the bar underneath is never touched. The feeds
+/// found list above the field, each with one button that follows or imports it, asking which folder
+/// to file it in when there are folders. Tapping the background outside the list closes it.
 struct TabBarComposer: View {
   @Bindable var model: TabBarModel
+  var focused: Binding<Bool>
   let container: CGSize
-  /// Top of the field in the bar's coordinates; the list ends a gap above it.
-  let fieldTop: CGFloat
+  /// The bar's layout as if searching, whose field and close button this layer draws.
+  let fieldLayout: TabBarLayout
   /// Where the status bar ends; the list stops a gap below it.
   let safeTop: CGFloat
 
@@ -20,40 +21,113 @@ struct TabBarComposer: View {
         : UIColor(red: 0xF7 / 255, green: 0xF5 / 255, blue: 0xF1 / 255, alpha: 1)
     }
   )
+  private static let glyphColor = Color(uiColor: .secondaryLabel)
+
+  private var field: CGRect { fieldLayout.searchRect }
+  private var close: CGRect { fieldLayout.trailingRect }
+  /// The list ends a gap above the field and starts a gap below the status bar.
+  private var listBottom: CGFloat { field.minY - TabBarMetrics.composerResultsGap }
+  private var listHeight: CGFloat { max(0, listBottom - safeTop - TabBarMetrics.composerResultsGap) }
 
   var body: some View {
-    ZStack(alignment: .bottom) {
+    ZStack(alignment: .topLeading) {
       Self.background
         .contentShape(.rect)
         .onTapGesture { model.toggleComposer() }
         .accessibilityHidden(true)
 
       results
-        .padding(.horizontal, TabBarMetrics.edgeInset)
-        .padding(.bottom, container.height - fieldTop + TabBarMetrics.composerResultsGap)
+        .frame(width: container.width, height: listBottom, alignment: .bottom)
+
+      GlassEffectContainer(spacing: 0) {
+        fieldView
+          .position(x: field.midX, y: field.midY)
+        closeButton
+          .position(x: close.midX, y: close.midY)
+      }
     }
     .frame(width: container.width, height: container.height)
     .animation(.easeOut(duration: 0.2), value: model.composerFeeds)
     .accessibilityElement(children: .contain)
-    .accessibilityLabel("Feeds found")
+    .accessibilityLabel("Add a feed")
+    .accessibilityAddTraits(.isModal)
     .accessibilityAction(.escape) { model.toggleComposer() }
   }
+
+  // MARK: Field
+
+  private var fieldView: some View {
+    HStack(spacing: 8) {
+      TabBarField(
+        text: $model.composerQuery,
+        focused: focused,
+        placeholder: "Search or paste a URL",
+        returnKey: .go,
+        keyboard: .webSearch
+      ) {
+        model.submitComposer()
+      }
+      if model.composerStatus == .loading {
+        ProgressView()
+      }
+    }
+    .padding(.leading, TabBarMetrics.fieldTextInset)
+    .padding(.trailing, TabBarMetrics.fieldTextTrailing)
+    .frame(width: field.width, height: field.height, alignment: .leading)
+    .overlay(alignment: .leading) {
+      glyph
+        .frame(width: field.height, height: field.height)
+        .allowsHitTesting(false)
+        .accessibilityHidden(true)
+    }
+    .clipShape(.capsule)
+    .glassEffect(.regular, in: .capsule)
+  }
+
+  @ViewBuilder
+  private var glyph: some View {
+    if let icon = model.composerIcon {
+      TabBarIconView(icon: icon, size: TabBarMetrics.fieldIconSize, color: Self.glyphColor)
+    } else {
+      Image(systemName: "magnifyingglass")
+        .font(.system(size: TabBarMetrics.fieldIconSize))
+        .foregroundStyle(Self.glyphColor)
+    }
+  }
+
+  private var closeButton: some View {
+    Button {
+      model.toggleComposer()
+    } label: {
+      Image(systemName: "xmark")
+        .font(.system(size: 17, weight: .semibold))
+        .foregroundStyle(.primary.opacity(0.82))
+        .frame(width: close.width, height: close.height)
+        .contentShape(.circle)
+    }
+    .buttonStyle(.plain)
+    .glassEffect(.regular.interactive(), in: .circle)
+    .accessibilityLabel("Close")
+  }
+
+  // MARK: Results
 
   @ViewBuilder
   private var results: some View {
     if model.composerFeeds.isEmpty {
       emptyState
     } else {
-      // Sized to its rows, up to the space between the status bar and the field, then it scrolls
-      // with the last row against the field. Its top edge fades out so a row cut by it does not
-      // end in a hard line.
-      let rows = CGFloat(model.composerFeeds.count) * TabBarMetrics.composerResultHeight
+      // Whole rows only: a row cut by the list's top edge at rest would read as running under the
+      // status bar. Scrolled rows still leave through that edge, fading out as they go.
+      let fitting = max(1, Int(listHeight / TabBarMetrics.composerResultHeight))
+      let rows = min(model.composerFeeds.count, fitting)
       ScrollView {
         LazyVStack(spacing: 0) {
           ForEach(model.composerFeeds) { feed in
             row(feed)
           }
         }
+        .padding(.horizontal, TabBarMetrics.edgeInset)
       }
       .scrollIndicators(.hidden)
       .scrollBounceBehavior(.basedOnSize)
@@ -64,13 +138,8 @@ struct TabBarComposer: View {
           Color.black
         }
       )
-      .frame(height: min(rows, listHeight))
+      .frame(height: CGFloat(rows) * TabBarMetrics.composerResultHeight)
     }
-  }
-
-  /// The space for the list: from a gap below the status bar to a gap above the field.
-  private var listHeight: CGFloat {
-    max(0, fieldTop - safeTop - TabBarMetrics.composerResultsGap * 2)
   }
 
   /// Before anything is typed, a hint; after, why nothing is listed. Nothing while a search is
@@ -80,15 +149,11 @@ struct TabBarComposer: View {
     let query = model.composerQuery.trimmingCharacters(in: .whitespacesAndNewlines)
     Group {
       if query.isEmpty {
-        ContentUnavailableView(
-          "Add a feed",
-          systemImage: "dot.radiowaves.up.forward",
-          description: Text("Search by topic or paste a feed address.")
-        )
+        TabBarEmptyState(title: "Add a feed", description: "Search by topic or paste a feed address.")
       } else if model.composerStatus == .failed, let message = model.composerMessage {
-        ContentUnavailableView(message, systemImage: "exclamationmark.triangle")
+        TabBarEmptyState(title: "Something went wrong", description: message)
       } else if model.composerStatus != .loading, model.composerMessage != nil {
-        ContentUnavailableView.search(text: query)
+        TabBarEmptyState(title: "No feeds found", description: "Try another topic or paste a feed address.")
       }
     }
     .frame(maxWidth: .infinity)

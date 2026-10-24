@@ -61,6 +61,8 @@ enum TabBarMetrics {
   /// Search and the add composer replace the bar with a native-sized field and a close button, both
   /// this tall: the height of the toolbar search field the system draws, not of the tab bar.
   static let fieldHeight: CGFloat = 48
+  /// The field's glyph, at the search button's glyph scaled to the field.
+  static let fieldIconSize = searchIconSize * fieldHeight / height
   /// The field's text starts this far from its leading edge, beside the glyph, and stops
   /// `fieldTextTrailing` short of the trailing one.
   static let fieldTextInset: CGFloat = 44
@@ -85,15 +87,13 @@ struct TabBarLayout: Equatable {
   let mainWidth: CGFloat
   let mainX: CGFloat
   /// The leading element: the search button, or the field it widens into while searching. They share
-  /// one glass, so this is the frame that glass moves between. The composer's field takes the same
-  /// frame with a glass of its own.
+  /// one glass, so this is the frame that glass moves between. The add composer, which draws its own
+  /// field, takes this frame from a layout built as if searching.
   let searchRect: CGRect
   /// The trailing element: the add button, or the close button it becomes beside the field.
   let trailingRect: CGRect
-  /// Minimized, searching or composing: the capsule is hidden.
+  /// Minimized or searching: the capsule is hidden.
   let showsMain: Bool
-  /// Composing covers the search button's place with a field of its own, so it leaves like the capsule.
-  let showsSearch: Bool
   /// The open sheet covers both buttons' places, so they are gone while it is presented.
   let showsButtons: Bool
   /// Whole-point widths of the tab segments. `UISegmentedControl` floors
@@ -113,19 +113,16 @@ struct TabBarLayout: Equatable {
     hasSwitcher: Bool,
     minimized: Bool,
     searchActive: Bool,
-    composing: Bool = false,
     reduceMotion: Bool = false,
     sheetPresented: Bool = false,
     keyboardInset: CGFloat = 0
   ) {
     let containerWidth = containerSize.width
-    let fielding = searchActive || composing
-    let compact = minimized && !fielding
+    let compact = minimized && !searchActive
     barHeight = TabBarMetrics.height
     buttonSize = compact && !reduceMotion ? TabBarMetrics.compactHeight : TabBarMetrics.height
     buttonScale = buttonSize / TabBarMetrics.height
-    showsMain = !minimized && !fielding
-    showsSearch = !composing
+    showsMain = !minimized && !searchActive
     showsButtons = !sheetPresented
 
     let inset = TabBarMetrics.edgeInset
@@ -133,7 +130,7 @@ struct TabBarLayout: Equatable {
     let availableWidth = max(0, containerWidth - inset * 2)
     // The bar rests `edgeInset` above the bottom of its band, or `keyboardGap` above the keyboard.
     // The field is shorter than the bar, so it keeps the same gap below it rather than the same centre.
-    let rowHeight = fielding ? TabBarMetrics.fieldHeight : barHeight
+    let rowHeight = searchActive ? TabBarMetrics.fieldHeight : barHeight
     barMidY = containerSize.height - max(inset, keyboardInset + TabBarMetrics.keyboardGap) - rowHeight / 2
 
     // The capsule keeps its size when the bar minimizes (it only hides), so size it for the
@@ -146,9 +143,9 @@ struct TabBarLayout: Equatable {
     let addX = containerWidth - inset - TabBarMetrics.height + buttonInset
     mainWidth = tabsWidth
     mainX = (containerWidth - tabsWidth) / 2
-    // Searching or composing, the add button's glass becomes the close button at the trailing edge,
-    // and the search button's glass widens to the field, ending a gap short of it.
-    if fielding {
+    // Searching, the add button's glass becomes the close button at the trailing edge, and the
+    // search button's glass widens to the field, ending a gap short of it.
+    if searchActive {
       let size = TabBarMetrics.fieldHeight
       trailingRect = CGRect(x: containerWidth - inset - size, y: barMidY - size / 2, width: size, height: size)
       searchRect = CGRect(
