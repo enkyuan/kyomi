@@ -3,10 +3,12 @@ import UIKit
 
 final class TabBarView: ExpoView {
   let onTabPress = EventDispatcher()
-  let onAddPress = EventDispatcher()
   let onSearchActiveChange = EventDispatcher()
   let onSearchQueryChange = EventDispatcher()
   let onSearchSubmit = EventDispatcher()
+  let onComposerActiveChange = EventDispatcher()
+  let onComposerQueryChange = EventDispatcher()
+  let onComposerSubmit = EventDispatcher()
 
   private let hostingView = TabBarHostingView(frame: .zero)
 
@@ -22,8 +24,14 @@ final class TabBarView: ExpoView {
     model.onTabPress = { [weak self] index in
       self?.onTabPress(["index": index])
     }
-    model.onAddPress = { [weak self] in
-      self?.onAddPress()
+    model.onComposerActiveChange = { [weak self] active in
+      self?.onComposerActiveChange(["active": active])
+    }
+    model.onComposerQueryChange = { [weak self] query in
+      self?.onComposerQueryChange(["query": query])
+    }
+    model.onComposerSubmit = { [weak self] feedId, url, folderId in
+      self?.onComposerSubmit(["feedId": feedId, "url": url, "folderId": folderId])
     }
     model.onSearchActiveChange = { [weak self] active in
       self?.onSearchActiveChange(["active": active])

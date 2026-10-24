@@ -11,7 +11,10 @@ public class TabBarModule: Module {
     Constant("keyboardGap") { Double(TabBarMetrics.keyboardGap) }
 
     View(TabBarView.self) {
-      Events("onTabPress", "onAddPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit")
+      Events(
+        "onTabPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit",
+        "onComposerActiveChange", "onComposerQueryChange", "onComposerSubmit"
+      )
 
       Prop("tabs") { (view: TabBarView, tabs: [TabItemRecord]) in
         view.model.tabs = tabs.map(\.item)
@@ -29,6 +32,18 @@ public class TabBarModule: Module {
         view.model.searchIcon = icon?.icon
       }
 
+      Prop("composerIcon") { (view: TabBarView, icon: IconRecord?) in
+        view.model.composerIcon = icon?.icon
+      }
+
+      Prop("composerAddIcon") { (view: TabBarView, icon: IconRecord?) in
+        view.model.composerAddIcon = icon?.icon
+      }
+
+      Prop("composerAddedIcon") { (view: TabBarView, icon: IconRecord?) in
+        view.model.composerAddedIcon = icon?.icon
+      }
+
       Prop("addIcon") { (view: TabBarView, icon: IconRecord?) in
         view.model.addIcon = icon?.icon
       }
@@ -43,6 +58,26 @@ public class TabBarModule: Module {
 
       Prop("activeTintColor") { (view: TabBarView, color: UIColor?) in
         view.model.activeTint = color.map { Color(uiColor: $0) } ?? .accentColor
+      }
+
+      Prop("composerKind") { (view: TabBarView, kind: String?) in
+        view.model.composerKind = kind.flatMap(ComposerKind.init(rawValue:)) ?? .follow
+      }
+
+      Prop("composerFeeds") { (view: TabBarView, feeds: [ComposerFeedRecord]?) in
+        view.model.composerFeeds = (feeds ?? []).map(\.feed)
+      }
+
+      Prop("composerFolders") { (view: TabBarView, folders: [ComposerFolderRecord]?) in
+        view.model.composerFolders = (folders ?? []).map(\.folder)
+      }
+
+      Prop("composerMessage") { (view: TabBarView, message: String?) in
+        view.model.composerMessage = message
+      }
+
+      Prop("composerStatus") { (view: TabBarView, status: String?) in
+        view.model.composerStatus = status.flatMap(ComposerStatus.init(rawValue:)) ?? .idle
       }
 
       Prop("searchPlaceholder") { (view: TabBarView, placeholder: String?) in
@@ -90,4 +125,28 @@ struct SwitcherRecord: Record {
   var switcher: TabBarSwitcher {
     TabBarSwitcher(title: title, label: label, hint: hint, icon: icon.icon)
   }
+}
+
+struct ComposerFeedRecord: Record {
+  @Field var id: String = ""
+  @Field var feedId: String? = nil
+  @Field var url: String = ""
+  @Field var title: String = ""
+  @Field var detail: String? = nil
+  @Field var faviconUrl: String? = nil
+  @Field var isSubscribed: Bool = false
+
+  var feed: ComposerFeed {
+    ComposerFeed(
+      id: id, feedID: feedId, url: url, title: title, detail: detail,
+      faviconURL: faviconUrl.flatMap(URL.init(string:)), isSubscribed: isSubscribed
+    )
+  }
+}
+
+struct ComposerFolderRecord: Record {
+  @Field var id: String = ""
+  @Field var name: String = ""
+
+  var folder: ComposerFolder { ComposerFolder(id: id, name: name) }
 }

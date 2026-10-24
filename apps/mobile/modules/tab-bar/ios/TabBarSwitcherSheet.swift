@@ -32,12 +32,8 @@ struct TabBarSwitcherSheet: View {
       }
       .padding([.horizontal, .top], TabBarMetrics.sheetCloseInset)
 
-      ContentUnavailableView(
-        "No Sources Yet",
-        systemImage: "folder",
-        description: Text("Folders and feeds you follow will appear here.")
-      )
-      .frame(maxHeight: .infinity)
+      TabBarEmptyState(title: "No sources yet", description: "Folders and feeds you follow will appear here.")
+        .frame(maxHeight: .infinity)
     }
   }
 }

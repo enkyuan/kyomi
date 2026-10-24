@@ -41,10 +41,11 @@ export function RecentList({
   const insets = useSafeAreaInsets();
   const allArticles = useRecentArticles();
   const articles = useMemo(() => filterRecentArticles(allArticles, range), [allArticles, range]);
-  const tabBarOcclusionHeight = getTabBarOcclusionHeight(insets);
   const isIOS = Platform.OS === "ios";
   // Without a header of our own (pushed under a native stack header) iOS insets the list itself.
   const insetsAutomatically = isIOS && headerHeight === 0;
+  // Pushed under a native header there is no tab bar to clear: iOS adds the safe area itself.
+  const bottomReserve = headerHeight === 0 ? 0 : getTabBarOcclusionHeight(insets);
   const initialScrollOffset = getRecentHistoryInitialOffset(headerHeight, isIOS);
   const listRef = useRef<ComponentRef<typeof AnimatedLegendList<RecentArticle>>>(null);
   const sharedValues = useMemo(() => ({ scrollOffset: scrollY }), [scrollY]);
@@ -73,17 +74,14 @@ export function RecentList({
       automaticallyAdjustsScrollIndicatorInsets={insetsAutomatically}
       contentContainerStyle={
         isIOS
-          ? {
-              flexGrow: articles.length === 0 ? 1 : undefined,
-              paddingBottom: tabBarOcclusionHeight,
-            }
+          ? { flexGrow: articles.length === 0 ? 1 : undefined }
           : {
               flexGrow: articles.length === 0 ? 1 : undefined,
-              paddingBottom: tabBarOcclusionHeight,
+              paddingBottom: bottomReserve,
               paddingTop: headerHeight,
             }
       }
-      contentInset={isIOS ? { bottom: tabBarOcclusionHeight, top: headerHeight } : undefined}
+      contentInset={isIOS ? { bottom: bottomReserve, top: headerHeight } : undefined}
       contentInsetAdjustmentBehavior={insetsAutomatically ? "automatic" : "never"}
       data={articles}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
@@ -97,9 +95,7 @@ export function RecentList({
       )}
       recycleItems
       ref={listRef}
-      scrollIndicatorInsets={
-        isIOS ? { bottom: tabBarOcclusionHeight, top: headerHeight } : undefined
-      }
+      scrollIndicatorInsets={isIOS ? { bottom: bottomReserve, top: headerHeight } : undefined}
       sharedValues={sharedValues}
     />
   );
@@ -112,7 +108,7 @@ function RecentHistoryItem({ article, isFirst }: { article: RecentArticle; isFir
 
   return (
     <View className="relative">
-      {!isFirst ? <View className="absolute top-0 right-0 left-0 h-px bg-border/70" /> : null}
+      {!isFirst ? <View className="absolute top-0 right-5 left-5 h-px bg-border/70" /> : null}
       <Pressable
         accessibilityLabel={`${article.title}. ${viewedLabel}`}
         accessibilityRole="button"

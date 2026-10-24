@@ -34,7 +34,7 @@ export function ListSkeleton({
       {ListHeaderComponent}
       {Array.from({ length: rowCount }).map((_, index) => (
         <View className="relative" key={index}>
-          {index > 0 ? <View className="absolute top-0 right-0 left-0 h-px bg-border/70" /> : null}
+          {index > 0 ? <View className="absolute top-0 right-5 left-5 h-px bg-border/70" /> : null}
 
           <View className="gap-4 px-5 pt-5 pb-2.5">
             <View className="flex-row items-center justify-between gap-4">

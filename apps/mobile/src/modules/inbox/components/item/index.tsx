@@ -30,7 +30,7 @@ export function Item({ item, isFirst, onPress, onPressIn }: ItemProps) {
 
   return (
     <View className="relative">
-      {!isFirst && <View className="absolute top-0 left-0 right-0 h-px bg-border/70" />}
+      {!isFirst && <View className="absolute top-0 right-5 left-5 h-px bg-border/70" />}
 
       <Pressable
         accessibilityRole="button"
