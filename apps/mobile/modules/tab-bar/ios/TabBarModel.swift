@@ -87,11 +87,6 @@ final class TabBarModel {
     onAddPress()
   }
 
-  func pressAdd() {
-    feedback.impactOccurred()
-    onAddPress()
-  }
-
   func toggleSearch() {
     searchActive.toggle()
     if !searchActive { searchQuery = "" }

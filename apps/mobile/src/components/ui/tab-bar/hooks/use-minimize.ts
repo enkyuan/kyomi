@@ -205,23 +205,3 @@ export function useTabBarMinimizeNativeScroll(
     doDependenciesDiffer,
   );
 }
-
-/**
- * Scroll offsets reported by a native list (`onScroll` of `ArticleListView`) feed the same
- * direction rules as `useTabBarMinimizeScroll`, which runs as a worklet on Reanimated scroll events.
- * These events arrive on the JS thread, so the bookkeeping lives in a ref the provider owns (and
- * resets): reading a shared value written since the last read blocks JS on a synchronous round-trip
- * to the UI thread, and this runs on every scroll event. A transition goes straight to React; it
- * does not detour through the UI thread and back before the bar can start moving.
- */
-export function useTabBarMinimizeOffset(scrollY: SharedValue<number>) {
-  const trackOffset = useOptionalTabBarMinimize()?.trackOffset;
-
-  return useCallback(
-    (y: number) => {
-      scrollY.set(y);
-      trackOffset?.(y);
-    },
-    [scrollY, trackOffset],
-  );
-}
