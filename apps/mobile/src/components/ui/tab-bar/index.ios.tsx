@@ -4,12 +4,14 @@ import Animated, { useAnimatedProps } from "react-native-reanimated";
 import {
   BLODE_STROKE_WIDTH,
   ChevronGrabberVerticalNativeIcon,
+  CircleCheckFilledNativeIcon,
   CompassPointerFilledNativeIcon,
   CompassPointerNativeIcon,
   LayoutAlignBottomFilledNativeIcon,
   LayoutAlignBottomNativeIcon,
   MagnifyingGlassNativeIcon,
   PageTextSearchNativeIcon,
+  PlusCircleFilledNativeIcon,
   PlusNativeIcon,
   type BlodeNativeIcon,
 } from "@kyomi/ui/icons/blode-native";
@@ -57,6 +59,8 @@ const TABS: readonly TabBarItem[] = [
 const SEARCH_ICON = toTabBarIcon(PageTextSearchNativeIcon);
 const COMPOSER_ICON = toTabBarIcon(MagnifyingGlassNativeIcon);
 const ADD_ICON = toTabBarIcon(PlusNativeIcon);
+const COMPOSER_ADD_ICON = toTabBarIcon(PlusCircleFilledNativeIcon);
+const COMPOSER_ADDED_ICON = toTabBarIcon(CircleCheckFilledNativeIcon);
 
 const SWITCHER: TabBarSwitcher = {
   title: "Sources",
@@ -100,6 +104,8 @@ export function TabBar({
       addIcon={ADD_ICON}
       addIconColor={kyomiNativeBrand.matcha.onColor}
       animatedProps={animatedProps}
+      composerAddIcon={COMPOSER_ADD_ICON}
+      composerAddedIcon={COMPOSER_ADDED_ICON}
       composerFeeds={composer?.feeds}
       composerIcon={COMPOSER_ICON}
       composerFolders={composer?.folders}

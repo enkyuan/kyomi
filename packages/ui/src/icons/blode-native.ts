@@ -89,6 +89,16 @@ export const ChevronsUpDownNativeIcon: BlodeNativeIcon = {
   ],
 };
 
+export const CircleCheckFilledNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M12 2C6.4772 2 2 6.4772 2 12s4.4772 10 10 10 10-4.4772 10-10S17.5228 2 12 2m3.774 8.1333c.3497-.4275.2867-1.0575-.1408-1.4072-.4274-.3498-1.0574-.2868-1.4072.1407l-3.8002 4.6448-1.2187-1.2187c-.3905-.3905-1.0237-.3905-1.4142 0s-.3905 1.0237 0 1.4142l2 2a1 1 0 0 0 1.4811-.0738z",
+      fillRule: "evenodd",
+    },
+  ],
+};
+
 export const ClockNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [
@@ -263,6 +273,16 @@ export const PageTextSearchNativeIcon: BlodeNativeIcon = {
 export const PlusNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [{ d: "M12 4v8m0 0v8m0-8H4m8 0h8", stroke: { linecap: "round" } }],
+};
+
+export const PlusCircleFilledNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M2 12C2 6.4772 6.4772 2 12 2s10 4.4772 10 10-4.4772 10-10 10S2 17.5228 2 12m14 .9999c.5523 0 1-.4477 1-1s-.4477-1-1-1L13 11V8.0001c0-.5523-.4477-1-1-1s-1 .4477-1 1V11l-3 .0001c-.5523 0-1 .4478-1 1s.4477 1 1 1L11 13v3c0 .5523.4477 1 1 1s1-.4477 1-1v-3z",
+      fillRule: "evenodd",
+    },
+  ],
 };
 
 export const ReceiptBillNativeIcon: BlodeNativeIcon = {

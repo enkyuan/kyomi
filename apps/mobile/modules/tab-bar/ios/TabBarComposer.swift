@@ -6,8 +6,8 @@ import SwiftUI
 /// to file it in when there are folders. Tapping the background outside the list closes it.
 struct TabBarComposer: View {
   @Bindable var model: TabBarModel
-  /// The list rests on its last row, against the field, whenever feeds arrive.
-  @State private var position = ScrollPosition(edge: .bottom)
+  /// The list opens on its first row, the best match, whenever feeds arrive.
+  @State private var position = ScrollPosition(edge: .top)
   var focused: Binding<Bool>
   let container: CGSize
   /// The bar's layout as if searching, whose field and close button this layer draws.
@@ -62,19 +62,15 @@ struct TabBarComposer: View {
   // MARK: Field
 
   private var fieldView: some View {
-    HStack(spacing: 8) {
-      TabBarField(
-        text: $model.composerQuery,
-        focused: focused,
-        placeholder: "Search or paste a URL",
-        returnKey: .go,
-        keyboard: .webSearch
-      ) {
-        model.submitComposer()
-      }
-      if model.composerStatus == .loading {
-        ProgressView()
-      }
+    TabBarField(
+      text: $model.composerQuery,
+      focused: focused,
+      placeholder: "Search or paste a URL",
+      returnKey: .go,
+      keyboard: .webSearch,
+      loading: model.composerStatus == .loading
+    ) {
+      model.submitComposer()
     }
     .padding(.leading, TabBarMetrics.fieldTextInset)
     .padding(.trailing, TabBarMetrics.fieldTextTrailing)
@@ -85,6 +81,16 @@ struct TabBarComposer: View {
         .allowsHitTesting(false)
         .accessibilityHidden(true)
     }
+    // The spinner takes the clear button's place, so the field never changes width while a search
+    // runs: UIKit would slide the clear button in from the edge along with the new width.
+    .overlay(alignment: .trailing) {
+      if model.composerStatus == .loading {
+        ProgressView()
+          .frame(width: field.height, height: field.height)
+          .transition(.opacity)
+      }
+    }
+    .animation(.easeOut(duration: 0.15), value: model.composerStatus == .loading)
     .clipShape(.capsule)
     .glassEffect(.regular, in: .capsule)
   }
@@ -125,7 +131,7 @@ struct TabBarComposer: View {
       // The scroll view fills the screen, under the status bar above and behind the field below,
       // so rows leave through both without a cut edge. Margins hold the first row below the
       // status bar and the last above the field when the list is at its ends. A short list rests
-      // on the field, and a long one opens on its last row.
+      // on the field, and a long one opens on its first row.
       ScrollView {
         VStack(spacing: 0) {
           Spacer(minLength: 0)
@@ -146,7 +152,7 @@ struct TabBarComposer: View {
       .scrollIndicators(.hidden)
       .scrollBounceBehavior(.basedOnSize)
       .scrollPosition($position)
-      .onChange(of: model.composerFeeds) { position.scrollTo(edge: .bottom) }
+      .onChange(of: model.composerFeeds) { position.scrollTo(edge: .top) }
       // Nothing shows behind the status bar, which would read as tappable and cost the clock its
       // legibility (HIG, "Obscure content under the status bar"); below it the background eases
       // away, as the scrim of `progressive-blur.tsx` does. A material would only tint the flat
@@ -155,8 +161,8 @@ struct TabBarComposer: View {
         LinearGradient(
           stops: [
             .init(color: Self.background, location: 0),
-            .init(color: Self.background, location: safeTop / listTop),
-            .init(color: Self.background.opacity(0.4), location: (safeTop / listTop + 1) / 2),
+            .init(color: Self.background, location: safeTop / max(listTop, 1)),
+            .init(color: Self.background.opacity(0.4), location: (safeTop / max(listTop, 1) + 1) / 2),
             .init(color: Self.background.opacity(0), location: 1),
           ],
           startPoint: .top,
@@ -204,7 +210,7 @@ struct TabBarComposer: View {
       Spacer(minLength: 0)
 
       if feed.isSubscribed {
-        Text("Following").font(.footnote).foregroundStyle(.secondary)
+        addedMark
       } else {
         action(feed)
       }
@@ -232,21 +238,40 @@ struct TabBarComposer: View {
     .disabled(!model.canSubmitComposer(feed))
   }
 
+  /// A check where the feed is already followed or filed in a folder.
+  private var addedMark: some View {
+    markView(icon: model.composerAddedIcon, symbol: "checkmark.circle.fill", color: Self.glyphColor)
+      .accessibilityElement(children: .ignore)
+      .accessibilityLabel("Following")
+  }
+
+  /// The plus that follows or imports; a spinner replaces it while that feed is being submitted.
   private func actionLabel(_ feed: ComposerFeed) -> some View {
     let submitting = model.composerStatus == .submitting && model.composerSubmittingID == feed.id
     return ZStack {
-      Text(model.composerKind == .import ? "Import" : "Follow")
+      markView(icon: model.composerAddIcon, symbol: "plus.circle.fill", color: model.activeTint)
         .opacity(submitting ? 0 : 1)
       if submitting {
-        ProgressView().tint(model.addIconColor)
+        ProgressView()
       }
     }
-    .font(.system(size: 15, weight: .semibold))
-    .foregroundStyle(model.addIconColor)
-    .padding(.horizontal, 18)
-    .frame(height: 36)
-    .background(model.activeTint, in: .capsule)
+    .frame(width: TabBarMetrics.composerMarkTarget, height: TabBarMetrics.composerMarkTarget)
     .opacity(model.canSubmitComposer(feed) || submitting ? 1 : 0.4)
-    .contentShape(.capsule)
+    .contentShape(.rect)
+    .accessibilityLabel(model.composerKind == .import ? "Import" : "Follow")
+  }
+
+  @ViewBuilder
+  private func markView(icon: TabBarIcon?, symbol: String, color: Color) -> some View {
+    Group {
+      if let icon {
+        TabBarIconView(icon: icon, size: TabBarMetrics.composerMarkSize, color: color)
+      } else {
+        Image(systemName: symbol)
+          .font(.system(size: TabBarMetrics.composerMarkSize))
+          .foregroundStyle(color)
+      }
+    }
+    .frame(width: TabBarMetrics.composerMarkTarget, height: TabBarMetrics.composerMarkTarget, alignment: .trailing)
   }
 }

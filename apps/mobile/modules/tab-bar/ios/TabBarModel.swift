@@ -54,6 +54,9 @@ final class TabBarModel {
   var searchIcon: TabBarIcon?
   /// Magnifying glass drawn in the composer's field; falls back to the SF Symbol.
   var composerIcon: TabBarIcon?
+  /// Plus drawn on a result not yet followed, and the check on one that is; fall back to SF Symbols.
+  var composerAddIcon: TabBarIcon?
+  var composerAddedIcon: TabBarIcon?
   /// Plus drawn in the add button; falls back to the SF Symbol.
   var addIcon: TabBarIcon?
   var addIconColor = Color.black.opacity(0.85)

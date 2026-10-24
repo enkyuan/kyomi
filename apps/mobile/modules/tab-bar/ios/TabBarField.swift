@@ -10,6 +10,9 @@ struct TabBarField: UIViewRepresentable {
   let placeholder: String
   var returnKey = UIReturnKeyType.search
   var keyboard = UIKeyboardType.default
+  /// Hides the clear button, whose place the host fills with a spinner. Drawing the spinner beside
+  /// the field instead would resize it, and UIKit slides the clear button along with the new width.
+  var loading = false
   var onSubmit: () -> Void
 
   func makeCoordinator() -> Coordinator {
@@ -38,6 +41,8 @@ struct TabBarField: UIViewRepresentable {
   func updateUIView(_ field: UITextField, context: Context) {
     context.coordinator.parent = self
     if field.placeholder != placeholder { field.placeholder = placeholder }
+    let clearMode: UITextField.ViewMode = loading ? .never : .whileEditing
+    if field.clearButtonMode != clearMode { field.clearButtonMode = clearMode }
     // Leave the text alone while an input method is composing it.
     if field.text != text, field.markedTextRange == nil { field.text = text }
     if focused, !field.isFirstResponder {

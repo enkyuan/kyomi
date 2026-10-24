@@ -53,6 +53,10 @@ export type TabBarViewProps = ViewProps & {
   readonly searchIcon?: TabBarIcon;
   /** Magnifying glass for the add composer's field; omit to use the SF Symbol. */
   readonly composerIcon?: TabBarIcon;
+  /** Plus on each composer result not yet followed; omit to use the SF Symbol. */
+  readonly composerAddIcon?: TabBarIcon;
+  /** Check on each composer result already followed or filed in a folder; omit to use the SF Symbol. */
+  readonly composerAddedIcon?: TabBarIcon;
   /** Plus for the add button at the trailing edge; omit to use the SF Symbol. */
   readonly addIcon?: TabBarIcon;
   /** Colour of the plus drawn on the tinted (`activeTintColor`) add button. */
