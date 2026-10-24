@@ -59,6 +59,13 @@ struct TabBarContent: View {
       traits.userInterfaceStyle == .dark ? .secondarySystemBackground : .systemBackground
     }
   )
+  /// What the capsule's glyphs do as it leaves or returns: they clear quickly when it leaves, so
+  /// none shows through the translucent search field growing over it, and shrink a little unless
+  /// Reduce Motion asks for a plain fade.
+  private var capsuleTransition: AnyTransition {
+    let leave = reduceMotion ? AnyTransition.opacity : .opacity.combined(with: .scale(scale: 0.86))
+    return .asymmetric(insertion: leave, removal: leave.animation(.easeOut(duration: 0.1)))
+  }
   /// The sheet's content follows the glass in, a beat behind, and leaves first on the way back.
   private static let sheetContentTransition = AnyTransition.asymmetric(
     insertion: .opacity.animation(.easeOut(duration: 0.2).delay(0.08)),
@@ -107,24 +114,27 @@ struct TabBarContent: View {
         // One container so the glass shapes render together and morph as they move.
         GlassEffectContainer(spacing: 0) {
           ZStack(alignment: .topLeading) {
-            // The capsule stays mounted while minimized and only its glass and glyphs go away.
-            // Inserting and removing it on every scroll reversal left interrupted removal
-            // transitions of the same glass identity in flight, which the container morphed into
-            // the add button, chevron and all. Searching hides it the same way, so on close it
-            // materializes back in place rather than being inserted and arriving from the screen's
-            // edge. Its glass has an identity of its own so the container never pairs it with the
-            // search field's glass and morphs the tabs into the field.
-            let capsuleFrame = model.switcherPresented
-              ? sheet.frame(top: sheet.top(sheetDetent, drag: sheetDrag))
-              : layout.mainRect
-            capsule(layout, sheet: sheet, frame: capsuleFrame)
-              .onGeometryChange(for: CGRect.self) { proxy in
-                proxy.frame(in: .named(Self.coordinateSpace))
-              } action: { frame in
-                model.mainFrame = frame
-              }
-              .glassEffectID("capsule", in: glassNamespace)
-              .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
+            // Minimizing and searching remove the capsule and closing brings it back, as the
+            // documented way to make a glass effect leave a `GlassEffectContainer`: inserting or
+            // removing the view animates its glass with `glassEffectTransition`, which acts only on
+            // hierarchy changes. `materialize` keeps it from pairing with the search field's glass
+            // and morphing the tabs into the field. The open sheet is the capsule's own glass, so
+            // it stays mounted while presented.
+            if layout.showsMain || model.switcherPresented {
+              let capsuleFrame = model.switcherPresented
+                ? sheet.frame(top: sheet.top(sheetDetent, drag: sheetDrag))
+                : layout.mainRect
+              capsule(layout, sheet: sheet, frame: capsuleFrame)
+                .onGeometryChange(for: CGRect.self) { proxy in
+                  proxy.frame(in: .named(Self.coordinateSpace))
+                } action: { frame in
+                  model.mainFrame = frame
+                }
+                .glassEffectID("capsule", in: glassNamespace)
+                .glassEffectTransition(.materialize)
+                .transition(capsuleTransition)
+                .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
+            }
 
             // The open sheet covers both buttons' places; they materialize out into its glass.
             if layout.showsButtons {
@@ -193,7 +203,6 @@ struct TabBarContent: View {
   /// The capsule's glass, which is also the sheet's: one view whose frame and content change, so
   /// opening and closing are the glass itself moving, with nothing handed between two surfaces.
   private func capsule(_ layout: TabBarLayout, sheet: SwitcherSheetGeometry, frame: CGRect) -> some View {
-    let compact = !layout.showsMain
     let presented = model.switcherPresented
 
     return ZStack(alignment: .top) {
@@ -220,23 +229,9 @@ struct TabBarContent: View {
     }
     .frame(width: frame.width, height: frame.height)
     .clipShape(Self.glassShape(sheet: presented))
-    // Minimizing shrinks and fades the glyphs inside the glass; the glass itself dematerializes
-    // below. Opacity and scale applied outside `glassEffect` reach the glyphs but not the glass a
-    // container renders, which left a shrunken capsule behind with the chevron outside it.
-    .scaleEffect(compact && !reduceMotion ? 0.86 : 1)
-    .opacity(compact ? 0 : 1)
-    // Opening search clears the capsule's glyphs quickly, so they don't show through the
-    // translucent field growing over them; closing brings them back on the root spring.
-    .animation(model.searchActive && !reduceMotion ? .easeOut(duration: 0.1) : transition, value: model.searchActive)
-    // `identity` keeps the capsule mounted while it has no glass, so a quick scroll reversal
-    // retargets the same view instead of stacking an interrupted removal under a new insertion.
-    // The switcher sheet never touches the capsule: it stays beneath the sheet, like the system tab
-    // bar under any sheet, so its glass is never rebuilt for it.
     // The sheet is not a control, so its glass does not react to touches like the bar's.
-    .glassEffect(compact ? .identity : presented ? .regular : .regular.interactive(), in: Self.glassShape(sheet: presented))
+    .glassEffect(presented ? .regular : .regular.interactive(), in: Self.glassShape(sheet: presented))
     .gesture(sheetDragGesture(sheet, capsuleTop: layout.mainRect.minY), isEnabled: presented)
-    .allowsHitTesting(!compact)
-    .accessibilityHidden(compact)
     .accessibilityAddTraits(presented ? .isModal : [])
     .accessibilityAction(.escape) { dismissSheet(sheet) }
   }
