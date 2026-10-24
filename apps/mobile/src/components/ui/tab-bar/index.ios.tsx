@@ -69,7 +69,7 @@ const AnimatedTabBarView = Animated.createAnimatedComponent(TabBarView);
 /** Floating tab bar drawn natively in SwiftUI by the local `tab-bar` module. */
 export function TabBar({
   navigation,
-  onAddPress,
+  composer,
   onSearchQueryChange,
   onSearchSubmit,
   onTabChange,
@@ -98,7 +98,16 @@ export function TabBar({
       addIcon={ADD_ICON}
       addIconColor={kyomiNativeBrand.matcha.onColor}
       animatedProps={animatedProps}
-      onAddPress={onAddPress}
+      composerFeeds={composer?.feeds}
+      composerFolders={composer?.folders}
+      composerKind={composer?.kind}
+      composerMessage={composer?.message ?? undefined}
+      composerStatus={composer?.status}
+      onComposerActiveChange={({ nativeEvent }) => composer?.onActiveChange(nativeEvent.active)}
+      onComposerQueryChange={({ nativeEvent }) => composer?.onQueryChange(nativeEvent.query)}
+      onComposerSubmit={({ nativeEvent: { feedId, folderId, url } }) =>
+        composer?.onSubmit({ feedId: feedId || undefined, folderId: folderId || undefined, url })
+      }
       onSearchQueryChange={({ nativeEvent }) => onSearchQueryChange?.(nativeEvent.query)}
       onSearchSubmit={({ nativeEvent }) => onSearchSubmit?.(nativeEvent.query)}
       onTabPress={handleTabPress}

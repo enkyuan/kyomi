@@ -61,6 +61,21 @@ enum TabBarMetrics {
   /// Release speed, in points per second, above which a drag counts as thrown, and the snap to a
   /// detent may overshoot a little.
   static let sheetFlickVelocity: CGFloat = 500
+
+  /// The add composer: a card grown out of the add button, rising from the bar's band.
+  static let composerCornerRadius: CGFloat = 30
+  static let composerPadding: CGFloat = 16
+  static let composerRowHeight: CGFloat = 48
+  static let composerResultHeight: CGFloat = 56
+  static let composerMaxResults = 3
+  static let composerSpacing: CGFloat = 10
+
+  /// Height of the card for the number of feeds it lists (or one line of message in their place).
+  static func composerHeight(listedRows: Int) -> CGFloat {
+    let rows = min(listedRows, composerMaxResults)
+    let list = rows > 0 ? CGFloat(rows) * composerResultHeight + composerSpacing : 0
+    return composerPadding * 2 + composerRowHeight * 2 + composerSpacing + list
+  }
 }
 
 /// Resolved geometry for one state of the bar: a search button at the leading edge, the tab capsule
@@ -77,12 +92,15 @@ struct TabBarLayout: Equatable {
   /// Frame of the tab capsule's glass.
   let mainWidth: CGFloat
   let mainX: CGFloat
-  let addX: CGFloat
   /// The leading element: the search button, or the search field it widens into while searching.
   /// They share one glass, so this is the frame that glass moves between.
   let searchRect: CGRect
-  /// Minimized or searching: the capsule is hidden.
+  /// The trailing element: the add (or, searching, close) button, or the composer card it grows into.
+  let trailingRect: CGRect
+  /// Minimized, searching or composing: the capsule is hidden.
   let showsMain: Bool
+  /// Composing covers the search button's place, so it leaves like the capsule does.
+  let showsSearch: Bool
   /// The open sheet covers both buttons' places, so they are gone while it is presented.
   let showsButtons: Bool
   /// Whole-point widths of the tab segments. `UISegmentedControl` floors
@@ -102,18 +120,20 @@ struct TabBarLayout: Equatable {
     hasSwitcher: Bool,
     minimized: Bool,
     searchActive: Bool,
+    composerHeight: CGFloat? = nil,
     reduceMotion: Bool = false,
     sheetPresented: Bool = false,
     keyboardInset: CGFloat = 0
   ) {
     let containerWidth = containerSize.width
-    let compact = minimized && !searchActive
+    let composing = composerHeight != nil
+    let compact = minimized && !searchActive && !composing
     barHeight = TabBarMetrics.height
     buttonSize = compact && !reduceMotion ? TabBarMetrics.compactHeight : TabBarMetrics.height
     buttonScale = buttonSize / TabBarMetrics.height
-    // Searching hides the capsule like minimizing does: it stays mounted, without its glass.
-    showsMain = !minimized && !searchActive
+    showsMain = !minimized && !searchActive && !composing
     showsButtons = !sheetPresented
+    showsSearch = !composing
 
     let inset = TabBarMetrics.edgeInset
     let gap = TabBarMetrics.gap
@@ -128,9 +148,14 @@ struct TabBarLayout: Equatable {
     // The buttons shrink about their centres, so their glyphs scale in place instead of sliding
     // toward the screen edges while the glass contracts.
     let buttonInset = (TabBarMetrics.height - buttonSize) / 2
-    addX = containerWidth - inset - TabBarMetrics.height + buttonInset
+    let addX = containerWidth - inset - TabBarMetrics.height + buttonInset
     mainWidth = tabsWidth
     mainX = (containerWidth - tabsWidth) / 2
+    // Composing, the add button's glass grows up and across into the card, whose bottom edge stays
+    // on the bar's band so the keyboard clears it as it clears the bar.
+    trailingRect = composerHeight.map {
+      CGRect(x: inset, y: barMidY + barHeight / 2 - $0, width: availableWidth, height: $0)
+    } ?? CGRect(x: addX, y: barMidY - buttonSize / 2, width: buttonSize, height: buttonSize)
     // Searching, the button's glass widens to the field, ending a gap short of the close button.
     searchRect = searchActive
       ? CGRect(

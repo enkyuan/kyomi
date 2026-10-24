@@ -16,6 +16,31 @@ struct TabBarSwitcher {
   let icon: TabBarIcon
 }
 
+/// A feed the add composer offers to follow, or the one it previews to import.
+struct ComposerFeed: Identifiable, Equatable {
+  let id: String
+  /// Set for a feed Kyomi already knows; it is followed by id rather than by address.
+  let feedID: String?
+  let url: String
+  let title: String
+  let detail: String?
+  let faviconURL: URL?
+  let isSubscribed: Bool
+}
+
+struct ComposerFolder: Identifiable, Equatable {
+  let id: String
+  let name: String
+}
+
+enum ComposerKind: String {
+  case `import`, follow
+}
+
+enum ComposerStatus: String {
+  case idle, loading, submitting, done, failed
+}
+
 /// State shared between React Native props, the SwiftUI bar, and the events
 /// sent back to JavaScript. Observation tracks each property separately, so a
 /// view re-renders only for what it reads: typing a search query redraws the
@@ -46,6 +71,33 @@ final class TabBarModel {
       if searchQuery != oldValue { onSearchQueryChange(searchQuery) }
     }
   }
+  /// The add composer: the add button's glass grown into a card that takes a feed address to
+  /// import or words to search for, with the folder to file the feed in.
+  var composerActive = false
+  var composerQuery = "" {
+    didSet {
+      if composerQuery != oldValue { onComposerQueryChange(composerQuery) }
+    }
+  }
+  var composerKind = ComposerKind.follow
+  var composerFeeds: [ComposerFeed] = [] {
+    didSet {
+      if !composerFeeds.contains(where: { $0.id == composerSelection }) {
+        composerSelection = composerFeeds.first(where: { !$0.isSubscribed })?.id ?? composerFeeds.first?.id
+      }
+    }
+  }
+  var composerFolders: [ComposerFolder] = []
+  var composerMessage: String?
+  var composerStatus = ComposerStatus.idle {
+    didSet {
+      if composerStatus == .done, composerActive { toggleComposer() }
+    }
+  }
+  /// The feed Follow acts on; Import always acts on the one previewed.
+  var composerSelection: String?
+  /// The folder the feed is filed in; nil leaves it unsorted.
+  var composerFolderID: String?
   var searchPlaceholder = "Search"
   var activeTint = Color.accentColor
   /// Bumped by a press that commits something worth feeling: switching tabs, or adding. Re-tapping
@@ -63,7 +115,9 @@ final class TabBarModel {
   @ObservationIgnored var addFrame = CGRect.zero
 
   @ObservationIgnored var onTabPress: @MainActor (Int) -> Void = { _ in }
-  @ObservationIgnored var onAddPress: @MainActor () -> Void = {}
+  @ObservationIgnored var onComposerActiveChange: @MainActor (Bool) -> Void = { _ in }
+  @ObservationIgnored var onComposerQueryChange: @MainActor (String) -> Void = { _ in }
+  @ObservationIgnored var onComposerSubmit: @MainActor (String, String, String) -> Void = { _, _, _ in }
   @ObservationIgnored var onSearchActiveChange: @MainActor (Bool) -> Void = { _ in }
   @ObservationIgnored var onSearchQueryChange: @MainActor (String) -> Void = { _ in }
   @ObservationIgnored var onSearchSubmit: @MainActor (String) -> Void = { _ in }
@@ -81,9 +135,39 @@ final class TabBarModel {
     onTabPress(index)
   }
 
-  func pressAdd() {
+  func toggleComposer() {
     pressFeedback += 1
-    onAddPress()
+    composerActive.toggle()
+    if !composerActive {
+      composerQuery = ""
+      composerFolderID = nil
+    }
+    onComposerActiveChange(composerActive)
+  }
+
+  /// Rows the card lists: the feeds found, or one line of message when there are none.
+  var composerListedRows: Int {
+    composerFeeds.isEmpty ? (composerMessage == nil ? 0 : 1) : composerFeeds.count
+  }
+
+  /// The feed the primary button acts on, if it can act yet.
+  var composerTarget: ComposerFeed? {
+    composerFeeds.first { $0.id == composerSelection } ?? composerFeeds.first
+  }
+
+  var composerCanSubmit: Bool {
+    guard composerStatus != .submitting else { return false }
+    let query = composerQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+    switch composerKind {
+    case .import: return !query.isEmpty
+    case .follow: return composerTarget.map { !$0.isSubscribed } ?? false
+    }
+  }
+
+  func submitComposer() {
+    guard composerCanSubmit else { return }
+    let feed = composerKind == .import ? composerFeeds.first : composerTarget
+    onComposerSubmit(feed?.feedID ?? "", feed?.url ?? composerQuery, composerFolderID ?? "")
   }
 
   func toggleSearch() {
