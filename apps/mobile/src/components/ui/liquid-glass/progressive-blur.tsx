@@ -20,6 +20,8 @@ type Props = ViewProps & {
  * full strength through the first 30%, easing to nothing at the far
  * edge. A gradient scrim, densest where the chrome sits, tones down bright text and imagery
  * that the blur alone leaves too contrasty, so overlaid chrome stays legible over any content.
+ * The scrim is also what keeps saturated content (an orange favicon) from showing through the
+ * blur as a coloured glow, so it stays near-opaque at the anchored edge.
  */
 export function ProgressiveBlur({
   style,
@@ -53,7 +55,7 @@ export function ProgressiveBlur({
           left: 0,
           right: 0,
           bottom: 0,
-          experimental_backgroundImage: `linear-gradient(to ${toEdge}, rgba(${rgb},0.84) 0%, rgba(${rgb},0.64) 34%, rgba(${rgb},0.32) 60%, rgba(${rgb},0.1) 80%, rgba(${rgb},0) 98%)`,
+          experimental_backgroundImage: `linear-gradient(to ${toEdge}, rgba(${rgb},0.96) 0%, rgba(${rgb},0.86) 34%, rgba(${rgb},0.5) 60%, rgba(${rgb},0.16) 80%, rgba(${rgb},0) 98%)`,
         }}
       />
     </View>
