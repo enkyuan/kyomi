@@ -86,7 +86,14 @@ final class TabBarModel {
     onAddPress()
   }
 
+  /// A second tap while the glass is still morphing reverses it mid-flight, and a glass layer
+  /// interrupted that early is left behind as a blank bar, so taps inside the morph are ignored.
+  private var lastSearchToggle = ContinuousClock.now.advanced(by: .seconds(-1))
+
   func toggleSearch() {
+    let now = ContinuousClock.now
+    guard now - lastSearchToggle > .milliseconds(400) else { return }
+    lastSearchToggle = now
     searchActive.toggle()
     if !searchActive { searchQuery = "" }
     onSearchActiveChange(searchActive)
