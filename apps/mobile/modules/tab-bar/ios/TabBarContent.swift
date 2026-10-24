@@ -59,13 +59,13 @@ struct TabBarContent: View {
       traits.userInterfaceStyle == .dark ? .secondarySystemBackground : .systemBackground
     }
   )
-  /// What the capsule's glyphs do as it leaves or returns: they clear quickly when it leaves, so
-  /// none shows through the translucent search field growing over it, and shrink a little unless
-  /// Reduce Motion asks for a plain fade.
-  private var capsuleTransition: AnyTransition {
-    let leave = reduceMotion ? AnyTransition.opacity : .opacity.combined(with: .scale(scale: 0.86))
-    return .asymmetric(insertion: leave, removal: leave.animation(.easeOut(duration: 0.1)))
-  }
+  /// The capsule's glyphs clear quickly when it leaves, so none shows through the translucent search
+  /// field growing over it. A plain fade: the glass materializes on its own, and any scale or offset
+  /// here would read as the bar drifting.
+  private static let capsuleTransition = AnyTransition.asymmetric(
+    insertion: .opacity,
+    removal: .opacity.animation(.easeOut(duration: 0.1))
+  )
   /// The sheet's content follows the glass in, a beat behind, and leaves first on the way back.
   private static let sheetContentTransition = AnyTransition.asymmetric(
     insertion: .opacity.animation(.easeOut(duration: 0.2).delay(0.08)),
@@ -132,7 +132,7 @@ struct TabBarContent: View {
                 }
                 .glassEffectID("capsule", in: glassNamespace)
                 .glassEffectTransition(.materialize)
-                .transition(capsuleTransition)
+                .transition(Self.capsuleTransition)
                 .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
             }
 
