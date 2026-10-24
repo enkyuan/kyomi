@@ -179,7 +179,7 @@ function chatText(result: ChatResult): string | null {
       .join("") ??
     result.response;
   if (typeof content === "string") {
-    return content;
+    return content === "" ? null : content;
   }
   return content !== null && typeof content === "object" ? JSON.stringify(content) : null;
 }
