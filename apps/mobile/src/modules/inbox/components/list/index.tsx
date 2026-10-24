@@ -1,7 +1,7 @@
 import { AnimatedLegendList } from "@legendapp/list/reanimated";
 import { router } from "expo-router";
 import { type ReactElement } from "react";
-import { Platform } from "react-native";
+import { Platform, RefreshControl } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, { type SharedValue } from "react-native-reanimated";
 import { COMPACT_NAV_HEIGHT } from "@ui/header";
@@ -10,6 +10,7 @@ import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { useTabBarMinimizeScroll } from "@ui/tab-bar/hooks/use-minimize";
 import { type ArticleScope, useArticles } from "@modules/inbox/hooks/use-articles";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
+import { useEmptyPage } from "@modules/inbox/hooks/use-empty-page";
 import { prefetchReaderArticle } from "@modules/articles/lib/requests";
 import { Item } from "../item";
 import { ESTIMATED_ROW_SIZE, ListSkeleton } from "./skeleton";
@@ -38,7 +39,17 @@ export function List({
   const scrollbarTopInset = insets.top + COMPACT_NAV_HEIGHT;
   const isIOS = Platform.OS === "ios";
 
-  const { items, isLoading, isFetchingNextPage, hasNextPage, fetchNextPage } = useArticles(scope);
+  const {
+    items,
+    isLoading,
+    isFetchingNextPage,
+    hasNextPage,
+    fetchNextPage,
+    refetch,
+    isRefetching,
+    isError,
+    pageCount,
+  } = useArticles(scope);
   const visibleItems =
     filter === "unread"
       ? items.filter((item) => !item.isRead)
@@ -47,6 +58,16 @@ export function List({
         : items;
   const sharedValues = { scrollOffset: scrollY };
   const minimizeScrollHandler = useTabBarMinimizeScroll(scrollY);
+
+  useEmptyPage(visibleItems.length, {
+    hasNextPage,
+    isLoading,
+    isFetchingNextPage,
+    isRefetching,
+    isError,
+    pageCount,
+    fetchNextPage,
+  });
 
   if (isLoading) {
     return (
@@ -68,6 +89,14 @@ export function List({
           paddingBottom: tabBarOcclusionHeight,
           paddingTop: topContentInset,
         }}
+        refreshControl={
+          <RefreshControl
+            refreshing={isRefetching}
+            onRefresh={() => {
+              void refetch();
+            }}
+          />
+        }
         onScroll={minimizeScrollHandler}
         scrollEventThrottle={16}
         scrollIndicatorInsets={
@@ -88,10 +117,15 @@ export function List({
       contentContainerStyle={{ paddingBottom: tabBarOcclusionHeight, paddingTop: topContentInset }}
       contentInsetAdjustmentBehavior="never"
       data={visibleItems}
+      onRefresh={() => {
+        void refetch();
+      }}
+      refreshing={isRefetching}
       estimatedItemSize={ESTIMATED_ROW_SIZE}
       keyExtractor={(item: ArticleListItemDto) => item.id}
       onEndReached={() => {
-        if (hasNextPage && !isFetchingNextPage) fetchNextPage();
+        if (hasNextPage && !isFetchingNextPage && !isRefetching)
+          void fetchNextPage({ cancelRefetch: false });
       }}
       onScroll={minimizeScrollHandler}
       scrollEventThrottle={16}

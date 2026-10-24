@@ -16,6 +16,7 @@ import PostHogProvider from "@integrations/posthog/provider";
 import { getAuthBootstrapState } from "@lib/auth/api";
 import type { AuthCapabilities } from "@lib/auth/capabilities";
 import type { AvailableAuthSessionState } from "@lib/auth/session";
+import { HttpStatusError } from "@lib/status";
 import { SHELL_INIT_SCRIPT } from "@/app/shell-init";
 import appCss from "../styles.css?url";
 
@@ -33,7 +34,10 @@ const REACT_SCAN_QUERY_PARAM = "react-scan";
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
   beforeLoad: async () => {
-    const { authState, authCapabilities } = await getAuthBootstrapState();
+    const { authState, authCapabilities, errorStatus } = await getAuthBootstrapState();
+    if (errorStatus) {
+      throw new HttpStatusError(errorStatus);
+    }
     if (authState.status === "unavailable") {
       throw new Error(authState.message);
     }

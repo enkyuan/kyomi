@@ -13,7 +13,6 @@ import type { TabBarProps } from "./lib/types";
 
 export function TabBar({
   descriptors: _descriptors,
-  minimized: _minimized = false,
   navigation,
   onSearchQueryChange,
   onSearchSubmit,

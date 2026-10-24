@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import ImageIO
 
 /// One list row. It mirrors the React Native `Item` and `RecentHistoryItem` layouts point for point:
 /// 20pt side padding, the same gaps and the same type scale, all fed from the shared JS theme.
@@ -69,7 +70,7 @@ struct ArticleRowView: View {
       .foregroundStyle(style.badgeText)
       .lineLimit(1)
       .padding(.horizontal, 8)
-      .frame(height: style.badgeHeight)
+      .frame(minHeight: style.badgeHeight)
       .background(Capsule().fill(style.badgeBackground))
       .accessibilityLabel("Previously opened. Continue reading.")
   }
@@ -160,6 +161,7 @@ struct ArticleRowView: View {
           tint: style.mutedForeground,
           background: style.card
         )
+          .id(row.faviconUrls)
           .accessibilityHidden(true)
         ListText(row.sourceLabel, font: style.metaFont, color: style.mutedForeground.opacity(0.95), lines: 1)
           .frame(maxWidth: .infinity, alignment: .leading)
@@ -256,7 +258,9 @@ struct FaviconView: View {
     .task(id: urls) {
       guard image == nil else { return }
       for url in urls {
+        guard !Task.isCancelled else { return }
         if let loaded = await FaviconStore.shared.image(for: url) {
+          guard !Task.isCancelled else { return }
           image = loaded
           return
         }
@@ -279,7 +283,12 @@ private nonisolated(unsafe) let faviconCache: NSCache<NSURL, UIImage> = {
 final class FaviconStore {
   static let shared = FaviconStore()
 
-  private var failed = Set<URL>()
+  // Failed URLs expire, so offline startup does not poison the rest of the app session.
+  private let failed: NSCache<NSURL, NSDate> = {
+    let cache = NSCache<NSURL, NSDate>()
+    cache.countLimit = 400
+    return cache
+  }()
   private var inFlight: [URL: Task<UIImage?, Never>] = [:]
 
   nonisolated static func cachedImage(for url: URL) -> UIImage? {
@@ -288,16 +297,24 @@ final class FaviconStore {
 
   func image(for url: URL) async -> UIImage? {
     if let cached = Self.cachedImage(for: url) { return cached }
-    if failed.contains(url) { return nil }
+    if let until = failed.object(forKey: url as NSURL), until.timeIntervalSinceNow > 0 { return nil }
     if let task = inFlight[url] { return await task.value }
 
     let task = Task.detached(priority: .utility) { () -> UIImage? in
+      let request = URLRequest(url: url, timeoutInterval: 15)
       guard
-        let (data, response) = try? await URLSession.shared.data(from: url),
+        let (data, response) = try? await URLSession.shared.data(for: request),
         (response as? HTTPURLResponse).map({ (200..<300).contains($0.statusCode) }) ?? true,
-        let image = await UIImage(data: data)?.byPreparingForDisplay()
+        data.count <= 1_048_576,
+        let source = CGImageSourceCreateWithData(data as CFData, nil),
+        let thumbnail = CGImageSourceCreateThumbnailAtIndex(source, 0, [
+          kCGImageSourceCreateThumbnailFromImageAlways: true,
+          kCGImageSourceCreateThumbnailWithTransform: true,
+          kCGImageSourceThumbnailMaxPixelSize: 96,
+          kCGImageSourceShouldCacheImmediately: true,
+        ] as CFDictionary)
       else { return nil }
-      return image
+      return await UIImage(cgImage: thumbnail).byPreparingForDisplay()
     }
     inFlight[url] = task
     let image = await task.value
@@ -305,7 +322,7 @@ final class FaviconStore {
     if let image {
       faviconCache.setObject(image, forKey: url as NSURL)
     } else {
-      failed.insert(url)
+      failed.setObject(NSDate(timeIntervalSinceNow: 30), forKey: url as NSURL)
     }
     return image
   }

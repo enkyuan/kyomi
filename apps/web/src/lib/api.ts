@@ -3,6 +3,7 @@ import {
   getUserSafeErrorMessage,
   readResponseErrorSummary,
 } from "@kyomi/reader/lib/errors";
+import { HttpStatusError } from "@lib/status";
 
 const HOP_BY_HOP_HEADERS = new Set([
   "connection",
@@ -113,7 +114,10 @@ export async function apiJson<T>(path: string, init?: RequestInit) {
   if (!response.ok) {
     const summary = await readResponseErrorSummary(response);
     logApiResponseError(method, apiPath, response.status, summary);
-    throw new Error(getUserSafeErrorMessage(summary, apiFailureUserMessage(response.status)));
+    throw new HttpStatusError(
+      response.status,
+      getUserSafeErrorMessage(summary, apiFailureUserMessage(response.status)),
+    );
   }
 
   try {

@@ -28,7 +28,6 @@ export interface TabBarProps {
   readonly onAddPress?: () => void;
   readonly onSearchQueryChange?: (query: string) => void;
   readonly onSearchSubmit?: (query: string) => void;
-  readonly minimized?: boolean;
   readonly [key: string]: unknown;
 }
 

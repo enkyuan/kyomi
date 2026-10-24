@@ -15,6 +15,7 @@ import {
   accessibilityLabel,
   autocorrectionDisabled,
   background,
+  clipped,
   clipShape,
   disabled,
   font,
@@ -22,11 +23,11 @@ import {
   frame,
   keyboardType,
   onSubmit,
+  onTapGesture,
   opacity,
   padding,
   strokeBorder,
   submitLabel,
-  tint,
   textContentType,
   textFieldStyle,
   textInputAutocapitalization,
@@ -264,7 +265,49 @@ export function OTPFormStep({
         />
 
         <ZStack modifiers={[FULL_WIDTH, padding({ top: 24 })]}>
-          <HStack spacing={10} modifiers={[FULL_WIDTH]}>
+          {/*
+            The real native input. iOS will not insert a tapped one-time-code suggestion into a
+            field drawn with clear text or tint, so it keeps default colours and is instead clipped
+            to a 1pt sliver at its centre, where no digit is drawn. The boxes are the display.
+          */}
+          <ZStack modifiers={[frame({ width: 1, height: 52 }), clipped()]}>
+            <TextField
+              ref={otpFieldRef}
+              text={otp}
+              onTextChange={onOTPChange}
+              maxLength={OTP_LENGTH}
+              modifiers={[
+                textFieldStyle("plain"),
+                keyboardType("numeric"),
+                onSubmit(handleSubmit),
+                submitLabel("done"),
+                textContentType("oneTimeCode"),
+                textInputAutocapitalization("never"),
+                autocorrectionDisabled(),
+
+                font({
+                  family: FONT_FAMILIES.inter.semibold,
+                  size: FONT_SIZES.otp,
+                }),
+
+                accessibilityLabel(
+                  invalid ? "Invalid 6-digit verification code" : "6-digit verification code",
+                ),
+                accessibilityHint(
+                  invalid ? validationMessage : "Enter the verification code we sent.",
+                ),
+
+                padding({ horizontal: 20 }),
+                frame({ width: 240, height: 52 }),
+                opacity(0.02),
+              ]}
+            />
+          </ZStack>
+
+          <HStack
+            spacing={10}
+            modifiers={[FULL_WIDTH, onTapGesture(() => otpFieldRef.current?.focus())]}
+          >
             {OTP_SLOTS.map((slot) => {
               const isCurrentSlot = otpValue.length === slot;
 
@@ -304,44 +347,6 @@ export function OTPFormStep({
               );
             })}
           </HStack>
-
-          <TextField
-            ref={otpFieldRef}
-            autoFocus
-            text={otp}
-            onTextChange={onOTPChange}
-            maxLength={OTP_LENGTH}
-            modifiers={[
-              textFieldStyle("plain"),
-              keyboardType("numeric"),
-              onSubmit(handleSubmit),
-              submitLabel("done"),
-              textContentType("oneTimeCode"),
-              textInputAutocapitalization("never"),
-              autocorrectionDisabled(),
-
-              font({
-                family: FONT_FAMILIES.inter.semibold,
-                size: FONT_SIZES.otp,
-              }),
-
-              accessibilityLabel(
-                invalid ? "Invalid 6-digit verification code" : "6-digit verification code",
-              ),
-              accessibilityHint(
-                invalid ? validationMessage : "Enter the verification code we sent.",
-              ),
-
-              // Full-size transparent field — the real native input. The six
-              // digit boxes above are presentation only.
-              foregroundStyle("clear"),
-              tint("clear"),
-              background("clear"),
-              clipShape("capsule"),
-              padding({ horizontal: 20 }),
-              frame({ maxWidth: Infinity, height: 52 }),
-            ]}
-          />
         </ZStack>
       </VStack>
 

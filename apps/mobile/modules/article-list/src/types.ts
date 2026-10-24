@@ -55,13 +55,53 @@ export type ArticleListRow = {
   readonly timeLabel: string;
   readonly title: string;
   readonly summary?: string;
-  readonly faviconUrls: readonly string[];
+  /** Retained on the wire for existing native development builds. Display uses sourceLabel. */
   readonly feedTitle: string;
+  readonly faviconUrls: readonly string[];
   readonly isSaved?: boolean;
   readonly isContinuing?: boolean;
 };
 
 export type ArticleListRowAction = "toggleSaved" | "share" | "openSource" | "hide" | "report";
+
+/**
+ * A change to the rows the list shows. Rows are not a prop: Fabric converts every prop again on
+ * each update to any prop, so the list is fed through `ArticleListHandle.applyOps` instead.
+ */
+export type ArticleListOp =
+  /** Replaces every row. `epoch` must grow with each reset. */
+  | {
+      readonly type: "reset";
+      readonly epoch: number;
+      readonly rows: readonly ArticleListRow[];
+      readonly scrollToTop?: boolean;
+    }
+  /** Adds rows after the last one; a row whose id is already listed is updated in place. */
+  | { readonly type: "append"; readonly rows: readonly ArticleListRow[] }
+  /** Replaces the content of listed rows; ids that are not listed are ignored. */
+  | { readonly type: "update"; readonly rows: readonly ArticleListRow[] }
+  | { readonly type: "remove"; readonly ids: readonly string[] }
+  /**
+   * Where paging stands, sent in the same batch as the rows it describes so the list never sees
+   * one without the other. `pageCount` must grow with every page that arrives, even one whose rows
+   * were all filtered out: it is what lets the list ask for the next page again.
+   */
+  | {
+      readonly type: "paging";
+      readonly pageCount: number;
+      readonly hasMore: boolean;
+      readonly isLoadingMore: boolean;
+    };
+
+/** What a ref to `ArticleListView` exposes. */
+export type ArticleListHandle = {
+  /** `payload` is `JSON.stringify` of an `ArticleListOp[]`, applied in order. */
+  readonly applyOps: (payload: string) => Promise<void>;
+  /** Scroll to an article by stable ID. Returns false when it is not loaded. */
+  readonly scrollToItem: (id: string, animated: boolean) => Promise<boolean>;
+  /** Native content offset, including negative top-inset positions. */
+  readonly scrollToOffset: (offset: number, animated: boolean) => Promise<void>;
+};
 
 export type ArticleListInsets = {
   readonly top: number;
@@ -69,24 +109,28 @@ export type ArticleListInsets = {
 };
 
 export type ArticleListViewProps = ViewProps & {
-  readonly rows: readonly ArticleListRow[];
   readonly listStyle: ArticleListStyle;
+  readonly refreshing?: boolean;
+  readonly onRefresh?: () => void;
+  /** Emitted only when visible IDs change, in display order. */
+  readonly onVisibleItemsChange?: (event: NativeSyntheticEvent<{ ids: string[] }>) => void;
   /** Space the content keeps clear of the floating header and tab bar. */
   readonly contentInset?: ArticleListInsets;
   readonly scrollIndicatorInset?: ArticleListInsets;
   /** Let UIKit inset the list under a native navigation header instead of `contentInset`. */
   readonly adjustsInsetsAutomatically?: boolean;
-  /**
-   * More pages exist; `onEndReached` fires once per page while this is true. Fetch state stays in
-   * JS: every prop change re-sends all props, `rows` included, so it is not mirrored here.
-   */
-  readonly hasMore?: boolean;
-  /** Distance from the end, in viewport heights, that triggers the next page. */
-  readonly endReachedThreshold?: number;
+  /** How many rows from the last one `onEndReached` fires. Default 5. */
+  readonly endReachedDistance?: number;
   /** Scrolls to the top whenever the value changes. */
   readonly scrollToTopToken?: number;
+  /**
+   * The next page is wanted: a row within `endReachedDistance` of the last is on screen, more
+   * pages exist and none is loading (see the `paging` operation). Fires once per page; a failed
+   * fetch is asked for again when the user next drags.
+   */
   readonly onEndReached?: () => void;
-  readonly onScroll?: (event: NativeSyntheticEvent<{ y: number }>) => void;
+  /** `maxY` is the resting offset at the end of the list; larger offsets are overscroll. */
+  readonly onScroll?: (event: NativeSyntheticEvent<{ y: number; maxY: number }>) => void;
   readonly onRowPress?: (event: NativeSyntheticEvent<{ id: string }>) => void;
   readonly onRowPressIn?: (event: NativeSyntheticEvent<{ id: string }>) => void;
   readonly onRowAction?: (
