@@ -6,8 +6,7 @@ import {
   logClientError,
 } from "@kyomi/reader/lib/errors";
 
-export type ApiFetchInit = Omit<RequestInit, "headers"> & {
-  headers?: HeadersInit;
+export type ApiFetchInit = RequestInit & {
   /** An internal Nitro cache key. It is never sent to the API. */
   prefetchKey?: string;
 };
