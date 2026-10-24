@@ -166,9 +166,14 @@ struct TabBarContent: View {
           }
         }
         .frame(width: container.width, height: container.height)
+        // The add composer draws its own field and close button where the bar's buttons are, so the
+        // bar fades out beneath it as a whole, with nothing inserted, removed or re-tinted.
+        .opacity(model.composerActive ? 0 : 1)
+        .allowsHitTesting(!model.composerActive)
+        .accessibilityHidden(model.composerActive)
 
-        // The add composer covers the bar, and everything behind it, with its own background, field
-        // and close button, so the bar underneath never changes for it. The whole layer fades.
+        // The add composer's own layer: a background over the screen above its field, the field and
+        // a close button, and the results. The whole layer fades.
         if model.composerActive {
           TabBarComposer(
             model: model,

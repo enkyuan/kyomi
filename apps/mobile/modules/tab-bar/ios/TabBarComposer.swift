@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// The add composer: a layer over the whole screen, the bar included, that brings its own
-/// background, search field and close button, so the bar underneath is never touched. The feeds
+/// background, search field and close button, so the bar underneath is only faded out. The feeds
 /// found list above the field, each with one button that follows or imports it, asking which folder
 /// to file it in when there are folders. Tapping the background outside the list closes it.
 struct TabBarComposer: View {
@@ -25,13 +25,23 @@ struct TabBarComposer: View {
 
   private var field: CGRect { fieldLayout.searchRect }
   private var close: CGRect { fieldLayout.trailingRect }
+  /// Rows scrolled past the list's top edge dissolve into this blur, as under the app's other chrome.
+  private static let blurBleed = TabBarMetrics.composerBlurBleed
   /// The list ends a gap above the field and starts a gap below the status bar.
   private var listBottom: CGFloat { field.minY - TabBarMetrics.composerResultsGap }
   private var listHeight: CGFloat { max(0, listBottom - safeTop - TabBarMetrics.composerResultsGap) }
 
   var body: some View {
     ZStack(alignment: .topLeading) {
+      // The background ends above the field, in a blur, so the field floats over the screen as
+      // the search field does.
       Self.background
+        .frame(height: listBottom)
+      TopBlur(background: Self.background)
+        .frame(height: Self.blurBleed)
+        .offset(y: listBottom)
+        .allowsHitTesting(false)
+      Color.clear
         .contentShape(.rect)
         .onTapGesture { model.toggleComposer() }
         .accessibilityHidden(true)
@@ -40,10 +50,13 @@ struct TabBarComposer: View {
         .frame(width: container.width, height: listBottom, alignment: .bottom)
 
       GlassEffectContainer(spacing: 0) {
-        fieldView
-          .position(x: field.midX, y: field.midY)
-        closeButton
-          .position(x: close.midX, y: close.midY)
+        // Each child is positioned over the whole container, so they need a stack to share it.
+        ZStack(alignment: .topLeading) {
+          fieldView
+            .position(x: field.midX, y: field.midY)
+          closeButton
+            .position(x: close.midX, y: close.midY)
+        }
       }
     }
     .frame(width: container.width, height: container.height)
@@ -117,8 +130,8 @@ struct TabBarComposer: View {
     if model.composerFeeds.isEmpty {
       emptyState
     } else {
-      // Whole rows only: a row cut by the list's top edge at rest would read as running under the
-      // status bar. Scrolled rows still leave through that edge, fading out as they go.
+      // Whole rows only, so no row sits cut by the list's top edge at rest. The scroll view runs a
+      // blur's height above them, empty at rest; scrolled rows rise into that blur and out of sight.
       let fitting = max(1, Int(listHeight / TabBarMetrics.composerResultHeight))
       let rows = min(model.composerFeeds.count, fitting)
       ScrollView {
@@ -132,13 +145,12 @@ struct TabBarComposer: View {
       .scrollIndicators(.hidden)
       .scrollBounceBehavior(.basedOnSize)
       .defaultScrollAnchor(.bottom)
-      .mask(
-        VStack(spacing: 0) {
-          LinearGradient(colors: [.clear, .black], startPoint: .top, endPoint: .bottom).frame(height: 16)
-          Color.black
-        }
-      )
-      .frame(height: CGFloat(rows) * TabBarMetrics.composerResultHeight)
+      .overlay(alignment: .top) {
+        TopBlur(background: Self.background)
+          .frame(height: Self.blurBleed)
+          .allowsHitTesting(false)
+      }
+      .frame(height: CGFloat(rows) * TabBarMetrics.composerResultHeight + Self.blurBleed)
     }
   }
 
@@ -226,5 +238,46 @@ struct TabBarComposer: View {
     .background(model.activeTint, in: .capsule)
     .opacity(model.canSubmitComposer(feed) || submitting ? 1 : 0.4)
     .contentShape(.capsule)
+  }
+}
+
+/// `ProgressiveBlur` (`progressive-blur.tsx`) for a top edge: a material, full strength through the
+/// first 30% and easing to nothing at the far edge, under a scrim of the screen's background that
+/// is near-opaque at the edge, so whatever scrolls into it dissolves instead of being cut.
+private struct TopBlur: View {
+  let background: Color
+
+  var body: some View {
+    ZStack {
+      Rectangle()
+        .fill(.regularMaterial)
+        .mask(
+          LinearGradient(
+            stops: [
+              .init(color: .black, location: 0),
+              .init(color: .black, location: 0.3),
+              .init(color: .black.opacity(0.95), location: 0.45),
+              .init(color: .black.opacity(0.82), location: 0.58),
+              .init(color: .black.opacity(0.62), location: 0.7),
+              .init(color: .black.opacity(0.38), location: 0.81),
+              .init(color: .black.opacity(0.16), location: 0.91),
+              .init(color: .clear, location: 1),
+            ],
+            startPoint: .top,
+            endPoint: .bottom
+          )
+        )
+      LinearGradient(
+        stops: [
+          .init(color: background.opacity(0.96), location: 0),
+          .init(color: background.opacity(0.86), location: 0.34),
+          .init(color: background.opacity(0.5), location: 0.6),
+          .init(color: background.opacity(0.16), location: 0.8),
+          .init(color: background.opacity(0), location: 0.98),
+        ],
+        startPoint: .top,
+        endPoint: .bottom
+      )
+    }
   }
 }
