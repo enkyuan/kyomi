@@ -27,16 +27,14 @@ struct TabBarComposer: View {
 
   private var field: CGRect { fieldLayout.searchRect }
   private var close: CGRect { fieldLayout.trailingRect }
-  /// At rest the list sits between a gap below the status bar and a gap above the field.
-  private var listTop: CGFloat { safeTop + TabBarMetrics.composerResultsGap }
+  /// At rest the list sits between the status bar's fade and a gap above the field.
+  private var listTop: CGFloat { safeTop + TabBarMetrics.composerFadeLength }
   private var listBottomInset: CGFloat { container.height - field.minY + TabBarMetrics.composerResultsGap }
   private var listHeight: CGFloat { max(0, container.height - listTop - listBottomInset) }
 
   var body: some View {
     ZStack(alignment: .topLeading) {
       Self.background
-      Color.clear
-        .contentShape(.rect)
         .onTapGesture { model.toggleComposer() }
         .accessibilityHidden(true)
 
@@ -125,9 +123,9 @@ struct TabBarComposer: View {
       emptyState
     } else {
       // The scroll view fills the screen, under the status bar above and behind the field below,
-      // so rows leave through both without a cut edge. Margins hold the first row below the status
-      // bar and the last above the field when the list is at its ends. A short list rests on the
-      // field, and a long one opens on its last row.
+      // so rows leave through both without a cut edge. Margins hold the first row below the
+      // status bar and the last above the field when the list is at its ends. A short list rests
+      // on the field, and a long one opens on its last row.
       ScrollView {
         VStack(spacing: 0) {
           Spacer(minLength: 0)
@@ -149,10 +147,23 @@ struct TabBarComposer: View {
       .scrollBounceBehavior(.basedOnSize)
       .scrollPosition($position)
       .onChange(of: model.composerFeeds) { position.scrollTo(edge: .bottom) }
+      // Nothing shows behind the status bar, which would read as tappable and cost the clock its
+      // legibility (HIG, "Obscure content under the status bar"); below it the background eases
+      // away, as the scrim of `progressive-blur.tsx` does. A material would only tint the flat
+      // background, so it is left out.
       .overlay(alignment: .top) {
-        TopFade(background: Self.background)
-          .frame(height: listTop)
-          .allowsHitTesting(false)
+        LinearGradient(
+          stops: [
+            .init(color: Self.background, location: 0),
+            .init(color: Self.background, location: safeTop / listTop),
+            .init(color: Self.background.opacity(0.4), location: (safeTop / listTop + 1) / 2),
+            .init(color: Self.background.opacity(0), location: 1),
+          ],
+          startPoint: .top,
+          endPoint: .bottom
+        )
+        .frame(height: listTop)
+        .allowsHitTesting(false)
       }
     }
   }
@@ -202,28 +213,23 @@ struct TabBarComposer: View {
   }
 
   /// With folders, pressing the button lists them to file the feed in; without, it follows at once.
-  @ViewBuilder
   private func action(_ feed: ComposerFeed) -> some View {
-    if model.composerFolders.isEmpty {
-      Button {
-        model.submitComposer(feed)
-      } label: {
-        actionLabel(feed)
-      }
-      .buttonStyle(.plain)
-      .disabled(!model.canSubmitComposer(feed))
-    } else {
-      Menu {
-        Button("Unsorted", systemImage: "tray") { model.submitComposer(feed) }
-        ForEach(model.composerFolders) { folder in
-          Button(folder.name, systemImage: "folder") { model.submitComposer(feed, folderID: folder.id) }
+    Group {
+      if model.composerFolders.isEmpty {
+        Button { model.submitComposer(feed) } label: { actionLabel(feed) }
+      } else {
+        Menu {
+          Button("Unsorted", systemImage: "tray") { model.submitComposer(feed) }
+          ForEach(model.composerFolders) { folder in
+            Button(folder.name, systemImage: "folder") { model.submitComposer(feed, folderID: folder.id) }
+          }
+        } label: {
+          actionLabel(feed)
         }
-      } label: {
-        actionLabel(feed)
       }
-      .buttonStyle(.plain)
-      .disabled(!model.canSubmitComposer(feed))
     }
+    .buttonStyle(.plain)
+    .disabled(!model.canSubmitComposer(feed))
   }
 
   private func actionLabel(_ feed: ComposerFeed) -> some View {
@@ -242,27 +248,5 @@ struct TabBarComposer: View {
     .background(model.activeTint, in: .capsule)
     .opacity(model.canSubmitComposer(feed) || submitting ? 1 : 0.4)
     .contentShape(.capsule)
-  }
-}
-
-/// The scrim of `ProgressiveBlur` (`progressive-blur.tsx`) for the top edge, in the screen's
-/// background colour: near-opaque at the screen's edge, so the status bar sits on clean ground, and
-/// easing to nothing below it. The list sits on a flat background, so a blur under it would only
-/// tint a band; the scrim alone is what blends the rows out.
-private struct TopFade: View {
-  let background: Color
-
-  var body: some View {
-    LinearGradient(
-      stops: [
-        .init(color: background.opacity(0.96), location: 0),
-        .init(color: background.opacity(0.86), location: 0.34),
-        .init(color: background.opacity(0.5), location: 0.6),
-        .init(color: background.opacity(0.16), location: 0.8),
-        .init(color: background.opacity(0), location: 0.98),
-      ],
-      startPoint: .top,
-      endPoint: .bottom
-    )
   }
 }

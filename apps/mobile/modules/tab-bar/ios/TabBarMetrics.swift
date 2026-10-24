@@ -70,6 +70,8 @@ enum TabBarMetrics {
   /// Height of a feed in the composer's results, and the space kept between them and the field.
   static let composerResultHeight: CGFloat = 76
   static let composerResultsGap: CGFloat = 12
+  /// How far below the status bar the results fade in.
+  static let composerFadeLength: CGFloat = 24
 }
 
 /// Resolved geometry for one state of the bar: a search button at the leading edge, the tab capsule
