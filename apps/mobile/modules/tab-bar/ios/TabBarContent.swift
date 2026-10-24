@@ -3,7 +3,7 @@ import UIKit
 
 /// Kyomi's floating tab bar, laid out like the iOS 26 system bar: a search button at the leading
 /// edge, a Liquid Glass capsule of tabs and the narrower switcher centred between the buttons, and
-/// a matcha add button at the trailing edge. Searching grows the search button's own glass into the
+/// a matcha add button at the trailing edge. Searching widens the search button's own glass into the
 /// field while the add button turns into the close button; the capsule dematerializes meanwhile and
 /// materializes again on close. Minimizing hides the capsule and leaves only the two buttons; the
 /// switcher grows the capsule's glass into a sheet, with a sheet's detents, drag, dimming and
@@ -12,9 +12,6 @@ struct TabBarContent: View {
   @Bindable var model: TabBarModel
   @FocusState private var searchFocused: Bool
   @State private var sheetDetent = SwitcherSheetDetent.medium
-  /// The field's glyph and text arrive a beat after its glass has started to grow, and leave with
-  /// the glass at once on close, so nothing cross-fades with the tabs coming back.
-  @State private var searchContentVisible = false
   /// Vertical drag on the open sheet; its top edge follows the finger 1:1.
   @State private var sheetDrag: CGFloat = 0
   /// VoiceOver lands on the sheet's title as it opens.
@@ -34,15 +31,20 @@ struct TabBarContent: View {
         : UIColor(red: 0x8E / 255, green: 0x8E / 255, blue: 0x93 / 255, alpha: 1)
     }
   )
-  /// Search grows the search button's glass into the field, and the user can reverse it
+  /// Search widens the search button's glass into the field, and the user can reverse it
   /// mid-flight; a spring retargets from the glass's current frame instead of restarting. A tap
   /// carries no momentum, so it does not overshoot. With Reduce Motion the glass takes its new
-  /// shape at once and only the field's content fades in (`searchContentAnimation`).
+  /// shape at once and only the field's text fades in (`searchFieldTransition`).
   private var transition: Animation? {
     reduceMotion ? nil : .spring(duration: 0.38, bounce: 0)
   }
-  private var searchContentAnimation: Animation? {
-    searchContentVisible ? .easeOut(duration: reduceMotion ? 0.15 : 0.2).delay(reduceMotion ? 0 : 0.08) : nil
+  /// The field's text arrives a beat after its glass has started to widen and leaves ahead of it,
+  /// so nothing cross-fades with the tabs coming back.
+  private var searchFieldTransition: AnyTransition {
+    .asymmetric(
+      insertion: .opacity.animation(.easeOut(duration: reduceMotion ? 0.15 : 0.2).delay(reduceMotion ? 0 : 0.08)),
+      removal: .opacity.animation(.easeOut(duration: 0.1))
+    )
   }
   /// One shape for the capsule and the sheet, so the glass only changes frame as it morphs: corners
   /// that follow the display's where they meet them, never tighter than the capsule's, or the
@@ -124,29 +126,22 @@ struct TabBarContent: View {
               .glassEffectID("capsule", in: glassNamespace)
               .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
 
-            // The search button and the field share one glass identity, so the button's glass
-            // grows into the field from the leading edge and contracts back into the button.
-            if layout.showsSearchButton {
-              Group {
-                if model.searchActive {
-                  searchField(layout)
-                } else {
-                  searchButton(layout)
+            // The open sheet covers both buttons' places; they materialize out into its glass.
+            if layout.showsButtons {
+              // The search button and the field are one view, so its glass widens from the
+              // leading edge and narrows back with nothing inserted or removed to be matched up.
+              searchSurface(layout)
+                .onGeometryChange(for: CGRect.self) { proxy in
+                  proxy.frame(in: .named(Self.coordinateSpace))
+                } action: { frame in
+                  model.actionFrame = frame
                 }
-              }
-              .onGeometryChange(for: CGRect.self) { proxy in
-                proxy.frame(in: .named(Self.coordinateSpace))
-              } action: { frame in
-                model.actionFrame = frame
-              }
-              .glassEffectID("search", in: glassNamespace)
-              .glassEffectTransition(.materialize)
-              .position(x: layout.searchRect.midX, y: layout.searchRect.midY)
-            }
+                .glassEffectID("search", in: glassNamespace)
+                .glassEffectTransition(.materialize)
+                .position(x: layout.searchRect.midX, y: layout.searchRect.midY)
 
-            // One button turns from add into close and back: the glass loses its tint and the plus
-            // turns a quarter of the way round into a cross.
-            if layout.showsTrailing {
+              // One button turns from add into close and back: the glass loses its tint and the
+              // plus turns a quarter of the way round into a cross.
               trailingButton(layout)
                 .onGeometryChange(for: CGRect.self) { proxy in
                   proxy.frame(in: .named(Self.coordinateSpace))
@@ -165,14 +160,14 @@ struct TabBarContent: View {
     .coordinateSpace(.named(Self.coordinateSpace))
     .animation(minimizeTransition, value: model.minimized)
     .animation(transition, value: model.searchActive)
-    .onChange(of: model.searchActive) { _, active in
-      searchContentVisible = active
-      if !active { searchFocused = false }
-    }
-    // Opening search focuses the field. It mounts while its content is still fading in, and a view
-    // that is not visible yet can refuse focus, so ask again once the fade is under way.
+    // Opening search focuses the field. It mounts while its text is still fading in, and a view
+    // that is not visible yet can refuse focus, so ask again once the fade is under way. Closing
+    // drops the keyboard with the glass.
     .task(id: model.searchActive) {
-      guard model.searchActive else { return }
+      guard model.searchActive else {
+        searchFocused = false
+        return
+      }
       searchFocused = true
       try? await Task.sleep(for: .milliseconds(200))
       if model.searchActive { searchFocused = true }
@@ -311,7 +306,8 @@ struct TabBarContent: View {
         .accessibilityHidden(true)
 
         HStack(spacing: 0) {
-          ForEach(Array(model.tabs.enumerated()), id: \.element.id) { index, tab in
+          ForEach(model.tabs.indices, id: \.self) { index in
+            let tab = model.tabs[index]
             let isSelected = index == model.selectedIndex
             TabBarIconView(
               icon: isSelected ? tab.selectedIcon : tab.icon,
@@ -353,50 +349,52 @@ struct TabBarContent: View {
     .accessibilityHint(switcher.hint)
   }
 
-  private func searchField(_ layout: TabBarLayout) -> some View {
-    HStack(spacing: TabBarMetrics.searchFieldSpacing) {
-      searchGlyph(size: TabBarMetrics.searchIconSize, color: Self.searchFieldIconColor)
-        .frame(width: TabBarMetrics.searchFieldIconWidth)
-        .accessibilityHidden(true)
+  /// A capsule as wide as it is tall is the search button; widened, it is the field. The glyph keeps
+  /// the button's centre in both, so it never slides, and the field's text sits beside it. The glass
+  /// is interactive only as a button.
+  private func searchSurface(_ layout: TabBarLayout) -> some View {
+    let searching = model.searchActive
+    return ZStack(alignment: .leading) {
+      if searching {
+        TextField(model.searchPlaceholder, text: $model.searchQuery)
+          .focused($searchFocused)
+          .submitLabel(.search)
+          .onSubmit {
+            model.submitSearch()
+            searchFocused = false
+          }
+          .padding(.leading, TabBarMetrics.searchFieldTextInset)
+          .padding(.trailing, TabBarMetrics.searchFieldPadding)
+          .transition(searchFieldTransition)
+      }
 
-      TextField(model.searchPlaceholder, text: $model.searchQuery)
-        .focused($searchFocused)
-        .submitLabel(.search)
-        .onSubmit {
-          model.submitSearch()
-          searchFocused = false
-        }
+      Button {
+        model.toggleSearch()
+      } label: {
+        searchGlyph(searching ? Self.searchFieldIconColor : Self.actionIconColor)
+          .scaleEffect(layout.buttonScale)
+          .frame(width: layout.buttonSize, height: layout.buttonSize)
+          .contentShape(.circle)
+      }
+      .buttonStyle(.plain)
+      .allowsHitTesting(!searching)
+      .accessibilityLabel("Search articles")
+      .accessibilityHidden(searching)
     }
-    .padding(.horizontal, TabBarMetrics.searchFieldPadding)
-    .opacity(searchContentVisible ? 1 : 0)
-    .animation(searchContentAnimation, value: searchContentVisible)
-    .frame(width: layout.searchRect.width, height: layout.searchRect.height)
-    .glassEffect(.regular, in: Self.glassShape(sheet: false))
+    .frame(width: layout.searchRect.width, height: layout.searchRect.height, alignment: .leading)
+    .clipShape(.capsule)
+    .glassEffect(searching ? .regular : .regular.interactive(), in: .capsule)
   }
 
   @ViewBuilder
-  private func searchGlyph(size: CGFloat, color: Color) -> some View {
+  private func searchGlyph(_ color: Color) -> some View {
     if let icon = model.searchIcon {
-      TabBarIconView(icon: icon, size: size, color: color)
+      TabBarIconView(icon: icon, size: TabBarMetrics.searchIconSize, color: color)
     } else {
       Image(systemName: "magnifyingglass")
-        .font(.system(size: size))
+        .font(.system(size: TabBarMetrics.searchIconSize))
         .foregroundStyle(color)
     }
-  }
-
-  private func searchButton(_ layout: TabBarLayout) -> some View {
-    Button {
-      model.toggleSearch()
-    } label: {
-      searchGlyph(size: TabBarMetrics.searchIconSize, color: Self.actionIconColor)
-        .scaleEffect(layout.buttonScale)
-        .frame(width: layout.buttonSize, height: layout.buttonSize)
-      .contentShape(.circle)
-    }
-    .buttonStyle(.plain)
-    .glassEffect(.regular.interactive(), in: .circle)
-    .accessibilityLabel("Search articles")
   }
 
   private func trailingButton(_ layout: TabBarLayout) -> some View {

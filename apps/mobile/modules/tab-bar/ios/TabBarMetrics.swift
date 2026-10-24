@@ -34,9 +34,10 @@ enum TabBarMetrics {
   static let switcherIconSize = tabIconSize
   static let searchIconSize = 18 * scale
   static let addIconSize = 20 * scale
+  /// The field's text starts this far from its leading edge, beside the glyph, and stops
+  /// `searchFieldPadding` short of the trailing one.
+  static let searchFieldTextInset = 44 * scale
   static let searchFieldPadding = 14 * scale
-  static let searchFieldSpacing = 8 * scale
-  static let searchFieldIconWidth = 22 * scale
 
   /// Space kept between the bar and the keyboard while it is visible.
   static let keyboardGap = 12 * scale
@@ -65,7 +66,6 @@ enum TabBarMetrics {
 /// Resolved geometry for one state of the bar: a search button at the leading edge, the tab capsule
 /// centred between the buttons, and an add button at the trailing edge, as in the iOS 26 tab bar.
 struct TabBarLayout: Equatable {
-  let containerWidth: CGFloat
   /// Height of the tab capsule (the buttons use `buttonSize`).
   let barHeight: CGFloat
   /// Vertical centre of the bar's band in the container.
@@ -74,17 +74,17 @@ struct TabBarLayout: Equatable {
   let buttonSize: CGFloat
   /// `buttonSize` relative to the expanded height, for scaling button glyphs.
   let buttonScale: CGFloat
-  /// Frame of the capsule's glass: the tab capsule or the search field.
+  /// Frame of the tab capsule's glass.
   let mainWidth: CGFloat
   let mainX: CGFloat
   let addX: CGFloat
-  /// The leading element: the search button, or the search field it grows into while searching.
+  /// The leading element: the search button, or the search field it widens into while searching.
   /// They share one glass, so this is the frame that glass moves between.
   let searchRect: CGRect
   /// Minimized or searching: the capsule is hidden.
   let showsMain: Bool
-  let showsSearchButton: Bool
-  let showsTrailing: Bool
+  /// The open sheet covers both buttons' places, so they are gone while it is presented.
+  let showsButtons: Bool
   /// Whole-point widths of the tab segments. `UISegmentedControl` floors
   /// fractional widths, so the icons and the selection lens share these values.
   let segmentWidths: [CGFloat]
@@ -107,16 +107,13 @@ struct TabBarLayout: Equatable {
     keyboardInset: CGFloat = 0
   ) {
     let containerWidth = containerSize.width
-    self.containerWidth = containerWidth
     let compact = minimized && !searchActive
     barHeight = TabBarMetrics.height
     buttonSize = compact && !reduceMotion ? TabBarMetrics.compactHeight : TabBarMetrics.height
     buttonScale = buttonSize / TabBarMetrics.height
     // Searching hides the capsule like minimizing does: it stays mounted, without its glass.
     showsMain = !minimized && !searchActive
-    // The open sheet covers both buttons' places; they materialize out into its glass.
-    showsSearchButton = !sheetPresented
-    showsTrailing = !sheetPresented
+    showsButtons = !sheetPresented
 
     let inset = TabBarMetrics.edgeInset
     let gap = TabBarMetrics.gap
@@ -134,7 +131,7 @@ struct TabBarLayout: Equatable {
     addX = containerWidth - inset - TabBarMetrics.height + buttonInset
     mainWidth = tabsWidth
     mainX = (containerWidth - tabsWidth) / 2
-    // Searching, the button's glass grows to the field, ending a gap short of the close button.
+    // Searching, the button's glass widens to the field, ending a gap short of the close button.
     searchRect = searchActive
       ? CGRect(
         x: inset,

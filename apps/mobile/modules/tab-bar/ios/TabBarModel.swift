@@ -81,7 +81,6 @@ final class TabBarModel {
     onTabPress(index)
   }
 
-
   func pressAdd() {
     pressFeedback += 1
     onAddPress()
