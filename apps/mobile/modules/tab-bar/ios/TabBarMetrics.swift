@@ -93,6 +93,7 @@ struct TabBarLayout: Equatable {
   let switcherWidth: CGFloat
   let segmentHeight: CGFloat
 
+  /// `keyboardInset`: how far the keyboard rises into the container, which the bar clears.
   /// `reduceMotion`: minimizing keeps the buttons' size, so it changes nothing's geometry and the
   /// capsule only dissolves, the cross-fade Reduce Motion asks for.
   init(
@@ -102,7 +103,8 @@ struct TabBarLayout: Equatable {
     minimized: Bool,
     searchActive: Bool,
     reduceMotion: Bool = false,
-    sheetPresented: Bool = false
+    sheetPresented: Bool = false,
+    keyboardInset: CGFloat = 0
   ) {
     let containerWidth = containerSize.width
     self.containerWidth = containerWidth
@@ -119,8 +121,8 @@ struct TabBarLayout: Equatable {
     let inset = TabBarMetrics.edgeInset
     let gap = TabBarMetrics.gap
     let availableWidth = max(0, containerWidth - inset * 2)
-    // The bar rests `edgeInset` above the bottom of its band.
-    barMidY = containerSize.height - inset - barHeight / 2
+    // The bar rests `edgeInset` above the bottom of its band, or `keyboardGap` above the keyboard.
+    barMidY = containerSize.height - max(inset, keyboardInset + TabBarMetrics.keyboardGap) - barHeight / 2
 
     // The capsule keeps its size when the bar minimizes (it only hides), so size it for the
     // expanded buttons, which also keeps the tab segments from reflowing.

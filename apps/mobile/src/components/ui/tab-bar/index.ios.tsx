@@ -12,12 +12,10 @@ import {
   PlusNativeIcon,
   type BlodeNativeIcon,
 } from "@kyomi/ui/icons/blode-native";
-import { useKeyboard } from "@hooks/use-keyboard";
 import { useOptionalTabBarMinimize } from "./hooks/use-minimize";
 import { mobileColors } from "@/theme/colors";
 import {
   TabBarView,
-  tabBarMetrics,
   type TabBarIcon,
   type TabBarItem,
   type TabBarSwitcher,
@@ -77,15 +75,11 @@ export function TabBar({
   onTabChange,
   state,
 }: TabBarProps) {
-  const { height: keyboardHeight } = useKeyboard();
   const minimizedSV = useOptionalTabBarMinimize()?.minimizedSV;
   // Committed on the UI thread the moment the scroll worklet decides, with no JS round trip and no
   // re-render; SwiftUI animates the change.
   const animatedProps = useAnimatedProps(() => ({ minimized: minimizedSV?.get() ?? false }));
   const selectedIndex = Math.min(Math.max(state?.index ?? 0, 0), TABS.length - 1);
-  // The bar rests on the screen edge and keeps `keyboardGap` above the keyboard.
-  const bottom =
-    keyboardHeight > 0 ? keyboardHeight + tabBarMetrics.keyboardGap - tabBarMetrics.edgeInset : 0;
 
   function handleTabPress({ nativeEvent: { index } }: NativeSyntheticEvent<{ index: number }>) {
     onTabChange?.(index);
@@ -113,7 +107,8 @@ export function TabBar({
       selectedIndex={selectedIndex}
       // Spans the screen so the switcher sheet can grow out of the bar; touches outside the bar
       // pass through natively. Screens reserve only the bar itself (`getTabBarOcclusionHeight`).
-      style={{ bottom, left: 0, position: "absolute", right: 0, top: 0 }}
+      // The bar clears the keyboard natively, so the host never moves with it.
+      style={{ bottom: 0, left: 0, position: "absolute", right: 0, top: 0 }}
       switcher={SWITCHER}
       tabs={TABS}
     />

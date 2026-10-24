@@ -84,16 +84,20 @@ struct TabBarContent: View {
 
   var body: some View {
     GeometryReader { proxy in
+      // The keyboard shrinks the proxy, so the full container is its size plus the keyboard's rise.
+      let keyboardInset = proxy.safeAreaInsets.bottom
+      let container = CGSize(width: proxy.size.width, height: proxy.size.height + keyboardInset)
       let layout = TabBarLayout(
-        containerSize: proxy.size,
+        containerSize: container,
         tabCount: model.tabs.count,
         hasSwitcher: model.switcher != nil,
         minimized: model.minimized,
         searchActive: model.searchActive,
         reduceMotion: reduceMotion,
-        sheetPresented: model.switcherPresented
+        sheetPresented: model.switcherPresented,
+        keyboardInset: keyboardInset
       )
-      let sheet = SwitcherSheetGeometry(container: proxy.size, safeTop: model.safeTop)
+      let sheet = SwitcherSheetGeometry(container: container, safeTop: model.safeTop)
 
       ZStack(alignment: .topLeading) {
         scrim(sheet)
@@ -105,8 +109,9 @@ struct TabBarContent: View {
             // Inserting and removing it on every scroll reversal left interrupted removal
             // transitions of the same glass identity in flight, which the container morphed into
             // the add button, chevron and all. Searching hides it the same way, so on close it
-            // materializes back in place, settling with the bar as the keyboard leaves, rather than
-            // being inserted mid-slide and arriving from the screen's edge.
+            // materializes back in place rather than being inserted and arriving from the screen's
+            // edge. Its glass has an identity of its own so the container never pairs it with the
+            // search field's glass and morphs the tabs into the field.
             let capsuleFrame = model.switcherPresented
               ? sheet.frame(top: sheet.top(sheetDetent, drag: sheetDrag))
               : layout.mainRect
@@ -116,6 +121,7 @@ struct TabBarContent: View {
               } action: { frame in
                 model.mainFrame = frame
               }
+              .glassEffectID("capsule", in: glassNamespace)
               .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
 
             // The search button and the field share one glass identity, so the button's glass
@@ -153,7 +159,7 @@ struct TabBarContent: View {
             }
           }
         }
-        .frame(width: proxy.size.width, height: proxy.size.height)
+        .frame(width: container.width, height: container.height)
       }
     }
     .coordinateSpace(.named(Self.coordinateSpace))
@@ -162,6 +168,14 @@ struct TabBarContent: View {
     .onChange(of: model.searchActive) { _, active in
       searchContentVisible = active
       if !active { searchFocused = false }
+    }
+    // Opening search focuses the field. It mounts while its content is still fading in, and a view
+    // that is not visible yet can refuse focus, so ask again once the fade is under way.
+    .task(id: model.searchActive) {
+      guard model.searchActive else { return }
+      searchFocused = true
+      try? await Task.sleep(for: .milliseconds(200))
+      if model.searchActive { searchFocused = true }
     }
     .sensoryFeedback(.impact(weight: .light), trigger: model.pressFeedback)
     .accessibilityElement(children: .contain)
@@ -352,7 +366,6 @@ struct TabBarContent: View {
           model.submitSearch()
           searchFocused = false
         }
-        .onAppear { searchFocused = true }
     }
     .padding(.horizontal, TabBarMetrics.searchFieldPadding)
     .opacity(searchContentVisible ? 1 : 0)

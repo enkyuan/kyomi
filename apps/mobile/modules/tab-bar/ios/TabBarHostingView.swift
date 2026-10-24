@@ -15,9 +15,10 @@ final class TabBarHostingView: UIView {
     super.init(frame: frame)
     backgroundColor = .clear
     hostingController.view.backgroundColor = .clear
-    // React Native positions the bar, including above the keyboard, so the
-    // hosted content must not apply safe-area or keyboard insets of its own.
-    hostingController.safeAreaRegions = []
+    // React Native places the host, and the bar clears the device's edges itself, so only the
+    // keyboard feeds the safe area: the bar rises above it natively, in the keyboard's own
+    // animation, instead of waiting on a JavaScript round trip that raced the search transition.
+    hostingController.safeAreaRegions = .keyboard
     // React Native sizes the host, so SwiftUI never needs to report an intrinsic size back.
     hostingController.sizingOptions = []
     addSubview(hostingController.view)
