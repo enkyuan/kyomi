@@ -1,5 +1,5 @@
 import { FlatList, Image, Pressable, Text, View } from "react-native";
-import type { ReactElement } from "react";
+import { useCallback, useMemo, type ReactElement } from "react";
 import type { ReaderBlock, ReaderImage, ReaderInline, ReaderPlacement } from "../../core/document";
 import { useReaderNative } from "./context";
 import { Inlines } from "./inline";
@@ -10,51 +10,54 @@ const IMAGE_RADIUS = 6;
 
 function useMediaRenderer() {
   const { host, theme } = useReaderNative();
-  return (
-    image: ReaderImage,
-    options: {
-      fit?: "cover" | "contain";
-      aspectRatio?: number;
-      caption?: string | undefined;
-      radius?: number;
-    },
-  ): ReactElement => {
-    const aspectRatio = options.aspectRatio ?? imageAspectRatio(image);
-    const label = image.alt || options.caption || undefined;
-    const open = host.openImage ? () => host.openImage?.(image, options.caption) : undefined;
-    if (host.renderImage) {
-      return host.renderImage({
-        image,
-        aspectRatio,
-        accessibilityLabel: label,
-        radius: options.radius ?? IMAGE_RADIUS,
-        fit: options.fit ?? "cover",
-        onPress: open,
-      });
-    }
-    return (
-      <Pressable
-        accessibilityLabel={label ?? "Image"}
-        accessibilityRole="imagebutton"
-        disabled={!open}
-        onPress={open}
-        style={{
+  return useCallback(
+    (
+      image: ReaderImage,
+      options: {
+        fit?: "cover" | "contain";
+        aspectRatio?: number;
+        caption?: string | undefined;
+        radius?: number;
+      },
+    ): ReactElement => {
+      const aspectRatio = options.aspectRatio ?? imageAspectRatio(image);
+      const label = image.alt || options.caption || undefined;
+      const open = host.openImage ? () => host.openImage?.(image, options.caption) : undefined;
+      if (host.renderImage) {
+        return host.renderImage({
+          image,
           aspectRatio,
-          backgroundColor: theme.colors.codeBackground,
-          borderRadius: options.radius ?? IMAGE_RADIUS,
-          overflow: "hidden",
-          width: "100%",
-        }}
-      >
-        <Image
-          accessibilityIgnoresInvertColors
-          resizeMode={options.fit === "contain" ? "contain" : "cover"}
-          source={{ uri: image.src }}
-          style={{ height: "100%", width: "100%" }}
-        />
-      </Pressable>
-    );
-  };
+          accessibilityLabel: label,
+          radius: options.radius ?? IMAGE_RADIUS,
+          fit: options.fit ?? "cover",
+          onPress: open,
+        });
+      }
+      return (
+        <Pressable
+          accessibilityLabel={label ?? "Image"}
+          accessibilityRole="imagebutton"
+          disabled={!open}
+          onPress={open}
+          style={{
+            aspectRatio,
+            backgroundColor: theme.colors.codeBackground,
+            borderRadius: options.radius ?? IMAGE_RADIUS,
+            overflow: "hidden",
+            width: "100%",
+          }}
+        >
+          <Image
+            accessibilityIgnoresInvertColors
+            resizeMode={options.fit === "contain" ? "contain" : "cover"}
+            source={{ uri: image.src }}
+            style={{ height: "100%", width: "100%" }}
+          />
+        </Pressable>
+      );
+    },
+    [host, theme],
+  );
 }
 
 function placementStyle(placement: ReaderPlacement, bleed: number) {
@@ -121,6 +124,61 @@ export function FigureBlock({
   );
 }
 
+type GalleryItem = Extract<ReaderBlock, { type: "gallery" }>["items"][number];
+
+const CAROUSEL_GAP = 8;
+
+// Virtualized: photo essays can hold dozens of images, and each cell has a fixed width.
+function CarouselGallery({ block }: { readonly block: Extract<ReaderBlock, { type: "gallery" }> }) {
+  const { theme } = useReaderNative();
+  const renderMedia = useMediaRenderer();
+  const itemWidth = Math.round(theme.columnWidth * 0.86);
+  const stride = itemWidth + CAROUSEL_GAP;
+  const itemStyle = useMemo(() => ({ width: itemWidth }), [itemWidth]);
+  const getItemLayout = useCallback(
+    (_: unknown, index: number) => ({ index, length: stride, offset: stride * index }),
+    [stride],
+  );
+  const renderItem = useCallback(
+    ({ item }: { item: GalleryItem }) => (
+      <View style={itemStyle}>
+        {renderMedia(item.image, {
+          caption: inlinesToText(item.caption) || undefined,
+          fit: "cover",
+          aspectRatio: imageAspectRatio(item.image, 4 / 3),
+        })}
+        <Caption caption={item.caption} />
+      </View>
+    ),
+    [itemStyle, renderMedia],
+  );
+  return (
+    <View style={placementStyle(block.placement, theme.bleed)}>
+      <FlatList
+        accessibilityLabel={`Gallery of ${block.items.length} images`}
+        contentContainerStyle={CAROUSEL_CONTENT_STYLE}
+        data={block.items}
+        decelerationRate="fast"
+        getItemLayout={getItemLayout}
+        horizontal
+        initialNumToRender={3}
+        keyExtractor={galleryItemKey}
+        renderItem={renderItem}
+        showsHorizontalScrollIndicator={false}
+        snapToInterval={stride}
+        windowSize={3}
+      />
+      <Caption caption={block.caption} />
+    </View>
+  );
+}
+
+const CAROUSEL_CONTENT_STYLE = { gap: CAROUSEL_GAP };
+
+function galleryItemKey(item: GalleryItem, index: number): string {
+  return `${item.image.src}.${index}`;
+}
+
 export function GalleryBlock({
   block,
 }: {
@@ -131,40 +189,7 @@ export function GalleryBlock({
   const gap = 8;
 
   if (block.layout === "carousel") {
-    const itemWidth = Math.round(theme.columnWidth * 0.86);
-    return (
-      <View style={placementStyle(block.placement, theme.bleed)}>
-        {/* Virtualized: photo essays can hold dozens of images, and each cell has a fixed width. */}
-        <FlatList
-          accessibilityLabel={`Gallery of ${block.items.length} images`}
-          contentContainerStyle={{ gap }}
-          data={block.items}
-          decelerationRate="fast"
-          getItemLayout={(_, index) => ({
-            index,
-            length: itemWidth + gap,
-            offset: (itemWidth + gap) * index,
-          })}
-          horizontal
-          initialNumToRender={3}
-          keyExtractor={(item, index) => `${item.image.src}.${index}`}
-          renderItem={({ item }) => (
-            <View style={{ width: itemWidth }}>
-              {renderMedia(item.image, {
-                caption: inlinesToText(item.caption) || undefined,
-                fit: "cover",
-                aspectRatio: imageAspectRatio(item.image, 4 / 3),
-              })}
-              <Caption caption={item.caption} />
-            </View>
-          )}
-          showsHorizontalScrollIndicator={false}
-          snapToInterval={itemWidth + gap}
-          windowSize={3}
-        />
-        <Caption caption={block.caption} />
-      </View>
-    );
+    return <CarouselGallery block={block} />;
   }
 
   const columns = 2;

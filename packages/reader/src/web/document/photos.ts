@@ -57,6 +57,10 @@ export function collectDocumentPhotos(
         for (const item of block.items) {
           add(item.image);
         }
+      } else if (block.type === "embed") {
+        for (const image of block.snapshot?.media ?? []) {
+          add(image);
+        }
       }
     });
 

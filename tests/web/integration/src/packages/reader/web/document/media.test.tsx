@@ -2,7 +2,8 @@
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import type { ReaderBlock } from "@kyomi/reader/document";
-import { everyBlock } from "./fixtures";
+import { RenderDocument } from "@kyomi/reader/web";
+import { documentOf, everyBlock } from "./fixtures";
 import { renderBlocks } from "./render";
 
 describe("figures and galleries", () => {
@@ -83,6 +84,46 @@ describe("figures and galleries", () => {
       expect(document.body.querySelector(".PhotoView-Portal")).toBeTruthy();
       expect(document.body.querySelector(".PhotoView-Slider__Counter")?.textContent).toBe("2 / 4");
     });
+  });
+
+  test("embed snapshot images open in the photo viewer", async () => {
+    const snapshotEmbed: ReaderBlock = {
+      type: "embed",
+      provider: "bluesky",
+      placement: "content",
+      url: "https://bsky.app/profile/a.example/post/3abc",
+      snapshot: {
+        text: [{ type: "text", value: "Post" }],
+        media: [
+          { src: "https://cdn.example/post-1.png", alt: "One" },
+          { src: "https://cdn.example/post-2.png", alt: "Two" },
+        ],
+        fetchedAt: "2026-10-21T12:00:00.000Z",
+      },
+    };
+    const { body } = renderBlocks([snapshotEmbed]);
+    fireEvent.click(body.querySelectorAll<HTMLElement>("[data-reader-photo-view]")[1]!);
+    await waitFor(() => {
+      expect(document.body.querySelector(".PhotoView-Slider__Counter")?.textContent).toBe("2 / 2");
+    });
+  });
+
+  test("a new image source at the same position loads instead of keeping a failed state", () => {
+    const figure = everyBlock.find((block) => block.type === "figure")!;
+    const { body, rerender } = renderBlocks([figure]);
+    fireEvent.error(body.querySelector("img")!);
+    expect(body.querySelector("[data-reader-img-unavailable]")).toBeTruthy();
+    const replaced = {
+      ...figure,
+      image: {
+        ...(figure as Extract<ReaderBlock, { type: "figure" }>).image,
+        src: "https://cdn.example/b.png",
+        srcset: undefined,
+      },
+    } as ReaderBlock;
+    rerender(<RenderDocument document={documentOf([replaced])} showLinkPreviews={false} />);
+    expect(body.querySelector("[data-reader-img-unavailable]")).toBeNull();
+    expect(body.querySelector("img")?.getAttribute("src")).toBe("https://cdn.example/b.png");
   });
 
   test("keyboard activation opens the viewer without motion", async () => {

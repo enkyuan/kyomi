@@ -78,6 +78,9 @@ function DocumentBody({
     <RenderDocument
       baseUrl={reader.contentBaseUrl ?? document.source.baseUrl}
       document={document}
+      // Switching between the original and extracted body, or to a recompiled document, remounts
+      // the tree so block-local state (image load status, open details) never carries over.
+      key={`${reader.contentSource}:${document.compiler.version}`}
       imageLoading={options.imageLoading}
       layoutMode={options.layoutMode}
       openLinksInNewTab={options.openLinksInNewTab}

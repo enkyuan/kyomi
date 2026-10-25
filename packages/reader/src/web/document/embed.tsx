@@ -130,8 +130,8 @@ function EmbedSnapshot({ block }: { block: EmbedBlockModel }) {
           <Inlines nodes={snapshot.text} />
         </p>
       ) : null}
-      {snapshot.media?.map((image, index) => (
-        <DocumentImage image={image} key={index} />
+      {snapshot.media?.map((image) => (
+        <DocumentImage image={image} key={image.src} />
       ))}
       <div className="flex flex-wrap items-center gap-x-2 text-muted-foreground text-xs">
         <span>{PROVIDER_LABELS[block.provider]}</span>

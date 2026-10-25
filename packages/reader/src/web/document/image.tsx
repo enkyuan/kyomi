@@ -6,7 +6,7 @@ import type { ReaderImage } from "../../core/document";
 import { normalizeSafeHttpUrl } from "../../core/url";
 import { skeletonShimmerClassName } from "../html/image";
 import { useDocumentContext } from "./context";
-import { isPlainLeftClick, resolveImage } from "./lib";
+import { isPlainLeftClick, resolveImage, type ResolvedImage } from "./lib";
 
 function ImageUnavailableIcon() {
   return (
@@ -113,8 +113,37 @@ export function DocumentImage({
   description?: string | undefined;
   zoomable?: boolean;
 }) {
-  const { transformImageUrl, imageLoading } = useDocumentContext();
+  const { transformImageUrl } = useDocumentContext();
   const resolved = resolveImage(image, transformImageUrl);
+  if (!resolved) {
+    return <ImageUnavailable alt={image.alt} description={description} />;
+  }
+  // Keyed by source: a new image at the same position (e.g. switching between the original and
+  // extracted body) starts loading afresh instead of inheriting the previous load state.
+  return (
+    <ImageFrame
+      description={description}
+      image={image}
+      key={resolved.src}
+      resolved={resolved}
+      zoomable={zoomable}
+    />
+  );
+}
+
+// oxlint-disable-next-line react-doctor/no-multi-comp -- load state for one resolved source
+function ImageFrame({
+  image,
+  resolved,
+  description,
+  zoomable,
+}: {
+  image: ReaderImage;
+  resolved: ResolvedImage;
+  description: string | undefined;
+  zoomable: boolean;
+}) {
+  const { imageLoading } = useDocumentContext();
   const [status, setStatus] = useState<"loading" | "loaded" | "error">("loading");
   const imageRef = useCallback((node: HTMLImageElement | null) => {
     // Cached images can finish before React attaches `onLoad`.
@@ -123,7 +152,7 @@ export function DocumentImage({
     }
   }, []);
 
-  if (!resolved || status === "error") {
+  if (status === "error") {
     return <ImageUnavailable alt={image.alt} description={description} />;
   }
 
