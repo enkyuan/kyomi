@@ -1,4 +1,4 @@
-import { ARTICLE_HTML_SANITIZER_VERSION } from "../sanitization/article-policy";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import {
   parseArticleFragment,
   type ArticlePass,

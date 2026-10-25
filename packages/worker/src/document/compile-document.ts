@@ -1,6 +1,6 @@
 import { renderHtml } from "@tanstack/markdown/html";
 import type { ReaderDocument, ReaderImage } from "@kyomi/reader/document";
-import { ARTICLE_HTML_SANITIZER_VERSION } from "../sanitization/article-policy";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import { compileArticleHtml, compileArticleRoot } from "./compile";
 import { createDraft, warn, type DocumentDraft, type DocumentPass } from "./document-draft";
 import { code } from "./passes/code";

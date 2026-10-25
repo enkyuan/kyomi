@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { parseFeedDocument } from "@kyomi/worker";
-import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/worker/sanitization";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 
 function repeatEntity(entity: string, count: number): string {
   return Array.from({ length: count }, () => entity).join("");

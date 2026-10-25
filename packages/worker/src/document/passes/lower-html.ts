@@ -6,7 +6,7 @@ import type {
   ReaderPlacement,
   ReaderTableCell,
 } from "@kyomi/reader/document";
-import { parseSrcset } from "../../sanitization/srcset";
+import { parseSrcset } from "@kyomi/reader/sanitization";
 import type { BlockHint, DraftFootnote } from "../document-draft";
 
 const MAX_DEPTH = 48;

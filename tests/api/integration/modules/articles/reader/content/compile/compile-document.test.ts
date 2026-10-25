@@ -6,7 +6,7 @@ import {
   compileArticleHtml,
 } from "@kyomi/worker/document";
 import { readerDocumentSchema } from "@kyomi/reader/document";
-import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/worker/sanitization";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 
 const BASE = "https://example.com/posts/entry";
 

@@ -1,4 +1,4 @@
-import { parseSrcset } from "../../sanitization/srcset";
+import { parseSrcset } from "@kyomi/reader/sanitization";
 import type { ArticlePass } from "../context";
 
 /** Lazy-loading attributes publishers use instead of `src` / `srcset`, strongest first. */

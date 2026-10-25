@@ -1,6 +1,6 @@
 import { decodeHtmlEntities } from "./html-entities";
 import { compileArticleHtml } from "../document";
-import { ARTICLE_HTML_SANITIZER_VERSION } from "../sanitization";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import type { ParsedFeedItem } from "../services/feed/types";
 
 function absoluteUrl(candidate: string | null, baseUrl: string): string | null {

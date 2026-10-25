@@ -21,7 +21,7 @@ src/
 | `@kyomi/reader`                | reader types and helpers.                  |
 | `@kyomi/reader/core`           | explicit core entry point.                 |
 | `@kyomi/reader/document`       | Kyomi Document Model Zod schema and types. |
-| `@kyomi/reader/sanitization`   | article sanitization policy.               |
+| `@kyomi/reader/sanitization`   | article HTML policy and sanitizer.              |
 | `@kyomi/reader/web`            | React web reader and HTML rendering.       |
 | `@kyomi/reader/web/styles.css` | web reader styles.                         |
 | `@kyomi/reader/webview`        | WebView HTML generation.                   |
@@ -39,7 +39,7 @@ src/
 
 - `core` and `webview` must not import React.
 - `web` expects React as a peer dependency.
-- `sanitization` must stay browser-safe — no JSDOM or Node-only modules.
+- `sanitization` must stay browser-safe — no JSDOM or Node-only modules. It owns the article HTML policy shared by web, API, and the worker compiler; `packages/reader` must never import `@kyomi/worker`.
 - article HTML is compiled once at ingest by `@kyomi/worker/document`. the web renderer re-applies
   the policy only and reads the compiler's hints instead of re-deriving them: `pre[data-kyomi-lang]`
   and `[data-kyomi-filename]` label code blocks, `figure[data-kyomi-embed][data-kyomi-url]` marks

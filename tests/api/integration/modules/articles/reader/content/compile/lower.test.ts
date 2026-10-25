@@ -9,7 +9,7 @@ import {
 import { lowerToDraft } from "./document-helpers";
 
 const blocksOf = (html: string) => lowerToDraft(html).blocks;
-const text = (value: string) => ({ type: "text", value });
+const text = (value: string) => ({ type: "text" as const, value });
 
 describe("lower (pass 10): HTML", () => {
   test("lowers paragraphs with nested inline formatting, links, code, and breaks", () => {
