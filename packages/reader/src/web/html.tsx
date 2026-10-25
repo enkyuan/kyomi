@@ -1,18 +1,12 @@
 "use client";
 
-import {
-  useCallback,
-  useEffect,
-  useEffectEvent,
-  useMemo,
-  useRef,
-  useSyncExternalStore,
-} from "react";
-import { PhotoSlider } from "react-photo-view";
+import { useCallback, useEffect, useEffectEvent, useMemo, useRef } from "react";
 import type { ReaderImageLoading, ReaderLayoutMode } from "../core/types";
 import { hasLikelyDelimitedTex } from "../shared/math";
 import { mountReaderLinkPreviewCards } from "./components/link-card";
-import { getReaderPhotoTransitionSpeed, useReaderPhotoPreviewTargets } from "./html/photo-preview";
+import { ReaderPhotoSlider } from "./components/photo-slider";
+import { useHydrated } from "./hooks/use-hydrated";
+import { useReaderPhotoPreviewTargets } from "./html/photo-preview";
 import { prepareArticleHtml } from "./html/string-prep";
 import type { ReaderImageUrlTransformer } from "./html/url-resolve";
 import {
@@ -84,26 +78,6 @@ function requestReaderIdleCallback(callback: () => void): () => void {
 
   const timeoutId = window.setTimeout(callback, 48);
   return () => window.clearTimeout(timeoutId);
-}
-
-function subscribeHydration() {
-  return () => {};
-}
-
-function getClientHydratedSnapshot() {
-  return true;
-}
-
-function getServerHydratedSnapshot() {
-  return false;
-}
-
-function useHydrated() {
-  return useSyncExternalStore(
-    subscribeHydration,
-    getClientHydratedSnapshot,
-    getServerHydratedSnapshot,
-  );
 }
 
 export function RenderHtml({
@@ -345,12 +319,11 @@ export function RenderHtml({
   return (
     <>
       {articleBody}
-      <PhotoSlider
-        easing={() => "cubic-bezier(0.23, 1, 0.32, 1)"}
-        images={photos}
-        visible={photoVisible && photos.length > 0}
-        index={Math.min(photoIndex, Math.max(photos.length - 1, 0))}
-        speed={(type) => getReaderPhotoTransitionSpeed(type, photoOpenedWithKeyboard)}
+      <ReaderPhotoSlider
+        photos={photos}
+        visible={photoVisible}
+        index={photoIndex}
+        openedWithKeyboard={photoOpenedWithKeyboard}
         onIndexChange={setPhotoIndex}
         onClose={() => setPhotoVisible(false)}
       />

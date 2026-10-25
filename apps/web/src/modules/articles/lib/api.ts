@@ -217,11 +217,13 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
   .validator((input: { itemId: string }) => input)
   .handler(async ({ data }): Promise<InboxDetailResponse> => {
     const { fetchValidatedJson, articleDetailSchema } = await getInboxSchemaModule();
-    const headers = getRequestHeaders();
+    const { READER_DOCUMENT_VERSION } = await import("@kyomi/reader/document");
+    const forwarded = buildForwardHeaders(getRequestHeaders());
+    // Advertise the newest document version this client renders; the API serves older or no
+    // document otherwise, and the HTML body is always populated alongside.
+    forwarded.set("x-kyomi-document-version", String(READER_DOCUMENT_VERSION));
     const item = await fetchValidatedJson(articleDetailSchema, () =>
-      apiJson<ArticleDetailDto>(`/api/v1/articles/${data.itemId}`, {
-        headers: buildForwardHeaders(headers),
-      }),
+      apiJson<ArticleDetailDto>(`/api/v1/articles/${data.itemId}`, { headers: forwarded }),
     );
 
     return { item };
