@@ -1,4 +1,5 @@
 import type { db } from "@adapters/db/client";
+import { enqueueEnrichmentForStoredDocument } from "@modules/articles/document/enrich";
 import { compileBodyDocumentColumns } from "@modules/articles/document/stored";
 import { getRedis } from "@adapters/redis";
 import { publishJob } from "@adapters/queue/publish";
@@ -298,6 +299,14 @@ export async function createArticleClip(
   const r = inserted[0];
   if (!r) {
     throw new AppError("Failed to create clip", { status: 500, code: "CLIP_CREATE_FAILED" });
+  }
+
+  if (content) {
+    await enqueueEnrichmentForStoredDocument(database, {
+      table: "article_clips",
+      id: r.id,
+      body: "original",
+    });
   }
 
   if (!content) {

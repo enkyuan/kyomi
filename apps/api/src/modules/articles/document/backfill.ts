@@ -2,6 +2,8 @@ import type { db } from "@adapters/db/client";
 import { articleClips, articleExtractionCache, feedItems } from "@kyomi/db";
 import { compileStoredDocument, type StoredDocumentInput } from "@kyomi/worker/lib/stored-document";
 import { and, asc, eq, gt, isNotNull, isNull, ne, or, sql, type SQL } from "drizzle-orm";
+import type { DocumentTarget } from "@kyomi/worker";
+import { enqueueEnrichmentForStoredDocument } from "./enrich";
 import type { PgColumn, PgTable } from "drizzle-orm/pg-core";
 
 type DB = typeof db;
@@ -29,6 +31,8 @@ type ScopeSpec = {
   compilerVersion: PgColumn;
   /** Property names on the Drizzle table, used to build the update `set`. */
   keys: { document: string; documentVersion: string; compilerVersion: string };
+  /** Enrichment target for rows of this scope; null for the extraction cache, which is not served. */
+  target: Pick<DocumentTarget, "table" | "body"> | null;
 };
 
 const SCOPES: Record<DocumentBackfillScope, ScopeSpec> = {
@@ -47,6 +51,7 @@ const SCOPES: Record<DocumentBackfillScope, ScopeSpec> = {
       documentVersion: "contentDocumentVersion",
       compilerVersion: "contentCompilerVersion",
     },
+    target: { table: "feed_items", body: "original" },
   },
   "feed-extracted": {
     table: feedItems,
@@ -63,6 +68,7 @@ const SCOPES: Record<DocumentBackfillScope, ScopeSpec> = {
       documentVersion: "extractedContentDocumentVersion",
       compilerVersion: "extractedContentCompilerVersion",
     },
+    target: { table: "feed_items", body: "extracted" },
   },
   "clip-original": {
     table: articleClips,
@@ -79,6 +85,7 @@ const SCOPES: Record<DocumentBackfillScope, ScopeSpec> = {
       documentVersion: "contentDocumentVersion",
       compilerVersion: "contentCompilerVersion",
     },
+    target: { table: "article_clips", body: "original" },
   },
   "clip-extracted": {
     table: articleClips,
@@ -95,6 +102,7 @@ const SCOPES: Record<DocumentBackfillScope, ScopeSpec> = {
       documentVersion: "extractedContentDocumentVersion",
       compilerVersion: "extractedContentCompilerVersion",
     },
+    target: { table: "article_clips", body: "extracted" },
   },
   "extraction-cache": {
     table: articleExtractionCache,
@@ -111,6 +119,7 @@ const SCOPES: Record<DocumentBackfillScope, ScopeSpec> = {
       documentVersion: "documentVersion",
       compilerVersion: "compilerVersion",
     },
+    target: null,
   },
 };
 
@@ -129,6 +138,8 @@ export type DocumentBackfillOptions = {
   /** Resume cursor: only rows with an id greater than this are scanned. */
   afterId?: string | null;
   log?: (message: string) => void;
+  /** Queues enrichment for a rewritten document; defaults to the real queue. */
+  enqueueEnrichment?: (target: DocumentTarget, document: object) => Promise<void>;
 };
 
 export type DocumentBackfillResult = {
@@ -159,6 +170,10 @@ export async function runDocumentBackfillScope(
   const spec = SCOPES[scope];
   const startedAt = Date.now();
   const log = options.log ?? (() => undefined);
+  const enqueue =
+    options.enqueueEnrichment ??
+    ((target: DocumentTarget, document: object) =>
+      enqueueEnrichmentForStoredDocument(database, target, document));
   const result: DocumentBackfillResult = {
     scope,
     scanned: 0,
@@ -237,6 +252,9 @@ export async function runDocumentBackfillScope(
                 : eq(spec.compilerVersion, row.compilerVersion),
             ),
           );
+        if (spec.target) {
+          await enqueue({ ...spec.target, id: row.id }, stored.document);
+        }
       }
     }
 

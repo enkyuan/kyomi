@@ -3,7 +3,7 @@ import type { StoredDocument, StoredDocumentCompiler } from "@kyomi/worker/lib/s
 export const TEST_COMPILER_VERSION = "test-compiler-1";
 
 /** Minimal valid KDM document with one image and one embed, the fields enrichment owns. */
-export function fakeDocument(): Record<string, unknown> {
+export function fakeDocument(imageSrc = "https://example.com/a.png"): Record<string, unknown> {
   return {
     version: 1,
     source: { format: "html", origin: "feed_html", baseUrl: "https://example.com/post" },
@@ -26,7 +26,7 @@ export function fakeDocument(): Record<string, unknown> {
       {
         type: "figure",
         placement: "content",
-        image: { src: "https://example.com/a.png", alt: "A" },
+        image: { src: imageSrc, alt: "A" },
       },
     ],
     footnotes: [],

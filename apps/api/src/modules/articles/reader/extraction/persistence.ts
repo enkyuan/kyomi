@@ -1,5 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { articleClips, feedItems } from "@kyomi/db";
+import { enqueueEnrichmentForStoredDocument } from "@modules/articles/document/enrich";
 import type { ArticleDetailDto } from "@modules/articles/types";
 import { toStoredDocumentColumns, type StoredDocument } from "@kyomi/worker/lib/stored-document";
 import { and, eq } from "drizzle-orm";
@@ -166,8 +167,18 @@ export async function persistExtracted(
 ) {
   if (article.articleType === "feed") {
     await persistFeedExtracted(database, article.id, payload);
-    return;
+  } else {
+    await persistClipExtracted(database, article.id, payload, titleReplacement);
   }
-
-  await persistClipExtracted(database, article.id, payload, titleReplacement);
+  if (payload.kind === "ready" && payload.document) {
+    await enqueueEnrichmentForStoredDocument(
+      database,
+      {
+        table: article.articleType === "feed" ? "feed_items" : "article_clips",
+        id: article.id,
+        body: "extracted",
+      },
+      payload.document.document,
+    );
+  }
 }

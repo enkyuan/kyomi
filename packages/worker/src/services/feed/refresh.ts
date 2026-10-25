@@ -1170,6 +1170,7 @@ export async function runFeedRefresh(
       itemCount: items.length,
       insertedCount: items.length, // Rough estimate as we don't have exact UPSERT counts right now
       articleExtractionCandidateIds,
+      documentItemIds: items.filter((item) => item.contentDocument).map((item) => item.id),
       contentLimitStats: parsed.contentLimitStats,
       categoryStats: {
         feedClassifierLabels: feedCategories.length,

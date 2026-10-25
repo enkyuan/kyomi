@@ -1,4 +1,5 @@
 import type { db } from "@adapters/db/client";
+import { enqueueEnrichmentForStoredDocument } from "@modules/articles/document/enrich";
 import { compileBodyDocumentColumns } from "@modules/articles/document/stored";
 import {
   articleClips,
@@ -126,6 +127,13 @@ export async function updateArticleForUser(
         updatedAt: now,
       })
       .where(eq(feedItems.id, articleId));
+    if (Object.hasOwn(body, "contentHtml")) {
+      await enqueueEnrichmentForStoredDocument(database, {
+        table: "feed_items",
+        id: articleId,
+        body: "original",
+      });
+    }
   }
 
   if (hasRead || hasSaved || hasHidden) {

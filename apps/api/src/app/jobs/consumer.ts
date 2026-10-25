@@ -22,6 +22,8 @@ import {
 } from "@modules/opml/jobs";
 import { runArticleExtractionForUser } from "@modules/articles/reader/extraction/workflow";
 import { prefetchArticleExtractionsForFeedItems } from "@modules/articles/reader/extraction/prefetch";
+import { createDocumentPatchStore } from "@modules/articles/document/store";
+import { enqueueEnrichmentForStoredDocument } from "@modules/articles/document/enrich";
 import { handleDocumentEnrichmentJob } from "@modules/articles/document-enrichment/jobs";
 import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "./classify";
 
@@ -69,6 +71,9 @@ async function handleWorkerJob(
         },
       );
       const durationMs = Date.now() - startTime;
+      for (const id of result.documentItemIds ?? []) {
+        await enqueueEnrichmentForStoredDocument(db, { table: "feed_items", id, body: "original" });
+      }
 
       if (!result.ok) {
         if (isNonRetryableFeedRefreshFailure(result)) {
@@ -215,7 +220,7 @@ async function handleWorkerJob(
     }
     case "document.image-measure":
     case "document.embed-snapshot":
-      await handleDocumentEnrichmentJob(job);
+      await handleDocumentEnrichmentJob(job, createDocumentPatchStore(db));
       return;
   }
 }

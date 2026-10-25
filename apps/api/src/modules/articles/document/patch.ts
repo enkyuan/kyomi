@@ -1,19 +1,10 @@
 import type { db } from "@adapters/db/client";
 import { articleClips, feedItems } from "@kyomi/db";
+import type { DocumentTarget } from "@kyomi/worker";
 import { readerDocumentSchema, type ReaderDocument } from "@kyomi/reader/document";
 import { eq } from "drizzle-orm";
 
 type DB = typeof db;
-
-/**
- * Targets are the article rows only. Extracted documents are copied onto `feed_items` and
- * `article_clips` at extraction time and served from there, never from the extraction cache.
- */
-export type DocumentPatchTarget = {
-  table: "feed_items" | "article_clips";
-  id: string;
-  body: "original" | "extracted";
-};
 
 /** The document the caller read; a patch applies only if storage still holds exactly this. */
 export type DocumentPatchExpectation = {
@@ -115,7 +106,7 @@ function deepEqual(a: unknown, b: unknown): boolean {
  */
 export async function patchStoredDocument(
   database: DB,
-  target: DocumentPatchTarget,
+  target: DocumentTarget,
   expected: DocumentPatchExpectation,
   patch: (document: ReaderDocument) => ReaderDocument,
 ): Promise<DocumentPatchResult> {
@@ -180,7 +171,7 @@ export type StoredDocumentRead = {
  */
 export async function loadStoredDocument(
   database: DB,
-  target: DocumentPatchTarget,
+  target: DocumentTarget,
 ): Promise<StoredDocumentRead | null> {
   const spec = COLUMNS[target.table];
   const columns = spec[target.body];

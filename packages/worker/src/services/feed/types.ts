@@ -32,6 +32,8 @@ export type FeedRefreshResult = {
   insertedCount?: number;
   updatedCount?: number;
   articleExtractionCandidateIds?: string[];
+  /** Ids of items written with a KDM document, for the caller to queue enrichment. */
+  documentItemIds?: string[];
   notModified?: boolean;
   skipped?: "superseded" | "not_queued";
   error?: string;
