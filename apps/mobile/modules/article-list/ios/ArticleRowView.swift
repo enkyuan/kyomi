@@ -261,7 +261,7 @@ struct FaviconView: View {
     }
     .frame(width: size, height: size)
     .background(background.opacity(0.85))
-    .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
+    .clipShape(RoundedRectangle(cornerRadius: size * ArticleListStyle.faviconCornerRatio, style: .continuous))
     .task(id: urls) {
       guard image == nil else { return }
       for url in urls {

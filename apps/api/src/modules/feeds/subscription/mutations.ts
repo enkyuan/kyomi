@@ -54,12 +54,12 @@ export async function bulkUnsubscribeFromFeeds(
   };
 }
 
-/** Bulk-move subscriptions into a user-owned folder. */
+/** Bulk-move subscriptions into a user-owned folder, or out of any folder when `folderId` is null. */
 export async function bulkMoveFeedsToFolder(
   database: DB,
   userId: string,
   feedIds: string[],
-  folderId: string,
+  folderId: string | null,
 ): Promise<BulkMoveFeedsResponseDto> {
   const unique = [...new Set(feedIds.map((id) => id.trim()).filter((id) => id.length > 0))];
   if (unique.length === 0) {
@@ -69,13 +69,15 @@ export async function bulkMoveFeedsToFolder(
     });
   }
 
-  const folderRows = await database
-    .select({ id: folders.id })
-    .from(folders)
-    .where(and(eq(folders.id, folderId), eq(folders.userId, userId)))
-    .limit(1);
-  if (!folderRows[0]) {
-    throw new AppError("Folder not found", { status: 404, code: "FOLDER_NOT_FOUND" });
+  if (folderId !== null) {
+    const folderRows = await database
+      .select({ id: folders.id })
+      .from(folders)
+      .where(and(eq(folders.id, folderId), eq(folders.userId, userId)))
+      .limit(1);
+    if (!folderRows[0]) {
+      throw new AppError("Folder not found", { status: 404, code: "FOLDER_NOT_FOUND" });
+    }
   }
 
   const updated = await database

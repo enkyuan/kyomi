@@ -260,8 +260,18 @@ struct TabBarContent: View {
         .accessibilityHidden(true)
 
       if presented, let switcher = model.switcher {
-        TabBarSwitcherSheet(title: switcher.title, focus: $sheetTitleFocused) { dismissSheet(sheet) }
-          .transition(Self.sheetContentTransition)
+        TabBarSwitcherSheet(
+          model: model,
+          switcher: switcher,
+          focus: $sheetTitleFocused,
+          onClose: { dismissSheet(sheet) },
+          // Opening a folder leaves the sheet for the screen that lists its feeds.
+          onOpenFolder: { id in
+            dismissSheet(sheet)
+            model.onSwitcherFolderAction("open", id, "")
+          }
+        )
+        .transition(Self.sheetContentTransition)
       }
     }
     .frame(width: frame.width, height: frame.height)
@@ -332,7 +342,7 @@ struct TabBarContent: View {
   private func tabs(_ layout: TabBarLayout) -> some View {
     HStack(spacing: 0) {
       ZStack {
-        TabSelector(
+        TabBarSelector(
           segmentWidths: layout.segmentWidths,
           height: layout.segmentHeight,
           selectedIndex: model.selectedIndex,

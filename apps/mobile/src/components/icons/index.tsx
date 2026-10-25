@@ -2,6 +2,7 @@ export { AppleIcon, type AppleIconProps } from "./apple";
 export { BlodeIcon, type BlodeIconProps } from "./blode";
 export { BookmarkIcon, type BookmarkIconProps } from "./bookmark";
 export { CloseIcon, type CloseIconProps } from "./close";
+export { DotGridIcon, type DotGridIconProps } from "./dot-grid";
 export { FilterIcon, type FilterIconProps } from "./filter";
 export { GoogleIcon, type GoogleIconProps } from "./google";
 export { InboxIcon, type InboxIconProps } from "./inbox";

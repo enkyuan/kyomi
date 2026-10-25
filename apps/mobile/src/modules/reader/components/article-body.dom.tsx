@@ -6,6 +6,7 @@ import type { ReaderContent as ReaderContentModel } from "@kyomi/reader";
 import { progressFromScroll, scrollTopForProgress } from "@kyomi/reader/core";
 import { ReaderContent } from "@kyomi/reader/web";
 import { RssIcon } from "@kyomi/ui/icons/blode";
+import { createSquircleStyle } from "@kyomi/ui/lib/squircle";
 import "@kyomi/reader/web/styles.css";
 import "@kyomi/ui/styles/reader.css";
 import { mobileColors } from "@/theme/colors";
@@ -83,7 +84,6 @@ const MOBILE_READER_STYLES = String.raw`
     width: 1.25rem;
     height: 1.25rem;
     flex: none;
-    border-radius: 3px;
     background: var(--reader-card);
     object-fit: contain;
   }
@@ -172,6 +172,14 @@ const MOBILE_READER_STYLES = String.raw`
 
 `;
 
+/** The source favicon is a fixed 1.25rem (20px) squircle; WebKit has no `corner-shape`, so it is clipped. */
+const FAVICON_SIZE_PX = 20;
+const FAVICON_SQUIRCLE = createSquircleStyle({
+  cornerRadius: FAVICON_SIZE_PX * 0.25,
+  height: FAVICON_SIZE_PX,
+  width: FAVICON_SIZE_PX,
+});
+
 type ArticleBodyProps = {
   readonly bottomInset: number;
   readonly colorScheme: "dark" | "light";
@@ -208,9 +216,15 @@ function ReaderSource({
             setFaviconIndex((current) => Math.min(current + 1, faviconUrls.length));
           }}
           src={faviconUrl}
+          style={FAVICON_SQUIRCLE}
         />
       ) : faviconIndex >= faviconUrls.length ? (
-        <RssIcon aria-hidden="true" className="mobile-reader__source-favicon" size={20} />
+        <RssIcon
+          aria-hidden="true"
+          className="mobile-reader__source-favicon"
+          size={FAVICON_SIZE_PX}
+          style={FAVICON_SQUIRCLE}
+        />
       ) : null}
       <span>{feedTitle}</span>
     </p>

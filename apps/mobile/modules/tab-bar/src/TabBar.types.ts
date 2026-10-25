@@ -29,6 +29,24 @@ export type TabBarSwitcher = {
   readonly label: string;
   readonly hint: string;
   readonly icon: TabBarIcon;
+  /** Glyphs of the sheet's chips: toggle deleting folders, toggle renaming them, and add one. */
+  readonly editIcon: TabBarIcon;
+  readonly renameIcon: TabBarIcon;
+  readonly addIcon: TabBarIcon;
+};
+
+/** A folder the switcher sheet lists, with the number of feeds filed in it. */
+export type TabBarSwitcherFolder = {
+  readonly id: string;
+  readonly name: string;
+  readonly feedCount: number;
+};
+
+/** What was done to a folder in the switcher sheet. `create` has no `folderId`; `open` and `delete` no `name`. */
+export type TabBarSwitcherFolderAction = {
+  readonly action: "open" | "create" | "rename" | "delete";
+  readonly folderId: string;
+  readonly name: string;
 };
 
 /** A feed the add composer offers to follow, or the one it previews to import. */
@@ -49,6 +67,10 @@ export type TabBarViewProps = ViewProps & {
   readonly tabs: readonly TabBarItem[];
   readonly selectedIndex: number;
   readonly switcher?: TabBarSwitcher;
+  readonly switcherFolders?: readonly TabBarSwitcherFolder[];
+  readonly onSwitcherFolderAction?: (
+    event: NativeSyntheticEvent<TabBarSwitcherFolderAction>,
+  ) => void;
   /** Magnifying glass for the search button and field; omit to use the SF Symbol. */
   readonly searchIcon?: TabBarIcon;
   /** Magnifying glass for the add composer's field; omit to use the SF Symbol. */

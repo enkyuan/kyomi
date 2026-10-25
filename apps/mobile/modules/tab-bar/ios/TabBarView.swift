@@ -9,6 +9,7 @@ final class TabBarView: ExpoView {
   let onComposerActiveChange = EventDispatcher()
   let onComposerQueryChange = EventDispatcher()
   let onComposerSubmit = EventDispatcher()
+  let onSwitcherFolderAction = EventDispatcher()
 
   private let hostingView = TabBarHostingView(frame: .zero)
 
@@ -32,6 +33,9 @@ final class TabBarView: ExpoView {
     }
     model.onComposerSubmit = { [weak self] feedId, url, folderId in
       self?.onComposerSubmit(["feedId": feedId, "url": url, "folderId": folderId])
+    }
+    model.onSwitcherFolderAction = { [weak self] action, folderId, name in
+      self?.onSwitcherFolderAction(["action": action, "folderId": folderId, "name": name])
     }
     model.onSearchActiveChange = { [weak self] active in
       self?.onSearchActiveChange(["active": active])

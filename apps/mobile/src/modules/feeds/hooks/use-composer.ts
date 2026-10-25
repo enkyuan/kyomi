@@ -4,11 +4,11 @@ import { mobileApiErrorMessage } from "@/lib/api";
 import type { TabBarComposerProps } from "@ui/tab-bar/lib/types";
 import { articleListQueryKeys } from "@modules/articles/queries/keys";
 import { normalizeFeedUrl } from "../lib/url";
+import { foldersQueryKey, subscribedFeedsQueryKey } from "../queries/keys";
 import { followFeed, listFolders, previewFeed, searchFeeds, type DiscoveredFeed } from "../lib/api";
 
 const SEARCH_DEBOUNCE_MS = 300;
 const MIN_SEARCH_LENGTH = 2;
-const foldersQueryKey = ["feeds", "folders"] as const;
 
 type ComposerProps = TabBarComposerProps;
 
@@ -58,6 +58,8 @@ export function useComposer() {
     mutationFn: followFeed,
     onSuccess: () => {
       for (const key of articleListQueryKeys) void queryClient.invalidateQueries({ queryKey: key });
+      // The Sources sheet's folder counts and the folder screens list what is followed.
+      void queryClient.invalidateQueries({ queryKey: subscribedFeedsQueryKey });
     },
   });
 

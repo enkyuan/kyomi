@@ -72,7 +72,8 @@ export const unsubscribeBulkBody = t.Object({
 
 export const moveFeedsBulkBody = t.Object({
   feedIds: t.Array(t.String({ format: "uuid" }), { minItems: 1 }),
-  folderId: t.String({ format: "uuid" }),
+  /** `null` takes the feeds out of their folder. */
+  folderId: t.Union([t.String({ format: "uuid" }), t.Null()]),
 });
 
 export const subscribedFeedItem = t.Object({

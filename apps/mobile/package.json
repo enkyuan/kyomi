@@ -101,8 +101,7 @@
         },
         {
           "files": [
-            "modules/header/src/**",
-            "modules/screen-shape/src/**"
+            "modules/*/src/**"
           ],
           "rules": [
             "unicorn/filename-case"

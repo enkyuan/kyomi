@@ -132,6 +132,8 @@ struct ListStyleRecord: Record {
 
 struct ArticleListStyle {
   static let faviconSize: CGFloat = 22
+  /// Favicons are squircles: the continuous corner radius scales with the icon, as in `FeedFavicon`.
+  static let faviconCornerRatio: CGFloat = 0.25
   static let faviconPlaceholderSize: CGFloat = faviconSize * 0.6
 
   var foreground: Color
