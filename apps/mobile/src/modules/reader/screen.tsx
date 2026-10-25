@@ -12,6 +12,7 @@ import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
 import { saveRecentArticle } from "@modules/recents/lib/store";
 import ArticleBody from "./components/article-body.dom";
 import { useArticle } from "./hooks/use-article";
+import { useReadingProgress } from "./hooks/use-reading-progress";
 import { getReaderCanvasColor, getReaderColorScheme } from "./lib/theme";
 import { FONT_STYLES } from "@/theme/fonts";
 import { mobileReaderLayout, mobileReaderSkeletonLayout } from "./lib/layout";
@@ -57,6 +58,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
     setReadyArticleId(articleId);
   }, [articleId]);
   const { data: article, error, isLoading, refetch } = useArticle(articleId);
+  const readingProgress = useReadingProgress(article);
   const faviconUrls = useMemo(
     () =>
       article
@@ -107,7 +109,9 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
       .catch(() => undefined);
   }, [article, queryClient]);
 
-  if (isLoading) {
+  // The body waits for the "Remember reading position" preference so a position is never restored
+  // against it.
+  if (isLoading || (article && !readingProgress.isReady)) {
     return (
       <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
         <ReaderSkeleton
@@ -159,6 +163,8 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
           faviconUrls={faviconUrls}
           feedTitle={article.feedTitle}
           fontSizePx={mobileReaderLayout.body.fontSizePx}
+          initialProgress={readingProgress.initialProgress}
+          onReadingProgress={readingProgress.onReadingProgress}
           onReady={handleArticleReady}
           reader={article.reader.selected}
           title={article.title}
