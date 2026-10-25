@@ -1,3 +1,4 @@
+import { attachItemDocuments } from "./documents";
 import { and, eq, or, sql } from "drizzle-orm";
 import { canonicalizeCategoryLabels, feedItems, feeds } from "@kyomi/db";
 import {
@@ -928,6 +929,7 @@ export async function runFeedRefresh(
       parsed: { metadata: parsed.metadata },
       items,
     });
+    items = await attachItemDocuments(items);
     const itemCategoryStats = summarizeItemCategoryStats(items);
 
     const prevLink = feed.link ?? null;

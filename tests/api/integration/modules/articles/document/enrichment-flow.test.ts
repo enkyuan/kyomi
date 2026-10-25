@@ -68,7 +68,7 @@ describe("document persistence to enrichment", () => {
     } as unknown as Redis;
     setStoredDocumentCompiler({
       version: TEST_COMPILER_VERSION,
-      compile: () => ({
+      compile: async () => ({
         document: fakeDocument(IMG),
         documentVersion: 1,
         compilerVersion: TEST_COMPILER_VERSION,

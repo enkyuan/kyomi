@@ -26,7 +26,7 @@ export type StoredDocumentInput = {
 export type StoredDocumentCompiler = {
   /** Compiler version stamped on new documents; rows with any other value are stale. */
   version: string;
-  compile(input: StoredDocumentInput): StoredDocument | null;
+  compile(input: StoredDocumentInput): Promise<StoredDocument | null>;
 };
 
 type CompileArticleDocument = (input: {
@@ -35,7 +35,11 @@ type CompileArticleDocument = (input: {
   origin: StoredDocumentInput["origin"];
   baseUrl?: string | null;
   meta?: { title?: string | null };
-}) => { document: StoredDocumentJson | null; documentVersion: number; compilerVersion: string };
+}) => Promise<{
+  document: StoredDocumentJson | null;
+  documentVersion: number;
+  compilerVersion: string;
+}>;
 
 /**
  * Binds the worker compiler once its entry point is exported (`compileArticleDocument` and
@@ -57,8 +61,8 @@ function defaultCompiler(): StoredDocumentCompiler | null {
   }
   return {
     version,
-    compile: (input) => {
-      const result = compileArticleDocument({
+    compile: async (input) => {
+      const result = await compileArticleDocument({
         body: input.raw,
         format: input.format,
         origin: input.origin,
@@ -87,12 +91,14 @@ export function currentCompilerVersion(): string | null {
 }
 
 /** Never throws: a compiler failure must not block ingest, which still stores the HTML body. */
-export function compileStoredDocument(input: StoredDocumentInput): StoredDocument | null {
+export async function compileStoredDocument(
+  input: StoredDocumentInput,
+): Promise<StoredDocument | null> {
   if (!compiler || !input.raw.trim()) {
     return null;
   }
   try {
-    return compiler.compile(input);
+    return await compiler.compile(input);
   } catch {
     return null;
   }

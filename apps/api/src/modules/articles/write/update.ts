@@ -24,24 +24,29 @@ type DB = typeof db;
  * Client-supplied HTML is untrusted: compile it like any ingested body and keep the original as
  * raw source, so the stored sanitizer version always describes compiler output.
  */
-function compileReplacementHtml(
+async function compileReplacementHtml(
   value: string | null | undefined,
   article: { link: string; title: string },
-): {
+): Promise<{
   contentHtml: string | null;
   contentRaw: string | null;
   contentSanitizerVersion: string | null;
   contentDocument: Record<string, unknown> | null;
   contentDocumentVersion: number | null;
   contentCompilerVersion: string | null;
-} {
+}> {
   const raw = value?.trim() ? value : null;
   if (!raw) {
     return {
       contentHtml: null,
       contentRaw: null,
       contentSanitizerVersion: null,
-      ...compileBodyDocumentColumns({ raw: null, contentSource: null, baseUrl: null, title: null }),
+      ...(await compileBodyDocumentColumns({
+        raw: null,
+        contentSource: null,
+        baseUrl: null,
+        title: null,
+      })),
     };
   }
   const compiled = processIngestedArticleHtml(raw, { baseUrl: article.link, title: article.title });
@@ -49,12 +54,12 @@ function compileReplacementHtml(
     contentHtml: compiled.html || null,
     contentRaw: raw,
     contentSanitizerVersion: ARTICLE_HTML_SANITIZER_VERSION,
-    ...compileBodyDocumentColumns({
+    ...(await compileBodyDocumentColumns({
       raw,
       contentSource: "feed_html",
       baseUrl: article.link,
       title: article.title,
-    }),
+    })),
   };
 }
 
@@ -108,7 +113,7 @@ export async function updateArticleForUser(
 
   if (hasContentFields) {
     const html = Object.hasOwn(body, "contentHtml")
-      ? compileReplacementHtml(body.contentHtml, article)
+      ? await compileReplacementHtml(body.contentHtml, article)
       : {};
     await database
       .update(feedItems)

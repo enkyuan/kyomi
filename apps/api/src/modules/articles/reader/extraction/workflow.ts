@@ -78,13 +78,13 @@ async function defaultEnqueueExtractionJob(job: ArticleExtractionJob): Promise<s
   return publishJob(getRedis(), job);
 }
 
-function compileExtractedDocument(
+async function compileExtractedDocument(
   raw: string | null,
   baseUrl: string | null,
   title: string | null,
-): StoredDocument | null {
+): Promise<StoredDocument | null> {
   return raw
-    ? compileStoredDocument({ raw, format: "html", origin: "extracted_html", baseUrl, title })
+    ? await compileStoredDocument({ raw, format: "html", origin: "extracted_html", baseUrl, title })
     : null;
 }
 
@@ -112,7 +112,11 @@ async function applyFreshExtractionCache(
     const document =
       cached.document && cached.document.compilerVersion === currentCompilerVersion()
         ? cached.document
-        : compileExtractedDocument(cached.rawHtml, cached.finalUrl ?? article.link, article.title);
+        : await compileExtractedDocument(
+            cached.rawHtml,
+            cached.finalUrl ?? article.link,
+            article.title,
+          );
     await persistExtracted(
       database,
       article,
@@ -440,7 +444,7 @@ export async function runArticleExtractionForUser(
     };
   }
 
-  const document = compileExtractedDocument(
+  const document = await compileExtractedDocument(
     extracted.rawHtml,
     extracted.finalUrl ?? sourceUrl.href,
     extracted.content.title,

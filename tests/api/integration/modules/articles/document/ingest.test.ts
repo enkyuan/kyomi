@@ -4,6 +4,7 @@ import { afterEach, describe, expect, test } from "bun:test";
 import { articleClips, articleExtractionCache, feedItems } from "@kyomi/db";
 import { parseFeedDocument } from "@kyomi/worker";
 import { setStoredDocumentCompiler } from "@kyomi/worker/lib/stored-document";
+import { attachItemDocuments } from "@kyomi/worker/ingestion";
 import { compileBodyDocumentColumns } from "@modules/articles/document/stored";
 import { fakeCompiler, TEST_COMPILER_VERSION } from "./helpers";
 
@@ -40,45 +41,75 @@ describe("document migration", () => {
 });
 
 describe("ingest document write", () => {
-  test("feed parsing stores the compiler's document next to the HTML", () => {
+  const parseItems = () => parseFeedDocument(RSS, "feed-1", "https://example.com/feed.xml").items;
+
+  test("parsing stays synchronous and leaves the document fields null", () => {
     setStoredDocumentCompiler(fakeCompiler());
-    const [item] = parseFeedDocument(RSS, "feed-1", "https://example.com/feed.xml").items;
+    const [item] = parseItems();
+    expect(item?.contentHtml).toContain("Hello");
+    expect(item?.contentDocument).toBeNull();
+  });
+
+  test("attachItemDocuments stores the compiler's document next to the HTML", async () => {
+    setStoredDocumentCompiler(fakeCompiler());
+    const [item] = await attachItemDocuments(parseItems());
     expect(item?.contentHtml).toContain("Hello");
     expect(item?.contentDocument).toMatchObject({ version: 1 });
     expect(item?.contentDocumentVersion).toBe(1);
     expect(item?.contentCompilerVersion).toBe(TEST_COMPILER_VERSION);
   });
 
-  test("without a compiler the item keeps its HTML and stores no document", () => {
-    const [item] = parseFeedDocument(RSS, "feed-1", "https://example.com/feed.xml").items;
+  test("compilation is bounded in concurrency", async () => {
+    let active = 0;
+    let peak = 0;
+    setStoredDocumentCompiler({
+      version: "x",
+      compile: async () => {
+        active += 1;
+        peak = Math.max(peak, active);
+        await new Promise((resolve) => setTimeout(resolve, 5));
+        active -= 1;
+        return null;
+      },
+    });
+    const [item] = parseItems();
+    await attachItemDocuments(
+      Array.from({ length: 12 }, () => item!),
+      3,
+    );
+    expect(peak).toBeLessThanOrEqual(3);
+  });
+
+  test("without a compiler the item keeps its HTML and stores no document", async () => {
+    const [item] = await attachItemDocuments(parseItems());
     expect(item?.contentHtml).toContain("Hello");
     expect(item?.contentDocument).toBeNull();
     expect(item?.contentDocumentVersion).toBeNull();
     expect(item?.contentCompilerVersion).toBeNull();
   });
 
-  test("a compiler that throws never blocks ingest", () => {
+  test("a compiler that rejects never blocks ingest", async () => {
     setStoredDocumentCompiler({
       version: "x",
-      compile: () => {
+      compile: async () => {
         throw new Error("boom");
       },
     });
-    const [item] = parseFeedDocument(RSS, "feed-1", "https://example.com/feed.xml").items;
+    const [item] = await attachItemDocuments(parseItems());
     expect(item?.contentHtml).toContain("Hello");
     expect(item?.contentDocument).toBeNull();
   });
 
-  test("clip and replacement writes compile by content source and clear for unsupported ones", () => {
+  test("clip and replacement writes compile by content source and clear for unsupported ones", async () => {
     setStoredDocumentCompiler(fakeCompiler());
-    const html = compileBodyDocumentColumns({
+    const html = await compileBodyDocumentColumns({
       raw: "<p>x</p>",
       contentSource: "feed_html",
       baseUrl: "https://example.com/",
       title: "T",
     });
     expect(html.contentCompilerVersion).toBe(TEST_COMPILER_VERSION);
-    const linkOnly = compileBodyDocumentColumns({
+    const linkOnly = await compileBodyDocumentColumns({
       raw: "x",
       contentSource: "link_only",
       baseUrl: null,

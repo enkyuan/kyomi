@@ -15,7 +15,7 @@ const FORMAT_BY_ORIGIN = {
  * Column values for the body document of a write. Returns the null trio when the source cannot be
  * compiled, so a replaced body never keeps a document that describes the previous one.
  */
-export function compileBodyDocumentColumns(input: {
+export async function compileBodyDocumentColumns(input: {
   raw: string | null;
   contentSource: string | null;
   baseUrl: string | null;
@@ -25,7 +25,7 @@ export function compileBodyDocumentColumns(input: {
   const format = origin ? FORMAT_BY_ORIGIN[origin] : undefined;
   const stored =
     input.raw && origin && format
-      ? compileStoredDocument({
+      ? await compileStoredDocument({
           raw: input.raw,
           format,
           origin,

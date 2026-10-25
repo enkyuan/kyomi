@@ -2,7 +2,6 @@ import { decodeHtmlEntities } from "./html-entities";
 import { compileArticleHtml } from "../document";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "../sanitization";
 import type { ParsedFeedItem } from "../services/feed/types";
-import { compileStoredDocument, toStoredDocumentColumns } from "./stored-document";
 
 function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
   if (!candidate) {
@@ -91,29 +90,14 @@ function htmlLooksLikeWrappedMarkdown(value: string): boolean {
  */
 function buildStoredFeedContent(
   value: string | null,
-  options?: { baseUrl?: string | null; title?: string | null },
+  options?: { baseUrl?: string | null },
 ): StoredFeedContent {
-  const stored = buildStoredFeedBody(value, options);
-  const origin = stored.contentSource;
-  const compiled =
-    stored.content &&
-    value &&
-    (origin === "feed_html" || origin === "feed_markdown" || origin === "text_fallback")
-      ? compileStoredDocument({
-          raw: value,
-          format:
-            origin === "feed_html" ? "html" : origin === "feed_markdown" ? "markdown" : "text",
-          origin,
-          baseUrl: options?.baseUrl ?? null,
-          title: options?.title ?? null,
-        })
-      : null;
-  const columns = toStoredDocumentColumns(compiled);
+  // Documents are compiled after parsing, in `attachItemDocuments`, because the compiler is async.
   return {
-    ...stored,
-    contentDocument: columns.document,
-    contentDocumentVersion: columns.documentVersion,
-    contentCompilerVersion: columns.compilerVersion,
+    ...buildStoredFeedBody(value, options),
+    contentDocument: null,
+    contentDocumentVersion: null,
+    contentCompilerVersion: null,
   };
 }
 

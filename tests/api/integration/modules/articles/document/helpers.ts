@@ -37,7 +37,7 @@ export function fakeDocument(imageSrc = "https://example.com/a.png"): Record<str
 export function fakeCompiler(version = TEST_COMPILER_VERSION): StoredDocumentCompiler {
   return {
     version,
-    compile: (): StoredDocument => ({
+    compile: async (): Promise<StoredDocument> => ({
       document: fakeDocument(),
       documentVersion: 1,
       compilerVersion: version,

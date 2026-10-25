@@ -138,22 +138,22 @@ function assertClipUpdateHasFields(body: ClipUpdateBody): void {
   }
 }
 
-function resolveClipHtml(
+async function resolveClipHtml(
   value: string | null | undefined,
   prev: ClipReadRow,
-): {
+): Promise<{
   contentHtml: string | null;
   contentRaw: string | null;
   version: string | null;
-  documentColumns: ReturnType<typeof compileBodyDocumentColumns>;
-} {
+  documentColumns: Awaited<ReturnType<typeof compileBodyDocumentColumns>>;
+}> {
   const raw = value?.trim() ? value : null;
   if (!raw) {
     return {
       contentHtml: null,
       contentRaw: null,
       version: null,
-      documentColumns: compileBodyDocumentColumns({
+      documentColumns: await compileBodyDocumentColumns({
         raw: null,
         contentSource: null,
         baseUrl: null,
@@ -166,7 +166,7 @@ function resolveClipHtml(
     contentHtml: compiled.html || null,
     contentRaw: raw,
     version: ARTICLE_HTML_SANITIZER_VERSION,
-    documentColumns: compileBodyDocumentColumns({
+    documentColumns: await compileBodyDocumentColumns({
       raw,
       contentSource: "feed_html",
       baseUrl: prev.url,
@@ -175,13 +175,15 @@ function resolveClipHtml(
   };
 }
 
-function resolveClipUpdateValues(body: ClipUpdateBody, prev: ClipReadRow, now: Date) {
+async function resolveClipUpdateValues(body: ClipUpdateBody, prev: ClipReadRow, now: Date) {
   const title =
     Object.hasOwn(body, "title") && typeof body.title === "string"
       ? body.title.trim() || prev.title
       : prev.title;
   // Client-provided HTML is untrusted: compile it once here and keep the original as raw source.
-  const html = Object.hasOwn(body, "contentHtml") ? resolveClipHtml(body.contentHtml, prev) : null;
+  const html = Object.hasOwn(body, "contentHtml")
+    ? await resolveClipHtml(body.contentHtml, prev)
+    : null;
   const contentText = Object.hasOwn(body, "contentText") ? body.contentText : prev.contentText;
   const contentMarkdown = Object.hasOwn(body, "contentMarkdown")
     ? body.contentMarkdown
@@ -275,12 +277,12 @@ export async function createArticleClip(
       contentHtml: stored.contentHtml,
       contentRaw: content,
       contentSanitizerVersion: stored.contentSanitizerVersion,
-      ...compileBodyDocumentColumns({
+      ...(await compileBodyDocumentColumns({
         raw: content,
         contentSource: stored.contentSource,
         baseUrl: trimmedUrl,
         title,
-      }),
+      })),
       contentText: stored.contentText,
       contentMarkdown: stored.contentMarkdown,
       contentStatus: stored.contentStatus,
@@ -379,7 +381,7 @@ export async function updateArticleClipForUser(
   }
 
   const now = new Date();
-  const next = resolveClipUpdateValues(body, prev, now);
+  const next = await resolveClipUpdateValues(body, prev, now);
 
   await database
     .update(articleClips)
@@ -407,6 +409,14 @@ export async function updateArticleClipForUser(
       updatedAt: now,
     })
     .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)));
+
+  if (next.contentRaw !== undefined) {
+    await enqueueEnrichmentForStoredDocument(database, {
+      table: "article_clips",
+      id: clipId,
+      body: "original",
+    });
+  }
 
   return true;
 }

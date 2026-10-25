@@ -223,7 +223,7 @@ export async function runDocumentBackfillScope(
         result.skipped += 1;
         continue;
       }
-      const stored = compileStoredDocument({
+      const stored = await compileStoredDocument({
         raw: row.raw,
         format,
         origin: spec.source ? (row.source as StoredDocumentInput["origin"]) : "extracted_html",
