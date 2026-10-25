@@ -239,7 +239,9 @@ function useReadingProgressTracking(
   onReadingProgress: ArticleBodyProps["onReadingProgress"],
 ) {
   const reportRef = useRef(onReadingProgress);
-  reportRef.current = onReadingProgress;
+  useEffect(() => {
+    reportRef.current = onReadingProgress;
+  }, [onReadingProgress]);
   const tracking = useRef<ReadingTracking>({
     emit: () => undefined,
     held: initialProgress !== undefined,
@@ -278,10 +280,12 @@ function useReadingProgressTracking(
       if (wait <= 0) {
         emit();
       } else {
-        trailing ??= window.setTimeout(() => {
-          trailing = undefined;
-          emit();
-        }, wait);
+        if (trailing === undefined) {
+          trailing = window.setTimeout(() => {
+            trailing = undefined;
+            emit();
+          }, wait);
+        }
       }
       window.clearTimeout(scrollEnd);
       scrollEnd = window.setTimeout(emit, READING_SCROLL_END_MS);
@@ -290,15 +294,18 @@ function useReadingProgressTracking(
       state.userScrolled = true;
     };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+    // One signal owns every listener, so a single abort removes them all.
+    const listeners = new AbortController();
+    window.addEventListener("scroll", onScroll, { passive: true, signal: listeners.signal });
     for (const type of ["touchstart", "wheel", "keydown"] as const) {
-      window.addEventListener(type, onUserInput, { capture: true, passive: true });
+      window.addEventListener(type, onUserInput, {
+        capture: true,
+        passive: true,
+        signal: listeners.signal,
+      });
     }
     return () => {
-      window.removeEventListener("scroll", onScroll);
-      for (const type of ["touchstart", "wheel", "keydown"] as const) {
-        window.removeEventListener(type, onUserInput, { capture: true });
-      }
+      listeners.abort();
       window.clearTimeout(trailing);
       window.clearTimeout(scrollEnd);
       state.emit = () => undefined;

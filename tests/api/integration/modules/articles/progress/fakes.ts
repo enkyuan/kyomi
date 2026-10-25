@@ -1,5 +1,6 @@
 import { getTableName } from "drizzle-orm";
 import { PgDialect } from "drizzle-orm/pg-core";
+import type { ReadingProgressUpdateBody } from "@modules/articles/progress/types";
 
 /**
  * In-memory stand-in for the Drizzle database used by the progress write tests. It keeps reading
@@ -87,9 +88,10 @@ export function createProgressDb(options: FakeProgressDbOptions = {}) {
       candidate.feedItemId,
       candidate.clipId,
     ]);
-    const named = params.filter((param) => ids.includes(param));
-    const rowIds = [row.id, row.feedItemId, row.clipId];
-    const idOk = named.length === 0 || named.some((param) => rowIds.includes(param));
+    const knownIds = new Set(ids);
+    const named = params.filter((param) => knownIds.has(param));
+    const rowIds = new Set([row.id, row.feedItemId, row.clipId]);
+    const idOk = named.length === 0 || named.some((param) => rowIds.has(param));
     return ownerOk && idOk;
   }
 
@@ -119,7 +121,8 @@ export function createProgressDb(options: FakeProgressDbOptions = {}) {
           returning: () => {
             const name = getTableName(table as never);
             const params = paramsOf(condition);
-            const rows = tables[name]!.filter((row) => params.includes(row.id));
+            const paramSet = new Set(params);
+            const rows = tables[name]!.filter((row) => paramSet.has(row.id));
             for (const row of rows) {
               Object.assign(row, patch);
             }
@@ -207,6 +210,26 @@ export function clipRow(overrides: Row = {}): Row {
     lastViewedAt: null,
     createdAt: new Date("2026-09-30T00:00:00.000Z"),
     updatedAt: new Date("2026-09-30T00:00:00.000Z"),
+    ...overrides,
+  };
+}
+
+export const FEED_ITEM_ID = "00000000-0000-4000-8000-000000000001";
+export const CLIP_ID = "00000000-0000-4000-8000-0000000000c1";
+export const SESSION_A = "11111111-1111-4111-8111-111111111111";
+export const SESSION_B = "22222222-2222-4222-8222-222222222222";
+
+export function body(
+  overrides: Partial<ReadingProgressUpdateBody> = {},
+): ReadingProgressUpdateBody {
+  return {
+    progress: 0.5,
+    anchor: null,
+    contentKey: "feed_html:v1",
+    sessionId: SESSION_A,
+    sessionActiveMs: 8_000,
+    completed: false,
+    clientUpdatedAt: atMs(0).toISOString(),
     ...overrides,
   };
 }
