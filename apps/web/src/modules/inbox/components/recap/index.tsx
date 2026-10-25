@@ -11,7 +11,10 @@ import { useTransition } from "@modules/inbox/hooks/use-transition";
 import { exportOpml } from "@modules/feeds/lib/api";
 import { CreateFolderDialog } from "@modules/folders/components/create-dialog";
 import type { useInboxRouteState } from "@modules/inbox/hooks/use-layout";
-import { inboxRecapQueryOptions } from "@modules/inbox/queries/options";
+import {
+  continueReadingQueryOptions,
+  inboxRecapQueryOptions,
+} from "@modules/inbox/queries/options";
 import { RecapContent } from "./content";
 import type {
   InboxRecapRailFolderBackTarget,
@@ -20,6 +23,7 @@ import type {
 import { invalidateRecapSurface } from "@modules/inbox/lib/recap/index";
 import type { InboxRecapDto } from "@modules/inbox/lib/recap/schema";
 import {
+  useDismissContinueReadingMutation,
   useFollowTopSourceMutation,
   useMoveRecapFeedMutation,
   useRemoveRecapFeedsMutation,
@@ -320,8 +324,15 @@ export function InboxRecapCard({
     refetch: refetchRecap,
   } = useQuery(inboxRecapQueryOptions(10));
 
+  // Loads with the recap so the rail settles once, instead of growing a row when this arrives.
+  const { data: continueReading, isLoading: continueReadingLoading } = useQuery(
+    continueReadingQueryOptions(),
+  );
+  const continueReadingItems = continueReading?.items ?? [];
+
   const { folders, isSummaryEmpty, oldestSavedItems, topViewedFeeds } = getRecapCollections(recap);
 
+  const dismissContinueReadingMutation = useDismissContinueReadingMutation(queryClient);
   const unsaveMutation = useUnsaveRecapItemMutation(queryClient);
   const followMutation = useFollowTopSourceMutation(queryClient);
   const moveFeedMutation = useMoveRecapFeedMutation(queryClient);
@@ -366,6 +377,7 @@ export function InboxRecapCard({
       <Transition {...recapTransition}>
         <RecapContent
           expandedSection={expandedSection}
+          continueReadingItems={continueReadingItems}
           exportingOpml={exportingOpml}
           folders={folders}
           followFeed={(feed, folderId) => followMutation.mutate({ feed, folderId })}
@@ -378,7 +390,7 @@ export function InboxRecapCard({
           navigateRecap={navigateRecap}
           oldestSavedItems={oldestSavedItems}
           recapError={recapError}
-          recapLoading={recapLoading}
+          recapLoading={recapLoading || continueReadingLoading}
           refetchRecap={() => void refetchRecap()}
           removeFeeds={(feedIds, options) => removeFeedsMutation.mutate({ feedIds, ...options })}
           removingFeedIds={removingFeedIds}
@@ -387,6 +399,7 @@ export function InboxRecapCard({
           topViewedFeeds={topViewedFeeds}
           unsavingItemId={unsavingItemId}
           onCreateFolder={() => dispatch({ type: "set-create-folder-open", open: true })}
+          onDismissContinueReading={(itemId) => dismissContinueReadingMutation.mutate({ itemId })}
           onExportOpml={exportOpmlAction}
           onImportOpml={() => setFollowSourcesDialogOpen(true)}
           onUnsave={(itemId) => unsaveMutation.mutate({ itemId })}

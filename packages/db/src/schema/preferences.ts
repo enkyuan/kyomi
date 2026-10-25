@@ -21,6 +21,7 @@ export const userPreferences = pgTable("user_preferences", {
   readerOpenLinksInNewTab: boolean("reader_open_links_in_new_tab").notNull().default(true),
   readerShowLinkPreviews: boolean("reader_show_link_previews").notNull().default(true),
   readerShowImages: boolean("reader_show_images").notNull().default(true),
+  readerRememberPosition: boolean("reader_remember_position").notNull().default(true),
   createdAt: timestamp("created_at").notNull().defaultNow(),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });

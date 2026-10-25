@@ -28,6 +28,8 @@ export const readerPreferencesSchema = z.object({
   openLinksInNewTab: z.boolean(),
   showLinkPreviews: z.boolean(),
   showImages: z.boolean(),
+  /** Track reading progress and restore the saved position. Older responses omit it. */
+  rememberPosition: z.boolean().default(true),
 });
 
 export const inboxPreferencesSchema = z.object({

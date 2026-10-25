@@ -14,6 +14,8 @@ export type UserPreferencesDto = {
   openLinksInNewTab: boolean;
   showLinkPreviews: boolean;
   showImages: boolean;
+  /** When false, clients neither send reading progress nor restore position. */
+  rememberPosition: boolean;
   inboxDefaultView: InboxDefaultViewDto;
   inboxDensity: InboxDensityDto;
   articleOpenBehavior: ArticleOpenBehaviorDto;

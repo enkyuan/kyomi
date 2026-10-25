@@ -1,4 +1,8 @@
-import type { ArticleDetailDto, ReaderContentDto } from "@kyomi/reader/schemas";
+import type {
+  ArticleDetailDto,
+  ReaderContentDto,
+  ReaderDefaultModeDto,
+} from "@kyomi/reader/schemas";
 import type { ReaderMode } from "./mode";
 
 /**
@@ -11,4 +15,12 @@ export function readerContentForMode(item: ArticleDetailDto, mode: ReaderMode): 
     return item.reader.extracted.content ?? item.reader.selected;
   }
   return item.reader.original.content;
+}
+
+/** The mode the reader renders: `smart` follows the server's choice for this article. */
+export function resolveReaderMode(
+  item: ArticleDetailDto,
+  defaultMode: ReaderDefaultModeDto,
+): ReaderMode {
+  return defaultMode === "smart" ? item.reader.activeMode : defaultMode;
 }

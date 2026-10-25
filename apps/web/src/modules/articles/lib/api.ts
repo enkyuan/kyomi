@@ -2,6 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders } from "@lib/api";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@kyomi/reader/schemas";
+import type { ReadingProgressDto, ReadingProgressUpdateBody } from "@kyomi/reader/schemas/article";
 import {
   buildArticlesUrl,
   buildCountsSearchParams,
@@ -54,6 +55,8 @@ export type InboxItem = {
   isRead: boolean;
   isSaved: boolean;
   categories: string[];
+  /** Absent on rows built before the reading state existed; null when nothing was read yet. */
+  readingProgress?: ReadingProgressDto | null;
 };
 
 type CursorListResponse = {
@@ -135,6 +138,7 @@ function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
     isRead: item.isRead,
     isSaved: item.isSaved,
     categories: item.categories,
+    readingProgress: item.readingProgress,
   };
 }
 
@@ -325,4 +329,86 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
       unread: counts.unread,
       saved: counts.saved,
     };
+  });
+
+export type SaveReadingProgressInput = {
+  itemId: string;
+  body: ReadingProgressUpdateBody;
+};
+
+/**
+ * Writes the reading position. Callers on a page-hide path pass a `keepalive` fetch through the
+ * server function's call-site `fetch` option so the request outlives the page.
+ */
+export const saveReadingProgress = createServerFn({ method: "POST" })
+  .validator((input: SaveReadingProgressInput) => input)
+  .handler(async ({ data }): Promise<{ readingProgress: ReadingProgressDto }> => {
+    const [{ fetchValidatedJson }, { readingProgressDtoSchema }] = await Promise.all([
+      getInboxSchemaModule(),
+      import("@kyomi/reader/schemas/article"),
+    ]);
+    const forwarded = buildForwardHeaders(getRequestHeaders());
+    forwarded.set("content-type", "application/json");
+
+    const readingProgress = await fetchValidatedJson(readingProgressDtoSchema, async () => {
+      const response = await apiJson<{ readingProgress: unknown }>(
+        `/api/v1/articles/${data.itemId}/progress`,
+        {
+          method: "PUT",
+          headers: forwarded,
+          body: JSON.stringify(data.body),
+        },
+      );
+      return response.readingProgress;
+    });
+
+    return { readingProgress };
+  });
+
+export const listContinueReading = createServerFn({ method: "GET" })
+  .validator((input: { limit?: number }) => input)
+  .handler(async ({ data }): Promise<{ items: InboxItem[] }> => {
+    const { fetchValidatedJson, cursorListResponseSchema } = await getInboxSchemaModule();
+    const search = new URLSearchParams();
+    if (data.limit !== undefined) {
+      search.set("limit", String(data.limit));
+    }
+    const query = search.toString();
+    const response = await fetchValidatedJson(cursorListResponseSchema, () =>
+      apiJson<CursorListResponse>(
+        `/api/v1/articles/views/continue-reading${query ? `?${query}` : ""}`,
+        { headers: buildForwardHeaders(getRequestHeaders()) },
+      ),
+    );
+
+    return { items: response.items.map(mapInboxItem) };
+  });
+
+export const reportContinueReadingImpressions = createServerFn({ method: "POST" })
+  .validator((input: { articleIds: string[] }) => input)
+  .handler(async ({ data }): Promise<{ message: string }> => {
+    const { fetchValidatedJson, messageResponseSchema } = await getInboxSchemaModule();
+    const forwarded = buildForwardHeaders(getRequestHeaders());
+    forwarded.set("content-type", "application/json");
+
+    return fetchValidatedJson(messageResponseSchema, () =>
+      apiJson<{ message: string }>("/api/v1/articles/views/continue-reading/impressions", {
+        method: "POST",
+        headers: forwarded,
+        body: JSON.stringify({ articleIds: data.articleIds }),
+      }),
+    );
+  });
+
+export const dismissContinueReading = createServerFn({ method: "POST" })
+  .validator((input: { itemId: string }) => input)
+  .handler(async ({ data }): Promise<{ message: string }> => {
+    const { fetchValidatedJson, messageResponseSchema } = await getInboxSchemaModule();
+
+    return fetchValidatedJson(messageResponseSchema, () =>
+      apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}/continue-reading/dismiss`, {
+        method: "POST",
+        headers: buildForwardHeaders(getRequestHeaders()),
+      }),
+    );
   });

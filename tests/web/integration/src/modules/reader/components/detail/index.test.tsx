@@ -12,6 +12,10 @@ vi.mock("@modules/reader/hooks/use-preferences", () => ({
   }),
 }));
 
+vi.mock("@modules/reader/hooks/use-reading-progress", () => ({
+  useReadingProgress: vi.fn(),
+}));
+
 vi.mock("@kyomi/ui/components/scroll-area", () => ({
   ScrollAreaPrimitive: {
     Root: ({ children, ...props }: { children: ReactNode }) => (
@@ -71,6 +75,9 @@ const article: ArticleDetailDto = {
   isSaved: false,
   articleType: "feed",
   categories: [],
+  lastViewedAt: null,
+  readingProgress: null,
+  readingPosition: null,
   contentHtml: null,
   contentText: null,
   contentMarkdown: "Reader body",

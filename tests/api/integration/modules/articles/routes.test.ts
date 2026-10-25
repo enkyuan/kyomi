@@ -53,6 +53,10 @@ describe("articles.routes", () => {
       "post /articles/:articleId/view",
       "post /articles/:articleId/reports/broken",
       "put /articles/:articleId",
+      "put /articles/:articleId/progress",
+      "get /articles/views/continue-reading",
+      "post /articles/views/continue-reading/impressions",
+      "post /articles/:articleId/continue-reading/dismiss",
     ]);
     for (const route of routes) {
       expect(typeof route.handler).toBe("function");
