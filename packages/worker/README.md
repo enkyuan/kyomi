@@ -11,6 +11,7 @@ src/
     feed/     feed fetch, parse, enrich, and refresh.
     favicon/  SSRF-safe favicon resolution and browser proxy URLs.
   document/      ingest-time article compiler and its passes (Node-only, linkedom).
+  enrichment/    pure helpers for the document-enrichment jobs: image size, thumbhash, embed snapshots.
   lib/           article identity, HTML entities, and feed helpers.
 ```
 
@@ -22,6 +23,7 @@ src/
 | `@kyomi/worker/queue`                | job stream types and consumers.                                                                  |
 | `@kyomi/worker/ingestion`            | feed refresh and parsing.                                                                        |
 | `@kyomi/worker/document`             | `compileArticleDocument` (HTML plus KDM), `compileArticleHtml`, and the ordered compiler passes. |
+| `@kyomi/worker/enrichment`           | KDM image-measure and embed-snapshot helpers (Node).                                             |
 | `@kyomi/worker/favicon`              | server-side favicon fetch and resolution.                                                        |
 | `@kyomi/worker/favicon/browser`      | client favicon proxy URL builder.                                                                |
 | `@kyomi/worker/lib/article-identity` | article URL identity helpers.                                                                    |

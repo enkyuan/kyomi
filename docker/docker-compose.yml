@@ -108,7 +108,7 @@ services:
       JOB_PROCESS_CONCURRENCY: ${JOB_PROCESS_CONCURRENCY:-4}
       JOB_READ_COUNT: ${JOB_READ_COUNT:-10}
       JOB_STREAM_MAX_LENGTH: ${JOB_STREAM_MAX_LENGTH:-100000}
-      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction}
+      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment}
       FEED_FETCH_HOST_LEASE_MS: ${FEED_FETCH_HOST_LEASE_MS:-5000}
       FEED_FETCH_HOST_RETRY_DELAY_MS: ${FEED_FETCH_HOST_RETRY_DELAY_MS:-250}
       FEATURE_GOOGLE_OAUTH: ${FEATURE_GOOGLE_OAUTH:-false}
@@ -120,6 +120,7 @@ services:
       FEATURE_SOCIAL_MODE: ${FEATURE_SOCIAL_MODE:-false}
       FEATURE_LINK_PREVIEWS: ${FEATURE_LINK_PREVIEWS:-false}
       FEATURE_SHARE_PREVIEWS: ${FEATURE_SHARE_PREVIEWS:-false}
+      FEATURE_READER_DOCUMENT: ${FEATURE_READER_DOCUMENT:-false}
       FEATURE_PUBLIC_API: ${FEATURE_PUBLIC_API:-false}
       FEATURE_SELF_HOSTING_SETUP: ${FEATURE_SELF_HOSTING_SETUP:-false}
       PUBLIC_API_KEY_PREFIX: ${PUBLIC_API_KEY_PREFIX:-kyomi_pk_}
@@ -182,7 +183,7 @@ services:
       JOB_PROCESS_CONCURRENCY: ${JOB_PROCESS_CONCURRENCY:-4}
       JOB_READ_COUNT: ${JOB_READ_COUNT:-10}
       JOB_STREAM_MAX_LENGTH: ${JOB_STREAM_MAX_LENGTH:-100000}
-      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction}
+      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment}
       FEED_FETCH_HOST_LEASE_MS: ${FEED_FETCH_HOST_LEASE_MS:-5000}
       FEED_FETCH_HOST_RETRY_DELAY_MS: ${FEED_FETCH_HOST_RETRY_DELAY_MS:-250}
     volumes:
@@ -231,7 +232,7 @@ services:
       JOB_PROCESS_CONCURRENCY: ${JOB_PROCESS_CONCURRENCY:-4}
       JOB_READ_COUNT: ${JOB_READ_COUNT:-10}
       JOB_STREAM_MAX_LENGTH: ${JOB_STREAM_MAX_LENGTH:-100000}
-      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction}
+      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment}
       FEED_FETCH_HOST_LEASE_MS: ${FEED_FETCH_HOST_LEASE_MS:-5000}
       FEED_FETCH_HOST_RETRY_DELAY_MS: ${FEED_FETCH_HOST_RETRY_DELAY_MS:-250}
     volumes:

@@ -51,6 +51,14 @@ export const feedItems = pgTable(
     extractedContentSanitizerVersion: text("extracted_content_sanitizer_version"),
     /** Readability output before sanitizing, kept for recompiles. Untrusted; never serialize. */
     extractedContentRaw: text("extracted_content_raw"),
+    /** KDM document compiled from the feed/clip body. Null until compiled; served only when `content_document_version` is supported by the client. */
+    contentDocument: jsonb("content_document"),
+    contentDocumentVersion: integer("content_document_version"),
+    contentCompilerVersion: text("content_compiler_version"),
+    /** KDM document compiled from the extracted body. Null until compiled; served only when `extracted_content_document_version` is supported by the client. */
+    extractedContentDocument: jsonb("extracted_content_document"),
+    extractedContentDocumentVersion: integer("extracted_content_document_version"),
+    extractedContentCompilerVersion: text("extracted_content_compiler_version"),
     imageUrl: text("image_url"),
     // Source parity for non-RSS items. Items still belong to a `feeds` row (feed_id stays
     // NOT NULL); these record the concrete platform identity and normalized author/language.
@@ -144,6 +152,14 @@ export const articleClips = pgTable(
     extractedContentSanitizerVersion: text("extracted_content_sanitizer_version"),
     /** Readability output before sanitizing, kept for recompiles. Untrusted; never serialize. */
     extractedContentRaw: text("extracted_content_raw"),
+    /** KDM document compiled from the feed/clip body. Null until compiled; served only when `content_document_version` is supported by the client. */
+    contentDocument: jsonb("content_document"),
+    contentDocumentVersion: integer("content_document_version"),
+    contentCompilerVersion: text("content_compiler_version"),
+    /** KDM document compiled from the extracted body. Null until compiled; served only when `extracted_content_document_version` is supported by the client. */
+    extractedContentDocument: jsonb("extracted_content_document"),
+    extractedContentDocumentVersion: integer("extracted_content_document_version"),
+    extractedContentCompilerVersion: text("extracted_content_compiler_version"),
     note: text("note"),
     isRead: boolean("is_read").notNull().default(false),
     isSaved: boolean("is_saved").notNull().default(true),
@@ -183,6 +199,10 @@ export const articleExtractionCache = pgTable(
     sanitizerVersion: text("sanitizer_version"),
     /** Readability output before sanitizing, kept for recompiles. Untrusted; never serialize. */
     rawHtml: text("raw_html"),
+    /** KDM document compiled from `raw_html`; null until compiled. */
+    document: jsonb("document"),
+    documentVersion: integer("document_version"),
+    compilerVersion: text("compiler_version"),
     status: text("status").notNull(),
     errorCode: text("error_code"),
     errorMessage: text("error_message"),

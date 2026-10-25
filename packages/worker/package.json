@@ -6,11 +6,13 @@
     ".": "./src/index.ts",
     "./queue": "./src/services/queue/index.ts",
     "./document": "./src/document/index.ts",
+    "./enrichment": "./src/enrichment/index.ts",
     "./ingestion": "./src/services/feed/index.ts",
     "./favicon": "./src/services/favicon/index.ts",
     "./favicon/browser": "./src/services/favicon/proxy-url.ts",
     "./lib/article-identity": "./src/lib/article-identity.ts",
     "./lib/html-entities": "./src/lib/html-entities.ts",
+    "./lib/stored-document": "./src/lib/stored-document.ts",
     "./lib/response-body": "./src/lib/response-body.ts"
   },
   "scripts": {
@@ -30,6 +32,8 @@
     "katex": "^0.16.45",
     "linkedom": "^0.18.12",
     "pg": "^8.16.3",
-    "shiki": "4.5.0"
+    "sharp": "^0.35.5",
+    "shiki": "4.5.0",
+    "thumbhash": "^0.1.1"
   }
 }

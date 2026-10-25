@@ -295,6 +295,13 @@
       "when": 1792530134439,
       "tag": "0041_raw_source_lz4",
       "breakpoints": true
+    },
+    {
+      "idx": 42,
+      "version": "7",
+      "when": 1792892501449,
+      "tag": "0042_kdm_document_columns",
+      "breakpoints": true
     }
   ]
 }
