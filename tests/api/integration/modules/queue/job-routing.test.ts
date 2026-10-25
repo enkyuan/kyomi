@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import {
   ARTICLE_EXTRACTION_JOBS_STREAM_KEY,
+  DOCUMENT_ENRICHMENT_JOBS_STREAM_KEY,
   FEED_REFRESH_JOBS_STREAM_KEY,
   OPML_JOBS_STREAM_KEY,
   getStreamKeyForJobType,
@@ -105,6 +106,17 @@ describe("queue routing", () => {
           payload: JSON.stringify({ feedId: "feed-1", userId: "user-1", generation }),
         }),
       ).toThrow("Invalid feed.refresh payload");
+    }
+  });
+
+  test("routes and parses document enrichment jobs", () => {
+    for (const type of ["document.image-measure", "document.embed-snapshot"] as const) {
+      expect(getStreamKeyForJobType(type)).toBe(DOCUMENT_ENRICHMENT_JOBS_STREAM_KEY);
+      expect(parseJob({ type, payload: JSON.stringify({ articleId: "a1" }) })).toEqual({
+        type,
+        payload: { articleId: "a1" },
+      });
+      expect(() => parseJob({ type, payload: JSON.stringify({}) })).toThrow();
     }
   });
 });

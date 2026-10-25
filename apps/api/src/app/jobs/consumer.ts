@@ -22,6 +22,7 @@ import {
 } from "@modules/opml/jobs";
 import { runArticleExtractionForUser } from "@modules/articles/reader/extraction/workflow";
 import { prefetchArticleExtractionsForFeedItems } from "@modules/articles/reader/extraction/prefetch";
+import { handleDocumentEnrichmentJob } from "@modules/articles/document-enrichment/jobs";
 import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "./classify";
 
 function extractionReasonForFeedRefresh(
@@ -212,6 +213,10 @@ async function handleWorkerJob(
       });
       return;
     }
+    case "document.image-measure":
+    case "document.embed-snapshot":
+      await handleDocumentEnrichmentJob(job);
+      return;
   }
 }
 

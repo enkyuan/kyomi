@@ -3,6 +3,7 @@ import type Redis from "ioredis";
 export const FEED_REFRESH_JOBS_STREAM_KEY = "jobs:feed-refresh";
 export const OPML_JOBS_STREAM_KEY = "jobs:opml";
 export const ARTICLE_EXTRACTION_JOBS_STREAM_KEY = "jobs:article-extraction";
+export const DOCUMENT_ENRICHMENT_JOBS_STREAM_KEY = "jobs:document-enrichment";
 export const JOBS_STREAM_KEY = FEED_REFRESH_JOBS_STREAM_KEY;
 export const JOBS_CONSUMER_GROUP = "kyomi-workers";
 export const JOBS_DEAD_LETTER_STREAM_KEY = "jobs:dead-letter";
@@ -76,13 +77,27 @@ export type ArticleExtractionJob = {
   };
 };
 
+/** Probes missing image dimensions and placeholders in a stored KDM document. */
+export type DocumentImageMeasureJob = {
+  type: "document.image-measure";
+  payload: { articleId: string };
+};
+
+/** Fetches `embed.snapshot` for X, Bluesky, Mastodon, Threads, and Instagram embeds. */
+export type DocumentEmbedSnapshotJob = {
+  type: "document.embed-snapshot";
+  payload: { articleId: string };
+};
+
 export type Job =
   | FeedRefreshJob
   | OpmlImportJob
   | OpmlImportFeedJob
   | OpmlImportPrepareJob
   | OpmlImportItemJob
-  | ArticleExtractionJob;
+  | ArticleExtractionJob
+  | DocumentImageMeasureJob
+  | DocumentEmbedSnapshotJob;
 export type JobType = Job["type"];
 
 export type JobMessage = {
@@ -109,6 +124,9 @@ export function getStreamKeyForJobType(jobType: JobType): string {
       return OPML_JOBS_STREAM_KEY;
     case "article.extract":
       return ARTICLE_EXTRACTION_JOBS_STREAM_KEY;
+    case "document.image-measure":
+    case "document.embed-snapshot":
+      return DOCUMENT_ENRICHMENT_JOBS_STREAM_KEY;
   }
 }
 
@@ -304,6 +322,16 @@ function parseArticleExtractionJob(parsedPayload: Record<string, unknown>): Arti
   };
 }
 
+function parseDocumentEnrichmentJob(
+  type: "document.image-measure" | "document.embed-snapshot",
+  parsedPayload: Record<string, unknown>,
+): DocumentImageMeasureJob | DocumentEmbedSnapshotJob {
+  if (typeof parsedPayload.articleId !== "string" || parsedPayload.articleId.length === 0) {
+    throw new Error(`Invalid ${type} payload`);
+  }
+  return { type, payload: { articleId: parsedPayload.articleId } };
+}
+
 export function parseJob(fields: Record<string, string>): Job {
   const parsedPayload = JSON.parse(fields.payload ?? "null") as Record<string, unknown> | null;
   if (!parsedPayload) {
@@ -323,6 +351,9 @@ export function parseJob(fields: Record<string, string>): Job {
       return parseOpmlImportItemJob(parsedPayload);
     case "article.extract":
       return parseArticleExtractionJob(parsedPayload);
+    case "document.image-measure":
+    case "document.embed-snapshot":
+      return parseDocumentEnrichmentJob(fields.type, parsedPayload);
     default:
       throw new Error(`Unsupported job type: ${fields.type ?? "unknown"}`);
   }
