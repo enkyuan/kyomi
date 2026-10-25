@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
 import { crc32, deflateSync } from "node:zlib";
+import { unwiredDocumentPatchStore } from "@modules/articles/document-enrichment/jobs";
 import { enqueueDocumentEnrichment } from "@modules/articles/document-enrichment/enqueue";
 import { fetchBounded } from "@modules/articles/document-enrichment/fetch";
 import { runEmbedSnapshotJob } from "@modules/articles/document-enrichment/embed-snapshot";
@@ -360,5 +361,16 @@ describe("enqueueDocumentEnrichment", () => {
   test("never throws when the queue is down", async () => {
     const redis = { xadd: async () => Promise.reject(new Error("down")) } as never;
     await enqueueDocumentEnrichment(TARGET, documentWith([figure(IMG)]), redis);
+  });
+});
+
+describe("unwiredDocumentPatchStore", () => {
+  test("fails loudly so a missed wiring surfaces as a failed job", async () => {
+    await expect(runImageMeasureJob(TARGET, { store: unwiredDocumentPatchStore })).rejects.toThrow(
+      "not wired",
+    );
+    await expect(runEmbedSnapshotJob(TARGET, { store: unwiredDocumentPatchStore })).rejects.toThrow(
+      "not wired",
+    );
   });
 });
