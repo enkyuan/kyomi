@@ -77,16 +77,23 @@ export type ArticleExtractionJob = {
   };
 };
 
+/** Content row that owns a stored KDM document. Feed items are shared across users. */
+export type DocumentTarget = {
+  table: "feed_items" | "article_clips";
+  id: string;
+  body: "original" | "extracted";
+};
+
 /** Probes missing image dimensions and placeholders in a stored KDM document. */
 export type DocumentImageMeasureJob = {
   type: "document.image-measure";
-  payload: { articleId: string };
+  payload: { target: DocumentTarget };
 };
 
 /** Fetches `embed.snapshot` for X, Bluesky, Mastodon, Threads, and Instagram embeds. */
 export type DocumentEmbedSnapshotJob = {
   type: "document.embed-snapshot";
-  payload: { articleId: string };
+  payload: { target: DocumentTarget };
 };
 
 export type Job =
@@ -322,14 +329,25 @@ function parseArticleExtractionJob(parsedPayload: Record<string, unknown>): Arti
   };
 }
 
+function parseDocumentTarget(value: unknown): DocumentTarget | null {
+  if (typeof value !== "object" || value === null) return null;
+  const { table, id, body } = value as Record<string, unknown>;
+  if ((table !== "feed_items" && table !== "article_clips") || typeof id !== "string" || !id) {
+    return null;
+  }
+  if (body !== "original" && body !== "extracted") return null;
+  return { table, id, body };
+}
+
 function parseDocumentEnrichmentJob(
   type: "document.image-measure" | "document.embed-snapshot",
   parsedPayload: Record<string, unknown>,
 ): DocumentImageMeasureJob | DocumentEmbedSnapshotJob {
-  if (typeof parsedPayload.articleId !== "string" || parsedPayload.articleId.length === 0) {
+  const target = parseDocumentTarget(parsedPayload.target);
+  if (!target) {
     throw new Error(`Invalid ${type} payload`);
   }
-  return { type, payload: { articleId: parsedPayload.articleId } };
+  return { type, payload: { target } };
 }
 
 export function parseJob(fields: Record<string, string>): Job {

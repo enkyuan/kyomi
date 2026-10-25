@@ -9,6 +9,7 @@ import {
 } from "@kyomi/worker/enrichment";
 import { fetchBounded } from "./fetch";
 import { createKeyedGate, mapWithConcurrency, retryFetch, type RetryOptions } from "./limits";
+import type { DocumentTarget } from "@kyomi/worker";
 import type { DocumentPatchStore } from "./store";
 
 const IMAGE_MAX_BYTES = 8 * 1024 * 1024;
@@ -26,7 +27,7 @@ export type ImageMeasureDeps = {
 };
 
 export type ImageMeasureResult = {
-  status: "patched" | "unchanged" | "missing" | "conflict";
+  status: "patched" | "unchanged" | "missing" | "stale" | "invalid";
   requested: number;
   measured: number;
 };
@@ -71,11 +72,11 @@ async function probeImage(probe: ImageNeed, retry: RetryOptions): Promise<ImageM
  * the merge against the fresh document without re-fetching.
  */
 export async function runImageMeasureJob(
-  articleId: string,
+  target: DocumentTarget,
   deps: ImageMeasureDeps,
 ): Promise<ImageMeasureResult> {
   const retry: RetryOptions = { attempts: 3, baseDelayMs: 250, ...deps.retry };
-  const first = await deps.store.load(articleId);
+  const first = await deps.store.load(target);
   if (!first) return { status: "missing", requested: 0, measured: 0 };
 
   const probes = collectImagesToMeasure(first.document).slice(0, MAX_IMAGES_PER_JOB);
@@ -91,18 +92,10 @@ export async function runImageMeasureJob(
   });
   if (measurements.size === 0) return { status: "unchanged", requested: urls.length, measured: 0 };
 
-  let current: typeof first | null = first;
-  for (let attempt = 0; attempt < MAX_SAVE_ATTEMPTS && current; attempt += 1) {
-    const { document, changed } = applyImageMeasurements(current.document, measurements);
-    if (!changed) {
-      return { status: "unchanged", requested: urls.length, measured: measurements.size };
-    }
-    if (await deps.store.save(articleId, document, current.version)) {
-      return { status: "patched", requested: urls.length, measured: measurements.size };
-    }
-    current = await deps.store.load(articleId);
-  }
-  return current
-    ? { status: "conflict", requested: urls.length, measured: measurements.size }
-    : { status: "missing", requested: urls.length, measured: measurements.size };
+  const outcome = await deps.store.patch(
+    target,
+    { documentVersion: first.documentVersion, compilerVersion: first.compilerVersion },
+    (doc) => applyImageMeasurements(doc, measurements).document,
+  );
+  return { status: outcome.status, requested: urls.length, measured: measurements.size };
 }

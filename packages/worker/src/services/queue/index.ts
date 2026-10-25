@@ -17,6 +17,7 @@ export {
   type ConsumeJobsOptions,
   type ArticleExtractionJob,
   type DocumentEmbedSnapshotJob,
+  type DocumentTarget,
   type DocumentImageMeasureJob,
   type FeedRefreshJob,
   type Job,

@@ -9,6 +9,7 @@ import {
 } from "@kyomi/worker/enrichment";
 import { fetchBounded } from "./fetch";
 import { createKeyedGate, mapWithConcurrency, retryFetch, type RetryOptions } from "./limits";
+import type { DocumentTarget } from "@kyomi/worker";
 import type { DocumentPatchStore } from "./store";
 
 const SNAPSHOT_MAX_BYTES = 1024 * 1024;
@@ -27,7 +28,7 @@ export type EmbedSnapshotDeps = {
 };
 
 export type EmbedSnapshotResult = {
-  status: "patched" | "unchanged" | "missing" | "conflict";
+  status: "patched" | "unchanged" | "missing" | "stale" | "invalid";
   requested: number;
   fetched: number;
 };
@@ -37,12 +38,12 @@ export type EmbedSnapshotResult = {
  * the embed as it was; the block keeps rendering its link-card fallback.
  */
 export async function runEmbedSnapshotJob(
-  articleId: string,
+  target: DocumentTarget,
   deps: EmbedSnapshotDeps,
 ): Promise<EmbedSnapshotResult> {
   const retry: RetryOptions = { attempts: 3, baseDelayMs: 500, ...deps.retry };
   const now = deps.now ?? (() => new Date());
-  const first = await deps.store.load(articleId);
+  const first = await deps.store.load(target);
   if (!first) return { status: "missing", requested: 0, fetched: 0 };
 
   const targets = collectEmbedsToSnapshot(first.document, providers).slice(0, MAX_EMBEDS_PER_JOB);
@@ -78,17 +79,10 @@ export async function runEmbedSnapshotJob(
   });
   if (snapshots.size === 0) return { status: "unchanged", requested: targets.length, fetched: 0 };
 
-  let current: typeof first | null = first;
-  for (let attempt = 0; attempt < MAX_SAVE_ATTEMPTS && current; attempt += 1) {
-    const { document, changed } = applyEmbedSnapshots(current.document, snapshots);
-    if (!changed)
-      return { status: "unchanged", requested: targets.length, fetched: snapshots.size };
-    if (await deps.store.save(articleId, document, current.version)) {
-      return { status: "patched", requested: targets.length, fetched: snapshots.size };
-    }
-    current = await deps.store.load(articleId);
-  }
-  return current
-    ? { status: "conflict", requested: targets.length, fetched: snapshots.size }
-    : { status: "missing", requested: targets.length, fetched: snapshots.size };
+  const outcome = await deps.store.patch(
+    target,
+    { documentVersion: first.documentVersion, compilerVersion: first.compilerVersion },
+    (doc) => applyEmbedSnapshots(doc, snapshots).document,
+  );
+  return { status: outcome.status, requested: targets.length, fetched: snapshots.size };
 }

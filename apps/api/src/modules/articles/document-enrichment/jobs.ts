@@ -12,7 +12,7 @@ export const unwiredDocumentPatchStore: DocumentPatchStore = {
   async load() {
     throw new Error("Document patch store is not wired");
   },
-  async save() {
+  async patch() {
     throw new Error("Document patch store is not wired");
   },
 };
@@ -22,14 +22,14 @@ export async function handleDocumentEnrichmentJob(
   store: DocumentPatchStore = unwiredDocumentPatchStore,
 ): Promise<void> {
   const startTime = Date.now();
-  const { articleId } = job.payload;
+  const { target } = job.payload;
   const result =
     job.type === "document.image-measure"
-      ? await runImageMeasureJob(articleId, { store })
-      : await runEmbedSnapshotJob(articleId, { store });
+      ? await runImageMeasureJob(target, { store })
+      : await runEmbedSnapshotJob(target, { store });
   logger.info("worker.job.document_enrichment.completed", {
     jobType: job.type,
-    articleId,
+    target,
     ...result,
     durationMs: Date.now() - startTime,
   });

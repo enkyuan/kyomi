@@ -6,6 +6,7 @@ import {
   collectEmbedsToSnapshot,
   collectImagesToMeasure,
 } from "@kyomi/worker/enrichment";
+import type { DocumentTarget } from "@kyomi/worker";
 import type Redis from "ioredis";
 
 /**
@@ -15,7 +16,7 @@ import type Redis from "ioredis";
  * for one document is harmless.
  */
 export async function enqueueDocumentEnrichment(
-  articleId: string,
+  target: DocumentTarget,
   document: object,
   redis: Redis = getRedis(),
 ): Promise<void> {
@@ -28,10 +29,10 @@ export async function enqueueDocumentEnrichment(
   await Promise.all(
     jobs.map(async (type) => {
       try {
-        await publishJob(redis, { type, payload: { articleId } });
+        await publishJob(redis, { type, payload: { target } });
       } catch (error) {
         logger.warn("document_enrichment.enqueue_failed", {
-          articleId,
+          target,
           type,
           error: error instanceof Error ? error.message : String(error),
         });

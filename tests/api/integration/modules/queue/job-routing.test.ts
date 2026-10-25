@@ -110,13 +110,17 @@ describe("queue routing", () => {
   });
 
   test("routes and parses document enrichment jobs", () => {
+    const target = { table: "article_clips", id: "c1", body: "extracted" } as const;
     for (const type of ["document.image-measure", "document.embed-snapshot"] as const) {
       expect(getStreamKeyForJobType(type)).toBe(DOCUMENT_ENRICHMENT_JOBS_STREAM_KEY);
-      expect(parseJob({ type, payload: JSON.stringify({ articleId: "a1" }) })).toEqual({
+      expect(parseJob({ type, payload: JSON.stringify({ target }) })).toEqual({
         type,
-        payload: { articleId: "a1" },
+        payload: { target },
       });
       expect(() => parseJob({ type, payload: JSON.stringify({}) })).toThrow();
+      expect(() =>
+        parseJob({ type, payload: JSON.stringify({ target: { ...target, table: "users" } }) }),
+      ).toThrow();
     }
   });
 });
