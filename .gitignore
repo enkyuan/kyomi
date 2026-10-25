@@ -1,56 +1,40 @@
 node_modules
-.turbo
-.DS_Store
-.env.keys
-.env*.local
-**/.env.example
+dist
+build
+coverage
 apps/*/bun.lock
 packages/*/bun.lock
 tests/bun.lock
-dist
-.artifacts/
-.gradle/
-build
-coverage
-.catalog-sync-logs/
-.catalog-sync.lock/
-.cursor/*
-.antigravitycli
-# Local docker overrides (corp CA mount, etc.)
+
+# Dot files and folders: only what contributors need is tracked (.agents, .github, .husky,
+# .circleci, .bun-version, .dockerignore, .oxfmtrc.json, .oxlintrc.json). Everything else
+# starting with a dot is local, so new tools and caches need no entry here.
+.*
+!.agents/
+!.circleci/
+!.dockerignore
+!.github/
+!.gitignore
+!.bun-version
+!.husky/
+!.oxfmtrc.json
+!.oxlintrc.json
+!.xcode.env
+
+# Encrypted dotenvx files are tracked; their private keys and local overrides are not.
+!.env
+!.env.example
+.env.keys
+.env*.local
+
+# Docker local overrides (corp CA mount, etc.)
 docker/certs/
 docker/docker-compose.override.yml
 
 # Python pipeline artifacts
-packages/catalog/.venv
 packages/catalog/**/__pycache__
 packages/catalog/**/*.py[codz]
-packages/catalog/.mypy_cache
-packages/catalog/.ruff_cache
-packages/catalog/.pytest_cache
 packages/catalog/processing/exports
 packages/catalog/**/*.parquet
 packages/catalog/**/*.duckdb
 packages/catalog/**/*.db
-.gstack/
-.pi/*
-!/.pi/extensions/
-!/.pi/extensions/kyomi.ts
-/.pi/tasks/
-.poolside/
-/.superpowers/
-/.claude/launch.json
-.poolside/
-
-# chunk local pool state
-.chunk/*-pool.json
-
-# Eval runs: keep cases, runner and summaries; translations, traces and reports stay local
-.claude/hillclimb/**/traces/
-.claude/hillclimb/**/ref/
-.claude/hillclimb/**/results.jsonl
-.claude/hillclimb/**/errors.jsonl
-.claude/hillclimb/**/progress.txt
-.claude/hillclimb/**/report.html
-.claude/hillclimb/**/state.json
-.claude/hillclimb/**/trajectory/
-.claude/hillclimb/translation-*/
