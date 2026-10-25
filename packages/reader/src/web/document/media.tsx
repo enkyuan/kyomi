@@ -5,8 +5,8 @@ import type { ReaderBlock } from "../../core/document";
 import { normalizeSafeHttpUrl } from "../../core/url";
 import { useDocumentContext } from "./context";
 import { DocumentImage } from "./image";
-import { Inlines, inlinesToText } from "./inline";
-import { resolveImageUrl } from "./lib";
+import { Inlines } from "./inline";
+import { inlinesToText, resolveImageUrl } from "./lib";
 
 type BlockOf<T extends ReaderBlock["type"]> = Extract<ReaderBlock, { type: T }>;
 

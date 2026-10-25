@@ -9,8 +9,8 @@ import { CodeBlock } from "./code";
 import { useDocumentContext } from "./context";
 import { EmbedBlock, LinkCardBlock } from "./embed";
 import { DocumentImage } from "./image";
-import { Inlines, inlinesToText } from "./inline";
-import { anchorId, scrollToAnchor } from "./lib";
+import { Inlines } from "./inline";
+import { anchorId, inlinesToText, scrollToAnchor } from "./lib";
 import { Audio, Figure, Gallery, Video } from "./media";
 import { BlockMath } from "./math";
 

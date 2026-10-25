@@ -30,7 +30,9 @@ const host = {
       src={props.image.src}
     />
   ),
-  renderIsland: (props: { kind: string }) => <iframe data-kind={props.kind} />,
+  renderIsland: (props: { kind: string; title: string }) => (
+    <iframe data-kind={props.kind} title={props.title} />
+  ),
 };
 
 function render(block: ReaderBlock, overrides: Partial<typeof host> = {}) {

@@ -8,7 +8,7 @@ import { getReaderSourceLabel, normalizeSafeHttpUrl } from "../../core/url";
 import { useDocumentContext } from "./context";
 import { DocumentImage } from "./image";
 import { Inlines } from "./inline";
-import { resolveImageUrl } from "./lib";
+import { allowedFrameUrl, resolveImageUrl } from "./lib";
 
 type EmbedBlockModel = Extract<ReaderBlock, { type: "embed" }>;
 type LinkCardModel = Extract<ReaderBlock, { type: "linkCard" }>;
@@ -37,35 +37,6 @@ const PROVIDER_LABELS: Record<ReaderEmbedProvider, string> = {
  * its own allowlist; this is the renderer's independent check, so a malformed document can never
  * point a frame at an arbitrary origin. Providers absent here are snapshot or link only.
  */
-const FRAME_HOSTS: Partial<Record<ReaderEmbedProvider, readonly string[]>> = {
-  youtube: ["www.youtube-nocookie.com", "youtube-nocookie.com"],
-  vimeo: ["player.vimeo.com"],
-  spotify: ["open.spotify.com"],
-  soundcloud: ["w.soundcloud.com"],
-  "apple-podcasts": ["embed.podcasts.apple.com"],
-  codepen: ["codepen.io"],
-  codesandbox: ["codesandbox.io"],
-  loom: ["www.loom.com"],
-  figma: ["www.figma.com", "embed.figma.com"],
-};
-
-export function allowedFrameUrl(
-  provider: ReaderEmbedProvider,
-  frameUrl: string | undefined,
-): string | null {
-  if (!frameUrl) {
-    return null;
-  }
-  try {
-    const url = new URL(frameUrl);
-    return url.protocol === "https:" && FRAME_HOSTS[provider]?.includes(url.hostname)
-      ? url.href
-      : null;
-  } catch {
-    return null;
-  }
-}
-
 const IFRAME_SANDBOX =
   "allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox";
 

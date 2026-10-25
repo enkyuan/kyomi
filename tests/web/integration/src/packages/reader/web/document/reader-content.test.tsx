@@ -86,7 +86,7 @@ describe("ReaderContent with a document body", () => {
   });
 
   test("validates a fetched document once, not on every render", () => {
-    const payload = JSON.parse(JSON.stringify(document_));
+    const payload = structuredClone(document_);
     const first = parseReaderDocument(payload);
     expect(first).not.toBeNull();
     expect(parseReaderDocument(payload)).toBe(first);

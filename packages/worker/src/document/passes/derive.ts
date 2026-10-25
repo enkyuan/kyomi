@@ -3,12 +3,18 @@ import type { DocumentDraft, DocumentPass } from "../document-draft";
 import { blocksText, mapOwnInlines, mapInlineTree, walkBlocks } from "../kdm-tree";
 
 const WORDS_PER_MINUTE = 238;
-const segmenter = new Intl.Segmenter(undefined, { granularity: "word" });
+const segmenter = new Intl.Segmenter("en", { granularity: "word" });
+const WORD_CHARACTER = /[\p{L}\p{N}]/u;
 
+/**
+ * Counts segments holding a letter or digit. `isWordLike` is not used: ICU builds disagree on it
+ * (Bun on macOS reports numbers such as `2024` or `p99` as not word-like, Linux builds as
+ * word-like), which made stored documents and corpus baselines depend on the host.
+ */
 export function countWords(text: string): number {
   let count = 0;
-  for (const segment of segmenter.segment(text)) {
-    if (segment.isWordLike) {
+  for (const { segment } of segmenter.segment(text)) {
+    if (WORD_CHARACTER.test(segment)) {
       count += 1;
     }
   }

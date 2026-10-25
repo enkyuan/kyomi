@@ -1,4 +1,4 @@
-import type { ReaderImage } from "../../core/document";
+import type { ReaderEmbedProvider, ReaderImage, ReaderInline } from "../../core/document";
 import { normalizeSafeHttpUrl } from "../../core/url";
 import type { ReaderImageUrlTransformer } from "../html/url-resolve";
 
@@ -69,4 +69,75 @@ export function isPlainLeftClick(event: {
   altKey: boolean;
 }): boolean {
   return !(event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey);
+}
+
+/** Plain text of inlines, for labels and failure descriptions. */
+export function inlinesToText(nodes: readonly ReaderInline[] | undefined): string {
+  if (!nodes) {
+    return "";
+  }
+  return nodes
+    .map((node) => {
+      switch (node.type) {
+        case "text":
+        case "code":
+          return node.value;
+        case "format":
+        case "link":
+        case "abbr":
+          return inlinesToText(node.children);
+        case "break":
+          return " ";
+        case "math":
+          return node.tex ?? "";
+        case "footnoteRef":
+          return node.label;
+        case "image":
+          return node.image.alt;
+        default:
+          return "";
+      }
+    })
+    .join("");
+}
+
+const FRAME_HOSTS: Partial<Record<ReaderEmbedProvider, readonly string[]>> = {
+  youtube: ["www.youtube-nocookie.com", "youtube-nocookie.com"],
+  vimeo: ["player.vimeo.com"],
+  spotify: ["open.spotify.com"],
+  soundcloud: ["w.soundcloud.com"],
+  "apple-podcasts": ["embed.podcasts.apple.com"],
+  codepen: ["codepen.io"],
+  codesandbox: ["codesandbox.io"],
+  loom: ["www.loom.com"],
+  figma: ["www.figma.com", "embed.figma.com"],
+};
+
+export function allowedFrameUrl(
+  provider: ReaderEmbedProvider,
+  frameUrl: string | undefined,
+): string | null {
+  if (!frameUrl) {
+    return null;
+  }
+  try {
+    const url = new URL(frameUrl);
+    return url.protocol === "https:" && FRAME_HOSTS[provider]?.includes(url.hostname)
+      ? url.href
+      : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * `rendered` is KaTeX output the compiler produced with `trust: false`. It is injected as-is, so
+ * anything that is not plain KaTeX markup (scripts, frames, event handlers) is refused and the
+ * math falls back to its source instead.
+ */
+const UNSAFE_RENDERED_RE =
+  /<\s*(?:script|iframe|object|embed|link|style|base|form)\b|\son[a-z]+\s*=|javascript:/i;
+
+export function isTrustedKatexHtml(html: string): boolean {
+  return !UNSAFE_RENDERED_RE.test(html);
 }

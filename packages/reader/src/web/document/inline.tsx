@@ -173,33 +173,3 @@ export function Inlines({ nodes }: { nodes: readonly ReaderInline[] }) {
     </>
   );
 }
-
-/** Plain text of inlines, for labels and failure descriptions. */
-export function inlinesToText(nodes: readonly ReaderInline[] | undefined): string {
-  if (!nodes) {
-    return "";
-  }
-  return nodes
-    .map((node) => {
-      switch (node.type) {
-        case "text":
-        case "code":
-          return node.value;
-        case "format":
-        case "link":
-        case "abbr":
-          return inlinesToText(node.children);
-        case "break":
-          return " ";
-        case "math":
-          return node.tex ?? "";
-        case "footnoteRef":
-          return node.label;
-        case "image":
-          return node.image.alt;
-        default:
-          return "";
-      }
-    })
-    .join("");
-}

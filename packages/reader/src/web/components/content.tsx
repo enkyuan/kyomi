@@ -54,41 +54,24 @@ type ReaderContentProps = {
   transformImageUrl?: ReaderImageUrlTransformer;
 };
 
-/** Whether `reader` has something to show, for callers that hide empty bodies. */
-export function hasReaderContentBody(reader: ReaderContentModel | ReaderDocumentContent): boolean {
-  switch (reader.bodyKind) {
-    case "document":
-      return parseReaderDocument(reader.document) !== null || Boolean(reader.contentHtml?.trim());
-    case "html":
-      return Boolean(reader.contentHtml?.trim());
-    case "markdown":
-      return Boolean(reader.contentMarkdown?.trim());
-    case "text":
-      return Boolean(reader.contentText?.trim());
-    default:
-      return false;
-  }
-}
-
 // oxlint-disable-next-line react-doctor/no-multi-comp -- sibling of ReaderContent: validates, then falls back
 function DocumentBody({
   reader,
   ...options
 }: Omit<ReaderContentProps, "reader"> & { reader: ReaderDocumentContent }) {
   const document = useMemo(() => parseReaderDocument(reader.document), [reader.document]);
-
-  if (!document) {
+  // Memoized so the memoized `ReaderContent` below does not re-render on every parent render.
+  const fallbackReader = useMemo((): ReaderContentProps["reader"] | null => {
+    if (document) {
+      return null;
+    }
     // Unsupported version, malformed, or absent: the HTML body is always served alongside.
     const { document: _document, documentVersion: _documentVersion, ...rest } = reader;
-    return (
-      <ReaderContent
-        {...options}
-        reader={{
-          ...rest,
-          bodyKind: reader.contentHtml ? "html" : "fallback",
-        }}
-      />
-    );
+    return { ...rest, bodyKind: reader.contentHtml ? "html" : "fallback" };
+  }, [document, reader]);
+
+  if (!document) {
+    return fallbackReader ? <ReaderContent {...options} reader={fallbackReader} /> : null;
   }
 
   const body = (

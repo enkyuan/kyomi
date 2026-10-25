@@ -52,6 +52,7 @@ export async function runDocumentPasses(
     if (!pass) {
       throw new Error(`Unknown document pass ${name}`);
     }
+    // Sequential on purpose: each pass mutates the same draft and depends on the one before it.
     await pass.run(draft);
   }
   return draft;
