@@ -10,6 +10,7 @@ vi.mock("@modules/articles/components/source", () => ({
 }));
 
 vi.mock("@kyomi/reader/web", () => ({
+  hasReaderContentBody: () => true,
   ReaderContent: () => <div>Reader body</div>,
 }));
 

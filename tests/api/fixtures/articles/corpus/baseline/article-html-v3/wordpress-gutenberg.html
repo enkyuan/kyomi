@@ -1,0 +1,21 @@
+<div class="entry-content wp-block-post-content">
+  <p>Offline sync shipped this week. The client now keeps a <b>local journal</b> of every edit, replays it when the network returns, and marks <i>conflicted</i> rows instead of overwriting them. The old <s>last-write-wins</s> policy is gone.</p>
+  <figure data-kyomi-placement="wide" class="wp-block-image alignwide">
+    <img loading="lazy" decoding="async" width="1024" height="576" src="https://blog.wp.example/wp-content/uploads/2026/10/sync-diagram-1024x576.png" alt="Diagram of the sync journal" class="wp-image-812" srcset="https://blog.wp.example/wp-content/uploads/2026/10/sync-diagram-1024x576.png 1024w, https://blog.wp.example/wp-content/uploads/2026/10/sync-diagram-2048x1152.png 2048w, https://blog.wp.example/wp-content/uploads/2026/10/sync-diagram-300x169.png 300w" sizes="(max-width: 1024px) 100vw, 1024px">
+    <figcaption data-kyomi-role="caption" class="wp-element-caption">Edits flow from the local journal to the server, then fan out to other devices.</figcaption>
+  </figure>
+  <h2 class="wp-block-heading" id="kyomi-what-changed">What changed</h2>
+  <figure data-kyomi-gallery="grid" class="wp-block-gallery has-nested-images wp-block-gallery-1">
+    <figure class="wp-block-image"><img loading="lazy" decoding="async" width="800" height="600" src="https://blog.wp.example/wp-content/uploads/2026/10/before.png" alt="Before: a spinner on every save"></figure>
+    <figure class="wp-block-image"><img loading="lazy" decoding="async" width="800" height="600" src="https://blog.wp.example/wp-content/uploads/2026/10/after.png" alt="After: saves appear instantly"></figure>
+    <figcaption data-kyomi-role="caption" class="wp-element-caption">Saving before and after the journal.</figcaption>
+  </figure>
+  <div data-kyomi-media-text="start" data-kyomi-placement="wide" class="wp-block-media-text alignwide">
+    <figure class="wp-block-media-text__media"><img loading="lazy" decoding="async" width="600" height="600" src="https://blog.wp.example/wp-content/uploads/2026/10/team.jpg" alt="The sync team"></figure>
+    <div class="wp-block-media-text__content"><p>Three people built this over two quarters, mostly by deleting code.</p></div>
+  </div>
+  <figure data-kyomi-role="pullquote" class="wp-block-pullquote"><blockquote><p>The fastest request is the one you never wait for.</p><cite>Sync team notes</cite></blockquote></figure>
+  <pre data-kyomi-lang="Bash" class="wp-block-code"><code>npm run sync -- --dry-run</code></pre>
+  <p>Conflict handling follows the approach in our earlier post<sup><a href="#kyomi-f1a2" id="kyomi-f1a2-link">1</a></sup>.</p>
+  <ol data-kyomi-role="footnotes" class="wp-block-footnotes"><li id="kyomi-f1a2">See the March post on vector clocks. <a href="#kyomi-f1a2-link">↩︎</a></li></ol>
+</div>

@@ -15,7 +15,7 @@ import { getTypography } from "@modules/articles/lib/typography";
 import { Toolbar } from "../toolbar";
 import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 import type { ToolbarModel } from "@modules/reader/lib/toolbar";
-import { ReaderContent } from "@kyomi/reader/web";
+import { hasReaderContentBody, ReaderContent } from "@kyomi/reader/web";
 import { Button } from "@kyomi/ui/components/button";
 import { Spinner } from "@kyomi/ui/components/spinner";
 import type {
@@ -38,19 +38,7 @@ function estimateReadingTime(html: string): number {
 }
 
 function hasReaderArticleBody(reader: ToolbarModel["displayReader"]): boolean {
-  if (reader.bodyKind === "fallback") {
-    return true;
-  }
-  if (reader.bodyKind === "html") {
-    return Boolean(reader.contentHtml?.trim());
-  }
-  if (reader.bodyKind === "markdown") {
-    return Boolean(reader.contentMarkdown?.trim());
-  }
-  if (reader.bodyKind === "text") {
-    return Boolean(reader.contentText?.trim());
-  }
-  return false;
+  return reader.bodyKind === "fallback" || hasReaderContentBody(reader);
 }
 
 function useFloatingToolbarBounds(articleRef: RefObject<HTMLElement | null>, enabled: boolean) {

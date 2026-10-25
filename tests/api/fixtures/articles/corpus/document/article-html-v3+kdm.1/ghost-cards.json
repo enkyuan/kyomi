@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://ghost.example/static-docs/"
+  },
+  "compiler": {
+    "version": "article-html-v3+kdm.1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Static docs",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 47,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": [],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We moved the documentation site to a static build. Here is what that looked like."
+        }
+      ]
+    },
+    {
+      "type": "figure",
+      "placement": "wide",
+      "image": {
+        "src": "https://ghost.example/content/images/2026/10/hero.jpg",
+        "alt": "",
+        "width": 2000,
+        "height": 1125,
+        "srcset": [
+          {
+            "url": "https://ghost.example/content/images/size/w600/2026/10/hero.jpg",
+            "width": 600
+          },
+          {
+            "url": "https://ghost.example/content/images/size/w1000/2026/10/hero.jpg",
+            "width": 1000
+          },
+          {
+            "url": "https://ghost.example/content/images/2026/10/hero.jpg",
+            "width": 2000
+          }
+        ]
+      },
+      "caption": [
+        {
+          "type": "text",
+          "value": "The new build pipeline at a glance."
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "placement": "wide",
+      "layout": "grid",
+      "items": [
+        {
+          "image": {
+            "src": "https://ghost.example/content/images/2026/10/a.png",
+            "alt": "",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        {
+          "image": {
+            "src": "https://ghost.example/content/images/2026/10/b.png",
+            "alt": "",
+            "width": 1200,
+            "height": 800
+          }
+        }
+      ]
+    },
+    {
+      "type": "linkCard",
+      "url": "https://docs.example.org/guide/static-builds",
+      "title": "Static builds guide",
+      "description": "How to prerender a docs site without a server.",
+      "siteName": "Example Docs",
+      "image": {
+        "src": "https://docs.example.org/og.png",
+        "alt": ""
+      }
+    },
+    {
+      "type": "callout",
+      "variant": "note",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Prerendering cut our hosting bill by two thirds."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "details",
+      "summary": [
+        {
+          "type": "text",
+          "value": "Does search still work?"
+        }
+      ],
+      "open": false,
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Yes, the index is built at deploy time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "placement": "content",
+      "sources": [
+        {
+          "url": "https://ghost.example/content/media/2026/10/demo.mp4"
+        }
+      ],
+      "poster": "https://img.spacergif.org/v1/1280x720/0a/spacer.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "type": "figure",
+      "placement": "content",
+      "image": {
+        "src": "https://ghost.example/content/images/2026/10/cover.jpg",
+        "alt": "audio-thumbnail"
+      }
+    },
+    {
+      "type": "audio",
+      "sources": [
+        {
+          "url": "https://ghost.example/content/media/2026/10/interview.mp3"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Interview with the docs team"
+        }
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {
+      "button": 1
+    },
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

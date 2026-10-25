@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { ARTICLE_COMPILE_PASSES, compileArticleHtml } from "@kyomi/worker/document";
-import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/worker/sanitization";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import { canonicalHtml } from "./run-pass";
 
 describe("compileArticleHtml", () => {
@@ -11,6 +11,7 @@ describe("compileArticleHtml", () => {
       "resolve-urls",
       "recognize-embeds",
       "capture-code-hints",
+      "capture-layout",
       "strip-chrome",
       "sanitize",
     ]);

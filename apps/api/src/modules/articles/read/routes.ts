@@ -9,7 +9,9 @@ import {
   getGlobalArticleCountsForUser,
   getUnreadCountsPerFeed,
 } from "./counts";
-import { getArticleDetailForUser } from "./detail";
+import { env } from "@config/env";
+import { parseSupportedDocumentVersion } from "@modules/articles/document/negotiate";
+import { getArticleDetailWithDocumentForUser } from "@modules/articles/document/serve";
 import { listAllArticlesForUser, listArticlesForUser } from "./list/query";
 import { parseArticlesListQuery, parseMergedViewListQuery, parseOptionalIsoDate } from "../params";
 import {
@@ -251,7 +253,16 @@ export function registerArticleReadRoutes(app: Elysia) {
         "/articles/:articleId",
         async (context) => {
           const { db, params, userId } = v1HandlerContext(context);
-          return getArticleDetailForUser(db, userId, params.articleId);
+          const { request, set } = context as unknown as {
+            request: Request;
+            set: { headers: Record<string, string> };
+          };
+          // The body varies by the declared version, so any cache in front must key on it.
+          set.headers.vary = "X-Kyomi-Document-Version";
+          return getArticleDetailWithDocumentForUser(db, userId, params.articleId, {
+            enabled: env.FEATURE_READER_DOCUMENT,
+            maxVersion: parseSupportedDocumentVersion(request.headers),
+          });
         },
         {
           params: articleIdParamsSchema,

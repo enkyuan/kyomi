@@ -9,7 +9,7 @@
  * row's stored version is compared against this to decide whether a fresh sanitizer pass
  * is required before it can be treated as already-safe.
  */
-export const ARTICLE_HTML_SANITIZER_VERSION = "article-html-v2" as const;
+export const ARTICLE_HTML_SANITIZER_VERSION = "article-html-v3" as const;
 
 /** MathML presentation elements. `annotation-xml` and `maction` stay out: both can carry HTML. */
 export const ARTICLE_MATHML_TAGS = [
@@ -41,6 +41,15 @@ export const ARTICLE_MATHML_TAGS = [
   "mtd",
   "mmultiscripts",
   "mprescripts",
+] as const;
+
+/** Layout hints captured by compiler pass 7 and read by the lowering pass. */
+export const ARTICLE_LAYOUT_HINT_ATTRS = [
+  "data-kyomi-placement",
+  "data-kyomi-gallery",
+  "data-kyomi-media-text",
+  "data-kyomi-callout",
+  "data-kyomi-role",
 ] as const;
 
 export const ARTICLE_HTML_ALLOWED_TAGS = [
@@ -124,6 +133,8 @@ export const ARTICLE_HTML_ALLOWED_ATTR = [
   "id",
   "style",
   "aria-hidden",
+  /* Compiler layout hints; `strip-reserved` guarantees only the compiler writes them. */
+  ...ARTICLE_LAYOUT_HINT_ATTRS,
 ] as const;
 
 const MATHML_ATTRS = Object.fromEntries(

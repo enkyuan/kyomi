@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://docs.mkdocs.example/guide/install/"
+  },
+  "compiler": {
+    "version": "article-html-v3+kdm.1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Install",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 36,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": ["shellscript"],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": [
+        {
+          "type": "text",
+          "value": "Warning"
+        }
+      ],
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Back up your configuration before upgrading."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "details",
+      "summary": [
+        {
+          "type": "text",
+          "value": "Why is a backup needed?"
+        }
+      ],
+      "open": false,
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "The upgrade rewrites the config file in place."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "value": "pip install example-tool",
+      "language": null,
+      "languageSource": "none",
+      "label": "Plain text"
+    },
+    {
+      "type": "code",
+      "value": "uv add example-tool",
+      "language": null,
+      "languageSource": "none",
+      "label": "Plain text"
+    },
+    {
+      "type": "code",
+      "value": "./install.sh --prefix ~/.local",
+      "language": "shellscript",
+      "languageSource": "explicit",
+      "label": "Shell",
+      "filename": "install.sh",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=5 lines=1 hash=33c9a6bfd1c63b49"
+    },
+    {
+      "type": "table",
+      "head": [
+        [
+          {
+            "header": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Option"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Default"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "body": [
+        [
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "code",
+                    "value": "--prefix"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "code",
+                    "value": "/usr/local"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {
+      "input": 2,
+      "label": 2
+    },
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

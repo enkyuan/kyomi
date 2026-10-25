@@ -1,4 +1,4 @@
-import { ARTICLE_HTML_DROP_CONTENT_TAGS } from "../../sanitization/article-policy";
+import { ARTICLE_HTML_DROP_CONTENT_TAGS } from "@kyomi/reader/sanitization";
 import { countDropped, unwrapElement, type ArticlePass } from "../context";
 
 /** Calls to action and share bars, matched as whole class tokens or token prefixes. */

@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://essays.example/on-margins/"
+  },
+  "compiler": {
+    "version": "article-html-v3+kdm.1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "On margins",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 55,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": [],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Margins are not wasted space"
+        },
+        {
+          "type": "footnoteRef",
+          "id": "fn-1",
+          "label": "1"
+        },
+        {
+          "type": "text",
+          "value": ". They let a reader decide how deep to go."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Some notes need no number at all"
+        },
+        {
+          "type": "footnoteRef",
+          "id": "fn-2",
+          "label": "2"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "attribution": [
+        {
+          "type": "text",
+          "value": "Edward Tufte, "
+        },
+        {
+          "type": "format",
+          "format": "cite",
+          "children": [
+            {
+              "type": "text",
+              "value": "The Visual Display of Quantitative Information"
+            }
+          ]
+        }
+      ],
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Above all else show the data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-fnref1",
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A pandoc-style footnote looks different"
+        },
+        {
+          "type": "footnoteRef",
+          "id": "fn-3",
+          "label": "3"
+        },
+        {
+          "type": "text",
+          "value": ". So does a "
+        },
+        {
+          "type": "format",
+          "format": "quote",
+          "children": [
+            {
+              "type": "text",
+              "value": "short inline quotation"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "format",
+          "format": "small",
+          "children": [
+            {
+              "type": "text",
+              "value": "fine print"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": ", and a date: 20 October 2026."
+        }
+      ]
+    }
+  ],
+  "footnotes": [
+    {
+      "id": "fn-1",
+      "label": "1",
+      "presentation": "sidenote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "A wide margin gives notes a place to live beside the sentence they explain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fn-2",
+      "label": "2",
+      "presentation": "sidenote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "An unnumbered margin note."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fn-3",
+      "label": "3",
+      "presentation": "footnote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Pandoc emits footnotes as an ordered list at the end of the document."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "droppedElements": {
+      "label": 2,
+      "input": 2
+    },
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

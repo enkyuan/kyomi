@@ -1,4 +1,4 @@
-import type { ARTICLE_EMBED_PROVIDERS } from "../sanitization/article-policy";
+import type { ARTICLE_EMBED_PROVIDERS } from "@kyomi/reader/sanitization";
 
 export type EmbedProvider = (typeof ARTICLE_EMBED_PROVIDERS)[number];
 

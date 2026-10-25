@@ -1,5 +1,3 @@
-/// <reference path="../css.d.ts" />
-import "katex/dist/katex.min.css";
 import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
 import { type ReaderMarkdownRenderOptions } from "../shared/markdown-core";
 import { readerMarkdownToHtmlWithKatex } from "../shared/markdown-katex";

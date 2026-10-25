@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://mathblog.example/posts/euler/"
+  },
+  "compiler": {
+    "version": "article-html-v3+kdm.1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Euler",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 68,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": true,
+    "codeLanguages": [],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Euler's identity, prerendered: "
+        },
+        {
+          "type": "math",
+          "tex": "e^{i\\pi}+1=0",
+          "rendered": "katex:1439:49e8b81e9a79003"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The same post also writes raw TeX for the client to render: "
+        },
+        {
+          "type": "math",
+          "tex": "\\int_0^1 x\\,dx = \\tfrac12",
+          "rendered": "katex:2854:dc772bcd1da708e5"
+        },
+        {
+          "type": "text",
+          "value": " and inline "
+        },
+        {
+          "type": "math",
+          "tex": "a^2+b^2=c^2",
+          "rendered": "katex:2122:b013ee0861232ecf"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Not math: the plan costs $5 a month or $50 a year, and the config key is "
+        },
+        {
+          "type": "code",
+          "value": "max_retry_count"
+        },
+        {
+          "type": "text",
+          "value": ", written in snake_case."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A display environment:"
+        }
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\begin{align}f(x) &= x^2 \\\\ f'(x) &= 2x\\end{align}",
+      "rendered": "katex:4415:89b30aa798f357e9"
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {},
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

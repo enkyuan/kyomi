@@ -10,7 +10,19 @@ import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
 import { articleListQueryKeys } from "@modules/articles/queries/keys";
 import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
 import { saveRecentArticle } from "@modules/recents/lib/store";
+import {
+  NATIVE_READER_ENABLED,
+  selectReaderBody,
+  toHtmlReaderContent,
+} from "@/lib/reader-document";
 import ArticleBody from "./components/article-body.dom";
+import { NativeArticleBody } from "./components/native-article-body";
+import {
+  READER_FIXTURE_ENABLED,
+  createLongArticleDocument,
+  createLongArticleReader,
+} from "./lib/fixture";
+import { startReaderTrace, type ReaderTrace } from "./lib/metrics";
 import { useArticle } from "./hooks/use-article";
 import { useReadingProgress } from "./hooks/use-reading-progress";
 import { getReaderCanvasColor, getReaderColorScheme } from "./lib/theme";
@@ -54,10 +66,48 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const [readyArticleId, setReadyArticleId] = useState<string | null>(null);
   // Avoid sending duplicate view events while an article stays open.
   const viewedArticleIdRef = useRef<string | null>(null);
+  const traceRef = useRef<{ articleId: string; trace: ReaderTrace } | null>(null);
   const handleArticleReady = useCallback(() => {
     setReadyArticleId(articleId);
+    if (traceRef.current?.articleId === articleId) traceRef.current.trace.ready();
   }, [articleId]);
-  const { data: article, error, isLoading, refetch } = useArticle(articleId);
+  const { data: fetchedArticle, error, isLoading, refetch } = useArticle(articleId);
+  const article = useMemo(
+    () =>
+      fetchedArticle && READER_FIXTURE_ENABLED
+        ? {
+            ...fetchedArticle,
+            reader: {
+              selected: NATIVE_READER_ENABLED
+                ? {
+                    ...createLongArticleReader(),
+                    bodyKind: "document" as const,
+                    document: createLongArticleDocument(),
+                    documentVersion: 1,
+                  }
+                : createLongArticleReader(),
+            },
+          }
+        : fetchedArticle,
+    [fetchedArticle],
+  );
+  const body = useMemo(
+    () => (article ? selectReaderBody(article.reader.selected, NATIVE_READER_ENABLED) : null),
+    [article],
+  );
+  const renderer = body?.kind === "document" ? "native" : "dom";
+
+  useEffect(() => {
+    if (!article || !body) return;
+    traceRef.current = {
+      articleId: article.id,
+      trace: startReaderTrace({
+        articleId: article.id,
+        blocks: body.kind === "document" ? body.document.blocks.length : undefined,
+        renderer,
+      }),
+    };
+  }, [article?.id, body, renderer]);
   const readingProgress = useReadingProgress(article);
   const faviconUrls = useMemo(
     () =>
@@ -124,6 +174,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   }
 
   const isDomReady = readyArticleId === article?.id;
+  const isNative = body?.kind === "document";
 
   if (!article) {
     return (
@@ -152,24 +203,39 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   return (
     <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
       <View style={{ flex: 1 }}>
-        <ArticleBody
-          key={article.id}
-          colorScheme={readerColorScheme}
-          bottomInset={tabBarOcclusionHeight}
-          dom={{
-            scrollEnabled: true,
-            style: { backgroundColor: readerCanvasColor, flex: 1, opacity: isDomReady ? 1 : 0 },
-          }}
-          faviconUrls={faviconUrls}
-          feedTitle={article.feedTitle}
-          fontSizePx={mobileReaderLayout.body.fontSizePx}
-          initialProgress={readingProgress.initialProgress}
-          onReadingProgress={readingProgress.onReadingProgress}
-          onReady={handleArticleReady}
-          reader={article.reader.selected}
-          title={article.title}
-        />
-        {!isDomReady ? (
+        {isNative ? (
+          <NativeArticleBody
+            key={article.id}
+            articleId={article.id}
+            bottomInset={tabBarOcclusionHeight}
+            colorScheme={readerColorScheme}
+            document={body.document}
+            faviconUrls={faviconUrls}
+            feedTitle={article.feedTitle}
+            onReady={handleArticleReady}
+            title={article.title}
+            topInset={insets.top}
+          />
+        ) : (
+          <ArticleBody
+            key={article.id}
+            colorScheme={readerColorScheme}
+            bottomInset={tabBarOcclusionHeight}
+            dom={{
+              scrollEnabled: true,
+              style: { backgroundColor: readerCanvasColor, flex: 1, opacity: isDomReady ? 1 : 0 },
+            }}
+            faviconUrls={faviconUrls}
+            feedTitle={article.feedTitle}
+            fontSizePx={mobileReaderLayout.body.fontSizePx}
+            initialProgress={readingProgress.initialProgress}
+            onReadingProgress={readingProgress.onReadingProgress}
+            onReady={handleArticleReady}
+            reader={toHtmlReaderContent(article.reader.selected)}
+            title={article.title}
+          />
+        )}
+        {!isDomReady && !isNative ? (
           <View
             pointerEvents="none"
             style={{

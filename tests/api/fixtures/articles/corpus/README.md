@@ -43,6 +43,28 @@ Contract details the checks rely on:
 - `data-kyomi-lang` keeps the hint as the source wrote it (`Bash`, `ts`); canonical language ids
   are resolved later, in compiler pass 13.
 
+## Document baseline
+
+`corpus-document.test.ts` compiles every fixture with `compileArticleDocument` and scores the KDM
+document against the sanitized HTML body and the authored `document` entry in `manifest.json`:
+
+```text
+document/<ARTICLE_COMPILER_VERSION>/
+  <name>.json     stable KDM snapshot (KaTeX markup and Shiki tokens are replaced by size and hash)
+  report.json     per-fixture and total scores
+```
+
+| Metric       | Meaning                                                                                    |
+| ------------ | ------------------------------------------------------------------------------------------ |
+| `elements`   | authored count per KDM type (`image` counts figures, gallery items, and media-text images) |
+| `textRecall` | share of the HTML body's words present in the document (embed fallbacks excluded)          |
+| `order`      | longest common word subsequence over the HTML body's words                                 |
+| `htmlBlocks` | `html` escape-hatch blocks; the manifest states the allowance and the target is zero       |
+
+Authored counts are the semantic truth (what the publisher put in the article), not the compiler's
+current output. Record a new baseline when `ARTICLE_COMPILER_VERSION` changes, with the same
+`KYOMI_UPDATE_READER_CORPUS=1` command, and review the report diff.
+
 ## Updating
 
 The test compares against `baseline/<current version>/`. When `ARTICLE_HTML_SANITIZER_VERSION`

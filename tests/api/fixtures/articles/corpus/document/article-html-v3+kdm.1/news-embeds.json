@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://news.example/2026/10/20/launch-day/"
+  },
+  "compiler": {
+    "version": "article-html-v3+kdm.1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Launch day",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 27,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": [],
+    "embedProviders": ["youtube", "x", "instagram", "tiktok", "bluesky", "mastodon"]
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The launch went out at nine. Here is how it unfolded."
+        }
+      ]
+    },
+    {
+      "type": "embed",
+      "provider": "youtube",
+      "placement": "content",
+      "url": "https://www.youtube.com/watch?v=M7lc1UVf-VE",
+      "providerId": "M7lc1UVf-VE",
+      "frameUrl": "https://www.youtube-nocookie.com/embed/M7lc1UVf-VE",
+      "aspectRatio": 1.7777777777777777,
+      "caption": [
+        {
+          "type": "text",
+          "value": "The keynote, from the thirty-second mark."
+        }
+      ]
+    },
+    {
+      "type": "embed",
+      "provider": "x",
+      "placement": "content",
+      "url": "https://x.com/exampleco/status/1847000000000000001"
+    },
+    {
+      "type": "embed",
+      "provider": "instagram",
+      "placement": "content",
+      "url": "https://www.instagram.com/p/C0abc123XYZ/"
+    },
+    {
+      "type": "embed",
+      "provider": "tiktok",
+      "placement": "content",
+      "url": "https://www.tiktok.com/@examplecreator/video/7300000000000000000"
+    },
+    {
+      "type": "embed",
+      "provider": "bluesky",
+      "placement": "content",
+      "url": "https://bsky.app/profile/did:plc:abc123example/post/3kxyzexample"
+    },
+    {
+      "type": "embed",
+      "provider": "mastodon",
+      "placement": "content",
+      "url": "https://mastodon.social/@example/111111111111111111"
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Behind the scenes:"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "placement": "content",
+      "sources": [
+        {
+          "url": "https://news.example/media/2026/10/backstage.mp4"
+        }
+      ],
+      "poster": "https://news.example/media/2026/10/backstage.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The full interview:"
+        }
+      ]
+    },
+    {
+      "type": "audio",
+      "sources": [
+        {
+          "url": "https://news.example/media/2026/10/interview.mp3"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "More coverage tomorrow."
+        }
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {
+      "script": 5,
+      "iframe": 1
+    },
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

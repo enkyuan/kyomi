@@ -164,9 +164,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "users_email_unique": {
-          "columns": [
-            "email"
-          ],
+          "columns": ["email"],
           "nullsNotDistinct": false,
           "name": "users_email_unique"
         }
@@ -267,12 +265,8 @@
           "tableFrom": "accounts",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -355,12 +349,8 @@
           "tableFrom": "memberships",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -369,12 +359,8 @@
           "tableFrom": "memberships",
           "tableTo": "organizations",
           "schemaTo": "public",
-          "columnsFrom": [
-            "organization_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["organization_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -537,12 +523,8 @@
           "tableFrom": "folders",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -805,12 +787,8 @@
           "tableFrom": "article_clips",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -1122,12 +1100,8 @@
           "tableFrom": "feed_subscriptions",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -1136,12 +1110,8 @@
           "tableFrom": "feed_subscriptions",
           "tableTo": "feeds",
           "schemaTo": "public",
-          "columnsFrom": [
-            "feed_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["feed_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -1150,12 +1120,8 @@
           "tableFrom": "feed_subscriptions",
           "tableTo": "folders",
           "schemaTo": "public",
-          "columnsFrom": [
-            "folder_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["folder_id"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "no action"
         }
@@ -1389,12 +1355,8 @@
           "tableFrom": "feed_items",
           "tableTo": "feeds",
           "schemaTo": "public",
-          "columnsFrom": [
-            "feed_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["feed_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -1541,12 +1503,8 @@
           "tableFrom": "user_preferences",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -1643,12 +1601,8 @@
           "tableFrom": "sessions",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -1656,9 +1610,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "sessions_token_unique": {
-          "columns": [
-            "token"
-          ],
+          "columns": ["token"],
           "nullsNotDistinct": false,
           "name": "sessions_token_unique"
         }
@@ -1939,12 +1891,8 @@
           "tableFrom": "article_reports",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -1953,12 +1901,8 @@
           "tableFrom": "article_reports",
           "tableTo": "feed_items",
           "schemaTo": "public",
-          "columnsFrom": [
-            "feed_item_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["feed_item_id"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "no action"
         },
@@ -1967,12 +1911,8 @@
           "tableFrom": "article_reports",
           "tableTo": "article_clips",
           "schemaTo": "public",
-          "columnsFrom": [
-            "clip_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["clip_id"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "no action"
         }
@@ -2101,12 +2041,8 @@
           "tableFrom": "article_view_events",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -2115,12 +2051,8 @@
           "tableFrom": "article_view_events",
           "tableTo": "feed_items",
           "schemaTo": "public",
-          "columnsFrom": [
-            "feed_item_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["feed_item_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -2129,12 +2061,8 @@
           "tableFrom": "article_view_events",
           "tableTo": "article_clips",
           "schemaTo": "public",
-          "columnsFrom": [
-            "clip_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["clip_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -2143,12 +2071,8 @@
           "tableFrom": "article_view_events",
           "tableTo": "feeds",
           "schemaTo": "public",
-          "columnsFrom": [
-            "feed_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["feed_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -2237,12 +2161,8 @@
           "tableFrom": "feed_user_stats",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -2251,12 +2171,8 @@
           "tableFrom": "feed_user_stats",
           "tableTo": "feeds",
           "schemaTo": "public",
-          "columnsFrom": [
-            "feed_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["feed_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -2264,10 +2180,7 @@
       "compositePrimaryKeys": {
         "feed_user_stats_user_id_feed_id_pk": {
           "name": "feed_user_stats_user_id_feed_id_pk",
-          "columns": [
-            "user_id",
-            "feed_id"
-          ]
+          "columns": ["user_id", "feed_id"]
         }
       },
       "uniqueConstraints": {},
@@ -2450,12 +2363,8 @@
           "tableFrom": "feed_item_user_state",
           "tableTo": "users",
           "schemaTo": "public",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -2464,12 +2373,8 @@
           "tableFrom": "feed_item_user_state",
           "tableTo": "feed_items",
           "schemaTo": "public",
-          "columnsFrom": [
-            "feed_item_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["feed_item_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -2477,10 +2382,7 @@
       "compositePrimaryKeys": {
         "feed_item_user_state_user_id_feed_item_id_pk": {
           "name": "feed_item_user_state_user_id_feed_item_id_pk",
-          "columns": [
-            "user_id",
-            "feed_item_id"
-          ]
+          "columns": ["user_id", "feed_item_id"]
         }
       },
       "uniqueConstraints": {},

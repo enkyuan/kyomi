@@ -1,5 +1,5 @@
 import { describe, expect, mock, test } from "bun:test";
-import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/worker/sanitization";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import { updateArticleForUser } from "@modules/articles/write/update";
 
 function createFakeDb() {

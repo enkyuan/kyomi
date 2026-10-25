@@ -1,6 +1,6 @@
 import { decodeHtmlEntities } from "./html-entities";
 import { compileArticleHtml } from "../document";
-import { ARTICLE_HTML_SANITIZER_VERSION } from "../sanitization";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import type { ParsedFeedItem } from "../services/feed/types";
 
 function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
@@ -91,7 +91,17 @@ function htmlLooksLikeWrappedMarkdown(value: string): boolean {
 function buildStoredFeedContent(
   value: string | null,
   options?: { baseUrl?: string | null },
-): Pick<
+): StoredFeedContent {
+  // Documents are compiled after parsing, in `attachItemDocuments`, because the compiler is async.
+  return {
+    ...buildStoredFeedBody(value, options),
+    contentDocument: null,
+    contentDocumentVersion: null,
+    contentCompilerVersion: null,
+  };
+}
+
+type StoredFeedContent = Pick<
   ParsedFeedItem,
   | "content"
   | "contentHtml"
@@ -103,6 +113,17 @@ function buildStoredFeedContent(
   | "contentSource"
   | "extractionErrorCode"
   | "extractionErrorMessage"
+  | "contentDocument"
+  | "contentDocumentVersion"
+  | "contentCompilerVersion"
+>;
+
+function buildStoredFeedBody(
+  value: string | null,
+  options?: { baseUrl?: string | null },
+): Omit<
+  StoredFeedContent,
+  "contentDocument" | "contentDocumentVersion" | "contentCompilerVersion"
 > {
   const sanitized = sanitizeStoredContent(value, options?.baseUrl ?? null);
   const contentRaw = value?.trim() ? value : null;

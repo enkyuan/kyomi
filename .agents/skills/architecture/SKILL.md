@@ -38,10 +38,10 @@ present need.
 - Keep `apps/web`, `apps/mobile`, and `apps/api` independently runnable.
 - Keep PostgreSQL schema and migrations in `packages/db`; keep product queries and authorization in
   the owning API domain.
-- Keep feed ingestion, queue contracts, favicon resolution, and shared sanitization in
+- Keep feed ingestion, queue contracts, favicon resolution, and the article compiler in
   `packages/worker`; keep executable worker and scheduler processes in `apps/api`.
 - Keep reusable presentation primitives and dependencies in `packages/ui`, and shared article
-  rendering in `packages/reader`.
+  rendering and HTML sanitization in `packages/reader`.
 - Keep `packages/catalog` optional and offline. Normal application setup must not require Python,
   uv, or catalog synchronization.
 - Keep compiler presets in `packages/tsconfig`; keep aliases and environment types in consumers.

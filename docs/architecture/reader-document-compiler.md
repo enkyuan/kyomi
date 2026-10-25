@@ -2,8 +2,11 @@
 
 Status: accepted 2026-10-20. Phase 0 shipped passes 2–6, 8, and 9 in
 `packages/worker/src/document/` (`@kyomi/worker/document`), wired into feed refresh, extraction, and
-clip writes (plan: `docs/superpowers/plans/2026-10-20-reader-sanitizer-v2.md`). The schema the later
-passes target is `packages/reader/src/core/document/`, exported as `@kyomi/reader/document`.
+clip writes (plan: `docs/superpowers/plans/2026-10-20-reader-sanitizer-v2.md`). Phase 1 compiler
+(2026-10-24) adds pass 7 and the Stage C passes 10–18 behind `compileArticleDocument`, which returns
+the sanitized HTML and a validated KDM document; storing, serving, and rendering the document are
+tracked in their own sessions. The schema is `packages/reader/src/core/document/`, exported as
+`@kyomi/reader/document`.
 
 ## Goal
 
@@ -41,13 +44,25 @@ Passes run in order. Each pass is a pure function over one tree with its own fix
 Phase 0 runs pass 4 (`unlazy-media`) before pass 3 (`resolve-urls`) so promoted lazy URLs are
 resolved too; see `ARTICLE_COMPILE_PASSES` in `packages/worker/src/document/compile.ts`.
 
-Phase 0 status: passes 2–6, 8, and 9 are shipped. Beyond the table, pass 3 also rewrites ids to
-`kyomi-` anchors and fixes in-page links, pass 6 also records task-list state
+Status: passes 2–9 (stage B) and 10–18 (stage C) are shipped. Beyond the table, pass 3 also
+rewrites ids to `kyomi-` anchors and fixes in-page links, pass 6 also records task-list state
 (`li[data-kyomi-checked]`) and drops Chroma line-number gutters and publisher token colours, and
-pass 8 also drops `label` and MathML `annotation-xml`. Pass 7 is deferred to Phase 1, which can
-derive it from retained raw source. Read paths never run these passes; they re-apply the policy and
-strip `data-kyomi-*` unless the row's stored sanitizer version is current.
-Stage A and B operate on a linkedom DOM, stage C on KDM.
+pass 8 also drops `label` and MathML `annotation-xml`. Pass 7 also labels callouts, pullquotes,
+captions, credits, sidenotes, and footnote containers (`data-kyomi-callout`, `data-kyomi-role`),
+because the sanitizer removes the classes they come from; its publisher adapters (Ghost, WordPress,
+Substack) rewrite bookmark cards, toggles, classic captions, and player chrome. The new hints are
+why `ARTICLE_HTML_SANITIZER_VERSION` is `article-html-v3`. Pass 11 groups the images of one
+paragraph into a gallery. Pass 12 matches footnote bodies by anchor, so Markdown `[^n]`, `.footnotes`
+lists, Substack footnotes, and authored sidenotes share one path. Pass 10 lowers a one-row
+LaTeXML-style equation table to a display `math` block. Pass 13 uses Shiki's Oniguruma engine; the
+JavaScript engine tokenized a language differently on its first call. Read paths never run these
+passes; they re-apply the policy and strip `data-kyomi-*` unless the row's stored sanitizer version
+is current. Stage A and B operate on a linkedom DOM, stage C on KDM.
+
+`compileArticleDocument(input)` (async) runs stages A–C and returns
+`{ html, sanitizerVersion, document, compilerVersion, documentVersion, diagnostics }`. `document` is
+`null`, with a warning, when `validate` fails or the source exceeds 4 MB or 100,000 elements; the
+HTML body is always returned. `ARTICLE_COMPILER_VERSION` is `${sanitizer version}+kdm.N`, so a sanitizer bump invalidates stored documents automatically; bump N when Stage C output changes.
 
 ### Stage A: input
 
@@ -118,8 +133,12 @@ the sanitizer, so they are captured first as compiler-owned `data-kyomi-*` attri
   `tests/api/integration/modules/articles/reader/content/compile/` (the compiler runs in Node).
 - The HTML fidelity corpus in `tests/api/fixtures/articles/corpus/`: 20 publisher archetypes with
   authored checks and a recorded baseline per sanitizer version (v1: 78 of 176, v2: 176 of 176).
-  Phase 1 extends it with expected KDM, text recall, element recall per type, order, and
-  `htmlBlocks` count per fixture. Markdown keeps its own corpus in
+  Phase 1 extends it with a KDM baseline per compiler version
+  (`document/<compiler version>/`): authored element counts per fixture, text recall and reading
+  order against the sanitized HTML body, and the `htmlBlocks` count. `article-html-v3+kdm.1`: 20 of 20
+  documents valid, 0 `html` blocks, element recall 1.0 (101 of 101 authored elements), text recall
+  0.998, reading order 0.977 (the lowest fixture is `tufte-sidenotes` at 0.73, because sidenotes
+  move from the sentence to the footnote list). Markdown keeps its own corpus in
   `tests/web/integration/src/packages/reader/markdown-corpus.test.tsx`.
 
 ## Decisions (accepted 2026-10-20)

@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://code.example/notes/language-hints"
+  },
+  "compiler": {
+    "version": "article-html-v3+kdm.1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Language hints",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 47,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": ["go", "php", "elixir", "sql", "haskell", "python", "typescript"],
+    "embedProviders": ["codepen", "github-gist", "codesandbox"]
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Language hints come in many shapes."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "value": "package main\n\nfunc main() {}",
+      "language": "go",
+      "languageSource": "explicit",
+      "label": "Go",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=4 lines=3 hash=35f0259a42099c75"
+    },
+    {
+      "type": "code",
+      "value": "<?php echo \"hello\"; ?>",
+      "language": "php",
+      "languageSource": "explicit",
+      "label": "PHP",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=5 lines=1 hash=29e6b7ee6f3d42c1"
+    },
+    {
+      "type": "code",
+      "value": "IO.puts(\"hello\")",
+      "language": "elixir",
+      "languageSource": "explicit",
+      "label": "Elixir",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=4 lines=1 hash=d2f6064aac1a697a"
+    },
+    {
+      "type": "code",
+      "value": "SELECT 1;\nSELECT 2;\nSELECT 3;",
+      "language": "sql",
+      "languageSource": "explicit",
+      "label": "SQL",
+      "highlightLines": [2, 3],
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=4 lines=3 hash=f5210f2cd58547aa"
+    },
+    {
+      "type": "code",
+      "value": "main = putStrLn \"hello\"",
+      "language": "haskell",
+      "languageSource": "explicit",
+      "label": "Haskell",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=4 lines=1 hash=c8c8e59fcdcf98bf"
+    },
+    {
+      "type": "code",
+      "value": "A preformatted block with no hints at all.",
+      "language": null,
+      "languageSource": "none",
+      "label": "Plain text"
+    },
+    {
+      "type": "code",
+      "value": "#!/usr/bin/env python3\nprint(\"from a shebang\")",
+      "language": "python",
+      "languageSource": "shebang",
+      "label": "Python",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=5 lines=2 hash=c084a75a739668e9"
+    },
+    {
+      "type": "code",
+      "value": "Bun.serve({ fetch: () => new Response(\"ok\") });",
+      "language": "typescript",
+      "languageSource": "explicit",
+      "label": "TypeScript",
+      "filename": "server.ts",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=5 lines=1 hash=67fd75d707db70ca"
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Live examples:"
+        }
+      ]
+    },
+    {
+      "type": "embed",
+      "provider": "codepen",
+      "placement": "content",
+      "url": "https://codepen.io/example/pen/abcXYZ",
+      "providerId": "example/abcXYZ",
+      "frameUrl": "https://codepen.io/example/embed/abcXYZ?default-tab=result",
+      "aspectRatio": 1.7777777777777777
+    },
+    {
+      "type": "embed",
+      "provider": "github-gist",
+      "placement": "content",
+      "url": "https://gist.github.com/example/0123456789abcdef0123456789abcdef"
+    },
+    {
+      "type": "embed",
+      "provider": "codesandbox",
+      "placement": "content",
+      "url": "https://codesandbox.io/s/xyz123",
+      "providerId": "xyz123",
+      "frameUrl": "https://codesandbox.io/embed/xyz123",
+      "aspectRatio": 1.7777777777777777
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {},
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

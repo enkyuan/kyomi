@@ -1,0 +1,7 @@
+<div><section><div><div><div>
+<p id="kyomi-5c1e">We replaced a distributed cache with an in-process <strong>LRU</strong> and a short <em>TTL</em>. The <code>get</code> path got four times faster.</p>
+<figure><div><div><picture><source srcset="https://miro.medium.example/v2/resize:fit:640/format:webp/1*cacheHits.png 640w, https://miro.medium.example/v2/resize:fit:720/format:webp/1*cacheHits.png 720w, https://miro.medium.example/v2/resize:fit:1400/format:webp/1*cacheHits.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) calc(100vw - 48px), 700px" type="image/webp"><source srcset="https://miro.medium.example/v2/resize:fit:640/1*cacheHits.png 640w, https://miro.medium.example/v2/resize:fit:1400/1*cacheHits.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) calc(100vw - 48px), 700px"><img decoding="async" src="https://miro.medium.example/v2/resize:fit:1400/1*cacheHits.png" alt="" width="700" height="394" loading="eager"></picture></div></div><figcaption>Cache hit rate in the week after the change.</figcaption></figure>
+<pre><span id="kyomi-9d1f">const cache = new Map();<br>cache.set("user:42", profile);<br>cache.get("user:42");</span></pre>
+<blockquote><p id="kyomi-aa10"><em>Every network hop you remove is latency you never have to explain.</em></p></blockquote>
+<p id="kyomi-b7c2">The trade-off is staleness, which we bound with the TTL.</p>
+</div></div></div></section></div>

@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://hostile.example/post"
+  },
+  "compiler": {
+    "version": "article-html-v3+kdm.1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Hostile",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 34,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": true,
+    "codeLanguages": [],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A paragraph carrying forged compiler hints."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A forged compiler element."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "value": "forged language hint",
+      "language": null,
+      "languageSource": "none",
+      "label": "Plain text"
+    },
+    {
+      "anchor": "kyomi-location",
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Clobbering location"
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-proto",
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Clobbering proto"
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-cookie",
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "named anchor "
+        },
+        {
+          "type": "image",
+          "image": {
+            "src": "https://hostile.example/ok.png",
+            "alt": "ok",
+            "srcset": [
+              {
+                "url": "https://hostile.example/ok2.png",
+                "density": 2
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "placement": "content",
+      "sources": [
+        {
+          "url": "https://hostile.example/v.mp4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "script link and "
+        },
+        {
+          "type": "link",
+          "href": "#kyomi-location",
+          "children": [
+            {
+              "type": "text",
+              "value": "fragment link"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "math",
+          "mathml": "<math><semantics><mi>x</mi></semantics></math>"
+        },
+        {
+          "type": "text",
+          "value": " "
+        },
+        {
+          "type": "math",
+          "mathml": "<math><mi>y</mi><mtext>status text</mtext></math>"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "An overlay attempt."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The end of the hostile fixture."
+        }
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {
+      "annotation-xml": 1,
+      "svg": 1,
+      "form": 1,
+      "iframe": 1,
+      "style": 1
+    },
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

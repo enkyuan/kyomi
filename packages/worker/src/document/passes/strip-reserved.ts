@@ -1,4 +1,4 @@
-import { stripReservedArticleMarkup } from "../../sanitization/reserved";
+import { stripReservedArticleMarkup } from "@kyomi/reader/sanitization";
 import type { ArticlePass } from "../context";
 
 /**

@@ -1,5 +1,6 @@
 import { prefetchMobileApi } from "@/lib/api";
 import { mobileApiPrefetchKey } from "@/lib/prefetch";
+import { readerDocumentHeaders } from "@/lib/reader-document";
 
 const PAGE_LIMIT = 100;
 
@@ -39,5 +40,8 @@ export function readerArticlePrefetchKey(articleId: string): string {
 
 export function prefetchReaderArticle(articleId: string): void {
   const path = readerArticlePath(articleId);
-  prefetchMobileApi(path, { prefetchKey: mobileApiPrefetchKey(path) });
+  prefetchMobileApi(path, {
+    headers: readerDocumentHeaders(),
+    prefetchKey: mobileApiPrefetchKey(path),
+  });
 }
