@@ -1,11 +1,13 @@
 import { sql } from "drizzle-orm";
 import {
   boolean,
+  check,
   index,
   integer,
   jsonb,
   pgTable,
   primaryKey,
+  real,
   text,
   timestamp,
   uniqueIndex,
@@ -291,5 +293,65 @@ export const articleReports = pgTable(
       table.articleId,
       table.createdAt.desc().nullsFirst(),
     ),
+  ],
+);
+
+/**
+ * Per-user reading position, engagement, and resurfacing schedule for one article. Lives apart from
+ * `feed_item_user_state` so frequent position writes do not churn that table's partial indexes,
+ * which every list query joins. Exactly one of `feed_item_id` / `clip_id` is set.
+ */
+export const articleReadingState = pgTable(
+  "article_reading_state",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    feedItemId: text("feed_item_id").references(() => feedItems.id, { onDelete: "cascade" }),
+    clipId: text("clip_id").references(() => articleClips.id, { onDelete: "cascade" }),
+    /** Current position, 0 to 1. */
+    progress: real("progress").notNull().default(0),
+    /** High-water mark, 0 to 1. */
+    maxProgress: real("max_progress").notNull().default(0),
+    /** `ReadingBlockAnchor`, reserved for KDM; null on the HTML path. */
+    anchor: jsonb("anchor"),
+    contentKey: text("content_key").notNull(),
+    /** Word count of the content read, computed once on the first write. */
+    contentWords: integer("content_words"),
+    activeReadMs: integer("active_read_ms").notNull().default(0),
+    sessionCount: integer("session_count").notNull().default(0),
+    lastSessionId: text("last_session_id"),
+    lastSessionActiveMs: integer("last_session_active_ms").notNull().default(0),
+    /** Last accepted position write, clamped to server time. */
+    clientUpdatedAt: timestamp("client_updated_at"),
+    firstReadAt: timestamp("first_read_at").notNull(),
+    lastReadAt: timestamp("last_read_at").notNull(),
+    completedAt: timestamp("completed_at"),
+    /** `reading` | `resurfacing` | `completed` | `dismissed` | `abandoned`. */
+    state: text("state").notNull().default("reading"),
+    dueAt: timestamp("due_at"),
+    intervalDays: real("interval_days").notNull().default(1),
+    ease: real("ease").notNull().default(2),
+    impressions: integer("impressions").notNull().default(0),
+    lapses: integer("lapses").notNull().default(0),
+    lastImpressionAt: timestamp("last_impression_at"),
+    dismissedAt: timestamp("dismissed_at"),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => [
+    check(
+      "article_reading_state_one_article_check",
+      sql`num_nonnulls(${table.feedItemId}, ${table.clipId}) = 1`,
+    ),
+    uniqueIndex("article_reading_state_user_feed_item_unique")
+      .on(table.userId, table.feedItemId)
+      .where(sql`${table.feedItemId} IS NOT NULL`),
+    uniqueIndex("article_reading_state_user_clip_unique")
+      .on(table.userId, table.clipId)
+      .where(sql`${table.clipId} IS NOT NULL`),
+    index("article_reading_state_user_due_idx")
+      .on(table.userId, table.dueAt)
+      .where(sql`${table.state} IN ('reading', 'resurfacing')`),
   ],
 );

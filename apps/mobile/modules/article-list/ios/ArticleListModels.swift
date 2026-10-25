@@ -23,8 +23,10 @@ struct ArticleRowModel: Equatable, Identifiable, Sendable {
   let summary: String
   let faviconUrls: [URL]
   let isSaved: Bool
-  /// The article was opened before, so it shows the "Continue reading" badge.
+  /// The article was started and left unfinished, so it shows the "Continue reading" badge.
   let isContinuing: Bool
+  /// The badge text, the time left such as "6m left". `nil` shows the style's `continueLabel`.
+  let continueLabel: String?
 }
 
 /// A row as JavaScript serialises it into a list operation (`ArticleListRow` in `types.ts`).
@@ -40,6 +42,7 @@ struct ArticleRowWire: Decodable {
   let faviconUrls: [String]
   let isSaved: Bool?
   let isContinuing: Bool?
+  let continueLabel: String?
 
   var model: ArticleRowModel {
     ArticleRowModel(
@@ -51,7 +54,8 @@ struct ArticleRowWire: Decodable {
       summary: summary ?? "",
       faviconUrls: faviconUrls.compactMap(URL.init(string:)),
       isSaved: isSaved ?? false,
-      isContinuing: isContinuing ?? false
+      isContinuing: isContinuing ?? false,
+      continueLabel: continueLabel
     )
   }
 }
@@ -128,6 +132,8 @@ struct ListStyleRecord: Record {
 
 struct ArticleListStyle {
   static let faviconSize: CGFloat = 22
+  /// Favicons are squircles: the continuous corner radius scales with the icon, as in `FeedFavicon`.
+  static let faviconCornerRatio: CGFloat = 0.25
   static let faviconPlaceholderSize: CGFloat = faviconSize * 0.6
 
   var foreground: Color

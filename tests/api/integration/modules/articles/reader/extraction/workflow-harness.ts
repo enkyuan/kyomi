@@ -148,8 +148,11 @@ export function createExtractionDb(
             leftJoin: () => ({
               innerJoin: () => ({
                 leftJoin: () => ({
-                  where: () => ({
-                    limit: () => Promise.resolve(item ? [item] : []),
+                  // Subscription, feed, user state, then reading state.
+                  leftJoin: () => ({
+                    where: () => ({
+                      limit: () => Promise.resolve(item ? [item] : []),
+                    }),
                   }),
                 }),
               }),
@@ -158,11 +161,13 @@ export function createExtractionDb(
         }
 
         if (name === "article_clips") {
-          return {
+          const filtered = {
             where: () => ({
               limit: () => Promise.resolve(clip ? [clip] : []),
             }),
           };
+          // Clip detail left joins the reading state before filtering.
+          return { ...filtered, leftJoin: () => filtered };
         }
 
         if (name === "article_extraction_cache") {

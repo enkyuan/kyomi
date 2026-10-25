@@ -92,7 +92,7 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
       async (context) => {
         const { body, db, logger, userId } = v1HandlerContext<{
           feedIds: string[];
-          folderId: string;
+          folderId: string | null;
         }>(context);
         const result = await bulkMoveFeedsToFolder(db, userId, body.feedIds, body.folderId);
         logger.info("feeds.folder.bulk_move", {

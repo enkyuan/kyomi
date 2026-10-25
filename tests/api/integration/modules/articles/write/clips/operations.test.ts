@@ -213,7 +213,9 @@ function selectingDb(row: Record<string, unknown>) {
     updates,
     select: (fields: Record<string, unknown>) => {
       selected.push(fields);
-      return { from: () => ({ where: () => ({ limit: () => Promise.resolve([row]) }) }) };
+      const filtered = { where: () => ({ limit: () => Promise.resolve([row]) }) };
+      // Clip detail left joins the reading state before filtering.
+      return { from: () => ({ ...filtered, leftJoin: () => filtered }) };
     },
     update: () => ({
       set: (patch: Record<string, unknown>) => {

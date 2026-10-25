@@ -299,8 +299,15 @@
     {
       "idx": 42,
       "version": "7",
-      "when": 1792892501449,
-      "tag": "0042_kdm_document_columns",
+      "when": 1792892972361,
+      "tag": "0042_article_reading_state",
+      "breakpoints": true
+    },
+    {
+      "idx": 43,
+      "version": "7",
+      "when": 1792904979200,
+      "tag": "0043_kdm_document_columns",
       "breakpoints": true
     }
   ]

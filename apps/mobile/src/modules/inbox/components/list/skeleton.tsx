@@ -39,33 +39,26 @@ export function ListSkeleton({
           <View className="gap-4 px-5 pt-5 pb-2.5">
             <View className="flex-row items-center justify-between gap-4">
               <View className="min-w-0 flex-1 flex-row items-center gap-3">
-                <Skeleton className="size-5.5 shrink-0" radius={4} />
-                <Skeleton
-                  className="w-28"
-                  radius={4}
-                  style={{ height: Math.max(13, metaFontSizePx) }}
-                />
+                {/* A squircle like the favicon it stands in for. */}
+                <Skeleton height={22} radius={5.5} width={22} />
+                <Skeleton height={Math.max(13, metaFontSizePx)} radius={4} width={112} />
               </View>
-              <Skeleton
-                className="w-16 shrink-0"
-                radius={4}
-                style={{ height: Math.max(13, metaFontSizePx) }}
-              />
+              <Skeleton height={Math.max(13, metaFontSizePx)} radius={4} width={64} />
             </View>
             <View className="gap-1.5">
-              <Skeleton className="w-full" radius={4} style={{ height: titleLineHeightPx }} />
-              <Skeleton className="w-[70%]" radius={4} style={{ height: titleLineHeightPx }} />
+              <Skeleton height={titleLineHeightPx} radius={4} width="100%" />
+              <Skeleton height={titleLineHeightPx} radius={4} width="70%" />
             </View>
           </View>
 
           <View className="gap-1.5 px-5">
-            <Skeleton className="w-full" radius={4} style={{ height: summaryLineHeightPx }} />
-            <Skeleton className="w-full" radius={4} style={{ height: summaryLineHeightPx }} />
+            <Skeleton height={summaryLineHeightPx} radius={4} width="100%" />
+            <Skeleton height={summaryLineHeightPx} radius={4} width="100%" />
           </View>
 
           <View className="mt-3 flex-row items-center gap-1.5 px-5 pb-4">
-            <Skeleton className="h-5 w-16" radius="round" />
-            <Skeleton className="h-5 w-24" radius="round" />
+            <Skeleton height={20} radius="round" width={64} />
+            <Skeleton height={20} radius="round" width={96} />
           </View>
         </View>
       ))}

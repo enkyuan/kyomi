@@ -7,7 +7,7 @@
 import { afterEach, beforeEach, describe, expect, mock, setSystemTime, test } from "bun:test";
 import type { RecentArticle } from "../../../../../../apps/mobile/src/modules/recents/lib/history";
 import { FAVICON_PROXY_VERSION } from "@kyomi/worker/favicon/browser";
-import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
+import type { ArticleListItemDto, ReadingProgressDto } from "@kyomi/reader/schemas/article";
 
 // lib/auth builds the expo-secure-store backed auth client at import time, so only it is stubbed.
 // The real resolveMobileApiUrl in lib/api still resolves the favicon proxy path.
@@ -25,6 +25,17 @@ const PROXY_FAVICON = `https://api.kyomi.test/api/favicon?domain=${encodeURIComp
 const DEFAULT_FAVICONS = [PROXY_FAVICON, "https://example.com/favicon.ico"];
 const hoursAgo = (hours: number) => new Date(NOW - hours * 60 * 60 * 1000).toISOString();
 
+const progress = (overrides: Partial<ReadingProgressDto> = {}): ReadingProgressDto => ({
+  completedAt: null,
+  engaged: true,
+  lastReadAt: hoursAgo(1),
+  maxProgress: 0.4,
+  progress: 0.4,
+  remainingMinutes: 6,
+  state: "reading",
+  ...overrides,
+});
+
 const item = (overrides: Partial<ArticleListItemDto> = {}): ArticleListItemDto => ({
   articleType: "feed",
   categories: [],
@@ -39,6 +50,7 @@ const item = (overrides: Partial<ArticleListItemDto> = {}): ArticleListItemDto =
   lastViewedAt: null,
   link: "https://www.example.com/posts/1",
   publishedAt: hoursAgo(2),
+  readingProgress: null,
   summary: "A short summary.",
   title: "Article 1",
   ...overrides,
@@ -95,10 +107,16 @@ describe("faviconUrls", () => {
 describe("toArticleRow", () => {
   test("maps an article to a continuing, saved-aware row with its source and time labels", () => {
     const row = toArticleRow(
-      item({ isSaved: true, lastViewedAt: hoursAgo(1), summary: "A short summary." }),
+      item({
+        isSaved: true,
+        lastViewedAt: hoursAgo(1),
+        readingProgress: progress(),
+        summary: "A short summary.",
+      }),
     );
 
     expect(row).toEqual({
+      continueLabel: "6m left",
       faviconUrls: DEFAULT_FAVICONS,
       feedTitle: "Example",
       id: "article-1",
@@ -112,10 +130,33 @@ describe("toArticleRow", () => {
     });
   });
 
-  test("marks only articles with a last-viewed time as continuing", () => {
-    expect(toArticleRow(item({ lastViewedAt: null })).isContinuing).toBe(false);
-    expect(toArticleRow(item({ lastViewedAt: "" })).isContinuing).toBe(false);
-    expect(toArticleRow(item({ lastViewedAt: hoursAgo(5) })).isContinuing).toBe(true);
+  test("opening an article is not enough to continue it", () => {
+    const opened = toArticleRow(item({ lastViewedAt: hoursAgo(5) }));
+
+    expect(opened.isContinuing).toBe(false);
+    expect(opened.continueLabel).toBeUndefined();
+  });
+
+  test("continues only engaged articles that are still being read or resurfaced", () => {
+    const continuing = (overrides: Partial<ReadingProgressDto>) =>
+      toArticleRow(item({ readingProgress: progress(overrides) })).isContinuing;
+
+    expect(continuing({})).toBe(true);
+    expect(continuing({ state: "resurfacing" })).toBe(true);
+    expect(continuing({ engaged: false })).toBe(false);
+    expect(continuing({ state: "completed" })).toBe(false);
+    expect(continuing({ state: "dismissed" })).toBe(false);
+    expect(continuing({ state: "abandoned" })).toBe(false);
+  });
+
+  test("labels a continuing row with the time left, and with no label when it is unknown", () => {
+    const label = (overrides: Partial<ReadingProgressDto>) =>
+      toArticleRow(item({ readingProgress: progress(overrides) })).continueLabel;
+
+    expect(label({ remainingMinutes: 12 })).toBe("12m left");
+    expect(label({ remainingMinutes: 90 })).toBe("2h left");
+    expect(label({ remainingMinutes: 0 })).toBe("<1m left");
+    expect(label({ remainingMinutes: null })).toBeUndefined();
   });
 
   test("defaults a missing summary to an empty string", () => {

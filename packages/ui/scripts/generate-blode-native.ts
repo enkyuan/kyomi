@@ -14,6 +14,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 const ICONS = [
   "ArrowShareRight",
   "BlankPagePortrait",
+  "BarsThree",
   "Bookmark",
   "BookmarkFilled",
   "Brain",
@@ -21,6 +22,8 @@ const ICONS = [
   "ChevronsUpDown",
   "CircleCheckFilled",
   "Clock",
+  "DotGrid1x3HorizontalFilled",
+  "EditBig",
   "Ellipsis",
   "FileArrowLeftIn",
   "FilterAsc",

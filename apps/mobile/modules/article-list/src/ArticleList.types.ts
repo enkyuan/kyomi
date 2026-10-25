@@ -59,7 +59,10 @@ export type ArticleListRow = {
   readonly feedTitle: string;
   readonly faviconUrls: readonly string[];
   readonly isSaved?: boolean;
+  /** The article was started and left unfinished; the row shows the continue badge. */
   readonly isContinuing?: boolean;
+  /** Badge text with the time left. Omit to show the style's `continueLabel`. */
+  readonly continueLabel?: string;
 };
 
 export type ArticleListRowAction = "toggleSaved" | "share" | "openSource" | "hide" | "report";

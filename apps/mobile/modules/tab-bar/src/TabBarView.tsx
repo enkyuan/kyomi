@@ -1,5 +1,5 @@
 import { requireNativeView } from "expo";
-import type { TabBarViewProps } from "./types";
+import type { TabBarViewProps } from "./TabBar.types";
 
 const NativeTabBarView = requireNativeView<TabBarViewProps>("TabBar");
 

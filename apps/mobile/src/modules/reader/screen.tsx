@@ -24,6 +24,7 @@ import {
 } from "./lib/fixture";
 import { startReaderTrace, type ReaderTrace } from "./lib/metrics";
 import { useArticle } from "./hooks/use-article";
+import { useReadingProgress } from "./hooks/use-reading-progress";
 import { getReaderCanvasColor, getReaderColorScheme } from "./lib/theme";
 import { FONT_STYLES } from "@/theme/fonts";
 import { mobileReaderLayout, mobileReaderSkeletonLayout } from "./lib/layout";
@@ -107,6 +108,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
       }),
     };
   }, [article?.id, body, renderer]);
+  const readingProgress = useReadingProgress(article);
   const faviconUrls = useMemo(
     () =>
       article
@@ -157,7 +159,9 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
       .catch(() => undefined);
   }, [article, queryClient]);
 
-  if (isLoading) {
+  // The body waits for the "Remember reading position" preference so a position is never restored
+  // against it.
+  if (isLoading || (article && !readingProgress.isReady)) {
     return (
       <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
         <ReaderSkeleton
@@ -224,6 +228,8 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
             faviconUrls={faviconUrls}
             feedTitle={article.feedTitle}
             fontSizePx={mobileReaderLayout.body.fontSizePx}
+            initialProgress={readingProgress.initialProgress}
+            onReadingProgress={readingProgress.onReadingProgress}
             onReady={handleArticleReady}
             reader={toHtmlReaderContent(article.reader.selected)}
             title={article.title}
@@ -274,9 +280,10 @@ function ReaderSkeleton({
       <View style={{ gap: mobileReaderLayout.headerBottomMarginPx }}>
         <View>
           <Skeleton
+            height={mobileReaderLayout.source.fontSizePx}
             radius={4}
-            style={{ height: mobileReaderLayout.source.fontSizePx, width: 96 }}
             surfaceColor={surfaceColor}
+            width={96}
           />
           <View
             style={{
@@ -287,13 +294,11 @@ function ReaderSkeleton({
             {READER_TITLE_SKELETON_WIDTHS.slice(0, mobileReaderLayout.title.skeletonLines).map(
               (width) => (
                 <Skeleton
+                  height={mobileReaderSkeletonLayout.titleLineHeightPx}
                   key={`title-${width}`}
                   radius={4}
-                  style={{
-                    height: mobileReaderSkeletonLayout.titleLineHeightPx,
-                    width,
-                  }}
                   surfaceColor={surfaceColor}
+                  width={width}
                 />
               ),
             )}
@@ -304,10 +309,11 @@ function ReaderSkeleton({
             <View key={paragraph.id} style={{ gap: mobileReaderSkeletonLayout.bodyLineSpacingPx }}>
               {paragraph.lines.map((line) => (
                 <Skeleton
+                  height={mobileReaderSkeletonLayout.bodyLineHeightPx}
                   key={`${paragraph.id}-${line.id}`}
                   radius={4}
-                  style={{ height: mobileReaderSkeletonLayout.bodyLineHeightPx, width: line.width }}
                   surfaceColor={surfaceColor}
+                  width={line.width}
                 />
               ))}
             </View>

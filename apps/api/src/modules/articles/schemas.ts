@@ -1,5 +1,6 @@
 import { t } from "elysia";
 import { uuidParam } from "@shared/http/v1/params";
+import { readingPositionDtoSchema, readingProgressDtoSchema } from "./progress/schemas";
 
 const TITLE_MAX_CHARS = 1_024;
 const NOTE_MAX_CHARS = 16_384;
@@ -149,6 +150,8 @@ export const articleDetailSchema = t.Object({
   lastViewedAt: t.Union([t.String(), t.Null()]),
   articleType: t.Union([t.Literal("feed"), t.Literal("clip")]),
   categories: t.Array(t.String()),
+  readingProgress: t.Union([readingProgressDtoSchema, t.Null()]),
+  readingPosition: t.Union([readingPositionDtoSchema, t.Null()]),
   reader: t.Object({
     activeMode: t.Union([t.Literal("original"), t.Literal("extracted")]),
     selected: readerContentContractSchema,
@@ -197,6 +200,7 @@ export const articleListItemSchema = t.Object({
   lastViewedAt: t.Union([t.String(), t.Null()]),
   articleType: t.Union([t.Literal("feed"), t.Literal("clip")]),
   categories: t.Array(t.String()),
+  readingProgress: t.Union([readingProgressDtoSchema, t.Null()]),
 });
 
 export const cursorListResponseSchema = t.Object({
