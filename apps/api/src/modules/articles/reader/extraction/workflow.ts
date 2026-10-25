@@ -32,6 +32,11 @@ import {
   upsertFailedExtractionCache,
   upsertReadyExtractionCache,
 } from "./cache";
+import {
+  compileStoredDocument,
+  currentCompilerVersion,
+  type StoredDocument,
+} from "@kyomi/worker/lib/stored-document";
 import { persistExtracted, persistPendingExtracted } from "./persistence";
 import { compileExtractedHtml, extractArticleContentFromUrl } from "./readability";
 
@@ -73,6 +78,16 @@ async function defaultEnqueueExtractionJob(job: ArticleExtractionJob): Promise<s
   return publishJob(getRedis(), job);
 }
 
+function compileExtractedDocument(
+  raw: string | null,
+  baseUrl: string | null,
+  title: string | null,
+): StoredDocument | null {
+  return raw
+    ? compileStoredDocument({ raw, format: "html", origin: "extracted_html", baseUrl, title })
+    : null;
+}
+
 async function applyFreshExtractionCache(
   database: DB,
   userId: string,
@@ -93,6 +108,11 @@ async function applyFreshExtractionCache(
         ? compileExtractedHtml(cached.rawHtml, { baseUrl: cached.finalUrl })
         : processArticleHtml(cached.html, { sanitizerVersion: cached.sanitizerVersion });
     const text = stale && cached.rawHtml ? processed.text : cached.text;
+    // Reuse the cached document unless the compiler moved on and raw source can rebuild it.
+    const document =
+      cached.document && cached.document.compilerVersion === currentCompilerVersion()
+        ? cached.document
+        : compileExtractedDocument(cached.rawHtml, cached.finalUrl ?? article.link, article.title);
     await persistExtracted(
       database,
       article,
@@ -102,6 +122,7 @@ async function applyFreshExtractionCache(
         text,
         sanitizerVersion: processed.sanitizerVersion,
         raw: cached.rawHtml,
+        document,
         title: null,
       },
       options.titleReplacement,
@@ -419,6 +440,11 @@ export async function runArticleExtractionForUser(
     };
   }
 
+  const document = compileExtractedDocument(
+    extracted.rawHtml,
+    extracted.finalUrl ?? sourceUrl.href,
+    extracted.content.title,
+  );
   await upsertReadyExtractionCache(database, {
     urlKey,
     sourceUrl: sourceUrl.href,
@@ -427,6 +453,7 @@ export async function runArticleExtractionForUser(
     text,
     sanitizerVersion: extracted.sanitizerVersion,
     rawHtml: extracted.rawHtml,
+    document,
   });
 
   await persistExtracted(
@@ -438,6 +465,7 @@ export async function runArticleExtractionForUser(
       text,
       sanitizerVersion: extracted.sanitizerVersion,
       raw: extracted.rawHtml,
+      document,
       title: extracted.content.title,
     },
     options.titleReplacement,

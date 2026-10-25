@@ -195,6 +195,7 @@ export const env = createEnv({
     FEATURE_SOCIAL_MODE: booleanFromEnv.default(false),
     FEATURE_LINK_PREVIEWS: booleanFromEnv.default(false),
     FEATURE_SHARE_PREVIEWS: booleanFromEnv.default(false),
+    FEATURE_READER_DOCUMENT: booleanFromEnv.default(false),
     FEATURE_PUBLIC_API: booleanFromEnv.default(false),
     FEATURE_SELF_HOSTING_SETUP: booleanFromEnv.default(false),
 
@@ -264,6 +265,7 @@ export const env = createEnv({
     FEATURE_SOCIAL_MODE: process.env.FEATURE_SOCIAL_MODE,
     FEATURE_LINK_PREVIEWS: process.env.FEATURE_LINK_PREVIEWS,
     FEATURE_SHARE_PREVIEWS: process.env.FEATURE_SHARE_PREVIEWS,
+    FEATURE_READER_DOCUMENT: process.env.FEATURE_READER_DOCUMENT,
     FEATURE_PUBLIC_API: process.env.FEATURE_PUBLIC_API,
     FEATURE_SELF_HOSTING_SETUP: process.env.FEATURE_SELF_HOSTING_SETUP,
     PUBLIC_API_KEY_PREFIX: process.env.PUBLIC_API_KEY_PREFIX,

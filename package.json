@@ -67,6 +67,7 @@
     "categories:backfill": "bun run --cwd apps/api category:backfill",
     "categories:report": "bun run --cwd apps/api category:report",
     "categories:audit": "bun run --cwd apps/api category:audit",
+    "content:document-backfill": "bun run --cwd apps/api content:document",
     "content:sanitizer-backfill": "bun run --cwd apps/api content:sanitizer"
   },
   "dependencies": {

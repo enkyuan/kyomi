@@ -13,7 +13,7 @@ export type ArticleContentSource =
 
 export type ArticleReaderStatus = Exclude<ArticleContentStatus, "pending">;
 
-export type ArticleReaderBodyKind = "html" | "markdown" | "text" | "fallback";
+export type ArticleReaderBodyKind = "html" | "markdown" | "text" | "fallback" | "document";
 
 export type ArticleReaderFallbackReason = "extraction_failed" | "timeout" | "missing_content";
 
@@ -71,7 +71,25 @@ type ArticleReaderFallback = ArticleReaderCommon & {
   fallbackReason: ArticleReaderFallbackReason;
 };
 
+/**
+ * Compiled KDM document served to clients that negotiated support. The underlying body stays
+ * populated (`fallbackBodyKind` names which one), so a client can fall back without refetching.
+ */
+type ArticleReaderDocument = ArticleReaderCommon & {
+  bodyKind: "document";
+  document: Record<string, unknown>;
+  documentVersion: number;
+  compilerVersion: string;
+  fallbackBodyKind: "html" | "markdown" | "text";
+  contentHtml: string | null;
+  contentMarkdown: string | null;
+  contentText: string | null;
+  fallbackSummary: null;
+  fallbackReason: null;
+};
+
 export type ArticleReaderContentDto =
+  | ArticleReaderDocument
   | ArticleReaderHtml
   | ArticleReaderMarkdown
   | ArticleReaderText

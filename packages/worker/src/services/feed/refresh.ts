@@ -1017,6 +1017,9 @@ export async function runFeedRefresh(
               contentHtml: item.contentHtml,
               contentRaw: item.contentRaw,
               contentSanitizerVersion: item.contentSanitizerVersion,
+              contentDocument: item.contentDocument,
+              contentDocumentVersion: item.contentDocumentVersion,
+              contentCompilerVersion: item.contentCompilerVersion,
               contentText: item.contentText,
               contentMarkdown: item.contentMarkdown,
               contentStatus: item.contentStatus,
@@ -1043,6 +1046,10 @@ export async function runFeedRefresh(
               // the version follows content_html, which is only taken from the new row when empty.
               contentRaw: sql`COALESCE(${feedItems.contentRaw}, excluded.content_raw)`,
               contentSanitizerVersion: sql`CASE WHEN ${feedItems.contentHtml} IS NULL THEN excluded.content_sanitizer_version ELSE ${feedItems.contentSanitizerVersion} END`,
+              // The document follows content_html, like the sanitizer version: it describes the same body.
+              contentDocument: sql`CASE WHEN ${feedItems.contentHtml} IS NULL THEN excluded.content_document ELSE ${feedItems.contentDocument} END`,
+              contentDocumentVersion: sql`CASE WHEN ${feedItems.contentHtml} IS NULL THEN excluded.content_document_version ELSE ${feedItems.contentDocumentVersion} END`,
+              contentCompilerVersion: sql`CASE WHEN ${feedItems.contentHtml} IS NULL THEN excluded.content_compiler_version ELSE ${feedItems.contentCompilerVersion} END`,
               contentText: sql`COALESCE(${feedItems.contentText}, excluded.content_text)`,
               contentMarkdown: sql`COALESCE(${feedItems.contentMarkdown}, excluded.content_markdown)`,
               contentStatus: sql`CASE WHEN ${feedItems.content} IS NULL AND excluded.content IS NOT NULL THEN excluded.content_status ELSE ${feedItems.contentStatus} END`,

@@ -1,4 +1,5 @@
 import type { db } from "@adapters/db/client";
+import { compileBodyDocumentColumns } from "@modules/articles/document/stored";
 import { getRedis } from "@adapters/redis";
 import { publishJob } from "@adapters/queue/publish";
 import { articleClips } from "@kyomi/db";
@@ -139,16 +140,37 @@ function assertClipUpdateHasFields(body: ClipUpdateBody): void {
 function resolveClipHtml(
   value: string | null | undefined,
   prev: ClipReadRow,
-): { contentHtml: string | null; contentRaw: string | null; version: string | null } {
+): {
+  contentHtml: string | null;
+  contentRaw: string | null;
+  version: string | null;
+  documentColumns: ReturnType<typeof compileBodyDocumentColumns>;
+} {
   const raw = value?.trim() ? value : null;
   if (!raw) {
-    return { contentHtml: null, contentRaw: null, version: null };
+    return {
+      contentHtml: null,
+      contentRaw: null,
+      version: null,
+      documentColumns: compileBodyDocumentColumns({
+        raw: null,
+        contentSource: null,
+        baseUrl: null,
+        title: null,
+      }),
+    };
   }
   const compiled = processIngestedArticleHtml(raw, { baseUrl: prev.url, title: prev.title });
   return {
     contentHtml: compiled.html || null,
     contentRaw: raw,
     version: ARTICLE_HTML_SANITIZER_VERSION,
+    documentColumns: compileBodyDocumentColumns({
+      raw,
+      contentSource: "feed_html",
+      baseUrl: prev.url,
+      title: prev.title,
+    }),
   };
 }
 
@@ -186,7 +208,13 @@ function resolveClipUpdateValues(body: ClipUpdateBody, prev: ClipReadRow, now: D
     note: Object.hasOwn(body, "note") ? body.note : prev.note,
     content: Object.hasOwn(body, "content") ? body.content : prev.content,
     contentHtml: html ? html.contentHtml : prev.contentHtml,
-    ...(html ? { contentRaw: html.contentRaw, contentSanitizerVersion: html.version } : {}),
+    ...(html
+      ? {
+          contentRaw: html.contentRaw,
+          contentSanitizerVersion: html.version,
+          documentColumns: html.documentColumns,
+        }
+      : {}),
     contentText,
     contentMarkdown,
     contentStatus,
@@ -246,6 +274,12 @@ export async function createArticleClip(
       contentHtml: stored.contentHtml,
       contentRaw: content,
       contentSanitizerVersion: stored.contentSanitizerVersion,
+      ...compileBodyDocumentColumns({
+        raw: content,
+        contentSource: stored.contentSource,
+        baseUrl: trimmedUrl,
+        title,
+      }),
       contentText: stored.contentText,
       contentMarkdown: stored.contentMarkdown,
       contentStatus: stored.contentStatus,
@@ -346,7 +380,11 @@ export async function updateArticleClipForUser(
       content: next.content,
       contentHtml: next.contentHtml,
       ...(next.contentRaw !== undefined
-        ? { contentRaw: next.contentRaw, contentSanitizerVersion: next.contentSanitizerVersion }
+        ? {
+            contentRaw: next.contentRaw,
+            contentSanitizerVersion: next.contentSanitizerVersion,
+            ...next.documentColumns,
+          }
         : {}),
       contentText: next.contentText,
       contentMarkdown: next.contentMarkdown,

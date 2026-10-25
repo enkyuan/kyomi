@@ -1,6 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { articleClips, feedItems } from "@kyomi/db";
 import type { ArticleDetailDto } from "@modules/articles/types";
+import { toStoredDocumentColumns, type StoredDocument } from "@kyomi/worker/lib/stored-document";
 import { and, eq } from "drizzle-orm";
 
 type DB = typeof db;
@@ -12,6 +13,8 @@ type ExtractedPersistencePayload =
       sanitizerVersion: string;
       /** Readability output before compiling, when known. */
       raw: string | null;
+      /** KDM document compiled from `raw`; null leaves the HTML body to serve alone. */
+      document?: StoredDocument | null;
       title?: string | null;
     }
   | { kind: "failed"; message: string };
@@ -49,6 +52,9 @@ async function persistFeedExtracted(
   payload: ExtractedPersistencePayload,
 ) {
   const now = new Date();
+  const extractedDocument = toStoredDocumentColumns(
+    payload.kind === "ready" ? (payload.document ?? null) : null,
+  );
   if (payload.kind === "ready") {
     await database
       .update(feedItems)
@@ -57,6 +63,9 @@ async function persistFeedExtracted(
         extractedContentText: payload.text,
         extractedContentSanitizerVersion: payload.sanitizerVersion,
         extractedContentRaw: payload.raw,
+        extractedContentDocument: extractedDocument.document,
+        extractedContentDocumentVersion: extractedDocument.documentVersion,
+        extractedContentCompilerVersion: extractedDocument.compilerVersion,
         extractedContentStatus: "ready",
         extractedContentError: null,
         extractedContentUpdatedAt: now,
@@ -71,6 +80,9 @@ async function persistFeedExtracted(
         extractedContentText: null,
         extractedContentSanitizerVersion: null,
         extractedContentRaw: null,
+        extractedContentDocument: null,
+        extractedContentDocumentVersion: null,
+        extractedContentCompilerVersion: null,
         extractedContentStatus: "failed",
         extractedContentError: payload.message,
         extractedContentUpdatedAt: now,
@@ -87,6 +99,9 @@ async function persistClipExtracted(
   titleReplacement?: TitleReplacement,
 ) {
   const now = new Date();
+  const extractedDocument = toStoredDocumentColumns(
+    payload.kind === "ready" ? (payload.document ?? null) : null,
+  );
   if (payload.kind === "ready") {
     await database
       .update(articleClips)
@@ -95,6 +110,9 @@ async function persistClipExtracted(
         extractedContentText: payload.text,
         extractedContentSanitizerVersion: payload.sanitizerVersion,
         extractedContentRaw: payload.raw,
+        extractedContentDocument: extractedDocument.document,
+        extractedContentDocumentVersion: extractedDocument.documentVersion,
+        extractedContentCompilerVersion: extractedDocument.compilerVersion,
         extractedContentStatus: "ready",
         extractedContentError: null,
         extractedContentUpdatedAt: now,
@@ -128,6 +146,9 @@ async function persistClipExtracted(
         extractedContentText: null,
         extractedContentSanitizerVersion: null,
         extractedContentRaw: null,
+        extractedContentDocument: null,
+        extractedContentDocumentVersion: null,
+        extractedContentCompilerVersion: null,
         extractedContentStatus: "failed",
         extractedContentError: payload.message,
         extractedContentUpdatedAt: now,

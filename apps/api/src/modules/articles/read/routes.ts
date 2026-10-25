@@ -9,7 +9,9 @@ import {
   getGlobalArticleCountsForUser,
   getUnreadCountsPerFeed,
 } from "./counts";
-import { getArticleDetailForUser } from "./detail";
+import { env } from "@config/env";
+import { parseSupportedDocumentVersion } from "@modules/articles/document/negotiate";
+import { getArticleDetailWithDocumentForUser } from "@modules/articles/document/serve";
 import { listAllArticlesForUser, listArticlesForUser } from "./list/query";
 import { parseArticlesListQuery, parseMergedViewListQuery, parseOptionalIsoDate } from "../params";
 import {
@@ -250,8 +252,12 @@ export function registerArticleReadRoutes(app: Elysia) {
       .get(
         "/articles/:articleId",
         async (context) => {
-          const { db, params, userId } = v1HandlerContext(context);
-          return getArticleDetailForUser(db, userId, params.articleId);
+          const { db, params, query, userId } = v1HandlerContext(context);
+          const { request } = context as unknown as { request: Request };
+          return getArticleDetailWithDocumentForUser(db, userId, params.articleId, {
+            enabled: env.FEATURE_READER_DOCUMENT,
+            maxVersion: parseSupportedDocumentVersion(request.headers, query),
+          });
         },
         {
           params: articleIdParamsSchema,

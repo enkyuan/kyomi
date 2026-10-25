@@ -1,4 +1,5 @@
 import type { db } from "@adapters/db/client";
+import { compileBodyDocumentColumns } from "@modules/articles/document/stored";
 import {
   articleClips,
   articleViewEvents,
@@ -29,16 +30,30 @@ function compileReplacementHtml(
   contentHtml: string | null;
   contentRaw: string | null;
   contentSanitizerVersion: string | null;
+  contentDocument: Record<string, unknown> | null;
+  contentDocumentVersion: number | null;
+  contentCompilerVersion: string | null;
 } {
   const raw = value?.trim() ? value : null;
   if (!raw) {
-    return { contentHtml: null, contentRaw: null, contentSanitizerVersion: null };
+    return {
+      contentHtml: null,
+      contentRaw: null,
+      contentSanitizerVersion: null,
+      ...compileBodyDocumentColumns({ raw: null, contentSource: null, baseUrl: null, title: null }),
+    };
   }
   const compiled = processIngestedArticleHtml(raw, { baseUrl: article.link, title: article.title });
   return {
     contentHtml: compiled.html || null,
     contentRaw: raw,
     contentSanitizerVersion: ARTICLE_HTML_SANITIZER_VERSION,
+    ...compileBodyDocumentColumns({
+      raw,
+      contentSource: "feed_html",
+      baseUrl: article.link,
+      title: article.title,
+    }),
   };
 }
 

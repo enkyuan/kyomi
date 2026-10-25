@@ -66,6 +66,10 @@ export type ParsedFeedItem = {
   contentRaw: string | null;
   /** Sanitizer version that produced `contentHtml`; null when the body is not HTML. */
   contentSanitizerVersion: string | null;
+  /** KDM document compiled from `contentRaw`; null when no compiler output exists. */
+  contentDocument: Record<string, unknown> | null;
+  contentDocumentVersion: number | null;
+  contentCompilerVersion: string | null;
   contentText: string | null;
   contentMarkdown: string | null;
   contentStatus: "ready" | "partial" | "failed" | "pending";
