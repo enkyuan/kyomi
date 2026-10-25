@@ -14,13 +14,11 @@ export function useFolderFeeds(folderId: string) {
   const folders = useQuery({ queryFn: listFolders, queryKey: foldersQueryKey });
   const feeds = useQuery({ queryFn: listSubscribedFeeds, queryKey: subscribedFeedListQueryKey });
 
-  const options = {
-    onError: (error: unknown) =>
-      Alert.alert("Couldn't update the feed", mobileApiErrorMessage(error)),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: subscribedFeedsQueryKey }),
-  };
-  const { mutate: move } = useMutation({ ...options, mutationFn: moveFeedToFolder });
-  const { mutate: unfollow } = useMutation({ ...options, mutationFn: unfollowFeed });
+  const onError = (error: unknown) =>
+    Alert.alert("Couldn't update the feed", mobileApiErrorMessage(error));
+  const onSuccess = () => queryClient.invalidateQueries({ queryKey: subscribedFeedsQueryKey });
+  const { mutate: move } = useMutation({ mutationFn: moveFeedToFolder, onError, onSuccess });
+  const { mutate: unfollow } = useMutation({ mutationFn: unfollowFeed, onError, onSuccess });
 
   return {
     feeds: feeds.data?.filter((feed) => feed.folderId === folderId) ?? [],

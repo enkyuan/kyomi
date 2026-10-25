@@ -27,29 +27,53 @@ export function Skeleton({
   const colorMode = colorModeProp ?? (scheme === "dark" ? "dark" : "light");
   const { background } = getMobileSurfaceTheme(colorMode);
   const { backgroundColor } = getSkeletonPalette(colorMode, surfaceColor ?? background);
-  const visible = show ?? group ?? !children;
-  const borderRadius = radius === "round" ? 99_999 : radius === "square" ? 0 : radius;
-  const block = visible ? (
-    <View
-      pointerEvents="none"
-      style={{
-        backgroundColor,
-        borderRadius,
-        height: height ?? (children ? "100%" : DEFAULT_SIZE),
-        position: children ? "absolute" : "relative",
-        width: width ?? (children ? "100%" : DEFAULT_SIZE),
-      }}
-    />
-  ) : null;
+  const block =
+    (show ?? group ?? !children) ? (
+      <SkeletonBlock
+        backgroundColor={backgroundColor}
+        covers={Boolean(children)}
+        height={height}
+        radius={radius}
+        width={width}
+      />
+    ) : null;
 
-  if (!children) return block;
-
-  return (
+  return children ? (
     <View>
       {children}
       {block}
     </View>
+  ) : (
+    block
   );
+}
+
+type SkeletonBlockProps = Pick<SkeletonProps, "height" | "radius" | "width"> & {
+  readonly backgroundColor: string;
+  /** Laid over children instead of standing in for them. */
+  readonly covers: boolean;
+};
+
+function SkeletonBlock({ backgroundColor, covers, height, radius = 8, width }: SkeletonBlockProps) {
+  const fallbackSize = covers ? "100%" : DEFAULT_SIZE;
+
+  return (
+    <View
+      pointerEvents="none"
+      style={{
+        backgroundColor,
+        borderRadius: toBorderRadius(radius),
+        height: height ?? fallbackSize,
+        position: covers ? "absolute" : "relative",
+        width: width ?? fallbackSize,
+      }}
+    />
+  );
+}
+
+function toBorderRadius(radius: NonNullable<SkeletonProps["radius"]>) {
+  if (radius === "round") return 99_999;
+  return radius === "square" ? 0 : radius;
 }
 
 Skeleton.Group = function SkeletonGroup({

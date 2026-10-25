@@ -32,14 +32,11 @@ export function useSources() {
       queryClient.invalidateQueries({ queryKey: foldersQueryKey }),
       queryClient.invalidateQueries({ queryKey: subscribedFeedsQueryKey }),
     ]);
-  const mutationOptions = {
-    onError: (error: unknown) => toast.error(mobileApiErrorMessage(error)),
-    onSuccess: refresh,
-  };
+  const onError = (error: unknown) => toast.error(mobileApiErrorMessage(error));
   // `mutate` keeps its identity across renders, so the handlers below stay stable.
-  const { mutate: create } = useMutation({ ...mutationOptions, mutationFn: createFolder });
-  const { mutate: rename } = useMutation({ ...mutationOptions, mutationFn: renameFolder });
-  const { mutate: remove } = useMutation({ ...mutationOptions, mutationFn: deleteFolder });
+  const { mutate: create } = useMutation({ mutationFn: createFolder, onError, onSuccess: refresh });
+  const { mutate: rename } = useMutation({ mutationFn: renameFolder, onError, onSuccess: refresh });
+  const { mutate: remove } = useMutation({ mutationFn: deleteFolder, onError, onSuccess: refresh });
 
   const feedCounts = useMemo(() => {
     const counts = new Map<string, number>();
