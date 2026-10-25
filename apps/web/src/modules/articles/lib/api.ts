@@ -216,8 +216,8 @@ export const getInboxItems = createServerFn({ method: "GET" })
 export const getInboxItemDetail = createServerFn({ method: "GET" })
   .validator((input: { itemId: string }) => input)
   .handler(async ({ data }): Promise<InboxDetailResponse> => {
-    const { fetchValidatedJson, articleDetailSchema } = await getInboxSchemaModule();
-    const { READER_DOCUMENT_VERSION } = await import("@kyomi/reader/document");
+    const [{ fetchValidatedJson, articleDetailSchema }, { READER_DOCUMENT_VERSION }] =
+      await Promise.all([getInboxSchemaModule(), import("@kyomi/reader/document")]);
     const forwarded = buildForwardHeaders(getRequestHeaders());
     // Advertise the newest document version this client renders; the API serves older or no
     // document otherwise, and the HTML body is always populated alongside.

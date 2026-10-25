@@ -103,3 +103,26 @@ export function hostnameOf(url: string): string {
     return url;
   }
 }
+
+const PROVIDER_NAMES: Record<string, string> = {
+  youtube: "YouTube",
+  vimeo: "Vimeo",
+  x: "X",
+  bluesky: "Bluesky",
+  mastodon: "Mastodon",
+  threads: "Threads",
+  instagram: "Instagram",
+  tiktok: "TikTok",
+  spotify: "Spotify",
+  soundcloud: "SoundCloud",
+  "apple-podcasts": "Apple Podcasts",
+  "github-gist": "GitHub Gist",
+  codepen: "CodePen",
+  codesandbox: "CodeSandbox",
+  loom: "Loom",
+  figma: "Figma",
+};
+
+export function providerName(provider: string): string {
+  return PROVIDER_NAMES[provider] ?? provider;
+}

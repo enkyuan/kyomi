@@ -1,25 +1,18 @@
-import { Pressable, ScrollView, Text, View, type TextStyle } from "react-native";
-import { useState, type ReactNode } from "react";
+import { Pressable, ScrollView, Text, View } from "react-native";
+import { useState, type ComponentType, type ReactNode } from "react";
 import type { ReaderBlock, ReaderInline, ReaderTableCell } from "../../core/document";
 import { useReaderNative } from "./context";
 import { CodeBlockView } from "./code";
 import { EmbedBlockView, LinkCardBlock } from "./embed";
 import { Inlines, renderInlines } from "./inline";
-import { FigureBlock, GalleryBlock, MediaFileBlock, imageAspectRatio } from "./media";
+import { HtmlBlock, MathBlock } from "./islands";
+import { FigureBlock, GalleryBlock, MediaFileBlock } from "./media";
+import { imageAspectRatio, useBodyTextStyle } from "./style";
+import { DividerBlock, HeadingBlock, PullQuoteBlock } from "./typography";
 import { inlinesToText } from "./text";
 import type { ReaderSegment } from "./plan";
 
 type Block<T extends ReaderBlock["type"]> = Extract<ReaderBlock, { type: T }>;
-
-export function useBodyTextStyle(): TextStyle {
-  const { theme } = useReaderNative();
-  return {
-    color: theme.colors.foreground,
-    fontFamily: theme.fonts.body,
-    fontSize: theme.fontSize,
-    lineHeight: Math.round(theme.fontSize * theme.lineHeight),
-  };
-}
 
 /** One native `Text` for consecutive paragraphs, so selection and copy span them. */
 export function ProseRun({
@@ -45,30 +38,6 @@ export function ProseRun({
           {renderInlines(block.children, { theme, host, footnotes }, `r${index}`)}
         </Text>
       ))}
-    </Text>
-  );
-}
-
-const HEADING_SCALE = [0, 0, 1.45, 1.28, 1.14, 1.04, 1] as const;
-
-function HeadingBlock({ block }: { readonly block: Block<"heading"> }) {
-  const { theme } = useReaderNative();
-  const base = useBodyTextStyle();
-  const size = theme.fontSize * (HEADING_SCALE[block.level] ?? 1);
-  return (
-    <Text
-      accessibilityRole="header"
-      maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
-      selectable
-      style={{
-        ...base,
-        fontFamily: theme.fonts.heading,
-        fontSize: size,
-        lineHeight: Math.round(size * 1.25),
-        marginTop: theme.blockGap * 0.6,
-      }}
-    >
-      <Inlines inlines={block.children} />
     </Text>
   );
 }
@@ -124,45 +93,6 @@ function QuoteBlock({ block }: { readonly block: Block<"quote"> }) {
           accessibilityRole={block.citeUrl ? "link" : undefined}
           maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
           onPress={block.citeUrl ? () => host.openUrl(block.citeUrl as string) : undefined}
-          style={{ ...base, color: theme.colors.muted, fontSize: theme.fontSize * 0.85 }}
-        >
-          — <Inlines inlines={block.attribution} />
-        </Text>
-      ) : null}
-    </View>
-  );
-}
-
-function PullQuoteBlock({ block }: { readonly block: Block<"pullQuote"> }) {
-  const { theme } = useReaderNative();
-  const base = useBodyTextStyle();
-  const size = theme.fontSize * 1.3;
-  return (
-    <View
-      style={{
-        borderColor: theme.colors.border,
-        borderBottomWidth: 1,
-        borderTopWidth: 1,
-        gap: 6,
-        paddingVertical: theme.blockGap * 0.8,
-      }}
-    >
-      <Text
-        maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
-        selectable
-        style={{
-          ...base,
-          fontFamily: theme.fonts.heading,
-          fontSize: size,
-          fontStyle: "italic",
-          lineHeight: Math.round(size * 1.4),
-        }}
-      >
-        <Inlines inlines={block.children} />
-      </Text>
-      {block.attribution?.length ? (
-        <Text
-          maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
           style={{ ...base, color: theme.colors.muted, fontSize: theme.fontSize * 0.85 }}
         >
           — <Inlines inlines={block.attribution} />
@@ -385,94 +315,42 @@ function TableBlock({ block }: { readonly block: Block<"table"> }) {
   );
 }
 
-function MathBlock({ block }: { readonly block: Block<"math"> }) {
-  const { host, theme } = useReaderNative();
-  const html = block.rendered ?? block.mathml;
-  const island = html
-    ? host.renderIsland?.({ kind: "math", html, title: block.tex ?? "Equation" })
-    : null;
-  if (island) return <View accessibilityLabel={block.tex ?? "Equation"}>{island}</View>;
-  return (
-    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-      <Text
-        accessibilityLabel={block.tex ?? "Equation"}
-        maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
-        selectable
-        style={{
-          color: theme.colors.foreground,
-          fontFamily: theme.fonts.mono,
-          fontSize: theme.fontSize * 0.9,
-        }}
-      >
-        {block.tex ?? ""}
-      </Text>
-    </ScrollView>
-  );
+function ParagraphBlock({ block }: { readonly block: Block<"paragraph"> }) {
+  return <ProseRun blocks={[block]} />;
 }
 
-function HtmlBlock({ block }: { readonly block: Block<"html"> }) {
-  const { host } = useReaderNative();
-  return host.renderIsland?.({ kind: "html", html: block.html, title: block.reason }) ?? null;
-}
+type BlockViews = {
+  readonly [K in ReaderBlock["type"]]: ComponentType<{ readonly block: Block<K> }>;
+};
 
-function DividerBlock() {
-  const { theme } = useReaderNative();
-  return (
-    <View
-      importantForAccessibility="no-hide-descendants"
-      style={{
-        alignSelf: "center",
-        backgroundColor: theme.colors.border,
-        height: 1,
-        marginVertical: theme.blockGap * 0.6,
-        width: "40%",
-      }}
-    />
-  );
-}
+const BLOCK_VIEWS: BlockViews = {
+  paragraph: ParagraphBlock,
+  heading: HeadingBlock,
+  list: ListBlock,
+  quote: QuoteBlock,
+  pullQuote: PullQuoteBlock,
+  divider: DividerBlock,
+  code: CodeBlockView,
+  math: MathBlock,
+  table: TableBlock,
+  figure: FigureBlock,
+  gallery: GalleryBlock,
+  video: MediaFileBlock,
+  audio: MediaFileBlock,
+  embed: EmbedBlockView,
+  linkCard: LinkCardBlock,
+  callout: CalloutBlock,
+  details: DetailsBlock,
+  definitionList: DefinitionListBlock,
+  mediaText: MediaTextBlock,
+  html: HtmlBlock,
+};
 
 export function BlockView({ block }: { readonly block: ReaderBlock }): ReactNode {
-  switch (block.type) {
-    case "paragraph":
-      return <ProseRun blocks={[block]} />;
-    case "heading":
-      return <HeadingBlock block={block} />;
-    case "list":
-      return <ListBlock block={block} />;
-    case "quote":
-      return <QuoteBlock block={block} />;
-    case "pullQuote":
-      return <PullQuoteBlock block={block} />;
-    case "divider":
-      return <DividerBlock />;
-    case "code":
-      return <CodeBlockView block={block} />;
-    case "math":
-      return <MathBlock block={block} />;
-    case "table":
-      return <TableBlock block={block} />;
-    case "figure":
-      return <FigureBlock block={block} />;
-    case "gallery":
-      return <GalleryBlock block={block} />;
-    case "video":
-    case "audio":
-      return <MediaFileBlock block={block} />;
-    case "embed":
-      return <EmbedBlockView block={block} />;
-    case "linkCard":
-      return <LinkCardBlock block={block} />;
-    case "callout":
-      return <CalloutBlock block={block} />;
-    case "details":
-      return <DetailsBlock block={block} />;
-    case "definitionList":
-      return <DefinitionListBlock block={block} />;
-    case "mediaText":
-      return <MediaTextBlock block={block} />;
-    case "html":
-      return <HtmlBlock block={block} />;
-  }
+  // `BlockViews` pairs each type with its component; TypeScript cannot correlate the lookup with
+  // `block` across the union, so the entry is widened to the union here.
+  const Component = BLOCK_VIEWS[block.type] as ComponentType<{ readonly block: ReaderBlock }>;
+  return <Component block={block} />;
 }
 
 /** Nested blocks (list items, quotes, callouts, cells). Consecutive paragraphs still share a `Text`. */

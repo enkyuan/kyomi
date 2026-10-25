@@ -1,28 +1,9 @@
-import { ScrollView, Text, View, type TextStyle } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import type { ReaderBlock } from "../../core/document";
 import { useReaderNative } from "./context";
+import { tokenStyle } from "./style";
 
 type CodeBlock = Extract<ReaderBlock, { type: "code" }>;
-type Highlight = NonNullable<CodeBlock["highlight"]>;
-
-const ITALIC = 1;
-const BOLD = 2;
-const UNDERLINE = 4;
-
-export function tokenStyle(
-  style: Highlight["styles"][number] | undefined,
-  scheme: "light" | "dark",
-): TextStyle | undefined {
-  if (!style) return undefined;
-  const out: TextStyle = {};
-  const color = scheme === "dark" ? (style.dark ?? style.light) : (style.light ?? style.dark);
-  if (color) out.color = color;
-  const font = style.fontStyle ?? 0;
-  if (font & ITALIC) out.fontStyle = "italic";
-  if (font & BOLD) out.fontWeight = "700";
-  if (font & UNDERLINE) out.textDecorationLine = "underline";
-  return Object.keys(out).length ? out : undefined;
-}
 
 /** Tokens are precomputed by the compiler; this only maps them to nested `Text`. */
 export function CodeBlockView({ block }: { readonly block: CodeBlock }) {

@@ -3,31 +3,9 @@ import { useState } from "react";
 import type { ReaderBlock, ReaderImage } from "../../core/document";
 import { useReaderNative } from "./context";
 import { Inlines } from "./inline";
-import { Caption, imageAspectRatio } from "./media";
-import { hostnameOf, inlinesToText } from "./text";
-
-const PROVIDER_NAMES: Record<string, string> = {
-  youtube: "YouTube",
-  vimeo: "Vimeo",
-  x: "X",
-  bluesky: "Bluesky",
-  mastodon: "Mastodon",
-  threads: "Threads",
-  instagram: "Instagram",
-  tiktok: "TikTok",
-  spotify: "Spotify",
-  soundcloud: "SoundCloud",
-  "apple-podcasts": "Apple Podcasts",
-  "github-gist": "GitHub Gist",
-  codepen: "CodePen",
-  codesandbox: "CodeSandbox",
-  loom: "Loom",
-  figma: "Figma",
-};
-
-export function providerName(provider: string): string {
-  return PROVIDER_NAMES[provider] ?? provider;
-}
+import { Caption } from "./media";
+import { imageAspectRatio } from "./style";
+import { hostnameOf, inlinesToText, providerName } from "./text";
 
 function CardFrame({
   children,

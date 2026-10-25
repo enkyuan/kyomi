@@ -7,6 +7,8 @@ import "katex/dist/katex.min.css";
 import "@kyomi/reader/web/styles.css";
 import "@kyomi/ui/styles/reader.css";
 
+const DEFAULT_EMBED_ASPECT_RATIO = 16 / 9;
+
 type HtmlIslandProps = {
   readonly kind: "html" | "math" | "embed";
   readonly html?: string;
@@ -24,7 +26,7 @@ type HtmlIslandProps = {
  * context; embeds load only compiler-built allowlist URLs.
  */
 export default function HtmlIsland({
-  aspectRatio = 16 / 9,
+  aspectRatio = DEFAULT_EMBED_ASPECT_RATIO,
   colorScheme,
   fontSizePx,
   frameUrl,

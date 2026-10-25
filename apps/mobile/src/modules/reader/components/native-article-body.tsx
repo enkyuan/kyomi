@@ -187,6 +187,9 @@ export function NativeArticleBody({
   return (
     <View style={{ backgroundColor: readerCanvas[colorScheme], flex: 1 }}>
       <NativeDocumentBody
+        // A new article or recompiled document remounts the body, so block-local state (open
+        // details, gallery page) never carries over by position.
+        key={`${articleId}:${document.compiler.version}`}
         ref={listRef}
         bottomInset={bottomInset}
         document={document}

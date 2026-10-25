@@ -1,17 +1,12 @@
-import { Image, Pressable, ScrollView, Text, View } from "react-native";
+import { FlatList, Image, Pressable, Text, View } from "react-native";
 import type { ReactElement } from "react";
 import type { ReaderBlock, ReaderImage, ReaderInline, ReaderPlacement } from "../../core/document";
 import { useReaderNative } from "./context";
 import { Inlines } from "./inline";
+import { imageAspectRatio } from "./style";
 import { inlinesToText } from "./text";
 
-/** Reserved when the enrichment job has not measured the image yet. */
-export const FALLBACK_ASPECT_RATIO = 3 / 2;
 const IMAGE_RADIUS = 6;
-
-export function imageAspectRatio(image: ReaderImage, fallback = FALLBACK_ASPECT_RATIO): number {
-  return image.width && image.height ? image.width / image.height : fallback;
-}
 
 function useMediaRenderer() {
   const { host, theme } = useReaderNative();
@@ -139,16 +134,22 @@ export function GalleryBlock({
     const itemWidth = Math.round(theme.columnWidth * 0.86);
     return (
       <View style={placementStyle(block.placement, theme.bleed)}>
-        <ScrollView
+        {/* Virtualized: photo essays can hold dozens of images, and each cell has a fixed width. */}
+        <FlatList
           accessibilityLabel={`Gallery of ${block.items.length} images`}
           contentContainerStyle={{ gap }}
+          data={block.items}
           decelerationRate="fast"
+          getItemLayout={(_, index) => ({
+            index,
+            length: itemWidth + gap,
+            offset: (itemWidth + gap) * index,
+          })}
           horizontal
-          showsHorizontalScrollIndicator={false}
-          snapToInterval={itemWidth + gap}
-        >
-          {block.items.map((item, index) => (
-            <View key={`${item.image.src}.${index}`} style={{ width: itemWidth }}>
+          initialNumToRender={3}
+          keyExtractor={(item, index) => `${item.image.src}.${index}`}
+          renderItem={({ item }) => (
+            <View style={{ width: itemWidth }}>
               {renderMedia(item.image, {
                 caption: inlinesToText(item.caption) || undefined,
                 fit: "cover",
@@ -156,8 +157,11 @@ export function GalleryBlock({
               })}
               <Caption caption={item.caption} />
             </View>
-          ))}
-        </ScrollView>
+          )}
+          showsHorizontalScrollIndicator={false}
+          snapToInterval={itemWidth + gap}
+          windowSize={3}
+        />
         <Caption caption={block.caption} />
       </View>
     );
