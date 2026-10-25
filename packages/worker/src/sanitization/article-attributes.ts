@@ -63,6 +63,13 @@ const VALUE_RULES: Record<string, (value: string) => boolean> = {
   "data-kyomi-filename": MATCHES(/^[^\u0000-\u001f<>"]{1,256}$/),
   "data-kyomi-lines": MATCHES(/^\d[\d,\s-]{0,63}$/),
   "data-kyomi-checked": MATCHES(/^(?:true|false)$/),
+  "data-kyomi-placement": MATCHES(/^(?:wide|full|start|end)$/),
+  "data-kyomi-gallery": MATCHES(/^(?:grid|carousel)$/),
+  "data-kyomi-media-text": MATCHES(/^(?:start|end)$/),
+  "data-kyomi-callout": MATCHES(/^(?:note|tip|important|warning|caution)$/),
+  "data-kyomi-role": MATCHES(
+    /^(?:pullquote|caption|credit|footnotes|footnote|sidenote|bookmark|callout-title)$/,
+  ),
 };
 
 /** Keeps http(s) candidates of a `srcset` with at most one width or density descriptor. */

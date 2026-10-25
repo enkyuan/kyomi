@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://blog.wp.example/2026/10/offline-sync/"
+  },
+  "compiler": {
+    "version": "kdm-compiler-1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Offline sync",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 98,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": ["shellscript"],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Offline sync shipped this week. The client now keeps a "
+        },
+        {
+          "type": "format",
+          "format": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "local journal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " of every edit, replays it when the network returns, and marks "
+        },
+        {
+          "type": "format",
+          "format": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "conflicted"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " rows instead of overwriting them. The old "
+        },
+        {
+          "type": "format",
+          "format": "strike",
+          "children": [
+            {
+              "type": "text",
+              "value": "last-write-wins"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " policy is gone."
+        }
+      ]
+    },
+    {
+      "type": "figure",
+      "placement": "wide",
+      "image": {
+        "src": "https://blog.wp.example/wp-content/uploads/2026/10/sync-diagram-1024x576.png",
+        "alt": "Diagram of the sync journal",
+        "width": 1024,
+        "height": 576,
+        "srcset": [
+          {
+            "url": "https://blog.wp.example/wp-content/uploads/2026/10/sync-diagram-1024x576.png",
+            "width": 1024
+          },
+          {
+            "url": "https://blog.wp.example/wp-content/uploads/2026/10/sync-diagram-2048x1152.png",
+            "width": 2048
+          },
+          {
+            "url": "https://blog.wp.example/wp-content/uploads/2026/10/sync-diagram-300x169.png",
+            "width": 300
+          }
+        ]
+      },
+      "caption": [
+        {
+          "type": "text",
+          "value": "Edits flow from the local journal to the server, then fan out to other devices."
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-what-changed",
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "What changed"
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "placement": "content",
+      "layout": "grid",
+      "items": [
+        {
+          "image": {
+            "src": "https://blog.wp.example/wp-content/uploads/2026/10/before.png",
+            "alt": "Before: a spinner on every save",
+            "width": 800,
+            "height": 600
+          }
+        },
+        {
+          "image": {
+            "src": "https://blog.wp.example/wp-content/uploads/2026/10/after.png",
+            "alt": "After: saves appear instantly",
+            "width": 800,
+            "height": 600
+          }
+        }
+      ],
+      "caption": [
+        {
+          "type": "text",
+          "value": "Saving before and after the journal."
+        }
+      ]
+    },
+    {
+      "type": "mediaText",
+      "mediaPosition": "start",
+      "image": {
+        "src": "https://blog.wp.example/wp-content/uploads/2026/10/team.jpg",
+        "alt": "The sync team",
+        "width": 600,
+        "height": 600
+      },
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Three people built this over two quarters, mostly by deleting code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "children": [
+        {
+          "type": "text",
+          "value": "The fastest request is the one you never wait for."
+        }
+      ],
+      "attribution": [
+        {
+          "type": "text",
+          "value": "Sync team notes"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "value": "npm run sync -- --dry-run",
+      "language": "shellscript",
+      "languageSource": "explicit",
+      "label": "Shell",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=5 lines=1 hash=d73d01b2fdf94443"
+    },
+    {
+      "anchor": "kyomi-f1a2-link",
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Conflict handling follows the approach in our earlier post"
+        },
+        {
+          "type": "footnoteRef",
+          "id": "fn-1",
+          "label": "1"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    }
+  ],
+  "footnotes": [
+    {
+      "id": "fn-1",
+      "label": "1",
+      "presentation": "footnote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "See the March post on vector clocks."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "droppedElements": {},
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

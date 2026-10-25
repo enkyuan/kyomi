@@ -1,0 +1,514 @@
+{
+  "compilerVersion": "kdm-compiler-1",
+  "documentVersion": 1,
+  "summary": {
+    "fixtures": 20,
+    "valid": 20,
+    "htmlBlocks": 0,
+    "textRecall": 0.9981,
+    "order": 0.9772,
+    "elementRecall": 1,
+    "elements": {
+      "audio": {
+        "expected": 2,
+        "actual": 2,
+        "recall": 1
+      },
+      "callout": {
+        "expected": 3,
+        "actual": 3,
+        "recall": 1
+      },
+      "code": {
+        "expected": 20,
+        "actual": 20,
+        "recall": 1
+      },
+      "definitionList": {
+        "expected": 1,
+        "actual": 1,
+        "recall": 1
+      },
+      "details": {
+        "expected": 3,
+        "actual": 3,
+        "recall": 1
+      },
+      "embed": {
+        "expected": 14,
+        "actual": 14,
+        "recall": 1
+      },
+      "footnote": {
+        "expected": 7,
+        "actual": 7,
+        "recall": 1
+      },
+      "heading": {
+        "expected": 9,
+        "actual": 9,
+        "recall": 1
+      },
+      "image": {
+        "expected": 17,
+        "actual": 17,
+        "recall": 1
+      },
+      "list": {
+        "expected": 3,
+        "actual": 3,
+        "recall": 1
+      },
+      "math": {
+        "expected": 10,
+        "actual": 10,
+        "recall": 1
+      },
+      "quote": {
+        "expected": 5,
+        "actual": 5,
+        "recall": 1
+      },
+      "table": {
+        "expected": 4,
+        "actual": 4,
+        "recall": 1
+      },
+      "video": {
+        "expected": 3,
+        "actual": 3,
+        "recall": 1
+      }
+    }
+  },
+  "fixtures": {
+    "wordpress-gutenberg": {
+      "valid": true,
+      "warnings": [],
+      "words": 105,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "heading": {
+          "expected": 1,
+          "actual": 1
+        },
+        "code": {
+          "expected": 1,
+          "actual": 1
+        },
+        "image": {
+          "expected": 4,
+          "actual": 4
+        },
+        "quote": {
+          "expected": 1,
+          "actual": 1
+        },
+        "footnote": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "wordpress-embeds": {
+      "valid": true,
+      "warnings": [],
+      "words": 29,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "embed": {
+          "expected": 4,
+          "actual": 4
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "ghost-cards": {
+      "valid": true,
+      "warnings": [],
+      "words": 61,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "image": {
+          "expected": 4,
+          "actual": 4
+        },
+        "embed": {
+          "expected": 1,
+          "actual": 1
+        },
+        "callout": {
+          "expected": 1,
+          "actual": 1
+        },
+        "details": {
+          "expected": 1,
+          "actual": 1
+        },
+        "video": {
+          "expected": 1,
+          "actual": 1
+        },
+        "audio": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "substack-post": {
+      "valid": true,
+      "warnings": [],
+      "words": 78,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "image": {
+          "expected": 1,
+          "actual": 1
+        },
+        "quote": {
+          "expected": 1,
+          "actual": 1
+        },
+        "footnote": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "medium-post": {
+      "valid": true,
+      "warnings": [],
+      "words": 66,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "image": {
+          "expected": 1,
+          "actual": 1
+        },
+        "code": {
+          "expected": 1,
+          "actual": 1
+        },
+        "quote": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "hugo-chroma": {
+      "valid": true,
+      "warnings": [],
+      "words": 55,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "code": {
+          "expected": 2,
+          "actual": 2
+        },
+        "footnote": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "jekyll-rouge": {
+      "valid": true,
+      "warnings": [],
+      "words": 85,
+      "textRecall": 1,
+      "order": 0.9882,
+      "elements": {
+        "code": {
+          "expected": 2,
+          "actual": 2
+        },
+        "definitionList": {
+          "expected": 1,
+          "actual": 1
+        },
+        "footnote": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "mkdocs-admonitions": {
+      "valid": true,
+      "warnings": [],
+      "words": 37,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "code": {
+          "expected": 3,
+          "actual": 3
+        },
+        "table": {
+          "expected": 1,
+          "actual": 1
+        },
+        "callout": {
+          "expected": 1,
+          "actual": 1
+        },
+        "details": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "docusaurus-docs": {
+      "valid": true,
+      "warnings": [],
+      "words": 32,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "heading": {
+          "expected": 1,
+          "actual": 1
+        },
+        "code": {
+          "expected": 1,
+          "actual": 1
+        },
+        "callout": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "arxiv-latexml": {
+      "valid": true,
+      "warnings": [],
+      "words": 39,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "heading": {
+          "expected": 2,
+          "actual": 2
+        },
+        "math": {
+          "expected": 4,
+          "actual": 4
+        },
+        "image": {
+          "expected": 1,
+          "actual": 1
+        },
+        "list": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "katex-blog": {
+      "valid": true,
+      "warnings": [],
+      "words": 68,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "math": {
+          "expected": 4,
+          "actual": 4
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "news-embeds": {
+      "valid": true,
+      "warnings": [],
+      "words": 27,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "embed": {
+          "expected": 6,
+          "actual": 6
+        },
+        "video": {
+          "expected": 1,
+          "actual": 1
+        },
+        "audio": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "github-release": {
+      "valid": true,
+      "warnings": [],
+      "words": 44,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "heading": {
+          "expected": 1,
+          "actual": 1
+        },
+        "list": {
+          "expected": 1,
+          "actual": 1
+        },
+        "code": {
+          "expected": 1,
+          "actual": 1
+        },
+        "table": {
+          "expected": 1,
+          "actual": 1
+        },
+        "details": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "tufte-sidenotes": {
+      "valid": true,
+      "warnings": [],
+      "words": 84,
+      "textRecall": 0.9762,
+      "order": 0.7262,
+      "elements": {
+        "quote": {
+          "expected": 1,
+          "actual": 1
+        },
+        "footnote": {
+          "expected": 3,
+          "actual": 3
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "newsletter-chrome": {
+      "valid": true,
+      "warnings": [],
+      "words": 47,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "heading": {
+          "expected": 2,
+          "actual": 2
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "data-tables": {
+      "valid": true,
+      "warnings": [],
+      "words": 49,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "table": {
+          "expected": 2,
+          "actual": 2
+        },
+        "list": {
+          "expected": 1,
+          "actual": 1
+        },
+        "image": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "rtl-multilingual": {
+      "valid": true,
+      "warnings": [],
+      "words": 54,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "quote": {
+          "expected": 1,
+          "actual": 1
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "lazy-images": {
+      "valid": true,
+      "warnings": [],
+      "words": 10,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "image": {
+          "expected": 5,
+          "actual": 5
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "code-zoo": {
+      "valid": true,
+      "warnings": [],
+      "words": 49,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "code": {
+          "expected": 8,
+          "actual": 8
+        },
+        "embed": {
+          "expected": 3,
+          "actual": 3
+        }
+      },
+      "htmlBlocks": 0
+    },
+    "hostile-markup": {
+      "valid": true,
+      "warnings": [],
+      "words": 33,
+      "textRecall": 1,
+      "order": 1,
+      "elements": {
+        "heading": {
+          "expected": 2,
+          "actual": 2
+        },
+        "code": {
+          "expected": 1,
+          "actual": 1
+        },
+        "video": {
+          "expected": 1,
+          "actual": 1
+        },
+        "math": {
+          "expected": 2,
+          "actual": 2
+        }
+      },
+      "htmlBlocks": 0
+    }
+  }
+}

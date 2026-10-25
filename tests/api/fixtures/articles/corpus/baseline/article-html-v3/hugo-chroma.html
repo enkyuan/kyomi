@@ -1,0 +1,18 @@
+<p>Stop a runaway build with <kbd>Ctrl</kbd>+<kbd>C</kbd>, then read the error from the top.</p>
+<div class="highlight"><pre data-kyomi-lines="2" data-kyomi-lang="rust"><code class="language-rust"><span><span><span>fn</span> <span>main</span><span>()</span><span> </span><span>{</span>
+</span></span><span><span><span>    </span><span>println!</span><span>(</span><span>"hello"</span><span>);</span>
+</span></span><span><span><span>}</span></span></span></code></pre></div>
+<p>The same program in Go, with line numbers:</p>
+<div class="highlight"><div>
+<pre data-kyomi-lang="go"><code class="language-go"><span><span><span>package</span> <span>main</span>
+</span></span><span><span><span>func</span> <span>main</span><span>()</span> <span>{}</span></span></span></code></pre>
+</div>
+</div><p>Rust reports the first error it can explain, not the first error it finds<sup id="kyomi-fnref-1"><a href="#kyomi-fn-1">1</a></sup>.</p>
+<div data-kyomi-role="footnotes">
+<hr>
+<ol>
+<li id="kyomi-fn-1">
+<p>This is a simplification of how the borrow checker orders diagnostics.&nbsp;<a href="#kyomi-fnref-1">↩︎</a></p>
+</li>
+</ol>
+</div>

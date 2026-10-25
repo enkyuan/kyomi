@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://writer.substack.example/p/notes-on-latency"
+  },
+  "compiler": {
+    "version": "kdm-compiler-1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Notes on latency",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 65,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": [],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "anchor": "kyomi-footnote-anchor-1",
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Tail latency is what users remember. The median tells you how the system feels on a good day; the ninety-ninth percentile tells you how it feels on the day someone decides to cancel"
+        },
+        {
+          "type": "footnoteRef",
+          "id": "fn-1",
+          "label": "1"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "type": "figure",
+      "placement": "content",
+      "image": {
+        "src": "https://substackcdn.example/image/fetch/w_1456,f_auto/latency.png",
+        "alt": "Latency chart",
+        "width": 1456,
+        "height": 816,
+        "srcset": [
+          {
+            "url": "https://substackcdn.example/image/fetch/w_424,f_auto/latency.png",
+            "width": 424
+          },
+          {
+            "url": "https://substackcdn.example/image/fetch/w_1456,f_auto/latency.png",
+            "width": 1456
+          }
+        ]
+      },
+      "caption": [
+        {
+          "type": "text",
+          "value": "p50 and p99 latency over one week of traffic."
+        }
+      ]
+    },
+    {
+      "type": "pullQuote",
+      "children": [
+        {
+          "type": "text",
+          "value": "Latency is a feature, and the tail is most of it."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The fix was boring: a "
+        },
+        {
+          "type": "format",
+          "format": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "bounded"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " queue and a timeout that actually fires."
+        }
+      ]
+    }
+  ],
+  "footnotes": [
+    {
+      "id": "fn-1",
+      "label": "1",
+      "presentation": "footnote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Measured on a mid-range Android phone over a congested network."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "droppedElements": {
+      "svg": 1,
+      "form": 1,
+      "div": 1
+    },
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

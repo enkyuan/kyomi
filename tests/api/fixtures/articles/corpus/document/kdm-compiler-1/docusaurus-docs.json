@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://docs.docusaurus.example/docs/configuration"
+  },
+  "compiler": {
+    "version": "kdm-compiler-1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Site settings",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 32,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": ["typescript"],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "anchor": "kyomi-config",
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Configuration"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "All options live in one file at the project root."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": [
+        {
+          "type": "text",
+          "value": "tip"
+        }
+      ],
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Run the CLI with "
+            },
+            {
+              "type": "code",
+              "value": "--check"
+            },
+            {
+              "type": "text",
+              "value": " to validate the file without building."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "value": "export default { title: \"Docs\" };",
+      "language": "typescript",
+      "languageSource": "explicit",
+      "label": "TypeScript",
+      "filename": "docusaurus.config.ts",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=4 lines=1 hash=f56af18f85fdaaee"
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "See "
+        },
+        {
+          "type": "link",
+          "href": "#kyomi-config",
+          "children": [
+            {
+              "type": "text",
+              "value": "Configuration"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " for every option."
+        }
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {
+      "svg": 1,
+      "button": 1
+    },
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

@@ -5,6 +5,8 @@ export type CompileContext = {
   document: Document;
   /** Absolute http(s) URL the article was published at, or null when unknown. */
   baseUrl: string | null;
+  /** `<meta name="generator">` of the source site, when the caller knows it. */
+  generator: string | null;
   diagnostics: CompileDiagnostics;
 };
 
@@ -33,7 +35,7 @@ function normalizeBaseUrl(baseUrl: string | null | undefined): string | null {
 /** Parses an article body fragment into a detached root the passes can mutate. */
 export function parseArticleFragment(
   html: string,
-  options?: { baseUrl?: string | null },
+  options?: { baseUrl?: string | null; generator?: string | null },
 ): { root: HTMLElement; context: CompileContext } {
   const { document } = parseHTML("<!doctype html><html><head></head><body></body></html>");
   const root = document.body as HTMLElement;
@@ -43,6 +45,7 @@ export function parseArticleFragment(
     context: {
       document: document as unknown as Document,
       baseUrl: normalizeBaseUrl(options?.baseUrl),
+      generator: options?.generator?.trim() || null,
       diagnostics: { droppedElements: {}, warnings: [] },
     },
   };

@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://arxiv.example/html/2610.01234v1/"
+  },
+  "compiler": {
+    "version": "kdm-compiler-1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Residual scaling",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 44,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": true,
+    "codeLanguages": [],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "anchor": "kyomi-s1",
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "1 Introduction"
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-s1-p1-1",
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Let "
+        },
+        {
+          "type": "math",
+          "tex": "x_{i}^{2}",
+          "rendered": "katex:1233:9a4122e67eee60d1"
+        },
+        {
+          "type": "text",
+          "value": " denote the squared residual of sample "
+        },
+        {
+          "type": "math",
+          "tex": "i",
+          "rendered": "katex:385:999925d944277401"
+        },
+        {
+          "type": "text",
+          "value": ", following the setup in "
+        },
+        {
+          "type": "format",
+          "format": "cite",
+          "children": [
+            {
+              "type": "text",
+              "value": "["
+            },
+            {
+              "type": "link",
+              "href": "#kyomi-bib-bib3",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "3"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "]"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-s1-e1",
+      "type": "math",
+      "tex": "A=\\begin{pmatrix}1&0\\\\ 0&1\\end{pmatrix}",
+      "rendered": "katex:2668:1595aad6c5bcd1fb"
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The bound "
+        },
+        {
+          "type": "math",
+          "tex": "\\sqrt[3]{n}",
+          "rendered": "katex:2006:f39b32d1c5dab43e"
+        },
+        {
+          "type": "text",
+          "value": " follows from Equation "
+        },
+        {
+          "type": "link",
+          "href": "#kyomi-s1-e1",
+          "title": "In 1 Introduction",
+          "children": [
+            {
+              "type": "text",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-s1-f1",
+      "type": "figure",
+      "placement": "content",
+      "image": {
+        "src": "https://arxiv.example/html/2610.01234v1/x1.png",
+        "alt": "Refer to caption",
+        "width": 598,
+        "height": 300
+      },
+      "caption": [
+        {
+          "type": "text",
+          "value": "Figure 1: Residuals shrink as the batch grows."
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-bib",
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "References"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "checked": null,
+          "children": [
+            {
+              "anchor": "kyomi-bib-bib3",
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "[3]A. Author and B. Author. Notes on residual scaling. 2025."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {},
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

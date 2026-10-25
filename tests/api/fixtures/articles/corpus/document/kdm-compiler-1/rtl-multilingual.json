@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://intl.example/blog/scripts/"
+  },
+  "compiler": {
+    "version": "kdm-compiler-1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Scripts",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 58,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": [],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This post collects short samples in several scripts to check that direction and annotations survive."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "هذا نص عربي قصير للتأكد من اتجاه الكتابة."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "זהו טקסט קצר בעברית לבדיקת כיוון הכתיבה."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "漢字(かんじ)の読み方を練習します。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The top scorer this week was إيمان with 90 points."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "German loves long words: Donaudampfschiffahrtsgesellschaft."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "« Le style est l’homme même. »"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {},
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

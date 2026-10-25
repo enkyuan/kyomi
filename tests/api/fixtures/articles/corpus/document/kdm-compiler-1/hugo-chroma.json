@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://hugo.example/posts/reading-errors/"
+  },
+  "compiler": {
+    "version": "kdm-compiler-1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Reading errors",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 44,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": ["rust", "go"],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Stop a runaway build with "
+        },
+        {
+          "type": "format",
+          "format": "keyboard",
+          "children": [
+            {
+              "type": "text",
+              "value": "Ctrl"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "+"
+        },
+        {
+          "type": "format",
+          "format": "keyboard",
+          "children": [
+            {
+              "type": "text",
+              "value": "C"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": ", then read the error from the top."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "value": "fn main() {\n    println!(\"hello\");\n}",
+      "language": "rust",
+      "languageSource": "explicit",
+      "label": "Rust",
+      "highlightLines": [2],
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=5 lines=3 hash=8a4497802738a1b3"
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The same program in Go, with line numbers:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "value": "package main\nfunc main() {}",
+      "language": "go",
+      "languageSource": "explicit",
+      "label": "Go",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=4 lines=2 hash=3ac8dfb879eec5c2"
+    },
+    {
+      "anchor": "kyomi-fnref-1",
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Rust reports the first error it can explain, not the first error it finds"
+        },
+        {
+          "type": "footnoteRef",
+          "id": "fn-1",
+          "label": "1"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    }
+  ],
+  "footnotes": [
+    {
+      "id": "fn-1",
+      "label": "1",
+      "presentation": "footnote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This is a simplification of how the borrow checker orders diagnostics."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "droppedElements": {},
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

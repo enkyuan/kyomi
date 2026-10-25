@@ -23,11 +23,17 @@
   },
   "dependencies": {
     "@kyomi/db": "workspace:*",
+    "@tanstack/markdown": "0.0.12",
     "drizzle-orm": "^0.45.2",
     "fast-xml-parser": "^5.5.10",
     "ioredis": "^5.6.0",
+    "katex": "^0.16.45",
     "linkedom": "^0.18.12",
     "neosanitize": "^0.3.0",
-    "pg": "^8.16.3"
+    "pg": "^8.16.3",
+    "shiki": "4.5.0"
+  },
+  "peerDependencies": {
+    "@kyomi/reader": "workspace:*"
   }
 }

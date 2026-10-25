@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://medium.example/@writer/replacing-the-cache-3f2a"
+  },
+  "compiler": {
+    "version": "kdm-compiler-1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Replacing the cache",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 62,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": [],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "anchor": "kyomi-5c1e",
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We replaced a distributed cache with an in-process "
+        },
+        {
+          "type": "format",
+          "format": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "LRU"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " and a short "
+        },
+        {
+          "type": "format",
+          "format": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "TTL"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": ". The "
+        },
+        {
+          "type": "code",
+          "value": "get"
+        },
+        {
+          "type": "text",
+          "value": " path got four times faster."
+        }
+      ]
+    },
+    {
+      "type": "figure",
+      "placement": "content",
+      "image": {
+        "src": "https://miro.medium.example/v2/resize:fit:1400/1*cacheHits.png",
+        "alt": "",
+        "width": 700,
+        "height": 394,
+        "srcset": [
+          {
+            "url": "https://miro.medium.example/v2/resize:fit:640/format:webp/1*cacheHits.png",
+            "width": 640
+          },
+          {
+            "url": "https://miro.medium.example/v2/resize:fit:720/format:webp/1*cacheHits.png",
+            "width": 720
+          },
+          {
+            "url": "https://miro.medium.example/v2/resize:fit:1400/format:webp/1*cacheHits.png",
+            "width": 1400
+          }
+        ]
+      },
+      "caption": [
+        {
+          "type": "text",
+          "value": "Cache hit rate in the week after the change."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "value": "const cache = new Map();\ncache.set(\"user:42\", profile);\ncache.get(\"user:42\");",
+      "language": null,
+      "languageSource": "none",
+      "label": "Plain text"
+    },
+    {
+      "type": "quote",
+      "children": [
+        {
+          "anchor": "kyomi-aa10",
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "format",
+              "format": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Every network hop you remove is latency you never have to explain."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-b7c2",
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The trade-off is staleness, which we bound with the TTL."
+        }
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {},
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

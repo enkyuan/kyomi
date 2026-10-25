@@ -1,0 +1,242 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://github.example/example/tool/releases/tag/v2.0.0"
+  },
+  "compiler": {
+    "version": "kdm-compiler-1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "v2.0.0",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 37,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": ["javascript"],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "What's Changed"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "checked": true,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Streaming imports for large OPML files"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "checked": false,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Resumable imports after a crash"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Thanks to "
+        },
+        {
+          "type": "link",
+          "href": "https://github.example/octo",
+          "children": [
+            {
+              "type": "text",
+              "value": "@octo"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " for the review 🎉. Press "
+        },
+        {
+          "type": "format",
+          "format": "keyboard",
+          "children": [
+            {
+              "type": "text",
+              "value": "Shift"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "+"
+        },
+        {
+          "type": "format",
+          "format": "keyboard",
+          "children": [
+            {
+              "type": "text",
+              "value": "I"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " to open the importer."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "value": "const importer = createImporter({ stream: true });",
+      "language": "javascript",
+      "languageSource": "explicit",
+      "label": "JavaScript",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=5 lines=1 hash=6ece52dde3e9215c"
+    },
+    {
+      "type": "table",
+      "head": [
+        [
+          {
+            "header": true,
+            "align": "start",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Flag"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": true,
+            "align": "center",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Default"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "body": [
+        [
+          {
+            "header": false,
+            "align": "start",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "code",
+                    "value": "--stream"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "align": "center",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "code",
+                    "value": "true"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "details",
+      "summary": [
+        {
+          "type": "text",
+          "value": "Full changelog"
+        }
+      ],
+      "open": false,
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "href": "https://github.example/example/tool/compare/v1.9.0...v2.0.0",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "v1.9.0...v2.0.0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {
+      "input": 2,
+      "svg": 1
+    },
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

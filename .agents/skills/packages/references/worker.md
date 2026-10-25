@@ -24,11 +24,15 @@ src/
 - Keep server-side favicon fetching separate from the browser-safe proxy URL export.
 - Keep `sanitization` browser-safe. Do not import Redis, database, queue, JSDOM, or API modules.
   `document` may import `sanitization`, never the reverse.
-- Compile untrusted article HTML once, at ingest, with `compileArticleHtml`. Read paths re-apply only
+- Compile untrusted article bodies once, at ingest, with `compileArticleDocument` (HTML plus the
+  validated KDM document; async because Shiki loads grammars lazily) or `compileArticleHtml` when
+  only HTML is needed. Read paths re-apply only
   the policy; never run compiler passes on stored HTML, because pass 2 strips the compiler's own
   `data-kyomi-*` hints.
 - Changing the policy or a pass's output bumps `ARTICLE_HTML_SANITIZER_VERSION` and needs a
   recorded corpus baseline (`tests/api/fixtures/articles/corpus/README.md`).
+- Import only `@kyomi/reader/document` from `@kyomi/reader`; the edge is a peer dependency because
+  reader imports `@kyomi/worker/sanitization` (Turborepo would otherwise report a cycle).
 - Never import `apps/api` internals from this package.
 - Export only stable contracts through declared `@kyomi/worker` subpaths.
 - Preserve job compatibility deliberately during producer/consumer rollouts. Define retirement

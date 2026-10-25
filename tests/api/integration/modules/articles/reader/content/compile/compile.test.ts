@@ -11,6 +11,7 @@ describe("compileArticleHtml", () => {
       "resolve-urls",
       "recognize-embeds",
       "capture-code-hints",
+      "capture-layout",
       "strip-chrome",
       "sanitize",
     ]);
