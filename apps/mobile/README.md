@@ -190,8 +190,8 @@ native KDM renderer (`@kyomi/reader/native`, wired in `modules/reader/components
 is chosen only when **all** hold: `EXPO_PUBLIC_KYOMI_NATIVE_READER=1` at build time, the article carries
 a document body, its `version` is one `isSupportedDocumentVersion` accepts, and it passes
 `readerDocumentSchema`. Anything else falls back to the DOM body. The request header that announces the
-supported version and the document field name are placeholders confined to `src/lib/reader-document.ts`
-until the storage/API contract is final.
+supported version and the `bodyKind: "document"` member of `reader.selected` follow the approved API contract and live in `src/lib/reader-document.ts`
+(`documentVersion` must be 1..`READER_DOCUMENT_VERSION`; the parse runs once per fetched article).
 
 Link taps open `expo-web-browser`; long-pressing a link shares it. Images go through the reader image
 proxy via `expo-image` (thumbhash placeholders, zero transition under reduce motion); tapping opens the

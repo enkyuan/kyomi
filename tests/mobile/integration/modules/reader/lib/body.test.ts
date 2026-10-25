@@ -2,15 +2,17 @@ import { describe, expect, test } from "bun:test";
 import "../../../packages/reader/render";
 import { makeDocument } from "../../../packages/reader/fixtures";
 
-const { readerDocumentHeaders, selectReaderBody, READER_DOCUMENT_VERSION_HEADER } =
+const { readerDocumentHeaders, selectReaderBody } =
   await import("../../../../../../apps/mobile/src/lib/reader-document");
 const { startReaderTrace } =
   await import("../../../../../../apps/mobile/src/modules/reader/lib/metrics");
 
 const html = { bodyKind: "html" as const, contentHtml: "<p>x</p>" };
-const withDocument = (document: unknown) => ({
+const withDocument = (document: unknown, documentVersion = 1) => ({
   ...html,
-  documentBody: { bodyKind: "document" as const, document },
+  bodyKind: "document" as const,
+  document,
+  documentVersion,
 });
 
 describe("selectReaderBody", () => {
@@ -27,8 +29,7 @@ describe("selectReaderBody", () => {
   });
 
   test("falls back for an unsupported document version", () => {
-    const future = { ...(makeDocument([]) as object), version: 99 };
-    expect(selectReaderBody(withDocument(future), true).kind).toBe("html");
+    expect(selectReaderBody(withDocument(makeDocument([]), 2), true).kind).toBe("html");
   });
 
   test("falls back for a document that fails validation", () => {
@@ -40,7 +41,7 @@ describe("selectReaderBody", () => {
 describe("readerDocumentHeaders", () => {
   test("sends the supported version only when the flag is on", () => {
     expect(readerDocumentHeaders(false)).toEqual({});
-    expect(readerDocumentHeaders(true)).toEqual({ [READER_DOCUMENT_VERSION_HEADER]: "1" });
+    expect(readerDocumentHeaders(true)).toEqual({ "X-Kyomi-Document-Version": "1" });
   });
 });
 

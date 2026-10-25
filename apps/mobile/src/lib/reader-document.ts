@@ -8,21 +8,26 @@ import type { ReaderContent } from "@kyomi/reader";
  */
 export const NATIVE_READER_ENABLED = process.env.EXPO_PUBLIC_KYOMI_NATIVE_READER === "1";
 
-/**
- * Placeholder contract names: the storage/API session owns the real header and field. Both live in
- * this file only, so aligning with the final contract is a one-file change.
- */
-export const READER_DOCUMENT_VERSION_HEADER = "x-kyomi-document-version";
+/** Approved API contract: the highest KDM version this client renders; absent or 0 means no document. */
+export const READER_DOCUMENT_VERSION_HEADER = "X-Kyomi-Document-Version";
 
 /** Headers that tell the API which document versions this client can render. */
 export function readerDocumentHeaders(enabled = NATIVE_READER_ENABLED): Record<string, string> {
   return enabled ? { [READER_DOCUMENT_VERSION_HEADER]: String(NATIVE_DOCUMENT_VERSION) } : {};
 }
 
-/** The API's `reader.selected` once it can carry a compiled document next to the HTML body. */
-export type ReaderBodyPayload = ReaderContent & {
-  readonly documentBody?: { readonly bodyKind: "document"; readonly document: unknown } | null;
+/**
+ * `reader.selected` once the API serves documents: a `bodyKind: "document"` member of the reader
+ * content union. The HTML fields stay populated as a fallback. Declared here until the shared
+ * `ReaderContent` union gains the member.
+ */
+export type ReaderDocumentContent = Omit<ReaderContent, "bodyKind"> & {
+  readonly bodyKind: "document";
+  readonly document: unknown;
+  readonly documentVersion: number;
 };
+
+export type ReaderBodyPayload = ReaderContent | ReaderDocumentContent;
 
 export type SelectedReaderBody =
   | { readonly kind: "document"; readonly document: ReaderDocument }
@@ -38,17 +43,21 @@ export function selectReaderBody(
   reader: ReaderBodyPayload,
   enabled = NATIVE_READER_ENABLED,
 ): SelectedReaderBody {
-  const candidate = reader.documentBody;
-  if (!enabled || !candidate || candidate.bodyKind !== "document") return { kind: "html" };
+  if (!enabled || reader.bodyKind !== "document") return { kind: "html" };
+  if (!isSupportedDocumentVersion(reader.documentVersion)) return { kind: "html" };
 
-  const version = (candidate.document as { version?: unknown } | null)?.version;
-  if (!isSupportedDocumentVersion(version)) return { kind: "html" };
-
-  let document = parsed.get(candidate);
+  let document = parsed.get(reader);
   if (document === undefined) {
-    const result = readerDocumentSchema.safeParse(candidate.document);
+    const result = readerDocumentSchema.safeParse(reader.document);
     document = result.success ? result.data : null;
-    parsed.set(candidate, document);
+    parsed.set(reader, document);
   }
   return document ? { kind: "document", document } : { kind: "html" };
+}
+
+/** The DOM reader's input: a document member carries sanitized `contentHtml` as its fallback body. */
+export function toHtmlReaderContent(reader: ReaderBodyPayload): ReaderContent {
+  if (reader.bodyKind !== "document") return reader;
+  const { document: _document, documentVersion: _version, ...rest } = reader;
+  return { ...rest, bodyKind: "html" };
 }

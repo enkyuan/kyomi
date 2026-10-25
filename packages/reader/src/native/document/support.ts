@@ -6,5 +6,9 @@ export const NATIVE_SUPPORTED_DOCUMENT_VERSIONS: readonly number[] = [READER_DOC
 export const NATIVE_DOCUMENT_VERSION = Math.max(...NATIVE_SUPPORTED_DOCUMENT_VERSIONS);
 
 export function isSupportedDocumentVersion(version: unknown): boolean {
-  return typeof version === "number" && NATIVE_SUPPORTED_DOCUMENT_VERSIONS.includes(version);
+  return (
+    Number.isInteger(version) &&
+    (version as number) >= 1 &&
+    (version as number) <= NATIVE_DOCUMENT_VERSION
+  );
 }

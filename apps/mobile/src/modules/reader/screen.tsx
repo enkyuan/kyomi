@@ -10,7 +10,11 @@ import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
 import { articleListQueryKeys } from "@modules/articles/queries/keys";
 import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
 import { saveRecentArticle } from "@modules/recents/lib/store";
-import { NATIVE_READER_ENABLED, selectReaderBody } from "@/lib/reader-document";
+import {
+  NATIVE_READER_ENABLED,
+  selectReaderBody,
+  toHtmlReaderContent,
+} from "@/lib/reader-document";
 import ArticleBody from "./components/article-body.dom";
 import { NativeArticleBody } from "./components/native-article-body";
 import {
@@ -73,13 +77,14 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
         ? {
             ...fetchedArticle,
             reader: {
-              selected: {
-                ...createLongArticleReader(),
-                documentBody: {
-                  bodyKind: "document" as const,
-                  document: createLongArticleDocument(),
-                },
-              },
+              selected: NATIVE_READER_ENABLED
+                ? {
+                    ...createLongArticleReader(),
+                    bodyKind: "document" as const,
+                    document: createLongArticleDocument(),
+                    documentVersion: 1,
+                  }
+                : createLongArticleReader(),
             },
           }
         : fetchedArticle,
@@ -220,7 +225,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
             feedTitle={article.feedTitle}
             fontSizePx={mobileReaderLayout.body.fontSizePx}
             onReady={handleArticleReady}
-            reader={article.reader.selected}
+            reader={toHtmlReaderContent(article.reader.selected)}
             title={article.title}
           />
         )}
