@@ -1,7 +1,15 @@
 import type { db } from "@adapters/db/client";
-import { articleClips } from "@kyomi/db";
+import { articleClips, articleReadingState } from "@kyomi/db";
 import { clipReadColumns, type ClipReadRow } from "./columns";
 import { and, eq } from "drizzle-orm";
+import {
+  clipReadingStateJoin,
+  readingPositionColumns,
+  toReadingPositionDto,
+  toReadingProgressDto,
+  type ReadingPositionColumnsRow,
+  type ReadingProgressColumnsRow,
+} from "@modules/articles/progress/read";
 import type { ArticleDetailDto, ArticleListItemDto } from "@modules/articles/types";
 import {
   buildArticleReaderDto,
@@ -14,7 +22,7 @@ import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./constants";
 
 type DB = typeof db;
 
-function clipToListItem(row: ClipReadRow): ArticleListItemDto {
+export function clipToListItem(row: ClipReadRow & ReadingProgressColumnsRow): ArticleListItemDto {
   return {
     id: row.id,
     title: row.title,
@@ -31,10 +39,11 @@ function clipToListItem(row: ClipReadRow): ArticleListItemDto {
     lastViewedAt: row.lastViewedAt?.toISOString() ?? null,
     articleType: "clip",
     categories: [],
+    readingProgress: toReadingProgressDto(row),
   };
 }
 
-export function clipToDetail(row: ClipReadRow): ArticleDetailDto {
+export function clipToDetail(row: ClipReadRow & ReadingPositionColumnsRow): ArticleDetailDto {
   const base = clipToListItem(row);
   const extractedStatus = (row.extractedContentStatus as ExtractedContentStatus) ?? "pending";
   const readerOriginal = buildStoredReaderContent({
@@ -81,6 +90,7 @@ export function clipToDetail(row: ClipReadRow): ArticleDetailDto {
     contentSource: (row.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
     extractionErrorCode: row.extractionErrorCode,
     extractionErrorMessage: row.extractionErrorMessage,
+    readingPosition: toReadingPositionDto(row),
     reader,
   };
 }
@@ -91,8 +101,9 @@ export async function getClipDetailForUser(
   clipId: string,
 ): Promise<ArticleDetailDto | null> {
   const rows = await database
-    .select(clipReadColumns)
+    .select({ ...clipReadColumns, ...readingPositionColumns })
     .from(articleClips)
+    .leftJoin(articleReadingState, clipReadingStateJoin(userId))
     .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)))
     .limit(1);
   const r = rows[0];

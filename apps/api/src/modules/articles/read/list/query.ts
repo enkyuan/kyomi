@@ -2,6 +2,7 @@ import type { db } from "@adapters/db/client";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
 import { and, asc, desc, eq, gt, gte, ilike, lt, or, sql, type SQL } from "drizzle-orm";
 import { logger } from "@adapters/logger";
+import { attachReadingProgress } from "@modules/articles/progress/read";
 import type { ArticleSort } from "@modules/articles/params";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
@@ -164,7 +165,7 @@ function filterVisibleArticleRows(rows: ArticleListRawRow[]): ArticleListRawRow[
 
 export const filterVisibleArticleRowsForTest = filterVisibleArticleRows;
 
-function toArticleListItems(page: ArticleListRawRow[]): ArticleListItemDto[] {
+export function toArticleListItems(page: ArticleListRawRow[]): ArticleListItemDto[] {
   return page.map((r) => ({
     id: r.id,
     title: decodeText(r.title),
@@ -181,6 +182,7 @@ function toArticleListItems(page: ArticleListRawRow[]): ArticleListItemDto[] {
     lastViewedAt: r.lastViewedAt?.toISOString() ?? null,
     articleType: "feed" as const,
     categories: r.categories.map((label) => decodeText(label)),
+    readingProgress: null,
   }));
 }
 
@@ -197,7 +199,7 @@ export async function listArticlesForUser(
   const rows = await listArticleRows(database, userId, opts, limit + 1);
   const { hasMore, page, nextCursor } = paginateRows(rows, limit, sort);
 
-  const items = toArticleListItems(page);
+  const items = await attachReadingProgress(database, userId, toArticleListItems(page));
   return { items, next_cursor: nextCursor, has_more: hasMore, total_count: null };
 }
 
@@ -212,7 +214,7 @@ export async function listAllArticlesForUser(
   const rows = await listGlobalArticleRows(database, userId, opts, limit + 1);
   const { hasMore, page, nextCursor } = paginateRows(rows, limit, sort);
 
-  const items = toArticleListItems(page);
+  const items = await attachReadingProgress(database, userId, toArticleListItems(page));
   return { items, next_cursor: nextCursor, has_more: hasMore, total_count: null };
 }
 

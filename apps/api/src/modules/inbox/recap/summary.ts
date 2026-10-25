@@ -167,6 +167,7 @@ async function listOldestSavedFeedItems(
       lastViewedAt: row.lastViewedAt?.toISOString() ?? null,
       articleType: "feed" as const,
       categories: [],
+      readingProgress: null,
       savedAt: row.savedAt.toISOString(),
     }));
 }
@@ -218,6 +219,7 @@ async function listOldestSavedClips(
       lastViewedAt: row.lastViewedAt?.toISOString() ?? null,
       articleType: "clip" as const,
       categories: [],
+      readingProgress: null,
       savedAt: row.savedAt.toISOString(),
     }));
 }
