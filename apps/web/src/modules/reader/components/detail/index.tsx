@@ -2,7 +2,10 @@
 
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/components/scroll-area";
 import { cn } from "@kyomi/ui/lib/utils";
+import { buildContentKey } from "@kyomi/reader/core";
 import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
+import { useReadingProgress } from "@modules/reader/hooks/use-reading-progress";
+import { readerContentForMode, resolveReaderMode } from "@modules/reader/lib/display";
 import { readerViewportContentInsetClass, type DetailViewProps } from "@modules/reader/lib/detail";
 import { useEffect, useRef, useState } from "react";
 import { BlurLayer } from "./blur";
@@ -53,12 +56,23 @@ export function Detail({
           contentWidth: preferences.contentWidth,
         }));
 
-  useEffect(() => {
-    if (!selectedItemId) {
-      return;
-    }
-    viewportRef.current?.scrollTo({ top: 0 });
-  }, [selectedItemId]);
+  const readingContentKey = selectedItem
+    ? buildContentKey(
+        readerContentForMode(
+          selectedItem,
+          resolveReaderMode(selectedItem, preferences.defaultMode),
+        ),
+      )
+    : undefined;
+
+  // Opens at the restored reading position or the top, and tracks progress while open.
+  useReadingProgress({
+    viewportRef,
+    itemId: selectedItemId,
+    contentKey: readingContentKey,
+    readingPosition: selectedItem?.readingPosition,
+    enabled: preferences.rememberPosition !== false,
+  });
 
   useEffect(() => {
     if (!isBrowserSurface || !selectedItemId) {

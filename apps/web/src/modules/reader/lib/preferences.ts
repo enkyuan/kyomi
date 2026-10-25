@@ -19,6 +19,7 @@ export const DEFAULT_READER_PREFERENCES: ReaderPreferences = {
   openLinksInNewTab: true,
   showLinkPreviews: true,
   showImages: true,
+  rememberPosition: true,
 };
 
 function clampReaderFontSize(value: unknown): number {
@@ -66,6 +67,10 @@ export function sanitizeReaderPreferences(value: unknown): ReaderPreferences {
       typeof record.showImages === "boolean"
         ? record.showImages
         : DEFAULT_READER_PREFERENCES.showImages,
+    rememberPosition:
+      typeof record.rememberPosition === "boolean"
+        ? record.rememberPosition
+        : DEFAULT_READER_PREFERENCES.rememberPosition,
   };
 }
 

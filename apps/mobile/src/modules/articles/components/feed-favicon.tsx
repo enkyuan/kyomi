@@ -6,6 +6,9 @@ import { RssIcon } from "@/components/icons/rss";
 import { resolveMobileApiUrl } from "@/lib/api";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 
+/** Favicons are squircles everywhere: the corner radius scales with the icon, on a continuous curve. */
+export const FAVICON_RADIUS_RATIO = 0.25;
+
 export type FeedFaviconProps = {
   faviconUrl: string | null;
   feedUrl: string;
@@ -45,8 +48,13 @@ function FeedFaviconImage({ candidateUrls, size, title }: FeedFaviconImageProps)
   return (
     <View
       accessibilityLabel={hasLoadedFavicon ? undefined : `${title} feed`}
-      className="items-center justify-center overflow-hidden rounded-sm bg-card/85"
-      style={{ width: size, height: size }}
+      className="items-center justify-center overflow-hidden bg-card/85"
+      style={{
+        borderCurve: "continuous",
+        borderRadius: size * FAVICON_RADIUS_RATIO,
+        height: size,
+        width: size,
+      }}
     >
       {!hasLoadedFavicon ? <RssIcon color={mutedForeground} size={size * 0.6} /> : null}
       {faviconSource ? (

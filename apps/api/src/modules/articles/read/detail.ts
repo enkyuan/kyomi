@@ -1,8 +1,21 @@
 import type { db } from "@adapters/db/client";
-import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
+import {
+  articleReadingState,
+  feedItemUserState,
+  feedItems,
+  feedSubscriptions,
+  feeds,
+} from "@kyomi/db";
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
+import {
+  feedReadingStateJoin,
+  readingPositionColumns,
+  toReadingPositionDto,
+  toReadingProgressDto,
+  type ReadingPositionColumnsRow,
+} from "../progress/read";
 import { getClipDetailForUser } from "../write/clips/detail";
 import {
   buildArticleReaderDto,
@@ -17,7 +30,7 @@ import type { ExtractedContentStatus } from "../reader/content";
 
 type DB = typeof db;
 
-type FeedArticleDetailRawRow = {
+type FeedArticleDetailRawRow = ReadingPositionColumnsRow & {
   id: string;
   title: string;
   link: string;
@@ -117,6 +130,8 @@ function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto 
     lastViewedAt: row.lastViewedAt?.toISOString() ?? null,
     articleType: "feed",
     categories: row.categories.map(decodeText),
+    readingProgress: toReadingProgressDto(row),
+    readingPosition: toReadingPositionDto(row),
     reader,
   };
 }
@@ -169,11 +184,13 @@ async function getFeedArticleDetailForUser(
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
       lastViewedAt: feedItemUserState.lastViewedAt,
       categories: categoryLabelsSql,
+      ...readingPositionColumns,
     })
     .from(feedItems)
     .leftJoin(feedSubscriptions, feedSubscriptionsJoin)
     .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
     .leftJoin(feedItemUserState, userStateJoin)
+    .leftJoin(articleReadingState, feedReadingStateJoin(userId))
     .where(eq(feedItems.id, articleId))
     .limit(1);
 

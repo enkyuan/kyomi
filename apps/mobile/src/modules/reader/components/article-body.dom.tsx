@@ -1,10 +1,12 @@
 "use dom";
 
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type RefObject } from "react";
 import type { DOMProps } from "expo/dom";
 import type { ReaderContent as ReaderContentModel } from "@kyomi/reader";
+import { progressFromScroll, scrollTopForProgress } from "@kyomi/reader/core";
 import { ReaderContent } from "@kyomi/reader/web";
 import { RssIcon } from "@kyomi/ui/icons/blode";
+import { createSquircleStyle } from "@kyomi/ui/lib/squircle";
 import "@kyomi/reader/web/styles.css";
 import "@kyomi/ui/styles/reader.css";
 import { mobileColors } from "@/theme/colors";
@@ -82,7 +84,6 @@ const MOBILE_READER_STYLES = String.raw`
     width: 1.25rem;
     height: 1.25rem;
     flex: none;
-    border-radius: 3px;
     background: var(--reader-card);
     object-fit: contain;
   }
@@ -171,13 +172,25 @@ const MOBILE_READER_STYLES = String.raw`
 
 `;
 
+/** The source favicon is a fixed 1.25rem (20px) squircle; WebKit has no `corner-shape`, so it is clipped. */
+const FAVICON_SIZE_PX = 20;
+const FAVICON_SQUIRCLE = createSquircleStyle({
+  cornerRadius: FAVICON_SIZE_PX * 0.25,
+  height: FAVICON_SIZE_PX,
+  width: FAVICON_SIZE_PX,
+});
+
 type ArticleBodyProps = {
   readonly bottomInset: number;
   readonly colorScheme: "dark" | "light";
   readonly faviconUrls: readonly string[];
   readonly feedTitle: string;
   readonly fontSizePx: number;
+  /** Where to put the reader once the body is laid out, as a fraction of the article (0..1). */
+  readonly initialProgress?: number;
   readonly onReady?: () => void;
+  /** Sent at most every 2 s while reading, and when scrolling ends. */
+  readonly onReadingProgress?: (sample: { progress: number; completed: boolean }) => void;
   readonly reader: ReaderContentModel;
   readonly title: string;
   readonly dom?: DOMProps;
@@ -203,13 +216,151 @@ function ReaderSource({
             setFaviconIndex((current) => Math.min(current + 1, faviconUrls.length));
           }}
           src={faviconUrl}
+          style={FAVICON_SQUIRCLE}
         />
       ) : faviconIndex >= faviconUrls.length ? (
-        <RssIcon aria-hidden="true" className="mobile-reader__source-favicon" size={20} />
+        <RssIcon
+          aria-hidden="true"
+          className="mobile-reader__source-favicon"
+          size={FAVICON_SIZE_PX}
+          style={FAVICON_SQUIRCLE}
+        />
       ) : null}
       <span>{feedTitle}</span>
     </p>
   );
+}
+
+const READING_SAMPLE_INTERVAL_MS = 2_000;
+const READING_SCROLL_END_MS = 150;
+/** Images and fonts keep resizing the body after first layout; a restore follows them this long. */
+const RESTORE_SETTLE_MS = 4_000;
+
+type ReadingTracking = {
+  /** Samples wait for a pending restore so the top of the article never overwrites a saved position. */
+  held: boolean;
+  userScrolled: boolean;
+  emit: () => void;
+};
+
+/**
+ * Restores `initialProgress` and reports reading progress. The page scrolls inside its own WebView,
+ * so scroll position, viewport and article geometry are read here and only samples cross the bridge.
+ */
+function useReadingProgressTracking(
+  articleRef: RefObject<HTMLElement | null>,
+  initialProgress: number | undefined,
+  onReadingProgress: ArticleBodyProps["onReadingProgress"],
+) {
+  const reportRef = useRef(onReadingProgress);
+  useEffect(() => {
+    reportRef.current = onReadingProgress;
+  }, [onReadingProgress]);
+  const tracking = useRef<ReadingTracking>({
+    emit: () => undefined,
+    held: initialProgress !== undefined,
+    userScrolled: false,
+  });
+
+  useEffect(() => {
+    const article = articleRef.current;
+    if (!article) return;
+    const state = tracking.current;
+
+    let lastEmitAt = 0;
+    let trailing: number | undefined;
+    let scrollEnd: number | undefined;
+
+    const emit = () => {
+      if (state.held || !reportRef.current) return;
+      const scrollTop = window.scrollY;
+      const progress = progressFromScroll({
+        contentHeight: article.offsetHeight,
+        contentTop: article.getBoundingClientRect().top + scrollTop,
+        scrollTop,
+        viewportHeight: window.innerHeight,
+      });
+      // The reading line never reaches the end of the body, so the end is checked directly: the
+      // last of the article is on screen after the reader has scrolled.
+      const completed =
+        scrollTop > 0 && article.getBoundingClientRect().bottom <= window.innerHeight + 2;
+      lastEmitAt = Date.now();
+      reportRef.current({ completed, progress });
+    };
+    state.emit = emit;
+
+    const onScroll = () => {
+      const wait = READING_SAMPLE_INTERVAL_MS - (Date.now() - lastEmitAt);
+      if (wait <= 0) {
+        emit();
+      } else {
+        if (trailing === undefined) {
+          trailing = window.setTimeout(() => {
+            trailing = undefined;
+            emit();
+          }, wait);
+        }
+      }
+      window.clearTimeout(scrollEnd);
+      scrollEnd = window.setTimeout(emit, READING_SCROLL_END_MS);
+    };
+    const onUserInput = () => {
+      state.userScrolled = true;
+    };
+
+    // One signal owns every listener, so a single abort removes them all.
+    const listeners = new AbortController();
+    window.addEventListener("scroll", onScroll, { passive: true, signal: listeners.signal });
+    for (const type of ["touchstart", "wheel", "keydown"] as const) {
+      window.addEventListener(type, onUserInput, {
+        capture: true,
+        passive: true,
+        signal: listeners.signal,
+      });
+    }
+    return () => {
+      listeners.abort();
+      window.clearTimeout(trailing);
+      window.clearTimeout(scrollEnd);
+      state.emit = () => undefined;
+    };
+  }, [articleRef]);
+
+  useEffect(() => {
+    const article = articleRef.current;
+    const state = tracking.current;
+    if (!article) return;
+
+    if (initialProgress === undefined) {
+      // Nothing to restore: the first scroll is the first sample.
+      state.held = false;
+      return;
+    }
+    if (state.userScrolled) return;
+
+    const restore = () => {
+      if (state.userScrolled) return;
+      const top = scrollTopForProgress(initialProgress, {
+        contentHeight: article.offsetHeight,
+        contentTop: article.getBoundingClientRect().top + window.scrollY,
+        viewportHeight: window.innerHeight,
+      });
+      window.scrollTo({ behavior: "instant", top });
+      if (state.held) {
+        state.held = false;
+        state.emit();
+      }
+    };
+
+    restore();
+    const observer = new ResizeObserver(restore);
+    observer.observe(article);
+    const stop = window.setTimeout(() => observer.disconnect(), RESTORE_SETTLE_MS);
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(stop);
+    };
+  }, [articleRef, initialProgress]);
 }
 
 function createReaderImageProxyUrl(sourceUrl: string): string {
@@ -222,11 +373,15 @@ export default function ArticleBody({
   faviconUrls,
   feedTitle,
   fontSizePx,
+  initialProgress,
   onReady,
+  onReadingProgress,
   reader,
   title,
 }: ArticleBodyProps) {
   const didNotifyReady = useRef(false);
+  const articleRef = useRef<HTMLElement>(null);
+  useReadingProgressTracking(articleRef, initialProgress, onReadingProgress);
 
   useEffect(() => {
     didNotifyReady.current = false;
@@ -260,7 +415,7 @@ export default function ArticleBody({
         />
         <h1 className="mobile-reader__title">{title}</h1>
       </header>
-      <article className="mobile-reader__content reader-content">
+      <article className="mobile-reader__content reader-content" ref={articleRef}>
         <ReaderContent
           layoutMode="fidelity"
           openLinksInNewTab

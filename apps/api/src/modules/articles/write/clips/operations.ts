@@ -13,13 +13,10 @@ import {
   buildStoredContentRecord,
   processIngestedArticleHtml,
 } from "@modules/articles/reader/content";
-import type {
-  ArticleDetailDto,
-  ArticleListItemDto,
-  ArticlesCursorListResponseDto,
-} from "@modules/articles/types";
+import type { ArticleDetailDto, ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { clipReadColumns, type ClipReadRow } from "./columns";
-import { clipToDetail } from "./detail";
+import { clipToDetail, clipToListItem } from "./detail";
+import { attachReadingProgress } from "@modules/articles/progress/read";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./constants";
 
 type DB = typeof db;
@@ -45,26 +42,6 @@ export type ListClipsOptions = {
 };
 
 type ClipCursor = { publishedAt: Date; id: string; isRead?: boolean };
-
-function clipToListItem(row: ClipReadRow): ArticleListItemDto {
-  return {
-    id: row.id,
-    title: row.title,
-    link: row.url,
-    summary: row.note,
-    publishedAt: row.createdAt.toISOString(),
-    feedId: CLIP_LIST_FEED_ID,
-    feedUrl: row.url,
-    feedSiteUrl: null,
-    feedTitle: CLIP_LIST_FEED_TITLE,
-    feedFaviconUrl: null,
-    isRead: row.isRead,
-    isSaved: row.isSaved,
-    lastViewedAt: row.lastViewedAt?.toISOString() ?? null,
-    articleType: "clip",
-    categories: [],
-  };
-}
 
 function ensureClipUrl(rawUrl: string): string {
   const trimmedUrl = rawUrl.trim();
@@ -376,7 +353,11 @@ export async function listClipsForUser(
   const nextCursor = hasMore && page.length > 0 ? page[page.length - 1].id : null;
 
   return {
-    items: page.map((r) => clipToListItem(r)),
+    items: await attachReadingProgress(
+      database,
+      userId,
+      page.map((r) => clipToListItem(r)),
+    ),
     next_cursor: nextCursor,
     has_more: hasMore,
     total_count: null,

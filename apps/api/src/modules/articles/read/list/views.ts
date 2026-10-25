@@ -6,6 +6,7 @@ import type { ArticleSort } from "@modules/articles/params";
 import type { ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { listClipsForUser } from "@modules/articles/write/clips/operations";
 import { clipReadColumns, type ClipReadRow } from "@modules/articles/write/clips/columns";
+import { attachReadingProgress } from "@modules/articles/progress/read";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "@modules/articles/write/clips/constants";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import { mergeArticleListsSorted, mergedFeedClipResponsePaged } from "./merge";
@@ -266,6 +267,7 @@ function recentFeedRowToItem(row: {
     articleType: "feed",
     categories: row.categories.map((label) => decodeText(label)),
     lastViewedAt: row.lastViewedAt ?? row.publishedAt,
+    readingProgress: null,
   };
 }
 
@@ -286,6 +288,7 @@ function recentClipRowToItem(row: ClipReadRow): RecentlyViewedItem {
     articleType: "clip",
     categories: [],
     lastViewedAt: row.lastViewedAt ?? row.createdAt,
+    readingProgress: null,
   };
 }
 
@@ -430,7 +433,14 @@ export async function listMergedRecentlyReadView(
     listRecentlyViewedFeedItems(database, userId, take, boundary, sort, search),
     listRecentlyViewedClipItems(database, userId, take, boundary, sort, search),
   ]);
-  const mergedSorted = mergeRecentlyViewedItemsSorted([...feed.items, ...clips.items], sort);
+  const [feedItemsWithProgress, clipItemsWithProgress] = await Promise.all([
+    attachReadingProgress(database, userId, feed.items),
+    attachReadingProgress(database, userId, clips.items),
+  ]);
+  const mergedSorted = mergeRecentlyViewedItemsSorted(
+    [...feedItemsWithProgress, ...clipItemsWithProgress],
+    sort,
+  );
   return mergedRecentlyViewedResponsePaged(mergedSorted, limit, feed.hasMore, clips.hasMore, sort);
 }
 

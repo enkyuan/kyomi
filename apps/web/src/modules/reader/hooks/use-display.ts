@@ -4,7 +4,7 @@ import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import { cn } from "@kyomi/ui/lib/utils";
 import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
 import { readerArticleTopInsetClass } from "@modules/reader/lib/detail";
-import { readerContentForMode } from "@modules/reader/lib/display";
+import { readerContentForMode, resolveReaderMode } from "@modules/reader/lib/display";
 import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
 import type { ReaderMode } from "../lib/mode";
 
@@ -16,8 +16,7 @@ export function useReaderDisplay({
   readerFocusMode: boolean;
 }) {
   const { preferences, setPreferences, limits } = useReaderPreferences();
-  const effectiveReaderMode: ReaderMode =
-    preferences.defaultMode === "smart" ? item.reader.activeMode : preferences.defaultMode;
+  const effectiveReaderMode: ReaderMode = resolveReaderMode(item, preferences.defaultMode);
   const contentWidth: ReaderContentWidth =
     preferences.contentWidth === "narrow" ? "narrow" : "wide";
   const maxWidthClassName =

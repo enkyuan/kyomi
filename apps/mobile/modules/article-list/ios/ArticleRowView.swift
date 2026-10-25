@@ -65,14 +65,21 @@ struct ArticleRowView: View {
   }
 
   private var continueBadge: some View {
-    Text(style.continueLabel)
+    Text(row.continueLabel ?? style.continueLabel)
       .font(style.badgeFont.font)
       .foregroundStyle(style.badgeText)
       .lineLimit(1)
       .padding(.horizontal, 8)
       .frame(minHeight: style.badgeHeight)
       .background(Capsule().fill(style.badgeBackground))
-      .accessibilityLabel("Previously opened. Continue reading.")
+      .accessibilityLabel(continueAccessibilityLabel)
+  }
+
+  /// The badge read aloud. The visible time left, such as "6m left", leaves out the action, so it
+  /// is spoken after it.
+  private var continueAccessibilityLabel: String {
+    guard let remaining = row.continueLabel else { return style.continueLabel }
+    return "\(style.continueLabel), \(remaining)"
   }
 
   private var toolbar: some View {
@@ -254,7 +261,7 @@ struct FaviconView: View {
     }
     .frame(width: size, height: size)
     .background(background.opacity(0.85))
-    .clipShape(RoundedRectangle(cornerRadius: 4, style: .continuous))
+    .clipShape(RoundedRectangle(cornerRadius: size * ArticleListStyle.faviconCornerRatio, style: .continuous))
     .task(id: urls) {
       guard image == nil else { return }
       for url in urls {

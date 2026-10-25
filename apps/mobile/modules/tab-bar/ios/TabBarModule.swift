@@ -13,7 +13,8 @@ public class TabBarModule: Module {
     View(TabBarView.self) {
       Events(
         "onTabPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit",
-        "onComposerActiveChange", "onComposerQueryChange", "onComposerSubmit"
+        "onComposerActiveChange", "onComposerQueryChange", "onComposerSubmit",
+        "onSwitcherFolderAction"
       )
 
       Prop("tabs") { (view: TabBarView, tabs: [TabItemRecord]) in
@@ -26,6 +27,10 @@ public class TabBarModule: Module {
 
       Prop("switcher") { (view: TabBarView, switcher: SwitcherRecord?) in
         view.model.switcher = switcher?.switcher
+      }
+
+      Prop("switcherFolders") { (view: TabBarView, folders: [SwitcherFolderRecord]?) in
+        view.model.switcherFolders = (folders ?? []).map(\.folder)
       }
 
       Prop("searchIcon") { (view: TabBarView, icon: IconRecord?) in
@@ -121,10 +126,24 @@ struct SwitcherRecord: Record {
   @Field var label: String = ""
   @Field var hint: String = ""
   @Field var icon: IconRecord = IconRecord()
+  @Field var editIcon: IconRecord = IconRecord()
+  @Field var renameIcon: IconRecord = IconRecord()
+  @Field var addIcon: IconRecord = IconRecord()
 
   var switcher: TabBarSwitcher {
-    TabBarSwitcher(title: title, label: label, hint: hint, icon: icon.icon)
+    TabBarSwitcher(
+      title: title, label: label, hint: hint, icon: icon.icon,
+      editIcon: editIcon.icon, renameIcon: renameIcon.icon, addIcon: addIcon.icon
+    )
   }
+}
+
+struct SwitcherFolderRecord: Record {
+  @Field var id: String = ""
+  @Field var name: String = ""
+  @Field var feedCount: Int = 0
+
+  var folder: SwitcherFolder { SwitcherFolder(id: id, name: name, feedCount: feedCount) }
 }
 
 struct ComposerFeedRecord: Record {

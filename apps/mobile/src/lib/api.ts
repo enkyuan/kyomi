@@ -77,6 +77,9 @@ export async function fetchMobileApiJson<T>(path: string, init?: ApiFetchInit): 
     throw new MobileApiError(response.status, body || null, summary);
   }
 
+  // A 204 (a deleted folder) has no body to parse.
+  if (response.status === 204) return undefined as T;
+
   try {
     return (await response.json()) as T;
   } catch (error) {

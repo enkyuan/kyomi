@@ -330,7 +330,11 @@ export function Article({
       />
       <ExtractionFailedBanner toolbar={toolbar} />
 
-      <div className="relative" data-reader-inbox-body={hideInlineToolbar ? "" : undefined}>
+      <div
+        className="relative"
+        data-reader-body={item.id}
+        data-reader-inbox-body={hideInlineToolbar ? "" : undefined}
+      >
         {shouldRenderArticleBody ? (
           <ReaderContent
             reader={toolbar.displayReader}

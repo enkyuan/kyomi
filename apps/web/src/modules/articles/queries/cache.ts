@@ -2,6 +2,7 @@
 
 import type { InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
+import type { ReadingPositionDto, ReadingProgressDto } from "@kyomi/reader/schemas/article";
 import type { InboxItem, InboxListPage } from "../lib/api";
 import { queryKeys } from "@lib/query/keys";
 
@@ -92,5 +93,52 @@ export function updateInboxItemCaches(
         },
       };
     },
+  );
+}
+
+/**
+ * Applies the server's reading state after a progress write: list rows get the new
+ * `readingProgress` (badge), and the cached detail gets it plus the position written, so reopening
+ * the article from cache restores where the reader stopped instead of the position it first loaded.
+ */
+export function updateReadingProgressCaches(
+  queryClient: QueryClient,
+  itemId: string,
+  state: { readingProgress: ReadingProgressDto; readingPosition: ReadingPositionDto },
+) {
+  queryClient.setQueriesData<InboxItemsInfiniteData>(
+    { queryKey: queryKeys.inbox.items },
+    (data) => {
+      if (!data) {
+        return data;
+      }
+
+      return {
+        ...data,
+        pages: data.pages.map((page) =>
+          page?.items?.some((item) => item.id === itemId)
+            ? {
+                ...page,
+                items: page.items.map((item) =>
+                  item.id === itemId ? { ...item, readingProgress: state.readingProgress } : item,
+                ),
+              }
+            : page,
+        ),
+      };
+    },
+  );
+
+  queryClient.setQueryData<InboxDetailData>(queryKeys.inbox.itemDetail(itemId), (data) =>
+    data?.item
+      ? {
+          ...data,
+          item: {
+            ...data.item,
+            readingProgress: state.readingProgress,
+            readingPosition: state.readingPosition,
+          },
+        }
+      : data,
   );
 }

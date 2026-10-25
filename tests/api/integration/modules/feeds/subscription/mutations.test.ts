@@ -75,6 +75,26 @@ describe("feeds.subscription.mutations", () => {
     expect(selectCall).toBe(1);
   });
 
+  test("bulkMoveFeedsToFolder takes feeds out of their folder without a folder lookup", async () => {
+    const select = mock(() => {
+      throw new Error("no folder to look up");
+    });
+    const returning = mock(() => Promise.resolve([{ id: "a" }]));
+    const where = mock(() => ({ returning }));
+    const set = mock(() => ({ where }));
+    const update = mock(() => ({ set }));
+    const fakeDb = { select, update } as unknown as Parameters<typeof bulkMoveFeedsToFolder>[0];
+
+    const r = await bulkMoveFeedsToFolder(
+      fakeDb,
+      "u1",
+      ["550e8400-e29b-41d4-a716-446655440000"],
+      null,
+    );
+    expect(r.updatedCount).toBe(1);
+    expect(set).toHaveBeenCalledWith({ folderId: null });
+  });
+
   test("updateFeedSubscriptionSettings updates when subscription exists", async () => {
     const returning = mock(() => Promise.resolve([{ id: "s1" }]));
     const where = mock(() => ({ returning }));

@@ -32,6 +32,7 @@ export function registerUserRoutes(app: Elysia) {
           openLinksInNewTab?: boolean;
           showLinkPreviews?: boolean;
           showImages?: boolean;
+          rememberPosition?: boolean;
           inboxDefaultView?: "my-feed" | "all" | "saved" | "recent";
           inboxDensity?: "comfortable" | "compact";
           articleOpenBehavior?: "split" | "reader";

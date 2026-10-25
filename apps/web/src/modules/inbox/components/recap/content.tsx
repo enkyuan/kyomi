@@ -7,6 +7,8 @@ import type {
   InboxRecapRailFolderBackTarget,
   InboxRecapRailSection,
 } from "@modules/inbox/lib/recap/index";
+import { cn } from "@kyomi/ui/lib/utils";
+import type { InboxItem } from "@modules/articles/lib/api";
 import { RecapExpandedView } from "./expanded";
 import {
   RECAP_SUMMARY_LAYOUT_CLASS,
@@ -15,6 +17,7 @@ import {
   RecapSkeleton,
   SectionEmpty,
 } from "./sections";
+import { ContinueReading } from "./sections/continue-reading";
 import { TopSources } from "./sections/top-sources";
 import { WorthRevisiting } from "./sections/worth-revisiting";
 import type { RecapFolder, RecapSavedItem, RecapTopViewedFeed } from "../../lib/recap/types";
@@ -27,6 +30,7 @@ type RemoveFeedsToastOptions = {
 export function RecapContent({
   expandedSection,
   exportingOpml,
+  continueReadingItems,
   folders,
   isFollowingFeed,
   isSummaryEmpty,
@@ -47,12 +51,14 @@ export function RecapContent({
   moveFeeds,
   navigateRecap,
   onCreateFolder,
+  onDismissContinueReading,
   onExportOpml,
   onImportOpml,
   onUnsave,
 }: {
   expandedSection: InboxRecapRailSection | null;
   exportingOpml: boolean;
+  continueReadingItems: InboxItem[];
   folders: RecapFolder[];
   isFollowingFeed: (feedId: string) => boolean;
   isSummaryEmpty: boolean;
@@ -78,10 +84,12 @@ export function RecapContent({
     railFolderId?: string | null;
   }) => void;
   onCreateFolder: () => void;
+  onDismissContinueReading: (itemId: string) => void;
   onExportOpml: () => void;
   onImportOpml: () => void;
   onUnsave: (itemId: string) => void;
 }) {
+  const hasContinueReading = continueReadingItems.length > 0;
   if (recapLoading) {
     return <RecapSkeleton />;
   }
@@ -123,7 +131,7 @@ export function RecapContent({
       />
     );
   }
-  if (isSummaryEmpty) {
+  if (isSummaryEmpty && !hasContinueReading) {
     return (
       <div className="flex min-h-0 w-full flex-1 items-center justify-center overflow-hidden px-4 py-4">
         <SectionEmpty
@@ -140,7 +148,7 @@ export function RecapContent({
     );
   }
   return (
-    <div className={RECAP_SUMMARY_LAYOUT_CLASS}>
+    <div className={cn(RECAP_SUMMARY_LAYOUT_CLASS, hasContinueReading && "grid-rows-4")}>
       <div className={RECAP_SUMMARY_SECTION_CLASS}>
         <Folders
           folders={folders}
@@ -167,6 +175,11 @@ export function RecapContent({
           onExpand={() => navigateRecap({ rail: "topSources" })}
         />
       </div>
+      {hasContinueReading ? (
+        <div className={RECAP_SUMMARY_SECTION_CLASS}>
+          <ContinueReading items={continueReadingItems} onDismiss={onDismissContinueReading} />
+        </div>
+      ) : null}
       <div className={RECAP_SUMMARY_SECTION_CLASS}>
         <WorthRevisiting
           items={oldestSavedItems}

@@ -3,6 +3,7 @@ import type {
   ArticleStoredContentDto,
   ExtractedContentStatus,
 } from "./reader/content";
+import type { ReadingPositionDto, ReadingProgressDto } from "./progress/types";
 
 export type ArticleListItemDto = {
   id: string;
@@ -22,6 +23,8 @@ export type ArticleListItemDto = {
   articleType: "feed" | "clip";
   /** Category labels for footer chips, item-level first and feed-level fallback, capped by SQL. */
   categories: string[];
+  /** This user's reading progress; null when the article has never been opened with tracking on. */
+  readingProgress: ReadingProgressDto | null;
 };
 
 export type ArticlesCursorListResponseDto = {
@@ -65,6 +68,8 @@ export type ArticleDetailDto = ArticleListItemDto & {
   extractionErrorCode: string | null;
   extractionErrorMessage: string | null;
   reader: ArticleReaderDto;
+  /** Saved reading position for restore; null when no progress row exists. */
+  readingPosition: ReadingPositionDto | null;
 };
 
 export type ArticleUpdateBody = {

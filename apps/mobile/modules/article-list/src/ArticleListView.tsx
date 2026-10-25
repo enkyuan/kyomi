@@ -1,7 +1,7 @@
 import { requireNativeView } from "expo";
 import { forwardRef, type ComponentType, type RefAttributes } from "react";
 import Animated from "react-native-reanimated";
-import type { ArticleListHandle, ArticleListViewProps } from "./types";
+import type { ArticleListHandle, ArticleListViewProps } from "./ArticleList.types";
 
 const NativeArticleListView = requireNativeView<
   ArticleListViewProps & { refreshEnabled?: boolean }

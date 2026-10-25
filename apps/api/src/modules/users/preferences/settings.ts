@@ -29,6 +29,7 @@ export const DEFAULT_USER_PREFERENCES: UserPreferencesDto = {
   openLinksInNewTab: true,
   showLinkPreviews: true,
   showImages: true,
+  rememberPosition: true,
   inboxDefaultView: "my-feed",
   inboxDensity: "comfortable",
   articleOpenBehavior: "split",
@@ -123,6 +124,7 @@ function rowToPreferences(row: typeof userPreferences.$inferSelect): UserPrefere
     openLinksInNewTab: row.readerOpenLinksInNewTab,
     showLinkPreviews: row.readerShowLinkPreviews,
     showImages: row.readerShowImages,
+    rememberPosition: row.readerRememberPosition,
     inboxDefaultView: parseInboxDefaultView(row.inboxDefaultView),
     inboxDensity: parseInboxDensity(row.inboxDensity),
     articleOpenBehavior: parseArticleOpenBehavior(row.articleOpenBehavior),
@@ -204,6 +206,7 @@ const BOOLEAN_PREFERENCE_KEYS = [
   "openLinksInNewTab",
   "showLinkPreviews",
   "showImages",
+  "rememberPosition",
   "inboxShowFavicons",
 ] as const;
 
@@ -308,6 +311,7 @@ export async function updateUserPreferences(
       readerOpenLinksInNewTab: DEFAULT_USER_PREFERENCES.openLinksInNewTab,
       readerShowLinkPreviews: DEFAULT_USER_PREFERENCES.showLinkPreviews,
       readerShowImages: DEFAULT_USER_PREFERENCES.showImages,
+      readerRememberPosition: DEFAULT_USER_PREFERENCES.rememberPosition,
       createdAt: now,
       updatedAt: now,
     })
@@ -360,6 +364,9 @@ export async function updateUserPreferences(
   }
   if (patch.showImages !== undefined) {
     updateSet.readerShowImages = patch.showImages;
+  }
+  if (patch.rememberPosition !== undefined) {
+    updateSet.readerRememberPosition = patch.rememberPosition;
   }
 
   const [updatedRow] = await database
