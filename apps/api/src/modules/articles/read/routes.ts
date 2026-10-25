@@ -252,11 +252,16 @@ export function registerArticleReadRoutes(app: Elysia) {
       .get(
         "/articles/:articleId",
         async (context) => {
-          const { db, params, query, userId } = v1HandlerContext(context);
-          const { request } = context as unknown as { request: Request };
+          const { db, params, userId } = v1HandlerContext(context);
+          const { request, set } = context as unknown as {
+            request: Request;
+            set: { headers: Record<string, string> };
+          };
+          // The body varies by the declared version, so any cache in front must key on it.
+          set.headers.vary = "X-Kyomi-Document-Version";
           return getArticleDetailWithDocumentForUser(db, userId, params.articleId, {
             enabled: env.FEATURE_READER_DOCUMENT,
-            maxVersion: parseSupportedDocumentVersion(request.headers, query),
+            maxVersion: parseSupportedDocumentVersion(request.headers),
           });
         },
         {

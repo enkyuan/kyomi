@@ -1,3 +1,5 @@
+import * as documentModule from "../document";
+
 /**
  * The single seam between ingest and the KDM compiler. Callers store whatever this returns next to
  * the sanitized HTML; `null` means "no document" and the HTML body keeps serving on its own.
@@ -27,8 +29,51 @@ export type StoredDocumentCompiler = {
   compile(input: StoredDocumentInput): StoredDocument | null;
 };
 
-// TODO(kdm-compiler): replace with `compileArticleDocument` from `./document` once it is exported.
-let compiler: StoredDocumentCompiler | null = null;
+type CompileArticleDocument = (input: {
+  body: string;
+  format?: StoredDocumentInput["format"];
+  origin: StoredDocumentInput["origin"];
+  baseUrl?: string | null;
+  meta?: { title?: string | null };
+}) => { document: StoredDocumentJson | null; documentVersion: number; compilerVersion: string };
+
+/**
+ * Binds the worker compiler once its entry point is exported (`compileArticleDocument` and
+ * `ARTICLE_COMPILER_VERSION` from `../document`). Until then no document is produced and the
+ * HTML body serves alone; tests and callers can still inject a compiler.
+ */
+function defaultCompiler(): StoredDocumentCompiler | null {
+  const exported = documentModule as unknown as {
+    compileArticleDocument?: CompileArticleDocument;
+    ARTICLE_COMPILER_VERSION?: string;
+  };
+  const compileArticleDocument = exported.compileArticleDocument;
+  const version = exported.ARTICLE_COMPILER_VERSION;
+  if (!compileArticleDocument || !version) {
+    return null;
+  }
+  return {
+    version,
+    compile: (input) => {
+      const result = compileArticleDocument({
+        body: input.raw,
+        format: input.format,
+        origin: input.origin,
+        baseUrl: input.baseUrl,
+        meta: { title: input.title },
+      });
+      return result.document
+        ? {
+            document: result.document,
+            documentVersion: result.documentVersion,
+            compilerVersion: result.compilerVersion,
+          }
+        : null;
+    },
+  };
+}
+
+let compiler: StoredDocumentCompiler | null = defaultCompiler();
 
 export function setStoredDocumentCompiler(next: StoredDocumentCompiler | null): void {
   compiler = next;

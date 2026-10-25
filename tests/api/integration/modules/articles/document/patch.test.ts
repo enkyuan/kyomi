@@ -1,5 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { patchStoredDocument, withoutEnrichmentFields } from "@modules/articles/document/patch";
+import {
+  loadStoredDocument,
+  patchStoredDocument,
+  withoutEnrichmentFields,
+} from "@modules/articles/document/patch";
 import type { ReaderDocument } from "@kyomi/reader/document";
 import { fakeDocument, TEST_COMPILER_VERSION } from "./helpers";
 
@@ -8,7 +12,10 @@ function fakeDb(row: Record<string, unknown> | undefined) {
   const tx = {
     select: () => ({
       from: () => ({
-        where: () => ({ for: () => ({ limit: () => Promise.resolve(row ? [row] : []) }) }),
+        where: () => {
+          const limit = () => Promise.resolve(row ? [row] : []);
+          return { for: () => ({ limit }), limit };
+        },
       }),
     }),
     update: () => ({
@@ -20,7 +27,10 @@ function fakeDb(row: Record<string, unknown> | undefined) {
   };
   return {
     updates,
-    db: { transaction: (fn: (t: typeof tx) => Promise<unknown>) => fn(tx) } as never,
+    db: {
+      select: tx.select,
+      transaction: (fn: (t: typeof tx) => Promise<unknown>) => fn(tx),
+    } as never,
   };
 }
 
@@ -102,5 +112,11 @@ describe("patchStoredDocument", () => {
         image: { src: "u", alt: "a", width: 1, height: 2, placeholder: "p" },
       }),
     ).toEqual({ type: "embed", image: { src: "u", alt: "a" } });
+  });
+
+  test("loadStoredDocument returns the document with versions, or null", async () => {
+    const loaded = await loadStoredDocument(fakeDb(row()).db, target);
+    expect(loaded).toMatchObject({ documentVersion: 1, compilerVersion: TEST_COMPILER_VERSION });
+    expect(await loadStoredDocument(fakeDb(undefined).db, target)).toBeNull();
   });
 });

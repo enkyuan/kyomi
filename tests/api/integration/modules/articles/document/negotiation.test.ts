@@ -49,20 +49,12 @@ const stored = (documentVersion: number) => ({
 afterEach(() => undefined);
 
 describe("parseSupportedDocumentVersion", () => {
-  test("reads the header, falls back to the query alias, and ignores junk", () => {
-    expect(
-      parseSupportedDocumentVersion(new Headers({ "x-kyomi-document-version": "2" }), {}),
-    ).toBe(2);
-    expect(parseSupportedDocumentVersion(new Headers(), { documentVersion: "3" })).toBe(3);
-    expect(
-      parseSupportedDocumentVersion(new Headers({ "x-kyomi-document-version": "2" }), {
-        documentVersion: "9",
-      }),
-    ).toBe(2);
-    expect(
-      parseSupportedDocumentVersion(new Headers({ "x-kyomi-document-version": "abc" }), {}),
-    ).toBe(0);
-    expect(parseSupportedDocumentVersion(new Headers(), undefined)).toBe(0);
+  test("reads the header and treats junk or absence as no support", () => {
+    expect(parseSupportedDocumentVersion(new Headers({ "x-kyomi-document-version": "2" }))).toBe(2);
+    expect(parseSupportedDocumentVersion(new Headers({ "x-kyomi-document-version": "abc" }))).toBe(
+      0,
+    );
+    expect(parseSupportedDocumentVersion(new Headers())).toBe(0);
   });
 });
 

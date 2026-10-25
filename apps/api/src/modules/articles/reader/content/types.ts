@@ -74,6 +74,7 @@ type ArticleReaderFallback = ArticleReaderCommon & {
 /**
  * Compiled KDM document served to clients that negotiated support. The underlying body stays
  * populated (`fallbackBodyKind` names which one), so a client can fall back without refetching.
+ * That duplicates the body in the payload; drop the fallback fields once the HTML path retires.
  */
 type ArticleReaderDocument = ArticleReaderCommon & {
   bodyKind: "document";

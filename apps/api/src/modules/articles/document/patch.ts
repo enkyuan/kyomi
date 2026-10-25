@@ -5,6 +5,10 @@ import { eq } from "drizzle-orm";
 
 type DB = typeof db;
 
+/**
+ * Targets are the article rows only. Extracted documents are copied onto `feed_items` and
+ * `article_clips` at extraction time and served from there, never from the extraction cache.
+ */
 export type DocumentPatchTarget = {
   table: "feed_items" | "article_clips";
   id: string;
@@ -162,4 +166,42 @@ export async function patchStoredDocument(
     }
     return { status: "patched", document: next.data };
   });
+}
+
+export type StoredDocumentRead = {
+  document: ReaderDocument;
+  documentVersion: number;
+  compilerVersion: string;
+};
+
+/**
+ * Read side for jobs: returns the stored document with the versions to pass as `expected` to
+ * `patchStoredDocument`, or null when there is no valid document.
+ */
+export async function loadStoredDocument(
+  database: DB,
+  target: DocumentPatchTarget,
+): Promise<StoredDocumentRead | null> {
+  const spec = COLUMNS[target.table];
+  const columns = spec[target.body];
+  const [row] = await database
+    .select({
+      document: columns.document,
+      documentVersion: columns.documentVersion,
+      compilerVersion: columns.compilerVersion,
+    })
+    .from(spec.table)
+    .where(eq(spec.table.id, target.id))
+    .limit(1);
+  if (!row?.document || row.documentVersion === null || !row.compilerVersion) {
+    return null;
+  }
+  const parsed = readerDocumentSchema.safeParse(row.document);
+  return parsed.success
+    ? {
+        document: parsed.data,
+        documentVersion: row.documentVersion,
+        compilerVersion: row.compilerVersion,
+      }
+    : null;
 }
