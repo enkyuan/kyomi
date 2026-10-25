@@ -3,6 +3,7 @@ import {
   getInboxItemDetail,
   getInboxItems,
   getSidebarInboxCounts,
+  listContinueReading,
   type InboxFilter,
   type InboxListPage,
   type InboxSort,
@@ -179,6 +180,19 @@ export function inboxRecapQueryOptions(limit = 5) {
   return {
     queryKey: queryKeys.inbox.recap,
     queryFn: () => getInboxRecap({ data: { limit } }),
+    staleTime: QUERY_TIMES.countsStale,
+    gcTime: QUERY_TIMES.listGc,
+  };
+}
+
+export const CONTINUE_READING_FETCH_LIMIT = 5;
+
+export const continueReadingQueryKey = [...queryKeys.inbox.all, "continue-reading"] as const;
+
+export function continueReadingQueryOptions(limit = CONTINUE_READING_FETCH_LIMIT) {
+  return {
+    queryKey: [...continueReadingQueryKey, limit] as const,
+    queryFn: () => listContinueReading({ data: { limit } }),
     staleTime: QUERY_TIMES.countsStale,
     gcTime: QUERY_TIMES.listGc,
   };

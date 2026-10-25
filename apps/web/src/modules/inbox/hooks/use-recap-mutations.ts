@@ -5,7 +5,12 @@ import { anchoredToastManager, toastManager } from "@kyomi/ui/components/toast";
 import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { followFeed, unfollowFeed } from "@modules/feeds/lib/api";
 import { moveFeedsToFolder } from "@modules/folders/lib/api";
-import { updateInboxItemState } from "@modules/articles/lib/api";
+import {
+  dismissContinueReading,
+  updateInboxItemState,
+  type InboxItem,
+} from "@modules/articles/lib/api";
+import { continueReadingQueryKey } from "@modules/inbox/queries/options";
 import { invalidateRecapSurface } from "@modules/inbox/lib/recap/index";
 import type { InboxRecapDto } from "@modules/inbox/lib/recap/schema";
 import type { RecapTopViewedFeed } from "../lib/recap/types";
@@ -52,6 +57,38 @@ export function useUnsaveRecapItemMutation(queryClient: QueryClient) {
       logClientError("inbox.recap.saved.unsave", error);
       toastManager.add({
         title: "Unable to unsave item",
+        description: getUserSafeErrorMessage(error, "Try again in a moment."),
+        type: "error",
+      });
+    },
+  });
+}
+
+export function useDismissContinueReadingMutation(queryClient: QueryClient) {
+  return useMutation({
+    mutationFn: ({ itemId }: { itemId: string }) => dismissContinueReading({ data: { itemId } }),
+    onMutate: async ({ itemId }) => {
+      await queryClient.cancelQueries({ queryKey: continueReadingQueryKey });
+      const snapshots = queryClient.getQueriesData<{ items: InboxItem[] }>({
+        queryKey: continueReadingQueryKey,
+      });
+      queryClient.setQueriesData<{ items: InboxItem[] }>(
+        { queryKey: continueReadingQueryKey },
+        (current) =>
+          current
+            ? { ...current, items: current.items.filter((item) => item.id !== itemId) }
+            : current,
+      );
+      return { snapshots };
+    },
+    onSettled: () => queryClient.invalidateQueries({ queryKey: continueReadingQueryKey }),
+    onError: (error, _variables, context) => {
+      for (const [queryKey, data] of context?.snapshots ?? []) {
+        queryClient.setQueryData(queryKey, data);
+      }
+      logClientError("inbox.recap.continue_reading.dismiss", error);
+      toastManager.add({
+        title: "Unable to dismiss article",
         description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });

@@ -4,6 +4,7 @@ import { BrushIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 import { InboxAppearanceSettings } from "./inbox";
+import { ReaderSettings } from "./reader";
 import { ThemeSwitcher } from "./theme-switcher";
 import { useAppearancePanel } from "@modules/settings/hooks/use-appearance-panel";
 
@@ -32,7 +33,14 @@ export function AppearancePageNav({ isActive, onSelect }: AppearancePageNavProps
 }
 
 export function AppearancePagePanel() {
-  const { inboxPreferences, ready, resetAll, setInboxPreferences } = useAppearancePanel();
+  const {
+    inboxPreferences,
+    readerPreferences,
+    ready,
+    resetAll,
+    setInboxPreferences,
+    setReaderPreferences,
+  } = useAppearancePanel();
 
   if (!ready) {
     return null;
@@ -57,7 +65,8 @@ export function AppearancePagePanel() {
         preferences={inboxPreferences}
         setPreferences={setInboxPreferences}
       />
-      {/* Reader settings were removed from Appearance for now. The removed section contained:
+      <ReaderSettings preferences={readerPreferences} setPreferences={setReaderPreferences} />
+      {/* The other reader settings were removed from Appearance for now. The removed section contained:
           default reader mode, font size, content width, open links in new tab, link previews on
           hover, and show images controls. */}
     </div>

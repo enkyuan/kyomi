@@ -7,6 +7,8 @@ import { AppearancePagePanel } from "@modules/settings/components/appearance";
 
 const setInboxPreferencesMock = vi.fn();
 const resetInboxPreferencesMock = vi.fn();
+const setReaderPreferencesMock = vi.fn();
+let rememberPosition = true;
 
 Object.defineProperty(window, "matchMedia", {
   writable: true,
@@ -47,6 +49,13 @@ vi.mock("@modules/inbox/hooks/use-preferences", () => ({
     },
     resetPreferences: resetInboxPreferencesMock,
     setPreferences: setInboxPreferencesMock,
+  }),
+}));
+
+vi.mock("@modules/reader/hooks/use-preferences", () => ({
+  useReaderPreferences: () => ({
+    preferences: { rememberPosition },
+    setPreferences: setReaderPreferencesMock,
   }),
 }));
 
@@ -127,6 +136,26 @@ describe("AppearancePagePanel", () => {
   beforeEach(() => {
     setInboxPreferencesMock.mockReset();
     resetInboxPreferencesMock.mockReset();
+    setReaderPreferencesMock.mockReset();
+    rememberPosition = true;
+  });
+
+  test("toggles remembering the reading position through the reader preferences", () => {
+    render(<AppearancePagePanel />);
+
+    expect(screen.getByText("Remember reading position")).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "reader-remember-position" }));
+
+    expect(setReaderPreferencesMock).toHaveBeenCalledWith({ rememberPosition: false });
+  });
+
+  test("turns the reading position back on from the off state", () => {
+    rememberPosition = false;
+    render(<AppearancePagePanel />);
+
+    fireEvent.click(screen.getByRole("button", { name: "reader-remember-position" }));
+
+    expect(setReaderPreferencesMock).toHaveBeenCalledWith({ rememberPosition: true });
   });
 
   test("updates inbox text scale preferences from the merged page", () => {

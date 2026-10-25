@@ -6,6 +6,7 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Item } from "@modules/inbox/components/item";
 import type { InboxItem } from "@modules/articles/lib/api";
+import type { ReadingProgressDto } from "@kyomi/reader/schemas/article";
 
 vi.mock("@kyomi/ui/hooks/use-pretext", () => ({
   usePretextLayout: () => ({
@@ -116,5 +117,62 @@ describe("inbox item row", () => {
 
     await click(screen.getByRole("button", { name: "Copy link" }));
     expect(onSelect).not.toHaveBeenCalled();
+  });
+
+  describe("continue reading badge", () => {
+    function progress(overrides: Partial<ReadingProgressDto> = {}): ReadingProgressDto {
+      return {
+        progress: 0.4,
+        maxProgress: 0.4,
+        state: "reading",
+        engaged: true,
+        remainingMinutes: 6,
+        lastReadAt: "2026-07-02T00:00:00.000Z",
+        completedAt: null,
+        ...overrides,
+      };
+    }
+
+    test("shows the badge with the time left for an engaged, unfinished article", () => {
+      renderItem({ rowItem: { ...item, readingProgress: progress() } });
+
+      expect(screen.getByText("Continue reading · 6 min left")).toBeTruthy();
+    });
+
+    test("shows the badge for a resurfacing article", () => {
+      renderItem({ rowItem: { ...item, readingProgress: progress({ state: "resurfacing" }) } });
+
+      expect(screen.getByText("Continue reading · 6 min left")).toBeTruthy();
+    });
+
+    test("omits the time left when the estimate is unknown", () => {
+      renderItem({ rowItem: { ...item, readingProgress: progress({ remainingMinutes: null }) } });
+
+      expect(screen.getByText("Continue reading")).toBeTruthy();
+    });
+
+    test("says under a minute when almost done", () => {
+      renderItem({ rowItem: { ...item, readingProgress: progress({ remainingMinutes: 0 }) } });
+
+      expect(screen.getByText("Continue reading · Under 1 min left")).toBeTruthy();
+    });
+
+    test.each([
+      ["no reading state", null],
+      ["an article that was not engaged", progress({ engaged: false })],
+      ["a completed article", progress({ state: "completed" })],
+      ["a dismissed article", progress({ state: "dismissed" })],
+      ["an abandoned article", progress({ state: "abandoned" })],
+    ])("hides the badge for %s", (_label, readingProgress) => {
+      renderItem({ rowItem: { ...item, readingProgress } });
+
+      expect(screen.queryByText(/Continue reading/)).toBeNull();
+    });
+
+    test("hides the badge when the field is absent", () => {
+      renderItem();
+
+      expect(screen.queryByText(/Continue reading/)).toBeNull();
+    });
   });
 });

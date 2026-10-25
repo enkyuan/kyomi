@@ -6,6 +6,8 @@ import { useSquircle } from "@kyomi/ui/lib/squircle";
 import { Categories } from "@modules/articles/components/categories";
 import { Source } from "@modules/articles/components/source";
 import { ItemInlineToolbar } from "./toolbar/inline";
+import { Badge } from "@kyomi/ui/components/badge";
+import { formatRemainingMinutes, isContinuingReading } from "@kyomi/reader/core";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@kyomi/ui/components/card";
 import { Timestamp } from "@modules/articles/components/timestamp";
 import { useTimestamp } from "@kyomi/ui/hooks/use-timestamp";
@@ -71,6 +73,11 @@ export const Item = memo(function Item({
     ITEM_HOVER_RADIUS_PX,
     ITEM_HOVER_CORNER_SMOOTHING,
   );
+  const continueLabel = isContinuingReading(item.readingProgress)
+    ? ["Continue reading", formatRemainingMinutes(item.readingProgress?.remainingMinutes ?? null)]
+        .filter(Boolean)
+        .join(" · ")
+    : null;
   const selectItem = () => {
     onSelect(item);
   };
@@ -189,7 +196,7 @@ export const Item = memo(function Item({
           sectionClassNames.footer,
         )}
       >
-        {item.isSaved || item.categories.length > 0 ? (
+        {item.isSaved || continueLabel || item.categories.length > 0 ? (
           <div className="me-auto flex min-w-0 items-center gap-1.5">
             {item.isSaved ? (
               <span
@@ -198,6 +205,16 @@ export const Item = memo(function Item({
               >
                 Saved
               </span>
+            ) : null}
+            {continueLabel ? (
+              <Badge
+                className="h-auto min-w-0 shrink-0 rounded-full bg-muted px-2 py-0.5 text-muted-foreground/85 sm:h-auto"
+                size="default"
+                style={{ fontSize: `${metaFontSizePx}px` }}
+                variant="secondary"
+              >
+                {continueLabel}
+              </Badge>
             ) : null}
             <Categories categories={item.categories} fontSizePx={metaFontSizePx} />
           </div>
@@ -243,6 +260,7 @@ function areItemsEqual(a: InboxItem, b: InboxItem) {
     a.feedTitle === b.feedTitle &&
     a.articleType === b.articleType &&
     a.isSaved === b.isSaved &&
+    a.readingProgress === b.readingProgress &&
     areStringArraysEqual(a.categories, b.categories)
   );
 }

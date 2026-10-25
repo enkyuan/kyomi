@@ -1,6 +1,7 @@
 "use client";
 
 import { useInboxPreferences } from "@modules/inbox/hooks/use-preferences";
+import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
 
 export function useAppearancePanel() {
   const {
@@ -9,6 +10,9 @@ export function useAppearancePanel() {
     resetPreferences: resetInboxPreferences,
     setPreferences: setInboxPreferences,
   } = useInboxPreferences();
+
+  const { preferences: readerPreferences, setPreferences: setReaderPreferences } =
+    useReaderPreferences();
 
   const ready = Boolean(inboxPreferences);
 
@@ -19,8 +23,10 @@ export function useAppearancePanel() {
   return {
     inboxLimits,
     inboxPreferences,
+    readerPreferences,
     ready,
     resetAll,
     setInboxPreferences,
+    setReaderPreferences,
   };
 }
