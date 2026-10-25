@@ -1,27 +1,63 @@
-import { useColorScheme, View, type ViewProps } from "react-native";
+import { createContext, useContext, type ReactNode } from "react";
+import { useColorScheme, View } from "react-native";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
-import { getSkeletonPalette, type HexColor } from "./palette";
+import { getSkeletonPalette } from "./palette";
+import type { SkeletonProps } from "./types";
 
-type SkeletonProps = Pick<ViewProps, "className" | "style"> & {
-  readonly radius?: number | "round";
-  readonly surfaceColor?: HexColor;
-};
+const DEFAULT_SIZE = 32;
+
+const SkeletonGroupContext = createContext<boolean | undefined>(undefined);
 
 /**
- * Moti pulls a Framer Motion CommonJS interop path that Expo Router cannot
- * evaluate during static web rendering. Native keeps the animated Moti
- * implementation; this base module is the SSR-safe web loading placeholder.
+ * Moti pulls a Framer Motion CommonJS interop path that Expo Router cannot evaluate during static
+ * web rendering. Native keeps the animated Moti skeleton (`index.native.tsx`); this module is the
+ * SSR-safe web placeholder with the same props: a flat block, no shimmer.
  */
-export function Skeleton({ className, radius = 4, style, surfaceColor }: SkeletonProps) {
-  const colorMode = useColorScheme() === "dark" ? "dark" : "light";
+export function Skeleton({
+  children,
+  colorMode: colorModeProp,
+  height,
+  radius = 8,
+  show,
+  surfaceColor,
+  width,
+}: SkeletonProps) {
+  const group = useContext(SkeletonGroupContext);
+  const scheme = useColorScheme();
+  const colorMode = colorModeProp ?? (scheme === "dark" ? "dark" : "light");
   const { background } = getMobileSurfaceTheme(colorMode);
-  const borderRadius = radius === "round" ? 999 : radius;
-  const palette = getSkeletonPalette(colorMode, surfaceColor ?? background);
+  const { backgroundColor } = getSkeletonPalette(colorMode, surfaceColor ?? background);
+  const visible = show ?? group ?? !children;
+  const borderRadius = radius === "round" ? 99_999 : radius === "square" ? 0 : radius;
+  const block = visible ? (
+    <View
+      pointerEvents="none"
+      style={{
+        backgroundColor,
+        borderRadius,
+        height: height ?? (children ? "100%" : DEFAULT_SIZE),
+        position: children ? "absolute" : "relative",
+        width: width ?? (children ? "100%" : DEFAULT_SIZE),
+      }}
+    />
+  ) : null;
+
+  if (!children) return block;
 
   return (
-    <View
-      className={`rounded-sm ${className ?? ""}`}
-      style={[{ backgroundColor: palette.backgroundColor, borderRadius }, style]}
-    />
+    <View>
+      {children}
+      {block}
+    </View>
   );
 }
+
+Skeleton.Group = function SkeletonGroup({
+  children,
+  show,
+}: {
+  readonly children: ReactNode;
+  readonly show: boolean;
+}) {
+  return <SkeletonGroupContext.Provider value={show}>{children}</SkeletonGroupContext.Provider>;
+};

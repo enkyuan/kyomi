@@ -214,9 +214,10 @@ function ReaderSkeleton({
       <View style={{ gap: mobileReaderLayout.headerBottomMarginPx }}>
         <View>
           <Skeleton
+            height={mobileReaderLayout.source.fontSizePx}
             radius={4}
-            style={{ height: mobileReaderLayout.source.fontSizePx, width: 96 }}
             surfaceColor={surfaceColor}
+            width={96}
           />
           <View
             style={{
@@ -227,13 +228,11 @@ function ReaderSkeleton({
             {READER_TITLE_SKELETON_WIDTHS.slice(0, mobileReaderLayout.title.skeletonLines).map(
               (width) => (
                 <Skeleton
+                  height={mobileReaderSkeletonLayout.titleLineHeightPx}
                   key={`title-${width}`}
                   radius={4}
-                  style={{
-                    height: mobileReaderSkeletonLayout.titleLineHeightPx,
-                    width,
-                  }}
                   surfaceColor={surfaceColor}
+                  width={width}
                 />
               ),
             )}
@@ -244,10 +243,11 @@ function ReaderSkeleton({
             <View key={paragraph.id} style={{ gap: mobileReaderSkeletonLayout.bodyLineSpacingPx }}>
               {paragraph.lines.map((line) => (
                 <Skeleton
+                  height={mobileReaderSkeletonLayout.bodyLineHeightPx}
                   key={`${paragraph.id}-${line.id}`}
                   radius={4}
-                  style={{ height: mobileReaderSkeletonLayout.bodyLineHeightPx, width: line.width }}
                   surfaceColor={surfaceColor}
+                  width={line.width}
                 />
               ))}
             </View>

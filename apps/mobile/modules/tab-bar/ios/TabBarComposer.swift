@@ -201,7 +201,8 @@ struct TabBarComposer: View {
         Image(systemName: "dot.radiowaves.up.forward").foregroundStyle(.secondary)
       }
       .frame(width: 36, height: 36)
-      .clipShape(.rect(cornerRadius: 8))
+      // A squircle like every favicon: the continuous corner at a quarter of the icon.
+      .clipShape(.rect(cornerRadius: 36 * 0.25, style: .continuous))
 
       VStack(alignment: .leading, spacing: 2) {
         Text(feed.title).font(.subheadline.weight(.semibold)).lineLimit(1)

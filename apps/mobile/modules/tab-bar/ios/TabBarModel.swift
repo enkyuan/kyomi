@@ -14,6 +14,17 @@ struct TabBarSwitcher {
   let label: String
   let hint: String
   let icon: TabBarIcon
+  /// Glyphs of the sheet's folder chips.
+  let editIcon: TabBarIcon
+  let renameIcon: TabBarIcon
+  let addIcon: TabBarIcon
+}
+
+/// A folder listed in the switcher sheet, with the feeds filed in it.
+struct SwitcherFolder: Identifiable, Equatable {
+  let id: String
+  let name: String
+  let feedCount: Int
 }
 
 /// A feed the add composer offers to follow, or the one it previews to import.
@@ -50,6 +61,8 @@ enum ComposerStatus: String {
 final class TabBarModel {
   var tabs: [TabBarItem] = []
   var switcher: TabBarSwitcher?
+  /// The folders the switcher sheet lists; the sheet reports every change to them back to JavaScript.
+  var switcherFolders: [SwitcherFolder] = []
   /// Magnifying glass drawn in the search button and field; falls back to the SF Symbol.
   var searchIcon: TabBarIcon?
   /// Magnifying glass drawn in the composer's field; falls back to the SF Symbol.
@@ -119,6 +132,9 @@ final class TabBarModel {
   @ObservationIgnored var onSearchActiveChange: @MainActor (Bool) -> Void = { _ in }
   @ObservationIgnored var onSearchQueryChange: @MainActor (String) -> Void = { _ in }
   @ObservationIgnored var onSearchSubmit: @MainActor (String) -> Void = { _ in }
+  /// What was done to a folder in the sheet: `open`, `create`, `rename` or `delete`, with the folder's
+  /// id (empty for `create`) and its name (empty for `open` and `delete`).
+  @ObservationIgnored var onSwitcherFolderAction: @MainActor (String, String, String) -> Void = { _, _, _ in }
   /// Lets the native view keep VoiceOver inside the open sheet.
   @ObservationIgnored var onSwitcherPresentedChange: @MainActor (Bool) -> Void = { _ in }
 

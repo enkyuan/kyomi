@@ -3,10 +3,12 @@ import type { NativeSyntheticEvent } from "react-native";
 import Animated, { useAnimatedProps } from "react-native-reanimated";
 import {
   BLODE_STROKE_WIDTH,
+  BarsThreeNativeIcon,
   ChevronGrabberVerticalNativeIcon,
   CircleCheckFilledNativeIcon,
   CompassPointerFilledNativeIcon,
   CompassPointerNativeIcon,
+  EditBigNativeIcon,
   LayoutAlignBottomFilledNativeIcon,
   LayoutAlignBottomNativeIcon,
   MagnifyingGlassNativeIcon,
@@ -67,6 +69,9 @@ const SWITCHER: TabBarSwitcher = {
   label: "Choose source",
   hint: "Opens folders and feeds",
   icon: toTabBarIcon(ChevronGrabberVerticalNativeIcon),
+  editIcon: toTabBarIcon(BarsThreeNativeIcon),
+  renameIcon: toTabBarIcon(EditBigNativeIcon),
+  addIcon: ADD_ICON,
 };
 
 // Animated so the scroll worklet's `minimized` reaches the native bar from the UI thread.
@@ -76,6 +81,7 @@ const AnimatedTabBarView = Animated.createAnimatedComponent(TabBarView);
 export function TabBar({
   navigation,
   composer,
+  sources,
   onSearchQueryChange,
   onSearchSubmit,
   onTabChange,
@@ -117,6 +123,12 @@ export function TabBar({
       onComposerSubmit={({ nativeEvent: { feedId, folderId, url } }) =>
         composer?.onSubmit({ feedId: feedId || undefined, folderId: folderId || undefined, url })
       }
+      onSwitcherFolderAction={({ nativeEvent: { action, folderId, name } }) => {
+        if (action === "open") sources?.onOpenFolder(folderId);
+        else if (action === "create") sources?.onCreateFolder(name);
+        else if (action === "rename") sources?.onRenameFolder(folderId, name);
+        else sources?.onDeleteFolder(folderId);
+      }}
       onSearchQueryChange={({ nativeEvent }) => onSearchQueryChange?.(nativeEvent.query)}
       onSearchSubmit={({ nativeEvent }) => onSearchSubmit?.(nativeEvent.query)}
       onTabPress={handleTabPress}
@@ -128,6 +140,7 @@ export function TabBar({
       // The bar clears the keyboard natively, so the host never moves with it.
       style={{ bottom: 0, left: 0, position: "absolute", right: 0, top: 0 }}
       switcher={SWITCHER}
+      switcherFolders={sources?.folders}
       tabs={TABS}
     />
   );

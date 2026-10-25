@@ -1,4 +1,8 @@
-import type { TabBarComposerFeed, TabBarComposerFolder } from "../../../../../modules/tab-bar";
+import type {
+  TabBarComposerFeed,
+  TabBarComposerFolder,
+  TabBarSwitcherFolder,
+} from "../../../../../modules/tab-bar";
 import type { ComposedGesture, GestureType } from "react-native-gesture-handler";
 import type { ViewStyle } from "react-native";
 import type { AnimatedStyle, SharedValue } from "react-native-reanimated";
@@ -33,12 +37,22 @@ export interface TabBarComposerProps {
   readonly onSubmit: (input: { feedId?: string; url: string; folderId?: string }) => void;
 }
 
+/** The switcher sheet's folders and the handlers for what is done to them, owned by a domain. */
+export interface TabBarSourcesProps {
+  readonly folders: readonly TabBarSwitcherFolder[];
+  readonly onOpenFolder: (folderId: string) => void;
+  readonly onCreateFolder: (name: string) => void;
+  readonly onRenameFolder: (folderId: string, name: string) => void;
+  readonly onDeleteFolder: (folderId: string) => void;
+}
+
 export interface TabBarProps {
   readonly state?: TabBarNavigationState;
   readonly descriptors?: Record<string, unknown>;
   readonly navigation?: TabBarNavigation;
   readonly onTabChange?: (index: number) => void;
   readonly composer?: TabBarComposerProps;
+  readonly sources?: TabBarSourcesProps;
   readonly onSearchQueryChange?: (query: string) => void;
   readonly onSearchSubmit?: (query: string) => void;
   readonly [key: string]: unknown;
