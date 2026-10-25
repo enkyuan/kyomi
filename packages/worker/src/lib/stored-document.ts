@@ -41,6 +41,9 @@ type CompileArticleDocument = (input: {
  * Binds the worker compiler once its entry point is exported (`compileArticleDocument` and
  * `ARTICLE_COMPILER_VERSION` from `../document`). Until then no document is produced and the
  * HTML body serves alone; tests and callers can still inject a compiler.
+ *
+ * Temporary: replace the namespace probe with a direct typed import of `compileArticleDocument` and
+ * `ARTICLE_COMPILER_VERSION` when the compiler branch merges.
  */
 function defaultCompiler(): StoredDocumentCompiler | null {
   const exported = documentModule as unknown as {
