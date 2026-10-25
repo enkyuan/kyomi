@@ -47,3 +47,8 @@ src/
 - `transformImageUrl` receives every image request (`src`, each `srcset` candidate, `video[poster]`).
   returning `null` keeps the original URL; a non-http result drops it. media files are not
   transformed.
+- `web/document` renders a compiled Kyomi Document (`@kyomi/reader/document`) as React blocks on
+  `@kyomi/ui`. `ReaderContent` picks it for `bodyKind: "document"` when the version is supported and
+  the document validates, and otherwise falls back to the HTML body. it ships no highlighter: code
+  tokens and KaTeX html come from the document, and KaTeX css loads only when `features.math`.
+  `web` depends on `@kyomi/ui`.

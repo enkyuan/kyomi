@@ -182,6 +182,7 @@
       "name": "@kyomi/reader",
       "version": "0.1.0",
       "dependencies": {
+        "@kyomi/ui": "workspace:*",
         "@kyomi/worker": "workspace:*",
         "@tanstack/markdown": "0.0.12",
         "highlight.js": "^11.11.1",
