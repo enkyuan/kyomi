@@ -4,7 +4,7 @@ export {
   type ReaderDocumentContent,
 } from "./components/content";
 export { RenderDocument } from "./document";
-export { parseReaderDocument, SUPPORTED_READER_DOCUMENT_VERSIONS } from "./document/resolve";
+export { parseReaderDocument, MAX_SUPPORTED_READER_DOCUMENT_VERSION } from "./document/resolve";
 export { RenderHtml } from "./html";
 export { sanitizeReaderArticleHtml } from "./html/purify";
 export { RenderMarkdown } from "./components/markdown";

@@ -37,10 +37,12 @@ function ContractViolationFallback({
  * Wire shape of an article body the API compiled into a Kyomi Document. `document` stays
  * `unknown` until validated here, so a document from a newer schema falls back to the HTML body.
  */
-export type ReaderDocumentContent = Omit<ReaderContentModel, "bodyKind"> & {
+export type ReaderDocumentContent = Omit<ReaderContentModel, "bodyKind" | "contentHtml"> & {
   bodyKind: "document";
   document?: unknown;
   documentVersion?: number | null;
+  /** Sanitized HTML body the API always serves alongside the document. */
+  contentHtml: string;
 };
 
 type ReaderContentProps = {

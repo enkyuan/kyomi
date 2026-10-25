@@ -1,7 +1,12 @@
 // @vitest-environment jsdom
 import { render, screen, waitFor } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
-import { hasReaderContentBody, ReaderContent, type ReaderDocumentContent } from "@kyomi/reader/web";
+import {
+  hasReaderContentBody,
+  parseReaderDocument,
+  ReaderContent,
+  type ReaderDocumentContent,
+} from "@kyomi/reader/web";
 import { documentOf, text } from "./fixtures";
 
 const document_ = documentOf([{ type: "paragraph", children: [text("From the document")] }]);
@@ -66,9 +71,9 @@ describe("ReaderContent with a document body", () => {
       <ReaderContent
         reader={reader({
           document: undefined,
-          contentHtml: null,
+          contentHtml: "",
           fallbackSummary: "Summary only",
-        } as Partial<ReaderDocumentContent>)}
+        })}
       />,
     );
     expect(screen.getByText("Summary only")).toBeTruthy();
@@ -78,5 +83,13 @@ describe("ReaderContent with a document body", () => {
     expect(hasReaderContentBody(reader())).toBe(true);
     expect(hasReaderContentBody(reader({ document: undefined }))).toBe(true);
     expect(hasReaderContentBody(reader({ document: undefined, contentHtml: " " }))).toBe(false);
+  });
+
+  test("validates a fetched document once, not on every render", () => {
+    const payload = JSON.parse(JSON.stringify(document_));
+    const first = parseReaderDocument(payload);
+    expect(first).not.toBeNull();
+    expect(parseReaderDocument(payload)).toBe(first);
+    expect(parseReaderDocument({ ...payload, version: 0 })).toBeNull();
   });
 });
