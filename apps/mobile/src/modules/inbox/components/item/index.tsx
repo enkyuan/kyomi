@@ -1,6 +1,7 @@
 import { Pressable, Text, useWindowDimensions, View } from "react-native";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { FeedFavicon } from "@modules/articles/components/feed-favicon";
+import { continueReadingBadge } from "@modules/articles/lib/continue-reading";
 import { feedItemTypography } from "@modules/articles/lib/layout";
 import { formatArticleTimestamp } from "@modules/articles/lib/format-timestamp";
 import { getFeedSourceLabel } from "@modules/articles/lib/source-label";
@@ -26,6 +27,7 @@ export function Item({ item, isFirst, onPress, onPressIn }: ItemProps) {
     metaFontSizePx,
   } = feedItemTypography;
   const sourceLabel = getFeedSourceLabel(item.link, item.feedTitle);
+  const { label: continueLabel } = continueReadingBadge(item);
   const continuationBadgeSize = width <= 360 ? "sm" : "lg";
 
   return (
@@ -88,13 +90,13 @@ export function Item({ item, isFirst, onPress, onPressIn }: ItemProps) {
       </Pressable>
 
       <View className="mt-3 flex-row items-center gap-3 px-5 pb-4">
-        {item.lastViewedAt ? (
+        {continueLabel ? (
           <Badge
-            accessibilityLabel="Previously opened. Continue reading."
+            accessibilityLabel={continueLabel.replace(" · ", ", ")}
             size={continuationBadgeSize}
             variant="matcha"
           >
-            Continue reading
+            {continueLabel}
           </Badge>
         ) : null}
         <View className="ml-auto shrink-0">

@@ -16,6 +16,7 @@ function sameRow(a: ArticleListRow, b: ArticleListRow) {
       a.summary === b.summary &&
       a.isSaved === b.isSaved &&
       a.isContinuing === b.isContinuing &&
+      a.continueLabel === b.continueLabel &&
       sameList(a.faviconUrls, b.faviconUrls))
   );
 }

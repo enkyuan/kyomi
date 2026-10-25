@@ -1,6 +1,7 @@
 import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 import { resolveMobileApiUrl } from "@/lib/api";
+import { continueReadingBadge } from "./continue-reading";
 import { formatArticleTimestamp } from "./format-timestamp";
 import { getFeedSourceLabel } from "./source-label";
 import type { ArticleListRow } from "../../../../modules/article-list";
@@ -28,11 +29,13 @@ export function toArticleRow(item: ArticleListItemDto): ArticleListRow {
   const cached = articleRows.get(item);
   if (cached) return cached;
 
+  const badge = continueReadingBadge(item);
   const row: ArticleListRow = {
+    ...(badge.label ? { continueLabel: badge.label } : {}),
     faviconUrls: faviconUrls(item),
     feedTitle: item.feedTitle,
     id: item.id,
-    isContinuing: Boolean(item.lastViewedAt),
+    isContinuing: badge.isContinuing,
     isSaved: item.isSaved,
     kind: "article",
     sourceLabel: getFeedSourceLabel(item.link, item.feedTitle),

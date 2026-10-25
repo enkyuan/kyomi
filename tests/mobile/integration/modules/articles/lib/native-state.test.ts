@@ -33,9 +33,9 @@ test.skipIf(process.platform !== "darwin")(
       writeFileSync(
         path,
         `import Foundation\n${models}\n${reducer}\n${signposts}\n${pipeline}\n
-func wire(_ id: String, title: String = "title") -> ArticleRowModel {
+func wire(_ id: String, title: String = "title", label: String? = nil) -> ArticleRowModel {
   ArticleRowModel(id: id, kind: .article, sourceLabel: "source", timeLabel: "1h", title: title,
-    summary: "", faviconUrls: [], isSaved: false, isContinuing: false)
+    summary: "", faviconUrls: [], isSaved: false, isContinuing: false, continueLabel: label)
 }
 func require(_ condition: Bool, _ message: String) {
   if !condition { fatalError(message) }
@@ -47,6 +47,8 @@ let edit = state.reduce([.update(rows: [wire("b", title: "saved")])])!
 require(!edit.didChangeStructure, "content update must reuse snapshot")
 require(edit.reconfiguredIds == ["b"], "only changed row reconfigured")
 require(state.reduce([.update(rows: [wire("b", title: "saved")])]) == nil, "unchanged row is a no-op")
+let relabeled = state.reduce([.update(rows: [wire("b", title: "saved", label: "Continue reading · 6 min left")])])!
+require(!relabeled.didChangeStructure && relabeled.reconfiguredIds == ["b"], "a new continue label alone reconfigures its row")
 let page = state.reduce([.append(rows: [wire("b", title: "newer"), wire("c")]),
   .paging(ArticleListPaging(pageCount: 2, hasMore: true, isLoadingMore: false))])!
 require(page.state.ids == ["a", "b", "c"], "append must dedupe IDs")
@@ -59,9 +61,11 @@ let duplicate = state.reduce([.reset(epoch: 3, rows: [wire("a"), wire("a", title
 require(duplicate.state.ids == ["a"] && duplicate.state.rows["a"]?.title == "last", "last duplicate wins")
 let paging = state.reduce([.paging(ArticleListPaging(pageCount: 3, hasMore: true, isLoadingMore: false))])!
 require(!paging.didChangeRows && !paging.didChangeStructure, "paging-only update must not rebuild rows")
-let payload = #"[{"type":"reset","epoch":4,"rows":[{"id":"x","kind":"article","sourceLabel":"source","timeLabel":"1h","title":"X","faviconUrls":[]}]},{"type":"paging","pageCount":1,"hasMore":false,"isLoadingMore":false}]"#
+let payload = #"[{"type":"reset","epoch":4,"rows":[{"id":"x","kind":"article","sourceLabel":"source","timeLabel":"1h","title":"X","faviconUrls":[],"isContinuing":true,"continueLabel":"Continue reading · 2 min left"}]},{"type":"paging","pageCount":1,"hasMore":false,"isLoadingMore":false}]"#
 let decoded = try JSONDecoder().decode([ArticleListOp].self, from: Data(payload.utf8))
-require(state.reduce(decoded)?.state.ids == ["x"], "real wire protocol must decode")
+let decodedState = state.reduce(decoded)
+require(decodedState?.state.ids == ["x"], "real wire protocol must decode")
+require(decodedState?.state.rows["x"]?.continueLabel == "Continue reading · 2 min left", "continueLabel must decode")
 @MainActor final class Collector {
   var presenting = false
   var ids: [String] = []

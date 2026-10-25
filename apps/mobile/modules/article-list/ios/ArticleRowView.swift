@@ -65,14 +65,20 @@ struct ArticleRowView: View {
   }
 
   private var continueBadge: some View {
-    Text(style.continueLabel)
+    Text(row.continueLabel ?? style.continueLabel)
       .font(style.badgeFont.font)
       .foregroundStyle(style.badgeText)
       .lineLimit(1)
       .padding(.horizontal, 8)
       .frame(minHeight: style.badgeHeight)
       .background(Capsule().fill(style.badgeBackground))
-      .accessibilityLabel("Previously opened. Continue reading.")
+      .accessibilityLabel(continueAccessibilityLabel)
+  }
+
+  /// The badge text read aloud, with the separator between the call to action and the time left
+  /// spoken as a pause.
+  private var continueAccessibilityLabel: String {
+    (row.continueLabel ?? style.continueLabel).replacingOccurrences(of: " · ", with: ", ")
   }
 
   private var toolbar: some View {
