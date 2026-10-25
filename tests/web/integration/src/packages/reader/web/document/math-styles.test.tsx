@@ -7,7 +7,7 @@ import { documentOf, text } from "./fixtures";
 const katexCss = vi.hoisted(() => vi.fn());
 
 // The stylesheet itself is a no-op under Vitest, so observe the lazy module that imports it.
-vi.mock("../../../../../../../../packages/reader/src/web/document/math-styles", () => {
+vi.mock("../../../../../../../../packages/reader/src/web/katex-styles", () => {
   katexCss();
   return {};
 });

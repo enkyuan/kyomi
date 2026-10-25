@@ -20,9 +20,9 @@ let katexRuntimePromise:
   | undefined;
 
 function getKatexRuntime() {
-  katexRuntimePromise ??= import("./katex-runtime").then((module) => ({
-    renderMathInHtmlElement: module.renderMathInHtmlElement,
-  }));
+  katexRuntimePromise ??= Promise.all([import("./katex-runtime"), import("./katex-styles")]).then(
+    ([module]) => ({ renderMathInHtmlElement: module.renderMathInHtmlElement }),
+  );
   return katexRuntimePromise;
 }
 

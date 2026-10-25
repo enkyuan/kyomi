@@ -11,9 +11,9 @@ let katexRuntimePromise:
   | undefined;
 
 function getKatexRuntime() {
-  katexRuntimePromise ??= import("../katex-runtime").then((module) => ({
-    renderMarkdownWithKatex: module.renderMarkdownWithKatex,
-  }));
+  katexRuntimePromise ??= Promise.all([import("../katex-runtime"), import("../katex-styles")]).then(
+    ([module]) => ({ renderMarkdownWithKatex: module.renderMarkdownWithKatex }),
+  );
   return katexRuntimePromise;
 }
 

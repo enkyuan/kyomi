@@ -76,7 +76,7 @@ export function RenderDocument({
   const usesMath = document.features.math;
   useEffect(() => {
     if (usesMath) {
-      void import("./math-styles");
+      void import("../katex-styles");
     }
   }, [usesMath]);
 
