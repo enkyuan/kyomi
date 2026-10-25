@@ -342,7 +342,7 @@ struct TabBarContent: View {
   private func tabs(_ layout: TabBarLayout) -> some View {
     HStack(spacing: 0) {
       ZStack {
-        TabSelector(
+        TabBarSelector(
           segmentWidths: layout.segmentWidths,
           height: layout.segmentHeight,
           selectedIndex: model.selectedIndex,

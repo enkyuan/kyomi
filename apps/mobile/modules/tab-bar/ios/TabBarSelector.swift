@@ -8,7 +8,7 @@ import UIKit
 ///
 /// Approach adapted from union-tab-view by Union St (MIT):
 /// https://github.com/unionst/union-tab-view
-struct TabSelector: UIViewRepresentable {
+struct TabBarSelector: UIViewRepresentable {
   var segmentWidths: [CGFloat]
   var height: CGFloat
   var selectedIndex: Int
@@ -85,10 +85,10 @@ struct TabSelector: UIViewRepresentable {
 
   @MainActor
   final class Coordinator: NSObject {
-    var parent: TabSelector
+    var parent: TabBarSelector
     var committedIndex = 0
 
-    init(parent: TabSelector) {
+    init(parent: TabBarSelector) {
       self.parent = parent
     }
 
