@@ -1,16 +1,18 @@
 {
   "name": "@kyomi/reader",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "description": "Kyomi reader rendering primitives for web and native surfaces.",
   "author": "enkyuan <yuan.enkng@gmail.com>",
-  "type": "module",
-  "files": ["src"],
   "repository": {
     "type": "git",
     "url": "https://github.com/enkyuan/kyomi.git",
     "directory": "packages/reader"
   },
+  "files": [
+    "src"
+  ],
+  "type": "module",
   "exports": {
     ".": "./src/core/index.ts",
     "./core": "./src/core/index.ts",
@@ -37,22 +39,6 @@
     "lint:fix": "oxlint --fix src",
     "typecheck": "tsgo -p tsconfig.json --noEmit"
   },
-  "peerDependencies": {
-    "@base-ui/react": "^1.3.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
-  },
-  "peerDependenciesMeta": {
-    "@base-ui/react": {
-      "optional": true
-    },
-    "react": {
-      "optional": true
-    },
-    "react-dom": {
-      "optional": true
-    }
-  },
   "dependencies": {
     "@kyomi/worker": "workspace:*",
     "@tanstack/markdown": "0.0.12",
@@ -66,6 +52,27 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3"
+  },
+  "peerDependencies": {
+    "@base-ui/react": "^1.3.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-native": ">=0.80.0"
+  },
+  "peerDependenciesMeta": {
+    "@base-ui/react": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-native": {
+      "optional": true
+    }
   }
 }

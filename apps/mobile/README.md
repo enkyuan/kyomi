@@ -182,3 +182,34 @@ Implementation references (accessed 2026-10-24):
 The bridge was checked against ExpoModulesCore 57.0.24, and native compilation uses Xcode 27.1.
 The explicit `.runOnQueue(.main)` follows the installed API rather than relying on documentation's
 default-queue statement. A native development build is required after these changes.
+
+## Reader renderers and baseline measurement
+
+The reader has two body renderers. The DOM WebView reader (`article-body.dom.tsx`) is the default. The
+native KDM renderer (`@kyomi/reader/native`, wired in `modules/reader/components/native-article-body.tsx`)
+is chosen only when **all** hold: `EXPO_PUBLIC_KYOMI_NATIVE_READER=1` at build time, the article carries
+a document body, its `version` is one `isSupportedDocumentVersion` accepts, and it passes
+`readerDocumentSchema`. Anything else falls back to the DOM body. The request header that announces the
+supported version and the document field name are placeholders confined to `src/lib/reader-document.ts`
+until the storage/API contract is final.
+
+Link taps open `expo-web-browser`; long-pressing a link shares it. Images go through the reader image
+proxy via `expo-image` (thumbhash placeholders, zero transition under reduce motion); tapping opens the
+viewer. Footnote refs open a page-sheet modal. `html` blocks, math and unsnapshotted players render in
+`html-island.dom.tsx` (one DOM component each; players mount only after a tap). Scroll position restores
+from the first visible row index (`reader-position` MMKV store).
+
+### Measure DOM vs. native on a device
+
+1. Build a development build (`bun run ios:device`) with
+   `EXPO_PUBLIC_KYOMI_READER_METRICS=1 EXPO_PUBLIC_KYOMI_READER_FIXTURE=long`. The fixture swaps any
+   opened article for a 400-paragraph article, rendered as HTML (DOM) and as KDM (native) so both
+   show identical content. Add `EXPO_PUBLIC_KYOMI_NATIVE_READER=1` for the native run.
+2. Open the article and read the `[reader-metrics]` console line (Metro log): `renderer`,
+   `timeToFirstContentMs` (article data available → first content laid out; for the DOM path this is
+   the first animation frame after React mounted in the WebView, so it understates WebView paint),
+   and `hermesHeapBefore/After` when Hermes exposes them. Repeat 5 times cold and 5 warm; compare medians.
+3. Memory: the WebView's memory is outside Hermes. In Xcode, Debug Navigator → Memory (or Instruments →
+   Allocations/VM Tracker) after fully scrolling the fixture; note the app total plus the
+   `com.apple.WebKit.WebContent` process for DOM. On Android use Android Studio Profiler → Memory.
+4. Scroll smoothness: Instruments → Core Animation / Hitches while flinging the fixture end to end.
