@@ -20,7 +20,8 @@ describe("document migration", () => {
     const file = readdirSync(dir)
       .filter((f) => f.endsWith(".sql"))
       .sort()
-      .findLast((f) => readFileSync(join(dir, f), "utf8").includes('"content_document"'));
+      .reverse()
+      .find((f) => readFileSync(join(dir, f), "utf8").includes('"content_document"'));
     expect(file).toBeDefined();
     const sql = readFileSync(join(dir, file!), "utf8");
     for (const column of [

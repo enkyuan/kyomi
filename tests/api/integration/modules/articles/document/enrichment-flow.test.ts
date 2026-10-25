@@ -1,6 +1,5 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { crc32, deflateSync } from "node:zlib";
-import type Redis from "ioredis";
 import { enqueueDocumentEnrichment } from "@modules/articles/document-enrichment/enqueue";
 import { handleDocumentEnrichmentJob } from "@modules/articles/document-enrichment/jobs";
 import { runDocumentBackfillScope } from "@modules/articles/document/backfill";
@@ -65,7 +64,7 @@ describe("document persistence to enrichment", () => {
     const xadds: unknown[][] = [];
     const redis = {
       xadd: async (...args: unknown[]) => (xadds.push(args), "1-0"),
-    } as unknown as Redis;
+    } as unknown as NonNullable<Parameters<typeof enqueueDocumentEnrichment>[2]>;
     setStoredDocumentCompiler({
       version: TEST_COMPILER_VERSION,
       compile: async () => ({

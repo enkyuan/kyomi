@@ -1,9 +1,10 @@
+import type { ReaderDocument } from "@kyomi/reader/document";
 import type { StoredDocument, StoredDocumentCompiler } from "@kyomi/worker/lib/stored-document";
 
 export const TEST_COMPILER_VERSION = "test-compiler-1";
 
 /** Minimal valid KDM document with one image and one embed, the fields enrichment owns. */
-export function fakeDocument(imageSrc = "https://example.com/a.png"): Record<string, unknown> {
+export function fakeDocument(imageSrc = "https://example.com/a.png"): ReaderDocument {
   return {
     version: 1,
     source: { format: "html", origin: "feed_html", baseUrl: "https://example.com/post" },
