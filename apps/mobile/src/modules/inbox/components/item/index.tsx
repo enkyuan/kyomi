@@ -27,7 +27,8 @@ export function Item({ item, isFirst, onPress, onPressIn }: ItemProps) {
     metaFontSizePx,
   } = feedItemTypography;
   const sourceLabel = getFeedSourceLabel(item.link, item.feedTitle);
-  const { label: continueLabel } = continueReadingBadge(item);
+  const { accessibilityLabel: continueAccessibilityLabel, label: continueLabel } =
+    continueReadingBadge(item);
   const continuationBadgeSize = width <= 360 ? "sm" : "lg";
 
   return (
@@ -92,7 +93,7 @@ export function Item({ item, isFirst, onPress, onPressIn }: ItemProps) {
       <View className="mt-3 flex-row items-center gap-3 px-5 pb-4">
         {continueLabel ? (
           <Badge
-            accessibilityLabel={continueLabel.replace(" · ", ", ")}
+            accessibilityLabel={continueAccessibilityLabel ?? continueLabel}
             size={continuationBadgeSize}
             variant="matcha"
           >

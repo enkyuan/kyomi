@@ -25,8 +25,7 @@ struct ArticleRowModel: Equatable, Identifiable, Sendable {
   let isSaved: Bool
   /// The article was started and left unfinished, so it shows the "Continue reading" badge.
   let isContinuing: Bool
-  /// The badge text with the time left, such as "Continue reading · 6 min left". `nil` shows the
-  /// style's `continueLabel`.
+  /// The badge text, the time left such as "6m left". `nil` shows the style's `continueLabel`.
   let continueLabel: String?
 }
 

@@ -75,10 +75,11 @@ struct ArticleRowView: View {
       .accessibilityLabel(continueAccessibilityLabel)
   }
 
-  /// The badge text read aloud, with the separator between the call to action and the time left
-  /// spoken as a pause.
+  /// The badge read aloud. The visible time left, such as "6m left", leaves out the action, so it
+  /// is spoken after it.
   private var continueAccessibilityLabel: String {
-    (row.continueLabel ?? style.continueLabel).replacingOccurrences(of: " · ", with: ", ")
+    guard let remaining = row.continueLabel else { return style.continueLabel }
+    return "\(style.continueLabel), \(remaining)"
   }
 
   private var toolbar: some View {

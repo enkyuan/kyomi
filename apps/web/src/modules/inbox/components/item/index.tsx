@@ -74,9 +74,7 @@ export const Item = memo(function Item({
     ITEM_HOVER_CORNER_SMOOTHING,
   );
   const continueLabel = isContinuingReading(item.readingProgress)
-    ? ["Continue reading", formatRemainingMinutes(item.readingProgress?.remainingMinutes ?? null)]
-        .filter(Boolean)
-        .join(" · ")
+    ? (formatRemainingMinutes(item.readingProgress?.remainingMinutes ?? null) ?? "Continue reading")
     : null;
   const selectItem = () => {
     onSelect(item);
@@ -208,6 +206,11 @@ export const Item = memo(function Item({
             ) : null}
             {continueLabel ? (
               <Badge
+                aria-label={
+                  continueLabel === "Continue reading"
+                    ? continueLabel
+                    : `Continue reading, ${continueLabel}`
+                }
                 className="h-auto min-w-0 shrink-0 rounded-full bg-muted px-2 py-0.5 text-muted-foreground/85 sm:h-auto"
                 size="default"
                 style={{ fontSize: `${metaFontSizePx}px` }}

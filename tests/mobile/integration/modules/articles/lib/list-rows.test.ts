@@ -116,7 +116,7 @@ describe("toArticleRow", () => {
     );
 
     expect(row).toEqual({
-      continueLabel: "Continue reading · 6 min left",
+      continueLabel: "6m left",
       faviconUrls: DEFAULT_FAVICONS,
       feedTitle: "Example",
       id: "article-1",
@@ -149,13 +149,14 @@ describe("toArticleRow", () => {
     expect(continuing({ state: "abandoned" })).toBe(false);
   });
 
-  test("labels a continuing row with the time left, and with no time when it is unknown", () => {
+  test("labels a continuing row with the time left, and with no label when it is unknown", () => {
     const label = (overrides: Partial<ReadingProgressDto>) =>
       toArticleRow(item({ readingProgress: progress(overrides) })).continueLabel;
 
-    expect(label({ remainingMinutes: 12 })).toBe("Continue reading · 12 min left");
-    expect(label({ remainingMinutes: 0 })).toBe("Continue reading · Under 1 min left");
-    expect(label({ remainingMinutes: null })).toBe("Continue reading");
+    expect(label({ remainingMinutes: 12 })).toBe("12m left");
+    expect(label({ remainingMinutes: 90 })).toBe("2h left");
+    expect(label({ remainingMinutes: 0 })).toBe("<1m left");
+    expect(label({ remainingMinutes: null })).toBeUndefined();
   });
 
   test("defaults a missing summary to an empty string", () => {

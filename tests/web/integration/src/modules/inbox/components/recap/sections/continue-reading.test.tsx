@@ -68,7 +68,7 @@ describe("ContinueReading", () => {
 
     expect(screen.getByText("Continue reading")).toBeTruthy();
     expect(screen.getByText("Article a")).toBeTruthy();
-    expect(screen.getByText("Example Feed · 6 min left")).toBeTruthy();
+    expect(screen.getByText("Example Feed · 6m left")).toBeTruthy();
   });
 
   test("shows only the feed when the time left is unknown", () => {

@@ -195,13 +195,17 @@ export function isContinuingReading(progress: ReadingProgressDto | null | undefi
   return progress.state === "reading" || progress.state === "resurfacing";
 }
 
-/** "6 min left", or "Under 1 min left" below a minute. Null when the estimate is unknown. */
+/**
+ * "6m left", "2h left", or "<1m left" below a minute. Units are the compact ones article
+ * timestamps use (`m`, `h`). Null when the estimate is unknown.
+ */
 export function formatRemainingMinutes(minutes: number | null): string | null {
   if (minutes === null || !Number.isFinite(minutes)) {
     return null;
   }
   if (minutes < 1) {
-    return "Under 1 min left";
+    return "<1m left";
   }
-  return `${Math.round(minutes)} min left`;
+  const rounded = Math.round(minutes);
+  return rounded < 60 ? `${rounded}m left` : `${Math.round(rounded / 60)}h left`;
 }

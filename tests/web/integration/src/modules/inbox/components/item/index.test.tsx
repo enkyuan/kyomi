@@ -136,16 +136,16 @@ describe("inbox item row", () => {
     test("shows the badge with the time left for an engaged, unfinished article", () => {
       renderItem({ rowItem: { ...item, readingProgress: progress() } });
 
-      expect(screen.getByText("Continue reading · 6 min left")).toBeTruthy();
+      expect(screen.getByText("6m left")).toBeTruthy();
     });
 
     test("shows the badge for a resurfacing article", () => {
       renderItem({ rowItem: { ...item, readingProgress: progress({ state: "resurfacing" }) } });
 
-      expect(screen.getByText("Continue reading · 6 min left")).toBeTruthy();
+      expect(screen.getByText("6m left")).toBeTruthy();
     });
 
-    test("omits the time left when the estimate is unknown", () => {
+    test("falls back to the action when the time left is unknown", () => {
       renderItem({ rowItem: { ...item, readingProgress: progress({ remainingMinutes: null }) } });
 
       expect(screen.getByText("Continue reading")).toBeTruthy();
@@ -154,7 +154,7 @@ describe("inbox item row", () => {
     test("says under a minute when almost done", () => {
       renderItem({ rowItem: { ...item, readingProgress: progress({ remainingMinutes: 0 }) } });
 
-      expect(screen.getByText("Continue reading · Under 1 min left")).toBeTruthy();
+      expect(screen.getByText("<1m left")).toBeTruthy();
     });
 
     test.each([

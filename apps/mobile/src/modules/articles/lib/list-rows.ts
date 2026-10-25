@@ -31,7 +31,7 @@ export function toArticleRow(item: ArticleListItemDto): ArticleListRow {
 
   const badge = continueReadingBadge(item);
   const row: ArticleListRow = {
-    ...(badge.label ? { continueLabel: badge.label } : {}),
+    ...(badge.remaining ? { continueLabel: badge.remaining } : {}),
     faviconUrls: faviconUrls(item),
     feedTitle: item.feedTitle,
     id: item.id,

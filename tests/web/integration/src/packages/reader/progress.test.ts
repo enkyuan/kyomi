@@ -384,16 +384,22 @@ describe("isContinuingReading", () => {
 });
 
 describe("formatRemainingMinutes", () => {
-  test("formats whole minutes", () => {
-    expect(formatRemainingMinutes(6)).toBe("6 min left");
-    expect(formatRemainingMinutes(1)).toBe("1 min left");
-    expect(formatRemainingMinutes(75)).toBe("75 min left");
+  test("formats whole minutes in the compact timestamp unit", () => {
+    expect(formatRemainingMinutes(6)).toBe("6m left");
+    expect(formatRemainingMinutes(1)).toBe("1m left");
+    expect(formatRemainingMinutes(59)).toBe("59m left");
+  });
+
+  test("switches to hours from an hour", () => {
+    expect(formatRemainingMinutes(60)).toBe("1h left");
+    expect(formatRemainingMinutes(75)).toBe("1h left");
+    expect(formatRemainingMinutes(90)).toBe("2h left");
   });
 
   test("labels sub-minute and zero estimates", () => {
-    expect(formatRemainingMinutes(0)).toBe("Under 1 min left");
-    expect(formatRemainingMinutes(0.4)).toBe("Under 1 min left");
-    expect(formatRemainingMinutes(-3)).toBe("Under 1 min left");
+    expect(formatRemainingMinutes(0)).toBe("<1m left");
+    expect(formatRemainingMinutes(0.4)).toBe("<1m left");
+    expect(formatRemainingMinutes(-3)).toBe("<1m left");
   });
 
   test("returns null for unknown estimates", () => {
