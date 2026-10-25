@@ -62,7 +62,7 @@ is current. Stage A and B operate on a linkedom DOM, stage C on KDM.
 `compileArticleDocument(input)` (async) runs stages A–C and returns
 `{ html, sanitizerVersion, document, compilerVersion, documentVersion, diagnostics }`. `document` is
 `null`, with a warning, when `validate` fails or the source exceeds 4 MB or 100,000 elements; the
-HTML body is always returned. Bump `ARTICLE_COMPILER_VERSION` when output changes for the same input.
+HTML body is always returned. `ARTICLE_COMPILER_VERSION` is `${sanitizer version}+kdm.N`, so a sanitizer bump invalidates stored documents automatically; bump N when Stage C output changes.
 
 ### Stage A: input
 
@@ -135,7 +135,7 @@ the sanitizer, so they are captured first as compiler-owned `data-kyomi-*` attri
   authored checks and a recorded baseline per sanitizer version (v1: 78 of 176, v2: 176 of 176).
   Phase 1 extends it with a KDM baseline per compiler version
   (`document/<compiler version>/`): authored element counts per fixture, text recall and reading
-  order against the sanitized HTML body, and the `htmlBlocks` count. `kdm-compiler-1`: 20 of 20
+  order against the sanitized HTML body, and the `htmlBlocks` count. `article-html-v3+kdm.1`: 20 of 20
   documents valid, 0 `html` blocks, element recall 1.0 (101 of 101 authored elements), text recall
   0.998, reading order 0.977 (the lowest fixture is `tufte-sidenotes` at 0.73, because sidenotes
   move from the sentence to the footnote list). Markdown keeps its own corpus in

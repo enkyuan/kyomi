@@ -6,7 +6,7 @@
     "baseUrl": "https://medium.example/@writer/replacing-the-cache-3f2a"
   },
   "compiler": {
-    "version": "kdm-compiler-1",
+    "version": "article-html-v3+kdm.1",
     "sanitizerVersion": "article-html-v3"
   },
   "meta": {

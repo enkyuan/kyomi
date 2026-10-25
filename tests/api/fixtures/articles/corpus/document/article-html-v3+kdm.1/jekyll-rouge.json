@@ -6,7 +6,7 @@
     "baseUrl": "https://jekyll.example/2026/10/12/frozen-strings.html"
   },
   "compiler": {
-    "version": "kdm-compiler-1",
+    "version": "article-html-v3+kdm.1",
     "sanitizerVersion": "article-html-v3"
   },
   "meta": {

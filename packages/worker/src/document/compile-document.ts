@@ -15,10 +15,13 @@ import { normalize } from "./passes/normalize";
 import { validate } from "./passes/validate";
 
 /**
- * Bump when compiler output changes for the same input, so stored documents can be recompiled
- * from retained source. The document schema has its own `READER_DOCUMENT_VERSION`.
+ * Compiler version stored with each document. It embeds the sanitizer version, so any sanitizer
+ * bump marks stored documents stale without a hand edit; bump `KDM_COMPILER_REVISION` when Stage C
+ * output changes for the same input. The document schema has its own `READER_DOCUMENT_VERSION`.
  */
-export const ARTICLE_COMPILER_VERSION = "kdm-compiler-1" as const;
+const KDM_COMPILER_REVISION = 1;
+export const ARTICLE_COMPILER_VERSION =
+  `${ARTICLE_HTML_SANITIZER_VERSION}+kdm.${KDM_COMPILER_REVISION}` as const;
 
 /** Source size above which no document is built; the sanitized HTML body is still produced. */
 export const MAX_DOCUMENT_SOURCE_BYTES = 4_000_000;

@@ -6,7 +6,7 @@
     "baseUrl": "https://blog.wp.example/2026/10/offline-sync/"
   },
   "compiler": {
-    "version": "kdm-compiler-1",
+    "version": "article-html-v3+kdm.1",
     "sanitizerVersion": "article-html-v3"
   },
   "meta": {
