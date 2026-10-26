@@ -16,6 +16,11 @@ Shared logic comes from workspace packages (`@kyomi/reader` schemas, document mo
 sanitization). Do not import `@kyomi/reader/web`, `@kyomi/reader/native`, or `@kyomi/ui` components:
 they target the DOM and React Native.
 
+## Platforms
+
+`@gpuix/native` publishes binaries for macOS arm64, Linux x64 (glibc), and Windows x64/arm64 only.
+Other targets (Intel macOS, Linux arm64, musl) cannot open the window until upstream adds a binary.
+
 ## Commands
 
 ```bash
