@@ -14,8 +14,10 @@ This repository follows a monorepo shape modeled after larger production repos:
 2. `apps/api` should contain transport/orchestration boundaries, not reusable business logic.
 3. `apps/embeddings` is the Cloudflare Worker that serves embeddings to the article classifier;
    it should contain only its `/embed` HTTP contract.
-4. Reusable logic should be promoted into `packages/*` once consumed by multiple app modules.
-5. Workspace-wide TypeScript baselines live in `packages/tsconfig`.
+4. `apps/desktop` is the GPUIX desktop client (React painted by GPUI on Bun); it composes shared
+   packages and keeps its view layer in `<div>`/`<text>`, not DOM or React Native components.
+5. Reusable logic should be promoted into `packages/*` once consumed by multiple app modules.
+6. Workspace-wide TypeScript baselines live in `packages/tsconfig`.
 
 ## Shared UI (`packages/ui`)
 
