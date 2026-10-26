@@ -32,7 +32,12 @@ export function App() {
       {sample.map((item) => (
         <div
           key={item.id}
+          role="button"
+          tabIndex={0}
           onClick={() => setSelectedId(item.id)}
+          onKeyDown={(event) => {
+            if (event.key === "enter" || event.key === "space") setSelectedId(item.id);
+          }}
           style={{
             flexDirection: "column",
             gap: 2,
