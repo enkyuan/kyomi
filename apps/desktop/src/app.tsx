@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "@gpuix/react";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 
 // GPUI does not inherit `color`; every <text> sets its own.
@@ -30,14 +31,9 @@ export function App() {
     >
       <text style={{ color: colors.text, fontSize: 20 }}>Inbox</text>
       {sample.map((item) => (
-        <div
+        <Button
           key={item.id}
-          role="button"
-          tabIndex={0}
           onClick={() => setSelectedId(item.id)}
-          onKeyDown={(event) => {
-            if (event.key === "enter" || event.key === "space") setSelectedId(item.id);
-          }}
           style={{
             flexDirection: "column",
             gap: 2,
@@ -50,7 +46,7 @@ export function App() {
         >
           <text style={{ color: colors.text }}>{item.title}</text>
           <text style={{ color: colors.muted, fontSize: 12 }}>{item.feedTitle}</text>
-        </div>
+        </Button>
       ))}
     </div>
   );
