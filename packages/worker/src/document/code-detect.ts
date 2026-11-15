@@ -1,45 +1,108 @@
 import type { ModelOperations } from "@vscode/vscode-languagedetection";
 import { lookupLanguage, type CodeLanguage } from "./code-language";
+import {
+  cssShape,
+  diffShape,
+  dockerfileShape,
+  httpShape,
+  jsonShape,
+  looksLikeOutput,
+  looseJsonShape,
+  markupShape,
+  nonEmptyLines,
+  shellShape,
+  sqlShape,
+  tomlShape,
+  visualBasicShape,
+  yamlShape,
+} from "./code-shapes";
+import { scriptDialect, witnessed } from "./code-witness";
 
-/** A block with fewer lines or characters is never classified: too little signal. */
+export { looksLikeOutput };
+
+/** A block with fewer lines or characters is never sent to the model: too little signal. */
 export const MIN_DETECT_LINES = 3;
 export const MIN_DETECT_CHARS = 40;
 /** Detection reads a bounded prefix so cost and result do not depend on article size. */
 const MAX_DETECT_CHARS = 4_000;
-/** The model's top score must clear this and beat the runner-up by this factor. */
-const MIN_CONFIDENCE = 0.15;
+/** A guess that comes from article context (not the model) still needs this much text. */
+const MIN_CONTEXT_CHARS = 12;
+/** The model's top score must clear this and beat the best other-family runner-up by this factor. */
+const MIN_CONFIDENCE = 0.05;
+const MIN_CANDIDATE = 0.02;
 const MIN_MARGIN = 2;
+/** Distinct structural tokens a block needs before the model's guess is believed. */
+const MODEL_WITNESSES = 2;
+/** At this confidence the model overrides article context that names a different language. */
+const OVERRIDE_CONFIDENCE = 0.35;
 
-/** The model's (VS Code) language ids that differ from the id Shiki knows them by. */
-const MODEL_ALIASES: Record<string, string> = {
-  sh: "shellscript",
-  bat: "bat",
-  ps1: "powershell",
-  rs: "rust",
-  pas: "pascal",
-  jl: "julia",
+/**
+ * The model's (VS Code) language ids mapped to the id Shiki knows them by. A model id missing
+ * here is never used: markdown, ini, csv, assembly and a few others say nothing about code.
+ */
+const MODEL_LANGUAGES: Record<string, string> = {
+  py: "python",
+  js: "javascript",
+  ts: "typescript",
   cs: "csharp",
   cpp: "cpp",
-  hs: "haskell",
-  kt: "kotlin",
+  c: "c",
+  java: "java",
+  go: "go",
+  rs: "rust",
   rb: "ruby",
-  py: "python",
-  ts: "typescript",
-  js: "javascript",
-  tex: "latex",
+  php: "php",
+  ps1: "powershell",
+  sh: "shellscript",
+  bat: "bat",
+  kt: "kotlin",
+  swift: "swift",
+  scala: "scala",
+  dart: "dart",
+  lua: "lua",
+  r: "r",
+  clj: "clojure",
+  hs: "haskell",
   ex: "elixir",
   erl: "erlang",
   pm: "perl",
-  m: "objective-c",
-  dm: "dm",
-  mk: "make",
-  jsx: "jsx",
-  tsx: "tsx",
-  yml: "yaml",
+  groovy: "groovy",
+  mm: "objective-c",
+  tex: "latex",
+  makefile: "make",
+  cmake: "cmake",
+  lisp: "lisp",
+  sql: "sql",
+  css: "css",
+  html: "html",
+  xml: "xml",
+  json: "json",
+  yaml: "yaml",
+  toml: "toml",
+  dockerfile: "docker",
 };
 
-/** Ids whose model hits say nothing about code (prose and markup). */
-const NOISY = new Set(["md", "ini"]);
+/** Languages that share syntax closely enough that a close runner-up is not a conflict. */
+const FAMILY: Record<string, string> = {
+  javascript: "script",
+  typescript: "script",
+  jsx: "script",
+  tsx: "script",
+  c: "c",
+  cpp: "c",
+  "objective-c": "c",
+  csharp: "c-like",
+  java: "c-like",
+  kotlin: "c-like",
+  scala: "c-like",
+  shellscript: "shell",
+  shellsession: "shell",
+  bat: "shell",
+  powershell: "shell",
+  html: "markup",
+  xml: "markup",
+};
+export const familyOf = (id: string) => FAMILY[id] ?? id;
 
 let model: Promise<ModelOperations> | undefined;
 
@@ -54,137 +117,131 @@ function loadModel(): Promise<ModelOperations> {
   return model;
 }
 
-function isJson(value: string): boolean {
-  const trimmed = value.trim();
-  if (!/^[[{]/.test(trimmed)) {
-    return false;
+/** What the rest of the article says about a block, used when the block itself is not enough. */
+export type DetectContext = {
+  /** A language the text next to the block names (`the following Python`), if exactly one. */
+  cue?: string | undefined;
+  /** Languages the article's other blocks carry explicitly, most common first. */
+  prior?: readonly string[] | undefined;
+};
+
+/** Shapes that need no statistics, so they apply to short blocks too. */
+export function shapeLanguage(value: string, lines: string[]): string | null {
+  const longEnough = lines.length >= 2 || value.trim().length >= MIN_DETECT_CHARS;
+  const session = shellShape(lines);
+  if (session === "shellsession") {
+    return session;
   }
-  try {
-    JSON.parse(trimmed);
-    return true;
-  } catch {
-    return false;
+  if (looksLikeOutput(value)) {
+    return null;
   }
+  if (longEnough && value.length <= MAX_DETECT_CHARS) {
+    const json = jsonShape(value);
+    if (json) {
+      return json;
+    }
+  }
+  if (tomlShape(lines)) {
+    return "toml";
+  }
+  if (dockerfileShape(lines) && lines.length >= 2) {
+    return "docker";
+  }
+  if (session) {
+    return session;
+  }
+  if (diffShape(lines)) {
+    return "diff";
+  }
+  if (httpShape(lines)) {
+    return "http";
+  }
+  if (lines.length >= 2 && markupShape(value, lines)) {
+    return markupShape(value, lines);
+  }
+  const css = cssShape(value, lines);
+  if (css) {
+    return css;
+  }
+  if (lines.length >= 2 && visualBasicShape(value)) {
+    return "vb";
+  }
+  if (sqlShape(value, lines)) {
+    return "sql";
+  }
+  if (yamlShape(lines)) {
+    return "yaml";
+  }
+  if (looseJsonShape(lines)) {
+    return "json";
+  }
+  return null;
 }
 
-/** Every non-empty line is a `$ command` or `# command` prompt line. */
-function isShellSession(lines: string[]): boolean {
-  const filled = lines.filter((line) => line.trim());
-  return filled.length >= 2 && filled.every((line) => /^\$ \S/.test(line));
+type Candidate = { id: string; confidence: number };
+
+/**
+ * The model proposes, the block's own syntax disposes: only languages whose structural tokens
+ * the block really contains compete, and the winner must beat the best witnessed language of
+ * another family by `MIN_MARGIN`.
+ */
+async function modelCandidate(sample: string): Promise<Candidate | null> {
+  const ranked = (await (await loadModel()).runModel(sample))
+    .filter((result) => MODEL_LANGUAGES[result.languageId] && result.confidence >= MIN_CANDIDATE)
+    .map((result) => ({ id: MODEL_LANGUAGES[result.languageId]!, confidence: result.confidence }))
+    .filter((candidate) => witnessed(candidate.id, sample, MODEL_WITNESSES));
+  const best = ranked[0];
+  if (!best || best.confidence < MIN_CONFIDENCE) {
+    return null;
+  }
+  const rival = ranked.find((candidate) => familyOf(candidate.id) !== familyOf(best.id));
+  if (rival && best.confidence / rival.confidence < MIN_MARGIN) {
+    return null;
+  }
+  const id = best.id === "javascript" || best.id === "typescript" ? scriptDialect(sample) : best.id;
+  return { id, confidence: best.confidence };
 }
 
-const COMMANDS = new Set([
-  "uv",
-  "pip",
-  "pip3",
-  "pipx",
-  "npm",
-  "npx",
-  "pnpm",
-  "yarn",
-  "bun",
-  "bunx",
-  "cargo",
-  "rustup",
-  "go",
-  "git",
-  "brew",
-  "curl",
-  "wget",
-  "docker",
-  "python",
-  "python3",
-  "node",
-  "apt",
-  "apt-get",
-  "sudo",
-  "make",
-  "cd",
-  "ls",
-  "mkdir",
-  "export",
-  "cp",
-  "mv",
-  "rm",
-  "chmod",
-  "source",
-  "echo",
-  "gem",
-  "poetry",
-]);
-
-function nonEmptyLines(value: string): string[] {
-  return value.split("\n").filter((line) => line.trim());
+function contextLanguage(sample: string, context: DetectContext): string | null {
+  for (const id of [context.cue, context.prior?.[0]]) {
+    if (!id) {
+      continue;
+    }
+    const base = id === "jsx" || id === "tsx" ? (id === "tsx" ? "typescript" : "javascript") : id;
+    if (witnessed(base, sample)) {
+      return base === "javascript" || base === "typescript" ? scriptDialect(sample) : id;
+    }
+  }
+  return null;
 }
 
 /**
- * Tool output rather than code: linter or compiler diagnostics (`path:line:col message`) and
- * similar report lines. Never coloured, since colouring them as code would be wrong.
+ * Best-effort language for an unhinted block, used for colour only. Returns null unless a
+ * deterministic shape, the article context or the model agrees with the block's own syntax, so
+ * ambiguous text stays plain. Output is a pure function of `value` and `context`.
  */
-export function looksLikeOutput(value: string): boolean {
-  const lines = nonEmptyLines(value);
-  const located = lines.filter((line) => /^\S+:\d+(?::\d+)?\s/.test(line)).length;
-  return located > 0 && located >= lines.length / 2;
-}
-
-/** Only `[table]` headers, `key = value` pairs and comments, opening with a table header. */
-function isToml(lines: string[]): boolean {
-  const first = lines[0]?.trim() ?? "";
-  if (!/^\[\[?[\w."'-]+\]\]?$/.test(first)) {
-    return false;
-  }
-  return lines.every((line) =>
-    /^(\[\[?[\w."'-]+\]\]?|[\w."'-]+\s*=\s*\S.*|#.*)$/.test(line.trim()),
-  );
-}
-
-/** Every line is a comment or starts with a well-known command, however short the block. */
-function isCommandLines(lines: string[]): boolean {
-  const commands = lines.filter((line) => !line.trim().startsWith("#"));
-  return (
-    commands.length > 0 &&
-    commands.every((line) => COMMANDS.has(line.trim().split(/\s+/, 1)[0]?.replace(/^\$/, "") ?? ""))
-  );
-}
-
-/**
- * Best-effort language for an unhinted block, used for colour only. Returns null unless the
- * snippet is long enough and the match is confident, so ambiguous text stays plain. Output is
- * a pure function of `value`.
- */
-export async function detectLanguage(value: string): Promise<CodeLanguage | null> {
+export async function detectLanguage(
+  value: string,
+  context: DetectContext = {},
+): Promise<CodeLanguage | null> {
   const sample = value.slice(0, MAX_DETECT_CHARS);
-  const lines = sample.split("\n");
-  // Deterministic shapes first, and allowed on short blocks: they need no statistics.
+  const lines = nonEmptyLines(sample);
+  const shape = shapeLanguage(sample, lines);
+  if (shape) {
+    return lookupLanguage(shape);
+  }
   if (looksLikeOutput(sample)) {
     return null;
   }
-  const filled = nonEmptyLines(sample);
-  if (isToml(filled)) {
-    return lookupLanguage("toml");
+  const hinted =
+    sample.trim().length >= MIN_CONTEXT_CHARS ? contextLanguage(sample, context) : null;
+  const enough = sample.trim().length >= MIN_DETECT_CHARS && lines.length >= MIN_DETECT_LINES;
+  const guess = enough ? await modelCandidate(sample) : null;
+  let chosen: string | null = null;
+  if (hinted && guess && familyOf(guess.id) !== familyOf(hinted)) {
+    chosen = guess.confidence >= OVERRIDE_CONFIDENCE ? guess.id : hinted;
+  } else {
+    chosen = hinted ?? guess?.id ?? null;
   }
-  if (isCommandLines(filled)) {
-    return lookupLanguage("shellscript");
-  }
-  // Conservative: require both enough text and enough lines.
-  if (
-    sample.trim().length < MIN_DETECT_CHARS ||
-    lines.filter((line) => line.trim()).length < MIN_DETECT_LINES
-  ) {
-    return null;
-  }
-  if (value.length <= MAX_DETECT_CHARS && isJson(value)) {
-    return lookupLanguage("json");
-  }
-  if (isShellSession(lines)) {
-    return lookupLanguage("shellscript");
-  }
-  const [best, next] = await (await loadModel()).runModel(sample);
-  if (!best || NOISY.has(best.languageId) || best.confidence < MIN_CONFIDENCE) {
-    return null;
-  }
-  if (next && best.confidence / Math.max(next.confidence, 1e-6) < MIN_MARGIN) {
-    return null;
-  }
-  return lookupLanguage(MODEL_ALIASES[best.languageId] ?? best.languageId);
+  return chosen ? lookupLanguage(chosen) : null;
 }
