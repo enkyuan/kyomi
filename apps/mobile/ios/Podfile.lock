@@ -191,6 +191,8 @@ PODS:
     - ExpoModulesCore
   - ExpoCrypto (57.0.4):
     - ExpoModulesCore
+  - ExpoDocumentPicker (57.0.3):
+    - ExpoModulesCore
   - ExpoDomWebView (57.0.1):
     - ExpoModulesCore
   - ExpoFileSystem (57.0.7):
@@ -2584,6 +2586,7 @@ DEPENDENCIES:
   - "ExpoBlur (from `../../../node_modules/.bun/expo-blur@57.0.3+00fad04f6d313f11/node_modules/expo-blur/ios`)"
   - "ExpoClipboard (from `../../../node_modules/.bun/expo-clipboard@57.0.2+00fad04f6d313f11/node_modules/expo-clipboard/ios`)"
   - "ExpoCrypto (from `../../../node_modules/.bun/expo-crypto@57.0.4+00fad04f6d313f11/node_modules/expo-crypto/ios`)"
+  - "ExpoDocumentPicker (from `../../../node_modules/.bun/expo-document-picker@57.0.3+00fad04f6d313f11/node_modules/expo-document-picker/ios`)"
   - "ExpoDomWebView (from `../../../node_modules/.bun/@expo+dom-webview@57.0.1+b864100ec71e10f0/node_modules/@expo/dom-webview/ios`)"
   - "ExpoFileSystem (from `../../../node_modules/.bun/expo-file-system@57.0.7+b864100ec71e10f0/node_modules/expo-file-system/ios/ExpoFileSystem.podspec`)"
   - "ExpoFont (from `../../../node_modules/.bun/expo-font@57.0.4+b864100ec71e10f0/node_modules/expo-font/ios/ExpoFont.podspec`)"
@@ -2731,6 +2734,8 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/.bun/expo-clipboard@57.0.2+00fad04f6d313f11/node_modules/expo-clipboard/ios"
   ExpoCrypto:
     :path: "../../../node_modules/.bun/expo-crypto@57.0.4+00fad04f6d313f11/node_modules/expo-crypto/ios"
+  ExpoDocumentPicker:
+    :path: "../../../node_modules/.bun/expo-document-picker@57.0.3+00fad04f6d313f11/node_modules/expo-document-picker/ios"
   ExpoDomWebView:
     :path: "../../../node_modules/.bun/@expo+dom-webview@57.0.1+b864100ec71e10f0/node_modules/@expo/dom-webview/ios"
   ExpoFileSystem:
@@ -2972,6 +2977,7 @@ SPEC CHECKSUMS:
   ExpoBlur: 975b78b65b3c8f475c44bd8f8b53948146b1ff9b
   ExpoClipboard: 15b8cc88075d7c50af165ed8fca0a76915903bba
   ExpoCrypto: 20c5dfad9f2c0b7831591fb75397d0c248cf7f8b
+  ExpoDocumentPicker: 3cb0c283969538c03ced2b405e519c91abf39f8e
   ExpoDomWebView: beaec034e51bd028428b98bb1f2633ab79c6d095
   ExpoFileSystem: 28778f942725170102f7c6cf4dee05a526ddacd0
   ExpoFont: f8198a952ba2ff53c9b393b5269ea435f232cfc3
