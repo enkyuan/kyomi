@@ -49,7 +49,7 @@ export function EmptyState({
         </Text>
         <Text
           style={{
-            ...FONT_STYLES.bodySmall,
+            ...FONT_STYLES.bodyMediumMedium,
             color: theme.mutedForeground,
             textAlign: "center",
           }}

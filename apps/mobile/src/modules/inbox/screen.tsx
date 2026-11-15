@@ -7,6 +7,13 @@ import { EmptyStateIcon } from "@/components/icons/empty-state";
 import { Badge } from "@/components/ui/badge";
 import { Host } from "@expo/ui";
 import { SymbolView } from "expo-symbols";
+import { IconMenuView, type IconMenuItem } from "../../../modules/tab-bar";
+import { toTabBarIcon } from "@/components/ui/tab-bar/lib/icon";
+import {
+  BookmarkNativeIcon,
+  CircleDashedNativeIcon,
+  LayoutAlignBottomNativeIcon,
+} from "@kyomi/ui/icons/blode-native";
 import { MenuView } from "@expo/ui/community/menu";
 import { FilterIcon } from "@/components/icons/filter";
 import { CollapsingHeader, HeaderActionButton, COMPACT_NAV_HEIGHT } from "@ui/header";
@@ -16,6 +23,12 @@ import { EmptyState } from "@modules/inbox/components/empty-state";
 import { List } from "@modules/inbox/components/list";
 import { type ArticleScope } from "@modules/inbox/hooks/use-articles";
 import { useSubscribedFeeds } from "@modules/inbox/hooks/use-feeds";
+
+const FILTER_MENU: readonly (Pick<IconMenuItem, "icon" | "title"> & { id: InboxFilter })[] = [
+  { icon: toTabBarIcon(LayoutAlignBottomNativeIcon), id: "all", title: "All" },
+  { icon: toTabBarIcon(CircleDashedNativeIcon), id: "unread", title: "Unread" },
+  { icon: toTabBarIcon(BookmarkNativeIcon), id: "saved", title: "Saved" },
+];
 
 type InboxScreenProps = {
   scope?: ArticleScope;
@@ -42,14 +55,11 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
   const headerActions =
     Platform.OS === "ios" ? (
       (() => {
-        const { Button, Image, Menu } = require("@expo/ui/swift-ui");
+        const { Image } = require("@expo/ui/swift-ui");
         const {
           accessibilityLabel,
-          buttonStyle,
           frame,
           glassEffect,
-          menuIndicator,
-          menuStyle,
           tint,
         } = require("@expo/ui/swift-ui/modifiers");
         const actionModifiers = [
@@ -62,39 +72,19 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
 
         return (
           <>
-            <Host style={{ height: 38, width: 38 }}>
-              <Menu
-                label={
-                  <Image
-                    systemName="line.3.horizontal.decrease"
-                    size={18}
-                    modifiers={[...actionModifiers, accessibilityLabel("Sources and filters")]}
-                  />
-                }
-                modifiers={[
-                  menuStyle("button"),
-                  buttonStyle("plain"),
-                  menuIndicator("hidden"),
-                  tint(theme.foreground),
-                ]}
-              >
-                <Button
-                  label="All"
-                  onPress={() => setFilter("all")}
-                  systemImage={filter === "all" ? "checkmark" : "square.grid.2x2"}
-                />
-                <Button
-                  label="Unread"
-                  onPress={() => setFilter("unread")}
-                  systemImage={filter === "unread" ? "checkmark" : "circle"}
-                />
-                <Button
-                  label="Saved"
-                  onPress={() => setFilter("saved")}
-                  systemImage={filter === "saved" ? "checkmark" : "bookmark"}
-                />
-              </Menu>
-            </Host>
+            <IconMenuView
+              accessibilityLabel="Sources and filters"
+              symbol="line.3.horizontal.decrease"
+              items={FILTER_MENU.map((item) => ({
+                checked: filter === item.id,
+                icon: item.icon,
+                id: item.id,
+                title: item.title,
+              }))}
+              onSelect={({ nativeEvent }) => setFilter(nativeEvent.id as InboxFilter)}
+              style={{ height: 38, width: 38 }}
+              tintColor={theme.foreground}
+            />
             <Host style={{ height: 38, width: 38 }}>
               <Image
                 onPress={() => router.push("/(protected)/settings")}

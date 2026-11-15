@@ -9,8 +9,8 @@ export type EmptyStateIconProps = Omit<SvgProps, "width" | "height"> & {
   size?: number;
 };
 
-/** A 24-unit glyph drawn at 64px in the middle of the 192-unit circle. */
-const GLYPH_TRANSFORM = "translate(64 64) scale(2.6667)";
+/** A 24-unit glyph drawn at 88px in the middle of the 192-unit circle. */
+const GLYPH_TRANSFORM = "translate(52 52) scale(3.6667)";
 
 type EmptyStateIllustrationProps = EmptyStateIconProps & {
   isDarkTheme: boolean;

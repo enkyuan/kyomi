@@ -34,7 +34,10 @@ export function ImportOpmlScreen() {
             </View>
             {/* React Native has no `text-wrap: balance`, so the two lines are broken by hand. */}
             <Text
-              style={[FONT_STYLES.bodySmall, { color: theme.mutedForeground, textAlign: "center" }]}
+              style={[
+                FONT_STYLES.bodyMediumMedium,
+                { color: theme.mutedForeground, textAlign: "center" },
+              ]}
             >
               {"Bring your feeds over from another\nreader by importing an OPML file."}
             </Text>
@@ -189,14 +192,14 @@ function Finished({
               </Text>
               <Text
                 numberOfLines={2}
-                style={[FONT_STYLES.bodySmall, { color: theme.mutedForeground }]}
+                style={[FONT_STYLES.bodyMediumMedium, { color: theme.mutedForeground }]}
               >
                 {failure.message}
               </Text>
             </View>
           ))}
           {summary.failures.length > MAX_FAILURES_SHOWN ? (
-            <Text style={[FONT_STYLES.bodySmall, { color: theme.mutedForeground }]}>
+            <Text style={[FONT_STYLES.bodyMediumMedium, { color: theme.mutedForeground }]}>
               {`and ${summary.failures.length - MAX_FAILURES_SHOWN} more`}
             </Text>
           ) : null}

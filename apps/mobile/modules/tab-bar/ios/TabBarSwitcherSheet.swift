@@ -104,7 +104,6 @@ struct TabBarSwitcherSheet: View {
           .transition(.opacity)
       } else {
         chips
-          .padding(.horizontal, TabBarMetrics.sheetCloseInset)
           .padding(.top, Self.listTop)
           .padding(.bottom, 8)
 
@@ -210,8 +209,11 @@ struct TabBarSwitcherSheet: View {
   /// text) the row scrolls sideways instead.
   private var chips: some View {
     ViewThatFits(in: .horizontal) {
-      chipRow
+      chipRow.padding(.horizontal, TabBarMetrics.sheetCloseInset)
+      // The scroller spans the sheet's full width and carries the inset as content margin, so
+      // chips run off the sheet's edge instead of being cut at the padding.
       ScrollView(.horizontal) { chipRow }
+        .contentMargins(.horizontal, TabBarMetrics.sheetCloseInset, for: .scrollContent)
         .scrollIndicators(.hidden)
     }
     .frame(maxWidth: .infinity, alignment: .leading)

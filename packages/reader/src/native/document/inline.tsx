@@ -13,6 +13,9 @@ type InlineContext = Pick<ReaderNativeContextValue, "theme" | "host" | "footnote
 
 const QUOTE_OPEN = "“";
 const QUOTE_CLOSE = "”";
+const NO_BREAK_SPACE = "\u00A0";
+/** Where a chip may wrap. It sits outside the tint, so a line that ends here paints nothing past its last word. */
+const BREAK_POINT = "\u200B";
 const CODE_PAD = " ";
 
 function plainText(children: readonly ReaderInline[]): string | null {
@@ -22,6 +25,45 @@ function plainText(children: readonly ReaderInline[]): string | null {
     out += child.value;
   }
   return out;
+}
+
+/**
+ * Inline code and keyboard keys: a tinted chip. Nested `Text` has no padding or radius, so the
+ * breathing room is a narrow no-break space at each end, set in the body face (the mono face has no
+ * such glyph and would draw a full-width cell). Surrounding whitespace is trimmed so it doesn't
+ * double the padding, and a value with nothing visible draws no chip.
+ */
+function renderChip(
+  value: string,
+  ctx: InlineContext,
+  key: string,
+  face: Pick<TextStyle, "fontFamily" | "fontSize">,
+): ReactNode {
+  const text = value.trim();
+  if (text === "") return value;
+  const tint = { backgroundColor: ctx.theme.colors.codeBackground, fontSize: face.fontSize };
+  const words = text.split(/ +/);
+  // One tinted span per word. A space that wraps inside a tinted span is painted out to the line's
+  // right edge, so the tint carries the gap as a no-break space and the break itself is untinted.
+  return (
+    <Text key={key}>
+      {words.map((word, index) => {
+        const first = index === 0;
+        const last = index === words.length - 1;
+        return (
+          // oxlint-disable-next-line react/no-array-index-key -- words never reorder
+          <Text key={index}>
+            {first ? null : BREAK_POINT}
+            <Text style={tint}>
+              {first ? CODE_PAD : null}
+              <Text style={{ fontFamily: face.fontFamily }}>{word}</Text>
+              {last ? CODE_PAD : NO_BREAK_SPACE}
+            </Text>
+          </Text>
+        );
+      })}
+    </Text>
+  );
 }
 
 function renderFootnoteRef(
@@ -125,11 +167,19 @@ function renderFormat(
     case "small":
       style.fontSize = theme.fontSize * 0.85;
       break;
-    case "keyboard":
+    case "keyboard": {
+      const keys = plainText(node.children);
+      if (keys !== null) {
+        return renderChip(keys, ctx, key, {
+          fontFamily: theme.fonts.mono,
+          fontSize: theme.fontSize * 0.86,
+        });
+      }
       style.fontFamily = theme.fonts.mono;
       style.fontSize = theme.fontSize * 0.86;
       style.backgroundColor = theme.colors.codeBackground;
       break;
+    }
     case "subscript":
     case "superscript": {
       const text = plainText(node.children);
@@ -246,20 +296,10 @@ function renderNode(node: ReaderInline, ctx: InlineContext, key: string): ReactN
     case "break":
       return "\n";
     case "code":
-      return (
-        <Text
-          key={key}
-          style={{
-            backgroundColor: theme.colors.codeBackground,
-            fontFamily: theme.fonts.mono,
-            fontSize: theme.fontSize * 0.88,
-          }}
-        >
-          {/* Nested `Text` has no padding or radius; narrow no-break spaces inside the span give the
-              chip the same breathing room as the web reader's `padding: 0.1em 0.3em`. */}
-          {`${CODE_PAD}${node.value}${CODE_PAD}`}
-        </Text>
-      );
+      return renderChip(node.value, ctx, key, {
+        fontFamily: theme.fonts.mono,
+        fontSize: theme.fontSize * 0.88,
+      });
     case "math":
       return renderMath(node, ctx, key);
     case "image":

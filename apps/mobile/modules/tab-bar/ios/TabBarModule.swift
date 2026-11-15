@@ -98,6 +98,22 @@ public class TabBarModule: Module {
         view.model.searchPlaceholder = placeholder ?? "Search"
       }
     }
+
+    View(IconMenuView.self) {
+      Events("onSelect")
+
+      Prop("items") { (view: IconMenuView, items: [IconMenuItemRecord]) in
+        view.items = items
+      }
+
+      Prop("symbol") { (view: IconMenuView, symbol: String?) in
+        view.symbol = symbol
+      }
+
+      Prop("tintColor") { (view: IconMenuView, color: UIColor?) in
+        view.tint = color
+      }
+    }
   }
 }
 
@@ -147,7 +163,7 @@ struct SwitcherRecord: Record {
     TabBarSwitcher(
       title: title, label: label, hint: hint, icon: icon.icon,
       editIcon: editIcon.icon, sortIcon: sortIcon.icon, reorderIcon: reorderIcon.icon,
-      renameIcon: renameIcon.icon, deleteIcon: deleteIcon.icon, importIcon: importIcon.icon, addIcon: addIcon.icon
+      importIcon: importIcon.icon, renameIcon: renameIcon.icon, deleteIcon: deleteIcon.icon, addIcon: addIcon.icon
     )
   }
 }

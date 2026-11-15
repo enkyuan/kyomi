@@ -104,6 +104,16 @@ export const CircleCheckFilledNativeIcon: BlodeNativeIcon = {
   ],
 };
 
+export const CircleDashedNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M21.0000 12.0000A9 9 0 0 1 20.5046 14.9448M18.4123 18.3153A9 9 0 0 1 15.9930 20.0657M12.1372 20.9990A9 9 0 0 1 9.1852 20.5485M5.7832 18.5078A9 9 0 0 1 3.9961 16.1155M3.0042 12.2743A9 9 0 0 1 3.4096 9.3158M5.3982 5.8831A9 9 0 0 1 7.7630 4.0597M11.5886 3.0094A9 9 0 0 1 14.5530 3.3697M18.0156 5.3058A9 9 0 0 1 19.8748 7.6425M20.9833 11.4517A9 9 0 0 1 21.0000 12.0000",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
 export const ClockNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [
