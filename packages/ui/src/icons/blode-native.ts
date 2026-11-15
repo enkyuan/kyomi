@@ -379,6 +379,16 @@ export const SearchNativeIcon: BlodeNativeIcon = {
   ],
 };
 
+export const SortArrowUpDownNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M4 7c0-1.6569 1.3431-3 3-3s3 1.3431 3 3-1.3431 3-3 3-3-1.3431-3-3M4 17c0-1.6569 1.3431-3 3-3s3 1.3431 3 3-1.3431 3-3 3-3-1.3431-3-3M15 7.25l3-3 3 3M18 4.5v15M21 16.75l-3 3-3-3",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
 export const TextNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [{ d: "M4 5h16M4 12h8m-8 7h16", stroke: { linecap: "round", linejoin: "round" } }],

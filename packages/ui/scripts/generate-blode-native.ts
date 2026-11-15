@@ -45,6 +45,7 @@ const ICONS = [
   "ReceiptBill",
   "Rss",
   "Search",
+  "SortArrowUpDown",
   "Text",
   "TextCursorInput",
   "TitleCase",

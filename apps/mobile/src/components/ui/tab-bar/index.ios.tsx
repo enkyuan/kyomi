@@ -13,7 +13,7 @@ import {
   PageTextSearchNativeIcon,
   PlusCircleFilledNativeIcon,
   PlusNativeIcon,
-  TextCursorInputNativeIcon,
+  SortArrowUpDownNativeIcon,
   type BlodeNativeIcon,
 } from "@kyomi/ui/icons/blode-native";
 import { useOptionalTabBarMinimize } from "./hooks/use-minimize";
@@ -58,7 +58,7 @@ const SWITCHER: TabBarSwitcher = {
   hint: "Opens folders and feeds",
   icon: toTabBarIcon(ChevronGrabberVerticalNativeIcon),
   editIcon: toTabBarIcon(EditBigNativeIcon),
-  renameIcon: toTabBarIcon(TextCursorInputNativeIcon),
+  sortIcon: toTabBarIcon(SortArrowUpDownNativeIcon),
   addIcon: ADD_ICON,
 };
 
@@ -120,7 +120,7 @@ export function TabBar({
       onSwitcherFolderAction={({ nativeEvent: { action, folderId, name } }) => {
         if (action === "create") sources?.onCreateFolder(name);
         else if (action === "rename") sources?.onRenameFolder(folderId, name);
-        else if (action === "reorder") sources?.onReorderFolders(name.split("\n").filter(Boolean));
+        else if (action === "reorder") sources?.onReorderFolders(name.split("\n"));
         else sources?.onDeleteFolder(folderId);
       }}
       onSearchQueryChange={({ nativeEvent }) => onSearchQueryChange?.(nativeEvent.query)}
