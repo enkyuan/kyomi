@@ -5,9 +5,12 @@ import type { ArticleDetailDto } from "@kyomi/reader/schemas/article";
 
 /**
  * Native KDM reader flag. Build-time (`EXPO_PUBLIC_*`), so the reader never flips renderers mid-session.
- * Off by default: the DOM WebView reader stays the production path.
+ * On by default on iOS, where the native reader measured 0 hitches against the DOM reader's 5 on a
+ * long article. Set `EXPO_PUBLIC_KYOMI_NATIVE_READER=0` to fall back to the DOM WebView reader.
+ * Other platforms stay on DOM until they are measured.
  */
-export const NATIVE_READER_ENABLED = process.env.EXPO_PUBLIC_KYOMI_NATIVE_READER === "1";
+export const NATIVE_READER_ENABLED =
+  process.env.EXPO_OS === "ios" && process.env.EXPO_PUBLIC_KYOMI_NATIVE_READER !== "0";
 
 /** Approved API contract: the highest KDM version this client renders; absent or 0 means no document. */
 export const READER_DOCUMENT_VERSION_HEADER = "X-Kyomi-Document-Version";

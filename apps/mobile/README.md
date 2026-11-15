@@ -172,9 +172,10 @@ default-queue statement. A native development build is required after these chan
 
 ## Reader renderers and baseline measurement
 
-The reader has two body renderers. The DOM WebView reader (`article-body.dom.tsx`) is the default. The
-native KDM renderer (`@kyomi/reader/native`, wired in `modules/reader/components/native-article-body.tsx`)
-is chosen only when **all** hold: `EXPO_PUBLIC_KYOMI_NATIVE_READER=1` at build time, the article carries
+The reader has two body renderers. The native KDM renderer (`@kyomi/reader/native`, wired in
+`modules/reader/components/native-article-body.tsx`) is the default on iOS; the DOM WebView reader
+(`article-body.dom.tsx`) is the default elsewhere. Native is chosen only when **all** hold: the build is
+iOS and `EXPO_PUBLIC_KYOMI_NATIVE_READER` is not `0` at build time, the article carries
 a document body, its `version` is one `isSupportedDocumentVersion` accepts, and it passes
 `readerDocumentSchema`. Anything else falls back to the DOM body. The request header that announces the
 supported version and the `bodyKind: "document"` member of `reader.selected` follow the approved API contract and live in `src/lib/reader-document.ts`
@@ -193,7 +194,7 @@ index (`reader-position` MMKV store). The article is validated against `articleD
 1. Build a development build (`bun run ios:device`) with
    `EXPO_PUBLIC_KYOMI_READER_METRICS=1 EXPO_PUBLIC_KYOMI_READER_FIXTURE=long`. The fixture swaps any
    opened article for a 400-paragraph article, rendered as HTML (DOM) and as KDM (native) so both
-   show identical content. Add `EXPO_PUBLIC_KYOMI_NATIVE_READER=1` for the native run.
+   show identical content. Native is the default on iOS; set `EXPO_PUBLIC_KYOMI_NATIVE_READER=0` for the DOM run.
 2. Open the article and read the `[reader-metrics]` console line (Metro log): `renderer`,
    `timeToFirstContentMs` (article data available → first content laid out; for the DOM path this is
    the first animation frame after React mounted in the WebView, so it understates WebView paint),
