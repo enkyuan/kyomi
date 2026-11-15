@@ -9,7 +9,7 @@ export const contentSourceSchema = z.enum([
   "link_only",
 ]);
 
-export const bodyKindSchema = z.enum(["html", "markdown", "text", "fallback"]);
+export const bodyKindSchema = z.enum(["html", "markdown", "text", "fallback", "document"]);
 
 const readerContentCommonSchema = z.object({
   contentStatus: z.enum(["ready", "partial", "failed"]),
@@ -64,7 +64,27 @@ const readerFallbackSchema = readerContentCommonSchema.extend({
   fallbackReason: z.enum(["extraction_failed", "timeout", "missing_content"]),
 });
 
+/**
+ * A compiled document the client declared support for with `x-kyomi-document-version`. The body
+ * it was compiled from stays populated (`fallbackBodyKind` names which), so a client falls back
+ * without refetching. `document` is validated by the renderer (`@kyomi/reader/document`), not
+ * here, so a document from a newer schema still parses and its fallback body renders.
+ */
+const readerDocumentBodySchema = readerContentCommonSchema.extend({
+  bodyKind: z.literal("document"),
+  document: z.record(z.string(), z.json()),
+  documentVersion: z.number().int().positive(),
+  compilerVersion: z.string(),
+  fallbackBodyKind: z.enum(["html", "markdown", "text"]),
+  contentHtml: z.string().nullable(),
+  contentMarkdown: z.string().nullable(),
+  contentText: z.string().nullable(),
+  fallbackSummary: z.null(),
+  fallbackReason: z.null(),
+});
+
 export const readerContentSchema = z.discriminatedUnion("bodyKind", [
+  readerDocumentBodySchema,
   readerHtmlSchema,
   readerMarkdownSchema,
   readerTextSchema,

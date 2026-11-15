@@ -6,6 +6,7 @@ import {
   deleteFolder,
   listFolders,
   markFolderReadStatus,
+  reorderFolders,
   updateFolder,
 } from "./operations";
 import type { UpdateFolderInput } from "./types";
@@ -14,6 +15,7 @@ import {
   folderIdParams,
   folderReadStatusResponse,
   folderResponse,
+  reorderFoldersBody,
   updateFolderBody,
 } from "./schemas";
 
@@ -40,6 +42,19 @@ export function registerFolderRoutes(app: Elysia) {
         return await listFolders(db, userId);
       },
       {
+        response: { 200: t.Array(folderResponse) },
+      },
+    )
+    .put(
+      "/folders/order",
+      async (context) => {
+        const { body, db, logger, userId } = v1HandlerContext<{ folderIds: string[] }>(context);
+        const ordered = await reorderFolders(db, userId, body.folderIds);
+        logger.info("folders.reordered", { userId, count: body.folderIds.length });
+        return ordered;
+      },
+      {
+        body: reorderFoldersBody,
         response: { 200: t.Array(folderResponse) },
       },
     )

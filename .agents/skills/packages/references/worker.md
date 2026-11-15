@@ -1,6 +1,6 @@
 # Worker package
 
-Use `packages/worker` for reusable queue, feed-ingestion, favicon, and sanitization contracts.
+Use `packages/worker` for reusable queue, feed-ingestion, favicon, and article-compiler contracts.
 
 ## Structure
 
@@ -10,7 +10,6 @@ src/
     queue/          Redis Stream job types, parsing, and consumers
     feed/           Fetch, parse, enrich, classify, and refresh behavior
     favicon/        SSRF-safe resolution and browser proxy URLs
-  sanitization/     Browser-safe article HTML policy
   document/         Node-only ingest compiler and its passes (linkedom)
   lib/              Article identity, safe URLs, entities, and feed text
 ```
@@ -22,13 +21,15 @@ src/
 - Keep feed lifecycle and network policy under `services/feed`; preserve finite resource and
   per-host limits.
 - Keep server-side favicon fetching separate from the browser-safe proxy URL export.
-- Keep `sanitization` browser-safe. Do not import Redis, database, queue, JSDOM, or API modules.
-  `document` may import `sanitization`, never the reverse.
-- Compile untrusted article HTML once, at ingest, with `compileArticleHtml`. Read paths re-apply only
+- Compile untrusted article bodies once, at ingest, with `compileArticleDocument` (HTML plus the
+  validated KDM document; async because Shiki loads grammars lazily) or `compileArticleHtml` when
+  only HTML is needed. Read paths re-apply only
   the policy; never run compiler passes on stored HTML, because pass 2 strips the compiler's own
   `data-kyomi-*` hints.
 - Changing the policy or a pass's output bumps `ARTICLE_HTML_SANITIZER_VERSION` and needs a
   recorded corpus baseline (`tests/api/fixtures/articles/corpus/README.md`).
+- Import the article policy from `@kyomi/reader/sanitization` and the KDM schema from
+  `@kyomi/reader/document`; `packages/reader` must never import `@kyomi/worker`.
 - Never import `apps/api` internals from this package.
 - Export only stable contracts through declared `@kyomi/worker` subpaths.
 - Preserve job compatibility deliberately during producer/consumer rollouts. Define retirement

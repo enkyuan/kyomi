@@ -1,0 +1,432 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://data.example/reports/q3-revenue"
+  },
+  "compiler": {
+    "version": "article-html-v3+kdm.1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Q3 revenue",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 44,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": [],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Revenue grew in every region except the west."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "caption": [
+        {
+          "type": "text",
+          "value": "Q3 revenue by region, in thousands"
+        }
+      ],
+      "head": [
+        [
+          {
+            "header": true,
+            "rowSpan": 2,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Region"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": true,
+            "colSpan": 2,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Revenue"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "header": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "2025"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "2026"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "body": [
+        [
+          {
+            "header": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "North"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "1,204"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "1,388"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "header": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "South"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "986"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "1,102"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "header": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "West"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "910"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "870"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "foot": [
+        [
+          {
+            "header": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Total"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "3,100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "3,360"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Notes on the regions:"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "head": [
+        [
+          {
+            "header": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Region"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": true,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Notes"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "body": [
+        [
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "West"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "list",
+                "ordered": false,
+                "items": [
+                  {
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Lost one large account."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "checked": null,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Pipeline recovering."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "North"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "header": false,
+            "children": [
+              {
+                "type": "figure",
+                "placement": "content",
+                "image": {
+                  "src": "https://data.example/charts/north-sparkline.png",
+                  "alt": "North trend",
+                  "width": 120,
+                  "height": 24
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {},
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

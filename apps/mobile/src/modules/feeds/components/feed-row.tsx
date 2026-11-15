@@ -4,6 +4,7 @@ import { DotGridIcon } from "@/components/icons";
 import { FONT_STYLES } from "@/theme/fonts";
 import { FeedFavicon } from "@modules/articles/components/feed-favicon";
 import { HeaderActionButton } from "@ui/header";
+import { Skeleton } from "@ui/skeleton";
 import type { Folder, SubscribedFeed } from "../lib/api";
 
 const REMOVE_ACTION = "remove";
@@ -72,6 +73,25 @@ export function FeedRow({ feed, onMove, onUnfollow, otherFolders }: FeedRowProps
       >
         <HeaderActionButton icon={<DotGridIcon size={18} />} label={`Actions for ${title}`} />
       </MenuView>
+    </View>
+  );
+}
+
+type FeedRowSkeletonProps = {
+  /** Varies per row so a column of placeholders reads as text, not identical bars. */
+  readonly titleWidth: `${number}%`;
+};
+
+/** A `FeedRow` while its folder loads: the same height, favicon, title and menu slots. */
+export function FeedRowSkeleton({ titleWidth }: FeedRowSkeletonProps) {
+  return (
+    <View className="min-h-14 flex-row items-center gap-3 px-5 py-2">
+      {/* A squircle like the favicon it stands in for. */}
+      <Skeleton height={32} radius={8} width={32} />
+      <View className="min-w-0 flex-1">
+        <Skeleton height={16} radius={4} width={titleWidth} />
+      </View>
+      <Skeleton height={38} radius="round" width={38} />
     </View>
   );
 }

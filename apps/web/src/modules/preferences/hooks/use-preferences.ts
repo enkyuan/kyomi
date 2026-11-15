@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { toastManager } from "@kyomi/ui/components/toast";
+import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { useAuth } from "@integrations/better-auth/provider";
 
 type PreferenceUpdate<TPreferences extends object> = {
@@ -66,12 +68,20 @@ export function usePreferences<TPreferences extends object>({
 
   const updateMutation = useMutation({
     mutationFn: ({ patch }: PreferenceUpdate<TPreferences>) => updateFn({ data: patch }),
-    onError: (_error, variables) => {
+    onError: (error, variables) => {
       if (variables.requestId !== latestRequestIdRef.current) {
         return;
       }
       queryClient.setQueryData(queryKey, variables.rollback);
       onCacheWrite?.(variables.rollback, user?.id);
+      logClientError("preferences.update", error);
+      toastManager.add({
+        // One id so rapid failures (a slider drag) update a single toast instead of stacking.
+        id: "preferences-update-failed",
+        title: "Couldn't save your settings",
+        description: getUserSafeErrorMessage(error, "Your previous settings were restored."),
+        type: "error",
+      });
     },
     onSuccess: (serverPreferences, variables) => {
       if (variables.requestId !== latestRequestIdRef.current) {

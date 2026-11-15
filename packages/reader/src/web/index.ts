@@ -1,4 +1,7 @@
-export { ReaderContent } from "./components/content";
+export { ReaderContent, type ReaderDocumentContent } from "./components/content";
+export { hasReaderContentBody } from "./components/content-body";
+export { RenderDocument } from "./document";
+export { parseReaderDocument, MAX_SUPPORTED_READER_DOCUMENT_VERSION } from "./document/resolve";
 export { RenderHtml } from "./html";
 export { sanitizeReaderArticleHtml } from "./html/purify";
 export { RenderMarkdown } from "./components/markdown";

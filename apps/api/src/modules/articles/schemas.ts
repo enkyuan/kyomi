@@ -30,6 +30,7 @@ const readerContentCommonProperties = {
     t.Literal("markdown"),
     t.Literal("text"),
     t.Literal("fallback"),
+    t.Literal("document"),
   ]),
   contentBaseUrl: t.Union([t.String(), t.Null()]),
   title: t.Union([t.String(), t.Null()]),
@@ -43,6 +44,21 @@ const readerContentCommonProperties = {
   extractionErrorMessage: t.Union([t.String(), t.Null()]),
   shouldExtract: t.Boolean(),
 } as const;
+
+const readerDocumentBodySchema = t.Object({
+  ...readerContentCommonProperties,
+  bodyKind: t.Literal("document"),
+  /** Kyomi Document Model JSON; the shape is `readerDocumentSchema` in `@kyomi/reader/document`. */
+  document: t.Record(t.String(), t.Unknown()),
+  documentVersion: t.Integer(),
+  compilerVersion: t.String(),
+  fallbackBodyKind: t.Union([t.Literal("html"), t.Literal("markdown"), t.Literal("text")]),
+  contentHtml: t.Union([t.String(), t.Null()]),
+  contentMarkdown: t.Union([t.String(), t.Null()]),
+  contentText: t.Union([t.String(), t.Null()]),
+  fallbackSummary: t.Null(),
+  fallbackReason: t.Null(),
+});
 
 const readerFallbackReasonSchema = t.Union([
   t.Literal("extraction_failed"),
@@ -91,6 +107,7 @@ const readerFallbackSchema = t.Object({
 });
 
 export const readerContentContractSchema = t.Union([
+  readerDocumentBodySchema,
   readerHtmlSchema,
   readerMarkdownSchema,
   readerTextSchema,

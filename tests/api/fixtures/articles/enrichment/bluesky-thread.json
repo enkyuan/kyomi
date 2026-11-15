@@ -1,0 +1,31 @@
+{
+  "thread": {
+    "$type": "app.bsky.feed.defs#threadViewPost",
+    "post": {
+      "uri": "at://did:plc:abc/app.bsky.feed.post/3kabc",
+      "author": {
+        "did": "did:plc:abc",
+        "handle": "alice.bsky.social",
+        "displayName": "Alice",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:abc/a@jpeg"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "text": "Shipping the reader today.",
+        "createdAt": "2026-10-20T12:30:00.000Z"
+      },
+      "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+          {
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/1@jpeg",
+            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/1@jpeg",
+            "alt": "A screenshot",
+            "aspectRatio": { "width": 1200, "height": 800 }
+          },
+          { "fullsize": "javascript:alert(1)", "alt": "bad" }
+        ]
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, mock, test } from "bun:test";
-import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/worker/sanitization";
+import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import { runArticleExtractionForUser } from "@modules/articles/reader/extraction/workflow";
 import { cacheRow, createExtractionDb, PERFORMANCE_DEV_LINEAR_FIXTURE } from "./workflow-harness";
 

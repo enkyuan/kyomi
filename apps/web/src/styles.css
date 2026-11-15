@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @source "../../../packages/ui/src";
+@source "../../../packages/reader/src";
 @plugin "@tailwindcss/typography";
 @import "@fontsource-variable/inter";
 @import "@fontsource/jetbrains-mono/400.css";

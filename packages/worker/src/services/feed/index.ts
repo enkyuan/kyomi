@@ -1,4 +1,5 @@
 export { runFeedRefresh } from "./refresh";
+export { attachItemDocuments } from "./documents";
 export { parseFeedDocument } from "./parse";
 export { discoverFeedUrlFromHtml } from "./discover-url";
 export { FEED_FETCH_ACCEPT, fetchFeedDocument } from "./fetch";

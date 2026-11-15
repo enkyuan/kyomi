@@ -4,14 +4,14 @@ import {
   normalizeSanitizedArticleRoot,
   sanitizeArticleHtmlFragment,
   stripReservedArticleMarkup,
-} from "@kyomi/worker/sanitization";
+} from "@kyomi/reader/sanitization";
 import { compileArticleHtml, type CompileDiagnostics } from "@kyomi/worker/document";
 import { JSDOM } from "jsdom";
 
 export { ARTICLE_HTML_SANITIZER_VERSION };
 
 /**
- * Article HTML sanitizer (see `@kyomi/worker/sanitization`).
+ * Article HTML sanitizer (see `@kyomi/reader/sanitization`).
  *
  * Configured to:
  * - Allow article-safe structural tags including `div` for publisher layout

@@ -64,21 +64,20 @@ function getStepModifiers(active: boolean) {
   ];
 }
 
+// Gaps between the sheet's blocks, in points. Every stack on these screens sets `spacing` to 0, so
+// these are the whole gap: an unset `spacing` falls back to SwiftUI's ~8pt default on top of them.
+// They match the Android screen (icon 20 title 6 subtitle 24 field).
+const SUBTITLE_TOP = 6;
+const FIELD_TOP = 24;
+
 type StepHeaderProps = {
   title: string;
   subtitle: string;
   subtitleSize: number;
-  subtitleTopPadding?: number;
   theme: EmailStepTheme;
 };
 
-function StepHeader({
-  title,
-  subtitle,
-  subtitleSize,
-  subtitleTopPadding = 1,
-  theme,
-}: StepHeaderProps) {
+function StepHeader({ title, subtitle, subtitleSize, theme }: StepHeaderProps) {
   return (
     <>
       <Text
@@ -97,7 +96,7 @@ function StepHeader({
 
       <Text
         modifiers={[
-          padding({ top: subtitleTopPadding }),
+          padding({ top: SUBTITLE_TOP }),
           font({
             family: FONT_FAMILIES.inter.medium,
             size: subtitleSize,
@@ -172,8 +171,8 @@ export function EmailFormStep({
   const validationMessage = errorMessage ?? "Check your email address and try again.";
 
   return (
-    <VStack alignment="leading" modifiers={[FULL_WIDTH]}>
-      <VStack alignment="leading" modifiers={getStepModifiers(active)}>
+    <VStack alignment="leading" spacing={0} modifiers={[FULL_WIDTH]}>
+      <VStack alignment="leading" spacing={0} modifiers={getStepModifiers(active)}>
         <StepHeader
           title="Continue with Email"
           subtitle="Sign in or sign up to get started"
@@ -209,7 +208,7 @@ export function EmailFormStep({
             accessibilityLabel("Email address"),
             accessibilityHint(invalid ? validationMessage : "Enter your email address."),
 
-            padding({ top: 24 }),
+            padding({ top: FIELD_TOP }),
           ]}
         />
       </VStack>
@@ -254,17 +253,16 @@ export function OTPFormStep({
   const validationMessage = errorMessage ?? "Enter the 6-digit code and try again.";
 
   return (
-    <VStack alignment="leading" modifiers={[FULL_WIDTH]}>
-      <VStack alignment="leading" modifiers={getStepModifiers(active)}>
+    <VStack alignment="leading" spacing={0} modifiers={[FULL_WIDTH]}>
+      <VStack alignment="leading" spacing={0} modifiers={getStepModifiers(active)}>
         <StepHeader
           title="Enter your Passcode"
           subtitle="Check your inbox for a one-time passcode"
           subtitleSize={FONT_SIZES.body}
-          subtitleTopPadding={2}
           theme={theme}
         />
 
-        <ZStack modifiers={[FULL_WIDTH, padding({ top: 24 })]}>
+        <ZStack modifiers={[FULL_WIDTH, padding({ top: FIELD_TOP })]}>
           {/*
             The real native input. iOS will not insert a tapped one-time-code suggestion into a
             field drawn with clear text or tint, so it keeps default colours and is instead clipped

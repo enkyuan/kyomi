@@ -10,7 +10,7 @@ export type DiscoveredFeed = {
   isSubscribed: boolean;
 };
 
-export type Folder = { id: string; name: string };
+export type Folder = { id: string; name: string; createdAt: string };
 
 type FollowedFeed = { feedId: string };
 
@@ -87,6 +87,15 @@ export function createFolder(name: string) {
 export function renameFolder(input: { folderId: string; name: string }) {
   return fetchMobileApiJson<Folder>(`/api/v1/folders/${encodeURIComponent(input.folderId)}`, {
     body: JSON.stringify({ name: input.name }),
+    headers: { "content-type": "application/json" },
+    method: "PUT",
+  });
+}
+
+/** Saves the user's order of their folders; the response is the folders in that order. */
+export function reorderFolders(folderIds: readonly string[]) {
+  return fetchMobileApiJson<Folder[]>("/api/v1/folders/order", {
+    body: JSON.stringify({ folderIds }),
     headers: { "content-type": "application/json" },
     method: "PUT",
   });

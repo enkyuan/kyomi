@@ -1,5 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { articleExtractionCache } from "@kyomi/db";
+import { toStoredDocumentColumns, type StoredDocument } from "@kyomi/worker/lib/stored-document";
 import { eq } from "drizzle-orm";
 
 type DB = typeof db;
@@ -59,6 +60,7 @@ export async function readFreshExtractionCache(
       text: string;
       sanitizerVersion: string | null;
       rawHtml: string | null;
+      document: StoredDocument | null;
       finalUrl: string | null;
     }
   | { kind: "failed"; errorCode: string; message: string }
@@ -71,6 +73,9 @@ export async function readFreshExtractionCache(
       contentText: articleExtractionCache.contentText,
       sanitizerVersion: articleExtractionCache.sanitizerVersion,
       rawHtml: articleExtractionCache.rawHtml,
+      document: articleExtractionCache.document,
+      documentVersion: articleExtractionCache.documentVersion,
+      compilerVersion: articleExtractionCache.compilerVersion,
       finalUrl: articleExtractionCache.finalUrl,
       errorCode: articleExtractionCache.errorCode,
       errorMessage: articleExtractionCache.errorMessage,
@@ -91,6 +96,14 @@ export async function readFreshExtractionCache(
       text: row.contentText ?? "",
       sanitizerVersion: row.sanitizerVersion,
       rawHtml: row.rawHtml,
+      document:
+        row.document && row.documentVersion !== null && row.compilerVersion
+          ? {
+              document: row.document as StoredDocument["document"],
+              documentVersion: row.documentVersion,
+              compilerVersion: row.compilerVersion,
+            }
+          : null,
       finalUrl: row.finalUrl,
     };
   }
@@ -116,9 +129,11 @@ export async function upsertReadyExtractionCache(
     text: string;
     sanitizerVersion: string;
     rawHtml: string | null;
+    document?: StoredDocument | null;
   },
 ) {
   const now = new Date();
+  const documentColumns = toStoredDocumentColumns(input.document ?? null);
   await database
     .insert(articleExtractionCache)
     .values({
@@ -131,6 +146,9 @@ export async function upsertReadyExtractionCache(
       contentText: input.text,
       sanitizerVersion: input.sanitizerVersion,
       rawHtml: input.rawHtml,
+      document: documentColumns.document,
+      documentVersion: documentColumns.documentVersion,
+      compilerVersion: documentColumns.compilerVersion,
       status: "ready",
       errorCode: null,
       errorMessage: null,
@@ -147,6 +165,9 @@ export async function upsertReadyExtractionCache(
         contentText: input.text,
         sanitizerVersion: input.sanitizerVersion,
         rawHtml: input.rawHtml,
+        document: documentColumns.document,
+        documentVersion: documentColumns.documentVersion,
+        compilerVersion: documentColumns.compilerVersion,
         status: "ready",
         errorCode: null,
         errorMessage: null,
@@ -179,6 +200,9 @@ export async function upsertFailedExtractionCache(
       contentText: null,
       sanitizerVersion: null,
       rawHtml: null,
+      document: null,
+      documentVersion: null,
+      compilerVersion: null,
       status: "failed",
       errorCode: input.errorCode,
       errorMessage: input.message,
@@ -195,6 +219,9 @@ export async function upsertFailedExtractionCache(
         contentText: null,
         sanitizerVersion: null,
         rawHtml: null,
+        document: null,
+        documentVersion: null,
+        compilerVersion: null,
         status: "failed",
         errorCode: input.errorCode,
         errorMessage: input.message,

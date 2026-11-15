@@ -1,11 +1,4 @@
-import type { ReaderContent } from "@kyomi/reader";
-import type { ArticleDetailDto, ArticleListItemDto } from "@kyomi/reader/schemas/article";
+import type { ArticleDetailDto } from "@kyomi/reader/schemas/article";
 
-export type ReaderArticle = ArticleListItemDto & {
-  readonly imageUrl: string | null;
-  /** Where the user stopped reading, for restore. Null when nothing was recorded. */
-  readonly readingPosition?: ArticleDetailDto["readingPosition"];
-  readonly reader: {
-    readonly selected: ReaderContent;
-  };
-};
+/** An article as the reader screen holds it: the validated detail the API returns. */
+export type ReaderArticle = ArticleDetailDto;

@@ -1,4 +1,4 @@
-import { parseSrcset, serializeSrcset } from "../../sanitization/srcset";
+import { parseSrcset, serializeSrcset } from "@kyomi/reader/sanitization";
 import { resolveHttpUrl, type ArticlePass, type CompileContext } from "../context";
 
 const ANCHOR_PREFIX = "kyomi-";

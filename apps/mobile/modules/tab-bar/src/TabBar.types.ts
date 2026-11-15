@@ -29,9 +29,9 @@ export type TabBarSwitcher = {
   readonly label: string;
   readonly hint: string;
   readonly icon: TabBarIcon;
-  /** Glyphs of the sheet's chips: toggle deleting folders, toggle renaming them, and add one. */
+  /** Glyphs of the sheet's chips: edit the folders (select and delete), sort them, and add one. */
   readonly editIcon: TabBarIcon;
-  readonly renameIcon: TabBarIcon;
+  readonly sortIcon: TabBarIcon;
   readonly addIcon: TabBarIcon;
 };
 
@@ -40,11 +40,21 @@ export type TabBarSwitcherFolder = {
   readonly id: string;
   readonly name: string;
   readonly feedCount: number;
+  /** ISO instant the folder was made, for sorting by age. */
+  readonly createdAt: string;
 };
 
-/** What was done to a folder in the switcher sheet. `create` has no `folderId`; `open` and `delete` no `name`. */
+/** A feed filed in a folder, listed when the sheet opens that folder. */
+export type TabBarSwitcherFeed = {
+  readonly id: string;
+  readonly folderId: string;
+  readonly title: string;
+  readonly faviconUrl?: string;
+};
+
+/** What was done to a folder in the switcher sheet. `create` has no `folderId`; `delete` no `name`; `reorder` has neither, and its `name` is the folder ids in their new order, one per line. */
 export type TabBarSwitcherFolderAction = {
-  readonly action: "open" | "create" | "rename" | "delete";
+  readonly action: "create" | "rename" | "delete" | "reorder";
   readonly folderId: string;
   readonly name: string;
 };
@@ -68,6 +78,7 @@ export type TabBarViewProps = ViewProps & {
   readonly selectedIndex: number;
   readonly switcher?: TabBarSwitcher;
   readonly switcherFolders?: readonly TabBarSwitcherFolder[];
+  readonly switcherFeeds?: readonly TabBarSwitcherFeed[];
   readonly onSwitcherFolderAction?: (
     event: NativeSyntheticEvent<TabBarSwitcherFolderAction>,
   ) => void;

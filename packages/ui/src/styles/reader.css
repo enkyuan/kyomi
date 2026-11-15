@@ -1236,3 +1236,124 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/*
+ * Document renderer (packages/reader/src/web/document). It emits the same semantic markup and
+ * `data-reader-*` hooks as the HTML path, so only what the compiled model adds lives here.
+ */
+
+/* Stored code tokens: both theme colours are custom properties; the scheme picks one. */
+.reader-content .article-body .reader-token {
+  color: var(--rt-light, inherit);
+}
+
+:is(.dark, [data-color-scheme="dark"]) .reader-content .article-body .reader-token {
+  color: var(--rt-dark, var(--rt-light, inherit));
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-line[data-highlighted] {
+  display: inline-block;
+  width: calc(100% + 2 * var(--reader-code-inline-pad));
+  margin-inline: calc(-1 * var(--reader-code-inline-pad));
+  padding-inline: var(--reader-code-inline-pad);
+  background: color-mix(in srgb, var(--foreground) 7%, transparent);
+}
+
+/* KaTeX output scrolls inside its own box instead of widening the article. */
+.reader-content .article-body [data-reader-math="block"] {
+  margin: 1.1em 0;
+  overflow: auto hidden;
+  overscroll-behavior-x: contain;
+}
+
+.reader-content .article-body [data-reader-math="block"] .katex-display {
+  margin: 0;
+}
+
+.reader-content .article-body [data-reader-table] {
+  margin: 1.1em 0;
+}
+
+.reader-content .article-body [data-reader-table] table {
+  margin: 0;
+}
+
+/* Author intent for media width. Breakouts only where the gutter has room; floats from sm up. */
+@media (min-width: 48rem) {
+  .reader-content .article-body [data-reader-placement="wide"] {
+    margin-inline: -1.5rem;
+    width: auto;
+  }
+
+  .reader-content .article-body [data-reader-placement="full"] {
+    margin-inline: -2rem;
+    width: auto;
+  }
+}
+
+@media (min-width: 40rem) {
+  .reader-content .article-body [data-reader-placement="start"],
+  .reader-content .article-body [data-reader-placement="end"] {
+    width: min(45%, 16rem);
+    margin-block: 0.25rem 0.75rem;
+  }
+
+  .reader-content .article-body [data-reader-placement="start"] {
+    float: left;
+    clear: left;
+    margin-inline: 0 1.25rem;
+  }
+
+  .reader-content .article-body [data-reader-placement="end"] {
+    float: right;
+    clear: right;
+    margin-inline: 1.25rem 0;
+  }
+}
+
+.reader-content .article-body [data-reader-gallery] figcaption,
+.reader-content .article-body [data-reader-gallery] [data-reader-figure-caption] {
+  font-size: 0.9rem;
+}
+
+.reader-content .article-body blockquote[data-reader-pull-quote] {
+  margin-block: 2em;
+  border-left: 0;
+  padding-left: 0;
+  color: var(--reader-ink-strong);
+  font-size: 1.35em;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.reader-content .article-body blockquote[data-reader-pull-quote] > p {
+  margin: 0;
+}
+
+.reader-content .article-body [data-reader-callout] {
+  border-radius: 0 8px 8px 0;
+}
+
+.reader-content .article-body [data-reader-footnotes] ol {
+  padding-left: 1.4rem;
+}
+
+.reader-content .article-body [data-reader-footnotes] li > :is(p, ul, ol) {
+  margin-block: 0.4em;
+}
+
+.reader-content .article-body [data-reader-footnote-backref] {
+  margin-inline-start: 0.35em;
+  text-decoration: none;
+}
+
+.reader-content .article-body [data-reader-footnote-ref] > a {
+  padding-inline: 0.1em;
+  text-decoration: none;
+}
+
+.reader-content .article-body [data-reader-html-block] > .article-body {
+  font-size: inherit;
+}

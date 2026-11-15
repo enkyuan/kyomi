@@ -147,30 +147,17 @@ and low-alpha selected surface.
 
 ## Article lists
 
-On iOS, `modules/article-list` hosts a UIKit collection view with reusable SwiftUI article rows.
-Android and the web fallback use Legend List. Article queries, filters, actions, and row formatting
-remain in TypeScript under `src/modules/articles` and `src/modules/inbox`.
+Inbox and Recents render with Legend List on every platform. Article queries, filters, actions, and
+row formatting live in TypeScript under `src/modules/articles` and `src/modules/inbox`.
 
-- `useNativeListSync` serializes incremental row operations and paging together, coalesces pending
-  state, and retries one failed delivery with a full reset. A scope/filter change resets to the top.
-- Native updates preserve the first surviving visible article and its offset. Content-only edits
-  reconfigure the existing snapshot; insertions, removals, and reorderings update its identifiers.
-- Pull to refresh uses the query's refetch state on every renderer, including empty lists. A page
-  hidden entirely by a local filter advances to the next page until an article appears, the server
-  is exhausted, or a request fails. Empty-page errors wait for an explicit refresh; populated native
-  lists retry failed paging on the next drag.
-- The native handle offers `scrollToItem(id, animated)` and `scrollToOffset(offset, animated)`.
-  `onVisibleItemsChange` reports visible IDs in display order only when that set changes. Ordinary
-  header/tab-bar scroll effects stay on the Reanimated UI thread.
-- Native favicons share decoded thumbnails and in-flight requests. Failed URLs expire after 30
-  seconds; changing a row's favicon URLs resets its image identity.
+`modules/article-list` is a parked iOS Expo module: a UIKit collection view with reusable SwiftUI
+article rows. No screen mounts it (the wiring was reverted in #133), and its unused TypeScript-side
+helpers (`useNativeListSync`, row and style mapping) have been removed; recover them from git
+history (for example commit `748072be`) if the list returns. Profile representative inbox sizes on
+a device before re-landing it.
 
-The native list is a vertical article/Recents renderer, not a general Legend List replacement.
-There are no current consumers for grids, horizontal lists, sticky sections, or chat/end anchoring.
-The inbox does not currently supply a list header; its collapsing header is a separate overlay.
-
-Use `bun run --cwd tests test:mobile` for the TypeScript contracts. On macOS this also compiles and
-executes the production Foundation-only Swift row models, reducer, and asynchronous pipeline; other platforms skip that test.
+Use `bun run --cwd tests test:mobile` for the mobile contracts. On macOS this also compiles and
+executes the parked module's Foundation-only Swift row models, reducer, and asynchronous pipeline; other platforms skip that test.
 The SwiftUI/Expo bridge still requires an iOS development build. Instruments points of interest in
 `ArticleListSignpost` distinguish decoding/reduction, snapshot application, and cell configuration.
 These counters are measurement hooks, not evidence of a frame-rate improvement by themselves.
@@ -182,3 +169,37 @@ Implementation references (accessed 2026-10-24):
 The bridge was checked against ExpoModulesCore 57.0.24, and native compilation uses Xcode 27.1.
 The explicit `.runOnQueue(.main)` follows the installed API rather than relying on documentation's
 default-queue statement. A native development build is required after these changes.
+
+## Reader renderers and baseline measurement
+
+The reader has two body renderers. The native KDM renderer (`@kyomi/reader/native`, wired in
+`modules/reader/components/native-article-body.tsx`) is the default on iOS; the DOM WebView reader
+(`article-body.dom.tsx`) is the default elsewhere. Native is chosen only when **all** hold: the build is
+iOS and `EXPO_PUBLIC_KYOMI_NATIVE_READER` is not `0` at build time, the article carries
+a document body, its `version` is one `isSupportedDocumentVersion` accepts, and it passes
+`readerDocumentSchema`. Anything else falls back to the DOM body. The request header that announces the
+supported version and the `bodyKind: "document"` member of `reader.selected` follow the approved API contract and live in `src/lib/reader-document.ts`
+(`documentVersion` must be 1..`READER_DOCUMENT_VERSION`; the parse runs once per fetched article).
+
+Link taps open `expo-web-browser`; long-pressing a link shares it. Images go through the reader image
+proxy via `expo-image` (thumbhash placeholders, zero transition under reduce motion); tapping opens the
+viewer. Footnote refs open a page-sheet modal. `html` blocks, math and unsnapshotted players render in
+`html-island.dom.tsx` (one DOM component each; players mount only after a tap). Scroll position restores
+from the server reading position when "Remember reading position" is on (the same
+`initialProgress` and `onReadingProgress` as the DOM body), and otherwise from the first visible row
+index (`reader-position` MMKV store). The article is validated against `articleDetailSchema` on fetch.
+
+### Measure DOM vs. native on a device
+
+1. Build a development build (`bun run ios:device`) with
+   `EXPO_PUBLIC_KYOMI_READER_METRICS=1 EXPO_PUBLIC_KYOMI_READER_FIXTURE=long`. The fixture swaps any
+   opened article for a 400-paragraph article, rendered as HTML (DOM) and as KDM (native) so both
+   show identical content. Native is the default on iOS; set `EXPO_PUBLIC_KYOMI_NATIVE_READER=0` for the DOM run.
+2. Open the article and read the `[reader-metrics]` console line (Metro log): `renderer`,
+   `timeToFirstContentMs` (article data available → first content laid out; for the DOM path this is
+   the first animation frame after React mounted in the WebView, so it understates WebView paint),
+   and `hermesHeapBefore/After` when Hermes exposes them. Repeat 5 times cold and 5 warm; compare medians.
+3. Memory: the WebView's memory is outside Hermes. In Xcode, Debug Navigator → Memory (or Instruments →
+   Allocations/VM Tracker) after fully scrolling the fixture; note the app total plus the
+   `com.apple.WebKit.WebContent` process for DOM. On Android use Android Studio Profiler → Memory.
+4. Scroll smoothness: Instruments → Core Animation / Hitches while flinging the fixture end to end.

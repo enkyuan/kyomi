@@ -161,7 +161,12 @@ export const env = createEnv({
     JOB_PROCESS_CONCURRENCY: z.coerce.number().int().positive().max(64).default(4),
     JOB_READ_COUNT: z.coerce.number().int().positive().max(256).default(10),
     JOB_STREAM_MAX_LENGTH: z.coerce.number().int().min(1_000).max(5_000_000).default(100_000),
-    JOB_STREAMS: csvFromEnv.default(["jobs:feed-refresh", "jobs:opml", "jobs:article-extraction"]),
+    JOB_STREAMS: csvFromEnv.default([
+      "jobs:feed-refresh",
+      "jobs:opml",
+      "jobs:article-extraction",
+      "jobs:document-enrichment",
+    ]),
     FEED_FETCH_HOST_LEASE_MS: z.coerce.number().int().min(1_000).max(60_000).default(5_000),
     FEED_FETCH_HOST_RETRY_DELAY_MS: z.coerce.number().int().min(10).max(5_000).default(250),
     /** Comma-separated Better Auth user ids allowed to call `PUT|DELETE /feeds/:feedId/admin`. */
@@ -195,6 +200,7 @@ export const env = createEnv({
     FEATURE_SOCIAL_MODE: booleanFromEnv.default(false),
     FEATURE_LINK_PREVIEWS: booleanFromEnv.default(false),
     FEATURE_SHARE_PREVIEWS: booleanFromEnv.default(false),
+    FEATURE_READER_DOCUMENT: booleanFromEnv.default(false),
     FEATURE_PUBLIC_API: booleanFromEnv.default(false),
     FEATURE_SELF_HOSTING_SETUP: booleanFromEnv.default(false),
 
@@ -264,6 +270,7 @@ export const env = createEnv({
     FEATURE_SOCIAL_MODE: process.env.FEATURE_SOCIAL_MODE,
     FEATURE_LINK_PREVIEWS: process.env.FEATURE_LINK_PREVIEWS,
     FEATURE_SHARE_PREVIEWS: process.env.FEATURE_SHARE_PREVIEWS,
+    FEATURE_READER_DOCUMENT: process.env.FEATURE_READER_DOCUMENT,
     FEATURE_PUBLIC_API: process.env.FEATURE_PUBLIC_API,
     FEATURE_SELF_HOSTING_SETUP: process.env.FEATURE_SELF_HOSTING_SETUP,
     PUBLIC_API_KEY_PREFIX: process.env.PUBLIC_API_KEY_PREFIX,

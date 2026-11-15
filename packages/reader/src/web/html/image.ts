@@ -7,7 +7,7 @@ import {
 import { dedupeFigureInlineCaptionNoise } from "./caption";
 import { cn, hasOnlyElementOrWhitespace, parsePositiveInt } from "./utils";
 
-const skeletonShimmerClassName =
+export const skeletonShimmerClassName =
   "animate-skeleton rounded-sm [--skeleton-highlight:--alpha(var(--color-white)/64%)] [background:linear-gradient(120deg,transparent_40%,var(--skeleton-highlight),transparent_60%)_var(--color-muted)_0_0/200%_100%_fixed] dark:[--skeleton-highlight:--alpha(var(--color-white)/4%)]";
 
 const INLINE_CONTEXT_TAGS = new Set([

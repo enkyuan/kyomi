@@ -2,6 +2,10 @@ import type { ReadingProgressDto, ReadingProgressUpdateBody } from "../schemas/a
 import type { ReaderContent } from "./types";
 
 export const READING_FLUSH_INTERVAL_MS = 10_000;
+/** Renderers report at most one progress sample this often while the reader scrolls. */
+export const READING_SAMPLE_INTERVAL_MS = 2_000;
+/** A final sample follows the last scroll event by this long, so the resting position is sent. */
+export const READING_SCROLL_END_MS = 150;
 export const READING_IDLE_TIMEOUT_MS = 30_000;
 export const READING_COMPLETE_THRESHOLD = 0.9;
 /** The reading line sits this far down the viewport. */
@@ -62,8 +66,10 @@ export function scrollTopForProgress(
  * A restore applies the stored position only when this key matches the content being rendered.
  * `ReaderContent` does not carry a sanitizer version today; one is used when present.
  */
-export function buildContentKey(reader: ReaderContent): string {
-  const { sanitizerVersion } = reader as ReaderContent & { sanitizerVersion?: string | null };
+export function buildContentKey(
+  reader: Pick<ReaderContent, "contentSource"> & { bodyKind: string },
+): string {
+  const { sanitizerVersion } = reader as typeof reader & { sanitizerVersion?: string | null };
   const source = reader.contentSource ?? reader.bodyKind;
   return `${source}:${sanitizerVersion || "none"}`.slice(0, CONTENT_KEY_MAX_LENGTH);
 }

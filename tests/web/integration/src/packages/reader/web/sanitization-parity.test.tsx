@@ -7,13 +7,13 @@ import {
   ARTICLE_EMBED_PROVIDERS,
   normalizeSanitizedArticleRoot,
   sanitizeArticleHtmlFragment,
-} from "@kyomi/worker/sanitization";
+} from "@kyomi/reader/sanitization";
 import { readerEmbedProviderSchema } from "@kyomi/reader/document";
 import { sanitizeReaderArticleHtml } from "@kyomi/reader/web";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "../../../../../../..");
 
-function viaWorkerPolicy(dirty: string): string {
+function viaPolicy(dirty: string): string {
   const tpl = document.createElement("template");
   tpl.innerHTML = sanitizeArticleHtmlFragment(dirty);
   normalizeSanitizedArticleRoot(tpl.content);
@@ -61,9 +61,9 @@ describe("sanitization policy parity", () => {
     expect(occurrences).toBe(1);
   });
 
-  test("the reader package does not own a second sanitizer implementation file", () => {
+  test("the worker package keeps no sanitizer implementation of its own", () => {
     expect(() =>
-      readFileSync(join(repoRoot, "packages/reader/src/sanitization/article-html.ts"), "utf8"),
+      readFileSync(join(repoRoot, "packages/worker/src/sanitization/article-html.ts"), "utf8"),
     ).toThrow();
   });
 
@@ -72,8 +72,8 @@ describe("sanitization policy parity", () => {
   });
 
   for (const [name, html] of Object.entries(fixtures)) {
-    test(`${name}: browser reader sanitizer matches the canonical worker policy`, () => {
-      expect(sanitizeReaderArticleHtml(html)).toBe(viaWorkerPolicy(html));
+    test(`${name}: browser reader sanitizer matches the canonical policy`, () => {
+      expect(sanitizeReaderArticleHtml(html)).toBe(viaPolicy(html));
     });
   }
 });

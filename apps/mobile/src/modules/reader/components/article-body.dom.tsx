@@ -3,7 +3,12 @@
 import { useEffect, useRef, useState, type CSSProperties, type RefObject } from "react";
 import type { DOMProps } from "expo/dom";
 import type { ReaderContent as ReaderContentModel } from "@kyomi/reader";
-import { progressFromScroll, scrollTopForProgress } from "@kyomi/reader/core";
+import {
+  READING_SAMPLE_INTERVAL_MS,
+  READING_SCROLL_END_MS,
+  progressFromScroll,
+  scrollTopForProgress,
+} from "@kyomi/reader/core";
 import { ReaderContent } from "@kyomi/reader/web";
 import { RssIcon } from "@kyomi/ui/icons/blode";
 import { createSquircleStyle } from "@kyomi/ui/lib/squircle";
@@ -91,10 +96,10 @@ const MOBILE_READER_STYLES = String.raw`
   .mobile-reader__title {
     margin: 0;
     color: var(--reader-foreground);
-    font-family: "${FONT_FAMILIES.inter.bold}", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "${FONT_FAMILIES.inter.semibold}", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: clamp(${mobileReaderLayout.title.minFontSizePx}px, 7vw, ${mobileReaderLayout.title.maxFontSizePx}px);
-    font-weight: ${FONT_WEIGHTS.bold};
-    letter-spacing: -0.035em;
+    font-weight: ${FONT_WEIGHTS.semibold};
+    letter-spacing: -0.012em;
     line-height: ${mobileReaderLayout.title.lineHeight};
     overflow-wrap: anywhere;
     text-wrap: balance;
@@ -108,9 +113,9 @@ const MOBILE_READER_STYLES = String.raw`
   }
 
   .mobile-reader .reader-content {
-    --font-reader: "${FONT_FAMILIES.dmSans.regular}", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-reader: "${FONT_FAMILIES.newsreader.regular}", "Iowan Old Style", Charter, "Bitstream Charter", Georgia, serif;
     --font-sans: "${FONT_FAMILIES.inter.regular}", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-mono: "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --font-mono: "${FONT_FAMILIES.jetbrainsMono.regular}", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     --font-code: var(--font-mono);
     width: 100%;
     min-width: 0;
@@ -231,8 +236,6 @@ function ReaderSource({
   );
 }
 
-const READING_SAMPLE_INTERVAL_MS = 2_000;
-const READING_SCROLL_END_MS = 150;
 /** Images and fonts keep resizing the body after first layout; a restore follows them this long. */
 const RESTORE_SETTLE_MS = 4_000;
 

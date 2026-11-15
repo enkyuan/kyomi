@@ -62,7 +62,17 @@
           "assert": "text",
           "value": "mostly by deleting code"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "heading": 1,
+          "code": 1,
+          "image": 4,
+          "quote": 1,
+          "footnote": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "wordpress-embeds",
@@ -110,7 +120,13 @@
           "assert": "text",
           "value": "ten thousand feeds"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "embed": 4
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "ghost-cards",
@@ -173,7 +189,18 @@
           "assert": "text",
           "value": "built at deploy time"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "image": 4,
+          "embed": 1,
+          "callout": 1,
+          "details": 1,
+          "video": 1,
+          "audio": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "substack-post",
@@ -221,7 +248,15 @@
           "assert": "text",
           "value": "the tail is most of it"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "image": 1,
+          "quote": 1,
+          "footnote": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "medium-post",
@@ -259,7 +294,15 @@
           "assert": "text",
           "value": "Every network hop you remove"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "image": 1,
+          "code": 1,
+          "quote": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "hugo-chroma",
@@ -297,7 +340,14 @@
           "assert": "present",
           "selector": "[id='kyomi-fn-1']"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "code": 2,
+          "footnote": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "jekyll-rouge",
@@ -350,7 +400,15 @@
           "assert": "present",
           "selector": "[id='kyomi-fn-ci']"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "code": 2,
+          "definitionList": 1,
+          "footnote": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "mkdocs-admonitions",
@@ -388,7 +446,16 @@
           "assert": "absent",
           "selector": "pre a"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "code": 3,
+          "table": 1,
+          "callout": 1,
+          "details": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "docusaurus-docs",
@@ -426,7 +493,15 @@
           "assert": "text",
           "value": "validate the file without building"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "heading": 1,
+          "code": 1,
+          "callout": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "arxiv-latexml",
@@ -474,7 +549,16 @@
           "assert": "present",
           "selector": "cite"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "heading": 2,
+          "math": 4,
+          "image": 1,
+          "list": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "katex-blog",
@@ -512,7 +596,13 @@
           "assert": "text",
           "value": "\\begin{align}"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "math": 4
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "news-embeds",
@@ -580,7 +670,15 @@
           "assert": "absent",
           "selector": "a[href^='https://ads.example']"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "embed": 6,
+          "video": 1,
+          "audio": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "github-release",
@@ -628,7 +726,17 @@
           "assert": "no-text",
           "value": "Copied!"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "heading": 1,
+          "list": 1,
+          "code": 1,
+          "table": 1,
+          "details": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "tufte-sidenotes",
@@ -681,7 +789,14 @@
           "assert": "present",
           "selector": "[id='kyomi-fn1']"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "quote": 1,
+          "footnote": 3
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "newsletter-chrome",
@@ -729,7 +844,13 @@
           "assert": "absent",
           "selector": "a[href='#kyomi-queues']"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "heading": 2
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "data-tables",
@@ -772,7 +893,15 @@
           "assert": "present",
           "selector": "td img[width='120'][height='24']"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "table": 2,
+          "list": 1,
+          "image": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "rtl-multilingual",
@@ -810,7 +939,13 @@
           "assert": "present",
           "selector": "blockquote[lang='fr']"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "quote": 1
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "lazy-images",
@@ -853,7 +988,13 @@
           "assert": "absent",
           "selector": "img[src*='placeholder']"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "image": 5
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "code-zoo",
@@ -916,7 +1057,14 @@
           "assert": "absent",
           "selector": "script"
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "code": 8,
+          "embed": 3
+        },
+        "htmlBlocks": 0
+      }
     },
     {
       "name": "hostile-markup",
@@ -1039,7 +1187,16 @@
           "assert": "text",
           "value": "The end of the hostile fixture."
         }
-      ]
+      ],
+      "document": {
+        "elements": {
+          "heading": 2,
+          "code": 1,
+          "video": 1,
+          "math": 2
+        },
+        "htmlBlocks": 0
+      }
     }
   ]
 }

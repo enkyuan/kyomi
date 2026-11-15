@@ -7,6 +7,8 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { toastManager } from "@kyomi/ui/components/toast";
+import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { useAuth } from "@integrations/better-auth/provider";
 import { listFollowedFeeds, type FollowedFeed, updateFeedSubscription } from "../lib/api";
 import {
@@ -132,8 +134,14 @@ export function usePinnedFeedIds() {
       applyPinnedFeedState(queryClient, feedId, pinned);
       return { snapshot };
     },
-    onError: (_error, _variables, context) => {
+    onError: (error, variables, context) => {
       restoreFeedCacheSnapshot(queryClient, context?.snapshot);
+      logClientError("feeds.pin.update", error);
+      toastManager.add({
+        title: variables.pinned ? "Unable to pin feed" : "Unable to unpin feed",
+        description: getUserSafeErrorMessage(error, "Try again in a moment."),
+        type: "error",
+      });
     },
     onSettled: () => {
       void queryClient.invalidateQueries({ queryKey: queryKeys.feeds.followed });

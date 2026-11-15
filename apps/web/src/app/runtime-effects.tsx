@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useQueryClient } from "@tanstack/react-query";
+import { onlineManager, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
+import { toastManager } from "@kyomi/ui/components/toast";
 import { useAuth } from "@integrations/better-auth/provider";
 import { clearHotQueryCache } from "@lib/query/cache";
 import { prefetchInboxFlow } from "@modules/inbox/lib/navigation";
 
 const SERVICE_WORKER_URL = "/sw.js";
+const OFFLINE_TOAST_ID = "network-offline";
 
 type IdleWindow = Window & {
   requestIdleCallback?: (callback: () => void, options?: { timeout?: number }) => number;
@@ -34,6 +36,25 @@ export function AppRuntimeEffects() {
   const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
   const previousIsAuthenticated = useRef(isAuthenticated);
+
+  useEffect(() => {
+    // Only transitions toast: starting online (or offline) stays silent. The offline toast is
+    // persistent and replaced in place so a flapping connection never stacks toasts.
+    return onlineManager.subscribe((isOnline) => {
+      if (!isOnline) {
+        toastManager.add({
+          id: OFFLINE_TOAST_ID,
+          title: "You're offline",
+          description: "Changes won't save until you reconnect.",
+          timeout: 0,
+          type: "warning",
+        });
+        return;
+      }
+      toastManager.close(OFFLINE_TOAST_ID);
+      toastManager.add({ title: "Back online", timeout: 2000, type: "success" });
+    });
+  }, []);
 
   useEffect(() => {
     if (import.meta.env.DEV || !("serviceWorker" in navigator)) {

@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://blog.wp.example/2026/10/importer/"
+  },
+  "compiler": {
+    "version": "article-html-v3+kdm.1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Importer",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 29,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": [],
+    "embedProviders": ["youtube", "x", "vimeo", "spotify"]
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Here is the five-minute walkthrough of the new importer."
+        }
+      ]
+    },
+    {
+      "type": "embed",
+      "provider": "youtube",
+      "placement": "content",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "providerId": "dQw4w9WgXcQ",
+      "frameUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+      "aspectRatio": 1.7777777777777777,
+      "caption": [
+        {
+          "type": "text",
+          "value": "The importer, start to finish."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The announcement thread got a few good questions."
+        }
+      ]
+    },
+    {
+      "type": "embed",
+      "provider": "x",
+      "placement": "content",
+      "url": "https://x.com/exampledev/status/1840000000000000000"
+    },
+    {
+      "type": "embed",
+      "provider": "vimeo",
+      "placement": "content",
+      "url": "https://vimeo.com/76979871",
+      "providerId": "76979871",
+      "frameUrl": "https://player.vimeo.com/video/76979871?dnt=1",
+      "aspectRatio": 1.7777777777777777
+    },
+    {
+      "type": "embed",
+      "provider": "spotify",
+      "placement": "content",
+      "url": "https://open.spotify.com/episode/7makk4oTQel546B0PZlDM5",
+      "providerId": "episode/7makk4oTQel546B0PZlDM5",
+      "frameUrl": "https://open.spotify.com/embed/episode/7makk4oTQel546B0PZlDM5"
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "That is all for this release."
+        }
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {
+      "script": 1
+    },
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { toastManager } from "@kyomi/ui/components/toast";
+import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
 import { recordInboxItemView, updateInboxItemState, type InboxItem } from "../lib/api";
 import {
   getInboxItemCacheSnapshot,
@@ -20,7 +22,13 @@ type InboxItemStateMutationInput = {
   removeFromList?: boolean;
 };
 
-export function useInboxItemStateMutation() {
+/**
+ * `reportErrors: false` lets a caller that owns its own failure copy (for example the save action)
+ * handle the error instead of getting the generic toast as well.
+ */
+export function useInboxItemStateMutation({
+  reportErrors = true,
+}: { reportErrors?: boolean } = {}) {
   const queryClient = useQueryClient();
 
   return useMutation({
@@ -37,8 +45,17 @@ export function useInboxItemStateMutation() {
       updateInboxItemCaches(queryClient, itemId, patch, Boolean(removeFromList));
       return { snapshot };
     },
-    onError: (_error, variables, context) => {
+    onError: (error, variables, context) => {
       restoreInboxItemCacheSnapshot(queryClient, variables.itemId, context?.snapshot);
+      if (!reportErrors) {
+        return;
+      }
+      logClientError("articles.item-state.update", error);
+      toastManager.add({
+        title: "Unable to update article",
+        description: getUserSafeErrorMessage(error, "Try again in a moment."),
+        type: "error",
+      });
     },
     onSettled: (_data, _error, variables) => {
       void queryClient.invalidateQueries({ queryKey: queryKeys.inbox.items });

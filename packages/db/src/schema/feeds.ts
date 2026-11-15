@@ -110,6 +110,8 @@ export const folders = pgTable(
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
     name: text("name").notNull(),
+    /** The user's own order among their folders; folders never moved have none and list last, by name. */
+    position: integer("position"),
     isPinned: boolean("is_pinned").notNull().default(false),
     pinnedAt: timestamp("pinned_at"),
     createdAt: timestamp("created_at").notNull().defaultNow(),

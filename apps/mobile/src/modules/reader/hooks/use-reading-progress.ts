@@ -9,6 +9,7 @@ import {
   type ActiveTimer,
   type ReadingSession,
 } from "@kyomi/reader/core";
+import { toHtmlReaderContent } from "@/lib/reader-document";
 import type { ReaderArticle } from "../lib/article";
 import { applyReadingProgressToCache } from "../lib/progress-cache";
 import { readingProgressSync } from "../lib/progress-store";
@@ -33,7 +34,12 @@ export function useReadingProgress(article: ReaderArticle | undefined) {
   const sessionRef = useRef<{ session: ReadingSession; timer: ActiveTimer } | null>(null);
   const articleId = article?.id;
   const selected = article?.reader.selected;
-  const contentKey = useMemo(() => (selected ? buildContentKey(selected) : null), [selected]);
+  // Progress is a scroll fraction of the body, so the key names the article content, not the
+  // renderer: a document body keys like the HTML body it was compiled from.
+  const contentKey = useMemo(
+    () => (selected ? buildContentKey(toHtmlReaderContent(selected)) : null),
+    [selected],
+  );
 
   useEffect(() => {
     if (!articleId || !contentKey || !rememberPosition) return;

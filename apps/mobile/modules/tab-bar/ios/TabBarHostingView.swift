@@ -43,9 +43,73 @@ final class TabBarHostingView: UIView {
     if model.safeTop != top { model.safeTop = top }
   }
 
+#if DEBUG
+  // Numerical probe for the capsule/sheet morph. Launch with KYOMI_TABBAR_PROBE=1 and read the
+  // `[tabbar-probe]` lines from the console. SwiftUI's own geometry reports the target of an
+  // animation at once, so this samples what is on screen: the tab selector's presentation layer
+  // (the segmented control sits in the same row as the icons), in window coordinates, and the
+  // opacity it is drawn with, once per display frame while either changes.
+  private var probeLink: CADisplayLink?
+  private var probeLast = ""
+  private var probeQuiet = 0
+  private weak var probeSelector: UISegmentedControl?
+
+  private func startProbeIfRequested() {
+    guard probeLink == nil, ProcessInfo.processInfo.environment["KYOMI_TABBAR_PROBE"] == "1" else { return }
+    let link = CADisplayLink(target: self, selector: #selector(probeTick(_:)))
+    link.add(to: .main, forMode: .common)
+    probeLink = link
+  }
+
+  private func findSelector(in view: UIView) -> UISegmentedControl? {
+    if let control = view as? UISegmentedControl { return control }
+    for child in view.subviews { if let found = findSelector(in: child) { return found } }
+    return nil
+  }
+
+  @objc private func probeTick(_ link: CADisplayLink) {
+    if probeSelector == nil { probeSelector = findSelector(in: hostingController.view) }
+    guard let selector = probeSelector, let window, let layer = selector.layer.presentation() else { return }
+    let windowLayer = window.layer.presentation() ?? window.layer
+    let rect = layer.convert(layer.bounds, to: windowLayer)
+    var opacity: Float = 1
+    var current: CALayer? = layer
+    while let node = current {
+      opacity *= node.opacity
+      current = node.superlayer
+    }
+    // The glass: the tallest presentation layer (in window coordinates) whose class names glass or
+    // backdrop and that is at least as wide as the capsule.
+    var glass = CGRect.null
+    func visit(_ node: CALayer) {
+      let name = NSStringFromClass(type(of: node))
+      if name.contains("Glass") || name.contains("Backdrop"), let shown = node.presentation() {
+        let frame = shown.convert(shown.bounds, to: windowLayer)
+        if frame.width >= 140, frame.height >= 40, frame.height > glass.height { glass = frame }
+      }
+      node.sublayers?.forEach(visit)
+    }
+    visit(hostingController.view.layer)
+    let line = String(
+      format: "y=%.2f midY=%.2f x=%.2f w=%.2f h=%.2f alpha=%.3f presented=%d glassMinY=%.2f glassMaxY=%.2f glassH=%.2f",
+      rect.minY, rect.midY, rect.minX, rect.width, rect.height, opacity, model.switcherPresented ? 1 : 0,
+      glass.isNull ? -1 : glass.minY, glass.isNull ? -1 : glass.maxY, glass.isNull ? -1 : glass.height)
+    if line == probeLast {
+      probeQuiet += 1
+      return
+    }
+    probeQuiet = 0
+    probeLast = line
+    NSLog("[tabbar-probe] t=%.4f %@", link.timestamp, line)
+  }
+#else
+  private func startProbeIfRequested() {}
+#endif
+
   override func didMoveToWindow() {
     super.didMoveToWindow()
     if window != nil {
+      startProbeIfRequested()
       updateSafeTop()
       guard hostingController.parent == nil, let parent = nearestViewController() else { return }
       // Navigation and tab controllers expect only screens as children.

@@ -339,13 +339,14 @@ use it for their Continue reading badge.
 
 ### Mobile (`mobile`)
 
-- `apps/mobile/src/modules/articles/lib/list-rows.ts` and the React Native item card use
-  `isContinuingReading` in place of `Boolean(item.lastViewedAt)`.
+- The React Native item card uses `isContinuingReading` in place of `Boolean(item.lastViewedAt)`.
 - A per-row `continueLabel` on `ArticleRowWire` and `ArticleRowModel` (optional, falls back to the
   style's label) carries `formatRemainingMinutes`.
 - Tracking and restore live in the reader screen and a hook, not in the renderer. The current
   WebView body (`article-body.dom.tsx`) gains only `initialProgress` and `onReadingProgress` props,
-  reporting at most every 2 s. The KDM renderer session will implement the same two props.
+  reporting at most every 2 s. The native KDM body (`@kyomi/reader/native`) takes the same two props and
+  measures them the same way: the article body below its header, the reading line a quarter down the
+  viewport, and the end of the body as completed. It leaves `anchor` null; block anchors stay reserved.
 - Flush every `READING_FLUSH_INTERVAL_MS`, on `AppState` background, and on unmount. Writes that
   fail are buffered in app storage and retried on the next foreground.
 - No mobile Continue reading surface and no impressions in this phase.

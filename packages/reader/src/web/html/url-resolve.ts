@@ -1,4 +1,4 @@
-import { isArticleFragmentHref, parseSrcset, serializeSrcset } from "@kyomi/worker/sanitization";
+import { isArticleFragmentHref, parseSrcset, serializeSrcset } from "../../sanitization";
 import { normalizeSafeHttpUrl } from "../../core/url";
 
 /**

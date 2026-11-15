@@ -9,7 +9,6 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 
-const alert = mock((..._args: unknown[]) => undefined);
 const openURL = mock(async (_url: string) => true);
 const share = mock(async (_content: unknown) => ({ action: "sharedAction" }));
 const selectionAsync = mock(async () => undefined);
@@ -23,10 +22,13 @@ const originalFetch = globalThis.fetch;
 // React Native, Expo and the secure-store backed auth client cannot load under bun, so only they
 // and the react-query mutation are stubbed. The real haptics helper and fetchMobileApiJson run.
 mock.module("react-native", () => ({
-  Alert: { alert },
   Linking: { openURL },
   Platform: { OS: "ios" },
   Share: { share },
+}));
+// Only the native viewport is stubbed (as in the toast manager test) so the real `toast` is spied on.
+mock.module("../../../../../../apps/mobile/src/components/ui/toast/atoms/viewport", () => ({
+  ToastViewport: () => null,
 }));
 mock.module("expo-haptics", () => ({
   AndroidHaptics: { Toggle_Off: "toggle-off", Toggle_On: "toggle-on" },
@@ -41,6 +43,7 @@ mock.module("../../../../../../apps/mobile/src/modules/inbox/hooks/use-state", (
   useArticleStateMutation: () => ({ isPending: false, mutateAsync }),
 }));
 
+const { toast } = await import("../../../../../../apps/mobile/src/components/ui/toast");
 const { useArticleRowActions } =
   await import("../../../../../../apps/mobile/src/modules/inbox/hooks/use-actions");
 
@@ -89,10 +92,14 @@ function mountRowActions(items: readonly ArticleListItemDto[]) {
 const settle = () => new Promise((resolve) => setTimeout(resolve, 0));
 
 let consoleError: ReturnType<typeof spyOn>;
+let toastError: ReturnType<typeof spyOn>;
+let toastSuccess: ReturnType<typeof spyOn>;
 
 beforeEach(() => {
   consoleError = spyOn(console, "error").mockImplementation(() => {});
-  for (const spy of [alert, openURL, share, selectionAsync, mutateAsync, fetchMock]) {
+  toastError = spyOn(toast, "error").mockImplementation(() => ({}) as never);
+  toastSuccess = spyOn(toast, "success").mockImplementation(() => ({}) as never);
+  for (const spy of [openURL, share, selectionAsync, mutateAsync, fetchMock]) {
     spy.mockClear();
   }
   globalThis.fetch = fetchMock as unknown as typeof fetch;
@@ -100,6 +107,8 @@ beforeEach(() => {
 
 afterEach(() => {
   consoleError.mockRestore();
+  toastError.mockRestore();
+  toastSuccess.mockRestore();
   globalThis.fetch = originalFetch;
   fetchMock.mockImplementation(
     async () => new Response(JSON.stringify({ message: "ok" }), { status: 200 }),
@@ -175,7 +184,7 @@ describe("useArticleRowActions routing", () => {
     expect(init?.method).toBe("POST");
     expect(init?.body).toBe(JSON.stringify({ reason: "broken_article" }));
     expect(new Headers(init?.headers).get("content-type")).toBe("application/json");
-    expect(alert.mock.calls).toEqual([["Report sent", "Thanks for helping improve Kyomi."]]);
+    expect(toastSuccess.mock.calls).toEqual([["Report sent"]]);
   });
 
   test("does nothing for an id that is not in the list", async () => {
@@ -191,7 +200,8 @@ describe("useArticleRowActions routing", () => {
     expect(share).not.toHaveBeenCalled();
     expect(openURL).not.toHaveBeenCalled();
     expect(fetchMock).not.toHaveBeenCalled();
-    expect(alert).not.toHaveBeenCalled();
+    expect(toastError).not.toHaveBeenCalled();
+    expect(toastSuccess).not.toHaveBeenCalled();
   });
 });
 
@@ -207,10 +217,10 @@ describe("useArticleRowActions failures", () => {
     dispatch(FIRST.id, "hide");
     await settle();
 
-    expect(alert.mock.calls).toEqual([
-      ["Unable to update article", "Unable to save article."],
-      ["Unable to update article", "Please try again."],
-      ["Unable to update article", "Please try again."],
+    expect(toastError.mock.calls).toEqual([
+      ["Couldn't save article"],
+      ["Couldn't unsave article"],
+      ["Couldn't hide article"],
     ]);
   });
 
@@ -225,9 +235,9 @@ describe("useArticleRowActions failures", () => {
     dispatch(FIRST.id, "report");
     await settle();
 
-    expect(alert.mock.calls).toEqual([
-      ["Unable to update article", "Unable to open the source."],
-      ["Unable to update article", "Unable to send the report."],
+    expect(toastError.mock.calls).toEqual([
+      ["Couldn't open the source"],
+      ["Couldn't send the report"],
     ]);
   });
 
@@ -240,6 +250,6 @@ describe("useArticleRowActions failures", () => {
     await settle();
 
     expect(share).toHaveBeenCalledTimes(1);
-    expect(alert).not.toHaveBeenCalled();
+    expect(toastError).not.toHaveBeenCalled();
   });
 });

@@ -3,6 +3,15 @@ import type { DimensionValue } from "react-native";
 import type { Skeleton as MotiSkeleton } from "moti/skeleton";
 import type { HexColor, SkeletonColorMode } from "./palette";
 
+export type SkeletonLinesProps = Pick<SkeletonProps, "delay" | "radius" | "surfaceColor"> & {
+  /** Space between bars, in points. Defaults to `6`. */
+  readonly gap?: number;
+  /** Height of every bar. */
+  readonly lineHeight: number;
+  /** One bar per entry, at that width. */
+  readonly widths: readonly DimensionValue[];
+};
+
 /**
  * Moti's skeleton props, so docs for `moti/skeleton` apply as written. `surfaceColor` is Kyomi's
  * only addition: the surface the placeholder sits on, which the shimmer layers are composited over.

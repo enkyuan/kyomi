@@ -8,10 +8,18 @@ export const FONT_FAMILIES = {
     semibold: "Inter-SemiBold",
     bold: "Inter-Bold",
   },
-  dmSans: {
-    regular: "DMSans-Regular",
-    medium: "DMSans-Medium",
-    semibold: "DMSans-SemiBold",
+  // Reader typography matches the web reader: Newsreader for prose and headings, JetBrains Mono for code.
+  newsreader: {
+    regular: "Newsreader-Regular",
+    italic: "Newsreader-Italic",
+    semibold: "Newsreader-SemiBold",
+    semiboldItalic: "Newsreader-SemiBoldItalic",
+    bold: "Newsreader-Bold",
+    boldItalic: "Newsreader-BoldItalic",
+  },
+  jetbrainsMono: {
+    regular: "JetBrainsMono-Regular",
+    medium: "JetBrainsMono-Medium",
   },
 } as const;
 
@@ -161,13 +169,13 @@ export const FONT_STYLES = {
     lineHeight: platformValue(18, 20),
   },
   readerSource: {
-    fontFamily: FONT_FAMILIES.dmSans.regular,
+    fontFamily: FONT_FAMILIES.inter.regular,
     fontSize: FONT_SIZES.readerSource,
     fontWeight: FONT_WEIGHTS.regular,
     lineHeight: platformValue(18, 20),
   },
   readerBody: {
-    fontFamily: FONT_FAMILIES.dmSans.regular,
+    fontFamily: FONT_FAMILIES.newsreader.regular,
     fontSize: FONT_SIZES.readerBody,
     fontWeight: FONT_WEIGHTS.regular,
     lineHeight: platformValue(29, 27),

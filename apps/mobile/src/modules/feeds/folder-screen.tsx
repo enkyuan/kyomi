@@ -1,8 +1,12 @@
 import { Stack } from "expo-router";
 import { FlatList, Text, View } from "react-native";
 import { FONT_STYLES } from "@/theme/fonts";
-import { FeedRow } from "./components/feed-row";
+import { Skeleton } from "@ui/skeleton";
+import { FeedRow, FeedRowSkeleton } from "./components/feed-row";
 import { useFolderFeeds } from "./hooks/use-folder-feeds";
+
+/** One placeholder row per width. */
+const SKELETON_TITLE_WIDTHS = ["52%", "38%", "64%", "44%", "58%", "34%"] as const;
 
 type FolderScreenProps = {
   readonly folderId: string;
@@ -21,7 +25,11 @@ export function FolderScreen({ folderId }: FolderScreenProps) {
         data={feeds}
         keyExtractor={(feed) => feed.feedId}
         ListEmptyComponent={
-          isLoading ? null : (
+          isLoading ? (
+            <Skeleton.Repeat count={SKELETON_TITLE_WIDTHS.length}>
+              {(index) => <FeedRowSkeleton titleWidth={SKELETON_TITLE_WIDTHS[index]} />}
+            </Skeleton.Repeat>
+          ) : (
             <View className="items-center px-8 pt-24">
               <Text className="text-muted-foreground" style={FONT_STYLES.bodyMedium}>
                 No feeds in this folder yet.

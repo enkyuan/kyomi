@@ -10,7 +10,15 @@ import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
 import { articleListQueryKeys } from "@modules/articles/queries/keys";
 import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
 import { saveRecentArticle } from "@modules/recents/lib/store";
+import {
+  NATIVE_READER_ENABLED,
+  selectReaderBody,
+  toHtmlReaderContent,
+} from "@/lib/reader-document";
 import ArticleBody from "./components/article-body.dom";
+import { NativeArticleBody } from "./components/native-article-body";
+import { READER_FIXTURE_ENABLED, createLongArticleBody } from "./lib/fixture";
+import { startReaderTrace, type ReaderTrace } from "./lib/metrics";
 import { useArticle } from "./hooks/use-article";
 import { useReadingProgress } from "./hooks/use-reading-progress";
 import { getReaderCanvasColor, getReaderColorScheme } from "./lib/theme";
@@ -22,26 +30,10 @@ export type ReaderScreenProps = {
 };
 
 const READER_TITLE_SKELETON_WIDTHS = ["100%", "88%", "64%"] as const;
+/** One bar width per line, a paragraph at a time. */
 const READER_SKELETON_PARAGRAPHS = [
-  {
-    id: "paragraph-1",
-    lines: [
-      { id: "line-1", width: "100%" },
-      { id: "line-2", width: "94%" },
-      { id: "line-3", width: "88%" },
-      { id: "line-4", width: "100%" },
-      { id: "line-5", width: "78%" },
-    ],
-  },
-  {
-    id: "paragraph-2",
-    lines: [
-      { id: "line-1", width: "96%" },
-      { id: "line-2", width: "100%" },
-      { id: "line-3", width: "90%" },
-      { id: "line-4", width: "82%" },
-    ],
-  },
+  ["100%", "94%", "88%", "100%", "78%"],
+  ["96%", "100%", "90%", "82%"],
 ] as const;
 
 export function ReaderScreen({ articleId }: ReaderScreenProps) {
@@ -54,10 +46,42 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const [readyArticleId, setReadyArticleId] = useState<string | null>(null);
   // Avoid sending duplicate view events while an article stays open.
   const viewedArticleIdRef = useRef<string | null>(null);
+  const traceRef = useRef<{ articleId: string; trace: ReaderTrace } | null>(null);
   const handleArticleReady = useCallback(() => {
     setReadyArticleId(articleId);
+    if (traceRef.current?.articleId === articleId) traceRef.current.trace.ready();
   }, [articleId]);
-  const { data: article, error, isLoading, refetch } = useArticle(articleId);
+  const { data: fetchedArticle, error, isLoading, refetch } = useArticle(articleId);
+  const article = useMemo(
+    () =>
+      fetchedArticle && READER_FIXTURE_ENABLED
+        ? {
+            ...fetchedArticle,
+            reader: {
+              ...fetchedArticle.reader,
+              selected: createLongArticleBody(NATIVE_READER_ENABLED),
+            },
+          }
+        : fetchedArticle,
+    [fetchedArticle],
+  );
+  const body = useMemo(
+    () => (article ? selectReaderBody(article.reader.selected, NATIVE_READER_ENABLED) : null),
+    [article],
+  );
+  const renderer = body?.kind === "document" ? "native" : "dom";
+
+  useEffect(() => {
+    if (!article || !body) return;
+    traceRef.current = {
+      articleId: article.id,
+      trace: startReaderTrace({
+        articleId: article.id,
+        blocks: body.kind === "document" ? body.document.blocks.length : undefined,
+        renderer,
+      }),
+    };
+  }, [article?.id, body, renderer]);
   const readingProgress = useReadingProgress(article);
   const faviconUrls = useMemo(
     () =>
@@ -124,6 +148,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   }
 
   const isDomReady = readyArticleId === article?.id;
+  const isNative = body?.kind === "document";
 
   if (!article) {
     return (
@@ -152,24 +177,41 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   return (
     <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
       <View style={{ flex: 1 }}>
-        <ArticleBody
-          key={article.id}
-          colorScheme={readerColorScheme}
-          bottomInset={tabBarOcclusionHeight}
-          dom={{
-            scrollEnabled: true,
-            style: { backgroundColor: readerCanvasColor, flex: 1, opacity: isDomReady ? 1 : 0 },
-          }}
-          faviconUrls={faviconUrls}
-          feedTitle={article.feedTitle}
-          fontSizePx={mobileReaderLayout.body.fontSizePx}
-          initialProgress={readingProgress.initialProgress}
-          onReadingProgress={readingProgress.onReadingProgress}
-          onReady={handleArticleReady}
-          reader={article.reader.selected}
-          title={article.title}
-        />
-        {!isDomReady ? (
+        {isNative ? (
+          <NativeArticleBody
+            key={article.id}
+            articleId={article.id}
+            bottomInset={tabBarOcclusionHeight}
+            colorScheme={readerColorScheme}
+            document={body.document}
+            faviconUrls={faviconUrls}
+            feedTitle={article.feedTitle}
+            initialProgress={readingProgress.initialProgress}
+            onReadingProgress={readingProgress.onReadingProgress}
+            onReady={handleArticleReady}
+            title={article.title}
+            topInset={insets.top}
+          />
+        ) : (
+          <ArticleBody
+            key={article.id}
+            colorScheme={readerColorScheme}
+            bottomInset={tabBarOcclusionHeight}
+            dom={{
+              scrollEnabled: true,
+              style: { backgroundColor: readerCanvasColor, flex: 1, opacity: isDomReady ? 1 : 0 },
+            }}
+            faviconUrls={faviconUrls}
+            feedTitle={article.feedTitle}
+            fontSizePx={mobileReaderLayout.body.fontSizePx}
+            initialProgress={readingProgress.initialProgress}
+            onReadingProgress={readingProgress.onReadingProgress}
+            onReady={handleArticleReady}
+            reader={toHtmlReaderContent(article.reader.selected)}
+            title={article.title}
+          />
+        )}
+        {!isDomReady && !isNative ? (
           <View
             pointerEvents="none"
             style={{
@@ -219,38 +261,24 @@ function ReaderSkeleton({
             surfaceColor={surfaceColor}
             width={96}
           />
-          <View
-            style={{
-              gap: mobileReaderSkeletonLayout.titleLineSpacingPx,
-              marginTop: mobileReaderLayout.source.marginBottomPx,
-            }}
-          >
-            {READER_TITLE_SKELETON_WIDTHS.slice(0, mobileReaderLayout.title.skeletonLines).map(
-              (width) => (
-                <Skeleton
-                  height={mobileReaderSkeletonLayout.titleLineHeightPx}
-                  key={`title-${width}`}
-                  radius={4}
-                  surfaceColor={surfaceColor}
-                  width={width}
-                />
-              ),
-            )}
+          <View style={{ marginTop: mobileReaderLayout.source.marginBottomPx }}>
+            <Skeleton.Lines
+              gap={mobileReaderSkeletonLayout.titleLineSpacingPx}
+              lineHeight={mobileReaderSkeletonLayout.titleLineHeightPx}
+              surfaceColor={surfaceColor}
+              widths={READER_TITLE_SKELETON_WIDTHS.slice(0, mobileReaderLayout.title.skeletonLines)}
+            />
           </View>
         </View>
         <View style={{ gap: mobileReaderSkeletonLayout.paragraphGapPx }}>
-          {READER_SKELETON_PARAGRAPHS.map((paragraph) => (
-            <View key={paragraph.id} style={{ gap: mobileReaderSkeletonLayout.bodyLineSpacingPx }}>
-              {paragraph.lines.map((line) => (
-                <Skeleton
-                  height={mobileReaderSkeletonLayout.bodyLineHeightPx}
-                  key={`${paragraph.id}-${line.id}`}
-                  radius={4}
-                  surfaceColor={surfaceColor}
-                  width={line.width}
-                />
-              ))}
-            </View>
+          {READER_SKELETON_PARAGRAPHS.map((widths) => (
+            <Skeleton.Lines
+              gap={mobileReaderSkeletonLayout.bodyLineSpacingPx}
+              key={widths.join("-")}
+              lineHeight={mobileReaderSkeletonLayout.bodyLineHeightPx}
+              surfaceColor={surfaceColor}
+              widths={widths}
+            />
           ))}
         </View>
       </View>

@@ -23,3 +23,7 @@ export const updateFolderBody = t.Object({
   name: t.Optional(t.String({ minLength: 1 })),
   isPinned: t.Optional(t.Boolean()),
 });
+
+export const reorderFoldersBody = t.Object({
+  folderIds: t.Array(uuidParam, { minItems: 1, maxItems: 500 }),
+});

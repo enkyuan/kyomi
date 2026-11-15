@@ -161,10 +161,50 @@ export async function listFolders(database: DB, userId: string): Promise<FolderD
     .where(eq(folders.userId, userId))
     .orderBy(
       sql`CASE WHEN ${folders.name} = ${DEFAULT_FOLDER_NAME} THEN 0 ELSE 1 END`,
+      sql`${folders.position} ASC NULLS LAST`,
       folders.name,
     );
 
   return rows.map(mapFolder);
+}
+
+/**
+ * Saves the order a user arranged their folders in: each id takes its index as its position. The
+ * ids must be distinct folders of the user's own; the default folder stays first whatever it holds.
+ */
+export async function reorderFolders(
+  database: DB,
+  userId: string,
+  folderIds: string[],
+): Promise<FolderDto[]> {
+  if (new Set(folderIds).size !== folderIds.length) {
+    throw new AppError("Folder ids must be distinct", {
+      status: 400,
+      code: "FOLDER_ORDER_INVALID",
+    });
+  }
+
+  await database.transaction(async (tx) => {
+    const owned = await tx
+      .select({ id: folders.id })
+      .from(folders)
+      .where(and(eq(folders.userId, userId), inArray(folders.id, folderIds)));
+    if (owned.length !== folderIds.length) {
+      throw new AppError("Folder not found", { status: 404, code: "FOLDER_NOT_FOUND" });
+    }
+
+    const now = new Date();
+    const positions = sql.join(
+      folderIds.map((id, index) => sql`WHEN ${id} THEN ${index}`),
+      sql` `,
+    );
+    await tx
+      .update(folders)
+      .set({ position: sql`CASE ${folders.id} ${positions} END`, updatedAt: now })
+      .where(and(eq(folders.userId, userId), inArray(folders.id, folderIds)));
+  });
+
+  return await listFolders(database, userId);
 }
 
 export async function updateFolder(

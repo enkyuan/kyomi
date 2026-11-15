@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "source": {
+    "format": "html",
+    "origin": "feed_html",
+    "baseUrl": "https://lazy.example/articles/coast-trip"
+  },
+  "compiler": {
+    "version": "article-html-v3+kdm.1",
+    "sanitizerVersion": "article-html-v3"
+  },
+  "meta": {
+    "title": "Coast trip",
+    "subtitle": null,
+    "authors": [],
+    "siteName": null,
+    "language": null,
+    "direction": "auto",
+    "publishedAt": null,
+    "updatedAt": null,
+    "wordCount": 10,
+    "readingMinutes": 1,
+    "leadImage": null
+  },
+  "features": {
+    "math": false,
+    "codeLanguages": [],
+    "embedProviders": []
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Five photos from the trip, each loaded a different way."
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "placement": "content",
+      "layout": "grid",
+      "items": [
+        {
+          "image": {
+            "src": "https://lazy.example/img/one.jpg",
+            "alt": "Harbour at dawn",
+            "width": 1600,
+            "height": 900,
+            "srcset": [
+              {
+                "url": "https://lazy.example/img/one-800.jpg",
+                "width": 800
+              },
+              {
+                "url": "https://lazy.example/img/one-1600.jpg",
+                "width": 1600
+              }
+            ]
+          }
+        },
+        {
+          "image": {
+            "src": "https://lazy.example/img/two.jpg",
+            "alt": "Market street",
+            "width": 1200,
+            "height": 800
+          }
+        },
+        {
+          "image": {
+            "src": "https://lazy.example/img/three.jpg",
+            "alt": "Lighthouse"
+          }
+        },
+        {
+          "image": {
+            "src": "https://lazy.example/img/four.jpg",
+            "alt": "Cliff path",
+            "width": 1000,
+            "height": 600,
+            "srcset": [
+              {
+                "url": "https://lazy.example/img/four.avif"
+              }
+            ]
+          }
+        },
+        {
+          "image": {
+            "src": "https://lazy.example/img/five.jpg",
+            "alt": "Ferry",
+            "width": 640,
+            "height": 480
+          }
+        }
+      ]
+    }
+  ],
+  "footnotes": [],
+  "diagnostics": {
+    "droppedElements": {},
+    "htmlBlocks": 0,
+    "warnings": []
+  }
+}

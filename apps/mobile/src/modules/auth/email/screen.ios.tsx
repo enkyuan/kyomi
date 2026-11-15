@@ -106,7 +106,11 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 padding({ bottom: 12 }),
               ]}
             >
-              <VStack alignment="leading" modifiers={[...FULL_WIDTH, padding({ top: 36 })]}>
+              <VStack
+                alignment="leading"
+                spacing={0}
+                modifiers={[...FULL_WIDTH, padding({ top: 36 })]}
+              >
                 {isEmailStep ? (
                   <ZStack
                     modifiers={[
@@ -146,6 +150,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                 )}
 
                 <VStack
+                  spacing={0}
                   modifiers={[
                     ...FULL_WIDTH,
                     animation(
@@ -189,9 +194,11 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                   {!isEmailStep ? (
                     <Button
                       onPress={handleUseDifferentEmail}
-                      modifiers={[buttonStyle("plain"), padding({ top: 16 }), ...FULL_WIDTH]}
+                      modifiers={[buttonStyle("plain"), padding({ top: 12 }), ...FULL_WIDTH]}
                     >
-                      <ZStack modifiers={FULL_WIDTH}>
+                      {/* 12pt above and below the label makes the tap target 46pt tall (HIG: at
+                          least 44pt) while the label sits 24pt under the code boxes. */}
+                      <ZStack modifiers={[...FULL_WIDTH, padding({ vertical: 12 })]}>
                         <Text
                           modifiers={[
                             ...CENTERED_LABEL,

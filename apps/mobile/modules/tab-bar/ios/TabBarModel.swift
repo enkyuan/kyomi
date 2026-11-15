@@ -16,7 +16,7 @@ struct TabBarSwitcher {
   let icon: TabBarIcon
   /// Glyphs of the sheet's folder chips.
   let editIcon: TabBarIcon
-  let renameIcon: TabBarIcon
+  let sortIcon: TabBarIcon
   let addIcon: TabBarIcon
 }
 
@@ -25,6 +25,15 @@ struct SwitcherFolder: Identifiable, Equatable {
   let id: String
   let name: String
   let feedCount: Int
+  let createdAt: Date
+}
+
+/// A feed filed in a folder, listed when the switcher sheet opens that folder.
+struct SwitcherFeed: Identifiable, Equatable {
+  let id: String
+  let folderID: String
+  let title: String
+  let faviconURL: URL?
 }
 
 /// A feed the add composer offers to follow, or the one it previews to import.
@@ -63,6 +72,7 @@ final class TabBarModel {
   var switcher: TabBarSwitcher?
   /// The folders the switcher sheet lists; the sheet reports every change to them back to JavaScript.
   var switcherFolders: [SwitcherFolder] = []
+  var switcherFeeds: [SwitcherFeed] = []
   /// Magnifying glass drawn in the search button and field; falls back to the SF Symbol.
   var searchIcon: TabBarIcon?
   /// Magnifying glass drawn in the composer's field; falls back to the SF Symbol.

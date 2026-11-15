@@ -1,7 +1,7 @@
 import {
   normalizeSanitizedArticleRoot,
   sanitizeArticleHtmlFragment,
-} from "../../sanitization/article-html";
+} from "@kyomi/reader/sanitization";
 import type { ArticlePass } from "../context";
 
 /** Links to anchors whose target did not survive sanitizing would point nowhere. */
