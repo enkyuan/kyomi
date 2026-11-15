@@ -1,7 +1,11 @@
 import { useMutation, useQueryClient, type InfiniteData } from "@tanstack/react-query";
 import { fetchMobileApiJson } from "@/lib/api";
-import { articleListQueryKeys } from "@modules/articles/queries/keys";
-import type { ArticleListItemDto, CursorListResponseDto } from "@kyomi/reader/schemas/article";
+import { articleListQueryKeys, articleQueryKey } from "@modules/articles/queries/keys";
+import type {
+  ArticleDetailDto,
+  ArticleListItemDto,
+  CursorListResponseDto,
+} from "@kyomi/reader/schemas/article";
 
 type ArticleStatePatch = Partial<Pick<ArticleListItemDto, "isRead" | "isSaved">> & {
   readonly isHidden?: boolean;
@@ -54,12 +58,27 @@ export function useArticleStateMutation() {
         });
       }
 
-      return { snapshots };
+      // An open reader shows the same state (the saved bookmark), so its article follows too.
+      const detailKey = articleQueryKey(itemId);
+      await queryClient.cancelQueries({ queryKey: detailKey });
+      const detail = queryClient.getQueryData<ArticleDetailDto>(detailKey);
+      queryClient.setQueryData<ArticleDetailDto>(detailKey, (current) =>
+        current
+          ? {
+              ...current,
+              isRead: patch.isRead ?? current.isRead,
+              isSaved: patch.isSaved ?? current.isSaved,
+            }
+          : current,
+      );
+
+      return { detail, detailKey, snapshots };
     },
     onError: (_error, _variables, context) => {
       for (const { queryKey, snapshot } of context?.snapshots ?? []) {
         queryClient.setQueryData(queryKey, snapshot);
       }
+      if (context?.detail) queryClient.setQueryData(context.detailKey, context.detail);
     },
     onSettled: () => {
       for (const queryKey of articleListQueryKeys) {

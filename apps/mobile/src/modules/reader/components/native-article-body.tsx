@@ -29,6 +29,8 @@ type NativeArticleBodyProps = {
   readonly document: ReaderDocument;
   readonly faviconUrls: readonly string[];
   readonly feedTitle: string;
+  /** Body text size in points. */
+  readonly fontSizePx: number;
   /** Restore here (0..1) instead of the locally saved row, so a position follows the reader across devices. */
   readonly initialProgress?: number;
   readonly onReadingProgress?: (sample: NativeReadingSample) => void;
@@ -56,6 +58,7 @@ export function NativeArticleBody({
   document,
   faviconUrls,
   feedTitle,
+  fontSizePx,
   initialProgress,
   onReadingProgress,
   onReady,
@@ -75,7 +78,8 @@ export function NativeArticleBody({
       createReaderNativeTheme({
         availableWidth: width - inset * 2,
         colors: { background: readerCanvas[colorScheme] },
-        fontSize: mobileReaderLayout.body.fontSizePx,
+        blockGap: mobileReaderLayout.body.blockGapPx,
+        fontSize: fontSizePx,
         fonts: {
           body: FONT_FAMILIES.newsreader.regular,
           heading: FONT_FAMILIES.newsreader.semibold,
@@ -89,7 +93,7 @@ export function NativeArticleBody({
         reduceMotion,
         scheme: colorScheme,
       }),
-    [colorScheme, inset, reduceMotion, width],
+    [colorScheme, fontSizePx, inset, reduceMotion, width],
   );
 
   const host = useMemo<ReaderNativeHost>(
@@ -106,7 +110,7 @@ export function NativeArticleBody({
           aspectRatio={island.kind === "embed" ? island.aspectRatio : undefined}
           colorScheme={colorScheme}
           dom={{ matchContents: true, scrollEnabled: false }}
-          fontSizePx={mobileReaderLayout.body.fontSizePx}
+          fontSizePx={fontSizePx}
           frameUrl={island.kind === "embed" ? island.frameUrl : undefined}
           html={island.kind === "embed" ? undefined : island.html}
           kind={island.kind}
@@ -115,7 +119,7 @@ export function NativeArticleBody({
       ),
       shareUrl,
     }),
-    [colorScheme, reduceMotion, theme.colors.codeBackground],
+    [colorScheme, fontSizePx, reduceMotion, theme.colors.codeBackground],
   );
 
   const sheetContext = useMemo(

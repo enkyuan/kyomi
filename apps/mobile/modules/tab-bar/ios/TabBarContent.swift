@@ -39,6 +39,13 @@ struct TabBarContent: View {
   private var transition: Animation? {
     reduceMotion ? nil : .spring(duration: 0.38, bounce: 0)
   }
+  /// The bar's morph into the reader and back. Opening is the user deciding, so it takes the search
+  /// spring's 0.38s; going back is the system answering a navigation that is already under way, so it
+  /// settles in 0.26s, in step with the screen leaving rather than trailing it. Both are critically
+  /// damped, so a reversal mid-flight retargets from the glass's current frame.
+  private func readerAnimation(entering: Bool) -> Animation? {
+    reduceMotion ? nil : .spring(duration: entering ? 0.38 : 0.26, bounce: 0)
+  }
   /// The field's text arrives a beat after its glass has started to widen and leaves ahead of it,
   /// so nothing cross-fades with the tabs coming back.
   private var searchFieldTransition: AnyTransition {
@@ -105,12 +112,14 @@ struct TabBarContent: View {
         searchActive: model.searchActive,
         reduceMotion: reduceMotion,
         sheetPresented: model.switcherPresented,
-        keyboardInset: keyboardInset
+        keyboardInset: keyboardInset,
+        readerToolCount: model.readerTools.count
       )
       let sheet = SwitcherSheetGeometry(container: container, safeTop: model.safeTop)
 
       ZStack(alignment: .topLeading) {
         scrim(sheet)
+        fontPanelDismissArea
 
         // One container so the glass shapes render together and morph as they move.
         GlassEffectContainer(spacing: 0) {
@@ -163,13 +172,25 @@ struct TabBarContent: View {
                 .glassEffectTransition(.materialize)
                 .position(x: layout.trailingRect.midX, y: layout.trailingRect.midY)
             }
+
+            // The text size panel materializes above the reader bar, on glass of its own, and
+            // leaves the same way: `materialize` fades its content with the material instead of
+            // matching its geometry to the bar's.
+            if model.readerActive, model.fontPanelPresented {
+              TabBarFontPanel(model: model, rect: layout.fontPanelRect)
+                .glassEffectID("fontPanel", in: glassNamespace)
+                .glassEffectTransition(.materialize)
+                .position(x: layout.fontPanelRect.midX, y: layout.fontPanelRect.midY)
+            }
           }
         }
         .frame(width: container.width, height: container.height)
         // The add composer draws its own field and close button where the bar's buttons are, so the
         // bar fades out beneath it as a whole, with nothing inserted, removed or re-tinted.
-        .opacity(model.composerActive ? 0 : 1)
-        .allowsHitTesting(!model.composerActive)
+        // The share sheet morphs out of a glass view that stands in for the capsule; the capsule itself
+        // stays hidden meanwhile (not animated: the two are the same glass in the same place).
+        .opacity(model.composerActive || model.shareInFlight ? 0 : 1)
+        .allowsHitTesting(!model.composerActive && !model.shareInFlight)
         .accessibilityHidden(model.composerActive)
 
         // The add composer's own layer: a background over the screen above its field, the field and
@@ -196,6 +217,10 @@ struct TabBarContent: View {
     .coordinateSpace(.named(Self.coordinateSpace))
     .animation(minimizeTransition, value: model.minimized)
     .animation(transition, value: model.searchActive)
+    // Entering the reader widens the capsule's glass to its tools while the search and add buttons
+    // materialize out of it; leaving reverses both. Same spring as search, so the two never disagree.
+    .animation(readerAnimation(entering: model.readerActive), value: model.readerActive)
+    .animation(reduceMotion ? nil : .spring(duration: 0.3, bounce: 0), value: model.fontPanelPresented)
     .animation(reduceMotion ? nil : .easeOut(duration: 0.2), value: model.composerActive)
     // Opening search focuses the field. It mounts while its text is still fading in, and a view
     // that is not visible yet can refuse focus, so ask again once the fade is under way. Closing
@@ -220,8 +245,22 @@ struct TabBarContent: View {
       if model.composerActive { composerFocused = true }
     }
     .sensoryFeedback(.impact(weight: .light), trigger: model.pressFeedback)
+    .sensoryFeedback(.selection, trigger: model.fontStepFeedback)
     .accessibilityElement(children: .contain)
-    .accessibilityAddTraits(.isTabBar)
+    .accessibilityAddTraits(model.readerActive ? [] : .isTabBar)
+  }
+
+  /// Catches the touch that lands outside the open text size panel and closes it, a tap or the
+  /// start of a drag, as a popover does. Under the glass, so the bar and the panel keep their touches.
+  @ViewBuilder
+  private var fontPanelDismissArea: some View {
+    if model.fontPanelPresented {
+      Color.clear
+        .contentShape(.rect)
+        .onTapGesture { model.fontPanelPresented = false }
+        .gesture(DragGesture(minimumDistance: 8).onChanged { _ in model.fontPanelPresented = false })
+        .accessibilityHidden(true)
+    }
   }
 
   /// Dims the screen behind the open sheet, lighter as it is dragged down. Tapping it dismisses the
@@ -244,12 +283,23 @@ struct TabBarContent: View {
 
     return ZStack(alignment: .top) {
       // The tabs keep their size on the bar's band as the glass grows away from them, and fade.
+      // In the reader they give way to the reader's tools: out quickly, so nothing cross-fades
+      // with the tools arriving on the widening glass.
+      let tabsHidden = presented || model.readerActive
       tabs(layout)
         .frame(width: layout.mainWidth, height: layout.barHeight)
         .frame(maxHeight: .infinity, alignment: .bottom)
-        .opacity(presented ? 0 : 1)
-        .allowsHitTesting(!presented)
-        .accessibilityHidden(presented)
+        .opacity(tabsHidden ? 0 : 1)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.12), value: tabsHidden)
+        .allowsHitTesting(!tabsHidden)
+        .accessibilityHidden(tabsHidden)
+
+      if model.readerActive, !presented {
+        TabBarReaderTools(model: model, segmentWidth: layout.readerSegmentWidth, height: layout.segmentHeight)
+          .frame(width: layout.mainWidth, height: layout.barHeight)
+          .frame(maxHeight: .infinity, alignment: .bottom)
+          .transition(Self.sheetContentTransition)
+      }
 
       // Glass at the medium detent, opaque at the large one, crossing over as the sheet is dragged
       // between them, and back to glass as it contracts into the capsule. Drawn inside the glass,
@@ -268,6 +318,7 @@ struct TabBarContent: View {
         )
         .transition(Self.sheetContentTransition)
       }
+
     }
     .frame(width: frame.width, height: frame.height)
     .clipShape(Self.glassShape(sheet: presented))

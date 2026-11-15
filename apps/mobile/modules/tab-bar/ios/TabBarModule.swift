@@ -14,7 +14,7 @@ public class TabBarModule: Module {
       Events(
         "onTabPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit",
         "onComposerActiveChange", "onComposerQueryChange", "onComposerSubmit",
-        "onSwitcherFolderAction"
+        "onSwitcherFolderAction", "onReaderToolPress", "onReaderFontSizeChange"
       )
 
       Prop("tabs") { (view: TabBarView, tabs: [TabItemRecord]) in
@@ -87,6 +87,11 @@ public class TabBarModule: Module {
 
       Prop("composerStatus") { (view: TabBarView, status: String?) in
         view.model.composerStatus = status.flatMap(ComposerStatus.init(rawValue:)) ?? .idle
+      }
+
+      // The reader's tools; omitted, the capsule is the tab bar.
+      Prop("reader") { (view: TabBarView, reader: ReaderRecord?) in
+        view.model.applyReader(reader?.state)
       }
 
       Prop("searchPlaceholder") { (view: TabBarView, placeholder: String?) in
@@ -194,4 +199,40 @@ struct ComposerFolderRecord: Record {
   @Field var name: String = ""
 
   var folder: ComposerFolder { ComposerFolder(id: id, name: name) }
+}
+
+struct ReaderToolRecord: Record {
+  @Field var key: String = ""
+  @Field var label: String = ""
+  @Field var icon: IconRecord = IconRecord()
+  @Field var selectedIcon: IconRecord? = nil
+  @Field var selected: Bool = false
+  @Field var selectedTint: UIColor? = nil
+  @Field var disabled: Bool = false
+
+  var tool: ReaderTool {
+    ReaderTool(
+      id: key, label: label, icon: icon.icon, selectedIcon: (selectedIcon ?? icon).icon,
+      isSelected: selected, isEnabled: !disabled,
+      selectedTint: selectedTint.map { Color(uiColor: $0) }
+    )
+  }
+}
+
+struct ReaderRecord: Record {
+  @Field var tools: [ReaderToolRecord] = []
+  @Field var fontSize: Double = 17
+  @Field var minFontSize: Double = 14
+  @Field var maxFontSize: Double = 22
+  @Field var fontSizeLabel: String = "Text size"
+  @Field var shareUrl: String? = nil
+
+  var state: ReaderState {
+    // A degenerate range would crash the slider; fall back to a single step above the minimum.
+    let upper = max(maxFontSize, minFontSize + 1)
+    return ReaderState(
+      tools: tools.map(\.tool), fontSize: fontSize, fontRange: minFontSize...upper, fontLabel: fontSizeLabel,
+      shareURL: shareUrl
+    )
+  }
 }
