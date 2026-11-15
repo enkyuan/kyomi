@@ -76,9 +76,8 @@ describe("native block rendering", () => {
   test("ordered list honours start and task state", () => {
     const out = render(blocksByType.list);
     expect(out).toContain("3.");
-    expect(out).toContain("☑");
-    expect(out).toContain("☐");
     expect(out).toContain('data-label="Done"');
+    expect(out).toContain('data-label="To do"');
     expect(out).toContain('data-role="list"');
   });
 

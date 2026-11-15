@@ -3,6 +3,7 @@ import { useState, type ComponentType, type ReactNode } from "react";
 import type { ReaderBlock, ReaderInline, ReaderTableCell } from "../../core/document";
 import { useReaderNative } from "./context";
 import { CodeBlockView } from "./code";
+import { Checkbox, Disclosure } from "./icons";
 import { EmbedBlockView, LinkCardBlock } from "./embed";
 import { Inlines, renderInlines } from "./inline";
 import { HtmlBlock, MathBlock } from "./islands";
@@ -58,14 +59,33 @@ function ListBlock({ block }: { readonly block: Block<"list"> }) {
         const task = item.checked !== null;
         return (
           <View key={index} style={{ flexDirection: "row" }}>
-            <Text
-              accessibilityLabel={task ? (item.checked ? "Done" : "To do") : undefined}
-              importantForAccessibility={task ? "yes" : "no-hide-descendants"}
-              maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
-              style={{ ...base, textAlign: "right", width: markerWidth, paddingRight: 8 }}
-            >
-              {task ? (item.checked ? "☑" : "☐") : marker(block.ordered, block.start, index)}
-            </Text>
+            {task ? (
+              <View
+                accessibilityLabel={item.checked ? "Done" : "To do"}
+                accessible
+                style={{
+                  alignItems: "center",
+                  height: base.lineHeight,
+                  justifyContent: "center",
+                  width: markerWidth,
+                }}
+              >
+                <Checkbox
+                  background={theme.colors.background}
+                  checked={Boolean(item.checked)}
+                  color={item.checked ? theme.colors.foreground : theme.colors.muted}
+                  size={Math.round(theme.fontSize * 0.8)}
+                />
+              </View>
+            ) : (
+              <Text
+                importantForAccessibility="no-hide-descendants"
+                maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
+                style={{ ...base, textAlign: "right", width: markerWidth, paddingRight: 8 }}
+              >
+                {marker(block.ordered, block.start, index)}
+              </Text>
+            )}
             <View style={{ flex: 1, gap: theme.blockGap * 0.4 }}>
               <Blocks blocks={item.children} compact />
             </View>
@@ -150,7 +170,13 @@ function DetailsBlock({ block }: { readonly block: Block<"details"> }) {
         onPress={() => setOpen((value) => !value)}
         style={{ flexDirection: "row", gap: 8, padding: 12 }}
       >
-        <Text style={{ ...base, color: theme.colors.muted }}>{open ? "▾" : "▸"}</Text>
+        <View style={{ height: base.lineHeight, justifyContent: "center" }}>
+          <Disclosure
+            color={theme.colors.muted}
+            open={open}
+            size={Math.round(theme.fontSize * 0.8)}
+          />
+        </View>
         <Text
           maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
           style={{ ...base, flex: 1, fontFamily: theme.fonts.strong }}

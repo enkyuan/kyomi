@@ -34,6 +34,8 @@ export type ReaderNativeHost = {
   /** Scrolls to an in-document anchor; returns false when the anchor is unknown. */
   scrollToAnchor?: ((anchor: string) => boolean) | undefined;
   renderImage?: ((props: ReaderImageRenderProps) => ReactElement) | undefined;
+  /** Copies text to the system clipboard. Without it, code blocks show no copy button. */
+  copyText?: ((text: string) => void | Promise<void>) | undefined;
   /** Without it, `html`, math and unsnapshotted embeds degrade to text and link cards. */
   renderIsland?: ((props: ReaderIslandProps) => ReactElement | null) | undefined;
 };

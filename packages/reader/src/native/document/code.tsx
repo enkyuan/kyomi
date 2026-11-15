@@ -1,13 +1,50 @@
-import { ScrollView, Text, View } from "react-native";
+import { useEffect, useRef, useState } from "react";
+import { Pressable, ScrollView, Text, View } from "react-native";
 import type { ReaderBlock } from "../../core/document";
 import { useReaderNative } from "./context";
+import { CheckIcon, CopyIcon } from "./icons";
 import { tokenStyle } from "./style";
 
 type CodeBlock = Extract<ReaderBlock, { type: "code" }>;
 
+const COPIED_MS = 1500;
+
+function CopyButton({ value }: { readonly value: string }) {
+  const { theme, host } = useReaderNative();
+  const [copied, setCopied] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  useEffect(() => () => clearTimeout(timer.current), []);
+  const copyText = host.copyText;
+  if (!copyText) return null;
+  const color = copied ? theme.colors.foreground : theme.colors.muted;
+  return (
+    <Pressable
+      accessibilityLabel={copied ? "Copied" : "Copy code"}
+      accessibilityRole="button"
+      hitSlop={14}
+      onPress={() => {
+        void Promise.resolve(copyText(value)).then(() => {
+          setCopied(true);
+          clearTimeout(timer.current);
+          timer.current = setTimeout(() => setCopied(false), COPIED_MS);
+        });
+      }}
+      style={({ pressed }) => ({
+        alignItems: "center",
+        height: 28,
+        justifyContent: "center",
+        opacity: pressed && !theme.reduceMotion ? 0.5 : 1,
+        width: 28,
+      })}
+    >
+      {copied ? <CheckIcon color={color} size={16} /> : <CopyIcon color={color} size={16} />}
+    </Pressable>
+  );
+}
+
 /** Tokens are precomputed by the compiler; this only maps them to nested `Text`. */
 export function CodeBlockView({ block }: { readonly block: CodeBlock }) {
-  const { theme } = useReaderNative();
+  const { theme, host } = useReaderNative();
   const emphasized = new Set(block.highlightLines);
   const fontSize = theme.fontSize * 0.82;
   const lines =
@@ -25,20 +62,34 @@ export function CodeBlockView({ block }: { readonly block: CodeBlock }) {
         overflow: "hidden",
       }}
     >
-      {header ? (
-        <Text
-          accessibilityRole="header"
-          maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
+      {header || host.copyText ? (
+        <View
           style={{
-            color: theme.colors.muted,
-            fontFamily: theme.fonts.strong,
-            fontSize: theme.fontSize * 0.74,
+            alignItems: "center",
+            flexDirection: "row",
+            justifyContent: "space-between",
             paddingHorizontal: 12,
-            paddingTop: 10,
+            paddingTop: 6,
           }}
         >
-          {header}
-        </Text>
+          {header ? (
+            <Text
+              accessibilityRole="header"
+              maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
+              style={{
+                color: theme.colors.muted,
+                fontFamily: theme.fonts.strong,
+                fontSize: theme.fontSize * 0.74,
+                flexShrink: 1,
+              }}
+            >
+              {header}
+            </Text>
+          ) : (
+            <View />
+          )}
+          <CopyButton value={block.value} />
+        </View>
       ) : null}
       <ScrollView
         accessibilityLabel={`${block.label} code`}
