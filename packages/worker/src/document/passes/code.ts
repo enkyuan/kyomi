@@ -34,7 +34,11 @@ export const code: DocumentPass = async (draft) => {
     // The label and the colour come from one decision, so a coloured block always says what it is:
     // a language the classifier committed to is named, and a block it could not place is plain text.
     const named = result.language ?? result.colour;
-    block.languageSource = result.language ? result.source : result.colour ? "classifier" : result.source;
+    block.languageSource = result.language
+      ? result.source
+      : result.colour
+        ? "classifier"
+        : result.source;
     block.language = named?.id ?? null;
     block.label = named?.label ?? "Plain text";
     delete block.highlight;
