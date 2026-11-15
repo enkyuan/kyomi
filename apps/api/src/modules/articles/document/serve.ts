@@ -136,9 +136,27 @@ export async function getArticleDetailWithDocumentForUser(
   database: DB,
   userId: string,
   articleId: string,
-  options: { enabled: boolean; maxVersion: number },
+  options: DocumentNegotiation,
 ): Promise<ArticleDetailDto> {
-  const article = await getArticleDetailForUser(database, userId, articleId);
+  return withNegotiatedDocuments(
+    database,
+    await getArticleDetailForUser(database, userId, articleId),
+    options,
+  );
+}
+
+export type DocumentNegotiation = { enabled: boolean; maxVersion: number };
+
+/**
+ * Applies the same capability negotiation to an article detail another operation produced, such
+ * as the one an extraction returns, so every response that carries `reader` bodies agrees on
+ * which body kind the client gets.
+ */
+export async function withNegotiatedDocuments(
+  database: DB,
+  article: ArticleDetailDto,
+  options: DocumentNegotiation,
+): Promise<ArticleDetailDto> {
   if (!options.enabled || options.maxVersion <= 0) {
     return article;
   }

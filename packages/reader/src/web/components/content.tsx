@@ -41,8 +41,8 @@ export type ReaderDocumentContent = Omit<ReaderContentModel, "bodyKind" | "conte
   bodyKind: "document";
   document?: unknown;
   documentVersion?: number | null;
-  /** Sanitized HTML body the API always serves alongside the document. */
-  contentHtml: string;
+  /** The sanitized HTML body served alongside the document; null when it compiled from markdown or text. */
+  contentHtml: string | null;
 };
 
 type ReaderContentProps = {
@@ -67,7 +67,9 @@ function DocumentBody({
     }
     // Unsupported version, malformed, or absent: the HTML body is always served alongside.
     const { document: _document, documentVersion: _documentVersion, ...rest } = reader;
-    return { ...rest, bodyKind: reader.contentHtml ? "html" : "fallback" };
+    return rest.contentHtml
+      ? { ...rest, contentHtml: rest.contentHtml, bodyKind: "html" }
+      : { ...rest, bodyKind: "fallback" };
   }, [document, reader]);
 
   if (!document) {

@@ -42,7 +42,7 @@ export function useActions({
   item: ArticleActionItem;
   saveErrorScope: string;
 }) {
-  const updateItemMutation = useInboxItemStateMutation();
+  const updateItemMutation = useInboxItemStateMutation({ reportErrors: false });
 
   const toggleSaved = useCallback(
     (options?: AnchoredToolbarActionOptions) => {
@@ -71,14 +71,28 @@ export function useActions({
   return {
     isSaved: item.isSaved,
     copyLink: () => {
-      void copyTextToClipboard(item.link).catch(() => undefined);
+      void copyTextToClipboard(item.link)
+        .then(() => toastManager.add({ title: "Link copied", type: "success", timeout: 1800 }))
+        .catch(() => showCopyFailedToast());
     },
     hide: (removeFromList = true) => {
-      updateItemMutation.mutate({
-        itemId: item.id,
-        patch: { isHidden: true },
-        removeFromList,
-      });
+      updateItemMutation.mutate(
+        {
+          itemId: item.id,
+          patch: { isHidden: true },
+          removeFromList,
+        },
+        {
+          onError: (error) => {
+            logClientError(saveErrorScope, error);
+            toastManager.add({
+              title: "Unable to hide article",
+              description: getUserSafeErrorMessage(error, "Try again in a moment."),
+              type: "error",
+            });
+          },
+        },
+      );
     },
     openSource: (options?: { newTab?: boolean }) => {
       const newTab = options?.newTab ?? true;
@@ -89,7 +103,17 @@ export function useActions({
       );
     },
     shareArticle: () => {
-      void shareArticle(item).catch(() => undefined);
+      void shareArticle(item).catch((error: unknown) => {
+        // Dismissing the native share sheet rejects with an AbortError; that is not a failure.
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+        toastManager.add({
+          title: "Unable to share article",
+          description: "Try again in a moment.",
+          type: "error",
+        });
+      });
     },
     toggleSaved,
   };
@@ -107,7 +131,17 @@ async function shareArticle(item: ArticleActionItem) {
     return;
   }
 
+  // No native share sheet: copying is the only action, so it needs its own confirmation.
   await copyTextToClipboard(item.link);
+  toastManager.add({ title: "Link copied", type: "success", timeout: 1800 });
+}
+
+function showCopyFailedToast() {
+  toastManager.add({
+    title: "Unable to copy link",
+    description: "Copy it from the address bar instead.",
+    type: "error",
+  });
 }
 
 async function copyTextToClipboard(text: string) {

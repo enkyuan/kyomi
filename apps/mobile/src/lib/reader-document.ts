@@ -1,6 +1,7 @@
 import { NATIVE_DOCUMENT_VERSION, isSupportedDocumentVersion } from "@kyomi/reader/native";
 import { readerDocumentSchema, type ReaderDocument } from "@kyomi/reader/document";
 import type { ReaderContent } from "@kyomi/reader";
+import type { ArticleDetailDto } from "@kyomi/reader/schemas/article";
 
 /**
  * Native KDM reader flag. Build-time (`EXPO_PUBLIC_*`), so the reader never flips renderers mid-session.
@@ -16,18 +17,8 @@ export function readerDocumentHeaders(enabled = NATIVE_READER_ENABLED): Record<s
   return enabled ? { [READER_DOCUMENT_VERSION_HEADER]: String(NATIVE_DOCUMENT_VERSION) } : {};
 }
 
-/**
- * `reader.selected` once the API serves documents: a `bodyKind: "document"` member of the reader
- * content union. The HTML fields stay populated as a fallback. Declared here until the shared
- * `ReaderContent` union gains the member.
- */
-export type ReaderDocumentContent = Omit<ReaderContent, "bodyKind"> & {
-  readonly bodyKind: "document";
-  readonly document: unknown;
-  readonly documentVersion: number;
-};
-
-export type ReaderBodyPayload = ReaderContent | ReaderDocumentContent;
+/** `reader.selected` as the API serves it: a document body when this client declared support. */
+export type ReaderBodyPayload = ArticleDetailDto["reader"]["selected"];
 
 export type SelectedReaderBody =
   | { readonly kind: "document"; readonly document: ReaderDocument }
@@ -55,9 +46,18 @@ export function selectReaderBody(
   return document ? { kind: "document", document } : { kind: "html" };
 }
 
-/** The DOM reader's input: a document member carries sanitized `contentHtml` as its fallback body. */
+/**
+ * The DOM reader's input: a document body carries the body it was compiled from as its fallback,
+ * named by `fallbackBodyKind`.
+ */
 export function toHtmlReaderContent(reader: ReaderBodyPayload): ReaderContent {
   if (reader.bodyKind !== "document") return reader;
-  const { document: _document, documentVersion: _version, ...rest } = reader;
-  return { ...rest, bodyKind: "html" };
+  const {
+    document: _document,
+    documentVersion: _version,
+    compilerVersion: _compiler,
+    fallbackBodyKind,
+    ...rest
+  } = reader;
+  return { ...rest, bodyKind: fallbackBodyKind };
 }

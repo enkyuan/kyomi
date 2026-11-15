@@ -1,7 +1,8 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { toFeedArticleDetailDtoForTest } from "@modules/articles/read/detail";
 import { parseSupportedDocumentVersion } from "@modules/articles/document/negotiate";
-import { applyStoredDocuments } from "@modules/articles/document/serve";
+import { articleDetailSchema } from "@kyomi/reader/schemas/article";
+import { applyStoredDocuments, withNegotiatedDocuments } from "@modules/articles/document/serve";
 import { fakeDocument, TEST_COMPILER_VERSION } from "./helpers";
 
 function article() {
@@ -79,5 +80,34 @@ describe("applyStoredDocuments", () => {
   test("falls back to the HTML body when no document is stored", () => {
     const result = applyStoredDocuments(article(), { original: none, extracted: none }, 5);
     expect(result.reader.selected.bodyKind).toBe("html");
+  });
+});
+
+describe("document bodies and the shared reader schema", () => {
+  test("a served document body parses with the schema every client validates against", () => {
+    const result = applyStoredDocuments(article(), { original: stored(1), extracted: none }, 1);
+    // Over the wire the detail is JSON, so check what a client would receive.
+    const parsed = articleDetailSchema.safeParse(JSON.parse(JSON.stringify(result)));
+    expect(parsed.success).toBe(true);
+    expect(parsed.data?.reader.selected.bodyKind).toBe("document");
+  });
+});
+
+describe("withNegotiatedDocuments", () => {
+  // No database is passed: when negotiation is off the stored columns must not be read.
+  const noDatabase = null as never;
+
+  test("returns the article untouched when the feature flag is off", async () => {
+    const base = article();
+    expect(await withNegotiatedDocuments(noDatabase, base, { enabled: false, maxVersion: 1 })).toBe(
+      base,
+    );
+  });
+
+  test("returns the article untouched when the client did not declare support", async () => {
+    const base = article();
+    expect(await withNegotiatedDocuments(noDatabase, base, { enabled: true, maxVersion: 0 })).toBe(
+      base,
+    );
   });
 });

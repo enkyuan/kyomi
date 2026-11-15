@@ -22,9 +22,8 @@ type ScrollHeaderLayoutProps = {
 
 /**
  * Shared chrome for a scroll-linked material header: the blur target, the
- * floating HeaderSurface, and the safe-area geometry. Recents and Settings
- * compose this so the header can't drift between them; each screen still owns
- * its own scroll model (the part that legitimately differs) via `scrollY`.
+ * floating HeaderSurface, and the safe-area geometry. The screen owns its
+ * scroll model via `scrollY`.
  */
 export function ScrollHeaderLayout({ children, header, scrollY, title }: ScrollHeaderLayoutProps) {
   const insets = useSafeAreaInsets();

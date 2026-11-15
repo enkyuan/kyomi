@@ -14,10 +14,17 @@ import {
   Inter_700Bold,
 } from "@expo-google-fonts/inter";
 import {
-  DMSans_400Regular,
-  DMSans_500Medium,
-  DMSans_600SemiBold,
-} from "@expo-google-fonts/dm-sans";
+  Newsreader_400Regular,
+  Newsreader_400Regular_Italic,
+  Newsreader_600SemiBold,
+  Newsreader_600SemiBold_Italic,
+  Newsreader_700Bold,
+  Newsreader_700Bold_Italic,
+} from "@expo-google-fonts/newsreader";
+import {
+  JetBrainsMono_400Regular,
+  JetBrainsMono_500Medium,
+} from "@expo-google-fonts/jetbrains-mono";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { persister, queryClient } from "@lib/query/client";
 import { useSessionGate } from "@modules/auth/hooks/use-session-gate";
@@ -35,9 +42,14 @@ export default function RootLayout() {
     [FONT_FAMILIES.inter.medium]: Inter_500Medium,
     [FONT_FAMILIES.inter.semibold]: Inter_600SemiBold,
     [FONT_FAMILIES.inter.bold]: Inter_700Bold,
-    [FONT_FAMILIES.dmSans.regular]: DMSans_400Regular,
-    [FONT_FAMILIES.dmSans.medium]: DMSans_500Medium,
-    [FONT_FAMILIES.dmSans.semibold]: DMSans_600SemiBold,
+    [FONT_FAMILIES.newsreader.regular]: Newsreader_400Regular,
+    [FONT_FAMILIES.newsreader.italic]: Newsreader_400Regular_Italic,
+    [FONT_FAMILIES.newsreader.semibold]: Newsreader_600SemiBold,
+    [FONT_FAMILIES.newsreader.semiboldItalic]: Newsreader_600SemiBold_Italic,
+    [FONT_FAMILIES.newsreader.bold]: Newsreader_700Bold,
+    [FONT_FAMILIES.newsreader.boldItalic]: Newsreader_700Bold_Italic,
+    [FONT_FAMILIES.jetbrainsMono.regular]: JetBrainsMono_400Regular,
+    [FONT_FAMILIES.jetbrainsMono.medium]: JetBrainsMono_500Medium,
   });
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { Alert } from "react-native";
 import { mobileApiErrorMessage } from "@/lib/api";
+import { toast } from "@ui/toast";
 import { articleListQueryKeys } from "@modules/articles/queries/keys";
 import { listFolders, listSubscribedFeeds, moveFeedToFolder, unfollowFeed } from "../lib/api";
 import {
@@ -15,8 +15,7 @@ export function useFolderFeeds(folderId: string) {
   const folders = useQuery({ queryFn: listFolders, queryKey: foldersQueryKey });
   const feeds = useQuery({ queryFn: listSubscribedFeeds, queryKey: subscribedFeedListQueryKey });
 
-  const onError = (error: unknown) =>
-    Alert.alert("Couldn't update the feed", mobileApiErrorMessage(error));
+  const onError = (error: unknown) => toast.error(mobileApiErrorMessage(error));
   const onSuccess = () => queryClient.invalidateQueries({ queryKey: subscribedFeedsQueryKey });
   const { mutate: move } = useMutation({ mutationFn: moveFeedToFolder, onError, onSuccess });
   const { mutate: unfollow } = useMutation({

@@ -20,19 +20,52 @@ public struct TabBarIcon: Sendable {
   /// off-centre.
   let transform: CGAffineTransform
 
+  /// A parsed path before stroking, kept so the same glyph can be stroked again at another weight.
+  struct Source {
+    let path: SwiftUI.Path
+    let strokeWidth: CGFloat?
+    let evenOdd: Bool
+  }
+
+  private let sources: [Source]
+
   public init(viewBox: String, rotation: Double = 0, paths: [(d: String, evenOdd: Bool, strokeWidth: CGFloat?)]) {
     let box = Self.parseViewBox(viewBox)
     let parsed = paths.map { SwiftUI.Path(SVGPathParser.path(from: $0.d)) }
     self.viewBox = box
     transform = Self.centeredRotation(degrees: rotation, in: box, paths: parsed)
-    layers = zip(paths, parsed).map { source, path in
+    sources = zip(paths, parsed).map { Source(path: $1, strokeWidth: $0.strokeWidth, evenOdd: $0.evenOdd) }
+    layers = Self.layers(for: sources)
+  }
+
+  private init(viewBox: CGRect, transform: CGAffineTransform, sources: [Source]) {
+    self.viewBox = viewBox
+    self.transform = transform
+    self.sources = sources
+    layers = Self.layers(for: sources)
+  }
+
+  private static func layers(for sources: [Source]) -> [Layer] {
+    sources.map { source in
       Layer(
         outline: source.strokeWidth.map {
-          path.strokedPath(StrokeStyle(lineWidth: $0, lineCap: .round, lineJoin: .round))
-        } ?? path,
+          source.path.strokedPath(StrokeStyle(lineWidth: $0, lineCap: .round, lineJoin: .round))
+        } ?? source.path,
         evenOdd: source.evenOdd
       )
     }
+  }
+
+  /// The same glyph with its line strokes `points` wide when drawn `size` points square, so an icon
+  /// beside text can take the text's stroke weight. Filled layers are unchanged.
+  func stroked(toPoints points: CGFloat, iconSize size: CGFloat) -> TabBarIcon {
+    let scale = min(size / viewBox.width, size / viewBox.height)
+    let width = points / scale
+    return TabBarIcon(
+      viewBox: viewBox,
+      transform: transform,
+      sources: sources.map { Source(path: $0.path, strokeWidth: $0.strokeWidth == nil ? nil : width, evenOdd: $0.evenOdd) }
+    )
   }
 
   private static func centeredRotation(degrees: Double, in box: CGRect, paths: [SwiftUI.Path]) -> CGAffineTransform {

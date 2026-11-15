@@ -8,6 +8,7 @@ import {
   NativeDocumentBody,
   createReaderNativeTheme,
   type NativeDocumentBodyHandle,
+  type NativeReadingSample,
   type ReaderFootnote,
   type ReaderNativeHost,
 } from "@kyomi/reader/native";
@@ -28,6 +29,9 @@ type NativeArticleBodyProps = {
   readonly document: ReaderDocument;
   readonly faviconUrls: readonly string[];
   readonly feedTitle: string;
+  /** Restore here (0..1) instead of the locally saved row, so a position follows the reader across devices. */
+  readonly initialProgress?: number;
+  readonly onReadingProgress?: (sample: NativeReadingSample) => void;
   readonly onReady?: () => void;
   readonly title: string;
   readonly topInset: number;
@@ -52,6 +56,8 @@ export function NativeArticleBody({
   document,
   faviconUrls,
   feedTitle,
+  initialProgress,
+  onReadingProgress,
   onReady,
   title,
   topInset,
@@ -71,10 +77,11 @@ export function NativeArticleBody({
         colors: { background: readerCanvas[colorScheme] },
         fontSize: mobileReaderLayout.body.fontSizePx,
         fonts: {
-          body: FONT_FAMILIES.dmSans.regular,
-          heading: FONT_FAMILIES.inter.bold,
-          mono: Platform.select({ android: "monospace", default: "Menlo" }),
-          strong: FONT_FAMILIES.dmSans.semibold,
+          body: FONT_FAMILIES.newsreader.regular,
+          heading: FONT_FAMILIES.newsreader.semibold,
+          italic: FONT_FAMILIES.newsreader.italic,
+          mono: FONT_FAMILIES.jetbrainsMono.regular,
+          strong: FONT_FAMILIES.newsreader.bold,
         },
         inset,
         lineHeight: mobileReaderLayout.body.lineHeight,
@@ -171,9 +178,9 @@ export function NativeArticleBody({
         selectable
         style={{
           color: theme.colors.foreground,
-          fontFamily: FONT_FAMILIES.inter.bold,
+          fontFamily: FONT_FAMILIES.inter.semibold,
           fontSize: mobileReaderLayout.title.minFontSizePx + 4,
-          letterSpacing: -0.035 * (mobileReaderLayout.title.minFontSizePx + 4),
+          letterSpacing: -0.012 * (mobileReaderLayout.title.minFontSizePx + 4),
           lineHeight: Math.round(
             (mobileReaderLayout.title.minFontSizePx + 4) * mobileReaderLayout.title.lineHeight,
           ),
@@ -196,8 +203,10 @@ export function NativeArticleBody({
         header={header}
         host={host}
         initialIndex={initialIndex}
+        initialProgress={initialProgress}
         inset={inset}
         onFirstContentLayout={onReady}
+        onReadingProgress={onReadingProgress}
         onScrollIndexChange={onScrollIndexChange}
         theme={theme}
       />

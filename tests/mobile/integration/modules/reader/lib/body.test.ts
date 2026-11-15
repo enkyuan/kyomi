@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import "../../../packages/reader/render";
 import { makeDocument } from "../../../packages/reader/fixtures";
 
-const { readerDocumentHeaders, selectReaderBody } =
+const { readerDocumentHeaders, selectReaderBody, toHtmlReaderContent } =
   await import("../../../../../../apps/mobile/src/lib/reader-document");
 const { startReaderTrace } =
   await import("../../../../../../apps/mobile/src/modules/reader/lib/metrics");
@@ -35,6 +35,32 @@ describe("selectReaderBody", () => {
   test("falls back for a document that fails validation", () => {
     const broken = { ...(makeDocument([]) as object), blocks: [{ type: "paragraph" }] };
     expect(selectReaderBody(withDocument(broken), true).kind).toBe("html");
+  });
+});
+
+describe("toHtmlReaderContent", () => {
+  const served = {
+    bodyKind: "document" as const,
+    compilerVersion: "article-html-v3+kdm.1",
+    contentHtml: null,
+    contentMarkdown: "# Title",
+    contentText: null,
+    document: { version: 1 },
+    documentVersion: 1,
+    fallbackBodyKind: "markdown" as const,
+  };
+
+  test("returns a document body as the body it was compiled from, without the document fields", () => {
+    const result = toHtmlReaderContent(served as never);
+    expect(result.bodyKind).toBe("markdown");
+    expect(result.contentMarkdown).toBe("# Title");
+    expect(result).not.toHaveProperty("document");
+    expect(result).not.toHaveProperty("documentVersion");
+    expect(result).not.toHaveProperty("compilerVersion");
+  });
+
+  test("returns any other body unchanged", () => {
+    expect(toHtmlReaderContent(html as never)).toBe(html);
   });
 });
 

@@ -147,30 +147,17 @@ and low-alpha selected surface.
 
 ## Article lists
 
-On iOS, `modules/article-list` hosts a UIKit collection view with reusable SwiftUI article rows.
-Android and the web fallback use Legend List. Article queries, filters, actions, and row formatting
-remain in TypeScript under `src/modules/articles` and `src/modules/inbox`.
+Inbox and Recents render with Legend List on every platform. Article queries, filters, actions, and
+row formatting live in TypeScript under `src/modules/articles` and `src/modules/inbox`.
 
-- `useNativeListSync` serializes incremental row operations and paging together, coalesces pending
-  state, and retries one failed delivery with a full reset. A scope/filter change resets to the top.
-- Native updates preserve the first surviving visible article and its offset. Content-only edits
-  reconfigure the existing snapshot; insertions, removals, and reorderings update its identifiers.
-- Pull to refresh uses the query's refetch state on every renderer, including empty lists. A page
-  hidden entirely by a local filter advances to the next page until an article appears, the server
-  is exhausted, or a request fails. Empty-page errors wait for an explicit refresh; populated native
-  lists retry failed paging on the next drag.
-- The native handle offers `scrollToItem(id, animated)` and `scrollToOffset(offset, animated)`.
-  `onVisibleItemsChange` reports visible IDs in display order only when that set changes. Ordinary
-  header/tab-bar scroll effects stay on the Reanimated UI thread.
-- Native favicons share decoded thumbnails and in-flight requests. Failed URLs expire after 30
-  seconds; changing a row's favicon URLs resets its image identity.
+`modules/article-list` is a parked iOS Expo module: a UIKit collection view with reusable SwiftUI
+article rows. No screen mounts it (the wiring was reverted in #133), and its unused TypeScript-side
+helpers (`useNativeListSync`, row and style mapping) have been removed; recover them from git
+history (for example commit `748072be`) if the list returns. Profile representative inbox sizes on
+a device before re-landing it.
 
-The native list is a vertical article/Recents renderer, not a general Legend List replacement.
-There are no current consumers for grids, horizontal lists, sticky sections, or chat/end anchoring.
-The inbox does not currently supply a list header; its collapsing header is a separate overlay.
-
-Use `bun run --cwd tests test:mobile` for the TypeScript contracts. On macOS this also compiles and
-executes the production Foundation-only Swift row models, reducer, and asynchronous pipeline; other platforms skip that test.
+Use `bun run --cwd tests test:mobile` for the mobile contracts. On macOS this also compiles and
+executes the parked module's Foundation-only Swift row models, reducer, and asynchronous pipeline; other platforms skip that test.
 The SwiftUI/Expo bridge still requires an iOS development build. Instruments points of interest in
 `ArticleListSignpost` distinguish decoding/reduction, snapshot application, and cell configuration.
 These counters are measurement hooks, not evidence of a frame-rate improvement by themselves.
@@ -197,7 +184,9 @@ Link taps open `expo-web-browser`; long-pressing a link shares it. Images go thr
 proxy via `expo-image` (thumbhash placeholders, zero transition under reduce motion); tapping opens the
 viewer. Footnote refs open a page-sheet modal. `html` blocks, math and unsnapshotted players render in
 `html-island.dom.tsx` (one DOM component each; players mount only after a tap). Scroll position restores
-from the first visible row index (`reader-position` MMKV store).
+from the server reading position when "Remember reading position" is on (the same
+`initialProgress` and `onReadingProgress` as the DOM body), and otherwise from the first visible row
+index (`reader-position` MMKV store). The article is validated against `articleDetailSchema` on fetch.
 
 ### Measure DOM vs. native on a device
 

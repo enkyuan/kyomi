@@ -1,12 +1,13 @@
 import { useCallback, useEffect, useRef } from "react";
-import { Alert, Linking, Share } from "react-native";
+import { Linking, Share } from "react-native";
 import { fetchMobileApiJson } from "@/lib/api";
+import { toast } from "@ui/toast";
 import { triggerSavedToggleHaptic } from "../lib/haptics";
 import { useArticleStateMutation } from "@modules/inbox/hooks/use-state";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
 
 function showActionError(message: string) {
-  Alert.alert("Unable to update article", message);
+  toast.error(message);
 }
 
 type ArticleStateMutation = ReturnType<typeof useArticleStateMutation>;
@@ -18,7 +19,9 @@ function createArticleActions(item: ArticleListItemDto, updateItem: ArticleState
 
     void updateItem
       .mutateAsync({ itemId: item.id, patch: { isSaved: nextIsSaved } })
-      .catch(() => showActionError(item.isSaved ? "Please try again." : "Unable to save article."));
+      .catch(() =>
+        showActionError(item.isSaved ? "Couldn't unsave article" : "Couldn't save article"),
+      );
   };
 
   const shareArticle = () => {
@@ -32,13 +35,13 @@ function createArticleActions(item: ArticleListItemDto, updateItem: ArticleState
   };
 
   const openSource = () => {
-    void Linking.openURL(item.link).catch(() => showActionError("Unable to open the source."));
+    void Linking.openURL(item.link).catch(() => showActionError("Couldn't open the source"));
   };
 
   const hideArticle = () => {
     void updateItem
       .mutateAsync({ itemId: item.id, patch: { isHidden: true }, removeFromList: true })
-      .catch(() => showActionError("Please try again."));
+      .catch(() => showActionError("Couldn't hide article"));
   };
 
   const reportBrokenArticle = () => {
@@ -50,8 +53,8 @@ function createArticleActions(item: ArticleListItemDto, updateItem: ArticleState
         method: "POST",
       },
     )
-      .then(() => Alert.alert("Report sent", "Thanks for helping improve Kyomi."))
-      .catch(() => showActionError("Unable to send the report."));
+      .then(() => toast.success("Report sent"))
+      .catch(() => showActionError("Couldn't send the report"));
   };
 
   return { hideArticle, openSource, reportBrokenArticle, shareArticle, toggleSaved };

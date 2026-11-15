@@ -4,6 +4,7 @@ export {
   type NativeDocumentBodyProps,
 } from "./body";
 export { Blocks, BlockView, ProseRun } from "./blocks";
+export { type NativeReadingSample } from "./tracking";
 export {
   ReaderNativeProvider,
   useReaderNative,

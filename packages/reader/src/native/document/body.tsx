@@ -12,6 +12,7 @@ import { BlockView, ProseRun } from "./blocks";
 import { ReaderNativeProvider, type ReaderNativeHost } from "./context";
 import { planDocument, type ReaderSegment } from "./plan";
 import type { ReaderNativeTheme } from "./theme";
+import { useReadingTracking, type NativeReadingSample } from "./tracking";
 
 export type NativeDocumentBodyHandle = {
   scrollToAnchor: (anchor: string) => boolean;
@@ -29,6 +30,13 @@ export type NativeDocumentBodyProps = {
   /** Restore with the segment index saved from `onScrollIndexChange`; stable across font changes. */
   initialIndex?: number | undefined;
   onScrollIndexChange?: ((index: number) => void) | undefined;
+  /**
+   * Restore to this reading progress (0..1, the reading line within the article body) once laid
+   * out. Takes precedence over `initialIndex`, which is ignored when this is set.
+   */
+  initialProgress?: number | undefined;
+  /** Reading progress samples, measured the way the DOM reader measures them. */
+  onReadingProgress?: ((sample: NativeReadingSample) => void) | undefined;
   /** Fires once, after the first rows are laid out. */
   onFirstContentLayout?: (() => void) | undefined;
   listProps?: Partial<FlatListProps<ReaderSegment>> | undefined;
@@ -50,12 +58,19 @@ export const NativeDocumentBody = forwardRef<NativeDocumentBodyHandle, NativeDoc
       header,
       bottomInset = 0,
       initialIndex,
+      initialProgress,
       listProps,
     } = props;
-    const { onScrollIndexChange, onFirstContentLayout } = props;
+    const { onScrollIndexChange, onFirstContentLayout, onReadingProgress } = props;
     const plan = useMemo(() => planDocument(document), [document]);
     const listRef = useRef<FlatList<ReaderSegment>>(null);
     const laidOut = useRef(false);
+    const tracking = useReadingTracking({
+      bottomInset,
+      initialProgress,
+      listRef,
+      onReadingProgress,
+    });
 
     const scrollToAnchor = useCallback(
       (anchor: string) => {
@@ -113,12 +128,15 @@ export const NativeDocumentBody = forwardRef<NativeDocumentBodyHandle, NativeDoc
       <ReaderNativeProvider value={value}>
         <FlatList
           ref={listRef}
-          ListHeaderComponent={header ?? null}
+          // The header's height is where the article body starts, for progress measures.
+          ListHeaderComponent={<View onLayout={tracking.onHeaderLayout}>{header}</View>}
           contentContainerStyle={{ paddingBottom: bottomInset, paddingHorizontal: inset }}
           data={plan.segments}
           initialNumToRender={6}
           initialScrollIndex={
-            initialIndex && initialIndex < plan.segments.length ? initialIndex : undefined
+            initialProgress === undefined && initialIndex && initialIndex < plan.segments.length
+              ? initialIndex
+              : undefined
           }
           keyExtractor={(item) => item.key}
           maxToRenderPerBatch={4}
@@ -127,8 +145,13 @@ export const NativeDocumentBody = forwardRef<NativeDocumentBodyHandle, NativeDoc
             listRef.current?.scrollToOffset({ animated: false, offset: averageItemLength * index });
             setTimeout(() => listRef.current?.scrollToIndex({ animated: false, index }), 50);
           }}
+          onContentSizeChange={tracking.onContentSizeChange}
+          onLayout={tracking.onLayout}
+          onScroll={tracking.onScroll}
+          onScrollBeginDrag={tracking.onScrollBeginDrag}
           onViewableItemsChanged={onViewableItemsChanged}
           renderItem={renderItem}
+          scrollEventThrottle={16}
           viewabilityConfig={VIEWABILITY}
           windowSize={7}
           {...listProps}

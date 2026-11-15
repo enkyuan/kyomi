@@ -16,6 +16,8 @@ export type ReaderNativeColors = {
 export type ReaderNativeFonts = {
   body: string;
   strong: string;
+  /** Face for emphasis; custom families have no synthesized italic, so name it explicitly. */
+  italic: string;
   heading: string;
   mono: string;
 };
@@ -79,6 +81,7 @@ const DARK: ReaderNativeColors = {
 export const DEFAULT_NATIVE_READER_FONTS: ReaderNativeFonts = {
   body: "System",
   strong: "System",
+  italic: "System",
   heading: "System",
   mono: "Menlo",
 };

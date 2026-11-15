@@ -17,11 +17,7 @@ import {
 } from "@/lib/reader-document";
 import ArticleBody from "./components/article-body.dom";
 import { NativeArticleBody } from "./components/native-article-body";
-import {
-  READER_FIXTURE_ENABLED,
-  createLongArticleDocument,
-  createLongArticleReader,
-} from "./lib/fixture";
+import { READER_FIXTURE_ENABLED, createLongArticleBody } from "./lib/fixture";
 import { startReaderTrace, type ReaderTrace } from "./lib/metrics";
 import { useArticle } from "./hooks/use-article";
 import { useReadingProgress } from "./hooks/use-reading-progress";
@@ -34,26 +30,10 @@ export type ReaderScreenProps = {
 };
 
 const READER_TITLE_SKELETON_WIDTHS = ["100%", "88%", "64%"] as const;
+/** One bar width per line, a paragraph at a time. */
 const READER_SKELETON_PARAGRAPHS = [
-  {
-    id: "paragraph-1",
-    lines: [
-      { id: "line-1", width: "100%" },
-      { id: "line-2", width: "94%" },
-      { id: "line-3", width: "88%" },
-      { id: "line-4", width: "100%" },
-      { id: "line-5", width: "78%" },
-    ],
-  },
-  {
-    id: "paragraph-2",
-    lines: [
-      { id: "line-1", width: "96%" },
-      { id: "line-2", width: "100%" },
-      { id: "line-3", width: "90%" },
-      { id: "line-4", width: "82%" },
-    ],
-  },
+  ["100%", "94%", "88%", "100%", "78%"],
+  ["96%", "100%", "90%", "82%"],
 ] as const;
 
 export function ReaderScreen({ articleId }: ReaderScreenProps) {
@@ -78,14 +58,8 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
         ? {
             ...fetchedArticle,
             reader: {
-              selected: NATIVE_READER_ENABLED
-                ? {
-                    ...createLongArticleReader(),
-                    bodyKind: "document" as const,
-                    document: createLongArticleDocument(),
-                    documentVersion: 1,
-                  }
-                : createLongArticleReader(),
+              ...fetchedArticle.reader,
+              selected: createLongArticleBody(NATIVE_READER_ENABLED),
             },
           }
         : fetchedArticle,
@@ -212,6 +186,8 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
             document={body.document}
             faviconUrls={faviconUrls}
             feedTitle={article.feedTitle}
+            initialProgress={readingProgress.initialProgress}
+            onReadingProgress={readingProgress.onReadingProgress}
             onReady={handleArticleReady}
             title={article.title}
             topInset={insets.top}
@@ -285,38 +261,24 @@ function ReaderSkeleton({
             surfaceColor={surfaceColor}
             width={96}
           />
-          <View
-            style={{
-              gap: mobileReaderSkeletonLayout.titleLineSpacingPx,
-              marginTop: mobileReaderLayout.source.marginBottomPx,
-            }}
-          >
-            {READER_TITLE_SKELETON_WIDTHS.slice(0, mobileReaderLayout.title.skeletonLines).map(
-              (width) => (
-                <Skeleton
-                  height={mobileReaderSkeletonLayout.titleLineHeightPx}
-                  key={`title-${width}`}
-                  radius={4}
-                  surfaceColor={surfaceColor}
-                  width={width}
-                />
-              ),
-            )}
+          <View style={{ marginTop: mobileReaderLayout.source.marginBottomPx }}>
+            <Skeleton.Lines
+              gap={mobileReaderSkeletonLayout.titleLineSpacingPx}
+              lineHeight={mobileReaderSkeletonLayout.titleLineHeightPx}
+              surfaceColor={surfaceColor}
+              widths={READER_TITLE_SKELETON_WIDTHS.slice(0, mobileReaderLayout.title.skeletonLines)}
+            />
           </View>
         </View>
         <View style={{ gap: mobileReaderSkeletonLayout.paragraphGapPx }}>
-          {READER_SKELETON_PARAGRAPHS.map((paragraph) => (
-            <View key={paragraph.id} style={{ gap: mobileReaderSkeletonLayout.bodyLineSpacingPx }}>
-              {paragraph.lines.map((line) => (
-                <Skeleton
-                  height={mobileReaderSkeletonLayout.bodyLineHeightPx}
-                  key={`${paragraph.id}-${line.id}`}
-                  radius={4}
-                  surfaceColor={surfaceColor}
-                  width={line.width}
-                />
-              ))}
-            </View>
+          {READER_SKELETON_PARAGRAPHS.map((widths) => (
+            <Skeleton.Lines
+              gap={mobileReaderSkeletonLayout.bodyLineSpacingPx}
+              key={widths.join("-")}
+              lineHeight={mobileReaderSkeletonLayout.bodyLineHeightPx}
+              surfaceColor={surfaceColor}
+              widths={widths}
+            />
           ))}
         </View>
       </View>

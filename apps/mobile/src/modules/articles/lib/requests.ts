@@ -1,5 +1,5 @@
 import { prefetchMobileApi } from "@/lib/api";
-import { mobileApiPrefetchKey } from "@/lib/prefetch";
+import { mobileApiPrefetchKey } from "./prefetch";
 import { readerDocumentHeaders } from "@/lib/reader-document";
 
 const PAGE_LIMIT = 100;

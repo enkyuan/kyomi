@@ -98,7 +98,8 @@ function renderFormat(
       break;
     case "emphasis":
     case "cite":
-      style.fontStyle = "italic";
+      if (theme.fonts.italic === "System") style.fontStyle = "italic";
+      else style.fontFamily = theme.fonts.italic;
       break;
     case "underline":
     case "insert":

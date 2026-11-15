@@ -74,6 +74,48 @@ describe("reader content schema contract", () => {
     expect(result.success).toBe(false);
   });
 
+  test("accepts a compiled document body served beside its fallback body", () => {
+    const parsed = readerContentSchema.parse({
+      ...base,
+      bodyKind: "document",
+      document: { version: 1, blocks: [] },
+      documentVersion: 1,
+      compilerVersion: "article-html-v3+kdm.1",
+      fallbackBodyKind: "html",
+      contentHtml: "<p>Hello</p>",
+      contentMarkdown: null,
+      contentText: "Hello",
+      fallbackSummary: null,
+      fallbackReason: null,
+    });
+
+    expect(parsed.bodyKind).toBe("document");
+    if (parsed.bodyKind !== "document") throw new Error("expected document");
+    expect(parsed.fallbackBodyKind).toBe("html");
+    expect(parsed.contentHtml).toBe("<p>Hello</p>");
+  });
+
+  test("rejects a document body whose document is not an object or whose version is invalid", () => {
+    const document = {
+      ...base,
+      bodyKind: "document",
+      document: { version: 1, blocks: [] },
+      documentVersion: 1,
+      compilerVersion: "v",
+      fallbackBodyKind: "html",
+      contentHtml: "<p>Hello</p>",
+      contentMarkdown: null,
+      contentText: null,
+      fallbackSummary: null,
+      fallbackReason: null,
+    };
+
+    expect(readerContentSchema.safeParse({ ...document, document: "not an object" }).success).toBe(
+      false,
+    );
+    expect(readerContentSchema.safeParse({ ...document, documentVersion: 0 }).success).toBe(false);
+  });
+
   test("accepts fallback payload only with explicit fallbackReason", () => {
     const parsed = readerContentSchema.parse({
       ...base,

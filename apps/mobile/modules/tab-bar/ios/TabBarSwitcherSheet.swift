@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// What the switcher sheet shows, drawn inside the capsule's glass once it has grown into the
-/// sheet: a header with the title and the close button, a row of glass chips that edit the folders,
+/// sheet: a header with the title and the close button, a row of flat chips that edit the folders,
 /// then the folders themselves. It brings no background of its own; the glass is the sheet.
 /// Everything that changes a folder is reported to JavaScript, which owns the data.
 struct TabBarSwitcherSheet: View {
@@ -16,7 +16,16 @@ struct TabBarSwitcherSheet: View {
     case browse, edit, rename
   }
 
+  /// The chips' icons are stroked as heavy as their label's strokes (`.subheadline`, medium, is about
+  /// 1.5pt thick), so icon and text read as one weight.
+  private static let chipIconSize: CGFloat = 18
+  private static let chipIconStroke: CGFloat = 1.75
+
+  /// How far down from the chips a scrolled list fades to clear.
+  private static let topFadeHeight: CGFloat = 28
+
   @State private var mode = Mode.browse
+  @State private var topFade: CGFloat = 0
   @State private var draft = ""
   @State private var isCreating = false
   @State private var renaming: SwitcherFolder?
@@ -86,21 +95,29 @@ struct TabBarSwitcherSheet: View {
 
   // MARK: Chips
 
-  /// Edit, rename and add as glass chips that merge where they touch.
+  /// Edit, rename and add as flat chips.
+  /// Labels are never truncated: on a width too narrow for all three chips (a small phone, larger
+  /// text) the row scrolls sideways instead.
   private var chips: some View {
-    GlassEffectContainer(spacing: 8) {
-      HStack(spacing: 8) {
-        chip("Edit", icon: switcher.editIcon, isOn: mode == .edit, isEnabled: !model.switcherFolders.isEmpty) {
-          mode = mode == .edit ? .browse : .edit
-        }
-        chip("Rename", icon: switcher.renameIcon, isOn: mode == .rename, isEnabled: !model.switcherFolders.isEmpty) {
-          mode = mode == .rename ? .browse : .rename
-        }
-        chip("Add", icon: switcher.addIcon, isOn: false, isEnabled: true) {
-          draft = ""
-          isCreating = true
-        }
-        Spacer(minLength: 0)
+    ViewThatFits(in: .horizontal) {
+      chipRow
+      ScrollView(.horizontal) { chipRow }
+        .scrollIndicators(.hidden)
+    }
+    .frame(maxWidth: .infinity, alignment: .leading)
+  }
+
+  private var chipRow: some View {
+    HStack(spacing: 8) {
+      chip("Edit", icon: switcher.editIcon, isOn: mode == .edit, isEnabled: !model.switcherFolders.isEmpty) {
+        mode = mode == .edit ? .browse : .edit
+      }
+      chip("Rename", icon: switcher.renameIcon, isOn: mode == .rename, isEnabled: !model.switcherFolders.isEmpty) {
+        mode = mode == .rename ? .browse : .rename
+      }
+      chip("New Folder", icon: switcher.addIcon, isOn: false, isEnabled: true) {
+        draft = ""
+        isCreating = true
       }
     }
   }
@@ -110,19 +127,21 @@ struct TabBarSwitcherSheet: View {
   ) -> some View {
     Button(action: action) {
       HStack(spacing: 6) {
-        TabBarIconView(icon: icon, size: 18, color: isOn ? model.activeTint : .primary)
-        Text(title).font(.subheadline.weight(.medium))
+        TabBarIconView(
+          icon: icon.stroked(toPoints: Self.chipIconStroke, iconSize: Self.chipIconSize),
+          size: Self.chipIconSize,
+          color: isOn ? model.activeTint : .primary
+        )
+        Text(title)
+          .font(.subheadline.weight(.medium))
+          .lineLimit(1)
+          .fixedSize(horizontal: true, vertical: false)
       }
       .foregroundStyle(isOn ? model.activeTint : .primary)
-      .padding(.horizontal, 14)
+      .padding(.horizontal, 12)
       .frame(height: 36)
-      .contentShape(.capsule)
     }
-    .buttonStyle(.plain)
-    .glassEffect(
-      isOn ? .regular.tint(model.activeTint.opacity(0.25)).interactive() : .regular.interactive(),
-      in: .capsule
-    )
+    .buttonStyle(ChipButtonStyle(isOn: isOn, tint: model.activeTint))
     .disabled(!isEnabled)
     .opacity(isEnabled ? 1 : 0.4)
     .accessibilityAddTraits(isOn ? .isSelected : [])
@@ -135,40 +154,59 @@ struct TabBarSwitcherSheet: View {
       LazyVStack(spacing: 0) {
         ForEach(model.switcherFolders) { folder in
           row(folder)
-          if folder != model.switcherFolders.last {
-            Divider().padding(.leading, 44)
-          }
         }
       }
       .padding(.horizontal, TabBarMetrics.sheetCloseInset)
       .padding(.bottom, TabBarMetrics.sheetCloseInset)
+    }
+    // The list is clipped where it meets the chips, which cuts a row mid-glyph in a hard line. A
+    // mask that fades the top edge to clear softens that cut. Its height follows the scroll offset,
+    // so at rest, with the first row against the chips, nothing is faded.
+    .onScrollGeometryChange(for: CGFloat.self) { geometry in
+      min(max(geometry.contentOffset.y + geometry.contentInsets.top, 0), Self.topFadeHeight)
+    } action: { _, fade in
+      topFade = fade
+    }
+    .mask(alignment: .top) {
+      VStack(spacing: 0) {
+        LinearGradient(colors: [.clear, .black], startPoint: .top, endPoint: .bottom)
+          .frame(height: topFade)
+        Rectangle()
+      }
     }
   }
 
   private func row(_ folder: SwitcherFolder) -> some View {
     Button { press(folder) } label: {
       HStack(spacing: 12) {
-        Image(systemName: mode == .edit ? "minus.circle.fill" : "folder")
+        // Browsing shows the name alone; edit and rename mark each row with what pressing it does.
+        if mode == .edit {
+          Image(systemName: "minus.circle.fill")
+            .font(.title3)
+            .foregroundStyle(.red)
+        }
+        // The feed count rides the name's cap height as a superscript.
+        Text("\(Text(folder.name))\(Text(" \(folder.feedCount)").font(.caption).monospacedDigit().baselineOffset(10).foregroundStyle(.secondary))")
           .font(.title3)
-          .foregroundStyle(mode == .edit ? AnyShapeStyle(.red) : AnyShapeStyle(.secondary))
-          .frame(width: 32)
-        Text(folder.name)
-          .font(.body)
           .lineLimit(1)
           .frame(maxWidth: .infinity, alignment: .leading)
-        Text("\(folder.feedCount)")
-          .font(.subheadline)
-          .monospacedDigit()
-          .foregroundStyle(.secondary)
-        Image(systemName: mode == .rename ? "pencil" : "chevron.right")
-          .font(.footnote.weight(.semibold))
-          .foregroundStyle(.tertiary)
-          .opacity(mode == .edit ? 0 : 1)
+        if mode == .rename {
+          Image(systemName: "pencil")
+            .font(.footnote.weight(.semibold))
+            .foregroundStyle(.tertiary)
+        }
       }
       .frame(minHeight: 52)
       .contentShape(.rect)
     }
     .buttonStyle(.plain)
+    // A row leaving under the chips blurs and fades in proportion to how much of it has left, so
+    // the list softens into its top edge. Nothing is drawn over the list, so the edge has no seam.
+    .scrollTransition(topLeading: .interactive, bottomTrailing: .identity, axis: .vertical) { content, phase in
+      content
+        .blur(radius: 10 * max(0, -phase.value))
+        .opacity(1 + min(0, phase.value))
+    }
     .accessibilityLabel(folder.name)
     .accessibilityValue("\(folder.feedCount) feeds")
     .accessibilityHint(hint)
@@ -219,6 +257,20 @@ struct TabBarSwitcherSheet: View {
 
   private var isDeleting: Binding<Bool> {
     Binding(get: { deleting != nil }, set: { if !$0 { deleting = nil } })
+  }
+}
+
+/// A flat chip: a tertiary fill, or the active tint when on, that dims while pressed like the close
+/// button.
+private struct ChipButtonStyle: ButtonStyle {
+  let isOn: Bool
+  let tint: Color
+
+  func makeBody(configuration: Configuration) -> some View {
+    configuration.label
+      .background(isOn ? AnyShapeStyle(tint.opacity(0.2)) : AnyShapeStyle(.fill.tertiary), in: .capsule)
+      .contentShape(.capsule)
+      .opacity(configuration.isPressed ? 0.5 : 1)
   }
 }
 

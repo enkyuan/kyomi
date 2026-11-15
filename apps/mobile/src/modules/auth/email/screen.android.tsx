@@ -215,7 +215,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
 
                   <Text
                     color={theme.foreground}
-                    modifiers={[padding(0, 2, 0, 0)]}
+                    modifiers={[padding(0, 6, 0, 0)]}
                     style={FONT_STYLES.body}
                   >
                     {`We sent a code to ${email.value}.`}

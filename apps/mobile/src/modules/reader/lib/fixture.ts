@@ -1,4 +1,6 @@
-import type { ReaderContent } from "@kyomi/reader";
+import type { ArticleDetailDto } from "@kyomi/reader/schemas/article";
+
+type ReaderBody = ArticleDetailDto["reader"]["selected"];
 
 /**
  * Long-article fixture for on-device comparison. Set `EXPO_PUBLIC_KYOMI_READER_FIXTURE=long` and the
@@ -110,10 +112,40 @@ export function createLongArticleHtml(paragraphs = 400): string {
   return parts.join("\n");
 }
 
-export function createLongArticleReader(paragraphs = 400): ReaderContent {
+const FIXTURE_BODY = {
+  contentStatus: "ready",
+  contentSource: "feed_html",
+  contentBaseUrl: null,
+  title: null,
+  byline: null,
+  excerpt: null,
+  siteName: null,
+  language: null,
+  publishedTime: null,
+  notice: null,
+  extractionErrorCode: null,
+  extractionErrorMessage: null,
+  shouldExtract: false,
+  contentMarkdown: null,
+  contentText: null,
+  fallbackSummary: null,
+  fallbackReason: null,
+} as const;
+
+/** The fixture as the API would serve it: an HTML body, or a document body when `native` is set. */
+export function createLongArticleBody(native: boolean, paragraphs = 400): ReaderBody {
+  const contentHtml = createLongArticleHtml(paragraphs);
+  if (!native) return { ...FIXTURE_BODY, bodyKind: "html", contentHtml };
   return {
-    bodyKind: "html",
-    contentHtml: createLongArticleHtml(paragraphs),
-    contentStatus: "ready",
+    ...FIXTURE_BODY,
+    bodyKind: "document",
+    compilerVersion: "fixture",
+    contentHtml,
+    document: createLongArticleDocument(paragraphs) as Extract<
+      ReaderBody,
+      { bodyKind: "document" }
+    >["document"],
+    documentVersion: 1,
+    fallbackBodyKind: "html",
   };
 }

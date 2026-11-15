@@ -52,14 +52,22 @@ const DEFAULT_TINT: Record<ToastSemantic, string> = {
   warning: "#ff9f0a",
 };
 
-export function ToastViewport() {
+type ToastViewportProps = {
+  /** Space the app keeps occupied at the bottom edge (a floating tab bar), kept clear of toasts. */
+  readonly bottomInset?: number;
+  /** Where toasts appear when a call site doesn't say. */
+  readonly defaultPosition?: ToastPosition;
+};
+
+export function ToastViewport({ bottomInset = 0, defaultPosition }: ToastViewportProps) {
   const insets = useSafeAreaInsets();
   const snapshot = useSyncExternalStore(engine.subscribe, engine.getSnapshot, engine.getSnapshot);
   useEffect(() => {
     void engine.setDefaults({
-      safeArea: { bottom: insets.bottom, top: insets.top },
+      ...(defaultPosition ? { defaultPosition } : null),
+      safeArea: { bottom: Math.max(insets.bottom, bottomInset), top: insets.top },
     });
-  }, [insets.bottom, insets.top]);
+  }, [bottomInset, defaultPosition, insets.bottom, insets.top]);
 
   return (
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>

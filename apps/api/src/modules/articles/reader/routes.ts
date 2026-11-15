@@ -1,5 +1,8 @@
 import type { Elysia } from "elysia";
 import { embeddingClassifierConfig } from "@config/embeddings";
+import { env } from "@config/env";
+import { parseSupportedDocumentVersion } from "@modules/articles/document/negotiate";
+import { withNegotiatedDocuments } from "@modules/articles/document/serve";
 import { assertContentFieldBudget } from "@shared/http/budget";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { getArticleDetailForUser } from "../read/detail";
@@ -20,10 +23,20 @@ export function registerArticleEnrichmentRoutes(app: Elysia) {
       "/articles/:articleId/extract-full-text",
       async (context) => {
         const { db, logger, params, userId } = v1HandlerContext(context);
-        const result = await requestFullTextExtractionForUser(db, userId, params.articleId, {
+        const { request } = context as unknown as { request: Request };
+        const extraction = await requestFullTextExtractionForUser(db, userId, params.articleId, {
           embeddingClassifier: embeddingClassifierConfig(8000),
           logger,
         });
+        // The article in the response follows the same document negotiation as `GET /articles/:id`,
+        // so a client never swaps from a document body to an HTML one just by extracting.
+        const result = {
+          ...extraction,
+          article: await withNegotiatedDocuments(db, extraction.article, {
+            enabled: env.FEATURE_READER_DOCUMENT,
+            maxVersion: parseSupportedDocumentVersion(request.headers),
+          }),
+        };
         if (result.ok) {
           logger.info("articles.extract_full_text.accepted", {
             userId,
