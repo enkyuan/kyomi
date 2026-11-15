@@ -72,7 +72,9 @@ export function CodeBlock({ block, id }: { block: CodeBlockModel; id: string | u
     return () => unmountCopyButton(host);
   }, [block.value]);
 
-  const title = block.filename ?? block.label;
+  // Colour inferred without a language (no hint, filename or context) must not read "Plain text".
+  const title =
+    block.filename ?? (block.language === null && block.highlight ? undefined : block.label);
   return (
     <div data-reader-code-block="" data-reader-language={block.language ?? undefined} id={id}>
       <div

@@ -6,7 +6,7 @@
     "baseUrl": "https://docs.mkdocs.example/guide/install/"
   },
   "compiler": {
-    "version": "article-html-v3+kdm.2",
+    "version": "article-html-v3+kdm.3",
     "sanitizerVersion": "article-html-v3"
   },
   "meta": {
@@ -77,14 +77,16 @@
       "value": "pip install example-tool",
       "language": null,
       "languageSource": "none",
-      "label": "Plain text"
+      "label": "Plain text",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=4 lines=1 hash=94eec3d99b90d10f"
     },
     {
       "type": "code",
       "value": "uv add example-tool",
       "language": null,
       "languageSource": "none",
-      "label": "Plain text"
+      "label": "Plain text",
+      "highlight": "shiki@4.5.0:github-light/github-dark styles=4 lines=1 hash=2a932007ddb596ca"
     },
     {
       "type": "code",

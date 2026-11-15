@@ -182,3 +182,52 @@ describe("code (pass 13) conservative detection", () => {
     expect((await detect(value)).highlight).toEqual(first.highlight);
   });
 });
+
+describe("code (pass 13) context and deterministic shapes", () => {
+  const blocksOf = async (html: string) =>
+    (await run(html)).blocks.filter((block) => block.type === "code");
+
+  test("a file named in the paragraph before the block sets its language and label", async () => {
+    const [block] = await blocksOf(
+      `<p>Given <code>shop.py</code>:</p><pre><code>PORT = 8080\nretries = 3\n</code></pre>`,
+    );
+    expect(block).toMatchObject({
+      language: "python",
+      languageSource: "filename",
+      label: "Python",
+    });
+    expect(block?.type === "code" && block.highlight).toBeTruthy();
+  });
+
+  test("a block introduced as output is never coloured", async () => {
+    const [block] = await blocksOf(
+      `<p><code>gawain check shop.py</code> prints:</p><pre><code>shop.py:1:1    GW001 variable 'PORT' has no annotation\nshop.py:2:1    GW001 variable 'retries' has no annotation\n</code></pre>`,
+    );
+    expect(block).toMatchObject({ language: null, label: "Plain text" });
+    expect(block?.type === "code" && block.highlight).toBeFalsy();
+  });
+
+  test("diagnostics without an introduction stay plain", async () => {
+    const [block] = await blocksOf(
+      `<pre><code>[presence]\nshop.py:1:1    GW001 variable 'PORT' has no annotation\nshop.py:2:1    GW001 variable 'retries' has no annotation\n</code></pre>`,
+    );
+    expect(block?.type === "code" && block.highlight).toBeFalsy();
+  });
+
+  test("a short toml table and one-line install commands are coloured", async () => {
+    const blocks = await blocksOf(
+      `<pre><code>[tool.gawain]\nmode = "strict"</code></pre><pre><code>uv tool install "gawain[ty]"  # or pip install "gawain[ty]"</code></pre>`,
+    );
+    for (const block of blocks) {
+      expect(block.type === "code" && block.highlight).toBeTruthy();
+      expect(block).toMatchObject({ language: null, languageSource: "none" });
+    }
+  });
+
+  test("an explicit hint still wins over the introduction", async () => {
+    const [block] = await blocksOf(
+      `<p>See <code>notes.py</code>:</p><pre class="language-ruby"><code>puts 1</code></pre>`,
+    );
+    expect(block).toMatchObject({ language: "ruby", languageSource: "explicit" });
+  });
+});

@@ -95,7 +95,9 @@ export function CodeBlockView({ block }: { readonly block: CodeBlock }) {
     block.highlight?.lines ??
     block.value.split("\n").map((line) => [[line, 0]] as [string, number][]);
   // As on the web: the filename, else the language the highlighter used, always shown.
-  const header = block.filename ?? block.label;
+  // Colour inferred without a language (no hint, filename or context) must not read "Plain text".
+  const header =
+    block.filename ?? (block.language === null && block.highlight ? null : block.label);
 
   return (
     <View
