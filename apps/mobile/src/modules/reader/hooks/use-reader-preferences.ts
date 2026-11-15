@@ -55,10 +55,8 @@ async function saveFontSize({ fontSizePx }: SaveFontSize) {
 }
 
 /**
- * The reader's text size, driven by the bar's slider. One value path: the slider's steps set a
- * preview that the body renders at once, and its release writes the size into the preferences cache
- * in the same tick the preview is dropped, so the body never falls back to the old saved size while
- * the request is in flight. The request is not awaited: a failure restores the previous size.
+ * The reader's text size, driven by the bar's slider: steps set a live preview, and the release writes
+ * the cache synchronously (so the body never shows the old size) before saving. A failure restores it.
  */
 export function useReaderFontSize() {
   const queryClient = useQueryClient();

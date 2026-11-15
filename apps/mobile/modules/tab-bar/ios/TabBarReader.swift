@@ -87,18 +87,182 @@ struct TabBarFontPanel: View {
   }
 }
 
+/// Reports, each display frame, how far the bar has got between its resting state and the reader's tools.
+///
+/// The system animates the reader's view during a push, pop or swipe back, so that view's on-screen
+/// presence (slid in from the side or bottom, times its opacity) is the transition's own progress,
+/// scrubbed by a finger and springing back on a cancel. Reading it needs no JS, bridge or prop update.
+/// The reader is found by the identifier its root view carries, so other screens' transitions are ignored.
+@MainActor
+final class ReaderTransitionTracker {
+  /// The test ID of the reader's root view (`READER_SCREEN_ID`); iOS exposes it as the accessibility identifier.
+  static let screenIdentifier = "kyomi.reader.screen"
+  /// Views searched for the identifier per screen, so a list below the reader is never walked.
+  private static let searchBudget = 160
 
-/// The system share controller, hosted as a sheet's content so SwiftUI can present it with a matched
-/// transition from the capsule. It is Apple's own controller, not a lookalike.
-struct TabBarShareSheet: UIViewControllerRepresentable {
-  let url: URL
-  let onFinish: () -> Void
+  private let model: TabBarModel
+  private weak var host: UIView?
+  private var link: CADisplayLink?
+  private weak var readerController: UIViewController?
+  private var inTransition = false
+  /// Presence at the previous frame, for the lookahead.
+  private var lastPresence: Double?
+  /// When the tools arrived, and whether a pop has finished: the tools outlive the screen until JS unmounts it.
+  private var activeSince: CFAbsoluteTime = 0
+  private var afterPop = false
+  /// Screens already found to be the reader.
+  private let readers = NSHashTable<UIViewController>.weakObjects()
 
-  func makeUIViewController(context: Context) -> UIActivityViewController {
-    let controller = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-    controller.completionWithItemsHandler = { _, _, _, _ in onFinish() }
-    return controller
+  /// A reader shown without a transition (first screen, replace) takes the reader's state after this long.
+  private static let noTransitionGrace: CFTimeInterval = 0.5
+  /// The bar draws a frame after it is measured, so the measure is moved on by one frame of motion.
+  private static let lookaheadFrames = 1.0
+
+  init(model: TabBarModel, host: UIView) {
+    self.model = model
+    self.host = host
   }
 
-  func updateUIViewController(_ controller: UIActivityViewController, context: Context) {}
+  func start() {
+    guard link == nil else { return }
+    let target = DisplayLinkTarget(self)
+    let link = CADisplayLink(target: target, selector: #selector(DisplayLinkTarget.tick))
+    link.preferredFrameRateRange = CAFrameRateRange(minimum: 60, maximum: 120, preferred: 120)
+    link.add(to: .main, forMode: .common)
+    self.link = link
+  }
+
+  func stop() {
+    link?.invalidate()
+    link = nil
+    readerController = nil
+    inTransition = false
+    lastPresence = nil
+  }
+
+  func readerActiveChanged(_ active: Bool) {
+    if active {
+      activeSince = CFAbsoluteTimeGetCurrent()
+    } else {
+      afterPop = false
+    }
+  }
+
+  fileprivate func tick() {
+    guard let window = host?.window else { return }
+
+    if let transition = readerTransition(in: window.rootViewController) {
+      let first = !inTransition
+      inTransition = true
+      readerController = transition.reader
+      let moving = transition.moving ?? transition.reader.view!
+      let presence = Self.presence(of: moving, in: transition.context.containerView)
+      // The transition's first sample can be taken before the system has positioned the screen, so it
+      // reads as fully present; it is skipped, and the next one starts the motion.
+      if first { return }
+      // Move on by a frame's worth of the motion just seen, so the frame this draws lines up with the
+      // screen's rather than the one before it. A jump of more than half is not motion to extend.
+      let ahead = lastPresence.map { abs(presence - $0) > 0.5 ? presence : presence + (presence - $0) * Self.lookaheadFrames } ?? presence
+      lastPresence = presence
+      model.setReaderMorph(ahead)
+      return
+    }
+
+    lastPresence = nil
+    if inTransition {
+      // It ended. A reader that is still on screen (a push, or a swipe that was cancelled) is the bar;
+      // one that has been removed is gone, and JavaScript is about to drop its tools.
+      inTransition = false
+      let onScreen = readerController?.viewIfLoaded?.window != nil
+      afterPop = !onScreen
+      model.setReaderMorph(onScreen ? 1 : 0)
+      readerController = nil
+      return
+    }
+
+    // Nothing is moving: the bar is at rest, in whichever state the reader is.
+    if !model.readerActive {
+      if model.readerMorph != 0 { model.setReaderMorph(0) }
+    } else if !afterPop, model.readerMorph < 1,
+      CFAbsoluteTimeGetCurrent() - activeSince > Self.noTransitionGrace
+    {
+      model.setReaderMorph(1)
+    }
+  }
+
+  /// How present the reader is in the transition's container, 0 to 1: how far it is from its resting
+  /// place along each axis, and how opaque. The system slides a wrapper (a card view) several levels
+  /// above the screen's own view, which stays put, so this takes the largest offset among the
+  /// ancestors up to the container. Read from presentation layers, where the animation has got to.
+  private static func presence(of view: UIView, in container: UIView) -> Double {
+    var across: CGFloat = 0
+    var down: CGFloat = 0
+    var opacity: Float = 1
+    var cursor: UIView? = view
+    while let current = cursor, current !== container {
+      let layer = current.layer.presentation() ?? current.layer
+      across = max(across, abs(layer.frame.minX))
+      down = max(down, abs(layer.frame.minY))
+      opacity = min(opacity, layer.opacity)
+      cursor = current.superview
+    }
+    let bounds = container.bounds
+    return (1 - min(1, Double(across / max(1, bounds.width)))) * (1 - min(1, Double(down / max(1, bounds.height)))) * Double(opacity)
+  }
+
+  /// The transition the reader's screen is in, if any: the stack that holds the reader is a UIKit
+  /// navigation controller somewhere in the view controller tree, and a transition counts only when the
+  /// reader is one of the two screens it moves between.
+  private func readerTransition(
+    in root: UIViewController?
+  ) -> (context: UIViewControllerTransitionCoordinatorContext, reader: UIViewController, moving: UIView?)? {
+    guard let root else { return nil }
+    if let navigation = root as? UINavigationController, let coordinator = navigation.transitionCoordinator {
+      for (controllerKey, viewKey) in [
+        (UITransitionContextViewControllerKey.from, UITransitionContextViewKey.from),
+        (.to, .to),
+      ] {
+        if let screen = coordinator.viewController(forKey: controllerKey), isReader(screen) {
+          // The view the system moves inside its container; the screen's own view stays put.
+          return (coordinator, screen, coordinator.view(forKey: viewKey))
+        }
+      }
+    }
+    for child in root.children {
+      if let found = readerTransition(in: child) { return found }
+    }
+    return readerTransition(in: root.presentedViewController)
+  }
+
+  private func isReader(_ controller: UIViewController) -> Bool {
+    if readers.contains(controller) { return true }
+    guard let root = controller.viewIfLoaded else { return false }
+    var queue = [root]
+    var visited = 0
+    while !queue.isEmpty, visited < Self.searchBudget {
+      let view = queue.removeFirst()
+      visited += 1
+      if view.accessibilityIdentifier == Self.screenIdentifier {
+        readers.add(controller)
+        return true
+      }
+      queue.append(contentsOf: view.subviews)
+    }
+    return false
+  }
+}
+
+/// `CADisplayLink` holds its target strongly, so the tracker is reached through a weak hop. A display
+/// link fires on the main run loop it was added to, so the target is main-actor isolated outright.
+@MainActor
+private final class DisplayLinkTarget: NSObject {
+  private weak var tracker: ReaderTransitionTracker?
+
+  init(_ tracker: ReaderTransitionTracker) {
+    self.tracker = tracker
+  }
+
+  @objc func tick() {
+    tracker?.tick()
+  }
 }

@@ -22,6 +22,7 @@ import { startReaderTrace, type ReaderTrace } from "./lib/metrics";
 import { useArticle } from "./hooks/use-article";
 import { useReadingProgress } from "./hooks/use-reading-progress";
 import { useReaderToolbar } from "./hooks/use-toolbar";
+import { READER_SCREEN_ID } from "./lib/toolbar";
 import { getReaderCanvasColor, getReaderColorScheme } from "./lib/theme";
 import { FONT_STYLES } from "@/theme/fonts";
 import { mobileReaderLayout, mobileReaderSkeletonLayout } from "./lib/layout";
@@ -139,9 +140,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
       .catch(() => undefined);
   }, [article, queryClient]);
 
-  // The body waits for the "Remember reading position" preference so a position is never restored
-  // against it.
-  if (isLoading || (article && !readingProgress.isReady)) {
+  if (isLoading) {
     return (
       <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
         <ReaderSkeleton
@@ -193,7 +192,6 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
             faviconUrls={faviconUrls}
             feedTitle={article.feedTitle}
             fontSizePx={fontSizePx}
-            initialProgress={readingProgress.initialProgress}
             onReadingProgress={readingProgress.onReadingProgress}
             onReady={handleArticleReady}
             title={article.title}
@@ -211,7 +209,6 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
             faviconUrls={faviconUrls}
             feedTitle={article.feedTitle}
             fontSizePx={fontSizePx}
-            initialProgress={readingProgress.initialProgress}
             onReadingProgress={readingProgress.onReadingProgress}
             onReady={handleArticleReady}
             reader={toHtmlReaderContent(article.reader.selected)}
@@ -310,7 +307,9 @@ function ReaderCanvas({
           statusBarStyle: colorScheme === "dark" ? "light" : "dark",
         }}
       />
-      <View style={{ backgroundColor: color, flex: 1 }}>{children}</View>
+      <View style={{ backgroundColor: color, flex: 1 }} testID={READER_SCREEN_ID}>
+        {children}
+      </View>
     </>
   );
 }

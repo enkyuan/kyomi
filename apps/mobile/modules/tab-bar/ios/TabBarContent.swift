@@ -20,12 +20,9 @@ struct TabBarContent: View {
   /// Ties each glass shape to an identity so a hidden one materializes in and out, as the
   /// system tab bar's glass does, instead of fading its content over a stuck glass layer.
   @Namespace private var glassNamespace
-  /// Names the capsule as the source the system share sheet zooms out of.
-  @Namespace private var shareNamespace
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
   private nonisolated static let coordinateSpace = "KyomiTabBar"
-  private static let shareSourceID = "share"
   private static let inactiveIconColor = Color.primary.opacity(0.72)
   private static let actionIconColor = Color.primary.opacity(0.82)
   private static let searchFieldIconColor = Color(
@@ -41,15 +38,6 @@ struct TabBarContent: View {
   /// shape at once and only the field's text fades in (`searchFieldTransition`).
   private var transition: Animation? {
     reduceMotion ? nil : .spring(duration: 0.38, bounce: 0)
-  }
-  /// The bar's morph into the reader and back. It rides a screen transition, so it is paced by that
-  /// transition rather than by feedback: a stack push or pop takes about 0.35s, and a morph that
-  /// finishes before the screen does (the 0.26s this used on the way back) reads as the bar jumping
-  /// ahead of it, while one that lags (0.38s and more) reads as late. One spring both ways, 0.35s and
-  /// critically damped: no overshoot, and a reversal mid-flight retargets from the glass's current frame.
-  private static let readerMorph = Animation.spring(duration: 0.35, bounce: 0)
-  private func readerAnimation() -> Animation? {
-    reduceMotion ? nil : Self.readerMorph
   }
   /// The field's text arrives a beat after its glass has started to widen and leaves ahead of it,
   /// so nothing cross-fades with the tabs coming back.
@@ -118,7 +106,12 @@ struct TabBarContent: View {
         reduceMotion: reduceMotion,
         sheetPresented: model.switcherPresented,
         keyboardInset: keyboardInset,
-        readerToolCount: model.readerTools.count
+        // The capsule takes the reader's shape as soon as the stack starts bringing the reader in,
+        // before its tools have been sent, which is why the count has a stand-in.
+        readerToolCount: model.readerTools.isEmpty
+          ? (model.readerMorph > 0 ? TabBarMetrics.readerToolCount : 0)
+          : model.readerTools.count,
+        readerMorph: model.readerMorph
       )
       let sheet = SwitcherSheetGeometry(container: container, safeTop: model.safeTop)
 
@@ -146,12 +139,6 @@ struct TabBarContent: View {
                   model.mainFrame = frame
                 }
                 .glassEffectID("capsule", in: glassNamespace)
-                // The whole capsule is the share sheet's transition source: the sheet zooms out of it
-                // and back into it, led by the capsule's own corner radius (the source only takes a
-                // rounded rectangle, which at half the height is the capsule).
-                .matchedTransitionSource(id: Self.shareSourceID, in: shareNamespace) { source in
-                  source.clipShape(.rect(cornerRadius: TabBarMetrics.cornerRadius, style: .continuous))
-                }
                 .glassEffectTransition(.materialize)
                 .transition(Self.capsuleTransition)
                 .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
@@ -226,9 +213,6 @@ struct TabBarContent: View {
     .coordinateSpace(.named(Self.coordinateSpace))
     .animation(minimizeTransition, value: model.minimized)
     .animation(transition, value: model.searchActive)
-    // Entering the reader widens the capsule's glass to its tools while the search and add buttons
-    // materialize out of it; leaving reverses both. Same spring as search, so the two never disagree.
-    .animation(readerAnimation(), value: model.readerActive)
     .animation(reduceMotion ? nil : .spring(duration: 0.3, bounce: 0), value: model.fontPanelPresented)
     .animation(reduceMotion ? nil : .easeOut(duration: 0.2), value: model.composerActive)
     // Opening search focuses the field. It mounts while its text is still fading in, and a view
@@ -252,16 +236,6 @@ struct TabBarContent: View {
       composerFocused = true
       try? await Task.sleep(for: .milliseconds(200))
       if model.composerActive { composerFocused = true }
-    }
-    // The system share sheet, presented by the bar so it can zoom out of the capsule. SwiftUI's sheet
-    // is the presentation that takes a matched transition source; the controller inside is the
-    // system's own, so the targets, previews and Copy are the real share sheet's.
-    .sheet(isPresented: $model.sharePresented) {
-      if let url = model.shareURL.flatMap(URL.init(string:)) {
-        TabBarShareSheet(url: url) { model.sharePresented = false }
-          .navigationTransition(.zoom(sourceID: Self.shareSourceID, in: shareNamespace))
-          .presentationDetents([.medium, .large])
-      }
     }
     .sensoryFeedback(.impact(weight: .light), trigger: model.pressFeedback)
     .sensoryFeedback(.selection, trigger: model.fontStepFeedback)
@@ -301,28 +275,32 @@ struct TabBarContent: View {
     let presented = model.switcherPresented
 
     return ZStack(alignment: .top) {
-      // The tabs keep their size on the bar's band as the glass grows away from them, and fade.
-      // In the reader they give way to the reader's tools: out quickly, so nothing cross-fades
-      // with the tools arriving on the widening glass, and back in only once the tools have cleared
-      // (0.06s after they start to fade, which is how long their 0.1s fade-out takes to be mostly gone),
-      // so the two sets of glyphs are never on the glass together.
-      let tabsHidden = presented || model.readerActive
+      // The tabs keep their size on the bar's band as the glass grows away from them. In the reader
+      // they and the tools cross over by how far the morph has got: the tabs are gone by the time it is
+      // a third of the way, the tools arrive in its last third, so the two sets of glyphs are never on
+      // the glass together, whichever way the morph is going and however fast the finger takes it.
+      let morph = model.readerMorph
+      // Over a minimized bar the capsule is contracting to nothing, with no tabs to show on the way.
+      let tabsOpacity = presented || model.minimized ? 0 : 1 - min(1, morph / 0.35)
+      // Over a minimized bar the tools are on the glass from the moment it exists, fading with it.
+      let edge = TabBarMetrics.minimizedReaderEdge
+      let toolsOpacity =
+        presented ? 0 : model.minimized ? min(1, max(0, (morph - edge) / 0.1)) : min(1, max(0, (morph - 0.65) / 0.35))
       tabs(layout)
         .frame(width: layout.mainWidth, height: layout.barHeight)
         .frame(maxHeight: .infinity, alignment: .bottom)
-        .opacity(tabsHidden ? 0 : 1)
-        .animation(
-          reduceMotion ? nil : .easeOut(duration: tabsHidden ? 0.1 : 0.15).delay(tabsHidden ? 0 : 0.06),
-          value: tabsHidden
-        )
-        .allowsHitTesting(!tabsHidden)
-        .accessibilityHidden(tabsHidden)
+        .opacity(tabsOpacity)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.12), value: presented)
+        .allowsHitTesting(tabsOpacity > 0.9)
+        .accessibilityHidden(tabsOpacity < 0.1)
 
-      if model.readerActive, !presented {
+      if model.readerActive {
         TabBarReaderTools(model: model, segmentWidth: layout.readerSegmentWidth, height: layout.segmentHeight)
           .frame(width: layout.mainWidth, height: layout.barHeight)
           .frame(maxHeight: .infinity, alignment: .bottom)
-          .transition(Self.sheetContentTransition)
+          .opacity(toolsOpacity)
+          .allowsHitTesting(toolsOpacity > 0.9)
+          .accessibilityHidden(toolsOpacity < 0.1)
       }
 
       // Glass at the medium detent, opaque at the large one, crossing over as the sheet is dragged

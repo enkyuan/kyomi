@@ -16,6 +16,13 @@ import type { ReaderArticle } from "./article";
 
 export type ReaderMode = ReaderArticle["reader"]["activeMode"];
 
+/**
+ * The test ID of the reader screen's root view. iOS exposes it as the view's accessibility
+ * identifier, which is how the native tab bar recognises the reader's own screen among the stack's
+ * transitions. Keep it in step with `ReaderTransitionTracker.screenIdentifier`.
+ */
+export const READER_SCREEN_ID = "kyomi.reader.screen";
+
 /** The tools of the reader bar, in the order they sit on it. `textSize` is handled natively. */
 export const READER_TOOL_KEYS = ["save", "share", "mode", "textSize", "original"] as const;
 export type ReaderToolKey = (typeof READER_TOOL_KEYS)[number];

@@ -151,13 +151,15 @@ final class TabBarModel {
   var readerFontLabel = "Text size"
   /// The text size panel floats above the reader bar while this is set.
   var fontPanelPresented = false
+  /// Where the bar is between its resting state (0: the tabs, or the minimized buttons) and the
+  /// reader's tools (1). `ReaderTransitionTracker` sets it every frame from the stack's own
+  /// transition, so the bar follows a push, a pop and a swipe back with the finger; nothing here
+  /// animates it, because the transition is already the animation.
+  private(set) var readerMorph: Double = 0
   /// Bumped on each step of the text size slider, for its selection haptic.
   private(set) var fontStepFeedback = 0
   /// The link the share tool shares; without it the share tool is a plain press.
   var shareURL: String?
-  /// The system share sheet is up. It is a SwiftUI sheet the bar presents itself, zooming out of the
-  /// capsule, rather than something presented over it.
-  var sharePresented = false
   var activeTint = Color.accentColor
   /// Bumped by a press that commits something worth feeling: switching tabs, or adding. Re-tapping
   /// the current tab, search and the switcher stay silent, as the system tab bar does. The bar plays
@@ -178,6 +180,10 @@ final class TabBarModel {
   @ObservationIgnored var onComposerQueryChange: @MainActor (String) -> Void = { _ in }
   @ObservationIgnored var onComposerSubmit: @MainActor (String, String, String) -> Void = { _, _, _ in }
   /// A reader tool other than the text size tool, which opens the panel natively.
+  /// Asks the native view to open the system share sheet for a link, anchored to the capsule.
+  @ObservationIgnored var onShareRequest: @MainActor (String, CGRect) -> Void = { _, _ in }
+  /// The reader bar appeared or went; the native view starts and stops following the stack for it.
+  @ObservationIgnored var onReaderActiveChange: @MainActor (Bool) -> Void = { _ in }
   @ObservationIgnored var onReaderToolPress: @MainActor (String) -> Void = { _ in }
   /// Each step of the text size slider (`committed` false) and its release (`committed` true).
   @ObservationIgnored var onReaderFontSizeChange: @MainActor (Int, Bool) -> Void = { _, _ in }
@@ -211,12 +217,24 @@ final class TabBarModel {
 
   var readerActive: Bool { !readerTools.isEmpty }
 
+  func setReaderMorph(_ value: Double) {
+    let morph = min(1, max(0, value))
+    // Below a thousandth nothing on screen moves, and each change re-evaluates the whole bar.
+    guard abs(morph - readerMorph) > 0.001 || morph == 0 || morph == 1 else { return }
+    readerMorph = morph
+    // Leaving the reader closes what hangs off its bar.
+    if morph < 0.98, fontPanelPresented { fontPanelPresented = false }
+  }
+
   func applyReader(_ state: ReaderState?) {
+    let wasActive = readerActive
+    defer {
+      if readerActive != wasActive { onReaderActiveChange(readerActive) }
+    }
     guard let state else {
       if readerActive { readerTools = [] }
       if fontPanelPresented { fontPanelPresented = false }
       shareURL = nil
-      sharePresented = false
       return
     }
     readerTools = state.tools
@@ -233,9 +251,9 @@ final class TabBarModel {
 
   func pressReaderTool(_ id: String) {
     pressFeedback += 1
-    if id == "share", shareURL != nil {
+    if id == "share", let url = shareURL {
       fontPanelPresented = false
-      sharePresented = true
+      onShareRequest(url, mainFrame)
       return
     }
     if id == "textSize" {
@@ -308,7 +326,8 @@ final class TabBarModel {
     // The open text size panel takes every touch, so a tap outside closes it.
     if fontPanelPresented { return true }
     // The reader bar replaces the buttons, whose last frames are stale, so only it takes touches.
-    if readerActive { return mainFrame.contains(point) }
+    // While the bar is the reader's, or on its way to or from it, only the capsule takes touches.
+    if readerActive || readerMorph > 0.01 { return mainFrame.contains(point) }
     let mainShown = !minimized && !searchActive
     return (mainShown && mainFrame.contains(point))
       || actionFrame.contains(point)
