@@ -6,7 +6,7 @@
     "baseUrl": "https://mathblog.example/posts/euler/"
   },
   "compiler": {
-    "version": "article-html-v3+kdm.3",
+    "version": "article-html-v3+kdm.4",
     "sanitizerVersion": "article-html-v3"
   },
   "meta": {
@@ -52,16 +52,21 @@
       "children": [
         {
           "type": "text",
-          "value": "The same post also writes raw TeX for the client to render: "
-        },
-        {
-          "type": "math",
-          "tex": "\\int_0^1 x\\,dx = \\tfrac12",
-          "rendered": "katex:2854:dc772bcd1da708e5"
-        },
+          "value": "The same post also writes raw TeX for the client to render:"
+        }
+      ]
+    },
+    {
+      "type": "math",
+      "tex": "\\int_0^1 x\\,dx = \\tfrac12",
+      "rendered": "katex:2854:dc772bcd1da708e5"
+    },
+    {
+      "type": "paragraph",
+      "children": [
         {
           "type": "text",
-          "value": " and inline "
+          "value": "and inline "
         },
         {
           "type": "math",

@@ -6,7 +6,7 @@
     "baseUrl": "https://docs.docusaurus.example/docs/configuration"
   },
   "compiler": {
-    "version": "article-html-v3+kdm.3",
+    "version": "article-html-v3+kdm.4",
     "sanitizerVersion": "article-html-v3"
   },
   "meta": {
