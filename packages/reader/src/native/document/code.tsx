@@ -3,7 +3,7 @@ import { Animated, Easing, Pressable, ScrollView, Text, View } from "react-nativ
 import type { ReaderBlock } from "../../core/document";
 import { useReaderNative } from "./context";
 import { CheckIcon, CopyIcon } from "./icons";
-import { tokenStyle } from "./style";
+import { resolveCodeLines } from "./style";
 
 type CodeBlock = Extract<ReaderBlock, { type: "code" }>;
 
@@ -89,11 +89,8 @@ function CopyButton({ value }: { readonly value: string }) {
 /** Tokens are precomputed by the compiler; this only maps them to nested `Text`. */
 export function CodeBlockView({ block }: { readonly block: CodeBlock }) {
   const { theme, host } = useReaderNative();
-  const emphasized = new Set(block.highlightLines);
   const fontSize = theme.fontSize * 0.82;
-  const lines =
-    block.highlight?.lines ??
-    block.value.split("\n").map((line) => [[line, 0]] as [string, number][]);
+  const lines = resolveCodeLines(block, theme.scheme);
   // As on the web: the filename, else the language the highlighter used, always shown.
   // Colour inferred without a language (no hint, filename or context) must not read "Plain text".
   const header =
@@ -159,18 +156,11 @@ export function CodeBlockView({ block }: { readonly block: CodeBlock }) {
           {lines.map((line, lineIndex) => (
             <Text
               key={lineIndex}
-              style={
-                emphasized.has(lineIndex + 1)
-                  ? { backgroundColor: theme.colors.highlight }
-                  : undefined
-              }
+              style={line.emphasized ? { backgroundColor: theme.colors.highlight } : undefined}
             >
-              {line.map(([text, styleIndex], tokenIndex) => (
-                <Text
-                  key={tokenIndex}
-                  style={tokenStyle(block.highlight?.styles[styleIndex], theme.scheme)}
-                >
-                  {text}
+              {line.tokens.map((token, tokenIndex) => (
+                <Text key={tokenIndex} style={token.style}>
+                  {token.text}
                 </Text>
               ))}
               {lineIndex < lines.length - 1 ? "\n" : ""}

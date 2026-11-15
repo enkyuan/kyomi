@@ -6,6 +6,13 @@ export const HIGHLIGHT_ENGINE = "shiki@4.5.0:github-light/github-dark";
 
 export const MAX_HIGHLIGHT_CHARS = 30_000;
 export const MAX_HIGHLIGHT_LINES = 1_500;
+/**
+ * Tokenizing one long line is quadratic when it is a single string or comment (a 20,000 character
+ * line took over 30 seconds), and Shiki's per-line time limit then truncates it by wall clock,
+ * which makes the stored tokens depend on machine load. Minified or data-like lines are not worth
+ * colouring, so the whole block stays plain.
+ */
+export const MAX_HIGHLIGHT_LINE_CHARS = 1_000;
 
 type Style = { light?: string; dark?: string; fontStyle?: number };
 export type CodeHighlight = {
@@ -17,7 +24,8 @@ export type CodeHighlight = {
 const HEX = /^#[0-9a-f]{6}(?:[0-9a-f]{2})?$/i;
 
 let highlighter: Promise<HighlighterCore> | undefined;
-const loaded = new Set<string>();
+/** Resolves once a language and everything it can embed is registered; failures are remembered. */
+const loading = new Map<string, Promise<boolean>>();
 
 function getHighlighter(): Promise<HighlighterCore> {
   highlighter ??= createHighlighterCore({
@@ -28,6 +36,47 @@ function getHighlighter(): Promise<HighlighterCore> {
     engine: createOnigurumaEngine(import("shiki/wasm")),
   });
   return highlighter;
+}
+
+type BundledGrammar = { embeddedLangsLazy?: string[] };
+
+/**
+ * Registers `language` plus the grammars it can embed (markdown fences, heredocs, `<script>`).
+ * Shiki leaves lazily embedded grammars out, and an unregistered one tokenizes as plain text, so
+ * the same snippet would colour differently depending on which languages earlier calls had loaded.
+ * Loading the whole closure up front makes the result independent of call order.
+ */
+async function register(engine: HighlighterCore, language: string): Promise<boolean> {
+  const queue = [language];
+  const visited = new Set<string>();
+  while (queue.length > 0) {
+    const next = queue.pop() as string;
+    if (visited.has(next) || !isHighlightableLanguage(next)) {
+      continue;
+    }
+    visited.add(next);
+    const loader = bundledLanguages[next as keyof typeof bundledLanguages];
+    await engine.loadLanguage(loader);
+    const grammars = ((await loader()) as { default: BundledGrammar[] }).default;
+    for (const grammar of grammars) {
+      queue.push(...(grammar.embeddedLangsLazy ?? []));
+    }
+  }
+  return true;
+}
+
+function ensureLanguage(engine: HighlighterCore, language: string): Promise<boolean> {
+  let pending = loading.get(language);
+  if (!pending) {
+    pending = register(engine, language).catch(() => false);
+    loading.set(language, pending);
+  }
+  return pending;
+}
+
+/** Own keys only: `"constructor" in bundledLanguages` is true and would poison the engine. */
+export function isHighlightableLanguage(language: string): boolean {
+  return Object.hasOwn(bundledLanguages, language);
 }
 
 function fontStyleOf(style: Record<string, string>): number {
@@ -54,18 +103,20 @@ export async function highlightCode(
   value: string,
   language: string,
 ): Promise<CodeHighlight | null> {
+  if (value.length > MAX_HIGHLIGHT_CHARS || !isHighlightableLanguage(language)) {
+    return null;
+  }
+  const sourceLines = value.split("\n");
   if (
-    value.length > MAX_HIGHLIGHT_CHARS ||
-    value.split("\n").length > MAX_HIGHLIGHT_LINES ||
-    !(language in bundledLanguages)
+    sourceLines.length > MAX_HIGHLIGHT_LINES ||
+    sourceLines.some((line) => line.length > MAX_HIGHLIGHT_LINE_CHARS)
   ) {
     return null;
   }
   try {
     const engine = await getHighlighter();
-    if (!loaded.has(language)) {
-      await engine.loadLanguage(bundledLanguages[language as keyof typeof bundledLanguages]);
-      loaded.add(language);
+    if (!(await ensureLanguage(engine, language))) {
+      return null;
     }
     const { tokens } = engine.codeToTokens(value, {
       lang: language,
@@ -97,7 +148,9 @@ export async function highlightCode(
         return [token.content, position];
       }),
     );
-    // The renderer rebuilds the code from these tokens, so a mismatch would corrupt it.
+    // The renderer rebuilds the code from these tokens, so a mismatch would corrupt it. Shiki splits
+    // on CRLF and drops the CR; such a block stays plain rather than being coloured with a changed
+    // value (HTML parsing already normalizes line endings, so compiled values never carry one).
     if (lines.map((line) => line.map(([text]) => text).join("")).join("\n") !== value) {
       return null;
     }
