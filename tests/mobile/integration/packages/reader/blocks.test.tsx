@@ -171,4 +171,32 @@ describe("native block rendering", () => {
     expect(render(blocksByType.math, { renderIsland: undefined })).toContain("E=mc^2");
     expect(render(blocksByType.html, { renderIsland: undefined })).toBe("");
   });
+
+  test("inline math: SVG with the TeX as label, flat MathML as text, laid-out MathML as a placeholder", () => {
+    const svg = `<svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2ex" height="1ex" viewBox="0 0 2 1"><g stroke="currentColor" fill="currentColor"></g></svg>`;
+    const para = (...children: unknown[]) =>
+      ({ type: "paragraph", children }) as unknown as ReaderBlock;
+    const withSvg = render(para({ type: "math", tex: "x^{\\alpha}", svg }));
+    expect(withSvg).toContain('data-role="image"');
+    expect(withSvg).toContain('data-label="x^{\\alpha}"');
+    expect(withSvg).toContain("data-xml");
+    expect(withSvg).not.toContain("currentColor");
+    expect(
+      render(para({ type: "math", mathml: "<math><mi>y</mi><mo>=</mo><mn>2</mn></math>" })),
+    ).toContain("y=2");
+    // `2^20` flattened would read as "220": show a placeholder instead.
+    const laidOut = render(
+      para({ type: "math", mathml: "<math><msup><mn>2</mn><mn>20</mn></msup></math>" }),
+    );
+    expect(laidOut).toContain("[formula]");
+    expect(laidOut).not.toContain("220");
+  });
+
+  test("MathML-only block math without an island shows a placeholder, never an empty box", () => {
+    const block = {
+      type: "math",
+      mathml: "<math><mfrac><mn>1</mn><mn>2</mn></mfrac></math>",
+    } as unknown as ReaderBlock;
+    expect(render(block, { renderIsland: undefined })).toContain("[equation]");
+  });
 });

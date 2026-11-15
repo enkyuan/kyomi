@@ -1,10 +1,10 @@
-import { Text, View, type TextStyle } from "react-native";
+import { Dimensions, ScrollView, Text, View, type TextStyle } from "react-native";
 import { SvgXml } from "react-native-svg";
 import type { ReactNode } from "react";
 import type { ReaderInline } from "../../core/document";
 import { useReaderNative, type ReaderNativeContextValue } from "./context";
 import { inlinesToText, safeExternalUrl, shiftScript } from "./text";
-import { layoutMathSvg, texToUnicode } from "./tex";
+import { fitMathLayout, layoutMathSvg, mathmlToPlainText, texToUnicode } from "./tex";
 
 type InlineContext = Pick<ReaderNativeContextValue, "theme" | "host" | "footnotes"> & {
   /** Which faces an ancestor already applied, so strong inside emphasis gets the bold-italic face. */
@@ -155,6 +155,89 @@ function renderFormat(
   );
 }
 
+function mathFontSize(theme: InlineContext["theme"]): number {
+  // Text scales with the system font size up to `maxFontSizeMultiplier`; the SVG must follow it,
+  // or a formula stays small next to enlarged text.
+  const fontScale = Dimensions.get("window").fontScale;
+  const scale = Number.isFinite(fontScale) && fontScale > 0 ? fontScale : 1;
+  return theme.fontSize * Math.min(scale, theme.maxFontSizeMultiplier);
+}
+
+function renderMath(
+  node: Extract<ReaderInline, { type: "math" }>,
+  ctx: InlineContext,
+  key: string,
+): ReactNode {
+  const { theme } = ctx;
+  // Compiler SVG first (full layout, no WebView per formula). Without it, simple formulas become
+  // Unicode in the body font; anything else keeps its TeX source in mono so it is never shown
+  // wrong.
+  const layout =
+    node.svg === undefined
+      ? null
+      : layoutMathSvg(node.svg, mathFontSize(theme), theme.colors.foreground);
+  if (layout) {
+    const label = node.tex ?? "Math";
+    // An inline view's bottom edge sits on the text baseline (React Native positions the
+    // attachment at `glyphRect.bottom - height + font.descender`, and the descender is negative,
+    // so the bottom lands on the baseline). The formula's own baseline is `descent` above its
+    // bottom edge, so push the box down by exactly that.
+    const fit = fitMathLayout(layout, theme.columnWidth);
+    const drawing = (
+      <SvgXml
+        xml={fit.natural.xml}
+        width={fit.scroll ? fit.natural.width : fit.layout.width}
+        height={fit.scroll ? fit.natural.height : fit.layout.height}
+      />
+    );
+    return (
+      <View
+        key={key}
+        accessible
+        accessibilityRole="image"
+        accessibilityLabel={label}
+        style={{
+          width: fit.layout.width,
+          height: fit.layout.height,
+          transform: [{ translateY: fit.layout.descent }],
+        }}
+      >
+        {fit.scroll ? (
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            style={{ width: fit.layout.width, height: fit.layout.height }}
+          >
+            {drawing}
+          </ScrollView>
+        ) : (
+          drawing
+        )}
+      </View>
+    );
+  }
+  if (node.tex === undefined) {
+    // Publisher MathML without TeX or an SVG: flat token runs read honestly as text, anything
+    // laid out (scripts, fractions) gets a placeholder rather than a wrong flattening.
+    const plain = node.mathml === undefined ? null : mathmlToPlainText(node.mathml);
+    return (
+      <Text key={key} style={{ fontFamily: theme.fonts.italic }}>
+        {plain ?? "[formula]"}
+      </Text>
+    );
+  }
+  const unicode = texToUnicode(node.tex);
+  return unicode !== null ? (
+    <Text key={key} style={{ fontFamily: theme.fonts.italic }}>
+      {unicode}
+    </Text>
+  ) : (
+    <Text key={key} style={{ fontFamily: theme.fonts.mono, fontSize: theme.fontSize * 0.9 }}>
+      {node.tex}
+    </Text>
+  );
+}
+
 function renderNode(node: ReaderInline, ctx: InlineContext, key: string): ReactNode {
   const { theme } = ctx;
   switch (node.type) {
@@ -178,41 +261,7 @@ function renderNode(node: ReaderInline, ctx: InlineContext, key: string): ReactN
         </Text>
       );
     case "math":
-      // Compiler SVG first (full layout, no WebView per formula). Without it, simple formulas
-      // become Unicode in the body font; anything else keeps its TeX source in mono so it is
-      // never shown wrong.
-      const layout =
-        node.svg === undefined
-          ? null
-          : layoutMathSvg(node.svg, theme.fontSize, theme.colors.foreground);
-      if (layout) {
-        // An inline view's bottom edge sits on the text baseline, so push it down by the descent.
-        return (
-          <View
-            key={key}
-            accessible
-            accessibilityRole="image"
-            accessibilityLabel={node.tex ?? "Math"}
-            style={{
-              width: layout.width,
-              height: layout.height,
-              transform: [{ translateY: layout.descent }],
-            }}
-          >
-            <SvgXml xml={layout.xml} width={layout.width} height={layout.height} />
-          </View>
-        );
-      }
-      const unicode = node.tex === undefined ? null : texToUnicode(node.tex);
-      return unicode !== null ? (
-        <Text key={key} style={{ fontFamily: theme.fonts.italic }}>
-          {unicode}
-        </Text>
-      ) : (
-        <Text key={key} style={{ fontFamily: theme.fonts.mono, fontSize: theme.fontSize * 0.9 }}>
-          {node.tex ?? ""}
-        </Text>
-      );
+      return renderMath(node, ctx, key);
     case "image":
       return node.image.alt;
     case "abbr":

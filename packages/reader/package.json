@@ -20,6 +20,7 @@
     "./sanitization": "./src/sanitization/index.ts",
     "./web": "./src/web/index.ts",
     "./web/styles.css": "./src/web/styles.css",
+    "./web/katex-offline.css": "./src/web/katex-offline.css",
     "./webview": "./src/webview/index.ts",
     "./native": "./src/native/index.ts",
     "./schemas": "./src/schemas/index.ts",

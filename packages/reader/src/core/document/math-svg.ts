@@ -4,29 +4,33 @@
  * strict allowlist, by the schema and again by the compiler, so a stored document can never carry
  * script, `foreignObject`, event handlers, links, or external references.
  */
-export const MAX_MATH_SVG_LENGTH = 30_000;
+export const MAX_MATH_SVG_LENGTH = 40_000;
 
 const SVG_NAMESPACE = "http://www.w3.org/2000/svg";
 const NUMBER = String.raw`-?\d+(?:\.\d+)?(?:e-?\d+)?`;
+
+const PAINT = /^(?:currentColor|none|#[0-9a-fA-F]{3,8}|[a-zA-Z]{3,24})$/;
 
 const TAGS = new Set(["svg", "g", "path", "rect", "line"]);
 
 const VALUE_PATTERNS: Record<string, RegExp> = {
   xmlns: new RegExp(`^${SVG_NAMESPACE.replaceAll(".", String.raw`\.`)}$`),
-  style: new RegExp(String.raw`^vertical-align: ${NUMBER}ex;$`),
+  // MathJax writes a unitless `0` when the formula sits on the baseline.
+  style: new RegExp(String.raw`^vertical-align: (?:0|${NUMBER}ex);$`),
   width: new RegExp(`^${NUMBER}(?:ex)?%?$`),
   height: new RegExp(`^${NUMBER}(?:ex)?%?$`),
   viewBox: new RegExp(`^${NUMBER}(?: ${NUMBER}){3}$`),
   role: /^img$/,
   focusable: /^false$/,
   "aria-hidden": /^true$/,
-  stroke: /^(?:currentColor|none)$/,
-  fill: /^(?:currentColor|none)$/,
+  // `\color`, `\textcolor` and `\colorbox` emit hex or named colours; never `url(...)`.
+  stroke: PAINT,
+  fill: PAINT,
   "stroke-width": new RegExp(`^${NUMBER}$`),
   "stroke-linecap": /^(?:butt|round|square)$/,
   "stroke-dasharray": /^[\d. ,-]{1,64}$/,
   transform: /^(?:(?:translate|scale)\([\d.,\s-]{1,64}\)\s*){1,4}$/,
-  d: /^[MmLlHhVvCcSsQqTtAaZz\d.,\s-]{1,20000}$/,
+  d: /^[MmLlHhVvCcSsQqTtAaZz\d.,\s-]{0,20000}$/,
   x: new RegExp(`^${NUMBER}$`),
   y: new RegExp(`^${NUMBER}$`),
   x1: new RegExp(`^${NUMBER}$`),
@@ -34,6 +38,8 @@ const VALUE_PATTERNS: Record<string, RegExp> = {
   y1: new RegExp(`^${NUMBER}$`),
   y2: new RegExp(`^${NUMBER}$`),
   "data-mml-node": /^[\w-]{1,32}$/,
+  "data-bgcolor": /^true$/,
+  "data-cramped": /^(?:true|false)$/,
   "data-c": /^[0-9A-F]{1,8}$/i,
   "data-latex": /^[^"<>&]{0,200}$/,
   "data-latex-item": /^[^"<>&]{0,200}$/,

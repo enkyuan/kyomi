@@ -3,7 +3,8 @@
 import { useMemo, type CSSProperties } from "react";
 import type { DOMProps } from "expo/dom";
 import { sanitizeArticleHtmlFragment } from "@kyomi/reader/sanitization";
-import "katex/dist/katex.min.css";
+// KaTeX with its fonts inlined: the exported WebView bundle does not ship `fonts/KaTeX_*.woff2`.
+import "@kyomi/reader/web/katex-offline.css";
 import "@kyomi/reader/web/styles.css";
 import "@kyomi/ui/styles/reader.css";
 
@@ -44,6 +45,9 @@ export default function HtmlIsland({
     background: "transparent",
     color: dark ? "#f7f7f7" : "#303030",
     colorScheme: dark ? "dark" : "light",
+    // A block formatting context keeps `.katex-display`'s vertical margin inside the measured
+    // body, so the WebView height (a ResizeObserver on `<body>`) includes tall formulas whole.
+    display: "flow-root",
     margin: 0,
     minWidth: 0,
     overflowX: "auto",
@@ -66,6 +70,8 @@ export default function HtmlIsland({
 
   return (
     <div className="reader-content" style={style}>
+      {/* The native block gap already spaces equations, so drop KaTeX's own display margin. */}
+      {kind === "math" ? <style>{".reader-content .katex-display{margin:0}"}</style> : null}
       <div className="article-body" dangerouslySetInnerHTML={{ __html: safeHtml }} />
     </div>
   );
