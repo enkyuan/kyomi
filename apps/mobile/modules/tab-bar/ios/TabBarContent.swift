@@ -189,6 +189,17 @@ struct TabBarContent: View {
         .allowsHitTesting(!model.composerActive)
         .accessibilityHidden(model.composerActive)
 
+        // The tabs are drawn over the glass, not inside it. Inside, they rode its bottom edge, and while
+        // the sheet contracts that edge detours: it dropped 118pt below its resting place and came back,
+        // so the icons shot down, rose 46pt above the bar while fully opaque, and settled (measured with
+        // KYOMI_TABBAR_PROBE). Here they stay at the bar's resting place whatever the glass does.
+        if layout.showsMain || model.switcherPresented {
+          tabsLayer(layout)
+            .opacity(model.composerActive ? 0 : 1)
+            .allowsHitTesting(!model.composerActive)
+            .accessibilityHidden(model.composerActive)
+        }
+
         // The add composer's own layer: a background over the screen above its field, the field and
         // a close button, and the results. The whole layer fades.
         if model.composerActive {
@@ -269,31 +280,37 @@ struct TabBarContent: View {
       .accessibilityHidden(true)
   }
 
+  /// The tab row at the bar's resting place. It fades out as the sheet opens or the reader's tools
+  /// arrive, and back in as they leave, without moving.
+  private func tabsLayer(_ layout: TabBarLayout) -> some View {
+    let presented = model.switcherPresented
+    // Over a minimized bar the capsule is contracting to nothing, with no tabs to show on the way.
+    let opacity = presented || model.minimized ? 0 : 1 - min(1, model.readerMorph / 0.35)
+    return tabs(layout)
+      .frame(width: layout.mainWidth, height: layout.barHeight)
+      .position(x: layout.mainRect.midX, y: layout.mainRect.midY)
+      .opacity(opacity)
+      .animation(reduceMotion ? nil : .easeOut(duration: 0.12), value: presented)
+      .allowsHitTesting(opacity > 0.9)
+      .accessibilityHidden(opacity < 0.1)
+      .transition(Self.capsuleTransition)
+  }
+
   /// The capsule's glass, which is also the sheet's: one view whose frame and content change, so
   /// opening and closing are the glass itself moving, with nothing handed between two surfaces.
   private func capsule(_ layout: TabBarLayout, sheet: SwitcherSheetGeometry, frame: CGRect) -> some View {
     let presented = model.switcherPresented
 
     return ZStack(alignment: .top) {
-      // The tabs keep their size on the bar's band as the glass grows away from them. In the reader
-      // they and the tools cross over by how far the morph has got: the tabs are gone by the time it is
-      // a third of the way, the tools arrive in its last third, so the two sets of glyphs are never on
-      // the glass together, whichever way the morph is going and however fast the finger takes it.
+      // In the reader the tabs (`tabsLayer`) and the tools cross over by how far the morph has got:
+      // the tabs are gone by the time it is a third of the way, the tools arrive in its last third,
+      // so the two sets of glyphs are never on the glass together, whichever way the morph is going
+      // and however fast the finger takes it.
       let morph = model.readerMorph
-      // Over a minimized bar the capsule is contracting to nothing, with no tabs to show on the way.
-      let tabsOpacity = presented || model.minimized ? 0 : 1 - min(1, morph / 0.35)
       // Over a minimized bar the tools are on the glass from the moment it exists, fading with it.
       let edge = TabBarMetrics.minimizedReaderEdge
       let toolsOpacity =
         presented ? 0 : model.minimized ? min(1, max(0, (morph - edge) / 0.1)) : min(1, max(0, (morph - 0.65) / 0.35))
-      tabs(layout)
-        .frame(width: layout.mainWidth, height: layout.barHeight)
-        .frame(maxHeight: .infinity, alignment: .bottom)
-        .opacity(tabsOpacity)
-        .animation(reduceMotion ? nil : .easeOut(duration: 0.12), value: presented)
-        .allowsHitTesting(tabsOpacity > 0.9)
-        .accessibilityHidden(tabsOpacity < 0.1)
-
       if model.readerActive {
         TabBarReaderTools(model: model, segmentWidth: layout.readerSegmentWidth, height: layout.segmentHeight)
           .frame(width: layout.mainWidth, height: layout.barHeight)
