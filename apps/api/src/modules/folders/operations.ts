@@ -193,15 +193,15 @@ export async function reorderFolders(
       throw new AppError("Folder not found", { status: 404, code: "FOLDER_NOT_FOUND" });
     }
 
+    // One typed update per folder (a user has few): a CASE over bound parameters would leave their
+    // types for Postgres to guess, and it guesses text for an integer column.
     const now = new Date();
-    const positions = sql.join(
-      folderIds.map((id, index) => sql`WHEN ${id} THEN ${index}`),
-      sql` `,
-    );
-    await tx
-      .update(folders)
-      .set({ position: sql`CASE ${folders.id} ${positions} END`, updatedAt: now })
-      .where(and(eq(folders.userId, userId), inArray(folders.id, folderIds)));
+    for (const [index, id] of folderIds.entries()) {
+      await tx
+        .update(folders)
+        .set({ position: index, updatedAt: now })
+        .where(and(eq(folders.id, id), eq(folders.userId, userId)));
+    }
   });
 
   return await listFolders(database, userId);
