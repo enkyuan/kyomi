@@ -5,10 +5,36 @@ import {
   deleteFolder,
   ensureFoldersByName,
   markFolderReadStatus,
+  reorderFolders,
   updateFolder,
 } from "@modules/folders/operations";
 
 describe("folders operations", () => {
+  test("reorderFolders rejects repeated ids without touching the database", async () => {
+    const transaction = mock(() => Promise.resolve());
+    const fakeDb = { transaction } as unknown as Parameters<typeof reorderFolders>[0];
+
+    await expect(reorderFolders(fakeDb, "u1", ["f1", "f1"])).rejects.toMatchObject({
+      code: "FOLDER_ORDER_INVALID",
+    });
+    expect(transaction).not.toHaveBeenCalled();
+  });
+
+  test("reorderFolders rejects an id the user does not own", async () => {
+    const tx = {
+      select: () => ({ from: () => ({ where: () => Promise.resolve([{ id: "f1" }]) }) }),
+      update: mock(() => ({})),
+    };
+    const fakeDb = {
+      transaction: (run: (inner: typeof tx) => Promise<void>) => run(tx),
+    } as unknown as Parameters<typeof reorderFolders>[0];
+
+    await expect(reorderFolders(fakeDb, "u1", ["f1", "someone-elses"])).rejects.toMatchObject({
+      code: "FOLDER_NOT_FOUND",
+    });
+    expect(tx.update).not.toHaveBeenCalled();
+  });
+
   test("createFolder trims and returns inserted folder", async () => {
     const createdAt = new Date("2026-04-01T00:00:00.000Z");
     const insert = mock(() => ({
