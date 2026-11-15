@@ -155,8 +155,9 @@ final class TabBarModel {
   private(set) var fontStepFeedback = 0
   /// The link the share tool shares; without it the share tool is a plain press.
   var shareURL: String?
-  /// The system share sheet is open: the capsule's glass has been handed to it, and is hidden until it closes.
-  var shareInFlight = false
+  /// The system share sheet is up. It is a SwiftUI sheet the bar presents itself, zooming out of the
+  /// capsule, rather than something presented over it.
+  var sharePresented = false
   var activeTint = Color.accentColor
   /// Bumped by a press that commits something worth feeling: switching tabs, or adding. Re-tapping
   /// the current tab, search and the switcher stay silent, as the system tab bar does. The bar plays
@@ -177,8 +178,6 @@ final class TabBarModel {
   @ObservationIgnored var onComposerQueryChange: @MainActor (String) -> Void = { _ in }
   @ObservationIgnored var onComposerSubmit: @MainActor (String, String, String) -> Void = { _, _, _ in }
   /// A reader tool other than the text size tool, which opens the panel natively.
-  /// Asks the native view to open the system share sheet for a link, out of the capsule's frame.
-  @ObservationIgnored var onShareRequest: @MainActor (String, CGRect) -> Void = { _, _ in }
   @ObservationIgnored var onReaderToolPress: @MainActor (String) -> Void = { _ in }
   /// Each step of the text size slider (`committed` false) and its release (`committed` true).
   @ObservationIgnored var onReaderFontSizeChange: @MainActor (Int, Bool) -> Void = { _, _ in }
@@ -217,6 +216,7 @@ final class TabBarModel {
       if readerActive { readerTools = [] }
       if fontPanelPresented { fontPanelPresented = false }
       shareURL = nil
+      sharePresented = false
       return
     }
     readerTools = state.tools
@@ -233,9 +233,9 @@ final class TabBarModel {
 
   func pressReaderTool(_ id: String) {
     pressFeedback += 1
-    if id == "share", let url = shareURL {
+    if id == "share", shareURL != nil {
       fontPanelPresented = false
-      onShareRequest(url, mainFrame)
+      sharePresented = true
       return
     }
     if id == "textSize" {

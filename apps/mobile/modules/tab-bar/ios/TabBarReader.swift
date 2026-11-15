@@ -87,3 +87,18 @@ struct TabBarFontPanel: View {
   }
 }
 
+
+/// The system share controller, hosted as a sheet's content so SwiftUI can present it with a matched
+/// transition from the capsule. It is Apple's own controller, not a lookalike.
+struct TabBarShareSheet: UIViewControllerRepresentable {
+  let url: URL
+  let onFinish: () -> Void
+
+  func makeUIViewController(context: Context) -> UIActivityViewController {
+    let controller = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+    controller.completionWithItemsHandler = { _, _, _, _ in onFinish() }
+    return controller
+  }
+
+  func updateUIViewController(_ controller: UIActivityViewController, context: Context) {}
+}

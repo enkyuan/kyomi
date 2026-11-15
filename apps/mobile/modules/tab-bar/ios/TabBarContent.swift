@@ -20,9 +20,12 @@ struct TabBarContent: View {
   /// Ties each glass shape to an identity so a hidden one materializes in and out, as the
   /// system tab bar's glass does, instead of fading its content over a stuck glass layer.
   @Namespace private var glassNamespace
+  /// Names the capsule as the source the system share sheet zooms out of.
+  @Namespace private var shareNamespace
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
   private nonisolated static let coordinateSpace = "KyomiTabBar"
+  private static let shareSourceID = "share"
   private static let inactiveIconColor = Color.primary.opacity(0.72)
   private static let actionIconColor = Color.primary.opacity(0.82)
   private static let searchFieldIconColor = Color(
@@ -39,12 +42,14 @@ struct TabBarContent: View {
   private var transition: Animation? {
     reduceMotion ? nil : .spring(duration: 0.38, bounce: 0)
   }
-  /// The bar's morph into the reader and back. Opening is the user deciding, so it takes the search
-  /// spring's 0.38s; going back is the system answering a navigation that is already under way, so it
-  /// settles in 0.26s, in step with the screen leaving rather than trailing it. Both are critically
-  /// damped, so a reversal mid-flight retargets from the glass's current frame.
-  private func readerAnimation(entering: Bool) -> Animation? {
-    reduceMotion ? nil : .spring(duration: entering ? 0.38 : 0.26, bounce: 0)
+  /// The bar's morph into the reader and back. It rides a screen transition, so it is paced by that
+  /// transition rather than by feedback: a stack push or pop takes about 0.35s, and a morph that
+  /// finishes before the screen does (the 0.26s this used on the way back) reads as the bar jumping
+  /// ahead of it, while one that lags (0.38s and more) reads as late. One spring both ways, 0.35s and
+  /// critically damped: no overshoot, and a reversal mid-flight retargets from the glass's current frame.
+  private static let readerMorph = Animation.spring(duration: 0.35, bounce: 0)
+  private func readerAnimation() -> Animation? {
+    reduceMotion ? nil : Self.readerMorph
   }
   /// The field's text arrives a beat after its glass has started to widen and leaves ahead of it,
   /// so nothing cross-fades with the tabs coming back.
@@ -141,6 +146,12 @@ struct TabBarContent: View {
                   model.mainFrame = frame
                 }
                 .glassEffectID("capsule", in: glassNamespace)
+                // The whole capsule is the share sheet's transition source: the sheet zooms out of it
+                // and back into it, led by the capsule's own corner radius (the source only takes a
+                // rounded rectangle, which at half the height is the capsule).
+                .matchedTransitionSource(id: Self.shareSourceID, in: shareNamespace) { source in
+                  source.clipShape(.rect(cornerRadius: TabBarMetrics.cornerRadius, style: .continuous))
+                }
                 .glassEffectTransition(.materialize)
                 .transition(Self.capsuleTransition)
                 .position(x: capsuleFrame.midX, y: capsuleFrame.midY)
@@ -187,10 +198,8 @@ struct TabBarContent: View {
         .frame(width: container.width, height: container.height)
         // The add composer draws its own field and close button where the bar's buttons are, so the
         // bar fades out beneath it as a whole, with nothing inserted, removed or re-tinted.
-        // The share sheet morphs out of a glass view that stands in for the capsule; the capsule itself
-        // stays hidden meanwhile (not animated: the two are the same glass in the same place).
-        .opacity(model.composerActive || model.shareInFlight ? 0 : 1)
-        .allowsHitTesting(!model.composerActive && !model.shareInFlight)
+        .opacity(model.composerActive ? 0 : 1)
+        .allowsHitTesting(!model.composerActive)
         .accessibilityHidden(model.composerActive)
 
         // The add composer's own layer: a background over the screen above its field, the field and
@@ -219,7 +228,7 @@ struct TabBarContent: View {
     .animation(transition, value: model.searchActive)
     // Entering the reader widens the capsule's glass to its tools while the search and add buttons
     // materialize out of it; leaving reverses both. Same spring as search, so the two never disagree.
-    .animation(readerAnimation(entering: model.readerActive), value: model.readerActive)
+    .animation(readerAnimation(), value: model.readerActive)
     .animation(reduceMotion ? nil : .spring(duration: 0.3, bounce: 0), value: model.fontPanelPresented)
     .animation(reduceMotion ? nil : .easeOut(duration: 0.2), value: model.composerActive)
     // Opening search focuses the field. It mounts while its text is still fading in, and a view
@@ -243,6 +252,16 @@ struct TabBarContent: View {
       composerFocused = true
       try? await Task.sleep(for: .milliseconds(200))
       if model.composerActive { composerFocused = true }
+    }
+    // The system share sheet, presented by the bar so it can zoom out of the capsule. SwiftUI's sheet
+    // is the presentation that takes a matched transition source; the controller inside is the
+    // system's own, so the targets, previews and Copy are the real share sheet's.
+    .sheet(isPresented: $model.sharePresented) {
+      if let url = model.shareURL.flatMap(URL.init(string:)) {
+        TabBarShareSheet(url: url) { model.sharePresented = false }
+          .navigationTransition(.zoom(sourceID: Self.shareSourceID, in: shareNamespace))
+          .presentationDetents([.medium, .large])
+      }
     }
     .sensoryFeedback(.impact(weight: .light), trigger: model.pressFeedback)
     .sensoryFeedback(.selection, trigger: model.fontStepFeedback)
@@ -284,13 +303,18 @@ struct TabBarContent: View {
     return ZStack(alignment: .top) {
       // The tabs keep their size on the bar's band as the glass grows away from them, and fade.
       // In the reader they give way to the reader's tools: out quickly, so nothing cross-fades
-      // with the tools arriving on the widening glass.
+      // with the tools arriving on the widening glass, and back in only once the tools have cleared
+      // (0.06s after they start to fade, which is how long their 0.1s fade-out takes to be mostly gone),
+      // so the two sets of glyphs are never on the glass together.
       let tabsHidden = presented || model.readerActive
       tabs(layout)
         .frame(width: layout.mainWidth, height: layout.barHeight)
         .frame(maxHeight: .infinity, alignment: .bottom)
         .opacity(tabsHidden ? 0 : 1)
-        .animation(reduceMotion ? nil : .easeOut(duration: 0.12), value: tabsHidden)
+        .animation(
+          reduceMotion ? nil : .easeOut(duration: tabsHidden ? 0.1 : 0.15).delay(tabsHidden ? 0 : 0.06),
+          value: tabsHidden
+        )
         .allowsHitTesting(!tabsHidden)
         .accessibilityHidden(tabsHidden)
 
