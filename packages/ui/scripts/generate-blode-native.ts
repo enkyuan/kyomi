@@ -51,6 +51,7 @@ const ICONS = [
   "TitleCase",
   "TitleCaseFilled",
   "Toggle",
+  "TrashCan",
   "X",
 ] as const;
 

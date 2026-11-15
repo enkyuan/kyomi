@@ -137,12 +137,17 @@ struct SwitcherRecord: Record {
   @Field var icon: IconRecord = IconRecord()
   @Field var editIcon: IconRecord = IconRecord()
   @Field var sortIcon: IconRecord = IconRecord()
+  @Field var reorderIcon: IconRecord = IconRecord()
+  @Field var importIcon: IconRecord = IconRecord()
+  @Field var renameIcon: IconRecord = IconRecord()
+  @Field var deleteIcon: IconRecord = IconRecord()
   @Field var addIcon: IconRecord = IconRecord()
 
   var switcher: TabBarSwitcher {
     TabBarSwitcher(
       title: title, label: label, hint: hint, icon: icon.icon,
-      editIcon: editIcon.icon, sortIcon: sortIcon.icon, addIcon: addIcon.icon
+      editIcon: editIcon.icon, sortIcon: sortIcon.icon, reorderIcon: reorderIcon.icon,
+      renameIcon: renameIcon.icon, deleteIcon: deleteIcon.icon, importIcon: importIcon.icon, addIcon: addIcon.icon
     )
   }
 }

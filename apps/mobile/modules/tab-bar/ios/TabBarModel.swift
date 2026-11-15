@@ -17,6 +17,10 @@ struct TabBarSwitcher {
   /// Glyphs of the sheet's folder chips.
   let editIcon: TabBarIcon
   let sortIcon: TabBarIcon
+  let reorderIcon: TabBarIcon
+  let importIcon: TabBarIcon
+  let renameIcon: TabBarIcon
+  let deleteIcon: TabBarIcon
   let addIcon: TabBarIcon
 }
 

@@ -2,11 +2,14 @@ import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import type { NativeSyntheticEvent } from "react-native";
 import Animated, { useAnimatedProps } from "react-native-reanimated";
 import {
+  BarsThreeNativeIcon,
   ChevronGrabberVerticalNativeIcon,
   ChevronsUpDownNativeIcon,
   CircleCheckFilledNativeIcon,
   CompassPointerFilledNativeIcon,
   CompassPointerNativeIcon,
+  EditBigNativeIcon,
+  FileArrowLeftInNativeIcon,
   LayoutAlignBottomFilledNativeIcon,
   LayoutAlignBottomNativeIcon,
   MagnifyingGlassNativeIcon,
@@ -14,6 +17,7 @@ import {
   PlusCircleFilledNativeIcon,
   PlusNativeIcon,
   SortArrowUpDownNativeIcon,
+  TrashCanNativeIcon,
   type BlodeNativeIcon,
 } from "@kyomi/ui/icons/blode-native";
 import { useOptionalTabBarMinimize } from "./hooks/use-minimize";
@@ -57,8 +61,12 @@ const SWITCHER: TabBarSwitcher = {
   label: "Choose source",
   hint: "Opens folders and feeds",
   icon: toTabBarIcon(ChevronGrabberVerticalNativeIcon),
-  editIcon: toTabBarIcon(EditBigNativeIcon),
+  editIcon: toTabBarIcon(BarsThreeNativeIcon),
   sortIcon: toTabBarIcon(SortArrowUpDownNativeIcon),
+  reorderIcon: toTabBarIcon(BarsThreeNativeIcon),
+  renameIcon: toTabBarIcon(EditBigNativeIcon),
+  deleteIcon: toTabBarIcon(TrashCanNativeIcon),
+  importIcon: toTabBarIcon(FileArrowLeftInNativeIcon),
   addIcon: ADD_ICON,
 };
 
@@ -119,6 +127,7 @@ export function TabBar({
       onReaderToolPress={({ nativeEvent: { key } }) => readerBar?.onTool(key)}
       onSwitcherFolderAction={({ nativeEvent: { action, folderId, name } }) => {
         if (action === "create") sources?.onCreateFolder(name);
+        else if (action === "import") sources?.onImport();
         else if (action === "rename") sources?.onRenameFolder(folderId, name);
         else if (action === "reorder") sources?.onReorderFolders(name.split("\n"));
         else sources?.onDeleteFolder(folderId);

@@ -333,7 +333,7 @@ struct TabBarContent: View {
           model: model,
           switcher: switcher,
           focus: $sheetTitleFocused,
-          onClose: { dismissSheet(sheet) }
+          onDismiss: { dismissSheet(sheet) }
         )
         .transition(Self.sheetContentTransition)
       }

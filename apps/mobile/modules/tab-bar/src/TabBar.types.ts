@@ -32,6 +32,13 @@ export type TabBarSwitcher = {
   /** Glyphs of the sheet's chips: edit the folders (select and delete), sort them, and add one. */
   readonly editIcon: TabBarIcon;
   readonly sortIcon: TabBarIcon;
+  /** The three-bar handle that drags a folder to a new place while editing. */
+  readonly reorderIcon: TabBarIcon;
+  /** The chip that opens the OPML import. */
+  readonly importIcon: TabBarIcon;
+  /** Glyphs of renaming (the open folder's header button and its long-press menu) and deleting. */
+  readonly renameIcon: TabBarIcon;
+  readonly deleteIcon: TabBarIcon;
   readonly addIcon: TabBarIcon;
 };
 
@@ -54,7 +61,7 @@ export type TabBarSwitcherFeed = {
 
 /** What was done to a folder in the switcher sheet. `create` has no `folderId`; `delete` no `name`; `reorder` has neither, and its `name` is the folder ids in their new order, one per line. */
 export type TabBarSwitcherFolderAction = {
-  readonly action: "create" | "rename" | "delete" | "reorder";
+  readonly action: "create" | "rename" | "delete" | "reorder" | "import";
   readonly folderId: string;
   readonly name: string;
 };
