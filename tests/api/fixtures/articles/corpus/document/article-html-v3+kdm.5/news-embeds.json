@@ -25,14 +25,7 @@
   "features": {
     "math": false,
     "codeLanguages": [],
-    "embedProviders": [
-      "youtube",
-      "x",
-      "instagram",
-      "tiktok",
-      "bluesky",
-      "mastodon"
-    ]
+    "embedProviders": ["youtube", "x", "instagram", "tiktok", "bluesky", "mastodon"]
   },
   "blocks": [
     {

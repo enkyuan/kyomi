@@ -24,9 +24,7 @@
   },
   "features": {
     "math": false,
-    "codeLanguages": [
-      "javascript"
-    ],
+    "codeLanguages": ["javascript"],
     "embedProviders": []
   },
   "blocks": [

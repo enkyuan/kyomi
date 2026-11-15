@@ -24,9 +24,7 @@
   },
   "features": {
     "math": false,
-    "codeLanguages": [
-      "shellscript"
-    ],
+    "codeLanguages": ["shellscript"],
     "embedProviders": []
   },
   "blocks": [

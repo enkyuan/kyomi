@@ -24,10 +24,7 @@
   },
   "features": {
     "math": false,
-    "codeLanguages": [
-      "ruby",
-      "python"
-    ],
+    "codeLanguages": ["ruby", "python"],
     "embedProviders": []
   },
   "blocks": [

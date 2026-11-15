@@ -24,10 +24,7 @@
   },
   "features": {
     "math": false,
-    "codeLanguages": [
-      "rust",
-      "go"
-    ],
+    "codeLanguages": ["rust", "go"],
     "embedProviders": []
   },
   "blocks": [
@@ -74,9 +71,7 @@
       "language": "rust",
       "languageSource": "explicit",
       "label": "Rust",
-      "highlightLines": [
-        2
-      ],
+      "highlightLines": [2],
       "highlight": "shiki@4.5.0:github-light/github-dark styles=5 lines=3 hash=8a4497802738a1b3"
     },
     {

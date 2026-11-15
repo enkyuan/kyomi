@@ -24,20 +24,8 @@
   },
   "features": {
     "math": false,
-    "codeLanguages": [
-      "go",
-      "php",
-      "elixir",
-      "sql",
-      "haskell",
-      "python",
-      "typescript"
-    ],
-    "embedProviders": [
-      "codepen",
-      "github-gist",
-      "codesandbox"
-    ]
+    "codeLanguages": ["go", "php", "elixir", "sql", "haskell", "python", "typescript"],
+    "embedProviders": ["codepen", "github-gist", "codesandbox"]
   },
   "blocks": [
     {
@@ -79,10 +67,7 @@
       "language": "sql",
       "languageSource": "explicit",
       "label": "SQL",
-      "highlightLines": [
-        2,
-        3
-      ],
+      "highlightLines": [2, 3],
       "highlight": "shiki@4.5.0:github-light/github-dark styles=4 lines=3 hash=f5210f2cd58547aa"
     },
     {

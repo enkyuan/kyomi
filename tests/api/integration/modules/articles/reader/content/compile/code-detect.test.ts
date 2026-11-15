@@ -262,7 +262,11 @@ describe("code detection: article context", () => {
     const named = await codeBlocks(`<p>Here is the Python entry point:</p>${pre(value)}`);
     const hinted = await codeBlocks(pre(value, ` data-lang="python"`));
     expect(named[0]?.highlight).toEqual(hinted[0]?.highlight);
-    expect(named[0]).toMatchObject({ language: "python", label: "Python", languageSource: "classifier" });
+    expect(named[0]).toMatchObject({
+      language: "python",
+      label: "Python",
+      languageSource: "classifier",
+    });
   });
 
   test("a paragraph that names two languages is no cue", async () => {
@@ -316,7 +320,11 @@ describe("code detection is deterministic and never labels", () => {
     const block = await first(
       `import os\nfrom pathlib import Path\n\ndef main():\n    print(Path.cwd())\n`,
     );
-    expect(block).toMatchObject({ language: "python", languageSource: "classifier", label: "Python" });
+    expect(block).toMatchObject({
+      language: "python",
+      languageSource: "classifier",
+      label: "Python",
+    });
     expect(block.highlight).toBeDefined();
   });
 

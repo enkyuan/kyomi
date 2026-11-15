@@ -25,12 +25,7 @@
   "features": {
     "math": false,
     "codeLanguages": [],
-    "embedProviders": [
-      "youtube",
-      "x",
-      "vimeo",
-      "spotify"
-    ]
+    "embedProviders": ["youtube", "x", "vimeo", "spotify"]
   },
   "blocks": [
     {
