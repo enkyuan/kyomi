@@ -7,7 +7,8 @@ type IconShape = {
   readonly attrs: Readonly<Record<string, string>>;
 };
 
-// Blode Icons (MIT) `FilesFilledIcon` and `Checkmark1FilledIcon` geometry on a 24px grid.
+// Blode Icons (MIT) `FilesFilledIcon` and `Checkmark1Icon` geometry on a 24px grid. The native
+// reader draws the same two glyphs (`native/document/icons.tsx`), so keep them in step.
 const COPY_ICON_SHAPES: readonly IconShape[] = [
   {
     tag: "path",
@@ -19,13 +20,17 @@ const COPY_ICON_SHAPES: readonly IconShape[] = [
   },
   { tag: "path", attrs: { d: "M16 2.5858 20.4142 7H17c-.5523 0-1-.4477-1-1z" } },
 ];
+/** A line glyph: stroked, not filled, as Blode draws it. */
 const CHECK_ICON_SHAPES: readonly IconShape[] = [
   {
     tag: "path",
     attrs: {
-      "clip-rule": "evenodd",
-      d: "M19.3209 4.2447c.6934.4534.8879 1.383.4346 2.0763l-8.5 13a1.5002 1.5002 0 0 1-2.3944.1554l-4.5-5.25c-.539-.629-.4663-1.576.1627-2.1151s1.576-.4663 2.1151.1627l3.1994 3.7326 7.4063-11.3273c.4533-.6934 1.3829-.888 2.0763-.4346",
-      "fill-rule": "evenodd",
+      d: "M5 12.75 10 19l9-14",
+      fill: "none",
+      stroke: "currentColor",
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round",
+      "stroke-width": "2",
     },
   },
 ];

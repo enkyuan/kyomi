@@ -81,6 +81,7 @@ export function NativeArticleBody({
           heading: FONT_FAMILIES.newsreader.semibold,
           italic: FONT_FAMILIES.newsreader.italic,
           mono: FONT_FAMILIES.jetbrainsMono.regular,
+          sans: FONT_FAMILIES.inter.medium,
           strong: FONT_FAMILIES.newsreader.bold,
         },
         inset,

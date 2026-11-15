@@ -22,6 +22,8 @@ export type ReaderNativeFonts = {
   strongItalic: string;
   heading: string;
   mono: string;
+  /** Sans face for chrome around the body, such as a code block's language label. */
+  sans: string;
 };
 
 export type ReaderNativeTheme = {
@@ -87,6 +89,7 @@ export const DEFAULT_NATIVE_READER_FONTS: ReaderNativeFonts = {
   strongItalic: "System",
   heading: "System",
   mono: "Menlo",
+  sans: "System",
 };
 
 /** Narrow keeps the text near 65 characters; wide lets tablets use more of the screen. */
