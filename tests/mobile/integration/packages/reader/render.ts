@@ -33,6 +33,10 @@ function host(tag: string) {
 
 // bun's module mocks outlive the file that registers them, so this stays a superset of the
 // names other mobile modules import from react-native.
+mock.module("react-native-svg", () => ({
+  SvgXml: ({ xml }: { xml: string }) => createElement("svg", { "data-xml": xml }),
+}));
+
 mock.module("react-native", () => ({
   Platform: { OS: "ios", select: <T>(spec: { ios?: T; default?: T }) => spec.ios ?? spec.default },
   StyleSheet: { create: <T>(styles: T) => styles, hairlineWidth: 1 },

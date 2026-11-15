@@ -1,4 +1,11 @@
 import katex from "katex";
+import { mathjax } from "mathjax-full/js/mathjax.js";
+import { TeX } from "mathjax-full/js/input/tex.js";
+import { AllPackages } from "mathjax-full/js/input/tex/AllPackages.js";
+import { SVG } from "mathjax-full/js/output/svg.js";
+import { liteAdaptor } from "mathjax-full/js/adaptors/liteAdaptor.js";
+import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html.js";
+import { isSafeMathSvg } from "@kyomi/reader/document/math-svg";
 import type { ReaderBlock, ReaderInline } from "@kyomi/reader/document";
 import { warn, type DocumentDraft, type DocumentPass } from "../document-draft";
 import { mapOwnInlines, walkBlockLists } from "../kdm-tree";
@@ -59,11 +66,74 @@ function splitDelimited(value: string): Segment[] | null {
   return segments;
 }
 
-type Renderer = { render: (tex: string, display: boolean) => string | undefined };
+/** Inline SVGs are only produced for this many formulas per document. */
+const MAX_SVG = 300;
+/** Packages that emit links or load other code are left out of the MathJax input. */
+const MATHJAX_BLOCKED_PACKAGES = new Set(["html", "require", "href", "autoload", "bussproofs"]);
+
+type MathJaxRenderer = { svg: (tex: string) => string | undefined };
+let mathjaxRenderer: MathJaxRenderer | undefined;
+
+/** MathJax (liteAdaptor, no DOM, `fontCache: "none"`) so each SVG is self-contained. */
+function getMathJax(): MathJaxRenderer {
+  if (mathjaxRenderer) {
+    return mathjaxRenderer;
+  }
+  const adaptor = liteAdaptor();
+  RegisterHTMLHandler(adaptor);
+  const document = mathjax.document("", {
+    InputJax: new TeX({
+      packages: AllPackages.filter((name) => !MATHJAX_BLOCKED_PACKAGES.has(name)),
+      maxMacros: 1_000,
+      maxBuffer: 20_000,
+      formatError: (_jax: unknown, error: Error) => {
+        throw error;
+      },
+    }),
+    OutputJax: new SVG({ fontCache: "none" }),
+  });
+  mathjaxRenderer = {
+    svg(tex) {
+      const node = document.convert(tex, { display: false });
+      const html = adaptor.outerHTML(node);
+      const start = html.indexOf("<svg");
+      const end = html.lastIndexOf("</svg>");
+      if (start === -1 || end === -1) {
+        return undefined;
+      }
+      return html.slice(start, end + "</svg>".length);
+    },
+  };
+  return mathjaxRenderer;
+}
+
+type Renderer = {
+  render: (tex: string, display: boolean) => string | undefined;
+  /** Inline SVG for native renderers; undefined when over budget, failing, or unsafe. */
+  svg: (tex: string) => string | undefined;
+};
 
 function createRenderer(draft: DocumentDraft): Renderer {
   let rendered = 0;
+  let svgs = 0;
   return {
+    svg(tex) {
+      if (svgs >= MAX_SVG || tex.length > MAX_INLINE_TEX_LENGTH) {
+        return undefined;
+      }
+      svgs += 1;
+      try {
+        const svg = getMathJax().svg(tex);
+        if (!svg || svg.includes("merror") || !isSafeMathSvg(svg)) {
+          warn(draft, "math-svg-failed");
+          return undefined;
+        }
+        return svg;
+      } catch {
+        warn(draft, "math-svg-failed");
+        return undefined;
+      }
+    },
     render(tex, display) {
       if (rendered >= MAX_RENDERED) {
         return undefined;
@@ -104,13 +174,20 @@ function convertInlines(inlines: ReaderInline[], renderer: Renderer): ReaderInli
         }
         // Display environments such as `align` only render in display mode.
         const rendered = renderer.render(segment.tex, segment.display);
-        return { type: "math", tex: segment.tex, ...(rendered ? { rendered } : {}) };
+        const svg = segment.display ? undefined : renderer.svg(segment.tex);
+        return {
+          type: "math",
+          tex: segment.tex,
+          ...(rendered ? { rendered } : {}),
+          ...(svg ? { svg } : {}),
+        };
       });
     }
     if (inline.type === "math") {
-      if (inline.tex && !inline.rendered) {
-        const rendered = renderer.render(inline.tex, false);
-        return [{ ...inline, ...(rendered ? { rendered } : {}) }];
+      if (inline.tex && (!inline.rendered || !inline.svg)) {
+        const rendered = inline.rendered ?? renderer.render(inline.tex, false);
+        const svg = inline.svg ?? renderer.svg(inline.tex);
+        return [{ ...inline, ...(rendered ? { rendered } : {}), ...(svg ? { svg } : {}) }];
       }
       return [inline];
     }

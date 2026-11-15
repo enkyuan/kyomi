@@ -1,10 +1,15 @@
-import { Text, type TextStyle } from "react-native";
+import { Text, View, type TextStyle } from "react-native";
+import { SvgXml } from "react-native-svg";
 import type { ReactNode } from "react";
 import type { ReaderInline } from "../../core/document";
 import { useReaderNative, type ReaderNativeContextValue } from "./context";
 import { inlinesToText, safeExternalUrl, shiftScript } from "./text";
+import { layoutMathSvg, texToUnicode } from "./tex";
 
-type InlineContext = Pick<ReaderNativeContextValue, "theme" | "host" | "footnotes">;
+type InlineContext = Pick<ReaderNativeContextValue, "theme" | "host" | "footnotes"> & {
+  /** Which faces an ancestor already applied, so strong inside emphasis gets the bold-italic face. */
+  readonly ambient?: { readonly strong: boolean; readonly emphasis: boolean };
+};
 
 const QUOTE_OPEN = "“";
 const QUOTE_CLOSE = "”";
@@ -90,17 +95,22 @@ function renderFormat(
   key: string,
 ): ReactNode {
   const { theme } = ctx;
-  const children = renderInlines(node.children, ctx, key);
+  const ambient = ctx.ambient ?? { strong: false, emphasis: false };
+  const next = {
+    strong: ambient.strong || node.format === "strong",
+    emphasis: ambient.emphasis || node.format === "emphasis" || node.format === "cite",
+  };
+  const children = renderInlines(node.children, { ...ctx, ambient: next }, key);
   const style: TextStyle = {};
   switch (node.format) {
     case "strong":
-      style.fontFamily = theme.fonts.strong;
+      style.fontFamily = next.emphasis ? theme.fonts.strongItalic : theme.fonts.strong;
       style.fontWeight = theme.fonts.strong === "System" ? "700" : "normal";
       break;
     case "emphasis":
     case "cite":
       if (theme.fonts.italic === "System") style.fontStyle = "italic";
-      else style.fontFamily = theme.fonts.italic;
+      else style.fontFamily = next.strong ? theme.fonts.strongItalic : theme.fonts.italic;
       break;
     case "underline":
     case "insert":
@@ -168,8 +178,37 @@ function renderNode(node: ReaderInline, ctx: InlineContext, key: string): ReactN
         </Text>
       );
     case "math":
-      // Inline islands would need one WebView per formula; show the TeX source in mono instead.
-      return (
+      // Compiler SVG first (full layout, no WebView per formula). Without it, simple formulas
+      // become Unicode in the body font; anything else keeps its TeX source in mono so it is
+      // never shown wrong.
+      const layout =
+        node.svg === undefined
+          ? null
+          : layoutMathSvg(node.svg, theme.fontSize, theme.colors.foreground);
+      if (layout) {
+        // An inline view's bottom edge sits on the text baseline, so push it down by the descent.
+        return (
+          <View
+            key={key}
+            accessible
+            accessibilityRole="image"
+            accessibilityLabel={node.tex ?? "Math"}
+            style={{
+              width: layout.width,
+              height: layout.height,
+              transform: [{ translateY: layout.descent }],
+            }}
+          >
+            <SvgXml xml={layout.xml} width={layout.width} height={layout.height} />
+          </View>
+        );
+      }
+      const unicode = node.tex === undefined ? null : texToUnicode(node.tex);
+      return unicode !== null ? (
+        <Text key={key} style={{ fontFamily: theme.fonts.italic }}>
+          {unicode}
+        </Text>
+      ) : (
         <Text key={key} style={{ fontFamily: theme.fonts.mono, fontSize: theme.fontSize * 0.9 }}>
           {node.tex ?? ""}
         </Text>

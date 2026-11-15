@@ -7,6 +7,7 @@ import {
   mathFields,
   readerImageSchema,
 } from "./shared";
+import { isSafeMathSvg, MAX_MATH_SVG_LENGTH } from "./math-svg";
 
 export const readerInlineFormatSchema = z.enum([
   "strong",
@@ -64,7 +65,12 @@ const breakInlineSchema = z.object({
 });
 
 const mathInlineSchema = z
-  .object({ type: z.literal("math"), ...mathFields })
+  .object({
+    type: z.literal("math"),
+    ...mathFields,
+    /** MathJax SVG for native renderers; validated against the math SVG allowlist. */
+    svg: z.string().max(MAX_MATH_SVG_LENGTH).refine(isSafeMathSvg, "unsafe math svg").optional(),
+  })
   .refine(hasMathSource, "math requires tex or mathml");
 
 const footnoteRefInlineSchema = z.object({

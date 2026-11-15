@@ -18,6 +18,8 @@ export type ReaderNativeFonts = {
   strong: string;
   /** Face for emphasis; custom families have no synthesized italic, so name it explicitly. */
   italic: string;
+  /** Face for emphasis inside strong text (or the reverse); custom families need it named too. */
+  strongItalic: string;
   heading: string;
   mono: string;
 };
@@ -82,6 +84,7 @@ export const DEFAULT_NATIVE_READER_FONTS: ReaderNativeFonts = {
   body: "System",
   strong: "System",
   italic: "System",
+  strongItalic: "System",
   heading: "System",
   mono: "Menlo",
 };
@@ -99,6 +102,8 @@ export type CreateReaderNativeThemeInput = {
   /** The horizontal inset the list applies; `full` placements bleed into it. */
   inset: number;
   fontSize: number;
+  /** Space between blocks, in px. Defaults to following `fontSize`; pass one to keep it fixed. */
+  blockGap?: number;
   contentWidth?: ReaderContentWidth;
   fonts?: Partial<ReaderNativeFonts>;
   colors?: Partial<ReaderNativeColors>;
@@ -117,7 +122,7 @@ export function createReaderNativeTheme(input: CreateReaderNativeThemeInput): Re
     fonts: { ...DEFAULT_NATIVE_READER_FONTS, ...input.fonts },
     fontSize: input.fontSize,
     lineHeight: input.lineHeight ?? 1.68,
-    blockGap: Math.round(input.fontSize * 1.15),
+    blockGap: input.blockGap ?? Math.round(input.fontSize * 1.15),
     columnWidth,
     bleed: Math.max(0, input.inset),
     tableColumnWidth: 144,
