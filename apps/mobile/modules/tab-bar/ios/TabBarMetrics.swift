@@ -82,7 +82,12 @@ enum TabBarMetrics {
   static let fieldTextInset: CGFloat = 44
   static let fieldTextTrailing: CGFloat = 12
   /// Height of a feed in the composer's results, and the space kept between them and the field.
-  static let composerResultHeight: CGFloat = 76
+  static let composerResultHeight: CGFloat = 60
+  /// The clear space between the status bar and the first result's icon.
+  static let composerFirstRowGap: CGFloat = 2
+  /// How far the first result is drawn up into the margin under the status bar: a row centers its 36pt
+  /// icon, so the rest of its slack above the icon is lifted away, leaving `composerFirstRowGap`.
+  static let composerFirstRowLift: CGFloat = (composerResultHeight - 36) / 2 - composerFirstRowGap
   static let composerResultsGap: CGFloat = 12
   /// The plus or check ending a result, and the touch target around it (the HIG's 44pt minimum).
   static let composerMarkSize: CGFloat = 30
