@@ -10,6 +10,7 @@ import { FigureBlock, GalleryBlock, MediaFileBlock } from "./media";
 import { imageAspectRatio, useBodyTextStyle } from "./style";
 import { DividerBlock, HeadingBlock, PullQuoteBlock } from "./typography";
 import { inlinesToText } from "./text";
+import { tableColumnWidths } from "./table-layout";
 import type { ReaderSegment } from "./plan";
 
 type Block<T extends ReaderBlock["type"]> = Extract<ReaderBlock, { type: T }>;
@@ -236,6 +237,18 @@ function TableBlock({ block }: { readonly block: Block<"table"> }) {
     ...(block.foot ?? []).map((row) => ({ row, head: false })),
   ];
   const size = theme.fontSize * 0.88;
+  const widths = tableColumnWidths(
+    rows.map(({ row }) =>
+      row.map((cell) => {
+        const inlines = cellInlines(cell);
+        return { chars: inlines ? inlinesToText(inlines).length : 0, span: cell.colSpan ?? 1 };
+      }),
+    ),
+    // Minus the 1px frame on each side, so a filled table sits flush inside its border.
+    { available: theme.columnWidth - 2, charWidth: size * 0.52 },
+  );
+  const widthOf = (column: number, span: number) =>
+    widths.slice(column, column + span).reduce((sum, width) => sum + width, 0);
   return (
     <View>
       {block.caption?.length ? (
@@ -268,6 +281,9 @@ function TableBlock({ block }: { readonly block: Block<"table"> }) {
               }}
             >
               {row.map((cell, cellIndex) => {
+                const column = row
+                  .slice(0, cellIndex)
+                  .reduce((sum, previous) => sum + (previous.colSpan ?? 1), 0);
                 const inlines = cellInlines(cell);
                 const header = head || cell.header;
                 return (
@@ -279,7 +295,7 @@ function TableBlock({ block }: { readonly block: Block<"table"> }) {
                       borderLeftWidth: cellIndex === 0 ? 0 : 1,
                       gap: 4,
                       padding: 10,
-                      width: theme.tableColumnWidth * (cell.colSpan ?? 1),
+                      width: widthOf(column, cell.colSpan ?? 1),
                     }}
                   >
                     {inlines ? (

@@ -8,6 +8,7 @@ type InlineContext = Pick<ReaderNativeContextValue, "theme" | "host" | "footnote
 
 const QUOTE_OPEN = "“";
 const QUOTE_CLOSE = "”";
+const CODE_PAD = " ";
 
 function plainText(children: readonly ReaderInline[]): string | null {
   let out = "";
@@ -161,7 +162,9 @@ function renderNode(node: ReaderInline, ctx: InlineContext, key: string): ReactN
             fontSize: theme.fontSize * 0.88,
           }}
         >
-          {node.value}
+          {/* Nested `Text` has no padding or radius; narrow no-break spaces inside the span give the
+              chip the same breathing room as the web reader's `padding: 0.1em 0.3em`. */}
+          {`${CODE_PAD}${node.value}${CODE_PAD}`}
         </Text>
       );
     case "math":
