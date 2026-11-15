@@ -1,7 +1,4 @@
 PODS:
-  - ArticleList (1.0.0):
-    - ExpoModulesCore
-    - TabBar
   - EXApplication (57.0.3):
     - ExpoModulesCore
   - EXConstants (57.0.22):
@@ -2565,14 +2562,11 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - ScreenShape (1.0.0):
-    - ExpoModulesCore
   - TabBar (1.0.0):
     - ExpoModulesCore
   - Yoga (0.0.0)
 
 DEPENDENCIES:
-  - ArticleList (from `../modules/article-list/ios`)
   - "EXApplication (from `../../../node_modules/.bun/expo-application@57.0.3+00fad04f6d313f11/node_modules/expo-application/ios`)"
   - "EXConstants (from `../../../node_modules/.bun/expo-constants@57.0.22+00fad04f6d313f11/node_modules/expo-constants/ios`)"
   - "EXJSONUtils (from `../../../node_modules/.bun/expo-json-utils@57.0.2/node_modules/expo-json-utils/ios`)"
@@ -2697,7 +2691,6 @@ DEPENDENCIES:
   - "RNScreens (from `../../../node_modules/.bun/react-native-screens@4.27.0+c94dbb497cb325a9/node_modules/react-native-screens`)"
   - "RNSVG (from `../../../node_modules/.bun/react-native-svg@15.15.4+c94dbb497cb325a9/node_modules/react-native-svg`)"
   - "RNWorklets (from `../../../node_modules/.bun/react-native-worklets@0.10.1+8ff225d12b7064b2/node_modules/react-native-worklets`)"
-  - ScreenShape (from `../modules/screen-shape/ios`)
   - TabBar (from `../modules/tab-bar/ios`)
   - "Yoga (from `../../../node_modules/.bun/react-native@0.86.3+b78b9e47dda8dbd4/node_modules/react-native/ReactCommon/yoga`)"
 
@@ -2706,8 +2699,6 @@ SPEC REPOS:
     - MMKVCore
 
 EXTERNAL SOURCES:
-  ArticleList:
-    :path: "../modules/article-list/ios"
   EXApplication:
     :path: "../../../node_modules/.bun/expo-application@57.0.3+00fad04f6d313f11/node_modules/expo-application/ios"
   EXConstants:
@@ -2955,15 +2946,12 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/.bun/react-native-svg@15.15.4+c94dbb497cb325a9/node_modules/react-native-svg"
   RNWorklets:
     :path: "../../../node_modules/.bun/react-native-worklets@0.10.1+8ff225d12b7064b2/node_modules/react-native-worklets"
-  ScreenShape:
-    :path: "../modules/screen-shape/ios"
   TabBar:
     :path: "../modules/tab-bar/ios"
   Yoga:
     :path: "../../../node_modules/.bun/react-native@0.86.3+b78b9e47dda8dbd4/node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  ArticleList: 504e73d6175fc45a66ef8094591343bbf9cc937f
   EXApplication: a727f05eb8592f0bc764f6ab8d51eacc158652ec
   EXConstants: 8a0eb5e2553569c0e6710b73a8d90d1ce358c153
   EXJSONUtils: a49e3ef80dff762108e5690c7b2f360675dcf7f6
@@ -3088,7 +3076,6 @@ SPEC CHECKSUMS:
   RNScreens: 9d0218f57a19d2c9f1cfe45683aae5ad8f6bdf82
   RNSVG: 3fe8590403ac9f107b4d14591bc6e54da4894e5c
   RNWorklets: 08a21e89722f529b915e0520eca6c14939deff94
-  ScreenShape: 5b4a5ff898f67bcf48ac82272cf59d5ed8efe074
   TabBar: dfa21c2c9b035c81654e734994909ec62db23d58
   Yoga: 18b74b3ade30bebc1904004dfaceae1dd02a330a
 
