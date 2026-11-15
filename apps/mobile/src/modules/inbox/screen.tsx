@@ -7,7 +7,7 @@ import { EmptyStateIcon } from "@/components/icons/empty-state";
 import { Badge } from "@/components/ui/badge";
 import { Host } from "@expo/ui";
 import { SymbolView } from "expo-symbols";
-import { IconMenuView, type IconMenuItem } from "../../../modules/tab-bar";
+import type { IconMenuItem } from "../../../modules/tab-bar";
 import { toTabBarIcon } from "@/components/ui/tab-bar/lib/icon";
 import {
   BookmarkNativeIcon,
@@ -55,6 +55,8 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
   const headerActions =
     Platform.OS === "ios" ? (
       (() => {
+        // The tab bar module is registered on Apple platforms only, so it is loaded here, not at the top.
+        const { IconMenuView } = require("../../../modules/tab-bar");
         const { Image } = require("@expo/ui/swift-ui");
         const {
           accessibilityLabel,
@@ -81,7 +83,9 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
                 id: item.id,
                 title: item.title,
               }))}
-              onSelect={({ nativeEvent }) => setFilter(nativeEvent.id as InboxFilter)}
+              onSelect={({ nativeEvent }: { nativeEvent: { id: string } }) =>
+                setFilter(nativeEvent.id as InboxFilter)
+              }
               style={{ height: 38, width: 38 }}
               tintColor={theme.foreground}
             />

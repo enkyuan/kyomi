@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import * as DocumentPicker from "expo-document-picker";
 import { useEffect, useState } from "react";
 import { mobileApiErrorMessage } from "@/lib/api";
+import { articleListQueryKeys } from "@modules/articles/queries/keys";
 import { foldersQueryKey, subscribedFeedsQueryKey } from "@modules/feeds/queries/keys";
 import { getOpmlImportState, isOpmlImportFinished, startOpmlImport } from "../lib/api";
 
@@ -54,6 +55,9 @@ export function useOpmlImport() {
     if (!finished) return;
     void queryClient.invalidateQueries({ queryKey: foldersQueryKey });
     void queryClient.invalidateQueries({ queryKey: subscribedFeedsQueryKey });
+    for (const queryKey of articleListQueryKeys) {
+      void queryClient.invalidateQueries({ queryKey });
+    }
   }, [finished, queryClient]);
 
   function reset() {

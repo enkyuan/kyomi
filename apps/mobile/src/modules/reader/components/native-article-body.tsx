@@ -17,7 +17,7 @@ import type { ReaderDocument } from "@kyomi/reader/document";
 import { FONT_FAMILIES } from "@/theme/fonts";
 import { mobileReaderLayout } from "../lib/layout";
 import { readerCanvas } from "../lib/theme";
-import { readReaderPosition, writeReaderPosition } from "../lib/position";
+import { writeReaderPosition } from "../lib/position";
 import HtmlIsland from "./html-island.dom";
 import { FootnoteSheet } from "./footnote-sheet";
 import { ImageViewer, type ImageViewerState } from "./image-viewer";
@@ -72,7 +72,6 @@ export function NativeArticleBody({
   const [viewer, setViewer] = useState<ImageViewerState | null>(null);
   const [footnote, setFootnote] = useState<ReaderFootnote | null>(null);
   const inset = mobileReaderLayout.contentInsetPx;
-  const initialIndex = useMemo(() => readReaderPosition(articleId), [articleId]);
 
   const theme = useMemo(
     () =>
@@ -212,7 +211,6 @@ export function NativeArticleBody({
         document={document}
         header={header}
         host={host}
-        initialIndex={initialIndex}
         initialProgress={initialProgress}
         inset={inset}
         onFirstContentLayout={onReady}
