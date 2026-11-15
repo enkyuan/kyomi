@@ -72,7 +72,7 @@ describe("code (pass 13)", () => {
     expect(block.highlight).toBeUndefined();
   });
 
-  test("without any hint the block is plain text, never classified", async () => {
+  test("without any hint a short block is plain text, never classified", async () => {
     const block = await codeOf(`<pre><code>function looksLikeJs() { return 1; }</code></pre>`);
     expect(block).toMatchObject({ language: null, languageSource: "none", label: "Plain text" });
     expect(block.highlight).toBeUndefined();
@@ -109,5 +109,76 @@ describe("code (pass 13)", () => {
     await codeOf(`<pre data-lang="ts"><code>let a: number = 1;</code></pre>`);
     const second = await codeOf(html);
     expect(second.highlight).toEqual(first.highlight);
+  });
+});
+
+describe("code (pass 13) conservative detection", () => {
+  const escape = (value: string) => value.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const detect = (value: string) => codeOf(`<pre><code>${escape(value)}</code></pre>`);
+
+  test.each([
+    [
+      "python",
+      `import os\nfrom pathlib import Path\n\ndef main(path):\n    for f in Path(path).iterdir():\n        print(f.name)\n`,
+    ],
+    ["toml", `[package]\nname = "gawain"\nversion = "0.1.0"\n\n[dependencies]\nserde = "1.0"\n`],
+    ["shell session", `$ pip install gawain\n$ gawain init\n$ gawain run --watch\n`],
+    [
+      "shell script",
+      `curl -fsSL https://example.com/install.sh | sh\nexport PATH="$HOME/.local/bin:$PATH"\ngawain --version\n`,
+    ],
+    [
+      "ruby",
+      `class Greeter\n  def initialize(name)\n    @name = name\n  end\n\n  def hello\n    puts "Hello, #{@name}"\n  end\nend\n`,
+    ],
+    [
+      "rust",
+      `fn main() {\n    let values: Vec<i32> = vec![1, 2, 3];\n    for v in values.iter() {\n        println!("{}", v);\n    }\n}\n`,
+    ],
+    [
+      "go",
+      `package main\n\nimport "fmt"\n\nfunc main() {\n\tfor i := 0; i < 3; i++ {\n\t\tfmt.Println(i)\n\t}\n}\n`,
+    ],
+    ["json", `{\n  "name": "gawain",\n  "version": "0.1.0",\n  "scripts": { "build": "tsc" }\n}\n`],
+  ])("colours an unhinted %s snippet without labelling it", async (_name, value) => {
+    const block = await detect(value);
+    expect(block).toMatchObject({ language: null, languageSource: "none", label: "Plain text" });
+    expect(block.highlight).toBeDefined();
+    expect(block.highlight!.styles.length).toBeGreaterThan(1);
+    expect(block.highlight!.lines.map((line) => line.map(([t]) => t).join("")).join("\n")).toBe(
+      block.value,
+    );
+  });
+
+  test.each([
+    ["short", `x = 1\ny = 2`],
+    [
+      "prose",
+      `This is some output that looks like prose.\nIt has several lines of text in it.\nNothing to see here at all, really.\n`,
+    ],
+    ["table", `name    age\nalice   30\nbob     25\n`],
+    [
+      "build output",
+      `Compiling gawain v0.1.0\n    Finished dev [unoptimized] target(s) in 1.2s\n     Running target/debug/gawain\n`,
+    ],
+  ])("leaves %s plain", async (_name, value) => {
+    const block = await detect(value);
+    expect(block.highlight).toBeUndefined();
+    expect(block.language).toBeNull();
+  });
+
+  test("never overrides an explicit hint or plain-text request", async () => {
+    const python = `import os\nfrom pathlib import Path\n\ndef main(path):\n    print(path)\n`;
+    const plain = await codeOf(`<pre data-lang="text"><code>${python}</code></pre>`);
+    expect(plain.highlight).toBeUndefined();
+    const hinted = await codeOf(`<pre data-lang="ruby"><code>${python}</code></pre>`);
+    expect(hinted).toMatchObject({ language: "ruby", languageSource: "explicit" });
+  });
+
+  test("detection is deterministic", async () => {
+    const value = `[package]\nname = "gawain"\nversion = "0.1.0"\n\n[dependencies]\nserde = "1.0"\n`;
+    const first = await detect(value);
+    await detect(`$ pip install gawain\n$ gawain init\n$ gawain run --watch\n`);
+    expect((await detect(value)).highlight).toEqual(first.highlight);
   });
 });
