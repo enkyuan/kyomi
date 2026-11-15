@@ -80,7 +80,7 @@ describe("reader content schema contract", () => {
       bodyKind: "document",
       document: { version: 1, blocks: [] },
       documentVersion: 1,
-      compilerVersion: "article-html-v3+kdm.4",
+      compilerVersion: "article-html-v3+kdm.5",
       fallbackBodyKind: "html",
       contentHtml: "<p>Hello</p>",
       contentMarkdown: null,

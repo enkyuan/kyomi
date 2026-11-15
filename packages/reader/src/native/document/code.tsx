@@ -93,8 +93,7 @@ export function CodeBlockView({ block }: { readonly block: CodeBlock }) {
   const lines = resolveCodeLines(block, theme.scheme);
   // As on the web: the filename, else the language the highlighter used, always shown.
   // Colour inferred without a language (no hint, filename or context) must not read "Plain text".
-  const header =
-    block.filename ?? (block.language === null && block.highlight ? null : block.label);
+  const header = block.filename ?? block.label;
 
   return (
     <View

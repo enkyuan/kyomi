@@ -3,14 +3,14 @@
   "source": {
     "format": "html",
     "origin": "feed_html",
-    "baseUrl": "https://newsletter.example/issues/42"
+    "baseUrl": "https://intl.example/blog/scripts/"
   },
   "compiler": {
-    "version": "article-html-v3+kdm.4",
+    "version": "article-html-v3+kdm.5",
     "sanitizerVersion": "article-html-v3"
   },
   "meta": {
-    "title": "Issue 42: Smaller queues",
+    "title": "Scripts",
     "subtitle": null,
     "authors": [],
     "siteName": null,
@@ -18,7 +18,7 @@
     "direction": "auto",
     "publishedAt": null,
     "updatedAt": null,
-    "wordCount": 47,
+    "wordCount": 59,
     "readingMinutes": 1,
     "leadImage": null
   },
@@ -33,18 +33,7 @@
       "children": [
         {
           "type": "text",
-          "value": "By A. Writer"
-        }
-      ]
-    },
-    {
-      "anchor": "kyomi-queues",
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "value": "Queues"
+          "value": "This post collects short samples in several scripts to check that direction and annotations survive."
         }
       ]
     },
@@ -53,7 +42,7 @@
       "children": [
         {
           "type": "text",
-          "value": "Most of our incidents this quarter started with a queue that was allowed to grow without bound."
+          "value": "هذا نص عربي قصير للتأكد من اتجاه الكتابة."
         }
       ]
     },
@@ -62,18 +51,7 @@
       "children": [
         {
           "type": "text",
-          "value": "An editorial aside worth keeping: the fix is usually a limit, not more workers."
-        }
-      ]
-    },
-    {
-      "anchor": "kyomi-timeouts",
-      "type": "heading",
-      "level": 2,
-      "children": [
-        {
-          "type": "text",
-          "value": "Timeouts"
+          "value": "זהו טקסט קצר בעברית לבדיקת כיוון הכתיבה."
         }
       ]
     },
@@ -82,21 +60,46 @@
       "children": [
         {
           "type": "text",
-          "value": "A timeout that never fires is a comment, not a control."
+          "value": "漢字(かんじ)の読み方を練習します。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The top scorer this week was إيمان with 90 points."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "German loves long words: Donaudampfschiffahrtsgesellschaft."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "« Le style est l’homme même. »"
+            }
+          ]
         }
       ]
     }
   ],
   "footnotes": [],
   "diagnostics": {
-    "droppedElements": {
-      "nav": 1,
-      "form": 1,
-      "button": 1,
-      "footer": 1,
-      "aside": 1,
-      "div": 1
-    },
+    "droppedElements": {},
     "htmlBlocks": 0,
     "warnings": []
   }

@@ -19,7 +19,7 @@ import { validate } from "./passes/validate";
  * bump marks stored documents stale without a hand edit; bump `KDM_COMPILER_REVISION` when Stage C
  * output changes for the same input. The document schema has its own `READER_DOCUMENT_VERSION`.
  */
-const KDM_COMPILER_REVISION = 4;
+const KDM_COMPILER_REVISION = 5;
 export const ARTICLE_COMPILER_VERSION =
   `${ARTICLE_HTML_SANITIZER_VERSION}+kdm.${KDM_COMPILER_REVISION}` as const;
 

@@ -6,7 +6,8 @@ import { highlightCode } from "../highlighter";
 /**
  * Pass 13. Resolves each code block's language (explicit hint, then filename, then shebang or
  * modeline) and stores dual-theme Shiki tokens so clients ship no highlighter. A block with no
- * signal at all may still get a confidently detected colouring, but never a language label.
+ * signal at all gets the classifier's language (colour and label together) when it is confident,
+ * and is plain text otherwise.
  * The decision itself lives in `classifyCode`.
  */
 export const code: DocumentPass = async (draft) => {
@@ -30,9 +31,12 @@ export const code: DocumentPass = async (draft) => {
       heading,
       prior,
     });
-    block.languageSource = result.source;
-    block.language = result.language?.id ?? null;
-    block.label = result.language?.label ?? "Plain text";
+    // The label and the colour come from one decision, so a coloured block always says what it is:
+    // a language the classifier committed to is named, and a block it could not place is plain text.
+    const named = result.language ?? result.colour;
+    block.languageSource = result.language ? result.source : result.colour ? "classifier" : result.source;
+    block.language = named?.id ?? null;
+    block.label = named?.label ?? "Plain text";
     delete block.highlight;
     if (result.colour) {
       const highlight = await highlightCode(block.value, result.colour.id);

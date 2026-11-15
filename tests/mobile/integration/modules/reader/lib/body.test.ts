@@ -41,7 +41,7 @@ describe("selectReaderBody", () => {
 describe("toHtmlReaderContent", () => {
   const served = {
     bodyKind: "document" as const,
-    compilerVersion: "article-html-v3+kdm.4",
+    compilerVersion: "article-html-v3+kdm.5",
     contentHtml: null,
     contentMarkdown: "# Title",
     contentText: null,

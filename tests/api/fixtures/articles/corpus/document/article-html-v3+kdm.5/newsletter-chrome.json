@@ -3,14 +3,14 @@
   "source": {
     "format": "html",
     "origin": "feed_html",
-    "baseUrl": "https://intl.example/blog/scripts/"
+    "baseUrl": "https://newsletter.example/issues/42"
   },
   "compiler": {
-    "version": "article-html-v3+kdm.4",
+    "version": "article-html-v3+kdm.5",
     "sanitizerVersion": "article-html-v3"
   },
   "meta": {
-    "title": "Scripts",
+    "title": "Issue 42: Smaller queues",
     "subtitle": null,
     "authors": [],
     "siteName": null,
@@ -18,7 +18,7 @@
     "direction": "auto",
     "publishedAt": null,
     "updatedAt": null,
-    "wordCount": 59,
+    "wordCount": 47,
     "readingMinutes": 1,
     "leadImage": null
   },
@@ -33,7 +33,18 @@
       "children": [
         {
           "type": "text",
-          "value": "This post collects short samples in several scripts to check that direction and annotations survive."
+          "value": "By A. Writer"
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-queues",
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Queues"
         }
       ]
     },
@@ -42,7 +53,7 @@
       "children": [
         {
           "type": "text",
-          "value": "هذا نص عربي قصير للتأكد من اتجاه الكتابة."
+          "value": "Most of our incidents this quarter started with a queue that was allowed to grow without bound."
         }
       ]
     },
@@ -51,7 +62,18 @@
       "children": [
         {
           "type": "text",
-          "value": "זהו טקסט קצר בעברית לבדיקת כיוון הכתיבה."
+          "value": "An editorial aside worth keeping: the fix is usually a limit, not more workers."
+        }
+      ]
+    },
+    {
+      "anchor": "kyomi-timeouts",
+      "type": "heading",
+      "level": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Timeouts"
         }
       ]
     },
@@ -60,46 +82,21 @@
       "children": [
         {
           "type": "text",
-          "value": "漢字(かんじ)の読み方を練習します。"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "The top scorer this week was إيمان with 90 points."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "German loves long words: Donaudampfschiffahrtsgesellschaft."
-        }
-      ]
-    },
-    {
-      "type": "quote",
-      "children": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "« Le style est l’homme même. »"
-            }
-          ]
+          "value": "A timeout that never fires is a comment, not a control."
         }
       ]
     }
   ],
   "footnotes": [],
   "diagnostics": {
-    "droppedElements": {},
+    "droppedElements": {
+      "nav": 1,
+      "form": 1,
+      "button": 1,
+      "footer": 1,
+      "aside": 1,
+      "div": 1
+    },
     "htmlBlocks": 0,
     "warnings": []
   }

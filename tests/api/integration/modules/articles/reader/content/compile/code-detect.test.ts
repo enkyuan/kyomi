@@ -4,7 +4,7 @@ import { runThrough } from "./document-helpers";
 /**
  * Regression tests for unhinted code-block classification. Colouring is asserted by comparing
  * the stored tokens with the tokens the same text gets under an explicit hint for the expected
- * language, so a wrong colour language fails even though the label stays "Plain text".
+ * language, so a wrong colour or label fails.
  */
 const escape = (value: string) => value.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 const pre = (value: string, attributes = "") =>
@@ -29,8 +29,10 @@ async function expectColour(value: string, language: string, before = "") {
   const hinted = await first(value, "").then(() =>
     codeBlocks(pre(value, ` data-lang="${language}"`)),
   );
-  expect(detected.language).toBeNull();
-  expect(detected.languageSource).toBe("none");
+  // Colour and label are one decision: the block names the language it is coloured as.
+  expect(detected.language).toBe(hinted[0]?.language ?? undefined);
+  expect(detected.label).toBe(hinted[0]?.label ?? undefined);
+  expect(detected.languageSource).toBe("classifier");
   expect(detected.highlight).toBeDefined();
   expect(detected.highlight).toEqual(hinted[0]?.highlight);
 }
@@ -114,8 +116,8 @@ describe("code detection: data and markup shapes", () => {
 
   test("jsx is not markup", async () => {
     const block = await first(`const App = () => {\n  return <div className="a">{x}</div>;\n};\n`);
-    expect(block.language).toBeNull();
-    // either plain or coloured as script, never as html
+    // either plain or labelled and coloured as script, never as html
+    expect(block.language).not.toBe("html");
     const html = await codeBlocks(
       pre(`const App = () => {\n  return <div className="a">{x}</div>;\n};\n`, ` data-lang="html"`),
     );
@@ -260,7 +262,7 @@ describe("code detection: article context", () => {
     const named = await codeBlocks(`<p>Here is the Python entry point:</p>${pre(value)}`);
     const hinted = await codeBlocks(pre(value, ` data-lang="python"`));
     expect(named[0]?.highlight).toEqual(hinted[0]?.highlight);
-    expect(named[0]?.language).toBeNull();
+    expect(named[0]).toMatchObject({ language: "python", label: "Python", languageSource: "classifier" });
   });
 
   test("a paragraph that names two languages is no cue", async () => {
@@ -279,7 +281,7 @@ describe("code labels from a named file", () => {
 
   test("a command that merely mentions the file is not the file", async () => {
     const block = await labelOf(`Apply <code>app.yaml</code>:`, `kubectl apply -f app.yaml`);
-    expect(block).toMatchObject({ language: null, languageSource: "none" });
+    expect(block).toMatchObject({ language: "shellscript", languageSource: "classifier" });
   });
 
   test("a script that imports the file is not the file", async () => {
@@ -296,7 +298,7 @@ describe("code labels from a named file", () => {
     const xml = await labelOf(`Edit <code>web.xml</code>:`, `<web-app>\n  <servlet/>\n</web-app>`);
     expect(xml).toMatchObject({ language: "xml", languageSource: "filename" });
     const wrong = await labelOf(`Edit <code>index.xml</code>:`, `<div>\n  <p>hi</p>\n</div>`);
-    expect(wrong?.language).toBeNull();
+    expect(wrong?.language).not.toBe("xml");
   });
 
   test("output named with a file is never labelled", async () => {
@@ -310,11 +312,11 @@ describe("code labels from a named file", () => {
 });
 
 describe("code detection is deterministic and never labels", () => {
-  test("a detected block keeps the Plain text label", async () => {
+  test("a detected block is labelled with the language it is coloured as", async () => {
     const block = await first(
       `import os\nfrom pathlib import Path\n\ndef main():\n    print(Path.cwd())\n`,
     );
-    expect(block).toMatchObject({ language: null, languageSource: "none", label: "Plain text" });
+    expect(block).toMatchObject({ language: "python", languageSource: "classifier", label: "Python" });
     expect(block.highlight).toBeDefined();
   });
 

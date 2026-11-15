@@ -140,9 +140,11 @@ describe("code (pass 13) conservative detection", () => {
       `package main\n\nimport "fmt"\n\nfunc main() {\n\tfor i := 0; i < 3; i++ {\n\t\tfmt.Println(i)\n\t}\n}\n`,
     ],
     ["json", `{\n  "name": "gawain",\n  "version": "0.1.0",\n  "scripts": { "build": "tsc" }\n}\n`],
-  ])("colours an unhinted %s snippet without labelling it", async (_name, value) => {
+  ])("labels and colours an unhinted %s snippet", async (_name, value) => {
     const block = await detect(value);
-    expect(block).toMatchObject({ language: null, languageSource: "none", label: "Plain text" });
+    expect(block).toMatchObject({ languageSource: "classifier" });
+    expect(block.language).not.toBeNull();
+    expect(block.label).not.toBe("Plain text");
     expect(block.highlight).toBeDefined();
     expect(block.highlight!.styles.length).toBeGreaterThan(1);
     expect(block.highlight!.lines.map((line) => line.map(([t]) => t).join("")).join("\n")).toBe(
@@ -218,9 +220,10 @@ describe("code (pass 13) context and deterministic shapes", () => {
     const blocks = await blocksOf(
       `<pre><code>[tool.gawain]\nmode = "strict"</code></pre><pre><code>uv tool install "gawain[ty]"  # or pip install "gawain[ty]"</code></pre>`,
     );
+    expect(blocks.map((block) => block.type === "code" && block.label)).toEqual(["TOML", "Shell"]);
     for (const block of blocks) {
       expect(block.type === "code" && block.highlight).toBeTruthy();
-      expect(block).toMatchObject({ language: null, languageSource: "none" });
+      expect(block).toMatchObject({ languageSource: "classifier" });
     }
   });
 
