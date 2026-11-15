@@ -2,6 +2,7 @@ import { FlatList, View, type FlatListProps, type ViewToken } from "react-native
 import {
   forwardRef,
   useCallback,
+  useEffect,
   useImperativeHandle,
   useMemo,
   useRef,
@@ -13,6 +14,9 @@ import { ReaderNativeProvider, type ReaderNativeHost } from "./context";
 import { planDocument, type ReaderSegment } from "./plan";
 import type { ReaderNativeTheme } from "./theme";
 import { useReadingTracking, type NativeReadingSample } from "./tracking";
+
+/** How long a restore may take to land before the body is shown regardless. */
+const RESTORE_REVEAL_FALLBACK_MS = 1_500;
 
 export type NativeDocumentBodyHandle = {
   scrollToAnchor: (anchor: string) => boolean;
@@ -65,12 +69,27 @@ export const NativeDocumentBody = forwardRef<NativeDocumentBodyHandle, NativeDoc
     const plan = useMemo(() => planDocument(document), [document]);
     const listRef = useRef<FlatList<ReaderSegment>>(null);
     const laidOut = useRef(false);
+    // The body is ready to show once its first block has laid out and, when a position is being
+    // restored, once that restore has settled; the screen keeps its skeleton up until then.
+    const revealed = useRef(false);
+    const reveal = useCallback(() => {
+      if (revealed.current) return;
+      revealed.current = true;
+      onFirstContentLayout?.();
+    }, [onFirstContentLayout]);
     const tracking = useReadingTracking({
       bottomInset,
       initialProgress,
       listRef,
       onReadingProgress,
+      onRestoreSettled: reveal,
     });
+    useEffect(() => {
+      if (initialProgress === undefined) return;
+      // A restore that never lands (nothing to scroll to, an early touch) must not hold the body back.
+      const fallback = setTimeout(reveal, RESTORE_REVEAL_FALLBACK_MS);
+      return () => clearTimeout(fallback);
+    }, [initialProgress, reveal]);
 
     const scrollToAnchor = useCallback(
       (anchor: string) => {
@@ -108,7 +127,7 @@ export const NativeDocumentBody = forwardRef<NativeDocumentBodyHandle, NativeDoc
               ? () => {
                   if (laidOut.current) return;
                   laidOut.current = true;
-                  onFirstContentLayout();
+                  if (initialProgress === undefined) reveal();
                 }
               : undefined
           }
@@ -121,7 +140,7 @@ export const NativeDocumentBody = forwardRef<NativeDocumentBodyHandle, NativeDoc
           )}
         </View>
       ),
-      [onFirstContentLayout, theme.blockGap, theme.columnWidth],
+      [initialProgress, onFirstContentLayout, reveal, theme.blockGap, theme.columnWidth],
     );
 
     return (
