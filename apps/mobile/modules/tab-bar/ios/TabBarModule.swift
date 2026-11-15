@@ -33,6 +33,10 @@ public class TabBarModule: Module {
         view.model.switcherFolders = (folders ?? []).map(\.folder)
       }
 
+      Prop("switcherFeeds") { (view: TabBarView, feeds: [SwitcherFeedRecord]?) in
+        view.model.switcherFeeds = (feeds ?? []).map(\.feed)
+      }
+
       Prop("searchIcon") { (view: TabBarView, icon: IconRecord?) in
         view.model.searchIcon = icon?.icon
       }
@@ -127,13 +131,13 @@ struct SwitcherRecord: Record {
   @Field var hint: String = ""
   @Field var icon: IconRecord = IconRecord()
   @Field var editIcon: IconRecord = IconRecord()
-  @Field var renameIcon: IconRecord = IconRecord()
+  @Field var sortIcon: IconRecord = IconRecord()
   @Field var addIcon: IconRecord = IconRecord()
 
   var switcher: TabBarSwitcher {
     TabBarSwitcher(
       title: title, label: label, hint: hint, icon: icon.icon,
-      editIcon: editIcon.icon, renameIcon: renameIcon.icon, addIcon: addIcon.icon
+      editIcon: editIcon.icon, sortIcon: sortIcon.icon, addIcon: addIcon.icon
     )
   }
 }
@@ -142,8 +146,30 @@ struct SwitcherFolderRecord: Record {
   @Field var id: String = ""
   @Field var name: String = ""
   @Field var feedCount: Int = 0
+  @Field var createdAt: String = ""
 
-  var folder: SwitcherFolder { SwitcherFolder(id: id, name: name, feedCount: feedCount) }
+  var folder: SwitcherFolder {
+    SwitcherFolder(id: id, name: name, feedCount: feedCount, createdAt: Self.date(createdAt))
+  }
+
+  /// Instants arrive as ISO 8601, with or without fractional seconds.
+  private static func date(_ value: String) -> Date {
+    let plain = ISO8601DateFormatter()
+    let fractional = ISO8601DateFormatter()
+    fractional.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+    return fractional.date(from: value) ?? plain.date(from: value) ?? .distantPast
+  }
+}
+
+struct SwitcherFeedRecord: Record {
+  @Field var id: String = ""
+  @Field var folderId: String = ""
+  @Field var title: String = ""
+  @Field var faviconUrl: String? = nil
+
+  var feed: SwitcherFeed {
+    SwitcherFeed(id: id, folderID: folderId, title: title, faviconURL: faviconUrl.flatMap(URL.init(string:)))
+  }
 }
 
 struct ComposerFeedRecord: Record {

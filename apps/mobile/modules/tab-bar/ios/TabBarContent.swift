@@ -264,12 +264,7 @@ struct TabBarContent: View {
           model: model,
           switcher: switcher,
           focus: $sheetTitleFocused,
-          onClose: { dismissSheet(sheet) },
-          // Opening a folder leaves the sheet for the screen that lists its feeds.
-          onOpenFolder: { id in
-            dismissSheet(sheet)
-            model.onSwitcherFolderAction("open", id, "")
-          }
+          onClose: { dismissSheet(sheet) }
         )
         .transition(Self.sheetContentTransition)
       }

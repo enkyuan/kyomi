@@ -129,9 +129,10 @@ public struct TabBarIcon: Sendable {
 public struct TabBarIconView: View {
   let icon: TabBarIcon
   let size: CGFloat
-  let color: Color
+  /// Without a colour the glyph takes the surrounding foreground style, so it matches adjacent text.
+  let color: Color?
 
-  public init(icon: TabBarIcon, size: CGFloat, color: Color) {
+  public init(icon: TabBarIcon, size: CGFloat, color: Color? = nil) {
     self.icon = icon
     self.size = size
     self.color = color
@@ -142,7 +143,7 @@ public struct TabBarIconView: View {
       ForEach(icon.layers.indices, id: \.self) { index in
         let layer = icon.layers[index]
         ViewBoxShape(outline: layer.outline, icon: icon)
-          .fill(color, style: FillStyle(eoFill: layer.evenOdd))
+          .fill(color.map(AnyShapeStyle.init) ?? AnyShapeStyle(.foreground), style: FillStyle(eoFill: layer.evenOdd))
       }
     }
     .frame(width: size, height: size)
