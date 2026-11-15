@@ -1,0 +1,11 @@
+{
+  "extends": "../../packages/tsconfig/node.json",
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "@gpuix/react",
+    "verbatimModuleSyntax": true,
+    "noUnusedLocals": true,
+    "noUncheckedSideEffectImports": true
+  }
+}
