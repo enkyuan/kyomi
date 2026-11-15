@@ -1,6 +1,7 @@
 import type {
   TabBarComposerFeed,
   TabBarComposerFolder,
+  TabBarSwitcherFeed,
   TabBarSwitcherFolder,
 } from "../../../../../modules/tab-bar";
 import type { ComposedGesture, GestureType } from "react-native-gesture-handler";
@@ -40,10 +41,11 @@ export interface TabBarComposerProps {
 /** The switcher sheet's folders and the handlers for what is done to them, owned by a domain. */
 export interface TabBarSourcesProps {
   readonly folders: readonly TabBarSwitcherFolder[];
-  readonly onOpenFolder: (folderId: string) => void;
+  readonly feeds: readonly TabBarSwitcherFeed[];
   readonly onCreateFolder: (name: string) => void;
   readonly onRenameFolder: (folderId: string, name: string) => void;
   readonly onDeleteFolder: (folderId: string) => void;
+  readonly onReorderFolders: (folderIds: string[]) => void;
 }
 
 export interface TabBarProps {
