@@ -1,3 +1,4 @@
+import * as Clipboard from "expo-clipboard";
 import * as Linking from "expo-linking";
 import * as WebBrowser from "expo-web-browser";
 import { Image } from "expo-image";
@@ -84,6 +85,7 @@ export function NativeArticleBody({
           body: FONT_FAMILIES.newsreader.regular,
           heading: FONT_FAMILIES.newsreader.semibold,
           italic: FONT_FAMILIES.newsreader.italic,
+          strongItalic: FONT_FAMILIES.newsreader.boldItalic,
           mono: FONT_FAMILIES.jetbrainsMono.regular,
           sans: FONT_FAMILIES.inter.medium,
           strong: FONT_FAMILIES.newsreader.bold,
@@ -100,6 +102,9 @@ export function NativeArticleBody({
     () => ({
       openFootnote: setFootnote,
       openImage: (image, caption) => setViewer({ caption, image }),
+      copyText: async (text) => {
+        await Clipboard.setStringAsync(text);
+      },
       openUrl: openExternal,
       renderImage: createReaderImageRenderer({
         background: theme.colors.codeBackground,
