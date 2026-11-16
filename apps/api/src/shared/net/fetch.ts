@@ -1,6 +1,6 @@
 import { assertHttpOrHttpsUrl } from "./http";
 import { assertSafeOutboundUrl } from "./outbound";
-import { readResponseBodyWithByteLimit as readBoundedBody } from "@kyomi/worker/lib/response-body";
+import { readResponseBodyWithByteLimit as readBoundedBody } from "@kyomi/ingest/lib/response-body";
 
 export class TooManyRedirectsError extends Error {
   constructor(message = "Too many redirects") {

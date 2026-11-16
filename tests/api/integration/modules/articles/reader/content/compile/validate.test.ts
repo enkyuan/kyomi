@@ -4,7 +4,7 @@ import {
   documentInvariantIssues,
   validate,
   type DocumentDraft,
-} from "@kyomi/worker/document";
+} from "@kyomi/ingest/document";
 import { runThrough } from "./document-helpers";
 
 async function draftOf(html: string): Promise<DocumentDraft> {

@@ -1,6 +1,6 @@
 import { Readability } from "@mozilla/readability";
 import { parseHTML } from "linkedom";
-import type { HostRateLimiter } from "@kyomi/worker";
+import type { HostRateLimiter } from "@kyomi/ingest";
 import { processIngestedArticleHtml } from "../content";
 import type { ArticleExtractionCandidate } from "../content";
 import { fetchArticleDocument } from "./fetch";

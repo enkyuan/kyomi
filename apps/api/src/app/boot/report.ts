@@ -2,7 +2,7 @@ import { sql } from "drizzle-orm";
 import { feedCategoryAssignments, feedItemCategoryAssignments, feedItems } from "@kyomi/db";
 import { db, pool } from "@adapters/db/client";
 import { assertApiDatabaseReady } from "@adapters/db/preflight";
-import { EMBEDDING_CLASSIFIER_METHOD, KEYWORD_CLASSIFIER_METHOD } from "@kyomi/worker";
+import { EMBEDDING_CLASSIFIER_METHOD, KEYWORD_CLASSIFIER_METHOD } from "@kyomi/ingest";
 
 export type CategoryCoverageArgs = {
   days: number;

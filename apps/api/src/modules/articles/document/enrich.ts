@@ -1,7 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { enqueueDocumentEnrichment } from "@modules/articles/document-enrichment/enqueue";
-import type { DocumentTarget } from "@kyomi/worker";
+import type { DocumentTarget } from "@kyomi/ingest";
 import { loadStoredDocument } from "./patch";
 
 type DB = typeof db;

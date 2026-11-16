@@ -1,5 +1,5 @@
 import type { ReaderDocument } from "@kyomi/reader/document";
-import type { StoredDocument, StoredDocumentCompiler } from "@kyomi/worker/lib/stored-document";
+import type { StoredDocument, StoredDocumentCompiler } from "@kyomi/ingest/lib/stored-document";
 
 export const TEST_COMPILER_VERSION = "test-compiler-1";
 

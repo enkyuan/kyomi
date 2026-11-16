@@ -4,7 +4,7 @@ import { compileBodyDocumentColumns } from "@modules/articles/document/stored";
 import { getRedis } from "@adapters/redis";
 import { publishJob } from "@adapters/queue/publish";
 import { articleClips } from "@kyomi/db";
-import type { ArticleExtractionJob } from "@kyomi/worker";
+import type { ArticleExtractionJob } from "@kyomi/ingest";
 import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize";
 import { and, asc, desc, eq, gt, gte, ilike, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app";

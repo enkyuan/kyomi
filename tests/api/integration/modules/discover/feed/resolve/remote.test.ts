@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { AppError } from "@shared/errors/app";
-import { discoverFeedUrlFromHtml } from "@kyomi/worker/ingestion";
+import { discoverFeedUrlFromHtml } from "@kyomi/ingest/ingestion";
 import { resolveRemoteFeed } from "@modules/discover/feed/resolve/remote";
 
 describe("resolveRemoteFeed", () => {

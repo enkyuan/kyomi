@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { fieldsForJob, parseJob } from "@kyomi/worker";
+import { fieldsForJob, parseJob } from "@kyomi/ingest";
 
 describe("worker queue job parsing", () => {
   test("round-trips opml.import jobs", () => {

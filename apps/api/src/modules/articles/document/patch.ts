@@ -1,6 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { articleClips, feedItems } from "@kyomi/db";
-import type { DocumentTarget } from "@kyomi/worker";
+import type { DocumentTarget } from "@kyomi/ingest";
 import { readerDocumentSchema, type ReaderDocument } from "@kyomi/reader/document";
 import { eq } from "drizzle-orm";
 

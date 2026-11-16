@@ -20,6 +20,10 @@
         "turbo": "^2.9.14",
       },
     },
+    "apps/ai-gateway": {
+      "name": "@kyomi/ai-gateway",
+      "version": "0.0.0",
+    },
     "apps/api": {
       "name": "@kyomi/api",
       "version": "1.0.50",
@@ -27,8 +31,8 @@
         "@elysiajs/cors": "^1.4.0",
         "@elysiajs/swagger": "^1.3.1",
         "@kyomi/db": "workspace:*",
+        "@kyomi/ingest": "workspace:*",
         "@kyomi/reader": "workspace:*",
-        "@kyomi/worker": "workspace:*",
         "@mozilla/readability": "^0.6.0",
         "@sinclair/typebox": "0.34.48",
         "@t3-oss/env-core": "^0.13.10",
@@ -52,10 +56,6 @@
         "@types/pg": "^8.15.5",
       },
     },
-    "apps/embeddings": {
-      "name": "@kyomi/embeddings",
-      "version": "0.0.0",
-    },
     "apps/mobile": {
       "name": "@kyomi/mobile",
       "version": "1.0.0",
@@ -68,9 +68,9 @@
         "@expo/material-symbols": "^0.1.1",
         "@expo/metro-runtime": "~57.0.17",
         "@expo/ui": "~57.0.26",
+        "@kyomi/ingest": "workspace:*",
         "@kyomi/reader": "workspace:*",
         "@kyomi/ui": "workspace:*",
-        "@kyomi/worker": "workspace:*",
         "@legendapp/list": "^3.3.3",
         "@react-native-masked-view/masked-view": "0.3.2",
         "@react-navigation/bottom-tabs": "^7.18.14",
@@ -128,9 +128,9 @@
         "@fontsource-variable/inter": "^5.3.0",
         "@fontsource-variable/newsreader": "^5.3.0",
         "@fontsource/jetbrains-mono": "^5.3.0",
+        "@kyomi/ingest": "workspace:*",
         "@kyomi/reader": "workspace:*",
         "@kyomi/ui": "workspace:*",
-        "@kyomi/worker": "workspace:*",
         "@posthog/react": "^1.10.4",
         "@tailwindcss/vite": "^4.3.3",
         "@tanstack/react-form": "^1.33.5",
@@ -180,6 +180,25 @@
       "devDependencies": {
         "drizzle-kit": "^0.31.10",
         "pg": "^8.16.3",
+      },
+    },
+    "packages/ingest": {
+      "name": "@kyomi/ingest",
+      "dependencies": {
+        "@kyomi/db": "workspace:*",
+        "@kyomi/reader": "workspace:*",
+        "@tanstack/markdown": "0.0.12",
+        "@vscode/vscode-languagedetection": "^1.0.23",
+        "drizzle-orm": "^0.45.2",
+        "fast-xml-parser": "^5.5.10",
+        "ioredis": "^5.6.0",
+        "katex": "^0.16.45",
+        "linkedom": "^0.18.12",
+        "mathjax-full": "3.2.2",
+        "pg": "^8.16.3",
+        "sharp": "^0.35.5",
+        "shiki": "4.5.0",
+        "thumbhash": "^0.1.1",
       },
     },
     "packages/reader": {
@@ -252,32 +271,13 @@
         "react-dom": "^19.2.0",
       },
     },
-    "packages/worker": {
-      "name": "@kyomi/worker",
-      "dependencies": {
-        "@kyomi/db": "workspace:*",
-        "@kyomi/reader": "workspace:*",
-        "@tanstack/markdown": "0.0.12",
-        "@vscode/vscode-languagedetection": "^1.0.23",
-        "drizzle-orm": "^0.45.2",
-        "fast-xml-parser": "^5.5.10",
-        "ioredis": "^5.6.0",
-        "katex": "^0.16.45",
-        "linkedom": "^0.18.12",
-        "mathjax-full": "3.2.2",
-        "pg": "^8.16.3",
-        "sharp": "^0.35.5",
-        "shiki": "4.5.0",
-        "thumbhash": "^0.1.1",
-      },
-    },
     "tests": {
       "name": "@kyomi/tests",
       "devDependencies": {
         "@kyomi/db": "workspace:*",
+        "@kyomi/ingest": "workspace:*",
         "@kyomi/reader": "workspace:*",
         "@kyomi/ui": "workspace:*",
-        "@kyomi/worker": "workspace:*",
         "@tanstack/react-query": "^5.62.8",
         "@tanstack/react-router": "^1.92.10",
         "@testing-library/dom": "^10.4.1",
@@ -774,13 +774,15 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
+    "@kyomi/ai-gateway": ["@kyomi/ai-gateway@workspace:apps/ai-gateway"],
+
     "@kyomi/api": ["@kyomi/api@workspace:apps/api"],
 
     "@kyomi/catalog": ["@kyomi/catalog@workspace:packages/catalog"],
 
     "@kyomi/db": ["@kyomi/db@workspace:packages/db"],
 
-    "@kyomi/embeddings": ["@kyomi/embeddings@workspace:apps/embeddings"],
+    "@kyomi/ingest": ["@kyomi/ingest@workspace:packages/ingest"],
 
     "@kyomi/mobile": ["@kyomi/mobile@workspace:apps/mobile"],
 
@@ -793,8 +795,6 @@
     "@kyomi/ui": ["@kyomi/ui@workspace:packages/ui"],
 
     "@kyomi/web": ["@kyomi/web@workspace:apps/web"],
-
-    "@kyomi/worker": ["@kyomi/worker@workspace:packages/worker"],
 
     "@legendapp/list": ["@legendapp/list@3.3.8", "", { "dependencies": { "use-sync-external-store": "^1.5.0" }, "peerDependencies": { "react": "*" } }, "sha512-GM4Hca/6WDvcY33XXCieR9MaG9CoZmACzwqQwRhKFSaNKfQV1lTLiTOpWuA9wnE8n8+6WeA52DwNKC9yrnPPeg=="],
 

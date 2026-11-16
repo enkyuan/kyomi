@@ -1,6 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { articleExtractionCache } from "@kyomi/db";
-import { toStoredDocumentColumns, type StoredDocument } from "@kyomi/worker/lib/stored-document";
+import { toStoredDocumentColumns, type StoredDocument } from "@kyomi/ingest/lib/stored-document";
 import { eq } from "drizzle-orm";
 
 type DB = typeof db;

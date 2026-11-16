@@ -174,7 +174,7 @@ export const env = createEnv({
     /** Shared secret accepted in `x-feed-admin-secret` as a backup admin control plane. */
     FEED_ADMIN_SHARED_SECRET: z.string().min(1).optional(),
     /**
-     * Kyomi's Cloudflare embeddings Worker (`apps/embeddings`): its `/embed` URL and bearer token,
+     * Kyomi's Cloudflare embeddings Worker (`apps/ai-gateway`): its `/embed` URL and bearer token,
      * for the embedding-based article classifier. Leave both unset to run feed refresh with only
      * the deterministic keyword classifier; no FEATURE_* flag gates this, matching the MEILI_*
      * pattern of "absent means fall back," not "absent means error."

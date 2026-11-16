@@ -1,6 +1,6 @@
 import { and, eq } from "drizzle-orm";
 import { feedSubscriptions, feeds } from "@kyomi/db";
-import { faviconSourceRank } from "@kyomi/worker/favicon";
+import { faviconSourceRank } from "@kyomi/ingest/favicon";
 import type { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";

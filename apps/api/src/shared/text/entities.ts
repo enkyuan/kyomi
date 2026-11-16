@@ -1,4 +1,4 @@
-import { decodeHtmlEntities } from "@kyomi/worker";
+import { decodeHtmlEntities } from "@kyomi/ingest";
 
 export function decodeText(value: string): string {
   return decodeHtmlEntities(value).trim();

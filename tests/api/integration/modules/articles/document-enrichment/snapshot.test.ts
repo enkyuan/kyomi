@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
-import { parseSnapshot, snapshotRequest } from "@kyomi/worker/enrichment";
+import { parseSnapshot, snapshotRequest } from "@kyomi/ingest/enrichment";
 
 const fixture = (name: string) =>
   readFileSync(

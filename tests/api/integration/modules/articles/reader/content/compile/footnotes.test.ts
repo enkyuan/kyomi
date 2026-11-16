@@ -76,7 +76,7 @@ describe("footnotes (pass 12)", () => {
   });
 
   test("resolves Markdown footnotes", async () => {
-    const { compileArticleDocument } = await import("@kyomi/worker/document");
+    const { compileArticleDocument } = await import("@kyomi/ingest/document");
     const result = await compileArticleDocument({
       body: "Claim[^a].\n\n[^a]: The note.",
       format: "markdown",

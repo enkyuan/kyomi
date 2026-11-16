@@ -4,7 +4,7 @@ import {
   classifyItemEmbeddings,
   embedTexts,
   type EmbeddingClassifierConfig,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 import { FAKE_CATEGORY_MODEL } from "./fake-category-model";
 
 const originalFetch = globalThis.fetch;

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { compileArticleDocument } from "@kyomi/worker/document";
+import { compileArticleDocument } from "@kyomi/ingest/document";
 import { readerDocumentSchema } from "@kyomi/reader/document";
 import { isSafeMathSvg, MAX_MATH_SVG_LENGTH } from "@kyomi/reader/document/math-svg";
 

@@ -14,7 +14,7 @@ export const CATEGORY_CLASSIFIER_PROVENANCE = "classifier";
 export const KEYWORD_CLASSIFIER_METHOD = "keyword";
 export const KEYWORD_CLASSIFIER_MODEL_ID = "keyword-v1";
 export const EMBEDDING_CLASSIFIER_METHOD = "embedding";
-// Workers AI BGE-M3, served through Kyomi's embeddings Worker (apps/embeddings).
+// Workers AI BGE-M3, served through Kyomi's embeddings Worker (apps/ai-gateway).
 export const EMBEDDING_CLASSIFIER_MODEL_ID = "@cf/baai/bge-m3";
 export const CLASSIFIER_TAXONOMY_VERSION = "v1";
 export { MISCELLANEOUS_CATEGORY_LABEL };

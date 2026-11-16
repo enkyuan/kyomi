@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { classifyItemCategories } from "@kyomi/worker";
+import { classifyItemCategories } from "@kyomi/ingest";
 import {
   accumulateConfusion,
   f1,

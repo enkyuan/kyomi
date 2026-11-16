@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { createHostRateLimiter, createMemoryHostRateLimitStore } from "@kyomi/worker/ingestion";
+import { createHostRateLimiter, createMemoryHostRateLimitStore } from "@kyomi/ingest/ingestion";
 
 describe("host rate limiter", () => {
   test("serializes same-host work across limiter instances sharing one store", async () => {

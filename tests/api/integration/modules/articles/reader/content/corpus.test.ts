@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { readdir } from "node:fs/promises";
 import { sanitizeArticleHtml } from "@modules/articles/reader/content";
-import { compileArticleHtml } from "@kyomi/worker/document";
+import { compileArticleHtml } from "@kyomi/ingest/document";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import {
   baselineUrl,

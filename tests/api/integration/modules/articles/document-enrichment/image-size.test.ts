@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { crc32, deflateSync } from "node:zlib";
-import { computeThumbhash, readImageDimensions } from "@kyomi/worker/enrichment";
+import { computeThumbhash, readImageDimensions } from "@kyomi/ingest/enrichment";
 
 function bytes(...parts: (number[] | string)[]): Uint8Array {
   return Uint8Array.from(

@@ -24,7 +24,7 @@ import {
   plainReason,
   type StoredCodeBlock,
 } from "./audit";
-import { lookupLanguage } from "../../../packages/worker/src/document/code-language";
+import { lookupLanguage } from "../../../packages/ingest/src/document/code-language";
 
 const [file, ...flags] = process.argv.slice(2);
 if (!file) {

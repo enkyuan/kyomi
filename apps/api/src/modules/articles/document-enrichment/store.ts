@@ -1,4 +1,4 @@
-import type { DocumentTarget } from "@kyomi/worker";
+import type { DocumentTarget } from "@kyomi/ingest";
 
 export type StoredDocumentState = {
   document: object;

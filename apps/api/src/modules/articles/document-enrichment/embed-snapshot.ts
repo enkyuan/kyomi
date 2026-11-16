@@ -6,10 +6,10 @@ import {
   parseSnapshot,
   snapshotRequest,
   type EmbedSnapshot,
-} from "@kyomi/worker/enrichment";
+} from "@kyomi/ingest/enrichment";
 import { fetchBounded } from "./fetch";
 import { createKeyedGate, mapWithConcurrency, retryFetch, type RetryOptions } from "./limits";
-import type { DocumentTarget } from "@kyomi/worker";
+import type { DocumentTarget } from "@kyomi/ingest";
 import type { DocumentPatchStore } from "./store";
 
 const SNAPSHOT_MAX_BYTES = 1024 * 1024;

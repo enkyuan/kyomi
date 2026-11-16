@@ -1,12 +1,12 @@
 import type { db } from "@adapters/db/client";
 import type { ReaderDocument } from "@kyomi/reader/document";
 import { loadStoredDocument, patchStoredDocument, type DocumentPatchExpectation } from "./patch";
-import type { DocumentTarget } from "@kyomi/worker";
+import type { DocumentTarget } from "@kyomi/ingest";
 
 /**
  * Binds `db` to the storage functions in the shape of enrichment's `DocumentPatchStore` port
  * (`document-enrichment/store.ts`), which this satisfies structurally. `DocumentTarget` is
- * structurally identical to enrichment's `DocumentTarget` from `@kyomi/worker`.
+ * structurally identical to enrichment's `DocumentTarget` from `@kyomi/ingest`.
  */
 export function createDocumentPatchStore(database: typeof db) {
   return {

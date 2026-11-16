@@ -43,4 +43,4 @@ operator scripts live in `src/app/boot` because they write through api adapters.
 
 - env is loaded with `dotenvx` from `docker/.env` and `apps/api/.env`.
 - database schema lives in `packages/db`; migrations run through the root `db:*` scripts.
-- shared ingestion, queue contracts, and sanitization live in `@kyomi/worker`. this app owns the executable processes that drive them.
+- shared ingestion, queue contracts, and sanitization live in `@kyomi/ingest`. this app owns the executable processes that drive them.

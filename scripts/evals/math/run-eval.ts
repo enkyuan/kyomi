@@ -11,7 +11,7 @@
 // Precision over recall: a wrong formula is worse than TeX source, so the report separates
 // "rendered" (KaTeX ok), "svg" (native inline ok) and "tex-only" (honest fallback).
 import { readFileSync, writeFileSync } from "node:fs";
-import { compileArticleDocument } from "@kyomi/worker/document";
+import { compileArticleDocument } from "@kyomi/ingest/document";
 import { PARITY_FORMULAS } from "./formulas";
 
 type Row = { id: string; body: string; format?: "html" | "markdown" | "text" };

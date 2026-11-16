@@ -1,6 +1,6 @@
-# Worker package
+# Ingest package
 
-Use `packages/worker` for reusable queue, feed-ingestion, favicon, and article-compiler contracts.
+Use `packages/ingest` for reusable queue, feed-ingestion, favicon, and article-compiler contracts.
 
 ## Structure
 
@@ -29,9 +29,9 @@ src/
 - Changing the policy or a pass's output bumps `ARTICLE_HTML_SANITIZER_VERSION` and needs a
   recorded corpus baseline (`tests/api/fixtures/articles/corpus/README.md`).
 - Import the article policy from `@kyomi/reader/sanitization` and the KDM schema from
-  `@kyomi/reader/document`; `packages/reader` must never import `@kyomi/worker`.
+  `@kyomi/reader/document`; `packages/reader` must never import `@kyomi/ingest`.
 - Never import `apps/api` internals from this package.
-- Export only stable contracts through declared `@kyomi/worker` subpaths.
+- Export only stable contracts through declared `@kyomi/ingest` subpaths.
 - Preserve job compatibility deliberately during producer/consumer rollouts. Define retirement
   conditions for legacy fields or job types.
 
@@ -41,4 +41,4 @@ src/
   `tests/api/integration/modules/queue`.
 - Test feed and favicon behavior under the owning API integration domain.
 - Test browser-safe exported behavior through the web suite when the web app consumes it.
-- Run `bun run --cwd packages/worker typecheck`, `lint`, and `fmt:check`, plus focused API tests.
+- Run `bun run --cwd packages/ingest typecheck`, `lint`, and `fmt:check`, plus focused API tests.

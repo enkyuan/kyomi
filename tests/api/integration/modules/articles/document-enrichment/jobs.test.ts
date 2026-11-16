@@ -5,13 +5,13 @@ import { enqueueDocumentEnrichment } from "@modules/articles/document-enrichment
 import { fetchBounded } from "@modules/articles/document-enrichment/fetch";
 import { runEmbedSnapshotJob } from "@modules/articles/document-enrichment/embed-snapshot";
 import { runImageMeasureJob } from "@modules/articles/document-enrichment/image-measure";
-import type { DocumentTarget } from "@kyomi/worker";
+import type { DocumentTarget } from "@kyomi/ingest";
 import type { DocumentPatchStore } from "@modules/articles/document-enrichment/store";
 import {
   applyImageMeasurements,
   collectEmbedsToSnapshot,
   collectImagesToMeasure,
-} from "@kyomi/worker/enrichment";
+} from "@kyomi/ingest/enrichment";
 
 const be32 = (n: number) => [(n >>> 24) & 255, (n >>> 16) & 255, (n >>> 8) & 255, n & 255];
 

@@ -1,7 +1,7 @@
 # Reader Document Compiler
 
 Status: accepted 2026-10-20. Phase 0 shipped passes 2–6, 8, and 9 in
-`packages/worker/src/document/` (`@kyomi/worker/document`), wired into feed refresh, extraction, and
+`packages/ingest/src/document/` (`@kyomi/ingest/document`), wired into feed refresh, extraction, and
 clip writes (plan: `docs/superpowers/plans/2026-10-20-reader-sanitizer-v2.md`). Phase 1 compiler
 (2026-10-24) adds pass 7 and the Stage C passes 10–18 behind `compileArticleDocument`, which returns
 the sanitized HTML and a validated KDM document; storing, serving, and rendering the document are
@@ -29,7 +29,7 @@ The compiler replaces work that is currently split across three places and runs 
 | Concern                                                      | Owner                                                                                  |
 | ------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
 | KDM schema and types (runtime-neutral contract)              | `packages/reader/src/core/document/`                                                   |
-| Compiler and passes (Node-only: linkedom, Shiki, KaTeX)      | `packages/worker/src/document/`, exported as `@kyomi/worker/document`                  |
+| Compiler and passes (Node-only: linkedom, Shiki, KaTeX)      | `packages/ingest/src/document/`, exported as `@kyomi/ingest/document`                  |
 | Calling the compiler on refresh, extraction, clips, backfill | `apps/api` ingestion and `articles/reader/extraction`                                  |
 | `content_document`, `document_version`, retained raw source  | `packages/db/src/schema/articles.ts`                                                   |
 | Renderers                                                    | `packages/reader/src/web` (React blocks on `@kyomi/ui`), `packages/reader/src/webview` |
@@ -42,7 +42,7 @@ directly; `html` and `inlineHtml` nodes go through the HTML passes.
 
 Passes run in order. Each pass is a pure function over one tree with its own fixture tests.
 Phase 0 runs pass 4 (`unlazy-media`) before pass 3 (`resolve-urls`) so promoted lazy URLs are
-resolved too; see `ARTICLE_COMPILE_PASSES` in `packages/worker/src/document/compile.ts`.
+resolved too; see `ARTICLE_COMPILE_PASSES` in `packages/ingest/src/document/compile.ts`.
 
 Status: passes 2–9 (stage B) and 10–18 (stage C) are shipped. Beyond the table, pass 3 also
 rewrites ids to `kyomi-` anchors and fixes in-page links, pass 6 also records task-list state

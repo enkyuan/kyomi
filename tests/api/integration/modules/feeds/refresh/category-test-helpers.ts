@@ -4,7 +4,7 @@ import {
   KEYWORD_CLASSIFIER_METHOD,
   KEYWORD_CLASSIFIER_MODEL_ID,
   type ClassifierModelInfo,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 
 export const KEYWORD_MODEL: ClassifierModelInfo = {
   modelId: KEYWORD_CLASSIFIER_MODEL_ID,

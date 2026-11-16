@@ -89,7 +89,7 @@ describe("embeds (pass 15)", () => {
       throw new Error("expected an embed");
     }
     embed.url = "https://example.com/not-youtube";
-    const { ARTICLE_DOCUMENT_PASSES } = await import("@kyomi/worker/document");
+    const { ARTICLE_DOCUMENT_PASSES } = await import("@kyomi/ingest/document");
     await ARTICLE_DOCUMENT_PASSES.find((pass) => pass.name === "embeds")!.run(draft);
     expect(draft.blocks[0]).toEqual({ type: "linkCard", url: "https://example.com/not-youtube" });
   });

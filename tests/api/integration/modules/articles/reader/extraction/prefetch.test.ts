@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { getTableName } from "drizzle-orm";
 import { feedItems } from "@kyomi/db";
 import { prefetchArticleExtractionsForFeedItems } from "@modules/articles/reader/extraction/prefetch";
-import type { ArticleExtractionJob } from "@kyomi/worker";
+import type { ArticleExtractionJob } from "@kyomi/ingest";
 
 type FakeFeedItemRow = {
   id: string;

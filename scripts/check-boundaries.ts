@@ -5,7 +5,7 @@ export const SOURCE_ROOTS = [
   "apps/api/src",
   "apps/mobile/src",
   "apps/web/src",
-  "packages/worker/src",
+  "packages/ingest/src",
   "packages/ui/src",
   "packages/db/src",
   "packages/reader/src",
@@ -101,7 +101,7 @@ function checkMobileLayering(file: string, specifier: string): string | null {
 function checkFile(root: string, file: string): Violation[] {
   const violations: Violation[] = [];
   const isPackageFile = file.startsWith("packages/");
-  const isWorkerFile = file.startsWith("packages/worker/");
+  const isWorkerFile = file.startsWith("packages/ingest/");
   const isRouteFile = file.startsWith("apps/api/src/modules/") && file.endsWith(".routes.ts");
   const isMobileFile = file.startsWith(`${MOBILE_SRC}/`);
 
@@ -129,7 +129,7 @@ function checkFile(root: string, file: string): Violation[] {
         specifier.startsWith("@shared/") ||
         specifier.startsWith("@kyomi/api"))
     ) {
-      violations.push({ file, specifier, reason: "worker must not import API/http modules" });
+      violations.push({ file, specifier, reason: "ingest must not import API/http modules" });
     }
     if (isRouteFile && specifier.includes("/src/") && specifier.startsWith("@kyomi/")) {
       violations.push({

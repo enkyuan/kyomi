@@ -4,7 +4,7 @@ import {
   resolvePersistedFaviconHost,
   type FaviconHostStore,
   type FaviconResolutionSource,
-} from "@kyomi/worker/favicon";
+} from "@kyomi/ingest/favicon";
 import { handleFaviconRequestWithStore } from "@modules/favicon/handler";
 
 type CachedFaviconHost = NonNullable<Awaited<ReturnType<FaviconHostStore["read"]>>>;

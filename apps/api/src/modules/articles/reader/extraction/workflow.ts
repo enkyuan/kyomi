@@ -24,7 +24,7 @@ import {
   type ClassifierModelInfo,
   type EmbeddingClassifierConfig,
   type HostRateLimiter,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 import {
   normalizeExtractionUrlKey,
   readFreshExtractionCache,
@@ -36,7 +36,7 @@ import {
   compileStoredDocument,
   currentCompilerVersion,
   type StoredDocument,
-} from "@kyomi/worker/lib/stored-document";
+} from "@kyomi/ingest/lib/stored-document";
 import { persistExtracted, persistPendingExtracted } from "./persistence";
 import { compileExtractedHtml, extractArticleContentFromUrl } from "./readability";
 

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { scoreWithCategoryModel } from "@kyomi/worker";
+import { scoreWithCategoryModel } from "@kyomi/ingest";
 import {
   crossValidateCategoryModel,
   trainCategoryModel,

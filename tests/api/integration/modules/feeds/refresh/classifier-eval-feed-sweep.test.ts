@@ -7,7 +7,7 @@ import {
   selectCategories,
   DEFAULT_FEED_SELECTION_RULE,
   type CategoryScore,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 import { cachedEmbeddingsFetch, embeddingsCacheFile } from "./embedding-cache";
 import { round3 } from "./classifier-eval-scoring";
 import {

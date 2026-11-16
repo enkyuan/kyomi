@@ -14,7 +14,7 @@ packages/
   db/       Drizzle schema and migrations.
   reader/   article rendering.
   ui/       React UI primitives.
-  worker/   queue, ingestion, favicon, sanitization.
+  ingest/   queue, ingestion, favicon, sanitization.
 tests/       api and web integration suites.
 docker/      local Postgres, Redis, search, and storage.
 ```
@@ -54,6 +54,6 @@ run from the repository root unless noted.
 ## notes
 
 - shared UI primitives live in `packages/ui`; app-specific UI stays in the owning app.
-- shared ingestion and queue code lives in `packages/worker`; the executable api and worker processes live in `apps/api`.
+- shared ingestion and queue code lives in `packages/ingest`; the executable api and worker processes live in `apps/api`.
 - database schema lives in `packages/db`.
 - generated files (route trees, migrations) change through their owning scripts, not by hand.

@@ -21,14 +21,14 @@ import {
   createDraft,
   createLowerContext,
   lowerHtml,
-} from "@kyomi/worker/document";
+} from "@kyomi/ingest/document";
 import {
   classifyCode,
   collectCodeEntries,
   priorFrom,
-} from "../../../packages/worker/src/document/code-classify";
-import { resolveLanguage } from "../../../packages/worker/src/document/code-language";
-import { ARTICLE_DOCUMENT_PASSES } from "@kyomi/worker/document";
+} from "../../../packages/ingest/src/document/code-classify";
+import { resolveLanguage } from "../../../packages/ingest/src/document/code-language";
+import { ARTICLE_DOCUMENT_PASSES } from "@kyomi/ingest/document";
 
 type Row = { id: string; f?: string; body?: string; b?: string };
 

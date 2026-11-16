@@ -5,7 +5,7 @@ import {
   runDocumentBackfillScope,
   type DocumentBackfillScope,
 } from "@modules/articles/document/backfill";
-import { currentCompilerVersion } from "@kyomi/worker/lib/stored-document";
+import { currentCompilerVersion } from "@kyomi/ingest/lib/stored-document";
 
 function flagValue(argv: string[], flag: string): string | null {
   const index = argv.indexOf(flag);

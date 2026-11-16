@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, test } from "bun:test";
-import { runFeedRefresh } from "@kyomi/worker";
+import { runFeedRefresh } from "@kyomi/ingest";
 import {
   createFeedRefreshDb,
   labelsForAssignments,

@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import type { CategorySelectionRule, EmbeddingClassifierConfig } from "@kyomi/worker";
+import type { CategorySelectionRule, EmbeddingClassifierConfig } from "@kyomi/ingest";
 import { embeddingsUpstreamFromEnv } from "./embedding-cache";
 
 /** Shared setup for the opt-in (`CLASSIFIER_SWEEP=1`) article and feed rule sweeps. */

@@ -1,6 +1,6 @@
 ---
 name: packages
-description: Build, refactor, review, or debug Kyomi shared packages. Use for Drizzle schema and migrations in packages/db; shared article contracts and web, WebView, or native rendering in packages/reader; reusable UI primitives, icons, motion, and styles in packages/ui; queue, feed ingestion, favicon, and sanitization contracts in packages/worker; the optional Python catalog pipeline in packages/catalog; or compiler presets in packages/tsconfig. Use for package exports, cross-workspace reuse, runtime compatibility, dependency direction, package-specific tests, and deciding whether code should remain app-local. Pair with the owning app skill when a package contract changes a consumer.
+description: Build, refactor, review, or debug Kyomi shared packages. Use for Drizzle schema and migrations in packages/db; shared article contracts and web, WebView, or native rendering in packages/reader; reusable UI primitives, icons, motion, and styles in packages/ui; queue, feed ingestion, favicon, and sanitization contracts in packages/ingest; the optional Python catalog pipeline in packages/catalog; or compiler presets in packages/tsconfig. Use for package exports, cross-workspace reuse, runtime compatibility, dependency direction, package-specific tests, and deciding whether code should remain app-local. Pair with the owning app skill when a package contract changes a consumer.
 ---
 
 # Packages
@@ -16,7 +16,7 @@ Read only the reference for the package being changed:
 | `packages/db`       | Drizzle schema and migrations          | [database.md](references/database.md)     |
 | `packages/reader`   | Shared article contracts and renderers | [reader.md](references/reader.md)         |
 | `packages/ui`       | Shared presentation system             | [ui.md](references/ui.md)                 |
-| `packages/worker`   | Queue and ingestion contracts          | [worker.md](references/worker.md)         |
+| `packages/ingest`   | Queue and ingestion contracts          | [ingest.md](references/ingest.md)         |
 | `packages/catalog`  | Optional offline Python enrichment     | [catalog.md](references/catalog.md)       |
 | `packages/tsconfig` | Shared compiler presets                | [typescript.md](references/typescript.md) |
 

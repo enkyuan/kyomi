@@ -132,7 +132,7 @@ export async function loadCases(): Promise<EvalCase[]> {
 
 /**
  * Calls Workers AI through the `POST /chat` route on the Kyomi embeddings Worker
- * (apps/embeddings), reusing CLOUDFLARE_EMBEDDINGS_URL's host and token.
+ * (apps/ai-gateway), reusing CLOUDFLARE_EMBEDDINGS_URL's host and token.
  */
 export const workerChat: ChatCall = async (body) => {
   const embedUrl = process.env.CLOUDFLARE_EMBEDDINGS_URL;

@@ -12,7 +12,7 @@ Kyomi's PR and `main` CI runs on CircleCI (`.circleci/`). GitHub Actions keeps o
 
 ## What runs for a change
 
-The setup job maps changed paths to areas. Docs, Markdown, `.agents/`, `.pi/`, `scratch/` and `.github/` changes reach no build or test.
+The setup job maps changed paths to areas. Docs, Markdown, `.agents/`, `.pi/` and `.github/` changes reach no build or test.
 
 | Area | Paths | Jobs |
 | --- | --- | --- |
@@ -74,7 +74,7 @@ No secrets are required for PR CI. The helper script `scripts/ci/prepare-env.ts`
 
 ## Package publishing
 
-`@kyomi/ui`, `@kyomi/reader` and the other workspace packages are `private` and are consumed only through `workspace:*` links, so nothing is published to a registry. GitHub Packages scopes npm packages to the repository owner's account (`@enkyuan`), so publishing them would need either a scope rename or publish-time renaming, plus a published `@kyomi/worker` for `@kyomi/reader`.
+`@kyomi/ui`, `@kyomi/reader` and the other workspace packages are `private` and are consumed only through `workspace:*` links, so nothing is published to a registry. GitHub Packages scopes npm packages to the repository owner's account (`@enkyuan`), so publishing them would need either a scope rename or publish-time renaming, plus a published `@kyomi/ingest` for `@kyomi/reader`.
 
 ## Debugging Failures
 

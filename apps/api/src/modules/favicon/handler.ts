@@ -5,7 +5,7 @@ import {
   tryFetchImageIfHostSafe,
   type FaviconDatabase,
   type FaviconHostStore,
-} from "@kyomi/worker/favicon";
+} from "@kyomi/ingest/favicon";
 
 const FAVICON_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7;
 const FAVICON_CACHE_STALE_SECONDS = 60 * 60 * 24 * 30;

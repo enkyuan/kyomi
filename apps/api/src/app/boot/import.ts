@@ -1,6 +1,6 @@
 import { sql } from "drizzle-orm";
 import { categories, feedCategoryAssignments, feeds, mapCategoryLabelToCanonical } from "@kyomi/db";
-import { canonicalWinsOnConflictSql } from "@kyomi/worker";
+import { canonicalWinsOnConflictSql } from "@kyomi/ingest";
 import { db, pool } from "@adapters/db/client";
 import { assertApiDatabaseReady } from "@adapters/db/preflight";
 import { type FeedSearchDocument, upsertFeedSearchDocuments } from "@adapters/search/meili";

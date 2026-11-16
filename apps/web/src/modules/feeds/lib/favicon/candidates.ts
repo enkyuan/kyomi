@@ -1,4 +1,4 @@
-export { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
+export { buildFaviconUrlCandidates } from "@kyomi/ingest/favicon/browser";
 
 export function firstUsableFaviconIndex(urls: string[], rejectedUrls: ReadonlySet<string>): number {
   const index = urls.findIndex((url) => !rejectedUrls.has(url));
