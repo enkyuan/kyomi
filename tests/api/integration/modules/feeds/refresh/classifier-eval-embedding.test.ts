@@ -5,7 +5,7 @@ import {
   MAX_CLASSIFIER_LABELS,
   scoreItemEmbeddings,
   type EmbeddingClassifierConfig,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 import { embeddingClassifierConfig } from "@config/embeddings";
 import {
   cachedEmbeddingsFetch,

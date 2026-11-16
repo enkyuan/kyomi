@@ -1,5 +1,5 @@
 {
-  "name": "@kyomi/worker",
+  "name": "@kyomi/ingest",
   "private": true,
   "type": "module",
   "exports": {

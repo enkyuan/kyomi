@@ -5,8 +5,8 @@ import {
   SNAPSHOT_PROVIDERS,
   collectEmbedsToSnapshot,
   collectImagesToMeasure,
-} from "@kyomi/worker/enrichment";
-import type { DocumentTarget } from "@kyomi/worker";
+} from "@kyomi/ingest/enrichment";
+import type { DocumentTarget } from "@kyomi/ingest";
 import type Redis from "ioredis";
 
 /**

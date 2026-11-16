@@ -1,8 +1,8 @@
 import type { db } from "@adapters/db/client";
 import { articleClips, articleExtractionCache, feedItems } from "@kyomi/db";
-import { compileStoredDocument, type StoredDocumentInput } from "@kyomi/worker/lib/stored-document";
+import { compileStoredDocument, type StoredDocumentInput } from "@kyomi/ingest/lib/stored-document";
 import { and, asc, eq, gt, isNotNull, isNull, ne, or, sql, type SQL } from "drizzle-orm";
-import type { DocumentTarget } from "@kyomi/worker";
+import type { DocumentTarget } from "@kyomi/ingest";
 import { enqueueEnrichmentForStoredDocument } from "./enrich";
 import type { PgColumn, PgTable } from "drizzle-orm/pg-core";
 

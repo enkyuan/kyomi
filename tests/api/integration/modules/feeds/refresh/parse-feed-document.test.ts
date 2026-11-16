@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { parseFeedDocument } from "@kyomi/worker";
+import { parseFeedDocument } from "@kyomi/ingest";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 
 function repeatEntity(entity: string, count: number): string {

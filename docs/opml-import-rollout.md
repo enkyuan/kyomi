@@ -78,7 +78,7 @@ If any condition is false, **do not delete legacy code**. Keep the compatibility
 Only after every drain-gate condition above holds:
 
 1. Delete `apps/api/src/modules/opml/task-store.ts`.
-2. Remove the legacy `opml.import` and `opml.import.feed` job types, parsers, and handlers from `packages/worker/src/services/queue/job.ts` and `apps/api/src/app/jobs/run-worker.ts`.
+2. Remove the legacy `opml.import` and `opml.import.feed` job types, parsers, and handlers from `packages/ingest/src/services/queue/job.ts` and `apps/api/src/app/jobs/run-worker.ts`.
 3. Remove their tests.
 4. Keep `opml.import.prepare` and `opml.import.item` — those are the durable path, not legacy.
 5. Run the complete functional gate again (the same command block as "Before you deploy" above).
@@ -86,7 +86,7 @@ Only after every drain-gate condition above holds:
 Confirm the removal is complete:
 
 ```bash
-rg 'initializeOpmlTask|getOpmlTaskOwner|OPML_TASK_TTL_SEC|type: "opml\.import"|type: "opml\.import\.feed"' apps/api/src packages/worker/src
+rg 'initializeOpmlTask|getOpmlTaskOwner|OPML_TASK_TTL_SEC|type: "opml\.import"|type: "opml\.import\.feed"' apps/api/src packages/ingest/src
 ```
 
 Expected: no production matches (test fixtures and this doc aside). The new prepare/item tests must still pass.

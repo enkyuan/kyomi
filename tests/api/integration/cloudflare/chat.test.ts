@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, spyOn, test } from "bun:test";
-import worker from "../../../../apps/embeddings/src/index";
+import worker from "../../../../apps/ai-gateway/src/index";
 
 const TOKEN = "test-embeddings-token";
 const CHAT_URL = "https://embeddings.test/chat";

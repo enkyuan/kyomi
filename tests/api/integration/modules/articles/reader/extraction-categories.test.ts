@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { getTableName } from "drizzle-orm";
-import { embeddingModelInfo, type EmbeddingClassifierConfig } from "@kyomi/worker";
+import { embeddingModelInfo, type EmbeddingClassifierConfig } from "@kyomi/ingest";
 import { reclassifyExtractedFeedItem } from "@modules/articles/reader/extraction/workflow";
 import type { ArticleDetailDto } from "@modules/articles/types";
 import { FAKE_CATEGORY_MODEL } from "../../feeds/refresh/fake-category-model";

@@ -6,10 +6,10 @@ import {
   computeThumbhash,
   readImageDimensions,
   type ImageMeasurement,
-} from "@kyomi/worker/enrichment";
+} from "@kyomi/ingest/enrichment";
 import { fetchBounded } from "./fetch";
 import { createKeyedGate, mapWithConcurrency, retryFetch, type RetryOptions } from "./limits";
-import type { DocumentTarget } from "@kyomi/worker";
+import type { DocumentTarget } from "@kyomi/ingest";
 import type { DocumentPatchStore } from "./store";
 
 const IMAGE_MAX_BYTES = 8 * 1024 * 1024;

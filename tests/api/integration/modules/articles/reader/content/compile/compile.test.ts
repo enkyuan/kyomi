@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { ARTICLE_COMPILE_PASSES, compileArticleHtml } from "@kyomi/worker/document";
+import { ARTICLE_COMPILE_PASSES, compileArticleHtml } from "@kyomi/ingest/document";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import { canonicalHtml } from "./run-pass";
 

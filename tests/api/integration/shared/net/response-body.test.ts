@@ -3,7 +3,7 @@ import {
   cancelResponseBody,
   readResponseBodyWithByteLimit,
   readResponseBytesWithByteLimit,
-} from "@kyomi/worker/lib/response-body";
+} from "@kyomi/ingest/lib/response-body";
 
 function streamResponse(chunks: Uint8Array[], headers?: Record<string, string>): Response {
   const stream = new ReadableStream<Uint8Array>({

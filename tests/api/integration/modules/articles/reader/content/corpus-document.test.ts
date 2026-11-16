@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { ARTICLE_COMPILER_VERSION, compileArticleDocument } from "@kyomi/worker/document";
+import { ARTICLE_COMPILER_VERSION, compileArticleDocument } from "@kyomi/ingest/document";
 import { readerDocumentSchema } from "@kyomi/reader/document";
 import { loadCorpusManifest, readFixtureHtml, UPDATE_CORPUS_ENV } from "./corpus";
 import {

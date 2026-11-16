@@ -3,7 +3,7 @@ import {
   resolvePersistedFeedFaviconUrl,
   tryFetchImageIfHostSafe,
   type FaviconDatabase,
-} from "@kyomi/worker/favicon";
+} from "@kyomi/ingest/favicon";
 import type { AppLogger } from "@adapters/logger";
 import type { ResolvedRemoteFeed } from "./remote";
 

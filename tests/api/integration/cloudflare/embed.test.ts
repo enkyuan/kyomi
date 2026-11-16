@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, spyOn, test } from "bun:test";
-import { EMBEDDING_CLASSIFIER_MODEL_ID, embedTexts } from "@kyomi/worker";
-import worker from "../../../../apps/embeddings/src/index";
+import { EMBEDDING_CLASSIFIER_MODEL_ID, embedTexts } from "@kyomi/ingest";
+import worker from "../../../../apps/ai-gateway/src/index";
 
 type WorkerEnv = Parameters<typeof worker.fetch>[1];
 

@@ -3,7 +3,7 @@ import { getRedis } from "@adapters/redis";
 import { publishJob } from "@adapters/queue/publish";
 import { feedItems } from "@kyomi/db";
 import { and, eq, inArray, isNull } from "drizzle-orm";
-import type { ArticleExtractionJob } from "@kyomi/worker";
+import type { ArticleExtractionJob } from "@kyomi/ingest";
 
 type DB = typeof db;
 type ExtractionPrefetchLogger = {

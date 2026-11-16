@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, test } from "bun:test";
-import { fetchFeedDocument } from "@kyomi/worker/ingestion";
+import { fetchFeedDocument } from "@kyomi/ingest/ingestion";
 
 describe("fetchFeedDocument allocation safety", () => {
   const originalFetch = globalThis.fetch;

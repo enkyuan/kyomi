@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { EMBEDDING_CLASSIFIER_MODEL_ID, embeddingModelInfo } from "@kyomi/worker";
+import { EMBEDDING_CLASSIFIER_MODEL_ID, embeddingModelInfo } from "@kyomi/ingest";
 import { activeEmbeddingModelId, embeddingClassifierConfig } from "@config/embeddings";
 
 // Rows name the model, the category head, and the selection rule they were written under:

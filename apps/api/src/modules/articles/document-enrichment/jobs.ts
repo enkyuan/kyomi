@@ -1,5 +1,5 @@
 import { logger } from "@adapters/logger";
-import type { DocumentEmbedSnapshotJob, DocumentImageMeasureJob } from "@kyomi/worker";
+import type { DocumentEmbedSnapshotJob, DocumentImageMeasureJob } from "@kyomi/ingest";
 import { runEmbedSnapshotJob } from "./embed-snapshot";
 import { runImageMeasureJob } from "./image-measure";
 import type { DocumentPatchStore } from "./store";

@@ -4,7 +4,7 @@ import {
   parseArticleFragment,
   type ArticleCompilePassName,
   type CompileDiagnostics,
-} from "@kyomi/worker/document";
+} from "@kyomi/ingest/document";
 
 /**
  * Re-serializes HTML through a browser-grade parser with attributes sorted by name, so

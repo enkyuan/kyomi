@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { PgDialect } from "drizzle-orm/pg-core";
-import { EMBEDDING_CLASSIFIER_MODEL_ID, type EmbeddingClassifierConfig } from "@kyomi/worker";
+import { EMBEDDING_CLASSIFIER_MODEL_ID, type EmbeddingClassifierConfig } from "@kyomi/ingest";
 import {
   backfillItemColumns,
   inferFeedCategories,

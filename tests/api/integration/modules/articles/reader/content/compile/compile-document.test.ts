@@ -4,7 +4,7 @@ import {
   ARTICLE_DOCUMENT_PASSES,
   compileArticleDocument,
   compileArticleHtml,
-} from "@kyomi/worker/document";
+} from "@kyomi/ingest/document";
 import { readerDocumentSchema } from "@kyomi/reader/document";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 

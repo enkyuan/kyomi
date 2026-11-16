@@ -5,7 +5,7 @@ import {
   MAX_HIGHLIGHT_LINES,
   MAX_HIGHLIGHT_LINE_CHARS,
   type CodeHighlight,
-} from "../../../packages/worker/src/document/highlighter";
+} from "../../../packages/ingest/src/document/highlighter";
 
 /** The slice of a stored KDM code block the audit reads. */
 export type StoredCodeBlock = {

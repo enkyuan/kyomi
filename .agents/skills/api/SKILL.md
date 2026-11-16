@@ -1,6 +1,6 @@
 ---
 name: api
-description: Build, refactor, review, or debug Kyomi backend code in apps/api. Use for Elysia HTTP composition, domain routes and operations, adapters for auth, database, logging, Redis, queues, search, CORS, rate limits, and OpenAPI, typed runtime configuration, worker and scheduler process boot, health behavior, outbound network policy, database-backed product behavior, queue publishing, catalog import, and API or backend tests. Use when deciding whether code belongs in an API domain, app composition, an adapter, shared server infrastructure, packages/db, or packages/worker. Not for frontend-only or final repository-wide verification work.
+description: Build, refactor, review, or debug Kyomi backend code in apps/api. Use for Elysia HTTP composition, domain routes and operations, adapters for auth, database, logging, Redis, queues, search, CORS, rate limits, and OpenAPI, typed runtime configuration, worker and scheduler process boot, health behavior, outbound network policy, database-backed product behavior, queue publishing, catalog import, and API or backend tests. Use when deciding whether code belongs in an API domain, app composition, an adapter, shared server infrastructure, packages/db, or packages/ingest. Not for frontend-only or final repository-wide verification work.
 ---
 
 # API
@@ -74,7 +74,7 @@ The full rule set, its cal.com analogue, and the differences from web naming liv
 - Keep Drizzle schema and migrations in `packages/db`; keep product queries, tenant scoping, and
   authorization in the owning API module.
 - Keep queue contracts, feed ingestion, favicon resolution, and shared sanitization in
-  `packages/worker`. Keep API, worker, and scheduler entrypoints in `apps/api/src/app/boot`.
+  `packages/ingest`. Keep API, worker, and scheduler entrypoints in `apps/api/src/app/boot`.
 - Import packages through `@kyomi/*` exports, never package source paths.
 - Validate request and response shapes at the HTTP boundary. Return stable status-specific public
   errors.

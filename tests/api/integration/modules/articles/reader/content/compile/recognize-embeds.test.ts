@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { recognizeEmbedUrl } from "@kyomi/worker/document";
+import { recognizeEmbedUrl } from "@kyomi/ingest/document";
 import { runPass } from "./run-pass";
 
 function embedOf(html: string): { provider: string | null; url: string | null } {

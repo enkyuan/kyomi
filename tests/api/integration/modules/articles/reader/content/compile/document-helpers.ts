@@ -6,7 +6,7 @@ import {
   lowerHtml,
   type ArticleDocumentPassName,
   type DocumentDraft,
-} from "@kyomi/worker/document";
+} from "@kyomi/ingest/document";
 
 export const BASE_URL = "https://example.com/posts/entry";
 

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { parseFeedDocument } from "@kyomi/worker";
+import { parseFeedDocument } from "@kyomi/ingest";
 
 // ponytail: capped at 500 (not the plan's 5,000 target) until large-data-read-models Task 5
 // (persistFeedItems) lands to bound SQL statement size for a 5K-item feed.

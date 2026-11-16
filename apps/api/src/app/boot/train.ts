@@ -35,7 +35,7 @@ try {
     );
   }
   console.log(
-    `Trained ${version} on ${examples} labeled articles; wrote packages/worker/src/services/feed/category-model-weights.ts`,
+    `Trained ${version} on ${examples} labeled articles; wrote packages/ingest/src/services/feed/category-model-weights.ts`,
   );
 } finally {
   await pool.end();

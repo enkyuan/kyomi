@@ -6,7 +6,7 @@ import {
   runFeedRefresh,
   syncInferredFeedCategories,
   syncItemInferences,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 import {
   createFeedRefreshDb,
   KEYWORD_MODEL,

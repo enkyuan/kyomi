@@ -2,9 +2,9 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { afterEach, describe, expect, test } from "bun:test";
 import { articleClips, articleExtractionCache, feedItems } from "@kyomi/db";
-import { parseFeedDocument } from "@kyomi/worker";
-import { setStoredDocumentCompiler } from "@kyomi/worker/lib/stored-document";
-import { attachItemDocuments } from "@kyomi/worker/ingestion";
+import { parseFeedDocument } from "@kyomi/ingest";
+import { setStoredDocumentCompiler } from "@kyomi/ingest/lib/stored-document";
+import { attachItemDocuments } from "@kyomi/ingest/ingestion";
 import { compileBodyDocumentColumns } from "@modules/articles/document/stored";
 import { fakeCompiler, TEST_COMPILER_VERSION } from "./helpers";
 

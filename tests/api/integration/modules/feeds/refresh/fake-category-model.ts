@@ -1,4 +1,4 @@
-import type { CategoryModel } from "@kyomi/worker";
+import type { CategoryModel } from "@kyomi/ingest";
 
 /**
  * A 3-dimensional stand-in for the trained article head, for tests whose fake embeddings are

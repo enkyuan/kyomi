@@ -1,6 +1,6 @@
 import { AppError } from "@shared/errors/app";
 import { logger } from "@adapters/logger";
-import { discoverFeedUrlFromHtml } from "@kyomi/worker/ingestion";
+import { discoverFeedUrlFromHtml } from "@kyomi/ingest/ingestion";
 import { fetchFeedDocument, type FetchFeedDocumentResult } from "../fetch";
 import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "../normalize";
 import { parseFeedMetadata, parseHtmlMetadataFallback } from "../parse";

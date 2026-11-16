@@ -57,7 +57,7 @@ export function selectClientFaviconOrigin(
  * Build a favicon URL for the browser:
  *  - Returns the stored favicon URL when one is passed in.
  *  - Otherwise builds the `/api/favicon?domain=<origin>` proxy URL, which
- *    uses @kyomi/worker/favicon server-side to safely resolve a high-quality
+ *    uses @kyomi/ingest/favicon server-side to safely resolve a high-quality
  *    site icon.
  *
  * Only http/https origins are forwarded to the proxy (matching the server's

@@ -12,7 +12,7 @@ import {
   NO_CATEGORY_CLASS,
   type CategoryModel,
   type EmbeddingClassifierConfig,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 import { eq, inArray, sql } from "drizzle-orm";
 import { db } from "@adapters/db/client";
 import {
@@ -50,7 +50,7 @@ export type TrainingLabel = {
 const TRAINING_LABELS_PATH = resolve(import.meta.dir, "training-labels.json");
 const WEIGHTS_MODULE_PATH = resolve(
   import.meta.dir,
-  "../../../../../../packages/worker/src/services/feed/category-model-weights.ts",
+  "../../../../../../packages/ingest/src/services/feed/category-model-weights.ts",
 );
 const EMBED_BATCH = 256;
 

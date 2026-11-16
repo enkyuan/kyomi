@@ -14,13 +14,12 @@ workflows:
           name: changes
           base-revision: main
           config-path: .circleci/continue.yml
-          # Docs, agent notes and scratch never reach a build or a test.
+          # Docs and agent notes never reach a build or a test.
           exclude: |
             docs/.*
             .*\.md
             \.agents/.*
             \.pi/.*
-            scratch/.*
             \.github/.*
           # One line per parameter: a parameter matched on two lines would be
           # sent twice in the continuation's parameters.

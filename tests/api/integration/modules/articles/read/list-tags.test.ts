@@ -168,7 +168,7 @@ describe("article list item categories", () => {
 
   test("category label SQL caps the DTO at two labels per item", () => {
     // Categories are normalized to canonical labels before this query ever runs (see
-    // packages/worker/src/services/feed/categories.ts), so this LIMIT is the only remaining
+    // packages/ingest/src/services/feed/categories.ts), so this LIMIT is the only remaining
     // enforcement point for "chips show at most two categories".
     const sql = renderSql(categoryLabelsSql);
     expect(sql).toMatch(/LIMIT 2\s*\)\s*AS fc/);

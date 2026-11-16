@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { compileArticleHtml } from "@kyomi/worker/document";
+import { compileArticleHtml } from "@kyomi/ingest/document";
 import { runPass } from "./run-pass";
 
 const IMG = (name: string) => `<img src="/${name}.jpg" alt="">`;

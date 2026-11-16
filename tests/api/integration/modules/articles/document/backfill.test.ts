@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, test } from "bun:test";
-import { setStoredDocumentCompiler } from "@kyomi/worker/lib/stored-document";
+import { setStoredDocumentCompiler } from "@kyomi/ingest/lib/stored-document";
 import { runDocumentBackfillScope } from "@modules/articles/document/backfill";
 import { fakeCompiler, TEST_COMPILER_VERSION } from "./helpers";
 

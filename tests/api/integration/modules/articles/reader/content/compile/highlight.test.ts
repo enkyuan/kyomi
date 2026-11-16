@@ -6,7 +6,7 @@ import {
   MAX_HIGHLIGHT_LINES,
   MAX_HIGHLIGHT_LINE_CHARS,
   type CodeHighlight,
-} from "../../../../../../../../packages/worker/src/document/highlighter";
+} from "../../../../../../../../packages/ingest/src/document/highlighter";
 
 const HEX = /^#[0-9a-f]{6}(?:[0-9a-f]{2})?$/i;
 

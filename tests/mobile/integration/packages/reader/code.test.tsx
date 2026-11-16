@@ -5,7 +5,7 @@ import {
   type ReaderBlock,
 } from "../../../../../packages/reader/src/core/document";
 import { makeDocument } from "./fixtures";
-import { highlightCode } from "../../../../../packages/worker/src/document/highlighter";
+import { highlightCode } from "../../../../../packages/ingest/src/document/highlighter";
 
 const native = await import("../../../../../packages/reader/src/native/document");
 const { resolveCodeLines, tokenStyle } =

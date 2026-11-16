@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
-import { EMBEDDING_CLASSIFIER_MODEL_ID } from "@kyomi/worker";
+import { EMBEDDING_CLASSIFIER_MODEL_ID } from "@kyomi/ingest";
 
 /**
  * Offline embeddings for the live classifier evals. Vectors are stored under the gitignored

@@ -5,7 +5,7 @@ import {
   type CategoryModel,
   type CategoryScore,
   type CategorySelectionRule,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 
 export type TrainingExample = { vector: readonly number[]; label: string };
 

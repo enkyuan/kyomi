@@ -52,7 +52,7 @@ describe("normalize (pass 16)", () => {
         },
       ],
     });
-    const { ARTICLE_DOCUMENT_PASSES } = await import("@kyomi/worker/document");
+    const { ARTICLE_DOCUMENT_PASSES } = await import("@kyomi/ingest/document");
     await ARTICLE_DOCUMENT_PASSES.find((pass) => pass.name === "normalize")!.run(draft);
     const json = JSON.stringify(draft.blocks[1]);
     expect(json.match(/"type":"link"/g)).toHaveLength(1);
@@ -130,14 +130,14 @@ describe("normalize (pass 16)", () => {
       anchor: "kyomi-a",
       children: [{ type: "text", value: "Dup" }],
     });
-    const { ARTICLE_DOCUMENT_PASSES } = await import("@kyomi/worker/document");
+    const { ARTICLE_DOCUMENT_PASSES } = await import("@kyomi/ingest/document");
     await ARTICLE_DOCUMENT_PASSES.find((pass) => pass.name === "normalize")!.run(draft);
     expect(draft.blocks.filter((block) => block.anchor === "kyomi-a")).toHaveLength(1);
   });
 });
 
 async function runThroughWithLead(html: string, leadSrc: string) {
-  const { ARTICLE_DOCUMENT_PASSES } = await import("@kyomi/worker/document");
+  const { ARTICLE_DOCUMENT_PASSES } = await import("@kyomi/ingest/document");
   const { lowerToDraft } = await import("./document-helpers");
   const draft = lowerToDraft(html);
   draft.leadImage = { src: leadSrc, alt: "" };

@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 // Article translation eval runner, from the /claude-api build-eval runner
 // scaffold. Translations and the judge both run on Workers AI through the
-// apps/embeddings Worker's /chat route; a later variant (v1, ...) can try another
+// apps/ai-gateway Worker's /chat route; a later variant (v1, ...) can try another
 // model or prompt against the same cases.
 //
 //   bun scripts/evals/translation/run-eval.mjs --variant baseline --model @cf/openai/gpt-oss-120b

@@ -1,4 +1,4 @@
-import { selectClientFaviconOrigin } from "@kyomi/worker/favicon/browser";
+import { selectClientFaviconOrigin } from "@kyomi/ingest/favicon/browser";
 
 const FAVICON_CACHE_DB_NAME = "kyomi.favicon-cache";
 const FAVICON_CACHE_STORE_NAME = "hosts";

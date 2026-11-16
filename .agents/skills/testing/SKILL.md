@@ -1,6 +1,6 @@
 ---
 name: testing
-description: Design, write, review, move, or improve Kyomi tests and fixtures. Use for regression coverage, choosing the narrowest real boundary, structuring tests under tests/web or tests/api, mirroring app domains, testing packages/ui, packages/reader, packages/db, or packages/worker through their owning runner, adding success and failure cases, handling time, retries, concurrency, auth, network, or database behavior, activating e2e coverage, or introducing the first mobile or catalog test runner. Pair with web, mobile, api, packages, security, or architecture while implementing behavior; use qa afterward for aggregate verification.
+description: Design, write, review, move, or improve Kyomi tests and fixtures. Use for regression coverage, choosing the narrowest real boundary, structuring tests under tests/web or tests/api, mirroring app domains, testing packages/ui, packages/reader, packages/db, or packages/ingest through their owning runner, adding success and failure cases, handling time, retries, concurrency, auth, network, or database behavior, activating e2e coverage, or introducing the first mobile or catalog test runner. Pair with web, mobile, api, packages, security, or architecture while implementing behavior; use qa afterward for aggregate verification.
 ---
 
 # Testing

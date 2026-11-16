@@ -2,7 +2,7 @@ import {
   compileStoredDocument,
   toStoredDocumentColumns,
   type StoredDocumentInput,
-} from "@kyomi/worker/lib/stored-document";
+} from "@kyomi/ingest/lib/stored-document";
 
 const FORMAT_BY_ORIGIN = {
   feed_html: "html",

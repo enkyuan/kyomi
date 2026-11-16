@@ -14,7 +14,7 @@ import type {
 } from "./classifier";
 import { MAX_CLASSIFIER_LABELS } from "./classifier";
 
-/** Kyomi's embeddings Worker (apps/embeddings), which serves BGE-M3 from Workers AI. */
+/** Kyomi's embeddings Worker (apps/ai-gateway), which serves BGE-M3 from Workers AI. */
 export type EmbeddingClassifierConfig = {
   /** Bearer token for the Worker. */
   apiKey: string;

@@ -1,6 +1,6 @@
 /**
  * Kyomi embeddings Worker: a `POST /embed` endpoint backed by Workers AI
- * BGE-M3. The article category classifier (packages/worker) calls it through the API's
+ * BGE-M3. The article category classifier (packages/ingest) calls it through the API's
  * CLOUDFLARE_EMBEDDINGS_URL and CLOUDFLARE_EMBEDDINGS_TOKEN.
  *
  * Contract (covered by tests/api/integration/cloudflare/embed.test.ts):
@@ -314,7 +314,7 @@ export default {
       return Response.json({ error: "Embedding provider failed" }, { status: 502 });
     }
 
-    // One `{ embedding, index }` entry per input, the shape @kyomi/worker's client reads.
+    // One `{ embedding, index }` entry per input, the shape @kyomi/ingest's client reads.
     return Response.json({ data });
   },
 };

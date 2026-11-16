@@ -28,7 +28,7 @@ import {
   type ClassifierModelInfo,
   type EmbeddingClassifierConfig,
   type InferredCategoryLabel,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 
 const BACKFILL_CLASSIFIER_MODEL: ClassifierModelInfo = {
   modelId: KEYWORD_CLASSIFIER_MODEL_ID,

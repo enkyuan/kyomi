@@ -5,7 +5,7 @@ import {
   lowerMarkdown,
   lowerPlainText,
   compileArticleRoot,
-} from "@kyomi/worker/document";
+} from "@kyomi/ingest/document";
 import { lowerToDraft } from "./document-helpers";
 
 const blocksOf = (html: string) => lowerToDraft(html).blocks;

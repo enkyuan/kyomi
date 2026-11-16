@@ -10,7 +10,7 @@ import {
   DEFAULT_ITEM_SELECTION_RULE,
   type CategoryScore,
   type CategorySelectionRule,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 import { cachedEmbeddingsFetch, embeddingsCacheFile } from "./embedding-cache";
 import { CLASSIFIER_EVAL_FIXTURE, type ClassifierEvalCase } from "./classifier-eval-fixture";
 import { CLASSIFIER_EVAL_STORED_CASES } from "./classifier-eval-stored-fixture";

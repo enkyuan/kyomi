@@ -41,7 +41,7 @@ packages/
   db/                          Drizzle schema and migrations
   reader/                      Core, web, WebView, and native article rendering
   ui/                          Shared presentation primitives, icons, motion, and styles
-  worker/                      Queue, ingestion, favicon, and sanitization contracts
+  ingest/                      Queue, ingestion, favicon, and sanitization contracts
   catalog/                     Optional offline Python catalog pipeline
   tsconfig/                    Shared compiler presets
 tests/

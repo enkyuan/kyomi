@@ -5,7 +5,7 @@ import {
   sanitizeArticleHtmlFragment,
   stripReservedArticleMarkup,
 } from "@kyomi/reader/sanitization";
-import { compileArticleHtml, type CompileDiagnostics } from "@kyomi/worker/document";
+import { compileArticleHtml, type CompileDiagnostics } from "@kyomi/ingest/document";
 import { JSDOM } from "jsdom";
 
 export { ARTICLE_HTML_SANITIZER_VERSION };

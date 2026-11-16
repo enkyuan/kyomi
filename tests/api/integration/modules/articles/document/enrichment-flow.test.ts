@@ -4,7 +4,7 @@ import { enqueueDocumentEnrichment } from "@modules/articles/document-enrichment
 import { handleDocumentEnrichmentJob } from "@modules/articles/document-enrichment/jobs";
 import { runDocumentBackfillScope } from "@modules/articles/document/backfill";
 import { createDocumentPatchStore } from "@modules/articles/document/store";
-import { setStoredDocumentCompiler } from "@kyomi/worker/lib/stored-document";
+import { setStoredDocumentCompiler } from "@kyomi/ingest/lib/stored-document";
 import { fakeDocument, TEST_COMPILER_VERSION } from "./helpers";
 
 const be32 = (n: number) => [(n >>> 24) & 255, (n >>> 16) & 255, (n >>> 8) & 255, n & 255];

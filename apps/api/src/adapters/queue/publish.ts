@@ -7,7 +7,7 @@ import {
   toRedisStreamFieldList,
   type Job,
   type QueueOptions,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 
 /** XADD a typed job. Returns Redis stream ID. */
 export async function publishJob(

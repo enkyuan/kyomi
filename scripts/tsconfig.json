@@ -10,7 +10,8 @@
       "@modules/*": ["../apps/api/src/modules/*"],
       "@scripts/*": ["./*"],
       "@kyomi/db": ["../packages/db/src/index.ts"],
-      "@kyomi/worker": ["../packages/worker/src/index.ts"]
+      "@kyomi/ingest": ["../packages/ingest/src/index.ts"],
+      "@kyomi/ingest/document": ["../packages/ingest/src/document/index.ts"]
     },
     "typeRoots": [
       "../node_modules/@types",

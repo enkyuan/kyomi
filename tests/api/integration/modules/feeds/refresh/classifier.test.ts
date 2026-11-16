@@ -4,7 +4,7 @@ import {
   classifyItemCategories,
   isMixedFeedHost,
   shouldSuppressFallback,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 
 describe("feed category classifier", () => {
   test("classifies technology feeds without RSS category tags", () => {

@@ -1,4 +1,4 @@
-import { embeddingModelInfo, type EmbeddingClassifierConfig } from "@kyomi/worker";
+import { embeddingModelInfo, type EmbeddingClassifierConfig } from "@kyomi/ingest";
 import { env } from "@config/env";
 
 type EmbeddingProviderEnv = Pick<

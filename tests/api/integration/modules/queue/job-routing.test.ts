@@ -7,7 +7,7 @@ import {
   getStreamKeyForJobType,
   normalizeQueueOptions,
   parseJob,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 
 describe("queue routing", () => {
   test("routes feed refresh jobs separately from OPML jobs", () => {

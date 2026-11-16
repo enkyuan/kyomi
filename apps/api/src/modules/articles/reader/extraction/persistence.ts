@@ -2,7 +2,7 @@ import type { db } from "@adapters/db/client";
 import { articleClips, feedItems } from "@kyomi/db";
 import { enqueueEnrichmentForStoredDocument } from "@modules/articles/document/enrich";
 import type { ArticleDetailDto } from "@modules/articles/types";
-import { toStoredDocumentColumns, type StoredDocument } from "@kyomi/worker/lib/stored-document";
+import { toStoredDocumentColumns, type StoredDocument } from "@kyomi/ingest/lib/stored-document";
 import { and, eq } from "drizzle-orm";
 
 type DB = typeof db;

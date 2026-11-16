@@ -1,7 +1,7 @@
 import { fetchWithSafeRedirects } from "@shared/net/fetch";
 import { assertHttpOrHttpsUrl } from "@shared/net/http";
 import { BlockedOutboundUrlError } from "@shared/net/outbound";
-import { cancelResponseBody } from "@kyomi/worker/lib/response-body";
+import { cancelResponseBody } from "@kyomi/ingest/lib/response-body";
 
 export const ENRICHMENT_USER_AGENT =
   "Mozilla/5.0 (compatible; KyomiEnrichment/1.0; +https://kyomi.app)";

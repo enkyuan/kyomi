@@ -13,7 +13,7 @@ import {
   type ArticleExtractionJob,
   type HostRateLimiter,
   type JobMessage,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 import {
   runOpmlImportFeedJob,
   runOpmlImportItemJob,

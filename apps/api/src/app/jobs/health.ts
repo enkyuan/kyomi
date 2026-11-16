@@ -2,7 +2,7 @@ import {
   FEED_REFRESH_JOBS_STREAM_KEY,
   JOBS_CONSUMER_GROUP,
   OPML_JOBS_STREAM_KEY,
-} from "@kyomi/worker";
+} from "@kyomi/ingest";
 
 export type QueueHealthRedis = {
   xlen(stream: string): Promise<number>;

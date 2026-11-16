@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "@app/jobs/classify";
-import { runFeedRefresh } from "@kyomi/worker";
+import { runFeedRefresh } from "@kyomi/ingest";
 
 const originalFetch = globalThis.fetch;
 

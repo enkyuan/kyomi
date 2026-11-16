@@ -1,7 +1,7 @@
 import {
   cancelResponseBody,
   readResponseBytesWithByteLimit,
-} from "@kyomi/worker/lib/response-body";
+} from "@kyomi/ingest/lib/response-body";
 import { assertHttpOrHttpsUrl } from "@shared/net/http";
 import { fetchWithSafeRedirects } from "@shared/net/fetch";
 

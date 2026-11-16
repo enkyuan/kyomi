@@ -42,7 +42,7 @@ const fixtures: Record<string, string> = {
 
 describe("sanitization policy parity", () => {
   test("exactly one ARTICLE_HTML_POLICY declaration exists across worker and reader", () => {
-    const roots = [join(repoRoot, "packages/worker/src"), join(repoRoot, "packages/reader/src")];
+    const roots = [join(repoRoot, "packages/ingest/src"), join(repoRoot, "packages/reader/src")];
     let occurrences = 0;
     const stack = [...roots];
     while (stack.length > 0) {
@@ -63,7 +63,7 @@ describe("sanitization policy parity", () => {
 
   test("the worker package keeps no sanitizer implementation of its own", () => {
     expect(() =>
-      readFileSync(join(repoRoot, "packages/worker/src/sanitization/article-html.ts"), "utf8"),
+      readFileSync(join(repoRoot, "packages/ingest/src/sanitization/article-html.ts"), "utf8"),
     ).toThrow();
   });
 

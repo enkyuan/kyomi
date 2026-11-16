@@ -1,5 +1,5 @@
 import { Image } from "expo-image";
-import { buildFaviconUrlCandidates } from "@kyomi/worker/favicon/browser";
+import { buildFaviconUrlCandidates } from "@kyomi/ingest/favicon/browser";
 import { useState } from "react";
 import { StyleSheet, useColorScheme, View } from "react-native";
 import { RssIcon } from "@/components/icons/rss";

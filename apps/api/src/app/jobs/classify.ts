@@ -1,4 +1,4 @@
-import type { FeedRefreshResult } from "@kyomi/worker";
+import type { FeedRefreshResult } from "@kyomi/ingest";
 
 export type FeedRefreshErrorSeverity = "feed" | "platform";
 
