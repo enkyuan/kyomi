@@ -61,7 +61,7 @@ export function useReadingTracking({
     reportRef.current = onReadingProgress;
     bottomInsetRef.current = bottomInset;
     initialRef.current = initialProgress;
-  }, [bottomInset, initialProgress, onReadingProgress]);
+  }, [bottomInset, initialProgress, onReadingProgress, onRestoreSettled]);
 
   const metrics = useRef({ content: 0, header: 0, scrollY: 0, viewport: 0 });
   const state = useRef({

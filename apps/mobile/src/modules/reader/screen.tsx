@@ -47,14 +47,9 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const tabBarOcclusionHeight = getReaderTabBarOcclusionHeight(insets);
   // Readiness is per article *and* reader view, since either remounts the body (and its restore).
   const [readyKey, setReadyKey] = useState<string | null>(null);
-  const currentKeyRef = useRef<string | null>(null);
   // Avoid sending duplicate view events while an article stays open.
   const viewedArticleIdRef = useRef<string | null>(null);
   const traceRef = useRef<{ articleId: string; trace: ReaderTrace } | null>(null);
-  const handleArticleReady = useCallback(() => {
-    setReadyKey(currentKeyRef.current);
-    if (traceRef.current?.articleId === articleId) traceRef.current.trace.ready();
-  }, [articleId]);
   const { data: fetchedArticle, error, isLoading, refetch } = useArticle(articleId);
   const baseArticle = useMemo(
     () =>
@@ -71,7 +66,11 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   );
   // The bar's tools act on the article, and its slider sets the size the body is drawn at.
   const { article, fontSizePx } = useReaderToolbar(baseArticle);
-  currentKeyRef.current = article ? `${article.id}:${article.reader.activeMode}` : null;
+  const currentKey = article ? `${article.id}:${article.reader.activeMode}` : null;
+  const handleArticleReady = useCallback(() => {
+    setReadyKey(currentKey);
+    if (traceRef.current?.articleId === articleId) traceRef.current.trace.ready();
+  }, [articleId, currentKey]);
   const body = useMemo(
     () => (article ? selectReaderBody(article.reader.selected, NATIVE_READER_ENABLED) : null),
     [article],
@@ -152,7 +151,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
     );
   }
 
-  const isReady = readyKey !== null && readyKey === currentKeyRef.current;
+  const isReady = readyKey !== null && readyKey === currentKey;
   const isNative = body?.kind === "document";
 
   if (!article) {

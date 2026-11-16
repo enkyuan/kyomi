@@ -96,6 +96,9 @@
   "packageManager": "bun@1.3.14",
   "reactDoctor": {
     "ignore": {
+      "files": [
+        "**/src/icons/blode-native.ts"
+      ],
       "overrides": [
         {
           "files": [

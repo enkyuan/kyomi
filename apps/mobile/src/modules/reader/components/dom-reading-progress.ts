@@ -19,6 +19,77 @@ type ReadingTracking = {
   emit: () => void;
 };
 
+type Timer = ReturnType<typeof setTimeout>;
+
+/**
+ * Throttles scroll samples: one at most every `READING_SAMPLE_INTERVAL_MS`, a trailing one for the
+ * scrolls in between, and a last one once scrolling stops. `report` returns whether it sent a sample.
+ * The timers live here, not in the effect, so `dispose` is the one place that releases them.
+ */
+function createScrollSampler(report: () => boolean) {
+  let lastEmitAt = 0;
+  let trailing: Timer | undefined;
+  let scrollEnd: Timer | undefined;
+
+  const emit = () => {
+    if (report()) lastEmitAt = Date.now();
+  };
+  const onScroll = () => {
+    const wait = READING_SAMPLE_INTERVAL_MS - (Date.now() - lastEmitAt);
+    if (wait <= 0) {
+      emit();
+    } else if (trailing === undefined) {
+      trailing = setTimeout(() => {
+        trailing = undefined;
+        emit();
+      }, wait);
+    }
+    clearTimeout(scrollEnd);
+    scrollEnd = setTimeout(emit, READING_SCROLL_END_MS);
+  };
+  const dispose = () => {
+    clearTimeout(trailing);
+    clearTimeout(scrollEnd);
+  };
+  return { dispose, emit, onScroll };
+}
+
+/**
+ * Decides when a restore has settled: after the article stops being corrected for
+ * `RESTORE_QUIET_MS`, or at `RESTORE_CAP_MS` if it never goes quiet. Each correction calls `arm`.
+ */
+function createRestoreSettler(onSettled: () => void) {
+  let settled = false;
+  let quiet: Timer | undefined;
+  const dispose = () => {
+    clearTimeout(quiet);
+    clearTimeout(cap);
+  };
+  const finish = () => {
+    if (settled) return;
+    settled = true;
+    dispose();
+    onSettled();
+  };
+  const cap = setTimeout(finish, RESTORE_CAP_MS);
+  const arm = () => {
+    clearTimeout(quiet);
+    quiet = setTimeout(finish, RESTORE_QUIET_MS);
+  };
+  return { arm, dispose };
+}
+
+/** Calls `onResize` while the element resizes, for `durationMs`; the returned function stops it. */
+function observeResizes(element: Element, onResize: () => void, durationMs: number) {
+  const observer = new ResizeObserver(onResize);
+  observer.observe(element);
+  const stop = setTimeout(() => observer.disconnect(), durationMs);
+  return () => {
+    observer.disconnect();
+    clearTimeout(stop);
+  };
+}
+
 /**
  * Restores `initialProgress` and reports reading progress. The page scrolls inside its own WebView,
  * so scroll position, viewport and article geometry are read here and only samples cross the bridge.
@@ -49,12 +120,9 @@ export function useReadingProgressTracking(
     if (!article) return;
     const state = tracking.current;
 
-    let lastEmitAt = 0;
-    let trailing: number | undefined;
-    let scrollEnd: number | undefined;
-
-    const emit = () => {
-      if (state.held || !reportRef.current) return;
+    const sampler = createScrollSampler(() => {
+      const report = reportRef.current;
+      if (state.held || !report) return false;
       const scrollTop = window.scrollY;
       const progress = progressFromScroll({
         contentHeight: article.offsetHeight,
@@ -66,33 +134,21 @@ export function useReadingProgressTracking(
       // last of the article is on screen after the reader has scrolled.
       const completed =
         scrollTop > 0 && article.getBoundingClientRect().bottom <= window.innerHeight + 2;
-      lastEmitAt = Date.now();
-      reportRef.current({ completed, progress });
-    };
-    state.emit = emit;
+      report({ completed, progress });
+      return true;
+    });
+    state.emit = sampler.emit;
 
-    const onScroll = () => {
-      const wait = READING_SAMPLE_INTERVAL_MS - (Date.now() - lastEmitAt);
-      if (wait <= 0) {
-        emit();
-      } else {
-        if (trailing === undefined) {
-          trailing = window.setTimeout(() => {
-            trailing = undefined;
-            emit();
-          }, wait);
-        }
-      }
-      window.clearTimeout(scrollEnd);
-      scrollEnd = window.setTimeout(emit, READING_SCROLL_END_MS);
-    };
     const onUserInput = () => {
       state.userScrolled = true;
     };
 
     // One signal owns every listener, so a single abort removes them all.
     const listeners = new AbortController();
-    window.addEventListener("scroll", onScroll, { passive: true, signal: listeners.signal });
+    window.addEventListener("scroll", sampler.onScroll, {
+      passive: true,
+      signal: listeners.signal,
+    });
     for (const type of ["touchstart", "wheel", "keydown"] as const) {
       window.addEventListener(type, onUserInput, {
         capture: true,
@@ -102,8 +158,7 @@ export function useReadingProgressTracking(
     }
     return () => {
       listeners.abort();
-      window.clearTimeout(trailing);
-      window.clearTimeout(scrollEnd);
+      sampler.dispose();
       state.emit = () => undefined;
     };
   }, [articleRef]);
@@ -134,35 +189,17 @@ export function useReadingProgressTracking(
       }
     };
 
-    let settled = false;
-    let quiet: number | undefined;
-    const finish = () => {
-      if (settled) return;
-      settled = true;
-      window.clearTimeout(quiet);
-      window.clearTimeout(cap);
-      settledRef.current?.();
-    };
-    // Each correction re-arms the quiet timer; the cap bounds the wait if the article never goes quiet.
-    const arm = () => {
-      window.clearTimeout(quiet);
-      quiet = window.setTimeout(finish, RESTORE_QUIET_MS);
-    };
-    const cap = window.setTimeout(finish, RESTORE_CAP_MS);
+    const settler = createRestoreSettler(() => settledRef.current?.());
     const restoreAndArm = () => {
       restore();
-      arm();
+      settler.arm();
     };
 
     restoreAndArm();
-    const observer = new ResizeObserver(restoreAndArm);
-    observer.observe(article);
-    const stop = window.setTimeout(() => observer.disconnect(), RESTORE_SETTLE_MS);
+    const stopObserving = observeResizes(article, restoreAndArm, RESTORE_SETTLE_MS);
     return () => {
-      observer.disconnect();
-      window.clearTimeout(stop);
-      window.clearTimeout(quiet);
-      window.clearTimeout(cap);
+      stopObserving();
+      settler.dispose();
     };
   }, [articleRef, initialProgress]);
 }

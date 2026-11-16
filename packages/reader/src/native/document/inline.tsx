@@ -42,26 +42,26 @@ function renderChip(
   const text = value.trim();
   if (text === "") return value;
   const tint = { backgroundColor: ctx.theme.colors.codeBackground, fontSize: face.fontSize };
-  const words = text.split(/ +/);
   // One tinted span per word. A space that wraps inside a tinted span is painted out to the line's
   // right edge, so the tint carries the gap as a no-break space and the break itself is untinted.
+  const words = text.split(/ +/).map((word, position, all) => ({
+    first: position === 0,
+    id: `${key}:${position}:${word}`,
+    last: position === all.length - 1,
+    word,
+  }));
   return (
     <Text key={key}>
-      {words.map((word, index) => {
-        const first = index === 0;
-        const last = index === words.length - 1;
-        return (
-          // oxlint-disable-next-line react/no-array-index-key -- words never reorder
-          <Text key={index}>
-            {first ? null : BREAK_POINT}
-            <Text style={tint}>
-              {first ? CODE_PAD : null}
-              <Text style={{ fontFamily: face.fontFamily }}>{word}</Text>
-              {last ? CODE_PAD : NO_BREAK_SPACE}
-            </Text>
+      {words.map(({ first, id, last, word }) => (
+        <Text key={id}>
+          {first ? null : BREAK_POINT}
+          <Text style={tint}>
+            {first ? CODE_PAD : null}
+            <Text style={{ fontFamily: face.fontFamily }}>{word}</Text>
+            {last ? CODE_PAD : NO_BREAK_SPACE}
           </Text>
-        );
-      })}
+        </Text>
+      ))}
     </Text>
   );
 }
@@ -143,51 +143,39 @@ function renderFormat(
     emphasis: ambient.emphasis || node.format === "emphasis" || node.format === "cite",
   };
   const children = renderInlines(node.children, { ...ctx, ambient: next }, key);
-  const style: TextStyle = {};
+  const special = renderSpecialFormat(node, ctx, key, children);
+  if (special !== null) return special;
+  return (
+    <Text key={key} style={formatStyle(node.format, next, theme)}>
+      {children}
+    </Text>
+  );
+}
+
+/** Formats drawn as something other than a styled span; `null` when the node is a plain span. */
+function renderSpecialFormat(
+  node: Extract<ReaderInline, { type: "format" }>,
+  ctx: InlineContext,
+  key: string,
+  children: ReactNode,
+): ReactNode {
+  const { theme } = ctx;
   switch (node.format) {
-    case "strong":
-      style.fontFamily = next.emphasis ? theme.fonts.strongItalic : theme.fonts.strong;
-      style.fontWeight = theme.fonts.strong === "System" ? "700" : "normal";
-      break;
-    case "emphasis":
-    case "cite":
-      if (theme.fonts.italic === "System") style.fontStyle = "italic";
-      else style.fontFamily = next.strong ? theme.fonts.strongItalic : theme.fonts.italic;
-      break;
-    case "underline":
-    case "insert":
-      style.textDecorationLine = "underline";
-      break;
-    case "strike":
-      style.textDecorationLine = "line-through";
-      break;
-    case "highlight":
-      style.backgroundColor = theme.colors.highlight;
-      break;
-    case "small":
-      style.fontSize = theme.fontSize * 0.85;
-      break;
     case "keyboard": {
       const keys = plainText(node.children);
-      if (keys !== null) {
-        return renderChip(keys, ctx, key, {
-          fontFamily: theme.fonts.mono,
-          fontSize: theme.fontSize * 0.86,
-        });
-      }
-      style.fontFamily = theme.fonts.mono;
-      style.fontSize = theme.fontSize * 0.86;
-      style.backgroundColor = theme.colors.codeBackground;
-      break;
+      return keys === null
+        ? null
+        : renderChip(keys, ctx, key, {
+            fontFamily: theme.fonts.mono,
+            fontSize: theme.fontSize * 0.86,
+          });
     }
     case "subscript":
     case "superscript": {
       const text = plainText(node.children);
-      const shifted =
-        text === null ? null : shiftScript(text, node.format === "subscript" ? "sub" : "super");
-      if (shifted !== null) return shifted;
-      style.fontSize = theme.fontSize * 0.75;
-      break;
+      return text === null
+        ? null
+        : shiftScript(text, node.format === "subscript" ? "sub" : "super");
     }
     case "quote":
       return (
@@ -197,12 +185,48 @@ function renderFormat(
           {QUOTE_CLOSE}
         </Text>
       );
+    default:
+      return null;
   }
-  return (
-    <Text key={key} style={style}>
-      {children}
-    </Text>
-  );
+}
+
+function formatStyle(
+  format: Extract<ReaderInline, { type: "format" }>["format"],
+  next: { strong: boolean; emphasis: boolean },
+  theme: InlineContext["theme"],
+): TextStyle {
+  switch (format) {
+    case "strong":
+      return {
+        fontFamily: next.emphasis ? theme.fonts.strongItalic : theme.fonts.strong,
+        fontWeight: theme.fonts.strong === "System" ? "700" : "normal",
+      };
+    case "emphasis":
+    case "cite":
+      return theme.fonts.italic === "System"
+        ? { fontStyle: "italic" }
+        : { fontFamily: next.strong ? theme.fonts.strongItalic : theme.fonts.italic };
+    case "underline":
+    case "insert":
+      return { textDecorationLine: "underline" };
+    case "strike":
+      return { textDecorationLine: "line-through" };
+    case "highlight":
+      return { backgroundColor: theme.colors.highlight };
+    case "small":
+      return { fontSize: theme.fontSize * 0.85 };
+    case "keyboard":
+      return {
+        backgroundColor: theme.colors.codeBackground,
+        fontFamily: theme.fonts.mono,
+        fontSize: theme.fontSize * 0.86,
+      };
+    case "subscript":
+    case "superscript":
+      return { fontSize: theme.fontSize * 0.75 };
+    default:
+      return {};
+  }
 }
 
 function mathFontSize(theme: InlineContext["theme"]): number {
