@@ -12,6 +12,7 @@
     "**/yarn.lock",
     "**/pnpm-lock.yaml",
     "**/routeTree.gen.ts",
-    "**/fixtures/articles/corpus/**/*.html"
+    "**/fixtures/articles/corpus/**/*.html",
+    "**/packages/reader/src/web/katex-offline.css"
   ]
 }
