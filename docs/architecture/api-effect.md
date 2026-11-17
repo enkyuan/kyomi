@@ -1,6 +1,6 @@
 # API on Effect
 
-`apps/api` is moving from Promise and singleton wiring to [Effect](https://effect.website) v4
+`apps/api` runs on [Effect](https://effect.website) v4
 (`effect@4.1.4`). Elysia stays the HTTP adapter. `@kyomi/db`, `@kyomi/ingest`, `@kyomi/reader`,
 drizzle-orm 0.45 and better-auth stay Promise-based and are wrapped at the API boundary.
 
@@ -12,16 +12,22 @@ memory. The names below were checked against 4.1.4.
 
 | Path | Holds |
 | --- | --- |
-| `src/shared/effect/errors.ts` | The typed error catalogue and `AppError` interop. |
+| `src/shared/effect/errors.ts` | The typed error catalogue. |
 | `src/shared/effect/request.ts` | `RequestContext` and `CurrentUser` services (per request). |
 | `src/shared/http/error/render.ts` | `describeError` / `describeCause`: the one edge mapper. `EffectFailure`. |
 | `src/shared/http/effect/bridge.ts` | `runEffect(ctx, effect)`: the typed Elysia to Effect bridge. |
-| `src/shared/http/effect/plugin.ts` | `effectPlugin(runtime)`: puts `runtime` and `runEffect` on the Elysia context. |
+| `src/shared/http/effect/plugin.ts` | `effectPlugin(runtime)`: derives `runEffect` on the Elysia context (the runtime itself is not decorated: Elysia deep-merges decorators on every mount). |
 | `src/config/env/service.ts` | `AppConfig` (validated env as a service). |
 | `src/adapters/<capability>/service.ts` | `Db`, `Redis`, `AppLogger` services and their live Layers. |
 | `src/adapters/http/client.ts` | `HttpClientLive` (the `HttpClient` service from `effect/http`). |
 | `src/adapters/queue/service.ts` | `JobQueue.publish(job)`: the producer side of the Redis Streams job queue. |
 | `src/adapters/queue/consumer.ts` | `startConsumers`: scoped, supervised stream consumers with drain on shutdown. |
+| `src/adapters/auth/service.ts` | `Auth` (Better Auth: `handle`, `sessionUserId`, `listSessions`). Sign-in emails run on a layer-owned `FiberSet`. `session.ts`: `requireAuth`, `resolveSessionContext(runtime, request, set)`. |
+| `src/adapters/rate-limit/service.ts` | `RateLimiter.enforce(subject, rule)`: Redis counters, scoped in-memory fallback. `plugin.ts`: `rateLimitPlugin(runtime)` puts `enforceRateLimit` on the Elysia context for `enforceRateLimitForContext`. |
+| `src/adapters/search/service.ts` | `FeedSearch` (Meilisearch over `HttpClient`): `isConfigured`, `upsert`, `remove`, `search`. |
+| `src/shared/net/outbound.ts` | `checkOutboundUrl` (SSRF policy as an Effect) and `HostResolver`, a `Context.Reference` whose default is system DNS; tests `Effect.provideService(HostResolver, ...)`. |
+| `src/modules/feeds/service.ts`, `favicon/service.ts`, `catalog/embeddings.ts`, `opml/live.ts` | Module seams: `FeedBackground` (post-response work on the runtime scope), `FaviconResolver` and `Embeddings` (the `@kyomi/ingest` favicon and embeddings clients, which use the global `fetch`, wrapped once with typed errors), `OpmlFeedsLive` (`OpmlFeeds` over feeds and folders, so OPML code needs only `OpmlFeeds`). All are in `AppLive`; tests provide fake Layers instead of patching `fetch`. |
+| `src/modules/catalog/` | Operator scripts' behaviour (`import/`, `backfill/`, `category-model/`) as Effects with their own tagged errors (`errors.ts`); `app/boot/*.ts` only run them. |
 | `src/app/jobs/` | `handler.ts` (job dispatch), `classify.ts` (typed failure classes), `consumer.ts` (`WorkerLive`), `scheduler.ts`, `dispatcher.ts` (loops). |
 | `src/app/setup/main.ts` | `runMain(effect)`: process entrypoint that turns SIGINT/SIGTERM into fiber interruption. |
 | `src/app/runtime.ts` | `AppLive` and `createAppRuntime()`: the one composition root. |
@@ -53,10 +59,10 @@ export class Db extends Context.Service<Db, DbShape>()("kyomi/Db") {
   `AppLogger`, the pool from `Db`, the client from `Redis`, outbound HTTP from `HttpClient`.
 - Add new services to `AppLive` in `app/runtime.ts`. `AppLive` is built once per process; the same
   Layer reference is memoized, so `AppConfig.layer` is built once.
-- During migration, unconverted modules still use `@adapters/db/client` and `@adapters/redis`
-  singletons, so the process holds two Postgres pools and two Redis connections until the last
-  module moves. Delete `adapters/db/client.ts`, `adapters/redis/client.ts`, `adapters/shutdown.ts`
-  and the module-level `env` export with the final module.
+- There is one Postgres pool and one Redis connection per process, both owned by `AppLive`. The
+  module-level `db`, `getRedis()`, `logger` and `env` singletons no longer exist; Promise-based
+  helpers that need a database take the Drizzle `Database` as an argument and are called through
+  `Db.use`. Operator scripts (`boot/*.ts`) run as `runMain(program.pipe(Effect.provide(AppLive)))`.
 
 ## Writing operations as Effects
 
@@ -80,14 +86,12 @@ export const checkReadiness: Effect.Effect<ReadinessPayload, never, Db | AppLogg
 - Recover with `Effect.catchTag` / `catchIf` / `Effect.catch`; never classify by message text.
 - Log with `AppLogger` using the existing event names: `yield* log.warn("feed.refresh.failed", ctx)`.
   `requestId` is added automatically inside `runEffect`. Pass `serializeError(e)` for errors.
-- Wrapping legacy Promise code that may throw `AppError`: 
-
-  ```ts
-  Effect.tryPromise({ try: () => legacyFn(), catch: toPublicError })
-  ```
-
-  `toPublicError` re-tags `AppError` by status (keeping code, message, details), passes typed
-  errors through, and turns anything else into an opaque `InternalError`.
+- Wrapping legacy Promise code: `Db.use` / `Redis.use` map a throw to `DatabaseError` /
+  `RedisError`. For other Promise code use `Effect.tryPromise({ try, catch })` and map the cause
+  to a catalogue error in `catch`. A Drizzle transaction callback that runs an Effect through
+  `Effect.runPromise` rejects with that Effect's typed error; `inTransaction`
+  (`modules/feeds/subscription/persistence.ts`) hands such a catalogue error back as itself
+  instead of wrapping it in `DatabaseError`, so it keeps its status and code.
 - Time comes from `Clock.currentTimeMillis`, not `Date.now()`; sleeps from `Effect.sleep`.
 - Background work: `Effect.forkScoped` (tied to a Scope) or `Effect.forkChild`; never a bare
   un-awaited Promise. Loops that must stop on shutdown use `Effect.repeat(Schedule.spaced(...))`
@@ -102,7 +106,7 @@ One catalogue in `shared/effect/errors.ts`, built on `Data.TaggedError`. Public 
 (defaults per class in `ERROR_CATALOGUE`), `details`, `cause`. Keep the existing wire codes:
 
 ```ts
-new NotFound({ message: "Feed not found", code: "FEED_NOT_FOUND" })   // replaces new AppError(..., {status: 404, code})
+new NotFound({ message: "Feed not found", code: "FEED_NOT_FOUND" })
 ```
 
 Infrastructure errors (`DatabaseError`, `RedisError`, `UpstreamError`, `ConfigError`) carry
@@ -110,13 +114,9 @@ Infrastructure errors (`DatabaseError`, `RedisError`, `UpstreamError`, `ConfigEr
 `ERROR_CATALOGUE` is `satisfies Record<ApiError["_tag"], ...>`, so a new tag must add its status.
 
 `describeError(unknown)` and `describeCause(cause)` in `shared/http/error/render.ts` are the only
-places that choose a status and body. They accept catalogue errors, legacy `AppError`, framework 4xx
-errors and defects. The wire envelope is unchanged: `{ error: { message, code, requestId, details } }`.
+places that choose a status and body. They accept catalogue errors, framework 4xx errors and
+defects. The wire envelope is unchanged: `{ error: { message, code, requestId, details } }`.
 An interrupted request renders 499 (client aborted) or 503 (server stopping).
-
-`AppError` keeps working: thrown inside Effect code it becomes a defect and still renders with its
-own status and code, and `fromAppError` / `toPublicError` convert it to a typed error when you want
-to `catchTag` it.
 
 ## HTTP bridge
 
@@ -130,15 +130,23 @@ runEffect({ runtime, request, requestId, userId }, effect)   // effect may requi
 ```
 
 `runEffect` provides `RequestContext` (and `CurrentUser` when `userId` is set) with
-`Effect.provideService`, passes `request.signal` so an abort interrupts the fiber, and on failure
-throws `EffectFailure`, which `registerErrorHandlers` renders through `describeError` and logs as
+`Effect.provideService`. It passes `request.signal` so a client abort interrupts the fiber for
+`GET`, `HEAD` and `OPTIONS` only: a mutating request runs to completion after the client leaves,
+because most mutations are multi-step (claim a row, then publish a job) and an abort between the
+steps would strand the claim. Code that can also be interrupted by a worker shutdown or a lost
+job lease (`enqueueFeedRefresh`, `prefetchArticleExtractionsForFeedItems`) wraps its
+claim-then-publish section in `Effect.uninterruptible`. On failure `runEffect` throws `EffectFailure`, which `registerErrorHandlers` renders through `describeError` and logs as
 `request.failed`. Do not render errors in handlers. Routes take the runtime as an argument:
 
 ```ts
-export function healthPlugin(runtime: ManagedRuntime.ManagedRuntime<Db | AppLogger | Redis, unknown>) {
-  return new Elysia({ name: "kyomi.health" }).use(effectPlugin(runtime)).get("/ready", ({ runEffect }) => runEffect(checkReadiness))
+export function healthPlugin(runtime: ManagedRuntime.ManagedRuntime<Db | AppLogger | Redis | AppConfig, unknown>) {
+  return new Elysia({ name: "kyomi.health" }).use(requestObservationPlugin(runtime)).use(effectPlugin(runtime)).get("/ready", ({ runEffect }) => runEffect(checkReadiness))
 }
 ```
+
+`registerErrorHandlers(app, runtime)` reads `AppLogger` and `AppConfig` from the runtime, and
+`requestObservationPlugin(runtime)` (`shared/http/stacks.ts`, one instance per runtime) reads
+`AppConfig`, so a route runtime type includes `AppConfig` when its plugin uses it.
 
 ## Runtime lifecycle
 
@@ -154,24 +162,33 @@ calls `app.stop()`, `pool.end()` or `closeRedis()`.
 | `boot/scheduler.ts` | `Effect.all([feedRefreshSchedulerLoop, importDispatcherLoop])`: one dying interrupts the other. |
 | `boot/dev.ts` | server + `WorkerLive` + feed scheduler in one scope. |
 
-`AppLive` includes `LegacyAdaptersLive`, whose finalizer closes the module-level `db`/`getRedis()`
-singletons that unconverted modules still use, so the runtime is the only shutdown path. Delete it
-(with `adapters/shutdown.ts`, `adapters/db/client.ts`, `adapters/redis/client.ts`) with the last
-module that imports them. Elysia does not await `onStop`; the entrypoint's scope owns the order.
+Elysia does not await `onStop`; the entrypoint's scope owns the order. Behavioural tests:
+`tests/api/integration/app/setup/main.test.ts` (a spawned entrypoint: SIGTERM/SIGINT release the scope in
+reverse order and exit 0, a failure exits non-zero) and `setup/lifecycle.test.ts` (`Db` and `Redis`
+finalizers, `runtimeFromScope` ordering, `registerLifecycle` with and without `ownsRuntime`). Operator scripts
+(`boot/import.ts`, `backfill.ts`, `train.ts`, `report.ts`, `audit.ts`, `sanitizer.ts`, `smoke.ts`,
+`document.ts`) use the same shape, so the pool and Redis close when the run ends or on a signal.
 
 ## Jobs
 
-- **Publish** through `JobQueue.publish(job)` (`RedisError` on failure). `publishJob(redis, job)` in
-  `adapters/queue/publish.ts` is the Promise entrypoint for unconverted modules.
+- **Publish** through `JobQueue.publish(job)` (`RedisError` on failure).
 - **Consume** with `startConsumers([...])` inside a scope. Per stream: abandoned entries are claimed,
   new ones read on a dedicated blocking connection, the batch runs with bounded concurrency. Redis
   failures are logged and retried with `Schedule` backoff (500ms doubling to 30s) and never stop the
   other streams; a missing consumer group is recreated. On scope close consumers stop reading, get
   8s to finish running jobs, then are interrupted (entries stay pending and are claimed later).
 - **Handlers** return `Effect<void, JobFailure>`. Wrap legacy Promise operations with
-  `Effect.tryPromise({ try, catch: toJobFailure })`. `classifyJobFailure` decides by error class:
-  4xx other than 408/429 is permanent (acknowledged, never retried), 5xx and infrastructure errors
-  retry (3 attempts, then the dead-letter stream with the error in `error` and `last_error`).
+  `attemptJob(run, onAbandoned)` (maps a throw with `toJobFailure`). `classifyJobFailure` classifies by error class:
+  the class only picks the log severity and the logged `retryable` hint (4xx other than 408/429 is
+  `expected` and logged at warn). Every failed job is retried (3 attempts) and then dead-lettered
+  with the error in `error` and `last_error`, so an operator can list and replay it. Only a
+  handler that returns normally (a permanent feed refresh failure the refresh service already
+  recorded on the feed row) is acknowledged without a retry.
+- **Interruption.** Feed ingestion is a Promise API without an abort signal, so `attemptJob`
+  (`app/jobs/handler.ts`) keeps an interrupted job's fiber alive, uninterruptibly and for at most
+  30s, until its Promise settles. The consumer scope therefore closes Postgres and Redis only
+  after the work has stopped, and the refresh's final status write is not lost. `Db.use` passes an
+  `AbortSignal` to its callback for loops that can stop between statements (the sanitizer backfill).
 - **Loops** (`scheduler`, `dispatcher`) run each tick uninterruptibly (a claim is always published or
   released) and wait between ticks with `Effect.repeat(Schedule.spaced(...))`, which interruption ends.
   A failed tick is logged with its cause chain and the next one runs.
@@ -191,6 +208,8 @@ No `mock.module` and no `globalThis.fetch` patching in converted tests. Provide 
 | `fakeQueue({ xadd, ... })` | `Redis` plus the real `JobQueue` over the same fake client. |
 | `replyError("NOGROUP ...")` | An error shaped like an ioredis `ReplyError`. |
 | `fakeHttpClient(respond)` | `HttpClient` answering from a function; no network. |
+| `scriptedHttpClient(respond)` (`support/http.ts`) | `HttpClient` that returns a `Response`, fails with a transport error when given an `Error`, or never answers; sees method, url, headers and body. |
+| `silentLogger` | An `AppLogger` that discards entries. |
 | `TestClock.layer()` (from `effect/testing`) | Deterministic time; `TestClock.setTime`, `TestClock.adjust`. |
 
 ```ts
@@ -198,8 +217,12 @@ await Effect.runPromise(checkReadiness.pipe(Effect.provide(Layer.mergeAll(fakeDb
 ```
 
 For routes, build `ManagedRuntime.make(Layer.mergeAll(...))`, call the plugin factory, call
-`registerErrorHandlers(plugin)`, then `plugin.handle(new Request(...))`; dispose the runtime in
-`afterEach`. `tests/package.json` depends on `effect` for this. Run focused tests:
+`registerTestErrorHandlers(plugin)` (from `support/elysia.ts`; it runs `registerErrorHandlers` over a
+silent logger and the test config), then `plugin.handle(new Request(...))`; dispose the runtime in
+`afterEach`. Fetch patching remains only for tests of Promise packages that call the global `fetch` themselves
+(`@kyomi/ingest` feed refresh and the embeddings client, Better Auth OAuth); Effect code
+reaches those packages through the `FaviconResolver` and `Embeddings` seams, which tests replace
+with Layers. `tests/package.json` depends on `effect` for this. Run focused tests:
 
 ```sh
 cd apps/api
