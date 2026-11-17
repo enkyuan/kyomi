@@ -147,7 +147,6 @@ export function getFieldErrorMessage(errors: readonly unknown[], canShow: boolea
 
 export const authSessionListRowSchema = z.object({
   id: z.string(),
-  token: z.string(),
   ipAddress: z
     .string()
     .nullable()

@@ -81,6 +81,27 @@ describe("authRoutes", () => {
     expect(listSessions.mock.calls[0]?.[0].get("cookie")).toBe("c=1");
   });
 
+  test("get-session never sends the session token on, and keeps the rest of the response", async () => {
+    const handle = mock(() =>
+      Effect.succeed(
+        Response.json(
+          { session: { id: "s1", token: "secret-token", userId: "u1" }, user: { id: "u1" } },
+          { headers: { "set-cookie": "refreshed=1; HttpOnly" } },
+        ),
+      ),
+    );
+    const app = appWith({ handle });
+
+    const response = await app.handle(new Request("http://localhost/api/auth/get-session"));
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get("set-cookie")).toContain("refreshed=1");
+    expect(response.headers.get(AUTH_CAPABILITIES_HEADER)).toContain("emailOtp");
+    const text = await response.text();
+    expect(text).not.toContain("secret-token");
+    expect(JSON.parse(text)).toEqual({ session: { id: "s1", userId: "u1" }, user: { id: "u1" } });
+  });
+
   test("list-sessions without a session renders the 401 envelope", async () => {
     const app = appWith({
       listSessions: () => Effect.fail(new Unauthorized({ message: "Unauthorized" })),

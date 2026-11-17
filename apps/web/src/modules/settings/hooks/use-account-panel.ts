@@ -78,29 +78,6 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     },
   });
 
-  const revokeSessionMutation = useMutation({
-    mutationFn: async (token: string) => {
-      await postAuthSessionAction("/api/auth/revoke-session", { token });
-    },
-    onSuccess: async () => {
-      toastManager.add({
-        title: "Session signed out",
-        description: "The selected device no longer has access.",
-        type: "success",
-      });
-      await queryClient.invalidateQueries({ queryKey: authSessionsQueryKey() });
-      await router.invalidate();
-    },
-    onError: (error) => {
-      logClientError("settings.account.revoke_session", error);
-      toastManager.add({
-        title: "Unable to sign out session",
-        description: parseApiErrorMessage(error, "Unable to sign out that session. Try again."),
-        type: "error",
-      });
-    },
-  });
-
   const revokeOtherSessionsMutation = useMutation({
     mutationFn: async () => {
       await postAuthSessionAction("/api/auth/revoke-other-sessions");
@@ -152,7 +129,6 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     ? [
         {
           id: session.session.id,
-          token: session.session.token,
           userAgent: session.session.userAgent ?? null,
           ipAddress: session.session.ipAddress ?? null,
           locationLabel: session.session.locationLabel ?? null,
@@ -214,10 +190,6 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     await updateEmailMutation.mutateAsync(trimmedEmail);
   };
 
-  const handleRevokeSession = async (token: string) => {
-    await revokeSessionMutation.mutateAsync(token);
-  };
-
   const handleRevokeOtherSessions = async () => {
     await revokeOtherSessionsMutation.mutateAsync();
   };
@@ -236,7 +208,6 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     handleEmailDraftChange,
     handleRevokeAllSessions,
     handleRevokeOtherSessions,
-    handleRevokeSession,
     handleSaveEmail,
     handleStartEditEmail,
     isEditingEmail,
@@ -244,7 +215,6 @@ export function useAccountPanel({ user, session }: UseAccountPanelArgs) {
     otherSessionCount,
     revokeAllSessionsMutation,
     revokeOtherSessionsMutation,
-    revokeSessionMutation,
     sessions,
     updateEmailMutation,
   };

@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { Effect, Layer } from "effect";
-import { Auth } from "@adapters/auth/service";
+import { Auth, toAuthSession } from "@adapters/auth/service";
 import { AppConfig } from "@config/env/service";
 import { scriptedHttpClient } from "@api-tests/support/http";
 import { fakeDb, silentLogger, testConfig } from "@api-tests/support/layers";
@@ -59,5 +59,28 @@ describe("Auth layer", () => {
     const error = await Effect.runPromise(Effect.flip(Effect.scoped(Layer.build(broken))));
 
     expect(error).toMatchObject({ _tag: "ConfigError", message: "Invalid auth configuration" });
+  });
+});
+
+describe("toAuthSession", () => {
+  test("has no token and fills in the location from the stored fields", () => {
+    const stored = {
+      id: "s1",
+      token: "secret-token",
+      userId: "u1",
+      ipAddress: "127.0.0.1",
+      userAgent: "Mozilla",
+      expiresAt: new Date(0),
+      createdAt: new Date(0),
+      updatedAt: new Date(0),
+      locationCity: "Springfield",
+      locationCountry: "US",
+    };
+
+    const session = toAuthSession(stored as never);
+
+    expect(session).not.toHaveProperty("token");
+    expect(JSON.stringify(session)).not.toContain("secret-token");
+    expect(session).toMatchObject({ id: "s1", userId: "u1", locationLabel: "Springfield, US" });
   });
 });

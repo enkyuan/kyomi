@@ -56,10 +56,18 @@ describe("classifyAuthSessionPayload", () => {
     expect(state).toMatchObject({ status: "authenticated" });
   });
 
-  test("a session without a token is not a complete session", () => {
+  test("a session without a token is complete: the API does not send one", () => {
     expect(classifyAuthSessionPayload(authenticatedPayload)).toMatchObject({
-      status: "unavailable",
+      status: "authenticated",
     });
+  });
+
+  test("a session missing a field the page needs is not complete", () => {
+    const { id: _id, ...withoutId } = authenticatedPayload.session;
+
+    expect(
+      classifyAuthSessionPayload({ ...authenticatedPayload, session: withoutId }),
+    ).toMatchObject({ status: "unavailable" });
   });
 
   test.each([

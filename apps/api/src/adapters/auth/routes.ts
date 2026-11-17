@@ -1,6 +1,7 @@
 import { Elysia } from "elysia";
 import { Effect, type ManagedRuntime } from "effect";
 import { AppConfig } from "@config/env/service";
+import { unexpected } from "@shared/effect/errors";
 import { effectPlugin } from "@shared/http/effect/plugin";
 import { requestObservationPlugin } from "@shared/http/stacks";
 import {
@@ -8,6 +9,7 @@ import {
   getAuthCapabilities,
   serializeAuthCapabilities,
 } from "./capabilities";
+import { isGetSessionRequest, redactSessionToken } from "./redact";
 import { Auth } from "./service";
 
 type AuthRuntime = ManagedRuntime.ManagedRuntime<Auth | AppConfig, unknown>;
@@ -39,7 +41,11 @@ const handleAuthRequest = Effect.fn("auth.handle")(function* (
   const auth = yield* Auth;
   const headers = withForwardedForHeader(request, ipAddress);
   const response = yield* auth.handle(new Request(request, { headers }));
-  return yield* withAuthCapabilities(response);
+  // The session record goes to page scripts, so it must not carry the session token.
+  const visible = isGetSessionRequest(request)
+    ? yield* Effect.tryPromise({ try: () => redactSessionToken(response), catch: unexpected })
+    : response;
+  return yield* withAuthCapabilities(visible);
 });
 
 const listSessions = Effect.fn("auth.listSessions")(function* (

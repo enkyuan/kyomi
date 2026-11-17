@@ -15,12 +15,22 @@ import {
 import { createAuth } from "./instance";
 import { hydrateStoredLocation, type LocationFields } from "./location";
 import { queueEmailOTP } from "./otp";
+import { withoutToken } from "./redact";
 
-/** One of the user's sessions, with its stored location filled in for display. */
-export type AuthSession = Awaited<
+type StoredSession = Awaited<
   ReturnType<ReturnType<typeof createAuth>["api"]["listSessions"]>
->[number] &
-  LocationFields;
+>[number];
+
+/**
+ * One of the user's sessions, with its stored location filled in for display. It has no token: a
+ * client names a session by its `id`.
+ */
+export type AuthSession = Omit<StoredSession, "token"> & LocationFields;
+
+/** What a client may see of a stored session: its location filled in, never its token. */
+export function toAuthSession(session: StoredSession): AuthSession {
+  return hydrateStoredLocation(withoutToken(session));
+}
 
 export type AuthShape = {
   /** Better Auth's HTTP surface (`/api/auth/*`): sign-in, OAuth, sessions. */
@@ -79,9 +89,7 @@ export class Auth extends Context.Service<Auth, AuthShape>()("kyomi/Auth") {
           Effect.tryPromise({
             try: () => auth.api.listSessions({ headers }),
             catch: toAuthError,
-          }).pipe(
-            Effect.map((sessions) => sessions.map((session) => hydrateStoredLocation(session))),
-          ),
+          }).pipe(Effect.map((sessions) => sessions.map(toAuthSession))),
       });
     }),
   );

@@ -39,7 +39,7 @@ describe("account session helpers", () => {
       parseSessionsResponse([
         {
           id: "session-1",
-          token: "token-1",
+          token: "stale-token-from-an-older-api",
           updatedAt: "2026-07-01T12:00:00.000Z",
           expiresAt: "2026-08-01T12:00:00.000Z",
         },
@@ -47,7 +47,6 @@ describe("account session helpers", () => {
     ).toEqual([
       {
         id: "session-1",
-        token: "token-1",
         ipAddress: null,
         userAgent: null,
         updatedAt: "2026-07-01T12:00:00.000Z",
