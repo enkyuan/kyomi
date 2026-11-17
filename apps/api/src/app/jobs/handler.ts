@@ -321,9 +321,9 @@ function failureContext(message: JobMessage | null): Record<string, unknown> {
 }
 
 /**
- * Build the consumer's failure logger: warn for expected failures, error for ours. The class only
- * picks the log severity; the consumer retries every failed job and dead-letters it after the
- * last attempt, so an operator can always find and replay it.
+ * Build the consumer's failure logger: warn for expected failures, error for ours. The class picks
+ * the log severity here and, through `isRetryable`, whether the consumer retries the job or
+ * dead-letters it at once; either way an operator can find and replay it.
  */
 export const makeFailureReporter = Effect.gen(function* () {
   const log = yield* AppLogger;

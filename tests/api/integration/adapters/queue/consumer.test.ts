@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { Deferred, Effect, Exit, Fiber, Layer, Scope } from "effect";
 import { TestClock } from "effect/testing";
 import { startConsumers, type StreamConsumer } from "@adapters/queue/consumer";
-import { toJobFailure, type JobFailure } from "@app/jobs/classify";
+import { classifyJobFailure, toJobFailure, type JobFailure } from "@app/jobs/classify";
 import { fakeRedis, recordingLogger, replyError } from "@api-tests/support/layers";
 import { NotFound, Unavailable } from "@shared/effect/errors";
 
@@ -204,7 +204,55 @@ describe("startConsumers", () => {
     });
   });
 
-  test("a deterministic failure is retried and dead-lettered like any other, never dropped", async () => {
+  test("a permanent failure is dead-lettered at once, never retried or dropped", async () => {
+    const failures: string[] = [];
+    const redis = streamRedis({ batches: [[refreshEntry("1-0")]] });
+
+    await runUntil(
+      [
+        consumer({
+          handle: () =>
+            Effect.fail(new NotFound({ message: "Article not found", code: "ARTICLE_NOT_FOUND" })),
+          isRetryable: (error) => classifyJobFailure(error).retryable,
+          onFailure: (error) => {
+            failures.push(error._tag);
+            return Effect.void;
+          },
+        }),
+      ],
+      redis,
+      () => redis.state.transactions.length === 1,
+    ).result;
+
+    expect(movedTo(redis.state.transactions[0]!)).toMatchObject({
+      stream: "jobs:dead-letter",
+      fields: { attempts: "1", error: "Article not found", original_stream_id: "1-0" },
+    });
+    expect(failures).toEqual(["NotFound"]);
+    expect(redis.state.acked).toEqual([]);
+  });
+
+  test("a retryable failure is still requeued when the consumer classifies failures", async () => {
+    const redis = streamRedis({ batches: [[refreshEntry("1-0")]] });
+
+    await runUntil(
+      [
+        consumer({
+          handle: () => Effect.fail(new Unavailable({ message: "later", code: "UPSTREAM" })),
+          isRetryable: (error) => classifyJobFailure(error).retryable,
+        }),
+      ],
+      redis,
+      () => redis.state.transactions.length === 1,
+    ).result;
+
+    expect(movedTo(redis.state.transactions[0]!)).toMatchObject({
+      stream: "jobs:feed-refresh",
+      fields: { attempts: "1", last_error: "later" },
+    });
+  });
+
+  test("without a classifier a deterministic failure is retried and dead-lettered like any other, never dropped", async () => {
     const failures: string[] = [];
     const handle = () =>
       Effect.fail(new NotFound({ message: "Article not found", code: "ARTICLE_NOT_FOUND" }));

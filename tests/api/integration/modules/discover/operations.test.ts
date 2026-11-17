@@ -163,7 +163,7 @@ describe("searchFeeds", () => {
     expect(db.calls).toBe(0);
   });
 
-  test("returns an empty list, with no Postgres fallback, when Meilisearch fails, and says so", async () => {
+  test("answers from Postgres when Meilisearch fails, and says so", async () => {
     const search = meili((request) =>
       request.url.endsWith("/search")
         ? new Response("meili is down", { status: 503 })
@@ -174,8 +174,8 @@ describe("searchFeeds", () => {
 
     const result = await test.run(searchFeeds("user_1", "example", 10));
 
-    expect(result).toEqual([]);
-    expect(db.calls).toBe(0);
+    expect(result).toEqual([feedRow()]);
+    expect(db.calls).toBe(1);
     expect(test.logs.entries).toContainEqual({
       level: "warn",
       event: "discover.search.meili_fallback",
@@ -187,20 +187,42 @@ describe("searchFeeds", () => {
     });
   });
 
-  test("returns an empty list when Meilisearch is unreachable", async () => {
+  test("answers from Postgres when Meilisearch is unreachable", async () => {
     const search = meili(() => new Error("connection refused"));
     const db = selectsReturning([{ ...feedRow(), score: 4 }]);
     const test = harness({ db, search: search.layer });
 
-    expect(await test.run(searchFeeds("user_1", "example", 10))).toEqual([]);
-    expect(db.calls).toBe(0);
+    expect(await test.run(searchFeeds("user_1", "example", 10))).toEqual([feedRow()]);
+    expect(db.calls).toBe(1);
     expect(test.logs.entries.map((entry) => entry.event)).toContain(
       "discover.search.meili_fallback",
     );
   });
 
-  test("returns an empty list when the Postgres join over Meilisearch hits fails", async () => {
+  test("answers from Postgres when only the join over Meilisearch hits fails", async () => {
     const search = meili(healthyMeili([meiliHit()]));
+    const rows = selectsReturning([{ ...feedRow(), score: 2 }]);
+    let joined = false;
+    const db = {
+      select: () => {
+        if (!joined) {
+          joined = true;
+          throw new Error("join failed");
+        }
+        return rows.select();
+      },
+      calls: 0,
+    };
+    const test = harness({ db, search: search.layer });
+
+    expect(await test.run(searchFeeds("user_1", "example", 10))).toEqual([feedRow()]);
+    expect(test.logs.entries.map((entry) => entry.event)).toContain(
+      "discover.search.meili_fallback",
+    );
+  });
+
+  test("fails with the database error, never an empty list, when Postgres is down too", async () => {
+    const search = meili(() => new Error("connection refused"));
     const db = {
       select: () => {
         throw new Error("postgres is down");
@@ -209,10 +231,9 @@ describe("searchFeeds", () => {
     };
     const test = harness({ db, search: search.layer });
 
-    expect(await test.run(searchFeeds("user_1", "example", 10))).toEqual([]);
-    expect(test.logs.entries.map((entry) => entry.event)).toContain(
-      "discover.search.meili_fallback",
-    );
+    const error = await test.run(searchFeeds("user_1", "example", 10).pipe(Effect.flip));
+
+    expect(error).toMatchObject({ _tag: "DatabaseError" });
   });
 
   test("uses Postgres alone when Meilisearch is not configured", async () => {

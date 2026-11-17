@@ -10,28 +10,28 @@ memory. The names below were checked against 4.1.4.
 
 ## Where things live
 
-| Path | Holds |
-| --- | --- |
-| `src/shared/effect/errors.ts` | The typed error catalogue. |
-| `src/shared/effect/request.ts` | `RequestContext` and `CurrentUser` services (per request). |
-| `src/shared/http/error/render.ts` | `describeError` / `describeCause`: the one edge mapper. `EffectFailure`. |
-| `src/shared/http/effect/bridge.ts` | `runEffect(ctx, effect)`: the typed Elysia to Effect bridge. |
-| `src/shared/http/effect/plugin.ts` | `effectPlugin(runtime)`: derives `runEffect` on the Elysia context (the runtime itself is not decorated: Elysia deep-merges decorators on every mount). |
-| `src/config/env/service.ts` | `AppConfig` (validated env as a service). |
-| `src/adapters/<capability>/service.ts` | `Db`, `Redis`, `AppLogger` services and their live Layers. |
-| `src/adapters/http/client.ts` | `HttpClientLive` (the `HttpClient` service from `effect/http`). |
-| `src/adapters/queue/service.ts` | `JobQueue.publish(job)`: the producer side of the Redis Streams job queue. |
-| `src/adapters/queue/consumer.ts` | `startConsumers`: scoped, supervised stream consumers with drain on shutdown. |
-| `src/adapters/auth/service.ts` | `Auth` (Better Auth: `handle`, `sessionUserId`, `listSessions`). Sign-in emails run on a layer-owned `FiberSet`. `session.ts`: `requireAuth`, `resolveSessionContext(runtime, request, set)`. |
-| `src/adapters/rate-limit/service.ts` | `RateLimiter.enforce(subject, rule)`: Redis counters, scoped in-memory fallback. `plugin.ts`: `rateLimitPlugin(runtime)` puts `enforceRateLimit` on the Elysia context for `enforceRateLimitForContext`. |
-| `src/adapters/search/service.ts` | `FeedSearch` (Meilisearch over `HttpClient`): `isConfigured`, `upsert`, `remove`, `search`. |
-| `src/shared/net/outbound.ts` | `checkOutboundUrl` (SSRF policy as an Effect) and `HostResolver`, a `Context.Reference` whose default is system DNS; tests `Effect.provideService(HostResolver, ...)`. |
+| Path                                                                                          | Holds                                                                                                                                                                                                                                                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/shared/effect/errors.ts`                                                                 | The typed error catalogue.                                                                                                                                                                                                                                                                                                                                                                               |
+| `src/shared/effect/request.ts`                                                                | `RequestContext` and `CurrentUser` services (per request).                                                                                                                                                                                                                                                                                                                                               |
+| `src/shared/http/error/render.ts`                                                             | `describeError` / `describeCause`: the one edge mapper. `EffectFailure`.                                                                                                                                                                                                                                                                                                                                 |
+| `src/shared/http/effect/bridge.ts`                                                            | `runEffect(ctx, effect)`: the typed Elysia to Effect bridge.                                                                                                                                                                                                                                                                                                                                             |
+| `src/shared/http/effect/plugin.ts`                                                            | `effectPlugin(runtime)`: derives `runEffect` on the Elysia context (the runtime itself is not decorated: Elysia deep-merges decorators on every mount).                                                                                                                                                                                                                                                  |
+| `src/config/env/service.ts`                                                                   | `AppConfig` (validated env as a service).                                                                                                                                                                                                                                                                                                                                                                |
+| `src/adapters/<capability>/service.ts`                                                        | `Db`, `Redis`, `AppLogger` services and their live Layers.                                                                                                                                                                                                                                                                                                                                               |
+| `src/adapters/http/client.ts`                                                                 | `HttpClientLive` (the `HttpClient` service from `effect/http`).                                                                                                                                                                                                                                                                                                                                          |
+| `src/adapters/queue/service.ts`                                                               | `JobQueue.publish(job)`: the producer side of the Redis Streams job queue.                                                                                                                                                                                                                                                                                                                               |
+| `src/adapters/queue/consumer.ts`                                                              | `startConsumers`: scoped, supervised stream consumers with drain on shutdown.                                                                                                                                                                                                                                                                                                                            |
+| `src/adapters/auth/service.ts`                                                                | `Auth` (Better Auth: `handle`, `sessionUserId`, `listSessions`). Sign-in emails run on a layer-owned `FiberSet`. `session.ts`: `requireAuth`, `resolveSessionContext(runtime, request, set)`.                                                                                                                                                                                                            |
+| `src/adapters/rate-limit/service.ts`                                                          | `RateLimiter.enforce(subject, rule)`: Redis counters, scoped in-memory fallback. `plugin.ts`: `rateLimitPlugin(runtime)` puts `enforceRateLimit` on the Elysia context for `enforceRateLimitForContext`.                                                                                                                                                                                                 |
+| `src/adapters/search/service.ts`                                                              | `FeedSearch` (Meilisearch over `HttpClient`): `isConfigured`, `upsert`, `remove`, `search`.                                                                                                                                                                                                                                                                                                              |
+| `src/shared/net/outbound.ts`                                                                  | `checkOutboundUrl` (SSRF policy as an Effect) and `HostResolver`, a `Context.Reference` whose default is system DNS; tests `Effect.provideService(HostResolver, ...)`.                                                                                                                                                                                                                                   |
 | `src/modules/feeds/service.ts`, `favicon/service.ts`, `catalog/embeddings.ts`, `opml/live.ts` | Module seams: `FeedBackground` (post-response work on the runtime scope), `FaviconResolver` and `Embeddings` (the `@kyomi/ingest` favicon and embeddings clients, which use the global `fetch`, wrapped once with typed errors), `OpmlFeedsLive` (`OpmlFeeds` over feeds and folders, so OPML code needs only `OpmlFeeds`). All are in `AppLive`; tests provide fake Layers instead of patching `fetch`. |
-| `src/modules/catalog/` | Operator scripts' behaviour (`import/`, `backfill/`, `category-model/`) as Effects with their own tagged errors (`errors.ts`); `app/boot/*.ts` only run them. |
-| `src/app/jobs/` | `handler.ts` (job dispatch), `classify.ts` (typed failure classes), `consumer.ts` (`WorkerLive`), `scheduler.ts`, `dispatcher.ts` (loops). |
-| `src/app/setup/main.ts` | `runMain(effect)`: process entrypoint that turns SIGINT/SIGTERM into fiber interruption. |
-| `src/app/runtime.ts` | `AppLive` and `createAppRuntime()`: the one composition root. |
-| `tests/api/integration/support/layers.ts` | Test Layers (fake db/redis/http, recording logger, config). |
+| `src/modules/catalog/`                                                                        | Operator scripts' behaviour (`import/`, `backfill/`, `category-model/`) as Effects with their own tagged errors (`errors.ts`); `app/boot/*.ts` only run them.                                                                                                                                                                                                                                            |
+| `src/app/jobs/`                                                                               | `handler.ts` (job dispatch), `classify.ts` (typed failure classes), `consumer.ts` (`WorkerLive`), `scheduler.ts`, `dispatcher.ts` (loops).                                                                                                                                                                                                                                                               |
+| `src/app/setup/main.ts`                                                                       | `runMain(effect)`: process entrypoint that turns SIGINT/SIGTERM into fiber interruption.                                                                                                                                                                                                                                                                                                                 |
+| `src/app/runtime.ts`                                                                          | `AppLive` and `createAppRuntime()`: the one composition root.                                                                                                                                                                                                                                                                                                                                            |
+| `tests/api/integration/support/layers.ts`                                                     | Test Layers (fake db/redis/http, recording logger, config).                                                                                                                                                                                                                                                                                                                                              |
 
 A module's Effects sit in its existing role files (`operations.ts`, `queries.ts`, `checks.ts`) and
 declare what they need in the `R` type. Modules never import `@app/*`. `routes.ts` stays the HTTP
@@ -41,11 +41,14 @@ boundary: it takes the runtime and calls `runEffect`. Reference exemplar: `modul
 
 ```ts
 export class Db extends Context.Service<Db, DbShape>()("kyomi/Db") {
-  static readonly layer = Layer.effect(Db, Effect.gen(function* () {
-    const config = yield* AppConfig            // a service is yieldable
-    const pool = yield* Effect.acquireRelease(acquire, release)  // scoped by Layer.effect
-    return Db.of(makeDb(pool))
-  }))
+  static readonly layer = Layer.effect(
+    Db,
+    Effect.gen(function* () {
+      const config = yield* AppConfig; // a service is yieldable
+      const pool = yield* Effect.acquireRelease(acquire, release); // scoped by Layer.effect
+      return Db.of(makeDb(pool));
+    }),
+  );
 }
 ```
 
@@ -69,14 +72,20 @@ export class Db extends Context.Service<Db, DbShape>()("kyomi/Db") {
 ```ts
 export const checkReadiness: Effect.Effect<ReadinessPayload, never, Db | AppLogger> = Effect.gen(
   function* () {
-    const db = yield* Db
-    const log = yield* AppLogger
-    return yield* db.use("select 1", (client) => client.execute(sql`select 1`)).pipe(
-      Effect.as(true),
-      Effect.catchTag("DatabaseError", (e) =>
-        log.warn("health.ready.failed", { error: serializeError(e.cause) }).pipe(Effect.as(false))),
-    )
-  })
+    const db = yield* Db;
+    const log = yield* AppLogger;
+    return yield* db
+      .use("select 1", (client) => client.execute(sql`select 1`))
+      .pipe(
+        Effect.as(true),
+        Effect.catchTag("DatabaseError", (e) =>
+          log
+            .warn("health.ready.failed", { error: serializeError(e.cause) })
+            .pipe(Effect.as(false)),
+        ),
+      );
+  },
+);
 ```
 
 - Parameterised operations use `Effect.fn("module.operation")(function* (arg) { ... })` (adds a
@@ -106,7 +115,7 @@ One catalogue in `shared/effect/errors.ts`, built on `Data.TaggedError`. Public 
 (defaults per class in `ERROR_CATALOGUE`), `details`, `cause`. Keep the existing wire codes:
 
 ```ts
-new NotFound({ message: "Feed not found", code: "FEED_NOT_FOUND" })
+new NotFound({ message: "Feed not found", code: "FEED_NOT_FOUND" });
 ```
 
 Infrastructure errors (`DatabaseError`, `RedisError`, `UpstreamError`, `ConfigError`) carry
@@ -126,7 +135,7 @@ runtime's services fixed, so an Effect that needs a service the runtime lacks do
 Authenticated route (after `resolveSessionContext`):
 
 ```ts
-runEffect({ runtime, request, requestId, userId }, effect)   // effect may require CurrentUser
+runEffect({ runtime, request, requestId, userId }, effect); // effect may require CurrentUser
 ```
 
 `runEffect` provides `RequestContext` (and `CurrentUser` when `userId` is set) with
@@ -139,8 +148,13 @@ claim-then-publish section in `Effect.uninterruptible`. On failure `runEffect` t
 `request.failed`. Do not render errors in handlers. Routes take the runtime as an argument:
 
 ```ts
-export function healthPlugin(runtime: ManagedRuntime.ManagedRuntime<Db | AppLogger | Redis | AppConfig, unknown>) {
-  return new Elysia({ name: "kyomi.health" }).use(requestObservationPlugin(runtime)).use(effectPlugin(runtime)).get("/ready", ({ runEffect }) => runEffect(checkReadiness))
+export function healthPlugin(
+  runtime: ManagedRuntime.ManagedRuntime<Db | AppLogger | Redis | AppConfig, unknown>,
+) {
+  return new Elysia({ name: "kyomi.health" })
+    .use(requestObservationPlugin(runtime))
+    .use(effectPlugin(runtime))
+    .get("/ready", ({ runEffect }) => runEffect(checkReadiness));
 }
 ```
 
@@ -155,12 +169,12 @@ program builds `AppLive` (`Effect.provide(AppLive)` or `Layer.launch`). SIGINT/S
 main fiber, the scope closes, and finalizers run in reverse order of acquisition. Nothing else
 calls `app.stop()`, `pool.end()` or `closeRedis()`.
 
-| Process | Program |
-| --- | --- |
-| `boot/server.ts` | build `AppLive` (invalid env fails here), `acquireRelease` the Elysia listener, wait forever. |
-| `boot/worker.ts` | `Layer.launch(WorkerLive)`: one consumer fiber per stream. |
+| Process             | Program                                                                                         |
+| ------------------- | ----------------------------------------------------------------------------------------------- |
+| `boot/server.ts`    | build `AppLive` (invalid env fails here), `acquireRelease` the Elysia listener, wait forever.   |
+| `boot/worker.ts`    | `Layer.launch(WorkerLive)`: one consumer fiber per stream.                                      |
 | `boot/scheduler.ts` | `Effect.all([feedRefreshSchedulerLoop, importDispatcherLoop])`: one dying interrupts the other. |
-| `boot/dev.ts` | server + `WorkerLive` + feed scheduler in one scope. |
+| `boot/dev.ts`       | server + `WorkerLive` + feed scheduler in one scope.                                            |
 
 Elysia does not await `onStop`; the entrypoint's scope owns the order. Behavioural tests:
 `tests/api/integration/app/setup/main.test.ts` (a spawned entrypoint: SIGTERM/SIGINT release the scope in
@@ -179,11 +193,12 @@ finalizers, `runtimeFromScope` ordering, `registerLifecycle` with and without `o
   8s to finish running jobs, then are interrupted (entries stay pending and are claimed later).
 - **Handlers** return `Effect<void, JobFailure>`. Wrap legacy Promise operations with
   `attemptJob(run, onAbandoned)` (maps a throw with `toJobFailure`). `classifyJobFailure` classifies by error class:
-  the class only picks the log severity and the logged `retryable` hint (4xx other than 408/429 is
-  `expected` and logged at warn). Every failed job is retried (3 attempts) and then dead-lettered
-  with the error in `error` and `last_error`, so an operator can list and replay it. Only a
-  handler that returns normally (a permanent feed refresh failure the refresh service already
-  recorded on the feed row) is acknowledged without a retry.
+  the class picks the log severity and whether the job is retried (4xx other than 408, 409 and 429
+  is permanent: `expected`, logged at warn, and dead-lettered on its first failure). Any other failed
+  job is retried (3 attempts) and then dead-lettered. Either way the error is in `error` and
+  `last_error`, so an operator can list and replay it. Only a handler that returns normally (a
+  permanent feed refresh failure the refresh service already recorded on the feed row) is
+  acknowledged without a retry.
 - **Interruption.** Feed ingestion is a Promise API without an abort signal, so `attemptJob`
   (`app/jobs/handler.ts`) keeps an interrupted job's fiber alive, uninterruptibly and for at most
   30s, until its Promise settles. The consumer scope therefore closes Postgres and Redis only
@@ -198,22 +213,24 @@ finalizers, `runtimeFromScope` ordering, `registerLifecycle` with and without `o
 No `mock.module` and no `globalThis.fetch` patching in converted tests. Provide Layers
 (`tests/api/integration/support/layers.ts`):
 
-| Helper | Gives |
-| --- | --- |
-| `testConfig(overrides)` | `AppConfig` from fixed values (validated), not `process.env`. |
-| `recordingLogger()` | `{ entries, layer }`: an `AppLogger` that records `{level, event, context}`. |
-| `fakeDb({ execute })` | `Db` over a Drizzle fake; unlisted methods throw. |
-| `realDb(overrides)` | The production `Db.layer` against `DATABASE_URL`. |
-| `fakeRedis({ xlen, xpending })` | `Redis` over a fake client; unlisted commands throw. |
-| `fakeQueue({ xadd, ... })` | `Redis` plus the real `JobQueue` over the same fake client. |
-| `replyError("NOGROUP ...")` | An error shaped like an ioredis `ReplyError`. |
-| `fakeHttpClient(respond)` | `HttpClient` answering from a function; no network. |
+| Helper                                            | Gives                                                                                                                                             |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `testConfig(overrides)`                           | `AppConfig` from fixed values (validated), not `process.env`.                                                                                     |
+| `recordingLogger()`                               | `{ entries, layer }`: an `AppLogger` that records `{level, event, context}`.                                                                      |
+| `fakeDb({ execute })`                             | `Db` over a Drizzle fake; unlisted methods throw.                                                                                                 |
+| `realDb(overrides)`                               | The production `Db.layer` against `DATABASE_URL`.                                                                                                 |
+| `fakeRedis({ xlen, xpending })`                   | `Redis` over a fake client; unlisted commands throw.                                                                                              |
+| `fakeQueue({ xadd, ... })`                        | `Redis` plus the real `JobQueue` over the same fake client.                                                                                       |
+| `replyError("NOGROUP ...")`                       | An error shaped like an ioredis `ReplyError`.                                                                                                     |
+| `fakeHttpClient(respond)`                         | `HttpClient` answering from a function; no network.                                                                                               |
 | `scriptedHttpClient(respond)` (`support/http.ts`) | `HttpClient` that returns a `Response`, fails with a transport error when given an `Error`, or never answers; sees method, url, headers and body. |
-| `silentLogger` | An `AppLogger` that discards entries. |
-| `TestClock.layer()` (from `effect/testing`) | Deterministic time; `TestClock.setTime`, `TestClock.adjust`. |
+| `silentLogger`                                    | An `AppLogger` that discards entries.                                                                                                             |
+| `TestClock.layer()` (from `effect/testing`)       | Deterministic time; `TestClock.setTime`, `TestClock.adjust`.                                                                                      |
 
 ```ts
-await Effect.runPromise(checkReadiness.pipe(Effect.provide(Layer.mergeAll(fakeDb({ execute }), recordingLogger().layer))))
+await Effect.runPromise(
+  checkReadiness.pipe(Effect.provide(Layer.mergeAll(fakeDb({ execute }), recordingLogger().layer))),
+);
 ```
 
 For routes, build `ManagedRuntime.make(Layer.mergeAll(...))`, call the plugin factory, call
@@ -238,30 +255,30 @@ the Promise API out of Effect signatures.
 
 ## v4 cheat-sheet (verified against effect@4.1.4)
 
-| Need | v4 name | Not (v3) |
-| --- | --- | --- |
-| Service | `class X extends Context.Service<X, Shape>()("key")` | `Context.Tag`, `Effect.Service` |
-| Read a service | `yield* X`, `Effect.service(X)`, `Effect.serviceOption(X)` | |
-| Provide | `Effect.provide(layer)`, `Effect.provideService(X, shape)` | |
-| Layers | `Layer.effect`, `.succeed`, `.sync`, `.unwrap`, `.mergeAll`, `.merge`, `.provide`, `.provideMerge` | `Layer.scoped` (scope is implicit in `Layer.effect`) |
-| Runtime | `ManagedRuntime.make(layer)`; `.runPromise(e, { signal })`, `.runPromiseExit`, `.context()`, `.dispose()` | |
-| Errors | `Data.TaggedError("Tag")<{...}>`; `Schema.TaggedError<Self>()("Tag", fields)` | |
-| Recover | `Effect.catch`, `catchTag`, `catchTags`, `catchIf`, `catchCause`, `mapError`, `orDie` | `catchAll` |
-| To value | `Effect.result` (a `Result`), `Effect.exit`, `Effect.flip` | `Effect.either` |
-| Promise | `Effect.tryPromise({ try, catch })`, `Effect.promise` | |
-| Resources | `Effect.acquireRelease`, `acquireUseRelease`, `addFinalizer`, `ensuring`, `Scope.make`, `Scope.close` | |
-| Fibers | `Effect.forkChild`, `forkScoped`, `forkIn`, `forkDetach` | `Effect.fork`, `forkDaemon` |
-| Functions | `Effect.fn("name")(function* (...) {})`, `Effect.fnUntraced`, `Effect.gen` | |
-| Cause | `Cause.findError(c)` / `findDefect(c)` return a `Result` (use `Result.isSuccess(r) && r.success`), `Cause.hasInterrupts`, `Cause.pretty`, `cause.reasons` | `Cause.failureOption` |
-| Exit | `Exit.isSuccess(e)` then `e.value`; `Exit.isFailure(e)` then `e.cause` | |
-| Time | `Clock.currentTimeMillis`, `Effect.sleep`, `Effect.timeout` (fails `Cause.TimeoutError`) | |
-| Retry | `Effect.retry({ schedule, while })`, `Effect.repeat`; `Schedule.exponential`, `spaced`, `fixed`, `recurs`, `jittered`, `during`, `cron` | |
-| Concurrency | `Effect.forEach(xs, f, { concurrency })`, `Effect.all({ a, b }, { concurrency })` | |
-| Queues | `Queue.bounded/unbounded/sliding/dropping`, `Queue.offer/take/takeAll/end`; `PubSub.bounded/publish/subscribe` (subscribe is scoped) | |
-| Streams | `Stream.fromQueue`, `fromPubSub`, `fromAsyncIterable`, `mapEffect`, `runForEach`, `runCollect` | |
-| Logging | `Logger.make`, `Logger.layer([...])`, `References.MinimumLogLevel` | |
-| HTTP client | `HttpClient.HttpClient`, `FetchHttpClient.layer`, `HttpClient.make`, `HttpClientResponse.fromWeb` (imports from `effect/http`) | |
-| Test time | `TestClock.layer()`, `TestClock.adjust`, `TestClock.setTime` (from `effect/testing`) | |
+| Need           | v4 name                                                                                                                                                   | Not (v3)                                             |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| Service        | `class X extends Context.Service<X, Shape>()("key")`                                                                                                      | `Context.Tag`, `Effect.Service`                      |
+| Read a service | `yield* X`, `Effect.service(X)`, `Effect.serviceOption(X)`                                                                                                |                                                      |
+| Provide        | `Effect.provide(layer)`, `Effect.provideService(X, shape)`                                                                                                |                                                      |
+| Layers         | `Layer.effect`, `.succeed`, `.sync`, `.unwrap`, `.mergeAll`, `.merge`, `.provide`, `.provideMerge`                                                        | `Layer.scoped` (scope is implicit in `Layer.effect`) |
+| Runtime        | `ManagedRuntime.make(layer)`; `.runPromise(e, { signal })`, `.runPromiseExit`, `.context()`, `.dispose()`                                                 |                                                      |
+| Errors         | `Data.TaggedError("Tag")<{...}>`; `Schema.TaggedError<Self>()("Tag", fields)`                                                                             |                                                      |
+| Recover        | `Effect.catch`, `catchTag`, `catchTags`, `catchIf`, `catchCause`, `mapError`, `orDie`                                                                     | `catchAll`                                           |
+| To value       | `Effect.result` (a `Result`), `Effect.exit`, `Effect.flip`                                                                                                | `Effect.either`                                      |
+| Promise        | `Effect.tryPromise({ try, catch })`, `Effect.promise`                                                                                                     |                                                      |
+| Resources      | `Effect.acquireRelease`, `acquireUseRelease`, `addFinalizer`, `ensuring`, `Scope.make`, `Scope.close`                                                     |                                                      |
+| Fibers         | `Effect.forkChild`, `forkScoped`, `forkIn`, `forkDetach`                                                                                                  | `Effect.fork`, `forkDaemon`                          |
+| Functions      | `Effect.fn("name")(function* (...) {})`, `Effect.fnUntraced`, `Effect.gen`                                                                                |                                                      |
+| Cause          | `Cause.findError(c)` / `findDefect(c)` return a `Result` (use `Result.isSuccess(r) && r.success`), `Cause.hasInterrupts`, `Cause.pretty`, `cause.reasons` | `Cause.failureOption`                                |
+| Exit           | `Exit.isSuccess(e)` then `e.value`; `Exit.isFailure(e)` then `e.cause`                                                                                    |                                                      |
+| Time           | `Clock.currentTimeMillis`, `Effect.sleep`, `Effect.timeout` (fails `Cause.TimeoutError`)                                                                  |                                                      |
+| Retry          | `Effect.retry({ schedule, while })`, `Effect.repeat`; `Schedule.exponential`, `spaced`, `fixed`, `recurs`, `jittered`, `during`, `cron`                   |                                                      |
+| Concurrency    | `Effect.forEach(xs, f, { concurrency })`, `Effect.all({ a, b }, { concurrency })`                                                                         |                                                      |
+| Queues         | `Queue.bounded/unbounded/sliding/dropping`, `Queue.offer/take/takeAll/end`; `PubSub.bounded/publish/subscribe` (subscribe is scoped)                      |                                                      |
+| Streams        | `Stream.fromQueue`, `fromPubSub`, `fromAsyncIterable`, `mapEffect`, `runForEach`, `runCollect`                                                            |                                                      |
+| Logging        | `Logger.make`, `Logger.layer([...])`, `References.MinimumLogLevel`                                                                                        |                                                      |
+| HTTP client    | `HttpClient.HttpClient`, `FetchHttpClient.layer`, `HttpClient.make`, `HttpClientResponse.fromWeb` (imports from `effect/http`)                            |                                                      |
+| Test time      | `TestClock.layer()`, `TestClock.adjust`, `TestClock.setTime` (from `effect/testing`)                                                                      |                                                      |
 
 ## Pitfalls
 

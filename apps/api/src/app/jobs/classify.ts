@@ -17,8 +17,8 @@ export type JobFailureClass = {
   severity: "expected" | "platform";
   code: string;
   /**
-   * Whether running the job again can succeed. Logged only: the consumer retries every failed job
-   * and dead-letters it after the last attempt.
+   * Whether running the job again can succeed. The consumer retries a retryable failure until its
+   * attempts are spent and dead-letters a permanent one on the first failure.
    */
   retryable: boolean;
 };
@@ -38,11 +38,12 @@ export function toJobFailure(cause: unknown): JobFailure {
 }
 
 /**
- * A request that cannot succeed unchanged (4xx other than 408 and 429) is permanent; server and
- * infrastructure failures are retryable. The same rule `classifyOpmlItemError` applies.
+ * A request that cannot succeed unchanged (4xx other than 408, 409 and 429) is permanent; server
+ * and infrastructure failures are retryable, and so is a conflict (409), which clears once the
+ * competing write settles. OPML items keep their own narrower rule in `classifyOpmlItemError`.
  */
 function retryableStatus(status: number): boolean {
-  return status >= 500 || status === 408 || status === 429;
+  return status >= 500 || status === 408 || status === 409 || status === 429;
 }
 
 export function classifyJobFailure(error: JobFailure): JobFailureClass {

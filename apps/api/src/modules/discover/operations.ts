@@ -178,10 +178,10 @@ const searchWithDatabase = Effect.fn("discover.searchDatabase")(function* (
 });
 
 /**
- * Feed search for `userId`. When Meilisearch is configured it answers alone (no hits means no
- * results); a failure anywhere in that branch (Meilisearch, or the Postgres join over its hits) is
- * logged as `discover.search.meili_fallback` and yields no results, as it did before the rewrite.
- * Postgres matching only serves a deployment without Meilisearch.
+ * Feed search for `userId`. When Meilisearch is configured it answers (no hits means no results);
+ * a failure anywhere in that branch (Meilisearch, or the Postgres join over its hits) is logged as
+ * `discover.search.meili_fallback` and the search is answered from Postgres instead. If Postgres
+ * fails too the `DatabaseError` propagates (a 500), so an outage never reads as "no matches".
  */
 export const searchFeeds = Effect.fn("discover.searchFeeds")(function* (
   userId: string,
@@ -216,7 +216,7 @@ export const searchFeeds = Effect.fn("discover.searchFeeds")(function* (
                 error: serializeError(error),
                 errorCode: error._tag === "Unavailable" ? error.code : undefined,
               })
-              .pipe(Effect.as([])),
+              .pipe(Effect.andThen(searchWithDatabase(userId, query, scanLimit))),
           ),
         )
       : yield* searchWithDatabase(userId, query, scanLimit);

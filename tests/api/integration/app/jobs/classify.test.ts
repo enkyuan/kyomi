@@ -6,6 +6,7 @@ import {
   toJobFailure,
 } from "@app/jobs/classify";
 import {
+  Conflict,
   DatabaseError,
   InternalError,
   NotFound,
@@ -83,7 +84,8 @@ describe("classifyJobFailure", () => {
     });
   });
 
-  test("timeouts, rate limits and server errors are retryable", () => {
+  test("timeouts, conflicts, rate limits and server errors are retryable", () => {
+    expect(classifyJobFailure(new Conflict({ message: "try again" })).retryable).toBe(true);
     expect(classifyJobFailure(new RateLimited({ message: "slow down" })).retryable).toBe(true);
     expect(classifyJobFailure(new Unavailable({ message: "later" })).retryable).toBe(true);
     expect(classifyJobFailure(new InternalError({ message: "boom", code: "BOOM" }))).toEqual({

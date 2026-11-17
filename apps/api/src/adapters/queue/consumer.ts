@@ -35,11 +35,17 @@ export type StreamConsumer<E extends { readonly message: string }> = {
   readonly maxAttempts?: number;
   readonly handle: (message: JobMessage) => Effect.Effect<void, E>;
   /**
+   * Whether running the job again could succeed. A failure it rejects is dead-lettered at once,
+   * with its error recorded, instead of being requeued: retrying a request that cannot succeed
+   * only delays the dead-letter entry an operator has to act on. Defaults to retrying everything.
+   */
+  readonly isRetryable?: (error: E | InternalError) => boolean;
+  /**
    * Called for every failure (a typed handler failure, a defect surfaced as `InternalError`, or
    * `BadRequest` for an entry that is not a job) so it can be logged. It never changes what
-   * happens to the job: a failed job goes back on the stream until `maxAttempts` is spent, then
-   * to the dead-letter stream, whatever the error class. An entry that is not a job is
-   * dead-lettered at once.
+   * happens to the job. A failed job goes back on the stream until `maxAttempts` is spent, then
+   * to the dead-letter stream; `isRetryable` skips straight to the dead-letter stream. An entry
+   * that is not a job is dead-lettered at once.
    */
   readonly onFailure: (
     error: E | BadRequest | InternalError,
@@ -178,7 +184,8 @@ const consumeStream = <E extends { readonly message: string }>(
         Effect.gen(function* () {
           yield* options.onFailure(failure, message);
           const text = failureText(failure);
-          if (message.attempts + 1 < maxAttempts) {
+          const retryable = options.isRetryable?.(failure) ?? true;
+          if (retryable && message.attempts + 1 < maxAttempts) {
             return yield* settle(
               "requeue",
               message.id,

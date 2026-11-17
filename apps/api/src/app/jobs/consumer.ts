@@ -4,7 +4,7 @@ import { developmentSchemaReady } from "@adapters/db/guard";
 import { AppLogger } from "@adapters/logger/service";
 import { startConsumers, type StreamConsumer } from "@adapters/queue/consumer";
 import { AppConfig } from "@config/env/service";
-import type { JobFailure } from "./classify";
+import { classifyJobFailure, type JobFailure } from "./classify";
 import { makeFailureReporter, makeJobHandler } from "./handler";
 
 /**
@@ -35,6 +35,7 @@ export const WorkerLive = Layer.effectDiscard(
         concurrency: config.JOB_PROCESS_CONCURRENCY,
         streamMaxLength: config.JOB_STREAM_MAX_LENGTH,
         handle,
+        isRetryable: (error) => classifyJobFailure(error).retryable,
         onFailure,
       }),
     );
