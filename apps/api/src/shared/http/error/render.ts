@@ -1,5 +1,6 @@
 import { Cause, Result } from "effect";
-import { ERROR_CATALOGUE, isApiError } from "@shared/effect/errors";
+import { ERROR_CATALOGUE, isApiError, type DatabaseError } from "@shared/effect/errors";
+import { isTransientDatabaseFailure } from "@shared/errors/postgres";
 import type { ErrorResponseDto } from "./response";
 
 /** A failure ready to render as `{ error: { message, code, requestId, details } }`. */
@@ -42,6 +43,28 @@ function isClientHttpError(
 }
 
 /**
+ * A database failure the client can act on, with its cause still logged: a write that lost a race
+ * to an equal row is a 409, and a timeout, deadlock, serialization failure or dropped connection is
+ * a 503 (the same request can succeed shortly). Anything else is an opaque 500.
+ */
+function describeDatabaseError(error: DatabaseError): RenderedFailure | undefined {
+  const { kind } = error;
+  if (kind === "unique_violation") {
+    return { status: 409, code: "CONFLICT", message: "Conflict", cause: error, expected: false };
+  }
+  if (isTransientDatabaseFailure(kind)) {
+    return {
+      status: 503,
+      code: "SERVICE_UNAVAILABLE",
+      message: "Service temporarily unavailable",
+      cause: error,
+      expected: false,
+    };
+  }
+  return undefined;
+}
+
+/**
  * The one mapping from any thrown or failed value to a status and error body. Typed catalogue
  * errors use `ERROR_CATALOGUE`, framework 4xx errors keep their status, and everything else is an opaque 500.
  */
@@ -50,6 +73,12 @@ export function describeError(error: unknown): RenderedFailure {
     return error.rendered;
   }
   if (isApiError(error)) {
+    if (error._tag === "DatabaseError") {
+      const rendered = describeDatabaseError(error);
+      if (rendered) {
+        return rendered;
+      }
+    }
     const entry = ERROR_CATALOGUE[error._tag];
     const fields = error as { message?: string; code?: string; details?: Record<string, unknown> };
     return {

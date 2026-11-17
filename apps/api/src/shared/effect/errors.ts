@@ -1,4 +1,9 @@
 import { Data } from "effect";
+import {
+  classifyDatabaseCause,
+  postgresSqlState,
+  type DatabaseFailureKind,
+} from "@shared/errors/postgres";
 
 /**
  * The typed error catalogue for Effect code. One class per HTTP meaning, a stable `code` string per
@@ -47,10 +52,23 @@ type InfraFields = {
   readonly cause: unknown;
 };
 
-/** A Postgres/drizzle call failed. Rendered as an opaque 500; the cause is logged, not exposed. */
+/**
+ * A Postgres/drizzle call failed. The cause is logged, never exposed. `kind` says what it means
+ * (a lost race, a timeout, a dropped connection) and is read from the SQLSTATE the driver reported,
+ * so callers and the HTTP edge can tell those from a bug without parsing the message.
+ */
 export class DatabaseError extends Data.TaggedError("DatabaseError")<InfraFields> {
   override get message() {
     return `Database operation failed: ${this.operation}`;
+  }
+
+  get kind(): DatabaseFailureKind {
+    return classifyDatabaseCause(this.cause);
+  }
+
+  /** The SQLSTATE of the Postgres error behind this failure, when the driver reported one. */
+  get sqlState(): string | undefined {
+    return postgresSqlState(this.cause);
   }
 }
 

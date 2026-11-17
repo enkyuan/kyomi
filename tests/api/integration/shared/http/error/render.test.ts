@@ -41,6 +41,60 @@ describe("describeError", () => {
     expect(redis.code).toBe("INTERNAL_ERROR");
   });
 
+  test("a write that lost a race to an equal row is a 409, with the cause still hidden and logged", () => {
+    const rendered = describeError(
+      new DatabaseError({
+        operation: "insert",
+        cause: Object.assign(new Error('duplicate key value violates unique constraint "u_idx"'), {
+          code: "23505",
+        }),
+      }),
+    );
+
+    expect(rendered).toMatchObject({
+      status: 409,
+      code: "CONFLICT",
+      message: "Conflict",
+      expected: false,
+    });
+    expect(JSON.stringify(failureBody(rendered))).not.toContain("u_idx");
+  });
+
+  test("a timeout, deadlock, serialization failure or dropped connection is a retryable 503", () => {
+    for (const cause of [
+      Object.assign(new Error("canceling statement due to statement timeout"), { code: "57014" }),
+      Object.assign(new Error("deadlock detected"), { code: "40P01" }),
+      Object.assign(new Error("could not serialize access"), { code: "40001" }),
+      Object.assign(new Error("terminating connection"), { code: "57P01" }),
+      new Error("Query read timeout"),
+      new Error("Connection terminated unexpectedly"),
+    ]) {
+      const rendered = describeError(new DatabaseError({ operation: "select", cause }));
+
+      expect(rendered).toMatchObject({
+        status: 503,
+        code: "SERVICE_UNAVAILABLE",
+        message: "Service temporarily unavailable",
+        expected: false,
+      });
+      expect(JSON.stringify(failureBody(rendered))).not.toContain(cause.message);
+    }
+  });
+
+  test("a foreign key violation or any other database error is still an opaque 500", () => {
+    for (const cause of [
+      Object.assign(new Error("violates foreign key constraint"), { code: "23503" }),
+      Object.assign(new Error("syntax error"), { code: "42601" }),
+    ]) {
+      expect(describeError(new DatabaseError({ operation: "x", cause }))).toMatchObject({
+        status: 500,
+        code: "INTERNAL_ERROR",
+        message: "Internal error",
+        expected: false,
+      });
+    }
+  });
+
   test("a typed error keeps its explicit code and details", () => {
     expect(
       describeError(

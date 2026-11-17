@@ -123,6 +123,16 @@ Infrastructure errors (`DatabaseError`, `RedisError`, `UpstreamError`, `ConfigEr
 `operation` and `cause`, render as an opaque `Internal error` / 502, and are logged with their cause.
 `ERROR_CATALOGUE` is `satisfies Record<ApiError["_tag"], ...>`, so a new tag must add its status.
 
+A `DatabaseError` also says what its cause means. `error.kind` and `error.sqlState` read the SQLSTATE
+the driver reported (through Drizzle's wrapper, `shared/errors/postgres.ts`), never the message; the one
+exception is the text `pg` itself raises for its own timeouts and dropped connections, which carry no
+SQLSTATE. The HTTP edge uses it: a unique violation (`23505`, a write that lost a race) renders 409
+`CONFLICT`, and a timeout (`57014`, `Query read timeout`), deadlock (`40P01`), serialization failure
+(`40001`) or dropped connection renders 503 `SERVICE_UNAVAILABLE`, since the same request can succeed
+shortly. Both stay opaque, with the cause logged. A foreign key violation and everything else stay a
+500: those are bugs or races worth seeing as errors. Jobs are unchanged: every `DatabaseError` is a
+retryable 5xx there, so the consumer retries it with its backoff.
+
 `describeError(unknown)` and `describeCause(cause)` in `shared/http/error/render.ts` are the only
 places that choose a status and body. They accept catalogue errors, framework 4xx errors and
 defects. The wire envelope is unchanged: `{ error: { message, code, requestId, details } }`.
