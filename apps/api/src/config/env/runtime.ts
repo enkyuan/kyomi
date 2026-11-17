@@ -52,6 +52,12 @@ export const embeddingsWorkerUrlFromEnv = httpsUrlFromEnv.refine(
   { error: "must point at the Worker's /embed route" },
 );
 
+/** The Kyomi Workers AI Worker's authenticated article translation route. */
+export const translationsWorkerUrlFromEnv = httpsUrlFromEnv.refine(
+  (value) => new URL(value).pathname.endsWith("/translate"),
+  { error: "must point at the Worker's /translate route" },
+);
+
 const nodeEnv =
   process.env.NODE_ENV === "development" ||
   process.env.NODE_ENV === "production" ||
@@ -82,6 +88,10 @@ const FEATURE_CREDENTIAL_RULES: readonly FeatureCredentialRule[] = [
   // The embeddings Worker needs its URL and token together; either alone is a mistake.
   { flag: "CLOUDFLARE_EMBEDDINGS_URL", credentials: ["CLOUDFLARE_EMBEDDINGS_TOKEN"] },
   { flag: "CLOUDFLARE_EMBEDDINGS_TOKEN", credentials: ["CLOUDFLARE_EMBEDDINGS_URL"] },
+  {
+    flag: "FEATURE_ARTICLE_TRANSLATIONS",
+    credentials: ["CLOUDFLARE_TRANSLATIONS_URL", "CLOUDFLARE_TRANSLATIONS_TOKEN"],
+  },
 ];
 
 function isFlagEnabled(flag: unknown): boolean {
@@ -166,6 +176,7 @@ export const env = createEnv({
       "jobs:opml",
       "jobs:article-extraction",
       "jobs:document-enrichment",
+      "jobs:article-translation",
     ]),
     FEED_FETCH_HOST_LEASE_MS: z.coerce.number().int().min(1_000).max(60_000).default(5_000),
     FEED_FETCH_HOST_RETRY_DELAY_MS: z.coerce.number().int().min(10).max(5_000).default(250),
@@ -181,6 +192,8 @@ export const env = createEnv({
      */
     CLOUDFLARE_EMBEDDINGS_URL: embeddingsWorkerUrlFromEnv.optional(),
     CLOUDFLARE_EMBEDDINGS_TOKEN: z.string().min(1).optional(),
+    CLOUDFLARE_TRANSLATIONS_URL: translationsWorkerUrlFromEnv.optional(),
+    CLOUDFLARE_TRANSLATIONS_TOKEN: z.string().min(1).optional(),
     /**
      * Category read path. Embedding (the default) shows the trained head's labels for the active
      * embedding model and falls back to keyword rows wherever an article has none, so it never
@@ -197,6 +210,7 @@ export const env = createEnv({
     FEATURE_SOURCE_REDDIT: booleanFromEnv.default(false),
     FEATURE_SOURCE_X: booleanFromEnv.default(false),
     FEATURE_AI_ARTICLE_INTELLIGENCE: booleanFromEnv.default(false),
+    FEATURE_ARTICLE_TRANSLATIONS: booleanFromEnv.default(false),
     FEATURE_SOCIAL_MODE: booleanFromEnv.default(false),
     FEATURE_LINK_PREVIEWS: booleanFromEnv.default(false),
     FEATURE_SHARE_PREVIEWS: booleanFromEnv.default(false),
@@ -260,6 +274,8 @@ export const env = createEnv({
     // runtimeEnv section
     CLOUDFLARE_EMBEDDINGS_URL: process.env.CLOUDFLARE_EMBEDDINGS_URL,
     CLOUDFLARE_EMBEDDINGS_TOKEN: process.env.CLOUDFLARE_EMBEDDINGS_TOKEN,
+    CLOUDFLARE_TRANSLATIONS_URL: process.env.CLOUDFLARE_TRANSLATIONS_URL,
+    CLOUDFLARE_TRANSLATIONS_TOKEN: process.env.CLOUDFLARE_TRANSLATIONS_TOKEN,
     CATEGORY_CLASSIFIER_READ_MODE: process.env.CATEGORY_CLASSIFIER_READ_MODE,
     FEATURE_GOOGLE_OAUTH: process.env.FEATURE_GOOGLE_OAUTH,
     FEATURE_ONBOARDING: process.env.FEATURE_ONBOARDING,
@@ -267,6 +283,7 @@ export const env = createEnv({
     FEATURE_SOURCE_REDDIT: process.env.FEATURE_SOURCE_REDDIT,
     FEATURE_SOURCE_X: process.env.FEATURE_SOURCE_X,
     FEATURE_AI_ARTICLE_INTELLIGENCE: process.env.FEATURE_AI_ARTICLE_INTELLIGENCE,
+    FEATURE_ARTICLE_TRANSLATIONS: process.env.FEATURE_ARTICLE_TRANSLATIONS,
     FEATURE_SOCIAL_MODE: process.env.FEATURE_SOCIAL_MODE,
     FEATURE_LINK_PREVIEWS: process.env.FEATURE_LINK_PREVIEWS,
     FEATURE_SHARE_PREVIEWS: process.env.FEATURE_SHARE_PREVIEWS,

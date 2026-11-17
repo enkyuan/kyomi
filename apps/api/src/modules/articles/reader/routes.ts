@@ -1,12 +1,18 @@
 import type { Elysia } from "elysia";
+import { publishJob } from "@adapters/queue/publish";
+import { MAX_CLOUDFLARE_TRANSLATION_CHARS } from "@adapters/translation/cloudflare";
+import { getRedis } from "@adapters/redis";
 import { embeddingClassifierConfig } from "@config/embeddings";
-import { env } from "@config/env";
-import { parseSupportedDocumentVersion } from "@modules/articles/document/negotiate";
-import { withNegotiatedDocuments } from "@modules/articles/document/serve";
+import { cloudflareTranslationConfig } from "@config/translations";
 import { assertContentFieldBudget } from "@shared/http/budget";
+import { AppError } from "@shared/errors/app";
 import { v1HandlerContext } from "@shared/http/v1/context";
 import { getArticleDetailForUser } from "../read/detail";
-import { resolveEnhancementContent, summarizeContent, translateContent } from "./enrichment";
+import {
+  resolveEnhancementContent,
+  resolveStoredTranslationContent,
+  summarizeContent,
+} from "./enrichment";
 import { requestFullTextExtractionForUser } from "./extraction/workflow";
 import {
   articleIdParamsSchema,
@@ -16,6 +22,7 @@ import {
   translateBodySchema,
   translateResponseSchema,
 } from "../schemas";
+import { findOrQueueFeedItemTranslation } from "./translations/store";
 
 export function registerArticleEnrichmentRoutes(app: Elysia) {
   return app
@@ -82,23 +89,88 @@ export function registerArticleEnrichmentRoutes(app: Elysia) {
       "/articles/:articleId/translate",
       async (context) => {
         const { body, db, logger, params, userId } = v1HandlerContext<
-          { content?: string; target_language: string },
+          { source_language?: string; target_language: string },
           Record<string, unknown>,
           { articleId: string }
         >(context);
         const article = await getArticleDetailForUser(db, userId, params.articleId);
-        const targetLanguage = body.target_language;
-        const content = resolveEnhancementContent(body.content, article);
-        assertContentFieldBudget([{ name: "content", value: content }]);
-        const translated = translateContent(content, targetLanguage);
+        const config = cloudflareTranslationConfig();
+        if (!config) {
+          throw new AppError("Article translation is not enabled", {
+            status: 503,
+            code: "TRANSLATION_NOT_CONFIGURED",
+          });
+        }
+        const sourceLanguage = resolveTranslationLanguage(
+          body.source_language ?? article.reader.selected.language,
+          "source_language",
+        );
+        const targetLanguage = resolveTranslationLanguage(body.target_language, "target_language");
+        const content = resolveStoredTranslationContent(article);
+        if (article.articleType !== "feed") {
+          throw new AppError("Translations are currently available for feed articles only", {
+            status: 400,
+            code: "TRANSLATION_ARTICLE_TYPE_UNSUPPORTED",
+          });
+        }
+
+        if (content.length > MAX_CLOUDFLARE_TRANSLATION_CHARS) {
+          throw new AppError("Article content exceeds the translation limit", {
+            status: 413,
+            code: "TRANSLATION_CONTENT_TOO_LARGE",
+          });
+        }
+
+        const requested = await findOrQueueFeedItemTranslation(db, {
+          feedItemId: article.id,
+          sourceText: content,
+          sourceLanguage,
+          targetLanguage,
+          modelId: config.model,
+        });
+
+        const translation = requested.translation;
+
+        if (translation.status === "queued") {
+          try {
+            await publishJob(getRedis(), {
+              type: "article.translate",
+              payload: { translationId: translation.id },
+            });
+          } catch (error) {
+            logger.error("articles.translate.queue_unavailable", {
+              userId,
+              articleId: article.id,
+              translationId: translation.id,
+              error: error instanceof Error ? error.message : String(error),
+            });
+
+            throw new AppError("Translation could not be queued", {
+              status: 503,
+              code: "TRANSLATION_QUEUE_UNAVAILABLE",
+            });
+          }
+        }
+
+        logger.info("articles.translate.requested", {
+          userId,
+          articleId: article.id,
+          translationId: translation.id,
+          status: translation.status,
+          created: requested.created,
+          targetLanguage,
+        });
         logger.info("articles.translate.succeeded", {
           userId,
           articleId: params.articleId,
           targetLanguage,
         });
         return {
-          translated_content: translated,
-          target_language: targetLanguage,
+          status: translation.status as "ready" | "queued" | "failed" | "processing",
+          translated_content: translation.translatedText,
+          source_language: translation.sourceLanguage,
+          target_language: translation.targetLanguage,
+          error_code: translation.errorCode,
         };
       },
       {
@@ -107,4 +179,16 @@ export function registerArticleEnrichmentRoutes(app: Elysia) {
         response: { 200: translateResponseSchema },
       },
     );
+}
+
+function resolveTranslationLanguage(value: string | null | undefined, field: string): string {
+  const primary = value?.trim().toLowerCase().split("-")[0];
+  if (!primary || !/^[a-z]{2,3}$/.test(primary)) {
+    throw new AppError(`${field} must be a two or three letter language code`, {
+      status: 400,
+      code: "TRANSLATION_LANGUAGE_INVALID",
+      details: { field },
+    });
+  }
+  return primary;
 }

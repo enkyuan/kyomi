@@ -69,3 +69,26 @@ export function translateContent(content: string, targetLanguage: string): strin
   }
   return `[translated:${target}] ${text}`;
 }
+
+/**
+ * Translation deliberately uses text stored for an article, never an arbitrary request body.
+ * HTML is excluded so provider input is readable prose rather than document markup.
+ */
+export function resolveStoredTranslationContent(article: ArticleDetailDto): string {
+  const selected = article.reader.selected;
+  const text = (
+    selected.contentText ??
+    article.contentText ??
+    selected.contentMarkdown ??
+    selected.fallbackSummary ??
+    article.summary ??
+    ""
+  ).trim();
+  if (!text) {
+    throw new AppError("No content available to translate", {
+      status: 400,
+      code: "TRANSLATION_CONTENT_MISSING",
+    });
+  }
+  return text;
+}

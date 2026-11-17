@@ -251,13 +251,21 @@ export const summarizeResponseSchema = t.Object({
 });
 
 export const translateBodySchema = t.Object({
-  content: t.Optional(t.String({ maxLength: CONTENT_FIELD_MAX_CHARS })),
   target_language: t.String({ minLength: 1, maxLength: LANGUAGE_IDENTIFIER_MAX_CHARS }),
+  source_language: t.Optional(t.String({ minLength: 2, maxLength: LANGUAGE_IDENTIFIER_MAX_CHARS })),
 });
 
 export const translateResponseSchema = t.Object({
-  translated_content: t.String(),
+  status: t.Union([
+    t.Literal("queued"),
+    t.Literal("processing"),
+    t.Literal("ready"),
+    t.Literal("failed"),
+  ]),
+  translated_content: t.Union([t.String(), t.Null()]),
+  source_language: t.String(),
   target_language: t.String(),
+  error_code: t.Union([t.String(), t.Null()]),
 });
 
 export const unreadCountsQuerySchema = t.Object({

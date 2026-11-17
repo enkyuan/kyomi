@@ -4,6 +4,9 @@ import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/guard";
 import { logger } from "@adapters/logger";
 import { closeRedis, getRedis } from "@adapters/redis";
 import { embeddingClassifierConfig } from "@config/embeddings";
+import { runFeedItemTranslationJob } from "@modules/articles/reader/translations/worker";
+import { TRANSLATION_LEASE_MS } from "@modules/articles/reader/translations/store";
+
 import {
   consumeJobs,
   createHostRateLimiter,
@@ -13,7 +16,7 @@ import {
   type ArticleExtractionJob,
   type HostRateLimiter,
   type JobMessage,
-} from "@kyomi/ingest";
+} from "../../../../../packages/ingest/src";
 import {
   runOpmlImportFeedJob,
   runOpmlImportItemJob,
@@ -222,6 +225,24 @@ async function handleWorkerJob(
     case "document.embed-snapshot":
       await handleDocumentEnrichmentJob(job, createDocumentPatchStore(db));
       return;
+    case "article.translate": {
+      const result = await runFeedItemTranslationJob(db, job.payload.translationId);
+
+      if (result.status === "retry") {
+        throw new Error(`Translation ${job.payload.translationId} needs retry`);
+      }
+
+      logger.info("worker.job.article_translate.completed", {
+        streamId: id,
+        translationId: job.payload.translationId,
+        status: result.status,
+        errorCode: "errorCode" in result ? result.errorCode : null,
+        attempts,
+        durationMs: Date.now() - startTime,
+      });
+
+      return;
+    }
   }
 }
 
@@ -290,7 +311,9 @@ export async function runWorkerLoop(signal?: AbortSignal): Promise<void> {
           pendingMinIdleMs:
             streamKey === FEED_REFRESH_JOBS_STREAM_KEY
               ? env.FEED_REFRESH_RUNNING_LEASE_MS
-              : undefined,
+              : streamKey.toLowerCase().includes("translation")
+                ? TRANSLATION_LEASE_MS
+                : undefined,
           count: env.JOB_READ_COUNT,
           processConcurrency: env.JOB_PROCESS_CONCURRENCY,
           streamMaxLength: env.JOB_STREAM_MAX_LENGTH,
