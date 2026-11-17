@@ -1,29 +1,28 @@
-import type { db } from "@adapters/db/client";
-import { logger } from "@adapters/logger";
-import { enqueueDocumentEnrichment } from "@modules/articles/document-enrichment/enqueue";
+import { Effect } from "effect";
 import type { DocumentTarget } from "@kyomi/ingest";
+import { AppLogger } from "@adapters/logger/service";
+import { enqueueDocumentEnrichment } from "@modules/articles/document-enrichment/enqueue";
+import { serializeError } from "@shared/errors/serialize";
 import { loadStoredDocument } from "./patch";
-
-type DB = typeof db;
 
 /**
  * Queues enrichment for a document that was just persisted. Loads the stored document unless the
- * caller already holds it. Never throws: enrichment must not fail the write that triggered it.
+ * caller already holds it. Never fails: enrichment must not fail the write that triggered it, so
+ * a read or publish failure is logged and the document simply stays un-enriched.
  */
-export async function enqueueEnrichmentForStoredDocument(
-  database: DB,
+export const enqueueEnrichmentForStoredDocument = Effect.fn("articles.document.enrich")(function* (
   target: DocumentTarget,
   document?: object,
-): Promise<void> {
-  try {
-    const stored = document ?? (await loadStoredDocument(database, target))?.document;
+) {
+  const log = yield* AppLogger;
+  yield* Effect.gen(function* () {
+    const stored = document ?? (yield* loadStoredDocument(target))?.document;
     if (stored) {
-      await enqueueDocumentEnrichment(target, stored);
+      yield* enqueueDocumentEnrichment(target, stored);
     }
-  } catch (error) {
-    logger.warn("document_enrichment.enqueue_failed", {
-      target,
-      error: error instanceof Error ? error.message : String(error),
-    });
-  }
-}
+  }).pipe(
+    Effect.catchTag("DatabaseError", (error) =>
+      log.warn("document_enrichment.enqueue_failed", { target, error: serializeError(error) }),
+    ),
+  );
+});

@@ -1,17 +1,69 @@
 import { afterEach, describe, expect, test } from "bun:test";
+import { Effect, Layer } from "effect";
 import { getTableName } from "drizzle-orm";
 import { embeddingModelInfo, type EmbeddingClassifierConfig } from "@kyomi/ingest";
-import { reclassifyExtractedFeedItem } from "@modules/articles/reader/extraction/workflow";
+import { reclassifyExtractedFeedItem } from "@modules/articles/reader/extraction/reclassify";
 import type { ArticleDetailDto } from "@modules/articles/types";
+import { fakeDb, recordingLogger } from "@api-tests/support/layers";
 import { FAKE_CATEGORY_MODEL } from "../../feeds/refresh/fake-category-model";
 
-const originalFetch = globalThis.fetch;
-const FAKE_CONFIG: EmbeddingClassifierConfig = {
+const EMBEDDING_MODEL_ID = embeddingModelInfo({
   apiKey: "test-key",
-  apiUrl: "https://fake-embeddings.test/embed",
+  apiUrl: "http://127.0.0.1/embed",
   categoryModel: FAKE_CATEGORY_MODEL,
-};
-const EMBEDDING_MODEL_ID = embeddingModelInfo(FAKE_CONFIG).modelId;
+}).modelId;
+
+/**
+ * A real embeddings endpoint on a loopback port. The embeddings client lives in `@kyomi/ingest`
+ * (plain `fetch`, no injection point), so the test points `apiUrl` at this server rather than
+ * patching `globalThis.fetch`.
+ */
+type EmbeddingsRequest = { input: string[] };
+const servers: Array<{ stop: (closeActiveConnections?: boolean) => void }> = [];
+
+function embeddingsWorker(
+  respond: (body: EmbeddingsRequest) => Response = (body) => embeddingsResponse(body, UNIT_X),
+) {
+  const requests: EmbeddingsRequest[] = [];
+  const server = Bun.serve({
+    port: 0,
+    hostname: "127.0.0.1",
+    fetch: async (request) => {
+      const body = (await request.json()) as EmbeddingsRequest;
+      requests.push(body);
+      return respond(body);
+    },
+  });
+  servers.push(server);
+  const config: EmbeddingClassifierConfig = {
+    apiKey: "test-key",
+    apiUrl: `http://127.0.0.1:${server.port}/embed`,
+    categoryModel: FAKE_CATEGORY_MODEL,
+  };
+  return { requests, config };
+}
+
+function embeddingsResponse(body: EmbeddingsRequest, vector: number[]) {
+  return new Response(
+    JSON.stringify({ data: body.input.map((_, index) => ({ embedding: vector, index })) }),
+    { status: 200 },
+  );
+}
+
+function reclassify(
+  db: ReturnType<typeof createCategoryDb>,
+  text: string,
+  config?: EmbeddingClassifierConfig,
+  target: ArticleDetailDto = article(),
+) {
+  const logs = recordingLogger();
+  const run = Effect.runPromise(
+    reclassifyExtractedFeedItem(target, text, config).pipe(
+      Effect.provide(Layer.mergeAll(fakeDb(db as never), logs.layer)),
+    ),
+  );
+  return run.then(() => logs);
+}
 
 const UNIT_X = [1, 0, 0];
 const ORTHOGONAL_Z = [0, 0, 1];
@@ -47,6 +99,9 @@ function article(overrides: Partial<ArticleDetailDto> = {}): ArticleDetailDto {
     feedFaviconUrl: null,
     isRead: false,
     isSaved: false,
+    lastViewedAt: null,
+    readingProgress: null,
+    readingPosition: null,
     articleType: "feed",
     categories: [],
     contentHtml: null,
@@ -110,29 +165,22 @@ function createCategoryDb(
 }
 
 afterEach(() => {
-  globalThis.fetch = originalFetch;
+  for (const server of servers.splice(0)) {
+    server.stop(true);
+  }
 });
 
 describe("reclassifyExtractedFeedItem", () => {
   test("writes keyword item rows when embedding classification is not configured", async () => {
     const fake = createCategoryDb();
-    let fetched = false;
-    globalThis.fetch = (async () => {
-      fetched = true;
-      return new Response("{}", { status: 200 });
-    }) as unknown as typeof fetch;
 
-    await reclassifyExtractedFeedItem(
-      fake as never,
-      article({
-        title: "Release notes",
-        link: "https://example.com/release-notes",
-      }),
+    await reclassify(
+      fake,
       "The new open weights language model uses transformer layers, embeddings, and agent training data.",
-      {},
+      undefined,
+      article({ title: "Release notes", link: "https://example.com/release-notes" }),
     );
 
-    expect(fetched).toBe(false);
     expect(fake.deletes).toEqual(["feed_item_category_assignments"]);
     expect(fake.categories.map((row) => row.label)).toEqual(["AI & ML"]);
     expect(fake.feedItemCategoryAssignments).toMatchObject([
@@ -148,23 +196,15 @@ describe("reclassifyExtractedFeedItem", () => {
 
   test("classifies extracted text and writes keyword plus embedding item rows", async () => {
     const fake = createCategoryDb();
-    const itemInputs: string[] = [];
-    globalThis.fetch = (async (_url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      itemInputs.push(body.input[0] ?? "");
-      return new Response(JSON.stringify({ data: [{ embedding: UNIT_X, index: 0 }] }), {
-        status: 200,
-      });
-    }) as unknown as typeof fetch;
+    const worker = embeddingsWorker();
 
-    await reclassifyExtractedFeedItem(
-      fake as never,
-      article(),
+    await reclassify(
+      fake,
       "Extracted full text about compilers, build systems, and package managers.",
-      { embeddingClassifier: FAKE_CONFIG },
+      worker.config,
     );
 
-    expect(itemInputs[0]).toContain("Extracted full text");
+    expect(worker.requests[0]?.input[0]).toContain("Extracted full text");
     expect(fake.deletes).toEqual([
       "feed_item_category_assignments",
       "feed_item_category_assignments",
@@ -204,20 +244,13 @@ describe("reclassifyExtractedFeedItem", () => {
       },
     ];
     const fake = createCategoryDb({ existingAssignments: existing });
-    globalThis.fetch = (async (_url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      const embeddings = body.input.map(() => ORTHOGONAL_Z);
-      return new Response(
-        JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-        { status: 200 },
-      );
-    }) as unknown as typeof fetch;
+    const worker = embeddingsWorker((body) => embeddingsResponse(body, ORTHOGONAL_Z));
 
-    await reclassifyExtractedFeedItem(
-      fake as never,
-      article({ title: "Weekly notes", link: "https://example.com/weekly-notes" }),
+    await reclassify(
+      fake,
       "Thanks for reading. Leave a comment below.",
-      { embeddingClassifier: FAKE_CONFIG },
+      worker.config,
+      article({ title: "Weekly notes", link: "https://example.com/weekly-notes" }),
     );
 
     expect(fake.deletes).toEqual([]);
@@ -239,20 +272,12 @@ describe("reclassifyExtractedFeedItem", () => {
       explicitLabels: ["Software Engineering"],
       existingAssignments: existing,
     });
-    globalThis.fetch = (async (_url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      const embeddings = body.input.map(() => UNIT_X);
-      return new Response(
-        JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-        { status: 200 },
-      );
-    }) as unknown as typeof fetch;
+    const worker = embeddingsWorker();
 
-    await reclassifyExtractedFeedItem(
-      fake as never,
-      article(),
+    await reclassify(
+      fake,
       "Extracted full text about compilers, build systems, and package managers.",
-      { embeddingClassifier: FAKE_CONFIG },
+      worker.config,
     );
 
     expect(fake.deletes).toEqual([]);
@@ -262,43 +287,28 @@ describe("reclassifyExtractedFeedItem", () => {
 
   test("embeds only the opening of long extracted text", async () => {
     const fake = createCategoryDb();
-    const itemInputs: string[] = [];
-    globalThis.fetch = (async (_url: string, init: RequestInit) => {
-      const body = JSON.parse(init.body as string) as { input: string[] };
-      itemInputs.push(...body.input);
-      const embeddings = body.input.map(() => UNIT_X);
-      return new Response(
-        JSON.stringify({ data: embeddings.map((e, i) => ({ embedding: e, index: i })) }),
-        { status: 200 },
-      );
-    }) as unknown as typeof fetch;
+    const worker = embeddingsWorker();
 
-    await reclassifyExtractedFeedItem(
-      fake as never,
-      article(),
+    await reclassify(
+      fake,
       `Compilers and build systems. ${"Body text. ".repeat(1_000)}Subscribe to our newsletter.`,
-      { embeddingClassifier: FAKE_CONFIG },
+      worker.config,
     );
 
-    expect(itemInputs).toHaveLength(1);
-    expect(itemInputs[0]).toStartWith("Compiler maintainers rewrite package manager");
-    expect(itemInputs[0]!.length).toBeLessThanOrEqual(4_000);
-    expect(itemInputs[0]).not.toContain("Subscribe to our newsletter");
+    const inputs = worker.requests.flatMap((request) => request.input);
+    expect(inputs).toHaveLength(1);
+    expect(inputs[0]).toStartWith("Compiler maintainers rewrite package manager");
+    expect(inputs[0]!.length).toBeLessThanOrEqual(4_000);
+    expect(inputs[0]).not.toContain("Subscribe to our newsletter");
   });
 
   test("clears classifier item rows without calling the embeddings Worker when explicit labels fill the chip slots", async () => {
     const fake = createCategoryDb({ explicitLabels: ["AI & ML", "Business & Startups"] });
-    let fetched = false;
-    globalThis.fetch = (async () => {
-      fetched = true;
-      return new Response("{}", { status: 200 });
-    }) as unknown as typeof fetch;
+    const worker = embeddingsWorker();
 
-    await reclassifyExtractedFeedItem(fake as never, article(), "Extracted full text", {
-      embeddingClassifier: FAKE_CONFIG,
-    });
+    await reclassify(fake, "Extracted full text", worker.config);
 
-    expect(fetched).toBe(false);
+    expect(worker.requests).toEqual([]);
     expect(fake.deletes).toEqual([
       "feed_item_category_assignments",
       "feed_item_category_assignments",
@@ -315,16 +325,9 @@ describe("reclassifyExtractedFeedItem", () => {
       modelId: EMBEDDING_MODEL_ID,
     };
     const fake = createCategoryDb({ existingAssignments: [existing] });
-    const warnings: CapturedRow[] = [];
-    globalThis.fetch = (async () =>
-      new Response("temporary outage", { status: 503 })) as unknown as typeof fetch;
+    const worker = embeddingsWorker(() => new Response("temporary outage", { status: 503 }));
 
-    await reclassifyExtractedFeedItem(fake as never, article(), "Extracted full text", {
-      embeddingClassifier: FAKE_CONFIG,
-      logger: {
-        warn: (message, data) => warnings.push({ message, ...data }),
-      },
-    });
+    const logs = await reclassify(fake, "Extracted full text", worker.config);
 
     expect(fake.deletes).toEqual(["feed_item_category_assignments"]);
     expect(fake.feedItemCategoryAssignments).toEqual(
@@ -339,11 +342,29 @@ describe("reclassifyExtractedFeedItem", () => {
         }),
       ]),
     );
-    expect(warnings).toMatchObject([
+    expect(logs.entries).toMatchObject([
       {
-        message: "articles.extract_full_text.categories_reclassify_failed",
-        articleId: "item-1",
-        classifierMethod: "embedding",
+        level: "warn",
+        event: "articles.extract_full_text.categories_reclassify_failed",
+        context: { articleId: "item-1", classifierMethod: "embedding" },
+      },
+    ]);
+  });
+
+  test("a failing label write is logged and does not fail the extraction", async () => {
+    const fake = createCategoryDb();
+    const failing = {
+      ...fake,
+      delete: () => ({ where: () => Promise.reject(new Error("deadlock detected")) }),
+    };
+
+    const logs = await reclassify(failing as never, "Extracted full text about compilers.");
+
+    expect(logs.entries).toMatchObject([
+      {
+        level: "warn",
+        event: "articles.extract_full_text.categories_reclassify_failed",
+        context: { articleId: "item-1", classifierMethod: "keyword" },
       },
     ]);
   });

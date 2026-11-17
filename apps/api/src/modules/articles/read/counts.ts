@@ -1,275 +1,172 @@
-import type { db } from "@adapters/db/client";
-import { articleClips, feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
-import { and, eq, gte, inArray, lt, sql } from "drizzle-orm";
-import { articleIsReadSql, globalArticleIsReadSql } from "./sql";
+import { Effect } from "effect";
+import { articleClips, feedItemUserState, feedItems, feedSubscriptions } from "@kyomi/db";
+import { and, eq, gte, inArray, lt, sql, type SQL } from "drizzle-orm";
+import { currentDate } from "@modules/articles/clock";
+import { Db, type Database } from "@adapters/db/service";
 import { capPublishedBeforeAtNow } from "./list/window";
+import {
+  readSqlFor,
+  subscriptionJoin,
+  userStateJoin,
+  visibleFeedItemSql,
+  type FeedScope,
+} from "./sql";
 import type { ArticleCountScope, ArticleCountsDto } from "../types";
 
-type DB = typeof db;
+const countSql = sql<number>`count(*)::int`;
 
-const visibleFeedItemSql = sql`${feedItemUserState.hiddenAt} IS NULL`;
-
-export async function getArticleCountsForUser(
-  database: DB,
+/** `count(*)` over feed items, joined to subscriptions only for the `subscribed` scope. */
+function countFeedItems(
+  client: Database,
   userId: string,
-  scope?: ArticleCountScope,
-): Promise<ArticleCountsDto> {
-  const joinCond = and(
-    eq(feedItems.feedId, feedSubscriptions.feedId),
-    eq(feedSubscriptions.userId, userId),
-  );
-  const stateJoin = and(
-    eq(feedItemUserState.feedItemId, feedItems.id),
-    eq(feedItemUserState.userId, userId),
-  );
-
-  const scopedFeedId = scope?.feedId?.trim();
-  const scopedFolderId = scope?.folderId?.trim();
-  const feedScopeFilter =
-    scopedFeedId || scopedFolderId
-      ? and(
-          scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined,
-          scopedFolderId ? eq(feedSubscriptions.folderId, scopedFolderId) : undefined,
-        )
-      : undefined;
-  const now = new Date();
-
-  const [unreadRow] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .innerJoin(feedSubscriptions, joinCond)
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(
-      and(
-        sql`(${articleIsReadSql}) = false`,
-        visibleFeedItemSql,
-        lt(feedItems.publishedAt, now),
-        feedScopeFilter,
-      ),
-    );
-
-  const [allRow] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .innerJoin(feedSubscriptions, joinCond)
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(and(visibleFeedItemSql, lt(feedItems.publishedAt, now), feedScopeFilter));
-
-  const [savedRow] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .innerJoin(feedSubscriptions, joinCond)
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(
-      and(
-        sql`${feedItemUserState.isSaved} IS TRUE`,
-        visibleFeedItemSql,
-        lt(feedItems.publishedAt, now),
-        feedScopeFilter,
-      ),
-    );
-
-  // Global/unscoped: `all` counts subscribed feed items plus all clips; `saved` merges feed saved + clip saved.
-  // Scoped by feed or folder: counts are feed-subscription rows only (clips are not folder-scoped).
-  const includeClipCounts = !scopedFeedId && !scopedFolderId;
-  const clipSaved = includeClipCounts
-    ? await database
-        .select({ c: sql<number>`count(*)::int` })
-        .from(articleClips)
-        .where(and(eq(articleClips.userId, userId), eq(articleClips.isSaved, true)))
-    : [];
-  const clipAll = includeClipCounts
-    ? await database
-        .select({ c: sql<number>`count(*)::int` })
-        .from(articleClips)
-        .where(eq(articleClips.userId, userId))
-    : [];
-  const clipAllRow = clipAll[0];
-  const clipSavedRow = clipSaved[0];
-
-  return {
-    all: (allRow?.c ?? 0) + (clipAllRow?.c ?? 0),
-    unread: unreadRow?.c ?? 0,
-    saved: (savedRow?.c ?? 0) + (clipSavedRow?.c ?? 0),
-  };
+  scope: FeedScope,
+  where: SQL | undefined,
+) {
+  const base = client.select({ c: countSql }).from(feedItems);
+  return scope === "subscribed"
+    ? base
+        .innerJoin(feedSubscriptions, subscriptionJoin(userId))
+        .leftJoin(feedItemUserState, userStateJoin(userId))
+        .where(where)
+    : base.leftJoin(feedItemUserState, userStateJoin(userId)).where(where);
 }
 
-export async function getGlobalArticleCountsForUser(
-  database: DB,
-  userId: string,
-  scope?: ArticleCountScope,
-): Promise<ArticleCountsDto> {
-  const stateJoin = and(
-    eq(feedItemUserState.feedItemId, feedItems.id),
-    eq(feedItemUserState.userId, userId),
+/** Feed and folder filters; the folder filter only exists for subscriptions. */
+function scopeFilter(feedScope: FeedScope, scope: ArticleCountScope | undefined) {
+  const feedId = scope?.feedId?.trim();
+  const folderId = scope?.folderId?.trim();
+  return and(
+    feedId ? eq(feedItems.feedId, feedId) : undefined,
+    feedScope === "subscribed" && folderId ? eq(feedSubscriptions.folderId, folderId) : undefined,
   );
-  const scopedFeedId = scope?.feedId?.trim();
-  const feedScopeFilter = scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined;
-  const now = new Date();
-
-  const [unreadRow] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(
-      and(
-        sql`(${globalArticleIsReadSql}) = false`,
-        visibleFeedItemSql,
-        lt(feedItems.publishedAt, now),
-        feedScopeFilter,
-      ),
-    );
-
-  const [allRow] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(and(visibleFeedItemSql, lt(feedItems.publishedAt, now), feedScopeFilter));
-
-  const [savedRow] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(
-      and(
-        sql`${feedItemUserState.isSaved} IS TRUE`,
-        visibleFeedItemSql,
-        lt(feedItems.publishedAt, now),
-        feedScopeFilter,
-      ),
-    );
-
-  return {
-    all: allRow?.c ?? 0,
-    unread: unreadRow?.c ?? 0,
-    saved: savedRow?.c ?? 0,
-  };
 }
+
+const firstCount = (rows: ReadonlyArray<{ c: number }>) => rows[0]?.c ?? 0;
+
+const countArticles = Effect.fn("articles.counts")(function* (
+  userId: string,
+  feedScope: FeedScope,
+  scope: ArticleCountScope | undefined,
+) {
+  const db = yield* Db;
+  const now = yield* currentDate;
+  const readSql = readSqlFor(feedScope);
+  const published = and(
+    visibleFeedItemSql,
+    lt(feedItems.publishedAt, now),
+    scopeFilter(feedScope, scope),
+  );
+  const count = (operation: string, where: SQL | undefined) =>
+    db
+      .use(`articles.counts.${operation}`, (client) =>
+        countFeedItems(client, userId, feedScope, where),
+      )
+      .pipe(Effect.map(firstCount));
+
+  const unread = yield* count("unread", and(sql`(${readSql}) = false`, published));
+  const all = yield* count("all", published);
+  const saved = yield* count("saved", and(sql`${feedItemUserState.isSaved} IS TRUE`, published));
+
+  // Unscoped subscribed counts also include clips: `all` adds every clip, `saved` the saved ones.
+  // Scoped by feed or folder, and the global scope, count feed items only.
+  const unscoped = !scope?.feedId?.trim() && !scope?.folderId?.trim();
+  if (feedScope === "global" || !unscoped) {
+    return { all, unread, saved } satisfies ArticleCountsDto;
+  }
+  const clipCount = (operation: string, where: SQL) =>
+    db
+      .use(`articles.counts.clips.${operation}`, (client) =>
+        client.select({ c: countSql }).from(articleClips).where(where),
+      )
+      .pipe(Effect.map(firstCount));
+  const clipSaved = yield* clipCount(
+    "saved",
+    and(eq(articleClips.userId, userId), eq(articleClips.isSaved, true))!,
+  );
+  const clipAll = yield* clipCount("all", eq(articleClips.userId, userId));
+  return { all: all + clipAll, unread, saved: saved + clipSaved } satisfies ArticleCountsDto;
+});
+
+/** Counts over the user's subscriptions plus (unscoped) their clips. */
+export const getArticleCounts = (userId: string, scope?: ArticleCountScope) =>
+  countArticles(userId, "subscribed", scope);
+
+/** Counts over every feed item; only the feed filter of `scope` applies. */
+export const getGlobalArticleCounts = (userId: string, scope?: ArticleCountScope) =>
+  countArticles(userId, "global", scope);
 
 /**
- * Counts subscribed feed articles whose `publishedAt` falls in `[publishedAfter, publishedBefore)`,
- * matching the date window used by `GET /articles` with the same query params (feeds source only).
+ * Counts feed articles whose `publishedAt` falls in `[publishedAfter, publishedBefore)`, matching
+ * the date window of `GET /articles` with the same query params (feeds source only).
  */
-export async function countFeedArticlesPublishedInRange(
-  database: DB,
+const countPublishedInRange = Effect.fn("articles.counts.range")(function* (
+  userId: string,
+  feedScope: FeedScope,
+  publishedAfter: Date,
+  publishedBefore: Date,
+  scope: ArticleCountScope | undefined,
+) {
+  const db = yield* Db;
+  const now = yield* currentDate;
+  const where = and(
+    gte(feedItems.publishedAt, publishedAfter),
+    lt(feedItems.publishedAt, capPublishedBeforeAtNow(publishedBefore, now)),
+    visibleFeedItemSql,
+    scopeFilter(feedScope, scope),
+  );
+  const rows = yield* db.use("articles.counts.range", (client) =>
+    countFeedItems(client, userId, feedScope, where),
+  );
+  return firstCount(rows);
+});
+
+export const countFeedArticlesPublishedInRange = (
   userId: string,
   publishedAfter: Date,
   publishedBefore: Date,
   scope?: ArticleCountScope,
-): Promise<number> {
-  const joinCond = and(
-    eq(feedItems.feedId, feedSubscriptions.feedId),
-    eq(feedSubscriptions.userId, userId),
-  );
-  const stateJoin = and(
-    eq(feedItemUserState.feedItemId, feedItems.id),
-    eq(feedItemUserState.userId, userId),
-  );
+) => countPublishedInRange(userId, "subscribed", publishedAfter, publishedBefore, scope);
 
-  const scopedFeedId = scope?.feedId?.trim();
-  const scopedFolderId = scope?.folderId?.trim();
-  const effectivePublishedBefore = capPublishedBeforeAtNow(publishedBefore);
-
-  const [row] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .innerJoin(feedSubscriptions, joinCond)
-    .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(
-      and(
-        gte(feedItems.publishedAt, publishedAfter),
-        lt(feedItems.publishedAt, effectivePublishedBefore),
-        visibleFeedItemSql,
-        scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined,
-        scopedFolderId ? eq(feedSubscriptions.folderId, scopedFolderId) : undefined,
-      ),
-    );
-
-  return row?.c ?? 0;
-}
-
-export async function countGlobalFeedArticlesPublishedInRange(
-  database: DB,
+export const countGlobalFeedArticlesPublishedInRange = (
   userId: string,
   publishedAfter: Date,
   publishedBefore: Date,
   scope?: ArticleCountScope,
-): Promise<number> {
-  const scopedFeedId = scope?.feedId?.trim();
-  const effectivePublishedBefore = capPublishedBeforeAtNow(publishedBefore);
-  const stateJoin = and(
-    eq(feedItemUserState.feedItemId, feedItems.id),
-    eq(feedItemUserState.userId, userId),
-  );
-
-  const [row] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(
-      and(
-        gte(feedItems.publishedAt, publishedAfter),
-        lt(feedItems.publishedAt, effectivePublishedBefore),
-        visibleFeedItemSql,
-        scopedFeedId ? eq(feedItems.feedId, scopedFeedId) : undefined,
-      ),
-    );
-
-  return row?.c ?? 0;
-}
+) => countPublishedInRange(userId, "global", publishedAfter, publishedBefore, scope);
 
 /**
- * Returns a map of feedId → unread article count for each of the supplied feed IDs.
- * Uses a single GROUP BY query so it scales to many feeds without N+1 requests.
+ * A map of feedId to unread article count for each supplied feed id (0 when none are unread).
+ * One GROUP BY query, so it scales to many feeds without N+1 requests.
  */
-export async function getUnreadCountsPerFeed(
-  database: DB,
+export const getUnreadCountsPerFeed = Effect.fn("articles.counts.unreadPerFeed")(function* (
   userId: string,
   feedIds: string[],
-): Promise<Record<string, number>> {
+) {
   if (feedIds.length === 0) {
-    return {};
+    return {} as Record<string, number>;
   }
-
-  const joinCond = and(
-    eq(feedItems.feedId, feedSubscriptions.feedId),
-    eq(feedSubscriptions.userId, userId),
+  const db = yield* Db;
+  const now = yield* currentDate;
+  const rows = yield* db.use("articles.counts.unreadPerFeed", (client) =>
+    client
+      .select({ feedId: feedItems.feedId, count: countSql })
+      .from(feedItems)
+      .innerJoin(feedSubscriptions, subscriptionJoin(userId))
+      .leftJoin(feedItemUserState, userStateJoin(userId))
+      .where(
+        and(
+          inArray(feedItems.feedId, feedIds),
+          sql`(${readSqlFor("subscribed")}) = false`,
+          visibleFeedItemSql,
+          lt(feedItems.publishedAt, now),
+        ),
+      )
+      .groupBy(feedItems.feedId),
   );
-  const stateJoin = and(
-    eq(feedItemUserState.feedItemId, feedItems.id),
-    eq(feedItemUserState.userId, userId),
-  );
-  const now = new Date();
 
-  const rows = await database
-    .select({
-      feedId: feedItems.feedId,
-      count: sql<number>`count(*)::int`,
-    })
-    .from(feedItems)
-    .innerJoin(feedSubscriptions, joinCond)
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(
-      and(
-        inArray(feedItems.feedId, feedIds),
-        sql`(${articleIsReadSql}) = false`,
-        visibleFeedItemSql,
-        lt(feedItems.publishedAt, now),
-      ),
-    )
-    .groupBy(feedItems.feedId);
-
-  const result: Record<string, number> = {};
+  const result: Record<string, number> = Object.fromEntries(feedIds.map((id) => [id, 0]));
   for (const row of rows) {
     result[row.feedId] = row.count;
   }
-  // Ensure every requested feed ID has an entry (default 0 for feeds with no unread items)
-  for (const id of feedIds) {
-    if (!(id in result)) {
-      result[id] = 0;
-    }
-  }
   return result;
-}
+});

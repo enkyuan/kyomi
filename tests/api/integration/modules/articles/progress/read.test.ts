@@ -5,9 +5,9 @@ import {
   toReadingPositionDto,
   toReadingProgressDto,
 } from "@modules/articles/progress/read";
-import { toFeedArticleDetailDtoForTest } from "@modules/articles/read/detail";
+import { toFeedArticleDetailDto } from "@modules/articles/read/detail";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
-import { toArticleListItemsForTest } from "@modules/articles/read/list/query";
+import { toArticleListItems } from "@modules/articles/read/list/query";
 import { articleDetailSchema, articleListItemSchema } from "@modules/articles/schemas";
 import { clipToDetail } from "@modules/articles/write/clips/detail";
 import { listClipsForUser } from "@modules/articles/write/clips/operations";
@@ -150,7 +150,7 @@ describe("article DTOs carry reading progress", () => {
   });
 
   test("a mapped list row has no progress until the page lookup attaches it", () => {
-    const [item] = toArticleListItemsForTest([rawListRow()]);
+    const [item] = toArticleListItems([rawListRow()]);
 
     expect(item?.readingProgress).toBeNull();
   });
@@ -163,7 +163,7 @@ describe("article DTOs carry reading progress", () => {
         stateRow({ id: "state-3", userId: "user-2", progress: 0.1 }),
       ],
     });
-    const items = toArticleListItemsForTest([rawListRow()]);
+    const items = toArticleListItems([rawListRow()]);
 
     const [feed] = await attachReadingProgress(db as never, "user-1", items);
     const [clip] = await attachReadingProgress(db as never, "user-1", [
@@ -206,7 +206,7 @@ describe("article DTOs carry reading progress", () => {
   });
 
   test("feed detail carries progress and the restore position", () => {
-    const detail = toFeedArticleDetailDtoForTest({
+    const detail = toFeedArticleDetailDto({
       ...feedItemRow(),
       ...positionColumns,
     } as never);
@@ -221,7 +221,7 @@ describe("article DTOs carry reading progress", () => {
   });
 
   test("feed detail has null progress and position when the user never read it", () => {
-    const detail = toFeedArticleDetailDtoForTest(feedItemRow() as never);
+    const detail = toFeedArticleDetailDto(feedItemRow() as never);
 
     expect(detail.readingProgress).toBeNull();
     expect(detail.readingPosition).toBeNull();

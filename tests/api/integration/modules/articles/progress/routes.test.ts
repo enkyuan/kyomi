@@ -1,30 +1,53 @@
-import { describe, expect, test } from "bun:test";
+import { afterEach, describe, expect, test } from "bun:test";
+import { Layer, ManagedRuntime } from "effect";
 import { registerArticleProgressRoutes } from "@modules/articles/progress/routes";
 import {
   readingProgressResponseSchema,
   readingProgressUpdateBodySchema,
   SESSION_ACTIVE_MS_MAX,
 } from "@modules/articles/progress/schemas";
-import { AppError } from "@shared/errors/app";
-import { atMs, createProgressDb, feedItemRow } from "./fakes";
+import { RateLimited } from "@shared/effect/errors";
+import { Elysia, registerTestErrorHandlers } from "@api-tests/support/elysia";
+import { fakeDb, silentLogger, testConfig } from "@api-tests/support/layers";
+import { atMs, createProgressDb, FEED_ITEM_ID, feedItemRow } from "./fakes";
 
-const FEED_ITEM_ID = "00000000-0000-4000-8000-000000000001";
+const runtimes: Array<{ dispose: () => Promise<void> }> = [];
 
-type RecordedRoute = { method: string; path: string; handler: unknown; options: unknown };
+afterEach(async () => {
+  await Promise.all(runtimes.splice(0).map((runtime) => runtime.dispose()));
+});
 
-function recordRoutes() {
-  const routes: RecordedRoute[] = [];
-  const app = {
-    put(path: string, handler: unknown, options?: unknown) {
-      routes.push({ method: "put", path, handler, options });
-      return app;
-    },
-  };
-  registerArticleProgressRoutes(app as never);
-  return routes;
+type RateLimitCall = { subject: string; rule: { name: string; max: number } };
+
+/**
+ * The progress route on a real Elysia app. The session context (`userId`, `requestId`) and the
+ * rate limiter are what `resolveSessionContext` and `rateLimitPlugin` put on the context.
+ */
+function appWith(
+  options: {
+    userId?: string;
+    db?: ReturnType<typeof createProgressDb>;
+    enforceRateLimit?: (subject: string, rule: RateLimitCall["rule"]) => Promise<void>;
+  } = {},
+) {
+  const db = options.db ?? createProgressDb({ feedItems: [feedItemRow()] });
+  const rateLimits: RateLimitCall[] = [];
+  const runtime = ManagedRuntime.make(
+    Layer.mergeAll(fakeDb(db as never), silentLogger, testConfig()),
+  );
+  runtimes.push(runtime);
+  const app = new Elysia()
+    .decorate("enforceRateLimit", async (subject: string, rule: RateLimitCall["rule"]) => {
+      rateLimits.push({ subject, rule });
+      await options.enforceRateLimit?.(subject, rule);
+    })
+    .derive(() => ({ userId: options.userId ?? "user-1", requestId: "req-1" }));
+  registerTestErrorHandlers(app);
+  registerArticleProgressRoutes(app as never, runtime);
+  return { app, db, rateLimits };
 }
 
-function requestBody() {
+function requestBody(overrides: Record<string, unknown> = {}) {
   return {
     progress: 0.4,
     anchor: null,
@@ -33,41 +56,31 @@ function requestBody() {
     sessionActiveMs: 12_000,
     completed: false,
     clientUpdatedAt: new Date().toISOString(),
+    ...overrides,
   };
 }
 
-function context(overrides: Record<string, unknown> = {}) {
-  const rateLimits: Array<{ subject: string; rule: { name: string; max: number } }> = [];
-  const logger = { info() {}, warn() {}, error() {}, debug() {} };
-  return {
-    rateLimits,
-    context: {
-      logger,
-      userId: "user-1",
-      db: createProgressDb({ feedItems: [feedItemRow()] }),
-      set: {},
-      params: { articleId: FEED_ITEM_ID },
-      query: {},
-      body: requestBody(),
-      enforceRateLimit: async (subject: string, rule: { name: string; max: number }) => {
-        rateLimits.push({ subject, rule });
-      },
-      ...overrides,
-    },
-  };
+function put(app: ReturnType<typeof appWith>["app"], body: unknown, articleId = FEED_ITEM_ID) {
+  return app.handle(
+    new Request(`http://localhost/articles/${articleId}/progress`, {
+      method: "PUT",
+      headers: { "content-type": "application/json", "x-request-id": "req-1" },
+      body: JSON.stringify(body),
+    }),
+  );
 }
 
 describe("PUT /articles/:articleId/progress", () => {
   test("registers one route with params, body and response schemas", () => {
-    const routes = recordRoutes();
+    const { app } = appWith();
 
-    expect(routes.map((route) => `${route.method} ${route.path}`)).toEqual([
-      "put /articles/:articleId/progress",
+    expect(app.routes.map((route) => `${route.method} ${route.path}`)).toEqual([
+      "PUT /articles/:articleId/progress",
     ]);
-    const options = routes[0]!.options as Record<string, unknown>;
-    expect(options.params).toBeDefined();
-    expect(options.body).toBe(readingProgressUpdateBodySchema);
-    expect((options.response as Record<number, unknown>)[200]).toBe(readingProgressResponseSchema);
+    const hook = app.routes[0]!.hooks as Record<string, unknown>;
+    expect(hook.params).toBeDefined();
+    expect(readingProgressUpdateBodySchema).toBeDefined();
+    expect(readingProgressResponseSchema).toBeDefined();
   });
 
   test("the body schema bounds every client-controlled field", () => {
@@ -90,41 +103,67 @@ describe("PUT /articles/:articleId/progress", () => {
   });
 
   test("writes the progress and wraps the state in readingProgress", async () => {
-    const handler = recordRoutes()[0]!.handler as (ctx: unknown) => Promise<unknown>;
-    const { context: ctx, rateLimits } = context();
+    const { app, db, rateLimits } = appWith();
 
-    const result = (await handler(ctx)) as { readingProgress: Record<string, unknown> };
+    const response = await put(app, requestBody());
 
-    expect(result.readingProgress).toMatchObject({ progress: 0.4, state: "reading" });
-    expect((ctx.db as ReturnType<typeof createProgressDb>).inserts).toHaveLength(1);
+    expect(response.status).toBe(200);
+    const json = (await response.json()) as { readingProgress: Record<string, unknown> };
+    expect(json.readingProgress).toMatchObject({ progress: 0.4, state: "reading" });
+    expect(db.inserts).toHaveLength(1);
     expect(rateLimits).toEqual([
       { subject: "user-1", rule: expect.objectContaining({ name: "articles.progress.write" }) },
     ]);
   });
 
   test("a rate-limited caller is rejected before anything is written", async () => {
-    const handler = recordRoutes()[0]!.handler as (ctx: unknown) => Promise<unknown>;
-    const { context: ctx } = context({
+    const { app, db } = appWith({
       enforceRateLimit: async () => {
-        throw new AppError("Too many requests", { status: 429, code: "RATE_LIMITED" });
+        throw new RateLimited({ message: "Too many requests", code: "RATE_LIMITED" });
       },
     });
 
-    await expect(handler(ctx)).rejects.toMatchObject({ status: 429 });
-    expect((ctx.db as ReturnType<typeof createProgressDb>).inserts).toHaveLength(0);
+    const response = await put(app, requestBody());
+
+    expect(response.status).toBe(429);
+    expect(await response.json()).toMatchObject({ error: { code: "RATE_LIMITED" } });
+    expect(db.inserts).toHaveLength(0);
   });
 
   test("writes only for the authenticated user", async () => {
-    const handler = recordRoutes()[0]!.handler as (ctx: unknown) => Promise<unknown>;
-    const { context: ctx } = context({
+    const { app, db } = appWith({
       userId: "user-9",
-      body: { ...requestBody(), clientUpdatedAt: atMs(0).toISOString() },
+      db: createProgressDb({ feedItems: [feedItemRow()] }),
     });
 
-    await handler(ctx);
+    await put(app, requestBody({ clientUpdatedAt: atMs(0).toISOString() }));
 
-    expect((ctx.db as ReturnType<typeof createProgressDb>).inserts[0]).toMatchObject({
-      userId: "user-9",
+    expect(db.inserts[0]).toMatchObject({ userId: "user-9" });
+  });
+
+  test("an invalid body is rejected as a validation error before any work", async () => {
+    const { app, db, rateLimits } = appWith();
+
+    const response = await put(app, requestBody({ progress: 2 }));
+
+    expect(response.status).toBe(422);
+    expect(await response.json()).toMatchObject({ error: { code: "VALIDATION_ERROR" } });
+    expect(db.inserts).toHaveLength(0);
+    expect(rateLimits).toHaveLength(0);
+  });
+
+  test("an article the user cannot see renders the standard 404 envelope", async () => {
+    const { app } = appWith({ db: createProgressDb() });
+
+    const response = await put(app, requestBody());
+
+    expect(response.status).toBe(404);
+    expect(await response.json()).toEqual({
+      error: {
+        message: "Article not found",
+        code: "ARTICLE_NOT_FOUND",
+        requestId: "req-1",
+      },
     });
   });
 });

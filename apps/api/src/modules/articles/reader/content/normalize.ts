@@ -1,19 +1,26 @@
 import type {
-  ArticleExtractionCandidate,
   ArticleReaderContentDto,
-  ArticleReaderFallbackReason,
   ArticleReaderStatus,
   ArticleStoredContentDto,
-  ExtractedContentStatus,
 } from "./types";
 import { normalizeMarkdownFeedArtifacts } from "./markdown";
 import {
   ARTICLE_HTML_SANITIZER_VERSION,
   htmlToText,
-  processArticleHtml,
   processIngestedArticleHtml,
   sanitizeArticleHtml,
 } from "./sanitize";
+import {
+  countSentences,
+  countWords,
+  hasArticleHtml,
+  htmlLooksLikeWrappedMarkdown,
+  looksLikeHtml,
+  looksLikeMarkdown,
+  looksLikeSummaryEcho,
+  normalizeText,
+  safeHttpBaseUrl,
+} from "./signals";
 
 type HtmlSanitizer = (
   html: string,
@@ -34,7 +41,7 @@ const READ_SANITIZER: HtmlSanitizer = sanitizeArticleHtml;
 const INGEST_SANITIZER: HtmlSanitizer = (html, options) =>
   processIngestedArticleHtml(html, options).html;
 
-type ReaderArticleInput = {
+export type ReaderArticleInput = {
   articleType: "feed" | "clip";
   /** Sanitizer version stored with `contentHtml`; only a current version marks it as compiled. */
   contentSanitizerVersion?: string | null;
@@ -51,265 +58,141 @@ type ReaderArticleInput = {
   extractionErrorMessage: string | null;
 };
 
-function normalizeText(value: string | null | undefined): string {
-  if (!value) {
-    return "";
+type StoredBody = Pick<
+  ArticleStoredContentDto,
+  "contentHtml" | "contentText" | "contentMarkdown" | "contentStatus" | "contentSource"
+> & { bodyKind: "html" | "markdown" | "text" };
+
+/** What an input's own columns say about a body, applied where the body kind leaves a choice. */
+type BodyDefaults = {
+  contentSource: ArticleStoredContentDto["contentSource"] | null;
+  contentStatus: ArticleStoredContentDto["contentStatus"] | null;
+  /** Status for an HTML body: stored columns are `ready`, legacy `content` is only `partial`. */
+  htmlStatus: ArticleStoredContentDto["contentStatus"];
+};
+
+const STORED_DEFAULTS = (input: ReaderArticleInput): BodyDefaults => ({
+  contentSource: input.contentSource,
+  contentStatus: input.contentStatus,
+  htmlStatus: "ready",
+});
+
+const LEGACY_DEFAULTS: BodyDefaults = {
+  contentSource: null,
+  contentStatus: null,
+  htmlStatus: "partial",
+};
+
+function markdownBody(markdown: string, text: string, defaults: BodyDefaults): StoredBody {
+  return {
+    bodyKind: "markdown",
+    contentHtml: null,
+    contentMarkdown: markdown,
+    contentText: text,
+    contentSource: defaults.contentSource ?? "feed_markdown",
+    contentStatus: defaults.contentStatus ?? "partial",
+  };
+}
+
+/** A plain-text body, promoted to markdown when it reads as markdown. */
+function textBody(raw: string, defaults: BodyDefaults): StoredBody {
+  if (looksLikeMarkdown(raw)) {
+    const markdown = normalizeMarkdownFeedArtifacts(raw);
+    return markdownBody(markdown, markdown, defaults);
   }
-
-  return value
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&[a-z0-9#]+;/gi, " ")
-    .replace(/https?:\/\/\S+/gi, " ")
-    .replace(/[^\p{L}\p{N}\s]+/gu, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-    .toLowerCase();
+  return {
+    bodyKind: "text",
+    contentHtml: null,
+    contentMarkdown: null,
+    contentText: raw,
+    contentSource: defaults.contentSource ?? "text_fallback",
+    contentStatus: defaults.contentStatus ?? "partial",
+  };
 }
 
-function countWords(value: string): number {
-  return value.split(/\s+/).filter(Boolean).length;
-}
-
-function countSentences(value: string): number {
-  return (value.match(/[.!?](?=\s|$)/g) ?? []).length;
-}
-
-function looksLikeHtml(value: string): boolean {
-  return /<[a-z][\s\S]*>/i.test(value);
-}
-
-function markdownSignalScore(value: string): number {
-  let score = 0;
-  if (/(^|\n)\s*```[\w-]*\n[\s\S]*?\n\s*```/m.test(value)) score += 7;
-  if (/(^|\n)\s{0,3}(?:[-*+]\s+|\d+[.)]\s+)/m.test(value)) score += 4;
-  if (/(^|\n)\s{0,3}>[^\n]+/m.test(value)) score += 3;
-  if (/(^|\n)\s{0,3}#{1,6}\s+\S/m.test(value)) score += 4;
-  if (/(^|\n)[^\n]+\n(?:=+|-{3,})\s*($|\n)/m.test(value)) score += 4;
-  if (/(^|\n)\s*\|.+\|\s*\n\s*\|[-:\s|]+\|/m.test(value)) score += 6;
-  if (/\[[^\]]+\]\(([^)\s]+)(?:\s+"[^"]*")?\)/m.test(value)) score += 4;
-  if (/!\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)/m.test(value)) score += 4;
-  if (/`[^`\n]{1,140}`/.test(value)) score += 3;
-  if (/(^|\n)\s*[-*_]{3,}\s*($|\n)/m.test(value)) score += 2;
-  if (/~~[^~\n]+~~/.test(value)) score += 1;
-  if (/\$[^$\n]+\$/.test(value)) score += 1;
-  return score;
-}
-
-function looksLikeMarkdown(value: string): boolean {
-  const score = markdownSignalScore(value);
-  const hasHeading = /(^|\n)\s{0,3}#{1,6}\s+\S/m.test(value);
-  const hasSetextHeading = /(^|\n)[^\n]+\n(?:=+|-{3,})\s*($|\n)/m.test(value);
-  const hasList = /(^|\n)\s{0,3}(?:[-*+]\s+|\d+[.)]\s+)/m.test(value);
-  const hasRule = /(^|\n)\s*[-*_]{3,}\s*($|\n)/m.test(value);
-
-  if (score >= 6) {
-    return true;
+/**
+ * A body from sanitized HTML. HTML that is only a wrapper around raw markdown text becomes a
+ * markdown body; anything with structural markup stays HTML.
+ */
+function htmlBody(
+  html: string,
+  preferredText: string | null | undefined,
+  defaults: BodyDefaults,
+): StoredBody {
+  const text = preferredText?.trim() || htmlToText(html).trim();
+  const wrappedMarkdown = normalizeMarkdownFeedArtifacts(text);
+  if (wrappedMarkdown && looksLikeMarkdown(wrappedMarkdown) && htmlLooksLikeWrappedMarkdown(html)) {
+    return markdownBody(wrappedMarkdown, wrappedMarkdown, defaults);
   }
-  // Long markdown posts can be mostly headings/rules with little inline syntax.
-  if (value.length > 1800 && score >= 4 && (hasHeading || hasSetextHeading || hasList || hasRule)) {
-    return true;
-  }
-  // Short technical content often only has inline code or links.
-  return score >= 3 && value.length <= 2600;
+  return {
+    bodyKind: "html",
+    contentHtml: html,
+    contentMarkdown: null,
+    contentText: preferredText?.trim() || htmlToText(html) || null,
+    contentSource: defaults.contentSource ?? "feed_html",
+    contentStatus: defaults.contentStatus ?? defaults.htmlStatus,
+  };
 }
 
-function safeHttpBaseUrl(input: string | null | undefined): string | null {
-  if (!input?.trim()) {
-    return null;
-  }
-  try {
-    const parsed = new URL(input);
-    if (parsed.protocol === "http:" || parsed.protocol === "https:") {
-      return parsed.href;
-    }
-    return null;
-  } catch {
-    return null;
-  }
+function sanitizeInputHtml(
+  input: ReaderArticleInput,
+  html: string,
+  sanitize: HtmlSanitizer,
+  trustCompilerHints: boolean,
+): string {
+  return sanitize(html, {
+    baseUrl: safeHttpBaseUrl(input.contentBaseUrl),
+    title: input.title,
+    byline: null,
+    excerpt: input.summary,
+    trustCompilerHints,
+  });
 }
 
-function hasArticleHtml(value: string): boolean {
-  return /<(article|main|section|p|blockquote|ul|ol|h[1-6]|pre|table)\b/i.test(value);
-}
-
-function htmlLooksLikeWrappedMarkdown(value: string): boolean {
-  // If markdown has already been rendered into structural HTML (headings/lists/code/tables/hr),
-  // keep HTML mode. Otherwise, wrapper-only tags may still contain raw markdown text.
-  return !/<(h[1-6]|ul|ol|li|blockquote|pre|table|thead|tbody|tr|th|td|hr|code)\b/i.test(value);
-}
-
-function looksLikeSummaryEcho(content: string, summary: string): boolean {
-  if (!content || !summary) {
-    return false;
-  }
-
-  if (content === summary) {
-    return true;
-  }
-
-  const lengthDelta = Math.abs(content.length - summary.length);
-  if (lengthDelta > 48) {
-    return false;
-  }
-
-  return content.includes(summary) || summary.includes(content);
-}
-
-function contentFromLegacy(input: ReaderArticleInput, sanitize: HtmlSanitizer) {
+function contentFromLegacy(input: ReaderArticleInput, sanitize: HtmlSanitizer): StoredBody | null {
   const legacy = input.legacyContent?.trim();
   if (!legacy) {
     return null;
   }
-
-  const baseUrl = safeHttpBaseUrl(input.contentBaseUrl);
-  if (looksLikeHtml(legacy)) {
-    // Legacy `content` has no stored version of its own (clips keep client input there).
-    const html = sanitize(legacy, {
-      baseUrl,
-      title: input.title,
-      byline: null,
-      excerpt: input.summary,
-      trustCompilerHints: false,
-    });
-    if (!html) {
-      const text = htmlToText(legacy).trim();
-      if (!text) {
-        return null;
-      }
-      const bodyKind: "markdown" | "text" = looksLikeMarkdown(text) ? "markdown" : "text";
-      const normalizedText = bodyKind === "markdown" ? normalizeMarkdownFeedArtifacts(text) : text;
-      return {
-        bodyKind,
-        contentHtml: null,
-        contentMarkdown: bodyKind === "markdown" ? normalizedText : null,
-        contentText: normalizedText,
-        contentSource:
-          bodyKind === "markdown" ? ("feed_markdown" as const) : ("text_fallback" as const),
-        contentStatus: "partial" as const,
-      };
-    }
-    const htmlText = normalizeMarkdownFeedArtifacts(htmlToText(html).trim());
-    if (htmlText && looksLikeMarkdown(htmlText) && htmlLooksLikeWrappedMarkdown(html)) {
-      return {
-        bodyKind: "markdown" as const,
-        contentHtml: null,
-        contentMarkdown: htmlText,
-        contentText: htmlText,
-        contentSource: "feed_markdown" as const,
-        contentStatus: "partial" as const,
-      };
-    }
-    return {
-      bodyKind: "html" as const,
-      contentHtml: html,
-      contentMarkdown: null,
-      contentText: htmlToText(html) || null,
-      contentSource: "feed_html" as const,
-      contentStatus: "partial" as const,
-    };
+  if (!looksLikeHtml(legacy)) {
+    return textBody(legacy, LEGACY_DEFAULTS);
   }
 
-  if (looksLikeMarkdown(legacy)) {
-    const md = normalizeMarkdownFeedArtifacts(legacy);
-    return {
-      bodyKind: "markdown" as const,
-      contentHtml: null,
-      contentMarkdown: md,
-      contentText: md,
-      contentSource: "feed_markdown" as const,
-      contentStatus: "partial" as const,
-    };
+  // Legacy `content` has no stored version of its own (clips keep client input there).
+  const html = sanitizeInputHtml(input, legacy, sanitize, false);
+  if (html) {
+    return htmlBody(html, null, LEGACY_DEFAULTS);
   }
-
-  return {
-    bodyKind: "text" as const,
-    contentHtml: null,
-    contentMarkdown: null,
-    contentText: legacy,
-    contentSource: "text_fallback" as const,
-    contentStatus: "partial" as const,
-  };
+  const text = htmlToText(legacy).trim();
+  return text ? textBody(text, LEGACY_DEFAULTS) : null;
 }
 
-function buildStoredBody(input: ReaderArticleInput, sanitize: HtmlSanitizer = READ_SANITIZER) {
+function buildStoredBody(
+  input: ReaderArticleInput,
+  sanitize: HtmlSanitizer = READ_SANITIZER,
+): StoredBody | null {
   // Canonical body-kind inference lives on the server. Clients render this result as-is.
-  const baseUrl = safeHttpBaseUrl(input.contentBaseUrl);
+  const defaults = STORED_DEFAULTS(input);
   if (input.contentHtml?.trim()) {
-    const html = sanitize(input.contentHtml, {
-      baseUrl,
-      title: input.title,
-      byline: null,
-      excerpt: input.summary,
-      trustCompilerHints: input.contentSanitizerVersion === ARTICLE_HTML_SANITIZER_VERSION,
-    });
-    if (!html) {
-      const rawCandidate = input.contentText?.trim() ?? htmlToText(input.contentHtml).trim();
-      if (rawCandidate) {
-        const bodyKind: "markdown" | "text" = looksLikeMarkdown(rawCandidate) ? "markdown" : "text";
-        const textCandidate =
-          bodyKind === "markdown" ? normalizeMarkdownFeedArtifacts(rawCandidate) : rawCandidate;
-        return {
-          bodyKind,
-          contentHtml: null,
-          contentMarkdown: bodyKind === "markdown" ? textCandidate : null,
-          contentText: textCandidate,
-          contentSource:
-            input.contentSource ?? (bodyKind === "markdown" ? "feed_markdown" : "text_fallback"),
-          contentStatus: input.contentStatus ?? "partial",
-        };
-      }
-      return null;
+    const trusted = input.contentSanitizerVersion === ARTICLE_HTML_SANITIZER_VERSION;
+    const html = sanitizeInputHtml(input, input.contentHtml, sanitize, trusted);
+    if (html) {
+      return htmlBody(html, input.contentText, defaults);
     }
-    const htmlText = normalizeMarkdownFeedArtifacts(
-      (input.contentText?.trim() || htmlToText(html).trim()).trim(),
-    );
-    if (htmlText && looksLikeMarkdown(htmlText) && htmlLooksLikeWrappedMarkdown(html)) {
-      return {
-        bodyKind: "markdown" as const,
-        contentHtml: null,
-        contentMarkdown: htmlText,
-        contentText: htmlText,
-        contentSource: input.contentSource ?? "feed_markdown",
-        contentStatus: input.contentStatus ?? "partial",
-      };
-    }
-    return {
-      bodyKind: "html" as const,
-      contentHtml: html,
-      contentMarkdown: null,
-      contentText: input.contentText?.trim() || htmlToText(html) || null,
-      contentSource: input.contentSource ?? "feed_html",
-      contentStatus: input.contentStatus ?? "ready",
-    };
+    const rawCandidate = input.contentText?.trim() ?? htmlToText(input.contentHtml).trim();
+    return rawCandidate ? textBody(rawCandidate, defaults) : null;
   }
 
   if (input.contentMarkdown?.trim()) {
-    const md = normalizeMarkdownFeedArtifacts(input.contentMarkdown.trim());
+    const markdown = normalizeMarkdownFeedArtifacts(input.contentMarkdown.trim());
     return {
-      bodyKind: "markdown" as const,
-      contentHtml: null,
-      contentMarkdown: md,
-      contentText: input.contentText?.trim() || md,
-      contentSource: input.contentSource ?? "feed_markdown",
-      contentStatus: input.contentStatus ?? "ready",
+      ...markdownBody(markdown, input.contentText?.trim() || markdown, defaults),
+      contentStatus: defaults.contentStatus ?? "ready",
     };
   }
 
   if (input.contentText?.trim()) {
-    const rawText = input.contentText.trim();
-    const bodyKind: "markdown" | "text" = looksLikeMarkdown(rawText) ? "markdown" : "text";
-    const text = bodyKind === "markdown" ? normalizeMarkdownFeedArtifacts(rawText) : rawText;
-    return {
-      bodyKind,
-      contentHtml: null,
-      contentMarkdown: bodyKind === "markdown" ? text : null,
-      contentText: text,
-      contentSource:
-        input.contentSource ?? (bodyKind === "markdown" ? "feed_markdown" : "text_fallback"),
-      contentStatus: input.contentStatus ?? "partial",
-    };
+    return textBody(input.contentText.trim(), defaults);
   }
 
   return contentFromLegacy(input, sanitize);
@@ -358,10 +241,19 @@ export function buildStoredContentRecord(
   };
 }
 
-function shouldExtractStoredContent(
-  input: ReaderArticleInput,
-  body: ReturnType<typeof buildStoredBody>,
-): boolean {
+/** Feed content too short, or too close to the feed summary, to be the whole article. */
+function isThinContent(text: string, summary: string | null, hasHtml: boolean): boolean {
+  const normalizedContent = normalizeText(text);
+  const words = countWords(normalizedContent);
+  const summaryEcho = looksLikeSummaryEcho(normalizedContent, normalizeText(summary));
+  return (
+    (summaryEcho && words < 180) ||
+    words < 40 ||
+    (!hasHtml && countSentences(text) < 2 && words < 90)
+  );
+}
+
+function shouldExtractStoredContent(input: ReaderArticleInput, body: StoredBody | null): boolean {
   const text =
     body?.contentText?.trim() ??
     body?.contentMarkdown?.trim() ??
@@ -379,29 +271,14 @@ function shouldExtractStoredContent(
     return false;
   }
 
-  const normalizedContent = normalizeText(text);
-  const normalizedSummary = normalizeText(input.summary);
-  const words = countWords(normalizedContent);
-  const sentences = countSentences(text);
-  const summaryEcho = looksLikeSummaryEcho(normalizedContent, normalizedSummary);
-  const hasHtml = Boolean(body?.contentHtml && hasArticleHtml(body.contentHtml));
-
-  if (summaryEcho && words < 180) {
-    return true;
-  }
-
-  if (words < 40) {
-    return true;
-  }
-
-  if (!hasHtml && sentences < 2 && words < 90) {
-    return true;
-  }
-
-  return false;
+  return isThinContent(
+    text,
+    input.summary,
+    Boolean(body?.contentHtml && hasArticleHtml(body.contentHtml)),
+  );
 }
 
-function fallbackNotice(hasContent: boolean, hasSummary: boolean): string {
+export function fallbackNotice(hasContent: boolean, hasSummary: boolean): string {
   if (hasContent) {
     return "Full preview unavailable right now. Showing the best saved version instead.";
   }
@@ -410,14 +287,6 @@ function fallbackNotice(hasContent: boolean, hasSummary: boolean): string {
   }
   return "This source could not be previewed in the reader.";
 }
-
-function inferFallbackReason(errorCode: string | null): ArticleReaderFallbackReason {
-  if (errorCode === "TIMEOUT") {
-    return "timeout";
-  }
-  return "extraction_failed";
-}
-
 function toReaderStatus(
   status: ArticleStoredContentDto["contentStatus"] | null,
 ): ArticleReaderStatus {
@@ -426,7 +295,6 @@ function toReaderStatus(
   }
   return "partial";
 }
-
 export function buildStoredReaderContent(input: ReaderArticleInput): ArticleReaderContentDto {
   // Invariant: this function is the only place that maps stored/original columns to reader bodyKind.
   const storedBody = buildStoredBody(input);
@@ -525,179 +393,5 @@ export function buildStoredReaderContent(input: ReaderArticleInput): ArticleRead
     extractionErrorCode: input.extractionErrorCode,
     extractionErrorMessage: input.extractionErrorMessage,
     shouldExtract: input.articleType === "feed",
-  };
-}
-
-/**
- * Builds extracted-mode reader content from persisted extracted columns.
- * Sanitization happens here again as a defense-in-depth step before returning HTML to clients.
- */
-export function buildExtractedReaderViewFromDb(input: {
-  articleType: "feed" | "clip";
-  title: string;
-  summary: string | null;
-  contentBaseUrl: string | null;
-  extractedContentHtml: string | null;
-  extractedContentText: string | null;
-  extractedContentStatus: ExtractedContentStatus;
-  extractedContentSanitizerVersion?: string | null;
-}): ArticleReaderContentDto | null {
-  if (input.extractedContentStatus !== "ready") {
-    return null;
-  }
-  const rawHtml = input.extractedContentHtml?.trim();
-  if (!rawHtml) {
-    return null;
-  }
-  // Pass the raw HTML and its stored sanitizer version through untouched;
-  // buildReadabilityReaderContent performs the single sanitize/normalize/text-extraction
-  // pass and skips re-sanitizing only when the version is already current.
-  return buildReadabilityReaderContent(
-    {
-      articleType: input.articleType,
-      title: input.title,
-      summary: input.summary,
-      contentBaseUrl: input.contentBaseUrl,
-      legacyContent: null,
-      contentHtml: null,
-      contentText: null,
-      contentMarkdown: null,
-      contentStatus: "ready",
-      contentSource: "feed_html",
-      extractionErrorCode: null,
-      extractionErrorMessage: null,
-    },
-    {
-      title: null,
-      byline: null,
-      excerpt: input.summary,
-      contentHtml: rawHtml,
-      contentText: input.extractedContentText?.trim() || null,
-      siteName: null,
-      language: null,
-      publishedTime: null,
-    },
-    input.extractedContentSanitizerVersion ?? null,
-  );
-}
-
-export function buildReadabilityReaderContent(
-  input: ReaderArticleInput,
-  extracted: ArticleExtractionCandidate,
-  sanitizerVersion: string | null = null,
-): ArticleReaderContentDto {
-  if (extracted.contentHtml?.trim()) {
-    const processed = processArticleHtml(extracted.contentHtml, {
-      baseUrl: safeHttpBaseUrl(input.contentBaseUrl),
-      title: extracted.title ?? input.title,
-      byline: extracted.byline,
-      excerpt: extracted.excerpt ?? input.summary,
-      sanitizerVersion,
-    });
-    return {
-      contentStatus: "ready",
-      contentSource: "extracted_html",
-      bodyKind: "html",
-      contentBaseUrl: safeHttpBaseUrl(input.contentBaseUrl),
-      title: extracted.title ?? input.title,
-      byline: extracted.byline,
-      excerpt: extracted.excerpt ?? input.summary,
-      contentHtml: processed.html,
-      contentMarkdown: null,
-      contentText: extracted.contentText?.trim() || processed.text || null,
-      fallbackSummary: null,
-      fallbackReason: null,
-      siteName: extracted.siteName,
-      language: extracted.language,
-      publishedTime: extracted.publishedTime,
-      notice: null,
-      extractionErrorCode: null,
-      extractionErrorMessage: null,
-      shouldExtract: false,
-    };
-  }
-
-  if (extracted.contentText?.trim()) {
-    return {
-      contentStatus: "ready",
-      contentSource: "extracted_html",
-      bodyKind: "text",
-      contentBaseUrl: safeHttpBaseUrl(input.contentBaseUrl),
-      title: extracted.title ?? input.title,
-      byline: extracted.byline,
-      excerpt: extracted.excerpt ?? input.summary,
-      contentHtml: null,
-      contentMarkdown: null,
-      contentText: extracted.contentText,
-      fallbackSummary: null,
-      fallbackReason: null,
-      siteName: extracted.siteName,
-      language: extracted.language,
-      publishedTime: extracted.publishedTime,
-      notice: null,
-      extractionErrorCode: null,
-      extractionErrorMessage: null,
-      shouldExtract: false,
-    };
-  }
-
-  return {
-    contentStatus: "failed",
-    contentSource: "link_only",
-    bodyKind: "fallback",
-    contentBaseUrl: safeHttpBaseUrl(input.contentBaseUrl),
-    title: extracted.title ?? input.title,
-    byline: extracted.byline,
-    excerpt: extracted.excerpt ?? input.summary,
-    contentHtml: null,
-    contentMarkdown: null,
-    contentText: null,
-    fallbackSummary: input.summary,
-    fallbackReason: "missing_content",
-    siteName: extracted.siteName,
-    language: extracted.language,
-    publishedTime: extracted.publishedTime,
-    notice: fallbackNotice(false, Boolean(input.summary)),
-    extractionErrorCode: null,
-    extractionErrorMessage: null,
-    shouldExtract: false,
-  };
-}
-
-export function buildFallbackReaderContent(
-  input: ReaderArticleInput,
-  error: { code: string; message: string },
-): ArticleReaderContentDto {
-  const base = buildStoredReaderContent({
-    ...input,
-    contentStatus: "failed",
-    extractionErrorCode: error.code,
-    extractionErrorMessage: error.message,
-  });
-  const hasContent =
-    Boolean(base.contentHtml?.trim()) ||
-    Boolean(base.contentMarkdown?.trim()) ||
-    Boolean(base.contentText?.trim());
-
-  if (base.bodyKind === "fallback") {
-    return {
-      ...base,
-      contentStatus: hasContent || Boolean(base.fallbackSummary) ? "partial" : "failed",
-      notice: fallbackNotice(hasContent, Boolean(base.fallbackSummary)),
-      extractionErrorCode: error.code,
-      extractionErrorMessage: error.message,
-      fallbackReason: base.fallbackReason ?? inferFallbackReason(error.code),
-      shouldExtract: false,
-    };
-  }
-
-  return {
-    ...base,
-    contentStatus: "partial",
-    notice: fallbackNotice(true, Boolean(base.fallbackSummary)),
-    extractionErrorCode: error.code,
-    extractionErrorMessage: error.message,
-    fallbackReason: null,
-    shouldExtract: false,
   };
 }

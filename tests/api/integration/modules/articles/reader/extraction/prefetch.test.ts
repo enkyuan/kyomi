@@ -1,8 +1,9 @@
 import { describe, expect, test } from "bun:test";
+import { Effect, Fiber, Layer } from "effect";
 import { getTableName } from "drizzle-orm";
-import { feedItems } from "@kyomi/db";
 import { prefetchArticleExtractionsForFeedItems } from "@modules/articles/reader/extraction/prefetch";
-import type { ArticleExtractionJob } from "@kyomi/ingest";
+import { fakeDb, fakeQueue, recordingLogger } from "@api-tests/support/layers";
+import { publishedJob } from "./workflow-harness";
 
 type FakeFeedItemRow = {
   id: string;
@@ -37,6 +38,8 @@ function createPrefetchDb(rows: FakeFeedItemRow[]) {
               }
             }
             return {
+              // Awaiting the query itself (the failed-state UPDATE) resolves with no rows.
+              then: (resolve: (value: void) => unknown) => Promise.resolve().then(resolve),
               returning: () => {
                 const claimed = rows.filter(
                   (row) =>
@@ -56,7 +59,53 @@ function createPrefetchDb(rows: FakeFeedItemRow[]) {
   };
 }
 
+function prefetchServices(db: ReturnType<typeof createPrefetchDb>, xadd: () => Promise<string>) {
+  const logs = recordingLogger();
+  const published: unknown[][] = [];
+  const layer = Layer.mergeAll(
+    fakeDb(db as never),
+    fakeQueue({
+      xadd: (...args: unknown[]) => {
+        published.push(args);
+        return xadd();
+      },
+    }),
+    logs.layer,
+  );
+  return { logs, published, layer };
+}
+
 describe("article extraction prefetch", () => {
+  test("an interruption right after the claim still publishes the claimed jobs", async () => {
+    const db = createPrefetchDb([
+      {
+        id: "item-1",
+        extractedContentStatus: "pending",
+        extractedContentUpdatedAt: null,
+        extractedContentError: null,
+      },
+    ]);
+    const { layer, published } = prefetchServices(db, async () => "1-0");
+
+    await Effect.runPromise(
+      Effect.gen(function* () {
+        const fiber = yield* Effect.forkChild(
+          prefetchArticleExtractionsForFeedItems({
+            articleIds: ["item-1"],
+            userId: "user-1",
+            reason: "scheduled",
+          }),
+        );
+        // Let the fiber start and reach the claim UPDATE, then interrupt it.
+        yield* Effect.yieldNow;
+        yield* Fiber.interrupt(fiber);
+      }).pipe(Effect.provide(layer)),
+    );
+    await new Promise((resolve) => setTimeout(resolve, 10));
+
+    expect(published).toHaveLength(1);
+  });
+
   test("claims only never-requested pending feed items before enqueueing jobs", async () => {
     const db = createPrefetchDb([
       {
@@ -78,17 +127,14 @@ describe("article extraction prefetch", () => {
         extractedContentError: null,
       },
     ]);
-    const jobs: ArticleExtractionJob[] = [];
+    const services = prefetchServices(db, async () => "1-0");
 
-    const result = await prefetchArticleExtractionsForFeedItems(
-      db as never,
-      { articleIds: ["item-1", "item-2", "item-3"], userId: "system", reason: "scheduled" },
-      {
-        enqueueExtractionJob: async (job) => {
-          jobs.push(job);
-          return "job-1";
-        },
-      },
+    const result = await Effect.runPromise(
+      prefetchArticleExtractionsForFeedItems({
+        articleIds: ["item-1", "item-2", "item-3"],
+        userId: "system",
+        reason: "scheduled",
+      }).pipe(Effect.provide(services.layer)),
     );
 
     expect(result).toMatchObject({
@@ -98,7 +144,7 @@ describe("article extraction prefetch", () => {
       failedCount: 0,
       skippedCount: 2,
     });
-    expect(jobs).toMatchObject([
+    expect(services.published.map(publishedJob)).toMatchObject([
       {
         type: "article.extract",
         payload: { articleId: "item-1", userId: "system", reason: "scheduled" },
@@ -119,17 +165,26 @@ describe("article extraction prefetch", () => {
       },
     ]);
 
-    const result = await prefetchArticleExtractionsForFeedItems(
-      db as never,
-      { articleIds: ["item-1"], userId: "system", reason: "scheduled" },
-      {
-        enqueueExtractionJob: async () => {
-          throw new Error("redis unavailable");
-        },
-      },
+    const services = prefetchServices(db, async () => {
+      throw new Error("redis unavailable");
+    });
+
+    const result = await Effect.runPromise(
+      prefetchArticleExtractionsForFeedItems({
+        articleIds: ["item-1"],
+        userId: "system",
+        reason: "scheduled",
+      }).pipe(Effect.provide(services.layer)),
     );
 
     expect(result).toMatchObject({ claimedCount: 1, queuedCount: 0, failedCount: 1 });
+    expect(services.logs.entries).toContainEqual(
+      expect.objectContaining({
+        level: "warn",
+        event: "articles.extract_full_text.prefetch_enqueue_failed",
+        context: expect.objectContaining({ articleId: "item-1", userId: "system" }),
+      }),
+    );
     expect(db.rows[0]).toMatchObject({
       extractedContentStatus: "failed",
       extractedContentError: "Full text extraction could not be queued.",

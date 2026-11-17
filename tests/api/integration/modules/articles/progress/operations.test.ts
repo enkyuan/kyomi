@@ -1,5 +1,10 @@
 import { describe, expect, test } from "bun:test";
-import { reduceProgressWrite, writeArticleProgressForUser } from "@modules/articles/progress/write";
+import { Effect, Layer } from "effect";
+import { TestClock } from "effect/testing";
+import { writeArticleProgressForUser } from "@modules/articles/progress/operations";
+import type { ReadingProgressUpdateBody } from "@modules/articles/progress/types";
+import { reduceProgressWrite } from "@modules/articles/progress/write";
+import { fakeDb, testConfig } from "@api-tests/support/layers";
 import {
   ARTICLE_WORDS,
   atMs,
@@ -13,11 +18,25 @@ import {
   SESSION_B,
 } from "./fakes";
 
+/** One write at `now` (the Effect clock), against the in-memory database. */
+function write(
+  db: ReturnType<typeof createProgressDb>,
+  userId: string,
+  articleId: string,
+  update: ReadingProgressUpdateBody,
+  now: Date,
+) {
+  return Effect.gen(function* () {
+    yield* TestClock.setTime(now.getTime());
+    return yield* writeArticleProgressForUser(userId, articleId, update);
+  }).pipe(Effect.provide(Layer.mergeAll(fakeDb(db as never), testConfig(), TestClock.layer())));
+}
+
 describe("writeArticleProgressForUser", () => {
   test("first write for a feed item inserts one row with the counted words", async () => {
     const db = createProgressDb({ feedItems: [feedItemRow()] });
 
-    const dto = await writeArticleProgressForUser(db as never, "user-1", FEED_ITEM_ID, body(), NOW);
+    const dto = await Effect.runPromise(write(db, "user-1", FEED_ITEM_ID, body(), NOW));
 
     expect(db.inserts).toHaveLength(1);
     expect(db.inserts[0]).toMatchObject({
@@ -41,7 +60,7 @@ describe("writeArticleProgressForUser", () => {
   test("a clip owned by the user stores its row against the clip", async () => {
     const db = createProgressDb({ clips: [clipRow()] });
 
-    await writeArticleProgressForUser(db as never, "user-1", CLIP_ID, body(), NOW);
+    await Effect.runPromise(write(db, "user-1", CLIP_ID, body(), NOW));
 
     expect(db.inserts[0]).toMatchObject({ clipId: CLIP_ID, feedItemId: null });
   });
@@ -49,29 +68,35 @@ describe("writeArticleProgressForUser", () => {
   test("another user's clip is rejected with not found and writes nothing", async () => {
     const db = createProgressDb({ clips: [clipRow({ userId: "user-2" })] });
 
-    await expect(
-      writeArticleProgressForUser(db as never, "user-1", CLIP_ID, body(), NOW),
-    ).rejects.toMatchObject({ status: 404, code: "ARTICLE_NOT_FOUND" });
+    const error = await Effect.runPromise(
+      write(db, "user-1", CLIP_ID, body(), NOW).pipe(Effect.flip),
+    );
+
+    expect(error).toMatchObject({ _tag: "NotFound", code: "ARTICLE_NOT_FOUND" });
     expect(db.inserts).toHaveLength(0);
   });
 
   test("an unknown article is rejected with not found", async () => {
     const db = createProgressDb();
 
-    await expect(
-      writeArticleProgressForUser(db as never, "user-1", FEED_ITEM_ID, body(), NOW),
-    ).rejects.toMatchObject({ status: 404, code: "ARTICLE_NOT_FOUND" });
+    const error = await Effect.runPromise(
+      write(db, "user-1", FEED_ITEM_ID, body(), NOW).pipe(Effect.flip),
+    );
+
+    expect(error).toMatchObject({ _tag: "NotFound", code: "ARTICLE_NOT_FOUND" });
   });
 
   test("successive requests accumulate on one row and retries are idempotent", async () => {
     const db = createProgressDb({ feedItems: [feedItemRow()] });
     const send = (offsetMs: number, overrides: Partial<ReadingProgressUpdateBody>) =>
-      writeArticleProgressForUser(
-        db as never,
-        "user-1",
-        FEED_ITEM_ID,
-        body({ clientUpdatedAt: atMs(offsetMs).toISOString(), ...overrides }),
-        atMs(offsetMs),
+      Effect.runPromise(
+        write(
+          db,
+          "user-1",
+          FEED_ITEM_ID,
+          body({ clientUpdatedAt: atMs(offsetMs).toISOString(), ...overrides }),
+          atMs(offsetMs),
+        ),
       );
 
     await send(10_000, { sessionActiveMs: 10_000 });
@@ -101,13 +126,7 @@ describe("writeArticleProgressForUser", () => {
       preferences: [{ userId: "user-1", readerRememberPosition: false }],
     });
 
-    const empty = await writeArticleProgressForUser(
-      db as never,
-      "user-1",
-      FEED_ITEM_ID,
-      body(),
-      NOW,
-    );
+    const empty = await Effect.runPromise(write(db, "user-1", FEED_ITEM_ID, body(), NOW));
 
     expect(db.inserts).toHaveLength(0);
     expect(empty).toMatchObject({ progress: 0, maxProgress: 0, state: "reading", engaged: false });
@@ -130,12 +149,8 @@ describe("writeArticleProgressForUser", () => {
       readingStates: [existing],
     });
 
-    const current = await writeArticleProgressForUser(
-      withRow as never,
-      "user-1",
-      FEED_ITEM_ID,
-      body({ progress: 0.9, completed: true }),
-      NOW,
+    const current = await Effect.runPromise(
+      write(withRow, "user-1", FEED_ITEM_ID, body({ progress: 0.9, completed: true }), NOW),
     );
 
     expect(withRow.updates).toHaveLength(0);
@@ -149,8 +164,36 @@ describe("writeArticleProgressForUser", () => {
       preferences: [{ userId: "user-1", readerRememberPosition: false }],
     });
 
-    await expect(
-      writeArticleProgressForUser(db as never, "user-1", CLIP_ID, body(), NOW),
-    ).rejects.toMatchObject({ status: 404 });
+    const error = await Effect.runPromise(
+      write(db, "user-1", CLIP_ID, body(), NOW).pipe(Effect.flip),
+    );
+
+    expect(error).toMatchObject({ _tag: "NotFound" });
+  });
+
+  test("a first write that loses the unique index race to a vanished row is a conflict", async () => {
+    const db = createProgressDb({ feedItems: [feedItemRow()] });
+    db.insert = (() => ({
+      values: () => ({ onConflictDoNothing: () => ({ returning: () => Promise.resolve([]) }) }),
+    })) as unknown as typeof db.insert;
+
+    const error = await Effect.runPromise(
+      write(db, "user-1", FEED_ITEM_ID, body(), NOW).pipe(Effect.flip),
+    );
+
+    expect(error).toMatchObject({ _tag: "Conflict", code: "READING_STATE_CONFLICT" });
+  });
+
+  test("a database failure surfaces as a typed DatabaseError, not a thrown exception", async () => {
+    const db = createProgressDb();
+    db.select = (() => {
+      throw new Error("connection terminated");
+    }) as unknown as typeof db.select;
+
+    const error = await Effect.runPromise(
+      write(db, "user-1", FEED_ITEM_ID, body(), NOW).pipe(Effect.flip),
+    );
+
+    expect(error._tag).toBe("DatabaseError");
   });
 });

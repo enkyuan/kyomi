@@ -1,12 +1,12 @@
-import type { db } from "@adapters/db/client";
+import { Clock, Effect } from "effect";
 import { articleClips, articleExtractionCache, feedItems } from "@kyomi/db";
 import { compileStoredDocument, type StoredDocumentInput } from "@kyomi/ingest/lib/stored-document";
 import { and, asc, eq, gt, isNotNull, isNull, ne, or, sql, type SQL } from "drizzle-orm";
 import type { DocumentTarget } from "@kyomi/ingest";
-import { enqueueEnrichmentForStoredDocument } from "./enrich";
 import type { PgColumn, PgTable } from "drizzle-orm/pg-core";
-
-type DB = typeof db;
+import { Db } from "@adapters/db/service";
+import { AppLogger } from "@adapters/logger/service";
+import { enqueueEnrichmentForStoredDocument } from "./enrich";
 
 export const DOCUMENT_BACKFILL_SCOPES = [
   "feed-original",
@@ -137,9 +137,6 @@ export type DocumentBackfillOptions = {
   compilerVersion: string;
   /** Resume cursor: only rows with an id greater than this are scanned. */
   afterId?: string | null;
-  log?: (message: string) => void;
-  /** Queues enrichment for a rewritten document; defaults to the real queue. */
-  enqueueEnrichment?: (target: DocumentTarget, document: object) => Promise<void>;
 };
 
 export type DocumentBackfillResult = {
@@ -152,40 +149,24 @@ export type DocumentBackfillResult = {
   durationMs: number;
 };
 
-function sleep(ms: number): Promise<void> {
-  return ms > 0 ? new Promise((resolve) => setTimeout(resolve, ms)) : Promise.resolve();
-}
+type ScannedRow = {
+  id: string;
+  raw: string | null;
+  source: string | null;
+  baseUrl: string | null;
+  title: string | null;
+  compilerVersion: string | null;
+};
 
-/**
- * Recompiles stored documents from retained raw source for one scope, keyset-batched by id so a
- * run can resume from `lastId`. Rows already at the current compiler version, or without raw
- * source, are never selected. Dry runs compile and count but write nothing. Each write is guarded
- * on the compiler version read, so a concurrent fresh ingest is never overwritten.
- */
-export async function runDocumentBackfillScope(
-  database: DB,
-  scope: DocumentBackfillScope,
+/** The next batch of stale rows after `afterId`, in id order. */
+const scanBatch = Effect.fn("articles.document.backfill.scan")(function* (
+  spec: ScopeSpec,
   options: DocumentBackfillOptions,
-): Promise<DocumentBackfillResult> {
-  const spec = SCOPES[scope];
-  const startedAt = Date.now();
-  const log = options.log ?? (() => undefined);
-  const enqueue =
-    options.enqueueEnrichment ??
-    ((target: DocumentTarget, document: object) =>
-      enqueueEnrichmentForStoredDocument(database, target, document));
-  const result: DocumentBackfillResult = {
-    scope,
-    scanned: 0,
-    updated: 0,
-    skipped: 0,
-    failed: 0,
-    lastId: options.afterId ?? null,
-    durationMs: 0,
-  };
-
-  while (true) {
-    const rows = await database
+  afterId: string | null,
+) {
+  const db = yield* Db;
+  const rows = yield* db.use("articles.document.backfill.scan", (client) =>
+    client
       .select({
         id: spec.id,
         raw: spec.raw,
@@ -199,74 +180,119 @@ export async function runDocumentBackfillScope(
         and(
           isNotNull(spec.raw),
           or(isNull(spec.compilerVersion), ne(spec.compilerVersion, options.compilerVersion)),
-          result.lastId ? gt(spec.id, result.lastId) : undefined,
+          afterId ? gt(spec.id, afterId) : undefined,
         ),
       )
       .orderBy(asc(spec.id))
-      .limit(options.batchSize);
+      .limit(options.batchSize),
+  );
+  return rows as ScannedRow[];
+});
+
+/** Recompiles one row and, when applying, writes the document and queues its enrichment. */
+const rewriteRow = Effect.fn("articles.document.backfill.row")(function* (
+  scope: DocumentBackfillScope,
+  spec: ScopeSpec,
+  row: ScannedRow,
+  apply: boolean,
+) {
+  const format = spec.source ? ORIGIN_BY_SOURCE[row.source ?? ""] : "html";
+  const raw = row.raw;
+  if (!raw || !format) {
+    return "skipped" as const;
+  }
+  // Never throws: a compiler failure yields no document.
+  const stored = yield* Effect.promise(() =>
+    compileStoredDocument({
+      raw,
+      format,
+      origin: spec.source ? (row.source as StoredDocumentInput["origin"]) : "extracted_html",
+      baseUrl: row.baseUrl,
+      title: row.title,
+    }),
+  );
+  if (!stored) {
+    const log = yield* AppLogger;
+    yield* log.warn("document.backfill.no_document", { scope, id: row.id });
+    return "failed" as const;
+  }
+  if (apply) {
+    const db = yield* Db;
+    yield* db.use("articles.document.backfill.write", (client) =>
+      client
+        .update(spec.table)
+        .set({
+          [spec.keys.document]: stored.document,
+          [spec.keys.documentVersion]: stored.documentVersion,
+          [spec.keys.compilerVersion]: stored.compilerVersion,
+        })
+        .where(
+          and(
+            eq(spec.id, row.id),
+            row.compilerVersion === null
+              ? isNull(spec.compilerVersion)
+              : eq(spec.compilerVersion, row.compilerVersion),
+          ),
+        ),
+    );
+    if (spec.target) {
+      yield* enqueueEnrichmentForStoredDocument({ ...spec.target, id: row.id }, stored.document);
+    }
+  }
+  return "updated" as const;
+});
+
+/**
+ * Recompiles stored documents from retained raw source for one scope, keyset-batched by id so a
+ * run can resume from `lastId`. Rows already at the current compiler version, or without raw
+ * source, are never selected. Dry runs compile and count but write nothing. Each write is guarded
+ * on the compiler version read, so a concurrent fresh ingest is never overwritten. Rows are
+ * handled one at a time and batches are `sleepMs` apart, which paces the load on the database.
+ */
+export const runDocumentBackfillScope = Effect.fn("articles.document.backfill")(function* (
+  scope: DocumentBackfillScope,
+  options: DocumentBackfillOptions,
+) {
+  const log = yield* AppLogger;
+  const spec = SCOPES[scope];
+  const startedAt = yield* Clock.currentTimeMillis;
+  const result: DocumentBackfillResult = {
+    scope,
+    scanned: 0,
+    updated: 0,
+    skipped: 0,
+    failed: 0,
+    lastId: options.afterId ?? null,
+    durationMs: 0,
+  };
+
+  while (true) {
+    const rows = yield* scanBatch(spec, options, result.lastId);
     if (rows.length === 0) {
       break;
     }
 
-    for (const row of rows as {
-      id: string;
-      raw: string | null;
-      source: string | null;
-      baseUrl: string | null;
-      title: string | null;
-      compilerVersion: string | null;
-    }[]) {
+    for (const row of rows) {
       result.lastId = row.id;
       result.scanned += 1;
-      const format = spec.source ? ORIGIN_BY_SOURCE[row.source ?? ""] : "html";
-      if (!row.raw || !format) {
-        result.skipped += 1;
-        continue;
-      }
-      const stored = await compileStoredDocument({
-        raw: row.raw,
-        format,
-        origin: spec.source ? (row.source as StoredDocumentInput["origin"]) : "extracted_html",
-        baseUrl: row.baseUrl,
-        title: row.title,
-      });
-      if (!stored) {
-        result.failed += 1;
-        log(`[document-backfill] ${scope} row ${row.id} produced no document`);
-        continue;
-      }
-      result.updated += 1;
-      if (options.apply) {
-        await database
-          .update(spec.table)
-          .set({
-            [spec.keys.document]: stored.document,
-            [spec.keys.documentVersion]: stored.documentVersion,
-            [spec.keys.compilerVersion]: stored.compilerVersion,
-          })
-          .where(
-            and(
-              eq(spec.id, row.id),
-              row.compilerVersion === null
-                ? isNull(spec.compilerVersion)
-                : eq(spec.compilerVersion, row.compilerVersion),
-            ),
-          );
-        if (spec.target) {
-          await enqueue({ ...spec.target, id: row.id }, stored.document);
-        }
-      }
+      const outcome = yield* rewriteRow(scope, spec, row, options.apply);
+      result[outcome] += 1;
     }
 
-    log(
-      `[document-backfill] ${scope} scanned=${result.scanned} updated=${result.updated} skipped=${result.skipped} failed=${result.failed} lastId=${result.lastId}`,
-    );
+    yield* log.info("document.backfill.batch", {
+      scope,
+      scanned: result.scanned,
+      updated: result.updated,
+      skipped: result.skipped,
+      failed: result.failed,
+      lastId: result.lastId,
+    });
     if (rows.length < options.batchSize) {
       break;
     }
-    await sleep(options.sleepMs);
+    yield* Effect.sleep(options.sleepMs);
   }
 
-  result.durationMs = Date.now() - startedAt;
+  result.durationMs = (yield* Clock.currentTimeMillis) - startedAt;
   return result;
-}
+});

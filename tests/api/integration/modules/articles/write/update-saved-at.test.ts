@@ -1,5 +1,7 @@
 import { describe, expect, mock, test } from "bun:test";
+import { Effect, Layer } from "effect";
 import { updateArticleForUser } from "@modules/articles/write/update";
+import { fakeDb, fakeQueue, silentLogger } from "@api-tests/support/layers";
 
 function firstValueInput(fake: ReturnType<typeof createFakeDb>): Record<string, unknown> {
   const call = fake.values.mock.calls[0] as unknown as [Record<string, unknown>] | undefined;
@@ -23,31 +25,35 @@ function createFakeDb(existingState?: { isSaved: boolean; savedAt: Date | null }
   return {
     values,
     onConflictDoUpdate,
-    db: {
-      select: mock(() => {
-        selectCall += 1;
-        if (selectCall === 1) {
+    layer: Layer.mergeAll(
+      fakeQueue(),
+      silentLogger,
+      fakeDb({
+        select: mock(() => {
+          selectCall += 1;
+          if (selectCall === 1) {
+            return {
+              from: () => ({
+                where: () => ({
+                  limit: () => Promise.resolve([{ id: "article-1", feedId: "feed-1" }]),
+                }),
+              }),
+            };
+          }
           return {
             from: () => ({
               where: () => ({
-                limit: () => Promise.resolve([{ id: "article-1", feedId: "feed-1" }]),
+                limit: () =>
+                  Promise.resolve(
+                    existingState ? [{ readOverride: null, hiddenAt: null, ...existingState }] : [],
+                  ),
               }),
             }),
           };
-        }
-        return {
-          from: () => ({
-            where: () => ({
-              limit: () =>
-                Promise.resolve(
-                  existingState ? [{ readOverride: null, hiddenAt: null, ...existingState }] : [],
-                ),
-            }),
-          }),
-        };
+        }),
+        insert: mock(() => ({ values })),
       }),
-      insert: mock(() => ({ values })),
-    },
+    ),
   };
 }
 
@@ -55,7 +61,11 @@ describe("updateArticleForUser saved aging state", () => {
   test("sets savedAt when save transitions from false to true", async () => {
     const fake = createFakeDb({ isSaved: false, savedAt: null });
 
-    await updateArticleForUser(fake.db as never, "user-1", "article-1", { isSaved: true });
+    await Effect.runPromise(
+      updateArticleForUser("user-1", "article-1", { isSaved: true }).pipe(
+        Effect.provide(fake.layer),
+      ),
+    );
 
     expect(firstValueInput(fake).isSaved).toBe(true);
     expect(firstValueInput(fake).savedAt).toBeInstanceOf(Date);
@@ -66,7 +76,11 @@ describe("updateArticleForUser saved aging state", () => {
     const savedAt = new Date("2026-06-01T00:00:00.000Z");
     const fake = createFakeDb({ isSaved: true, savedAt });
 
-    await updateArticleForUser(fake.db as never, "user-1", "article-1", { isSaved: true });
+    await Effect.runPromise(
+      updateArticleForUser("user-1", "article-1", { isSaved: true }).pipe(
+        Effect.provide(fake.layer),
+      ),
+    );
 
     expect(firstValueInput(fake).savedAt).toBe(savedAt);
     expect(firstConflictSet(fake).savedAt).toBe(savedAt);
@@ -78,7 +92,11 @@ describe("updateArticleForUser saved aging state", () => {
       savedAt: new Date("2026-06-01T00:00:00.000Z"),
     });
 
-    await updateArticleForUser(fake.db as never, "user-1", "article-1", { isSaved: false });
+    await Effect.runPromise(
+      updateArticleForUser("user-1", "article-1", { isSaved: false }).pipe(
+        Effect.provide(fake.layer),
+      ),
+    );
 
     expect(firstValueInput(fake).isSaved).toBe(false);
     expect(firstValueInput(fake).savedAt).toBeNull();

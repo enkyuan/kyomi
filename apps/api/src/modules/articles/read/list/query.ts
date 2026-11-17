@@ -1,17 +1,31 @@
-import type { db } from "@adapters/db/client";
+import { Effect } from "effect";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
-import { and, asc, desc, eq, gt, gte, ilike, lt, or, sql, type SQL } from "drizzle-orm";
-import { logger } from "@adapters/logger";
+import { and, eq, gte, lt, sql, type SQL } from "drizzle-orm";
+import { currentDate } from "@modules/articles/clock";
+import { Db } from "@adapters/db/service";
+import { AppLogger } from "@adapters/logger/service";
+import { AppConfig } from "@config/env/service";
 import { attachReadingProgress } from "@modules/articles/progress/read";
 import type { ArticleSort } from "@modules/articles/params";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
-import { collapseObviousDuplicates, type ArticleListRawRow } from "./dedupe";
-import { categoryLabelsSql } from "../labels";
-import { articleIsReadSql, globalArticleIsReadSql } from "../sql";
-import { capPublishedBeforeAtNow } from "./window";
-
-type DB = typeof db;
+import {
+  collapseObviousDuplicates,
+  filterVisibleArticleRows,
+  type ArticleListRawRow,
+} from "./dedupe";
+import { decodeCompositeCursor, encodeCompositeCursor } from "./cursor";
+import { keysetFilter, keysetOrderBy, type KeysetBoundary, type KeysetColumns } from "./keyset";
+import { capPublishedBeforeAtNow, clampLimit } from "./window";
+import { categoryLabelsFor } from "../labels";
+import {
+  readSqlFor,
+  searchFilter,
+  subscriptionJoin,
+  userStateJoin,
+  visibleFeedItemSql,
+  type FeedScope,
+} from "../sql";
 
 export type ListArticlesOptions = {
   feedId?: string;
@@ -30,92 +44,20 @@ export type ListArticlesOptions = {
 
 type GlobalListArticlesOptions = Omit<ListArticlesOptions, "feedId" | "folderId">;
 
-type ArticleCursor = { publishedAt: Date; id: string; isRead?: boolean };
+const keysetColumnsFor = (scope: FeedScope): KeysetColumns => ({
+  at: feedItems.publishedAt,
+  id: feedItems.id,
+  isRead: readSqlFor(scope),
+});
 
-function baseJoins(userId: string) {
-  return {
-    feedSubscriptionsJoin: and(
-      eq(feedItems.feedId, feedSubscriptions.feedId),
-      eq(feedSubscriptions.userId, userId),
-    ),
-    userStateJoin: and(
-      eq(feedItemUserState.feedItemId, feedItems.id),
-      eq(feedItemUserState.userId, userId),
-    ),
-  };
-}
+const toBoundary = (boundary: {
+  publishedAt: Date;
+  id: string;
+  isRead?: boolean;
+}): KeysetBoundary => ({ at: boundary.publishedAt, id: boundary.id, isRead: boundary.isRead });
 
-function normalizeLimit(limit: number): number {
-  return Math.min(Math.max(limit, 1), 200);
-}
-
-function toBase64Url(json: string): string {
-  return Buffer.from(json, "utf8").toString("base64url");
-}
-
-function fromBase64Url(b64: string): string {
-  return Buffer.from(b64, "base64url").toString("utf8");
-}
-
-function encodeCompositeCursor(
-  row: Pick<ArticleListRawRow, "publishedAt" | "id" | "isRead">,
-  sort: ArticleSort,
-): string {
-  return `a1.${toBase64Url(
-    JSON.stringify({
-      v: 1,
-      s: sort,
-      pa: row.publishedAt.toISOString(),
-      id: row.id,
-      r: row.isRead,
-    }),
-  )}`;
-}
-
-function decodeCompositeCursor(cursor: string): ArticleCursor | null {
-  const trimmed = cursor.trim();
-  if (trimmed.startsWith("a1.")) {
-    try {
-      const raw = JSON.parse(fromBase64Url(trimmed.slice(3))) as {
-        pa?: unknown;
-        id?: unknown;
-        r?: unknown;
-      };
-      if (typeof raw.pa !== "string" || typeof raw.id !== "string" || !raw.id.trim()) {
-        return null;
-      }
-      const publishedAt = new Date(raw.pa);
-      if (Number.isNaN(publishedAt.getTime())) {
-        return null;
-      }
-      return {
-        publishedAt,
-        id: raw.id,
-        isRead: typeof raw.r === "boolean" ? raw.r : undefined,
-      };
-    } catch {
-      return null;
-    }
-  }
-
-  const parts = cursor.split("::");
-  if (parts.length !== 2) {
-    return null;
-  }
-  const [publishedAtIso, id] = parts;
-  if (!publishedAtIso || !id) {
-    return null;
-  }
-  const publishedAt = new Date(publishedAtIso);
-  if (Number.isNaN(publishedAt.getTime())) {
-    return null;
-  }
-  return { publishedAt, id };
-}
-
-function computeFetchWindowSize(opts: { feedId?: string }, take: number): number {
-  const multiplier = opts.feedId ? 2 : 3;
-  return Math.min(800, take * multiplier);
+function computeFetchWindowSize(feedScoped: boolean, take: number): number {
+  return Math.min(800, take * (feedScoped ? 2 : 3));
 }
 
 function compareArticleRowsForSort(
@@ -145,25 +87,18 @@ function paginateRows(rows: ArticleListRawRow[], limit: number, sort: ArticleSor
   const dedupedRows = collapseObviousDuplicates(visibleRows).sort((left, right) =>
     compareArticleRowsForSort(left, right, sort),
   );
-  if (dedupedRows.length !== visibleRows.length) {
-    logger.warn("articles.list_time_dedupe.collapsed", {
-      rawCount: visibleRows.length,
-      dedupedCount: dedupedRows.length,
-      collapsedCount: visibleRows.length - dedupedRows.length,
-    });
-  }
   const hasMore = dedupedRows.length > limit;
   const page = hasMore ? dedupedRows.slice(0, limit) : dedupedRows;
   const nextCursor =
     hasMore && page.length > 0 ? encodeCompositeCursor(page[page.length - 1]!, sort) : null;
-  return { hasMore, page, nextCursor };
+  return {
+    hasMore,
+    page,
+    nextCursor,
+    rawCount: visibleRows.length,
+    dedupedCount: dedupedRows.length,
+  };
 }
-
-function filterVisibleArticleRows(rows: ArticleListRawRow[]): ArticleListRawRow[] {
-  return rows.filter((row) => row.hiddenAt == null);
-}
-
-export const filterVisibleArticleRowsForTest = filterVisibleArticleRows;
 
 export function toArticleListItems(page: ArticleListRawRow[]): ArticleListItemDto[] {
   return page.map((r) => ({
@@ -186,305 +121,168 @@ export function toArticleListItems(page: ArticleListRawRow[]): ArticleListItemDt
   }));
 }
 
-export const toArticleListItemsForTest = toArticleListItems;
-
-export async function listArticlesForUser(
-  database: DB,
+/**
+ * Where the page starts. Preference order: the merged-view boundary, an `a1.`/`<iso>::<id>`
+ * cursor, then (oldest format) the id of the last article of the previous page, which is looked
+ * up. An id that no longer resolves starts from the first page.
+ */
+const resolveBoundary = Effect.fn("articles.list.boundary")(function* (
   userId: string,
   opts: ListArticlesOptions,
-): Promise<ArticlesCursorListResponseDto> {
-  const limit = normalizeLimit(opts.limit);
-  const sort = opts.sort ?? "latest";
-
-  const rows = await listArticleRows(database, userId, opts, limit + 1);
-  const { hasMore, page, nextCursor } = paginateRows(rows, limit, sort);
-
-  const items = await attachReadingProgress(database, userId, toArticleListItems(page));
-  return { items, next_cursor: nextCursor, has_more: hasMore, total_count: null };
-}
-
-export async function listAllArticlesForUser(
-  database: DB,
-  userId: string,
-  opts: GlobalListArticlesOptions,
-): Promise<ArticlesCursorListResponseDto> {
-  const limit = normalizeLimit(opts.limit);
-  const sort = opts.sort ?? "latest";
-
-  const rows = await listGlobalArticleRows(database, userId, opts, limit + 1);
-  const { hasMore, page, nextCursor } = paginateRows(rows, limit, sort);
-
-  const items = await attachReadingProgress(database, userId, toArticleListItems(page));
-  return { items, next_cursor: nextCursor, has_more: hasMore, total_count: null };
-}
-
-function pushBaseFilters(filters: SQL[], opts: ListArticlesOptions): void {
-  if (opts.feedId) {
-    filters.push(eq(feedItems.feedId, opts.feedId));
+  scope: FeedScope,
+) {
+  if (opts.exclusiveBefore) {
+    return toBoundary(opts.exclusiveBefore);
   }
-  if (opts.folderId) {
-    filters.push(eq(feedSubscriptions.folderId, opts.folderId));
-  }
-}
-
-function pushReadSavedFilters(filters: SQL[], opts: ListArticlesOptions): void {
-  if (opts.isRead === true) {
-    filters.push(sql`(${articleIsReadSql}) = true`);
-  } else if (opts.isRead === false) {
-    filters.push(sql`(${articleIsReadSql}) = false`);
-  }
-  if (opts.isSaved === true) {
-    filters.push(sql`${feedItemUserState.isSaved} IS TRUE`);
-  }
-}
-
-function pushGlobalReadSavedFilters(filters: SQL[], opts: GlobalListArticlesOptions): void {
-  if (opts.isRead === true) {
-    filters.push(sql`(${globalArticleIsReadSql}) = true`);
-  } else if (opts.isRead === false) {
-    filters.push(sql`(${globalArticleIsReadSql}) = false`);
-  }
-  if (opts.isSaved === true) {
-    filters.push(sql`${feedItemUserState.isSaved} IS TRUE`);
-  }
-}
-
-function pushHiddenFilter(filters: SQL[]): void {
-  filters.push(sql`${feedItemUserState.hiddenAt} IS NULL`);
-}
-
-function pushPublishedDateFilters(filters: SQL[], opts: ListArticlesOptions): void {
-  if (opts.publishedAfter) {
-    filters.push(gte(feedItems.publishedAt, opts.publishedAfter));
-  }
-  filters.push(lt(feedItems.publishedAt, capPublishedBeforeAtNow(opts.publishedBefore)));
-}
-
-function escapeLikePattern(input: string): string {
-  return input.replaceAll("\\", "\\\\").replaceAll("%", "\\%").replaceAll("_", "\\_");
-}
-
-function pushSearchFilter(filters: SQL[], opts: ListArticlesOptions): void {
-  const search = opts.search?.trim();
-  if (!search) {
-    return;
-  }
-  const pattern = `%${escapeLikePattern(search)}%`;
-  filters.push(
-    or(
-      ilike(feedItems.title, pattern),
-      ilike(feedItems.summary, pattern),
-      ilike(feeds.title, pattern),
-    )!,
-  );
-}
-
-async function pushCursorFilter(
-  database: DB,
-  userId: string,
-  opts: ListArticlesOptions,
-  feedSubscriptionsJoin: SQL<unknown> | undefined,
-  userStateJoin: SQL<unknown> | undefined,
-  filters: SQL[],
-): Promise<void> {
-  if (!opts.cursor || !feedSubscriptionsJoin) {
-    return;
-  }
-  const decoded = decodeCompositeCursor(opts.cursor);
-  if (decoded) {
-    pushSortBoundaryFilter(filters, opts.sort ?? "latest", decoded);
-    return;
-  }
-  const cur = await database
-    .select({
-      publishedAt: feedItems.publishedAt,
-      id: feedItems.id,
-      isRead: articleIsReadSql,
-    })
-    .from(feedItems)
-    .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
-    .leftJoin(feedItemUserState, userStateJoin)
-    .where(
-      and(
-        eq(feedItems.id, opts.cursor),
-        eq(feedSubscriptions.userId, userId),
-        opts.folderId ? eq(feedSubscriptions.folderId, opts.folderId) : undefined,
-      ),
-    )
-    .limit(1);
-  const c = cur[0];
-  if (!c) {
-    return;
-  }
-  pushSortBoundaryFilter(filters, opts.sort ?? "latest", c);
-}
-
-async function pushGlobalCursorFilter(
-  database: DB,
-  opts: GlobalListArticlesOptions,
-  userStateJoin: SQL<unknown> | undefined,
-  filters: SQL[],
-): Promise<void> {
   if (!opts.cursor) {
-    return;
+    return undefined;
   }
   const decoded = decodeCompositeCursor(opts.cursor);
   if (decoded) {
-    pushSortBoundaryFilter(filters, opts.sort ?? "latest", decoded, globalArticleIsReadSql);
-    return;
+    return toBoundary(decoded);
   }
-  const cur = await database
-    .select({
-      publishedAt: feedItems.publishedAt,
-      id: feedItems.id,
-      isRead: globalArticleIsReadSql,
-    })
-    .from(feedItems)
-    .leftJoin(feedItemUserState, userStateJoin)
-    .where(eq(feedItems.id, opts.cursor))
-    .limit(1);
-  const c = cur[0];
-  if (!c) {
-    return;
-  }
-  pushSortBoundaryFilter(filters, opts.sort ?? "latest", c, globalArticleIsReadSql);
+  const cursorId = opts.cursor;
+  const db = yield* Db;
+  const columns = {
+    publishedAt: feedItems.publishedAt,
+    id: feedItems.id,
+    isRead: readSqlFor(scope),
+  };
+  const [row] = yield* db.use("articles.list.cursor", (client) =>
+    scope === "subscribed"
+      ? client
+          .select(columns)
+          .from(feedItems)
+          .innerJoin(feedSubscriptions, subscriptionJoin(userId))
+          .leftJoin(feedItemUserState, userStateJoin(userId))
+          .where(
+            and(
+              eq(feedItems.id, cursorId),
+              opts.folderId ? eq(feedSubscriptions.folderId, opts.folderId) : undefined,
+            ),
+          )
+          .limit(1)
+      : client
+          .select(columns)
+          .from(feedItems)
+          .leftJoin(feedItemUserState, userStateJoin(userId))
+          .where(eq(feedItems.id, cursorId))
+          .limit(1),
+  );
+  return row ? toBoundary(row) : undefined;
+});
+
+function listFilters(
+  scope: FeedScope,
+  opts: ListArticlesOptions,
+  now: Date,
+  boundary: KeysetBoundary | undefined,
+) {
+  const readSql = readSqlFor(scope);
+  const subscribed = scope === "subscribed";
+  const sort = opts.sort ?? "latest";
+  return and(
+    subscribed && opts.feedId ? eq(feedItems.feedId, opts.feedId) : undefined,
+    subscribed && opts.folderId ? eq(feedSubscriptions.folderId, opts.folderId) : undefined,
+    opts.isRead === true ? sql`(${readSql}) = true` : undefined,
+    opts.isRead === false ? sql`(${readSql}) = false` : undefined,
+    opts.isSaved === true ? sql`${feedItemUserState.isSaved} IS TRUE` : undefined,
+    visibleFeedItemSql,
+    opts.publishedAfter ? gte(feedItems.publishedAt, opts.publishedAfter) : undefined,
+    lt(feedItems.publishedAt, capPublishedBeforeAtNow(opts.publishedBefore, now)),
+    searchFilter(opts.search, [feedItems.title, feedItems.summary, feeds.title]),
+    boundary ? keysetFilter(keysetColumnsFor(scope), sort, boundary) : undefined,
+  );
 }
 
-function pushSortBoundaryFilter(
-  filters: SQL[],
-  sort: ArticleSort,
-  cursor: ArticleCursor,
-  readSql: SQL<boolean> = articleIsReadSql,
-): void {
-  const olderThanCursor = or(
-    lt(feedItems.publishedAt, cursor.publishedAt),
-    and(eq(feedItems.publishedAt, cursor.publishedAt), lt(feedItems.id, cursor.id)),
-  )!;
-  if (sort === "oldest") {
-    filters.push(
-      or(
-        gt(feedItems.publishedAt, cursor.publishedAt),
-        and(eq(feedItems.publishedAt, cursor.publishedAt), gt(feedItems.id, cursor.id)),
-      )!,
-    );
-    return;
-  }
-  if (sort === "unread-first" && cursor.isRead !== undefined) {
-    filters.push(
-      cursor.isRead
-        ? and(sql`(${readSql}) = true`, olderThanCursor)!
-        : or(sql`(${readSql}) = true`, and(sql`(${readSql}) = false`, olderThanCursor))!,
-    );
-    return;
-  }
-  filters.push(olderThanCursor);
-}
-
-function orderByForSort(sort: ArticleSort, readSql: SQL<boolean> = articleIsReadSql) {
-  if (sort === "oldest") {
-    return [asc(feedItems.publishedAt), asc(feedItems.id)] as const;
-  }
-  if (sort === "unread-first") {
-    return [asc(readSql), desc(feedItems.publishedAt), desc(feedItems.id)] as const;
-  }
-  return [desc(feedItems.publishedAt), desc(feedItems.id)] as const;
-}
-
-async function listArticleRows(
-  database: DB,
+const listRows = Effect.fn("articles.list.rows")(function* (
   userId: string,
   opts: ListArticlesOptions,
+  scope: FeedScope,
   take: number,
-): Promise<ArticleListRawRow[]> {
-  const { feedSubscriptionsJoin, userStateJoin } = baseJoins(userId);
+) {
+  const db = yield* Db;
+  const config = yield* AppConfig;
+  const now = yield* currentDate;
+  const boundary = yield* resolveBoundary(userId, opts, scope);
   const sort = opts.sort ?? "latest";
+  const readSql = readSqlFor(scope);
+  const where = listFilters(scope, opts, now, boundary);
+  const orderBy = keysetOrderBy(keysetColumnsFor(scope), sort);
+  const limit = computeFetchWindowSize(scope === "subscribed" && Boolean(opts.feedId), take);
 
-  const filters: SQL[] = [];
-  pushBaseFilters(filters, opts);
-  pushReadSavedFilters(filters, opts);
-  pushHiddenFilter(filters);
-  pushPublishedDateFilters(filters, opts);
-  pushSearchFilter(filters, opts);
-  if (opts.exclusiveBefore) {
-    pushSortBoundaryFilter(filters, sort, opts.exclusiveBefore);
-  } else {
-    await pushCursorFilter(database, userId, opts, feedSubscriptionsJoin, userStateJoin, filters);
-  }
+  return yield* db.use("articles.list.rows", (client) => {
+    const base = client
+      .select({
+        id: feedItems.id,
+        title: feedItems.title,
+        canonicalUrl: feedItems.canonicalUrl,
+        link: feedItems.link,
+        summary: feedItems.summary,
+        publishedAt: feedItems.publishedAt,
+        feedId: feedItems.feedId,
+        feedUrl: feeds.url,
+        feedSiteUrl: feeds.link,
+        feedTitle: feeds.title,
+        feedFaviconUrl: feeds.faviconUrl,
+        isRead: readSql,
+        isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
+        lastViewedAt: feedItemUserState.lastViewedAt,
+        hiddenAt: feedItemUserState.hiddenAt,
+        categories: categoryLabelsFor(config),
+      })
+      .from(feedItems);
+    const joined =
+      scope === "subscribed"
+        ? base
+            .innerJoin(feedSubscriptions, subscriptionJoin(userId))
+            .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
+            .leftJoin(feedItemUserState, userStateJoin(userId))
+        : base
+            .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
+            .leftJoin(feedItemUserState, userStateJoin(userId));
+    return joined
+      .where(where)
+      .orderBy(...orderBy)
+      .limit(limit);
+  });
+});
 
-  return database
-    .select({
-      id: feedItems.id,
-      title: feedItems.title,
-      canonicalUrl: feedItems.canonicalUrl,
-      link: feedItems.link,
-      summary: feedItems.summary,
-      publishedAt: feedItems.publishedAt,
-      feedId: feedItems.feedId,
-      feedUrl: feeds.url,
-      feedSiteUrl: feeds.link,
-      feedTitle: feeds.title,
-      feedFaviconUrl: feeds.faviconUrl,
-      isRead: articleIsReadSql,
-      isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
-      lastViewedAt: feedItemUserState.lastViewedAt,
-      hiddenAt: feedItemUserState.hiddenAt,
-      categories: categoryLabelsSql,
-    })
-    .from(feedItems)
-    .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
-    .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
-    .leftJoin(feedItemUserState, userStateJoin)
-    .where(filters.length > 0 ? and(...filters) : sql`true`)
-    .orderBy(...orderByForSort(sort))
-    .limit(computeFetchWindowSize(opts, take));
-}
-
-async function listGlobalArticleRows(
-  database: DB,
+const listPage = Effect.fn("articles.list.page")(function* (
   userId: string,
-  opts: GlobalListArticlesOptions,
-  take: number,
-): Promise<ArticleListRawRow[]> {
-  const userStateJoin = and(
-    eq(feedItemUserState.feedItemId, feedItems.id),
-    eq(feedItemUserState.userId, userId),
-  );
+  opts: ListArticlesOptions,
+  scope: FeedScope,
+) {
+  const db = yield* Db;
+  const log = yield* AppLogger;
+  const limit = clampLimit(opts.limit);
   const sort = opts.sort ?? "latest";
 
-  const filters: SQL[] = [];
-  pushGlobalReadSavedFilters(filters, opts);
-  pushHiddenFilter(filters);
-  pushPublishedDateFilters(filters, opts);
-  pushSearchFilter(filters, opts);
-  if (opts.exclusiveBefore) {
-    pushSortBoundaryFilter(filters, sort, opts.exclusiveBefore, globalArticleIsReadSql);
-  } else {
-    await pushGlobalCursorFilter(database, opts, userStateJoin, filters);
+  const rows = yield* listRows(userId, opts, scope, limit + 1);
+  const { hasMore, page, nextCursor, rawCount, dedupedCount } = paginateRows(rows, limit, sort);
+  if (dedupedCount !== rawCount) {
+    yield* log.warn("articles.list_time_dedupe.collapsed", {
+      rawCount,
+      dedupedCount,
+      collapsedCount: rawCount - dedupedCount,
+    });
   }
 
-  return database
-    .select({
-      id: feedItems.id,
-      title: feedItems.title,
-      canonicalUrl: feedItems.canonicalUrl,
-      link: feedItems.link,
-      summary: feedItems.summary,
-      publishedAt: feedItems.publishedAt,
-      feedId: feedItems.feedId,
-      feedUrl: feeds.url,
-      feedSiteUrl: feeds.link,
-      feedTitle: feeds.title,
-      feedFaviconUrl: feeds.faviconUrl,
-      isRead: globalArticleIsReadSql,
-      isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
-      lastViewedAt: feedItemUserState.lastViewedAt,
-      hiddenAt: feedItemUserState.hiddenAt,
-      categories: categoryLabelsSql,
-    })
-    .from(feedItems)
-    .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
-    .leftJoin(feedItemUserState, userStateJoin)
-    .where(filters.length > 0 ? and(...filters) : sql`true`)
-    .orderBy(...orderByForSort(sort, globalArticleIsReadSql))
-    .limit(computeFetchWindowSize({}, take));
-}
+  const items = yield* db.use("articles.list.progress", (client) =>
+    attachReadingProgress(client, userId, toArticleListItems(page)),
+  );
+  return {
+    items,
+    next_cursor: nextCursor,
+    has_more: hasMore,
+    total_count: null,
+  } satisfies ArticlesCursorListResponseDto;
+});
+
+/** A page of the user's subscribed feed items. */
+export const listArticles = (userId: string, opts: ListArticlesOptions) =>
+  listPage(userId, opts, "subscribed");
+
+/** A page of every feed item, regardless of subscription. */
+export const listAllArticles = (userId: string, opts: GlobalListArticlesOptions) =>
+  listPage(userId, opts, "global");

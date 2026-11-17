@@ -1,10 +1,9 @@
-import type { db } from "@adapters/db/client";
+import { Effect } from "effect";
 import { articleClips, feedItems } from "@kyomi/db";
 import type { DocumentTarget } from "@kyomi/ingest";
 import { readerDocumentSchema, type ReaderDocument } from "@kyomi/reader/document";
 import { eq } from "drizzle-orm";
-
-type DB = typeof db;
+import { Db } from "@adapters/db/service";
 
 /** The document the caller read; a patch applies only if storage still holds exactly this. */
 export type DocumentPatchExpectation = {
@@ -104,60 +103,62 @@ function deepEqual(a: unknown, b: unknown): boolean {
  * schema, and rejects any patch that changes more than the enrichment-owned fields. Compiler
  * output is therefore never altered by a job, only completed.
  */
-export async function patchStoredDocument(
-  database: DB,
+export const patchStoredDocument = Effect.fn("articles.document.patch")(function* (
   target: DocumentTarget,
   expected: DocumentPatchExpectation,
   patch: (document: ReaderDocument) => ReaderDocument,
-): Promise<DocumentPatchResult> {
+) {
+  const db = yield* Db;
   const spec = COLUMNS[target.table];
   const columns = spec[target.body];
-  return database.transaction(async (tx): Promise<DocumentPatchResult> => {
-    const [row] = await tx
-      .select({
-        document: columns.document,
-        documentVersion: columns.documentVersion,
-        compilerVersion: columns.compilerVersion,
-      })
-      .from(spec.table)
-      .where(eq(spec.table.id, target.id))
-      .for("update")
-      .limit(1);
-    if (!row || !row.document) {
-      return { status: "missing" };
-    }
-    if (
-      row.documentVersion !== expected.documentVersion ||
-      row.compilerVersion !== expected.compilerVersion
-    ) {
-      return { status: "stale" };
-    }
-    const current = readerDocumentSchema.safeParse(row.document);
-    if (!current.success) {
-      return { status: "invalid", reason: "stored document failed validation" };
-    }
-    const next = readerDocumentSchema.safeParse(patch(structuredClone(current.data)));
-    if (!next.success) {
-      return { status: "invalid", reason: "patched document failed validation" };
-    }
-    if (!deepEqual(withoutEnrichmentFields(current.data), withoutEnrichmentFields(next.data))) {
-      return { status: "invalid", reason: "patch changed fields outside enrichment" };
-    }
-    const original = target.body === "original";
-    if (target.table === "feed_items") {
-      await tx
-        .update(feedItems)
-        .set(original ? { contentDocument: next.data } : { extractedContentDocument: next.data })
-        .where(eq(feedItems.id, target.id));
-    } else {
-      await tx
-        .update(articleClips)
-        .set(original ? { contentDocument: next.data } : { extractedContentDocument: next.data })
-        .where(eq(articleClips.id, target.id));
-    }
-    return { status: "patched", document: next.data };
-  });
-}
+  return yield* db.use("articles.document.patch", (client) =>
+    client.transaction(async (tx): Promise<DocumentPatchResult> => {
+      const [row] = await tx
+        .select({
+          document: columns.document,
+          documentVersion: columns.documentVersion,
+          compilerVersion: columns.compilerVersion,
+        })
+        .from(spec.table)
+        .where(eq(spec.table.id, target.id))
+        .for("update")
+        .limit(1);
+      if (!row || !row.document) {
+        return { status: "missing" };
+      }
+      if (
+        row.documentVersion !== expected.documentVersion ||
+        row.compilerVersion !== expected.compilerVersion
+      ) {
+        return { status: "stale" };
+      }
+      const current = readerDocumentSchema.safeParse(row.document);
+      if (!current.success) {
+        return { status: "invalid", reason: "stored document failed validation" };
+      }
+      const next = readerDocumentSchema.safeParse(patch(structuredClone(current.data)));
+      if (!next.success) {
+        return { status: "invalid", reason: "patched document failed validation" };
+      }
+      if (!deepEqual(withoutEnrichmentFields(current.data), withoutEnrichmentFields(next.data))) {
+        return { status: "invalid", reason: "patch changed fields outside enrichment" };
+      }
+      const original = target.body === "original";
+      if (target.table === "feed_items") {
+        await tx
+          .update(feedItems)
+          .set(original ? { contentDocument: next.data } : { extractedContentDocument: next.data })
+          .where(eq(feedItems.id, target.id));
+      } else {
+        await tx
+          .update(articleClips)
+          .set(original ? { contentDocument: next.data } : { extractedContentDocument: next.data })
+          .where(eq(articleClips.id, target.id));
+      }
+      return { status: "patched", document: next.data };
+    }),
+  );
+});
 
 export type StoredDocumentRead = {
   document: ReaderDocument;
@@ -169,30 +170,32 @@ export type StoredDocumentRead = {
  * Read side for jobs: returns the stored document with the versions to pass as `expected` to
  * `patchStoredDocument`, or null when there is no valid document.
  */
-export async function loadStoredDocument(
-  database: DB,
+export const loadStoredDocument = Effect.fn("articles.document.load")(function* (
   target: DocumentTarget,
-): Promise<StoredDocumentRead | null> {
+) {
+  const db = yield* Db;
   const spec = COLUMNS[target.table];
   const columns = spec[target.body];
-  const [row] = await database
-    .select({
-      document: columns.document,
-      documentVersion: columns.documentVersion,
-      compilerVersion: columns.compilerVersion,
-    })
-    .from(spec.table)
-    .where(eq(spec.table.id, target.id))
-    .limit(1);
+  const [row] = yield* db.use("articles.document.load", (client) =>
+    client
+      .select({
+        document: columns.document,
+        documentVersion: columns.documentVersion,
+        compilerVersion: columns.compilerVersion,
+      })
+      .from(spec.table)
+      .where(eq(spec.table.id, target.id))
+      .limit(1),
+  );
   if (!row?.document || row.documentVersion === null || !row.compilerVersion) {
     return null;
   }
   const parsed = readerDocumentSchema.safeParse(row.document);
   return parsed.success
-    ? {
+    ? ({
         document: parsed.data,
         documentVersion: row.documentVersion,
         compilerVersion: row.compilerVersion,
-      }
+      } satisfies StoredDocumentRead)
     : null;
-}
+});

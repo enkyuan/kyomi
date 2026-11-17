@@ -1,4 +1,5 @@
 import { describe, expect, test } from "bun:test";
+import { Effect } from "effect";
 import { extractArticleContentFromHtml } from "@modules/articles/reader/extraction/readability";
 
 const PERFORMANCE_DEV_LINEAR_FIXTURE = new URL(
@@ -10,15 +11,12 @@ describe("articles.reader.extraction.readability", () => {
   test("extracts a performance.dev-style article from a local fixture without live network", async () => {
     const html = await Bun.file(PERFORMANCE_DEV_LINEAR_FIXTURE).text();
 
-    const result = extractArticleContentFromHtml({
-      body: html,
-      finalUrl: "https://performance.dev/how-is-linear-so-fast-a-technical-breakdown",
-    });
-
-    expect(result.ok).toBe(true);
-    if (!result.ok) {
-      throw new Error(result.errorMessage);
-    }
+    const result = await Effect.runPromise(
+      extractArticleContentFromHtml({
+        body: html,
+        finalUrl: "https://performance.dev/how-is-linear-so-fast-a-technical-breakdown",
+      }),
+    );
 
     expect(result.content.title).toBe("How's Linear so fast? A technical breakdown");
     expect(result.content.byline).toBe("Dennis Brotzky");
@@ -34,20 +32,49 @@ describe("articles.reader.extraction.readability", () => {
     expect(result.content.contentHtml).not.toContain("Related posts");
   });
 
-  test("rejects non-article URLs before parsing fixture HTML", () => {
-    const result = extractArticleContentFromHtml({
-      body: "<article><p>This body should not matter once the URL is rejected.</p></article>",
-      finalUrl: "https://performance.dev/search",
-    });
+  test("rejects non-article URLs before parsing fixture HTML", async () => {
+    const failure = await Effect.runPromise(
+      Effect.flip(
+        extractArticleContentFromHtml({
+          body: "<article><p>This body should not matter once the URL is rejected.</p></article>",
+          finalUrl: "https://performance.dev/search",
+        }),
+      ),
+    );
 
-    expect(result).toEqual({
-      ok: false,
+    expect(failure).toMatchObject({
+      _tag: "ExtractionFailed",
       errorCode: "NO_READABLE_CONTENT",
       errorMessage: "This source is not a readable article page.",
     });
   });
 
-  test("normalizes readability prose captured in a preformatted article wrapper", () => {
+  test("fails typed when Readability finds no article body", async () => {
+    const failure = await Effect.runPromise(
+      Effect.flip(
+        extractArticleContentFromHtml({
+          body: "<html><body></body></html>",
+          finalUrl: "https://performance.dev/post",
+        }),
+      ),
+    );
+
+    expect(failure).toMatchObject({
+      _tag: "ExtractionFailed",
+      errorCode: "NO_READABLE_CONTENT",
+      errorMessage: "No readable article body was found.",
+    });
+  });
+
+  test("fails typed with BLOCKED_URL when the final URL does not parse", async () => {
+    const failure = await Effect.runPromise(
+      Effect.flip(extractArticleContentFromHtml({ body: "<p>x</p>", finalUrl: "not a url" })),
+    );
+
+    expect(failure).toMatchObject({ _tag: "ExtractionFailed", errorCode: "BLOCKED_URL" });
+  });
+
+  test("normalizes readability prose captured in a preformatted article wrapper", async () => {
     const body = `
       <html>
         <head><title>PlayStation can delete all your digital games after 3 years of inactivity (EU)</title></head>
@@ -68,15 +95,12 @@ Whether PlayStation actually enforces this policy is another matter, but consume
       </html>
     `;
 
-    const result = extractArticleContentFromHtml({
-      body,
-      finalUrl: "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1783340582",
-    });
-
-    expect(result.ok).toBe(true);
-    if (!result.ok) {
-      throw new Error(result.errorMessage);
-    }
+    const result = await Effect.runPromise(
+      extractArticleContentFromHtml({
+        body,
+        finalUrl: "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1783340582",
+      }),
+    );
     expect(result.content.contentHtml).not.toContain("<pre");
     expect(result.content.contentHtml).toContain("<p>PlayStation is facing");
     expect(result.content.contentText).toContain("digital ownership can remain fragile");

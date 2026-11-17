@@ -1,6 +1,7 @@
 import type { ArticleSort } from "@modules/articles/params";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { encodeMergedListCursorFromItem } from "./cursor";
+import { clampLimit } from "./window";
 
 /** Global sort: latest first; tie-break by id descending (matches DB `orderBy`). */
 export function mergeArticleListsSortedDesc(parts: ArticleListItemDto[][]): ArticleListItemDto[] {
@@ -46,8 +47,23 @@ export function mergeArticleItemsByDate(
   parts: ArticleListItemDto[][],
   limit: number,
 ): ArticleListItemDto[] {
-  const cap = Math.min(Math.max(limit, 1), 200);
-  return mergeArticleListsSortedDesc(parts).slice(0, cap);
+  return mergeArticleListsSortedDesc(parts).slice(0, clampLimit(limit));
+}
+
+/**
+ * The first `limit` merged items, and whether more exist: the merge overflowed the page or either
+ * source reported another page of its own.
+ */
+export function sliceMergedPage<T>(
+  mergedSorted: T[],
+  limit: number,
+  sourcesHaveMore: readonly boolean[],
+): { page: T[]; hasMore: boolean } {
+  const cap = clampLimit(limit);
+  return {
+    page: mergedSorted.slice(0, cap),
+    hasMore: mergedSorted.length > cap || sourcesHaveMore.some(Boolean),
+  };
 }
 
 export function mergedFeedClipResponsePaged(
@@ -57,9 +73,7 @@ export function mergedFeedClipResponsePaged(
   clipHasMore: boolean,
   sort: ArticleSort,
 ): ArticlesCursorListResponseDto {
-  const cap = Math.min(Math.max(limit, 1), 200);
-  const page = mergedSorted.slice(0, cap);
-  const hasMore = mergedSorted.length > cap || feedHasMore || clipHasMore;
+  const { page, hasMore } = sliceMergedPage(mergedSorted, limit, [feedHasMore, clipHasMore]);
   const nextCursor =
     hasMore && page.length > 0
       ? encodeMergedListCursorFromItem(page[page.length - 1]!, sort)

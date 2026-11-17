@@ -1,4 +1,5 @@
-import { AppError } from "@shared/errors/app";
+import { Effect } from "effect";
+import { BadRequest } from "@shared/effect/errors";
 import type { ArticleDetailDto } from "../types";
 
 function firstSentences(input: string, maxSentences: number): string {
@@ -9,13 +10,14 @@ function firstSentences(input: string, maxSentences: number): string {
   return chunks.slice(0, maxSentences).join(" ");
 }
 
+/** Text the enrichment endpoints operate on: the request's own content, else the article's body. */
 export function resolveEnhancementContent(
   requestContent: string | undefined,
   article: ArticleDetailDto,
-) {
+): Effect.Effect<string, BadRequest> {
   const explicit = requestContent?.trim();
   if (explicit) {
-    return explicit;
+    return Effect.succeed(explicit);
   }
   const primary = article.reader.selected;
   const fallback = (
@@ -25,47 +27,58 @@ export function resolveEnhancementContent(
     article.summary ??
     ""
   ).trim();
-  if (!fallback) {
-    throw new AppError("No content available to process", {
-      status: 400,
-      code: "ARTICLE_CONTENT_MISSING",
-    });
-  }
-  return fallback;
+  return fallback
+    ? Effect.succeed(fallback)
+    : Effect.fail(
+        new BadRequest({
+          message: "No content available to process",
+          code: "ARTICLE_CONTENT_MISSING",
+        }),
+      );
 }
 
-export function summarizeContent(content: string, languageKey: string | undefined): string {
+export function summarizeContent(
+  content: string,
+  languageKey: string | undefined,
+): Effect.Effect<string, BadRequest> {
   const text = content.trim();
   if (!text) {
-    throw new AppError("No content available to summarize", {
-      status: 400,
-      code: "SUMMARY_CONTENT_MISSING",
-    });
+    return Effect.fail(
+      new BadRequest({
+        message: "No content available to summarize",
+        code: "SUMMARY_CONTENT_MISSING",
+      }),
+    );
   }
   const summary = firstSentences(text, 3) || text.slice(0, 300);
-  if (!languageKey || languageKey === "original") {
-    return summary;
-  }
-  return `[${languageKey}] ${summary}`;
+  return Effect.succeed(
+    !languageKey || languageKey === "original" ? summary : `[${languageKey}] ${summary}`,
+  );
 }
 
-export function translateContent(content: string, targetLanguage: string): string {
+export function translateContent(
+  content: string,
+  targetLanguage: string,
+): Effect.Effect<string, BadRequest> {
   const text = content.trim();
   if (!text) {
-    throw new AppError("No content available to translate", {
-      status: 400,
-      code: "TRANSLATION_CONTENT_MISSING",
-    });
+    return Effect.fail(
+      new BadRequest({
+        message: "No content available to translate",
+        code: "TRANSLATION_CONTENT_MISSING",
+      }),
+    );
   }
   const target = targetLanguage.trim();
   if (!target) {
-    throw new AppError("target_language is required", {
-      status: 400,
-      code: "TARGET_LANGUAGE_REQUIRED",
-    });
+    return Effect.fail(
+      new BadRequest({
+        message: "target_language is required",
+        code: "TARGET_LANGUAGE_REQUIRED",
+      }),
+    );
   }
-  if (target.toLowerCase() === "original") {
-    return text;
-  }
-  return `[translated:${target}] ${text}`;
+  return Effect.succeed(
+    target.toLowerCase() === "original" ? text : `[translated:${target}] ${text}`,
+  );
 }

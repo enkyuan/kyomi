@@ -1,6 +1,8 @@
 import { describe, expect, mock, test } from "bun:test";
+import { Effect, Layer } from "effect";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import { updateArticleForUser } from "@modules/articles/write/update";
+import { fakeDb, fakeQueue, silentLogger } from "@api-tests/support/layers";
 
 function createFakeDb() {
   const set = mock((patch: Record<string, unknown>) => {
@@ -9,24 +11,28 @@ function createFakeDb() {
   });
   return {
     set,
-    db: {
-      select: () => ({
-        from: () => ({
-          where: () => ({
-            limit: () =>
-              Promise.resolve([
-                {
-                  id: "article-1",
-                  feedId: "feed-1",
-                  link: "https://example.com/posts/entry",
-                  title: "Entry",
-                },
-              ]),
+    layer: Layer.mergeAll(
+      fakeQueue(),
+      silentLogger,
+      fakeDb({
+        select: () => ({
+          from: () => ({
+            where: () => ({
+              limit: () =>
+                Promise.resolve([
+                  {
+                    id: "article-1",
+                    feedId: "feed-1",
+                    link: "https://example.com/posts/entry",
+                    title: "Entry",
+                  },
+                ]),
+            }),
           }),
         }),
+        update: () => ({ set }),
       }),
-      update: () => ({ set }),
-    },
+    ),
   };
 }
 
@@ -41,7 +47,9 @@ describe("updateArticleForUser content", () => {
     const fake = createFakeDb();
     const contentHtml = `<p data-kyomi-url="https://evil.example/">See <a href="../about">about</a></p><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>`;
 
-    await updateArticleForUser(fake.db as never, "user-1", "article-1", { contentHtml });
+    await Effect.runPromise(
+      updateArticleForUser("user-1", "article-1", { contentHtml }).pipe(Effect.provide(fake.layer)),
+    );
 
     const patch = firstPatch(fake);
     expect(patch.contentRaw).toBe(contentHtml);
@@ -54,7 +62,11 @@ describe("updateArticleForUser content", () => {
   test("clearing the HTML clears its raw source and version", async () => {
     const fake = createFakeDb();
 
-    await updateArticleForUser(fake.db as never, "user-1", "article-1", { contentHtml: null });
+    await Effect.runPromise(
+      updateArticleForUser("user-1", "article-1", { contentHtml: null }).pipe(
+        Effect.provide(fake.layer),
+      ),
+    );
 
     expect(firstPatch(fake)).toMatchObject({
       contentHtml: null,
@@ -66,9 +78,11 @@ describe("updateArticleForUser content", () => {
   test("updates that leave contentHtml alone do not touch the version", async () => {
     const fake = createFakeDb();
 
-    await updateArticleForUser(fake.db as never, "user-1", "article-1", {
-      contentText: "Plain text",
-    });
+    await Effect.runPromise(
+      updateArticleForUser("user-1", "article-1", { contentText: "Plain text" }).pipe(
+        Effect.provide(fake.layer),
+      ),
+    );
 
     expect(firstPatch(fake)).not.toHaveProperty("contentSanitizerVersion");
     expect(firstPatch(fake)).not.toHaveProperty("contentRaw");

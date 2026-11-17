@@ -1,5 +1,8 @@
+import { Effect } from "effect";
 import type { ReaderDocument } from "@kyomi/reader/document";
 import type { StoredDocument, StoredDocumentCompiler } from "@kyomi/ingest/lib/stored-document";
+import type { Db } from "@adapters/db/service";
+import { fakeDb } from "@api-tests/support/layers";
 
 export const TEST_COMPILER_VERSION = "test-compiler-1";
 
@@ -44,4 +47,12 @@ export function fakeCompiler(version = TEST_COMPILER_VERSION): StoredDocumentCom
       compilerVersion: version,
     }),
   };
+}
+
+/** Runs an operation that needs only `Db` against a fake Drizzle client. */
+export function runWithDb<A, E>(
+  effect: Effect.Effect<A, E, Db>,
+  methods: Parameters<typeof fakeDb>[0],
+): Promise<A> {
+  return Effect.runPromise(effect.pipe(Effect.provide(fakeDb(methods))));
 }

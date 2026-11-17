@@ -1,13 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { dismissContinueReading } from "@modules/articles/resurface/operations";
-import { AppError } from "@shared/errors/app";
-import { DAY, NOW, ago, createWriteDb, readingRow, renderSql } from "./fakes";
-
-type Db = Parameters<typeof dismissContinueReading>[0];
-
-function asDb(fake: ReturnType<typeof createWriteDb>): Db {
-  return fake.db as unknown as Db;
-}
+import { DAY, NOW, ago, createWriteDb, readingRow, renderSql, run, runFailure } from "./fakes";
 
 describe("dismissContinueReading", () => {
   test("moves a live row to dismissed and clears its due time", async () => {
@@ -15,7 +8,7 @@ describe("dismissContinueReading", () => {
       const reading = readingRow({ feedItemId: "item-a", state });
       const fake = createWriteDb([{ reading }]);
 
-      await dismissContinueReading(asDb(fake), "user-1", "item-a", NOW);
+      await run(dismissContinueReading("item-a"), fake);
 
       expect(fake.updates).toHaveLength(1);
       expect(fake.updates[0]!.set).toMatchObject({
@@ -32,7 +25,7 @@ describe("dismissContinueReading", () => {
     const reading = readingRow({ feedItemId: null, clipId: "clip-1" });
     const fake = createWriteDb([{ reading }]);
 
-    await dismissContinueReading(asDb(fake), "user-1", "clip-1", NOW);
+    await run(dismissContinueReading("clip-1"), fake);
 
     expect(fake.updates[0]!.set).toMatchObject({ state: "dismissed" });
   });
@@ -46,7 +39,7 @@ describe("dismissContinueReading", () => {
     });
     const fake = createWriteDb([{ reading }]);
 
-    await dismissContinueReading(asDb(fake), "user-1", "item-a", NOW);
+    await run(dismissContinueReading("item-a"), fake);
 
     expect(fake.updates).toEqual([]);
   });
@@ -55,7 +48,7 @@ describe("dismissContinueReading", () => {
     const reading = readingRow({ feedItemId: "item-a", state: "completed", dueAt: null });
     const fake = createWriteDb([{ reading }]);
 
-    await dismissContinueReading(asDb(fake), "user-1", "item-a", NOW);
+    await run(dismissContinueReading("item-a"), fake);
 
     expect(fake.updates).toEqual([]);
   });
@@ -63,12 +56,13 @@ describe("dismissContinueReading", () => {
   test("answers 404 when the caller has no reading row for the id", async () => {
     const fake = createWriteDb([]);
 
-    const error = await dismissContinueReading(asDb(fake), "user-1", "someone-elses", NOW).catch(
-      (caught: unknown) => caught,
-    );
+    const error = await runFailure(dismissContinueReading("someone-elses"), fake);
 
-    expect(error).toBeInstanceOf(AppError);
-    expect((error as AppError).status).toBe(404);
+    expect(error).toMatchObject({
+      _tag: "NotFound",
+      code: "ARTICLE_NOT_FOUND",
+      message: "Article not found",
+    });
     expect(fake.updates).toEqual([]);
     const { sql, params } = renderSql(fake.queries[0]!.where!);
     expect(sql).toContain('"article_reading_state"."user_id" =');

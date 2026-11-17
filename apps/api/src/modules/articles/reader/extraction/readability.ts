@@ -1,20 +1,22 @@
 import { Readability } from "@mozilla/readability";
+import { Effect } from "effect";
 import { parseHTML } from "linkedom";
 import type { HostRateLimiter } from "@kyomi/ingest";
 import { processIngestedArticleHtml } from "../content";
 import type { ArticleExtractionCandidate } from "../content";
-import { fetchArticleDocument } from "./fetch";
+import { blockedUrl, ExtractionFailed } from "./errors";
+import { fetchArticleDocument, withHostRateLimit } from "./fetch";
 
-type ArticleExtractionResult =
-  | {
-      ok: true;
-      content: ArticleExtractionCandidate;
-      finalUrl: string;
-      sanitizerVersion: string;
-      /** Readability output before compiling; stored for recompiles and never served. */
-      rawHtml: string;
-    }
-  | { ok: false; errorCode: string; errorMessage: string };
+type ArticleExtraction = {
+  content: ArticleExtractionCandidate;
+  finalUrl: string;
+  sanitizerVersion: string;
+  /** Readability output before compiling; stored for recompiles and never served. */
+  rawHtml: string;
+};
+
+const noReadableContent = (errorMessage: string) =>
+  new ExtractionFailed({ errorCode: "NO_READABLE_CONTENT", errorMessage });
 
 function wordCount(input: string): number {
   return input.split(/\s+/).filter(Boolean).length;
@@ -91,107 +93,83 @@ function looksLikeNonArticlePage(url: URL): boolean {
   );
 }
 
-export function extractArticleContentFromHtml(input: {
+/** Parse `body` as the page at `finalUrl` and run Readability over it. */
+const readArticle = (body: string, finalUrl: URL) =>
+  Effect.try({
+    try: () => {
+      const doc = parseHTML(body).document;
+      try {
+        Object.defineProperty(doc, "URL", { value: finalUrl.href, configurable: true });
+      } catch {
+        /* ignore if runtime does not allow redefining URL */
+      }
+      return new Readability(doc).parse();
+    },
+    catch: (cause) =>
+      new ExtractionFailed({
+        errorCode: "PARSING_FAILED",
+        errorMessage:
+          cause instanceof Error
+            ? `Could not parse article HTML: ${cause.message}`
+            : "Could not parse article HTML.",
+        cause,
+      }),
+  });
+
+/** Run Readability over fetched HTML. Pure CPU work; a page with no article fails typed. */
+export const extractArticleContentFromHtml = Effect.fn("extraction.readability")(function* (input: {
   body: string;
   finalUrl: string;
-}): ArticleExtractionResult {
-  let finalUrl: URL;
-  try {
-    finalUrl = new URL(input.finalUrl);
-  } catch {
-    return {
-      ok: false,
-      errorCode: "BLOCKED_URL",
-      errorMessage: "Invalid or unsafe URL provided.",
-    };
-  }
-
+}) {
+  const finalUrl = yield* Effect.try({ try: () => new URL(input.finalUrl), catch: blockedUrl });
   if (looksLikeNonArticlePage(finalUrl)) {
-    return {
-      ok: false,
-      errorCode: "NO_READABLE_CONTENT",
-      errorMessage: "This source is not a readable article page.",
-    };
+    return yield* noReadableContent("This source is not a readable article page.");
   }
 
-  let article: ReturnType<Readability["parse"]> | null;
-  try {
-    const htmlView = parseHTML(input.body);
-    const doc = htmlView.document;
-    try {
-      Object.defineProperty(doc, "URL", { value: finalUrl.href, configurable: true });
-    } catch {
-      /* ignore if runtime does not allow redefining URL */
-    }
-    const reader = new Readability(doc);
-    article = reader.parse();
-  } catch (error) {
-    return {
-      ok: false,
-      errorCode: "PARSING_FAILED",
-      errorMessage:
-        error instanceof Error
-          ? `Could not parse article HTML: ${error.message}`
-          : "Could not parse article HTML.",
-    };
-  }
-
+  const article = yield* readArticle(input.body, finalUrl);
   if (!article?.content) {
-    return {
-      ok: false,
-      errorCode: "NO_READABLE_CONTENT",
-      errorMessage: "No readable article body was found.",
-    };
+    return yield* noReadableContent("No readable article body was found.");
   }
 
+  const title = article.title?.trim() || null;
+  const byline = article.byline?.trim() || null;
+  const excerpt = article.excerpt?.trim() || null;
   const processed = compileExtractedHtml(article.content, {
     baseUrl: finalUrl.href,
-    title: article.title?.trim() || null,
-    byline: article.byline?.trim() || null,
-    excerpt: article.excerpt?.trim() || null,
+    title,
+    byline,
+    excerpt,
   });
-  const contentHtml = processed.html;
-  const contentText = processed.text;
-
-  if (wordCount(contentText) < 60 || paragraphCount(contentText) < 2) {
-    return {
-      ok: false,
-      errorCode: "NO_READABLE_CONTENT",
-      errorMessage: "This source did not expose enough readable article text.",
-    };
+  if (wordCount(processed.text) < 60 || paragraphCount(processed.text) < 2) {
+    return yield* noReadableContent("This source did not expose enough readable article text.");
   }
 
   return {
-    ok: true,
     finalUrl: finalUrl.href,
     sanitizerVersion: processed.sanitizerVersion,
     rawHtml: article.content,
     content: {
-      title: article.title?.trim() || null,
-      byline: article.byline?.trim() || null,
-      excerpt: article.excerpt?.trim() || null,
-      contentHtml: contentHtml || null,
-      contentText: contentText || null,
+      title,
+      byline,
+      excerpt,
+      contentHtml: processed.html || null,
+      contentText: processed.text || null,
       siteName: article.siteName?.trim() || null,
       language: article.lang?.trim() || null,
       publishedTime: null,
     },
-  };
-}
+  } satisfies ArticleExtraction;
+});
 
-export async function extractArticleContentFromUrl(
+/** Fetch an article page (under the host's rate limit, when given one) and extract its body. */
+export const extractArticleContentFromUrl = Effect.fn("extraction.fromUrl")(function* (
   url: string,
   options?: { hostRateLimiter?: HostRateLimiter },
-): Promise<ArticleExtractionResult> {
-  const fetched = options?.hostRateLimiter
-    ? await options.hostRateLimiter.run(url, () => fetchArticleDocument(url))
-    : await fetchArticleDocument(url);
-  if (!fetched.ok) {
-    return fetched;
-  }
-
-  return extractArticleContentFromHtml({
-    body: fetched.body,
-    finalUrl: fetched.finalUrl,
-  });
-}
+) {
+  const fetched = yield* withHostRateLimit(
+    options?.hostRateLimiter,
+    url,
+    fetchArticleDocument(url),
+  );
+  return yield* extractArticleContentFromHtml({ body: fetched.body, finalUrl: fetched.finalUrl });
+});

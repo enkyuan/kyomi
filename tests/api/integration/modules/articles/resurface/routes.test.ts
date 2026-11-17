@@ -1,6 +1,8 @@
-import { describe, expect, mock, test } from "bun:test";
-import { rateLimitPlugin } from "@adapters/rate-limit/plugin";
+import { afterEach, describe, expect, mock, test } from "bun:test";
+import { Layer, ManagedRuntime } from "effect";
 import { registerArticleResurfaceRoutes } from "@modules/articles/resurface/routes";
+import { Elysia, registerTestErrorHandlers } from "@api-tests/support/elysia";
+import { fakeDb, testConfig } from "@api-tests/support/layers";
 import {
   clipCandidateRow,
   createViewDb,
@@ -13,28 +15,25 @@ const USER_ID = "user-1";
 const ARTICLE_ID = "0b0f5b9e-6f7c-4a3e-9b53-1c2d3e4f5a6b";
 const OTHER_ID = "7a1d2c3b-4e5f-4a6b-8c7d-9e0f1a2b3c4d";
 
-const logger = { info: () => {}, warn: () => {}, error: () => {}, debug: () => {} };
-
-/**
- * The tests tree does not depend on elysia directly, so reuse the constructor of an existing
- * Elysia instance from the app to build a real router with real schema validation.
- */
-const ElysiaApp = rateLimitPlugin.constructor as new (config?: {
-  prefix?: string;
-}) => typeof rateLimitPlugin;
-
 type Routed = { handle(request: Request): Promise<Response> };
 
-function createApp(database: unknown) {
+const runtimes: Array<{ dispose: () => Promise<void> }> = [];
+
+afterEach(async () => {
+  await Promise.all(runtimes.splice(0).map((runtime) => runtime.dispose()));
+});
+
+function createApp(database: Parameters<typeof fakeDb>[0]) {
+  const runtime = ManagedRuntime.make(Layer.mergeAll(fakeDb(database), testConfig()));
+  runtimes.push(runtime);
   const enforceRateLimit = mock(async (..._args: unknown[]) => {});
-  const app = registerArticleResurfaceRoutes(
-    new ElysiaApp({ prefix: "/api/v1" }).decorate({
-      userId: USER_ID,
-      db: database,
-      logger,
-      enforceRateLimit,
-    }) as never,
-  ) as unknown as Routed;
+  // What `/api/v1` provides before a domain route runs: the session, a request id and the limiter.
+  const authenticated = new Elysia({ prefix: "/api/v1" })
+    .decorate({ enforceRateLimit })
+    .derive(() => ({ userId: USER_ID, requestId: "req-1" }));
+  // Hooks only reach routes registered after them.
+  registerTestErrorHandlers(authenticated);
+  const app = registerArticleResurfaceRoutes(authenticated as never, runtime) as unknown as Routed;
   return { app, enforceRateLimit };
 }
 
@@ -60,7 +59,10 @@ describe("registerArticleResurfaceRoutes", () => {
       },
     };
 
-    registerArticleResurfaceRoutes(recorder as never);
+    registerArticleResurfaceRoutes(
+      recorder as never,
+      ManagedRuntime.make(Layer.mergeAll(fakeDb(), testConfig())),
+    );
 
     expect(recorded).toEqual([
       "get /articles/views/continue-reading",
@@ -171,6 +173,18 @@ describe("registerArticleResurfaceRoutes", () => {
       expect(fake.updates[0]!.set).toMatchObject({
         state: "dismissed",
         dismissedAt: expect.any(Date),
+      });
+    });
+
+    test("answers 404 in the error envelope when the article is not the caller's", async () => {
+      const fake = createWriteDb([]);
+      const { app } = createApp(fake.db);
+
+      const response = await app.handle(post(`/articles/${ARTICLE_ID}/continue-reading/dismiss`));
+
+      expect(response.status).toBe(404);
+      expect(await response.json()).toMatchObject({
+        error: { code: "ARTICLE_NOT_FOUND", message: "Article not found" },
       });
     });
 
