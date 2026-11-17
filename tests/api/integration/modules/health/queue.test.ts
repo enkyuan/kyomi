@@ -13,13 +13,18 @@ describe("queue health snapshot", () => {
           fakeRedis({
             xlen: async (stream: string) => (stream === "jobs:feed-refresh" ? 12 : 3),
             xpending: async () => [2, "1-0", "2-0", []],
+            zcard: async (key: string) => (key === "jobs:feed-refresh:retry" ? 7 : 0),
           }),
         ),
       ),
     );
 
-    expect(snapshot.streams["jobs:feed-refresh"]).toEqual({ length: 12, pending: 2 });
-    expect(snapshot.streams["jobs:opml"]).toEqual({ length: 3, pending: 2 });
+    expect(snapshot.streams["jobs:feed-refresh"]).toEqual({
+      length: 12,
+      pending: 2,
+      scheduled: 7,
+    });
+    expect(snapshot.streams["jobs:opml"]).toEqual({ length: 3, pending: 2, scheduled: 0 });
   });
 
   test("a stream whose consumer group does not exist has nothing pending", async () => {
@@ -28,6 +33,7 @@ describe("queue health snapshot", () => {
         Effect.provide(
           fakeRedis({
             xlen: async () => 5,
+            zcard: async () => 0,
             xpending: async () => {
               throw replyError("NOGROUP No such key 'jobs:opml' or consumer group 'workers'");
             },
@@ -36,7 +42,7 @@ describe("queue health snapshot", () => {
       ),
     );
 
-    expect(snapshot.streams["jobs:opml"]).toEqual({ length: 5, pending: 0 });
+    expect(snapshot.streams["jobs:opml"]).toEqual({ length: 5, pending: 0, scheduled: 0 });
   });
 
   test("an xpending failure is an error, not zero pending", async () => {
@@ -45,6 +51,7 @@ describe("queue health snapshot", () => {
         Effect.provide(
           fakeRedis({
             xlen: async () => 5,
+            zcard: async () => 0,
             xpending: async () => {
               throw new Error("Connection is closed.");
             },
@@ -65,6 +72,7 @@ describe("queue health snapshot", () => {
         Effect.provide(
           fakeRedis({
             xlen: async () => 5,
+            zcard: async () => 0,
             xpending: async () => {
               throw replyError("WRONGTYPE Operation against a key holding the wrong kind of value");
             },
@@ -79,7 +87,27 @@ describe("queue health snapshot", () => {
   test("an unexpected xpending reply shape is an error", async () => {
     const exit = await run(
       queueHealth.pipe(
-        Effect.provide(fakeRedis({ xlen: async () => 1, xpending: async () => "OK" })),
+        Effect.provide(
+          fakeRedis({ xlen: async () => 1, zcard: async () => 0, xpending: async () => "OK" }),
+        ),
+      ),
+    );
+
+    expect(Exit.isFailure(exit)).toBe(true);
+  });
+
+  test("a failure counting scheduled retries is an error, not zero", async () => {
+    const exit = await run(
+      queueHealth.pipe(
+        Effect.provide(
+          fakeRedis({
+            xlen: async () => 1,
+            xpending: async () => [0],
+            zcard: async () => {
+              throw new Error("Connection is closed.");
+            },
+          }),
+        ),
       ),
     );
 

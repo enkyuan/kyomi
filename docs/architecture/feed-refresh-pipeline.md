@@ -13,6 +13,29 @@
 - `jobs:feed-refresh`: feed refresh jobs.
 - `jobs:opml`: OPML import and OPML feed import jobs.
 - `jobs:dead-letter`: exhausted or malformed jobs.
+- `jobs:<stream>:retry` (a sorted set beside each stream, for example `jobs:feed-refresh:retry`): failed jobs waiting out their retry delay.
+
+## Retries
+
+A job that fails with a retryable error is not put straight back on its stream, where it would hit the
+same failing host or database again at once. The consumer parks it in the stream's retry set, scored
+by the time it is due, and acknowledges the original entry in the same transaction, so the job is in
+exactly one place at all times. Each consumer loop first runs one Lua script that moves every due
+member onto the stream (`XADD`, then `ZREM`); because the move is a single script, consumers
+promoting at the same moment never put a job on the stream twice. A retry is therefore delayed by up
+to the stream's read block (2s) beyond its due time, and by longer while every consumer is busy.
+
+The delay is a random share of a ceiling (full jitter): up to 5s for the first retry, doubling with
+each one, never more than 5 minutes. With the default of 3 attempts a job is retried at most twice,
+after up to 5s and then up to 10s; the 5-minute cap matters only if `maxAttempts` is raised. Full
+jitter spreads jobs that failed together (one host down, one rate limit hit) over the whole window
+instead of bringing them back as one burst, at the price that a single retry can come back at once.
+
+`/queue/health` reports `scheduled`, the number of jobs in a stream's retry set. They are on neither
+the stream nor pending, so without it a burst of failures would look like an empty queue. Entries sit in
+Redis until some consumer promotes them, so they survive a worker restart. A retry's due time comes from
+the clock of the host that scheduled it and is compared with the clock of the host that promotes it, so
+keep worker clocks in sync (seconds of skew only shifts a delay of seconds).
 
 The scheduler claims due feeds before enqueueing. Claims use row locks with `FOR UPDATE SKIP LOCKED`, so multiple scheduler processes should not duplicate work. The worker can be scaled independently because it no longer starts a scheduler loop.
 

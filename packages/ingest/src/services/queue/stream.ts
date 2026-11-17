@@ -8,8 +8,9 @@ import {
 
 /**
  * Redis Streams protocol for job consumers: group creation, claiming, reading, acknowledging and
- * the retry / dead-letter hand-off. Plain Promise functions over one ioredis client; the consume
- * loop, concurrency, backoff and shutdown belong to the caller.
+ * the retry / dead-letter hand-off, including the sorted set that holds a failed job until its
+ * retry is due. Plain Promise functions over one ioredis client; the consume loop, concurrency,
+ * how long a retry waits and shutdown belong to the caller.
  */
 
 /** One stream entry as ioredis returns it: its id and the flat `[field, value, ...]` list. */
@@ -127,17 +128,79 @@ async function moveEntry(
   }
 }
 
-/** Put a failed job back at the tail of its stream with the failure recorded as `last_error`. */
-export async function requeueJob(
+/** The sorted set holding a stream's retries until they are due: member = job, score = due time. */
+export function retryKeyFor(streamKey: string): string {
+  return `${streamKey}:retry`;
+}
+
+/**
+ * Park a failed job in the stream's retry set until `dueAtMs` instead of putting it straight back
+ * on the stream, and acknowledge the entry, in one transaction. The job is in exactly one place at
+ * all times, so a crash cannot lose it or run it twice. `promoteDueRetries` puts it back on the
+ * stream once it is due.
+ *
+ * The member carries the original entry id so two failed jobs with identical fields stay two
+ * members instead of collapsing into one.
+ */
+export async function scheduleRetry(
   redis: Redis,
   target: StreamTarget,
   message: JobMessage,
   error: string,
+  dueAtMs: number,
 ): Promise<void> {
-  await moveEntry(redis, target, message.id, {
-    streamKey: target.streamKey,
-    fields: fieldsForJob(message.job, { attempts: message.attempts + 1, lastError: error }),
-  });
+  const fields = toRedisStreamFieldList(
+    fieldsForJob(message.job, { attempts: message.attempts + 1, lastError: error }),
+  );
+  const results = await redis
+    .multi()
+    .zadd(retryKeyFor(target.streamKey), dueAtMs, JSON.stringify({ id: message.id, fields }))
+    .xack(target.streamKey, target.group, message.id)
+    .exec();
+
+  const failed = results?.find(([commandError]) => commandError !== null);
+  if (failed?.[0]) {
+    throw failed[0];
+  }
+}
+
+/**
+ * Moves every retry due at `nowMs` or earlier onto the stream, oldest first and at most `limit` at
+ * a time. One script does the whole move (read the due members, XADD each, remove it), so
+ * consumers promoting at the same moment never put the same job on the stream twice.
+ */
+const PROMOTE_DUE_RETRIES = `
+local due = redis.call('ZRANGEBYSCORE', KEYS[1], '-inf', ARGV[1], 'LIMIT', 0, ARGV[3])
+for _, member in ipairs(due) do
+  local job = cjson.decode(member)
+  redis.call('XADD', KEYS[2], 'MAXLEN', '~', ARGV[2], '*', unpack(job.fields))
+  redis.call('ZREM', KEYS[1], member)
+end
+return #due
+`;
+
+/** Put the retries that are due back on the stream. Returns how many were moved. */
+export async function promoteDueRetries(
+  redis: Redis,
+  target: StreamTarget,
+  nowMs: number,
+  limit = 100,
+): Promise<number> {
+  const moved = await redis.eval(
+    PROMOTE_DUE_RETRIES,
+    2,
+    retryKeyFor(target.streamKey),
+    target.streamKey,
+    String(nowMs),
+    String(target.streamMaxLength),
+    String(limit),
+  );
+  return Number(moved);
+}
+
+/** How many failed jobs are waiting in the retry set for their delay to pass. */
+export async function countScheduledRetries(redis: Redis, streamKey: string): Promise<number> {
+  return redis.zcard(retryKeyFor(streamKey));
 }
 
 /**

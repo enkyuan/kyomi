@@ -7,7 +7,9 @@ import {
   ensureConsumerGroup,
   parseStreamEntry,
   readNewEntries,
-  requeueJob,
+  promoteDueRetries,
+  retryKeyFor,
+  scheduleRetry,
   type JobMessage,
   type StreamTarget,
 } from "@kyomi/ingest";
@@ -39,6 +41,10 @@ function fakeTransaction(
       commands.push(["xadd", ...args]);
       return chain;
     },
+    zadd: (...args: unknown[]) => {
+      commands.push(["zadd", ...args]);
+      return chain;
+    },
     xack: (...args: unknown[]) => {
       commands.push(["xack", ...args]);
       return chain;
@@ -58,36 +64,124 @@ function addedFields(commands: unknown[][]): { stream: unknown; fields: Record<s
   return { stream, fields };
 }
 
-describe("requeueJob", () => {
-  test("puts the job back on its stream with the failure recorded as last_error", async () => {
+/** The recorded ZADD: the retry set, when it is due, and the job it will come back as. */
+function scheduled(commands: unknown[][]) {
+  const [command, key, dueAt, member] = commands[0] as [string, string, number, string];
+  expect(command).toBe("zadd");
+  const { id, fields: flat } = JSON.parse(member) as { id: string; fields: string[] };
+  const fields: Record<string, string> = {};
+  for (let i = 0; i < flat.length; i += 2) {
+    fields[flat[i]!] = flat[i + 1]!;
+  }
+  return { key, dueAt, id, flat, fields };
+}
+
+describe("scheduleRetry", () => {
+  test("parks the job in the retry set until it is due, with the failure recorded as last_error", async () => {
     const { redis, commands } = fakeTransaction();
 
-    await requeueJob(redis, target, message, "Feed fetch failed: HTTP 503");
+    await scheduleRetry(redis, target, message, "Feed fetch failed: HTTP 503", 1_700_000_005_000);
 
-    const added = addedFields(commands);
-    expect(added.stream).toBe("jobs:feed-refresh");
-    expect(added.fields).toMatchObject({
+    const retry = scheduled(commands);
+    expect(retry.key).toBe("jobs:feed-refresh:retry");
+    expect(retry.dueAt).toBe(1_700_000_005_000);
+    expect(retry.id).toBe("10-0");
+    expect(retry.fields).toMatchObject({
       type: "feed.refresh",
       attempts: "2",
       last_error: "Feed fetch failed: HTTP 503",
     });
-    expect(JSON.parse(added.fields.payload!)).toEqual({
+    expect(JSON.parse(retry.fields.payload!)).toEqual({
       feedId: "feed-1",
       userId: "user-1",
       generation: 4,
     });
+  });
+
+  test("acknowledges the entry in the same transaction and never puts it on the stream early", async () => {
+    const { redis, commands } = fakeTransaction();
+
+    await scheduleRetry(redis, target, message, "boom", 1);
+
+    expect(commands.map(([command]) => command)).toEqual(["zadd", "xack"]);
     expect(commands[1]).toEqual(["xack", "jobs:feed-refresh", "kyomi-workers", "10-0"]);
   });
 
   test("a retried job parses back with its previous failure and attempt count", async () => {
     const { redis, commands } = fakeTransaction();
-    await requeueJob(redis, target, message, "boom");
+    await scheduleRetry(redis, target, message, "boom", 1);
 
-    const parsed = parseStreamEntry(["11-0", Object.entries(addedFields(commands).fields).flat()]);
+    const parsed = parseStreamEntry(["11-0", scheduled(commands).flat]);
 
     expect(parsed.attempts).toBe(2);
     expect(parsed.rawFields.last_error).toBe("boom");
   });
+
+  test("two failed jobs with the same fields stay two members of the set", async () => {
+    const first = fakeTransaction();
+    const second = fakeTransaction();
+    await scheduleRetry(first.redis, target, message, "boom", 1);
+    await scheduleRetry(second.redis, target, { ...message, id: "11-0" }, "boom", 1);
+
+    expect(first.commands[0]![3]).not.toBe(second.commands[0]![3]);
+  });
+
+  test("fails when Redis reports an error for a command inside the transaction", async () => {
+    const { redis } = fakeTransaction([
+      [new Error("OOM command not allowed"), null],
+      [null, 1],
+    ]);
+
+    await expect(scheduleRetry(redis, target, message, "x", 1)).rejects.toThrow("OOM");
+  });
+});
+
+describe("promoteDueRetries", () => {
+  function fakeEval(reply: unknown) {
+    const calls: unknown[][] = [];
+    return {
+      redis: {
+        eval: async (...args: unknown[]) => {
+          calls.push(args);
+          return reply;
+        },
+      } as never,
+      calls,
+    };
+  }
+
+  test("moves the due retries in one script run over the retry set and the stream", async () => {
+    const { redis, calls } = fakeEval(3);
+
+    const moved = await promoteDueRetries(redis, target, 1_700_000_000_000);
+
+    expect(moved).toBe(3);
+    const [script, keyCount, ...rest] = calls[0] as [string, number, ...string[]];
+    expect(script).toContain("ZRANGEBYSCORE");
+    expect(script).toContain("XADD");
+    expect(script).toContain("ZREM");
+    expect(keyCount).toBe(2);
+    expect(rest).toEqual([
+      "jobs:feed-refresh:retry",
+      "jobs:feed-refresh",
+      "1700000000000",
+      "5000",
+      "100",
+    ]);
+  });
+
+  test("takes at most the limit it is given", async () => {
+    const { redis, calls } = fakeEval(0);
+
+    await promoteDueRetries(redis, target, 1, 7);
+
+    expect((calls[0] as string[]).at(-1)).toBe("7");
+  });
+});
+
+test("retryKeyFor keeps each stream's retries apart", () => {
+  expect(retryKeyFor("jobs:feed-refresh")).toBe("jobs:feed-refresh:retry");
+  expect(retryKeyFor("jobs:opml")).not.toBe(retryKeyFor("jobs:feed-refresh"));
 });
 
 describe("deadLetterJob", () => {

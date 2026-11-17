@@ -3,6 +3,7 @@ import {
   FEED_REFRESH_JOBS_STREAM_KEY,
   JOBS_CONSUMER_GROUP,
   OPML_JOBS_STREAM_KEY,
+  countScheduledRetries,
 } from "@kyomi/ingest";
 import { Redis } from "@adapters/redis/service";
 import { RedisError } from "@shared/effect/errors";
@@ -21,7 +22,7 @@ function pendingCount(reply: unknown): Effect.Effect<number, RedisError> {
 }
 
 /**
- * Length and pending count per job stream. A missing consumer group (`NOGROUP`) has nothing
+ * Length, pending and scheduled-retry counts per job stream. A missing consumer group (`NOGROUP`) has nothing
  * pending; any other Redis failure fails the snapshot instead of reporting zero.
  */
 export const queueHealth: Effect.Effect<QueueHealthSnapshot, RedisError, Redis> = Effect.gen(
@@ -32,6 +33,7 @@ export const queueHealth: Effect.Effect<QueueHealthSnapshot, RedisError, Redis> 
       (streamKey) =>
         Effect.all({
           length: redis.use("xlen", (client) => client.xlen(streamKey)),
+          scheduled: redis.use("zcard", (client) => countScheduledRetries(client, streamKey)),
           pending: redis
             .use("xpending", (client) => client.xpending(streamKey, JOBS_CONSUMER_GROUP))
             .pipe(

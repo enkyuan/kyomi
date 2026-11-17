@@ -13,7 +13,9 @@ function appWith(options: {
   const runtime = ManagedRuntime.make(
     Layer.mergeAll(
       fakeDb(options.db ?? { execute: async () => undefined }),
-      fakeRedis(options.redis ?? { xlen: async () => 0, xpending: async () => [0] }),
+      fakeRedis(
+        options.redis ?? { xlen: async () => 0, xpending: async () => [0], zcard: async () => 0 },
+      ),
       recordingLogger().layer,
       testConfig(),
     ),
@@ -57,14 +59,18 @@ describe("health routes", () => {
 
   test("queue health returns stream counts", async () => {
     const response = await appWith({
-      redis: { xlen: async () => 4, xpending: async () => [1, "1-0", "1-0", []] },
+      redis: {
+        xlen: async () => 4,
+        xpending: async () => [1, "1-0", "1-0", []],
+        zcard: async () => 3,
+      },
     }).handle(new Request("http://localhost/queue/health"));
 
     expect(response.status).toBe(200);
     expect(await response.json()).toEqual({
       streams: {
-        "jobs:feed-refresh": { length: 4, pending: 1 },
-        "jobs:opml": { length: 4, pending: 1 },
+        "jobs:feed-refresh": { length: 4, pending: 1, scheduled: 3 },
+        "jobs:opml": { length: 4, pending: 1, scheduled: 3 },
       },
     });
   });

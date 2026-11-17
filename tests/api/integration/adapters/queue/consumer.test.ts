@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { Deferred, Effect, Exit, Fiber, Layer, Scope } from "effect";
+import { Deferred, Effect, Exit, Fiber, Layer, Random, Scope } from "effect";
 import { TestClock } from "effect/testing";
 import { startConsumers, type StreamConsumer } from "@adapters/queue/consumer";
 import { classifyJobFailure, toJobFailure, type JobFailure } from "@app/jobs/classify";
@@ -26,11 +26,16 @@ function streamRedis(
     batches?: Entry[][];
     claim?: () => unknown;
     ack?: (id: string) => unknown;
+    promote?: () => unknown;
   } = {},
 ) {
   const state = {
     acked: [] as string[],
     transactions: [] as unknown[][][],
+    /** The arguments of each EVAL that puts due retries back on the stream. */
+    promotions: [] as unknown[][],
+    /** Which Redis reads happened, in order, to show retries are promoted before the read. */
+    reads: [] as string[],
     groups: 0,
     blockingClosed: false,
   };
@@ -43,6 +48,7 @@ function streamRedis(
       state.blockingClosed = true;
     },
     xreadgroup: async () => {
+      state.reads.push("read");
       const next = batches.shift();
       if (next) {
         return [["stream", next]];
@@ -57,11 +63,21 @@ function streamRedis(
       return "OK";
     },
     call: async () => {
+      state.reads.push("claim");
       const thrown = options.claim?.();
       if (thrown instanceof Error) {
         throw thrown;
       }
       return ["0-0", pending.splice(0)];
+    },
+    eval: async (...args: unknown[]) => {
+      state.reads.push("promote");
+      const thrown = options.promote?.();
+      if (thrown instanceof Error) {
+        throw thrown;
+      }
+      state.promotions.push(args);
+      return 0;
     },
     xack: async (_stream: string, _group: string, id: string) => {
       const thrown = options.ack?.(id);
@@ -75,6 +91,7 @@ function streamRedis(
       const calls: unknown[][] = [];
       const chain = {
         xadd: (...args: unknown[]) => (calls.push(["xadd", ...args]), chain),
+        zadd: (...args: unknown[]) => (calls.push(["zadd", ...args]), chain),
         xack: (...args: unknown[]) => (calls.push(["xack", ...args]), chain),
         exec: async () => {
           state.transactions.push(calls);
@@ -99,6 +116,18 @@ function movedTo(transaction: unknown[][]) {
     fields[flat[i]!] = flat[i + 1]!;
   }
   return { stream, fields };
+}
+
+/** The retry a failed job was parked as: when it is due and the job it will come back as. */
+function scheduledRetry(transaction: unknown[][]) {
+  const [command, key, dueAt, member] = transaction[0] as [string, string, number, string];
+  expect(command).toBe("zadd");
+  const { id, fields: flat } = JSON.parse(member) as { id: string; fields: string[] };
+  const fields: Record<string, string> = {};
+  for (let i = 0; i < flat.length; i += 2) {
+    fields[flat[i]!] = flat[i + 1]!;
+  }
+  return { key, dueAt, id, fields };
 }
 
 function consumer(
@@ -131,16 +160,23 @@ function runUntil(
   consumers: StreamConsumer<JobFailure>[],
   redis: ReturnType<typeof streamRedis>,
   done: () => boolean,
-  options: { graceMs?: number } = {},
+  options: { graceMs?: number; random?: number } = {},
 ) {
   const logs = recordingLogger();
   const result = Effect.runPromise(
     Effect.scoped(
       Effect.gen(function* () {
-        yield* startConsumers(consumers, options);
+        yield* startConsumers(consumers, { graceMs: options.graceMs });
         yield* Effect.promise(() => waitFor(done, "consumer progress"));
       }),
-    ).pipe(Effect.provide(Layer.mergeAll(redis.layer, logs.layer))),
+    ).pipe(
+      // A fixed draw from the random service makes the backoff delay exact.
+      Effect.provideService(Random.Random, {
+        nextIntUnsafe: () => 0,
+        nextDoubleUnsafe: () => options.random ?? Math.random(),
+      }),
+      Effect.provide(Layer.mergeAll(redis.layer, logs.layer)),
+    ),
   );
   return { logs, result };
 }
@@ -163,7 +199,7 @@ describe("startConsumers", () => {
     expect(redis.state.blockingClosed).toBe(true);
   });
 
-  test("a retryable failure goes back on the stream with its error recorded as last_error", async () => {
+  test("a retryable failure waits in the retry set with its error recorded as last_error", async () => {
     const redis = streamRedis({ batches: [[refreshEntry("1-0")]] });
 
     const { result } = runUntil(
@@ -178,10 +214,78 @@ describe("startConsumers", () => {
     );
     await result;
 
-    const moved = movedTo(redis.state.transactions[0]!);
-    expect(moved.stream).toBe("jobs:feed-refresh");
-    expect(moved.fields).toMatchObject({ attempts: "1", last_error: "upstream down" });
+    const retry = scheduledRetry(redis.state.transactions[0]!);
+    expect(retry.key).toBe("jobs:feed-refresh:retry");
+    expect(retry.id).toBe("1-0");
+    expect(retry.fields).toMatchObject({ attempts: "1", last_error: "upstream down" });
+    // Parked and acknowledged together, and never put straight back on the stream.
     expect(redis.state.transactions[0]![1]![0]).toBe("xack");
+    expect(redis.state.transactions[0]!.some(([command]) => command === "xadd")).toBe(false);
+  });
+
+  test("a retry is due after a random share of its backoff, which doubles and is capped", async () => {
+    /** How long after the failure the retry was scheduled to come back, for a draw of `random`. */
+    const delayFor = async (
+      entry: Entry,
+      retryBackoff: { baseMs: number; maxMs: number },
+      random: number,
+    ) => {
+      const redis = streamRedis({ batches: [[entry]] });
+      const before = Date.now();
+      await runUntil(
+        [
+          consumer({
+            retryBackoff,
+            handle: () => Effect.fail(new Unavailable({ message: "down", code: "UPSTREAM" })),
+          }),
+        ],
+        redis,
+        () => redis.state.transactions.length === 1,
+        { random },
+      ).result;
+      const { dueAt } = scheduledRetry(redis.state.transactions[0]!);
+      const after = Date.now();
+      return { min: dueAt - after, max: dueAt - before };
+    };
+    const within = (waited: { min: number; max: number }, expected: number) => {
+      expect(waited.min).toBeLessThanOrEqual(expected);
+      expect(waited.max).toBeGreaterThanOrEqual(expected);
+    };
+
+    // The first retry waits a share of the base; a draw of 0 means no wait at all.
+    within(await delayFor(refreshEntry("1-0"), { baseMs: 40_000, maxMs: 1_000_000 }, 0.5), 20_000);
+    within(await delayFor(refreshEntry("2-0"), { baseMs: 40_000, maxMs: 1_000_000 }, 0), 0);
+    // The second retry's window is twice as long, and neither goes past the cap.
+    within(
+      await delayFor(entryWithAttempts("3-0", 1), { baseMs: 40_000, maxMs: 1_000_000 }, 0.5),
+      40_000,
+    );
+    within(
+      await delayFor(entryWithAttempts("4-0", 1), { baseMs: 40_000, maxMs: 50_000 }, 0.5),
+      25_000,
+    );
+  });
+
+  test("retries that are due are put back on the stream before each read", async () => {
+    const redis = streamRedis({ batches: [[refreshEntry("1-0")]] });
+
+    await runUntil(
+      [consumer({ handle: () => Effect.void })],
+      redis,
+      () => redis.state.acked.length === 1,
+    ).result;
+
+    expect(redis.state.reads.slice(0, 3)).toEqual(["promote", "claim", "read"]);
+    const [script, keyCount, retryKey, streamKey, now, maxLength, limit] = redis.state
+      .promotions[0] as [string, number, string, string, string, string, string];
+    expect(script).toContain("ZRANGEBYSCORE");
+    expect([keyCount, retryKey, streamKey]).toEqual([
+      2,
+      "jobs:feed-refresh:retry",
+      "jobs:feed-refresh",
+    ]);
+    expect(Number(now)).toBeGreaterThan(0);
+    expect([maxLength, limit]).toEqual(["5000", "100"]);
   });
 
   test("the last retryable failure is dead-lettered with the error the replay listing shows", async () => {
@@ -232,7 +336,7 @@ describe("startConsumers", () => {
     expect(redis.state.acked).toEqual([]);
   });
 
-  test("a retryable failure is still requeued when the consumer classifies failures", async () => {
+  test("a retryable failure is still retried when the consumer classifies failures", async () => {
     const redis = streamRedis({ batches: [[refreshEntry("1-0")]] });
 
     await runUntil(
@@ -246,8 +350,8 @@ describe("startConsumers", () => {
       () => redis.state.transactions.length === 1,
     ).result;
 
-    expect(movedTo(redis.state.transactions[0]!)).toMatchObject({
-      stream: "jobs:feed-refresh",
+    expect(scheduledRetry(redis.state.transactions[0]!)).toMatchObject({
+      key: "jobs:feed-refresh:retry",
       fields: { attempts: "1", last_error: "later" },
     });
   });
@@ -267,8 +371,8 @@ describe("startConsumers", () => {
       first,
       () => first.state.transactions.length === 1,
     ).result;
-    expect(movedTo(first.state.transactions[0]!)).toMatchObject({
-      stream: "jobs:feed-refresh",
+    expect(scheduledRetry(first.state.transactions[0]!)).toMatchObject({
+      key: "jobs:feed-refresh:retry",
       fields: { attempts: "1", last_error: "Article not found" },
     });
 
@@ -305,7 +409,7 @@ describe("startConsumers", () => {
     );
     await result;
 
-    expect(movedTo(redis.state.transactions[0]!).fields.last_error).toBe(
+    expect(scheduledRetry(redis.state.transactions[0]!).fields.last_error).toBe(
       "undefined is not a function",
     );
   });
@@ -381,6 +485,34 @@ describe("startConsumers", () => {
 });
 
 describe("a Redis outage", () => {
+  test("while promoting retries is logged and retried, and the loop carries on", async () => {
+    let down = true;
+    const redis = streamRedis({
+      batches: [[refreshEntry("1-0")]],
+      promote: () => (down ? new Error("Connection is closed.") : undefined),
+    });
+    const logs = recordingLogger();
+
+    await Effect.runPromise(
+      Effect.scoped(
+        Effect.gen(function* () {
+          yield* startConsumers([consumer({ handle: () => Effect.void })]);
+          yield* Effect.promise(() =>
+            waitFor(
+              () => logs.entries.some((entry) => entry.event === "worker.stream.recovering"),
+              "promotion failure to be logged",
+            ),
+          );
+          expect(redis.state.acked).toEqual([]);
+
+          down = false;
+          yield* TestClock.adjust("40 seconds");
+          yield* Effect.promise(() => waitFor(() => redis.state.acked.length === 1, "recovery"));
+        }).pipe(Effect.provide(Layer.mergeAll(redis.layer, logs.layer, TestClock.layer()))),
+      ),
+    );
+  });
+
   test("is retried with backoff and consuming resumes, without stopping the other stream", async () => {
     let down = true;
     const healthy = streamRedis({ batches: [[refreshEntry("1-0")]] });

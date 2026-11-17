@@ -1,4 +1,4 @@
-import { Cause, Clock, Deferred, Duration, Effect, Fiber, Result, Schedule } from "effect";
+import { Cause, Clock, Deferred, Duration, Effect, Fiber, Random, Result, Schedule } from "effect";
 import {
   JOBS_CONSUMER_GROUP,
   JOBS_DEAD_LETTER_STREAM_KEY,
@@ -8,13 +8,15 @@ import {
   deadLetterRawEntry,
   ensureConsumerGroup,
   parseStreamEntry,
+  promoteDueRetries,
   readNewEntries,
-  requeueJob,
+  scheduleRetry,
   type JobMessage,
   type StreamEntry,
   type StreamTarget,
 } from "@kyomi/ingest";
 import { AppLogger } from "@adapters/logger/service";
+import { DEFAULT_RETRY_BACKOFF, retryDelayMs, type RetryBackoff } from "./backoff";
 import { Redis, makeRedis, redisReplyCode } from "@adapters/redis/service";
 import { BadRequest, InternalError, RedisError, unexpected } from "@shared/effect/errors";
 import { serializeError } from "@shared/errors/serialize";
@@ -33,6 +35,12 @@ export type StreamConsumer<E extends { readonly message: string }> = {
   /** How long one XREADGROUP blocks; bounds how quickly a stopped consumer notices. */
   readonly blockMs?: number;
   readonly maxAttempts?: number;
+  /**
+   * How long a failed job waits before its next attempt: a random delay up to 5s for the first
+   * retry, doubling each time, never more than 5 minutes. It waits in a Redis sorted set beside the
+   * stream and is put back once due, so a failing dependency is not hit again at once.
+   */
+  readonly retryBackoff?: RetryBackoff;
   readonly handle: (message: JobMessage) => Effect.Effect<void, E>;
   /**
    * Whether running the job again could succeed. A failure it rejects is dead-lettered at once,
@@ -43,9 +51,9 @@ export type StreamConsumer<E extends { readonly message: string }> = {
   /**
    * Called for every failure (a typed handler failure, a defect surfaced as `InternalError`, or
    * `BadRequest` for an entry that is not a job) so it can be logged. It never changes what
-   * happens to the job. A failed job goes back on the stream until `maxAttempts` is spent, then
-   * to the dead-letter stream; `isRetryable` skips straight to the dead-letter stream. An entry
-   * that is not a job is dead-lettered at once.
+   * happens to the job. A failed job is retried after its backoff until `maxAttempts` is spent,
+   * then goes to the dead-letter stream; `isRetryable` skips straight to the dead-letter stream. An
+   * entry that is not a job is dead-lettered at once.
    */
   readonly onFailure: (
     error: E | BadRequest | InternalError,
@@ -109,6 +117,7 @@ const consumeStream = <E extends { readonly message: string }>(
         streamMaxLength: options.streamMaxLength,
       };
       const maxAttempts = options.maxAttempts ?? DEFAULT_MAX_ATTEMPTS;
+      const backoff = options.retryBackoff ?? DEFAULT_RETRY_BACKOFF;
       const context = { streamKey: options.streamKey, consumer: options.consumer };
 
       // XREADGROUP BLOCK holds its connection, so reads get their own and never delay acks.
@@ -186,10 +195,24 @@ const consumeStream = <E extends { readonly message: string }>(
           const text = failureText(failure);
           const retryable = options.isRetryable?.(failure) ?? true;
           if (retryable && message.attempts + 1 < maxAttempts) {
+            const now = yield* Clock.currentTimeMillis;
+            const delayMs = retryDelayMs(
+              message.attempts + 1,
+              yield* Random.nextBetween(0, 1),
+              backoff,
+            );
+            yield* log.info("worker.job.retry_scheduled", {
+              ...context,
+              streamId: message.id,
+              attempts: message.attempts + 1,
+              delayMs,
+            });
             return yield* settle(
-              "requeue",
+              "retry",
               message.id,
-              redis.use("requeue", (client) => requeueJob(client, target, message, text)),
+              redis.use("retry", (client) =>
+                scheduleRetry(client, target, message, text, now + delayMs),
+              ),
             );
           }
           const now = new Date(yield* Clock.currentTimeMillis);
@@ -238,7 +261,14 @@ const consumeStream = <E extends { readonly message: string }>(
           }),
         );
 
+      /** Failed jobs whose delay has passed go back on the stream, so the read below sees them. */
+      const promoteRetries = Effect.gen(function* () {
+        const now = yield* Clock.currentTimeMillis;
+        yield* redis.use("promote_retries", (client) => promoteDueRetries(client, target, now));
+      });
+
       const iteration = Effect.gen(function* () {
+        yield* promoteRetries;
         const entries = yield* nextEntries;
         yield* Effect.forEach(entries, processEntry, {
           concurrency: options.concurrency,
