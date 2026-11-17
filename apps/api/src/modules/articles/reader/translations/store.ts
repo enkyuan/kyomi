@@ -46,7 +46,6 @@ export async function findOrQueueFeedItemTranslation(
   }
 
   const sourceContentHash = await sha256Hex(sourceText);
-
   const existing = await database
     .select()
     .from(feedItemTranslations)
