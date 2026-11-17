@@ -1,34 +1,16 @@
+import { Effect } from "effect";
 import { and, eq, ne } from "drizzle-orm";
 import { feeds } from "@kyomi/db";
-import type { db } from "@adapters/db/client";
-import type { AppLogger } from "@adapters/logger";
-import { deleteFeedSearchDocument, upsertFeedSearchDocument } from "@adapters/search/meili";
+import { Db } from "@adapters/db/service";
+import { AppLogger } from "@adapters/logger/service";
+import { FeedSearch, type FeedSearchError } from "@adapters/search/service";
 import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize";
-import { AppError } from "@shared/errors/app";
+import { currentDate } from "@shared/effect/clock";
+import { BadRequest, Conflict } from "@shared/effect/errors";
 import { serializeError } from "@shared/errors/serialize";
+import { emptyUpdate, feedNotFound } from "../errors";
 import type { AdminGlobalFeedDetailDto, AdminUpdateGlobalFeedBody } from "../types";
-
-type DB = typeof db;
-
-function mapFeedRow(row: {
-  id: string;
-  url: string;
-  title: string;
-  description: string | null;
-  link: string | null;
-  createdAt: Date;
-  updatedAt: Date;
-}): AdminGlobalFeedDetailDto {
-  return {
-    id: row.id,
-    url: row.url,
-    title: row.title,
-    description: row.description,
-    link: row.link,
-    createdAt: row.createdAt.toISOString(),
-    updatedAt: row.updatedAt.toISOString(),
-  };
-}
+import { requireFeedAdmin } from "./guard";
 
 type FeedRow = {
   id: string;
@@ -48,204 +30,201 @@ type FeedUpdates = {
   updatedAt: Date;
 };
 
-function assertPatchHasUpdatableField(patch: AdminUpdateGlobalFeedBody): void {
-  const hasField = "title" in patch || "description" in patch || "link" in patch || "url" in patch;
-  if (!hasField) {
-    throw new AppError("No updatable fields provided", { status: 400, code: "EMPTY_UPDATE" });
-  }
+const FEED_COLUMNS = {
+  id: feeds.id,
+  url: feeds.url,
+  title: feeds.title,
+  description: feeds.description,
+  link: feeds.link,
+  createdAt: feeds.createdAt,
+  updatedAt: feeds.updatedAt,
+};
+
+function mapFeedRow(row: FeedRow): AdminGlobalFeedDetailDto {
+  return {
+    id: row.id,
+    url: row.url,
+    title: row.title,
+    description: row.description,
+    link: row.link,
+    createdAt: row.createdAt.toISOString(),
+    updatedAt: row.updatedAt.toISOString(),
+  };
 }
 
-async function getExistingFeed(database: DB, feedId: string): Promise<FeedRow> {
-  const existing = await database
-    .select({
-      id: feeds.id,
-      url: feeds.url,
-      title: feeds.title,
-      description: feeds.description,
-      link: feeds.link,
-      createdAt: feeds.createdAt,
-      updatedAt: feeds.updatedAt,
-    })
-    .from(feeds)
-    .where(eq(feeds.id, feedId))
-    .limit(1);
+const getExistingFeed = Effect.fn("feeds.admin.get")(function* (feedId: string) {
+  const db = yield* Db;
+  const existing = yield* db.use("feeds.admin.get", (client) =>
+    client.select(FEED_COLUMNS).from(feeds).where(eq(feeds.id, feedId)).limit(1),
+  );
   const current = existing[0];
   if (!current) {
-    throw new AppError("Feed not found", { status: 404, code: "FEED_NOT_FOUND" });
+    return yield* feedNotFound();
   }
   return current;
+});
+
+/** `link`: trimmed, and blank or null clears it. */
+function normalizeLink(link: string | null | undefined): string | null {
+  const trimmed = link?.trim() ?? "";
+  return trimmed.length > 0 ? trimmed : null;
 }
 
-function applyTitlePatch(updates: FeedUpdates, patch: AdminUpdateGlobalFeedBody): void {
-  if (!("title" in patch)) {
-    return;
+const invalidFeedUrl = (cause?: unknown) =>
+  new BadRequest({ message: "Invalid feed URL", code: "INVALID_FEED_URL", cause });
+
+function normalizePatchedUrl(rawUrl: string) {
+  const trimmed = rawUrl.trim();
+  if (trimmed.length === 0) {
+    return Effect.fail(invalidFeedUrl());
   }
-  const next = (patch.title ?? "").trim();
-  if (next.length === 0) {
-    throw new AppError("title cannot be empty", { status: 400, code: "INVALID_FEED_TITLE" });
-  }
-  updates.title = next;
+  return Effect.try({
+    try: () => normalizeFeedUrl(assertHttpOrHttpsUrl(trimmed).href),
+    catch: invalidFeedUrl,
+  });
 }
 
-function applyDescriptionPatch(updates: FeedUpdates, patch: AdminUpdateGlobalFeedBody): void {
+const assertNoFeedUrlConflict = Effect.fn("feeds.admin.assert_url_free")(function* (
+  feedId: string,
+  normalizedUrl: string,
+) {
+  const db = yield* Db;
+  const clash = yield* db.use("feeds.admin.url_conflict", (client) =>
+    client
+      .select({ id: feeds.id })
+      .from(feeds)
+      .where(and(eq(feeds.url, normalizedUrl), ne(feeds.id, feedId)))
+      .limit(1),
+  );
+  if (clash[0]) {
+    return yield* new Conflict({
+      message: "A feed with this URL already exists",
+      code: "FEED_URL_CONFLICT",
+    });
+  }
+});
+
+/** Validates the patch fields in a fixed order and returns the columns to write. */
+const buildFeedUpdates = Effect.fn("feeds.admin.build_updates")(function* (
+  patch: AdminUpdateGlobalFeedBody,
+  feedId: string,
+  currentUrl: string,
+) {
+  const updates: FeedUpdates = { updatedAt: yield* currentDate };
+
+  if ("title" in patch) {
+    const next = (patch.title ?? "").trim();
+    if (next.length === 0) {
+      return yield* new BadRequest({
+        message: "title cannot be empty",
+        code: "INVALID_FEED_TITLE",
+      });
+    }
+    updates.title = next;
+  }
   if ("description" in patch) {
     updates.description = patch.description ?? null;
   }
-}
-
-function applyLinkPatch(updates: FeedUpdates, patch: AdminUpdateGlobalFeedBody): void {
-  if (!("link" in patch)) {
-    return;
+  if ("link" in patch) {
+    updates.link = normalizeLink(patch.link);
   }
-  if (patch.link === null || patch.link === undefined) {
-    updates.link = null;
-    return;
+  if ("url" in patch && patch.url !== undefined) {
+    const normalized = yield* normalizePatchedUrl(patch.url);
+    if (normalized !== currentUrl) {
+      yield* assertNoFeedUrlConflict(feedId, normalized);
+      updates.url = normalized;
+    }
   }
-  const trimmed = patch.link.trim();
-  updates.link = trimmed.length > 0 ? trimmed : null;
-}
-
-function normalizePatchedUrl(rawUrl: string): string {
-  const trimmed = rawUrl.trim();
-  if (trimmed.length === 0) {
-    throw new AppError("Invalid feed URL", { status: 400, code: "INVALID_FEED_URL" });
-  }
-  try {
-    return normalizeFeedUrl(assertHttpOrHttpsUrl(trimmed).href);
-  } catch {
-    throw new AppError("Invalid feed URL", { status: 400, code: "INVALID_FEED_URL" });
-  }
-}
-
-async function assertNoFeedUrlConflict(
-  database: DB,
-  feedId: string,
-  normalizedUrl: string,
-): Promise<void> {
-  const clash = await database
-    .select({ id: feeds.id })
-    .from(feeds)
-    .where(and(eq(feeds.url, normalizedUrl), ne(feeds.id, feedId)))
-    .limit(1);
-  if (!clash[0]) {
-    return;
-  }
-  throw new AppError("A feed with this URL already exists", {
-    status: 409,
-    code: "FEED_URL_CONFLICT",
-  });
-}
-
-async function applyUrlPatch(
-  database: DB,
-  updates: FeedUpdates,
-  patch: AdminUpdateGlobalFeedBody,
-  feedId: string,
-  currentUrl: string,
-): Promise<void> {
-  if (!("url" in patch) || patch.url === undefined) {
-    return;
-  }
-  const normalized = normalizePatchedUrl(patch.url);
-  if (normalized === currentUrl) {
-    return;
-  }
-  await assertNoFeedUrlConflict(database, feedId, normalized);
-  updates.url = normalized;
-}
-
-async function applyAdminPatchToUpdates(
-  database: DB,
-  patch: AdminUpdateGlobalFeedBody,
-  feedId: string,
-  currentUrl: string,
-): Promise<FeedUpdates> {
-  const updates: FeedUpdates = { updatedAt: new Date() };
-  applyTitlePatch(updates, patch);
-  applyDescriptionPatch(updates, patch);
-  applyLinkPatch(updates, patch);
-  await applyUrlPatch(database, updates, patch, feedId, currentUrl);
   return updates;
-}
+});
 
-async function saveFeedUpdates(
-  database: DB,
+const saveFeedUpdates = Effect.fn("feeds.admin.save")(function* (
   feedId: string,
   updates: FeedUpdates,
-): Promise<FeedRow> {
-  const rows = await database.update(feeds).set(updates).where(eq(feeds.id, feedId)).returning({
-    id: feeds.id,
-    url: feeds.url,
-    title: feeds.title,
-    description: feeds.description,
-    link: feeds.link,
-    createdAt: feeds.createdAt,
-    updatedAt: feeds.updatedAt,
-  });
+) {
+  const db = yield* Db;
+  const rows = yield* db.use("feeds.admin.save", (client) =>
+    client.update(feeds).set(updates).where(eq(feeds.id, feedId)).returning(FEED_COLUMNS),
+  );
   const row = rows[0];
   if (!row) {
-    throw new AppError("Feed not found", { status: 404, code: "FEED_NOT_FOUND" });
+    return yield* feedNotFound();
   }
   return row;
-}
+});
 
 /**
  * Keep the search index in step with a committed feed change. The database write already
  * succeeded, so an index failure must not fail the request, but it leaves the index stale until
  * the next sync: log it with the cause so the drift is visible.
  */
-async function syncSearchIndex(
-  logger: AppLogger,
+const syncSearchIndex = Effect.fn("feeds.admin.sync_search")(function* (
   operation: "upsert" | "delete",
   feedId: string,
-  run: () => Promise<unknown>,
-): Promise<void> {
-  try {
-    await run();
-  } catch (error) {
-    logger.warn("feeds.admin.search_sync_failed", {
-      operation,
-      feedId,
-      error: serializeError(error),
-    });
-  }
-}
+  run: Effect.Effect<void, FeedSearchError>,
+) {
+  const log = yield* AppLogger;
+  yield* run.pipe(
+    Effect.catch((error) =>
+      log.warn("feeds.admin.search_sync_failed", {
+        operation,
+        feedId,
+        error: serializeError(error),
+      }),
+    ),
+  );
+});
 
-export async function adminUpdateGlobalFeed(
-  database: DB,
+export const adminUpdateGlobalFeed = Effect.fn("feeds.admin.update")(function* (
+  userId: string,
+  headers: Headers,
   feedId: string,
   patch: AdminUpdateGlobalFeedBody,
-  logger: AppLogger,
-): Promise<AdminGlobalFeedDetailDto> {
-  assertPatchHasUpdatableField(patch);
-  const current = await getExistingFeed(database, feedId);
-  const updates = await applyAdminPatchToUpdates(database, patch, feedId, current.url);
-  const row = await saveFeedUpdates(database, feedId, updates);
+) {
+  const search = yield* FeedSearch;
+  const log = yield* AppLogger;
+  yield* requireFeedAdmin(userId, headers);
+  if (!("title" in patch || "description" in patch || "link" in patch || "url" in patch)) {
+    return yield* emptyUpdate();
+  }
+  const current = yield* getExistingFeed(feedId);
+  const updates = yield* buildFeedUpdates(patch, feedId, current.url);
+  const row = yield* saveFeedUpdates(feedId, updates);
 
-  await syncSearchIndex(logger, "upsert", row.id, () =>
-    upsertFeedSearchDocument({
-      id: row.id,
-      url: row.url,
-      title: row.title,
-      description: row.description,
-      link: row.link,
-    }),
+  yield* syncSearchIndex(
+    "upsert",
+    row.id,
+    search.upsert([
+      {
+        id: row.id,
+        url: row.url,
+        title: row.title,
+        description: row.description,
+        link: row.link,
+      },
+    ]),
   );
 
+  yield* log.info("feeds.admin.updated", { userId, feedId });
   return mapFeedRow(row);
-}
+});
 
-export async function adminDeleteGlobalFeed(
-  database: DB,
+export const adminDeleteGlobalFeed = Effect.fn("feeds.admin.delete")(function* (
+  userId: string,
+  headers: Headers,
   feedId: string,
-  logger: AppLogger,
-): Promise<void> {
-  const removed = await database
-    .delete(feeds)
-    .where(eq(feeds.id, feedId))
-    .returning({ id: feeds.id });
+) {
+  const db = yield* Db;
+  const search = yield* FeedSearch;
+  const log = yield* AppLogger;
+  yield* requireFeedAdmin(userId, headers);
+  const removed = yield* db.use("feeds.admin.delete", (client) =>
+    client.delete(feeds).where(eq(feeds.id, feedId)).returning({ id: feeds.id }),
+  );
   if (removed.length === 0) {
-    throw new AppError("Feed not found", { status: 404, code: "FEED_NOT_FOUND" });
+    return yield* feedNotFound();
   }
-  await syncSearchIndex(logger, "delete", feedId, () => deleteFeedSearchDocument(feedId));
-}
+  yield* syncSearchIndex("delete", feedId, search.remove(feedId));
+  yield* log.info("feeds.admin.deleted", { userId, feedId });
+  return { message: "Feed deleted" };
+});

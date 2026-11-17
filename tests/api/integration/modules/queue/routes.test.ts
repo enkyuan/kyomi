@@ -1,32 +1,31 @@
-import "./admin-env";
 import { afterEach, describe, expect, mock, test } from "bun:test";
 import { Layer, ManagedRuntime } from "effect";
-import { rateLimitPlugin } from "@adapters/rate-limit/plugin";
 import { registerQueueRoutes } from "@modules/queue/routes";
-import { registerErrorHandlers } from "@app/setup/errors";
-import { fakeQueue, recordingLogger } from "@api-tests/support/layers";
+import { Elysia, registerTestErrorHandlers } from "@api-tests/support/elysia";
+import { fakeQueue, recordingLogger, testConfig } from "@api-tests/support/layers";
 
-/**
- * The tests tree does not depend on elysia directly, so reuse the constructor of an existing
- * Elysia instance from the app to build a real router.
- */
-const ElysiaApp = rateLimitPlugin.constructor as new () => typeof rateLimitPlugin;
 type Routed = { handle(request: Request): Promise<Response> };
 
 const runtimes: Array<{ dispose: () => Promise<void> }> = [];
 
 function appWith(redis: Parameters<typeof fakeQueue>[0]) {
-  const runtime = ManagedRuntime.make(Layer.mergeAll(fakeQueue(redis), recordingLogger().layer));
+  const runtime = ManagedRuntime.make(
+    Layer.mergeAll(
+      fakeQueue(redis),
+      recordingLogger().layer,
+      testConfig({ FEED_ADMIN_SHARED_SECRET: "queue-test-secret" }),
+    ),
+  );
   runtimes.push(runtime);
   // What `/api/v1` provides before a domain route runs: the session, a request id, logger and db.
-  const authenticated = new ElysiaApp().derive(() => ({
+  const authenticated = new Elysia().derive(() => ({
     userId: "user-1",
     requestId: "req-1",
     logger: { info: () => undefined, warn: () => undefined, error: () => undefined },
     db: {},
   }));
   // Hooks only reach routes registered after them.
-  registerErrorHandlers(authenticated as never);
+  registerTestErrorHandlers(authenticated);
   return registerQueueRoutes(authenticated as never, runtime) as unknown as Routed;
 }
 

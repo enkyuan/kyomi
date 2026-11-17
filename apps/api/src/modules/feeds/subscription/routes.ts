@@ -1,18 +1,19 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { enforceRateLimitForContext } from "@adapters/rate-limit/plugin";
-import { v1HandlerContext } from "@shared/http/v1/context";
+import { runEffect } from "@shared/http/effect/bridge";
+import { v1EffectContext } from "@shared/http/v1/context";
 import { uuidParam } from "@shared/http/v1/params";
+import { getFeedDetailForUser, listSubscribedFeeds } from "../read/queries";
+import type { FeedsRuntime } from "../runtime";
+import * as dto from "../schemas";
 import {
   bulkMoveFeedsToFolder,
   bulkUnsubscribeFromFeeds,
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
 } from "./mutations";
-import { getFeedDetailForUser, listSubscribedFeeds } from "../read/queries";
-import * as dto from "../schemas";
-import { enqueueFeedRefresh } from "../refresh/enqueue";
-import { createOrSubscribeToFeed, subscribeToExistingFeed } from "./subscribe";
+import { subscribeById, subscribeByUrl } from "./operations";
 
 const createFeedRateLimit = {
   name: "feeds.create_by_url",
@@ -20,24 +21,18 @@ const createFeedRateLimit = {
   windowMs: 10 * 60_000,
 } as const;
 
-export function registerFeedSubscriptionRoutes(app: Elysia) {
+export function registerFeedSubscriptionRoutes(app: Elysia, runtime: FeedsRuntime) {
   return app
     .post(
       "/feeds",
       async (context) => {
-        const { body, db, logger, set, userId } = v1HandlerContext<{ url: string }>(context);
+        const { body, request, requestId, set, userId } = v1EffectContext<{ url: string }>(context);
         await enforceRateLimitForContext(context, userId, createFeedRateLimit);
-        const result = await createOrSubscribeToFeed(db, userId, body.url.trim());
-        if (result.newSubscription) {
-          await enqueueFeedRefresh(db, result.feedId, userId, "subscription_created", logger);
-        }
+        const result = await runEffect(
+          { runtime, request, requestId, userId },
+          subscribeByUrl(userId, body.url),
+        );
         set.status = result.newSubscription ? 201 : 200;
-        logger.info("feeds.subscribe.by_url", {
-          userId,
-          feedId: result.feedId,
-          newFeed: result.newFeed,
-          newSubscription: result.newSubscription,
-        });
         return result;
       },
       {
@@ -51,17 +46,12 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
     .post(
       "/feeds/:feedId/subscribe",
       async (context) => {
-        const { db, logger, params, set, userId } = v1HandlerContext(context);
-        const result = await subscribeToExistingFeed(db, userId, params.feedId);
-        if (result.newSubscription) {
-          await enqueueFeedRefresh(db, result.feedId, userId, "subscription_created", logger);
-        }
+        const { params, request, requestId, set, userId } = v1EffectContext(context);
+        const result = await runEffect(
+          { runtime, request, requestId, userId },
+          subscribeById(userId, params.feedId),
+        );
         set.status = result.newSubscription ? 201 : 200;
-        logger.info("feeds.subscribe.by_id", {
-          userId,
-          feedId: result.feedId,
-          newSubscription: result.newSubscription,
-        });
         return result;
       },
       {
@@ -74,11 +64,14 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
     )
     .delete(
       "/feeds",
-      async (context) => {
-        const { body, db, logger, userId } = v1HandlerContext<{ feedIds: string[] }>(context);
-        const result = await bulkUnsubscribeFromFeeds(db, userId, body.feedIds);
-        logger.info("feeds.unsubscribe.bulk", { userId, removedCount: result.removedCount });
-        return result;
+      (context) => {
+        const { body, request, requestId, userId } = v1EffectContext<{ feedIds: string[] }>(
+          context,
+        );
+        return runEffect(
+          { runtime, request, requestId, userId },
+          bulkUnsubscribeFromFeeds(userId, body.feedIds),
+        );
       },
       {
         body: dto.unsubscribeBulkBody,
@@ -89,18 +82,15 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
     )
     .patch(
       "/feeds/folder",
-      async (context) => {
-        const { body, db, logger, userId } = v1HandlerContext<{
+      (context) => {
+        const { body, request, requestId, userId } = v1EffectContext<{
           feedIds: string[];
           folderId: string | null;
         }>(context);
-        const result = await bulkMoveFeedsToFolder(db, userId, body.feedIds, body.folderId);
-        logger.info("feeds.folder.bulk_move", {
-          userId,
-          folderId: body.folderId,
-          updatedCount: result.updatedCount,
-        });
-        return result;
+        return runEffect(
+          { runtime, request, requestId, userId },
+          bulkMoveFeedsToFolder(userId, body.feedIds, body.folderId),
+        );
       },
       {
         body: dto.moveFeedsBulkBody,
@@ -113,8 +103,11 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
       "/feeds",
       async (context) => {
         // Refresh contract: read endpoints must be side-effect free.
-        const { db, userId } = v1HandlerContext(context);
-        const items = await listSubscribedFeeds(db, userId);
+        const { request, requestId, userId } = v1EffectContext(context);
+        const items = await runEffect(
+          { runtime, request, requestId, userId },
+          listSubscribedFeeds(userId),
+        );
         return { items };
       },
       {
@@ -125,16 +118,13 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
     )
     .get(
       "/feeds/:feedId",
-      async (context) => {
+      (context) => {
         // Refresh state is surfaced from persisted feed row fields, never guessed in API/UI.
-        const { db, logger, params, userId } = v1HandlerContext(context);
-        const detail = await getFeedDetailForUser(db, userId, params.feedId);
-        logger.info("feeds.detail", {
-          userId,
-          feedId: params.feedId,
-          isSubscribed: detail.isSubscribed,
-        });
-        return detail;
+        const { params, request, requestId, userId } = v1EffectContext(context);
+        return runEffect(
+          { runtime, request, requestId, userId },
+          getFeedDetailForUser(userId, params.feedId),
+        );
       },
       {
         params: t.Object({ feedId: uuidParam }),
@@ -145,15 +135,16 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
     )
     .put(
       "/feeds/:feedId",
-      async (context) => {
-        const { body, db, logger, params, userId } = v1HandlerContext<
+      (context) => {
+        const { body, params, request, requestId, userId } = v1EffectContext<
           { customTitle?: string | null; isPinned?: boolean },
           Record<string, unknown>,
           { feedId: string }
         >(context);
-        const result = await updateFeedSubscriptionSettings(db, userId, params.feedId, body);
-        logger.info("feeds.subscription.updated", { userId, feedId: params.feedId });
-        return result;
+        return runEffect(
+          { runtime, request, requestId, userId },
+          updateFeedSubscriptionSettings(userId, params.feedId, body),
+        );
       },
       {
         params: t.Object({ feedId: uuidParam }),
@@ -165,11 +156,12 @@ export function registerFeedSubscriptionRoutes(app: Elysia) {
     )
     .delete(
       "/feeds/:feedId",
-      async (context) => {
-        const { db, logger, params, userId } = v1HandlerContext(context);
-        const result = await unsubscribeFromFeed(db, userId, params.feedId);
-        logger.info("feeds.unsubscribe", { userId, feedId: params.feedId });
-        return result;
+      (context) => {
+        const { params, request, requestId, userId } = v1EffectContext(context);
+        return runEffect(
+          { runtime, request, requestId, userId },
+          unsubscribeFromFeed(userId, params.feedId),
+        );
       },
       {
         params: t.Object({ feedId: uuidParam }),

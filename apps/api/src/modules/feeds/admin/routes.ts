@@ -1,26 +1,27 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
-import { v1HandlerContext } from "@shared/http/v1/context";
+import { runEffect } from "@shared/http/effect/bridge";
+import { v1EffectContext } from "@shared/http/v1/context";
 import { uuidParam } from "@shared/http/v1/params";
-import { assertFeedAdminUser } from "./guard";
+import type { FeedsRuntime } from "../runtime";
 import { adminDeleteGlobalFeed, adminUpdateGlobalFeed } from "./operations";
 import type { AdminUpdateGlobalFeedBody } from "../types";
 import * as dto from "../schemas";
 
-export function registerFeedAdminRoutes(app: Elysia) {
+export function registerFeedAdminRoutes(app: Elysia, runtime: FeedsRuntime) {
   return app
     .put(
       "/feeds/:feedId/admin",
-      async (context) => {
-        const { body, db, logger, params, userId } = v1HandlerContext<
+      (context) => {
+        const { body, params, request, requestId, userId } = v1EffectContext<
           AdminUpdateGlobalFeedBody,
           Record<string, unknown>,
           { feedId: string }
         >(context);
-        assertFeedAdminUser(userId, context.request.headers);
-        const detail = await adminUpdateGlobalFeed(db, params.feedId, body, logger);
-        logger.info("feeds.admin.updated", { userId, feedId: params.feedId });
-        return detail;
+        return runEffect(
+          { runtime, request, requestId, userId },
+          adminUpdateGlobalFeed(userId, request.headers, params.feedId, body),
+        );
       },
       {
         params: t.Object({ feedId: uuidParam }),
@@ -32,12 +33,12 @@ export function registerFeedAdminRoutes(app: Elysia) {
     )
     .delete(
       "/feeds/:feedId/admin",
-      async (context) => {
-        const { db, logger, params, userId } = v1HandlerContext(context);
-        assertFeedAdminUser(userId, context.request.headers);
-        await adminDeleteGlobalFeed(db, params.feedId, logger);
-        logger.info("feeds.admin.deleted", { userId, feedId: params.feedId });
-        return { message: "Feed deleted" };
+      (context) => {
+        const { params, request, requestId, userId } = v1EffectContext(context);
+        return runEffect(
+          { runtime, request, requestId, userId },
+          adminDeleteGlobalFeed(userId, request.headers, params.feedId),
+        );
       },
       {
         params: t.Object({ feedId: uuidParam }),

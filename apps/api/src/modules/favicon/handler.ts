@@ -1,11 +1,12 @@
+import { Clock, Effect } from "effect";
 import {
   createDrizzleFaviconHostStore,
   parseFaviconOrigin,
-  resolvePersistedFaviconHost,
-  tryFetchImageIfHostSafe,
-  type FaviconDatabase,
   type FaviconHostStore,
 } from "@kyomi/ingest/favicon";
+import { Db } from "@adapters/db/service";
+import { DatabaseError, unexpected } from "@shared/effect/errors";
+import { FaviconResolver } from "./service";
 
 const FAVICON_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7;
 const FAVICON_CACHE_STALE_SECONDS = 60 * 60 * 24 * 30;
@@ -29,32 +30,46 @@ function faviconMissHeaders() {
   };
 }
 
-async function fetchResolvedFavicon(
+const missResponse = () => new Response(null, { status: 404, headers: faviconMissHeaders() });
+
+const useStore = <A>(operation: string, run: () => Promise<A>) =>
+  Effect.tryPromise({
+    try: run,
+    catch: (cause) => new DatabaseError({ operation, cause }),
+  });
+
+const fetchResolvedFavicon = Effect.fn("favicon.fetch_resolved")(function* (
   store: FaviconHostStore,
   origin: string,
   faviconUrl: string,
-): Promise<FaviconFetchResult> {
-  const upstream = await tryFetchImageIfHostSafe(faviconUrl);
+) {
+  const resolver = yield* FaviconResolver;
+  const upstream = yield* resolver.fetchImage(faviconUrl);
   if (!upstream) {
-    return { kind: "miss", terminal: false };
+    return { kind: "miss", terminal: false } satisfies FaviconFetchResult;
   }
 
   const contentType = upstream.headers.get("content-type") ?? "image/x-icon";
-  const buffer = await upstream.arrayBuffer();
+  const buffer = yield* Effect.tryPromise({
+    try: () => upstream.arrayBuffer(),
+    catch: unexpected,
+  });
   if (buffer.byteLength > FAVICON_MAX_RESPONSE_BYTES) {
-    await store.writeMiss({
-      origin,
-      hostname: new URL(origin).hostname,
-      errorCode: "response_too_large",
-      expiresAt: new Date(Date.now() + FAVICON_MISS_CACHE_MAX_AGE_SECONDS * 1000),
-    });
-    return { kind: "miss", terminal: true };
+    const now = yield* Clock.currentTimeMillis;
+    yield* useStore("favicon.write_miss", () =>
+      store.writeMiss({
+        origin,
+        hostname: new URL(origin).hostname,
+        errorCode: "response_too_large",
+        expiresAt: new Date(now + FAVICON_MISS_CACHE_MAX_AGE_SECONDS * 1000),
+      }),
+    );
+    return { kind: "miss", terminal: true } satisfies FaviconFetchResult;
   }
 
-  await store.updateResponseMetadata({
-    origin,
-    contentType,
-  });
+  yield* useStore("favicon.update_metadata", () =>
+    store.updateResponseMetadata({ origin, contentType }),
+  );
 
   return {
     kind: "hit",
@@ -62,20 +77,20 @@ async function fetchResolvedFavicon(
       status: 200,
       headers: faviconHitHeaders(contentType),
     }),
-  };
-}
+  } satisfies FaviconFetchResult;
+});
 
-export async function handleFaviconRequest(
-  database: FaviconDatabase,
-  request: Request,
-): Promise<Response> {
-  return handleFaviconRequestWithStore(createDrizzleFaviconHostStore(database), request);
-}
+/** `GET /api/favicon?domain=`: the cached favicon image for a site, backed by the `Db` host cache. */
+export const handleFaviconRequest = (request: Request) =>
+  Effect.flatMap(Db, (db) =>
+    handleFaviconRequestWithStore(createDrizzleFaviconHostStore(db.client), request),
+  );
 
-export async function handleFaviconRequestWithStore(
+export const handleFaviconRequestWithStore = Effect.fn("favicon.handle")(function* (
   store: FaviconHostStore,
   request: Request,
-): Promise<Response> {
+) {
+  const resolver = yield* FaviconResolver;
   const requestUrl = new URL(request.url);
   const rawDomain = requestUrl.searchParams.get("domain") ?? "";
   const parsed = parseFaviconOrigin(rawDomain);
@@ -83,43 +98,31 @@ export async function handleFaviconRequestWithStore(
     return new Response("Invalid domain", { status: 400 });
   }
 
-  const resolved = await resolvePersistedFaviconHost(store, parsed.origin);
+  const resolved = yield* resolver.resolveHost(store, parsed.origin);
   if (!resolved) {
     return new Response("Invalid domain", { status: 400 });
   }
   if (resolved.kind === "miss") {
-    return new Response(null, {
-      status: 404,
-      headers: faviconMissHeaders(),
-    });
+    return missResponse();
   }
 
-  const cachedResponse = await fetchResolvedFavicon(store, resolved.origin, resolved.url);
+  const cachedResponse = yield* fetchResolvedFavicon(store, resolved.origin, resolved.url);
   if (cachedResponse.kind === "hit") {
     return cachedResponse.response;
   }
   if (cachedResponse.terminal) {
-    return new Response(null, {
-      status: 404,
-      headers: faviconMissHeaders(),
-    });
+    return missResponse();
   }
 
-  const refreshed = await resolvePersistedFaviconHost(store, parsed.origin, { forceRefresh: true });
+  const refreshed = yield* resolver.resolveHost(store, parsed.origin, { forceRefresh: true });
   if (!refreshed || refreshed.kind === "miss") {
-    return new Response(null, {
-      status: 404,
-      headers: faviconMissHeaders(),
-    });
+    return missResponse();
   }
 
-  const refreshedResponse = await fetchResolvedFavicon(store, refreshed.origin, refreshed.url);
+  const refreshedResponse = yield* fetchResolvedFavicon(store, refreshed.origin, refreshed.url);
   if (refreshedResponse.kind === "hit") {
     return refreshedResponse.response;
   }
 
-  return new Response(null, {
-    status: 404,
-    headers: faviconMissHeaders(),
-  });
-}
+  return missResponse();
+});

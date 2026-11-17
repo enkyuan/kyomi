@@ -1,24 +1,30 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
-import { v1HandlerContext } from "@shared/http/v1/context";
+import { runEffect } from "@shared/http/effect/bridge";
+import { v1EffectContext } from "@shared/http/v1/context";
 import { uuidParam } from "@shared/http/v1/params";
 import { listFeedRefreshStatusesForUser } from "../read/queries";
-import { assertUserSubscribedToFeed } from "../subscription/mutations";
 import * as dto from "../schemas";
-import { enqueueBatchFeedRefresh, enqueueFeedRefresh } from "./enqueue";
-import { listRefreshableFeedIdsForUser } from "./selection";
+import type { FeedsRuntime } from "../runtime";
+import { refreshFeedForUser, refreshFeedsForUser } from "./operations";
 
-export function registerFeedRefreshRoutes(app: Elysia) {
+export function registerFeedRefreshRoutes(app: Elysia, runtime: FeedsRuntime) {
   return app
     .get(
       "/feeds/refresh-status",
       async (context) => {
-        const { db, query, userId } = v1HandlerContext<unknown, { folder_id?: string }>(context);
+        const { query, request, requestId, userId } = v1EffectContext<
+          unknown,
+          { folder_id?: string }
+        >(context);
         const folderId =
           typeof query.folder_id === "string" && query.folder_id.trim().length > 0
             ? query.folder_id.trim()
             : undefined;
-        const items = await listFeedRefreshStatusesForUser(db, userId, folderId);
+        const items = await runEffect(
+          { runtime, request, requestId, userId },
+          listFeedRefreshStatusesForUser(userId, folderId),
+        );
         return { items };
       },
       {
@@ -30,34 +36,26 @@ export function registerFeedRefreshRoutes(app: Elysia) {
     .post(
       "/feeds/:feedId/refresh",
       async (context) => {
-        // Refresh is an explicit action and always flows through queue -> worker -> ingestion.
-        const { db, logger, set, userId, params } = v1HandlerContext(context);
-        await assertUserSubscribedToFeed(db, userId, params.feedId);
-        const { jobId } = await enqueueFeedRefresh(db, params.feedId, userId, "manual", logger);
+        const { params, request, requestId, set, userId } = v1EffectContext(context);
+        const accepted = await runEffect(
+          { runtime, request, requestId, userId },
+          refreshFeedForUser(userId, params.feedId),
+        );
         set.status = 202;
-        return {
-          accepted: true as const,
-          jobId,
-          type: "feed.refresh" as const,
-        };
+        return accepted;
       },
       { params: t.Object({ feedId: uuidParam }) },
     )
     .post(
       "/feeds/refresh",
       async (context) => {
-        const { db, logger, set, userId, body } = v1HandlerContext<{ folderId?: string }>(context);
-        const { folderId } = body || {};
-
-        const feedIdsToRefresh = await listRefreshableFeedIdsForUser(db, userId, folderId);
-        const result = await enqueueBatchFeedRefresh(
-          db,
-          feedIdsToRefresh,
-          userId,
-          "manual",
-          logger,
+        const { body, request, requestId, set, userId } = v1EffectContext<{
+          folderId?: string;
+        }>(context);
+        const result = await runEffect(
+          { runtime, request, requestId, userId },
+          refreshFeedsForUser(userId, (body || {}).folderId),
         );
-
         set.status = 202;
         return result;
       },

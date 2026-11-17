@@ -1,28 +1,52 @@
 import { describe, expect, mock, test } from "bun:test";
-import { getUserProfileById, updateUserEmailById } from "@modules/users/profile/account";
+import { Effect, Layer } from "effect";
+import { TestClock } from "effect/testing";
+import { getUserProfile, updateUserEmail } from "@modules/users/profile/account";
+import { CurrentUser } from "@shared/effect/request";
+import { fakeDb } from "@api-tests/support/layers";
+
+/** Run as `user_1` against a fake client, with the clock at 2026-01-03. */
+function run<A, E, R>(effect: Effect.Effect<A, E, R>, client: Parameters<typeof fakeDb>[0]) {
+  const layer = Layer.mergeAll(
+    fakeDb(client),
+    TestClock.layer(),
+    Layer.succeed(CurrentUser, { userId: "user_1" }),
+  );
+  return Effect.runPromise(
+    Effect.gen(function* () {
+      yield* TestClock.setTime(Date.parse("2026-01-03T00:00:00.000Z"));
+      return yield* effect;
+    }).pipe(Effect.provide(layer)) as Effect.Effect<A, E>,
+  );
+}
+
+const failure = <A, E>(effect: Effect.Effect<A, E, never>) =>
+  Effect.runPromise(Effect.flip(effect));
+
+const profileRow = (overrides: Record<string, unknown> = {}) => ({
+  id: "user_1",
+  name: "Test",
+  email: "t@example.com",
+  emailVerified: true,
+  image: null as string | null,
+  createdAt: new Date("2026-01-01T00:00:00.000Z"),
+  updatedAt: new Date("2026-01-02T00:00:00.000Z"),
+  ...overrides,
+});
+
+function updateReturning(rows: unknown[]) {
+  const set = mock((_values: Record<string, unknown>) => ({
+    where: () => ({ returning: () => Promise.resolve(rows) }),
+  }));
+  return { update: () => ({ set }), set };
+}
 
 describe("users profile", () => {
-  test("getUserProfileById returns DTO when user exists", async () => {
-    const createdAt = new Date("2026-01-01T00:00:00.000Z");
-    const updatedAt = new Date("2026-01-02T00:00:00.000Z");
-    const findFirst = mock(() =>
-      Promise.resolve({
-        id: "user_1",
-        name: "Test",
-        email: "t@example.com",
-        emailVerified: true,
-        image: null as string | null,
-        createdAt,
-        updatedAt,
-      }),
-    );
-    const fakeDb = {
-      query: {
-        users: { findFirst },
-      },
-    } as unknown as Parameters<typeof getUserProfileById>[0];
+  test("getUserProfile returns the DTO when the user exists", async () => {
+    const findFirst = mock(() => Promise.resolve(profileRow()));
 
-    const out = await getUserProfileById(fakeDb, "user_1");
+    const out = await run(getUserProfile, { query: { users: { findFirst } } });
+
     expect(out).toEqual({
       id: "user_1",
       name: "Test",
@@ -35,126 +59,91 @@ describe("users profile", () => {
     expect(findFirst).toHaveBeenCalled();
   });
 
-  test("getUserProfileById returns null when user missing", async () => {
-    const findFirst = mock(() => Promise.resolve(undefined));
-    const fakeDb = {
-      query: {
-        users: { findFirst },
-      },
-    } as unknown as Parameters<typeof getUserProfileById>[0];
+  test("getUserProfile fails with USER_NOT_FOUND when the user is missing", async () => {
+    const findFirst = () => Promise.resolve(undefined);
 
-    const out = await getUserProfileById(fakeDb, "missing");
-    expect(out).toBeNull();
-  });
-
-  test("updateUserEmailById updates and returns normalized email", async () => {
-    const createdAt = new Date("2026-01-01T00:00:00.000Z");
-    const updatedAt = new Date("2026-01-03T00:00:00.000Z");
-    const findFirst = mock(() => Promise.resolve(undefined));
-    const returning = mock(() =>
-      Promise.resolve([
-        {
-          id: "user_1",
-          name: "Test",
-          email: "new@example.com",
-          emailVerified: true,
-          image: null as string | null,
-          createdAt,
-          updatedAt,
-        },
-      ]),
+    const error = await failure(
+      getUserProfile.pipe(
+        Effect.provide(
+          Layer.mergeAll(
+            fakeDb({ query: { users: { findFirst } } }),
+            Layer.succeed(CurrentUser, { userId: "missing" }),
+          ),
+        ),
+      ),
     );
-    const update = mock(() => ({
-      set: mock(() => ({
-        where: mock(() => ({
-          returning,
-        })),
-      })),
-    }));
-    const fakeDb = {
-      query: {
-        users: { findFirst },
-      },
-      update,
-    } as unknown as Parameters<typeof updateUserEmailById>[0];
 
-    const out = await updateUserEmailById(fakeDb, "user_1", "  New@Example.com ");
-    expect(out).toEqual({
-      id: "user_1",
-      name: "Test",
+    expect(error).toMatchObject({ _tag: "NotFound", code: "USER_NOT_FOUND" });
+  });
+
+  test("updateUserEmail normalizes the address and stamps the clock time", async () => {
+    const findFirst = mock(() => Promise.resolve(undefined));
+    const { update, set } = updateReturning([
+      profileRow({ email: "new@example.com", updatedAt: new Date("2026-01-03T00:00:00.000Z") }),
+    ]);
+
+    const out = await run(updateUserEmail("  New@Example.com "), {
+      query: { users: { findFirst } },
+      update,
+    });
+
+    expect(set.mock.calls[0]?.[0]).toEqual({
       email: "new@example.com",
-      emailVerified: true,
-      image: null,
-      createdAt: "2026-01-01T00:00:00.000Z",
-      updatedAt: "2026-01-03T00:00:00.000Z",
+      updatedAt: new Date("2026-01-03T00:00:00.000Z"),
     });
+    expect(out).toMatchObject({ email: "new@example.com", updatedAt: "2026-01-03T00:00:00.000Z" });
     expect(findFirst).toHaveBeenCalled();
-    expect(update).toHaveBeenCalled();
   });
 
-  test("updateUserEmailById rejects invalid email", async () => {
-    const findFirst = mock(() => Promise.resolve(undefined));
-    const update = mock(() => ({
-      set: mock(() => ({
-        where: mock(() => ({
-          returning: mock(() => Promise.resolve([])),
-        })),
-      })),
-    }));
-    const fakeDb = {
-      query: {
-        users: { findFirst },
-      },
-      update,
-    } as unknown as Parameters<typeof updateUserEmailById>[0];
+  test("updateUserEmail rejects an invalid address before any query", async () => {
+    const update = mock();
 
-    await expect(updateUserEmailById(fakeDb, "user_1", "not-an-email")).rejects.toMatchObject({
-      status: 400,
-      code: "USER_EMAIL_INVALID",
-    });
+    const error = await failure(
+      updateUserEmail("not-an-email").pipe(
+        Effect.provide(
+          Layer.mergeAll(fakeDb({ update }), Layer.succeed(CurrentUser, { userId: "user_1" })),
+        ),
+      ),
+    );
+
+    expect(error).toMatchObject({ _tag: "BadRequest", code: "USER_EMAIL_INVALID" });
+    expect(update).not.toHaveBeenCalled();
   });
 
-  test("updateUserEmailById rejects conflicting email", async () => {
-    const findFirst = mock(() => Promise.resolve({ id: "user_2" }));
-    const update = mock(() => ({
-      set: mock(() => ({
-        where: mock(() => ({
-          returning: mock(() => Promise.resolve([])),
-        })),
-      })),
-    }));
-    const fakeDb = {
-      query: {
-        users: { findFirst },
-      },
-      update,
-    } as unknown as Parameters<typeof updateUserEmailById>[0];
+  test("updateUserEmail rejects an address another user holds", async () => {
+    const findFirst = () => Promise.resolve({ id: "user_2" });
+    const update = mock();
 
-    await expect(updateUserEmailById(fakeDb, "user_1", "user@example.com")).rejects.toMatchObject({
-      status: 409,
-      code: "USER_EMAIL_CONFLICT",
-    });
+    const error = await failure(
+      updateUserEmail("taken@example.com").pipe(
+        Effect.provide(
+          Layer.mergeAll(
+            fakeDb({ query: { users: { findFirst } }, update }),
+            Layer.succeed(CurrentUser, { userId: "user_1" }),
+          ),
+        ),
+      ),
+    );
+
+    expect(error).toMatchObject({ _tag: "Conflict", code: "USER_EMAIL_CONFLICT" });
+    expect(update).not.toHaveBeenCalled();
   });
 
-  test("updateUserEmailById rejects missing user", async () => {
-    const findFirst = mock(() => Promise.resolve(undefined));
-    const update = mock(() => ({
-      set: mock(() => ({
-        where: mock(() => ({
-          returning: mock(() => Promise.resolve([])),
-        })),
-      })),
-    }));
-    const fakeDb = {
-      query: {
-        users: { findFirst },
-      },
-      update,
-    } as unknown as Parameters<typeof updateUserEmailById>[0];
+  test("updateUserEmail fails with USER_NOT_FOUND when the update matches no row", async () => {
+    const findFirst = () => Promise.resolve(undefined);
+    const { update } = updateReturning([]);
 
-    await expect(updateUserEmailById(fakeDb, "user_1", "user@example.com")).rejects.toMatchObject({
-      status: 404,
-      code: "USER_NOT_FOUND",
-    });
+    const error = await failure(
+      updateUserEmail("user@example.com").pipe(
+        Effect.provide(
+          Layer.mergeAll(
+            fakeDb({ query: { users: { findFirst } }, update }),
+            Layer.succeed(CurrentUser, { userId: "user_1" }),
+          ),
+        ),
+      ),
+    );
+
+    expect(error).toMatchObject({ _tag: "NotFound", code: "USER_NOT_FOUND" });
   });
 });

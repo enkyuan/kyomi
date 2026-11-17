@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { Layer, ManagedRuntime } from "effect";
 import { healthPlugin } from "@modules/health/routes";
-import { registerErrorHandlers } from "@app/setup/errors";
-import { fakeDb, fakeRedis, recordingLogger } from "@api-tests/support/layers";
+import { fakeDb, fakeRedis, recordingLogger, testConfig } from "@api-tests/support/layers";
+import { registerTestErrorHandlers } from "@api-tests/support/elysia";
 
 const runtimes: Array<{ dispose: () => Promise<void> }> = [];
 
@@ -15,11 +15,12 @@ function appWith(options: {
       fakeDb(options.db ?? { execute: async () => undefined }),
       fakeRedis(options.redis ?? { xlen: async () => 0, xpending: async () => [0] }),
       recordingLogger().layer,
+      testConfig(),
     ),
   );
   runtimes.push(runtime);
   const app = healthPlugin(runtime);
-  registerErrorHandlers(app as unknown as Parameters<typeof registerErrorHandlers>[0]);
+  registerTestErrorHandlers(app);
   return app;
 }
 

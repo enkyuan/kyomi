@@ -1,10 +1,14 @@
-import { assertHttpOrHttpsUrl } from "./normalize";
+import { Data, Effect, Stream } from "effect";
+import type { HttpClient, HttpClientResponse } from "effect/http";
 import { BlockedOutboundUrlError } from "@shared/net/outbound";
 import {
-  TooManyRedirectsError,
-  fetchWithSafeRedirects,
-  readResponseBodyWithByteLimit,
-} from "@shared/net/fetch";
+  safeFetch,
+  type SafeFetchError,
+  type TooManyRedirects,
+  type UnsafeOutboundUrl,
+} from "@shared/net/safe-fetch";
+import type { UpstreamError } from "@shared/effect/errors";
+import { assertHttpOrHttpsUrl } from "./normalize";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_BYTES = 2 * 1024 * 1024;
@@ -25,91 +29,143 @@ export type FetchFeedErrorCode =
   | "RESPONSE_TOO_LARGE"
   | "BLOCKED_URL";
 
-export type FetchFeedDocumentResult =
-  | { ok: true; finalUrl: string; body: string; contentType: string }
-  | { ok: false; error: string; code: FetchFeedErrorCode; status?: number };
+export type FetchedFeedDocument = {
+  finalUrl: string;
+  body: string;
+  contentType: string;
+};
 
-const TLS_CERT_ERROR_PATTERNS = [
-  /unable to verify the first certificate/i,
-  /unable to get local issuer certificate/i,
-  /self[- ]signed certificate/i,
-  /certificate has expired/i,
-  /cert_.*invalid/i,
-] as const;
+/** The feed document could not be fetched. `code` says why; `status` is set for `HTTP_ERROR`. */
+export class FeedFetchFailed extends Data.TaggedError("FeedFetchFailed")<{
+  readonly code: FetchFeedErrorCode;
+  readonly message: string;
+  readonly status?: number;
+}> {}
 
-function isRedirectStatus(status: number): boolean {
-  return status === 301 || status === 302 || status === 303 || status === 307 || status === 308;
+/** TLS verification failures, by the error `code` the runtime sets (never by message text). */
+const TLS_CERT_ERROR_CODES = new Set([
+  "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+  "UNABLE_TO_GET_ISSUER_CERT",
+  "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+  "DEPTH_ZERO_SELF_SIGNED_CERT",
+  "SELF_SIGNED_CERT_IN_CHAIN",
+  "CERT_HAS_EXPIRED",
+  "ERR_TLS_CERT_ALTNAME_INVALID",
+]);
+
+/** The error and the causes beneath it, outermost first (`HttpClientError` hides its in `reason`). */
+function* errorChain(error: unknown): Generator<Error> {
+  let current: unknown = error;
+  for (let depth = 0; current instanceof Error && depth < 8; depth += 1) {
+    yield current;
+    const wrapped = current as { cause?: unknown; reason?: { cause?: unknown } };
+    current = wrapped.cause ?? wrapped.reason?.cause;
+  }
 }
 
-function fetchFailed(
-  code: FetchFeedErrorCode,
-  error: string,
-  status?: number,
-): Extract<FetchFeedDocumentResult, { ok: false }> {
-  return { ok: false, error, code, status };
+function hasTlsCertificateCode(error: unknown): boolean {
+  for (const link of errorChain(error)) {
+    const code = (link as { code?: unknown }).code;
+    if (typeof code === "string" && TLS_CERT_ERROR_CODES.has(code)) {
+      return true;
+    }
+  }
+  return false;
 }
 
-function classifyFetchError(error: unknown): Extract<FetchFeedDocumentResult, { ok: false }> {
-  if (error instanceof BlockedOutboundUrlError) {
-    return fetchFailed("BLOCKED_URL", error.message);
+/** The deepest message in the chain: the runtime's own words, not an Effect wrapper's. */
+function rootMessage(error: unknown): string {
+  let message = "fetch failed";
+  for (const link of errorChain(error)) {
+    if (link.message) {
+      message = link.message;
+    }
   }
-
-  if (error instanceof TooManyRedirectsError) {
-    return fetchFailed("TOO_MANY_REDIRECTS", "Too many redirects");
-  }
-
-  if (error instanceof Error && error.name === "AbortError") {
-    return fetchFailed("FETCH_TIMEOUT", "Feed fetch timed out");
-  }
-
-  if (
-    error instanceof Error &&
-    TLS_CERT_ERROR_PATTERNS.some((pattern) => pattern.test(error.message))
-  ) {
-    return fetchFailed("TLS_CERTIFICATE_FAILED", error.message);
-  }
-
-  const message = error instanceof Error ? error.message : "fetch failed";
-  return fetchFailed("FETCH_FAILED", message);
+  return message;
 }
 
-export async function fetchFeedDocument(
+function classifySafeFetchError(
+  error: UnsafeOutboundUrl | TooManyRedirects | UpstreamError,
+): FeedFetchFailed {
+  switch (error._tag) {
+    case "UnsafeOutboundUrl":
+      return error.cause instanceof BlockedOutboundUrlError
+        ? new FeedFetchFailed({ code: "BLOCKED_URL", message: error.message })
+        : new FeedFetchFailed({ code: "FETCH_FAILED", message: error.message });
+    case "TooManyRedirects":
+      return new FeedFetchFailed({ code: "TOO_MANY_REDIRECTS", message: "Too many redirects" });
+    case "UpstreamError":
+      return new FeedFetchFailed({
+        code: hasTlsCertificateCode(error) ? "TLS_CERTIFICATE_FAILED" : "FETCH_FAILED",
+        message: rootMessage(error),
+      });
+  }
+}
+
+/** Reads the body as UTF-8 text, failing as soon as it exceeds `MAX_BYTES` (declared or streamed). */
+const readBody = Effect.fnUntraced(function* (response: HttpClientResponse.HttpClientResponse) {
+  const tooLarge = () =>
+    new FeedFetchFailed({ code: "RESPONSE_TOO_LARGE", message: "Feed response too large" });
+  const declared = response.headers["content-length"];
+  if (declared !== undefined && /^\d+$/.test(declared) && Number(declared) > MAX_BYTES) {
+    return yield* tooLarge();
+  }
+
+  const chunks: Uint8Array[] = [];
+  let received = 0;
+  yield* Stream.runForEach(response.stream, (chunk) => {
+    received += chunk.byteLength;
+    if (received > MAX_BYTES) {
+      return Effect.fail(tooLarge());
+    }
+    chunks.push(chunk);
+    return Effect.void;
+  }).pipe(
+    Effect.catchTag("HttpClientError", (error) =>
+      Effect.fail(new FeedFetchFailed({ code: "FETCH_FAILED", message: rootMessage(error) })),
+    ),
+  );
+  return new TextDecoder("utf-8", { fatal: false }).decode(Buffer.concat(chunks));
+});
+
+/**
+ * Fetches a feed or HTML document from an untrusted URL: every hop is checked against the
+ * private-network policy, with a redirect cap, a size cap and one deadline that covers headers and
+ * body. Closing the scope (success, failure, timeout or interruption) aborts the request.
+ */
+export const fetchFeedDocument = Effect.fn("discover.fetchFeedDocument")(function* (
   url: string,
   options?: { ignoreTlsError?: boolean },
-): Promise<FetchFeedDocumentResult> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
-  try {
-    const init: RequestInit & { tls?: { rejectUnauthorized: boolean } } = {
-      signal: controller.signal,
+): Effect.fn.Return<FetchedFeedDocument, FeedFetchFailed, HttpClient.HttpClient> {
+  const target = yield* Effect.try({
+    try: () => assertHttpOrHttpsUrl(url),
+    catch: (cause) =>
+      new FeedFetchFailed({
+        code: "FETCH_FAILED",
+        message: cause instanceof Error ? cause.message : "fetch failed",
+      }),
+  });
+
+  return yield* Effect.gen(function* () {
+    const { response, finalUrl } = yield* safeFetch(target, {
       headers: FETCH_HEADERS,
-    };
-    if (options?.ignoreTlsError) {
-      init.tls = { rejectUnauthorized: false };
-    }
-
-    const { response, finalUrl } = await fetchWithSafeRedirects(assertHttpOrHttpsUrl(url), init, {
       maxRedirects: MAX_REDIRECTS,
-    });
-    if (!response.ok) {
-      response.body?.cancel().catch(() => undefined);
-      return fetchFailed("HTTP_ERROR", `HTTP ${response.status}`, response.status);
+      insecureTls: options?.ignoreTlsError === true,
+    }).pipe(Effect.mapError((error: SafeFetchError) => classifySafeFetchError(error)));
+    if (response.status < 200 || response.status >= 300) {
+      return yield* new FeedFetchFailed({
+        code: "HTTP_ERROR",
+        message: `HTTP ${response.status}`,
+        status: response.status,
+      });
     }
-
-    const body = await readResponseBodyWithByteLimit(response, MAX_BYTES);
-    if (!body.ok) {
-      return fetchFailed("RESPONSE_TOO_LARGE", "Feed response too large");
-    }
-
-    return {
-      ok: true,
-      finalUrl: finalUrl.href,
-      body: body.body,
-      contentType: response.headers.get("content-type") ?? "",
-    };
-  } catch (error) {
-    return classifyFetchError(error);
-  } finally {
-    clearTimeout(timer);
-  }
-}
+    const body = yield* readBody(response);
+    return { finalUrl: finalUrl.href, body, contentType: response.headers["content-type"] ?? "" };
+  }).pipe(
+    Effect.scoped,
+    Effect.timeout(FETCH_TIMEOUT_MS),
+    Effect.catchTag("TimeoutError", () =>
+      Effect.fail(new FeedFetchFailed({ code: "FETCH_TIMEOUT", message: "Feed fetch timed out" })),
+    ),
+  );
+});

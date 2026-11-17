@@ -9,8 +9,8 @@ import { AppLogger } from "@adapters/logger/service";
 import { JobQueue } from "@adapters/queue/service";
 import { Redis } from "@adapters/redis/service";
 import { CurrentUser } from "@shared/effect/request";
-import { toPublicError, unexpected } from "@shared/effect/errors";
-import { assertFeedAdminUser } from "@modules/feeds/admin/guard";
+import { unexpected } from "@shared/effect/errors";
+import { requireFeedAdmin as requireFeedAdminUser } from "@modules/feeds/admin/guard";
 import type { DeadLetterItem } from "./types";
 
 type StreamRow = [id: string, fields: string[]];
@@ -19,10 +19,7 @@ type StreamRow = [id: string, fields: string[]];
 export const requireFeedAdmin = (headers: Headers) =>
   Effect.gen(function* () {
     const { userId } = yield* CurrentUser;
-    yield* Effect.try({
-      try: () => assertFeedAdminUser(userId, headers),
-      catch: toPublicError,
-    });
+    yield* requireFeedAdminUser(userId, headers);
   });
 
 function toDeadLetterItem([id, fields]: StreamRow): DeadLetterItem {

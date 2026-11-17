@@ -4,13 +4,14 @@ import { t } from "elysia";
 import type { AppLogger } from "@adapters/logger/service";
 import type { JobQueue } from "@adapters/queue/service";
 import type { Redis } from "@adapters/redis/service";
+import type { AppConfig } from "@config/env/service";
 import type { CurrentUser, RequestContext } from "@shared/effect/request";
 import { runEffect } from "@shared/http/effect/bridge";
-import { v1HandlerContext } from "@shared/http/v1/context";
+import { v1EffectContext } from "@shared/http/v1/context";
 import { listDeadLetters, replayDeadLetters, requireFeedAdmin } from "./operations";
 import { deadLetterItem, deadLetterListQuery, replayBody, replayResponse } from "./schemas";
 
-type QueueServices = Redis | JobQueue | AppLogger;
+type QueueServices = Redis | JobQueue | AppLogger | AppConfig;
 type QueueRuntime = ManagedRuntime.ManagedRuntime<QueueServices, unknown>;
 
 export function registerQueueRoutes(app: Elysia, runtime: QueueRuntime) {
@@ -19,8 +20,7 @@ export function registerQueueRoutes(app: Elysia, runtime: QueueRuntime) {
     context: unknown,
     effect: Effect.Effect<A, E, QueueServices | RequestContext | CurrentUser>,
   ) => {
-    const { userId } = v1HandlerContext(context);
-    const { request, requestId } = context as { request: Request; requestId: string };
+    const { request, requestId, userId } = v1EffectContext(context);
     return runEffect({ runtime, request, requestId, userId }, effect);
   };
 
@@ -28,7 +28,7 @@ export function registerQueueRoutes(app: Elysia, runtime: QueueRuntime) {
     .get(
       "/queue/dead-letter",
       (context) => {
-        const { query } = v1HandlerContext<unknown, { limit?: number }>(context);
+        const { query } = v1EffectContext<unknown, { limit?: number }>(context);
         const limit = Math.min(100, Math.max(1, Number(query.limit ?? 25) || 25));
         return run(
           context,
@@ -40,7 +40,7 @@ export function registerQueueRoutes(app: Elysia, runtime: QueueRuntime) {
     .post(
       "/queue/dead-letter/replay",
       (context) => {
-        const { body } = v1HandlerContext<{ ids: string[] }>(context);
+        const { body } = v1EffectContext<{ ids: string[] }>(context);
         return run(
           context,
           requireFeedAdmin(context.request.headers).pipe(

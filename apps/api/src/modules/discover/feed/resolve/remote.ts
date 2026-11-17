@@ -1,7 +1,9 @@
-import { AppError } from "@shared/errors/app";
-import { logger } from "@adapters/logger";
+import { Effect, Option, Result } from "effect";
+import type { HttpClient } from "effect/http";
 import { discoverFeedUrlFromHtml } from "@kyomi/ingest/ingestion";
-import { fetchFeedDocument, type FetchFeedDocumentResult } from "../fetch";
+import { AppLogger } from "@adapters/logger/service";
+import { BadRequest, GatewayTimeout, InternalError, Unprocessable } from "@shared/effect/errors";
+import { fetchFeedDocument, type FeedFetchFailed, type FetchedFeedDocument } from "../fetch";
 import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "../normalize";
 import { parseFeedMetadata, parseHtmlMetadataFallback } from "../parse";
 
@@ -17,6 +19,15 @@ export type ResolvedRemoteFeed = {
   link: string | null;
   iconUrl: string | null;
 };
+
+/** What `resolveRemoteFeed` can fail with; every case maps to a stable wire code. */
+export type ResolveFeedError = BadRequest | InternalError | Unprocessable | GatewayTimeout;
+
+type Resolution = Effect.Effect<
+  ResolvedRemoteFeed,
+  ResolveFeedError,
+  HttpClient.HttpClient | AppLogger
+>;
 
 type RemoteFeedResolutionContext = {
   submittedUrl: string;
@@ -37,132 +48,129 @@ function toHttpFallbackUrl(rawUrl: string): string | null {
   }
 }
 
-async function tryTlsRetryOrHttpFallback(
-  url: string,
-  visitedUrls: Set<string>,
-  context: RemoteFeedResolutionContext,
-): Promise<ResolvedRemoteFeed | null> {
-  logger.warn("discover.feed.tls_failed_retrying", { url });
-  return await resolveRemoteFeedFromUrl(url, visitedUrls, context, true);
+/** The base-site URL a `/feed` or `/rss` URL hangs off, or null when `url` is not of that shape. */
+function toBaseUrl(url: string): string | null {
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return null;
+  }
+  if (!/\/(feed|rss)\/?$/i.test(parsed.pathname)) {
+    return null;
+  }
+  parsed.pathname = parsed.pathname.replace(/\/(feed|rss)\/?$/i, "/");
+  return parsed.href;
 }
 
-async function tryHttpFallbackAfterTls(
+function tlsRetryOrHttpFallback(
   url: string,
   visitedUrls: Set<string>,
   context: RemoteFeedResolutionContext,
-): Promise<ResolvedRemoteFeed | null> {
+  ignoreTlsError: boolean,
+): Resolution | null {
+  if (!ignoreTlsError) {
+    return Effect.gen(function* () {
+      const log = yield* AppLogger;
+      yield* log.warn("discover.feed.tls_failed_retrying", { url });
+      return yield* resolveFromUrl(url, visitedUrls, context, true);
+    });
+  }
   const httpFallbackUrl = toHttpFallbackUrl(url);
-  if (!httpFallbackUrl) {
+  if (!httpFallbackUrl || visitedUrls.has(normalizeFeedUrl(httpFallbackUrl))) {
     return null;
   }
-  const normalizedFallbackUrl = normalizeFeedUrl(httpFallbackUrl);
-  if (visitedUrls.has(normalizedFallbackUrl)) {
-    return null;
-  }
-  return await resolveRemoteFeedFromUrl(httpFallbackUrl, visitedUrls, {
+  return resolveFromUrl(httpFallbackUrl, visitedUrls, {
     ...context,
     discoveredFromUrl: url,
     discoveryProvenance: "http_fallback",
   });
 }
 
-async function tryBaseUrlFallbackOn404(
+function baseUrlFallbackOn404(
   url: string,
   visitedUrls: Set<string>,
   ignoreTlsError: boolean,
   context: RemoteFeedResolutionContext,
-): Promise<ResolvedRemoteFeed | null> {
-  let parsedUrl: URL;
-  try {
-    parsedUrl = new URL(url);
-  } catch {
+): Resolution | null {
+  const baseUrl = toBaseUrl(url);
+  if (!baseUrl || visitedUrls.has(normalizeFeedUrl(baseUrl))) {
     return null;
   }
-
-  if (!parsedUrl.pathname.match(/\/(feed|rss)\/?$/i)) {
-    return null;
-  }
-
-  parsedUrl.pathname = parsedUrl.pathname.replace(/\/(feed|rss)\/?$/i, "/");
-  const baseUrl = parsedUrl.href;
-  const normalizedBaseUrl = normalizeFeedUrl(baseUrl);
-  if (visitedUrls.has(normalizedBaseUrl)) {
-    return null;
-  }
-
-  logger.warn("discover.feed.fallback_to_base_url", { url, baseUrl });
-  return await resolveRemoteFeedFromUrl(
-    baseUrl,
-    visitedUrls,
-    {
-      ...context,
-      discoveredFromUrl: url,
-      discoveryProvenance: "base_url_fallback",
-    },
-    ignoreTlsError,
-  );
+  return Effect.gen(function* () {
+    const log = yield* AppLogger;
+    yield* log.warn("discover.feed.fallback_to_base_url", { url, baseUrl });
+    return yield* resolveFromUrl(
+      baseUrl,
+      visitedUrls,
+      { ...context, discoveredFromUrl: url, discoveryProvenance: "base_url_fallback" },
+      ignoreTlsError,
+    );
+  });
 }
 
-async function handleFailedFeedFetch(
+/** Picks the recovery for a failed fetch (TLS retry, http fallback, base URL) or fails with its wire error. */
+const handleFailedFeedFetch = Effect.fn("discover.handleFailedFeedFetch")(function* (
   url: string,
   visitedUrls: Set<string>,
   ignoreTlsError: boolean,
-  fetched: Extract<FetchFeedDocumentResult, { ok: false }>,
+  failure: FeedFetchFailed,
   context: RemoteFeedResolutionContext,
-): Promise<ResolvedRemoteFeed> {
-  if (fetched.code === "BLOCKED_URL") {
-    throw new AppError(fetched.error || "Invalid feed URL", {
-      status: 400,
+): Effect.fn.Return<ResolvedRemoteFeed, ResolveFeedError, HttpClient.HttpClient | AppLogger> {
+  if (failure.code === "BLOCKED_URL") {
+    return yield* new BadRequest({
+      message: failure.message || "Invalid feed URL",
       code: "FEED_URL_FORBIDDEN",
     });
   }
 
-  if (fetched.code === "TLS_CERTIFICATE_FAILED") {
-    if (!ignoreTlsError) {
-      const tlsRetry = await tryTlsRetryOrHttpFallback(url, visitedUrls, context);
-      if (tlsRetry) {
-        return tlsRetry;
-      }
-    }
-    const httpFallback = await tryHttpFallbackAfterTls(url, visitedUrls, context);
-    if (httpFallback) {
-      return httpFallback;
+  if (failure.code === "TLS_CERTIFICATE_FAILED") {
+    const recovery = tlsRetryOrHttpFallback(url, visitedUrls, context, ignoreTlsError);
+    if (recovery) {
+      return yield* recovery;
     }
   }
 
-  if (fetched.status === 404) {
-    const baseFallback = await tryBaseUrlFallbackOn404(url, visitedUrls, ignoreTlsError, context);
-    if (baseFallback) {
-      return baseFallback;
+  if (failure.status === 404) {
+    const recovery = baseUrlFallbackOn404(url, visitedUrls, ignoreTlsError, context);
+    if (recovery) {
+      return yield* recovery;
     }
   }
 
-  logger.warn("discover.feed.fetch_failed", {
+  const log = yield* AppLogger;
+  yield* log.warn("discover.feed.fetch_failed", {
     url,
-    fetchCode: fetched.code,
-    fetchError: fetched.error,
-    fetchStatus: fetched.status,
+    fetchCode: failure.code,
+    fetchError: failure.message,
+    fetchStatus: failure.status,
   });
 
-  throw new AppError("Could not fetch feed", {
-    status: fetched.code === "FETCH_TIMEOUT" ? 504 : 422,
+  const Failed = failure.code === "FETCH_TIMEOUT" ? GatewayTimeout : Unprocessable;
+  return yield* new Failed({
+    message: "Could not fetch feed",
     code: "FEED_FETCH_FAILED",
     details: {
-      fetchCode: fetched.code,
-      fetchError: fetched.error,
-      fetchStatus: fetched.status,
+      fetchCode: failure.code,
+      fetchError: failure.message,
+      fetchStatus: failure.status,
     },
   });
-}
+});
 
-async function resolveFromFetchedBody(
-  fetched: Extract<FetchFeedDocumentResult, { ok: true }>,
+const resolveFromFetchedBody = Effect.fn("discover.resolveFromFetchedBody")(function* (
+  fetched: FetchedFeedDocument,
   visitedUrls: Set<string>,
   context: RemoteFeedResolutionContext,
-): Promise<ResolvedRemoteFeed> {
-  try {
-    const meta = parseFeedMetadata(fetched.body, fetched.finalUrl);
-    const canonicalUrl = normalizeFeedUrl(fetched.finalUrl);
+): Effect.fn.Return<ResolvedRemoteFeed, ResolveFeedError, HttpClient.HttpClient | AppLogger> {
+  const parsed = yield* Effect.option(
+    Effect.try(() => ({
+      meta: parseFeedMetadata(fetched.body, fetched.finalUrl),
+      canonicalUrl: normalizeFeedUrl(fetched.finalUrl),
+    })),
+  );
+  if (Option.isSome(parsed)) {
+    const { meta, canonicalUrl } = parsed.value;
     return {
       canonicalUrl,
       canonicalFeedUrl: canonicalUrl,
@@ -175,76 +183,81 @@ async function resolveFromFetchedBody(
       link: meta.link,
       iconUrl: meta.iconUrl,
     };
-  } catch {
-    const discoveredFeedUrl = discoverFeedUrlFromHtml(fetched.body, fetched.finalUrl);
-    if (discoveredFeedUrl) {
-      return await resolveRemoteFeedFromUrl(discoveredFeedUrl, visitedUrls, {
-        ...context,
-        discoveredFromUrl: fetched.finalUrl,
-        discoveryProvenance: "html_autodiscovery",
-      });
-    }
-
-    const meta = parseHtmlMetadataFallback(fetched.body, fetched.finalUrl);
-    const canonicalUrl = normalizeFeedUrl(fetched.finalUrl);
-    return {
-      canonicalUrl,
-      canonicalFeedUrl: canonicalUrl,
-      submittedUrl: context.submittedUrl,
-      siteUrl: meta.link,
-      discoveredFromUrl: context.discoveredFromUrl,
-      discoveryProvenance:
-        context.discoveryProvenance === "direct"
-          ? "html_metadata_fallback"
-          : context.discoveryProvenance,
-      title: meta.title,
-      description: meta.description,
-      link: meta.link,
-      iconUrl: meta.iconUrl,
-    };
-  }
-}
-
-/** Fetch URL, follow redirects, parse RSS/Atom/JSON Feed, return canonical URL + metadata. */
-export async function resolveRemoteFeed(rawUrl: string): Promise<ResolvedRemoteFeed> {
-  const trimmed = rawUrl.trim();
-  if (!trimmed) {
-    throw new AppError("Invalid feed URL", { status: 400, code: "INVALID_FEED_URL" });
   }
 
-  let initial: URL;
-  try {
-    initial = assertHttpOrHttpsUrl(trimmed);
-  } catch {
-    throw new AppError("Invalid feed URL", { status: 400, code: "INVALID_FEED_URL" });
+  // Not a feed: follow an advertised feed link, else describe the page itself.
+  const discoveredFeedUrl = discoverFeedUrlFromHtml(fetched.body, fetched.finalUrl);
+  if (discoveredFeedUrl) {
+    return yield* resolveFromUrl(discoveredFeedUrl, visitedUrls, {
+      ...context,
+      discoveredFromUrl: fetched.finalUrl,
+      discoveryProvenance: "html_autodiscovery",
+    });
   }
 
-  return await resolveRemoteFeedFromUrl(initial.href, new Set(), {
-    submittedUrl: initial.href,
-    discoveredFromUrl: null,
-    discoveryProvenance: "direct",
-  });
-}
+  const meta = parseHtmlMetadataFallback(fetched.body, fetched.finalUrl);
+  const canonicalUrl = normalizeFeedUrl(fetched.finalUrl);
+  return {
+    canonicalUrl,
+    canonicalFeedUrl: canonicalUrl,
+    submittedUrl: context.submittedUrl,
+    siteUrl: meta.link,
+    discoveredFromUrl: context.discoveredFromUrl,
+    discoveryProvenance:
+      context.discoveryProvenance === "direct"
+        ? "html_metadata_fallback"
+        : context.discoveryProvenance,
+    title: meta.title,
+    description: meta.description,
+    link: meta.link,
+    iconUrl: meta.iconUrl,
+  };
+});
 
-async function resolveRemoteFeedFromUrl(
+const resolveFromUrl = Effect.fn("discover.resolveFromUrl")(function* (
   url: string,
   visitedUrls: Set<string>,
   context: RemoteFeedResolutionContext,
   ignoreTlsError = false,
-): Promise<ResolvedRemoteFeed> {
+): Effect.fn.Return<ResolvedRemoteFeed, ResolveFeedError, HttpClient.HttpClient | AppLogger> {
   const normalizedInputUrl = normalizeFeedUrl(url);
   if (visitedUrls.has(normalizedInputUrl)) {
+    // A TLS retry revisits the same URL on purpose; any other revisit is a redirect loop.
     if (!ignoreTlsError) {
-      throw new AppError("Failed to parse feed", { status: 500, code: "FEED_PARSE_FAILED" });
+      return yield* new InternalError({
+        message: "Failed to parse feed",
+        code: "FEED_PARSE_FAILED",
+      });
     }
   } else {
     visitedUrls.add(normalizedInputUrl);
   }
 
-  const fetched = await fetchFeedDocument(url, { ignoreTlsError });
-  if (!fetched.ok) {
-    return await handleFailedFeedFetch(url, visitedUrls, ignoreTlsError, fetched, context);
+  const fetched = yield* Effect.result(fetchFeedDocument(url, { ignoreTlsError }));
+  if (Result.isFailure(fetched)) {
+    return yield* handleFailedFeedFetch(url, visitedUrls, ignoreTlsError, fetched.failure, context);
   }
+  return yield* resolveFromFetchedBody(fetched.success, visitedUrls, context);
+});
 
-  return await resolveFromFetchedBody(fetched, visitedUrls, context);
-}
+/** Fetch URL, follow redirects, parse RSS/Atom/JSON Feed, return canonical URL + metadata. */
+export const resolveRemoteFeed = Effect.fn("discover.resolveRemoteFeed")(function* (
+  rawUrl: string,
+): Effect.fn.Return<ResolvedRemoteFeed, ResolveFeedError, HttpClient.HttpClient | AppLogger> {
+  const trimmed = rawUrl.trim();
+  const initial = yield* Effect.try({
+    try: () => {
+      if (!trimmed) {
+        throw new Error("empty");
+      }
+      return assertHttpOrHttpsUrl(trimmed);
+    },
+    catch: () => new BadRequest({ message: "Invalid feed URL", code: "INVALID_FEED_URL" }),
+  });
+
+  return yield* resolveFromUrl(initial.href, new Set(), {
+    submittedUrl: initial.href,
+    discoveredFromUrl: null,
+    discoveryProvenance: "direct",
+  });
+});

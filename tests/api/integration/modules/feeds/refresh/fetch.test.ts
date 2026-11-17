@@ -20,7 +20,7 @@ describe("fetchFeedDocument allocation safety", () => {
         status: 200,
         headers: { "content-length": String(10 * 1024 * 1024), "content-type": "application/xml" },
       });
-    }) as typeof fetch;
+    }) as unknown as typeof fetch;
 
     const result = await fetchFeedDocument("https://example.com/feed.xml");
     expect(result).toMatchObject({ ok: false, error: "Feed response too large" });
@@ -43,7 +43,7 @@ describe("fetchFeedDocument allocation safety", () => {
         status: 200,
         headers: { "content-type": "application/xml" },
       });
-    }) as typeof fetch;
+    }) as unknown as typeof fetch;
 
     const result = await fetchFeedDocument("https://example.com/feed.xml");
     expect(result).toMatchObject({ ok: false, error: "Feed response too large" });
@@ -56,7 +56,7 @@ describe("fetchFeedDocument allocation safety", () => {
         status: 200,
         headers: { "content-type": "application/xml" },
       });
-    }) as typeof fetch;
+    }) as unknown as typeof fetch;
 
     const result = await fetchFeedDocument("https://example.com/feed.xml");
     expect(result).toMatchObject({ ok: true, body: "<rss></rss>" });

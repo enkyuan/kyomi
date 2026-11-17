@@ -1,291 +1,230 @@
-import { afterEach, describe, expect, test } from "bun:test";
-import {
-  FAVICON_PROXY_VERSION,
-  resolvePersistedFaviconHost,
-  type FaviconHostStore,
-  type FaviconResolutionSource,
-} from "@kyomi/ingest/favicon";
+import { describe, expect, test } from "bun:test";
+import { Effect, Layer } from "effect";
+import { TestClock } from "effect/testing";
+import type { FaviconHostStore, PersistedFaviconHostResult } from "@kyomi/ingest/favicon";
 import { handleFaviconRequestWithStore } from "@modules/favicon/handler";
+import { FaviconResolver } from "@modules/favicon/service";
+import { DatabaseError } from "@shared/effect/errors";
+import { MemoryFaviconHostStore, ORIGIN } from "./store";
 
-type CachedFaviconHost = NonNullable<Awaited<ReturnType<FaviconHostStore["read"]>>>;
-
-const ORIGIN = "https://93.184.216.34";
-
-class MemoryFaviconHostStore implements FaviconHostStore {
-  rows = new Map<string, CachedFaviconHost>();
-
-  seed(row: CachedFaviconHost) {
-    this.rows.set(row.origin, row);
-  }
-
-  seedHit(input: {
-    origin?: string;
-    resolvedUrl: string;
-    source?: FaviconResolutionSource;
-    expiresAt?: Date;
-  }) {
-    const origin = input.origin ?? ORIGIN;
-    this.seed({
-      origin,
-      hostname: new URL(origin).hostname,
-      resolvedUrl: input.resolvedUrl,
-      source: input.source ?? "html_link",
-      status: "hit",
-      contentType: null,
-      width: null,
-      height: null,
-      expiresAt: input.expiresAt ?? new Date(Date.now() + 60_000),
-      errorCode: null,
-      version: FAVICON_PROXY_VERSION,
-    });
-  }
-
-  seedMiss(input: { origin?: string; expiresAt?: Date; errorCode?: string }) {
-    const origin = input.origin ?? ORIGIN;
-    this.seed({
-      origin,
-      hostname: new URL(origin).hostname,
-      resolvedUrl: null,
-      source: null,
-      status: "miss",
-      contentType: null,
-      width: null,
-      height: null,
-      expiresAt: input.expiresAt ?? new Date(Date.now() + 60_000),
-      errorCode: input.errorCode ?? "not_found",
-      version: FAVICON_PROXY_VERSION,
-    });
-  }
-
-  async read(origin: string) {
-    return this.rows.get(origin) ?? null;
-  }
-
-  async writeHit(input: {
-    origin: string;
-    hostname: string;
-    resolvedUrl: string;
-    source: FaviconResolutionSource;
-    expiresAt: Date;
-  }) {
-    this.seed({
-      origin: input.origin,
-      hostname: input.hostname,
-      resolvedUrl: input.resolvedUrl,
-      source: input.source,
-      status: "hit",
-      contentType: null,
-      width: null,
-      height: null,
-      expiresAt: input.expiresAt,
-      errorCode: null,
-      version: FAVICON_PROXY_VERSION,
-    });
-  }
-
-  async writeMiss(input: { origin: string; hostname: string; errorCode: string; expiresAt: Date }) {
-    this.seed({
-      origin: input.origin,
-      hostname: input.hostname,
-      resolvedUrl: null,
-      source: null,
-      status: "miss",
-      contentType: null,
-      width: null,
-      height: null,
-      expiresAt: input.expiresAt,
-      errorCode: input.errorCode,
-      version: FAVICON_PROXY_VERSION,
-    });
-  }
-
-  async updateResponseMetadata(input: {
-    origin: string;
-    contentType: string;
-    width?: number | null;
-    height?: number | null;
-  }) {
-    const row = this.rows.get(input.origin);
-    if (!row) {
-      return;
-    }
-    this.rows.set(input.origin, {
-      ...row,
-      contentType: input.contentType,
-      width: input.width ?? null,
-      height: input.height ?? null,
-    });
-  }
-}
-
-const originalFetch = globalThis.fetch;
-
-function mockFetch(handler: (url: string) => Response | Promise<Response>) {
-  const calls: string[] = [];
-  globalThis.fetch = (async (input: RequestInfo | URL) => {
-    const url = String(input);
-    calls.push(url);
-    return await handler(url);
-  }) as typeof fetch;
-  return calls;
-}
-
-function delay(ms: number) {
-  return new Promise<void>((resolve) => setTimeout(resolve, ms));
-}
+const ICON_URL = `${ORIGIN}/icon-256.png`;
+const HOSTNAME = new URL(ORIGIN).hostname;
 
 function faviconRequest(rawDomain: string) {
   return new Request(`https://kyomi.test/api/favicon?domain=${encodeURIComponent(rawDomain)}`);
 }
 
-function faviconResolutionFetch(url: string) {
-  if (url === ORIGIN) {
-    return new Response(
-      '<html><head><link rel="icon" sizes="256x256" href="/icon-256.png"></head></html>',
-      { headers: { "content-type": "text/html" } },
-    );
-  }
-  if (url === `${ORIGIN}/icon-256.png`) {
-    return new Response("png", { headers: { "content-type": "image/png" } });
-  }
-  return new Response(null, { status: 404 });
+const hit = (url = ICON_URL): PersistedFaviconHostResult => ({
+  kind: "hit",
+  origin: ORIGIN,
+  hostname: HOSTNAME,
+  url,
+  source: "html_link",
+  contentType: null,
+});
+
+const miss: PersistedFaviconHostResult = {
+  kind: "miss",
+  origin: ORIGIN,
+  hostname: HOSTNAME,
+  errorCode: "not_found",
+};
+
+type ResolverScript = {
+  /** Answers each `resolveHost` call in order; the last answer repeats. */
+  resolveHost?: Array<PersistedFaviconHostResult | null | DatabaseError>;
+  fetchImage?: (url: string) => Response | null;
+};
+
+/** A `FaviconResolver` that answers from a script and records what the handler asked for. */
+function scriptedResolver(script: ResolverScript = {}) {
+  const resolveCalls: Array<{ origin: string; forceRefresh: boolean }> = [];
+  const fetchCalls: string[] = [];
+  const answers = script.resolveHost ?? [];
+  const layer = Layer.succeed(
+    FaviconResolver,
+    FaviconResolver.of({
+      resolveHost: (_store, origin, options) => {
+        resolveCalls.push({ origin, forceRefresh: options?.forceRefresh ?? false });
+        const answer = answers[Math.min(resolveCalls.length - 1, answers.length - 1)] ?? null;
+        return answer instanceof DatabaseError ? Effect.fail(answer) : Effect.succeed(answer);
+      },
+      fetchImage: (url) => {
+        fetchCalls.push(url);
+        return Effect.succeed(script.fetchImage?.(url) ?? null);
+      },
+    }),
+  );
+  return { layer, resolveCalls, fetchCalls };
+}
+
+const png = () => new Response("png", { headers: { "content-type": "image/png" } });
+
+function handle(layer: Layer.Layer<FaviconResolver>, store: FaviconHostStore, rawDomain: string) {
+  return Effect.runPromise(
+    handleFaviconRequestWithStore(store, faviconRequest(rawDomain)).pipe(Effect.provide(layer)),
+  );
 }
 
 describe("favicon request handler", () => {
-  afterEach(() => {
-    globalThis.fetch = originalFetch;
+  test("rejects invalid domains without resolving anything", async () => {
+    const { layer, resolveCalls, fetchCalls } = scriptedResolver();
+
+    const response = await handle(layer, new MemoryFaviconHostStore(), "not-a-url");
+
+    expect(response.status).toBe(400);
+    expect(await response.text()).toBe("Invalid domain");
+    expect(resolveCalls).toHaveLength(0);
+    expect(fetchCalls).toHaveLength(0);
   });
 
-  test("rejects invalid domains", async () => {
-    const response = await handleFaviconRequestWithStore(
-      new MemoryFaviconHostStore(),
-      faviconRequest("not-a-url"),
-    );
+  test("answers 400 when the resolver rejects the origin", async () => {
+    const { layer } = scriptedResolver({ resolveHost: [null] });
+
+    const response = await handle(layer, new MemoryFaviconHostStore(), ORIGIN);
 
     expect(response.status).toBe(400);
   });
 
-  test("does not fetch unsafe hosts", async () => {
+  test("an unsafe host is cached as a miss through the real resolver and never served", async () => {
+    // The live layer is the ingest resolver: `localhost` fails its safety check before any fetch.
     const store = new MemoryFaviconHostStore();
-    const calls = mockFetch(() => new Response(null, { status: 500 }));
 
-    const response = await handleFaviconRequestWithStore(store, faviconRequest("http://localhost"));
+    const response = await handle(FaviconResolver.layer, store, "http://localhost");
 
     expect(response.status).toBe(404);
-    expect(calls).toHaveLength(0);
     expect(store.rows.get("http://localhost")?.status).toBe("miss");
   });
 
-  test("serves a cached resolved favicon and records response metadata", async () => {
+  test("serves a resolved favicon with cache headers and records its content type", async () => {
     const store = new MemoryFaviconHostStore();
-    store.seedHit({ resolvedUrl: `${ORIGIN}/icon-256.png` });
-    mockFetch((url) =>
-      url === `${ORIGIN}/icon-256.png`
-        ? new Response("png", { headers: { "content-type": "image/png" } })
-        : new Response(null, { status: 404 }),
-    );
+    store.seedHit({ resolvedUrl: ICON_URL });
+    const { layer, fetchCalls } = scriptedResolver({
+      resolveHost: [hit()],
+      fetchImage: (url) => (url === ICON_URL ? png() : null),
+    });
 
-    const response = await handleFaviconRequestWithStore(store, faviconRequest(ORIGIN));
+    const response = await handle(layer, store, ORIGIN);
 
     expect(response.status).toBe(200);
     expect(response.headers.get("content-type")).toBe("image/png");
+    expect(response.headers.get("cache-control")).toBe(
+      "public, max-age=604800, stale-while-revalidate=2592000",
+    );
+    expect(response.headers.get("vary")).toBe("Accept");
     expect(await response.text()).toBe("png");
+    expect(fetchCalls).toEqual([ICON_URL]);
     expect(store.rows.get(ORIGIN)?.contentType).toBe("image/png");
   });
 
-  test("uses negative cache without remote fetch", async () => {
-    const store = new MemoryFaviconHostStore();
-    store.seedMiss({});
-    const calls = mockFetch(() => new Response(null, { status: 500 }));
+  test("defaults the content type of an image served without one", async () => {
+    const { layer } = scriptedResolver({
+      resolveHost: [hit()],
+      fetchImage: () => new Response("ico"),
+    });
 
-    const response = await handleFaviconRequestWithStore(store, faviconRequest(ORIGIN));
+    const response = await handle(layer, new MemoryFaviconHostStore(), ORIGIN);
 
-    expect(response.status).toBe(404);
-    expect(calls).toHaveLength(0);
+    expect(response.headers.get("content-type")).toBe("image/x-icon");
   });
 
-  test("refreshes a stale miss", async () => {
-    const store = new MemoryFaviconHostStore();
-    store.seedMiss({ expiresAt: new Date(Date.now() - 1) });
-    mockFetch(faviconResolutionFetch);
+  test("a cached miss answers 404 with the short miss cache and fetches nothing", async () => {
+    const { layer, resolveCalls, fetchCalls } = scriptedResolver({ resolveHost: [miss] });
 
-    const response = await handleFaviconRequestWithStore(store, faviconRequest(ORIGIN));
+    const response = await handle(layer, new MemoryFaviconHostStore(), ORIGIN);
+
+    expect(response.status).toBe(404);
+    expect(response.headers.get("cache-control")).toBe(
+      "public, max-age=120, stale-while-revalidate=600",
+    );
+    expect(resolveCalls).toEqual([{ origin: ORIGIN, forceRefresh: false }]);
+    expect(fetchCalls).toHaveLength(0);
+  });
+
+  test("re-resolves with a forced refresh when the cached icon no longer fetches", async () => {
+    const store = new MemoryFaviconHostStore();
+    const refreshedUrl = `${ORIGIN}/new-icon.png`;
+    const { layer, resolveCalls, fetchCalls } = scriptedResolver({
+      resolveHost: [hit(), hit(refreshedUrl)],
+      fetchImage: (url) => (url === refreshedUrl ? png() : null),
+    });
+
+    const response = await handle(layer, store, ORIGIN);
 
     expect(response.status).toBe(200);
-    expect(store.rows.get(ORIGIN)?.status).toBe("hit");
-    expect(store.rows.get(ORIGIN)?.resolvedUrl).toBe(`${ORIGIN}/icon-256.png`);
+    expect(resolveCalls.map((call) => call.forceRefresh)).toEqual([false, true]);
+    expect(fetchCalls).toEqual([ICON_URL, refreshedUrl]);
   });
 
-  test("prefers declared site icons before provider fallback results", async () => {
-    const store = new MemoryFaviconHostStore();
-    mockFetch(async (url) => {
-      if (url === ORIGIN) {
-        await delay(5);
-        return new Response(
-          '<html><head><link rel="icon" sizes="256x256" href="/icon-256.png"></head></html>',
-          { headers: { "content-type": "text/html" } },
-        );
-      }
-      if (url === `${ORIGIN}/icon-256.png`) {
-        await delay(5);
-        return new Response("png", { headers: { "content-type": "image/png" } });
-      }
-      if (url === `${ORIGIN}/favicon.ico`) {
-        return new Response(null, { status: 404 });
-      }
-      if (url.startsWith("https://www.google.com/s2/favicons")) {
-        return new Response("provider", { headers: { "content-type": "image/png" } });
-      }
-      if (url.startsWith("https://icons.duckduckgo.com/ip3/")) {
-        return new Response("provider", { headers: { "content-type": "image/x-icon" } });
-      }
-      return new Response(null, { status: 404 });
-    });
+  test("answers 404 when the refresh resolves to a miss or still cannot fetch", async () => {
+    const refreshedMiss = scriptedResolver({ resolveHost: [hit(), miss] });
+    expect((await handle(refreshedMiss.layer, new MemoryFaviconHostStore(), ORIGIN)).status).toBe(
+      404,
+    );
+    expect(refreshedMiss.fetchCalls).toEqual([ICON_URL]);
 
-    const result = await resolvePersistedFaviconHost(store, ORIGIN);
-    await delay(20);
-
-    expect(result).toEqual({
-      kind: "hit",
-      origin: ORIGIN,
-      hostname: new URL(ORIGIN).hostname,
-      url: `${ORIGIN}/icon-256.png`,
-      source: "html_link",
-      contentType: null,
-    });
-    expect(store.rows.get(ORIGIN)?.resolvedUrl).toBe(`${ORIGIN}/icon-256.png`);
-    expect(store.rows.get(ORIGIN)?.source).toBe("html_link");
+    const unfetchable = scriptedResolver({ resolveHost: [hit(), hit()] });
+    expect((await handle(unfetchable.layer, new MemoryFaviconHostStore(), ORIGIN)).status).toBe(
+      404,
+    );
+    expect(unfetchable.fetchCalls).toEqual([ICON_URL, ICON_URL]);
   });
 
-  test("negative-caches oversized favicon responses", async () => {
+  test("negative-caches oversized favicon responses for the miss TTL and does not refresh", async () => {
     const store = new MemoryFaviconHostStore();
-    store.seedHit({ resolvedUrl: `${ORIGIN}/icon-256.png` });
-    mockFetch((url) =>
-      url === `${ORIGIN}/icon-256.png`
-        ? new Response(new Uint8Array(65 * 1024), {
-            headers: { "content-type": "image/png" },
-          })
-        : new Response(null, { status: 404 }),
+    store.seedHit({ resolvedUrl: ICON_URL });
+    const { layer, resolveCalls } = scriptedResolver({
+      resolveHost: [hit()],
+      fetchImage: () =>
+        new Response(new Uint8Array(65 * 1024), { headers: { "content-type": "image/png" } }),
+    });
+
+    const response = await Effect.runPromise(
+      Effect.gen(function* () {
+        yield* TestClock.setTime(1_000_000);
+        return yield* handleFaviconRequestWithStore(store, faviconRequest(ORIGIN));
+      }).pipe(Effect.provide(Layer.mergeAll(layer, TestClock.layer()))),
     );
 
-    const response = await handleFaviconRequestWithStore(store, faviconRequest(ORIGIN));
-
     expect(response.status).toBe(404);
-    expect(store.rows.get(ORIGIN)?.status).toBe("miss");
-    expect(store.rows.get(ORIGIN)?.errorCode).toBe("response_too_large");
+    expect(resolveCalls).toHaveLength(1);
+    const row = store.rows.get(ORIGIN);
+    expect(row?.status).toBe("miss");
+    expect(row?.errorCode).toBe("response_too_large");
+    expect(row?.expiresAt?.getTime()).toBe(1_000_000 + 120_000);
   });
 
-  test("dedupes concurrent same-origin resolutions", async () => {
+  test("a resolver store failure is a typed DatabaseError, not a response", async () => {
+    const failure = new DatabaseError({ operation: "favicon.resolve_host", cause: new Error("x") });
+    const { layer } = scriptedResolver({ resolveHost: [failure] });
+
+    const error = await Effect.runPromise(
+      Effect.flip(
+        handleFaviconRequestWithStore(new MemoryFaviconHostStore(), faviconRequest(ORIGIN)).pipe(
+          Effect.provide(layer),
+        ),
+      ),
+    );
+
+    expect(error).toBe(failure);
+  });
+
+  test("a failing store write while recording metadata is a typed DatabaseError", async () => {
     const store = new MemoryFaviconHostStore();
-    const calls = mockFetch(faviconResolutionFetch);
+    store.updateResponseMetadata = async () => {
+      throw new Error("connection lost");
+    };
+    const { layer } = scriptedResolver({ resolveHost: [hit()], fetchImage: () => png() });
 
-    const [first, second] = await Promise.all([
-      resolvePersistedFaviconHost(store, ORIGIN),
-      resolvePersistedFaviconHost(store, ORIGIN),
-    ]);
+    const error = await Effect.runPromise(
+      Effect.flip(
+        handleFaviconRequestWithStore(store, faviconRequest(ORIGIN)).pipe(Effect.provide(layer)),
+      ),
+    );
 
-    expect(first?.kind).toBe("hit");
-    expect(second?.kind).toBe("hit");
-    expect(calls.filter((url) => url === ORIGIN)).toHaveLength(1);
+    expect(error).toMatchObject({
+      _tag: "DatabaseError",
+      operation: "favicon.update_metadata",
+    });
   });
 });
