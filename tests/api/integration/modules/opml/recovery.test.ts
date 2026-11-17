@@ -15,6 +15,11 @@ import { fakeDb, fakeQueue, recordingLogger } from "@api-tests/support/layers";
  * (select), listCancellingOpmlImportIds (select), cancelPendingOpmlItems (transaction+execute,
  * looped to 0), and optionally deleteOldTerminalOpmlImports (select then delete).
  */
+/** A drizzle write builder: awaitable on its own, or with `.returning()` for the written rows. */
+function writeBuilder(rows: unknown[]) {
+  return Object.assign(Promise.resolve(rows), { returning: () => Promise.resolve(rows) });
+}
+
 function createFakeReconcileDb(options: {
   parsingReclaimed?: Array<{ id: string }>;
   dueForPrepare?: Array<{ id: string }>;
@@ -40,11 +45,7 @@ function createFakeReconcileDb(options: {
     update: () => ({
       set: (patch: Record<string, unknown>) => {
         itemUpdateSets.push(patch);
-        return {
-          where: () => ({
-            returning: () => Promise.resolve(opts.parsingReclaimed),
-          }),
-        };
+        return { where: () => writeBuilder(opts.parsingReclaimed) };
       },
     }),
     select: () => ({
@@ -66,11 +67,7 @@ function createFakeReconcileDb(options: {
         }),
       }),
     }),
-    delete: () => ({
-      where: () => ({
-        returning: () => Promise.resolve(opts.retentionCandidates),
-      }),
-    }),
+    delete: () => ({ where: () => writeBuilder(opts.retentionCandidates) }),
     transaction: async (callback: (tx: unknown) => unknown) => {
       let txUpdateCount = 0;
       const tx = {
@@ -84,9 +81,9 @@ function createFakeReconcileDb(options: {
             txUpdateCount += 1;
             if (txUpdateCount === 1) {
               itemUpdateSets.push(patch);
-              return { where: () => ({ returning: () => Promise.resolve([{ id: "item-1" }]) }) };
+              return { where: () => writeBuilder([{ id: "item-1" }]) };
             }
-            return { where: () => Promise.resolve() };
+            return { where: () => writeBuilder([]) };
           },
         }),
         select: () => ({

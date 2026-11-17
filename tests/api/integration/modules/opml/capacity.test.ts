@@ -1,9 +1,12 @@
 import { describe, expect, test } from "bun:test";
-import type { db } from "@adapters/db/client";
-import { parseOpmlDocument } from "@modules/opml/parse";
+import { Effect } from "effect";
+import { parseOpmlDocument as parseOpmlDocumentEffect } from "@modules/opml/parse";
 import { insertOpmlImportItems, opmlImportItemId } from "@modules/opml/store";
 import { subscribeKnownOpmlItems } from "@modules/opml/known";
-import { buildOpml } from "./fixtures";
+import { fakeDb as dbLayer } from "@api-tests/support/layers";
+import { buildOpml, runWith } from "./fixtures";
+
+const parseOpmlDocument = (xml: string) => Effect.runSync(parseOpmlDocumentEffect(xml));
 
 /**
  * Opt-in capacity gate: RUN_OPML_CAPACITY=true bun run --cwd tests test:api:integration -- modules/opml/capacity.test.ts
@@ -12,8 +15,6 @@ import { buildOpml } from "./fixtures";
  */
 const RUN = process.env.RUN_OPML_CAPACITY === "true";
 const describeCapacity = RUN ? describe : describe.skip;
-
-type DB = typeof db;
 
 /**
  * Fake Postgres-shaped db for insertOpmlImportItems: records every values() batch size (so the
@@ -61,13 +62,11 @@ describeCapacity("OPML capacity gates", () => {
 
   test("materializes 50,000 items in chunks no larger than 500 rows", async () => {
     const parsed = parseOpmlDocument(buildOpml(50_000));
-    const { db: fakeDb, batchSizes } = createFakeInsertDb();
+    const { db, batchSizes } = createFakeInsertDb();
 
-    const total = await insertOpmlImportItems(
-      fakeDb as unknown as DB,
-      "import-capacity-1",
-      parsed.feeds,
-      new Map(),
+    const total = await runWith(
+      insertOpmlImportItems("import-capacity-1", parsed.feeds, new Map()),
+      dbLayer(db),
     );
 
     expect(total).toBe(50_000);
@@ -77,19 +76,16 @@ describeCapacity("OPML capacity gates", () => {
 
   test("rerunning materialization after a simulated crash converges without duplicating items", async () => {
     const parsed = parseOpmlDocument(buildOpml(1_000));
-    const { db: fakeDb, rowsById } = createFakeInsertDb();
+    const { db, rowsById } = createFakeInsertDb();
+    const layer = dbLayer(db);
 
-    const firstRun = await insertOpmlImportItems(
-      fakeDb as unknown as DB,
-      "import-crash-1",
-      parsed.feeds,
-      new Map(),
+    const firstRun = await runWith(
+      insertOpmlImportItems("import-crash-1", parsed.feeds, new Map()),
+      layer,
     );
-    const rerun = await insertOpmlImportItems(
-      fakeDb as unknown as DB,
-      "import-crash-1",
-      parsed.feeds,
-      new Map(),
+    const rerun = await runWith(
+      insertOpmlImportItems("import-crash-1", parsed.feeds, new Map()),
+      layer,
     );
 
     expect(firstRun).toBe(1_000);
@@ -113,7 +109,7 @@ describeCapacity("OPML capacity gates", () => {
     const insertBatchSizes: number[] = [];
     let remainingPending = [...pendingRows];
 
-    const fakeDb = {
+    const layer = dbLayer({
       select: () => ({
         from: () => ({
           where: () => ({
@@ -166,16 +162,12 @@ describeCapacity("OPML capacity gates", () => {
         };
         return callback(tx);
       },
-    };
+    });
 
     let processed = 0;
     let iterations = 0;
     while (iterations < 20) {
-      const completion = await subscribeKnownOpmlItems(
-        fakeDb as unknown as DB,
-        "import-known-1",
-        "user-1",
-      );
+      const completion = await runWith(subscribeKnownOpmlItems("import-known-1", "user-1"), layer);
       processed += completion.processed;
       iterations += 1;
       if (completion.processed === 0) {

@@ -1,52 +1,67 @@
 import { describe, expect, test } from "bun:test";
-import { AppError } from "@shared/errors/app";
-import { classifyOpmlItemError, computeOpmlRetryDelayMs } from "@modules/opml/retry";
+import { Effect } from "effect";
+import {
+  BadGateway,
+  BadRequest,
+  DatabaseError,
+  GatewayTimeout,
+  InternalError,
+  NotFound,
+  RateLimited,
+} from "@shared/effect/errors";
+import {
+  classifyOpmlItemError,
+  computeOpmlRetryDelayMs,
+  opmlRetryJitter,
+} from "@modules/opml/retry";
 
 describe("classifyOpmlItemError", () => {
   test("classifies invalid and forbidden URLs as permanent", () => {
     for (const code of ["INVALID_FEED_URL", "FEED_URL_FORBIDDEN"]) {
-      expect(classifyOpmlItemError(new AppError("bad", { status: 400, code }))).toEqual({
+      expect(classifyOpmlItemError(new BadRequest({ message: "bad", code }))).toEqual({
         retryable: false,
         code,
+        message: "bad",
       });
     }
   });
 
   test("classifies OPML-specific invalid-url and parse-failure codes as permanent", () => {
     expect(
-      classifyOpmlItemError(new AppError("bad", { status: 400, code: "OPML_FEED_URL_INVALID" })),
-    ).toEqual({ retryable: false, code: "OPML_FEED_URL_INVALID" });
+      classifyOpmlItemError(new BadRequest({ message: "bad", code: "OPML_FEED_URL_INVALID" })),
+    ).toEqual({ retryable: false, code: "OPML_FEED_URL_INVALID", message: "bad" });
     expect(
-      classifyOpmlItemError(new AppError("bad", { status: 502, code: "FEED_PARSE_FAILED" })),
-    ).toEqual({ retryable: false, code: "FEED_PARSE_FAILED" });
+      classifyOpmlItemError(new BadGateway({ message: "bad", code: "FEED_PARSE_FAILED" })),
+    ).toEqual({ retryable: false, code: "FEED_PARSE_FAILED", message: "bad" });
   });
 
-  test("classifies timeout, 429, 5xx, database, and unknown errors as retryable", () => {
+  test("classifies timeout, 429 and 5xx errors as retryable and keeps their code", () => {
     expect(
-      classifyOpmlItemError(new AppError("timeout", { status: 504, code: "FEED_FETCH_FAILED" }))
-        .retryable,
-    ).toBe(true);
+      classifyOpmlItemError(new GatewayTimeout({ message: "timeout", code: "FEED_FETCH_FAILED" })),
+    ).toEqual({ retryable: true, code: "FEED_FETCH_FAILED", message: "timeout" });
+    expect(classifyOpmlItemError(new RateLimited({ message: "slow down" }))).toEqual({
+      retryable: true,
+      code: "RATE_LIMITED",
+      message: "slow down",
+    });
     expect(
-      classifyOpmlItemError(new AppError("rate limited", { status: 429, code: "RATE_LIMITED" }))
-        .retryable,
+      classifyOpmlItemError(new InternalError({ message: "boom", code: "SERVER_ERROR" })).retryable,
     ).toBe(true);
-    expect(
-      classifyOpmlItemError(new AppError("boom", { status: 500, code: "SERVER_ERROR" })).retryable,
-    ).toBe(true);
-    expect(classifyOpmlItemError(new Error("connection reset")).retryable).toBe(true);
-    expect(classifyOpmlItemError("not an error object").retryable).toBe(true);
   });
 
-  test("classifies other 4xx AppErrors as permanent", () => {
+  test("classifies other 4xx errors as permanent", () => {
     expect(
-      classifyOpmlItemError(new AppError("not found", { status: 404, code: "FEED_NOT_FOUND" })),
-    ).toEqual({ retryable: false, code: "FEED_NOT_FOUND" });
+      classifyOpmlItemError(new NotFound({ message: "not found", code: "FEED_NOT_FOUND" })),
+    ).toEqual({ retryable: false, code: "FEED_NOT_FOUND", message: "not found" });
   });
 
-  test("falls back to a generic retryable code for a non-AppError", () => {
-    expect(classifyOpmlItemError(new Error("connection reset"))).toEqual({
+  test("retries infrastructure failures under the generic import code", () => {
+    expect(
+      classifyOpmlItemError(new DatabaseError({ operation: "opml.item.complete", cause: "down" })),
+    ).toEqual({
       retryable: true,
       code: "OPML_FEED_IMPORT_FAILED",
+      message: "Database operation failed: opml.item.complete",
     });
   });
 });
@@ -66,5 +81,15 @@ describe("computeOpmlRetryDelayMs", () => {
   test("treats attempt 0 or negative the same as attempt 1", () => {
     expect(computeOpmlRetryDelayMs(0, 0)).toBe(5_000);
     expect(computeOpmlRetryDelayMs(-3, 0)).toBe(5_000);
+  });
+});
+
+describe("opmlRetryJitter", () => {
+  test("stays within +/-20%", () => {
+    for (let run = 0; run < 200; run += 1) {
+      const jitter = Effect.runSync(opmlRetryJitter);
+      expect(jitter).toBeGreaterThanOrEqual(-0.2);
+      expect(jitter).toBeLessThan(0.2);
+    }
   });
 });

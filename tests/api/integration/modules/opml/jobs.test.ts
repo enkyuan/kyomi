@@ -1,71 +1,26 @@
 import { describe, expect, mock, test } from "bun:test";
+import { Effect, Layer } from "effect";
+import { enqueueOpmlImport } from "@modules/opml/enqueue";
+import {
+  runOpmlImportFeedJob,
+  runOpmlImportItemJob,
+  runOpmlImportJob,
+  runOpmlImportPrepareJob,
+} from "@modules/opml/jobs";
+import { BadRequest, InternalError } from "@shared/effect/errors";
+import {
+  fakeDb as dbLayer,
+  fakeQueue,
+  fakeRedis,
+  recordingLogger,
+} from "@api-tests/support/layers";
+import { feedsLayer } from "./fixtures";
 
 /**
- * Drives jobs.ts through the real @modules/opml/store and @modules/opml/known functions
- * with fake Postgres-shaped db objects, rather than mock.module(...) on those two modules:
- * mock.module's replacement is process-wide and not reliably undone by mock.restore() once the
- * suite has enough files (confirmed by reproducing the leak at ~50 files) -- it corrupted
- * store.test.ts's and known.test.ts's real-implementation tests depending on run order.
- *
- * @adapters/queue/publish is left unmocked for the same reason: dispatcher.ts
- * (exercised unmocked by recovery.test.ts and dispatcher.test.ts) imports the real
- * publishJob, so mocking it here leaked into those files' real-implementation assertions about
- * how the real publishJob behaves against a fake redis client. getRedis() (from @adapters/redis,
- * confirmed safe -- no other file imports it unmocked) is mocked instead to return a fake redis
- * with a controllable .xadd, the same technique recovery.test.ts and
- * dispatcher.test.ts already use.
- *
- * @modules/feeds/subscription/subscribe, @modules/feeds/refresh/enqueue, and
- * @modules/opml/task have no other file importing them unmocked, so those three stay
- * mocked here.
+ * Drives jobs.ts through the real store, known-feed and task code with fake Postgres- and
+ * Redis-shaped clients behind the real `Db`, `Redis` and `JobQueue` services. The feeds and
+ * folders domains are the only seam replaced, through the `OpmlFeeds` service.
  */
-const createOrSubscribeToFeedMock = mock(async () => ({
-  feedId: "feed-1",
-  subscriptionId: "sub-1",
-  newFeed: true,
-  newSubscription: true,
-}));
-const enqueueFeedRefreshMock = mock(async () => ({ jobId: "job-1" }));
-const recordOpmlTaskSuccessMock = mock(async () => undefined);
-const subscribeToExistingFeedMock = mock(async () => ({
-  feedId: "feed-1",
-  subscriptionId: "sub-1",
-  newFeed: false,
-  newSubscription: false,
-}));
-const redisXaddMock = mock(async () => "stream-id-1");
-
-mock.module("@modules/feeds/subscription/subscribe", () => ({
-  createOrSubscribeToFeed: createOrSubscribeToFeedMock,
-  subscribeToExistingFeed: subscribeToExistingFeedMock,
-}));
-mock.module("@modules/feeds/refresh/enqueue", () => ({
-  enqueueBatchFeedRefresh: mock(async () => ({ accepted: true, count: 0, failedCount: 0 })),
-  enqueueFeedRefresh: enqueueFeedRefreshMock,
-}));
-mock.module("@modules/opml/task", () => ({
-  failOpmlTask: mock(async () => undefined),
-  getOpmlTask: mock(async () => null),
-  isOpmlTaskCancelled: mock(async () => false),
-  markOpmlTaskInProgress: mock(async () => undefined),
-  recordOpmlTaskSuccess: recordOpmlTaskSuccessMock,
-  recordOpmlTaskFailure: mock(async () => undefined),
-}));
-mock.module("@adapters/redis", () => ({
-  getRedis: mock(() => ({ xadd: redisXaddMock })),
-}));
-
-const { enqueueOpmlImport, runOpmlImportFeedJob, runOpmlImportPrepareJob, runOpmlImportItemJob } =
-  await import("@modules/opml/jobs");
-
-function logger() {
-  return {
-    info: mock(() => undefined),
-    warn: mock(() => undefined),
-    error: mock(() => undefined),
-  };
-}
-
 function importRow(overrides: Partial<Record<string, unknown>> = {}) {
   return {
     id: "import-1",
@@ -80,10 +35,35 @@ function importRow(overrides: Partial<Record<string, unknown>> = {}) {
   };
 }
 
+/**
+ * A fake ioredis `multi()`: each call returns a chain that records its commands and answers
+ * `exec` with the next entry of `results` (one array of command values per transaction).
+ */
+function fakeMulti(commands: unknown[][], results: unknown[][]) {
+  let transaction = 0;
+  return () => {
+    const values = results[transaction] ?? [];
+    transaction += 1;
+    const chain: Record<string, unknown> = new Proxy(
+      {},
+      {
+        get: (_, name) =>
+          name === "exec"
+            ? async () => values.map((value) => [null, value])
+            : (...args: unknown[]) => {
+                commands.push([name, ...args]);
+                return chain;
+              },
+      },
+    );
+    return chain;
+  };
+}
+
 describe("enqueueOpmlImport", () => {
   /** Models createOpmlImport's insert chain and recordOpmlImportPrepareWakeup's update chain. */
   function createFakeEnqueueDb(created: Record<string, unknown>) {
-    const db = {
+    return {
       insert: () => ({
         values: () => ({ returning: () => Promise.resolve([created]) }),
       }),
@@ -91,73 +71,248 @@ describe("enqueueOpmlImport", () => {
         set: () => ({ where: () => Promise.resolve() }),
       }),
     };
-    return db;
   }
 
-  test("creates the durable import row and publishes an ID-only prepare wakeup", async () => {
-    redisXaddMock.mockClear();
-    const created = importRow({ id: "import-1", userId: "user-1", status: "accepted" });
-    const db = createFakeEnqueueDb(created);
-    const testLogger = logger();
+  const xml = '<opml><body><outline xmlUrl="https://example.com/feed.xml"/></body></opml>';
 
-    const result = await enqueueOpmlImport(
-      db as never,
-      "user-1",
-      '<opml><body><outline xmlUrl="https://example.com/feed.xml"/></body></opml>',
-      testLogger,
-      "feeds.opml",
+  test("creates the durable import row and publishes an ID-only prepare wakeup", async () => {
+    const xadd = mock(async () => "stream-id-1");
+    const logs = recordingLogger();
+    const db = createFakeEnqueueDb(importRow());
+
+    const result = await Effect.runPromise(
+      enqueueOpmlImport({ userId: "user-1", xml, filename: "feeds.opml" }).pipe(
+        Effect.provide(Layer.mergeAll(dbLayer(db), fakeQueue({ xadd }), logs.layer)),
+      ),
     );
 
     expect(result).toEqual({ taskId: "import-1" });
-    // publishJob (real, unmocked) XADDs the prepare wakeup through getRedis()'s fake .xadd.
-    expect(redisXaddMock).toHaveBeenCalledTimes(1);
-    expect(testLogger.error).not.toHaveBeenCalled();
+    expect(xadd).toHaveBeenCalledTimes(1);
+    expect(JSON.stringify(xadd.mock.calls[0])).toContain("import-1");
+    expect(logs.entries.filter((entry) => entry.level === "error")).toEqual([]);
+    expect(logs.entries).toContainEqual(
+      expect.objectContaining({ event: "opml.import.enqueued", context: expect.any(Object) }),
+    );
   });
 
   test("still returns the taskId when publishing the prepare wakeup fails", async () => {
-    redisXaddMock.mockImplementationOnce(async () => {
-      throw new Error("redis unavailable");
-    });
-    const created = importRow({ id: "import-1", userId: "user-1", status: "accepted" });
-    const db = createFakeEnqueueDb(created);
-    const testLogger = logger();
+    const logs = recordingLogger();
+    const db = createFakeEnqueueDb(importRow());
 
-    const result = await enqueueOpmlImport(db as never, "user-1", "<opml></opml>", testLogger);
+    const result = await Effect.runPromise(
+      enqueueOpmlImport({ userId: "user-1", xml: "<opml></opml>" }).pipe(
+        Effect.provide(
+          Layer.mergeAll(
+            dbLayer(db),
+            fakeQueue({
+              xadd: async () => {
+                throw new Error("redis unavailable");
+              },
+            }),
+            logs.layer,
+          ),
+        ),
+      ),
+    );
 
     expect(result).toEqual({ taskId: "import-1" });
-    expect(testLogger.error).toHaveBeenCalledWith(
-      "opml.import.prepare.delivery_pending",
-      expect.objectContaining({ userId: "user-1", taskId: "import-1" }),
+    expect(logs.entries).toContainEqual(
+      expect.objectContaining({
+        level: "error",
+        event: "opml.import.prepare.delivery_pending",
+        context: expect.objectContaining({ userId: "user-1", taskId: "import-1" }),
+      }),
     );
+  });
+
+  test("rejects a filename that is not .opml or .xml before storing anything", async () => {
+    const error = await Effect.runPromise(
+      Effect.flip(enqueueOpmlImport({ userId: "user-1", xml, filename: "feeds.txt" })).pipe(
+        Effect.provide(Layer.mergeAll(dbLayer({}), fakeQueue({}), recordingLogger().layer)),
+      ),
+    );
+
+    expect(error).toBeInstanceOf(BadRequest);
+    expect(error).toMatchObject({ code: "OPML_FILE_TYPE_INVALID" });
   });
 });
 
-describe("runOpmlImportFeedJob", () => {
-  test("enqueues a first refresh for newly imported subscriptions", async () => {
-    const testLogger = logger();
+describe("legacy opml.import.feed job", () => {
+  const payload = {
+    taskId: "task-1",
+    userId: "user-1",
+    url: "https://example.com/feed.xml",
+    title: "Example",
+    folderId: null,
+  };
 
-    await runOpmlImportFeedJob(
-      {} as never,
-      {
-        taskId: "task-1",
-        userId: "user-1",
-        url: "https://example.com/feed.xml",
-        title: "Example",
-        folderId: null,
-      },
-      testLogger,
-    );
-
-    expect(enqueueFeedRefreshMock).toHaveBeenCalledWith(
-      {},
-      "feed-1",
-      "user-1",
-      "subscription_created",
-      testLogger,
-    );
-    expect(recordOpmlTaskSuccessMock).toHaveBeenCalledWith("task-1", {
-      alreadySubscribed: false,
+  function run(
+    feeds: ReturnType<typeof feedsLayer>,
+    redisCommands: { transaction: unknown[][]; results: unknown[][] },
+  ) {
+    const logs = recordingLogger();
+    const redis = fakeRedis({
+      exists: async () => 0,
+      multi: fakeMulti(redisCommands.transaction, redisCommands.results),
     });
+    return {
+      logs,
+      done: Effect.runPromise(
+        runOpmlImportFeedJob(payload).pipe(
+          Effect.provide(Layer.mergeAll(feeds.layer, redis, logs.layer)),
+        ),
+      ),
+    };
+  }
+
+  test("enqueues a first refresh for newly imported subscriptions and counts the success", async () => {
+    const feeds = feedsLayer();
+    const transaction: unknown[][] = [];
+
+    // The counter transaction (completed = 1), then getOpmlTask's [meta, counters, errors] for
+    // the finalize check: no stored meta, so nothing to finalize.
+    await run(feeds, {
+      transaction,
+      results: [
+        [1, 1, 1],
+        [null, {}, []],
+      ],
+    }).done;
+
+    expect(feeds.calls.subscribeToFeedUrl[0]).toEqual([
+      "user-1",
+      "https://example.com/feed.xml",
+      { folderId: null, customTitle: "Example" },
+    ]);
+    expect(feeds.calls.requestInitialRefresh).toEqual([["feed-1", "user-1"]]);
+    expect(transaction[0]).toEqual(["hincrby", "kyomi:opml:task:task-1:counters", "subscribed", 1]);
+  });
+
+  test("records a typed failure against the task and still succeeds", async () => {
+    const feeds = feedsLayer({
+      subscribeToFeedUrl: () =>
+        Effect.fail(new BadRequest({ message: "bad feed", code: "INVALID_FEED_URL" })),
+    });
+    const transaction: unknown[][] = [];
+
+    const { logs, done } = run(feeds, {
+      transaction,
+      results: [
+        [1, 1, 1, 1, 1],
+        [null, {}, []],
+      ],
+    });
+    await done;
+
+    expect(transaction.find(([command]) => command === "rpush")).toEqual([
+      "rpush",
+      "kyomi:opml:task:task-1:errors",
+      JSON.stringify({
+        url: "https://example.com/feed.xml",
+        code: "INVALID_FEED_URL",
+        message: "bad feed",
+      }),
+    ]);
+    expect(feeds.calls.requestInitialRefresh).toEqual([]);
+    expect(logs.entries).toContainEqual(
+      expect.objectContaining({
+        level: "error",
+        event: "worker.job.opml_import_feed.failed",
+        context: expect.objectContaining({ code: "INVALID_FEED_URL" }),
+      }),
+    );
+  });
+
+  test("does no work for a cancelled task", async () => {
+    const feeds = feedsLayer();
+    const logs = recordingLogger();
+
+    await Effect.runPromise(
+      runOpmlImportFeedJob(payload).pipe(
+        Effect.provide(
+          Layer.mergeAll(feeds.layer, fakeRedis({ exists: async () => 1 }), logs.layer),
+        ),
+      ),
+    );
+
+    expect(feeds.calls.subscribeToFeedUrl).toEqual([]);
+    expect(logs.entries.map((entry) => entry.event)).toEqual([
+      "worker.job.opml_import_feed.cancelled",
+    ]);
+  });
+});
+
+describe("legacy opml.import job", () => {
+  test("publishes one feed job per URL with its folder and stops when the task is cancelled", async () => {
+    const xml = `<opml><body><outline text="Tech"><outline xmlUrl="https://a.example/f"/><outline xmlUrl="https://b.example/f"/></outline></body></opml>`;
+    const published: string[] = [];
+    let cancelChecks = 0;
+    const feeds = feedsLayer({
+      getOrCreateFolder: () => Effect.succeed({ id: "folder-tech" }),
+    });
+
+    await Effect.runPromise(
+      runOpmlImportJob({ taskId: "task-1", userId: "user-1", xml, filename: "f.opml" }).pipe(
+        Effect.provide(
+          Layer.mergeAll(
+            feeds.layer,
+            fakeQueue({
+              // Cancelled before the second feed is published.
+              exists: async () => {
+                cancelChecks += 1;
+                return cancelChecks >= 3 ? 1 : 0;
+              },
+              multi: fakeMulti([], [[1, 1, 1, 1, 1]]),
+              eval: async () => 1,
+              xadd: async (...args: unknown[]) => {
+                published.push(args.join(" "));
+                return "1-0";
+              },
+            }),
+            recordingLogger().layer,
+          ),
+        ),
+      ),
+    );
+
+    expect(published).toHaveLength(1);
+    expect(published[0]).toContain("https://a.example/f");
+    expect(published[0]).toContain("folder-tech");
+  });
+
+  test("marks the task failed and fails the job when the document cannot be parsed", async () => {
+    const evalCalls: unknown[][] = [];
+    const logs = recordingLogger();
+
+    const error = await Effect.runPromise(
+      Effect.flip(
+        runOpmlImportJob({
+          taskId: "task-1",
+          userId: "user-1",
+          xml: "<opml><body></body></opml>",
+          filename: "f.opml",
+        }),
+      ).pipe(
+        Effect.provide(
+          Layer.mergeAll(
+            feedsLayer().layer,
+            fakeQueue({
+              exists: async () => 0,
+              eval: async (...args: unknown[]) => {
+                evalCalls.push(args);
+                return 1;
+              },
+            }),
+            logs.layer,
+          ),
+        ),
+      ),
+    );
+
+    expect(error).toMatchObject({ _tag: "BadRequest", code: "OPML_NO_FEEDS" });
+    // failOpmlTask patches the meta atomically with status "failed" and the error message.
+    expect(String(evalCalls[0]?.[4])).toContain('"status":"failed"');
+    expect(logs.entries.map((entry) => entry.event)).toContain("worker.job.opml_import.failed");
   });
 });
 
@@ -168,6 +323,10 @@ describe("runOpmlImportPrepareJob", () => {
       (_, i) => `<outline xmlUrl="https://example.com/feed-${i}.xml"/>`,
     ).join("");
     return `<opml><body>${outlines}</body></opml>`;
+  }
+
+  function withLimit<T>(rows: T[]): Promise<T[]> & { limit: () => Promise<T[]> } {
+    return Object.assign(Promise.resolve(rows), { limit: () => Promise.resolve(rows) });
   }
 
   /**
@@ -200,10 +359,6 @@ describe("runOpmlImportPrepareJob", () => {
     const updateSets: Array<Record<string, unknown>> = [];
     let topSelectCount = 0;
     let countedItems = 0;
-
-    function withLimit<T>(rows: T[]): Promise<T[]> & { limit: () => Promise<T[]> } {
-      return Object.assign(Promise.resolve(rows), { limit: () => Promise.resolve(rows) });
-    }
 
     const db = {
       update: () => ({
@@ -251,6 +406,11 @@ describe("runOpmlImportPrepareJob", () => {
     return { db, insertedBatches, updateSets };
   }
 
+  const runPrepare = (db: unknown, feeds = feedsLayer(), logs = recordingLogger()) =>
+    runOpmlImportPrepareJob({ importId: "import-1" }).pipe(
+      Effect.provide(Layer.mergeAll(dbLayer(db as never), feeds.layer, logs.layer)),
+    );
+
   test("materializes items in chunks of at most 500 and finalizes once", async () => {
     const claimed = {
       importId: "import-1",
@@ -259,9 +419,8 @@ describe("runOpmlImportPrepareJob", () => {
       sourceXml: buildOpmlWithFeedCount(1201),
     };
     const { db, insertedBatches, updateSets } = createFakePrepareDb({ claimed });
-    const testLogger = logger();
 
-    await runOpmlImportPrepareJob(db as never, { importId: "import-1" }, testLogger);
+    await Effect.runPromise(runPrepare(db));
 
     expect(insertedBatches).toHaveLength(3);
     expect(insertedBatches[0]).toHaveLength(500);
@@ -276,15 +435,13 @@ describe("runOpmlImportPrepareJob", () => {
       throw new Error("must not be called");
     });
     const { db: baseDb } = createFakePrepareDb({ claimed: null });
-    const db = { ...baseDb, insert };
-    const testLogger = logger();
 
-    await runOpmlImportPrepareJob(db as never, { importId: "import-1" }, testLogger);
+    await Effect.runPromise(runPrepare({ ...baseDb, insert }));
 
     expect(insert).not.toHaveBeenCalled();
   });
 
-  test("fails the import on invalid XML without throwing", async () => {
+  test("fails the import on invalid XML without failing the job", async () => {
     const claimed = {
       importId: "import-1",
       userId: "user-1",
@@ -292,16 +449,48 @@ describe("runOpmlImportPrepareJob", () => {
       sourceXml: "<opml><body></body></opml>",
     };
     const { db, updateSets } = createFakePrepareDb({ claimed });
-    const testLogger = logger();
+    const logs = recordingLogger();
 
-    await runOpmlImportPrepareJob(db as never, { importId: "import-1" }, testLogger);
+    await Effect.runPromise(runPrepare(db, feedsLayer(), logs));
 
     expect(updateSets).toContainEqual(
       expect.objectContaining({ status: "failed", lastErrorCode: "OPML_NO_FEEDS" }),
     );
+    expect(logs.entries).toContainEqual(
+      expect.objectContaining({
+        level: "error",
+        event: "worker.job.opml_import_prepare.failed",
+        context: expect.objectContaining({ importId: "import-1", code: "OPML_NO_FEEDS" }),
+      }),
+    );
   });
 
-  test("rethrows platform errors so the queue retries instead of failing the import", async () => {
+  test("fails the import when the folders domain rejects the document's folders", async () => {
+    const claimed = {
+      importId: "import-1",
+      userId: "user-1",
+      filename: "feeds.opml",
+      sourceXml: buildOpmlWithFeedCount(2),
+    };
+    const { db, updateSets } = createFakePrepareDb({ claimed });
+    const feeds = feedsLayer({
+      ensureFolders: () =>
+        Effect.fail(
+          new BadRequest({
+            message: "Folder name exceeds maximum length",
+            code: "FOLDER_NAME_TOO_LONG",
+          }),
+        ),
+    });
+
+    await Effect.runPromise(runPrepare(db, feeds));
+
+    expect(updateSets).toContainEqual(
+      expect.objectContaining({ status: "failed", lastErrorCode: "FOLDER_NAME_TOO_LONG" }),
+    );
+  });
+
+  test("fails the job on platform errors so the queue retries instead of failing the import", async () => {
     const claimed = {
       importId: "import-1",
       userId: "user-1",
@@ -317,16 +506,14 @@ describe("runOpmlImportPrepareJob", () => {
         },
       }),
     };
-    const testLogger = logger();
 
-    await expect(
-      runOpmlImportPrepareJob(db as never, { importId: "import-1" }, testLogger),
-    ).rejects.toThrow("connection reset");
+    const error = await Effect.runPromise(Effect.flip(runPrepare(db)));
+
+    expect(error).toMatchObject({ _tag: "DatabaseError", operation: "opml.item.insert" });
     expect(updateSets.some((patch) => patch.status === "failed")).toBe(false);
   });
 
   test("drains known-feed matches in a loop and publishes refresh candidates before finalizing", async () => {
-    enqueueFeedRefreshMock.mockClear();
     const claimed = {
       importId: "import-1",
       userId: "user-1",
@@ -335,10 +522,6 @@ describe("runOpmlImportPrepareJob", () => {
     };
     const updateSets: Array<Record<string, unknown>> = [];
     let topSelectCount = 0;
-
-    function withLimit<T>(rows: T[]): Promise<T[]> & { limit: () => Promise<T[]> } {
-      return Object.assign(Promise.resolve(rows), { limit: () => Promise.resolve(rows) });
-    }
 
     const db = {
       update: () => ({
@@ -389,12 +572,8 @@ describe("runOpmlImportPrepareJob", () => {
                   // parent status lookup.
                   return { limit: () => Promise.resolve([{ status: "parsing" }]) };
                 }
-                if (txSelectCount === 2) {
-                  // existing subscriptions for feed-1: none.
-                  return Promise.resolve([]);
-                }
-                // feedIdsNeedingInitialRefresh's two selects: feed-1 has no prior refresh and no
-                // items yet, so it qualifies as a refresh candidate.
+                // existing subscriptions for feed-1 (none), then feedIdsNeedingInitialRefresh's
+                // two selects: feed-1 has no prior refresh and no items yet, so it qualifies.
                 return Promise.resolve([]);
               },
             }),
@@ -415,17 +594,11 @@ describe("runOpmlImportPrepareJob", () => {
         return callback(tx);
       },
     };
-    const testLogger = logger();
+    const feeds = feedsLayer();
 
-    await runOpmlImportPrepareJob(db as never, { importId: "import-1" }, testLogger);
+    await Effect.runPromise(runPrepare(db, feeds));
 
-    expect(enqueueFeedRefreshMock).toHaveBeenCalledWith(
-      db,
-      "feed-1",
-      "user-1",
-      "subscription_created",
-      testLogger,
-    );
+    expect(feeds.calls.requestInitialRefresh).toEqual([["feed-1", "user-1"]]);
     expect(
       updateSets.some((patch) => patch.status === "completed" || patch.status === "dispatching"),
     ).toBe(true);
@@ -433,6 +606,8 @@ describe("runOpmlImportPrepareJob", () => {
 });
 
 describe("runOpmlImportItemJob", () => {
+  const payload = { importId: "import-1", itemId: "item-1", leaseToken: "lease-1" };
+
   function claimedItem(overrides: Partial<Record<string, unknown>> = {}) {
     return {
       id: "item-1",
@@ -470,22 +645,6 @@ describe("runOpmlImportItemJob", () => {
       }),
     };
   }
-
-  test("returns successfully with no fetch when the lease claim is stale or already gone", async () => {
-    subscribeToExistingFeedMock.mockClear();
-    createOrSubscribeToFeedMock.mockClear();
-    const db = createFakeClaimDb({ claimedRow: null });
-    const testLogger = logger();
-
-    await runOpmlImportItemJob(
-      db as never,
-      { importId: "import-1", itemId: "item-1", leaseToken: "lease-1" },
-      testLogger,
-    );
-
-    expect(subscribeToExistingFeedMock).not.toHaveBeenCalled();
-    expect(createOrSubscribeToFeedMock).not.toHaveBeenCalled();
-  });
 
   /** Models completeOpmlItem's transaction: item update (returning) then parent counter update. */
   function withCompleteTransaction(db: Record<string, unknown>) {
@@ -526,16 +685,22 @@ describe("runOpmlImportItemJob", () => {
     };
   }
 
+  const runItem = (db: unknown, feeds = feedsLayer(), logs = recordingLogger()) =>
+    runOpmlImportItemJob(payload).pipe(
+      Effect.provide(Layer.mergeAll(dbLayer(db as never), feeds.layer, logs.layer)),
+    );
+
+  test("returns successfully with no fetch when the lease claim is stale or already gone", async () => {
+    const feeds = feedsLayer();
+
+    await Effect.runPromise(runItem(createFakeClaimDb({ claimedRow: null }), feeds));
+
+    expect(feeds.calls.subscribeToKnownFeed).toEqual([]);
+    expect(feeds.calls.subscribeToFeedUrl).toEqual([]);
+  });
+
   test("subscribes by feedId without a remote fetch when the item already has a known feed", async () => {
-    subscribeToExistingFeedMock.mockClear();
-    createOrSubscribeToFeedMock.mockClear();
-    enqueueFeedRefreshMock.mockClear();
-    subscribeToExistingFeedMock.mockImplementationOnce(async () => ({
-      feedId: "feed-known",
-      subscriptionId: "sub-1",
-      newFeed: false,
-      newSubscription: true,
-    }));
+    const feeds = feedsLayer();
     const claimed = claimedItem({
       title: "Custom Title",
       folderName: "Tech",
@@ -543,69 +708,34 @@ describe("runOpmlImportItemJob", () => {
       feedId: "feed-known",
     });
     const db = withCompleteTransaction(createFakeClaimDb({ claimedRow: claimed }));
-    const testLogger = logger();
 
-    await runOpmlImportItemJob(
-      db as never,
-      { importId: "import-1", itemId: "item-1", leaseToken: "lease-1" },
-      testLogger,
-    );
+    await Effect.runPromise(runItem(db, feeds));
 
-    expect(subscribeToExistingFeedMock).toHaveBeenCalledWith(db, "user-1", "feed-known", {
-      folderId: "folder-1",
-      customTitle: "Custom Title",
-    });
-    expect(createOrSubscribeToFeedMock).not.toHaveBeenCalled();
-    expect(enqueueFeedRefreshMock).toHaveBeenCalledWith(
-      db,
-      "feed-known",
-      "user-1",
-      "subscription_created",
-      testLogger,
-    );
+    expect(feeds.calls.subscribeToKnownFeed).toEqual([
+      ["user-1", "feed-known", { folderId: "folder-1", customTitle: "Custom Title" }],
+    ]);
+    expect(feeds.calls.subscribeToFeedUrl).toEqual([]);
+    expect(feeds.calls.requestInitialRefresh).toEqual([["feed-1", "user-1"]]);
   });
 
-  test("falls back to createOrSubscribeToFeed when the item has no known feed", async () => {
-    createOrSubscribeToFeedMock.mockClear();
-    createOrSubscribeToFeedMock.mockImplementationOnce(async () => ({
-      feedId: "feed-1",
-      subscriptionId: "sub-1",
-      newFeed: true,
-      newSubscription: true,
-    }));
+  test("falls back to subscribing by URL when the item has no known feed", async () => {
+    const feeds = feedsLayer();
     const claimed = claimedItem({
       originalUrl: "https://example.com/unknown.xml",
       normalizedUrl: "https://example.com/unknown.xml",
       feedId: null,
     });
     const db = withCompleteTransaction(createFakeClaimDb({ claimedRow: claimed }));
-    const testLogger = logger();
 
-    await runOpmlImportItemJob(
-      db as never,
-      { importId: "import-1", itemId: "item-1", leaseToken: "lease-1" },
-      testLogger,
-    );
+    await Effect.runPromise(runItem(db, feeds));
 
-    expect(createOrSubscribeToFeedMock).toHaveBeenCalledWith(
-      db,
-      "user-1",
-      "https://example.com/unknown.xml",
-      { folderId: null, customTitle: null },
-    );
+    expect(feeds.calls.subscribeToFeedUrl).toEqual([
+      ["user-1", "https://example.com/unknown.xml", { folderId: null, customTitle: null }],
+    ]);
   });
 
-  test("classifies and durably persists a retryable failure without throwing", async () => {
-    createOrSubscribeToFeedMock.mockClear();
-    createOrSubscribeToFeedMock.mockImplementationOnce(async () => {
-      throw new Error("connection reset");
-    });
-    const claimed = claimedItem({
-      originalUrl: "https://example.com/unknown.xml",
-      normalizedUrl: "https://example.com/unknown.xml",
-      feedId: null,
-      attempts: 1,
-    });
+  /** A db whose claim returns `claimed` and which records every later update patch. */
+  function createFailingItemDb(claimed: Record<string, unknown>) {
     const updateSets: Array<Record<string, unknown>> = [];
     // claimLeasedOpmlItem's update (status: "processing") returns the claim via .returning();
     // retryOrFailOpmlItem's subsequent update (a retryable, non-final attempt, status: "pending")
@@ -624,16 +754,118 @@ describe("runOpmlImportItemJob", () => {
         from: () => ({ where: () => ({ limit: () => Promise.resolve([{ userId: "user-1" }]) }) }),
       }),
     };
-    const testLogger = logger();
+    return { db, updateSets };
+  }
 
-    await runOpmlImportItemJob(
-      db as never,
-      { importId: "import-1", itemId: "item-1", leaseToken: "lease-1" },
-      testLogger,
-    );
+  test("classifies and durably persists a retryable failure without failing the job", async () => {
+    const feeds = feedsLayer({
+      subscribeToFeedUrl: () =>
+        Effect.fail(
+          new InternalError({
+            message: "connection reset",
+            code: "OPML_FEED_IMPORT_FAILED",
+          }),
+        ),
+    });
+    const { db, updateSets } = createFailingItemDb(claimedItem({ attempts: 1 }));
+    const logs = recordingLogger();
+
+    await Effect.runPromise(runItem(db, feeds, logs));
 
     expect(
-      updateSets.some((patch) => patch.status === "pending" && patch.leaseToken === null),
+      updateSets.some(
+        (patch) =>
+          patch.status === "pending" &&
+          patch.leaseToken === null &&
+          patch.errorCode === "OPML_FEED_IMPORT_FAILED" &&
+          patch.errorMessage === "connection reset",
+      ),
     ).toBe(true);
+    expect(logs.entries).toContainEqual(
+      expect.objectContaining({
+        level: "error",
+        event: "worker.job.opml_import_item.failed",
+        context: expect.objectContaining({ retryable: true, code: "OPML_FEED_IMPORT_FAILED" }),
+      }),
+    );
+  });
+
+  test("fails an item permanently on a non-retryable error", async () => {
+    const feeds = feedsLayer({
+      subscribeToFeedUrl: () =>
+        Effect.fail(new BadRequest({ message: "not a feed", code: "FEED_PARSE_FAILED" })),
+    });
+    const claimed = claimedItem({ attempts: 1 });
+    const updateSets: Array<Record<string, unknown>> = [];
+    const db = {
+      update: () => ({
+        set: (patch: Record<string, unknown>) => {
+          updateSets.push(patch);
+          return { where: () => ({ returning: () => Promise.resolve([claimed]) }) };
+        },
+      }),
+      select: () => ({
+        from: () => ({ where: () => ({ limit: () => Promise.resolve([{ userId: "user-1" }]) }) }),
+      }),
+      transaction: async (callback: (tx: unknown) => unknown) =>
+        callback({
+          update: () => ({
+            set: (patch: Record<string, unknown>) => {
+              updateSets.push(patch);
+              return { where: () => ({ returning: () => Promise.resolve([{ id: "item-1" }]) }) };
+            },
+          }),
+          select: () => ({
+            from: () => ({
+              where: () => ({
+                limit: () =>
+                  Promise.resolve([
+                    {
+                      totalItems: 5,
+                      subscribedItems: 0,
+                      alreadySubscribedItems: 0,
+                      failedItems: 1,
+                      cancelledItems: 0,
+                    },
+                  ]),
+              }),
+            }),
+          }),
+        }),
+    };
+
+    await Effect.runPromise(runItem(db, feeds));
+
+    expect(updateSets).toContainEqual(
+      expect.objectContaining({
+        status: "failed",
+        errorCode: "FEED_PARSE_FAILED",
+        errorMessage: "not a feed",
+      }),
+    );
+  });
+
+  test("fails the job when the retry decision itself cannot be persisted", async () => {
+    const feeds = feedsLayer({
+      subscribeToFeedUrl: () => Effect.fail(new InternalError({ message: "boom" })),
+    });
+    const claimed = claimedItem({ attempts: 1 });
+    const db = {
+      update: () => ({
+        set: (patch: Record<string, unknown>) => {
+          if (patch.status === "processing") {
+            return { where: () => ({ returning: () => Promise.resolve([claimed]) }) };
+          }
+          return { where: () => Promise.reject(new Error("database down")) };
+        },
+      }),
+      select: () => ({
+        from: () => ({ where: () => ({ limit: () => Promise.resolve([{ userId: "user-1" }]) }) }),
+      }),
+    };
+
+    const error = await Effect.runPromise(Effect.flip(runItem(db, feeds)));
+
+    expect(error).toMatchObject({ _tag: "DatabaseError", operation: "opml.item.retry" });
   });
 });

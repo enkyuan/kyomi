@@ -8,7 +8,7 @@ import {
   toCategorySlug,
   type NormalizedImportRecord,
   type ValidationReport,
-} from "../../../../../apps/api/src/modules/catalog/import";
+} from "@modules/catalog/import/records";
 
 describe("catalog import metadata preservation", () => {
   test("parseRecord carries source/language/category/content_type/quality_score", () => {
