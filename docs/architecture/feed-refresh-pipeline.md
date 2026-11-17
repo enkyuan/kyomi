@@ -26,6 +26,11 @@ Workers use:
 - `JOB_READ_COUNT`
 - `JOB_PROCESS_CONCURRENCY`
 - `JOB_STREAM_MAX_LENGTH`
+- `SHUTDOWN_BUDGET_MS` (default 30000): the whole window a worker has to stop in. Compose sets the
+  worker's `stop_grace_period` to 30s; keep the two in step. `app/jobs/shutdown.ts` spends the budget
+  on draining running jobs, then a 2s settle for any job it has to interrupt, then a 5s reserve for
+  closing Redis and Postgres. A job cut off at the end of the drain stays pending and is claimed
+  again after the stream's pending-idle time.
 
 Scheduled system refreshes skip article enrichment by default. User-triggered refreshes can still enrich articles.
 

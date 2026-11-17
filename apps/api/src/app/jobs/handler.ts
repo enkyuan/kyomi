@@ -26,6 +26,7 @@ import {
 } from "@modules/opml/jobs";
 import { serializeError } from "@shared/errors/serialize";
 import { makeDocumentJobs } from "./documents";
+import { INTERRUPTED_JOB_SETTLE_MS, shutdownWindows } from "./shutdown";
 import {
   FeedRefreshFailed,
   classifyJobFailure,
@@ -60,15 +61,13 @@ function promiseLogger(log: AppLoggerShape): LogSink {
 /** What the extraction Effects need; captured once so each job runs against the same services. */
 type ExtractionServices = AppConfig | AppLogger | Db | HttpClient.HttpClient | JobQueue;
 
-/** How long an interrupted job's Promise gets to settle before it is abandoned. */
-const INTERRUPTED_JOB_SETTLE = Duration.seconds(30);
-
 const noop = () => undefined;
 
 /**
  * Run a legacy Promise operation; whatever it throws becomes a typed `JobFailure`. If the fiber is
- * interrupted (worker shutdown) the release step waits, uninterruptibly and up to `settle`, for the
- * Promise to settle, so the pool and Redis are still open while it finishes. The fiber ends only
+ * interrupted (worker shutdown) the release step waits, uninterruptibly and up to `settle` (a share
+ * of the shutdown budget, see `shutdown.ts`), for the Promise to settle, so the pool and Redis are
+ * still open while it finishes. The fiber ends only
  * after the work has, which is what lets the consumer's scope close the shared clients afterwards.
  * Feed ingestion takes no abort signal, so abandoning its Promise (the `tryPromise` default) would
  * let it run on against closed clients and lose its final status write. `onAbandoned` runs when
@@ -77,7 +76,7 @@ const noop = () => undefined;
 export const attemptJob = <A>(
   run: () => Promise<A>,
   onAbandoned: Effect.Effect<void>,
-  settle: Duration.Input = INTERRUPTED_JOB_SETTLE,
+  settle: Duration.Input = Duration.millis(INTERRUPTED_JOB_SETTLE_MS),
 ) =>
   Effect.acquireUseRelease(
     Effect.sync(run),
@@ -102,6 +101,7 @@ export const makeJobHandler = Effect.gen(function* () {
   const opmlServices = yield* Effect.context<AppLogger | Db | JobQueue | OpmlFeeds | Redis>();
   const documents = yield* makeDocumentJobs;
   const logger = promiseLogger(log);
+  const { settleMs } = shutdownWindows(config.SHUTDOWN_BUDGET_MS);
   const hostRateLimiter = createHostRateLimiter({
     store: createRedisHostRateLimitStore(redis.client),
     leaseMs: config.FEED_FETCH_HOST_LEASE_MS,
@@ -142,8 +142,9 @@ export const makeJobHandler = Effect.gen(function* () {
         log.error("worker.job.abandoned", {
           jobType: job.type,
           feedId: job.payload.feedId,
-          settleMs: Duration.toMillis(INTERRUPTED_JOB_SETTLE),
+          settleMs,
         }),
+        Duration.millis(settleMs),
       );
       const durationMs = yield* elapsedSince(startedAt);
       for (const itemId of result.documentItemIds ?? []) {

@@ -169,6 +169,11 @@ export function loadEnv(source: RawEnv = process.env) {
       JOB_PROCESS_CONCURRENCY: z.coerce.number().int().positive().max(64).default(4),
       JOB_READ_COUNT: z.coerce.number().int().positive().max(256).default(10),
       JOB_STREAM_MAX_LENGTH: z.coerce.number().int().min(1_000).max(5_000_000).default(100_000),
+      /**
+       * The whole window a worker has to stop in. The compose `stop_grace_period` for the worker
+       * must be at least this; `app/jobs/shutdown.ts` splits it into drain, settle and reserve.
+       */
+      SHUTDOWN_BUDGET_MS: z.coerce.number().int().min(5_000).max(300_000).default(30_000),
       JOB_STREAMS: csvFromEnv.default([
         "jobs:feed-refresh",
         "jobs:opml",

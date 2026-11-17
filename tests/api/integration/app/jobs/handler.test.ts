@@ -1,6 +1,8 @@
 import { describe, expect, test } from "bun:test";
 import { Effect, Exit, Fiber, Layer } from "effect";
+import { TestClock } from "effect/testing";
 import { attemptJob, makeFailureReporter, makeJobHandler } from "@app/jobs/handler";
+import { INTERRUPTED_JOB_SETTLE_MS } from "@app/jobs/shutdown";
 import type { JobMessage } from "@kyomi/ingest";
 import {
   fakeDb,
@@ -188,6 +190,31 @@ describe("attemptJob", () => {
     );
 
     expect(abandoned).toBe(true);
+  });
+
+  test("without a settle window it waits for the shutdown settle window, then abandons", async () => {
+    const abandoned: string[] = [];
+
+    await Effect.runPromise(
+      Effect.gen(function* () {
+        const fiber = yield* Effect.forkChild(
+          attemptJob(
+            () => new Promise<void>(() => undefined),
+            Effect.sync(() => void abandoned.push("abandoned")),
+          ),
+        );
+        yield* TestClock.adjust("1 millis");
+        const interrupting = yield* Effect.forkChild(Fiber.interrupt(fiber));
+
+        yield* TestClock.adjust(`${INTERRUPTED_JOB_SETTLE_MS - 1} millis`);
+        expect(abandoned).toEqual([]);
+
+        yield* TestClock.adjust("1 millis");
+        yield* Fiber.join(interrupting);
+      }).pipe(Effect.provide(TestClock.layer())),
+    );
+
+    expect(abandoned).toEqual(["abandoned"]);
   });
 
   test("a rejection becomes a typed job failure and nothing is abandoned", async () => {

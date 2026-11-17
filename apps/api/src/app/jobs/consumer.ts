@@ -6,11 +6,13 @@ import { startConsumers, type StreamConsumer } from "@adapters/queue/consumer";
 import { AppConfig } from "@config/env/service";
 import { classifyJobFailure, type JobFailure } from "./classify";
 import { makeFailureReporter, makeJobHandler } from "./handler";
+import { shutdownWindows } from "./shutdown";
 
 /**
  * The job worker: one consumer fiber per stream in `JOB_STREAMS`, owned by this layer's scope.
  * Building the layer starts them; releasing it (SIGTERM, runtime disposal) stops reading, lets
- * running jobs finish within the drain grace, then interrupts what is left.
+ * running jobs finish within the drain window, then interrupts what is left (`shutdown.ts` splits
+ * `SHUTDOWN_BUDGET_MS` into those windows).
  */
 export const WorkerLive = Layer.effectDiscard(
   Effect.gen(function* () {
@@ -43,6 +45,8 @@ export const WorkerLive = Layer.effectDiscard(
     yield* log.info("worker.started", { consumer: consumerPrefix, streams: config.JOB_STREAMS });
     // Registered before the consumers, so it runs after they have drained.
     yield* Effect.addFinalizer(() => log.info("worker.stopped", { consumer: consumerPrefix }));
-    yield* startConsumers(consumers);
+    yield* startConsumers(consumers, {
+      graceMs: shutdownWindows(config.SHUTDOWN_BUDGET_MS).drainMs,
+    });
   }),
 );
