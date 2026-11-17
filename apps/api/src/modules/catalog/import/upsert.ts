@@ -12,7 +12,7 @@ import { Db } from "@adapters/db/service";
 import { AppLogger } from "@adapters/logger/service";
 import { FeedSearch, type FeedSearchDocument } from "@adapters/search/service";
 import { serializeError } from "@shared/errors/serialize";
-import { currentDate } from "../clock";
+import { currentDate } from "@shared/effect/clock";
 import { domainFromUrl, type NormalizedImportRecord } from "./records";
 
 type BatchUpsertResult = {

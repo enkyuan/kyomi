@@ -11,6 +11,8 @@ import { Db } from "@adapters/db/service";
 import { activeEmbeddingModelId } from "@config/embeddings";
 import { AppConfig } from "@config/env/service";
 import { CatalogFileError, InvalidArguments } from "@modules/catalog/errors";
+import { positiveIntFlag, valueAfter } from "@shared/cli/args";
+import { rowsFromExecute } from "@shared/db/rows";
 import { AppLive } from "../runtime";
 import { runMain } from "../setup/main";
 import { ensureDatabaseReady } from "../setup/ready";
@@ -80,27 +82,6 @@ type CategoryAuditDatabase = {
   execute: (query: SQL) => Promise<unknown> | unknown;
 };
 
-function valueAfter(argv: string[], flag: string): string | null {
-  const index = argv.indexOf(flag);
-  if (index === -1) {
-    return null;
-  }
-  const value = argv[index + 1];
-  return value && !value.startsWith("--") ? value : null;
-}
-
-function positiveIntFlag(argv: string[], flag: string, fallback: number): number {
-  const value = valueAfter(argv, flag);
-  if (!value) {
-    return fallback;
-  }
-  const parsed = Number.parseInt(value, 10);
-  if (!Number.isFinite(parsed) || parsed <= 0) {
-    throw new Error(`Invalid ${flag} value: ${value}`);
-  }
-  return parsed;
-}
-
 function formatFlag(argv: string[]): CategoryAuditFormat {
   const value = valueAfter(argv, "--format") ?? "jsonl";
   if (value !== "jsonl" && value !== "summary") {
@@ -117,16 +98,6 @@ export function parseCategoryAuditArgs(argv: string[]): CategoryAuditArgs {
     labelsFile: valueAfter(argv, "--labels-file"),
     format: formatFlag(argv),
   };
-}
-
-function rowsFromExecute<T>(result: unknown): T[] {
-  if (Array.isArray(result)) {
-    return result as T[];
-  }
-  if (result && typeof result === "object" && "rows" in result) {
-    return (result as { rows: T[] }).rows;
-  }
-  return [];
 }
 
 function normalizeLabelList(values: unknown): string[] {

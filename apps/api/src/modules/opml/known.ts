@@ -4,9 +4,10 @@ import { feedItems, feeds, feedSubscriptions, opmlImportItems, opmlImports } fro
 import { Db } from "@adapters/db/service";
 import { AppLogger } from "@adapters/logger/service";
 import { serializeError } from "@shared/errors/serialize";
+import { rowsFromExecute } from "@shared/db/rows";
 import { OPML_MATERIALIZE_CHUNK_SIZE } from "./constants";
 import { OpmlFeeds } from "./feeds";
-import { rowsFromExecute, type SqlClient } from "./store/sql";
+import type { SqlClient } from "./store/sql";
 
 /** Feeds whose first refresh is requested at once. */
 const REFRESH_PUBLISH_CONCURRENCY = 4;

@@ -1,6 +1,6 @@
 import { Effect, Result } from "effect";
 import { AppLogger } from "@adapters/logger/service";
-import { currentDate } from "../clock";
+import { currentDate } from "@shared/effect/clock";
 import { failureMessage } from "../errors";
 import {
   createProcessedFeedStats,

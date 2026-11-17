@@ -1,15 +1,6 @@
 import { Effect } from "effect";
+import { valueAfter } from "@shared/cli/args";
 import { InvalidArguments } from "./errors";
-
-/** The value following `flag`, or null when the flag is absent or followed by another flag. */
-export function valueAfter(argv: readonly string[], flag: string): string | null {
-  const index = argv.indexOf(flag);
-  if (index === -1) {
-    return null;
-  }
-  const value = argv[index + 1];
-  return value && !value.startsWith("--") ? value : null;
-}
 
 /** A positive integer, or `fallback` when the value is missing or malformed. */
 export function positiveInt(value: string | null, fallback: number): number {

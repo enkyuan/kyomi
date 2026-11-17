@@ -10,7 +10,7 @@ import {
   type EmbedSnapshot,
 } from "@kyomi/ingest/enrichment";
 import type { DocumentTarget } from "@kyomi/ingest";
-import { currentDate } from "@modules/articles/clock";
+import { currentDate } from "@shared/effect/clock";
 import type { DatabaseError } from "@shared/effect/errors";
 import { fetchBounded } from "./fetch";
 import { EnrichmentGates, retryTransient, type RetryOptions } from "./limits";

@@ -3,7 +3,7 @@ import { articleClips, articleReadingState, feedItems, userPreferences } from "@
 import { and, eq, or } from "drizzle-orm";
 import { Db, type Database } from "@adapters/db/service";
 import { Conflict } from "@shared/effect/errors";
-import { currentDate } from "../clock";
+import { currentDate } from "@shared/effect/clock";
 import { articleNotFound } from "../errors";
 import { getArticleDetail } from "../read/detail";
 import { toReadingProgressDtoFromFields } from "./read";

@@ -6,6 +6,7 @@ import { AppLogger } from "@adapters/logger/service";
 import { JobQueue } from "@adapters/queue/service";
 import { AppConfig } from "@config/env/service";
 import { serializeError } from "@shared/errors/serialize";
+import { rowsFromExecute } from "@shared/db/rows";
 import { logTickFailure } from "./tick";
 
 export type FeedRefreshScheduleReason = "scheduled" | "global_scheduled";
@@ -97,18 +98,6 @@ export function buildFeedRefreshClaimSql(input: {
     RETURNING feeds.id AS "feedId", claimed.reason AS reason,
               feeds.refresh_generation AS "generation"
   `;
-}
-
-function rowsFromExecute<T>(result: unknown): T[] {
-  if (Array.isArray(result)) {
-    return result as T[];
-  }
-
-  if (result && typeof result === "object" && "rows" in result) {
-    return (result as { rows: T[] }).rows;
-  }
-
-  return [];
 }
 
 export const countActiveQueuedFeedRefreshes = Effect.fn("feed.scheduler.countQueued")(function* (

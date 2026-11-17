@@ -4,6 +4,8 @@ import { feedCategoryAssignments, feedItemCategoryAssignments, feedItems } from 
 import { EMBEDDING_CLASSIFIER_METHOD, KEYWORD_CLASSIFIER_METHOD } from "@kyomi/ingest";
 import { Db, type Database } from "@adapters/db/service";
 import { InvalidArguments } from "@modules/catalog/errors";
+import { positiveIntFlag, valueAfter } from "@shared/cli/args";
+import { rowsFromExecute } from "@shared/db/rows";
 import { AppLive } from "../runtime";
 import { runMain } from "../setup/main";
 import { ensureDatabaseReady } from "../setup/ready";
@@ -37,42 +39,11 @@ type CategoryCoverageRow = {
 
 type CategoryCoverageDatabase = Pick<Database, "execute">;
 
-function valueAfter(argv: string[], flag: string): string | null {
-  const index = argv.indexOf(flag);
-  if (index === -1) {
-    return null;
-  }
-  const value = argv[index + 1];
-  return value && !value.startsWith("--") ? value : null;
-}
-
-function positiveIntFlag(argv: string[], flag: string, fallback: number): number {
-  const value = valueAfter(argv, flag);
-  if (!value) {
-    return fallback;
-  }
-  const parsed = Number.parseInt(value, 10);
-  if (!Number.isFinite(parsed) || parsed <= 0) {
-    throw new Error(`Invalid ${flag} value: ${value}`);
-  }
-  return parsed;
-}
-
 export function parseCategoryCoverageArgs(argv: string[]): CategoryCoverageArgs {
   return {
     days: positiveIntFlag(argv, "--days", 7),
     feedId: valueAfter(argv, "--feed-id"),
   };
-}
-
-function rowsFromExecute<T>(result: unknown): T[] {
-  if (Array.isArray(result)) {
-    return result as T[];
-  }
-  if (result && typeof result === "object" && "rows" in result) {
-    return (result as { rows: T[] }).rows;
-  }
-  return [];
 }
 
 function percent(numerator: number, denominator: number): number {

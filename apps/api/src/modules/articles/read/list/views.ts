@@ -1,5 +1,5 @@
 import { Effect } from "effect";
-import { currentDate } from "@modules/articles/clock";
+import { currentDate } from "@shared/effect/clock";
 import { Db } from "@adapters/db/service";
 import type { ArticleSort } from "@modules/articles/params";
 import { attachReadingProgress } from "@modules/articles/progress/read";

@@ -1,6 +1,6 @@
 import { Console, Data, Effect } from "effect";
 import { searchFeeds } from "@modules/discover/operations";
-import { valueAfter } from "@modules/catalog/args";
+import { valueAfter } from "@shared/cli/args";
 import { AppLive } from "../runtime";
 import { runMain } from "../setup/main";
 import { ensureDatabaseReady } from "../setup/ready";

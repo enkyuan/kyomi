@@ -11,7 +11,7 @@ import { and, eq, sql } from "drizzle-orm";
 import { Db } from "@adapters/db/service";
 import { BadRequest } from "@shared/effect/errors";
 import { checkContentFieldBudget } from "@shared/http/budget";
-import { currentDate } from "../clock";
+import { currentDate } from "@shared/effect/clock";
 import { articleNotFound } from "../errors";
 import {
   CLIP_UPDATE_KEYS,

@@ -1,5 +1,6 @@
 import { Effect } from "effect";
-import { strictPositiveIntFlag, valueAfter } from "../args";
+import { valueAfter } from "@shared/cli/args";
+import { strictPositiveIntFlag } from "../args";
 import { InvalidArguments } from "../errors";
 
 export const DEFAULT_IMPORT_BATCH_SIZE = 1_000;

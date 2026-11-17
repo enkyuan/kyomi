@@ -2,6 +2,7 @@ import { articleClips } from "@kyomi/db";
 import { and, asc, desc, eq, gt, gte, ilike, lt, or, type SQL } from "drizzle-orm";
 import type { Database } from "@adapters/db/service";
 import type { ArticleSort } from "@modules/articles/params";
+import { escapeLikePattern } from "@modules/articles/read/sql";
 import { attachReadingProgress } from "@modules/articles/progress/read";
 import type { ArticlesCursorListResponseDto } from "@modules/articles/types";
 import { clipReadColumns, type ClipReadRow } from "./columns";
@@ -55,10 +56,6 @@ function clipOrderByForSort(sort: ArticleSort) {
     return [asc(articleClips.isRead), desc(articleClips.createdAt), desc(articleClips.id)] as const;
   }
   return [desc(articleClips.createdAt), desc(articleClips.id)] as const;
-}
-
-function escapeLikePattern(input: string): string {
-  return input.replaceAll("\\", "\\\\").replaceAll("%", "\\%").replaceAll("_", "\\_");
 }
 
 /** One page of the user's clips (up to `take` rows) for the filters, sort and boundary in `opts`. */

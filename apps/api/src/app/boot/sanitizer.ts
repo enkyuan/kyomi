@@ -7,6 +7,7 @@ import {
 } from "@modules/articles/reader/content";
 import { Db, type Database } from "@adapters/db/service";
 import { InvalidArguments } from "@modules/catalog/errors";
+import { valueAfter } from "@shared/cli/args";
 import { AppLive } from "../runtime";
 import { runMain } from "../setup/main";
 import { ensureDatabaseReady } from "../setup/ready";
@@ -30,15 +31,6 @@ export type BackfillSanitizerVersionArgs = {
   sleepMs: number;
   scopes: BackfillScope[];
 };
-
-function valueAfter(argv: string[], flag: string): string | null {
-  const index = argv.indexOf(flag);
-  if (index === -1) {
-    return null;
-  }
-  const value = argv[index + 1];
-  return value && !value.startsWith("--") ? value : null;
-}
 
 function boundedIntFlag(
   argv: string[],

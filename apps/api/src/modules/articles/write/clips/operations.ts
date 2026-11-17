@@ -12,7 +12,7 @@ import { BadRequest, InternalError } from "@shared/effect/errors";
 import { serializeError } from "@shared/errors/serialize";
 import { checkContentFieldBudget } from "@shared/http/budget";
 import { assertHttpOrHttpsUrl } from "@shared/net/http";
-import { currentDate } from "../../clock";
+import { currentDate } from "@shared/effect/clock";
 import { articleNotFound } from "../../errors";
 import { hasAnyOwn, savedAtAfter } from "../fields";
 import { compileClientHtml } from "../html";

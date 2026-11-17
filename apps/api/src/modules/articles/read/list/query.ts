@@ -1,7 +1,7 @@
 import { Effect } from "effect";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@kyomi/db";
 import { and, eq, gte, lt, sql, type SQL } from "drizzle-orm";
-import { currentDate } from "@modules/articles/clock";
+import { currentDate } from "@shared/effect/clock";
 import { Db } from "@adapters/db/service";
 import { AppLogger } from "@adapters/logger/service";
 import { AppConfig } from "@config/env/service";

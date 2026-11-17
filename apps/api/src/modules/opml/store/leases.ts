@@ -4,8 +4,8 @@ import { opmlImportItems, opmlImports } from "@kyomi/db";
 import { Db } from "@adapters/db/service";
 import { AppLogger } from "@adapters/logger/service";
 import { serializeError } from "@shared/errors/serialize";
+import { rowsFromExecute } from "@shared/db/rows";
 import { OPML_ITEM_HEARTBEAT_MS, OPML_ITEM_LEASE_MS } from "../constants";
-import { rowsFromExecute } from "./sql";
 
 export type ClaimDispatchableOpmlItemsOptions = {
   maxImports: number;

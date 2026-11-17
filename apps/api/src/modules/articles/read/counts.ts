@@ -1,7 +1,7 @@
 import { Effect } from "effect";
 import { articleClips, feedItemUserState, feedItems, feedSubscriptions } from "@kyomi/db";
 import { and, eq, gte, inArray, lt, sql, type SQL } from "drizzle-orm";
-import { currentDate } from "@modules/articles/clock";
+import { currentDate } from "@shared/effect/clock";
 import { Db, type Database } from "@adapters/db/service";
 import { capPublishedBeforeAtNow } from "./list/window";
 import {

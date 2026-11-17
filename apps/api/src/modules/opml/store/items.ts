@@ -3,9 +3,10 @@ import { Array as Arr, DateTime, Effect } from "effect";
 import { and, count, eq, inArray, lt, notInArray, sql } from "drizzle-orm";
 import { opmlImportItems, opmlImports } from "@kyomi/db";
 import { Db } from "@adapters/db/service";
+import { rowsFromExecute } from "@shared/db/rows";
 import { OPML_ITEM_MAX_ATTEMPTS, OPML_MATERIALIZE_CHUNK_SIZE } from "../constants";
 import type { ParsedOpmlFeed } from "../types";
-import { rowsFromExecute, type SqlClient } from "./sql";
+import type { SqlClient } from "./sql";
 
 const NONTERMINAL_PARENT_STATUSES = ["dispatching", "running"] as const;
 

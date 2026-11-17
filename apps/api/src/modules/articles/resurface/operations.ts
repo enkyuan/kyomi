@@ -2,7 +2,7 @@ import { Effect } from "effect";
 import { articleReadingState } from "@kyomi/db";
 import { eq } from "drizzle-orm";
 import { Db, type Database } from "@adapters/db/service";
-import { currentDate } from "@modules/articles/clock";
+import { currentDate } from "@shared/effect/clock";
 import { articleNotFound } from "@modules/articles/errors";
 import { toReadingProgressDtoFromFields } from "@modules/articles/progress/read";
 import { scheduleFieldsOf, type ReadingStateRow } from "@modules/articles/progress/write";
