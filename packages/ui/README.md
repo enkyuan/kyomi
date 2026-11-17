@@ -85,7 +85,8 @@ as plain text. Do not use it in long lists or for values that change while dragg
 
 - `variant="attached"` (default) joins segments into one bordered control.
 - `variant="split"` keeps each segment a separate pill: capsule outer ends, `rounded-sm` inner
-  corners, and a 3px gap, like a theme and language switcher.
+  corners, and a gap and inner radius that scale with `--split-h` (`--split-gap` is 1/24 of it,
+  `--split-inner` 1/8), like a theme and language switcher.
 
 ```tsx
 <ButtonGroup aria-label="Theme and language" variant="split">

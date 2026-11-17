@@ -31,8 +31,8 @@ export function ScrollArea({
       >
         {children}
       </ScrollAreaPrimitive.Viewport>
-      <ScrollBar orientation="vertical" />
-      <ScrollBar orientation="horizontal" />
+      <ScrollBar orientation="vertical" track={scrollbarGutter ? "none" : "hover"} />
+      <ScrollBar orientation="horizontal" track={scrollbarGutter ? "none" : "hover"} />
       <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
     </ScrollAreaPrimitive.Root>
   );

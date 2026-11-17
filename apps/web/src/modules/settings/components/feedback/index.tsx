@@ -67,7 +67,7 @@ export function FeedbackPagePanel() {
               <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
             </ScrollAreaPrimitive.Root>
             <div className="feedback-composer-toolbar">
-              <Button className="feedback-composer-submit" size="sm" type="submit">
+              <Button className="feedback-composer-submit" shape="pill" size="sm" type="submit">
                 Send
               </Button>
             </div>

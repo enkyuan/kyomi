@@ -9,6 +9,7 @@ import {
   PlusIcon,
 } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
+import { cn } from "@kyomi/ui/lib/utils";
 import {
   Item,
   ItemContent,
@@ -25,6 +26,12 @@ import { FolderIconBadge } from "./icon";
 export const FOLDER_ACTION_BUTTON_CLASS =
   "h-10 flex-1 gap-1.5 px-4 font-semibold text-sm leading-none sm:h-10 sm:text-sm";
 export const FOLDER_ICON_BUTTON_CLASS = "size-10 px-0 sm:size-10";
+
+/** Flat like its siblings, and tactile (the outline look) only while it is pressed. */
+const CREATE_FOLDER_BUTTON_CLASS = cn(
+  FOLDER_ICON_BUTTON_CLASS,
+  "[:active,[data-pressed]]:border-input [:active,[data-pressed]]:bg-popover [:active,[data-pressed]]:shadow-xs/5 dark:[:active,[data-pressed]]:bg-input/32",
+);
 
 export function FolderActions({
   exportingOpml = false,
@@ -115,9 +122,9 @@ function FolderSummaryActions({
       <RailTooltip label="Create folder">
         <Button
           aria-label="Create folder"
-          className={FOLDER_ICON_BUTTON_CLASS}
+          className={CREATE_FOLDER_BUTTON_CLASS}
           shape="pill"
-          variant="outline"
+          variant="secondary"
           onClick={onAddFolder}
         >
           <PlusIcon className="mx-0 size-4" />

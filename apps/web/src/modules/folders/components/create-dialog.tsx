@@ -131,6 +131,7 @@ export function CreateFolderDialog({
           render={
             <Button
               aria-label="Create folder"
+              shape="pill"
               size="icon-xs"
               variant="ghost"
               onClick={(event) => {
@@ -145,7 +146,10 @@ export function CreateFolderDialog({
           <PlusIcon aria-hidden="true" className="size-3" />
         </DialogTrigger>
       ) : null}
-      <DialogPopup className="sm:max-w-sm">
+      <DialogPopup
+        className="sm:max-w-sm"
+        closeProps={{ render: <Button shape="pill" size="icon" variant="ghost" /> }}
+      >
         <Form
           className="contents"
           onSubmit={async (event) => {
@@ -184,8 +188,8 @@ export function CreateFolderDialog({
             </Field>
           </DialogPanel>
           <DialogFooter>
-            <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
-            <Button loading={createFolderMutation.isPending} type="submit">
+            <DialogClose render={<Button shape="pill" variant="ghost" />}>Cancel</DialogClose>
+            <Button loading={createFolderMutation.isPending} shape="pill" type="submit">
               Create folder
             </Button>
           </DialogFooter>

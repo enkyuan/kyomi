@@ -184,7 +184,7 @@ function CommandResults({
             </div>
           </CommandList>
         </ScrollAreaPrimitive.Viewport>
-        <ScrollBar orientation="vertical" />
+        <ScrollBar orientation="vertical" track="none" />
         <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
       </ScrollAreaPrimitive.Root>
       <div className="kyomi-command-footer">
