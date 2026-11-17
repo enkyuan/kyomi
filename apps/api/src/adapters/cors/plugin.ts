@@ -1,12 +1,15 @@
 import { cors } from "@elysiajs/cors";
 import { Elysia } from "elysia";
-import { env } from "@config/env";
+import type { Env } from "@config/env/runtime";
 
-export const corsPlugin = new Elysia({
-  name: "cors.plugin",
-}).use(
-  cors({
-    origin: env.WEB_ORIGIN,
-    credentials: true,
-  }),
-);
+/** Credentialed CORS for the web app's origin. */
+export function corsPlugin(config: Pick<Env, "WEB_ORIGIN">) {
+  return new Elysia({
+    name: "cors.plugin",
+  }).use(
+    cors({
+      origin: config.WEB_ORIGIN,
+      credentials: true,
+    }),
+  );
+}

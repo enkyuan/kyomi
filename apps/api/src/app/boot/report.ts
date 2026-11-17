@@ -1,8 +1,12 @@
+import { Console, Effect } from "effect";
 import { sql } from "drizzle-orm";
 import { feedCategoryAssignments, feedItemCategoryAssignments, feedItems } from "@kyomi/db";
-import { db, pool } from "@adapters/db/client";
-import { assertApiDatabaseReady } from "@adapters/db/preflight";
 import { EMBEDDING_CLASSIFIER_METHOD, KEYWORD_CLASSIFIER_METHOD } from "@kyomi/ingest";
+import { Db, type Database } from "@adapters/db/service";
+import { InvalidArguments } from "@modules/catalog/errors";
+import { AppLive } from "../runtime";
+import { runMain } from "../setup/main";
+import { ensureDatabaseReady } from "../setup/ready";
 
 export type CategoryCoverageArgs = {
   days: number;
@@ -31,7 +35,7 @@ type CategoryCoverageRow = {
   unclassified_items: number;
 };
 
-type CategoryCoverageDatabase = Pick<typeof db, "execute">;
+type CategoryCoverageDatabase = Pick<Database, "execute">;
 
 function valueAfter(argv: string[], flag: string): string | null {
   const index = argv.indexOf(flag);
@@ -128,7 +132,7 @@ export function summarizeCategoryCoverageReport(report: CategoryCoverageReport):
 
 export async function runCategoryCoverageReport(
   args: CategoryCoverageArgs,
-  database: CategoryCoverageDatabase = db,
+  database: CategoryCoverageDatabase,
 ): Promise<CategoryCoverageReport> {
   const result = await database.execute(sql<CategoryCoverageRow>`
     WITH recent_items AS (
@@ -205,15 +209,20 @@ export async function runCategoryCoverageReport(
 }
 
 if (import.meta.main) {
-  const args = parseCategoryCoverageArgs(process.argv);
-  try {
-    await assertApiDatabaseReady({
-      commandName: "categories:report",
-      ensureSchema: true,
+  const report = Effect.gen(function* () {
+    const args = yield* Effect.try({
+      try: () => parseCategoryCoverageArgs(process.argv),
+      catch: (cause) =>
+        new InvalidArguments({ message: cause instanceof Error ? cause.message : String(cause) }),
     });
-    const report = await runCategoryCoverageReport(args);
-    console.log(summarizeCategoryCoverageReport(report));
-  } finally {
-    await pool.end();
-  }
+    yield* ensureDatabaseReady({ commandName: "categories:report", ensureSchema: true });
+    const db = yield* Db;
+    const coverage = yield* db.use("categories.report", (client) =>
+      runCategoryCoverageReport(args, client),
+    );
+    yield* Console.log(summarizeCategoryCoverageReport(coverage));
+  });
+
+  // The layer scope closes Postgres and Redis once the run ends, or on SIGINT/SIGTERM.
+  runMain(report.pipe(Effect.provide(AppLive)));
 }

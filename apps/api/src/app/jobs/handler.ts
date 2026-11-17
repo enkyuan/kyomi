@@ -1,4 +1,5 @@
-import { Clock, Effect } from "effect";
+import { Clock, Duration, Effect, Option } from "effect";
+import type { HttpClient } from "effect/http";
 import {
   createHostRateLimiter,
   createRedisHostRateLimitStore,
@@ -10,15 +11,13 @@ import {
 import { Db } from "@adapters/db/service";
 import type { AppLogger as LogSink } from "@adapters/logger/pino";
 import { AppLogger, type AppLoggerShape } from "@adapters/logger/service";
-import type { FailureDisposition } from "@adapters/queue/consumer";
+import { JobQueue } from "@adapters/queue/service";
 import { Redis } from "@adapters/redis/service";
 import { AppConfig } from "@config/env/service";
 import { embeddingClassifierConfig } from "@config/embeddings";
-import { enqueueEnrichmentForStoredDocument } from "@modules/articles/document/enrich";
-import { createDocumentPatchStore } from "@modules/articles/document/store";
-import { handleDocumentEnrichmentJob } from "@modules/articles/document-enrichment/jobs";
 import { prefetchArticleExtractionsForFeedItems } from "@modules/articles/reader/extraction/prefetch";
 import { runArticleExtractionForUser } from "@modules/articles/reader/extraction/workflow";
+import { OpmlFeeds } from "@modules/opml/feeds";
 import {
   runOpmlImportFeedJob,
   runOpmlImportItemJob,
@@ -26,6 +25,7 @@ import {
   runOpmlImportPrepareJob,
 } from "@modules/opml/jobs";
 import { serializeError } from "@shared/errors/serialize";
+import { makeDocumentJobs } from "./documents";
 import {
   FeedRefreshFailed,
   classifyJobFailure,
@@ -57,8 +57,37 @@ function promiseLogger(log: AppLoggerShape): LogSink {
   };
 }
 
-/** Run a legacy Promise operation; whatever it throws becomes a typed `JobFailure`. */
-const attempt = <A>(run: () => Promise<A>) => Effect.tryPromise({ try: run, catch: toJobFailure });
+/** What the extraction Effects need; captured once so each job runs against the same services. */
+type ExtractionServices = AppConfig | AppLogger | Db | HttpClient.HttpClient | JobQueue;
+
+/** How long an interrupted job's Promise gets to settle before it is abandoned. */
+const INTERRUPTED_JOB_SETTLE = Duration.seconds(30);
+
+const noop = () => undefined;
+
+/**
+ * Run a legacy Promise operation; whatever it throws becomes a typed `JobFailure`. If the fiber is
+ * interrupted (worker shutdown) the release step waits, uninterruptibly and up to `settle`, for the
+ * Promise to settle, so the pool and Redis are still open while it finishes. The fiber ends only
+ * after the work has, which is what lets the consumer's scope close the shared clients afterwards.
+ * Feed ingestion takes no abort signal, so abandoning its Promise (the `tryPromise` default) would
+ * let it run on against closed clients and lose its final status write. `onAbandoned` runs when
+ * `settle` elapses first.
+ */
+export const attemptJob = <A>(
+  run: () => Promise<A>,
+  onAbandoned: Effect.Effect<void>,
+  settle: Duration.Input = INTERRUPTED_JOB_SETTLE,
+) =>
+  Effect.acquireUseRelease(
+    Effect.sync(run),
+    (promise) => Effect.tryPromise({ try: () => promise, catch: toJobFailure }),
+    (promise) =>
+      Effect.promise(() => promise.then(noop, noop)).pipe(
+        Effect.timeoutOption(settle),
+        Effect.flatMap(Option.match({ onSome: () => Effect.void, onNone: () => onAbandoned })),
+      ),
+  );
 
 /**
  * Build the job handler: one Effect per job type that runs the owning module's operation against
@@ -69,6 +98,9 @@ export const makeJobHandler = Effect.gen(function* () {
   const { client: database } = yield* Db;
   const redis = yield* Redis;
   const log = yield* AppLogger;
+  const services = yield* Effect.context<ExtractionServices>();
+  const opmlServices = yield* Effect.context<AppLogger | Db | JobQueue | OpmlFeeds | Redis>();
+  const documents = yield* makeDocumentJobs;
   const logger = promiseLogger(log);
   const hostRateLimiter = createHostRateLimiter({
     store: createRedisHostRateLimitStore(redis.client),
@@ -87,35 +119,39 @@ export const makeJobHandler = Effect.gen(function* () {
       const { job, id, attempts } = message;
       // Canonical refresh execution path: queued job -> worker -> ingestion.
       // API/read paths should only enqueue or read status, never run refresh inline.
-      const result = yield* attempt(() =>
-        runFeedRefresh(
-          database,
-          job.payload.feedId,
-          {
-            url: config.MEILI_URL ?? "",
-            masterKey: config.MEILI_MASTER_KEY,
-            indexUid: config.MEILI_INDEX_FEEDS,
-          },
-          {
-            hostRateLimiter,
-            refreshGeneration: job.payload.generation,
-            // Best-effort embedding classification runs alongside the keyword classifier when a
-            // key is configured; absent means refresh proceeds with the keyword classifier only.
-            // The timeout bounds each embeddings request, so a stalled provider can't hold the
-            // refresh job indefinitely.
-            embeddingClassifier: embeddingClassifierConfig(30_000, config),
-          },
-        ),
+      const result = yield* attemptJob(
+        () =>
+          runFeedRefresh(
+            database,
+            job.payload.feedId,
+            {
+              url: config.MEILI_URL ?? "",
+              masterKey: config.MEILI_MASTER_KEY,
+              indexUid: config.MEILI_INDEX_FEEDS,
+            },
+            {
+              hostRateLimiter,
+              refreshGeneration: job.payload.generation,
+              // Best-effort embedding classification runs alongside the keyword classifier when a
+              // key is configured; absent means refresh proceeds with the keyword classifier only.
+              // The timeout bounds each embeddings request, so a stalled provider can't hold the
+              // refresh job indefinitely.
+              embeddingClassifier: embeddingClassifierConfig(30_000, config),
+            },
+          ),
+        log.error("worker.job.abandoned", {
+          jobType: job.type,
+          feedId: job.payload.feedId,
+          settleMs: Duration.toMillis(INTERRUPTED_JOB_SETTLE),
+        }),
       );
       const durationMs = yield* elapsedSince(startedAt);
       for (const itemId of result.documentItemIds ?? []) {
-        yield* attempt(() =>
-          enqueueEnrichmentForStoredDocument(database, {
-            table: "feed_items",
-            id: itemId,
-            body: "original",
-          }),
-        );
+        yield* documents.enqueueForStoredDocument({
+          table: "feed_items",
+          id: itemId,
+          body: "original",
+        });
       }
 
       if (!result.ok) {
@@ -141,17 +177,12 @@ export const makeJobHandler = Effect.gen(function* () {
       }
 
       const extractionPrefetch = result.articleExtractionCandidateIds?.length
-        ? yield* attempt(() =>
-            prefetchArticleExtractionsForFeedItems(
-              database,
-              {
-                articleIds: result.articleExtractionCandidateIds ?? [],
-                userId: job.payload.userId,
-                reason: extractionReasonForFeedRefresh(job.payload.reason),
-              },
-              { logger },
-            ),
-          ).pipe(
+        ? yield* prefetchArticleExtractionsForFeedItems({
+            articleIds: result.articleExtractionCandidateIds ?? [],
+            userId: job.payload.userId,
+            reason: extractionReasonForFeedRefresh(job.payload.reason),
+          }).pipe(
+            Effect.provideContext(services),
             Effect.catch((error) =>
               log
                 .warn("worker.job.feed_refresh.extraction_prefetch_failed", {
@@ -200,17 +231,13 @@ export const makeJobHandler = Effect.gen(function* () {
   ) =>
     Effect.gen(function* () {
       const { job, id, attempts } = message;
-      const result = yield* attempt(() =>
-        runArticleExtractionForUser(database, job.payload.userId, job.payload.articleId, {
-          embeddingClassifier: embeddingClassifierConfig(8000, config),
-          hostRateLimiter,
-          logger,
-          titleReplacement: {
-            replaceClipTitle: job.payload.replaceClipTitle ?? false,
-            autogeneratedTitleAtQueue: job.payload.autogeneratedTitleAtQueue,
-          },
-        }),
-      );
+      const result = yield* runArticleExtractionForUser(job.payload.userId, job.payload.articleId, {
+        hostRateLimiter,
+        titleReplacement: {
+          replaceClipTitle: job.payload.replaceClipTitle ?? false,
+          autogeneratedTitleAtQueue: job.payload.autogeneratedTitleAtQueue,
+        },
+      }).pipe(Effect.provideContext(services), Effect.mapError(toJobFailure));
       const durationMs = yield* elapsedSince(startedAt);
       const fields = {
         streamId: id,
@@ -250,29 +277,29 @@ export const makeJobHandler = Effect.gen(function* () {
         case "feed.refresh":
           return yield* refreshFeed({ ...message, job }, startedAt);
         case "opml.import":
-          yield* attempt(() => runOpmlImportJob(database, job.payload, logger));
+          yield* runOpmlImportJob(job.payload).pipe(Effect.provideContext(opmlServices));
           return yield* completed("worker.job.opml_import.completed", startedAt, message, {
             taskId: job.payload.taskId,
             userId: job.payload.userId,
           });
         case "opml.import.feed":
-          yield* attempt(() => runOpmlImportFeedJob(database, job.payload, logger));
+          yield* runOpmlImportFeedJob(job.payload).pipe(Effect.provideContext(opmlServices));
           return yield* completed("worker.job.opml_import_feed.completed", startedAt, message, {
             taskId: job.payload.taskId,
             userId: job.payload.userId,
             url: job.payload.url,
           });
         case "opml.import.prepare":
-          return yield* attempt(() => runOpmlImportPrepareJob(database, job.payload, logger));
+          return yield* runOpmlImportPrepareJob(job.payload).pipe(
+            Effect.provideContext(opmlServices),
+          );
         case "opml.import.item":
-          return yield* attempt(() => runOpmlImportItemJob(database, job.payload, logger));
+          return yield* runOpmlImportItemJob(job.payload).pipe(Effect.provideContext(opmlServices));
         case "article.extract":
           return yield* extractArticle({ ...message, job }, startedAt);
         case "document.image-measure":
         case "document.embed-snapshot":
-          return yield* attempt(() =>
-            handleDocumentEnrichmentJob(job, createDocumentPatchStore(database)),
-          );
+          return yield* documents.handle(job);
       }
     });
 });
@@ -294,12 +321,13 @@ function failureContext(message: JobMessage | null): Record<string, unknown> {
 }
 
 /**
- * Build the consumer's failure policy: log the failure (warn for expected ones, error for ours)
- * and retry only what `classifyJobFailure` says can succeed on another attempt.
+ * Build the consumer's failure logger: warn for expected failures, error for ours. The class only
+ * picks the log severity; the consumer retries every failed job and dead-letters it after the
+ * last attempt, so an operator can always find and replay it.
  */
 export const makeFailureReporter = Effect.gen(function* () {
   const log = yield* AppLogger;
-  return (error: JobFailure, message: JobMessage | null): Effect.Effect<FailureDisposition> => {
+  return (error: JobFailure, message: JobMessage | null): Effect.Effect<void> => {
     const classification = classifyJobFailure(error);
     const fields = {
       streamId: message?.id ?? null,
@@ -311,10 +339,8 @@ export const makeFailureReporter = Effect.gen(function* () {
       error: error.message,
       cause: serializeError(error.cause),
     };
-    const logged =
-      classification.severity === "platform"
-        ? log.error("worker.job.failed", fields)
-        : log.warn("worker.job.failed", fields);
-    return Effect.as(logged, classification.retryable ? "retry" : "permanent");
+    return classification.severity === "platform"
+      ? log.error("worker.job.failed", fields)
+      : log.warn("worker.job.failed", fields);
   };
 });

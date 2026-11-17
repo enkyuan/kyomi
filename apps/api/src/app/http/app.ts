@@ -18,9 +18,9 @@ export function createApp(options: { runtime?: AppRuntime } = {}) {
     name: "@kyomi/api",
   });
 
-  registerPlugins(app);
+  registerPlugins(app, runtime);
   registerLifecycle(app, { runtime, ownsRuntime: options.runtime === undefined });
-  registerErrorHandlers(app);
+  registerErrorHandlers(app, runtime);
   registerRoutes(app, runtime);
 
   return app;

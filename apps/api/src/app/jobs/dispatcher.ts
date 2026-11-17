@@ -1,5 +1,4 @@
 import { Clock, Duration, Effect, Ref, Schedule } from "effect";
-import { Db } from "@adapters/db/service";
 import { AppLogger } from "@adapters/logger/service";
 import { JobQueue } from "@adapters/queue/service";
 import { serializeError } from "@shared/errors/serialize";
@@ -15,11 +14,7 @@ import {
   releaseOpmlItemLease,
   retryOrFailOpmlItem,
 } from "@modules/opml/store";
-import {
-  classifyOpmlItemError,
-  computeOpmlRetryDelayMs,
-  randomOpmlRetryJitter,
-} from "@modules/opml/retry";
+import { computeOpmlRetryDelayMs, opmlRetryJitter } from "@modules/opml/retry";
 import { OPML_IMPORT_RETENTION_DAYS } from "@modules/opml/constants";
 import { logTickFailure } from "./tick";
 
@@ -46,18 +41,15 @@ export type DispatchStats = {
 };
 
 export const runImportDispatcherTick = Effect.fn("import.dispatcher.tick")(function* (now: Date) {
-  const db = yield* Db;
   const queue = yield* JobQueue;
   const log = yield* AppLogger;
 
-  const claimed = yield* db.use("opml.dispatch.claim", (client) =>
-    claimDispatchableOpmlItems(client, now, {
-      maxImports: IMPORT_DISPATCH_MAX_IMPORTS,
-      perImport: IMPORT_DISPATCH_PER_IMPORT,
-      total: IMPORT_DISPATCH_TOTAL,
-      leaseMs: IMPORT_DISPATCH_LEASE_MS,
-    }),
-  );
+  const claimed = yield* claimDispatchableOpmlItems(now, {
+    maxImports: IMPORT_DISPATCH_MAX_IMPORTS,
+    perImport: IMPORT_DISPATCH_PER_IMPORT,
+    total: IMPORT_DISPATCH_TOTAL,
+    leaseMs: IMPORT_DISPATCH_LEASE_MS,
+  });
 
   const stats: DispatchStats = {
     claimed: claimed.length,
@@ -77,21 +69,16 @@ export const runImportDispatcherTick = Effect.fn("import.dispatcher.tick")(funct
 
       if (!startedImports.has(item.importId)) {
         startedImports.add(item.importId);
-        yield* db.use("opml.dispatch.mark_running", (client) =>
-          markOpmlImportRunning(client, item.importId),
-        );
+        yield* markOpmlImportRunning(item.importId);
         stats.importsStarted += 1;
       }
     }).pipe(
       Effect.catch((error) =>
         Effect.gen(function* () {
-          const released = yield* db.use("opml.dispatch.release", (client) =>
-            releaseOpmlItemLease(
-              client,
-              item.id,
-              item.leaseToken,
-              new Date(now.getTime() + PUBLISH_FAILURE_RETRY_DELAY_MS),
-            ),
+          const released = yield* releaseOpmlItemLease(
+            item.id,
+            item.leaseToken,
+            new Date(now.getTime() + PUBLISH_FAILURE_RETRY_DELAY_MS),
           );
           if (released) {
             stats.releasedAfterPublishFailure += 1;
@@ -126,7 +113,6 @@ export const reconcileImports = Effect.fn("import.dispatcher.reconcile")(functio
   now: Date,
   options: { includeRetention?: boolean } = {},
 ) {
-  const db = yield* Db;
   const queue = yield* JobQueue;
   const log = yield* AppLogger;
   const stats: ReconcileStats = {
@@ -136,21 +122,14 @@ export const reconcileImports = Effect.fn("import.dispatcher.reconcile")(functio
     retentionDeleted: 0,
   };
 
-  const dueForPrepare = yield* db.use("opml.reconcile.reclaim_prepare", (client) =>
-    reclaimStalePrepareImports(
-      client,
-      now,
-      new Date(now.getTime() - RECONCILE_PREPARE_WAKEUP_STALE_MS),
-      new Date(now.getTime() - RECONCILE_PARSING_HEARTBEAT_STALE_MS),
-    ),
+  const dueForPrepare = yield* reclaimStalePrepareImports(
+    now,
+    new Date(now.getTime() - RECONCILE_PREPARE_WAKEUP_STALE_MS),
+    new Date(now.getTime() - RECONCILE_PARSING_HEARTBEAT_STALE_MS),
   );
   for (const importId of dueForPrepare) {
     yield* queue.publish({ type: "opml.import.prepare", payload: { importId } }).pipe(
-      Effect.andThen(
-        db.use("opml.reconcile.record_wakeup", (client) =>
-          recordOpmlImportPrepareWakeup(client, importId),
-        ),
-      ),
+      Effect.andThen(recordOpmlImportPrepareWakeup(importId)),
       Effect.map(() => {
         stats.prepareRepublished += 1;
       }),
@@ -163,34 +142,20 @@ export const reconcileImports = Effect.fn("import.dispatcher.reconcile")(functio
     );
   }
 
-  const expiredLeases = yield* db.use("opml.reconcile.expired_leases", (client) =>
-    findExpiredOpmlLeases(client, now),
-  );
+  const expiredLeases = yield* findExpiredOpmlLeases(now);
   for (const item of expiredLeases) {
-    const decision = classifyOpmlItemError(new Error("lease expired"));
-    const delayMs = computeOpmlRetryDelayMs(item.attempts, randomOpmlRetryJitter());
-    yield* db.use("opml.reconcile.retry_item", (client) =>
-      retryOrFailOpmlItem(
-        client,
-        item,
-        {
-          retryable: decision.retryable,
-          code: "OPML_ITEM_LEASE_EXPIRED",
-          message: "Lease expired",
-        },
-        new Date(now.getTime() + delayMs),
-      ),
+    const delayMs = computeOpmlRetryDelayMs(item.attempts, yield* opmlRetryJitter);
+    yield* retryOrFailOpmlItem(
+      item,
+      { retryable: true, code: "OPML_ITEM_LEASE_EXPIRED", message: "Lease expired" },
+      new Date(now.getTime() + delayMs),
     );
     stats.leasesReclaimed += 1;
   }
 
-  const cancellingImportIds = yield* db.use("opml.reconcile.list_cancelling", (client) =>
-    listCancellingOpmlImportIds(client, RECONCILE_CANCEL_BATCH_SIZE),
-  );
+  const cancellingImportIds = yield* listCancellingOpmlImportIds(RECONCILE_CANCEL_BATCH_SIZE);
   const cancelBatch = (importId: string) =>
-    db.use("opml.reconcile.cancel_items", (client) =>
-      cancelPendingOpmlItems(client, importId, RECONCILE_CANCEL_BATCH_SIZE),
-    );
+    cancelPendingOpmlItems(importId, RECONCILE_CANCEL_BATCH_SIZE);
   for (const importId of cancellingImportIds) {
     let cancelledInBatch = yield* cancelBatch(importId);
     while (cancelledInBatch > 0) {
@@ -200,11 +165,8 @@ export const reconcileImports = Effect.fn("import.dispatcher.reconcile")(functio
   }
 
   if (options.includeRetention) {
-    stats.retentionDeleted = yield* db.use("opml.reconcile.retention", (client) =>
-      deleteOldTerminalOpmlImports(
-        client,
-        new Date(now.getTime() - RECONCILE_RETENTION_DAYS * 24 * 60 * 60_000),
-      ),
+    stats.retentionDeleted = yield* deleteOldTerminalOpmlImports(
+      new Date(now.getTime() - RECONCILE_RETENTION_DAYS * 24 * 60 * 60_000),
     );
   }
 

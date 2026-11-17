@@ -1,12 +1,16 @@
 import { Elysia } from "elysia";
+import { Effect, type ManagedRuntime } from "effect";
+import { AppConfig } from "@config/env/service";
+import { effectPlugin } from "@shared/http/effect/plugin";
 import { requestObservationPlugin } from "@shared/http/stacks";
-import { auth } from ".";
 import {
   AUTH_CAPABILITIES_HEADER,
   getAuthCapabilities,
   serializeAuthCapabilities,
 } from "./capabilities";
-import { hydrateStoredLocation } from "./location";
+import { Auth } from "./service";
+
+type AuthRuntime = ManagedRuntime.ManagedRuntime<Auth | AppConfig, unknown>;
 
 function withForwardedForHeader(request: Request, ipAddress?: string) {
   const headers = new Headers(request.headers);
@@ -16,41 +20,55 @@ function withForwardedForHeader(request: Request, ipAddress?: string) {
   return headers;
 }
 
-function withAuthCapabilities(response: Response) {
-  const headers = new Headers(response.headers);
-  headers.set(AUTH_CAPABILITIES_HEADER, serializeAuthCapabilities(getAuthCapabilities()));
-  return new Response(response.body, {
-    status: response.status,
-    statusText: response.statusText,
-    headers,
+const withAuthCapabilities = (response: Response) =>
+  AppConfig.useSync((config) => {
+    const headers = new Headers(response.headers);
+    headers.set(AUTH_CAPABILITIES_HEADER, serializeAuthCapabilities(getAuthCapabilities(config)));
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers,
+    });
   });
-}
 
-async function handleAuthRequest(request: Request, ipAddress?: string) {
+/** Forward a request to Better Auth with the caller's address, then advertise the capabilities. */
+const handleAuthRequest = Effect.fn("auth.handle")(function* (
+  request: Request,
+  ipAddress?: string,
+) {
+  const auth = yield* Auth;
   const headers = withForwardedForHeader(request, ipAddress);
-  const response = await auth.handler(new Request(request, { headers }));
-  return withAuthCapabilities(response);
-}
+  const response = yield* auth.handle(new Request(request, { headers }));
+  return yield* withAuthCapabilities(response);
+});
 
-export const authRoutes = new Elysia({
-  name: "kyomi.auth.routes",
-})
-  .use(requestObservationPlugin)
-  .get("/api/auth/list-sessions", async (ctx) => {
-    const headers = withForwardedForHeader(
-      ctx.request,
-      ctx.server?.requestIP(ctx.request)?.address,
-    );
-    const sessions = await auth.api.listSessions({ headers });
-    return sessions.map((session) => hydrateStoredLocation(session));
+const listSessions = Effect.fn("auth.listSessions")(function* (
+  request: Request,
+  ipAddress?: string,
+) {
+  const auth = yield* Auth;
+  return yield* auth.listSessions(withForwardedForHeader(request, ipAddress));
+});
+
+export function authRoutes(runtime: AuthRuntime) {
+  return new Elysia({
+    name: "kyomi.auth.routes",
   })
-  .all(
-    "/api/auth",
-    (ctx) => handleAuthRequest(ctx.request, ctx.server?.requestIP(ctx.request)?.address),
-    { parse: "none" },
-  )
-  .all(
-    "/api/auth/*",
-    (ctx) => handleAuthRequest(ctx.request, ctx.server?.requestIP(ctx.request)?.address),
-    { parse: "none" },
-  );
+    .use(requestObservationPlugin(runtime))
+    .use(effectPlugin(runtime))
+    .get("/api/auth/list-sessions", ({ request, server, runEffect }) =>
+      runEffect(listSessions(request, server?.requestIP(request)?.address)),
+    )
+    .all(
+      "/api/auth",
+      ({ request, server, runEffect }) =>
+        runEffect(handleAuthRequest(request, server?.requestIP(request)?.address)),
+      { parse: "none" },
+    )
+    .all(
+      "/api/auth/*",
+      ({ request, server, runEffect }) =>
+        runEffect(handleAuthRequest(request, server?.requestIP(request)?.address)),
+      { parse: "none" },
+    );
+}

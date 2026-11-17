@@ -2,9 +2,9 @@ import { describe, expect, test } from "bun:test";
 import { Deferred, Effect, Exit, Fiber, Layer, Scope } from "effect";
 import { TestClock } from "effect/testing";
 import { startConsumers, type StreamConsumer } from "@adapters/queue/consumer";
-import { classifyJobFailure, toJobFailure, type JobFailure } from "@app/jobs/classify";
+import { toJobFailure, type JobFailure } from "@app/jobs/classify";
 import { fakeRedis, recordingLogger, replyError } from "@api-tests/support/layers";
-import { AppError } from "@shared/errors/app";
+import { NotFound, Unavailable } from "@shared/effect/errors";
 
 type Entry = [string, string[]];
 
@@ -111,8 +111,7 @@ function consumer(
     concurrency: 2,
     streamMaxLength: 5_000,
     blockMs: 5,
-    onFailure: (error) =>
-      Effect.succeed(classifyJobFailure(error).retryable ? "retry" : "permanent"),
+    onFailure: () => Effect.void,
     ...overrides,
   };
 }
@@ -171,9 +170,7 @@ describe("startConsumers", () => {
       [
         consumer({
           handle: () =>
-            Effect.fail(
-              toJobFailure(new AppError("upstream down", { status: 503, code: "UPSTREAM" })),
-            ),
+            Effect.fail(new Unavailable({ message: "upstream down", code: "UPSTREAM" })),
         }),
       ],
       redis,
@@ -207,32 +204,40 @@ describe("startConsumers", () => {
     });
   });
 
-  test("a deterministic failure is acknowledged without being retried", async () => {
-    const redis = streamRedis({ batches: [[refreshEntry("1-0")]] });
+  test("a deterministic failure is retried and dead-lettered like any other, never dropped", async () => {
     const failures: string[] = [];
+    const handle = () =>
+      Effect.fail(new NotFound({ message: "Article not found", code: "ARTICLE_NOT_FOUND" }));
+    const onFailure = (error: { _tag: string }) => {
+      failures.push(error._tag);
+      return Effect.void;
+    };
 
-    const { result } = runUntil(
-      [
-        consumer({
-          handle: () =>
-            Effect.fail(
-              toJobFailure(
-                new AppError("Article not found", { status: 404, code: "ARTICLE_NOT_FOUND" }),
-              ),
-            ),
-          onFailure: (error) => {
-            failures.push(error._tag);
-            return Effect.succeed("permanent");
-          },
-        }),
-      ],
-      redis,
-      () => redis.state.acked.length === 1,
-    );
-    await result;
+    const first = streamRedis({ batches: [[refreshEntry("1-0")]] });
+    await runUntil(
+      [consumer({ handle, onFailure })],
+      first,
+      () => first.state.transactions.length === 1,
+    ).result;
+    expect(movedTo(first.state.transactions[0]!)).toMatchObject({
+      stream: "jobs:feed-refresh",
+      fields: { attempts: "1", last_error: "Article not found" },
+    });
 
-    expect(failures).toEqual(["NotFound"]);
-    expect(redis.state.transactions).toEqual([]);
+    const last = streamRedis({ batches: [[entryWithAttempts("2-0", 2)]] });
+    await runUntil(
+      [consumer({ handle, onFailure })],
+      last,
+      () => last.state.transactions.length === 1,
+    ).result;
+    expect(movedTo(last.state.transactions[0]!)).toMatchObject({
+      stream: "jobs:dead-letter",
+      fields: { attempts: "3", error: "Article not found", original_stream_id: "2-0" },
+    });
+
+    expect(failures).toEqual(["NotFound", "NotFound"]);
+    expect(first.state.acked).toEqual([]);
+    expect(last.state.acked).toEqual([]);
   });
 
   test("a defect in a handler is a retryable failure, not a crash", async () => {
@@ -267,7 +272,7 @@ describe("startConsumers", () => {
           handle: () => Effect.void,
           onFailure: (error, message) => {
             reported.push([error._tag, message?.id ?? null]);
-            return Effect.succeed("retry");
+            return Effect.void;
           },
         }),
       ],

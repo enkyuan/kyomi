@@ -19,12 +19,6 @@ import { Redis, makeRedis, redisReplyCode } from "@adapters/redis/service";
 import { BadRequest, InternalError, RedisError, unexpected } from "@shared/effect/errors";
 import { serializeError } from "@shared/errors/serialize";
 
-/**
- * What to do with a job whose handler failed: `retry` puts it back on the stream (or dead-letters
- * it once attempts run out), `permanent` acknowledges it because running it again cannot succeed.
- */
-export type FailureDisposition = "retry" | "permanent";
-
 export type StreamConsumer<E extends { readonly message: string }> = {
   /** Unique consumer name inside the group. */
   readonly consumer: string;
@@ -42,13 +36,15 @@ export type StreamConsumer<E extends { readonly message: string }> = {
   readonly handle: (message: JobMessage) => Effect.Effect<void, E>;
   /**
    * Called for every failure (a typed handler failure, a defect surfaced as `InternalError`, or
-   * `BadRequest` for an entry that is not a job). Logs and decides whether the job is retried.
-   * An entry that is not a job is always dead-lettered.
+   * `BadRequest` for an entry that is not a job) so it can be logged. It never changes what
+   * happens to the job: a failed job goes back on the stream until `maxAttempts` is spent, then
+   * to the dead-letter stream, whatever the error class. An entry that is not a job is
+   * dead-lettered at once.
    */
   readonly onFailure: (
     error: E | BadRequest | InternalError,
     message: JobMessage | null,
-  ) => Effect.Effect<FailureDisposition>;
+  ) => Effect.Effect<void>;
 };
 
 const DEFAULT_PENDING_MIN_IDLE_MS = 10_000;
@@ -180,10 +176,7 @@ const consumeStream = <E extends { readonly message: string }>(
 
       const settleFailure = (message: JobMessage, failure: E | InternalError) =>
         Effect.gen(function* () {
-          const disposition = yield* options.onFailure(failure, message);
-          if (disposition === "permanent") {
-            return yield* ack(message.id);
-          }
+          yield* options.onFailure(failure, message);
           const text = failureText(failure);
           if (message.attempts + 1 < maxAttempts) {
             return yield* settle(

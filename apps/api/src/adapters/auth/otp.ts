@@ -1,22 +1,13 @@
-import { logger } from "@adapters/logger";
-import { env } from "@config/env";
-
-const RESEND_EMAILS_URL = "https://api.resend.com/emails";
-const DELIVERY_TIMEOUT_MS = 10_000;
+import { Effect } from "effect";
+import type { HttpClient } from "effect/http";
+import { AppLogger } from "@adapters/logger/service";
+import type { AppConfig } from "@config/env/service";
+import { serializeError } from "@shared/errors/serialize";
+import { deliverEmail } from "./resend";
 
 type EmailOTPMessage = {
   to: string;
   otp: string;
-};
-
-type EmailOTPConfig = {
-  apiKey?: string;
-  from?: string;
-  nodeEnv: "development" | "production" | "test";
-};
-
-type SendEmailOTPOptions = {
-  fetchImpl?: typeof fetch;
 };
 
 export function createEmailOTPBody({ otp }: EmailOTPMessage) {
@@ -27,51 +18,31 @@ export function createEmailOTPBody({ otp }: EmailOTPMessage) {
   };
 }
 
-export async function sendEmailOTP(
-  message: EmailOTPMessage,
-  config: EmailOTPConfig,
-  options: SendEmailOTPOptions = {},
-): Promise<"delivered" | "development-link" | "unconfigured"> {
-  if (!config.apiKey || !config.from) {
-    if (config.nodeEnv !== "production") {
-      logger.warn("auth.email_otp.development_log", { otp: message.otp });
-      return "development-link";
-    }
-
-    logger.error("auth.email_otp.delivery_unconfigured");
-    return "unconfigured";
-  }
-
-  const { subject, text, html } = createEmailOTPBody(message);
-  const response = await (options.fetchImpl ?? fetch)(RESEND_EMAILS_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${config.apiKey}`,
-      "Content-Type": "application/json",
+/** Email the sign-in code. In development without a provider the code is logged instead. */
+export const sendEmailOTP = (message: EmailOTPMessage) =>
+  deliverEmail({
+    to: message.to,
+    content: createEmailOTPBody(message),
+    label: "Email OTP",
+    events: {
+      development: "auth.email_otp.development_log",
+      unconfigured: "auth.email_otp.delivery_unconfigured",
     },
-    body: JSON.stringify({
-      from: config.from,
-      to: [message.to],
-      subject,
-      text,
-      html,
-    }),
-    signal: AbortSignal.timeout(DELIVERY_TIMEOUT_MS),
+    developmentLog: { otp: message.otp },
   });
 
-  if (!response.ok) {
-    throw new Error(`Email OTP delivery failed with status ${response.status}`);
-  }
-
-  return "delivered";
-}
-
-export function queueEmailOTP(message: EmailOTPMessage): void {
-  void sendEmailOTP(message, {
-    apiKey: env.RESEND_API_KEY,
-    from: env.AUTH_EMAIL_FROM,
-    nodeEnv: env.NODE_ENV,
-  }).catch((error) => {
-    logger.error("auth.email_otp.delivery_failed", { error });
-  });
-}
+/**
+ * `sendEmailOTP` for a background delivery: a failure is logged and never escapes, because the
+ * sign-in request that triggered it has already been answered.
+ */
+export const queueEmailOTP = (
+  message: EmailOTPMessage,
+): Effect.Effect<void, never, AppConfig | AppLogger | HttpClient.HttpClient> =>
+  sendEmailOTP(message).pipe(
+    Effect.asVoid,
+    Effect.catch((error) =>
+      AppLogger.use((log) =>
+        log.error("auth.email_otp.delivery_failed", { error: serializeError(error) }),
+      ),
+    ),
+  );

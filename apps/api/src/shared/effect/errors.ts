@@ -1,9 +1,8 @@
 import { Data } from "effect";
-import { AppError } from "@shared/errors/app";
 
 /**
  * The typed error catalogue for Effect code. One class per HTTP meaning, a stable `code` string per
- * failure (the same codes `AppError` sites use), and optional `details` for the wire envelope.
+ * failure, and optional `details` for the wire envelope.
  * Status codes and default codes live in `ERROR_CATALOGUE` so the edge mapper stays exhaustive.
  */
 type PublicFields = {
@@ -111,52 +110,7 @@ export function isApiError(value: unknown): value is ApiError {
   );
 }
 
-const PUBLIC_BY_STATUS: Record<number, new (fields: PublicFields) => PublicError> = {
-  400: BadRequest,
-  401: Unauthorized,
-  403: Forbidden,
-  404: NotFound,
-  409: Conflict,
-  413: PayloadTooLarge,
-  422: Unprocessable,
-  429: RateLimited,
-  500: InternalError,
-  502: BadGateway,
-  503: Unavailable,
-  504: GatewayTimeout,
-};
-
-/**
- * Interop for modules that have not moved yet: re-tag a legacy `AppError` by status, keeping its
- * code, message and details. Statuses outside the catalogue collapse to the nearest class.
- */
-export function fromAppError(error: AppError): PublicError {
-  const Class =
-    PUBLIC_BY_STATUS[error.status] ?? (error.status >= 500 ? InternalError : BadRequest);
-  return new Class({
-    message: error.message,
-    code: error.code,
-    details: error.details,
-    cause: error,
-  });
-}
-
 /** What an unexpected throw from Promise code becomes: an opaque 500 carrying the cause. */
 export function unexpected(cause: unknown): InternalError {
   return new InternalError({ message: "Internal error", cause });
-}
-
-/**
- * `catch` handler for `Effect.tryPromise` around legacy Promise code that may still throw
- * `AppError`: typed errors pass through, `AppError` is re-tagged, anything else is `unexpected`.
- * Classification is by class, never by message text.
- */
-export function toPublicError(cause: unknown): PublicError {
-  if (cause instanceof AppError) {
-    return fromAppError(cause);
-  }
-  if (isApiError(cause) && ERROR_CATALOGUE[cause._tag].expose) {
-    return cause as PublicError;
-  }
-  return unexpected(cause);
 }

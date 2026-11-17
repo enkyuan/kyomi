@@ -1,20 +1,32 @@
 import { Elysia } from "elysia";
-import { dbPlugin } from "@adapters/db/plugin";
+import type { ManagedRuntime } from "effect";
+import { AppConfig } from "@config/env/service";
 import { loggingMiddleware } from "@shared/http/logging/middleware";
 import { requestIdMiddleware } from "@shared/http/request-id/middleware";
 
-/** Request correlation id + structured access logging (no persistence adapters). */
-export const requestObservationPlugin = new Elysia({ name: "kyomi.http.observation" })
-  .use(requestIdMiddleware)
-  .use(loggingMiddleware);
+function buildRequestObservationPlugin(runtime: ManagedRuntime.ManagedRuntime<AppConfig, unknown>) {
+  const config = runtime.runSync(AppConfig.useSync((value) => value));
+  return new Elysia({ name: "kyomi.http.observation" })
+    .use(requestIdMiddleware)
+    .use(loggingMiddleware(config));
+}
 
-/** Drizzle + `pg` pool on context (`db`, `pool`). */
-export const databaseAdapterPlugin = new Elysia({ name: "kyomi.adapters.database" }).use(dbPlugin);
+const byRuntime = new WeakMap<object, ReturnType<typeof buildRequestObservationPlugin>>();
 
 /**
- * Default stack for `/api/v1` before route handlers: observation + database
- * (session resolution runs inside the versioned group).
+ * Request correlation id + structured access logging, configured from the runtime's `AppConfig`.
+ * Persistence is not part of it: Effect code gets Postgres and Redis from the runtime's services.
+ *
+ * One instance per runtime: every route group mounts the same plugin object, which is what lets
+ * Elysia deduplicate it (a fresh instance per group re-registers the logger and never finishes).
  */
-export const apiV1AdapterPlugin = new Elysia({ name: "kyomi.api.v1.adapters" })
-  .use(requestObservationPlugin)
-  .use(databaseAdapterPlugin);
+export function requestObservationPlugin(
+  runtime: ManagedRuntime.ManagedRuntime<AppConfig, unknown>,
+) {
+  let plugin = byRuntime.get(runtime);
+  if (!plugin) {
+    plugin = buildRequestObservationPlugin(runtime);
+    byRuntime.set(runtime, plugin);
+  }
+  return plugin;
+}

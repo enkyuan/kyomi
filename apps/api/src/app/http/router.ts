@@ -12,9 +12,9 @@ export function createHttpRouter(runtime: AppRuntime) {
     name: "kyomi.http",
   })
     .use(healthPlugin(runtime))
-    .use(faviconPlugin)
-    .use(readerAssetPlugin)
-    .use(authRoutes)
+    .use(faviconPlugin(runtime))
+    .use(readerAssetPlugin(runtime))
+    .use(authRoutes(runtime))
     .use(createApiV1Router(runtime));
 }
 

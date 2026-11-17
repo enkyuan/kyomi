@@ -1,3 +1,4 @@
+import { Console, Effect } from "effect";
 import { sql, type SQL } from "drizzle-orm";
 import {
   categories,
@@ -6,7 +7,13 @@ import {
   feeds,
   feedItems,
 } from "@kyomi/db";
+import { Db } from "@adapters/db/service";
 import { activeEmbeddingModelId } from "@config/embeddings";
+import { AppConfig } from "@config/env/service";
+import { CatalogFileError, InvalidArguments } from "@modules/catalog/errors";
+import { AppLive } from "../runtime";
+import { runMain } from "../setup/main";
+import { ensureDatabaseReady } from "../setup/ready";
 import { buildCategoryLabelsSql } from "@modules/articles/read/labels";
 
 export type CategoryAuditFormat = "jsonl" | "summary";
@@ -192,12 +199,12 @@ export async function runCategoryAudit(
   args: CategoryAuditArgs,
   database: CategoryAuditDatabase,
   feedItemIds: readonly string[] | null = null,
+  embeddingModelId: string | undefined = undefined,
 ): Promise<CategoryAuditItem[]> {
   if (feedItemIds && feedItemIds.length === 0) {
     return [];
   }
 
-  const embeddingModelId = activeEmbeddingModelId();
   const itemIdFilter = itemIdFilterSql(feedItemIds);
   const result = await database.execute(sql<CategoryAuditRow>`
     SELECT
@@ -391,29 +398,38 @@ export function formatCategoryAuditOutput(
 }
 
 if (import.meta.main) {
-  const args = parseCategoryAuditArgs(process.argv);
-  let labels: CategoryAuditLabel[] | null = null;
-  const [{ db, pool }, { assertApiDatabaseReady }] = await Promise.all([
-    import("@adapters/db/client"),
-    import("@adapters/db/preflight"),
-  ]);
-  try {
-    labels = args.labelsFile ? await readAuditLabelsFile(args.labelsFile) : null;
-    await assertApiDatabaseReady({
-      commandName: "categories:audit",
-      ensureSchema: true,
+  const audit = Effect.gen(function* () {
+    const args = yield* Effect.try({
+      try: () => parseCategoryAuditArgs(process.argv),
+      catch: (cause) =>
+        new InvalidArguments({ message: cause instanceof Error ? cause.message : String(cause) }),
     });
-    const items = await runCategoryAudit(
-      args,
-      db,
-      labels ? labels.map((label) => label.feedItemId) : null,
+    const labelsFile = args.labelsFile;
+    const labels = labelsFile
+      ? yield* Effect.tryPromise({
+          try: () => readAuditLabelsFile(labelsFile),
+          catch: (cause) => new CatalogFileError({ path: labelsFile, cause }),
+        })
+      : null;
+    yield* ensureDatabaseReady({ commandName: "categories:audit", ensureSchema: true });
+
+    const db = yield* Db;
+    const embeddingModelId = activeEmbeddingModelId(yield* AppConfig);
+    const items = yield* db.use("categories.audit", (client) =>
+      runCategoryAudit(
+        args,
+        client,
+        labels ? labels.map((label) => label.feedItemId) : null,
+        embeddingModelId,
+      ),
     );
     const scoreReport = labels ? scoreCategoryAuditItems(items, labels) : null;
     const output = formatCategoryAuditOutput(items, args, scoreReport);
     if (output.length > 0) {
-      console.log(output);
+      yield* Console.log(output);
     }
-  } finally {
-    await pool.end();
-  }
+  });
+
+  // The layer scope closes Postgres and Redis once the run ends, or on SIGINT/SIGTERM.
+  runMain(audit.pipe(Effect.provide(AppLive)));
 }

@@ -1,11 +1,25 @@
-import { db, pool } from "@adapters/db/client";
-import { assertApiDatabaseReady } from "@adapters/db/preflight";
+import { Data, Effect } from "effect";
 import {
   DOCUMENT_BACKFILL_SCOPES,
   runDocumentBackfillScope,
   type DocumentBackfillScope,
 } from "@modules/articles/document/backfill";
 import { currentCompilerVersion } from "@kyomi/ingest/lib/stored-document";
+import { AppLogger } from "@adapters/logger/service";
+import { AppLive } from "../runtime";
+import { runMain } from "../setup/main";
+import { ensureDatabaseReady } from "../setup/ready";
+
+/** The run finished but some rows produced no document; the process exits non-zero. */
+class DocumentBackfillIncomplete extends Data.TaggedError("DocumentBackfillIncomplete")<{
+  readonly failed: number;
+}> {}
+
+class NoDocumentCompiler extends Data.TaggedError("NoDocumentCompiler")<{}> {
+  override get message() {
+    return "no document compiler is wired; nothing to do";
+  }
+}
 
 function flagValue(argv: string[], flag: string): string | null {
   const index = argv.indexOf(flag);
@@ -46,30 +60,27 @@ export function parseDocumentBackfillArgs(argv: string[]) {
   };
 }
 
-if (import.meta.main) {
-  const args = parseDocumentBackfillArgs(process.argv);
+const backfill = Effect.gen(function* () {
+  const log = yield* AppLogger;
+  const args = yield* Effect.try(() => parseDocumentBackfillArgs(process.argv));
   const compilerVersion = currentCompilerVersion();
   if (!compilerVersion) {
-    console.error("[content:document-backfill] no document compiler is wired; nothing to do");
-    process.exit(1);
+    return yield* new NoDocumentCompiler();
   }
-  try {
-    await assertApiDatabaseReady({ commandName: "content:document-backfill" });
-    let failed = 0;
-    for (const scope of args.scopes) {
-      const result = await runDocumentBackfillScope(db, scope, {
-        ...args,
-        compilerVersion,
-        log: console.log,
-      });
-      console.log(JSON.stringify(result));
-      failed += result.failed;
-    }
-    console.log(`${args.apply ? "APPLIED" : "DRY RUN"}: failed ${failed}`);
-    if (failed > 0) {
-      process.exitCode = 1;
-    }
-  } finally {
-    await pool.end();
+  yield* ensureDatabaseReady({ commandName: "content:document-backfill" });
+  let failed = 0;
+  for (const scope of args.scopes) {
+    const result = yield* runDocumentBackfillScope(scope, { ...args, compilerVersion });
+    yield* log.info("document.backfill.scope_done", result);
+    failed += result.failed;
   }
+  yield* log.info("document.backfill.done", { mode: args.apply ? "applied" : "dry_run", failed });
+  if (failed > 0) {
+    return yield* new DocumentBackfillIncomplete({ failed });
+  }
+});
+
+// The layer scope closes Postgres and Redis once the run ends, or on SIGINT/SIGTERM.
+if (import.meta.main) {
+  runMain(backfill.pipe(Effect.provide(AppLive)));
 }

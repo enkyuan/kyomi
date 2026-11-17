@@ -1,5 +1,7 @@
 import { lookup } from "node:dns/promises";
 import { BlockList, isIP } from "node:net";
+import { Context, Data, Effect } from "effect";
+import { UpstreamError } from "@shared/effect/errors";
 
 const blockedAddressList = new BlockList();
 const sharedAddressList = new BlockList();
@@ -26,6 +28,12 @@ export class BlockedOutboundUrlError extends Error {
     this.name = "BlockedOutboundUrlError";
   }
 }
+
+/** The target (or a redirect hop) is not a public http(s) URL. */
+export class UnsafeOutboundUrl extends Data.TaggedError("UnsafeOutboundUrl")<{
+  readonly message: string;
+  readonly cause?: unknown;
+}> {}
 
 function canonicalHostname(hostname: string): string {
   const withoutBrackets =
@@ -66,34 +74,54 @@ export function isBlockedOutboundIpAddress(
   );
 }
 
-async function resolveHostnameAddresses(hostname: string): Promise<string[]> {
-  if (isIP(hostname) !== 0) {
-    return [hostname];
-  }
+/**
+ * How a hostname becomes addresses. The default asks the system resolver; tests provide a fixed
+ * answer with `Effect.provideService(HostResolver, ...)` instead of needing real DNS.
+ */
+export const HostResolver = Context.Reference<
+  (hostname: string) => Effect.Effect<readonly string[], UpstreamError>
+>("kyomi/HostResolver", {
+  defaultValue: () => (hostname) =>
+    Effect.tryPromise({
+      try: async () => {
+        const records = await lookup(hostname, { all: true, verbatim: true });
+        return records.map((record) => record.address);
+      },
+      catch: (cause) => new UpstreamError({ operation: "resolve outbound host", cause }),
+    }),
+});
 
-  const resolved = await lookup(hostname, { all: true, verbatim: true });
-  return [...new Set(resolved.map((record) => normalizeIpAddress(record.address)))];
-}
+const PRIVATE_NETWORK_MESSAGE = "Private network URLs are not allowed";
 
-export async function assertSafeOutboundUrl(url: URL): Promise<void> {
+/**
+ * Fails with `UnsafeOutboundUrl` unless `url` is a public destination: a literal address or every
+ * address its hostname resolves to must be outside the private, loopback and link-local ranges.
+ * A resolver failure is an `UpstreamError`.
+ */
+export const checkOutboundUrl = Effect.fn("net.checkOutboundUrl")(function* (url: URL) {
   const hostname = canonicalHostname(url.hostname);
   if (!hostname) {
-    throw new BlockedOutboundUrlError("URL must include a hostname");
+    return yield* new UnsafeOutboundUrl({
+      message: "URL must include a hostname",
+      cause: new BlockedOutboundUrlError("URL must include a hostname"),
+    });
   }
-
+  const blocked = () =>
+    new UnsafeOutboundUrl({
+      message: PRIVATE_NETWORK_MESSAGE,
+      cause: new BlockedOutboundUrlError(PRIVATE_NETWORK_MESSAGE),
+    });
   if (isBlockedHostname(hostname)) {
-    throw new BlockedOutboundUrlError("Private network URLs are not allowed");
+    return yield* blocked();
   }
 
   const isLiteralIpAddress = isIP(hostname) !== 0;
-  const resolvedAddresses = await resolveHostnameAddresses(hostname);
-  if (
-    resolvedAddresses.some((address) =>
-      isBlockedOutboundIpAddress(address, {
-        blockSharedAddressSpace: isLiteralIpAddress,
-      }),
-    )
-  ) {
-    throw new BlockedOutboundUrlError("Private network URLs are not allowed");
+  const resolve = yield* HostResolver;
+  const addresses = isLiteralIpAddress ? [hostname] : yield* resolve(hostname);
+  const resolved = new Set(addresses.map(normalizeIpAddress));
+  for (const address of resolved) {
+    if (isBlockedOutboundIpAddress(address, { blockSharedAddressSpace: isLiteralIpAddress })) {
+      return yield* blocked();
+    }
   }
-}
+});

@@ -20,13 +20,13 @@ describe("process roles", () => {
     expect(schedulerBoot).not.toContain("WorkerLive");
   });
 
-  test("every process entrypoint hands shutdown to runMain, not to signal handlers of its own", () => {
+  // Which entrypoint runs under `runMain` is a wiring fact a grep can state; what `runMain` and the
+  // scopes do on a signal is covered behaviourally in `setup/main.test.ts` and `setup/lifecycle.test.ts`.
+  test("every process entrypoint runs under runMain and installs no signal handler of its own", () => {
     for (const entry of ["server", "worker", "scheduler", "dev"]) {
       const source = readFileSync(join(root, `apps/api/src/app/boot/${entry}.ts`), "utf8");
       expect(source).toContain("runMain(");
       expect(source).not.toContain("process.on(");
-      expect(source).not.toContain("AbortController");
-      expect(source).not.toContain("shutdownAdapters");
     }
   });
 

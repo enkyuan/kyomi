@@ -1,7 +1,8 @@
+import type { ManagedRuntime } from "effect";
 import type { Elysia } from "elysia";
 import { ValidationError } from "elysia";
-import { env } from "@config/env";
-import { logger } from "@adapters/logger";
+import { AppLogger } from "@adapters/logger/service";
+import { AppConfig } from "@config/env/service";
 import { serializeError } from "@shared/errors/serialize";
 import { describeError } from "@shared/http/error/render";
 import { shapeErrorResponse } from "@shared/http/error/shape";
@@ -35,12 +36,24 @@ function validationFailureResponse(error: ValidationError, requestId: string) {
   );
 }
 
-export function registerErrorHandlers(app: Elysia) {
+/**
+ * Renders every failure as the wire envelope and logs it. The logger and the development stack
+ * flag come from the runtime's services; Elysia hooks are synchronous, so the log Effect runs
+ * with `runSync` (the sink writes synchronously).
+ */
+export function registerErrorHandlers(
+  app: Elysia,
+  runtime: ManagedRuntime.ManagedRuntime<AppLogger | AppConfig, unknown>,
+) {
+  const { NODE_ENV } = runtime.runSync(AppConfig.useSync((value) => value));
+  const log = (level: "warn" | "error", event: string, context: Record<string, unknown>) =>
+    runtime.runSync(AppLogger.use((logger) => logger[level](event, context)));
+
   app.onError(({ error, request, set, code }) => {
     const requestId = resolveErrorRequestId(request, set);
 
     if (code === "VALIDATION" && error instanceof ValidationError) {
-      logger.warn("request.validation.failed", {
+      log("warn", "request.validation.failed", {
         path: new URL(request.url).pathname,
         method: request.method,
         requestId,
@@ -57,10 +70,10 @@ export function registerErrorHandlers(app: Elysia) {
       errorCode: rendered.expected ? rendered.code : undefined,
       errorDetails: rendered.details,
       cause: rendered.expected ? undefined : serializeError(rendered.cause),
-      stack: env.NODE_ENV === "development" && error instanceof Error ? error.stack : undefined,
+      stack: NODE_ENV === "development" && error instanceof Error ? error.stack : undefined,
     };
 
-    logger.error("request.failed", context);
+    log("error", "request.failed", context);
 
     return shapeErrorResponse(error, requestId);
   });

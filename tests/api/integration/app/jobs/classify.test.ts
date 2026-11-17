@@ -13,7 +13,6 @@ import {
   RedisError,
   Unavailable,
 } from "@shared/effect/errors";
-import { AppError } from "@shared/errors/app";
 
 describe("isNonRetryableFeedRefreshFailure", () => {
   test("acks permanent fetch failures so the scheduler can own backoff", () => {
@@ -54,15 +53,6 @@ describe("isNonRetryableFeedRefreshFailure", () => {
 });
 
 describe("toJobFailure", () => {
-  test("re-tags an AppError by status and keeps its code", () => {
-    const failure = toJobFailure(
-      new AppError("Article not found", { status: 404, code: "ARTICLE_NOT_FOUND" }),
-    );
-
-    expect(failure).toBeInstanceOf(NotFound);
-    expect(failure).toMatchObject({ code: "ARTICLE_NOT_FOUND", message: "Article not found" });
-  });
-
   test("passes typed failures through unchanged", () => {
     const failure = new RedisError({ operation: "xadd", cause: new Error("down") });
     expect(toJobFailure(failure)).toBe(failure);
@@ -83,7 +73,7 @@ describe("toJobFailure", () => {
 describe("classifyJobFailure", () => {
   test("a deterministic 4xx from a job is permanent and expected", () => {
     const failure = toJobFailure(
-      new AppError("Article not found", { status: 404, code: "ARTICLE_NOT_FOUND" }),
+      new NotFound({ message: "Article not found", code: "ARTICLE_NOT_FOUND" }),
     );
 
     expect(classifyJobFailure(failure)).toEqual({
@@ -96,9 +86,11 @@ describe("classifyJobFailure", () => {
   test("timeouts, rate limits and server errors are retryable", () => {
     expect(classifyJobFailure(new RateLimited({ message: "slow down" })).retryable).toBe(true);
     expect(classifyJobFailure(new Unavailable({ message: "later" })).retryable).toBe(true);
-    expect(
-      classifyJobFailure(toJobFailure(new AppError("boom", { status: 500, code: "BOOM" }))),
-    ).toEqual({ severity: "platform", code: "BOOM", retryable: true });
+    expect(classifyJobFailure(new InternalError({ message: "boom", code: "BOOM" }))).toEqual({
+      severity: "platform",
+      code: "BOOM",
+      retryable: true,
+    });
   });
 
   test("infrastructure failures are retryable platform failures", () => {

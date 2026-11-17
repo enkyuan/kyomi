@@ -1,6 +1,12 @@
 import { describe, expect, test } from "bun:test";
-import { AppError } from "@shared/errors/app";
-import { BadGateway, Conflict, DatabaseError, RedisError } from "@shared/effect/errors";
+import {
+  BadGateway,
+  BadRequest,
+  Conflict,
+  NotFound,
+  DatabaseError,
+  RedisError,
+} from "@shared/effect/errors";
 import { describeError, failureBody } from "@shared/http/error/render";
 import { shapeErrorResponse } from "@shared/http/error/shape";
 
@@ -35,10 +41,10 @@ describe("describeError", () => {
     expect(redis.code).toBe("INTERNAL_ERROR");
   });
 
-  test("legacy AppError keeps its status, code and details", () => {
+  test("a typed error keeps its explicit code and details", () => {
     expect(
       describeError(
-        new AppError("gone", { status: 404, code: "ARTICLE_NOT_FOUND", details: { id: "a" } }),
+        new NotFound({ message: "gone", code: "ARTICLE_NOT_FOUND", details: { id: "a" } }),
       ),
     ).toMatchObject({
       status: 404,
@@ -68,7 +74,7 @@ describe("describeError", () => {
     expect(body).toEqual({
       error: { message: "taken", code: "CONFLICT", requestId: "req-1", details: { a: 1 } },
     });
-    const response = shapeErrorResponse(new AppError("nope", { status: 400, code: "X" }), "req-2");
+    const response = shapeErrorResponse(new BadRequest({ message: "nope", code: "X" }), "req-2");
     expect(response.status).toBe(400);
     expect(await (response as Response).json()).toEqual({
       error: { message: "nope", code: "X", requestId: "req-2" },

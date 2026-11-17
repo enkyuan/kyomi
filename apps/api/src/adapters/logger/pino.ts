@@ -1,7 +1,6 @@
 import pino from "pino";
 
 import { SERVICE_NAME } from "@config/constants";
-import { env } from "@config/env";
 
 export type LogLevel = "info" | "warn" | "error";
 export type LogContext = Record<string, unknown>;
@@ -70,22 +69,19 @@ const DRIVER_ERROR_KEYS = [
 function normalizeForJson(value: unknown, seen = new WeakSet<object>()): unknown {
   if (value instanceof Error) {
     const record = value as unknown as Record<string, unknown>;
-    const result: Record<string, unknown> = {
-      name: value.name,
-      message: value.message,
-      stack: value.stack,
-    };
-    // Preserve the cause chain so DrizzleQueryError's underlying pg DatabaseError
-    // is never silently dropped from structured logs.
-    if (value.cause !== undefined) {
-      result.cause = normalizeForJson(value.cause, seen);
-    }
+    const result: Record<string, unknown> = { name: value.name, message: value.message };
     for (const key of DRIVER_ERROR_KEYS) {
       const val = record[key];
       if (typeof val === "string" && val.length > 0) {
         result[key] = val;
       }
     }
+    // The cause chain (DrizzleQueryError's underlying pg DatabaseError, say) comes before the
+    // stack: a log line is truncated from the end, and the stack must not push the root cause out.
+    if (value.cause !== undefined) {
+      result.cause = normalizeForJson(value.cause, seen);
+    }
+    result.stack = value.stack;
     return result;
   }
   if (typeof value === "bigint") {
@@ -149,8 +145,8 @@ function emitPrettyLog(level: LogLevel, event: string, context: LogContext = {})
 
 /**
  * Build the process logger: pretty single-line output in development, JSON through pino in
- * production, filtered at the configured level. `logger` below is the legacy singleton; Effect
- * code reaches the same sink through the `AppLogger` service in `./service`.
+ * production, filtered at the configured level. Effect code reaches it through the `AppLogger`
+ * service in `./service`.
  */
 export function createLogger(options: LoggerOptions): AppLogger {
   const minimum = LEVEL_ORDER[configuredLogLevel(options)];
@@ -175,5 +171,3 @@ export function createLogger(options: LoggerOptions): AppLogger {
     error: (event, context) => emit("error", event, context),
   };
 }
-
-export const logger: AppLogger = createLogger({ nodeEnv: env.NODE_ENV, logLevel: env.LOG_LEVEL });

@@ -171,4 +171,49 @@ describe("sanitizer backfill base URLs", () => {
       expect(html).toContain('href="https://example.com/next"');
     }
   });
+
+  test("an aborted run stops before reading another page or writing another row", async () => {
+    const controller = new AbortController();
+    let pages = 0;
+    let writes = 0;
+    const row = {
+      id: "row-1",
+      html: "<p>hello</p>",
+      sanitizerVersion: 0,
+      baseUrl: "https://example.com/post",
+    };
+    const database = {
+      select: () => ({
+        from: () => ({
+          where: () => ({
+            orderBy: () => ({
+              limit: () => {
+                pages += 1;
+                // The first page arrives with the run already told to stop.
+                controller.abort(new Error("stopped"));
+                return Promise.resolve([row, { ...row, id: "row-2" }]);
+              },
+            }),
+          }),
+        }),
+      }),
+      update: () => ({
+        set: () => {
+          writes += 1;
+          return { where: () => Promise.resolve() };
+        },
+      }),
+    };
+
+    await expect(
+      runSanitizerVersionBackfillScope(
+        database as never,
+        BACKFILL_SCOPES[0]!,
+        { apply: true, batchSize: 10, sleepMs: 0 },
+        controller.signal,
+      ),
+    ).rejects.toThrow("stopped");
+    expect(pages).toBe(1);
+    expect(writes).toBe(0);
+  });
 });

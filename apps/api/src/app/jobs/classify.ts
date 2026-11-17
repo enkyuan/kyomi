@@ -1,13 +1,6 @@
 import { Data } from "effect";
 import type { FeedRefreshFailureClass, FeedRefreshResult } from "@kyomi/ingest";
-import {
-  ERROR_CATALOGUE,
-  InternalError,
-  fromAppError,
-  isApiError,
-  type ApiError,
-} from "@shared/effect/errors";
-import { AppError } from "@shared/errors/app";
+import { ERROR_CATALOGUE, InternalError, isApiError, type ApiError } from "@shared/effect/errors";
 
 /** A feed refresh that finished without a usable feed and is worth another attempt. */
 export class FeedRefreshFailed extends Data.TaggedError("FeedRefreshFailed")<{
@@ -23,19 +16,18 @@ export type JobFailureClass = {
   /** `expected` failures are about the job's input (log at warn); `platform` ones are ours (error). */
   severity: "expected" | "platform";
   code: string;
-  /** Whether running the job again can succeed. Permanent failures are acknowledged, not retried. */
+  /**
+   * Whether running the job again can succeed. Logged only: the consumer retries every failed job
+   * and dead-letters it after the last attempt.
+   */
   retryable: boolean;
 };
 
 /**
- * Map what a legacy Promise operation threw to a typed job failure, by class and never by message:
- * `AppError` keeps its status and code, typed errors pass through, and anything else is an
- * `InternalError` that keeps the original cause.
+ * Map what a Promise operation threw to a typed job failure, by class and never by message: typed
+ * errors pass through, and anything else is an `InternalError` that keeps the original cause.
  */
 export function toJobFailure(cause: unknown): JobFailure {
-  if (cause instanceof AppError) {
-    return fromAppError(cause);
-  }
   if (isApiError(cause) || cause instanceof FeedRefreshFailed) {
     return cause;
   }
@@ -47,7 +39,7 @@ export function toJobFailure(cause: unknown): JobFailure {
 
 /**
  * A request that cannot succeed unchanged (4xx other than 408 and 429) is permanent; server and
- * infrastructure failures are retryable. The same rule `classifyOpmlItemError` applies to AppError.
+ * infrastructure failures are retryable. The same rule `classifyOpmlItemError` applies.
  */
 function retryableStatus(status: number): boolean {
   return status >= 500 || status === 408 || status === 429;

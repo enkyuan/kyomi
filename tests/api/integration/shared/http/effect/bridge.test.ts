@@ -10,8 +10,8 @@ import { testConfig } from "@api-tests/support/layers";
 const runtime = ManagedRuntime.make(testConfig());
 afterAll(() => runtime.dispose());
 
-const request = (signal?: AbortSignal) =>
-  new Request("http://localhost/api/v1/things?x=1", { method: "POST", signal });
+const request = (signal?: AbortSignal, method = "POST") =>
+  new Request("http://localhost/api/v1/things?x=1", { method, signal });
 
 describe("runEffect", () => {
   test("provides the request context and current user", async () => {
@@ -59,11 +59,11 @@ describe("runEffect", () => {
     });
   });
 
-  test("aborting the request interrupts the running Effect", async () => {
+  test("aborting a read-only request interrupts the running Effect", async () => {
     const controller = new AbortController();
     let finalized = false;
     const pending = runEffect(
-      { runtime, request: request(controller.signal), requestId: "req-10" },
+      { runtime, request: request(controller.signal, "GET"), requestId: "req-10" },
       Effect.never.pipe(Effect.ensuring(Effect.sync(() => (finalized = true)))),
     ).catch((error: unknown) => error);
 
@@ -72,5 +72,25 @@ describe("runEffect", () => {
 
     expect(finalized).toBe(true);
     expect((failure as EffectFailure).rendered).toMatchObject({ status: 499 });
+  });
+
+  test("aborting a mutating request between a claim and its publish still runs the publish", async () => {
+    const controller = new AbortController();
+    const steps: string[] = [];
+    const claimThenPublish = Effect.gen(function* () {
+      steps.push("claim");
+      controller.abort();
+      yield* Effect.sleep("20 millis");
+      steps.push("publish");
+      return "done";
+    });
+
+    const result = await runEffect(
+      { runtime, request: request(controller.signal, "POST"), requestId: "req-11" },
+      claimThenPublish,
+    );
+
+    expect(result).toBe("done");
+    expect(steps).toEqual(["claim", "publish"]);
   });
 });

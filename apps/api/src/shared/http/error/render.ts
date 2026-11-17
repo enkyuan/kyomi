@@ -1,5 +1,4 @@
 import { Cause, Result } from "effect";
-import { AppError } from "@shared/errors/app";
 import { ERROR_CATALOGUE, isApiError } from "@shared/effect/errors";
 import type { ErrorResponseDto } from "./response";
 
@@ -44,8 +43,7 @@ function isClientHttpError(
 
 /**
  * The one mapping from any thrown or failed value to a status and error body. Typed catalogue
- * errors use `ERROR_CATALOGUE`, legacy `AppError` keeps its own status/code, framework 4xx errors
- * keep their status, and everything else is an opaque 500.
+ * errors use `ERROR_CATALOGUE`, framework 4xx errors keep their status, and everything else is an opaque 500.
  */
 export function describeError(error: unknown): RenderedFailure {
   if (error instanceof EffectFailure) {
@@ -61,16 +59,6 @@ export function describeError(error: unknown): RenderedFailure {
       details: entry.expose ? fields.details : undefined,
       cause: error,
       expected: entry.expose,
-    };
-  }
-  if (error instanceof AppError) {
-    return {
-      status: error.status,
-      code: error.code,
-      message: error.message,
-      details: error.details,
-      cause: error,
-      expected: error.status < 500,
     };
   }
   if (isClientHttpError(error)) {

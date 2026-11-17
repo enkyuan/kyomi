@@ -14,10 +14,14 @@ export type DbShape = {
   /** The Drizzle client. Prefer `use` so failures become typed `DatabaseError`s. */
   readonly client: Database;
   readonly pool: Pool;
-  /** Run a Promise-based Drizzle call, mapping any throw to `DatabaseError`. */
+  /**
+   * Run a Promise-based Drizzle call, mapping any throw to `DatabaseError`. `signal` aborts when
+   * the calling fiber is interrupted; long loops check it between statements so they stop instead
+   * of running on against a pool that is about to close.
+   */
   readonly use: <A>(
     operation: string,
-    run: (client: Database) => Promise<A>,
+    run: (client: Database, signal: AbortSignal) => Promise<A>,
   ) => Effect.Effect<A, DatabaseError>;
 };
 
@@ -28,7 +32,7 @@ export function dbShape(client: Database, pool: Pool): DbShape {
     pool,
     use: (operation, run) =>
       Effect.tryPromise({
-        try: () => run(client),
+        try: (signal) => run(client, signal),
         catch: (cause) => new DatabaseError({ operation, cause }),
       }),
   };

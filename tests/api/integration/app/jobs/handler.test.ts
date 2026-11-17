@@ -1,8 +1,15 @@
 import { describe, expect, test } from "bun:test";
-import { Effect, Exit, Layer } from "effect";
-import { makeFailureReporter, makeJobHandler } from "@app/jobs/handler";
+import { Effect, Exit, Fiber, Layer } from "effect";
+import { attemptJob, makeFailureReporter, makeJobHandler } from "@app/jobs/handler";
 import type { JobMessage } from "@kyomi/ingest";
-import { fakeDb, fakeRedis, recordingLogger, testConfig } from "@api-tests/support/layers";
+import {
+  fakeDb,
+  fakeHttpClient,
+  fakeQueue,
+  recordingLogger,
+  testConfig,
+} from "@api-tests/support/layers";
+import { feedsLayer } from "../../modules/opml/fixtures";
 
 /** A query chain that resolves to no rows however it is built up. */
 function emptyQuery(): unknown {
@@ -23,7 +30,16 @@ const message = (job: JobMessage["job"], attempts = 0): JobMessage => ({
 
 function setup(db: Parameters<typeof fakeDb>[0]) {
   const logs = recordingLogger();
-  const layer = Layer.mergeAll(fakeDb(db), fakeRedis({}), testConfig(), logs.layer);
+  const layer = Layer.mergeAll(
+    fakeDb(db),
+    fakeQueue({}),
+    fakeHttpClient(() => {
+      throw new Error("the job handler tests make no outbound requests");
+    }),
+    testConfig(),
+    feedsLayer().layer,
+    logs.layer,
+  );
   const build = Effect.gen(function* () {
     return { handle: yield* makeJobHandler, report: yield* makeFailureReporter };
   }).pipe(Effect.provide(layer));
@@ -31,8 +47,8 @@ function setup(db: Parameters<typeof fakeDb>[0]) {
 }
 
 describe("job handler failures", () => {
-  test("a deterministic AppError inside article extraction is permanent, not retried to dead-letter", async () => {
-    const { build } = setup({ select: () => emptyQuery() });
+  test("a deterministic NotFound inside article extraction is logged as expected and left to the consumer's retry", async () => {
+    const { build, logs } = setup({ select: () => emptyQuery() });
     const { handle, report } = await Effect.runPromise(build);
 
     const exit = await Effect.runPromiseExit(
@@ -48,7 +64,14 @@ describe("job handler failures", () => {
     const failure = Exit.isFailure(exit) ? exit.cause.reasons[0] : undefined;
     const error = (failure as { error?: { _tag: string; code?: string } } | undefined)?.error;
     expect(error?._tag).toBe("NotFound");
-    await expect(Effect.runPromise(report(error as never, null))).resolves.toBe("permanent");
+    await Effect.runPromise(report(error as never, null));
+    expect(logs.entries).toContainEqual(
+      expect.objectContaining({
+        level: "warn",
+        event: "worker.job.failed",
+        context: expect.objectContaining({ retryable: false }),
+      }),
+    );
   });
 
   test("an unexpected throw from a module is a retryable internal failure with its message kept", async () => {
@@ -79,7 +102,7 @@ describe("job handler failures", () => {
       _tag: "FeedRefreshFailed",
       message: "connection terminated unexpectedly",
     });
-    await expect(Effect.runPromise(report(error as never, job))).resolves.toBe("retry");
+    await Effect.runPromise(report(error as never, job));
     expect(logs.entries).toContainEqual(
       expect.objectContaining({
         level: "error",
@@ -119,5 +142,69 @@ describe("job handler failures", () => {
         }),
       }),
     );
+  });
+});
+
+describe("attemptJob", () => {
+  const delay = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
+
+  test("an interrupted job ends only after its Promise has settled", async () => {
+    const order: string[] = [];
+    const work = async () => {
+      order.push("started");
+      await delay(40);
+      order.push("settled");
+    };
+
+    await Effect.runPromise(
+      Effect.gen(function* () {
+        const fiber = yield* Effect.forkChild(attemptJob(work, Effect.void));
+        yield* Effect.sleep("5 millis");
+        yield* Fiber.interrupt(fiber);
+        order.push("interrupted");
+      }),
+    );
+
+    expect(order).toEqual(["started", "settled", "interrupted"]);
+  });
+
+  test("a Promise that outlasts the settle window is abandoned and reported", async () => {
+    let abandoned = false;
+
+    await Effect.runPromise(
+      Effect.gen(function* () {
+        const fiber = yield* Effect.forkChild(
+          attemptJob(
+            () => delay(200),
+            Effect.sync(() => {
+              abandoned = true;
+            }),
+            "10 millis",
+          ),
+        );
+        yield* Effect.sleep("5 millis");
+        yield* Fiber.interrupt(fiber);
+      }),
+    );
+
+    expect(abandoned).toBe(true);
+  });
+
+  test("a rejection becomes a typed job failure and nothing is abandoned", async () => {
+    let abandoned = false;
+
+    const failure = await Effect.runPromise(
+      Effect.flip(
+        attemptJob(
+          () => Promise.reject(new Error("connection terminated")),
+          Effect.sync(() => {
+            abandoned = true;
+          }),
+        ),
+      ),
+    );
+
+    expect(failure).toMatchObject({ _tag: "InternalError", message: "connection terminated" });
+    expect(abandoned).toBe(false);
   });
 });

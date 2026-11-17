@@ -1,24 +1,41 @@
 import { Effect, Layer, ManagedRuntime, type Scope } from "effect";
+import { Auth } from "@adapters/auth/service";
 import { Db } from "@adapters/db/service";
 import { HttpClientLive } from "@adapters/http/client";
 import { AppLogger } from "@adapters/logger/service";
 import { JobQueue } from "@adapters/queue/service";
+import { RateLimiter } from "@adapters/rate-limit/service";
 import { Redis } from "@adapters/redis/service";
-import { LegacyAdaptersLive } from "@adapters/shutdown";
+import { FeedSearch } from "@adapters/search/service";
 import { AppConfig } from "@config/env/service";
+import { FaviconResolver } from "@modules/favicon/service";
+import { FeedBackground } from "@modules/feeds/service";
+import { OpmlFeedsLive } from "@modules/opml/live";
 
 const ConfigAndLogger = Layer.mergeAll(
   AppConfig.layer,
   AppLogger.layer.pipe(Layer.provide(AppConfig.layer)),
 );
 
-const Infrastructure = Layer.mergeAll(Db.layer, Redis.layer, HttpClientLive);
+const Infrastructure = Layer.mergeAll(
+  Db.layer,
+  Redis.layer,
+  HttpClientLive,
+  FeedSearch.layer.pipe(Layer.provide(HttpClientLive)),
+);
 
 /** Every service the API provides, wired once. Resources release when the layer scope closes. */
-export const AppLive = JobQueue.layer.pipe(
+const Domains = Layer.mergeAll(
+  JobQueue.layer,
+  FeedBackground.layer,
+  FaviconResolver.layer,
+  RateLimiter.layer,
+  Auth.layer,
+);
+
+export const AppLive = Layer.provideMerge(OpmlFeedsLive, Domains).pipe(
   Layer.provideMerge(Infrastructure),
   Layer.provideMerge(ConfigAndLogger),
-  Layer.provideMerge(LegacyAdaptersLive),
 );
 
 export type AppServices = Layer.Success<typeof AppLive>;

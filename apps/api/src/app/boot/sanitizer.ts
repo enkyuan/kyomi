@@ -1,11 +1,15 @@
-import { db, pool } from "@adapters/db/client";
-import { assertApiDatabaseReady } from "@adapters/db/preflight";
+import { Console, Data, Effect } from "effect";
 import { articleClips, articleExtractionCache, feedItems } from "@kyomi/db";
 import { and, asc, eq, gt, isNotNull, isNull, ne, or, sql } from "drizzle-orm";
 import {
   ARTICLE_HTML_SANITIZER_VERSION,
   processArticleHtml,
 } from "@modules/articles/reader/content";
+import { Db, type Database } from "@adapters/db/service";
+import { InvalidArguments } from "@modules/catalog/errors";
+import { AppLive } from "../runtime";
+import { runMain } from "../setup/main";
+import { ensureDatabaseReady } from "../setup/ready";
 
 export const BACKFILL_SCOPES = [
   "feed-original",
@@ -132,7 +136,7 @@ function sleep(ms: number): Promise<void> {
   return ms > 0 ? new Promise((resolve) => setTimeout(resolve, ms)) : Promise.resolve();
 }
 
-type DB = typeof db;
+type DB = Database;
 /** `baseUrl` is the article URL, so relative links and images in stored HTML resolve correctly. */
 type StaleRow = {
   id: string;
@@ -349,11 +353,16 @@ const SCOPE_RUNNERS: Record<BackfillScope, ScopeRunner> = {
   },
 };
 
-/** Runs one scope to completion, keyset-batched by primary key, sleeping between batches. */
+/**
+ * Runs one scope to completion, keyset-batched by primary key, sleeping between batches. `signal`
+ * stops the run (by throwing its reason) before the next page and the next write, so a SIGINT ends
+ * the scan within one statement instead of leaving it running against a closing pool.
+ */
 export async function runSanitizerVersionBackfillScope(
   database: DB,
   scope: BackfillScope,
   options: { apply: boolean; batchSize: number; sleepMs: number },
+  signal?: AbortSignal,
 ): Promise<ScopeBackfillResult> {
   const runner = SCOPE_RUNNERS[scope];
   const startedAt = Date.now();
@@ -370,6 +379,7 @@ export async function runSanitizerVersionBackfillScope(
 
   let cursor: string | null = null;
   while (true) {
+    signal?.throwIfAborted();
     const rows = await runner.readPage(database, cursor, options.batchSize);
     if (rows.length === 0) {
       break;
@@ -404,6 +414,7 @@ export async function runSanitizerVersionBackfillScope(
       result.updated += 1;
 
       if (options.apply) {
+        signal?.throwIfAborted();
         await runner.applyUpdate(database, row.id, row.sanitizerVersion, processed);
       }
     }
@@ -418,15 +429,32 @@ export async function runSanitizerVersionBackfillScope(
   return result;
 }
 
+/** The run finished but some rows could not be reprocessed; the process exits non-zero. */
+class SanitizerBackfillIncomplete extends Data.TaggedError("SanitizerBackfillIncomplete")<{
+  readonly failed: number;
+}> {
+  override get message() {
+    return `${this.failed} rows failed sanitizer reprocessing`;
+  }
+}
+
 if (import.meta.main) {
-  const args = parseBackfillSanitizerVersionArgs(process.argv);
-  try {
-    await assertApiDatabaseReady({ commandName: "content:sanitizer-backfill" });
+  const backfill = Effect.gen(function* () {
+    const args = yield* Effect.try({
+      try: () => parseBackfillSanitizerVersionArgs(process.argv),
+      catch: (cause) =>
+        new InvalidArguments({ message: cause instanceof Error ? cause.message : String(cause) }),
+    });
+    yield* ensureDatabaseReady({ commandName: "content:sanitizer-backfill" });
+
+    const db = yield* Db;
     const results: ScopeBackfillResult[] = [];
     for (const scope of args.scopes) {
-      const result = await runSanitizerVersionBackfillScope(db, scope, args);
+      const result = yield* db.use("content.sanitizer_backfill", (client) =>
+        runSanitizerVersionBackfillScope(client, scope, args),
+      );
       results.push(result);
-      console.log(JSON.stringify(result));
+      yield* Console.log(JSON.stringify(result));
     }
     const summary = results.reduce(
       (acc, result) => ({
@@ -437,13 +465,14 @@ if (import.meta.main) {
       }),
       { scanned: 0, updated: 0, skipped: 0, failed: 0 },
     );
-    console.log(
+    yield* Console.log(
       `${args.apply ? "APPLIED" : "DRY RUN"}: scanned ${summary.scanned}, updated ${summary.updated}, skipped ${summary.skipped}, failed ${summary.failed}`,
     );
     if (summary.failed > 0) {
-      process.exitCode = 1;
+      return yield* new SanitizerBackfillIncomplete({ failed: summary.failed });
     }
-  } finally {
-    await pool.end();
-  }
+  });
+
+  // The layer scope closes Postgres and Redis once the run ends, or on SIGINT/SIGTERM.
+  runMain(backfill.pipe(Effect.provide(AppLive)));
 }

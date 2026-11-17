@@ -257,5 +257,3 @@ export function loadEnv(source: RawEnv = process.env) {
 }
 
 export type Env = ReturnType<typeof loadEnv>;
-
-export const env: Env = loadEnv(process.env);

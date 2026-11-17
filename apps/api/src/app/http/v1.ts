@@ -1,4 +1,5 @@
 import { Elysia } from "elysia";
+import { resolveSessionContext } from "@adapters/auth/session";
 import { registerArticleRoutes } from "@modules/articles/routes";
 import { registerDiscoverRoutes } from "@modules/discover/routes";
 import { registerFeedRoutes } from "@modules/feeds/routes";
@@ -7,8 +8,7 @@ import { registerInboxRoutes } from "@modules/inbox/routes";
 import { registerOpmlRoutes } from "@modules/opml/routes";
 import { registerQueueRoutes } from "@modules/queue/routes";
 import { registerUserRoutes } from "@modules/users/routes";
-import { apiV1AdapterPlugin } from "@shared/http/stacks";
-import { resolveSessionContext } from "@shared/http/session/context";
+import { requestObservationPlugin } from "@shared/http/stacks";
 import type { AppRuntime } from "../runtime";
 
 /**
@@ -39,10 +39,10 @@ export function createApiV1Router(runtime: AppRuntime) {
   return new Elysia({
     name: "kyomi.api.v1",
   })
-    .use(apiV1AdapterPlugin)
+    .use(requestObservationPlugin(runtime))
     .group("/api/v1", (group) => {
       const authenticated = group.derive(async ({ request, set }) =>
-        resolveSessionContext(request, set),
+        resolveSessionContext(runtime, request, set),
       );
       return applyDomainRoutes(
         authenticated as unknown as Elysia,

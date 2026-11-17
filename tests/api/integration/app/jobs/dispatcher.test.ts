@@ -15,7 +15,7 @@ import { fakeDb, fakeQueue, recordingLogger } from "@api-tests/support/layers";
 
 const itemsStorePath = join(
   import.meta.dir,
-  "../../../../../apps/api/src/modules/opml/store/items.ts",
+  "../../../../../apps/api/src/modules/opml/store/leases.ts",
 );
 
 /**
