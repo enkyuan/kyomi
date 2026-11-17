@@ -43,4 +43,5 @@ operator scripts live in `src/app/boot` because they write through api adapters.
 
 - env is loaded with `dotenvx` from `docker/.env` and `apps/api/.env`.
 - database schema lives in `packages/db`; migrations run through the root `db:*` scripts.
+- converted modules run on Effect (services, Layers, typed errors, one runtime); see [`docs/architecture/api-effect.md`](../../docs/architecture/api-effect.md).
 - shared ingestion, queue contracts, and sanitization live in `@kyomi/ingest`. this app owns the executable processes that drive them.

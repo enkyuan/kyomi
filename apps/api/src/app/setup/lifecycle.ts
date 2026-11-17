@@ -3,12 +3,16 @@ import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/guard";
 import { env } from "@config/env";
 import { shutdownAdapters } from "@adapters/shutdown";
 import { logger } from "@adapters/logger";
+import type { AppRuntime } from "../runtime";
 import { parseFeedAdminUserIds } from "@modules/feeds/admin/allowlist";
 
 /**
  * Startup / shutdown hooks (FastAPI `lifespan` equivalent).
  */
-export function registerLifecycle(app: Elysia) {
+export function registerLifecycle(
+  app: Elysia,
+  options: { runtime: AppRuntime; ownsRuntime: boolean },
+) {
   app.onStart(async () => {
     if (env.NODE_ENV === "development") {
       await assertDevelopmentDatabaseSchemaReady();
@@ -24,7 +28,11 @@ export function registerLifecycle(app: Elysia) {
   });
 
   app.onStop(async () => {
+    // Legacy singletons first, then every Layer-owned resource (pool, Redis) in reverse acquire order.
     await shutdownAdapters();
+    if (options.ownsRuntime) {
+      await options.runtime.dispose();
+    }
     logger.info("application.shutdown.complete", { nodeEnv: env.NODE_ENV });
   });
 }

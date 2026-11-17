@@ -2,7 +2,8 @@ import type { Elysia } from "elysia";
 import { ValidationError } from "elysia";
 import { env } from "@config/env";
 import { logger } from "@adapters/logger";
-import { AppError } from "@shared/errors/app";
+import { serializeError } from "@shared/errors/serialize";
+import { describeError } from "@shared/http/error/render";
 import { shapeErrorResponse } from "@shared/http/error/shape";
 import { getRequestIdFromHeaders } from "@shared/http/request-id/headers";
 
@@ -47,14 +48,15 @@ export function registerErrorHandlers(app: Elysia) {
       return validationFailureResponse(error, requestId);
     }
 
-    const isAppError = error instanceof AppError;
+    const rendered = describeError(error);
     const context = {
       path: new URL(request.url).pathname,
       method: request.method,
       requestId,
       error: error instanceof Error ? error.message : "Unknown error",
-      errorCode: isAppError ? error.code : undefined,
-      errorDetails: isAppError ? error.details : undefined,
+      errorCode: rendered.expected ? rendered.code : undefined,
+      errorDetails: rendered.details,
+      cause: rendered.expected ? undefined : serializeError(rendered.cause),
       stack: env.NODE_ENV === "development" && error instanceof Error ? error.stack : undefined,
     };
 

@@ -12,3 +12,7 @@ export type ReadinessPayload = {
   now: string;
   version: string;
 };
+
+export type QueueHealthSnapshot = {
+  streams: Record<string, { length: number; pending: number }>;
+};

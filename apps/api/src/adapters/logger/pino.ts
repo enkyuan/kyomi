@@ -3,7 +3,7 @@ import pino from "pino";
 import { SERVICE_NAME } from "@config/constants";
 import { env } from "@config/env";
 
-type LogLevel = "info" | "warn" | "error";
+export type LogLevel = "info" | "warn" | "error";
 export type LogContext = Record<string, unknown>;
 export type AppLogger = {
   info: (event: string, context?: LogContext) => void;
@@ -24,16 +24,13 @@ const LEVEL_LABEL: Record<LogLevel, string> = {
 const MAX_STRING_LENGTH = 240;
 const MAX_STRUCTURED_LENGTH = 480;
 
-function getConfiguredLogLevel(): LogLevel {
-  const raw = env.LOG_LEVEL;
-  if (raw === "error" || raw === "warn" || raw === "info") {
-    return raw;
-  }
-  return env.NODE_ENV === "production" ? "warn" : "info";
-}
+export type LoggerOptions = {
+  readonly nodeEnv: "development" | "production" | "test";
+  readonly logLevel?: LogLevel | undefined;
+};
 
-function shouldLog(level: LogLevel) {
-  return LEVEL_ORDER[level] >= LEVEL_ORDER[getConfiguredLogLevel()];
+function configuredLogLevel(options: LoggerOptions): LogLevel {
+  return options.logLevel ?? (options.nodeEnv === "production" ? "warn" : "info");
 }
 
 function pad(value: number, length = 2) {
@@ -146,32 +143,37 @@ export function formatLogLine(level: LogLevel, event: string, context: LogContex
   return [timestamp, SERVICE_NAME, LEVEL_LABEL[level], event, ...fields].join(" ");
 }
 
-const baseLogger = pino({
-  level: getConfiguredLogLevel(),
-  timestamp: pino.stdTimeFunctions.isoTime,
-});
-
 function emitPrettyLog(level: LogLevel, event: string, context: LogContext = {}) {
-  if (!shouldLog(level)) {
-    return;
-  }
   process.stdout.write(`${formatLogLine(level, event, context)}\n`);
 }
 
-function emitJsonLog(level: LogLevel, event: string, context: LogContext = {}) {
-  baseLogger[level]({ event, ...context });
+/**
+ * Build the process logger: pretty single-line output in development, JSON through pino in
+ * production, filtered at the configured level. `logger` below is the legacy singleton; Effect
+ * code reaches the same sink through the `AppLogger` service in `./service`.
+ */
+export function createLogger(options: LoggerOptions): AppLogger {
+  const minimum = LEVEL_ORDER[configuredLogLevel(options)];
+  const base =
+    options.nodeEnv === "production"
+      ? pino({ level: configuredLogLevel(options), timestamp: pino.stdTimeFunctions.isoTime })
+      : null;
+  const emit = (level: LogLevel, event: string, context: LogContext = {}) => {
+    if (LEVEL_ORDER[level] < minimum) {
+      return;
+    }
+    if (base) {
+      base[level]({ event, ...context });
+    } else {
+      emitPrettyLog(level, event, context);
+    }
+  };
+
+  return {
+    info: (event, context) => emit("info", event, context),
+    warn: (event, context) => emit("warn", event, context),
+    error: (event, context) => emit("error", event, context),
+  };
 }
 
-const emitLog = env.NODE_ENV === "production" ? emitJsonLog : emitPrettyLog;
-
-export const logger: AppLogger = {
-  info: (event: string, context: LogContext = {}) => {
-    emitLog("info", event, context);
-  },
-  warn: (event: string, context: LogContext = {}) => {
-    emitLog("warn", event, context);
-  },
-  error: (event: string, context: LogContext = {}) => {
-    emitLog("error", event, context);
-  },
-};
+export const logger: AppLogger = createLogger({ nodeEnv: env.NODE_ENV, logLevel: env.LOG_LEVEL });

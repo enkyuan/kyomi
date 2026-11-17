@@ -32,6 +32,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.1.4",
+    "effect": "4.1.4",
     "jsdom": "^28.1.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",

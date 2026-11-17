@@ -34,5 +34,6 @@ run from the repository root.
 
 ## notes
 
+- api tests for Effect-based code provide Layers from `api/integration/support/layers.ts` instead of mocking modules or `fetch`.
 - api tests run from `apps/api` so they pick up the same env files and runtime aliases as the app.
 - e2e scripts are wired in `tests/package.json`. add `tests/api/e2e` or `tests/web/e2e` when those suites land.
