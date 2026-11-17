@@ -38,6 +38,15 @@ A module's Effects sit in its existing role files (`operations.ts`, `queries.ts`
 declare what they need in the `R` type. Modules never import `@app/*`. `routes.ts` stays the HTTP
 boundary: it takes the runtime and calls `runEffect`. Reference exemplar: `modules/health`.
 
+`bun run check:boundaries` enforces the structure. Layers depend downward only: `app`, then
+`modules`, then `adapters`, then `shared` and `config` (one tier, since configuration fails with the
+shared error catalogue and the shared HTTP stacks read configuration); a new top-level directory has
+to be placed in `API_LAYER_TIERS` in `scripts/check-boundaries.ts`. Domain modules form a graph
+without cycles (type imports included); import a module's concrete file rather than a barrel. Across
+every source root, files must not import each other in a loop at runtime. Type-only imports, dynamic
+`import()` and generated files (`*.gen.ts`) are not counted. A cycle is reported once, naming its
+files; break it by moving the shared piece down, or by passing it in.
+
 ## Services and Layers
 
 ```ts

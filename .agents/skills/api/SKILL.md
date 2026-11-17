@@ -57,6 +57,9 @@ apps/api/src/
 - Time comes from `Clock`, sleeps from `Effect.sleep`; discarded Effects are bugs (always `yield*`).
 
 - Keep boot and HTTP assembly focused on wiring and lifecycle.
+- Keep dependencies pointing down: `app`, then `modules`, then `adapters`, then `shared` and
+  `config`. Modules do not import each other in a cycle, and no files import each other in a loop at
+  runtime; `bun run check:boundaries` fails on an upward import or a cycle.
 - Keep public product behavior under `src/modules/<domain>`. Split large domains by subdomain or
   read/write responsibility before creating repository-wide technical buckets.
 - Keep each `routes.ts` file as the HTTP boundary and delegator. Put schemas, types, queries,
