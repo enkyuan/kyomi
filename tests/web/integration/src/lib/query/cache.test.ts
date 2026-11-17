@@ -1,8 +1,10 @@
-import { describe, expect, test } from "vitest";
+// @vitest-environment jsdom
+
 import { QueryClient } from "@tanstack/react-query";
+import { describe, expect, test, vi } from "vitest";
 import type { InboxListPage } from "@modules/articles/lib/api";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
-import { dropCorruptInboxItemQueries, prepareHotCacheState } from "@lib/query/cache";
+import { dropCorruptHotQueries, prepareHotCacheState } from "@lib/query/cache";
 
 type HotCacheState = Parameters<typeof prepareHotCacheState>[0];
 type DehydratedHotQuery = HotCacheState["queries"][number];
@@ -216,32 +218,145 @@ describe("prepareHotCacheState", () => {
   });
 });
 
-describe("dropCorruptInboxItemQueries", () => {
-  test("removes an item-detail entry whose cached data belongs to a different item id", () => {
-    const queryClient = new QueryClient();
-    queryClient.setQueryData(["inbox", "item-detail", "item-a"], articleDetail("item-b"));
+describe("dropCorruptHotQueries", () => {
+  const detailKey = (id: string) => ["inbox", "item-detail", id] as const;
+  const keysAfter = (...queries: DehydratedHotQuery[]) =>
+    dropCorruptHotQueries({ mutations: [], queries }).queries.map((query) => query.queryKey);
 
-    dropCorruptInboxItemQueries(queryClient);
+  test("retains an item-detail entry holding the article it is keyed by, in its { item } wrapper", () => {
+    const entry = successfulQuery(detailKey("item-a"), { item: articleDetail("item-a") }, 1);
 
-    expect(queryClient.getQueryData(["inbox", "item-detail", "item-a"])).toBeUndefined();
+    expect(keysAfter(entry)).toEqual([detailKey("item-a")]);
   });
 
-  test("removes an item-detail entry that fails schema validation", () => {
-    const queryClient = new QueryClient();
-    queryClient.setQueryData(["inbox", "item-detail", "item-a"], { not: "an article" });
+  test("retains an entry whose article is gone ({ item: null }) and one with no data yet", () => {
+    const gone = successfulQuery(detailKey("item-a"), { item: null }, 1);
+    const pending: DehydratedHotQuery = {
+      ...successfulQuery(detailKey("item-b"), undefined, 0),
+      state: {
+        ...successfulQuery(detailKey("item-b"), undefined, 0).state,
+        status: "pending",
+        fetchStatus: "fetching",
+      },
+    };
 
-    dropCorruptInboxItemQueries(queryClient);
-
-    expect(queryClient.getQueryData(["inbox", "item-detail", "item-a"])).toBeUndefined();
+    expect(keysAfter(gone, pending)).toEqual([detailKey("item-a"), detailKey("item-b")]);
   });
 
-  test("retains a valid item-detail entry matching its own item id", () => {
+  test("removes an item-detail entry whose article belongs to a different item id", () => {
+    const entry = successfulQuery(detailKey("item-a"), { item: articleDetail("item-b") }, 1);
+
+    expect(keysAfter(entry)).toEqual([]);
+  });
+
+  test("removes an item-detail entry that fails schema validation or lacks the wrapper", () => {
+    const invalid = successfulQuery(detailKey("item-a"), { item: { not: "an article" } }, 1);
+    const unwrapped = successfulQuery(detailKey("item-b"), articleDetail("item-b"), 1);
+
+    expect(keysAfter(invalid, unwrapped)).toEqual([]);
+  });
+
+  test("removes a list whose data is null or malformed without losing the valid ones", () => {
+    const valid = successfulQuery(["inbox", "items", "ok"], infiniteInboxData(inboxPage("a")), 1);
+    const nothing = successfulQuery(["inbox", "items", "null"], null, 1);
+    const notPages = successfulQuery(
+      ["inbox", "items", "text"],
+      { pages: "abc", pageParams: [] },
+      1,
+    );
+
+    expect(keysAfter(valid, nothing, notPages)).toEqual([["inbox", "items", "ok"]]);
+  });
+
+  test("removes an inbox list with an invalid page and keeps a valid one and other queries", () => {
+    const valid = successfulQuery(["inbox", "items", "ok"], infiniteInboxData(inboxPage("a")), 1);
+    const invalid = successfulQuery(
+      ["inbox", "items", "bad"],
+      { pages: [{ invalid: true }], pageParams: ["cursor"] },
+      1,
+    );
+    const other = successfulQuery(["folders", "all"], [], 1);
+
+    expect(keysAfter(valid, invalid, other)).toEqual([
+      ["inbox", "items", "ok"],
+      ["folders", "all"],
+    ]);
+  });
+});
+
+/** The few IndexedDB calls the hot cache makes, over one stored snapshot. */
+function stubIndexedDb(snapshot: unknown) {
+  const store = new Map<string, unknown>([["kyomi:hot-query-cache:v2", snapshot]]);
+  const database = {
+    createObjectStore: () => undefined,
+    close: () => undefined,
+    transaction: () => {
+      const transaction: { oncomplete?: () => void; objectStore: () => unknown } = {
+        objectStore: () => ({
+          get: (key: string) => {
+            const request: { result?: unknown; onsuccess?: () => void } = {};
+            queueMicrotask(() => {
+              request.result = store.get(key);
+              request.onsuccess?.();
+              transaction.oncomplete?.();
+            });
+            return request;
+          },
+          put: (value: unknown, key: string) => {
+            store.set(key, value);
+            queueMicrotask(() => transaction.oncomplete?.());
+          },
+          delete: (key: string) => {
+            store.delete(key);
+            queueMicrotask(() => transaction.oncomplete?.());
+          },
+        }),
+      };
+      return transaction;
+    },
+  };
+  Object.defineProperty(window, "indexedDB", {
+    configurable: true,
+    value: {
+      open: () => {
+        const request: { result: unknown; onupgradeneeded?: () => void; onsuccess?: () => void } = {
+          result: database,
+        };
+        setTimeout(() => {
+          request.onupgradeneeded?.();
+          request.onsuccess?.();
+        });
+        return request;
+      },
+    },
+  });
+}
+
+describe("hydrateHotQueryCache", () => {
+  test("restores the snapshot without touching the queries the page already holds", async () => {
+    vi.resetModules();
+    const { hydrateHotQueryCache } = await import("@lib/query/cache");
+    stubIndexedDb({
+      savedAt: Date.now(),
+      state: {
+        mutations: [],
+        queries: [
+          successfulQuery(["inbox", "item-detail", "item-a"], { item: articleDetail("item-a") }, 1),
+          successfulQuery(["inbox", "item-detail", "item-bad"], articleDetail("item-bad"), 1),
+        ],
+      },
+    });
     const queryClient = new QueryClient();
-    const detail = articleDetail("item-a");
-    queryClient.setQueryData(["inbox", "item-detail", "item-a"], detail);
+    const live = { item: articleDetail("item-live") };
+    queryClient.setQueryData(["inbox", "item-detail", "item-live"], live);
 
-    dropCorruptInboxItemQueries(queryClient);
+    await hydrateHotQueryCache(queryClient);
 
-    expect(queryClient.getQueryData(["inbox", "item-detail", "item-a"])).toEqual(detail);
+    // The page's own query survives, the valid snapshot entry is restored, the malformed one is not.
+    expect(queryClient.getQueryData(["inbox", "item-detail", "item-live"])).toEqual(live);
+    expect(queryClient.getQueryData(["inbox", "item-detail", "item-a"])).toEqual({
+      item: articleDetail("item-a"),
+    });
+    expect(queryClient.getQueryData(["inbox", "item-detail", "item-bad"])).toBeUndefined();
   });
 });
