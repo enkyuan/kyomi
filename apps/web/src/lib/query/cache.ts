@@ -215,26 +215,50 @@ export function prepareHotCacheState(state: DehydratedState): DehydratedState {
   };
 }
 
-export function dropCorruptInboxItemQueries(queryClient: QueryClient) {
-  for (const query of queryClient.getQueryCache().findAll({ queryKey: queryKeys.inbox.items })) {
-    const data = query.state.data as InfiniteData<HotInboxListPage> | undefined;
-    if (!data?.pages?.length) {
-      continue;
-    }
-    if (data.pages.some((page) => !isValidInboxListPage(page))) {
-      queryClient.removeQueries({ queryKey: query.queryKey, exact: true });
-    }
+/**
+ * Whether a persisted item-detail entry is the `{ item }` response the query returns, holding the
+ * article it is keyed by. `item: null` is a valid response (the article is gone).
+ */
+function isValidItemDetailData(itemId: unknown, data: unknown): boolean {
+  if (!data || typeof data !== "object" || !("item" in data)) {
+    return false;
   }
+  const { item } = data as { item: unknown };
+  if (item === null) {
+    return true;
+  }
+  const parsed = articleDetailSchema.safeParse(item);
+  return parsed.success && parsed.data.id === itemId;
+}
 
-  for (const query of queryClient
-    .getQueryCache()
-    .findAll({ queryKey: queryKeys.inbox.itemDetails })) {
-    const itemId = query.queryKey[2];
-    const parsed = articleDetailSchema.safeParse(query.state.data);
-    if (!parsed.success || parsed.data.id !== itemId) {
-      queryClient.removeQueries({ queryKey: query.queryKey, exact: true });
-    }
+function isCorruptHotQuery(query: DehydratedHotQuery) {
+  if (query.state.data === undefined) {
+    return false;
   }
+  if (isInboxQueryScope(query, "items")) {
+    const data = query.state.data;
+    if (!data || typeof data !== "object") {
+      return true;
+    }
+    const { pages } = data as Partial<InfiniteData<HotInboxListPage>>;
+    return (
+      pages !== undefined &&
+      (!Array.isArray(pages) || pages.some((page) => !isValidInboxListPage(page)))
+    );
+  }
+  if (isInboxQueryScope(query, "item-detail")) {
+    return !isValidItemDetailData(query.queryKey[2], query.state.data);
+  }
+  return false;
+}
+
+/**
+ * Drop persisted entries that no longer match what their query returns (an older shape, a
+ * mismatched id). It filters the snapshot before it is hydrated, so the live cache, including
+ * queries the page is observing right now, is never touched.
+ */
+export function dropCorruptHotQueries(state: DehydratedState): DehydratedState {
+  return { ...state, queries: state.queries.filter((query) => !isCorruptHotQuery(query)) };
 }
 
 export function hydrateHotQueryCache(queryClient: QueryClient): Promise<void> {
@@ -256,8 +280,7 @@ export function hydrateHotQueryCache(queryClient: QueryClient): Promise<void> {
         return;
       }
 
-      hydrate(queryClient, parsed.state);
-      dropCorruptInboxItemQueries(queryClient);
+      hydrate(queryClient, dropCorruptHotQueries(parsed.state));
     })
     .catch(async () => {
       await removeHotCache(HOT_CACHE_KEY).catch(() => {});
