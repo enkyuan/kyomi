@@ -1,6 +1,8 @@
 import { describe, expect, mock, test } from "bun:test";
 import { Effect, Layer } from "effect";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
+import { Db } from "@adapters/db/service";
+import { JobQueue } from "@adapters/queue/service";
 import { getClipDetailForUser } from "@modules/articles/write/clips/detail";
 import {
   createArticleClip,
@@ -61,12 +63,12 @@ function publishedJobs(xadd: ReturnType<typeof mock>) {
   return xadd.mock.calls.map((call) => {
     const fields = (call as unknown[]).slice(5) as string[];
     const at = (name: string) => fields[fields.indexOf(name) + 1]!;
-    return { type: at("type"), payload: JSON.parse(at("payload")) as Record<string, any> };
+    return { type: at("type"), payload: JSON.parse(at("payload")) as Record<string, unknown> };
   });
 }
 
 function runCreate(
-  layer: Layer.Layer<any, any>,
+  layer: Layer.Layer<Db | JobQueue, unknown>,
   body: Parameters<typeof createArticleClip>[1],
   logs = recordingLogger(),
 ) {

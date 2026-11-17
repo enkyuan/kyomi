@@ -94,7 +94,11 @@ describe("recordArticleViewForUser", () => {
     expect(events).toHaveLength(2);
     expect(events[1]!.values).toMatchObject({ articleType: "feed", isFirstView: false });
     expect(
-      db.log.some((step) => step.kind === "insert" && (step.values as any).viewedItemCount === 1),
+      db.log.some(
+        (step) =>
+          step.kind === "insert" &&
+          (step.values as { viewedItemCount?: number }).viewedItemCount === 1,
+      ),
     ).toBe(false);
   });
 
