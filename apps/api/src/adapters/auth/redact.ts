@@ -1,21 +1,28 @@
-const GET_SESSION_PATH = "/api/auth/get-session";
+/**
+ * The one auth response that carries a session token on purpose: the mobile app exchanges its
+ * authorization code here and gets a session of its own. A native client has no page scripts to
+ * guard against, and an older build may read the token from the body.
+ */
+const OAUTH_TOKEN_PATH = "/api/auth/oauth/token";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
 /**
- * Whether this request is for the current session record (`/api/auth/get-session`). Better Auth
- * ignores trailing slashes, so they are ignored here too. This runs on unauthenticated requests, so
- * it trims them with a loop rather than a regular expression that backtracks on a long run of them.
+ * Whether this request is for the mobile app's token endpoint, whose response keeps its token.
+ * Better Auth ignores trailing slashes, so they are ignored here too. This runs on unauthenticated
+ * requests, so it trims them with a loop rather than a regular expression that backtracks on a
+ * long run of them. A path that only Better Auth would route here (doubled slashes, say) is not
+ * matched, so its token is removed: the exception fails closed.
  */
-export function isGetSessionRequest(request: Request) {
+export function isOAuthTokenRequest(request: Request) {
   const { pathname } = new URL(request.url);
   let end = pathname.length;
   while (end > 0 && pathname.charCodeAt(end - 1) === 47) {
     end -= 1;
   }
-  return pathname.slice(0, end) === GET_SESSION_PATH;
+  return pathname.slice(0, end) === OAUTH_TOKEN_PATH;
 }
 
 /**
@@ -40,8 +47,11 @@ function rebuild(response: Response, body: string) {
 }
 
 /**
- * Removes `session.token` from a successful JSON `get-session` response and leaves everything else
- * (status, headers including refreshed cookies, the rest of the body) as it was.
+ * Removes the session token from a successful JSON auth response and leaves everything else
+ * (status, headers including the session cookie, the rest of the body) as it was. Better Auth
+ * puts the token in two places: `session.token` in `get-session`, and a top-level `token` in what
+ * sign-in, sign-up and email verification answer with. The cookie has already been set by then, and
+ * it is the cookie, not the body, that the clients use.
  */
 export async function redactSessionToken(response: Response): Promise<Response> {
   if (!response.ok || !response.headers.get("content-type")?.includes("application/json")) {
@@ -56,8 +66,18 @@ export async function redactSessionToken(response: Response): Promise<Response> 
     return rebuild(response, text);
   }
 
-  if (!isRecord(body) || !isRecord(body.session) || !("token" in body.session)) {
+  if (!isRecord(body)) {
     return rebuild(response, text);
   }
-  return rebuild(response, JSON.stringify({ ...body, session: withoutToken(body.session) }));
+  const nested = isRecord(body.session) && "token" in body.session;
+  if (!nested && !("token" in body)) {
+    return rebuild(response, text);
+  }
+  const rest = withoutToken(body);
+  return rebuild(
+    response,
+    JSON.stringify(
+      nested ? { ...rest, session: withoutToken(body.session as { token?: unknown }) } : rest,
+    ),
+  );
 }

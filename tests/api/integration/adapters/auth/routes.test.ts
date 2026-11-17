@@ -102,6 +102,52 @@ describe("authRoutes", () => {
     expect(JSON.parse(text)).toEqual({ session: { id: "s1", userId: "u1" }, user: { id: "u1" } });
   });
 
+  test.each([
+    [
+      "sign-in with an email code",
+      "/api/auth/sign-in/email-otp",
+      { token: "secret-token", user: { id: "u1" } },
+    ],
+    [
+      "sign-in with a password",
+      "/api/auth/sign-in/email",
+      { redirect: false, token: "secret-token", user: { id: "u1" } },
+    ],
+    ["sign-up", "/api/auth/sign-up/email", { token: "secret-token", user: { id: "u1" } }],
+    [
+      "email verification",
+      "/api/auth/email-otp/verify-email",
+      { status: true, token: "secret-token", user: { id: "u1" } },
+    ],
+  ])(
+    "%s never sends the session token on, and keeps the cookie and the rest",
+    async (_name, path, body) => {
+      const handle = mock(() =>
+        Effect.succeed(Response.json(body, { headers: { "set-cookie": "session=abc; HttpOnly" } })),
+      );
+      const app = appWith({ handle });
+
+      const response = await app.handle(new Request(`http://localhost${path}`, { method: "POST" }));
+
+      expect(response.status).toBe(200);
+      expect(response.headers.get("set-cookie")).toContain("session=abc");
+      const text = await response.text();
+      expect(text).not.toContain("secret-token");
+      expect(JSON.parse(text)).toMatchObject({ user: { id: "u1" } });
+    },
+  );
+
+  test("the mobile token endpoint keeps its token", async () => {
+    const handle = mock(() => Effect.succeed(Response.json({ token: "secret-token" })));
+    const app = appWith({ handle });
+
+    const response = await app.handle(
+      new Request("http://localhost/api/auth/oauth/token", { method: "POST" }),
+    );
+
+    expect(await response.json()).toEqual({ token: "secret-token" });
+  });
+
   test("list-sessions without a session renders the 401 envelope", async () => {
     const app = appWith({
       listSessions: () => Effect.fail(new Unauthorized({ message: "Unauthorized" })),

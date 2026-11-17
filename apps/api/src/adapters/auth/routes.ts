@@ -9,7 +9,7 @@ import {
   getAuthCapabilities,
   serializeAuthCapabilities,
 } from "./capabilities";
-import { isGetSessionRequest, redactSessionToken } from "./redact";
+import { isOAuthTokenRequest, redactSessionToken } from "./redact";
 import { Auth } from "./service";
 
 type AuthRuntime = ManagedRuntime.ManagedRuntime<Auth | AppConfig, unknown>;
@@ -41,10 +41,11 @@ const handleAuthRequest = Effect.fn("auth.handle")(function* (
   const auth = yield* Auth;
   const headers = withForwardedForHeader(request, ipAddress);
   const response = yield* auth.handle(new Request(request, { headers }));
-  // The session record goes to page scripts, so it must not carry the session token.
-  const visible = isGetSessionRequest(request)
-    ? yield* Effect.tryPromise({ try: () => redactSessionToken(response), catch: unexpected })
-    : response;
+  // Page scripts read these responses, so none may carry the session token (the cookie is
+  // HttpOnly so that they cannot). The mobile app's token endpoint is the one exception.
+  const visible = isOAuthTokenRequest(request)
+    ? response
+    : yield* Effect.tryPromise({ try: () => redactSessionToken(response), catch: unexpected });
   return yield* withAuthCapabilities(visible);
 });
 

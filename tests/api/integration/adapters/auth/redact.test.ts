@@ -1,19 +1,20 @@
 import { describe, expect, test } from "bun:test";
-import { isGetSessionRequest, redactSessionToken, withoutToken } from "@adapters/auth/redact";
+import { isOAuthTokenRequest, redactSessionToken, withoutToken } from "@adapters/auth/redact";
 
 const session = { id: "s1", token: "secret-token", userId: "u1", userAgent: "Mozilla" };
 
-describe("isGetSessionRequest", () => {
+describe("isOAuthTokenRequest", () => {
   test.each([
-    ["http://localhost/api/auth/get-session", true],
-    ["http://localhost/api/auth/get-session/", true],
-    ["http://localhost/api/auth/get-session///", true],
-    ["http://localhost/api/auth/get-session?disableCookieCache=true", true],
-    ["http://localhost/api/auth/list-sessions", false],
-    ["http://localhost/api/auth/get-session-extra", false],
+    ["http://localhost/api/auth/oauth/token", true],
+    ["http://localhost/api/auth/oauth/token/", true],
+    ["http://localhost/api/auth/oauth/token///", true],
+    ["http://localhost/api/auth/oauth/token?x=1", true],
+    ["http://localhost/api/auth/oauth/token-extra", false],
+    ["http://localhost/api/auth//oauth/token", false],
+    ["http://localhost/api/auth/get-session", false],
     ["http://localhost/api/auth/sign-in/email-otp", false],
   ])("%s -> %p", (url, expected) => {
-    expect(isGetSessionRequest(new Request(url))).toBe(expected);
+    expect(isOAuthTokenRequest(new Request(url))).toBe(expected);
   });
 });
 
@@ -64,7 +65,40 @@ describe("redactSessionToken", () => {
   });
 
   test.each([
+    ["sign-in", { token: "secret-token", redirect: false, user: { id: "u1" } }],
+    ["email verification", { status: true, token: "secret-token", user: { id: "u1" } }],
+  ])("removes the top-level token a %s answers with", async (_name, body) => {
+    const response = await redactSessionToken(
+      new Response(JSON.stringify(body), {
+        headers: { "content-type": "application/json", "set-cookie": "a=1; HttpOnly" },
+      }),
+    );
+
+    const text = await response.text();
+    expect(text).not.toContain("secret-token");
+    const { token: _token, ...rest } = body;
+    expect(JSON.parse(text)).toEqual(rest);
+    expect(response.headers.get("set-cookie")).toBe("a=1; HttpOnly");
+  });
+
+  test("removes both tokens when a body has them in both places", async () => {
+    const response = await redactSessionToken(
+      Response.json({ token: "top-secret", session, user: {} }),
+    );
+
+    const text = await response.text();
+    expect(text).not.toContain("top-secret");
+    expect(text).not.toContain("secret-token");
+    expect(JSON.parse(text)).toEqual({
+      session: { id: "s1", userId: "u1", userAgent: "Mozilla" },
+      user: {},
+    });
+  });
+
+  test.each([
     ["no session (null body)", "null"],
+    ["a body that is a list", JSON.stringify([{ token: "kept" }])],
+    ["a body with a null token and no session", JSON.stringify({ status: true, user: {} })],
     ["a session object with no token", JSON.stringify({ session: { id: "s1" }, user: {} })],
     ["a body that is not JSON", "{not json"],
   ])("leaves %s as it was", async (_name, text) => {
@@ -84,12 +118,12 @@ describe("redactSessionToken", () => {
   });
 });
 
-describe("isGetSessionRequest on a hostile path", () => {
+describe("isOAuthTokenRequest on a hostile path", () => {
   test("stays fast with a very long run of trailing slashes", () => {
     const request = new Request(`http://localhost/api/auth/${"/".repeat(15_000)}x`);
 
     const started = performance.now();
-    expect(isGetSessionRequest(request)).toBe(false);
+    expect(isOAuthTokenRequest(request)).toBe(false);
 
     expect(performance.now() - started).toBeLessThan(20);
   });
