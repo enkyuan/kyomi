@@ -1,5 +1,6 @@
-import IORedis from "ioredis";
+import IORedis, { type RedisOptions } from "ioredis";
 import { Context, Effect, Layer } from "effect";
+import type { Env } from "@config/env/runtime";
 import { AppConfig } from "@config/env/service";
 import { AppLogger } from "@adapters/logger/service";
 import { RedisError } from "@shared/effect/errors";
@@ -24,6 +25,26 @@ export function redisReplyCode(cause: unknown): string | undefined {
   return undefined;
 }
 
+/** What a client needs from the environment. */
+type RedisSettings = Pick<
+  Env,
+  "REDIS_URL" | "REDIS_CONNECT_TIMEOUT_MS" | "REDIS_COMMAND_TIMEOUT_MS"
+>;
+
+/**
+ * The client options. A connection that cannot be made within `connectTimeout`, and a command with
+ * no reply within `commandTimeout`, fail instead of waiting forever. A command timeout of 0 is left
+ * unset (no limit). Clients duplicated from this one (the blocking reads) inherit both.
+ */
+export function redisClientOptions(config: RedisSettings): RedisOptions {
+  return {
+    maxRetriesPerRequest: 2,
+    enableReadyCheck: true,
+    connectTimeout: config.REDIS_CONNECT_TIMEOUT_MS,
+    commandTimeout: config.REDIS_COMMAND_TIMEOUT_MS || undefined,
+  };
+}
+
 export function makeRedis(client: RedisClient): RedisShape {
   return {
     client,
@@ -44,10 +65,7 @@ export class Redis extends Context.Service<Redis, RedisShape>()("kyomi/Redis") {
       const log = yield* AppLogger;
       const client = yield* Effect.acquireRelease(
         Effect.sync(() => {
-          const created = new IORedis(config.REDIS_URL, {
-            maxRetriesPerRequest: 2,
-            enableReadyCheck: true,
-          });
+          const created = new IORedis(config.REDIS_URL, redisClientOptions(config));
           created.on("error", (error) => {
             Effect.runSync(log.error("redis.client.error", { error: error.message }));
           });

@@ -138,7 +138,17 @@ export function loadEnv(source: RawEnv = process.env) {
       DATABASE_POOL_IDLE_TIMEOUT_MS: z.coerce.number().int().nonnegative().default(30_000),
       DATABASE_POOL_CONNECTION_TIMEOUT_MS: z.coerce.number().int().positive().default(5_000),
       DATABASE_SSL_MODE: z.enum(["disable", "require", "no-verify"]).optional(),
+      /** The server cancels a statement that runs longer than this (Postgres `statement_timeout`). 0 turns it off. */
+      DATABASE_STATEMENT_TIMEOUT_MS: z.coerce.number().int().nonnegative().default(30_000),
+      /**
+       * Client-side backstop for a query the server never answers (a dead connection). Keep it above
+       * the statement timeout so the server cancels first. 0 turns it off.
+       */
+      DATABASE_QUERY_TIMEOUT_MS: z.coerce.number().int().nonnegative().default(35_000),
       REDIS_URL: z.string().min(1),
+      REDIS_CONNECT_TIMEOUT_MS: z.coerce.number().int().positive().default(10_000),
+      /** A command with no reply after this long fails instead of waiting forever. 0 turns it off. */
+      REDIS_COMMAND_TIMEOUT_MS: z.coerce.number().int().nonnegative().default(5_000),
       WEB_ORIGIN: z.string().min(1),
       BETTER_AUTH_SECRET: z.string().min(1),
       BETTER_AUTH_URL: z.string().min(1).optional(),
@@ -245,6 +255,18 @@ export function loadEnv(source: RawEnv = process.env) {
     emptyStringAsUndefined: true,
     createFinalSchema: (shape) =>
       z.object(shape).superRefine((value, ctx) => {
+        if (
+          value.DATABASE_STATEMENT_TIMEOUT_MS > 0 &&
+          value.DATABASE_QUERY_TIMEOUT_MS > 0 &&
+          value.DATABASE_QUERY_TIMEOUT_MS <= value.DATABASE_STATEMENT_TIMEOUT_MS
+        ) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ["DATABASE_QUERY_TIMEOUT_MS"],
+            message:
+              "DATABASE_QUERY_TIMEOUT_MS must be above DATABASE_STATEMENT_TIMEOUT_MS so the server cancels a slow statement before the client gives up",
+          });
+        }
         for (const { flag, key } of findMissingFeatureCredentials(value)) {
           ctx.addIssue({
             code: z.ZodIssueCode.custom,

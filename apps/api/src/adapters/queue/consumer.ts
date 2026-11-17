@@ -124,7 +124,14 @@ const consumeStream = <E extends { readonly message: string }>(
       const blocking = makeRedis(
         yield* Effect.acquireRelease(
           Effect.sync(() => {
-            const client = redis.client.duplicate();
+            // A blocking read waits on purpose, so it may take its block time plus the command
+            // timeout; the timeout is only there to catch a read that never returns.
+            const commandTimeout = redis.client.options.commandTimeout;
+            const client = redis.client.duplicate(
+              commandTimeout
+                ? { commandTimeout: commandTimeout + (options.blockMs ?? DEFAULT_BLOCK_MS) }
+                : {},
+            );
             client.on("error", (error) => {
               Effect.runSync(
                 log.error("redis.client.error", {

@@ -34,6 +34,8 @@ function streamRedis(
     transactions: [] as unknown[][][],
     /** The arguments of each EVAL that puts due retries back on the stream. */
     promotions: [] as unknown[][],
+    /** The options each blocking client was duplicated with. */
+    duplicateOptions: [] as unknown[],
     /** Which Redis reads happened, in order, to show retries are promoted before the read. */
     reads: [] as string[],
     groups: 0,
@@ -103,7 +105,11 @@ function streamRedis(
       };
       return chain;
     },
-    duplicate: () => blocking,
+    options: { commandTimeout: 5_000 },
+    duplicate: (overrides: unknown) => {
+      state.duplicateOptions.push(overrides);
+      return blocking;
+    },
   };
   return { state, layer: fakeRedis(commands) };
 }
@@ -264,6 +270,19 @@ describe("startConsumers", () => {
       await delayFor(entryWithAttempts("4-0", 1), { baseMs: 40_000, maxMs: 50_000 }, 0.5),
       25_000,
     );
+  });
+
+  test("the blocking client may wait out its block time on top of the command timeout", async () => {
+    const redis = streamRedis({ batches: [[refreshEntry("1-0")]] });
+
+    await runUntil(
+      [consumer({ blockMs: 2_000, handle: () => Effect.void })],
+      redis,
+      () => redis.state.acked.length === 1,
+    ).result;
+
+    // The shared client times a command out after 5s; a read that blocks for 2s must not.
+    expect(redis.state.duplicateOptions).toEqual([{ commandTimeout: 7_000 }]);
   });
 
   test("retries that are due are put back on the stream before each read", async () => {

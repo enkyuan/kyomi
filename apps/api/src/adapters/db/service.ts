@@ -2,6 +2,7 @@ import { Context, Effect, Layer } from "effect";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool, type PoolConfig } from "pg";
 import * as schema from "@kyomi/db";
+import type { Env } from "@config/env/runtime";
 import { AppConfig } from "@config/env/service";
 import { AppLogger } from "@adapters/logger/service";
 import { DatabaseError } from "@shared/effect/errors";
@@ -48,6 +49,37 @@ function sslConfig(mode: "disable" | "require" | "no-verify" | undefined): PoolC
   return undefined;
 }
 
+/** What a pool needs from the environment. */
+type PoolSettings = Pick<
+  Env,
+  | "DATABASE_URL"
+  | "DATABASE_POOL_MAX"
+  | "DATABASE_POOL_IDLE_TIMEOUT_MS"
+  | "DATABASE_POOL_CONNECTION_TIMEOUT_MS"
+  | "DATABASE_STATEMENT_TIMEOUT_MS"
+  | "DATABASE_QUERY_TIMEOUT_MS"
+  | "DATABASE_SSL_MODE"
+  | "NODE_ENV"
+>;
+
+/**
+ * The pool configuration. `statement_timeout` makes the server cancel a runaway statement and free
+ * its connection; `query_timeout` is the client-side backstop for a connection that stops
+ * answering, where the server cannot cancel anything. A timeout of 0 is left unset (no limit).
+ */
+export function poolConfig(config: PoolSettings): PoolConfig {
+  return {
+    connectionString: normalizeLoopbackUrl(config.DATABASE_URL),
+    max: config.DATABASE_POOL_MAX,
+    idleTimeoutMillis: config.DATABASE_POOL_IDLE_TIMEOUT_MS,
+    connectionTimeoutMillis: config.DATABASE_POOL_CONNECTION_TIMEOUT_MS,
+    statement_timeout: config.DATABASE_STATEMENT_TIMEOUT_MS || undefined,
+    query_timeout: config.DATABASE_QUERY_TIMEOUT_MS || undefined,
+    allowExitOnIdle: config.NODE_ENV !== "production",
+    ssl: sslConfig(config.DATABASE_SSL_MODE),
+  };
+}
+
 export function makeDb(pool: Pool): DbShape {
   return dbShape(drizzle(pool, { schema }), pool);
 }
@@ -61,14 +93,7 @@ export class Db extends Context.Service<Db, DbShape>()("kyomi/Db") {
       const log = yield* AppLogger;
       const pool = yield* Effect.acquireRelease(
         Effect.sync(() => {
-          const created = new Pool({
-            connectionString: normalizeLoopbackUrl(config.DATABASE_URL),
-            max: config.DATABASE_POOL_MAX,
-            idleTimeoutMillis: config.DATABASE_POOL_IDLE_TIMEOUT_MS,
-            connectionTimeoutMillis: config.DATABASE_POOL_CONNECTION_TIMEOUT_MS,
-            allowExitOnIdle: config.NODE_ENV !== "production",
-            ssl: sslConfig(config.DATABASE_SSL_MODE),
-          });
+          const created = new Pool(poolConfig(config));
           // An unhandled 'error' on an idle client would otherwise crash the process.
           created.on("error", (error) => {
             Effect.runSync(log.error("db.pool.error", { error: serializeError(error) }));

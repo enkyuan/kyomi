@@ -16,6 +16,25 @@ describe("Db layer", () => {
     expect(db.pool.ended).toBe(true);
   });
 
+  test("has the server cancel a slow statement, with a client backstop for a dead connection", async () => {
+    const runtime = ManagedRuntime.make(realDb());
+    const db = await runtime.runPromise(Effect.service(Db));
+    await runtime.dispose();
+
+    expect(db.pool.options).toMatchObject({ statement_timeout: 30_000, query_timeout: 35_000 });
+  });
+
+  test("a timeout of 0 leaves that limit off", async () => {
+    const runtime = ManagedRuntime.make(
+      realDb({ DATABASE_STATEMENT_TIMEOUT_MS: "0", DATABASE_QUERY_TIMEOUT_MS: "0" }),
+    );
+    const db = await runtime.runPromise(Effect.service(Db));
+    await runtime.dispose();
+
+    expect(db.pool.options.statement_timeout).toBeUndefined();
+    expect(db.pool.options.query_timeout).toBeUndefined();
+  });
+
   test("maps a failing query to DatabaseError", async () => {
     const runtime = ManagedRuntime.make(
       realDb({ DATABASE_URL: "postgresql://x:y@127.0.0.1:1/none" }),

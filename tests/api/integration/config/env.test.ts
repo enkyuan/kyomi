@@ -3,6 +3,7 @@ import {
   embeddingsWorkerUrlFromEnv,
   findMissingFeatureCredentials,
   httpsUrlFromEnv,
+  loadEnv,
 } from "@config/env/runtime";
 
 describe("env https URL validation", () => {
@@ -106,5 +107,49 @@ describe("env feature-flag credential validation", () => {
       // REDDIT_CLIENT_SECRET intentionally absent
     });
     expect(missing.map((m) => m.key)).toEqual(["REDDIT_CLIENT_SECRET"]);
+  });
+});
+
+describe("timeout settings", () => {
+  const env = {
+    NODE_ENV: "test",
+    DATABASE_URL: "postgresql://postgres:postgres@127.0.0.1:5432/kyomi_test",
+    REDIS_URL: "redis://127.0.0.1:6379",
+    WEB_ORIGIN: "http://localhost:3000",
+    BETTER_AUTH_SECRET: "test-secret",
+  };
+
+  test("default to a 30s statement timeout, a 35s query backstop and short Redis timeouts", () => {
+    expect(loadEnv(env)).toMatchObject({
+      DATABASE_STATEMENT_TIMEOUT_MS: 30_000,
+      DATABASE_QUERY_TIMEOUT_MS: 35_000,
+      REDIS_CONNECT_TIMEOUT_MS: 10_000,
+      REDIS_COMMAND_TIMEOUT_MS: 5_000,
+    });
+  });
+
+  test("the client backstop must stay above the statement timeout", () => {
+    expect(() =>
+      loadEnv({
+        ...env,
+        DATABASE_STATEMENT_TIMEOUT_MS: "20000",
+        DATABASE_QUERY_TIMEOUT_MS: "20000",
+      }),
+    ).toThrow("Invalid environment variables");
+  });
+
+  test("a timeout of 0 turns that limit off without tripping the ordering check", () => {
+    expect(
+      loadEnv({ ...env, DATABASE_STATEMENT_TIMEOUT_MS: "0", DATABASE_QUERY_TIMEOUT_MS: "10000" }),
+    ).toMatchObject({ DATABASE_STATEMENT_TIMEOUT_MS: 0, DATABASE_QUERY_TIMEOUT_MS: 10_000 });
+    expect(
+      loadEnv({ ...env, DATABASE_STATEMENT_TIMEOUT_MS: "10000", DATABASE_QUERY_TIMEOUT_MS: "0" }),
+    ).toMatchObject({ DATABASE_STATEMENT_TIMEOUT_MS: 10_000, DATABASE_QUERY_TIMEOUT_MS: 0 });
+  });
+
+  test("a Redis connect timeout of 0 is rejected: it would never connect", () => {
+    expect(() => loadEnv({ ...env, REDIS_CONNECT_TIMEOUT_MS: "0" })).toThrow(
+      "Invalid environment variables",
+    );
   });
 });

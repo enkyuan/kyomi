@@ -184,6 +184,25 @@ finalizers, `runtimeFromScope` ordering, `registerLifecycle` with and without `o
 (`boot/import.ts`, `backfill.ts`, `train.ts`, `report.ts`, `audit.ts`, `sanitizer.ts`, `smoke.ts`,
 `document.ts`) use the same shape, so the pool and Redis close when the run ends or on a signal.
 
+## Timeouts
+
+Nothing waits forever on a dependency that has stopped answering. All limits come from `AppConfig`.
+
+| Dependency       | Limit                                                                                            | Setting                                                 |
+| ---------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| Postgres query   | the server cancels a statement after 30s (`statement_timeout`) and frees the connection          | `DATABASE_STATEMENT_TIMEOUT_MS`                         |
+| Postgres query   | client-side backstop at 35s (`query_timeout`) for a connection that stops answering; no SQLSTATE | `DATABASE_QUERY_TIMEOUT_MS` (must stay above the above) |
+| Postgres connect | 5s to get a connection from the pool                                                             | `DATABASE_POOL_CONNECTION_TIMEOUT_MS`                   |
+| Redis connect    | 10s                                                                                              | `REDIS_CONNECT_TIMEOUT_MS`                              |
+| Redis command    | 5s with no reply fails the command; the consumer's blocking client adds its block time to this   | `REDIS_COMMAND_TIMEOUT_MS`                              |
+| Outbound HTTP    | feed fetch, favicon, discover, Resend and Meilisearch each set their own (5 to 30s)              | constants beside each call                              |
+
+A timeout of 0 turns that limit off. Operator scripts (`backfill`, `train`, `report`) share the pool
+settings, so a one-off run that needs a longer statement sets `DATABASE_STATEMENT_TIMEOUT_MS` for that
+run only; the batched backfill stays well inside the default. A timed-out Redis command leaves a
+blocking command (`BLPOP`, `XREADGROUP BLOCK`) running on the server until its own block ends, so only
+the consumer's duplicated blocking client issues those.
+
 ## Jobs
 
 - **Publish** through `JobQueue.publish(job)` (`RedisError` on failure).
