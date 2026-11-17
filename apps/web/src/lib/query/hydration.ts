@@ -1,5 +1,6 @@
 import type { DehydratedState, QueryClient } from "@tanstack/react-query";
 import { hydrate as queryHydrate } from "@tanstack/react-query";
+import { mark } from "@lib/perf/marks";
 
 type QueryStreamReader = {
   read: () => Promise<{ done: boolean; value?: DehydratedState }>;
@@ -38,6 +39,7 @@ export function createSafeHydrate(
   queryClient: QueryClient,
 ) {
   return async (dehydrated: unknown) => {
+    mark("router-hydrate-start");
     await ogHydrate?.(dehydrated as never);
 
     const state = dehydrated as SsrDehydratedState | undefined;
@@ -50,6 +52,7 @@ export function createSafeHydrate(
       // router hydration (so `hydrateRoot`) must not wait for that.
       void drainQueryStream(state.queryStream.getReader(), queryClient);
     }
+    mark("router-hydrate-end");
   };
 }
 
@@ -73,5 +76,7 @@ async function drainQueryStream(reader: QueryStreamReader, queryClient: QueryCli
     } while (!result.done);
   } catch (error) {
     console.error("Error reading the query stream:", error);
+  } finally {
+    mark("query-stream-drained");
   }
 }

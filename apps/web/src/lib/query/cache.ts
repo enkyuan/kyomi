@@ -1,5 +1,6 @@
 import type { DehydratedState, InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
 import { dehydrate, hydrate } from "@tanstack/react-query";
+import { mark } from "@lib/perf/marks";
 import { queryKeys } from "./keys";
 
 const HOT_CACHE_KEY = "kyomi:hot-query-cache:v2";
@@ -32,6 +33,14 @@ type PersistedHotCache = {
   userId: string;
   state: DehydratedState;
 };
+
+/** How the snapshot fared on this page load, reported with the page's performance. */
+type HotCacheOutcome = "pending" | "hit" | "empty" | "discarded" | "unavailable";
+let hotCacheOutcome: HotCacheOutcome = "pending";
+
+export function getHotCacheOutcome(): HotCacheOutcome {
+  return hotCacheOutcome;
+}
 
 let hasHydrated = false;
 let persistTimer: number | undefined;
@@ -264,12 +273,14 @@ export function hydrateHotQueryCache(queryClient: QueryClient, userId: string): 
     return Promise.resolve();
   }
   hasHydrated = true;
+  mark("hot-cache-read-start");
 
   return readHotCache()
     .then(async (parsed) => {
       removeLegacyLocalStorageCache();
       await removeHotCache(HOT_CACHE_LEGACY_KEY).catch(() => {});
       if (!parsed) {
+        hotCacheOutcome = "empty";
         return;
       }
 
@@ -279,15 +290,19 @@ export function hydrateHotQueryCache(queryClient: QueryClient, userId: string): 
         Boolean(parsed.savedAt) &&
         Date.now() - parsed.savedAt <= HOT_CACHE_MAX_AGE_MS;
       if (!isCurrent) {
+        hotCacheOutcome = "discarded";
         await removeHotCache(HOT_CACHE_KEY);
         return;
       }
 
       hydrate(queryClient, dropCorruptHotQueries(parsed.state));
+      hotCacheOutcome = "hit";
     })
     .catch(async () => {
+      hotCacheOutcome = "unavailable";
       await removeHotCache(HOT_CACHE_KEY).catch(() => {});
-    });
+    })
+    .finally(() => mark("hot-cache-ready"));
 }
 
 export async function clearHotQueryCache(): Promise<void> {
