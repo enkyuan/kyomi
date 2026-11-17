@@ -1,9 +1,11 @@
 import { and, eq, ne } from "drizzle-orm";
 import { feeds } from "@kyomi/db";
 import type { db } from "@adapters/db/client";
+import type { AppLogger } from "@adapters/logger";
 import { deleteFeedSearchDocument, upsertFeedSearchDocument } from "@adapters/search/meili";
 import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize";
 import { AppError } from "@shared/errors/app";
+import { serializeError } from "@shared/errors/serialize";
 import type { AdminGlobalFeedDetailDto, AdminUpdateGlobalFeedBody } from "../types";
 
 type DB = typeof db;
@@ -187,28 +189,57 @@ async function saveFeedUpdates(
   return row;
 }
 
+/**
+ * Keep the search index in step with a committed feed change. The database write already
+ * succeeded, so an index failure must not fail the request, but it leaves the index stale until
+ * the next sync: log it with the cause so the drift is visible.
+ */
+async function syncSearchIndex(
+  logger: AppLogger,
+  operation: "upsert" | "delete",
+  feedId: string,
+  run: () => Promise<unknown>,
+): Promise<void> {
+  try {
+    await run();
+  } catch (error) {
+    logger.warn("feeds.admin.search_sync_failed", {
+      operation,
+      feedId,
+      error: serializeError(error),
+    });
+  }
+}
+
 export async function adminUpdateGlobalFeed(
   database: DB,
   feedId: string,
   patch: AdminUpdateGlobalFeedBody,
+  logger: AppLogger,
 ): Promise<AdminGlobalFeedDetailDto> {
   assertPatchHasUpdatableField(patch);
   const current = await getExistingFeed(database, feedId);
   const updates = await applyAdminPatchToUpdates(database, patch, feedId, current.url);
   const row = await saveFeedUpdates(database, feedId, updates);
 
-  await upsertFeedSearchDocument({
-    id: row.id,
-    url: row.url,
-    title: row.title,
-    description: row.description,
-    link: row.link,
-  }).catch(() => undefined);
+  await syncSearchIndex(logger, "upsert", row.id, () =>
+    upsertFeedSearchDocument({
+      id: row.id,
+      url: row.url,
+      title: row.title,
+      description: row.description,
+      link: row.link,
+    }),
+  );
 
   return mapFeedRow(row);
 }
 
-export async function adminDeleteGlobalFeed(database: DB, feedId: string): Promise<void> {
+export async function adminDeleteGlobalFeed(
+  database: DB,
+  feedId: string,
+  logger: AppLogger,
+): Promise<void> {
   const removed = await database
     .delete(feeds)
     .where(eq(feeds.id, feedId))
@@ -216,5 +247,5 @@ export async function adminDeleteGlobalFeed(database: DB, feedId: string): Promi
   if (removed.length === 0) {
     throw new AppError("Feed not found", { status: 404, code: "FEED_NOT_FOUND" });
   }
-  await deleteFeedSearchDocument(feedId).catch(() => undefined);
+  await syncSearchIndex(logger, "delete", feedId, () => deleteFeedSearchDocument(feedId));
 }

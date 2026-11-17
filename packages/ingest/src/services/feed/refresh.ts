@@ -37,6 +37,7 @@ import {
   KEYWORD_CLASSIFIER_MODEL_ID,
 } from "./taxonomy";
 import type {
+  FeedFetchFailureClass,
   FeedIngestDatabase,
   FeedMetadata,
   FetchFeedDocumentResult,
@@ -82,6 +83,14 @@ function isPermanentHttpStatus(status: number | undefined): boolean {
 
 function isPermanentFetchError(error: string | undefined): boolean {
   return Boolean(error && CERTIFICATE_FETCH_ERROR_PATTERN.test(error));
+}
+
+function fetchFailureClass(status: number | undefined, permanent: boolean): FeedFetchFailureClass {
+  if (status === 404) return "http_404";
+  if (status !== undefined && status >= 500) return "http_5xx";
+  if (status !== undefined && status >= 400) return "http_4xx";
+  // The only status-less failure treated as permanent is a certificate error.
+  return permanent ? "certificate" : "network";
 }
 
 function computeFailureBackoffMs(
@@ -719,7 +728,8 @@ export async function runFeedRefresh(
       .limit(1);
 
     if (!feed) {
-      return { ok: false, itemCount: 0, error: "Feed not found" };
+      // The row was deleted after the refresh was claimed; another attempt finds nothing either.
+      return { ok: false, itemCount: 0, error: "Feed not found", permanent: true };
     }
 
     const fetchDocument = (
@@ -762,6 +772,7 @@ export async function runFeedRefresh(
         ok: false,
         itemCount: 0,
         error: `Feed fetch failed: ${fetched.error}`,
+        failureClass: fetchFailureClass(fetched.httpStatus, permanent),
         permanent,
       };
     }

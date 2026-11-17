@@ -1,5 +1,7 @@
 import { describe, expect, mock, test } from "bun:test";
+import { Effect, Layer } from "effect";
 import { reconcileImports } from "@app/jobs/dispatcher";
+import { fakeDb, fakeQueue, recordingLogger } from "@api-tests/support/layers";
 
 /**
  * Drives reconcileImports through the real store functions with a fake Postgres-shaped db,
@@ -98,12 +100,25 @@ function createFakeReconcileDb(options: {
   return { db, itemUpdateSets };
 }
 
-function fakeRedis() {
-  return { xadd: mock(async () => "stream-id") };
-}
+type FakeDb = ReturnType<typeof createFakeReconcileDb>["db"];
 
-function logger() {
-  return { info: mock(() => undefined), error: mock(() => undefined) };
+/** Run `reconcileImports` against the fake Db and a fake Redis behind the real `JobQueue`. */
+function reconcile(
+  db: FakeDb,
+  options: { includeRetention?: boolean; xadd?: () => Promise<string> } = {},
+) {
+  const logs = recordingLogger();
+  const layer = Layer.mergeAll(
+    fakeDb(db as never),
+    fakeQueue({ xadd: options.xadd ?? mock(async () => "stream-id") }),
+    logs.layer,
+  );
+  const stats = Effect.runPromise(
+    reconcileImports(new Date(), { includeRetention: options.includeRetention }).pipe(
+      Effect.provide(layer),
+    ),
+  );
+  return { stats, logs };
 }
 
 describe("reconcileImports", () => {
@@ -113,7 +128,7 @@ describe("reconcileImports", () => {
       dueForPrepare: [{ id: "import-accepted-1" }, { id: "import-accepted-2" }],
     });
 
-    const stats = await reconcileImports(db as never, fakeRedis() as never, logger());
+    const stats = await reconcile(db).stats;
 
     expect(stats.prepareRepublished).toBe(2);
     expect(itemUpdateSets[0]).toMatchObject({ status: "accepted" });
@@ -127,7 +142,7 @@ describe("reconcileImports", () => {
       ],
     });
 
-    const stats = await reconcileImports(db as never, fakeRedis() as never, logger());
+    const stats = await reconcile(db).stats;
 
     expect(stats.leasesReclaimed).toBe(2);
     // item-1 (attempt 1, retryable) goes back to pending; item-2 (attempt 5) fails permanently.
@@ -141,7 +156,7 @@ describe("reconcileImports", () => {
       cancelBatches: [500, 201, 0],
     });
 
-    const stats = await reconcileImports(db as never, fakeRedis() as never, logger());
+    const stats = await reconcile(db).stats;
 
     expect(stats.cancellingProcessed).toBe(701);
   });
@@ -151,9 +166,7 @@ describe("reconcileImports", () => {
       retentionCandidates: [{ id: "import-old-1" }],
     });
 
-    const stats = await reconcileImports(db as never, fakeRedis() as never, logger(), new Date(), {
-      includeRetention: false,
-    });
+    const stats = await reconcile(db, { includeRetention: false }).stats;
 
     expect(stats.retentionDeleted).toBe(0);
   });
@@ -163,9 +176,7 @@ describe("reconcileImports", () => {
       retentionCandidates: [{ id: "import-old-1" }, { id: "import-old-2" }],
     });
 
-    const stats = await reconcileImports(db as never, fakeRedis() as never, logger(), new Date(), {
-      includeRetention: true,
-    });
+    const stats = await reconcile(db, { includeRetention: true }).stats;
 
     expect(stats.retentionDeleted).toBe(2);
   });
@@ -174,16 +185,20 @@ describe("reconcileImports", () => {
     const { db } = createFakeReconcileDb({
       dueForPrepare: [{ id: "import-1" }],
     });
-    const testLogger = logger();
-
-    // publishJob (real, unmocked) calls redis.xadd internally; an empty object has no such
-    // method, so it throws exactly like a real Redis connection failure would.
-    const stats = await reconcileImports(db as never, {} as never, testLogger);
+    const { stats: pending, logs } = reconcile(db, {
+      xadd: async () => {
+        throw new Error("redis unavailable");
+      },
+    });
+    const stats = await pending;
 
     expect(stats.prepareRepublished).toBe(0);
-    expect(testLogger.error).toHaveBeenCalledWith(
-      "opml.import.reconcile.prepare_republish_failed",
-      expect.objectContaining({ importId: "import-1" }),
+    expect(logs.entries).toContainEqual(
+      expect.objectContaining({
+        level: "error",
+        event: "opml.import.reconcile.prepare_republish_failed",
+        context: expect.objectContaining({ importId: "import-1" }),
+      }),
     );
   });
 });

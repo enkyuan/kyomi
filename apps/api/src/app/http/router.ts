@@ -4,7 +4,7 @@ import { readerAssetPlugin } from "@modules/articles/reader/assets/routes";
 import { faviconPlugin } from "@modules/favicon/routes";
 import { healthPlugin } from "@modules/health/routes";
 import type { AppRuntime } from "../runtime";
-import { apiV1Router } from "./v1";
+import { createApiV1Router } from "./v1";
 
 /** Root HTTP plugin: operational endpoints + versioned product API. */
 export function createHttpRouter(runtime: AppRuntime) {
@@ -15,7 +15,7 @@ export function createHttpRouter(runtime: AppRuntime) {
     .use(faviconPlugin)
     .use(readerAssetPlugin)
     .use(authRoutes)
-    .use(apiV1Router);
+    .use(createApiV1Router(runtime));
 }
 
 export function registerRoutes(app: Elysia, runtime: AppRuntime) {

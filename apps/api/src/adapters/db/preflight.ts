@@ -31,7 +31,7 @@ export async function assertApiDatabaseReady(options: PreflightOptions): Promise
       await pool.query("select 1");
 
       if (options.ensureSchema) {
-        await assertDevelopmentDatabaseSchemaReady();
+        await assertDevelopmentDatabaseSchemaReady(pool);
       }
 
       return;

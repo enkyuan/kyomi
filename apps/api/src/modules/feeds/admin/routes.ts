@@ -18,7 +18,7 @@ export function registerFeedAdminRoutes(app: Elysia) {
           { feedId: string }
         >(context);
         assertFeedAdminUser(userId, context.request.headers);
-        const detail = await adminUpdateGlobalFeed(db, params.feedId, body);
+        const detail = await adminUpdateGlobalFeed(db, params.feedId, body, logger);
         logger.info("feeds.admin.updated", { userId, feedId: params.feedId });
         return detail;
       },
@@ -35,7 +35,7 @@ export function registerFeedAdminRoutes(app: Elysia) {
       async (context) => {
         const { db, logger, params, userId } = v1HandlerContext(context);
         assertFeedAdminUser(userId, context.request.headers);
-        await adminDeleteGlobalFeed(db, params.feedId);
+        await adminDeleteGlobalFeed(db, params.feedId, logger);
         logger.info("feeds.admin.deleted", { userId, feedId: params.feedId });
         return { message: "Feed deleted" };
       },

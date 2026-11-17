@@ -1,14 +1,17 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, mock, test } from "bun:test";
+import { Effect, Fiber, Layer } from "effect";
+import { TestClock } from "effect/testing";
 import {
   IMPORT_DISPATCH_LEASE_MS,
   IMPORT_DISPATCH_MAX_IMPORTS,
   IMPORT_DISPATCH_PER_IMPORT,
   IMPORT_DISPATCH_TOTAL,
-  runImportDispatcherLoop,
+  importDispatcherLoop,
   runImportDispatcherTick,
 } from "@app/jobs/dispatcher";
+import { fakeDb, fakeQueue, recordingLogger } from "@api-tests/support/layers";
 
 const itemsStorePath = join(
   import.meta.dir,
@@ -16,18 +19,11 @@ const itemsStorePath = join(
 );
 
 /**
- * Drives the dispatcher through the real @modules/opml/store functions with a fake
- * Postgres-shaped db and a fake redis client, rather than mock.module(...): a module-level mock
- * of @modules/opml/store or @adapters/queue/publish is process-wide and was proven to leak
- * into other files' real-implementation tests at scale (store.test.ts, recovery.test.ts), even
- * with mock.restore() called afterEach -- so this file never mocks either module.
+ * Drives the dispatcher through the real @modules/opml/store functions with a fake Postgres-shaped
+ * Db layer and a fake Redis client behind the real `JobQueue`; nothing is module-mocked.
  */
-function fakeRedis() {
+function redisClient() {
   return { xadd: mock(async () => "stream-id") };
-}
-
-function logger() {
-  return { info: mock(() => undefined), error: mock(() => undefined) };
 }
 
 describe("import dispatcher claim SQL", () => {
@@ -109,6 +105,14 @@ function createFakeDispatchDb(options: {
   return { db, updateSets };
 }
 
+function dispatchLayer(
+  db: ReturnType<typeof createFakeDispatchDb>["db"] | Record<string, unknown>,
+  xadd: ReturnType<typeof mock>,
+) {
+  const logs = recordingLogger();
+  return { logs, layer: Layer.mergeAll(fakeDb(db as never), fakeQueue({ xadd }), logs.layer) };
+}
+
 describe("runImportDispatcherTick", () => {
   test("publishes exactly one ID-only wakeup per claimed item and marks imports running once", async () => {
     const { db } = createFakeDispatchDb({
@@ -118,11 +122,12 @@ describe("runImportDispatcherTick", () => {
         claimedRow({ id: "item-3", import_id: "import-b", lease_token: "lease-3" }),
       ],
     });
-    const redis = fakeRedis();
-    const testLogger = logger();
-    const now = new Date("2026-01-01T00:00:00.000Z");
+    const redis = redisClient();
+    const { layer } = dispatchLayer(db, redis.xadd);
 
-    const stats = await runImportDispatcherTick(db as never, redis as never, testLogger, now);
+    const stats = await Effect.runPromise(
+      runImportDispatcherTick(new Date("2026-01-01T00:00:00.000Z")).pipe(Effect.provide(layer)),
+    );
 
     expect(stats).toEqual({
       claimed: 3,
@@ -137,22 +142,22 @@ describe("runImportDispatcherTick", () => {
     const { db, updateSets } = createFakeDispatchDb({
       claimedRows: [claimedRow({ id: "item-1", lease_token: "lease-1" })],
     });
-    const redis = { xadd: mock(async () => Promise.reject(new Error("redis unavailable"))) };
-    const testLogger = logger();
+    const xadd = mock(async () => Promise.reject(new Error("redis unavailable")));
+    const { layer, logs } = dispatchLayer(db, xadd);
 
-    const stats = await runImportDispatcherTick(
-      db as never,
-      redis as never,
-      testLogger,
-      new Date(),
+    const stats = await Effect.runPromise(
+      runImportDispatcherTick(new Date()).pipe(Effect.provide(layer)),
     );
 
     expect(stats.published).toBe(0);
     expect(stats.releasedAfterPublishFailure).toBe(1);
     expect(updateSets.some((patch) => patch.status === "pending")).toBe(true);
-    expect(testLogger.error).toHaveBeenCalledWith(
-      "opml.import.dispatch.publish_failed",
-      expect.objectContaining({ importId: "import-1", itemId: "item-1" }),
+    expect(logs.entries).toContainEqual(
+      expect.objectContaining({
+        level: "error",
+        event: "opml.import.dispatch.publish_failed",
+        context: expect.objectContaining({ importId: "import-1", itemId: "item-1" }),
+      }),
     );
   });
 
@@ -161,79 +166,81 @@ describe("runImportDispatcherTick", () => {
       claimedRows: [claimedRow({ id: "item-1", lease_token: "lease-1" })],
       releaseSucceeds: false,
     });
-    const redis = { xadd: mock(async () => Promise.reject(new Error("redis unavailable"))) };
+    const xadd = mock(async () => Promise.reject(new Error("redis unavailable")));
+    const { layer } = dispatchLayer(db, xadd);
 
-    const stats = await runImportDispatcherTick(db as never, redis as never, logger(), new Date());
+    const stats = await Effect.runPromise(
+      runImportDispatcherTick(new Date()).pipe(Effect.provide(layer)),
+    );
 
     expect(stats.releasedAfterPublishFailure).toBe(0);
   });
 });
 
-describe("runImportDispatcherLoop", () => {
-  test("ticks at least once and stops promptly once the signal aborts", async () => {
+describe("importDispatcherLoop", () => {
+  test("ticks at once and stops promptly when interrupted", async () => {
     const { db } = createFakeDispatchDb({ claimedRows: [] });
-    // reconcileImports' extra store calls (reclaimStalePrepareImports, findExpiredOpmlLeases,
-    // listCancellingOpmlImportIds) are select-based with no rows, so an empty select chain covers
-    // all of them without a real reconciliation tick landing inside this short-lived test.
+    // reconcileImports' extra store calls are select-based with no rows, so an empty select chain
+    // covers all of them.
     const fullDb = {
       ...db,
-      update: db.update,
       select: () => ({ from: () => ({ where: () => ({ limit: () => Promise.resolve([]) }) }) }),
     };
-    const redis = fakeRedis();
-    const testLogger = logger();
-    const controller = new AbortController();
+    const { layer, logs } = dispatchLayer(fullDb, redisClient().xadd);
 
-    const loopPromise = runImportDispatcherLoop(
-      fullDb as never,
-      redis as never,
-      testLogger,
-      controller.signal,
+    await Effect.runPromise(
+      Effect.gen(function* () {
+        const fiber = yield* Effect.forkChild(importDispatcherLoop);
+        yield* TestClock.adjust("3 seconds");
+        yield* Fiber.interrupt(fiber);
+      }).pipe(Effect.provide(Layer.mergeAll(layer, TestClock.layer()))),
     );
-    controller.abort();
-    await loopPromise;
 
-    expect(testLogger.info).toHaveBeenCalledWith(
-      "import.dispatcher.started",
-      expect.objectContaining({ dispatchTickMs: 1_000, reconcileTickMs: 30_000 }),
+    expect(logs.entries).toContainEqual(
+      expect.objectContaining({
+        event: "import.dispatcher.started",
+        context: expect.objectContaining({ dispatchTickMs: 1_000, reconcileTickMs: 30_000 }),
+      }),
     );
   });
 
   test("logs the full cause chain (not just the truncated SQL message) on tick failure", async () => {
-    const rootCause = new Error("permission denied for table opml_import_items");
-    rootCause.name = "DatabaseError";
-    (rootCause as Record<string, unknown>).code = "42501";
-    (rootCause as Record<string, unknown>).severity = "ERROR";
-
-    const drizzleError = new Error("Failed query: WITH active_imports AS (SELECT id FROM …");
-    drizzleError.name = "DrizzleQueryError";
-    (drizzleError as Record<string, unknown>).cause = rootCause;
-
-    const throwingExecuteDb = {
-      execute: mock(async () => Promise.reject(drizzleError)),
-    };
-    const redis = fakeRedis();
-    const testLogger = logger();
-    const controller = new AbortController();
-
-    const loopPromise = runImportDispatcherLoop(
-      throwingExecuteDb as never,
-      redis as never,
-      testLogger,
-      controller.signal,
+    const rootCause = Object.assign(new Error("permission denied for table opml_import_items"), {
+      name: "DatabaseError",
+      code: "42501",
+      severity: "ERROR",
+    });
+    const drizzleError = Object.assign(
+      new Error("Failed query: WITH active_imports AS (SELECT id FROM …"),
+      { name: "DrizzleQueryError", cause: rootCause },
     );
-    controller.abort();
-    await loopPromise;
 
-    expect(testLogger.error).toHaveBeenCalledWith(
-      "import.dispatcher.tick_failed",
+    const { layer, logs } = dispatchLayer(
+      { execute: mock(async () => Promise.reject(drizzleError)) },
+      redisClient().xadd,
+    );
+
+    await Effect.runPromise(
+      Effect.gen(function* () {
+        const fiber = yield* Effect.forkChild(importDispatcherLoop);
+        yield* Effect.yieldNow;
+        yield* Fiber.interrupt(fiber);
+      }).pipe(Effect.provide(Layer.mergeAll(layer, TestClock.layer()))),
+    );
+
+    const failure = logs.entries.find((entry) => entry.event === "import.dispatcher.tick_failed");
+    expect(failure?.level).toBe("error");
+    expect(failure?.context).toEqual(
       expect.objectContaining({
         error: expect.objectContaining({
-          name: "DrizzleQueryError",
+          name: "DatabaseError",
           cause: expect.objectContaining({
-            name: "DatabaseError",
-            message: "permission denied for table opml_import_items",
-            code: "42501",
+            name: "DrizzleQueryError",
+            cause: expect.objectContaining({
+              name: "DatabaseError",
+              message: "permission denied for table opml_import_items",
+              code: "42501",
+            }),
           }),
         }),
       }),

@@ -3,6 +3,7 @@ import { HttpClient, HttpClientResponse } from "effect/http";
 import { Db, dbShape, type Database, type DbShape } from "@adapters/db/service";
 import type { LogContext } from "@adapters/logger/pino";
 import { AppLogger } from "@adapters/logger/service";
+import { JobQueue } from "@adapters/queue/service";
 import { Redis, makeRedis, type RedisClient } from "@adapters/redis/service";
 import { AppConfig } from "@config/env/service";
 
@@ -83,6 +84,18 @@ export function fakeRedis(commands: Partial<Record<keyof RedisClient, unknown>> 
     },
   }) as unknown as RedisClient;
   return Layer.succeed(Redis, Redis.of(makeRedis(client)));
+}
+
+/**
+ * `Redis` and the real `JobQueue` over the same fake client: publishing runs `xadd` (and whatever
+ * else the code under test calls) against `commands`.
+ */
+export function fakeQueue(commands: Partial<Record<keyof RedisClient, unknown>> = {}) {
+  const redis = fakeRedis(commands);
+  return Layer.mergeAll(
+    redis,
+    JobQueue.layer.pipe(Layer.provide(Layer.mergeAll(redis, testConfig()))),
+  );
 }
 
 /** An error shaped like an ioredis `ReplyError` (`name`, and the reply code leading the message). */

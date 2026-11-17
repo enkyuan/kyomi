@@ -1,130 +1,53 @@
+import { Effect, type ManagedRuntime } from "effect";
 import type { Elysia } from "elysia";
 import { t } from "elysia";
-import { publishJob } from "@adapters/queue/publish";
-import { getRedis } from "@adapters/redis";
-import { JOBS_DEAD_LETTER_STREAM_KEY, parseJobMessageFields } from "@kyomi/ingest";
+import type { AppLogger } from "@adapters/logger/service";
+import type { JobQueue } from "@adapters/queue/service";
+import type { Redis } from "@adapters/redis/service";
+import type { CurrentUser, RequestContext } from "@shared/effect/request";
+import { runEffect } from "@shared/http/effect/bridge";
 import { v1HandlerContext } from "@shared/http/v1/context";
-import { assertFeedAdminUser } from "@modules/feeds/admin/guard";
+import { listDeadLetters, replayDeadLetters, requireFeedAdmin } from "./operations";
+import { deadLetterItem, deadLetterListQuery, replayBody, replayResponse } from "./schemas";
 
-const deadLetterItem = t.Object({
-  id: t.String(),
-  type: t.String(),
-  attempts: t.Number(),
-  error: t.Union([t.String(), t.Null()]),
-  failedAt: t.Union([t.String(), t.Null()]),
-  originalStreamId: t.Union([t.String(), t.Null()]),
-  payload: t.String(),
-});
+type QueueServices = Redis | JobQueue | AppLogger;
+type QueueRuntime = ManagedRuntime.ManagedRuntime<QueueServices, unknown>;
 
-const replayBody = t.Object({
-  ids: t.Array(t.String(), { minItems: 1 }),
-});
+export function registerQueueRoutes(app: Elysia, runtime: QueueRuntime) {
+  /** Run an effect for the authenticated user of this request. */
+  const run = <A, E>(
+    context: unknown,
+    effect: Effect.Effect<A, E, QueueServices | RequestContext | CurrentUser>,
+  ) => {
+    const { userId } = v1HandlerContext(context);
+    const { request, requestId } = context as { request: Request; requestId: string };
+    return runEffect({ runtime, request, requestId, userId }, effect);
+  };
 
-export function registerQueueRoutes(app: Elysia) {
   return app
     .get(
       "/queue/dead-letter",
-      async (context) => {
-        const { logger, query, userId } = v1HandlerContext<unknown, { limit?: number }>(context);
-        assertFeedAdminUser(userId, context.request.headers);
+      (context) => {
+        const { query } = v1HandlerContext<unknown, { limit?: number }>(context);
         const limit = Math.min(100, Math.max(1, Number(query.limit ?? 25) || 25));
-        const redis = getRedis();
-        const rows = (await redis.xrevrange(
-          JOBS_DEAD_LETTER_STREAM_KEY,
-          "+",
-          "-",
-          "COUNT",
-          limit,
-        )) as [string, string[]][];
-
-        const items = rows.map(([id, fields]) => {
-          const record = Object.fromEntries(
-            fields.reduce<string[][]>((pairs, value, index, all) => {
-              if (index % 2 === 0 && index + 1 < all.length) {
-                pairs.push([value, all[index + 1] ?? ""]);
-              }
-              return pairs;
-            }, []),
-          );
-
-          return {
-            id,
-            type: record.type ?? "unknown",
-            attempts: Number(record.attempts ?? "0") || 0,
-            error: record.error ?? null,
-            failedAt: record.failed_at ?? null,
-            originalStreamId: record.original_stream_id ?? null,
-            payload: record.payload ?? "{}",
-          };
-        });
-
-        logger.info("queue.dead_letter.listed", {
-          userId,
-          count: items.length,
-        });
-        return items;
+        return run(
+          context,
+          requireFeedAdmin(context.request.headers).pipe(Effect.andThen(listDeadLetters(limit))),
+        );
       },
-      {
-        query: t.Object({
-          limit: t.Optional(t.Numeric()),
-        }),
-        response: {
-          200: t.Array(deadLetterItem),
-        },
-      },
+      { query: deadLetterListQuery, response: { 200: t.Array(deadLetterItem) } },
     )
     .post(
       "/queue/dead-letter/replay",
-      async (context) => {
-        const { body, logger, userId } = v1HandlerContext<{ ids: string[] }>(context);
-        assertFeedAdminUser(userId, context.request.headers);
-        const redis = getRedis();
-        const ids = body.ids;
-
-        let replayed = 0;
-        for (const id of ids) {
-          const rows = (await redis.xrange(JOBS_DEAD_LETTER_STREAM_KEY, id, id)) as [
-            string,
-            string[],
-          ][];
-          const row = rows[0];
-          if (!row) {
-            continue;
-          }
-          const [entryId, fields] = row;
-          const record = Object.fromEntries(
-            fields.reduce<string[][]>((pairs, value, index, all) => {
-              if (index % 2 === 0 && index + 1 < all.length) {
-                pairs.push([value, all[index + 1] ?? ""]);
-              }
-              return pairs;
-            }, []),
-          );
-          const message = parseJobMessageFields(entryId, record);
-          await publishJob(redis, message.job);
-          await redis.xdel(JOBS_DEAD_LETTER_STREAM_KEY, id);
-          replayed += 1;
-        }
-
-        logger.info("queue.dead_letter.replayed", {
-          userId,
-          requested: ids.length,
-          replayed,
-        });
-
-        return {
-          message: `Replayed ${replayed} dead-letter job(s)`,
-          replayed,
-        };
+      (context) => {
+        const { body } = v1HandlerContext<{ ids: string[] }>(context);
+        return run(
+          context,
+          requireFeedAdmin(context.request.headers).pipe(
+            Effect.andThen(replayDeadLetters(body.ids)),
+          ),
+        );
       },
-      {
-        body: replayBody,
-        response: {
-          200: t.Object({
-            message: t.String(),
-            replayed: t.Number(),
-          }),
-        },
-      },
+      { body: replayBody, response: { 200: replayResponse } },
     );
 }

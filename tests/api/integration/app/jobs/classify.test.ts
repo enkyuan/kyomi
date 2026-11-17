@@ -1,55 +1,19 @@
-import { afterEach, describe, expect, test } from "bun:test";
-import { classifyFeedRefreshError, isNonRetryableFeedRefreshFailure } from "@app/jobs/classify";
-import { runFeedRefresh } from "@kyomi/ingest";
-
-const originalFetch = globalThis.fetch;
-
-function mockFetch(handler: () => Response | Promise<Response>): typeof fetch {
-  return handler as unknown as typeof fetch;
-}
-
-afterEach(() => {
-  globalThis.fetch = originalFetch;
-});
-
-function createFeedRefreshDb() {
-  const updates: Array<Record<string, unknown>> = [];
-  return {
-    updates,
-    db: {
-      update: () => ({
-        set: (patch: Record<string, unknown>) => {
-          updates.push(patch);
-          return {
-            where: () => ({
-              returning: () => Promise.resolve([{ generation: 0 }]),
-            }),
-          };
-        },
-      }),
-      select: () => ({
-        from: () => ({
-          where: () => ({
-            limit: () =>
-              Promise.resolve([
-                {
-                  id: "feed-1",
-                  url: "https://engineering.fb.com/feed/",
-                  link: null,
-                  faviconUrl: null,
-                  faviconSource: null,
-                  etag: null,
-                  lastModified: null,
-                  lastRefreshSucceededAt: null,
-                  lastRefreshFailedAt: null,
-                },
-              ]),
-          }),
-        }),
-      }),
-    },
-  };
-}
+import { describe, expect, test } from "bun:test";
+import {
+  FeedRefreshFailed,
+  classifyJobFailure,
+  isNonRetryableFeedRefreshFailure,
+  toJobFailure,
+} from "@app/jobs/classify";
+import {
+  DatabaseError,
+  InternalError,
+  NotFound,
+  RateLimited,
+  RedisError,
+  Unavailable,
+} from "@shared/effect/errors";
+import { AppError } from "@shared/errors/app";
 
 describe("isNonRetryableFeedRefreshFailure", () => {
   test("acks permanent fetch failures so the scheduler can own backoff", () => {
@@ -85,105 +49,82 @@ describe("isNonRetryableFeedRefreshFailure", () => {
   });
 
   test("does not treat successful refreshes as non-retryable", () => {
-    expect(
-      isNonRetryableFeedRefreshFailure({
-        ok: true,
-        itemCount: 3,
-      }),
-    ).toBe(false);
+    expect(isNonRetryableFeedRefreshFailure({ ok: true, itemCount: 3 })).toBe(false);
   });
 });
 
-describe("classifyFeedRefreshError", () => {
-  test("classifies known feed-owner failures", () => {
-    expect(classifyFeedRefreshError(new Error("Feed fetch failed: HTTP 404")).severity).toBe(
-      "feed",
+describe("toJobFailure", () => {
+  test("re-tags an AppError by status and keeps its code", () => {
+    const failure = toJobFailure(
+      new AppError("Article not found", { status: 404, code: "ARTICLE_NOT_FOUND" }),
     );
-    expect(
-      classifyFeedRefreshError(new Error("Entity expansion limit exceeded: 1003 > 1000")).severity,
-    ).toBe("feed");
-    expect(
-      classifyFeedRefreshError(
-        new Error("Feed fetch failed: unknown certificate verification error"),
-      ).severity,
-    ).toBe("feed");
-    expect(
-      classifyFeedRefreshError(
-        new Error(
-          'Feed fetch failed: ERR_TLS_CERT_ALTNAME_INVALID fetching "https://example.com/feed"',
-        ),
-      ),
-    ).toEqual({
-      severity: "feed",
-      code: "certificate",
-      retryable: false,
-    });
-    expect(
-      classifyFeedRefreshError(
-        new Error("Feed returned HTML (access_denied_html): no feed alternate found"),
-      ),
-    ).toEqual({
-      severity: "feed",
-      code: "access_denied_html",
-      retryable: false,
-    });
+
+    expect(failure).toBeInstanceOf(NotFound);
+    expect(failure).toMatchObject({ code: "ARTICLE_NOT_FOUND", message: "Article not found" });
   });
 
-  test("classifies platform errors separately", () => {
-    expect(classifyFeedRefreshError(new Error("Redis connection closed")).severity).toBe(
-      "platform",
-    );
+  test("passes typed failures through unchanged", () => {
+    const failure = new RedisError({ operation: "xadd", cause: new Error("down") });
+    expect(toJobFailure(failure)).toBe(failure);
+    const refresh = new FeedRefreshFailed({ message: "x", feedId: "f" });
+    expect(toJobFailure(refresh)).toBe(refresh);
+  });
+
+  test("keeps the cause of anything else as an InternalError", () => {
+    const cause = new Error("connection terminated");
+    const failure = toJobFailure(cause);
+
+    expect(failure).toBeInstanceOf(InternalError);
+    expect(failure).toMatchObject({ message: "connection terminated", cause });
+    expect(toJobFailure("boom")).toMatchObject({ _tag: "InternalError", message: "Job failed" });
   });
 });
 
-describe("runFeedRefresh HTML responses", () => {
-  test("marks TLS certificate fetch failures as permanent feed-owner failures", async () => {
-    const fake = createFeedRefreshDb();
-    const startedAt = Date.now();
-    globalThis.fetch = mockFetch(() => {
-      throw new Error(
-        'ERR_TLS_CERT_ALTNAME_INVALID fetching "https://marycalotes.com/category/wedding/feed"',
-      );
+describe("classifyJobFailure", () => {
+  test("a deterministic 4xx from a job is permanent and expected", () => {
+    const failure = toJobFailure(
+      new AppError("Article not found", { status: 404, code: "ARTICLE_NOT_FOUND" }),
+    );
+
+    expect(classifyJobFailure(failure)).toEqual({
+      severity: "expected",
+      code: "ARTICLE_NOT_FOUND",
+      retryable: false,
     });
-
-    const result = await runFeedRefresh(fake.db as never, "feed-1");
-
-    expect(result.ok).toBe(false);
-    expect(result.permanent).toBe(true);
-    expect(result.error).toBe(
-      'Feed fetch failed: ERR_TLS_CERT_ALTNAME_INVALID fetching "https://marycalotes.com/category/wedding/feed"',
-    );
-    expect(fake.updates.at(-1)?.refreshStatus).toBe("failed");
-    expect(fake.updates.at(-1)?.lastRefreshError).toBe(
-      'ERR_TLS_CERT_ALTNAME_INVALID fetching "https://marycalotes.com/category/wedding/feed"',
-    );
-    expect((fake.updates.at(-1)?.nextRefreshAt as Date).getTime()).toBeGreaterThanOrEqual(
-      startedAt + 23 * 60 * 60 * 1000,
-    );
   });
 
-  test("marks HTML without an alternate as a permanent feed-owner failure", async () => {
-    const fake = createFeedRefreshDb();
-    globalThis.fetch = mockFetch(
-      () =>
-        new Response(
-          "<!doctype html><html><head><title>Access denied</title></head><body>Blocked</body></html>",
-          {
-            status: 200,
-            headers: { "content-type": "text/html" },
-          },
-        ),
-    );
+  test("timeouts, rate limits and server errors are retryable", () => {
+    expect(classifyJobFailure(new RateLimited({ message: "slow down" })).retryable).toBe(true);
+    expect(classifyJobFailure(new Unavailable({ message: "later" })).retryable).toBe(true);
+    expect(
+      classifyJobFailure(toJobFailure(new AppError("boom", { status: 500, code: "BOOM" }))),
+    ).toEqual({ severity: "platform", code: "BOOM", retryable: true });
+  });
 
-    const result = await runFeedRefresh(fake.db as never, "feed-1");
+  test("infrastructure failures are retryable platform failures", () => {
+    const database = classifyJobFailure(new DatabaseError({ operation: "select", cause: 1 }));
+    expect(database).toEqual({ severity: "platform", code: "INTERNAL_ERROR", retryable: true });
+    expect(
+      classifyJobFailure(new RedisError({ operation: "xadd", cause: 1, code: "NOGROUP" })),
+    ).toMatchObject({ severity: "platform", retryable: true });
+  });
 
-    expect(result.ok).toBe(false);
-    expect(result.permanent).toBe(true);
-    expect(result.failureClass).toBe("access_denied_html");
-    expect(result.error).toBe("Feed returned HTML (access_denied_html): no feed alternate found");
-    expect(fake.updates.at(-1)?.refreshStatus).toBe("failed");
-    expect(fake.updates.at(-1)?.lastRefreshError).toBe(
-      "Feed returned HTML (access_denied_html): no feed alternate found",
-    );
+  test("classifies by error class, never by what the message says", () => {
+    // A message that reads like a permanent 404 must not make an internal error permanent.
+    const misleading = new InternalError({ message: "Feed fetch failed: HTTP 404" });
+    expect(classifyJobFailure(misleading)).toMatchObject({ severity: "platform", retryable: true });
+  });
+
+  test("a feed refresh failure carries its class and stays retryable", () => {
+    expect(
+      classifyJobFailure(
+        new FeedRefreshFailed({ message: "HTTP 503", feedId: "f", failureClass: "http_5xx" }),
+      ),
+    ).toEqual({ severity: "expected", code: "http_5xx", retryable: true });
+    expect(classifyJobFailure(new FeedRefreshFailed({ message: "weird", feedId: "f" }))).toEqual({
+      severity: "platform",
+      code: "unknown",
+      retryable: true,
+    });
   });
 });

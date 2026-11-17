@@ -1,4 +1,8 @@
-import { pool } from "./client";
+import { Effect } from "effect";
+import type { Pool } from "pg";
+import { AppConfig } from "@config/env/service";
+import { ConfigError } from "@shared/effect/errors";
+import { Db } from "./service";
 
 const REQUIRED_DEV_TABLES = ["users", "sessions", "feeds", "memberships"] as const;
 const REQUIRED_DEV_INDEXES = [
@@ -24,7 +28,7 @@ export function findMissingRequiredIndexes(existingIndexes: string[]): string[] 
   return REQUIRED_DEV_INDEXES.filter((indexName) => !existing.has(indexName));
 }
 
-export async function assertDevelopmentDatabaseSchemaReady(): Promise<void> {
+export async function assertDevelopmentDatabaseSchemaReady(pool: Pool): Promise<void> {
   const tablesResult = await pool.query<TableRow>(
     `
       select table_name
@@ -64,3 +68,24 @@ export async function assertDevelopmentDatabaseSchemaReady(): Promise<void> {
     ].join(" "),
   );
 }
+
+/**
+ * In development, fail startup with the migrate hint when the schema is behind; a no-op elsewhere.
+ * Used by every long-running process before it starts serving or consuming.
+ */
+export const developmentSchemaReady = Effect.gen(function* () {
+  const config = yield* AppConfig;
+  if (config.NODE_ENV !== "development") {
+    return;
+  }
+  const { pool } = yield* Db;
+  yield* Effect.tryPromise({
+    try: () => assertDevelopmentDatabaseSchemaReady(pool),
+    catch: (cause) =>
+      new ConfigError({
+        message:
+          cause instanceof Error ? cause.message : "Development database schema check failed",
+        cause,
+      }),
+  });
+});

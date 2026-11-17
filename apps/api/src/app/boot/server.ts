@@ -1,43 +1,37 @@
-import { logger } from "@adapters/logger";
+import { Effect } from "effect";
+import { AppLogger } from "@adapters/logger/service";
+import { AppConfig } from "@config/env/service";
 import { createApp } from "../http/app";
-import { createAppRuntime } from "../runtime";
 import { buildListenOptions } from "../http/listen";
-import { env } from "@config/env";
-import { shutdownAdapters } from "@adapters/shutdown";
-import { serializeError } from "@shared/errors/serialize";
+import { AppLive, runtimeFromScope } from "../runtime";
+import { runMain } from "../setup/main";
 
-const runtime = createAppRuntime();
-// Build every Layer now so invalid configuration fails at boot, not on the first request.
-await runtime.context();
+// The Layer scope owns every resource: building `AppLive` validates the environment and opens
+// Postgres and Redis (a failure here stops the boot), and on SIGINT/SIGTERM the server stops
+// accepting requests first, then the scope closes the pool and Redis in reverse order.
+const server = Effect.gen(function* () {
+  const config = yield* AppConfig;
+  const log = yield* AppLogger;
+  const runtime = yield* runtimeFromScope;
+  const app = createApp({ runtime });
 
-const app = createApp({ runtime });
+  yield* Effect.acquireRelease(
+    Effect.sync(() =>
+      app.listen(
+        buildListenOptions({
+          port: config.PORT,
+          maxRequestBodySize: config.API_MAX_REQUEST_BODY_BYTES,
+        }),
+      ),
+    ),
+    () => Effect.promise(() => app.stop()),
+  );
 
-app.listen(
-  buildListenOptions({ port: env.PORT, maxRequestBodySize: env.API_MAX_REQUEST_BODY_BYTES }),
-);
+  yield* log.info("server.listening", {
+    host: app.server?.hostname ?? "unknown",
+    port: app.server?.port ?? config.PORT,
+  });
+  return yield* Effect.never;
+}).pipe(Effect.scoped, Effect.provide(AppLive));
 
-logger.info("server.listening", {
-  host: app.server?.hostname ?? "unknown",
-  port: app.server?.port ?? env.PORT,
-});
-
-// Elysia does not await `onStop` hooks, so the entrypoint owns the ordered shutdown: stop accepting
-// requests, release legacy singletons, then dispose the runtime (pool and Redis scopes close).
-async function shutdown(signalName: string) {
-  logger.info("server.shutdown.requested", { signal: signalName });
-  try {
-    await app.stop();
-    await shutdownAdapters();
-    await runtime.dispose();
-    logger.info("server.shutdown.complete", { signal: signalName });
-  } catch (error) {
-    logger.error("server.shutdown.failed", { error: serializeError(error) });
-    process.exitCode = 1;
-  } finally {
-    process.exit();
-  }
-}
-
-for (const signalName of ["SIGINT", "SIGTERM"] as const) {
-  process.once(signalName, () => void shutdown(signalName));
-}
+runMain(server);

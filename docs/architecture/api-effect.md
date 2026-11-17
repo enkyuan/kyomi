@@ -20,6 +20,10 @@ memory. The names below were checked against 4.1.4.
 | `src/config/env/service.ts` | `AppConfig` (validated env as a service). |
 | `src/adapters/<capability>/service.ts` | `Db`, `Redis`, `AppLogger` services and their live Layers. |
 | `src/adapters/http/client.ts` | `HttpClientLive` (the `HttpClient` service from `effect/http`). |
+| `src/adapters/queue/service.ts` | `JobQueue.publish(job)`: the producer side of the Redis Streams job queue. |
+| `src/adapters/queue/consumer.ts` | `startConsumers`: scoped, supervised stream consumers with drain on shutdown. |
+| `src/app/jobs/` | `handler.ts` (job dispatch), `classify.ts` (typed failure classes), `consumer.ts` (`WorkerLive`), `scheduler.ts`, `dispatcher.ts` (loops). |
+| `src/app/setup/main.ts` | `runMain(effect)`: process entrypoint that turns SIGINT/SIGTERM into fiber interruption. |
 | `src/app/runtime.ts` | `AppLive` and `createAppRuntime()`: the one composition root. |
 | `tests/api/integration/support/layers.ts` | Test Layers (fake db/redis/http, recording logger, config). |
 
@@ -138,12 +142,39 @@ export function healthPlugin(runtime: ManagedRuntime.ManagedRuntime<Db | AppLogg
 
 ## Runtime lifecycle
 
-`createAppRuntime()` is `ManagedRuntime.make(AppLive)`. `boot/server.ts` calls
-`await runtime.context()` before listening (invalid env, `ConfigError`, fails at boot) and on
-SIGINT/SIGTERM runs `app.stop()`, `shutdownAdapters()` (legacy), then `runtime.dispose()`, which
-closes the Postgres pool and Redis in reverse acquire order. Elysia does not await `onStop`
-hooks, so shutdown lives in the entrypoint. `createApp({ runtime })` leaves disposal to the caller;
-without it, `createApp` owns and disposes its runtime on stop.
+One mechanism owns shutdown: Layer scopes. Every process entrypoint is `runMain(program)` where the
+program builds `AppLive` (`Effect.provide(AppLive)` or `Layer.launch`). SIGINT/SIGTERM interrupt the
+main fiber, the scope closes, and finalizers run in reverse order of acquisition. Nothing else
+calls `app.stop()`, `pool.end()` or `closeRedis()`.
+
+| Process | Program |
+| --- | --- |
+| `boot/server.ts` | build `AppLive` (invalid env fails here), `acquireRelease` the Elysia listener, wait forever. |
+| `boot/worker.ts` | `Layer.launch(WorkerLive)`: one consumer fiber per stream. |
+| `boot/scheduler.ts` | `Effect.all([feedRefreshSchedulerLoop, importDispatcherLoop])`: one dying interrupts the other. |
+| `boot/dev.ts` | server + `WorkerLive` + feed scheduler in one scope. |
+
+`AppLive` includes `LegacyAdaptersLive`, whose finalizer closes the module-level `db`/`getRedis()`
+singletons that unconverted modules still use, so the runtime is the only shutdown path. Delete it
+(with `adapters/shutdown.ts`, `adapters/db/client.ts`, `adapters/redis/client.ts`) with the last
+module that imports them. Elysia does not await `onStop`; the entrypoint's scope owns the order.
+
+## Jobs
+
+- **Publish** through `JobQueue.publish(job)` (`RedisError` on failure). `publishJob(redis, job)` in
+  `adapters/queue/publish.ts` is the Promise entrypoint for unconverted modules.
+- **Consume** with `startConsumers([...])` inside a scope. Per stream: abandoned entries are claimed,
+  new ones read on a dedicated blocking connection, the batch runs with bounded concurrency. Redis
+  failures are logged and retried with `Schedule` backoff (500ms doubling to 30s) and never stop the
+  other streams; a missing consumer group is recreated. On scope close consumers stop reading, get
+  8s to finish running jobs, then are interrupted (entries stay pending and are claimed later).
+- **Handlers** return `Effect<void, JobFailure>`. Wrap legacy Promise operations with
+  `Effect.tryPromise({ try, catch: toJobFailure })`. `classifyJobFailure` decides by error class:
+  4xx other than 408/429 is permanent (acknowledged, never retried), 5xx and infrastructure errors
+  retry (3 attempts, then the dead-letter stream with the error in `error` and `last_error`).
+- **Loops** (`scheduler`, `dispatcher`) run each tick uninterruptibly (a claim is always published or
+  released) and wait between ticks with `Effect.repeat(Schedule.spaced(...))`, which interruption ends.
+  A failed tick is logged with its cause chain and the next one runs.
 
 ## Testing
 
@@ -157,6 +188,7 @@ No `mock.module` and no `globalThis.fetch` patching in converted tests. Provide 
 | `fakeDb({ execute })` | `Db` over a Drizzle fake; unlisted methods throw. |
 | `realDb(overrides)` | The production `Db.layer` against `DATABASE_URL`. |
 | `fakeRedis({ xlen, xpending })` | `Redis` over a fake client; unlisted commands throw. |
+| `fakeQueue({ xadd, ... })` | `Redis` plus the real `JobQueue` over the same fake client. |
 | `replyError("NOGROUP ...")` | An error shaped like an ioredis `ReplyError`. |
 | `fakeHttpClient(respond)` | `HttpClient` answering from a function; no network. |
 | `TestClock.layer()` (from `effect/testing`) | Deterministic time; `TestClock.setTime`, `TestClock.adjust`. |

@@ -291,4 +291,62 @@ describe("discover feeds", () => {
     expect(result).toEqual([]);
     expect(select).not.toHaveBeenCalled();
   });
+
+  test("searchFeeds falls back to the Postgres query when Meili fails, and says so", async () => {
+    const searchFeeds = await loadSearchFeeds({
+      MEILI_URL: "http://meili.local",
+      MEILI_MASTER_KEY: "test-key",
+    });
+    globalThis.fetch = mock((input: unknown) => {
+      const href = typeof input === "string" ? input : String((input as { url?: unknown }).url);
+      if (href.endsWith("/indexes")) {
+        return Promise.resolve(new Response(null, { status: 409 }));
+      }
+      if (href.includes("/settings/")) {
+        return Promise.resolve(new Response(null, { status: 202 }));
+      }
+      return Promise.resolve(new Response("meili is down", { status: 503 }));
+    }) as unknown as typeof fetch;
+
+    const limit = mock(() =>
+      Promise.resolve([
+        {
+          id: "feed_1",
+          url: "https://example.com/feed.xml",
+          title: "Example Feed",
+          description: "Latest updates",
+          link: "https://example.com",
+          faviconUrl: null,
+          isSubscribed: false,
+          score: 3,
+        },
+      ]),
+    );
+    const orderBy = mock(() => ({ limit }));
+    const where = mock(() => ({ orderBy }));
+    const leftJoin = mock(() => ({ where }));
+    const from = mock(() => ({ leftJoin }));
+    const select = mock(() => ({ from }));
+    const fakeDb = { select } as unknown as Parameters<typeof searchFeeds>[0];
+    const logger = { info: mock(() => undefined), warn: mock(() => undefined) };
+
+    const result = await searchFeeds(fakeDb, "user_1", "example", 10, logger);
+
+    expect(result).toEqual([
+      {
+        id: "feed_1",
+        url: "https://example.com/feed.xml",
+        title: "Example Feed",
+        description: "Latest updates",
+        link: "https://example.com",
+        faviconUrl: null,
+        isSubscribed: false,
+      },
+    ]);
+    expect(select).toHaveBeenCalledTimes(1);
+    expect(logger.warn).toHaveBeenCalledWith(
+      "discover.search.meili_fallback",
+      expect.objectContaining({ userId: "user_1", errorCode: "MEILI_SEARCH_FAILED" }),
+    );
+  });
 });

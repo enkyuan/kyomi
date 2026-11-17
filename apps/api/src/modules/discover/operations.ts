@@ -281,7 +281,7 @@ export async function searchFeeds(
         error: error instanceof Error ? error.message : String(error),
         errorCode: error instanceof AppError ? error.code : undefined,
       });
-      return [];
+      // Fall through to the database query below: a search outage degrades to slower matching.
     }
   }
 

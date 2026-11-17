@@ -1,3 +1,4 @@
+import { Effect, Layer } from "effect";
 import { pool } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { closeRedis } from "@adapters/redis";
@@ -15,11 +16,17 @@ async function closeAdapters(): Promise<void> {
 }
 
 /**
- * Release the legacy singleton resources (Postgres pool, Redis client) on shutdown. Idempotent, so
- * Elysia's un-awaited `onStop` hook and the process entrypoint can both call it. Layer-owned
- * resources are released by disposing the runtime instead.
+ * Releases the module-level singletons (Postgres pool, Redis client) that modules which have not
+ * moved to Effect still use. It is part of `AppLive`, so disposing the runtime is the one shutdown
+ * path: Layer-owned resources and these close together, and nothing else calls `shutdownAdapters`.
+ * Idempotent in case a second runtime is built in one process. Delete this file, with
+ * `adapters/db/client.ts` and `adapters/redis/client.ts`, once the last module is converted.
  */
 export function shutdownAdapters(): Promise<void> {
   closing ??= closeAdapters();
   return closing;
 }
+
+export const LegacyAdaptersLive = Layer.effectDiscard(
+  Effect.addFinalizer(() => Effect.promise(shutdownAdapters)),
+);

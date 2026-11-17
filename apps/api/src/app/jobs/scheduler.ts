@@ -1,11 +1,12 @@
-import { sql } from "drizzle-orm";
-import type Redis from "ioredis";
+import { Clock, Duration, Effect, Schedule } from "effect";
+import { and, eq, sql } from "drizzle-orm";
 import { feeds } from "@kyomi/db";
-import { db } from "@adapters/db/client";
-import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/guard";
-import { logger } from "@adapters/logger";
-import { publishJob } from "@adapters/queue/publish";
-import { env } from "@config/env";
+import { Db } from "@adapters/db/service";
+import { AppLogger } from "@adapters/logger/service";
+import { JobQueue } from "@adapters/queue/service";
+import { AppConfig } from "@config/env/service";
+import { serializeError } from "@shared/errors/serialize";
+import { logTickFailure } from "./tick";
 
 export type FeedRefreshScheduleReason = "scheduled" | "global_scheduled";
 
@@ -110,45 +111,83 @@ function rowsFromExecute<T>(result: unknown): T[] {
   return [];
 }
 
-export async function countActiveQueuedFeedRefreshes(staleQueuedBefore: Date): Promise<number> {
-  const result = await db.execute(sql<{ count: number }>`
-    SELECT count(*)::int AS count
-    FROM feeds
-    WHERE refresh_status = 'queued'
-      AND updated_at > ${staleQueuedBefore}
-  `);
-
-  return rowsFromExecute<{ count: number }>(result)[0]?.count ?? 0;
-}
-
-export async function claimDueFeedRefreshes(
-  options: SchedulerOptions = {},
-  now = new Date(),
-): Promise<ClaimedFeedRefresh[]> {
-  const normalized = normalizeSchedulerOptions(options);
-  const staleQueuedBefore = new Date(now.getTime() - normalized.queuedLeaseMs);
-  const staleRunningBefore = new Date(now.getTime() - normalized.runningLeaseMs);
-
-  const result = await db.execute(
-    buildFeedRefreshClaimSql({
-      now,
-      staleQueuedBefore,
-      staleRunningBefore,
-      subscribedLimit: normalized.subscribedLimit,
-      globalLimit: normalized.globalLimit,
-    }),
+export const countActiveQueuedFeedRefreshes = Effect.fn("feed.scheduler.countQueued")(function* (
+  staleQueuedBefore: Date,
+) {
+  const db = yield* Db;
+  const result = yield* db.use("feed.scheduler.count_queued", (client) =>
+    client.execute(sql<{ count: number }>`
+      SELECT count(*)::int AS count
+      FROM feeds
+      WHERE refresh_status = 'queued'
+        AND updated_at > ${staleQueuedBefore}
+    `),
   );
+  return rowsFromExecute<{ count: number }>(result)[0]?.count ?? 0;
+});
 
+export const claimDueFeedRefreshes = Effect.fn("feed.scheduler.claim")(function* (
+  options: SchedulerOptions,
+  now: Date,
+) {
+  const db = yield* Db;
+  const normalized = normalizeSchedulerOptions(options);
+  const result = yield* db.use("feed.scheduler.claim", (client) =>
+    client.execute(
+      buildFeedRefreshClaimSql({
+        now,
+        staleQueuedBefore: new Date(now.getTime() - normalized.queuedLeaseMs),
+        staleRunningBefore: new Date(now.getTime() - normalized.runningLeaseMs),
+        subscribedLimit: normalized.subscribedLimit,
+        globalLimit: normalized.globalLimit,
+      }),
+    ),
+  );
   return rowsFromExecute<ClaimedFeedRefresh>(result);
-}
+});
 
-export async function publishClaimedFeedRefreshes(
-  redis: Redis,
-  claimed: ClaimedFeedRefresh[],
-): Promise<void> {
+/**
+ * Hand a claim back when its job could not be published: the row returns to `idle` (still due, so
+ * the next tick claims it again) instead of waiting out the queued lease. Guarded by generation and
+ * `queued` status so a claim that was since superseded or started is left alone. Resolves to
+ * whether a row was released.
+ */
+export const releaseFeedRefreshClaim = Effect.fn("feed.scheduler.release")(function* (
+  feed: ClaimedFeedRefresh,
+  now: Date,
+) {
+  const db = yield* Db;
+  const released = yield* db.use("feed.scheduler.release", (client) =>
+    client
+      .update(feeds)
+      .set({ refreshStatus: "idle", updatedAt: now })
+      .where(
+        and(
+          eq(feeds.id, feed.feedId),
+          eq(feeds.refreshGeneration, feed.generation),
+          eq(feeds.refreshStatus, "queued"),
+        ),
+      )
+      .returning({ id: feeds.id }),
+  );
+  return released.length > 0;
+});
+
+/**
+ * Publish one job per claim. A claim whose job cannot be published is released straight away, so a
+ * Redis outage delays those feeds by one tick rather than a full queued lease. Resolves to the
+ * number of jobs published.
+ */
+export const publishClaimedFeedRefreshes = Effect.fn("feed.scheduler.publish")(function* (
+  claimed: ReadonlyArray<ClaimedFeedRefresh>,
+) {
+  const queue = yield* JobQueue;
+  const log = yield* AppLogger;
+  let published = 0;
+
   for (const feed of claimed) {
-    try {
-      await publishJob(redis, {
+    yield* queue
+      .publish({
         type: "feed.refresh",
         payload: {
           feedId: feed.feedId,
@@ -156,44 +195,49 @@ export async function publishClaimedFeedRefreshes(
           reason: feed.reason,
           generation: feed.generation,
         },
-      });
-    } catch (error) {
-      logger.error("feed.scheduler.publish_failed", {
-        feedId: feed.feedId,
-        error: error instanceof Error ? error.message : String(error),
-      });
-    }
+      })
+      .pipe(
+        Effect.map(() => {
+          published += 1;
+        }),
+        Effect.catch((error) =>
+          Effect.gen(function* () {
+            yield* log.error("feed.scheduler.publish_failed", {
+              feedId: feed.feedId,
+              error: serializeError(error),
+            });
+            const now = new Date(yield* Clock.currentTimeMillis);
+            yield* releaseFeedRefreshClaim(feed, now).pipe(
+              Effect.catch((releaseError) =>
+                log.error("feed.scheduler.release_failed", {
+                  feedId: feed.feedId,
+                  error: serializeError(releaseError),
+                }),
+              ),
+            );
+          }),
+        ),
+      );
   }
-}
+  return published;
+});
 
-function sleep(ms: number, signal?: AbortSignal): Promise<void> {
-  return new Promise((resolve) => {
-    const timer = setTimeout(resolve, ms);
-    signal?.addEventListener(
-      "abort",
-      () => {
-        clearTimeout(timer);
-        resolve();
-      },
-      { once: true },
-    );
-  });
-}
-
-export async function runFeedRefreshSchedulerTick(redis: Redis): Promise<void> {
-  const now = new Date();
+export const runFeedRefreshSchedulerTick = Effect.gen(function* () {
+  const config = yield* AppConfig;
+  const log = yield* AppLogger;
+  const now = new Date(yield* Clock.currentTimeMillis);
   const options = normalizeSchedulerOptions({
-    subscribedLimit: env.SUBSCRIBED_FEED_REFRESH_BATCH_SIZE,
-    globalLimit: env.GLOBAL_FEED_REFRESH_ENABLED ? env.GLOBAL_FEED_REFRESH_BATCH_SIZE : 0,
-    maxQueuedRefreshJobs: env.GLOBAL_FEED_REFRESH_MAX_QUEUED,
-    queuedLeaseMs: env.FEED_REFRESH_QUEUED_LEASE_MS,
-    runningLeaseMs: env.FEED_REFRESH_RUNNING_LEASE_MS,
+    subscribedLimit: config.SUBSCRIBED_FEED_REFRESH_BATCH_SIZE,
+    globalLimit: config.GLOBAL_FEED_REFRESH_ENABLED ? config.GLOBAL_FEED_REFRESH_BATCH_SIZE : 0,
+    maxQueuedRefreshJobs: config.GLOBAL_FEED_REFRESH_MAX_QUEUED,
+    queuedLeaseMs: config.FEED_REFRESH_QUEUED_LEASE_MS,
+    runningLeaseMs: config.FEED_REFRESH_RUNNING_LEASE_MS,
   });
   const staleQueuedBefore = new Date(now.getTime() - options.queuedLeaseMs);
-  const queuedCount = await countActiveQueuedFeedRefreshes(staleQueuedBefore);
+  const queuedCount = yield* countActiveQueuedFeedRefreshes(staleQueuedBefore);
 
   if (queuedCount >= options.maxQueuedRefreshJobs) {
-    logger.info("feed.scheduler.skipped_backpressure", {
+    yield* log.info("feed.scheduler.skipped_backpressure", {
       queuedCount,
       maxQueued: options.maxQueuedRefreshJobs,
     });
@@ -201,44 +245,37 @@ export async function runFeedRefreshSchedulerTick(redis: Redis): Promise<void> {
   }
 
   const remainingCapacity = options.maxQueuedRefreshJobs - queuedCount;
-  const claimed = await claimDueFeedRefreshes({
-    ...options,
-    subscribedLimit: Math.min(options.subscribedLimit, remainingCapacity),
-    globalLimit: Math.min(options.globalLimit, remainingCapacity),
-  });
+  const claimed = yield* claimDueFeedRefreshes(
+    {
+      ...options,
+      subscribedLimit: Math.min(options.subscribedLimit, remainingCapacity),
+      globalLimit: Math.min(options.globalLimit, remainingCapacity),
+    },
+    now,
+  );
+  const published = yield* publishClaimedFeedRefreshes(claimed);
 
-  await publishClaimedFeedRefreshes(redis, claimed);
-
-  logger.info("feed.scheduler.claimed", {
+  yield* log.info("feed.scheduler.claimed", {
     claimed: claimed.length,
+    published,
     queuedCount,
     remainingCapacity,
   });
-}
+});
 
-export async function runFeedRefreshSchedulerLoop(
-  redis: Redis,
-  signal?: AbortSignal,
-): Promise<void> {
-  if (env.NODE_ENV === "development") {
-    await assertDevelopmentDatabaseSchemaReady();
-  }
+/**
+ * Claim due feeds and publish their refresh jobs every `tickMs`, until the scope closes. A tick
+ * runs to completion once started (so a claim is never left unpublished by a shutdown); the wait
+ * between ticks is what an interruption ends. A failing tick is logged and the next one runs.
+ */
+export const feedRefreshSchedulerLoop = Effect.gen(function* () {
+  const log = yield* AppLogger;
+  const { tickMs } = normalizeSchedulerOptions({ tickMs: 60_000 });
+  yield* log.info("feed.scheduler.started", { tickMs });
 
-  const options = normalizeSchedulerOptions({
-    tickMs: 60_000,
-  });
-
-  logger.info("feed.scheduler.started", { tickMs: options.tickMs });
-
-  while (!signal?.aborted) {
-    try {
-      await runFeedRefreshSchedulerTick(redis);
-    } catch (error) {
-      logger.error("feed.scheduler.failed", {
-        error: error instanceof Error ? error.message : String(error),
-      });
-    }
-
-    await sleep(options.tickMs, signal);
-  }
-}
+  yield* runFeedRefreshSchedulerTick.pipe(
+    Effect.catchCause(logTickFailure("feed.scheduler.failed")),
+    Effect.uninterruptible,
+    Effect.repeat(Schedule.spaced(Duration.millis(tickMs))),
+  );
+});
