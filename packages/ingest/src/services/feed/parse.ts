@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { XMLParser, type X2jOptions } from "fast-xml-parser";
 import { normalizeArticleUrl } from "../../lib/article-identity";
 import {
+  absoluteHttpUrl,
   buildStoredFeedContent,
   extractImageUrl,
   stripTags,
@@ -123,35 +124,13 @@ function normalizeFeedUrl(raw: string): string {
   return url.href;
 }
 
-function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
-  if (!candidate) {
-    return null;
-  }
-  try {
-    return new URL(candidate, baseUrl).href;
-  } catch {
-    return null;
-  }
-}
-
-function absoluteHttpUrl(candidate: string | null, baseUrl: string): string | null {
-  const href = absoluteUrl(candidate, baseUrl);
-  if (!href) {
-    return null;
-  }
-  try {
-    const parsed = new URL(href);
-    return parsed.protocol === "http:" || parsed.protocol === "https:" ? parsed.href : null;
-  } catch {
-    return null;
-  }
-}
-
 /**
- * An item's link as the feed wrote it, when it is an http(s) URL (absolute, or relative to the
- * feed), and `fallback` when it is anything else. A feed can put `javascript:`, `data:` or an app
- * scheme in a link, and clients open that link; kept as written, not made absolute, so the item
- * identity derived from it does not change for feeds that already worked.
+ * The link clients open for an item: `candidate` as the feed wrote it when it is an http(s) URL
+ * (absolute, or relative to the feed), and `fallback` when it is anything else. A feed can put
+ * `javascript:`, `data:` or an app scheme in a link. Only what is displayed is replaced: the item's
+ * identity (`canonicalUrl`, hence its id) still comes from `candidate`, because many feeds give
+ * every item a distinct `urn:` or `tag:` guid in place of a link and the fallback is one URL for
+ * all of them.
  */
 function httpItemLink(candidate: string, finalUrl: string, fallback: string): string {
   return absoluteHttpUrl(candidate, finalUrl) === null ? fallback : candidate;
@@ -301,25 +280,25 @@ function parsePublishedAt(value: unknown, fallback: Date): Date {
 
 function embeddedJsonFeedIconUrl(feed: Record<string, unknown>, baseUrl: string): string | null {
   return (
-    absoluteUrl(typeof feed.icon === "string" ? feed.icon : null, baseUrl) ??
-    absoluteUrl(typeof feed.favicon === "string" ? feed.favicon : null, baseUrl)
+    absoluteHttpUrl(typeof feed.icon === "string" ? feed.icon : null, baseUrl) ??
+    absoluteHttpUrl(typeof feed.favicon === "string" ? feed.favicon : null, baseUrl)
   );
 }
 
 function embeddedRssFeedIconUrl(channel: Record<string, unknown>, baseUrl: string): string | null {
   const image = channel.image;
   if (typeof image === "string") {
-    return absoluteUrl(image.trim() || null, baseUrl);
+    return absoluteHttpUrl(image.trim() || null, baseUrl);
   }
   if (!image || typeof image !== "object") {
     return null;
   }
   const rec = image as Record<string, unknown>;
-  return absoluteUrl(rawText(rec.url) ?? rawText(rec["@_href"]), baseUrl);
+  return absoluteHttpUrl(rawText(rec.url) ?? rawText(rec["@_href"]), baseUrl);
 }
 
 function embeddedAtomFeedIconUrl(feed: Record<string, unknown>, baseUrl: string): string | null {
-  return absoluteUrl(rawText(feed.icon) ?? rawText(feed.logo), baseUrl);
+  return absoluteHttpUrl(rawText(feed.icon) ?? rawText(feed.logo), baseUrl);
 }
 
 function jsonFeedTagLabels(value: unknown): string[] {
@@ -366,14 +345,12 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       ITEM_TITLE_MAX_CHARS,
     );
     const fallbackLink = `${finalUrl}#item-${index + 1}`;
-    const itemLink = httpItemLink(
+    const candidateLink =
       (typeof record.url === "string" && record.url.trim()) ||
-        (typeof record.external_url === "string" && record.external_url.trim()) ||
-        fallbackLink,
-      finalUrl,
-      fallbackLink,
-    );
-    const canonicalUrl = normalizeArticleUrl(itemLink);
+      (typeof record.external_url === "string" && record.external_url.trim()) ||
+      fallbackLink;
+    const itemLink = httpItemLink(candidateLink, finalUrl, fallbackLink);
+    const canonicalUrl = normalizeArticleUrl(candidateLink);
     const stableIdentity = (typeof record.id === "string" && record.id.trim()) || canonicalUrl;
     const contentHtml =
       typeof record.content_html === "string" ? record.content_html.trim() || null : null;
@@ -442,12 +419,9 @@ function parseRssDocument(
       ITEM_TITLE_MAX_CHARS,
     );
     const fallbackLink = `${finalUrl}#item-${index + 1}`;
-    const itemLink = httpItemLink(
-      pickRssLink(record.link, rawText(record.guid) ?? fallbackLink),
-      finalUrl,
-      fallbackLink,
-    );
-    const canonicalUrl = normalizeArticleUrl(itemLink);
+    const candidateLink = pickRssLink(record.link, rawText(record.guid) ?? fallbackLink);
+    const itemLink = httpItemLink(candidateLink, finalUrl, fallbackLink);
+    const canonicalUrl = normalizeArticleUrl(candidateLink);
     const stableIdentity = rawText(record.guid) ?? canonicalUrl;
     const rawCandidate = rawText(record["content:encoded"]) ?? rawText(record.description);
     const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate), {
@@ -515,8 +489,9 @@ function parseAtomDocument(
       ITEM_TITLE_MAX_CHARS,
     );
     const fallbackLink = `${finalUrl}#entry-${index + 1}`;
-    const itemLink = httpItemLink(pickAtomLink(record.link, fallbackLink), finalUrl, fallbackLink);
-    const canonicalUrl = normalizeArticleUrl(itemLink);
+    const candidateLink = pickAtomLink(record.link, fallbackLink);
+    const itemLink = httpItemLink(candidateLink, finalUrl, fallbackLink);
+    const canonicalUrl = normalizeArticleUrl(candidateLink);
     const stableIdentity = rawText(record.id) ?? canonicalUrl;
     const rawCandidate = rawText(record.content) ?? rawText(record.summary);
     const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate), {

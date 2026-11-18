@@ -270,6 +270,27 @@ function skippedSupersededFeedRefresh(): FeedRefreshResult {
   return { ok: true, itemCount: 0, skipped: "superseded" };
 }
 
+function urlCarriesLogin(url: string): boolean {
+  try {
+    const { username, password } = new URL(url);
+    return Boolean(username || password);
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * The URL a document was served from becomes the feed's stored URL (and its provenance), and that
+ * row is readable by every account. A redirect or an autodiscovered link can add a username or
+ * password to it, so such a document is not accepted; fetching follows redirects as before.
+ */
+function refuseLoginUrl(result: FetchFeedDocumentResult): FetchFeedDocumentResult {
+  if (result.ok && !result.notModified && urlCarriesLogin(result.finalUrl)) {
+    return { ok: false, error: "Feed URLs with a username or password are not supported" };
+  }
+  return result;
+}
+
 async function fetchRefreshDocument(
   url: string,
   etag: string | null,
@@ -277,9 +298,11 @@ async function fetchRefreshDocument(
   options?: { hostRateLimiter?: HostRateLimiter },
 ): Promise<FetchFeedDocumentResult> {
   if (options?.hostRateLimiter) {
-    return await options.hostRateLimiter.run(url, () => fetchFeedDocument(url, etag, lastModified));
+    return refuseLoginUrl(
+      await options.hostRateLimiter.run(url, () => fetchFeedDocument(url, etag, lastModified)),
+    );
   }
-  return await fetchFeedDocument(url, etag, lastModified);
+  return refuseLoginUrl(await fetchFeedDocument(url, etag, lastModified));
 }
 
 async function resolveHtmlRefreshDocument(input: {

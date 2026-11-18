@@ -41,6 +41,60 @@ describe("parseFeedMetadata", () => {
   });
 });
 
+describe("parseFeedMetadata untrusted links and icons", () => {
+  const base = "https://feeds.example/feed.xml";
+  const hostile = [
+    "javascript:alert(1)",
+    "data:image/svg+xml;base64,PHN2Zy8+",
+    "file:///etc/passwd",
+    "https://reader:s3cret@cdn.example/icon.png",
+  ];
+  const rss = (extra: string) =>
+    `<?xml version="1.0"?><rss version="2.0"><channel><title>T</title><link>https://blog.example/</link>${extra}</channel></rss>`;
+
+  test.each(hostile)("does not keep %s as the feed icon", (url) => {
+    expect(parseFeedMetadata(rss(`<image><url>${url}</url></image>`), base).iconUrl).toBeNull();
+    expect(parseFeedMetadata(rss(`<image>${url}</image>`), base).iconUrl).toBeNull();
+    expect(
+      parseFeedMetadata(
+        `<?xml version="1.0"?><feed><title>T</title><icon>${url}</icon><logo>${url}</logo></feed>`,
+        base,
+      ).iconUrl,
+    ).toBeNull();
+    expect(
+      parseFeedMetadata(JSON.stringify({ title: "T", icon: url, favicon: url }), base).iconUrl,
+    ).toBeNull();
+  });
+
+  test("keeps absolute and relative http(s) icons", () => {
+    expect(
+      parseFeedMetadata(rss("<image><url>https://cdn.example/i.png</url></image>"), base).iconUrl,
+    ).toBe("https://cdn.example/i.png");
+    expect(parseFeedMetadata(rss("<image><url>/i.png</url></image>"), base).iconUrl).toBe(
+      "https://feeds.example/i.png",
+    );
+    expect(
+      parseFeedMetadata(JSON.stringify({ title: "T", icon: "//cdn.example/j.png" }), base).iconUrl,
+    ).toBe("https://cdn.example/j.png");
+  });
+
+  test("does not keep a site link that carries a login", () => {
+    const login = "https://reader:s3cret@blog.example/";
+    expect(
+      parseFeedMetadata(rss("").replace("https://blog.example/", login), base).link,
+    ).toBeNull();
+    expect(
+      parseFeedMetadata(JSON.stringify({ title: "T", home_page_url: login }), base).link,
+    ).toBeNull();
+    expect(
+      parseFeedMetadata(
+        `<?xml version="1.0"?><feed><title>T</title><link rel="self" href="${login}"/></feed>`,
+        base,
+      ).link,
+    ).toBeNull();
+  });
+});
+
 describe("parseFeedMetadata markup stripping", () => {
   test("strips markup from CDATA titles and JSON descriptions", () => {
     const xml = `<?xml version="1.0"?><rss version="2.0"><channel><title><![CDATA[<b>Bold</b> &amp; text]]></title><link>https://blog.example/</link><description>D</description></channel></rss>`;
@@ -85,6 +139,19 @@ describe("parseHtmlMetadataFallback", () => {
       description: "OG description",
       iconUrl: "https://example.com/og.ico",
     });
+  });
+
+  test("skips an icon that is not http(s) for the next one that is", () => {
+    const html = `<head><link rel="icon" href="data:image/png;base64,AAAA"><link rel="icon" href="javascript:alert(1)"><link rel="icon" href="/real.ico"></head>`;
+    expect(parseHtmlMetadataFallback(html, "https://example.com/").iconUrl).toBe(
+      "https://example.com/real.ico",
+    );
+    expect(
+      parseHtmlMetadataFallback(
+        `<head><link rel="icon" href="data:image/png;base64,AAAA"></head>`,
+        "https://example.com/",
+      ).iconUrl,
+    ).toBeNull();
   });
 
   test("matches head, title and link tags case-insensitively", () => {

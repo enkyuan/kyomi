@@ -41,25 +41,19 @@ function textFromUnknown(value: unknown): string | null {
   return text || null;
 }
 
-function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
+/**
+ * `candidate` resolved against `baseUrl`, when the result is an http(s) URL without a login. The
+ * link and icon of a feed are stored on a shared row and loaded by every follower's client, so a
+ * `javascript:`, `data:` or `file:` URL, or one that carries a password, is dropped.
+ */
+function absoluteHttpUrl(candidate: string | null, baseUrl: string): string | null {
   if (!candidate) {
     return null;
   }
   try {
-    return new URL(candidate, baseUrl).href;
-  } catch {
-    return null;
-  }
-}
-
-function absoluteHttpUrl(candidate: string | null, baseUrl: string): string | null {
-  const href = absoluteUrl(candidate, baseUrl);
-  if (!href) {
-    return null;
-  }
-  try {
-    const parsed = new URL(href);
-    return parsed.protocol === "http:" || parsed.protocol === "https:" ? parsed.href : null;
+    const url = new URL(candidate, baseUrl);
+    const isHttp = url.protocol === "http:" || url.protocol === "https:";
+    return isHttp && !url.username && !url.password ? url.href : null;
   } catch {
     return null;
   }
@@ -128,17 +122,17 @@ function pickAtomLink(feed: Record<string, unknown>, fallback: string): string |
 function pickRssImageUrl(channel: Record<string, unknown>, fallbackUrl: string): string | null {
   const image = channel.image;
   if (typeof image === "string") {
-    return absoluteUrl(image.trim() || null, fallbackUrl);
+    return absoluteHttpUrl(image.trim() || null, fallbackUrl);
   }
   if (!image || typeof image !== "object") {
     return null;
   }
   const rec = image as Record<string, unknown>;
-  return absoluteUrl(textFromUnknown(rec.url) ?? textFromUnknown(rec["@_href"]), fallbackUrl);
+  return absoluteHttpUrl(textFromUnknown(rec.url) ?? textFromUnknown(rec["@_href"]), fallbackUrl);
 }
 
 function pickAtomIconUrl(feed: Record<string, unknown>, fallbackUrl: string): string | null {
-  return absoluteUrl(textFromUnknown(feed.icon) ?? textFromUnknown(feed.logo), fallbackUrl);
+  return absoluteHttpUrl(textFromUnknown(feed.icon) ?? textFromUnknown(feed.logo), fallbackUrl);
 }
 
 function parseJsonFeedPreview(body: string, fallbackUrl: string): ParsedFeedMetadata {
@@ -161,8 +155,8 @@ function parseJsonFeedPreview(body: string, fallbackUrl: string): ParsedFeedMeta
     description: description || "Follow recent articles from this feed",
     link: home || null,
     iconUrl:
-      absoluteUrl(typeof rec.icon === "string" ? rec.icon : null, fallbackUrl) ??
-      absoluteUrl(typeof rec.favicon === "string" ? rec.favicon : null, fallbackUrl),
+      absoluteHttpUrl(typeof rec.icon === "string" ? rec.icon : null, fallbackUrl) ??
+      absoluteHttpUrl(typeof rec.favicon === "string" ? rec.favicon : null, fallbackUrl),
   };
 }
 
@@ -271,9 +265,9 @@ function parseHtmlIconUrl(headHtml: string, resolvedUrl: string): string | null 
     if (!linkTagHasIconRel(tag)) {
       continue;
     }
-    const href = extractLinkHref(tag);
-    if (href) {
-      return absoluteUrl(href, resolvedUrl);
+    const icon = absoluteHttpUrl(extractLinkHref(tag), resolvedUrl);
+    if (icon) {
+      return icon;
     }
   }
   return null;

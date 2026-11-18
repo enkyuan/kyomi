@@ -485,6 +485,97 @@ describe("runFeedRefresh HTML autodiscovery", () => {
     );
   });
 
+  describe("a login in a URL that would become the stored feed URL", () => {
+    const login = "https://reader:s3cret@93.184.216.35/feed.xml";
+    const feedXml = (siteUrl: string) =>
+      `<?xml version="1.0"?><rss version="2.0"><channel><title>Moved</title><link>${siteUrl}</link><description>d</description><item><title>First</title><link>${siteUrl}first</link><guid>first</guid></item></channel></rss>`;
+    const urlOf = (input: Request | string | URL) =>
+      typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
+
+    test("refuses a feed that redirects to a URL with a login, writing none of it", async () => {
+      const fake = createFeedRefreshDb();
+      const seen: string[] = [];
+      globalThis.fetch = mockFetch((input) => {
+        seen.push(urlOf(input));
+        return urlOf(input) === "https://93.184.216.34/"
+          ? new Response(null, { status: 302, headers: { location: login } })
+          : response(feedXml("https://93.184.216.35/"), login, "application/rss+xml");
+      });
+
+      const result = await runFeedRefresh(fake as never, "feed-1");
+
+      expect(result).toMatchObject({
+        ok: false,
+        error: "Feed fetch failed: Feed URLs with a username or password are not supported",
+      });
+      // The redirect is still followed; the document it led to is not accepted.
+      expect(seen).toHaveLength(2);
+      expect(JSON.stringify(fake.updates)).not.toContain("s3cret");
+      expect(fake.inserts.feed_items ?? []).toEqual([]);
+    });
+
+    test("refuses an autodiscovered alternate that carries a login", async () => {
+      const fake = createFeedRefreshDb();
+      const seen: string[] = [];
+      globalThis.fetch = mockFetch((input) => {
+        seen.push(urlOf(input));
+        return response(
+          `<!doctype html><html><head><link rel="alternate" type="application/rss+xml" href="${login}"></head></html>`,
+          "https://93.184.216.34/",
+          "text/html",
+        );
+      });
+
+      const result = await runFeedRefresh(fake as never, "feed-1");
+
+      expect(seen).toEqual(["https://93.184.216.34/"]);
+      expect(result).toMatchObject({ ok: false, failureClass: "html_not_feed" });
+      expect(JSON.stringify(fake.updates)).not.toContain("s3cret");
+    });
+
+    test("refuses an autodiscovered alternate that redirects to a URL with a login", async () => {
+      const fake = createFeedRefreshDb();
+      globalThis.fetch = mockFetch((input) => {
+        const url = urlOf(input);
+        if (url === "https://93.184.216.34/") {
+          return response(
+            `<!doctype html><html><head><link rel="alternate" type="application/rss+xml" href="/feed.xml"></head></html>`,
+            url,
+            "text/html",
+          );
+        }
+        return url === "https://93.184.216.34/feed.xml"
+          ? new Response(null, { status: 302, headers: { location: login } })
+          : response(feedXml("https://93.184.216.35/"), login, "application/rss+xml");
+      });
+
+      const result = await runFeedRefresh(fake as never, "feed-1");
+
+      expect(result.ok).toBe(false);
+      expect(result.error).toContain("Feed URLs with a username or password are not supported");
+      expect(JSON.stringify(fake.updates)).not.toContain("s3cret");
+    });
+
+    test("still adopts the URL a feed redirects to when it is an ordinary one", async () => {
+      const fake = createFeedRefreshDb();
+      const movedUrl = "https://93.184.216.35/new.xml";
+      globalThis.fetch = mockFetch((input) =>
+        urlOf(input) === "https://93.184.216.34/"
+          ? new Response(null, { status: 301, headers: { location: movedUrl } })
+          : response(feedXml("https://93.184.216.35/"), movedUrl, "application/rss+xml"),
+      );
+
+      const result = await runFeedRefresh(fake as never, "feed-1");
+
+      expect(result.ok).toBe(true);
+      expect(lastUpdateForTable(fake.updates, "feeds")).toMatchObject({
+        url: movedUrl,
+        canonicalFeedUrl: movedUrl,
+        refreshStatus: "idle",
+      });
+    });
+  });
+
   test("does not recursively crawl when the discovered alternate is also HTML", async () => {
     const fake = createFeedRefreshDb();
     const seen: string[] = [];

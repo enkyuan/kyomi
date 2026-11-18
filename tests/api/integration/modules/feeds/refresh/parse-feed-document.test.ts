@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { parseFeedDocument } from "@kyomi/ingest";
+import { normalizeArticleUrl } from "@kyomi/ingest/lib/article-identity";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 
 function repeatEntity(entity: string, count: number): string {
@@ -409,5 +410,240 @@ const x = 1;
         "https://example.com/posts/c",
       ]);
     });
+
+    test("drops a link that carries a login, as it does for a feed-level URL", () => {
+      const hostile = "https://reader:s3cret@example.com/posts/a";
+      for (const body of [rss(hostile), atom(hostile), jsonFeed(hostile)]) {
+        expect(links(body)[0]).toMatch(/^https:\/\/example\.com\/feed\.xml#(item|entry)-1$/);
+      }
+    });
+  });
+
+  describe("item identity", () => {
+    const FEED_URL = "https://example.com/feed.xml";
+    const rssItems = (items: string) => `<?xml version="1.0"?>
+      <rss version="2.0"><channel><title>T</title><link>https://example.com/</link>${items}</channel></rss>`;
+    const parse = (body: string) => parseFeedDocument(body, "feed-1", FEED_URL).items;
+    const distinct = (values: string[]) => new Set(values).size;
+
+    test.each([
+      [
+        "RSS items whose only identity is a urn: or tag: guid",
+        rssItems(
+          ["urn:uuid:aaaa-1", "urn:uuid:aaaa-2", "tag:example.com,2024:post-3"]
+            .map((guid) => `<item><title>t</title><guid isPermaLink="false">${guid}</guid></item>`)
+            .join(""),
+        ),
+      ],
+      [
+        "RSS items linking to mailto: or javascript:",
+        rssItems(
+          ["mailto:a1@b.c", "mailto:a2@b.c", "javascript:alert(1)", "javascript:alert(2)"]
+            .map((link) => `<item><title>t</title><link>${link}</link></item>`)
+            .join(""),
+        ),
+      ],
+      [
+        "Atom entries with a magnet: alternate",
+        `<feed xmlns="http://www.w3.org/2005/Atom"><title>T</title><id>x</id>${[1, 2, 3]
+          .map(
+            (n) =>
+              `<entry><title>t</title><id>e${n}</id><link rel="alternate" href="magnet:?xt=urn:btih:${n}"/></entry>`,
+          )
+          .join("")}</feed>`,
+      ],
+      [
+        "JSON Feed items with an app-scheme url",
+        JSON.stringify({
+          version: "https://jsonfeed.org/version/1.1",
+          title: "T",
+          items: [1, 2, 3].map((n) => ({ id: String(n), url: `app://x/${n}`, content_text: "x" })),
+        }),
+      ],
+    ])("keeps %s as separate items, and never shows a non-http link", (_, body) => {
+      const items = parse(body);
+
+      expect(items.length).toBeGreaterThanOrEqual(3);
+      expect(distinct(items.map((item) => item.id))).toBe(items.length);
+      expect(distinct(items.map((item) => item.canonicalUrl))).toBe(items.length);
+      for (const item of items) {
+        expect(item.link).toMatch(/^https:\/\/example\.com\/feed\.xml#(item|entry)-\d+$/);
+      }
+    });
+
+    test("derives the same ids as before non-http links were replaced", () => {
+      const urn = parse(
+        rssItems(
+          ["urn:uuid:aaaa-1", "urn:uuid:aaaa-2", "tag:example.com,2024:post-3"]
+            .map((guid) => `<item><title>t</title><guid isPermaLink="false">${guid}</guid></item>`)
+            .join(""),
+        ),
+      );
+      expect(urn.map((item) => item.id)).toEqual([
+        "77bac7e9-6b05-524f-a4d2-c7c6bd73b883",
+        "b2f41a93-f8f9-54c1-897a-ee79b6f4a93c",
+        "ac1172d2-ce5b-519b-9eb2-21070114ff69",
+      ]);
+      expect(urn[0]?.stableIdentity).toBe("urn:uuid:aaaa-1");
+      expect(urn[0]?.canonicalUrl).toBe("urn:uuid:aaaa-1");
+
+      const http = parse(
+        rssItems(`
+          <item><title>t</title><link>https://example.com/p/1?utm_source=x&amp;id=2#frag</link></item>
+          <item><title>t</title><link>/rel/2/</link></item>
+          <item><title>t</title><link>HTTPS://EXAMPLE.com/Up/</link><guid>g</guid></item>`),
+      );
+      expect(http.map((item) => item.id)).toEqual([
+        "561a49a9-22ab-51c2-a412-d2301401fba2",
+        "bef0d2d2-c571-5566-aaeb-fab2465da141",
+        "026091b9-cdf6-5299-bc24-d72b73f83597",
+      ]);
+    });
+  });
+
+  describe("images and icons", () => {
+    const FEED_URL = "https://example.com/feed.xml";
+    const hostileUrls = [
+      "javascript:alert(1)",
+      "data:image/svg+xml;base64,PHN2Zy8+",
+      "file:///etc/passwd",
+      "https://reader:s3cret@cdn.example.com/a.png",
+    ];
+    const rssWithItemHtml = (html: string, channelExtra = "") => `<?xml version="1.0"?>
+      <rss version="2.0"><channel><title>T</title><link>https://example.com/</link>${channelExtra}
+        <item><title>A</title><link>https://example.com/posts/a</link><guid>a</guid>
+          <description><![CDATA[${html}]]></description></item>
+      </channel></rss>`;
+
+    test.each(hostileUrls)("does not keep %s as an item image", (url) => {
+      for (const html of [
+        `<p>Text</p><img src="${url}">`,
+        `<meta property="og:image" content="${url}"><p>Text</p>`,
+      ]) {
+        const [item] = parseFeedDocument(rssWithItemHtml(html), "feed-1", FEED_URL).items;
+        expect(item?.imageUrl).toBeNull();
+      }
+    });
+
+    test("keeps absolute and relative http(s) item images, resolved against the item link", () => {
+      const imageUrl = (html: string) =>
+        parseFeedDocument(rssWithItemHtml(html), "feed-1", FEED_URL).items[0]?.imageUrl;
+
+      expect(imageUrl('<img src="https://cdn.example.com/a.png">')).toBe(
+        "https://cdn.example.com/a.png",
+      );
+      expect(imageUrl('<img src="/img/a.png">')).toBe("https://example.com/img/a.png");
+      expect(imageUrl('<img src="b.png">')).toBe("https://example.com/posts/b.png");
+      expect(imageUrl('<img src="//cdn.example.com/c.png">')).toBe("https://cdn.example.com/c.png");
+    });
+
+    test.each(hostileUrls)("does not keep %s as the feed icon", (url) => {
+      const iconUrl = (body: string) =>
+        parseFeedDocument(body, "feed-1", FEED_URL).metadata.iconUrl;
+
+      expect(iconUrl(rssWithItemHtml("x", `<image><url>${url}</url></image>`))).toBeNull();
+      expect(iconUrl(rssWithItemHtml("x", `<image>${url}</image>`))).toBeNull();
+      expect(
+        iconUrl(
+          `<feed xmlns="http://www.w3.org/2005/Atom"><title>T</title><icon>${url}</icon><logo>${url}</logo></feed>`,
+        ),
+      ).toBeNull();
+      expect(
+        iconUrl(
+          JSON.stringify({
+            version: "https://jsonfeed.org/version/1.1",
+            title: "T",
+            icon: url,
+            favicon: url,
+            items: [],
+          }),
+        ),
+      ).toBeNull();
+    });
+
+    test("keeps http(s) feed icons, resolved against the feed URL", () => {
+      const iconUrl = (body: string) =>
+        parseFeedDocument(body, "feed-1", FEED_URL).metadata.iconUrl;
+
+      expect(iconUrl(rssWithItemHtml("x", "<image><url>/logo.png</url></image>"))).toBe(
+        "https://example.com/logo.png",
+      );
+      expect(
+        iconUrl(
+          '<feed xmlns="http://www.w3.org/2005/Atom"><title>T</title><icon>https://cdn.example.com/i.ico</icon></feed>',
+        ),
+      ).toBe("https://cdn.example.com/i.ico");
+      expect(
+        iconUrl(
+          JSON.stringify({
+            version: "https://jsonfeed.org/version/1.1",
+            title: "T",
+            favicon: "f.ico",
+            items: [],
+          }),
+        ),
+      ).toBe("https://example.com/f.ico");
+    });
+
+    test("does not keep a feed-level site link that carries a login", () => {
+      const link = (body: string) => parseFeedDocument(body, "feed-1", FEED_URL).metadata.link;
+      const hostile = "https://reader:s3cret@example.com/";
+
+      expect(
+        link(rssWithItemHtml("x").replace("https://example.com/</link>", `${hostile}</link>`)),
+      ).toBeNull();
+      expect(
+        link(
+          JSON.stringify({
+            version: "https://jsonfeed.org/version/1.1",
+            title: "T",
+            home_page_url: hostile,
+            items: [],
+          }),
+        ),
+      ).toBeNull();
+      expect(link(rssWithItemHtml("x"))).toBe("https://example.com/");
+    });
+  });
+});
+
+describe("normalizeArticleUrl", () => {
+  test("drops tracking parameters and leaves an untouched query byte-identical", () => {
+    expect(normalizeArticleUrl("https://a.com/p?utm_source=x&id=2&fbclid=3")).toBe(
+      "https://a.com/p?id=2",
+    );
+    expect(normalizeArticleUrl("https://a.com/p?UTM_x=1&gclid=2&mc_cid=3")).toBe("https://a.com/p");
+    expect(normalizeArticleUrl("https://A.com/p/?q=a%20b&x=%7E")).toBe(
+      "https://a.com/p?q=a%20b&x=%7E",
+    );
+    expect(normalizeArticleUrl("https://a.com/p?a=1&utm_b=2&a=3#frag")).toBe(
+      "https://a.com/p?a=1&a=3",
+    );
+    expect(normalizeArticleUrl("  not a url ")).toBe("not a url");
+  });
+
+  test("stays linear in the number of tracking parameters", () => {
+    const query = Array.from({ length: 48_000 }, (_, index) => `utm_${index}=1`).join("&");
+
+    const started = performance.now();
+    const normalized = normalizeArticleUrl(`https://example.com/p?${query}&keep=1`);
+    const elapsed = performance.now() - started;
+
+    expect(normalized).toBe("https://example.com/p?keep=1");
+    // About 15 ms; the per-parameter `searchParams.delete` this replaced took seconds.
+    expect(elapsed).toBeLessThan(1_000);
+  });
+
+  test("a feed item with tens of thousands of tracking parameters parses promptly", () => {
+    const query = Array.from({ length: 48_000 }, (_, index) => `utm_${index}=1`).join("&");
+    const body = `<?xml version="1.0"?><rss version="2.0"><channel><title>T</title><link>https://example.com/</link>
+      <item><title>A</title><link>https://example.com/p?${query}</link><guid>g</guid></item></channel></rss>`;
+
+    const started = performance.now();
+    const [item] = parseFeedDocument(body, "feed-1", "https://example.com/feed.xml").items;
+    const elapsed = performance.now() - started;
+
+    expect(item?.canonicalUrl).toBe("https://example.com/p");
+    expect(elapsed).toBeLessThan(1_000);
   });
 });

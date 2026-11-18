@@ -8,7 +8,7 @@ import {
   type UnsafeOutboundUrl,
 } from "@shared/net/safe-fetch";
 import type { UpstreamError } from "@shared/effect/errors";
-import { assertHttpOrHttpsUrl } from "./normalize";
+import { assertHttpOrHttpsUrl, LOGIN_URL_MESSAGE } from "./normalize";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_BYTES = 2 * 1024 * 1024;
@@ -152,6 +152,11 @@ export const fetchFeedDocument = Effect.fn("discover.fetchFeedDocument")(functio
       maxRedirects: MAX_REDIRECTS,
       insecureTls: options?.ignoreTlsError === true,
     }).pipe(Effect.mapError((error: SafeFetchError) => classifySafeFetchError(error)));
+    // The final URL becomes the stored feed URL, shared by every follower, and a redirect can add a
+    // login to it. Redirects are followed as before; the document is not accepted.
+    if (finalUrl.username || finalUrl.password) {
+      return yield* new FeedFetchFailed({ code: "BLOCKED_URL", message: LOGIN_URL_MESSAGE });
+    }
     if (response.status < 200 || response.status >= 300) {
       return yield* new FeedFetchFailed({
         code: "HTTP_ERROR",

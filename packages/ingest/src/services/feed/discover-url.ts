@@ -1,3 +1,4 @@
+import { absoluteHttpUrl } from "../../lib/feed-text";
 import { extractHeadHtml, openTags } from "../../lib/text-scan";
 
 type FeedLinkCandidate = {
@@ -34,17 +35,6 @@ function normalizeRel(value: string | null): string[] {
     .filter(Boolean);
 }
 
-function resolveCandidateHref(href: string | null, baseUrl: string): string | null {
-  if (!href) {
-    return null;
-  }
-  try {
-    return new URL(href, baseUrl).href;
-  } catch {
-    return null;
-  }
-}
-
 function attributePattern(name: string): RegExp {
   return new RegExp(`\\b${name}\\s*=\\s*(?:"([^"]+)"|'([^']+)'|([^\\s>]+))`, "i");
 }
@@ -73,7 +63,8 @@ function parseFeedLinkCandidate(tag: string, baseUrl: string): FeedLinkCandidate
     return null;
   }
 
-  const href = resolveCandidateHref(extractLinkAttribute(tag, HREF_PATTERN), baseUrl);
+  // Only an http(s) URL without a login can become the stored feed URL.
+  const href = absoluteHttpUrl(extractLinkAttribute(tag, HREF_PATTERN), baseUrl);
   if (!href) {
     return null;
   }

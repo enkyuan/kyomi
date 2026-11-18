@@ -132,6 +132,73 @@ describe("createOrSubscribeToFeed", () => {
     expect(env.background).toHaveLength(1);
   });
 
+  describe("what a feed can put in the shared row", () => {
+    const feedWith = (extra: string, link = "https://site.example/") =>
+      new Response(
+        `<?xml version="1.0"?><rss version="2.0"><channel><title>T</title><link>${link}</link><description>D</description>${extra}</channel></rss>`,
+        { status: 200, headers: { "content-type": "application/rss+xml" } },
+      );
+    const subscribeWith = (
+      env: ReturnType<typeof environment>,
+      respond: Parameters<typeof scriptedHttpClient>[0],
+    ) =>
+      createOrSubscribeToFeed("user-1", FEED_URL, { folderId: "folder-1" }).pipe(
+        Effect.provide(scriptedHttpClient(respond)),
+        Effect.provide(env.layer),
+      );
+
+    test.each([
+      "javascript:alert(1)",
+      "data:image/svg+xml;base64,PHN2Zy8+",
+      "file:///etc/passwd",
+      "https://reader:s3cret@cdn.example/icon.png",
+    ])("does not store %s as the feed's icon or link", async (hostile) => {
+      const env = environment({});
+
+      const result = await Effect.runPromise(
+        subscribeWith(env, () => feedWith(`<image><url>${hostile}</url></image>`, hostile)),
+      );
+
+      expect(result).toMatchObject({ newFeed: true, faviconUrl: null, link: null });
+      expect(env.inserts[0]).toMatchObject({ faviconUrl: null, faviconSource: null, link: null });
+      expect(JSON.stringify([env.inserts, env.indexed])).not.toMatch(
+        /javascript:|data:|file:|s3cret/,
+      );
+    });
+
+    test("still stores an http(s) icon the feed names, relative to the feed", async () => {
+      const env = environment({});
+
+      const result = await Effect.runPromise(
+        subscribeWith(env, () => feedWith("<image><url>/logo.png</url></image>")),
+      );
+
+      expect(result.faviconUrl).toBe("https://93.184.216.34/logo.png");
+      expect(env.inserts[0]).toMatchObject({ faviconSource: "feed_icon" });
+    });
+
+    test("stores nothing for a feed that redirects to a URL with a login", async () => {
+      const env = environment({});
+
+      const error = await Effect.runPromise(
+        Effect.flip(
+          subscribeWith(env, (request) =>
+            request.url === FEED_URL
+              ? new Response(null, {
+                  status: 302,
+                  headers: { location: "https://reader:s3cret@93.184.216.35/feed.xml" },
+                })
+              : feedWith(""),
+          ),
+        ),
+      );
+
+      expect(error).toMatchObject({ _tag: "BadRequest", code: "FEED_URL_FORBIDDEN" });
+      expect(env.transactions()).toBe(0);
+      expect(env.indexed).toEqual([]);
+    });
+  });
+
   test("a search index outage is logged and the subscription still succeeds", async () => {
     const env = environment({ searchFails: true });
 

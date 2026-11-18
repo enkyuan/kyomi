@@ -13,12 +13,19 @@ import { compileArticleHtml } from "../document";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import type { ParsedFeedItem } from "../services/feed/types";
 
-function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
+/**
+ * `candidate` resolved against `baseUrl`, when the result is an http(s) URL without a login. A feed
+ * is untrusted: `javascript:`, `data:` and `file:` URLs, and one that carries a password, must not
+ * reach a stored link, image or icon that clients open or load.
+ */
+function absoluteHttpUrl(candidate: string | null, baseUrl: string): string | null {
   if (!candidate) {
     return null;
   }
   try {
-    return new URL(candidate, baseUrl).href;
+    const url = new URL(candidate, baseUrl);
+    const isHttp = url.protocol === "http:" || url.protocol === "https:";
+    return isHttp && !url.username && !url.password ? url.href : null;
   } catch {
     return null;
   }
@@ -169,13 +176,11 @@ function extractImageUrl(html: string | null, baseUrl: string): string | null {
     return null;
   }
   const trimmed = (value: string | null) => value?.trim() || null;
-  return (
-    absoluteUrl(
-      trimmed(metaContent(html, "property", "og:image")) ??
-        trimmed(metaContent(html, "name", "twitter:image")) ??
-        trimmed(firstImageSrc(html)),
-      baseUrl,
-    ) ?? null
+  return absoluteHttpUrl(
+    trimmed(metaContent(html, "property", "og:image")) ??
+      trimmed(metaContent(html, "name", "twitter:image")) ??
+      trimmed(firstImageSrc(html)),
+    baseUrl,
   );
 }
 
@@ -201,6 +206,7 @@ function summarizeText(value: string | null): string | null {
 }
 
 export {
+  absoluteHttpUrl,
   stripTags,
   sanitizeStoredContent,
   buildStoredFeedContent,

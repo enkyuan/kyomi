@@ -157,6 +157,92 @@ describe("resolveRemoteFeed", () => {
     });
   });
 
+  test("does not follow an autodiscovered feed link that carries a login", async () => {
+    const siteUrl = "https://93.184.216.34/";
+    const html = (links: string) =>
+      new Response(`<!doctype html><html><head><title>Page</title>${links}</head></html>`, {
+        status: 200,
+        headers: { "content-type": "text/html" },
+      });
+    const login =
+      '<link rel="alternate" type="application/rss+xml" href="https://reader:s3cret@93.184.216.35/f.xml">';
+
+    // Only a login-bearing link: the page is described from its own metadata.
+    const only = resolveWith(() => html(login), siteUrl);
+    expect(await succeeds(only.effect)).toMatchObject({
+      canonicalUrl: siteUrl,
+      discoveryProvenance: "html_metadata_fallback",
+    });
+    expect(only.requested).toEqual([siteUrl]);
+
+    // A better-ranked login-bearing link does not hide a usable one.
+    const feedUrl = "https://93.184.216.34/atom.xml";
+    const both = resolveWith(
+      (request) =>
+        request.url === siteUrl
+          ? html(`${login}<link rel="alternate" type="application/atom+xml" href="/atom.xml">`)
+          : request.url === feedUrl
+            ? xml(rss("Atom", siteUrl))
+            : new Error(`unexpected fetch: ${request.url}`),
+      siteUrl,
+    );
+    expect(await succeeds(both.effect)).toMatchObject({
+      canonicalUrl: feedUrl,
+      discoveryProvenance: "html_autodiscovery",
+    });
+    expect(both.requested).toEqual([siteUrl, feedUrl]);
+  });
+
+  test("refuses a feed that redirects to a URL with a login, instead of storing it", async () => {
+    const { effect, requested } = resolveWith((request) =>
+      request.url === publicFeedUrl
+        ? new Response(null, {
+            status: 302,
+            headers: { location: "https://reader:s3cret@93.184.216.35/feed.xml" },
+          })
+        : xml(rss("Redirected", "https://93.184.216.35/")),
+    );
+
+    expect(await failsWith(effect)).toMatchObject({
+      _tag: "BadRequest",
+      code: "FEED_URL_FORBIDDEN",
+      message: "Feed URLs with a username or password are not supported",
+    });
+    // Redirects are still followed; only the document served from such a URL is not accepted.
+    expect(requested).toHaveLength(2);
+  });
+
+  test("still follows a redirect to an ordinary URL and stores where the feed ended up", async () => {
+    const movedUrl = "https://93.184.216.35/moved.xml";
+    const { effect } = resolveWith((request) =>
+      request.url === publicFeedUrl
+        ? new Response(null, { status: 301, headers: { location: movedUrl } })
+        : xml(rss("Moved", "https://93.184.216.35/")),
+    );
+
+    expect(await succeeds(effect)).toMatchObject({
+      canonicalUrl: movedUrl,
+      canonicalFeedUrl: movedUrl,
+      submittedUrl: publicFeedUrl,
+      title: "Moved",
+    });
+  });
+
+  test("drops a feed link and icon that are not safe to store, keeping the feed", async () => {
+    const { effect } = resolveWith(() =>
+      xml(
+        `<?xml version="1.0"?><rss version="2.0"><channel><title>T</title><link>https://reader:s3cret@site.example/</link><description>D</description><image><url>javascript:alert(1)</url></image></channel></rss>`,
+      ),
+    );
+
+    expect(await succeeds(effect)).toMatchObject({
+      canonicalUrl: publicFeedUrl,
+      link: null,
+      siteUrl: null,
+      iconUrl: null,
+    });
+  });
+
   test("describes an HTML page with no feed link from its own metadata", async () => {
     const siteUrl = "https://93.184.216.34/";
     const { effect } = resolveWith(
@@ -245,6 +331,25 @@ describe("resolveRemoteFeed", () => {
       code: "FEED_FETCH_FAILED",
       details: { fetchCode: "FETCH_TIMEOUT" },
     });
+  });
+
+  test("ignores alternate links that are not http(s) URLs without a login", () => {
+    const html = `<!doctype html><html><head>
+      <link rel="alternate" type="application/rss+xml" href="javascript:alert(1)">
+      <link rel="alternate" type="application/rss+xml" href="https://reader:s3cret@93.184.216.34/rss.xml">
+      <link rel="alternate" type="application/rss+xml" href="file:///etc/passwd">
+      <link rel="alternate" type="application/json" href="/feed.json">
+    </head></html>`;
+
+    expect(discoverFeedUrlFromHtml(html, "https://93.184.216.34/posts/")).toBe(
+      "https://93.184.216.34/feed.json",
+    );
+    expect(
+      discoverFeedUrlFromHtml(
+        `<link rel="alternate" type="application/rss+xml" href="https://reader:s3cret@93.184.216.34/rss.xml">`,
+        "https://93.184.216.34/",
+      ),
+    ).toBeNull();
   });
 
   test("ranks alternate feed links by supported feed type", () => {
