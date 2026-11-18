@@ -54,7 +54,10 @@ function appWith(db: Parameters<typeof fakeDb>[0], published: unknown[][] = []) 
     ),
   );
   runtimes.push(runtime);
-  const app = new Elysia().derive(() => ({ userId: "user-1", requestId: "req-1" }));
+  const app = new Elysia()
+    // The limiter `rateLimitPlugin` puts on the context; its limits are tested in costly-actions.
+    .decorate("enforceRateLimit", async () => {})
+    .derive(() => ({ userId: "user-1", requestId: "req-1" }));
   registerTestErrorHandlers(app);
   registerFeedRoutes(app as never, runtime);
   return app;

@@ -20,7 +20,10 @@ function appWith(feedRows: unknown[], config: Record<string, string> = {}) {
     Layer.mergeAll(selectResults(feedRows, []).layer, fakeQueue(), testConfig(config), logs.layer),
   );
   runtimes.push(runtime);
-  const session = new Elysia().derive(() => ({ userId: "user-1", requestId: "req-1" }));
+  const session = new Elysia()
+    // The limiter `rateLimitPlugin` puts on the context; its limits are tested in costly-actions.
+    .decorate("enforceRateLimit", async () => {})
+    .derive(() => ({ userId: "user-1", requestId: "req-1" }));
   // Elysia hooks only reach routes registered after them.
   registerTestErrorHandlers(session);
   const app = registerArticleEnrichmentRoutes(session as never, runtime as never);

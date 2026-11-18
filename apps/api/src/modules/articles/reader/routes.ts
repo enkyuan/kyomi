@@ -3,6 +3,7 @@ import type { ManagedRuntime } from "effect";
 import type { Db } from "@adapters/db/service";
 import type { AppLogger } from "@adapters/logger/service";
 import type { JobQueue } from "@adapters/queue/service";
+import { enforceRateLimitForContext } from "@adapters/rate-limit/plugin";
 import type { AppConfig } from "@config/env/service";
 import { parseSupportedDocumentVersion } from "@modules/articles/document/negotiate";
 import { runEffect } from "@shared/http/effect/bridge";
@@ -17,6 +18,11 @@ import {
   translateResponseSchema,
 } from "../schemas";
 
+/** Each of these fetches a page or calls a paid model on the user's behalf. */
+const extractRateLimit = { name: "articles.extract", max: 30, windowMs: 10 * 60_000 } as const;
+const summarizeRateLimit = { name: "articles.summarize", max: 30, windowMs: 10 * 60_000 } as const;
+const translateRateLimit = { name: "articles.translate", max: 30, windowMs: 10 * 60_000 } as const;
+
 type ArticleEnrichmentRuntime = ManagedRuntime.ManagedRuntime<
   Db | AppLogger | AppConfig | JobQueue,
   unknown
@@ -26,12 +32,13 @@ export function registerArticleEnrichmentRoutes(app: Elysia, runtime: ArticleEnr
   return app
     .post(
       "/articles/:articleId/extract-full-text",
-      (context) => {
+      async (context) => {
         const { params, request, requestId, userId } = v1EffectContext<
           unknown,
           Record<string, unknown>,
           { articleId: string }
         >(context);
+        await enforceRateLimitForContext(context, userId, extractRateLimit);
         return runEffect(
           { runtime, request, requestId, userId },
           extractArticleFullText(params.articleId, {
@@ -46,12 +53,13 @@ export function registerArticleEnrichmentRoutes(app: Elysia, runtime: ArticleEnr
     )
     .post(
       "/articles/:articleId/summarize",
-      (context) => {
+      async (context) => {
         const { body, params, request, requestId, userId } = v1EffectContext<
           { content?: string; language_key?: string },
           Record<string, unknown>,
           { articleId: string }
         >(context);
+        await enforceRateLimitForContext(context, userId, summarizeRateLimit);
         return runEffect(
           { runtime, request, requestId, userId },
           summarizeArticle(params.articleId, body),
@@ -65,12 +73,13 @@ export function registerArticleEnrichmentRoutes(app: Elysia, runtime: ArticleEnr
     )
     .post(
       "/articles/:articleId/translate",
-      (context) => {
+      async (context) => {
         const { body, params, request, requestId, userId } = v1EffectContext<
           { content?: string; target_language: string },
           Record<string, unknown>,
           { articleId: string }
         >(context);
+        await enforceRateLimitForContext(context, userId, translateRateLimit);
         return runEffect(
           { runtime, request, requestId, userId },
           translateArticle(params.articleId, body),

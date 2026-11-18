@@ -50,7 +50,10 @@ const selecting = (rows: unknown[]) => () => {
 function appWith(db: Parameters<typeof fakeDb>[0], redis: Parameters<typeof fakeQueue>[0] = {}) {
   const runtime = ManagedRuntime.make(Layer.mergeAll(fakeDb(db), fakeQueue(redis), silentLogger));
   runtimes.push(runtime);
-  const app = new Elysia().derive(() => ({ userId: "user-1", requestId: "req-1" }));
+  const app = new Elysia()
+    // The limiter `rateLimitPlugin` puts on the context; its limits are tested in costly-actions.
+    .decorate("enforceRateLimit", async () => {})
+    .derive(() => ({ userId: "user-1", requestId: "req-1" }));
   registerTestErrorHandlers(app);
   registerArticleWriteRoutes(app as never, runtime);
   return app;
