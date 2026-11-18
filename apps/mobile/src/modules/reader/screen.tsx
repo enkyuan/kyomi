@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { getReaderTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { Skeleton } from "@ui/skeleton";
 import { fetchMobileApiJson, resolveMobileApiUrl } from "@/lib/api";
+import { openExternalLink } from "@/lib/external-link";
 import { buildFaviconUrlCandidates } from "@kyomi/ingest/favicon/browser";
 import { articleListQueryKeys } from "@modules/articles/queries/keys";
 import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
@@ -210,6 +211,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
             fontSizePx={fontSizePx}
             onReadingProgress={readingProgress.onReadingProgress}
             onReady={handleArticleReady}
+            openUrl={openExternalLink}
             reader={toHtmlReaderContent(article.reader.selected)}
             title={article.title}
           />

@@ -33,17 +33,23 @@ export function createProgressSync({
   readonly send: SendProgress;
 }) {
   let retrying: Promise<number> | null = null;
+  // Bumped by `reset`: a write that started under an earlier account must not be sent, kept or
+  // retried once another account may be signed in.
+  let epoch = 0;
 
   /**
    * `sent`, `dropped` (never retry) or `kept` (retry later). A new write that fails is buffered; a
    * buffered one that fails again stays where it is, so retries keep their order and age.
    */
   async function attempt(articleId: string, body: ProgressUpdate, isBuffered: boolean) {
+    const startedIn = epoch;
     try {
       const result = await send(articleId, body);
+      if (startedIn !== epoch) return { outcome: "dropped" as const, result: null };
       buffer.remove(articleId, body);
       return { outcome: "sent" as const, result };
     } catch (error) {
+      if (startedIn !== epoch) return { outcome: "dropped" as const, result: null };
       if (isPermanentFailure(error)) {
         buffer.remove(articleId, body);
         return { outcome: "dropped" as const, result: null };
@@ -54,8 +60,10 @@ export function createProgressSync({
   }
 
   async function retryAll() {
+    const startedIn = epoch;
     let sent = 0;
     for (const entry of buffer.list()) {
+      if (startedIn !== epoch) break;
       const { outcome } = await attempt(entry.articleId, entry.body, true);
       if (outcome === "sent") sent += 1;
       // The network is down or the session ended: the rest would fail the same way.
@@ -69,11 +77,20 @@ export function createProgressSync({
     async push(articleId: string, body: ProgressUpdate): Promise<ReadingProgressResult | null> {
       return (await attempt(articleId, body, false)).result;
     },
+    /** Forgets every kept write and stops any retry or send in flight from touching the buffer or the network again. */
+    reset(): void {
+      epoch += 1;
+      retrying = null;
+      buffer.clear();
+    },
     /** Sends every kept write once; calls made while one is running share it. Resolves to the count sent. */
     retryBuffered(): Promise<number> {
-      retrying ??= retryAll().finally(() => {
-        retrying = null;
-      });
+      if (!retrying) {
+        const run = retryAll().finally(() => {
+          if (retrying === run) retrying = null;
+        });
+        retrying = run;
+      }
       return retrying;
     },
   };

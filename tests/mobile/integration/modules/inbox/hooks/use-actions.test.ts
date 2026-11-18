@@ -8,6 +8,7 @@ import { afterEach, beforeEach, describe, expect, mock, spyOn, test } from "bun:
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
+import { mockMobileAuth, mockReactNative } from "../../../lib/module-mocks";
 
 const openURL = mock(async (_url: string) => true);
 const share = mock(async (_content: unknown) => ({ action: "sharedAction" }));
@@ -21,11 +22,7 @@ const originalFetch = globalThis.fetch;
 
 // React Native, Expo and the secure-store backed auth client cannot load under bun, so only they
 // and the react-query mutation are stubbed. The real haptics helper and fetchMobileApiJson run.
-mock.module("react-native", () => ({
-  Linking: { openURL },
-  Platform: { OS: "ios" },
-  Share: { share },
-}));
+mockReactNative({ Linking: { openURL }, Share: { share } });
 // Only the native viewport is stubbed (as in the toast manager test) so the real `toast` is spied on.
 mock.module("../../../../../../apps/mobile/src/components/ui/toast/atoms/viewport", () => ({
   ToastViewport: () => null,
@@ -35,10 +32,7 @@ mock.module("expo-haptics", () => ({
   performAndroidHapticsAsync: async () => undefined,
   selectionAsync,
 }));
-mock.module("../../../../../../apps/mobile/src/lib/auth", () => ({
-  getAuthCookie: () => "",
-  resolveAuthOrigin: () => "https://api.kyomi.test",
-}));
+mockMobileAuth();
 mock.module("../../../../../../apps/mobile/src/modules/inbox/hooks/use-state", () => ({
   useArticleStateMutation: () => ({ isPending: false, mutateAsync }),
 }));
@@ -202,6 +196,55 @@ describe("useArticleRowActions routing", () => {
     expect(fetchMock).not.toHaveBeenCalled();
     expect(toastError).not.toHaveBeenCalled();
     expect(toastSuccess).not.toHaveBeenCalled();
+  });
+});
+
+// A publisher controls `link`, so it can carry any URL scheme. Only a web page may be launched or shared.
+const HOSTILE_LINKS = [
+  "itms-services://?action=download-manifest&url=https://attacker.example/app.plist",
+  "tel:+15555550100",
+  "sms:+15555550100&body=hello",
+  "javascript:alert(1)",
+  "file:///etc/hosts",
+  "data:text/html,<script>alert(1)</script>",
+  "intent://scan/#Intent;scheme=zxing;end",
+  "kyomi://settings",
+  "not a url",
+  "",
+] as const;
+
+describe("useArticleRowActions link scheme", () => {
+  test.each(HOSTILE_LINKS)("never launches %p when opening the source", async (link) => {
+    mountRowActions([item({ link })])("article-1", "openSource");
+    await settle();
+
+    expect(openURL).not.toHaveBeenCalled();
+    expect(toastError).not.toHaveBeenCalled();
+  });
+
+  test.each(HOSTILE_LINKS)("never shares %p as the article link", async (link) => {
+    mountRowActions([item({ link })])("article-1", "share");
+    await settle();
+
+    expect(share).not.toHaveBeenCalled();
+  });
+
+  test("still opens and shares http and https links", async () => {
+    const dispatch = mountRowActions([
+      item({ id: "http", link: "http://example.com/plain" }),
+      item({ id: "https", link: "https://example.com/secure?a=1#frag" }),
+    ]);
+
+    dispatch("http", "openSource");
+    dispatch("https", "openSource");
+    dispatch("https", "share");
+    await settle();
+
+    expect(openURL.mock.calls).toEqual([
+      ["http://example.com/plain"],
+      ["https://example.com/secure?a=1#frag"],
+    ]);
+    expect(share).toHaveBeenCalledTimes(1);
   });
 });
 

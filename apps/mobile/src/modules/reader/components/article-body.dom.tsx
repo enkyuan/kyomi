@@ -20,6 +20,7 @@ import { FONT_FAMILIES, FONT_WEIGHTS } from "@/theme/fonts";
 import { mobileReaderLayout } from "../lib/layout";
 import { useReadingProgressTracking } from "./dom-reading-progress";
 import { readerCanvas } from "../lib/theme";
+import { handleLinkClick } from "../lib/web-policy";
 import { resolveMobileApiUrl } from "@/lib/api";
 
 const MOBILE_READER_STYLES = String.raw`
@@ -199,6 +200,8 @@ type ArticleBodyProps = {
   readonly onReady?: () => void;
   /** Sent at most every 2 s while reading, and when scrolling ends. */
   readonly onReadingProgress?: (sample: { progress: number; completed: boolean }) => void;
+  /** Opens a web link in the system browser; the article never loads a link itself. */
+  readonly openUrl: (url: string) => void;
   readonly reader: ReaderContentModel;
   readonly title: string;
   readonly dom?: DOMProps;
@@ -252,6 +255,7 @@ export default function ArticleBody({
   initialProgress,
   onReady,
   onReadingProgress,
+  openUrl,
   reader,
   title,
 }: ArticleBodyProps) {
@@ -284,6 +288,8 @@ export default function ArticleBody({
     <main
       className="mobile-reader"
       data-color-scheme={colorScheme}
+      // The WebView would load a tapped link in place, so every link is claimed here.
+      onClickCapture={(event) => handleLinkClick(event, openUrl, window.location.href)}
       style={
         {
           "--reader-font-size": `${fontSizePx}px`,

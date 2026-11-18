@@ -7,6 +7,7 @@ import { sanitizeArticleHtmlFragment } from "@kyomi/reader/sanitization";
 import "@kyomi/reader/web/katex-offline.css";
 import "@kyomi/reader/web/styles.css";
 import "@kyomi/ui/styles/reader.css";
+import { EMBED_FRAME_SANDBOX, handleLinkClick, httpsFrameUrl } from "../lib/web-policy";
 
 const DEFAULT_EMBED_ASPECT_RATIO = 16 / 9;
 
@@ -18,13 +19,16 @@ type HtmlIslandProps = {
   readonly colorScheme: "dark" | "light";
   readonly fontSizePx: number;
   readonly title: string;
+  /** Opens a web link in the system browser; the island never loads a link itself. */
+  readonly openUrl: (url: string) => void;
   readonly dom?: DOMProps;
 };
 
 /**
  * WebView island for the three things native text cannot express: `html` escape-hatch blocks,
  * KaTeX output and third-party players. HTML is re-sanitized here because this runs in a web
- * context; embeds load only compiler-built allowlist URLs.
+ * context; embeds load only compiler-built allowlist URLs, sandboxed, and only over https.
+ * Links never navigate the island: see `handleLinkClick`.
  */
 export default function HtmlIsland({
   aspectRatio = DEFAULT_EMBED_ASPECT_RATIO,
@@ -33,6 +37,7 @@ export default function HtmlIsland({
   frameUrl,
   html,
   kind,
+  openUrl,
   title,
 }: HtmlIslandProps) {
   const safeHtml = useMemo(
@@ -53,14 +58,18 @@ export default function HtmlIsland({
     overflowX: "auto",
   } as CSSProperties;
 
-  if (kind === "embed" && frameUrl) {
+  if (kind === "embed") {
+    const src = httpsFrameUrl(frameUrl);
+    if (!src) return null;
+
     return (
       <div style={{ ...style, aspectRatio: String(aspectRatio), width: "100%" }}>
         <iframe
           allow="fullscreen; picture-in-picture"
           allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin"
-          src={frameUrl}
+          sandbox={EMBED_FRAME_SANDBOX}
+          src={src}
           style={{ border: 0, height: "100%", width: "100%" }}
           title={title}
         />
@@ -69,7 +78,11 @@ export default function HtmlIsland({
   }
 
   return (
-    <div className="reader-content" style={style}>
+    <div
+      className="reader-content"
+      onClickCapture={(event) => handleLinkClick(event, openUrl, window.location.href)}
+      style={style}
+    >
       {/* The native block gap already spaces equations, so drop KaTeX's own display margin. */}
       {kind === "math" ? <style>{".reader-content .katex-display{margin:0}"}</style> : null}
       <div className="article-body" dangerouslySetInnerHTML={{ __html: safeHtml }} />
