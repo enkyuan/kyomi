@@ -104,9 +104,11 @@ export function useReaderExtract({
         });
 
       if (reason === "auto") {
-        void extractionPromise.catch(() => {
-          requestedExtractionForItemRef.current = null;
-        });
+        // The item stays marked as requested when the attempt fails: the rolled-back query data
+        // still reads "pending", so re-arming here would refire at once and loop for as long as
+        // the request keeps failing (a 429 from the extraction limit included). Asking again is
+        // left to the user: the retry button, or opening the article again.
+        void extractionPromise.catch((error: unknown) => logClientError("reader.extract", error));
         return;
       }
 

@@ -101,7 +101,14 @@ export async function proxyFavicon(request: Request) {
     });
   }
 
-  const body = await readCapped(upstream, FAVICON_MAX_BYTES);
+  let body: Awaited<ReturnType<typeof readCapped>>;
+  try {
+    body = await readCapped(upstream, FAVICON_MAX_BYTES);
+  } catch (error) {
+    // The connection dropped or the timeout fired after the headers arrived.
+    console.error(`[api] GET ${url.pathname} -> body error: ${formatErrorForLog(error)}`);
+    return new Response(null, { status: 502, headers: faviconHeaders() });
+  }
   if (body === null) {
     // Too large to be a favicon: a miss, so the page falls back to its placeholder.
     return new Response(null, { status: 404, headers: faviconHeaders() });

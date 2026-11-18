@@ -331,7 +331,9 @@ export function List({
 }
 
 function HeaderReaderToolbar({ item }: { item: ArticleDetailDto }) {
-  const toolbar = useReaderToolbar({ item });
+  // The article beside the list extracts on its own; a second extracting instance would send the
+  // same request twice.
+  const toolbar = useReaderToolbar({ item, autoExtract: false });
 
   return (
     <div className="relative inline-flex h-11 min-w-0 max-w-96 items-center overflow-hidden rounded-full bg-muted-solid px-1.5 text-base font-medium text-muted-foreground *:relative">

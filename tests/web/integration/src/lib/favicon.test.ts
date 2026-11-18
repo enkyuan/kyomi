@@ -229,4 +229,72 @@ describe("proxyFavicon", () => {
     expect(response.status).toBe(502);
     expect(response.headers.get("x-content-type-options")).toBe("nosniff");
   });
+
+  test("answers a bad gateway when the connection drops after the headers", async () => {
+    let sent = false;
+    const body = new ReadableStream<Uint8Array>({
+      pull(controller) {
+        if (sent) {
+          controller.error(new Error("socket reset"));
+          return;
+        }
+        sent = true;
+        controller.enqueue(new Uint8Array(8));
+      },
+    });
+    stubApi(new Response(body, { headers: { "content-type": "image/png" } }));
+
+    const response = await proxyFavicon(faviconRequest());
+
+    expect(response.status).toBe(502);
+    expect(response.headers.get("content-type")).toBeNull();
+    expect(response.headers.get("x-content-type-options")).toBe("nosniff");
+    expect(response.headers.get("content-security-policy")).toContain("sandbox");
+    expect(await response.text()).toBe("");
+  });
+
+  test("answers a bad gateway when the timeout fires while the body is still being read", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (_url: URL, init: RequestInit) => {
+        const body = new ReadableStream<Uint8Array>({
+          start(controller) {
+            // The timeout fires after the headers: the signal is already aborted by the first read.
+            const fail = () => controller.error(init.signal?.reason);
+            if (init.signal?.aborted) fail();
+            else init.signal?.addEventListener("abort", fail);
+          },
+        });
+        return new Response(body, { headers: { "content-type": "image/png" } });
+      }),
+    );
+    vi.spyOn(AbortSignal, "timeout").mockImplementation(() =>
+      AbortSignal.abort(new DOMException("The operation timed out.", "TimeoutError")),
+    );
+
+    const response = await proxyFavicon(faviconRequest());
+
+    expect(response.status).toBe(502);
+    expect(response.headers.get("x-content-type-options")).toBe("nosniff");
+  });
+
+  test("still serves an icon whose body arrives in several chunks", async () => {
+    const chunks = [new Uint8Array([1, 2]), new Uint8Array([3, 4])];
+    const body = new ReadableStream<Uint8Array>({
+      pull(controller) {
+        const next = chunks.shift();
+        if (next) {
+          controller.enqueue(next);
+        } else {
+          controller.close();
+        }
+      },
+    });
+    stubApi(new Response(body, { headers: { "content-type": "image/png" } }));
+
+    const response = await proxyFavicon(faviconRequest());
+
+    expect(response.status).toBe(200);
+    expect(new Uint8Array(await response.arrayBuffer())).toEqual(new Uint8Array([1, 2, 3, 4]));
+  });
 });
