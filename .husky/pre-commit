@@ -11,11 +11,10 @@ else
   exit 127
 fi
 
-# Only run dotenvx precommit when a .env* file is actually staged.
-# dotenvx scans `git diff HEAD` (staged + unstaged), so unrelated dirty
-# .env files in a multi-agent workspace would otherwise block every commit.
-if git diff --cached --name-only --diff-filter=ACMR | grep -qE '(^|/)\.env($|\.)'; then
-  "$BUN_BIN" run check:env
-fi
+# check:env reads the staged content of every tracked env-like file from the index, so unrelated
+# dirty .env files in a multi-agent workspace cannot block a commit. It runs on every commit instead of
+# only when a .env* path is staged: matching staged names here needed -z handling for non-ASCII paths and
+# a second copy of the file-name rules, and a skipped check is how plaintext reaches a commit.
+"$BUN_BIN" run check:env
 
 "$BUN_BIN" x lint-staged

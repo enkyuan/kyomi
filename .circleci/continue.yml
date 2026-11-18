@@ -1,6 +1,7 @@
 # Continuation of .circleci/config.yml. Every job is always part of the `ci`
 # workflow so `ci-summary` can be the one required check; a job whose area did
-# not change finishes in seconds without checking out or installing anything.
+# not change finishes in seconds without checking out or installing anything
+# (except static-quality, which always runs the env secret scan).
 #
 # Local equivalents: docs/ci-cd.md.
 version: 2.1
@@ -96,11 +97,20 @@ jobs:
   static-quality:
     executor: bun
     steps:
+      # Unlike every other job this one always checks out and installs: an env file can be tracked
+      # anywhere (docs, .agents, packages/catalog), so the path filter must not decide whether the
+      # secret scan runs. It reads the dotenvx parser from the workspace install.
+      - checkout
+      - setup-bun
+      - run:
+          name: Env files hold no plaintext (checkout and commits new on this branch)
+          command: |
+            bun run check:env
+            git fetch --quiet origin +refs/heads/main:refs/remotes/origin/main
+            bun run check:env --range origin/main..HEAD
       - only-if:
           condition: << pipeline.parameters.app >>
           steps:
-            - checkout
-            - setup-bun
             # Turbo's local cache is content-hashed: packages whose inputs did
             # not change replay their fmt/lint/typecheck result instead of rerunning.
             - restore_cache:
