@@ -1,63 +1,24 @@
-import { ALLOWED_SCHEMES, assertSafeFaviconHost } from "./host-safety";
+import { ALLOWED_SCHEMES, fetchPublic, isPublicUrl } from "../../lib/outbound";
+import { openTags } from "../../lib/text-scan";
 
 const MAX_REDIRECT_HOPS = 5;
 const HTML_ICON_SCAN_MAX_CHARS = 128 * 1024;
 const FAVICON_REQUEST_TIMEOUT_MS = 1_200;
 
 /**
- * Follows redirects manually, re-validating each Location URL's hostname with
- * assertSafeFaviconHost when `validateEachHop` is true. This prevents SSRF via
- * open-redirect chains that could reach private/internal addresses.
+ * `fetchPublic` for a favicon: every URL it requests, the first and each redirect, must be a public
+ * destination, and a destination that is not, cannot be reached or redirects too often is just
+ * "no icon" (null).
  */
 async function fetchWithRedirectGuard(
   startUrl: string,
   init: Omit<RequestInit, "redirect"> & { signal?: AbortSignal },
-  validateEachHop: boolean,
 ): Promise<Response | null> {
-  let url = startUrl;
-  for (let hop = 0; hop <= MAX_REDIRECT_HOPS; hop++) {
-    let parsed: URL;
-    try {
-      parsed = new URL(url);
-    } catch {
-      return null;
-    }
-    if (!ALLOWED_SCHEMES.has(parsed.protocol)) {
-      return null;
-    }
-    if (validateEachHop) {
-      const isSafe = await assertSafeFaviconHost(parsed.hostname);
-      if (!isSafe) {
-        return null;
-      }
-    }
-
-    let response: Response;
-    try {
-      response = await fetch(url, { ...init, redirect: "manual" });
-    } catch {
-      return null;
-    }
-
-    if (response.status >= 300 && response.status < 400) {
-      const location = response.headers.get("location");
-      response.body?.cancel().catch(() => {});
-      if (!location) {
-        return null;
-      }
-      try {
-        url = new URL(location, url).href;
-      } catch {
-        return null;
-      }
-      continue;
-    }
-
-    return response;
+  try {
+    return (await fetchPublic(startUrl, init, { maxRedirects: MAX_REDIRECT_HOPS })).response;
+  } catch {
+    return null;
   }
-
-  // Exceeded maximum redirect hops.
-  return null;
 }
 
 /**
@@ -118,44 +79,12 @@ function isImageResponse(response: Response, requestUrl: string): boolean {
   return false;
 }
 
-/** Try fetching a URL and return the response only if it looks like a valid image. */
-export async function tryFetchImage(imageUrl: string): Promise<Response | null> {
-  const response = await fetchWithRedirectGuard(
-    imageUrl,
-    { headers: { Accept: "image/*,*/*" }, signal: AbortSignal.timeout(FAVICON_REQUEST_TIMEOUT_MS) },
-    false,
-  );
-  if (!response || !isImageResponse(response, imageUrl)) {
-    response?.body?.cancel().catch(() => {});
-    return null;
-  }
-  return response;
-}
-
+/** Fetch an image from a host that passes the safety check, following redirects with the same check on every hop. */
 export async function tryFetchImageIfHostSafe(imageUrl: string): Promise<Response | null> {
-  let hostname: string;
-  try {
-    const parsed = new URL(imageUrl);
-    if (!ALLOWED_SCHEMES.has(parsed.protocol)) {
-      return null;
-    }
-    hostname = parsed.hostname;
-  } catch {
-    return null;
-  }
-
-  const isSafe = await assertSafeFaviconHost(hostname);
-  if (!isSafe) {
-    return null;
-  }
-
-  // Use redirect guard with per-hop host validation so a redirect chain cannot
-  // bypass the SSRF guard by pointing to a private/internal address.
-  const response = await fetchWithRedirectGuard(
-    imageUrl,
-    { headers: { Accept: "image/*,*/*" }, signal: AbortSignal.timeout(FAVICON_REQUEST_TIMEOUT_MS) },
-    true,
-  );
+  const response = await fetchWithRedirectGuard(imageUrl, {
+    headers: { Accept: "image/*,*/*" },
+    signal: AbortSignal.timeout(FAVICON_REQUEST_TIMEOUT_MS),
+  });
   if (!response || !isImageResponse(response, imageUrl)) {
     response?.body?.cancel().catch(() => {});
     return null;
@@ -238,11 +167,10 @@ function iconCandidateScore({
 
 export async function findIconsFromHtml(origin: string): Promise<string[]> {
   try {
-    const response = await fetchWithRedirectGuard(
-      origin,
-      { headers: { Accept: "text/html" }, signal: AbortSignal.timeout(FAVICON_REQUEST_TIMEOUT_MS) },
-      true,
-    );
+    const response = await fetchWithRedirectGuard(origin, {
+      headers: { Accept: "text/html" },
+      signal: AbortSignal.timeout(FAVICON_REQUEST_TIMEOUT_MS),
+    });
     if (!response?.ok) return [];
     const reader = response.body?.getReader();
     if (!reader) return [];
@@ -254,7 +182,8 @@ export async function findIconsFromHtml(origin: string): Promise<string[]> {
     }
     reader.cancel().catch(() => {});
 
-    const links = html.match(/<link[^>]*>/gi) ?? [];
+    // A scan, not a regex: a page of `<link` with no `>` makes `<link[^>]*>` quadratic.
+    const links = [...openTags(html, "link")];
     const candidates: Array<{ order: number; score: number; url: string }> = [];
 
     for (const [order, linkTag] of links.entries()) {
@@ -330,7 +259,7 @@ async function resolveHtmlFavicon(origin: string): Promise<ResolveFeedFaviconUrl
 }
 
 async function resolveDirectFavicon(origin: string): Promise<ResolveFeedFaviconUrlResult | null> {
-  const result = await tryFetchImage(`${origin}/favicon.ico`);
+  const result = await tryFetchImageIfHostSafe(`${origin}/favicon.ico`);
   if (!result) {
     return null;
   }
@@ -346,14 +275,14 @@ async function resolveProviderFavicon(
 
   try {
     return await Promise.any([
-      tryFetchImage(googleUrl).then((result) => {
+      tryFetchImageIfHostSafe(googleUrl).then((result) => {
         if (result) {
           result.body?.cancel().catch(() => {});
           return { url: googleUrl, source: "google_s2" as FaviconResolutionSource };
         }
         throw new Error("No Google favicon found");
       }),
-      tryFetchImage(duckUrl).then((result) => {
+      tryFetchImageIfHostSafe(duckUrl).then((result) => {
         if (result) {
           result.body?.cancel().catch(() => {});
           return { url: duckUrl, source: "duckduckgo" as FaviconResolutionSource };
@@ -387,8 +316,7 @@ export async function resolveFeedFaviconUrl(
     return null;
   }
 
-  const isSafe = await assertSafeFaviconHost(hostname);
-  if (!isSafe) {
+  if (!(await isPublicUrl(new URL(origin)))) {
     return null;
   }
 

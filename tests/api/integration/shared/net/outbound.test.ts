@@ -91,4 +91,55 @@ describe("outbound URL policy", () => {
       true,
     );
   });
+
+  test("blocks special-use ranges beyond the private ones", () => {
+    for (const address of [
+      "192.0.0.192",
+      "192.0.2.1",
+      "198.18.0.1",
+      "198.51.100.7",
+      "203.0.113.9",
+      "224.0.0.1",
+      "239.255.255.250",
+      "240.0.0.1",
+      "255.255.255.255",
+      "fec0::1",
+      "ff02::1",
+      "64:ff9b::7f00:1",
+      "2002:7f00:1::",
+      "2001:db8::1",
+      "fd00:ec2::254",
+      "fe90::1",
+      "::ffff:10.0.0.8",
+    ]) {
+      expect(isBlockedOutboundIpAddress(address)).toBe(true);
+    }
+  });
+
+  test("does not block ordinary public addresses", () => {
+    for (const address of [
+      "93.184.216.34",
+      "8.8.8.8",
+      "1.1.1.1",
+      "2606:4700:4700::1111",
+      "2a00:1450:4001::200e",
+    ]) {
+      expect(isBlockedOutboundIpAddress(address)).toBe(false);
+    }
+  });
+
+  test("blocks names that only mean something inside a network", async () => {
+    for (const url of [
+      "http://redis:6379/",
+      "http://postgres/",
+      "http://localhost./feed",
+      "http://x.localhost/feed",
+      "http://foo.internal/feed",
+      "http://[fd00:ec2::254]/",
+      "http://[fe90::1]/",
+      "http://0.1.2.3/",
+    ]) {
+      expect(await check(url, ["93.184.216.34"])).toMatchObject({ _tag: "UnsafeOutboundUrl" });
+    }
+  });
 });

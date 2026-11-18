@@ -1,5 +1,8 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { fetchFeedDocument } from "@kyomi/ingest/ingestion";
+import { resolveHostsPublicly } from "@api-tests/support/dns";
+
+resolveHostsPublicly();
 
 describe("fetchFeedDocument allocation safety", () => {
   const originalFetch = globalThis.fetch;

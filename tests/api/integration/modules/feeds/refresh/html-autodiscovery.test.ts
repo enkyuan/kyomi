@@ -13,7 +13,7 @@ type RefreshState = {
 };
 
 function mockFetch(
-  handler: (input: Request | string | URL) => Response | Promise<Response>,
+  handler: (input: Request | string | URL, init?: RequestInit) => Response | Promise<Response>,
 ): typeof fetch {
   return handler as unknown as typeof fetch;
 }
@@ -213,9 +213,11 @@ describe("runFeedRefresh HTML autodiscovery", () => {
     const refreshState: RefreshState = { status: "queued", generation: 3 };
     const fake = createFeedRefreshDb({ refreshState });
     let fetchCalls = 0;
-    globalThis.fetch = mockFetch((input) => {
+    globalThis.fetch = mockFetch((input, init) => {
       const url = input instanceof Request ? input.url : input.toString();
-      if (url !== "https://93.184.216.34/") {
+      // The feed request, not the favicon lookup that follows a refresh of the same site.
+      const isFeedRequest = new Headers(init?.headers).get("accept")?.includes("rss");
+      if (url !== "https://93.184.216.34/" || !isFeedRequest) {
         return new Response(null, { status: 404 });
       }
       fetchCalls += 1;
