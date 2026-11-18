@@ -12,6 +12,7 @@ import { resolveUrls } from "./passes/resolve-urls";
 import { sanitize } from "./passes/sanitize";
 import { stripChrome } from "./passes/strip-chrome";
 import { stripReserved } from "./passes/strip-reserved";
+import { isWithinStructureBudget, textOnlyHtml } from "./structure-budget";
 import { unlazyMedia } from "./passes/unlazy-media";
 
 /**
@@ -41,13 +42,17 @@ type CompileOptions = { baseUrl?: string | null; generator?: string | null };
 
 /**
  * Runs the ingest passes (strip-reserved through sanitize) and returns the sanitized tree, which
- * is also the input to the lowering pass.
+ * is also the input to the lowering pass. A body nested or populated beyond `structure-budget`
+ * is compiled as its text, so a hostile shape costs a bounded amount of work and never throws.
  */
 export function compileArticleRoot(
   raw: string,
   options?: CompileOptions,
 ): { root: HTMLElement; context: CompileContext } {
-  const { root, context } = parseArticleFragment(raw, options);
+  const { root, context } = parseArticleFragment(
+    isWithinStructureBudget(raw) ? raw : textOnlyHtml(raw),
+    options,
+  );
   for (const pass of ARTICLE_COMPILE_PASSES) {
     pass.run(root, context);
   }

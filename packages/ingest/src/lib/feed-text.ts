@@ -1,4 +1,14 @@
 import { decodeHtmlEntities } from "./html-entities";
+import {
+  elementInner,
+  firstImageSrc,
+  htmlLooksLikeWrappedMarkdown,
+  looksLikeHtml,
+  looksLikeMarkdown,
+  metaContent,
+  removeScriptsAndStyles,
+  stripTagMarkup,
+} from "./text-scan";
 import { compileArticleHtml } from "../document";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import type { ParsedFeedItem } from "../services/feed/types";
@@ -16,10 +26,7 @@ function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
 
 function stripTags(html: string): string {
   return decodeHtmlEntities(
-    html
-      .replace(/<script[\s\S]*?<\/script>/gi, " ")
-      .replace(/<style[\s\S]*?<\/style>/gi, " ")
-      .replace(/<[^>]*>/g, " ")
+    stripTagMarkup(removeScriptsAndStyles(html))
       .replace(/&nbsp;/gi, " ")
       .replace(/&amp;/gi, "&")
       .replace(/\s+/g, " ")
@@ -33,55 +40,11 @@ function sanitizeStoredContent(value: string | null, baseUrl: string | null): st
   }
   const sanitized = looksLikeHtml(value)
     ? compileArticleHtml(value, { baseUrl }).html
-    : value
-        .replace(/<script[\s\S]*?<\/script>/gi, " ")
-        .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    : removeScriptsAndStyles(value)
         .replace(/\son\w+="[^"]*"/gi, "")
         .replace(/\son\w+='[^']*'/gi, "")
         .trim();
   return sanitized || null;
-}
-
-function looksLikeHtml(value: string | null): boolean {
-  return Boolean(value && /<[a-z][\s\S]*>/i.test(value));
-}
-
-function markdownSignalScore(value: string): number {
-  let score = 0;
-  if (/(^|\n)\s*```[\w-]*\n[\s\S]*?\n\s*```/m.test(value)) score += 7;
-  if (/(^|\n)\s{0,3}(?:[-*+]\s+|\d+[.)]\s+)/m.test(value)) score += 4;
-  if (/(^|\n)\s{0,3}>[^\n]+/m.test(value)) score += 3;
-  if (/(^|\n)\s{0,3}#{1,6}\s+\S/m.test(value)) score += 4;
-  if (/(^|\n)[^\n]+\n(?:=+|-{3,})\s*($|\n)/m.test(value)) score += 4;
-  if (/(^|\n)\s*\|.+\|\s*\n\s*\|[-:\s|]+\|/m.test(value)) score += 6;
-  if (/\[[^\]]+\]\(([^)\s]+)(?:\s+"[^"]*")?\)/m.test(value)) score += 4;
-  if (/!\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)/m.test(value)) score += 4;
-  if (/`[^`\n]{1,140}`/.test(value)) score += 3;
-  if (/(^|\n)\s*[-*_]{3,}\s*($|\n)/m.test(value)) score += 2;
-  return score;
-}
-
-function looksLikeMarkdown(value: string | null): boolean {
-  if (!value) {
-    return false;
-  }
-  const score = markdownSignalScore(value);
-  const hasHeading = /(^|\n)\s{0,3}#{1,6}\s+\S/m.test(value);
-  const hasSetextHeading = /(^|\n)[^\n]+\n(?:=+|-{3,})\s*($|\n)/m.test(value);
-  const hasList = /(^|\n)\s{0,3}(?:[-*+]\s+|\d+[.)]\s+)/m.test(value);
-  const hasRule = /(^|\n)\s*[-*_]{3,}\s*($|\n)/m.test(value);
-
-  if (score >= 6) {
-    return true;
-  }
-  if (value.length > 1800 && score >= 4 && (hasHeading || hasSetextHeading || hasList || hasRule)) {
-    return true;
-  }
-  return score >= 3 && value.length <= 2600;
-}
-
-function htmlLooksLikeWrappedMarkdown(value: string): boolean {
-  return !/<(h[1-6]|ul|ol|li|blockquote|pre|table|thead|tbody|tr|th|td|hr|code)\b/i.test(value);
 }
 
 /**
@@ -201,20 +164,16 @@ function buildStoredFeedBody(
   };
 }
 
-function firstMatch(input: string, pattern: RegExp): string | null {
-  const match = input.match(pattern);
-  return match?.[1]?.trim() || null;
-}
-
 function extractImageUrl(html: string | null, baseUrl: string): string | null {
   if (!html) {
     return null;
   }
+  const trimmed = (value: string | null) => value?.trim() || null;
   return (
     absoluteUrl(
-      firstMatch(html, /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i) ??
-        firstMatch(html, /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i) ??
-        firstMatch(html, /<img[^>]+src=["']([^"']+)["']/i),
+      trimmed(metaContent(html, "property", "og:image")) ??
+        trimmed(metaContent(html, "name", "twitter:image")) ??
+        trimmed(firstImageSrc(html)),
       baseUrl,
     ) ?? null
   );
@@ -222,9 +181,9 @@ function extractImageUrl(html: string | null, baseUrl: string): string | null {
 
 function extractReadableTextFromHtml(html: string): string | null {
   const articleSection =
-    firstMatch(html, /<article[^>]*>([\s\S]*?)<\/article>/i) ??
-    firstMatch(html, /<main[^>]*>([\s\S]*?)<\/main>/i) ??
-    firstMatch(html, /<body[^>]*>([\s\S]*?)<\/body>/i) ??
+    elementInner(html, "article")?.trim() ||
+    elementInner(html, "main")?.trim() ||
+    elementInner(html, "body")?.trim() ||
     html;
   const text = stripTags(articleSection);
   return text || null;

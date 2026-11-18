@@ -30,6 +30,7 @@ function slugify(value: string): string {
 function rewriteAnchors(root: HTMLElement): Map<string, string> {
   const anchors = new Map<string, string>();
   const used = new Set<string>();
+  const nextSuffix = new Map<string, number>();
 
   for (const element of Array.from(root.querySelectorAll("[id], a[name]"))) {
     const original = element.getAttribute("id") ?? element.getAttribute("name") ?? "";
@@ -44,10 +45,15 @@ function rewriteAnchors(root: HTMLElement): Map<string, string> {
       ? original.slice(ANCHOR_PREFIX.length)
       : original;
     const base = `${ANCHOR_PREFIX}${slugify(unprefixed) || "anchor"}`;
+    // Resume each base where its last collision stopped, so many ids that slug alike cost one
+    // probe each instead of rescanning every earlier suffix.
     let anchor = base;
-    for (let suffix = 2; used.has(anchor); suffix += 1) {
+    let suffix = nextSuffix.get(base) ?? 2;
+    while (used.has(anchor)) {
       anchor = `${base}-${suffix}`;
+      suffix += 1;
     }
+    nextSuffix.set(base, suffix);
     used.add(anchor);
     anchors.set(original, anchor);
     element.setAttribute("id", anchor);

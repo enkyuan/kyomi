@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { htmlToText, sanitizeArticleHtml } from "@modules/articles/reader/content";
+import { expectLinear, hostileInputs } from "@api-tests/support/hostile-text";
 
 describe("articles.sanitize.content", () => {
   test("preserves headings, lists, code blocks, tables, and strips scripts", () => {
@@ -408,5 +409,27 @@ describe("articles.sanitize.content – policy v2", () => {
 
     expect(sanitized).toContain('<aside class="note"><p>An aside.</p></aside>');
     expect(sanitized).toContain("<footer>Author, <cite>Book</cite></footer>");
+  });
+});
+
+describe("articles.sanitize.content – hostile metadata", () => {
+  for (const [name, input] of Object.entries(hostileInputs)) {
+    test(`normalises hostile title, byline and excerpt in linear time: ${name}`, () => {
+      expectLinear(() =>
+        sanitizeArticleHtml("<h1>Real title</h1><p>Body</p>", {
+          title: `Real title ${input}`,
+          byline: input,
+          excerpt: input,
+        }),
+      );
+    });
+  }
+
+  test("still strips a leading title heading that repeats the title", () => {
+    const html = sanitizeArticleHtml("<h1>Real <b>title</b></h1><p>Body text</p>", {
+      title: "Real <i>title</i>",
+    });
+    expect(html).not.toContain("<h1>");
+    expect(html).toContain("Body text");
   });
 });

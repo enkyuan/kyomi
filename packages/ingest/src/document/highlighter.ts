@@ -7,12 +7,19 @@ export const HIGHLIGHT_ENGINE = "shiki@4.5.0:github-light/github-dark";
 export const MAX_HIGHLIGHT_CHARS = 30_000;
 export const MAX_HIGHLIGHT_LINES = 1_500;
 /**
- * Tokenizing one long line is quadratic when it is a single string or comment (a 20,000 character
- * line took over 30 seconds), and Shiki's per-line time limit then truncates it by wall clock,
- * which makes the stored tokens depend on machine load. Minified or data-like lines are not worth
- * colouring, so the whole block stays plain.
+ * Tokenizing is quadratic in line length for a hostile line (an unterminated template literal of
+ * `${a ` repeated cost about 50 microseconds per character at 300 characters and 100 at 500, and a
+ * 20,000 character line took over 30 seconds), and Shiki's per-line time limit then truncates it
+ * by wall clock, which makes the stored tokens depend on machine load. Minified or data-like lines
+ * are not worth colouring, so the whole block stays plain. Real code lines are far shorter.
  */
-export const MAX_HIGHLIGHT_LINE_CHARS = 1_000;
+export const MAX_HIGHLIGHT_LINE_CHARS = 300;
+/**
+ * Characters a whole document may spend on highlighting. The per-block caps above still allow many
+ * blocks, so without this one article could hold the CPU for minutes. A counter, not a timer, so
+ * the stored tokens never depend on machine load.
+ */
+export const MAX_DOCUMENT_HIGHLIGHT_CHARS = 30_000;
 
 type Style = { light?: string; dark?: string; fontStyle?: number };
 export type CodeHighlight = {

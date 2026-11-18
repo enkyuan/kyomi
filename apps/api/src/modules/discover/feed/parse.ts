@@ -1,5 +1,12 @@
 import { XMLParser } from "fast-xml-parser";
 import { decodeHtmlEntities } from "@kyomi/ingest";
+import {
+  extractHeadHtml,
+  elementInner,
+  metaContent,
+  openTags,
+  stripTagMarkup,
+} from "@kyomi/ingest/lib/text-scan";
 
 export type ParsedFeedMetadata = {
   title: string;
@@ -9,12 +16,7 @@ export type ParsedFeedMetadata = {
 };
 
 function stripTags(html: string): string {
-  return decodeHtmlEntities(
-    html
-      .replace(/<[^>]*>/g, " ")
-      .replace(/\s+/g, " ")
-      .trim(),
-  );
+  return decodeHtmlEntities(stripTagMarkup(html).replace(/\s+/g, " ").trim());
 }
 
 function xmlText(value: unknown): string {
@@ -219,52 +221,30 @@ export function parseFeedMetadata(body: string, resolvedUrl: string): ParsedFeed
 
 const ICON_REL_TOKEN = "icon";
 
-function extractHeadHtml(body: string): string {
-  const headMatch = body.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
-  return headMatch ? headMatch[1] : body.slice(0, 32768);
-}
-
-function firstMetaContent(headHtml: string, patterns: RegExp[]): string | null {
-  for (const pattern of patterns) {
-    const match = headHtml.match(pattern);
-    if (match?.[1]) {
-      return decodeHtmlEntities(match[1]).trim();
-    }
-  }
-  return null;
+function firstMetaContent(
+  headHtml: string,
+  attribute: "property" | "name",
+  key: string,
+): string | null {
+  const content = metaContent(headHtml, attribute, key);
+  return content ? decodeHtmlEntities(content).trim() : null;
 }
 
 function parseHtmlTitle(headHtml: string): string {
-  const titleMatch = headHtml.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
-  const documentTitle = titleMatch ? decodeHtmlEntities(titleMatch[1]).trim() : "Untitled";
+  const title = elementInner(headHtml, "title");
+  const documentTitle = title === null ? "Untitled" : decodeHtmlEntities(title).trim();
   if (documentTitle !== "Untitled") {
     return documentTitle;
   }
 
-  return (
-    firstMetaContent(headHtml, [
-      /<meta[^>]+property\s*=\s*["']og:title["'][^>]*content\s*=\s*["']([^"']+)["']/i,
-      /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+property\s*=\s*["']og:title["']/i,
-    ]) ?? "Untitled"
-  );
+  return firstMetaContent(headHtml, "property", "og:title") ?? "Untitled";
 }
 
 function parseHtmlDescription(headHtml: string): string {
-  const description =
-    firstMetaContent(headHtml, [
-      /<meta[^>]+name\s*=\s*["']description["'][^>]*content\s*=\s*["']([^"']+)["']/i,
-      /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+name\s*=\s*["']description["']/i,
-    ]) ?? "";
-
-  if (description) {
-    return description;
-  }
-
   return (
-    firstMetaContent(headHtml, [
-      /<meta[^>]+property\s*=\s*["']og:description["'][^>]*content\s*=\s*["']([^"']+)["']/i,
-      /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+property\s*=\s*["']og:description["']/i,
-    ]) ?? "Follow recent articles from this feed"
+    firstMetaContent(headHtml, "name", "description") ||
+    (firstMetaContent(headHtml, "property", "og:description") ??
+      "Follow recent articles from this feed")
   );
 }
 
@@ -287,10 +267,7 @@ function linkTagHasIconRel(tag: string): boolean {
 }
 
 function parseHtmlIconUrl(headHtml: string, resolvedUrl: string): string | null {
-  const linkRegex = /<link[^>]*>/gi;
-  let match: RegExpExecArray | null;
-  while ((match = linkRegex.exec(headHtml)) !== null) {
-    const tag = match[0];
+  for (const tag of openTags(headHtml, "link")) {
     if (!linkTagHasIconRel(tag)) {
       continue;
     }

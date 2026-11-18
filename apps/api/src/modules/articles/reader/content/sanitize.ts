@@ -6,6 +6,7 @@ import {
   stripReservedArticleMarkup,
 } from "@kyomi/reader/sanitization";
 import { compileArticleHtml, type CompileDiagnostics } from "@kyomi/ingest/document";
+import { stripTagMarkup } from "@kyomi/ingest/lib/text-scan";
 import { JSDOM } from "jsdom";
 
 export { ARTICLE_HTML_SANITIZER_VERSION };
@@ -130,8 +131,7 @@ function normalizeMetadataText(value: string | null | undefined): string {
   if (!value) {
     return "";
   }
-  return value
-    .replace(/<[^>]+>/g, " ")
+  return stripTagMarkup(value)
     .replace(/&[a-z0-9#]+;/gi, " ")
     .replace(/[^\p{L}\p{N}\s]+/gu, " ")
     .replace(/\s+/g, " ")

@@ -1,17 +1,19 @@
 import type { DocumentPass } from "../document-draft";
 import { classifyCode, collectCodeEntries, priorFrom } from "../code-classify";
 import { resolveLanguage } from "../code-language";
-import { highlightCode } from "../highlighter";
+import { highlightCode, MAX_DOCUMENT_HIGHLIGHT_CHARS } from "../highlighter";
 
 /**
  * Pass 13. Resolves each code block's language (explicit hint, then filename, then shebang or
  * modeline) and stores dual-theme Shiki tokens so clients ship no highlighter. A block with no
  * signal at all gets the classifier's language (colour and label together) when it is confident,
  * and is plain text otherwise.
- * The decision itself lives in `classifyCode`.
+ * The decision itself lives in `classifyCode`. Highlighting spends from one per-document budget
+ * (`MAX_DOCUMENT_HIGHLIGHT_CHARS`); a block that no longer fits stays plain.
  */
 export const code: DocumentPass = async (draft) => {
   const entries = collectCodeEntries(draft.blocks);
+  let highlightBudget = MAX_DOCUMENT_HIGHLIGHT_CHARS;
   // What the author declared for the article's other blocks says what the undeclared ones are.
   const declared = entries.map(({ block }) =>
     resolveLanguage(draft.hints.get(block)?.codeLanguage, block.filename, block.value),
@@ -42,7 +44,8 @@ export const code: DocumentPass = async (draft) => {
     block.language = named?.id ?? null;
     block.label = named?.label ?? "Plain text";
     delete block.highlight;
-    if (result.colour) {
+    if (result.colour && block.value.length <= highlightBudget) {
+      highlightBudget -= block.value.length;
       const highlight = await highlightCode(block.value, result.colour.id);
       if (highlight) {
         block.highlight = highlight;

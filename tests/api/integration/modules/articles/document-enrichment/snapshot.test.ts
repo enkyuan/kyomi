@@ -1,6 +1,8 @@
 import { describe, expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { parseSnapshot, snapshotRequest } from "@kyomi/ingest/enrichment";
+import { expectLinear, hostileInputs } from "@api-tests/support/hostile-text";
+import { htmlFragmentToText } from "../../../../../../packages/ingest/src/enrichment/snapshot";
 
 const fixture = (name: string) =>
   readFileSync(
@@ -94,5 +96,46 @@ describe("parseSnapshot", () => {
     expect(parseSnapshot("mastodon", "{}", FETCHED_AT)).toBeNull();
     expect(parseSnapshot("x", '{"html":"<div></div>","author_name":"A"}', FETCHED_AT)).toBeNull();
     expect(parseSnapshot("threads", "<html></html>", FETCHED_AT)).toBeNull();
+  });
+});
+
+describe("htmlFragmentToText", () => {
+  test("keeps paragraph and line breaks, drops other tags and decodes entities", () => {
+    expect(
+      htmlFragmentToText(
+        "<p>one</p><p class=x>two &amp; <a href=/x>link</a></p><p>three<br/>four</p>",
+      ),
+    ).toBe("one\n\ntwo & link\n\nthree\nfour");
+  });
+
+  for (const [name, input] of Object.entries(hostileInputs)) {
+    test(`stays linear on hostile markup: ${name}`, () => {
+      expectLinear(() => htmlFragmentToText(input));
+      expectLinear(() =>
+        parseSnapshot("x", JSON.stringify({ html: input, author_name: "a" }), FETCHED_AT),
+      );
+      expectLinear(() => parseSnapshot("threads", input, FETCHED_AT));
+    });
+  }
+
+  test("reads the first paragraph of an X oEmbed and the Open Graph tags of a page", () => {
+    const x = parseSnapshot(
+      "x",
+      JSON.stringify({
+        html: `<blockquote><P class="x">First &amp; only</P><p>second</p></blockquote>`,
+        author_name: "Carol",
+        author_url: "https://twitter.com/carol",
+      }),
+      FETCHED_AT,
+    );
+    expect(x?.text).toEqual([{ type: "text", value: "First & only" }]);
+
+    const page = parseSnapshot(
+      "threads",
+      `<header><meta property="og:title" content="Dee (@dee)"></header><META NAME="og:description" CONTENT="Hello"><metadata property="og:title" content="no">`,
+      FETCHED_AT,
+    );
+    expect(page?.author).toEqual({ name: "Dee", handle: "@dee" });
+    expect(page?.text).toEqual([{ type: "text", value: "Hello" }]);
   });
 });
