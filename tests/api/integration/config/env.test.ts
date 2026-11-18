@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   embeddingsWorkerUrlFromEnv,
   findMissingFeatureCredentials,
+  findWeakProductionSettings,
   httpsUrlFromEnv,
   loadEnv,
 } from "@config/env/runtime";
@@ -151,5 +152,56 @@ describe("timeout settings", () => {
     expect(() => loadEnv({ ...env, REDIS_CONNECT_TIMEOUT_MS: "0" })).toThrow(
       "Invalid environment variables",
     );
+  });
+});
+
+describe("production settings", () => {
+  const production = {
+    NODE_ENV: "production",
+    DATABASE_URL: "postgresql://postgres:postgres@127.0.0.1:5432/kyomi",
+    REDIS_URL: "redis://127.0.0.1:6379",
+    WEB_ORIGIN: "https://app.kyomi.example",
+    BETTER_AUTH_URL: "https://api.kyomi.example",
+    BETTER_AUTH_SECRET: "a".repeat(48),
+  };
+
+  test("accepts a complete production environment", () => {
+    expect(loadEnv(production)).toMatchObject({ NODE_ENV: "production", OPENAPI_ENABLED: false });
+  });
+
+  test("refuses a NODE_ENV that is set but not recognised, instead of running as development", () => {
+    for (const NODE_ENV of ["prod", "Production", "staging"]) {
+      expect(() => loadEnv({ ...production, NODE_ENV })).toThrow("NODE_ENV must be");
+    }
+    expect(loadEnv({ ...production, NODE_ENV: undefined })).toMatchObject({
+      NODE_ENV: "development",
+    });
+  });
+
+  test("refuses a short session secret, a missing base URL and a short admin secret", () => {
+    expect(() => loadEnv({ ...production, BETTER_AUTH_SECRET: "short" })).toThrow(
+      "Invalid environment variables",
+    );
+    expect(() => loadEnv({ ...production, BETTER_AUTH_URL: undefined })).toThrow(
+      "Invalid environment variables",
+    );
+    expect(() => loadEnv({ ...production, FEED_ADMIN_SHARED_SECRET: "admin" })).toThrow(
+      "Invalid environment variables",
+    );
+    expect(findWeakProductionSettings({ BETTER_AUTH_SECRET: "short" }).map((i) => i.key)).toEqual([
+      "BETTER_AUTH_SECRET",
+      "BETTER_AUTH_URL",
+    ]);
+  });
+
+  test("development and test keep their short secrets", () => {
+    expect(
+      loadEnv({
+        ...production,
+        NODE_ENV: "test",
+        BETTER_AUTH_SECRET: "test-secret",
+        BETTER_AUTH_URL: undefined,
+      }),
+    ).toMatchObject({ NODE_ENV: "test" });
   });
 });

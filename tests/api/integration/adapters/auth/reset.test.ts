@@ -4,7 +4,14 @@ import { createResetPasswordEmailBody, sendResetPasswordEmail } from "@adapters/
 import { scriptedHttpClient, type ScriptedRequest } from "@api-tests/support/http";
 import { recordingLogger, testConfig } from "@api-tests/support/layers";
 
+const PRODUCTION_BASE = {
+  // A production environment must name its base URL and sign with a real secret.
+  BETTER_AUTH_URL: "https://api.example.com",
+  BETTER_AUTH_SECRET: "production-test-secret-0123456789abcdef",
+};
+
 const PRODUCTION_SENDER = {
+  ...PRODUCTION_BASE,
   NODE_ENV: "production",
   RESEND_API_KEY: "re_test",
   AUTH_EMAIL_FROM: "Kyomi <auth@example.com>",
@@ -80,7 +87,10 @@ describe("reset password email", () => {
   });
 
   test("reports an unconfigured production sender without making a request", async () => {
-    const { requests, layer } = delivery({ NODE_ENV: "production" }, () => new Error("unexpected"));
+    const { requests, layer } = delivery(
+      { ...PRODUCTION_BASE, NODE_ENV: "production" },
+      () => new Error("unexpected"),
+    );
 
     const outcome = await Effect.runPromise(
       sendResetPasswordEmail(message).pipe(Effect.provide(layer)),

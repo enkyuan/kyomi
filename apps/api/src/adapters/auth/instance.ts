@@ -1,6 +1,5 @@
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { emailOTP } from "better-auth/plugins";
 import {
   betterAuthSchema,
   resolveBetterAuthBaseUrl,
@@ -10,14 +9,16 @@ import {
 import type { Database } from "@adapters/db/service";
 import type { Env } from "@config/env/runtime";
 import { resolveGoogleSocialProvider } from "./capabilities";
+import { emailOtpPlugin } from "./email-otp";
 import { resolveLocationFromAuthContext } from "./location";
 import { oauth } from "./oauth";
+import type { EmailOTPMessage } from "./otp";
 
 type AuthOptions = {
   config: Env;
   db: Database;
   /** Hand a sign-in code to the mailer. Must not wait for delivery. */
-  sendOtp: (message: { to: string; otp: string }) => void;
+  sendOtp: (message: EmailOTPMessage) => void;
 };
 
 /** The Better Auth instance for this configuration. Pure construction: no I/O until it serves. */
@@ -35,6 +36,7 @@ export function createAuth({ config, db, sendOtp }: AuthOptions) {
       baseURL,
       trustedOrigins: config.BETTER_AUTH_TRUSTED_ORIGINS,
       additionalOrigins: [config.WEB_ORIGIN],
+      includeLocalhost: config.NODE_ENV !== "production",
     }),
     advanced: {
       useSecureCookies: shouldUseSecureCookies(baseURL),
@@ -59,11 +61,7 @@ export function createAuth({ config, db, sendOtp }: AuthOptions) {
       enabled: false,
     },
     plugins: [
-      emailOTP({
-        sendVerificationOTP: async ({ email, otp }) => {
-          sendOtp({ to: email, otp });
-        },
-      }),
+      emailOtpPlugin(sendOtp),
       oauth({
         clientId: "kyomi-mobile",
         redirectURIs: ["kyomi://oauth/callback"],

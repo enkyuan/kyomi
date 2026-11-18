@@ -107,18 +107,24 @@ describe("registerUserRoutes", () => {
     expect(await response.json()).toEqual({ items: [row] });
   });
 
-  test("POST /users/profile/email rejects an invalid address with USER_EMAIL_INVALID", async () => {
-    const app = appWith({});
+  test("an address cannot be set directly: only the code-verified auth flow changes it", async () => {
+    let updates = 0;
+    const app = appWith({
+      update: () => {
+        updates += 1;
+        return { set: () => ({ where: () => ({ returning: () => Promise.resolve([]) }) }) };
+      },
+    });
 
     const response = await app.handle(
       new Request("http://localhost/api/v1/users/profile/email", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ email: "nope" }),
+        body: JSON.stringify({ email: "someone.else@example.com" }),
       }),
     );
 
-    expect(response.status).toBe(400);
-    expect(await response.json()).toMatchObject({ error: { code: "USER_EMAIL_INVALID" } });
+    expect(response.status).toBe(404);
+    expect(updates).toBe(0);
   });
 });

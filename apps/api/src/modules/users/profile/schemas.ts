@@ -9,7 +9,3 @@ export const userProfileResponse = t.Object({
   createdAt: t.String(),
   updatedAt: t.String(),
 });
-
-export const updateEmailBody = t.Object({
-  email: t.String(),
-});

@@ -1,5 +1,4 @@
 import { Effect } from "effect";
-import { enqueueEnrichmentForStoredDocument } from "@modules/articles/document/enrich";
 import {
   articleClips,
   articleViewEvents,
@@ -9,8 +8,7 @@ import {
 } from "@kyomi/db";
 import { and, eq, sql } from "drizzle-orm";
 import { Db } from "@adapters/db/service";
-import { BadRequest } from "@shared/effect/errors";
-import { checkContentFieldBudget } from "@shared/http/budget";
+import { BadRequest, Forbidden } from "@shared/effect/errors";
 import { currentDate } from "@shared/effect/clock";
 import { articleNotFound } from "../errors";
 import {
@@ -19,11 +17,19 @@ import {
   updateArticleClipForUser,
 } from "./clips/operations";
 import { hasAnyOwn, pickOwn, savedAtAfter } from "./fields";
-import { compileClientHtml } from "./html";
 import type { ArticleUpdateBody } from "../types";
 
-const FEED_STATE_KEYS = ["isRead", "isSaved", "isHidden"] as const;
-const FEED_CONTENT_KEYS = [
+/**
+ * What a feed item accepts. `feed_items` rows are shared by every subscriber, so a user may only
+ * change their own read, saved and hidden state; the stored body is written by ingestion alone.
+ */
+const FEED_STATE_KEYS = [
+  "isRead",
+  "isSaved",
+  "isHidden",
+] as const satisfies readonly (keyof ArticleUpdateBody)[];
+/** Body and extraction fields a clip owner may set on their own clip, never on a feed item. */
+const CONTENT_KEYS = [
   "contentHtml",
   "contentText",
   "contentMarkdown",
@@ -32,10 +38,6 @@ const FEED_CONTENT_KEYS = [
   "extractionErrorCode",
   "extractionErrorMessage",
 ] as const;
-const FEED_UPDATE_KEYS = [
-  ...FEED_STATE_KEYS,
-  ...FEED_CONTENT_KEYS,
-] as const satisfies readonly (keyof ArticleUpdateBody)[];
 
 const getFeedArticleOrFail = Effect.fn("articles.update.find_feed_item")(function* (
   articleId: string,
@@ -43,61 +45,12 @@ const getFeedArticleOrFail = Effect.fn("articles.update.find_feed_item")(functio
   const db = yield* Db;
   const [article] = yield* db.use("articles.find_feed_item", (client) =>
     client
-      .select({
-        id: feedItems.id,
-        feedId: feedItems.feedId,
-        link: feedItems.link,
-        title: feedItems.title,
-      })
+      .select({ id: feedItems.id, feedId: feedItems.feedId })
       .from(feedItems)
       .where(eq(feedItems.id, articleId))
       .limit(1),
   );
   return article ?? (yield* articleNotFound());
-});
-
-/** Replaces the stored body fields the update names; client HTML is compiled and re-enriched. */
-const updateFeedContent = Effect.fn("articles.update.feed_content")(function* (
-  articleId: string,
-  article: { link: string; title: string },
-  body: ArticleUpdateBody,
-  now: Date,
-) {
-  const db = yield* Db;
-  const html = Object.hasOwn(body, "contentHtml")
-    ? yield* compileClientHtml(body.contentHtml, { baseUrl: article.link, title: article.title })
-    : null;
-  yield* db.use("articles.update.feed_content", (client) =>
-    client
-      .update(feedItems)
-      .set({
-        ...(html && {
-          contentHtml: html.contentHtml,
-          contentRaw: html.contentRaw,
-          contentSanitizerVersion: html.contentSanitizerVersion,
-          ...html.documentColumns,
-        }),
-        contentText: Object.hasOwn(body, "contentText") ? body.contentText : undefined,
-        contentMarkdown: Object.hasOwn(body, "contentMarkdown") ? body.contentMarkdown : undefined,
-        contentStatus: Object.hasOwn(body, "contentStatus") ? body.contentStatus : undefined,
-        contentSource: Object.hasOwn(body, "contentSource") ? body.contentSource : undefined,
-        extractionErrorCode: Object.hasOwn(body, "extractionErrorCode")
-          ? body.extractionErrorCode
-          : undefined,
-        extractionErrorMessage: Object.hasOwn(body, "extractionErrorMessage")
-          ? body.extractionErrorMessage
-          : undefined,
-        updatedAt: now,
-      })
-      .where(eq(feedItems.id, articleId)),
-  );
-  if (html) {
-    yield* enqueueEnrichmentForStoredDocument({
-      table: "feed_items",
-      id: articleId,
-      body: "original",
-    });
-  }
 });
 
 /** Merges the read, saved and hidden flags the update names over the user's stored state. */
@@ -155,28 +108,15 @@ export const updateArticleForUser = Effect.fn("articles.update.feed")(function* 
   articleId: string,
   body: ArticleUpdateBody,
 ) {
-  const hasContentFields = hasAnyOwn(body, FEED_CONTENT_KEYS);
-  const hasStateFields = hasAnyOwn(body, FEED_STATE_KEYS);
-  if (!hasStateFields && !hasContentFields) {
+  if (!hasAnyOwn(body, FEED_STATE_KEYS)) {
     return yield* new BadRequest({
       message: "No updatable fields provided",
       code: "EMPTY_UPDATE",
     });
   }
-  yield* checkContentFieldBudget([
-    { name: "contentHtml", value: body.contentHtml },
-    { name: "contentText", value: body.contentText },
-    { name: "contentMarkdown", value: body.contentMarkdown },
-  ]);
 
-  const article = yield* getFeedArticleOrFail(articleId);
-  const now = yield* currentDate;
-  if (hasContentFields) {
-    yield* updateFeedContent(articleId, article, body, now);
-  }
-  if (hasStateFields) {
-    yield* updateFeedState(userId, articleId, body, now);
-  }
+  yield* getFeedArticleOrFail(articleId);
+  yield* updateFeedState(userId, articleId, body, yield* currentDate);
 });
 
 /**
@@ -334,10 +274,16 @@ export const updateArticleOrClipForUser = Effect.fn("articles.update")(function*
   );
 
   if (!clip) {
+    if (hasAnyOwn(raw, CONTENT_KEYS)) {
+      return yield* new Forbidden({
+        message: "Only a clip's owner can change its content",
+        code: "ARTICLE_CONTENT_READ_ONLY",
+      });
+    }
     return yield* updateArticleForUser(
       userId,
       articleId,
-      pickOwn<ArticleUpdateBody>(raw, FEED_UPDATE_KEYS),
+      pickOwn<ArticleUpdateBody>(raw, FEED_STATE_KEYS),
     );
   }
   if (Object.hasOwn(raw, "isHidden")) {

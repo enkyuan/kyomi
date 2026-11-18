@@ -100,18 +100,58 @@ export function findMissingFeatureCredentials(
   return missing;
 }
 
+const MIN_PRODUCTION_SECRET_LENGTH = 32;
+
+/**
+ * Settings that must be real values in production. A development server may run on a short
+ * secret and `http://localhost`; a production one signs sessions with the secret, builds cookie and
+ * callback URLs from the base URL, and lets the feed admin secret open the admin routes to any
+ * signed-in user who guesses it.
+ */
+export function findWeakProductionSettings(value: {
+  BETTER_AUTH_SECRET: string;
+  BETTER_AUTH_URL?: string | undefined;
+  FEED_ADMIN_SHARED_SECRET?: string | undefined;
+}): Array<{ key: string; message: string }> {
+  const issues: Array<{ key: string; message: string }> = [];
+  if (value.BETTER_AUTH_SECRET.length < MIN_PRODUCTION_SECRET_LENGTH) {
+    issues.push({
+      key: "BETTER_AUTH_SECRET",
+      message: `BETTER_AUTH_SECRET must be at least ${MIN_PRODUCTION_SECRET_LENGTH} characters in production`,
+    });
+  }
+  if (!value.BETTER_AUTH_URL) {
+    issues.push({
+      key: "BETTER_AUTH_URL",
+      message: "BETTER_AUTH_URL is required in production (it would default to http://localhost)",
+    });
+  }
+  if (
+    value.FEED_ADMIN_SHARED_SECRET !== undefined &&
+    value.FEED_ADMIN_SHARED_SECRET.length < MIN_PRODUCTION_SECRET_LENGTH
+  ) {
+    issues.push({
+      key: "FEED_ADMIN_SHARED_SECRET",
+      message: `FEED_ADMIN_SHARED_SECRET must be at least ${MIN_PRODUCTION_SECRET_LENGTH} characters in production`,
+    });
+  }
+  return issues;
+}
+
 /**
  * Validate a raw environment record against the API schema. Throws `Invalid environment variables`
  * on failure, so callers fail fast. `AppConfig.layer` calls this per runtime; the module-level
  * `env` below stays for code that has not moved to the Effect runtime yet.
  */
 export function loadEnv(source: RawEnv = process.env) {
-  const nodeEnv =
-    source.NODE_ENV === "development" ||
-    source.NODE_ENV === "production" ||
-    source.NODE_ENV === "test"
-      ? source.NODE_ENV
-      : "development";
+  const declaredNodeEnv = source.NODE_ENV?.trim();
+  // An unset NODE_ENV is development, but a value that is set and not one of the three (`prod`,
+  // `Production`) is a mistake that would otherwise start a production server with development
+  // defaults: OpenAPI docs on, localhost origins, the global refresh on.
+  if (declaredNodeEnv && !["development", "production", "test"].includes(declaredNodeEnv)) {
+    throw new Error(`NODE_ENV must be development, production or test (got "${declaredNodeEnv}")`);
+  }
+  const nodeEnv = (declaredNodeEnv || "development") as "development" | "production" | "test";
 
   const skipEnvValidation = source.SKIP_ENV_VALIDATION === "true";
   if (skipEnvValidation && nodeEnv === "production") {
@@ -266,6 +306,15 @@ export function loadEnv(source: RawEnv = process.env) {
             message:
               "DATABASE_QUERY_TIMEOUT_MS must be above DATABASE_STATEMENT_TIMEOUT_MS so the server cancels a slow statement before the client gives up",
           });
+        }
+        if (value.NODE_ENV === "production") {
+          for (const issue of findWeakProductionSettings(value)) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              path: [issue.key],
+              message: issue.message,
+            });
+          }
         }
         for (const { flag, key } of findMissingFeatureCredentials(value)) {
           ctx.addIssue({

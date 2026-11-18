@@ -5,8 +5,8 @@ import { runEffect } from "@shared/http/effect/bridge";
 import { v1EffectContext } from "@shared/http/v1/context";
 import { listMemberships } from "./organizations/memberships";
 import { userMembershipsResponse } from "./organizations/schemas";
-import { getUserProfile, updateUserEmail } from "./profile/account";
-import { updateEmailBody, userProfileResponse } from "./profile/schemas";
+import { getUserProfile } from "./profile/account";
+import { userProfileResponse } from "./profile/schemas";
 import { getUserPreferences, updateUserPreferences } from "./preferences/settings";
 import { updateUserPreferencesBody, userPreferencesResponse } from "./preferences/schemas";
 import type { UpdateUserPreferencesDto } from "./preferences/types";
@@ -51,16 +51,5 @@ export function registerUserRoutes(app: Elysia, runtime: UserRuntime) {
         return { items };
       },
       { response: { 200: userMembershipsResponse } },
-    )
-    .post(
-      "/users/profile/email",
-      (context) => {
-        const { body, request, requestId, userId } = v1EffectContext<{ email: string }>(context);
-        return runEffect({ runtime, request, requestId, userId }, updateUserEmail(body.email));
-      },
-      {
-        body: updateEmailBody,
-        response: { 200: userProfileResponse },
-      },
     );
 }
