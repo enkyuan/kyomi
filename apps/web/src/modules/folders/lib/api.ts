@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders, resolveApiUrl } from "@lib/api";
+import { parseUuid } from "@lib/ids";
 
 export type Folder = {
   id: string;
@@ -34,7 +35,10 @@ export const createFolder = createServerFn({ method: "POST" })
   });
 
 export const updateFolder = createServerFn({ method: "POST" })
-  .validator((input: { folderId: string; name?: string; isPinned?: boolean }) => input)
+  .validator((input: { folderId: string; name?: string; isPinned?: boolean }) => ({
+    ...input,
+    folderId: parseUuid(input.folderId),
+  }))
   .handler(async ({ data }): Promise<Folder> => {
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");
@@ -55,7 +59,7 @@ export const updateFolder = createServerFn({ method: "POST" })
   });
 
 export const deleteFolder = createServerFn({ method: "POST" })
-  .validator((input: { folderId: string }) => input)
+  .validator((input: { folderId: string }) => ({ folderId: parseUuid(input.folderId) }))
   .handler(async ({ data }): Promise<void> => {
     const headers = buildForwardHeaders(getRequestHeaders());
 
@@ -72,7 +76,10 @@ export const deleteFolder = createServerFn({ method: "POST" })
   });
 
 export const moveFeedsToFolder = createServerFn({ method: "POST" })
-  .validator((input: { feedIds: string[]; folderId: string }) => input)
+  .validator((input: { feedIds: string[]; folderId: string }) => ({
+    feedIds: input.feedIds.map(parseUuid),
+    folderId: parseUuid(input.folderId),
+  }))
   .handler(async ({ data }): Promise<{ updatedCount: number }> => {
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");

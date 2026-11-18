@@ -66,7 +66,8 @@ export async function forwardRequestToApi(request: Request) {
       redirect: "manual",
     });
   } catch (error) {
-    logApiNetworkError(method, `${url.pathname}${url.search}`, error);
+    // The query string is not logged: an OAuth callback's carries its one-time code and state.
+    logApiNetworkError(method, url.pathname, error);
     throw new Error("Unable to reach the server.");
   }
 }
@@ -101,7 +102,8 @@ export function logApiNetworkError(method: string, path: string, error: unknown)
 export async function apiJson<T>(path: string, init?: RequestInit) {
   const url = resolveApiUrl(path);
   const method = init?.method?.toUpperCase() ?? "GET";
-  const apiPath = `${url.pathname}${url.search}`;
+  // Paths only: query strings carry search text, feed URLs, and cursors.
+  const apiPath = url.pathname;
   let response: Response;
 
   try {

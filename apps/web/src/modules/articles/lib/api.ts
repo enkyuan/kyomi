@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders } from "@lib/api";
+import { parseUuid } from "@lib/ids";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@kyomi/reader/schemas";
 import type { ReadingProgressDto, ReadingProgressUpdateBody } from "@kyomi/reader/schemas/article";
 import {
@@ -122,6 +123,19 @@ type GetInboxItemsInput = {
   sort?: InboxSort;
 };
 
+/**
+ * Every server function that reaches an article path takes the id from the client, so each rejects
+ * anything but a UUID before a request is built, and the path encodes the id as well.
+ */
+function parseItemInput<T extends { itemId: string }>(input: T): T {
+  return { ...input, itemId: parseUuid(input.itemId) };
+}
+
+function articlePath(itemId: string, suffix?: string) {
+  const path = `/api/v1/articles/${encodeURIComponent(itemId)}`;
+  return suffix ? `${path}/${suffix}` : path;
+}
+
 function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
   return {
     id: item.id,
@@ -218,7 +232,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
   });
 
 export const getInboxItemDetail = createServerFn({ method: "GET" })
-  .validator((input: { itemId: string }) => input)
+  .validator(parseItemInput)
   .handler(async ({ data }): Promise<InboxDetailResponse> => {
     const [{ fetchValidatedJson, articleDetailSchema }, { READER_DOCUMENT_VERSION }] =
       await Promise.all([getInboxSchemaModule(), import("@kyomi/reader/document")]);
@@ -227,14 +241,14 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
     // document otherwise, and the HTML body is always populated alongside.
     forwarded.set("x-kyomi-document-version", String(READER_DOCUMENT_VERSION));
     const item = await fetchValidatedJson(articleDetailSchema, () =>
-      apiJson<ArticleDetailDto>(`/api/v1/articles/${data.itemId}`, { headers: forwarded }),
+      apiJson<ArticleDetailDto>(articlePath(data.itemId), { headers: forwarded }),
     );
 
     return { item };
   });
 
 export const updateInboxItemState = createServerFn({ method: "POST" })
-  .validator((input: UpdateInboxItemStateInput) => input)
+  .validator((input: UpdateInboxItemStateInput) => parseItemInput(input))
   .handler(async ({ data }): Promise<{ message: string }> => {
     const { fetchValidatedJson, messageResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
@@ -253,7 +267,7 @@ export const updateInboxItemState = createServerFn({ method: "POST" })
     }
 
     return fetchValidatedJson(messageResponseSchema, () =>
-      apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}`, {
+      apiJson<{ message: string }>(articlePath(data.itemId), {
         method: "PUT",
         headers: forwarded,
         body: JSON.stringify(body),
@@ -262,7 +276,7 @@ export const updateInboxItemState = createServerFn({ method: "POST" })
   });
 
 export const reportBrokenArticle = createServerFn({ method: "POST" })
-  .validator((input: ReportBrokenArticleInput) => input)
+  .validator((input: ReportBrokenArticleInput) => parseItemInput(input))
   .handler(async ({ data }): Promise<{ message: string }> => {
     const { fetchValidatedJson, messageResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
@@ -270,7 +284,7 @@ export const reportBrokenArticle = createServerFn({ method: "POST" })
     forwarded.set("content-type", "application/json");
 
     return fetchValidatedJson(messageResponseSchema, () =>
-      apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}/reports/broken`, {
+      apiJson<{ message: string }>(articlePath(data.itemId, "reports/broken"), {
         method: "POST",
         headers: forwarded,
         body: JSON.stringify({
@@ -282,24 +296,24 @@ export const reportBrokenArticle = createServerFn({ method: "POST" })
   });
 
 export const recordInboxItemView = createServerFn({ method: "POST" })
-  .validator((input: { itemId: string }) => input)
+  .validator(parseItemInput)
   .handler(async ({ data }): Promise<{ message: string }> => {
     const headers = getRequestHeaders();
-    return apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}/view`, {
+    return apiJson<{ message: string }>(articlePath(data.itemId, "view"), {
       method: "POST",
       headers: buildForwardHeaders(headers),
     });
   });
 
 export const extractInboxItemFullText = createServerFn({ method: "POST" })
-  .validator((input: { itemId: string }) => input)
+  .validator(parseItemInput)
   .handler(async ({ data }): Promise<ExtractFullTextResponseDto> => {
     const { fetchValidatedJson, extractFullTextResponseSchema } = await getInboxSchemaModule();
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
 
     return fetchValidatedJson(extractFullTextResponseSchema, () =>
-      apiJson<ExtractFullTextResponseDto>(`/api/v1/articles/${data.itemId}/extract-full-text`, {
+      apiJson<ExtractFullTextResponseDto>(articlePath(data.itemId, "extract-full-text"), {
         method: "POST",
         headers: forwarded,
       }),
@@ -343,7 +357,7 @@ export type SaveReadingProgressInput = {
  * server function's call-site `fetch` option so the request outlives the page.
  */
 export const saveReadingProgress = createServerFn({ method: "POST" })
-  .validator((input: SaveReadingProgressInput) => input)
+  .validator((input: SaveReadingProgressInput) => parseItemInput(input))
   .handler(async ({ data }): Promise<{ readingProgress: ReadingProgressDto }> => {
     const [{ fetchValidatedJson }, { readingProgressDtoSchema }] = await Promise.all([
       getInboxSchemaModule(),
@@ -354,7 +368,7 @@ export const saveReadingProgress = createServerFn({ method: "POST" })
 
     const readingProgress = await fetchValidatedJson(readingProgressDtoSchema, async () => {
       const response = await apiJson<{ readingProgress: unknown }>(
-        `/api/v1/articles/${data.itemId}/progress`,
+        articlePath(data.itemId, "progress"),
         {
           method: "PUT",
           headers: forwarded,
@@ -403,12 +417,12 @@ export const reportContinueReadingImpressions = createServerFn({ method: "POST" 
   });
 
 export const dismissContinueReading = createServerFn({ method: "POST" })
-  .validator((input: { itemId: string }) => input)
+  .validator(parseItemInput)
   .handler(async ({ data }): Promise<{ message: string }> => {
     const { fetchValidatedJson, messageResponseSchema } = await getInboxSchemaModule();
 
     return fetchValidatedJson(messageResponseSchema, () =>
-      apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}/continue-reading/dismiss`, {
+      apiJson<{ message: string }>(articlePath(data.itemId, "continue-reading/dismiss"), {
         method: "POST",
         headers: buildForwardHeaders(getRequestHeaders()),
       }),
