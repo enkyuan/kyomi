@@ -139,29 +139,15 @@ export function ExpandedFolderFeeds({
     cancelSelecting();
   };
 
-  const exportFeeds = (
-    feedsToExport: FollowedFeed[],
-    description: string | ((count: number) => string),
-  ) => {
+  const exportFeeds = (feedsToExport: FollowedFeed[]) => {
     if (feedsToExport.length === 0) {
       return;
     }
     downloadSelectedOpml(folder, feedsToExport);
-    toastManager.add({
-      title: "OPML exported",
-      description:
-        typeof description === "function" ? description(feedsToExport.length) : description,
-      type: "success",
-    });
+    toastManager.add({ title: "OPML exported", type: "success" });
   };
-  const exportFolderFeeds = () =>
-    exportFeeds(folderFeeds, (count) =>
-      count === 1 ? "1 source exported." : `${count} sources exported.`,
-    );
-  const exportSelectedFeeds = () =>
-    exportFeeds(selectedFeeds, (count) =>
-      count === 1 ? "1 selected source exported." : `${count} selected sources exported.`,
-    );
+  const exportFolderFeeds = () => exportFeeds(folderFeeds);
+  const exportSelectedFeeds = () => exportFeeds(selectedFeeds);
 
   if (isLoading) {
     return (

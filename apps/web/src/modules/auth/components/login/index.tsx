@@ -5,7 +5,7 @@ import { useForm } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
-import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
+import { logClientError } from "@kyomi/reader/lib/errors";
 import { prefetchInboxFlow } from "@modules/inbox/lib/navigation";
 import { useAuth } from "@integrations/better-auth/provider";
 import { Button } from "@kyomi/ui/components/button";
@@ -67,19 +67,16 @@ export function Login({ redirect }: { redirect?: string }) {
           error: (error) => {
             logClientError("auth.send_otp", error);
             return {
-              description: getUserSafeErrorMessage(error, "Could not send sign-in code"),
               title: "Error sending code",
               type: "error",
             };
           },
           loading: {
-            description: "Sending sign-in code to your email.",
             timeout: 0,
-            title: "Sending code…",
+            title: "Sending code",
             type: "loading",
           },
           success: {
-            description: "Check your email for the 6-digit code.",
             title: "Code sent",
             type: "success",
           },
@@ -109,14 +106,12 @@ export function Login({ redirect }: { redirect?: string }) {
         await Promise.all([router.invalidate(), prefetchInboxFlow(router, queryClient)]);
         await router.navigate({ href: returnTo });
         toastManager.add({
-          description: "Redirecting to your inbox.",
           title: "Logged in",
           type: "success",
         });
       } catch (error) {
         logClientError("auth.verify_otp", error);
         toastManager.add({
-          description: getUserSafeErrorMessage(error, "Invalid code"),
           title: "Verification failed",
           type: "error",
         });
@@ -143,19 +138,16 @@ export function Login({ redirect }: { redirect?: string }) {
           error: (error) => {
             logClientError("auth.resend_otp", error);
             return {
-              description: getUserSafeErrorMessage(error, "Could not resend code"),
               title: "Resend failed",
               type: "error",
             };
           },
           loading: {
-            description: "Sending a new code to your email.",
             timeout: 0,
-            title: "Resending code…",
+            title: "Resending code",
             type: "loading",
           },
           success: {
-            description: "Check your email for the new code.",
             title: "Code sent",
             type: "success",
           },

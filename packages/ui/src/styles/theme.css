@@ -137,6 +137,18 @@
   --bar-blur-dim: 1;
   /* Colour left in content behind a blurred bar, per overlapping strip; both themes. */
   --bar-blur-saturate: 0.5;
+  /* Frosted glass for transient layers (toasts): the popover colour, translucent, with a vertical
+     sheen from the top, a 1px edge that catches light along its top, and a soft lift. The blur
+     frosts what scrolls behind it; saturation stays near 1 so colour never reads as tint. */
+  --glass: color-mix(in srgb, var(--popover) 62%, transparent);
+  --glass-sheen: color-mix(in srgb, var(--color-white) 40%, transparent);
+  --glass-edge: var(--border);
+  --glass-highlight: color-mix(in srgb, var(--color-white) 70%, transparent);
+  --glass-blur: 24px;
+  --glass-saturate: 1.25;
+  --glass-shadow:
+    0 1px 2px color-mix(in srgb, var(--color-black) 6%, transparent),
+    0 8px 24px -8px color-mix(in srgb, var(--color-black) 18%, transparent);
   --input: --alpha(var(--color-black) / 10%);
   --border: --alpha(var(--color-black) / 8%);
   --ring: var(--color-neutral-400);
@@ -185,6 +197,13 @@
   --reader-ink: oklch(0.885 0.009 80);
   --reader-ink-strong: oklch(0.935 0.007 80);
   --bar-blur-dim: 0.84;
+  --glass: color-mix(in srgb, var(--popover) 56%, transparent);
+  --glass-sheen: color-mix(in srgb, var(--color-white) 8%, transparent);
+  --glass-edge: var(--border);
+  --glass-highlight: color-mix(in srgb, var(--color-white) 20%, transparent);
+  --glass-shadow:
+    0 1px 2px color-mix(in srgb, var(--color-black) 24%, transparent),
+    0 8px 24px -8px color-mix(in srgb, var(--color-black) 56%, transparent);
   --input: --alpha(var(--color-white) / 8%);
   --border: var(--input);
   --ring: var(--color-neutral-500);
@@ -200,4 +219,24 @@
   --scrollbar-thumb-hover: --alpha(var(--color-white) / 56%);
   --scrollbar-track: --alpha(var(--color-white) / 4%);
   --scrollbar-track-edge: --alpha(var(--color-white) / 8%);
+}
+
+/* Glass stays legible without its blur: reduced transparency asks for solid surfaces, and engines
+   without backdrop-filter would otherwise show unblurred content through a 60% tint. */
+@media (prefers-reduced-transparency: reduce) {
+  :root,
+  .dark {
+    --glass: var(--popover);
+    --glass-sheen: transparent;
+    --glass-blur: 0px;
+    --glass-saturate: 1;
+  }
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root,
+  .dark {
+    --glass: color-mix(in srgb, var(--popover) 94%, transparent);
+    --glass-sheen: transparent;
+  }
 }

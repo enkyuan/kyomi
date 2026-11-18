@@ -4,7 +4,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Suspense, useCallback, useReducer, type Dispatch } from "react";
 import { Transition, type TransitionDirection } from "@kyomi/ui/components/transition";
 import { toastManager } from "@kyomi/ui/components/toast";
-import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
+import { logClientError } from "@kyomi/reader/lib/errors";
 import { lazyNamed } from "@lib/lazy-named";
 import { usePlatform } from "@hooks/use-platform";
 import { useTransition } from "@modules/inbox/hooks/use-transition";
@@ -229,14 +229,12 @@ async function exportRecapOpml(dispatch: Dispatch<RecapCardAction>) {
     downloadOpmlExport(exported);
     toastManager.add({
       title: "OPML exported",
-      description: exported.filename,
       type: "success",
     });
   } catch (error) {
     logClientError("inbox.recap.opml.export", error);
     toastManager.add({
       title: "Unable to export OPML",
-      description: getUserSafeErrorMessage(error, "Try again in a moment."),
       type: "error",
     });
   } finally {

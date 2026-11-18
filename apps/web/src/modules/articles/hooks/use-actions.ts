@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/components/toast";
-import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
+import { logClientError } from "@kyomi/reader/lib/errors";
 import { useInboxItemStateMutation } from "@modules/articles/hooks/use-item-state";
 import type { AnchoredToolbarActionOptions, ArticleActionItem, ToolbarSide } from "../lib/types";
 
@@ -60,7 +60,6 @@ export function useActions({
           logClientError(saveErrorScope, error);
           toastManager.add({
             title: nextSaved ? "Unable to save article" : "Unable to update article",
-            description: getUserSafeErrorMessage(error, "Try again in a moment."),
             type: "error",
           });
         });
@@ -87,7 +86,6 @@ export function useActions({
             logClientError(saveErrorScope, error);
             toastManager.add({
               title: "Unable to hide article",
-              description: getUserSafeErrorMessage(error, "Try again in a moment."),
               type: "error",
             });
           },
@@ -110,7 +108,6 @@ export function useActions({
         }
         toastManager.add({
           title: "Unable to share article",
-          description: "Try again in a moment.",
           type: "error",
         });
       });
@@ -139,7 +136,6 @@ async function shareArticle(item: ArticleActionItem) {
 function showCopyFailedToast() {
   toastManager.add({
     title: "Unable to copy link",
-    description: "Copy it from the address bar instead.",
     type: "error",
   });
 }

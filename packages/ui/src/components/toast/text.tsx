@@ -16,8 +16,8 @@ interface ToastTextProps {
   maxMorphChars?: number;
 }
 
-// TextMorph lays its text out on one line, so anything that could wrap stays plain text and changes
-// without a morph instead of overflowing the toast.
+// TextMorph lays its text out on one line, so anything that could overflow stays plain text and
+// changes without a morph; the title's own truncation then ends it with an ellipsis.
 function ToastMorph({
   children,
   maxChars,
@@ -45,18 +45,5 @@ export function ToastTitle({
     <Toast.Title {...props}>
       <ToastMorph maxChars={maxMorphChars}>{toast.title}</ToastMorph>
     </Toast.Title>
-  ) : null;
-}
-
-/** The toast's description, morphing in place alongside its title. */
-export function ToastDescription({
-  toast,
-  maxMorphChars = DEFAULT_MORPH_MAX_CHARS,
-  ...props
-}: Omit<Toast.Description.Props, "children"> & ToastTextProps): React.ReactElement | null {
-  return toast.description ? (
-    <Toast.Description {...props}>
-      <ToastMorph maxChars={maxMorphChars}>{toast.description}</ToastMorph>
-    </Toast.Description>
   ) : null;
 }

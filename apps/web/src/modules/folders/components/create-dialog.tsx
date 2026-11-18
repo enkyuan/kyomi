@@ -19,7 +19,7 @@ import { Field, FieldError } from "@kyomi/ui/components/field";
 import { Form } from "@kyomi/ui/components/form";
 import { Input } from "@kyomi/ui/components/input";
 import { toastManager } from "@kyomi/ui/components/toast";
-import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
+import { logClientError } from "@kyomi/reader/lib/errors";
 import { createFolder } from "@modules/folders/lib/api";
 import { queryKeys } from "@lib/query/keys";
 
@@ -110,7 +110,6 @@ export function CreateFolderDialog({
       setDialogOpen(false);
       toastManager.add({
         title: "Folder created",
-        description: folder.name,
         type: "success",
       });
     },
@@ -118,7 +117,6 @@ export function CreateFolderDialog({
       logClientError("folders.create", error);
       toastManager.add({
         title: "Unable to create folder",
-        description: getUserSafeErrorMessage(error, "Try a different folder name."),
         type: "error",
       });
     },

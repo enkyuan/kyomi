@@ -2,7 +2,6 @@
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
-import type { ReactNode } from "react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import type { OpmlImportStatusDto } from "@kyomi/reader/schemas";
 import type { PlatformState } from "@hooks/use-platform";
@@ -206,7 +205,7 @@ describe("SourcesDialog OPML import", () => {
     expect(mocks.toastUpdate).toHaveBeenCalledWith(
       expect.stringMatching(/^opml-import-/),
       expect.objectContaining({
-        description: "2 of 2 feeds imported.",
+        title: "Importing feeds",
         data: {
           progress: {
             value: 2,
@@ -216,6 +215,10 @@ describe("SourcesDialog OPML import", () => {
         },
       }),
     );
+    // One line: the count rides in `progress` and is drawn at the toast's end, not as a description.
+    for (const [, update] of mocks.toastUpdate.mock.calls as unknown as [string, object][]) {
+      expect(update).not.toHaveProperty("description");
+    }
     await waitFor(() => {
       expect(invalidateSpy).toHaveBeenCalledWith({ queryKey: ["folders"] });
     });
@@ -227,12 +230,10 @@ describe("SourcesDialog OPML import", () => {
         loading: { timeout: number };
         success: (status: OpmlImportStatusDto) => {
           title: string;
-          description: ReactNode;
           timeout: number;
         };
         error: (error: unknown) => {
           title: string;
-          description: string;
           timeout: number;
         };
       },
@@ -241,6 +242,8 @@ describe("SourcesDialog OPML import", () => {
     expect(toastOptions.success(finalStatus).title).toBe("Imported 2 of 2 feeds");
     expect(toastOptions.success(finalStatus).timeout).toBe(3000);
     expect(toastOptions.error(new Error("failed")).timeout).toBe(7000);
+    expect(toastOptions.error(new Error("failed"))).not.toHaveProperty("description");
+    expect(toastOptions.success(finalStatus)).not.toHaveProperty("description");
   });
 });
 
