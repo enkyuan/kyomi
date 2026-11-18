@@ -41,5 +41,4 @@ export type UseAccountPanelArgs = {
       }
     | null
     | undefined;
-  user: { email?: string | null } | null | undefined;
 };

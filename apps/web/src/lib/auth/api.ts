@@ -2,7 +2,6 @@ import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import {
   apiFailureUserMessage,
-  apiJson,
   buildForwardHeaders,
   logApiNetworkError,
   logApiResponseError,
@@ -93,25 +92,3 @@ export const getAuthBootstrapState = createServerFn({ method: "POST" }).handler(
     return fetchAuthBootstrapStateFromHeaders(headers);
   },
 );
-
-export const updateUserEmail = createServerFn({ method: "POST" })
-  .validator((input: { email: string }) => input)
-  .handler(async ({ data }) => {
-    const headers = buildForwardHeaders(getRequestHeaders());
-    headers.set("content-type", "application/json");
-    const normalizedEmail = data.email.trim();
-
-    return apiJson<{
-      id: string;
-      name: string;
-      email: string;
-      emailVerified: boolean;
-      image: string | null;
-      createdAt: string;
-      updatedAt: string;
-    }>("/api/v1/users/profile/email", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({ email: normalizedEmail }),
-    });
-  });

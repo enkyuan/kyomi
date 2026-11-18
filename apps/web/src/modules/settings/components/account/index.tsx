@@ -1,12 +1,10 @@
 "use client";
 
-import { CheckIcon, HandIcon, PencilIcon, UserIcon, XIcon } from "@kyomi/ui/icons/blode";
+import { HandIcon, PencilIcon, UserIcon } from "@kyomi/ui/icons/blode";
 import { useAuth } from "@integrations/better-auth/provider";
 import { Badge } from "@kyomi/ui/components/badge";
 import { Button } from "@kyomi/ui/components/button";
 import { Frame } from "@kyomi/ui/components/frame";
-import { Group } from "@kyomi/ui/components/group";
-import { Input } from "@kyomi/ui/components/input";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 import {
   Table,
@@ -19,6 +17,7 @@ import {
 } from "@kyomi/ui/components/table";
 import { useAccountPanel } from "@modules/settings/hooks/use-account-panel";
 import { SettingHeading } from "../appearance/headings";
+import { EmailDialog } from "./email-dialog";
 
 export const accountSection = {
   description: "Manage your account details, connected accounts, and security settings.",
@@ -59,14 +58,10 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
   const {
     describeSessionDevice,
     describeSessionLocation,
-    emailDraft,
-    emailError,
     formatTimestamp,
     handleCancelEditEmail,
-    handleEmailDraftChange,
     handleRevokeAllSessions,
     handleRevokeOtherSessions,
-    handleSaveEmail,
     handleStartEditEmail,
     isEditingEmail,
     isSessionsError,
@@ -74,8 +69,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
     revokeAllSessionsMutation,
     revokeOtherSessionsMutation,
     sessions,
-    updateEmailMutation,
-  } = useAccountPanel({ user, session });
+  } = useAccountPanel({ session });
 
   return (
     <div className={ACCOUNT_SUBSECTION_SPACING_CLASS}>
@@ -93,60 +87,28 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <SettingHeading title="Email" description="Manage your account email address." />
           <div className="flex items-center gap-2">
-            {isEditingEmail ? (
-              <Group aria-label="Email subscription" className="gap-2">
-                <Input
-                  className="flex-1"
-                  aria-label="Email"
-                  aria-invalid={emailError ? true : undefined}
-                  onChange={(event) => {
-                    handleEmailDraftChange(event.target.value);
-                  }}
-                  placeholder="you@example.com"
-                  type="email"
-                  value={emailDraft}
-                />
-                <div>
-                  <Button
-                    aria-label="Save email"
-                    loading={updateEmailMutation.isPending}
-                    onClick={() => void handleSaveEmail()}
-                    size="icon"
-                    variant="outline"
-                  >
-                    <CheckIcon />
-                  </Button>
-                </div>
-                <div>
-                  <Button
-                    aria-label="Cancel editing email"
-                    disabled={updateEmailMutation.isPending}
-                    onClick={handleCancelEditEmail}
-                    size="icon"
-                    variant="destructive-outline"
-                  >
-                    <XIcon />
-                  </Button>
-                </div>
-              </Group>
-            ) : (
-              <>
-                <span className="text-sm text-muted-foreground">
-                  {user?.email ?? "Unknown email"}
-                </span>
-                <Button
-                  aria-label="Edit email"
-                  onClick={handleStartEditEmail}
-                  size="icon-xs"
-                  variant="ghost"
-                >
-                  <PencilIcon />
-                </Button>
-              </>
-            )}
+            <span className="text-sm text-muted-foreground">{user?.email ?? "Unknown email"}</span>
+            <Button
+              aria-label="Edit email"
+              onClick={handleStartEditEmail}
+              size="icon-xs"
+              variant="ghost"
+            >
+              <PencilIcon />
+            </Button>
           </div>
         </div>
-        {emailError ? <p className="text-sm text-destructive">{emailError}</p> : null}
+        {user?.email ? (
+          <EmailDialog
+            currentEmail={user.email}
+            onOpenChange={(open) => {
+              if (!open) {
+                handleCancelEditEmail();
+              }
+            }}
+            open={isEditingEmail}
+          />
+        ) : null}
       </section>
 
       <section className="space-y-3">
