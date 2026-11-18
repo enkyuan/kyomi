@@ -19,7 +19,9 @@ import {
 } from "../schemas";
 
 /** Each of these fetches a page or calls a paid model on the user's behalf. */
-const extractRateLimit = { name: "articles.extract", max: 30, windowMs: 10 * 60_000 } as const;
+// The web client extracts the full text of every article it opens by default, so a reader going
+// through an inbox makes many of these legitimately; this bounds a script, not a person.
+const extractRateLimit = { name: "articles.extract", max: 120, windowMs: 10 * 60_000 } as const;
 const summarizeRateLimit = { name: "articles.summarize", max: 30, windowMs: 10 * 60_000 } as const;
 const translateRateLimit = { name: "articles.translate", max: 30, windowMs: 10 * 60_000 } as const;
 

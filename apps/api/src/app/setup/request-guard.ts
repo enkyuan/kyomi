@@ -1,4 +1,9 @@
 import { Elysia } from "elysia";
+import { shapeErrorResponse } from "@shared/http/error/shape";
+import {
+  getRequestIdFromHeaders,
+  type MutableResponseHeaders,
+} from "@shared/http/request-id/headers";
 
 /**
  * What a request body may weigh before anything reads it. Bun's transport ceiling
@@ -51,3 +56,27 @@ export const requestGuardPlugin = new Elysia({ name: "kyomi.request-guard" }).on
     }
   },
 );
+
+/** A request to one of the routes that take a document bigger than the default ceiling. */
+export const isLargeBodyRequest = (request: Request) =>
+  BODY_METHODS.has(request.method) && LARGE_BODY_PATHS.has(new URL(request.url).pathname);
+
+/**
+ * The large-document routes are exempt from the default ceiling, and Elysia reads and parses a
+ * body before it derives the session, so an anonymous caller could make the server hold tens of
+ * megabytes per request. This answers them first: the session is resolved before the body is
+ * read, and a caller without one is refused with the usual 401.
+ */
+export const largeBodyAuthPlugin = (
+  authenticate: (request: Request, set: { headers: MutableResponseHeaders }) => Promise<unknown>,
+) =>
+  new Elysia({ name: "kyomi.large-body-auth" }).onRequest(async ({ request, set }) => {
+    if (!isLargeBodyRequest(request)) {
+      return;
+    }
+    try {
+      await authenticate(request, set);
+    } catch (error) {
+      return shapeErrorResponse(error, getRequestIdFromHeaders(request.headers));
+    }
+  });

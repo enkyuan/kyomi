@@ -10,6 +10,7 @@ import { registerQueueRoutes } from "@modules/queue/routes";
 import { registerUserRoutes } from "@modules/users/routes";
 import { requestObservationPlugin } from "@shared/http/stacks";
 import type { AppRuntime } from "../runtime";
+import { largeBodyAuthPlugin } from "../setup/request-guard";
 
 /**
  * Domain registrars in route order (discovery → identity → content → feeds → imports). A registrar
@@ -40,6 +41,7 @@ export function createApiV1Router(runtime: AppRuntime) {
     name: "kyomi.api.v1",
   })
     .use(requestObservationPlugin(runtime))
+    .use(largeBodyAuthPlugin((request, set) => resolveSessionContext(runtime, request, set)))
     .group("/api/v1", (group) => {
       const authenticated = group.derive(async ({ request, set }) =>
         resolveSessionContext(runtime, request, set),
