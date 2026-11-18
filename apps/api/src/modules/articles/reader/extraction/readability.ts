@@ -2,6 +2,10 @@ import { Readability } from "@mozilla/readability";
 import { Effect } from "effect";
 import { parseHTML } from "linkedom";
 import type { HostRateLimiter } from "@kyomi/ingest";
+import {
+  isTreeWithinStructureBudget,
+  isWithinStructureBudget,
+} from "@kyomi/ingest/document/structure-budget";
 import { processIngestedArticleHtml } from "../content";
 import type { ArticleExtractionCandidate } from "../content";
 import { blockedUrl, ExtractionFailed } from "./errors";
@@ -93,11 +97,36 @@ function looksLikeNonArticlePage(url: URL): boolean {
   );
 }
 
-/** Parse `body` as the page at `finalUrl` and run Readability over it. */
-const readArticle = (body: string, finalUrl: URL) =>
-  Effect.try({
+const parsingFailed = (cause: unknown) =>
+  new ExtractionFailed({
+    errorCode: "PARSING_FAILED",
+    errorMessage:
+      cause instanceof Error
+        ? `Could not parse article HTML: ${cause.message}`
+        : "Could not parse article HTML.",
+    cause,
+  });
+
+const tooComplex = () => noReadableContent("This source is too complex to read as an article.");
+
+/**
+ * Parse `body` as the page at `finalUrl` and run Readability over it. A page past the structure
+ * budget (the one article bodies are held to) fails as having no readable article, before
+ * Readability reads it: its cost grows with the cube of the nesting and the square of the element
+ * count, and its own `maxElemsToParse` counts nothing on linkedom, so a few kilobytes of nested
+ * `<div>` or a few megabytes of links would hold the thread for tens of seconds. The source is
+ * measured first so a page that plainly is too deep is not parsed, then the tree that came out.
+ */
+const readArticle = Effect.fnUntraced(function* (body: string, finalUrl: URL) {
+  if (!isWithinStructureBudget(body)) {
+    return yield* tooComplex();
+  }
+  const doc = yield* Effect.try({ try: () => parseHTML(body).document, catch: parsingFailed });
+  if (!isTreeWithinStructureBudget(doc)) {
+    return yield* tooComplex();
+  }
+  return yield* Effect.try({
     try: () => {
-      const doc = parseHTML(body).document;
       try {
         Object.defineProperty(doc, "URL", { value: finalUrl.href, configurable: true });
       } catch {
@@ -105,16 +134,9 @@ const readArticle = (body: string, finalUrl: URL) =>
       }
       return new Readability(doc).parse();
     },
-    catch: (cause) =>
-      new ExtractionFailed({
-        errorCode: "PARSING_FAILED",
-        errorMessage:
-          cause instanceof Error
-            ? `Could not parse article HTML: ${cause.message}`
-            : "Could not parse article HTML.",
-        cause,
-      }),
+    catch: parsingFailed,
   });
+});
 
 /** Run Readability over fetched HTML. Pure CPU work; a page with no article fails typed. */
 export const extractArticleContentFromHtml = Effect.fn("extraction.readability")(function* (input: {

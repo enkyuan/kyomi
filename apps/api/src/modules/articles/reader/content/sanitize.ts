@@ -208,8 +208,12 @@ function descendToContentRoot(element: HTMLElement): HTMLElement {
 }
 
 function firstMeaningfulDirectChild(parent: HTMLElement): HTMLElement | null {
-  for (const child of Array.from(parent.children)) {
-    if (!(child instanceof parent.ownerDocument.defaultView!.HTMLElement)) {
+  const ElementClass = parent.ownerDocument.defaultView!.HTMLElement;
+  // Walk the siblings instead of copying `parent.children`: jsdom builds that collection's named
+  // properties from the children's ids, which is superquadratic for a body of thousands of them,
+  // and the first meaningful child is usually the first or second.
+  for (let child = parent.firstElementChild; child; child = child.nextElementSibling) {
+    if (!(child instanceof ElementClass)) {
       continue;
     }
     const text = normalizeMetadataText(child.textContent);

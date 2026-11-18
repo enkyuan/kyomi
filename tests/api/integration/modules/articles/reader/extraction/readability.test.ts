@@ -74,6 +74,60 @@ describe("articles.reader.extraction.readability", () => {
     expect(failure).toMatchObject({ _tag: "ExtractionFailed", errorCode: "BLOCKED_URL" });
   });
 
+  describe("pages past the structure budget", () => {
+    const url = "https://performance.dev/post";
+    const sentence =
+      "Linear feels immediate because the client keeps a local copy of every issue and applies changes optimistically. ";
+    const articleParagraphs = `<p>${sentence.repeat(4)}</p><p>${sentence.repeat(4)}</p><p>${sentence.repeat(4)}</p>`;
+    const failure = (body: string) =>
+      Effect.runPromise(Effect.flip(extractArticleContentFromHtml({ body, finalUrl: url })));
+
+    test.each([
+      ["nested divs", `${"<div>".repeat(1_200)}${articleParagraphs}`],
+      // Each of these is a line of markup an estimate from the tag text reads as shallow.
+      ["self-closing divs the parser opens", `${"<div/>".repeat(600)}${articleParagraphs}`],
+      ["closers that close nothing", `${"<div></x>".repeat(600)}${articleParagraphs}`],
+      [
+        "links past the element limit",
+        `${'<a href="/x">l</a>'.repeat(50_500)}${articleParagraphs}`,
+      ],
+    ])("fails typed, and quickly, for a page of %s", async (_, body) => {
+      const started = performance.now();
+      const error = await failure(body);
+      const elapsed = performance.now() - started;
+
+      expect(error).toMatchObject({
+        _tag: "ExtractionFailed",
+        errorCode: "NO_READABLE_CONTENT",
+        errorMessage: "This source is too complex to read as an article.",
+      });
+      // Readability took seconds on these (cubic in the nesting, quadratic in the element count:
+      // about 5 s at 1,200 levels, 54 s at 2,400, 10 s on 170k links); the budget needs milliseconds.
+      expect(elapsed).toBeLessThan(3_000);
+    });
+
+    test("still extracts a page with a large inline script full of comparisons", async () => {
+      const body = `<html><head><title>Post</title><script>${"for(var i=0;i<n;i++){x[i]=i>>1}".repeat(2_000)}</script></head>
+        <body><article><h1>How Linear is so fast</h1>${articleParagraphs}</article></body></html>`;
+
+      const result = await Effect.runPromise(
+        extractArticleContentFromHtml({ body, finalUrl: url }),
+      );
+
+      expect(result.content.contentText).toContain("Linear feels immediate");
+    });
+
+    test("still extracts a long page of a few thousand elements", async () => {
+      const body = `<html><body><article>${`<div><p>${sentence.repeat(2)}</p></div>`.repeat(2_000)}</article></body></html>`;
+
+      const result = await Effect.runPromise(
+        extractArticleContentFromHtml({ body, finalUrl: url }),
+      );
+
+      expect(result.content.contentText).toContain("Linear feels immediate");
+    });
+  });
+
   test("normalizes readability prose captured in a preformatted article wrapper", async () => {
     const body = `
       <html>
