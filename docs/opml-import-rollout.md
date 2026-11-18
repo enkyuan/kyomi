@@ -32,7 +32,7 @@ Deploy in this order. Each step should be independently verifiable before moving
 
 1. **Apply the additive schema migration.** `opml_imports` and `opml_import_items` are new tables; nothing existing is altered or dropped. Safe to apply ahead of any application deploy.
 2. **Deploy workers that understand both legacy and new job types.** The worker must route `opml.import` / `opml.import.feed` (legacy, Redis-only) and `opml.import.prepare` / `opml.import.item` (new, ID-only wakeups over Postgres-backed state) to their respective handlers.
-3. **Deploy the scheduler with OPML reconciliation.** `runImportDispatcherLoop` must be running in the scheduler process (dispatch every 1s, reconciliation every 30s, retention piggybacked every 24h) — confirm via scheduler startup logs (`import.dispatcher.started`).
+3. **Deploy the scheduler with OPML reconciliation.** `importDispatcherLoop` must be running in the scheduler process (dispatch every 1s, reconciliation every 30s, retention piggybacked every 24h) — confirm via scheduler startup logs (`import.dispatcher.started`).
 4. **Deploy API producers/readers using Postgres.** New imports go through `enqueueOpmlImport` (creates an `opml_imports` row, publishes an ID-only `opml.import.prepare` wakeup) instead of the legacy Redis task store.
 5. **Verify.** Create a real import through the deployed API and confirm: a row appears in `opml_imports`, the only new Redis payload is `{importId}` (never raw XML/URLs/titles), and the import reaches `completed`/`failed` through the new pipeline end to end.
 

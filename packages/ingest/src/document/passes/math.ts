@@ -16,10 +16,7 @@ import { KATEX_MACROS_FOR_MATHJAX } from "./math-macros";
 
 const MAX_TEX_LENGTH = 20_000;
 const MAX_INLINE_TEX_LENGTH = 2_000;
-/**
- * Longer text nodes are not scanned: an unclosed `\[` or `$$` makes the lazy match rescan to the
- * end for every opener, which is quadratic on hostile input.
- */
+/** Longer text nodes are not scanned, so no formula in one can be longer than {@link MAX_TEX_LENGTH}. */
 const MAX_SCANNED_TEXT = 20_000;
 /** Beyond this many expressions the rest keep their TeX source without a rendered form. */
 const MAX_RENDERED = 500;
@@ -31,12 +28,13 @@ const MAX_RENDERED = 500;
  * `$` is also a currency sign, a shell sigil and slang ("$$$"), so `$…$` and `$$…$$` are further
  * checked by {@link looksLikeProse} and fall back to their original text when KaTeX rejects them.
  */
+const ENVIRONMENTS = "equation|align|gather|multline|eqnarray|alignat|flalign";
 const DELIMITED = new RegExp(
   [
     String.raw`(?<![\\$])\$\$(?!\$)([\s\S]{1,${MAX_TEX_LENGTH}}?)(?<!\$)\$\$(?!\$)`,
     String.raw`\\\[([\s\S]{1,${MAX_TEX_LENGTH}}?)\\\]`,
     String.raw`\\\(([\s\S]{1,${MAX_TEX_LENGTH}}?)\\\)`,
-    String.raw`(\\begin\{(equation|align|gather|multline|eqnarray|alignat|flalign)\*?\}[\s\S]{1,${MAX_TEX_LENGTH}}?\\end\{\5\*?\})`,
+    String.raw`(\\begin\{(${ENVIRONMENTS})\*?\}[\s\S]{1,${MAX_TEX_LENGTH}}?\\end\{\5\*?\})`,
     String.raw`(?<![\\$\w])\$(?=[^\s$])((?:\\.|[^$\\\n]){1,${MAX_INLINE_TEX_LENGTH}}?)(?<=[^\s\\])\$(?![\d$])`,
   ].join("|"),
   "g",
@@ -109,16 +107,53 @@ type Segment =
       ambiguous: boolean;
     };
 
+const OPENERS = new RegExp(String.raw`\\\[|\\\(|\\begin\{(${ENVIRONMENTS})\*?\}`, "g");
+const ENVIRONMENT_END = new RegExp(String.raw`\\end\{(${ENVIRONMENTS})\*?\}`, "g");
+/** Stands in for the backslash of an opener nothing closes: it starts no delimiter. */
+const HIDDEN = "\uFFFF";
+
+/**
+ * `value` with the `\[`, `\(` and `\begin{…}` openers that no closer follows made unable to match.
+ * The lazy scan for a closer reads to the end of the text for each such opener, so a text of
+ * thousands of them costs its length times their count. A closer after a position is after every
+ * earlier one, so the unclosed openers are exactly those past the last closer, and hiding them
+ * changes no match: those attempts could only fail. The text keeps its length, so indexes carry over.
+ */
+function hideUnclosedOpeners(value: string): string {
+  const lastBracket = value.lastIndexOf("\\]");
+  const lastParen = value.lastIndexOf("\\)");
+  let lastEnd: Map<string, number> | undefined;
+  return value.replace(OPENERS, (opener: string, environment: string | undefined, at: number) => {
+    let closer = opener === "\\[" ? lastBracket : lastParen;
+    if (environment !== undefined) {
+      if (!lastEnd) {
+        lastEnd = new Map();
+        for (const end of value.matchAll(ENVIRONMENT_END)) {
+          lastEnd.set(end[1] as string, end.index);
+        }
+      }
+      closer = lastEnd.get(environment) ?? -1;
+    }
+    // A formula has at least one character, so its closer starts at least that far after the opener.
+    return closer > at + opener.length ? opener : HIDDEN + opener.slice(1);
+  });
+}
+
 function splitDelimited(value: string): Segment[] | null {
   if (value.length > MAX_SCANNED_TEXT || !/[$\\]/.test(value)) {
     return null;
   }
+  const visible = hideUnclosedOpeners(value);
   const segments: Segment[] = [];
   let cursor = 0;
   DELIMITED.lastIndex = 0;
-  for (let match = DELIMITED.exec(value); match; match = DELIMITED.exec(value)) {
+  for (let match = DELIMITED.exec(visible); match; match = DELIMITED.exec(visible)) {
     const display = match[1] !== undefined || match[2] !== undefined || match[4] !== undefined;
-    const tex = (match[1] ?? match[2] ?? match[3] ?? match[4] ?? match[6] ?? "").trim();
+    // The match is read from `value`, not `visible`: a hidden opener inside it is still an opener.
+    const raw = value.slice(match.index, match.index + match[0].length);
+    // An environment carries its own `\begin` and `\end`, `$` is one character, the rest two.
+    const edge = match[4] !== undefined ? 0 : match[6] !== undefined ? 1 : 2;
+    const tex = raw.slice(edge, raw.length - edge).trim();
     if (!tex || tex.length > MAX_TEX_LENGTH) {
       continue;
     }
@@ -131,7 +166,7 @@ function splitDelimited(value: string): Segment[] | null {
     if (match.index > cursor) {
       segments.push({ text: value.slice(cursor, match.index) });
     }
-    segments.push({ tex, display, raw: match[0], ambiguous });
+    segments.push({ tex, display, raw, ambiguous });
     cursor = match.index + match[0].length;
   }
   if (segments.length === 0) {

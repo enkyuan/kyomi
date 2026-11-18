@@ -1,4 +1,3 @@
-import type { db } from "@adapters/db/client";
 import { articleClips, articleReadingState } from "@kyomi/db";
 import { clipReadColumns, type ClipReadRow } from "./columns";
 import { and, eq } from "drizzle-orm";
@@ -18,9 +17,8 @@ import {
   normalizeMarkdownFeedArtifacts,
   type ExtractedContentStatus,
 } from "@modules/articles/reader/content";
+import type { Database } from "@adapters/db/service";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./constants";
-
-type DB = typeof db;
 
 export function clipToListItem(row: ClipReadRow & ReadingProgressColumnsRow): ArticleListItemDto {
   return {
@@ -95,17 +93,17 @@ export function clipToDetail(row: ClipReadRow & ReadingPositionColumnsRow): Arti
   };
 }
 
+/** The user's clip as a detail DTO, or null when it does not exist or belongs to someone else. */
 export async function getClipDetailForUser(
-  database: DB,
+  database: Database,
   userId: string,
   clipId: string,
 ): Promise<ArticleDetailDto | null> {
-  const rows = await database
+  const [row] = await database
     .select({ ...clipReadColumns, ...readingPositionColumns })
     .from(articleClips)
     .leftJoin(articleReadingState, clipReadingStateJoin(userId))
     .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)))
     .limit(1);
-  const r = rows[0];
-  return r ? clipToDetail(r) : null;
+  return row ? clipToDetail(row) : null;
 }

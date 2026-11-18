@@ -1,22 +1,6 @@
-import type { db } from "@adapters/db/client";
-import type { AppLogger } from "@adapters/logger";
-
-/** Context for `/api/v1` handlers after `resolveSessionContext` + logging middleware. */
-export type V1HandlerContext<
-  TBody = unknown,
-  TQuery = Record<string, unknown>,
-  TParams = Record<string, string>,
-> = {
-  logger: AppLogger;
-  userId: string;
-  db: typeof db;
-  set: { status?: number | string };
-  params: TParams;
-  query: TQuery;
-  body: TBody;
-};
-
-type V1RuntimeContext = Partial<V1HandlerContext> & {
+type V1RuntimeContext = {
+  userId?: unknown;
+  set?: unknown;
   params?: unknown;
   query?: unknown;
   body?: unknown;
@@ -24,13 +8,7 @@ type V1RuntimeContext = Partial<V1HandlerContext> & {
 
 function assertUserId(value: unknown): asserts value is string {
   if (typeof value !== "string" || value.length === 0) {
-    throw new Error("v1HandlerContext requires authenticated userId");
-  }
-}
-
-function assertDb(value: unknown): asserts value is typeof db {
-  if (!value) {
-    throw new Error("v1HandlerContext requires database adapter");
+    throw new Error("v1EffectContext requires authenticated userId");
   }
 }
 
@@ -38,33 +16,42 @@ function coerceObject<T>(value: unknown, fallback: T): T {
   return (typeof value === "object" && value !== null ? value : fallback) as T;
 }
 
-function isLogger(value: unknown): value is AppLogger {
-  if (typeof value !== "object" || value === null) {
-    return false;
-  }
-  return (
-    typeof Reflect.get(value, "info") === "function" &&
-    typeof Reflect.get(value, "warn") === "function" &&
-    typeof Reflect.get(value, "error") === "function"
-  );
-}
-
-export function v1HandlerContext<
+/** Context for `/api/v1` handlers that run an Effect: what `runEffect` needs plus request input. */
+export type V1EffectContext<
   TBody = unknown,
   TQuery = Record<string, unknown>,
   TParams = Record<string, string>,
->(context: unknown): V1HandlerContext<TBody, TQuery, TParams> {
-  const c = context as V1RuntimeContext;
-  if (!isLogger(c.logger)) {
-    throw new Error("v1HandlerContext requires logger middleware");
-  }
-  assertUserId(c.userId);
-  assertDb(c.db);
+> = {
+  request: Request;
+  requestId: string;
+  userId: string;
+  set: { status?: number | string };
+  params: TParams;
+  query: TQuery;
+  body: TBody;
+};
 
+/**
+ * Reads the request, request id and authenticated user that `resolveSessionContext` derived. Effect
+ * code gets the database and logger from the runtime's services, not from the context.
+ */
+export function v1EffectContext<
+  TBody = unknown,
+  TQuery = Record<string, unknown>,
+  TParams = Record<string, string>,
+>(context: unknown): V1EffectContext<TBody, TQuery, TParams> {
+  const c = context as V1RuntimeContext & { request?: unknown; requestId?: unknown };
+  assertUserId(c.userId);
+  if (!(c.request instanceof Request)) {
+    throw new Error("v1EffectContext requires the request");
+  }
+  if (typeof c.requestId !== "string" || c.requestId.length === 0) {
+    throw new Error("v1EffectContext requires a request id");
+  }
   return {
-    logger: c.logger,
+    request: c.request,
+    requestId: c.requestId,
     userId: c.userId,
-    db: c.db,
     set: coerceObject(c.set, {}),
     params: coerceObject(c.params, {} as TParams),
     query: coerceObject(c.query, {} as TQuery),

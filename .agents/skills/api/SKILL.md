@@ -15,6 +15,9 @@ Keep product behavior domain-owned, HTTP boundaries thin, and executable process
    a public or internal contract.
 3. Load `$packages` for schema, migration, queue, ingestion, sanitization, or package-export changes.
 4. Add `$security`, `$environment`, and `$testing` for their boundaries.
+5. Read `docs/architecture/api-effect.md` before writing or reviewing API code. The API runs on
+   Effect v4 (`effect@4.1.4`); most online and model-memory examples are v3 and do not compile, so
+   learn each API from `apps/api/node_modules/effect/dist/*.d.ts`.
 
 ## Organize the API
 
@@ -23,15 +26,40 @@ apps/api/src/
   app/
     boot/                    server, worker, scheduler, and dev entrypoints plus operator scripts
     http/                    Elysia construction and route registration
-    jobs/                    Executable job orchestration
-    setup/                   Process-wide setup and lifecycle
-  adapters/<capability>/     Framework and provider protocol boundaries
+    jobs/                    Job dispatch, worker consumer, scheduler and dispatcher loops
+    setup/                   `runMain`, lifecycle, error handlers, plugins
+    runtime.ts               `AppLive` and `createAppRuntime()`: the one composition root
+  adapters/<capability>/     Framework and provider boundaries; `service.ts` holds the Effect service
   config/env/                Typed runtime configuration
   modules/<domain>/          Product behavior, schemas, operations, and routes
-  shared/<capability>/       Cross-domain errors, HTTP, network, and text
+  shared/<capability>/       Cross-domain error catalogue, HTTP bridge and rendering, network, and text
 ```
 
+## Write API code as Effects
+
+- Product behavior is `Effect` with its needs in `R` and expected failures in `E`. Use
+  `Effect.gen`, or `Effect.fn("module.operation")` for parameterised operations.
+- Each dependency is a `Context.Service` with a live Layer (`Db`, `Redis`, `AppConfig`, `AppLogger`,
+  `JobQueue`, `Auth`, `RateLimiter`, `FeedSearch`, `HttpClient`). Add new ones to `AppLive` in
+  `app/runtime.ts`. Do not add module-level singletons for env, logger, database, Redis, or
+  clients, and do not import `@app/*` from a module.
+- Wrap Promise APIs (drizzle, ioredis, better-auth, `@kyomi/ingest`, `@kyomi/reader`) once, at the
+  adapter or call site: `Db.use`, `Redis.use`, or `Effect.tryPromise` mapped to a catalogue error.
+  Keep Promise types out of Effect signatures.
+- Fail with the typed catalogue in `shared/effect/errors.ts` (`NotFound`, `Conflict`, ...), keeping
+  the existing wire `code`. Never classify errors by message text and never render an error in a
+  handler: `describeError`/`describeCause` in `shared/http/error/render.ts` is the only mapper.
+- `routes.ts` takes the runtime and calls `runEffect(effect)` (`shared/http/effect`); authenticated
+  routes pass `{ runtime, request, requestId, userId }` after `resolveSessionContext`.
+- Background work and resources belong to a Layer or Scope (`Effect.acquireRelease`,
+  `Effect.forkScoped`, `Effect.repeat(Schedule.spaced(...))`). Every process entrypoint is
+  `runMain(program)`; nothing else calls `app.stop()`, `pool.end()`, or closes Redis.
+- Time comes from `Clock`, sleeps from `Effect.sleep`; discarded Effects are bugs (always `yield*`).
+
 - Keep boot and HTTP assembly focused on wiring and lifecycle.
+- Keep dependencies pointing down: `app`, then `modules`, then `adapters`, then `shared` and
+  `config`. Modules do not import each other in a cycle, and no files import each other in a loop at
+  runtime; `bun run check:boundaries` fails on an upward import or a cycle.
 - Keep public product behavior under `src/modules/<domain>`. Split large domains by subdomain or
   read/write responsibility before creating repository-wide technical buckets.
 - Keep each `routes.ts` file as the HTTP boundary and delegator. Put schemas, types, queries,
@@ -65,7 +93,7 @@ The full rule set, its cal.com analogue, and the differences from web naming liv
   a directory.
 - Add `index.ts` only for an intentional adapter or package-like surface.
 - Keep tests mirroring the renamed path and basename (`tests/api/integration/<src path>/<basename>.test.ts`)
-  and update `mock.module` strings and path-reading tests with the move.
+  and update path-reading tests and test Layer imports with the move.
 - Keep imports ordered from platform and third-party dependencies to workspace aliases to relative
   files.
 
@@ -80,8 +108,17 @@ The full rule set, its cal.com analogue, and the differences from web naming liv
   errors.
 - Authenticate and authorize every user-owned read or mutation at the server boundary.
 - Give outbound requests finite time, size, redirect, and retry policies. Reuse `shared/net`
-  protections for untrusted URLs and preserve caller cancellation.
-- Keep secrets server-side and parse runtime values in `src/config/env/runtime.ts`.
+  protections (`checkOutboundUrl`, `HostResolver`, `safe-fetch`) for untrusted URLs, send provider
+  calls through the `HttpClient` service, and preserve caller cancellation. The destination rules
+  and pinned connection live once, in `@kyomi/ingest/lib/outbound`; do not copy a blocklist.
+- Rate-limit by user (`enforceRateLimitForContext`) every authenticated action that fetches another
+  server, compiles a page or calls a model; bound unauthenticated outward-fetching routes with
+  `makeLoadShedder`. Body size is capped once, by `requestGuardPlugin`.
+- Production configuration fails closed in `config/env/runtime.ts`: an unrecognised `NODE_ENV`,
+  a short `BETTER_AUTH_SECRET`, a missing `BETTER_AUTH_URL` or a short `FEED_ADMIN_SHARED_SECRET`
+  stop the boot.
+- Keep secrets server-side. Runtime values are parsed in `src/config/env/runtime.ts` and consumed
+  through the `AppConfig` service (`src/config/env/service.ts`), not a global.
 - Keep `apps/api/src/modules/feeds/routes.ts` a delegator; put refresh enqueue behavior under
   `modules/feeds/refresh`.
 
@@ -89,7 +126,8 @@ The full rule set, its cal.com analogue, and the differences from web naming liv
 
 1. Put tests under `tests/api/integration` and mirror the app or backend owner. Do not add tests under
    `apps/api`.
-2. Cover success, invalid input, absent or unauthorized identity, provider failure, timeout, retry,
+2. Provide Layers from `tests/api/integration/support/layers.ts` instead of `mock.module` or
+   `globalThis.fetch` patching (see `$testing`). Cover success, invalid input, absent or unauthorized identity, provider failure, timeout, retry,
    cancellation, and duplicate work when relevant.
 3. Run the narrowest Bun test through the API dotenvx environment.
 4. Run `bun run --cwd apps/api typecheck`, `lint`, and `fmt:check`.

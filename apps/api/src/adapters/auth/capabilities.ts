@@ -1,4 +1,4 @@
-import { env } from "@config/env";
+import type { Env } from "@config/env/runtime";
 
 export const AUTH_CAPABILITIES_HEADER = "x-kyomi-auth-capabilities";
 
@@ -45,12 +45,14 @@ export function resolveAuthCapabilities({
   };
 }
 
-export function getAuthCapabilities(): AuthCapabilities {
+export function getAuthCapabilities(
+  config: Pick<Env, "FEATURE_GOOGLE_OAUTH" | "NODE_ENV" | "RESEND_API_KEY" | "AUTH_EMAIL_FROM">,
+): AuthCapabilities {
   return resolveAuthCapabilities({
-    googleOAuthEnabled: env.FEATURE_GOOGLE_OAUTH,
-    nodeEnv: env.NODE_ENV,
-    resendApiKey: env.RESEND_API_KEY,
-    emailFrom: env.AUTH_EMAIL_FROM,
+    googleOAuthEnabled: config.FEATURE_GOOGLE_OAUTH,
+    nodeEnv: config.NODE_ENV,
+    resendApiKey: config.RESEND_API_KEY,
+    emailFrom: config.AUTH_EMAIL_FROM,
   });
 }
 

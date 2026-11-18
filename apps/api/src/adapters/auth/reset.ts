@@ -1,22 +1,13 @@
-import { logger } from "@adapters/logger";
-import { env } from "@config/env";
-
-const RESEND_EMAILS_URL = "https://api.resend.com/emails";
-const DELIVERY_TIMEOUT_MS = 10_000;
+import { Effect } from "effect";
+import type { HttpClient } from "effect/http";
+import { AppLogger } from "@adapters/logger/service";
+import type { AppConfig } from "@config/env/service";
+import { serializeError } from "@shared/errors/serialize";
+import { deliverEmail } from "./resend";
 
 type ResetPasswordEmail = {
   to: string;
   url: string;
-};
-
-type ResetPasswordEmailConfig = {
-  apiKey?: string;
-  from?: string;
-  nodeEnv: "development" | "production" | "test";
-};
-
-type SendResetPasswordEmailOptions = {
-  fetchImpl?: typeof fetch;
 };
 
 function escapeHtml(value: string): string {
@@ -36,51 +27,28 @@ export function createResetPasswordEmailBody({ url }: ResetPasswordEmail) {
   };
 }
 
-export async function sendResetPasswordEmail(
-  message: ResetPasswordEmail,
-  config: ResetPasswordEmailConfig,
-  options: SendResetPasswordEmailOptions = {},
-): Promise<"delivered" | "development-link" | "unconfigured"> {
-  if (!config.apiKey || !config.from) {
-    if (config.nodeEnv !== "production") {
-      logger.warn("auth.reset_password.development_link", { url: message.url });
-      return "development-link";
-    }
-
-    logger.error("auth.reset_password.delivery_unconfigured");
-    return "unconfigured";
-  }
-
-  const { subject, text, html } = createResetPasswordEmailBody(message);
-  const response = await (options.fetchImpl ?? fetch)(RESEND_EMAILS_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${config.apiKey}`,
-      "Content-Type": "application/json",
+/** Email the reset link. In development without a provider the link is logged instead. */
+export const sendResetPasswordEmail = (message: ResetPasswordEmail) =>
+  deliverEmail({
+    to: message.to,
+    content: createResetPasswordEmailBody(message),
+    label: "Reset password email",
+    events: {
+      development: "auth.reset_password.development_link",
+      unconfigured: "auth.reset_password.delivery_unconfigured",
     },
-    body: JSON.stringify({
-      from: config.from,
-      to: [message.to],
-      subject,
-      text,
-      html,
-    }),
-    signal: AbortSignal.timeout(DELIVERY_TIMEOUT_MS),
+    developmentLog: { url: message.url },
   });
 
-  if (!response.ok) {
-    throw new Error(`Reset password email delivery failed with status ${response.status}`);
-  }
-
-  return "delivered";
-}
-
-export function queueResetPasswordEmail(message: ResetPasswordEmail): void {
-  void sendResetPasswordEmail(message, {
-    apiKey: env.RESEND_API_KEY,
-    from: env.AUTH_EMAIL_FROM,
-    nodeEnv: env.NODE_ENV,
-  }).catch((error) => {
-    logger.error("auth.reset_password.delivery_failed", { error });
-  });
-}
+/** `sendResetPasswordEmail` for a background delivery: a failure is logged and never escapes. */
+export const queueResetPasswordEmail = (
+  message: ResetPasswordEmail,
+): Effect.Effect<void, never, AppConfig | AppLogger | HttpClient.HttpClient> =>
+  sendResetPasswordEmail(message).pipe(
+    Effect.asVoid,
+    Effect.catch((error) =>
+      AppLogger.use((log) =>
+        log.error("auth.reset_password.delivery_failed", { error: serializeError(error) }),
+      ),
+    ),
+  );

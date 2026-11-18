@@ -1,11 +1,9 @@
-import type { db } from "@adapters/db/client";
+import { Effect } from "effect";
 import { articleClips, feedItems } from "@kyomi/db";
 import { eq } from "drizzle-orm";
-import { getArticleDetailForUser } from "@modules/articles/read/detail";
+import { Db } from "@adapters/db/service";
 import type { ArticleReaderContentDto } from "@modules/articles/reader/content";
 import type { ArticleDetailDto } from "@modules/articles/types";
-
-type DB = typeof db;
 
 export type StoredBodyDocument = {
   document: Record<string, unknown> | null;
@@ -93,27 +91,29 @@ export function applyStoredDocuments(
   };
 }
 
-async function readStoredDocuments(
-  database: DB,
+const readStoredDocuments = Effect.fn("articles.document.readStored")(function* (
   article: ArticleDetailDto,
-): Promise<StoredArticleDocuments | null> {
+) {
+  const db = yield* Db;
   const table = article.articleType === "feed" ? feedItems : articleClips;
-  const [row] = await database
-    .select({
-      document: table.contentDocument,
-      documentVersion: table.contentDocumentVersion,
-      compilerVersion: table.contentCompilerVersion,
-      extractedDocument: table.extractedContentDocument,
-      extractedDocumentVersion: table.extractedContentDocumentVersion,
-      extractedCompilerVersion: table.extractedContentCompilerVersion,
-    })
-    .from(table)
-    .where(eq(table.id, article.id))
-    .limit(1);
+  const [row] = yield* db.use("articles.document.read_stored", (client) =>
+    client
+      .select({
+        document: table.contentDocument,
+        documentVersion: table.contentDocumentVersion,
+        compilerVersion: table.contentCompilerVersion,
+        extractedDocument: table.extractedContentDocument,
+        extractedDocumentVersion: table.extractedContentDocumentVersion,
+        extractedCompilerVersion: table.extractedContentCompilerVersion,
+      })
+      .from(table)
+      .where(eq(table.id, article.id))
+      .limit(1),
+  );
   if (!row) {
     return null;
   }
-  return {
+  const stored: StoredArticleDocuments = {
     original: {
       document: row.document as Record<string, unknown> | null,
       documentVersion: row.documentVersion,
@@ -125,41 +125,25 @@ async function readStoredDocuments(
       compilerVersion: row.extractedCompilerVersion,
     },
   };
-}
-
-/**
- * Article detail with capability negotiation. `maxVersion` is what the client declared (0 when it
- * did not opt in) and `enabled` is the `FEATURE_READER_DOCUMENT` flag; either one off returns
- * the plain detail without touching the document columns.
- */
-export async function getArticleDetailWithDocumentForUser(
-  database: DB,
-  userId: string,
-  articleId: string,
-  options: DocumentNegotiation,
-): Promise<ArticleDetailDto> {
-  return withNegotiatedDocuments(
-    database,
-    await getArticleDetailForUser(database, userId, articleId),
-    options,
-  );
-}
+  return stored;
+});
 
 export type DocumentNegotiation = { enabled: boolean; maxVersion: number };
 
 /**
- * Applies the same capability negotiation to an article detail another operation produced, such
- * as the one an extraction returns, so every response that carries `reader` bodies agrees on
- * which body kind the client gets.
+ * Applies capability negotiation to an article detail another operation produced (the detail
+ * read, an extraction result), so every response that carries `reader` bodies agrees on which
+ * body kind the client gets. `maxVersion` is what the client declared (0 when it did not opt in)
+ * and `enabled` is the `FEATURE_READER_DOCUMENT` flag; either one off returns the article
+ * untouched without reading the document columns.
  */
-export async function withNegotiatedDocuments(
-  database: DB,
+export const withNegotiatedDocuments = Effect.fn("articles.document.negotiate")(function* (
   article: ArticleDetailDto,
   options: DocumentNegotiation,
-): Promise<ArticleDetailDto> {
+) {
   if (!options.enabled || options.maxVersion <= 0) {
     return article;
   }
-  const stored = await readStoredDocuments(database, article);
+  const stored = yield* readStoredDocuments(article);
   return stored ? applyStoredDocuments(article, stored, options.maxVersion) : article;
-}
+});

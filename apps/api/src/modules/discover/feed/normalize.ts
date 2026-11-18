@@ -14,6 +14,17 @@ export function normalizeFeedUrl(raw: string): string {
   return u.href;
 }
 
+export const LOGIN_URL_MESSAGE = "Feed URLs with a username or password are not supported";
+
+/**
+ * A feed URL is stored once and shared by everyone who follows it, and discovery search matches on
+ * it, so it must not carry a login: `https://user:password@host/feed` would hand the password to
+ * every other account.
+ */
 export function assertHttpOrHttpsUrl(raw: string): URL {
-  return assertSharedHttpOrHttpsUrl(raw, "Only http(s) feed URLs are supported");
+  const url = assertSharedHttpOrHttpsUrl(raw, "Only http(s) feed URLs are supported");
+  if (url.username || url.password) {
+    throw new Error(LOGIN_URL_MESSAGE);
+  }
+  return url;
 }

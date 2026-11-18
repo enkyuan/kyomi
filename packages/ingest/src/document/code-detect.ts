@@ -25,6 +25,12 @@ export const MIN_DETECT_LINES = 3;
 export const MIN_DETECT_CHARS = 40;
 /** Detection reads a bounded prefix so cost and result do not depend on article size. */
 const MAX_DETECT_CHARS = 4_000;
+/**
+ * Blocks of one document the model may look at. Each costs milliseconds whatever its size, so an
+ * article of thousands of small unhinted blocks would hold the thread for seconds; the rest of
+ * them stay plain. A count, not a timer, so the stored result never depends on machine load.
+ */
+export const MAX_DOCUMENT_MODEL_DETECTIONS = 64;
 /** A guess that comes from article context (not the model) still needs this much text. */
 const MIN_CONTEXT_CHARS = 12;
 /** The model's top score must clear this and beat the best other-family runner-up by this factor. */
@@ -123,7 +129,21 @@ export type DetectContext = {
   cue?: string | undefined;
   /** Languages the article's other blocks carry explicitly, most common first. */
   prior?: readonly string[] | undefined;
+  /** Model calls the document has left; each one spends from it. Unlimited when absent. */
+  modelCalls?: { remaining: number } | undefined;
 };
+
+/** Takes one call from a document's allowance; false when it is spent. */
+function spend(allowance: { remaining: number } | undefined): boolean {
+  if (!allowance) {
+    return true;
+  }
+  if (allowance.remaining <= 0) {
+    return false;
+  }
+  allowance.remaining -= 1;
+  return true;
+}
 
 /** Shapes that need no statistics, so they apply to short blocks too. */
 export function shapeLanguage(value: string, lines: string[]): string | null {
@@ -236,7 +256,7 @@ export async function detectLanguage(
   const hinted =
     sample.trim().length >= MIN_CONTEXT_CHARS ? contextLanguage(sample, context) : null;
   const enough = sample.trim().length >= MIN_DETECT_CHARS && lines.length >= MIN_DETECT_LINES;
-  const guess = enough ? await modelCandidate(sample) : null;
+  const guess = enough && spend(context.modelCalls) ? await modelCandidate(sample) : null;
   let chosen: string | null = null;
   if (hinted && guess && familyOf(guess.id) !== familyOf(hinted)) {
     chosen = guess.confidence >= OVERRIDE_CONFIDENCE ? guess.id : hinted;

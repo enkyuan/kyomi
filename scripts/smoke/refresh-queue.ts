@@ -1,9 +1,10 @@
-import { buildQueueHealthSnapshot } from "@app/jobs/health";
-import { getRedis, closeRedis } from "@adapters/redis";
+import { createAppRuntime } from "@app/runtime";
+import { queueHealth } from "@modules/health/queue";
 
+const runtime = createAppRuntime();
 try {
-  const snapshot = await buildQueueHealthSnapshot(getRedis());
+  const snapshot = await runtime.runPromise(queueHealth);
   console.log(JSON.stringify(snapshot, null, 2));
 } finally {
-  await closeRedis();
+  await runtime.dispose();
 }

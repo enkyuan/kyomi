@@ -15,13 +15,8 @@ import {
   feedCandidateRow,
   readingRow,
   renderSql,
+  run,
 } from "./fakes";
-
-type Db = Parameters<typeof listContinueReading>[0];
-
-function asDb(fake: ReturnType<typeof createViewDb>): Db {
-  return fake.db as unknown as Db;
-}
 
 describe("normalizeContinueReadingLimit", () => {
   test("defaults to 5 and clamps to 1..20", () => {
@@ -38,7 +33,7 @@ describe("listContinueReading", () => {
   test("returns an unpaginated list response", async () => {
     const fake = createViewDb({ feed: [feedCandidateRow({ reading: readingRow() })] });
 
-    const result = await listContinueReading(asDb(fake), "user-1", 5, NOW);
+    const result = await run(listContinueReading(5), fake);
 
     expect(result.next_cursor).toBeNull();
     expect(result.has_more).toBe(false);
@@ -58,7 +53,7 @@ describe("listContinueReading", () => {
       feed: [feedCandidateRow({ reading, id: "item-a", isSaved: true })],
     });
 
-    const [item] = (await listContinueReading(asDb(fake), "user-1", 5, NOW)).items;
+    const [item] = (await run(listContinueReading(5), fake)).items;
 
     expect(item).toMatchObject({
       id: "item-a",
@@ -87,7 +82,7 @@ describe("listContinueReading", () => {
       clips: [clipCandidateRow(clipReading, "clip-1")],
     });
 
-    const { items } = await listContinueReading(asDb(fake), "user-1", 5, NOW);
+    const { items } = await run(listContinueReading(5), fake);
 
     expect(items.map((item) => `${item.articleType}:${item.id}`)).toEqual([
       "clip:clip-1",
@@ -115,7 +110,7 @@ describe("listContinueReading", () => {
       ],
     });
 
-    const { items } = await listContinueReading(asDb(fake), "user-1", 5, NOW);
+    const { items } = await run(listContinueReading(5), fake);
 
     expect(items.map((item) => item.id)).toEqual(["strong", "saved", "stale"]);
   });
@@ -132,7 +127,7 @@ describe("listContinueReading", () => {
       maxViewedItemCount: 80,
     });
 
-    const { items } = await listContinueReading(asDb(fake), "user-1", 5, NOW);
+    const { items } = await run(listContinueReading(5), fake);
 
     expect(items.map((item) => item.id)).toEqual(["familiar", "unfamiliar"]);
   });
@@ -149,7 +144,7 @@ describe("listContinueReading", () => {
     );
     const fake = createViewDb({ feed });
 
-    const { items } = await listContinueReading(asDb(fake), "user-1", 3, NOW);
+    const { items } = await run(listContinueReading(3), fake);
 
     expect(items.map((item) => item.id)).toEqual(["item-5", "item-4", "item-3"]);
   });
@@ -162,7 +157,7 @@ describe("listContinueReading", () => {
       feed: [second, third, first].map((reading) => feedCandidateRow({ reading })),
     });
 
-    const { items } = await listContinueReading(asDb(fake), "user-1", 5, NOW);
+    const { items } = await run(listContinueReading(5), fake);
 
     expect(items.map((item) => item.id)).toEqual(["b", "a", "c"]);
   });
@@ -187,7 +182,7 @@ describe("listContinueReading", () => {
           feed: [feedCandidateRow({ reading: readingRow({ feedItemId: "x", ...overrides }) })],
         });
 
-        const { items } = await listContinueReading(asDb(fake), "user-1", 5, NOW);
+        const { items } = await run(listContinueReading(5), fake);
 
         expect(items).toEqual([]);
       });
@@ -198,7 +193,7 @@ describe("listContinueReading", () => {
         feed: [feedCandidateRow({ reading: readingRow(), hiddenAt: ago(HOUR) })],
       });
 
-      expect((await listContinueReading(asDb(fake), "user-1", 5, NOW)).items).toEqual([]);
+      expect((await run(listContinueReading(5), fake)).items).toEqual([]);
     });
 
     test("an ineligible row does not displace eligible ones", async () => {
@@ -211,7 +206,7 @@ describe("listContinueReading", () => {
         ],
       });
 
-      const { items } = await listContinueReading(asDb(fake), "user-1", 5, NOW);
+      const { items } = await run(listContinueReading(5), fake);
 
       expect(items.map((item) => item.id)).toEqual(["ok"]);
     });
@@ -221,7 +216,7 @@ describe("listContinueReading", () => {
     test("every candidate query is scoped to the caller and the due window", async () => {
       const fake = createViewDb({});
 
-      await listContinueReading(asDb(fake), "user-42", 5, NOW);
+      await run(listContinueReading(5), fake, "user-42");
 
       const reads = fake.queries.filter((query) => query.where !== undefined);
       // feed candidates, clip candidates, and the affinity denominator
@@ -248,7 +243,7 @@ describe("listContinueReading", () => {
     test("clip candidates also require the clip to belong to the caller", async () => {
       const fake = createViewDb({});
 
-      await listContinueReading(asDb(fake), "user-42", 5, NOW);
+      await run(listContinueReading(5), fake, "user-42");
 
       const clipRead = fake.queries.find(
         (query) => query.joins.length === 1 && query.limit === 200,
@@ -261,7 +256,7 @@ describe("listContinueReading", () => {
     test("feed candidates scope user state and stats joins and skip hidden items", async () => {
       const fake = createViewDb({});
 
-      await listContinueReading(asDb(fake), "user-42", 5, NOW);
+      await run(listContinueReading(5), fake, "user-42");
 
       const feedRead = fake.queries.find((query) => query.joins.length === 4);
       const { sql } = renderSql(feedRead!.where!);

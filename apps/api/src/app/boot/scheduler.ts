@@ -1,29 +1,18 @@
-import { db } from "@adapters/db/client";
-import { logger } from "@adapters/logger";
-import { closeRedis, getRedis } from "@adapters/redis";
-import { runImportDispatcherLoop } from "../jobs/dispatcher";
-import { runFeedRefreshSchedulerLoop } from "../jobs/scheduler";
+import { Effect } from "effect";
+import { developmentSchemaReady } from "@adapters/db/guard";
+import { importDispatcherLoop } from "../jobs/dispatcher";
+import { feedRefreshSchedulerLoop } from "../jobs/scheduler";
+import { AppLive } from "../runtime";
+import { runMain } from "../setup/main";
 
-const controller = new AbortController();
-
-for (const signalName of ["SIGINT", "SIGTERM"] as const) {
-  process.on(signalName, () => {
-    logger.info("scheduler.shutdown.requested", { signal: signalName });
-    controller.abort();
+// Both loops run until the process is told to stop; if one of them dies the other is interrupted
+// and the process exits non-zero instead of limping on with half a scheduler.
+const scheduler = Effect.gen(function* () {
+  yield* developmentSchemaReady;
+  yield* Effect.all([feedRefreshSchedulerLoop, importDispatcherLoop], {
+    concurrency: "unbounded",
+    discard: true,
   });
-}
+}).pipe(Effect.provide(AppLive));
 
-try {
-  const redis = getRedis();
-  await Promise.all([
-    runFeedRefreshSchedulerLoop(redis, controller.signal),
-    runImportDispatcherLoop(db, redis, logger, controller.signal),
-  ]);
-} catch (error) {
-  logger.error("scheduler.crashed", {
-    error: error instanceof Error ? error.message : String(error),
-  });
-  throw error;
-} finally {
-  await closeRedis();
-}
+runMain(scheduler);

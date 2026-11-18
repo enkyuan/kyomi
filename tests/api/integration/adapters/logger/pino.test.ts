@@ -7,7 +7,7 @@ describe("formatLogLine error serialization", () => {
     root.name = "DatabaseError";
     const outer = new Error("Failed query: SELECT …");
     outer.name = "DrizzleQueryError";
-    (outer as Record<string, unknown>).cause = root;
+    (outer as unknown as Record<string, unknown>).cause = root;
 
     const line = formatLogLine("error", "test.event", { error: outer });
 
@@ -41,10 +41,10 @@ describe("formatLogLine error serialization", () => {
     inner.name = "InnerError";
     const middle = new Error("mid");
     middle.name = "MiddleError";
-    (middle as Record<string, unknown>).cause = inner;
+    (middle as unknown as Record<string, unknown>).cause = inner;
     const outer = new Error("outer");
     outer.name = "OuterError";
-    (outer as Record<string, unknown>).cause = middle;
+    (outer as unknown as Record<string, unknown>).cause = middle;
 
     const line = formatLogLine("error", "test.event", { error: outer });
 

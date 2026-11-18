@@ -6,11 +6,11 @@ the backend. built with Bun and Elysia.
 
 ```text
 src/
-  app/       process boot (`boot/server.ts`, `worker.ts`, `scheduler.ts`, `dev.ts`, operator scripts), HTTP assembly, and job setup.
-  adapters/  auth, database, logging, Redis, queue, search, CORS, and OpenAPI boundaries.
-  config/    typed environment loading.
-  modules/   product domains: articles, discover, favicon, feeds, folders, health, inbox, opml, queue, users.
-  shared/    errors, HTTP helpers, network guards, and text decoding used across modules.
+  app/       `runtime.ts` (`AppLive`, the one composition root), process boot (`boot/server.ts`, `worker.ts`, `scheduler.ts`, `dev.ts`, operator scripts), HTTP assembly, jobs, and `setup/main.ts` (`runMain`).
+  adapters/  Effect services and Layers for auth, database, logging, Redis, queue, rate limits, search, and outbound HTTP, plus CORS and OpenAPI plugins.
+  config/    typed environment loading (`AppConfig` service).
+  modules/   product domains: articles, catalog, discover, favicon, feeds, folders, health, inbox, opml, queue, users.
+  shared/    the typed error catalogue, the Elysia to Effect bridge and error rendering, network guards, and text decoding used across modules.
 ```
 
 product routes mount under `/api/v1`. probes live at `/health`, `/ready`, `/queue/health`, and their `/api/*` mirrors.
@@ -43,4 +43,6 @@ operator scripts live in `src/app/boot` because they write through api adapters.
 
 - env is loaded with `dotenvx` from `docker/.env` and `apps/api/.env`.
 - database schema lives in `packages/db`; migrations run through the root `db:*` scripts.
+- the api runs on Effect v4: services and Layers composed once in `src/app/runtime.ts`, typed errors rendered to one wire envelope, and every process entrypoint run through `runMain` so Layer scopes own shutdown. Elysia stays the HTTP adapter. see [`docs/architecture/api-effect.md`](../../docs/architecture/api-effect.md).
+- tests swap Layers (`tests/api/integration/support/layers.ts`) instead of `mock.module` or patching `fetch`; tests that need no services run with `SKIP_ENV_VALIDATION=true bunx --no-install dotenvx run -f ../../docker/.env.example -f .env.example -- bun test ../../tests/api/integration/<path>` from `apps/api`.
 - shared ingestion, queue contracts, and sanitization live in `@kyomi/ingest`. this app owns the executable processes that drive them.

@@ -1,7 +1,13 @@
+import { Effect, Layer } from "effect";
+import { TestClock } from "effect/testing";
 import { articleClips, feedUserStats } from "@kyomi/db";
 import { PgDialect } from "drizzle-orm/pg-core";
 import type { SQL } from "drizzle-orm";
+import type { Db } from "@adapters/db/service";
+import type { AppConfig } from "@config/env/service";
 import type { ReadingStateRow } from "@modules/articles/progress/write";
+import { CurrentUser } from "@shared/effect/request";
+import { fakeDb, testConfig } from "@api-tests/support/layers";
 
 export const NOW = new Date("2026-10-24T12:00:00.000Z");
 export const HOUR = 3_600_000;
@@ -9,6 +15,38 @@ export const DAY = 24 * HOUR;
 
 export function ago(ms: number): Date {
   return new Date(NOW.getTime() - ms);
+}
+
+type FakeDatabase = { db: object };
+
+/** The Layers an operation runs against: the fake database, and a clock fixed at `NOW`. */
+function operationLayers(fake: FakeDatabase, userId: string) {
+  return <A, E>(effect: Effect.Effect<A, E, Db | AppConfig | CurrentUser>) =>
+    TestClock.setTime(NOW.getTime()).pipe(
+      Effect.andThen(effect),
+      Effect.provideService(CurrentUser, { userId }),
+      Effect.provide(
+        Layer.mergeAll(fakeDb(fake.db), testConfig(), TestClock.layer()).pipe(Layer.orDie),
+      ),
+    );
+}
+
+/** Runs an operation as `userId` against the fake database, with the clock fixed at `NOW`. */
+export function run<A, E>(
+  effect: Effect.Effect<A, E, Db | AppConfig | CurrentUser>,
+  fake: FakeDatabase,
+  userId = "user-1",
+): Promise<A> {
+  return Effect.runPromise(operationLayers(fake, userId)(effect));
+}
+
+/** The typed failure an operation ends with. */
+export function runFailure<A, E>(
+  effect: Effect.Effect<A, E, Db | AppConfig | CurrentUser>,
+  fake: FakeDatabase,
+  userId = "user-1",
+): Promise<E> {
+  return Effect.runPromise(Effect.flip(operationLayers(fake, userId)(effect)));
 }
 
 export function renderSql(fragment: SQL): { sql: string; params: unknown[] } {

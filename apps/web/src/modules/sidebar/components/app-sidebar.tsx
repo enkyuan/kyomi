@@ -3,7 +3,7 @@
 import type { CSSProperties } from "react";
 import { Suspense, useReducer } from "react";
 import { Link } from "@tanstack/react-router";
-import { PlusIcon, SettingsIcon } from "@kyomi/ui/icons/blode";
+import { PlusIcon, SettingsFilledIcon } from "@kyomi/ui/icons/blode";
 import { KyomiLogo, PremiumIcon } from "@kyomi/ui/icons";
 import { ScrollArea } from "@kyomi/ui/components/scroll-area";
 import {
@@ -222,7 +222,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               onFocus={preloadSettingsDialog}
               onPointerEnter={preloadSettingsDialog}
             >
-              <SettingsIcon size={24} />
+              <SettingsFilledIcon size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

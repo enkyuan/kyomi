@@ -118,11 +118,14 @@ const config = defineConfig(({ command }) => {
       noExternal: ["blode-icons-react"],
     },
     optimizeDeps: {
+      // Pre-bundle the npm packages, never `@kyomi/ui` source files: Vite keys its dependency cache
+      // on the lockfile and config, so a workspace re-export (`@kyomi/ui/icons/blode`) that gained a
+      // name stayed stale until `vite --force` ("does not provide an export named ...").
       include: [
         "react",
         "react-dom",
-        "@kyomi/ui/icons/blode",
-        "@kyomi/ui/lib/motion",
+        "blode-icons-react",
+        "motion/react",
         "@tanstack/react-query",
         "@tanstack/react-router",
         "@tanstack/react-virtual",

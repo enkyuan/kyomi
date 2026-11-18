@@ -1,12 +1,12 @@
 import { afterEach, describe, expect, test } from "bun:test";
-import { toFeedArticleDetailDtoForTest } from "@modules/articles/read/detail";
+import { toFeedArticleDetailDto } from "@modules/articles/read/detail";
 import { parseSupportedDocumentVersion } from "@modules/articles/document/negotiate";
 import { articleDetailSchema } from "@kyomi/reader/schemas/article";
 import { applyStoredDocuments, withNegotiatedDocuments } from "@modules/articles/document/serve";
-import { fakeDocument, TEST_COMPILER_VERSION } from "./helpers";
+import { fakeDocument, runWithDb, TEST_COMPILER_VERSION } from "./helpers";
 
 function article() {
-  return toFeedArticleDetailDtoForTest({
+  return toFeedArticleDetailDto({
     id: "a1",
     title: "Entry",
     link: "https://example.com/post",
@@ -94,20 +94,47 @@ describe("document bodies and the shared reader schema", () => {
 });
 
 describe("withNegotiatedDocuments", () => {
-  // No database is passed: when negotiation is off the stored columns must not be read.
-  const noDatabase = null as never;
+  // `fakeDb()` has no methods, so any read of the stored columns throws: when negotiation is off
+  // the database must not be touched.
+  const negotiate = (options: { enabled: boolean; maxVersion: number }) => {
+    const base = article();
+    return runWithDb(withNegotiatedDocuments(base, options), {}).then((result) => ({
+      base,
+      result,
+    }));
+  };
 
   test("returns the article untouched when the feature flag is off", async () => {
-    const base = article();
-    expect(await withNegotiatedDocuments(noDatabase, base, { enabled: false, maxVersion: 1 })).toBe(
-      base,
-    );
+    const { base, result } = await negotiate({ enabled: false, maxVersion: 1 });
+    expect(result).toBe(base);
   });
 
   test("returns the article untouched when the client did not declare support", async () => {
-    const base = article();
-    expect(await withNegotiatedDocuments(noDatabase, base, { enabled: true, maxVersion: 0 })).toBe(
-      base,
+    const { base, result } = await negotiate({ enabled: true, maxVersion: 0 });
+    expect(result).toBe(base);
+  });
+
+  test("swaps in the stored document when negotiation is on", async () => {
+    const select = () => ({
+      from: () => ({
+        where: () => ({
+          limit: async () => [
+            {
+              document: fakeDocument(),
+              documentVersion: 1,
+              compilerVersion: TEST_COMPILER_VERSION,
+              extractedDocument: null,
+              extractedDocumentVersion: null,
+              extractedCompilerVersion: null,
+            },
+          ],
+        }),
+      }),
+    });
+    const result = await runWithDb(
+      withNegotiatedDocuments(article(), { enabled: true, maxVersion: 1 }),
+      { select },
     );
+    expect(result.reader.selected.bodyKind).toBe("document");
   });
 });

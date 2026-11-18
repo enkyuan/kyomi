@@ -1,26 +1,26 @@
+import { Cause, Effect } from "effect";
 import { eq } from "drizzle-orm";
 import { feeds } from "@kyomi/db";
-import type { db } from "@adapters/db/client";
-import { AppError } from "@shared/errors/app";
+import { Db } from "@adapters/db/service";
+import { AppLogger } from "@adapters/logger/service";
 import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize";
-import { resolveRemoteFeed } from "@modules/discover/feed/resolve/remote";
 import { resolveRemoteFeedFavicon } from "@modules/discover/feed/resolve/favicon";
-import { logger } from "@adapters/logger";
+import { resolveRemoteFeed, type ResolvedRemoteFeed } from "@modules/discover/feed/resolve/remote";
+import { currentDate } from "@shared/effect/clock";
 import { decodeText } from "@shared/text/entities";
+import { FeedBackground } from "../service";
+import { feedNotFound } from "../errors";
 import type { FeedSubscribeResultDto } from "../types";
 import {
-  indexFeedForSearch,
+  inTransaction,
   subscribeUserToFeed,
   upsertFeedRecord,
   type FaviconEnrichment,
   type SubscriptionInsertOptions,
 } from "./persistence";
+import { indexFeedForSearch } from "./search";
 
-type DB = typeof db;
-
-function resolveImmediateFavicon(
-  resolved: Awaited<ReturnType<typeof resolveRemoteFeed>>,
-): FaviconEnrichment {
+function resolveImmediateFavicon(resolved: ResolvedRemoteFeed): FaviconEnrichment {
   const embeddedIconUrl = resolved.iconUrl?.trim();
   if (!embeddedIconUrl) {
     return null;
@@ -36,164 +36,179 @@ function normalizeExistingFeedLookupUrl(rawUrl: string): string | null {
   }
 }
 
-async function subscribeToExistingFeedByUrl(
-  database: DB,
-  userId: string,
-  rawUrl: string,
-  options?: SubscriptionInsertOptions,
-): Promise<FeedSubscribeResultDto | null> {
-  const normalizedUrl = normalizeExistingFeedLookupUrl(rawUrl);
-  if (!normalizedUrl) {
-    return null;
-  }
+/** Subscribe to a feed row that already exists (no remote fetch). */
+export const subscribeToExistingFeed = Effect.fn("feeds.subscription.subscribe_existing")(
+  function* (userId: string, feedId: string, options?: SubscriptionInsertOptions) {
+    const now = yield* currentDate;
+    const subscribed = yield* inTransaction(
+      "feeds.subscribe_existing",
+      async (tx): Promise<FeedSubscribeResultDto | null> => {
+        const feedRow = await tx
+          .select({
+            id: feeds.id,
+            url: feeds.url,
+            title: feeds.title,
+            link: feeds.link,
+            faviconUrl: feeds.faviconUrl,
+            faviconSource: feeds.faviconSource,
+          })
+          .from(feeds)
+          .where(eq(feeds.id, feedId))
+          .limit(1);
 
-  const feedRow = await database
-    .select({ id: feeds.id })
-    .from(feeds)
-    .where(eq(feeds.url, normalizedUrl))
-    .limit(1);
-  const existingFeed = feedRow[0];
-  if (!existingFeed) {
-    return null;
-  }
+        const feed = feedRow[0];
+        if (!feed) {
+          return null;
+        }
 
-  return subscribeToExistingFeed(database, userId, existingFeed.id, options);
-}
+        const { subscriptionId, newSubscription } = await subscribeUserToFeed(
+          tx,
+          userId,
+          feed.id,
+          now,
+          options,
+        );
 
-async function enrichFaviconInBackground(
-  database: DB,
-  resolved: Awaited<ReturnType<typeof resolveRemoteFeed>>,
-): Promise<void> {
-  try {
-    const enriched = await resolveRemoteFeedFavicon(database, resolved, logger);
-    if (!enriched) {
-      return;
+        return {
+          feedId: feed.id,
+          subscriptionId,
+          url: feed.url,
+          title: decodeText(feed.title),
+          link: feed.link,
+          faviconUrl: feed.faviconUrl,
+          faviconSource: feed.faviconSource,
+          newFeed: false,
+          newSubscription,
+        };
+      },
+    );
+    if (!subscribed) {
+      return yield* feedNotFound();
+    }
+    return subscribed;
+  },
+);
+
+const subscribeToExistingFeedByUrl = Effect.fn("feeds.subscription.subscribe_by_known_url")(
+  function* (userId: string, rawUrl: string, options?: SubscriptionInsertOptions) {
+    const normalizedUrl = normalizeExistingFeedLookupUrl(rawUrl);
+    if (!normalizedUrl) {
+      return null;
     }
 
-    const persisted = await database.transaction(async (tx) =>
-      upsertFeedRecord(tx, resolved, enriched),
+    const db = yield* Db;
+    const feedRow = yield* db.use("feeds.find_by_url", (client) =>
+      client.select({ id: feeds.id }).from(feeds).where(eq(feeds.url, normalizedUrl)).limit(1),
     );
-    await indexFeedForSearch({
-      id: persisted.feedId,
-      url: resolved.canonicalUrl,
-      title: decodeText(resolved.title),
-      description: decodeText(resolved.description),
-      link: resolved.link,
-      faviconUrl: persisted.faviconUrl,
-    });
-  } catch (error) {
-    logger.warn("feeds.favicon.enrich_background_failed", {
-      url: resolved.canonicalUrl,
-      error: error instanceof Error ? error.message : String(error),
-    });
+    const existingFeed = feedRow[0];
+    if (!existingFeed) {
+      return null;
+    }
+
+    return yield* subscribeToExistingFeed(userId, existingFeed.id, options);
+  },
+);
+
+/** Probe the website's favicon and, when one is found, persist and re-index it. */
+const enrichFavicon = Effect.fn("feeds.subscription.enrich_favicon")(function* (
+  resolved: ResolvedRemoteFeed,
+) {
+  const enriched = yield* resolveRemoteFeedFavicon(resolved);
+  if (!enriched) {
+    return;
   }
-}
+
+  const now = yield* currentDate;
+  const persisted = yield* inTransaction("feeds.favicon.persist", (tx) =>
+    upsertFeedRecord(tx, resolved, enriched, now),
+  );
+  yield* indexFeedForSearch({
+    id: persisted.feedId,
+    url: resolved.canonicalUrl,
+    title: decodeText(resolved.title),
+    description: decodeText(resolved.description),
+    link: resolved.link,
+    faviconUrl: persisted.faviconUrl,
+  });
+});
+
+/** `enrichFavicon` as background work: whatever goes wrong is logged with its cause chain. */
+const enrichFaviconInBackground = Effect.fn("feeds.subscription.enrich_favicon_background")(
+  function* (resolved: ResolvedRemoteFeed) {
+    const log = yield* AppLogger;
+    yield* enrichFavicon(resolved).pipe(
+      Effect.catchCause((cause) =>
+        log.warn("feeds.favicon.enrich_background_failed", {
+          url: resolved.canonicalUrl,
+          error: Cause.pretty(cause),
+        }),
+      ),
+    );
+  },
+);
 
 /**
  * Fetch feed document, upsert `feeds` by canonical URL, ensure
  * `feed_subscriptions` row for user, and index for search.
  */
-export async function createOrSubscribeToFeed(
-  database: DB,
-  userId: string,
-  rawUrl: string,
-  options?: SubscriptionInsertOptions,
-): Promise<FeedSubscribeResultDto> {
-  const existing = await subscribeToExistingFeedByUrl(database, userId, rawUrl, options);
-  if (existing) {
-    return existing;
-  }
-
-  const resolved = await resolveRemoteFeed(rawUrl);
-
-  // Never block subscription flow on remote favicon probing.
-  const favicon: FaviconEnrichment = resolveImmediateFavicon(resolved);
-
-  const result = await database.transaction(async (tx) => {
-    const { feedId, newFeed, faviconUrl, faviconSource } = await upsertFeedRecord(
-      tx,
-      resolved,
-      favicon,
-    );
-    const { subscriptionId, newSubscription } = await subscribeUserToFeed(
-      tx,
-      userId,
-      feedId,
-      options,
-    );
-
-    return {
-      feedId,
-      subscriptionId,
-      url: resolved.canonicalUrl,
-      title: decodeText(resolved.title),
-      link: resolved.link,
-      faviconUrl,
-      faviconSource,
-      newFeed,
-      newSubscription,
-    };
-  });
-
-  await indexFeedForSearch({
-    id: result.feedId,
-    url: result.url,
-    title: decodeText(result.title),
-    description: decodeText(resolved.description),
-    link: result.link,
-    faviconUrl: result.faviconUrl,
-  });
-
-  if (!result.faviconUrl || result.faviconSource === "feed_icon") {
-    void enrichFaviconInBackground(database, resolved);
-  }
-
-  return result;
-}
-
-/** Subscribe to a feed row that already exists (no remote fetch). */
-export async function subscribeToExistingFeed(
-  database: DB,
-  userId: string,
-  feedId: string,
-  options?: SubscriptionInsertOptions,
-): Promise<FeedSubscribeResultDto> {
-  return await database.transaction(async (tx) => {
-    const feedRow = await tx
-      .select({
-        id: feeds.id,
-        url: feeds.url,
-        title: feeds.title,
-        link: feeds.link,
-        faviconUrl: feeds.faviconUrl,
-        faviconSource: feeds.faviconSource,
-      })
-      .from(feeds)
-      .where(eq(feeds.id, feedId))
-      .limit(1);
-
-    const feed = feedRow[0];
-    if (!feed) {
-      throw new AppError("Feed not found", { status: 404, code: "FEED_NOT_FOUND" });
+export const createOrSubscribeToFeed = Effect.fn("feeds.subscription.create_or_subscribe")(
+  function* (userId: string, rawUrl: string, options?: SubscriptionInsertOptions) {
+    const background = yield* FeedBackground;
+    const existing = yield* subscribeToExistingFeedByUrl(userId, rawUrl, options);
+    if (existing) {
+      return existing;
     }
 
-    const { subscriptionId, newSubscription } = await subscribeUserToFeed(
-      tx,
-      userId,
-      feed.id,
-      options,
+    const resolved = yield* resolveRemoteFeed(rawUrl);
+
+    // Never block subscription flow on remote favicon probing.
+    const favicon: FaviconEnrichment = resolveImmediateFavicon(resolved);
+
+    const now = yield* currentDate;
+    const result = yield* inTransaction(
+      "feeds.subscribe_create",
+      async (tx): Promise<FeedSubscribeResultDto> => {
+        const { feedId, newFeed, faviconUrl, faviconSource } = await upsertFeedRecord(
+          tx,
+          resolved,
+          favicon,
+          now,
+        );
+        const { subscriptionId, newSubscription } = await subscribeUserToFeed(
+          tx,
+          userId,
+          feedId,
+          now,
+          options,
+        );
+
+        return {
+          feedId,
+          subscriptionId,
+          url: resolved.canonicalUrl,
+          title: decodeText(resolved.title),
+          link: resolved.link,
+          faviconUrl,
+          faviconSource,
+          newFeed,
+          newSubscription,
+        };
+      },
     );
 
-    return {
-      feedId: feed.id,
-      subscriptionId,
-      url: feed.url,
-      title: decodeText(feed.title),
-      link: feed.link,
-      faviconUrl: feed.faviconUrl,
-      faviconSource: feed.faviconSource,
-      newFeed: false,
-      newSubscription,
-    };
-  });
-}
+    yield* indexFeedForSearch({
+      id: result.feedId,
+      url: result.url,
+      title: decodeText(result.title),
+      description: decodeText(resolved.description),
+      link: result.link,
+      faviconUrl: result.faviconUrl,
+    });
+
+    if (!result.faviconUrl || result.faviconSource === "feed_icon") {
+      yield* background.run(enrichFaviconInBackground(resolved));
+    }
+
+    return result;
+  },
+);

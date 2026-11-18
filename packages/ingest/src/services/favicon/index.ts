@@ -1,4 +1,4 @@
-export { assertSafeFaviconHost, ALLOWED_SCHEMES } from "./host-safety";
+export { ALLOWED_SCHEMES } from "../../lib/outbound";
 export {
   createDrizzleFaviconHostStore,
   faviconSourceRank,
@@ -12,7 +12,6 @@ export {
 export { FAVICON_PROXY_VERSION, buildClientFaviconUrl } from "./proxy-url";
 export {
   resolveFeedFaviconUrl,
-  tryFetchImage,
   tryFetchImageIfHostSafe,
   findIconsFromHtml,
   findIconFromHtml,

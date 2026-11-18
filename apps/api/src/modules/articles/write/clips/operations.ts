@@ -1,27 +1,27 @@
-import type { db } from "@adapters/db/client";
+import { Effect } from "effect";
+import { articleClips } from "@kyomi/db";
+import { and, eq } from "drizzle-orm";
+import { Db } from "@adapters/db/service";
+import { AppLogger } from "@adapters/logger/service";
+import { JobQueue } from "@adapters/queue/service";
 import { enqueueEnrichmentForStoredDocument } from "@modules/articles/document/enrich";
 import { compileBodyDocumentColumns } from "@modules/articles/document/stored";
-import { getRedis } from "@adapters/redis";
-import { publishJob } from "@adapters/queue/publish";
-import { articleClips } from "@kyomi/db";
-import type { ArticleExtractionJob } from "@kyomi/ingest";
-import { assertHttpOrHttpsUrl } from "@modules/discover/feed/normalize";
-import { and, asc, desc, eq, gt, gte, ilike, lt, or, type SQL } from "drizzle-orm";
-import { AppError } from "@shared/errors/app";
-import { assertContentFieldBudget } from "@shared/http/budget";
-import type { ArticleSort } from "@modules/articles/params";
-import {
-  ARTICLE_HTML_SANITIZER_VERSION,
-  buildStoredContentRecord,
-  processIngestedArticleHtml,
-} from "@modules/articles/reader/content";
-import type { ArticleDetailDto, ArticlesCursorListResponseDto } from "@modules/articles/types";
+import { buildStoredContentRecord } from "@modules/articles/reader/content";
+import type { ArticleDetailDto } from "@modules/articles/types";
+import { BadRequest, InternalError } from "@shared/effect/errors";
+import { serializeError } from "@shared/errors/serialize";
+import { checkContentFieldBudget } from "@shared/http/budget";
+import { assertHttpOrHttpsUrl } from "@shared/net/http";
+import { currentDate } from "@shared/effect/clock";
+import { articleNotFound } from "../../errors";
+import { hasAnyOwn, savedAtAfter } from "../fields";
+import { compileClientHtml } from "../html";
 import { clipReadColumns, type ClipReadRow } from "./columns";
-import { clipToDetail, clipToListItem } from "./detail";
-import { attachReadingProgress } from "@modules/articles/progress/read";
-import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./constants";
+import { CLIP_LIST_FEED_TITLE } from "./constants";
+import { clipToDetail } from "./detail";
 
-type DB = typeof db;
+/** Listing lives with the other clip queries; re-exported for existing importers. */
+export { listClipsForUser, type ListClipsOptions } from "./queries";
 
 export type CreateArticleClipBody = {
   url: string;
@@ -30,32 +30,49 @@ export type CreateArticleClipBody = {
   note?: string;
 };
 
-export type ListClipsOptions = {
-  search?: string;
-  isRead?: boolean;
+export type ClipUpdateBody = {
+  isRead?: boolean | null;
   isSaved?: boolean;
-  publishedAfter?: Date;
-  publishedBefore?: Date;
-  sort?: ArticleSort;
-  limit: number;
-  cursor?: string;
-  /** Merged feed+clip pagination boundary in the active sort order. */
-  exclusiveBefore?: { publishedAt: Date; id: string; isRead?: boolean };
+  title?: string;
+  note?: string | null;
+  content?: string | null;
+  contentHtml?: string | null;
+  contentText?: string | null;
+  contentMarkdown?: string | null;
+  contentStatus?: ArticleDetailDto["contentStatus"] | null;
+  contentSource?: ArticleDetailDto["contentSource"] | null;
+  extractionErrorCode?: string | null;
+  extractionErrorMessage?: string | null;
 };
 
-type ClipCursor = { publishedAt: Date; id: string; isRead?: boolean };
+/** The keys an update body may carry; routes copy exactly these from the validated request. */
+export const CLIP_UPDATE_KEYS = [
+  "isRead",
+  "isSaved",
+  "title",
+  "note",
+  "content",
+  "contentHtml",
+  "contentText",
+  "contentMarkdown",
+  "contentStatus",
+  "contentSource",
+  "extractionErrorCode",
+  "extractionErrorMessage",
+] as const satisfies readonly (keyof ClipUpdateBody)[];
 
-function ensureClipUrl(rawUrl: string): string {
+function ensureClipUrl(rawUrl: string): Effect.Effect<string, BadRequest> {
   const trimmedUrl = rawUrl.trim();
   if (!trimmedUrl) {
-    throw new AppError("url is required", { status: 400, code: "CLIP_URL_REQUIRED" });
+    return Effect.fail(new BadRequest({ message: "url is required", code: "CLIP_URL_REQUIRED" }));
   }
-  try {
-    assertHttpOrHttpsUrl(trimmedUrl);
-  } catch {
-    throw new AppError("Invalid URL", { status: 400, code: "INVALID_CLIP_URL" });
-  }
-  return trimmedUrl;
+  return Effect.try({
+    try: () => {
+      assertHttpOrHttpsUrl(trimmedUrl);
+      return trimmedUrl;
+    },
+    catch: () => new BadRequest({ message: "Invalid URL", code: "INVALID_CLIP_URL" }),
+  });
 }
 
 function deriveTitleFromContent(content: string | null): string {
@@ -96,141 +113,65 @@ function resolveClipTitle(
   return deriveFallbackTitle(url);
 }
 
-function assertClipUpdateHasFields(body: ClipUpdateBody): void {
-  const hasAny =
-    Object.hasOwn(body, "isRead") ||
-    Object.hasOwn(body, "isSaved") ||
-    Object.hasOwn(body, "title") ||
-    Object.hasOwn(body, "note") ||
-    Object.hasOwn(body, "content") ||
-    Object.hasOwn(body, "contentHtml") ||
-    Object.hasOwn(body, "contentText") ||
-    Object.hasOwn(body, "contentMarkdown") ||
-    Object.hasOwn(body, "contentStatus") ||
-    Object.hasOwn(body, "contentSource") ||
-    Object.hasOwn(body, "extractionErrorCode") ||
-    Object.hasOwn(body, "extractionErrorMessage");
-  if (!hasAny) {
-    throw new AppError("No updatable fields provided", { status: 400, code: "EMPTY_UPDATE" });
-  }
-}
-
-async function resolveClipHtml(
-  value: string | null | undefined,
+/** Field-by-field merge of an update body over the stored clip; absent keys keep their value. */
+const resolveClipUpdateValues = Effect.fn("articles.clip.resolve_update")(function* (
+  body: ClipUpdateBody,
   prev: ClipReadRow,
-): Promise<{
-  contentHtml: string | null;
-  contentRaw: string | null;
-  version: string | null;
-  documentColumns: Awaited<ReturnType<typeof compileBodyDocumentColumns>>;
-}> {
-  const raw = value?.trim() ? value : null;
-  if (!raw) {
-    return {
-      contentHtml: null,
-      contentRaw: null,
-      version: null,
-      documentColumns: await compileBodyDocumentColumns({
-        raw: null,
-        contentSource: null,
-        baseUrl: null,
-        title: null,
-      }),
-    };
-  }
-  const compiled = processIngestedArticleHtml(raw, { baseUrl: prev.url, title: prev.title });
-  return {
-    contentHtml: compiled.html || null,
-    contentRaw: raw,
-    version: ARTICLE_HTML_SANITIZER_VERSION,
-    documentColumns: await compileBodyDocumentColumns({
-      raw,
-      contentSource: "feed_html",
-      baseUrl: prev.url,
-      title: prev.title,
-    }),
-  };
-}
+  now: Date,
+) {
+  const pick = <K extends keyof ClipUpdateBody & keyof ClipReadRow>(key: K) =>
+    (Object.hasOwn(body, key) ? body[key] : prev[key]) as ClipReadRow[K];
 
-async function resolveClipUpdateValues(body: ClipUpdateBody, prev: ClipReadRow, now: Date) {
   const title =
     Object.hasOwn(body, "title") && typeof body.title === "string"
       ? body.title.trim() || prev.title
       : prev.title;
-  // Client-provided HTML is untrusted: compile it once here and keep the original as raw source.
   const html = Object.hasOwn(body, "contentHtml")
-    ? await resolveClipHtml(body.contentHtml, prev)
+    ? yield* compileClientHtml(body.contentHtml, { baseUrl: prev.url, title: prev.title })
     : null;
-  const contentText = Object.hasOwn(body, "contentText") ? body.contentText : prev.contentText;
-  const contentMarkdown = Object.hasOwn(body, "contentMarkdown")
-    ? body.contentMarkdown
-    : prev.contentMarkdown;
-  const contentStatus = Object.hasOwn(body, "contentStatus")
-    ? body.contentStatus
-    : prev.contentStatus;
-  const contentSource = Object.hasOwn(body, "contentSource")
-    ? body.contentSource
-    : prev.contentSource;
-  const extractionErrorCode = Object.hasOwn(body, "extractionErrorCode")
-    ? body.extractionErrorCode
-    : prev.extractionErrorCode;
-  const extractionErrorMessage = Object.hasOwn(body, "extractionErrorMessage")
-    ? body.extractionErrorMessage
-    : prev.extractionErrorMessage;
-  const isSaved = Object.hasOwn(body, "isSaved") ? body.isSaved === true : prev.isSaved;
-  const savedAt = Object.hasOwn(body, "isSaved")
-    ? isSaved
-      ? (prev.savedAt ?? now)
-      : null
-    : prev.savedAt;
+  const hasSaved = Object.hasOwn(body, "isSaved");
+
   return {
     title,
-    note: Object.hasOwn(body, "note") ? body.note : prev.note,
-    content: Object.hasOwn(body, "content") ? body.content : prev.content,
+    note: pick("note"),
+    content: pick("content"),
     contentHtml: html ? html.contentHtml : prev.contentHtml,
-    ...(html
-      ? {
-          contentRaw: html.contentRaw,
-          contentSanitizerVersion: html.version,
-          documentColumns: html.documentColumns,
-        }
-      : {}),
-    contentText,
-    contentMarkdown,
-    contentStatus,
-    contentSource,
-    extractionErrorCode,
-    extractionErrorMessage,
+    html,
+    contentText: pick("contentText"),
+    contentMarkdown: pick("contentMarkdown"),
+    contentStatus: pick("contentStatus"),
+    contentSource: pick("contentSource"),
+    extractionErrorCode: pick("extractionErrorCode"),
+    extractionErrorMessage: pick("extractionErrorMessage"),
     isRead: Object.hasOwn(body, "isRead") ? body.isRead === true : prev.isRead,
-    isSaved,
-    savedAt,
+    isSaved: hasSaved ? body.isSaved === true : prev.isSaved,
+    savedAt: savedAtAfter(prev.savedAt, hasSaved ? body.isSaved === true : undefined, now),
   };
-}
+});
 
-export type CreateArticleClipOptions = {
-  enqueueExtractionJob?: (job: ArticleExtractionJob) => Promise<string>;
-};
-
-async function defaultEnqueueExtractionJob(job: ArticleExtractionJob): Promise<string> {
-  return publishJob(getRedis(), job);
-}
-
-export async function createArticleClip(
-  database: DB,
+/**
+ * Saves a link (and optional pasted content) as a clip. A clip without content gets a full-text
+ * extraction job; when that job cannot be queued the clip stays and is marked as failed to extract.
+ */
+export const createArticleClip = Effect.fn("articles.clip.create")(function* (
   userId: string,
   body: CreateArticleClipBody,
-  options: CreateArticleClipOptions = {},
-): Promise<ArticleDetailDto> {
-  assertContentFieldBudget([{ name: "content", value: body.content }]);
-  const trimmedUrl = ensureClipUrl(body.url);
+) {
+  const db = yield* Db;
+  const queue = yield* JobQueue;
+  const log = yield* AppLogger;
+
+  yield* checkContentFieldBudget([{ name: "content", value: body.content }]);
+  const url = yield* ensureClipUrl(body.url);
   const content = body.content?.trim() || null;
-  const title = resolveClipTitle(body.title, content, trimmedUrl);
+  const note = body.note?.trim() || null;
+  const title = resolveClipTitle(body.title, content, url);
   const isAutogeneratedTitle = !body.title?.trim();
   const stored = buildStoredContentRecord({
     articleType: "clip",
     title,
-    summary: body.note?.trim() || null,
-    contentBaseUrl: trimmedUrl,
+    summary: note,
+    contentBaseUrl: url,
     legacyContent: content,
     contentHtml: null,
     contentText: null,
@@ -240,288 +181,161 @@ export async function createArticleClip(
     extractionErrorCode: null,
     extractionErrorMessage: null,
   });
+  const documentColumns = yield* compileBodyDocumentColumns({
+    raw: content,
+    contentSource: stored.contentSource,
+    baseUrl: url,
+    title,
+  });
 
-  const id = crypto.randomUUID();
-  const now = new Date();
-  const inserted = await database
-    .insert(articleClips)
-    .values({
-      id,
-      userId,
-      url: trimmedUrl,
-      title,
-      content,
-      contentHtml: stored.contentHtml,
-      contentRaw: content,
-      contentSanitizerVersion: stored.contentSanitizerVersion,
-      ...(await compileBodyDocumentColumns({
-        raw: content,
-        contentSource: stored.contentSource,
-        baseUrl: trimmedUrl,
+  const now = yield* currentDate;
+  const [row] = yield* db.use("articles.clip.insert", (client) =>
+    client
+      .insert(articleClips)
+      .values({
+        id: crypto.randomUUID(),
+        userId,
+        url,
         title,
-      })),
-      contentText: stored.contentText,
-      contentMarkdown: stored.contentMarkdown,
-      contentStatus: stored.contentStatus,
-      contentSource: stored.contentSource,
-      extractionErrorCode: stored.extractionErrorCode,
-      extractionErrorMessage: stored.extractionErrorMessage,
-      note: body.note?.trim() || null,
-      isRead: false,
-      isSaved: true,
-      savedAt: now,
-      createdAt: now,
-      updatedAt: now,
-    })
-    .returning(clipReadColumns);
-
-  const r = inserted[0];
-  if (!r) {
-    throw new AppError("Failed to create clip", { status: 500, code: "CLIP_CREATE_FAILED" });
-  }
-
-  if (content) {
-    await enqueueEnrichmentForStoredDocument(database, {
-      table: "article_clips",
-      id: r.id,
-      body: "original",
+        content,
+        contentHtml: stored.contentHtml,
+        contentRaw: content,
+        contentSanitizerVersion: stored.contentSanitizerVersion,
+        ...documentColumns,
+        contentText: stored.contentText,
+        contentMarkdown: stored.contentMarkdown,
+        contentStatus: stored.contentStatus,
+        contentSource: stored.contentSource,
+        extractionErrorCode: stored.extractionErrorCode,
+        extractionErrorMessage: stored.extractionErrorMessage,
+        note,
+        isRead: false,
+        isSaved: true,
+        savedAt: now,
+        createdAt: now,
+        updatedAt: now,
+      })
+      .returning(clipReadColumns),
+  );
+  if (!row) {
+    return yield* new InternalError({
+      message: "Failed to create clip",
+      code: "CLIP_CREATE_FAILED",
     });
   }
 
-  if (!content) {
-    const enqueueExtractionJob = options.enqueueExtractionJob ?? defaultEnqueueExtractionJob;
-    try {
-      await enqueueExtractionJob({
+  if (content) {
+    yield* enqueueEnrichmentForStoredDocument({
+      table: "article_clips",
+      id: row.id,
+      body: "original",
+    });
+  } else {
+    yield* queue
+      .publish({
         type: "article.extract",
         payload: {
-          articleId: r.id,
+          articleId: row.id,
           userId,
           requestedAt: now.toISOString(),
           reason: "clip_created",
           replaceClipTitle: isAutogeneratedTitle,
           ...(isAutogeneratedTitle ? { autogeneratedTitleAtQueue: title } : {}),
         },
-      });
-    } catch {
-      await database
-        .update(articleClips)
-        .set({
-          extractedContentStatus: "failed",
-          extractedContentError: "Full text extraction could not be queued.",
-          extractedContentUpdatedAt: now,
-          updatedAt: now,
-        })
-        .where(eq(articleClips.id, r.id));
-    }
+      })
+      .pipe(
+        Effect.catchTag("RedisError", (error) =>
+          Effect.gen(function* () {
+            yield* log.warn("articles.clip.extraction_enqueue_failed", {
+              clipId: row.id,
+              error: serializeError(error),
+            });
+            yield* db.use("articles.clip.mark_extraction_failed", (client) =>
+              client
+                .update(articleClips)
+                .set({
+                  extractedContentStatus: "failed",
+                  extractedContentError: "Full text extraction could not be queued.",
+                  extractedContentUpdatedAt: now,
+                  updatedAt: now,
+                })
+                .where(eq(articleClips.id, row.id)),
+            );
+          }),
+        ),
+      );
   }
 
-  return clipToDetail(r);
-}
+  yield* log.info("articles.clip.created", { userId, clipId: row.id });
+  return clipToDetail(row);
+});
 
-export type ClipUpdateBody = {
-  isRead?: boolean | null;
-  isSaved?: boolean;
-  title?: string;
-  note?: string | null;
-  content?: string | null;
-  contentHtml?: string | null;
-  contentText?: string | null;
-  contentMarkdown?: string | null;
-  contentStatus?: ArticleDetailDto["contentStatus"] | null;
-  contentSource?: ArticleDetailDto["contentSource"] | null;
-  extractionErrorCode?: string | null;
-  extractionErrorMessage?: string | null;
-};
-
-export async function updateArticleClipForUser(
-  database: DB,
+/** Applies an update body to one of the user's clips; fails with not found when it is not theirs. */
+export const updateArticleClipForUser = Effect.fn("articles.clip.update")(function* (
   userId: string,
   clipId: string,
   body: ClipUpdateBody,
-): Promise<boolean> {
-  assertClipUpdateHasFields(body);
-  assertContentFieldBudget([
+) {
+  const db = yield* Db;
+  if (!hasAnyOwn(body, CLIP_UPDATE_KEYS)) {
+    return yield* new BadRequest({
+      message: "No updatable fields provided",
+      code: "EMPTY_UPDATE",
+    });
+  }
+  yield* checkContentFieldBudget([
     { name: "content", value: body.content },
     { name: "contentHtml", value: body.contentHtml },
     { name: "contentText", value: body.contentText },
     { name: "contentMarkdown", value: body.contentMarkdown },
   ]);
 
-  const existing = await database
-    .select(clipReadColumns)
-    .from(articleClips)
-    .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)))
-    .limit(1);
-  const prev = existing[0];
+  const [prev] = yield* db.use("articles.clip.update_find", (client) =>
+    client
+      .select(clipReadColumns)
+      .from(articleClips)
+      .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)))
+      .limit(1),
+  );
   if (!prev) {
-    return false;
+    return yield* articleNotFound();
   }
 
-  const now = new Date();
-  const next = await resolveClipUpdateValues(body, prev, now);
+  const now = yield* currentDate;
+  const next = yield* resolveClipUpdateValues(body, prev, now);
 
-  await database
-    .update(articleClips)
-    .set({
-      title: next.title,
-      note: next.note,
-      content: next.content,
-      contentHtml: next.contentHtml,
-      ...(next.contentRaw !== undefined
-        ? {
-            contentRaw: next.contentRaw,
-            contentSanitizerVersion: next.contentSanitizerVersion,
-            ...next.documentColumns,
-          }
-        : {}),
-      contentText: next.contentText,
-      contentMarkdown: next.contentMarkdown,
-      contentStatus: next.contentStatus,
-      contentSource: next.contentSource,
-      extractionErrorCode: next.extractionErrorCode,
-      extractionErrorMessage: next.extractionErrorMessage,
-      isRead: next.isRead,
-      isSaved: next.isSaved,
-      savedAt: next.savedAt,
-      updatedAt: now,
-    })
-    .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId)));
+  yield* db.use("articles.clip.update", (client) =>
+    client
+      .update(articleClips)
+      .set({
+        title: next.title,
+        note: next.note,
+        content: next.content,
+        contentHtml: next.contentHtml,
+        ...(next.html && {
+          contentRaw: next.html.contentRaw,
+          contentSanitizerVersion: next.html.contentSanitizerVersion,
+          ...next.html.documentColumns,
+        }),
+        contentText: next.contentText,
+        contentMarkdown: next.contentMarkdown,
+        contentStatus: next.contentStatus,
+        contentSource: next.contentSource,
+        extractionErrorCode: next.extractionErrorCode,
+        extractionErrorMessage: next.extractionErrorMessage,
+        isRead: next.isRead,
+        isSaved: next.isSaved,
+        savedAt: next.savedAt,
+        updatedAt: now,
+      })
+      .where(and(eq(articleClips.id, clipId), eq(articleClips.userId, userId))),
+  );
 
-  if (next.contentRaw !== undefined) {
-    await enqueueEnrichmentForStoredDocument(database, {
+  if (next.html) {
+    yield* enqueueEnrichmentForStoredDocument({
       table: "article_clips",
       id: clipId,
       body: "original",
     });
   }
-
-  return true;
-}
-
-export async function listClipsForUser(
-  database: DB,
-  userId: string,
-  opts: ListClipsOptions,
-): Promise<ArticlesCursorListResponseDto> {
-  const limit = Math.min(Math.max(opts.limit, 1), 200);
-  const rows = await listClipRows(database, userId, opts, limit + 1);
-  const hasMore = rows.length > limit;
-  const page = hasMore ? rows.slice(0, limit) : rows;
-  const nextCursor = hasMore && page.length > 0 ? page[page.length - 1].id : null;
-
-  return {
-    items: await attachReadingProgress(
-      database,
-      userId,
-      page.map((r) => clipToListItem(r)),
-    ),
-    next_cursor: nextCursor,
-    has_more: hasMore,
-    total_count: null,
-  };
-}
-
-function pushClipSortBoundaryFilter(filters: SQL[], sort: ArticleSort, cursor: ClipCursor): void {
-  const olderThanCursor = or(
-    lt(articleClips.createdAt, cursor.publishedAt),
-    and(eq(articleClips.createdAt, cursor.publishedAt), lt(articleClips.id, cursor.id)),
-  )!;
-  if (sort === "oldest") {
-    filters.push(
-      or(
-        gt(articleClips.createdAt, cursor.publishedAt),
-        and(eq(articleClips.createdAt, cursor.publishedAt), gt(articleClips.id, cursor.id)),
-      )!,
-    );
-    return;
-  }
-  if (sort === "unread-first" && cursor.isRead !== undefined) {
-    filters.push(
-      cursor.isRead
-        ? and(eq(articleClips.isRead, true), olderThanCursor)!
-        : or(eq(articleClips.isRead, true), and(eq(articleClips.isRead, false), olderThanCursor))!,
-    );
-    return;
-  }
-  filters.push(olderThanCursor);
-}
-
-function clipOrderByForSort(sort: ArticleSort) {
-  if (sort === "oldest") {
-    return [asc(articleClips.createdAt), asc(articleClips.id)] as const;
-  }
-  if (sort === "unread-first") {
-    return [asc(articleClips.isRead), desc(articleClips.createdAt), desc(articleClips.id)] as const;
-  }
-  return [desc(articleClips.createdAt), desc(articleClips.id)] as const;
-}
-
-function escapeLikePattern(input: string): string {
-  return input.replaceAll("\\", "\\\\").replaceAll("%", "\\%").replaceAll("_", "\\_");
-}
-
-async function listClipRows(
-  database: DB,
-  userId: string,
-  opts: ListClipsOptions,
-  take: number,
-): Promise<ClipReadRow[]> {
-  const sort = opts.sort ?? "latest";
-  const filters: SQL[] = [eq(articleClips.userId, userId)];
-  if (opts.isRead === true) {
-    filters.push(eq(articleClips.isRead, true));
-  } else if (opts.isRead === false) {
-    filters.push(eq(articleClips.isRead, false));
-  }
-  if (opts.isSaved === true) {
-    filters.push(eq(articleClips.isSaved, true));
-  } else if (opts.isSaved === false) {
-    filters.push(eq(articleClips.isSaved, false));
-  }
-  if (opts.publishedAfter) {
-    filters.push(gte(articleClips.createdAt, opts.publishedAfter));
-  }
-  if (opts.publishedBefore) {
-    filters.push(lt(articleClips.createdAt, opts.publishedBefore));
-  }
-  const search = opts.search?.trim();
-  if (search) {
-    const pattern = `%${escapeLikePattern(search)}%`;
-    filters.push(
-      or(
-        ilike(articleClips.title, pattern),
-        ilike(articleClips.note, pattern),
-        ilike(articleClips.url, pattern),
-      )!,
-    );
-  }
-
-  if (opts.exclusiveBefore) {
-    pushClipSortBoundaryFilter(filters, sort, opts.exclusiveBefore);
-  } else if (opts.cursor) {
-    const cur = await database
-      .select({
-        createdAt: articleClips.createdAt,
-        id: articleClips.id,
-        isRead: articleClips.isRead,
-      })
-      .from(articleClips)
-      .where(and(eq(articleClips.id, opts.cursor), eq(articleClips.userId, userId)))
-      .limit(1);
-    const c = cur[0];
-    if (c) {
-      pushClipSortBoundaryFilter(filters, sort, {
-        publishedAt: c.createdAt,
-        id: c.id,
-        isRead: c.isRead,
-      });
-    }
-  }
-
-  return database
-    .select(clipReadColumns)
-    .from(articleClips)
-    .where(and(...filters))
-    .orderBy(...clipOrderByForSort(sort))
-    .limit(take);
-}
+});

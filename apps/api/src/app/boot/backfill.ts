@@ -1,20 +1,17 @@
-import { pool } from "@adapters/db/client";
-import { assertApiDatabaseReady } from "@adapters/db/preflight";
-import {
-  parseBackfillArgs,
-  runCategoryBackfill,
-  summarizeBackfill,
-} from "@modules/catalog/backfill";
+import { Console, Effect } from "effect";
+import { summarizeBackfill, parseBackfillArgs } from "@modules/catalog/backfill/cli";
+import { runCategoryBackfill } from "@modules/catalog/backfill/operations";
+import { Embeddings } from "@modules/catalog/embeddings";
+import { AppLive } from "../runtime";
+import { runMain } from "../setup/main";
+import { ensureDatabaseReady } from "../setup/ready";
 
-const args = parseBackfillArgs(process.argv);
+const backfill = Effect.gen(function* () {
+  const args = yield* parseBackfillArgs(process.argv);
+  yield* ensureDatabaseReady({ commandName: "categories:backfill", ensureSchema: true });
+  const stats = yield* runCategoryBackfill(args);
+  yield* Console.log(summarizeBackfill(stats));
+});
 
-try {
-  await assertApiDatabaseReady({
-    commandName: "categories:backfill",
-    ensureSchema: true,
-  });
-  const stats = await runCategoryBackfill(args);
-  console.log(summarizeBackfill(stats));
-} finally {
-  await pool.end();
-}
+// The layer scope closes Postgres and Redis once the run ends, or on SIGINT/SIGTERM.
+runMain(backfill.pipe(Effect.provide(Embeddings.layer), Effect.provide(AppLive)));

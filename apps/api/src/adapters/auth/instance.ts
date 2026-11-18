@@ -6,89 +6,108 @@ import {
   resolveBetterAuthTrustedOrigins,
   shouldUseSecureCookies,
 } from "@kyomi/db";
-import { db } from "@adapters/db/client";
-import { env } from "@config/env";
-import { emailOTP } from "better-auth/plugins";
+import type { Database } from "@adapters/db/service";
+import type { Env } from "@config/env/runtime";
 import { resolveGoogleSocialProvider } from "./capabilities";
+import { emailOtpPlugin } from "./email-otp";
 import { resolveLocationFromAuthContext } from "./location";
-import { queueEmailOTP } from "./otp";
 import { oauth } from "./oauth";
+import type { EmailOTPMessage } from "./otp";
 
-const defaultApiOrigin = `http://localhost:${env.PORT}`;
-const baseURL = resolveBetterAuthBaseUrl(env.BETTER_AUTH_URL ?? defaultApiOrigin, defaultApiOrigin);
+type AuthOptions = {
+  config: Env;
+  db: Database;
+  /** Hand a sign-in code to the mailer. Must not wait for delivery. */
+  sendOtp: (message: EmailOTPMessage) => void;
+};
 
-export const auth = betterAuth({
-  secret: env.BETTER_AUTH_SECRET,
-  baseURL,
-  trustedOrigins: resolveBetterAuthTrustedOrigins({
+/** The Better Auth instance for this configuration. Pure construction: no I/O until it serves. */
+export function createAuth({ config, db, sendOtp }: AuthOptions) {
+  const defaultApiOrigin = `http://localhost:${config.PORT}`;
+  const baseURL = resolveBetterAuthBaseUrl(
+    config.BETTER_AUTH_URL ?? defaultApiOrigin,
+    defaultApiOrigin,
+  );
+
+  return betterAuth({
+    secret: config.BETTER_AUTH_SECRET,
     baseURL,
-    trustedOrigins: env.BETTER_AUTH_TRUSTED_ORIGINS,
-    additionalOrigins: [env.WEB_ORIGIN],
-  }),
-  advanced: {
-    useSecureCookies: shouldUseSecureCookies(baseURL),
-  },
-  databaseHooks: {
+    trustedOrigins: resolveBetterAuthTrustedOrigins({
+      baseURL,
+      trustedOrigins: config.BETTER_AUTH_TRUSTED_ORIGINS,
+      additionalOrigins: [config.WEB_ORIGIN],
+      includeLocalhost: config.NODE_ENV !== "production",
+    }),
+    advanced: {
+      useSecureCookies: shouldUseSecureCookies(baseURL),
+    },
+    // Better Auth decides this from the raw process environment, which can disagree with the
+    // validated one (it compares `NODE_ENV` exactly); follow the configuration this API booted with.
+    rateLimit: { enabled: config.NODE_ENV === "production" },
+    // When a query fails, Better Auth and its router log the drizzle error, whose message carries
+    // the bound values: the one-time code and email of a sign-in, or a session token. Errors are
+    // rethrown to this API's handler instead, which logs them through `errorMessage` without the
+    // values, and Better Auth's own logger is off. Responses (4xx included) are unchanged.
+    onAPIError: { throw: true },
+    logger: { disabled: true },
+    databaseHooks: {
+      session: {
+        create: {
+          before: async (data, context) => ({
+            data: resolveLocationFromAuthContext(
+              context,
+              typeof data.ipAddress === "string" ? data.ipAddress : null,
+            ),
+          }),
+        },
+      },
+    },
+    database: drizzleAdapter(db, {
+      provider: "pg",
+      schema: betterAuthSchema,
+    }),
+    emailAndPassword: {
+      enabled: false,
+    },
+    plugins: [
+      emailOtpPlugin(sendOtp),
+      oauth({
+        clientId: "kyomi-mobile",
+        redirectURIs: ["kyomi://oauth/callback"],
+      }),
+    ],
+    socialProviders: resolveGoogleSocialProvider({
+      enabled: config.FEATURE_GOOGLE_OAUTH,
+      clientId: config.GOOGLE_CLIENT_ID,
+      clientSecret: config.GOOGLE_CLIENT_SECRET,
+    }),
     session: {
-      create: {
-        before: async (data, context) => ({
-          data: resolveLocationFromAuthContext(
-            context,
-            typeof data.ipAddress === "string" ? data.ipAddress : null,
-          ),
-        }),
+      additionalFields: {
+        locationLabel: {
+          type: "string",
+          required: false,
+          input: false,
+          returned: true,
+        },
+        locationCity: {
+          type: "string",
+          required: false,
+          input: false,
+          returned: true,
+        },
+        locationRegion: {
+          type: "string",
+          required: false,
+          input: false,
+          returned: true,
+        },
+        locationCountry: {
+          type: "string",
+          required: false,
+          input: false,
+          returned: true,
+        },
       },
     },
-  },
-  database: drizzleAdapter(db, {
-    provider: "pg",
-    schema: betterAuthSchema,
-  }),
-  emailAndPassword: {
-    enabled: false,
-  },
-  plugins: [
-    emailOTP({
-      sendVerificationOTP: async ({ email, otp }) => {
-        void queueEmailOTP({ to: email, otp });
-      },
-    }),
-    oauth({
-      clientId: "kyomi-mobile",
-      redirectURIs: ["kyomi://oauth/callback"],
-    }),
-  ],
-  socialProviders: resolveGoogleSocialProvider({
-    enabled: env.FEATURE_GOOGLE_OAUTH,
-    clientId: env.GOOGLE_CLIENT_ID,
-    clientSecret: env.GOOGLE_CLIENT_SECRET,
-  }),
-  session: {
-    additionalFields: {
-      locationLabel: {
-        type: "string",
-        required: false,
-        input: false,
-        returned: true,
-      },
-      locationCity: {
-        type: "string",
-        required: false,
-        input: false,
-        returned: true,
-      },
-      locationRegion: {
-        type: "string",
-        required: false,
-        input: false,
-        returned: true,
-      },
-      locationCountry: {
-        type: "string",
-        required: false,
-        input: false,
-        returned: true,
-      },
-    },
-  },
-});
+  });
+}

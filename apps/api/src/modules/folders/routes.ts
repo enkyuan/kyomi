@@ -1,6 +1,10 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
-import { v1HandlerContext } from "@shared/http/v1/context";
+import type { ManagedRuntime } from "effect";
+import type { Db } from "@adapters/db/service";
+import type { AppLogger } from "@adapters/logger/service";
+import { runEffect } from "@shared/http/effect/bridge";
+import { v1EffectContext } from "@shared/http/v1/context";
 import {
   createFolder,
   deleteFolder,
@@ -19,14 +23,20 @@ import {
   updateFolderBody,
 } from "./schemas";
 
-export function registerFolderRoutes(app: Elysia) {
+type FolderRuntime = ManagedRuntime.ManagedRuntime<Db | AppLogger, unknown>;
+
+export function registerFolderRoutes(app: Elysia, runtime: FolderRuntime) {
   return app
     .post(
       "/folders",
       async (context) => {
-        const { body, db, logger, set, userId } = v1HandlerContext<{ name: string }>(context);
-        const created = await createFolder(db, userId, body.name);
-        logger.info("folders.created", { userId, folderId: created.id });
+        const { body, request, requestId, set, userId } = v1EffectContext<{ name: string }>(
+          context,
+        );
+        const created = await runEffect(
+          { runtime, request, requestId, userId },
+          createFolder(body.name),
+        );
         set.status = 201;
         return created;
       },
@@ -37,9 +47,9 @@ export function registerFolderRoutes(app: Elysia) {
     )
     .get(
       "/folders",
-      async (context) => {
-        const { db, userId } = v1HandlerContext(context);
-        return await listFolders(db, userId);
+      (context) => {
+        const { request, requestId, userId } = v1EffectContext(context);
+        return runEffect({ runtime, request, requestId, userId }, listFolders);
       },
       {
         response: { 200: t.Array(folderResponse) },
@@ -47,11 +57,11 @@ export function registerFolderRoutes(app: Elysia) {
     )
     .put(
       "/folders/order",
-      async (context) => {
-        const { body, db, logger, userId } = v1HandlerContext<{ folderIds: string[] }>(context);
-        const ordered = await reorderFolders(db, userId, body.folderIds);
-        logger.info("folders.reordered", { userId, count: body.folderIds.length });
-        return ordered;
+      (context) => {
+        const { body, request, requestId, userId } = v1EffectContext<{ folderIds: string[] }>(
+          context,
+        );
+        return runEffect({ runtime, request, requestId, userId }, reorderFolders(body.folderIds));
       },
       {
         body: reorderFoldersBody,
@@ -60,15 +70,16 @@ export function registerFolderRoutes(app: Elysia) {
     )
     .put(
       "/folders/:folderId",
-      async (context) => {
-        const { body, db, logger, params, userId } = v1HandlerContext<
+      (context) => {
+        const { body, params, request, requestId, userId } = v1EffectContext<
           UpdateFolderInput,
           Record<string, unknown>,
           { folderId: string }
         >(context);
-        const updated = await updateFolder(db, userId, params.folderId, body);
-        logger.info("folders.updated", { userId, folderId: params.folderId });
-        return updated;
+        return runEffect(
+          { runtime, request, requestId, userId },
+          updateFolder(params.folderId, body),
+        );
       },
       {
         params: folderIdParams,
@@ -79,11 +90,13 @@ export function registerFolderRoutes(app: Elysia) {
     .delete(
       "/folders/:folderId",
       async (context) => {
-        const { db, logger, params, userId, set } = v1HandlerContext(context);
-        await deleteFolder(db, userId, params.folderId);
-        logger.info("folders.deleted", { userId, folderId: params.folderId });
+        const { params, request, requestId, set, userId } = v1EffectContext<
+          unknown,
+          Record<string, unknown>,
+          { folderId: string }
+        >(context);
+        await runEffect({ runtime, request, requestId, userId }, deleteFolder(params.folderId));
         set.status = 204;
-        return;
       },
       {
         params: folderIdParams,
@@ -92,11 +105,16 @@ export function registerFolderRoutes(app: Elysia) {
     )
     .put(
       "/folders/:folderId/read-status",
-      async (context) => {
-        const { db, logger, params, userId } = v1HandlerContext(context);
-        const result = await markFolderReadStatus(db, userId, params.folderId);
-        logger.info("folders.read_status.mark_all", { userId, folderId: params.folderId });
-        return result;
+      (context) => {
+        const { params, request, requestId, userId } = v1EffectContext<
+          unknown,
+          Record<string, unknown>,
+          { folderId: string }
+        >(context);
+        return runEffect(
+          { runtime, request, requestId, userId },
+          markFolderReadStatus(params.folderId),
+        );
       },
       {
         params: folderIdParams,

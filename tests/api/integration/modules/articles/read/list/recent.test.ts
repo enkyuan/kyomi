@@ -20,6 +20,7 @@ function item(overrides: Partial<RecentlyViewedItem>): RecentlyViewedItem {
     isSaved: false,
     articleType: "feed",
     categories: [],
+    readingProgress: null,
     lastViewedAt: new Date("2026-01-01T00:00:00.000Z"),
     ...overrides,
   };

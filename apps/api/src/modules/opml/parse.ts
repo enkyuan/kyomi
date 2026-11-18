@@ -1,6 +1,7 @@
+import { Effect } from "effect";
 import { XMLParser } from "fast-xml-parser";
 import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/feed/normalize";
-import { AppError } from "@shared/errors/app";
+import { BadRequest, PayloadTooLarge } from "@shared/effect/errors";
 import { decodeText } from "@shared/text/entities";
 import {
   OPML_MAX_DEPTH,
@@ -38,18 +39,22 @@ function readOutlineLabel(outline: OutlineNode): string | null {
   return clampLabel(readString(outline.text) ?? readString(outline.title));
 }
 
-function normalizeImportedFeedUrl(value: string): string {
+/**
+ * The normalized URL, or the `BadRequest` to fail with. Returned instead of yielded so the
+ * per-feed loop (up to OPML_MAX_FEEDS iterations) stays synchronous.
+ */
+function normalizeImportedFeedUrl(value: string): string | BadRequest {
   if (value.length > OPML_MAX_URL_LENGTH) {
-    throw new AppError("Feed URL exceeds maximum length", {
-      status: 400,
+    return new BadRequest({
+      message: "Feed URL exceeds maximum length",
       code: "OPML_URL_TOO_LONG",
     });
   }
   try {
     return normalizeFeedUrl(assertHttpOrHttpsUrl(value).href);
   } catch {
-    throw new AppError("OPML contains an invalid feed URL", {
-      status: 400,
+    return new BadRequest({
+      message: "OPML contains an invalid feed URL",
       code: "OPML_FEED_URL_INVALID",
     });
   }
@@ -67,23 +72,27 @@ function registerFeed(
   folderName: string,
   seen: Set<string>,
   collected: ParsedOpmlFeed[],
-): void {
+): BadRequest | null {
   const normalizedUrl = normalizeImportedFeedUrl(originalUrl);
+  if (normalizedUrl instanceof BadRequest) {
+    return normalizedUrl;
+  }
   if (seen.has(normalizedUrl)) {
-    return;
+    return null;
   }
   seen.add(normalizedUrl);
   collected.push({ xmlUrl: originalUrl, originalUrl, normalizedUrl, title, folderName });
   if (collected.length > OPML_MAX_FEEDS) {
-    throw new AppError("Too many feeds in OPML", {
-      status: 400,
+    return new BadRequest({
+      message: "Too many feeds in OPML",
       code: "OPML_TOO_MANY",
       details: { max: OPML_MAX_FEEDS },
     });
   }
+  return null;
 }
 
-function collectFeeds(root: OutlineNode[], fallbackFolderName: string): ParsedOpmlFeed[] {
+const collectFeeds = Effect.fnUntraced(function* (root: OutlineNode[], fallbackFolderName: string) {
   const collected: ParsedOpmlFeed[] = [];
   const seen = new Set<string>();
   const stack: TraversalFrame[] = root
@@ -98,7 +107,10 @@ function collectFeeds(root: OutlineNode[], fallbackFolderName: string): ParsedOp
     const title = readOutlineLabel(node);
     const folderName = ancestors[ancestors.length - 1] ?? fallbackFolderName;
     if (originalUrl) {
-      registerFeed(originalUrl, title, folderName, seen, collected);
+      const failure = registerFeed(originalUrl, title, folderName, seen, collected);
+      if (failure) {
+        return yield* failure;
+      }
     }
 
     const children = asOutlineArray(node.outline);
@@ -106,8 +118,8 @@ function collectFeeds(root: OutlineNode[], fallbackFolderName: string): ParsedOp
       continue;
     }
     if (depth >= OPML_MAX_DEPTH) {
-      throw new AppError("OPML outline nesting is too deep", {
-        status: 400,
+      return yield* new BadRequest({
+        message: "OPML outline nesting is too deep",
         code: "OPML_TOO_DEEP",
         details: { maxDepth: OPML_MAX_DEPTH },
       });
@@ -119,89 +131,91 @@ function collectFeeds(root: OutlineNode[], fallbackFolderName: string): ParsedOp
   }
 
   return collected;
-}
+});
 
-export function assertOpmlSourceAdmission(xml: string): number {
+const invalidDocument = () =>
+  new BadRequest({ message: "Invalid OPML document", code: "OPML_INVALID" });
+
+const noFeeds = () =>
+  new BadRequest({ message: "No feed URLs found in OPML", code: "OPML_NO_FEEDS" });
+
+/**
+ * Admits a source before it is stored or parsed: a UTF-8 size ceiling, then no DTD or entity
+ * declarations. Succeeds with the byte length.
+ */
+export const assertOpmlSourceAdmission = Effect.fnUntraced(function* (xml: string) {
   const byteLength = Buffer.byteLength(xml, "utf8");
   if (byteLength > OPML_MAX_SOURCE_BYTES) {
-    throw new AppError("OPML payload exceeds maximum size", {
-      status: 413,
+    return yield* new PayloadTooLarge({
+      message: "OPML payload exceeds maximum size",
       code: "OPML_TOO_LARGE",
       details: { maxBytes: OPML_MAX_SOURCE_BYTES, foundBytes: byteLength },
     });
   }
   if (/(<!DOCTYPE|<!ENTITY)/i.test(xml)) {
-    throw new AppError("OPML document contains unsupported XML declarations", {
-      status: 400,
+    return yield* new BadRequest({
+      message: "OPML document contains unsupported XML declarations",
       code: "OPML_UNSAFE_XML",
     });
   }
   return byteLength;
-}
+});
 
-function parseOpmlXml(xml: string): unknown {
-  const parser = new XMLParser({
-    ignoreAttributes: false,
-    attributeNamePrefix: "",
-    trimValues: true,
-    processEntities: true,
+const parseOpmlXml = (xml: string) =>
+  Effect.try({
+    try: (): unknown =>
+      new XMLParser({
+        ignoreAttributes: false,
+        attributeNamePrefix: "",
+        trimValues: true,
+        processEntities: true,
+      }).parse(xml),
+    catch: (cause) =>
+      new BadRequest({ message: "Could not parse OPML XML", code: "OPML_PARSE_FAILED", cause }),
   });
-  try {
-    return parser.parse(xml);
-  } catch {
-    throw new AppError("Could not parse OPML XML", { status: 400, code: "OPML_PARSE_FAILED" });
-  }
-}
 
-function getOpmlRoot(parsed: unknown): Record<string, unknown> {
-  if (typeof parsed !== "object" || parsed === null) {
-    throw new AppError("Invalid OPML document", { status: 400, code: "OPML_INVALID" });
-  }
-  const root = (parsed as Record<string, unknown>).opml;
+const getOpmlRoot = Effect.fnUntraced(function* (parsed: unknown) {
+  const root =
+    typeof parsed === "object" && parsed !== null ? (parsed as { opml?: unknown }).opml : null;
   if (typeof root !== "object" || root === null) {
-    throw new AppError("Invalid OPML document", { status: 400, code: "OPML_INVALID" });
+    return yield* invalidDocument();
   }
   return root as Record<string, unknown>;
-}
+});
 
-function getOpmlBody(root: Record<string, unknown>): Record<string, unknown> {
+const getOpmlBody = Effect.fnUntraced(function* (root: Record<string, unknown>) {
   const body = root.body;
   if (body === undefined || body === null || body === "") {
-    throw new AppError("No feed URLs found in OPML", { status: 400, code: "OPML_NO_FEEDS" });
+    return yield* noFeeds();
   }
   if (typeof body !== "object") {
-    throw new AppError("Invalid OPML document", { status: 400, code: "OPML_INVALID" });
+    return yield* invalidDocument();
   }
   return body as Record<string, unknown>;
-}
+});
 
-export function parseOpmlDocument(
+/** Parses an OPML document into its distinct, normalized feed URLs grouped by folder name. */
+export const parseOpmlDocument = Effect.fn("opml.parse")(function* (
   xml: string,
   fallbackFolderName = "Unsorted",
-): ParsedOpmlDocument {
-  assertOpmlSourceAdmission(xml);
+) {
+  yield* assertOpmlSourceAdmission(xml);
 
-  const parsed = parseOpmlXml(xml);
-  const root = getOpmlRoot(parsed);
-  const body = getOpmlBody(root);
+  const parsed = yield* parseOpmlXml(xml);
+  const root = yield* getOpmlRoot(parsed);
+  const body = yield* getOpmlBody(root);
   const head =
     typeof root.head === "object" && root.head !== null ? (root.head as OutlineNode) : null;
 
-  const feeds = collectFeeds(asOutlineArray(body.outline), fallbackFolderName);
+  const feeds = yield* collectFeeds(asOutlineArray(body.outline), fallbackFolderName);
   if (feeds.length === 0) {
-    throw new AppError("No feed URLs found in OPML", { status: 400, code: "OPML_NO_FEEDS" });
+    return yield* noFeeds();
   }
 
-  return {
+  const document: ParsedOpmlDocument = {
     opmlTitle: head ? clampLabel(readString(head.title)) : null,
     opmlAuthor: head ? clampLabel(readString(head.ownerName) ?? readString(head.ownerEmail)) : null,
     feeds,
   };
-}
-
-/**
- * Backwards-compatible helper used by existing tests and any URL-only callers.
- */
-export function parseOpmlFeeds(xml: string): string[] {
-  return parseOpmlDocument(xml).feeds.map((feed) => feed.xmlUrl);
-}
+  return document;
+});

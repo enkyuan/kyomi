@@ -51,7 +51,7 @@ export function AppearancePagePanel() {
       <section className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h3 className="text-base font-semibold text-foreground">Appearance</h3>
-          <Button size="sm" variant="outline" onClick={resetAll}>
+          <Button shape="pill" size="sm" variant="secondary" onClick={resetAll}>
             Reset defaults
           </Button>
         </div>

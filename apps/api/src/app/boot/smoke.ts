@@ -1,40 +1,37 @@
-import { db, pool } from "@adapters/db/client";
-import { assertApiDatabaseReady } from "@adapters/db/preflight";
+import { Console, Data, Effect } from "effect";
 import { searchFeeds } from "@modules/discover/operations";
+import { valueAfter } from "@shared/cli/args";
+import { AppLive } from "../runtime";
+import { runMain } from "../setup/main";
+import { ensureDatabaseReady } from "../setup/ready";
 
-function getArgValue(flag: string): string | null {
-  const index = process.argv.indexOf(flag);
-  if (index === -1) {
-    return null;
-  }
-  const value = process.argv[index + 1];
-  return value && !value.startsWith("--") ? value : null;
-}
+/** The probe query returned nothing, or nothing containing the expected token. */
+class SmokeFailed extends Data.TaggedError("SmokeFailed")<{ readonly message: string }> {}
 
-async function main() {
-  const query = getArgValue("--query") ?? "hacker news";
-  const expected = (getArgValue("--expect") ?? "hacker news").toLowerCase();
-  const probeUserId = getArgValue("--user-id") ?? "00000000-0000-0000-0000-000000000000";
-  const limit = Number(getArgValue("--limit") ?? "20");
+const smoke = Effect.gen(function* () {
+  const query = valueAfter(process.argv, "--query") ?? "hacker news";
+  const expected = (valueAfter(process.argv, "--expect") ?? "hacker news").toLowerCase();
+  const probeUserId =
+    valueAfter(process.argv, "--user-id") ?? "00000000-0000-0000-0000-000000000000";
+  const limit = Number(valueAfter(process.argv, "--limit") ?? "20");
 
-  await assertApiDatabaseReady({
-    commandName: "catalog:smoke",
-    ensureSchema: true,
-  });
+  yield* ensureDatabaseReady({ commandName: "catalog:smoke", ensureSchema: true });
 
-  const rows = await searchFeeds(db, probeUserId, query, Number.isFinite(limit) ? limit : 20);
+  const rows = yield* searchFeeds(probeUserId, query, Number.isFinite(limit) ? limit : 20);
   if (rows.length === 0) {
-    throw new Error(`No results for query "${query}"`);
+    return yield* new SmokeFailed({ message: `No results for query "${query}"` });
   }
 
   const matched = rows.some((row) =>
     `${row.title} ${row.url} ${row.description ?? ""}`.toLowerCase().includes(expected),
   );
   if (!matched) {
-    throw new Error(`No results matched expected token "${expected}" for query "${query}"`);
+    return yield* new SmokeFailed({
+      message: `No results matched expected token "${expected}" for query "${query}"`,
+    });
   }
 
-  console.log(
+  yield* Console.log(
     JSON.stringify(
       {
         query,
@@ -46,16 +43,7 @@ async function main() {
       2,
     ),
   );
-}
+});
 
-main()
-  .catch((error: unknown) => {
-    console.error(
-      "[catalog-smoke] failed:",
-      error instanceof Error ? error.message : String(error),
-    );
-    process.exitCode = 1;
-  })
-  .finally(async () => {
-    await pool.end().catch(() => undefined);
-  });
+// The layer scope closes Postgres and Redis once the run ends, or on SIGINT/SIGTERM.
+runMain(smoke.pipe(Effect.provide(AppLive)));

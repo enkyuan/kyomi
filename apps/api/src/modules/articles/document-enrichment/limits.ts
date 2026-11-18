@@ -1,74 +1,80 @@
-/** Runs `fn` over `items` with at most `limit` in flight. Results keep input order. */
-export async function mapWithConcurrency<T, R>(
-  items: readonly T[],
-  limit: number,
-  fn: (item: T) => Promise<R>,
-): Promise<R[]> {
-  const results = new Array<R>(items.length);
-  let next = 0;
-  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
-    while (next < items.length) {
-      const index = next;
-      next += 1;
-      results[index] = await fn(items[index]!);
-    }
-  });
-  await Promise.all(workers);
-  return results;
-}
+import { Context, Duration, Effect, Layer, Schedule, Semaphore } from "effect";
 
-/** Caps concurrent work per key (host) inside one process. */
-export function createKeyedGate(limitPerKey: number) {
-  const active = new Map<string, number>();
-  const waiters = new Map<string, (() => void)[]>();
+/** Caps concurrent work per key (a host) inside one process. */
+export type KeyedGate = {
+  readonly run: <A, E, R>(key: string, effect: Effect.Effect<A, E, R>) => Effect.Effect<A, E, R>;
+};
 
-  async function acquire(key: string) {
-    while ((active.get(key) ?? 0) >= limitPerKey) {
-      await new Promise<void>((resolve) => {
-        const queue = waiters.get(key) ?? [];
-        queue.push(resolve);
-        waiters.set(key, queue);
+type GateEntry = { readonly semaphore: Semaphore.Semaphore; users: number };
+
+/**
+ * A gate with `limitPerKey` permits for each key. A key's semaphore exists only while someone is
+ * running or waiting on it, so the map stays as small as the work in flight. Waiters are freed in
+ * arrival order and an interrupted waiter leaves without taking a permit.
+ */
+export const makeKeyedGate = (limitPerKey: number): Effect.Effect<KeyedGate> =>
+  Effect.sync(() => {
+    const entries = new Map<string, GateEntry>();
+    const enter = (key: string) =>
+      Effect.sync(() => {
+        const entry = entries.get(key) ?? {
+          semaphore: Semaphore.makeUnsafe(limitPerKey),
+          users: 0,
+        };
+        entry.users += 1;
+        entries.set(key, entry);
+        return entry;
       });
-    }
-    active.set(key, (active.get(key) ?? 0) + 1);
-  }
+    const leave = (key: string, entry: GateEntry) =>
+      Effect.sync(() => {
+        entry.users -= 1;
+        if (entry.users === 0) {
+          entries.delete(key);
+        }
+      });
+    return {
+      run: (key, effect) =>
+        Effect.acquireUseRelease(
+          enter(key),
+          (entry) => entry.semaphore.withPermit(effect),
+          (entry) => leave(key, entry),
+        ),
+    };
+  });
 
-  function release(key: string) {
-    const count = (active.get(key) ?? 1) - 1;
-    if (count <= 0) active.delete(key);
-    else active.set(key, count);
-    waiters.get(key)?.shift()?.();
-  }
+/** How many requests enrichment may have open against one host. */
+const IMAGE_REQUESTS_PER_HOST = 2;
+const EMBED_REQUESTS_PER_HOST = 1;
 
+type EnrichmentGatesShape = { readonly images: KeyedGate; readonly embeds: KeyedGate };
+
+/** The gates, built once per worker so every job it runs shares them. */
+export const makeEnrichmentGates: Effect.Effect<EnrichmentGatesShape> = Effect.gen(function* () {
   return {
-    async run<T>(key: string, task: () => Promise<T>): Promise<T> {
-      await acquire(key);
-      try {
-        return await task();
-      } finally {
-        release(key);
-      }
-    },
+    images: yield* makeKeyedGate(IMAGE_REQUESTS_PER_HOST),
+    embeds: yield* makeKeyedGate(EMBED_REQUESTS_PER_HOST),
   };
+});
+
+/** Per-host politeness for the enrichment jobs. */
+export class EnrichmentGates extends Context.Service<EnrichmentGates, EnrichmentGatesShape>()(
+  "kyomi/EnrichmentGates",
+) {
+  static readonly layer = Layer.effect(EnrichmentGates, makeEnrichmentGates);
 }
 
 export type RetryOptions = {
+  /** Total tries, the first included. */
   attempts: number;
   baseDelayMs: number;
-  sleep?: (ms: number) => Promise<void>;
 };
 
-/** Retries retryable failures with exponential backoff; stops at the first success or hard failure. */
-export async function retryFetch<T extends { ok: boolean; retryable?: boolean }>(
-  task: () => Promise<T>,
-  options: RetryOptions,
-): Promise<T> {
-  const sleep = options.sleep ?? ((ms: number) => new Promise<void>((r) => setTimeout(r, ms)));
-  let result = await task();
-  for (let attempt = 1; attempt < options.attempts; attempt += 1) {
-    if (result.ok || !result.retryable) return result;
-    await sleep(options.baseDelayMs * 2 ** (attempt - 1));
-    result = await task();
-  }
-  return result;
-}
+/** Retries failures marked `retryable` with exponential backoff; any other failure ends it. */
+export const retryTransient =
+  (options: RetryOptions) =>
+  <A, E extends { readonly retryable: boolean }, R>(effect: Effect.Effect<A, E, R>) =>
+    Effect.retry(effect, {
+      schedule: Schedule.exponential(Duration.millis(options.baseDelayMs)),
+      times: options.attempts - 1,
+      while: (error) => error.retryable,
+    });

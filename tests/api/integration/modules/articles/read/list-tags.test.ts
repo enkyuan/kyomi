@@ -1,8 +1,8 @@
 import { describe, expect, test } from "bun:test";
 import { PgDialect } from "drizzle-orm/pg-core";
 import { isCanonicalCategoryLabel, MISCELLANEOUS_CATEGORY_LABEL } from "@kyomi/db";
-import { buildCategoryLabelsSql, categoryLabelsSql } from "@modules/articles/read/labels";
-import { toArticleListItemsForTest } from "@modules/articles/read/list/query";
+import { buildCategoryLabelsSql, categoryLabelsFor } from "@modules/articles/read/labels";
+import { toArticleListItems } from "@modules/articles/read/list/query";
 import type { ArticleListRawRow } from "@modules/articles/read/list/dedupe";
 import { articleListItemSchema } from "@modules/articles/schemas";
 
@@ -42,17 +42,17 @@ function renderSql(fragment: Parameters<PgDialect["sqlToQuery"]>[0]): string {
 
 describe("article list item categories", () => {
   test("maps feed-level category labels onto the DTO", () => {
-    const [item] = toArticleListItemsForTest([rawRow({ categories: ["Engineering", "AI"] })]);
+    const [item] = toArticleListItems([rawRow({ categories: ["Engineering", "AI"] })]);
     expect(item?.categories).toEqual(["Engineering", "AI"]);
   });
 
   test("defaults to an empty array when a feed has no categories", () => {
-    const [item] = toArticleListItemsForTest([rawRow({ categories: [] })]);
+    const [item] = toArticleListItems([rawRow({ categories: [] })]);
     expect(item?.categories).toEqual([]);
   });
 
   test("decodes HTML entities in category labels", () => {
-    const [item] = toArticleListItemsForTest([rawRow({ categories: ["Arts &amp; Culture"] })]);
+    const [item] = toArticleListItems([rawRow({ categories: ["Arts &amp; Culture"] })]);
     expect(item?.categories).toEqual(["Arts & Culture"]);
   });
 
@@ -64,7 +64,7 @@ describe("article list item categories", () => {
 
   test("maps a persisted view timestamp into the list DTO", () => {
     const lastViewedAt = new Date("2026-07-02T00:00:00.000Z");
-    const [item] = toArticleListItemsForTest([rawRow({ lastViewedAt })]);
+    const [item] = toArticleListItems([rawRow({ lastViewedAt })]);
 
     expect(item?.lastViewedAt).toBe(lastViewedAt.toISOString());
     expect(articleListItemSchema.properties).toHaveProperty("lastViewedAt");
@@ -170,17 +170,23 @@ describe("article list item categories", () => {
     // Categories are normalized to canonical labels before this query ever runs (see
     // packages/ingest/src/services/feed/categories.ts), so this LIMIT is the only remaining
     // enforcement point for "chips show at most two categories".
-    const sql = renderSql(categoryLabelsSql);
+    const sql = renderSql(
+      categoryLabelsFor({
+        CATEGORY_CLASSIFIER_READ_MODE: "keyword",
+        CLOUDFLARE_EMBEDDINGS_URL: undefined,
+        CLOUDFLARE_EMBEDDINGS_TOKEN: undefined,
+      }),
+    );
     expect(sql).toMatch(/LIMIT 2\s*\)\s*AS fc/);
   });
 
   test("DTO categories only ever contain canonical labels sourced from the categories table", () => {
-    // The article list query selects `categories.label` directly (see categoryLabelsSql
+    // The article list query selects `categories.label` directly (see categoryLabelsFor
     // and listArticleRows/listGlobalArticleRows), with no transformation in between. Write-time
     // canonicalization (Tasks 3/6/7 of the taxonomy plan) is what keeps that column
     // canonical-only; this test documents the invariant the DTO mapper relies on rather than
     // re-normalizing at read time.
-    const [item] = toArticleListItemsForTest([
+    const [item] = toArticleListItems([
       rawRow({ categories: ["Software Engineering", "AI & ML"] }),
     ]);
     expect(item?.categories).toEqual(["Software Engineering", "AI & ML"]);

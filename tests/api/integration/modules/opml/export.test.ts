@@ -1,33 +1,13 @@
 import { describe, expect, test } from "bun:test";
+import { Effect, Layer } from "effect";
+import { TestClock } from "effect/testing";
 import { buildOpmlExportDocument, exportOpmlForUser } from "@modules/opml/export";
-import { parseOpmlDocument } from "@modules/opml/parse";
-import { registerOpmlRoutes } from "@modules/opml/routes";
+import { parseOpmlDocument as parseOpmlDocumentEffect } from "@modules/opml/parse";
+import { fakeDb } from "@api-tests/support/layers";
 
-type RecordedRoute = {
-  method: "get" | "post" | "delete";
-  path: string;
-  handler: unknown;
-  options: unknown;
-};
-
-function createRouteRecorder() {
-  const routes: RecordedRoute[] = [];
-  const app = {
-    get(path: string, handler: unknown, options?: unknown) {
-      routes.push({ method: "get", path, handler, options });
-      return app;
-    },
-    post(path: string, handler: unknown, options?: unknown) {
-      routes.push({ method: "post", path, handler, options });
-      return app;
-    },
-    delete(path: string, handler: unknown, options?: unknown) {
-      routes.push({ method: "delete", path, handler, options });
-      return app;
-    },
-  };
-  return { app, routes };
-}
+const generatedAt = new Date("2026-05-25T18:00:00.000Z");
+const parseOpmlDocument = (xml: string, fallbackFolderName: string) =>
+  Effect.runSync(parseOpmlDocumentEffect(xml, fallbackFolderName));
 
 describe("opml export", () => {
   test("builds a valid OPML document that round-trips through the parser", () => {
@@ -52,7 +32,7 @@ describe("opml export", () => {
           folderName: "Unsorted",
         },
       ],
-      { generatedAt: new Date("2026-05-25T18:00:00.000Z") },
+      { generatedAt },
     );
 
     expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>');
@@ -96,7 +76,7 @@ describe("opml export", () => {
           folderName: `R&D <Lab> "North" 'A'`,
         },
       ],
-      { generatedAt: new Date("2026-05-25T18:00:00.000Z") },
+      { generatedAt },
     );
 
     expect(xml).toContain("Tom &amp; Jerry &lt;Daily&gt; &quot;Quotes&quot; &#39;Edition&#39;");
@@ -117,38 +97,41 @@ describe("opml export", () => {
   });
 
   test("is deterministic: folders are grouped once and feeds are sorted stably", () => {
-    const xml = buildOpmlExportDocument([
-      {
-        title: "Zoo",
-        xmlUrl: "https://example.com/z.xml",
-        htmlUrl: null,
-        folderName: "Science",
-      },
-      {
-        title: "Alpha",
-        xmlUrl: "https://example.com/a.xml",
-        htmlUrl: null,
-        folderName: "Science",
-      },
-      {
-        title: "Beta",
-        xmlUrl: "https://example.com/b.xml",
-        htmlUrl: null,
-        folderName: "Arts",
-      },
-      {
-        title: "Root",
-        xmlUrl: "https://example.com/root.xml",
-        htmlUrl: null,
-        folderName: null,
-      },
-      {
-        title: "Gamma",
-        xmlUrl: "https://example.com/g.xml",
-        htmlUrl: null,
-        folderName: "Unsorted",
-      },
-    ]);
+    const xml = buildOpmlExportDocument(
+      [
+        {
+          title: "Zoo",
+          xmlUrl: "https://example.com/z.xml",
+          htmlUrl: null,
+          folderName: "Science",
+        },
+        {
+          title: "Alpha",
+          xmlUrl: "https://example.com/a.xml",
+          htmlUrl: null,
+          folderName: "Science",
+        },
+        {
+          title: "Beta",
+          xmlUrl: "https://example.com/b.xml",
+          htmlUrl: null,
+          folderName: "Arts",
+        },
+        {
+          title: "Root",
+          xmlUrl: "https://example.com/root.xml",
+          htmlUrl: null,
+          folderName: null,
+        },
+        {
+          title: "Gamma",
+          xmlUrl: "https://example.com/g.xml",
+          htmlUrl: null,
+          folderName: "Unsorted",
+        },
+      ],
+      { generatedAt },
+    );
 
     expect(xml.match(/<outline text="Science"/g)?.length).toBe(1);
     expect(xml.indexOf('xmlUrl="https://example.com/root.xml"')).toBeLessThan(
@@ -166,19 +149,20 @@ describe("opml export", () => {
   });
 
   test("falls back to xmlUrl when title is blank and emits an empty body for zero feeds", () => {
-    const emptyXml = buildOpmlExportDocument([], {
-      generatedAt: new Date("2026-05-25T18:00:00.000Z"),
-    });
+    const emptyXml = buildOpmlExportDocument([], { generatedAt });
     expect(emptyXml).toContain("<body></body>");
 
-    const titledXml = buildOpmlExportDocument([
-      {
-        title: "   ",
-        xmlUrl: "https://example.com/fallback.xml",
-        htmlUrl: null,
-        folderName: null,
-      },
-    ]);
+    const titledXml = buildOpmlExportDocument(
+      [
+        {
+          title: "   ",
+          xmlUrl: "https://example.com/fallback.xml",
+          htmlUrl: null,
+          folderName: null,
+        },
+      ],
+      { generatedAt },
+    );
     expect(titledXml).toContain('text="https://example.com/fallback.xml"');
 
     const parsed = parseOpmlDocument(titledXml, "Unsorted");
@@ -210,11 +194,12 @@ describe("opml export", () => {
         }),
       }),
     });
-    const fakeDb = { select } as never;
-
-    const xml = await exportOpmlForUser(fakeDb, "user-1", {
-      generatedAt: new Date("2026-05-25T18:00:00.000Z"),
-    });
+    const xml = await Effect.runPromise(
+      Effect.gen(function* () {
+        yield* TestClock.setTime(generatedAt.getTime());
+        return yield* exportOpmlForUser("user-1");
+      }).pipe(Effect.provide(Layer.mergeAll(fakeDb({ select }), TestClock.layer()))),
+    );
 
     expect(xml).toContain('text="My &amp; Feed"');
     const parsed = parseOpmlDocument(xml, "Unsorted");
@@ -227,53 +212,5 @@ describe("opml export", () => {
         folderName: "Research",
       },
     ]);
-  });
-
-  test("registers and serves GET /opml/export with XML attachment headers", async () => {
-    const { app, routes } = createRouteRecorder();
-    registerOpmlRoutes(app as never);
-
-    const exportRoute = routes.find(
-      (route) => route.method === "get" && route.path === "/opml/export",
-    );
-    expect(exportRoute).toBeDefined();
-    expect((exportRoute?.options as Record<string, unknown>).response).toBeDefined();
-
-    const handler = exportRoute?.handler as (context: unknown) => Promise<Response>;
-    const response = await handler({
-      db: {
-        select: () => ({
-          from: () => ({
-            innerJoin: () => ({
-              leftJoin: () => ({
-                where: () =>
-                  Promise.resolve([
-                    {
-                      customTitle: null,
-                      feedTitle: "Route Feed",
-                      xmlUrl: "https://example.com/route.xml",
-                      htmlUrl: null,
-                      folderName: null,
-                    },
-                  ]),
-              }),
-            }),
-          }),
-        }),
-      },
-      userId: "user-1",
-      logger: { info() {}, warn() {}, error() {} },
-      set: {},
-      params: {},
-      query: {},
-      body: {},
-    });
-
-    expect(response.headers.get("content-type")).toBe("application/xml; charset=utf-8");
-    expect(response.headers.get("content-disposition")).toBe(
-      'attachment; filename="kyomi-subscriptions.opml"',
-    );
-    const body = await response.text();
-    expect(body).toContain("https://example.com/route.xml");
   });
 });

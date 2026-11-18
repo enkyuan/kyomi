@@ -1,76 +1,70 @@
-import type { FeedRefreshResult } from "@kyomi/ingest";
+import { Data } from "effect";
+import type { FeedRefreshFailureClass, FeedRefreshResult } from "@kyomi/ingest";
+import { ERROR_CATALOGUE, InternalError, isApiError, type ApiError } from "@shared/effect/errors";
+import { errorMessage } from "@shared/errors/serialize";
 
-export type FeedRefreshErrorSeverity = "feed" | "platform";
+/** A feed refresh that finished without a usable feed and is worth another attempt. */
+export class FeedRefreshFailed extends Data.TaggedError("FeedRefreshFailed")<{
+  readonly message: string;
+  readonly feedId: string;
+  readonly failureClass?: FeedRefreshFailureClass;
+}> {}
 
-export type FeedRefreshErrorClass = {
-  severity: FeedRefreshErrorSeverity;
-  code:
-    | "http_404"
-    | "http_4xx"
-    | "http_5xx"
-    | "certificate"
-    | "parser_limit"
-    | "html_not_feed"
-    | "access_denied_html"
-    | "captcha_html"
-    | "login_html"
-    | "stale_endpoint_html"
-    | "network"
-    | "unknown";
+/** Everything a job handler can fail with. Anything else is mapped to one of these first. */
+export type JobFailure = ApiError | FeedRefreshFailed;
+
+export type JobFailureClass = {
+  /** `expected` failures are about the job's input (log at warn); `platform` ones are ours (error). */
+  severity: "expected" | "platform";
+  code: string;
+  /**
+   * Whether running the job again can succeed. The consumer retries a retryable failure until its
+   * attempts are spent and dead-letters a permanent one on the first failure.
+   */
   retryable: boolean;
 };
 
-// Non-retryable failures are ones where re-running the job would deterministically fail again
-// (permanent HTTP 4xx, feed row deleted, etc.). The refresh service persists the outcome to the
-// feeds row before returning, so acking here is safe — the scheduler backoff owns the next attempt.
-export function isNonRetryableFeedRefreshFailure(result: FeedRefreshResult): boolean {
-  if (result.ok) {
-    return false;
+/**
+ * Map what a Promise operation threw to a typed job failure, by class and never by message: typed
+ * errors pass through, and anything else is an `InternalError` that keeps the original cause.
+ */
+export function toJobFailure(cause: unknown): JobFailure {
+  if (isApiError(cause) || cause instanceof FeedRefreshFailed) {
+    return cause;
   }
-  return Boolean(result.permanent);
+  return new InternalError({
+    message: cause instanceof Error ? errorMessage(cause) : "Job failed",
+    cause,
+  });
 }
 
-export function classifyFeedRefreshError(error: unknown): FeedRefreshErrorClass {
-  const message = error instanceof Error ? error.message : String(error);
+/**
+ * A request that cannot succeed unchanged (4xx other than 408, 409 and 429) is permanent; server
+ * and infrastructure failures are retryable, and so is a conflict (409), which clears once the
+ * competing write settles. OPML items keep their own narrower rule in `classifyOpmlItemError`.
+ */
+function retryableStatus(status: number): boolean {
+  return status >= 500 || status === 408 || status === 409 || status === 429;
+}
 
-  if (/HTTP 404/.test(message)) {
-    return { severity: "feed", code: "http_404", retryable: false };
+export function classifyJobFailure(error: JobFailure): JobFailureClass {
+  if (error._tag === "FeedRefreshFailed") {
+    return error.failureClass === undefined
+      ? { severity: "platform", code: "unknown", retryable: true }
+      : { severity: "expected", code: error.failureClass, retryable: true };
   }
+  const { status, code: defaultCode, expose } = ERROR_CATALOGUE[error._tag];
+  const code =
+    expose && "code" in error && typeof error.code === "string" ? error.code : defaultCode;
+  const retryable = retryableStatus(status);
+  return { severity: retryable ? "platform" : "expected", code, retryable };
+}
 
-  if (/HTTP 4\d\d/.test(message)) {
-    return { severity: "feed", code: "http_4xx", retryable: false };
-  }
-
-  if (/HTTP 5\d\d/.test(message)) {
-    return { severity: "feed", code: "http_5xx", retryable: true };
-  }
-
-  if (
-    /certificate|ERR_TLS_CERT|UNABLE_TO_GET_ISSUER_CERT|UNABLE_TO_VERIFY_LEAF_SIGNATURE|SELF_SIGNED_CERT|CERT_HAS_EXPIRED/i.test(
-      message,
-    )
-  ) {
-    return { severity: "feed", code: "certificate", retryable: false };
-  }
-
-  if (/Entity expansion limit exceeded/i.test(message)) {
-    return { severity: "feed", code: "parser_limit", retryable: false };
-  }
-
-  const htmlFailure = message.match(
-    /Feed returned HTML \((html_not_feed|access_denied_html|captcha_html|login_html|stale_endpoint_html)\)/,
-  );
-  if (htmlFailure?.[1]) {
-    return {
-      severity: "feed",
-      code: htmlFailure[1] as FeedRefreshErrorClass["code"],
-      retryable: false,
-    };
-  }
-
-  if (/Unable to connect|fetch failed|network/i.test(message)) {
-    return { severity: "feed", code: "network", retryable: true };
-  }
-
-  return { severity: "platform", code: "unknown", retryable: true };
+/**
+ * A feed refresh result that will fail again unchanged (HTTP 4xx other than 408/429, certificate
+ * errors, HTML where a feed should be). The refresh service has already recorded the outcome on
+ * the feed row, so the scheduler's backoff owns the next attempt and the job is acknowledged.
+ */
+export function isNonRetryableFeedRefreshFailure(result: FeedRefreshResult): boolean {
+  return !result.ok && Boolean(result.permanent);
 }

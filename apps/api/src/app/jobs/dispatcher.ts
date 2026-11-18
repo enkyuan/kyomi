@@ -1,6 +1,6 @@
-import type Redis from "ioredis";
-import type { db } from "@adapters/db/client";
-import { publishJob } from "@adapters/queue/publish";
+import { Clock, Duration, Effect, Ref, Schedule } from "effect";
+import { AppLogger } from "@adapters/logger/service";
+import { JobQueue } from "@adapters/queue/service";
 import { serializeError } from "@shared/errors/serialize";
 import {
   cancelPendingOpmlItems,
@@ -14,18 +14,9 @@ import {
   releaseOpmlItemLease,
   retryOrFailOpmlItem,
 } from "@modules/opml/store";
-import {
-  classifyOpmlItemError,
-  computeOpmlRetryDelayMs,
-  randomOpmlRetryJitter,
-} from "@modules/opml/retry";
+import { computeOpmlRetryDelayMs, opmlRetryJitter } from "@modules/opml/retry";
 import { OPML_IMPORT_RETENTION_DAYS } from "@modules/opml/constants";
-
-type DB = typeof db;
-type Logger = {
-  info: (msg: string, meta?: Record<string, unknown>) => void;
-  error: (msg: string, meta?: Record<string, unknown>) => void;
-};
+import { logTickFailure } from "./tick";
 
 export const IMPORT_DISPATCH_MAX_IMPORTS = 10;
 export const IMPORT_DISPATCH_PER_IMPORT = 5;
@@ -49,13 +40,11 @@ export type DispatchStats = {
   importsStarted: number;
 };
 
-export async function runImportDispatcherTick(
-  database: DB,
-  redis: Redis,
-  logger: Logger,
-  now: Date = new Date(),
-): Promise<DispatchStats> {
-  const claimed = await claimDispatchableOpmlItems(database, now, {
+export const runImportDispatcherTick = Effect.fn("import.dispatcher.tick")(function* (now: Date) {
+  const queue = yield* JobQueue;
+  const log = yield* AppLogger;
+
+  const claimed = yield* claimDispatchableOpmlItems(now, {
     maxImports: IMPORT_DISPATCH_MAX_IMPORTS,
     perImport: IMPORT_DISPATCH_PER_IMPORT,
     total: IMPORT_DISPATCH_TOTAL,
@@ -71,8 +60,8 @@ export async function runImportDispatcherTick(
   const startedImports = new Set<string>();
 
   for (const item of claimed) {
-    try {
-      await publishJob(redis, {
+    yield* Effect.gen(function* () {
+      yield* queue.publish({
         type: "opml.import.item",
         payload: { importId: item.importId, itemId: item.id, leaseToken: item.leaseToken },
       });
@@ -80,29 +69,32 @@ export async function runImportDispatcherTick(
 
       if (!startedImports.has(item.importId)) {
         startedImports.add(item.importId);
-        await markOpmlImportRunning(database, item.importId);
+        yield* markOpmlImportRunning(item.importId);
         stats.importsStarted += 1;
       }
-    } catch (error) {
-      const released = await releaseOpmlItemLease(
-        database,
-        item.id,
-        item.leaseToken,
-        new Date(now.getTime() + PUBLISH_FAILURE_RETRY_DELAY_MS),
-      );
-      if (released) {
-        stats.releasedAfterPublishFailure += 1;
-      }
-      logger.error("opml.import.dispatch.publish_failed", {
-        importId: item.importId,
-        itemId: item.id,
-        error: serializeError(error),
-      });
-    }
+    }).pipe(
+      Effect.catch((error) =>
+        Effect.gen(function* () {
+          const released = yield* releaseOpmlItemLease(
+            item.id,
+            item.leaseToken,
+            new Date(now.getTime() + PUBLISH_FAILURE_RETRY_DELAY_MS),
+          );
+          if (released) {
+            stats.releasedAfterPublishFailure += 1;
+          }
+          yield* log.error("opml.import.dispatch.publish_failed", {
+            importId: item.importId,
+            itemId: item.id,
+            error: serializeError(error),
+          });
+        }),
+      ),
+    );
   }
 
   return stats;
-}
+});
 
 export type ReconcileStats = {
   prepareRepublished: number;
@@ -117,13 +109,12 @@ export type ReconcileStats = {
  * deletes old terminal imports. Every step is bounded and uses guarded/conditional updates so
  * multiple scheduler replicas running this concurrently never duplicate or lose work.
  */
-export async function reconcileImports(
-  database: DB,
-  redis: Redis,
-  logger: Logger,
-  now: Date = new Date(),
+export const reconcileImports = Effect.fn("import.dispatcher.reconcile")(function* (
+  now: Date,
   options: { includeRetention?: boolean } = {},
-): Promise<ReconcileStats> {
+) {
+  const queue = yield* JobQueue;
+  const log = yield* AppLogger;
   const stats: ReconcileStats = {
     prepareRepublished: 0,
     leasesReclaimed: 0,
@@ -131,122 +122,96 @@ export async function reconcileImports(
     retentionDeleted: 0,
   };
 
-  const dueForPrepare = await reclaimStalePrepareImports(
-    database,
+  const dueForPrepare = yield* reclaimStalePrepareImports(
     now,
     new Date(now.getTime() - RECONCILE_PREPARE_WAKEUP_STALE_MS),
     new Date(now.getTime() - RECONCILE_PARSING_HEARTBEAT_STALE_MS),
   );
   for (const importId of dueForPrepare) {
-    try {
-      await publishJob(redis, { type: "opml.import.prepare", payload: { importId } });
-      await recordOpmlImportPrepareWakeup(database, importId);
-      stats.prepareRepublished += 1;
-    } catch (error) {
-      logger.error("opml.import.reconcile.prepare_republish_failed", {
-        importId,
-        error: serializeError(error),
-      });
-    }
+    yield* queue.publish({ type: "opml.import.prepare", payload: { importId } }).pipe(
+      Effect.andThen(recordOpmlImportPrepareWakeup(importId)),
+      Effect.map(() => {
+        stats.prepareRepublished += 1;
+      }),
+      Effect.catch((error) =>
+        log.error("opml.import.reconcile.prepare_republish_failed", {
+          importId,
+          error: serializeError(error),
+        }),
+      ),
+    );
   }
 
-  const expiredLeases = await findExpiredOpmlLeases(database, now);
+  const expiredLeases = yield* findExpiredOpmlLeases(now);
   for (const item of expiredLeases) {
-    const decision = classifyOpmlItemError(new Error("lease expired"));
-    const delayMs = computeOpmlRetryDelayMs(item.attempts, randomOpmlRetryJitter());
-    await retryOrFailOpmlItem(
-      database,
+    const delayMs = computeOpmlRetryDelayMs(item.attempts, yield* opmlRetryJitter);
+    yield* retryOrFailOpmlItem(
       item,
-      { retryable: decision.retryable, code: "OPML_ITEM_LEASE_EXPIRED", message: "Lease expired" },
+      { retryable: true, code: "OPML_ITEM_LEASE_EXPIRED", message: "Lease expired" },
       new Date(now.getTime() + delayMs),
     );
     stats.leasesReclaimed += 1;
   }
 
-  const cancellingImportIds = await listCancellingOpmlImportIds(
-    database,
-    RECONCILE_CANCEL_BATCH_SIZE,
-  );
+  const cancellingImportIds = yield* listCancellingOpmlImportIds(RECONCILE_CANCEL_BATCH_SIZE);
+  const cancelBatch = (importId: string) =>
+    cancelPendingOpmlItems(importId, RECONCILE_CANCEL_BATCH_SIZE);
   for (const importId of cancellingImportIds) {
-    let cancelledInBatch = await cancelPendingOpmlItems(
-      database,
-      importId,
-      RECONCILE_CANCEL_BATCH_SIZE,
-    );
+    let cancelledInBatch = yield* cancelBatch(importId);
     while (cancelledInBatch > 0) {
       stats.cancellingProcessed += cancelledInBatch;
-      cancelledInBatch = await cancelPendingOpmlItems(
-        database,
-        importId,
-        RECONCILE_CANCEL_BATCH_SIZE,
-      );
+      cancelledInBatch = yield* cancelBatch(importId);
     }
   }
 
   if (options.includeRetention) {
-    stats.retentionDeleted = await deleteOldTerminalOpmlImports(
-      database,
+    stats.retentionDeleted = yield* deleteOldTerminalOpmlImports(
       new Date(now.getTime() - RECONCILE_RETENTION_DAYS * 24 * 60 * 60_000),
     );
   }
 
   return stats;
-}
-
-function sleep(ms: number, signal?: AbortSignal): Promise<void> {
-  return new Promise((resolve) => {
-    const timer = setTimeout(resolve, ms);
-    signal?.addEventListener(
-      "abort",
-      () => {
-        clearTimeout(timer);
-        resolve();
-      },
-      { once: true },
-    );
-  });
-}
+});
 
 /**
  * Runs the dispatch tick every DISPATCH_TICK_MS and reconciliation every RECONCILE_TICK_MS on
  * one non-blocking loop, so a single scheduler process drives both without a second connection.
  * Retention only needs to run roughly once a day; it piggybacks on whichever reconciliation
  * tick crosses the RETENTION_TICK_MS boundary rather than needing its own timer.
+ * A tick runs to completion once started; the wait between ticks is what shutdown interrupts.
  */
-export async function runImportDispatcherLoop(
-  database: DB,
-  redis: Redis,
-  logger: Logger,
-  signal?: AbortSignal,
-): Promise<void> {
-  logger.info("import.dispatcher.started", {
+export const importDispatcherLoop = Effect.gen(function* () {
+  const log = yield* AppLogger;
+  yield* log.info("import.dispatcher.started", {
     dispatchTickMs: DISPATCH_TICK_MS,
     reconcileTickMs: RECONCILE_TICK_MS,
   });
 
-  let lastReconcileAt = 0;
-  let lastRetentionAt = 0;
+  const lastReconcileAt = yield* Ref.make(0);
+  const lastRetentionAt = yield* Ref.make(0);
 
-  const maybeReconcile = async (now: number) => {
-    if (now - lastReconcileAt < RECONCILE_TICK_MS) {
-      return;
-    }
-    lastReconcileAt = now;
-    const includeRetention = now - lastRetentionAt >= RETENTION_TICK_MS;
-    lastRetentionAt = includeRetention ? now : lastRetentionAt;
-    await reconcileImports(database, redis, logger, new Date(now), { includeRetention });
-  };
+  const maybeReconcile = (nowMs: number) =>
+    Effect.gen(function* () {
+      if (nowMs - (yield* Ref.get(lastReconcileAt)) < RECONCILE_TICK_MS) {
+        return;
+      }
+      yield* Ref.set(lastReconcileAt, nowMs);
+      const includeRetention = nowMs - (yield* Ref.get(lastRetentionAt)) >= RETENTION_TICK_MS;
+      if (includeRetention) {
+        yield* Ref.set(lastRetentionAt, nowMs);
+      }
+      yield* reconcileImports(new Date(nowMs), { includeRetention });
+    });
 
-  while (!signal?.aborted) {
-    try {
-      await runImportDispatcherTick(database, redis, logger);
-      await maybeReconcile(Date.now());
-    } catch (error) {
-      logger.error("import.dispatcher.tick_failed", {
-        error: serializeError(error),
-      });
-    }
+  const tick = Effect.gen(function* () {
+    const nowMs = yield* Clock.currentTimeMillis;
+    yield* runImportDispatcherTick(new Date(nowMs));
+    yield* maybeReconcile(nowMs);
+  });
 
-    await sleep(DISPATCH_TICK_MS, signal);
-  }
-}
+  yield* tick.pipe(
+    Effect.catchCause(logTickFailure("import.dispatcher.tick_failed")),
+    Effect.uninterruptible,
+    Effect.repeat(Schedule.spaced(Duration.millis(DISPATCH_TICK_MS))),
+  );
+});

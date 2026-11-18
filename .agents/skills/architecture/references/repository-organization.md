@@ -174,7 +174,7 @@ Rules:
 8. Tests mirror the source path and basename
    (`tests/api/integration/<path under apps/api/src>/<basename>.test.ts`); behavior-spanning tests
    (`detail-tags`, `process-roles`, schema SQL checks) sit under their owning directory. A rename
-   moves the mirror and updates `mock.module` strings, path-reading tests, and template imports in
+   moves the mirror and updates test imports, path-reading tests, and template imports in
    the same change.
 
 Where API naming differs from web: no `use-*` hook files, no `index.tsx` primary-component files,

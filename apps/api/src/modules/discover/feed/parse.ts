@@ -1,5 +1,12 @@
 import { XMLParser } from "fast-xml-parser";
 import { decodeHtmlEntities } from "@kyomi/ingest";
+import {
+  extractHeadHtml,
+  elementInner,
+  metaContent,
+  openTags,
+  stripTagMarkup,
+} from "@kyomi/ingest/lib/text-scan";
 
 export type ParsedFeedMetadata = {
   title: string;
@@ -9,12 +16,7 @@ export type ParsedFeedMetadata = {
 };
 
 function stripTags(html: string): string {
-  return decodeHtmlEntities(
-    html
-      .replace(/<[^>]*>/g, " ")
-      .replace(/\s+/g, " ")
-      .trim(),
-  );
+  return decodeHtmlEntities(stripTagMarkup(html).replace(/\s+/g, " ").trim());
 }
 
 function xmlText(value: unknown): string {
@@ -39,25 +41,19 @@ function textFromUnknown(value: unknown): string | null {
   return text || null;
 }
 
-function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
+/**
+ * `candidate` resolved against `baseUrl`, when the result is an http(s) URL without a login. The
+ * link and icon of a feed are stored on a shared row and loaded by every follower's client, so a
+ * `javascript:`, `data:` or `file:` URL, or one that carries a password, is dropped.
+ */
+function absoluteHttpUrl(candidate: string | null, baseUrl: string): string | null {
   if (!candidate) {
     return null;
   }
   try {
-    return new URL(candidate, baseUrl).href;
-  } catch {
-    return null;
-  }
-}
-
-function absoluteHttpUrl(candidate: string | null, baseUrl: string): string | null {
-  const href = absoluteUrl(candidate, baseUrl);
-  if (!href) {
-    return null;
-  }
-  try {
-    const parsed = new URL(href);
-    return parsed.protocol === "http:" || parsed.protocol === "https:" ? parsed.href : null;
+    const url = new URL(candidate, baseUrl);
+    const isHttp = url.protocol === "http:" || url.protocol === "https:";
+    return isHttp && !url.username && !url.password ? url.href : null;
   } catch {
     return null;
   }
@@ -126,17 +122,17 @@ function pickAtomLink(feed: Record<string, unknown>, fallback: string): string |
 function pickRssImageUrl(channel: Record<string, unknown>, fallbackUrl: string): string | null {
   const image = channel.image;
   if (typeof image === "string") {
-    return absoluteUrl(image.trim() || null, fallbackUrl);
+    return absoluteHttpUrl(image.trim() || null, fallbackUrl);
   }
   if (!image || typeof image !== "object") {
     return null;
   }
   const rec = image as Record<string, unknown>;
-  return absoluteUrl(textFromUnknown(rec.url) ?? textFromUnknown(rec["@_href"]), fallbackUrl);
+  return absoluteHttpUrl(textFromUnknown(rec.url) ?? textFromUnknown(rec["@_href"]), fallbackUrl);
 }
 
 function pickAtomIconUrl(feed: Record<string, unknown>, fallbackUrl: string): string | null {
-  return absoluteUrl(textFromUnknown(feed.icon) ?? textFromUnknown(feed.logo), fallbackUrl);
+  return absoluteHttpUrl(textFromUnknown(feed.icon) ?? textFromUnknown(feed.logo), fallbackUrl);
 }
 
 function parseJsonFeedPreview(body: string, fallbackUrl: string): ParsedFeedMetadata {
@@ -159,8 +155,8 @@ function parseJsonFeedPreview(body: string, fallbackUrl: string): ParsedFeedMeta
     description: description || "Follow recent articles from this feed",
     link: home || null,
     iconUrl:
-      absoluteUrl(typeof rec.icon === "string" ? rec.icon : null, fallbackUrl) ??
-      absoluteUrl(typeof rec.favicon === "string" ? rec.favicon : null, fallbackUrl),
+      absoluteHttpUrl(typeof rec.icon === "string" ? rec.icon : null, fallbackUrl) ??
+      absoluteHttpUrl(typeof rec.favicon === "string" ? rec.favicon : null, fallbackUrl),
   };
 }
 
@@ -219,52 +215,30 @@ export function parseFeedMetadata(body: string, resolvedUrl: string): ParsedFeed
 
 const ICON_REL_TOKEN = "icon";
 
-function extractHeadHtml(body: string): string {
-  const headMatch = body.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
-  return headMatch ? headMatch[1] : body.slice(0, 32768);
-}
-
-function firstMetaContent(headHtml: string, patterns: RegExp[]): string | null {
-  for (const pattern of patterns) {
-    const match = headHtml.match(pattern);
-    if (match?.[1]) {
-      return decodeHtmlEntities(match[1]).trim();
-    }
-  }
-  return null;
+function firstMetaContent(
+  headHtml: string,
+  attribute: "property" | "name",
+  key: string,
+): string | null {
+  const content = metaContent(headHtml, attribute, key);
+  return content ? decodeHtmlEntities(content).trim() : null;
 }
 
 function parseHtmlTitle(headHtml: string): string {
-  const titleMatch = headHtml.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
-  const documentTitle = titleMatch ? decodeHtmlEntities(titleMatch[1]).trim() : "Untitled";
+  const title = elementInner(headHtml, "title");
+  const documentTitle = title === null ? "Untitled" : decodeHtmlEntities(title).trim();
   if (documentTitle !== "Untitled") {
     return documentTitle;
   }
 
-  return (
-    firstMetaContent(headHtml, [
-      /<meta[^>]+property\s*=\s*["']og:title["'][^>]*content\s*=\s*["']([^"']+)["']/i,
-      /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+property\s*=\s*["']og:title["']/i,
-    ]) ?? "Untitled"
-  );
+  return firstMetaContent(headHtml, "property", "og:title") ?? "Untitled";
 }
 
 function parseHtmlDescription(headHtml: string): string {
-  const description =
-    firstMetaContent(headHtml, [
-      /<meta[^>]+name\s*=\s*["']description["'][^>]*content\s*=\s*["']([^"']+)["']/i,
-      /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+name\s*=\s*["']description["']/i,
-    ]) ?? "";
-
-  if (description) {
-    return description;
-  }
-
   return (
-    firstMetaContent(headHtml, [
-      /<meta[^>]+property\s*=\s*["']og:description["'][^>]*content\s*=\s*["']([^"']+)["']/i,
-      /<meta[^>]*content\s*=\s*["']([^"']+)["'][^>]+property\s*=\s*["']og:description["']/i,
-    ]) ?? "Follow recent articles from this feed"
+    firstMetaContent(headHtml, "name", "description") ||
+    (firstMetaContent(headHtml, "property", "og:description") ??
+      "Follow recent articles from this feed")
   );
 }
 
@@ -287,16 +261,13 @@ function linkTagHasIconRel(tag: string): boolean {
 }
 
 function parseHtmlIconUrl(headHtml: string, resolvedUrl: string): string | null {
-  const linkRegex = /<link[^>]*>/gi;
-  let match: RegExpExecArray | null;
-  while ((match = linkRegex.exec(headHtml)) !== null) {
-    const tag = match[0];
+  for (const tag of openTags(headHtml, "link")) {
     if (!linkTagHasIconRel(tag)) {
       continue;
     }
-    const href = extractLinkHref(tag);
-    if (href) {
-      return absoluteUrl(href, resolvedUrl);
+    const icon = absoluteHttpUrl(extractLinkHref(tag), resolvedUrl);
+    if (icon) {
+      return icon;
     }
   }
   return null;

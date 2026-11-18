@@ -1,12 +1,19 @@
-import { afterEach, beforeEach, describe, expect, test } from "bun:test";
+import { beforeEach, describe, expect, test } from "bun:test";
 import { crc32, deflateSync } from "node:zlib";
-import { unwiredDocumentPatchStore } from "@modules/articles/document-enrichment/jobs";
-import { enqueueDocumentEnrichment } from "@modules/articles/document-enrichment/enqueue";
-import { fetchBounded } from "@modules/articles/document-enrichment/fetch";
+import { DateTime, Effect, Exit, Layer } from "effect";
+import type { HttpClient } from "effect/http";
+import { TestClock } from "effect/testing";
+import { handleDocumentEnrichmentJob } from "@modules/articles/document-enrichment/jobs";
 import { runEmbedSnapshotJob } from "@modules/articles/document-enrichment/embed-snapshot";
 import { runImageMeasureJob } from "@modules/articles/document-enrichment/image-measure";
-import type { DocumentTarget } from "@kyomi/ingest";
-import type { DocumentPatchStore } from "@modules/articles/document-enrichment/store";
+import { EnrichmentGates } from "@modules/articles/document-enrichment/limits";
+import {
+  DocumentPatchStore,
+  type DocumentPatchStoreShape,
+} from "@modules/articles/document-enrichment/store";
+import { DatabaseError } from "@shared/effect/errors";
+import { fakeHttpClient, recordingLogger } from "@api-tests/support/layers";
+import { documentWith, figure, IMG, TARGET } from "./helpers";
 import {
   applyImageMeasurements,
   collectEmbedsToSnapshot,
@@ -31,37 +38,24 @@ function solidPng(width: number, height: number): Uint8Array<ArrayBuffer> {
   );
 }
 
-// Literal public IPs keep the SSRF check off the network (no DNS lookup).
-const IMG = "https://93.184.216.34/a.png";
 const NO_RETRY = { attempts: 1, baseDelayMs: 0 };
-
-function documentWith(blocks: unknown[]) {
-  return { version: 1, blocks, footnotes: [], meta: { leadImage: null } };
-}
-const figure = (src: string, extra: object = {}) => ({
-  type: "figure",
-  image: { src, alt: "", ...extra },
-});
-
-const TARGET: DocumentTarget = { table: "feed_items", id: "a1", body: "original" };
 
 function memoryStore(document: object) {
   let state = { document, documentVersion: 1, compilerVersion: "c1" };
   const saves: number[] = [];
-  const store: DocumentPatchStore = {
-    async load() {
-      return structuredClone(state);
-    },
-    async patch(_target, expected, fn) {
-      if (expected.documentVersion !== state.documentVersion) return { status: "stale" };
-      state = {
-        ...state,
-        document: fn(structuredClone(state.document)),
-        documentVersion: state.documentVersion + 1,
-      };
-      saves.push(state.documentVersion);
-      return { status: "patched" };
-    },
+  const store: DocumentPatchStoreShape = {
+    load: () => Effect.sync(() => structuredClone(state)),
+    patch: (_target, expected, fn) =>
+      Effect.sync(() => {
+        if (expected.documentVersion !== state.documentVersion) return { status: "stale" as const };
+        state = {
+          ...state,
+          document: fn(structuredClone(state.document)),
+          documentVersion: state.documentVersion + 1,
+        };
+        saves.push(state.documentVersion);
+        return { status: "patched" as const };
+      }),
   };
   return {
     store,
@@ -73,21 +67,33 @@ function memoryStore(document: object) {
 
 type Doc = { blocks: { image: Record<string, unknown>; snapshot?: unknown }[] };
 
-const realFetch = globalThis.fetch;
 let requested: string[] = [];
-function stubFetch(handler: (url: string) => Response | Promise<Response>) {
-  globalThis.fetch = (async (input: Request | string | URL) => {
-    const url = String(input instanceof Request ? input.url : input);
-    requested.push(url);
-    return handler(url);
-  }) as typeof fetch;
-}
+type Responder = (url: string) => Response | Promise<Response>;
 beforeEach(() => {
   requested = [];
 });
-afterEach(() => {
-  globalThis.fetch = realFetch;
-});
+
+/** Every service a job needs, with the network answered by `respond` and no real clock or host. */
+function jobServices(store: DocumentPatchStoreShape, respond: Responder) {
+  return Layer.mergeAll(
+    Layer.succeed(DocumentPatchStore, DocumentPatchStore.of(store)),
+    EnrichmentGates.layer,
+    fakeHttpClient(({ url }) => {
+      requested.push(url);
+      return respond(url);
+    }),
+    recordingLogger().layer,
+  );
+}
+
+const unreachable: Responder = () => {
+  throw new Error("unexpected request");
+};
+
+const noStore: DocumentPatchStoreShape = {
+  load: () => Effect.succeed(null),
+  patch: () => Effect.succeed({ status: "missing" }),
+};
 
 describe("document walkers", () => {
   test("collect nested images once and never overwrite existing values", () => {
@@ -145,19 +151,32 @@ describe("document walkers", () => {
   });
 });
 
+/** Runs a job Effect against `store`, with the network answered by `respond`. */
+function runJob<A, E>(
+  job: Effect.Effect<A, E, DocumentPatchStore | EnrichmentGates | HttpClient.HttpClient>,
+  store: DocumentPatchStoreShape,
+  respond: Responder,
+) {
+  return Effect.runPromise(job.pipe(Effect.provide(jobServices(store, respond))));
+}
+
+const png =
+  (width = 8, height = 8): Responder =>
+  () =>
+    new Response(solidPng(width, height), { headers: { "content-type": "image/png" } });
+
 describe("runImageMeasureJob", () => {
   test("patches dimensions and placeholder, then is a no-op", async () => {
-    const png = solidPng(40, 30);
-    stubFetch(() => new Response(png, { headers: { "content-type": "image/png" } }));
     const mem = memoryStore(documentWith([figure(IMG)]));
+    const job = runImageMeasureJob(TARGET, { retry: NO_RETRY });
 
-    const first = await runImageMeasureJob(TARGET, { store: mem.store, retry: NO_RETRY });
+    const first = await runJob(job, mem.store, png(40, 30));
     expect(first).toMatchObject({ status: "patched", measured: 1 });
     const image = (mem.get().document as Doc).blocks[0].image;
     expect(image).toMatchObject({ width: 40, height: 30 });
     expect(typeof image.placeholder).toBe("string");
 
-    const second = await runImageMeasureJob(TARGET, { store: mem.store, retry: NO_RETRY });
+    const second = await runJob(job, mem.store, png(40, 30));
     expect(second.status).toBe("unchanged");
     expect(mem.saves).toEqual([2]);
     expect(requested).toHaveLength(1);
@@ -165,13 +184,16 @@ describe("runImageMeasureJob", () => {
 
   test("reads only the header when a placeholder already exists", async () => {
     let cancelled = false;
-    const png = solidPng(64, 48);
-    stubFetch(
+    const image = solidPng(64, 48);
+    const mem = memoryStore(documentWith([figure(IMG, { placeholder: "abc" })]));
+    const result = await runJob(
+      runImageMeasureJob(TARGET, { retry: NO_RETRY }),
+      mem.store,
       () =>
         new Response(
           new ReadableStream({
             start(controller) {
-              controller.enqueue(png.subarray(0, 40));
+              controller.enqueue(image.subarray(0, 40));
             },
             cancel() {
               cancelled = true;
@@ -180,8 +202,6 @@ describe("runImageMeasureJob", () => {
           { headers: { "content-type": "image/png" } },
         ),
     );
-    const mem = memoryStore(documentWith([figure(IMG, { placeholder: "abc" })]));
-    const result = await runImageMeasureJob(TARGET, { store: mem.store, retry: NO_RETRY });
     expect(result.status).toBe("patched");
     expect(cancelled).toBe(true);
     expect((mem.get().document as Doc).blocks[0].image).toMatchObject({
@@ -192,50 +212,104 @@ describe("runImageMeasureJob", () => {
   });
 
   test("drops the job when the document was recompiled", async () => {
-    stubFetch(() => new Response(solidPng(10, 10), { headers: { "content-type": "image/png" } }));
     const mem = memoryStore(documentWith([figure(IMG)]));
-    const racing: DocumentPatchStore = {
+    const racing: DocumentPatchStoreShape = {
       load: mem.store.load,
-      async patch(target, expected, fn) {
+      patch: (target, expected, fn) => {
         mem.bump();
         return mem.store.patch(target, expected, fn);
       },
     };
-    const result = await runImageMeasureJob(TARGET, { store: racing, retry: NO_RETRY });
+    const result = await runJob(
+      runImageMeasureJob(TARGET, { retry: NO_RETRY }),
+      racing,
+      png(10, 10),
+    );
     expect(result.status).toBe("stale");
     expect(mem.saves).toEqual([]);
   });
 
   test("failed probes leave the document untouched", async () => {
-    stubFetch(() => new Response("nope", { status: 404 }));
     const mem = memoryStore(documentWith([figure(IMG)]));
-    const result = await runImageMeasureJob(TARGET, { store: mem.store, retry: NO_RETRY });
+    const result = await runJob(
+      runImageMeasureJob(TARGET, { retry: NO_RETRY }),
+      mem.store,
+      () => new Response("nope", { status: 404 }),
+    );
     expect(result).toMatchObject({ status: "unchanged", measured: 0 });
     expect(mem.saves).toEqual([]);
   });
 
   test("retries transient failures with backoff", async () => {
     let calls = 0;
-    stubFetch(() =>
-      ++calls < 3
-        ? new Response("busy", { status: 503 })
-        : new Response(solidPng(8, 8), { headers: { "content-type": "image/png" } }),
-    );
     const mem = memoryStore(documentWith([figure(IMG)]));
-    const result = await runImageMeasureJob(TARGET, {
-      store: mem.store,
-      retry: { attempts: 3, baseDelayMs: 1 },
-    });
+    const result = await runJob(
+      runImageMeasureJob(TARGET, { retry: { attempts: 3, baseDelayMs: 1 } }),
+      mem.store,
+      (url) => (++calls < 3 ? new Response("busy", { status: 503 }) : png(8, 8)(url)),
+    );
     expect(result.status).toBe("patched");
     expect(calls).toBe(3);
   });
 
+  test("gives up after the configured attempts", async () => {
+    let calls = 0;
+    const mem = memoryStore(documentWith([figure(IMG)]));
+    const result = await runJob(
+      runImageMeasureJob(TARGET, { retry: { attempts: 3, baseDelayMs: 1 } }),
+      mem.store,
+      () => (calls++, new Response("busy", { status: 503 })),
+    );
+    expect(result).toMatchObject({ status: "unchanged", measured: 0 });
+    expect(calls).toBe(3);
+  });
+
+  test("does not retry a permanent failure", async () => {
+    let calls = 0;
+    const mem = memoryStore(documentWith([figure(IMG)]));
+    await runJob(
+      runImageMeasureJob(TARGET, { retry: { attempts: 3, baseDelayMs: 1 } }),
+      mem.store,
+      () => (calls++, new Response("gone", { status: 404 })),
+    );
+    expect(calls).toBe(1);
+  });
+
   test("missing documents are reported, not thrown", async () => {
-    const store: DocumentPatchStore = {
-      load: async () => null,
-      patch: async () => ({ status: "missing" }),
-    };
-    expect((await runImageMeasureJob(TARGET, { store })).status).toBe("missing");
+    const result = await runJob(runImageMeasureJob(TARGET), noStore, unreachable);
+    expect(result.status).toBe("missing");
+  });
+
+  test("keeps at most two requests open against one host", async () => {
+    let active = 0;
+    let peak = 0;
+    const urls = Array.from({ length: 6 }, (_, index) => `https://93.184.216.34/${index}.png`);
+    const mem = memoryStore(documentWith(urls.map((url) => figure(url))));
+    const result = await runJob(
+      runImageMeasureJob(TARGET, { retry: NO_RETRY, concurrency: 6 }),
+      mem.store,
+      async (url) => {
+        active += 1;
+        peak = Math.max(peak, active);
+        await new Promise((resolve) => setTimeout(resolve, 10));
+        active -= 1;
+        return png(8, 8)(url);
+      },
+    );
+    expect(result).toMatchObject({ status: "patched", measured: 6 });
+    expect(peak).toBe(2);
+  });
+
+  test("an interrupted job ends without patching", async () => {
+    const mem = memoryStore(documentWith([figure(IMG)]));
+    const exit = await Effect.runPromiseExit(
+      runImageMeasureJob(TARGET, { retry: NO_RETRY }).pipe(
+        Effect.timeout(20),
+        Effect.provide(jobServices(mem.store, () => new Promise<Response>(() => undefined))),
+      ),
+    );
+    expect(Exit.isFailure(exit)).toBe(true);
+    expect(mem.saves).toEqual([]);
   });
 });
 
@@ -247,130 +321,93 @@ describe("runEmbedSnapshotJob", () => {
     account: { acct: "bob", display_name: "Bob", url: "https://93.184.216.34/@bob" },
     media_attachments: [],
   });
+  const json: Responder = () =>
+    new Response(status, { headers: { "content-type": "application/json" } });
 
   test("writes the snapshot once and is idempotent", async () => {
-    stubFetch(() => new Response(status, { headers: { "content-type": "application/json" } }));
     const mem = memoryStore(documentWith([{ type: "embed", provider: "mastodon", url: MASTODON }]));
-    const now = () => new Date("2026-10-24T00:00:00.000Z");
-    const first = await runEmbedSnapshotJob(TARGET, { store: mem.store, retry: NO_RETRY, now });
+    const job = runEmbedSnapshotJob(TARGET, { retry: NO_RETRY });
+    const at = DateTime.toEpochMillis(DateTime.makeUnsafe("2026-10-24T00:00:00.000Z"));
+
+    const first = await Effect.runPromise(
+      TestClock.setTime(at).pipe(
+        Effect.andThen(job),
+        Effect.provide(Layer.mergeAll(jobServices(mem.store, json), TestClock.layer())),
+      ),
+    );
     expect(first.status).toBe("patched");
     expect((mem.get().document as Doc).blocks[0].snapshot).toMatchObject({
       text: [{ type: "text", value: "hi" }],
       fetchedAt: "2026-10-24T00:00:00.000Z",
     });
     expect(requested).toEqual(["https://93.184.216.34/api/v1/statuses/111"]);
-    expect((await runEmbedSnapshotJob(TARGET, { store: mem.store, retry: NO_RETRY })).status).toBe(
-      "unchanged",
-    );
+    expect((await runJob(job, mem.store, json)).status).toBe("unchanged");
     expect(requested).toHaveLength(1);
   });
 
   test("failures leave the embed as-is", async () => {
-    stubFetch(() => new Response("{}", { status: 500 }));
     const mem = memoryStore(documentWith([{ type: "embed", provider: "mastodon", url: MASTODON }]));
-    const result = await runEmbedSnapshotJob(TARGET, { store: mem.store, retry: NO_RETRY });
+    const result = await runJob(
+      runEmbedSnapshotJob(TARGET, { retry: NO_RETRY }),
+      mem.store,
+      () => new Response("{}", { status: 500 }),
+    );
     expect(result).toMatchObject({ status: "unchanged", fetched: 0 });
     expect((mem.get().document as Doc).blocks[0].snapshot).toBeUndefined();
   });
 
   test("never fetches private-network Mastodon hosts", async () => {
-    stubFetch(() => new Response(status));
     const mem = memoryStore(
       documentWith([{ type: "embed", provider: "mastodon", url: "https://169.254.169.254/@a/1" }]),
     );
-    const result = await runEmbedSnapshotJob(TARGET, { store: mem.store, retry: NO_RETRY });
+    const result = await runJob(
+      runEmbedSnapshotJob(TARGET, { retry: NO_RETRY }),
+      mem.store,
+      () => new Response(status),
+    );
     expect(result.status).toBe("unchanged");
     expect(requested).toEqual([]);
   });
 });
 
-describe("fetchBounded SSRF policy", () => {
-  const opts = { accept: "*/*", timeoutMs: 1000, maxBytes: 1024 };
-
-  test.each([
-    "http://127.0.0.1/x",
-    "http://localhost/x",
-    "http://169.254.169.254/latest/meta-data",
-    "http://10.0.0.5/x",
-    "http://[::1]/x",
-    "file:///etc/passwd",
-  ])("rejects %s without fetching", async (url) => {
-    stubFetch(() => new Response("secret"));
-    const result = await fetchBounded(url, opts);
-    expect(result.ok).toBe(false);
-    if (!result.ok) expect(result.retryable).toBe(false);
-    expect(requested).toEqual([]);
-  });
-
-  test("rejects a redirect into a private address", async () => {
-    stubFetch(
-      () => new Response(null, { status: 302, headers: { location: "http://127.0.0.1/admin" } }),
+describe("handleDocumentEnrichmentJob", () => {
+  test("runs the job for its type and logs the outcome", async () => {
+    const mem = memoryStore(documentWith([figure(IMG)]));
+    const logs = recordingLogger();
+    await Effect.runPromise(
+      handleDocumentEnrichmentJob({
+        type: "document.image-measure",
+        payload: { target: TARGET },
+      }).pipe(Effect.provide(Layer.mergeAll(jobServices(mem.store, png(8, 8)), logs.layer))),
     );
-    const result = await fetchBounded("https://93.184.216.34/start", opts);
-    expect(result).toMatchObject({ ok: false, reason: "blocked_url", retryable: false });
-    expect(requested).toEqual(["https://93.184.216.34/start"]);
+    expect(mem.saves).toEqual([2]);
+    expect(logs.entries).toContainEqual(
+      expect.objectContaining({
+        level: "info",
+        event: "worker.job.document_enrichment.completed",
+        context: expect.objectContaining({
+          jobType: "document.image-measure",
+          target: TARGET,
+          status: "patched",
+          measured: 1,
+        }),
+      }),
+    );
   });
 
-  test("enforces the byte limit", async () => {
-    stubFetch(() => new Response(new Uint8Array(4096)));
-    expect(await fetchBounded("https://93.184.216.34/big", opts)).toMatchObject({
-      ok: false,
-      reason: "too_large",
-    });
-  });
-});
-
-describe("enqueueDocumentEnrichment", () => {
-  function fakeRedis() {
-    const added: string[][] = [];
-    const redis = {
-      xadd: async (...args: (string | number)[]) => {
-        added.push(args.map(String));
-        return "1-0";
-      },
+  test("a failing store fails the job so the queue retries it", async () => {
+    const broken: DocumentPatchStoreShape = {
+      ...noStore,
+      load: () => Effect.fail(new DatabaseError({ operation: "load", cause: new Error("down") })),
     };
-    return { redis: redis as never, added };
-  }
-
-  test("queues only the jobs with work to do", async () => {
-    const { redis, added } = fakeRedis();
-    await enqueueDocumentEnrichment(TARGET, documentWith([figure(IMG)]), redis);
-    expect(added.map((a) => a[0])).toEqual(["jobs:document-enrichment"]);
-    expect(added[0]).toContain("document.image-measure");
-
-    const both = fakeRedis();
-    await enqueueDocumentEnrichment(
-      TARGET,
-      documentWith([
-        figure(IMG),
-        { type: "embed", provider: "x", url: "https://x.com/a/status/1" },
-      ]),
-      both.redis,
+    const error = await Effect.runPromise(
+      Effect.flip(
+        handleDocumentEnrichmentJob({
+          type: "document.embed-snapshot",
+          payload: { target: TARGET },
+        }),
+      ).pipe(Effect.provide(jobServices(broken, unreachable))),
     );
-    expect(both.added).toHaveLength(2);
-
-    const none = fakeRedis();
-    await enqueueDocumentEnrichment(
-      TARGET,
-      documentWith([figure(IMG, { width: 1, height: 1, placeholder: "p" })]),
-      none.redis,
-    );
-    expect(none.added).toHaveLength(0);
-  });
-
-  test("never throws when the queue is down", async () => {
-    const redis = { xadd: async () => Promise.reject(new Error("down")) } as never;
-    await enqueueDocumentEnrichment(TARGET, documentWith([figure(IMG)]), redis);
-  });
-});
-
-describe("unwiredDocumentPatchStore", () => {
-  test("fails loudly so a missed wiring surfaces as a failed job", async () => {
-    await expect(runImageMeasureJob(TARGET, { store: unwiredDocumentPatchStore })).rejects.toThrow(
-      "not wired",
-    );
-    await expect(runEmbedSnapshotJob(TARGET, { store: unwiredDocumentPatchStore })).rejects.toThrow(
-      "not wired",
-    );
+    expect(error._tag).toBe("DatabaseError");
   });
 });

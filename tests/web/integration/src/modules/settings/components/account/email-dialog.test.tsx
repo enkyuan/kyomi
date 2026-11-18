@@ -129,6 +129,16 @@ afterEach(() => {
 });
 
 describe("EmailDialog change-email flow", () => {
+  test("keeps its footer actions rectangular, including the render-prop Cancel button", () => {
+    renderDialog();
+
+    for (const name of ["Cancel", "Continue"]) {
+      const button = screen.getByRole("button", { name });
+      expect(button.classList.contains("rounded-lg")).toBe(true);
+      expect(button.classList.contains("rounded-full")).toBe(false);
+    }
+  });
+
   test("verifies the current mailbox, then the new one, with the exact calls in order", async () => {
     const fetchSpy = vi.spyOn(globalThis, "fetch");
     const { invalidate, onOpenChange } = renderDialog();

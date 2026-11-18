@@ -152,7 +152,8 @@ function captureMediaText(root: HTMLElement): void {
 function calloutVariant(element: Element): "note" | "tip" | "important" | "warning" | "caution" {
   const tokens = classTokens(element).flatMap((token) => token.toLowerCase().split(/[-_]/));
   for (const token of tokens) {
-    const variant = VARIANT_BY_TOKEN[token];
+    // Own keys only: a class of `constructor` or `toString` is publisher text, not a variant.
+    const variant = Object.hasOwn(VARIANT_BY_TOKEN, token) ? VARIANT_BY_TOKEN[token] : undefined;
     if (variant) {
       return variant;
     }

@@ -135,7 +135,7 @@ export const buttonGroupVariants = cva("", {
       attached: "",
       /** Separate pill segments: capsule outer ends, small inner corners, a hairline gap. */
       split:
-        "inline-flex w-fit gap-0.75 *:pointer-coarse:after:min-h-auto *:pointer-coarse:after:min-w-auto *:data-[slot=button]:before:rounded-[inherit]",
+        "inline-flex w-fit gap-(--split-gap) [--split-gap:calc(var(--split-h,2.25rem)/24)] [--split-inner:calc(var(--split-h,2.25rem)/8)] *:pointer-coarse:after:min-h-auto *:pointer-coarse:after:min-w-auto *:data-[slot=button]:before:rounded-[inherit]",
     },
   },
   compoundVariants: [

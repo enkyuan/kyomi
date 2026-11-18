@@ -37,4 +37,7 @@ COPY packages/ingest packages/ingest
 WORKDIR /app/apps/api
 EXPOSE 8000
 
+# The server only reads its files, so it does not need root; the base image ships this user.
+USER bun
+
 CMD ["bun", "src/app/boot/server.ts"]

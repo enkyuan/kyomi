@@ -1,6 +1,6 @@
 "use client";
 
-import { HandIcon, PencilIcon, UserIcon } from "@kyomi/ui/icons/blode";
+import { EditIcon, UserIcon } from "@kyomi/ui/icons/blode";
 import { useAuth } from "@integrations/better-auth/provider";
 import { Badge } from "@kyomi/ui/components/badge";
 import { Button } from "@kyomi/ui/components/button";
@@ -18,6 +18,10 @@ import {
 import { useAccountPanel } from "@modules/settings/hooks/use-account-panel";
 import { SettingHeading } from "../appearance/headings";
 import { EmailDialog } from "./email-dialog";
+
+/** The flat destructive action: the secondary token fill with a tinted hover, no tactile shadow. */
+const DESTRUCTIVE_FLAT_CLASS =
+  "text-destructive hover:bg-destructive/10 data-pressed:bg-destructive/10";
 
 export const accountSection = {
   description: "Manage your account details, connected accounts, and security settings.",
@@ -76,8 +80,13 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
       <section className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h3 className="text-base font-semibold text-foreground">Account</h3>
-          <Button size="sm" variant="destructive-outline" onClick={() => void onLogout()}>
-            <HandIcon />
+          <Button
+            className={DESTRUCTIVE_FLAT_CLASS}
+            shape="pill"
+            size="sm"
+            variant="secondary"
+            onClick={() => void onLogout()}
+          >
             Log out
           </Button>
         </div>
@@ -91,10 +100,11 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
             <Button
               aria-label="Edit email"
               onClick={handleStartEditEmail}
+              shape="pill"
               size="icon-xs"
               variant="ghost"
             >
-              <PencilIcon />
+              <EditIcon />
             </Button>
           </div>
         </div>
@@ -143,7 +153,11 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
                           {describeSessionDevice(sessionItem.userAgent).label}
                         </span>
                         {sessionItem.isCurrent ? (
-                          <Badge className="font-semibold tracking-wider" size="sm" variant="mizu">
+                          <Badge
+                            className="font-semibold tracking-wider"
+                            size="sm"
+                            variant="success"
+                          >
                             Current
                           </Badge>
                         ) : null}
@@ -181,16 +195,19 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
             <Button
               loading={revokeOtherSessionsMutation.isPending}
               onClick={() => void handleRevokeOtherSessions()}
-              variant="outline"
+              shape="pill"
+              variant="secondary"
               size="sm"
             >
               Sign out other devices
             </Button>
           ) : null}
           <Button
+            className={DESTRUCTIVE_FLAT_CLASS}
             loading={revokeAllSessionsMutation.isPending}
             onClick={() => void handleRevokeAllSessions()}
-            variant="destructive-outline"
+            shape="pill"
+            variant="secondary"
             size="sm"
           >
             Sign out of all devices

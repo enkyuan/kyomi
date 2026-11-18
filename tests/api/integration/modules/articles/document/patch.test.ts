@@ -5,9 +5,9 @@ import {
   withoutEnrichmentFields,
 } from "@modules/articles/document/patch";
 import type { ReaderDocument } from "@kyomi/reader/document";
-import { fakeDocument, TEST_COMPILER_VERSION } from "./helpers";
+import { fakeDocument, runWithDb, TEST_COMPILER_VERSION } from "./helpers";
 
-function fakeDb(row: Record<string, unknown> | undefined) {
+function fakeRow(row: Record<string, unknown> | undefined) {
   const updates: Record<string, unknown>[] = [];
   const tx = {
     select: () => ({
@@ -27,10 +27,10 @@ function fakeDb(row: Record<string, unknown> | undefined) {
   };
   return {
     updates,
-    db: {
+    methods: {
       select: tx.select,
       transaction: (fn: (t: typeof tx) => Promise<unknown>) => fn(tx),
-    } as never,
+    },
   };
 }
 
@@ -42,10 +42,16 @@ const row = () => ({
   compilerVersion: TEST_COMPILER_VERSION,
 });
 
+const patch = (
+  fake: ReturnType<typeof fakeRow>,
+  change: (document: ReaderDocument) => ReaderDocument,
+  body: "original" | "extracted" = "original",
+) => runWithDb(patchStoredDocument({ ...target, body }, expected, change), fake.methods);
+
 describe("patchStoredDocument", () => {
   test("applies an image dimension and placeholder patch", async () => {
-    const fake = fakeDb(row());
-    const result = await patchStoredDocument(fake.db, target, expected, (doc) => {
+    const fake = fakeRow(row());
+    const result = await patch(fake, (doc) => {
       const block = doc.blocks[0];
       if (block?.type === "figure") {
         block.image.width = 800;
@@ -60,31 +66,27 @@ describe("patchStoredDocument", () => {
   });
 
   test("targets the extracted column for the extracted body", async () => {
-    const fake = fakeDb(row());
-    await patchStoredDocument(fake.db, { ...target, body: "extracted" }, expected, (d) => d);
+    const fake = fakeRow(row());
+    await patch(fake, (d) => d, "extracted");
     expect(fake.updates[0]).toHaveProperty("extractedContentDocument");
   });
 
   test("returns stale when versions moved on and writes nothing", async () => {
-    const fake = fakeDb({ ...row(), compilerVersion: "newer" });
-    const result = await patchStoredDocument(fake.db, target, expected, (d) => d);
+    const fake = fakeRow({ ...row(), compilerVersion: "newer" });
+    const result = await patch(fake, (d) => d);
     expect(result.status).toBe("stale");
     expect(fake.updates).toHaveLength(0);
   });
 
   test("returns missing without a row or document", async () => {
-    expect(
-      (await patchStoredDocument(fakeDb(undefined).db, target, expected, (d) => d)).status,
-    ).toBe("missing");
-    const noDoc = fakeDb({ document: null, documentVersion: null, compilerVersion: null });
-    expect((await patchStoredDocument(noDoc.db, target, expected, (d) => d)).status).toBe(
-      "missing",
-    );
+    expect((await patch(fakeRow(undefined), (d) => d)).status).toBe("missing");
+    const noDoc = fakeRow({ document: null, documentVersion: null, compilerVersion: null });
+    expect((await patch(noDoc, (d) => d)).status).toBe("missing");
   });
 
   test("rejects patches that change compiler-owned content", async () => {
-    const fake = fakeDb(row());
-    const result = await patchStoredDocument(fake.db, target, expected, (doc) => {
+    const fake = fakeRow(row());
+    const result = await patch(fake, (doc) => {
       const block = doc.blocks[0];
       if (block?.type === "figure") block.image.alt = "changed";
       return doc;
@@ -94,13 +96,8 @@ describe("patchStoredDocument", () => {
   });
 
   test("rejects patches that produce an invalid document", async () => {
-    const fake = fakeDb(row());
-    const result = await patchStoredDocument(
-      fake.db,
-      target,
-      expected,
-      () => ({ version: 99 }) as unknown as ReaderDocument,
-    );
+    const fake = fakeRow(row());
+    const result = await patch(fake, () => ({ version: 99 }) as unknown as ReaderDocument);
     expect(result.status).toBe("invalid");
   });
 
@@ -115,8 +112,8 @@ describe("patchStoredDocument", () => {
   });
 
   test("loadStoredDocument returns the document with versions, or null", async () => {
-    const loaded = await loadStoredDocument(fakeDb(row()).db, target);
+    const loaded = await runWithDb(loadStoredDocument(target), fakeRow(row()).methods);
     expect(loaded).toMatchObject({ documentVersion: 1, compilerVersion: TEST_COMPILER_VERSION });
-    expect(await loadStoredDocument(fakeDb(undefined).db, target)).toBeNull();
+    expect(await runWithDb(loadStoredDocument(target), fakeRow(undefined).methods)).toBeNull();
   });
 });

@@ -130,7 +130,11 @@ export function MenuPopup({
             >
               <div className="w-full p-1">{children}</div>
             </ScrollAreaPrimitive.Viewport>
-            <ScrollBar className="absolute inset-y-0 end-0 z-10 m-0" orientation="vertical" />
+            <ScrollBar
+              className="absolute inset-y-0 end-0 z-10 m-0"
+              orientation="vertical"
+              track="none"
+            />
             <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
           </ScrollAreaPrimitive.Root>
         </MenuPrimitive.Popup>

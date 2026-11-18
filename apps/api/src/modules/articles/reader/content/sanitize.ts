@@ -6,6 +6,7 @@ import {
   stripReservedArticleMarkup,
 } from "@kyomi/reader/sanitization";
 import { compileArticleHtml, type CompileDiagnostics } from "@kyomi/ingest/document";
+import { stripTagMarkup } from "@kyomi/ingest/lib/text-scan";
 import { JSDOM } from "jsdom";
 
 export { ARTICLE_HTML_SANITIZER_VERSION };
@@ -130,8 +131,7 @@ function normalizeMetadataText(value: string | null | undefined): string {
   if (!value) {
     return "";
   }
-  return value
-    .replace(/<[^>]+>/g, " ")
+  return stripTagMarkup(value)
     .replace(/&[a-z0-9#]+;/gi, " ")
     .replace(/[^\p{L}\p{N}\s]+/gu, " ")
     .replace(/\s+/g, " ")
@@ -208,8 +208,12 @@ function descendToContentRoot(element: HTMLElement): HTMLElement {
 }
 
 function firstMeaningfulDirectChild(parent: HTMLElement): HTMLElement | null {
-  for (const child of Array.from(parent.children)) {
-    if (!(child instanceof parent.ownerDocument.defaultView!.HTMLElement)) {
+  const ElementClass = parent.ownerDocument.defaultView!.HTMLElement;
+  // Walk the siblings instead of copying `parent.children`: jsdom builds that collection's named
+  // properties from the children's ids, which is superquadratic for a body of thousands of them,
+  // and the first meaningful child is usually the first or second.
+  for (let child = parent.firstElementChild; child; child = child.nextElementSibling) {
+    if (!(child instanceof ElementClass)) {
       continue;
     }
     const text = normalizeMetadataText(child.textContent);

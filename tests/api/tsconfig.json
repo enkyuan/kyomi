@@ -22,7 +22,8 @@
       "@kyomi/ingest/favicon": ["../../packages/ingest/src/services/favicon/index.ts"],
       "@kyomi/ingest/favicon/browser": ["../../packages/ingest/src/services/favicon/proxy-url.ts"],
       "@kyomi/ingest/lib/article-identity": ["../../packages/ingest/src/lib/article-identity.ts"],
-      "@kyomi/ingest/lib/html-entities": ["../../packages/ingest/src/lib/html-entities.ts"]
+      "@kyomi/ingest/lib/html-entities": ["../../packages/ingest/src/lib/html-entities.ts"],
+      "@kyomi/ingest/lib/outbound": ["../../packages/ingest/src/lib/outbound.ts"]
     },
     "types": ["bun"]
   },

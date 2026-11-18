@@ -88,6 +88,8 @@ export type CodeClassificationInput = {
   value: string;
   /** Languages the same article's other blocks carry explicitly, most common first. */
   prior?: readonly string[] | undefined;
+  /** Model calls the document has left, shared by all its blocks. */
+  modelCalls?: { remaining: number } | undefined;
   /** The block right after this one in its list. */
   next?: ReaderBlock | undefined;
   /** Text of the nearest heading above the block. */
@@ -150,7 +152,11 @@ export async function classifyCode(input: CodeClassificationInput): Promise<Code
   const colour =
     resolved.language ??
     (resolved.source === "none" && !skipDetection
-      ? await detectLanguage(input.value, { cue: intro.cue, prior: input.prior })
+      ? await detectLanguage(input.value, {
+          cue: intro.cue,
+          prior: input.prior,
+          modelCalls: input.modelCalls,
+        })
       : null);
   return { source: resolved.source, language: resolved.language, colour };
 }

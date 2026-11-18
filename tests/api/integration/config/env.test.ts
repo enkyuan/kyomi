@@ -2,7 +2,9 @@ import { describe, expect, test } from "bun:test";
 import {
   embeddingsWorkerUrlFromEnv,
   findMissingFeatureCredentials,
+  findWeakProductionSettings,
   httpsUrlFromEnv,
+  loadEnv,
 } from "@config/env/runtime";
 
 describe("env https URL validation", () => {
@@ -106,5 +108,125 @@ describe("env feature-flag credential validation", () => {
       // REDDIT_CLIENT_SECRET intentionally absent
     });
     expect(missing.map((m) => m.key)).toEqual(["REDDIT_CLIENT_SECRET"]);
+  });
+});
+
+describe("timeout settings", () => {
+  const env = {
+    NODE_ENV: "test",
+    DATABASE_URL: "postgresql://postgres:postgres@127.0.0.1:5432/kyomi_test",
+    REDIS_URL: "redis://127.0.0.1:6379",
+    WEB_ORIGIN: "http://localhost:3000",
+    BETTER_AUTH_SECRET: "test-secret",
+  };
+
+  test("default to a 30s statement timeout, a 35s query backstop and short Redis timeouts", () => {
+    expect(loadEnv(env)).toMatchObject({
+      DATABASE_STATEMENT_TIMEOUT_MS: 30_000,
+      DATABASE_QUERY_TIMEOUT_MS: 35_000,
+      REDIS_CONNECT_TIMEOUT_MS: 10_000,
+      REDIS_COMMAND_TIMEOUT_MS: 5_000,
+    });
+  });
+
+  test("the client backstop must stay above the statement timeout", () => {
+    expect(() =>
+      loadEnv({
+        ...env,
+        DATABASE_STATEMENT_TIMEOUT_MS: "20000",
+        DATABASE_QUERY_TIMEOUT_MS: "20000",
+      }),
+    ).toThrow("Invalid environment variables");
+  });
+
+  test("a timeout of 0 turns that limit off without tripping the ordering check", () => {
+    expect(
+      loadEnv({ ...env, DATABASE_STATEMENT_TIMEOUT_MS: "0", DATABASE_QUERY_TIMEOUT_MS: "10000" }),
+    ).toMatchObject({ DATABASE_STATEMENT_TIMEOUT_MS: 0, DATABASE_QUERY_TIMEOUT_MS: 10_000 });
+    expect(
+      loadEnv({ ...env, DATABASE_STATEMENT_TIMEOUT_MS: "10000", DATABASE_QUERY_TIMEOUT_MS: "0" }),
+    ).toMatchObject({ DATABASE_STATEMENT_TIMEOUT_MS: 10_000, DATABASE_QUERY_TIMEOUT_MS: 0 });
+  });
+
+  test("a Redis connect timeout of 0 is rejected: it would never connect", () => {
+    expect(() => loadEnv({ ...env, REDIS_CONNECT_TIMEOUT_MS: "0" })).toThrow(
+      "Invalid environment variables",
+    );
+  });
+});
+
+describe("production settings", () => {
+  const production = {
+    NODE_ENV: "production",
+    DATABASE_URL: "postgresql://postgres:postgres@127.0.0.1:5432/kyomi",
+    REDIS_URL: "redis://127.0.0.1:6379",
+    WEB_ORIGIN: "https://app.kyomi.example",
+    BETTER_AUTH_URL: "https://api.kyomi.example",
+    BETTER_AUTH_SECRET: "k9Zq!x7Lm2#Vb8Rt4Yw6Uc1Nd3Hf5Jg0Pa8Se",
+  };
+
+  test("accepts a complete production environment", () => {
+    expect(loadEnv(production)).toMatchObject({ NODE_ENV: "production", OPENAPI_ENABLED: false });
+  });
+
+  test("refuses a NODE_ENV that is set but not recognised, instead of running as development", () => {
+    for (const NODE_ENV of [
+      "prod",
+      "Production",
+      "staging",
+      " production",
+      "production ",
+      "production\r",
+    ]) {
+      expect(() => loadEnv({ ...production, NODE_ENV })).toThrow("NODE_ENV must be");
+    }
+    expect(loadEnv({ ...production, NODE_ENV: undefined })).toMatchObject({
+      NODE_ENV: "development",
+    });
+  });
+
+  test("refuses a short session secret, a missing base URL and a short admin secret", () => {
+    expect(() => loadEnv({ ...production, BETTER_AUTH_SECRET: "short" })).toThrow(
+      "Invalid environment variables",
+    );
+    expect(() => loadEnv({ ...production, BETTER_AUTH_URL: undefined })).toThrow(
+      "Invalid environment variables",
+    );
+    expect(() => loadEnv({ ...production, FEED_ADMIN_SHARED_SECRET: "admin" })).toThrow(
+      "Invalid environment variables",
+    );
+    expect(findWeakProductionSettings({ BETTER_AUTH_SECRET: "short" }).map((i) => i.key)).toEqual([
+      "BETTER_AUTH_SECRET",
+      "BETTER_AUTH_URL",
+    ]);
+  });
+
+  test("refuses a secret that is long but not random, and a base URL that is not public https", () => {
+    for (const BETTER_AUTH_SECRET of ["a".repeat(48), "1234".repeat(12)]) {
+      expect(() => loadEnv({ ...production, BETTER_AUTH_SECRET })).toThrow(
+        "Invalid environment variables",
+      );
+    }
+    for (const BETTER_AUTH_URL of [
+      "http://api.kyomi.example",
+      "https://localhost:8000",
+      "https://redis",
+      "not a url",
+    ]) {
+      expect(() => loadEnv({ ...production, BETTER_AUTH_URL })).toThrow(
+        "Invalid environment variables",
+      );
+    }
+  });
+
+  test("development and test keep their short secrets", () => {
+    expect(
+      loadEnv({
+        ...production,
+        NODE_ENV: "test",
+        BETTER_AUTH_SECRET: "test-secret",
+        BETTER_AUTH_URL: undefined,
+      }),
+    ).toMatchObject({ NODE_ENV: "test" });
   });
 });

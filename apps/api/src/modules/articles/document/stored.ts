@@ -1,3 +1,4 @@
+import { Effect } from "effect";
 import {
   compileStoredDocument,
   toStoredDocumentColumns,
@@ -15,28 +16,34 @@ const FORMAT_BY_ORIGIN = {
  * Column values for the body document of a write. Returns the null trio when the source cannot be
  * compiled, so a replaced body never keeps a document that describes the previous one.
  */
-export async function compileBodyDocumentColumns(input: {
-  raw: string | null;
-  contentSource: string | null;
-  baseUrl: string | null;
-  title: string | null;
-}) {
-  const origin = input.contentSource as keyof typeof FORMAT_BY_ORIGIN | null;
-  const format = origin ? FORMAT_BY_ORIGIN[origin] : undefined;
-  const stored =
-    input.raw && origin && format
-      ? await compileStoredDocument({
-          raw: input.raw,
-          format,
-          origin,
-          baseUrl: input.baseUrl,
-          title: input.title,
-        })
-      : null;
-  const columns = toStoredDocumentColumns(stored);
-  return {
-    contentDocument: columns.document,
-    contentDocumentVersion: columns.documentVersion,
-    contentCompilerVersion: columns.compilerVersion,
-  };
-}
+export const compileBodyDocumentColumns = Effect.fn("articles.document.compileColumns")(
+  function* (input: {
+    raw: string | null;
+    contentSource: string | null;
+    baseUrl: string | null;
+    title: string | null;
+  }) {
+    const origin = input.contentSource as keyof typeof FORMAT_BY_ORIGIN | null;
+    const format = origin ? FORMAT_BY_ORIGIN[origin] : undefined;
+    const { raw } = input;
+    const stored =
+      raw && origin && format
+        ? // Never throws: a compiler failure yields no document, and the HTML body serves alone.
+          yield* Effect.promise(() =>
+            compileStoredDocument({
+              raw,
+              format,
+              origin,
+              baseUrl: input.baseUrl,
+              title: input.title,
+            }),
+          )
+        : null;
+    const columns = toStoredDocumentColumns(stored);
+    return {
+      contentDocument: columns.document,
+      contentDocumentVersion: columns.documentVersion,
+      contentCompilerVersion: columns.compilerVersion,
+    };
+  },
+);

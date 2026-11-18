@@ -37,6 +37,7 @@ import {
   KEYWORD_CLASSIFIER_MODEL_ID,
 } from "./taxonomy";
 import type {
+  FeedFetchFailureClass,
   FeedIngestDatabase,
   FeedMetadata,
   FetchFeedDocumentResult,
@@ -82,6 +83,14 @@ function isPermanentHttpStatus(status: number | undefined): boolean {
 
 function isPermanentFetchError(error: string | undefined): boolean {
   return Boolean(error && CERTIFICATE_FETCH_ERROR_PATTERN.test(error));
+}
+
+function fetchFailureClass(status: number | undefined, permanent: boolean): FeedFetchFailureClass {
+  if (status === 404) return "http_404";
+  if (status !== undefined && status >= 500) return "http_5xx";
+  if (status !== undefined && status >= 400) return "http_4xx";
+  // The only status-less failure treated as permanent is a certificate error.
+  return permanent ? "certificate" : "network";
 }
 
 function computeFailureBackoffMs(
@@ -261,6 +270,27 @@ function skippedSupersededFeedRefresh(): FeedRefreshResult {
   return { ok: true, itemCount: 0, skipped: "superseded" };
 }
 
+function urlCarriesLogin(url: string): boolean {
+  try {
+    const { username, password } = new URL(url);
+    return Boolean(username || password);
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * The URL a document was served from becomes the feed's stored URL (and its provenance), and that
+ * row is readable by every account. A redirect or an autodiscovered link can add a username or
+ * password to it, so such a document is not accepted; fetching follows redirects as before.
+ */
+function refuseLoginUrl(result: FetchFeedDocumentResult): FetchFeedDocumentResult {
+  if (result.ok && !result.notModified && urlCarriesLogin(result.finalUrl)) {
+    return { ok: false, error: "Feed URLs with a username or password are not supported" };
+  }
+  return result;
+}
+
 async function fetchRefreshDocument(
   url: string,
   etag: string | null,
@@ -268,9 +298,11 @@ async function fetchRefreshDocument(
   options?: { hostRateLimiter?: HostRateLimiter },
 ): Promise<FetchFeedDocumentResult> {
   if (options?.hostRateLimiter) {
-    return await options.hostRateLimiter.run(url, () => fetchFeedDocument(url, etag, lastModified));
+    return refuseLoginUrl(
+      await options.hostRateLimiter.run(url, () => fetchFeedDocument(url, etag, lastModified)),
+    );
   }
-  return await fetchFeedDocument(url, etag, lastModified);
+  return refuseLoginUrl(await fetchFeedDocument(url, etag, lastModified));
 }
 
 async function resolveHtmlRefreshDocument(input: {
@@ -719,7 +751,8 @@ export async function runFeedRefresh(
       .limit(1);
 
     if (!feed) {
-      return { ok: false, itemCount: 0, error: "Feed not found" };
+      // The row was deleted after the refresh was claimed; another attempt finds nothing either.
+      return { ok: false, itemCount: 0, error: "Feed not found", permanent: true };
     }
 
     const fetchDocument = (
@@ -762,6 +795,7 @@ export async function runFeedRefresh(
         ok: false,
         itemCount: 0,
         error: `Feed fetch failed: ${fetched.error}`,
+        failureClass: fetchFailureClass(fetched.httpStatus, permanent),
         permanent,
       };
     }

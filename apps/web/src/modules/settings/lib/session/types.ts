@@ -7,7 +7,6 @@ export type SessionRow = {
   locationCountry: string | null;
   locationLabel: string | null;
   locationRegion: string | null;
-  token: string;
   updatedAt: string;
   userAgent: string | null;
 };
@@ -34,7 +33,6 @@ export type UseAccountPanelArgs = {
           locationCountry?: string | null;
           locationLabel?: string | null;
           locationRegion?: string | null;
-          token: string;
           updatedAt: string | Date;
           userAgent?: string | null;
         };

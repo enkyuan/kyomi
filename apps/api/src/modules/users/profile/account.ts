@@ -1,11 +1,12 @@
-import { and, eq, ne } from "drizzle-orm";
+import { Effect } from "effect";
+import { eq } from "drizzle-orm";
 import { users } from "@kyomi/db";
-import { normalizeEmail } from "./email";
-import type { db } from "@adapters/db/client";
-import { AppError } from "@shared/errors/app";
+import { Db } from "@adapters/db/service";
+import { NotFound } from "@shared/effect/errors";
+import { CurrentUser } from "@shared/effect/request";
 import type { UserProfileDto } from "./types";
 
-type DB = typeof db;
+const userNotFound = () => new NotFound({ message: "User not found", code: "USER_NOT_FOUND" });
 
 function rowToUserProfile(row: {
   id: string;
@@ -27,71 +28,25 @@ function rowToUserProfile(row: {
   };
 }
 
-export async function getUserProfileById(
-  database: DB,
-  userId: string,
-): Promise<UserProfileDto | null> {
-  const row = await database.query.users.findFirst({
-    where: eq(users.id, userId),
-    columns: {
-      id: true,
-      name: true,
-      email: true,
-      emailVerified: true,
-      image: true,
-      createdAt: true,
-      updatedAt: true,
-    },
-  });
-
-  return row ? rowToUserProfile(row) : null;
-}
-
-export async function updateUserEmailById(
-  database: DB,
-  userId: string,
-  emailInput: string,
-): Promise<UserProfileDto> {
-  const email = normalizeEmail(emailInput);
-  if (!email) {
-    throw new AppError("Enter a valid email address.", {
-      status: 400,
-      code: "USER_EMAIL_INVALID",
-    });
+export const getUserProfile = Effect.gen(function* () {
+  const { userId } = yield* CurrentUser;
+  const db = yield* Db;
+  const row = yield* db.use("users.profile.get", (client) =>
+    client.query.users.findFirst({
+      where: eq(users.id, userId),
+      columns: {
+        id: true,
+        name: true,
+        email: true,
+        emailVerified: true,
+        image: true,
+        createdAt: true,
+        updatedAt: true,
+      },
+    }),
+  );
+  if (!row) {
+    return yield* userNotFound();
   }
-
-  const conflictingUser = await database.query.users.findFirst({
-    where: and(eq(users.email, email), ne(users.id, userId)),
-    columns: { id: true },
-  });
-
-  if (conflictingUser) {
-    throw new AppError("This email is already in use.", {
-      status: 409,
-      code: "USER_EMAIL_CONFLICT",
-    });
-  }
-
-  const [updatedRow] = await database
-    .update(users)
-    .set({
-      email,
-      updatedAt: new Date(),
-    })
-    .where(eq(users.id, userId))
-    .returning({
-      id: users.id,
-      name: users.name,
-      email: users.email,
-      emailVerified: users.emailVerified,
-      image: users.image,
-      createdAt: users.createdAt,
-      updatedAt: users.updatedAt,
-    });
-
-  if (!updatedRow) {
-    throw new AppError("User not found", { status: 404, code: "USER_NOT_FOUND" });
-  }
-
-  return rowToUserProfile(updatedRow);
-}
+  return rowToUserProfile(row);
+});

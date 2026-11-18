@@ -2,6 +2,7 @@ import { renderHtml } from "@tanstack/markdown/html";
 import type { ReaderDocument, ReaderImage } from "@kyomi/reader/document";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import { compileArticleHtml, compileArticleRoot } from "./compile";
+import { parseArticleFragment } from "./context";
 import { createDraft, warn, type DocumentDraft, type DocumentPass } from "./document-draft";
 import { code } from "./passes/code";
 import { derive } from "./passes/derive";
@@ -27,6 +28,14 @@ export const ARTICLE_COMPILER_VERSION =
 export const MAX_DOCUMENT_SOURCE_BYTES = 4_000_000;
 /** Parsed element count above which no document is built. */
 export const MAX_DOCUMENT_SOURCE_NODES = 100_000;
+/**
+ * Raw HTML fragments (HTML blocks and paragraphs with inline HTML) a Markdown body may hold, and
+ * their total size. Each one is parsed and run through every ingest pass as a document of its own,
+ * which costs a fraction of a millisecond whatever its size, so thousands of them held the thread
+ * for seconds. Past either limit no document is built; the sanitized HTML body is still served.
+ */
+export const MAX_MARKDOWN_HTML_FRAGMENTS = 1_000;
+export const MAX_MARKDOWN_HTML_BYTES = 512_000;
 
 /** Stage C passes 11–17 in run order; `lower` (10) runs before and `validate` (18) after. */
 export const ARTICLE_DOCUMENT_PASSES = [
@@ -148,15 +157,35 @@ export async function compileArticleDocument(
     baseUrl = options.baseUrl;
     mergeDropped(dropped, compiled.diagnostics.droppedElements);
     if (!skipReason) {
+      let fragments = 0;
+      let fragmentChars = 0;
+      let overBudget = false;
+      // What a fragment past the budget lowers to: nothing, and without parsing anything.
+      let empty: HTMLElement | undefined;
       blocks = lowerMarkdown(input.body, {
         ctx,
         baseUrl,
         sanitizeFragment: (fragment) => {
+          fragments += 1;
+          fragmentChars += fragment.length;
+          if (
+            overBudget ||
+            fragments > MAX_MARKDOWN_HTML_FRAGMENTS ||
+            fragmentChars > MAX_MARKDOWN_HTML_BYTES
+          ) {
+            overBudget = true;
+            empty ??= parseArticleFragment("", options).root;
+            return empty;
+          }
           const { root, context } = compileArticleRoot(fragment, options);
           mergeDropped(dropped, context.diagnostics.droppedElements);
           return root;
         },
       });
+      if (overBudget) {
+        blocks = [];
+        skipReason = "source-too-complex";
+      }
     }
   } else {
     html = plainTextHtml(input.body);
