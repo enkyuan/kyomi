@@ -17,6 +17,7 @@
     "category:train": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/train.ts",
     "content:document": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/document.ts",
     "content:sanitizer": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/sanitizer.ts",
+    "content:urls": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/urls.ts",
     "fmt": "oxfmt src",
     "fmt:check": "oxfmt --check src",
     "lint": "oxlint src",

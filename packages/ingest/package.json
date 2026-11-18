@@ -13,6 +13,7 @@
     "./favicon/browser": "./src/services/favicon/proxy-url.ts",
     "./lib/article-identity": "./src/lib/article-identity.ts",
     "./lib/html-entities": "./src/lib/html-entities.ts",
+    "./lib/feed-text": "./src/lib/feed-text.ts",
     "./lib/stored-document": "./src/lib/stored-document.ts",
     "./lib/response-body": "./src/lib/response-body.ts",
     "./lib/text-scan": "./src/lib/text-scan.ts",

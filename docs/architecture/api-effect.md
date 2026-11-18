@@ -203,7 +203,7 @@ Elysia does not await `onStop`; the entrypoint's scope owns the order. Behaviour
 reverse order and exit 0, a failure exits non-zero) and `setup/lifecycle.test.ts` (`Db` and `Redis`
 finalizers, `runtimeFromScope` ordering, `registerLifecycle` with and without `ownsRuntime`). Operator scripts
 (`boot/import.ts`, `backfill.ts`, `train.ts`, `report.ts`, `audit.ts`, `sanitizer.ts`, `smoke.ts`,
-`document.ts`) use the same shape, so the pool and Redis close when the run ends or on a signal.
+`document.ts`, `urls.ts`) use the same shape, so the pool and Redis close when the run ends or on a signal.
 
 ## Timeouts
 

@@ -38,6 +38,7 @@ operator scripts live in `src/app/boot` because they write through api adapters.
 | `bun run categories:report` | report category coverage (`report.ts`). |
 | `bun run categories:audit` | score category assignments against labels (`audit.ts`). |
 | `bun run content:sanitizer-backfill` | backfill the article sanitizer version (`sanitizer.ts`). |
+| `bun run content:urls-repair` | one-off repair of stored feed and item URLs that carry a login or are not http(s) (`urls.ts`); dry run unless `--apply`, prints the feed ids to re-index in Meilisearch and the feeds whose own url holds a login. |
 
 ## notes
 

@@ -68,7 +68,8 @@
     "categories:report": "bun run --cwd apps/api category:report",
     "categories:audit": "bun run --cwd apps/api category:audit",
     "content:document-backfill": "bun run --cwd apps/api content:document",
-    "content:sanitizer-backfill": "bun run --cwd apps/api content:sanitizer"
+    "content:sanitizer-backfill": "bun run --cwd apps/api content:sanitizer",
+    "content:urls-repair": "bun run --cwd apps/api content:urls"
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.66.0",
