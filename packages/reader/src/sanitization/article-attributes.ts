@@ -1,6 +1,6 @@
 import { filterArticleClassAttr } from "./article-classes";
 import { parseSrcset } from "./srcset";
-import { ARTICLE_EMBED_PROVIDERS, ARTICLE_MATHML_TAGS } from "./article-policy";
+import { ARTICLE_EMBED_PROVIDERS } from "./article-policy";
 
 /**
  * Value rules applied after neosanitize has filtered attribute names. neosanitize only blocks
@@ -16,7 +16,6 @@ const MAX_SRCSET_CANDIDATES = 8;
 const MAX_DIMENSION = 16_384;
 const MAX_ASPECT_RATIO = 20;
 
-const STYLE_ALLOWED_TAGS = new Set<string>(["span", ...ARTICLE_MATHML_TAGS]);
 const MEDIA_TAGS = new Set(["video", "audio"]);
 const EMBED_PROVIDERS = new Set<string>(ARTICLE_EMBED_PROVIDERS);
 
@@ -140,13 +139,6 @@ export function normalizeElementAttributes(element: Element): void {
       element.removeAttribute("class");
     } else {
       element.setAttribute("class", next);
-    }
-  }
-
-  const styleValue = element.getAttribute("style");
-  if (styleValue !== null) {
-    if (!STYLE_ALLOWED_TAGS.has(tag) || !styleValue.trim()) {
-      element.removeAttribute("style");
     }
   }
 
