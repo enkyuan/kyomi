@@ -1,6 +1,6 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, spyOn, test } from "bun:test";
 import { Effect, Fiber, Layer } from "effect";
-import { HttpClient, HttpClientError } from "effect/http";
+import { FetchHttpClient, HttpClient, HttpClientError } from "effect/http";
 import { TestClock } from "effect/testing";
 import { OPML_MAX_SOURCE_BYTES } from "@modules/opml/constants";
 import { fetchOpmlDocumentFromUrl } from "@modules/opml/fetch";
@@ -214,5 +214,53 @@ describe("fetchOpmlDocumentFromUrl", () => {
     const result = await runWith(fetchOpmlDocumentFromUrl(publicOpmlUrl), layer);
     expect(Buffer.byteLength(result.xml, "utf8")).toBeGreaterThan(2 * 1024 * 1024);
     expect(Buffer.byteLength(result.xml, "utf8")).toBeLessThan(OPML_MAX_SOURCE_BYTES);
+  });
+
+  test("connects to the address it checked, so a name that answers differently later cannot move it", async () => {
+    let lookups = 0;
+    const requested: Array<{ url: string; host: string | null }> = [];
+    const fetchSpy = spyOn(globalThis, "fetch").mockImplementation((async (
+      input: URL | RequestInfo,
+      init?: RequestInit,
+    ) => {
+      requested.push({ url: String(input), host: new Headers(init?.headers).get("host") });
+      return new Response("<opml><body/></opml>", { status: 200 });
+    }) as unknown as typeof fetch);
+
+    try {
+      await Effect.runPromise(
+        fetchOpmlDocumentFromUrl("https://rebind.example/feeds.opml").pipe(
+          Effect.provideService(HostResolver, () =>
+            Effect.sync(() => {
+              lookups += 1;
+              return ["93.184.216.34"];
+            }),
+          ),
+          Effect.provide(FetchHttpClient.layer),
+        ),
+      );
+    } finally {
+      fetchSpy.mockRestore();
+    }
+
+    expect(lookups).toBe(1);
+    expect(requested).toEqual([
+      { url: "https://93.184.216.34/feeds.opml", host: "rebind.example" },
+    ]);
+  });
+
+  test("refuses a name that resolves into carrier-grade NAT, where cloud metadata can live", async () => {
+    const layer = fakeHttpClient(() => {
+      throw new Error("must not be called");
+    });
+
+    const error = await failureWith(
+      fetchOpmlDocumentFromUrl("https://cgnat.example/feeds.opml").pipe(
+        Effect.provideService(HostResolver, () => Effect.succeed(["100.100.100.200"])),
+      ),
+      layer,
+    );
+
+    expect(error).toMatchObject({ code: "OPML_URL_BLOCKED" });
   });
 });

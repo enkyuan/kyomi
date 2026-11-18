@@ -72,6 +72,16 @@ export const safeFetch = Effect.fn("net.safeFetch")(function* (
   let currentUrl = initialUrl;
 
   for (let redirects = 0; ; redirects += 1) {
+    // The first URL is checked as well as each redirect: `checkOutboundUrl` judges the host, not
+    // the scheme, and `fetch` would read `file:` or `ftp:` for what it is.
+    yield* Effect.try({
+      try: () => assertHttpOrHttpsUrl(currentUrl.href),
+      catch: (cause) =>
+        new UnsafeOutboundUrl({
+          message: cause instanceof Error ? cause.message : "Only http and https URLs are allowed",
+          cause,
+        }),
+    });
     const addresses = ipv4First(yield* checkOutboundUrl(currentUrl));
     const request = HttpClientRequest.get(currentUrl.href, { headers: options.headers });
     const requestAt = (address: string | undefined) =>

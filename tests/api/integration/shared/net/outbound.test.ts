@@ -66,9 +66,29 @@ describe("outbound URL policy", () => {
     });
   });
 
-  test("allows a public name, including shared-address-space DNS answers", async () => {
+  test("allows a public name", async () => {
     await succeeds("https://example.com/feed", ["93.184.216.34"]);
-    await succeeds("https://carrier.example.com/feed", ["100.64.1.181"]);
+  });
+
+  test("blocks a name that resolves into carrier-grade NAT, where tailnets and cloud metadata live", async () => {
+    for (const answer of [
+      "100.64.1.181",
+      "100.100.100.200",
+      "100.127.255.255",
+      "::ffff:100.100.100.200",
+    ]) {
+      expect(await check("https://carrier.example.com/feed", [answer])).toMatchObject({
+        _tag: "UnsafeOutboundUrl",
+      });
+    }
+  });
+
+  test("refuses an empty or non-address answer instead of letting fetch resolve the name again", async () => {
+    for (const answer of [[], ["not-an-ip"], ["127.1"], ["0x7f.1"], ["2130706433"]]) {
+      expect(await check("https://odd.example.com/feed", answer)).toMatchObject({
+        _tag: "UnsafeOutboundUrl",
+      });
+    }
   });
 
   test("a resolver failure is an UpstreamError, not a verdict on the URL", async () => {
@@ -83,7 +103,7 @@ describe("outbound URL policy", () => {
     expect(error).toBe(failure);
   });
 
-  test("allows shared-address-space DNS answers for non-literal hostnames", () => {
+  test("shared address space is only refused when asked", () => {
     expect(isBlockedOutboundIpAddress("100.64.1.181", { blockSharedAddressSpace: false })).toBe(
       false,
     );
@@ -104,6 +124,9 @@ describe("outbound URL policy", () => {
       "240.0.0.1",
       "255.255.255.255",
       "fec0::1",
+      "::7f00:1",
+      "::a00:1",
+      "::ffff:0:7f00:1",
       "ff02::1",
       "64:ff9b::7f00:1",
       "2002:7f00:1::",

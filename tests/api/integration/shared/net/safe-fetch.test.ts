@@ -114,6 +114,15 @@ describe("safeFetch", () => {
     });
   });
 
+  test("a first URL that is not http(s) is refused before any request", async () => {
+    const { requests, run } = fetching(() => new Response("ok"));
+
+    for (const url of ["file:///etc/passwd", "ftp://example.com/feed", "gopher://example.com/"]) {
+      expect(await run(Effect.flip(fetchUrl(url)))).toMatchObject({ _tag: "UnsafeOutboundUrl" });
+    }
+    expect(requests).toEqual([]);
+  });
+
   test("a transport failure is an UpstreamError", async () => {
     const run = (effect: Effect.Effect<unknown, unknown, HttpClient.HttpClient>) =>
       Effect.runPromise(

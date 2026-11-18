@@ -53,6 +53,20 @@ describe("fetchFeedDocument destination policy", () => {
     expect(requests).toEqual([]);
   });
 
+  test.each([["127.1"], ["0x7f.1"], ["2130706433"], ["not-an-address"]])(
+    "refuses a resolver answer that is not an address (%s)",
+    async (answer) => {
+      const requests = stubNetwork();
+
+      const result = await fetchFeedDocument("https://feeds.example.com/rss", null, null, {
+        resolve: async () => [answer],
+      });
+
+      expect(result).toMatchObject({ ok: false });
+      expect(requests).toEqual([]);
+    },
+  );
+
   test("refuses a public-looking name that resolves into the network", async () => {
     const requests = stubNetwork();
 

@@ -71,8 +71,15 @@ export const checkOutboundUrl = Effect.fn("net.checkOutboundUrl")(function* (url
   const resolve = yield* HostResolver;
   const addresses = isLiteralIpAddress ? [hostname] : yield* resolve(hostname);
   const resolved = new Set(addresses.map(normalizeIpAddress));
+  // No answer, or an answer that is not an address (a resolver bug or a hostile one), has nothing
+  // to connect to and nothing that was checked: refuse rather than let `fetch` resolve it again.
+  if (resolved.size === 0 || [...resolved].some((address) => isIP(address) === 0)) {
+    return yield* blocked();
+  }
   for (const address of resolved) {
-    if (isBlockedOutboundIpAddress(address, { blockSharedAddressSpace: isLiteralIpAddress })) {
+    // Carrier-grade NAT (100.64.0.0/10) holds tailnets and some clouds' metadata services
+    // (100.100.100.200), and no public site, so a name pointing there is refused as well.
+    if (isBlockedOutboundIpAddress(address, { blockSharedAddressSpace: true })) {
       return yield* blocked();
     }
   }

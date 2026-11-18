@@ -1,14 +1,14 @@
 import { Effect, Stream } from "effect";
-import {
-  FetchHttpClient,
-  HttpClient,
-  HttpClientRequest,
-  type HttpClientError,
-  type HttpClientResponse,
-} from "effect/http";
+import { HttpClientError, type HttpClientResponse } from "effect/http";
 import { assertHttpOrHttpsUrl } from "@shared/net/http";
-import { checkOutboundUrl } from "@shared/net/outbound";
-import { BadGateway, BadRequest, GatewayTimeout, PayloadTooLarge } from "@shared/effect/errors";
+import { safeFetch } from "@shared/net/safe-fetch";
+import {
+  BadGateway,
+  BadRequest,
+  GatewayTimeout,
+  PayloadTooLarge,
+  UpstreamError,
+} from "@shared/effect/errors";
 import { OPML_MAX_SOURCE_BYTES } from "./constants";
 
 const DEFAULT_REMOTE_OPML_FILENAME = "remote.opml";
@@ -64,34 +64,13 @@ const parseOpmlImportUrl = (rawUrl: string) =>
     catch: () => new BadRequest({ message: "Invalid OPML URL", code: "OPML_URL_INVALID" }),
   });
 
-/**
- * Runs before the first request and before every redirect hop, so a public URL cannot bounce the
- * fetch into a private network. Only http(s) hops are allowed.
- */
-const assertSafeRequest = Effect.fn("opml.fetch.assertSafe")(function* (
-  request: HttpClientRequest.HttpClientRequest,
-) {
-  const url = yield* Effect.try({
-    try: () => assertHttpOrHttpsUrl(request.url),
-    catch: fetchFailed,
-  });
-  yield* checkOutboundUrl(url).pipe(
-    Effect.catchTags({
-      UnsafeOutboundUrl: (error) =>
-        Effect.fail(
-          new BadRequest({
-            message: "This OPML URL cannot be imported",
-            code: "OPML_URL_BLOCKED",
-            cause: error,
-          }),
-        ),
-      UpstreamError: (error) => Effect.fail(fetchFailed(error)),
-    }),
-  );
-});
-
-function classifyTransportError(error: HttpClientError.HttpClientError) {
-  const cause = error.reason._tag === "TransportError" ? error.reason.cause : undefined;
+function classifyTransportError(error: unknown) {
+  // `safeFetch` wraps a failed request as an UpstreamError whose cause is the HttpClientError.
+  const failure = error instanceof UpstreamError ? error.cause : error;
+  const cause =
+    HttpClientError.isHttpClientError(failure) && failure.reason._tag === "TransportError"
+      ? failure.reason.cause
+      : undefined;
   const code = cause instanceof Error && "code" in cause ? cause.code : undefined;
   if (typeof code === "string" && TLS_CERT_ERROR_CODES.has(code)) {
     return new BadGateway({
@@ -132,31 +111,19 @@ const readBodyWithByteLimit = Effect.fnUntraced(function* (
 
 /**
  * Downloads an OPML document from a user-supplied URL: http(s) only, every hop checked against the
- * private-network policy, at most MAX_REDIRECTS redirects, a size cap, and an overall deadline.
- * Closing the scope (on success, failure, timeout or interruption) aborts the request and body.
+ * private-network policy and connected to the address that was checked (`safeFetch`), at most
+ * MAX_REDIRECTS redirects, a size cap, and an overall deadline. Closing the scope (on success,
+ * failure, timeout or interruption) aborts the request and body.
  */
 export const fetchOpmlDocumentFromUrl = Effect.fn("opml.fetch")(function* (rawUrl: string) {
   const url = yield* parseOpmlImportUrl(rawUrl);
-  const baseClient = yield* HttpClient.HttpClient;
-  const client = baseClient.pipe(
-    // `transform` wraps the per-request step that `followRedirects` re-runs for every hop
-    // (`mapRequestEffect` would only guard the first request).
-    HttpClient.transform((response, request) =>
-      Effect.andThen(assertSafeRequest(request), response),
-    ),
-    HttpClient.followRedirects(MAX_REDIRECTS),
-    HttpClient.withScope,
-  );
 
   return yield* Effect.gen(function* () {
-    const response = yield* client.execute(HttpClientRequest.get(url, { headers: FETCH_HEADERS }));
+    const { response, finalUrl } = yield* safeFetch(url, {
+      headers: FETCH_HEADERS,
+      maxRedirects: MAX_REDIRECTS,
+    });
 
-    if (response.status >= 300 && response.status < 400 && response.headers.location) {
-      return yield* new BadRequest({
-        message: "OPML URL redirected too many times",
-        code: "OPML_URL_TOO_MANY_REDIRECTS",
-      });
-    }
     if (response.status < 200 || response.status >= 300) {
       return yield* new BadGateway({
         message: "Could not fetch OPML URL",
@@ -166,7 +133,6 @@ export const fetchOpmlDocumentFromUrl = Effect.fn("opml.fetch")(function* (rawUr
     }
 
     const xml = yield* readBodyWithByteLimit(response, OPML_MAX_SOURCE_BYTES);
-    const finalUrl = new URL(response.request.url);
     const result: FetchOpmlDocumentResult = {
       xml,
       finalUrl: finalUrl.href,
@@ -175,10 +141,24 @@ export const fetchOpmlDocumentFromUrl = Effect.fn("opml.fetch")(function* (rawUr
     return result;
   }).pipe(
     Effect.scoped,
-    // fetch follows redirects itself unless told not to; every hop must pass `assertSafeRequest`.
-    Effect.provideService(FetchHttpClient.RequestInit, { redirect: "manual" }),
     Effect.timeout(FETCH_TIMEOUT_MS),
     Effect.catchTags({
+      UnsafeOutboundUrl: (error) =>
+        Effect.fail(
+          new BadRequest({
+            message: "This OPML URL cannot be imported",
+            code: "OPML_URL_BLOCKED",
+            cause: error,
+          }),
+        ),
+      TooManyRedirects: () =>
+        Effect.fail(
+          new BadRequest({
+            message: "OPML URL redirected too many times",
+            code: "OPML_URL_TOO_MANY_REDIRECTS",
+          }),
+        ),
+      UpstreamError: (error) => Effect.fail(classifyTransportError(error)),
       HttpClientError: (error) => Effect.fail(classifyTransportError(error)),
       TimeoutError: () =>
         Effect.fail(

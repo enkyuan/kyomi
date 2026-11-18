@@ -35,8 +35,8 @@ for (const [network, prefix] of [
 sharedAddressSpace.addSubnet("100.64.0.0", 10, "ipv4"); // carrier-grade NAT
 
 for (const [network, prefix] of [
-  ["::", 128],
-  ["::1", 128],
+  ["::", 96], // unspecified, loopback and the deprecated IPv4-compatible range (::a.b.c.d)
+  ["::ffff:0:0:0", 96], // IPv4-translated (SIIT)
   ["64:ff9b::", 96], // NAT64: an IPv4 address in disguise
   ["64:ff9b:1::", 48],
   ["100::", 64], // discard-only
@@ -154,6 +154,10 @@ export async function checkPublicUrl(
   const addresses = literal ? [hostname] : await resolve(hostname);
   if (addresses.length === 0) {
     throw new Error(`No address for ${hostname}`);
+  }
+  // A resolver answer that is not an address (`127.1`, a name) would be read as one by `fetch`.
+  if (addresses.some((address) => isIP(normalizeIpAddress(address)) === 0)) {
+    throw new BlockedOutboundUrl();
   }
   if (
     addresses.some((address) =>
