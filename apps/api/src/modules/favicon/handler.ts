@@ -26,9 +26,12 @@ type FaviconFetchResult = { kind: "hit"; response: Response } | { kind: "miss"; 
  * `application/octet-stream` for `favicon.ico`, and a type it picked such as `text/html` must
  * never reach a browser from this origin.
  */
+// A bare `type/subtype` token: `startsWith("image/")` would also pass `image/x-icon/../html`.
+const IMAGE_TYPE = /^image\/[a-z0-9][a-z0-9.+-]*$/;
+
 function servedContentType(upstream: Response): string {
   const declared = upstream.headers.get("content-type")?.split(";", 1)[0]?.trim().toLowerCase();
-  return declared?.startsWith("image/") ? declared : "image/x-icon";
+  return declared && IMAGE_TYPE.test(declared) ? declared : "image/x-icon";
 }
 
 /** The body, or null as soon as it is known to exceed `limit` bytes; nothing past it is read. */

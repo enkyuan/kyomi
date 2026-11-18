@@ -133,6 +133,9 @@ describe("favicon request handler", () => {
       "text/html; charset=utf-8",
       "application/octet-stream",
       "text/x-icon",
+      "image/x-icon/../html",
+      "image/",
+      "image/svg xml",
     ]) {
       const { layer } = scriptedResolver({
         resolveHost: [hit()],
@@ -143,6 +146,23 @@ describe("favicon request handler", () => {
       const response = await handle(layer, new MemoryFaviconHostStore(), ORIGIN);
 
       expect(response.headers.get("content-type")).toBe("image/x-icon");
+    }
+  });
+
+  test("passes an ordinary image type through", async () => {
+    for (const declared of [
+      "image/png",
+      "image/svg+xml",
+      "image/vnd.microsoft.icon; charset=binary",
+    ]) {
+      const { layer } = scriptedResolver({
+        resolveHost: [hit()],
+        fetchImage: () => new Response("img", { headers: { "content-type": declared } }),
+      });
+
+      const response = await handle(layer, new MemoryFaviconHostStore(), ORIGIN);
+
+      expect(response.headers.get("content-type")).toBe(declared.split(";")[0]);
     }
   });
 
