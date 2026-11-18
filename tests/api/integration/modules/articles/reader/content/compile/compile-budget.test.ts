@@ -201,14 +201,30 @@ describe("tokenizing time is bounded, not only characters", () => {
     expect(performance.now() - started).toBeLessThan(6_000);
   });
 
-  test("a spent clock declines a block, an unspent one colours it and is charged", async () => {
+  test("a spent clock declines a block, an unspent one colours it without being charged", async () => {
     const value = Array.from({ length: 50 }, (_, line) => `const v${line} = ${line};`).join("\n");
 
     expect(await highlightCode(value, "javascript", { remainingMs: 0 })).toBeNull();
     const clock = { remainingMs: MAX_DOCUMENT_HIGHLIGHT_MS };
     expect(await highlightCode(value, "javascript", clock)).not.toBeNull();
-    expect(clock.remainingMs).toBeLessThan(MAX_DOCUMENT_HIGHLIGHT_MS);
-    expect(clock.remainingMs).toBeGreaterThan(0);
+    // Ordinary lines are never charged, so a busy machine cannot spend the budget on them.
+    expect(clock.remainingMs).toBe(MAX_DOCUMENT_HIGHLIGHT_MS);
+  });
+
+  test("a large ordinary document is not charged, in any language", async () => {
+    const clock = { remainingMs: MAX_DOCUMENT_HIGHLIGHT_MS };
+    const css = Array.from(
+      { length: 400 },
+      (_, line) => `.card-${line} > a:hover { margin: ${line}px auto; color: #${line % 10}f0; }`,
+    ).join("\n");
+    const html = `<div class="a"><script>let x = 1;</script><style>a{b:c}</style></div>\n`.repeat(
+      100,
+    );
+
+    expect(await highlightCode(css, "css", clock)).not.toBeNull();
+    expect(await highlightCode(html, "html", clock)).not.toBeNull();
+
+    expect(clock.remainingMs).toBe(MAX_DOCUMENT_HIGHLIGHT_MS);
   });
 
   test("tokenizing line by line gives the tokens of one pass, state included", async () => {

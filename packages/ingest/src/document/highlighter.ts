@@ -21,27 +21,35 @@ export const MAX_HIGHLIGHT_LINES = 1_500;
 export const MAX_HIGHLIGHT_LINE_CHARS = 300;
 /**
  * Characters a whole document may spend on highlighting. The per-block caps above still allow many
- * blocks, so without this one article could hold the CPU for minutes. A counter, not a timer, so
- * the stored tokens of ordinary code never depend on machine load.
+ * blocks, so without this one article could hold the CPU for minutes. A counter, so the stored
+ * tokens of ordinary code never depend on machine load.
  */
 export const MAX_DOCUMENT_HIGHLIGHT_CHARS = 30_000;
 /**
- * Milliseconds a whole document may spend inside the tokenizer. Characters cannot bound it: some
- * grammars take time exponential in the length of a line made of repeated openers (`<a ` x 24 in C#,
- * Markdown, Svelte, ERB and a dozen more costs a second a line at 72 characters and stays there up
- * to the line cap), and a regex search cannot be interrupted. So lines are tokenized one at a time
- * and a document whose lines have used this up stops colouring, which bounds it to this plus the
- * one line in flight. Ordinary code tokenizes at a few thousand lines per 10 ms, so it never
- * reaches it, even on a machine many times slower.
+ * Milliseconds of slow lines a whole document may spend inside the tokenizer. Characters cannot
+ * bound the cost: some grammars take time exponential in the length of a line made of repeated
+ * openers (`<a ` x 24 in C#, Markdown, Svelte, ERB and a dozen more costs a second a line at 72
+ * characters and stays there up to the line cap), and a regex search cannot be interrupted. So
+ * lines are tokenized one at a time, and a document whose slow lines have used this up stops
+ * colouring, which bounds it to this plus the one line in flight.
+ *
+ * Only a slow line (over {@link SLOW_LINE_MS}) is charged, and a grammar's first line in the process
+ * is free (it compiles the grammar, about 100 ms for CSS or HTML). Ordinary code is therefore never
+ * charged at all, however busy the machine is, and what it is stored as does not depend on load.
+ * Only text built to be slow spends this.
  */
-export const MAX_DOCUMENT_HIGHLIGHT_MS = 500;
+export const MAX_DOCUMENT_HIGHLIGHT_MS = 750;
 /** What is left of {@link MAX_DOCUMENT_HIGHLIGHT_MS}; one object is shared by a document's blocks. */
 export type HighlightClock = { remainingMs: number };
+/** A line that takes longer than this (wall time) spends the document's budget. */
+const SLOW_LINE_MS = 100;
 /**
- * A line still being tokenized after this long is cut off where the tokenizer is, and the rest of
- * it is plain. Real lines take microseconds.
+ * A line still being tokenized after this long is cut off where the tokenizer is (Shiki measures
+ * wall time), and the block stays plain: the line took a hundred times what a real one does.
  */
-const LINE_TIME_LIMIT_MS = 100;
+const LINE_TIME_LIMIT_MS = 750;
+/** Languages whose grammar this process has already run, so its first line is not charged. */
+const warmedLanguages = new Set<string>();
 
 type Style = { light?: string; dark?: string; fontStyle?: number };
 export type CodeHighlight = {
@@ -168,8 +176,19 @@ export async function highlightCode(
         tokenizeTimeLimit: LINE_TIME_LIMIT_MS,
         ...(state ? { grammarState: state } : {}),
       });
-      if (clock) {
-        clock.remainingMs -= performance.now() - started;
+      const spent = performance.now() - started;
+      const warmUp = !warmedLanguages.has(language);
+      warmedLanguages.add(language);
+      if (spent >= LINE_TIME_LIMIT_MS * 0.9) {
+        // Cut off by the limit: what is left of the line is one plain token, and the next line is
+        // likely as bad. Stop colouring this block and the rest of the document.
+        if (clock) {
+          clock.remainingMs = 0;
+        }
+        return null;
+      }
+      if (clock && spent > SLOW_LINE_MS && !warmUp) {
+        clock.remainingMs -= spent;
       }
       tokens.push(...result.tokens);
       state = result.grammarState;
