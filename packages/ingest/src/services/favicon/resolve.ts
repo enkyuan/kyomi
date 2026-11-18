@@ -4,6 +4,12 @@ import { openTags } from "../../lib/text-scan";
 const MAX_REDIRECT_HOPS = 5;
 const HTML_ICON_SCAN_MAX_CHARS = 128 * 1024;
 const FAVICON_REQUEST_TIMEOUT_MS = 1_200;
+/**
+ * How many of a page's declared icons are fetched, best first. A page can declare thousands in the
+ * 128 KiB that is read, and each one tried costs a request and up to the timeout above, so an
+ * unbounded loop would hold a worker for minutes on a hostile homepage.
+ */
+const HTML_ICON_MAX_ATTEMPTS = 5;
 
 /**
  * `fetchPublic` for a favicon: every URL it requests, the first and each redirect, must be a public
@@ -248,7 +254,7 @@ export type ResolveFeedFaviconUrlResult = {
 
 async function resolveHtmlFavicon(origin: string): Promise<ResolveFeedFaviconUrlResult | null> {
   const iconHrefs = await findIconsFromHtml(origin);
-  for (const iconHref of iconHrefs) {
+  for (const iconHref of iconHrefs.slice(0, HTML_ICON_MAX_ATTEMPTS)) {
     const htmlIconResult = await tryFetchImageIfHostSafe(iconHref);
     if (htmlIconResult) {
       htmlIconResult.body?.cancel().catch(() => {});

@@ -147,6 +147,28 @@ describe("favicon host resolution", () => {
   });
 });
 
+describe("a page that declares far too many icons", () => {
+  test("only the best few are fetched, then resolution moves on", async () => {
+    const store = new MemoryFaviconHostStore();
+    const links = Array.from(
+      { length: 2_000 },
+      (_, index) => `<link rel="icon" sizes="16x16" href="/i${index}.png">`,
+    ).join("");
+    const calls = mockFetch((url) =>
+      url === ORIGIN
+        ? new Response(`<html><head>${links}</head></html>`, {
+            headers: { "content-type": "text/html" },
+          })
+        : new Response(null, { status: 404 }),
+    );
+
+    const result = await resolvePersistedFaviconHost(store, ORIGIN);
+
+    expect(result?.kind).toBe("miss");
+    expect(calls.filter((url) => /\/i\d+\.png$/.test(url)).length).toBeLessThanOrEqual(5);
+  });
+});
+
 describe("icon discovery in a page", () => {
   const page = (head: string) =>
     new Response(`<html><head>${head}</head></html>`, { headers: { "content-type": "text/html" } });
