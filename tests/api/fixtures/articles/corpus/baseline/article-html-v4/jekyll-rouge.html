@@ -1,0 +1,22 @@
+<p>Ruby 3.4 makes frozen string literals the default in more places. Here is the smallest example.</p>
+<div class="language-ruby"><div class="highlight"><pre data-kyomi-lang="ruby" class="highlight"><code><span>def</span> <span>greet</span><span>(</span><span>name</span><span>)</span>
+  <span>puts</span> <span>"Hello, </span><span>#{</span><span>name</span><span>}</span><span>"</span>
+<span>end</span>
+</code></pre></div></div>
+<p>And the equivalent Python, highlighted by a Liquid tag:</p>
+<figure class="highlight"><pre data-kyomi-lang="python"><code class="language-python"><span>def</span> <span>greet</span><span>(</span><span>name</span><span>):</span>
+    <span>print</span><span>(</span><span>f</span><span>"Hello, </span><span>{</span><span>name</span><span>}</span><span>"</span><span>)</span></code></pre></figure>
+<p>Install it with <abbr title="Ruby Version Manager">RVM</abbr> or rbenv. The old advice to <del>pin 2.7</del> <ins>use 3.4</ins> still applies to CI images<sup id="kyomi-fnref-ci"><a data-kyomi-role="footnote" href="#kyomi-fn-ci" rel="footnote">1</a></sup>.</p>
+<dl>
+  <dt>Gem</dt>
+  <dd>A packaged Ruby library.</dd>
+  <dt>Bundler</dt>
+  <dd>The tool that resolves and installs gems for a project.</dd>
+</dl>
+<div data-kyomi-role="footnotes">
+  <ol>
+    <li id="kyomi-fn-ci">
+      <p>Most hosted runners ship an older default Ruby. <a href="#kyomi-fnref-ci">↩</a></p>
+    </li>
+  </ol>
+</div>

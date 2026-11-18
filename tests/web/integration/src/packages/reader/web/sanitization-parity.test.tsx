@@ -37,6 +37,7 @@ const fixtures: Record<string, string> = {
   v2Anchors: `<p><a href="#kyomi-fn-1">1</a> <a href="#raw">raw</a></p><h2 id="location">x</h2><a id="kyomi-fnref-1"></a>`,
   v2Hints: `<pre data-kyomi-lang="ts" data-kyomi-lines="2"><code>a</code></pre><figure data-kyomi-embed="youtube" data-kyomi-url="https://www.youtube.com/watch?v=abc"><a href="https://www.youtube.com/watch?v=abc">v</a></figure><p data-kyomi-embed="x">p</p><li data-kyomi-checked="maybe">l</li>`,
   v2Math: `<math display="block"><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mtable><mtr><mtd><mn>1</mn></mtd></mtr></mtable></math><math><annotation-xml encoding="text/html"><b>h</b></annotation-xml><maction><mi>z</mi></maction></math>`,
+  inlineStyle: `<span style="position:fixed;inset:0">a</span><span style="background:url(https://evil.example/x)">b</span><math style="color:red"><mi style="z-index:9">x</mi></math><div style="color:red">c</div>`,
   v2Aside: `<aside class="note promo"><p>A</p></aside><blockquote><p>Q</p><footer>Author</footer></blockquote>`,
 };
 
@@ -69,6 +70,35 @@ describe("sanitization policy parity", () => {
 
   test("the policy's embed providers match the reader document model", () => {
     expect([...ARTICLE_EMBED_PROVIDERS]).toEqual(readerEmbedProviderSchema.options);
+  });
+
+  test.each([
+    ['<span style="position:fixed;inset:0;width:100vw;height:100vh">x</span>'],
+    ['<span style="background:url(https://evil.example/x)">x</span>'],
+    ['<a href="https://example.com/a"><span style="display:block;position:absolute">x</span></a>'],
+    ['<math><mi style="z-index:9">x</mi></math>'],
+    ['<span class="katex"><span style="height:0.69em;vertical-align:-0.19em">x</span></span>'],
+    ["<span STYLE='top:0' style=\"position:fixed\">x</span>"],
+  ])("neither sanitizer keeps inline style: %s", (html) => {
+    expect(viaPolicy(html)).not.toMatch(/style/i);
+    expect(sanitizeReaderArticleHtml(html)).not.toMatch(/style/i);
+  });
+
+  test("a formula keeps its classes and MathML without inline style", () => {
+    const html = `<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span></span>`;
+
+    const sanitized = viaPolicy(html);
+
+    expect(sanitized).toContain('class="katex"');
+    expect(sanitized).toContain("<mi>x</mi>");
+    expect(sanitized).toContain('encoding="application/x-tex"');
+  });
+
+  test("nesting tens of thousands deep is sanitized, not a stack overflow", () => {
+    const html = `${"<div>".repeat(30_000)}deep${"</div>".repeat(30_000)}`;
+
+    expect(() => sanitizeArticleHtmlFragment(html)).not.toThrow();
+    expect(sanitizeArticleHtmlFragment(html)).toContain("deep");
   });
 
   for (const [name, html] of Object.entries(fixtures)) {
