@@ -36,7 +36,7 @@ mockMobileAuth({ useSession: () => session });
 const { queryClient } = await import("../../../../../../apps/mobile/src/lib/query/client");
 const { useSessionGate } =
   await import("../../../../../../apps/mobile/src/modules/auth/hooks/use-session-gate");
-const { adoptSessionUser, clearUserData } =
+const { adoptSessionUser, clearUserData, isSessionOwner } =
   await import("../../../../../../apps/mobile/src/modules/auth/lib/user-data");
 const { saveRecentArticle, useRecentArticles } =
   await import("../../../../../../apps/mobile/src/modules/recents/lib/store");
@@ -61,8 +61,13 @@ const signedIn = (userId: string | null, isPending = false): Session => ({
   isPending,
 });
 
+type Gate = { isAuthenticated: boolean; isPending: boolean };
+/** Every render of the probe, in order, so a test can read what a render returned before any effect ran. */
+const renders: Gate[] = [];
+
 function Probe() {
   const gate = useSessionGate();
+  renders.push({ isAuthenticated: gate.isAuthenticated, isPending: gate.isPending });
   return createElement("div", {
     "data-authenticated": String(gate.isAuthenticated),
     "data-pending": String(gate.isPending),
@@ -106,6 +111,7 @@ beforeEach(() => {
   fetchMock.mockImplementation(async () => new Response("down", { status: 503 }));
   globalThis.fetch = fetchMock as unknown as typeof fetch;
   session = { data: null, isPending: false };
+  renders.length = 0;
 });
 
 afterEach(async () => {
@@ -178,6 +184,50 @@ describe("useSessionGate", () => {
 
     expect(await settle()).toEqual({ isAuthenticated: false, isPending: false });
     expect(readRecentIds(stores)).toEqual(["a1"]);
+  });
+
+  test("a sign-out followed by the same account's sign-in waits for the owner record before it mounts signed-in screens", async () => {
+    adoptSessionUser("user-a");
+    await seedAccount(stores, localStorage, "a1");
+    session = signedIn("user-a");
+    page = createDomPage({ localStorage });
+    await page.mount(createElement(Probe));
+    expect(renders.at(-1)).toEqual({ isAuthenticated: true, isPending: false });
+
+    // The user logs out: the session goes first, then the account's data and owner record.
+    session = { data: null, isPending: false };
+    await page.render(createElement(Probe));
+    clearUserData();
+    expect(renders.at(-1)).toEqual({ isAuthenticated: false, isPending: false });
+
+    // Signing back in as the same account: no signed-in screen may render before the owner is set,
+    // or its queries start and the adoption then wipes the cache under them.
+    session = signedIn("user-a");
+    renders.length = 0;
+    await page.render(createElement(Probe));
+
+    expect(renders[0]).toEqual({ isAuthenticated: false, isPending: true });
+    expect(renders.at(-1)).toEqual({ isAuthenticated: true, isPending: false });
+    expect(isSessionOwner("user-a")).toBe(true);
+    expect(readRecentIds(stores)).toEqual([]);
+  });
+
+  test("a session that goes missing and returns without a sign-out keeps the account signed in and its data", async () => {
+    adoptSessionUser("user-a");
+    await seedAccount(stores, localStorage, "a1");
+    session = signedIn("user-a");
+    page = createDomPage({ localStorage });
+    await page.mount(createElement(Probe));
+
+    session = { data: null, isPending: false };
+    await page.render(createElement(Probe));
+    session = signedIn("user-a");
+    renders.length = 0;
+    await page.render(createElement(Probe));
+
+    expect(renders.every((gate) => gate.isAuthenticated && !gate.isPending)).toBe(true);
+    expect(readRecentIds(stores)).toEqual(["a1"]);
+    expect(readReaderPosition("a1")).toBe(7);
   });
 
   test("stays pending while the auth client resolves the session", () => {

@@ -46,16 +46,28 @@ describe("resolveLinkClick", () => {
     "#",
     "",
     "   ",
+    // The URL parser strips only ASCII whitespace and C0 controls, so the browser reads these as
+    // a path in the document's directory, never as an in-page anchor.
+    "\u00a0#kyomi-fn1",
+    "\u2003#kyomi-fn1",
+    "\u3000#kyomi-fn1",
+    "\ufeff#kyomi-fn1",
+    "\u00a0file:///var/app/dom/article.html#kyomi-fn1",
   ])("blocks %p", (href) => {
     expect(resolveLinkClick(href, DOCUMENT)).toEqual({ action: "block" });
   });
 
-  test.each(["#note-1", "#kyomi-fn_1", "file:///var/app/dom/article.html#note-1"])(
-    "lets the same-document link %p scroll",
-    (href) => {
-      expect(resolveLinkClick(href, DOCUMENT)).toEqual({ action: "scroll" });
-    },
-  );
+  test.each([
+    "#note-1",
+    "#kyomi-fn_1",
+    "file:///var/app/dom/article.html#note-1",
+    // ASCII whitespace and controls at the ends are stripped by the browser too.
+    " #note-1",
+    "\t#note-1\n",
+    "\u0001#note-1",
+  ])("lets the same-document link %p scroll", (href) => {
+    expect(resolveLinkClick(href, DOCUMENT)).toEqual({ action: "scroll" });
+  });
 
   test("a same-document link keeps scrolling when the page is served over http (development)", () => {
     expect(resolveLinkClick("#note", "http://192.168.1.2:8081/_expo/dom/article.html")).toEqual({

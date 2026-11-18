@@ -18,7 +18,12 @@ export function useSessionGate() {
   const isAdopting = userId !== null && adoptedUserId !== userId && !isSessionOwner(userId);
 
   useEffect(() => {
-    if (userId === null) return;
+    // Signing out ends the adoption: the next session, even the same account's, adopts again, so it
+    // waits for `adoptSessionUser` to settle the owner record that the sign-out removed.
+    if (userId === null) {
+      setAdoptedUserId(null);
+      return;
+    }
 
     adoptSessionUser(userId);
     setAdoptedUserId(userId);

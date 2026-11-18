@@ -14,20 +14,22 @@ export function useLogout() {
 
     setErrorMessage(null);
     setIsLoggingOut(true);
-    void authClient.signOut().then(
-      (result: Awaited<ReturnType<typeof authClient.signOut>>) => {
-        try {
-          // Only a completed sign-out ends the session; a failed one leaves the account signed in.
-          if (result?.error) setErrorMessage(LOGOUT_ERROR_MESSAGE);
-          else clearUserData();
-        } finally {
-          setIsLoggingOut(false);
-        }
-      },
-      () => {
-        setErrorMessage(LOGOUT_ERROR_MESSAGE);
+    // The auth client drops the stored session and flips the session atom before it sends the
+    // request, so the device is signed out whether or not the server answered. The account's data
+    // goes with it either way; clearing only after the request settles means the signed-in screens
+    // are already gone and cannot refetch into the emptied stores.
+    const finish = (message: string | null) => {
+      try {
+        clearUserData();
+      } finally {
+        setErrorMessage(message);
         setIsLoggingOut(false);
-      },
+      }
+    };
+    void authClient.signOut().then(
+      (result: Awaited<ReturnType<typeof authClient.signOut>>) =>
+        finish(result?.error ? LOGOUT_ERROR_MESSAGE : null),
+      () => finish(LOGOUT_ERROR_MESSAGE),
     );
   }
 
