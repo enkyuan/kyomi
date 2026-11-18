@@ -85,7 +85,9 @@ export function isSafeMathSvg(svg: string): boolean {
         const attrName = attr[1] ?? "";
         const pattern = /^data-mjx-[a-z-]{1,24}$/.test(attrName)
           ? /^[\w -]{0,32}$/
-          : VALUE_PATTERNS[attrName];
+          : Object.hasOwn(VALUE_PATTERNS, attrName)
+            ? VALUE_PATTERNS[attrName]
+            : undefined;
         if (!pattern?.test(attr[2] ?? "")) {
           return false;
         }

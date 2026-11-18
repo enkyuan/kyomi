@@ -83,7 +83,10 @@ function resolveHighlightLanguage(raw: string): string | undefined {
   if (hljs.getLanguage(id)) {
     return id;
   }
-  const mapped = HIGHLIGHT_LANGUAGE_ALIASES[id];
+  // Own keys only: `constructor` is a publisher-writable hint and must not find a prototype member.
+  const mapped = Object.hasOwn(HIGHLIGHT_LANGUAGE_ALIASES, id)
+    ? HIGHLIGHT_LANGUAGE_ALIASES[id]
+    : undefined;
   if (mapped && hljs.getLanguage(mapped)) {
     return mapped;
   }

@@ -129,15 +129,3 @@ export function allowedFrameUrl(
     return null;
   }
 }
-
-/**
- * `rendered` is KaTeX output the compiler produced with `trust: false`. It is injected as-is, so
- * anything that is not plain KaTeX markup (scripts, frames, event handlers) is refused and the
- * math falls back to its source instead.
- */
-const UNSAFE_RENDERED_RE =
-  /<\s*(?:script|iframe|object|embed|link|style|base|form)\b|\son[a-z]+\s*=|javascript:/i;
-
-export function isTrustedKatexHtml(html: string): boolean {
-  return !UNSAFE_RENDERED_RE.test(html);
-}
