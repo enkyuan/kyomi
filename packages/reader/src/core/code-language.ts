@@ -7,6 +7,13 @@ export type CodeLanguageDetection = {
   reason: string;
 };
 
+/**
+ * The pattern heuristics below read at most this many characters. Several of them backtrack, so
+ * their cost grows with the square of the text; an unlabeled code block is rarely longer, and a
+ * hostile one cannot turn a whole article into minutes of work.
+ */
+const MAX_HEURISTIC_CHARS = 20_000;
+
 const PLAIN_LANGUAGE = "plaintext";
 const PLAIN_LABEL = "Plain text";
 
@@ -51,18 +58,24 @@ const LANGUAGE_LABELS: Record<string, string> = {
   graphql: "GraphQL",
 };
 
+/** Own keys only: a publisher-supplied hint such as `constructor` must not find a prototype member. */
+function lookup(map: Record<string, string>, key: string): string | undefined {
+  return Object.hasOwn(map, key) ? map[key] : undefined;
+}
+
 function toLanguageId(raw: string | undefined): string | undefined {
   const trimmed = raw?.trim().toLowerCase();
   if (!trimmed) {
     return undefined;
   }
-  return LANGUAGE_ALIASES[trimmed] ?? trimmed;
+  return lookup(LANGUAGE_ALIASES, trimmed) ?? trimmed;
 }
 
 function toLanguageLabel(language: string): string {
   const normalized = language.trim().toLowerCase();
-  if (LANGUAGE_LABELS[normalized]) {
-    return LANGUAGE_LABELS[normalized];
+  const known = lookup(LANGUAGE_LABELS, normalized);
+  if (known) {
+    return known;
   }
   const parts: string[] = [];
   for (const chunk of normalized.split(/[-_]/)) {
@@ -163,6 +176,36 @@ function tryDetectBash(text: string): CodeLanguageDetection | null {
   return null;
 }
 
+const MARKUP_OPEN = /<[a-z][\w:-]*/gi;
+const MARKUP_CLOSE = /<\/[a-z][\w:-]*>/gi;
+
+/**
+ * Matches `/<[a-z][\w:-]*(\s[^>]*)?>[\s\S]*<\/[a-z][\w:-]*>/i` in one pass; that regex rescans to
+ * the end of the text for every `<a ` or `<a>` without a closing tag after it. The first opening
+ * tag that ends is the one with the most text after it, so only it needs a closing tag.
+ */
+function hasPairedMarkupTags(text: string): boolean {
+  MARKUP_OPEN.lastIndex = 0;
+  for (let open = MARKUP_OPEN.exec(text); open; open = MARKUP_OPEN.exec(text)) {
+    const next = text[MARKUP_OPEN.lastIndex];
+    let end = -1;
+    if (next === ">") {
+      end = MARKUP_OPEN.lastIndex + 1;
+    } else if (next !== undefined && /\s/.test(next)) {
+      const close = text.indexOf(">", MARKUP_OPEN.lastIndex + 1);
+      if (close === -1) {
+        return false;
+      }
+      end = close + 1;
+    }
+    if (end !== -1) {
+      MARKUP_CLOSE.lastIndex = end;
+      return MARKUP_CLOSE.test(text);
+    }
+  }
+  return false;
+}
+
 function tryDetectXml(text: string): CodeLanguageDetection | null {
   const normalized = text.trim();
   if (!normalized) {
@@ -176,7 +219,7 @@ function tryDetectXml(text: string): CodeLanguageDetection | null {
       reason: "HTML doctype",
     };
   }
-  if (/<[a-z][\w:-]*(\s[^>]*)?>[\s\S]*<\/[a-z][\w:-]*>/i.test(normalized)) {
+  if (hasPairedMarkupTags(normalized)) {
     return {
       language: "xml",
       label: "HTML",
@@ -213,10 +256,12 @@ function tryDetectPython(text: string): CodeLanguageDetection | null {
   const functionOrClass =
     /\bdef\s+[A-Za-z_][A-Za-z0-9_]*\s*\([^)]*\)\s*:\s*$/m.test(normalized) ||
     /\bclass\s+[A-Za-z_][A-Za-z0-9_]*(\([^)]*\))?\s*:\s*$/m.test(normalized);
+  // The indent excludes line breaks: `^\s*` also matches across blank lines, which rescans the
+  // rest of a run of newlines from every line start in it. Any match still starts at a line start.
   const importPattern =
-    /^\s*from\s+[A-Za-z_][A-Za-z0-9_.]*\s+import\s+[A-Za-z_*][A-Za-z0-9_,\s*]*$/m.test(
+    /^[^\S\n\r\u2028\u2029]*from\s+[A-Za-z_][A-Za-z0-9_.]*\s+import\s+[A-Za-z_*][A-Za-z0-9_,\s*]*$/m.test(
       normalized,
-    ) || /^\s*import\s+[A-Za-z_][A-Za-z0-9_.,\s]*$/m.test(normalized);
+    ) || /^[^\S\n\r\u2028\u2029]*import\s+[A-Za-z_][A-Za-z0-9_.,\s]*$/m.test(normalized);
   const indentationBlock = /\n\s{2,}[^\n]+/.test(normalized);
 
   if (functionOrClass && indentationBlock) {
@@ -328,21 +373,27 @@ export function detectCodeLanguage(text: string, explicitLanguage?: string): Cod
     return asPlain("empty code block");
   }
 
+  // JSON must be parsed whole; every other check is a heuristic over the start of the block. The
+  // cut sample is trimmed again: `\n\s{2,}\S` and its kin backtrack through a trailing whitespace run.
+  const sample =
+    trimmed.length > MAX_HEURISTIC_CHARS
+      ? trimmed.slice(0, MAX_HEURISTIC_CHARS).trimEnd()
+      : trimmed;
   const deterministic =
     tryDetectJson(trimmed) ??
-    tryDetectBash(trimmed) ??
-    tryDetectXml(trimmed) ??
-    tryDetectSql(trimmed) ??
-    tryDetectPython(trimmed) ??
-    tryDetectTypeScript(trimmed) ??
-    tryDetectJavaScript(trimmed) ??
-    tryDetectYaml(trimmed);
+    tryDetectBash(sample) ??
+    tryDetectXml(sample) ??
+    tryDetectSql(sample) ??
+    tryDetectPython(sample) ??
+    tryDetectTypeScript(sample) ??
+    tryDetectJavaScript(sample) ??
+    tryDetectYaml(sample);
 
   if (deterministic) {
     return deterministic;
   }
 
-  if (looksLikePlainText(trimmed)) {
+  if (looksLikePlainText(sample)) {
     return asPlain("plain prose text without code markers");
   }
 

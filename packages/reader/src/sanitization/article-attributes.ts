@@ -8,7 +8,13 @@ import { ARTICLE_EMBED_PROVIDERS } from "./article-policy";
  * renderer reads is checked against the shape it expects.
  */
 
-/** Compiler-assigned anchor ids (`kyomi-` prefix keeps them clear of app ids and globals). */
+/**
+ * Compiler-assigned anchor ids. The prefix keeps them clear of globals and of the bare ids a
+ * publisher writes, but not of ids an app writes for itself: the compiler derives `kyomi-<slug>`
+ * from every publisher id (`id="command-description"` becomes `kyomi-command-description`), so
+ * this rule accepts any such id. App code must not give its own elements ids that start with
+ * `kyomi-`; `useId()` ids cannot collide.
+ */
 const KYOMI_ANCHOR = /^kyomi-[a-z0-9][a-z0-9-]{0,63}$/;
 const KYOMI_FRAGMENT = /^#kyomi-[a-z0-9][a-z0-9-]{0,63}$/;
 const MAX_SRCSET_CANDIDATES = 8;

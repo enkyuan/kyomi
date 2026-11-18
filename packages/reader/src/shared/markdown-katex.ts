@@ -29,6 +29,12 @@ function restoreMathDelimiters(value: string): string {
     .replaceAll(`${RIGHT_BRACKET}]`, String.raw`\]`);
 }
 
+/**
+ * Longer text nodes are not scanned for math: `MATH_RE` is lazy, so an unclosed `$$` or `\(`
+ * makes it rescan to the end of the text from every opener. The compiler applies the same limit.
+ */
+const MAX_SCANNED_TEXT = 20_000;
+
 const MATH_RE =
   /\\begin\{([A-Za-z*]+)\}([\s\S]+?)\\end\{\1\}|\$\$([\s\S]+?)\$\$|\uE002\[([\s\S]+?)\uE003\]|\uE000\(([\s\S]+?)\uE001\)|(?<!\$)\$([^$\n]+?)\$(?!\$)/g;
 
@@ -48,6 +54,10 @@ function transformMathInlineNodes(nodes: InlineNode[]): InlineNode[] {
     }
 
     const value = node.value;
+    if (value.length > MAX_SCANNED_TEXT) {
+      transformed.push({ type: "text", value: restoreMathDelimiters(value) });
+      continue;
+    }
     MATH_RE.lastIndex = 0;
     let cursor = 0;
     let match: RegExpExecArray | null;
