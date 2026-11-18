@@ -3,7 +3,7 @@
 import { useCallback } from "react";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/components/toast";
 import { normalizeSafeHttpUrl } from "@kyomi/reader/core";
-import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
+import { logClientError } from "@kyomi/reader/lib/errors";
 import { useInboxItemStateMutation } from "@modules/articles/hooks/use-item-state";
 import type { AnchoredToolbarActionOptions, ArticleActionItem, ToolbarSide } from "../lib/types";
 
