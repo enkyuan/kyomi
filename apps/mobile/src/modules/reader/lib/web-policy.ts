@@ -21,10 +21,12 @@ function withoutHash(url: string): string {
 
 /** What a tap on `href` does, given the URL of the page that contains the link. */
 export function resolveLinkClick(href: string, documentUrl: string): LinkClick {
-  const raw = href.trim();
-
+  // The attribute is parsed exactly as the browser parses it when the click navigates: the URL
+  // parser drops only ASCII whitespace and C0 controls at the ends. `String.trim` also drops NBSP,
+  // BOM and other Unicode spaces, which would turn a link the browser resolves to another document
+  // (`\u00a0#note` is a path) into an in-page anchor that is never cancelled.
   try {
-    const target = new URL(raw, documentUrl);
+    const target = new URL(href, documentUrl);
     if (target.hash && withoutHash(target.href) === withoutHash(documentUrl)) {
       return { action: "scroll" };
     }
@@ -32,7 +34,7 @@ export function resolveLinkClick(href: string, documentUrl: string): LinkClick {
     return { action: "block" };
   }
 
-  const url = normalizeSafeHttpUrl(raw);
+  const url = normalizeSafeHttpUrl(href);
   return url ? { action: "open", url } : { action: "block" };
 }
 

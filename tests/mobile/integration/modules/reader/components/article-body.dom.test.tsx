@@ -49,7 +49,7 @@ describe("article body links", () => {
     const event = page!.click(root.querySelector(".article-body a")!);
 
     expect(event.defaultPrevented).toBe(true);
-    expect(page!.navigations).toEqual([]);
+    expect(await page!.navigations()).toEqual([]);
     expect(openUrl.mock.calls).toEqual([["https://attacker.example/signin"]]);
   });
 
@@ -78,7 +78,7 @@ describe("article body links", () => {
     }
 
     expect(openUrl).not.toHaveBeenCalled();
-    expect(page!.navigations).toEqual([]);
+    expect(await page!.navigations()).toEqual([]);
   });
 
   test("lets a footnote link scroll inside the article", async () => {

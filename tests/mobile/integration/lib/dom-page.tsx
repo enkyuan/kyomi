@@ -22,9 +22,9 @@ const GLOBAL_KEYS = [
 type GlobalKey = (typeof GLOBAL_KEYS)[number];
 
 /**
- * A browser page for the Expo DOM components, which run inside a WebView. `navigations` collects
+ * A browser page for the Expo DOM components, which run inside a WebView. `navigations()` reports
  * every page load the page attempted: jsdom reports them instead of performing them, so a link
- * the component left alone shows up here, the way it would load inside the WebView.
+ * the component left alone shows up there, the way it would load inside the WebView.
  */
 export function createDomPage({ localStorage }: { localStorage?: Storage | object } = {}) {
   const navigations: string[] = [];
@@ -45,7 +45,15 @@ export function createDomPage({ localStorage }: { localStorage?: Storage | objec
   let root: Root | undefined;
 
   return {
-    navigations,
+    /**
+     * The page loads attempted so far. jsdom starts the load for a followed link on a zero-delay
+     * timer of its own window, after the click has returned, so this waits a turn of that timer
+     * queue first: a synchronous read sees nothing whether or not the link navigated.
+     */
+    async navigations() {
+      await new Promise<void>((resolve) => dom.window.setTimeout(resolve, 20));
+      return [...navigations];
+    },
     /** Installs the page as the global browser, mounts `element`, and waits for effects. */
     async mount(element: ReactElement) {
       for (const key of GLOBAL_KEYS) {
@@ -61,6 +69,10 @@ export function createDomPage({ localStorage }: { localStorage?: Storage | objec
       root = createRoot(container);
       await act(async () => root?.render(element));
       return container;
+    },
+    /** Renders `element` into the mounted page again, keeping the state of what is already there. */
+    async render(element: ReactElement) {
+      await act(async () => root?.render(element));
     },
     /** A tap on `target`: a cancelable click that bubbles, as the WebView delivers it. */
     click(target: Element) {

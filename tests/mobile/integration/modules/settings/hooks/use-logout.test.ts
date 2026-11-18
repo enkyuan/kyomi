@@ -1,4 +1,4 @@
-// Value: protects=signing out removes the previous account's cached articles, reading history, reading position and queued progress writes from memory and from the device;
+// Value: protects=signing out removes the previous account's cached articles, reading history, reading position and queued progress writes from memory and from the device, also when the sign-out request fails after the client already dropped the local session;
 //   fails_when=logout leaves any of those behind, so the next account on the device sees them or replays them under its own session;
 //   why_new=useLogout only called signOut, so every persisted store survived a sign-out and nothing tested it;
 //   seam=real stores and real query client over an in-memory localStorage, with the auth client and the network stubbed;
@@ -37,6 +37,8 @@ const { queryClient, persister } =
   await import("../../../../../../apps/mobile/src/lib/query/client");
 const { useLogout } =
   await import("../../../../../../apps/mobile/src/modules/settings/hooks/use-logout");
+const { adoptSessionUser, isSessionOwner } =
+  await import("../../../../../../apps/mobile/src/modules/auth/lib/user-data");
 const { saveRecentArticle, useRecentArticles } =
   await import("../../../../../../apps/mobile/src/modules/recents/lib/store");
 const { readReaderPosition, writeReaderPosition } =
@@ -98,6 +100,7 @@ beforeEach(async () => {
   fetchMock.mockClear();
   fetchMock.mockImplementation(async () => new Response("down", { status: 503 }));
   globalThis.fetch = fetchMock as unknown as typeof fetch;
+  adoptSessionUser("user-a");
   await seedAccount(stores, localStorage, "a1");
 });
 
@@ -144,24 +147,44 @@ describe("logging out", () => {
     expect(readThemeMode()).toBe("dark");
   });
 
-  test("keeps the data when sign-out fails, because the session is still active", async () => {
-    signOut.mockImplementation(async () => ({ error: { message: "offline" } }));
+  test("leaves nothing behind when the sign-out request fails: the client already dropped the session", async () => {
+    signOut.mockImplementation(async () => ({ error: { message: "offline", status: 503 } }));
 
     await confirmLogout();
 
-    expect(recentIds()).toEqual(["a1"]);
-    expect(readReaderPosition("a1")).toBe(7);
-    expect(queryClient.getQueryCache().getAll()).toHaveLength(1);
+    expect(signOut).toHaveBeenCalledTimes(1);
+    expect(recentIds()).toEqual([]);
+    expect(readReaderPosition("a1")).toBeUndefined();
+    expect(queryClient.getQueryCache().getAll()).toEqual([]);
+    expect(await persister.restoreClient()).toBeUndefined();
+    expect(isSessionOwner("user-a")).toBe(false);
   });
 
-  test("keeps the data when the sign-out request rejects", async () => {
+  test("leaves nothing behind when the sign-out request rejects", async () => {
     signOut.mockImplementation(async () => {
       throw new Error("network down");
     });
 
     await confirmLogout();
 
-    expect(recentIds()).toEqual(["a1"]);
-    expect(queryClient.getQueryCache().getAll()).toHaveLength(1);
+    expect(recentIds()).toEqual([]);
+    expect(readReaderPosition("a1")).toBeUndefined();
+    expect(queryClient.getQueryCache().getAll()).toEqual([]);
+    expect(await persister.restoreClient()).toBeUndefined();
+    expect(isSessionOwner("user-a")).toBe(false);
+  });
+
+  test("does not replay queued progress under the next session after a failed sign-out", async () => {
+    signOut.mockImplementation(async () => {
+      throw new Error("network down");
+    });
+    await confirmLogout();
+    fetchMock.mockClear();
+    fetchMock.mockImplementation(
+      async () => new Response(JSON.stringify({ readingProgress: {} }), { status: 200 }),
+    );
+
+    expect(await readingProgressSync.retryBuffered()).toBe(0);
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 });

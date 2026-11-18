@@ -40,7 +40,7 @@ describe("html island links", () => {
     const event = page!.click(root.querySelector("a")!);
 
     expect(event.defaultPrevented).toBe(true);
-    expect(page!.navigations).toEqual([]);
+    expect(await page!.navigations()).toEqual([]);
     expect(openUrl.mock.calls).toEqual([["https://attacker.example/signin"]]);
   });
 
@@ -61,7 +61,7 @@ describe("html island links", () => {
     const event = page!.click(root.querySelector("a")!);
 
     expect(event.defaultPrevented).toBe(true);
-    expect(page!.navigations).toEqual([]);
+    expect(await page!.navigations()).toEqual([]);
     expect(openUrl.mock.calls).toEqual([["https://example.com/out"]]);
   });
 
@@ -85,7 +85,41 @@ describe("html island links", () => {
     }
 
     expect(openUrl).not.toHaveBeenCalled();
-    expect(page!.navigations).toEqual([]);
+    expect(await page!.navigations()).toEqual([]);
+  });
+
+  test("reports a link the policy leaves alone as a navigation, so the assertions above can fail", async () => {
+    // A bare anchor: nothing cancels the click, so jsdom follows it to another document.
+    page = createDomPage();
+    const root = await page.mount(createElement("a", { href: "other.html" }, "other"));
+
+    const event = page.click(root.querySelector("a")!);
+
+    expect(event.defaultPrevented).toBe(false);
+    expect(await page.navigations()).toEqual(["Not implemented: navigation to another Document"]);
+  });
+
+  test("cancels a fragment link behind Unicode whitespace, which the browser resolves to another document", async () => {
+    const root = await mountHtml('<p><a href="#note-1">1</a></p><p id="note-1">Note</p>');
+    const anchor = root.querySelector("a")!;
+
+    for (const space of ["\u00a0", "\u2003", "\u3000", "\ufeff"]) {
+      anchor.setAttribute("href", `${space}#note-1`);
+      expect(page!.click(anchor).defaultPrevented).toBe(true);
+    }
+
+    expect(openUrl).not.toHaveBeenCalled();
+    expect(await page!.navigations()).toEqual([]);
+  });
+
+  test("still scrolls a fragment link padded with ASCII whitespace, as the browser does", async () => {
+    const root = await mountHtml('<p><a href="#note-1">1</a></p><p id="note-1">Note</p>');
+    const anchor = root.querySelector("a")!;
+
+    anchor.setAttribute("href", "\t #note-1\n");
+
+    expect(page!.click(anchor).defaultPrevented).toBe(false);
+    expect(await page!.navigations()).toEqual([]);
   });
 
   test("lets a link inside the same document scroll", async () => {

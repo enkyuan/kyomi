@@ -4,7 +4,7 @@
 //   why_new=useArticleRowActions had no test, so mis-wired save, hide, share, source or report taps would only show on a device;
 //   seam=none;
 //   no_claim=green does not prove the native list reports these ids or that the mutation updates the cached list.
-import { afterEach, beforeEach, describe, expect, mock, spyOn, test } from "bun:test";
+import { afterAll, afterEach, beforeEach, describe, expect, mock, spyOn, test } from "bun:test";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import type { ArticleListItemDto } from "@kyomi/reader/schemas/article";
@@ -33,9 +33,16 @@ mock.module("expo-haptics", () => ({
   selectionAsync,
 }));
 mockMobileAuth();
-mock.module("../../../../../../apps/mobile/src/modules/inbox/hooks/use-state", () => ({
+// Module mocks outlive the file that registers them, and use-state.test.tsx runs the real hook, so
+// the real module is captured here and put back when this file is done.
+const USE_STATE = "../../../../../../apps/mobile/src/modules/inbox/hooks/use-state";
+const realUseState = await import(USE_STATE);
+mock.module(USE_STATE, () => ({
   useArticleStateMutation: () => ({ isPending: false, mutateAsync }),
 }));
+afterAll(() => {
+  mock.module(USE_STATE, () => realUseState);
+});
 
 const { toast } = await import("../../../../../../apps/mobile/src/components/ui/toast");
 const { useArticleRowActions } =
