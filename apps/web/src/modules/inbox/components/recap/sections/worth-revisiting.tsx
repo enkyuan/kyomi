@@ -11,6 +11,7 @@ import {
   ItemTitle,
 } from "@kyomi/ui/components/item";
 import { Button } from "@kyomi/ui/components/button";
+import { normalizeSafeHttpUrl } from "@kyomi/reader/core";
 import type { InboxSearch } from "@modules/inbox/lib/search";
 import { buildInboxItemSlug } from "@modules/articles/lib/slug";
 import type { RecapSavedItem } from "../../../lib/recap/types";
@@ -73,7 +74,7 @@ export function WorthRevisiting({
                         render={
                           <a
                             aria-label={`Open original for ${item.title}`}
-                            href={item.link}
+                            href={normalizeSafeHttpUrl(item.link) ?? undefined}
                             rel="noreferrer"
                             target="_blank"
                           />

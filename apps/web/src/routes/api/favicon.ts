@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { forwardRequestToApi } from "@lib/api";
+import { proxyFavicon } from "@lib/favicon";
 
 export const Route = createFileRoute("/api/favicon")({
   server: {
     handlers: {
-      GET: ({ request }) => forwardRequestToApi(request),
+      GET: ({ request }) => proxyFavicon(request),
     },
   },
 });

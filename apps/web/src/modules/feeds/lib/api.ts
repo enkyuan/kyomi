@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders, resolveApiUrl } from "@lib/api";
+import { parseOpaqueId } from "@lib/ids";
 import type {
   DiscoverFeedResultDto,
   FollowFeedResultDto,
@@ -172,7 +173,10 @@ export const searchFeeds = createServerFn({ method: "GET" })
   });
 
 export const followFeed = createServerFn({ method: "POST" })
-  .validator((input: FollowFeedInput) => input)
+  .validator((input: FollowFeedInput) => ({
+    ...input,
+    feedId: input.feedId?.trim() ? parseOpaqueId(input.feedId.trim()) : null,
+  }))
   .handler(async ({ data }): Promise<FollowFeedResult> => {
     const { fetchValidatedJson, followFeedResultSchema } = await getFeedsSchemaModule();
     const feedId = data.feedId?.trim();
@@ -239,7 +243,7 @@ export const importOpmlFromUrl = createServerFn({ method: "POST" })
   });
 
 export const getOpmlImportStatus = createServerFn({ method: "GET" })
-  .validator((input: { taskId: string }) => input)
+  .validator((input: { taskId: string }) => ({ taskId: parseOpaqueId(input.taskId.trim()) }))
   .handler(async ({ data }): Promise<OpmlImportStatus> => {
     const { fetchValidatedJson, opmlImportStatusSchema } = await getFeedsSchemaModule();
     const taskId = data.taskId.trim();
@@ -278,7 +282,7 @@ export const exportOpml = createServerFn({ method: "GET" }).handler(
 );
 
 export const unfollowFeed = createServerFn({ method: "POST" })
-  .validator((input: { feedId: string }) => input)
+  .validator((input: { feedId: string }) => ({ feedId: parseOpaqueId(input.feedId) }))
   .handler(async ({ data }): Promise<{ message: string }> => {
     const headers = buildForwardHeaders(getRequestHeaders());
     return apiJson<{ message: string }>(`/api/v1/feeds/${encodeURIComponent(data.feedId)}`, {
@@ -288,7 +292,10 @@ export const unfollowFeed = createServerFn({ method: "POST" })
   });
 
 export const updateFeedSubscription = createServerFn({ method: "POST" })
-  .validator((input: { feedId: string; customTitle?: string | null; isPinned?: boolean }) => input)
+  .validator((input: { feedId: string; customTitle?: string | null; isPinned?: boolean }) => ({
+    ...input,
+    feedId: parseOpaqueId(input.feedId),
+  }))
   .handler(async ({ data }): Promise<{ message: string }> => {
     const { fetchValidatedJson, messageResponseSchema } = await getFeedsSchemaModule();
     const headers = buildForwardHeaders(getRequestHeaders());
