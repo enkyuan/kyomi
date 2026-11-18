@@ -108,8 +108,15 @@ The full rule set, its cal.com analogue, and the differences from web naming liv
   errors.
 - Authenticate and authorize every user-owned read or mutation at the server boundary.
 - Give outbound requests finite time, size, redirect, and retry policies. Reuse `shared/net`
-  protections (`checkOutboundUrl`, `HostResolver`) for untrusted URLs, send provider calls through
-  the `HttpClient` service, and preserve caller cancellation.
+  protections (`checkOutboundUrl`, `HostResolver`, `safe-fetch`) for untrusted URLs, send provider
+  calls through the `HttpClient` service, and preserve caller cancellation. The destination rules
+  and pinned connection live once, in `@kyomi/ingest/lib/outbound`; do not copy a blocklist.
+- Rate-limit by user (`enforceRateLimitForContext`) every authenticated action that fetches another
+  server, compiles a page or calls a model; bound unauthenticated outward-fetching routes with
+  `makeLoadShedder`. Body size is capped once, by `requestGuardPlugin`.
+- Production configuration fails closed in `config/env/runtime.ts`: an unrecognised `NODE_ENV`,
+  a short `BETTER_AUTH_SECRET`, a missing `BETTER_AUTH_URL` or a short `FEED_ADMIN_SHARED_SECRET`
+  stop the boot.
 - Keep secrets server-side. Runtime values are parsed in `src/config/env/runtime.ts` and consumed
   through the `AppConfig` service (`src/config/env/service.ts`), not a global.
 - Keep `apps/api/src/modules/feeds/routes.ts` a delegator; put refresh enqueue behavior under

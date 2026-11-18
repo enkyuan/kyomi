@@ -31,7 +31,11 @@ Protect Kyomi's actual trust boundaries while preserving legitimate product beha
 - Reuse `apps/api/src/shared/net` controls for attacker-influenced URLs. Apply finite DNS, redirect,
   address, size, timeout, retry, and cancellation policies.
 - Preserve SSRF-safe favicon and feed fetching. Re-check every redirect hop and alternate address
-  class when behavior changes.
+  class when behavior changes. Connect to the address that was checked (`pinnedFetch`), never to a
+  second lookup of the name.
+- Shared rows (`feeds`, `feed_items`) are readable by every account and writable only by ingestion:
+  a user-facing update may change that user's own state, never the shared body. A feed URL must not
+  carry a username or password, and an item link is kept only when it is http(s).
 - Keep article HTML sanitization browser-safe and conservative. Treat raw HTML, URL resolution,
   WebView bridges, and navigation as untrusted boundaries.
 - Preserve credentialed CORS, trusted origins, cookies, callbacks, and account-linking semantics as
