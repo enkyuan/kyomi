@@ -20,3 +20,10 @@ export const queryClient = new QueryClient({
     },
   },
 });
+
+/** Drops every query from memory and from the persisted copy, so a later account starts empty. */
+export function clearQueryCache(): void {
+  // `clear` also cancels the fetches in flight, so a late response cannot repopulate the cache.
+  queryClient.clear();
+  storage.clearAll();
+}

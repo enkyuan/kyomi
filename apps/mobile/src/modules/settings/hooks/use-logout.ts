@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Alert } from "react-native";
 import { authClient } from "@/lib/auth";
+import { clearUserData } from "@modules/auth/lib/user-data";
 
 const LOGOUT_ERROR_MESSAGE = "Unable to log out. Try again.";
 
@@ -15,8 +16,13 @@ export function useLogout() {
     setIsLoggingOut(true);
     void authClient.signOut().then(
       (result: Awaited<ReturnType<typeof authClient.signOut>>) => {
-        if (result?.error) setErrorMessage(LOGOUT_ERROR_MESSAGE);
-        setIsLoggingOut(false);
+        try {
+          // Only a completed sign-out ends the session; a failed one leaves the account signed in.
+          if (result?.error) setErrorMessage(LOGOUT_ERROR_MESSAGE);
+          else clearUserData();
+        } finally {
+          setIsLoggingOut(false);
+        }
       },
       () => {
         setErrorMessage(LOGOUT_ERROR_MESSAGE);

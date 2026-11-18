@@ -20,6 +20,7 @@ import {
 const memoryStorage = (): AppStorage & { raw: Map<string, string> } => {
   const raw = new Map<string, string>();
   return {
+    clearAll: () => raw.clear(),
     getString: (key) => raw.get(key),
     raw,
     remove: (key) => void raw.delete(key),
@@ -212,6 +213,129 @@ describe("progress sync", () => {
     const [first, second] = await Promise.all([sync.retryBuffered(), sync.retryBuffered()]);
 
     expect([first, second, calls]).toEqual([1, 1, 1]);
+  });
+});
+
+describe("progress sync reset", () => {
+  test("forgets the kept writes, so a later session cannot send them", async () => {
+    const buffer = createProgressBuffer(memoryStorage());
+    const sent: string[] = [];
+    const sync = createProgressSync({
+      buffer,
+      send: async (articleId) => {
+        sent.push(articleId);
+        return accepted;
+      },
+    });
+    buffer.put("a", body(10));
+    buffer.put("b", body(10));
+
+    sync.reset();
+
+    expect(buffer.list()).toEqual([]);
+    expect(await sync.retryBuffered()).toBe(0);
+    expect(sent).toEqual([]);
+  });
+
+  test("a retry in flight stops before it sends the next kept write", async () => {
+    const buffer = createProgressBuffer(memoryStorage());
+    buffer.put("a", body(10));
+    buffer.put("b", body(10));
+    const sent: string[] = [];
+    let release: () => void = () => undefined;
+    const sync = createProgressSync({
+      buffer,
+      send: async (articleId) => {
+        sent.push(articleId);
+        await new Promise<void>((resolve) => (release = resolve));
+        return accepted;
+      },
+    });
+
+    const retry = sync.retryBuffered();
+    await Promise.resolve();
+    sync.reset();
+    release();
+
+    expect(await retry).toBe(0);
+    expect(sent).toEqual(["a"]);
+    expect(buffer.list()).toEqual([]);
+  });
+
+  test("a write that fails after the reset is not kept for the next session", async () => {
+    const buffer = createProgressBuffer(memoryStorage());
+    let fail: (error: Error) => void = () => undefined;
+    const sync = createProgressSync({
+      buffer,
+      send: () => new Promise((_, reject) => (fail = reject)),
+    });
+
+    const push = sync.push("a", body(10));
+    sync.reset();
+    fail(failure(503));
+
+    expect(await push).toBeNull();
+    expect(buffer.list()).toEqual([]);
+  });
+
+  test("a write that succeeds after the reset reports no progress for the next session to apply", async () => {
+    const buffer = createProgressBuffer(memoryStorage());
+    let succeed: (value: ReadingProgressResult) => void = () => undefined;
+    const sync = createProgressSync({
+      buffer,
+      send: () => new Promise((resolve) => (succeed = resolve)),
+    });
+
+    const push = sync.push("a", body(10));
+    sync.reset();
+    succeed(accepted);
+
+    expect(await push).toBeNull();
+  });
+
+  test("writes made after the reset are kept and retried as usual", async () => {
+    const buffer = createProgressBuffer(memoryStorage());
+    let online = false;
+    const sync = createProgressSync({
+      buffer,
+      send: async () => {
+        if (!online) throw failure(0);
+        return accepted;
+      },
+    });
+    sync.reset();
+
+    await sync.push("a", body(10));
+    expect(buffer.list()).toHaveLength(1);
+
+    online = true;
+    expect(await sync.retryBuffered()).toBe(1);
+  });
+
+  test("a retry started after the reset is not held up by the one the reset cancelled", async () => {
+    const buffer = createProgressBuffer(memoryStorage());
+    buffer.put("old", body(10));
+    let release: () => void = () => undefined;
+    const sent: string[] = [];
+    const sync = createProgressSync({
+      buffer,
+      send: async (articleId) => {
+        sent.push(articleId);
+        if (articleId === "old") await new Promise<void>((resolve) => (release = resolve));
+        return accepted;
+      },
+    });
+
+    const cancelled = sync.retryBuffered();
+    await Promise.resolve();
+    sync.reset();
+    buffer.put("new", body(20));
+    const fresh = sync.retryBuffered();
+    release();
+
+    expect(await fresh).toBe(1);
+    expect(await cancelled).toBe(0);
+    expect(sent).toEqual(["old", "new"]);
   });
 });
 

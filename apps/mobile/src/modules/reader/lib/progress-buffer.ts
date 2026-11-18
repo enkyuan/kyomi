@@ -83,6 +83,10 @@ export function createProgressBuffer(storage: AppStorage, now: () => number = Da
       entries.delete(articleId);
       write(entries);
     },
+    /** Forgets every pending write, for example when the account that made them signs out. */
+    clear() {
+      storage.remove(BUFFER_KEY);
+    },
     /** Pending writes, oldest first. */
     list(): BufferedProgress[] {
       return [...read().values()].sort((a, b) => a.bufferedAt - b.bufferedAt);
