@@ -24,7 +24,7 @@ import {
   runOpmlImportJob,
   runOpmlImportPrepareJob,
 } from "@modules/opml/jobs";
-import { serializeError } from "@shared/errors/serialize";
+import { errorMessage, serializeError } from "@shared/errors/serialize";
 import { makeDocumentJobs } from "./documents";
 import { INTERRUPTED_JOB_SETTLE_MS, shutdownWindows } from "./shutdown";
 import {
@@ -337,7 +337,7 @@ export const makeFailureReporter = Effect.gen(function* () {
       ...failureContext(message),
       errorClass: classification.code,
       retryable: classification.retryable,
-      error: error.message,
+      error: errorMessage(error),
       cause: serializeError(error.cause),
     };
     return classification.severity === "platform"

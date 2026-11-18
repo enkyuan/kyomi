@@ -19,7 +19,7 @@ import { AppLogger } from "@adapters/logger/service";
 import { DEFAULT_RETRY_BACKOFF, retryDelayMs, type RetryBackoff } from "./backoff";
 import { Redis, makeRedis, redisReplyCode } from "@adapters/redis/service";
 import { BadRequest, InternalError, RedisError, unexpected } from "@shared/effect/errors";
-import { serializeError } from "@shared/errors/serialize";
+import { errorMessage, serializeError } from "@shared/errors/serialize";
 
 export type StreamConsumer<E extends { readonly message: string }> = {
   /** Unique consumer name inside the group. */
@@ -75,8 +75,9 @@ const RECOVERY_BACKOFF = Schedule.min([
 
 const MAX_RECORDED_ERROR_LENGTH = 1_000;
 
+/** What is stored for a failed job: no bound query values, and a bounded length. */
 function failureText(error: { readonly message: string }): string {
-  return error.message.slice(0, MAX_RECORDED_ERROR_LENGTH);
+  return errorMessage(error).slice(0, MAX_RECORDED_ERROR_LENGTH);
 }
 
 /** The failure to report for a handler's `Cause`; `undefined` when it only holds interruptions. */

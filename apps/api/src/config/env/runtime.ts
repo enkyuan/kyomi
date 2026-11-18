@@ -1,4 +1,5 @@
 import { createEnv } from "@t3-oss/env-core";
+import { isBlockedOutboundHostname } from "@kyomi/ingest/lib/outbound";
 import z from "zod";
 
 const booleanFromEnv = z.preprocess((value) => {
@@ -101,6 +102,20 @@ export function findMissingFeatureCredentials(
 }
 
 const MIN_PRODUCTION_SECRET_LENGTH = 32;
+/** A secret made of a handful of distinct characters (`aaaa…`, `1234…`) is not random. */
+const MIN_PRODUCTION_SECRET_DISTINCT_CHARS = 10;
+
+const isPublicHttpsOrigin = (value: string) => {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" && !isBlockedOutboundHostname(url.hostname);
+  } catch {
+    return false;
+  }
+};
+
+const hasWeakShape = (secret: string) =>
+  new Set(secret).size < MIN_PRODUCTION_SECRET_DISTINCT_CHARS;
 
 /**
  * Settings that must be real values in production. A development server may run on a short
@@ -120,15 +135,30 @@ export function findWeakProductionSettings(value: {
       message: `BETTER_AUTH_SECRET must be at least ${MIN_PRODUCTION_SECRET_LENGTH} characters in production`,
     });
   }
+  if (
+    value.BETTER_AUTH_SECRET.length >= MIN_PRODUCTION_SECRET_LENGTH &&
+    hasWeakShape(value.BETTER_AUTH_SECRET)
+  ) {
+    issues.push({
+      key: "BETTER_AUTH_SECRET",
+      message: `BETTER_AUTH_SECRET must be random: at least ${MIN_PRODUCTION_SECRET_DISTINCT_CHARS} distinct characters`,
+    });
+  }
   if (!value.BETTER_AUTH_URL) {
     issues.push({
       key: "BETTER_AUTH_URL",
       message: "BETTER_AUTH_URL is required in production (it would default to http://localhost)",
     });
+  } else if (!isPublicHttpsOrigin(value.BETTER_AUTH_URL)) {
+    issues.push({
+      key: "BETTER_AUTH_URL",
+      message: "BETTER_AUTH_URL must be a public https:// origin in production",
+    });
   }
   if (
     value.FEED_ADMIN_SHARED_SECRET !== undefined &&
-    value.FEED_ADMIN_SHARED_SECRET.length < MIN_PRODUCTION_SECRET_LENGTH
+    (value.FEED_ADMIN_SHARED_SECRET.length < MIN_PRODUCTION_SECRET_LENGTH ||
+      hasWeakShape(value.FEED_ADMIN_SHARED_SECRET))
   ) {
     issues.push({
       key: "FEED_ADMIN_SHARED_SECRET",
@@ -144,12 +174,16 @@ export function findWeakProductionSettings(value: {
  * `env` below stays for code that has not moved to the Effect runtime yet.
  */
 export function loadEnv(source: RawEnv = process.env) {
-  const declaredNodeEnv = source.NODE_ENV?.trim();
-  // An unset NODE_ENV is development, but a value that is set and not one of the three (`prod`,
-  // `Production`) is a mistake that would otherwise start a production server with development
-  // defaults: OpenAPI docs on, localhost origins, the global refresh on.
+  // An unset or empty NODE_ENV is development. A value that is set and not exactly one of the
+  // three (`prod`, `Production`, ` production`, `production\r` from a CRLF .env) is a mistake that
+  // would start a production server with development defaults: OpenAPI docs on, localhost origins,
+  // the global refresh on. It is compared as written, not trimmed, because Better Auth reads the
+  // raw process environment and would disagree with a trimmed reading.
+  const declaredNodeEnv = source.NODE_ENV;
   if (declaredNodeEnv && !["development", "production", "test"].includes(declaredNodeEnv)) {
-    throw new Error(`NODE_ENV must be development, production or test (got "${declaredNodeEnv}")`);
+    throw new Error(
+      `NODE_ENV must be development, production or test (got ${JSON.stringify(declaredNodeEnv)})`,
+    );
   }
   const nodeEnv = (declaredNodeEnv || "development") as "development" | "production" | "test";
 

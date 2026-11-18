@@ -1,6 +1,7 @@
 import { Data } from "effect";
 import type { FeedRefreshFailureClass, FeedRefreshResult } from "@kyomi/ingest";
 import { ERROR_CATALOGUE, InternalError, isApiError, type ApiError } from "@shared/effect/errors";
+import { errorMessage } from "@shared/errors/serialize";
 
 /** A feed refresh that finished without a usable feed and is worth another attempt. */
 export class FeedRefreshFailed extends Data.TaggedError("FeedRefreshFailed")<{
@@ -32,7 +33,7 @@ export function toJobFailure(cause: unknown): JobFailure {
     return cause;
   }
   return new InternalError({
-    message: cause instanceof Error ? cause.message : "Job failed",
+    message: cause instanceof Error ? errorMessage(cause) : "Job failed",
     cause,
   });
 }

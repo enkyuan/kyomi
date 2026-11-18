@@ -20,7 +20,7 @@ const DRIVER_ERROR_KEYS = [
  * the message (`Failed query: <sql>\nparams: <values>`), and for this API those are one-time
  * codes, emails, session tokens and article bodies. The SQL, with its `$1` placeholders, stays.
  */
-export function errorMessage(error: Error): string {
+export function errorMessage(error: { readonly message: string }): string {
   const at = error.message.indexOf("\nparams: ");
   return error.message.startsWith("Failed query: ") && at >= 0
     ? error.message.slice(0, at)

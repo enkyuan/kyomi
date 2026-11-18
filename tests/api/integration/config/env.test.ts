@@ -162,7 +162,7 @@ describe("production settings", () => {
     REDIS_URL: "redis://127.0.0.1:6379",
     WEB_ORIGIN: "https://app.kyomi.example",
     BETTER_AUTH_URL: "https://api.kyomi.example",
-    BETTER_AUTH_SECRET: "a".repeat(48),
+    BETTER_AUTH_SECRET: "k9Zq!x7Lm2#Vb8Rt4Yw6Uc1Nd3Hf5Jg0Pa8Se",
   };
 
   test("accepts a complete production environment", () => {
@@ -170,7 +170,14 @@ describe("production settings", () => {
   });
 
   test("refuses a NODE_ENV that is set but not recognised, instead of running as development", () => {
-    for (const NODE_ENV of ["prod", "Production", "staging"]) {
+    for (const NODE_ENV of [
+      "prod",
+      "Production",
+      "staging",
+      " production",
+      "production ",
+      "production\r",
+    ]) {
       expect(() => loadEnv({ ...production, NODE_ENV })).toThrow("NODE_ENV must be");
     }
     expect(loadEnv({ ...production, NODE_ENV: undefined })).toMatchObject({
@@ -192,6 +199,24 @@ describe("production settings", () => {
       "BETTER_AUTH_SECRET",
       "BETTER_AUTH_URL",
     ]);
+  });
+
+  test("refuses a secret that is long but not random, and a base URL that is not public https", () => {
+    for (const BETTER_AUTH_SECRET of ["a".repeat(48), "1234".repeat(12)]) {
+      expect(() => loadEnv({ ...production, BETTER_AUTH_SECRET })).toThrow(
+        "Invalid environment variables",
+      );
+    }
+    for (const BETTER_AUTH_URL of [
+      "http://api.kyomi.example",
+      "https://localhost:8000",
+      "https://redis",
+      "not a url",
+    ]) {
+      expect(() => loadEnv({ ...production, BETTER_AUTH_URL })).toThrow(
+        "Invalid environment variables",
+      );
+    }
   });
 
   test("development and test keep their short secrets", () => {

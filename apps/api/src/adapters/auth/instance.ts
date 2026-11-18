@@ -41,6 +41,15 @@ export function createAuth({ config, db, sendOtp }: AuthOptions) {
     advanced: {
       useSecureCookies: shouldUseSecureCookies(baseURL),
     },
+    // Better Auth decides this from the raw process environment, which can disagree with the
+    // validated one (it compares `NODE_ENV` exactly); follow the configuration this API booted with.
+    rateLimit: { enabled: config.NODE_ENV === "production" },
+    // When a query fails, Better Auth and its router log the drizzle error, whose message carries
+    // the bound values: the one-time code and email of a sign-in, or a session token. Errors are
+    // rethrown to this API's handler instead, which logs them through `errorMessage` without the
+    // values, and Better Auth's own logger is off. Responses (4xx included) are unchanged.
+    onAPIError: { throw: true },
+    logger: { disabled: true },
     databaseHooks: {
       session: {
         create: {
