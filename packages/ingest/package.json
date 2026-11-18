@@ -6,6 +6,7 @@
     ".": "./src/index.ts",
     "./queue": "./src/services/queue/index.ts",
     "./document": "./src/document/index.ts",
+    "./document/structure-budget": "./src/document/structure-budget.ts",
     "./enrichment": "./src/enrichment/index.ts",
     "./ingestion": "./src/services/feed/index.ts",
     "./favicon": "./src/services/favicon/index.ts",

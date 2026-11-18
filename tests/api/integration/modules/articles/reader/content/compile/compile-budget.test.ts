@@ -1,5 +1,9 @@
 import { describe, expect, test } from "bun:test";
 import { compileArticleDocument, compileArticleHtml } from "@kyomi/ingest/document";
+import {
+  highlightCode,
+  MAX_DOCUMENT_HIGHLIGHT_MS,
+} from "../../../../../../../../packages/ingest/src/document/highlighter";
 
 /**
  * The compiler runs on the API thread for a signed-in user's clip and in the feed worker for a
@@ -161,5 +165,192 @@ describe("structure budget", () => {
     const voids = `<p>${"line<br>".repeat(5_000)}${'<img src="https://example.com/a.png">'.repeat(2_000)}</p>`;
     expect(compile(voids)).toContain("<br>");
     expect(compile(voids)).toContain("<img");
+  });
+});
+
+describe("tokenizing time is bounded, not only characters", () => {
+  /** The C# grammar takes about a second on one line of repeated `<a `, and stays there. */
+  const hostileLine = "&lt;a ".repeat(32);
+  const csharp = (lines: number) =>
+    `<pre><code class="language-csharp">${Array.from({ length: lines }, () => hostileLine).join("\n")}</code></pre>`;
+
+  test("a block of lines that make the grammar backtrack stops colouring and stays fast", async () => {
+    const started = performance.now();
+    const { document } = await compileArticleDocument({
+      body: csharp(12),
+      origin: "feed_html",
+      baseUrl: BASE,
+    });
+    const elapsed = performance.now() - started;
+
+    const [block] = codeBlocks(document as { blocks: Block[] } | null);
+    expect(block).toBeDefined();
+    expect(block?.highlight).toBeUndefined();
+    // Twelve lines took fourteen seconds, a second each; now one line is paid for and no more.
+    expect(elapsed).toBeLessThan(6_000);
+  });
+
+  test("the same bound holds across blocks, so many hostile blocks cost about one", async () => {
+    const started = performance.now();
+    await compileArticleDocument({
+      body: Array.from({ length: 8 }, () => csharp(3)).join(""),
+      origin: "feed_html",
+      baseUrl: BASE,
+    });
+
+    expect(performance.now() - started).toBeLessThan(6_000);
+  });
+
+  test("a spent clock declines a block, an unspent one colours it and is charged", async () => {
+    const value = Array.from({ length: 50 }, (_, line) => `const v${line} = ${line};`).join("\n");
+
+    expect(await highlightCode(value, "javascript", { remainingMs: 0 })).toBeNull();
+    const clock = { remainingMs: MAX_DOCUMENT_HIGHLIGHT_MS };
+    expect(await highlightCode(value, "javascript", clock)).not.toBeNull();
+    expect(clock.remainingMs).toBeLessThan(MAX_DOCUMENT_HIGHLIGHT_MS);
+    expect(clock.remainingMs).toBeGreaterThan(0);
+  });
+
+  test("tokenizing line by line gives the tokens of one pass, state included", async () => {
+    // A block comment and a template literal each carry their state across lines.
+    const value = "/* one\n two\n three */ const a = `x\n y\n z`;\nconst b = 2;";
+    const highlight = await highlightCode(value, "javascript");
+
+    expect(highlight).not.toBeNull();
+    const styleOf = (text: string) =>
+      highlight?.lines.flat().find(([content]) => content.includes(text))?.[1];
+    expect(styleOf("two")).toBe(styleOf("/* one"));
+    expect(styleOf("three")).toBe(styleOf("/* one"));
+    expect(styleOf(" y")).toBe(styleOf("`x"));
+    expect(styleOf("const")).not.toBe(styleOf("/* one"));
+  });
+
+  test("a block with a carriage return is still declined", async () => {
+    expect(await highlightCode("const a = 1;\r\nconst b = 2;", "javascript")).toBeNull();
+  });
+});
+
+describe("the code pass scales with blocks", () => {
+  test("tens of thousands of fenced blocks are not compared with each other", async () => {
+    const started = performance.now();
+    const { document } = await compileArticleDocument({
+      body: "```\n".repeat(60_000),
+      format: "markdown",
+      origin: "feed_markdown",
+      baseUrl: BASE,
+    });
+    const elapsed = performance.now() - started;
+
+    expect(document).not.toBeNull();
+    // This took seven seconds, quadratic in the number of blocks.
+    expect(elapsed).toBeLessThan(2_500);
+  });
+
+  test("only a bounded number of unhinted blocks go to the language model", async () => {
+    const snippet = (index: number) =>
+      `public async Task&lt;List&lt;Flag${index}&gt;&gt; GetFlagsAsync(string key)\n{\n    var cache = new Cache();\n    var flags = await cache.GetAsync(key);\n    return flags;\n}\n`;
+    const { document } = await compileArticleDocument({
+      body: Array.from(
+        { length: 100 },
+        (_, index) => `<pre><code>${snippet(index)}</code></pre>`,
+      ).join(""),
+      origin: "feed_html",
+      baseUrl: BASE,
+    });
+
+    const blocks = codeBlocks(document as { blocks: Block[] } | null);
+    expect(blocks).toHaveLength(100);
+    const coloured = blocks.filter((block) => block.highlight).length;
+    // The first ones are recognised, as they are one by one; the rest stay plain.
+    expect(coloured).toBeGreaterThan(0);
+    expect(coloured).toBeLessThanOrEqual(64);
+  });
+});
+
+describe("raw HTML in Markdown", () => {
+  const compile = (body: string) =>
+    compileArticleDocument({ body, format: "markdown", origin: "feed_markdown", baseUrl: BASE });
+
+  test.each([
+    ["html blocks", "<div>a</div>\n\n".repeat(18_000)],
+    ["inline html", "a <b>b</b> c\n\n".repeat(20_000)],
+    ["unclosed blocks", "<div>\n\n".repeat(40_000)],
+  ])("%s past the fragment budget build no document and stay fast", async (_name, body) => {
+    const started = performance.now();
+    const compiled = await compile(body);
+    const elapsed = performance.now() - started;
+
+    expect(compiled.document).toBeNull();
+    expect(compiled.diagnostics.warnings).toContain("source-too-complex");
+    expect(elapsed).toBeLessThan(3_000);
+  });
+
+  test("the sanitized HTML of such a body is still served", async () => {
+    const compiled = await compile("<div>a</div>\n\n".repeat(18_000));
+
+    expect(compiled.html).toContain("<div>a</div>");
+  });
+
+  test("fragments that are few and large are bounded by their size", async () => {
+    const compiled = await compile(`<div>${"word ".repeat(2_000)}</div>\n\n`.repeat(100));
+
+    expect(compiled.document).toBeNull();
+    expect(compiled.diagnostics.warnings).toContain("source-too-complex");
+  });
+
+  test("an article with hundreds of fragments still gets its document", async () => {
+    const body =
+      '<p align="center"><img src="https://example.com/a.png"></p>\n\ntext **bold**\n\n'.repeat(
+        200,
+      );
+    const compiled = await compile(body);
+
+    expect(compiled.document).not.toBeNull();
+    expect(compiled.diagnostics.warnings).not.toContain("source-too-complex");
+    expect(JSON.stringify(compiled.document)).toContain("bold");
+  });
+});
+
+describe("math delimiters", () => {
+  const compile = (body: string) =>
+    compileArticleDocument({ body, origin: "feed_html", baseUrl: BASE });
+  const paragraphs = (text: string, count = 13) => `<p>${text}</p>`.repeat(count);
+
+  test.each([
+    ["unclosed \\[", "\\[".repeat(10_000)],
+    ["unclosed \\(", "\\(".repeat(10_000)],
+    ["a closed one, then unclosed \\[", `\\[x\\]${"\\[".repeat(9_997)}`],
+    ["an empty one, then unclosed \\[", `\\[\\]${"\\[".repeat(9_998)}`],
+    ["unclosed environments", "\\begin{equation}".repeat(1_200)],
+    ["an environment closed by a lookalike", `${"\\begin{equation}".repeat(1_200)}\\end{equation`],
+  ])("%s do not make the scan quadratic", async (_name, text) => {
+    const started = performance.now();
+    const { document } = await compile(paragraphs(text));
+    const elapsed = performance.now() - started;
+
+    expect(document).not.toBeNull();
+    // Thirteen text nodes of twenty thousand characters took two to three seconds.
+    expect(elapsed).toBeLessThan(1_200);
+  });
+
+  test("math is still found around openers nothing closes", async () => {
+    const { document } = await compile(
+      "<p>an unclosed \\[ here, then \\(x+1\\) and \\begin{align} a=b \\end{align} and $$y^2$$ done \\(</p>",
+    );
+
+    const text = JSON.stringify(document);
+    expect(text).toContain('"tex":"x+1"');
+    expect(text).toContain("y^2");
+    expect(text).toContain("a=b");
+  });
+
+  test("ordinary delimiters render as before", async () => {
+    const { document } = await compile(
+      "<p>Let \\(x^2 + y^2 = z^2\\) and $a+b$; then \\[ \\int_0^1 x\\,dx = \\tfrac12 \\]</p>",
+    );
+
+    const text = JSON.stringify(document);
+    expect(text).toContain("x^2 + y^2 = z^2");
+    expect(text).toContain('"type":"math"');
   });
 });

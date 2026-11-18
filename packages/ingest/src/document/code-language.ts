@@ -41,6 +41,10 @@ const INTERPRETERS: Record<string, string> = {
   pwsh: "powershell",
 };
 
+/** Own keys only: `table["constructor"]` is a function, and the hints and filenames are publisher text. */
+const own = (table: Readonly<Record<string, string>>, key: string): string | undefined =>
+  Object.hasOwn(table, key) ? table[key] : undefined;
+
 const byKey = new Map<string, CodeLanguage>();
 for (const info of bundledLanguagesInfo) {
   const language = { id: info.id, label: info.name };
@@ -71,7 +75,7 @@ function fromHint(hint: string): CodeLanguage | null {
 
 export function languageFromFilename(filename: string): CodeLanguage | null {
   const base = filename.split(/[\\/]/).pop()?.toLowerCase() ?? "";
-  const whole = FILENAME_LANGUAGES[base];
+  const whole = own(FILENAME_LANGUAGES, base);
   if (whole) {
     return lookupLanguage(whole);
   }
@@ -79,7 +83,7 @@ export function languageFromFilename(filename: string): CodeLanguage | null {
   if (!extension) {
     return null;
   }
-  return lookupLanguage(EXTENSION_ALIASES[extension] ?? extension);
+  return lookupLanguage(own(EXTENSION_ALIASES, extension) ?? extension);
 }
 
 /** `#!/usr/bin/env python3`, `#!/bin/bash`, then vim and emacs modelines in the first lines. */
@@ -88,7 +92,7 @@ export function languageFromContent(value: string): CodeLanguage | null {
   const shebang = head[0]?.match(/^#!\s*(?:\/usr\/bin\/env\s+(?:-\S+\s+)*|\S*\/)([\w.+-]+)/);
   if (shebang?.[1]) {
     const interpreter = shebang[1].toLowerCase().replace(/[\d.]+$/, "");
-    return lookupLanguage(INTERPRETERS[interpreter] ?? interpreter);
+    return lookupLanguage(own(INTERPRETERS, interpreter) ?? interpreter);
   }
   for (const line of head) {
     const modeline =

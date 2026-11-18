@@ -1,5 +1,10 @@
 import { bundledLanguages, bundledThemes, createOnigurumaEngine } from "shiki";
-import { createHighlighterCore, type HighlighterCore } from "shiki/core";
+import {
+  createHighlighterCore,
+  type GrammarState,
+  type HighlighterCore,
+  type ThemedToken,
+} from "shiki/core";
 
 /** Pinned with the dependency version so stored tokens say which engine produced them. */
 export const HIGHLIGHT_ENGINE = "shiki@4.5.0:github-light/github-dark";
@@ -17,9 +22,26 @@ export const MAX_HIGHLIGHT_LINE_CHARS = 300;
 /**
  * Characters a whole document may spend on highlighting. The per-block caps above still allow many
  * blocks, so without this one article could hold the CPU for minutes. A counter, not a timer, so
- * the stored tokens never depend on machine load.
+ * the stored tokens of ordinary code never depend on machine load.
  */
 export const MAX_DOCUMENT_HIGHLIGHT_CHARS = 30_000;
+/**
+ * Milliseconds a whole document may spend inside the tokenizer. Characters cannot bound it: some
+ * grammars take time exponential in the length of a line made of repeated openers (`<a ` x 24 in C#,
+ * Markdown, Svelte, ERB and a dozen more costs a second a line at 72 characters and stays there up
+ * to the line cap), and a regex search cannot be interrupted. So lines are tokenized one at a time
+ * and a document whose lines have used this up stops colouring, which bounds it to this plus the
+ * one line in flight. Ordinary code tokenizes at a few thousand lines per 10 ms, so it never
+ * reaches it, even on a machine many times slower.
+ */
+export const MAX_DOCUMENT_HIGHLIGHT_MS = 500;
+/** What is left of {@link MAX_DOCUMENT_HIGHLIGHT_MS}; one object is shared by a document's blocks. */
+export type HighlightClock = { remainingMs: number };
+/**
+ * A line still being tokenized after this long is cut off where the tokenizer is, and the rest of
+ * it is plain. Real lines take microseconds.
+ */
+const LINE_TIME_LIMIT_MS = 100;
 
 type Style = { light?: string; dark?: string; fontStyle?: number };
 export type CodeHighlight = {
@@ -104,17 +126,22 @@ function fontStyleOf(style: Record<string, string>): number {
 
 /**
  * Dual-theme tokens for `value`, or null when the language is not bundled, the input exceeds the
- * size cap, or the engine fails. Style index 0 is always the unstyled default.
+ * size cap, the document's tokenizing time is spent (`clock`), or the engine fails. Style index 0
+ * is always the unstyled default.
  */
 export async function highlightCode(
   value: string,
   language: string,
+  clock?: HighlightClock,
 ): Promise<CodeHighlight | null> {
   if (value.length > MAX_HIGHLIGHT_CHARS || !isHighlightableLanguage(language)) {
     return null;
   }
   const sourceLines = value.split("\n");
   if (
+    // Shiki splits on CR as well and drops it, which would change the code the renderer rebuilds
+    // from the tokens; HTML parsing already normalizes line endings, so compiled values never have one.
+    value.includes("\r") ||
     sourceLines.length > MAX_HIGHLIGHT_LINES ||
     sourceLines.some((line) => line.length > MAX_HIGHLIGHT_LINE_CHARS)
   ) {
@@ -125,11 +152,28 @@ export async function highlightCode(
     if (!(await ensureLanguage(engine, language))) {
       return null;
     }
-    const { tokens } = engine.codeToTokens(value, {
-      lang: language,
-      themes: { light: "github-light", dark: "github-dark" },
-      defaultColor: false,
-    });
+    // One line per call, each continuing from the state the last one ended in: the tokens are the
+    // ones a single call gives, and the clock can stop the block between lines.
+    const tokens: ThemedToken[][] = [];
+    let state: GrammarState | undefined;
+    for (const line of sourceLines) {
+      if (clock && clock.remainingMs <= 0) {
+        return null;
+      }
+      const started = performance.now();
+      const result = engine.codeToTokens(line, {
+        lang: language,
+        themes: { light: "github-light", dark: "github-dark" },
+        defaultColor: false,
+        tokenizeTimeLimit: LINE_TIME_LIMIT_MS,
+        ...(state ? { grammarState: state } : {}),
+      });
+      if (clock) {
+        clock.remainingMs -= performance.now() - started;
+      }
+      tokens.push(...result.tokens);
+      state = result.grammarState;
+    }
     const styles: Style[] = [{}];
     const index = new Map<string, number>();
     const lines = tokens.map((line) =>
@@ -155,9 +199,7 @@ export async function highlightCode(
         return [token.content, position];
       }),
     );
-    // The renderer rebuilds the code from these tokens, so a mismatch would corrupt it. Shiki splits
-    // on CRLF and drops the CR; such a block stays plain rather than being coloured with a changed
-    // value (HTML parsing already normalizes line endings, so compiled values never carry one).
+    // The renderer rebuilds the code from these tokens, so a mismatch would corrupt it.
     if (lines.map((line) => line.map(([text]) => text).join("")).join("\n") !== value) {
       return null;
     }
