@@ -48,7 +48,13 @@ describe("resolveRemoteFeed", () => {
   });
 
   test("rejects an empty or non-http URL as invalid", async () => {
-    for (const url of ["   ", "ftp://example.com/feed.xml", "not a url"]) {
+    for (const url of [
+      "   ",
+      "ftp://example.com/feed.xml",
+      "not a url",
+      // The stored feed URL is shared with, and searchable by, every account.
+      "https://reader:s3cret@example.com/feed.xml",
+    ]) {
       const { effect, requested } = resolveWith(() => new Error("must not be called"), url);
       expect(await failsWith(effect)).toMatchObject({
         _tag: "BadRequest",

@@ -362,4 +362,52 @@ const x = 1;
     expect(parsed.metadata.categoryLabels).toEqual([]);
     expect(parsed.items[0]?.categoryLabels).toEqual([]);
   });
+
+  describe("item links", () => {
+    const FEED_URL = "https://example.com/feed.xml";
+    const rss = (link: string) => `<?xml version="1.0"?>
+      <rss version="2.0"><channel><title>T</title><link>https://example.com/</link>
+        <item><title>A</title><link>${link}</link><guid>g-1</guid><description>d</description></item>
+      </channel></rss>`;
+    const atom = (href: string) => `<?xml version="1.0"?>
+      <feed xmlns="http://www.w3.org/2005/Atom"><title>T</title><id>x</id>
+        <entry><title>A</title><id>e-1</id><link rel="alternate" href="${href}"/><summary>s</summary></entry>
+      </feed>`;
+    const jsonFeed = (url: string) =>
+      JSON.stringify({
+        version: "https://jsonfeed.org/version/1.1",
+        title: "T",
+        items: [{ id: "1", url, content_text: "x" }],
+      });
+
+    const links = (body: string) =>
+      parseFeedDocument(body, "feed-1", FEED_URL).items.map((item) => item.link);
+
+    test.each([
+      "javascript:alert(document.domain)",
+      "data:text/html,<script>alert(1)</script>",
+      "vbscript:x",
+      "file:///etc/passwd",
+      "intent://x#Intent;end",
+    ])("does not keep a %s link a client would open", (hostile) => {
+      for (const body of [
+        rss(hostile.replaceAll("<", "&lt;")),
+        atom(hostile.replaceAll("<", "&lt;")),
+        jsonFeed(hostile),
+      ]) {
+        const [link] = links(body);
+        expect(link).toMatch(/^https:\/\/example\.com\/feed\.xml#(item|entry)-1$/);
+      }
+    });
+
+    test("keeps absolute and feed-relative http(s) links as the feed wrote them", () => {
+      expect(links(rss("https://example.com/posts/a"))).toEqual(["https://example.com/posts/a"]);
+      expect(links(rss("http://example.com/posts/a"))).toEqual(["http://example.com/posts/a"]);
+      expect(links(rss("/posts/a"))).toEqual(["/posts/a"]);
+      expect(links(atom("https://example.com/posts/b"))).toEqual(["https://example.com/posts/b"]);
+      expect(links(jsonFeed("https://example.com/posts/c"))).toEqual([
+        "https://example.com/posts/c",
+      ]);
+    });
+  });
 });

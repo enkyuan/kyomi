@@ -147,6 +147,16 @@ function absoluteHttpUrl(candidate: string | null, baseUrl: string): string | nu
   }
 }
 
+/**
+ * An item's link as the feed wrote it, when it is an http(s) URL (absolute, or relative to the
+ * feed), and `fallback` when it is anything else. A feed can put `javascript:`, `data:` or an app
+ * scheme in a link, and clients open that link; kept as written, not made absolute, so the item
+ * identity derived from it does not change for feeds that already worked.
+ */
+function httpItemLink(candidate: string, finalUrl: string, fallback: string): string {
+  return absoluteHttpUrl(candidate, finalUrl) === null ? fallback : candidate;
+}
+
 function xmlText(value: unknown): string {
   if (typeof value === "string") {
     return stripTags(value).trim();
@@ -355,10 +365,14 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       (typeof record.title === "string" && stripTags(record.title)) || `Untitled item ${index + 1}`,
       ITEM_TITLE_MAX_CHARS,
     );
-    const itemLink =
+    const fallbackLink = `${finalUrl}#item-${index + 1}`;
+    const itemLink = httpItemLink(
       (typeof record.url === "string" && record.url.trim()) ||
-      (typeof record.external_url === "string" && record.external_url.trim()) ||
-      `${finalUrl}#item-${index + 1}`;
+        (typeof record.external_url === "string" && record.external_url.trim()) ||
+        fallbackLink,
+      finalUrl,
+      fallbackLink,
+    );
     const canonicalUrl = normalizeArticleUrl(itemLink);
     const stableIdentity = (typeof record.id === "string" && record.id.trim()) || canonicalUrl;
     const contentHtml =
@@ -427,9 +441,11 @@ function parseRssDocument(
       xmlText(record.title) || `Untitled item ${index + 1}`,
       ITEM_TITLE_MAX_CHARS,
     );
-    const itemLink = pickRssLink(
-      record.link,
-      rawText(record.guid) ?? `${finalUrl}#item-${index + 1}`,
+    const fallbackLink = `${finalUrl}#item-${index + 1}`;
+    const itemLink = httpItemLink(
+      pickRssLink(record.link, rawText(record.guid) ?? fallbackLink),
+      finalUrl,
+      fallbackLink,
     );
     const canonicalUrl = normalizeArticleUrl(itemLink);
     const stableIdentity = rawText(record.guid) ?? canonicalUrl;
@@ -498,7 +514,8 @@ function parseAtomDocument(
       xmlText(record.title) || `Untitled item ${index + 1}`,
       ITEM_TITLE_MAX_CHARS,
     );
-    const itemLink = pickAtomLink(record.link, `${finalUrl}#entry-${index + 1}`);
+    const fallbackLink = `${finalUrl}#entry-${index + 1}`;
+    const itemLink = httpItemLink(pickAtomLink(record.link, fallbackLink), finalUrl, fallbackLink);
     const canonicalUrl = normalizeArticleUrl(itemLink);
     const stableIdentity = rawText(record.id) ?? canonicalUrl;
     const rawCandidate = rawText(record.content) ?? rawText(record.summary);
