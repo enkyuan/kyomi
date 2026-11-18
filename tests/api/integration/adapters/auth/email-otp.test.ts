@@ -64,12 +64,22 @@ function createTestAuth() {
       .join("; ");
   }
 
+  /** The code from the CURRENT mailbox that a change of address must present. */
+  async function currentMailboxCode(cookie: string, email: string) {
+    const { message } = await nextMessage(() =>
+      post("/email-otp/send-verification-otp", { email, type: "email-verification" }, cookie),
+    );
+    expect(message).toMatchObject({ to: email, purpose: "verify-current-email" });
+    return message!.otp;
+  }
+
   return {
     db,
     outbox,
     post,
     signIn,
     nextMessage,
+    currentMailboxCode,
     userEmails: () => db.user.map((row) => row.email),
   };
 }
@@ -90,12 +100,50 @@ describe("changing the account email", () => {
     expect(userEmails()).toEqual([OWNER]);
   });
 
-  test("the confirmation code goes to the new address, so it proves the address is theirs", async () => {
-    const { outbox, nextMessage, post, signIn } = createTestAuth();
+  test("a session alone cannot start the change: the current mailbox must confirm it first", async () => {
+    const { outbox, post, signIn, userEmails } = createTestAuth();
     const cookie = await signIn(OWNER);
+    const sentBefore = outbox.length;
+
+    const withoutCode = await post("/email-otp/request-email-change", { newEmail: NEW }, cookie);
+    const wrongCode = await post(
+      "/email-otp/request-email-change",
+      { newEmail: NEW, otp: "000000" },
+      cookie,
+    );
+    await Bun.sleep(100);
+
+    expect(withoutCode.status).toBe(400);
+    expect(wrongCode.status).toBe(400);
+    // Nothing went to the address the attacker named, and the account is unchanged.
+    expect(outbox).toHaveLength(sentBefore);
+    expect(userEmails()).toEqual([OWNER]);
+  });
+
+  test("a code from the current mailbox cannot be used for a different purpose", async () => {
+    const { post, signIn, nextMessage } = createTestAuth();
+    const cookie = await signIn(OWNER);
+    const { message } = await nextMessage(() =>
+      post("/email-otp/send-verification-otp", { email: OWNER, type: "sign-in" }, cookie),
+    );
+
+    // A sign-in code is not a confirmation code.
+    const response = await post(
+      "/email-otp/request-email-change",
+      { newEmail: NEW, otp: message!.otp },
+      cookie,
+    );
+
+    expect(response.status).toBe(400);
+  });
+
+  test("the confirmation code goes to the new address, so it proves the address is theirs", async () => {
+    const { outbox, currentMailboxCode, nextMessage, post, signIn } = createTestAuth();
+    const cookie = await signIn(OWNER);
+    const current = await currentMailboxCode(cookie, OWNER);
 
     const { response, message } = await nextMessage(() =>
-      post("/email-otp/request-email-change", { newEmail: NEW }, cookie),
+      post("/email-otp/request-email-change", { newEmail: NEW, otp: current }, cookie),
     );
 
     expect(response.status).toBe(200);
@@ -106,10 +154,11 @@ describe("changing the account email", () => {
   });
 
   test("a wrong code leaves the address alone, and the right one changes it and verifies it", async () => {
-    const { db, nextMessage, post, signIn, userEmails } = createTestAuth();
+    const { db, currentMailboxCode, nextMessage, post, signIn, userEmails } = createTestAuth();
     const cookie = await signIn(OWNER);
+    const current = await currentMailboxCode(cookie, OWNER);
     const requested = await nextMessage(() =>
-      post("/email-otp/request-email-change", { newEmail: NEW }, cookie),
+      post("/email-otp/request-email-change", { newEmail: NEW, otp: current }, cookie),
     );
     const otp = requested.message!.otp;
 
@@ -129,14 +178,15 @@ describe("changing the account email", () => {
   });
 
   test("asking for an address another account holds sends nothing and does not say so", async () => {
-    const { outbox, post, signIn, userEmails } = createTestAuth();
+    const { outbox, currentMailboxCode, post, signIn, userEmails } = createTestAuth();
     await signIn("taken@example.com");
     const cookie = await signIn(OWNER);
+    const current = await currentMailboxCode(cookie, OWNER);
     const sentBefore = outbox.length;
 
     const response = await post(
       "/email-otp/request-email-change",
-      { newEmail: "taken@example.com" },
+      { newEmail: "taken@example.com", otp: current },
       cookie,
     );
     // A message, if one were going to be sent, is sent in the background.

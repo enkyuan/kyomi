@@ -9,12 +9,16 @@ export type EmailOTPMessage = {
   to: string;
   otp: string;
   /** What the code is for; a code that confirms a new address is worded differently. */
-  purpose?: "sign-in" | "change-email";
+  purpose?: "sign-in" | "change-email" | "verify-current-email";
 };
 
 const WORDING = {
   "sign-in": { subject: "Your Kyomi sign-in code", noun: "sign-in code" },
   "change-email": { subject: "Confirm your new Kyomi email", noun: "confirmation code" },
+  "verify-current-email": {
+    subject: "Confirm your Kyomi email change",
+    noun: "confirmation code",
+  },
 } as const;
 
 export function createEmailOTPBody({ otp, purpose = "sign-in" }: EmailOTPMessage) {
