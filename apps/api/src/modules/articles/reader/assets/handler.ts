@@ -1,6 +1,7 @@
 import { Data, Effect, Stream } from "effect";
 import type { HttpClientResponse } from "effect/http";
 import { AppLogger } from "@adapters/logger/service";
+import { makeLoadShedder } from "@shared/http/shed";
 import { assertHttpOrHttpsUrl } from "@shared/net/http";
 import { safeFetch, type SafeFetchError } from "@shared/net/safe-fetch";
 
@@ -164,6 +165,10 @@ export const loadReaderImage = Effect.fn("reader.image.load")(function* (rawUrl:
   );
 });
 
+/** Image fetches that may be open at once, each up to 8 MiB and 8 s; the route is public. */
+const READER_IMAGE_MAX_IN_FLIGHT = 16;
+const shedReaderImages = makeLoadShedder("reader-image", READER_IMAGE_MAX_IN_FLIGHT);
+
 /**
  * Serves a bounded, SSRF-protected remote image for the Expo DOM reader.
  * The public publisher URL remains the source of truth; no image content is persisted here.
@@ -171,7 +176,7 @@ export const loadReaderImage = Effect.fn("reader.image.load")(function* (rawUrl:
 export const serveReaderImage = Effect.fn("reader.image.serve")(function* (requestUrl: string) {
   const log = yield* AppLogger;
   const rawUrl = new URL(requestUrl).searchParams.get("url");
-  return yield* loadReaderImage(rawUrl).pipe(
+  return yield* shedReaderImages(loadReaderImage(rawUrl)).pipe(
     Effect.map(
       ({ contentType, bytes }) =>
         new Response(bytes, { status: 200, headers: imageHitHeaders(contentType) }),

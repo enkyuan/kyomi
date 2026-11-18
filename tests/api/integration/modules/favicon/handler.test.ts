@@ -128,6 +128,66 @@ describe("favicon request handler", () => {
     expect(response.headers.get("content-type")).toBe("image/x-icon");
   });
 
+  test("never serves a content type the upstream picked unless it is an image", async () => {
+    for (const declared of [
+      "text/html; charset=utf-8",
+      "application/octet-stream",
+      "text/x-icon",
+    ]) {
+      const { layer } = scriptedResolver({
+        resolveHost: [hit()],
+        fetchImage: () =>
+          new Response("<script>alert(1)</script>", { headers: { "content-type": declared } }),
+      });
+
+      const response = await handle(layer, new MemoryFaviconHostStore(), ORIGIN);
+
+      expect(response.headers.get("content-type")).toBe("image/x-icon");
+    }
+  });
+
+  test("sandboxes every favicon so a scriptable image opened as a document cannot run", async () => {
+    const { layer } = scriptedResolver({
+      resolveHost: [hit()],
+      fetchImage: () =>
+        new Response("<svg xmlns='http://www.w3.org/2000/svg'><script>alert(1)</script></svg>", {
+          headers: { "content-type": "image/svg+xml" },
+        }),
+    });
+
+    const response = await handle(layer, new MemoryFaviconHostStore(), ORIGIN);
+
+    expect(response.headers.get("content-type")).toBe("image/svg+xml");
+    expect(response.headers.get("x-content-type-options")).toBe("nosniff");
+    expect(response.headers.get("content-security-policy")).toContain("sandbox");
+    expect(response.headers.get("content-security-policy")).toContain("default-src 'none'");
+  });
+
+  test("stops reading an oversized body that declares no length", async () => {
+    let pulls = 0;
+    let cancelled = false;
+    const chunk = new Uint8Array(40 * 1024);
+    const body = new ReadableStream<Uint8Array>({
+      pull(controller) {
+        pulls += 1;
+        controller.enqueue(chunk);
+      },
+      cancel() {
+        cancelled = true;
+      },
+    });
+    const { layer } = scriptedResolver({
+      resolveHost: [hit()],
+      fetchImage: () => new Response(body, { headers: { "content-type": "image/png" } }),
+    });
+
+    const response = await handle(layer, new MemoryFaviconHostStore(), ORIGIN);
+
+    expect(response.status).toBe(404);
+    expect(cancelled).toBe(true);
+    expect(pulls).toBeLessThanOrEqual(4);
+  });
+
   test("a cached miss answers 404 with the short miss cache and fetches nothing", async () => {
     const { layer, resolveCalls, fetchCalls } = scriptedResolver({ resolveHost: [miss] });
 

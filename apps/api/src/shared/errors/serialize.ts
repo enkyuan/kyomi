@@ -16,6 +16,18 @@ const DRIVER_ERROR_KEYS = [
 ] as const;
 
 /**
+ * An error's message with the bound values of a failed query taken out. drizzle writes them into
+ * the message (`Failed query: <sql>\nparams: <values>`), and for this API those are one-time
+ * codes, emails, session tokens and article bodies. The SQL, with its `$1` placeholders, stays.
+ */
+export function errorMessage(error: Error): string {
+  const at = error.message.indexOf("\nparams: ");
+  return error.message.startsWith("Failed query: ") && at >= 0
+    ? error.message.slice(0, at)
+    : error.message;
+}
+
+/**
  * Recursively serializes an unknown error into a plain, JSON-safe object suitable for
  * structured logging. Unlike the lossy `error.message` shorthand used elsewhere, this
  * function unwraps the entire `cause` chain so the root cause — the actual PostgreSQL
@@ -38,7 +50,7 @@ export function serializeError(error: unknown): Record<string, unknown> | string
 
   const result: Record<string, unknown> = {
     name: error.name,
-    message: error.message,
+    message: errorMessage(error),
   };
 
   // Unwrap the cause chain recursively. This is the critical difference from the

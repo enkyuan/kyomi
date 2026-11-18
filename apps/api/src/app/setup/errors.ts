@@ -3,7 +3,7 @@ import type { Elysia } from "elysia";
 import { ValidationError } from "elysia";
 import { AppLogger } from "@adapters/logger/service";
 import { AppConfig } from "@config/env/service";
-import { serializeError } from "@shared/errors/serialize";
+import { errorMessage, serializeError } from "@shared/errors/serialize";
 import { describeError } from "@shared/http/error/render";
 import { shapeErrorResponse } from "@shared/http/error/shape";
 import { getRequestIdFromHeaders } from "@shared/http/request-id/headers";
@@ -66,7 +66,7 @@ export function registerErrorHandlers(
       path: new URL(request.url).pathname,
       method: request.method,
       requestId,
-      error: error instanceof Error ? error.message : "Unknown error",
+      error: error instanceof Error ? errorMessage(error) : "Unknown error",
       errorCode: rendered.expected ? rendered.code : undefined,
       errorDetails: rendered.details,
       cause: rendered.expected ? undefined : serializeError(rendered.cause),

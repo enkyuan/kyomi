@@ -8,6 +8,7 @@ import {
 import { Db, type Database } from "@adapters/db/service";
 import { InvalidArguments } from "@modules/catalog/errors";
 import { valueAfter } from "@shared/cli/args";
+import { errorMessage } from "@shared/errors/serialize";
 import { AppLive } from "../runtime";
 import { runMain } from "../setup/main";
 import { ensureDatabaseReady } from "../setup/ready";
@@ -104,7 +105,7 @@ export function processSanitizerVersionRow(input: {
     return {
       skipped: false,
       failed: true,
-      error: error instanceof Error ? error.message : String(error),
+      error: error instanceof Error ? errorMessage(error) : String(error),
     };
   }
 }

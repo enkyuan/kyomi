@@ -6,6 +6,7 @@ import {
 } from "@kyomi/ingest/favicon";
 import { Db } from "@adapters/db/service";
 import { DatabaseError, unexpected } from "@shared/effect/errors";
+import { makeLoadShedder } from "@shared/http/shed";
 import { FaviconResolver } from "./service";
 
 const FAVICON_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7;
@@ -13,12 +14,56 @@ const FAVICON_CACHE_STALE_SECONDS = 60 * 60 * 24 * 30;
 const FAVICON_MISS_CACHE_MAX_AGE_SECONDS = 120;
 const FAVICON_MISS_CACHE_STALE_SECONDS = 600;
 const FAVICON_MAX_RESPONSE_BYTES = 64 * 1024;
+// Upstream bytes are attacker-controlled. If a favicon is opened as a top-level document (an SVG
+// with <script>, say), this puts it in an opaque origin with no script or network access; <img>
+// rendering is unaffected.
+const FAVICON_CONTENT_SECURITY_POLICY = "default-src 'none'; style-src 'unsafe-inline'; sandbox";
 
 type FaviconFetchResult = { kind: "hit"; response: Response } | { kind: "miss"; terminal: boolean };
+
+/**
+ * What the favicon is served as. Only an image type is passed on: the upstream server also sends
+ * `application/octet-stream` for `favicon.ico`, and a type it picked such as `text/html` must
+ * never reach a browser from this origin.
+ */
+function servedContentType(upstream: Response): string {
+  const declared = upstream.headers.get("content-type")?.split(";", 1)[0]?.trim().toLowerCase();
+  return declared?.startsWith("image/") ? declared : "image/x-icon";
+}
+
+/** The body, or null as soon as it is known to exceed `limit` bytes; nothing past it is read. */
+async function readCapped(
+  response: Response,
+  limit: number,
+): Promise<Uint8Array<ArrayBuffer> | null> {
+  const declared = Number(response.headers.get("content-length"));
+  if (Number.isFinite(declared) && declared > limit) {
+    await response.body?.cancel().catch(() => {});
+    return null;
+  }
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  const reader = response.body?.getReader();
+  while (reader) {
+    const { done, value } = await reader.read();
+    if (done) {
+      break;
+    }
+    total += value.byteLength;
+    if (total > limit) {
+      await reader.cancel().catch(() => {});
+      return null;
+    }
+    chunks.push(value);
+  }
+  return Buffer.concat(chunks);
+}
 
 function faviconHitHeaders(contentType: string) {
   return {
     "Content-Type": contentType,
+    "Content-Security-Policy": FAVICON_CONTENT_SECURITY_POLICY,
+    "X-Content-Type-Options": "nosniff",
     "Cache-Control": `public, max-age=${FAVICON_CACHE_MAX_AGE_SECONDS}, stale-while-revalidate=${FAVICON_CACHE_STALE_SECONDS}`,
     Vary: "Accept",
   };
@@ -49,12 +94,12 @@ const fetchResolvedFavicon = Effect.fn("favicon.fetch_resolved")(function* (
     return { kind: "miss", terminal: false } satisfies FaviconFetchResult;
   }
 
-  const contentType = upstream.headers.get("content-type") ?? "image/x-icon";
+  const contentType = servedContentType(upstream);
   const buffer = yield* Effect.tryPromise({
-    try: () => upstream.arrayBuffer(),
+    try: () => readCapped(upstream, FAVICON_MAX_RESPONSE_BYTES),
     catch: unexpected,
   });
-  if (buffer.byteLength > FAVICON_MAX_RESPONSE_BYTES) {
+  if (buffer === null) {
     const now = yield* Clock.currentTimeMillis;
     yield* useStore("favicon.write_miss", () =>
       store.writeMiss({
@@ -80,10 +125,16 @@ const fetchResolvedFavicon = Effect.fn("favicon.fetch_resolved")(function* (
   } satisfies FaviconFetchResult;
 });
 
+/** Favicon lookups that may be fetching from the network at once; the route is public. */
+const FAVICON_MAX_IN_FLIGHT = 24;
+const shedFavicons = makeLoadShedder("favicon", FAVICON_MAX_IN_FLIGHT);
+
 /** `GET /api/favicon?domain=`: the cached favicon image for a site, backed by the `Db` host cache. */
 export const handleFaviconRequest = (request: Request) =>
-  Effect.flatMap(Db, (db) =>
-    handleFaviconRequestWithStore(createDrizzleFaviconHostStore(db.client), request),
+  shedFavicons(
+    Effect.flatMap(Db, (db) =>
+      handleFaviconRequestWithStore(createDrizzleFaviconHostStore(db.client), request),
+    ),
   );
 
 export const handleFaviconRequestWithStore = Effect.fn("favicon.handle")(function* (

@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { serializeError } from "@shared/errors/serialize";
+import { DrizzleQueryError } from "drizzle-orm";
+import { errorMessage, serializeError } from "@shared/errors/serialize";
 
 describe("serializeError", () => {
   test("null passes through", () => {
@@ -110,5 +111,27 @@ describe("serializeError", () => {
         table: "opml_import_items",
       },
     });
+  });
+
+  test("a failed query keeps its SQL but not the values bound to it", () => {
+    const failure = new DrizzleQueryError(
+      'insert into "verification" ("identifier", "value") values ($1, $2)',
+      ["email-otp:victim@example.com", "482913:0"],
+      new Error("connection terminated"),
+    );
+
+    const result = serializeError(failure) as { message: string; cause: unknown };
+
+    expect(result.message).toBe(
+      'Failed query: insert into "verification" ("identifier", "value") values ($1, $2)',
+    );
+    expect(JSON.stringify(result)).not.toContain("482913");
+    expect(JSON.stringify(result)).not.toContain("victim@example.com");
+    expect(result.cause).toMatchObject({ message: "connection terminated" });
+  });
+
+  test("messages that are not a failed query are untouched, params text included", () => {
+    expect(errorMessage(new Error("bad input\nparams: x"))).toBe("bad input\nparams: x");
+    expect(errorMessage(new Error("Failed query: select 1"))).toBe("Failed query: select 1");
   });
 });
