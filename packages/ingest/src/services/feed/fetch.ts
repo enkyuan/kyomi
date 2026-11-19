@@ -1,5 +1,5 @@
 import type { FetchFeedDocumentResult } from "./types";
-import { isSafeEnrichmentUrl } from "../../lib/safe-url";
+import { fetchPublic, type ResolveAddresses } from "../../lib/outbound";
 import { cancelResponseBody, readResponseBodyWithByteLimit } from "../../lib/response-body";
 
 const FETCH_TIMEOUT_MS = 12_000;
@@ -14,50 +14,9 @@ const HTML_FETCH_ACCEPT =
 
 type FetchFeedDocumentOptions = {
   accept?: "feed" | "html";
+  /** How a name becomes addresses; real DNS unless a test says otherwise. */
+  resolve?: ResolveAddresses;
 };
-
-function isRedirectStatus(status: number): boolean {
-  return status === 301 || status === 302 || status === 303 || status === 307 || status === 308;
-}
-
-function assertSafeFetchUrl(rawUrl: string): URL {
-  const url = new URL(rawUrl);
-  if (!isSafeEnrichmentUrl(url.href)) {
-    throw new Error("Private network URLs are not allowed");
-  }
-  return url;
-}
-
-async function fetchWithBoundedRedirects(
-  rawUrl: string,
-  init: RequestInit,
-): Promise<{ response: Response; finalUrl: string }> {
-  let currentUrl = assertSafeFetchUrl(rawUrl);
-
-  for (let redirectCount = 0; redirectCount <= MAX_REDIRECTS; redirectCount += 1) {
-    const response = await fetch(currentUrl.href, {
-      ...init,
-      redirect: "manual",
-    });
-
-    if (!isRedirectStatus(response.status)) {
-      return { response, finalUrl: currentUrl.href };
-    }
-
-    const location = response.headers.get("location");
-    if (!location) {
-      return { response, finalUrl: currentUrl.href };
-    }
-
-    response.body?.cancel().catch(() => undefined);
-    if (redirectCount === MAX_REDIRECTS) {
-      throw new Error("Too many redirects");
-    }
-    currentUrl = assertSafeFetchUrl(new URL(location, currentUrl).href);
-  }
-
-  throw new Error("Too many redirects");
-}
 
 export async function fetchFeedDocument(
   url: string,
@@ -76,10 +35,11 @@ export async function fetchFeedDocument(
     if (etag) headers["if-none-match"] = etag;
     if (lastModified) headers["if-modified-since"] = lastModified;
 
-    const { response, finalUrl } = await fetchWithBoundedRedirects(url, {
-      signal: controller.signal,
-      headers,
-    });
+    const { response, finalUrl } = await fetchPublic(
+      url,
+      { signal: controller.signal, headers },
+      { maxRedirects: MAX_REDIRECTS, resolve: options?.resolve },
+    );
 
     if (response.status === 304) {
       return {

@@ -27,6 +27,11 @@ export type ArticleListRawRow = {
   categories: string[];
 };
 
+/** Rows the user has not hidden. */
+export function filterVisibleArticleRows(rows: ArticleListRawRow[]): ArticleListRawRow[] {
+  return rows.filter((row) => row.hiddenAt == null);
+}
+
 export function normalizedArticleIdentity(rawUrl: string): string {
   return normalizeArticleUrl(rawUrl);
 }

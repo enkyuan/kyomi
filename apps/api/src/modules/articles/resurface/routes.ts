@@ -1,6 +1,11 @@
+import type { Effect, ManagedRuntime } from "effect";
 import type { Elysia } from "elysia";
+import type { Db } from "@adapters/db/service";
+import type { AppConfig } from "@config/env/service";
 import { enforceRateLimitForContext } from "@adapters/rate-limit/plugin";
-import { v1HandlerContext } from "@shared/http/v1/context";
+import type { CurrentUser, RequestContext } from "@shared/effect/request";
+import { runEffect } from "@shared/http/effect/bridge";
+import { v1EffectContext, type V1EffectContext } from "@shared/http/v1/context";
 import { articleIdParamsSchema, cursorListResponseSchema, messageResponseSchema } from "../schemas";
 import {
   dismissContinueReading,
@@ -15,13 +20,25 @@ import {
   continueReadingQuerySchema,
 } from "./schemas";
 
-export function registerArticleResurfaceRoutes(app: Elysia) {
+type ResurfaceRuntime = ManagedRuntime.ManagedRuntime<Db | AppConfig, unknown>;
+
+export function registerArticleResurfaceRoutes(app: Elysia, runtime: ResurfaceRuntime) {
+  /** Run an operation for the authenticated user of this request. */
+  const run = <A, E>(
+    input: V1EffectContext<unknown, unknown, unknown>,
+    effect: Effect.Effect<A, E, Db | AppConfig | RequestContext | CurrentUser>,
+  ) =>
+    runEffect(
+      { runtime, request: input.request, requestId: input.requestId, userId: input.userId },
+      effect,
+    );
+
   return app
     .get(
       "/articles/views/continue-reading",
-      async (context) => {
-        const { db, query, userId } = v1HandlerContext<unknown, { limit?: string }>(context);
-        return listContinueReading(db, userId, normalizeContinueReadingLimit(query.limit));
+      (context) => {
+        const input = v1EffectContext<unknown, { limit?: string }>(context);
+        return run(input, listContinueReading(normalizeContinueReadingLimit(input.query.limit)));
       },
       {
         query: continueReadingQuerySchema,
@@ -31,9 +48,13 @@ export function registerArticleResurfaceRoutes(app: Elysia) {
     .post(
       "/articles/views/continue-reading/impressions",
       async (context) => {
-        const { body, db, userId } = v1HandlerContext<{ articleIds: string[] }>(context);
-        await enforceRateLimitForContext(context, userId, continueReadingImpressionsRateLimit);
-        await recordContinueReadingImpressions(db, userId, body.articleIds);
+        const input = v1EffectContext<{ articleIds: string[] }>(context);
+        await enforceRateLimitForContext(
+          context,
+          input.userId,
+          continueReadingImpressionsRateLimit,
+        );
+        await run(input, recordContinueReadingImpressions(input.body.articleIds));
         return { message: "Impressions recorded" };
       },
       {
@@ -44,13 +65,11 @@ export function registerArticleResurfaceRoutes(app: Elysia) {
     .post(
       "/articles/:articleId/continue-reading/dismiss",
       async (context) => {
-        const { db, params, userId } = v1HandlerContext<
-          unknown,
-          Record<string, unknown>,
-          { articleId: string }
-        >(context);
-        await enforceRateLimitForContext(context, userId, continueReadingDismissRateLimit);
-        await dismissContinueReading(db, userId, params.articleId);
+        const input = v1EffectContext<unknown, Record<string, unknown>, { articleId: string }>(
+          context,
+        );
+        await enforceRateLimitForContext(context, input.userId, continueReadingDismissRateLimit);
+        await run(input, dismissContinueReading(input.params.articleId));
         return { message: "Article dismissed from continue reading" };
       },
       {

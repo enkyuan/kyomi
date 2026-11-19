@@ -1,6 +1,7 @@
 ## Catalog Data
 
 ### Merge With Original Dataset
+
 - [ ] Compare current catalog against original dataset.
 - [ ] Define canonical feed identity:
   - feed URL
@@ -18,6 +19,7 @@
   - missing metadata count
 
 ### Fill Missing Feed Metadata
+
 - [ ] Find all feeds without `content_type`.
 - [ ] Backfill `content_type`.
 - [ ] Backfill missing:
@@ -33,6 +35,7 @@
 ## Vols.RSS Integration
 
 ### Import Existing Data
+
 - [ ] Inspect kyomi feed/article/export schema.
 - [ ] Map kyomi fields to kyomi catalog fields.
 - [ ] Identify new fields worth adding:
@@ -48,6 +51,7 @@
 - [ ] Add import summary report.
 
 ### UI Display Additions
+
 - [ ] Display feed content type.
 - [ ] Display enrichment status.
 - [ ] Display favicon source/status.
@@ -57,6 +61,7 @@
 ## Favicon System
 
 ### S3-Based Favicon Serving
+
 - [ ] Build favicon fetch/enrichment worker.
 - [ ] Store favicon assets in S3-compatible storage.
 - [ ] Save favicon asset key on feed records.
@@ -69,6 +74,7 @@
 ## Enrichment Pipeline
 
 ### Carry Over vols Processing Pipeline
+
 - [ ] Port feed enrichment logic from vols feed modules.
 - [ ] Switch network fetching to `aiohttp`.
 - [ ] Switch AI enrichment to Vertex AI.
@@ -83,6 +89,7 @@
 - [ ] Store enrichment status per feed.
 
 ### OPML Import Integration
+
 - [ ] Convert OPML import into batch task creation.
 - [ ] After OPML import, enqueue batch enrichment jobs.
 - [ ] Track batch progress:

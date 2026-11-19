@@ -1,9 +1,8 @@
 import pino from "pino";
 
 import { SERVICE_NAME } from "@config/constants";
-import { env } from "@config/env";
 
-type LogLevel = "info" | "warn" | "error";
+export type LogLevel = "info" | "warn" | "error";
 export type LogContext = Record<string, unknown>;
 export type AppLogger = {
   info: (event: string, context?: LogContext) => void;
@@ -24,16 +23,13 @@ const LEVEL_LABEL: Record<LogLevel, string> = {
 const MAX_STRING_LENGTH = 240;
 const MAX_STRUCTURED_LENGTH = 480;
 
-function getConfiguredLogLevel(): LogLevel {
-  const raw = env.LOG_LEVEL;
-  if (raw === "error" || raw === "warn" || raw === "info") {
-    return raw;
-  }
-  return env.NODE_ENV === "production" ? "warn" : "info";
-}
+export type LoggerOptions = {
+  readonly nodeEnv: "development" | "production" | "test";
+  readonly logLevel?: LogLevel | undefined;
+};
 
-function shouldLog(level: LogLevel) {
-  return LEVEL_ORDER[level] >= LEVEL_ORDER[getConfiguredLogLevel()];
+function configuredLogLevel(options: LoggerOptions): LogLevel {
+  return options.logLevel ?? (options.nodeEnv === "production" ? "warn" : "info");
 }
 
 function pad(value: number, length = 2) {
@@ -73,22 +69,19 @@ const DRIVER_ERROR_KEYS = [
 function normalizeForJson(value: unknown, seen = new WeakSet<object>()): unknown {
   if (value instanceof Error) {
     const record = value as unknown as Record<string, unknown>;
-    const result: Record<string, unknown> = {
-      name: value.name,
-      message: value.message,
-      stack: value.stack,
-    };
-    // Preserve the cause chain so DrizzleQueryError's underlying pg DatabaseError
-    // is never silently dropped from structured logs.
-    if (value.cause !== undefined) {
-      result.cause = normalizeForJson(value.cause, seen);
-    }
+    const result: Record<string, unknown> = { name: value.name, message: value.message };
     for (const key of DRIVER_ERROR_KEYS) {
       const val = record[key];
       if (typeof val === "string" && val.length > 0) {
         result[key] = val;
       }
     }
+    // The cause chain (DrizzleQueryError's underlying pg DatabaseError, say) comes before the
+    // stack: a log line is truncated from the end, and the stack must not push the root cause out.
+    if (value.cause !== undefined) {
+      result.cause = normalizeForJson(value.cause, seen);
+    }
+    result.stack = value.stack;
     return result;
   }
   if (typeof value === "bigint") {
@@ -146,32 +139,35 @@ export function formatLogLine(level: LogLevel, event: string, context: LogContex
   return [timestamp, SERVICE_NAME, LEVEL_LABEL[level], event, ...fields].join(" ");
 }
 
-const baseLogger = pino({
-  level: getConfiguredLogLevel(),
-  timestamp: pino.stdTimeFunctions.isoTime,
-});
-
 function emitPrettyLog(level: LogLevel, event: string, context: LogContext = {}) {
-  if (!shouldLog(level)) {
-    return;
-  }
   process.stdout.write(`${formatLogLine(level, event, context)}\n`);
 }
 
-function emitJsonLog(level: LogLevel, event: string, context: LogContext = {}) {
-  baseLogger[level]({ event, ...context });
+/**
+ * Build the process logger: pretty single-line output in development, JSON through pino in
+ * production, filtered at the configured level. Effect code reaches it through the `AppLogger`
+ * service in `./service`.
+ */
+export function createLogger(options: LoggerOptions): AppLogger {
+  const minimum = LEVEL_ORDER[configuredLogLevel(options)];
+  const base =
+    options.nodeEnv === "production"
+      ? pino({ level: configuredLogLevel(options), timestamp: pino.stdTimeFunctions.isoTime })
+      : null;
+  const emit = (level: LogLevel, event: string, context: LogContext = {}) => {
+    if (LEVEL_ORDER[level] < minimum) {
+      return;
+    }
+    if (base) {
+      base[level]({ event, ...context });
+    } else {
+      emitPrettyLog(level, event, context);
+    }
+  };
+
+  return {
+    info: (event, context) => emit("info", event, context),
+    warn: (event, context) => emit("warn", event, context),
+    error: (event, context) => emit("error", event, context),
+  };
 }
-
-const emitLog = env.NODE_ENV === "production" ? emitJsonLog : emitPrettyLog;
-
-export const logger: AppLogger = {
-  info: (event: string, context: LogContext = {}) => {
-    emitLog("info", event, context);
-  },
-  warn: (event: string, context: LogContext = {}) => {
-    emitLog("warn", event, context);
-  },
-  error: (event: string, context: LogContext = {}) => {
-    emitLog("error", event, context);
-  },
-};

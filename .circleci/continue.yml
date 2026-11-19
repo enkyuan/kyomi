@@ -34,7 +34,9 @@ executors:
         environment:
           MEILI_MASTER_KEY: vols-meili-dev-key
           MEILI_NO_ANALYTICS: "true"
-    resource_class: medium
+    # Four services plus `bun test --isolate` over ~200 files exceed medium's 4 GB: the kernel
+    # SIGKILLs bun (or Meilisearch, exit 137) at random, so the job passes and fails on the same code.
+    resource_class: large
   base:
     docker:
       - image: cimg/base:current

@@ -54,24 +54,24 @@ Before editing, collect:
 
 ### Source-of-truth order
 
-| Concern | Authority | Reason |
-| --- | --- | --- |
-| Callable API, prop, modifier, runtime availability | Installed package version and `.d.ts`/source | The lockfile determines what will execute. |
-| Recommended framework usage | Official documentation matching the installed major/minor version | Examples and patterns evolve independently of Kyomi. |
-| Native behavior, accessibility, navigation, interaction | Apple HIG/SwiftUI and Android Compose/Material 3 guidance | Platform conventions are product requirements, not decoration. |
-| Ownership, exports, naming, app/package boundaries, existing product conventions | Kyomi `AGENTS.md`, owner skills, and established nearby code | Vendor examples do not know Kyomi’s architecture. |
+| Concern                                                                          | Authority                                                         | Reason                                                         |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------- |
+| Callable API, prop, modifier, runtime availability                               | Installed package version and `.d.ts`/source                      | The lockfile determines what will execute.                     |
+| Recommended framework usage                                                      | Official documentation matching the installed major/minor version | Examples and patterns evolve independently of Kyomi.           |
+| Native behavior, accessibility, navigation, interaction                          | Apple HIG/SwiftUI and Android Compose/Material 3 guidance         | Platform conventions are product requirements, not decoration. |
+| Ownership, exports, naming, app/package boundaries, existing product conventions | Kyomi `AGENTS.md`, owner skills, and established nearby code      | Vendor examples do not know Kyomi’s architecture.              |
 
 When sources disagree, resolve the installed version first. If a documented approach does not exist in that version, use the matching version’s documentation or changelog. Do not hide the mismatch behind an undocumented workaround.
 
 ### Framework source map
 
-| Scope | Required first-party references when applicable | Notes |
-| --- | --- | --- |
-| `apps/web` | TanStack Start, Router, and Query official docs | Read the exact installed `@tanstack/*` versions first. Router search validation, loader/server boundaries, and Query cache updates need their own page-level evidence. |
-| `apps/web` / `packages/ui` | Coss UI and Base UI docs only if explicitly evaluating or using them | Coss is not a current Kyomi dependency and is early-development, copy-and-own software. It must not appear in a feature incidentally. |
-| `apps/mobile` | Expo SDK 57 docs, Expo UI, Expo Router, Expo Modules, Uniwind | Start universal with `@expo/ui`; inspect installed types for every native component/modifier. Isolate SwiftUI and Compose imports in platform files. |
-| iOS mobile presentation | Apple HIG and SwiftUI documentation | Apply platform behavior, accessibility, Dynamic Type, and control conventions without erasing Kyomi’s content hierarchy and tokens. |
-| Android mobile presentation | Android Compose and Material 3 documentation | Apply adaptive layout, state, semantic color, component, and feedback conventions without copying an unrelated app design. |
+| Scope                       | Required first-party references when applicable                      | Notes                                                                                                                                                                  |
+| --------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `apps/web`                  | TanStack Start, Router, and Query official docs                      | Read the exact installed `@tanstack/*` versions first. Router search validation, loader/server boundaries, and Query cache updates need their own page-level evidence. |
+| `apps/web` / `packages/ui`  | Coss UI and Base UI docs only if explicitly evaluating or using them | Coss is not a current Kyomi dependency and is early-development, copy-and-own software. It must not appear in a feature incidentally.                                  |
+| `apps/mobile`               | Expo SDK 57 docs, Expo UI, Expo Router, Expo Modules, Uniwind        | Start universal with `@expo/ui`; inspect installed types for every native component/modifier. Isolate SwiftUI and Compose imports in platform files.                   |
+| iOS mobile presentation     | Apple HIG and SwiftUI documentation                                  | Apply platform behavior, accessibility, Dynamic Type, and control conventions without erasing Kyomi’s content hierarchy and tokens.                                    |
+| Android mobile presentation | Android Compose and Material 3 documentation                         | Apply adaptive layout, state, semantic color, component, and feedback conventions without copying an unrelated app design.                                             |
 
 Prefer official Markdown endpoints and `llms.txt` indexes where supplied. Expo exposes a Markdown index and page-level Markdown; Uniwind exposes `llms.txt`. Fetch a relevant page from the index rather than ingesting a whole site. Record URLs and access date in the implementation report, not as checked-in snapshots.
 
@@ -93,12 +93,12 @@ The evidence makes review possible without creating a permanent, stale documenta
 
 ### Enforcement layers
 
-| Layer | Responsibility | Limits |
-| --- | --- | --- |
-| Project guidance | `AGENTS.md` and owner skills define the context, documentation, ownership, naming, and test workflow. | Guidance cannot technically prove compliance. |
-| Pi extension | Reminds the active agent of the framework and blocks clearly unsafe direct `edit`/`write` paths. | It cannot safely interpret every shell command or confirm a skill was loaded. |
-| Deterministic checks | Existing formatting, lint, import-boundary, type, test, build, and CI gates catch objective regressions. | They do not judge every architecture or product decision. |
-| Review | A fresh read-only Pi review may challenge the diff after deterministic checks pass. | It is opt-in advice, not CI or a merge condition. |
+| Layer                | Responsibility                                                                                           | Limits                                                                        |
+| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Project guidance     | `AGENTS.md` and owner skills define the context, documentation, ownership, naming, and test workflow.    | Guidance cannot technically prove compliance.                                 |
+| Pi extension         | Reminds the active agent of the framework and blocks clearly unsafe direct `edit`/`write` paths.         | It cannot safely interpret every shell command or confirm a skill was loaded. |
+| Deterministic checks | Existing formatting, lint, import-boundary, type, test, build, and CI gates catch objective regressions. | They do not judge every architecture or product decision.                     |
+| Review               | A fresh read-only Pi review may challenge the diff after deterministic checks pass.                      | It is opt-in advice, not CI or a merge condition.                             |
 
 ## Task 0: Protect the shared working tree
 

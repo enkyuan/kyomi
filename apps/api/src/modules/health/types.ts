@@ -12,3 +12,16 @@ export type ReadinessPayload = {
   now: string;
   version: string;
 };
+
+export type QueueHealthSnapshot = {
+  streams: Record<
+    string,
+    {
+      length: number;
+      /** Read by a consumer and not yet acknowledged. */
+      pending: number;
+      /** Failed jobs waiting out their retry delay; they are on neither the stream nor pending. */
+      scheduled: number;
+    }
+  >;
+};

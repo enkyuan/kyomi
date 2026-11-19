@@ -1,7 +1,7 @@
 {
   "name": "@kyomi/ui",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "description": "Kyomi design system: Base UI primitives, tokens, icons, and motion.",
   "repository": {
     "type": "git",

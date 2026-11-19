@@ -10,20 +10,11 @@
       "kind": "feed",
       "feed_url": "http://www.africanews.com/feed/rss?themes=news",
       "details": "Local > Africa",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Africa"
-      ],
+      "tags": ["Local", "Africa"],
       "language": "en",
-      "keywords": [
-        "pan-African news",
-        "current affairs",
-        "international news"
-      ],
+      "keywords": ["pan-African news", "current affairs", "international news"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -35,20 +26,11 @@
       "channel_id": "UCNtUXiCqH6nUTFeTW4qLpqw",
       "thumbnail_url": "https://yt3.ggpht.com/Da5g860nwckFAT04f4O8oSWNv1fP71d5Iga5Qfc5zYPcFfFdRVcPgRcWzCw77-ql91gvoT6v7Q=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Africa",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Africa"
-      ],
+      "tags": ["Local", "Africa"],
       "language": "en",
-      "keywords": [
-        "youth issues",
-        "Africa",
-        "social challenges"
-      ],
+      "keywords": ["youth issues", "Africa", "social challenges"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -59,21 +41,11 @@
       "kind": "feed",
       "feed_url": "http://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
       "details": "Local > Africa",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Africa"
-      ],
+      "tags": ["Local", "Africa"],
       "language": "en",
-      "keywords": [
-        "aggregated news",
-        "politics",
-        "business",
-        "sports"
-      ],
+      "keywords": ["aggregated news", "politics", "business", "sports"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -85,20 +57,11 @@
       "channel_id": "UCMeYPU1YfXjxsUa6QXWsfjg",
       "thumbnail_url": "https://yt3.ggpht.com/HKqZu2XDiAK1EMUwmwgpuDynb63jK3e0B6SC1_tmLXzCvyMmgVSY7OCAh6iDnAHIlnqADy10Jvw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Africa",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Africa"
-      ],
+      "tags": ["Local", "Africa"],
       "language": "en",
-      "keywords": [
-        "China-Africa relations",
-        "development news",
-        "Africa"
-      ],
+      "keywords": ["China-Africa relations", "development news", "Africa"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -109,21 +72,11 @@
       "kind": "feed",
       "feed_url": "http://www.un.org/africarenewal/rss.xml",
       "details": "Local > Africa",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Africa"
-      ],
+      "tags": ["Local", "Africa"],
       "language": "en",
-      "keywords": [
-        "United Nations",
-        "Africa development",
-        "gender equality",
-        "health"
-      ],
+      "keywords": ["United Nations", "Africa development", "gender equality", "health"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -134,14 +87,9 @@
       "kind": "feed",
       "feed_url": "http://www.africa.com/feed/",
       "details": "Local > Africa",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Africa"
-      ],
+      "tags": ["Local", "Africa"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Regional & Local"
@@ -155,14 +103,9 @@
       "channel_id": "UCvhPRRiwI1_p4OBsY0yz6mg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqPd8XX0Tfxu6dYPlb9wp6gTX33qz6MUPXw2LjG3-RE=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Africa",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Africa"
-      ],
+      "tags": ["Local", "Africa"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Regional & Local"
@@ -176,49 +119,26 @@
       "channel_id": "UC7fWeaHhqgM4Ry-RMpM2YYw",
       "thumbnail_url": "https://yt3.ggpht.com/4FK_4c1SOUGyQXgvLZ7WDJXB-sE8vVntcrTI7PYCiYkjkftELWfuRiQW_-1w6_uPbSY6T6ij=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "News > Global",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Middle East",
-        "Asia",
-        "Africa",
-        "_mainstream"
-      ],
+      "tags": ["News", "Middle East", "Asia", "Africa", "_mainstream"],
       "language": "en",
-      "keywords": [
-        "global news",
-        "Middle East",
-        "Asia",
-        "Africa"
-      ],
+      "keywords": ["global news", "Middle East", "Asia", "Africa"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://africasacountry.com/feed/",
       "title": "Africa Is a Country",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://africasacountry.com/feed/",
       "summary": "\u2026a site of opinion, analysis, and new writing on and from the African left.",
       "details": "Politics > Politics",
       "cleaned_title": "Africa Is a Country",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Africa",
-        "Journalism"
-      ],
+      "tags": ["Politics", "Africa", "Journalism"],
       "language": "en",
-      "keywords": [
-        "African politics",
-        "social issues",
-        "opinion writing"
-      ],
+      "keywords": ["African politics", "social issues", "opinion writing"],
       "top_level_category": "News & Current Events"
     }
   ],

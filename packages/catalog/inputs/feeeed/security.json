@@ -5,9 +5,7 @@
     {
       "title": "Pluralistic: Daily links from Cory Doctorow",
       "popularity_score": 3.4294927536231885,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "feed_url": "https://pluralistic.net/feed/",
       "kind": "feed",
       "id": "feed:https://pluralistic.net/feed/",
@@ -31,53 +29,30 @@
       "id": "feed:https://davidmytton.blog/feed/",
       "title": "David Mytton",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://davidmytton.blog/feed/",
       "details": "Technology",
       "cleaned_title": "David Mytton",
       "cleaned_author": "David Mytton",
       "summary": "Insights from a tech entrepreneur on data center energy efficiency and developer security in the evolving tech landscape.",
-      "tags": [
-        "Tech",
-        "Security",
-        "Data",
-        "Finance"
-      ],
+      "tags": ["Tech", "Security", "Data", "Finance"],
       "language": "en",
-      "keywords": [
-        "data centers",
-        "AI workload",
-        "security",
-        "developer tools"
-      ],
+      "keywords": ["data centers", "AI workload", "security", "developer tools"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
       "id": "feed:https://netwars.pelicancrossing.net/feed/",
       "title": "net.wars",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://netwars.pelicancrossing.net/feed/",
       "details": "Technology",
       "cleaned_title": "net.wars",
       "cleaned_author": null,
       "summary": "A blog that delves into the intersection of technology, privacy, and freedom, discussing current issues related to computing.",
-      "tags": [
-        "Tech",
-        "Internet",
-        "Security"
-      ],
+      "tags": ["Tech", "Internet", "Security"],
       "language": "en",
-      "keywords": [
-        "technology",
-        "privacy",
-        "freedom",
-        "computing"
-      ],
+      "keywords": ["technology", "privacy", "freedom", "computing"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
@@ -88,24 +63,11 @@
       "kind": "feed",
       "feed_url": "http://rss1.smashingmagazine.com/feed/",
       "details": "Arts > Design",
-      "sources": [
-        "original_feed_db",
-        "ooh_directory"
-      ],
+      "sources": ["original_feed_db", "ooh_directory"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "WebDev",
-        "Coding",
-        "Security"
-      ],
+      "tags": ["Tech", "WebDev", "Coding", "Security"],
       "language": "en",
-      "keywords": [
-        "web design",
-        "development",
-        "user experience",
-        "best practices"
-      ],
+      "keywords": ["web design", "development", "user experience", "best practices"],
       "top_level_category": "Arts & Culture"
     }
   ],

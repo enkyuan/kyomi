@@ -1,4 +1,4 @@
-/** Schemes accepted by the server-side favicon proxy (mirrors host-safety.ts). */
+/** Schemes accepted by the server-side favicon proxy (mirrors `ALLOWED_SCHEMES` in lib/outbound.ts). */
 const PROXY_ALLOWED_SCHEMES = new Set(["http:", "https:"]);
 export const FAVICON_PROXY_VERSION = "5";
 

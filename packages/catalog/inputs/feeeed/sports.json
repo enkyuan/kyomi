@@ -10,21 +10,11 @@
       "kind": "feed",
       "feed_url": "https://kareem.substack.com/feed",
       "details": "Sports",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Arts & Culture",
-        "Sports"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Arts & Culture", "Sports"],
       "cleaned_author": "Kareem Abdul-Jabbar",
       "language": "en",
-      "keywords": [
-        "sports",
-        "politics",
-        "popular culture",
-        "insights"
-      ],
+      "keywords": ["sports", "politics", "popular culture", "insights"],
       "top_level_category": "Sports"
     },
     {
@@ -35,26 +25,11 @@
       "kind": "feed",
       "feed_url": "https://www.johncanzano.com/feed",
       "details": "Sports",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Tech",
-        "News",
-        "Living",
-        "Politics",
-        "Sports",
-        "USA",
-        "Football"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Tech", "News", "Living", "Politics", "Sports", "USA", "Football"],
       "cleaned_author": "John Canzano",
       "language": "en",
-      "keywords": [
-        "college football",
-        "sports",
-        "gambling",
-        "Pac-12"
-      ],
+      "keywords": ["college football", "sports", "gambling", "Pac-12"],
       "top_level_category": "Sports"
     },
     {
@@ -65,23 +40,11 @@
       "kind": "feed",
       "feed_url": "https://www.splitzoneduo.com/feed",
       "details": "Sports",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Tech",
-        "Living",
-        "Sports",
-        "Football"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Tech", "Living", "Sports", "Football"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "college football",
-        "NIL",
-        "coaching carousel",
-        "offseason"
-      ],
+      "keywords": ["college football", "NIL", "coaching carousel", "offseason"],
       "top_level_category": "Sports"
     },
     {
@@ -92,24 +55,11 @@
       "kind": "feed",
       "feed_url": "https://www.houseofstrauss.com/feed",
       "details": "Sports",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Tech",
-        "Living",
-        "Arts & Culture",
-        "Sports",
-        "Basketball"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Tech", "Living", "Arts & Culture", "Sports", "Basketball"],
       "cleaned_author": "Ethan Strauss",
       "language": "en",
-      "keywords": [
-        "NBA",
-        "media",
-        "culture",
-        "sports business"
-      ],
+      "keywords": ["NBA", "media", "culture", "sports business"],
       "top_level_category": "Sports"
     },
     {
@@ -120,23 +70,11 @@
       "kind": "feed",
       "feed_url": "https://marcstein.substack.com/feed",
       "details": "Sports",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Tech",
-        "Living",
-        "Sports",
-        "Basketball"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Tech", "Living", "Sports", "Basketball"],
       "cleaned_author": "Marc Stein",
       "language": "en",
-      "keywords": [
-        "NBA",
-        "insider coverage",
-        "basketball news",
-        "Joel Embiid"
-      ],
+      "keywords": ["NBA", "insider coverage", "basketball news", "Joel Embiid"],
       "top_level_category": "Sports"
     },
     {
@@ -147,23 +85,11 @@
       "kind": "feed",
       "feed_url": "http://www.skysports.com/rss/0,20514,12433,00.xml",
       "details": "Popular",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Sports",
-        "Football"
-      ],
+      "tags": ["News", "Sports", "Football"],
       "language": "en",
-      "keywords": [
-        "Formula 1",
-        "racing news",
-        "drivers",
-        "F1 testing",
-        "team updates"
-      ],
+      "keywords": ["Formula 1", "racing news", "drivers", "F1 testing", "team updates"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -174,22 +100,11 @@
       "kind": "feed",
       "feed_url": "https://www.petcashpost.com/feed",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Andrew Petcash",
-      "tags": [
-        "Money",
-        "Tech",
-        "Sports",
-        "Finance"
-      ],
+      "tags": ["Money", "Tech", "Sports", "Finance"],
       "language": "en",
-      "keywords": [
-        "sports trends",
-        "industry analysis",
-        "innovation"
-      ],
+      "keywords": ["sports trends", "industry analysis", "innovation"],
       "top_level_category": "Sports"
     },
     {
@@ -200,22 +115,11 @@
       "kind": "feed",
       "feed_url": "https://ziller.substack.com/feed",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Living",
-        "Local",
-        "Sports"
-      ],
+      "tags": ["Tech", "Living", "Local", "Sports"],
       "language": "en",
-      "keywords": [
-        "NBA",
-        "basketball",
-        "sports commentary"
-      ],
+      "keywords": ["NBA", "basketball", "sports commentary"],
       "top_level_category": "Sports"
     },
     {
@@ -226,21 +130,11 @@
       "kind": "feed",
       "feed_url": "https://joeposnanski.substack.com/feed",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Sports"
-      ],
+      "tags": ["Living", "Arts & Culture", "Sports"],
       "language": "en",
-      "keywords": [
-        "sports writing",
-        "essays",
-        "humor"
-      ],
+      "keywords": ["sports writing", "essays", "humor"],
       "top_level_category": "Sports"
     },
     {
@@ -251,21 +145,11 @@
       "kind": "feed",
       "feed_url": "http://www.sexyloops.com/blog/feed/",
       "details": "Hobbies > Fishing",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Humor",
-        "Sports"
-      ],
+      "tags": ["Living", "Humor", "Sports"],
       "language": "en",
-      "keywords": [
-        "New Zealand",
-        "fly fishing",
-        "fishing stories"
-      ],
+      "keywords": ["New Zealand", "fly fishing", "fishing stories"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -277,21 +161,11 @@
       "channel_id": "UCv8yAO6UKIzMEWCLzKnIbuA",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AOPolaRhYv7uETxGyRucRxcEW06-FYYWBeYwpeuzj7yXrw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Hobbies > Fishing",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports",
-        "Humor"
-      ],
+      "tags": ["Living", "Sports", "Humor"],
       "language": "en",
-      "keywords": [
-        "bass fishing",
-        "fishing techniques",
-        "gear reviews"
-      ],
+      "keywords": ["bass fishing", "fishing techniques", "gear reviews"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -302,20 +176,11 @@
       "kind": "reddit",
       "subreddit": "Fishing",
       "details": "Hobbies > Fishing",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Sports"
-      ],
+      "tags": ["Local", "Sports"],
       "language": "en",
-      "keywords": [
-        "fishing stories",
-        "angler tips",
-        "fishing discussions"
-      ],
+      "keywords": ["fishing stories", "angler tips", "fishing discussions"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -326,20 +191,11 @@
       "kind": "feed",
       "feed_url": "http://musicarskikafe.blogspot.com/feeds/posts/default",
       "details": "Hobbies > Fishing",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Vladan Milenkovic",
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "fly fishing",
-        "fishing techniques",
-        " angler strategies"
-      ],
+      "keywords": ["fly fishing", "fishing techniques", " angler strategies"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -351,20 +207,11 @@
       "channel_id": "UCT83YP07yVuaH9J19YABhlw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqPkcripMMEXcJ24LLSEusvj2GxIs2e0GDg2coJsZw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Entertainment > TV Shows",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Sports"
-      ],
+      "tags": ["Arts & Culture", "Sports"],
       "language": "en",
-      "keywords": [
-        "pop culture analysis",
-        "sports discussions",
-        "TV shows"
-      ],
+      "keywords": ["pop culture analysis", "sports discussions", "TV shows"],
       "top_level_category": "Entertainment"
     },
     {
@@ -376,21 +223,11 @@
       "channel_id": "UCEPKlFeUjRY_1mpZP8GnkVg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqP-SaR5uVyxW9wxN9Uf6zsW2Qi9zHj9L05ijI6dhw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Football",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Soccer",
-        "Sports"
-      ],
+      "tags": ["Tech", "Soccer", "Sports"],
       "language": "en",
-      "keywords": [
-        "football documentaries",
-        "fan culture",
-        "soccer fandom"
-      ],
+      "keywords": ["football documentaries", "fan culture", "soccer fandom"],
       "top_level_category": "Sports"
     },
     {
@@ -402,21 +239,11 @@
       "channel_id": "UCGYYNGmyhZ_kwBF_lqqXdAQ",
       "thumbnail_url": "https://yt3.ggpht.com/KSXuxPcicFNbupRKC8NTAjtXki-Ldybl09BK28hYPi_V89DqkDgwJyQh0MYGUmSmbadOkZVZ_Q=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Soccer",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Soccer",
-        "Sports"
-      ],
+      "tags": ["Tech", "Soccer", "Sports"],
       "language": "en",
-      "keywords": [
-        "tactical analysis",
-        "soccer history",
-        "football stories"
-      ],
+      "keywords": ["tactical analysis", "soccer history", "football stories"],
       "top_level_category": "Sports"
     },
     {
@@ -427,21 +254,11 @@
       "kind": "reddit",
       "subreddit": "soccer",
       "details": "Sports > Football",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Football",
-        "Sports"
-      ],
+      "tags": ["Local", "Football", "Sports"],
       "language": "en",
-      "keywords": [
-        "soccer news",
-        "match discussions",
-        "football community"
-      ],
+      "keywords": ["soccer news", "match discussions", "football community"],
       "top_level_category": "Sports"
     },
     {
@@ -453,21 +270,11 @@
       "channel_id": "UCTl3QQTvqHFjurroKxexy2Q",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqM7OxmzrTI3jba7pPGb9uaWAOXtOBWBH7PH6FCoy-E=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Olympics",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Olympics",
-        "Sports"
-      ],
+      "tags": ["Tech", "Olympics", "Sports"],
       "language": "en",
-      "keywords": [
-        "Olympics highlights",
-        "behind-the-scenes content",
-        "Olympic sports"
-      ],
+      "keywords": ["Olympics highlights", "behind-the-scenes content", "Olympic sports"],
       "top_level_category": "Sports"
     },
     {
@@ -478,21 +285,11 @@
       "kind": "feed",
       "feed_url": "http://swimswam.com/feed/",
       "details": "Sports > Olympics",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Olympics",
-        "Sports"
-      ],
+      "tags": ["Tech", "Olympics", "Sports"],
       "language": "en",
-      "keywords": [
-        "swimming news",
-        "aquatic sports",
-        "Olympic swimming"
-      ],
+      "keywords": ["swimming news", "aquatic sports", "Olympic swimming"],
       "top_level_category": "Sports"
     },
     {
@@ -504,24 +301,11 @@
       "channel_id": "UC6DIWqCjBs24dchRgLwziZA",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMA5rv021brW4bTEYmhWMT4JnO_I2lkQd2RLIG9Iw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Olympics",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports",
-        "Olympics",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Sports", "Olympics", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "gymnastics",
-        "tutorials",
-        "Olympic sport",
-        "training tips",
-        "comic relief"
-      ],
+      "keywords": ["gymnastics", "tutorials", "Olympic sport", "training tips", "comic relief"],
       "top_level_category": "Sports"
     },
     {
@@ -533,23 +317,11 @@
       "channel_id": "UCWJ2lWNubArHWmf3FIHbfcQ",
       "thumbnail_url": "https://yt3.ggpht.com/urNLBJGryDamao5r0jmlTg84mIBOoaeJd6XR67j4nuRd0iRvv5g-MUgaowsWKCs8V_t4KwST=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Basketball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports",
-        "Basketball"
-      ],
+      "tags": ["Living", "Sports", "Basketball"],
       "language": "en",
-      "keywords": [
-        "NBA",
-        "highlights",
-        "games",
-        "plays",
-        "basketball"
-      ],
+      "keywords": ["NBA", "highlights", "games", "plays", "basketball"],
       "top_level_category": "Sports"
     },
     {
@@ -561,15 +333,9 @@
       "channel_id": "UC3L9XPe0_FGfRG-CMGtBvFg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMw-2tC-Zajw6X34_qGxCNG_9LvGjv3Dcf9rOBrQw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Basketball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports",
-        "Basketball"
-      ],
+      "tags": ["Living", "Sports", "Basketball"],
       "language": "en",
       "keywords": [
         "basketball analysis",
@@ -589,15 +355,9 @@
       "channel_id": "UCSpvjDk06HLxBaw8sZw7SkA",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqNkWsC3lKZo43uKchxM-gvVuQjTEyuAKTOLbRhDwA=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Basketball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports",
-        "Basketball"
-      ],
+      "tags": ["Living", "Sports", "Basketball"],
       "language": "en",
       "keywords": [
         "basketball strategy",
@@ -617,23 +377,11 @@
       "channel_id": "UCqQo7ewe87aYAe7ub5UqXMw",
       "thumbnail_url": "https://yt3.ggpht.com/JFAJ04m40cSwVc7szsN5NdMU7QrqyWOSnK1a5RzG237wSIMH_sRa9fDbUc_NtbRsxko9WLTz=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Basketball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports",
-        "Basketball"
-      ],
+      "tags": ["Living", "Sports", "Basketball"],
       "language": "en",
-      "keywords": [
-        "basketball highlights",
-        "dunks",
-        "funny moments",
-        "NBA",
-        "entertainment"
-      ],
+      "keywords": ["basketball highlights", "dunks", "funny moments", "NBA", "entertainment"],
       "top_level_category": "Sports"
     },
     {
@@ -644,15 +392,9 @@
       "kind": "feed",
       "feed_url": "http://www.fangraphs.com/blogs/?feed=rss2",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Sports",
-        "Baseball"
-      ],
+      "tags": ["Money", "Sports", "Baseball"],
       "language": "en",
       "keywords": [
         "baseball analysis",
@@ -672,15 +414,9 @@
       "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqPyvPmL2bD-z5AiFPy8XoOkyXtO0HmiMLGZcD1dhQc=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports",
-        "Baseball"
-      ],
+      "tags": ["Living", "Sports", "Baseball"],
       "language": "en",
       "keywords": [
         "MLB",
@@ -699,23 +435,11 @@
       "kind": "reddit",
       "subreddit": "baseball",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Sports",
-        "Baseball"
-      ],
+      "tags": ["Local", "Sports", "Baseball"],
       "language": "en",
-      "keywords": [
-        "baseball",
-        "MLB",
-        "discussions",
-        "fan community",
-        "game threads"
-      ],
+      "keywords": ["baseball", "MLB", "discussions", "fan community", "game threads"],
       "top_level_category": "Sports"
     },
     {
@@ -727,23 +451,11 @@
       "channel_id": "UCl9E4Zxa8CVr2LBLD0_TaNg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMOVf4_HnLEqzm_hBGhs_tEEzopLNHBKl743W6p1Q=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Baseball",
-        "Sports",
-        "NYC"
-      ],
+      "tags": ["Living", "Baseball", "Sports", "NYC"],
       "language": "en",
-      "keywords": [
-        "baseball",
-        "analysis",
-        "umpire",
-        "player mic'd up"
-      ],
+      "keywords": ["baseball", "analysis", "umpire", "player mic'd up"],
       "top_level_category": "Sports"
     },
     {
@@ -754,21 +466,11 @@
       "kind": "feed",
       "feed_url": "https://www.baseballprospectus.com/feed/",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Baseball",
-        "Sports"
-      ],
+      "tags": ["Money", "Baseball", "Sports"],
       "language": "en",
-      "keywords": [
-        "analysis",
-        "statistics",
-        "player projections"
-      ],
+      "keywords": ["analysis", "statistics", "player projections"],
       "top_level_category": "Sports"
     },
     {
@@ -780,21 +482,11 @@
       "channel_id": "UCAgLUO68gPXGgg5cpqfV-tA",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqOaqGGieVpj-Jj1ZhuZHsVpUel2OfHDF7tO07Rb=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Baseball",
-        "Sports"
-      ],
+      "tags": ["Living", "Baseball", "Sports"],
       "language": "en",
-      "keywords": [
-        "pitching",
-        "analysis",
-        "mechanics"
-      ],
+      "keywords": ["pitching", "analysis", "mechanics"],
       "top_level_category": "Sports"
     },
     {
@@ -805,21 +497,11 @@
       "kind": "reddit",
       "subreddit": "Homeplate",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Baseball",
-        "Sports"
-      ],
+      "tags": ["Local", "Baseball", "Sports"],
       "language": "en",
-      "keywords": [
-        "pitching mechanics",
-        "community",
-        "discussions"
-      ],
+      "keywords": ["pitching mechanics", "community", "discussions"],
       "top_level_category": "Sports"
     },
     {
@@ -830,21 +512,11 @@
       "kind": "reddit",
       "subreddit": "FootballTactics",
       "details": "Sports > Football",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Football",
-        "Sports"
-      ],
+      "tags": ["Living", "Football", "Sports"],
       "language": "en",
-      "keywords": [
-        "tactics",
-        "form formations",
-        "strategies"
-      ],
+      "keywords": ["tactics", "form formations", "strategies"],
       "top_level_category": "Sports"
     },
     {
@@ -856,21 +528,11 @@
       "channel_id": "UC8CSt-oVqy8pUAoKSApTxQw",
       "thumbnail_url": "https://yt3.ggpht.com/86fh33GEEB84T-GD2gIB-3pDQtuuUmchAQbw7SLDAiCOFAghNnYHWlvFcPsityLKfleGzL_3Hg=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Los Angeles",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Sports"
-      ],
+      "tags": ["Local", "Sports"],
       "language": "en",
-      "keywords": [
-        "Los Angeles",
-        "basketball",
-        "Lakers",
-        "sports"
-      ],
+      "keywords": ["Los Angeles", "basketball", "Lakers", "sports"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -882,551 +544,326 @@
       "channel_id": "UC6E2mP01ZLH_kbAyeazCNdg",
       "thumbnail_url": "https://yt3.ggpht.com/AH2IPWIe6xqJ9zDeD1zC24lVpq88Ri1yEkObpxmSo7H_9666TDDClQQrbwQgBNxk2gu_2TbmKQ=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Adventure",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Wanderlust",
-        "Sports",
-        "_hip",
-        "_artsy"
-      ],
+      "tags": ["Living", "Wanderlust", "Sports", "_hip", "_artsy"],
       "language": "en",
-      "keywords": [
-        "adventure",
-        "wildlife encounters",
-        "travel"
-      ],
+      "keywords": ["adventure", "wildlife encounters", "travel"],
       "top_level_category": "Travel & Geography"
     },
     {
       "id": "feed:https://glitternight.com/feed/",
       "title": "Balladeer's Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://glitternight.com/feed/",
       "summary": "Singing the praises of things that slip through the cultural cracks.",
       "details": "Politics > Politics",
       "cleaned_title": "Balladeer's Blog",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Cinema",
-        "Sports"
-      ],
+      "tags": ["Arts & Culture", "Cinema", "Sports"],
       "language": "en",
-      "keywords": [
-        "cultural commentary",
-        "classic films",
-        "sports history"
-      ],
+      "keywords": ["cultural commentary", "classic films", "sports history"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://slyflourish.com/index.xml",
       "title": "Sly Flourish: Helping Dungeon Masters run great D&D games.",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://slyflourish.com/index.xml",
       "summary": "Weekly articles with tips, tricks, tools, and advice for the ffth edition of Dungeons & Dragons (D&D) written by the author of Return of the Lazy Dungeon Master.",
       "details": "Arts > Games > Tabletop Games > Role Playing Games",
       "cleaned_title": "Sly Flourish",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Gaming",
-        "Rock",
-        "Sports"
-      ],
+      "tags": ["Arts & Culture", "Gaming", "Rock", "Sports"],
       "language": "en",
-      "keywords": [
-        "D&D",
-        "tabletop",
-        "RPG",
-        "Dungeon Master",
-        "adventure"
-      ],
+      "keywords": ["D&D", "tabletop", "RPG", "Dungeon Master", "adventure"],
       "top_level_category": "Gaming"
     },
     {
       "id": "feed:https://arseblog.com/feed/",
       "title": "Arseblog ... an Arsenal blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://arseblog.com/feed/",
       "summary": "Arseblog is a dedicated Arsenal blog that covers a variety of topics from match reviews to player analysis. The blog provides insights into the latest happenings around the club, making it a go-to resource for dedicated Arsenal fans.",
       "details": "Recreation > Sport",
       "cleaned_title": "Arseblog",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Local",
-        "Sports"
-      ],
+      "tags": ["Living", "Local", "Sports"],
       "language": "en",
-      "keywords": [
-        "Arsenal",
-        "football",
-        "Premier League",
-        "match review"
-      ],
+      "keywords": ["Arsenal", "football", "Premier League", "match review"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:https://www.giventotri.com/feed.xml",
       "title": "Given to Tri",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.giventotri.com/feed.xml",
       "summary": "I hope to keep competing in triathlons of various distances for the foreseeable future, and sharing what I learn along the way on this website.",
       "details": "Recreation > Sport",
       "cleaned_title": "Given to Tri",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "triathlon",
-        "training",
-        "racing"
-      ],
+      "keywords": ["triathlon", "training", "racing"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:https://impossiblehq.com/feed/",
       "title": "IMPOSSIBLE \u00ae | Push Your Limits\u2122",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://impossiblehq.com/feed/",
       "summary": "Impossible is a performance lifestyle brand for elite athletes and high performers.",
       "details": "Recreation > Sport",
       "cleaned_title": "IMPOSSIBLE",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "performance",
-        "motivation",
-        "athletics"
-      ],
+      "keywords": ["performance", "motivation", "athletics"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:https://janestuart.co.uk/feed/",
       "title": "Jane Stuart - Writer",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://janestuart.co.uk/feed/",
       "summary": "My musings on beer and football culture.",
       "details": "Recreation > Food And Drink > Restaurants > Pubs",
       "cleaned_title": "Jane Stuart",
       "cleaned_author": "Jane Stuart",
-      "tags": [
-        "Arts & Culture",
-        "Sports",
-        "Restaurants"
-      ],
+      "tags": ["Arts & Culture", "Sports", "Restaurants"],
       "language": "en",
-      "keywords": [
-        "beer",
-        "football culture",
-        "pub reviews"
-      ],
+      "keywords": ["beer", "football culture", "pub reviews"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://jonsmalldon.wordpress.com/feed/",
       "title": "Jon's Place",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://jonsmalldon.wordpress.com/feed/",
       "summary": "Talking rubbish since 2009.",
       "details": "Recreation > Sport",
       "cleaned_title": "Jon's Place",
       "cleaned_author": "Jon",
-      "tags": [
-        "Local",
-        "Sports"
-      ],
+      "tags": ["Local", "Sports"],
       "language": "en",
-      "keywords": [
-        "local sports",
-        "theatre",
-        "match reports"
-      ],
+      "keywords": ["local sports", "theatre", "match reports"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:https://www.meangreennation.com/feed",
       "title": "Mean Green Nation",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.meangreennation.com/feed",
       "summary": "Independent U of North Texas Analysis.",
       "details": "Recreation > Sport",
       "cleaned_title": "Mean Green Nation",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "University of North Texas",
-        "college football",
-        "college basketball"
-      ],
+      "keywords": ["University of North Texas", "college football", "college basketball"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:https://playrface.co.uk/feed/",
       "title": "Playrface",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://playrface.co.uk/feed/",
       "summary": "A sports blog covering everything from football to surfing.",
       "details": "Recreation > Sport",
       "cleaned_title": "Playrface",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "sports blog",
-        "football",
-        "surfing"
-      ],
+      "keywords": ["sports blog", "football", "surfing"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:http://www.tabletenniscoaching.com/rss.xml",
       "title": "TableTennisCoaching.com",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://www.tabletenniscoaching.com/rss.xml",
       "summary": "Your Worldwide Center for Table Tennis Coaching.",
       "details": "Recreation > Sport",
       "cleaned_title": "TableTennisCoaching.com",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Science",
-        "Sports"
-      ],
+      "tags": ["Living", "Science", "Sports"],
       "language": "en",
-      "keywords": [
-        "table tennis",
-        "coaching",
-        "sports"
-      ],
+      "keywords": ["table tennis", "coaching", "sports"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:https://uni-watch.com/feed/",
       "title": "Uni Watch",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://uni-watch.com/feed/",
       "summary": "A media project that deconstructs the finer points of sports uniforms (and occasionally other topics) in obsessive and excruciating detail.",
       "details": "Recreation > Sport",
       "cleaned_title": "Uni Watch",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Arts & Culture", "Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "sports uniforms",
-        "aesthetics",
-        "design"
-      ],
+      "keywords": ["sports uniforms", "aesthetics", "design"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:http://rethinkingathletics.blogspot.com/feeds/posts/default",
       "title": "Rethinking Athletics",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://rethinkingathletics.blogspot.com/feeds/posts/default",
       "summary": "A blog exploring various facets of athletics, shedding light on historical events and the evolution of sports.",
       "details": "Recreation > Sport > Athletics",
       "cleaned_title": "Rethinking Athletics",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports",
-        "History"
-      ],
+      "tags": ["Living", "Sports", "History"],
       "language": "en",
-      "keywords": [
-        "athletics",
-        "sports history",
-        "insights",
-        "analysis"
-      ],
+      "keywords": ["athletics", "sports history", "insights", "analysis"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:http://bureboyblog.blogspot.com/feeds/posts/default",
       "title": "Bureboyblog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://bureboyblog.blogspot.com/feeds/posts/default",
       "summary": "Mostly fishing, mainly North Norfolk.",
       "details": "Recreation > Sport > Fishing",
       "cleaned_title": "Bureboyblog",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cities",
-        "Sports"
-      ],
+      "tags": ["Living", "Cities", "Sports"],
       "language": "en",
-      "keywords": [
-        "fishing",
-        "North Norfolk",
-        "dace",
-        "chub"
-      ],
+      "keywords": ["fishing", "North Norfolk", "dace", "chub"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://fishingsgreat.blogspot.com/feeds/posts/default",
       "title": "Fishing & stuff ...",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://fishingsgreat.blogspot.com/feeds/posts/default",
       "summary": "A blog that covers various aspects of fishing, sharing personal stories and tips from the water.",
       "details": "Recreation > Sport > Fishing",
       "cleaned_title": "Fishing & stuff ...",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "fishing",
-        "river diaries",
-        "cold mornings"
-      ],
+      "keywords": ["fishing", "river diaries", "cold mornings"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://btrussell-fishingthroughlife.blogspot.com/feeds/posts/default",
       "title": "Fishing Through Life",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://btrussell-fishingthroughlife.blogspot.com/feeds/posts/default",
       "summary": "fly fishing for trout, bluegill and bass.",
       "details": "Recreation > Sport > Fishing",
       "cleaned_title": "Fishing Through Life",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "fly fishing",
-        "trout",
-        "bluegill",
-        "bass"
-      ],
+      "keywords": ["fly fishing", "trout", "bluegill", "bass"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://jamesthespecimenhunter.blogspot.com/feeds/posts/default",
       "title": "James' Angling Adventures",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://jamesthespecimenhunter.blogspot.com/feeds/posts/default",
       "summary": "Authored by James Denison, this blog chronicles personal angling experiences across various fishing locations.",
       "details": "Recreation > Sport > Fishing",
       "cleaned_title": "James' Angling Adventures",
       "cleaned_author": "James Denison",
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "angling",
-        "Dorset Stour",
-        "barbel",
-        "Itchen"
-      ],
+      "keywords": ["angling", "Dorset Stour", "barbel", "Itchen"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:http://ordinaryangler.blogspot.com/feeds/posts/default",
       "title": "ordinaryangler",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://ordinaryangler.blogspot.com/feeds/posts/default",
       "summary": "Hello, my name is Ian Firkins and I am a very ordinary angler. If there was a school report for fishing, mine would read \"tries hard, could do better\"!",
       "details": "Recreation > Sport > Fishing",
       "cleaned_title": "ordinaryangler",
       "cleaned_author": "Ian Firkins",
-      "tags": [
-        "Living",
-        "Sports",
-        "_personal"
-      ],
+      "tags": ["Living", "Sports", "_personal"],
       "language": "en",
-      "keywords": [
-        "fishing",
-        "ordinary angler",
-        "Trent",
-        "Derwent",
-        "Dove",
-        "Soar"
-      ],
+      "keywords": ["fishing", "ordinary angler", "Trent", "Derwent", "Dove", "Soar"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://www.pikeblog.com/feeds/posts/default",
       "title": "Pike Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.pikeblog.com/feeds/posts/default",
       "summary": "And barbel and chub and perch and carp and\u2026.",
       "details": "Recreation > Sport > Fishing",
       "cleaned_title": "Pike Blog",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "pike",
-        "barbel",
-        "chub",
-        "perch"
-      ],
+      "keywords": ["pike", "barbel", "chub", "perch"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:http://calamitymn.blogspot.com/feeds/posts/default",
       "title": "Piscatorial Quagswagging",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://calamitymn.blogspot.com/feeds/posts/default",
       "summary": "The diary of a specialist angler in around the Warwickshire Avon and its tributaries.",
       "details": "Recreation > Sport > Fishing",
       "cleaned_title": "Piscatorial Quagswagging",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "Angling",
-        "Warwickshire Avon",
-        "barbel"
-      ],
+      "keywords": ["Angling", "Warwickshire Avon", "barbel"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://urbanflyfisher.com/feed/",
       "title": "The Urban Fly Fisher",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://urbanflyfisher.com/feed/",
       "summary": "A satirical look at brownlining...",
       "details": "Recreation > Sport > Fishing",
       "cleaned_title": "The Urban Fly Fisher",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports"
-      ],
+      "tags": ["Living", "Sports"],
       "language": "en",
-      "keywords": [
-        "urban fishing",
-        "satire",
-        "brownlining"
-      ],
+      "keywords": ["urban fishing", "satire", "brownlining"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://onceuponatimeinthevest.blogspot.com/feeds/posts/default",
       "title": "Once Upon a Time in the Vest",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://onceuponatimeinthevest.blogspot.com/feeds/posts/default",
       "summary": "A blog for athletes and fans of 20th century Track and Field culled from articles in sports journals of the day, original articles, book reviews, and commentaries from readers.",
       "details": "Recreation > Sport > Athletics > Running",
       "cleaned_title": "Once Upon a Time in the Vest",
       "cleaned_author": "George Brose",
-      "tags": [
-        "Living",
-        "Sports",
-        "History"
-      ],
+      "tags": ["Living", "Sports", "History"],
       "language": "en",
-      "keywords": [
-        "track and field",
-        "sports history",
-        "nostalgia",
-        "athletics",
-        "coaching"
-      ],
+      "keywords": ["track and field", "sports history", "nostalgia", "athletics", "coaching"],
       "top_level_category": "Sports"
     }
   ],

@@ -10,20 +10,11 @@
       "kind": "feed",
       "feed_url": "https://www.theastropoets.com/feed",
       "details": "Literature",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Arts & Culture",
-        "Poetry",
-        "Astronomy"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Arts & Culture", "Poetry", "Astronomy"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "astrology",
-        "poetry"
-      ],
+      "keywords": ["astrology", "poetry"],
       "top_level_category": "Arts & Culture"
     },
     {
@@ -34,23 +25,11 @@
       "kind": "feed",
       "feed_url": "http://www.astrology.com/horoscopes/daily-extended.rss",
       "details": "Hobbies > Astrology",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Astronomy"
-      ],
+      "tags": ["Arts & Culture", "Living", "Astronomy"],
       "language": "en",
-      "keywords": [
-        "horoscopes",
-        "astrology",
-        "daily readings",
-        "Aries",
-        "Taurus"
-      ],
+      "keywords": ["horoscopes", "astrology", "daily readings", "Aries", "Taurus"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -62,22 +41,11 @@
       "channel_id": "UCfKTTU7BQvBd3mpRoTk95kw",
       "thumbnail_url": "https://yt3.ggpht.com/0zAz9l3VTs2swjrCuPZlINkFHyIMjQmU6CCrYa-NbYrldr4nt5NoJ2hvVBelC7BLg9UFHUi19w=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Hobbies > Astrology",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "David Palmer",
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Astronomy"
-      ],
+      "tags": ["Arts & Culture", "Living", "Astronomy"],
       "language": "en",
-      "keywords": [
-        "astrology forecasts",
-        "horoscopes",
-        "zodiac signs",
-        "tarot"
-      ],
+      "keywords": ["astrology forecasts", "horoscopes", "zodiac signs", "tarot"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -88,22 +56,11 @@
       "kind": "reddit",
       "subreddit": "astrology",
       "details": "Hobbies > Astrology",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Astronomy"
-      ],
+      "tags": ["Arts & Culture", "Living", "Astronomy"],
       "language": "en",
-      "keywords": [
-        "astrology discussions",
-        "horoscopes",
-        "birth charts",
-        "Saturn Return"
-      ],
+      "keywords": ["astrology discussions", "horoscopes", "birth charts", "Saturn Return"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -115,22 +72,11 @@
       "channel_id": "UCumOVjcBcn37LeYbZzaJD3w",
       "thumbnail_url": "https://yt3.ggpht.com/iPeWzaPaPvDX3RcfIYuFX1WOERaSaSNG7CcihTfAz6J5g_pE52LvbchNZdPArRCEjlnIPm9Mqeg=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Hobbies > Astrology",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Astronomy"
-      ],
+      "tags": ["Arts & Culture", "Living", "Astronomy"],
       "language": "en",
-      "keywords": [
-        "podcast",
-        "astrology insights",
-        "Jupiter in Gemini",
-        "horoscopes"
-      ],
+      "keywords": ["podcast", "astrology insights", "Jupiter in Gemini", "horoscopes"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -142,15 +88,9 @@
       "channel_id": "UCKJ08TgPdcW4as_pfY4Dauw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AOPolaQbKoUmBMQ0WxEDNVCqZ0UC2vGXzoUoEYcgkVUFKw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Hobbies > Astrology",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Nadiya Shah",
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Astronomy"
-      ],
+      "tags": ["Arts & Culture", "Living", "Astronomy"],
       "language": "en",
       "keywords": [
         "astrology forecasts",
@@ -168,15 +108,9 @@
       "kind": "reddit",
       "subreddit": "AskAstrologers",
       "details": "Hobbies > Astrology",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Astronomy"
-      ],
+      "tags": ["Arts & Culture", "Living", "Astronomy"],
       "language": "en",
       "keywords": [
         "astrology questions",
@@ -194,121 +128,71 @@
       "kind": "feed",
       "feed_url": "http://astrostyle.com/feed/",
       "details": "Hobbies > Astrology",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "The AstroTwins",
-      "tags": [
-        "Living",
-        "Astronomy",
-        "Writing"
-      ],
+      "tags": ["Living", "Astronomy", "Writing"],
       "language": "en",
-      "keywords": [
-        "horoscopes",
-        "astrology",
-        "compatibility",
-        "career"
-      ],
+      "keywords": ["horoscopes", "astrology", "compatibility", "career"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:http://astroblogger.blogspot.com/feeds/posts/default",
       "title": "Astroblog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://astroblogger.blogspot.com/feeds/posts/default",
       "summary": "Obscured by Clouds. The rough and ready blog of a cloud benighted biologist and amateur astronomer.",
       "details": "Science > Space",
       "cleaned_title": "Astroblog",
       "cleaned_author": null,
-      "tags": [
-        "Science",
-        "Astronomy",
-        "Biology"
-      ],
+      "tags": ["Science", "Astronomy", "Biology"],
       "language": "en",
-      "keywords": [
-        "astronomy",
-        "space",
-        "celestial events"
-      ],
+      "keywords": ["astronomy", "space", "celestial events"],
       "top_level_category": "Science & Nature"
     },
     {
       "id": "feed:https://www.duluthnewstribune.com/lifestyle/astro-bob.rss",
       "title": "Astro Bob | Duluth News Tribune",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.duluthnewstribune.com/lifestyle/astro-bob.rss",
       "summary": "Bob King's 'Astro Bob' is astronomy for everyone. Mars, Milky Way, Northern Lights, constellations, star gazing and much more.",
       "details": "Science > Space",
       "cleaned_title": "Astro Bob",
       "cleaned_author": "Bob King",
-      "tags": [
-        "Science",
-        "Astronomy"
-      ],
+      "tags": ["Science", "Astronomy"],
       "language": "en",
-      "keywords": [
-        "astronomy",
-        "stars",
-        "aurora",
-        "constellations"
-      ],
+      "keywords": ["astronomy", "stars", "aurora", "constellations"],
       "top_level_category": "Science & Nature"
     },
     {
       "id": "feed:https://www.drewexmachina.com/feed/",
       "title": "Drew Ex Machina | Posts",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.drewexmachina.com/feed/",
       "summary": "My website is dedicated to the presentation and discussion of my past and current professional work. My areas of interest include remote sensing, spaceflight, astronomy and astrobiology.",
       "details": "Science > Space",
       "cleaned_title": "Drew Ex Machina",
       "cleaned_author": "Andrew LePage",
-      "tags": [
-        "Science",
-        "Astronomy",
-        "Space"
-      ],
+      "tags": ["Science", "Astronomy", "Space"],
       "language": "en",
-      "keywords": [
-        "space research",
-        "NASA",
-        "astronomy insights"
-      ],
+      "keywords": ["space research", "NASA", "astronomy insights"],
       "top_level_category": "Science & Nature"
     },
     {
       "id": "feed:https://telescoper.blog/feed/",
       "title": "In the Dark",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://telescoper.blog/feed/",
       "summary": "A blog about the Universe, and all that surrounds it.",
       "details": "Science > Space",
       "cleaned_title": "In the Dark",
       "cleaned_author": null,
-      "tags": [
-        "Science",
-        "Astronomy"
-      ],
+      "tags": ["Science", "Astronomy"],
       "language": "en",
-      "keywords": [
-        "universe",
-        "astrobiology",
-        "scientific reflections"
-      ],
+      "keywords": ["universe", "astrobiology", "scientific reflections"],
       "top_level_category": "Science & Nature"
     },
     {
@@ -319,27 +203,12 @@
       "kind": "feed",
       "feed_url": "http://www.quantamagazine.org/feed/",
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular",
-        "ooh_directory"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular", "ooh_directory"],
       "popularity_score": 6.348774433451852,
       "cleaned_author": null,
-      "tags": [
-        "Science",
-        "Biology",
-        "Physics",
-        "Astronomy"
-      ],
+      "tags": ["Science", "Biology", "Physics", "Astronomy"],
       "language": "en",
-      "keywords": [
-        "science",
-        "mathematics",
-        "research",
-        "coral reefs",
-        "black holes"
-      ],
+      "keywords": ["science", "mathematics", "research", "coral reefs", "black holes"],
       "top_level_category": "News & Current Events"
     }
   ],

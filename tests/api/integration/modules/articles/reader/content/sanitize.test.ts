@@ -1,5 +1,10 @@
 import { describe, expect, test } from "bun:test";
-import { htmlToText, sanitizeArticleHtml } from "@modules/articles/reader/content";
+import {
+  htmlToText,
+  processIngestedArticleHtml,
+  sanitizeArticleHtml,
+} from "@modules/articles/reader/content";
+import { expectLinear, hostileInputs } from "@api-tests/support/hostile-text";
 
 describe("articles.sanitize.content", () => {
   test("preserves headings, lists, code blocks, tables, and strips scripts", () => {
@@ -408,5 +413,63 @@ describe("articles.sanitize.content – policy v2", () => {
 
     expect(sanitized).toContain('<aside class="note"><p>An aside.</p></aside>');
     expect(sanitized).toContain("<footer>Author, <cite>Book</cite></footer>");
+  });
+});
+
+describe("articles.sanitize.content – hostile metadata", () => {
+  for (const [name, input] of Object.entries(hostileInputs)) {
+    test(`normalises hostile title, byline and excerpt in linear time: ${name}`, () => {
+      expectLinear(() =>
+        sanitizeArticleHtml("<h1>Real title</h1><p>Body</p>", {
+          title: `Real title ${input}`,
+          byline: input,
+          excerpt: input,
+        }),
+      );
+    });
+  }
+
+  test("still strips a leading title heading that repeats the title", () => {
+    const html = sanitizeArticleHtml("<h1>Real <b>title</b></h1><p>Body text</p>", {
+      title: "Real <i>title</i>",
+    });
+    expect(html).not.toContain("<h1>");
+    expect(html).toContain("Body text");
+  });
+
+  describe("a body of thousands of siblings that carry ids", () => {
+    // The compiler keeps these anchors (rewritten to `kyomi-aN`), and the leading heading sits in
+    // front of them, so every read of the article asks for its first meaningful child.
+    const anchors = (count: number) =>
+      Array.from({ length: count }, (_, index) => `<a id="a${index}"></a>`).join("");
+
+    test.each(["Quux", "Zebra"])(
+      "finds the leading block without copying the children (title %p)",
+      (title) => {
+        const started = performance.now();
+        const processed = processIngestedArticleHtml(`<h1>Quux</h1>${anchors(6_000)}<p>x</p>`, {
+          baseUrl: "https://example.com/post",
+          title,
+        });
+        const elapsed = performance.now() - started;
+
+        // Copying `children` took seconds (superquadratic in the number of ids); this takes about
+        // a second on a loaded machine, so the bound is generous.
+        expect(elapsed).toBeLessThan(4_000);
+        expect(processed.text).toContain("x");
+        // The heading repeats the first title, so it is stripped; under the other title it is kept.
+        expect(processed.html.includes("<h1")).toBe(title !== "Quux");
+      },
+      30_000,
+    );
+
+    test("still skips leading empty siblings to the first meaningful one", () => {
+      const html = sanitizeArticleHtml(`<div></div><div> </div><h1>Real title</h1><p>Body</p>`, {
+        title: "Real title",
+      });
+
+      expect(html).not.toContain("<h1>");
+      expect(html).toContain("Body");
+    });
   });
 });

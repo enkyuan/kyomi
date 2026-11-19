@@ -3,8 +3,8 @@ const SESSION_UNAVAILABLE_MESSAGE = "Unable to load your session. Try again.";
 /**
  * What the page may hold of the signed-in session. This state is serialized into the HTML document
  * and returned to the browser on every navigation, so it is built from an allowlist: never the
- * session token (a bearer credential), the IP address or the user agent. Settings reads those from
- * the live session or the sessions list when it needs them.
+ * IP address or the user agent (and `get-session` no longer returns the session token). Settings
+ * reads those from the live session or the sessions list when it needs them.
  */
 type AuthenticatedSession = {
   session: {
@@ -42,13 +42,13 @@ function hasStringFields(record: Record<string, unknown>, fields: string[]) {
   return fields.every((field) => typeof record[field] === "string");
 }
 
-/** A complete session record from the API. It must carry a token, though none is passed on. */
+/** A complete session record from the API. It carries no token: `get-session` leaves it out. */
 function isSessionRecord(
   value: unknown,
 ): value is AuthenticatedSession["session"] & Record<string, unknown> {
   return (
     isRecord(value) &&
-    hasStringFields(value, ["id", "expiresAt", "token", "createdAt", "updatedAt", "userId"])
+    hasStringFields(value, ["id", "expiresAt", "createdAt", "updatedAt", "userId"])
   );
 }
 

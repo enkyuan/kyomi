@@ -1,4 +1,5 @@
 import { decodeHtmlEntities } from "../lib/html-entities";
+import { elementInner, openTags, stripTagMarkup } from "../lib/text-scan";
 
 export const SNAPSHOT_PROVIDERS = ["x", "bluesky", "mastodon", "threads", "instagram"] as const;
 export type SnapshotProvider = (typeof SNAPSHOT_PROVIDERS)[number];
@@ -80,16 +81,12 @@ function plainText(value: string | undefined): { type: "text"; value: string }[]
 
 /** Converts a small HTML fragment to text, keeping paragraph and line breaks. */
 export function htmlFragmentToText(html: string): string {
-  const withBreaks = html
-    .replace(/<br\s*\/?>/gi, "\n")
-    .replace(/<\/p>\s*<p[^>]*>/gi, "\n\n")
-    .replace(/<[^>]*>/g, "");
-  return decodeHtmlEntities(withBreaks).trim();
+  const withBreaks = html.replace(/<br\s*\/?>/gi, "\n").replace(/<\/p>\s*<p[^>]*>/gi, "\n\n");
+  return decodeHtmlEntities(stripTagMarkup(withBreaks, "")).trim();
 }
 
 function meta(html: string, property: string): string | undefined {
-  const tags = html.match(/<meta\b[^>]*>/gi) ?? [];
-  for (const tag of tags) {
+  for (const tag of openTags(html, "meta")) {
     const key = /\s(?:property|name)\s*=\s*["']([^"']+)["']/i.exec(tag)?.[1];
     if (key?.toLowerCase() !== property) continue;
     const content = /\scontent\s*=\s*"([^"]*)"|\scontent\s*=\s*'([^']*)'/i.exec(tag);
@@ -210,7 +207,7 @@ function parseXOembed(body: string, fetchedAt: string): EmbedSnapshot | null {
   const html = str(oembed?.html);
   const name = str(oembed?.author_name);
   if (!html || !name) return null;
-  const paragraph = /<p\b[^>]*>([\s\S]*?)<\/p>/i.exec(html)?.[1];
+  const paragraph = elementInner(html, "p");
   if (!paragraph) return null;
   const authorUrl = httpUrl(oembed?.author_url);
   const handle = authorUrl ? new URL(authorUrl).pathname.split("/").filter(Boolean)[0] : undefined;

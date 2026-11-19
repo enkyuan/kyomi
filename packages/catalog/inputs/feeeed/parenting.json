@@ -10,21 +10,11 @@
       "kind": "feed",
       "feed_url": "https://emilyley.substack.com/feed",
       "details": "Parenting",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Living",
-        "Parenting",
-        "Cooking"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Living", "Parenting", "Cooking"],
       "cleaned_author": "Emily Ley",
       "language": "en",
-      "keywords": [
-        "parenting",
-        "motherhood",
-        "recipes"
-      ],
+      "keywords": ["parenting", "motherhood", "recipes"],
       "top_level_category": "Family & Relationships"
     },
     {
@@ -35,21 +25,11 @@
       "kind": "feed",
       "feed_url": "https://emilywrites.substack.com/feed",
       "details": "Parenting",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Living",
-        "Parenting",
-        "_hip"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Living", "Parenting", "_hip"],
       "cleaned_author": "Emily Writes",
       "language": "en",
-      "keywords": [
-        "parenting",
-        "humor",
-        "snark"
-      ],
+      "keywords": ["parenting", "humor", "snark"],
       "top_level_category": "Family & Relationships"
     },
     {
@@ -60,20 +40,11 @@
       "kind": "feed",
       "feed_url": "https://designmom.substack.com/feed",
       "details": "Parenting",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Living",
-        "Parenting"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Living", "Parenting"],
       "cleaned_author": "Gabrielle Blair",
       "language": "en",
-      "keywords": [
-        "design",
-        "parenting",
-        "curiosity"
-      ],
+      "keywords": ["design", "parenting", "curiosity"],
       "top_level_category": "Family & Relationships"
     },
     {
@@ -84,144 +55,84 @@
       "kind": "feed",
       "feed_url": "https://melindawmoyer.substack.com/feed",
       "details": "Parenting",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Living",
-        "Parenting",
-        "Health"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Living", "Parenting", "Health"],
       "cleaned_author": "Melinda Wenner Moyer",
       "language": "en",
-      "keywords": [
-        "parenting advice",
-        "science",
-        "parenting challenges"
-      ],
+      "keywords": ["parenting advice", "science", "parenting challenges"],
       "top_level_category": "Family & Relationships"
     },
     {
       "id": "feed:https://www.freerangekids.com/feed/",
       "title": "Free-Range Kids",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.freerangekids.com/feed/",
       "summary": "How parents and teachers can let go and grow.",
       "details": "Society",
       "cleaned_title": "Free-Range Kids",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Parenting"
-      ],
+      "tags": ["Living", "Parenting"],
       "language": "en",
-      "keywords": [
-        "parenting",
-        "independence",
-        "child development"
-      ],
+      "keywords": ["parenting", "independence", "child development"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://cupofjo.com/feed/",
       "title": "Cup of Jo",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://cupofjo.com/feed/",
       "summary": "A daily women\u2019s lifestyle site that covers style, culture, food, travel, relationships and parenting.",
       "details": "Recreation",
       "cleaned_title": "Cup of Jo",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "LGBTQ",
-        "Fashion",
-        "Cooking",
-        "Parenting",
-        "_mainstream"
-      ],
+      "tags": ["Living", "LGBTQ", "Fashion", "Cooking", "Parenting", "_mainstream"],
       "language": "en",
-      "keywords": [
-        "lifestyle",
-        "relationships",
-        "food"
-      ],
+      "keywords": ["lifestyle", "relationships", "food"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://petharmonytraining.com/feed/",
       "title": "Pet Harmony",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://petharmonytraining.com/feed/",
       "summary": "Helping you and your pet live harmoniously.",
       "details": "Recreation",
       "cleaned_title": "Pet Harmony",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Parenting",
-        "Writing"
-      ],
+      "tags": ["Living", "Parenting", "Writing"],
       "language": "en",
-      "keywords": [
-        "pet care",
-        "dog training",
-        "behavior tracking",
-        "pet aging"
-      ],
+      "keywords": ["pet care", "dog training", "behavior tracking", "pet aging"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://sallylait.com/blog/index.xml",
       "title": "Sally Lait | Blogs",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://sallylait.com/blog/index.xml",
       "details": "Technology",
       "cleaned_title": "Sally Lait Blogs",
       "cleaned_author": "Sally Lait",
       "summary": "A personal blog featuring stories and reflections on parenting, travel, and everyday challenges, particularly from the perspective of a young family.",
-      "tags": [
-        "Living",
-        "Parenting"
-      ],
+      "tags": ["Living", "Parenting"],
       "language": "en",
-      "keywords": [
-        "family",
-        "travel",
-        "parenting"
-      ],
+      "keywords": ["family", "travel", "parenting"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
       "id": "feed:https://growinguptransgender.com/feed/",
       "title": "Growing Up Transgender",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://growinguptransgender.com/feed/",
       "summary": "Raising our trans child.",
       "details": "Society",
       "cleaned_title": "Growing Up Transgender",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Activism",
-        "Mental Health",
-        "Parenting",
-        "LGBTQ"
-      ],
+      "tags": ["Living", "Activism", "Mental Health", "Parenting", "LGBTQ"],
       "language": "en",
       "keywords": [
         "transgender",

@@ -29,4 +29,3 @@ This repository follows a monorepo shape modeled after larger production repos:
 - `packages/tsconfig/base.json`: default strict TS compiler baseline.
 - `packages/tsconfig/web.json`: browser/react-focused TS defaults.
 - `packages/tsconfig/node.json`: node/server-focused TS defaults.
-

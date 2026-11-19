@@ -10,26 +10,12 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/eater/nyc",
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 2.7595419669077423,
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Local",
-        "Restaurants",
-        "Cities",
-        "NYC"
-      ],
+      "tags": ["Living", "Local", "Restaurants", "Cities", "NYC"],
       "language": "en",
-      "keywords": [
-        "restaurants",
-        "New York",
-        "nightlife",
-        "food"
-      ],
+      "keywords": ["restaurants", "New York", "nightlife", "food"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -41,23 +27,11 @@
       "channel_id": "UCl9E4Zxa8CVr2LBLD0_TaNg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMOVf4_HnLEqzm_hBGhs_tEEzopLNHBKl743W6p1Q=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Baseball",
-        "Sports",
-        "NYC"
-      ],
+      "tags": ["Living", "Baseball", "Sports", "NYC"],
       "language": "en",
-      "keywords": [
-        "baseball",
-        "analysis",
-        "umpire",
-        "player mic'd up"
-      ],
+      "keywords": ["baseball", "analysis", "umpire", "player mic'd up"],
       "top_level_category": "Sports"
     },
     {
@@ -69,14 +43,9 @@
       "channel_id": "UCBkcw8h7epT_bK0QzuY2Bmg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqNnRYRvKOppwDdCbg8u8tnBvgym_6KjSVabcrFgsA=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Regional & Local"
@@ -86,16 +55,11 @@
       "title": "r/nyc",
       "kind": "reddit",
       "subreddit": "nyc",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "r/nyc",
       "cleaned_author": null,
       "summary": "A dynamic subreddit dedicated to everything about New York City, where users engage in discussions ranging from local events to civic matters.",
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
       "keywords": []
     },
@@ -107,14 +71,9 @@
       "kind": "reddit",
       "subreddit": "AskNYC",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Regional & Local"
@@ -127,14 +86,9 @@
       "kind": "feed",
       "feed_url": "http://www.timeout.com/newyork/blog/feed.rss",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Regional & Local"
@@ -147,18 +101,9 @@
       "kind": "feed",
       "feed_url": "http://forgotten-ny.com/feed/",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC",
-        "History",
-        "Urban",
-        "_hip",
-        "_personal"
-      ],
+      "tags": ["Local", "NYC", "History", "Urban", "_hip", "_personal"],
       "language": "en",
       "keywords": [
         "New York City",
@@ -177,15 +122,9 @@
       "kind": "feed",
       "feed_url": "http://www.newyorkyimby.com/feed",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC",
-        "Urban"
-      ],
+      "tags": ["Local", "NYC", "Urban"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Regional & Local"
@@ -198,14 +137,9 @@
       "kind": "feed",
       "feed_url": "http://www.overheardinnewyork.com/feed",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Regional & Local"
@@ -218,14 +152,9 @@
       "kind": "feed",
       "feed_url": "https://www.foundny.com/feed",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Regional & Local"
@@ -238,14 +167,9 @@
       "kind": "feed",
       "feed_url": "https://annekadet.substack.com/feed",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Regional & Local"
@@ -258,20 +182,11 @@
       "kind": "feed",
       "feed_url": "https://katiehonan.substack.com/feed",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
-      "keywords": [
-        "New York",
-        "local news",
-        "current events"
-      ],
+      "keywords": ["New York", "local news", "current events"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -282,20 +197,11 @@
       "kind": "feed",
       "feed_url": "https://www.maximumnewyork.com/feed",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
-      "keywords": [
-        "housing crisis",
-        "urban development",
-        "NYC news"
-      ],
+      "keywords": ["housing crisis", "urban development", "NYC news"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -306,20 +212,11 @@
       "kind": "feed",
       "feed_url": "https://ryanmandelbirder.substack.com/feed",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
-      "keywords": [
-        "nature",
-        "birds",
-        "New York City"
-      ],
+      "keywords": ["nature", "birds", "New York City"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -330,92 +227,51 @@
       "kind": "feed",
       "feed_url": "https://thethornnyc.substack.com/feed",
       "details": "Local > New York City",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "local governance",
-        "NYC news"
-      ],
+      "keywords": ["politics", "local governance", "NYC news"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "curated:gothamist",
       "title": "Gothamist",
       "kind": "feed",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "summary": "Local news and culture from New York City.",
       "feed_url": "https://gothamist.com/feed",
       "cleaned_title": "Gothamist",
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Cities",
-        "Activism",
-        "NYC"
-      ],
+      "tags": ["Local", "Cities", "Activism", "NYC"],
       "language": "en",
-      "keywords": [
-        "New York City",
-        "local news",
-        "culture"
-      ]
+      "keywords": ["New York City", "local news", "culture"]
     },
     {
       "id": "feed:http://www.wnyc.org/feeds/channels/wnyc-news",
       "title": "WNYC News",
       "kind": "feed",
       "feed_url": "http://www.wnyc.org/feeds/channels/wnyc-news",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "WNYC News",
       "cleaned_author": null,
       "summary": "A reliable source for local and national news, WNYC covers a range of topics including politics, culture, and community events in New York City.",
-      "tags": [
-        "Local",
-        "NYC"
-      ],
+      "tags": ["Local", "NYC"],
       "language": "en",
-      "keywords": [
-        "news",
-        "New York",
-        "politics",
-        "current events"
-      ]
+      "keywords": ["news", "New York", "politics", "current events"]
     },
     {
       "id": "feed:https://hellgatenyc.com/all-posts/rss/",
       "title": "Hell Gate \u2013 hellgatenyc.com",
       "kind": "feed",
       "feed_url": "https://hellgatenyc.com/all-posts/rss/",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "Hell Gate",
       "cleaned_author": null,
       "summary": "A unique, worker-owned news platform dedicated to in-depth reporting on New York City, tackling local issues with a fresh perspective.",
-      "tags": [
-        "Local",
-        "NYC",
-        "_alternative"
-      ],
+      "tags": ["Local", "NYC", "_alternative"],
       "language": "en",
-      "keywords": [
-        "local news",
-        "New York City",
-        "community issues",
-        "independent journalism"
-      ]
+      "keywords": ["local news", "New York City", "community issues", "independent journalism"]
     }
   ],
   "child_categories": []

@@ -10,14 +10,9 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/MattsTravelSite",
       "details": "Travel",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Nomadic Matt",
-      "tags": [
-        "Living",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Wanderlust"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Travel & Geography"
@@ -30,14 +25,9 @@
       "kind": "feed",
       "feed_url": "https://www.gocurrycracker.com/feed/",
       "details": "Travel",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Wanderlust"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Travel & Geography"
@@ -50,22 +40,11 @@
       "kind": "feed",
       "feed_url": "http://www.bbc.com/travel/feed.rss",
       "details": "Travel",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cities",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cities", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "travel",
-        "guides",
-        "articles"
-      ],
+      "keywords": ["travel", "guides", "articles"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -77,24 +56,11 @@
       "channel_id": "UCI6gB6eZS0c3ZrjcJq7xAtA",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AOPolaQPCWdmw3OtEbmPi8Ji_QYxk97j5rQtt53bkW6YEA=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Hobbies > Fishing",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Living",
-        "DIY",
-        "Gardens",
-        "Wanderlust"
-      ],
+      "tags": ["Tech", "Living", "DIY", "Gardens", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "fishing",
-        "bass fishing",
-        "YouTube channel",
-        "adventures"
-      ],
+      "keywords": ["fishing", "bass fishing", "YouTube channel", "adventures"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -106,23 +72,11 @@
       "channel_id": "UCt6iqDb8Pcza_A_UW5XMFyg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AOPolaSfAg_8O2NU2CPQ3OC6jcMVWeMvf_xdso8vR5hRaA=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Hobbies > Fishing",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Living",
-        "Gardens",
-        "Wanderlust"
-      ],
+      "tags": ["Tech", "Living", "Gardens", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "fishing",
-        "freshwater",
-        "YouTube channel",
-        "adventures"
-      ],
+      "keywords": ["fishing", "freshwater", "YouTube channel", "adventures"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -133,23 +87,11 @@
       "kind": "reddit",
       "subreddit": "FlyFishing",
       "details": "Hobbies > Fishing",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Living",
-        "Gardens",
-        "Wanderlust"
-      ],
+      "tags": ["Tech", "Living", "Gardens", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "fly fishing",
-        "subreddit",
-        "community",
-        "photography"
-      ],
+      "keywords": ["fly fishing", "subreddit", "community", "photography"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -161,23 +103,11 @@
       "channel_id": "UCL0L7RQ8mrO10OLRlWPoq6A",
       "thumbnail_url": "https://yt3.ggpht.com/hfM0zcgUaXThL_sVH1TWvGaqu5nmekZ_NkCTZWVYWce5BI-TG5HoCPotr39b0hjYyhBkAWsuZw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Hobbies > Fishing",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Living",
-        "Gardens",
-        "Wanderlust"
-      ],
+      "tags": ["Tech", "Living", "Gardens", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "saltwater fishing",
-        "YouTube channel",
-        "adventures",
-        "sharks"
-      ],
+      "keywords": ["saltwater fishing", "YouTube channel", "adventures", "sharks"],
       "top_level_category": "Home & Hobbies"
     },
     {
@@ -189,24 +119,11 @@
       "channel_id": "UC6DIWqCjBs24dchRgLwziZA",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMA5rv021brW4bTEYmhWMT4JnO_I2lkQd2RLIG9Iw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Olympics",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports",
-        "Olympics",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Sports", "Olympics", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "gymnastics",
-        "tutorials",
-        "Olympic sport",
-        "training tips",
-        "comic relief"
-      ],
+      "keywords": ["gymnastics", "tutorials", "Olympic sport", "training tips", "comic relief"],
       "top_level_category": "Sports"
     },
     {
@@ -218,21 +135,11 @@
       "channel_id": "UCchgIh8Tc4sTmBfnMQ5pDdg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMx_-Mkmuil3vVoHCg6KgDpC-5EUzGr616CwhTg7g=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Europe",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Rick Steves",
-      "tags": [
-        "Living",
-        "Cities",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Cities", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "travel",
-        "Europe",
-        "culture"
-      ],
+      "keywords": ["travel", "Europe", "culture"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -244,23 +151,11 @@
       "channel_id": "UC6E2mP01ZLH_kbAyeazCNdg",
       "thumbnail_url": "https://yt3.ggpht.com/AH2IPWIe6xqJ9zDeD1zC24lVpq88Ri1yEkObpxmSo7H_9666TDDClQQrbwQgBNxk2gu_2TbmKQ=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Adventure",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Wanderlust",
-        "Sports",
-        "_hip",
-        "_artsy"
-      ],
+      "tags": ["Living", "Wanderlust", "Sports", "_hip", "_artsy"],
       "language": "en",
-      "keywords": [
-        "adventure",
-        "wildlife encounters",
-        "travel"
-      ],
+      "keywords": ["adventure", "wildlife encounters", "travel"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -272,21 +167,11 @@
       "channel_id": "UClFrYG5h7Vbz-Y2CEIEU6EQ",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMmOCGdJJDb3DhXQT4pRMABg_jNPzfinMY4wUocbQ=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Adventure",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Wanderlust",
-        "DIY"
-      ],
+      "tags": ["Living", "Wanderlust", "DIY"],
       "language": "en",
-      "keywords": [
-        "outdoor adventures",
-        "hiking",
-        "exploration"
-      ],
+      "keywords": ["outdoor adventures", "hiking", "exploration"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -297,20 +182,11 @@
       "kind": "feed",
       "feed_url": "http://adventure.com/feed/",
       "details": "Travel > Adventure",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "adventure travel",
-        "guides",
-        "stories"
-      ],
+      "keywords": ["adventure travel", "guides", "stories"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -321,20 +197,11 @@
       "kind": "feed",
       "feed_url": "https://www.theoutbound.com/journal.rss",
       "details": "Travel > Adventure",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "outdoor news",
-        "guides",
-        "community"
-      ],
+      "keywords": ["outdoor news", "guides", "community"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -346,20 +213,11 @@
       "channel_id": "UC4ijq8Cg-8zQKx8OH12dUSw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqM6rEswtp0bMfL79PZod6PTw9K6wbHPj8r2hH-ywA=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Adventure",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Kara and Nate",
-      "tags": [
-        "Living",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "travel vlogging",
-        "adventures",
-        "exploration"
-      ],
+      "keywords": ["travel vlogging", "adventures", "exploration"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -371,20 +229,11 @@
       "channel_id": "UCuAHfJyWROB4XRReS43EWUw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqPg0HaJU6QuJe0_2qXF2vhOW1RWIXVbTVDqvADYoA=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Adventure",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "family travel",
-        "adventure",
-        "unique experiences"
-      ],
+      "keywords": ["family travel", "adventure", "unique experiences"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -396,203 +245,116 @@
       "channel_id": "UCYxsXxbjJO1YYa9yQ3lKC8w",
       "thumbnail_url": "https://yt3.ggpht.com/8pTWfgrXfrGin2LbwiuSARil48hGkyml2P2a-bRFCrWodkiA3sfnSjGl0aa2uFhXxGtSgazmEW0=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Hotels & Accommodation",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cities",
-        "Restaurants",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cities", "Restaurants", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "luxury travel",
-        "hotel reviews",
-        "travel guides"
-      ],
+      "keywords": ["luxury travel", "hotel reviews", "travel guides"],
       "top_level_category": "Travel & Geography"
     },
     {
       "id": "feed:https://adventureite.com//feed.xml",
       "title": "Adventuresite.com",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://adventureite.com//feed.xml",
       "summary": "Family focused outdoor adventures.",
       "details": "Recreation > Travel",
       "cleaned_title": "Adventuresite.com",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Wanderlust",
-        "DIY"
-      ],
+      "tags": ["Living", "Arts & Culture", "Wanderlust", "DIY"],
       "language": "en",
-      "keywords": [
-        "family travel",
-        "outdoor adventures",
-        "hiking",
-        "camping"
-      ],
+      "keywords": ["family travel", "outdoor adventures", "hiking", "camping"],
       "top_level_category": "Travel & Geography"
     },
     {
       "id": "feed:https://justalittlefurther.com/just-a-little-further?format=rss",
       "title": "Our Blog \u2014 Just a Little Further",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://justalittlefurther.com/just-a-little-further?format=rss",
       "summary": "It's not just travel...it's our lifestyle.",
       "details": "Recreation > Travel",
       "cleaned_title": "Just a Little Further",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Local",
-        "Cities",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Local", "Cities", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "travel",
-        "lifestyle",
-        "adventure"
-      ],
+      "keywords": ["travel", "lifestyle", "adventure"],
       "top_level_category": "Travel & Geography"
     },
     {
       "id": "feed:https://www.packing-up-the-pieces.com/feed/",
       "title": "Packing Up The Pieces | Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.packing-up-the-pieces.com/feed/",
       "summary": "Travel. Make the Most of Life's Grand Adventure.",
       "details": "Recreation > Travel",
       "cleaned_title": "Packing Up The Pieces",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Local",
-        "Cities",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Local", "Cities", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "travel",
-        "itinerary",
-        "Camino de Santiago"
-      ],
+      "keywords": ["travel", "itinerary", "Camino de Santiago"],
       "top_level_category": "Travel & Geography"
     },
     {
       "id": "feed:https://pmags.com/feed",
       "title": "PMags.com",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://pmags.com/feed",
       "summary": "Backpacking, Camping, Hiking, and the Outdoors.",
       "details": "Recreation > Travel",
       "cleaned_title": "PMags.com",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "DIY",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "DIY", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "outdoors",
-        "hiking",
-        "camping"
-      ],
+      "keywords": ["outdoors", "hiking", "camping"],
       "top_level_category": "Travel & Geography"
     },
     {
       "id": "feed:https://randomwire.com/feed/",
       "title": "Randomwire",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://randomwire.com/feed/",
       "summary": "Exploring Asia since 2003.",
       "details": "Recreation > Travel",
       "cleaned_title": "Randomwire",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cities",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Cities", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "Asia",
-        "travel",
-        "culture"
-      ],
+      "keywords": ["Asia", "travel", "culture"],
       "top_level_category": "Travel & Geography"
     },
     {
       "id": "feed:https://sinclairtrails.com/feed/",
       "title": "Sinclair Trails",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://sinclairtrails.com/feed/",
       "summary": "The travels of David and Jennifer Sinclair, full-timing in their Tiffin Allegro Bus 40SP motorhome.",
       "details": "Recreation > Travel",
       "cleaned_title": "Sinclair Trails",
       "cleaned_author": "David and Jennifer Sinclair",
-      "tags": [
-        "Living",
-        "Cities",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "Cities", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "travel",
-        "motorhome",
-        "nature"
-      ],
+      "keywords": ["travel", "motorhome", "nature"],
       "top_level_category": "Travel & Geography"
     },
     {
       "title": "r/interestingasfuck",
       "popularity_score": 3.094956412347717,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "subreddit": "interestingasfuck",
       "kind": "reddit",
       "id": "reddit:interestingasfuck",
       "cleaned_title": "r/interestingasfuck",
       "cleaned_author": null,
       "summary": "A subreddit dedicated to showcasing unique and fascinating content that captures the essence of curiosity.",
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Photos",
-        "Wanderlust"
-      ],
+      "tags": ["Arts & Culture", "Living", "Photos", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "interesting",
-        "unique",
-        "curiosity"
-      ]
+      "keywords": ["interesting", "unique", "curiosity"]
     },
     {
       "id": "feed:atlasobscura.com:Atlas Obscura - Latest Articles and Places",
@@ -602,26 +364,12 @@
       "kind": "feed",
       "feed_url": "https://www.atlasobscura.com/feeds/latest",
       "details": "Travel",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular",
-        "ooh_directory"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular", "ooh_directory"],
       "popularity_score": 1.9696687370600412,
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cities",
-        "Wanderlust",
-        "World News"
-      ],
+      "tags": ["Living", "Cities", "Wanderlust", "World News"],
       "language": "en",
-      "keywords": [
-        "travel",
-        "curiosities",
-        "history",
-        "locations"
-      ],
+      "keywords": ["travel", "curiosities", "history", "locations"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -632,23 +380,11 @@
       "kind": "feed",
       "feed_url": "http://www.adventurouskate.com/feed/",
       "details": "Travel",
-      "sources": [
-        "original_feed_db",
-        "ooh_directory"
-      ],
+      "sources": ["original_feed_db", "ooh_directory"],
       "cleaned_author": "Kate",
-      "tags": [
-        "Living",
-        "DIY",
-        "Wanderlust"
-      ],
+      "tags": ["Living", "DIY", "Wanderlust"],
       "language": "en",
-      "keywords": [
-        "solo travel",
-        "women travel",
-        "Italy",
-        "tips"
-      ],
+      "keywords": ["solo travel", "women travel", "Italy", "tips"],
       "top_level_category": "Travel & Geography"
     }
   ],

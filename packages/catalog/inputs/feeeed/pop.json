@@ -10,9 +10,7 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/TheFaderMagazine",
       "details": "Entertainment > Music",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
       "tags": [
         "Arts & Culture",
@@ -25,38 +23,22 @@
         "_high_quality"
       ],
       "language": "en",
-      "keywords": [
-        "music news",
-        "emerging artists",
-        "cultural trends",
-        "Oscars",
-        "Drake"
-      ],
+      "keywords": ["music news", "emerging artists", "cultural trends", "Oscars", "Drake"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:https://psychotronicpaul.blogspot.com/feeds/posts/default",
       "title": "Way Too Damn Lazy To Write A Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://psychotronicpaul.blogspot.com/feeds/posts/default",
       "details": "Arts > TV",
       "cleaned_title": "Way Too Damn Lazy To Write A Blog",
       "cleaned_author": "Psychotronic Paul",
       "summary": "A personal blog sharing insights and reflections on 20th-century pop culture, from cartoons to notable figures.",
-      "tags": [
-        "Arts & Culture",
-        "Comics",
-        "Pop"
-      ],
+      "tags": ["Arts & Culture", "Comics", "Pop"],
       "language": "en",
-      "keywords": [
-        "pop culture",
-        "cartoons",
-        "historical insights"
-      ],
+      "keywords": ["pop culture", "cartoons", "historical insights"],
       "top_level_category": "Entertainment"
     }
   ],

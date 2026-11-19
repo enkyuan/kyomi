@@ -11,21 +11,11 @@
       "feed_url": "http://feeds.arstechnica.com/arstechnica/index/",
       "popularity_score": 15.744693339786506,
       "details": "Popular",
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Cybersecurity",
-        "Gadgets"
-      ],
+      "tags": ["Tech", "Cybersecurity", "Gadgets"],
       "language": "en",
-      "keywords": [
-        "technology",
-        "news",
-        "deep dive"
-      ],
+      "keywords": ["technology", "news", "deep dive"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -36,23 +26,12 @@
       "kind": "feed",
       "feed_url": "http://krebsonsecurity.com/feed/",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 3.652429631833218,
       "cleaned_author": "Brian Krebs",
-      "tags": [
-        "Tech",
-        "Cybersecurity",
-        "Internet"
-      ],
+      "tags": ["Tech", "Cybersecurity", "Internet"],
       "language": "en",
-      "keywords": [
-        "cybersecurity",
-        "data breaches",
-        "security news"
-      ],
+      "keywords": ["cybersecurity", "data breaches", "security news"],
       "top_level_category": "Software & Engineering"
     },
     {
@@ -63,23 +42,12 @@
       "kind": "feed",
       "feed_url": "http://thehackernews.com/feeds/posts/default",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 2.9696065892624683,
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "cybersecurity news",
-        "data breaches",
-        "exploits",
-        "hacking news"
-      ],
+      "keywords": ["cybersecurity news", "data breaches", "exploits", "hacking news"],
       "top_level_category": "Software & Engineering"
     },
     {
@@ -91,20 +59,11 @@
       "channel_id": "UCRAxwkquV9-2NK5bmS_IHAQ",
       "thumbnail_url": "https://yt3.ggpht.com/7AxmDfwQ-3OIWlHFlGxtPp16ffUY9DP8ilgX93nTviz6Y8DXKCyhmqheWIHZWdD5q5EDOPZ0=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "cybersecurity tips",
-        "threat analysis",
-        "data protection"
-      ],
+      "keywords": ["cybersecurity tips", "threat analysis", "data protection"],
       "top_level_category": "Software & Engineering"
     },
     {
@@ -116,20 +75,11 @@
       "channel_id": "UCRikWa5PGyQZw0yATk8iZWg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMkymY3DRHpDC_zVfzeRBv0AeZGcy73sob5sG9brw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "cybersecurity trends",
-        "interviews",
-        "crypto theft"
-      ],
+      "keywords": ["cybersecurity trends", "interviews", "crypto theft"],
       "top_level_category": "Software & Engineering"
     },
     {
@@ -140,20 +90,11 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/Securityweek",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "cybersecurity news",
-        "threat analysis",
-        "compliance"
-      ],
+      "keywords": ["cybersecurity news", "threat analysis", "compliance"],
       "top_level_category": "Software & Engineering"
     },
     {
@@ -164,21 +105,11 @@
       "kind": "feed",
       "feed_url": "https://ventureinsecurity.net/feed",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "cybersecurity",
-        "technology",
-        "investors",
-        "startups"
-      ],
+      "keywords": ["cybersecurity", "technology", "investors", "startups"],
       "top_level_category": "Software & Engineering"
     },
     {
@@ -189,21 +120,11 @@
       "kind": "feed",
       "feed_url": "https://franklyspeaking.substack.com/feed",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "security",
-        "AI",
-        "technology",
-        "thoughts"
-      ],
+      "keywords": ["security", "AI", "technology", "thoughts"],
       "top_level_category": "Software & Engineering"
     },
     {
@@ -214,21 +135,11 @@
       "kind": "feed",
       "feed_url": "https://www.detectionengineering.net/feed",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "detection engineering",
-        "technology",
-        "news",
-        "how-tos"
-      ],
+      "keywords": ["detection engineering", "technology", "news", "how-tos"],
       "top_level_category": "Software & Engineering"
     },
     {
@@ -239,22 +150,11 @@
       "kind": "feed",
       "feed_url": "https://techletters.substack.com/feed",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Lukasz Olejnik",
-      "tags": [
-        "Tech",
-        "Cybersecurity",
-        "_intellectual"
-      ],
+      "tags": ["Tech", "Cybersecurity", "_intellectual"],
       "language": "en",
-      "keywords": [
-        "cybersecurity",
-        "privacy",
-        "technology policy",
-        "analysis"
-      ],
+      "keywords": ["cybersecurity", "privacy", "technology policy", "analysis"],
       "top_level_category": "Software & Engineering"
     },
     {
@@ -265,171 +165,101 @@
       "kind": "feed",
       "feed_url": "https://www.secwale.com/feed",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "cloud",
-        "AI",
-        "cybersecurity",
-        "technology"
-      ],
+      "keywords": ["cloud", "AI", "cybersecurity", "technology"],
       "top_level_category": "Software & Engineering"
     },
     {
       "id": "feed:https://www.eff.org/rss/updates.xml",
       "title": "Deeplinks Blog | Electronic Frontier Foundation",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.eff.org/rss/updates.xml",
       "details": "Technology",
       "cleaned_title": "Deeplinks Blog | Electronic Frontier Foundation",
       "cleaned_author": null,
       "summary": "A blog from the Electronic Frontier Foundation focused on the intersection of technology, privacy, and civil liberties, providing important updates and analysis.",
-      "tags": [
-        "Tech",
-        "Activism",
-        "Cybersecurity",
-        "Internet"
-      ],
+      "tags": ["Tech", "Activism", "Cybersecurity", "Internet"],
       "language": "en",
-      "keywords": [
-        "privacy",
-        "internet rights",
-        "EFF",
-        "technology",
-        "civil liberties"
-      ],
+      "keywords": ["privacy", "internet rights", "EFF", "technology", "civil liberties"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
       "id": "feed:https://blog.zsec.uk/rss/",
       "title": "ZephrSec - ZSEC Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://blog.zsec.uk/rss/",
       "details": "Technology",
       "cleaned_title": "ZephrSec - ZSEC Blog",
       "cleaned_author": "Andy Gill",
       "summary": "A tech-focused blog that features security explorations and projects, offering insights into modern cybersecurity challenges.",
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "security projects",
-        "cybersecurity insights",
-        "technology"
-      ],
+      "keywords": ["security projects", "cybersecurity insights", "technology"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
       "id": "feed:https://soatok.blog/feed/",
       "title": "Dhole Moments - Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://soatok.blog/feed/",
       "details": "Technology > Development",
       "cleaned_title": "Dhole Moments - Blog",
       "cleaned_author": null,
       "summary": "This blog discusses the nuances of software development, security, and cryptography while also addressing broader societal issues related to these topics, all from a unique perspective.",
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "cryptography",
-        "security researchers",
-        "software development"
-      ],
+      "keywords": ["cryptography", "security researchers", "software development"],
       "top_level_category": "Software & Engineering"
     },
     {
       "id": "feed:https://www.skrasser.com/feed.xml",
       "title": "Sven Krasser's Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.skrasser.com/feed.xml",
       "details": "Technology > Development",
       "cleaned_title": "Sven Krasser's Blog",
       "cleaned_author": "Sven Krasser",
       "summary": "A blog focused on technology and cybersecurity, featuring insights into malware detection and retro computing.",
-      "tags": [
-        "Tech",
-        "Cybersecurity",
-        "Internet"
-      ],
+      "tags": ["Tech", "Cybersecurity", "Internet"],
       "language": "en",
-      "keywords": [
-        "malware",
-        "Commodore 64",
-        "cybersecurity"
-      ],
+      "keywords": ["malware", "Commodore 64", "cybersecurity"],
       "top_level_category": "Software & Engineering"
     },
     {
       "id": "feed:https://tantek.com/updates.atom",
       "title": "Tantek \u00c7elik",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://tantek.com/updates.atom",
       "details": "Technology > Development > Web",
       "cleaned_title": "Tantek \u00c7elik",
       "cleaned_author": "Tantek \u00c7elik",
       "summary": "A platform for sharing thoughts and insights on web development and the IndieWeb movement, focusing on personal contributions to web security and privacy.",
-      "tags": [
-        "Tech",
-        "WebDev",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "WebDev", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "cybersecurity",
-        "IndieWeb"
-      ],
+      "keywords": ["cybersecurity", "IndieWeb"],
       "top_level_category": "Software & Engineering"
     },
     {
       "id": "feed:https://www.pogowasright.org/feed/",
       "title": "PogoWasRight.org: Privacy News & Issues",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.pogowasright.org/feed/",
       "summary": "My attempt to increase awareness of privacy news and issues.",
       "details": "Politics > Law",
       "cleaned_title": "PogoWasRight.org: Privacy News & Issues",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Law",
-        "Cybersecurity"
-      ],
+      "tags": ["Politics", "Law", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "privacy news",
-        "data protection",
-        "digital rights"
-      ],
+      "keywords": ["privacy news", "data protection", "digital rights"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -440,22 +270,11 @@
       "kind": "feed",
       "feed_url": "http://www.schneier.com/blog/index.rdf",
       "details": "Tech > Cybersecurity",
-      "sources": [
-        "original_feed_db",
-        "ooh_directory"
-      ],
+      "sources": ["original_feed_db", "ooh_directory"],
       "cleaned_author": "Bruce Schneier",
-      "tags": [
-        "Tech",
-        "Cybersecurity"
-      ],
+      "tags": ["Tech", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "security",
-        "privacy",
-        "cybersecurity analysis",
-        "trust"
-      ],
+      "keywords": ["security", "privacy", "cybersecurity analysis", "trust"],
       "top_level_category": "Software & Engineering"
     }
   ],

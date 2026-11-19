@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { afterEach, describe, expect, test } from "bun:test";
+import { Effect } from "effect";
 import { articleClips, articleExtractionCache, feedItems } from "@kyomi/db";
 import { parseFeedDocument } from "@kyomi/ingest";
 import { setStoredDocumentCompiler } from "@kyomi/ingest/lib/stored-document";
@@ -103,19 +104,23 @@ describe("ingest document write", () => {
 
   test("clip and replacement writes compile by content source and clear for unsupported ones", async () => {
     setStoredDocumentCompiler(fakeCompiler());
-    const html = await compileBodyDocumentColumns({
-      raw: "<p>x</p>",
-      contentSource: "feed_html",
-      baseUrl: "https://example.com/",
-      title: "T",
-    });
+    const html = await Effect.runPromise(
+      compileBodyDocumentColumns({
+        raw: "<p>x</p>",
+        contentSource: "feed_html",
+        baseUrl: "https://example.com/",
+        title: "T",
+      }),
+    );
     expect(html.contentCompilerVersion).toBe(TEST_COMPILER_VERSION);
-    const linkOnly = await compileBodyDocumentColumns({
-      raw: "x",
-      contentSource: "link_only",
-      baseUrl: null,
-      title: null,
-    });
+    const linkOnly = await Effect.runPromise(
+      compileBodyDocumentColumns({
+        raw: "x",
+        contentSource: "link_only",
+        baseUrl: null,
+        title: null,
+      }),
+    );
     expect(linkOnly).toEqual({
       contentDocument: null,
       contentDocumentVersion: null,

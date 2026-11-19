@@ -11,22 +11,11 @@
       "channel_id": "UCVgO39Bk5sMo66-6o6Spn6Q",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqM7NZfeKN0CUY5GmqT4fqzLd0CDSHB7SoIt9-6pPQ=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Australia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Australia",
-        "Journalism"
-      ],
+      "tags": ["News", "Local", "Australia", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Australia",
-        "news",
-        "current affairs"
-      ],
+      "keywords": ["Australia", "news", "current affairs"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -37,20 +26,11 @@
       "kind": "reddit",
       "subreddit": "australia",
       "details": "Local > Australia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Australia"
-      ],
+      "tags": ["Local", "Australia"],
       "language": "en",
-      "keywords": [
-        "Australia",
-        "discussion",
-        "community"
-      ],
+      "keywords": ["Australia", "discussion", "community"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -61,23 +41,11 @@
       "kind": "feed",
       "feed_url": "http://news.google.com/news?hl=en&gl=us&q=guardian%20australia&um=1&ie=UTF-8&output=rss",
       "details": "Local > Australia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Australia",
-        "Journalism"
-      ],
+      "tags": ["News", "Local", "Australia", "Journalism"],
       "language": "en",
-      "keywords": [
-        "news",
-        "australia",
-        "current affairs",
-        "analysis"
-      ],
+      "keywords": ["news", "australia", "current affairs", "analysis"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -89,20 +57,11 @@
       "channel_id": "UC5T7D-Dh1eDGtsAFCuwv_Sw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqM7UYtCFHjUVhxwjJfEhSh4aCkqIGPRT0TaZ6tV8w=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Australia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Australia"
-      ],
+      "tags": ["Local", "Australia"],
       "language": "en",
-      "keywords": [
-        "breaking news",
-        "current affairs",
-        "investigative reports"
-      ],
+      "keywords": ["breaking news", "current affairs", "investigative reports"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -114,20 +73,11 @@
       "channel_id": "UCO0akufu9MOzyz3nvGIXAAw",
       "thumbnail_url": "https://yt3.ggpht.com/Q-ry-JNiIiQtu7V8C3PdBFyOI-i4_bR_v8jpnkvKSAlgrLaZa40Zu1TQyfGVCGm9-49JxlOjng=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Australia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Australia"
-      ],
+      "tags": ["Local", "Australia"],
       "language": "en",
-      "keywords": [
-        "live news",
-        "analysis",
-        "commentary"
-      ],
+      "keywords": ["live news", "analysis", "commentary"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -138,95 +88,56 @@
       "kind": "reddit",
       "subreddit": "sydney",
       "details": "Local > Australia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Australia"
-      ],
+      "tags": ["Local", "Australia"],
       "language": "en",
-      "keywords": [
-        "Sydney",
-        "discussion",
-        "events"
-      ],
+      "keywords": ["Sydney", "discussion", "events"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://johnquiggin.com/feed/",
       "title": "John Quiggin",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://johnquiggin.com/feed/",
       "summary": "Commentary on Australian and world events from a socialist and democratic viewpoint.",
       "details": "Politics > Politics",
       "cleaned_title": "John Quiggin",
       "cleaned_author": "John Quiggin",
-      "tags": [
-        "Politics",
-        "Australia",
-        "_left"
-      ],
+      "tags": ["Politics", "Australia", "_left"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "Australia",
-        "economic commentary",
-        "socialism"
-      ],
+      "keywords": ["politics", "Australia", "economic commentary", "socialism"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://johnmenadue.com/feed/",
       "title": "Pearls and Irritations \u2013 Public policy journal",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://johnmenadue.com/feed/",
       "summary": "Read progressive, liberal commentary on issues that impact Australians. Our daily articles focus on politics, public policy and world affairs.",
       "details": "Politics > Politics",
       "cleaned_title": "Pearls and Irritations",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Australia"
-      ],
+      "tags": ["Politics", "Australia"],
       "language": "en",
-      "keywords": [
-        "public policy",
-        "Australian politics",
-        "world affairs"
-      ],
+      "keywords": ["public policy", "Australian politics", "world affairs"],
       "top_level_category": "News & Current Events"
     },
     {
       "title": "r/de",
       "popularity_score": 2.476190476190476,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "subreddit": "de",
       "kind": "reddit",
       "id": "reddit:de",
       "cleaned_title": "r/de",
       "cleaned_author": null,
       "summary": "A community hub for German speakers discussing a range of topics relevant to Germany, Austria, and Switzerland, offering insights and news from local regions.",
-      "tags": [
-        "Local",
-        "Germany",
-        "Australia"
-      ],
+      "tags": ["Local", "Germany", "Australia"],
       "language": "de",
-      "keywords": [
-        "community",
-        "local news",
-        "Germany"
-      ]
+      "keywords": ["community", "local news", "Germany"]
     }
   ],
   "child_categories": []

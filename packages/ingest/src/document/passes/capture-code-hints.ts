@@ -42,7 +42,36 @@ function captureLanguage(pre: Element): string | null {
   return null;
 }
 
-/** A title bar beside the `<pre>` in its wrapper, or a filename-only figure caption. */
+/** What `textContent` is, computed once per element however many code blocks look at it. */
+const textOf = new WeakMap<Element, string>();
+
+function trimmedText(element: Element): string {
+  let text = textOf.get(element);
+  if (text === undefined) {
+    text = element.textContent?.trim() ?? "";
+    textOf.set(element, text);
+  }
+  return text;
+}
+
+/** How many `<pre>` an element holds, once per element for the same reason. */
+const preCounts = new WeakMap<Element, number>();
+
+function preCount(element: Element): number {
+  let count = preCounts.get(element);
+  if (count === undefined) {
+    count = element.querySelectorAll("pre").length;
+    preCounts.set(element, count);
+  }
+  return count;
+}
+
+/**
+ * A title bar beside the `<pre>` in its wrapper, or a filename-only figure caption. Only the
+ * elements directly before and after the block (or the wrapper level that holds it) are looked at:
+ * that is where highlighters put the title bar, and scanning every sibling made a page with many
+ * code blocks in one container quadratic.
+ */
 function captureFilename(pre: Element): string | null {
   const explicit =
     pre.getAttribute("data-filename") ?? pre.querySelector("code")?.getAttribute("data-filename");
@@ -50,21 +79,26 @@ function captureFilename(pre: Element): string | null {
     return explicit.trim();
   }
 
+  let held: Element = pre;
   let wrapper = pre.parentElement;
   for (let depth = 0; wrapper && depth < MAX_WRAPPER_DEPTH; depth += 1) {
-    for (const child of Array.from(wrapper.children)) {
-      if (child === pre || child.contains(pre)) {
+    for (const child of [held.previousElementSibling, held.nextElementSibling]) {
+      if (!child) {
         continue;
       }
       const isTitle =
         TITLE_CLASS.test(child.getAttribute("class") ?? "") ||
-        (child.tagName === "FIGCAPTION" && wrapper.querySelectorAll("pre").length === 1);
-      const text = child.textContent?.trim() ?? "";
-      if (isTitle && FILENAME_LIKE.test(text)) {
+        (child.tagName === "FIGCAPTION" && preCount(wrapper) === 1);
+      if (!isTitle) {
+        continue;
+      }
+      const text = trimmedText(child);
+      if (FILENAME_LIKE.test(text)) {
         child.remove();
         return text;
       }
     }
+    held = wrapper;
     wrapper = wrapper.parentElement;
   }
   return null;

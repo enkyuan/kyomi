@@ -10,26 +10,11 @@
       "kind": "feed",
       "feed_url": "https://www.johncanzano.com/feed",
       "details": "Sports",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Tech",
-        "News",
-        "Living",
-        "Politics",
-        "Sports",
-        "USA",
-        "Football"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Tech", "News", "Living", "Politics", "Sports", "USA", "Football"],
       "cleaned_author": "John Canzano",
       "language": "en",
-      "keywords": [
-        "college football",
-        "sports",
-        "gambling",
-        "Pac-12"
-      ],
+      "keywords": ["college football", "sports", "gambling", "Pac-12"],
       "top_level_category": "Sports"
     },
     {
@@ -40,23 +25,11 @@
       "kind": "feed",
       "feed_url": "https://www.splitzoneduo.com/feed",
       "details": "Sports",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Tech",
-        "Living",
-        "Sports",
-        "Football"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Tech", "Living", "Sports", "Football"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "college football",
-        "NIL",
-        "coaching carousel",
-        "offseason"
-      ],
+      "keywords": ["college football", "NIL", "coaching carousel", "offseason"],
       "top_level_category": "Sports"
     },
     {
@@ -67,23 +40,11 @@
       "kind": "feed",
       "feed_url": "http://www.skysports.com/rss/0,20514,12433,00.xml",
       "details": "Popular",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Sports",
-        "Football"
-      ],
+      "tags": ["News", "Sports", "Football"],
       "language": "en",
-      "keywords": [
-        "Formula 1",
-        "racing news",
-        "drivers",
-        "F1 testing",
-        "team updates"
-      ],
+      "keywords": ["Formula 1", "racing news", "drivers", "F1 testing", "team updates"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -95,21 +56,11 @@
       "channel_id": "UCDVYQ4Zhbm3S2dlz7P1GBDg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMEhkqBg1B3kByYb9JYScyGo-G7eHpM6l9o7Z_hHU4=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Football"
-      ],
+      "tags": ["Arts & Culture", "Living", "Football"],
       "language": "en",
-      "keywords": [
-        "NFL",
-        "scouting",
-        "game highlights"
-      ],
+      "keywords": ["NFL", "scouting", "game highlights"],
       "top_level_category": "Sports"
     },
     {
@@ -120,23 +71,11 @@
       "kind": "reddit",
       "subreddit": "sports",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Football",
-        "Basketball",
-        "Hip-Hop"
-      ],
+      "tags": ["News", "Local", "Football", "Basketball", "Hip-Hop"],
       "language": "en",
-      "keywords": [
-        "sports discussion",
-        "highlights",
-        "OP-ED"
-      ],
+      "keywords": ["sports discussion", "highlights", "OP-ED"],
       "top_level_category": "Sports"
     },
     {
@@ -147,23 +86,11 @@
       "kind": "feed",
       "feed_url": "https://theathletic.com/feeds/rss/news/",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Football",
-        "Basketball",
-        "Baseball"
-      ],
+      "tags": ["News", "Local", "Football", "Basketball", "Baseball"],
       "language": "en",
-      "keywords": [
-        "The Athletic",
-        "sports coverage",
-        "breaking news"
-      ],
+      "keywords": ["The Athletic", "sports coverage", "breaking news"],
       "top_level_category": "Sports"
     },
     {
@@ -174,22 +101,11 @@
       "kind": "feed",
       "feed_url": "https://www.thesportsletter.com/feed/",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Basketball",
-        "Football"
-      ],
+      "tags": ["News", "Local", "Basketball", "Football"],
       "language": "en",
-      "keywords": [
-        "sports updates",
-        "event analysis",
-        "fan engagement"
-      ],
+      "keywords": ["sports updates", "event analysis", "fan engagement"],
       "top_level_category": "Sports"
     },
     {
@@ -200,21 +116,11 @@
       "kind": "reddit",
       "subreddit": "soccer",
       "details": "Sports > Football",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Football",
-        "Sports"
-      ],
+      "tags": ["Local", "Football", "Sports"],
       "language": "en",
-      "keywords": [
-        "soccer news",
-        "match discussions",
-        "football community"
-      ],
+      "keywords": ["soccer news", "match discussions", "football community"],
       "top_level_category": "Sports"
     },
     {
@@ -225,21 +131,11 @@
       "kind": "reddit",
       "subreddit": "FootballTactics",
       "details": "Sports > Football",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Football",
-        "Sports"
-      ],
+      "tags": ["Living", "Football", "Sports"],
       "language": "en",
-      "keywords": [
-        "tactics",
-        "form formations",
-        "strategies"
-      ],
+      "keywords": ["tactics", "form formations", "strategies"],
       "top_level_category": "Sports"
     }
   ],

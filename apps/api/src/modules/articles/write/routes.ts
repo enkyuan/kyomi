@@ -1,5 +1,11 @@
 import type { Elysia } from "elysia";
-import { v1HandlerContext } from "@shared/http/v1/context";
+import type { ManagedRuntime } from "effect";
+import type { Db } from "@adapters/db/service";
+import type { AppLogger } from "@adapters/logger/service";
+import type { JobQueue } from "@adapters/queue/service";
+import { enforceRateLimitForContext } from "@adapters/rate-limit/plugin";
+import { runEffect } from "@shared/http/effect/bridge";
+import { v1EffectContext } from "@shared/http/v1/context";
 import { createArticleClip } from "./clips/operations";
 import {
   articleDetailSchema,
@@ -12,24 +18,41 @@ import {
 import { createBrokenArticleReport } from "./reports";
 import { recordArticleViewForUser, updateArticleOrClipForUser } from "./update";
 
-export function registerArticleWriteRoutes(app: Elysia) {
+/** Saving a page compiles its HTML and queues enrichment, so a user may only do it so often. */
+const clipCreateRateLimit = {
+  name: "articles.clip_create",
+  max: 30,
+  windowMs: 10 * 60_000,
+} as const;
+const clipContentRateLimit = {
+  name: "articles.clip_content",
+  max: 30,
+  windowMs: 10 * 60_000,
+} as const;
+
+type WriteRuntime = ManagedRuntime.ManagedRuntime<Db | AppLogger | JobQueue, unknown>;
+
+export function registerArticleWriteRoutes(app: Elysia, runtime: WriteRuntime) {
   return app
     .post(
       "/articles",
       async (context) => {
-        const { body, db, logger, set, userId } = v1HandlerContext<{
+        const { body, request, requestId, set, userId } = v1EffectContext<{
           url: string;
           title?: string;
           content?: string;
           note?: string;
         }>(context);
-        const detail = await createArticleClip(db, userId, {
-          url: body.url,
-          title: body.title,
-          content: body.content,
-          note: body.note,
-        });
-        logger.info("articles.clip.created", { userId, clipId: detail.id });
+        await enforceRateLimitForContext(context, userId, clipCreateRateLimit);
+        const detail = await runEffect(
+          { runtime, request, requestId, userId },
+          createArticleClip(userId, {
+            url: body.url,
+            title: body.title,
+            content: body.content,
+            note: body.note,
+          }),
+        );
         set.status = 201;
         return detail;
       },
@@ -43,12 +66,15 @@ export function registerArticleWriteRoutes(app: Elysia) {
     .post(
       "/articles/:articleId/view",
       async (context) => {
-        const { db, params, userId } = v1HandlerContext<
+        const { params, request, requestId, userId } = v1EffectContext<
           unknown,
           Record<string, unknown>,
           { articleId: string }
         >(context);
-        await recordArticleViewForUser(db, userId, params.articleId);
+        await runEffect(
+          { runtime, request, requestId, userId },
+          recordArticleViewForUser(userId, params.articleId),
+        );
         return { message: "Article view recorded" };
       },
       {
@@ -59,7 +85,7 @@ export function registerArticleWriteRoutes(app: Elysia) {
     .post(
       "/articles/:articleId/reports/broken",
       async (context) => {
-        const { body, db, params, userId } = v1HandlerContext<
+        const { body, params, request, requestId, userId } = v1EffectContext<
           {
             reason?: "broken_article" | "missing_content" | "wrong_content" | "feed_error";
             details?: string | null;
@@ -67,7 +93,10 @@ export function registerArticleWriteRoutes(app: Elysia) {
           Record<string, unknown>,
           { articleId: string }
         >(context);
-        await createBrokenArticleReport(db, userId, params.articleId, body);
+        await runEffect(
+          { runtime, request, requestId, userId },
+          createBrokenArticleReport(userId, params.articleId, body),
+        );
         return { message: "Broken article report submitted" };
       },
       {
@@ -79,32 +108,19 @@ export function registerArticleWriteRoutes(app: Elysia) {
     .put(
       "/articles/:articleId",
       async (context) => {
-        const { body, db, params, userId } = v1HandlerContext<
-          {
-            isRead?: boolean | null;
-            isSaved?: boolean;
-            isHidden?: boolean;
-            title?: string;
-            note?: string | null;
-            contentHtml?: string | null;
-            contentText?: string | null;
-            contentMarkdown?: string | null;
-            contentStatus?: "ready" | "partial" | "failed" | "pending" | null;
-            contentSource?:
-              | "feed_html"
-              | "feed_markdown"
-              | "feed_summary"
-              | "extracted_html"
-              | "text_fallback"
-              | "link_only"
-              | null;
-            extractionErrorCode?: string | null;
-            extractionErrorMessage?: string | null;
-          },
+        const { body, params, request, requestId, userId } = v1EffectContext<
+          Record<string, unknown>,
           Record<string, unknown>,
           { articleId: string }
         >(context);
-        await updateArticleOrClipForUser(db, userId, params.articleId, body);
+        // Read, saved and hidden toggles are frequent and cheap; a new body is neither.
+        if (body.contentHtml !== undefined) {
+          await enforceRateLimitForContext(context, userId, clipContentRateLimit);
+        }
+        await runEffect(
+          { runtime, request, requestId, userId },
+          updateArticleOrClipForUser(userId, params.articleId, body),
+        );
         return { message: "Article updated" };
       },
       {

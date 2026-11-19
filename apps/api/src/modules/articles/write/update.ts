@@ -1,6 +1,4 @@
-import type { db } from "@adapters/db/client";
-import { enqueueEnrichmentForStoredDocument } from "@modules/articles/document/enrich";
-import { compileBodyDocumentColumns } from "@modules/articles/document/stored";
+import { Effect } from "effect";
 import {
   articleClips,
   articleViewEvents,
@@ -9,140 +7,62 @@ import {
   feedUserStats,
 } from "@kyomi/db";
 import { and, eq, sql } from "drizzle-orm";
-import { AppError } from "@shared/errors/app";
-import { assertContentFieldBudget } from "@shared/http/budget";
+import { Db } from "@adapters/db/service";
+import { BadRequest, Forbidden } from "@shared/effect/errors";
+import { currentDate } from "@shared/effect/clock";
+import { articleNotFound } from "../errors";
 import {
-  ARTICLE_HTML_SANITIZER_VERSION,
-  processIngestedArticleHtml,
-} from "@modules/articles/reader/content";
-import { type ClipUpdateBody, updateArticleClipForUser } from "./clips/operations";
+  CLIP_UPDATE_KEYS,
+  type ClipUpdateBody,
+  updateArticleClipForUser,
+} from "./clips/operations";
+import { hasAnyOwn, pickOwn, savedAtAfter } from "./fields";
 import type { ArticleUpdateBody } from "../types";
 
-type DB = typeof db;
-
 /**
- * Client-supplied HTML is untrusted: compile it like any ingested body and keep the original as
- * raw source, so the stored sanitizer version always describes compiler output.
+ * What a feed item accepts. `feed_items` rows are shared by every subscriber, so a user may only
+ * change their own read, saved and hidden state; the stored body is written by ingestion alone.
  */
-async function compileReplacementHtml(
-  value: string | null | undefined,
-  article: { link: string; title: string },
-): Promise<{
-  contentHtml: string | null;
-  contentRaw: string | null;
-  contentSanitizerVersion: string | null;
-  contentDocument: Record<string, unknown> | null;
-  contentDocumentVersion: number | null;
-  contentCompilerVersion: string | null;
-}> {
-  const raw = value?.trim() ? value : null;
-  if (!raw) {
-    return {
-      contentHtml: null,
-      contentRaw: null,
-      contentSanitizerVersion: null,
-      ...(await compileBodyDocumentColumns({
-        raw: null,
-        contentSource: null,
-        baseUrl: null,
-        title: null,
-      })),
-    };
-  }
-  const compiled = processIngestedArticleHtml(raw, { baseUrl: article.link, title: article.title });
-  return {
-    contentHtml: compiled.html || null,
-    contentRaw: raw,
-    contentSanitizerVersion: ARTICLE_HTML_SANITIZER_VERSION,
-    ...(await compileBodyDocumentColumns({
-      raw,
-      contentSource: "feed_html",
-      baseUrl: article.link,
-      title: article.title,
-    })),
-  };
-}
+const FEED_STATE_KEYS = [
+  "isRead",
+  "isSaved",
+  "isHidden",
+] as const satisfies readonly (keyof ArticleUpdateBody)[];
+/** Body and extraction fields a clip owner may set on their own clip, never on a feed item. */
+const CONTENT_KEYS = [
+  "contentHtml",
+  "contentText",
+  "contentMarkdown",
+  "contentStatus",
+  "contentSource",
+  "extractionErrorCode",
+  "extractionErrorMessage",
+] as const;
 
-async function getFeedArticleOrThrow(database: DB, articleId: string) {
-  const rows = await database
-    .select({
-      id: feedItems.id,
-      feedId: feedItems.feedId,
-      link: feedItems.link,
-      title: feedItems.title,
-    })
-    .from(feedItems)
-    .where(eq(feedItems.id, articleId))
-    .limit(1);
-  const article = rows[0];
-  if (!article) {
-    throw new AppError("Article not found", { status: 404, code: "ARTICLE_NOT_FOUND" });
-  }
-  return article;
-}
+const getFeedArticleOrFail = Effect.fn("articles.update.find_feed_item")(function* (
+  articleId: string,
+) {
+  const db = yield* Db;
+  const [article] = yield* db.use("articles.find_feed_item", (client) =>
+    client
+      .select({ id: feedItems.id, feedId: feedItems.feedId })
+      .from(feedItems)
+      .where(eq(feedItems.id, articleId))
+      .limit(1),
+  );
+  return article ?? (yield* articleNotFound());
+});
 
-export async function updateArticleForUser(
-  database: DB,
+/** Merges the read, saved and hidden flags the update names over the user's stored state. */
+const updateFeedState = Effect.fn("articles.update.feed_state")(function* (
   userId: string,
   articleId: string,
   body: ArticleUpdateBody,
-): Promise<void> {
-  const hasRead = Object.hasOwn(body, "isRead");
-  const hasSaved = Object.hasOwn(body, "isSaved");
-  const hasHidden = Object.hasOwn(body, "isHidden");
-  const hasContentFields =
-    Object.hasOwn(body, "contentHtml") ||
-    Object.hasOwn(body, "contentText") ||
-    Object.hasOwn(body, "contentMarkdown") ||
-    Object.hasOwn(body, "contentStatus") ||
-    Object.hasOwn(body, "contentSource") ||
-    Object.hasOwn(body, "extractionErrorCode") ||
-    Object.hasOwn(body, "extractionErrorMessage");
-  if (!hasRead && !hasSaved && !hasHidden && !hasContentFields) {
-    throw new AppError("No updatable fields provided", { status: 400, code: "EMPTY_UPDATE" });
-  }
-  assertContentFieldBudget([
-    { name: "contentHtml", value: body.contentHtml },
-    { name: "contentText", value: body.contentText },
-    { name: "contentMarkdown", value: body.contentMarkdown },
-  ]);
-
-  const article = await getFeedArticleOrThrow(database, articleId);
-
-  const now = new Date();
-
-  if (hasContentFields) {
-    const html = Object.hasOwn(body, "contentHtml")
-      ? await compileReplacementHtml(body.contentHtml, article)
-      : {};
-    await database
-      .update(feedItems)
-      .set({
-        ...html,
-        contentText: Object.hasOwn(body, "contentText") ? body.contentText : undefined,
-        contentMarkdown: Object.hasOwn(body, "contentMarkdown") ? body.contentMarkdown : undefined,
-        contentStatus: Object.hasOwn(body, "contentStatus") ? body.contentStatus : undefined,
-        contentSource: Object.hasOwn(body, "contentSource") ? body.contentSource : undefined,
-        extractionErrorCode: Object.hasOwn(body, "extractionErrorCode")
-          ? body.extractionErrorCode
-          : undefined,
-        extractionErrorMessage: Object.hasOwn(body, "extractionErrorMessage")
-          ? body.extractionErrorMessage
-          : undefined,
-        updatedAt: now,
-      })
-      .where(eq(feedItems.id, articleId));
-    if (Object.hasOwn(body, "contentHtml")) {
-      await enqueueEnrichmentForStoredDocument(database, {
-        table: "feed_items",
-        id: articleId,
-        body: "original",
-      });
-    }
-  }
-
-  if (hasRead || hasSaved || hasHidden) {
-    const existing = await database
+  now: Date,
+) {
+  const db = yield* Db;
+  const [prev] = yield* db.use("articles.update.feed_state_read", (client) =>
+    client
       .select({
         readOverride: feedItemUserState.readOverride,
         isSaved: feedItemUserState.isSaved,
@@ -151,19 +71,21 @@ export async function updateArticleForUser(
       })
       .from(feedItemUserState)
       .where(and(eq(feedItemUserState.userId, userId), eq(feedItemUserState.feedItemId, articleId)))
-      .limit(1);
+      .limit(1),
+  );
 
-    const prev = existing[0];
-    const readOverride = hasRead ? body.isRead! : (prev?.readOverride ?? null);
-    const isSaved = hasSaved ? body.isSaved! : (prev?.isSaved ?? false);
-    const savedAt = hasSaved
-      ? body.isSaved
-        ? (prev?.savedAt ?? now)
-        : null
-      : (prev?.savedAt ?? null);
-    const hiddenAt = hasHidden ? (body.isHidden ? now : null) : (prev?.hiddenAt ?? null);
+  const hasSaved = Object.hasOwn(body, "isSaved");
+  const readOverride = Object.hasOwn(body, "isRead") ? body.isRead! : (prev?.readOverride ?? null);
+  const isSaved = hasSaved ? body.isSaved! : (prev?.isSaved ?? false);
+  const savedAt = savedAtAfter(prev?.savedAt ?? null, hasSaved ? body.isSaved : undefined, now);
+  const hiddenAt = Object.hasOwn(body, "isHidden")
+    ? body.isHidden
+      ? now
+      : null
+    : (prev?.hiddenAt ?? null);
 
-    await database
+  yield* db.use("articles.update.feed_state_write", (client) =>
+    client
       .insert(feedItemUserState)
       .values({
         userId,
@@ -176,230 +98,203 @@ export async function updateArticleForUser(
       })
       .onConflictDoUpdate({
         target: [feedItemUserState.userId, feedItemUserState.feedItemId],
-        set: {
-          readOverride,
-          isSaved,
-          savedAt,
-          hiddenAt,
-          updatedAt: now,
-        },
-      });
-  }
-}
+        set: { readOverride, isSaved, savedAt, hiddenAt, updatedAt: now },
+      }),
+  );
+});
 
-export async function recordArticleViewForUser(
-  database: DB,
+export const updateArticleForUser = Effect.fn("articles.update.feed")(function* (
   userId: string,
   articleId: string,
-): Promise<void> {
-  const now = new Date();
-  const updatedClips = await database
-    .update(articleClips)
-    .set({ lastViewedAt: now, updatedAt: now })
-    .where(and(eq(articleClips.id, articleId), eq(articleClips.userId, userId)))
-    .returning({ id: articleClips.id });
-
-  if (updatedClips[0]) {
-    await database.insert(articleViewEvents).values({
-      id: crypto.randomUUID(),
-      userId,
-      clipId: articleId,
-      articleType: "clip",
-      isFirstView: false,
-      viewedAt: now,
+  body: ArticleUpdateBody,
+) {
+  if (!hasAnyOwn(body, FEED_STATE_KEYS)) {
+    return yield* new BadRequest({
+      message: "No updatable fields provided",
+      code: "EMPTY_UPDATE",
     });
+  }
+
+  yield* getFeedArticleOrFail(articleId);
+  yield* updateFeedState(userId, articleId, body, yield* currentDate);
+});
+
+/**
+ * Records one open of an article: the view event, the per-user last-viewed time, and the per-feed
+ * viewed counter (incremented only on the first view of a feed item).
+ */
+export const recordArticleViewForUser = Effect.fn("articles.view.record")(function* (
+  userId: string,
+  articleId: string,
+) {
+  const db = yield* Db;
+  const now = yield* currentDate;
+
+  const [updatedClip] = yield* db.use("articles.view.touch_clip", (client) =>
+    client
+      .update(articleClips)
+      .set({ lastViewedAt: now, updatedAt: now })
+      .where(and(eq(articleClips.id, articleId), eq(articleClips.userId, userId)))
+      .returning({ id: articleClips.id }),
+  );
+
+  if (updatedClip) {
+    yield* db.use("articles.view.event_clip", (client) =>
+      client.insert(articleViewEvents).values({
+        id: crypto.randomUUID(),
+        userId,
+        clipId: articleId,
+        articleType: "clip",
+        isFirstView: false,
+        viewedAt: now,
+      }),
+    );
     return;
   }
 
-  const article = await getFeedArticleOrThrow(database, articleId);
-  const insertedState = await database
-    .insert(feedItemUserState)
-    .values({
-      userId,
-      feedItemId: articleId,
-      readOverride: null,
-      isSaved: false,
-      lastViewedAt: now,
-      updatedAt: now,
-    })
-    .onConflictDoNothing()
-    .returning({ feedItemId: feedItemUserState.feedItemId });
+  const article = yield* getFeedArticleOrFail(articleId);
+  const [insertedState] = yield* db.use("articles.view.insert_state", (client) =>
+    client
+      .insert(feedItemUserState)
+      .values({
+        userId,
+        feedItemId: articleId,
+        readOverride: null,
+        isSaved: false,
+        lastViewedAt: now,
+        updatedAt: now,
+      })
+      .onConflictDoNothing()
+      .returning({ feedItemId: feedItemUserState.feedItemId }),
+  );
 
-  let isFirstView = Boolean(insertedState[0]);
+  let isFirstView = Boolean(insertedState);
   if (!isFirstView) {
-    const firstViewedState = await database
-      .update(feedItemUserState)
-      .set({ lastViewedAt: now, updatedAt: now })
-      .where(
-        and(
-          eq(feedItemUserState.userId, userId),
-          eq(feedItemUserState.feedItemId, articleId),
-          sql`${feedItemUserState.lastViewedAt} IS NULL`,
-        ),
-      )
-      .returning({ feedItemId: feedItemUserState.feedItemId });
-
-    isFirstView = Boolean(firstViewedState[0]);
-    if (!isFirstView) {
-      await database
+    const [firstViewedState] = yield* db.use("articles.view.first_view_state", (client) =>
+      client
         .update(feedItemUserState)
         .set({ lastViewedAt: now, updatedAt: now })
         .where(
-          and(eq(feedItemUserState.userId, userId), eq(feedItemUserState.feedItemId, articleId)),
-        );
+          and(
+            eq(feedItemUserState.userId, userId),
+            eq(feedItemUserState.feedItemId, articleId),
+            sql`${feedItemUserState.lastViewedAt} IS NULL`,
+          ),
+        )
+        .returning({ feedItemId: feedItemUserState.feedItemId }),
+    );
+
+    isFirstView = Boolean(firstViewedState);
+    if (!isFirstView) {
+      yield* db.use("articles.view.touch_state", (client) =>
+        client
+          .update(feedItemUserState)
+          .set({ lastViewedAt: now, updatedAt: now })
+          .where(
+            and(eq(feedItemUserState.userId, userId), eq(feedItemUserState.feedItemId, articleId)),
+          ),
+      );
     }
   }
 
-  await database.insert(articleViewEvents).values({
-    id: crypto.randomUUID(),
+  yield* db.use("articles.view.event_feed_item", (client) =>
+    client.insert(articleViewEvents).values({
+      id: crypto.randomUUID(),
+      userId,
+      feedItemId: articleId,
+      feedId: article.feedId,
+      articleType: "feed",
+      isFirstView,
+      viewedAt: now,
+    }),
+  );
+
+  const firstStats = {
     userId,
-    feedItemId: articleId,
     feedId: article.feedId,
-    articleType: "feed",
-    isFirstView,
-    viewedAt: now,
-  });
+    viewedItemCount: 1,
+    lastViewedAt: now,
+    updatedAt: now,
+  };
 
   if (isFirstView) {
-    await database
-      .insert(feedUserStats)
-      .values({
-        userId,
-        feedId: article.feedId,
-        viewedItemCount: 1,
-        lastViewedAt: now,
-        updatedAt: now,
-      })
-      .onConflictDoUpdate({
-        target: [feedUserStats.userId, feedUserStats.feedId],
-        set: {
-          viewedItemCount: sql`${feedUserStats.viewedItemCount} + 1`,
-          lastViewedAt: now,
-          updatedAt: now,
-        },
-      });
+    yield* db.use("articles.view.stats_increment", (client) =>
+      client
+        .insert(feedUserStats)
+        .values(firstStats)
+        .onConflictDoUpdate({
+          target: [feedUserStats.userId, feedUserStats.feedId],
+          set: {
+            viewedItemCount: sql`${feedUserStats.viewedItemCount} + 1`,
+            lastViewedAt: now,
+            updatedAt: now,
+          },
+        }),
+    );
     return;
   }
 
-  const updatedStats = await database
-    .update(feedUserStats)
-    .set({ lastViewedAt: now, updatedAt: now })
-    .where(and(eq(feedUserStats.userId, userId), eq(feedUserStats.feedId, article.feedId)))
-    .returning({ feedId: feedUserStats.feedId });
+  const [updatedStats] = yield* db.use("articles.view.stats_touch", (client) =>
+    client
+      .update(feedUserStats)
+      .set({ lastViewedAt: now, updatedAt: now })
+      .where(and(eq(feedUserStats.userId, userId), eq(feedUserStats.feedId, article.feedId)))
+      .returning({ feedId: feedUserStats.feedId }),
+  );
 
-  if (!updatedStats[0]) {
-    await database
-      .insert(feedUserStats)
-      .values({
-        userId,
-        feedId: article.feedId,
-        viewedItemCount: 1,
-        lastViewedAt: now,
-        updatedAt: now,
-      })
-      .onConflictDoUpdate({
-        target: [feedUserStats.userId, feedUserStats.feedId],
-        set: {
-          lastViewedAt: now,
-          updatedAt: now,
-        },
-      });
+  if (!updatedStats) {
+    yield* db.use("articles.view.stats_backfill", (client) =>
+      client
+        .insert(feedUserStats)
+        .values(firstStats)
+        .onConflictDoUpdate({
+          target: [feedUserStats.userId, feedUserStats.feedId],
+          set: { lastViewedAt: now, updatedAt: now },
+        }),
+    );
   }
-}
+});
 
-export async function updateArticleOrClipForUser(
-  database: DB,
+/**
+ * `PUT /articles/:articleId`: the article is either one of the user's clips (clip rules: no hide,
+ * title and note editable) or a feed item (per-user state plus optional content replacement).
+ */
+export const updateArticleOrClipForUser = Effect.fn("articles.update")(function* (
   userId: string,
   articleId: string,
   raw: Record<string, unknown>,
-): Promise<void> {
-  const clipRows = await database
-    .select({ id: articleClips.id })
-    .from(articleClips)
-    .where(and(eq(articleClips.id, articleId), eq(articleClips.userId, userId)))
-    .limit(1);
+) {
+  const db = yield* Db;
+  const [clip] = yield* db.use("articles.update.find_clip", (client) =>
+    client
+      .select({ id: articleClips.id })
+      .from(articleClips)
+      .where(and(eq(articleClips.id, articleId), eq(articleClips.userId, userId)))
+      .limit(1),
+  );
 
-  if (clipRows[0]) {
-    if (Object.hasOwn(raw, "isHidden")) {
-      throw new AppError("Clips cannot be hidden from feed views", {
-        status: 400,
-        code: "CLIP_HIDE_UNSUPPORTED",
+  if (!clip) {
+    if (hasAnyOwn(raw, CONTENT_KEYS)) {
+      return yield* new Forbidden({
+        message: "Only a clip's owner can change its content",
+        code: "ARTICLE_CONTENT_READ_ONLY",
       });
     }
-    const clipBody: ClipUpdateBody = {};
-    if (Object.hasOwn(raw, "isRead")) {
-      clipBody.isRead = raw.isRead as boolean | null;
-    }
-    if (Object.hasOwn(raw, "isSaved")) {
-      clipBody.isSaved = raw.isSaved as boolean;
-    }
-    if (Object.hasOwn(raw, "title")) {
-      clipBody.title = raw.title as string;
-    }
-    if (Object.hasOwn(raw, "note")) {
-      clipBody.note = raw.note as string | null;
-    }
-    if (Object.hasOwn(raw, "content")) {
-      clipBody.content = raw.content as string | null;
-    }
-    if (Object.hasOwn(raw, "contentHtml")) {
-      clipBody.contentHtml = raw.contentHtml as string | null;
-    }
-    if (Object.hasOwn(raw, "contentText")) {
-      clipBody.contentText = raw.contentText as string | null;
-    }
-    if (Object.hasOwn(raw, "contentMarkdown")) {
-      clipBody.contentMarkdown = raw.contentMarkdown as string | null;
-    }
-    if (Object.hasOwn(raw, "contentStatus")) {
-      clipBody.contentStatus = raw.contentStatus as ClipUpdateBody["contentStatus"];
-    }
-    if (Object.hasOwn(raw, "contentSource")) {
-      clipBody.contentSource = raw.contentSource as ClipUpdateBody["contentSource"];
-    }
-    if (Object.hasOwn(raw, "extractionErrorCode")) {
-      clipBody.extractionErrorCode = raw.extractionErrorCode as string | null;
-    }
-    if (Object.hasOwn(raw, "extractionErrorMessage")) {
-      clipBody.extractionErrorMessage = raw.extractionErrorMessage as string | null;
-    }
-    const ok = await updateArticleClipForUser(database, userId, articleId, clipBody);
-    if (!ok) {
-      throw new AppError("Article not found", { status: 404, code: "ARTICLE_NOT_FOUND" });
-    }
-    return;
-  }
-
-  const feedBody: ArticleUpdateBody = {};
-  if (Object.hasOwn(raw, "isRead")) {
-    feedBody.isRead = raw.isRead as boolean | null;
-  }
-  if (Object.hasOwn(raw, "isSaved")) {
-    feedBody.isSaved = raw.isSaved as boolean;
+    return yield* updateArticleForUser(
+      userId,
+      articleId,
+      pickOwn<ArticleUpdateBody>(raw, FEED_STATE_KEYS),
+    );
   }
   if (Object.hasOwn(raw, "isHidden")) {
-    feedBody.isHidden = raw.isHidden as boolean;
+    return yield* new BadRequest({
+      message: "Clips cannot be hidden from feed views",
+      code: "CLIP_HIDE_UNSUPPORTED",
+    });
   }
-  if (Object.hasOwn(raw, "contentHtml")) {
-    feedBody.contentHtml = raw.contentHtml as string | null;
-  }
-  if (Object.hasOwn(raw, "contentText")) {
-    feedBody.contentText = raw.contentText as string | null;
-  }
-  if (Object.hasOwn(raw, "contentMarkdown")) {
-    feedBody.contentMarkdown = raw.contentMarkdown as string | null;
-  }
-  if (Object.hasOwn(raw, "contentStatus")) {
-    feedBody.contentStatus = raw.contentStatus as ArticleUpdateBody["contentStatus"];
-  }
-  if (Object.hasOwn(raw, "contentSource")) {
-    feedBody.contentSource = raw.contentSource as ArticleUpdateBody["contentSource"];
-  }
-  if (Object.hasOwn(raw, "extractionErrorCode")) {
-    feedBody.extractionErrorCode = raw.extractionErrorCode as string | null;
-  }
-  if (Object.hasOwn(raw, "extractionErrorMessage")) {
-    feedBody.extractionErrorMessage = raw.extractionErrorMessage as string | null;
-  }
-  await updateArticleForUser(database, userId, articleId, feedBody);
-}
+  yield* updateArticleClipForUser(
+    userId,
+    articleId,
+    pickOwn<ClipUpdateBody>(raw, CLIP_UPDATE_KEYS),
+  );
+});

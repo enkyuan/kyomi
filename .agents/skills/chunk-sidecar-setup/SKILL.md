@@ -28,6 +28,7 @@ allowed-tools:
 This skill walks you through setting up a `chunk` sidecar from scratch. A sidecar is a remote Linux container provisioned on CircleCI. It mirrors your local working tree and runs your build, test, and validate commands in a clean, isolated environment — no local port conflicts, no dependency drift, no "works on my machine."
 
 **What you'll have by the end:**
+
 - Auth and credentials verified
 - A running sidecar with your project's dependencies installed
 - A reusable snapshot so future sessions start in seconds
@@ -48,16 +49,18 @@ cat .chunk/config.json 2>&1 || echo "{}"
 ```
 
 ### `chunk --version`
+
 If the command is not found, stop and explain: "`chunk` is not installed or not on your PATH. Install it first (e.g. `brew install circleci/tools/chunk` on macOS), then re-run this skill."
 
 ### `chunk auth status`
+
 Read the output carefully — it prints the status of each credential:
 
-| Credential  | Required for                              |
-|-------------|-------------------------------------------|
-| CircleCI    | All sidecar commands (required)           |
-| GitHub      | Validate commands that fetch PRs/issues   |
-| Anthropic   | Validate commands that invoke Claude      |
+| Credential | Required for                            |
+| ---------- | --------------------------------------- |
+| CircleCI   | All sidecar commands (required)         |
+| GitHub     | Validate commands that fetch PRs/issues |
+| Anthropic  | Validate commands that invoke Claude    |
 
 If CircleCI shows "Not set", run the OAuth login yourself — see [Logging in](#logging-in) below — then re-run `chunk auth status` and confirm it shows "Configured" before continuing. For GitHub and Anthropic, surface that they're missing but do not block if the user's validate commands don't need them.
 
@@ -253,6 +256,7 @@ chunk validate
 **If nothing ran on the sidecar**, no command is marked — go back to Stage 6.
 
 **If it fails:**
+
 - Read the stderr output — `chunk validate` prints per-command headers and propagates the first non-zero exit.
 - Fix missing binaries: `chunk validate --remote --cmd "<install-command>"`.
 - Fix local file issues: edit locally, `chunk sidecar sync`, re-run `chunk validate`.

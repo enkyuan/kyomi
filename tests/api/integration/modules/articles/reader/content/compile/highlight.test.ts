@@ -118,7 +118,7 @@ describe("highlightCode", () => {
   test("size caps degrade to plain, never to partial tokens", async () => {
     expect(await highlightCode("a".repeat(MAX_HIGHLIGHT_CHARS + 1), "javascript")).toBeNull();
     expect(await highlightCode("a\n".repeat(MAX_HIGHLIGHT_LINES), "javascript")).toBeNull();
-    const edge = Array.from({ length: 30 }, () => "a".repeat(1000))
+    const edge = Array.from({ length: 100 }, () => "a".repeat(MAX_HIGHLIGHT_LINE_CHARS))
       .join("\n")
       .slice(0, MAX_HIGHLIGHT_CHARS);
     expect(edge.length).toBe(MAX_HIGHLIGHT_CHARS);

@@ -1,20 +1,14 @@
 import { describe, expect, test } from "bun:test";
 import { recordContinueReadingImpressions } from "@modules/articles/resurface/operations";
 import { RESURFACE_CONFIG } from "@modules/articles/resurface/schedule";
-import { DAY, HOUR, NOW, ago, createWriteDb, readingRow, renderSql } from "./fakes";
-
-type Db = Parameters<typeof recordContinueReadingImpressions>[0];
-
-function asDb(fake: ReturnType<typeof createWriteDb>): Db {
-  return fake.db as unknown as Db;
-}
+import { DAY, HOUR, NOW, ago, createWriteDb, readingRow, renderSql, run } from "./fakes";
 
 describe("recordContinueReadingImpressions", () => {
   test("applies a lapse to an eligible row and persists the schedule", async () => {
     const reading = readingRow({ feedItemId: "item-a" });
     const fake = createWriteDb([{ reading }]);
 
-    const applied = await recordContinueReadingImpressions(asDb(fake), "user-1", ["item-a"], NOW);
+    const applied = await run(recordContinueReadingImpressions(["item-a"]), fake);
 
     expect(applied).toBe(1);
     expect(fake.transactions).toBe(1);
@@ -46,7 +40,7 @@ describe("recordContinueReadingImpressions", () => {
     });
     const fake = createWriteDb([{ reading }]);
 
-    const applied = await recordContinueReadingImpressions(asDb(fake), "user-1", ["item-a"], NOW);
+    const applied = await run(recordContinueReadingImpressions(["item-a"]), fake);
 
     expect(applied).toBe(0);
     expect(fake.updates).toEqual([]);
@@ -65,7 +59,7 @@ describe("recordContinueReadingImpressions", () => {
     });
     const fake = createWriteDb([{ reading }]);
 
-    await recordContinueReadingImpressions(asDb(fake), "user-1", ["item-a"], NOW);
+    await run(recordContinueReadingImpressions(["item-a"]), fake);
 
     expect(fake.updates[0]!.set).toMatchObject({ impressions: 2, lapses: 2 });
   });
@@ -81,7 +75,7 @@ describe("recordContinueReadingImpressions", () => {
     });
     const fake = createWriteDb([{ reading }]);
 
-    await recordContinueReadingImpressions(asDb(fake), "user-1", ["item-a"], NOW);
+    await run(recordContinueReadingImpressions(["item-a"]), fake);
 
     expect(fake.updates[0]!.set).toMatchObject({ state: "abandoned", dueAt: null });
   });
@@ -97,11 +91,9 @@ describe("recordContinueReadingImpressions", () => {
     ];
     const fake = createWriteDb(rows.map((reading) => ({ reading })));
 
-    const applied = await recordContinueReadingImpressions(
-      asDb(fake),
-      "user-1",
-      rows.map((row) => row.feedItemId!),
-      NOW,
+    const applied = await run(
+      recordContinueReadingImpressions(rows.map((row) => row.feedItemId!)),
+      fake,
     );
 
     expect(applied).toBe(0);
@@ -112,7 +104,7 @@ describe("recordContinueReadingImpressions", () => {
     const reading = readingRow({ feedItemId: "item-a" });
     const fake = createWriteDb([{ reading, hiddenAt: ago(HOUR) }]);
 
-    const applied = await recordContinueReadingImpressions(asDb(fake), "user-1", ["item-a"], NOW);
+    const applied = await run(recordContinueReadingImpressions(["item-a"]), fake);
 
     expect(applied).toBe(0);
     expect(fake.updates).toEqual([]);
@@ -121,12 +113,7 @@ describe("recordContinueReadingImpressions", () => {
   test("scopes the locked read to the caller and the submitted ids, locking the rows", async () => {
     const fake = createWriteDb([]);
 
-    const applied = await recordContinueReadingImpressions(
-      asDb(fake),
-      "user-1",
-      ["id-1", "id-2", "id-1"],
-      NOW,
-    );
+    const applied = await run(recordContinueReadingImpressions(["id-1", "id-2", "id-1"]), fake);
 
     // Another user's ids match no rows for this caller, so nothing is written.
     expect(applied).toBe(0);
@@ -147,12 +134,7 @@ describe("recordContinueReadingImpressions", () => {
     const second = readingRow({ feedItemId: null, clipId: "clip-b" });
     const fake = createWriteDb([{ reading: first }, { reading: second }]);
 
-    const applied = await recordContinueReadingImpressions(
-      asDb(fake),
-      "user-1",
-      ["a", "clip-b"],
-      NOW,
-    );
+    const applied = await run(recordContinueReadingImpressions(["a", "clip-b"]), fake);
 
     expect(applied).toBe(2);
     expect(fake.transactions).toBe(1);
@@ -162,7 +144,7 @@ describe("recordContinueReadingImpressions", () => {
   test("makes no query for an empty id list", async () => {
     const fake = createWriteDb([]);
 
-    await recordContinueReadingImpressions(asDb(fake), "user-1", [], NOW);
+    await run(recordContinueReadingImpressions([]), fake);
 
     expect(fake.queries).toEqual([]);
   });

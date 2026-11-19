@@ -1,10 +1,7 @@
 import { embeddingModelInfo, type EmbeddingClassifierConfig } from "@kyomi/ingest";
-import { env } from "@config/env";
+import type { Env } from "@config/env";
 
-type EmbeddingProviderEnv = Pick<
-  typeof env,
-  "CLOUDFLARE_EMBEDDINGS_URL" | "CLOUDFLARE_EMBEDDINGS_TOKEN"
->;
+type EmbeddingProviderEnv = Pick<Env, "CLOUDFLARE_EMBEDDINGS_URL" | "CLOUDFLARE_EMBEDDINGS_TOKEN">;
 
 /**
  * The embeddings Worker config shared by every classifier writer (refresh, extraction, backfill),
@@ -12,8 +9,8 @@ type EmbeddingProviderEnv = Pick<
  * keyword classifier then runs alone.
  */
 export function embeddingClassifierConfig(
-  timeoutMs?: number,
-  values: EmbeddingProviderEnv = env,
+  timeoutMs: number | undefined,
+  values: EmbeddingProviderEnv,
 ): EmbeddingClassifierConfig | undefined {
   const apiUrl = values.CLOUDFLARE_EMBEDDINGS_URL;
   const apiKey = values.CLOUDFLARE_EMBEDDINGS_TOKEN;
@@ -24,7 +21,7 @@ export function embeddingClassifierConfig(
 }
 
 /** Model id on rows the configured Worker writes; undefined when none is configured. */
-export function activeEmbeddingModelId(values: EmbeddingProviderEnv = env): string | undefined {
+export function activeEmbeddingModelId(values: EmbeddingProviderEnv): string | undefined {
   const config = embeddingClassifierConfig(undefined, values);
   return config ? embeddingModelInfo(config).modelId : undefined;
 }

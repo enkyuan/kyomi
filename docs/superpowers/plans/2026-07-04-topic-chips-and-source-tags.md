@@ -92,12 +92,14 @@ Why this is the right shape:
 ## Task 1: Persist Raw Source Tags During Refresh
 
 **Files:**
+
 - Create: `packages/worker/src/services/feed/tags.ts`
 - Modify: `packages/worker/src/services/feed/refresh.ts`
 - Modify: `packages/worker/src/services/feed/types.ts`
 - Test: `tests/api/integration/modules/feeds/refresh/categories.test.ts`
 
 **Interfaces:**
+
 - Consumes: `ParsedFeedItem.id` and `ParsedFeedItem.categoryLabels`.
 - Produces: `syncParsedFeedItemTags(database, items, now): Promise<number>`.
 - Produces: tag rows in `feed_item_tag_assignments` with `provenance = "feed"` and `confidence = null`.
@@ -289,13 +291,13 @@ import { syncParsedFeedItemTags } from "./tags";
 Before the existing `await database.transaction(async (tx) => { ... })`, initialize the count so it can be returned after the transaction:
 
 ```ts
-    let sourceTagAssignments = 0;
+let sourceTagAssignments = 0;
 ```
 
 Inside the existing refresh transaction, after feed item upsert and before the transaction closes, add:
 
 ```ts
-      sourceTagAssignments = await syncParsedFeedItemTags(tx, items, now);
+sourceTagAssignments = await syncParsedFeedItemTags(tx, items, now);
 ```
 
 Then include it in the success result:
@@ -340,6 +342,7 @@ Commit only the Task 1 files.
 ## Task 2: Share Canonical Category SQL Between List And Detail
 
 **Files:**
+
 - Create: `apps/api/src/modules/articles/read/category-labels.ts`
 - Modify: `apps/api/src/modules/articles/read/list/service.ts`
 - Modify: `apps/api/src/modules/articles/read/list/views.ts`
@@ -348,6 +351,7 @@ Commit only the Task 1 files.
 - Test: `tests/api/integration/modules/articles/read/detail-tags.test.ts`
 
 **Interfaces:**
+
 - Consumes: existing `feedCategoryLabelsSql` SQL body.
 - Produces: `feedCategoryLabelsSql` from `apps/api/src/modules/articles/read/category-labels.ts`.
 - Produces: `toFeedArticleDetailDtoForTest(row)` for focused DTO mapping tests.
@@ -360,7 +364,9 @@ Create `tests/api/integration/modules/articles/read/detail-tags.test.ts`:
 import { describe, expect, test } from "bun:test";
 import { toFeedArticleDetailDtoForTest } from "@modules/articles/read/detail";
 
-function rawDetailRow(overrides: Partial<Parameters<typeof toFeedArticleDetailDtoForTest>[0]> = {}) {
+function rawDetailRow(
+  overrides: Partial<Parameters<typeof toFeedArticleDetailDtoForTest>[0]> = {},
+) {
   const base = {
     id: "item-1",
     title: "Article &amp; title",
@@ -557,7 +563,9 @@ function toFeedArticleDetailDto(r: FeedArticleDetailRawRow): ArticleDetailDto {
     summary: decodeNullableText(r.summary),
     contentBaseUrl: r.link,
     extractedContentHtml: r.extractedContentHtml,
-    extractedContentText: r.extractedContentText ? decodeNullableText(r.extractedContentText) : null,
+    extractedContentText: r.extractedContentText
+      ? decodeNullableText(r.extractedContentText)
+      : null,
     extractedContentStatus: extractedStatus,
   });
   const reader = buildArticleReaderDto({
@@ -641,10 +649,12 @@ Commit only the Task 2 files.
 ## Task 3: Render Reader Topic Chips
 
 **Files:**
+
 - Modify: `apps/web/src/modules/reader/components/article/index.tsx`
 - Test: `tests/web/integration/src/modules/reader/components/article/category-chips.test.tsx`
 
 **Interfaces:**
+
 - Consumes: `ArticleDetailDto.categories`.
 - Reuses: `Categories` from `@modules/feeds/components/item/categories`.
 - Produces: reader header chip row matching list item chip semantics.
@@ -685,11 +695,7 @@ import { Categories } from "@modules/feeds/components/item/categories";
 Inside `ReaderArticleHeader`, after the title block, add:
 
 ```tsx
-      <Categories
-        categories={item.categories}
-        fontSizePx={sourceLabelFontSizePx}
-        className="not-prose"
-      />
+<Categories categories={item.categories} fontSizePx={sourceLabelFontSizePx} className="not-prose" />
 ```
 
 Do not add copy that explains topics or raw tags in the UI.
@@ -718,9 +724,11 @@ Commit only the Task 3 files.
 ## Task 4: Verify The End-To-End Contract
 
 **Files:**
+
 - Modify only if checks reveal a defect.
 
 **Interfaces:**
+
 - Consumes: outputs from Tasks 1-3.
 - Produces: verified topic/tag contract.
 
@@ -859,13 +867,13 @@ Sequential implementation, no parallelization opportunity. The work touches one 
 
 ## GSTACK REVIEW REPORT
 
-| Review | Trigger | Why | Runs | Status | Findings |
-|--------|---------|-----|------|--------|----------|
-| CEO Review | `/plan-ceo-review` | Scope & strategy | 0 | skipped | Product scope supplied directly by user; no separate CEO review requested for this plan. |
-| Codex Review | `/codex review` | Independent 2nd opinion | 0 | skipped | Not run; plan is based on direct repo inspection. |
-| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 1 | CLEAR | Reuse existing tag table, no migration, shared SQL for list/detail, tests added across ingestion/API/UI. |
-| Design Review | `/plan-design-review` | UI/UX gaps | 0 | skipped | UI change reuses existing chip component and style. |
-| DX Review | `/plan-devex-review` | Developer experience gaps | 0 | skipped | No developer-facing workflow change. |
+| Review        | Trigger               | Why                             | Runs | Status  | Findings                                                                                                 |
+| ------------- | --------------------- | ------------------------------- | ---- | ------- | -------------------------------------------------------------------------------------------------------- |
+| CEO Review    | `/plan-ceo-review`    | Scope & strategy                | 0    | skipped | Product scope supplied directly by user; no separate CEO review requested for this plan.                 |
+| Codex Review  | `/codex review`       | Independent 2nd opinion         | 0    | skipped | Not run; plan is based on direct repo inspection.                                                        |
+| Eng Review    | `/plan-eng-review`    | Architecture & tests (required) | 1    | CLEAR   | Reuse existing tag table, no migration, shared SQL for list/detail, tests added across ingestion/API/UI. |
+| Design Review | `/plan-design-review` | UI/UX gaps                      | 0    | skipped | UI change reuses existing chip component and style.                                                      |
+| DX Review     | `/plan-devex-review`  | Developer experience gaps       | 0    | skipped | No developer-facing workflow change.                                                                     |
 
 - **VERDICT:** ENG CLEARED — ready to implement.
 

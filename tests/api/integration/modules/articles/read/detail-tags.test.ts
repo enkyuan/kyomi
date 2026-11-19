@@ -1,45 +1,11 @@
 import { describe, expect, test } from "bun:test";
-import { toFeedArticleDetailDtoForTest } from "@modules/articles/read/detail";
+import { toFeedArticleDetailDto } from "@modules/articles/read/detail";
+import { rawDetailRow } from "./fakes";
 import { clipToDetail } from "@modules/articles/write/clips/detail";
-
-type FeedArticleDetailRawRow = Parameters<typeof toFeedArticleDetailDtoForTest>[0];
-
-function rawDetailRow(overrides: Partial<FeedArticleDetailRawRow> = {}): FeedArticleDetailRawRow {
-  return {
-    id: "item-1",
-    title: "SearXNG: A free internet metasearch engine",
-    link: "https://searxng.org/",
-    summary: "Summary",
-    imageUrl: "https://searxng.org/og-image.png",
-    content: null,
-    contentHtml: "<p>Summary</p>",
-    contentText: "Summary",
-    contentMarkdown: null,
-    contentStatus: "ready",
-    contentSource: "feed_html",
-    extractionErrorCode: null,
-    extractionErrorMessage: null,
-    extractedContentHtml: null,
-    extractedContentText: null,
-    extractedContentStatus: "pending",
-    extractedContentError: null,
-    extractedContentUpdatedAt: null,
-    publishedAt: new Date("2026-07-04T00:00:00.000Z"),
-    feedId: "feed-1",
-    feedUrl: "https://news.ycombinator.com/rss",
-    feedSiteUrl: "https://news.ycombinator.com",
-    feedTitle: "Hacker News",
-    feedFaviconUrl: null,
-    isRead: false,
-    isSaved: false,
-    categories: [],
-    ...overrides,
-  };
-}
 
 describe("article detail content", () => {
   test("normalizes feed top-level markdown to match nested reader content", () => {
-    const item = toFeedArticleDetailDtoForTest(
+    const item = toFeedArticleDetailDto(
       rawDetailRow({
         contentHtml: null,
         contentText: null,
@@ -71,9 +37,17 @@ describe("article detail content", () => {
       extractedContentStatus: "pending",
       extractedContentError: null,
       extractedContentUpdatedAt: null,
+      contentSanitizerVersion: null,
+      extractedContentSanitizerVersion: null,
+      contentDocumentVersion: null,
+      contentCompilerVersion: null,
+      extractedContentDocumentVersion: null,
+      extractedContentCompilerVersion: null,
       note: null,
       isRead: false,
       isSaved: false,
+      savedAt: null,
+      lastViewedAt: null,
       createdAt: new Date("2026-07-04T00:00:00.000Z"),
       updatedAt: new Date("2026-07-04T00:00:00.000Z"),
     });
@@ -85,7 +59,7 @@ describe("article detail content", () => {
 
 describe("article detail categories", () => {
   test("preserves the feed-provided lead image for reader clients", () => {
-    const item = toFeedArticleDetailDtoForTest(
+    const item = toFeedArticleDetailDto(
       rawDetailRow({ imageUrl: "https://searxng.org/og-image.png" }),
     );
 
@@ -93,7 +67,7 @@ describe("article detail categories", () => {
   });
 
   test("returns the same canonical category labels the list query selects", () => {
-    const item = toFeedArticleDetailDtoForTest(
+    const item = toFeedArticleDetailDto(
       rawDetailRow({ categories: ["Technology", "Software Engineering"] }),
     );
 
@@ -101,9 +75,7 @@ describe("article detail categories", () => {
   });
 
   test("decodes category label HTML entities on feed detail DTOs", () => {
-    const item = toFeedArticleDetailDtoForTest(
-      rawDetailRow({ categories: ["Arts &amp; Culture"] }),
-    );
+    const item = toFeedArticleDetailDto(rawDetailRow({ categories: ["Arts &amp; Culture"] }));
 
     expect(item.categories).toEqual(["Arts & Culture"]);
   });

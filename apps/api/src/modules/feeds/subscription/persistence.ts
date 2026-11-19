@@ -1,92 +1,114 @@
+import { Effect } from "effect";
 import { and, eq } from "drizzle-orm";
 import { feedSubscriptions, feeds } from "@kyomi/db";
 import { faviconSourceRank } from "@kyomi/ingest/favicon";
-import type { db } from "@adapters/db/client";
-import { logger } from "@adapters/logger";
-import { upsertFeedSearchDocument } from "@adapters/search/meili";
-import { resolveRemoteFeed } from "@modules/discover/feed/resolve/remote";
+import { Db, type Database } from "@adapters/db/service";
+import type { ResolvedRemoteFeed } from "@modules/discover/feed/resolve/remote";
 import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/operations";
+import { isApiError, type ApiError, type DatabaseError } from "@shared/effect/errors";
 
-type DB = typeof db;
+export type Transaction = Parameters<Parameters<Database["transaction"]>[0]>[0];
+
+/**
+ * Run Promise-based Drizzle work in one transaction. A throw rolls it back and becomes a typed
+ * `DatabaseError`, except a catalogue error the callback rejects with (the folders domain's
+ * `FOLDER_CREATE_FAILED`, say), which is handed back as itself so it keeps its status and code.
+ */
+export function inTransaction<A>(operation: string, run: (tx: Transaction) => Promise<A>) {
+  return Effect.gen(function* () {
+    const db = yield* Db;
+    return yield* db
+      .use(operation, (client) => client.transaction(run))
+      .pipe(
+        Effect.mapError(
+          (error: DatabaseError): ApiError => (isApiError(error.cause) ? error.cause : error),
+        ),
+      );
+  });
+}
 
 export type FaviconEnrichment = { url: string; source: string } | null;
 
-/**
- * Upsert the global `feeds` row by canonical URL. Returns the feed ID and
- * whether a new row was inserted.
- */
-export async function upsertFeedRecord(
-  tx: Parameters<Parameters<DB["transaction"]>[0]>[0],
-  resolved: Awaited<ReturnType<typeof resolveRemoteFeed>>,
-  favicon: FaviconEnrichment,
-): Promise<{
+type UpsertedFeed = {
   feedId: string;
   newFeed: boolean;
   faviconUrl: string | null;
   faviconSource: string | null;
-}> {
-  const now = new Date();
+};
 
-  const existingFeed = await tx
-    .select({
-      id: feeds.id,
-      link: feeds.link,
-      submittedUrl: feeds.submittedUrl,
-      discoveredFromUrl: feeds.discoveredFromUrl,
-      discoveryProvenance: feeds.discoveryProvenance,
-      faviconUrl: feeds.faviconUrl,
-      faviconSource: feeds.faviconSource,
+type ExistingFeed = {
+  id: string;
+  link: string | null;
+  submittedUrl: string | null;
+  discoveredFromUrl: string | null;
+  discoveryProvenance: string | null;
+  faviconUrl: string | null;
+  faviconSource: string | null;
+};
+
+/** A resolved favicon replaces the stored one when none is stored, the site moved, or it ranks higher. */
+function shouldApplyFavicon(
+  existing: ExistingFeed,
+  resolved: ResolvedRemoteFeed,
+  favicon: FaviconEnrichment,
+): favicon is NonNullable<FaviconEnrichment> {
+  if (!favicon) {
+    return false;
+  }
+  const linkChanged = (existing.link ?? "") !== (resolved.link ?? "");
+  const hasBetterFavicon =
+    faviconSourceRank(favicon.source) > faviconSourceRank(existing.faviconSource);
+  return !existing.faviconUrl || linkChanged || hasBetterFavicon;
+}
+
+async function updateExistingFeed(
+  tx: Transaction,
+  existing: ExistingFeed,
+  resolved: ResolvedRemoteFeed,
+  favicon: FaviconEnrichment,
+  now: Date,
+): Promise<UpsertedFeed> {
+  await tx
+    .update(feeds)
+    .set({
+      title: resolved.title,
+      description: resolved.description,
+      link: resolved.link,
+      submittedUrl: existing.submittedUrl ?? resolved.submittedUrl,
+      siteUrl: resolved.siteUrl ?? resolved.link,
+      canonicalFeedUrl: resolved.canonicalFeedUrl,
+      discoveredFromUrl: resolved.discoveredFromUrl ?? existing.discoveredFromUrl,
+      discoveryProvenance:
+        resolved.discoveredFromUrl !== null
+          ? resolved.discoveryProvenance
+          : (existing.discoveryProvenance ?? resolved.discoveryProvenance),
+      updatedAt: now,
+      ...(shouldApplyFavicon(existing, resolved, favicon)
+        ? { faviconUrl: favicon.url, faviconSource: favicon.source, faviconFetchedAt: now }
+        : {}),
     })
+    .where(eq(feeds.id, existing.id));
+
+  const [final] = await tx
+    .select({ faviconUrl: feeds.faviconUrl, faviconSource: feeds.faviconSource })
     .from(feeds)
-    .where(eq(feeds.url, resolved.canonicalUrl))
+    .where(eq(feeds.id, existing.id))
     .limit(1);
 
-  if (existingFeed[0]) {
-    const linkChanged = (existingFeed[0].link ?? "") !== (resolved.link ?? "");
-    const hasBetterFavicon =
-      faviconSourceRank(favicon?.source ?? null) > faviconSourceRank(existingFeed[0].faviconSource);
-    const shouldApplyFavicon =
-      favicon && (!existingFeed[0].faviconUrl || linkChanged || hasBetterFavicon);
+  return {
+    feedId: existing.id,
+    newFeed: false,
+    faviconUrl: final?.faviconUrl ?? null,
+    faviconSource: final?.faviconSource ?? null,
+  };
+}
 
-    await tx
-      .update(feeds)
-      .set({
-        title: resolved.title,
-        description: resolved.description,
-        link: resolved.link,
-        submittedUrl: existingFeed[0].submittedUrl ?? resolved.submittedUrl,
-        siteUrl: resolved.siteUrl ?? resolved.link,
-        canonicalFeedUrl: resolved.canonicalFeedUrl,
-        discoveredFromUrl: resolved.discoveredFromUrl ?? existingFeed[0].discoveredFromUrl,
-        discoveryProvenance:
-          resolved.discoveredFromUrl !== null
-            ? resolved.discoveryProvenance
-            : (existingFeed[0].discoveryProvenance ?? resolved.discoveryProvenance),
-        updatedAt: now,
-        ...(shouldApplyFavicon
-          ? {
-              faviconUrl: favicon!.url,
-              faviconSource: favicon!.source,
-              faviconFetchedAt: now,
-            }
-          : {}),
-      })
-      .where(eq(feeds.id, existingFeed[0].id));
-
-    const [final] = await tx
-      .select({ faviconUrl: feeds.faviconUrl, faviconSource: feeds.faviconSource })
-      .from(feeds)
-      .where(eq(feeds.id, existingFeed[0].id))
-      .limit(1);
-
-    return {
-      feedId: existingFeed[0].id,
-      newFeed: false,
-      faviconUrl: final?.faviconUrl ?? null,
-      faviconSource: final?.faviconSource ?? null,
-    };
-  }
-
+async function insertFeed(
+  tx: Transaction,
+  resolved: ResolvedRemoteFeed,
+  favicon: FaviconEnrichment,
+  now: Date,
+): Promise<UpsertedFeed> {
   const feedId = crypto.randomUUID();
   await tx.insert(feeds).values({
     id: feedId,
@@ -114,6 +136,35 @@ export async function upsertFeedRecord(
   };
 }
 
+/**
+ * Upsert the global `feeds` row by canonical URL. Returns the feed ID and
+ * whether a new row was inserted.
+ */
+export async function upsertFeedRecord(
+  tx: Transaction,
+  resolved: ResolvedRemoteFeed,
+  favicon: FaviconEnrichment,
+  now: Date,
+): Promise<UpsertedFeed> {
+  const [existing] = await tx
+    .select({
+      id: feeds.id,
+      link: feeds.link,
+      submittedUrl: feeds.submittedUrl,
+      discoveredFromUrl: feeds.discoveredFromUrl,
+      discoveryProvenance: feeds.discoveryProvenance,
+      faviconUrl: feeds.faviconUrl,
+      faviconSource: feeds.faviconSource,
+    })
+    .from(feeds)
+    .where(eq(feeds.url, resolved.canonicalUrl))
+    .limit(1);
+
+  return existing
+    ? updateExistingFeed(tx, existing, resolved, favicon, now)
+    : insertFeed(tx, resolved, favicon, now);
+}
+
 export type SubscriptionInsertOptions = {
   folderId?: string | null;
   customTitle?: string | null;
@@ -126,9 +177,10 @@ export type SubscriptionInsertOptions = {
  * left untouched — only a newly inserted row gets the requested metadata.
  */
 export async function subscribeUserToFeed(
-  tx: Parameters<Parameters<DB["transaction"]>[0]>[0],
+  tx: Transaction,
   userId: string,
   feedId: string,
+  now: Date,
   options?: SubscriptionInsertOptions,
 ): Promise<{ subscriptionId: string; newSubscription: boolean }> {
   const subscriptionId = crypto.randomUUID();
@@ -143,7 +195,7 @@ export async function subscribeUserToFeed(
       feedId,
       folderId,
       customTitle: options?.customTitle?.trim() || null,
-      createdAt: new Date(),
+      createdAt: now,
     })
     .onConflictDoNothing()
     .returning({ id: feedSubscriptions.id });
@@ -161,27 +213,4 @@ export async function subscribeUserToFeed(
     throw new Error("Subscription insert conflicted but no existing row was found");
   }
   return { subscriptionId: existingSub[0].id, newSubscription: false };
-}
-
-/**
- * Index the feed in the search engine. Logs errors instead of silently
- * swallowing them so search indexing failures are visible in telemetry.
- */
-export async function indexFeedForSearch(metadata: {
-  id: string;
-  url: string;
-  title: string;
-  description: string | null;
-  link: string | null;
-  faviconUrl?: string | null;
-}): Promise<void> {
-  try {
-    await upsertFeedSearchDocument(metadata);
-  } catch (error) {
-    logger.warn("feeds.search_index.failed", {
-      feedId: metadata.id,
-      url: metadata.url,
-      error: error instanceof Error ? error.message : String(error),
-    });
-  }
 }

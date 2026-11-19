@@ -1,5 +1,7 @@
 import { describe, expect, mock, test } from "bun:test";
-import { AppError } from "@shared/errors/app";
+import type { Effect } from "effect";
+import type { Db } from "@adapters/db/service";
+import { fakeDb as dbLayer } from "@api-tests/support/layers";
 import { encodeOpmlFailureCursor } from "@modules/opml/cursor/failure";
 import { encodeOpmlImportCursor } from "@modules/opml/cursor/import";
 import {
@@ -26,6 +28,15 @@ import {
   retryOrFailOpmlItem,
   toCompatibleOpmlImportStatus,
 } from "@modules/opml/store";
+import { failureWith, runWith } from "./fixtures";
+
+/** Run a store Effect against a fake Drizzle client. */
+const run = <A, E>(effect: Effect.Effect<A, E, Db>, fake: unknown) =>
+  runWith(effect, dbLayer(fake as never));
+
+/** Run a store Effect that must fail and return its typed error. */
+const failure = <A, E>(effect: Effect.Effect<A, E, Db>, fake: unknown) =>
+  failureWith(effect, dbLayer(fake as never));
 
 function importRow(overrides: Partial<Record<string, unknown>> = {}) {
   return {
@@ -65,11 +76,14 @@ describe("opml import store", () => {
     const insert = mock(() => ({ values }));
     const fakeDb = { insert } as unknown as Parameters<typeof createOpmlImport>[0];
 
-    const result = await createOpmlImport(fakeDb, {
-      userId: "user-1",
-      filename: "feeds.opml",
-      sourceXml: "<opml><body><outline/></body></opml>",
-    });
+    const result = await run(
+      createOpmlImport({
+        userId: "user-1",
+        filename: "feeds.opml",
+        sourceXml: "<opml><body><outline/></body></opml>",
+      }),
+      fakeDb,
+    );
 
     expect(result).toMatchObject({ userId: "user-1", status: "accepted" });
     expect(values).toHaveBeenCalled();
@@ -84,13 +98,15 @@ describe("opml import store", () => {
     });
     const fakeDb = { insert } as unknown as Parameters<typeof createOpmlImport>[0];
 
-    await expect(
-      createOpmlImport(fakeDb, {
+    const error = await failure(
+      createOpmlImport({
         userId: "user-1",
         filename: "feeds.opml",
         sourceXml: "x".repeat(32 * 1024 * 1024 + 1),
       }),
-    ).rejects.toMatchObject({ code: "OPML_TOO_LARGE", status: 413 });
+      fakeDb,
+    );
+    expect(error).toMatchObject({ _tag: "PayloadTooLarge", code: "OPML_TOO_LARGE" });
     expect(insert).not.toHaveBeenCalled();
   });
 
@@ -106,16 +122,52 @@ describe("opml import store", () => {
     const insert = mock(() => ({ values }));
     const fakeDb = { insert } as unknown as Parameters<typeof createOpmlImport>[0];
 
-    await expect(
-      createOpmlImport(fakeDb, {
+    const error = await failure(
+      createOpmlImport({
         userId: "user-1",
         filename: "feeds.opml",
         sourceXml: "<opml><body><outline/></body></opml>",
       }),
-    ).rejects.toMatchObject({
-      code: "OPML_IMPORT_ACTIVE",
-      status: 409,
-    } satisfies Partial<AppError>);
+      fakeDb,
+    );
+    expect(error).toMatchObject({ _tag: "Conflict", code: "OPML_IMPORT_ACTIVE" });
+  });
+
+  test("finds the constraint on a driver error wrapped by Drizzle", async () => {
+    const wrapped = Object.assign(new Error("Failed query"), {
+      cause: Object.assign(new Error("duplicate key"), {
+        constraint: "opml_imports_one_active_per_user_uidx",
+      }),
+    });
+    const fakeDb = {
+      insert: () => ({ values: () => ({ returning: () => Promise.reject(wrapped) }) }),
+    };
+
+    const error = await failure(
+      createOpmlImport({
+        userId: "user-1",
+        filename: "feeds.opml",
+        sourceXml: "<opml><body><outline/></body></opml>",
+      }),
+      fakeDb,
+    );
+    expect(error).toMatchObject({ _tag: "Conflict", code: "OPML_IMPORT_ACTIVE" });
+  });
+
+  test("any other insert failure is an opaque database error", async () => {
+    const fakeDb = {
+      insert: () => ({ values: () => ({ returning: () => Promise.reject(new Error("down")) }) }),
+    };
+
+    const error = await failure(
+      createOpmlImport({
+        userId: "user-1",
+        filename: "feeds.opml",
+        sourceXml: "<opml><body><outline/></body></opml>",
+      }),
+      fakeDb,
+    );
+    expect(error).toMatchObject({ _tag: "DatabaseError", operation: "opml.import.create" });
   });
 
   test("status reads stored counters without loading every item", async () => {
@@ -133,7 +185,7 @@ describe("opml import store", () => {
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof getOpmlImportForUser>[0];
 
-    const found = await getOpmlImportForUser(fakeDb, "user-1", "import-1");
+    const found = await run(getOpmlImportForUser("user-1", "import-1"), fakeDb);
     expect(found).not.toBeNull();
     expect(buildOpmlImportSummary(found as NonNullable<typeof found>)).toEqual({
       totalUrls: 50_000,
@@ -152,7 +204,7 @@ describe("opml import store", () => {
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof getOpmlImportForUser>[0];
 
-    expect(await getOpmlImportForUser(fakeDb, "user-2", "import-1")).toBeNull();
+    expect(await run(getOpmlImportForUser("user-2", "import-1"), fakeDb)).toBeNull();
   });
 
   test("lists at most one active import per user", async () => {
@@ -162,7 +214,7 @@ describe("opml import store", () => {
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof listActiveOpmlImportsForUser>[0];
 
-    const active = await listActiveOpmlImportsForUser(fakeDb, "user-1");
+    const active = await run(listActiveOpmlImportsForUser("user-1"), fakeDb);
     expect(active).toHaveLength(1);
     expect(limit).toHaveBeenCalledWith(1);
   });
@@ -173,7 +225,7 @@ describe("opml import store", () => {
     const del = mock(() => ({ where }));
     const fakeDb = { delete: del } as unknown as Parameters<typeof deleteTerminalOpmlImport>[0];
 
-    expect(await deleteTerminalOpmlImport(fakeDb, "user-1", "import-1")).toBe(true);
+    expect(await run(deleteTerminalOpmlImport("user-1", "import-1"), fakeDb)).toBe(true);
   });
 
   test("maps internal states to the compatible five-value status", () => {
@@ -203,7 +255,7 @@ describe("opml import store", () => {
       typeof requestOpmlImportCancellation
     >[0];
 
-    const result = await requestOpmlImportCancellation(fakeDb, "user-1", "import-1");
+    const result = await run(requestOpmlImportCancellation("user-1", "import-1"), fakeDb);
     expect(result).toEqual({ found: true, cancelled: true, status: "in_progress" });
   });
 
@@ -214,7 +266,7 @@ describe("opml import store", () => {
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof requestOpmlImportCancellation>[0];
 
-    const result = await requestOpmlImportCancellation(fakeDb, "user-1", "import-1");
+    const result = await run(requestOpmlImportCancellation("user-1", "import-1"), fakeDb);
     expect(result).toEqual({ found: false, cancelled: false, status: "cancelled" });
   });
 
@@ -231,7 +283,7 @@ describe("opml import store", () => {
       typeof requestOpmlImportCancellation
     >[0];
 
-    const result = await requestOpmlImportCancellation(fakeDb, "user-1", "import-1");
+    const result = await run(requestOpmlImportCancellation("user-1", "import-1"), fakeDb);
     expect(result).toEqual({ found: true, cancelled: false, status: "completed" });
     expect(update).not.toHaveBeenCalled();
   });
@@ -266,7 +318,7 @@ describe("opml import store", () => {
       title: null,
       folderName: "Unsorted",
       ...overrides,
-    } as Parameters<typeof insertOpmlImportItems>[2][number];
+    } as Parameters<typeof insertOpmlImportItems>[1][number];
   }
 
   test("insertOpmlImportItems writes at most 500 rows per statement and returns the durable count", async () => {
@@ -289,7 +341,7 @@ describe("opml import store", () => {
       }),
     );
 
-    const total = await insertOpmlImportItems(fakeDb, "import-1", feeds, new Map());
+    const total = await run(insertOpmlImportItems("import-1", feeds, new Map()), fakeDb);
 
     expect(insertCalls).toHaveLength(3);
     expect((insertCalls[0] as unknown[]).length).toBe(500);
@@ -311,19 +363,21 @@ describe("opml import store", () => {
     }));
     const fakeDb = { insert, select } as unknown as Parameters<typeof insertOpmlImportItems>[0];
 
-    await insertOpmlImportItems(
+    await run(
+      insertOpmlImportItems(
+        "import-1",
+        [
+          parsedFeed({ folderName: "Tech" }),
+          parsedFeed({
+            xmlUrl: "https://example.com/other.xml",
+            originalUrl: "https://example.com/other.xml",
+            normalizedUrl: "https://example.com/other.xml",
+            folderName: "Unsorted",
+          }),
+        ],
+        new Map([["Tech", "folder-1"]]),
+      ),
       fakeDb,
-      "import-1",
-      [
-        parsedFeed({ folderName: "Tech" }),
-        parsedFeed({
-          xmlUrl: "https://example.com/other.xml",
-          originalUrl: "https://example.com/other.xml",
-          normalizedUrl: "https://example.com/other.xml",
-          folderName: "Unsorted",
-        }),
-      ],
-      new Map([["Tech", "folder-1"]]),
     );
 
     expect(capturedRows[0]).toMatchObject({ position: 0, folderId: "folder-1" });
@@ -336,7 +390,7 @@ describe("opml import store", () => {
     });
     const fakeDb = { insert } as unknown as Parameters<typeof insertOpmlImportItems>[0];
 
-    expect(await insertOpmlImportItems(fakeDb, "import-1", [], new Map())).toBe(0);
+    expect(await run(insertOpmlImportItems("import-1", [], new Map()), fakeDb)).toBe(0);
   });
 });
 
@@ -347,11 +401,14 @@ describe("recordOpmlImportMaterialized", () => {
     const update = mock(() => ({ set }));
     const fakeDb = { update } as unknown as Parameters<typeof recordOpmlImportMaterialized>[0];
 
-    await recordOpmlImportMaterialized(fakeDb, "import-1", {
-      totalItems: 1201,
-      opmlTitle: "My Feeds",
-      opmlAuthor: null,
-    });
+    await run(
+      recordOpmlImportMaterialized("import-1", {
+        totalItems: 1201,
+        opmlTitle: "My Feeds",
+        opmlAuthor: null,
+      }),
+      fakeDb,
+    );
 
     expect(set).toHaveBeenCalledWith(
       expect.objectContaining({ totalItems: 1201, opmlTitle: "My Feeds" }),
@@ -392,7 +449,7 @@ describe("finalizeOpmlImportPreparation", () => {
       failedItems: 0,
     });
 
-    await finalizeOpmlImportPreparation(fakeDb as never, "import-1");
+    await run(finalizeOpmlImportPreparation("import-1"), fakeDb);
 
     expect(setCalls).toHaveLength(1);
     expect(setCalls[0]).toMatchObject({ status: "dispatching", sourceXml: null });
@@ -406,7 +463,7 @@ describe("finalizeOpmlImportPreparation", () => {
       failedItems: 0,
     });
 
-    await finalizeOpmlImportPreparation(fakeDb as never, "import-1");
+    await run(finalizeOpmlImportPreparation("import-1"), fakeDb);
 
     expect(setCalls[0]).toMatchObject({ status: "completed", sourceXml: null });
   });
@@ -419,7 +476,7 @@ describe("finalizeOpmlImportPreparation", () => {
       failedItems: 5,
     });
 
-    await finalizeOpmlImportPreparation(fakeDb as never, "import-1");
+    await run(finalizeOpmlImportPreparation("import-1"), fakeDb);
 
     expect(setCalls[0]).toMatchObject({ status: "failed", sourceXml: null });
   });
@@ -427,7 +484,7 @@ describe("finalizeOpmlImportPreparation", () => {
   test("does nothing when the import has already left parsing", async () => {
     const { fakeDb, setCalls } = createFakeFinalizeDb(undefined);
 
-    await finalizeOpmlImportPreparation(fakeDb as never, "import-1");
+    await run(finalizeOpmlImportPreparation("import-1"), fakeDb);
 
     expect(setCalls).toHaveLength(0);
   });
@@ -455,7 +512,7 @@ describe("claimLeasedOpmlItem", () => {
     }));
     const fakeDb = { update, select } as unknown as Parameters<typeof claimLeasedOpmlItem>[0];
 
-    const claim = await claimLeasedOpmlItem(fakeDb, "import-1", "item-1", "lease-1");
+    const claim = await run(claimLeasedOpmlItem("import-1", "item-1", "lease-1"), fakeDb);
 
     expect(claim).toMatchObject({ id: "item-1", userId: "user-1", leaseToken: "lease-1" });
   });
@@ -469,7 +526,7 @@ describe("claimLeasedOpmlItem", () => {
     });
     const fakeDb = { update, select } as unknown as Parameters<typeof claimLeasedOpmlItem>[0];
 
-    expect(await claimLeasedOpmlItem(fakeDb, "import-1", "item-1", "lease-1")).toBeNull();
+    expect(await run(claimLeasedOpmlItem("import-1", "item-1", "lease-1"), fakeDb)).toBeNull();
   });
 });
 
@@ -523,7 +580,7 @@ describe("completeOpmlItem", () => {
       },
     };
 
-    const result = await completeOpmlItem(fakeDb as never, claimStub(), "subscribed");
+    const result = await run(completeOpmlItem(claimStub(), "subscribed"), fakeDb);
 
     expect(result).toBe(true);
     expect(setCalls[0]).toMatchObject({ status: "subscribed" });
@@ -544,7 +601,7 @@ describe("completeOpmlItem", () => {
       },
     };
 
-    expect(await completeOpmlItem(fakeDb as never, claimStub(), "subscribed")).toBe(false);
+    expect(await run(completeOpmlItem(claimStub(), "subscribed"), fakeDb)).toBe(false);
   });
 });
 
@@ -560,11 +617,13 @@ describe("retryOrFailOpmlItem", () => {
     const fakeDb = { update } as unknown as Parameters<typeof retryOrFailOpmlItem>[0];
     const availableAt = new Date("2026-01-01T00:05:00.000Z");
 
-    await retryOrFailOpmlItem(
+    await run(
+      retryOrFailOpmlItem(
+        claimStub({ attempts: 2 }),
+        { retryable: true, code: "FEED_FETCH_FAILED", message: "timeout" },
+        availableAt,
+      ),
       fakeDb,
-      claimStub({ attempts: 2 }),
-      { retryable: true, code: "FEED_FETCH_FAILED", message: "timeout" },
-      availableAt,
     );
 
     expect(setCalls).toHaveLength(1);
@@ -614,11 +673,13 @@ describe("retryOrFailOpmlItem", () => {
       },
     };
 
-    await retryOrFailOpmlItem(
-      fakeDb as never,
-      claimStub({ attempts: 1 }),
-      { retryable: false, code: "INVALID_FEED_URL", message: "bad url" },
-      new Date(),
+    await run(
+      retryOrFailOpmlItem(
+        claimStub({ attempts: 1 }),
+        { retryable: false, code: "INVALID_FEED_URL", message: "bad url" },
+        new Date(),
+      ),
+      fakeDb,
     );
 
     expect(setCalls[0]).toMatchObject({ status: "failed", errorCode: "INVALID_FEED_URL" });
@@ -664,11 +725,13 @@ describe("retryOrFailOpmlItem", () => {
       },
     };
 
-    await retryOrFailOpmlItem(
-      fakeDb as never,
-      claimStub({ attempts: 5 }),
-      { retryable: true, code: "FEED_FETCH_FAILED", message: "timeout" },
-      new Date(),
+    await run(
+      retryOrFailOpmlItem(
+        claimStub({ attempts: 5 }),
+        { retryable: true, code: "FEED_FETCH_FAILED", message: "timeout" },
+        new Date(),
+      ),
+      fakeDb,
     );
 
     expect(setCalls[0]).toMatchObject({ status: "failed" });
@@ -691,10 +754,12 @@ describe("completion cannot overwrite cancellation", () => {
     };
 
     expect(
-      await completeOpmlItem(
-        fakeDb as never,
-        { id: "item-1", importId: "import-1", leaseToken: "lease-1" },
-        "subscribed",
+      await run(
+        completeOpmlItem(
+          { id: "item-1", importId: "import-1", leaseToken: "lease-1" },
+          "subscribed",
+        ),
+        fakeDb,
       ),
     ).toBe(false);
   });
@@ -735,9 +800,9 @@ describe("cancelPendingOpmlItems", () => {
   test("cancels in bounded batches and stops once nothing remains", async () => {
     const { db } = createFakeCancelDb([500, 201, 0]);
 
-    expect(await cancelPendingOpmlItems(db as never, "import-1", 500)).toBe(500);
-    expect(await cancelPendingOpmlItems(db as never, "import-1", 500)).toBe(201);
-    expect(await cancelPendingOpmlItems(db as never, "import-1", 500)).toBe(0);
+    expect(await run(cancelPendingOpmlItems("import-1", 500), db)).toBe(500);
+    expect(await run(cancelPendingOpmlItems("import-1", 500), db)).toBe(201);
+    expect(await run(cancelPendingOpmlItems("import-1", 500), db)).toBe(0);
   });
 
   test("clamps batchSize to at most 500", async () => {
@@ -754,7 +819,7 @@ describe("cancelPendingOpmlItems", () => {
       },
     };
 
-    await cancelPendingOpmlItems(db as never, "import-1", 10_000);
+    await run(cancelPendingOpmlItems("import-1", 10_000), db);
 
     const values = (capturedQuery?.queryChunks ?? []).filter(
       (chunk): chunk is number => typeof chunk === "number",
@@ -791,19 +856,21 @@ describe("listOpmlImportsForUser", () => {
       }),
     } as unknown as Parameters<typeof listOpmlImportsForUser>[0];
 
-    const page = await listOpmlImportsForUser(fakeDb, { userId: "user-1", limit: 20 });
+    const page = await run(listOpmlImportsForUser({ userId: "user-1", limit: 20 }), fakeDb);
 
     expect(page.items).toHaveLength(20);
     expect(page.hasMore).toBe(true);
     expect(page.nextCursor).toBeString();
   });
 
-  test("throws OPML_IMPORT_CURSOR_INVALID for a malformed cursor", async () => {
+  test("fails with OPML_IMPORT_CURSOR_INVALID for a malformed cursor", async () => {
     const fakeDb = {} as unknown as Parameters<typeof listOpmlImportsForUser>[0];
 
-    await expect(
-      listOpmlImportsForUser(fakeDb, { userId: "user-1", cursor: "not-a-valid-cursor" }),
-    ).rejects.toMatchObject({ code: "OPML_IMPORT_CURSOR_INVALID", status: 400 });
+    const error = await failure(
+      listOpmlImportsForUser({ userId: "user-1", cursor: "not-a-valid-cursor" }),
+      fakeDb,
+    );
+    expect(error).toMatchObject({ _tag: "BadRequest", code: "OPML_IMPORT_CURSOR_INVALID" });
   });
 
   test("accepts its own encoded cursor on a subsequent call", async () => {
@@ -823,7 +890,7 @@ describe("listOpmlImportsForUser", () => {
       }),
     } as unknown as Parameters<typeof listOpmlImportsForUser>[0];
 
-    const page = await listOpmlImportsForUser(fakeDb, { userId: "user-1", cursor });
+    const page = await run(listOpmlImportsForUser({ userId: "user-1", cursor }), fakeDb);
     expect(page.items).toEqual([]);
   });
 });
@@ -851,10 +918,13 @@ describe("listOpmlImportFailures", () => {
       }),
     } as unknown as Parameters<typeof listOpmlImportFailures>[0];
 
-    const page = await listOpmlImportFailures(fakeDb, {
-      userId: "user-1",
-      importId: "import-1",
-    });
+    const page = await run(
+      listOpmlImportFailures({
+        userId: "user-1",
+        importId: "import-1",
+      }),
+      fakeDb,
+    );
     expect(page).toEqual({ items: [], nextCursor: null, hasMore: false });
   });
 
@@ -875,27 +945,28 @@ describe("listOpmlImportFailures", () => {
       }),
     } as unknown as Parameters<typeof listOpmlImportFailures>[0];
 
-    const page = await listOpmlImportFailures(fakeDb, {
-      userId: "user-1",
-      importId: "import-1",
-      limit: 2,
-    });
+    const page = await run(
+      listOpmlImportFailures({
+        userId: "user-1",
+        importId: "import-1",
+        limit: 2,
+      }),
+      fakeDb,
+    );
 
     expect(page.items).toHaveLength(2);
     expect(page.hasMore).toBe(true);
     expect(page.nextCursor).toBeString();
   });
 
-  test("throws OPML_FAILURE_CURSOR_INVALID for a malformed cursor", async () => {
+  test("fails with OPML_FAILURE_CURSOR_INVALID for a malformed cursor", async () => {
     const fakeDb = {} as unknown as Parameters<typeof listOpmlImportFailures>[0];
 
-    await expect(
-      listOpmlImportFailures(fakeDb, {
-        userId: "user-1",
-        importId: "import-1",
-        cursor: "garbage",
-      }),
-    ).rejects.toMatchObject({ code: "OPML_FAILURE_CURSOR_INVALID", status: 400 });
+    const error = await failure(
+      listOpmlImportFailures({ userId: "user-1", importId: "import-1", cursor: "garbage" }),
+      fakeDb,
+    );
+    expect(error).toMatchObject({ _tag: "BadRequest", code: "OPML_FAILURE_CURSOR_INVALID" });
   });
 
   test("accepts its own encoded cursor on a subsequent call", async () => {
@@ -915,11 +986,14 @@ describe("listOpmlImportFailures", () => {
       }),
     } as unknown as Parameters<typeof listOpmlImportFailures>[0];
 
-    const page = await listOpmlImportFailures(fakeDb, {
-      userId: "user-1",
-      importId: "import-1",
-      cursor,
-    });
+    const page = await run(
+      listOpmlImportFailures({
+        userId: "user-1",
+        importId: "import-1",
+        cursor,
+      }),
+      fakeDb,
+    );
     expect(page.items).toEqual([]);
   });
 });
@@ -938,11 +1012,13 @@ describe("reclaimStalePrepareImports", () => {
     >[0];
 
     const now = new Date("2026-01-01T00:10:00.000Z");
-    const dueForPrepare = await reclaimStalePrepareImports(
+    const dueForPrepare = await run(
+      reclaimStalePrepareImports(
+        now,
+        new Date(now.getTime() - 30_000),
+        new Date(now.getTime() - 5 * 60_000),
+      ),
       fakeDb,
-      now,
-      new Date(now.getTime() - 30_000),
-      new Date(now.getTime() - 5 * 60_000),
     );
 
     expect(dueForPrepare).toEqual(["import-accepted-1", "import-accepted-2"]);
@@ -962,7 +1038,7 @@ describe("findExpiredOpmlLeases", () => {
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof findExpiredOpmlLeases>[0];
 
-    const expired = await findExpiredOpmlLeases(fakeDb, new Date());
+    const expired = await run(findExpiredOpmlLeases(new Date()), fakeDb);
 
     expect(expired).toEqual([
       { id: "item-1", importId: "import-1", leaseToken: "lease-1", attempts: 1 },
@@ -978,7 +1054,7 @@ describe("listCancellingOpmlImportIds", () => {
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof listCancellingOpmlImportIds>[0];
 
-    expect(await listCancellingOpmlImportIds(fakeDb, 2)).toEqual(["import-1", "import-2"]);
+    expect(await run(listCancellingOpmlImportIds(2), fakeDb)).toEqual(["import-1", "import-2"]);
     expect(limit).toHaveBeenCalledWith(2);
   });
 });
@@ -995,7 +1071,7 @@ describe("deleteOldTerminalOpmlImports", () => {
       typeof deleteOldTerminalOpmlImports
     >[0];
 
-    const deletedCount = await deleteOldTerminalOpmlImports(fakeDb, new Date());
+    const deletedCount = await run(deleteOldTerminalOpmlImports(new Date()), fakeDb);
 
     expect(deletedCount).toBe(2);
   });
@@ -1011,7 +1087,7 @@ describe("deleteOldTerminalOpmlImports", () => {
       typeof deleteOldTerminalOpmlImports
     >[0];
 
-    expect(await deleteOldTerminalOpmlImports(fakeDb, new Date())).toBe(0);
+    expect(await run(deleteOldTerminalOpmlImports(new Date()), fakeDb)).toBe(0);
   });
 });
 
@@ -1026,11 +1102,13 @@ describe("retryOrFailOpmlItem reclaims a leased (never-claimed) item the same as
     }));
     const fakeDb = { update } as unknown as Parameters<typeof retryOrFailOpmlItem>[0];
 
-    await retryOrFailOpmlItem(
+    await run(
+      retryOrFailOpmlItem(
+        { id: "item-1", importId: "import-1", leaseToken: "lease-1", attempts: 1 },
+        { retryable: true, code: "OPML_ITEM_LEASE_EXPIRED", message: "Lease expired" },
+        new Date(),
+      ),
       fakeDb,
-      { id: "item-1", importId: "import-1", leaseToken: "lease-1", attempts: 1 },
-      { retryable: true, code: "OPML_ITEM_LEASE_EXPIRED", message: "Lease expired" },
-      new Date(),
     );
 
     expect(setCalls[0]).toMatchObject({ status: "pending", leaseToken: null });

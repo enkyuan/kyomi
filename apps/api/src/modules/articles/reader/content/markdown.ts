@@ -44,6 +44,22 @@ function previousNonBlankLine(lines: string[], index: number): string | undefine
   return undefined;
 }
 
+/** The run of indented lines starting at `start` (blank lines inside the run included). */
+function collectIndentedBlock(lines: string[], start: number): { block: string[]; next: number } {
+  const block: string[] = [];
+  let index = start;
+  while (index < lines.length) {
+    const current = lines[index] ?? "";
+    const isBlank = !current.trim();
+    if (isBlank ? expandedIndent(lines[index + 1] ?? "") < 4 : expandedIndent(current) < 4) {
+      break;
+    }
+    block.push(isBlank ? current : expandTabs(current).slice(4));
+    index += 1;
+  }
+  return { block, next: index };
+}
+
 function convertIndentedCodeBlocks(lines: string[]): string[] {
   const out: string[] = [];
   let index = 0;
@@ -70,24 +86,9 @@ function convertIndentedCodeBlocks(lines: string[]): string[] {
       continue;
     }
 
-    const block: string[] = [];
-    while (index < lines.length) {
-      const current = lines[index] ?? "";
-      if (!current.trim()) {
-        const next = lines[index + 1] ?? "";
-        if (expandedIndent(next) >= 4) {
-          block.push(current);
-          index += 1;
-          continue;
-        }
-        break;
-      }
-      if (expandedIndent(current) < 4) {
-        break;
-      }
-      block.push(expandTabs(current).slice(4));
-      index += 1;
-    }
+    const collected = collectIndentedBlock(lines, index);
+    const block = collected.block;
+    index = collected.next;
 
     const generatedFence = block.some((entry) => entry.trimStart().startsWith("```"))
       ? "~~~"

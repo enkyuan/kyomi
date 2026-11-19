@@ -72,17 +72,17 @@ Dynamic Type and Material typography.
 
 ## Commands
 
-| Command                               | Purpose                               |
-| ------------------------------------- | ------------------------------------- |
-| `bun run --cwd apps/mobile start`     | Start the Expo development server.    |
-| `bun run --cwd apps/mobile ios`       | Build and run on iOS.                 |
+| Command                                | Purpose                                 |
+| -------------------------------------- | --------------------------------------- |
+| `bun run --cwd apps/mobile start`      | Start the Expo development server.      |
+| `bun run --cwd apps/mobile ios`        | Build and run on iOS.                   |
 | `bun run --cwd apps/mobile ios:device` | Build and run on a physical iOS device. |
-| `bun run --cwd apps/mobile android`   | Build and run on Android.             |
-| `bun run --cwd apps/mobile web`       | Start the web fallback.               |
-| `bun run --cwd apps/mobile build`     | Export iOS, Android, and web bundles. |
-| `bun run --cwd apps/mobile typecheck` | Type-check the mobile workspace.      |
-| `bun run --cwd apps/mobile lint`      | Lint mobile source.                   |
-| `bun run --cwd apps/mobile fmt:check` | Check formatting.                     |
+| `bun run --cwd apps/mobile android`    | Build and run on Android.               |
+| `bun run --cwd apps/mobile web`        | Start the web fallback.                 |
+| `bun run --cwd apps/mobile build`      | Export iOS, Android, and web bundles.   |
+| `bun run --cwd apps/mobile typecheck`  | Type-check the mobile workspace.        |
+| `bun run --cwd apps/mobile lint`       | Lint mobile source.                     |
+| `bun run --cwd apps/mobile fmt:check`  | Check formatting.                       |
 
 ## Authentication development
 
@@ -165,7 +165,7 @@ These counters are measurement hooks, not evidence of a frame-rate improvement b
 Implementation references (accessed 2026-10-24):
 [Expo view functions and lifecycle](https://docs.expo.dev/modules/module-api/),
 [Apple collection-view performance](https://developer.apple.com/videos/play/wwdc2021/10252/), and
-[SwiftUI fonts relative to text styles](https://developer.apple.com/documentation/swiftui/font/custom(_:size:relativeto:)).
+[SwiftUI fonts relative to text styles](<https://developer.apple.com/documentation/swiftui/font/custom(_:size:relativeto:)>).
 The bridge was checked against ExpoModulesCore 57.0.24, and native compilation uses Xcode 27.1.
 The explicit `.runOnQueue(.main)` follows the installed API rather than relying on documentation's
 default-queue statement. A native development build is required after these changes.

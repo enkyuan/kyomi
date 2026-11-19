@@ -28,7 +28,8 @@ function normalizeInitialSession(initialSession?: AuthSession | null): SessionDa
   return {
     session: {
       ...initialSession.session,
-      // Not sent with the page; the live session or the sessions list supplies them.
+      // Not sent with the page, and `get-session` leaves the token out; the live session or the
+      // sessions list supplies the rest. The empty token only satisfies the client's session type.
       token: "",
       ipAddress: null,
       userAgent: null,

@@ -10,23 +10,11 @@
       "kind": "feed",
       "feed_url": "https://www.thegistsports.com/rss.xml",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "LGBTQ",
-        "Soccer",
-        "Basketball"
-      ],
+      "tags": ["News", "Local", "LGBTQ", "Soccer", "Basketball"],
       "language": "en",
-      "keywords": [
-        "women's sports",
-        "advocacy",
-        "news"
-      ],
+      "keywords": ["women's sports", "advocacy", "news"],
       "top_level_category": "Sports"
     },
     {
@@ -38,21 +26,11 @@
       "channel_id": "UCTyC11PsbR-CMXSG9M1na1g",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AOPolaQoejwmDCZA1OVCRIYQBH_EW47mgUmqnS60ZuI9=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Activism",
-        "Soccer"
-      ],
+      "tags": ["Local", "Activism", "Soccer"],
       "language": "en",
-      "keywords": [
-        "community stories",
-        "inspiring locals",
-        "cultural diversity"
-      ],
+      "keywords": ["community stories", "inspiring locals", "cultural diversity"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -64,21 +42,11 @@
       "channel_id": "UCEPKlFeUjRY_1mpZP8GnkVg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqP-SaR5uVyxW9wxN9Uf6zsW2Qi9zHj9L05ijI6dhw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Football",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Soccer",
-        "Sports"
-      ],
+      "tags": ["Tech", "Soccer", "Sports"],
       "language": "en",
-      "keywords": [
-        "football documentaries",
-        "fan culture",
-        "soccer fandom"
-      ],
+      "keywords": ["football documentaries", "fan culture", "soccer fandom"],
       "top_level_category": "Sports"
     },
     {
@@ -90,70 +58,41 @@
       "channel_id": "UCGYYNGmyhZ_kwBF_lqqXdAQ",
       "thumbnail_url": "https://yt3.ggpht.com/KSXuxPcicFNbupRKC8NTAjtXki-Ldybl09BK28hYPi_V89DqkDgwJyQh0MYGUmSmbadOkZVZ_Q=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Soccer",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Soccer",
-        "Sports"
-      ],
+      "tags": ["Tech", "Soccer", "Sports"],
       "language": "en",
-      "keywords": [
-        "tactical analysis",
-        "soccer history",
-        "football stories"
-      ],
+      "keywords": ["tactical analysis", "soccer history", "football stories"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:https://thenextwavefutures.wordpress.com/feed/",
       "title": "the next wave",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://thenextwavefutures.wordpress.com/feed/",
       "summary": "Andrew Curry's blog on futures, trends, emerging issues and scenarios.",
       "details": "Humanities > Futures",
       "cleaned_title": "the next wave",
       "cleaned_author": "Andrew Curry",
-      "tags": [
-        "Tech",
-        "Future",
-        "Soccer"
-      ],
+      "tags": ["Tech", "Future", "Soccer"],
       "language": "en",
-      "keywords": [
-        "futures",
-        "trends",
-        "insight"
-      ],
+      "keywords": ["futures", "trends", "insight"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://lukebennett13.wordpress.com/feed/",
       "title": "lukebennett13",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://lukebennett13.wordpress.com/feed/",
       "summary": "Tracing the spectacular within the humdrum of the built environment.",
       "details": "Society > Psychogeography",
       "cleaned_title": "lukebennett13",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Soccer"
-      ],
+      "tags": ["Living", "Soccer"],
       "language": "en",
-      "keywords": [
-        "psychogeography",
-        "urban",
-        "environment"
-      ],
+      "keywords": ["psychogeography", "urban", "environment"],
       "top_level_category": "Society, Law & History"
     }
   ],

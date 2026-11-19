@@ -1,9 +1,8 @@
-import { and, eq } from "drizzle-orm";
-import type { db } from "@adapters/db/client";
+import { DateTime, Effect } from "effect";
+import { eq } from "drizzle-orm";
 import { feedSubscriptions, feeds, folders } from "@kyomi/db";
+import { Db } from "@adapters/db/service";
 import { decodeText } from "@shared/text/entities";
-
-type DB = typeof db;
 
 export type OpmlExportFeed = {
   title: string;
@@ -88,7 +87,7 @@ function renderFeedOutline(feed: OpmlExportFeed): string {
 
 export function buildOpmlExportDocument(
   feedsForExport: OpmlExportFeed[],
-  options?: { title?: string; generatedAt?: Date },
+  options: { title?: string; generatedAt: Date },
 ): string {
   const normalizedFeeds = feedsForExport
     .map((feed) => ({
@@ -121,8 +120,8 @@ export function buildOpmlExportDocument(
         `<outline text="${escapeXml(folderName)}" title="${escapeXml(folderName)}">${outlines.join("")}</outline>`,
     );
 
-  const generatedAt = options?.generatedAt ?? new Date();
-  const title = options?.title?.trim() || "kyomi Subscriptions";
+  const { generatedAt } = options;
+  const title = options.title?.trim() || "kyomi Subscriptions";
 
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
@@ -137,36 +136,36 @@ export function buildOpmlExportDocument(
   ].join("");
 }
 
-export async function listFeedsForOpmlExport(
-  database: DB,
-  userId: string,
-): Promise<OpmlExportFeed[]> {
-  const rows = await database
-    .select({
-      customTitle: feedSubscriptions.customTitle,
-      feedTitle: feeds.title,
-      xmlUrl: feeds.url,
-      htmlUrl: feeds.link,
-      folderName: folders.name,
-    })
-    .from(feedSubscriptions)
-    .innerJoin(feeds, eq(feedSubscriptions.feedId, feeds.id))
-    .leftJoin(folders, eq(feedSubscriptions.folderId, folders.id))
-    .where(eq(feedSubscriptions.userId, userId));
+const listFeedsForOpmlExport = Effect.fn("opml.export.list_feeds")(function* (userId: string) {
+  const db = yield* Db;
+  const rows = yield* db.use("opml.export.list_feeds", (client) =>
+    client
+      .select({
+        customTitle: feedSubscriptions.customTitle,
+        feedTitle: feeds.title,
+        xmlUrl: feeds.url,
+        htmlUrl: feeds.link,
+        folderName: folders.name,
+      })
+      .from(feedSubscriptions)
+      .innerJoin(feeds, eq(feedSubscriptions.feedId, feeds.id))
+      .leftJoin(folders, eq(feedSubscriptions.folderId, folders.id))
+      .where(eq(feedSubscriptions.userId, userId)),
+  );
 
-  return rows.map((row) => ({
-    title: decodeText((row.customTitle?.trim() || row.feedTitle).trim()),
-    xmlUrl: row.xmlUrl,
-    htmlUrl: row.htmlUrl,
-    folderName: row.folderName,
-  }));
-}
+  return rows.map(
+    (row): OpmlExportFeed => ({
+      title: decodeText((row.customTitle?.trim() || row.feedTitle).trim()),
+      xmlUrl: row.xmlUrl,
+      htmlUrl: row.htmlUrl,
+      folderName: row.folderName,
+    }),
+  );
+});
 
-export async function exportOpmlForUser(
-  database: DB,
-  userId: string,
-  options?: { generatedAt?: Date },
-): Promise<string> {
-  const feeds = await listFeedsForOpmlExport(database, userId);
-  return buildOpmlExportDocument(feeds, options);
-}
+/** The OPML document for every feed the user is subscribed to. */
+export const exportOpmlForUser = Effect.fn("opml.export")(function* (userId: string) {
+  const feedsForExport = yield* listFeedsForOpmlExport(userId);
+  const generatedAt = yield* DateTime.nowAsDate;
+  return buildOpmlExportDocument(feedsForExport, { generatedAt });
+});

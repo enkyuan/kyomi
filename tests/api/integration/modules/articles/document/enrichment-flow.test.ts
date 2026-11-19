@@ -1,10 +1,12 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { crc32, deflateSync } from "node:zlib";
-import { enqueueDocumentEnrichment } from "@modules/articles/document-enrichment/enqueue";
+import { Effect, Layer } from "effect";
 import { handleDocumentEnrichmentJob } from "@modules/articles/document-enrichment/jobs";
+import { EnrichmentGates } from "@modules/articles/document-enrichment/limits";
 import { runDocumentBackfillScope } from "@modules/articles/document/backfill";
-import { createDocumentPatchStore } from "@modules/articles/document/store";
+import { DocumentPatchStoreLive } from "@modules/articles/document/store";
 import { setStoredDocumentCompiler } from "@kyomi/ingest/lib/stored-document";
+import { fakeDb, fakeHttpClient, fakeQueue, recordingLogger } from "@api-tests/support/layers";
 import { fakeDocument, TEST_COMPILER_VERSION } from "./helpers";
 
 const be32 = (n: number) => [(n >>> 24) & 255, (n >>> 16) & 255, (n >>> 8) & 255, n & 255];
@@ -27,12 +29,8 @@ function solidPng(width: number, height: number): Uint8Array<ArrayBuffer> {
 
 // A literal public IP keeps the SSRF check off the network.
 const IMG = "https://93.184.216.34/a.png";
-const realFetch = globalThis.fetch;
 
-afterEach(() => {
-  globalThis.fetch = realFetch;
-  setStoredDocumentCompiler(null);
-});
+afterEach(() => setStoredDocumentCompiler(null));
 
 /** One-row stand-in for feed_items: select/for/limit read it, update.set writes it. */
 function rowDb() {
@@ -54,7 +52,7 @@ function rowDb() {
       },
     }),
   };
-  return { state, db: { ...tx, transaction: (fn: (t: typeof tx) => unknown) => fn(tx) } as never };
+  return { state, methods: { ...tx, transaction: (fn: (t: typeof tx) => unknown) => fn(tx) } };
 }
 
 describe("document persistence to enrichment", () => {
@@ -62,9 +60,6 @@ describe("document persistence to enrichment", () => {
     const row = rowDb();
     const target = { table: "feed_items", id: "a1", body: "original" } as const;
     const xadds: unknown[][] = [];
-    const redis = {
-      xadd: async (...args: unknown[]) => (xadds.push(args), "1-0"),
-    } as unknown as NonNullable<Parameters<typeof enqueueDocumentEnrichment>[2]>;
     setStoredDocumentCompiler({
       version: TEST_COMPILER_VERSION,
       compile: async () => ({
@@ -75,6 +70,16 @@ describe("document persistence to enrichment", () => {
     });
 
     // Backfill recompiles the row and queues enrichment for the document it wrote.
+    const backfillRows = [
+      {
+        id: "a1",
+        raw: "<p>x</p>",
+        source: "feed_html",
+        baseUrl: "https://example.com/",
+        title: "T",
+        compilerVersion: null,
+      },
+    ];
     const backfillDb = {
       select: () => ({
         from: () => ({
@@ -89,33 +94,40 @@ describe("document persistence to enrichment", () => {
         }),
       }),
       update: () => ({ set: () => ({ where: () => Promise.resolve() }) }),
-    } as never;
-    const backfillRows = [
-      {
-        id: "a1",
-        raw: "<p>x</p>",
-        source: "feed_html",
-        baseUrl: "https://example.com/",
-        title: "T",
-        compilerVersion: null,
-      },
-    ];
-    const result = await runDocumentBackfillScope(backfillDb, "feed-original", {
-      apply: true,
-      batchSize: 10,
-      sleepMs: 0,
-      compilerVersion: TEST_COMPILER_VERSION,
-      enqueueEnrichment: (t, document) => enqueueDocumentEnrichment(t, document, redis),
-    });
+    };
+    const result = await Effect.runPromise(
+      runDocumentBackfillScope("feed-original", {
+        apply: true,
+        batchSize: 10,
+        sleepMs: 0,
+        compilerVersion: TEST_COMPILER_VERSION,
+      }).pipe(
+        Effect.provide(
+          Layer.mergeAll(
+            fakeDb(backfillDb),
+            fakeQueue({ xadd: async (...args: unknown[]) => (xadds.push(args), "1-0") }),
+            recordingLogger().layer,
+          ),
+        ),
+      ),
+    );
     expect(result.updated).toBe(1);
     expect(xadds).toHaveLength(1);
     expect(xadds[0]?.some((arg) => arg === "document.image-measure")).toBe(true);
 
-    globalThis.fetch = (async () =>
-      new Response(solidPng(40, 30), { headers: { "content-type": "image/png" } })) as never;
-    await handleDocumentEnrichmentJob(
-      { type: "document.image-measure", payload: { target } },
-      createDocumentPatchStore(row.db),
+    // The worker then runs the queued job against the stored row, with the image served by a fake.
+    const jobLayer = Layer.mergeAll(
+      DocumentPatchStoreLive.pipe(Layer.provide(fakeDb(row.methods))),
+      EnrichmentGates.layer,
+      fakeHttpClient(
+        () => new Response(solidPng(40, 30), { headers: { "content-type": "image/png" } }),
+      ),
+      recordingLogger().layer,
+    );
+    await Effect.runPromise(
+      handleDocumentEnrichmentJob({ type: "document.image-measure", payload: { target } }).pipe(
+        Effect.provide(jobLayer),
+      ),
     );
 
     const patched = row.state.document as { blocks: { image: Record<string, unknown> }[] };

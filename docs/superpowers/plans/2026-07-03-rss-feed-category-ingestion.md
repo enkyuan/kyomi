@@ -63,12 +63,14 @@ article list SQL
 ## Task 1: Share Category Slug Normalization
 
 **Files:**
+
 - Create: `packages/db/src/categories.ts`
 - Modify: `packages/db/src/index.ts`
 - Modify: `apps/api/src/modules/catalog/import.ts`
 - Test: `tests/api/integration/scripts/import-catalog-feeds.test.ts`
 
 **Interfaces:**
+
 - Produces: `toCategorySlug(label: string): string`
 - Consumes: existing catalog import tests and worker category assignment code.
 
@@ -132,11 +134,13 @@ Expected: all tests pass, including non-Latin fallback.
 ## Task 2: Parse Feed And Item Category Labels
 
 **Files:**
+
 - Modify: `packages/worker/src/services/feed/types.ts`
 - Modify: `packages/worker/src/services/feed/parse.ts`
 - Test: `tests/api/integration/modules/feeds/refresh/parse-feed-document.test.ts`
 
 **Interfaces:**
+
 - Produces: `ParsedFeedDocument.metadata.categoryLabels: string[]`
 - Produces: `ParsedFeedItem.categoryLabels: string[]`
 
@@ -185,12 +189,14 @@ function categoryLabelsFrom(...values: unknown[]): string[] {
   const labels: string[] = [];
   for (const value of values) collectCategoryLabels(value, labels);
   const seen = new Set<string>();
-  return labels.filter((label) => {
-    const key = label.toLocaleLowerCase();
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  }).slice(0, MAX_CATEGORY_LABELS_PER_SCOPE);
+  return labels
+    .filter((label) => {
+      const key = label.toLocaleLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, MAX_CATEGORY_LABELS_PER_SCOPE);
 }
 ```
 
@@ -240,11 +246,13 @@ expect(parsed.items[0]?.categoryLabels).toEqual(["AI"]);
 ## Task 3: Persist Feed-Provenance Category Assignments
 
 **Files:**
+
 - Create: `packages/worker/src/services/feed/categories.ts`
 - Modify: `packages/worker/src/services/feed/refresh.ts`
 - Test: `tests/api/integration/modules/feeds/refresh/categories.test.ts`
 
 **Interfaces:**
+
 - Consumes: `ParsedFeedDocument.metadata.categoryLabels`
 - Consumes: `ParsedFeedItem.categoryLabels`
 - Produces: synced rows in `feed_category_assignments` and `feed_item_category_assignments`
@@ -289,14 +297,16 @@ async function upsertCategories(
   if (records.length === 0) return new Map();
   const rows = await database
     .insert(categories)
-    .values(records.map((record) => ({
-      id: crypto.randomUUID(),
-      slug: record.slug,
-      label: record.label,
-      provenance: "feed",
-      createdAt: now,
-      updatedAt: now,
-    })))
+    .values(
+      records.map((record) => ({
+        id: crypto.randomUUID(),
+        slug: record.slug,
+        label: record.label,
+        provenance: "feed",
+        createdAt: now,
+        updatedAt: now,
+      })),
+    )
     .onConflictDoUpdate({
       target: categories.slug,
       set: { updatedAt: now },
@@ -313,12 +323,22 @@ export async function syncParsedFeedCategories(
   const itemIds = input.items.map((item) => item.id);
   await database
     .delete(feedCategoryAssignments)
-    .where(and(eq(feedCategoryAssignments.feedId, input.feedId), eq(feedCategoryAssignments.provenance, "feed")));
+    .where(
+      and(
+        eq(feedCategoryAssignments.feedId, input.feedId),
+        eq(feedCategoryAssignments.provenance, "feed"),
+      ),
+    );
 
   if (itemIds.length > 0) {
     await database
       .delete(feedItemCategoryAssignments)
-      .where(and(inArray(feedItemCategoryAssignments.feedItemId, itemIds), eq(feedItemCategoryAssignments.provenance, "feed")));
+      .where(
+        and(
+          inArray(feedItemCategoryAssignments.feedItemId, itemIds),
+          eq(feedItemCategoryAssignments.provenance, "feed"),
+        ),
+      );
   }
 
   const allRecords = normalizeRecords([
@@ -329,30 +349,40 @@ export async function syncParsedFeedCategories(
 
   const feedRecords = normalizeRecords(input.feedLabels);
   if (feedRecords.length > 0) {
-    await database.insert(feedCategoryAssignments).values(feedRecords.flatMap((record) => {
-      const categoryId = categoryIdsBySlug.get(record.slug);
-      return categoryId ? [{
-        id: crypto.randomUUID(),
-        feedId: input.feedId,
-        categoryId,
-        provenance: "feed",
-        createdAt: now,
-        updatedAt: now,
-      }] : [];
-    }));
+    await database.insert(feedCategoryAssignments).values(
+      feedRecords.flatMap((record) => {
+        const categoryId = categoryIdsBySlug.get(record.slug);
+        return categoryId
+          ? [
+              {
+                id: crypto.randomUUID(),
+                feedId: input.feedId,
+                categoryId,
+                provenance: "feed",
+                createdAt: now,
+                updatedAt: now,
+              },
+            ]
+          : [];
+      }),
+    );
   }
 
   const itemAssignments = input.items.flatMap((item) =>
     normalizeRecords(item.categoryLabels).flatMap((record) => {
       const categoryId = categoryIdsBySlug.get(record.slug);
-      return categoryId ? [{
-        id: crypto.randomUUID(),
-        feedItemId: item.id,
-        categoryId,
-        provenance: "feed",
-        createdAt: now,
-        updatedAt: now,
-      }] : [];
+      return categoryId
+        ? [
+            {
+              id: crypto.randomUUID(),
+              feedItemId: item.id,
+              categoryId,
+              provenance: "feed",
+              createdAt: now,
+              updatedAt: now,
+            },
+          ]
+        : [];
     }),
   );
   if (itemAssignments.length > 0) {
@@ -401,11 +431,13 @@ expect(fake.deletes).toContain("feed_item_category_assignments");
 ## Task 4: Return Item Categories Before Feed Categories
 
 **Files:**
+
 - Modify: `apps/api/src/modules/articles/read/list/service.ts`
 - Modify: `apps/api/src/modules/articles/types.ts`
 - Test: `tests/api/integration/modules/articles/read/list-tags.test.ts`
 
 **Interfaces:**
+
 - Produces: DTO `categories` remains `string[]`, now sourced from item categories first and feed categories second.
 
 - [ ] **Step 1: Extend category label SQL**
@@ -449,6 +481,7 @@ Add a test that `feedCategoryLabelsSql.getSQL()` contains both `feed_item_catego
 ## Task 5: Focused Verification And Commit
 
 **Files:**
+
 - All files above.
 
 - [ ] **Step 1: Run focused tests**
@@ -548,13 +581,13 @@ Sequential implementation, no parallelization opportunity. Parser, persistence, 
 
 ## GSTACK REVIEW REPORT
 
-| Review | Trigger | Why | Runs | Status | Findings |
-|--------|---------|-----|------|--------|----------|
-| CEO Review | `/plan-ceo-review` | Scope & strategy | 0 | not run | Not needed for backend completion of existing roadmap task |
-| Codex Review | `/codex review` | Independent 2nd opinion | 0 | skipped | User requested immediate implementation after local eng review |
-| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 1 | CLEAR | 4 issues folded into plan, 0 critical gaps |
-| Design Review | `/plan-design-review` | UI/UX gaps | 0 | skipped | Existing UI chip rendering remains unchanged |
-| DX Review | `/plan-devex-review` | Developer experience gaps | 0 | skipped | No developer-facing flow changed |
+| Review        | Trigger               | Why                             | Runs | Status  | Findings                                                       |
+| ------------- | --------------------- | ------------------------------- | ---- | ------- | -------------------------------------------------------------- |
+| CEO Review    | `/plan-ceo-review`    | Scope & strategy                | 0    | not run | Not needed for backend completion of existing roadmap task     |
+| Codex Review  | `/codex review`       | Independent 2nd opinion         | 0    | skipped | User requested immediate implementation after local eng review |
+| Eng Review    | `/plan-eng-review`    | Architecture & tests (required) | 1    | CLEAR   | 4 issues folded into plan, 0 critical gaps                     |
+| Design Review | `/plan-design-review` | UI/UX gaps                      | 0    | skipped | Existing UI chip rendering remains unchanged                   |
+| DX Review     | `/plan-devex-review`  | Developer experience gaps       | 0    | skipped | No developer-facing flow changed                               |
 
 - **VERDICT:** ENG CLEARED — ready to implement.
-NO UNRESOLVED DECISIONS
+  NO UNRESOLVED DECISIONS

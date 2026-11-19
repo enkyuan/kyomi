@@ -3,7 +3,7 @@ import type { drizzle } from "drizzle-orm/node-postgres";
 import { faviconHosts } from "@kyomi/db";
 import type * as schema from "@kyomi/db";
 import { FAVICON_PROXY_VERSION } from "./proxy-url";
-import { ALLOWED_SCHEMES } from "./host-safety";
+import { ALLOWED_SCHEMES } from "../../lib/outbound";
 import { resolveFeedFaviconUrl, type FaviconResolutionSource } from "./resolve";
 
 const FAVICON_HOST_HIT_TTL_MS = 30 * 24 * 60 * 60_000;

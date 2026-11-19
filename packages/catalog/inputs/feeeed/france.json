@@ -10,25 +10,11 @@
       "kind": "feed",
       "feed_url": "https://parisbymouth.substack.com/feed",
       "details": "Travel",
-      "sources": [
-        "substack_top",
-        "original_feed_db"
-      ],
-      "tags": [
-        "Living",
-        "Cities",
-        "Europe",
-        "France"
-      ],
+      "sources": ["substack_top", "original_feed_db"],
+      "tags": ["Living", "Cities", "Europe", "France"],
       "cleaned_author": "Meg Zimbeck",
       "language": "en",
-      "keywords": [
-        "Paris",
-        "restaurants",
-        "foodie guide",
-        "insider tips",
-        "dining"
-      ],
+      "keywords": ["Paris", "restaurants", "foodie guide", "insider tips", "dining"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -39,20 +25,11 @@
       "kind": "reddit",
       "subreddit": "france",
       "details": "Local > France",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "France"
-      ],
+      "tags": ["Local", "France"],
       "language": "fr",
-      "keywords": [
-        "French culture",
-        "discussion",
-        "current events"
-      ],
+      "keywords": ["French culture", "discussion", "current events"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -64,23 +41,11 @@
       "channel_id": "UCQfwfsi5VrQ8yKZ-UWmAEFg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqNNrxL3Bam46oeoN-tJlZBWkunod2b7AUNRasWbrA=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "News > Global",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "World News",
-        "France"
-      ],
+      "tags": ["News", "World News", "France"],
       "language": "en",
-      "keywords": [
-        "France",
-        "global affairs",
-        "news",
-        "interviews",
-        "documentaries"
-      ],
+      "keywords": ["France", "global affairs", "news", "interviews", "documentaries"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -91,21 +56,11 @@
       "kind": "feed",
       "feed_url": "http://www.farm-connexion.com/feed/",
       "details": "Local > France",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "France"
-      ],
+      "tags": ["Local", "France"],
       "language": "fr",
-      "keywords": [
-        "agriculture",
-        "machinery",
-        "trends",
-        "France"
-      ],
+      "keywords": ["agriculture", "machinery", "trends", "France"],
       "top_level_category": "Regional & Local"
     }
   ],
