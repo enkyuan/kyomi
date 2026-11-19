@@ -1350,7 +1350,9 @@ export async function runFeedRefresh(
       itemCount: items.length,
       feedBodyCount: items.filter((item) => Boolean(item.content)).length,
       articleExtractionCandidateIds,
-      documentItemIds: items.filter((item) => item.contentDocument).map((item) => item.id),
+      documentItemIds: preview
+        ? []
+        : items.filter((item) => item.contentDocument).map((item) => item.id),
       contentLimitStats: parsed.contentLimitStats,
       categoryStats: {
         feedClassifierLabels: feedCategories.length,

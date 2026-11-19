@@ -37,6 +37,9 @@ test.skipIf(!url)(
         SELECT id,CASE WHEN id='promote' THEN 'follow' ELSE 'cold' END,id,id,'https://example.org',now(),
           CASE WHEN id='legacy' THEN null ELSE now()-interval '1 day' END
         FROM unnest(ARRAY['legacy','expired','saved','promote']) ids(id)`);
+        await client.execute(sql`INSERT INTO feed_items(id,feed_id,canonical_url,title,link,published_at,catalog_expires_at)
+          SELECT 'old-'||n,'cold','old-'||n,'old','https://example.org',now(),now()-interval '2 days'
+          FROM generate_series(1,501) n`);
         await client.execute(
           sql`INSERT INTO feed_item_user_state(user_id,feed_item_id,is_saved) VALUES ('reader','saved',true)`,
         );
@@ -44,8 +47,9 @@ test.skipIf(!url)(
           sql`INSERT INTO feed_subscriptions(id,user_id,feed_id) VALUES ('sub','reader','follow')`,
         );
       });
-      yield* pruneCatalogPreviews;
-      yield* pruneCatalogPreviews;
+      expect(yield* pruneCatalogPreviews).toBe(500);
+      expect(yield* pruneCatalogPreviews).toBe(3);
+      expect(yield* pruneCatalogPreviews).toBe(0);
       const rows = yield* db.use("retention.verify", (c) =>
         c.execute(sql`SELECT id,catalog_expires_at FROM feed_items ORDER BY id`),
       );
@@ -126,7 +130,7 @@ test.skipIf(!url)(
                 catalogRefreshIntervalMs: 86400000,
               }),
             );
-          expect(yield* poll()).toMatchObject({ ok: true, itemCount: 3 });
+          expect(yield* poll()).toMatchObject({ ok: true, itemCount: 3, documentItemIds: [] });
           yield* db.use("retention.requeue", (c) =>
             c.execute(sql`UPDATE feeds SET refresh_status='queued'`),
           );
@@ -137,7 +141,9 @@ test.skipIf(!url)(
             );
             await c.execute(sql`UPDATE feeds SET refresh_status='queued'`);
           });
-          expect(yield* poll()).toMatchObject({ ok: true, itemCount: 5 });
+          const hydrated = yield* poll();
+          expect(hydrated).toMatchObject({ ok: true, itemCount: 5 });
+          expect(hydrated.documentItemIds).toHaveLength(5);
           const dictionary = yield* db.use("retention.category_reuse", (c) =>
             c.execute(sql`
             SELECT updated_at = '2000-01-01'::timestamp AS reused, EXISTS(

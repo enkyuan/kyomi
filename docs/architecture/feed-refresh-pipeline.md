@@ -57,7 +57,7 @@ Workers use:
 
 A feed worker reads at most the number of free handler slots and starts the next Redis read when any handler finishes. A slow publisher consumes one slot. The blocking read connection is separate from acknowledgements. Jobs already delivered can drain on shutdown and an interrupted job remains pending for lease recovery. Other streams keep their batch policy. [Redis XREADGROUP](https://redis.io/docs/latest/commands/xreadgroup/) · [Effect 4.1.4 scoped fiber sets](https://unpkg.com/effect@4.1.4/src/FiberSet.ts)
 
-Subscribed refreshes can prefetch extraction for up to five eligible articles. Unsubscribed catalog polls store a bounded preview and skip extraction prefetch.
+Subscribed refreshes can prefetch extraction for up to five eligible articles. Unsubscribed catalog polls store a bounded preview. Full-text prefetch, image measurements and embed snapshots start with the full subscription refresh. Catalog previews still include the compiled reader document and publisher image URLs.
 
 ## Scale Math
 
@@ -97,7 +97,7 @@ An unsubscribed catalog refresh records the result of checking the feed, its met
 
 For a never-successful catalog feed returning 404 or 410, Kyomi can check the catalogued homepage for a replacement. The original URL must be a conventional feed endpoint under that homepage. The alternate must stay on the origin and declare the same homepage and title. Category-specific paths, mismatched publications and access challenges retain their failure status. [HTML feed autodiscovery](https://html.spec.whatwg.org/multipage/links.html#rel-alternate)
 
-Only rows newly inserted as catalog previews acquire an expiration. The worker marks surplus preview rows for expiry and the scheduler sweeps up to 500 per minute. The sweep locks the feed and item, then preserves articles with a subscription, reading progress, user state, report or view event. Earlier full-history rows keep their original retention. The first subscription promotes previews and makes the feed due. Its next full fetch omits the preview validators so the publisher can return older entries even when the feed is unchanged. A subscription arriving during a preview fetch also makes the next poll due. Publisher history available at hydration is limited by the publisher's feed window. Miniflux similarly makes polling and archival independently configurable. [Miniflux configuration](https://miniflux.app/docs/configuration.html)
+Only rows newly inserted as catalog previews acquire an expiration. The worker marks surplus preview rows for expiry and the scheduler sweeps up to 500 at a time. It waits five seconds after a full batch and one minute after a partial or empty sweep. At 500,000 daily polls, replacing all three previews per feed could expire 1.5 million rows a day, so the sweep continues promptly while a backlog exists. The sweep locks the feed and item, then preserves articles with a subscription, reading progress, user state, report or view event. Earlier full-history rows keep their original retention. The first subscription promotes previews and makes the feed due. Its next full fetch omits the preview validators so the publisher can return older entries even when the feed is unchanged. A subscription arriving during a preview fetch also makes the next poll due. Publisher history available at hydration is limited by the publisher's feed window. Miniflux similarly makes polling and archival independently configurable. [Miniflux configuration](https://miniflux.app/docs/configuration.html)
 
 ## Reader recovery
 
