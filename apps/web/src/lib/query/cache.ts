@@ -1,35 +1,64 @@
 import type { DehydratedState, InfiniteData, QueryClient, QueryKey } from "@tanstack/react-query";
 import { dehydrate, hydrate } from "@tanstack/react-query";
-import { articleDetailSchema } from "@kyomi/reader/schemas";
+import { mark } from "@lib/perf/marks";
 import { queryKeys } from "./keys";
 
 const HOT_CACHE_KEY = "kyomi:hot-query-cache:v2";
+/** Removed on load (from localStorage and IndexedDB) if an older build left it behind. */
 const HOT_CACHE_LEGACY_KEY = "kyomi:hot-query-cache:v1";
+/** Bump when the data shape of a persisted query changes: older snapshots are discarded unread. */
+const HOT_CACHE_SCHEMA = 3;
 const HOT_CACHE_DB_NAME = "kyomi.query-cache";
 const HOT_CACHE_STORE_NAME = "snapshots";
 const HOT_CACHE_DB_VERSION = 1;
 const HOT_CACHE_MAX_AGE_MS = 24 * 60 * 60_000;
 const PERSIST_THROTTLE_MS = 1_000;
+const PERSIST_IDLE_TIMEOUT_MS = 2_000;
+/** Consecutive failed writes after which persisting stops until the next sign-in or page load. */
+const PERSIST_FAILURE_LIMIT = 3;
+/** Logout must never wait on a stuck IndexedDB operation longer than this. */
+const CLEAR_TIMEOUT_MS = 1_000;
 const HOT_CACHE_MAX_INBOX_LISTS = 8;
-const HOT_CACHE_MAX_ITEM_DETAILS = 20;
 
 /** The hot cache only relies on a persisted inbox list page carrying an `items` array. */
 type HotInboxListPage = { items: unknown[] };
 
+/**
+ * One snapshot per browser. It carries the user it belongs to, so a different account never hydrates
+ * it, and the schema version it was written with.
+ */
 type PersistedHotCache = {
   savedAt: number;
+  schema: number;
+  userId: string;
   state: DehydratedState;
 };
+
+/** How the snapshot fared on this page load, reported with the page's performance. */
+type HotCacheOutcome = "pending" | "hit" | "empty" | "discarded" | "unavailable";
+let hotCacheOutcome: HotCacheOutcome = "pending";
+
+export function getHotCacheOutcome(): HotCacheOutcome {
+  return hotCacheOutcome;
+}
 
 let hasHydrated = false;
 let persistTimer: number | undefined;
 let pendingPersist: Promise<void> | undefined;
+/** Which queries (and when they last changed) the stored snapshot holds; an equal one is not rewritten. */
+let lastWrittenSignature: string | undefined;
+let consecutiveFailures = 0;
+let persistDisabled = false;
 
+/**
+ * Article details are deliberately absent: each holds the full article body, the heaviest thing to
+ * clone on the main thread, and it should not sit on disk for a day. Opening an article fetches it;
+ * the list rows paint instantly from this snapshot.
+ */
 const HOT_QUERY_KEY_PREFIXES: readonly QueryKey[] = [
   queryKeys.folders.all,
   queryKeys.feeds.followed,
   queryKeys.inbox.items,
-  queryKeys.inbox.itemDetails,
   queryKeys.inbox.viewCount,
   queryKeys.sidebar.inboxSummary,
 ];
@@ -151,9 +180,8 @@ function isValidInboxListPage(page: unknown): page is HotInboxListPage {
 
 type DehydratedHotQuery = DehydratedState["queries"][number];
 
-function isInboxQueryScope(query: DehydratedHotQuery, scope: "items" | "item-detail") {
-  const prefix = scope === "items" ? queryKeys.inbox.items : queryKeys.inbox.itemDetails;
-  return hasQueryKeyPrefix(query.queryKey, prefix);
+function isInboxListQuery(query: DehydratedHotQuery) {
+  return hasQueryKeyPrefix(query.queryKey, queryKeys.inbox.items);
 }
 
 function isValidInfiniteInboxListData(data: unknown): data is InfiniteData<HotInboxListPage> {
@@ -196,95 +224,85 @@ function retainInboxListFirstPage(query: DehydratedHotQuery): DehydratedHotQuery
 export function prepareHotCacheState(state: DehydratedState): DehydratedState {
   const inboxListQueries = newestQueries(
     state.queries.filter(
-      (query) =>
-        isInboxQueryScope(query, "items") && isValidInfiniteInboxListData(query.state.data),
+      (query) => isInboxListQuery(query) && isValidInfiniteInboxListData(query.state.data),
     ),
     HOT_CACHE_MAX_INBOX_LISTS,
   ).map(retainInboxListFirstPage);
-  const inboxItemDetailQueries = newestQueries(
-    state.queries.filter((query) => isInboxQueryScope(query, "item-detail")),
-    HOT_CACHE_MAX_ITEM_DETAILS,
-  );
-  const otherQueries = state.queries.filter(
-    (query) => !isInboxQueryScope(query, "items") && !isInboxQueryScope(query, "item-detail"),
-  );
+  const otherQueries = state.queries.filter((query) => !isInboxListQuery(query));
 
-  return {
-    ...state,
-    queries: [...otherQueries, ...inboxListQueries, ...inboxItemDetailQueries],
-  };
-}
-
-/**
- * Whether a persisted item-detail entry is the `{ item }` response the query returns, holding the
- * article it is keyed by. `item: null` is a valid response (the article is gone).
- */
-function isValidItemDetailData(itemId: unknown, data: unknown): boolean {
-  if (!data || typeof data !== "object" || !("item" in data)) {
-    return false;
-  }
-  const { item } = data as { item: unknown };
-  if (item === null) {
-    return true;
-  }
-  const parsed = articleDetailSchema.safeParse(item);
-  return parsed.success && parsed.data.id === itemId;
+  return { ...state, queries: [...otherQueries, ...inboxListQueries] };
 }
 
 function isCorruptHotQuery(query: DehydratedHotQuery) {
-  if (query.state.data === undefined) {
+  if (!isInboxListQuery(query) || query.state.data === undefined) {
     return false;
   }
-  if (isInboxQueryScope(query, "items")) {
-    const data = query.state.data;
-    if (!data || typeof data !== "object") {
-      return true;
-    }
-    const { pages } = data as Partial<InfiniteData<HotInboxListPage>>;
-    return (
-      pages !== undefined &&
-      (!Array.isArray(pages) || pages.some((page) => !isValidInboxListPage(page)))
-    );
+  const data = query.state.data;
+  if (!data || typeof data !== "object") {
+    return true;
   }
-  if (isInboxQueryScope(query, "item-detail")) {
-    return !isValidItemDetailData(query.queryKey[2], query.state.data);
-  }
-  return false;
+  const { pages } = data as Partial<InfiniteData<HotInboxListPage>>;
+  return (
+    pages !== undefined &&
+    (!Array.isArray(pages) || pages.some((page) => !isValidInboxListPage(page)))
+  );
 }
 
 /**
- * Drop persisted entries that no longer match what their query returns (an older shape, a
- * mismatched id). It filters the snapshot before it is hydrated, so the live cache, including
+ * Drop persisted entries that no longer match what their query returns (an older shape). It filters the snapshot before it is hydrated, so the live cache, including
  * queries the page is observing right now, is never touched.
  */
 export function dropCorruptHotQueries(state: DehydratedState): DehydratedState {
   return { ...state, queries: state.queries.filter((query) => !isCorruptHotQuery(query)) };
 }
 
-export function hydrateHotQueryCache(queryClient: QueryClient): Promise<void> {
+/** `promise`, or `undefined` pending, settled within `ms`: a stuck IndexedDB call cannot block a caller. */
+function settleWithin(promise: Promise<unknown> | undefined, ms: number) {
+  return Promise.race([
+    promise ?? Promise.resolve(),
+    new Promise<void>((resolve) => setTimeout(resolve, ms)),
+  ]);
+}
+
+/**
+ * Restore the snapshot into the query cache, once per page. A snapshot written for another user,
+ * by another schema version, or more than a day ago is discarded unread.
+ */
+export function hydrateHotQueryCache(queryClient: QueryClient, userId: string): Promise<void> {
   if (hasHydrated || typeof window === "undefined") {
     return Promise.resolve();
   }
   hasHydrated = true;
+  mark("hot-cache-read-start");
 
   return readHotCache()
     .then(async (parsed) => {
       removeLegacyLocalStorageCache();
       await removeHotCache(HOT_CACHE_LEGACY_KEY).catch(() => {});
       if (!parsed) {
+        hotCacheOutcome = "empty";
         return;
       }
 
-      if (!parsed.savedAt || Date.now() - parsed.savedAt > HOT_CACHE_MAX_AGE_MS) {
+      const isCurrent =
+        parsed.schema === HOT_CACHE_SCHEMA &&
+        parsed.userId === userId &&
+        Boolean(parsed.savedAt) &&
+        Date.now() - parsed.savedAt <= HOT_CACHE_MAX_AGE_MS;
+      if (!isCurrent) {
+        hotCacheOutcome = "discarded";
         await removeHotCache(HOT_CACHE_KEY);
         return;
       }
 
       hydrate(queryClient, dropCorruptHotQueries(parsed.state));
+      hotCacheOutcome = "hit";
     })
     .catch(async () => {
+      hotCacheOutcome = "unavailable";
       await removeHotCache(HOT_CACHE_KEY).catch(() => {});
-    });
+    })
+    .finally(() => mark("hot-cache-ready"));
 }
 
 export async function clearHotQueryCache(): Promise<void> {
@@ -296,16 +314,37 @@ export async function clearHotQueryCache(): Promise<void> {
     clearTimeout(persistTimer);
     persistTimer = undefined;
   }
+  lastWrittenSignature = undefined;
+  consecutiveFailures = 0;
+  persistDisabled = false;
 
-  await pendingPersist;
+  await settleWithin(pendingPersist, CLEAR_TIMEOUT_MS);
   removeLegacyLocalStorageCache();
-  await Promise.all([
-    removeHotCache(HOT_CACHE_KEY).catch(() => {}),
-    removeHotCache(HOT_CACHE_LEGACY_KEY).catch(() => {}),
-  ]);
+  await settleWithin(
+    Promise.all([
+      removeHotCache(HOT_CACHE_KEY).catch(() => {}),
+      removeHotCache(HOT_CACHE_LEGACY_KEY).catch(() => {}),
+    ]),
+    CLEAR_TIMEOUT_MS,
+  );
 }
 
-async function persistHotQueryCache(queryClient: QueryClient) {
+function snapshotSignature(state: DehydratedState) {
+  return state.queries
+    .map((query) => `${query.queryHash}:${query.state.dataUpdatedAt}`)
+    .sort()
+    .join("|");
+}
+
+/** A full or disabled store will not recover by retrying. */
+function isStorageLimitError(error: unknown) {
+  return (
+    error instanceof DOMException &&
+    (error.name === "QuotaExceededError" || error.name === "DataCloneError")
+  );
+}
+
+async function persistHotQueryCache(queryClient: QueryClient, userId: string) {
   if (pendingPersist) {
     return pendingPersist;
   }
@@ -314,13 +353,20 @@ async function persistHotQueryCache(queryClient: QueryClient) {
     .then(async () => {
       const dehydrated = dehydrate(queryClient, { shouldDehydrateQuery: isSuccessfulHotQuery });
       const state = prepareHotCacheState(dehydrated);
-      await writeHotCache({
-        savedAt: Date.now(),
-        state,
-      });
+      const signature = snapshotSignature(state);
+      if (signature === lastWrittenSignature) {
+        return;
+      }
+      await writeHotCache({ savedAt: Date.now(), schema: HOT_CACHE_SCHEMA, userId, state });
+      lastWrittenSignature = signature;
+      consecutiveFailures = 0;
     })
-    .catch(async () => {
-      await removeHotCache(HOT_CACHE_KEY).catch(() => {});
+    .catch((error: unknown) => {
+      // The last good snapshot stays: a failed write says nothing about it.
+      consecutiveFailures += 1;
+      if (consecutiveFailures >= PERSIST_FAILURE_LIMIT || isStorageLimitError(error)) {
+        persistDisabled = true;
+      }
     })
     .finally(() => {
       pendingPersist = undefined;
@@ -329,27 +375,53 @@ async function persistHotQueryCache(queryClient: QueryClient) {
   return pendingPersist;
 }
 
-function scheduleHotCachePersist(queryClient: QueryClient) {
-  if (persistTimer) {
+type IdleWindow = Window & {
+  requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number;
+};
+
+function runWhenIdle(task: () => void) {
+  const { requestIdleCallback } = window as IdleWindow;
+  if (requestIdleCallback) {
+    requestIdleCallback.call(window, task, { timeout: PERSIST_IDLE_TIMEOUT_MS });
+    return;
+  }
+  task();
+}
+
+function scheduleHotCachePersist(queryClient: QueryClient, userId: string) {
+  if (persistTimer || persistDisabled) {
     return;
   }
 
   persistTimer = window.setTimeout(() => {
     persistTimer = undefined;
-    void persistHotQueryCache(queryClient);
+    runWhenIdle(() => void persistHotQueryCache(queryClient, userId));
   }, PERSIST_THROTTLE_MS);
 }
 
+type CacheEventLike = {
+  type?: string;
+  query?: { queryKey?: QueryKey };
+  action?: { type?: string };
+};
+
+/** Only a hot query gaining data or leaving the cache changes the snapshot. */
 function shouldPersistQueryCacheEvent(event: unknown) {
   if (!event || typeof event !== "object") {
-    return true;
+    return false;
   }
 
-  const query = (event as { query?: { queryKey?: QueryKey } }).query;
-  return query?.queryKey ? isHotQueryKey(query.queryKey) : true;
+  const { type, query, action } = event as CacheEventLike;
+  if (!query?.queryKey || !isHotQueryKey(query.queryKey)) {
+    return false;
+  }
+  return (
+    type === "removed" ||
+    (type === "updated" && (action?.type === "success" || action?.type === "setState"))
+  );
 }
 
-export function subscribeHotQueryCachePersistence(queryClient: QueryClient) {
+export function subscribeHotQueryCachePersistence(queryClient: QueryClient, userId: string) {
   if (typeof window === "undefined") {
     return () => {};
   }
@@ -358,7 +430,7 @@ export function subscribeHotQueryCachePersistence(queryClient: QueryClient) {
     if (!shouldPersistQueryCacheEvent(event)) {
       return;
     }
-    scheduleHotCachePersist(queryClient);
+    scheduleHotCachePersist(queryClient, userId);
   });
 
   return () => {
