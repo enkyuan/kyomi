@@ -1,5 +1,5 @@
 import { Circle, G, Path } from "react-native-svg";
-import { Bar, Surface, type Scene, type SceneContext } from "./parts";
+import { Bar, RssTile, Surface, type Scene, type SceneContext } from "./parts";
 
 /** A stroke in the theme icon colour: the one accent each scene is allowed. */
 function Accent({ context, d, width = 3.5 }: { context: SceneContext; d: string; width?: number }) {
@@ -126,12 +126,9 @@ const SHIELD =
 /** A shield dropped in front of a feed tile, one cross on its face. */
 const blockedSources: Scene = (context) => (
   <>
-    <G opacity={0.5} transform="translate(0 0) rotate(-9 60 118)">
-      <Surface context={context} d={roundedRect(36, 94, 48, 48, 13)} />
+    <G transform="rotate(-9 60 118)">
+      <RssTile fill={context.theme.toneEdge} size={48} x={36} y={94} />
     </G>
-    <Faint context={context} d="M50 128H50.01" width={5} />
-    <Faint context={context} d="M50 114A14 14 0 0 1 64 128" />
-    <Faint context={context} d="M50 102A26 26 0 0 1 76 128" />
     <Surface context={context} d={SHIELD} x={14} y={-4}>
       <Accent context={context} d="M99 81L117 99M117 81L99 99" width={4} />
     </Surface>

@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
-import { G, Path } from "react-native-svg";
-import { RssNativeIcon } from "@kyomi/ui/icons/blode-native";
-import { Bar, Glyph, Surface, type Scene, type SceneContext } from "./parts";
+import { G, Path, Rect } from "react-native-svg";
+import { Bar, RssTile, Surface, type Scene, type SceneContext } from "./parts";
 
 /** A circle as path data, so every shape here is a single `Path`. */
 function circle(cx: number, cy: number, r: number) {
@@ -66,7 +65,6 @@ function Wash({ context, r = 58 }: { context: SceneContext; r?: number }) {
 const recents: Scene = (context) => (
   <>
     <Wash context={context} />
-    <Slot context={context} d="M60 70.8A44 44 0 0 0 60 121.2" />
     <Surface context={context} d={circle(98, 96, 34)}>
       {[
         [98, 69],
@@ -89,9 +87,14 @@ const recents: Scene = (context) => (
 /** A row of three tiles on a slight rise: one solid RSS tile, then two fading ghosts. */
 const sourcesNone: Scene = (context) => (
   <G transform="rotate(-6 96 96)">
-    <Surface context={context} d={box(34, 74, 40, 40, 13)}>
-      <Glyph context={context} icon={RssNativeIcon} size={22} x={43} y={83} />
-    </Surface>
+    <Surface context={context} d={box(34, 74, 40, 40, 13)} />
+    <RssTile
+      fill={context.theme.icon}
+      opacity={context.theme.iconOpacity}
+      size={40}
+      x={34}
+      y={74}
+    />
     <Slot context={context} d={box(76, 74, 40, 40, 13)} opacity={0.85} />
     <Slot context={context} d={box(118, 74, 40, 40, 13)} opacity={0.45} />
   </G>
@@ -181,8 +184,8 @@ const searchPrompt: Scene = (context) => (
   <>
     <Magnifier context={context}>
       <Accent context={context} d="M77 73V95" width={2.6} />
-      <Bar context={context} tone={1} width={20} x={85} y={74} />
-      <Bar context={context} tone={2} width={14} x={85} y={91} />
+      <Rect fill={context.theme.toneEdge} height={7.5} rx={3.75} width={22} x={82} y={72.5} />
+      <Rect fill={context.theme.toneEdge} height={7.5} rx={3.75} width={15} x={82} y={87.5} />
     </Magnifier>
   </>
 );
@@ -190,9 +193,7 @@ const searchPrompt: Scene = (context) => (
 /** The magnifier mirrored over a soft wash: an empty dashed ring and an x, no paper. */
 const searchNoResults: Scene = (context) => (
   <>
-    <Wash context={context} r={60} />
     <Magnifier context={context} mirrored>
-      <Slot context={context} d={circle(86, 84, 21)} />
       <Accent context={context} d="M79 77L93 91M93 77L79 91" width={2.6} />
     </Magnifier>
   </>

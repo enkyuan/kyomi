@@ -26,6 +26,9 @@ export type EmptyStateTheme = {
   /** Opaque mid tones for shapes drawn as plain strokes (a padlock shackle): fill and its edge. */
   tone: string;
   toneEdge: string;
+  /** A visible line colour for interior details (a fold, a flap) that must read on either theme. */
+  detail: string;
+  detailOpacity: number;
   /** Opacity of the soft contact shadow under every paper; none in dark, where surfaces glow. */
   shadowOpacity: number;
   isDark: boolean;
@@ -43,8 +46,10 @@ export function getEmptyStateTheme(isDark: boolean): EmptyStateTheme {
         lines: ["white", "white", "white", "white"],
         lineOpacities: [0.1, 0.075, 0.05, 0.025],
         paperOpacity: 0.1,
-        edge: { from: "white", fromOpacity: 0.1, to: "#323232", toOpacity: 0 },
+        edge: { from: "white", fromOpacity: 0.16, to: "white", toOpacity: 0.07 },
         shadowOpacity: 0,
+        detail: "white",
+        detailOpacity: 0.2,
         base: "#0F0F0F",
         tone: "#2A2A2A",
         toneEdge: "#3A3A3A",
@@ -62,6 +67,8 @@ export function getEmptyStateTheme(isDark: boolean): EmptyStateTheme {
         paperOpacity: 1,
         edge: { from: "#D6D6D6", fromOpacity: 1, to: "#E4E4E4", toOpacity: 1 },
         shadowOpacity: 0.06,
+        detail: "#C9C9C9",
+        detailOpacity: 1,
         base: "#FAFAFA",
         tone: "#E8E8E8",
         toneEdge: "#D6D6D6",
@@ -146,20 +153,23 @@ export function Surface({
   children,
   context,
   d,
+  fillRule,
   strokeD,
   ...placement
 }: {
   children?: ReactNode;
   context: SceneContext;
   d: string;
+  /** `evenodd` lets a subpath (a keyhole) cut a hole through the one shape. */
+  fillRule?: "evenodd" | "nonzero";
   /** Edge path inset half a unit from `d`; defaults to `d` itself. */
   strokeD?: string;
 } & PlacementProps) {
   return (
     <G transform={place(placement)}>
       <Shadow context={context} d={d} />
-      <Path d={d} fill={context.theme.base} />
-      <Path d={d} fill={context.paints.fill} />
+      <Path d={d} fill={context.theme.base} fillRule={fillRule} />
+      <Path d={d} fill={context.paints.fill} fillRule={fillRule} />
       {children}
       <Path d={strokeD ?? d} fill="none" stroke={context.paints.stroke} strokeLinecap="round" />
     </G>
@@ -301,5 +311,38 @@ export function Check({
         strokeWidth={2}
       />
     </G>
+  );
+}
+
+const RSS_TILE_PATH =
+  "M21.5004 8.4422c0-.2265 0-.453-.001-.6796-.0011-.191-.0032-.3821-.0085-.5732-.011-.4164-.0358-.836-.1097-1.2477-.075-.418-.198-.807-.3911-1.187-.19-.3731-.4381-.714-.7342-1.0102-.2961-.296-.6376-.5441-1.0107-.7341-.3795-.1932-.7685-.3157-1.1859-.3911-.4117-.074-.8318-.0987-1.2483-.1098-.191-.0053-.3821-.0074-.5732-.0084C16.0109 2.5 15.7839 2.5 15.557 2.5H8.4434c-.2269 0-.4539 0-.6808.001-.191.0011-.3821.0032-.5732.0085-.4164.0116-.8365.0359-1.2482.1103-.418.075-.8065.198-1.186.3911-.3731.19-.7146.438-1.0107.7342-.296.296-.5441.637-.7341 1.0102-.1932.38-.3162.769-.3911 1.187-.074.4116-.0987.8317-.1098 1.2476-.0053.1911-.0074.3822-.0084.5732-.0011.2264-.0011.4534-.0011.6803v7.1131c0 .2269 0 .4539.001.6808.0011.1911.0032.3821.0085.5732.011.4164.0359.836.1098 1.2477.075.418.1979.807.391 1.187.19.3731.4381.7141.7342 1.0102s.6376.5441 1.0108.7341c.3794.1932.7684.3157 1.1859.3911.4117.0739.8318.0987 1.2482.1098.191.0053.3821.0074.5732.0085.1815.0012.363.0011.5446.0011l7.2493-.0001c.2269 0 .4539 0 .6808-.001.1911-.0011.3821-.0032.5732-.0085.4164-.0111.8365-.0359 1.2482-.1098.418-.0749.8065-.1979 1.186-.3911.3731-.19.7146-.438 1.0107-.7341s.5441-.6371.7341-1.0102c.1932-.38.3162-.769.3911-1.187.0739-.4117.0987-.8318.1098-1.2477.0053-.1911.0074-.3821.0085-.5732.0012-.1815.0011-.363.0011-.5446zM7.5 18c.8284 0 1.5-.6716 1.5-1.5S8.3284 15 7.5 15 6 15.6716 6 16.5 6.6716 18 7.5 18Zm4.5 0c0-3.3137-2.6863-6-6-6v-2c4.4183 0 8 3.5817 8 8zM6 8c5.5228 0 10 4.4772 10 10h2c0-6.6274-5.3726-12-12-12z";
+
+/**
+ * The RSS tile as one filled shape: a rounded square with the feed mark cut out of it, so the mark
+ * can never drift from its tile. `size` is the tile's side; place it by the tile's top-left corner.
+ * Draw it inside the same transform group as its tile so it turns with it.
+ */
+export function RssTile({
+  fill,
+  opacity = 1,
+  size,
+  x,
+  y,
+}: {
+  fill: string;
+  opacity?: number;
+  size: number;
+  x: number;
+  y: number;
+}) {
+  const scale = size / 19;
+  return (
+    <Path
+      d={RSS_TILE_PATH}
+      fill={fill}
+      fillOpacity={opacity}
+      fillRule="evenodd"
+      transform={`translate(${x - 2.5 * scale} ${y - 2.5 * scale}) scale(${scale})`}
+    />
   );
 }

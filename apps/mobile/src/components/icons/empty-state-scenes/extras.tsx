@@ -158,23 +158,19 @@ const readerNoHighlights: Scene = (context) => {
 /** Advanced, no data: a big open box seen in perspective with nothing in it. */
 const advancedNoData: Scene = (context) => {
   const { theme } = context;
+  const outline: readonly Point[] = [
+    [96, 48],
+    [150, 74],
+    [150, 112],
+    [96, 138],
+    [42, 112],
+    [42, 74],
+  ];
   const top: readonly Point[] = [
     [96, 48],
     [150, 74],
     [96, 100],
     [42, 74],
-  ];
-  const left: readonly Point[] = [
-    [42, 74],
-    [96, 100],
-    [96, 138],
-    [42, 112],
-  ];
-  const right: readonly Point[] = [
-    [96, 100],
-    [150, 74],
-    [150, 112],
-    [96, 138],
   ];
   const opening: readonly Point[] = [
     [96, 58],
@@ -184,10 +180,18 @@ const advancedNoData: Scene = (context) => {
   ];
   return (
     <G transform="translate(0 -4)">
-      <Surface context={context} d={roundedPoly(left, 7)} />
-      <Surface context={context} d={roundedPoly(right, 7)} />
-      <Surface context={context} d={roundedPoly(top, 7)} />
+      <Surface context={context} d={roundedPoly(outline, 8)} />
+      <Path d={roundedPoly(top, 4)} fill={theme.lines[0]} fillOpacity={theme.lineOpacities[0]} />
       <Path d={roundedPoly(opening, 5)} fill={theme.tone} />
+      <Path
+        d="M42 74L96 100L150 74M96 100V138"
+        fill="none"
+        opacity={theme.detailOpacity}
+        stroke={theme.detail}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.2}
+      />
       <Path
         d="M86 76H106"
         fill="none"
@@ -200,9 +204,15 @@ const advancedNoData: Scene = (context) => {
   );
 };
 
-/** Feedback sent: a paper plane has left a small envelope, trailing a dashed arc. */
+/** Feedback sent: one paper plane flies off its envelope along the dashed trail, nose pointing the way it travels. */
 const feedbackSent: Scene = (context) => {
   const { theme } = context;
+  const plane: readonly Point[] = [
+    [152, 44],
+    [108, 76],
+    [126, 86],
+    [122, 110],
+  ];
   return (
     <G transform="translate(0 2)">
       <Surface
@@ -212,14 +222,17 @@ const feedbackSent: Scene = (context) => {
         tilt={-4}
       >
         <Path
-          d="M39 110L62 128C64 129.5 66 129.5 68 128L91 110"
+          d="M40 111L62 128C64 129.5 66 129.5 68 128L90 111"
           fill="none"
-          stroke={context.paints.stroke}
+          opacity={theme.detailOpacity}
+          stroke={theme.detail}
           strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.4}
         />
       </Surface>
       <Path
-        d="M68 98C62 76 82 62 106 66"
+        d="M80 104C92 120 110 118 120 102"
         fill="none"
         opacity={theme.iconOpacity}
         stroke={theme.icon}
@@ -227,28 +240,16 @@ const feedbackSent: Scene = (context) => {
         strokeLinecap="round"
         strokeWidth={2.5}
       />
-      <Surface
-        context={context}
-        d={roundedPoly(
-          [
-            [152, 44],
-            [108, 76],
-            [126, 86],
-          ],
-          4,
-        )}
-      />
-      <Surface
-        context={context}
-        d={roundedPoly(
-          [
-            [152, 44],
-            [126, 86],
-            [122, 110],
-          ],
-          4,
-        )}
-      />
+      <Surface context={context} d={roundedPoly(plane, 4)}>
+        <Path
+          d="M152 44L126 86"
+          fill="none"
+          opacity={theme.detailOpacity}
+          stroke={theme.detail}
+          strokeLinecap="round"
+          strokeWidth={1.4}
+        />
+      </Surface>
     </G>
   );
 };
@@ -312,10 +313,12 @@ const loadError: Scene = (context) => {
   );
 };
 
-/** Permission denied: one padlock; the shackle is a solid stroke tucked behind the opaque body. */
+/** Permission denied: one padlock, its keyhole cut clean through the body so lock and keyhole are one shape. */
 const permissionDenied: Scene = (context) => {
   const { theme } = context;
   const shackle = "M76 92V76C76 64 84 56 96 56S116 64 116 76V92";
+  const keyhole =
+    "M96 103A6.5 6.5 0 0 1 99.4 115.04L101 126Q101 129 98 129H94Q91 129 91 126L92.6 115.04A6.5 6.5 0 0 1 96 103Z";
   return (
     <G transform="translate(0 -1)">
       <Path
@@ -326,16 +329,12 @@ const permissionDenied: Scene = (context) => {
         strokeWidth={13}
       />
       <Path d={shackle} fill="none" stroke={theme.tone} strokeLinecap="round" strokeWidth={10} />
-      <Surface context={context} d={rr(62, 88, 68, 54, 15)} strokeD={rr(62, 88, 68, 54, 15, 0.5)}>
-        <Circle cx={96} cy={110} fill={theme.icon} fillOpacity={theme.iconOpacity} r={5.5} />
-        <Path
-          d="M96 114V125"
-          opacity={theme.iconOpacity}
-          stroke={theme.icon}
-          strokeLinecap="round"
-          strokeWidth={3.5}
-        />
-      </Surface>
+      <Surface
+        context={context}
+        d={`${rr(62, 88, 68, 54, 15)}${keyhole}`}
+        fillRule="evenodd"
+        strokeD={rr(62, 88, 68, 54, 15, 0.5)}
+      />
     </G>
   );
 };
