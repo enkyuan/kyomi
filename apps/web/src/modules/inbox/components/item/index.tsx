@@ -73,9 +73,6 @@ export const Item = memo(function Item({
     ITEM_HOVER_RADIUS_PX,
     ITEM_HOVER_CORNER_SMOOTHING,
   );
-  const continueLabel = isContinuingReading(item.readingProgress)
-    ? (formatRemainingMinutes(item.readingProgress?.remainingMinutes ?? null) ?? "Continue reading")
-    : null;
   const selectItem = () => {
     onSelect(item);
   };
@@ -83,10 +80,7 @@ export const Item = memo(function Item({
     onIntent?.(item);
   };
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
-    if (event.target !== event.currentTarget) {
-      return;
-    }
-    if (event.key === "Enter" || event.key === " ") {
+    if (isActivationKey(event)) {
       event.preventDefault();
       selectItem();
     }
@@ -112,25 +106,7 @@ export const Item = memo(function Item({
         className="pointer-events-none absolute -inset-x-5 inset-y-0 -z-10 bg-accent opacity-0 transition-opacity duration-150 ease-out-quint group-hover/inbox-item:opacity-100"
         style={hoverSurface.style}
       />
-      {!isFirst ? (
-        <span
-          aria-hidden="true"
-          className={cn(
-            "pointer-events-none absolute top-0 h-px bg-border/70 transition-opacity duration-150 ease-out-quint group-hover/inbox-item:opacity-0",
-            ITEM_SEPARATOR_CLASS,
-          )}
-          data-slot="inbox-item-separator"
-        />
-      ) : null}
-      {showBottomSeparator ? (
-        <span
-          aria-hidden="true"
-          className={cn(
-            "pointer-events-none absolute bottom-0 h-px bg-border/70",
-            ITEM_SEPARATOR_CLASS,
-          )}
-        />
-      ) : null}
+      <ItemSeparators isFirst={isFirst} showBottomSeparator={showBottomSeparator} />
       <CardHeader className={cn("p-0", ITEM_GUTTER_CLASS, sectionClassNames.header)}>
         <div className="flex min-w-0 items-center justify-between gap-4">
           <Source
@@ -194,39 +170,89 @@ export const Item = memo(function Item({
           sectionClassNames.footer,
         )}
       >
-        {item.isSaved || continueLabel || item.categories.length > 0 ? (
-          <div className="me-auto flex min-w-0 items-center gap-1.5">
-            {item.isSaved ? (
-              <span
-                className="min-w-0 shrink-0 rounded-full bg-mizu/8 px-2 py-0.5 font-medium text-mizu-foreground dark:bg-mizu/16"
-                style={{ fontSize: `${metaFontSizePx}px` }}
-              >
-                Saved
-              </span>
-            ) : null}
-            {continueLabel ? (
-              <Badge
-                aria-label={
-                  continueLabel === "Continue reading"
-                    ? continueLabel
-                    : `Continue reading, ${continueLabel}`
-                }
-                className="h-auto min-w-0 shrink-0 rounded-full bg-muted px-2 py-0.5 text-muted-foreground/85 sm:h-auto"
-                size="default"
-                style={{ fontSize: `${metaFontSizePx}px` }}
-                variant="secondary"
-              >
-                {continueLabel}
-              </Badge>
-            ) : null}
-            <Categories categories={item.categories} fontSizePx={metaFontSizePx} />
-          </div>
-        ) : null}
+        <ItemMeta item={item} metaFontSizePx={metaFontSizePx} />
         <ItemInlineToolbar item={item} />
       </CardFooter>
     </Card>
   );
 }, arePropsEqual);
+
+function isActivationKey(event: KeyboardEvent<HTMLDivElement>) {
+  return event.target === event.currentTarget && (event.key === "Enter" || event.key === " ");
+}
+
+function getContinueLabel(item: InboxItem) {
+  return isContinuingReading(item.readingProgress)
+    ? (formatRemainingMinutes(item.readingProgress?.remainingMinutes ?? null) ?? "Continue reading")
+    : null;
+}
+
+function ItemSeparators({
+  isFirst,
+  showBottomSeparator,
+}: {
+  isFirst: boolean;
+  showBottomSeparator: boolean;
+}) {
+  return (
+    <>
+      {!isFirst ? (
+        <span
+          aria-hidden="true"
+          className={cn(
+            "pointer-events-none absolute top-0 h-px bg-border/70 transition-opacity duration-150 ease-out-quint group-hover/inbox-item:opacity-0",
+            ITEM_SEPARATOR_CLASS,
+          )}
+          data-slot="inbox-item-separator"
+        />
+      ) : null}
+      {showBottomSeparator ? (
+        <span
+          aria-hidden="true"
+          className={cn(
+            "pointer-events-none absolute bottom-0 h-px bg-border/70",
+            ITEM_SEPARATOR_CLASS,
+          )}
+        />
+      ) : null}
+    </>
+  );
+}
+
+function ItemMeta({ item, metaFontSizePx }: { item: InboxItem; metaFontSizePx: number }) {
+  const continueLabel = getContinueLabel(item);
+  if (!item.isSaved && !continueLabel && item.categories.length === 0) {
+    return null;
+  }
+  return (
+    <div className="me-auto flex min-w-0 items-center gap-1.5">
+      {item.isSaved ? (
+        <span
+          className="min-w-0 shrink-0 rounded-full bg-mizu/8 px-2 py-0.5 font-medium text-mizu-foreground dark:bg-mizu/16"
+          style={{ fontSize: `${metaFontSizePx}px` }}
+        >
+          Saved
+        </span>
+      ) : null}
+      {continueLabel ? (
+        <Badge
+          aria-label={
+            continueLabel === "Continue reading"
+              ? continueLabel
+              : `Continue reading, ${continueLabel}`
+          }
+          className="h-auto min-w-0 shrink-0 rounded-full bg-muted px-2 py-0.5 text-muted-foreground/85 sm:h-auto"
+          size="default"
+          style={{ fontSize: `${metaFontSizePx}px` }}
+          variant="secondary"
+        >
+          {continueLabel}
+        </Badge>
+      ) : null}
+      <Categories categories={item.categories} fontSizePx={metaFontSizePx} />
+    </div>
+  );
+}
 
 type ItemProps = {
   filter: InboxFilter;

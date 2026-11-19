@@ -35,6 +35,97 @@ type InboxScreenProps = {
   title?: string;
 };
 
+type HeaderActionsProps = {
+  filter: InboxFilter;
+  onFilterChange: (filter: InboxFilter) => void;
+  foreground: string;
+};
+
+function IosHeaderActions({ filter, onFilterChange, foreground }: HeaderActionsProps) {
+  // The tab bar module is registered on Apple platforms only, so it is loaded here, not at the top.
+  const { IconMenuView } = require("../../../modules/tab-bar");
+  const { Image } = require("@expo/ui/swift-ui");
+  const { accessibilityLabel, frame, glassEffect, tint } = require("@expo/ui/swift-ui/modifiers");
+  const actionModifiers = [
+    frame({ height: 38, width: 38 }),
+    glassEffect({
+      glass: { interactive: true, variant: "regular" },
+      shape: "circle",
+    }),
+  ];
+
+  return (
+    <>
+      <IconMenuView
+        accessibilityLabel="Sources and filters"
+        symbol="line.3.horizontal.decrease"
+        items={FILTER_MENU.map((item) => ({
+          checked: filter === item.id,
+          icon: item.icon,
+          id: item.id,
+          title: item.title,
+        }))}
+        onSelect={({ nativeEvent }: { nativeEvent: { id: string } }) =>
+          onFilterChange(nativeEvent.id as InboxFilter)
+        }
+        style={{ height: 38, width: 38 }}
+        tintColor={foreground}
+      />
+      <Host style={{ height: 38, width: 38 }}>
+        <Image
+          onPress={() => router.push("/(protected)/settings")}
+          systemName="gearshape"
+          size={18}
+          modifiers={[...actionModifiers, accessibilityLabel("Settings"), tint(foreground)]}
+        />
+      </Host>
+    </>
+  );
+}
+
+function AndroidHeaderActions({ filter, onFilterChange, foreground }: HeaderActionsProps) {
+  return (
+    <>
+      <MenuView
+        actions={[
+          { id: "all", state: filter === "all" ? "on" : "off", title: "All" },
+          { id: "unread", state: filter === "unread" ? "on" : "off", title: "Unread" },
+          { id: "saved", state: filter === "saved" ? "on" : "off", title: "Saved" },
+        ]}
+        onPressAction={({ nativeEvent }) => {
+          const nextFilter = nativeEvent.event;
+          if (nextFilter === "all" || nextFilter === "unread" || nextFilter === "saved") {
+            onFilterChange(nextFilter);
+          }
+        }}
+        style={{ height: 38, width: 38 }}
+      >
+        <HeaderActionButton icon={<FilterIcon color={foreground} size={18} />} label="Filters" />
+      </MenuView>
+      <HeaderActionButton
+        icon={
+          <SymbolView
+            accessibilityElementsHidden
+            name={{ android: "settings", ios: "gearshape", web: "settings" }}
+            size={18}
+            tintColor={foreground}
+            weight="regular"
+          />
+        }
+        label="Settings"
+        onPress={() => router.push("/(protected)/settings")}
+      />
+    </>
+  );
+}
+
+function emptyHeader(hasNoSubscribedFeeds: boolean, filter: InboxFilter) {
+  if (hasNoSubscribedFeeds) return "No feeds yet";
+  if (filter === "saved") return "No saved articles yet";
+  if (filter === "unread") return "No unread articles";
+  return "No articles yet";
+}
+
 export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
   const colorScheme = useColorScheme();
   const theme = getMobileSurfaceTheme(colorScheme);
@@ -54,91 +145,13 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
   // Keep native menu imports out of the other platform bundle.
   const headerActions =
     Platform.OS === "ios" ? (
-      (() => {
-        // The tab bar module is registered on Apple platforms only, so it is loaded here, not at the top.
-        const { IconMenuView } = require("../../../modules/tab-bar");
-        const { Image } = require("@expo/ui/swift-ui");
-        const {
-          accessibilityLabel,
-          frame,
-          glassEffect,
-          tint,
-        } = require("@expo/ui/swift-ui/modifiers");
-        const actionModifiers = [
-          frame({ height: 38, width: 38 }),
-          glassEffect({
-            glass: { interactive: true, variant: "regular" },
-            shape: "circle",
-          }),
-        ];
-
-        return (
-          <>
-            <IconMenuView
-              accessibilityLabel="Sources and filters"
-              symbol="line.3.horizontal.decrease"
-              items={FILTER_MENU.map((item) => ({
-                checked: filter === item.id,
-                icon: item.icon,
-                id: item.id,
-                title: item.title,
-              }))}
-              onSelect={({ nativeEvent }: { nativeEvent: { id: string } }) =>
-                setFilter(nativeEvent.id as InboxFilter)
-              }
-              style={{ height: 38, width: 38 }}
-              tintColor={theme.foreground}
-            />
-            <Host style={{ height: 38, width: 38 }}>
-              <Image
-                onPress={() => router.push("/(protected)/settings")}
-                systemName="gearshape"
-                size={18}
-                modifiers={[
-                  ...actionModifiers,
-                  accessibilityLabel("Settings"),
-                  tint(theme.foreground),
-                ]}
-              />
-            </Host>
-          </>
-        );
-      })()
+      <IosHeaderActions filter={filter} foreground={theme.foreground} onFilterChange={setFilter} />
     ) : (
-      <>
-        <MenuView
-          actions={[
-            { id: "all", state: filter === "all" ? "on" : "off", title: "All" },
-            { id: "unread", state: filter === "unread" ? "on" : "off", title: "Unread" },
-            { id: "saved", state: filter === "saved" ? "on" : "off", title: "Saved" },
-          ]}
-          onPressAction={({ nativeEvent }) => {
-            const nextFilter = nativeEvent.event;
-            if (nextFilter === "all" || nextFilter === "unread" || nextFilter === "saved") {
-              setFilter(nextFilter);
-            }
-          }}
-          style={{ height: 38, width: 38 }}
-        >
-          <HeaderActionButton
-            icon={<FilterIcon color={theme.foreground} size={18} />}
-            label="Filters"
-          />
-        </MenuView>
-        <HeaderActionButton
-          icon={
-            <SymbolView
-              accessibilityElementsHidden
-              name={{ android: "settings", ios: "gearshape", web: "settings" }}
-              size={18}
-              tintColor={theme.foreground}
-              weight="regular"
-            />
-          }
-          label="Settings"
-          onPress={() => router.push("/(protected)/settings")}
-        />
-      </>
+      <AndroidHeaderActions
+        filter={filter}
+        foreground={theme.foreground}
+        onFilterChange={setFilter}
+      />
     );
 
   return (
@@ -165,15 +178,7 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
                 "New stories will show up here after\nfeeds publish or refresh."
               )
             }
-            header={
-              hasNoSubscribedFeeds
-                ? "No feeds yet"
-                : filter === "saved"
-                  ? "No saved articles yet"
-                  : filter === "unread"
-                    ? "No unread articles"
-                    : "No articles yet"
-            }
+            header={emptyHeader(hasNoSubscribedFeeds, filter)}
             height={height}
             topContentInset={topContentInset}
           />

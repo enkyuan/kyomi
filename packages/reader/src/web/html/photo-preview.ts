@@ -39,6 +39,85 @@ function areReaderPhotosEqual(a: ReaderPhoto[], b: ReaderPhoto[]): boolean {
   return true;
 }
 
+function bindPhotoPreviewTarget({
+  frame,
+  target,
+  link,
+  alt,
+  openPhoto,
+}: {
+  frame: HTMLElement;
+  target: HTMLElement;
+  link: boolean;
+  alt: string | undefined;
+  openPhoto: (openedWithKeyboard: boolean) => void;
+}): () => void {
+  const previousRole = target.getAttribute("role");
+  const previousTabIndex = target.getAttribute("tabindex");
+  const previousAriaLabel = target.getAttribute("aria-label");
+  const previousPreview = target.getAttribute("data-reader-photo-view");
+  const previousFramePreview = frame.getAttribute("data-reader-photo-view");
+
+  frame.setAttribute("data-reader-photo-view", "");
+  target.setAttribute("data-reader-photo-view", "");
+  if (!link) {
+    target.setAttribute("role", "button");
+    target.setAttribute("tabindex", "0");
+  }
+  target.setAttribute("aria-label", alt ? `Open image preview: ${alt}` : "Open image preview");
+
+  const onClick = (event: MouseEvent) => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+      return;
+    }
+    event.preventDefault();
+    event.stopPropagation();
+    openPhoto(false);
+  };
+  const onKeyDown = (event: KeyboardEvent) => {
+    if (event.key !== "Enter" && event.key !== " ") {
+      return;
+    }
+    event.preventDefault();
+    event.stopPropagation();
+    openPhoto(true);
+  };
+
+  target.addEventListener("click", onClick);
+  target.addEventListener("keydown", onKeyDown);
+  return () => {
+    target.removeEventListener("click", onClick);
+    target.removeEventListener("keydown", onKeyDown);
+    if (previousPreview === null) {
+      target.removeAttribute("data-reader-photo-view");
+    } else {
+      target.setAttribute("data-reader-photo-view", previousPreview);
+    }
+    if (previousFramePreview === null) {
+      frame.removeAttribute("data-reader-photo-view");
+    } else {
+      frame.setAttribute("data-reader-photo-view", previousFramePreview);
+    }
+    if (!link) {
+      if (previousRole === null) {
+        target.removeAttribute("role");
+      } else {
+        target.setAttribute("role", previousRole);
+      }
+      if (previousTabIndex === null) {
+        target.removeAttribute("tabindex");
+      } else {
+        target.setAttribute("tabindex", previousTabIndex);
+      }
+    }
+    if (previousAriaLabel === null) {
+      target.removeAttribute("aria-label");
+    } else {
+      target.setAttribute("aria-label", previousAriaLabel);
+    }
+  };
+}
+
 export function useReaderPhotoPreviewTargets() {
   const photoPreviewCleanupsRef = useRef<(() => void)[]>([]);
   const [photos, setPhotos] = useState<ReaderPhoto[]>([]);
@@ -76,86 +155,21 @@ export function useReaderPhotoPreviewTargets() {
         const photo: ReaderPhoto = { key: `${index}:${src}`, src, alt };
         const link = frame.closest<HTMLElement>("a[href]");
         const target = link && node.contains(link) ? link : frame;
-        const previousRole = target.getAttribute("role");
-        const previousTabIndex = target.getAttribute("tabindex");
-        const previousAriaLabel = target.getAttribute("aria-label");
-        const previousPreview = target.getAttribute("data-reader-photo-view");
-        const previousFramePreview = frame.getAttribute("data-reader-photo-view");
-
         nextPhotos.push(photo);
         seenSrcs.add(src);
-        frame.setAttribute("data-reader-photo-view", "");
-        target.setAttribute("data-reader-photo-view", "");
-        if (!link) {
-          target.setAttribute("role", "button");
-          target.setAttribute("tabindex", "0");
-        }
-        target.setAttribute(
-          "aria-label",
-          alt ? `Open image preview: ${alt}` : "Open image preview",
+        cleanups.push(
+          bindPhotoPreviewTarget({
+            frame,
+            target,
+            link: Boolean(link),
+            alt,
+            openPhoto: (openedWithKeyboard) => {
+              setPhotoOpenedWithKeyboard(openedWithKeyboard);
+              setPhotoIndex(index);
+              setPhotoVisible(true);
+            },
+          }),
         );
-
-        const openPhoto = (openedWithKeyboard: boolean) => {
-          setPhotoOpenedWithKeyboard(openedWithKeyboard);
-          setPhotoIndex(index);
-          setPhotoVisible(true);
-        };
-        const onClick = (event: MouseEvent) => {
-          if (
-            event.button !== 0 ||
-            event.metaKey ||
-            event.ctrlKey ||
-            event.shiftKey ||
-            event.altKey
-          ) {
-            return;
-          }
-          event.preventDefault();
-          event.stopPropagation();
-          openPhoto(false);
-        };
-        const onKeyDown = (event: KeyboardEvent) => {
-          if (event.key !== "Enter" && event.key !== " ") {
-            return;
-          }
-          event.preventDefault();
-          event.stopPropagation();
-          openPhoto(true);
-        };
-
-        target.addEventListener("click", onClick);
-        target.addEventListener("keydown", onKeyDown);
-        cleanups.push(() => {
-          target.removeEventListener("click", onClick);
-          target.removeEventListener("keydown", onKeyDown);
-          if (previousPreview === null) {
-            target.removeAttribute("data-reader-photo-view");
-          } else {
-            target.setAttribute("data-reader-photo-view", previousPreview);
-          }
-          if (previousFramePreview === null) {
-            frame.removeAttribute("data-reader-photo-view");
-          } else {
-            frame.setAttribute("data-reader-photo-view", previousFramePreview);
-          }
-          if (!link) {
-            if (previousRole === null) {
-              target.removeAttribute("role");
-            } else {
-              target.setAttribute("role", previousRole);
-            }
-            if (previousTabIndex === null) {
-              target.removeAttribute("tabindex");
-            } else {
-              target.setAttribute("tabindex", previousTabIndex);
-            }
-          }
-          if (previousAriaLabel === null) {
-            target.removeAttribute("aria-label");
-          } else {
-            target.setAttribute("aria-label", previousAriaLabel);
-          }
-        });
       }
 
       photoPreviewCleanupsRef.current = cleanups;

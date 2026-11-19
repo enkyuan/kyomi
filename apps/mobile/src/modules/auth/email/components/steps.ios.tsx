@@ -233,6 +233,7 @@ type OTPFormStepProps = {
   onSubmit: () => void;
   otp: ObservableStringState;
   otpFieldRef: RefObject<TextFieldRef | null>;
+  onFocusOtp: () => void;
   otpValue: string;
   theme: EmailStepTheme;
 };
@@ -247,13 +248,11 @@ export function OTPFormStep({
   onSubmit: handleSubmit,
   otp,
   otpFieldRef,
+  onFocusOtp,
   otpValue,
   theme,
 }: OTPFormStepProps) {
   const validationMessage = errorMessage ?? "Enter the 6-digit code and try again.";
-  const focusOtpField = () => {
-    otpFieldRef.current?.focus();
-  };
 
   return (
     <VStack alignment="leading" spacing={0} modifiers={[FULL_WIDTH]}>
@@ -305,7 +304,7 @@ export function OTPFormStep({
             />
           </ZStack>
 
-          <HStack spacing={10} modifiers={[FULL_WIDTH, onTapGesture(focusOtpField)]}>
+          <HStack spacing={10} modifiers={[FULL_WIDTH, onTapGesture(onFocusOtp)]}>
             {OTP_SLOTS.map((slot) => {
               const isCurrentSlot = otpValue.length === slot;
 

@@ -52,7 +52,8 @@ export function useSources() {
       if (previous) {
         const byId = new Map(previous.map((folder) => [folder.id, folder]));
         const moved = folderIds.flatMap((id) => byId.get(id) ?? []);
-        const rest = previous.filter((folder) => !folderIds.includes(folder.id));
+        const movedIds = new Set(folderIds);
+        const rest = previous.filter((folder) => !movedIds.has(folder.id));
         queryClient.setQueryData(foldersQueryKey, [...moved, ...rest]);
       }
       return previous;

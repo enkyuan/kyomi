@@ -71,6 +71,197 @@ function sendProgress({
     .catch(() => undefined);
 }
 
+/** Re-applies a restored position once the article body and late layout settle; returns teardown. */
+function watchRestoredPosition({
+  viewport,
+  itemId,
+  restoreProgress,
+  scrollTo,
+}: {
+  viewport: HTMLElement;
+  itemId: string;
+  restoreProgress: number;
+  scrollTo: (top: number) => void;
+}): () => void {
+  let frames = 0;
+  let frameId: number | null = null;
+  let settleTimer: ReturnType<typeof setTimeout> | null = null;
+  let stopTimer: ReturnType<typeof setTimeout> | null = null;
+  let resizeObserver: ResizeObserver | null = null;
+  let userScrolled = false;
+  let reapplied = false;
+
+  const apply = () => {
+    const metrics = measureReaderBody(viewport, itemId);
+    if (!metrics) {
+      return false;
+    }
+    scrollTo(scrollTopForProgress(restoreProgress, metrics));
+    return true;
+  };
+
+  const stopWatching = () => {
+    resizeObserver?.disconnect();
+    resizeObserver = null;
+    viewport.removeEventListener("load", scheduleReapply, true);
+    if (settleTimer !== null) {
+      clearTimeout(settleTimer);
+      settleTimer = null;
+    }
+    if (stopTimer !== null) {
+      clearTimeout(stopTimer);
+      stopTimer = null;
+    }
+  };
+
+  // Re-apply once after images and late layout settle, unless the reader already moved.
+  function scheduleReapply() {
+    if (reapplied || userScrolled) {
+      return;
+    }
+    if (settleTimer !== null) {
+      clearTimeout(settleTimer);
+    }
+    settleTimer = setTimeout(() => {
+      settleTimer = null;
+      reapplied = true;
+      if (!userScrolled) {
+        apply();
+      }
+      stopWatching();
+    }, RESTORE_SETTLE_DEBOUNCE_MS);
+  }
+
+  const startWatching = () => {
+    const body = findReaderBody(viewport, itemId);
+    if (body && typeof ResizeObserver !== "undefined") {
+      // The first callback is the initial observation, not a layout change.
+      let initial = true;
+      resizeObserver = new ResizeObserver(() => {
+        if (initial) {
+          initial = false;
+          return;
+        }
+        scheduleReapply();
+      });
+      resizeObserver.observe(body);
+    }
+    viewport.addEventListener("load", scheduleReapply, true);
+    stopTimer = setTimeout(stopWatching, RESTORE_SETTLE_MAX_MS);
+  };
+
+  const markUserScrolled = () => {
+    userScrolled = true;
+    stopWatching();
+  };
+  for (const type of USER_SCROLL_INTENT_EVENTS) {
+    viewport.addEventListener(type, markUserScrolled, { passive: true });
+  }
+
+  const waitForBody = () => {
+    frameId = null;
+    if (userScrolled) {
+      return;
+    }
+    if (apply()) {
+      startWatching();
+      return;
+    }
+    frames += 1;
+    if (frames < RESTORE_MAX_FRAMES) {
+      frameId = window.requestAnimationFrame(waitForBody);
+    }
+  };
+  waitForBody();
+
+  return () => {
+    if (frameId !== null) {
+      window.cancelAnimationFrame(frameId);
+    }
+    stopWatching();
+    for (const type of USER_SCROLL_INTENT_EVENTS) {
+      viewport.removeEventListener(type, markUserScrolled);
+    }
+  };
+}
+
+/** Tracks one reading session for an article; returns teardown that flushes the last update. */
+function trackReadingSession({
+  viewport,
+  itemId,
+  contentKey,
+  queryClient,
+  ignoreActivityUntil,
+}: {
+  viewport: HTMLElement;
+  itemId: string;
+  contentKey: string;
+  queryClient: QueryClient;
+  ignoreActivityUntil: { current: number };
+}): () => void {
+  const timer = createActiveTimer();
+  const session = createReadingSession({ contentKey, timer });
+  let frameId: number | null = null;
+
+  const flush = (keepalive = false) => {
+    const body = session.takeUpdate();
+    if (body) {
+      sendProgress({ queryClient, itemId, body, keepalive });
+    }
+  };
+
+  const sample = () => {
+    frameId = null;
+    const metrics = measureReaderBody(viewport, itemId);
+    if (metrics) {
+      session.sample({ progress: progressFromScroll(metrics), completed: metrics.endVisible });
+    }
+  };
+
+  const handleScroll = () => {
+    if (Date.now() >= ignoreActivityUntil.current) {
+      timer.markActivity();
+    }
+    if (frameId === null) {
+      frameId = window.requestAnimationFrame(sample);
+    }
+  };
+  const handleActivity = () => timer.markActivity();
+
+  const handleVisibility = () => {
+    if (document.visibilityState === "hidden") {
+      timer.setVisible(false);
+      flush(true);
+      return;
+    }
+    timer.setVisible(true);
+  };
+
+  viewport.addEventListener("scroll", handleScroll, { passive: true });
+  for (const type of ACTIVITY_EVENTS) {
+    viewport.addEventListener(type, handleActivity, { passive: true });
+  }
+  document.addEventListener("visibilitychange", handleVisibility);
+  const intervalId = setInterval(() => {
+    if (document.visibilityState !== "hidden") {
+      flush();
+    }
+  }, READING_FLUSH_INTERVAL_MS);
+
+  return () => {
+    clearInterval(intervalId);
+    document.removeEventListener("visibilitychange", handleVisibility);
+    viewport.removeEventListener("scroll", handleScroll);
+    for (const type of ACTIVITY_EVENTS) {
+      viewport.removeEventListener(type, handleActivity);
+    }
+    if (frameId !== null) {
+      window.cancelAnimationFrame(frameId);
+    }
+    flush();
+  };
+}
+
 /**
  * Opens the article at the right scroll offset and tracks reading progress for it.
  *
@@ -118,106 +309,7 @@ export function useReadingProgress({
       return;
     }
 
-    let frames = 0;
-    let frameId: number | null = null;
-    let settleTimer: ReturnType<typeof setTimeout> | null = null;
-    let stopTimer: ReturnType<typeof setTimeout> | null = null;
-    let resizeObserver: ResizeObserver | null = null;
-    let userScrolled = false;
-    let reapplied = false;
-
-    const apply = () => {
-      const metrics = measureReaderBody(viewport, itemId);
-      if (!metrics) {
-        return false;
-      }
-      scrollTo(scrollTopForProgress(restoreProgress, metrics));
-      return true;
-    };
-
-    const stopWatching = () => {
-      resizeObserver?.disconnect();
-      resizeObserver = null;
-      viewport.removeEventListener("load", scheduleReapply, true);
-      if (settleTimer !== null) {
-        clearTimeout(settleTimer);
-        settleTimer = null;
-      }
-      if (stopTimer !== null) {
-        clearTimeout(stopTimer);
-        stopTimer = null;
-      }
-    };
-
-    // Re-apply once after images and late layout settle, unless the reader already moved.
-    function scheduleReapply() {
-      if (reapplied || userScrolled) {
-        return;
-      }
-      if (settleTimer !== null) {
-        clearTimeout(settleTimer);
-      }
-      settleTimer = setTimeout(() => {
-        settleTimer = null;
-        reapplied = true;
-        if (!userScrolled) {
-          apply();
-        }
-        stopWatching();
-      }, RESTORE_SETTLE_DEBOUNCE_MS);
-    }
-
-    const startWatching = () => {
-      const body = findReaderBody(viewport, itemId);
-      if (body && typeof ResizeObserver !== "undefined") {
-        // The first callback is the initial observation, not a layout change.
-        let initial = true;
-        resizeObserver = new ResizeObserver(() => {
-          if (initial) {
-            initial = false;
-            return;
-          }
-          scheduleReapply();
-        });
-        resizeObserver.observe(body);
-      }
-      viewport.addEventListener("load", scheduleReapply, true);
-      stopTimer = setTimeout(stopWatching, RESTORE_SETTLE_MAX_MS);
-    };
-
-    const markUserScrolled = () => {
-      userScrolled = true;
-      stopWatching();
-    };
-    for (const type of USER_SCROLL_INTENT_EVENTS) {
-      viewport.addEventListener(type, markUserScrolled, { passive: true });
-    }
-
-    const waitForBody = () => {
-      frameId = null;
-      if (userScrolled) {
-        return;
-      }
-      if (apply()) {
-        startWatching();
-        return;
-      }
-      frames += 1;
-      if (frames < RESTORE_MAX_FRAMES) {
-        frameId = window.requestAnimationFrame(waitForBody);
-      }
-    };
-    waitForBody();
-
-    return () => {
-      if (frameId !== null) {
-        window.cancelAnimationFrame(frameId);
-      }
-      stopWatching();
-      for (const type of USER_SCROLL_INTENT_EVENTS) {
-        viewport.removeEventListener(type, markUserScrolled);
-      }
-    };
+    return watchRestoredPosition({ viewport, itemId, restoreProgress, scrollTo });
   }, [itemId, viewportRef]);
 
   // Tracking: one session per article open and content key.
@@ -227,66 +319,6 @@ export function useReadingProgress({
       return;
     }
 
-    const timer = createActiveTimer();
-    const session = createReadingSession({ contentKey, timer });
-    let frameId: number | null = null;
-
-    const flush = (keepalive = false) => {
-      const body = session.takeUpdate();
-      if (body) {
-        sendProgress({ queryClient, itemId, body, keepalive });
-      }
-    };
-
-    const sample = () => {
-      frameId = null;
-      const metrics = measureReaderBody(viewport, itemId);
-      if (metrics) {
-        session.sample({ progress: progressFromScroll(metrics), completed: metrics.endVisible });
-      }
-    };
-
-    const handleScroll = () => {
-      if (Date.now() >= ignoreActivityUntil.current) {
-        timer.markActivity();
-      }
-      if (frameId === null) {
-        frameId = window.requestAnimationFrame(sample);
-      }
-    };
-    const handleActivity = () => timer.markActivity();
-
-    const handleVisibility = () => {
-      if (document.visibilityState === "hidden") {
-        timer.setVisible(false);
-        flush(true);
-        return;
-      }
-      timer.setVisible(true);
-    };
-
-    viewport.addEventListener("scroll", handleScroll, { passive: true });
-    for (const type of ACTIVITY_EVENTS) {
-      viewport.addEventListener(type, handleActivity, { passive: true });
-    }
-    document.addEventListener("visibilitychange", handleVisibility);
-    const intervalId = setInterval(() => {
-      if (document.visibilityState !== "hidden") {
-        flush();
-      }
-    }, READING_FLUSH_INTERVAL_MS);
-
-    return () => {
-      clearInterval(intervalId);
-      document.removeEventListener("visibilitychange", handleVisibility);
-      viewport.removeEventListener("scroll", handleScroll);
-      for (const type of ACTIVITY_EVENTS) {
-        viewport.removeEventListener(type, handleActivity);
-      }
-      if (frameId !== null) {
-        window.cancelAnimationFrame(frameId);
-      }
-      flush();
-    };
+    return trackReadingSession({ viewport, itemId, contentKey, queryClient, ignoreActivityUntil });
   }, [contentKey, enabled, itemId, queryClient, viewportRef]);
 }

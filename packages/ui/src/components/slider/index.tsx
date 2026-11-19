@@ -142,6 +142,60 @@ function Slider({
 // ---------------------------------------------------------------------------
 
 // oxlint-disable-next-line eslint/complexity
+// Snap an x offset (within a track of width w) to the nearest step value; null when pips has <= 1 step.
+function snapValue(
+  clamped: number,
+  w: number,
+  variant: "pips" | "scrubber",
+  pipSteps: number[],
+  min: number,
+  max: number,
+  step: number,
+): number | null {
+  if (variant === "pips") {
+    const pipCount = pipSteps.length;
+    if (pipCount <= 1) return null;
+    const index = Math.max(0, Math.min(pipCount - 1, Math.round((clamped / w) * (pipCount - 1))));
+    return pipSteps[index];
+  }
+  const raw = min + (clamped / w) * (max - min);
+  return Math.max(min, Math.min(max, Math.round((raw - min) / step) * step + min));
+}
+
+// Active handle line spans 18px of the 32px track; idle is 16px.
+const HANDLE_LINE_IDLE_SCALE = 16 / 18;
+
+function HandleLine({
+  className,
+  left,
+  isActive,
+  isFocused,
+  isHovered,
+}: {
+  className: string;
+  left: MotionValue<string>;
+  isActive: boolean;
+  isFocused: boolean;
+  isHovered: boolean;
+}) {
+  return (
+    <m.div
+      className={cn("absolute rounded-full pointer-events-none", className)}
+      initial={false}
+      animate={{
+        scaleY: isActive ? 1 : HANDLE_LINE_IDLE_SCALE,
+        backgroundColor: isFocused
+          ? "var(--foreground)"
+          : isHovered
+            ? "color-mix(in srgb, var(--foreground) 50%, transparent)"
+            : "color-mix(in srgb, var(--foreground) 25%, transparent)",
+      }}
+      transition={springs.fast}
+      style={{ left, top: 7, bottom: 7, width: 2 }}
+    />
+  );
+}
+
 function SliderComfortable({
   ref,
   value,
@@ -195,7 +249,6 @@ function SliderComfortable({
     () => Array.from({ length: Math.round((max - min) / step) + 1 }, (_, i) => min + i * step),
     [min, max, step],
   );
-  const pipCount = pipSteps.length;
 
   // Fill motion value
   const fillPercent = useMotionValue(
@@ -237,19 +290,8 @@ function SliderComfortable({
       const x = clientX - rect.left - borderLeft;
       const clamped = Math.max(0, Math.min(w, x));
 
-      // Snap to nearest step value
-      let snappedVal: number;
-      if (variant === "pips") {
-        if (pipCount <= 1) return;
-        const index = Math.max(
-          0,
-          Math.min(pipCount - 1, Math.round((clamped / w) * (pipCount - 1))),
-        );
-        snappedVal = pipSteps[index];
-      } else {
-        const raw = min + (clamped / w) * (max - min);
-        snappedVal = Math.max(min, Math.min(max, Math.round((raw - min) / step) * step + min));
-      }
+      const snappedVal = snapValue(clamped, w, variant, pipSteps, min, max, step);
+      if (snappedVal === null) return;
       const snappedPercent = max === min ? 0 : (snappedVal - min) / (max - min);
       const snappedX = snappedPercent * w;
 
@@ -269,7 +311,7 @@ function SliderComfortable({
       const width = Math.abs(edgeX - handleX);
       setHoverPreview({ left, width, snappedValue: snappedVal, cursorX: snappedX });
     },
-    [variant, pipSteps, pipCount, min, max, step, fillPercent, zeroOffset],
+    [variant, pipSteps, min, max, step, fillPercent, zeroOffset],
   );
 
   // Sync fill on programmatic value change
@@ -292,20 +334,9 @@ function SliderComfortable({
       const borderLeft = rect.width - w > 0 ? (rect.width - w) / 2 : 0;
       const x = clientX - rect.left - borderLeft;
       const clamped = Math.max(0, Math.min(w, x));
-      if (variant === "pips") {
-        if (pipCount <= 1) return min;
-        const index = Math.max(
-          0,
-          Math.min(pipCount - 1, Math.round((clamped / w) * (pipCount - 1))),
-        );
-        return pipSteps[index];
-      } else {
-        const raw = min + (clamped / w) * (max - min);
-        const snapped = Math.round((raw - min) / step) * step + min;
-        return Math.max(min, Math.min(max, snapped));
-      }
+      return snapValue(clamped, w, variant, pipSteps, min, max, step) ?? min;
     },
-    [variant, pipSteps, pipCount, min, max, step],
+    [variant, pipSteps, min, max, step],
   );
 
   const handlePointerDown = useCallback(
@@ -546,25 +577,13 @@ function SliderComfortable({
             />
           )}
 
-          {/* Pips: handle line — z-[3] */}
           {variant === "pips" && (
-            <m.div
-              className="absolute rounded-full pointer-events-none z-3"
-              initial={false}
-              animate={{
-                top: isActive ? 7 : 8,
-                bottom: isActive ? 7 : 8,
-                backgroundColor: isFocused
-                  ? "var(--foreground)"
-                  : isHovered
-                    ? "color-mix(in srgb, var(--foreground) 50%, transparent)"
-                    : "color-mix(in srgb, var(--foreground) 25%, transparent)",
-              }}
-              transition={springs.fast}
-              style={{
-                left: pipsHandleLineLeftStyle,
-                width: 2,
-              }}
+            <HandleLine
+              className="z-3"
+              left={pipsHandleLineLeftStyle}
+              isActive={isActive}
+              isFocused={isFocused}
+              isHovered={isHovered}
             />
           )}
 
@@ -604,25 +623,13 @@ function SliderComfortable({
             />
           )}
 
-          {/* Scrubber: handle line */}
           {variant === "scrubber" && (
-            <m.div
-              className="absolute rounded-full pointer-events-none z-10"
-              initial={false}
-              animate={{
-                top: isActive ? 7 : 8,
-                bottom: isActive ? 7 : 8,
-                backgroundColor: isFocused
-                  ? "var(--foreground)"
-                  : isHovered
-                    ? "color-mix(in srgb, var(--foreground) 50%, transparent)"
-                    : "color-mix(in srgb, var(--foreground) 25%, transparent)",
-              }}
-              transition={springs.fast}
-              style={{
-                left: handleLineLeftStyle,
-                width: 2,
-              }}
+            <HandleLine
+              className="z-10"
+              left={handleLineLeftStyle}
+              isActive={isActive}
+              isFocused={isFocused}
+              isHovered={isHovered}
             />
           )}
 

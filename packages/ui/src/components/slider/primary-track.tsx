@@ -53,7 +53,189 @@ export type PrimaryTrackProps = {
   isInteracting: boolean;
 };
 
-// oxlint-disable-next-line eslint/complexity,react-doctor/no-many-boolean-props
+function TrackValueTooltips({
+  isInteracting,
+  isRange,
+  values,
+  formatValue,
+  motionX0,
+  motionX1,
+}: {
+  isInteracting: boolean;
+  isRange: boolean;
+  values: number[];
+  formatValue: (v: number) => string;
+  motionX0: MotionValue<number>;
+  motionX1: MotionValue<number>;
+}) {
+  return (
+    <AnimatePresence>
+      {isInteracting ? (
+        <TooltipValue
+          key="tooltip-0"
+          value={values[0]}
+          formatValue={formatValue}
+          motionX={motionX0}
+        />
+      ) : null}
+      {isInteracting && isRange && values[1] !== undefined ? (
+        <TooltipValue
+          key="tooltip-1"
+          value={values[1]}
+          formatValue={formatValue}
+          motionX={motionX1}
+        />
+      ) : null}
+    </AnimatePresence>
+  );
+}
+
+function ThumbInput({
+  index,
+  dispatchUi,
+}: {
+  index: number;
+  dispatchUi: PrimaryTrackProps["dispatchUi"];
+}) {
+  return (
+    <SliderPrimitive.Thumb
+      className="block outline-none"
+      style={{ width: THUMB_SIZE, height: THUMB_SIZE }}
+      onFocus={(event) => {
+        if (event.currentTarget.matches(":focus-visible")) {
+          dispatchUi({ type: "set_focused_thumb", index });
+        }
+      }}
+      onBlur={() => dispatchUi({ type: "set_focused_thumb", index: null })}
+    />
+  );
+}
+
+function HiddenRadixSlider({
+  values,
+  onValueChange,
+  min,
+  max,
+  step,
+  disabled,
+  label,
+  isRange,
+  dispatchUi,
+}: {
+  values: number[];
+  onValueChange: (newValues: number[]) => void;
+  min: number;
+  max: number;
+  step: number;
+  disabled: boolean;
+  label?: string;
+  isRange: boolean;
+  dispatchUi: PrimaryTrackProps["dispatchUi"];
+}) {
+  return (
+    <SliderPrimitive.Root
+      value={values}
+      onValueChange={onValueChange}
+      min={min}
+      max={max}
+      step={step}
+      disabled={disabled}
+      aria-label={label}
+      className="absolute inset-0 opacity-0 pointer-events-none"
+      style={{ height: THUMB_SIZE }}
+    >
+      <SliderPrimitive.Track className="h-full w-full">
+        <SliderPrimitive.Range />
+      </SliderPrimitive.Track>
+      <ThumbInput index={0} dispatchUi={dispatchUi} />
+      {isRange ? <ThumbInput index={1} dispatchUi={dispatchUi} /> : null}
+    </SliderPrimitive.Root>
+  );
+}
+
+function HoverValueTooltip({
+  visible,
+  hoverPreview,
+  formatValue,
+}: {
+  visible: boolean;
+  hoverPreview: PrimarySliderUiState["hoverPreview"];
+  formatValue: (v: number) => string;
+}) {
+  return (
+    <AnimatePresence>
+      {visible && hoverPreview ? (
+        <m.div
+          key="hover-tooltip"
+          className="pointer-events-none absolute z-20 -translate-x-1/2"
+          initial={{ opacity: 0, y: 4 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 4, transition: { duration: 0.1 } }}
+          transition={springs.fast}
+          style={{ left: hoverPreview.cursorX, top: -20 }}
+        >
+          <span
+            className="rounded-md bg-foreground px-2 py-1 text-[12px] text-background tabular-nums whitespace-nowrap"
+            style={{ fontVariationSettings: fontWeights.medium }}
+          >
+            {formatValue(hoverPreview.snappedValue)}
+          </span>
+        </m.div>
+      ) : null}
+    </AnimatePresence>
+  );
+}
+
+function StepDotsLayer({
+  stepDots,
+  stepDotsMask,
+  isHovered,
+}: {
+  stepDots: Array<{ value: number; percent: number }>;
+  stepDotsMask: MotionValue<string>;
+  isHovered: boolean;
+}) {
+  if (stepDots.length === 0) return null;
+  return (
+    <m.div
+      className="pointer-events-none absolute right-0 left-0"
+      style={{
+        top: 8 + (THUMB_SIZE - TRACK_BG_HEIGHT) / 2,
+        height: TRACK_BG_HEIGHT,
+        WebkitMaskImage: stepDotsMask,
+        maskImage: stepDotsMask,
+      }}
+    >
+      {stepDots.map(({ value: dotValue, percent }) => (
+        <div
+          key={dotValue}
+          className="pointer-events-none absolute flex items-center justify-center"
+          style={{
+            left: `calc(${THUMB_SIZE / 2}px + ${percent} * (100% - ${THUMB_SIZE}px))`,
+            top: "50%",
+            width: 0,
+            height: 0,
+          }}
+        >
+          <m.div
+            className="shrink-0 rounded-full"
+            initial={false}
+            animate={{ scale: isHovered ? 1.25 : 1 }}
+            transition={springs.moderate}
+            style={{
+              width: DOT_SIZE,
+              height: DOT_SIZE,
+              backgroundColor: "var(--muted-foreground)",
+              opacity: 0.3,
+            }}
+          />
+        </div>
+      ))}
+    </m.div>
+  );
+}
+
+// oxlint-disable-next-line react-doctor/no-many-boolean-props
 export function PrimaryTrack({
   valuePosition,
   showValue,
@@ -113,63 +295,27 @@ export function PrimaryTrack({
       }}
     >
       {showValue && valuePosition === "tooltip" ? (
-        <AnimatePresence>
-          {isInteracting ? (
-            <TooltipValue
-              key="tooltip-0"
-              value={values[0]}
-              formatValue={formatValue}
-              motionX={motionX0}
-            />
-          ) : null}
-          {isInteracting && isRange && values[1] !== undefined ? (
-            <TooltipValue
-              key="tooltip-1"
-              value={values[1]}
-              formatValue={formatValue}
-              motionX={motionX1}
-            />
-          ) : null}
-        </AnimatePresence>
+        <TrackValueTooltips
+          isInteracting={isInteracting}
+          isRange={isRange}
+          values={values}
+          formatValue={formatValue}
+          motionX0={motionX0}
+          motionX1={motionX1}
+        />
       ) : null}
 
-      <SliderPrimitive.Root
-        value={values}
+      <HiddenRadixSlider
+        values={values}
         onValueChange={handleRadixChange}
         min={min}
         max={max}
         step={step}
         disabled={disabled}
-        aria-label={label}
-        className="absolute inset-0 opacity-0 pointer-events-none"
-        style={{ height: THUMB_SIZE }}
-      >
-        <SliderPrimitive.Track className="h-full w-full">
-          <SliderPrimitive.Range />
-        </SliderPrimitive.Track>
-        <SliderPrimitive.Thumb
-          className="block outline-none"
-          style={{ width: THUMB_SIZE, height: THUMB_SIZE }}
-          onFocus={(event) => {
-            if (event.currentTarget.matches(":focus-visible")) {
-              dispatchUi({ type: "set_focused_thumb", index: 0 });
-            }
-          }}
-          onBlur={() => dispatchUi({ type: "set_focused_thumb", index: null })}
-        />
-        {isRange ? (
-          <SliderPrimitive.Thumb
-            className="block outline-none"
-            style={{ width: THUMB_SIZE, height: THUMB_SIZE }}
-            onFocus={(event) => {
-              if (event.currentTarget.matches(":focus-visible")) {
-                dispatchUi({ type: "set_focused_thumb", index: 1 });
-              }
-            }}
-            onBlur={() => dispatchUi({ type: "set_focused_thumb", index: null })}
-          />
-        ) : null}
-      </SliderPrimitive.Root>
+        label={label}
+        isRange={isRange}
+        dispatchUi={dispatchUi}
+      />
 
       <div
         ref={trackRef}
@@ -190,26 +336,13 @@ export function PrimaryTrack({
           onPointerCancel={handlePointerUp}
           onLostPointerCapture={handlePointerUp}
         />
-        <AnimatePresence>
-          {hoverPreview && showHoverTooltip && !isPressed && valuePosition !== "tooltip" ? (
-            <m.div
-              key="hover-tooltip"
-              className="pointer-events-none absolute z-20 -translate-x-1/2"
-              initial={{ opacity: 0, y: 4 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 4, transition: { duration: 0.1 } }}
-              transition={springs.fast}
-              style={{ left: hoverPreview.cursorX, top: -20 }}
-            >
-              <span
-                className="rounded-md bg-foreground px-2 py-1 text-[12px] text-background tabular-nums whitespace-nowrap"
-                style={{ fontVariationSettings: fontWeights.medium }}
-              >
-                {formatValue(hoverPreview.snappedValue)}
-              </span>
-            </m.div>
-          ) : null}
-        </AnimatePresence>
+        <HoverValueTooltip
+          visible={Boolean(
+            hoverPreview && showHoverTooltip && !isPressed && valuePosition !== "tooltip",
+          )}
+          hoverPreview={hoverPreview}
+          formatValue={formatValue}
+        />
         <m.div
           className={cn(
             "absolute overflow-hidden rounded-full border border-border",
@@ -247,41 +380,7 @@ export function PrimaryTrack({
             }}
           />
         </m.div>
-        {stepDots.length > 0 ? (
-          <m.div
-            className="pointer-events-none absolute right-0 left-0"
-            style={{
-              top: 8 + (THUMB_SIZE - TRACK_BG_HEIGHT) / 2,
-              height: TRACK_BG_HEIGHT,
-              WebkitMaskImage: stepDotsMask,
-              maskImage: stepDotsMask,
-            }}
-          >
-            {stepDots.map(({ value: dotValue, percent }) => (
-              <div
-                key={dotValue}
-                className="pointer-events-none absolute flex items-center justify-center"
-                style={{
-                  left: `calc(${THUMB_SIZE / 2}px + ${percent} * (100% - ${THUMB_SIZE}px))`,
-                  top: "50%",
-                  width: 0,
-                  height: 0,
-                }}
-              >
-                <m.div
-                  className="shrink-0 rounded-full"
-                  initial={false}
-                  animate={{
-                    width: isHovered ? DOT_SIZE * 1.25 : DOT_SIZE,
-                    height: isHovered ? DOT_SIZE * 1.25 : DOT_SIZE,
-                  }}
-                  transition={springs.moderate}
-                  style={{ backgroundColor: "var(--muted-foreground)", opacity: 0.3 }}
-                />
-              </div>
-            ))}
-          </m.div>
-        ) : null}
+        <StepDotsLayer stepDots={stepDots} stepDotsMask={stepDotsMask} isHovered={isHovered} />
         <VisualThumb
           index={0}
           motionX={motionX0}

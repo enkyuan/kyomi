@@ -1,49 +1,22 @@
-import { Pressable, ScrollView, Text, useWindowDimensions, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { useState, type ComponentType, type ReactNode } from "react";
-import type { ReaderBlock, ReaderInline, ReaderTableCell } from "../../core/document";
+import type { ReaderBlock } from "../../core/document";
 import { useReaderNative } from "./context";
+import { keyedByContent } from "../../core/keys";
 import { CodeBlockView } from "./code";
 import { Checkbox, Disclosure } from "./icons";
 import { EmbedBlockView, LinkCardBlock } from "./embed";
-import { Inlines, renderInlines } from "./inline";
+import { Inlines } from "./inline";
 import { HtmlBlock, MathBlock } from "./islands";
 import { FigureBlock, GalleryBlock, MediaFileBlock } from "./media";
 import { imageAspectRatio, useBodyTextStyle } from "./style";
 import { DividerBlock, HeadingBlock, PullQuoteBlock } from "./typography";
 import { inlinesToText } from "./text";
-import { tableColumnWidths } from "./table-layout";
+import { TableBlock } from "./table";
+import { ProseRun } from "./prose";
 import type { ReaderSegment } from "./plan";
 
 type Block<T extends ReaderBlock["type"]> = Extract<ReaderBlock, { type: T }>;
-
-/** One native `Text` for consecutive paragraphs, so selection and copy span them. */
-export function ProseRun({
-  blocks,
-}: {
-  readonly blocks: Extract<ReaderSegment, { kind: "prose" }>["blocks"];
-}) {
-  const { theme, host, footnotes } = useReaderNative();
-  const { fontScale } = useWindowDimensions();
-  const base = useBodyTextStyle();
-  // The second newline is styled smaller so the gap between paragraphs matches `blockGap`
-  // instead of a full blank line.
-  const gap = { fontSize: theme.blockGap, lineHeight: theme.blockGap };
-  return (
-    <Text maxFontSizeMultiplier={theme.maxFontSizeMultiplier} selectable style={base}>
-      {blocks.map((block, index) => (
-        <Text key={index}>
-          {index > 0 ? (
-            <>
-              {"\n"}
-              <Text style={gap}>{"\n"}</Text>
-            </>
-          ) : null}
-          {renderInlines(block.children, { theme, host, footnotes, fontScale }, `r${index}`)}
-        </Text>
-      ))}
-    </Text>
-  );
-}
 
 function marker(ordered: boolean, start: number | undefined, index: number): string {
   return ordered ? `${(start ?? 1) + index}.` : "•";
@@ -56,10 +29,10 @@ function ListBlock({ block }: { readonly block: Block<"list"> }) {
   const markerWidth = Math.max(18, widest * theme.fontSize * 0.62 + 6);
   return (
     <View accessibilityRole="list" style={{ gap: theme.blockGap * 0.4 }}>
-      {block.items.map((item, index) => {
+      {keyedByContent(block.items).map(({ item, key, position: index }) => {
         const task = item.checked !== null;
         return (
-          <View key={index} style={{ flexDirection: "row" }}>
+          <View key={key} style={{ flexDirection: "row" }}>
             {task ? (
               <View
                 accessibilityLabel={item.checked ? "Done" : "To do"}
@@ -154,7 +127,8 @@ function CalloutBlock({ block }: { readonly block: Block<"callout"> }) {
 function DetailsBlock({ block }: { readonly block: Block<"details"> }) {
   const { theme } = useReaderNative();
   const base = useBodyTextStyle();
-  const [open, setOpen] = useState(block.open);
+  const [toggled, setToggled] = useState(false);
+  const open = block.open !== toggled;
   return (
     <View
       style={{
@@ -168,7 +142,7 @@ function DetailsBlock({ block }: { readonly block: Block<"details"> }) {
         accessibilityLabel={inlinesToText(block.summary)}
         accessibilityRole="button"
         accessibilityState={{ expanded: open }}
-        onPress={() => setOpen((value) => !value)}
+        onPress={() => setToggled((value) => !value)}
         style={{ flexDirection: "row", gap: 8, padding: 12 }}
       >
         <View style={{ height: base.lineHeight, justifyContent: "center" }}>
@@ -199,8 +173,8 @@ function DefinitionListBlock({ block }: { readonly block: Block<"definitionList"
   const base = useBodyTextStyle();
   return (
     <View style={{ gap: theme.blockGap * 0.6 }}>
-      {block.items.map((item, index) => (
-        <View key={index} style={{ gap: 4 }}>
+      {keyedByContent(block.items).map(({ item, key }) => (
+        <View key={key} style={{ gap: 4 }}>
           {item.terms.map((term, termIndex) => (
             <Text
               key={termIndex}
@@ -249,112 +223,9 @@ function MediaTextBlock({ block }: { readonly block: Block<"mediaText"> }) {
   );
 }
 
-/** A cell with one paragraph renders as bare text; richer cells render their blocks. */
-function cellInlines(cell: ReaderTableCell): readonly ReaderInline[] | null {
-  const only = cell.children.length === 1 ? cell.children[0] : undefined;
-  return only?.type === "paragraph" ? only.children : null;
-}
-
-function TableBlock({ block }: { readonly block: Block<"table"> }) {
-  const { theme } = useReaderNative();
-  const base = useBodyTextStyle();
-  const rows = [
-    ...block.head.map((row) => ({ row, head: true })),
-    ...block.body.map((row) => ({ row, head: false })),
-    ...(block.foot ?? []).map((row) => ({ row, head: false })),
-  ];
-  const size = theme.fontSize * 0.88;
-  const widths = tableColumnWidths(
-    rows.map(({ row }) =>
-      row.map((cell) => {
-        const inlines = cellInlines(cell);
-        return { chars: inlines ? inlinesToText(inlines).length : 0, span: cell.colSpan ?? 1 };
-      }),
-    ),
-    // Minus the 1px frame on each side, so a filled table sits flush inside its border.
-    { available: theme.columnWidth - 2, charWidth: size * 0.52 },
-  );
-  const widthOf = (column: number, span: number) =>
-    widths.slice(column, column + span).reduce((sum, width) => sum + width, 0);
+function TableView({ block }: { readonly block: Block<"table"> }) {
   return (
-    <View>
-      {block.caption?.length ? (
-        <Text
-          maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
-          style={{
-            ...base,
-            color: theme.colors.muted,
-            fontSize: theme.fontSize * 0.85,
-            marginBottom: 6,
-          }}
-        >
-          <Inlines inlines={block.caption} />
-        </Text>
-      ) : null}
-      <ScrollView
-        accessibilityLabel="Table"
-        horizontal
-        showsHorizontalScrollIndicator
-        style={{ borderColor: theme.colors.border, borderRadius: 8, borderWidth: 1 }}
-      >
-        <View>
-          {rows.map(({ row, head }, rowIndex) => (
-            <View
-              key={rowIndex}
-              style={{
-                borderTopColor: theme.colors.border,
-                borderTopWidth: rowIndex === 0 ? 0 : 1,
-                flexDirection: "row",
-              }}
-            >
-              {row.map((cell, cellIndex) => {
-                const column = row
-                  .slice(0, cellIndex)
-                  .reduce((sum, previous) => sum + (previous.colSpan ?? 1), 0);
-                const inlines = cellInlines(cell);
-                const header = head || cell.header;
-                return (
-                  <View
-                    key={cellIndex}
-                    style={{
-                      backgroundColor: header ? theme.colors.codeBackground : undefined,
-                      borderLeftColor: theme.colors.border,
-                      borderLeftWidth: cellIndex === 0 ? 0 : 1,
-                      gap: 4,
-                      padding: 10,
-                      width: widthOf(column, cell.colSpan ?? 1),
-                    }}
-                  >
-                    {inlines ? (
-                      <Text
-                        maxFontSizeMultiplier={theme.maxFontSizeMultiplier}
-                        selectable
-                        style={{
-                          ...base,
-                          fontFamily: header ? theme.fonts.strong : theme.fonts.body,
-                          fontSize: size,
-                          lineHeight: Math.round(size * 1.45),
-                          textAlign:
-                            cell.align === "end"
-                              ? "right"
-                              : cell.align === "center"
-                                ? "center"
-                                : "left",
-                        }}
-                      >
-                        <Inlines inlines={inlines} />
-                      </Text>
-                    ) : (
-                      <Blocks blocks={cell.children} compact />
-                    )}
-                  </View>
-                );
-              })}
-            </View>
-          ))}
-        </View>
-      </ScrollView>
-    </View>
+    <TableBlock block={block} renderBlocks={(children) => <Blocks blocks={children} compact />} />
   );
 }
 
@@ -375,7 +246,7 @@ const BLOCK_VIEWS: BlockViews = {
   divider: DividerBlock,
   code: CodeBlockView,
   math: MathBlock,
-  table: TableBlock,
+  table: TableView,
   figure: FigureBlock,
   gallery: GalleryBlock,
   video: MediaFileBlock,
@@ -416,14 +287,14 @@ export function Blocks({
   }
   return (
     <View style={{ gap, opacity: muted ? 0.82 : 1 }}>
-      {groups.map((group, index) =>
+      {keyedByContent(groups).map(({ item: group, key }) =>
         group[0]!.type === "paragraph" ? (
           <ProseRun
             blocks={group as Extract<ReaderSegment, { kind: "prose" }>["blocks"]}
-            key={index}
+            key={key}
           />
         ) : (
-          <BlockView block={group[0]!} key={index} />
+          <BlockView block={group[0]!} key={key} />
         ),
       )}
     </View>

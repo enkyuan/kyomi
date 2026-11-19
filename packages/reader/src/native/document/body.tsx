@@ -9,7 +9,8 @@ import {
   type ReactElement,
 } from "react";
 import type { ReaderDocument } from "../../core/document";
-import { BlockView, ProseRun } from "./blocks";
+import { BlockView } from "./blocks";
+import { ProseRun } from "./prose";
 import { ReaderNativeProvider, type ReaderNativeHost } from "./context";
 import { planDocument, type ReaderSegment } from "./plan";
 import type { ReaderNativeTheme } from "./theme";

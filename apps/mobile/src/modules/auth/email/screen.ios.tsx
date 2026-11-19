@@ -186,6 +186,7 @@ export function EmailSheet({ isPresented, onDismiss, theme }: EmailSheetProps) {
                       }
                       otp={otp}
                       otpFieldRef={otpFieldRef}
+                      onFocusOtp={focusOTP}
                       otpValue={otpValue}
                       theme={theme}
                     />
