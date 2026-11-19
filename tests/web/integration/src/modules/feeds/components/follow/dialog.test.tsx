@@ -128,7 +128,7 @@ function renderDialog({ onOpenChange = vi.fn() }: { onOpenChange?: (open: boolea
 }
 
 function typeInSearch(value: string) {
-  fireEvent.change(screen.getByPlaceholderText("Search feeds or paste a feed URL..."), {
+  fireEvent.change(screen.getByPlaceholderText("Search feeds or paste a feed URL"), {
     target: { value },
   });
 }

@@ -28,7 +28,7 @@ export function Table({
           {...props}
         />
       </ScrollAreaPrimitive.Viewport>
-      <ScrollBar className="!mx-1.5 !mt-px !mb-0" orientation="horizontal" />
+      <ScrollBar className="!mx-1.5 !mt-px !mb-0" orientation="horizontal" track="none" />
     </ScrollAreaPrimitive.Root>
   );
 }

@@ -15,7 +15,13 @@ function showSavedToast(options: AnchoredToolbarActionOptions | undefined, isSav
   const type = isSaved ? "success" : "info";
   const anchor = options?.anchor;
 
-  if (anchor?.isConnected) {
+  // A toolbar click gets only the anchored toast. If its button has since unmounted (the row moved
+  // or re-rendered), show nothing rather than a second, global toast; the button's own state
+  // already reflects the change. Only anchorless triggers, such as shortcuts, use the global one.
+  if (anchor) {
+    if (!anchor.isConnected) {
+      return;
+    }
     anchoredToastManager.add({
       title,
       type,

@@ -86,6 +86,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* One stroke weight for icons beside text (2.5 of 24 reads as 1.7px at 16px): matches medium and
+     semibold UI text, so a plus beside "Import" is as heavy as the word. */
+  --icon-stroke: 2.5;
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-reader:

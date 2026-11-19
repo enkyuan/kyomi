@@ -1,6 +1,6 @@
 "use client";
 
-import { Link, useLocation, useMatches, useRouteContext } from "@tanstack/react-router";
+import { Link, useLocation, useRouteContext } from "@tanstack/react-router";
 import type { MouseEventHandler, ReactNode } from "react";
 import { Button } from "@kyomi/ui/components/button";
 import { Empty } from "@kyomi/ui/components/empty";
@@ -9,9 +9,6 @@ import {
   getPathRecoveryAction,
   type RouteRecoveryAction,
 } from "@lib/recovery";
-
-/** `page` takes over the viewport; `panel` fills the content area and keeps the app shell around it. */
-export type RecoveryLayout = "page" | "panel";
 
 /** The single primary action on every error page: leave for the route's contextual recovery target. */
 export function RecoveryButton({
@@ -32,40 +29,33 @@ export function RecoveryButton({
   );
 }
 
-export function RecoverySurface({
-  layout,
-  children,
-}: {
-  layout: RecoveryLayout;
-  children: ReactNode;
-}) {
-  return layout === "panel" ? (
-    <div className="flex h-full min-h-0 flex-1 bg-background text-foreground">
-      <Empty size="md">{children}</Empty>
-    </div>
-  ) : (
-    <main className="flex min-h-svh bg-background text-foreground">
+/**
+ * An error or not-found page is a whole page: it takes over the viewport, above the app shell and
+ * its sidebar, wherever in the route tree the failure happened. It is fixed to the window rather
+ * than sized to its parent because a failure under the signed-in shell renders inside that shell's
+ * content column, which would leave the sidebar showing beside it.
+ */
+export function RecoverySurface({ children }: { children: ReactNode }) {
+  return (
+    <main
+      className="fixed inset-0 z-50 flex bg-background text-foreground"
+      data-slot="recovery-page"
+    >
       <Empty size="page">{children}</Empty>
     </main>
   );
 }
 
 /**
- * Where an error or not-found page renders and where it sends the user, read from the router: a
- * failure under the signed-in shell keeps the shell (`panel`), anything else is a full `page`; the
- * action follows the resolved auth state, or the failing area when the session lookup itself failed.
+ * Where an error or not-found page sends the user, read from the router: the action follows the
+ * resolved auth state, or the failing area when the session lookup itself failed.
  */
-export function useRecoveryContext(): {
-  layout: RecoveryLayout;
-  recoveryAction: RouteRecoveryAction;
-} {
-  const inShell = useMatches({ select: (matches) => matches.some((m) => m.routeId === "/_app") });
+export function useRecoveryContext(): { recoveryAction: RouteRecoveryAction } {
   const pathname = useLocation({ select: (location) => location.pathname });
   // The failing route may not have a context at all (the session lookup that builds it failed).
   const authState = useRouteContext({ strict: false, select: (context) => context?.authState });
 
   return {
-    layout: inShell ? "panel" : "page",
     recoveryAction: getAuthRecoveryAction(authState) ?? getPathRecoveryAction(pathname),
   };
 }

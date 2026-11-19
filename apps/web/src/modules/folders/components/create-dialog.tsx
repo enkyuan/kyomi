@@ -129,6 +129,7 @@ export function CreateFolderDialog({
           render={
             <Button
               aria-label="Create folder"
+              shape="pill"
               size="icon-xs"
               variant="ghost"
               onClick={(event) => {
@@ -143,7 +144,8 @@ export function CreateFolderDialog({
           <PlusIcon aria-hidden="true" className="size-3" />
         </DialogTrigger>
       ) : null}
-      <DialogPopup className="sm:max-w-sm">
+      {/* The Cancel button is the way out, so there is no second close control in the corner. */}
+      <DialogPopup className="sm:max-w-sm" showCloseButton={false}>
         <Form
           className="contents"
           onSubmit={async (event) => {

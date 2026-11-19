@@ -5,10 +5,10 @@ import {
   FileArrowLeftInIcon,
   FileArrowRightOutIcon,
   FolderIcon,
-  Maximize2Icon,
   PlusIcon,
 } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
+import { cn } from "@kyomi/ui/lib/utils";
 import {
   Item,
   ItemContent,
@@ -26,6 +26,12 @@ export const FOLDER_ACTION_BUTTON_CLASS =
   "h-10 flex-1 gap-1.5 px-4 font-semibold text-sm leading-none sm:h-10 sm:text-sm";
 export const FOLDER_ICON_BUTTON_CLASS = "size-10 px-0 sm:size-10";
 
+/** Flat like its siblings, and tactile (the outline look) only while it is pressed. */
+export const FOLDER_ICON_ACTION_BUTTON_CLASS = cn(
+  FOLDER_ICON_BUTTON_CLASS,
+  "[:active,[data-pressed]]:border-input [:active,[data-pressed]]:bg-popover [:active,[data-pressed]]:shadow-xs/5 dark:[:active,[data-pressed]]:bg-input/32",
+);
+
 export function FolderActions({
   exportingOpml = false,
   onCreateFolder,
@@ -38,7 +44,7 @@ export function FolderActions({
   onImportOpml: () => void;
 }) {
   return (
-    <div className="mt-3 grid min-w-0 shrink-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)_2.5rem] gap-2 px-1">
+    <div className="mt-3 grid min-w-0 shrink-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)_2.5rem] gap-2">
       <RailTooltip label="Create folder">
         <Button
           className={FOLDER_ACTION_BUTTON_CLASS}
@@ -65,10 +71,10 @@ export function FolderActions({
       <RailTooltip label="Export OPML">
         <Button
           aria-label="Export OPML"
-          className={FOLDER_ICON_BUTTON_CLASS}
+          className={FOLDER_ICON_ACTION_BUTTON_CLASS}
           loading={exportingOpml}
           shape="pill"
-          variant="outline"
+          variant="secondary"
           onClick={onExportOpml}
         >
           <FileArrowRightOutIcon className="mx-0 size-4" />
@@ -88,7 +94,7 @@ function FolderSummaryActions({
   onManageFolders: () => void;
 }) {
   return (
-    <div className="mt-auto grid min-w-0 shrink-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)_2.5rem] gap-2 px-1 pt-3">
+    <div className="mt-3 grid min-w-0 shrink-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)_2.5rem] gap-2">
       <RailTooltip label="Manage folders">
         <Button
           className={FOLDER_ACTION_BUTTON_CLASS}
@@ -115,9 +121,9 @@ function FolderSummaryActions({
       <RailTooltip label="Create folder">
         <Button
           aria-label="Create folder"
-          className={FOLDER_ICON_BUTTON_CLASS}
+          className={FOLDER_ICON_ACTION_BUTTON_CLASS}
           shape="pill"
-          variant="outline"
+          variant="secondary"
           onClick={onAddFolder}
         >
           <PlusIcon className="mx-0 size-4" />
@@ -164,30 +170,21 @@ function FolderSummaryItem({
 
 export function Folders({
   folders,
+  limit,
   onExpand,
   onCreateFolder,
   onImportOpml,
   onSelectFolder,
 }: {
   folders: RecapFolder[];
+  limit: number;
   onExpand: () => void;
   onCreateFolder: () => void;
   onImportOpml: () => void;
   onSelectFolder: (folder: RecapFolder) => void;
 }) {
   return (
-    <RecapSection
-      action={
-        folders.length > 0 ? (
-          <RailTooltip label="View folders">
-            <Button aria-label="View folders" size="icon-xs" variant="ghost" onClick={onExpand}>
-              <Maximize2Icon />
-            </Button>
-          </RailTooltip>
-        ) : null
-      }
-      title="Folders"
-    >
+    <RecapSection title="Folders">
       {folders.length === 0 ? (
         <SectionEmpty
           title="No folders yet"
@@ -202,7 +199,7 @@ export function Folders({
       ) : (
         <div className="flex min-h-0 flex-1 flex-col">
           <div className="min-h-0 space-y-3 overflow-hidden">
-            {folders.slice(0, 3).map((folder) => (
+            {folders.slice(0, limit).map((folder) => (
               <FolderSummaryItem key={folder.id} folder={folder} onSelect={onSelectFolder} />
             ))}
           </div>

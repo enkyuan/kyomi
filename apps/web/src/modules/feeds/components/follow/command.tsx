@@ -120,7 +120,7 @@ function CommandSearch({
     <div ref={squircle.ref} className="kyomi-command-search" style={squircle.style}>
       <SearchIcon className="kyomi-command-search-icon" />
       <CommandInput
-        placeholder="Search feeds or paste a feed URL..."
+        placeholder="Search feeds or paste a feed URL"
         value={query}
         onValueChange={onQueryChange}
       />
@@ -184,7 +184,7 @@ function CommandResults({
             </div>
           </CommandList>
         </ScrollAreaPrimitive.Viewport>
-        <ScrollBar orientation="vertical" />
+        <ScrollBar orientation="vertical" track="none" />
         <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
       </ScrollAreaPrimitive.Root>
       <div className="kyomi-command-footer">
@@ -199,7 +199,7 @@ function CommandLoading() {
   return (
     <CommandItem disabled value="searching">
       <RssIcon className="kyomi-command-item-icon" />
-      <span>Searching feeds...</span>
+      <span>Searching feeds</span>
     </CommandItem>
   );
 }

@@ -1,10 +1,10 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { Suspense, useReducer } from "react";
+import { Suspense, useReducer, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { PlusIcon, SettingsIcon } from "@kyomi/ui/icons/blode";
-import { KyomiLogo, PremiumIcon } from "@kyomi/ui/icons";
+import { MessageCircleFilledIcon, PlusIcon, SettingsFilledIcon } from "@kyomi/ui/icons/blode";
+import { KyomiLogo } from "@kyomi/ui/icons";
 import { ScrollArea } from "@kyomi/ui/components/scroll-area";
 import {
   Sidebar,
@@ -19,6 +19,7 @@ import { lazyNamed } from "@lib/lazy-named";
 import { useScope } from "@modules/sidebar/hooks/use-scope";
 import { INBOX_PREVIOUS_FEED_ID_STATE_KEY } from "@modules/inbox/lib/layout/history";
 import { APP_SIDEBAR_WIDTH } from "../lib/constants";
+import { FeedbackDialog } from "./feedback-dialog";
 import { useAppSidebar } from "../hooks/use-app-sidebar";
 import { usePinnedSection } from "../hooks/use-pinned-section";
 import { useInboxPrefetch } from "../hooks/use-inbox-prefetch";
@@ -35,7 +36,7 @@ const SettingsDialog = lazyNamed(
 
 const CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS = cn(
   "size-10 justify-center rounded-full! p-0",
-  "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_var(--sidebar-border)]",
+  "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
   "active:scale-[0.96] active:bg-sidebar-accent active:text-sidebar-accent-foreground active:shadow-[0_0_0_1px_var(--sidebar-border)]",
   "motion-reduce:active:scale-100",
   "group-data-[collapsible=icon]:size-10! group-data-[collapsible=icon]:p-0!",
@@ -88,6 +89,7 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
   const { prefetchOnFocus, prefetchOnPointerEnter } = useInboxPrefetch();
 
   const [dialogState, dispatchDialogState] = useReducer(dialogStateReducer, INITIAL_DIALOG_STATE);
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
 
   const preloadSourcesDialog = () => {
     dispatchDialogState({ type: "load-follow-sources" });
@@ -202,12 +204,12 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
         <SidebarMenu className="items-center gap-3">
           <SidebarMenuItem className="flex justify-center">
             <SidebarMenuButton
-              tooltip="Upgrade Plan"
+              tooltip="Feedback"
               variant="secondary"
               className={CIRCULAR_SIDEBAR_ACTION_BUTTON_CLASS}
-              disabled
+              onClick={() => setFeedbackOpen(true)}
             >
-              <PremiumIcon size={24} />
+              <MessageCircleFilledIcon size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="flex justify-center">
@@ -222,11 +224,13 @@ export function AppSidebar({ className, style }: { className?: string; style?: C
               onFocus={preloadSettingsDialog}
               onPointerEnter={preloadSettingsDialog}
             >
-              <SettingsIcon size={24} />
+              <SettingsFilledIcon size={24} />
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
+
+      <FeedbackDialog open={feedbackOpen} onOpenChange={setFeedbackOpen} />
 
       <Suspense fallback={null}>
         {dialogState.followSourcesDialogLoaded ? (

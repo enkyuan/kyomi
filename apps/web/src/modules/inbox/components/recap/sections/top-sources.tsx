@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { Maximize2Icon, PlusIcon, RssIcon } from "@kyomi/ui/icons/blode";
+import { PlusIcon, RssIcon } from "@kyomi/ui/icons/blode";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/components/button";
 import type { InboxSearch } from "@modules/inbox/lib/search";
@@ -21,9 +21,7 @@ import {
   ItemTitle,
 } from "@kyomi/ui/components/item";
 import { formatRelativeTime, formatViewedCount } from "@modules/inbox/lib/recap/index";
-import { RailTooltip, RecapSection, SectionEmpty } from ".";
-
-const TOP_SOURCE_DISPLAY_LIMIT = 4;
+import { RecapSection, SectionEmpty } from ".";
 
 function TopSourceRow({
   currentFolder,
@@ -120,45 +118,29 @@ function TopSourceRow({
 
 export function TopSources({
   feeds,
+  limit,
   folders,
   followFeed,
   isFollowingFeed,
   moveFeed,
   movingFeedId,
-  onExpand,
 }: {
   feeds: RecapTopViewedFeed[];
+  limit: number;
   folders: RecapFolder[];
   followFeed: (feed: RecapTopViewedFeed, folderId?: string) => void;
   isFollowingFeed: (feedId: string) => boolean;
   moveFeed: (feedId: string, folderId: string) => void;
   movingFeedId: string | null;
-  onExpand: () => void;
 }) {
   const folderOptions = useMemo(
     () => folders.map((folder) => ({ label: folder.name, value: folder.id })),
     [folders],
   );
-  const visibleFeeds = feeds.slice(0, TOP_SOURCE_DISPLAY_LIMIT);
+  const visibleFeeds = feeds.slice(0, limit);
 
   return (
-    <RecapSection
-      action={
-        feeds.length > TOP_SOURCE_DISPLAY_LIMIT ? (
-          <RailTooltip label="View more sources">
-            <Button
-              aria-label="View more sources"
-              size="icon-xs"
-              variant="ghost"
-              onClick={onExpand}
-            >
-              <Maximize2Icon />
-            </Button>
-          </RailTooltip>
-        ) : null
-      }
-      title="Top Sources"
-    >
+    <RecapSection title="Top Sources">
       {feeds.length === 0 ? (
         <SectionEmpty
           title="No viewed sources"

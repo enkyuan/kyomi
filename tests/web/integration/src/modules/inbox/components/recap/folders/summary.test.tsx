@@ -112,7 +112,7 @@ describe("recap folders summary", () => {
     expect(screen.queryByRole("link", { name: /Tech/ })).toBeNull();
   });
 
-  test("keeps compact actions rail-scoped at the bottom of the folder section", () => {
+  test("keeps compact actions rail-scoped under the folder rows", () => {
     const { onCreateFolder, onExpand, onImportOpml } = renderFolders(folders.slice(0, 1));
 
     const manageButton = screen.getByRole("button", { name: /Manage/ });
@@ -120,7 +120,8 @@ describe("recap folders summary", () => {
     const addButton = screen.getByRole("button", { name: "Create folder" });
     const actionRow = manageButton.closest(".grid");
 
-    expect(actionRow?.className).toContain("mt-auto");
+    // Same box geometry as the expanded footer (mt-3), so the shared element only has to move.
+    expect(actionRow?.className).toContain("mt-3");
     expect(screen.queryByRole("button", { name: "Export OPML" })).toBeNull();
 
     fireEvent.click(manageButton);

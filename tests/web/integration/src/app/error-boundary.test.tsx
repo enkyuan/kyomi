@@ -45,20 +45,20 @@ function renderApp(path: string, { failLoader = false }: { failLoader?: boolean 
 }
 
 describe("router-wide error pages", () => {
-  test("a failing content route keeps the app shell and offers the inbox", async () => {
+  test("a failing content route takes over the whole page and offers the inbox", async () => {
     vi.spyOn(console, "error").mockImplementation(() => undefined);
 
     renderApp("/inbox", { failLoader: true });
 
     expect(await screen.findByRole("link", { name: "Back to inbox" })).toBeTruthy();
-    expect(screen.getByRole("navigation", { name: "sidebar" })).toBeTruthy();
-    expect(screen.queryByRole("main")).toBeNull();
+    // Rendered inside the shell's column, but fixed over the whole window, sidebar included.
+    expect(screen.getByRole("main").className).toContain("fixed inset-0");
   });
 
-  test("an unknown path under the shell renders not-found inside it", async () => {
+  test("an unknown path under the shell renders a whole-page not-found", async () => {
     renderApp("/inbox/missing/extra");
 
     expect(await screen.findByText("Page not found")).toBeTruthy();
-    expect(screen.getByRole("navigation", { name: "sidebar" })).toBeTruthy();
+    expect(screen.getByRole("main").className).toContain("fixed inset-0");
   });
 });
