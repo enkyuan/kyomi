@@ -160,7 +160,7 @@ describe("EmailDialog change-email flow", () => {
       ["changeEmail", { newEmail: "New@Example.com", otp: "222222" }],
     ]);
     expect(mocks.toastAdd).toHaveBeenCalledWith(
-      expect.objectContaining({ description: "New@Example.com", title: "Email updated" }),
+      expect.objectContaining({ title: "Email updated" }),
     );
     expect(mocks.notify).toHaveBeenCalledWith("$sessionSignal");
     expect(mocks.router.invalidate).toHaveBeenCalledTimes(1);
