@@ -158,43 +158,23 @@ const readerNoHighlights: Scene = (context) => {
 /** Advanced, no data: a big open box seen in perspective with nothing in it. */
 const advancedNoData: Scene = (context) => {
   const { theme } = context;
-  const detail = {
-    fill: "none",
-    opacity: theme.detailOpacity,
-    stroke: theme.detail,
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-  } as const;
   return (
-    <G transform="translate(0 -5)">
+    <G transform="translate(96 96) scale(1.18) translate(-96 -96)">
       <Surface
         context={context}
-        d={rr(38, 112, 116, 38, 16)}
-        strokeD={rr(38, 112, 116, 38, 16, 0.5)}
-      >
-        {Array.from({ length: 8 }, (_, index) => (
-          <Rect
-            fill={theme.toneEdge}
-            height={7}
-            key={index}
-            rx={1.75}
-            width={3.5}
-            x={58 + index * 8.5}
-            y={140}
-          />
-        ))}
-        <Circle cx={140} cy={143.5} fill={theme.icon} fillOpacity={theme.iconOpacity} r={2.8} />
-      </Surface>
-      <Surface context={context} d={rr(38, 52, 116, 84, 20)} strokeD={rr(38, 52, 116, 84, 20, 0.5)}>
-        <Path d={rr(50, 62, 22, 8, 4)} fill={theme.toneEdge} />
-        <Circle cx={86} cy={98} fill={theme.lines[0]} fillOpacity={theme.lineOpacities[0]} r={29} />
-        <Circle cx={86} cy={98} r={29} strokeWidth={1.2} {...detail} />
-        <Circle cx={86} cy={98} r={20} strokeWidth={1} {...detail} />
-        <Circle cx={86} cy={98} fill={theme.tone} r={9} />
-        <Circle cx={86} cy={98} r={9} strokeWidth={1.2} {...detail} />
-        <Path d="M134 68L108 94" strokeWidth={4} {...detail} />
-        <Circle cx={134} cy={68} fill={theme.tone} r={6} />
-        <Circle cx={134} cy={68} r={6} strokeWidth={1.2} {...detail} />
+        d={rr(66, 44, 68, 108, 18)}
+        strokeD={rr(66, 44, 68, 108, 18, 0.5)}
+      />
+      <Surface context={context} d={rr(58, 40, 68, 108, 18)} strokeD={rr(58, 40, 68, 108, 18, 0.5)}>
+        <Path
+          d={rr(64, 46, 56, 62, 12)}
+          fill={theme.lines[0]}
+          fillOpacity={theme.lineOpacities[0]}
+        />
+        <Rect fill={theme.toneEdge} height={7} rx={3.5} width={28} x={66} y={130} />
+        <Circle cx={104} cy={133.5} fill={theme.toneEdge} r={2.4} />
+        <Circle cx={111.5} cy={133.5} fill={theme.toneEdge} r={2.4} />
+        <Circle cx={119} cy={133.5} fill={theme.icon} fillOpacity={theme.iconOpacity} r={2.4} />
       </Surface>
     </G>
   );
