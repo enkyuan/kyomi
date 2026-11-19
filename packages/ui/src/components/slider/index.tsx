@@ -14,8 +14,8 @@ import {
 } from "motion/react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import { cn } from "../../lib/utils";
+import { TextMorph } from "../text-morph";
 import {
-  PIP_SIZE,
   fontWeights,
   springs,
   type SliderComfortableProps,
@@ -223,13 +223,6 @@ function SliderComfortable({
   const pipsHandleLineLeftStyle = useTransform(
     fillPercent,
     (p) => `calc(${p * 100}% + ${11 - 24 * p}px)`,
-  );
-  const pipsMaskStyle = useTransform(
-    [fillPercent, zeroOffset] as MotionValue<number>[],
-    ([p, zo]) => {
-      const offset = 20 - 20 * (p as number) - (zo as number) * 2.5;
-      return `linear-gradient(to right, transparent calc(${(p as number) * 100}% + ${offset}px), black calc(${(p as number) * 100}% + ${offset + 2}px))`;
-    },
   );
 
   // --- Hover preview computation ---
@@ -490,7 +483,7 @@ function SliderComfortable({
         <m.div
           ref={mergedRef}
           className={cn(
-            "relative w-full h-8 select-none touch-none border border-border overflow-hidden outline-offset-2",
+            "relative w-full h-8 select-none touch-none overflow-hidden outline-none",
             variant === "scrubber"
               ? "flex items-center gap-3 px-4 cursor-ew-resize"
               : "cursor-ew-resize",
@@ -499,10 +492,6 @@ function SliderComfortable({
             className,
           )}
           initial={false}
-          animate={{
-            outline: isFocused ? "1px solid #6B97FF" : "1px solid transparent",
-          }}
-          transition={springs.fast}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerCancel={handlePointerUp}
@@ -545,58 +534,6 @@ function SliderComfortable({
               backgroundColor: "color-mix(in srgb, var(--color-accent) 40%, transparent)",
             }}
           />
-
-          {/* Pips: dots layer — z-[1] */}
-          {variant === "pips" && (
-            <m.div
-              className="absolute inset-0 flex justify-between items-center px-3 pointer-events-none z-1"
-              style={{ WebkitMaskImage: pipsMaskStyle, maskImage: pipsMaskStyle }}
-            >
-              {pipSteps.map((pipValue) => {
-                const isActivePip = pipValue === value;
-                return (
-                  <div
-                    key={pipValue}
-                    className="relative flex items-center justify-center"
-                    style={{ width: PIP_SIZE, height: PIP_SIZE }}
-                  >
-                    <m.div
-                      className="rounded-full"
-                      initial={false}
-                      animate={{
-                        backgroundColor: isActivePip
-                          ? "var(--foreground)"
-                          : "var(--muted-foreground)",
-                        opacity: isActivePip ? 1 : 0.3,
-                      }}
-                      transition={springs.fast}
-                      style={{ width: PIP_SIZE, height: PIP_SIZE }}
-                    />
-                  </div>
-                );
-              })}
-            </m.div>
-          )}
-
-          {/* Pips: label + value BG layer — z-[2] (occludes dots behind text) */}
-          {variant === "pips" && (
-            <div
-              className="absolute inset-0 flex items-center px-2 z-2 pointer-events-none"
-              aria-hidden
-            >
-              {label && (
-                <span className="text-[13px] px-2 bg-background text-transparent select-none">
-                  {label}
-                </span>
-              )}
-              <span
-                className="text-[13px] tabular-nums ml-auto px-2 bg-background text-transparent select-none"
-                style={{ minWidth: `${String(formatValue(max)).length}ch` }}
-              >
-                {formatValue(value)}
-              </span>
-            </div>
-          )}
 
           {/* Pips: fill — z-[3] */}
           {variant === "pips" && (
@@ -651,7 +588,7 @@ function SliderComfortable({
                 transition={springs.fast}
                 style={{ minWidth: `${String(formatValue(max)).length}ch`, textAlign: "right" }}
               >
-                {formatValue(value)}
+                <TextMorph>{formatValue(value)}</TextMorph>
               </m.span>
             </div>
           )}

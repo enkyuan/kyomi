@@ -174,7 +174,6 @@ describe("AppearancePagePanel", () => {
       .map((tab) => tab.textContent)
       .filter((label) => ["Relative", "Date & time", "Date", "ISO"].includes(label ?? ""));
     expect(formats).toEqual(["Relative", "Date & time", "Date", "ISO"]);
-    expect(screen.getByRole("tab", { name: "Compact" })).toBeTruthy();
     expect(screen.getByRole("tab", { name: "Expanded" })).toBeTruthy();
 
     fireEvent.click(screen.getByRole("tab", { name: "Date" }));

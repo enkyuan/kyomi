@@ -12,13 +12,6 @@ import {
 import { Tabs, TabsList, TabsTab } from "@kyomi/ui/components/tabs";
 import { formatInboxTimestamp } from "@modules/articles/lib/format-timestamp";
 import { useMemo } from "react";
-import {
-  Select,
-  SelectItem,
-  SelectPopup,
-  SelectTrigger,
-  SelectValue,
-} from "@kyomi/ui/components/select";
 import { Switch } from "@kyomi/ui/components/switch";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-preferences";
 import { SettingHeading, SettingSubHeading } from "./headings";
@@ -174,11 +167,7 @@ export function InboxAppearanceSettings({
           description="Compact trims row spacing for denser scanning. Comfortable preserves the current roomy card layout."
           title="Density"
         />
-        <Select
-          items={[
-            { label: "Comfortable", value: "comfortable" },
-            { label: "Compact", value: "compact" },
-          ]}
+        <Tabs
           value={preferences.inboxDensity}
           onValueChange={(value) => {
             if (value === "comfortable" || value === "compact") {
@@ -186,14 +175,15 @@ export function InboxAppearanceSettings({
             }
           }}
         >
-          <SelectTrigger className="w-fit min-w-44" size="sm">
-            <SelectValue />
-          </SelectTrigger>
-          <SelectPopup>
-            <SelectItem value="comfortable">Comfortable</SelectItem>
-            <SelectItem value="compact">Compact</SelectItem>
-          </SelectPopup>
-        </Select>
+          <TabsList aria-label="Inbox density" variant="pill">
+            <TabsTab className="px-3" value="comfortable">
+              Comfortable
+            </TabsTab>
+            <TabsTab className="px-3" value="compact">
+              Compact
+            </TabsTab>
+          </TabsList>
+        </Tabs>
       </div>
 
       <div className="space-y-3 py-1">

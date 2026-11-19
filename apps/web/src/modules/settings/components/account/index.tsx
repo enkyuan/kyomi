@@ -84,7 +84,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
     <div className={ACCOUNT_SUBSECTION_SPACING_CLASS}>
       <section className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h3 className="text-base font-semibold text-foreground">Account</h3>
+          <h2 className="font-semibold text-foreground text-xl leading-8">Account</h2>
           <Button
             className={DESTRUCTIVE_FLAT_CLASS}
             shape="pill"

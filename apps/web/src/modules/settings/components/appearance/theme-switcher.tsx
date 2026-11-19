@@ -83,8 +83,8 @@ export function ThemeSwitcher() {
       render={(props) => <Fieldset {...props} className="max-w-none gap-4" />}
     >
       <div className="space-y-1">
-        <FieldsetLegend className="font-medium text-sm">Theme</FieldsetLegend>
-        <p className="text-xs text-muted-foreground">Choose how kyomi appears across the app.</p>
+        <FieldsetLegend className="font-semibold text-lg leading-7">Theme</FieldsetLegend>
+        <p className="text-muted-foreground text-sm">Choose how Kyomi appears across the app.</p>
       </div>
       <RadioGroup
         className="flex-row gap-4"
@@ -104,7 +104,9 @@ export function ThemeSwitcher() {
               <span className="relative block h-17.5 w-22 overflow-hidden rounded-lg shadow-xs transition-shadow peer-data-disabled:cursor-not-allowed peer-data-disabled:opacity-64 peer-data-checked:ring-2 peer-data-checked:ring-primary/48 peer-data-checked:ring-offset-1 peer-data-checked:ring-offset-background not-peer-data-checked:opacity-80">
                 {themePreviews[item.value]}
               </span>
-              <span className="not-peer-data-checked:text-muted-foreground/70">{item.label}</span>
+              <span className="text-sm not-peer-data-checked:text-muted-foreground/70">
+                {item.label}
+              </span>
             </FieldLabel>
           </FieldItem>
         ))}
