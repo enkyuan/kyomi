@@ -66,7 +66,10 @@ function card(name: keyof typeof EMPTY_STATES, mode: "dark" | "light") {
   // useId repeats across separate renders, and duplicate gradient ids resolve to the first in the page.
   const art = renderToStaticMarkup(
     createElement(EmptyStateIcon, { scene: name, size: 176 }),
-  ).replace(/(empty-state-(?:back|front|stroke)-[A-Za-z0-9_]+)/g, `$1-${cardCount}`);
+  ).replace(
+    /((?:empty-state|drive)-(?:back|front|stroke|face|bevel|lip)-[A-Za-z0-9_]+)/g,
+    `$1-${cardCount}`,
+  );
   const { header, description } = EMPTY_STATES[name];
   const dark = mode === "dark";
   return `<div class="card ${mode}"><div class="art">${art}</div><h3>${header}</h3><p>${description.replaceAll("\n", "<br>")}</p><code>${name}</code></div>`;

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { Circle, G, Path, Rect } from "react-native-svg";
+import { useId } from "react";
+import { Circle, Defs, G, LinearGradient, Path, Rect, Stop } from "react-native-svg";
 import { BLODE_STROKE_WIDTH } from "@kyomi/ui/icons/blode-native";
 import { Bar, Surface, type Scene, type SceneContext } from "./parts";
 
@@ -156,30 +157,116 @@ const readerNoHighlights: Scene = (context) => {
 };
 
 /** Advanced, no data: a big open box seen in perspective with nothing in it. */
-const advancedNoData: Scene = (context) => {
-  const { theme } = context;
-  const shade = { fill: theme.lines[0], fillOpacity: theme.lineOpacities[0] } as const;
-  const port = { fill: theme.cavity } as const;
+/**
+ * Two external drives drawn in the reference's own 678x452 pixel space and scaled into the circle:
+ * a port drive (capsule slot and three round ports) and a plain drive with a thick bottom lip. The
+ * metal is a local palette (silver in light, graphite in dark); the centre is left blank.
+ */
+function StorageDrives({ context }: { context: SceneContext }) {
+  const id = useId().replaceAll(":", "");
+  const dark = context.theme.isDark;
+  const c = dark
+    ? {
+        faceTop: "#3D3D3D",
+        faceBottom: "#2A2A2A",
+        bevelLight: "#454545",
+        bevelDark: "#1E1E1E",
+        lipTop: "#383838",
+        lipBottom: "#232323",
+        lineLight: "#5A5A5A",
+        lineDark: "#161616",
+        port: "#050505",
+        rim: "#575757",
+        accent: context.theme.icon,
+      }
+    : {
+        faceTop: "#DCDCDC",
+        faceBottom: "#C4C4C4",
+        bevelLight: "#D6D6D6",
+        bevelDark: "#A8A8A8",
+        lipTop: "#D3D3D3",
+        lipBottom: "#B4B4B4",
+        lineLight: "#F2F2F2",
+        lineDark: "#A0A0A0",
+        port: "#0A0A0A",
+        rim: "#EDEDED",
+        accent: context.theme.icon,
+      };
+  const face = `drive-face-${id}`;
+  const bevel = `drive-bevel-${id}`;
+  const lip = `drive-lip-${id}`;
+  const leftBody =
+    "M49 66H283C298 66 308 78 308 94V366C308 382 298 395 283 395H61C46 395 37 386 37 372V80C37 72 42 66 49 66Z";
+  const rightBody =
+    "M374 92C374 76 388 66 408 66H606C626 66 640 76 640 92V370C640 386 630 395 616 395H394C382 395 374 390 374 380Z";
   return (
-    <Surface context={context} d={rr(54, 34, 84, 124, 14)} strokeD={rr(54, 34, 84, 124, 14, 0.5)}>
-      <Circle cx={92} cy={80} fill={theme.lines[1]} fillOpacity={theme.lineOpacities[1]} r={17} />
-      <Path d="M54 132H138V144Q138 158 124 158H68Q54 158 54 144Z" {...shade} />
-      <Path d="M128 34H124Q138 34 138 48V144Q138 158 124 158H128Z" {...shade} />
+    <G transform="translate(34 62) scale(0.205) translate(-37 -66)">
+      <Defs>
+        <LinearGradient gradientUnits="userSpaceOnUse" id={face} x1="0" x2="0" y1="66" y2="395">
+          <Stop offset="0" stopColor={c.faceTop} />
+          <Stop offset="1" stopColor={c.faceBottom} />
+        </LinearGradient>
+        <LinearGradient gradientUnits="objectBoundingBox" id={bevel} x1="0" x2="1" y1="0" y2="0">
+          <Stop offset="0" stopColor={c.bevelLight} />
+          <Stop offset="1" stopColor={c.bevelDark} />
+        </LinearGradient>
+        <LinearGradient gradientUnits="userSpaceOnUse" id={lip} x1="0" x2="0" y1="352" y2="395">
+          <Stop offset="0" stopColor={c.lipTop} />
+          <Stop offset="1" stopColor={c.lipBottom} />
+        </LinearGradient>
+      </Defs>
+
+      <Path d={leftBody} fill={`url(#${face})`} />
+      <Path d="M283 66C298 66 308 78 308 94V366C308 382 298 395 283 395Z" fill={`url(#${bevel})`} />
       <Path
-        d="M55 132H137"
+        d="M284 70V391"
         fill="none"
-        opacity={theme.detailOpacity}
-        stroke={theme.detail}
+        stroke={c.lineLight}
         strokeLinecap="round"
-        strokeWidth={1.2}
+        strokeWidth={2}
       />
-      <Rect height={12} rx={6} width={34} x={62} y={139} {...port} />
-      <Circle cx={105} cy={145} r={4.6} {...port} />
-      <Circle cx={115.5} cy={145} r={4.6} {...port} />
-      <Circle cx={126} cy={145} fill={theme.icon} fillOpacity={theme.iconOpacity} r={4.6} />
-    </Surface>
+      <Path
+        d="M38 84V366"
+        fill="none"
+        stroke={c.lineLight}
+        strokeLinecap="round"
+        strokeOpacity={0.7}
+        strokeWidth={2}
+      />
+      <Rect fill={c.rim} height={19} rx={9.5} width={76} x={48} y={366} />
+      <Rect fill={c.port} height={15} rx={7.5} width={72} x={50} y={368} />
+      {[229, 254, 278].map((cx, index) => (
+        <G key={cx}>
+          <Circle cx={cx} cy={375.5} fill={c.rim} r={11} />
+          <Circle cx={cx} cy={375.5} fill={index === 2 ? c.accent : c.port} r={9} />
+        </G>
+      ))}
+
+      <Path d={rightBody} fill={`url(#${face})`} />
+      <Path
+        d="M374 92C374 76 388 66 408 66H606C626 66 640 76 640 92C640 98 630 101 620 101H394C384 101 374 98 374 92Z"
+        fill={c.lineLight}
+        fillOpacity={dark ? 0.16 : 0.85}
+      />
+      <Path
+        d="M376 98C384 101 394 101 396 101H618C626 101 636 100 638 98"
+        fill="none"
+        stroke={c.lineDark}
+        strokeOpacity={0.35}
+        strokeWidth={1.6}
+      />
+      <Path d="M612 70C630 70 640 80 640 94V370C640 386 630 395 612 395Z" fill={`url(#${bevel})`} />
+      <Path
+        d="M374 352H640V370C640 386 630 395 616 395H394C382 395 374 390 374 380Z"
+        fill={`url(#${lip})`}
+      />
+      <Path d="M374 352H640" fill="none" stroke={c.lineDark} strokeWidth={2} />
+      <Path d="M374 349H640" fill="none" stroke={c.lineLight} strokeOpacity={0.8} strokeWidth={2} />
+    </G>
   );
-};
+}
+
+const advancedNoData: Scene = (context) => <StorageDrives context={context} />;
 
 /** Feedback sent: one paper plane flies off its envelope along the dashed trail, nose pointing the way it travels. */
 const feedbackSent: Scene = (context) => {
