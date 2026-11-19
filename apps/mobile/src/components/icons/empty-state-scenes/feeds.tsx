@@ -1,13 +1,15 @@
-import { G, Path, Rect, Circle } from "react-native-svg";
+import { Circle, G, Path, Rect } from "react-native-svg";
 import { RssNativeIcon } from "@kyomi/ui/icons/blode-native";
 import {
   BackPaper,
+  Bar,
   Glyph,
   PAPER_FRAME,
   Paper,
   PaperLines,
   type Scene,
   type SceneContext,
+  Surface,
 } from "./parts";
 
 /** The original illustration: a paper stacked on another, an RSS badge and four skeleton lines. */
@@ -23,92 +25,152 @@ const myFeed: Scene = (context) => (
   </>
 );
 
-/** Small hand-drawn badge strokes share the theme icon colour. */
-function Badge({ children, context }: { children: React.ReactNode; context: SceneContext }) {
+function rrect(x: number, y: number, w: number, h: number, r: number) {
+  return `M${x + r} ${y}H${x + w - r}A${r} ${r} 0 0 1 ${x + w} ${y + r}V${y + h - r}A${r} ${r} 0 0 1 ${x + w - r} ${y + h}H${x + r}A${r} ${r} 0 0 1 ${x} ${y + h - r}V${y + r}A${r} ${r} 0 0 1 ${x + r} ${y}Z`;
+}
+
+function circle(cx: number, cy: number, r: number) {
+  return `M${cx - r} ${cy}A${r} ${r} 0 1 0 ${cx + r} ${cy}A${r} ${r} 0 1 0 ${cx - r} ${cy}Z`;
+}
+
+/** The dashed "ghost" outline of the thing that will land here. */
+function Ghost({
+  context,
+  d,
+  transform,
+}: {
+  context: SceneContext;
+  d: string;
+  transform?: string;
+}) {
   const { theme } = context;
   return (
-    <G opacity={theme.iconOpacity} transform={PAPER_FRAME}>
-      <G
-        fill="none"
-        stroke={theme.icon}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-      >
-        {children}
-      </G>
+    <Path
+      d={d}
+      fill="none"
+      stroke={theme.border}
+      strokeDasharray="4 5"
+      strokeLinecap="round"
+      strokeOpacity={theme.borderOpacity}
+      strokeWidth={1.5}
+      transform={transform}
+    />
+  );
+}
+
+function Accent({ children, context }: { children: React.ReactNode; context: SceneContext }) {
+  const { theme } = context;
+  return (
+    <G
+      fill="none"
+      opacity={theme.iconOpacity}
+      stroke={theme.icon}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={3}
+    >
+      {children}
     </G>
   );
 }
 
-/** A fanned stack of three papers with a small 2x2 grid badge: everything you follow. */
-const allFeeds: Scene = (context) => {
+/** A tile's placeholder content: an avatar dot and a short bar. */
+function TileContent({
+  context,
+  h,
+  w,
+  x,
+  y,
+}: {
+  context: SceneContext;
+  h: number;
+  w: number;
+  x: number;
+  y: number;
+}) {
+  const { theme } = context;
+  const r = Math.min(w, h) / 2 - 11;
+  return (
+    <>
+      <Circle
+        cx={x + w / 2}
+        cy={y + h / 2 - 4}
+        fill={theme.lines[0]}
+        fillOpacity={theme.lineOpacities[0]}
+        r={Math.max(r - 2, 6)}
+      />
+      <Bar context={context} tone={1} width={w - 24} x={x + 12} y={y + h - 15} />
+    </>
+  );
+}
+
+/** A bento mosaic of four source tiles of different sizes, the biggest carrying the RSS accent. */
+const allFeeds: Scene = (context) => (
+  <>
+    <Surface context={context} d={rrect(38, 40, 64, 64, 17)}>
+      <Glyph context={context} icon={RssNativeIcon} size={30} x={55} y={57} />
+    </Surface>
+    <Surface context={context} d={rrect(110, 40, 44, 44, 14)}>
+      <TileContent context={context} h={44} w={44} x={110} y={40} />
+    </Surface>
+    <Surface context={context} d={rrect(38, 112, 64, 40, 14)}>
+      <TileContent context={context} h={40} w={64} x={38} y={112} />
+    </Surface>
+    <Surface context={context} d={rrect(110, 92, 44, 60, 14)}>
+      <TileContent context={context} h={60} w={44} x={110} y={92} />
+    </Surface>
+  </>
+);
+
+/** A soft concentric wash behind one big upright check tile: done, nothing more to show. */
+const unreadCaughtUp: Scene = (context) => {
   const { theme } = context;
   return (
     <>
-      <BackPaper context={context} tilt={-15} x={-10} y={0} />
-      <BackPaper context={context} tilt={15} x={10} y={0} />
-      <Paper context={context} y={2}>
-        <G opacity={theme.iconOpacity} transform={PAPER_FRAME}>
-          <G fill={theme.icon}>
-            <Rect height={6.5} rx={2.2} width={6.5} x={1} y={1} />
-            <Rect height={6.5} rx={2.2} width={6.5} x={10.5} y={1} />
-            <Rect height={6.5} rx={2.2} width={6.5} x={1} y={10.5} />
-            <Rect height={6.5} rx={2.2} width={6.5} x={10.5} y={10.5} />
-          </G>
+      <Circle cx={96} cy={96} fill={theme.lines[2]} fillOpacity={theme.lineOpacities[2]} r={62} />
+      <Circle cx={96} cy={96} fill={theme.lines[1]} fillOpacity={theme.lineOpacities[1]} r={50} />
+      <G transform="rotate(-8 96 96)">
+        <Surface context={context} d={rrect(62, 62, 68, 68, 22)} />
+        <G transform="translate(62 62)">
+          <Accent context={context}>
+            <Path d="M20 35 L30 45 L49 23" />
+          </Accent>
         </G>
-        <PaperLines context={context} top={32} widths={[57.3, 73.7, 65.5, 45.3]} />
-      </Paper>
+      </G>
     </>
   );
 };
 
-/** A paper with a check in a ring and only a few faded lines: nothing left to read. */
-const unreadCaughtUp: Scene = (context) => (
-  <>
-    <BackPaper context={context} />
-    <Paper context={context}>
-      <Badge context={context}>
-        <Circle cx={9} cy={9} r={8.5} />
-        <Path d="M5.2 9.3 L8 12 L13 6.4" />
-      </Badge>
-      <PaperLines context={context} count={3} first={1} widths={[0, 57.3, 73.7, 45.3]} />
-    </Paper>
-  </>
-);
+const BOOKMARK =
+  "M72 48H120V128C120 131 116.800 132.800 114.200 131 L96 118 L77.800 131C75.200 132.800 72 131 72 128Z";
 
-/** A paper with a bookmark ribbon hanging from its top edge. */
-const saved: Scene = (context) => (
-  <>
-    <BackPaper context={context} />
-    <Paper context={context}>
-      <PaperLines context={context} top={34} />
-      <G transform={PAPER_FRAME}>
-        <Path
-          d="M61 -6.5 H77 V19 C77 20.4 75.6 21.2 74.5 20.3 L69 15.8 L63.5 20.3 C62.4 21.2 61 20.4 61 19 Z"
-          fill={context.theme.icon}
-          fillOpacity={context.theme.iconOpacity}
-          stroke={context.theme.icon}
-          strokeLinejoin="round"
-          strokeOpacity={context.theme.iconOpacity}
-          strokeWidth={2}
-        />
+/** One upright bookmark ribbon with a dashed ghost card waiting behind it. */
+const saved: Scene = (context) => {
+  return (
+    <G transform="translate(-13 2)">
+      <Ghost context={context} d={rrect(112, 50, 46, 80, 15)} transform="rotate(9 135 90)" />
+      <Surface context={context} d={BOOKMARK} />
+      <G transform="translate(96 82)">
+        <Accent context={context}>
+          <Path d="M-11 0 L-3 8 L12 -9" />
+        </Accent>
       </G>
-    </Paper>
-  </>
-);
+    </G>
+  );
+};
 
-/** A paper with a clock badge: set aside for later. */
+/** A clock on a shelf, with a dashed ghost card waiting beside it. */
 const readLater: Scene = (context) => (
   <>
-    <BackPaper context={context} />
-    <Paper context={context}>
-      <Badge context={context}>
-        <Circle cx={9} cy={9} r={8.5} />
-        <Path d="M9 4.6 V9 L12 10.8" />
-      </Badge>
-      <PaperLines context={context} />
-    </Paper>
+    <Surface context={context} d={rrect(36, 128, 120, 16, 8)} />
+    <Ghost context={context} d={rrect(114, 62, 34, 58, 12)} transform="rotate(9 131 120)" />
+    <Surface context={context} d={circle(76, 88, 38)}>
+      <G transform="translate(76 88)">
+        <Accent context={context}>
+          <Path d="M0 -18V0L12 7" />
+        </Accent>
+      </G>
+    </Surface>
   </>
 );
 

@@ -1,24 +1,20 @@
+import type { ReactNode } from "react";
 import { G, Path } from "react-native-svg";
 import { RssNativeIcon } from "@kyomi/ui/icons/blode-native";
-import {
-  BackPaper,
-  Bar,
-  Glyph,
-  PAPER_FRAME,
-  Paper,
-  PaperLines,
-  Surface,
-  type Scene,
-  type SceneContext,
-} from "./parts";
+import { Bar, Glyph, Surface, type Scene, type SceneContext } from "./parts";
 
 /** A circle as path data, so every shape here is a single `Path`. */
 function circle(cx: number, cy: number, r: number) {
   return `M${cx - r} ${cy}a${r} ${r} 0 1 0 ${2 * r} 0a${r} ${r} 0 1 0 ${-2 * r} 0`;
 }
 
-/** A small hand-drawn badge stroke in the theme icon colour, the way the RSS glyph is drawn. */
-function Badge({ context, d, width = 2 }: { context: SceneContext; d: string; width?: number }) {
+/** A rounded rectangle as path data. */
+function box(x: number, y: number, w: number, h: number, r: number) {
+  return `M${x + r} ${y}H${x + w - r}Q${x + w} ${y} ${x + w} ${y + r}V${y + h - r}Q${x + w} ${y + h} ${x + w - r} ${y + h}H${x + r}Q${x} ${y + h} ${x} ${y + h - r}V${y + r}Q${x} ${y} ${x + r} ${y}Z`;
+}
+
+/** A small hand-drawn stroke in the theme icon colour, the way the RSS glyph is drawn. */
+function Accent({ context, d, width = 2.2 }: { context: SceneContext; d: string; width?: number }) {
   const { theme } = context;
   return (
     <G opacity={theme.iconOpacity}>
@@ -34,13 +30,14 @@ function Badge({ context, d, width = 2 }: { context: SceneContext; d: string; wi
   );
 }
 
-/** An empty dashed slot, the "nothing here yet" mark. */
-function Slot({ context, d }: { context: SceneContext; d: string }) {
+/** A dashed "nothing here yet" outline, optionally faded to read as a ghost of what will land. */
+function Slot({ context, d, opacity = 1 }: { context: SceneContext; d: string; opacity?: number }) {
   const { theme } = context;
   return (
     <Path
       d={d}
       fill="none"
+      opacity={opacity}
       stroke={theme.border}
       strokeDasharray="3 5"
       strokeLinecap="round"
@@ -50,154 +47,144 @@ function Slot({ context, d }: { context: SceneContext; d: string }) {
   );
 }
 
-/** A folder silhouette with a tab on the left, rounded everywhere. */
-const FOLDER_BACK =
-  "M52 46H77Q83 46 86 50.5L88 54Q90 58 96 58H140Q152 58 152 70V134Q152 146 140 146H52Q40 146 40 134V58Q40 46 52 46Z";
-const FOLDER_FRONT = "M46 92Q46 82 56 82H136Q146 82 146 92V136Q146 146 136 146H56Q46 146 46 136Z";
-
-/** The back flap of a folder drawn at half strength, as the original's back paper. */
-function FolderBack({ context }: { context: SceneContext }) {
+/** A soft radial wash behind a hero object, built only from the theme line tones. */
+function Wash({ context, r = 58 }: { context: SceneContext; r?: number }) {
+  const { theme } = context;
   return (
-    <G transform="rotate(-4 96 96)">
+    <>
+      <Path d={circle(96, 96, r)} fill={theme.lines[1]} fillOpacity={theme.lineOpacities[1]} />
       <Path
-        d={FOLDER_BACK}
-        fill={context.theme.lines[1]}
-        fillOpacity={context.theme.lineOpacities[1] * 1.6}
+        d={circle(96, 96, r - 12)}
+        fill={theme.lines[0]}
+        fillOpacity={theme.lineOpacities[0] * 0.5}
       />
-      <Path d={FOLDER_BACK} fill="none" stroke={context.paints.stroke} strokeLinecap="round" />
+    </>
+  );
+}
+
+/** A clock face, upright and centred, with a dashed arc trailing off to the left for "history". */
+const recents: Scene = (context) => (
+  <>
+    <Wash context={context} />
+    <Slot context={context} d="M60 70.8A44 44 0 0 0 60 121.2" />
+    <Surface context={context} d={circle(98, 96, 34)}>
+      {[
+        [98, 69],
+        [125, 96],
+        [98, 123],
+        [71, 96],
+      ].map(([x, y]) => (
+        <Path
+          d={circle(x, y, 1.8)}
+          fill={context.theme.lines[0]}
+          fillOpacity={context.theme.lineOpacities[0]}
+          key={`${x}-${y}`}
+        />
+      ))}
+      <Accent context={context} d="M98 96V79M98 96L110 103" width={3} />
+    </Surface>
+  </>
+);
+
+/** A row of three tiles on a slight rise: one solid RSS tile, then two fading ghosts. */
+const sourcesNone: Scene = (context) => (
+  <G transform="rotate(-6 96 96)">
+    <Surface context={context} d={box(34, 74, 40, 40, 13)}>
+      <Glyph context={context} icon={RssNativeIcon} size={22} x={43} y={83} />
+    </Surface>
+    <Slot context={context} d={box(76, 74, 40, 40, 13)} opacity={0.85} />
+    <Slot context={context} d={box(118, 74, 40, 40, 13)} opacity={0.45} />
+  </G>
+);
+
+/** A large upright open folder, flat, with a faint dashed file peeking out and an empty slot. */
+const FOLDER_BACK =
+  "M52 56H78Q84 56 87 60.5L89 64Q91 68 97 68H140Q152 68 152 80V132Q152 144 140 144H52Q40 144 40 132V68Q40 56 52 56Z";
+const FOLDER_FRONT = "M40 92Q40 82 50 82H142Q152 82 152 92V134Q152 144 142 144H50Q40 144 40 134Z";
+
+const folderEmpty: Scene = (context) => (
+  <>
+    <Slot context={context} d={box(62, 38, 68, 44, 10)} opacity={0.8} />
+    <Surface context={context} d={FOLDER_BACK} />
+    <Surface context={context} d={FOLDER_FRONT}>
+      <Slot context={context} d={box(70, 98, 52, 30, 9)} />
+    </Surface>
+  </>
+);
+
+/** A faint ghost folder with one solid round plus button overlapping its corner. */
+const foldersNone: Scene = (context) => (
+  <>
+    <G transform="rotate(-6 96 96) translate(-4 -2)">
+      <Slot
+        context={context}
+        d="M52 58H76Q82 58 85 62L87 65Q89 69 95 69H132Q142 69 142 79V118Q142 128 132 128H52Q42 128 42 118V68Q42 58 52 58Z"
+      />
+    </G>
+    <Surface context={context} d={circle(124, 124, 21)}>
+      <Accent context={context} d="M124 114V134M114 124H134" width={2.6} />
+    </Surface>
+  </>
+);
+
+/** Magnifier built from a lens and a rounded handle, drawn in canvas space. */
+function Magnifier({
+  children,
+  context,
+  mirrored = false,
+}: {
+  children?: ReactNode;
+  context: SceneContext;
+  mirrored?: boolean;
+}) {
+  return (
+    <G
+      transform={`${mirrored ? "translate(192 0) scale(-1 1) " : ""}translate(96 96) scale(1.18) translate(-97 -95)`}
+    >
+      <G transform="translate(104 104) rotate(45)">
+        <Surface context={context} d={box(-4, -6.5, 40, 13, 6.5)} />
+      </G>
+      <Surface context={context} d={circle(86, 84, 31)} />
+      {children}
     </G>
   );
 }
 
-/** Papers fanned on both sides with a clock-and-arrow history badge. */
-const recents: Scene = (context) => (
-  <>
-    <BackPaper context={context} tilt={-8} x={-6} y={2} />
-    <BackPaper context={context} tilt={8} x={6} y={-2} />
-    <Paper context={context}>
-      <G transform={`${PAPER_FRAME} scale(1.2)`}>
-        <Badge
-          context={context}
-          d="M1.6 8A6.4 6.4 0 1 0 3.6 3.4M1 1.6L1.6 4.4L4.4 3.8M8 4.8V8L10.2 9.4"
-          width={1.6}
-        />
-      </G>
-      <PaperLines context={context} count={3} top={30} />
-    </Paper>
-  </>
-);
-
-/** A paper whose rows are dashed empty placeholders under the RSS badge. */
-const sourcesNone: Scene = (context) => (
-  <>
-    <BackPaper context={context} />
-    <Paper context={context}>
-      <G transform={PAPER_FRAME}>
-        <Glyph context={context} icon={RssNativeIcon} size={16} />
-        {[0, 1, 2].map((row) => (
-          <G key={row}>
-            <Slot context={context} d={circle(6.5, 38 + row * 20, 6)} />
-            <Bar
-              context={context}
-              tone={row as 0 | 1 | 2}
-              width={[44, 36, 40][row]}
-              x={20}
-              y={34.25 + row * 20}
-            />
-          </G>
-        ))}
-      </G>
-    </Paper>
-  </>
-);
-
-/** An open folder: back flap, a lower front panel and an empty dashed slot. */
-const folderEmpty: Scene = (context) => (
-  <>
-    <FolderBack context={context} />
-    <Surface context={context} d={FOLDER_FRONT} tilt={4} x={0} y={0}>
-      <Slot
-        context={context}
-        d="M72 104H120Q126 104 126 110V120Q126 126 120 126H72Q66 126 66 120V110Q66 104 72 104Z"
-      />
-    </Surface>
-  </>
-);
-
-/** A closed folder with a plus badge and two label lines, a faded folder behind. */
-const foldersNone: Scene = (context) => (
-  <>
-    <G opacity={0.5} transform="rotate(-8 96 96) translate(-6 4)">
-      <Path d={FOLDER_BACK} fill={context.paints.back} />
-    </G>
-    <Surface context={context} d={FOLDER_BACK} tilt={3}>
-      <Badge context={context} d={`${circle(96, 98, 10)}M96 92.5V103.5M90.5 98H101.5`} />
-      <Bar context={context} tone={0} width={44} x={74} y={118} />
-      <Bar context={context} tone={2} width={28} x={82} y={130} />
-    </Surface>
-  </>
-);
-
-const LENS = circle(46, 62, 13);
-
-/** The handle runs from the lens rim toward the paper's lower-right corner. */
-const HANDLE = "M55.5 71.5L66 82";
-
-/** A paper with a magnifier over its lower corner. */
+/** A big magnifier with a text cursor in the lens and two faint result rows beside it. */
 const searchPrompt: Scene = (context) => (
   <>
-    <BackPaper context={context} />
-    <Paper context={context}>
-      <PaperLines context={context} count={3} top={8} />
-      <G transform={PAPER_FRAME}>
-        <Path d={LENS} fill={context.paints.fill} />
-        <Badge context={context} d={`${LENS}${HANDLE}`} width={2.2} />
-      </G>
-    </Paper>
+    <Magnifier context={context}>
+      <Accent context={context} d="M77 73V95" width={2.6} />
+      <Bar context={context} tone={1} width={20} x={85} y={74} />
+      <Bar context={context} tone={2} width={14} x={85} y={91} />
+    </Magnifier>
   </>
 );
 
-/** The same magnifier with an x inside the lens over a paper tilted the other way. */
+/** The magnifier mirrored over a soft wash: an empty dashed ring and an x, no paper. */
 const searchNoResults: Scene = (context) => (
   <>
-    <BackPaper context={context} tilt={-10} x={-4} y={0} />
-    <Paper context={context} tilt={-6} x={-1} y={0}>
-      <PaperLines context={context} count={2} first={1} top={8} />
-      <G transform={PAPER_FRAME}>
-        <Path d={LENS} fill={context.paints.fill} />
-        <Badge
-          context={context}
-          d={`${LENS}${HANDLE}M41.5 57.5L50.5 66.5M50.5 57.5L41.5 66.5`}
-          width={2.2}
-        />
-      </G>
-    </Paper>
+    <Wash context={context} r={60} />
+    <Magnifier context={context} mirrored>
+      <Slot context={context} d={circle(86, 84, 21)} />
+      <Accent context={context} d="M79 77L93 91M93 77L79 91" width={2.6} />
+    </Magnifier>
   </>
 );
 
-/** A file with a folded corner, two skeleton lines and an arrow dropping into a tray. */
-const FILE =
-  "M60 40H114Q118 40 120.8 42.8L139.2 61.2Q142 64 142 68V142Q142 152 132 152H60Q50 152 50 142V50Q50 40 60 40Z";
-const FILE_FLAP = "M114 40V56Q114 66 124 66H142L120.8 42.8Q118 40 114 40Z";
+/** A file arriving into an inbox tray: file drawn first so the tray front overlaps it. */
+const TRAY =
+  "M44 112H64Q68 112 70 116L72 120Q74 124 78 124H114Q118 124 120 120L122 116Q124 112 128 112H148V136Q148 148 136 148H56Q44 148 44 136Z";
 
 const importOpml: Scene = (context) => (
   <>
-    <BackPaper context={context} tilt={-8} x={-6} y={2} />
-    <Surface context={context} d={FILE} tilt={4}>
-      <Path d={FILE_FLAP} fill={context.paints.back} />
-      <Path
-        d={FILE_FLAP}
-        fill="none"
-        stroke={context.paints.stroke}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <Bar context={context} tone={0} width={44} x={64} y={72} />
-      <Bar context={context} tone={1} width={32} x={64} y={86} />
-      <Badge
-        context={context}
-        d="M96 104V127M87.5 118.5L96 127L104.5 118.5M80 131V138Q80 142 84 142H108Q112 142 112 138V131"
-      />
+    <G transform="rotate(8 96 80)">
+      <Surface context={context} d={box(68, 40, 56, 76, 12)}>
+        <Accent context={context} d="M96 56V82M86 73L96 83L106 73" width={2.4} />
+      </Surface>
+    </G>
+    <Surface context={context} d={TRAY}>
+      <Bar context={context} tone={1} width={26} x={83} y={133} />
     </Surface>
   </>
 );

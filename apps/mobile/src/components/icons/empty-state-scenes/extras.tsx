@@ -1,19 +1,11 @@
 import type { ReactNode } from "react";
-import { Circle, Ellipse, G, Path, Rect } from "react-native-svg";
+import { Circle, G, Path, Rect } from "react-native-svg";
 import { BLODE_STROKE_WIDTH } from "@kyomi/ui/icons/blode-native";
-import {
-  Bar,
-  PAPER_FRAME,
-  Paper,
-  PaperLines,
-  Surface,
-  type Scene,
-  type SceneContext,
-} from "./parts";
+import { Bar, Surface, type Scene, type SceneContext } from "./parts";
 
 /**
- * A small hand-drawn badge on a 24-unit grid, scaled to `size` and positioned by its top-left
- * corner, in the theme's icon colour. Stands in for the original RSS badge.
+ * A small hand-drawn glyph on a 24-unit grid, scaled to `size` and positioned by its top-left
+ * corner, in the theme's icon colour. This is the one accent in a scene.
  */
 function Badge({
   children,
@@ -44,172 +36,307 @@ function Badge({
   );
 }
 
-/** Muted keywords: a paper of pill tags, one of them struck through, a mute badge in the corner. */
+type Point = readonly [number, number];
+
+const round = (value: number) => Math.round(value * 100) / 100;
+
+/** A rounded rectangle path; `inset` shrinks it for the hairline edge. */
+function rr(x: number, y: number, w: number, h: number, r: number, inset = 0) {
+  const left = x + inset;
+  const top = y + inset;
+  const width = w - inset * 2;
+  const height = h - inset * 2;
+  const radius = Math.max(0, r - inset);
+  return `M${left + radius} ${top}H${left + width - radius}A${radius} ${radius} 0 0 1 ${left + width} ${top + radius}V${top + height - radius}A${radius} ${radius} 0 0 1 ${left + width - radius} ${top + height}H${left + radius}A${radius} ${radius} 0 0 1 ${left} ${top + height - radius}V${top + radius}A${radius} ${radius} 0 0 1 ${left + radius} ${top}Z`;
+}
+
+/** A closed polygon with every corner rounded by up to `r` units. */
+function roundedPoly(points: readonly Point[], r: number) {
+  const count = points.length;
+  let d = "";
+  points.forEach((current, index) => {
+    const prev = points[(index - 1 + count) % count]!;
+    const next = points[(index + 1) % count]!;
+    const toPrev = [prev[0] - current[0], prev[1] - current[1]] as const;
+    const toNext = [next[0] - current[0], next[1] - current[1]] as const;
+    const lenPrev = Math.hypot(...toPrev);
+    const lenNext = Math.hypot(...toNext);
+    const reach = Math.min(r, lenPrev / 2, lenNext / 2);
+    const a = [
+      current[0] + (toPrev[0] / lenPrev) * reach,
+      current[1] + (toPrev[1] / lenPrev) * reach,
+    ] as const;
+    const b = [
+      current[0] + (toNext[0] / lenNext) * reach,
+      current[1] + (toNext[1] / lenNext) * reach,
+    ] as const;
+    d += `${index === 0 ? "M" : "L"}${round(a[0])} ${round(a[1])}Q${current[0]} ${current[1]} ${round(b[0])} ${round(b[1])}`;
+  });
+  return `${d}Z`;
+}
+
+/** Muted keywords: three staggered pill chips, the middle one struck through. */
 const mutedKeywords: Scene = (context) => {
   const { theme } = context;
+  const chip = (x: number, y: number, w: number) => ({
+    d: rr(x, y, w, 26, 13),
+    strokeD: rr(x, y, w, 26, 13, 0.5),
+  });
   return (
-    <Paper context={context}>
-      <G transform={PAPER_FRAME}>
-        <Badge context={context} size={16} x={0} y={0}>
-          <Circle cx={12} cy={12} r={9} />
-          <Path d="M5.6 5.6L18.4 18.4" />
-        </Badge>
-        <Bar context={context} height={13} tone={0} width={34} x={0} y={30} />
-        <Bar context={context} height={13} tone={1} width={26} x={40} y={30} />
-        <Bar context={context} height={13} tone={1} width={42} x={0} y={50} />
-        <Bar context={context} height={13} tone={2} width={20} x={48} y={50} />
-        <Bar context={context} height={13} tone={2} width={28} x={0} y={70} />
-        <Bar context={context} height={13} tone={3} width={34} x={34} y={70} />
+    <G>
+      <Surface context={context} tilt={-3} {...chip(44, 50, 76)}>
+        <Circle cx={58} cy={62} fill={theme.lines[0]} fillOpacity={theme.lineOpacities[0]} r={4} />
+        <Bar context={context} tone={1} width={38} x={68} y={58.25} />
+      </Surface>
+      <Surface context={context} {...chip(64, 84, 84)}>
+        <Circle cx={78} cy={96} fill={theme.lines[0]} fillOpacity={theme.lineOpacities[0]} r={4} />
+        <Bar context={context} tone={0} width={44} x={88} y={92.25} />
         <Path
-          d="M-3 56.5H45"
+          d="M58 96H154"
           opacity={theme.iconOpacity}
           stroke={theme.icon}
           strokeLinecap="round"
-          strokeWidth={1.75}
+          strokeWidth={2.5}
         />
-      </G>
-    </Paper>
+      </Surface>
+      <Surface context={context} tilt={3} {...chip(48, 118, 62)}>
+        <Circle cx={62} cy={130} fill={theme.lines[1]} fillOpacity={theme.lineOpacities[1]} r={4} />
+        <Bar context={context} tone={2} width={26} x={72} y={126.25} />
+      </Surface>
+    </G>
   );
 };
 
-/** Reader highlights: skeleton text with an empty, dashed highlighter bar behind the second line. */
+/** Reader highlights: a highlighter lying diagonally over faint, dashed, still-empty text lines. */
 const readerNoHighlights: Scene = (context) => {
   const { theme } = context;
+  const ghost = (x: number, y: number, w: number) => (
+    <Rect
+      fill="none"
+      height={14}
+      rx={7}
+      stroke={theme.border}
+      strokeDasharray="3 3"
+      strokeOpacity={theme.borderOpacity}
+      strokeWidth={1}
+      width={w}
+      x={x}
+      y={y}
+    />
+  );
   return (
-    <Paper context={context}>
-      <G transform={PAPER_FRAME}>
-        <Badge context={context} size={16} x={0} y={0}>
-          <Path d="M4 20L5 15.5L16 4.5A2.1 2.1 0 0 1 19.5 8L8.5 19Z" />
-          <Path d="M14 7L17 10" />
-        </Badge>
+    <G>
+      {ghost(40, 114, 112)}
+      {ghost(40, 136, 70)}
+      <Surface
+        context={context}
+        d="M84 38H108C111 38 112 39 112 42V108L104 130H88L80 108V42C80 39 81 38 84 38Z"
+        tilt={42}
+        x={0}
+        y={-6}
+      >
         <Rect
-          fill="none"
-          height={15}
-          rx={7.5}
-          stroke={theme.border}
-          strokeDasharray="3 3"
-          strokeOpacity={theme.borderOpacity}
-          strokeWidth={1}
-          width={70}
-          x={-4}
-          y={44.7}
+          fill={theme.icon}
+          fillOpacity={0.12 * theme.iconOpacity}
+          height={16}
+          width={32}
+          x={80}
+          y={54}
         />
-      </G>
-      <PaperLines context={context} />
-    </Paper>
+        <Path
+          d="M80 54H112"
+          opacity={theme.iconOpacity}
+          stroke={theme.icon}
+          strokeLinecap="round"
+          strokeWidth={2.5}
+        />
+      </Surface>
+    </G>
   );
 };
 
-/** Advanced, no data: an empty inbox tray with a lone blank sheet resting above it. */
-const advancedNoData: Scene = (context) => (
-  <>
-    <Surface
-      context={context}
-      d="M70 46H122C126.4 46 130 49.6 130 54V110H62V54C62 49.6 65.6 46 70 46Z"
-      tilt={-5}
-    >
-      <Bar context={context} tone={1} width={36} x={74} y={62} />
-      <Bar context={context} tone={2} width={26} x={74} y={76} />
-    </Surface>
-    <Surface
-      context={context}
-      d="M44 106C44 100.5 48.5 96 54 96H72C76 96 78.5 98.5 80.5 102C82.5 105.5 85 108 89 108H103C107 108 109.5 105.5 111.5 102C113.5 98.5 116 96 120 96H138C143.5 96 148 100.5 148 106V138C148 144 143 149 137 149H55C49 149 44 144 44 138Z"
-      tilt={3}
-    >
-      <Badge context={context} size={18} x={56} y={116}>
-        <Ellipse cx={12} cy={6} rx={8} ry={3} />
-        <Path d="M4 6V18C4 19.7 7.6 21 12 21S20 19.7 20 18V6" />
-        <Path d="M4 12C4 13.7 7.6 15 12 15S20 13.7 20 12" />
-      </Badge>
-      <Bar context={context} tone={0} width={34} x={84} y={119} />
-      <Bar context={context} tone={2} width={22} x={84} y={131} />
-    </Surface>
-  </>
-);
-
-/** Feedback sent: a note slipping out of an envelope, a check badge on the envelope. */
-const feedbackSent: Scene = (context) => (
-  <>
-    <Surface
-      context={context}
-      d="M62 46H126C131.5 46 136 50.5 136 56V92H52V56C52 50.5 56.5 46 62 46Z"
-      tilt={-4}
-    >
-      <Bar context={context} tone={0} width={44} x={64} y={58} />
-      <Bar context={context} tone={1} width={30} x={64} y={72} />
-    </Surface>
-    <Surface
-      context={context}
-      d="M44 82C44 76.5 48.5 72 54 72H138C143.5 72 148 76.5 148 82V134C148 140 143 145 137 145H55C49 145 44 140 44 134Z"
-      strokeD="M44.5 82C44.5 76.8 48.8 72.5 54 72.5H138C143.2 72.5 147.5 76.8 147.5 82V134C147.5 139.7 142.7 144.5 137 144.5H55C49.3 144.5 44.5 139.7 44.5 134Z"
-      tilt={3}
-    >
+/** Advanced, no data: a big open box seen in perspective with nothing in it. */
+const advancedNoData: Scene = (context) => {
+  const { theme } = context;
+  const top: readonly Point[] = [
+    [96, 48],
+    [150, 74],
+    [96, 100],
+    [42, 74],
+  ];
+  const left: readonly Point[] = [
+    [42, 74],
+    [96, 100],
+    [96, 138],
+    [42, 112],
+  ];
+  const right: readonly Point[] = [
+    [96, 100],
+    [150, 74],
+    [150, 112],
+    [96, 138],
+  ];
+  return (
+    <G transform="translate(0 -4)">
       <Path
-        d="M47 80L91 112C94 114 98 114 101 112L145 80"
-        fill="none"
+        d={roundedPoly(top, 7)}
+        fill={theme.border}
+        fillOpacity={theme.isDark ? 0.08 : 0.8}
         stroke={context.paints.stroke}
         strokeLinecap="round"
       />
-      <Badge context={context} size={18} x={87} y={118}>
-        <Path d="M5 12.5L9.5 17L19 7.5" />
-      </Badge>
-    </Surface>
-  </>
-);
+      <Surface context={context} d={roundedPoly(left, 7)} />
+      <Surface context={context} d={roundedPoly(right, 7)} />
+      <G transform="skewY(25.9)">
+        <Badge context={context} size={18} x={60} y={77}>
+          <Circle cx={12} cy={12} r={9} />
+          <Path d="M8 12H16" />
+        </Badge>
+      </G>
+    </G>
+  );
+};
 
-/** Offline: a soft cloud with two skeleton lines and a struck-through wifi badge. */
-const offline: Scene = (context) => (
-  <Surface
-    context={context}
-    d="M72 132C57 132 46 121 46 107C46 95 54 86 65 84C68 70 80 60 95 60C109 60 120 69 123 82C137 83 148 93 148 107C148 121 137 132 124 132Z"
-    tilt={4}
-  >
-    <Badge context={context} size={20} x={85} y={84}>
-      <Path d="M2 8.8C7.2 4.2 16.8 4.2 22 8.8" />
-      <Path d="M5.2 12.6C9 9.2 15 9.2 18.8 12.6" />
-      <Path d="M8.6 16.3C10.6 14.7 13.4 14.7 15.4 16.3" />
-      <Circle cx={12} cy={19.5} r={0.6} />
-      <Path d="M4 3.5L20 21" />
-    </Badge>
-    <Bar context={context} tone={0} width={50} x={71} y={111} />
-    <Bar context={context} tone={2} width={32} x={80} y={122} height={6} />
-  </Surface>
-);
+/** Feedback sent: a paper plane has left a small envelope, trailing a dashed arc. */
+const feedbackSent: Scene = (context) => {
+  const { theme } = context;
+  return (
+    <G transform="translate(0 2)">
+      <Surface
+        context={context}
+        d={rr(36, 104, 58, 42, 10)}
+        strokeD={rr(36, 104, 58, 42, 10, 0.5)}
+        tilt={-4}
+      >
+        <Path
+          d="M39 110L62 128C64 129.5 66 129.5 68 128L91 110"
+          fill="none"
+          stroke={context.paints.stroke}
+          strokeLinecap="round"
+        />
+      </Surface>
+      <Path
+        d="M68 98C62 76 82 62 106 66"
+        fill="none"
+        opacity={theme.iconOpacity}
+        stroke={theme.icon}
+        strokeDasharray="2 5"
+        strokeLinecap="round"
+        strokeWidth={2.5}
+      />
+      <Surface
+        context={context}
+        d={roundedPoly(
+          [
+            [152, 44],
+            [108, 76],
+            [126, 86],
+          ],
+          4,
+        )}
+      />
+      <Surface
+        context={context}
+        d={roundedPoly(
+          [
+            [152, 44],
+            [126, 86],
+            [122, 110],
+          ],
+          4,
+        )}
+      />
+    </G>
+  );
+};
 
-/** Load error: a paper with a torn, wavy bottom edge and a warning badge. */
-const loadError: Scene = (context) => (
-  <Surface
-    context={context}
-    d="M60 42H128C133.5 42 138 46.5 138 52V138Q133.5 148 129 138T120 138T111 138T102 138T93 138T84 138T75 138T66 138T57 138H50V52C50 46.5 54.5 42 60 42Z"
-    tilt={5}
-  >
-    <Badge context={context} size={18} x={62} y={54}>
-      <Path d="M12 3.5L21.5 19.5H2.5Z" />
-      <Path d="M12 10V14" />
-      <Path d="M12 16.6V16.7" />
-    </Badge>
-    <Bar context={context} tone={0} width={54} x={62} y={82} />
-    <Bar context={context} tone={1} width={64} x={62} y={96} />
-    <Bar context={context} tone={2} width={44} x={62} y={110} />
-  </Surface>
-);
+/** Offline: a big cloud with a dashed twin behind it, cut by a single slash. */
+const offline: Scene = (context) => {
+  const { theme } = context;
+  const cloud =
+    "M72 132C57 132 46 121 46 107C46 95 54 86 65 84C68 70 80 60 95 60C109 60 120 69 123 82C137 83 148 93 148 107C148 121 137 132 124 132Z";
+  return (
+    <G transform="translate(-6 5)">
+      <Path
+        d={cloud}
+        fill="none"
+        stroke={theme.border}
+        strokeDasharray="3 4"
+        strokeLinecap="round"
+        strokeOpacity={theme.borderOpacity}
+        transform="translate(11 -14)"
+      />
+      <Surface context={context} d={cloud} x={0} y={6} />
+      <Path
+        d="M76 134L122 82"
+        opacity={theme.iconOpacity}
+        stroke={theme.icon}
+        strokeLinecap="round"
+        strokeWidth={3}
+      />
+    </G>
+  );
+};
 
-/** Permission denied: a rounded shield with a padlock badge above two skeleton lines. */
-const permissionDenied: Scene = (context) => (
-  <Surface
-    context={context}
-    d="M90 38C93.3 38 94.5 38.4 98 39.7L128 51C132.6 52.7 135 55.5 135 60V92C135 120 118 140 99 151C97 152 95 152 93 151C74 140 57 120 57 92V60C57 55.5 59.4 52.7 64 51L82 44C85.5 42.7 87.5 38 90 38Z"
-    tilt={4}
-  >
-    <Badge context={context} size={20} x={86} y={66}>
-      <Rect height={10} rx={3} width={14} x={5} y={11} />
-      <Path d="M8 11V8C8 5.8 9.8 4 12 4S16 5.8 16 8V11" />
-      <Path d="M12 15.2V16.8" />
-    </Badge>
-    <Bar context={context} tone={0} width={42} x={75} y={102} />
-    <Bar context={context} tone={2} width={28} x={82} y={116} />
-  </Surface>
-);
+/** Load error: one card torn in two along a zig-zag, its halves drawn apart, with a warning mark. */
+const loadError: Scene = (context) => {
+  const zig = "L104 66L90 84L102 104L88 124L96 148";
+  const zigBack = "L88 124L102 104L90 84L104 66Z";
+  return (
+    <G>
+      <Surface
+        context={context}
+        d={`M62 44H96${zig}H62C55 148 50 144 50 138V56C50 49 55 44 62 44Z`}
+        tilt={-4}
+        x={-4}
+      >
+        <Bar context={context} tone={1} width={22} x={60} y={58} />
+        <Bar context={context} tone={2} width={16} x={60} y={72} />
+      </Surface>
+      <Surface
+        context={context}
+        d={`M96 44H130C137 44 142 49 142 56V138C142 144 137 148 130 148H96${zigBack}`}
+        tilt={4}
+        x={4}
+      >
+        <Badge context={context} size={22} x={108} y={92}>
+          <Path d="M12 3.5L21.5 19.5H2.5Z" />
+          <Path d="M12 10V14" />
+          <Path d="M12 16.6V16.7" />
+        </Badge>
+      </Surface>
+    </G>
+  );
+};
+
+/** Permission denied: a big padlock on a soft two-ring wash, the keyhole as the only accent. */
+const permissionDenied: Scene = (context) => {
+  const { theme } = context;
+  return (
+    <G transform="translate(0 -3)">
+      <Circle cx={96} cy={99} fill={theme.lines[1]} fillOpacity={theme.lineOpacities[1]} r={56} />
+      <Circle cx={96} cy={99} fill={theme.lines[0]} fillOpacity={theme.lineOpacities[0]} r={42} />
+      <Path
+        d="M76 92V78C76 66 84 58 96 58S116 66 116 78V92"
+        fill="none"
+        stroke={theme.border}
+        strokeLinecap="round"
+        strokeOpacity={theme.borderOpacity}
+        strokeWidth={8}
+      />
+      <Surface context={context} d={rr(62, 88, 68, 54, 15)} strokeD={rr(62, 88, 68, 54, 15, 0.5)}>
+        <Circle cx={96} cy={110} fill={theme.icon} fillOpacity={theme.iconOpacity} r={5.5} />
+        <Path
+          d="M96 114V125"
+          opacity={theme.iconOpacity}
+          stroke={theme.icon}
+          strokeLinecap="round"
+          strokeWidth={3.5}
+        />
+      </Surface>
+    </G>
+  );
+};
 
 export const EXTRA_SCENES = {
   "settings-muted-keywords": mutedKeywords,
