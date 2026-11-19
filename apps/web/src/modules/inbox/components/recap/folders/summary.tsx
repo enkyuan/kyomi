@@ -2,7 +2,7 @@
 
 import {
   ChecklistIcon,
-  FileArrowLeftInIcon,
+  FileArrowLeftInFilledIcon,
   FileArrowRightOutIcon,
   FolderIcon,
   PlusIcon,
@@ -64,7 +64,7 @@ export function FolderActions({
           variant="secondary"
           onClick={onImportOpml}
         >
-          <FileArrowLeftInIcon className="mx-0 size-4" />
+          <FileArrowLeftInFilledIcon className="mx-0 size-4" />
           Import
         </Button>
       </RailTooltip>
@@ -114,7 +114,7 @@ function FolderSummaryActions({
           variant="secondary"
           onClick={onImportOpml}
         >
-          <FileArrowLeftInIcon className="mx-0 size-4" />
+          <FileArrowLeftInFilledIcon className="mx-0 size-4" />
           Import
         </Button>
       </RailTooltip>
