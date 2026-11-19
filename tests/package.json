@@ -23,6 +23,7 @@
     "@kyomi/ingest": "workspace:*",
     "@kyomi/reader": "workspace:*",
     "@kyomi/ui": "workspace:*",
+    "@stylexjs/unplugin": "^0.19.2",
     "@tanstack/react-query": "^5.62.8",
     "@tanstack/react-router": "^1.92.10",
     "@testing-library/dom": "^10.4.1",

@@ -9,7 +9,7 @@
  * originals. Greys and blacks (sumi) stay in theme.css; semantic roles (success, info, warning,
  * destructive, highlight) are mapped there.
  */
-@theme {
+:root {
   /* 桜 sakura: hue 8, 60% of gamut; Momo-iro, Kōbai-iro, Benifuji */
   --color-sakura-50: oklch(0.972 0.009 8);
   --color-sakura-100: oklch(0.94 0.019 8);

@@ -175,6 +175,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         {/* oxlint-disable-next-line react/no-danger -- static first-paint shell bootstrap; not user HTML */}
         <script dangerouslySetInnerHTML={{ __html: SHELL_INIT_SCRIPT }} />
         <HeadContent />
+        {import.meta.env.DEV && (
+          <>
+            <link rel="stylesheet" href="/virtual:stylex.css" />
+            <script type="module" src="/@id/virtual:stylex:css-only" />
+          </>
+        )}
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased wrap-anywhere selection:bg-matcha/24">
         <PostHogProvider>

@@ -518,7 +518,7 @@ function SliderComfortable({
             variant === "scrubber"
               ? "flex items-center gap-3 px-4 cursor-ew-resize"
               : "cursor-ew-resize",
-            "rounded-lg bg-background not-dark:bg-clip-padding shadow-xs/5 before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-[0_1px_--theme(--color-black/4%)] dark:bg-input/32 dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
+            "rounded-lg bg-background not-dark:bg-clip-padding shadow-xs/5 before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-var(--stroke-width))] before:shadow-(--shadow-edge-raised) dark:bg-input/32 dark:before:shadow-(--shadow-edge-highlight)",
             disabled && "opacity-50 pointer-events-none",
             className,
           )}

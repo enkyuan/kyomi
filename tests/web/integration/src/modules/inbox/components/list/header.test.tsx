@@ -87,8 +87,8 @@ describe("FilterControl", () => {
     );
 
     const trigger = screen.getByRole("button", { name: "Choose filter" });
-    expect(trigger.className).toContain("focus-visible:ring-2");
-    expect(trigger.className).toContain("pointer-coarse:after:min-h-11");
+    expect(trigger.className).toContain("focus-visible:ring-(length:--focus-ring-width)");
+    expect(trigger.className).toContain("pointer-coarse:after:min-h-(--touch-target-min)");
   });
 
   test("keeps My Feed and the All button group as tabs", () => {

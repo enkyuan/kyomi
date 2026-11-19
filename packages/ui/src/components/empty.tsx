@@ -15,7 +15,7 @@ const emptyMediaVariants = cva(
         /** Large product illustration, 160px (176px from sm). */
         illustration:
           "bg-transparent [&_svg:not([class*='size-'])]:size-40 sm:[&_svg:not([class*='size-'])]:size-44",
-        icon: "relative flex size-9 shrink-0 items-center justify-center rounded-lg border border-border/80 bg-background text-muted-foreground shadow-xs/5 before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-[0_1px_--theme(--color-black/4%)] dark:before:shadow-[0_-1px_--theme(--color-white/6%)] [&_svg:not([class*='size-'])]:size-4",
+        icon: "relative flex size-9 shrink-0 items-center justify-center rounded-lg border border-border/80 bg-background text-muted-foreground shadow-xs/5 before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-var(--stroke-width))] before:shadow-(--shadow-edge-raised) dark:before:shadow-(--shadow-edge-highlight) [&_svg:not([class*='size-'])]:size-4",
       },
     },
   },

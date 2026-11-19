@@ -1,5 +1,6 @@
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import stylex from "@stylexjs/unplugin";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
@@ -10,7 +11,11 @@ const webSrc = join(webAppRoot, "src");
 
 export default defineConfig({
   root: webAppRoot,
-  plugins: [tsconfigPaths({ projects: [join(webAppRoot, "tsconfig.json")] }), react()],
+  plugins: [
+    stylex.vite({ dev: false }),
+    tsconfigPaths({ projects: [join(webAppRoot, "tsconfig.json")] }),
+    react(),
+  ],
   resolve: {
     dedupe: ["react", "react-dom"],
     alias: {

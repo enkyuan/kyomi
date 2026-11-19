@@ -8,6 +8,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 
 import viteReact from "@vitejs/plugin-react";
+import stylex from "@stylexjs/unplugin";
 import tailwindcss from "@tailwindcss/vite";
 import { nitro } from "nitro/vite";
 
@@ -102,6 +103,13 @@ const config = defineConfig(({ command }) => {
   const isTest = process.env.VITEST === "true";
   const isDev = command === "serve";
 
+  const stylexPlugin = stylex.vite({
+    dev: isDev,
+    devMode: "css-only",
+    useCSSLayers: { prefix: "kyomi-stylex" },
+    cssInjectionTarget: (asset) => /(?:^|\/)styles-[^/]+\.css$/.test(asset),
+  });
+
   return {
     build: {
       target: "esnext",
@@ -137,7 +145,7 @@ const config = defineConfig(({ command }) => {
       ],
     },
     plugins: isTest
-      ? [tsconfigPaths({ projects: ["./tsconfig.json"] }), viteReact()]
+      ? [stylexPlugin, tsconfigPaths({ projects: ["./tsconfig.json"] }), viteReact()]
       : [
           devtools(),
           tsconfigPaths({ projects: ["./tsconfig.json"] }),
@@ -162,6 +170,7 @@ const config = defineConfig(({ command }) => {
               },
             },
           }),
+          stylexPlugin,
           viteReact(),
           tailwindcss(),
           staticAssetServiceWorkerPlugin(),
