@@ -5,14 +5,14 @@ import { SliderComfortable } from "@kyomi/ui/components/slider";
 import {
   AnimatePresence,
   LazyMotion,
-  controlSwapMotion,
+  CONTROL_SWAP_SHOWN,
   domAnimation,
   m,
   useReducedMotion,
 } from "@kyomi/ui/lib/motion";
 import { Tabs, TabsList, TabsTab } from "@kyomi/ui/components/tabs";
 import { formatInboxTimestamp } from "@modules/articles/lib/format-timestamp";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Switch } from "@kyomi/ui/components/switch";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-preferences";
 import { SettingHeading, SettingSubHeading } from "./headings";
@@ -112,6 +112,35 @@ function showsClock(display: InboxPreferences["inboxTimestampDisplay"]) {
   return display === "absolute" || display === "iso";
 }
 
+const SWAP_OFFSET_PX = 8;
+const SWAP_BLUR = "blur(4px)";
+
+/** Which way the newest change moved along an ordered list: 1 toward later items, -1 earlier. */
+function useSwapDirection(index: number): 1 | -1 {
+  const [state, setState] = useState<{ index: number; direction: 1 | -1 }>({
+    index,
+    direction: 1,
+  });
+  if (state.index !== index) {
+    setState({ index, direction: index > state.index ? 1 : -1 });
+  }
+  return state.direction;
+}
+
+/**
+ * Direction-aware swap: content enters from the side of the newly selected item and the outgoing
+ * content leaves toward the opposite side. `custom` is the latest direction, so an exiting element
+ * (already unmounted from the tree) still reads it. Fade and blur only under reduced motion.
+ */
+function swapVariants(reducedMotion: boolean | null) {
+  const offset = (direction: number) => (reducedMotion ? 0 : direction * SWAP_OFFSET_PX);
+  return {
+    initial: (direction: number) => ({ opacity: 0, x: offset(direction), filter: SWAP_BLUR }),
+    animate: { ...CONTROL_SWAP_SHOWN, scale: 1, x: 0 },
+    exit: (direction: number) => ({ opacity: 0, x: -offset(direction), filter: SWAP_BLUR }),
+  };
+}
+
 /**
  * The options that belong to the chosen format (a style for Relative, a clock for the formats with
  * a time) and an example line. They blur in when the format changes, and not at all on first paint.
@@ -128,17 +157,35 @@ function TimestampOptions({
   const hourCycle = preferences.inboxTimestampHourCycle;
   // Two hours back, so every format has something to show.
   const sample = useMemo(() => new Date(Date.now() - 2 * 3_600_000).toISOString(), []);
+  const group = getTimestampFormat(display);
+  const formatIndex = TIMESTAMP_FORMATS.findIndex((option) => option.value === group);
+  const subIndex =
+    group === "relative"
+      ? display === "relative-long"
+        ? 1
+        : 0
+      : showsClock(display)
+        ? hourCycle === "24h"
+          ? 1
+          : 0
+        : 0;
+  const formatDirection = useSwapDirection(formatIndex);
+  // Format change outranks a style or clock change, so the example reads them as one ordered axis.
+  const exampleDirection = useSwapDirection(formatIndex * 10 + subIndex);
+  const variants = swapVariants(reducedMotion);
   const motionProps = {
-    ...controlSwapMotion(reducedMotion),
+    variants,
+    initial: "initial",
+    animate: "animate",
+    exit: "exit",
     transition: { bounce: 0, duration: 0.25, type: "spring" as const },
   };
-  const group = getTimestampFormat(display);
 
   return (
     <LazyMotion features={domAnimation}>
-      <AnimatePresence initial={false} mode="popLayout">
+      <AnimatePresence custom={formatDirection} initial={false} mode="popLayout">
         {group === "relative" ? (
-          <m.div key="style" {...motionProps}>
+          <m.div key="style" custom={formatDirection} {...motionProps}>
             <Tabs
               value={display}
               onValueChange={(value) => {
@@ -158,7 +205,7 @@ function TimestampOptions({
             </Tabs>
           </m.div>
         ) : showsClock(display) ? (
-          <m.div key="clock" {...motionProps}>
+          <m.div key="clock" custom={formatDirection} {...motionProps}>
             <Tabs
               value={hourCycle}
               onValueChange={(value) => {
@@ -179,10 +226,11 @@ function TimestampOptions({
           </m.div>
         ) : null}
       </AnimatePresence>
-      <AnimatePresence initial={false} mode="popLayout">
+      <AnimatePresence custom={exampleDirection} initial={false} mode="popLayout">
         <m.p
           key={`${display}-${showsClock(display) ? hourCycle : ""}`}
           className="text-muted-foreground text-xs tabular-nums"
+          custom={exampleDirection}
           {...motionProps}
         >
           Example: {formatInboxTimestamp(sample, display, hourCycle)}
