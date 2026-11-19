@@ -78,6 +78,37 @@ describe("ToastProvider", () => {
     expect(markup.size).toBe(types.length);
   });
 
+  test("swaps the icon inside one slot on a state change, never a second toast", async () => {
+    render(<ToastProvider>{null}</ToastProvider>);
+    let id = "";
+    act(() => {
+      id = toastManager.add({ timeout: 0, title: "Sending code", type: "loading" });
+    });
+    await waitFor(() => {
+      expect(toastNode('[data-slot="toast-icon"] svg')).toBeTruthy();
+    });
+    const loadingMarkup = toastNode('[data-slot="toast-icon"] svg').innerHTML;
+
+    act(() => {
+      toastManager.update(id, { title: "Code sent", type: "success" });
+    });
+
+    // jsdom has no Web Animations, so the outgoing icon never finishes exiting: during the swap the
+    // slot holds both glyphs, stacked in one grid cell, inside the one toast.
+    await waitFor(() => {
+      const slot = toastNode('[data-slot="toast-icon"]');
+      const markup = [...slot.querySelectorAll("svg")].map((svg) => svg.innerHTML);
+      expect(markup).toHaveLength(2);
+      expect(markup).toContain(loadingMarkup);
+      for (const layer of slot.children) {
+        expect(layer.className).toContain("col-start-1");
+        expect(layer.className).toContain("row-start-1");
+      }
+    });
+    expect(document.querySelectorAll('[data-slot="toast-icon"]')).toHaveLength(1);
+    expect(document.querySelectorAll('[data-slot="toast-title"]')).toHaveLength(1);
+  });
+
   test("ends the line with a count, tabular so it does not jitter as it climbs", async () => {
     render(<ToastProvider>{null}</ToastProvider>);
 

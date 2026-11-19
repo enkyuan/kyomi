@@ -89,6 +89,11 @@ title, and an end slot. There is no description, and the managers are typed to r
 - The count is tabular (`tabular-nums`, one digit width), so a step never moves the title or the end
   edge; only a new digit place widens it. It morphs by place value on the progress ring's own 240ms
   `ease-out-quint`, so a step up or down moves the digits and the ring together.
+- A state change (loading → success or error) updates the one toast in place, never a second one.
+  The title morphs with Torph over 600ms on `cubic-bezier(0.41, 1.03, 0.6, 1.03)`. The icon swaps
+  inside a single grid cell: the old glyph scales to 0.6 and fades out while the new one grows in
+  from 0.6 after 0.1s, on one spring (`mass 4, stiffness 800, damping 80`). Reduced motion swaps
+  instantly. The count keeps its own 240ms curve so it stays in step with the ring.
 - Loading titles carry no ellipsis (`Importing feeds`, not `Importing feeds...`); the spinner and
   the count say it is in progress.
 - The body is a squircle (`useSquircle`, 14px; 10px for anchored tooltips). A clip path cuts a

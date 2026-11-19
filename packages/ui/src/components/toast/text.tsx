@@ -7,6 +7,11 @@ import { TextMorph } from "../text-morph";
 
 type ToastData = ToastObject<Record<string, unknown>>;
 
+// A state change reads as one line settling into the next, so titles morph slower and softer than
+// the count beside them (which has to stay in step with the progress ring).
+const TITLE_MORPH_DURATION_MS = 600;
+const TITLE_MORPH_EASE = "cubic-bezier(0.41, 1.03, 0.6, 1.03)";
+
 // A 360px toast fits about 40 characters of 14px text beside its icon; anchored cards are narrower.
 const DEFAULT_MORPH_MAX_CHARS = 40;
 
@@ -29,7 +34,9 @@ function ToastMorph({
     typeof children === "string" || typeof children === "number" ? String(children) : null;
 
   return text !== null && text.length <= maxChars && !text.includes("\n") ? (
-    <TextMorph>{text}</TextMorph>
+    <TextMorph duration={TITLE_MORPH_DURATION_MS} ease={TITLE_MORPH_EASE}>
+      {text}
+    </TextMorph>
   ) : (
     children
   );
