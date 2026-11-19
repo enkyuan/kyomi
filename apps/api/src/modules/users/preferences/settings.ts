@@ -89,7 +89,13 @@ function parseInboxMarkReadBehavior(value: string): InboxMarkReadBehaviorDto {
 }
 
 function parseInboxTimestampDisplay(value: string): InboxTimestampDisplayDto {
-  if (value === "absolute" || value === "relative") {
+  if (
+    value === "absolute" ||
+    value === "relative" ||
+    value === "relative-long" ||
+    value === "date" ||
+    value === "iso"
+  ) {
     return value;
   }
   return DEFAULT_USER_PREFERENCES.inboxTimestampDisplay;
@@ -190,7 +196,7 @@ const STRING_PREFERENCE_RULES: Array<{
   },
   {
     key: "inboxTimestampDisplay",
-    values: ["absolute", "relative"],
+    values: ["absolute", "relative", "relative-long", "date", "iso"],
     message: "Unsupported inbox timestamp display.",
     code: "USER_PREFERENCES_INVALID_INBOX_TIMESTAMP_DISPLAY",
   },

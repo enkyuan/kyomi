@@ -42,9 +42,11 @@ export function usePrimarySlider({
   const valuesRef = useRef(values);
   const minRef = useRef(min);
   const maxRef = useRef(max);
-  valuesRef.current = values;
-  minRef.current = min;
-  maxRef.current = max;
+  useLayoutEffect(() => {
+    valuesRef.current = values;
+    minRef.current = min;
+    maxRef.current = max;
+  });
 
   // --- State ---
   const [ui, dispatchUi] = useReducer(primarySliderUiReducer, initialPrimarySliderUiState);

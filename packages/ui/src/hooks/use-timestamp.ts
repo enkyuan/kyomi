@@ -37,9 +37,11 @@ function getTimestampSnapshot() {
  * Subscribes to a shared minute ticker when timestamps render in relative mode,
  * so list rows and detail surfaces stay in sync without per-item intervals.
  */
-export function useTimestamp(display: "absolute" | "relative") {
+export function useTimestamp(display: "absolute" | "relative" | "relative-long" | "date" | "iso") {
   useSyncExternalStore(
-    display === "relative" ? subscribeToTimestampTick : () => () => {},
+    display === "relative" || display === "relative-long"
+      ? subscribeToTimestampTick
+      : () => () => {},
     getTimestampSnapshot,
     () => 0,
   );

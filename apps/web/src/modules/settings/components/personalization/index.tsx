@@ -3,7 +3,7 @@
 import { BrainIcon } from "@kyomi/ui/icons/blode";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 
-export const personalizationSection = {
+const personalizationSection = {
   name: "Personalization",
 } as const;
 

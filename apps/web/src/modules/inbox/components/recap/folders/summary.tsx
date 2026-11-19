@@ -22,12 +22,12 @@ import { RailTooltip, RecapSection, SectionEmpty } from "@modules/inbox/componen
 import { formatFeedCount } from "@modules/inbox/lib/recap/index";
 import { FolderIconBadge } from "./icon";
 
-export const FOLDER_ACTION_BUTTON_CLASS =
+const FOLDER_ACTION_BUTTON_CLASS =
   "h-10 flex-1 gap-1.5 px-4 font-semibold text-sm leading-none sm:h-10 sm:text-sm";
-export const FOLDER_ICON_BUTTON_CLASS = "size-10 px-0 sm:size-10";
+const FOLDER_ICON_BUTTON_CLASS = "size-10 px-0 sm:size-10";
 
 /** Flat like its siblings, and tactile (the outline look) only while it is pressed. */
-export const FOLDER_ICON_ACTION_BUTTON_CLASS = cn(
+const FOLDER_ICON_ACTION_BUTTON_CLASS = cn(
   FOLDER_ICON_BUTTON_CLASS,
   "[:active,[data-pressed]]:border-input [:active,[data-pressed]]:bg-popover [:active,[data-pressed]]:shadow-xs/5 dark:[:active,[data-pressed]]:bg-input/32",
 );

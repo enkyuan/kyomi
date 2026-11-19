@@ -4,7 +4,7 @@ export type InboxDefaultViewDto = "my-feed" | "all" | "saved" | "recent";
 export type InboxDensityDto = "comfortable" | "compact";
 export type ArticleOpenBehaviorDto = "split" | "reader";
 export type InboxMarkReadBehaviorDto = "on-open" | "after-delay" | "manual";
-export type InboxTimestampDisplayDto = "absolute" | "relative";
+export type InboxTimestampDisplayDto = "absolute" | "relative" | "relative-long" | "date" | "iso";
 export type InboxTimestampHourCycleDto = "12h" | "24h";
 
 export type UserPreferencesDto = {

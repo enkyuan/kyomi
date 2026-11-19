@@ -4,7 +4,8 @@ import { Toast } from "@base-ui/react/toast";
 import type { ToastObject } from "@base-ui/react/toast";
 import type React from "react";
 import { TextMorph } from "../text-morph";
-import { formatToastProgress, getToastProgress, ToastStatusIcon } from "./status-icon";
+import { formatToastProgress, getToastProgress } from "./progress";
+import { ToastStatusIcon } from "./status-icon";
 import { ToastTitle } from "./text";
 
 /**

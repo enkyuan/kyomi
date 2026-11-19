@@ -1,4 +1,4 @@
-import { Pressable, ScrollView, Text, View } from "react-native";
+import { Pressable, ScrollView, Text, useWindowDimensions, View } from "react-native";
 import { useState, type ComponentType, type ReactNode } from "react";
 import type { ReaderBlock, ReaderInline, ReaderTableCell } from "../../core/document";
 import { useReaderNative } from "./context";
@@ -23,6 +23,7 @@ export function ProseRun({
   readonly blocks: Extract<ReaderSegment, { kind: "prose" }>["blocks"];
 }) {
   const { theme, host, footnotes } = useReaderNative();
+  const { fontScale } = useWindowDimensions();
   const base = useBodyTextStyle();
   // The second newline is styled smaller so the gap between paragraphs matches `blockGap`
   // instead of a full blank line.
@@ -37,7 +38,7 @@ export function ProseRun({
               <Text style={gap}>{"\n"}</Text>
             </>
           ) : null}
-          {renderInlines(block.children, { theme, host, footnotes }, `r${index}`)}
+          {renderInlines(block.children, { theme, host, footnotes, fontScale }, `r${index}`)}
         </Text>
       ))}
     </Text>

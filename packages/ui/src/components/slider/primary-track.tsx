@@ -216,12 +216,9 @@ export function PrimaryTrack({
             trackClassName,
           )}
           initial={false}
-          animate={{
+          style={{
             height: TRACK_BG_HEIGHT,
             top: 8 + (THUMB_SIZE - TRACK_BG_HEIGHT) / 2,
-          }}
-          transition={springs.fast}
-          style={{
             left: TRACK_INSET,
             right: TRACK_INSET,
             backgroundColor: "transparent",

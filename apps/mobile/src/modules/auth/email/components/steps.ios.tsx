@@ -251,6 +251,9 @@ export function OTPFormStep({
   theme,
 }: OTPFormStepProps) {
   const validationMessage = errorMessage ?? "Enter the 6-digit code and try again.";
+  const focusOtpField = () => {
+    otpFieldRef.current?.focus();
+  };
 
   return (
     <VStack alignment="leading" spacing={0} modifiers={[FULL_WIDTH]}>
@@ -302,10 +305,7 @@ export function OTPFormStep({
             />
           </ZStack>
 
-          <HStack
-            spacing={10}
-            modifiers={[FULL_WIDTH, onTapGesture(() => otpFieldRef.current?.focus())]}
-          >
+          <HStack spacing={10} modifiers={[FULL_WIDTH, onTapGesture(focusOtpField)]}>
             {OTP_SLOTS.map((slot) => {
               const isCurrentSlot = otpValue.length === slot;
 

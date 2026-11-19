@@ -42,8 +42,10 @@ export function TabsList({
   size?: TabsSize;
   variant?: TabsVariant;
 }): React.ReactElement {
+  const contextValue = React.useMemo(() => ({ size, variant }), [size, variant]);
+
   return (
-    <TabsListContext.Provider value={{ size, variant }}>
+    <TabsListContext.Provider value={contextValue}>
       <TabsPrimitive.List
         className={cn(
           "relative z-0 flex w-fit items-center justify-center text-muted-foreground",

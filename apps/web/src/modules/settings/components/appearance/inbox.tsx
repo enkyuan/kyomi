@@ -1,7 +1,17 @@
 "use client";
 
-import { Group, GroupSeparator } from "@kyomi/ui/components/group";
+import { SliderComfortable } from "@kyomi/ui/components/slider";
+import {
+  AnimatePresence,
+  LazyMotion,
+  controlSwapMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "@kyomi/ui/lib/motion";
 import { Tabs, TabsList, TabsTab } from "@kyomi/ui/components/tabs";
+import { formatInboxTimestamp } from "@modules/articles/lib/format-timestamp";
+import { useMemo } from "react";
 import {
   Select,
   SelectItem,
@@ -38,8 +48,110 @@ function getInboxTextScaleValue(fontSizePx: number): InboxTextScaleValue {
   return closestOption.value;
 }
 
-function getInboxTextScaleFontSize(value: string): number | null {
-  return INBOX_TEXT_SCALE_OPTIONS.find((option) => option.value === value)?.fontSizePx ?? null;
+function getInboxTextScaleIndex(fontSizePx: number): number {
+  const value = getInboxTextScaleValue(fontSizePx);
+  return INBOX_TEXT_SCALE_OPTIONS.findIndex((option) => option.value === value);
+}
+
+type TimestampDisplay = InboxPreferences["inboxTimestampDisplay"];
+
+/** What the picker shows: both relative styles live under one "Relative" option. */
+const TIMESTAMP_FORMATS = [
+  { label: "Relative", value: "relative" },
+  { label: "Date & time", value: "absolute" },
+  { label: "Date", value: "date" },
+  { label: "ISO", value: "iso" },
+] as const;
+
+function getTimestampFormat(
+  display: TimestampDisplay,
+): (typeof TIMESTAMP_FORMATS)[number]["value"] {
+  return display === "relative-long" ? "relative" : display;
+}
+
+/** Only the formats that show a time are affected by the 12 or 24-hour clock. */
+function showsClock(display: InboxPreferences["inboxTimestampDisplay"]) {
+  return display === "absolute" || display === "iso";
+}
+
+/**
+ * The options that belong to the chosen format (a style for Relative, a clock for the formats with
+ * a time) and an example line. They blur in when the format changes, and not at all on first paint.
+ */
+function TimestampOptions({
+  preferences,
+  setPreferences,
+}: {
+  preferences: InboxPreferences;
+  setPreferences: (next: Partial<InboxPreferences>) => void;
+}) {
+  const reducedMotion = useReducedMotion();
+  const display = preferences.inboxTimestampDisplay;
+  const hourCycle = preferences.inboxTimestampHourCycle;
+  // Two hours back, so every format has something to show.
+  const sample = useMemo(() => new Date(Date.now() - 2 * 3_600_000).toISOString(), []);
+  const motionProps = {
+    ...controlSwapMotion(reducedMotion),
+    transition: { bounce: 0, duration: 0.25, type: "spring" as const },
+  };
+  const group = getTimestampFormat(display);
+
+  return (
+    <LazyMotion features={domAnimation}>
+      <AnimatePresence initial={false} mode="popLayout">
+        {group === "relative" ? (
+          <m.div key="style" {...motionProps}>
+            <Tabs
+              value={display}
+              onValueChange={(value) => {
+                if (value === "relative" || value === "relative-long") {
+                  setPreferences({ inboxTimestampDisplay: value });
+                }
+              }}
+            >
+              <TabsList aria-label="Relative style" variant="pill">
+                <TabsTab className="px-3" value="relative">
+                  Compact
+                </TabsTab>
+                <TabsTab className="px-3" value="relative-long">
+                  Expanded
+                </TabsTab>
+              </TabsList>
+            </Tabs>
+          </m.div>
+        ) : showsClock(display) ? (
+          <m.div key="clock" {...motionProps}>
+            <Tabs
+              value={hourCycle}
+              onValueChange={(value) => {
+                if (value === "12h" || value === "24h") {
+                  setPreferences({ inboxTimestampHourCycle: value });
+                }
+              }}
+            >
+              <TabsList aria-label="Clock" variant="pill">
+                <TabsTab className="px-3" value="12h">
+                  12-hour
+                </TabsTab>
+                <TabsTab className="px-3" value="24h">
+                  24-hour
+                </TabsTab>
+              </TabsList>
+            </Tabs>
+          </m.div>
+        ) : null}
+      </AnimatePresence>
+      <AnimatePresence initial={false} mode="popLayout">
+        <m.p
+          key={`${display}-${showsClock(display) ? hourCycle : ""}`}
+          className="text-muted-foreground text-xs tabular-nums"
+          {...motionProps}
+        >
+          Example: {formatInboxTimestamp(sample, display, hourCycle)}
+        </m.p>
+      </AnimatePresence>
+    </LazyMotion>
+  );
 }
 
 type InboxAppearanceSettingsProps = {
@@ -89,23 +201,21 @@ export function InboxAppearanceSettings({
           description="Scale inbox item text while preserving title, summary, and metadata hierarchy."
           title="Text size"
         />
-        <Tabs
-          value={getInboxTextScaleValue(preferences.inboxFontSizePx)}
-          onValueChange={(value) => {
-            const fontSizePx = getInboxTextScaleFontSize(value as string);
-            if (fontSizePx !== null) {
-              setPreferences({ inboxFontSizePx: fontSizePx });
+        <SliderComfortable
+          aria-label="Inbox text size"
+          className="max-w-xs"
+          formatValue={(index) => INBOX_TEXT_SCALE_OPTIONS[index]?.label ?? ""}
+          max={INBOX_TEXT_SCALE_OPTIONS.length - 1}
+          min={0}
+          step={1}
+          value={getInboxTextScaleIndex(preferences.inboxFontSizePx)}
+          onChange={(index) => {
+            const option = INBOX_TEXT_SCALE_OPTIONS[index];
+            if (option) {
+              setPreferences({ inboxFontSizePx: option.fontSizePx });
             }
           }}
-        >
-          <TabsList aria-label="Inbox text scale" variant="pill">
-            {INBOX_TEXT_SCALE_OPTIONS.map((option) => (
-              <TabsTab key={option.value} className="px-3" value={option.value}>
-                {option.label}
-              </TabsTab>
-            ))}
-          </TabsList>
-        </Tabs>
+        />
       </div>
 
       <div className="space-y-3 py-1">
@@ -113,49 +223,25 @@ export function InboxAppearanceSettings({
           description="Relative recency is the default for inbox timestamps; switch to absolute when you need exact dates."
           title="Timestamp"
         />
-        <Group aria-label="Timestamp format">
-          <Select
-            items={[
-              { label: "Relative", value: "relative" },
-              { label: "Absolute", value: "absolute" },
-            ]}
-            value={preferences.inboxTimestampDisplay}
-            onValueChange={(value) => {
-              if (value === "absolute" || value === "relative") {
-                setPreferences({ inboxTimestampDisplay: value });
-              }
-            }}
-          >
-            <SelectTrigger className="w-fit min-w-0" size="sm">
-              <SelectValue className="flex-none" />
-            </SelectTrigger>
-            <SelectPopup>
-              <SelectItem value="relative">Relative</SelectItem>
-              <SelectItem value="absolute">Absolute</SelectItem>
-            </SelectPopup>
-          </Select>
-          <GroupSeparator />
-          <Select
-            items={[
-              { label: "12-hour", value: "12h" },
-              { label: "24-hour", value: "24h" },
-            ]}
-            value={preferences.inboxTimestampHourCycle}
-            onValueChange={(value) => {
-              if (value === "12h" || value === "24h") {
-                setPreferences({ inboxTimestampHourCycle: value });
-              }
-            }}
-          >
-            <SelectTrigger className="w-fit min-w-0" size="sm">
-              <SelectValue className="flex-none" />
-            </SelectTrigger>
-            <SelectPopup>
-              <SelectItem value="12h">12-hour</SelectItem>
-              <SelectItem value="24h">24-hour</SelectItem>
-            </SelectPopup>
-          </Select>
-        </Group>
+        <Tabs
+          value={getTimestampFormat(preferences.inboxTimestampDisplay)}
+          onValueChange={(value) => {
+            const format = TIMESTAMP_FORMATS.find((option) => option.value === value);
+            // Picking Relative again keeps the style already chosen.
+            if (format && format.value !== getTimestampFormat(preferences.inboxTimestampDisplay)) {
+              setPreferences({ inboxTimestampDisplay: format.value });
+            }
+          }}
+        >
+          <TabsList aria-label="Timestamp format" variant="pill">
+            {TIMESTAMP_FORMATS.map((option) => (
+              <TabsTab key={option.value} className="px-3" value={option.value}>
+                {option.label}
+              </TabsTab>
+            ))}
+          </TabsList>
+        </Tabs>
+        <TimestampOptions preferences={preferences} setPreferences={setPreferences} />
       </div>
 
       <div className="space-y-3 py-1">

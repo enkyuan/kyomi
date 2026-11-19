@@ -23,7 +23,7 @@ import { EmailDialog } from "./email-dialog";
 const DESTRUCTIVE_FLAT_CLASS =
   "text-destructive hover:bg-destructive/10 data-pressed:bg-destructive/10";
 
-export const accountSection = {
+const accountSection = {
   description: "Manage your account details, connected accounts, and security settings.",
   icon: UserIcon,
   name: "Account",

@@ -37,7 +37,7 @@ export function registerUserRoutes(app: Elysia) {
           inboxDensity?: "comfortable" | "compact";
           articleOpenBehavior?: "split" | "reader";
           inboxMarkReadBehavior?: "on-open" | "after-delay" | "manual";
-          inboxTimestampDisplay?: "absolute" | "relative";
+          inboxTimestampDisplay?: "absolute" | "relative" | "relative-long" | "date" | "iso";
           inboxTimestampHourCycle?: "12h" | "24h";
           inboxFontSizePx?: number;
           inboxShowFavicons?: boolean;

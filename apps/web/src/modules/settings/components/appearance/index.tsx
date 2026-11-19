@@ -8,7 +8,7 @@ import { ReaderSettings } from "./reader";
 import { ThemeSwitcher } from "./theme-switcher";
 import { useAppearancePanel } from "@modules/settings/hooks/use-appearance-panel";
 
-export const appearanceSection = {
+const appearanceSection = {
   description: "Adjust theme and inbox presentation.",
   icon: BrushIcon,
   name: "Appearance",

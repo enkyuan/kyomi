@@ -21,7 +21,13 @@ export const userPreferencesResponse = t.Object({
     t.Literal("after-delay"),
     t.Literal("manual"),
   ]),
-  inboxTimestampDisplay: t.Union([t.Literal("absolute"), t.Literal("relative")]),
+  inboxTimestampDisplay: t.Union([
+    t.Literal("absolute"),
+    t.Literal("relative"),
+    t.Literal("relative-long"),
+    t.Literal("date"),
+    t.Literal("iso"),
+  ]),
   inboxTimestampHourCycle: t.Union([t.Literal("12h"), t.Literal("24h")]),
   inboxFontSizePx: t.Number({ minimum: 14, maximum: 20 }),
   inboxShowFavicons: t.Boolean(),
@@ -45,7 +51,15 @@ export const updateUserPreferencesBody = t.Object({
   inboxMarkReadBehavior: t.Optional(
     t.Union([t.Literal("on-open"), t.Literal("after-delay"), t.Literal("manual")]),
   ),
-  inboxTimestampDisplay: t.Optional(t.Union([t.Literal("absolute"), t.Literal("relative")])),
+  inboxTimestampDisplay: t.Optional(
+    t.Union([
+      t.Literal("absolute"),
+      t.Literal("relative"),
+      t.Literal("relative-long"),
+      t.Literal("date"),
+      t.Literal("iso"),
+    ]),
+  ),
   inboxTimestampHourCycle: t.Optional(t.Union([t.Literal("12h"), t.Literal("24h")])),
   inboxFontSizePx: t.Optional(t.Number({ minimum: 14, maximum: 20 })),
   inboxShowFavicons: t.Optional(t.Boolean()),

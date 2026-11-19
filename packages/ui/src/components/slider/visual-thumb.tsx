@@ -24,6 +24,8 @@ export function VisualThumb({
 }: VisualThumbProps) {
   const thumbInnerStyle = useMemo(
     () => ({
+      width: THUMB_SIZE_REST,
+      height: THUMB_SIZE_REST,
       backgroundColor: thumbColor ?? "white",
       boxShadow: "0 1px 2px rgba(0,0,0,0.1)",
       border: thumbBorderColor ? `1px solid ${thumbBorderColor}` : undefined,
@@ -43,25 +45,15 @@ export function VisualThumb({
       }}
       initial={false}
     >
-      <m.span
-        className="block rounded-full"
-        initial={false}
-        animate={{
-          width: THUMB_SIZE_REST,
-          height: THUMB_SIZE_REST,
-        }}
-        transition={springs.fast}
-        style={thumbInnerStyle}
-      />
+      <m.span className="block rounded-full" initial={false} style={thumbInnerStyle} />
       <m.span
         className="absolute rounded-full border border-[#6B97FF] pointer-events-none"
         initial={false}
         animate={{
           opacity: focusedThumb === index ? 1 : 0,
-          width: THUMB_SIZE + 4,
-          height: THUMB_SIZE + 4,
         }}
         transition={springs.fast}
+        style={{ width: THUMB_SIZE + 4, height: THUMB_SIZE + 4 }}
       />
     </m.span>
   );

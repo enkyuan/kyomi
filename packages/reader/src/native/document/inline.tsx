@@ -1,4 +1,4 @@
-import { Dimensions, ScrollView, Text, View, type TextStyle } from "react-native";
+import { ScrollView, Text, useWindowDimensions, View, type TextStyle } from "react-native";
 import { SvgXml } from "react-native-svg";
 import type { ReactNode } from "react";
 import type { ReaderInline } from "../../core/document";
@@ -9,6 +9,8 @@ import { fitMathLayout, layoutMathSvg, mathmlToPlainText, texToUnicode } from ".
 type InlineContext = Pick<ReaderNativeContextValue, "theme" | "host" | "footnotes"> & {
   /** Which faces an ancestor already applied, so strong inside emphasis gets the bold-italic face. */
   readonly ambient?: { readonly strong: boolean; readonly emphasis: boolean };
+  /** System font scale, so formula SVGs follow enlarged text. */
+  readonly fontScale: number;
 };
 
 const QUOTE_OPEN = "“";
@@ -229,10 +231,9 @@ function formatStyle(
   }
 }
 
-function mathFontSize(theme: InlineContext["theme"]): number {
+function mathFontSize(theme: InlineContext["theme"], fontScale: number): number {
   // Text scales with the system font size up to `maxFontSizeMultiplier`; the SVG must follow it,
   // or a formula stays small next to enlarged text.
-  const fontScale = Dimensions.get("window").fontScale;
   const scale = Number.isFinite(fontScale) && fontScale > 0 ? fontScale : 1;
   return theme.fontSize * Math.min(scale, theme.maxFontSizeMultiplier);
 }
@@ -249,7 +250,7 @@ function renderMath(
   const layout =
     node.svg === undefined
       ? null
-      : layoutMathSvg(node.svg, mathFontSize(theme), theme.colors.foreground);
+      : layoutMathSvg(node.svg, mathFontSize(theme, ctx.fontScale), theme.colors.foreground);
   if (layout) {
     const label = node.tex ?? "Math";
     // An inline view's bottom edge sits on the text baseline (React Native positions the
@@ -349,8 +350,9 @@ export function renderInlines(
 
 /** Nested native `Text` for KDM inlines; style the parent `Text` for font, color and size. */
 export function Inlines({ inlines }: { readonly inlines: readonly ReaderInline[] }): ReactNode {
-  const ctx = useReaderNative();
-  return renderInlines(inlines, ctx);
+  const native = useReaderNative();
+  const { fontScale } = useWindowDimensions();
+  return renderInlines(inlines, { ...native, fontScale });
 }
 
 export { inlinesToText };

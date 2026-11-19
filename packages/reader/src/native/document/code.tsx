@@ -23,7 +23,7 @@ function CopyButton({ value }: { readonly value: string }) {
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   // 0 shows the copy glyph, 1 the check. A timing value retargets from where it is, so pressing
   // again mid-swap reverses smoothly instead of restarting.
-  const swap = useRef(new Animated.Value(0)).current;
+  const [swap] = useState(() => new Animated.Value(0));
   useEffect(() => () => clearTimeout(timer.current), []);
   useEffect(() => {
     Animated.timing(swap, {
