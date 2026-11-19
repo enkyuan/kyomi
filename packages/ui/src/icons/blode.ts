@@ -54,6 +54,8 @@ export {
   RefreshCwIcon,
   RssIcon,
   SearchIcon,
+  StarFilledIcon,
+  StarIcon,
   SettingsFilledIcon,
   SquareIcon,
   TextFilledIcon,

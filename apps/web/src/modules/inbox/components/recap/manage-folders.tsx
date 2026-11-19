@@ -7,6 +7,8 @@ import {
   FileArrowRightOutFilledIcon,
   FilterDescFilledIcon,
   FolderFilledIcon,
+  StarFilledIcon,
+  StarIcon,
   EditBigFilledIcon,
   BarsThreeFilledIcon,
   PencilIcon,
@@ -14,6 +16,13 @@ import {
   PinIcon,
   PlusCircleFilledIcon,
 } from "@kyomi/ui/icons/blode";
+import {
+  AnimatePresence,
+  LazyMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "@kyomi/ui/lib/motion";
 import { useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
 import {
   AlertDialog,
@@ -245,11 +254,21 @@ export function ManageFolders({
                     value={`folder-${folder.id}`}
                     onSelect={() => toggle(folder.id)}
                   >
-                    <FolderFilledIcon className="kyomi-command-item-icon" />
+                    <FolderGlyph
+                      disabled={pinMutation.isPending}
+                      folder={folder}
+                      onTogglePin={() =>
+                        pinMutation.mutate({
+                          folderId: folder.id,
+                          isPinned: !folder.isPinned,
+                          name: folder.name,
+                        })
+                      }
+                    />
                     <span className="min-w-0 truncate">{folder.name}</span>
                     <sup
                       aria-label={formatFeedCount(folder.feedCount)}
-                      className="-ms-1.5 self-start pt-2 font-normal text-[10px] text-muted-foreground tabular-nums leading-none"
+                      className="-ms-2.5 self-start pt-2 font-normal text-[10px] text-muted-foreground tabular-nums leading-none"
                     >
                       {folder.feedCount}
                     </sup>
@@ -364,6 +383,64 @@ export function ManageFolders({
         </AlertDialogPopup>
       </AlertDialog>
     </>
+  );
+}
+
+/**
+ * The folder's glyph, which turns into a star on hover: tap it to pin (outline) or unpin (filled,
+ * in the palette's amber). Icons swap with the shared recipe: scale 0.25 to 1, opacity and a 4px
+ * blur, on a spring with no bounce.
+ */
+function FolderGlyph({
+  disabled,
+  folder,
+  onTogglePin,
+}: {
+  disabled: boolean;
+  folder: RecapFolder;
+  onTogglePin: () => void;
+}) {
+  const [hovered, setHovered] = useState(false);
+  const reduced = useReducedMotion();
+  const Star = folder.isPinned ? StarFilledIcon : StarIcon;
+  const swap = {
+    animate: { filter: "blur(0px)", opacity: 1, scale: 1 },
+    exit: reduced ? { opacity: 0 } : { filter: "blur(4px)", opacity: 0, scale: 0.25 },
+    initial: reduced ? { opacity: 0 } : { filter: "blur(4px)", opacity: 0, scale: 0.25 },
+    transition: { bounce: 0, duration: 0.3, type: "spring" as const },
+  };
+
+  return (
+    <LazyMotion features={domAnimation}>
+      <button
+        aria-label={folder.isPinned ? `Unpin ${folder.name}` : `Pin ${folder.name}`}
+        className="relative mx-0.5 grid size-5 shrink-0 place-items-center rounded-md outline-none"
+        disabled={disabled}
+        type="button"
+        onBlur={() => setHovered(false)}
+        onClick={(event) => {
+          event.stopPropagation();
+          onTogglePin();
+        }}
+        onFocus={() => setHovered(true)}
+        onPointerEnter={() => setHovered(true)}
+        onPointerLeave={() => setHovered(false)}
+      >
+        <AnimatePresence initial={false} mode="popLayout">
+          {hovered ? (
+            <m.span key="star" className="absolute grid place-items-center" {...swap}>
+              <Star
+                className={`size-5 ${folder.isPinned ? "text-amber-500" : "text-muted-foreground"}`}
+              />
+            </m.span>
+          ) : (
+            <m.span key="folder" className="absolute grid place-items-center" {...swap}>
+              <FolderFilledIcon className="size-5 text-muted-foreground" />
+            </m.span>
+          )}
+        </AnimatePresence>
+      </button>
+    </LazyMotion>
   );
 }
 
