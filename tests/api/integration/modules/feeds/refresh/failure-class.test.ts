@@ -115,7 +115,7 @@ describe("runFeedRefresh failure results", () => {
     expect(result).toMatchObject({ ok: false, failureClass: "http_404", permanent: true });
   });
 
-  test("reports other client errors as http_4xx and rate limiting as retryable", async () => {
+  test("reports other client errors as http_4xx and schedules rate-limited feeds for a later poll", async () => {
     const forbidden = createFeedRefreshDb();
     globalThis.fetch = mockFetch(() => new Response("no", { status: 403 }));
     expect(await runFeedRefresh(forbidden.db as never, "feed-1")).toMatchObject({
@@ -126,7 +126,8 @@ describe("runFeedRefresh failure results", () => {
     const limited = createFeedRefreshDb();
     globalThis.fetch = mockFetch(() => new Response("slow down", { status: 429 }));
     expect(await runFeedRefresh(limited.db as never, "feed-1")).toMatchObject({
-      failureClass: "http_4xx",
+      failureClass: "http_429",
+      retryScheduled: true,
       permanent: false,
     });
   });

@@ -25,8 +25,11 @@ import type {
 } from "@kyomi/reader/schemas";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useTimestamp } from "@kyomi/ui/hooks/use-timestamp";
-import { useLayoutEffect, useRef, useState } from "react";
+import { captureReaderBody } from "@integrations/posthog/capture";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { RefObject } from "react";
+
+const readerImageUrl = (source: string) => `/api/reader-image?url=${encodeURIComponent(source)}`;
 
 function estimateReadingTime(html: string): number {
   const text = html
@@ -280,6 +283,29 @@ export function Article({
   const prefersReducedMotion = useReducedMotion();
   const toolbar = useReaderToolbar({ item, readerFocusMode });
   const articleRef = useRef<HTMLElement>(null);
+  const { bodyKind, contentSource } = toolbar.displayReader;
+  const mode = toolbar.toolbarProps.activeMode;
+  useEffect(() => {
+    const root = articleRef.current?.querySelector("[data-reader-body]");
+    if (!root) return;
+    // HTML enhancement and Markdown can mount after the first paint.
+    let reported = false;
+    const inspect = () => {
+      const body = root.querySelector<HTMLElement>(".article-body");
+      if (!body || !body.getClientRects().length || !body.innerText.trim()) return;
+      if (reported) return;
+      reported = true;
+      captureReaderBody({ mode, bodyKind, contentSource });
+      observer.disconnect();
+    };
+    const observer = new MutationObserver(inspect);
+    observer.observe(root, { subtree: true, childList: true, characterData: true });
+    const frame = requestAnimationFrame(inspect);
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
+  }, [item.id, bodyKind, contentSource, mode]);
   const floatingToolbarBounds = useFloatingToolbarBounds(
     articleRef,
     toolbar.floatingToolbarEdge === "top",
@@ -325,6 +351,7 @@ export function Article({
       >
         {shouldRenderArticleBody ? (
           <ReaderContent
+            transformImageUrl={readerImageUrl}
             reader={toolbar.displayReader}
             openLinksInNewTab={toolbar.openLinksInNewTab}
             showLinkPreviews={toolbar.showLinkPreviews}

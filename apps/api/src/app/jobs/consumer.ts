@@ -22,7 +22,7 @@ export const WorkerLive = Layer.effectDiscard(
 
     const handle = yield* makeJobHandler;
     const onFailure = yield* makeFailureReporter;
-    const consumerPrefix = `api-worker-${process.pid}`;
+    const consumerPrefix = `api-worker-${crypto.randomUUID()}`;
 
     const consumers = config.JOB_STREAMS.map(
       (streamKey): StreamConsumer<JobFailure> => ({

@@ -72,13 +72,17 @@ function faviconHeaders(extra: Record<string, string | null | undefined> = {}) {
  * the upstream response is passed on beyond the status, cache lifetime and image bytes. The API
  * already serves an image type; this re-checks it so a regression there cannot reach the app origin.
  */
-export async function proxyFavicon(request: Request) {
-  const domain = new URL(request.url).searchParams.get("domain");
+export const proxyFavicon = (request: Request) => proxyImage(request, "favicon");
+export const proxyReaderImage = (request: Request) => proxyImage(request, "reader-image");
+
+async function proxyImage(request: Request, kind: "favicon" | "reader-image") {
+  const param = kind === "favicon" ? "domain" : "url";
+  const domain = new URL(request.url).searchParams.get(param);
   if (!domain) {
     return new Response("Invalid domain", { status: 400, headers: faviconHeaders() });
   }
 
-  const url = resolveApiUrl("/api/favicon", `?${new URLSearchParams({ domain })}`);
+  const url = resolveApiUrl(`/api/${kind}`, `?${new URLSearchParams({ [param]: domain })}`);
   let upstream: Response;
   try {
     upstream = await fetch(url, {
@@ -103,7 +107,7 @@ export async function proxyFavicon(request: Request) {
 
   let body: Awaited<ReturnType<typeof readCapped>>;
   try {
-    body = await readCapped(upstream, FAVICON_MAX_BYTES);
+    body = await readCapped(upstream, kind === "favicon" ? FAVICON_MAX_BYTES : 8 * 1024 * 1024);
   } catch (error) {
     // The connection dropped or the timeout fired after the headers arrived.
     console.error(`[api] GET ${url.pathname} -> body error: ${formatErrorForLog(error)}`);

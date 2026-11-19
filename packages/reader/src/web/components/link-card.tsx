@@ -58,7 +58,12 @@ function ReaderLinkPreviewCard({
 
 function shouldEnhanceAnchor(anchor: HTMLAnchorElement): boolean {
   const href = anchor.getAttribute("href");
-  if (!href || href.startsWith("#")) {
+  if (
+    !href ||
+    href.startsWith("#") ||
+    anchor.childElementCount > 0 ||
+    !anchor.textContent?.trim()
+  ) {
     return false;
   }
   if (anchor.getAttribute("data-reader-link-preview") === "true") {
@@ -84,9 +89,9 @@ function collectAnchorProps(anchor: HTMLAnchorElement): Record<string, string> {
   return props;
 }
 
-export function mountReaderLinkPreviewCards(container: HTMLElement): () => void {
+export function mountReaderLinkPreviewCards(container: HTMLElement): (() => void) | null {
   const mountedRoots: Root[] = [];
-  const mountedHosts: HTMLElement[] = [];
+  const replacements: Array<{ host: HTMLElement; anchor: HTMLAnchorElement }> = [];
   let disposed = false;
 
   for (const anchor of Array.from(container.querySelectorAll<HTMLAnchorElement>("a[href]"))) {
@@ -118,23 +123,24 @@ export function mountReaderLinkPreviewCards(container: HTMLElement): () => void 
 
     anchor.remove();
     mountedRoots.push(root);
-    mountedHosts.push(host);
+    replacements.push({ host, anchor });
   }
 
+  if (!mountedRoots.length) return null;
   return () => {
     if (disposed) {
       return;
     }
     disposed = true;
 
+    // Keep the publisher link in the body while options change or enhancements run again.
+    for (const { host, anchor } of replacements) host.replaceWith(anchor);
+
     // These preview cards live in nested standalone React roots. Defer unmount to the next
     // task so parent reader cleanup does not synchronously unmount child roots mid-commit.
     window.setTimeout(() => {
       for (const root of mountedRoots) {
         root.unmount();
-      }
-      for (const host of mountedHosts) {
-        host.remove();
       }
     }, 0);
   };

@@ -86,6 +86,7 @@ function isPermanentFetchError(error: string | undefined): boolean {
 }
 
 function fetchFailureClass(status: number | undefined, permanent: boolean): FeedFetchFailureClass {
+  if (status === 429) return "http_429";
   if (status === 404) return "http_404";
   if (status !== undefined && status >= 500) return "http_5xx";
   if (status !== undefined && status >= 400) return "http_4xx";
@@ -147,7 +148,11 @@ function isFeedsUrlUniqueViolation(error: unknown): boolean {
   if (!error || typeof error !== "object") {
     return false;
   }
-  const databaseError = error as { code?: unknown; constraint?: unknown };
+  // Drizzle wraps a node-postgres constraint violation in DrizzleQueryError.
+  const databaseError = (error instanceof Error && error.cause ? error.cause : error) as {
+    code?: unknown;
+    constraint?: unknown;
+  };
   return databaseError.code === "23505" && databaseError.constraint === "feeds_url_unique";
 }
 
@@ -306,6 +311,7 @@ async function fetchRefreshDocument(
 }
 
 async function resolveHtmlRefreshDocument(input: {
+  window?: Parameters<typeof parseFeedDocument>[3];
   feedId: string;
   fetched: FetchedFeedDocument;
   fetchDocument: (
@@ -336,7 +342,12 @@ async function resolveHtmlRefreshDocument(input: {
     return {
       ok: true,
       fetched: discoveredFetched,
-      parsed: parseFeedDocument(discoveredFetched.body, input.feedId, discoveredFetched.finalUrl),
+      parsed: parseFeedDocument(
+        discoveredFetched.body,
+        input.feedId,
+        discoveredFetched.finalUrl,
+        input.window,
+      ),
       discoveredFromUrl: input.fetched.finalUrl,
       discoveryProvenance: SCHEDULED_HTML_AUTODISCOVERY_PROVENANCE,
     };
@@ -349,7 +360,68 @@ async function resolveHtmlRefreshDocument(input: {
   }
 }
 
+/** An old category, comments or author feed must never silently become a site's main feed.
+ * Only recover a conventional endpoint under the catalogued homepage when the new feed
+ * independently declares that same homepage and publication title. */
+async function recoverGoneCatalogFeed(
+  feed: { id: string; url: string; link: string | null; title: string },
+  fetchDocument: Parameters<typeof resolveHtmlRefreshDocument>[0]["fetchDocument"],
+  window: NonNullable<Parameters<typeof parseFeedDocument>[3]>,
+) {
+  if (!feed.link || !URL.canParse(feed.link) || !URL.canParse(feed.url)) return null;
+  const home = new URL(feed.link);
+  const old = new URL(feed.url);
+  const homePath = home.pathname.replace(/\/?$/, "/");
+  if (
+    home.origin !== old.origin ||
+    home.username ||
+    home.password ||
+    home.search ||
+    home.hash ||
+    old.search ||
+    old.hash ||
+    !old.pathname.startsWith(homePath) ||
+    !/^(?:feeds?\/)?(?:feed|rss|atom|index)(?:\.(?:xml|rss|atom))?\/?$/i.test(
+      old.pathname.slice(homePath.length),
+    )
+  )
+    return null;
+
+  const page = await fetchDocument(home.href, null, null);
+  if (
+    !page.ok ||
+    page.notModified ||
+    page.finalUrl.replace(/\/$/, "") !== home.href.replace(/\/$/, "")
+  )
+    return null;
+  const alternate = discoverFeedUrlFromHtml(page.body, page.finalUrl);
+  if (!alternate || new URL(alternate).origin !== home.origin || alternate === old.href)
+    return null;
+  const fetched = await fetchDocument(alternate, null, null);
+  if (!fetched.ok || fetched.notModified || new URL(fetched.finalUrl).origin !== home.origin)
+    return null;
+  try {
+    const parsed = parseFeedDocument(fetched.body, feed.id, fetched.finalUrl, window);
+    if (
+      parsed.metadata.link?.replace(/\/$/, "") !== home.href.replace(/\/$/, "") ||
+      !feed.title.trim() ||
+      parsed.metadata.title.trim().toLowerCase() !== feed.title.trim().toLowerCase()
+    )
+      return null;
+    return {
+      ok: true as const,
+      fetched,
+      parsed,
+      discoveredFromUrl: home.href,
+      discoveryProvenance: "catalog_homepage_alternate",
+    };
+  } catch {
+    return null;
+  }
+}
+
 async function resolveRefreshDocument(input: {
+  window?: Parameters<typeof parseFeedDocument>[3];
   feedId: string;
   fetched: FetchedFeedDocument;
   fetchDocument: (
@@ -366,7 +438,12 @@ async function resolveRefreshDocument(input: {
     return {
       ok: true,
       fetched: input.fetched,
-      parsed: parseFeedDocument(input.fetched.body, input.feedId, input.fetched.finalUrl),
+      parsed: parseFeedDocument(
+        input.fetched.body,
+        input.feedId,
+        input.fetched.finalUrl,
+        input.window,
+      ),
       discoveredFromUrl: null,
       discoveryProvenance: null,
     };
@@ -713,6 +790,8 @@ export async function runFeedRefresh(
     hostRateLimiter?: HostRateLimiter;
     embeddingClassifier?: EmbeddingClassifierConfig;
     refreshGeneration?: number;
+    refreshIntervalMs?: number;
+    catalogRefreshIntervalMs?: number;
   },
 ): Promise<FeedRefreshResult> {
   const claimed = await claimFeedRefresh(database, feedId, options?.refreshGeneration);
@@ -743,6 +822,8 @@ export async function runFeedRefresh(
         faviconSource: feeds.faviconSource,
         etag: feeds.etag,
         lastModified: feeds.lastModified,
+        subscriberCount: feeds.subscriberCount,
+        catalogPreview: feeds.catalogPreview,
         lastRefreshSucceededAt: feeds.lastRefreshSucceededAt,
         lastRefreshFailedAt: feeds.lastRefreshFailedAt,
       })
@@ -764,7 +845,29 @@ export async function runFeedRefresh(
         hostRateLimiter: options?.hostRateLimiter,
       });
 
-    const fetched = await fetchDocument(feed.url, feed.etag, feed.lastModified);
+    const preview = options?.catalogRefreshIntervalMs !== undefined && feed.subscriberCount === 0;
+    const hydrate = !preview && feed.catalogPreview;
+    const interval =
+      (preview ? options?.catalogRefreshIntervalMs : options?.refreshIntervalMs) ?? 3_600_000;
+    const nextPoll = (now: Date) =>
+      sql`CASE WHEN ${preview} AND subscriber_count > 0 THEN NOW() ELSE ${new Date(now.getTime() + interval).toISOString()}::timestamptz AT TIME ZONE 'UTC' END`;
+    const until = new Date();
+    const window = preview
+      ? { since: new Date(until.getTime() - 7 * 86_400_000), until, limit: 3 }
+      : undefined;
+    const initial = await fetchDocument(
+      feed.url,
+      hydrate ? null : feed.etag,
+      hydrate ? null : feed.lastModified,
+    );
+    const recovered =
+      window &&
+      !feed.lastRefreshSucceededAt &&
+      !initial.ok &&
+      (initial.httpStatus === 404 || initial.httpStatus === 410)
+        ? await recoverGoneCatalogFeed(feed, fetchDocument, window)
+        : null;
+    const fetched = recovered?.fetched ?? initial;
     if (!fetched.ok) {
       const now = new Date();
       const permanent =
@@ -783,7 +886,7 @@ export async function runFeedRefresh(
           lastRefreshFailedAt: now,
           lastRefreshError: fetched.error,
           lastRefreshCompletedAt: now,
-          nextRefreshAt: new Date(now.getTime() + backoffMs),
+          nextRefreshAt: new Date(now.getTime() + Math.max(backoffMs, fetched.retryAfterMs ?? 0)),
         })
         .where(and(eq(feeds.id, feedId), eq(feeds.refreshGeneration, generation)))
         .returning({ id: feeds.id });
@@ -795,11 +898,15 @@ export async function runFeedRefresh(
         ok: false,
         itemCount: 0,
         error: `Feed fetch failed: ${fetched.error}`,
+        retryScheduled: preview || fetched.httpStatus === 429 || Boolean(fetched.retryAfterMs),
         failureClass: fetchFailureClass(fetched.httpStatus, permanent),
         permanent,
       };
     }
 
+    if (fetched.notModified && (hydrate || (!feed.etag && !feed.lastModified))) {
+      throw new Error("Publisher returned 304 to an unconditional request");
+    }
     if (fetched.notModified) {
       const now = new Date();
       let faviconPatch: {
@@ -809,6 +916,7 @@ export async function runFeedRefresh(
         updatedAt: Date;
       } | null = null;
       if (
+        !preview &&
         shouldResolveFavicon({
           currentUrl: feed.faviconUrl,
           currentSource: feed.faviconSource,
@@ -870,7 +978,7 @@ export async function runFeedRefresh(
             submittedUrl: feed.submittedUrl ?? feed.url,
             siteUrl: feed.siteUrl ?? feed.link,
             canonicalFeedUrl: feed.canonicalFeedUrl ?? feed.url,
-            nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000), // Next refresh in 1 hour
+            nextRefreshAt: nextPoll(now),
             ...(faviconPatch ?? {}),
           })
           .where(and(eq(feeds.id, feedId), eq(feeds.refreshGeneration, generation)))
@@ -922,11 +1030,14 @@ export async function runFeedRefresh(
       };
     }
 
-    const resolved = await resolveRefreshDocument({
-      feedId: feed.id,
-      fetched,
-      fetchDocument,
-    });
+    const resolved =
+      recovered ??
+      (await resolveRefreshDocument({
+        window,
+        feedId: feed.id,
+        fetched,
+        fetchDocument,
+      }));
     if (!resolved.ok) {
       return await markHtmlFeedRefreshFailed(
         database,
@@ -954,7 +1065,7 @@ export async function runFeedRefresh(
     const embeddingConfig = options?.embeddingClassifier;
     const embeddingCategoryStats = createEmbeddingStats(embeddingConfig);
     let items = Array.from(deduped.values());
-    const articleExtractionCandidateIds = selectExtractionPrefetchCandidates(items);
+    const articleExtractionCandidateIds = preview ? [] : selectExtractionPrefetchCandidates(items);
 
     // Keep the refresh critical path CPU/local-DB only. Full source-page text now flows through
     // article.extract jobs after items are visible, so feed rows are not blocked on article fetches.
@@ -969,11 +1080,13 @@ export async function runFeedRefresh(
     const prevLink = feed.link ?? null;
     const nextLink = parsed.metadata.link ?? null;
     const linkChanged = (prevLink ?? "") !== (nextLink ?? "");
-    const needsFavicon = shouldResolveFavicon({
-      currentUrl: feed.faviconUrl,
-      currentSource: feed.faviconSource,
-      linkChanged,
-    });
+    const needsFavicon =
+      !preview &&
+      shouldResolveFavicon({
+        currentUrl: feed.faviconUrl,
+        currentSource: feed.faviconSource,
+        linkChanged,
+      });
     let faviconPatch: {
       faviconUrl: string;
       faviconSource: string;
@@ -990,6 +1103,7 @@ export async function runFeedRefresh(
         submittedUrl: feed.submittedUrl ?? feed.url,
         siteUrl: parsed.metadata.link,
         canonicalFeedUrl: parsed.metadata.canonicalUrl,
+        catalogPreview: preview,
         discoveredFromUrl: resolved.discoveredFromUrl ?? feed.discoveredFromUrl,
         discoveryProvenance:
           resolved.discoveryProvenance ?? feed.discoveryProvenance ?? "direct_feed_refresh",
@@ -1000,7 +1114,7 @@ export async function runFeedRefresh(
         lastRefreshError: null,
         etag: fetchedForParse.etag,
         lastModified: fetchedForParse.lastModified,
-        nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000),
+        nextRefreshAt: nextPoll(now),
       };
       const persistFeed = (updateTx: typeof tx, patch: typeof feedPatch & { url?: string }) =>
         updateTx
@@ -1039,6 +1153,24 @@ export async function runFeedRefresh(
       }
 
       if (items.length > 0) {
+        // The conflict update below fills missing fields. For a verified publisher excerpt,
+        // clear its coupled representations in the same transaction so no stale excerpt or
+        // compiled document can outrank the recovered full text.
+        const excerpts = items.flatMap((item) =>
+          (item.excerptDigests ?? []).map(
+            (digest) =>
+              sql`(${item.canonicalUrl}::text, ${digest}::text, ${Buffer.byteLength(item.contentText ?? "")}::int)`,
+          ),
+        );
+        if (excerpts.length) {
+          await tx.execute(sql`UPDATE feed_items i SET content=NULL, content_raw=NULL, content_html=NULL,
+            content_text=NULL, content_markdown=NULL, content_sanitizer_version=NULL, content_document=NULL,
+            content_document_version=NULL, content_compiler_version=NULL
+            FROM (VALUES ${sql.join(excerpts, sql`,`)}) AS candidate(url,digest,bytes)
+            WHERE i.feed_id=${feed.id} AND i.canonical_url=candidate.url
+              AND octet_length(coalesce(i.content_text,'')) < candidate.bytes
+              AND encode(sha256(convert_to(i.content_raw,'UTF8')),'hex') = candidate.digest`);
+        }
         await tx
           .insert(feedItems)
           .values(
@@ -1063,6 +1195,9 @@ export async function runFeedRefresh(
               extractionErrorCode: item.extractionErrorCode,
               extractionErrorMessage: item.extractionErrorMessage,
               imageUrl: item.imageUrl,
+              catalogExpiresAt: preview
+                ? new Date(Math.min(item.publishedAt.getTime(), now.getTime()) + 7 * 86_400_000)
+                : null,
               publishedAt: item.publishedAt,
               createdAt: now,
               updatedAt: now,
@@ -1074,7 +1209,7 @@ export async function runFeedRefresh(
             target: [feedItems.feedId, feedItems.canonicalUrl],
             set: {
               title: sql`CASE WHEN length(trim(excluded.title)) > length(trim(${feedItems.title})) THEN excluded.title ELSE ${feedItems.title} END`,
-              link: sql`COALESCE(NULLIF(${feedItems.link}, ''), excluded.link)`,
+              link: sql`CASE WHEN ${feedItems.link} !~* '^https?://' OR ${feedItems.link} ~ '#(item|entry)-[0-9]+$' THEN excluded.link ELSE ${feedItems.link} END`,
               summary: sql`CASE WHEN length(COALESCE(excluded.summary, '')) > length(COALESCE(${feedItems.summary}, '')) THEN excluded.summary ELSE ${feedItems.summary} END`,
               content: sql`COALESCE(${feedItems.content}, excluded.content)`,
               contentHtml: sql`COALESCE(${feedItems.contentHtml}, excluded.content_html)`,
@@ -1094,12 +1229,20 @@ export async function runFeedRefresh(
               extractionErrorCode: sql`COALESCE(${feedItems.extractionErrorCode}, excluded.extraction_error_code)`,
               extractionErrorMessage: sql`COALESCE(${feedItems.extractionErrorMessage}, excluded.extraction_error_message)`,
               imageUrl: sql`COALESCE(${feedItems.imageUrl}, excluded.image_url)`,
+              catalogExpiresAt: sql`CASE WHEN excluded.catalog_expires_at IS NULL THEN NULL ELSE ${feedItems.catalogExpiresAt} END`,
               publishedAt: sql`LEAST(${feedItems.publishedAt}, excluded.published_at)`,
               updatedAt: now,
             },
           });
       }
 
+      if (preview) {
+        // Superseded preview entries become eligible for the bounded maintenance sweep.
+        await tx.execute(sql`UPDATE feed_items SET catalog_expires_at=LEAST(catalog_expires_at,NOW())
+          WHERE feed_id=${feed.id} AND catalog_expires_at > NOW() AND id NOT IN
+          (SELECT id FROM feed_items WHERE feed_id=${feed.id} AND catalog_expires_at > NOW()
+           ORDER BY published_at DESC, id DESC LIMIT 3)`);
+      }
       sourceTagAssignments = await syncParsedFeedItemTags(tx, items, now);
 
       await syncParsedFeedCategories(
@@ -1205,7 +1348,7 @@ export async function runFeedRefresh(
     return {
       ok: true,
       itemCount: items.length,
-      insertedCount: items.length, // Rough estimate as we don't have exact UPSERT counts right now
+      feedBodyCount: items.filter((item) => Boolean(item.content)).length,
       articleExtractionCandidateIds,
       documentItemIds: items.filter((item) => item.contentDocument).map((item) => item.id),
       contentLimitStats: parsed.contentLimitStats,

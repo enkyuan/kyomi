@@ -401,10 +401,10 @@ const x = 1;
       }
     });
 
-    test("keeps absolute and feed-relative http(s) links as the feed wrote them", () => {
+    test("keeps absolute and feed-relative http(s) links as absolute URLs", () => {
       expect(links(rss("https://example.com/posts/a"))).toEqual(["https://example.com/posts/a"]);
       expect(links(rss("http://example.com/posts/a"))).toEqual(["http://example.com/posts/a"]);
-      expect(links(rss("/posts/a"))).toEqual(["/posts/a"]);
+      expect(links(rss("/posts/a"))).toEqual(["https://example.com/posts/a"]);
       expect(links(atom("https://example.com/posts/b"))).toEqual(["https://example.com/posts/b"]);
       expect(links(jsonFeed("https://example.com/posts/c"))).toEqual([
         "https://example.com/posts/c",
@@ -646,4 +646,58 @@ describe("normalizeArticleUrl", () => {
     expect(item?.canonicalUrl).toBe("https://example.com/p");
     expect(elapsed).toBeLessThan(1_000);
   });
+});
+
+test("preserves Atom XHTML mixed content and falls back from external content to the supplied summary", () => {
+  const feed =
+    '<feed><entry><content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>First <em>middle</em> last</p></div></content></entry><entry><content src="other.bin" type="application/octet-stream"/><summary type="xhtml"><div><p>A summary</p></div></summary></entry></feed>';
+  const items = parseFeedDocument(feed, "f", "https://example.org/feed").items;
+  expect(items[0]?.contentHtml).toContain("First <em>middle</em> last");
+  expect(items[1]?.contentText).toContain("A summary");
+});
+
+test("reads RDF sibling items and their article URLs", () => {
+  const feed =
+    '<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><channel><title>Feed</title></channel><item rdf:about="https://example.org/post"><title>Post</title><description>Body</description></item></rdf:RDF>';
+  const [item] = parseFeedDocument(feed, "f", "https://example.org/rss").items;
+  expect(item?.link).toBe("https://example.org/post");
+  expect(item?.contentText).toBe("Body");
+});
+
+test("catalog preview selects three newest eligible entries in publication order before compiling bodies", () => {
+  const body = JSON.stringify({
+    items: [1, 14, 8, 5, 11, 10, 9].map((day) => ({
+      title: String(day),
+      url: `https://example.com/${day}`,
+      date_published: `2026-11-${String(day).padStart(2, "0")}T00:00:00Z`,
+      content_text: "Published here",
+    })),
+  });
+  const preview = parseFeedDocument(body, "feed", "https://example.com/feed", {
+    since: new Date("2026-11-04T00:00:00Z"),
+    until: new Date("2026-11-11T00:00:00Z"),
+    limit: 3,
+  });
+  expect(preview.items.map((item) => item.title)).toEqual(["11", "10", "9"]);
+  expect(parseFeedDocument(body, "feed", "https://example.com/feed").items).toHaveLength(7);
+  expect(() =>
+    parseFeedDocument('{"error":"rate limited"}', "feed", "https://example.com/feed"),
+  ).toThrow();
+});
+
+test("declared plain-text fields preserve literal markup through storage and text compilation", () => {
+  const text = "Examples of <em>literal</em> & other tags";
+  for (const feed of [
+    JSON.stringify({ items: [{ content_text: text }] }),
+    "<feed><entry><content type='text'>Examples of &lt;em&gt;literal&lt;/em&gt; &amp; other tags</content></entry></feed>",
+  ]) {
+    const [item] = parseFeedDocument(feed, "f", "https://example.org/feed").items;
+    expect(item).toMatchObject({
+      contentRaw: text,
+      contentText: text,
+      contentHtml: null,
+      contentSource: "text_fallback",
+    });
+    expect(item?.content).toContain("&lt;em&gt;");
+  }
 });

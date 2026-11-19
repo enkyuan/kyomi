@@ -8,6 +8,26 @@ import { normalizeSafeHttpUrl } from "../../core/url";
 export type ReaderImageUrlTransformer = (url: string) => string | null | undefined;
 
 /** Resolves an image URL against the article and routes it through the image transformer. */
+export function transformedImageUrl(
+  normalized: string,
+  transform?: ReaderImageUrlTransformer,
+): string | null {
+  const output = transform?.(normalized) ?? normalized;
+  // Only an explicit application transform may return a same-origin path.
+  if (transform && output.startsWith("/")) {
+    const base = "https://reader.invalid";
+    const resolved = normalizeSafeHttpUrl(output, base);
+    if (!resolved || new URL(resolved).origin !== base) return null;
+    const path = resolved.slice(base.length);
+    if (path.startsWith("//")) return null;
+    // Browser sanitization requires an absolute source. SSR document markup can use the same-site path.
+    return typeof window === "undefined"
+      ? path
+      : normalizeSafeHttpUrl(path, window.location.origin);
+  }
+  return normalizeSafeHttpUrl(output);
+}
+
 function resolveImageUrl(
   url: string,
   baseUrl: string | null,
@@ -17,7 +37,7 @@ function resolveImageUrl(
   if (!normalized) {
     return null;
   }
-  return normalizeSafeHttpUrl(transformImageUrl?.(normalized) ?? normalized);
+  return transformedImageUrl(normalized, transformImageUrl);
 }
 
 function rewriteAttribute(

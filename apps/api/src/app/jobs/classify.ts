@@ -66,5 +66,5 @@ export function classifyJobFailure(error: JobFailure): JobFailureClass {
  * the feed row, so the scheduler's backoff owns the next attempt and the job is acknowledged.
  */
 export function isNonRetryableFeedRefreshFailure(result: FeedRefreshResult): boolean {
-  return !result.ok && Boolean(result.permanent);
+  return !result.ok && Boolean(result.permanent || result.retryScheduled);
 }

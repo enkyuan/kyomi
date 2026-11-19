@@ -82,3 +82,15 @@ describe("image proxying survives the sanitizer's restructuring", () => {
     );
   });
 });
+
+test("the web route survives sanitizing and an external-looking relative transform is dropped", () => {
+  const html = '<img src="/photos/cover.jpg" alt="">';
+  const origin = "https://publisher.example/article";
+  const path = "/api/reader-image?url=https%3A%2F%2Fpublisher.example%2Fphotos%2Fcover.jpg";
+  expect(imageUrls(prepareArticleHtml(html, origin, undefined, () => path))).toEqual([
+    new URL(path, window.location.origin).href,
+  ]);
+  expect(
+    imageUrls(prepareArticleHtml(html, origin, undefined, () => "/.//elsewhere.example/photo")),
+  ).toEqual([]);
+});

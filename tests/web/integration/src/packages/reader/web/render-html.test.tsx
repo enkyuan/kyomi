@@ -869,3 +869,16 @@ describe("RenderHtml – fidelity layout mode", () => {
     });
   });
 });
+
+test("keeps the only article link when DOM enhancements run again", async () => {
+  const { container } = render(
+    <RenderHtml html={'<figure><a href="https://video.example/watch">Video player</a></figure>'} />,
+  );
+  await waitFor(() =>
+    expect(container.querySelector("[data-reader-link-preview]")?.textContent).toBe("Video player"),
+  );
+  const first = container.querySelector("[data-reader-link-preview]");
+  container.querySelector("figure")?.append(document.createTextNode(" "));
+  await new Promise((resolve) => setTimeout(resolve, 150));
+  expect(container.querySelector("[data-reader-link-preview]")).toBe(first);
+});

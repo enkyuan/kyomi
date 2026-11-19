@@ -29,8 +29,8 @@ export type SchedulerOptions = {
 export function normalizeSchedulerOptions(options: SchedulerOptions = {}) {
   return {
     subscribedLimit: Math.min(Math.max(options.subscribedLimit ?? 50, 1), 5_000),
-    globalLimit: Math.min(Math.max(options.globalLimit ?? 10, 0), 1_000),
-    maxQueuedRefreshJobs: Math.min(Math.max(options.maxQueuedRefreshJobs ?? 25, 1), 1_000_000),
+    globalLimit: Math.min(Math.max(options.globalLimit ?? 64, 0), 1_000),
+    maxQueuedRefreshJobs: Math.min(Math.max(options.maxQueuedRefreshJobs ?? 128, 1), 1_000_000),
     queuedLeaseMs: Math.min(Math.max(options.queuedLeaseMs ?? 15 * 60_000, 60_000), 86_400_000),
     runningLeaseMs: Math.min(Math.max(options.runningLeaseMs ?? 30 * 60_000, 60_000), 86_400_000),
     tickMs: Math.min(Math.max(options.tickMs ?? 60_000, 1_000), 3_600_000),
@@ -39,8 +39,7 @@ export function normalizeSchedulerOptions(options: SchedulerOptions = {}) {
 
 export function buildFeedRefreshClaimSql(input: {
   now: Date;
-  staleQueuedBefore: Date;
-  staleRunningBefore: Date;
+  remainingCapacity?: number;
   subscribedLimit: number;
   globalLimit: number;
 }) {
@@ -48,16 +47,10 @@ export function buildFeedRefreshClaimSql(input: {
     WITH subscribed_due AS (
       SELECT f.id, 'scheduled'::text AS reason
       FROM feeds f
-      WHERE EXISTS (
-        SELECT 1 FROM feed_subscriptions fs WHERE fs.feed_id = f.id
-      )
-        AND (f.next_refresh_at IS NULL OR f.next_refresh_at <= ${input.now})
-        AND (
-          f.refresh_status NOT IN ('running', 'queued')
-          OR (f.refresh_status = 'queued' AND f.updated_at <= ${input.staleQueuedBefore})
-          OR (f.refresh_status = 'running' AND f.updated_at <= ${input.staleRunningBefore})
-        )
-      ORDER BY f.next_refresh_at NULLS FIRST, f.id
+      WHERE f.subscriber_count > 0
+        AND f.refresh_status NOT IN ('running','queued')
+        AND coalesce(f.next_refresh_at, '-infinity'::timestamp) <= ${input.now.toISOString()}::timestamp
+      ORDER BY coalesce(f.next_refresh_at, '-infinity'::timestamp), f.id
       FOR UPDATE SKIP LOCKED
       LIMIT ${input.subscribedLimit}
     ),
@@ -65,34 +58,25 @@ export function buildFeedRefreshClaimSql(input: {
       SELECT f.id, 'global_scheduled'::text AS reason
       FROM feeds f
       WHERE ${input.globalLimit} > 0
-        AND NOT EXISTS (
-          SELECT 1 FROM feed_subscriptions fs WHERE fs.feed_id = f.id
-        )
-        AND (f.next_refresh_at IS NULL OR f.next_refresh_at <= ${input.now})
-        AND (
-          f.refresh_status NOT IN ('running', 'queued')
-          OR (f.refresh_status = 'queued' AND f.updated_at <= ${input.staleQueuedBefore})
-          OR (f.refresh_status = 'running' AND f.updated_at <= ${input.staleRunningBefore})
-        )
-      ORDER BY
-        CASE WHEN EXISTS (
-          SELECT 1 FROM feed_items fi WHERE fi.feed_id = f.id
-        ) THEN 1 ELSE 0 END,
-        f.next_refresh_at NULLS FIRST,
-        f.id
+        AND f.subscriber_count = 0
+        AND f.refresh_status NOT IN ('running','queued')
+        AND coalesce(f.next_refresh_at, '-infinity'::timestamp) <= ${input.now.toISOString()}::timestamp
+      ORDER BY coalesce(f.next_refresh_at, '-infinity'::timestamp), f.id
       FOR UPDATE SKIP LOCKED
-      LIMIT ${input.globalLimit}
+      LIMIT LEAST(${input.globalLimit}::int,
+        ${input.remainingCapacity ?? input.subscribedLimit + input.globalLimit}::int - (SELECT count(*) FROM subscribed_due))
     ),
     claimed AS (
       SELECT * FROM subscribed_due
       UNION ALL
       SELECT * FROM global_due
+      LIMIT ${input.remainingCapacity ?? input.subscribedLimit + input.globalLimit}
     )
     UPDATE feeds
     SET refresh_status = 'queued',
         refresh_generation = feeds.refresh_generation + 1,
         last_refresh_error = NULL,
-        updated_at = ${input.now}
+        updated_at = ${input.now.toISOString()}
     FROM claimed
     WHERE feeds.id = claimed.id
     RETURNING feeds.id AS "feedId", claimed.reason AS reason,
@@ -100,39 +84,43 @@ export function buildFeedRefreshClaimSql(input: {
   `;
 }
 
-export const countActiveQueuedFeedRefreshes = Effect.fn("feed.scheduler.countQueued")(function* (
-  staleQueuedBefore: Date,
-) {
-  const db = yield* Db;
-  const result = yield* db.use("feed.scheduler.count_queued", (client) =>
-    client.execute(sql<{ count: number }>`
-      SELECT count(*)::int AS count
-      FROM feeds
-      WHERE refresh_status = 'queued'
-        AND updated_at > ${staleQueuedBefore}
-    `),
-  );
-  return rowsFromExecute<{ count: number }>(result)[0]?.count ?? 0;
-});
-
+/** Serialize scheduler admission across replicas. READ COMMITTED gives the count after the
+ * advisory lock its own snapshot, including the previous scheduler's committed claims. */
 export const claimDueFeedRefreshes = Effect.fn("feed.scheduler.claim")(function* (
-  options: SchedulerOptions,
+  options: ReturnType<typeof normalizeSchedulerOptions>,
   now: Date,
 ) {
   const db = yield* Db;
-  const normalized = normalizeSchedulerOptions(options);
-  const result = yield* db.use("feed.scheduler.claim", (client) =>
-    client.execute(
-      buildFeedRefreshClaimSql({
-        now,
-        staleQueuedBefore: new Date(now.getTime() - normalized.queuedLeaseMs),
-        staleRunningBefore: new Date(now.getTime() - normalized.runningLeaseMs),
-        subscribedLimit: normalized.subscribedLimit,
-        globalLimit: normalized.globalLimit,
-      }),
-    ),
+  const staleQueuedBefore = new Date(now.getTime() - options.queuedLeaseMs);
+  const staleRunningBefore = new Date(now.getTime() - options.runningLeaseMs);
+  return yield* db.use("feed.scheduler.claim", (client) =>
+    client.transaction(async (tx) => {
+      await tx.execute(sql`SELECT pg_advisory_xact_lock(1130753361, 1)`);
+      await tx.execute(sql`
+      UPDATE feeds SET refresh_status='idle', refresh_generation=refresh_generation+1
+      WHERE id IN (SELECT id FROM feeds
+        WHERE (refresh_status = 'queued' AND updated_at <= ${staleQueuedBefore.toISOString()})
+           OR (refresh_status = 'running' AND updated_at <= ${staleRunningBefore.toISOString()})
+        ORDER BY updated_at LIMIT ${options.maxQueuedRefreshJobs} FOR UPDATE SKIP LOCKED)`);
+      const count = await tx.execute(sql<{ count: number }>`SELECT count(*)::int AS count
+      FROM feeds WHERE refresh_status='queued' AND updated_at > ${staleQueuedBefore.toISOString()}`);
+      const queuedCount = rowsFromExecute<{ count: number }>(count)[0]?.count ?? 0;
+      const remainingCapacity = Math.max(0, options.maxQueuedRefreshJobs - queuedCount);
+      const claimed = remainingCapacity
+        ? rowsFromExecute<ClaimedFeedRefresh>(
+            await tx.execute(
+              buildFeedRefreshClaimSql({
+                now,
+                remainingCapacity,
+                subscribedLimit: Math.min(options.subscribedLimit, remainingCapacity),
+                globalLimit: options.globalLimit,
+              }),
+            ),
+          )
+        : [];
+      return { claimed, queuedCount, remainingCapacity };
+    }),
   );
-  return rowsFromExecute<ClaimedFeedRefresh>(result);
 });
 
 /**
@@ -222,26 +210,14 @@ export const runFeedRefreshSchedulerTick = Effect.gen(function* () {
     queuedLeaseMs: config.FEED_REFRESH_QUEUED_LEASE_MS,
     runningLeaseMs: config.FEED_REFRESH_RUNNING_LEASE_MS,
   });
-  const staleQueuedBefore = new Date(now.getTime() - options.queuedLeaseMs);
-  const queuedCount = yield* countActiveQueuedFeedRefreshes(staleQueuedBefore);
-
-  if (queuedCount >= options.maxQueuedRefreshJobs) {
+  const { claimed, queuedCount, remainingCapacity } = yield* claimDueFeedRefreshes(options, now);
+  if (!remainingCapacity) {
     yield* log.info("feed.scheduler.skipped_backpressure", {
       queuedCount,
       maxQueued: options.maxQueuedRefreshJobs,
     });
     return;
   }
-
-  const remainingCapacity = options.maxQueuedRefreshJobs - queuedCount;
-  const claimed = yield* claimDueFeedRefreshes(
-    {
-      ...options,
-      subscribedLimit: Math.min(options.subscribedLimit, remainingCapacity),
-      globalLimit: Math.min(options.globalLimit, remainingCapacity),
-    },
-    now,
-  );
   const published = yield* publishClaimedFeedRefreshes(claimed);
 
   yield* log.info("feed.scheduler.claimed", {
@@ -259,7 +235,7 @@ export const runFeedRefreshSchedulerTick = Effect.gen(function* () {
  */
 export const feedRefreshSchedulerLoop = Effect.gen(function* () {
   const log = yield* AppLogger;
-  const { tickMs } = normalizeSchedulerOptions({ tickMs: 60_000 });
+  const { tickMs } = normalizeSchedulerOptions({ tickMs: (yield* AppConfig).FEED_REFRESH_TICK_MS });
   yield* log.info("feed.scheduler.started", { tickMs });
 
   yield* runFeedRefreshSchedulerTick.pipe(

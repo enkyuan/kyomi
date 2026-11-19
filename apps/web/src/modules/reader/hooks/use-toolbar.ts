@@ -18,7 +18,13 @@ export function useReaderToolbar({
   autoExtract?: boolean;
 }): ToolbarModel {
   const reader = useReaderDisplay({ item, readerFocusMode });
-  const canRequestExtraction = item.link.startsWith("http");
+  const canRequestExtraction =
+    /^https?:\/\//i.test(item.link) &&
+    !(
+      item.articleType === "feed" &&
+      /#(?:item|entry)-\d+$/.test(item.link) &&
+      item.link.split("#")[0] === item.feedUrl?.split("#")[0]
+    );
   const extraction = useReaderExtract({
     autoExtract,
     canRequestExtraction,

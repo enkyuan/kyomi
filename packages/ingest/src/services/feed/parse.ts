@@ -133,7 +133,7 @@ function normalizeFeedUrl(raw: string): string {
  * all of them.
  */
 function httpItemLink(candidate: string, finalUrl: string, fallback: string): string {
-  return absoluteHttpUrl(candidate, finalUrl) === null ? fallback : candidate;
+  return absoluteHttpUrl(candidate, finalUrl) ?? fallback;
 }
 
 function xmlText(value: unknown): string {
@@ -251,7 +251,7 @@ function pickAtomLink(link: unknown, fallback: string): string {
     const rel = record["@_rel"];
     const href = record["@_href"];
     if (typeof href === "string" && href.trim()) {
-      if (rel === "alternate" || rel === undefined || rel === "self") {
+      if (rel === "alternate" || rel === undefined) {
         return href.trim();
       }
     }
@@ -318,9 +318,133 @@ function jsonFeedTagLabels(value: unknown): string[] {
   return dedupeCategoryLabels(labels);
 }
 
-function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): ParsedFeedDocument {
+type FeedBodySource = string | { text: string } | null;
+
+function admitPlainText(tracker: ContentLimitTracker, text: string, retainRaw: boolean) {
+  // Reject oversize plain text before allocating its escaped copy.
+  if (utf8ByteLength(text) > ITEM_SOURCE_CONTENT_MAX_BYTES) {
+    tracker.admitContent(text);
+    return null;
+  }
+  // Older clients can render the legacy content column as HTML.
+  const escaped = text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+  if (!tracker.admitContent(escaped)) return null;
+  return {
+    ...buildStoredFeedContent(null),
+    content: escaped,
+    contentRaw: retainRaw ? text : null,
+    contentText: text,
+    contentStatus: "partial" as const,
+    contentSource: "text_fallback" as const,
+  };
+}
+
+/** Offer a complete bounded projection of the publisher's main body before its summary. */
+function selectFeedBody(
+  tracker: ContentLimitTracker,
+  baseUrl: string,
+  ...sources: FeedBodySource[]
+) {
+  let emptyBody = buildStoredFeedContent(null);
+  const unique = [...new Set(sources)];
+  for (const [index, source] of unique.entries()) {
+    if (!source) continue;
+    if (typeof source !== "string") {
+      const body = admitPlainText(tracker, source.text, true);
+      if (body) return body;
+      continue;
+    }
+    const admitted = tracker.admitContent(source);
+    if (admitted) {
+      const body = buildStoredFeedContent(admitted, { baseUrl });
+      if (body.content) return body;
+      if (!emptyBody.contentRaw) emptyBody = body;
+      continue;
+    }
+    if (
+      source.length > 2 * 1024 * 1024 ||
+      !source.includes("<") ||
+      utf8ByteLength(source) <= ITEM_SOURCE_CONTENT_MAX_BYTES
+    )
+      continue;
+    const text = stripTags(source);
+    if (!text || utf8ByteLength(text) > ITEM_SOURCE_CONTENT_MAX_BYTES) continue;
+    const body = admitPlainText(tracker, text, false);
+    if (!body) continue;
+    const excerptDigests = unique.slice(index + 1).flatMap((alternate) => {
+      const raw = typeof alternate === "string" ? alternate : alternate?.text;
+      return raw && utf8ByteLength(raw) <= ITEM_SOURCE_CONTENT_MAX_BYTES
+        ? [createHash("sha256").update(raw).digest("hex")]
+        : [];
+    });
+    return { ...body, excerptDigests };
+  }
+  return emptyBody;
+}
+
+function atomTextConstruct(value: unknown): string | null {
+  if (value && typeof value === "object") {
+    const attrs = value as Record<string, unknown>;
+    if (attrs["@_src"]) return null;
+    const type = String(attrs["@_type"] ?? "text")
+      .toLowerCase()
+      .split(";")[0]
+      ?.trim();
+    if (
+      ![
+        "text",
+        "html",
+        "xhtml",
+        "application/xhtml+xml",
+        "text/html",
+        "text/plain",
+        "text/markdown",
+      ].includes(type ?? "")
+    )
+      return null;
+  }
+  return rawText(value);
+}
+
+function atomBody(value: unknown): FeedBodySource {
+  const body = atomTextConstruct(value);
+  if (!body) return null;
+  const type =
+    typeof value === "object" && value ? (value as Record<string, unknown>)["@_type"] : undefined;
+  const mime = String(type ?? "text")
+    .split(";")[0]
+    ?.trim()
+    .toLowerCase();
+  return mime === "text" || mime === "text/plain" ? { text: body } : body;
+}
+
+/** Catalog polling stores a small preview. Select before sanitization and document compilation. */
+type CatalogWindow = { since: Date; until: Date; limit: number };
+function entryWindow(value: unknown, dates: string[], window?: CatalogWindow) {
+  const entries = Array.from(toArray(value).entries());
+  if (!window) return entries;
+  return entries
+    .flatMap(([index, item]) => {
+      if (!item || typeof item !== "object") return [];
+      const record = item as Record<string, unknown>;
+      const stamp = dates.map((key) => record[key]).find((v) => typeof v === "string");
+      // Dateless entries can be previewed for a week from first observation.
+      const date = parsePublishedAt(stamp, window.until);
+      return date >= window.since && date <= window.until ? [{ index, item, date }] : [];
+    })
+    .sort((a, b) => b.date.getTime() - a.date.getTime() || a.index - b.index)
+    .slice(0, window.limit)
+    .map(({ index, item }): [number, unknown] => [index, item]);
+}
+function parseJsonFeedDocument(
+  body: string,
+  feedId: string,
+  finalUrl: string,
+  window?: CatalogWindow,
+): ParsedFeedDocument {
   const now = new Date();
   const parsed = JSON.parse(body) as Record<string, unknown>;
+  if (!Array.isArray(parsed.items)) throw new Error("Unsupported JSON feed: missing items array");
   const title = typeof parsed.title === "string" ? stripTags(parsed.title) : "Untitled";
   const description =
     typeof parsed.description === "string"
@@ -332,7 +456,11 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
   );
   const tracker = new ContentLimitTracker();
   const items: ParsedFeedItem[] = [];
-  for (const [index, item] of toArray(parsed.items).entries()) {
+  for (const [index, item] of entryWindow(
+    parsed.items,
+    ["date_published", "date_modified"],
+    window,
+  )) {
     if (!item || typeof item !== "object") {
       continue;
     }
@@ -350,18 +478,24 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       (typeof record.external_url === "string" && record.external_url.trim()) ||
       fallbackLink;
     const itemLink = httpItemLink(candidateLink, finalUrl, fallbackLink);
-    const canonicalUrl = normalizeArticleUrl(candidateLink);
+    const canonicalUrl =
+      candidateLink === fallbackLink
+        ? (rawText(record.id) ?? fallbackLink)
+        : normalizeArticleUrl(candidateLink);
     const stableIdentity = (typeof record.id === "string" && record.id.trim()) || canonicalUrl;
     const contentHtml =
       typeof record.content_html === "string" ? record.content_html.trim() || null : null;
     const contentText =
       typeof record.content_text === "string" ? record.content_text.trim() || null : null;
     const rawCandidate = contentHtml ?? contentText;
-    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate), {
-      baseUrl: itemLink,
-    });
+    const storedContent = selectFeedBody(
+      tracker,
+      itemLink,
+      contentHtml,
+      contentText ? { text: contentText } : null,
+    );
     const imageUrl = extractImageUrl(contentHtml, itemLink);
-    const publishedAt = parsePublishedAt(record.date_published, now);
+    const publishedAt = parsePublishedAt(record.date_published ?? record.date_modified, now);
     items.push({
       id: computeFeedItemId(feedId, canonicalUrl),
       stableIdentity,
@@ -399,6 +533,7 @@ function parseRssDocument(
   channel: Record<string, unknown>,
   feedId: string,
   finalUrl: string,
+  window?: CatalogWindow,
 ): ParsedFeedDocument {
   const now = new Date();
   const title = xmlText(channel.title) || "Untitled";
@@ -406,7 +541,11 @@ function parseRssDocument(
   const link = absoluteHttpUrl(pickRssLink(channel.link, finalUrl), finalUrl);
   const tracker = new ContentLimitTracker();
   const items: ParsedFeedItem[] = [];
-  for (const [index, item] of toArray(channel.item).entries()) {
+  for (const [index, item] of entryWindow(
+    channel.item,
+    ["pubDate", "isoDate", "dc:date"],
+    window,
+  )) {
     if (!item || typeof item !== "object") {
       continue;
     }
@@ -419,14 +558,35 @@ function parseRssDocument(
       ITEM_TITLE_MAX_CHARS,
     );
     const fallbackLink = `${finalUrl}#item-${index + 1}`;
-    const candidateLink = pickRssLink(record.link, rawText(record.guid) ?? fallbackLink);
-    const itemLink = httpItemLink(candidateLink, finalUrl, fallbackLink);
-    const canonicalUrl = normalizeArticleUrl(candidateLink);
+    const candidateLink = pickRssLink(
+      record.link,
+      rawText(record.guid) ?? rawText(record["@_rdf:about"]) ?? fallbackLink,
+    );
+    const permalink =
+      pickRssLink(record.link, "") ||
+      rawText(record["@_rdf:about"]) ||
+      (typeof record.guid === "object" &&
+      record.guid !== null &&
+      "@_isPermaLink" in record.guid &&
+      record.guid["@_isPermaLink"] === "false"
+        ? null
+        : /^https?:\/\//i.test(candidateLink)
+          ? candidateLink
+          : null);
+    const itemLink = permalink ? httpItemLink(permalink, finalUrl, fallbackLink) : fallbackLink;
+    const canonicalUrl =
+      candidateLink === fallbackLink
+        ? (rawText(record.guid) ?? fallbackLink)
+        : normalizeArticleUrl(candidateLink);
     const stableIdentity = rawText(record.guid) ?? canonicalUrl;
     const rawCandidate = rawText(record["content:encoded"]) ?? rawText(record.description);
-    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate), {
-      baseUrl: itemLink,
-    });
+    const storedContent = selectFeedBody(
+      tracker,
+      itemLink,
+      rawCandidate,
+      rawText(record.description),
+      rawText(record["itunes:summary"]),
+    );
     const imageUrl = extractImageUrl(
       rawText(record["content:encoded"]) ?? rawText(record.description),
       itemLink,
@@ -434,7 +594,10 @@ function parseRssDocument(
     const summary = summarizeText(
       rawText(record.description) ?? storedContent.content ?? boundedSummarySource(rawCandidate),
     );
-    const publishedAt = parsePublishedAt(record.pubDate ?? record.isoDate, now);
+    const publishedAt = parsePublishedAt(
+      record.pubDate ?? record.isoDate ?? record["dc:date"],
+      now,
+    );
     const categoryLabels = categoryLabelsFrom(record.category, record["itunes:category"]);
 
     items.push({
@@ -469,6 +632,7 @@ function parseAtomDocument(
   feed: Record<string, unknown>,
   feedId: string,
   finalUrl: string,
+  window?: CatalogWindow,
 ): ParsedFeedDocument {
   const now = new Date();
   const title = xmlText(feed.title) || "Untitled";
@@ -476,7 +640,7 @@ function parseAtomDocument(
   const link = absoluteHttpUrl(pickAtomLink(feed.link, finalUrl), finalUrl);
   const tracker = new ContentLimitTracker();
   const items: ParsedFeedItem[] = [];
-  for (const [index, entry] of toArray(feed.entry).entries()) {
+  for (const [index, entry] of entryWindow(feed.entry, ["published", "updated"], window)) {
     if (!entry || typeof entry !== "object") {
       continue;
     }
@@ -491,15 +655,26 @@ function parseAtomDocument(
     const fallbackLink = `${finalUrl}#entry-${index + 1}`;
     const candidateLink = pickAtomLink(record.link, fallbackLink);
     const itemLink = httpItemLink(candidateLink, finalUrl, fallbackLink);
-    const canonicalUrl = normalizeArticleUrl(candidateLink);
+    const canonicalUrl =
+      candidateLink === fallbackLink
+        ? (rawText(record.id) ?? fallbackLink)
+        : normalizeArticleUrl(candidateLink);
     const stableIdentity = rawText(record.id) ?? canonicalUrl;
-    const rawCandidate = rawText(record.content) ?? rawText(record.summary);
-    const storedContent = buildStoredFeedContent(tracker.admitContent(rawCandidate), {
-      baseUrl: itemLink,
-    });
-    const imageUrl = extractImageUrl(rawText(record.content) ?? rawText(record.summary), itemLink);
+    const rawCandidate = atomTextConstruct(record.content) ?? atomTextConstruct(record.summary);
+    const storedContent = selectFeedBody(
+      tracker,
+      itemLink,
+      atomBody(record.content),
+      atomBody(record.summary),
+    );
+    const imageUrl = extractImageUrl(
+      atomTextConstruct(record.content) ?? atomTextConstruct(record.summary),
+      itemLink,
+    );
     const summary = summarizeText(
-      rawText(record.summary) ?? storedContent.content ?? boundedSummarySource(rawCandidate),
+      atomTextConstruct(record.summary) ??
+        storedContent.content ??
+        boundedSummarySource(rawCandidate),
     );
     const publishedAt = parsePublishedAt(record.published ?? record.updated, now);
     const categoryLabels = categoryLabelsFrom(record.category);
@@ -536,10 +711,11 @@ export function parseFeedDocument(
   body: string,
   feedId: string,
   finalUrl: string,
+  window?: CatalogWindow,
 ): ParsedFeedDocument {
   const trimmed = body.trim();
   if (trimmed.startsWith("{")) {
-    return parseJsonFeedDocument(trimmed, feedId, finalUrl);
+    return parseJsonFeedDocument(trimmed, feedId, finalUrl, window);
   }
 
   const lower = trimmed.toLowerCase();
@@ -548,6 +724,12 @@ export function parseFeedDocument(
   }
 
   const parser = new XMLParser({
+    // Keep mixed inline text, whitespace and child order intact for the HTML sanitizer.
+    stopNodes: ["content", "summary", "title"].flatMap((tag) =>
+      ["xhtml", "application/xhtml+xml"].map((type) => `feed.entry.${tag}[type=${type}]`),
+    ),
+    transformTagName: (name) => (name.startsWith("atom:") ? name.slice(5) : name),
+    parseTagValue: false,
     ignoreAttributes: false,
     attributeNamePrefix: "@_",
     processEntities: FEED_XML_PROCESS_ENTITIES,
@@ -558,12 +740,17 @@ export function parseFeedDocument(
   if (doc.rss && typeof doc.rss === "object") {
     const channel = (doc.rss as Record<string, unknown>).channel;
     if (channel && typeof channel === "object") {
-      return parseRssDocument(channel as Record<string, unknown>, feedId, finalUrl);
+      return parseRssDocument(channel as Record<string, unknown>, feedId, finalUrl, window);
     }
   }
 
+  const rdf = doc["rdf:RDF"] as Record<string, unknown> | undefined;
+  if (rdf?.channel && typeof rdf.channel === "object") {
+    return parseRssDocument({ ...rdf.channel, item: rdf.item }, feedId, finalUrl, window);
+  }
+
   if (doc.feed && typeof doc.feed === "object") {
-    return parseAtomDocument(doc.feed as Record<string, unknown>, feedId, finalUrl);
+    return parseAtomDocument(doc.feed as Record<string, unknown>, feedId, finalUrl, window);
   }
 
   throw new Error("Unsupported feed format");

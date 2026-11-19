@@ -64,7 +64,7 @@ function createFeedRefreshDb(
     sourceKind: "rss",
     faviconUrl: null,
     faviconSource: null,
-    etag: null,
+    etag: '"cached"',
     lastModified: null,
     lastRefreshSucceededAt: null,
     lastRefreshFailedAt: null,
@@ -102,7 +102,7 @@ function createFeedRefreshDb(
                     new Error('duplicate key value violates unique constraint "feeds_url_unique"'),
                     { code: "23505", constraint: "feeds_url_unique" },
                   );
-                  return Promise.reject(error);
+                  return Promise.reject(new Error("Failed query", { cause: error }));
                 }
                 const refreshState = options.refreshState;
                 if (refreshState) {
@@ -161,6 +161,7 @@ function createFeedRefreshDb(
     select: () => ({
       from: (table: unknown) => ({
         where: () => ({
+          for: () => Promise.resolve(inserts.categories ?? []),
           limit: () => {
             if (tableName(table) === "feed_category_assignments") {
               return Promise.resolve([]);
@@ -170,6 +171,7 @@ function createFeedRefreshDb(
         }),
       }),
     }),
+    execute: async () => ({ rows: [] }),
     transaction: async (callback: (tx: unknown) => Promise<void>) => callback(db),
   };
 
@@ -372,6 +374,56 @@ describe("runFeedRefresh HTML autodiscovery", () => {
       lastRefreshError: null,
     });
   });
+
+  test.each([
+    ["/feed", "Example", true],
+    ["/feed", "Different publication", false],
+    ["/category/books/feed", "Example", false],
+  ] as const)(
+    "a missing catalog endpoint %s only adopts the same publication (%s)",
+    async (path, title, recovered) => {
+      const home = "https://93.184.216.34/";
+      const fake = createFeedRefreshDb({
+        feed: {
+          id: "feed-1",
+          url: new URL(path, home).href,
+          link: home,
+          title: "Example",
+          subscriberCount: 0,
+          lastRefreshSucceededAt: null,
+          lastRefreshFailedAt: null,
+          sourceKind: "rss",
+          description: "Example",
+        },
+      });
+      globalThis.fetch = mockFetch((input) => {
+        const url = input instanceof Request ? input.url : input.toString();
+        if (url === home)
+          return response(
+            '<html><head><link rel="alternate" type="application/rss+xml" href="/rss.xml"></head></html>',
+            home,
+            "text/html",
+          );
+        if (url === home + "rss.xml")
+          return response(
+            `<rss><channel><title>${title}</title><link>${home}</link></channel></rss>`,
+            url,
+            "application/rss+xml",
+          );
+        return new Response(null, { status: 404 });
+      });
+      const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
+        catalogRefreshIntervalMs: 86_400_000,
+      });
+      expect(result.ok, result.error).toBe(recovered);
+      if (recovered)
+        expect(lastUpdateForTable(fake.updates, "feeds")).toMatchObject({
+          url: home + "rss.xml",
+          discoveryProvenance: "catalog_homepage_alternate",
+        });
+      else expect(result.failureClass).toBe("http_404");
+    },
+  );
 
   test("keeps the existing feed URL when an autodiscovered canonical URL is already owned", async () => {
     const siteUrl = "https://93.184.216.34/";

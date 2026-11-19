@@ -129,6 +129,7 @@ function createCategoryDb(
     feedItemCategoryAssignments,
     select: () => ({
       from: () => ({
+        where: () => ({ for: () => Promise.resolve(categories) }),
         innerJoin: () => ({
           where: () => Promise.resolve((options.explicitLabels ?? []).map((label) => ({ label }))),
         }),
@@ -209,10 +210,8 @@ describe("reclassifyExtractedFeedItem", () => {
       "feed_item_category_assignments",
       "feed_item_category_assignments",
     ]);
-    expect(fake.categories.map((row) => row.label)).toEqual([
-      "Software Engineering",
-      "Software Engineering",
-    ]);
+    expect(fake.categories.map((row) => row.label)).toEqual(["Software Engineering"]);
+    expect(new Set(fake.feedItemCategoryAssignments.map((row) => row.categoryId)).size).toBe(1);
     expect(fake.feedItemCategoryAssignments).toEqual(
       expect.arrayContaining([
         expect.objectContaining({

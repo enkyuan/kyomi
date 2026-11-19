@@ -1,3 +1,4 @@
+import { GarageAssets } from "@adapters/assets/garage";
 import { Effect, Layer, ManagedRuntime, type Scope } from "effect";
 import { Auth } from "@adapters/auth/service";
 import { Db } from "@adapters/db/service";
@@ -26,6 +27,7 @@ const Infrastructure = Layer.mergeAll(
 
 /** Every service the API provides, wired once. Resources release when the layer scope closes. */
 const Domains = Layer.mergeAll(
+  GarageAssets,
   JobQueue.layer,
   FeedBackground.layer,
   FaviconResolver.layer,

@@ -22,21 +22,33 @@ function fakeScheduleDb(options: {
   queuedCount?: number;
   claimed?: ReturnType<typeof claimedRow>[];
   released?: boolean;
+  releaseError?: boolean;
   onExecute?: (call: number) => unknown;
 }) {
   let calls = 0;
   const patches: Array<Record<string, unknown>> = [];
   const layer = fakeDb({
-    execute: async () => {
-      calls += 1;
-      const override = options.onExecute?.(calls);
-      if (override !== undefined) {
-        return override;
-      }
-      return calls % 2 === 1 ? [{ count: options.queuedCount ?? 0 }] : (options.claimed ?? []);
-    },
+    transaction: async (run: (tx: unknown) => Promise<unknown>) =>
+      run({
+        execute: async (query: Parameters<PgDialect["sqlToQuery"]>[0]) => {
+          const statement = new PgDialect().sqlToQuery(query).sql;
+          if (
+            statement.includes("pg_advisory_xact_lock") ||
+            statement.includes("SET refresh_status='idle'")
+          )
+            return [];
+
+          calls += 1;
+          const override = options.onExecute?.(calls);
+          if (override !== undefined) {
+            return override;
+          }
+          return calls % 2 === 1 ? [{ count: options.queuedCount ?? 0 }] : (options.claimed ?? []);
+        },
+      }),
     update: () => ({
       set: (patch: Record<string, unknown>) => {
+        if (options.releaseError) throw new Error("postgres unavailable");
         patches.push(patch);
         return {
           where: () => ({
@@ -62,8 +74,6 @@ describe("feed refresh claim SQL", () => {
     const { sql } = new PgDialect().sqlToQuery(
       buildFeedRefreshClaimSql({
         now,
-        staleQueuedBefore: new Date(now.getTime() - 60_000),
-        staleRunningBefore: new Date(now.getTime() - 120_000),
         subscribedLimit: 5,
         globalLimit: 2,
       }),
@@ -155,15 +165,7 @@ describe("runFeedRefreshSchedulerTick", () => {
     const xadd = mock(async (..._args: unknown[]): Promise<string> => {
       throw new Error("redis unavailable");
     });
-    const db = fakeDb({
-      execute: (() => {
-        let calls = 0;
-        return async () => (++calls % 2 === 1 ? [{ count: 0 }] : [claimedRow("feed-a")]);
-      })(),
-      update: () => {
-        throw new Error("postgres unavailable");
-      },
-    });
+    const db = fakeScheduleDb({ claimed: [claimedRow("feed-a")], releaseError: true }).layer;
     const logs = recordingLogger();
 
     await Effect.runPromise(

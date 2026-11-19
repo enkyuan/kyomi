@@ -37,7 +37,7 @@ export function canonicalWinsOnConflictSql(
   return sql`CASE WHEN ${categories.provenance} = ${CATEGORY_CLASSIFIER_PROVENANCE} OR (excluded.label IN (${CANONICAL_LABELS_SQL_LIST}) AND ${categories.label} NOT IN (${CANONICAL_LABELS_SQL_LIST})) THEN ${excludedColumnSql} ELSE ${existingColumnSql} END`;
 }
 
-type CategoryAssignmentDatabase = Pick<FeedIngestDatabase, "delete" | "insert">;
+type CategoryAssignmentDatabase = Pick<FeedIngestDatabase, "delete" | "insert" | "select">;
 
 type CategoryRecord = {
   slug: string;
@@ -90,10 +90,45 @@ async function upsertCategories(
     return new Map();
   }
 
+  // Every feed shares a small dictionary. An unconditional upsert holds an exclusive
+  // row lock for the rest of refresh, serializing otherwise independent publishers.
+  // KEY SHARE keeps a referenced ID alive while allowing other feeds to read it.
+  const existing = await database
+    .select({
+      id: categories.id,
+      slug: categories.slug,
+      label: categories.label,
+      provenance: categories.provenance,
+    })
+    .from(categories)
+    .where(
+      inArray(
+        categories.slug,
+        records.map((r) => r.slug),
+      ),
+    )
+    .for("key share");
+  const bySlug = new Map(existing.map((row) => [row.slug, row]));
+  const ids = new Map<string, string>();
+  const pending = records
+    .filter((record) => {
+      const row = bySlug.get(record.slug);
+      if (
+        !row ||
+        row.label !== record.label ||
+        (row.provenance === CATEGORY_CLASSIFIER_PROVENANCE && provenance !== row.provenance)
+      )
+        return true;
+      ids.set(row.slug, row.id);
+      return false;
+    })
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+  if (!pending.length) return ids;
+
   const rows = await database
     .insert(categories)
     .values(
-      records.map((record) => ({
+      pending.map((record) => ({
         id: crypto.randomUUID(),
         slug: record.slug,
         label: record.label,
@@ -112,7 +147,8 @@ async function upsertCategories(
     })
     .returning({ id: categories.id, slug: categories.slug });
 
-  return new Map(rows.map((row) => [row.slug, row.id]));
+  for (const row of rows) ids.set(row.slug, row.id);
+  return ids;
 }
 
 /**

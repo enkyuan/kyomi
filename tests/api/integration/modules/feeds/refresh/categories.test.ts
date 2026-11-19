@@ -65,7 +65,10 @@ describe("runFeedRefresh category ingestion", () => {
     // Raw "JavaScript"/"Programming"/"Technology" source labels are canonicalized before
     // ever reaching the categories dictionary, so both map onto "Software Engineering" and
     // "Technology" stays as-is; no raw label is inserted as its own row.
-    expect(fake.categories.map((row) => row.label)).toEqual(["Technology", "Software Engineering"]);
+    expect(fake.categories.map((row) => row.label).sort()).toEqual([
+      "Software Engineering",
+      "Technology",
+    ]);
     expect(fake.categories.every((row) => row.provenance === "feed")).toBe(true);
     expect(labelsForAssignments(fake.feedCategoryAssignments, fake.categories)).toEqual([
       "Technology",
@@ -139,7 +142,10 @@ describe("runFeedRefresh category ingestion", () => {
     );
 
     expect(fake.deletes).toEqual(["feed_category_assignments", "feed_item_category_assignments"]);
-    expect(fake.categories.map((row) => row.label)).toEqual(["Technology", "Security & Privacy"]);
+    expect(fake.categories.map((row) => row.label).sort()).toEqual([
+      "Security & Privacy",
+      "Technology",
+    ]);
     expect(fake.feedCategoryAssignments).toMatchObject([
       { feedId: "feed-1", provenance: "classifier", confidence: 0.7 },
     ]);

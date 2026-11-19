@@ -1,3 +1,5 @@
+import { assetLifetime } from "@adapters/assets/freshness";
+import { Assets } from "@adapters/assets/garage";
 import { Clock, Effect } from "effect";
 import {
   createDrizzleFaviconHostStore,
@@ -10,7 +12,7 @@ import { makeLoadShedder } from "@shared/http/shed";
 import { FaviconResolver } from "./service";
 
 const FAVICON_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7;
-const FAVICON_CACHE_STALE_SECONDS = 60 * 60 * 24 * 30;
+
 const FAVICON_MISS_CACHE_MAX_AGE_SECONDS = 120;
 const FAVICON_MISS_CACHE_STALE_SECONDS = 600;
 const FAVICON_MAX_RESPONSE_BYTES = 64 * 1024;
@@ -62,12 +64,12 @@ async function readCapped(
   return Buffer.concat(chunks);
 }
 
-function faviconHitHeaders(contentType: string) {
+function faviconHitHeaders(contentType: string, ttl: number) {
   return {
     "Content-Type": contentType,
     "Content-Security-Policy": FAVICON_CONTENT_SECURITY_POLICY,
     "X-Content-Type-Options": "nosniff",
-    "Cache-Control": `public, max-age=${FAVICON_CACHE_MAX_AGE_SECONDS}, stale-while-revalidate=${FAVICON_CACHE_STALE_SECONDS}`,
+    "Cache-Control": ttl > 0 ? `public, max-age=${ttl}` : "no-store",
     Vary: "Accept",
   };
 }
@@ -92,6 +94,16 @@ const fetchResolvedFavicon = Effect.fn("favicon.fetch_resolved")(function* (
   faviconUrl: string,
 ) {
   const resolver = yield* FaviconResolver;
+  const assets = yield* Assets;
+  const key = "favicon:" + faviconUrl;
+  const saved = yield* assets.get(key, FAVICON_MAX_RESPONSE_BYTES);
+  if (saved)
+    return {
+      kind: "hit",
+      response: new Response(saved.bytes, {
+        headers: faviconHitHeaders(saved.contentType, saved.ttl),
+      }),
+    } satisfies FaviconFetchResult;
   const upstream = yield* resolver.fetchImage(faviconUrl);
   if (!upstream) {
     return { kind: "miss", terminal: false } satisfies FaviconFetchResult;
@@ -115,6 +127,11 @@ const fetchResolvedFavicon = Effect.fn("favicon.fetch_resolved")(function* (
     return { kind: "miss", terminal: true } satisfies FaviconFetchResult;
   }
 
+  const ttl = assetLifetime(upstream.headers, FAVICON_CACHE_MAX_AGE_SECONDS);
+  yield* assets.put(key, { bytes: buffer, contentType }, ttl, {
+    etag: upstream.headers.get("etag"),
+    lastModified: upstream.headers.get("last-modified"),
+  });
   yield* useStore("favicon.update_metadata", () =>
     store.updateResponseMetadata({ origin, contentType }),
   );
@@ -123,7 +140,7 @@ const fetchResolvedFavicon = Effect.fn("favicon.fetch_resolved")(function* (
     kind: "hit",
     response: new Response(buffer, {
       status: 200,
-      headers: faviconHitHeaders(contentType),
+      headers: faviconHitHeaders(contentType, ttl),
     }),
   } satisfies FaviconFetchResult;
 });

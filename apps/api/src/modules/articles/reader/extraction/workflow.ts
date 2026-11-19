@@ -134,7 +134,12 @@ const prepareExtraction = Effect.fn("extraction.prepare")(function* (
   const before = yield* getArticleDetail(userId, articleId);
 
   const sourceUrl = parseSourceUrl(before.link);
-  if (!sourceUrl) {
+  if (
+    !sourceUrl ||
+    (before.articleType === "feed" &&
+      /#(?:item|entry)-\d+$/.test(before.link) &&
+      before.link.split("#")[0] === before.feedUrl?.split("#")[0])
+  ) {
     const result = yield* recordFailure(
       userId,
       before,

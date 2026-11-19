@@ -1,0 +1,1 @@
+CREATE INDEX "image_assets_expiry_idx" ON "image_assets" USING btree ("expires_at","source_key");

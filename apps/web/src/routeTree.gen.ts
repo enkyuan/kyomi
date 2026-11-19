@@ -15,6 +15,7 @@ import { Route as FaviconRouteImport } from './routes/favicon'
 import { Route as RegisterRouteImport } from './routes/register'
 import { Route as AppInboxRouteRouteImport } from './routes/_app/inbox/route'
 import { Route as ApiFaviconRouteImport } from './routes/api/favicon'
+import { Route as ApiReaderImageRouteImport } from './routes/api/reader-image'
 import { Route as AppInboxIndexRouteImport } from './routes/_app/inbox/index'
 import { Route as AppInboxArticleRouteImport } from './routes/_app/inbox/$article'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
@@ -48,6 +49,11 @@ const ApiFaviconRoute = ApiFaviconRouteImport.update({
   path: '/api/favicon',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiReaderImageRoute = ApiReaderImageRouteImport.update({
+  id: '/api/reader-image',
+  path: '/api/reader-image',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AppInboxIndexRoute = AppInboxIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -70,6 +76,7 @@ export interface FileRoutesByFullPath {
   '/register': typeof RegisterRoute
   '/inbox': typeof AppInboxRouteRouteWithChildren
   '/api/favicon': typeof ApiFaviconRoute
+  '/api/reader-image': typeof ApiReaderImageRoute
   '/inbox/$article': typeof AppInboxArticleRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/inbox/': typeof AppInboxIndexRoute
@@ -79,6 +86,7 @@ export interface FileRoutesByTo {
   '/favicon': typeof FaviconRoute
   '/register': typeof RegisterRoute
   '/api/favicon': typeof ApiFaviconRoute
+  '/api/reader-image': typeof ApiReaderImageRoute
   '/inbox/$article': typeof AppInboxArticleRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/inbox': typeof AppInboxIndexRoute
@@ -91,6 +99,7 @@ export interface FileRoutesById {
   '/register': typeof RegisterRoute
   '/_app/inbox': typeof AppInboxRouteRouteWithChildren
   '/api/favicon': typeof ApiFaviconRoute
+  '/api/reader-image': typeof ApiReaderImageRoute
   '/_app/inbox/$article': typeof AppInboxArticleRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/_app/inbox/': typeof AppInboxIndexRoute
@@ -103,6 +112,7 @@ export interface FileRouteTypes {
     | '/register'
     | '/inbox'
     | '/api/favicon'
+    | '/api/reader-image'
     | '/inbox/$article'
     | '/api/auth/$'
     | '/inbox/'
@@ -112,6 +122,7 @@ export interface FileRouteTypes {
     | '/favicon'
     | '/register'
     | '/api/favicon'
+    | '/api/reader-image'
     | '/inbox/$article'
     | '/api/auth/$'
     | '/inbox'
@@ -123,6 +134,7 @@ export interface FileRouteTypes {
     | '/register'
     | '/_app/inbox'
     | '/api/favicon'
+    | '/api/reader-image'
     | '/_app/inbox/$article'
     | '/api/auth/$'
     | '/_app/inbox/'
@@ -134,6 +146,7 @@ export interface RootRouteChildren {
   FaviconRoute: typeof FaviconRoute
   RegisterRoute: typeof RegisterRoute
   ApiFaviconRoute: typeof ApiFaviconRoute
+  ApiReaderImageRoute: typeof ApiReaderImageRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
@@ -179,6 +192,13 @@ declare module '@tanstack/react-router' {
       path: '/api/favicon'
       fullPath: '/api/favicon'
       preLoaderRoute: typeof ApiFaviconRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/reader-image': {
+      id: '/api/reader-image'
+      path: '/api/reader-image'
+      fullPath: '/api/reader-image'
+      preLoaderRoute: typeof ApiReaderImageRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_app/inbox/': {
@@ -237,6 +257,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaviconRoute: FaviconRoute,
   RegisterRoute: RegisterRoute,
   ApiFaviconRoute: ApiFaviconRoute,
+  ApiReaderImageRoute: ApiReaderImageRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
 export const routeTree = rootRouteImport
