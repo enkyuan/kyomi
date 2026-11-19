@@ -1,3 +1,7 @@
+## Releases
+
+Follow [docs/releasing.md](docs/releasing.md) for versioning, tags, and release preparation.
+
 <!-- project-skills:start -->
 
 ## Project skill routing
