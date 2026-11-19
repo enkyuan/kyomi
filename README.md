@@ -21,6 +21,10 @@ docker/      local Postgres, Redis, search, and storage.
 
 product code lives inside its owning app or package. runtime code shared across apps belongs in `packages/*`. cross-app tests mirror the source tree under `tests/`.
 
+## releases
+
+Release versions and publication steps are documented in [docs/releasing.md](docs/releasing.md).
+
 ## setup
 
 ```sh

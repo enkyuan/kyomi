@@ -1,0 +1,38 @@
+# Releasing Kyomi
+
+Kyomi uses one repository release version for a snapshot of the complete product. Git tags use
+`vMAJOR.MINOR.PATCH`, for example `v0.1.0-alpha.1`. The version on a GitHub release identifies
+the tagged commit; existing private workspace package versions have their own histories and are not
+the release source of truth.
+
+## Version selection
+
+Follow [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html). Initial development uses
+`0.y.z`. Start with `0.1.0-alpha.1`; increment the prerelease number for another snapshot in
+the same series. Choose a new minor version for significant new capability or incompatible changes,
+and a patch for fixes within the current minor series. Use `alpha`, `beta`, or `rc` to describe
+the release stage. A stable `v1.0.0` marks the start of a stable public compatibility contract.
+
+A published version and its tag are immutable. Fixes after publication receive a new version. Do
+not move an existing tag or replace its contents.
+
+## Release process
+
+1. Fetch the remote default branch and tags. Check for an existing release and tag before choosing
+   the next version. Identify the exact commit to release. Open pull requests and unmerged branches
+   are outside that commit.
+2. Review changes since the previous release, or the repository history for the first release.
+   Verify relevant checks for the commit and report any missing checks or known limitations.
+3. Write release notes describing shipped changes and any migration or operational steps. Identify
+   the commit, distinguish local tests from CI, and avoid claiming deployment or device validation
+   without evidence.
+4. Create a signed annotated tag on the chosen commit using `git tag -s vX.Y.Z-... -m '...'`.
+   Push the tag, then create a GitHub release with `gh release create` and `--prerelease` for
+   prerelease versions. Do not attach binaries unless they were built and verified for that release.
+5. Verify the remote tag, release target, prerelease flag, notes, and GitHub signature status.
+   If publishing fails, inspect remote state before retrying. Never overwrite a published tag.
+
+A GitHub release records source history. Deployment, app-store publication, migrations, and package
+publication are separate operations and require their own verification.
+
+All coding agents should follow this guide when preparing, tagging, or publishing releases.
