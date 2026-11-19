@@ -13,10 +13,13 @@ export default function TanstackQueryProvider({
   children,
   queryClient,
   sessionStatus,
+  userId,
 }: {
   children: ReactNode;
   queryClient: QueryClient;
   sessionStatus?: "authenticated" | "anonymous";
+  /** Whose data the persisted snapshot may hold; without it nothing is restored or saved. */
+  userId?: string;
 }) {
   useEffect(() => {
     if (!sessionStatus) {
@@ -29,21 +32,25 @@ export default function TanstackQueryProvider({
       return;
     }
 
+    if (!userId) {
+      return;
+    }
+
     let unsubscribe: (() => void) | undefined;
     let cancelled = false;
 
-    void hydrateHotQueryCache(queryClient).finally(() => {
+    void hydrateHotQueryCache(queryClient, userId).finally(() => {
       if (cancelled) {
         return;
       }
-      unsubscribe = subscribeHotQueryCachePersistence(queryClient);
+      unsubscribe = subscribeHotQueryCachePersistence(queryClient, userId);
     });
 
     return () => {
       cancelled = true;
       unsubscribe?.();
     };
-  }, [queryClient, sessionStatus]);
+  }, [queryClient, sessionStatus, userId]);
 
   return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
 }

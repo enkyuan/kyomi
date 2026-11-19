@@ -3,10 +3,12 @@ import { routeTree } from "./routeTree.gen";
 import { DefaultErrorPage } from "./app/error";
 import { DefaultNotFoundPage } from "./app/not-found";
 import { captureRouteError } from "@integrations/posthog/capture";
+import { startPagePerfReporting } from "@integrations/posthog/perf";
 
 import { setupRouterSsrQueryIntegration } from "@tanstack/react-router-ssr-query";
 import { getContext } from "@lib/query/client";
 import { createSafeHydrate } from "@lib/query/hydration";
+import { mark } from "@lib/perf/marks";
 
 export function getRouter() {
   const context = getContext();
@@ -37,6 +39,14 @@ export function getRouter() {
     ogHydrate as ((d: unknown) => Promise<void> | void) | undefined,
     context.queryClient,
   );
+
+  if (typeof window !== "undefined") {
+    const stopResolvedMark = router.subscribe("onResolved", () => {
+      mark("route-resolved");
+      stopResolvedMark();
+    });
+    startPagePerfReporting({ getRouteId: () => router.state.matches.at(-1)?.routeId });
+  }
 
   return router;
 }
