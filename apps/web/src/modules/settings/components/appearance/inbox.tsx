@@ -64,15 +64,7 @@ function DensityPreview({ rows }: { rows: number }) {
     >
       {/* Drawn with the active theme's own surfaces, so it matches light, dark and system. */}
       <rect className="fill-background" height="70" width="88" />
-      <rect
-        className="fill-popover stroke-border"
-        height="61"
-        rx="3.5"
-        strokeWidth="1"
-        width="79"
-        x="4.5"
-        y="4.5"
-      />
+      <rect className="fill-popover" height="62" rx="4" width="80" x="4" y="4" />
       {Array.from({ length: rows }, (_, index) => {
         const mid = top + index * pitch + pitch / 2;
         return (
