@@ -30,7 +30,7 @@ export function ImportOpmlScreen() {
         {phase === "idle" ? (
           <>
             <View className="items-center">
-              <EmptyStateIcon icon={EMPTY_STATES["import-opml"].icon} size={176} />
+              <EmptyStateIcon scene="import-opml" size={176} />
             </View>
             {/* React Native has no `text-wrap: balance`, so the two lines are broken by hand. */}
             <Text

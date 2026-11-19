@@ -13,7 +13,7 @@ export function RecentHistoryEmptyState() {
       className="flex-1 items-center justify-center gap-5 pb-24"
       style={{ paddingHorizontal: 32 }}
     >
-      <EmptyStateIcon icon={EMPTY_STATES.recents.icon} size={176} />
+      <EmptyStateIcon scene="recents" size={176} />
       {/* React Native has no `text-wrap: balance`, so the two lines are broken by hand. */}
       <Text
         style={[
