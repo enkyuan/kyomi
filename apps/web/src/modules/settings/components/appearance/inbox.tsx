@@ -1,5 +1,6 @@
 "use client";
 
+import { PreviewRadioGroup, type PreviewRadioItem } from "@kyomi/ui/components/preview-radio-group";
 import { SliderComfortable } from "@kyomi/ui/components/slider";
 import {
   AnimatePresence,
@@ -45,6 +46,46 @@ function getInboxTextScaleIndex(fontSizePx: number): number {
   const value = getInboxTextScaleValue(fontSizePx);
   return INBOX_TEXT_SCALE_OPTIONS.findIndex((option) => option.value === value);
 }
+
+/** Rows of an inbox list at each density: fewer, roomier rows against more, tighter ones. */
+function DensityPreview({ rows }: { rows: number }) {
+  const pitch = 62 / rows;
+  const small = rows > 3;
+  return (
+    <svg
+      aria-hidden
+      className="size-full text-foreground"
+      fill="none"
+      viewBox="0 0 88 70"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect className="fill-muted" height="70" width="88" />
+      {Array.from({ length: rows }, (_, index) => {
+        const y = 4 + index * pitch;
+        const mid = y + pitch / 2 - 1;
+        return (
+          <g key={y} className="fill-current">
+            <circle cx="14" cy={mid} opacity="0.22" r={small ? 3.5 : 6} />
+            <rect
+              height={small ? 3 : 4}
+              opacity="0.22"
+              rx="1.5"
+              width="46"
+              x="26"
+              y={small ? mid - 1.5 : mid - 5}
+            />
+            {small ? null : <rect height="4" opacity="0.14" rx="2" width="30" x="26" y={mid + 2} />}
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+const DENSITY_OPTIONS: readonly PreviewRadioItem<InboxPreferences["inboxDensity"]>[] = [
+  { label: "Comfortable", preview: <DensityPreview rows={3} />, value: "comfortable" },
+  { label: "Compact", preview: <DensityPreview rows={6} />, value: "compact" },
+];
 
 type TimestampDisplay = InboxPreferences["inboxTimestampDisplay"];
 
@@ -167,23 +208,12 @@ export function InboxAppearanceSettings({
           description="Compact trims row spacing for denser scanning. Comfortable preserves the current roomy card layout."
           title="Density"
         />
-        <Tabs
+        <PreviewRadioGroup
+          aria-label="Inbox density"
+          items={DENSITY_OPTIONS}
           value={preferences.inboxDensity}
-          onValueChange={(value) => {
-            if (value === "comfortable" || value === "compact") {
-              setPreferences({ inboxDensity: value });
-            }
-          }}
-        >
-          <TabsList aria-label="Inbox density" variant="pill">
-            <TabsTab className="px-3" value="comfortable">
-              Comfortable
-            </TabsTab>
-            <TabsTab className="px-3" value="compact">
-              Compact
-            </TabsTab>
-          </TabsList>
-        </Tabs>
+          onValueChange={(value) => setPreferences({ inboxDensity: value })}
+        />
       </div>
 
       <div className="space-y-3 py-1">

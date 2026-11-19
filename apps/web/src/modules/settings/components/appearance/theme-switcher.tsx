@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Field, FieldItem, FieldLabel } from "@kyomi/ui/components/field";
+import { Field } from "@kyomi/ui/components/field";
 import { Fieldset, FieldsetLegend } from "@kyomi/ui/components/fieldset";
-import { Radio, RadioGroup } from "@kyomi/ui/components/radio-group";
+import { PreviewRadioGroup } from "@kyomi/ui/components/preview-radio-group";
 import { THEME_STORAGE_KEY } from "@lib/shell/keys";
 
 const items = [
@@ -86,31 +86,15 @@ export function ThemeSwitcher() {
         <FieldsetLegend className="font-semibold text-lg leading-7">Theme</FieldsetLegend>
         <p className="text-muted-foreground text-sm">Choose how Kyomi appears across the app.</p>
       </div>
-      <RadioGroup
-        className="flex-row gap-4"
+      <PreviewRadioGroup
+        aria-label="Theme"
+        items={items.map((item) => ({ ...item, preview: themePreviews[item.value] }))}
         value={value}
         onValueChange={(next) => {
-          if (next !== "system" && next !== "light" && next !== "dark") {
-            return;
-          }
           setValue(next);
           applyTheme(next);
         }}
-      >
-        {items.map((item) => (
-          <FieldItem key={item.value}>
-            <FieldLabel className="cursor-pointer flex-col">
-              <Radio className="peer absolute sr-only" value={item.value} />
-              <span className="relative block h-17.5 w-22 overflow-hidden rounded-lg shadow-xs transition-shadow peer-data-disabled:cursor-not-allowed peer-data-disabled:opacity-64 peer-data-checked:ring-2 peer-data-checked:ring-primary/48 peer-data-checked:ring-offset-1 peer-data-checked:ring-offset-background not-peer-data-checked:opacity-80">
-                {themePreviews[item.value]}
-              </span>
-              <span className="text-sm not-peer-data-checked:text-muted-foreground/70">
-                {item.label}
-              </span>
-            </FieldLabel>
-          </FieldItem>
-        ))}
-      </RadioGroup>
+      />
     </Field>
   );
 }
