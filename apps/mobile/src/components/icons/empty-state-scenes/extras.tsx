@@ -158,25 +158,19 @@ const readerNoHighlights: Scene = (context) => {
 /** Advanced, no data: a big open box seen in perspective with nothing in it. */
 const advancedNoData: Scene = (context) => {
   const { theme } = context;
+  const port = { fill: theme.cavity } as const;
   return (
-    <G transform="translate(96 96) scale(1.18) translate(-96 -96)">
-      <Surface
-        context={context}
-        d={rr(66, 44, 68, 108, 18)}
-        strokeD={rr(66, 44, 68, 108, 18, 0.5)}
+    <Surface context={context} d={rr(52, 36, 88, 120, 18)} strokeD={rr(52, 36, 88, 120, 18, 0.5)}>
+      <Path
+        d="M128 36H122Q140 36 140 54V138Q140 156 122 156H128Z"
+        fill={theme.lines[0]}
+        fillOpacity={theme.lineOpacities[0]}
       />
-      <Surface context={context} d={rr(58, 40, 68, 108, 18)} strokeD={rr(58, 40, 68, 108, 18, 0.5)}>
-        <Path
-          d={rr(64, 46, 56, 62, 12)}
-          fill={theme.lines[0]}
-          fillOpacity={theme.lineOpacities[0]}
-        />
-        <Rect fill={theme.toneEdge} height={7} rx={3.5} width={28} x={66} y={130} />
-        <Circle cx={104} cy={133.5} fill={theme.toneEdge} r={2.4} />
-        <Circle cx={111.5} cy={133.5} fill={theme.toneEdge} r={2.4} />
-        <Circle cx={119} cy={133.5} fill={theme.icon} fillOpacity={theme.iconOpacity} r={2.4} />
-      </Surface>
-    </G>
+      <Rect height={11} rx={5.5} width={32} x={62} y={134} {...port} />
+      <Circle cx={105} cy={139.5} r={4.5} {...port} />
+      <Circle cx={116} cy={139.5} r={4.5} {...port} />
+      <Circle cx={127} cy={139.5} fill={theme.icon} fillOpacity={theme.iconOpacity} r={4.5} />
+    </Surface>
   );
 };
 

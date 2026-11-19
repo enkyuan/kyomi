@@ -70,7 +70,7 @@ export function getEmptyStateTheme(isDark: boolean): EmptyStateTheme {
         paperOpacity: 1,
         edge: { from: "#D6D6D6", fromOpacity: 1, to: "#E4E4E4", toOpacity: 1 },
         shadowOpacity: 0.06,
-        cavity: "#E4E4E4",
+        cavity: "#CDCDCD",
         detail: "#C9C9C9",
         detailOpacity: 1,
         base: "#FAFAFA",
