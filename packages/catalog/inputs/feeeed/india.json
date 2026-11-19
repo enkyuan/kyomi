@@ -10,20 +10,11 @@
       "kind": "feed",
       "feed_url": "https://bookcrumbsco.substack.com/feed",
       "details": "Fiction",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Arts & Culture",
-        "Literature",
-        "India"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Arts & Culture", "Literature", "India"],
       "cleaned_author": "Divs.BookCrumbs",
       "language": "en",
-      "keywords": [
-        "diverse reads",
-        "fiction"
-      ],
+      "keywords": ["diverse reads", "fiction"],
       "top_level_category": "Arts & Culture"
     },
     {
@@ -34,23 +25,11 @@
       "kind": "feed",
       "feed_url": "https://www.culturalsurvival.org/rss.xml",
       "details": "Travel > Culture",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Activism",
-        "India",
-        "Russia",
-        "Brazil"
-      ],
+      "tags": ["Living", "Activism", "India", "Russia", "Brazil"],
       "language": "en",
-      "keywords": [
-        "indigenous rights",
-        "cultural heritage",
-        "advocacy"
-      ],
+      "keywords": ["indigenous rights", "cultural heritage", "advocacy"],
       "top_level_category": "Travel & Geography"
     }
   ],

@@ -117,8 +117,8 @@ vi.mock("@kyomi/ui/components/switch", () => ({
 
 vi.mock("@kyomi/ui/components/slider", () => ({
   SliderComfortable: ({ onChange }: { onChange?: (value: number) => void }) => (
-    <button onClick={() => onChange?.(21)} type="button">
-      font-size-slider
+    <button onClick={() => onChange?.(3)} type="button">
+      text-size-slider
     </button>
   ),
 }));
@@ -161,20 +161,29 @@ describe("AppearancePagePanel", () => {
   test("updates inbox text scale preferences from the merged page", () => {
     render(<AppearancePagePanel />);
 
-    fireEvent.click(screen.getByRole("tab", { name: "xl" }));
+    fireEvent.click(screen.getByRole("button", { name: "text-size-slider" }));
 
     expect(setInboxPreferencesMock).toHaveBeenCalledWith({ inboxFontSizePx: 20 });
   });
 
-  test("shows relative timestamp display as the default-first option", () => {
+  test("lists every timestamp format, with the relative styles under Relative, and switches between them", () => {
     render(<AppearancePagePanel />);
 
-    const timestampOptions = screen
-      .getAllByRole("button")
-      .map((button) => button.textContent)
-      .filter((label) => label === "Relative" || label === "Absolute");
+    const formats = screen
+      .getAllByRole("tab")
+      .map((tab) => tab.textContent)
+      .filter((label) => ["Relative", "Date & time", "Date", "ISO"].includes(label ?? ""));
+    expect(formats).toEqual(["Relative", "Date & time", "Date", "ISO"]);
+    expect(screen.getByRole("tab", { name: "Expanded" })).toBeTruthy();
 
-    expect(timestampOptions).toEqual(["Relative", "Absolute"]);
+    fireEvent.click(screen.getByRole("tab", { name: "Date" }));
+    expect(setInboxPreferencesMock).toHaveBeenCalledWith({ inboxTimestampDisplay: "date" });
+  });
+
+  test("shows the clock toggle only for formats that include a time", () => {
+    render(<AppearancePagePanel />);
+
+    expect(screen.queryByRole("tab", { name: "24-hour" })).toBeNull();
   });
 
   test("resets inbox defaults from the merged page", () => {

@@ -10,20 +10,11 @@
       "kind": "feed",
       "feed_url": "http://www.sfist.com/index.rdf",
       "details": "Local > SF Bay Area",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "San Francisco"
-      ],
+      "tags": ["Local", "San Francisco"],
       "language": "en",
-      "keywords": [
-        "San Francisco",
-        "local events",
-        "restaurants"
-      ],
+      "keywords": ["San Francisco", "local events", "restaurants"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -34,20 +25,11 @@
       "kind": "reddit",
       "subreddit": "bayarea",
       "details": "Local > SF Bay Area",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "San Francisco"
-      ],
+      "tags": ["Local", "San Francisco"],
       "language": "en",
-      "keywords": [
-        "Bay Area",
-        "community news",
-        "events"
-      ],
+      "keywords": ["Bay Area", "community news", "events"],
       "top_level_category": "Regional & Local"
     }
   ],

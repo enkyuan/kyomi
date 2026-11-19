@@ -20,13 +20,13 @@ behavior.
 Each workstream edits only the files it owns. Reading anything is fine. When a dependency file
 does not exist yet, code against the signature in this document and re-check before finishing.
 
-| Workstream       | Owns                                                                                                                                                                                                                                                                                                                                                         |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `progress-api`   | `packages/db/src/schema/articles.ts` (the new table only), `packages/db/src/schema/preferences.ts` (the new column only), the generated migration, `apps/api/src/modules/articles/progress/**`, `apps/api/src/modules/articles/routes.ts`, `apps/api/src/modules/articles/schemas.ts`, the list and detail queries under `apps/api/src/modules/articles/read/**`, the user preferences API, `tests/api/integration/modules/articles/progress/**` |
-| `resurface-api`  | `apps/api/src/modules/articles/resurface/**`, `tests/api/integration/modules/articles/resurface/**`                                                                                                                                                                                                                                                       |
-| `reader-core`    | `packages/reader/src/core/progress.ts`, its export from `packages/reader/src/core/index.ts`, `packages/reader/src/schemas/article.ts`, `packages/reader/src/schemas/preferences.ts`, `tests/web/integration/src/packages/reader/progress*.test.ts`                                                                                                           |
-| `web`            | `apps/web/src/**` changes for tracking, restore, badge, recap section, settings toggle, and query keys; `tests/web/integration/**` for those                                                                                                                                                                                                                 |
-| `mobile`         | `apps/mobile/src/**` and `apps/mobile/modules/article-list/ios/**` changes for badge, label, tracking, restore, and offline buffer; mobile tests                                                                                                                                                                                                             |
+| Workstream      | Owns                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `progress-api`  | `packages/db/src/schema/articles.ts` (the new table only), `packages/db/src/schema/preferences.ts` (the new column only), the generated migration, `apps/api/src/modules/articles/progress/**`, `apps/api/src/modules/articles/routes.ts`, `apps/api/src/modules/articles/schemas.ts`, the list and detail queries under `apps/api/src/modules/articles/read/**`, the user preferences API, `tests/api/integration/modules/articles/progress/**` |
+| `resurface-api` | `apps/api/src/modules/articles/resurface/**`, `tests/api/integration/modules/articles/resurface/**`                                                                                                                                                                                                                                                                                                                                              |
+| `reader-core`   | `packages/reader/src/core/progress.ts`, its export from `packages/reader/src/core/index.ts`, `packages/reader/src/schemas/article.ts`, `packages/reader/src/schemas/preferences.ts`, `tests/web/integration/src/packages/reader/progress*.test.ts`                                                                                                                                                                                               |
+| `web`           | `apps/web/src/**` changes for tracking, restore, badge, recap section, settings toggle, and query keys; `tests/web/integration/**` for those                                                                                                                                                                                                                                                                                                     |
+| `mobile`        | `apps/mobile/src/**` and `apps/mobile/modules/article-list/ios/**` changes for badge, label, tracking, restore, and offline buffer; mobile tests                                                                                                                                                                                                                                                                                                 |
 
 Nobody commits. The coordinator reviews and creates the GitButler checkpoints.
 
@@ -36,34 +36,34 @@ New table `article_reading_state` in `packages/db/src/schema/articles.ts`, expor
 `articleReadingState`. It follows the `article_view_events` convention of one nullable foreign key
 per article kind.
 
-| Column                   | Type        | Notes                                                                                   |
-| ------------------------ | ----------- | --------------------------------------------------------------------------------------- |
-| `id`                     | `text` PK   | `crypto.randomUUID()`                                                                   |
-| `user_id`                | `text`      | FK `users.id`, cascade                                                                  |
-| `feed_item_id`           | `text` null | FK `feed_items.id`, cascade                                                             |
-| `clip_id`                | `text` null | FK `article_clips.id`, cascade                                                          |
-| `progress`               | `real`      | 0–1, current position, default 0                                                        |
-| `max_progress`           | `real`      | 0–1, high-water mark, default 0                                                         |
-| `anchor`                 | `jsonb` null| `ReadingBlockAnchor`, reserved for KDM, null on the HTML path                           |
-| `content_key`            | `text`      | see "Content key"                                                                       |
-| `content_words`          | `integer` null | word count of the content read, computed once on first write                         |
-| `active_read_ms`         | `integer`   | default 0                                                                               |
-| `session_count`          | `integer`   | default 0                                                                               |
-| `last_session_id`        | `text` null |                                                                                         |
-| `last_session_active_ms` | `integer`   | default 0                                                                               |
-| `client_updated_at`      | `timestamp` null | last accepted position write, clamped to server time                               |
-| `first_read_at`          | `timestamp` |                                                                                         |
-| `last_read_at`           | `timestamp` |                                                                                         |
-| `completed_at`           | `timestamp` null |                                                                                    |
-| `state`                  | `text`      | `reading` \| `resurfacing` \| `completed` \| `dismissed` \| `abandoned`, default `reading` |
-| `due_at`                 | `timestamp` null |                                                                                    |
-| `interval_days`          | `real`      | default 1                                                                               |
-| `ease`                   | `real`      | default 2                                                                               |
-| `impressions`            | `integer`   | default 0                                                                               |
-| `lapses`                 | `integer`   | default 0                                                                               |
-| `last_impression_at`     | `timestamp` null |                                                                                    |
-| `dismissed_at`           | `timestamp` null |                                                                                    |
-| `updated_at`             | `timestamp` | default now                                                                             |
+| Column                   | Type             | Notes                                                                                      |
+| ------------------------ | ---------------- | ------------------------------------------------------------------------------------------ |
+| `id`                     | `text` PK        | `crypto.randomUUID()`                                                                      |
+| `user_id`                | `text`           | FK `users.id`, cascade                                                                     |
+| `feed_item_id`           | `text` null      | FK `feed_items.id`, cascade                                                                |
+| `clip_id`                | `text` null      | FK `article_clips.id`, cascade                                                             |
+| `progress`               | `real`           | 0–1, current position, default 0                                                           |
+| `max_progress`           | `real`           | 0–1, high-water mark, default 0                                                            |
+| `anchor`                 | `jsonb` null     | `ReadingBlockAnchor`, reserved for KDM, null on the HTML path                              |
+| `content_key`            | `text`           | see "Content key"                                                                          |
+| `content_words`          | `integer` null   | word count of the content read, computed once on first write                               |
+| `active_read_ms`         | `integer`        | default 0                                                                                  |
+| `session_count`          | `integer`        | default 0                                                                                  |
+| `last_session_id`        | `text` null      |                                                                                            |
+| `last_session_active_ms` | `integer`        | default 0                                                                                  |
+| `client_updated_at`      | `timestamp` null | last accepted position write, clamped to server time                                       |
+| `first_read_at`          | `timestamp`      |                                                                                            |
+| `last_read_at`           | `timestamp`      |                                                                                            |
+| `completed_at`           | `timestamp` null |                                                                                            |
+| `state`                  | `text`           | `reading` \| `resurfacing` \| `completed` \| `dismissed` \| `abandoned`, default `reading` |
+| `due_at`                 | `timestamp` null |                                                                                            |
+| `interval_days`          | `real`           | default 1                                                                                  |
+| `ease`                   | `real`           | default 2                                                                                  |
+| `impressions`            | `integer`        | default 0                                                                                  |
+| `lapses`                 | `integer`        | default 0                                                                                  |
+| `last_impression_at`     | `timestamp` null |                                                                                            |
+| `dismissed_at`           | `timestamp` null |                                                                                            |
+| `updated_at`             | `timestamp`      | default now                                                                                |
 
 Constraints and indexes:
 
@@ -142,12 +142,12 @@ DTO additions:
 
 All under `/api/v1`, authenticated, with the existing rate-limit plugin.
 
-| Method and path                                        | Owner           | Body                         | 200 response                       |
-| ------------------------------------------------------ | --------------- | ---------------------------- | ---------------------------------- |
-| `PUT /articles/:articleId/progress`                    | `progress-api`  | `ReadingProgressUpdateBody`  | `{ readingProgress: ReadingProgressDto }` |
-| `GET /articles/views/continue-reading?limit=5`         | `resurface-api` | none; `limit` 1..20          | `cursorListResponseSchema` with `next_cursor: null`, `has_more: false` |
-| `POST /articles/views/continue-reading/impressions`    | `resurface-api` | `{ articleIds: string[] }` (1..20 uuids) | `{ message }`             |
-| `POST /articles/:articleId/continue-reading/dismiss`   | `resurface-api` | none                         | `{ message }`                      |
+| Method and path                                      | Owner           | Body                                     | 200 response                                                           |
+| ---------------------------------------------------- | --------------- | ---------------------------------------- | ---------------------------------------------------------------------- |
+| `PUT /articles/:articleId/progress`                  | `progress-api`  | `ReadingProgressUpdateBody`              | `{ readingProgress: ReadingProgressDto }`                              |
+| `GET /articles/views/continue-reading?limit=5`       | `resurface-api` | none; `limit` 1..20                      | `cursorListResponseSchema` with `next_cursor: null`, `has_more: false` |
+| `POST /articles/views/continue-reading/impressions`  | `resurface-api` | `{ articleIds: string[] }` (1..20 uuids) | `{ message }`                                                          |
+| `POST /articles/:articleId/continue-reading/dismiss` | `resurface-api` | none                                     | `{ message }`                                                          |
 
 `progress-api` registers both route modules from `apps/api/src/modules/articles/routes.ts`:
 `registerArticleProgressRoutes` from `./progress/routes` and `registerArticleResurfaceRoutes` from
@@ -291,7 +291,10 @@ export type ScrollMetrics = {
 };
 
 export function progressFromScroll(metrics: ScrollMetrics): number; // clamped 0..1
-export function scrollTopForProgress(progress: number, metrics: Omit<ScrollMetrics, "scrollTop">): number;
+export function scrollTopForProgress(
+  progress: number,
+  metrics: Omit<ScrollMetrics, "scrollTop">,
+): number;
 export function buildContentKey(reader: ReaderContent): string;
 
 export type ActiveTimer = {

@@ -3,7 +3,8 @@ export {
   type NativeDocumentBodyHandle,
   type NativeDocumentBodyProps,
 } from "./body";
-export { Blocks, BlockView, ProseRun } from "./blocks";
+export { Blocks, BlockView } from "./blocks";
+export { ProseRun } from "./prose";
 export { type NativeReadingSample } from "./tracking";
 export {
   ReaderNativeProvider,

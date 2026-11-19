@@ -16,10 +16,10 @@ if `URL` is omitted, the scraper uses Feedspot's technology RSS list.
 
 a JSON object with:
 
-| field | notes |
-| --- | --- |
-| `category` | category inferred from the Feedspot page. |
-| `feeds` | title, feed URL, website URL, description, and follower counts when available. |
+| field      | notes                                                                          |
+| ---------- | ------------------------------------------------------------------------------ |
+| `category` | category inferred from the Feedspot page.                                      |
+| `feeds`    | title, feed URL, website URL, description, and follower counts when available. |
 
 ## notes
 

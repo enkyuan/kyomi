@@ -4,7 +4,7 @@ import { ReceiptBillIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 
-export const billingSection = {
+const billingSection = {
   description: "Review your workspace plan, payment method, and billing history.",
   name: "Billing",
 } as const;

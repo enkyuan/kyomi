@@ -21,16 +21,16 @@ export type ReadingSample = {
 };
 
 /**
- * Tracks how far the user reads `article` and where to put them back.
+ * Tracks how far the user reads `article`. Articles always open at the top; nothing is restored.
  *
  * Samples come from the body renderer through `onReadingProgress`. A session accumulates them with
  * the active reading time and is flushed every `READING_FLUSH_INTERVAL_MS`, when the app leaves the
  * foreground, and when the article closes. A write that fails is kept for the next foreground.
- * With the "Remember reading position" preference off nothing is tracked or restored.
+ * With the "Remember reading position" preference off nothing is tracked.
  */
 export function useReadingProgress(article: ReaderArticle | undefined) {
   const queryClient = useQueryClient();
-  const { isSettled, rememberPosition } = useReaderPreferences();
+  const { rememberPosition } = useReaderPreferences();
   const sessionRef = useRef<{ session: ReadingSession; timer: ActiveTimer } | null>(null);
   const articleId = article?.id;
   const selected = article?.reader.selected;
@@ -82,16 +82,7 @@ export function useReadingProgress(article: ReaderArticle | undefined) {
     current.session.sample(sample);
   }, []);
 
-  const position = article?.readingPosition;
-  const initialProgress =
-    rememberPosition && position && contentKey !== null && position.contentKey === contentKey
-      ? position.progress
-      : undefined;
-
   return {
-    initialProgress,
-    /** The renderer waits for the preference so a position is never restored against it. */
-    isReady: isSettled,
     onReadingProgress: rememberPosition ? onReadingProgress : undefined,
   };
 }

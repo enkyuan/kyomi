@@ -13,19 +13,19 @@ Every optional platform-expansion capability is gated behind a `FEATURE_*` flag.
 default to `false` in local development and examples. Existing stable behavior (RSS reading,
 search-over-feeds, auth email/password) is not flagged.
 
-| Flag | Default | Gated capability | Required credentials when enabled |
-| --- | --- | --- | --- |
-| `FEATURE_GOOGLE_OAUTH` | false | Google OAuth sign-in via Better Auth | `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` |
-| `FEATURE_ONBOARDING` | false | First-run onboarding flow | none |
-| `FEATURE_SOURCE_YOUTUBE` | false | YouTube source connector | `YOUTUBE_API_KEY` |
-| `FEATURE_SOURCE_REDDIT` | false | Reddit source connector (public/app-credential only) | `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET` |
-| `FEATURE_SOURCE_X` | false | X source connector (public/app-credential only) | `X_CLIENT_ID`, `X_CLIENT_SECRET` |
-| `FEATURE_AI_ARTICLE_INTELLIGENCE` | false | Article summaries/tags/knowledge banks | `AI_PROVIDER`, `AI_API_KEY` |
-| `FEATURE_SOCIAL_MODE` | false | Opt-in social mode (zen stays default) | none |
-| `FEATURE_LINK_PREVIEWS` | false | Server-enriched reader link previews | none |
-| `FEATURE_SHARE_PREVIEWS` | false | Kyomi-owned share target preview pages | none |
-| `FEATURE_PUBLIC_API` | false | `/api/public/v1` developer API | none (per-key credentials issued at runtime) |
-| `FEATURE_SELF_HOSTING_SETUP` | false | Local appliance / setup wizard | none |
+| Flag                              | Default | Gated capability                                     | Required credentials when enabled            |
+| --------------------------------- | ------- | ---------------------------------------------------- | -------------------------------------------- |
+| `FEATURE_GOOGLE_OAUTH`            | false   | Google OAuth sign-in via Better Auth                 | `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`   |
+| `FEATURE_ONBOARDING`              | false   | First-run onboarding flow                            | none                                         |
+| `FEATURE_SOURCE_YOUTUBE`          | false   | YouTube source connector                             | `YOUTUBE_API_KEY`                            |
+| `FEATURE_SOURCE_REDDIT`           | false   | Reddit source connector (public/app-credential only) | `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET`   |
+| `FEATURE_SOURCE_X`                | false   | X source connector (public/app-credential only)      | `X_CLIENT_ID`, `X_CLIENT_SECRET`             |
+| `FEATURE_AI_ARTICLE_INTELLIGENCE` | false   | Article summaries/tags/knowledge banks               | `AI_PROVIDER`, `AI_API_KEY`                  |
+| `FEATURE_SOCIAL_MODE`             | false   | Opt-in social mode (zen stays default)               | none                                         |
+| `FEATURE_LINK_PREVIEWS`           | false   | Server-enriched reader link previews                 | none                                         |
+| `FEATURE_SHARE_PREVIEWS`          | false   | Kyomi-owned share target preview pages               | none                                         |
+| `FEATURE_PUBLIC_API`              | false   | `/api/public/v1` developer API                       | none (per-key credentials issued at runtime) |
+| `FEATURE_SELF_HOSTING_SETUP`      | false   | Local appliance / setup wizard                       | none                                         |
 
 The validation rule: a credential is required **only** when its matching feature flag is
 enabled. With a flag disabled, missing credentials must not fail startup. This keeps
@@ -33,11 +33,11 @@ zero-credential local/self-hosted core setup working (roadmap self-hosting invar
 
 ## Public API rate limits
 
-| Setting | Default | Meaning |
-| --- | --- | --- |
-| `PUBLIC_API_KEY_PREFIX` | `kyomi_pk_` | Non-secret identifying prefix for issued keys (logs use prefix/id only) |
-| `PUBLIC_API_DEFAULT_RATE_LIMIT_PER_MINUTE` | 60 | Default per-key per-minute quota |
-| `PUBLIC_API_DEFAULT_RATE_LIMIT_PER_DAY` | 10000 | Default per-key per-day quota |
+| Setting                                    | Default     | Meaning                                                                 |
+| ------------------------------------------ | ----------- | ----------------------------------------------------------------------- |
+| `PUBLIC_API_KEY_PREFIX`                    | `kyomi_pk_` | Non-secret identifying prefix for issued keys (logs use prefix/id only) |
+| `PUBLIC_API_DEFAULT_RATE_LIMIT_PER_MINUTE` | 60          | Default per-key per-minute quota                                        |
+| `PUBLIC_API_DEFAULT_RATE_LIMIT_PER_DAY`    | 10000       | Default per-key per-day quota                                           |
 
 Rate limiting must apply at multiple layers (key id, owner user id, route family, IP
 fallback, global emergency limit). Query-string API keys are not accepted; keys travel in
@@ -122,17 +122,17 @@ app-credential only.
 
 ## Public API v1 exposure matrix
 
-| Resource | Allowed fields (v1) | Denied fields | Scope | Rate-limit bucket | Privacy test |
-| --- | --- | --- | --- | --- | --- |
-| Feeds | id, title, description, siteUrl, sourceKind, categories, language | folder membership, private subscription notes | `feeds:read` | key + owner | feed-owner-scope leak test |
-| Feed items | id, title, canonicalUrl, summary, publishedAt, author, sourceKind, tags, categories | read/saved/hidden state, clips, private notes, private annotations | `items:read` | key + owner | item-private-state leak test |
-| Search | accessible feed-item hits, honest pagination | global hit counts, unauthorized feeds | `search:read` | key + owner + route | search-access-scope leak test |
-| Tags & categories | slug, label, provenance (when safe) | none beyond provenance policy | `tags:read` | key + owner | tag-dictionary scope test |
-| Share targets | slug, kind, visibility for objects the principal can access | private-state entities | `shares:write` | key + owner | share-visibility recheck test |
-| Usage | own key metadata, own usage summary | cross-user usage, raw request logs | `usage:read` | key + owner | cross-user-usage leak test |
-| Social profiles | not exposed in v1 | all | — | — | — |
-| Knowledge banks | not exposed in v1 | all | — | — | — |
-| Source connector mgmt | not exposed in v1 | all | — | — | — |
+| Resource              | Allowed fields (v1)                                                                 | Denied fields                                                      | Scope          | Rate-limit bucket   | Privacy test                  |
+| --------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------ | -------------- | ------------------- | ----------------------------- |
+| Feeds                 | id, title, description, siteUrl, sourceKind, categories, language                   | folder membership, private subscription notes                      | `feeds:read`   | key + owner         | feed-owner-scope leak test    |
+| Feed items            | id, title, canonicalUrl, summary, publishedAt, author, sourceKind, tags, categories | read/saved/hidden state, clips, private notes, private annotations | `items:read`   | key + owner         | item-private-state leak test  |
+| Search                | accessible feed-item hits, honest pagination                                        | global hit counts, unauthorized feeds                              | `search:read`  | key + owner + route | search-access-scope leak test |
+| Tags & categories     | slug, label, provenance (when safe)                                                 | none beyond provenance policy                                      | `tags:read`    | key + owner         | tag-dictionary scope test     |
+| Share targets         | slug, kind, visibility for objects the principal can access                         | private-state entities                                             | `shares:write` | key + owner         | share-visibility recheck test |
+| Usage                 | own key metadata, own usage summary                                                 | cross-user usage, raw request logs                                 | `usage:read`   | key + owner         | cross-user-usage leak test    |
+| Social profiles       | not exposed in v1                                                                   | all                                                                | —              | —                   | —                             |
+| Knowledge banks       | not exposed in v1                                                                   | all                                                                | —              | —                   | —                             |
+| Source connector mgmt | not exposed in v1                                                                   | all                                                                | —              | —                   | —                             |
 
 ## External source quota / retention notes
 
@@ -146,7 +146,6 @@ app-credential only.
   store only public post metadata. No posting/voting/replying.
 - **AI provider**: per-provider token/rate limits. Validate structured outputs, store
   provenance + confidence, never trust raw LLM output. Do not train on user reading history.
-
 
 ---
 
@@ -530,17 +529,17 @@ Public API principles:
 
 Public API v1 exposure policy:
 
-| Resource | Public API v1 exposure | Notes |
-| --- | --- | --- |
-| Feeds | Read feed metadata for feeds owned or followed by the API principal | No folder membership or private subscription notes. |
-| Feed items | Read normalized public article/source metadata for accessible feeds | No read state, saved state, hidden state, clips, private notes, or private annotations. |
-| Search | Search accessible feed items through the existing search service | Must reuse search access-scope logic and avoid leaking global hit counts. |
-| Tags and categories | Read normalized public tag/category dictionaries and assignments on accessible items | Include provenance only when safe and useful. |
-| Share targets | Create/revoke share targets for public feed items and feeds | Must reuse Task 13 visibility checks. |
-| Usage | Read the API principal's own key metadata and usage summary | No cross-user usage or raw request logs. |
-| Social profiles | Not exposed in v1 unless Task 12 explicitly marks fields public | No read activity through public API in this roadmap. |
-| Knowledge banks | Not exposed in v1 | Private by default; needs a separate sharing and consent design. |
-| Source connector management | Not exposed in v1 | Avoid external mutation of connector credentials, follows, or refresh schedules. |
+| Resource                    | Public API v1 exposure                                                               | Notes                                                                                   |
+| --------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| Feeds                       | Read feed metadata for feeds owned or followed by the API principal                  | No folder membership or private subscription notes.                                     |
+| Feed items                  | Read normalized public article/source metadata for accessible feeds                  | No read state, saved state, hidden state, clips, private notes, or private annotations. |
+| Search                      | Search accessible feed items through the existing search service                     | Must reuse search access-scope logic and avoid leaking global hit counts.               |
+| Tags and categories         | Read normalized public tag/category dictionaries and assignments on accessible items | Include provenance only when safe and useful.                                           |
+| Share targets               | Create/revoke share targets for public feed items and feeds                          | Must reuse Task 13 visibility checks.                                                   |
+| Usage                       | Read the API principal's own key metadata and usage summary                          | No cross-user usage or raw request logs.                                                |
+| Social profiles             | Not exposed in v1 unless Task 12 explicitly marks fields public                      | No read activity through public API in this roadmap.                                    |
+| Knowledge banks             | Not exposed in v1                                                                    | Private by default; needs a separate sharing and consent design.                        |
+| Source connector management | Not exposed in v1                                                                    | Avoid external mutation of connector credentials, follows, or refresh schedules.        |
 
 ## Privacy Model
 
@@ -630,29 +629,29 @@ Privacy invariants:
 
 ## Feature Coverage Map
 
-| User note | Covered by |
-| --- | --- |
-| Add YouTube support | Task 8 |
-| Expand system scale and take in more feeds | Scale Readiness Dependency plus Tasks 2, 3, 5, 8, 9, 13, 15, and 16 |
-| Reach well over 1M feeds | Feed Refresh Scale Architecture plus Tasks 15, 16, and 18 |
-| Make first feed follow feel instant | Task 15 |
-| Add durability, replay, and upgrade safety | Task 16 |
-| Run Kyomi locally with extreme ease | Task 17 |
-| Self-host with prebuilt Docker images and guided setup | Task 17 |
-| Handle stored feed URLs that return HTML pages | Tasks 2 and 15 |
-| i18n and translations | Task 11 |
-| Tagging feed items based on category | Tasks 2, 3, and 4 |
-| Search service for the search bar | Task 5 |
-| Continue `packages/catalog/TODO.md` work | Task 3 |
-| Add TanStack AI SDK for articles and knowledge banks | Tasks 1 and 10 |
-| Implement rest of settings | Task 6 |
-| User onboarding | Task 7 |
-| Google OAuth with Better Auth | Task 7 |
-| Social mode with zen default | Task 12 |
-| Show actual content for `Comments` links in feed items/previews | Task 13 |
-| Share feed items and feeds with Reddit-like preview pages | Task 13 |
-| Public-facing API for developers with rate limits and safe exposure rules | Task 14 |
-| Support Reddit and X | Task 9 |
+| User note                                                                 | Covered by                                                          |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| Add YouTube support                                                       | Task 8                                                              |
+| Expand system scale and take in more feeds                                | Scale Readiness Dependency plus Tasks 2, 3, 5, 8, 9, 13, 15, and 16 |
+| Reach well over 1M feeds                                                  | Feed Refresh Scale Architecture plus Tasks 15, 16, and 18           |
+| Make first feed follow feel instant                                       | Task 15                                                             |
+| Add durability, replay, and upgrade safety                                | Task 16                                                             |
+| Run Kyomi locally with extreme ease                                       | Task 17                                                             |
+| Self-host with prebuilt Docker images and guided setup                    | Task 17                                                             |
+| Handle stored feed URLs that return HTML pages                            | Tasks 2 and 15                                                      |
+| i18n and translations                                                     | Task 11                                                             |
+| Tagging feed items based on category                                      | Tasks 2, 3, and 4                                                   |
+| Search service for the search bar                                         | Task 5                                                              |
+| Continue `packages/catalog/TODO.md` work                                  | Task 3                                                              |
+| Add TanStack AI SDK for articles and knowledge banks                      | Tasks 1 and 10                                                      |
+| Implement rest of settings                                                | Task 6                                                              |
+| User onboarding                                                           | Task 7                                                              |
+| Google OAuth with Better Auth                                             | Task 7                                                              |
+| Social mode with zen default                                              | Task 12                                                             |
+| Show actual content for `Comments` links in feed items/previews           | Task 13                                                             |
+| Share feed items and feeds with Reddit-like preview pages                 | Task 13                                                             |
+| Public-facing API for developers with rate limits and safe exposure rules | Task 14                                                             |
+| Support Reddit and X                                                      | Task 9                                                              |
 
 ## Roadmap Execution Model
 
@@ -669,20 +668,20 @@ Rules for child plans:
 
 Child plan gate matrix:
 
-| Child plan | Parent tasks covered | Required before | Scope |
-| --- | --- | --- | --- |
-| `2026-07-01-feed-refresh-scale-architecture.md` | Scale Readiness Dependency | Any high-volume catalog import, connector backfill, or scheduled refresh expansion | Scheduler, worker roles, queue partitioning, scale indexes, host politeness, queue observability |
-| `2026-07-01-platform-foundation-metadata-search.md` | Tasks 1, 2, 3, 4, 5 | Tags, search, catalog metadata, or source schema implementation | Dependency audit, source/category/tag schema, catalog import preservation, feed item chips, article/feed search with explicit access filtering |
-| `2026-07-01-settings-onboarding-auth.md` | Tasks 6, 7 | Settings, onboarding, or Google OAuth implementation | Preferences, feedback, settings panels, onboarding state, Better Auth Google provider |
-| `2026-07-01-source-connectors.md` | Tasks 8, 9 | YouTube, Reddit, or X source implementation | Connector interface, source identity, public/app-credential platform access, quota/backoff, mocked official API fixtures |
-| `2026-07-01-article-intelligence-knowledge-i18n.md` | Tasks 10, 11 | AI, knowledge bank, translation, or app locale implementation | AI provider adapter, validated outputs, knowledge banks, translation cache, app i18n |
-| `2026-07-01-social-mode.md` | Task 12 | Any profile, follow, or read-activity sharing implementation | Profiles, follows, visibility rules, blocks, social UI, privacy tests |
-| `2026-07-01-sharing-discussion-previews.md` | Task 13 | Any Kyomi-owned share URL, feed share preview, feed item share preview, or enriched comments/discussion link preview | Preview classification, server-side preview cache, public discussion excerpts, share target routes, Open Graph metadata, privacy tests |
-| `2026-07-01-public-api-platform.md` | Task 14 | Any public developer API endpoint, API key management surface, public API docs, or external client contract | Separate `/api/public/v1` router, scoped API keys, public DTO allowlists, rate limits, usage/audit logs, OpenAPI docs, privacy tests |
-| `2026-07-01-feed-follow-cold-start-performance.md` | Task 15 | Any new follow-source path, million-feed performance gate, or feed URL canonicalization change | Known-feed cache path, unknown-feed priority fetch, SLOs, HTML autodiscovery, canonical URL updates, priority queues, load tests |
-| `2026-07-01-durability-upgrades-recovery.md` | Task 16 | Any durable ingestion ledger, queue payload versioning, backfill/reindex framework, backup/restore, or rolling worker upgrade | Postgres ingestion ledger, replay, DLQs, versioned payloads, Meili index swaps, migration safety, restore drills |
-| `2026-07-01-self-hosting-local-appliance.md` | Task 17 | Any self-hosting docs, local launcher, published images, setup wizard, local doctor, backup, restore, or upgrade UX | GHCR image naming, compose profiles, browser installer, zero-credential defaults, health checks, backup/restore, upgrade docs |
-| `2026-07-01-platform-rollout-observability.md` | Task 18 | Production rollout of the platform expansion | Smoke tests, feature flag rollout, backfills, dashboards, rollback, release notes |
+| Child plan                                          | Parent tasks covered       | Required before                                                                                                               | Scope                                                                                                                                          |
+| --------------------------------------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `2026-07-01-feed-refresh-scale-architecture.md`     | Scale Readiness Dependency | Any high-volume catalog import, connector backfill, or scheduled refresh expansion                                            | Scheduler, worker roles, queue partitioning, scale indexes, host politeness, queue observability                                               |
+| `2026-07-01-platform-foundation-metadata-search.md` | Tasks 1, 2, 3, 4, 5        | Tags, search, catalog metadata, or source schema implementation                                                               | Dependency audit, source/category/tag schema, catalog import preservation, feed item chips, article/feed search with explicit access filtering |
+| `2026-07-01-settings-onboarding-auth.md`            | Tasks 6, 7                 | Settings, onboarding, or Google OAuth implementation                                                                          | Preferences, feedback, settings panels, onboarding state, Better Auth Google provider                                                          |
+| `2026-07-01-source-connectors.md`                   | Tasks 8, 9                 | YouTube, Reddit, or X source implementation                                                                                   | Connector interface, source identity, public/app-credential platform access, quota/backoff, mocked official API fixtures                       |
+| `2026-07-01-article-intelligence-knowledge-i18n.md` | Tasks 10, 11               | AI, knowledge bank, translation, or app locale implementation                                                                 | AI provider adapter, validated outputs, knowledge banks, translation cache, app i18n                                                           |
+| `2026-07-01-social-mode.md`                         | Task 12                    | Any profile, follow, or read-activity sharing implementation                                                                  | Profiles, follows, visibility rules, blocks, social UI, privacy tests                                                                          |
+| `2026-07-01-sharing-discussion-previews.md`         | Task 13                    | Any Kyomi-owned share URL, feed share preview, feed item share preview, or enriched comments/discussion link preview          | Preview classification, server-side preview cache, public discussion excerpts, share target routes, Open Graph metadata, privacy tests         |
+| `2026-07-01-public-api-platform.md`                 | Task 14                    | Any public developer API endpoint, API key management surface, public API docs, or external client contract                   | Separate `/api/public/v1` router, scoped API keys, public DTO allowlists, rate limits, usage/audit logs, OpenAPI docs, privacy tests           |
+| `2026-07-01-feed-follow-cold-start-performance.md`  | Task 15                    | Any new follow-source path, million-feed performance gate, or feed URL canonicalization change                                | Known-feed cache path, unknown-feed priority fetch, SLOs, HTML autodiscovery, canonical URL updates, priority queues, load tests               |
+| `2026-07-01-durability-upgrades-recovery.md`        | Task 16                    | Any durable ingestion ledger, queue payload versioning, backfill/reindex framework, backup/restore, or rolling worker upgrade | Postgres ingestion ledger, replay, DLQs, versioned payloads, Meili index swaps, migration safety, restore drills                               |
+| `2026-07-01-self-hosting-local-appliance.md`        | Task 17                    | Any self-hosting docs, local launcher, published images, setup wizard, local doctor, backup, restore, or upgrade UX           | GHCR image naming, compose profiles, browser installer, zero-credential defaults, health checks, backup/restore, upgrade docs                  |
+| `2026-07-01-platform-rollout-observability.md`      | Task 18                    | Production rollout of the platform expansion                                                                                  | Smoke tests, feature flag rollout, backfills, dashboards, rollback, release notes                                                              |
 
 Child plan creation order:
 
@@ -1507,18 +1506,18 @@ Credential invariants:
 
 ### Public API v1 Endpoints
 
-| Endpoint | Scope | Behavior |
-| --- | --- | --- |
-| `GET /api/public/v1/me` | any valid scope | Return API principal, key id/prefix, scopes, and quota summary. |
-| `GET /api/public/v1/feeds` | `feeds:read` | Cursor-paginated feeds owned or followed by the principal. |
-| `GET /api/public/v1/feeds/:feedId` | `feeds:read` | Feed metadata after object-level authorization. |
-| `GET /api/public/v1/feeds/:feedId/items` | `items:read` | Cursor-paginated public item metadata for an accessible feed. |
-| `GET /api/public/v1/items/:itemId` | `items:read` | Public item detail without user state, notes, clips, private annotations, or internal ingestion fields. |
-| `GET /api/public/v1/search` | `search:read` | Search accessible items using Task 5 access-scope logic. |
-| `GET /api/public/v1/tags` | `tags:read` | Tags/categories visible through accessible feeds and items. |
-| `POST /api/public/v1/share-targets` | `shares:write` | Create a share target for an allowed public feed item or feed using Task 13 visibility checks. |
-| `DELETE /api/public/v1/share-targets/:slug` | `shares:write` | Revoke a share target owned by the API principal. |
-| `GET /api/public/v1/usage` | `usage:read` | Return aggregate usage and quota state for the API principal. |
+| Endpoint                                    | Scope           | Behavior                                                                                                |
+| ------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------- |
+| `GET /api/public/v1/me`                     | any valid scope | Return API principal, key id/prefix, scopes, and quota summary.                                         |
+| `GET /api/public/v1/feeds`                  | `feeds:read`    | Cursor-paginated feeds owned or followed by the principal.                                              |
+| `GET /api/public/v1/feeds/:feedId`          | `feeds:read`    | Feed metadata after object-level authorization.                                                         |
+| `GET /api/public/v1/feeds/:feedId/items`    | `items:read`    | Cursor-paginated public item metadata for an accessible feed.                                           |
+| `GET /api/public/v1/items/:itemId`          | `items:read`    | Public item detail without user state, notes, clips, private annotations, or internal ingestion fields. |
+| `GET /api/public/v1/search`                 | `search:read`   | Search accessible items using Task 5 access-scope logic.                                                |
+| `GET /api/public/v1/tags`                   | `tags:read`     | Tags/categories visible through accessible feeds and items.                                             |
+| `POST /api/public/v1/share-targets`         | `shares:write`  | Create a share target for an allowed public feed item or feed using Task 13 visibility checks.          |
+| `DELETE /api/public/v1/share-targets/:slug` | `shares:write`  | Revoke a share target owned by the API principal.                                                       |
+| `GET /api/public/v1/usage`                  | `usage:read`    | Return aggregate usage and quota state for the API principal.                                           |
 
 Public DTO invariants:
 
@@ -1594,13 +1593,13 @@ bun run typecheck
 
 ### SLO Contract
 
-| Scenario | Target | Notes |
-| --- | --- | --- |
-| Follow known feed | `<100ms` API acknowledgement, `<300ms` first visible cached items p95 | No network fetch before showing existing items. |
-| Follow unknown RSS/Atom/JSON Feed | `<100ms` acknowledgement, `<2s` p50 / `<5s` p95 first visible items | Publisher latency and host politeness still apply. |
-| Follow homepage with alternate feed link | Same as unknown feed after first HTML discovery fetch | Store submitted URL and canonical feed URL separately. |
-| Follow stale endpoint returning HTML | `<100ms` acknowledgement, visible `needs_feed_url` or `feed_unavailable` state | Do not spin indefinitely or log as platform unknown. |
-| Concurrent duplicate follows | One canonical feed row, one priority fetch, both users updated | Tests cover two users and same-user double-click. |
+| Scenario                                 | Target                                                                         | Notes                                                  |
+| ---------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| Follow known feed                        | `<100ms` API acknowledgement, `<300ms` first visible cached items p95          | No network fetch before showing existing items.        |
+| Follow unknown RSS/Atom/JSON Feed        | `<100ms` acknowledgement, `<2s` p50 / `<5s` p95 first visible items            | Publisher latency and host politeness still apply.     |
+| Follow homepage with alternate feed link | Same as unknown feed after first HTML discovery fetch                          | Store submitted URL and canonical feed URL separately. |
+| Follow stale endpoint returning HTML     | `<100ms` acknowledgement, visible `needs_feed_url` or `feed_unavailable` state | Do not spin indefinitely or log as platform unknown.   |
+| Concurrent duplicate follows             | One canonical feed row, one priority fetch, both users updated                 | Tests cover two users and same-user double-click.      |
 
 ### Requirements
 
@@ -1835,19 +1834,19 @@ bun run typecheck
 
 ## Worktree Parallelization
 
-| Lane | Tasks | Modules touched | Depends on |
-| --- | --- | --- | --- |
-| A | 1, 2, 3, 4, 5 | `packages/db`, catalog import, Meili, article DTOs, feed item UI | none |
-| B | 6, 7 | settings, preferences, auth, onboarding | Task 1 |
-| C | 8, 9 | source connectors, worker ingestion, env config | Tasks 1 and 2 |
-| D | 10, 11 | AI, knowledge, translation, reader UI | Tasks 1, 2, and 5 |
-| E | 12 | social schema, API, UI, privacy settings | Tasks 1, 2, 6, and 10 |
-| F | 13 | preview service, sharing API, share routes, reader link preview UI | Tasks 1, 2, and 5; Task 12 only for profile context |
-| G | 14 | public API router, key management, public DTOs, OpenAPI docs, usage/audit logs | Tasks 1, 2, 5, 6, and 13; Task 12 only for explicitly public profile fields |
-| H | 15 | feed follow fast path, canonical URL updates, priority queues, worker fetch policy | Feed Refresh Scale Architecture plus Tasks 1, 2, 3, and 5 |
-| I | 16 | ingestion ledger, queue payloads, backfills, Meili swaps, restore drills | Feed Refresh Scale Architecture plus Tasks 2, 3, 5, 8, 9, and 15 |
-| J | 17 | Docker, setup wizard, self-hosting docs, backup/restore commands, image publishing | Tasks 1, 6, 7, 15, and 16 |
-| K | 18 | docs, smoke tests, observability | all tasks |
+| Lane | Tasks         | Modules touched                                                                    | Depends on                                                                  |
+| ---- | ------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| A    | 1, 2, 3, 4, 5 | `packages/db`, catalog import, Meili, article DTOs, feed item UI                   | none                                                                        |
+| B    | 6, 7          | settings, preferences, auth, onboarding                                            | Task 1                                                                      |
+| C    | 8, 9          | source connectors, worker ingestion, env config                                    | Tasks 1 and 2                                                               |
+| D    | 10, 11        | AI, knowledge, translation, reader UI                                              | Tasks 1, 2, and 5                                                           |
+| E    | 12            | social schema, API, UI, privacy settings                                           | Tasks 1, 2, 6, and 10                                                       |
+| F    | 13            | preview service, sharing API, share routes, reader link preview UI                 | Tasks 1, 2, and 5; Task 12 only for profile context                         |
+| G    | 14            | public API router, key management, public DTOs, OpenAPI docs, usage/audit logs     | Tasks 1, 2, 5, 6, and 13; Task 12 only for explicitly public profile fields |
+| H    | 15            | feed follow fast path, canonical URL updates, priority queues, worker fetch policy | Feed Refresh Scale Architecture plus Tasks 1, 2, 3, and 5                   |
+| I    | 16            | ingestion ledger, queue payloads, backfills, Meili swaps, restore drills           | Feed Refresh Scale Architecture plus Tasks 2, 3, 5, 8, 9, and 15            |
+| J    | 17            | Docker, setup wizard, self-hosting docs, backup/restore commands, image publishing | Tasks 1, 6, 7, 15, and 16                                                   |
+| K    | 18            | docs, smoke tests, observability                                                   | all tasks                                                                   |
 
 Recommended execution:
 
@@ -1910,13 +1909,13 @@ Recommended execution:
 
 ## GSTACK REVIEW REPORT
 
-| Review | Trigger | Why | Runs | Status | Findings |
-| --- | --- | --- | --- | --- | --- |
-| CEO Review | `/plan-ceo-review` | Scope & strategy | 1 | CLEAR | Added three first-class product lanes: feed-follow/million-feed performance, durability/upgrades/recovery, and self-hosting/local appliance. |
-| Codex Review | `/codex review` | Independent 2nd opinion | 0 | NOT RUN | Not requested separately; this pass used the requested gstack review rubrics directly. |
-| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 1 | CLEAR | Split background refresh from cold-follow fast path, added durable Postgres ingestion ledger requirements, versioned payloads, Meili swaps, SLO tests, and failure-mode coverage. |
-| Design Review | `/plan-design-review` | UI/UX gaps | 0 | NOT RUN | No visual design change in this parent roadmap update; setup wizard and local status UI are deferred to the self-hosting child plan. |
-| DX Review | `/plan-devex-review` | Developer experience gaps | 1 | CLEAR | Added appliance-style self-hosting, canonical GHCR image names, compose profiles, browser installer, doctor, backup, restore, reset, upgrade docs, and zero-credential local defaults. |
+| Review        | Trigger               | Why                             | Runs | Status  | Findings                                                                                                                                                                               |
+| ------------- | --------------------- | ------------------------------- | ---- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CEO Review    | `/plan-ceo-review`    | Scope & strategy                | 1    | CLEAR   | Added three first-class product lanes: feed-follow/million-feed performance, durability/upgrades/recovery, and self-hosting/local appliance.                                           |
+| Codex Review  | `/codex review`       | Independent 2nd opinion         | 0    | NOT RUN | Not requested separately; this pass used the requested gstack review rubrics directly.                                                                                                 |
+| Eng Review    | `/plan-eng-review`    | Architecture & tests (required) | 1    | CLEAR   | Split background refresh from cold-follow fast path, added durable Postgres ingestion ledger requirements, versioned payloads, Meili swaps, SLO tests, and failure-mode coverage.      |
+| Design Review | `/plan-design-review` | UI/UX gaps                      | 0    | NOT RUN | No visual design change in this parent roadmap update; setup wizard and local status UI are deferred to the self-hosting child plan.                                                   |
+| DX Review     | `/plan-devex-review`  | Developer experience gaps       | 1    | CLEAR   | Added appliance-style self-hosting, canonical GHCR image names, compose profiles, browser installer, doctor, backup, restore, reset, upgrade docs, and zero-credential local defaults. |
 
 - **VERDICT:** CEO + ENG + DX CLEARED. The parent roadmap now captures the requested considerations with explicit child plans, task gates, validation commands, failure modes, rollout order, and acceptance criteria.
 

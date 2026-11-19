@@ -19,7 +19,7 @@ src/
 
 | import                               | purpose                                                                                          |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `@kyomi/ingest`                      | queue, feed, favicon, and helpers.                                                 |
+| `@kyomi/ingest`                      | queue, feed, favicon, and helpers.                                                               |
 | `@kyomi/ingest/queue`                | job stream types and consumers.                                                                  |
 | `@kyomi/ingest/ingestion`            | feed refresh and parsing.                                                                        |
 | `@kyomi/ingest/document`             | `compileArticleDocument` (HTML plus KDM), `compileArticleHtml`, and the ordered compiler passes. |

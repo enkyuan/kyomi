@@ -665,13 +665,13 @@ These are intentionally outside the scaffold and require their own plans:
 
 ## GSTACK REVIEW REPORT
 
-| Review             | Passes | Status  | Result                                                                                                                                                                        |
-| ------------------ | -----: | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Plan Tune          |      1 | CLEAR   | Prior answers locked the review scope, builder mode, platform/native strategy, and parity posture.                                                                            |
-| Engineering Review |      1 | CLEAR   | Resolved six execution gaps: universal tree, enforceable motion outcomes, export-map proof, lock ownership, atomic template removal/clean prebuild, and durable bundles.      |
+| Review             | Passes | Status  | Result                                                                                                                                                                     |
+| ------------------ | -----: | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Plan Tune          |      1 | CLEAR   | Prior answers locked the review scope, builder mode, platform/native strategy, and parity posture.                                                                         |
+| Engineering Review |      1 | CLEAR   | Resolved six execution gaps: universal tree, enforceable motion outcomes, export-map proof, lock ownership, atomic template removal/clean prebuild, and durable bundles.   |
 | Design Review      |      1 | CLEAR   | Score improved from 5/10 to 9/10 by removing Android cardification, preserving source-first hierarchy, constraining matcha/Blode, and defining accessibility/state checks. |
-| CEO Review         |      0 | NOT RUN | Not requested; Office Hours product decisions were already answered inline.                                                                                                   |
-| DevEx Review       |      0 | NOT RUN | Not requested; command and package-boundary concerns were covered by engineering review.                                                                                      |
+| CEO Review         |      0 | NOT RUN | Not requested; Office Hours product decisions were already answered inline.                                                                                                |
+| DevEx Review       |      0 | NOT RUN | Not requested; command and package-boundary concerns were covered by engineering review.                                                                                   |
 
 Engineering review found no remaining critical architecture or execution decision. The dependency
 lock may still require coordination if GitButler cannot isolate generated hunks; this is an

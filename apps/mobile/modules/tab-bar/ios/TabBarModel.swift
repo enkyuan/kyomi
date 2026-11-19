@@ -17,6 +17,10 @@ struct TabBarSwitcher {
   /// Glyphs of the sheet's folder chips.
   let editIcon: TabBarIcon
   let sortIcon: TabBarIcon
+  let reorderIcon: TabBarIcon
+  let importIcon: TabBarIcon
+  let renameIcon: TabBarIcon
+  let deleteIcon: TabBarIcon
   let addIcon: TabBarIcon
 }
 
@@ -59,6 +63,29 @@ enum ComposerKind: String {
 
 enum ComposerStatus: String {
   case idle, loading, submitting, done, failed
+}
+
+/// One tool of the reader bar, drawn from Blode geometry like the tabs' glyphs.
+struct ReaderTool: Identifiable {
+  let id: String
+  let label: String
+  let icon: TabBarIcon
+  /// The glyph while `isSelected`, usually the filled variant.
+  let selectedIcon: TabBarIcon
+  let isSelected: Bool
+  let isEnabled: Bool
+  /// The glyph's colour while `isSelected`; the bar's accent when nil.
+  let selectedTint: Color?
+}
+
+/// What the reader hands the bar: its tools, and the text size the size tool's slider adjusts.
+struct ReaderState {
+  let tools: [ReaderTool]
+  let fontSize: Double
+  let fontRange: ClosedRange<Double>
+  let fontLabel: String
+  /// The article's link, for the system share sheet the share tool opens.
+  let shareURL: String?
 }
 
 /// State shared between React Native props, the SwiftUI bar, and the events
@@ -120,6 +147,23 @@ final class TabBarModel {
   /// The feed whose button was pressed while the submit is in flight.
   private(set) var composerSubmittingID: String?
   var searchPlaceholder = "Search"
+  /// The reader's tools. While there are any, the capsule is the reader bar: the tabs give way to
+  /// the tools, and the search and add buttons materialize out of the glass.
+  var readerTools: [ReaderTool] = []
+  var readerFontSize: Double = 17
+  var readerFontRange: ClosedRange<Double> = 14...22
+  var readerFontLabel = "Text size"
+  /// The text size panel floats above the reader bar while this is set.
+  var fontPanelPresented = false
+  /// Where the bar is between its resting state (0: the tabs, or the minimized buttons) and the
+  /// reader's tools (1). `ReaderTransitionTracker` sets it every frame from the stack's own
+  /// transition, so the bar follows a push, a pop and a swipe back with the finger; nothing here
+  /// animates it, because the transition is already the animation.
+  private(set) var readerMorph: Double = 0
+  /// Bumped on each step of the text size slider, for its selection haptic.
+  private(set) var fontStepFeedback = 0
+  /// The link the share tool shares; without it the share tool is a plain press.
+  var shareURL: String?
   var activeTint = Color.accentColor
   /// Bumped by a press that commits something worth feeling: switching tabs, or adding. Re-tapping
   /// the current tab, search and the switcher stay silent, as the system tab bar does. The bar plays
@@ -139,6 +183,19 @@ final class TabBarModel {
   @ObservationIgnored var onComposerActiveChange: @MainActor (Bool) -> Void = { _ in }
   @ObservationIgnored var onComposerQueryChange: @MainActor (String) -> Void = { _ in }
   @ObservationIgnored var onComposerSubmit: @MainActor (String, String, String) -> Void = { _, _, _ in }
+  /// A reader tool other than the text size tool, which opens the panel natively.
+  /// Asks the native view to open the system share sheet for a link, anchored to the capsule.
+  @ObservationIgnored var onShareRequest: @MainActor (String, CGRect) -> Void = { _, _ in }
+  /// The reader bar appeared or went; the native view starts and stops following the stack for it.
+  @ObservationIgnored var onReaderActiveChange: @MainActor (Bool) -> Void = { _ in }
+  @ObservationIgnored var onReaderToolPress: @MainActor (String) -> Void = { _ in }
+  /// Each step of the text size slider (`committed` false) and its release (`committed` true).
+  @ObservationIgnored var onReaderFontSizeChange: @MainActor (Int, Bool) -> Void = { _, _ in }
+  /// The slider is held: JavaScript's echo of the size must not move it under the finger.
+  @ObservationIgnored private var fontSizeEditing = false
+  /// When the slider last changed the size. JavaScript echoes each step back a beat later, and an
+  /// echo that lands after the release (or after the next drag has begun) is older than the slider.
+  @ObservationIgnored private var fontSizeChangedAt = Date.distantPast
   @ObservationIgnored var onSearchActiveChange: @MainActor (Bool) -> Void = { _ in }
   @ObservationIgnored var onSearchQueryChange: @MainActor (String) -> Void = { _ in }
   @ObservationIgnored var onSearchSubmit: @MainActor (String) -> Void = { _ in }
@@ -157,6 +214,73 @@ final class TabBarModel {
       selectedIndex = index
     }
     onTabPress(index)
+  }
+
+  /// How long after a slider change a different size from JavaScript is taken for a stale echo.
+  private static let fontSizeEchoWindow: TimeInterval = 0.4
+
+  var readerActive: Bool { !readerTools.isEmpty }
+
+  func setReaderMorph(_ value: Double) {
+    let morph = min(1, max(0, value))
+    // Below a thousandth nothing on screen moves, and each change re-evaluates the whole bar.
+    guard abs(morph - readerMorph) > 0.001 || morph == 0 || morph == 1 else { return }
+    readerMorph = morph
+    // Leaving the reader closes what hangs off its bar.
+    if morph < 0.98, fontPanelPresented { fontPanelPresented = false }
+  }
+
+  func applyReader(_ state: ReaderState?) {
+    let wasActive = readerActive
+    defer {
+      if readerActive != wasActive { onReaderActiveChange(readerActive) }
+    }
+    guard let state else {
+      if readerActive { readerTools = [] }
+      if fontPanelPresented { fontPanelPresented = false }
+      shareURL = nil
+      return
+    }
+    readerTools = state.tools
+    shareURL = state.shareURL
+    readerFontRange = state.fontRange
+    readerFontLabel = state.fontLabel
+    // One value path: the slider owns the size while held, JavaScript's echo is applied after.
+    if !fontSizeEditing, readerFontSize != state.fontSize,
+      Date().timeIntervalSince(fontSizeChangedAt) > Self.fontSizeEchoWindow
+    {
+      readerFontSize = state.fontSize
+    }
+  }
+
+  func pressReaderTool(_ id: String) {
+    pressFeedback += 1
+    if id == "share", let url = shareURL {
+      fontPanelPresented = false
+      onShareRequest(url, mainFrame)
+      return
+    }
+    if id == "textSize" {
+      fontPanelPresented.toggle()
+    } else {
+      fontPanelPresented = false
+      onReaderToolPress(id)
+    }
+  }
+
+  func setReaderFontSize(_ value: Double) {
+    let size = min(readerFontRange.upperBound, max(readerFontRange.lowerBound, value.rounded()))
+    guard size != readerFontSize else { return }
+    readerFontSize = size
+    fontSizeChangedAt = Date()
+    fontStepFeedback += 1
+    onReaderFontSizeChange(Int(size), false)
+  }
+
+  func setFontSizeEditing(_ editing: Bool) {
+    fontSizeEditing = editing
+    fontSizeChangedAt = Date()
+    if !editing { onReaderFontSizeChange(Int(readerFontSize), true) }
   }
 
   func toggleComposer() {
@@ -203,6 +327,11 @@ final class TabBarModel {
     if switcherPresented { return true }
     // The composer's results and the screen behind them take every touch, so a tap outside closes it.
     if composerActive { return true }
+    // The open text size panel takes every touch, so a tap outside closes it.
+    if fontPanelPresented { return true }
+    // The reader bar replaces the buttons, whose last frames are stale, so only it takes touches.
+    // While the bar is the reader's, or on its way to or from it, only the capsule takes touches.
+    if readerActive || readerMorph > 0.01 { return mainFrame.contains(point) }
     let mainShown = !minimized && !searchActive
     return (mainShown && mainFrame.contains(point))
       || actionFrame.contains(point)

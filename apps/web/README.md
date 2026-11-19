@@ -24,26 +24,26 @@ sidebar, settings, auth -> inbox -> reader -> articles -> feeds, folders, prefer
 
 ## commands
 
-| command | purpose |
-| --- | --- |
-| `bun run dev:web` | start the Vite dev server on port 3000. |
-| `bun run --cwd apps/web build` | build the app. |
-| `bun run --cwd apps/web preview` | preview the production build. |
-| `bun run --cwd apps/web typecheck` | type-check. |
-| `bun run --cwd apps/web lint` | lint. |
-| `bun run --cwd apps/web fmt:check` | check formatting. |
-| `bun run test:web` | run web integration tests from `tests/web`. |
+| command                            | purpose                                     |
+| ---------------------------------- | ------------------------------------------- |
+| `bun run dev:web`                  | start the Vite dev server on port 3000.     |
+| `bun run --cwd apps/web build`     | build the app.                              |
+| `bun run --cwd apps/web preview`   | preview the production build.               |
+| `bun run --cwd apps/web typecheck` | type-check.                                 |
+| `bun run --cwd apps/web lint`      | lint.                                       |
+| `bun run --cwd apps/web fmt:check` | check formatting.                           |
+| `bun run test:web`                 | run web integration tests from `tests/web`. |
 
 ## environment
 
 env is loaded with `dotenvx` from `docker/.env` and `apps/web/.env`. there is no typed web env schema yet; values are read where they are used.
 
-| variable | purpose |
-| --- | --- |
-| `SERVER_URL` | public origin for the web app (set for Docker and CI; not read by web code yet). |
-| `API_ORIGIN` | backend api origin, read server-side in `src/lib/api.ts`. |
-| `VITE_POSTHOG_KEY` | optional PostHog project key, read in `src/integrations/posthog/provider.tsx`. |
-| `VITE_POSTHOG_HOST` | optional PostHog ingest host. |
+| variable            | purpose                                                                          |
+| ------------------- | -------------------------------------------------------------------------------- |
+| `SERVER_URL`        | public origin for the web app (set for Docker and CI; not read by web code yet). |
+| `API_ORIGIN`        | backend api origin, read server-side in `src/lib/api.ts`.                        |
+| `VITE_POSTHOG_KEY`  | optional PostHog project key, read in `src/integrations/posthog/provider.tsx`.   |
+| `VITE_POSTHOG_HOST` | optional PostHog ingest host.                                                    |
 
 ## notes
 

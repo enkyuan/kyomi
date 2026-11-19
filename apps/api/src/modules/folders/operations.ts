@@ -226,14 +226,14 @@ export const reorderFolders = Effect.fn("folders.reorder")(function* (folderIds:
         return "unknown-folder" as const;
       }
 
-      const positions = sql.join(
-        folderIds.map((id, index) => sql`WHEN ${id} THEN ${index}`),
-        sql` `,
-      );
-      await tx
-        .update(folders)
-        .set({ position: sql`CASE ${folders.id} ${positions} END`, updatedAt: now })
-        .where(and(eq(folders.userId, userId), inArray(folders.id, folderIds)));
+      // One typed update per folder (a user has few): a CASE over bound parameters would leave
+      // their types for Postgres to guess, and it guesses text for an integer column.
+      for (const [index, id] of folderIds.entries()) {
+        await tx
+          .update(folders)
+          .set({ position: index, updatedAt: now })
+          .where(and(eq(folders.id, id), eq(folders.userId, userId)));
+      }
       return "reordered" as const;
     }),
   );

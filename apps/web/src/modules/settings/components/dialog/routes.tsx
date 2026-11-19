@@ -23,7 +23,6 @@ import { AccountPageNav, AccountPagePanel } from "../account";
 import { AdvancedPageNav, AdvancedPagePanel } from "../advanced";
 import { AppearancePageNav, AppearancePagePanel } from "../appearance";
 import { BillingPageNav, BillingPagePanel } from "../billing";
-import { FeedbackPageNav, FeedbackPagePanel } from "../feedback";
 import { PersonalizationPageNav, PersonalizationPagePanel } from "../personalization";
 
 type SettingsDialogRouteContextValue = {
@@ -65,10 +64,6 @@ function SettingsSectionMenu({ pathname, className }: { pathname: string; classN
         isActive={pathname === "/billing"}
         onSelect={() => navigateToSettingsRoute("/billing")}
       />
-      <FeedbackPageNav
-        isActive={pathname === "/feedback"}
-        onSelect={() => navigateToSettingsRoute("/feedback")}
-      />
       <AdvancedPageNav
         isActive={pathname === "/advanced"}
         onSelect={() => navigateToSettingsRoute("/advanced")}
@@ -83,8 +78,10 @@ function SettingsDialogRouteLayout() {
     select: (state) => state.location.pathname,
   });
 
+  // `min-h-0` overrides the provider's `min-h-svh`, which would stretch past the dialog and clip
+  // the scroll area.
   return (
-    <SidebarProvider className="h-full items-start bg-popover">
+    <SidebarProvider className="h-full min-h-0 items-start bg-popover">
       <Sidebar
         collapsible="none"
         className="hidden h-full w-48 border-r border-border bg-sidebar md:flex"
@@ -104,7 +101,7 @@ function SettingsDialogRouteLayout() {
             className="flex-row overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>[data-slot=sidebar-menu-item]]:shrink-0 [&_[data-slot=sidebar-menu-button]]:w-auto"
           />
         </nav>
-        <ScrollArea className="min-h-0 flex-1">
+        <ScrollArea className="min-h-0 flex-1" scrollFade>
           <div className="flex flex-col gap-4 p-5">
             <Outlet />
           </div>
@@ -148,12 +145,6 @@ const billingRoute = createRoute({
   component: BillingPagePanel,
 });
 
-const feedbackRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/feedback",
-  component: FeedbackPagePanel,
-});
-
 const advancedRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/advanced",
@@ -165,7 +156,6 @@ const routeTree = rootRoute.addChildren([
   appearanceRoute,
   personalizationRoute,
   billingRoute,
-  feedbackRoute,
   advancedRoute,
 ]);
 
@@ -174,13 +164,7 @@ const settingsRouter = createRouter({
   history: createMemoryHistory({ initialEntries: ["/account"] }),
 });
 
-type SettingsRoutePath =
-  | "/account"
-  | "/appearance"
-  | "/personalization"
-  | "/billing"
-  | "/feedback"
-  | "/advanced";
+type SettingsRoutePath = "/account" | "/appearance" | "/personalization" | "/billing" | "/advanced";
 
 type SettingsDialogRoutesProps = {
   logout: () => Promise<void>;

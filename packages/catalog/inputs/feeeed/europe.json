@@ -10,25 +10,11 @@
       "kind": "feed",
       "feed_url": "https://parisbymouth.substack.com/feed",
       "details": "Travel",
-      "sources": [
-        "substack_top",
-        "original_feed_db"
-      ],
-      "tags": [
-        "Living",
-        "Cities",
-        "Europe",
-        "France"
-      ],
+      "sources": ["substack_top", "original_feed_db"],
+      "tags": ["Living", "Cities", "Europe", "France"],
       "cleaned_author": "Meg Zimbeck",
       "language": "en",
-      "keywords": [
-        "Paris",
-        "restaurants",
-        "foodie guide",
-        "insider tips",
-        "dining"
-      ],
+      "keywords": ["Paris", "restaurants", "foodie guide", "insider tips", "dining"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -39,22 +25,11 @@
       "kind": "reddit",
       "subreddit": "Europe",
       "details": "Local > Europe",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Europe"
-      ],
+      "tags": ["Local", "Europe"],
       "language": "en",
-      "keywords": [
-        "Europe",
-        "politics",
-        "current events",
-        "Ukraine",
-        "community discussions"
-      ],
+      "keywords": ["Europe", "politics", "current events", "Ukraine", "community discussions"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -65,21 +40,12 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/euronews/en/home/",
       "details": "Local > Europe",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 2.3560449407223603,
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Europe"
-      ],
+      "tags": ["Local", "Europe"],
       "language": "en",
-      "keywords": [
-        "European news",
-        "current affairs"
-      ],
+      "keywords": ["European news", "current affairs"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -91,22 +57,12 @@
       "channel_id": "UCknLrEdhRCp1aegoMqRaCZg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMiAkwjCNDMQ09AZ4BAaIg0djLTgB_3i0uUjgKPQOU=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "News > Global",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 2.6944688455846215,
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Europe"
-      ],
+      "tags": ["News", "Europe"],
       "language": "en",
-      "keywords": [
-        "global news",
-        "analysis",
-        "European news"
-      ],
+      "keywords": ["global news", "analysis", "European news"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -117,153 +73,86 @@
       "kind": "reddit",
       "subreddit": "AskEurope",
       "details": "Local > Europe",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Europe"
-      ],
+      "tags": ["Local", "Europe"],
       "language": "en",
-      "keywords": [
-        "discussion",
-        "culture",
-        "travel"
-      ],
+      "keywords": ["discussion", "culture", "travel"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://faroutliers.com/feed/",
       "title": "Far Outliers",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://faroutliers.com/feed/",
       "summary": "Exploring migrants, exiles, expatriates, and out-of-the-way peoples, places, and times.",
       "details": "Society",
       "cleaned_title": "Far Outliers",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "History",
-        "Social",
-        "Europe"
-      ],
+      "tags": ["Politics", "History", "Social", "Europe"],
       "language": "en",
-      "keywords": [
-        "migrants",
-        "cultures",
-        "Pashto",
-        "Romania",
-        "Eastern European nationalism"
-      ],
+      "keywords": ["migrants", "cultures", "Pashto", "Romania", "Eastern European nationalism"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://googlemapsmania.blogspot.com/feeds/posts/default",
       "title": "Maps Mania",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://googlemapsmania.blogspot.com/feeds/posts/default",
       "summary": "Dedicated to tracking the very best digital interactive maps on the internet and the tools used to create them.",
       "details": "Humanities > Geography > Maps",
       "cleaned_title": "Maps Mania",
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Germany",
-        "USA",
-        "Europe",
-        "World News"
-      ],
+      "tags": ["Tech", "Germany", "USA", "Europe", "World News"],
       "language": "en",
-      "keywords": [
-        "interactive maps",
-        "digital maps",
-        "mapping tools"
-      ],
+      "keywords": ["interactive maps", "digital maps", "mapping tools"],
       "top_level_category": "Travel & Geography"
     },
     {
       "id": "feed:https://www.eatsleepcycle.com/journal/feed/",
       "title": "Eat Sleep Cycle Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.eatsleepcycle.com/journal/feed/",
       "summary": "Written by those who love to eat, sleep, cycle. From our base in Girona, Catalunya, we ride bikes all over Europe.",
       "details": "Recreation > Sport > Cycling",
       "cleaned_title": "Eat Sleep Cycle Blog",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Tech",
-        "Cycling",
-        "Europe"
-      ],
+      "tags": ["Living", "Tech", "Cycling", "Europe"],
       "language": "en",
-      "keywords": [
-        "cycling",
-        "tours",
-        "adventure",
-        "Europe"
-      ],
+      "keywords": ["cycling", "tours", "adventure", "Europe"],
       "top_level_category": "Sports"
     },
     {
       "id": "feed:https://verfassungsblog.de/feed/",
       "title": "Verfassungsblog \u2013 On Matters Constitutional",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://verfassungsblog.de/feed/",
       "summary": "An academic and journalistic open access forum of debate on topical events and developments in constitutional law and politics in Germany, the emerging European constitutional space and beyond.",
       "details": "Politics > Law",
       "cleaned_title": "Verfassungsblog",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Law",
-        "Europe",
-        "Germany"
-      ],
+      "tags": ["Politics", "Law", "Europe", "Germany"],
       "language": "en",
-      "keywords": [
-        "Constitutional Law",
-        "European Politics",
-        "Legal Debates"
-      ],
+      "keywords": ["Constitutional Law", "European Politics", "Legal Debates"],
       "top_level_category": "Society, Law & History"
     },
     {
       "title": "ZEIT ONLINE | Nachrichten, News, Hintergr\u00fcnde und Debatten",
       "popularity_score": 2.577380952380952,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "feed_url": "http://newsfeed.zeit.de/index",
       "kind": "feed",
       "id": "feed:http://newsfeed.zeit.de/index",
       "cleaned_title": "ZEIT ONLINE",
       "cleaned_author": null,
       "summary": "A prominent German news outlet offering comprehensive articles, commentary, and analyses across political, economic, and cultural topics.",
-      "tags": [
-        "News",
-        "Germany",
-        "Europe"
-      ],
+      "tags": ["News", "Germany", "Europe"],
       "language": "de",
-      "keywords": [
-        "current events",
-        "politics",
-        "society"
-      ]
+      "keywords": ["current events", "politics", "society"]
     }
   ],
   "child_categories": []

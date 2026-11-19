@@ -203,18 +203,21 @@ outputs:
 ### Stack templates
 
 **Go:**
+
 ```yaml
 discover: go list -f '{{ if or (len .TestGoFiles) (len .XTestGoFiles) }} {{ .ImportPath }} {{end}}' ./...
 run: go tool gotestsum --junitfile="<< outputs.junit >>" -- -race << test.atoms >>
 ```
 
 **Python (pytest):**
+
 ```yaml
 discover: python -m pytest --collect-only -q
 run: python -m pytest --junit-xml=<< outputs.junit >> << test.atoms >>
 ```
 
 **Node (Jest):**
+
 ```yaml
 discover: npx jest --listTests
 run: JEST_JUNIT_OUTPUT_FILE=<< outputs.junit >> npx jest --reporters=default --reporters=jest-junit << test.atoms >>

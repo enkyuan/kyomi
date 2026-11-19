@@ -3,6 +3,7 @@
 import { cn } from "@kyomi/ui/lib/utils";
 import { Fragment, type ComponentType } from "react";
 import type { ReaderBlock, ReaderTableCell } from "../../core/document";
+import { keyedByContent } from "../../core/keys";
 import { normalizeSafeHttpUrl } from "../../core/url";
 import { RenderHtml } from "../html";
 import { CodeBlock } from "./code";
@@ -122,11 +123,8 @@ function List({ block, id }: { block: BlockOf<"list">; id: string | undefined })
   const Tag = block.ordered ? "ol" : "ul";
   return (
     <Tag id={id} start={block.ordered ? block.start : undefined}>
-      {block.items.map((item, index) => (
-        <li
-          data-kyomi-checked={item.checked === null ? undefined : String(item.checked)}
-          key={index}
-        >
+      {keyedByContent(block.items).map(({ item, key }) => (
+        <li data-kyomi-checked={item.checked === null ? undefined : String(item.checked)} key={key}>
           <Flow blocks={item.children} />
         </li>
       ))}
@@ -234,8 +232,8 @@ function DefinitionList({
 }) {
   return (
     <dl id={id}>
-      {block.items.map((item, index) => (
-        <Fragment key={index}>
+      {keyedByContent(block.items).map(({ item, key }) => (
+        <Fragment key={key}>
           {item.terms.map((term, termIndex) => (
             <dt key={termIndex}>
               <Inlines nodes={term} />
@@ -306,8 +304,8 @@ function BlockNode({ block }: { block: ReaderBlock }) {
 export function Blocks({ blocks }: { blocks: readonly ReaderBlock[] }) {
   return (
     <>
-      {blocks.map((block, index) => (
-        <BlockNode block={block} key={index} />
+      {keyedByContent(blocks).map(({ item, key }) => (
+        <BlockNode block={item} key={key} />
       ))}
     </>
   );

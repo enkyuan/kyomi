@@ -32,6 +32,13 @@ export type TabBarSwitcher = {
   /** Glyphs of the sheet's chips: edit the folders (select and delete), sort them, and add one. */
   readonly editIcon: TabBarIcon;
   readonly sortIcon: TabBarIcon;
+  /** The three-bar handle that drags a folder to a new place while editing. */
+  readonly reorderIcon: TabBarIcon;
+  /** The chip that opens the OPML import. */
+  readonly importIcon: TabBarIcon;
+  /** Glyphs of renaming (the open folder's header button and its long-press menu) and deleting. */
+  readonly renameIcon: TabBarIcon;
+  readonly deleteIcon: TabBarIcon;
   readonly addIcon: TabBarIcon;
 };
 
@@ -54,7 +61,7 @@ export type TabBarSwitcherFeed = {
 
 /** What was done to a folder in the switcher sheet. `create` has no `folderId`; `delete` no `name`; `reorder` has neither, and its `name` is the folder ids in their new order, one per line. */
 export type TabBarSwitcherFolderAction = {
-  readonly action: "create" | "rename" | "delete" | "reorder";
+  readonly action: "create" | "rename" | "delete" | "reorder" | "import";
   readonly folderId: string;
   readonly name: string;
 };
@@ -72,6 +79,38 @@ export type TabBarComposerFeed = {
 };
 
 export type TabBarComposerFolder = { readonly id: string; readonly name: string };
+
+/** One tool of the reader bar, drawn natively from Blode geometry. */
+export type TabBarReaderTool = {
+  readonly key: string;
+  readonly label: string;
+  readonly icon: TabBarIcon;
+  /** The glyph while `selected`, usually the filled variant; omit to keep `icon`. */
+  readonly selectedIcon?: TabBarIcon;
+  readonly selected?: boolean;
+  /** The colour of the glyph while `selected`; omit for the bar's accent. */
+  readonly selectedTint?: ColorValue;
+  readonly disabled?: boolean;
+};
+
+/**
+ * The reader's tools. While it is set the capsule is the reader bar, and the bar morphs between the
+ * two. The tool with key `textSize` opens a slider above the bar natively and reports its steps
+ * through `onReaderFontSizeChange`; every other tool reports a press through `onReaderToolPress`.
+ */
+export type TabBarReader = {
+  readonly tools: readonly TabBarReaderTool[];
+  readonly fontSize: number;
+  readonly minFontSize: number;
+  readonly maxFontSize: number;
+  /** Accessibility label of the slider. */
+  readonly fontSizeLabel: string;
+  /**
+   * The article's link. The native bar opens the system share sheet for it out of the share tool;
+   * without it the share tool is a plain press.
+   */
+  readonly shareUrl?: string;
+};
 
 export type TabBarViewProps = ViewProps & {
   readonly tabs: readonly TabBarItem[];
@@ -110,6 +149,13 @@ export type TabBarViewProps = ViewProps & {
   readonly onComposerQueryChange?: (event: NativeSyntheticEvent<{ query: string }>) => void;
   readonly onComposerSubmit?: (
     event: NativeSyntheticEvent<{ feedId: string; url: string; folderId: string }>,
+  ) => void;
+  /** `null` when no reader is open, so the native bar is told the reader has gone, not left to infer it. */
+  readonly reader?: TabBarReader | null;
+  readonly onReaderToolPress?: (event: NativeSyntheticEvent<{ key: string }>) => void;
+  /** Each step of the size slider (`committed` false) and its release (`committed` true). */
+  readonly onReaderFontSizeChange?: (
+    event: NativeSyntheticEvent<{ size: number; committed: boolean }>,
   ) => void;
   readonly onSearchActiveChange?: (event: NativeSyntheticEvent<{ active: boolean }>) => void;
   readonly onSearchQueryChange?: (event: NativeSyntheticEvent<{ query: string }>) => void;

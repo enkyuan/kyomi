@@ -108,10 +108,12 @@ read time
 ## Task 1: Make Item Classification Independent
 
 **Files:**
+
 - Modify: `packages/worker/src/services/feed/classifier.ts`
 - Test: `tests/api/integration/modules/feeds/refresh/classifier.test.ts`
 
 **Interfaces:**
+
 - Consumes: existing `CATEGORY_TAXONOMY`, `InferredCategoryLabel`, `CategoryClassification`.
 - Produces: `FeedItemCategoryClassificationInput` with `itemContentText?: string | null`.
 - Produces: `classifyFeedItemCategories(input: FeedItemCategoryClassificationInput): CategoryClassification` that scores only item title, item summary/content, and item URL host.
@@ -121,40 +123,40 @@ read time
 Append these tests to `tests/api/integration/modules/feeds/refresh/classifier.test.ts` inside the existing `describe("feed category classifier", () => { ... })` block:
 
 ```ts
-  test("does not let parent feed metadata dilute item classification", () => {
-    const result = classifyFeedItemCategories({
-      feedTitle: "AI & ML Daily",
-      feedDescription:
-        "Language model, transformer, embedding, agent, and artificial intelligence analysis.",
-      feedUrl: "https://example.com/rss",
-      feedSiteUrl: "https://example.com",
-      sourceKind: "rss",
-      itemTitle: "A practical guide to pasta dough and weeknight cooking",
-      itemSummary: "Chef notes on kitchen technique, recipe testing, and restaurant prep.",
-      itemUrl: "https://seriouseats.com/pasta-dough-guide",
-    });
-
-    const labels = result.categories.map((category) => category.label);
-    expect(labels).toContain("Food & Travel");
-    expect(labels).not.toContain("AI & ML");
+test("does not let parent feed metadata dilute item classification", () => {
+  const result = classifyFeedItemCategories({
+    feedTitle: "AI & ML Daily",
+    feedDescription:
+      "Language model, transformer, embedding, agent, and artificial intelligence analysis.",
+    feedUrl: "https://example.com/rss",
+    feedSiteUrl: "https://example.com",
+    sourceKind: "rss",
+    itemTitle: "A practical guide to pasta dough and weeknight cooking",
+    itemSummary: "Chef notes on kitchen technique, recipe testing, and restaurant prep.",
+    itemUrl: "https://seriouseats.com/pasta-dough-guide",
   });
 
-  test("uses enriched content text when RSS summary is thin", () => {
-    const result = classifyFeedItemCategories({
-      feedTitle: "Daily Links",
-      feedDescription: "A mixed collection of links.",
-      feedUrl: "https://example.com/rss",
-      feedSiteUrl: "https://example.com",
-      sourceKind: "rss",
-      itemTitle: "Release notes",
-      itemSummary: "Comments",
-      itemContentText:
-        "The new open weights language model uses transformer layers, embeddings, and agent training data.",
-      itemUrl: "https://huggingface.co/blog/open-model-release",
-    });
+  const labels = result.categories.map((category) => category.label);
+  expect(labels).toContain("Food & Travel");
+  expect(labels).not.toContain("AI & ML");
+});
 
-    expect(result.categories.map((category) => category.label)).toEqual(["AI & ML"]);
+test("uses enriched content text when RSS summary is thin", () => {
+  const result = classifyFeedItemCategories({
+    feedTitle: "Daily Links",
+    feedDescription: "A mixed collection of links.",
+    feedUrl: "https://example.com/rss",
+    feedSiteUrl: "https://example.com",
+    sourceKind: "rss",
+    itemTitle: "Release notes",
+    itemSummary: "Comments",
+    itemContentText:
+      "The new open weights language model uses transformer layers, embeddings, and agent training data.",
+    itemUrl: "https://huggingface.co/blog/open-model-release",
   });
+
+  expect(result.categories.map((category) => category.label)).toEqual(["AI & ML"]);
+});
 ```
 
 - [ ] **Step 2: Run the focused classifier test and verify failure**
@@ -193,7 +195,9 @@ export function classifyFeedItemCategories(
 ): CategoryClassification {
   const itemHost = safeHost(input.itemUrl);
   const titleText = normalizeText(input.itemTitle);
-  const bodyText = normalizeText([input.itemSummary, input.itemContentText].filter(Boolean).join(" "));
+  const bodyText = normalizeText(
+    [input.itemSummary, input.itemContentText].filter(Boolean).join(" "),
+  );
 
   return {
     categories: topCategories({
@@ -220,10 +224,12 @@ Expected: PASS.
 ## Task 2: Classify Every Refreshed Item
 
 **Files:**
+
 - Modify: `packages/worker/src/services/feed/refresh.ts`
 - Test: `tests/api/integration/modules/feeds/refresh/categories.test.ts`
 
 **Interfaces:**
+
 - Consumes: `classifyFeedItemCategories(input)` from Task 1.
 - Consumes: `canonicalizeCategoryLabels(labels: readonly string[]): string[]`.
 - Produces: `ParsedFeedItem.inferredCategoryLabels` for every refreshed item that has classifier labels after explicit-label filtering.
@@ -233,25 +239,25 @@ Expected: PASS.
 Append this test to `tests/api/integration/modules/feeds/refresh/categories.test.ts` inside `describe("runFeedRefresh category ingestion", () => { ... })`:
 
 ```ts
-  test("classifies item-level categories for non-allowlisted feeds", async () => {
-    const fake = createFeedRefreshDb({
-      feed: {
-        id: "feed-1",
-        url: "https://example.com/feed.xml",
-        link: "https://example.com",
-        title: "Daily Links",
-        description: "A mixed collection of links from across the web.",
-        faviconUrl: null,
-        faviconSource: null,
-        etag: null,
-        lastModified: null,
-        lastRefreshSucceededAt: null,
-        lastRefreshFailedAt: null,
-      },
-    });
-    globalThis.fetch = async () => {
-      const response = new Response(
-        `<?xml version="1.0"?>
+test("classifies item-level categories for non-allowlisted feeds", async () => {
+  const fake = createFeedRefreshDb({
+    feed: {
+      id: "feed-1",
+      url: "https://example.com/feed.xml",
+      link: "https://example.com",
+      title: "Daily Links",
+      description: "A mixed collection of links from across the web.",
+      faviconUrl: null,
+      faviconSource: null,
+      etag: null,
+      lastModified: null,
+      lastRefreshSucceededAt: null,
+      lastRefreshFailedAt: null,
+    },
+  });
+  globalThis.fetch = async () => {
+    const response = new Response(
+      `<?xml version="1.0"?>
         <rss version="2.0">
           <channel>
             <title>Daily Links</title>
@@ -273,24 +279,24 @@ Append this test to `tests/api/integration/modules/feeds/refresh/categories.test
             </item>
           </channel>
         </rss>`,
-        { status: 200, headers: { "content-type": "application/rss+xml" } },
-      );
-      Object.defineProperty(response, "url", { value: "https://example.com/feed.xml" });
-      return response;
-    };
-
-    const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
-      enrichArticles: false,
-    });
-
-    expect(result.ok).toBe(true);
-    const itemLabels = labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories);
-    expect(itemLabels).toContain("AI & ML");
-    expect(itemLabels).toContain("Finance & Markets");
-    expect(fake.feedItemCategoryAssignments.every((row) => row.provenance === "classifier")).toBe(
-      true,
+      { status: 200, headers: { "content-type": "application/rss+xml" } },
     );
+    Object.defineProperty(response, "url", { value: "https://example.com/feed.xml" });
+    return response;
+  };
+
+  const result = await runFeedRefresh(fake as never, "feed-1", undefined, {
+    enrichArticles: false,
   });
+
+  expect(result.ok).toBe(true);
+  const itemLabels = labelsForAssignments(fake.feedItemCategoryAssignments, fake.categories);
+  expect(itemLabels).toContain("AI & ML");
+  expect(itemLabels).toContain("Finance & Markets");
+  expect(fake.feedItemCategoryAssignments.every((row) => row.provenance === "classifier")).toBe(
+    true,
+  );
+});
 ```
 
 - [ ] **Step 2: Run the focused refresh category test and verify failure**
@@ -378,20 +384,20 @@ function classifyItemLevelCategories(input: {
 In `runFeedRefresh()`, delete this block:
 
 ```ts
-    const mixedFeed = isMixedFeed({
-      feed: feedForClassification,
-      parsed: { metadata: parsed.metadata, items: [] },
-    });
+const mixedFeed = isMixedFeed({
+  feed: feedForClassification,
+  parsed: { metadata: parsed.metadata, items: [] },
+});
 ```
 
 Then replace the item classification call with:
 
 ```ts
-    items = classifyItemLevelCategories({
-      feed: feedForClassification,
-      parsed: { metadata: parsed.metadata },
-      items,
-    });
+items = classifyItemLevelCategories({
+  feed: feedForClassification,
+  parsed: { metadata: parsed.metadata },
+  items,
+});
 ```
 
 - [ ] **Step 6: Run refresh category tests**
@@ -407,10 +413,12 @@ Expected: PASS.
 ## Task 3: Backfill Every Existing Item By Default
 
 **Files:**
+
 - Modify: `scripts/categories/backfill.ts`
 - Test: `tests/api/integration/scripts/categories/backfill.test.ts`
 
 **Interfaces:**
+
 - Consumes: `classifyFeedItemCategories(input)` from Task 1.
 - Produces: `parseBackfillArgs(argv): BackfillArgs` where `itemLimit` is `number | null`.
 - Produces: `nextItemBackfillBatchSize(input: { itemLimit: number | null; processed: number }): number | null`.
@@ -422,35 +430,35 @@ Expected: PASS.
 Replace the first two tests in `tests/api/integration/scripts/categories/backfill.test.ts` with:
 
 ```ts
-  test("defaults to dry-run and scans all items", () => {
-    expect(parseBackfillArgs(["bun", "backfill"])).toEqual({
-      apply: false,
-      limit: 500,
-      itemLimit: null,
-      feedId: null,
-    });
+test("defaults to dry-run and scans all items", () => {
+  expect(parseBackfillArgs(["bun", "backfill"])).toEqual({
+    apply: false,
+    limit: 500,
+    itemLimit: null,
+    feedId: null,
   });
+});
 
-  test("parses apply, limit, item limit, and feed id", () => {
-    expect(
-      parseBackfillArgs([
-        "bun",
-        "backfill",
-        "--apply",
-        "--limit",
-        "25",
-        "--item-limit",
-        "10",
-        "--feed-id",
-        "feed-1",
-      ]),
-    ).toEqual({
-      apply: true,
-      limit: 25,
-      itemLimit: 10,
-      feedId: "feed-1",
-    });
+test("parses apply, limit, item limit, and feed id", () => {
+  expect(
+    parseBackfillArgs([
+      "bun",
+      "backfill",
+      "--apply",
+      "--limit",
+      "25",
+      "--item-limit",
+      "10",
+      "--feed-id",
+      "feed-1",
+    ]),
+  ).toEqual({
+    apply: true,
+    limit: 25,
+    itemLimit: 10,
+    feedId: "feed-1",
   });
+});
 ```
 
 Add this import:
@@ -467,39 +475,39 @@ import {
 Add this test inside the same `describe("category backfill script", () => { ... })` block:
 
 ```ts
-  test("classifies non-allowlisted feed items during backfill", () => {
-    const labels = inferBackfillItemCategories(
-      {
-        title: "Daily Links",
-        description: "A mixed collection of links.",
-        url: "https://example.com/feed.xml",
-        link: "https://example.com",
-        sourceKind: "rss",
-      },
-      {
-        title: "Bitcoin market rally lifts crypto stocks",
-        summary: "Investors watch market prices, stock performance, and crypto trading volume.",
-        contentText: null,
-        link: "https://finance.yahoo.com/news/bitcoin-market-rally",
-        canonicalUrl: "https://finance.yahoo.com/news/bitcoin-market-rally",
-      },
-    ).map((category) => category.label);
+test("classifies non-allowlisted feed items during backfill", () => {
+  const labels = inferBackfillItemCategories(
+    {
+      title: "Daily Links",
+      description: "A mixed collection of links.",
+      url: "https://example.com/feed.xml",
+      link: "https://example.com",
+      sourceKind: "rss",
+    },
+    {
+      title: "Bitcoin market rally lifts crypto stocks",
+      summary: "Investors watch market prices, stock performance, and crypto trading volume.",
+      contentText: null,
+      link: "https://finance.yahoo.com/news/bitcoin-market-rally",
+      canonicalUrl: "https://finance.yahoo.com/news/bitcoin-market-rally",
+    },
+  ).map((category) => category.label);
 
-    expect(labels).toEqual(["Finance & Markets"]);
-  });
+  expect(labels).toEqual(["Finance & Markets"]);
+});
 ```
 
 Add this test inside the same `describe("category backfill script", () => { ... })` block:
 
 ```ts
-  test("computes all-item and capped item backfill batches", () => {
-    expect(nextItemBackfillBatchSize({ itemLimit: null, processed: 0 })).toBe(500);
-    expect(nextItemBackfillBatchSize({ itemLimit: null, processed: 1500 })).toBe(500);
-    expect(nextItemBackfillBatchSize({ itemLimit: 10, processed: 0 })).toBe(10);
-    expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 0 })).toBe(500);
-    expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 500 })).toBe(250);
-    expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 750 })).toBeNull();
-  });
+test("computes all-item and capped item backfill batches", () => {
+  expect(nextItemBackfillBatchSize({ itemLimit: null, processed: 0 })).toBe(500);
+  expect(nextItemBackfillBatchSize({ itemLimit: null, processed: 1500 })).toBe(500);
+  expect(nextItemBackfillBatchSize({ itemLimit: 10, processed: 0 })).toBe(10);
+  expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 0 })).toBe(500);
+  expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 500 })).toBe(250);
+  expect(nextItemBackfillBatchSize({ itemLimit: 750, processed: 750 })).toBeNull();
+});
 ```
 
 - [ ] **Step 2: Run the focused backfill test and verify failure**
@@ -643,63 +651,63 @@ export function inferBackfillItemCategories(
 Inside the `for (const feed of feedRows)` loop, replace the existing `mixedFeed`, `loadRecentItems()`, and `inferredItems` block with:
 
 ```ts
-    let itemOffset = 0;
-    let remainingItems = args.itemLimit ?? Number.POSITIVE_INFINITY;
+let itemOffset = 0;
+let remainingItems = args.itemLimit ?? Number.POSITIVE_INFINITY;
 
-    while (remainingItems > 0) {
-      const batchSize = nextItemBackfillBatchSize({
-        itemLimit: args.itemLimit,
-        processed: itemOffset,
-      });
-      if (batchSize === null) {
-        break;
-      }
-      const items = await loadItemsPage(feed.id, batchSize, itemOffset);
-      if (items.length === 0) {
-        break;
-      }
+while (remainingItems > 0) {
+  const batchSize = nextItemBackfillBatchSize({
+    itemLimit: args.itemLimit,
+    processed: itemOffset,
+  });
+  if (batchSize === null) {
+    break;
+  }
+  const items = await loadItemsPage(feed.id, batchSize, itemOffset);
+  if (items.length === 0) {
+    break;
+  }
 
-      const inferredItems = items.map((item) => {
-        stats.itemsScanned += 1;
-        const inferredCategoryLabels = inferBackfillItemCategories(feed, item);
-        if (inferredCategoryLabels.length > 0) {
-          stats.itemsWithClassifierCategories += 1;
-        }
-        return { id: item.id, inferredCategoryLabels };
-      });
-
-      if (args.apply) {
-        await syncInferredFeedCategories(
-          db,
-          {
-            feedId: feed.id,
-            feedCategories,
-            items: inferredItems,
-          },
-          now,
-        );
-      }
-
-      itemOffset += items.length;
-      if (Number.isFinite(remainingItems)) {
-        remainingItems -= items.length;
-      }
-      if (items.length < batchSize) {
-        break;
-      }
+  const inferredItems = items.map((item) => {
+    stats.itemsScanned += 1;
+    const inferredCategoryLabels = inferBackfillItemCategories(feed, item);
+    if (inferredCategoryLabels.length > 0) {
+      stats.itemsWithClassifierCategories += 1;
     }
+    return { id: item.id, inferredCategoryLabels };
+  });
 
-    if (args.apply && itemOffset === 0) {
-      await syncInferredFeedCategories(
-        db,
-        {
-          feedId: feed.id,
-          feedCategories,
-          items: [],
-        },
-        now,
-      );
-    }
+  if (args.apply) {
+    await syncInferredFeedCategories(
+      db,
+      {
+        feedId: feed.id,
+        feedCategories,
+        items: inferredItems,
+      },
+      now,
+    );
+  }
+
+  itemOffset += items.length;
+  if (Number.isFinite(remainingItems)) {
+    remainingItems -= items.length;
+  }
+  if (items.length < batchSize) {
+    break;
+  }
+}
+
+if (args.apply && itemOffset === 0) {
+  await syncInferredFeedCategories(
+    db,
+    {
+      feedId: feed.id,
+      feedCategories,
+      items: [],
+    },
+    now,
+  );
+}
 ```
 
 - [ ] **Step 7: Run the focused backfill test**
@@ -715,6 +723,7 @@ Expected: PASS.
 ## Task 4: Verify Read-Time Ranking And End-To-End Category Coverage
 
 **Files:**
+
 - Read: `apps/api/src/modules/articles/read/list/service.ts`
 - Test: `tests/api/integration/modules/articles/read/list-tags.test.ts`
 - Test: `tests/api/integration/modules/feeds/refresh/classifier.test.ts`
@@ -722,6 +731,7 @@ Expected: PASS.
 - Test: `tests/api/integration/scripts/categories/backfill.test.ts`
 
 **Interfaces:**
+
 - Consumes: item/feed assignment provenance from Tasks 1-3.
 - Produces: verified behavior that item classifier labels appear before feed fallback labels.
 
@@ -779,9 +789,11 @@ Expected: PASS.
 ## Task 5: Manual Database Verification
 
 **Files:**
+
 - Read/write DB only through existing app scripts and worker refresh.
 
 **Interfaces:**
+
 - Consumes: `categories:backfill` script.
 - Produces: observed classifier item rows for non-allowlisted feeds and visible chips in inbox.
 
@@ -965,13 +977,13 @@ Synthesized from this review's findings. Each task derives from a specific findi
 
 ## GSTACK REVIEW REPORT
 
-| Review | Trigger | Why | Runs | Status | Findings |
-|--------|---------|-----|------|--------|----------|
-| CEO Review | `/plan-ceo-review` | Scope & strategy | 0 | not run | Backend accuracy refinement; CEO review not required |
-| Codex Review | `/codex review` | Independent 2nd opinion | 0 | not run | Not requested for this plan |
-| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 1 | CLEAR | 0 unresolved, 0 critical gaps after folding scope, architecture, test, and performance checks into the plan |
-| Design Review | `/plan-design-review` | UI/UX gaps | 0 | not run | No UI changes planned |
-| DX Review | `/plan-devex-review` | Developer experience gaps | 0 | not run | No developer-facing API or setup change beyond backfill defaults |
+| Review        | Trigger               | Why                             | Runs | Status  | Findings                                                                                                    |
+| ------------- | --------------------- | ------------------------------- | ---- | ------- | ----------------------------------------------------------------------------------------------------------- |
+| CEO Review    | `/plan-ceo-review`    | Scope & strategy                | 0    | not run | Backend accuracy refinement; CEO review not required                                                        |
+| Codex Review  | `/codex review`       | Independent 2nd opinion         | 0    | not run | Not requested for this plan                                                                                 |
+| Eng Review    | `/plan-eng-review`    | Architecture & tests (required) | 1    | CLEAR   | 0 unresolved, 0 critical gaps after folding scope, architecture, test, and performance checks into the plan |
+| Design Review | `/plan-design-review` | UI/UX gaps                      | 0    | not run | No UI changes planned                                                                                       |
+| DX Review     | `/plan-devex-review`  | Developer experience gaps       | 0    | not run | No developer-facing API or setup change beyond backfill defaults                                            |
 
 **VERDICT:** ENG CLEARED — ready to implement.
 

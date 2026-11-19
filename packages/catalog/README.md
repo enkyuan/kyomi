@@ -22,29 +22,29 @@ processing/
 
 run from the repository root.
 
-| command | purpose |
-| --- | --- |
-| `bun run catalog:install` | install Python dependencies with `uv`. |
-| `bun run catalog:export` | export canonical catalog JSONL. |
-| `bun run catalog:import` | import exported feeds into the database and search index. |
-| `bun run catalog:smoke` | verify catalog search returns expected seeded results. |
-| `bun run catalog:sync` | export, import, and smoke test in one pass. |
-| `bun run catalog:sync:local` | run the local scheduled-sync wrapper. |
-| `bun run --cwd packages/catalog typecheck` | type-check. |
+| command                                    | purpose                                                   |
+| ------------------------------------------ | --------------------------------------------------------- |
+| `bun run catalog:install`                  | install Python dependencies with `uv`.                    |
+| `bun run catalog:export`                   | export canonical catalog JSONL.                           |
+| `bun run catalog:import`                   | import exported feeds into the database and search index. |
+| `bun run catalog:smoke`                    | verify catalog search returns expected seeded results.    |
+| `bun run catalog:sync`                     | export, import, and smoke test in one pass.               |
+| `bun run catalog:sync:local`               | run the local scheduled-sync wrapper.                     |
+| `bun run --cwd packages/catalog typecheck` | type-check.                                               |
 
 ## output
 
 `catalog:export` writes `packages/catalog/processing/exports/catalog-feeds.jsonl`. each record follows this contract:
 
-| field | required | notes |
-| --- | --- | --- |
-| `feed_url` | yes | canonical RSS/Atom feed URL. |
-| `title` | no | display title. |
-| `description` | no | short source description. |
-| `link` | no | website URL. |
-| `source` | no | source dataset name. |
-| `language` | no | language code when known. |
-| `category` | no | top-level catalog category. |
+| field         | required | notes                        |
+| ------------- | -------- | ---------------------------- |
+| `feed_url`    | yes      | canonical RSS/Atom feed URL. |
+| `title`       | no       | display title.               |
+| `description` | no       | short source description.    |
+| `link`        | no       | website URL.                 |
+| `source`      | no       | source dataset name.         |
+| `language`    | no       | language code when known.    |
+| `category`    | no       | top-level catalog category.  |
 
 ## notes
 

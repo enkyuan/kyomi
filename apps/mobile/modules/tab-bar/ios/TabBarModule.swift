@@ -14,7 +14,7 @@ public class TabBarModule: Module {
       Events(
         "onTabPress", "onSearchActiveChange", "onSearchQueryChange", "onSearchSubmit",
         "onComposerActiveChange", "onComposerQueryChange", "onComposerSubmit",
-        "onSwitcherFolderAction"
+        "onSwitcherFolderAction", "onReaderToolPress", "onReaderFontSizeChange"
       )
 
       Prop("tabs") { (view: TabBarView, tabs: [TabItemRecord]) in
@@ -89,8 +89,29 @@ public class TabBarModule: Module {
         view.model.composerStatus = status.flatMap(ComposerStatus.init(rawValue:)) ?? .idle
       }
 
+      // The reader's tools; omitted, the capsule is the tab bar.
+      Prop("reader") { (view: TabBarView, reader: ReaderRecord?) in
+        view.model.applyReader(reader?.state)
+      }
+
       Prop("searchPlaceholder") { (view: TabBarView, placeholder: String?) in
         view.model.searchPlaceholder = placeholder ?? "Search"
+      }
+    }
+
+    View(IconMenuView.self) {
+      Events("onSelect")
+
+      Prop("items") { (view: IconMenuView, items: [IconMenuItemRecord]) in
+        view.items = items
+      }
+
+      Prop("symbol") { (view: IconMenuView, symbol: String?) in
+        view.symbol = symbol
+      }
+
+      Prop("tintColor") { (view: IconMenuView, color: UIColor?) in
+        view.tint = color
       }
     }
   }
@@ -132,12 +153,17 @@ struct SwitcherRecord: Record {
   @Field var icon: IconRecord = IconRecord()
   @Field var editIcon: IconRecord = IconRecord()
   @Field var sortIcon: IconRecord = IconRecord()
+  @Field var reorderIcon: IconRecord = IconRecord()
+  @Field var importIcon: IconRecord = IconRecord()
+  @Field var renameIcon: IconRecord = IconRecord()
+  @Field var deleteIcon: IconRecord = IconRecord()
   @Field var addIcon: IconRecord = IconRecord()
 
   var switcher: TabBarSwitcher {
     TabBarSwitcher(
       title: title, label: label, hint: hint, icon: icon.icon,
-      editIcon: editIcon.icon, sortIcon: sortIcon.icon, addIcon: addIcon.icon
+      editIcon: editIcon.icon, sortIcon: sortIcon.icon, reorderIcon: reorderIcon.icon,
+      importIcon: importIcon.icon, renameIcon: renameIcon.icon, deleteIcon: deleteIcon.icon, addIcon: addIcon.icon
     )
   }
 }
@@ -194,4 +220,40 @@ struct ComposerFolderRecord: Record {
   @Field var name: String = ""
 
   var folder: ComposerFolder { ComposerFolder(id: id, name: name) }
+}
+
+struct ReaderToolRecord: Record {
+  @Field var key: String = ""
+  @Field var label: String = ""
+  @Field var icon: IconRecord = IconRecord()
+  @Field var selectedIcon: IconRecord? = nil
+  @Field var selected: Bool = false
+  @Field var selectedTint: UIColor? = nil
+  @Field var disabled: Bool = false
+
+  var tool: ReaderTool {
+    ReaderTool(
+      id: key, label: label, icon: icon.icon, selectedIcon: (selectedIcon ?? icon).icon,
+      isSelected: selected, isEnabled: !disabled,
+      selectedTint: selectedTint.map { Color(uiColor: $0) }
+    )
+  }
+}
+
+struct ReaderRecord: Record {
+  @Field var tools: [ReaderToolRecord] = []
+  @Field var fontSize: Double = 17
+  @Field var minFontSize: Double = 14
+  @Field var maxFontSize: Double = 22
+  @Field var fontSizeLabel: String = "Text size"
+  @Field var shareUrl: String? = nil
+
+  var state: ReaderState {
+    // A degenerate range would crash the slider; fall back to a single step above the minimum.
+    let upper = max(maxFontSize, minFontSize + 1)
+    return ReaderState(
+      tools: tools.map(\.tool), fontSize: fontSize, fontRange: minFontSize...upper, fontLabel: fontSizeLabel,
+      shareURL: shareUrl
+    )
+  }
 }

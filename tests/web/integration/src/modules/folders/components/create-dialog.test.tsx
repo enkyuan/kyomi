@@ -20,15 +20,16 @@ function renderDialog(open: boolean) {
 }
 
 describe("CreateFolderDialog", () => {
-  test("renders its footer actions as pills, including the render-prop Cancel button", () => {
+  test("renders its footer actions as rectangles, with no second close control", () => {
     renderDialog(true);
 
-    for (const name of ["Cancel", "Create folder", "Close"]) {
+    for (const name of ["Cancel", "Create folder"]) {
       const button = screen.getByRole("button", { name });
-      expect(button.classList.contains("rounded-full")).toBe(true);
-      expect(button.classList.contains("before:rounded-full")).toBe(true);
-      expect(button.classList.contains("rounded-lg")).toBe(false);
+      expect(button.classList.contains("rounded-lg")).toBe(true);
+      expect(button.classList.contains("rounded-full")).toBe(false);
     }
+    // Cancel is the way out; a corner X would be redundant.
+    expect(screen.queryByRole("button", { name: "Close" })).toBeNull();
   });
 
   test("renders the trigger as a circular icon button", () => {

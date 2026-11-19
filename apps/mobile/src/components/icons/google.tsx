@@ -1,4 +1,4 @@
-import { GoogleIconGeometry } from "@kyomi/ui/icons/google";
+import { GoogleIconGeometry } from "@kyomi/ui/icons/google-geometry";
 import Svg, { Path, type SvgProps } from "react-native-svg";
 
 export type GoogleIconProps = Omit<SvgProps, "width" | "height"> & {

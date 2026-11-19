@@ -14,7 +14,7 @@ allowed-tools:
 
 The daemon decides per change whether the agent waits for `chunk validate` or is
 released and told the answer on its next turn. These keys move that decision.
-Nothing here changes *whether* a change is validated — every change is, always.
+Nothing here changes _whether_ a change is validated — every change is, always.
 The only question is who waits.
 
 ## Step 0 — Understand what the user wants
@@ -59,13 +59,13 @@ AskUserQuestion:
 
 ## What each key does
 
-| Key | Effect |
-|---|---|
-| `asyncValidate` | `auto` (default), `always`, `never` |
-| `asyncValidateMaxLines` | Largest change still released under `auto` (default: 500) |
-| `asyncValidateInert` | Extensions or file names this project counts as prose, released however large |
-| `asyncValidateBlocking` | Extensions or file names that always block, whatever the size or mode |
-| `asyncValidateWorktree` | Run background checks in a snapshot so edits can't stale the result |
+| Key                     | Effect                                                                        |
+| ----------------------- | ----------------------------------------------------------------------------- |
+| `asyncValidate`         | `auto` (default), `always`, `never`                                           |
+| `asyncValidateMaxLines` | Largest change still released under `auto` (default: 500)                     |
+| `asyncValidateInert`    | Extensions or file names this project counts as prose, released however large |
+| `asyncValidateBlocking` | Extensions or file names that always block, whatever the size or mode         |
+| `asyncValidateWorktree` | Run background checks in a snapshot so edits can't stale the result           |
 
 The two rule lists take an extension with its dot (`.sql`) or an exact file name
 (`NOTICE`). Not paths, not globs — both are refused with an error.

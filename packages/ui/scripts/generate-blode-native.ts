@@ -13,36 +13,58 @@ import { renderToStaticMarkup } from "react-dom/server";
 /** Blode export name, without the `Icon` suffix, for every icon native code uses. */
 const ICONS = [
   "ArrowShareRight",
-  "BlankPagePortrait",
   "BarsThree",
+  "BellOff",
+  "BlankPagePortrait",
   "Bookmark",
   "BookmarkFilled",
   "Brain",
   "ChevronGrabberVertical",
   "ChevronsUpDown",
   "CircleCheckFilled",
+  "CircleDashed",
   "Clock",
   "DotGrid1x3HorizontalFilled",
   "EditBig",
   "Ellipsis",
+  "ExternalLink",
+  "ExternalLinkFilled",
+  "EyeClosed",
   "FileArrowLeftIn",
   "FilterAsc",
   "FilterAscFilled",
+  "FolderAddLeft",
+  "FolderOpen",
+  "Highlight",
   "History",
   "HistoryFilled",
   "Inbox",
+  "InboxChecked",
   "InboxFilled",
   "Lock",
   "MagnifyingGlass",
   "MessageCircle",
+  "PageText",
+  "PageTextFilled",
   "PageTextSearch",
+  "PaperPlaneTopRight",
+  "Phone",
   "Plus",
   "PlusCircleFilled",
   "ReceiptBill",
   "Rss",
   "Search",
+  "ShieldCrossed",
+  "SortArrowUpDown",
+  "Archive",
   "Text",
+  "TextCursorInput",
+  "TitleCase",
+  "TitleCaseFilled",
   "Toggle",
+  "TrashCan",
+  "TriangleExclamation",
+  "CloudSimpleDisconnected",
   "X",
 ] as const;
 
@@ -103,6 +125,29 @@ function readMarkup(name: string): { markup: string; strictRoot: boolean } {
   return { markup: renderToStaticMarkup(createElement(component as never)), strictRoot: true };
 }
 
+/**
+ * Renderers draw paths without dash patterns, so a dashed ring is expanded into one arc per dash.
+ * Only the 9-radius circle Blode uses for `CircleDashed` is supported.
+ */
+function dashCircle(name: string, d: string, dasharray: string): string {
+  const [dash, gap] = dasharray.split(/[ ,]+/).map(Number);
+  if (!d.startsWith("M21 12c0 4.9706") || !dash || !gap) {
+    throw new Error(`${name}: only dashed 9-radius circles are supported`);
+  }
+  const [cx, cy, r] = [12, 12, 9];
+  const point = (length: number) => {
+    const angle = length / r;
+    return `${(cx + r * Math.cos(angle)).toFixed(4)} ${(cy + r * Math.sin(angle)).toFixed(4)}`;
+  };
+  const circumference = 2 * Math.PI * r;
+  let out = "";
+  for (let start = 0; start < circumference - 0.01; start += dash + gap) {
+    const end = Math.min(start + dash, circumference);
+    out += `M${point(start)}A${r} ${r} 0 0 1 ${point(end)}`;
+  }
+  return out;
+}
+
 function extractPaths(name: string): GeneratedPath[] {
   const { markup, strictRoot } = readMarkup(name);
   const svg = /<svg\s([^>]*)>/.exec(markup)?.[1] ?? "";
@@ -130,7 +175,8 @@ function extractPaths(name: string): GeneratedPath[] {
       throw new Error(`${name} has a stroke that is not 2 wide`);
     }
 
-    const path: GeneratedPath = { d };
+    const dash = attribute(attributes, "stroke-dasharray");
+    const path: GeneratedPath = { d: dash ? dashCircle(name, d, dash) : d };
     if (attribute(attributes, "fill-rule") === "evenodd") path.fillRule = "evenodd";
     if (isStroke) {
       path.stroke = {};

@@ -374,6 +374,7 @@
 			baseConfigurationReference = 5D38EA7A839871A704C9A51D /* Pods-Kyomi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Kyomi/Kyomi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -414,6 +415,7 @@
 			baseConfigurationReference = 09BB5C88ADDE7B36EA7517C8 /* Pods-Kyomi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Kyomi/Kyomi.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";

@@ -414,9 +414,10 @@ Expose `getStreamKeyForJobType`, `FEED_REFRESH_JOBS_STREAM_KEY`, `OPML_JOBS_STRE
 In `apps/api/src/app/jobs/run-worker.ts`, parse `env.JOB_STREAMS` as a comma-delimited list with this default:
 
 ```ts
-const jobStreams = env.JOB_STREAMS.length > 0
-  ? env.JOB_STREAMS
-  : [FEED_REFRESH_JOBS_STREAM_KEY, OPML_JOBS_STREAM_KEY];
+const jobStreams =
+  env.JOB_STREAMS.length > 0
+    ? env.JOB_STREAMS
+    : [FEED_REFRESH_JOBS_STREAM_KEY, OPML_JOBS_STREAM_KEY];
 ```
 
 Start one consumer loop per stream with the same job handler but separate read cursors:
@@ -537,8 +538,14 @@ export function normalizeSchedulerOptions(options: SchedulerOptions = {}) {
     subscribedLimit: Math.min(Math.max(options.subscribedLimit ?? 50, 1), 5_000),
     globalLimit: Math.min(Math.max(options.globalLimit ?? 10, 0), 1_000),
     maxQueuedRefreshJobs: Math.min(Math.max(options.maxQueuedRefreshJobs ?? 25, 1), 1_000_000),
-    queuedLeaseMs: Math.min(Math.max(options.queuedLeaseMs ?? 15 * 60_000, 60_000), 24 * 60 * 60_000),
-    runningLeaseMs: Math.min(Math.max(options.runningLeaseMs ?? 30 * 60_000, 60_000), 24 * 60 * 60_000),
+    queuedLeaseMs: Math.min(
+      Math.max(options.queuedLeaseMs ?? 15 * 60_000, 60_000),
+      24 * 60 * 60_000,
+    ),
+    runningLeaseMs: Math.min(
+      Math.max(options.runningLeaseMs ?? 30 * 60_000, 60_000),
+      24 * 60 * 60_000,
+    ),
     tickMs: Math.min(Math.max(options.tickMs ?? 60_000, 1_000), 3_600_000),
   };
 }
@@ -648,10 +655,7 @@ export async function claimDueFeedRefreshes(
 Add the publish step. This accepts claimed rows only; it does not select feeds:
 
 ```ts
-export async function publishClaimedFeedRefreshes(
-  redis: Redis,
-  claimed: ClaimedFeedRefresh[],
-) {
+export async function publishClaimedFeedRefreshes(redis: Redis, claimed: ClaimedFeedRefresh[]) {
   const unpublishedFeedIds: string[] = [];
 
   for (const feed of claimed) {
@@ -736,7 +740,10 @@ export async function runFeedRefreshSchedulerLoop(redis: Redis, signal?: AbortSi
         });
       }
     } catch (error) {
-      logger.error({ event: "feed.scheduler.failed", error: error instanceof Error ? error.message : String(error) });
+      logger.error({
+        event: "feed.scheduler.failed",
+        error: error instanceof Error ? error.message : String(error),
+      });
     }
 
     await Bun.sleep(options.tickMs);
@@ -880,24 +887,24 @@ Edit `apps/api/package.json`:
 Edit `docker/docker-compose.yml`:
 
 ```yaml
-  worker:
-    command: bun run --cwd apps/api worker
-    environment:
-      JOB_STREAMS: jobs:feed-refresh,jobs:opml
+worker:
+  command: bun run --cwd apps/api worker
+  environment:
+    JOB_STREAMS: jobs:feed-refresh,jobs:opml
 
-  scheduler:
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile
-    command: bun run --cwd apps/api scheduler
-    depends_on:
-      postgres:
-        condition: service_healthy
-      redis:
-        condition: service_started
-    env_file:
-      - .env
-      - ../apps/api/.env
+scheduler:
+  build:
+    context: ..
+    dockerfile: docker/Dockerfile
+  command: bun run --cwd apps/api scheduler
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_started
+  env_file:
+    - .env
+    - ../apps/api/.env
 ```
 
 If the compose file uses shared anchors for `api` and `worker`, reuse the existing anchor instead of duplicating build/env boilerplate.
@@ -954,10 +961,7 @@ Create `tests/api/integration/modules/feeds/host-limit.test.ts`:
 
 ```ts
 import { describe, expect, test } from "bun:test";
-import {
-  createHostRateLimiter,
-  createMemoryHostRateLimitStore,
-} from "@kyomi/worker/ingestion";
+import { createHostRateLimiter, createMemoryHostRateLimitStore } from "@kyomi/worker/ingestion";
 
 describe("host rate limiter", () => {
   test("serializes same-host work across limiter instances sharing one store", async () => {
@@ -1128,11 +1132,11 @@ await runFeedRefresh(payload.feedId, {
 Add refresh policy:
 
 ```ts
-export function shouldEnrichInsertedItems(input: {
-  userId: string;
-  reason?: string;
-}) {
-  if (input.userId === "system" && (input.reason === "scheduled" || input.reason === "global_scheduled")) {
+export function shouldEnrichInsertedItems(input: { userId: string; reason?: string }) {
+  if (
+    input.userId === "system" &&
+    (input.reason === "scheduled" || input.reason === "global_scheduled")
+  ) {
     return false;
   }
 
@@ -1195,13 +1199,23 @@ import { classifyFeedRefreshError } from "@/app/jobs/feed-refresh-errors";
 
 describe("feed refresh error classification", () => {
   test("classifies known feed-owner failures", () => {
-    expect(classifyFeedRefreshError(new Error("Feed fetch failed: HTTP 404")).severity).toBe("feed");
-    expect(classifyFeedRefreshError(new Error("Entity expansion limit exceeded: 1003 > 1000")).severity).toBe("feed");
-    expect(classifyFeedRefreshError(new Error("Feed fetch failed: unknown certificate verification error")).severity).toBe("feed");
+    expect(classifyFeedRefreshError(new Error("Feed fetch failed: HTTP 404")).severity).toBe(
+      "feed",
+    );
+    expect(
+      classifyFeedRefreshError(new Error("Entity expansion limit exceeded: 1003 > 1000")).severity,
+    ).toBe("feed");
+    expect(
+      classifyFeedRefreshError(
+        new Error("Feed fetch failed: unknown certificate verification error"),
+      ).severity,
+    ).toBe("feed");
   });
 
   test("classifies platform errors separately", () => {
-    expect(classifyFeedRefreshError(new Error("Redis connection closed")).severity).toBe("platform");
+    expect(classifyFeedRefreshError(new Error("Redis connection closed")).severity).toBe(
+      "platform",
+    );
   });
 });
 ```
@@ -1307,9 +1321,8 @@ export async function buildQueueHealthSnapshot(redis: QueueHealthRedis) {
         redis.xpending(stream, JOBS_CONSUMER_GROUP).catch(() => [0]),
       ]);
 
-      const pending = Array.isArray(pendingResult) && typeof pendingResult[0] === "number"
-        ? pendingResult[0]
-        : 0;
+      const pending =
+        Array.isArray(pendingResult) && typeof pendingResult[0] === "number" ? pendingResult[0] : 0;
 
       return [stream, { length, pending }] as const;
     }),

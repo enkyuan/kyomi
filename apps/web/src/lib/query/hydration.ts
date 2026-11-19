@@ -61,24 +61,26 @@ export function createSafeHydrate(
  * means the queries it would have carried are fetched by the client instead, so each failure is
  * logged and never rejects hydration; one bad chunk does not stop the ones after it.
  */
-function hydrateChunk(queryClient: QueryClient, chunk: Parameters<typeof queryHydrate>[1]) {
-  try {
-    queryHydrate(queryClient, chunk);
-  } catch (error) {
-    console.error("Error hydrating a streamed query chunk:", error);
-  }
-}
-
 async function drainQueryStream(reader: QueryStreamReader, queryClient: QueryClient) {
   try {
     let result;
     do {
       result = await reader.read();
-      if (!result.done && result.value) hydrateChunk(queryClient, result.value);
+      if (!result.done && result.value) {
+        hydrateStreamedChunk(queryClient, result.value);
+      }
     } while (!result.done);
   } catch (error) {
     console.error("Error reading the query stream:", error);
   } finally {
     mark("query-stream-drained");
+  }
+}
+
+function hydrateStreamedChunk(queryClient: QueryClient, chunk: Parameters<typeof queryHydrate>[1]) {
+  try {
+    queryHydrate(queryClient, chunk);
+  } catch (error) {
+    console.error("Error hydrating a streamed query chunk:", error);
   }
 }

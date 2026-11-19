@@ -118,15 +118,15 @@ Blocked feed HTML
 
 ## Worktree Parallelization
 
-| Step | Modules touched | Depends on |
-|------|-----------------|------------|
-| Database contract | `packages/db`, article API types | - |
-| Article API hidden/report | `apps/api/src/modules/articles` | Database contract |
-| Inbox UI actions/dialog | `apps/web/src/modules/inbox`, `apps/web/src/modules/feeds` | Article API hidden/report |
-| OPML refresh enqueue | `apps/api/src/modules/opml`, feeds refresh | - |
-| Worker HTML rejection | `packages/worker` | - |
-| OPML toast timing | `apps/web/src/modules/feeds/components/follow` | - |
-| Final verification | whole repo | all tasks |
+| Step                      | Modules touched                                            | Depends on                |
+| ------------------------- | ---------------------------------------------------------- | ------------------------- |
+| Database contract         | `packages/db`, article API types                           | -                         |
+| Article API hidden/report | `apps/api/src/modules/articles`                            | Database contract         |
+| Inbox UI actions/dialog   | `apps/web/src/modules/inbox`, `apps/web/src/modules/feeds` | Article API hidden/report |
+| OPML refresh enqueue      | `apps/api/src/modules/opml`, feeds refresh                 | -                         |
+| Worker HTML rejection     | `packages/worker`                                          | -                         |
+| OPML toast timing         | `apps/web/src/modules/feeds/components/follow`             | -                         |
+| Final verification        | whole repo                                                 | all tasks                 |
 
 Parallel lanes:
 
@@ -144,11 +144,13 @@ Conflict flags: Lane A and D both touch `apps/web/src/modules/feeds`, but differ
 ### Task 1: Database Contract For Hidden State And Reports
 
 **Files:**
+
 - Create: `packages/db/drizzle/0025_article_reports_and_hidden_state.sql`
 - Modify: `packages/db/drizzle/meta/_journal.json`
 - Modify: `packages/db/src/schema/articles.ts`
 
 **Interfaces:**
+
 - Produces: `feedItemUserState.hiddenAt: Date | null`
 - Produces: `articleReports` Drizzle table with `id`, `userId`, `articleId`, `articleType`, `feedItemId`, `clipId`, `reason`, `details`, `articleTitle`, `articleUrl`, `feedTitle`, `feedUrl`, `createdAt`
 - Consumes: existing `users`, `feedItems`, and `articleClips` schema exports
@@ -295,6 +297,7 @@ git commit -m "feat: add article hidden state and reports schema"
 ### Task 2: Article API Hidden State And Broken Report Endpoint
 
 **Files:**
+
 - Modify: `apps/api/src/modules/articles/types.ts`
 - Modify: `apps/api/src/modules/articles/schemas.ts`
 - Modify: `apps/api/src/modules/articles/write/update.ts`
@@ -309,6 +312,7 @@ git commit -m "feat: add article hidden state and reports schema"
 - Test: `tests/api/integration/modules/articles/read/list.test.ts`
 
 **Interfaces:**
+
 - Consumes: `feedItemUserState.hiddenAt` and `articleReports` from Task 1
 - Produces: `ArticleUpdateBody.isHidden?: boolean`
 - Produces: `createBrokenArticleReport(database, userId, articleId, body): Promise<void>`
@@ -661,9 +665,9 @@ pushGlobalReadSavedFilters(filters, opts);
 pushHiddenFilter(filters);
 ```
 
-In `apps/api/src/modules/articles/read/counts.ts`, add `sql`${feedItemUserState.hiddenAt} IS NULL`` to feed item counts, unread counts, saved counts, and per-feed unread counts. Do not apply this to `articleClips`.
+In `apps/api/src/modules/articles/read/counts.ts`, add `sql`${feedItemUserState.hiddenAt} IS NULL``to feed item counts, unread counts, saved counts, and per-feed unread counts. Do not apply this to`articleClips`.
 
-In `apps/api/src/modules/articles/read/views-merged.ts`, add `sql`${feedItemUserState.hiddenAt} IS NULL`` to the custom recently-viewed feed row query and any other direct feed item query that bypasses `listArticlesForUser`.
+In `apps/api/src/modules/articles/read/views-merged.ts`, add `sql`${feedItemUserState.hiddenAt} IS NULL``to the custom recently-viewed feed row query and any other direct feed item query that bypasses`listArticlesForUser`.
 
 - [ ] **Step 6: Implement report service**
 
@@ -800,6 +804,7 @@ git commit -m "feat: persist hidden articles and broken reports"
 ### Task 3: Inbox UI Actions And Broken Article Dialog
 
 **Files:**
+
 - Modify: `apps/web/src/lib/schemas.ts`
 - Modify: `apps/web/src/modules/inbox/services/api.ts`
 - Modify: `apps/web/src/modules/inbox/hooks/use-inbox-data.ts`
@@ -808,6 +813,7 @@ git commit -m "feat: persist hidden articles and broken reports"
 - Test: `tests/web/integration/modules/feeds/item-toolbar.test.tsx`
 
 **Interfaces:**
+
 - Consumes: `PUT /api/v1/articles/:articleId` with `isHidden`
 - Consumes: `POST /api/v1/articles/:articleId/reports/broken`
 - Produces: `reportBrokenArticle({ data: { itemId, reason, details } })`
@@ -1126,10 +1132,12 @@ git commit -m "feat: add durable inbox item reports"
 ### Task 4: OPML Imports Enqueue First Refresh
 
 **Files:**
+
 - Modify: `apps/api/src/modules/opml/service.ts`
 - Test: `tests/api/integration/modules/opml/routes.test.ts` or create `tests/api/integration/modules/opml/service.test.ts` if route-level mocks are awkward
 
 **Interfaces:**
+
 - Consumes: `enqueueFeedRefresh(database, feedId, userId, "subscription_created", logger)`
 - Produces: new OPML subscriptions move to refresh queue immediately after import feed job success
 
@@ -1164,15 +1172,23 @@ mock.module("@modules/opml/task-store", () => ({
 describe("runOpmlImportFeedJob", () => {
   test("enqueues a first refresh for newly imported subscriptions", async () => {
     const { runOpmlImportFeedJob } = await import("@modules/opml/service");
-    const logger = { info: mock(() => undefined), warn: mock(() => undefined), error: mock(() => undefined) };
+    const logger = {
+      info: mock(() => undefined),
+      warn: mock(() => undefined),
+      error: mock(() => undefined),
+    };
 
-    await runOpmlImportFeedJob({} as never, {
-      taskId: "task-1",
-      userId: "user-1",
-      url: "https://example.com/feed.xml",
-      title: "Example",
-      folderId: null,
-    }, logger);
+    await runOpmlImportFeedJob(
+      {} as never,
+      {
+        taskId: "task-1",
+        userId: "user-1",
+        url: "https://example.com/feed.xml",
+        title: "Example",
+        folderId: null,
+      },
+      logger,
+    );
 
     expect(enqueueFeedRefreshMock).toHaveBeenCalledWith(
       {},
@@ -1243,10 +1259,12 @@ git commit -m "fix: refresh feeds imported from opml"
 ### Task 5: Reject HTML During Feed Refresh Parsing
 
 **Files:**
+
 - Modify: `packages/worker/src/services/feed/parse.ts`
 - Test: `tests/api/integration/modules/feeds/parse-feed-document.test.ts`
 
 **Interfaces:**
+
 - Consumes: existing `runFeedRefresh` catch block that marks refresh failure
 - Produces: `parseFeedDocument` throws `Unsupported feed format: received HTML document` for HTML bodies
 
@@ -1308,10 +1326,12 @@ git commit -m "fix: reject html feed refresh responses"
 ### Task 6: Explicit OPML Import Toast Completion Timeouts
 
 **Files:**
+
 - Modify: `apps/web/src/modules/feeds/components/follow/sources-dialog.tsx`
 - Test: `tests/web/integration/modules/feeds/sources-dialog.test.tsx`
 
 **Interfaces:**
+
 - Produces: loading toast remains indefinite while polling
 - Produces: success toast timeout is `3000`
 - Produces: error toast timeout is `7000`
@@ -1325,7 +1345,11 @@ const [, toastOptions] = mocks.toastPromise.mock.calls[0] as [
   Promise<unknown>,
   {
     loading: { timeout: number };
-    success: (status: OpmlImportStatusDto) => { title: string; description: ReactNode; timeout: number };
+    success: (status: OpmlImportStatusDto) => {
+      title: string;
+      description: ReactNode;
+      timeout: number;
+    };
     error: (error: unknown) => { title: string; description: string; timeout: number };
   },
 ];
@@ -1384,9 +1408,11 @@ git commit -m "fix: bound opml import completion toasts"
 ### Task 7: Final Verification And Manual QA
 
 **Files:**
+
 - Verify all files changed in Tasks 1-6
 
 **Interfaces:**
+
 - Consumes: all prior tasks
 - Produces: verified behavior for the three page feedback items and empty-feed root cause
 
@@ -1517,13 +1543,13 @@ QUALITY TARGET: behavior + edge/error coverage for all P1/P2 paths.
 
 ## GSTACK REVIEW REPORT
 
-| Review | Trigger | Why | Runs | Status | Findings |
-|--------|---------|-----|------|--------|----------|
-| CEO Review | `/plan-ceo-review` | Scope & strategy | 0 | not run | Not required for targeted reliability fixes |
-| Codex Review | `/codex review` | Independent 2nd opinion | 0 | not run | Not requested |
-| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 1 | clear | 6 issues, 0 critical gaps, all folded into tasks |
-| Design Review | `/plan-design-review` | UI/UX gaps | 0 | not run | Dialog follows existing feedback/settings UI primitives |
-| DX Review | `/plan-devex-review` | Developer experience gaps | 0 | not run | Not required |
+| Review        | Trigger               | Why                             | Runs | Status  | Findings                                                |
+| ------------- | --------------------- | ------------------------------- | ---- | ------- | ------------------------------------------------------- |
+| CEO Review    | `/plan-ceo-review`    | Scope & strategy                | 0    | not run | Not required for targeted reliability fixes             |
+| Codex Review  | `/codex review`       | Independent 2nd opinion         | 0    | not run | Not requested                                           |
+| Eng Review    | `/plan-eng-review`    | Architecture & tests (required) | 1    | clear   | 6 issues, 0 critical gaps, all folded into tasks        |
+| Design Review | `/plan-design-review` | UI/UX gaps                      | 0    | not run | Dialog follows existing feedback/settings UI primitives |
+| DX Review     | `/plan-devex-review`  | Developer experience gaps       | 0    | not run | Not required                                            |
 
 - **VERDICT:** ENG CLEARED - ready to implement.
-NO UNRESOLVED DECISIONS
+  NO UNRESOLVED DECISIONS

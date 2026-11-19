@@ -1,15 +1,22 @@
 import type { ConfigContext, ExpoConfig } from "expo/config";
 
-const localNetworkInfoPlist = process.env.EXPO_PUBLIC_AUTH_ORIGIN?.trim().startsWith("http://")
-  ? {
-      NSLocalNetworkUsageDescription:
-        "Kyomi connects to your local development server during development.",
-      NSBonjourServices: ["_expo._tcp"],
-      NSAppTransportSecurity: {
-        NSAllowsLocalNetworking: true,
+// Dev builds reach Metro and the API over plain HTTP on the local network, whichever host
+// Metro was loaded from, so this no longer depends on a build-time origin.
+const localNetworkInfoPlist = {
+  NSLocalNetworkUsageDescription:
+    "Kyomi connects to your local development server during development.",
+  NSBonjourServices: ["_expo._tcp"],
+  NSAppTransportSecurity: {
+    NSAllowsLocalNetworking: true,
+    // Tailscale MagicDNS hosts (Metro and the API over a tailnet) are not "local" to ATS.
+    NSExceptionDomains: {
+      "ts.net": {
+        NSIncludesSubdomains: true,
+        NSExceptionAllowsInsecureHTTPLoads: true,
       },
-    }
-  : {};
+    },
+  },
+};
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,

@@ -36,20 +36,20 @@ env is loaded from `docker/.env` and each app's local `.env`. copy the matching 
 
 run from the repository root unless noted.
 
-| command | purpose |
-| --- | --- |
-| `bun run dev` | start web and api together. |
-| `bun run dev:web` | start the web app. |
-| `bun run dev:api` | follow api, worker, and scheduler Docker logs. |
+| command                | purpose                                                    |
+| ---------------------- | ---------------------------------------------------------- |
+| `bun run dev`          | start web and api together.                                |
+| `bun run dev:web`      | start the web app.                                         |
+| `bun run dev:api`      | follow api, worker, and scheduler Docker logs.             |
 | `bun run dev:api:host` | run api, worker, and scheduler locally with file watching. |
-| `bun run docker:up` | start local infrastructure. |
-| `bun run docker:down` | stop local infrastructure. |
-| `bun run db:migrate` | apply database migrations. |
-| `bun run typecheck` | type-check every workspace. |
-| `bun run lint` | lint every workspace. |
-| `bun run fmt:check` | check formatting. |
-| `bun run test` | run web and api integration tests. |
-| `bun run catalog:sync` | export, import, and smoke-test the feed catalog. |
+| `bun run docker:up`    | start local infrastructure.                                |
+| `bun run docker:down`  | stop local infrastructure.                                 |
+| `bun run db:migrate`   | apply database migrations.                                 |
+| `bun run typecheck`    | type-check every workspace.                                |
+| `bun run lint`         | lint every workspace.                                      |
+| `bun run fmt:check`    | check formatting.                                          |
+| `bun run test`         | run web and api integration tests.                         |
+| `bun run catalog:sync` | export, import, and smoke-test the feed catalog.           |
 
 ## notes
 

@@ -4,11 +4,15 @@ import { Toast } from "@base-ui/react/toast";
 import type { ToastObject } from "@base-ui/react/toast";
 import { useEffect, useState, type CSSProperties } from "react";
 import type React from "react";
-import { buttonVariants } from "../button";
 import { cn } from "../../lib/utils";
-import { ToastStatusIcon } from "./status-icon";
-import { ToastDescription, ToastTitle } from "./text";
+import { TOAST_CONTENT_CLASS_NAME, ToastRow } from "./row";
+import { ToastSurface } from "./surface";
+import { ToastTitle } from "./text";
 import { getAnchorRect, type AnchoredToastData, type AnchorRect } from "./utils";
+
+/** Corner radii of the two anchored shapes; keep in step with `--toast-radius` below. */
+const TOOLTIP_RADIUS_PX = 10;
+const CARD_RADIUS_PX = 14;
 
 const ANCHORED_TOAST_VIEWPORT_STYLE = {
   pointerEvents: "none",
@@ -100,45 +104,33 @@ function AnchoredToastItem({
     >
       <Toast.Root
         className={cn(
-          "relative text-balance border border-border bg-popover not-dark:bg-clip-padding text-popover-foreground text-xs transition-[scale,opacity] before:pointer-events-none before:absolute before:inset-0 before:shadow-[0_1px_--theme(--color-black/4%)] data-ending-style:scale-98 data-starting-style:scale-98 data-ending-style:opacity-0 data-starting-style:opacity-0 pointer-events-auto dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
+          "group/toast pointer-events-auto relative text-popover-foreground text-xs shadow-(--glass-shadow) transition-[scale,box-shadow] data-ending-style:scale-98 data-ending-style:shadow-none data-starting-style:scale-98 data-starting-style:shadow-none",
           tooltipStyle
-            ? "rounded-md shadow-md/5 before:rounded-[calc(var(--radius-md)-1px)]"
-            : "rounded-lg shadow-lg/5 before:rounded-[calc(var(--radius-lg)-1px)]",
+            ? "rounded-(--toast-radius) [--toast-radius:10px]"
+            : "rounded-(--toast-radius) [--toast-inset:6px] [--toast-radius:14px]",
         )}
         data-slot="toast-popup"
         toast={toast}
       >
-        {tooltipStyle ? (
-          <Toast.Content className="pointer-events-auto px-2 py-1">
-            <ToastTitle data-slot="toast-title" maxMorphChars={36} toast={toast} />
-          </Toast.Content>
-        ) : (
-          <Toast.Content className="pointer-events-auto flex items-center justify-between gap-1.5 overflow-hidden px-3.5 py-3 text-sm">
-            <div className="flex gap-2">
-              <ToastStatusIcon toast={toast} />
-
-              <div className="flex flex-col gap-0.5">
-                <ToastTitle
-                  className="font-medium"
-                  data-slot="toast-title"
-                  maxMorphChars={28}
-                  toast={toast}
-                />
-                <ToastDescription
-                  className="text-muted-foreground"
-                  data-slot="toast-description"
-                  maxMorphChars={28}
-                  toast={toast}
-                />
-              </div>
-            </div>
-            {toast.actionProps && (
-              <Toast.Action className={buttonVariants({ size: "xs" })} data-slot="toast-action">
-                {toast.actionProps.children}
-              </Toast.Action>
-            )}
-          </Toast.Content>
-        )}
+        <ToastSurface
+          className="transition-opacity duration-150 group-data-ending-style/toast:opacity-0 group-data-starting-style/toast:opacity-0"
+          radius={tooltipStyle ? TOOLTIP_RADIUS_PX : CARD_RADIUS_PX}
+        >
+          {tooltipStyle ? (
+            <Toast.Content className="pointer-events-auto px-2 py-1">
+              <ToastTitle
+                className="truncate font-medium"
+                data-slot="toast-title"
+                maxMorphChars={36}
+                toast={toast}
+              />
+            </Toast.Content>
+          ) : (
+            <Toast.Content className={TOAST_CONTENT_CLASS_NAME}>
+              <ToastRow maxMorphChars={28} toast={toast} />
+            </Toast.Content>
+          )}
+        </ToastSurface>
       </Toast.Root>
     </Toast.Positioner>
   );

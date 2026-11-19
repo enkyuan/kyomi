@@ -1,27 +1,9 @@
 "use client";
 
 import { useViewport } from "@modules/inbox/hooks/use-viewport";
-import { VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows";
-import { Badge } from "@kyomi/ui/components/badge";
+import { type RowsPaginationState } from "./rows";
 import { ScrollAreaPrimitive, ScrollBar } from "@kyomi/ui/components/scroll-area";
-import {
-  Empty,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@kyomi/ui/components/empty";
-import { EmptyStateIcon } from "@kyomi/ui/icons/empty-state";
 import { useElementScrollRestoration } from "@tanstack/react-router";
-import {
-  AnimatePresence,
-  LazyMotion,
-  domAnimation,
-  controlSwapMotion,
-  m,
-  useReducedMotion,
-  springTransition,
-} from "@kyomi/ui/lib/motion";
 import { cn } from "@kyomi/ui/lib/utils";
 import { useRef } from "react";
 import { useHydrated } from "@hooks/use-hydrated";
@@ -31,60 +13,17 @@ import type {
   InboxDensityDto,
   InboxTimestampDisplayDto,
 } from "@kyomi/reader/schemas";
-import {
-  BackToInboxButton,
-  DEFAULT_SORT,
-  FilterControl,
-  SearchBar,
-  SortButton,
-  type PinnedFolderFilter,
-} from "./header";
-import { Toolbar as ReaderToolbar } from "@modules/reader/components/toolbar";
-import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
+import { type PinnedFolderFilter } from "./header";
+import { ListBody, getEmptyStateCopy } from "./body";
+import { ListHeader } from "./scope-bar";
 
 type ListDisplayOptions = {
   readerFocusMode?: boolean;
   showFavicons: boolean;
 };
 
-const EMPTY_STATE_BODY_COPY =
-  "Follow feeds to start building your reading list. New stories will show up here as they're published.";
-
 const EMPTY_PINNED_FOLDERS: PinnedFolderFilter[] = [];
 const INBOX_LIST_SCROLL_RESTORATION_ID = "inbox-list";
-function getEmptyStateCopy(filter: InboxFilter) {
-  switch (filter) {
-    case "my-feed":
-      return {
-        title: (
-          <>
-            Add a new feed or check out{" "}
-            <Badge variant="secondary" size="lg">
-              All
-            </Badge>{" "}
-            to get started
-          </>
-        ),
-        description: EMPTY_STATE_BODY_COPY,
-      };
-    case "saved":
-      return {
-        title: "Nothing saved yet",
-        description: "Saved articles will appear here when you mark them for later.",
-      };
-    case "recent":
-      return {
-        title: "No recent reads",
-        description: "Articles you open will show up here after you read them.",
-      };
-    case "all":
-    default:
-      return {
-        title: "No articles yet",
-        description: "New stories will show up here after feeds publish or refresh.",
-      };
-  }
-}
 
 interface ListProps {
   inboxItems: InboxItem[];
@@ -143,11 +82,6 @@ export function List({
   const { readerFocusMode = false, showFavicons } = display;
   const { isLoading, isRefreshing } = pagination;
   const listScrollRef = useRef<HTMLDivElement | null>(null);
-  const listHeaderRef = useRef<HTMLDivElement | null>(null);
-  const listToolsRef = useRef<HTMLDivElement | null>(null);
-  const prefersReducedMotion = useReducedMotion();
-  const scopeControlTransition = springTransition("standard", prefersReducedMotion);
-  const controlSwap = controlSwapMotion(prefersReducedMotion);
 
   const { containerWidth: listContainerWidth, viewportHeight } = useViewport(listScrollRef, [
     inboxItems.length,
@@ -181,127 +115,44 @@ export function List({
         >
           <div className={cn("flex min-h-full flex-col", showEmptyState && "h-full")}>
             {onFilterChange ? (
-              <div
-                ref={listHeaderRef}
-                className="isolate sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-5.5 py-4.5"
-                data-slot="inbox-list-header"
-              >
-                <div className="flex min-w-0 items-center gap-2">
-                  <LazyMotion features={domAnimation}>
-                    <m.div className="inline-flex shrink-0">
-                      <AnimatePresence initial={false} mode="popLayout">
-                        {showScopedHeader && backAction ? (
-                          <m.div
-                            key="scoped-header"
-                            className="flex min-w-0 items-center gap-2"
-                            {...controlSwap}
-                            transition={scopeControlTransition}
-                          >
-                            <BackToInboxButton onClick={backAction} />
-                            {isArticleScoped && selectedArticle && !isLoading ? (
-                              <HeaderReaderToolbar item={selectedArticle} />
-                            ) : feedLabel ? (
-                              <span className="relative inline-flex h-11 min-w-0 max-w-72 items-center overflow-hidden rounded-full bg-muted-solid px-4 text-base font-medium text-muted-foreground *:relative">
-                                <span className="truncate">{feedLabel}</span>
-                              </span>
-                            ) : null}
-                          </m.div>
-                        ) : (
-                          <m.div
-                            key="filter-tabs"
-                            layout
-                            {...controlSwap}
-                            transition={scopeControlTransition}
-                          >
-                            <FilterControl
-                              activeFolderId={activeFolderId}
-                              filter={filter}
-                              pinnedFolders={pinnedFolders}
-                              onFilterChange={onFilterChange}
-                              onFolderFilterChange={onFolderFilterChange}
-                            />
-                          </m.div>
-                        )}
-                      </AnimatePresence>
-                    </m.div>
-                  </LazyMotion>
-                </div>
-                <div className="flex min-w-0 flex-1 items-center justify-end">
-                  <div
-                    ref={listToolsRef}
-                    className="flex min-w-0 max-w-full items-center justify-end gap-2"
-                  >
-                    <SearchBar />
-                    <LazyMotion features={domAnimation}>
-                      <AnimatePresence initial={false} mode="popLayout">
-                        {!isArticleScoped ? (
-                          <m.div
-                            key="sort"
-                            layout
-                            initial={
-                              prefersReducedMotion ? false : { opacity: 0, x: -8, scale: 0.96 }
-                            }
-                            animate={{ opacity: 1, x: 0, scale: 1 }}
-                            exit={
-                              prefersReducedMotion ? undefined : { opacity: 0, x: -8, scale: 0.96 }
-                            }
-                            transition={scopeControlTransition}
-                          >
-                            <SortButton
-                              sort={sort ?? DEFAULT_SORT}
-                              anchor={listToolsRef}
-                              onSortChange={onSortChange}
-                            />
-                          </m.div>
-                        ) : null}
-                      </AnimatePresence>
-                    </LazyMotion>
-                  </div>
-                </div>
-              </div>
+              <ListHeader
+                activeFolderId={activeFolderId}
+                backAction={backAction}
+                feedLabel={feedLabel}
+                filter={filter}
+                isArticleScoped={isArticleScoped}
+                isLoading={isLoading}
+                pinnedFolders={pinnedFolders}
+                selectedArticle={selectedArticle}
+                showScopedHeader={showScopedHeader}
+                sort={sort}
+                onFilterChange={onFilterChange}
+                onFolderFilterChange={onFolderFilterChange}
+                onSortChange={onSortChange}
+              />
             ) : null}
-            <div className={showEmptyState ? "flex flex-1 flex-col" : ""}>
-              {showEmptyState ? (
-                <Empty className="w-full px-5.5" size="md">
-                  <EmptyHeader>
-                    <EmptyMedia variant="illustration">
-                      <EmptyStateIcon size={176} />
-                    </EmptyMedia>
-                    <EmptyTitle>{emptyState.title}</EmptyTitle>
-                    <EmptyDescription>{emptyState.description}</EmptyDescription>
-                  </EmptyHeader>
-                </Empty>
-              ) : !isVirtualizerHostMounted ? (
-                inboxItems.length === 0 && !isLoading ? null : (
-                  <SkeletonRows
-                    density={density}
-                    fontSizePx={fontSizePx}
-                    showFavicons={showFavicons}
-                    readerFocusMode={readerFocusMode}
-                    viewportHeight={viewportHeight}
-                  />
-                )
-              ) : (
-                <VirtualizedRows
-                  listScrollRef={listScrollRef}
-                  filter={filter}
-                  readerFocusMode={readerFocusMode}
-                  density={density}
-                  fontSizePx={fontSizePx}
-                  showFavicons={showFavicons}
-                  listContainerWidth={listContainerWidth}
-                  timestampDisplay={timestampDisplay}
-                  timestampHourCycle={timestampHourCycle}
-                  inboxItems={inboxItems}
-                  selectedItemId={selectedItemId}
-                  pagination={pagination}
-                  onSelectItem={onSelectItem}
-                  onIntentItem={onIntentItem}
-                  viewportHeight={viewportHeight}
-                  initialScrollOffset={scrollRestorationEntry?.scrollY}
-                />
-              )}
-            </div>
+            <ListBody
+              density={density}
+              emptyState={emptyState}
+              filter={filter}
+              fontSizePx={fontSizePx}
+              inboxItems={inboxItems}
+              initialScrollOffset={scrollRestorationEntry?.scrollY}
+              isLoading={isLoading}
+              isVirtualizerHostMounted={isVirtualizerHostMounted}
+              listContainerWidth={listContainerWidth}
+              listScrollRef={listScrollRef}
+              pagination={pagination}
+              readerFocusMode={readerFocusMode}
+              selectedItemId={selectedItemId}
+              showEmptyState={showEmptyState}
+              showFavicons={showFavicons}
+              timestampDisplay={timestampDisplay}
+              timestampHourCycle={timestampHourCycle}
+              viewportHeight={viewportHeight}
+              onIntentItem={onIntentItem}
+              onSelectItem={onSelectItem}
+            />
           </div>
         </ScrollAreaPrimitive.Viewport>
         {showScrollbar && (inboxItems.length > 0 || isLoading) ? (
@@ -314,15 +165,5 @@ export function List({
         ) : null}
       </ScrollAreaPrimitive.Root>
     </section>
-  );
-}
-
-function HeaderReaderToolbar({ item }: { item: ArticleDetailDto }) {
-  const toolbar = useReaderToolbar({ item });
-
-  return (
-    <div className="relative inline-flex h-11 min-w-0 max-w-96 items-center overflow-hidden rounded-full bg-muted-solid px-1.5 text-base font-medium text-muted-foreground *:relative">
-      <ReaderToolbar {...toolbar.toolbarProps} />
-    </div>
   );
 }

@@ -13,12 +13,15 @@ import {
 } from "@kyomi/ui/components/empty";
 import { Skeleton } from "@kyomi/ui/components/skeleton";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/components/tooltip";
-import { cn } from "@kyomi/ui/lib/utils";
 
-export const RECAP_SUMMARY_LAYOUT_CLASS =
-  "grid min-h-0 w-full min-w-0 flex-1 grid-rows-3 gap-6 overflow-hidden py-4";
+/**
+ * Spacing is one 8px step: a section card is inset 8px from the rail, sits 8px from the next card,
+ * and pads its contents by 8px. Its 24px corner is then concentric with the 16px corner of the
+ * rows inside (24 = 16 + 8), and a header's text lines up with a row's text (8px card + 8px own).
+ */
+export const RECAP_SUMMARY_LAYOUT_CLASS = "flex w-full min-w-0 flex-col gap-4.5 px-2 pt-4.5";
 export const RECAP_SUMMARY_SECTION_CLASS =
-  "flex h-full min-h-0 w-full min-w-0 flex-col overflow-hidden px-4";
+  "flex w-full min-w-0 shrink-0 flex-col rounded-3xl bg-sidebar p-2";
 
 export function RailTooltip({ label, children }: { label: string; children: ReactElement }) {
   return (
@@ -40,8 +43,8 @@ export function RecapSection({
 }) {
   return (
     <section className="flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-hidden">
-      <div className="mb-3 flex h-7 shrink-0 items-center justify-between gap-2">
-        <h3 className="min-w-0 truncate font-semibold text-base">{title}</h3>
+      <div className="mb-2 flex h-6 shrink-0 items-center justify-between gap-2 px-2">
+        <h3 className="min-w-0 truncate font-medium text-muted-foreground text-sm">{title}</h3>
         {action ? (
           <div className="ms-auto flex shrink-0 items-center justify-end">{action}</div>
         ) : null}
@@ -63,7 +66,7 @@ export function SectionEmpty({
   action?: ReactNode;
 }) {
   return (
-    <Empty className="w-full" size="sm">
+    <Empty className="w-full py-4" size="sm">
       <EmptyHeader>
         {icon ? (
           <EmptyMedia className="text-muted-foreground/80" variant="icon">
@@ -72,7 +75,7 @@ export function SectionEmpty({
         ) : null}
         <div>
           <EmptyTitle>{title}</EmptyTitle>
-          <EmptyDescription className="mx-auto max-w-full text-pretty line-clamp-2">
+          <EmptyDescription className="mx-auto max-w-full text-pretty">
             {description}
           </EmptyDescription>
         </div>
@@ -85,8 +88,8 @@ export function SectionEmpty({
 export function RecapSkeleton() {
   return (
     <div className={RECAP_SUMMARY_LAYOUT_CLASS}>
-      <div className={cn(RECAP_SUMMARY_SECTION_CLASS, "px-4")}>
-        <div className="mb-3 flex h-7 shrink-0 items-center">
+      <div className={RECAP_SUMMARY_SECTION_CLASS}>
+        <div className="mb-2 flex h-6 shrink-0 items-center px-2">
           <Skeleton className="h-5 w-24" />
         </div>
         <div className="space-y-3">
@@ -102,8 +105,8 @@ export function RecapSkeleton() {
         </div>
         <div aria-hidden="true" className="mt-auto h-[52px] shrink-0" />
       </div>
-      <div className={cn(RECAP_SUMMARY_SECTION_CLASS, "px-4")}>
-        <div className="mb-3 flex h-7 shrink-0 items-center">
+      <div className={RECAP_SUMMARY_SECTION_CLASS}>
+        <div className="mb-2 flex h-6 shrink-0 items-center px-2">
           <Skeleton className="h-5 w-28" />
         </div>
         <div className="space-y-2">
@@ -119,8 +122,8 @@ export function RecapSkeleton() {
           ))}
         </div>
       </div>
-      <div className={cn(RECAP_SUMMARY_SECTION_CLASS, "px-4")}>
-        <div className="mb-3 flex h-7 shrink-0 items-center">
+      <div className={RECAP_SUMMARY_SECTION_CLASS}>
+        <div className="mb-2 flex h-6 shrink-0 items-center px-2">
           <Skeleton className="h-5 w-32" />
         </div>
         <div className="space-y-3">

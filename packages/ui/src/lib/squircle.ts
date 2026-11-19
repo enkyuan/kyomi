@@ -8,21 +8,25 @@ export type SquircleStyleOptions = {
   cornerSmoothing?: number;
 };
 
-export function createSquircleStyle({
+export function createSquirclePath({
   cornerRadius,
   cornerSmoothing = 1,
   height,
   width,
-}: SquircleStyleOptions): CSSProperties {
-  const path = getSvgPath({
+}: SquircleStyleOptions): string {
+  return getSvgPath({
     width,
     height,
     cornerRadius,
     cornerSmoothing,
   });
+}
+
+export function createSquircleStyle(options: SquircleStyleOptions): CSSProperties {
+  const path = createSquirclePath(options);
 
   return {
-    borderRadius: cornerRadius,
+    borderRadius: options.cornerRadius,
     clipPath: `path('${path}')`,
     WebkitClipPath: `path('${path}')`,
   };
@@ -33,8 +37,9 @@ export function useSquircle<T extends HTMLElement = HTMLElement>(
   cornerSmoothing = 1,
 ) {
   const ref = useRef<T | null>(null);
-  const [style, setStyle] = useState<CSSProperties>({
-    borderRadius: cornerRadius,
+  const [shape, setShape] = useState<{ path: string | null; style: CSSProperties }>({
+    path: null,
+    style: { borderRadius: cornerRadius },
   });
 
   useEffect(() => {
@@ -44,14 +49,13 @@ export function useSquircle<T extends HTMLElement = HTMLElement>(
     const update = () => {
       const { offsetWidth, offsetHeight } = element;
       if (offsetWidth > 0 && offsetHeight > 0) {
-        setStyle(
-          createSquircleStyle({
-            width: offsetWidth,
-            height: offsetHeight,
-            cornerRadius,
-            cornerSmoothing,
-          }),
-        );
+        const options = {
+          width: offsetWidth,
+          height: offsetHeight,
+          cornerRadius,
+          cornerSmoothing,
+        };
+        setShape({ path: createSquirclePath(options), style: createSquircleStyle(options) });
       }
     };
 
@@ -64,7 +68,8 @@ export function useSquircle<T extends HTMLElement = HTMLElement>(
     }
   }, [cornerRadius, cornerSmoothing]);
 
-  return { ref, style };
+  // `path` is the measured outline in the element's own pixels, for drawing an edge a clip would cut.
+  return { ref, style: shape.style, path: shape.path };
 }
 
 export { getSvgPath };

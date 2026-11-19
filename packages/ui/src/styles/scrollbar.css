@@ -58,6 +58,19 @@
   height: var(--scrollbar-track-size);
 }
 
+/*
+ * An inset scrollbar sits inside rounded corners, where a thumb running the full height would look
+ * like it touches them. Pull its ends in by the corner's inset (8px); a window-edge scrollbar has
+ * no corners and keeps the full run.
+ */
+[data-slot="scroll-area-scrollbar"][data-placement="container"][data-orientation="vertical"] {
+  margin-block: 0.5rem;
+}
+
+[data-slot="scroll-area-scrollbar"][data-placement="container"][data-orientation="horizontal"] {
+  margin-inline: 0.5rem;
+}
+
 [data-slot="scroll-area-scrollbar"][data-scrolling],
 [data-slot="scroll-area-scrollbar"]:hover,
 [data-slot="scroll-area-scrollbar"]:active {

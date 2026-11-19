@@ -10,7 +10,7 @@ import {
   springTransition,
 } from "@kyomi/ui/lib/motion";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
-import { BackToInboxButton, SearchBar } from "@modules/inbox/components/list/header";
+import { BackToInboxButton } from "@modules/inbox/components/list/header";
 import { ReaderFontSizeControls } from "@modules/reader/components/toolbar";
 import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 import type { ToolbarModel } from "@modules/reader/lib/toolbar";
@@ -66,7 +66,6 @@ function ArticleHeaderShell({ onBackToList }: { onBackToList: () => void }) {
       <div className="flex min-w-0 items-center gap-2">
         <BackToInboxButton onClick={onBackToList} />
       </div>
-      <SearchBar />
     </div>
   );
 }
@@ -112,13 +111,7 @@ function SelectedArticleHeader({
           className="flex min-w-0 flex-1 items-center justify-end gap-2"
           transition={scopeControlTransition}
         >
-          <m.div
-            layout
-            className="flex min-w-0 flex-1 justify-end"
-            transition={scopeControlTransition}
-          >
-            <SearchBar />
-          </m.div>
+          <div className="min-w-0 flex-1" />
           <AnimatePresence initial={false} mode="popLayout">
             {!readerControlsCollapsed ? (
               <m.div

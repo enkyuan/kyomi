@@ -12,7 +12,7 @@ function showActionError(message: string) {
 
 type ArticleStateMutation = ReturnType<typeof useArticleStateMutation>;
 
-function createArticleActions(item: ArticleListItemDto, updateItem: ArticleStateMutation) {
+export function createArticleActions(item: ArticleListItemDto, updateItem: ArticleStateMutation) {
   const toggleSaved = () => {
     const nextIsSaved = !item.isSaved;
     void triggerSavedToggleHaptic(nextIsSaved);

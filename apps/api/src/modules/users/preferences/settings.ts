@@ -101,7 +101,7 @@ const CHOICES: { readonly [K in ChoiceKey]: Choice<K> } = {
     code: "USER_PREFERENCES_INVALID_INBOX_MARK_READ_BEHAVIOR",
   },
   inboxTimestampDisplay: {
-    values: ["absolute", "relative"],
+    values: ["absolute", "relative", "relative-long", "date", "iso"],
     message: "Unsupported inbox timestamp display.",
     code: "USER_PREFERENCES_INVALID_INBOX_TIMESTAMP_DISPLAY",
   },

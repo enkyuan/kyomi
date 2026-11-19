@@ -56,26 +56,17 @@ function createSquircleMaskUrl(path: string, width: number, height: number): str
   return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
 }
 
-export function Favicon({
+function useSquircle({
+  shape,
+  cornerRadius,
+  cornerSmoothing,
   ref,
-  src,
-  title,
-  alt = `${title} favicon`,
-  shape = "squircle",
-  cornerRadius = 6,
-  cornerSmoothing = 1,
-  fallback,
-  fallbackClassName,
-  imageClassName,
-  imageKey,
-  imageProps,
-  imageRef,
-  loading = false,
-  loadingClassName,
-  className,
-  style,
-  ...props
-}: FaviconProps): ReactElement {
+}: {
+  shape: FaviconProps["shape"];
+  cornerRadius: number;
+  cornerSmoothing: number;
+  ref: FaviconProps["ref"];
+}) {
   const [wrapper, setWrapper] = useState<HTMLSpanElement | null>(null);
   const [wrapperSize, setWrapperSize] = useState({ width: 0, height: 0 });
 
@@ -146,6 +137,36 @@ export function Favicon({
           WebkitMaskSize: "100% 100%",
         } satisfies CSSProperties)
       : undefined;
+
+  return { setWrapperNode, squircleStyle };
+}
+
+export function Favicon({
+  ref,
+  src,
+  title,
+  alt = `${title} favicon`,
+  shape = "squircle",
+  cornerRadius = 6,
+  cornerSmoothing = 1,
+  fallback,
+  fallbackClassName,
+  imageClassName,
+  imageKey,
+  imageProps,
+  imageRef,
+  loading = false,
+  loadingClassName,
+  className,
+  style,
+  ...props
+}: FaviconProps): ReactElement {
+  const { setWrapperNode, squircleStyle } = useSquircle({
+    shape,
+    cornerRadius,
+    cornerSmoothing,
+    ref,
+  });
 
   return (
     <span

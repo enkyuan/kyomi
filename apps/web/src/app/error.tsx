@@ -12,12 +12,7 @@ import { getUserSafeErrorMessage } from "@kyomi/reader/lib/errors";
 import type { RouteRecoveryAction } from "@lib/recovery";
 import { getErrorStatus } from "@lib/status";
 import { NotFoundPage } from "./not-found";
-import {
-  RecoveryButton,
-  RecoverySurface,
-  useRecoveryContext,
-  type RecoveryLayout,
-} from "./recovery";
+import { RecoveryButton, RecoverySurface, useRecoveryContext } from "./recovery";
 
 const FALLBACK_TITLE = "We lost the plot";
 const FALLBACK_MESSAGE = "The page lost its place for a moment.";
@@ -44,8 +39,7 @@ export function RouteErrorPage({
   error,
   recoveryAction,
   reset,
-  layout = "page",
-}: ErrorComponentProps & { recoveryAction: RouteRecoveryAction; layout?: RecoveryLayout }) {
+}: ErrorComponentProps & { recoveryAction: RouteRecoveryAction }) {
   const router = useRouter();
   const status = getErrorStatus(error);
   const statusCopy = status === undefined ? undefined : STATUS_COPY[status];
@@ -60,11 +54,11 @@ export function RouteErrorPage({
 
   // A 404 from a loader or the server is the same page as an unmatched URL.
   if (status === 404) {
-    return <NotFoundPage recoveryAction={recoveryAction} layout={layout} />;
+    return <NotFoundPage recoveryAction={recoveryAction} />;
   }
 
   return (
-    <RecoverySurface layout={layout}>
+    <RecoverySurface>
       <EmptyHeader>
         <KyomiLogo size={28} className="mb-5 size-7 text-matcha" />
         <EmptyTitle>{statusCopy?.title ?? FALLBACK_TITLE}</EmptyTitle>
@@ -79,7 +73,7 @@ export function RouteErrorPage({
   );
 }
 
-/** The router-wide error page: contextual layout and recovery action, no per-route wiring. */
+/** The router-wide error page: contextual recovery action, no per-route wiring. */
 export function DefaultErrorPage(props: ErrorComponentProps) {
   return <RouteErrorPage {...props} {...useRecoveryContext()} />;
 }

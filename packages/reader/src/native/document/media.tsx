@@ -1,6 +1,7 @@
 import { FlatList, Image, Pressable, Text, View } from "react-native";
 import { useCallback, useMemo, type ReactElement } from "react";
 import type { ReaderBlock, ReaderImage, ReaderInline, ReaderPlacement } from "../../core/document";
+import { keyedByContent } from "../../core/keys";
 import { useReaderNative } from "./context";
 import { Inlines } from "./inline";
 import { imageAspectRatio } from "./style";
@@ -197,8 +198,8 @@ export function GalleryBlock({
   return (
     <View style={placementStyle(block.placement, theme.bleed)}>
       <View style={{ flexDirection: "row", flexWrap: "wrap", gap }}>
-        {block.items.map((item, index) => (
-          <View key={`${item.image.src}.${index}`} style={{ width: cell }}>
+        {keyedByContent(block.items).map(({ item, key }) => (
+          <View key={key} style={{ width: cell }}>
             {renderMedia(item.image, {
               caption: inlinesToText(item.caption) || undefined,
               fit: "cover",

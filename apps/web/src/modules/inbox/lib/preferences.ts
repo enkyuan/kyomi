@@ -49,7 +49,11 @@ function parseMarkReadBehavior(value: unknown): InboxMarkReadBehaviorDto {
 }
 
 function parseTimestampDisplay(value: unknown): InboxTimestampDisplayDto {
-  return value === "relative" || value === "absolute"
+  return value === "relative" ||
+    value === "absolute" ||
+    value === "relative-long" ||
+    value === "date" ||
+    value === "iso"
     ? value
     : DEFAULT_INBOX_PREFERENCES.inboxTimestampDisplay;
 }

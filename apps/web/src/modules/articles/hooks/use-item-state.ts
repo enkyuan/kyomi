@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toastManager } from "@kyomi/ui/components/toast";
-import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
+import { logClientError } from "@kyomi/reader/lib/errors";
 import { recordInboxItemView, updateInboxItemState, type InboxItem } from "../lib/api";
 import {
   getInboxItemCacheSnapshot,
@@ -53,7 +53,6 @@ export function useInboxItemStateMutation({
       logClientError("articles.item-state.update", error);
       toastManager.add({
         title: "Unable to update article",
-        description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });
     },

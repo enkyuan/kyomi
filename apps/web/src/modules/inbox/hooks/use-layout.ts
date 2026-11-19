@@ -7,7 +7,6 @@ import type { InboxMarkReadBehaviorDto } from "@kyomi/reader/schemas";
 import type { InboxPreferences } from "./use-preferences";
 import { getInboxItemIdFromSlug } from "@modules/articles/lib/slug";
 import type { InboxFilter, InboxSort } from "@modules/articles/lib/api";
-import type { InboxRecapRailFolderBackTarget, InboxRecapRailSection } from "../lib/recap/index";
 
 // Both thresholds are measured content-column widths, not viewport breakpoints: the app shell
 // subtracts the sidebar column and its padding from the viewport, so they sit below `md` (800px)
@@ -25,9 +24,6 @@ export type InboxRouteSearch = {
   feedId?: string;
   folderId?: string;
   itemId?: string;
-  rail?: InboxRecapRailSection;
-  railFolderBack?: InboxRecapRailFolderBackTarget;
-  railFolderId?: string;
   showHidden?: "1";
   showRead?: "1";
   sort?: InboxSort;
@@ -84,19 +80,9 @@ export function useRecapRailVisibility(contentWidthPx: number): boolean {
 }
 
 export function useInboxRouteState(preferences: InboxPreferences) {
-  const {
-    filter,
-    search,
-    feedId,
-    folderId,
-    itemId,
-    rail,
-    railFolderBack,
-    railFolderId,
-    showHidden,
-    showRead,
-    sort,
-  } = useSearch({ strict: false });
+  const { filter, search, feedId, folderId, itemId, showHidden, showRead, sort } = useSearch({
+    strict: false,
+  });
   const params = useParams({ strict: false });
   const rawNavigate = useNavigate();
   const article = typeof params?.article === "string" ? params.article : undefined;
@@ -110,9 +96,6 @@ export function useInboxRouteState(preferences: InboxPreferences) {
         feedId,
         folderId,
         itemId,
-        rail,
-        railFolderBack,
-        railFolderId,
         showHidden,
         showRead,
         sort,
@@ -134,21 +117,7 @@ export function useInboxRouteState(preferences: InboxPreferences) {
         replace,
       });
     },
-    [
-      article,
-      feedId,
-      filter,
-      folderId,
-      itemId,
-      rail,
-      railFolderBack,
-      railFolderId,
-      rawNavigate,
-      search,
-      showHidden,
-      showRead,
-      sort,
-    ],
+    [article, feedId, filter, folderId, itemId, rawNavigate, search, showHidden, showRead, sort],
   );
 
   const showHiddenItems = parseSearchFlag(showHidden);
@@ -193,9 +162,6 @@ export function useInboxRouteState(preferences: InboxPreferences) {
       feedId,
       folderId,
       itemId: routeItemId,
-      rail,
-      railFolderBack,
-      railFolderId,
       effectiveFilter,
       isReadScopedFilterActive,
       includeRead,
@@ -208,9 +174,6 @@ export function useInboxRouteState(preferences: InboxPreferences) {
       feedId,
       folderId,
       routeItemId,
-      rail,
-      railFolderBack,
-      railFolderId,
       effectiveFilter,
       isReadScopedFilterActive,
       includeRead,

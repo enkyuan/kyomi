@@ -355,14 +355,14 @@ Status note:
 
 ## Risk Matrix
 
-| Risk | Impact | Mitigation |
-|------|--------|------------|
-| Hook behavior drift from DOMPurify to `neosanitize` | Unsafe or broken reader HTML | Golden tests before implementation; explicit post-processing functions |
-| Relative URLs become allowed before normalization | Broken links or policy mismatch | Keep URL resolution before sanitization in API and reader |
-| Browser imports pull Node-only worker code | Vite build failure or bundle bloat | Keep `@kyomi/worker/sanitization` pure; verify app typecheck/build |
-| DOMPurify removed too early | Runtime import errors | Remove deps only after `rg dompurify` is empty |
-| Style handling changes | KaTeX/MathML rendering regressions | Preserve style only for `span` and MathML; add tests |
-| Class filtering changes | Reader enhancements stop detecting author/media blocks | Add class-token parity tests and reader DOM enhancement tests |
+| Risk                                                | Impact                                                 | Mitigation                                                             |
+| --------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------- |
+| Hook behavior drift from DOMPurify to `neosanitize` | Unsafe or broken reader HTML                           | Golden tests before implementation; explicit post-processing functions |
+| Relative URLs become allowed before normalization   | Broken links or policy mismatch                        | Keep URL resolution before sanitization in API and reader              |
+| Browser imports pull Node-only worker code          | Vite build failure or bundle bloat                     | Keep `@kyomi/worker/sanitization` pure; verify app typecheck/build     |
+| DOMPurify removed too early                         | Runtime import errors                                  | Remove deps only after `rg dompurify` is empty                         |
+| Style handling changes                              | KaTeX/MathML rendering regressions                     | Preserve style only for `span` and MathML; add tests                   |
+| Class filtering changes                             | Reader enhancements stop detecting author/media blocks | Add class-token parity tests and reader DOM enhancement tests          |
 
 ## Plan-Tune Review
 

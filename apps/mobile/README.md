@@ -72,35 +72,35 @@ Dynamic Type and Material typography.
 
 ## Commands
 
-| Command                               | Purpose                               |
-| ------------------------------------- | ------------------------------------- |
-| `bun run --cwd apps/mobile start`     | Start the Expo development server.    |
-| `bun run --cwd apps/mobile ios`       | Build and run on iOS.                 |
+| Command                                | Purpose                                 |
+| -------------------------------------- | --------------------------------------- |
+| `bun run --cwd apps/mobile start`      | Start the Expo development server.      |
+| `bun run --cwd apps/mobile ios`        | Build and run on iOS.                   |
 | `bun run --cwd apps/mobile ios:device` | Build and run on a physical iOS device. |
-| `bun run --cwd apps/mobile android`   | Build and run on Android.             |
-| `bun run --cwd apps/mobile web`       | Start the web fallback.               |
-| `bun run --cwd apps/mobile build`     | Export iOS, Android, and web bundles. |
-| `bun run --cwd apps/mobile typecheck` | Type-check the mobile workspace.      |
-| `bun run --cwd apps/mobile lint`      | Lint mobile source.                   |
-| `bun run --cwd apps/mobile fmt:check` | Check formatting.                     |
+| `bun run --cwd apps/mobile android`    | Build and run on Android.               |
+| `bun run --cwd apps/mobile web`        | Start the web fallback.                 |
+| `bun run --cwd apps/mobile build`      | Export iOS, Android, and web bundles.   |
+| `bun run --cwd apps/mobile typecheck`  | Type-check the mobile workspace.        |
+| `bun run --cwd apps/mobile lint`       | Lint mobile source.                     |
+| `bun run --cwd apps/mobile fmt:check`  | Check formatting.                       |
 
 ## Authentication development
 
-`EXPO_PUBLIC_AUTH_ORIGIN` is optional for local development. Create `.env.local` only to override
-the public origin serving `/api/auth/*`. The built-in local defaults point directly to the API:
+Run Tailscale on the Mac and the iPhone. `start` and `ios:device` then advertise Metro on the
+Mac's Tailscale address (`scripts/expo.sh`), a stable private address that works on any network,
+including ones that isolate Wi-Fi clients and refuse phone-to-Mac connections. Without Tailscale
+they fall back to the LAN address. Set `REACT_NATIVE_PACKAGER_HOSTNAME` to override.
 
-- iOS simulator: `http://localhost:8000`;
-- Android emulator: `http://10.0.2.2:8000`;
-- physical iPhone: `http://<Mac-LAN-IP>:8000`, configured through `.env.local`.
+Dev builds derive the API origin at runtime from the host that served the JS bundle (Metro's
+`hostUri`), on port 8000. If the phone can load the app from Metro, it can reach the API on the
+same host, on any network and across DHCP changes; no address is baked into the build. Run
+`bun run --cwd apps/mobile start` and keep it running: `ios:device` only builds and installs, and
+a Debug build loads its JS from Metro.
 
-For a physical iPhone on the same Wi-Fi network, get the Mac's address with
-`ipconfig getifaddr en0`, then store the override in an encrypted mobile env file:
-
-```sh
-LAN_IP="$(ipconfig getifaddr en0)"
-bun run dotenvx set EXPO_PUBLIC_AUTH_ORIGIN "http://${LAN_IP}:8000" \\
-  -f apps/mobile/.env.local -fk apps/mobile/.env.keys
-```
+`EXPO_PUBLIC_AUTH_ORIGIN` (shell or encrypted `apps/mobile/.env.local`) overrides the derived
+origin. Tunnel hosts cannot reach the API port, so tunnel mode needs it set. Release builds embed
+the API origin at build time and run without Metro. Simulators fall back to `localhost` (iOS) and
+`10.0.2.2` (Android emulator).
 
 Restart Metro after changing the value. The API already listens on all interfaces by default, and
 Docker publishes only the API port to the host network; Postgres, Redis, Garage, and Meilisearch
@@ -165,7 +165,7 @@ These counters are measurement hooks, not evidence of a frame-rate improvement b
 Implementation references (accessed 2026-10-24):
 [Expo view functions and lifecycle](https://docs.expo.dev/modules/module-api/),
 [Apple collection-view performance](https://developer.apple.com/videos/play/wwdc2021/10252/), and
-[SwiftUI fonts relative to text styles](https://developer.apple.com/documentation/swiftui/font/custom(_:size:relativeto:)).
+[SwiftUI fonts relative to text styles](<https://developer.apple.com/documentation/swiftui/font/custom(_:size:relativeto:)>).
 The bridge was checked against ExpoModulesCore 57.0.24, and native compilation uses Xcode 27.1.
 The explicit `.runOnQueue(.main)` follows the installed API rather than relying on documentation's
 default-queue statement. A native development build is required after these changes.

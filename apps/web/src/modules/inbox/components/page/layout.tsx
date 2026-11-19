@@ -11,7 +11,7 @@ import type { InboxItem } from "@modules/articles/lib/api";
 import type { ArticleStepDirection } from "@modules/reader/lib/detail";
 import type { Folder } from "@modules/folders/lib/api";
 import { MobileLayout } from "@modules/inbox/layouts/mobile";
-import { Recap } from "@modules/inbox/components/page/recap";
+import { InboxRecap } from "@modules/inbox/components/recap";
 import { ArticleShell } from "@modules/inbox/components/page/article/shell";
 import { DetailSection } from "@modules/inbox/components/page/detail";
 import { Feed } from "@modules/inbox/components/page/feed";
@@ -72,9 +72,6 @@ export function InboxPageLayout({
   };
   recap: {
     navigate: ReturnType<typeof useInboxRouteState>["navigate"];
-    rail: ReturnType<typeof useInboxRouteState>["rail"];
-    railFolderBack: ReturnType<typeof useInboxRouteState>["railFolderBack"];
-    railFolderId: string | undefined;
     showRecap: boolean;
   };
 }) {
@@ -172,13 +169,7 @@ export function InboxPageLayout({
             showDetail={layout.showDetail}
             transition={page.feedTransition}
           />
-          <Recap
-            show={recap.showRecap}
-            navigate={recap.navigate}
-            rail={recap.rail}
-            railFolderBack={recap.railFolderBack}
-            railFolderId={recap.railFolderId}
-          />
+          <InboxRecap show={recap.showRecap} navigate={recap.navigate} />
         </div>
       )}
     </div>

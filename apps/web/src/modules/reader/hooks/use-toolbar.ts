@@ -83,7 +83,6 @@ export function useReaderToolbar({
       onTranslateArticle: () => {
         toastManager.add({
           title: "Translation coming soon",
-          description: "This button is reserved for article translation.",
           type: "info",
         });
       },

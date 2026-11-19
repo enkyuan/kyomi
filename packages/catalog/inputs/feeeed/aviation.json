@@ -10,22 +10,11 @@
       "kind": "feed",
       "feed_url": "https://www.theairlineobserver.com/feed",
       "details": "Travel",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Tech",
-        "News",
-        "Aviation",
-        "USA"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Tech", "News", "Aviation", "USA"],
       "cleaned_author": "Brian Sumers",
       "language": "en",
-      "keywords": [
-        "airlines",
-        "business",
-        "industry insights"
-      ],
+      "keywords": ["airlines", "business", "industry insights"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -36,22 +25,11 @@
       "kind": "feed",
       "feed_url": "http://skift.com/feed/",
       "details": "Travel",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Living",
-        "Aviation",
-        "World News"
-      ],
+      "tags": ["News", "Living", "Aviation", "World News"],
       "language": "en",
-      "keywords": [
-        "travel news",
-        "tourism",
-        "airlines"
-      ],
+      "keywords": ["travel news", "tourism", "airlines"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -62,20 +40,11 @@
       "kind": "feed",
       "feed_url": "http://www.flightradar24.com/blog/feed/",
       "details": "Travel > Transport & Flights",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Aviation"
-      ],
+      "tags": ["Local", "Aviation"],
       "language": "en",
-      "keywords": [
-        "aviation",
-        "flights",
-        "air travel"
-      ],
+      "keywords": ["aviation", "flights", "air travel"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -87,20 +56,11 @@
       "channel_id": "UCfYCRj25JJQ41JGPqiqXmJw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqPK9UJjQkjWsom8N2N1Qm8H1Q4REwih93pkvBcprQ=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Transport & Flights",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Sam Chui",
-      "tags": [
-        "Local",
-        "Aviation"
-      ],
+      "tags": ["Local", "Aviation"],
       "language": "en",
-      "keywords": [
-        "aviation reviews",
-        "travel",
-        "airlines"
-      ],
+      "keywords": ["aviation reviews", "travel", "airlines"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -112,20 +72,11 @@
       "channel_id": "UCQrk97MBH6DToctKRfQJcNQ",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMRGK-iXB6Ap4lCSAu6jwcgDAkUmLWNiWsZ1v1o8-c=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Transport & Flights",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Dennis Bunnik",
-      "tags": [
-        "Local",
-        "Aviation"
-      ],
+      "tags": ["Local", "Aviation"],
       "language": "en",
-      "keywords": [
-        "travel vlogs",
-        "flight reviews",
-        "aviation"
-      ],
+      "keywords": ["travel vlogs", "flight reviews", "aviation"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -137,20 +88,11 @@
       "channel_id": "UCEF-9XhkdyFY0hMRUkmxXfQ",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqM4LVTcK_sqM1ReBHL3HSbBezeXSQLfEpSzEjNFJQ=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Transport & Flights",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Martin",
-      "tags": [
-        "Local",
-        "Aviation"
-      ],
+      "tags": ["Local", "Aviation"],
       "language": "en",
-      "keywords": [
-        "flight reports",
-        "aviation reviews",
-        "travel experiences"
-      ],
+      "keywords": ["flight reports", "aviation reviews", "travel experiences"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -158,151 +100,87 @@
       "title": "Simple Flying",
       "kind": "feed",
       "feed_url": "https://simpleflying.com/feed/",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "Simple Flying",
       "cleaned_author": null,
       "summary": "An independent voice in aviation, Simple Flying provides comprehensive news and insights into the airline industry, covering everything from operational updates to travel trends.",
-      "tags": [
-        "News",
-        "Tech",
-        "Aviation",
-        "Data"
-      ],
+      "tags": ["News", "Tech", "Aviation", "Data"],
       "language": "en",
-      "keywords": [
-        "aviation news",
-        "airlines",
-        "travel"
-      ]
+      "keywords": ["aviation news", "airlines", "travel"]
     },
     {
       "id": "feed:https://shkspr.mobi/blog/feed/atom/",
       "title": "Terence Eden\u2019s Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://shkspr.mobi/blog/feed/atom/",
       "details": "Technology",
       "cleaned_title": "Terence Eden\u2019s Blog",
       "cleaned_author": "Terence Eden",
       "summary": "A blog where Terence Eden explores topics in technology and accessibility, combining personal insights with practical advice.",
-      "tags": [
-        "Tech",
-        "WebDev",
-        "Aviation",
-        "Design"
-      ],
+      "tags": ["Tech", "WebDev", "Aviation", "Design"],
       "language": "en",
-      "keywords": [
-        "accessibility",
-        "technology reviews",
-        "coding insights"
-      ],
+      "keywords": ["accessibility", "technology reviews", "coding insights"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
       "id": "feed:https://www.cpushack.com/feed/",
       "title": "The CPU Shack",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.cpushack.com/feed/",
       "summary": "A museum for the history of processors and CPUs and how they have changed our world. Includes Intel, AMD as well as lesser known companies such as Signetics.",
       "details": "Technology > Hardware",
       "cleaned_title": "The CPU Shack",
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "History",
-        "Aviation"
-      ],
+      "tags": ["Tech", "History", "Aviation"],
       "language": "en",
-      "keywords": [
-        "CPU history",
-        "Intel",
-        "AMD"
-      ],
+      "keywords": ["CPU history", "Intel", "AMD"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
       "id": "feed:https://www.airlinereporter.com/feed/",
       "title": "AirlineReporter",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.airlinereporter.com/feed/",
       "summary": "A Place to Share Your Passion for Airlines. Home of the AvGeek!",
       "details": "Recreation > Public Transport",
       "cleaned_title": "AirlineReporter",
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Living",
-        "Aviation",
-        "USA"
-      ],
+      "tags": ["Tech", "Living", "Aviation", "USA"],
       "language": "en",
-      "keywords": [
-        "airlines",
-        "aviation",
-        "travel",
-        "aircraft",
-        "airline news"
-      ],
+      "keywords": ["airlines", "aviation", "travel", "aircraft", "airline news"],
       "top_level_category": "Automotive & Transport"
     },
     {
       "id": "feed:https://balloonstodrones.com/feed/",
       "title": "From Balloons to Drones \u2013 Articles",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://balloonstodrones.com/feed/",
       "summary": "Air Power throughout the Ages.",
       "details": "Politics > Military",
       "cleaned_title": "From Balloons to Drones",
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Aviation",
-        "History"
-      ],
+      "tags": ["Tech", "Aviation", "History"],
       "language": "en",
-      "keywords": [
-        "air power",
-        "aerospace history",
-        "military technology"
-      ],
+      "keywords": ["air power", "aerospace history", "military technology"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://hushkit.net/feed/",
       "title": "Hush-Kit",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://hushkit.net/feed/",
       "summary": "The alternative aviation magazine.",
       "details": "Politics > Military",
       "cleaned_title": "Hush-Kit",
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Aviation"
-      ],
+      "tags": ["Tech", "Aviation"],
       "language": "en",
-      "keywords": [
-        "aviation",
-        "military aircraft",
-        "aircraft analysis"
-      ],
+      "keywords": ["aviation", "military aircraft", "aircraft analysis"],
       "top_level_category": "Society, Law & History"
     }
   ],

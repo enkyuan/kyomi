@@ -16,7 +16,16 @@ export const mobileReaderLayout = {
   body: {
     fontSizePx: FONT_SIZES.readerBody,
     lineHeight: 1.68,
-    paragraphGapEm: 1.15,
+    /**
+     * The text size preference scales the glyphs only: the space between blocks and a list's indent
+     * are fixed at the default size, so the column keeps its rhythm and padding as the size changes.
+     */
+    blockGapPx: Math.round(FONT_SIZES.readerBody * 1.15),
+    listIndentPx: Math.round(FONT_SIZES.readerBody * 1.3),
+    headingGapPx: {
+      bottom: Math.round(FONT_SIZES.readerBody * 0.75),
+      top: Math.round(FONT_SIZES.readerBody * 2.4),
+    },
   },
 } as const;
 

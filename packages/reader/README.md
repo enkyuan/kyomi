@@ -16,15 +16,15 @@ src/
 
 ## exports
 
-| import                         | purpose                                    |
-| ------------------------------ | ------------------------------------------ |
-| `@kyomi/reader`                | reader types and helpers.                  |
-| `@kyomi/reader/core`           | explicit core entry point.                 |
-| `@kyomi/reader/document`       | Kyomi Document Model Zod schema and types. |
-| `@kyomi/reader/sanitization`   | article HTML policy and sanitizer.              |
-| `@kyomi/reader/web`            | React web reader and HTML rendering.       |
-| `@kyomi/reader/web/styles.css` | web reader styles.                         |
-| `@kyomi/reader/webview`        | WebView HTML generation.                   |
+| import                         | purpose                                        |
+| ------------------------------ | ---------------------------------------------- |
+| `@kyomi/reader`                | reader types and helpers.                      |
+| `@kyomi/reader/core`           | explicit core entry point.                     |
+| `@kyomi/reader/document`       | Kyomi Document Model Zod schema and types.     |
+| `@kyomi/reader/sanitization`   | article HTML policy and sanitizer.             |
+| `@kyomi/reader/web`            | React web reader and HTML rendering.           |
+| `@kyomi/reader/web/styles.css` | web reader styles.                             |
+| `@kyomi/reader/webview`        | WebView HTML generation.                       |
 | `@kyomi/reader/native`         | WebView wrapper and React Native KDM renderer. |
 
 ## commands

@@ -14,7 +14,7 @@ and any active mobile design plan before choosing presentation. Preserve intent,
 | Color             | Proven brand accents and semantic roles                    | System semantic surfaces and labels; apply Kyomi accents selectively | Material dynamic or seeded color roles; apply Kyomi accents selectively |
 | Typography        | Reading hierarchy and emphasis                             | Dynamic Type text styles                                             | Material 3 type roles and font scaling                                  |
 | Shape and density | Relative emphasis and grouping                             | Native SwiftUI containers and continuous platform geometry           | Material 3 Expressive shape scale, spacing, and adaptive layout         |
-| Icons             | Kyomi's semantic icon and persisted-state rules            | Use the project-selected native-safe Blode renderer when required | Use the same project-selected Blode geometry when required           |
+| Icons             | Kyomi's semantic icon and persisted-state rules            | Use the project-selected native-safe Blode renderer when required    | Use the same project-selected Blode geometry when required              |
 | Motion            | Named intent, effect category, and reduced-motion fallback | Translate through SwiftUI animation                                  | Translate through Compose motion                                        |
 
 Do not copy web hex tables, Tailwind classes, fixed desktop dimensions, hover behavior, or radius
