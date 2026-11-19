@@ -67,16 +67,20 @@ async function drainQueryStream(reader: QueryStreamReader, queryClient: QueryCli
     do {
       result = await reader.read();
       if (!result.done && result.value) {
-        try {
-          queryHydrate(queryClient, result.value);
-        } catch (error) {
-          console.error("Error hydrating a streamed query chunk:", error);
-        }
+        hydrateStreamedChunk(queryClient, result.value);
       }
     } while (!result.done);
   } catch (error) {
     console.error("Error reading the query stream:", error);
   } finally {
     mark("query-stream-drained");
+  }
+}
+
+function hydrateStreamedChunk(queryClient: QueryClient, chunk: Parameters<typeof queryHydrate>[1]) {
+  try {
+    queryHydrate(queryClient, chunk);
+  } catch (error) {
+    console.error("Error hydrating a streamed query chunk:", error);
   }
 }
