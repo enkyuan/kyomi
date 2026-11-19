@@ -33,6 +33,7 @@ export const WorkerLive = Layer.effectDiscard(
           streamKey === FEED_REFRESH_JOBS_STREAM_KEY
             ? config.FEED_REFRESH_RUNNING_LEASE_MS
             : undefined,
+        refillWhileRunning: streamKey === FEED_REFRESH_JOBS_STREAM_KEY,
         count: config.JOB_READ_COUNT,
         concurrency: config.JOB_PROCESS_CONCURRENCY,
         streamMaxLength: config.JOB_STREAM_MAX_LENGTH,

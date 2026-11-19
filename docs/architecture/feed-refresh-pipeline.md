@@ -55,6 +55,8 @@ Workers use:
   closing Redis and Postgres. A job cut off at the end of the drain stays pending and is claimed
   again after the stream's pending-idle time.
 
+A feed worker reads at most the number of free handler slots and starts the next Redis read when any handler finishes. A slow publisher consumes one slot. The blocking read connection is separate from acknowledgements. Jobs already delivered can drain on shutdown and an interrupted job remains pending for lease recovery. Other streams keep their batch policy. [Redis XREADGROUP](https://redis.io/docs/latest/commands/xreadgroup/) · [Effect 4.1.4 scoped fiber sets](https://unpkg.com/effect@4.1.4/src/FiberSet.ts)
+
 Subscribed refreshes can prefetch extraction for up to five eligible articles. Unsubscribed catalog polls store a bounded preview and skip extraction prefetch.
 
 ## Scale Math
@@ -136,4 +138,5 @@ Set an object and byte quota when provisioning the bucket. Apply an S3 lifecycle
 - Replayed the affected feeds against the local PostgreSQL data and passed their saved bodies to the web reader. All 27 confirmed Atom XHTML losses displayed text. All 54 matched entries from the source-content audit displayed text or a media link after the parser and link-preview repairs. Three oversized RSS bodies produced 30,170, 39,921 and 41,706 visible characters after replay, matching the independent feed-text counts. These are targeted regression cohorts.
 - The full-retention pilot added about 29 MB for 90 newly successful feeds. A later bounded-preview interval added 43,483,136 PostgreSQL bytes for 2,175 additional distinct successes, including concurrent article extraction. These are whole-database size deltas. Wall-clock workload and publisher mix affect the result.
 - At 167,465 feeds the old claim plan scanned the feed table and took 464 ms. A 64-feed claim using bounded primary-key lookups took 16.2 ms with writes. Three concurrent claimers on an isolated 500,001-row fixture admitted 19 distinct feeds against a shared budget of 19 in 212 ms including connection setup. This test exercised PostgreSQL scheduling. Sustained coverage requires successful network polls over a full freshness window.
+- With a 56-slot local feed configuration, twelve samples of running database rows had medians of 15 before slot refilling and 51 afterward. Two post-warmup intervals gained 1,177 distinct successful feeds in 66 seconds. Publisher mix and network conditions vary over time.
 - Garage v2.2.0 served the same 4,846 bytes on both requests to the reader-image handler. The favicon handler also returned 200. Replay used Bun 1.3.14, fast-xml-parser 5.11.0 and PostgreSQL 18.6.
