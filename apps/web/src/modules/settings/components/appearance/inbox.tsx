@@ -49,7 +49,10 @@ function getInboxTextScaleIndex(fontSizePx: number): number {
 
 /** Rows of an inbox list at each density: fewer, roomier rows against more, tighter ones. */
 function DensityPreview({ rows }: { rows: number }) {
-  const pitch = 62 / rows;
+  // The frame has an 8px corner; the list panel is inset 4px, so its corner is 4px (8 - 4), and
+  // the rows sit a further 6px inside it, clear of that curve.
+  const top = 10;
+  const pitch = 50 / rows;
   const small = rows > 3;
   return (
     <svg
@@ -60,21 +63,21 @@ function DensityPreview({ rows }: { rows: number }) {
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect className="fill-muted" height="70" width="88" />
+      <rect className="fill-current" height="62" opacity="0.06" rx="4" width="80" x="4" y="4" />
       {Array.from({ length: rows }, (_, index) => {
-        const y = 4 + index * pitch;
-        const mid = y + pitch / 2 - 1;
+        const mid = top + index * pitch + pitch / 2;
         return (
-          <g key={y} className="fill-current">
-            <circle cx="14" cy={mid} opacity="0.22" r={small ? 3.5 : 6} />
+          <g key={mid} className="fill-current">
+            <circle cx="17" cy={mid} opacity="0.22" r={small ? 3 : 5.5} />
             <rect
               height={small ? 3 : 4}
               opacity="0.22"
               rx="1.5"
-              width="46"
-              x="26"
-              y={small ? mid - 1.5 : mid - 5}
+              width="48"
+              x="27"
+              y={small ? mid - 1.5 : mid - 4.5}
             />
-            {small ? null : <rect height="4" opacity="0.14" rx="2" width="30" x="26" y={mid + 2} />}
+            {small ? null : <rect height="4" opacity="0.14" rx="2" width="32" x="27" y={mid + 1} />}
           </g>
         );
       })}
