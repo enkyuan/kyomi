@@ -50,28 +50,28 @@ function roundedRect(x: number, y: number, w: number, h: number, r: number) {
 }
 
 const BELL =
-  "M96 44C79 44 67 57 67 73V96C67 104 62 108 58.5 114C55.5 119 58.5 126 64.5 126H127.5C133.5 126 136.5 119 133.5 114C130 108 125 104 125 96V73C125 57 113 44 96 44ZM85 133C85 139.5 89.5 144 96 144C102.5 144 107 139.5 107 133Z";
+  "M96 52C78 52 66 66 66 84V104C66 111 62 114 59 119C57 123 60 128 65 128H127C132 128 135 123 133 119C130 114 126 111 126 104V84C126 66 114 52 96 52Z";
+const BELL_NUB = "M90 50Q90 42 96 42Q102 42 102 50Z";
+const BELL_CLAPPER = "M85 134H107Q107 146 96 146Q85 146 85 134Z";
 
-/** A big upright bell on a soft radial wash, its sound arcs cut short, one slash across it. */
+/** A big upright bell, its sound arcs cut short, one slash across it with a gap cut out around it. */
 const notificationsOff: Scene = (context) => {
   const { theme } = context;
   return (
     <>
-      <Circle cx={96} cy={96} fill={theme.lines[1]} fillOpacity={theme.lineOpacities[1]} r={62} />
-      <Circle cx={96} cy={96} fill={theme.lines[0]} fillOpacity={theme.lineOpacities[0]} r={48} />
-      <Faint context={context} d="M141 82Q147 96 141 110" />
-      <Faint context={context} d="M51 82Q45 96 51 110" />
+      <Faint context={context} d="M143 80Q150 96 143 112" />
+      <Faint context={context} d="M49 80Q42 96 49 112" />
+      <Surface context={context} d={BELL_NUB} />
       <Surface context={context} d={BELL} />
-      {theme.isDark ? null : (
-        <Path
-          d="M64 60L128 132"
-          fill="none"
-          stroke={context.paints.fill}
-          strokeLinecap="round"
-          strokeWidth={9}
-        />
-      )}
-      <Accent context={context} d="M64 60L128 132" width={4} />
+      <Surface context={context} d={BELL_CLAPPER} />
+      <Path
+        d="M62 58L130 134"
+        fill="none"
+        stroke={theme.base}
+        strokeLinecap="round"
+        strokeWidth={11}
+      />
+      <Accent context={context} d="M62 58L130 134" width={4} />
     </>
   );
 };

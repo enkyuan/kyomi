@@ -176,23 +176,26 @@ const advancedNoData: Scene = (context) => {
     [150, 112],
     [96, 138],
   ];
+  const opening: readonly Point[] = [
+    [96, 58],
+    [134, 76],
+    [96, 94],
+    [58, 76],
+  ];
   return (
     <G transform="translate(0 -4)">
-      <Path
-        d={roundedPoly(top, 7)}
-        fill={theme.border}
-        fillOpacity={theme.isDark ? 0.08 : 0.8}
-        stroke={context.paints.stroke}
-        strokeLinecap="round"
-      />
       <Surface context={context} d={roundedPoly(left, 7)} />
       <Surface context={context} d={roundedPoly(right, 7)} />
-      <G transform="skewY(25.9)">
-        <Badge context={context} size={18} x={60} y={77}>
-          <Circle cx={12} cy={12} r={9} />
-          <Path d="M8 12H16" />
-        </Badge>
-      </G>
+      <Surface context={context} d={roundedPoly(top, 7)} />
+      <Path d={roundedPoly(opening, 5)} fill={theme.tone} />
+      <Path
+        d="M86 76H106"
+        fill="none"
+        opacity={theme.iconOpacity}
+        stroke={theme.icon}
+        strokeLinecap="round"
+        strokeWidth={3.5}
+      />
     </G>
   );
 };
@@ -309,21 +312,20 @@ const loadError: Scene = (context) => {
   );
 };
 
-/** Permission denied: a big padlock on a soft two-ring wash, the keyhole as the only accent. */
+/** Permission denied: one padlock; the shackle is a solid stroke tucked behind the opaque body. */
 const permissionDenied: Scene = (context) => {
   const { theme } = context;
+  const shackle = "M76 92V76C76 64 84 56 96 56S116 64 116 76V92";
   return (
-    <G transform="translate(0 -3)">
-      <Circle cx={96} cy={99} fill={theme.lines[1]} fillOpacity={theme.lineOpacities[1]} r={56} />
-      <Circle cx={96} cy={99} fill={theme.lines[0]} fillOpacity={theme.lineOpacities[0]} r={42} />
+    <G transform="translate(0 -1)">
       <Path
-        d="M76 92V78C76 66 84 58 96 58S116 66 116 78V92"
+        d={shackle}
         fill="none"
-        stroke={theme.border}
+        stroke={theme.toneEdge}
         strokeLinecap="round"
-        strokeOpacity={theme.borderOpacity}
-        strokeWidth={8}
+        strokeWidth={13}
       />
+      <Path d={shackle} fill="none" stroke={theme.tone} strokeLinecap="round" strokeWidth={10} />
       <Surface context={context} d={rr(62, 88, 68, 54, 15)} strokeD={rr(62, 88, 68, 54, 15, 0.5)}>
         <Circle cx={96} cy={110} fill={theme.icon} fillOpacity={theme.iconOpacity} r={5.5} />
         <Path

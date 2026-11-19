@@ -127,7 +127,31 @@ const foldersNone: Scene = (context) => (
   </>
 );
 
-/** Magnifier built from a lens and a rounded handle, drawn in canvas space. */
+/**
+ * One outline for lens and handle: the lens circle runs the long way round and leaves where the
+ * handle's two sides meet it, so there is no seam, overlap or second edge between them.
+ */
+function magnifierPath(cx: number, cy: number, radius: number, half: number, tip: number) {
+  const angle = Math.PI / 4;
+  const ux = Math.cos(angle);
+  const uy = Math.sin(angle);
+  const nx = -uy;
+  const ny = ux;
+  const reach = Math.sqrt(radius * radius - half * half);
+  const point = (along: number, across: number) =>
+    `${(cx + ux * along + nx * across).toFixed(2)} ${(cy + uy * along + ny * across).toFixed(2)}`;
+  const end = tip - half;
+  return [
+    `M${point(reach, half)}`,
+    `L${point(end, half)}`,
+    `A${half} ${half} 0 0 0 ${point(end, -half)}`,
+    `L${point(reach, -half)}`,
+    `A${radius} ${radius} 0 1 0 ${point(reach, half)}`,
+    "Z",
+  ].join("");
+}
+
+/** Magnifier: lens and handle are one silhouette, with a recessed glass inside. */
 function Magnifier({
   children,
   context,
@@ -141,10 +165,12 @@ function Magnifier({
     <G
       transform={`${mirrored ? "translate(192 0) scale(-1 1) " : ""}translate(96 96) scale(1.18) translate(-97 -95)`}
     >
-      <G transform="translate(104 104) rotate(45)">
-        <Surface context={context} d={box(-4, -6.5, 40, 13, 6.5)} />
-      </G>
-      <Surface context={context} d={circle(86, 84, 31)} />
+      <Surface context={context} d={magnifierPath(86, 84, 31, 6.5, 62)} />
+      <Path
+        d={circle(86, 84, 23)}
+        fill={context.theme.lines[1]}
+        fillOpacity={context.theme.lineOpacities[1]}
+      />
       {children}
     </G>
   );

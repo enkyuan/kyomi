@@ -3,6 +3,7 @@ import { RssNativeIcon } from "@kyomi/ui/icons/blode-native";
 import {
   BackPaper,
   Bar,
+  Check,
   Glyph,
   PAPER_FRAME,
   Paper,
@@ -131,11 +132,7 @@ const unreadCaughtUp: Scene = (context) => {
       <Circle cx={96} cy={96} fill={theme.lines[1]} fillOpacity={theme.lineOpacities[1]} r={50} />
       <G transform="rotate(-8 96 96)">
         <Surface context={context} d={rrect(62, 62, 68, 68, 22)} />
-        <G transform="translate(62 62)">
-          <Accent context={context}>
-            <Path d="M20 35 L30 45 L49 23" />
-          </Accent>
-        </G>
+        <Check context={context} size={40} x={76} y={76} />
       </G>
     </>
   );
@@ -148,13 +145,9 @@ const BOOKMARK =
 const saved: Scene = (context) => {
   return (
     <G transform="translate(-13 2)">
-      <Ghost context={context} d={rrect(112, 50, 46, 80, 15)} transform="rotate(9 135 90)" />
+      <Ghost context={context} d={rrect(122, 50, 40, 80, 15)} transform="rotate(9 142 90)" />
       <Surface context={context} d={BOOKMARK} />
-      <G transform="translate(96 82)">
-        <Accent context={context}>
-          <Path d="M-11 0 L-3 8 L12 -9" />
-        </Accent>
-      </G>
+      <Check context={context} size={26} x={83} y={66} />
     </G>
   );
 };

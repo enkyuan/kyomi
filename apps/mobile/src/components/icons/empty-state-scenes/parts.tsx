@@ -21,6 +21,11 @@ export type EmptyStateTheme = {
   paperOpacity: number;
   /** The paper's hairline edge, from its top corner to its bottom. */
   edge: { from: string; fromOpacity: number; to: string; toOpacity: number };
+  /** An opaque surface colour laid under every translucent fill so overlapping shapes never show through. */
+  base: string;
+  /** Opaque mid tones for shapes drawn as plain strokes (a padlock shackle): fill and its edge. */
+  tone: string;
+  toneEdge: string;
   /** Opacity of the soft contact shadow under every paper; none in dark, where surfaces glow. */
   shadowOpacity: number;
   isDark: boolean;
@@ -40,6 +45,9 @@ export function getEmptyStateTheme(isDark: boolean): EmptyStateTheme {
         paperOpacity: 0.1,
         edge: { from: "white", fromOpacity: 0.1, to: "#323232", toOpacity: 0 },
         shadowOpacity: 0,
+        base: "#0F0F0F",
+        tone: "#2A2A2A",
+        toneEdge: "#3A3A3A",
         isDark,
       }
     : {
@@ -54,6 +62,9 @@ export function getEmptyStateTheme(isDark: boolean): EmptyStateTheme {
         paperOpacity: 1,
         edge: { from: "#D6D6D6", fromOpacity: 1, to: "#E4E4E4", toOpacity: 1 },
         shadowOpacity: 0.06,
+        base: "#FAFAFA",
+        tone: "#E8E8E8",
+        toneEdge: "#D6D6D6",
         isDark,
       };
 }
@@ -147,6 +158,7 @@ export function Surface({
   return (
     <G transform={place(placement)}>
       <Shadow context={context} d={d} />
+      <Path d={d} fill={context.theme.base} />
       <Path d={d} fill={context.paints.fill} />
       {children}
       <Path d={strokeD ?? d} fill="none" stroke={context.paints.stroke} strokeLinecap="round" />
@@ -258,6 +270,36 @@ export function Glyph({
           <Path d={path.d} fill={theme.icon} fillRule={path.fillRule} key={path.d} />
         ),
       )}
+    </G>
+  );
+}
+
+/**
+ * The one checkmark every state uses, drawn on a 24-unit grid with a 2-unit round stroke and placed
+ * by its top-left corner at `size` units, so it matches the Blode check everywhere else.
+ */
+export function Check({
+  context,
+  size = 24,
+  x = 0,
+  y = 0,
+}: {
+  context: SceneContext;
+  size?: number;
+  x?: number;
+  y?: number;
+}) {
+  const { theme } = context;
+  return (
+    <G opacity={theme.iconOpacity} transform={`translate(${x} ${y}) scale(${size / 24})`}>
+      <Path
+        d="M5 12.75 10 19l9-14"
+        fill="none"
+        stroke={theme.icon}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+      />
     </G>
   );
 }
