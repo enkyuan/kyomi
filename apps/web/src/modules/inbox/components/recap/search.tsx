@@ -56,7 +56,8 @@ export function RecapSearch({ value, onOpen }: { value: string | undefined; onOp
           aria-haspopup="dialog"
           aria-keyshortcuts={`${platform.usesMetaModifier ? "Meta" : "Control"}+K`}
           aria-label="Search"
-          className="cursor-pointer"
+          // It opens the menu rather than taking text, so it never shows a caret or a selection.
+          className="cursor-pointer select-none caret-transparent"
           placeholder="Search"
           readOnly
           value={value ?? ""}
