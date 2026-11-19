@@ -38,9 +38,8 @@ export function ScrollArea({
         className={scrollbarPlacement === "viewport" ? "z-50" : undefined}
         orientation="vertical"
         placement={scrollbarPlacement}
-        track={scrollbarGutter ? "none" : "hover"}
       />
-      <ScrollBar orientation="horizontal" track={scrollbarGutter ? "none" : "hover"} />
+      <ScrollBar orientation="horizontal" />
       <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
     </ScrollAreaPrimitive.Root>
   );

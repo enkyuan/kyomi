@@ -26,21 +26,22 @@ export function ScrollBar({
   className,
   orientation = "vertical",
   placement = "container",
-  track = "hover",
+  track,
   style,
   ...props
 }: Omit<ScrollAreaPrimitive.Scrollbar.Props, "style"> & {
   placement?: "container" | "viewport";
   /**
-   * `hover` is the macOS default: a faint track appears behind the thumb while the pointer is over
-   * the scrollbar. Use `none` for inset scrollbars (tables, menus, lists with a gutter) where only
-   * the thumb should react.
+   * `hover` shows a faint track behind the thumb while the pointer is over the scrollbar. It is the
+   * default only for window-edge scrollbars (`placement="viewport"`); inset scrollbars (dialogs,
+   * tables, menus, lists with a gutter) default to `none`, so only the thumb reacts.
    */
   track?: "hover" | "none";
   style?: React.CSSProperties;
 }): React.ReactElement {
   const canPortal = useSyncExternalStore(subscribeNever, getClientSnapshot, getServerSnapshot);
   const isViewportPlacement = placement === "viewport";
+  const resolvedTrack = track ?? (isViewportPlacement ? "hover" : "none");
   const scrollbar = (
     <ScrollAreaPrimitive.Scrollbar
       className={cn(
@@ -49,7 +50,8 @@ export function ScrollBar({
         className,
       )}
       data-slot="scroll-area-scrollbar"
-      data-track={track}
+      data-placement={placement}
+      data-track={resolvedTrack}
       orientation={orientation}
       style={isViewportPlacement ? { ...VIEWPORT_EDGE_STYLE[orientation], ...style } : style}
       {...props}
