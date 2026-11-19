@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
-import { defineConfig, transformWithEsbuild } from "vite";
+import { defineConfig, transformWithOxc } from "vite";
 import type { Plugin } from "vite";
 import { devtools } from "@tanstack/devtools-vite";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -78,12 +78,14 @@ function staticAssetServiceWorkerPlugin(): Plugin {
       const version = createHash("sha256").update(urls.join("\n")).digest("hex").slice(0, 16);
 
       const source = (
-        await transformWithEsbuild(serviceWorkerSource, "service-worker.ts", {
-          format: "iife",
-          loader: "ts",
+        await transformWithOxc(serviceWorkerSource, "service-worker.ts", {
+          lang: "ts",
           target: "esnext",
         })
       ).code
+        // Oxc has no IIFE output format, and the worker is a classic script with no imports.
+        .replace(/^/, "(() => {\n")
+        .concat("\n})();\n")
         .replaceAll("__SW_VERSION__", JSON.stringify(version))
         .replaceAll("__STATIC_ASSET_URLS__", JSON.stringify(urls));
 
@@ -107,9 +109,12 @@ const config = defineConfig(({ command }) => {
       modulePreload: {
         polyfill: false,
       },
-      rollupOptions: {
+      rolldownOptions: {
         output: {
-          manualChunks: getVendorChunkName,
+          // Rolldown replaces `manualChunks` with code-splitting groups: one chunk per package.
+          codeSplitting: {
+            groups: [{ name: getVendorChunkName, test: /node_modules/ }],
+          },
         },
       },
     },
