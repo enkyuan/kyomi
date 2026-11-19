@@ -35,11 +35,9 @@ import {
   BackToInboxButton,
   DEFAULT_SORT,
   FilterControl,
-  SearchBar,
   SortButton,
   type PinnedFolderFilter,
 } from "./header";
-import { BarBlur, SCROLL_OFFSET_INHERIT } from "@modules/reader/components/detail/blur";
 import { Toolbar as ReaderToolbar } from "@modules/reader/components/toolbar";
 import { useReaderToolbar } from "@modules/reader/hooks/use-toolbar";
 
@@ -180,25 +178,13 @@ export function List({
           data-scroll-restoration-id={INBOX_LIST_SCROLL_RESTORATION_ID}
           data-slot="scroll-area-viewport"
         >
-          <div
-            className={cn(
-              "flex min-h-full flex-col",
-              // Base UI registers this variable as non-inherited, so each level down to the blur
-              // layer opts in to the viewport's value.
-              SCROLL_OFFSET_INHERIT,
-              showEmptyState && "h-full",
-            )}
-          >
+          <div className={cn("flex min-h-full flex-col", showEmptyState && "h-full")}>
             {onFilterChange ? (
               <div
                 ref={listHeaderRef}
-                className={cn(
-                  "isolate sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-5.5 py-4.5",
-                  SCROLL_OFFSET_INHERIT,
-                )}
+                className="isolate sticky top-0 z-20 flex shrink-0 items-center justify-between gap-2 px-5.5 py-4.5"
                 data-slot="inbox-list-header"
               >
-                {showEmptyState ? null : <BarBlur />}
                 <div className="flex min-w-0 items-center gap-2">
                   <LazyMotion features={domAnimation}>
                     <m.div className="inline-flex shrink-0">
@@ -244,7 +230,6 @@ export function List({
                     ref={listToolsRef}
                     className="flex min-w-0 max-w-full items-center justify-end gap-2"
                   >
-                    <SearchBar />
                     <LazyMotion features={domAnimation}>
                       <AnimatePresence initial={false} mode="popLayout">
                         {!isArticleScoped ? (

@@ -224,7 +224,12 @@ export function Login({ redirect }: { redirect?: string }) {
 
                 <emailForm.Subscribe selector={(state) => [state.isSubmitting]}>
                   {([isSubmitting]) => (
-                    <Button className="w-full" type="submit" loading={Boolean(isSubmitting)}>
+                    <Button
+                      className="w-full"
+                      shape="pill"
+                      type="submit"
+                      loading={Boolean(isSubmitting)}
+                    >
                       Continue
                     </Button>
                   )}
@@ -311,7 +316,12 @@ export function Login({ redirect }: { redirect?: string }) {
 
                 <otpForm.Subscribe selector={(state) => [state.isSubmitting]}>
                   {([isSubmitting]) => (
-                    <Button className="w-full" type="submit" loading={Boolean(isSubmitting)}>
+                    <Button
+                      className="w-full"
+                      shape="pill"
+                      type="submit"
+                      loading={Boolean(isSubmitting)}
+                    >
                       Continue
                     </Button>
                   )}

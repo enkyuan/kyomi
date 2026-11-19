@@ -21,17 +21,8 @@ import {
   FilterDescIcon,
   FolderIcon,
   type IconProps,
-  SearchIcon,
-  XIcon,
 } from "@kyomi/ui/icons/blode";
-import {
-  AnimatePresence,
-  LazyMotion,
-  domAnimation,
-  m,
-  useReducedMotion,
-} from "@kyomi/ui/lib/motion";
-import { useCallback, useRef, useState, type ComponentType, type RefObject } from "react";
+import { useRef, type ComponentType, type RefObject } from "react";
 import type { InboxFilter, InboxSort } from "@modules/articles/lib/api";
 import { cn } from "@kyomi/ui/lib/utils";
 import { SplitSegment } from "./split";
@@ -158,13 +149,13 @@ export function FilterControl({
           {/* The tab and the menu trigger are siblings: a control nested in a tab is not reachable
               or announced reliably. The group draws them as one split pill. */}
           <ButtonGroup
-            className="[--split-fill:transparent] [--split-h:2.25rem] data-split-active:[--split-fill:var(--background)] gap-0.75 text-muted-foreground hover:text-foreground/70 data-split-active:text-foreground"
+            className="[--split-fill:transparent] [--split-h:2.25rem] data-split-active:[--split-fill:var(--background)] text-muted-foreground hover:text-foreground/70 data-split-active:text-foreground"
             data-split-active={segmentValue === "my-feed" ? undefined : ""}
             variant="split"
           >
             <TabsTab
               value={segmentValue === "my-feed" ? "all" : segmentValue}
-              className="rounded-s-[calc(var(--split-h)/2)] rounded-e-[6px] px-0 text-inherit hover:text-inherit data-active:text-inherit"
+              className="rounded-s-[calc(var(--split-h)/2)] rounded-e-(--split-inner) px-0 text-inherit hover:text-inherit data-active:text-inherit"
               nativeButton={false}
             >
               <SplitSegment className="ps-4 pe-1.5" edge="start" render={<span />}>
@@ -224,83 +215,6 @@ export function BackToInboxButton({
     >
       <ArrowLeftIcon className="size-5" />
     </button>
-  );
-}
-
-export function SearchBar({ variant = "pill" }: { variant?: "pill" | "transparent" }) {
-  const [expanded, setExpanded] = useState(false);
-  const [value, setValue] = useState("");
-  const inputRef = useRef<HTMLInputElement | null>(null);
-  const prefersReducedMotion = useReducedMotion();
-  const open = useCallback(() => {
-    setExpanded(true);
-    requestAnimationFrame(() => inputRef.current?.focus());
-  }, []);
-
-  const close = useCallback(() => {
-    setValue("");
-    setExpanded(false);
-  }, []);
-
-  return (
-    <LazyMotion features={domAnimation}>
-      <div
-        className={cn(
-          "relative flex h-11 min-w-11 max-w-full items-center overflow-hidden rounded-full text-muted-foreground [&>*]:relative",
-          expanded ? "w-[420px]" : "w-11",
-          variant === "pill" && "bg-muted-solid",
-        )}
-      >
-        <button
-          type="button"
-          aria-label="Search"
-          aria-expanded={expanded}
-          onClick={expanded ? undefined : open}
-          tabIndex={expanded ? -1 : 0}
-          className="inline-flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full text-current outline-none transition-colors hover:text-foreground/70 focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none"
-        >
-          <SearchIcon className="size-5" />
-        </button>
-        <AnimatePresence initial={false}>
-          {expanded ? (
-            <m.div
-              key="search-input"
-              initial={prefersReducedMotion ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={prefersReducedMotion ? undefined : { opacity: 0 }}
-              transition={{ duration: prefersReducedMotion ? 0 : 0.16 }}
-              className="flex min-w-0 flex-1 items-center gap-1 pe-1"
-            >
-              <input
-                ref={inputRef}
-                type="search"
-                aria-label="Search inbox"
-                value={value}
-                onChange={(event) => setValue(event.target.value)}
-                onKeyDown={(event) => {
-                  if (event.key === "Escape") {
-                    event.preventDefault();
-                    close();
-                  }
-                }}
-                placeholder="Search"
-                className="min-w-0 flex-1 bg-transparent text-base text-foreground outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none"
-              />
-              <button
-                type="button"
-                aria-label="Close search"
-                onClick={close}
-                className="inline-flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full text-muted-foreground outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring"
-              >
-                <span className="inline-flex size-5 items-center justify-center rounded-full transition-colors hover:bg-accent">
-                  <XIcon className="size-4" />
-                </span>
-              </button>
-            </m.div>
-          ) : null}
-        </AnimatePresence>
-      </div>
-    </LazyMotion>
   );
 }
 
