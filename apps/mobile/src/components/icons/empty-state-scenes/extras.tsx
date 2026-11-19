@@ -158,18 +158,25 @@ const readerNoHighlights: Scene = (context) => {
 /** Advanced, no data: a big open box seen in perspective with nothing in it. */
 const advancedNoData: Scene = (context) => {
   const { theme } = context;
+  const shade = { fill: theme.lines[0], fillOpacity: theme.lineOpacities[0] } as const;
   const port = { fill: theme.cavity } as const;
   return (
-    <Surface context={context} d={rr(52, 36, 88, 120, 18)} strokeD={rr(52, 36, 88, 120, 18, 0.5)}>
+    <Surface context={context} d={rr(54, 34, 84, 124, 14)} strokeD={rr(54, 34, 84, 124, 14, 0.5)}>
+      <Circle cx={92} cy={80} fill={theme.lines[1]} fillOpacity={theme.lineOpacities[1]} r={17} />
+      <Path d="M54 132H138V144Q138 158 124 158H68Q54 158 54 144Z" {...shade} />
+      <Path d="M128 34H124Q138 34 138 48V144Q138 158 124 158H128Z" {...shade} />
       <Path
-        d="M128 36H122Q140 36 140 54V138Q140 156 122 156H128Z"
-        fill={theme.lines[0]}
-        fillOpacity={theme.lineOpacities[0]}
+        d="M55 132H137"
+        fill="none"
+        opacity={theme.detailOpacity}
+        stroke={theme.detail}
+        strokeLinecap="round"
+        strokeWidth={1.2}
       />
-      <Rect height={11} rx={5.5} width={32} x={62} y={134} {...port} />
-      <Circle cx={105} cy={139.5} r={4.5} {...port} />
-      <Circle cx={116} cy={139.5} r={4.5} {...port} />
-      <Circle cx={127} cy={139.5} fill={theme.icon} fillOpacity={theme.iconOpacity} r={4.5} />
+      <Rect height={12} rx={6} width={34} x={62} y={139} {...port} />
+      <Circle cx={105} cy={145} r={4.6} {...port} />
+      <Circle cx={115.5} cy={145} r={4.6} {...port} />
+      <Circle cx={126} cy={145} fill={theme.icon} fillOpacity={theme.iconOpacity} r={4.6} />
     </Surface>
   );
 };
