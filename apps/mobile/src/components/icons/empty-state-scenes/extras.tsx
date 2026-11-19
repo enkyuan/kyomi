@@ -155,13 +155,12 @@ const readerNoHighlights: Scene = (context) => {
   );
 };
 
-/** Advanced, no data: a big open box seen in perspective with nothing in it. */
-/** One external drive in the shared style, leaning forward: slightly narrower at the top, a straight back edge, a fully rounded front. */
+/** One external drive in the shared style, traced from the reference silhouette: leaning forward, flat back edge, fully rounded front. */
 const advancedNoData: Scene = (context) => {
   const { theme } = context;
   const port = { fill: theme.cavity } as const;
   const body =
-    "M66 46H126Q132 46 133.5 52L151 134Q153 146 141 146H51Q39 146 41 134L58.5 52Q60 46 66 46Z";
+    "M67.2 41.5H124.8Q132.48 41.5 134.4 49.18L151.36 125.34Q153.6 133.66 152.32 139.1Q151.04 150.94 139.52 150.94H52.48Q40.96 150.94 39.68 139.1Q38.4 133.66 40.64 125.34L57.6 49.18Q59.52 41.5 67.2 41.5Z";
   const detail = {
     fill: "none",
     opacity: theme.detailOpacity,
@@ -172,15 +171,21 @@ const advancedNoData: Scene = (context) => {
   return (
     <Surface context={context} d={body}>
       <Path
-        d="M43.1 124H148.9L151 134Q153 145 141 145H51Q39 145 41 134Z"
+        d="M67.2 41.5H124.8Q132.48 41.5 134.4 49.18Q131.2 50.14 124.8 50.14H67.2Q60.8 50.14 57.6 49.18Q59.52 41.5 67.2 41.5Z"
         fill={theme.lines[0]}
         fillOpacity={theme.lineOpacities[0]}
       />
-      <Path d="M43.5 124H148.5" {...detail} />
-      <Rect height={12} rx={6} width={32} x={54} y={129} {...port} />
-      <Circle cx={108} cy={135} r={4.4} {...port} />
-      <Circle cx={118.5} cy={135} r={4.4} {...port} />
-      <Circle cx={129} cy={135} fill={theme.icon} fillOpacity={theme.iconOpacity} r={4.4} />
+      <Path d="M58.24 48.86Q60.8 50.14 67.2 50.14H124.8Q131.2 50.14 133.76 48.86" {...detail} />
+      <Path
+        d="M40.0 131.74H152.0Q153.6 134.3 152.32 139.1Q151.04 150.3 139.52 150.3H52.48Q40.96 150.3 39.68 139.1Q38.4 134.3 40.0 131.74Z"
+        fill={theme.lines[0]}
+        fillOpacity={theme.lineOpacities[0]}
+      />
+      <Path d="M40.0 131.74H152.0" {...detail} />
+      <Rect height={10.88} rx={5.44} width={32.0} x={48.0} y={136.22} {...port} />
+      <Circle cx={105.6} cy={141.66} r={4.48} {...port} />
+      <Circle cx={116.8} cy={141.66} r={4.48} {...port} />
+      <Circle cx={128.0} cy={141.66} fill={theme.icon} fillOpacity={theme.iconOpacity} r={4.48} />
     </Surface>
   );
 };
