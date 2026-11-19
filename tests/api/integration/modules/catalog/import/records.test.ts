@@ -59,6 +59,15 @@ describe("catalog import metadata preservation", () => {
     expect(normalized.canonicalUrl).toContain("a.example.com");
   });
 
+  test("keeps the request path distinct from the catalog deduplication key", () => {
+    expect(
+      normalizeImportRecord({ feed_url: "https://EXAMPLE.com/feed/?lang=en#top" }),
+    ).toMatchObject({
+      submittedUrl: "https://example.com/feed/?lang=en",
+      canonicalUrl: "https://example.com/feed?lang=en",
+    });
+  });
+
   test("toCategorySlug normalizes to lowercase ASCII", () => {
     expect(toCategorySlug("Engineering & Tech")).toBe("engineering-tech");
     expect(toCategorySlug("  Café News  ")).toBe("cafe-news");
@@ -100,6 +109,7 @@ describe("catalog import metadata preservation", () => {
       missingCategory: 0,
     };
     const record: NormalizedImportRecord = {
+      submittedUrl: "https://b.example.com/feed",
       canonicalUrl: "https://b.example.com/feed",
       title: "https://b.example.com/feed",
       description: null,

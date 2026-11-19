@@ -32,6 +32,7 @@ export type ValidationReport = {
 };
 
 export type NormalizedImportRecord = {
+  submittedUrl: string;
   canonicalUrl: string;
   title: string;
   description: string | null;
@@ -69,14 +70,12 @@ export function parseRecord(line: string): CatalogFeedRecord | null {
   };
 }
 
-function resolveCanonicalUrl(raw: string): string {
-  const asserted = assertHttpOrHttpsUrl(raw);
-  return normalizeFeedUrl(asserted.href);
-}
-
 export function normalizeImportRecord(record: CatalogFeedRecord): NormalizedImportRecord {
-  const canonicalUrl = resolveCanonicalUrl(record.feed_url);
+  const submitted = assertHttpOrHttpsUrl(record.feed_url);
+  submitted.hash = "";
+  const canonicalUrl = normalizeFeedUrl(submitted.href);
   return {
+    submittedUrl: submitted.href,
     canonicalUrl,
     title: record.title && record.title.length > 0 ? record.title : canonicalUrl,
     description: record.description && record.description.length > 0 ? record.description : null,

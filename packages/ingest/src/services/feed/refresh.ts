@@ -22,7 +22,7 @@ import {
   type EmbeddingClassifierConfig,
 } from "./embeddings";
 import { fetchFeedDocument } from "./fetch";
-import { parseFeedDocument } from "./parse";
+import { normalizeFeedUrl, parseFeedDocument } from "./parse";
 import { syncFeedToSearch } from "./search";
 import {
   hasExplicitFeedCategories,
@@ -782,6 +782,11 @@ async function tryResolveFaviconMetadata(
   }
 }
 
+// PostgreSQL text cannot store NUL. Publisher and transport diagnostics may include raw bytes.
+function feedFailureMessage(message: string): string {
+  return message.includes("\0") ? "Feed refresh failed: binary diagnostic" : message.slice(0, 1024);
+}
+
 export async function runFeedRefresh(
   database: FeedIngestDatabase,
   feedId: string,
@@ -855,11 +860,19 @@ export async function runFeedRefresh(
     const window = preview
       ? { since: new Date(until.getTime() - 7 * 86_400_000), until, limit: 3 }
       : undefined;
-    const initial = await fetchDocument(
-      feed.url,
-      hydrate ? null : feed.etag,
-      hydrate ? null : feed.lastModified,
-    );
+    // The deduplication key trims trailing slashes. Poll the exact path the publisher
+    // supplied or last served, retaining aliases whose canonical URL belongs to another row.
+    const candidate =
+      feed.canonicalFeedUrl ?? (feed.lastRefreshSucceededAt ? null : feed.submittedUrl);
+    const requestUrl =
+      candidate && URL.canParse(candidate) && normalizeFeedUrl(candidate) === feed.url
+        ? candidate
+        : feed.url;
+    const conditional =
+      !hydrate && (requestUrl === feed.url || requestUrl === feed.canonicalFeedUrl);
+    const etag = conditional ? feed.etag : null;
+    const lastModified = conditional ? feed.lastModified : null;
+    const initial = await fetchDocument(requestUrl, etag, lastModified);
     const recovered =
       window &&
       !feed.lastRefreshSucceededAt &&
@@ -869,6 +882,7 @@ export async function runFeedRefresh(
         : null;
     const fetched = recovered?.fetched ?? initial;
     if (!fetched.ok) {
+      const message = feedFailureMessage(fetched.error);
       const now = new Date();
       const permanent =
         isPermanentHttpStatus(fetched.httpStatus) || isPermanentFetchError(fetched.error);
@@ -884,7 +898,7 @@ export async function runFeedRefresh(
         .set({
           refreshStatus: "failed",
           lastRefreshFailedAt: now,
-          lastRefreshError: fetched.error,
+          lastRefreshError: message,
           lastRefreshCompletedAt: now,
           nextRefreshAt: new Date(now.getTime() + Math.max(backoffMs, fetched.retryAfterMs ?? 0)),
         })
@@ -897,14 +911,14 @@ export async function runFeedRefresh(
       return {
         ok: false,
         itemCount: 0,
-        error: `Feed fetch failed: ${fetched.error}`,
+        error: `Feed fetch failed: ${message}`,
         retryScheduled: preview || fetched.httpStatus === 429 || Boolean(fetched.retryAfterMs),
         failureClass: fetchFailureClass(fetched.httpStatus, permanent),
         permanent,
       };
     }
 
-    if (fetched.notModified && (hydrate || (!feed.etag && !feed.lastModified))) {
+    if (fetched.notModified && !etag && !lastModified) {
       throw new Error("Publisher returned 304 to an unconditional request");
     }
     if (fetched.notModified) {
@@ -1102,7 +1116,7 @@ export async function runFeedRefresh(
         link: parsed.metadata.link,
         submittedUrl: feed.submittedUrl ?? feed.url,
         siteUrl: parsed.metadata.link,
-        canonicalFeedUrl: parsed.metadata.canonicalUrl,
+        canonicalFeedUrl: fetchedForParse.finalUrl.split("#", 1)[0]!,
         catalogPreview: preview,
         discoveredFromUrl: resolved.discoveredFromUrl ?? feed.discoveredFromUrl,
         discoveryProvenance:
@@ -1126,7 +1140,7 @@ export async function runFeedRefresh(
       let updatedRows: Array<{ id: string }>;
       const shouldUpdateUrl =
         feed.url !== parsed.metadata.canonicalUrl &&
-        feed.canonicalFeedUrl !== parsed.metadata.canonicalUrl;
+        feed.canonicalFeedUrl !== feedPatch.canonicalFeedUrl;
       if (shouldUpdateUrl) {
         try {
           updatedRows = await tx.transaction(
@@ -1367,7 +1381,7 @@ export async function runFeedRefresh(
     let message = "Feed refresh failed";
     if (error instanceof Error) {
       const cause = (error as Error & { cause?: unknown }).cause;
-      message = cause instanceof Error ? cause.message : error.message;
+      message = feedFailureMessage(cause instanceof Error ? cause.message : error.message);
     }
     const now = new Date();
     const backoffMs = 30 * 60 * 1000;

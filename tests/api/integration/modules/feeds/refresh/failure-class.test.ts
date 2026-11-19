@@ -141,6 +141,34 @@ describe("runFeedRefresh failure results", () => {
     expect(result).toMatchObject({ ok: false, failureClass: "http_5xx", permanent: false });
   });
 
+  test("records a binary response at a feed URL as a completed failure", async () => {
+    const fake = createFeedRefreshDb();
+    globalThis.fetch = mockFetch(() => new Response(new Uint8Array([137, 80, 78, 71, 0])));
+
+    expect(await runFeedRefresh(fake.db as never, "feed-1")).toMatchObject({
+      ok: false,
+      error: "Unsupported feed format",
+    });
+    expect(fake.updates.at(-1)).toMatchObject({
+      refreshStatus: "failed",
+      lastRefreshCompletedAt: expect.any(Date),
+      lastRefreshError: "Unsupported feed format",
+    });
+  });
+
+  test("persists a text diagnostic when a transport includes binary data", async () => {
+    const fake = createFeedRefreshDb();
+    globalThis.fetch = mockFetch(() => {
+      throw new Error("Invalid response\0");
+    });
+
+    await runFeedRefresh(fake.db as never, "feed-1");
+    expect(fake.updates.at(-1)).toMatchObject({
+      refreshStatus: "failed",
+      lastRefreshError: "Feed refresh failed: binary diagnostic",
+    });
+  });
+
   test("reports transport failures as retryable network failures", async () => {
     const fake = createFeedRefreshDb();
     globalThis.fetch = mockFetch(() => {

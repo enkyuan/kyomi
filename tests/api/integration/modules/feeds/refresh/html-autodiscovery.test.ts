@@ -334,6 +334,40 @@ describe("runFeedRefresh HTML autodiscovery", () => {
     expect(result).toMatchObject({ ok: true, skipped: "superseded", itemCount: 0 });
   });
 
+  test("retains the exact request path across the first and conditional catalog refreshes", async () => {
+    const url = "https://93.184.216.34/feed";
+    const submittedUrl = url + "/";
+    const feed = {
+      id: "feed-1",
+      url,
+      submittedUrl,
+      subscriberCount: 0,
+      title: "Example",
+      etag: '"previous-path"',
+    };
+    const fake = createFeedRefreshDb({ feed });
+    globalThis.fetch = mockFetch((input, init) => {
+      expect(input.toString()).toBe(submittedUrl);
+      expect(new Headers(init?.headers).get("if-none-match")).toBeNull();
+      return response(
+        "<rss><channel><title>Example</title></channel></rss>",
+        submittedUrl,
+        "application/rss+xml",
+      );
+    });
+    const options = { catalogRefreshIntervalMs: 86_400_000 };
+    expect((await runFeedRefresh(fake as never, "feed-1", undefined, options)).ok).toBe(true);
+    const updated = lastUpdateForTable(fake.updates, "feeds");
+    expect(updated?.canonicalFeedUrl).toBe(submittedUrl);
+    const next = createFeedRefreshDb({ feed: { ...feed, ...updated, etag: '"exact-path"' } });
+    globalThis.fetch = mockFetch((input, init) => {
+      expect(input.toString()).toBe(submittedUrl);
+      expect(new Headers(init?.headers).get("if-none-match")).toBe('"exact-path"');
+      return new Response(null, { status: 304 });
+    });
+    expect((await runFeedRefresh(next as never, "feed-1", undefined, options)).ok).toBe(true);
+  });
+
   test("fetches an RSS alternate from HTML and updates canonical feed provenance", async () => {
     const siteUrl = "https://93.184.216.34/";
     const feedUrl = "https://93.184.216.34/feed.xml";

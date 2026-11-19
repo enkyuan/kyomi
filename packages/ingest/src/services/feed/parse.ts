@@ -113,7 +113,7 @@ function computeFeedItemId(feedId: string, canonicalUrl: string): string {
   return stableUuid(`${feedId}|${canonicalUrl}`);
 }
 
-function normalizeFeedUrl(raw: string): string {
+export function normalizeFeedUrl(raw: string): string {
   const trimmed = raw.trim();
   const url = new URL(trimmed);
   url.hash = "";
@@ -714,6 +714,9 @@ export function parseFeedDocument(
   window?: CatalogWindow,
 ): ParsedFeedDocument {
   const trimmed = body.trim();
+  if (trimmed.includes("\0") || !(trimmed.startsWith("<") || trimmed.startsWith("{"))) {
+    throw new Error("Unsupported feed format");
+  }
   if (trimmed.startsWith("{")) {
     return parseJsonFeedDocument(trimmed, feedId, finalUrl, window);
   }
