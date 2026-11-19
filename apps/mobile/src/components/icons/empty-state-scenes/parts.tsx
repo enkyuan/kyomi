@@ -19,6 +19,10 @@ export type EmptyStateTheme = {
   lines: readonly [string, string, string, string];
   lineOpacities: readonly [number, number, number, number];
   paperOpacity: number;
+  /** The paper's hairline edge, from its top corner to its bottom. */
+  edge: { from: string; fromOpacity: number; to: string; toOpacity: number };
+  /** Opacity of the soft contact shadow under every paper; none in dark, where surfaces glow. */
+  shadowOpacity: number;
   isDark: boolean;
 };
 
@@ -34,6 +38,8 @@ export function getEmptyStateTheme(isDark: boolean): EmptyStateTheme {
         lines: ["white", "white", "white", "white"],
         lineOpacities: [0.1, 0.075, 0.05, 0.025],
         paperOpacity: 0.1,
+        edge: { from: "white", fromOpacity: 0.1, to: "#323232", toOpacity: 0 },
+        shadowOpacity: 0,
         isDark,
       }
     : {
@@ -46,6 +52,8 @@ export function getEmptyStateTheme(isDark: boolean): EmptyStateTheme {
         lines: ["#E7E7E7", "#F0F0F0", "#F6F6F6", "#FAFAFA"],
         lineOpacities: [1, 1, 1, 1],
         paperOpacity: 1,
+        edge: { from: "#D6D6D6", fromOpacity: 1, to: "#E4E4E4", toOpacity: 1 },
+        shadowOpacity: 0.06,
         isDark,
       };
 }
@@ -80,11 +88,28 @@ function place({ tilt = 0, x = 0, y = 0 }: PlacementProps) {
   return `translate(${x} ${y}) rotate(${tilt} 96 96)`;
 }
 
-/** A paper resting behind the main one: the gradient fill at half strength, no edge. */
+/** A soft contact shadow, a hair below the shape, so a pale paper still lifts off a pale circle. */
+function Shadow({ context, d }: { context: SceneContext; d: string }) {
+  if (context.theme.shadowOpacity === 0) {
+    return null;
+  }
+  return (
+    <Path
+      d={d}
+      fill="black"
+      fillOpacity={context.theme.shadowOpacity}
+      transform="translate(0 1.5)"
+    />
+  );
+}
+
+/** A paper resting behind the main one: the gradient fill and edge at half strength. */
 export function BackPaper({ context, ...placement }: { context: SceneContext } & PlacementProps) {
   return (
     <G opacity={0.5} transform={place(placement)}>
+      <Shadow context={context} d={BACK_PAPER_PATH} />
       <Path d={BACK_PAPER_PATH} fill={context.paints.back} />
+      <Path d={BACK_PAPER_PATH} stroke={context.paints.stroke} strokeLinecap="round" />
     </G>
   );
 }
@@ -97,6 +122,7 @@ export function Paper({
 }: { children?: ReactNode; context: SceneContext } & PlacementProps) {
   return (
     <G transform={place(placement)}>
+      <Shadow context={context} d={FRONT_PAPER_PATH} />
       <Path d={FRONT_PAPER_PATH} fill={context.paints.fill} />
       {children}
       <Path d={FRONT_PAPER_STROKE_PATH} stroke={context.paints.stroke} strokeLinecap="round" />
@@ -120,6 +146,7 @@ export function Surface({
 } & PlacementProps) {
   return (
     <G transform={place(placement)}>
+      <Shadow context={context} d={d} />
       <Path d={d} fill={context.paints.fill} />
       {children}
       <Path d={strokeD ?? d} fill="none" stroke={context.paints.stroke} strokeLinecap="round" />

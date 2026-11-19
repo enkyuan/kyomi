@@ -104,8 +104,8 @@ function EmptyStateIllustration({
           y1="44.922"
           y2="146.534"
         >
-          <Stop offset="0" stopColor="white" stopOpacity={0.1} />
-          <Stop offset="1" stopColor="#323232" stopOpacity={0} />
+          <Stop offset="0" stopColor={theme.edge.from} stopOpacity={theme.edge.fromOpacity} />
+          <Stop offset="1" stopColor={theme.edge.to} stopOpacity={theme.edge.toOpacity} />
         </LinearGradient>
       </Defs>
     </Svg>

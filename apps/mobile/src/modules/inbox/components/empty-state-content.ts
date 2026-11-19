@@ -22,7 +22,7 @@ export const EMPTY_STATES = {
   },
   "unread-caught-up": {
     header: "You're all caught up",
-    description: "Nothing unread right now. New\nstories will land here.",
+    description: "New stories show up here\nas they arrive.",
   },
   saved: {
     header: "No saved articles yet",
@@ -42,7 +42,7 @@ export const EMPTY_STATES = {
   },
   "sources-none": {
     header: "No feeds yet",
-    description: "Add a new feed or check out\nExplore to get started.",
+    description: "Add a feed, or open Explore\nto find one.",
   },
   recents: {
     header: "No recent articles",
@@ -55,7 +55,7 @@ export const EMPTY_STATES = {
   },
   "search-no-results": {
     header: "No results found",
-    description: "Try a different word or check\nthe spelling.",
+    description: "Check the spelling or try\na broader word.",
   },
   // Settings
   "import-opml": {
@@ -101,10 +101,10 @@ export const EMPTY_STATES = {
   },
   "load-error": {
     header: "Couldn't load this",
-    description: "Something went wrong on our end.\nPull down to try again.",
+    description: "Pull down to try again.",
   },
   "permission-denied": {
     header: "Access needed",
-    description: "Allow access in Settings to\ncontinue with this.",
+    description: "Allow access in Settings\nto continue.",
   },
 } as const satisfies Record<EmptyStateScene, EmptyStateContent>;
