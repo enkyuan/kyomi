@@ -107,7 +107,6 @@ const FOLDER_FRONT = "M40 92Q40 82 50 82H142Q152 82 152 92V134Q152 144 142 144H5
 
 const folderEmpty: Scene = (context) => (
   <>
-    <Slot context={context} d={box(62, 38, 68, 44, 10)} opacity={0.8} />
     <Surface context={context} d={FOLDER_BACK} />
     <Surface context={context} d={FOLDER_FRONT}>
       <Slot context={context} d={box(70, 98, 52, 30, 9)} />
