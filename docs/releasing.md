@@ -23,9 +23,11 @@ not move an existing tag or replace its contents.
    are outside that commit.
 2. Review changes since the previous release, or the repository history for the first release.
    Verify relevant checks for the commit and report any missing checks or known limitations.
-3. Write release notes describing shipped changes and any migration or operational steps. Identify
-   the commit, distinguish local tests from CI, and avoid claiming deployment or device validation
-   without evidence.
+3. Name the GitHub release after its tag, such as `v0.1.0-alpha.1`. Generate notes using
+   GitHub's release notes API or `gh release create --generate-notes`, then review them against
+   the tagged history. Use the generated **What's Changed**, **New Contributors** when applicable,
+   and **Full Changelog** sections with contributor and pull request links. Add migration or
+   operational steps where needed, and distinguish local tests from CI.
 4. Create a signed annotated tag on the chosen commit using `git tag -s vX.Y.Z-... -m '...'`.
    Push the tag, then create a GitHub release with `gh release create` and `--prerelease` for
    prerelease versions. Do not attach binaries unless they were built and verified for that release.
