@@ -5,6 +5,9 @@ import { createAuthClient } from "better-auth/react";
 import Constants from "expo-constants";
 import * as SecureStore from "expo-secure-store";
 import { NativeModules, Platform } from "react-native";
+import { resolveAuthOrigin } from "./auth-origin";
+
+export { resolveAuthOrigin };
 
 const AUTH_STORAGE_PREFIX = "better-auth";
 const LOCAL_API_PORT = 8000;
@@ -31,20 +34,6 @@ function resolveMetroHostOrigin(): string | null {
   if (!hostname || hostname.endsWith(".exp.direct")) return null;
 
   return `http://${hostname}:${LOCAL_API_PORT}`;
-}
-
-export function resolveAuthOrigin(): string {
-  const configured = process.env.EXPO_PUBLIC_AUTH_ORIGIN?.trim();
-  if (configured) {
-    return configured.replace(/\/$/, "");
-  }
-
-  return (
-    resolveMetroHostOrigin() ??
-    (Platform.OS === "android"
-      ? `http://10.0.2.2:${LOCAL_API_PORT}`
-      : `http://localhost:${LOCAL_API_PORT}`)
-  );
 }
 
 export const authClient = createAuthClient({

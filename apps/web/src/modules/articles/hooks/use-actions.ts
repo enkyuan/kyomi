@@ -2,6 +2,7 @@
 
 import { useCallback } from "react";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/components/toast";
+import { normalizeSafeHttpUrl } from "@kyomi/reader/core";
 import { logClientError } from "@kyomi/reader/lib/errors";
 import { useInboxItemStateMutation } from "@modules/articles/hooks/use-item-state";
 import type { AnchoredToolbarActionOptions, ArticleActionItem, ToolbarSide } from "../lib/types";
@@ -76,7 +77,13 @@ export function useActions({
   return {
     isSaved: item.isSaved,
     copyLink: () => {
-      void copyTextToClipboard(item.link)
+      // A feed supplies the link, so only an http(s) one is copied, opened, or shared.
+      const link = normalizeSafeHttpUrl(item.link);
+      if (!link) {
+        showCopyFailedToast();
+        return;
+      }
+      void copyTextToClipboard(link)
         .then(() => toastManager.add({ title: "Link copied", type: "success", timeout: 1800 }))
         .catch(() => showCopyFailedToast());
     },
@@ -99,12 +106,13 @@ export function useActions({
       );
     },
     openSource: (options?: { newTab?: boolean }) => {
+      // `javascript:` would run in this origin when opened in the same tab.
+      const link = normalizeSafeHttpUrl(item.link);
+      if (!link) {
+        return;
+      }
       const newTab = options?.newTab ?? true;
-      window.open(
-        item.link,
-        newTab ? "_blank" : "_self",
-        newTab ? "noopener,noreferrer" : undefined,
-      );
+      window.open(link, newTab ? "_blank" : "_self", newTab ? "noopener,noreferrer" : undefined);
     },
     shareArticle: () => {
       void shareArticle(item).catch((error: unknown) => {
@@ -123,10 +131,15 @@ export function useActions({
 }
 
 async function shareArticle(item: ArticleActionItem) {
+  const link = normalizeSafeHttpUrl(item.link);
+  if (!link) {
+    throw new Error("The article link is not a web address.");
+  }
+
   const shareData: ShareData = {
     title: item.title,
     text: item.summary ?? item.feedTitle,
-    url: item.link,
+    url: link,
   };
 
   if (navigator.share && (!navigator.canShare || navigator.canShare(shareData))) {
@@ -135,7 +148,7 @@ async function shareArticle(item: ArticleActionItem) {
   }
 
   // No native share sheet: copying is the only action, so it needs its own confirmation.
-  await copyTextToClipboard(item.link);
+  await copyTextToClipboard(link);
   toastManager.add({ title: "Link copied", type: "success", timeout: 1800 });
 }
 

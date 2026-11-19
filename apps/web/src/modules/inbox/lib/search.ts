@@ -1,3 +1,4 @@
+import { isUuid } from "@lib/ids";
 import type { InboxFilter, InboxSort } from "@modules/articles/lib/api";
 import { normalizeInboxSort } from "@modules/articles/lib/urls";
 
@@ -39,7 +40,7 @@ export function validateInboxSearch(search: Record<string, unknown>): InboxSearc
     search: parseOptionalString(search.search),
     feedId: parseOptionalString(search.feedId),
     folderId: parseOptionalString(search.folderId),
-    itemId: parseOptionalString(search.itemId),
+    itemId: isUuid(search.itemId) ? search.itemId : undefined,
     showHidden: search.showHidden === "1" ? "1" : undefined,
     showRead: search.showRead === "1" ? "1" : undefined,
     sort,

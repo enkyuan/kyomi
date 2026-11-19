@@ -1,3 +1,4 @@
+import { isUuid } from "@lib/ids";
 import type { InboxItem } from "./api";
 
 const ARTICLE_SLUG_ID_SEPARATOR = "--";
@@ -31,5 +32,7 @@ export function getInboxItemIdFromSlug(slug: string | undefined) {
     return undefined;
   }
 
-  return slug.slice(0, separatorIndex);
+  // The id becomes an API path, and the slug is whatever a link carries.
+  const id = slug.slice(0, separatorIndex);
+  return isUuid(id) ? id : undefined;
 }

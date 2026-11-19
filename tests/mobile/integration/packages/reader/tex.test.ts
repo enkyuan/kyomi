@@ -113,6 +113,20 @@ describe("fitMathLayout", () => {
   });
 });
 
+describe("texToUnicode with publisher-written command names", () => {
+  test.each(["constructor", "toString", "hasOwnProperty", "valueOf", "__proto__"])(
+    "\\%s is not a symbol",
+    (name) => {
+      expect(texToUnicode(`\\${name}`)).toBeNull();
+      expect(texToUnicode(`x + \\${name}`)).toBeNull();
+    },
+  );
+
+  test("known symbols still convert", () => {
+    expect(texToUnicode("\\alpha")).toBe("α");
+  });
+});
+
 describe("mathmlToPlainText", () => {
   test("flattens token runs and decodes entities", () => {
     expect(
@@ -127,5 +141,85 @@ describe("mathmlToPlainText", () => {
     expect(mathmlToPlainText("<math><msup><mn>2</mn><mn>20</mn></msup></math>")).toBeNull();
     expect(mathmlToPlainText("<math><mfrac><mn>1</mn><mn>2</mn></mfrac></math>")).toBeNull();
     expect(mathmlToPlainText("<math><mi></mi></math>")).toBeNull();
+  });
+});
+
+describe("mathmlToPlainText on hostile input", () => {
+  const BUDGET_MS = 1_000;
+  const elapsed = (run: () => unknown) => {
+    const start = performance.now();
+    run();
+    return performance.now() - start;
+  };
+
+  test("drops annotations and tags exactly as before", () => {
+    expect(
+      mathmlToPlainText(
+        "<math><mi>a</mi><annotation encoding='x'>a<b></annotation><mo>+</mo><mi>b</mi><annotation>z</annotation></math>",
+      ),
+    ).toBe("a+b");
+    expect(mathmlToPlainText("<math><mi>x</mi><annotation>never closed</math>")).toBe(
+      "xnever closed",
+    );
+    expect(mathmlToPlainText("<math><mi>1 < 2</mi></math>")).toBe("1");
+    expect(mathmlToPlainText("<<mi>>x<>y<mo>")).toBe(">x<>y");
+  });
+
+  test("agrees with the regexes it replaces on 5000 random fragments", () => {
+    const reference = (mathml: string) => {
+      if (
+        /<(?:msup|msub|msubsup|mfrac|msqrt|mroot|mover|munder|munderover|mtable)\b/.test(mathml)
+      ) {
+        return null;
+      }
+      const text = mathml
+        .replace(/<annotation\b[\s\S]*?<\/annotation>/g, "")
+        .replace(/<[^>]+>/g, "")
+        .replace(/&nbsp;|&#160;/g, " ")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&amp;/g, "&")
+        .trim();
+      return text.length > 0 ? text : null;
+    };
+    let seed = 5;
+    const next = () => {
+      seed = (seed * 1_103_515_245 + 12_345) % 2_147_483_648;
+      return seed / 2_147_483_648;
+    };
+    const tokens = [
+      "<",
+      ">",
+      "<annotation",
+      "<annotation>",
+      "</annotation>",
+      "<mi>",
+      "</mi>",
+      "<msup>",
+      "x",
+      " ",
+      "&lt;",
+      "&amp;",
+      "/",
+      "=",
+      "<>",
+    ];
+    for (let index = 0; index < 5_000; index += 1) {
+      let mathml = "";
+      for (let count = Math.floor(next() * 9) + 1; count > 0; count -= 1) {
+        mathml += tokens[Math.floor(next() * tokens.length)];
+      }
+      expect(mathmlToPlainText(mathml), JSON.stringify(mathml)).toBe(reference(mathml));
+    }
+  });
+
+  test.each([
+    ["unclosed <annotation", "<annotation ".repeat(20_000)],
+    ["unclosed <annotation>", "<annotation>".repeat(20_000)],
+    ["'<' with no '>'", "<".repeat(150_000)],
+    ["'<>' pairs", "<>".repeat(150_000)],
+    ["'<' runs before one '>'", `${"<".repeat(150_000)}>`],
+  ])("stays linear on %s", (_name, mathml) => {
+    expect(elapsed(() => mathmlToPlainText(mathml))).toBeLessThan(BUDGET_MS);
   });
 });

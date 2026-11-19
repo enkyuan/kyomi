@@ -11,4 +11,6 @@ else
   exit 127
 fi
 
-"$BUN_BIN" run check:env
+# git feeds the refs being pushed on stdin; check:env scans the env files those commits added as well
+# as the current index, so plaintext that a later commit encrypted is still caught.
+"$BUN_BIN" run check:env --pre-push

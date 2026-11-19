@@ -36,13 +36,9 @@ export function useArticleStateMutation() {
       await Promise.all(
         articleListQueryKeys.map((queryKey) => queryClient.cancelQueries({ queryKey })),
       );
-      const snapshots = articleListQueryKeys.map((queryKey) => ({
-        queryKey,
-        snapshot: queryClient.getQueryData<ArticleStateSnapshot>(queryKey),
-      }));
-
       // Update both lists immediately; restore snapshots if the request fails.
-      for (const queryKey of articleListQueryKeys) {
+      const snapshots = articleListQueryKeys.map((queryKey) => {
+        const snapshot = queryClient.getQueryData<ArticleStateSnapshot>(queryKey);
         queryClient.setQueryData<ArticleStateSnapshot>(queryKey, (current) => {
           if (!current) return current;
 
@@ -56,7 +52,13 @@ export function useArticleStateMutation() {
             })),
           };
         });
-      }
+
+        return {
+          queryKey,
+          snapshot,
+          optimistic: queryClient.getQueryData<ArticleStateSnapshot>(queryKey),
+        };
+      });
 
       // An open reader shows the same state (the saved bookmark), so its article follows too.
       const detailKey = articleQueryKey(itemId);
@@ -75,8 +77,13 @@ export function useArticleStateMutation() {
       return { detail, detailKey, snapshots };
     },
     onError: (_error, _variables, context) => {
-      for (const { queryKey, snapshot } of context?.snapshots ?? []) {
-        queryClient.setQueryData(queryKey, snapshot);
+      for (const { queryKey, snapshot, optimistic } of context?.snapshots ?? []) {
+        // Undo only what this mutation wrote. A list that was cleared (sign-out) or replaced
+        // (another account, a refetch) since is no longer ours, and the snapshot would put the
+        // previous account's articles back, and into the persisted copy.
+        if (queryClient.getQueryData<ArticleStateSnapshot>(queryKey) === optimistic) {
+          queryClient.setQueryData(queryKey, snapshot);
+        }
       }
       if (context?.detail) queryClient.setQueryData(context.detailKey, context.detail);
     },

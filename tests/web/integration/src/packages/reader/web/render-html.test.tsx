@@ -43,7 +43,8 @@ describe("RenderHtml", () => {
     expect(root?.querySelector(".promo")).toBeNull();
     expect(root?.querySelector(".sidebar")).toBeNull();
     expect(root?.querySelector(".author-bio")?.hasAttribute("style")).toBe(false);
-    expect(root?.querySelector("span")?.getAttribute("style")).toBe("color: red");
+    expect(root?.querySelector("span")?.hasAttribute("style")).toBe(false);
+    expect(root?.querySelector("[style]")).toBeNull();
   });
 
   test("tags author-bio host as profile thumb and keeps avatar-class image inline", async () => {

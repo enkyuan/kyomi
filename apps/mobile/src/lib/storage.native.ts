@@ -8,5 +8,6 @@ export function createAppStorage(id: string): AppStorage {
     getString: (key) => storage.getString(key),
     set: (key, value) => storage.set(key, value),
     remove: (key) => storage.remove(key),
+    clearAll: () => storage.clearAll(),
   };
 }

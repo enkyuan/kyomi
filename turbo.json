@@ -4,6 +4,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
+      "env": ["EXPO_PUBLIC_AUTH_ORIGIN"],
       "outputs": ["dist/**", "build/**", ".next/**", ".output/**"]
     },
     "dev": {

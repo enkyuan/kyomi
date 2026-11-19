@@ -1,4 +1,4 @@
-import { Sanitizer, type PolicyInput } from "neosanitize";
+import { Sanitizer } from "neosanitize";
 import { normalizeElementAttributes } from "./article-attributes";
 import {
   ARTICLE_HTML_ALLOWED_ATTR,
@@ -15,7 +15,7 @@ import {
  *   images, direct media, and MathML layout
  * - Allow conservative `class` tokens for layout/semantics; keep code `language-*`
  * - Strip interactive/page chrome, scripts, and dangerous URLs
- * - Restrict inline `style` to MathML + spans (KaTeX); rely on tags/classes elsewhere
+ * - Drop inline `style` everywhere; rely on tags and the allowed classes
  * - Accept only compiler-shaped `kyomi-` ids and `data-kyomi-*` hints
  */
 
@@ -47,15 +47,14 @@ const KEEP_WHEN_EMPTY = new Set([
   "mspace",
 ]);
 
-const ARTICLE_HTML_POLICY = {
-  tags: ARTICLE_HTML_ALLOWED_TAGS,
-  attrs: {
-    "*": ARTICLE_HTML_ALLOWED_ATTR,
-    ...ARTICLE_HTML_TAG_ATTRS,
-  },
-} satisfies PolicyInput;
+const ARTICLE_HTML_POLICY = Sanitizer.builder()
+  .allow([...ARTICLE_HTML_ALLOWED_TAGS])
+  .allow("*", ARTICLE_HTML_ALLOWED_ATTR);
+for (const [tag, attrs] of Object.entries(ARTICLE_HTML_TAG_ATTRS)) {
+  ARTICLE_HTML_POLICY.allow(tag, attrs);
+}
 
-const articleHtmlSanitizer = Sanitizer.builder(ARTICLE_HTML_POLICY).build();
+const articleHtmlSanitizer = ARTICLE_HTML_POLICY.build();
 
 /** A player whose only URL failed validation would render as a dead control. */
 function hasPlayableSource(media: Element): boolean {

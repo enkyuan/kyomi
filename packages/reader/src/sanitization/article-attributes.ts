@@ -1,6 +1,6 @@
 import { filterArticleClassAttr } from "./article-classes";
 import { parseSrcset } from "./srcset";
-import { ARTICLE_EMBED_PROVIDERS, ARTICLE_MATHML_TAGS } from "./article-policy";
+import { ARTICLE_EMBED_PROVIDERS } from "./article-policy";
 
 /**
  * Value rules applied after neosanitize has filtered attribute names. neosanitize only blocks
@@ -8,7 +8,13 @@ import { ARTICLE_EMBED_PROVIDERS, ARTICLE_MATHML_TAGS } from "./article-policy";
  * renderer reads is checked against the shape it expects.
  */
 
-/** Compiler-assigned anchor ids (`kyomi-` prefix keeps them clear of app ids and globals). */
+/**
+ * Compiler-assigned anchor ids. The prefix keeps them clear of globals and of the bare ids a
+ * publisher writes, but not of ids an app writes for itself: the compiler derives `kyomi-<slug>`
+ * from every publisher id (`id="command-description"` becomes `kyomi-command-description`), so
+ * this rule accepts any such id. App code must not give its own elements ids that start with
+ * `kyomi-`; `useId()` ids cannot collide.
+ */
 const KYOMI_ANCHOR = /^kyomi-[a-z0-9][a-z0-9-]{0,63}$/;
 const KYOMI_FRAGMENT = /^#kyomi-[a-z0-9][a-z0-9-]{0,63}$/;
 const MAX_SRCSET_CANDIDATES = 8;
@@ -16,7 +22,6 @@ const MAX_SRCSET_CANDIDATES = 8;
 const MAX_DIMENSION = 16_384;
 const MAX_ASPECT_RATIO = 20;
 
-const STYLE_ALLOWED_TAGS = new Set<string>(["span", ...ARTICLE_MATHML_TAGS]);
 const MEDIA_TAGS = new Set(["video", "audio"]);
 const EMBED_PROVIDERS = new Set<string>(ARTICLE_EMBED_PROVIDERS);
 
@@ -140,13 +145,6 @@ export function normalizeElementAttributes(element: Element): void {
       element.removeAttribute("class");
     } else {
       element.setAttribute("class", next);
-    }
-  }
-
-  const styleValue = element.getAttribute("style");
-  if (styleValue !== null) {
-    if (!STYLE_ALLOWED_TAGS.has(tag) || !styleValue.trim()) {
-      element.removeAttribute("style");
     }
   }
 

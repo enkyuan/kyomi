@@ -164,6 +164,19 @@ describe("SourcesDialog OPML import", () => {
     delete (Element.prototype as { getAnimations?: unknown }).getAnimations;
   });
 
+  test("describes itself by an id outside the kyomi- namespace that article anchors use", () => {
+    renderDialog();
+
+    const popup = screen.getByRole("dialog");
+    const describedBy = popup.getAttribute("aria-describedby");
+    const description = describedBy ? document.getElementById(describedBy) : null;
+
+    // The compiler turns a publisher's id="command-description" into kyomi-command-description, so a
+    // fixed id of that shape can be shadowed by an article's anchor.
+    expect(description?.textContent).toContain("paste a feed URL");
+    expect(describedBy).not.toMatch(/^kyomi-/);
+  });
+
   test("shows the import button for OPML-looking URLs", () => {
     renderDialog();
 

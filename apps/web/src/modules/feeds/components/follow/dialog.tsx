@@ -379,12 +379,9 @@ export function FollowSourcesDialog({
     <CommandDialog open={dialogOpen} onOpenChange={setDialogOpen}>
       <CommandDialogPortal>
         <CommandDialogPrimitive.Backdrop className="kyomi-command-overlay" />
-        <CommandDialogPrimitive.Popup
-          aria-describedby="kyomi-command-description"
-          className="kyomi-command-dialog"
-        >
+        <CommandDialogPrimitive.Popup className="kyomi-command-dialog">
           <CommandDialogPrimitive.Title className="sr-only">Add feed</CommandDialogPrimitive.Title>
-          <CommandDialogPrimitive.Description id="kyomi-command-description" className="sr-only">
+          <CommandDialogPrimitive.Description className="sr-only">
             Search feeds, paste a feed URL to follow it, or paste an OPML URL to import feeds.
           </CommandDialogPrimitive.Description>
           <FollowSourcesCommand

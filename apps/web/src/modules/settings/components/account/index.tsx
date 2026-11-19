@@ -62,14 +62,10 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
   const {
     describeSessionDevice,
     describeSessionLocation,
-    emailDraft,
-    emailError,
     formatTimestamp,
     handleCancelEditEmail,
-    handleEmailDraftChange,
     handleRevokeAllSessions,
     handleRevokeOtherSessions,
-    handleSaveEmail,
     handleStartEditEmail,
     isEditingEmail,
     isSessionsError,
@@ -77,8 +73,7 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
     revokeAllSessionsMutation,
     revokeOtherSessionsMutation,
     sessions,
-    updateEmailMutation,
-  } = useAccountPanel({ user, session });
+  } = useAccountPanel({ session });
 
   return (
     <div className={ACCOUNT_SUBSECTION_SPACING_CLASS}>
@@ -113,19 +108,17 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
             </Button>
           </div>
         </div>
-        <EmailDialog
-          draft={emailDraft}
-          error={emailError}
-          isSaving={updateEmailMutation.isPending}
-          onDraftChange={handleEmailDraftChange}
-          onOpenChange={(open) => {
-            if (!open) {
-              handleCancelEditEmail();
-            }
-          }}
-          onSubmit={handleSaveEmail}
-          open={isEditingEmail}
-        />
+        {user?.email ? (
+          <EmailDialog
+            currentEmail={user.email}
+            onOpenChange={(open) => {
+              if (!open) {
+                handleCancelEditEmail();
+              }
+            }}
+            open={isEditingEmail}
+          />
+        ) : null}
       </section>
 
       <section className="space-y-3">

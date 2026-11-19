@@ -14,11 +14,8 @@ on:
       - "**/*.md"
       - "packages/catalog/**"
 
-permissions:
-  contents: read
-  pull-requests: write
-  issues: write
-  statuses: write
+# Each job asks for what it needs; nothing is granted workflow-wide.
+permissions: {}
 
 concurrency:
   group: react-doctor-${{ github.event.pull_request.number || github.ref }}
@@ -27,10 +24,21 @@ concurrency:
 jobs:
   react-doctor:
     runs-on: ubuntu-latest
+    # Read the code, and post the summary comment on the pull request. No commit status is
+    # published (`commit-status: false`) and nothing touches issues, so neither is granted.
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
-      - uses: actions/checkout@v5
+      # Actions run from a full commit SHA, because a tag can be moved to different code. Update the
+      # SHA and its comment together.
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
           fetch-depth: 0
-      - uses: millionco/react-doctor@v2
+          persist-credentials: false
+      - uses: millionco/react-doctor@695e46eee203a5d1855020191aa7e9c010a1250e # v2.4.0
         with:
           commit-status: false
+          # The CLI the action downloads and runs is pinned too; `latest` would run whatever is
+          # published at that moment.
+          version: 0.9.23

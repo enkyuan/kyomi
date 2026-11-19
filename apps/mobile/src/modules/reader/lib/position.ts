@@ -17,3 +17,7 @@ export function writeReaderPosition(articleId: string, index: number): void {
   }
   storage.set(`${PREFIX}${articleId}`, String(index));
 }
+
+export function clearReaderPositions(): void {
+  storage.clearAll();
+}

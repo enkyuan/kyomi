@@ -1,3 +1,4 @@
+import { replaceSpans } from "../../shared/scan";
 import { shiftScript } from "./text";
 
 const SYMBOLS: Record<string, string> = {
@@ -99,7 +100,7 @@ export function texToUnicode(tex: string): string | null {
     if (char === "\\") {
       const match = /^[A-Za-z]+/.exec(tex.slice(index + 1));
       if (!match) return null;
-      const symbol = SYMBOLS[match[0]];
+      const symbol = Object.hasOwn(SYMBOLS, match[0]) ? SYMBOLS[match[0]] : undefined;
       if (symbol === undefined) return null;
       out += symbol;
       index += 1 + match[0].length;
@@ -212,6 +213,29 @@ const MATHML_LAYOUT_TAGS =
   /<(?:msup|msub|msubsup|mfrac|msqrt|mroot|mover|munder|munderover|mtable)\b/;
 
 /**
+ * Removes every `<…>` run with at least one character inside. `/<[^>]+>/g` rescans to the end of
+ * the text for every `<` that has no `>` after it, which is quadratic on a hostile document.
+ */
+function stripTags(text: string): string {
+  let out = "";
+  let cursor = 0;
+  for (let open = text.indexOf("<"); open !== -1; ) {
+    const close = text.indexOf(">", open + 1);
+    if (close === -1) {
+      break;
+    }
+    if (close > open + 1) {
+      out += text.slice(cursor, open);
+      cursor = close + 1;
+      open = text.indexOf("<", cursor);
+    } else {
+      open = text.indexOf("<", open + 1);
+    }
+  }
+  return out + text.slice(cursor);
+}
+
+/**
  * Text for MathML-only math when no SVG could be drawn. Only flat token runs (`x = 1`) have an
  * honest plain-text form; anything with scripts, fractions or roots would read wrong flattened
  * (`2^20` as "220"), so those return null and the caller shows a placeholder.
@@ -220,9 +244,9 @@ export function mathmlToPlainText(mathml: string): string | null {
   if (MATHML_LAYOUT_TAGS.test(mathml)) {
     return null;
   }
-  const text = mathml
-    .replace(/<annotation\b[\s\S]*?<\/annotation>/g, "")
-    .replace(/<[^>]+>/g, "")
+  const text = stripTags(
+    replaceSpans(mathml, { open: /<annotation\b/g, close: /<\/annotation>/g }, () => ""),
+  )
     .replace(/&nbsp;|&#160;/g, " ")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")

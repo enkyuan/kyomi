@@ -1,6 +1,4 @@
 import * as Clipboard from "expo-clipboard";
-import * as Linking from "expo-linking";
-import * as WebBrowser from "expo-web-browser";
 import { Image } from "expo-image";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { Platform, Share, Text, View, useWindowDimensions } from "react-native";
@@ -14,6 +12,8 @@ import {
   type ReaderNativeHost,
 } from "@kyomi/reader/native";
 import type { ReaderDocument } from "@kyomi/reader/document";
+import { normalizeSafeHttpUrl } from "@kyomi/reader/core";
+import { openExternalLink } from "@/lib/external-link";
 import { FONT_FAMILIES } from "@/theme/fonts";
 import { mobileReaderLayout } from "../lib/layout";
 import { readerCanvas } from "../lib/theme";
@@ -40,15 +40,10 @@ type NativeArticleBodyProps = {
   readonly topInset: number;
 };
 
-function openExternal(url: string) {
-  if (url.startsWith("mailto:")) {
-    void Linking.openURL(url);
-    return;
-  }
-  void WebBrowser.openBrowserAsync(url);
-}
+function shareUrl(raw: string) {
+  const url = normalizeSafeHttpUrl(raw);
+  if (!url) return;
 
-function shareUrl(url: string) {
   void Share.share(Platform.OS === "ios" ? { url } : { message: url });
 }
 
@@ -104,7 +99,7 @@ export function NativeArticleBody({
       copyText: async (text) => {
         await Clipboard.setStringAsync(text);
       },
-      openUrl: openExternal,
+      openUrl: openExternalLink,
       renderImage: createReaderImageRenderer({
         background: theme.colors.codeBackground,
         reduceMotion,
@@ -118,6 +113,7 @@ export function NativeArticleBody({
           frameUrl={island.kind === "embed" ? island.frameUrl : undefined}
           html={island.kind === "embed" ? undefined : island.html}
           kind={island.kind}
+          openUrl={openExternalLink}
           title={island.title}
         />
       ),
