@@ -1,10 +1,12 @@
 // @vitest-environment jsdom
 
 import { QueryClient } from "@tanstack/react-query";
-import { describe, expect, test, vi } from "vitest";
+import { afterEach, describe, expect, test, vi } from "vitest";
 import type { InboxListPage } from "@modules/articles/lib/api";
-import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import { dropCorruptHotQueries, prepareHotCacheState } from "@lib/query/cache";
+
+const HOT_CACHE_KEY = "kyomi:hot-query-cache:v2";
+const HOT_CACHE_SCHEMA = 3;
 
 type HotCacheState = Parameters<typeof prepareHotCacheState>[0];
 type DehydratedHotQuery = HotCacheState["queries"][number];
@@ -117,7 +119,7 @@ function successfulQuery(
 }
 
 describe("prepareHotCacheState", () => {
-  test("bounds inbox lists and item details without retaining extra list pages", () => {
+  test("bounds inbox lists without retaining extra list pages", () => {
     const state: HotCacheState = {
       mutations: [],
       queries: [
@@ -128,13 +130,6 @@ describe("prepareHotCacheState", () => {
               inboxPage(`scope-${index}-page-0`),
               inboxPage(`scope-${index}-page-1`),
             ),
-            index,
-          ),
-        ),
-        ...Array.from({ length: 22 }, (_, index) =>
-          successfulQuery(
-            ["inbox", "item-detail", `item-${index}`],
-            { id: `item-${index}` },
             index,
           ),
         ),
@@ -177,9 +172,6 @@ describe("prepareHotCacheState", () => {
         pageParam: `scope-${scope}-page-0-page-param`,
       })),
     );
-    expect(compacted.queries.filter((query) => query.queryKey[1] === "item-detail")).toHaveLength(
-      20,
-    );
   });
 
   test("retains page zero and excludes invalid inbox list data", () => {
@@ -216,42 +208,8 @@ describe("prepareHotCacheState", () => {
 });
 
 describe("dropCorruptHotQueries", () => {
-  const detailKey = (id: string) => ["inbox", "item-detail", id] as const;
   const keysAfter = (...queries: DehydratedHotQuery[]) =>
     dropCorruptHotQueries({ mutations: [], queries }).queries.map((query) => query.queryKey);
-
-  test("retains an item-detail entry holding the article it is keyed by, in its { item } wrapper", () => {
-    const entry = successfulQuery(detailKey("item-a"), { item: articleDetail("item-a") }, 1);
-
-    expect(keysAfter(entry)).toEqual([detailKey("item-a")]);
-  });
-
-  test("retains an entry whose article is gone ({ item: null }) and one with no data yet", () => {
-    const gone = successfulQuery(detailKey("item-a"), { item: null }, 1);
-    const pending: DehydratedHotQuery = {
-      ...successfulQuery(detailKey("item-b"), undefined, 0),
-      state: {
-        ...successfulQuery(detailKey("item-b"), undefined, 0).state,
-        status: "pending",
-        fetchStatus: "fetching",
-      },
-    };
-
-    expect(keysAfter(gone, pending)).toEqual([detailKey("item-a"), detailKey("item-b")]);
-  });
-
-  test("removes an item-detail entry whose article belongs to a different item id", () => {
-    const entry = successfulQuery(detailKey("item-a"), { item: articleDetail("item-b") }, 1);
-
-    expect(keysAfter(entry)).toEqual([]);
-  });
-
-  test("removes an item-detail entry that fails schema validation or lacks the wrapper", () => {
-    const invalid = successfulQuery(detailKey("item-a"), { item: { not: "an article" } }, 1);
-    const unwrapped = successfulQuery(detailKey("item-b"), articleDetail("item-b"), 1);
-
-    expect(keysAfter(invalid, unwrapped)).toEqual([]);
-  });
 
   test("removes a list whose data is null or malformed without losing the valid ones", () => {
     const valid = successfulQuery(["inbox", "items", "ok"], infiniteInboxData(inboxPage("a")), 1);
@@ -281,14 +239,23 @@ describe("dropCorruptHotQueries", () => {
   });
 });
 
-/** The few IndexedDB calls the hot cache makes, over one stored snapshot. */
-function stubIndexedDb(snapshot: unknown) {
-  const store = new Map<string, unknown>([["kyomi:hot-query-cache:v2", snapshot]]);
+/** The few IndexedDB calls the hot cache makes, over one in-memory store. */
+function stubIndexedDb(
+  initial: Record<string, unknown> = {},
+  options: { failWrites?: () => boolean } = {},
+) {
+  const store = new Map<string, unknown>(Object.entries(initial));
+  const writes: unknown[] = [];
   const database = {
     createObjectStore: () => undefined,
     close: () => undefined,
     transaction: () => {
-      const transaction: { oncomplete?: () => void; objectStore: () => unknown } = {
+      const transaction: {
+        oncomplete?: () => void;
+        onabort?: () => void;
+        error?: unknown;
+        objectStore: () => unknown;
+      } = {
         objectStore: () => ({
           get: (key: string) => {
             const request: { result?: unknown; onsuccess?: () => void } = {};
@@ -300,8 +267,16 @@ function stubIndexedDb(snapshot: unknown) {
             return request;
           },
           put: (value: unknown, key: string) => {
-            store.set(key, value);
-            queueMicrotask(() => transaction.oncomplete?.());
+            queueMicrotask(() => {
+              if (options.failWrites?.()) {
+                transaction.error = new DOMException("full", "QuotaExceededError");
+                transaction.onabort?.();
+                return;
+              }
+              store.set(key, value);
+              writes.push(value);
+              transaction.oncomplete?.();
+            });
           },
           delete: (key: string) => {
             store.delete(key);
@@ -319,7 +294,7 @@ function stubIndexedDb(snapshot: unknown) {
         const request: { result: unknown; onupgradeneeded?: () => void; onsuccess?: () => void } = {
           result: database,
         };
-        setTimeout(() => {
+        queueMicrotask(() => {
           request.onupgradeneeded?.();
           request.onsuccess?.();
         });
@@ -327,33 +302,171 @@ function stubIndexedDb(snapshot: unknown) {
       },
     },
   });
+  return { store, writes };
+}
+
+function snapshot(overrides: Record<string, unknown> = {}) {
+  return {
+    savedAt: Date.now(),
+    schema: HOT_CACHE_SCHEMA,
+    userId: "user-1",
+    state: {
+      mutations: [],
+      queries: [successfulQuery(["folders", "all"], [{ id: "folder-1" }], 1)],
+    },
+    ...overrides,
+  };
 }
 
 describe("hydrateHotQueryCache", () => {
-  test("restores the snapshot without touching the queries the page already holds", async () => {
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  async function load() {
     vi.resetModules();
-    const { hydrateHotQueryCache } = await import("@lib/query/cache");
+    return import("@lib/query/cache");
+  }
+
+  test("restores the snapshot without touching the queries the page already holds", async () => {
+    const { hydrateHotQueryCache } = await load();
     stubIndexedDb({
-      savedAt: Date.now(),
-      state: {
-        mutations: [],
-        queries: [
-          successfulQuery(["inbox", "item-detail", "item-a"], { item: articleDetail("item-a") }, 1),
-          successfulQuery(["inbox", "item-detail", "item-bad"], articleDetail("item-bad"), 1),
-        ],
-      },
+      [HOT_CACHE_KEY]: snapshot({
+        state: {
+          mutations: [],
+          queries: [
+            successfulQuery(["folders", "all"], [{ id: "folder-1" }], 1),
+            successfulQuery(["inbox", "items", "bad"], { pages: [{ invalid: true }] }, 1),
+          ],
+        },
+      }),
     });
     const queryClient = new QueryClient();
-    const live = { item: articleDetail("item-live") };
-    queryClient.setQueryData(["inbox", "item-detail", "item-live"], live);
+    queryClient.setQueryData(["feeds", "followed"], ["live"]);
 
-    await hydrateHotQueryCache(queryClient);
+    await hydrateHotQueryCache(queryClient, "user-1");
 
-    // The page's own query survives, the valid snapshot entry is restored, the malformed one is not.
-    expect(queryClient.getQueryData(["inbox", "item-detail", "item-live"])).toEqual(live);
-    expect(queryClient.getQueryData(["inbox", "item-detail", "item-a"])).toEqual({
-      item: articleDetail("item-a"),
+    expect(queryClient.getQueryData(["feeds", "followed"])).toEqual(["live"]);
+    expect(queryClient.getQueryData(["folders", "all"])).toEqual([{ id: "folder-1" }]);
+    expect(queryClient.getQueryData(["inbox", "items", "bad"])).toBeUndefined();
+  });
+
+  test.each([
+    ["another user", { userId: "user-2" }],
+    ["an older schema", { schema: HOT_CACHE_SCHEMA - 1 }],
+    ["no schema (a snapshot from before versioning)", { schema: undefined, userId: undefined }],
+    ["more than a day ago", { savedAt: Date.now() - 25 * 60 * 60_000 }],
+  ])("discards a snapshot from %s unread and deletes it", async (_name, overrides) => {
+    const { hydrateHotQueryCache } = await load();
+    const { store } = stubIndexedDb({ [HOT_CACHE_KEY]: snapshot(overrides) });
+    const queryClient = new QueryClient();
+
+    await hydrateHotQueryCache(queryClient, "user-1");
+
+    expect(queryClient.getQueryData(["folders", "all"])).toBeUndefined();
+    expect(store.has(HOT_CACHE_KEY)).toBe(false);
+  });
+});
+
+describe("hot cache persistence", () => {
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  async function setup(options?: Parameters<typeof stubIndexedDb>[1]) {
+    vi.resetModules();
+    vi.useFakeTimers();
+    const cache = await import("@lib/query/cache");
+    const db = stubIndexedDb({}, options);
+    const queryClient = new QueryClient();
+    const unsubscribe = cache.subscribeHotQueryCachePersistence(queryClient, "user-1");
+    const flush = () => vi.advanceTimersByTimeAsync(1_500);
+    return { ...cache, ...db, queryClient, unsubscribe, flush };
+  }
+
+  test("saves only the hot queries, stamped with the user and schema version", async () => {
+    const { writes, queryClient, flush, unsubscribe } = await setup();
+
+    queryClient.setQueryData(["folders", "all"], [{ id: "folder-1" }]);
+    queryClient.setQueryData(["inbox", "item-detail", "item-a"], { item: { id: "item-a" } });
+    queryClient.setQueryData(["unrelated"], "x");
+    await flush();
+
+    expect(writes).toHaveLength(1);
+    const saved = writes[0] as ReturnType<typeof snapshot>;
+    expect(saved.userId).toBe("user-1");
+    expect(saved.schema).toBe(HOT_CACHE_SCHEMA);
+    expect(saved.state.queries.map((query) => query.queryKey)).toEqual([["folders", "all"]]);
+    unsubscribe();
+  });
+
+  test("only data arriving or a query leaving schedules a write, not observers or fetches", async () => {
+    const { queryClient, flush, unsubscribe } = await setup();
+
+    queryClient.setQueryData(["folders", "all"], [{ id: "folder-1" }]);
+    await flush();
+    const cache = queryClient.getQueryCache();
+    const query = cache.find({ queryKey: ["folders", "all"] })!;
+    // The query's own garbage-collection timer is already pending; a write adds one more.
+    const baseline = vi.getTimerCount();
+
+    cache.notify({ type: "observerResultsUpdated", query });
+    cache.notify({ type: "observerAdded", query, observer: {} as never });
+    cache.notify({ type: "updated", query, action: { type: "fetch" } });
+    expect(vi.getTimerCount()).toBe(baseline);
+
+    cache.notify({
+      type: "updated",
+      query,
+      action: { type: "success", data: [], dataUpdatedAt: 1 } as never,
     });
-    expect(queryClient.getQueryData(["inbox", "item-detail", "item-bad"])).toBeUndefined();
+    expect(vi.getTimerCount()).toBe(baseline + 1);
+    unsubscribe();
+  });
+
+  test("does not rewrite a snapshot that has not changed", async () => {
+    const { writes, queryClient, flush, unsubscribe } = await setup();
+
+    queryClient.setQueryData(["folders", "all"], [{ id: "folder-1" }]);
+    await flush();
+    // A hot query that never succeeded leaves the cache: an event, but nothing in the snapshot.
+    const cache = queryClient.getQueryCache();
+    cache.build(queryClient, { queryKey: ["feeds", "followed", "pending"] });
+    cache.remove(cache.find({ queryKey: ["feeds", "followed", "pending"] })!);
+    await flush();
+    unsubscribe();
+
+    expect(writes).toHaveLength(1);
+  });
+
+  test("keeps the last good snapshot when a write fails, and stops after a full store", async () => {
+    let failing = false;
+    const { writes, store, queryClient, flush, unsubscribe } = await setup({
+      failWrites: () => failing,
+    });
+
+    queryClient.setQueryData(["folders", "all"], [{ id: "folder-1" }]);
+    await flush();
+    expect(writes).toHaveLength(1);
+
+    failing = true;
+    queryClient.setQueryData(["folders", "all"], [{ id: "folder-2" }]);
+    await flush();
+    failing = false;
+    // A quota error disables persisting: the later change is not attempted.
+    queryClient.setQueryData(["folders", "all"], [{ id: "folder-3" }]);
+    await flush();
+    unsubscribe();
+
+    expect(writes).toHaveLength(1);
+    expect((store.get(HOT_CACHE_KEY) as ReturnType<typeof snapshot>).state.queries).toHaveLength(1);
+  });
+
+  test("clearing does not wait on a write that never settles", async () => {
+    const { clearHotQueryCache } = await setup();
+    const cleared = clearHotQueryCache();
+
+    await vi.advanceTimersByTimeAsync(2_500);
+    await expect(cleared).resolves.toBeUndefined();
   });
 });
