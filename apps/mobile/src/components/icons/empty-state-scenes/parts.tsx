@@ -26,6 +26,8 @@ export type EmptyStateTheme = {
   /** Opaque mid tones for shapes drawn as plain strokes (a padlock shackle): fill and its edge. */
   tone: string;
   toneEdge: string;
+  /** The recessed inside of something open (a box): darker than its walls on either theme. */
+  cavity: string;
   /** A visible line colour for interior details (a fold, a flap) that must read on either theme. */
   detail: string;
   detailOpacity: number;
@@ -48,6 +50,7 @@ export function getEmptyStateTheme(isDark: boolean): EmptyStateTheme {
         paperOpacity: 0.1,
         edge: { from: "white", fromOpacity: 0.16, to: "white", toOpacity: 0.07 },
         shadowOpacity: 0,
+        cavity: "#070707",
         detail: "white",
         detailOpacity: 0.2,
         base: "#0F0F0F",
@@ -67,6 +70,7 @@ export function getEmptyStateTheme(isDark: boolean): EmptyStateTheme {
         paperOpacity: 1,
         edge: { from: "#D6D6D6", fromOpacity: 1, to: "#E4E4E4", toOpacity: 1 },
         shadowOpacity: 0.06,
+        cavity: "#E4E4E4",
         detail: "#C9C9C9",
         detailOpacity: 1,
         base: "#FAFAFA",

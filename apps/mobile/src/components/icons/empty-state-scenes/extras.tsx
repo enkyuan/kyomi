@@ -158,48 +158,32 @@ const readerNoHighlights: Scene = (context) => {
 /** Advanced, no data: a big open box seen in perspective with nothing in it. */
 const advancedNoData: Scene = (context) => {
   const { theme } = context;
-  const outline: readonly Point[] = [
-    [96, 48],
-    [150, 74],
-    [150, 112],
-    [96, 138],
-    [42, 112],
-    [42, 74],
+  const back: readonly Point[] = [
+    [54, 54],
+    [138, 54],
+    [152, 96],
+    [40, 96],
   ];
-  const top: readonly Point[] = [
-    [96, 48],
-    [150, 74],
-    [96, 100],
-    [42, 74],
-  ];
-  const opening: readonly Point[] = [
-    [96, 58],
-    [134, 76],
-    [96, 94],
-    [58, 76],
+  const inside: readonly Point[] = [
+    [62, 61],
+    [130, 61],
+    [140, 92],
+    [52, 92],
   ];
   return (
-    <G transform="translate(0 -4)">
-      <Surface context={context} d={roundedPoly(outline, 8)} />
-      <Path d={roundedPoly(top, 4)} fill={theme.lines[0]} fillOpacity={theme.lineOpacities[0]} />
-      <Path d={roundedPoly(opening, 5)} fill={theme.tone} />
-      <Path
-        d="M42 74L96 100L150 74M96 100V138"
-        fill="none"
-        opacity={theme.detailOpacity}
-        stroke={theme.detail}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1.2}
-      />
-      <Path
-        d="M86 76H106"
-        fill="none"
-        opacity={theme.iconOpacity}
-        stroke={theme.icon}
-        strokeLinecap="round"
-        strokeWidth={3.5}
-      />
+    <G transform="translate(0 -2)">
+      <Surface context={context} d={roundedPoly(back, 8)} />
+      <Path d={roundedPoly(inside, 5)} fill={theme.cavity} />
+      <Surface context={context} d={rr(40, 90, 112, 56, 14)} strokeD={rr(40, 90, 112, 56, 14, 0.5)}>
+        <Path
+          d="M86 120H106"
+          fill="none"
+          opacity={theme.iconOpacity}
+          stroke={theme.icon}
+          strokeLinecap="round"
+          strokeWidth={3.5}
+        />
+      </Surface>
     </G>
   );
 };
@@ -214,10 +198,10 @@ const feedbackSent: Scene = (context) => {
     [122, 110],
   ];
   return (
-    <G transform="translate(0 2)">
+    <G transform="translate(0 6)">
       <Surface
         context={context}
-        d={rr(36, 104, 58, 42, 10)}
+        d={rr(34, 104, 56, 40, 10)}
         strokeD={rr(36, 104, 58, 42, 10, 0.5)}
         tilt={-4}
       >
@@ -232,7 +216,7 @@ const feedbackSent: Scene = (context) => {
         />
       </Surface>
       <Path
-        d="M80 104C92 120 110 118 120 102"
+        d="M82 104C96 124 120 120 130 98"
         fill="none"
         opacity={theme.iconOpacity}
         stroke={theme.icon}
@@ -240,7 +224,7 @@ const feedbackSent: Scene = (context) => {
         strokeLinecap="round"
         strokeWidth={2.5}
       />
-      <Surface context={context} d={roundedPoly(plane, 4)}>
+      <Surface context={context} d={roundedPoly(plane, 4)} x={8} y={-8}>
         <Path
           d="M152 44L126 86"
           fill="none"
@@ -284,25 +268,33 @@ const offline: Scene = (context) => {
 
 /** Load error: one card torn in two along a zig-zag, its halves drawn apart, with a warning mark. */
 const loadError: Scene = (context) => {
-  const zig = "L104 66L90 84L102 104L88 124L96 148";
-  const zigBack = "L88 124L102 104L90 84L104 66Z";
+  const left: readonly Point[] = [
+    [50, 44],
+    [96, 44],
+    [104, 66],
+    [90, 84],
+    [102, 104],
+    [88, 124],
+    [96, 148],
+    [50, 148],
+  ];
+  const right: readonly Point[] = [
+    [96, 44],
+    [142, 44],
+    [142, 148],
+    [96, 148],
+    [88, 124],
+    [102, 104],
+    [90, 84],
+    [104, 66],
+  ];
   return (
     <G>
-      <Surface
-        context={context}
-        d={`M62 44H96${zig}H62C55 148 50 144 50 138V56C50 49 55 44 62 44Z`}
-        tilt={-4}
-        x={-4}
-      >
+      <Surface context={context} d={roundedPoly(left, 7)} tilt={-4} x={-4}>
         <Bar context={context} tone={1} width={22} x={60} y={58} />
         <Bar context={context} tone={2} width={16} x={60} y={72} />
       </Surface>
-      <Surface
-        context={context}
-        d={`M96 44H130C137 44 142 49 142 56V138C142 144 137 148 130 148H96${zigBack}`}
-        tilt={4}
-        x={4}
-      >
+      <Surface context={context} d={roundedPoly(right, 7)} tilt={4} x={4}>
         <Badge context={context} size={22} x={108} y={92}>
           <Path d="M12 3.5L21.5 19.5H2.5Z" />
           <Path d="M12 10V14" />

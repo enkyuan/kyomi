@@ -166,7 +166,7 @@ function Magnifier({
 }) {
   return (
     <G
-      transform={`${mirrored ? "translate(192 0) scale(-1 1) " : ""}translate(96 96) scale(1.18) translate(-97 -95)`}
+      transform={`${mirrored ? "translate(192 0) scale(-1 1) " : ""}translate(96 96) scale(1.3) translate(-94.5 -93.5)`}
     >
       <Surface context={context} d={magnifierPath(86, 84, 31, 6.5, 62)} />
       <Path
@@ -183,9 +183,9 @@ function Magnifier({
 const searchPrompt: Scene = (context) => (
   <>
     <Magnifier context={context}>
-      <Accent context={context} d="M77 73V95" width={2.6} />
-      <Rect fill={context.theme.toneEdge} height={7.5} rx={3.75} width={22} x={82} y={72.5} />
-      <Rect fill={context.theme.toneEdge} height={7.5} rx={3.75} width={15} x={82} y={87.5} />
+      <Accent context={context} d="M74 73V95" width={2.6} />
+      <Rect fill={context.theme.toneEdge} height={7.5} rx={3.75} width={22} x={77.5} y={73} />
+      <Rect fill={context.theme.toneEdge} height={7.5} rx={3.75} width={15} x={77.5} y={87.5} />
     </Magnifier>
   </>
 );
