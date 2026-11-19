@@ -27,7 +27,7 @@ Import `@kyomi/ui/styles/tokens.css` for plain CSS custom properties and
 palette, spacing, corners, control heights, stroke, focus, opacity, touch target, and motion roles.
 Tailwind apps import `@kyomi/ui/globals.css` for the Tailwind theme bridge and existing UI CSS.
 The web app declares the `kyomi-stylex` layer before Tailwind utilities so caller utilities can
-override primitive defaults. `@kyomi/ui/styles/native-theme.css` supplies the native palette and
+override primitive defaults. `@kyomi/ui/styles/native.css` supplies the native palette and
 typography through Uniwind's light and dark variants. [Uniwind theming](https://docs.uniwind.dev/theming/basics)
 
 The [primitive catalog](primitives.md) records each family's variants, styling, tokens and context.
