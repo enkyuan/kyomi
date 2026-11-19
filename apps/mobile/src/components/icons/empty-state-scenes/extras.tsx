@@ -155,44 +155,30 @@ const readerNoHighlights: Scene = (context) => {
   );
 };
 
-/** One external drive in the shared style, traced from the reference silhouette: leaning forward, flat back edge, fully rounded front. */
+/** A memory card with a chamfered corner, a blank label recess and a row of contact pads. */
 const advancedNoData: Scene = (context) => {
   const { theme } = context;
-  const port = { fill: theme.cavity } as const;
+  const pad = { fill: theme.cavity } as const;
   const body =
-    "M76.8 41.5H115.2C124.8 41.5 131.84 45.98 134.4 54.3L151.36 125.34Q153.6 133.66 152.32 139.1Q151.04 150.94 139.52 150.94H52.48Q40.96 150.94 39.68 139.1Q38.4 133.66 40.64 125.34L56.32 54.3C58.88 45.98 65.92 41.5 76.8 41.5Z";
-  const detail = {
-    fill: "none",
-    opacity: theme.detailOpacity,
-    stroke: theme.detail,
-    strokeLinecap: "round",
-    strokeWidth: 1.2,
-  } as const;
+    "M64 32H114Q118 32 121 35L135 49Q138 52 138 56V150Q138 160 128 160H64Q54 160 54 150V42Q54 32 64 32Z";
   return (
     <Surface context={context} d={body}>
-      <Path
-        d="M76.8 41.5H115.2C124.8 41.5 131.84 45.98 134.4 54.3L151.36 125.34Q153.6 133.66 152.32 139.1Q151.04 150.94 139.52 150.94H52.48Q40.96 150.94 39.68 139.1Q38.4 133.66 40.64 125.34L56.32 54.3C58.88 45.98 65.92 41.5 76.8 41.5Z"
-        fill={theme.lines[0]}
-        fillOpacity={theme.lineOpacities[0]}
+      <Path d={rr(64, 62, 64, 56, 9)} fill={theme.lines[0]} fillOpacity={theme.lineOpacities[0]} />
+      <Rect height={15} rx={2.75} width={5.5} x={65.0} y={136} {...pad} />
+      <Rect height={15} rx={2.75} width={5.5} x={75.2} y={136} {...pad} />
+      <Rect height={15} rx={2.75} width={5.5} x={85.4} y={136} {...pad} />
+      <Rect height={15} rx={2.75} width={5.5} x={95.6} y={136} {...pad} />
+      <Rect height={15} rx={2.75} width={5.5} x={105.8} y={136} {...pad} />
+      <Rect height={15} rx={2.75} width={5.5} x={116.0} y={136} {...pad} />
+      <Rect
+        fill={theme.icon}
+        fillOpacity={theme.iconOpacity}
+        height={15}
+        rx={2.75}
+        width={5.5}
+        x={126.2}
+        y={136}
       />
-      <Path
-        d="M80.0 50.14H112.0C120.96 50.14 126.08 54.3 128.0 60.7L146.24 121.5Q147.2 131.74 139.52 131.74H52.48Q44.8 131.74 45.76 121.5L64.0 60.7C65.92 54.3 71.04 50.14 80.0 50.14Z"
-        fill={theme.base}
-      />
-      <Path
-        d="M80.0 50.14H112.0C120.96 50.14 126.08 54.3 128.0 60.7L146.24 121.5Q147.2 131.74 139.52 131.74H52.48Q44.8 131.74 45.76 121.5L64.0 60.7C65.92 54.3 71.04 50.14 80.0 50.14Z"
-        fill={context.paints.fill}
-      />
-      <Path
-        d="M40.0 131.74H152.0Q153.6 134.3 152.32 139.1Q151.04 150.3 139.52 150.3H52.48Q40.96 150.3 39.68 139.1Q38.4 134.3 40.0 131.74Z"
-        fill={theme.lines[0]}
-        fillOpacity={theme.lineOpacities[0]}
-      />
-      <Path d="M44.8 131.74H147.2" {...detail} />
-      <Rect height={10.88} rx={5.44} width={32.0} x={48.0} y={136.22} {...port} />
-      <Circle cx={105.6} cy={141.66} r={4.48} {...port} />
-      <Circle cx={116.8} cy={141.66} r={4.48} {...port} />
-      <Circle cx={128.0} cy={141.66} fill={theme.icon} fillOpacity={theme.iconOpacity} r={4.48} />
     </Surface>
   );
 };
