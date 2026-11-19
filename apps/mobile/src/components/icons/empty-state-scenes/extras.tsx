@@ -158,31 +158,24 @@ const readerNoHighlights: Scene = (context) => {
 /** Advanced, no data: a big open box seen in perspective with nothing in it. */
 const advancedNoData: Scene = (context) => {
   const { theme } = context;
-  const back: readonly Point[] = [
-    [54, 54],
-    [138, 54],
-    [152, 96],
-    [40, 96],
-  ];
-  const inside: readonly Point[] = [
-    [62, 61],
-    [130, 61],
-    [140, 92],
-    [52, 92],
-  ];
   return (
-    <G transform="translate(0 -2)">
-      <Surface context={context} d={roundedPoly(back, 8)} />
-      <Path d={roundedPoly(inside, 5)} fill={theme.cavity} />
-      <Surface context={context} d={rr(40, 90, 112, 56, 14)} strokeD={rr(40, 90, 112, 56, 14, 0.5)}>
+    <G transform="translate(0 -10)">
+      <Surface context={context} d={rr(36, 74, 120, 64, 18)} strokeD={rr(36, 74, 120, 64, 18, 0.5)}>
         <Path
-          d="M86 120H106"
-          fill="none"
-          opacity={theme.iconOpacity}
-          stroke={theme.icon}
-          strokeLinecap="round"
-          strokeWidth={3.5}
+          d={rr(45, 82, 102, 32, 11)}
+          fill={theme.lines[0]}
+          fillOpacity={theme.lineOpacities[0]}
         />
+        <Path
+          d="M48 119H144"
+          fill="none"
+          opacity={theme.detailOpacity}
+          stroke={theme.detail}
+          strokeLinecap="round"
+          strokeWidth={1.2}
+        />
+        <Rect fill={theme.toneEdge} height={6} rx={3} width={30} x={50} y={125} />
+        <Circle cx={136} cy={128} fill={theme.icon} fillOpacity={theme.iconOpacity} r={3.2} />
       </Surface>
     </G>
   );

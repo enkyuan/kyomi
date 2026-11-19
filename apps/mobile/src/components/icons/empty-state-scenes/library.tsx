@@ -183,9 +183,9 @@ function Magnifier({
 const searchPrompt: Scene = (context) => (
   <>
     <Magnifier context={context}>
-      <Accent context={context} d="M74 73V95" width={2.6} />
-      <Rect fill={context.theme.toneEdge} height={7.5} rx={3.75} width={22} x={77.5} y={73} />
-      <Rect fill={context.theme.toneEdge} height={7.5} rx={3.75} width={15} x={77.5} y={87.5} />
+      <Accent context={context} d="M75 74.5V93.5" width={2.6} />
+      <Rect fill={context.theme.toneEdge} height={7.5} rx={3.75} width={22} x={78.5} y={74.5} />
+      <Rect fill={context.theme.toneEdge} height={7.5} rx={3.75} width={15} x={78.5} y={86} />
     </Magnifier>
   </>
 );
