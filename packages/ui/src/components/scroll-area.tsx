@@ -11,11 +11,14 @@ export function ScrollArea({
   scrollFade = false,
   scrollFadeClassName,
   scrollbarGutter = false,
+  scrollbarPlacement = "container",
   ...props
 }: ScrollAreaPrimitive.Root.Props & {
   scrollFade?: boolean;
   scrollFadeClassName?: string;
   scrollbarGutter?: boolean;
+  /** `viewport` pins the vertical scrollbar to the window edge; see `ScrollBar`. */
+  scrollbarPlacement?: "container" | "viewport";
 }): React.ReactElement {
   return (
     <ScrollAreaPrimitive.Root className={cn("size-full min-h-0", className)} {...props}>
@@ -31,8 +34,13 @@ export function ScrollArea({
       >
         {children}
       </ScrollAreaPrimitive.Viewport>
-      <ScrollBar orientation="vertical" />
-      <ScrollBar orientation="horizontal" />
+      <ScrollBar
+        className={scrollbarPlacement === "viewport" ? "z-50" : undefined}
+        orientation="vertical"
+        placement={scrollbarPlacement}
+        track={scrollbarGutter ? "none" : "hover"}
+      />
+      <ScrollBar orientation="horizontal" track={scrollbarGutter ? "none" : "hover"} />
       <ScrollAreaPrimitive.Corner data-slot="scroll-area-corner" />
     </ScrollAreaPrimitive.Root>
   );
