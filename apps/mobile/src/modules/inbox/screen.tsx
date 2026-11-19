@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Platform, useColorScheme, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useSharedValue } from "react-native-reanimated";
-import { EmptyStateIcon } from "@/components/icons/empty-state";
 import { Badge } from "@/components/ui/badge";
 import { Host } from "@expo/ui";
 import { SymbolView } from "expo-symbols";
@@ -19,7 +18,7 @@ import { FilterIcon } from "@/components/icons/filter";
 import { CollapsingHeader, HeaderActionButton, COMPACT_NAV_HEIGHT } from "@ui/header";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
 import type { InboxFilter } from "./model";
-import { EmptyState } from "@modules/inbox/components/empty-state";
+import { EmptyStateView, type EmptyStateVariant } from "@modules/inbox/components/empty-states";
 import { List } from "@modules/inbox/components/list";
 import { type ArticleScope } from "@modules/inbox/hooks/use-articles";
 import { useSubscribedFeeds } from "@modules/inbox/hooks/use-feeds";
@@ -119,11 +118,27 @@ function AndroidHeaderActions({ filter, onFilterChange, foreground }: HeaderActi
   );
 }
 
-function emptyHeader(hasNoSubscribedFeeds: boolean, filter: InboxFilter) {
-  if (hasNoSubscribedFeeds) return "No feeds yet";
-  if (filter === "saved") return "No saved articles yet";
-  if (filter === "unread") return "No unread articles";
-  return "No articles yet";
+function emptyVariant(
+  hasNoSubscribedFeeds: boolean,
+  scope: ArticleScope,
+  filter: InboxFilter,
+): EmptyStateVariant {
+  if (hasNoSubscribedFeeds) return "sources-none";
+  if (filter === "saved") return "saved";
+  if (filter === "unread") return "unread-caught-up";
+  return scope === "explore" ? "all-feeds" : "my-feed";
+}
+
+function ExploreHint() {
+  return (
+    <>
+      Add a new feed or check out{" "}
+      <Badge size="default" style={{ transform: [{ translateY: 3 }] }} variant="secondary">
+        Explore
+      </Badge>{" "}
+      to get started.
+    </>
+  );
 }
 
 export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
@@ -159,28 +174,11 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
       <List
         filter={filter}
         ListEmptyComponent={
-          <EmptyState
-            asset={<EmptyStateIcon size={176} />}
-            description={
-              hasNoSubscribedFeeds ? (
-                <>
-                  Add a new feed or check out{" "}
-                  <Badge
-                    size="default"
-                    style={{ transform: [{ translateY: 3 }] }}
-                    variant="secondary"
-                  >
-                    Explore
-                  </Badge>{" "}
-                  to get started.
-                </>
-              ) : (
-                "New stories will show up here after\nfeeds publish or refresh."
-              )
-            }
-            header={emptyHeader(hasNoSubscribedFeeds, filter)}
+          <EmptyStateView
+            description={hasNoSubscribedFeeds ? <ExploreHint /> : undefined}
             height={height}
             topContentInset={topContentInset}
+            variant={emptyVariant(hasNoSubscribedFeeds, scope, filter)}
           />
         }
         scope={scope}

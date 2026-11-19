@@ -20,6 +20,20 @@ export const BLODE_STROKE_WIDTH = 2;
 
 const viewBox = "0 0 24 24" as const;
 
+export const ArchiveNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M20 15.2v-4.6c0-.5601 0-.84-.109-1.054a1 1 0 0 0-.437-.437C19.2401 9 18.9601 9 18.4 9H5.6c-.56 0-.84 0-1.054.109a1 1 0 0 0-.437.437C4 9.76 4 10.04 4 10.6v4.6c0 1.6802 0 2.5202.327 3.162a3 3 0 0 0 1.311 1.311C6.2798 20 7.1198 20 8.8 20h6.4c1.6802 0 2.5202 0 3.162-.327a3 3 0 0 0 1.311-1.311C20 17.7202 20 16.8802 20 15.2Z",
+      stroke: { linejoin: "round" },
+    },
+    {
+      d: "M6 8V4c0-.5523.4477-1 1-1h3.0858c.2652 0 .5196.1054.7071.2929l1.4142 1.4142c.1875.1875.4419.2929.7071.2929H17c.5523 0 1 .4477 1 1v2M8 13h4",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
 export const ArrowShareRightNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [
@@ -33,6 +47,15 @@ export const ArrowShareRightNativeIcon: BlodeNativeIcon = {
 export const BarsThreeNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [{ d: "M3 12h18M3 6h18M3 18h18", stroke: { linecap: "round", linejoin: "round" } }],
+};
+
+export const BellOffNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "m4.4529 14.6035-.9913-.1322zm.7541-5.6561.9913.1321zM3.7071 2.2929c-.3905-.3905-1.0237-.3905-1.4142 0s-.3905 1.0237 0 1.4142zM20.293 21.707c.3905.3905 1.0237.3905 1.4142 0s.3905-1.0237 0-1.4142zm-1.5-12.7596.9912-.1322zM8.8339 2.6655c-.5054.2229-.7344.8132-.5115 1.3185.2228.5054.8131.7344 1.3185.5115zm9.6123 11.2472c.073.5475.576.9321 1.1234.8591s.932-.5759.8591-1.1234zm-3.3806 3.7311C14.5106 19.0996 13.297 20 12 20v2c2.2812 0 4.1429-1.5678 4.9344-3.6438zM12 20c-1.297 0-2.5106-.9004-3.0656-2.3562l-1.8688.7124C7.8571 20.4322 9.7188 22 12 22zm-6.556-5.2643.7542-5.6562-1.9824-.2643-.7542 5.6561zM2.293 3.7071l3.2004 3.2004 1.4143-1.4142L3.707 2.293zm3.0616 1.96a7.83 7.83 0 0 0-1.1387 3.1481l1.9825.2643a5.83 5.83 0 0 1 .848-2.3457zm.1388 1.2405L17.293 18.707l1.4142-1.4142L6.9076 5.4933zM17.293 18.707l3 3 1.4142-1.4142-3-3zM18 17H7.4265v2H18zM3.4616 14.4713C3.142 16.8693 5.0074 19 7.4266 19v-2c-1.2096 0-2.1424-1.0654-1.9825-2.2643zM12 4c2.9336 0 5.4141 2.1717 5.8018 5.0795l1.9824-.2643C19.264 4.9137 15.936 2 12 2zm0-2a7.83 7.83 0 0 0-3.1661.6655l.807 1.83A5.835 5.835 0 0 1 12 4zm5.8018 7.0795.6444 4.8332 1.9825-.2643-.6445-4.8332z",
+    },
+  ],
 };
 
 export const BlankPagePortraitNativeIcon: BlodeNativeIcon = {
@@ -124,6 +147,16 @@ export const ClockNativeIcon: BlodeNativeIcon = {
   ],
 };
 
+export const CloudSimpleDisconnectedNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M19 18.584c1.7659-.7716 3-2.5337 3-4.584 0-2.7614-2.2386-5-5-5-.2269 0-.4503.0151-.6692.0444-.5141.0688-1.0424-.1665-1.3072-.6124C13.8039 6.3772 11.5628 5 9 5c-3.866 0-7 3.134-7 7 0 2.3787 1.1865 4.4804 3 5.7453M14 16l-2 2m0 0-2 2m2-2-2-2m2 2 2 2",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
 export const CompassPointerNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [
@@ -192,6 +225,16 @@ export const ExternalLinkFilledNativeIcon: BlodeNativeIcon = {
   ],
 };
 
+export const EyeClosedNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M4 12.9381c4.6451 4.939 11.3548 4.939 16 0M4 7.7043C6.3226 5.2348 9.1613 4 12 4s5.6774 1.2347 8 3.7041M12 16.75V20m-3.5-3.75L7 18.7321m8.5-2.4821 1.5 2.4821",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
 export const FileArrowLeftInNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [
@@ -223,6 +266,36 @@ export const FilterAscFilledNativeIcon: BlodeNativeIcon = {
   ],
 };
 
+export const FolderAddLeftNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M3 10V7c0-1.6569 1.3431-3 3-3h2.9296a2 2 0 0 1 1.6641.8906l.8126 1.2188A2 2 0 0 0 13.0704 7H18c1.6569 0 3 1.3431 3 3v6c0 1.6569-1.3431 3-3 3h-6m-7-5v3m0 0v3m0-3H2m3 0h3",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
+export const FolderOpenNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M4.4408 19h13.5888a2 2 0 0 0 1.909-1.4035l1.6557-5.2982c.2012-.644-.2799-1.2983-.9545-1.2983H20M4.4408 19a1.441 1.441 0 0 0 1.3751-1.011l1.7455-5.5856A2 2 0 0 1 9.4704 11H20M4.4408 19C3.645 19 3 18.3549 3 17.5592V7c0-1.6569 1.3431-3 3-3h2.3945a3 3 0 0 1 2.4961 1.3359l.5157.7735A2 2 0 0 0 13.0704 7H18c1.1046 0 2 .8954 2 2v2",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
+export const HighlightNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M12.0003 21c-.5 0-3.063-.8706-5.2825-3.0901-3.71-3.71-4.6597-8.7753-2.1213-11.3137C6.6822 4.5105 10.4738 4.7797 13.8179 7m3.2887 3c2.8861 3.3312 4.108 6.7286 1.8937 8.5-1.6588 1.3271-3.7579-.2076-4.9827-1.3906M11.0003 13h1.7725c.797 0 1.5611-.3171 2.124-.8813l4.6062-4.6178c.8272-.8292.8264-2.1717-.0018-3v0c-.829-.829-2.1729-.8289-3.0019 0L11.879 9.1214a3 3 0 0 0-.8787 2.1213z",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
 export const HistoryNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [
@@ -250,6 +323,16 @@ export const InboxNativeIcon: BlodeNativeIcon = {
   paths: [
     {
       d: "M3 12h4.25c.7869 0 1.5279.3705 2 1s1.2131 1 2 1h1.5c.7869 0 1.5279-.3705 2-1s1.2131-1 2-1H21m.6047-.6917-2.7409-4.7967A3 3 0 0 0 16.259 5H7.741a3 3 0 0 0-2.6048 1.5116l-2.741 4.7967A3 3 0 0 0 2 12.7967V16c0 1.6569 1.3432 3 3 3h14c1.6569 0 3-1.3431 3-3v-3.2033a3 3 0 0 0-.3953-1.4884",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
+export const InboxCheckedNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M7.5 10.4259 10.9483 14.5 17.5 4.5M4 15v.2c0 1.6802 0 2.5202.327 3.162a3 3 0 0 0 1.311 1.311C6.2798 20 7.1198 20 8.8 20h6.4c1.6802 0 2.5202 0 3.162-.327a3 3 0 0 0 1.311-1.311C20 17.7202 20 16.8802 20 15.2V15",
       stroke: { linecap: "round", linejoin: "round" },
     },
   ],
@@ -344,6 +427,26 @@ export const PageTextSearchNativeIcon: BlodeNativeIcon = {
   ],
 };
 
+export const PaperPlaneTopRightNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "m9.6195 10.8613 11.3802-6.307m-11.9524 6.35L4.1007 5.6881C3.4963 5.051 3.948 4 4.8262 4h15.4251c.7734 0 1.2541.8404.8619 1.507l-7.923 13.4692c-.4469.7596-1.5867.6117-1.8248-.2369l-2.0808-7.417a1 1 0 0 0-.2372-.418Z",
+      stroke: { linecap: "round", linejoin: "round" },
+    },
+  ],
+};
+
+export const PhoneNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "m9.7923 4.4807.7301 1.3083c.6589 1.1807.3944 2.7295-.6433 3.7673 0 0-1.2587 1.2589 1.0235 3.5412 2.2815 2.2815 3.5411 1.0235 3.5411 1.0235 1.0378-1.0378 2.5866-1.3023 3.7673-.6434l1.3083.7301c1.7829.995 1.9934 3.4952.4263 5.0623-.9416.9416-2.0952 1.6744-3.3703 1.7226-2.1467.0815-5.7922-.4618-9.4491-4.1187-3.657-3.657-4.2002-7.3025-4.1188-9.4492.0483-1.2751.781-2.4287 1.7226-3.3703 1.5671-1.567 4.0673-1.3565 5.0623.4263Z",
+      stroke: {},
+    },
+  ],
+};
+
 export const PlusNativeIcon: BlodeNativeIcon = {
   viewBox,
   paths: [{ d: "M12 4v8m0 0v8m0-8H4m8 0h8", stroke: { linecap: "round" } }],
@@ -385,6 +488,16 @@ export const SearchNativeIcon: BlodeNativeIcon = {
     {
       d: "m20 20-3.95-3.95M18 11c0 3.866-3.134 7-7 7s-7-3.134-7-7 3.134-7 7-7 7 3.134 7 7Z",
       stroke: { linecap: "round" },
+    },
+  ],
+};
+
+export const ShieldCrossedNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "m14 13.5-2-2m0 0-2-2m2 2 2-2m-2 2-2 2m10-1.5877v-4.735c0-.854-.5422-1.6137-1.3498-1.8913l-5.675-1.9508a3 3 0 0 0-1.9504 0L5.3498 5.286A2 2 0 0 0 4 7.1774v4.7349C4 16.8848 8 19 12 21.1579c4-2.1579 8-4.2731 8-9.2456",
+      stroke: { linecap: "round", linejoin: "round" },
     },
   ],
 };
@@ -448,6 +561,16 @@ export const TrashCanNativeIcon: BlodeNativeIcon = {
   paths: [
     {
       d: "m5.8133 18.1996.9978-.0666zm12.3734 0 .9978.0665zM3 5c-.5523 0-1 .4477-1 1s.4477 1 1 1zm18 2c.5523 0 1-.4477 1-1s-.4477-1-1-1zm-10 4c0-.5523-.4477-1-1-1s-1 .4477-1 1zm-2 5c0 .5523.4477 1 1 1s1-.4477 1-1zm6-5c0-.5523-.4477-1-1-1s-1 .4477-1 1zm-2 5c0 .5523.4477 1 1 1s1-.4477 1-1zm1.9056-9.7507c.1376.5348.6828.8568 1.2177.7191.5348-.1376.8568-.6828.7191-1.2177zM4.0022 6.0665l.8133 12.1996 1.9956-.1331-.8133-12.1995zM8.8067 22h6.3866v-2H8.8067zm10.3778-3.7339.8133-12.1996-1.9956-.133-.8133 12.1995zM19 5H5v2h14zM3 7h2V5H3zm16 0h2V5h-2zm-3.8067 15c2.1059 0 3.8511-1.6327 3.9912-3.7339l-1.9956-.1331c-.07 1.0506-.9426 1.867-1.9956 1.867zM4.8155 18.2661C4.9556 20.3673 6.7008 22 8.8067 22v-2c-1.053 0-1.9256-.8164-1.9956-1.867zM9 11v5h2v-5zm4 0v5h2v-5zm-1-7c1.3965 0 2.5725.9551 2.9056 2.2493l1.9368-.4986C16.2874 3.5944 14.3312 2 12 2zM9.0945 6.2493C9.4275 4.955 10.6035 4 12 4V2C9.6689 2 7.7126 3.5944 7.1576 5.7507z",
+    },
+  ],
+};
+
+export const TriangleExclamationNativeIcon: BlodeNativeIcon = {
+  viewBox,
+  paths: [
+    {
+      d: "M12 8.8846v3.0346M12 15h.01M9.4822 4.4325l-6.0307 9.9308C2.224 16.3848 3.6441 19 5.9693 19h12.0614c2.3252 0 3.7454-2.6152 2.5178-4.6367l-6.0307-9.9308c-1.16-1.91-3.8756-1.91-5.0356 0ZM12.25 15a.25.25 0 1 1-.5 0 .25.25 0 0 1 .5 0Z",
+      stroke: { linecap: "round" },
     },
   ],
 };

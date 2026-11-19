@@ -1,7 +1,7 @@
 import { router } from "expo-router";
 import { ActivityIndicator, Pressable, ScrollView, Text, useColorScheme, View } from "react-native";
-import { FileArrowLeftInNativeIcon } from "@kyomi/ui/icons/blode-native";
 import { EmptyStateIcon } from "@/components/icons/empty-state";
+import { EMPTY_STATES } from "@modules/inbox/components/empty-states";
 import { SettingsDetailToolbar } from "@modules/settings/components/detail-toolbar";
 import { FONT_STYLES } from "@/theme/fonts";
 import { getMobileSurfaceTheme } from "@/theme/surfaces";
@@ -30,7 +30,7 @@ export function ImportOpmlScreen() {
         {phase === "idle" ? (
           <>
             <View className="items-center">
-              <EmptyStateIcon icon={FileArrowLeftInNativeIcon} size={176} />
+              <EmptyStateIcon icon={EMPTY_STATES["import-opml"].icon} size={176} />
             </View>
             {/* React Native has no `text-wrap: balance`, so the two lines are broken by hand. */}
             <Text
@@ -39,7 +39,7 @@ export function ImportOpmlScreen() {
                 { color: theme.mutedForeground, textAlign: "center" },
               ]}
             >
-              {"Bring your feeds over from another\nreader by importing an OPML file."}
+              {EMPTY_STATES["import-opml"].description}
             </Text>
             <PrimaryButton label="Choose File" onPress={start} />
           </>
