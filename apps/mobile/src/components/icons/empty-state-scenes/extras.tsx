@@ -156,25 +156,28 @@ const readerNoHighlights: Scene = (context) => {
 };
 
 /** Advanced, no data: a big open box seen in perspective with nothing in it. */
-/** One external drive in the shared style: a fully rounded body, a shaded port band, dark ports. */
+/** One external drive in the shared style: gently rounded corners, an arched top edge, tilted forward. */
 const advancedNoData: Scene = (context) => {
   const { theme } = context;
   const port = { fill: theme.cavity } as const;
+  const body =
+    "M52 48Q52 38 62 36Q96 28 130 36Q140 38 140 48V146Q140 158 128 158H64Q52 158 52 146Z";
+  const detail = {
+    fill: "none",
+    opacity: theme.detailOpacity,
+    stroke: theme.detail,
+    strokeLinecap: "round",
+    strokeWidth: 1.2,
+  } as const;
   return (
-    <Surface context={context} d={rr(52, 34, 88, 124, 22)} strokeD={rr(52, 34, 88, 124, 22, 0.5)}>
+    <Surface context={context} d={body} tilt={-5}>
       <Path
-        d="M52 132H140V136Q140 158 118 158H74Q52 158 52 136Z"
+        d="M53 132H139V146Q139 157 128 157H64Q53 157 53 146Z"
         fill={theme.lines[0]}
         fillOpacity={theme.lineOpacities[0]}
       />
-      <Path
-        d="M53 132H139"
-        fill="none"
-        opacity={theme.detailOpacity}
-        stroke={theme.detail}
-        strokeLinecap="round"
-        strokeWidth={1.2}
-      />
+      <Path d="M53 132H139" {...detail} />
+      <Path d="M62 44Q96 36 130 44" {...detail} />
       <Rect height={12} rx={6} width={34} x={62} y={139} {...port} />
       <Circle cx={106} cy={145} r={4.6} {...port} />
       <Circle cx={116.5} cy={145} r={4.6} {...port} />
