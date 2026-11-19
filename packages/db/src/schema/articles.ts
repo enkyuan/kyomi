@@ -11,7 +11,6 @@ import {
   text,
   timestamp,
   uniqueIndex,
-  check,
 } from "drizzle-orm/pg-core";
 
 import { users } from "./auth";

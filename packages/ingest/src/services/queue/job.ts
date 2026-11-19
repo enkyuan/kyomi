@@ -95,6 +95,8 @@ export type DocumentImageMeasureJob = {
 export type DocumentEmbedSnapshotJob = {
   type: "document.embed-snapshot";
   payload: { target: DocumentTarget };
+};
+
 /** Wakeup carrying only a durable translation id; the worker loads text from Postgres. */
 export type ArticleTranslationJob = {
   type: "article.translate";
@@ -111,7 +113,7 @@ export type Job =
   | OpmlImportItemJob
   | ArticleExtractionJob
   | DocumentImageMeasureJob
-  | DocumentEmbedSnapshotJob;
+  | DocumentEmbedSnapshotJob
   | ArticleTranslationJob;
 export type JobType = Job["type"];
 
@@ -358,6 +360,8 @@ function parseDocumentEnrichmentJob(
     throw new Error(`Invalid ${type} payload`);
   }
   return { type, payload: { target } };
+}
+
 function parseArticleTranslationJob(parsedPayload: Record<string, unknown>): ArticleTranslationJob {
   if (typeof parsedPayload.translationId !== "string" || parsedPayload.translationId.length === 0) {
     throw new Error("Invalid article.translate payload");

@@ -1,7 +1,7 @@
 /**
- * Kyomi embeddings Worker: a `POST /embed` endpoint backed by Workers AI
- * BGE-M3. The article category classifier (packages/ingest) calls it through the API's
- * CLOUDFLARE_EMBEDDINGS_URL and CLOUDFLARE_EMBEDDINGS_TOKEN.
+ * Kyomi's private Workers AI gateway serves embeddings, translation, and evaluation chat.
+ * The API owns public authorization and durable work; this Worker validates its service tokens
+ * and invokes Workers AI.
  *
  * Contract (covered by tests/api/integration/cloudflare/embed.test.ts):
  * - `Authorization: Bearer <EMBEDDINGS_TOKEN>` is required. Without the secret the Worker refuses
@@ -18,6 +18,10 @@
  *   normalized from whichever output shape the model returns. A provider failure, or a result
  *   with no text, is a 502.
  *
+ * `POST /translate` accepts `{ text, source_language, target_language }` and is authenticated
+ * with a separate TRANSLATIONS_TOKEN. It returns `{ translated_text, source_language,
+ * target_language }`.
+ *
  * Local development: `bunx wrangler dev`. Deploy: `bunx wrangler deploy`, after setting the token
  * with `bunx wrangler secret put EMBEDDINGS_TOKEN`.
  */
@@ -27,6 +31,7 @@ type Env = {
     run(model: string, input: Record<string, unknown>): Promise<unknown>;
   };
   EMBEDDINGS_TOKEN?: string;
+  TRANSLATIONS_TOKEN?: string;
 };
 
 // Allowlisted so a leaked token cannot run arbitrary (or arbitrarily priced) models.
@@ -35,7 +40,9 @@ const MAX_CHAT_OUTPUT_TOKENS = 32_768;
 const MAX_CHAT_INPUT_CHARS = 400_000;
 
 const EMBEDDING_MODEL = "@cf/baai/bge-m3";
+const TRANSLATION_MODEL = "@cf/meta/m2m100-1.2b";
 const MAX_CHARS_PER_INPUT = 6_000;
+const MAX_TRANSLATION_CHARS = 6_000;
 const MAX_INPUTS_PER_BATCH = 8;
 // Workers AI calls in flight at once for one request.
 const MAX_CONCURRENT_BATCHES = 4;
@@ -221,6 +228,69 @@ async function handleChat(body: unknown, env: Env): Promise<Response> {
   });
 }
 
+type TranslationRequest = {
+  text: string;
+  sourceLanguage: string;
+  targetLanguage: string;
+};
+
+function translationRequest(body: unknown): TranslationRequest | string {
+  if (typeof body !== "object" || body === null) {
+    return "Body must be a JSON object";
+  }
+
+  const { text, source_language, target_language } = body as Record<string, unknown>;
+  if (typeof text !== "string" || text.trim() === "") {
+    return "`text` must be a non-empty string";
+  }
+  if (typeof source_language !== "string" || !/^[a-z]{2,3}$/i.test(source_language.trim())) {
+    return "`source_language` must be a two or three letter language code";
+  }
+  if (typeof target_language !== "string" || !/^[a-z]{2,3}$/i.test(target_language.trim())) {
+    return "`target_language` must be a two or three letter language code";
+  }
+
+  return {
+    text: text.trim(),
+    sourceLanguage: source_language.trim().toLowerCase(),
+    targetLanguage: target_language.trim().toLowerCase(),
+  };
+}
+
+async function handleTranslate(body: unknown, env: Env): Promise<Response> {
+  const parsed = translationRequest(body);
+  if (typeof parsed === "string") {
+    return Response.json({ error: parsed }, { status: 400 });
+  }
+  if (parsed.text.length > MAX_TRANSLATION_CHARS) {
+    return Response.json(
+      { error: `\`text\` must contain at most ${MAX_TRANSLATION_CHARS} characters` },
+      { status: 413 },
+    );
+  }
+
+  try {
+    const result = (await env.AI.run(TRANSLATION_MODEL, {
+      text: parsed.text,
+      source_lang: parsed.sourceLanguage,
+      target_lang: parsed.targetLanguage,
+    })) as { translated_text?: unknown };
+    const translatedText = result.translated_text;
+    if (typeof translatedText !== "string" || translatedText.trim() === "") {
+      throw new Error("Workers AI returned no translated_text");
+    }
+
+    return Response.json({
+      translated_text: translatedText,
+      source_language: parsed.sourceLanguage,
+      target_language: parsed.targetLanguage,
+    });
+  } catch (error) {
+    console.error("Workers AI translation failed", error);
+    return Response.json({ error: "Translation provider failed" }, { status: 502 });
+  }
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -229,17 +299,19 @@ export default {
       return Response.json({ ok: true });
     }
 
-    if (request.method !== "POST" || (url.pathname !== "/embed" && url.pathname !== "/chat")) {
+    if (request.method !== "POST" || !["/embed", "/chat", "/translate"].includes(url.pathname)) {
       return new Response("Not found", { status: 404 });
     }
 
-    if (!env.EMBEDDINGS_TOKEN) {
-      console.error("EMBEDDINGS_TOKEN is not set; refusing embedding requests");
-      return Response.json({ error: "Embeddings Worker is not configured" }, { status: 500 });
+    const expectedToken =
+      url.pathname === "/translate" ? env.TRANSLATIONS_TOKEN : env.EMBEDDINGS_TOKEN;
+    if (!expectedToken) {
+      console.error(`${url.pathname} Worker token is not set; refusing requests`);
+      return Response.json({ error: "Worker route is not configured" }, { status: 500 });
     }
 
     const token = bearerToken(request);
-    if (token === null || !(await tokenMatches(token, env.EMBEDDINGS_TOKEN))) {
+    if (token === null || !(await tokenMatches(token, expectedToken))) {
       return new Response("Unauthorized", { status: 401 });
     }
 
@@ -253,6 +325,10 @@ export default {
 
     if (url.pathname === "/chat") {
       return handleChat(body, env);
+    }
+
+    if (url.pathname === "/translate") {
+      return handleTranslate(body, env);
     }
 
     const texts = inputTexts(body);
