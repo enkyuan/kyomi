@@ -370,7 +370,7 @@ function RecapCommandPanel({
                   onClick={activeMode.finish}
                   onMouseDown={(event) => event.preventDefault()}
                 >
-                  <Kbd className="px-1.5 text-[10px] leading-none">×</Kbd>
+                  <Kbd className="px-1.5 text-[10px] leading-none">x</Kbd>
                   to {activeMode.label}
                 </m.button>
               ) : null}
