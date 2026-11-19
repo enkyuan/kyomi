@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/components/toast";
-import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
+import { logClientError } from "@kyomi/reader/lib/errors";
 import { useInboxItemStateMutation } from "@modules/articles/hooks/use-item-state";
 import type { AnchoredToolbarActionOptions, ArticleActionItem, ToolbarSide } from "../lib/types";
 
@@ -15,7 +15,13 @@ function showSavedToast(options: AnchoredToolbarActionOptions | undefined, isSav
   const type = isSaved ? "success" : "info";
   const anchor = options?.anchor;
 
-  if (anchor?.isConnected) {
+  // A toolbar click gets only the anchored toast. If its button has since unmounted (the row moved
+  // or re-rendered), show nothing rather than a second, global toast; the button's own state
+  // already reflects the change. Only anchorless triggers, such as shortcuts, use the global one.
+  if (anchor) {
+    if (!anchor.isConnected) {
+      return;
+    }
     anchoredToastManager.add({
       title,
       type,
@@ -60,7 +66,6 @@ export function useActions({
           logClientError(saveErrorScope, error);
           toastManager.add({
             title: nextSaved ? "Unable to save article" : "Unable to update article",
-            description: getUserSafeErrorMessage(error, "Try again in a moment."),
             type: "error",
           });
         });
@@ -87,7 +92,6 @@ export function useActions({
             logClientError(saveErrorScope, error);
             toastManager.add({
               title: "Unable to hide article",
-              description: getUserSafeErrorMessage(error, "Try again in a moment."),
               type: "error",
             });
           },
@@ -110,7 +114,6 @@ export function useActions({
         }
         toastManager.add({
           title: "Unable to share article",
-          description: "Try again in a moment.",
           type: "error",
         });
       });
@@ -139,7 +142,6 @@ async function shareArticle(item: ArticleActionItem) {
 function showCopyFailedToast() {
   toastManager.add({
     title: "Unable to copy link",
-    description: "Copy it from the address bar instead.",
     type: "error",
   });
 }

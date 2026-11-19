@@ -135,10 +135,10 @@ function ToastCard({ item }: { item: RenderToast }) {
   const effect = toast.style?.glass === "none" ? "none" : "regular";
   const useGlass = shouldUseGlass(toast);
   const maxWidth = multiline ? Math.min(440, width - 40) : Math.min(340, width - 32);
-  const surfaceStyle: StyleProp<ViewStyle> = [
-    styles.surface,
-    { backgroundColor: background, borderRadius: radius, maxWidth },
-  ];
+  // The glass is the surface: it takes the shape and nothing else, so it refracts what is behind
+  // it. A fill is only for the solid fallback, where there is no glass to draw.
+  const shapeStyle: StyleProp<ViewStyle> = { borderRadius: radius, maxWidth };
+  const solidStyle: StyleProp<ViewStyle> = [styles.solid, { backgroundColor: background }];
 
   useEffect(() => {
     triggerToastHaptic(toast);
@@ -150,7 +150,11 @@ function ToastCard({ item }: { item: RenderToast }) {
       isDark={isDark}
       item={item}
       multiline={multiline}
-      surfaceStyle={surfaceStyle}
+      pressableStyle={
+        useGlass
+          ? [styles.padding, { borderRadius: radius }]
+          : [styles.padding, solidStyle, shapeStyle]
+      }
       tint={tint}
     />
   );
@@ -159,7 +163,7 @@ function ToastCard({ item }: { item: RenderToast }) {
     <ToastAnimatedContainer id={item.id} onSwipe={() => void engine.dismiss(item.id, "swipe")}>
       {useGlass ? (
         <LiquidGlassContainerView spacing={0} style={styles.glassContainer}>
-          <LiquidGlassView animated effect={effect} style={surfaceStyle}>
+          <LiquidGlassView animated effect={effect} style={shapeStyle}>
             {content}
           </LiquidGlassView>
         </LiquidGlassContainerView>
@@ -175,7 +179,7 @@ type ToastCardContentProps = {
   isDark: boolean;
   item: RenderToast;
   multiline: boolean;
-  surfaceStyle: StyleProp<ViewStyle>;
+  pressableStyle: StyleProp<ViewStyle>;
   tint: string;
 };
 
@@ -184,7 +188,7 @@ function ToastCardContent({
   isDark,
   item,
   multiline,
-  surfaceStyle,
+  pressableStyle,
   tint,
 }: ToastCardContentProps) {
   const { toast } = item;
@@ -196,7 +200,7 @@ function ToastCardContent({
       }
       accessibilityRole="alert"
       onPress={() => engine.tap(item.id)}
-      style={surfaceStyle}
+      style={pressableStyle}
     >
       <View style={styles.row}>
         <Leading toast={toast} tint={tint} />
@@ -325,18 +329,13 @@ const styles = StyleSheet.create({
   centerStack: { bottom: 0, justifyContent: "center", top: 0 },
   cardContainer: { marginBottom: 10, maxWidth: "100%" },
   glassContainer: { maxWidth: "100%" },
-  surface: {
-    borderColor: "rgba(255,255,255,0.16)",
-    borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 16,
-    paddingVertical: 11,
-    width: "100%",
-  },
+  padding: { paddingHorizontal: 16, paddingVertical: 11 },
+  solid: { borderColor: "rgba(255,255,255,0.16)", borderWidth: StyleSheet.hairlineWidth },
   row: { alignItems: "center", flexDirection: "row", gap: 12 },
   leading: { height: 22, width: 22 },
   avatar: { borderRadius: 13, height: 26, width: 26 },
   icon: { ...FONT_STYLES.otp, height: 26, textAlign: "center", width: 26 },
-  textColumn: { flex: 1, minWidth: 0 },
+  textColumn: { flexShrink: 1, minWidth: 0 },
   title: {
     ...FONT_STYLES.bodyMedium,
     fontFamily: FONT_FAMILIES.inter.bold,

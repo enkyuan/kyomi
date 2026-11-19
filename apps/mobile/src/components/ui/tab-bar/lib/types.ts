@@ -45,7 +45,10 @@ export interface TabBarSourcesProps {
   readonly onCreateFolder: (name: string) => void;
   readonly onRenameFolder: (folderId: string, name: string) => void;
   readonly onDeleteFolder: (folderId: string) => void;
-  readonly onReorderFolders: (folderIds: string[]) => void;
+  /** Opens the screen that imports feeds from an OPML file. */
+  readonly onImport: () => void;
+  /** The folders' ids in the order the user dropped them in. */
+  readonly onReorderFolders: (folderIds: readonly string[]) => void;
 }
 
 export interface TabBarProps {

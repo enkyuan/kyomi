@@ -7,7 +7,7 @@ import { useReaderPreferences } from "@modules/reader/hooks/use-preferences";
 import { useReadingProgress } from "@modules/reader/hooks/use-reading-progress";
 import { readerContentForMode, resolveReaderMode } from "@modules/reader/lib/display";
 import { readerViewportContentInsetClass, type DetailViewProps } from "@modules/reader/lib/detail";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type RefObject } from "react";
 import { BlurLayer } from "./blur";
 import { ContentView } from "./content";
 
@@ -35,16 +35,11 @@ export function Detail({
   const blurTopOffset = showBackToList ? DETAIL_BACK_BUTTON_BLUR_OFFSET : 0;
   const selectedItem = detailState.status === "selected" ? detailState.item : null;
   const selectedItemId = selectedItem?.id;
-  const [readerControlsState, setReaderControlsState] = useState({
-    collapsed: false,
+  const { readerControlsCollapsed } = useReaderControlsCollapsed({
+    viewportRef,
+    isBrowserSurface,
     selectedItemId,
   });
-  let readerControlsCollapsed = readerControlsState.collapsed;
-
-  if (readerControlsState.selectedItemId !== selectedItemId) {
-    readerControlsCollapsed = false;
-    setReaderControlsState({ collapsed: false, selectedItemId });
-  }
 
   const selectedContentKey = articleContentKey ?? selectedItem?.id;
   const viewportContentInset =
@@ -73,55 +68,6 @@ export function Detail({
     readingPosition: selectedItem?.readingPosition,
     enabled: preferences.rememberPosition !== false,
   });
-
-  useEffect(() => {
-    if (!isBrowserSurface || !selectedItemId) {
-      return;
-    }
-
-    const viewport = viewportRef.current;
-    if (!viewport) {
-      return;
-    }
-
-    let previousScrollTop = viewport.scrollTop;
-    let frameId: number | null = null;
-
-    const updateCollapsedState = () => {
-      frameId = null;
-      const nextScrollTop = viewport.scrollTop;
-      const delta = nextScrollTop - previousScrollTop;
-      previousScrollTop = nextScrollTop;
-      const nextCollapsed =
-        nextScrollTop < 16 ? false : delta > 6 ? true : delta < -6 ? false : null;
-
-      if (nextCollapsed === null) {
-        return;
-      }
-
-      setReaderControlsState((current) =>
-        current.selectedItemId === selectedItemId && current.collapsed === nextCollapsed
-          ? current
-          : { collapsed: nextCollapsed, selectedItemId },
-      );
-    };
-
-    const handleScroll = () => {
-      if (frameId !== null) {
-        return;
-      }
-      frameId = window.requestAnimationFrame(updateCollapsedState);
-    };
-
-    viewport.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      viewport.removeEventListener("scroll", handleScroll);
-      if (frameId !== null) {
-        window.cancelAnimationFrame(frameId);
-      }
-    };
-  }, [isBrowserSurface, selectedItemId]);
 
   const renderedHeader =
     typeof header === "function" ? header({ readerControlsCollapsed }) : header;
@@ -179,4 +125,85 @@ export function Detail({
       </ScrollAreaPrimitive.Root>
     </section>
   );
+}
+
+function nextCollapsedFromScroll(scrollTop: number, delta: number) {
+  if (scrollTop < 16) {
+    return false;
+  }
+  if (delta > 6) {
+    return true;
+  }
+  return delta < -6 ? false : null;
+}
+
+function useReaderControlsCollapsed({
+  viewportRef,
+  isBrowserSurface,
+  selectedItemId,
+}: {
+  viewportRef: RefObject<HTMLDivElement | null>;
+  isBrowserSurface: boolean;
+  selectedItemId: string | undefined;
+}) {
+  const [readerControlsState, setReaderControlsState] = useState({
+    collapsed: false,
+    selectedItemId,
+  });
+  let readerControlsCollapsed = readerControlsState.collapsed;
+
+  if (readerControlsState.selectedItemId !== selectedItemId) {
+    readerControlsCollapsed = false;
+    setReaderControlsState({ collapsed: false, selectedItemId });
+  }
+
+  useEffect(() => {
+    if (!isBrowserSurface || !selectedItemId) {
+      return;
+    }
+
+    const viewport = viewportRef.current;
+    if (!viewport) {
+      return;
+    }
+
+    let previousScrollTop = viewport.scrollTop;
+    let frameId: number | null = null;
+
+    const updateCollapsedState = () => {
+      frameId = null;
+      const nextScrollTop = viewport.scrollTop;
+      const delta = nextScrollTop - previousScrollTop;
+      previousScrollTop = nextScrollTop;
+      const nextCollapsed = nextCollapsedFromScroll(nextScrollTop, delta);
+
+      if (nextCollapsed === null) {
+        return;
+      }
+
+      setReaderControlsState((current) =>
+        current.selectedItemId === selectedItemId && current.collapsed === nextCollapsed
+          ? current
+          : { collapsed: nextCollapsed, selectedItemId },
+      );
+    };
+
+    const handleScroll = () => {
+      if (frameId !== null) {
+        return;
+      }
+      frameId = window.requestAnimationFrame(updateCollapsedState);
+    };
+
+    viewport.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      viewport.removeEventListener("scroll", handleScroll);
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
+  }, [isBrowserSurface, selectedItemId, viewportRef]);
+
+  return { readerControlsCollapsed };
 }

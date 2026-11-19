@@ -10,6 +10,13 @@ import {
 /** How long after first layout a restore keeps correcting as virtualized rows report real heights. */
 const RESTORE_SETTLE_MS = 4_000;
 const END_SLACK_PX = 2;
+/**
+ * A restore is settled once the list has stopped changing size for this long, or this long after it
+ * began, whichever comes first. Until then the screen keeps its skeleton up, so the corrections a
+ * virtualized list makes as rows report real heights happen out of sight instead of as visible jumps.
+ */
+const RESTORE_QUIET_MS = 150;
+const RESTORE_CAP_MS = 800;
 
 export type NativeReadingSample = {
   readonly progress: number;
@@ -25,6 +32,8 @@ type UseReadingTrackingInput = {
   initialProgress: number | undefined;
   listRef: RefObject<ScrollTarget | null>;
   onReadingProgress: ((sample: NativeReadingSample) => void) | undefined;
+  /** The restore has landed and the list has stopped moving; nothing is called without a restore. */
+  onRestoreSettled?: () => void;
 };
 
 /**
@@ -41,15 +50,18 @@ export function useReadingTracking({
   initialProgress,
   listRef,
   onReadingProgress,
+  onRestoreSettled,
 }: UseReadingTrackingInput) {
   const reportRef = useRef(onReadingProgress);
   const bottomInsetRef = useRef(bottomInset);
   const initialRef = useRef(initialProgress);
+  const settledRef = useRef(onRestoreSettled);
   useEffect(() => {
+    settledRef.current = onRestoreSettled;
     reportRef.current = onReadingProgress;
     bottomInsetRef.current = bottomInset;
     initialRef.current = initialProgress;
-  }, [bottomInset, initialProgress, onReadingProgress]);
+  }, [bottomInset, initialProgress, onReadingProgress, onRestoreSettled]);
 
   const metrics = useRef({ content: 0, header: 0, scrollY: 0, viewport: 0 });
   const state = useRef({
@@ -58,6 +70,11 @@ export function useReadingTracking({
     restoreUntil: 0,
     userScrolled: false,
   });
+  const settle = useRef<{
+    cap?: ReturnType<typeof setTimeout>;
+    done: boolean;
+    quiet?: ReturnType<typeof setTimeout>;
+  }>({ done: false });
   const timers = useRef<{
     end?: ReturnType<typeof setTimeout>;
     trailing?: ReturnType<typeof setTimeout>;
@@ -87,10 +104,33 @@ export function useReadingTracking({
     });
   }, [bodyGeometry]);
 
+  const finishRestore = useCallback(() => {
+    const pending = settle.current;
+    if (pending.done) return;
+    pending.done = true;
+    clearTimeout(pending.quiet);
+    clearTimeout(pending.cap);
+    settledRef.current?.();
+  }, []);
+
+  /** Each correction re-arms the quiet timer; the cap bounds the wait if the list never goes quiet. */
+  const armSettle = useCallback(() => {
+    const pending = settle.current;
+    if (pending.done) return;
+    clearTimeout(pending.quiet);
+    pending.quiet = setTimeout(finishRestore, RESTORE_QUIET_MS);
+    pending.cap ??= setTimeout(finishRestore, RESTORE_CAP_MS);
+  }, [finishRestore]);
+
   const restore = useCallback(() => {
     const target = initialRef.current;
     const { content, viewport } = metrics.current;
-    if (target === undefined || state.current.userScrolled || viewport <= 0 || content <= 0) return;
+    if (target === undefined) return;
+    if (state.current.userScrolled) {
+      finishRestore();
+      return;
+    }
+    if (viewport <= 0 || content <= 0) return;
 
     const now = Date.now();
     if (state.current.restoreUntil === 0) state.current.restoreUntil = now + RESTORE_SETTLE_MS;
@@ -104,11 +144,12 @@ export function useReadingTracking({
     });
     listRef.current?.scrollToOffset({ animated: false, offset });
     metrics.current.scrollY = offset;
+    armSettle();
     if (state.current.held) {
       state.current.held = false;
       emit();
     }
-  }, [bodyGeometry, emit, listRef]);
+  }, [armSettle, bodyGeometry, emit, finishRestore, listRef]);
 
   useEffect(() => {
     // Nothing to restore: the first scroll is the first sample.
@@ -117,9 +158,12 @@ export function useReadingTracking({
 
   useEffect(() => {
     const pending = timers.current;
+    const restoring = settle.current;
     return () => {
       clearTimeout(pending.trailing);
       clearTimeout(pending.end);
+      clearTimeout(restoring.quiet);
+      clearTimeout(restoring.cap);
     };
   }, []);
 

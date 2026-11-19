@@ -1,12 +1,10 @@
 "use client";
 
-import { CheckIcon, HandIcon, PencilIcon, UserIcon, XIcon } from "@kyomi/ui/icons/blode";
+import { EditIcon, UserIcon } from "@kyomi/ui/icons/blode";
 import { useAuth } from "@integrations/better-auth/provider";
 import { Badge } from "@kyomi/ui/components/badge";
 import { Button } from "@kyomi/ui/components/button";
 import { Frame } from "@kyomi/ui/components/frame";
-import { Group } from "@kyomi/ui/components/group";
-import { Input } from "@kyomi/ui/components/input";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 import {
   Table,
@@ -19,8 +17,13 @@ import {
 } from "@kyomi/ui/components/table";
 import { useAccountPanel } from "@modules/settings/hooks/use-account-panel";
 import { SettingHeading } from "../appearance/headings";
+import { EmailDialog } from "./email-dialog";
 
-export const accountSection = {
+/** The flat destructive action: the secondary token fill with a tinted hover, no tactile shadow. */
+const DESTRUCTIVE_FLAT_CLASS =
+  "text-destructive hover:bg-destructive/10 data-pressed:bg-destructive/10";
+
+const accountSection = {
   description: "Manage your account details, connected accounts, and security settings.",
   icon: UserIcon,
   name: "Account",
@@ -81,9 +84,14 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
     <div className={ACCOUNT_SUBSECTION_SPACING_CLASS}>
       <section className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h3 className="text-base font-semibold text-foreground">Account</h3>
-          <Button size="sm" variant="destructive-outline" onClick={() => void onLogout()}>
-            <HandIcon />
+          <h2 className="font-semibold text-foreground text-xl leading-8">Account</h2>
+          <Button
+            className={DESTRUCTIVE_FLAT_CLASS}
+            shape="pill"
+            size="sm"
+            variant="secondary"
+            onClick={() => void onLogout()}
+          >
             Log out
           </Button>
         </div>
@@ -93,60 +101,31 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <SettingHeading title="Email" description="Manage your account email address." />
           <div className="flex items-center gap-2">
-            {isEditingEmail ? (
-              <Group aria-label="Email subscription" className="gap-2">
-                <Input
-                  className="flex-1"
-                  aria-label="Email"
-                  aria-invalid={emailError ? true : undefined}
-                  onChange={(event) => {
-                    handleEmailDraftChange(event.target.value);
-                  }}
-                  placeholder="you@example.com"
-                  type="email"
-                  value={emailDraft}
-                />
-                <div>
-                  <Button
-                    aria-label="Save email"
-                    loading={updateEmailMutation.isPending}
-                    onClick={() => void handleSaveEmail()}
-                    size="icon"
-                    variant="outline"
-                  >
-                    <CheckIcon />
-                  </Button>
-                </div>
-                <div>
-                  <Button
-                    aria-label="Cancel editing email"
-                    disabled={updateEmailMutation.isPending}
-                    onClick={handleCancelEditEmail}
-                    size="icon"
-                    variant="destructive-outline"
-                  >
-                    <XIcon />
-                  </Button>
-                </div>
-              </Group>
-            ) : (
-              <>
-                <span className="text-sm text-muted-foreground">
-                  {user?.email ?? "Unknown email"}
-                </span>
-                <Button
-                  aria-label="Edit email"
-                  onClick={handleStartEditEmail}
-                  size="icon-xs"
-                  variant="ghost"
-                >
-                  <PencilIcon />
-                </Button>
-              </>
-            )}
+            <span className="text-sm text-muted-foreground">{user?.email ?? "Unknown email"}</span>
+            <Button
+              aria-label="Edit email"
+              onClick={handleStartEditEmail}
+              shape="pill"
+              size="icon-xs"
+              variant="ghost"
+            >
+              <EditIcon />
+            </Button>
           </div>
         </div>
-        {emailError ? <p className="text-sm text-destructive">{emailError}</p> : null}
+        <EmailDialog
+          draft={emailDraft}
+          error={emailError}
+          isSaving={updateEmailMutation.isPending}
+          onDraftChange={handleEmailDraftChange}
+          onOpenChange={(open) => {
+            if (!open) {
+              handleCancelEditEmail();
+            }
+          }}
+          onSubmit={handleSaveEmail}
+          open={isEditingEmail}
+        />
       </section>
 
       <section className="space-y-3">
@@ -181,7 +160,11 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
                           {describeSessionDevice(sessionItem.userAgent).label}
                         </span>
                         {sessionItem.isCurrent ? (
-                          <Badge className="font-semibold tracking-wider" size="sm" variant="mizu">
+                          <Badge
+                            className="font-semibold tracking-wider"
+                            size="sm"
+                            variant="success"
+                          >
                             Current
                           </Badge>
                         ) : null}
@@ -219,16 +202,19 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
             <Button
               loading={revokeOtherSessionsMutation.isPending}
               onClick={() => void handleRevokeOtherSessions()}
-              variant="outline"
+              shape="pill"
+              variant="secondary"
               size="sm"
             >
               Sign out other devices
             </Button>
           ) : null}
           <Button
+            className={DESTRUCTIVE_FLAT_CLASS}
             loading={revokeAllSessionsMutation.isPending}
             onClick={() => void handleRevokeAllSessions()}
-            variant="destructive-outline"
+            shape="pill"
+            variant="secondary"
             size="sm"
           >
             Sign out of all devices

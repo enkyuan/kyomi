@@ -1,9 +1,34 @@
 import { Toast } from "@base-ui/react/toast";
 import { getAnchorRect, type AnchoredToastData } from "./utils";
 
-type ToastManager = ReturnType<typeof Toast.createToastManager>;
-type ToastInput = Parameters<ToastManager["add"]>[0];
-type ToastId = Parameters<ToastManager["update"]>[0];
+type BaseToastManager = ReturnType<typeof Toast.createToastManager>;
+type BaseToastInput = Parameters<BaseToastManager["add"]>[0];
+type ToastInput = BaseToastInput;
+type ToastId = Parameters<BaseToastManager["update"]>[0];
+
+/**
+ * A toast is one line: a title, never a description. Base UI would accept a description, so the
+ * managers are typed to refuse it and the renderers never draw one.
+ */
+export type ToastLine = Omit<BaseToastInput, "description" | "title"> & {
+  description?: never;
+  title: string;
+};
+
+type ToastPromiseLine = string | ToastLine;
+
+export type ToastPromiseOptions<Value> = {
+  loading: ToastPromiseLine;
+  success: ToastPromiseLine | ((result: Value) => ToastPromiseLine);
+  error: ToastPromiseLine | ((error: unknown) => ToastPromiseLine);
+};
+
+/** Base UI's manager with its `add`, `update` and `promise` narrowed to one-line toasts. */
+export type ToastManager = Omit<BaseToastManager, "add" | "update" | "promise"> & {
+  add(options: ToastLine): string;
+  update(id: string, options: Partial<Omit<ToastLine, "id">>): void;
+  promise<Value>(promise: Promise<Value>, options: ToastPromiseOptions<Value>): Promise<Value>;
+};
 
 function snapshotAnchoredToastInput(toast: ToastInput): ToastInput {
   const anchorRect = getAnchorRect(toast.positionerProps?.anchor);
@@ -31,7 +56,7 @@ function getAnchoredToastCleanupDelay(toast: ToastInput): number | null {
     : null;
 }
 
-function createAnchoredToastManager(): ToastManager {
+function createAnchoredToastManager(): BaseToastManager {
   const manager = Toast.createToastManager();
   const add = manager.add.bind(manager);
   const update = manager.update.bind(manager);
@@ -70,14 +95,14 @@ function createAnchoredToastManager(): ToastManager {
     if (existingToastId) {
       update(existingToastId, nextToast);
       scheduleGroupCleanup(groupKey, existingToastId, nextToast);
-      return existingToastId as ReturnType<ToastManager["add"]>;
+      return existingToastId as ReturnType<BaseToastManager["add"]>;
     }
 
     const toastId = add(nextToast) as ToastId;
     groupedToastIds.set(groupKey, toastId);
     scheduleGroupCleanup(groupKey, toastId, nextToast);
-    return toastId as ReturnType<ToastManager["add"]>;
-  }) as ToastManager["add"];
+    return toastId as ReturnType<BaseToastManager["add"]>;
+  }) as BaseToastManager["add"];
   return manager;
 }
 

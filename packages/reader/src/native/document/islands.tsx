@@ -37,5 +37,7 @@ export function MathBlock({ block }: { readonly block: Block<"math"> }) {
 
 export function HtmlBlock({ block }: { readonly block: Block<"html"> }) {
   const { host } = useReaderNative();
-  return host.renderIsland?.({ kind: "html", html: block.html, title: block.reason }) ?? null;
+  return (
+    <>{host.renderIsland?.({ kind: "html", html: block.html, title: block.reason }) ?? null}</>
+  );
 }

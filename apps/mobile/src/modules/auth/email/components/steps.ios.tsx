@@ -233,6 +233,7 @@ type OTPFormStepProps = {
   onSubmit: () => void;
   otp: ObservableStringState;
   otpFieldRef: RefObject<TextFieldRef | null>;
+  onFocusOtp: () => void;
   otpValue: string;
   theme: EmailStepTheme;
 };
@@ -247,6 +248,7 @@ export function OTPFormStep({
   onSubmit: handleSubmit,
   otp,
   otpFieldRef,
+  onFocusOtp,
   otpValue,
   theme,
 }: OTPFormStepProps) {
@@ -302,10 +304,7 @@ export function OTPFormStep({
             />
           </ZStack>
 
-          <HStack
-            spacing={10}
-            modifiers={[FULL_WIDTH, onTapGesture(() => otpFieldRef.current?.focus())]}
-          >
+          <HStack spacing={10} modifiers={[FULL_WIDTH, onTapGesture(onFocusOtp)]}>
             {OTP_SLOTS.map((slot) => {
               const isCurrentSlot = otpValue.length === slot;
 

@@ -1,3 +1,4 @@
+import * as Clipboard from "expo-clipboard";
 import * as Linking from "expo-linking";
 import * as WebBrowser from "expo-web-browser";
 import { Image } from "expo-image";
@@ -16,7 +17,7 @@ import type { ReaderDocument } from "@kyomi/reader/document";
 import { FONT_FAMILIES } from "@/theme/fonts";
 import { mobileReaderLayout } from "../lib/layout";
 import { readerCanvas } from "../lib/theme";
-import { readReaderPosition, writeReaderPosition } from "../lib/position";
+import { writeReaderPosition } from "../lib/position";
 import HtmlIsland from "./html-island.dom";
 import { FootnoteSheet } from "./footnote-sheet";
 import { ImageViewer, type ImageViewerState } from "./image-viewer";
@@ -29,6 +30,8 @@ type NativeArticleBodyProps = {
   readonly document: ReaderDocument;
   readonly faviconUrls: readonly string[];
   readonly feedTitle: string;
+  /** Body text size in points. */
+  readonly fontSizePx: number;
   /** Restore here (0..1) instead of the locally saved row, so a position follows the reader across devices. */
   readonly initialProgress?: number;
   readonly onReadingProgress?: (sample: NativeReadingSample) => void;
@@ -56,6 +59,7 @@ export function NativeArticleBody({
   document,
   faviconUrls,
   feedTitle,
+  fontSizePx,
   initialProgress,
   onReadingProgress,
   onReady,
@@ -68,18 +72,19 @@ export function NativeArticleBody({
   const [viewer, setViewer] = useState<ImageViewerState | null>(null);
   const [footnote, setFootnote] = useState<ReaderFootnote | null>(null);
   const inset = mobileReaderLayout.contentInsetPx;
-  const initialIndex = useMemo(() => readReaderPosition(articleId), [articleId]);
 
   const theme = useMemo(
     () =>
       createReaderNativeTheme({
         availableWidth: width - inset * 2,
         colors: { background: readerCanvas[colorScheme] },
-        fontSize: mobileReaderLayout.body.fontSizePx,
+        blockGap: mobileReaderLayout.body.blockGapPx,
+        fontSize: fontSizePx,
         fonts: {
           body: FONT_FAMILIES.newsreader.regular,
           heading: FONT_FAMILIES.newsreader.semibold,
           italic: FONT_FAMILIES.newsreader.italic,
+          strongItalic: FONT_FAMILIES.newsreader.boldItalic,
           mono: FONT_FAMILIES.jetbrainsMono.regular,
           sans: FONT_FAMILIES.inter.medium,
           strong: FONT_FAMILIES.newsreader.bold,
@@ -89,13 +94,16 @@ export function NativeArticleBody({
         reduceMotion,
         scheme: colorScheme,
       }),
-    [colorScheme, inset, reduceMotion, width],
+    [colorScheme, fontSizePx, inset, reduceMotion, width],
   );
 
   const host = useMemo<ReaderNativeHost>(
     () => ({
       openFootnote: setFootnote,
       openImage: (image, caption) => setViewer({ caption, image }),
+      copyText: async (text) => {
+        await Clipboard.setStringAsync(text);
+      },
       openUrl: openExternal,
       renderImage: createReaderImageRenderer({
         background: theme.colors.codeBackground,
@@ -106,7 +114,7 @@ export function NativeArticleBody({
           aspectRatio={island.kind === "embed" ? island.aspectRatio : undefined}
           colorScheme={colorScheme}
           dom={{ matchContents: true, scrollEnabled: false }}
-          fontSizePx={mobileReaderLayout.body.fontSizePx}
+          fontSizePx={fontSizePx}
           frameUrl={island.kind === "embed" ? island.frameUrl : undefined}
           html={island.kind === "embed" ? undefined : island.html}
           kind={island.kind}
@@ -115,7 +123,7 @@ export function NativeArticleBody({
       ),
       shareUrl,
     }),
-    [colorScheme, reduceMotion, theme.colors.codeBackground],
+    [colorScheme, fontSizePx, reduceMotion, theme.colors.codeBackground],
   );
 
   const sheetContext = useMemo(
@@ -203,7 +211,6 @@ export function NativeArticleBody({
         document={document}
         header={header}
         host={host}
-        initialIndex={initialIndex}
         initialProgress={initialProgress}
         inset={inset}
         onFirstContentLayout={onReady}

@@ -25,7 +25,7 @@ export function previewFeed(url: string, signal?: AbortSignal) {
 
 export function searchFeeds(query: string, signal?: AbortSignal) {
   return fetchMobileApiJson<DiscoveredFeed[]>(
-    `/api/v1/discover/search?q=${encodeURIComponent(query)}&limit=6`,
+    `/api/v1/discover/search?q=${encodeURIComponent(query)}&limit=7`,
     { signal },
   );
 }

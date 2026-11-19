@@ -3,7 +3,7 @@
 import { ToggleIcon } from "@kyomi/ui/icons/blode";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 
-export const advancedSection = {
+const advancedSection = {
   description: "Update advanced preferences and account-level controls.",
   icon: ToggleIcon,
   name: "Advanced",

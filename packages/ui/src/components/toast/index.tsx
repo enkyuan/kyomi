@@ -4,12 +4,11 @@
 import { Toast } from "@base-ui/react/toast";
 import type { CSSProperties } from "react";
 import type React from "react";
-import { buttonVariants } from "../button";
 import { cn } from "../../lib/utils";
 import { AnchoredToasts } from "./anchored";
-import { anchoredToastManager } from "./manager";
-import { ToastStatusIcon } from "./status-icon";
-import { ToastDescription, ToastTitle } from "./text";
+import { anchoredToastManager, type ToastManager } from "./manager";
+import { TOAST_CONTENT_CLASS_NAME, ToastRow } from "./row";
+import { ToastSurface } from "./surface";
 
 const TOAST_LAYER_Z_INDEX = 60;
 const TOAST_VIEWPORT_STYLE = {
@@ -18,7 +17,8 @@ const TOAST_VIEWPORT_STYLE = {
 
 type SwipeDirection = "up" | "down" | "left" | "right";
 
-type ToastManager = ReturnType<typeof Toast.createToastManager>;
+/** Outer corner radius of a toast; keep in step with `--toast-radius` on the root below. */
+const TOAST_RADIUS_PX = 14;
 
 function getSwipeDirection(position: ToastPosition): SwipeDirection[] {
   const verticalDirection: SwipeDirection = position.startsWith("top") ? "up" : "down";
@@ -59,7 +59,7 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
           return (
             <Toast.Root
               className={cn(
-                "absolute z-[calc(9999-var(--toast-index))] h-(--toast-calc-height) w-full select-none rounded-lg border border-border bg-[color-mix(in_srgb,var(--popover),var(--color-black)_calc(1%*max(0,var(--toast-index,0))))] not-dark:bg-clip-padding text-popover-foreground shadow-lg/5 [transition:transform_.2s_var(--ease-out-quint),opacity_.2s,height_.15s,background-color_.15s] before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-[0_1px_--theme(--color-black/4%)] data-expanded:bg-popover dark:bg-[color-mix(in_srgb,var(--popover),var(--color-black)_calc(6%*max(0,var(--toast-index,0))))] dark:data-expanded:bg-popover dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
+                "group/toast absolute z-[calc(9999-var(--toast-index))] h-(--toast-calc-height) w-full select-none rounded-(--toast-radius) text-popover-foreground shadow-(--glass-shadow) [--toast-inset:6px] [--toast-radius:14px] [--toast-shade:calc(1%*max(0,var(--toast-index,0)))] [transition:transform_.2s_var(--ease-out-quint),box-shadow_.2s,height_.15s] data-expanded:[--toast-shade:0%] dark:[--toast-shade:calc(6%*max(0,var(--toast-index,0)))] dark:data-expanded:[--toast-shade:0%]",
                 // Base positioning using data-position
                 "data-[position*=right]:right-0 data-[position*=right]:left-auto",
                 "data-[position*=left]:right-auto data-[position*=left]:left-0",
@@ -78,15 +78,15 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
                 // Default state transform
                 "data-[position*=top]:transform-[translateX(var(--toast-swipe-movement-x))_translateY(calc(var(--toast-swipe-movement-y)+(var(--toast-index)*var(--toast-peek))+(var(--toast-shrink)*var(--toast-calc-height))))_scale(var(--toast-scale))]",
                 "data-[position*=bottom]:transform-[translateX(var(--toast-swipe-movement-x))_translateY(calc(var(--toast-swipe-movement-y)-(var(--toast-index)*var(--toast-peek))-(var(--toast-shrink)*var(--toast-calc-height))))_scale(var(--toast-scale))]",
-                // Limited state
-                "data-limited:opacity-0",
+                // Limited state: the surface fades, so the shadow goes with it
+                "data-limited:shadow-none",
                 // Expanded state
                 "data-expanded:h-(--toast-height)",
                 "data-position:data-expanded:transform-[translateX(var(--toast-swipe-movement-x))_translateY(var(--toast-calc-offset-y))]",
                 // Starting and ending animations
                 "data-[position*=top]:data-starting-style:transform-[translateY(calc(-100%-var(--toast-inset)))]",
                 "data-[position*=bottom]:data-starting-style:transform-[translateY(calc(100%+var(--toast-inset)))]",
-                "data-ending-style:opacity-0",
+                "data-ending-style:shadow-none",
                 // Ending animations (direction-aware)
                 "data-ending-style:not-data-limited:not-data-swipe-direction:transform-[translateY(calc(100%+var(--toast-inset)))]",
                 "data-ending-style:data-[swipe-direction=left]:transform-[translateX(calc(var(--toast-swipe-movement-x)-100%-var(--toast-inset)))_translateY(var(--toast-calc-offset-y))]",
@@ -104,25 +104,14 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
               swipeDirection={swipeDirection}
               toast={toast}
             >
-              <Toast.Content className="pointer-events-auto flex items-center justify-between gap-1.5 overflow-hidden px-3.5 py-3 text-sm transition-opacity duration-150 data-behind:not-data-expanded:pointer-events-none data-behind:opacity-0 data-expanded:opacity-100">
-                <div className="flex gap-2">
-                  <ToastStatusIcon toast={toast} />
-
-                  <div className="flex flex-col gap-0.5">
-                    <ToastTitle className="font-medium" data-slot="toast-title" toast={toast} />
-                    <ToastDescription
-                      className="text-muted-foreground"
-                      data-slot="toast-description"
-                      toast={toast}
-                    />
-                  </div>
-                </div>
-                {toast.actionProps && (
-                  <Toast.Action className={buttonVariants({ size: "xs" })} data-slot="toast-action">
-                    {toast.actionProps.children}
-                  </Toast.Action>
-                )}
-              </Toast.Content>
+              <ToastSurface
+                className="size-full transition-opacity duration-200 group-data-ending-style/toast:opacity-0 group-data-limited/toast:opacity-0"
+                radius={TOAST_RADIUS_PX}
+              >
+                <Toast.Content className={TOAST_CONTENT_CLASS_NAME}>
+                  <ToastRow toast={toast} />
+                </Toast.Content>
+              </ToastSurface>
             </Toast.Root>
           );
         })}
@@ -133,6 +122,7 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
 
 export const toastManager: ToastManager = Toast.createToastManager();
 export { anchoredToastManager } from "./manager";
+export type { ToastLine, ToastManager } from "./manager";
 
 export type ToastPosition =
   | "top-left"
@@ -141,6 +131,9 @@ export type ToastPosition =
   | "bottom-left"
   | "bottom-center"
   | "bottom-right";
+
+// The managers are Base UI's own, typed to refuse a description; the provider takes the wider type.
+type ProviderManager = Toast.Provider.Props["toastManager"];
 
 export interface ToastProviderProps extends Toast.Provider.Props {
   position?: ToastPosition;
@@ -152,7 +145,7 @@ export function ToastProvider({
   ...props
 }: ToastProviderProps): React.ReactElement {
   return (
-    <Toast.Provider toastManager={toastManager} {...props}>
+    <Toast.Provider toastManager={toastManager as ProviderManager} {...props}>
       {children}
       <Toasts position={position} />
     </Toast.Provider>
@@ -164,7 +157,7 @@ export function AnchoredToastProvider({
   ...props
 }: Toast.Provider.Props): React.ReactElement {
   return (
-    <Toast.Provider toastManager={anchoredToastManager} {...props}>
+    <Toast.Provider toastManager={anchoredToastManager as ProviderManager} {...props}>
       {children}
       <AnchoredToasts />
     </Toast.Provider>

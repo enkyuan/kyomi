@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// What the switcher sheet shows, drawn inside the capsule's glass once it has grown into the
 /// sheet: a header with the title and the close button, a row of flat chips that edit and sort the
@@ -9,8 +10,11 @@ struct TabBarSwitcherSheet: View {
   let model: TabBarModel
   let switcher: TabBarSwitcher
   let focus: AccessibilityFocusState<Bool>.Binding
-  let onClose: () -> Void
+  /// Closes the sheet, for an action that leaves it for another screen.
+  let onDismiss: () -> Void
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
+  /// A row's height, which scales with the text size; the drag moves in whole rows.
+  @ScaledMetric(relativeTo: .title3) private var rowHeight: CGFloat = 52
 
   /// `edit` marks each folder with a radio button, to delete several at once.
   private enum Mode {
@@ -30,6 +34,12 @@ struct TabBarSwitcherSheet: View {
 
   /// The chips' icons are stroked as heavy as their label's strokes (`.subheadline`, medium, is about
   /// 1.5pt thick), so icon and text read as one weight.
+  /// The folder the server always lists first (`DEFAULT_FOLDER_NAME` in the API).
+  private static let defaultFolderName = "Unsorted"
+  /// How far the chips sit below the sheet's top edge when the list has no header: clear of the grabber.
+  private static let listTop: CGFloat = 28
+  /// A lifted row's corner radius, continuous like the sheet's own.
+  private static let liftedRadius: CGFloat = 14
   private static let chipIconSize: CGFloat = 18
   private static let chipIconStroke: CGFloat = 1.75
 
@@ -38,43 +48,55 @@ struct TabBarSwitcherSheet: View {
   @State private var isCreating = false
   @State private var sort = SortOrder.automatic
   @State private var selection = Set<String>()
+  /// The folder being dragged, how far it has been dragged, and the place it started from.
+  @State private var dragging: String?
+  @State private var dragOffset: CGFloat = 0
+  @State private var dragStart = 0
   /// Folder ids in the order just dropped, shown until the folders prop arrives in that order.
   @State private var localOrder: [String]?
-  @State private var openFolder: SwitcherFolder?
+  @State private var openFolderID: String?
   @State private var renaming: SwitcherFolder?
   @State private var deleting: [SwitcherFolder] = []
 
   var body: some View {
     VStack(spacing: 0) {
-      // The close button sits the same distance from the sheet's top and side edges, as on a system
-      // sheet, so it is concentric with the sheet's corner; the title centres on the same line.
-      ZStack {
-        Text(openFolder?.name ?? switcher.title)
-          .font(.headline)
-          .lineLimit(1)
-          .accessibilityAddTraits(.isHeader)
-          .accessibilityFocused(focus)
-        HStack {
-          if openFolder != nil {
+      // The folder list has no title: the sheet closes by its grabber, a drag or a tap outside, and
+      // the chips say what it is for. Inside a folder the header holds that folder's name, the way
+      // back and the way to rename it. Both buttons sit the same distance from the sheet's top and
+      // side edges, as on a system sheet, so they are concentric with its corner; the title centres
+      // on the same line.
+      if let openFolder {
+        ZStack {
+          Text(openFolder.name)
+            .font(.headline)
+            .lineLimit(1)
+            .padding(.horizontal, TabBarMetrics.sheetCloseSize + 8)
+            .accessibilityAddTraits(.isHeader)
+            .accessibilityFocused(focus)
+          HStack {
             Button { show(nil) } label: {
               Label("Folders", systemImage: "chevron.left")
                 .labelStyle(.iconOnly)
                 .fontWeight(.semibold)
                 .frame(width: TabBarMetrics.sheetCloseSize, height: TabBarMetrics.sheetCloseSize)
             }
-            .buttonStyle(CloseButtonStyle())
+            .buttonStyle(RoundButtonStyle())
+            Spacer()
+            Button {
+              draft = openFolder.name
+              renaming = openFolder
+            } label: {
+              Image(uiImage: switcher.renameIcon.stroked(toPoints: Self.chipIconStroke, iconSize: 20).templateImage(size: 20))
+                .renderingMode(.template)
+                .frame(width: TabBarMetrics.sheetCloseSize, height: TabBarMetrics.sheetCloseSize)
+            }
+            .buttonStyle(RoundButtonStyle())
+            .accessibilityLabel("Rename folder")
           }
-          Spacer()
-          Button(action: onClose) {
-            Label("Close", systemImage: "xmark")
-              .labelStyle(.iconOnly)
-              .fontWeight(.semibold)
-              .frame(width: TabBarMetrics.sheetCloseSize, height: TabBarMetrics.sheetCloseSize)
-          }
-          .buttonStyle(CloseButtonStyle())
         }
+        .frame(height: TabBarMetrics.sheetCloseSize)
+        .padding([.horizontal, .top], TabBarMetrics.sheetCloseInset)
       }
-      .padding([.horizontal, .top], TabBarMetrics.sheetCloseInset)
 
       if let openFolder {
         feedList(in: openFolder)
@@ -82,8 +104,7 @@ struct TabBarSwitcherSheet: View {
           .transition(.opacity)
       } else {
         chips
-          .padding(.horizontal, TabBarMetrics.sheetCloseInset)
-          .padding(.top, 12)
+          .padding(.top, Self.listTop)
           .padding(.bottom, 8)
 
         if model.switcherFolders.isEmpty {
@@ -94,47 +115,65 @@ struct TabBarSwitcherSheet: View {
         }
       }
     }
-    // The alerts' default action (Create, Rename) is drawn filled in the app's tint, as on a system alert.
-    .tint(model.activeTint)
     .safeAreaInset(edge: .bottom) {
       if mode == .edit, !selection.isEmpty { deleteBar }
     }
-    .alert("New folder", isPresented: $isCreating) {
-      TextField("Name", text: $draft)
-      Button("Cancel", role: .cancel) {}
-      Button("Create") { commit(.create) }
-        .keyboardShortcut(.defaultAction)
+    // The bar every sheet carries to say it can be dragged away.
+    .overlay(alignment: .top) {
+      Capsule()
+        .fill(.tertiary)
+        .frame(width: 36, height: 5)
+        .padding(.top, 6)
+        .allowsHitTesting(false)
+        // With no title on the folder list, the grabber is what VoiceOver lands on, named for the sheet.
+        .accessibilityHidden(openFolder != nil)
+        .accessibilityLabel(switcher.title)
+        .accessibilityAddTraits(.isHeader)
+        .accessibilityFocused(focus)
     }
-    .alert("Rename folder", isPresented: isRenaming) {
-      TextField("Name", text: $draft)
-      Button("Cancel", role: .cancel) {}
-      Button("Rename") { commit(.rename) }
-        .keyboardShortcut(.defaultAction)
-    }
-    .alert(deleteTitle, isPresented: isDeleting) {
-      Button("Cancel", role: .cancel) {}
-      Button("Delete", role: .destructive) {
-        for folder in deleting { model.onSwitcherFolderAction("delete", folder.id, "") }
-        selection.subtract(deleting.map(\.id))
-        if mode == .edit, selection.isEmpty { mode = .browse }
-      }
-    } message: {
-      Text("Their feeds stay followed and move to Unsorted.")
-    }
+    .background { alertHost }
     // A folder that is gone (deleted here or elsewhere) cannot stay open or selected, and leaving
     // the last one behind leaves nothing to edit.
     .onChange(of: model.switcherFolders) { _, folders in
       let ids = Set(folders.map(\.id))
       selection.formIntersection(ids)
       localOrder = nil
-      if let openFolder, !ids.contains(openFolder.id) { show(nil) }
+      if let openFolderID, !ids.contains(openFolderID) { show(nil) }
       if folders.isEmpty { mode = .browse }
     }
   }
 
+  /// The alerts hang off an empty view of their own. They keep the system's colours: a tint here
+  /// would colour every button's text, Cancel included, and leave the default action's fill alone.
+  private var alertHost: some View {
+    Color.clear
+      .alert("New folder", isPresented: $isCreating) {
+        TextField("Name", text: $draft)
+        Button("Cancel", role: .cancel) {}
+        Button("Create") { commit(.create) }
+          .keyboardShortcut(.defaultAction)
+      }
+      .alert("Rename folder", isPresented: isRenaming) {
+        TextField("Name", text: $draft)
+        Button("Cancel", role: .cancel) {}
+        Button("Rename") { commit(.rename) }
+          .keyboardShortcut(.defaultAction)
+      }
+      .alert(deleteTitle, isPresented: isDeleting) {
+        Button("Cancel", role: .cancel) {}
+        Button("Delete", role: .destructive) {
+          for folder in deleting { model.onSwitcherFolderAction("delete", folder.id, "") }
+          selection.subtract(deleting.map(\.id))
+          if mode == .edit, selection.isEmpty { mode = .browse }
+        }
+      } message: {
+        Text("Their feeds stay followed and move to Unsorted.")
+      }
+  }
+
   private func show(_ folder: SwitcherFolder?) {
     withAnimation(reduceMotion ? nil : .easeOut(duration: 0.2)) {
-      openFolder = folder
+      openFolderID = folder?.id
       mode = .browse
       selection = []
     }
@@ -170,8 +209,11 @@ struct TabBarSwitcherSheet: View {
   /// text) the row scrolls sideways instead.
   private var chips: some View {
     ViewThatFits(in: .horizontal) {
-      chipRow
+      chipRow.padding(.horizontal, TabBarMetrics.sheetCloseInset)
+      // The scroller spans the sheet's full width and carries the inset as content margin, so
+      // chips run off the sheet's edge instead of being cut at the padding.
       ScrollView(.horizontal) { chipRow }
+        .contentMargins(.horizontal, TabBarMetrics.sheetCloseInset, for: .scrollContent)
         .scrollIndicators(.hidden)
     }
     .frame(maxWidth: .infinity, alignment: .leading)
@@ -193,6 +235,10 @@ struct TabBarSwitcherSheet: View {
       .buttonStyle(.plain)
       .disabled(model.switcherFolders.count < 2)
       .opacity(model.switcherFolders.count < 2 ? 0.4 : 1)
+      chip("Import", icon: switcher.importIcon, isOn: false, isEnabled: true) {
+        model.onSwitcherFolderAction("import", "", "")
+        onDismiss()
+      }
       chip("New Folder", icon: switcher.addIcon, isOn: false, isEnabled: true) {
         draft = ""
         isCreating = true
@@ -235,6 +281,11 @@ struct TabBarSwitcherSheet: View {
 
   /// The folders as shown: the order the user dropped them in until the server's own list catches up,
   /// or the chosen sort.
+  /// The open folder as the server has it now, so a rename shows in the title as soon as it lands.
+  private var openFolder: SwitcherFolder? {
+    model.switcherFolders.first { $0.id == openFolderID }
+  }
+
   private var sortedFolders: [SwitcherFolder] {
     let folders = model.switcherFolders
     switch sort {
@@ -256,68 +307,198 @@ struct TabBarSwitcherSheet: View {
     }
   }
 
-  /// A system `List` in edit mode, as the docs describe it: with a selection binding it puts a
-  /// selection circle before each row, and with `onMove` a reorder handle (three bars) after it, so
-  /// both the controls and the drag are the platform's own.
+  /// The folders, one row each. Editing adds a radio button before a name and a three-bar handle after
+  /// it. Dragging the handle lifts the row itself, at full size, and the rows it passes slide aside.
   private var folderList: some View {
-    List(selection: $selection) {
-      ForEach(sortedFolders) { folder in
-        row(folder)
-          .tag(folder.id)
-          .listRowBackground(Color.clear)
-          .listRowSeparator(.hidden)
-          .listRowInsets(EdgeInsets(top: 0, leading: TabBarMetrics.sheetCloseInset, bottom: 0, trailing: TabBarMetrics.sheetCloseInset))
-          // A sorted list has no manual order to change, so it offers no handle.
-          .moveDisabled(sort != .automatic)
+    let folders = sortedFolders
+    return ScrollView {
+      LazyVStack(spacing: 0) {
+        ForEach(Array(folders.enumerated()), id: \.element.id) { index, folder in
+          row(folder)
+            .offset(y: offset(of: index, folder: folder, count: folders.count))
+            .zIndex(dragging == folder.id ? 1 : 0)
+        }
       }
-      .onMove(perform: move)
+      .padding(.horizontal, TabBarMetrics.sheetCloseInset)
+      .padding(.bottom, TabBarMetrics.sheetCloseInset)
+      .coordinateSpace(.named(Self.listSpace))
     }
-    .listStyle(.plain)
-    .scrollContentBackground(.hidden)
-    .environment(\.editMode, .constant(mode == .edit ? .active : .inactive))
-    .contentMargins(.bottom, TabBarMetrics.sheetCloseInset, for: .scrollContent)
+    // The finger is on the handle; the list must not scroll under it.
+    .scrollDisabled(dragging != nil)
     .fadedTopEdge()
   }
 
-  private func move(from source: IndexSet, to destination: Int) {
+  private static let listSpace = "folderList"
+
+  /// Where the dragged row would land: its start moved by whole rows, never above the default folder.
+  private func target(count: Int) -> Int {
+    let floor = sortedFolders.first?.name == Self.defaultFolderName ? 1 : 0
+    let moved = dragStart + Int((dragOffset / rowHeight).rounded())
+    return min(max(moved, floor), count - 1)
+  }
+
+  /// The dragged row follows the finger; the rows between its start and its target step one row aside.
+  private func offset(of index: Int, folder: SwitcherFolder, count: Int) -> CGFloat {
+    guard let dragging else { return 0 }
+    if folder.id == dragging { return dragOffset }
+    let end = target(count: count)
+    if dragStart < end, index > dragStart, index <= end { return -rowHeight }
+    if dragStart > end, index >= end, index < dragStart { return rowHeight }
+    return 0
+  }
+
+  private func row(_ folder: SwitcherFolder) -> some View {
+    let isSelected = selection.contains(folder.id)
+    let isLifted = dragging == folder.id
+    let canMove = sort == .automatic && folder.name != Self.defaultFolderName
+    return HStack(spacing: 12) {
+      Button { press(folder) } label: {
+        HStack(spacing: 12) {
+          // Editing puts a radio button before each name: empty to filled, in the app's tint.
+          if mode == .edit {
+            Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+              .font(.title3)
+              .foregroundStyle(isSelected ? AnyShapeStyle(model.activeTint) : AnyShapeStyle(.secondary))
+              .accessibilityHidden(true)
+          }
+          // The feed count rides the name's cap height as a superscript.
+          Text("\(Text(folder.name))\(Text(" \(folder.feedCount)").font(.caption).monospacedDigit().baselineOffset(10).foregroundStyle(.secondary))")
+            .font(.title3)
+            .lineLimit(1)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .frame(height: rowHeight)
+        .contentShape(.rect)
+      }
+      .buttonStyle(.plain)
+
+      if mode == .edit, canMove {
+        handle(for: folder)
+      }
+    }
+    .padding(.horizontal, isLifted ? 12 : 0)
+    .background { if isLifted { liftedBackground } }
+    // The card is wider than the row by its padding, so the text stays where it was.
+    .padding(.horizontal, isLifted ? -12 : 0)
+    // Rows that make way glide; the lifted row follows the finger exactly, with no animation of its own.
+    .animation(reduceMotion || isLifted ? nil : .snappy(duration: 0.2), value: dragOffset == 0 ? -1 : target(count: model.switcherFolders.count))
+    // Renaming and deleting a single folder live on a long press, so a row stays a plain target.
+    .contextMenu {
+      Button {
+        draft = folder.name
+        renaming = folder
+      } label: {
+        menuLabel("Rename", icon: switcher.renameIcon)
+      }
+      Button(role: .destructive) {
+        deleting = [folder]
+      } label: {
+        menuLabel("Delete", icon: switcher.deleteIcon)
+      }
+    }
+    .accessibilityLabel(folder.name)
+    .accessibilityValue(mode == .edit ? (isSelected ? "Selected" : "Not selected") : "\(folder.feedCount) feeds")
+    .accessibilityHint(mode == .edit ? "Selects this folder to delete" : "Shows the feeds in this folder")
+    .accessibilityAddTraits(isSelected ? .isSelected : [])
+  }
+
+  /// A menu item with a Blode glyph, a template image so the menu colours it like the title.
+  private func menuLabel(_ title: String, icon: TabBarIcon) -> some View {
+    Label {
+      Text(title)
+    } icon: {
+      Image(uiImage: icon.stroked(toPoints: Self.chipIconStroke, iconSize: Self.chipIconSize).templateImage(size: Self.chipIconSize))
+        .renderingMode(.template)
+    }
+  }
+
+  /// What a lifted row is made of: a translucent material, the theme's own so it follows light and
+  /// dark, in a continuous rounded shape. Raised the way the system raises a card: a hairline edge in
+  /// the foreground colour at low opacity, and two transparent shadows, a tight contact one and a
+  /// wide soft one, so it reads as lifted off the sheet rather than outlined.
+  private var liftedBackground: some View {
+    let shape = RoundedRectangle(cornerRadius: Self.liftedRadius, style: .continuous)
+    return shape
+      .fill(.regularMaterial)
+      .overlay { shape.strokeBorder(Color.primary.opacity(0.12), lineWidth: 0.5) }
+      .shadow(color: .black.opacity(0.10), radius: 1, y: 1)
+      .shadow(color: .black.opacity(0.18), radius: 14, y: 8)
+  }
+
+  /// The three-bar handle. It takes the touch ahead of the sheet's own drag and the list's scroll, so
+  /// a press on it moves the folder and nothing else; the rest of the row is untouched.
+  private func handle(for folder: SwitcherFolder) -> some View {
+    Image(uiImage: switcher.reorderIcon.stroked(toPoints: Self.chipIconStroke, iconSize: 22).templateImage(size: 22))
+      .renderingMode(.template)
+      .foregroundStyle(.secondary)
+      .frame(width: 44, height: 44)
+      .contentShape(.rect)
+      .highPriorityGesture(
+        DragGesture(minimumDistance: 0, coordinateSpace: .named(Self.listSpace))
+          .onChanged { value in
+            if dragging == nil {
+              // The lift, felt as the row leaves the list.
+              UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+              dragStart = sortedFolders.firstIndex(of: folder) ?? 0
+              dragging = folder.id
+            }
+            let before = target(count: sortedFolders.count)
+            dragOffset = value.translation.height
+            // A tick each time the row passes another.
+            if target(count: sortedFolders.count) != before { UISelectionFeedbackGenerator().selectionChanged() }
+          }
+          .onEnded { _ in drop() }
+      )
+      .accessibilityLabel("Reorder \(folder.name)")
+      .accessibilityAddTraits(.isButton)
+      .accessibilityAction(named: "Move up") { shift(folder, by: -1) }
+      .accessibilityAction(named: "Move down") { shift(folder, by: 1) }
+  }
+
+  /// Lets go: the row settles into the place it was over, and then the order is saved and the offsets
+  /// are cleared in one step, which moves nothing, as the layout has caught up with them.
+  private func drop() {
+    guard dragging != nil else { return }
+    let count = sortedFolders.count
+    let end = target(count: count)
+    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+    withAnimation(reduceMotion ? nil : .snappy(duration: 0.2), completionCriteria: .logicallyComplete) {
+      dragOffset = CGFloat(end - dragStart) * rowHeight
+    } completion: {
+      var ids = sortedFolders.map(\.id)
+      let moved = ids.remove(at: dragStart)
+      ids.insert(moved, at: end)
+      var transaction = Transaction()
+      transaction.disablesAnimations = true
+      withTransaction(transaction) {
+        if end != dragStart { save(ids) }
+        dragging = nil
+        dragOffset = 0
+      }
+    }
+  }
+
+  /// VoiceOver's way to reorder: one step at a time.
+  private func shift(_ folder: SwitcherFolder, by step: Int) {
     var ids = sortedFolders.map(\.id)
-    ids.move(fromOffsets: source, toOffset: destination)
+    let floor = sortedFolders.first?.name == Self.defaultFolderName ? 1 : 0
+    guard let from = ids.firstIndex(of: folder.id), (floor..<ids.count).contains(from + step) else { return }
+    ids.swapAt(from, from + step)
+    save(ids)
+  }
+
+  private func save(_ ids: [String]) {
     localOrder = ids
     model.onSwitcherFolderAction("reorder", "", ids.joined(separator: "\n"))
   }
 
-  @ViewBuilder
-  private func row(_ folder: SwitcherFolder) -> some View {
-    let content = HStack(spacing: 12) {
-      // The feed count rides the name's cap height as a superscript.
-      Text("\(Text(folder.name))\(Text(" \(folder.feedCount)").font(.caption).monospacedDigit().baselineOffset(10).foregroundStyle(.secondary))")
-        .font(.title3)
-        .lineLimit(1)
-        .frame(maxWidth: .infinity, alignment: .leading)
+  private func press(_ folder: SwitcherFolder) {
+    switch mode {
+    case .browse:
+      show(folder)
+    case .edit:
+      if selection.contains(folder.id) { selection.remove(folder.id) } else { selection.insert(folder.id) }
     }
-    .frame(minHeight: 52)
-    .contentShape(.rect)
-
-    // Editing selects through the list; browsing opens the folder.
-    Group {
-      if mode == .edit {
-        content
-      } else {
-        Button { show(folder) } label: { content }.buttonStyle(.plain)
-      }
-    }
-    .softensAtTop()
-    // Renaming and deleting a single folder live on a long press, so a row stays a plain target.
-    .contextMenu {
-      Button("Rename", systemImage: "pencil") {
-        draft = folder.name
-        renaming = folder
-      }
-      Button("Delete", systemImage: "trash", role: .destructive) { deleting = [folder] }
-    }
-    .accessibilityLabel(folder.name)
-    .accessibilityValue("\(folder.feedCount) feeds")
-    .accessibilityHint(mode == .edit ? "Selects this folder to delete" : "Shows the feeds in this folder")
   }
 
   // MARK: Feeds
@@ -426,10 +607,11 @@ private extension View {
   }
 }
 
-/// The app's close button (the email sign-in sheet's) at the system sheet's 44pt: a filled circle,
+/// The sheet header's round button (the app's close button, as on the email sign-in sheet) at the
+/// system sheet's 44pt: a filled circle,
 /// not glass on glass, that dims while pressed as `.bordered` does. `.bordered` itself sizes the
 /// circle from its label, so it cannot be held at an exact size.
-private struct CloseButtonStyle: ButtonStyle {
+private struct RoundButtonStyle: ButtonStyle {
   func makeBody(configuration: Configuration) -> some View {
     configuration.label
       .foregroundStyle(.primary)

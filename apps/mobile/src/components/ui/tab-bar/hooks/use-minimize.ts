@@ -169,7 +169,7 @@ type NativeListScrollOptions = {
 };
 
 /**
- * `onScroll` for `ArticleListView` (wrapped with `Animated.createAnimatedComponent`). Reanimated
+ * `onScroll` for a native scroll view (wrapped with `Animated.createAnimatedComponent`). Reanimated
  * receives the native view's scroll event on the UI thread, as it does a `ScrollView`'s, so the
  * header tracks every frame and the direction rules decide there; no offset crosses to JS.
  */

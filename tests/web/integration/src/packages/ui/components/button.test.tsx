@@ -82,7 +82,8 @@ describe("ButtonGroup", () => {
   test("splits segments with capsule ends and small inner corners", () => {
     const classes = buttonGroupVariants({ variant: "split" });
 
-    expect(classes).toContain("gap-0.75");
+    expect(classes).toContain("gap-(--split-gap)");
+    expect(classes).toContain("[--split-gap:calc(var(--split-h,2.25rem)/24)]");
     expect(classes).toContain("*:data-[slot=button]:rounded-sm");
     expect(classes).toContain("*:data-[slot=button]:first:rounded-s-full");
     expect(classes).toContain("*:data-[slot=button]:last:rounded-e-full");

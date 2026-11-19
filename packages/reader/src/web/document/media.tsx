@@ -2,6 +2,7 @@
 
 import { cn } from "@kyomi/ui/lib/utils";
 import type { ReaderBlock } from "../../core/document";
+import { keyedByContent } from "../../core/keys";
 import { normalizeSafeHttpUrl } from "../../core/url";
 import { useDocumentContext } from "./context";
 import { DocumentImage } from "./image";
@@ -54,11 +55,8 @@ export function Gallery({ block, id }: { block: BlockOf<"gallery">; id: string |
         role={carousel ? "group" : undefined}
         tabIndex={carousel ? 0 : undefined}
       >
-        {block.items.map((item, index) => (
-          <div
-            className={cn("min-w-0", carousel && "shrink-0 basis-[85%] snap-center")}
-            key={index}
-          >
+        {keyedByContent(block.items).map(({ item, key }) => (
+          <div className={cn("min-w-0", carousel && "shrink-0 basis-[85%] snap-center")} key={key}>
             <DocumentImage description={inlinesToText(item.caption)} image={item.image} />
             {item.caption ? (
               <span className="mt-1 block text-start" data-reader-figure-caption="">

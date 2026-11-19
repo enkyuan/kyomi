@@ -12,7 +12,7 @@ type ReaderSettingsProps = {
 export function ReaderSettings({ preferences, setPreferences }: ReaderSettingsProps) {
   return (
     <section className="space-y-3">
-      <SettingHeading description="Choose how the reader treats your place." title="Reading" />
+      <SettingHeading description="Customize your reading experience." title="Reading" />
       <div className="space-y-3 py-1">
         <label
           htmlFor="reader-remember-position"

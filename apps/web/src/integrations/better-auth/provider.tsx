@@ -28,6 +28,10 @@ function normalizeInitialSession(initialSession?: AuthSession | null): SessionDa
   return {
     session: {
       ...initialSession.session,
+      // Not sent with the page; the live session or the sessions list supplies them.
+      token: "",
+      ipAddress: null,
+      userAgent: null,
       expiresAt: new Date(initialSession.session.expiresAt),
       createdAt: new Date(initialSession.session.createdAt),
       updatedAt: new Date(initialSession.session.updatedAt),

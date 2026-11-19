@@ -2,14 +2,17 @@
 
 import { FolderIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
-import { Folders } from "@modules/inbox/components/recap/folders/summary";
-import type {
-  InboxRecapRailFolderBackTarget,
-  InboxRecapRailSection,
-} from "@modules/inbox/lib/recap/index";
+import { ScrollArea } from "@kyomi/ui/components/scroll-area";
+import { useViewport } from "@modules/inbox/hooks/use-viewport";
+import { getRecapRowLimits } from "../../lib/recap/row-limits";
+import { useRef } from "react";
 import { cn } from "@kyomi/ui/lib/utils";
+import { Folders } from "@modules/inbox/components/recap/folders/summary";
 import type { InboxItem } from "@modules/articles/lib/api";
-import { RecapExpandedView } from "./expanded";
+
+/** An expanded screen is one card inset like the summary's section cards, with the same 24px corner. */
+const RECAP_EMPTY_CARD_CLASS =
+  "mx-2 mt-4.5 flex min-h-0 flex-1 flex-col overflow-hidden rounded-3xl bg-sidebar p-2 shadow-sm/5";
 import {
   RECAP_SUMMARY_LAYOUT_CLASS,
   RECAP_SUMMARY_SECTION_CLASS,
@@ -22,118 +25,65 @@ import { TopSources } from "./sections/top-sources";
 import { WorthRevisiting } from "./sections/worth-revisiting";
 import type { RecapFolder, RecapSavedItem, RecapTopViewedFeed } from "../../lib/recap/types";
 
-type RemoveFeedsToastOptions = {
-  anchor?: HTMLElement | null;
-  feedName?: string;
-};
-
 export function RecapContent({
-  expandedSection,
-  exportingOpml,
   continueReadingItems,
   folders,
   isFollowingFeed,
   isSummaryEmpty,
   movingFeedId,
-  movingFeedIds,
   oldestSavedItems,
   recapError,
   recapLoading,
   refetchRecap,
-  removeFeeds,
-  removingFeedIds,
-  selectedFolderBackTarget,
-  selectedFolderId,
   topViewedFeeds,
   unsavingItemId,
   followFeed,
   moveFeed,
-  moveFeeds,
-  navigateRecap,
   onCreateFolder,
   onDismissContinueReading,
-  onExportOpml,
   onImportOpml,
+  onManageFolders,
   onUnsave,
 }: {
-  expandedSection: InboxRecapRailSection | null;
-  exportingOpml: boolean;
   continueReadingItems: InboxItem[];
   folders: RecapFolder[];
   isFollowingFeed: (feedId: string) => boolean;
   isSummaryEmpty: boolean;
   movingFeedId: string | null;
-  movingFeedIds: string[];
   oldestSavedItems: RecapSavedItem[];
   recapError: boolean;
   recapLoading: boolean;
   refetchRecap: () => void;
-  removeFeeds: (feedIds: string[], options?: RemoveFeedsToastOptions) => void;
-  removingFeedIds: string[];
-  selectedFolderBackTarget: InboxRecapRailFolderBackTarget | null;
-  selectedFolderId: string | null;
   topViewedFeeds: RecapTopViewedFeed[];
   unsavingItemId: string | null;
   followFeed: (feed: RecapTopViewedFeed, folderId?: string) => void;
   moveFeed: (feedId: string, folderId: string) => void;
-  moveFeeds: (feedIds: string[], folderId: string) => void;
-  navigateRecap: (input: {
-    direction?: "forward" | "backward";
-    rail: InboxRecapRailSection | null;
-    railFolderBack?: InboxRecapRailFolderBackTarget;
-    railFolderId?: string | null;
-  }) => void;
   onCreateFolder: () => void;
   onDismissContinueReading: (itemId: string) => void;
-  onExportOpml: () => void;
   onImportOpml: () => void;
+  /** Opens the folders page of the command menu. */
+  onManageFolders: () => void;
   onUnsave: (itemId: string) => void;
 }) {
   const hasContinueReading = continueReadingItems.length > 0;
+  const areaRef = useRef<HTMLDivElement | null>(null);
+  const { viewportHeight } = useViewport(areaRef);
+  const limits = getRecapRowLimits({
+    availableHeight: viewportHeight,
+    continueReadingCount: continueReadingItems.length,
+    folderCount: folders.length,
+    savedItemCount: oldestSavedItems.length,
+    topSourceCount: topViewedFeeds.length,
+  });
   if (recapLoading) {
     return <RecapSkeleton />;
   }
   if (recapError) {
     return <RecapError onRetry={refetchRecap} />;
   }
-  if (expandedSection) {
-    return (
-      <RecapExpandedView
-        exportingOpml={exportingOpml}
-        folders={folders}
-        followFeed={followFeed}
-        isFollowingFeed={isFollowingFeed}
-        moveFeed={moveFeed}
-        moveFeeds={moveFeeds}
-        movingFeedIds={movingFeedIds}
-        movingFeedId={movingFeedId}
-        oldestSavedItems={oldestSavedItems}
-        removeFeeds={removeFeeds}
-        removingFeedIds={removingFeedIds}
-        section={expandedSection}
-        selectedFolderBackTarget={selectedFolderBackTarget}
-        selectedFolderId={selectedFolderId}
-        topViewedFeeds={topViewedFeeds}
-        unsavingItemId={unsavingItemId}
-        onBack={() => navigateRecap({ direction: "backward", rail: null })}
-        onCreateFolder={onCreateFolder}
-        onExportOpml={onExportOpml}
-        onImportOpml={onImportOpml}
-        onSelectFolder={(folderId, backTarget) =>
-          navigateRecap({
-            direction: folderId ? "forward" : "backward",
-            rail: "folders",
-            railFolderBack: backTarget,
-            railFolderId: folderId,
-          })
-        }
-        onUnsave={onUnsave}
-      />
-    );
-  }
   if (isSummaryEmpty && !hasContinueReading) {
     return (
-      <div className="flex min-h-0 w-full flex-1 items-center justify-center overflow-hidden px-4 py-4">
+      <div className={cn(RECAP_EMPTY_CARD_CLASS, "items-center justify-center px-4")}>
         <SectionEmpty
           title="Nothing here yet"
           description="Folders, top sources, and saved items will appear here as you read and organize feeds."
@@ -148,46 +98,50 @@ export function RecapContent({
     );
   }
   return (
-    <div className={cn(RECAP_SUMMARY_LAYOUT_CLASS, hasContinueReading && "grid-rows-4")}>
-      <div className={RECAP_SUMMARY_SECTION_CLASS}>
-        <Folders
-          folders={folders}
-          onExpand={() => navigateRecap({ rail: "folders" })}
-          onCreateFolder={onCreateFolder}
-          onImportOpml={onImportOpml}
-          onSelectFolder={(folder) =>
-            navigateRecap({
-              rail: "folders",
-              railFolderBack: "recap",
-              railFolderId: folder.id,
-            })
-          }
-        />
+    <>
+      <div ref={areaRef} className="min-h-0 flex-1">
+        <ScrollArea className="h-full" scrollbarGutter>
+          <div className={cn(RECAP_SUMMARY_LAYOUT_CLASS, "min-h-full")}>
+            <div className={RECAP_SUMMARY_SECTION_CLASS}>
+              <Folders
+                folders={folders}
+                limit={limits.folders}
+                onExpand={onManageFolders}
+                onCreateFolder={onCreateFolder}
+                onImportOpml={onImportOpml}
+                onSelectFolder={onManageFolders}
+              />
+            </div>
+            <div className={RECAP_SUMMARY_SECTION_CLASS}>
+              <TopSources
+                feeds={topViewedFeeds}
+                limit={limits.topSources}
+                folders={folders}
+                followFeed={followFeed}
+                isFollowingFeed={isFollowingFeed}
+                moveFeed={moveFeed}
+                movingFeedId={movingFeedId}
+              />
+            </div>
+            {hasContinueReading ? (
+              <div className={RECAP_SUMMARY_SECTION_CLASS}>
+                <ContinueReading
+                  items={continueReadingItems}
+                  onDismiss={onDismissContinueReading}
+                />
+              </div>
+            ) : null}
+            <div className={RECAP_SUMMARY_SECTION_CLASS}>
+              <WorthRevisiting
+                items={oldestSavedItems}
+                limit={limits.savedItems}
+                onUnsave={onUnsave}
+                unsavingItemId={unsavingItemId}
+              />
+            </div>
+          </div>
+        </ScrollArea>
       </div>
-      <div className={RECAP_SUMMARY_SECTION_CLASS}>
-        <TopSources
-          feeds={topViewedFeeds}
-          folders={folders}
-          followFeed={followFeed}
-          isFollowingFeed={isFollowingFeed}
-          moveFeed={moveFeed}
-          movingFeedId={movingFeedId}
-          onExpand={() => navigateRecap({ rail: "topSources" })}
-        />
-      </div>
-      {hasContinueReading ? (
-        <div className={RECAP_SUMMARY_SECTION_CLASS}>
-          <ContinueReading items={continueReadingItems} onDismiss={onDismissContinueReading} />
-        </div>
-      ) : null}
-      <div className={RECAP_SUMMARY_SECTION_CLASS}>
-        <WorthRevisiting
-          items={oldestSavedItems}
-          onExpand={() => navigateRecap({ rail: "worthRevisiting" })}
-          onUnsave={onUnsave}
-          unsavingItemId={unsavingItemId}
-        />
-      </div>
-    </div>
+    </>
   );
 }

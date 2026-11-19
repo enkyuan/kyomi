@@ -1,8 +1,9 @@
 "use client";
 
-import { CheckIcon, PlusIcon } from "@kyomi/ui/icons/blode";
+import { Checkmark1Icon, PlusIcon } from "@kyomi/ui/icons/blode";
 import { useMemo } from "react";
 import { Button } from "@kyomi/ui/components/button";
+import { cn } from "@kyomi/ui/lib/utils";
 import {
   Menu,
   MenuItem,
@@ -35,7 +36,7 @@ export function FolderPickerButton({
 }) {
   const isFollowMode = mode === "follow";
   const isFiled = !isFollowMode && currentFolderName !== "Unsorted";
-  const Icon = isFiled ? CheckIcon : PlusIcon;
+  const Icon = isFiled ? Checkmark1Icon : PlusIcon;
   const orderedFolders = useMemo(() => {
     const unsortedFolder = folders.find((folder) => folder.label === "Unsorted");
     if (!unsortedFolder) {
@@ -89,7 +90,11 @@ export function FolderPickerButton({
                   ? `${feedTitle} is in ${currentFolderName}. Change folder.`
                   : `Add ${feedTitle} to a folder`
             }
-            className={TOP_SOURCE_FOLDER_BUTTON_CLASS}
+            className={cn(
+              TOP_SOURCE_FOLDER_BUTTON_CLASS,
+              isFiled &&
+                "bg-matcha text-matcha-foreground hover:bg-matcha/90 data-pressed:bg-matcha/90 *:data-[slot=button-loading-indicator]:text-matcha-foreground",
+            )}
             loading={isMoving}
             shape="pill"
             size="icon-xs"

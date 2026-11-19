@@ -23,7 +23,6 @@ const initialSession: NonNullable<AuthSession> = {
   session: {
     id: "session-1",
     expiresAt: "2026-07-15T12:00:00.000Z",
-    token: "token",
     createdAt: "2026-07-14T12:00:00.000Z",
     updatedAt: "2026-07-14T12:00:00.000Z",
     userId: "user-1",

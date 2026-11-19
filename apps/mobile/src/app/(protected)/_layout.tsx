@@ -1,16 +1,11 @@
-import { useSegments } from "expo-router";
 import { Stack } from "expo-router/stack";
 import { useEffect, useRef } from "react";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { getTabBarOcclusionHeight } from "@ui/tab-bar/lib/styles";
 import { ToastViewport } from "@ui/toast";
 import { prefetchInitialExploreArticles } from "@modules/articles/lib/requests";
 import { useBufferedProgressRetry } from "@modules/reader/hooks/use-buffered-progress-retry";
 
 export default function AppLayout() {
   const hasPrefetchedRef = useRef(false);
-  const insets = useSafeAreaInsets();
-  const isInTabs = (useSegments() as string[]).includes("(tabs)");
 
   useBufferedProgressRetry();
 
@@ -39,11 +34,8 @@ export default function AppLayout() {
         {/* The settings stack owns its header (Stack.Toolbar needs the nested one), so this stays off. */}
         <Stack.Screen name="settings" options={{ presentation: "modal" }} />
       </Stack>
-      {/* Last, so it paints over the screens. Bottom placement keeps toasts off headers and above the floating tab bar. */}
-      <ToastViewport
-        bottomInset={isInTabs ? getTabBarOcclusionHeight(insets) : 0}
-        defaultPosition="bottomCenter"
-      />
+      {/* Last, so it paints over the screens. Toasts sit at the top, below the status bar. */}
+      <ToastViewport defaultPosition="topCenter" />
     </>
   );
 }
