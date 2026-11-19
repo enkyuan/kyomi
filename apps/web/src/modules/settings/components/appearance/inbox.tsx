@@ -62,8 +62,17 @@ function DensityPreview({ rows }: { rows: number }) {
       viewBox="0 0 88 70"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect className="fill-muted" height="70" width="88" />
-      <rect className="fill-current" height="62" opacity="0.06" rx="4" width="80" x="4" y="4" />
+      {/* Drawn with the active theme's own surfaces, so it matches light, dark and system. */}
+      <rect className="fill-background" height="70" width="88" />
+      <rect
+        className="fill-popover stroke-border"
+        height="61"
+        rx="3.5"
+        strokeWidth="1"
+        width="79"
+        x="4.5"
+        y="4.5"
+      />
       {Array.from({ length: rows }, (_, index) => {
         const mid = top + index * pitch + pitch / 2;
         return (
