@@ -82,14 +82,23 @@ export function ManageFolders({
   onImportOpml,
   moveFeed,
   onOpenFeed,
+  editMode,
+  pinMode,
   run,
+  setEditMode,
+  setPinMode,
   term,
-}: ManageFoldersProps & { run: (action: () => void) => () => void; term: string }) {
+}: ManageFoldersProps & {
+  editMode: boolean;
+  pinMode: boolean;
+  run: (action: () => void) => () => void;
+  setEditMode: (update: (value: boolean) => boolean) => void;
+  setPinMode: (update: (value: boolean) => boolean) => void;
+  term: string;
+}) {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [draftName, setDraftName] = useState("");
   const [expandedIds, setExpandedIds] = useState<ReadonlySet<string>>(() => new Set());
-  const [editMode, setEditMode] = useState(false);
-  const [pinMode, setPinMode] = useState(false);
   const [sort, setSort] = useState<FolderSort>("manual");
   const [dropTargetId, setDropTargetId] = useState<string | null>(null);
   const [drag, setDrag] = useState<{ dy: number; feedId: string; originId: string | null } | null>(
@@ -130,13 +139,13 @@ export function ManageFolders({
   const actions = [
     {
       icon: BarsThreeFilledIcon,
-      label: editMode ? "Done editing" : "Edit folders",
+      label: editMode ? "Finished editing" : "Edit folders",
       onSelect: () => setEditMode((value) => !value),
       value: "edit-folders",
     },
     {
       icon: StarFilledIcon,
-      label: pinMode ? "Done pinning" : "Pin folders",
+      label: pinMode ? "Finished pinning" : "Pin folders",
       onSelect: () => setPinMode((value) => !value),
       value: "pin-folders",
     },

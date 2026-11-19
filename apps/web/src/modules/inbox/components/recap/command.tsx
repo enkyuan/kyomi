@@ -13,6 +13,14 @@ import {
 import type { ReactNode } from "react";
 import { useCallback, useRef, useState } from "react";
 import {
+  AnimatePresence,
+  LazyMotion,
+  controlSwapMotion,
+  domAnimation,
+  m,
+  useReducedMotion,
+} from "@kyomi/ui/lib/motion";
+import {
   Command,
   CommandDialog,
   CommandDialogPortal,
@@ -133,8 +141,12 @@ function RecapCommandPanel({
   const [page, setPage] = useState<RecapCommandPage>(initialPage);
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const [editMode, setEditMode] = useState(false);
+  const [pinMode, setPinMode] = useState(false);
   const goTo = (next: RecapCommandPage) => {
     setPage(next);
+    setEditMode(false);
+    setPinMode(false);
     setQuery("");
     inputRef.current?.focus();
   };
@@ -253,6 +265,13 @@ function RecapCommandPanel({
   const term = query.trim();
 
   const goBack = () => goTo("root");
+  const reducedMotion = useReducedMotion();
+  const onFolders = page === "folders";
+  const activeMode = editMode
+    ? { finish: () => setEditMode(() => false), label: "finish editing" }
+    : pinMode
+      ? { finish: () => setPinMode(() => false), label: "finish pinning" }
+      : null;
 
   return (
     <Command
@@ -284,8 +303,12 @@ function RecapCommandPanel({
         <CommandEmpty>Nothing matches.</CommandEmpty>
         {page === "folders" ? (
           <ManageFolders
+            editMode={editMode}
             exportingOpml={exportingOpml}
             feeds={feeds}
+            pinMode={pinMode}
+            setEditMode={setEditMode}
+            setPinMode={setPinMode}
             folders={folders}
             run={run}
             term={query.trim()}
@@ -316,24 +339,44 @@ function RecapCommandPanel({
         )}
       </CommandList>
       <div className="kyomi-command-footer">
-        {onSubPage ? (
-          <button
-            className="kyomi-command-footer-action"
-            type="button"
-            // Keep focus in the field: a button taking it on press leaves the dialog frame focused
-            // after the page changes.
-            onMouseDown={(event) => event.preventDefault()}
-            onClick={goBack}
-          >
-            <Kbd className="px-1.5 text-[10px] leading-none">←</Kbd>
-            to go back
-          </button>
-        ) : (
-          <span className="inline-flex items-center gap-1.5">
-            <Kbd className="px-1.5 text-[10px] leading-none">/</Kbd>
-            for commands
-          </span>
-        )}
+        <span className="inline-flex items-center gap-4">
+          {onSubPage ? (
+            <button
+              className="kyomi-command-footer-action"
+              type="button"
+              // Keep focus in the field: a button taking it on press leaves the dialog frame focused
+              // after the page changes.
+              onMouseDown={(event) => event.preventDefault()}
+              onClick={goBack}
+            >
+              <Kbd className="px-1.5 text-[10px] leading-none">←</Kbd>
+              to go back
+            </button>
+          ) : (
+            <span className="inline-flex items-center gap-1.5">
+              <Kbd className="px-1.5 text-[10px] leading-none">/</Kbd>
+              for commands
+            </span>
+          )}
+          <LazyMotion features={domAnimation}>
+            <AnimatePresence initial={false} mode="popLayout">
+              {onFolders && activeMode ? (
+                <m.button
+                  key={activeMode.label}
+                  className="kyomi-command-footer-action"
+                  type="button"
+                  {...controlSwapMotion(reducedMotion)}
+                  transition={{ bounce: 0, duration: 0.2, type: "spring" }}
+                  onClick={activeMode.finish}
+                  onMouseDown={(event) => event.preventDefault()}
+                >
+                  <Kbd className="px-1.5 text-[10px] leading-none">×</Kbd>
+                  to {activeMode.label}
+                </m.button>
+              ) : null}
+            </AnimatePresence>
+          </LazyMotion>
+        </span>
         <span className="inline-flex items-center gap-1.5">
           <Kbd className="px-1.5 text-[10px] leading-none">↵</Kbd>
           to select
