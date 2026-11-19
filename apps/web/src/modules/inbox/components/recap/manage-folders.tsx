@@ -23,7 +23,7 @@ import {
   m,
   useReducedMotion,
 } from "@kyomi/ui/lib/motion";
-import { useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
+import { useEffect, useRef, useState, type PointerEvent, type ReactNode } from "react";
 import {
   AlertDialog,
   AlertDialogClose,
@@ -40,7 +40,6 @@ import {
   ContextMenuPopup,
   ContextMenuTrigger,
 } from "@kyomi/ui/components/context-menu";
-import { Input } from "@kyomi/ui/components/input";
 import { MenuItem } from "@kyomi/ui/components/menu";
 import { FeedFavicon } from "@modules/feeds/components/favicon";
 import type { FollowedFeed } from "@modules/feeds/lib/api";
@@ -90,6 +89,7 @@ export function ManageFolders({
   const [draftName, setDraftName] = useState("");
   const [expandedIds, setExpandedIds] = useState<ReadonlySet<string>>(() => new Set());
   const [editMode, setEditMode] = useState(false);
+  const [pinMode, setPinMode] = useState(false);
   const [sort, setSort] = useState<FolderSort>("manual");
   const [dropTargetId, setDropTargetId] = useState<string | null>(null);
   const [drag, setDrag] = useState<{ dy: number; feedId: string; originId: string | null } | null>(
@@ -133,6 +133,12 @@ export function ManageFolders({
       label: editMode ? "Done editing" : "Edit folders",
       onSelect: () => setEditMode((value) => !value),
       value: "edit-folders",
+    },
+    {
+      icon: StarFilledIcon,
+      label: pinMode ? "Done pinning" : "Pin folders",
+      onSelect: () => setPinMode((value) => !value),
+      value: "pin-folders",
     },
     {
       icon: FilterDescFilledIcon,
@@ -208,15 +214,6 @@ export function ManageFolders({
     renameMutation.mutate({ folderId: folder.id, name });
   };
   // The menu treats Enter, Escape and the arrows as its own; the rename field keeps them.
-  const renameKeyDown = (event: KeyboardEvent<HTMLInputElement>, folder: RecapFolder) => {
-    event.stopPropagation();
-    if (event.key === "Enter") {
-      submitRename(folder);
-    }
-    if (event.key === "Escape") {
-      setEditingId(null);
-    }
-  };
 
   return (
     <>
@@ -224,17 +221,17 @@ export function ManageFolders({
         <Group label="Folders">
           {visibleFolders.map((folder) =>
             editingId === folder.id ? (
-              <div key={folder.id} className="flex h-10 items-center gap-2.5 px-2.5">
+              <div
+                key={folder.id}
+                className="flex h-10 items-center gap-2.5 px-2.5 font-medium text-sm"
+              >
                 <FolderFilledIcon className="kyomi-command-item-icon" />
-                <Input
-                  aria-label={`Rename ${folder.name}`}
-                  className="h-8 min-w-0 flex-1"
-                  size="sm"
-                  value={draftName}
-                  autoFocus
-                  onBlur={() => setEditingId(null)}
-                  onChange={(event) => setDraftName(event.currentTarget.value)}
-                  onKeyDown={(event) => renameKeyDown(event, folder)}
+                <InlineRename
+                  label={`Rename ${folder.name}`}
+                  name={folder.name}
+                  onCancel={() => setEditingId(null)}
+                  onChange={setDraftName}
+                  onSubmit={() => submitRename(folder)}
                 />
               </div>
             ) : (
@@ -255,6 +252,7 @@ export function ManageFolders({
                     onSelect={() => toggle(folder.id)}
                   >
                     <FolderGlyph
+                      alwaysStar={pinMode}
                       disabled={pinMutation.isPending}
                       folder={folder}
                       onTogglePin={() =>
@@ -387,15 +385,75 @@ export function ManageFolders({
 }
 
 /**
+ * The folder's name, edited in place: the text itself becomes editable (no input box), marked by a
+ * soft highlight and a caret. Enter saves, Escape or clicking away cancels.
+ */
+function InlineRename({
+  label,
+  name,
+  onCancel,
+  onChange,
+  onSubmit,
+}: {
+  label: string;
+  name: string;
+  onCancel: () => void;
+  onChange: (value: string) => void;
+  onSubmit: () => void;
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) {
+      return;
+    }
+    node.focus();
+    const range = document.createRange();
+    range.selectNodeContents(node);
+    const selection = window.getSelection();
+    selection?.removeAllRanges();
+    selection?.addRange(range);
+  }, []);
+
+  return (
+    <span
+      ref={ref}
+      aria-label={label}
+      className="-mx-1.5 min-w-0 flex-1 truncate rounded-md bg-accent/70 px-1.5 py-0.5 text-foreground caret-foreground outline-none ring-1 ring-ring/40 transition-[background-color,box-shadow] duration-150 ease-out focus:ring-2"
+      contentEditable="plaintext-only"
+      role="textbox"
+      suppressContentEditableWarning
+      onBlur={onCancel}
+      onInput={(event) => onChange(event.currentTarget.textContent ?? "")}
+      onKeyDown={(event) => {
+        // The menu treats Enter, Escape and the arrows as its own; the name keeps them.
+        event.stopPropagation();
+        if (event.key === "Enter") {
+          event.preventDefault();
+          onSubmit();
+        }
+        if (event.key === "Escape") {
+          onCancel();
+        }
+      }}
+    >
+      {name}
+    </span>
+  );
+}
+
+/**
  * The folder's glyph, which turns into a star on hover: tap it to pin (outline) or unpin (filled,
  * in the palette's amber). Icons swap with the shared recipe: scale 0.25 to 1, opacity and a 4px
  * blur, on a spring with no bounce.
  */
 function FolderGlyph({
+  alwaysStar,
   disabled,
   folder,
   onTogglePin,
 }: {
+  alwaysStar: boolean;
   disabled: boolean;
   folder: RecapFolder;
   onTogglePin: () => void;
@@ -427,7 +485,7 @@ function FolderGlyph({
         onPointerLeave={() => setHovered(false)}
       >
         <AnimatePresence initial={false} mode="popLayout">
-          {hovered ? (
+          {hovered || alwaysStar ? (
             <m.span key="star" className="absolute grid place-items-center" {...swap}>
               <Star
                 className={`size-5 ${folder.isPinned ? "text-amber-500" : "text-muted-foreground"}`}
