@@ -14,11 +14,11 @@ Kyomi's PR and `main` CI runs on CircleCI (`.circleci/`). GitHub Actions keeps o
 
 The setup job maps changed paths to areas. Docs, Markdown, `.agents/`, `.pi/` and `.github/` changes reach no build or test.
 
-| Area      | Paths                                                                                                        | Jobs                                                            |
-| --------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
-| `app`     | Anything outside `packages/catalog/` (and the excluded paths above)                                          | `static-quality`, then `web-tests`, `api-tests`, `build`        |
-| `docker`  | Dockerfiles, `.dockerignore`, `.bun-version`, `bun.lock`, `package.json` manifests, `turbo.json`, `patches/` | `docker-build` (on `main`, any `app` change also builds images) |
-| `catalog` | `packages/catalog/**`, `.circleci/**`                                                                        | `catalog-typecheck`                                             |
+| Area      | Paths                                                                                            | Jobs                                                            |
+| --------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| `app`     | Anything outside `packages/catalog/` (and the excluded paths above)                              | `static-quality`, then `web-tests`, `api-tests`, `build`        |
+| `docker`  | Dockerfiles, `.dockerignore`, `.bun-version`, `bun.lock`, `package.json` manifests, `turbo.json` | `docker-build` (on `main`, any `app` change also builds images) |
+| `catalog` | `packages/catalog/**`, `.circleci/**`                                                            | `catalog-typecheck`                                             |
 
 `web-tests`, `api-tests`, `build` and `docker-build` wait for `static-quality`: a formatting or type error fails the pipeline in one cheap job instead of five parallel ones. `static-quality` restores Turbo's local cache, so packages whose inputs did not change replay their lint/format/typecheck result.
 
