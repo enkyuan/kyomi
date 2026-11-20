@@ -26,6 +26,16 @@ export type HtmlFeedFailureClass =
   | "login_html"
   | "stale_endpoint_html";
 
+/** Why fetching the feed document failed, derived from the response status or the transport. */
+export type FeedFetchFailureClass =
+  | "http_404"
+  | "http_4xx"
+  | "http_5xx"
+  | "certificate"
+  | "network";
+
+export type FeedRefreshFailureClass = HtmlFeedFailureClass | FeedFetchFailureClass;
+
 export type FeedRefreshResult = {
   ok: boolean;
   itemCount: number;
@@ -37,7 +47,7 @@ export type FeedRefreshResult = {
   notModified?: boolean;
   skipped?: "superseded" | "not_queued";
   error?: string;
-  failureClass?: HtmlFeedFailureClass;
+  failureClass?: FeedRefreshFailureClass;
   categoryStats?: FeedRefreshCategoryStats;
   contentLimitStats?: FeedContentLimitStats;
   // True when the failure cannot be resolved by retrying (e.g. HTTP 4xx other than 408/429).

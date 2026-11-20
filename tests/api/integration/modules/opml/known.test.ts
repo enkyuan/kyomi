@@ -1,9 +1,13 @@
 import { describe, expect, mock, test } from "bun:test";
+import { Effect, Layer } from "effect";
+import { InternalError } from "@shared/effect/errors";
 import {
   matchKnownFeedsForImport,
   publishKnownFeedRefreshCandidates,
   subscribeKnownOpmlItems,
 } from "@modules/opml/known";
+import { fakeDb as dbLayer, recordingLogger } from "@api-tests/support/layers";
+import { feedsLayer, runWith } from "./fixtures";
 
 function pendingItem(overrides: Partial<Record<string, unknown>> = {}) {
   return {
@@ -36,7 +40,7 @@ describe("matchKnownFeedsForImport", () => {
     ];
     let selectCount = 0;
     const executeCalls: unknown[] = [];
-    const fakeDb = {
+    const layer = dbLayer({
       select: () => ({
         from: () => ({
           where: () => {
@@ -50,9 +54,9 @@ describe("matchKnownFeedsForImport", () => {
         // Both item-1 (exact) and item-2 (alias) match; item-3 does not.
         return Promise.resolve([{ id: "item-1" }, { id: "item-2" }]);
       },
-    } as unknown as Parameters<typeof matchKnownFeedsForImport>[0];
+    });
 
-    const matched = await matchKnownFeedsForImport(fakeDb, "import-1");
+    const matched = await runWith(matchKnownFeedsForImport("import-1"), layer);
 
     expect(matched).toBe(2);
     expect(executeCalls).toHaveLength(1);
@@ -62,12 +66,12 @@ describe("matchKnownFeedsForImport", () => {
     const execute = mock(() => {
       throw new Error("must not be called");
     });
-    const fakeDb = {
+    const layer = dbLayer({
       select: () => ({ from: () => ({ where: () => Promise.resolve([]) }) }),
       execute,
-    } as unknown as Parameters<typeof matchKnownFeedsForImport>[0];
+    });
 
-    expect(await matchKnownFeedsForImport(fakeDb, "import-1")).toBe(0);
+    expect(await runWith(matchKnownFeedsForImport("import-1"), layer)).toBe(0);
     expect(execute).not.toHaveBeenCalled();
   });
 
@@ -77,7 +81,7 @@ describe("matchKnownFeedsForImport", () => {
     );
     const selectFromCalls: number[] = [];
     let selectCount = 0;
-    const fakeDb = {
+    const layer = dbLayer({
       select: () => ({
         from: () => ({
           where: () => {
@@ -91,9 +95,9 @@ describe("matchKnownFeedsForImport", () => {
         }),
       }),
       execute: () => Promise.resolve([]),
-    } as unknown as Parameters<typeof matchKnownFeedsForImport>[0];
+    });
 
-    await matchKnownFeedsForImport(fakeDb, "import-1");
+    await runWith(matchKnownFeedsForImport("import-1"), layer);
 
     // One candidate-lookup select per chunk of at most 500 pending items: 500 + 500 + 201 = 3.
     expect(selectFromCalls).toHaveLength(3);
@@ -195,7 +199,7 @@ describe("subscribeKnownOpmlItems", () => {
       importStatus: "parsing",
     });
 
-    const result = await subscribeKnownOpmlItems(db as never, "import-1", "user-1");
+    const result = await runWith(subscribeKnownOpmlItems("import-1", "user-1"), dbLayer(db));
 
     expect(result).toEqual({
       processed: 0,
@@ -212,7 +216,7 @@ describe("subscribeKnownOpmlItems", () => {
       importStatus: "cancelling",
     });
 
-    const result = await subscribeKnownOpmlItems(db as never, "import-1", "user-1");
+    const result = await runWith(subscribeKnownOpmlItems("import-1", "user-1"), dbLayer(db));
 
     expect(result.processed).toBe(0);
     expect(insertedSubscriptions).toHaveLength(0);
@@ -228,7 +232,7 @@ describe("subscribeKnownOpmlItems", () => {
       importStatus: "parsing",
     });
 
-    const result = await subscribeKnownOpmlItems(db as never, "import-1", "user-1");
+    const result = await runWith(subscribeKnownOpmlItems("import-1", "user-1"), dbLayer(db));
 
     expect(result.processed).toBe(2);
     expect(result.subscribed).toBe(1);
@@ -240,25 +244,28 @@ describe("subscribeKnownOpmlItems", () => {
 });
 
 describe("publishKnownFeedRefreshCandidates", () => {
-  test("publishes every candidate and logs, without throwing, on individual failures", async () => {
-    const enqueueFeedRefreshMock = mock(async (_db: unknown, feedId: string) => {
-      if (feedId === "feed-2") {
-        throw new Error("queue unavailable");
-      }
-      return { jobId: "job-1" };
+  test("requests every candidate's refresh and logs, without failing, on individual failures", async () => {
+    const requested: string[] = [];
+    const feeds = feedsLayer({
+      requestInitialRefresh: (feedId) => {
+        requested.push(feedId);
+        return requested.length === 2
+          ? Effect.fail(new InternalError({ message: "queue unavailable" }))
+          : Effect.void;
+      },
     });
-    mock.module("@modules/feeds/refresh/enqueue", () => ({
-      enqueueFeedRefresh: enqueueFeedRefreshMock,
-    }));
-    const { publishKnownFeedRefreshCandidates: publish } = await import("@modules/opml/known");
-    const logger = { info: mock(() => undefined), error: mock(() => undefined) };
+    const logs = recordingLogger();
 
-    await publish({} as never, "user-1", ["feed-1", "feed-2", "feed-3"], logger);
-
-    expect(enqueueFeedRefreshMock).toHaveBeenCalledTimes(3);
-    expect(logger.error).toHaveBeenCalledWith(
-      "opml.import.known_feed.refresh_publish_failed",
-      expect.objectContaining({ feedId: "feed-2" }),
+    await runWith(
+      publishKnownFeedRefreshCandidates("user-1", ["feed-1", "feed-2", "feed-3"]),
+      Layer.mergeAll(feeds.layer, logs.layer),
     );
+
+    expect([...requested].sort()).toEqual(["feed-1", "feed-2", "feed-3"]);
+    const failures = logs.entries.filter(
+      (entry) => entry.event === "opml.import.known_feed.refresh_publish_failed",
+    );
+    expect(failures).toHaveLength(1);
+    expect(failures[0]).toMatchObject({ level: "error", context: { feedId: expect.any(String) } });
   });
 });

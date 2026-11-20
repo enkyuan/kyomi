@@ -3,6 +3,7 @@
 import { cn } from "@kyomi/ui/lib/utils";
 import { Fragment, useEffect, useMemo, useRef, type CSSProperties } from "react";
 import type { ReaderBlock } from "../../core/document";
+import { keyedByContent } from "../../core/keys";
 import { mountCopyButton, unmountCopyButton } from "../lib/code-copy-button";
 
 type CodeBlockModel = Extract<ReaderBlock, { type: "code" }>;
@@ -94,8 +95,8 @@ export function CodeBlock({ block, id }: { block: CodeBlockModel; id: string | u
       </div>
       <pre className="reader-code-pre">
         <code className={cn("hljs", block.language && `language-${block.language}`)}>
-          {lines.map((line, index) => (
-            <Fragment key={index}>
+          {keyedByContent(lines).map(({ item: line, key, position: index }) => (
+            <Fragment key={key}>
               <span
                 className="reader-code-line"
                 data-highlighted={highlighted.has(index + 1) ? "" : undefined}

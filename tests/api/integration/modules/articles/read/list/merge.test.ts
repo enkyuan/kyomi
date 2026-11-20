@@ -18,6 +18,7 @@ const feed = (id: string, at: string): ArticleListItemDto => ({
   lastViewedAt: null,
   articleType: "feed",
   categories: [],
+  readingProgress: null,
 });
 
 describe("mergeArticleItemsByDate", () => {

@@ -15,4 +15,3 @@ Already server-backed:
 - Clip saved/read state: `article_clips`.
 
 Next server-backed preferences table should cover only durable cross-device preferences, such as `theme`, `reader_mode`, `inbox_density`, and `article_open_behavior`. Keep feed-specific state on `feed_subscriptions` and article-specific state on `feed_item_user_state`.
-

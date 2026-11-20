@@ -1,97 +1,56 @@
+import { registerOnboardingRoutes } from "./onboarding/routes";
 import type { Elysia } from "elysia";
-import { AppError } from "@shared/errors/app";
-import { v1HandlerContext } from "@shared/http/v1/context";
-import { listMembershipsForUser } from "./organizations/memberships";
+import type { ManagedRuntime } from "effect";
+import type { Db } from "@adapters/db/service";
+import { runEffect } from "@shared/http/effect/bridge";
+import { v1EffectContext } from "@shared/http/v1/context";
+import { listMemberships } from "./organizations/memberships";
 import { userMembershipsResponse } from "./organizations/schemas";
-import { getUserProfileById, updateUserEmailById } from "./profile/account";
-import { updateEmailBody, userProfileResponse } from "./profile/schemas";
+import { getUserProfile } from "./profile/account";
+import { userProfileResponse } from "./profile/schemas";
 import { getUserPreferences, updateUserPreferences } from "./preferences/settings";
 import { updateUserPreferencesBody, userPreferencesResponse } from "./preferences/schemas";
+import type { UpdateUserPreferencesDto } from "./preferences/types";
 
-export function registerUserRoutes(app: Elysia) {
-  return app
+type UserRuntime = ManagedRuntime.ManagedRuntime<Db, unknown>;
+
+export function registerUserRoutes(app: Elysia, runtime: UserRuntime) {
+  return registerOnboardingRoutes(app, runtime)
     .get(
       "/me/preferences",
-      async (context) => {
-        const { db, userId } = v1HandlerContext(context);
-        return getUserPreferences(db, userId);
+      (context) => {
+        const { request, requestId, userId } = v1EffectContext(context);
+        return runEffect({ runtime, request, requestId, userId }, getUserPreferences);
       },
-      {
-        response: {
-          200: userPreferencesResponse,
-        },
-      },
+      { response: { 200: userPreferencesResponse } },
     )
     .patch(
       "/me/preferences",
-      async (context) => {
-        const { db, userId, body } = v1HandlerContext<{
-          defaultMode?: "smart" | "original" | "extracted";
-          fontSizePx?: number;
-          contentWidth?: "narrow" | "wide";
-          openLinksInNewTab?: boolean;
-          showLinkPreviews?: boolean;
-          showImages?: boolean;
-          rememberPosition?: boolean;
-          inboxDefaultView?: "my-feed" | "all" | "saved" | "recent";
-          inboxDensity?: "comfortable" | "compact";
-          articleOpenBehavior?: "split" | "reader";
-          inboxMarkReadBehavior?: "on-open" | "after-delay" | "manual";
-          inboxTimestampDisplay?: "absolute" | "relative";
-          inboxTimestampHourCycle?: "12h" | "24h";
-          inboxFontSizePx?: number;
-          inboxShowFavicons?: boolean;
-        }>(context);
-        return updateUserPreferences(db, userId, body);
+      (context) => {
+        const { body, request, requestId, userId } =
+          v1EffectContext<UpdateUserPreferencesDto>(context);
+        return runEffect({ runtime, request, requestId, userId }, updateUserPreferences(body));
       },
       {
         body: updateUserPreferencesBody,
-        response: {
-          200: userPreferencesResponse,
-        },
+        response: { 200: userPreferencesResponse },
       },
     )
     .get(
       "/users/profile",
-      async (context) => {
-        const { db, userId } = v1HandlerContext(context);
-        const profile = await getUserProfileById(db, userId);
-        if (!profile) {
-          throw new AppError("User not found", { status: 404, code: "USER_NOT_FOUND" });
-        }
-        return profile;
+      (context) => {
+        const { request, requestId, userId } = v1EffectContext(context);
+        return runEffect({ runtime, request, requestId, userId }, getUserProfile);
       },
-      {
-        response: {
-          200: userProfileResponse,
-        },
-      },
+      { response: { 200: userProfileResponse } },
     )
     .get(
       "/users/memberships",
       async (context) => {
-        const { db, userId } = v1HandlerContext(context);
-        const items = await listMembershipsForUser(db, userId);
+        const { request, requestId, userId } = v1EffectContext(context);
+        const items = await runEffect({ runtime, request, requestId, userId }, listMemberships);
         return { items };
       },
-      {
-        response: {
-          200: userMembershipsResponse,
-        },
-      },
-    )
-    .post(
-      "/users/profile/email",
-      async (context) => {
-        const { db, userId, body } = v1HandlerContext<{ email: string }>(context);
-
-        return updateUserEmailById(db, userId, body.email);
-      },
-      {
-        body: updateEmailBody,
-        response: {
-          200: userProfileResponse,
-        },
-      },
+      { response: { 200: userMembershipsResponse } },
     );
 }

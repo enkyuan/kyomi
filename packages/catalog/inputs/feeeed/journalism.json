@@ -10,22 +10,11 @@
       "kind": "feed",
       "feed_url": "https://www.thefp.com/feed",
       "details": "US Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "Journalism",
-        "USA",
-        "_mainstream"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "Journalism", "USA", "_mainstream"],
       "cleaned_author": "Bari Weiss",
       "language": "en",
-      "keywords": [
-        "journalism",
-        "politics",
-        "investigative reporting"
-      ],
+      "keywords": ["journalism", "politics", "investigative reporting"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -36,22 +25,11 @@
       "kind": "feed",
       "feed_url": "https://www.thebulwark.com/feed",
       "details": "US Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "Journalism",
-        "USA",
-        "_intellectual"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "Journalism", "USA", "_intellectual"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "politics",
-        "analysis",
-        "culture"
-      ],
+      "keywords": ["politics", "analysis", "culture"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -62,21 +40,11 @@
       "kind": "feed",
       "feed_url": "https://alexberenson.substack.com/feed",
       "details": "Health Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "Health",
-        "Journalism"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "Health", "Journalism"],
       "cleaned_author": "Alex Berenson",
       "language": "en",
-      "keywords": [
-        "independent journalism",
-        "health politics",
-        "controversial topics"
-      ],
+      "keywords": ["independent journalism", "health politics", "controversial topics"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -87,13 +55,8 @@
       "kind": "feed",
       "feed_url": "https://www.elliottconfidential.com/feed",
       "details": "Travel",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Money",
-        "Journalism"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Money", "Journalism"],
       "cleaned_author": "Christopher Elliott",
       "language": "en",
       "keywords": [
@@ -113,22 +76,11 @@
       "kind": "feed",
       "feed_url": "https://www.counteroffensive.news/feed",
       "details": "International",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "News",
-        "World News",
-        "Journalism"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["News", "World News", "Journalism"],
       "cleaned_author": "Tim Mak",
       "language": "en",
-      "keywords": [
-        "Tim Mak",
-        "Ukraine",
-        "war",
-        "democracy"
-      ],
+      "keywords": ["Tim Mak", "Ukraine", "war", "democracy"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -139,21 +91,11 @@
       "kind": "feed",
       "feed_url": "https://phillipspobrien.substack.com/feed",
       "details": "International",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "World News",
-        "Journalism"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "World News", "Journalism"],
       "cleaned_author": "Phillips P. OBrien",
       "language": "en",
-      "keywords": [
-        "Phillips P. OBrien",
-        "Ukraine",
-        "political narratives"
-      ],
+      "keywords": ["Phillips P. OBrien", "Ukraine", "political narratives"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -165,20 +107,11 @@
       "feed_url": "http://www.techmeme.com/index.xml",
       "popularity_score": 2.0,
       "details": "Tech",
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Journalism"
-      ],
+      "tags": ["Tech", "Journalism"],
       "language": "en",
-      "keywords": [
-        "aggregation",
-        "tech news",
-        "trends"
-      ],
+      "keywords": ["aggregation", "tech news", "trends"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
@@ -190,25 +123,11 @@
       "feed_url": "http://feeds.feedburner.com/TheAtlantic",
       "popularity_score": 15.519871128593945,
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Arts & Culture",
-        "USA",
-        "Words",
-        "Journalism"
-      ],
+      "tags": ["Politics", "Arts & Culture", "USA", "Words", "Journalism"],
       "language": "en",
-      "keywords": [
-        "culture",
-        "politics",
-        "society",
-        "investigative"
-      ],
+      "keywords": ["culture", "politics", "society", "investigative"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -220,24 +139,11 @@
       "feed_url": "http://www.newyorker.com/services/mrss/feeds/everything.xml",
       "popularity_score": 8.205989854994,
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Politics",
-        "USA",
-        "Journalism",
-        "Literature"
-      ],
+      "tags": ["Arts & Culture", "Politics", "USA", "Journalism", "Literature"],
       "language": "en",
-      "keywords": [
-        "commentary",
-        "reporting",
-        "fiction"
-      ],
+      "keywords": ["commentary", "reporting", "fiction"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -249,21 +155,11 @@
       "feed_url": "https://www.propublica.org/feeds/propublica/main",
       "popularity_score": 5.160222375998966,
       "details": "News > US News",
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Journalism",
-        "USA"
-      ],
+      "tags": ["News", "Journalism", "USA"],
       "language": "en",
-      "keywords": [
-        "investigative journalism",
-        "public interest",
-        "news articles"
-      ],
+      "keywords": ["investigative journalism", "public interest", "news articles"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -275,23 +171,11 @@
       "feed_url": "http://www.vox.com/rss/index.xml",
       "popularity_score": 8.237969799788589,
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Politics",
-        "USA",
-        "Journalism"
-      ],
+      "tags": ["News", "Politics", "USA", "Journalism"],
       "language": "en",
-      "keywords": [
-        "news",
-        "current events",
-        "political analysis"
-      ],
+      "keywords": ["news", "current events", "political analysis"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -302,24 +186,11 @@
       "kind": "feed",
       "feed_url": "https://www.newyorker.com/feed/rss",
       "details": "Popular",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Politics",
-        "News",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Politics", "News", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Trump",
-        "E.P.A.",
-        "Oscars",
-        "Berlin Film Festival",
-        "cartoon"
-      ],
+      "keywords": ["Trump", "E.P.A.", "Oscars", "Berlin Film Festival", "cartoon"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -330,24 +201,12 @@
       "kind": "feed",
       "feed_url": "http://nymag.com/feeds/intelligencer/flipboard.rss",
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 4.830178844220315,
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Politics",
-        "USA",
-        "Journalism"
-      ],
+      "tags": ["News", "Politics", "USA", "Journalism"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "pop culture",
-        "analysis"
-      ],
+      "keywords": ["politics", "pop culture", "analysis"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -358,22 +217,11 @@
       "kind": "feed",
       "feed_url": "https://www.truehoop.com/feed",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Living",
-        "Basketball",
-        "Journalism"
-      ],
+      "tags": ["News", "Living", "Basketball", "Journalism"],
       "language": "en",
-      "keywords": [
-        "NBA analysis",
-        "in-depth articles",
-        "basketball news"
-      ],
+      "keywords": ["NBA analysis", "in-depth articles", "basketball news"],
       "top_level_category": "Sports"
     },
     {
@@ -384,21 +232,11 @@
       "kind": "feed",
       "feed_url": "https://www.localmedia.org/feed/",
       "details": "Local",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Journalism",
-        "Activism"
-      ],
+      "tags": ["Local", "Journalism", "Activism"],
       "language": "en",
-      "keywords": [
-        "local journalism",
-        "media support",
-        "community engagement"
-      ],
+      "keywords": ["local journalism", "media support", "community engagement"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -409,21 +247,11 @@
       "kind": "feed",
       "feed_url": "http://lunch.publishersmarketplace.com/feed/",
       "details": "Arts > Publishing",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Literature",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Literature", "Journalism"],
       "language": "en",
-      "keywords": [
-        "publishing news",
-        "industry updates",
-        "book trade"
-      ],
+      "keywords": ["publishing news", "industry updates", "book trade"],
       "top_level_category": "Arts & Culture"
     },
     {
@@ -434,21 +262,11 @@
       "kind": "feed",
       "feed_url": "https://hotsheetpub.com/feed/",
       "details": "Arts > Publishing",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Literature",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Literature", "Journalism"],
       "language": "en",
-      "keywords": [
-        "publishing insights",
-        "industry trends",
-        "author news"
-      ],
+      "keywords": ["publishing insights", "industry trends", "author news"],
       "top_level_category": "Arts & Culture"
     },
     {
@@ -459,21 +277,11 @@
       "kind": "reddit",
       "subreddit": "AcademicPublishing",
       "details": "Education > Academic Research",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Education",
-        "Journalism"
-      ],
+      "tags": ["Living", "Education", "Journalism"],
       "language": "en",
-      "keywords": [
-        "academic publishing",
-        "peer review",
-        "scholarly communication"
-      ],
+      "keywords": ["academic publishing", "peer review", "scholarly communication"],
       "top_level_category": "Science & Nature"
     },
     {
@@ -484,20 +292,11 @@
       "kind": "feed",
       "feed_url": "http://dailycoffeenews.com/feed/",
       "details": "Food & Drink > Coffee & Tea",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Journalism"
-      ],
+      "tags": ["News", "Journalism"],
       "language": "en",
-      "keywords": [
-        "specialty coffee",
-        "business news",
-        "coffee trends"
-      ],
+      "keywords": ["specialty coffee", "business news", "coffee trends"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -508,22 +307,11 @@
       "kind": "feed",
       "feed_url": "http://thediplomat.com/feed/atom/",
       "details": "Local > Asia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Asia",
-        "Journalism"
-      ],
+      "tags": ["Politics", "Asia", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Asia-Pacific",
-        "politics",
-        "security",
-        "culture"
-      ],
+      "keywords": ["Asia-Pacific", "politics", "security", "culture"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -535,21 +323,11 @@
       "channel_id": "UC2-_WWPT_124iN6jiym4fOw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMahvqwZVMrB_iBXdxkPn40artBUjHJtUgTZSHTOw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Asia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Asia",
-        "Journalism"
-      ],
+      "tags": ["Living", "Asia", "Journalism"],
       "language": "en",
-      "keywords": [
-        "interviews",
-        "social issues",
-        "cultural documentaries"
-      ],
+      "keywords": ["interviews", "social issues", "cultural documentaries"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -560,23 +338,11 @@
       "kind": "feed",
       "feed_url": "http://www.scmp.com/rss/hong_kong.xml",
       "details": "Local > Asia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Asia",
-        "Journalism"
-      ],
+      "tags": ["News", "Local", "Asia", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Hong Kong",
-        "China",
-        "news",
-        "analysis"
-      ],
+      "keywords": ["Hong Kong", "China", "news", "analysis"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -587,23 +353,11 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/japantimes",
       "details": "Local > Asia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Asia",
-        "Journalism"
-      ],
+      "tags": ["News", "Local", "Asia", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Japan",
-        "news",
-        "sports",
-        "features"
-      ],
+      "keywords": ["Japan", "news", "sports", "features"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -615,22 +369,11 @@
       "channel_id": "UCVgO39Bk5sMo66-6o6Spn6Q",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqM7NZfeKN0CUY5GmqT4fqzLd0CDSHB7SoIt9-6pPQ=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Australia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Australia",
-        "Journalism"
-      ],
+      "tags": ["News", "Local", "Australia", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Australia",
-        "news",
-        "current affairs"
-      ],
+      "keywords": ["Australia", "news", "current affairs"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -641,23 +384,11 @@
       "kind": "feed",
       "feed_url": "http://news.google.com/news?hl=en&gl=us&q=guardian%20australia&um=1&ie=UTF-8&output=rss",
       "details": "Local > Australia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Australia",
-        "Journalism"
-      ],
+      "tags": ["News", "Local", "Australia", "Journalism"],
       "language": "en",
-      "keywords": [
-        "news",
-        "australia",
-        "current affairs",
-        "analysis"
-      ],
+      "keywords": ["news", "australia", "current affairs", "analysis"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -668,22 +399,11 @@
       "kind": "feed",
       "feed_url": "http://www.independent.co.uk/rss",
       "details": "News > UK News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "UK",
-        "Journalism"
-      ],
+      "tags": ["News", "UK", "Journalism"],
       "language": "en",
-      "keywords": [
-        "UK news",
-        "independent journalism",
-        "events",
-        "politics"
-      ],
+      "keywords": ["UK news", "independent journalism", "events", "politics"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -693,159 +413,87 @@
       "title": "The Onion",
       "kind": "bluesky",
       "bluesky_did": "did:plc:a4pqq234yw7fqbddawjo7y35",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Humor",
-        "Journalism",
-        "_intellectual",
-        "_artsy"
-      ],
+      "tags": ["Arts & Culture", "Living", "Humor", "Journalism", "_intellectual", "_artsy"],
       "language": "en",
-      "keywords": [
-        "satire",
-        "news parody",
-        "comedy"
-      ]
+      "keywords": ["satire", "news parody", "comedy"]
     },
     {
       "id": "feed:http://www.niemanlab.org/feed/",
       "title": "Nieman Lab",
       "kind": "feed",
       "feed_url": "http://www.niemanlab.org/feed/",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "Nieman Lab",
       "cleaned_author": null,
       "summary": "Nieman Lab is a respected source for insights into the media industry, exploring trends, ideas, and innovations in journalism with a focus on the future of news.",
-      "tags": [
-        "News",
-        "Journalism",
-        "USA"
-      ],
+      "tags": ["News", "Journalism", "USA"],
       "language": "en",
-      "keywords": [
-        "journalism",
-        "news",
-        "media",
-        "innovation"
-      ]
+      "keywords": ["journalism", "news", "media", "innovation"]
     },
     {
       "id": "feed:https://bellingcat.com/feed/",
       "title": "bellingcat",
       "kind": "feed",
       "feed_url": "https://bellingcat.com/feed/",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "bellingcat",
       "cleaned_author": null,
       "summary": "Bellingcat is renowned for its groundbreaking online investigations and open-source intelligence work, covering critical global issues.",
-      "tags": [
-        "News",
-        "Journalism",
-        "Crime",
-        "World News"
-      ],
+      "tags": ["News", "Journalism", "Crime", "World News"],
       "language": "en",
-      "keywords": [
-        "investigations",
-        "open source",
-        "global issues",
-        "journalism"
-      ]
+      "keywords": ["investigations", "open source", "global issues", "journalism"]
     },
     {
       "id": "feed:https://africasacountry.com/feed/",
       "title": "Africa Is a Country",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://africasacountry.com/feed/",
       "summary": "\u2026a site of opinion, analysis, and new writing on and from the African left.",
       "details": "Politics > Politics",
       "cleaned_title": "Africa Is a Country",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Africa",
-        "Journalism"
-      ],
+      "tags": ["Politics", "Africa", "Journalism"],
       "language": "en",
-      "keywords": [
-        "African politics",
-        "social issues",
-        "opinion writing"
-      ],
+      "keywords": ["African politics", "social issues", "opinion writing"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://www.caribbeansignal.com/feed/",
       "title": "caribbeansignal.com",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.caribbeansignal.com/feed/",
       "summary": "Separating signal from noise.",
       "details": "Countries",
       "cleaned_title": "caribbeansignal.com",
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Journalism"
-      ],
+      "tags": ["News", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Caribbean news",
-        "politics",
-        "social issues"
-      ],
+      "keywords": ["Caribbean news", "politics", "social issues"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://www.palestinechronicle.com/feed/",
       "title": "Palestine Chronicle LIVE BLOG",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.palestinechronicle.com/feed/",
       "summary": "\u2026a 501(c)3 non-profit organization whose mission is to educate the general public by providing a forum that strives to highlight issues of relevance to human rights, national struggles, freedom and democracy\u2026.",
       "details": "Arts > News",
       "cleaned_title": "Palestine Chronicle LIVE BLOG",
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Politics",
-        "Middle East",
-        "Activism",
-        "Journalism",
-        "_mainstream"
-      ],
+      "tags": ["News", "Politics", "Middle East", "Activism", "Journalism", "_mainstream"],
       "language": "en",
-      "keywords": [
-        "Palestine",
-        "Middle East",
-        "human rights",
-        "Israel",
-        "conflict"
-      ],
+      "keywords": ["Palestine", "Middle East", "human rights", "Israel", "conflict"],
       "top_level_category": "Arts & Culture"
     },
     {
       "title": "Pluralistic: Daily links from Cory Doctorow",
       "popularity_score": 3.4294927536231885,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "feed_url": "https://pluralistic.net/feed/",
       "kind": "feed",
       "id": "feed:https://pluralistic.net/feed/",
@@ -869,277 +517,163 @@
       "id": "feed:https://theoverspill.blog/feed/",
       "title": "The Overspill: when there's more that I want to say",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://theoverspill.blog/feed/",
       "details": "Technology",
       "cleaned_title": "The Overspill",
       "cleaned_author": "Charles Arthur",
       "summary": "A collection of insights and observations on technology trends, covering the latest developments in the tech industry with a critical approach.",
-      "tags": [
-        "Tech",
-        "Internet",
-        "Journalism"
-      ],
+      "tags": ["Tech", "Internet", "Journalism"],
       "language": "en",
-      "keywords": [
-        "technology trends",
-        "observations",
-        "tech industry news"
-      ],
+      "keywords": ["technology trends", "observations", "tech industry news"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
       "id": "feed:https://hedgehogreview.com/web-features/feed",
       "title": "THR Web Features | Web Features | The Hedgehog Review",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://hedgehogreview.com/web-features/feed",
       "summary": "Critical Reflections on Contemporary Culture.",
       "details": "Society",
       "cleaned_title": "THR Web Features",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Living",
-        "Literature",
-        "Journalism",
-        "Social"
-      ],
+      "tags": ["Arts & Culture", "Living", "Literature", "Journalism", "Social"],
       "language": "en",
-      "keywords": [
-        "culture",
-        "society",
-        "critique",
-        "contemporary"
-      ],
+      "keywords": ["culture", "society", "critique", "contemporary"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://sippey.com/rss.xml",
       "title": "Michael Sippey",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://sippey.com/rss.xml",
       "summary": "A long-running personal blog where Michael Sippey shares his insights on politics, culture, and personal reflections, inviting readers into his contemplative world.",
       "details": "Uncategorizable",
       "cleaned_title": "Michael Sippey",
       "cleaned_author": "Michael Sippey",
-      "tags": [
-        "Politics",
-        "Journalism",
-        "Activism"
-      ],
+      "tags": ["Politics", "Journalism", "Activism"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "personal",
-        "reflections"
-      ],
+      "keywords": ["politics", "personal", "reflections"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:http://culturalsnow.blogspot.com/feeds/posts/default",
       "title": "cultural snow",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://culturalsnow.blogspot.com/feeds/posts/default",
       "summary": "Author of books about Radiohead, Leonard Cohen and The Noughties, plus odds and sods for The Guardian, Mojo, Time Out, Prospect, BBC, CNN and more.",
       "details": "Arts",
       "cleaned_title": "cultural snow",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Music",
-        "Literature",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Music", "Literature", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Radiohead",
-        "Leonard Cohen",
-        "media commentary"
-      ],
+      "keywords": ["Radiohead", "Leonard Cohen", "media commentary"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:http://www.flowjournal.org/feed/",
       "title": "Flow",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://www.flowjournal.org/feed/",
       "summary": "Flow\u2019s mission is to provide a space where scholars and the public can discuss media histories, media studies, and the changing landscape of contemporary media.",
       "details": "Arts",
       "cleaned_title": "Flow",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Journalism",
-        "Literature"
-      ],
+      "tags": ["Arts & Culture", "Journalism", "Literature"],
       "language": "en",
-      "keywords": [
-        "media studies",
-        "cultural critique",
-        "scholarship"
-      ],
+      "keywords": ["media studies", "cultural critique", "scholarship"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:https://podnews.net/rss",
       "title": "Podnews podcasting news",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://podnews.net/rss",
       "summary": "Daily news about the global podcasting and on-demand audio industry.",
       "details": "Arts",
       "cleaned_title": "Podnews podcasting news",
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Internet",
-        "Journalism"
-      ],
+      "tags": ["Tech", "Internet", "Journalism"],
       "language": "en",
-      "keywords": [
-        "podcasting",
-        "industry news",
-        "audio"
-      ],
+      "keywords": ["podcasting", "industry news", "audio"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:https://retractionwatch.com/feed/",
       "title": "Retraction Watch",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://retractionwatch.com/feed/",
       "summary": "Tracking retractions as a window into the scientific process.",
       "details": "Science",
       "cleaned_title": "Retraction Watch",
       "cleaned_author": null,
-      "tags": [
-        "Science",
-        "Journalism",
-        "Academia",
-        "_intellectual",
-        "_mainstream"
-      ],
+      "tags": ["Science", "Journalism", "Academia", "_intellectual", "_mainstream"],
       "language": "en",
-      "keywords": [
-        "scientific integrity",
-        "research retractions",
-        "academic scrutiny"
-      ],
+      "keywords": ["scientific integrity", "research retractions", "academic scrutiny"],
       "top_level_category": "Science & Nature"
     },
     {
       "id": "feed:https://nobells.blog/feed/",
       "title": "No Bells",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://nobells.blog/feed/",
       "details": "Arts > Music",
       "cleaned_title": "No Bells",
       "cleaned_author": null,
       "summary": "A platform dedicated to independent music journalism, providing insights and reviews across genres.",
-      "tags": [
-        "Arts & Culture",
-        "Music",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Music", "Journalism"],
       "language": "en",
-      "keywords": [
-        "independent music",
-        "journalism",
-        "reviews"
-      ],
+      "keywords": ["independent music", "journalism", "reviews"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:http://thefilmexperience.net/blog/atom.xml",
       "title": "Blog - The Film Experience",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://thefilmexperience.net/blog/atom.xml",
       "summary": "Awards, Actresses and Cinematic Musings.",
       "details": "Arts > Movies",
       "cleaned_title": "Blog - The Film Experience",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Movies",
-        "Academia",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Movies", "Academia", "Journalism"],
       "language": "en",
-      "keywords": [
-        "film awards",
-        "movie reviews"
-      ],
+      "keywords": ["film awards", "movie reviews"],
       "top_level_category": "Entertainment"
     },
     {
       "id": "feed:https://www.spellingmistakescostlives.com/blog-feed.xml",
       "title": "Spelling Mistakes Cost Lives /// Darren Cullen",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.spellingmistakescostlives.com/blog-feed.xml",
       "details": "Politics > Politics",
       "cleaned_title": "Spelling Mistakes Cost Lives",
       "cleaned_author": "Darren Cullen",
       "summary": "Darren Cullen's blog tackles pressing political issues with sharp wit and commentary, using humor and creative expression to provoke thought around serious topics.",
-      "tags": [
-        "Politics",
-        "Journalism",
-        "_intellectual",
-        "_alternative"
-      ],
+      "tags": ["Politics", "Journalism", "_intellectual", "_alternative"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "social commentary",
-        "humor",
-        "writing"
-      ],
+      "keywords": ["politics", "social commentary", "humor", "writing"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://www.newshounds.us/home.rss",
       "title": "NewsHounds",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.newshounds.us/home.rss",
       "details": "Arts > TV",
       "cleaned_title": "NewsHounds",
       "cleaned_author": null,
       "summary": "A critical blog that analyzes media coverage, particularly focusing on the editorial choices of major news networks like Fox, amidst contemporary political narratives.",
-      "tags": [
-        "Politics",
-        "Arts & Culture",
-        "Journalism"
-      ],
+      "tags": ["Politics", "Arts & Culture", "Journalism"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Entertainment"
@@ -1148,18 +682,13 @@
       "id": "feed:https://feeds.realityblurred.com/realityblurred",
       "title": "reality blurred",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://feeds.realityblurred.com/realityblurred",
       "details": "Arts > TV",
       "cleaned_title": "reality blurred",
       "cleaned_author": null,
       "summary": "A blog dedicated to analyzing reality television with thoughtful reviews and insights since 2000, exploring the impact of popular shows on culture.",
-      "tags": [
-        "Arts & Culture",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Journalism"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Entertainment"
@@ -1168,68 +697,43 @@
       "id": "feed:https://magculture.com/blogs/journal.atom",
       "title": "magCulture \u2014 Journal",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://magculture.com/blogs/journal.atom",
       "summary": "We stock an ever-changing selection of 600 magazines, and deliver internationally from our London shop.",
       "details": "Arts > Magazines",
       "cleaned_title": "magCulture \u2014 Journal",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Art",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Art", "Journalism"],
       "language": "en",
-      "keywords": [
-        "magazines",
-        "culture",
-        "print"
-      ],
+      "keywords": ["magazines", "culture", "print"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:https://stackmagazines.com/feed/",
       "title": "STACK magazines - Editorial",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://stackmagazines.com/feed/",
       "summary": "A blog that discusses independent magazines, focusing on editorial choices, themes, and the stories behind them.",
       "details": "Arts > Magazines",
       "cleaned_title": "STACK magazines - Editorial",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Journalism"],
       "language": "en",
-      "keywords": [
-        "magazines",
-        "publishing",
-        "editorial"
-      ],
+      "keywords": ["magazines", "publishing", "editorial"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:https://www.theguardian.com/artanddesign/series/mybestshot/rss",
       "title": "My best shot | Artanddesign | The Guardian",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.theguardian.com/artanddesign/series/mybestshot/rss",
       "summary": "Photographers reveal the fascinating stories behind their favourite work.",
       "details": "Arts > Photography > Photographs",
       "cleaned_title": "My Best Shot",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Photos",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Photos", "Journalism"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Arts & Culture"
@@ -1238,104 +742,60 @@
       "id": "feed:https://publishingperspectives.com/feed/",
       "title": "Publishing Perspectives",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://publishingperspectives.com/feed/",
       "summary": "News and information about the international book publishing industry, book sales, rights deals, and more.",
       "details": "Arts > Books > Publishing",
       "cleaned_title": "Publishing Perspectives",
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Journalism",
-        "Literature"
-      ],
+      "tags": ["News", "Journalism", "Literature"],
       "language": "en",
-      "keywords": [
-        "publishing news",
-        "book market",
-        "rights deals"
-      ],
+      "keywords": ["publishing news", "book market", "rights deals"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:https://disneyparksblog.com/feed/",
       "title": "Disney Parks Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://disneyparksblog.com/feed/",
       "summary": "The official blog for Disneyland Resort, Walt Disney World and Disney Cruise Line.",
       "details": "Recreation > Travel > Disney Parks",
       "cleaned_title": "Disney Parks Blog",
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Cities",
-        "Social",
-        "Journalism"
-      ],
+      "tags": ["Local", "Cities", "Social", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Disney",
-        "parks",
-        "guides"
-      ],
+      "keywords": ["Disney", "parks", "guides"],
       "top_level_category": "Travel & Geography"
     },
     {
       "id": "feed:https://greenwichwire.co.uk/feed/",
       "title": "853",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://greenwichwire.co.uk/feed/",
       "summary": "Public interest news for Greenwich and SE London, funded by you.",
       "details": "Countries > UK > London > Areas",
       "cleaned_title": "853",
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "London",
-        "Journalism"
-      ],
+      "tags": ["News", "Local", "London", "Journalism"],
       "language": "en",
-      "keywords": [
-        "local news",
-        "Greenwich",
-        "Southeast London"
-      ],
+      "keywords": ["local news", "Greenwich", "Southeast London"],
       "top_level_category": "Regional & Local"
     },
     {
       "title": "Meduza.io",
       "popularity_score": 4.573448773448773,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "feed_url": "https://meduza.io/feed/all",
       "kind": "feed",
       "id": "feed:https://meduza.io/feed/all",
       "cleaned_title": "Meduza.io",
       "cleaned_author": null,
       "summary": "A platform delivering significant news and well-crafted articles about events in Russia and around the world, focusing on critical reporting.",
-      "tags": [
-        "News",
-        "World News",
-        "Journalism",
-        "Russia"
-      ],
+      "tags": ["News", "World News", "Journalism", "Russia"],
       "language": "ru",
-      "keywords": [
-        "news",
-        "Russia",
-        "current events",
-        "reporting"
-      ]
+      "keywords": ["news", "Russia", "current events", "reporting"]
     }
   ],
   "child_categories": []

@@ -36,5 +36,13 @@
         "ignore": ["^__root\\.tsx$", "^routeTree\\.gen\\.ts$"]
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["tests/**"],
+      "rules": {
+        "max-lines": "off"
+      }
+    }
+  ]
 }

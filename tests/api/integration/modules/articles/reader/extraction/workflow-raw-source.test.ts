@@ -1,23 +1,23 @@
-import { afterEach, describe, expect, mock, test } from "bun:test";
+import { describe, expect, test } from "bun:test";
 import { ARTICLE_HTML_SANITIZER_VERSION } from "@kyomi/reader/sanitization";
 import { runArticleExtractionForUser } from "@modules/articles/reader/extraction/workflow";
-import { cacheRow, createExtractionDb, PERFORMANCE_DEV_LINEAR_FIXTURE } from "./workflow-harness";
-
-const originalFetch = globalThis.fetch;
-
-afterEach(() => {
-  globalThis.fetch = originalFetch;
-});
+import {
+  cacheRow,
+  createExtractionDb,
+  extractionServices,
+  PERFORMANCE_DEV_LINEAR_FIXTURE,
+  runExtraction,
+} from "./workflow-harness";
 
 describe("article extraction raw source", () => {
   test("worker cache miss stores the raw Readability body beside the compiled HTML", async () => {
     const html = await Bun.file(PERFORMANCE_DEV_LINEAR_FIXTURE).text();
     const db = createExtractionDb();
-    globalThis.fetch = mock(
-      async () => new Response(html, { status: 200, headers: { "content-type": "text/html" } }),
-    ) as unknown as typeof fetch;
+    const services = extractionServices(db, {
+      respond: () => new Response(html, { status: 200, headers: { "content-type": "text/html" } }),
+    });
 
-    await runArticleExtractionForUser(db as never, "user-1", "item-1");
+    await runExtraction(runArticleExtractionForUser("user-1", "item-1"), services);
     const item = db.item as Record<string, unknown>;
 
     const raw = String(db.cache?.rawHtml);
@@ -41,14 +41,13 @@ describe("article extraction raw source", () => {
         finalUrl: "https://93.184.216.34/posts/flow/",
       }),
     });
-    const fetchMock = mock(async () => new Response("should not fetch"));
-    globalThis.fetch = fetchMock as unknown as typeof fetch;
+    const services = extractionServices(db);
 
-    await runArticleExtractionForUser(db as never, "user-1", "item-1");
+    await runExtraction(runArticleExtractionForUser("user-1", "item-1"), services);
     const item = db.item as Record<string, unknown>;
 
     const html = String(item.extractedContentHtml);
-    expect(fetchMock).not.toHaveBeenCalled();
+    expect(services.requests).toEqual([]);
     expect(html).toContain('src="https://93.184.216.34/posts/flow/images/flow.png"');
     expect(html).toContain('data-kyomi-embed="vimeo"');
     expect(html).not.toContain("Old v1 body");
@@ -67,11 +66,9 @@ describe("article extraction raw source", () => {
         rawHtml: null,
       }),
     });
-    globalThis.fetch = mock(
-      async () => new Response("should not fetch"),
-    ) as unknown as typeof fetch;
+    const services = extractionServices(db);
 
-    await runArticleExtractionForUser(db as never, "user-1", "item-1");
+    await runExtraction(runArticleExtractionForUser("user-1", "item-1"), services);
     const item = db.item as Record<string, unknown>;
 
     expect(item.extractedContentHtml).toBe("<p>Legacy cached body.</p>");

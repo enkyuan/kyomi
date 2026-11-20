@@ -5,7 +5,6 @@ const authenticatedPayload = {
   session: {
     id: "session-1",
     expiresAt: "2026-07-15T12:00:00.000Z",
-    token: "token",
     createdAt: "2026-07-14T12:00:00.000Z",
     updatedAt: "2026-07-14T12:00:00.000Z",
     userId: "user-1",
@@ -20,6 +19,13 @@ const authenticatedPayload = {
   },
 };
 
+const secrets = {
+  token: "secret-session-token",
+  ipAddress: "203.0.113.7",
+  userAgent: "Mozilla/5.0 (secret agent)",
+  locationLabel: "Springfield",
+};
+
 describe("classifyAuthSessionPayload", () => {
   test.each([null, { session: null, user: null }])(
     "classifies missing sessions as anonymous",
@@ -29,15 +35,44 @@ describe("classifyAuthSessionPayload", () => {
   );
 
   test("classifies complete sessions as authenticated", () => {
-    expect(classifyAuthSessionPayload(authenticatedPayload)).toEqual({
-      status: "authenticated",
-      session: authenticatedPayload,
+    expect(
+      classifyAuthSessionPayload({
+        ...authenticatedPayload,
+        session: { ...authenticatedPayload.session, ...secrets },
+      }),
+    ).toEqual({ status: "authenticated", session: authenticatedPayload });
+  });
+
+  test("never passes the token, IP address, user agent or any other extra field on", () => {
+    const state = classifyAuthSessionPayload({
+      session: { ...authenticatedPayload.session, ...secrets },
+      user: { ...authenticatedPayload.user, image: null, internalNote: "staff only" },
     });
+
+    const serialized = JSON.stringify(state);
+    for (const secret of [...Object.values(secrets), "staff only"]) {
+      expect(serialized).not.toContain(secret);
+    }
+    expect(state).toMatchObject({ status: "authenticated" });
+  });
+
+  test("a session without a token is complete: the API does not send one", () => {
+    expect(classifyAuthSessionPayload(authenticatedPayload)).toMatchObject({
+      status: "authenticated",
+    });
+  });
+
+  test("a session missing a field the page needs is not complete", () => {
+    const { id: _id, ...withoutId } = authenticatedPayload.session;
+
+    expect(
+      classifyAuthSessionPayload({ ...authenticatedPayload, session: withoutId }),
+    ).toMatchObject({ status: "unavailable" });
   });
 
   test.each([
     {},
-    { session: authenticatedPayload.session, user: null },
+    { session: { ...authenticatedPayload.session, ...secrets }, user: null },
     { session: null, user: authenticatedPayload.user },
     "not-json-session-data",
   ])("treats malformed session payloads as unavailable", (payload) => {

@@ -147,14 +147,12 @@ export function ReportArticleDialog({
       onOpenChange(false);
       toastManager.add({
         title: "Report sent",
-        description: "Thanks. This article is marked for review.",
         type: "success",
         timeout: 3000,
       });
     } catch {
       toastManager.add({
         title: "Report failed",
-        description: "Try again in a moment.",
         type: "error",
         timeout: 7000,
       });

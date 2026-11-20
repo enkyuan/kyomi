@@ -1,6 +1,6 @@
-import type { db } from "@adapters/db/client";
 import { articleClips, articleReadingState, feedItems } from "@kyomi/db";
 import { and, eq, inArray, or } from "drizzle-orm";
+import type { Database } from "@adapters/db/service";
 import { isEngaged } from "@modules/articles/resurface/schedule";
 import { remainingMinutesFor as remainingMinutesForWords } from "@modules/articles/resurface/score";
 import type {
@@ -73,7 +73,7 @@ export function clipReadingStateJoin(userId: string) {
  * index once per candidate row rather than once per returned row.
  */
 export async function loadReadingProgressByArticleId(
-  database: typeof db,
+  database: Database,
   userId: string,
   articleIds: string[],
 ): Promise<Map<string, ReadingProgressDto>> {
@@ -109,7 +109,7 @@ export async function loadReadingProgressByArticleId(
 
 /** Fills `readingProgress` on list items that were mapped without it. */
 export async function attachReadingProgress<T extends { id: string }>(
-  database: typeof db,
+  database: Database,
   userId: string,
   items: T[],
 ): Promise<(T & { readingProgress: ReadingProgressDto | null })[]> {

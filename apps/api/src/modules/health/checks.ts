@@ -1,28 +1,38 @@
+import { Clock, Effect } from "effect";
 import { sql } from "drizzle-orm";
+import { Db } from "@adapters/db/service";
+import { AppLogger } from "@adapters/logger/service";
 import { API_PACKAGE_VERSION } from "@config/version";
 import { SERVICE_NAME } from "@config/constants";
-import type { db } from "@adapters/db/client";
+import { serializeError } from "@shared/errors/serialize";
 import { HEALTH_STATUS } from "./constants";
 import type { HealthPayload, ReadinessPayload } from "./types";
 
-type DB = typeof db;
+const nowIso = Effect.map(Clock.currentTimeMillis, (millis) => new Date(millis).toISOString());
 
-export function getHealth(): HealthPayload {
-  return {
-    status: HEALTH_STATUS,
-    service: SERVICE_NAME,
-    now: new Date().toISOString(),
-    version: API_PACKAGE_VERSION,
-  };
-}
+export const getHealth: Effect.Effect<HealthPayload> = Effect.map(nowIso, (now) => ({
+  status: HEALTH_STATUS,
+  service: SERVICE_NAME,
+  now,
+  version: API_PACKAGE_VERSION,
+}));
 
-export async function buildReadinessPayload(database: DB): Promise<ReadinessPayload> {
-  const now = new Date().toISOString();
-  const base = { service: SERVICE_NAME, now, version: API_PACKAGE_VERSION };
-  try {
-    await database.execute(sql`select 1`);
-    return { ready: true, ...base };
-  } catch {
-    return { ready: false, ...base };
-  }
-}
+/** Ready when `select 1` succeeds. A failing check is logged and reported as not ready. */
+export const checkReadiness: Effect.Effect<ReadinessPayload, never, Db | AppLogger> = Effect.gen(
+  function* () {
+    const db = yield* Db;
+    const log = yield* AppLogger;
+    const now = yield* nowIso;
+    const ready = yield* db
+      .use("select 1", (client) => client.execute(sql`select 1`))
+      .pipe(
+        Effect.as(true),
+        Effect.catchTag("DatabaseError", (error) =>
+          log
+            .warn("health.ready.failed", { error: serializeError(error.cause) })
+            .pipe(Effect.as(false)),
+        ),
+      );
+    return { ready, service: SERVICE_NAME, now, version: API_PACKAGE_VERSION };
+  },
+);

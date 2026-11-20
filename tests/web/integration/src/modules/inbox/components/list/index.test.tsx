@@ -31,9 +31,11 @@ vi.mock("@modules/reader/components/toolbar", () => ({
   Toolbar: () => <div data-slot="reader-toolbar" />,
 }));
 
-vi.mock("@modules/reader/hooks/use-toolbar", () => ({
-  useReaderToolbar: () => ({ toolbarProps: {} }),
+const { useReaderToolbar } = vi.hoisted(() => ({
+  useReaderToolbar: vi.fn((_options: { autoExtract?: boolean }) => ({ toolbarProps: {} })),
 }));
+
+vi.mock("@modules/reader/hooks/use-toolbar", () => ({ useReaderToolbar }));
 
 vi.mock("@kyomi/ui/components/scroll-area", () => ({
   ScrollAreaPrimitive: {
@@ -137,5 +139,37 @@ describe("List scoped article header", () => {
     );
 
     expect(container.querySelector('[data-slot="reader-toolbar"]')).toBeNull();
+  });
+
+  test("renders the header toolbar without auto-extraction, which the article beside the list already runs", () => {
+    const selectedArticle = { id: "article-1", title: "Article" } as ArticleDetailDto;
+    useReaderToolbar.mockClear();
+    const { container } = render(
+      <List
+        inboxItems={[]}
+        filter="my-feed"
+        display={{ showFavicons: true }}
+        density="comfortable"
+        fontSizePx={16}
+        timestampDisplay="relative"
+        timestampHourCycle="12h"
+        isArticleScoped
+        selectedArticle={selectedArticle}
+        pagination={{
+          isLoading: false,
+          isRefreshing: false,
+          hasNextPage: false,
+          isFetchingNextPage: false,
+          fetchNextPage: vi.fn(),
+        }}
+        onBackToList={vi.fn()}
+        onFilterChange={vi.fn()}
+        onSelectItem={vi.fn()}
+        onSortChange={vi.fn()}
+      />,
+    );
+
+    expect(container.querySelector('[data-slot="reader-toolbar"]')).not.toBeNull();
+    expect(useReaderToolbar).toHaveBeenCalledWith({ item: selectedArticle, autoExtract: false });
   });
 });

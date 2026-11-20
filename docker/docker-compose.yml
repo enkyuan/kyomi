@@ -80,12 +80,13 @@ services:
     image: oven/bun:1.3.14
     container_name: kyomi-api
     restart: unless-stopped
+    stop_grace_period: 30s
     working_dir: /app
     command:
       [
         "sh",
         "-lc",
-        "CA_FLAG=\"\"; [ -f /etc/ssl/certs/corp-ca.pem ] && CA_FLAG=\"--cafile /etc/ssl/certs/corp-ca.pem\"; bun install $$CA_FLAG --frozen-lockfile --ignore-scripts && touch node_modules/.install-complete && bun run --cwd apps/api start"
+        'CA_FLAG=""; [ -f /etc/ssl/certs/corp-ca.pem ] && CA_FLAG="--cafile /etc/ssl/certs/corp-ca.pem"; bun install $$CA_FLAG --frozen-lockfile --ignore-scripts && touch node_modules/.install-complete && bun run --cwd apps/api start',
       ]
     environment:
       PORT: 8000
@@ -108,6 +109,9 @@ services:
       JOB_PROCESS_CONCURRENCY: ${JOB_PROCESS_CONCURRENCY:-4}
       JOB_READ_COUNT: ${JOB_READ_COUNT:-10}
       JOB_STREAM_MAX_LENGTH: ${JOB_STREAM_MAX_LENGTH:-100000}
+      FEATURE_ARTICLE_TRANSLATIONS: ${FEATURE_ARTICLE_TRANSLATIONS:-false}
+      CLOUDFLARE_TRANSLATIONS_URL: ${CLOUDFLARE_TRANSLATIONS_URL:-}
+      CLOUDFLARE_TRANSLATIONS_TOKEN: ${CLOUDFLARE_TRANSLATIONS_TOKEN:-}
       JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment,jobs:article-translation}
       FEED_FETCH_HOST_LEASE_MS: ${FEED_FETCH_HOST_LEASE_MS:-5000}
       FEED_FETCH_HOST_RETRY_DELAY_MS: ${FEED_FETCH_HOST_RETRY_DELAY_MS:-250}
@@ -155,12 +159,13 @@ services:
     image: oven/bun:1.3.14
     container_name: kyomi-worker
     restart: unless-stopped
+    stop_grace_period: 30s
     working_dir: /app
     command:
       [
         "sh",
         "-lc",
-        "until [ -f node_modules/.install-complete ]; do sleep 1; done; bun run --cwd apps/api worker"
+        "until [ -f node_modules/.install-complete ]; do sleep 1; done; bun run --cwd apps/api worker",
       ]
     environment:
       PORT: 8000
@@ -183,7 +188,12 @@ services:
       JOB_PROCESS_CONCURRENCY: ${JOB_PROCESS_CONCURRENCY:-4}
       JOB_READ_COUNT: ${JOB_READ_COUNT:-10}
       JOB_STREAM_MAX_LENGTH: ${JOB_STREAM_MAX_LENGTH:-100000}
-      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction, jobs:document-enrichment,jobs:article-translation}
+      FEATURE_ARTICLE_TRANSLATIONS: ${FEATURE_ARTICLE_TRANSLATIONS:-false}
+      CLOUDFLARE_TRANSLATIONS_URL: ${CLOUDFLARE_TRANSLATIONS_URL:-}
+      CLOUDFLARE_TRANSLATIONS_TOKEN: ${CLOUDFLARE_TRANSLATIONS_TOKEN:-}
+      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment,jobs:article-translation}
+      # Must not exceed stop_grace_period above.
+      SHUTDOWN_BUDGET_MS: ${SHUTDOWN_BUDGET_MS:-30000}
       FEED_FETCH_HOST_LEASE_MS: ${FEED_FETCH_HOST_LEASE_MS:-5000}
       FEED_FETCH_HOST_RETRY_DELAY_MS: ${FEED_FETCH_HOST_RETRY_DELAY_MS:-250}
     volumes:
@@ -204,12 +214,13 @@ services:
     image: oven/bun:1.3.14
     container_name: kyomi-scheduler
     restart: unless-stopped
+    stop_grace_period: 30s
     working_dir: /app
     command:
       [
         "sh",
         "-lc",
-        "until [ -f node_modules/.install-complete ]; do sleep 1; done; bun run --cwd apps/api scheduler"
+        "until [ -f node_modules/.install-complete ]; do sleep 1; done; bun run --cwd apps/api scheduler",
       ]
     environment:
       PORT: 8000
@@ -232,6 +243,9 @@ services:
       JOB_PROCESS_CONCURRENCY: ${JOB_PROCESS_CONCURRENCY:-4}
       JOB_READ_COUNT: ${JOB_READ_COUNT:-10}
       JOB_STREAM_MAX_LENGTH: ${JOB_STREAM_MAX_LENGTH:-100000}
+      FEATURE_ARTICLE_TRANSLATIONS: ${FEATURE_ARTICLE_TRANSLATIONS:-false}
+      CLOUDFLARE_TRANSLATIONS_URL: ${CLOUDFLARE_TRANSLATIONS_URL:-}
+      CLOUDFLARE_TRANSLATIONS_TOKEN: ${CLOUDFLARE_TRANSLATIONS_TOKEN:-}
       JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment,jobs:article-translation}
       FEED_FETCH_HOST_LEASE_MS: ${FEED_FETCH_HOST_LEASE_MS:-5000}
       FEED_FETCH_HOST_RETRY_DELAY_MS: ${FEED_FETCH_HOST_RETRY_DELAY_MS:-250}

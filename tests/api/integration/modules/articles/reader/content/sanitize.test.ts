@@ -1,5 +1,10 @@
 import { describe, expect, test } from "bun:test";
-import { htmlToText, sanitizeArticleHtml } from "@modules/articles/reader/content";
+import {
+  htmlToText,
+  processIngestedArticleHtml,
+  sanitizeArticleHtml,
+} from "@modules/articles/reader/content";
+import { expectLinear, hostileInputs } from "@api-tests/support/hostile-text";
 
 describe("articles.sanitize.content", () => {
   test("preserves headings, lists, code blocks, tables, and strips scripts", () => {
@@ -100,9 +105,42 @@ describe("articles.sanitize.content", () => {
     expect(sanitized).not.toContain("promo");
     expect(sanitized).not.toContain("sidebar");
     expect(sanitized).not.toContain('<div class="author-bio" style=');
-    expect(sanitized).toContain('<span style="color: red">Author</span>');
-    expect(sanitized).toContain('<math style="color: red">');
+    expect(sanitized).toContain("<span>Author</span>");
+    expect(sanitized).toContain("<math>");
+    expect(sanitized).not.toContain("style");
     expect(sanitized).not.toContain("<div></div>");
+  });
+
+  test("drops inline style from every element, so a feed cannot restyle or overlay the reader", () => {
+    const sanitized = sanitizeArticleHtml(`
+      <p>Before</p>
+      <span style="position:fixed;inset:0;width:100vw;height:100vh">overlay</span>
+      <span style="background:url(https://evil.example/beacon.gif)">tracked</span>
+      <span STYLE='position:absolute' style="top:0">twice</span>
+      <math><mrow><mi style="z-index:9">x</mi></mrow></math>
+      <div style="color:red">block</div>
+      <p>After</p>
+    `);
+
+    expect(sanitized).not.toMatch(/style/i);
+    expect(sanitized).not.toContain("evil.example");
+    expect(sanitized).not.toContain("position");
+    for (const text of ["Before", "overlay", "tracked", "twice", "block", "After"]) {
+      expect(sanitized).toContain(text);
+    }
+    expect(sanitized).toContain("<mi>x</mi>");
+  });
+
+  test("keeps a prerendered KaTeX formula as classes, MathML and its TeX source", () => {
+    const sanitized = sanitizeArticleHtml(
+      `<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">e^x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span style="height:0.6644em;vertical-align:-0.19em"><span style="top:-3.063em;margin-right:0.05em">x</span></span></span></span></p>`,
+    );
+
+    expect(sanitized).toContain('class="katex"');
+    expect(sanitized).toContain('class="katex-mathml"');
+    expect(sanitized).toContain("<msup><mi>e</mi><mi>x</mi></msup>");
+    expect(sanitized).toContain('<annotation encoding="application/x-tex">e^x</annotation>');
+    expect(sanitized).not.toContain("style");
   });
 
   test("adds lazy image defaults after sanitization", () => {
@@ -408,5 +446,63 @@ describe("articles.sanitize.content – policy v2", () => {
 
     expect(sanitized).toContain('<aside class="note"><p>An aside.</p></aside>');
     expect(sanitized).toContain("<footer>Author, <cite>Book</cite></footer>");
+  });
+});
+
+describe("articles.sanitize.content – hostile metadata", () => {
+  for (const [name, input] of Object.entries(hostileInputs)) {
+    test(`normalises hostile title, byline and excerpt in linear time: ${name}`, () => {
+      expectLinear(() =>
+        sanitizeArticleHtml("<h1>Real title</h1><p>Body</p>", {
+          title: `Real title ${input}`,
+          byline: input,
+          excerpt: input,
+        }),
+      );
+    });
+  }
+
+  test("still strips a leading title heading that repeats the title", () => {
+    const html = sanitizeArticleHtml("<h1>Real <b>title</b></h1><p>Body text</p>", {
+      title: "Real <i>title</i>",
+    });
+    expect(html).not.toContain("<h1>");
+    expect(html).toContain("Body text");
+  });
+
+  describe("a body of thousands of siblings that carry ids", () => {
+    // The compiler keeps these anchors (rewritten to `kyomi-aN`), and the leading heading sits in
+    // front of them, so every read of the article asks for its first meaningful child.
+    const anchors = (count: number) =>
+      Array.from({ length: count }, (_, index) => `<a id="a${index}"></a>`).join("");
+
+    test.each(["Quux", "Zebra"])(
+      "finds the leading block without copying the children (title %p)",
+      (title) => {
+        const started = performance.now();
+        const processed = processIngestedArticleHtml(`<h1>Quux</h1>${anchors(6_000)}<p>x</p>`, {
+          baseUrl: "https://example.com/post",
+          title,
+        });
+        const elapsed = performance.now() - started;
+
+        // Copying `children` took seconds (superquadratic in the number of ids); this takes about
+        // a second on a loaded machine, so the bound is generous.
+        expect(elapsed).toBeLessThan(4_000);
+        expect(processed.text).toContain("x");
+        // The heading repeats the first title, so it is stripped; under the other title it is kept.
+        expect(processed.html.includes("<h1")).toBe(title !== "Quux");
+      },
+      30_000,
+    );
+
+    test("still skips leading empty siblings to the first meaningful one", () => {
+      const html = sanitizeArticleHtml(`<div></div><div> </div><h1>Real title</h1><p>Body</p>`, {
+        title: "Real title",
+      });
+
+      expect(html).not.toContain("<h1>");
+      expect(html).toContain("Body");
+    });
   });
 });

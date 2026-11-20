@@ -58,6 +58,20 @@ enum TabBarMetrics {
   /// detent may overshoot a little.
   static let sheetFlickVelocity: CGFloat = 500
 
+  /// Width of one reader tool's slot: the HIG's 44pt minimum target, with room around the glyph.
+  /// Over a minimized bar the reader's capsule exists only from this far into the morph, so it always
+  /// has its tools on it and never shows as empty glass on the way to or from a circle.
+  static let minimizedReaderEdge: CGFloat = 0.45
+  /// The least a reader tool is given; the bar normally fills the width and the tools share it.
+  static let readerToolSlot: CGFloat = 64
+  /// The reader bar's tools, for sizing its capsule before JavaScript has said what they are: the stack
+  /// starts sliding the reader in before the reader's first render has finished.
+  static let readerToolCount = 5
+  /// The text size panel above the reader bar: tall enough for the slider's 44pt target.
+  static let fontPanelHeight: CGFloat = 56
+  static let fontPanelInset: CGFloat = 20
+  /// Width reserved for the `textformat` glyph and for the size, whose digits are tabular.
+  static let fontPanelSideWidth: CGFloat = 28
   /// Search and the add composer replace the bar with a native-sized field and a close button, both
   /// this tall: the height of the toolbar search field the system draws, not of the tab bar.
   static let fieldHeight: CGFloat = 48
@@ -68,7 +82,12 @@ enum TabBarMetrics {
   static let fieldTextInset: CGFloat = 44
   static let fieldTextTrailing: CGFloat = 12
   /// Height of a feed in the composer's results, and the space kept between them and the field.
-  static let composerResultHeight: CGFloat = 76
+  static let composerResultHeight: CGFloat = 60
+  /// The clear space between the status bar and the first result's icon.
+  static let composerFirstRowGap: CGFloat = 2
+  /// How far the first result is drawn up into the margin under the status bar: a row centers its 36pt
+  /// icon, so the rest of its slack above the icon is lifted away, leaving `composerFirstRowGap`.
+  static let composerFirstRowLift: CGFloat = (composerResultHeight - 36) / 2 - composerFirstRowGap
   static let composerResultsGap: CGFloat = 12
   /// The plus or check ending a result, and the touch target around it (the HIG's 44pt minimum).
   static let composerMarkSize: CGFloat = 30
@@ -108,6 +127,8 @@ struct TabBarLayout: Equatable {
   /// selection lens can never land on it. Zero without a switcher.
   let switcherWidth: CGFloat
   let segmentHeight: CGFloat
+  /// Width of one tool of the reader bar; zero outside the reader.
+  let readerSegmentWidth: CGFloat
 
   /// `keyboardInset`: how far the keyboard rises into the container, which the bar clears.
   /// `reduceMotion`: minimizing keeps the buttons' size, so it changes nothing's geometry and the
@@ -120,15 +141,27 @@ struct TabBarLayout: Equatable {
     searchActive: Bool,
     reduceMotion: Bool = false,
     sheetPresented: Bool = false,
-    keyboardInset: CGFloat = 0
+    keyboardInset: CGFloat = 0,
+    readerToolCount: Int = 0,
+    readerMorph: CGFloat = 1
   ) {
     let containerWidth = containerSize.width
+    let reading = readerToolCount > 0
+    let morph = min(1, max(0, readerMorph))
+    // A minimized bar's buttons are compact whether or not a reader is open over it, so they come back
+    // at that size when the reader leaves.
     let compact = minimized && !searchActive
     barHeight = TabBarMetrics.height
     buttonSize = compact && !reduceMotion ? TabBarMetrics.compactHeight : TabBarMetrics.height
-    buttonScale = buttonSize / TabBarMetrics.height
-    showsMain = !minimized && !searchActive
-    showsButtons = !sheetPresented
+    // The search and add buttons shrink away over the first half of the morph and grow back over the last
+    // half of the return, scrubbed with it like the capsule, so a finger drives them too.
+    let presence = reading ? 1 - min(1, morph / 0.5) : 1
+    buttonScale = buttonSize / TabBarMetrics.height * presence
+    // Reading, the capsule is there while the morph is under way, and at rest only if the tabs are:
+    // over a minimized bar it contracts to nothing as the reader leaves and is removed there.
+    showsMain = reading ? (!minimized || morph > TabBarMetrics.minimizedReaderEdge) : (!minimized && !searchActive)
+    // They leave the hierarchy only once they have shrunk to nothing, where it cannot be seen.
+    showsButtons = !sheetPresented && presence > 0.02
 
     let inset = TabBarMetrics.edgeInset
     let gap = TabBarMetrics.gap
@@ -142,12 +175,26 @@ struct TabBarLayout: Equatable {
     // expanded buttons, which also keeps the tab segments from reflowing.
     let sideReserve = (TabBarMetrics.height + gap) * 2
     let tabsWidth = min(TabBarMetrics.mainWidth, max(0, availableWidth - sideReserve))
+    // The capsule's width is the tab capsule's and the reader bar's, mixed by how far the stack's
+    // transition has taken the bar from one to the other, so it follows a swipe back with the finger.
+    // The reader bar is as wide as a system tab bar with as many items: edge to edge between the
+    // screen's insets, its tools sharing the width (never narrower than a slot each).
+    let readerWidth = max(
+      availableWidth,
+      TabBarMetrics.readerToolSlot * CGFloat(readerToolCount) + TabBarMetrics.selectionInset * 2
+    )
+    // Its resting end is the tab capsule, or a circle where the bar is minimized, so the reader bar
+    // contracts into whichever of the two the feed is showing.
+    let restWidth = minimized ? TabBarMetrics.height : tabsWidth
+    // Reduce Motion swaps between the two ends instead of sweeping through the widths between them.
+    let sweep = reduceMotion ? (morph >= 0.5 ? 1 : 0) : morph
+    let capsuleWidth = reading ? restWidth + (readerWidth - restWidth) * sweep : tabsWidth
     // The buttons shrink about their centres, so their glyphs scale in place instead of sliding
     // toward the screen edges while the glass contracts.
     let buttonInset = (TabBarMetrics.height - buttonSize) / 2
     let addX = containerWidth - inset - TabBarMetrics.height + buttonInset
-    mainWidth = tabsWidth
-    mainX = (containerWidth - tabsWidth) / 2
+    mainWidth = capsuleWidth
+    mainX = (containerWidth - capsuleWidth) / 2
     // Searching, the add button's glass becomes the close button at the trailing edge, and the
     // search button's glass widens to the field, ending a gap short of it.
     if searchActive {
@@ -160,8 +207,10 @@ struct TabBarLayout: Equatable {
         height: size
       )
     } else {
-      trailingRect = CGRect(x: addX, y: barMidY - buttonSize / 2, width: buttonSize, height: buttonSize)
-      searchRect = CGRect(x: inset + buttonInset, y: barMidY - buttonSize / 2, width: buttonSize, height: buttonSize)
+      let size = buttonSize * presence
+      trailingRect = CGRect(x: addX + (buttonSize - size) / 2, y: barMidY - size / 2, width: size, height: size)
+      searchRect = CGRect(
+        x: inset + buttonInset + (buttonSize - size) / 2, y: barMidY - size / 2, width: size, height: size)
     }
     // Inset the control so its lens sits `selectionInset` from the capsule.
     // UISegmentedControl sizes itself in whole points, so round its height.
@@ -170,6 +219,10 @@ struct TabBarLayout: Equatable {
     let controlWidth = max(0, tabsWidth - controlInset * 2)
     let units = CGFloat(tabCount) + (hasSwitcher ? TabBarMetrics.switcherWidthRatio : 0)
     let tabWidth = units > 0 ? (controlWidth / units).rounded(.down) : 0
+    readerSegmentWidth =
+      reading
+      ? ((capsuleWidth - TabBarMetrics.selectionInset * 2) / CGFloat(readerToolCount)).rounded(.down)
+      : 0
     segmentWidths = Array(repeating: tabWidth, count: tabCount)
     switcherWidth = hasSwitcher ? (controlWidth - tabWidth * CGFloat(tabCount)).rounded(.down) : 0
   }
@@ -177,6 +230,12 @@ struct TabBarLayout: Equatable {
   /// The capsule's frame in the container.
   var mainRect: CGRect {
     CGRect(x: mainX, y: barMidY - barHeight / 2, width: mainWidth, height: barHeight)
+  }
+
+  /// The text size panel: the capsule's width, floating one gap above it.
+  var fontPanelRect: CGRect {
+    let height = TabBarMetrics.fontPanelHeight
+    return CGRect(x: mainX, y: mainRect.minY - TabBarMetrics.gap - height, width: mainWidth, height: height)
   }
 
   /// Width of the segmented control, which spans the tabs only.

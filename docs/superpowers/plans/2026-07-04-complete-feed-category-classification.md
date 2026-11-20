@@ -141,9 +141,11 @@ article list SQL ranks:
 ## Task 0: Workspace And Branch Guard
 
 **Files:**
+
 - Read only: workspace state
 
 **Interfaces:**
+
 - Consumes: current GitButler workspace.
 - Produces: safe starting state on `feat/feed-metadata` with unrelated work isolated.
 
@@ -180,11 +182,13 @@ Expected:
 ## Task 1: Deterministic Category Taxonomy And Classifier
 
 **Files:**
+
 - Create: `packages/worker/src/services/feed/category-taxonomy.ts`
 - Create: `packages/worker/src/services/feed/category-classifier.ts`
 - Test: `tests/api/integration/modules/feeds/refresh/category-classifier.test.ts`
 
 **Interfaces:**
+
 - Produces: `CATEGORY_CLASSIFIER_PROVENANCE: "classifier"`.
 - Produces: `GENERAL_CATEGORY_LABEL: "General"`.
 - Produces: `type InferredCategoryLabel = { label: string; confidence: number }`.
@@ -198,17 +202,14 @@ Create `tests/api/integration/modules/feeds/refresh/category-classifier.test.ts`
 
 ```ts
 import { describe, expect, test } from "bun:test";
-import {
-  classifyFeedCategories,
-  classifyFeedItemCategories,
-  isMixedFeedHost,
-} from "@kyomi/worker";
+import { classifyFeedCategories, classifyFeedItemCategories, isMixedFeedHost } from "@kyomi/worker";
 
 describe("feed category classifier", () => {
   test("classifies technology feeds without RSS category tags", () => {
     const result = classifyFeedCategories({
       feedTitle: "Airbnb Engineering",
-      feedDescription: "Engineering posts about infrastructure, data, product systems, and software architecture.",
+      feedDescription:
+        "Engineering posts about infrastructure, data, product systems, and software architecture.",
       feedUrl: "https://medium.com/feed/airbnb-engineering",
       feedSiteUrl: "https://medium.com/airbnb-engineering",
       sourceKind: "rss",
@@ -460,17 +461,7 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
   {
     label: "Culture",
     slug: "culture",
-    keywords: [
-      "art",
-      "book",
-      "culture",
-      "essay",
-      "film",
-      "history",
-      "music",
-      "society",
-      "writing",
-    ],
+    keywords: ["art", "book", "culture", "essay", "film", "history", "music", "society", "writing"],
     domainHints: ["newyorker.com", "theatlantic.com", "lithub.com"],
   },
   {
@@ -540,29 +531,13 @@ export const CATEGORY_TAXONOMY: readonly CategoryTaxonomyEntry[] = [
   {
     label: "Food",
     slug: "food",
-    keywords: [
-      "baking",
-      "chef",
-      "cooking",
-      "food",
-      "kitchen",
-      "recipe",
-      "restaurant",
-    ],
+    keywords: ["baking", "chef", "cooking", "food", "kitchen", "recipe", "restaurant"],
     domainHints: ["seriouseats.com", "bonappetit.com"],
   },
   {
     label: "News",
     slug: "news",
-    keywords: [
-      "breaking",
-      "daily",
-      "headline",
-      "latest",
-      "news",
-      "report",
-      "world",
-    ],
+    keywords: ["breaking", "daily", "headline", "latest", "news", "report", "world"],
     domainHints: ["apnews.com", "reuters.com", "bbc.com", "nytimes.com"],
   },
 ];
@@ -630,9 +605,9 @@ function includesToken(text: string, token: string): boolean {
   if (normalized.includes(" ")) {
     return text.includes(normalized);
   }
-  return new RegExp(`(^|[^a-z0-9])${normalized.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^a-z0-9]|$)`).test(
-    text,
-  );
+  return new RegExp(
+    `(^|[^a-z0-9])${normalized.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^a-z0-9]|$)`,
+  ).test(text);
 }
 
 function scoreCategory(
@@ -724,7 +699,9 @@ export function classifyFeedItemCategories(
   const feedHost = safeHost(input.feedUrl);
   const siteHost = safeHost(input.feedSiteUrl);
   const titleText = normalizeText(input.itemTitle);
-  const bodyText = normalizeText([input.itemSummary, input.feedTitle, input.feedDescription].join(" "));
+  const bodyText = normalizeText(
+    [input.itemSummary, input.feedTitle, input.feedDescription].join(" "),
+  );
 
   return {
     categories: topCategories({
@@ -745,10 +722,7 @@ Modify `packages/worker/src/services/feed/index.ts`:
 ```ts
 export { runFeedRefresh, shouldEnrichInsertedItems } from "./refresh";
 export { parseFeedDocument } from "./parse";
-export {
-  CATEGORY_CLASSIFIER_PROVENANCE,
-  GENERAL_CATEGORY_LABEL,
-} from "./category-taxonomy";
+export { CATEGORY_CLASSIFIER_PROVENANCE, GENERAL_CATEGORY_LABEL } from "./category-taxonomy";
 export {
   classifyFeedCategories,
   classifyFeedItemCategories,
@@ -820,11 +794,13 @@ feat(feeds): add deterministic category classifier
 ## Task 2: Inferred Category Sync With Classifier Provenance
 
 **Files:**
+
 - Modify: `packages/worker/src/services/feed/types.ts`
 - Modify: `packages/worker/src/services/feed/categories.ts`
 - Test: `tests/api/integration/modules/feeds/refresh/categories.test.ts`
 
 **Interfaces:**
+
 - Consumes: `InferredCategoryLabel` from `category-classifier.ts`.
 - Produces: `syncInferredFeedCategories(database, input, now): Promise<void>`.
 - `syncInferredFeedCategories()` deletes and rewrites only `provenance = "classifier"` assignments.
@@ -975,7 +951,9 @@ function normalizeCategoryRecords(labels: string[]): CategoryRecord[] {
   return Array.from(bySlug.values());
 }
 
-function normalizeInferredRecords(labels: InferredCategoryLabel[]): Array<CategoryRecord & InferredCategoryLabel> {
+function normalizeInferredRecords(
+  labels: InferredCategoryLabel[],
+): Array<CategoryRecord & InferredCategoryLabel> {
   const bySlug = new Map<string, CategoryRecord & InferredCategoryLabel>();
   for (const label of labels) {
     const trimmed = label.label.trim();
@@ -1198,10 +1176,12 @@ feat(feeds): persist inferred category assignments
 ## Task 3: Worker Refresh Integration
 
 **Files:**
+
 - Modify: `packages/worker/src/services/feed/refresh.ts`
 - Test: `tests/api/integration/modules/feeds/refresh/categories.test.ts`
 
 **Interfaces:**
+
 - Consumes: `classifyFeedCategories()`, `classifyFeedItemCategories()`, `isMixedFeedHost()`, and `syncInferredFeedCategories()`.
 - Produces: refresh path writes explicit categories and classifier fallback categories in one transaction.
 
@@ -1466,11 +1446,13 @@ feat(feeds): classify categories during refresh
 ## Task 4: Backfill Existing Feeds And Items
 
 **Files:**
+
 - Create: `scripts/categories/backfill.ts`
 - Modify: `package.json`
 - Test: `tests/api/integration/scripts/categories/backfill.test.ts`
 
 **Interfaces:**
+
 - Consumes: `db`, `assertApiDatabaseReady`, `feeds`, `feedItems`, classifier helpers, and `syncInferredFeedCategories()`.
 - Produces: CLI command `bun run categories:backfill -- --apply`.
 - Produces: dry-run output without writes when `--apply` is absent.
@@ -1715,11 +1697,15 @@ export async function runCategoryBackfill(args: BackfillArgs): Promise<BackfillS
     });
 
     if (args.apply) {
-      await syncInferredFeedCategories(db, {
-        feedId: feed.id,
-        feedCategories,
-        items: inferredItems,
-      }, now);
+      await syncInferredFeedCategories(
+        db,
+        {
+          feedId: feed.id,
+          feedCategories,
+          items: inferredItems,
+        },
+        now,
+      );
     }
   }
 
@@ -1797,10 +1783,12 @@ feat(feeds): add category backfill script
 ## Task 5: Provenance-Aware API Category Ranking
 
 **Files:**
+
 - Modify: `apps/api/src/modules/articles/read/list/service.ts`
 - Test: `tests/api/integration/modules/articles/read/list-tags.test.ts`
 
 **Interfaces:**
+
 - Consumes: `feedItemCategoryAssignments.provenance` and `feedCategoryAssignments.provenance`.
 - Produces: SQL ordering that ranks explicit item labels, item classifier labels, explicit feed labels, then feed classifier labels.
 
@@ -1921,9 +1909,11 @@ feat(articles): rank category provenance in list queries
 ## Task 6: End-To-End Verification And Local Backfill
 
 **Files:**
+
 - Runtime verification only unless tests reveal a code defect.
 
 **Interfaces:**
+
 - Consumes: all prior tasks.
 - Produces: a populated local DB that shows chips without manual inserts.
 
@@ -2115,13 +2105,13 @@ Synthesized from this review's findings. Each task derives from a specific findi
 
 ## GSTACK REVIEW REPORT
 
-| Review | Trigger | Why | Runs | Status | Findings |
-|--------|---------|-----|------|--------|----------|
-| CEO Review | `/plan-ceo-review` | Scope & strategy | 0 | not run | Not required: backend data-population fix, no product strategy fork. |
-| Codex Review | `/codex review` | Independent 2nd opinion | 0 | not run | Not required before implementation; run pre-ship if diff is large. |
-| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 1 | CLEAR | 5 findings folded: separate classifier sync, provenance ranking, mixed-feed tests, bounded backfill, dry-run default. |
-| Design Review | `/plan-design-review` | UI/UX gaps | 0 | not run | Not required: UI remains data-driven and component layout is unchanged. |
-| DX Review | `/plan-devex-review` | Developer experience gaps | 0 | not run | Not required: one script and existing test commands cover operator flow. |
+| Review        | Trigger               | Why                             | Runs | Status  | Findings                                                                                                              |
+| ------------- | --------------------- | ------------------------------- | ---- | ------- | --------------------------------------------------------------------------------------------------------------------- |
+| CEO Review    | `/plan-ceo-review`    | Scope & strategy                | 0    | not run | Not required: backend data-population fix, no product strategy fork.                                                  |
+| Codex Review  | `/codex review`       | Independent 2nd opinion         | 0    | not run | Not required before implementation; run pre-ship if diff is large.                                                    |
+| Eng Review    | `/plan-eng-review`    | Architecture & tests (required) | 1    | CLEAR   | 5 findings folded: separate classifier sync, provenance ranking, mixed-feed tests, bounded backfill, dry-run default. |
+| Design Review | `/plan-design-review` | UI/UX gaps                      | 0    | not run | Not required: UI remains data-driven and component layout is unchanged.                                               |
+| DX Review     | `/plan-devex-review`  | Developer experience gaps       | 0    | not run | Not required: one script and existing test commands cover operator flow.                                              |
 
 **VERDICT:** ENG CLEARED - ready to implement on `feat/feed-metadata`.
 NO UNRESOLVED DECISIONS

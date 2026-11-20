@@ -1,9 +1,8 @@
-import type { db } from "@adapters/db/client";
+import { DateTime, Effect } from "effect";
+import { Db } from "@adapters/db/service";
 import { articleExtractionCache } from "@kyomi/db";
 import { toStoredDocumentColumns, type StoredDocument } from "@kyomi/ingest/lib/stored-document";
 import { eq } from "drizzle-orm";
-
-type DB = typeof db;
 
 const READY_CACHE_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 const FAILED_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
@@ -49,11 +48,7 @@ function isFreshCacheRow(
   );
 }
 
-export async function readFreshExtractionCache(
-  database: DB,
-  urlKey: string,
-  now = new Date(),
-): Promise<
+export type FreshExtractionCache =
   | {
       kind: "ready";
       html: string;
@@ -63,27 +58,33 @@ export async function readFreshExtractionCache(
       document: StoredDocument | null;
       finalUrl: string | null;
     }
-  | { kind: "failed"; errorCode: string; message: string }
-  | null
-> {
-  const [row] = await database
-    .select({
-      status: articleExtractionCache.status,
-      contentHtml: articleExtractionCache.contentHtml,
-      contentText: articleExtractionCache.contentText,
-      sanitizerVersion: articleExtractionCache.sanitizerVersion,
-      rawHtml: articleExtractionCache.rawHtml,
-      document: articleExtractionCache.document,
-      documentVersion: articleExtractionCache.documentVersion,
-      compilerVersion: articleExtractionCache.compilerVersion,
-      finalUrl: articleExtractionCache.finalUrl,
-      errorCode: articleExtractionCache.errorCode,
-      errorMessage: articleExtractionCache.errorMessage,
-      fetchedAt: articleExtractionCache.fetchedAt,
-    })
-    .from(articleExtractionCache)
-    .where(eq(articleExtractionCache.urlKey, urlKey))
-    .limit(1);
+  | { kind: "failed"; errorCode: string; message: string };
+
+export const readFreshExtractionCache = Effect.fn("extraction.cache.read")(function* (
+  urlKey: string,
+) {
+  const db = yield* Db;
+  const now = yield* DateTime.nowAsDate;
+  const [row] = yield* db.use("select article_extraction_cache", (client) =>
+    client
+      .select({
+        status: articleExtractionCache.status,
+        contentHtml: articleExtractionCache.contentHtml,
+        contentText: articleExtractionCache.contentText,
+        sanitizerVersion: articleExtractionCache.sanitizerVersion,
+        rawHtml: articleExtractionCache.rawHtml,
+        document: articleExtractionCache.document,
+        documentVersion: articleExtractionCache.documentVersion,
+        compilerVersion: articleExtractionCache.compilerVersion,
+        finalUrl: articleExtractionCache.finalUrl,
+        errorCode: articleExtractionCache.errorCode,
+        errorMessage: articleExtractionCache.errorMessage,
+        fetchedAt: articleExtractionCache.fetchedAt,
+      })
+      .from(articleExtractionCache)
+      .where(eq(articleExtractionCache.urlKey, urlKey))
+      .limit(1),
+  );
 
   if (!row || !isFreshCacheRow(row, now)) {
     return null;
@@ -105,7 +106,7 @@ export async function readFreshExtractionCache(
             }
           : null,
       finalUrl: row.finalUrl,
-    };
+    } satisfies FreshExtractionCache;
   }
 
   if (row.status === "failed") {
@@ -113,15 +114,28 @@ export async function readFreshExtractionCache(
       kind: "failed",
       errorCode: row.errorCode ?? "EXTRACTION_FAILED",
       message: safeExtractErrorMessage(row.errorMessage ?? "Full text could not be extracted."),
-    };
+    } satisfies FreshExtractionCache;
   }
 
   return null;
-}
+});
 
-export async function upsertReadyExtractionCache(
-  database: DB,
-  input: {
+/** Columns an upsert writes; the row's identity (`id`, `urlKey`) is only set on insert. */
+type CacheColumns = Omit<typeof articleExtractionCache.$inferInsert, "id" | "urlKey">;
+
+const upsertExtractionCache = (operation: string, urlKey: string, columns: CacheColumns) =>
+  Effect.gen(function* () {
+    const db = yield* Db;
+    yield* db.use(operation, (client) =>
+      client
+        .insert(articleExtractionCache)
+        .values({ id: extractionCacheId(urlKey), urlKey, ...columns })
+        .onConflictDoUpdate({ target: articleExtractionCache.urlKey, set: columns }),
+    );
+  });
+
+export const upsertReadyExtractionCache = Effect.fn("extraction.cache.upsertReady")(
+  function* (input: {
     urlKey: string;
     sourceUrl: string;
     finalUrl: string | null;
@@ -130,15 +144,10 @@ export async function upsertReadyExtractionCache(
     sanitizerVersion: string;
     rawHtml: string | null;
     document?: StoredDocument | null;
-  },
-) {
-  const now = new Date();
-  const documentColumns = toStoredDocumentColumns(input.document ?? null);
-  await database
-    .insert(articleExtractionCache)
-    .values({
-      id: extractionCacheId(input.urlKey),
-      urlKey: input.urlKey,
+  }) {
+    const now = yield* DateTime.nowAsDate;
+    const documentColumns = toStoredDocumentColumns(input.document ?? null);
+    yield* upsertExtractionCache("upsert ready article_extraction_cache", input.urlKey, {
       sourceUrl: input.sourceUrl,
       finalUrl: input.finalUrl,
       contentHash: extractionContentHash(input.html, input.text),
@@ -154,45 +163,20 @@ export async function upsertReadyExtractionCache(
       errorMessage: null,
       fetchedAt: now,
       updatedAt: now,
-    })
-    .onConflictDoUpdate({
-      target: articleExtractionCache.urlKey,
-      set: {
-        sourceUrl: input.sourceUrl,
-        finalUrl: input.finalUrl,
-        contentHash: extractionContentHash(input.html, input.text),
-        contentHtml: input.html,
-        contentText: input.text,
-        sanitizerVersion: input.sanitizerVersion,
-        rawHtml: input.rawHtml,
-        document: documentColumns.document,
-        documentVersion: documentColumns.documentVersion,
-        compilerVersion: documentColumns.compilerVersion,
-        status: "ready",
-        errorCode: null,
-        errorMessage: null,
-        fetchedAt: now,
-        updatedAt: now,
-      },
     });
-}
+  },
+);
 
-export async function upsertFailedExtractionCache(
-  database: DB,
-  input: {
+export const upsertFailedExtractionCache = Effect.fn("extraction.cache.upsertFailed")(
+  function* (input: {
     urlKey: string;
     sourceUrl: string;
     finalUrl?: string | null;
     errorCode: string;
     message: string;
-  },
-) {
-  const now = new Date();
-  await database
-    .insert(articleExtractionCache)
-    .values({
-      id: extractionCacheId(input.urlKey),
-      urlKey: input.urlKey,
+  }) {
+    const now = yield* DateTime.nowAsDate;
+    yield* upsertExtractionCache("upsert failed article_extraction_cache", input.urlKey, {
       sourceUrl: input.sourceUrl,
       finalUrl: input.finalUrl ?? null,
       contentHash: null,
@@ -208,25 +192,6 @@ export async function upsertFailedExtractionCache(
       errorMessage: input.message,
       fetchedAt: now,
       updatedAt: now,
-    })
-    .onConflictDoUpdate({
-      target: articleExtractionCache.urlKey,
-      set: {
-        sourceUrl: input.sourceUrl,
-        finalUrl: input.finalUrl ?? null,
-        contentHash: null,
-        contentHtml: null,
-        contentText: null,
-        sanitizerVersion: null,
-        rawHtml: null,
-        document: null,
-        documentVersion: null,
-        compilerVersion: null,
-        status: "failed",
-        errorCode: input.errorCode,
-        errorMessage: input.message,
-        fetchedAt: now,
-        updatedAt: now,
-      },
     });
-}
+  },
+);

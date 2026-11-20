@@ -73,7 +73,9 @@ export function resolveRelativeAssetUrls(
   for (const element of tpl.content.querySelectorAll("video[poster]")) {
     rewriteAttribute(element, "poster", image);
   }
-  for (const element of tpl.content.querySelectorAll("img[srcset], picture > source[srcset]")) {
+  // Any `source[srcset]`, not only `picture > source`: the sanitizer unwraps elements it does not
+  // allow (`<picture><font><source …>`), which moves the source under `picture` after this runs.
+  for (const element of tpl.content.querySelectorAll("img[srcset], source[srcset]")) {
     rewriteAttribute(element, "srcset", (value) => {
       const candidates = parseSrcset(value).flatMap(({ url, descriptor }) => {
         const resolved = image(url);

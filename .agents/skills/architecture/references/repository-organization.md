@@ -136,14 +136,14 @@ under `packages/trpc/server/routers/viewer/<domain>/`. Kyomi has no DI container
 role is the basename (flat module directories, no `.controller.ts` suffix) and tests stay under
 `tests/api`.
 
-| Kyomi role file | cal.com analogue | Holds |
-| --- | --- | --- |
-| `routes.ts` | `*.controller.ts`, `_router.tsx` | Elysia HTTP boundary; validates, authenticates, delegates |
-| `schemas.ts`, `types.ts` | `inputs/`, `outputs/`, `*.schema.ts` | TypeBox wire contracts; DTO types |
-| `queries.ts` | `*.repository.ts` | Read-side SQL |
-| `operations.ts`, `mutations.ts` | `services/`, `*.handler.ts` | Behavior and writes |
-| `guard.ts`, `middleware.ts`, `plugin.ts` | `guards/`, `pipes/`, `decorators/` | Request interceptors and Elysia plugins |
-| `client.ts`, `instance.ts`, provider name (`meili.ts`, `pino.ts`) | `prisma/`, `redis/` modules | Outbound connections, configured SDK instances, and provider adapters |
+| Kyomi role file                                                   | cal.com analogue                     | Holds                                                                 |
+| ----------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------- |
+| `routes.ts`                                                       | `*.controller.ts`, `_router.tsx`     | Elysia HTTP boundary; validates, authenticates, delegates             |
+| `schemas.ts`, `types.ts`                                          | `inputs/`, `outputs/`, `*.schema.ts` | TypeBox wire contracts; DTO types                                     |
+| `queries.ts`                                                      | `*.repository.ts`                    | Read-side SQL                                                         |
+| `operations.ts`, `mutations.ts`                                   | `services/`, `*.handler.ts`          | Behavior and writes                                                   |
+| `guard.ts`, `middleware.ts`, `plugin.ts`                          | `guards/`, `pipes/`, `decorators/`   | Request interceptors and Elysia plugins                               |
+| `client.ts`, `instance.ts`, provider name (`meili.ts`, `pino.ts`) | `prisma/`, `redis/` modules          | Outbound connections, configured SDK instances, and provider adapters |
 
 Rules:
 
@@ -174,7 +174,7 @@ Rules:
 8. Tests mirror the source path and basename
    (`tests/api/integration/<path under apps/api/src>/<basename>.test.ts`); behavior-spanning tests
    (`detail-tags`, `process-roles`, schema SQL checks) sit under their owning directory. A rename
-   moves the mirror and updates `mock.module` strings, path-reading tests, and template imports in
+   moves the mirror and updates test imports, path-reading tests, and template imports in
    the same change.
 
 Where API naming differs from web: no `use-*` hook files, no `index.tsx` primary-component files,
@@ -195,16 +195,16 @@ cal.com spells components `PascalCase.tsx` and hooks `useCamelCase.ts`; Kyomi ke
 every authored file (`use-*.ts` hooks, lowercase component files) and keeps tests under `tests/web`
 instead of beside source.
 
-| Kyomi file | cal.com analogue | Holds |
-| --- | --- | --- |
-| `page.tsx`, `layout.tsx` | `modules/<domain>/*-view.tsx`, `app/**/layout.tsx` | A module's page entry and layout composition |
-| `index.tsx` | `components/<Area>/index.tsx` | An area's primary component once its directory names it |
-| `use-<purpose>.ts` | `hooks/use<Purpose>.ts` | One hook; the file names the purpose, the symbol carries the module |
-| `api.ts` | `app/**/actions.ts` | `createServerFn` server functions and their client types |
-| `options.ts`, `cache.ts` | none (Kyomi's TanStack Query layer) | Query options and cache mutations |
-| `types.ts`, `constants.ts` | `types.ts`, `lib/constants.ts` | Shared types and constants for the directory |
-| `-loader.ts`, `-component.tsx` | `lib/<route>/getServerSideProps.ts` | Route-adjacent files the router ignores (`-` prefix) |
-| `hydration.ts`, `urls.ts`, a precise term | `lib/buildNonce.ts`, `lib/getThemeProviderProps.ts` | Named for the function the file performs |
+| Kyomi file                                | cal.com analogue                                    | Holds                                                               |
+| ----------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------- |
+| `page.tsx`, `layout.tsx`                  | `modules/<domain>/*-view.tsx`, `app/**/layout.tsx`  | A module's page entry and layout composition                        |
+| `index.tsx`                               | `components/<Area>/index.tsx`                       | An area's primary component once its directory names it             |
+| `use-<purpose>.ts`                        | `hooks/use<Purpose>.ts`                             | One hook; the file names the purpose, the symbol carries the module |
+| `api.ts`                                  | `app/**/actions.ts`                                 | `createServerFn` server functions and their client types            |
+| `options.ts`, `cache.ts`                  | none (Kyomi's TanStack Query layer)                 | Query options and cache mutations                                   |
+| `types.ts`, `constants.ts`                | `types.ts`, `lib/constants.ts`                      | Shared types and constants for the directory                        |
+| `-loader.ts`, `-component.tsx`            | `lib/<route>/getServerSideProps.ts`                 | Route-adjacent files the router ignores (`-` prefix)                |
+| `hydration.ts`, `urls.ts`, a precise term | `lib/buildNonce.ts`, `lib/getThemeProviderProps.ts` | Named for the function the file performs                            |
 
 Rules:
 

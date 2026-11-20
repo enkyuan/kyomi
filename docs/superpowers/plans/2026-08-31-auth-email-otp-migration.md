@@ -29,7 +29,7 @@ OAuth (`socialProviders`) stays enabled alongside OTP. Scope: `apps/api` and
   (`^1.5.3` in `package.json`). No version bump needed. The plugin's
   `sendVerificationOTP` callback receives `{ email, otp, type }` where
   `type` is `"sign-in" | "email-verification" | "forget-password" |
-  "change-email"`.
+"change-email"`.
 - **No DB migrations required.** The emailOTP plugin stores OTP codes in
   the existing `verifications` table (see `packages/db/src/schema/auth.ts`).
   Better Auth's CLI `generate` is a no-op for this plugin.
@@ -39,7 +39,7 @@ OAuth (`socialProviders`) stays enabled alongside OTP. Scope: `apps/api` and
   then `authClient.signIn.emailOtp({ email, otp })`). The web migration
   mirrors this established pattern.
 - **Auth capabilities** currently expose `{ google, passwordReset,
-  passwordResetUsesDevelopmentLog }` via `AUTH_CAPABILITIES_HEADER`. The
+passwordResetUsesDevelopmentLog }` via `AUTH_CAPABILITIES_HEADER`. The
   migration replaces `passwordReset` / `passwordResetUsesDevelopmentLog`
   with `emailOtp` / `emailOtpUsesDevelopmentLog`.
 - **Web auth UI**: two pages — `/` (Login, email+password form) and
@@ -80,7 +80,7 @@ import { queueEmailOTP } from "./email-otp";
 
 export const auth = betterAuth({
   // … existing secret, baseURL, trustedOrigins, advanced, databaseHooks, database …
-  emailAndPassword: { enabled: false },          // Step 4: explicitly disabled
+  emailAndPassword: { enabled: false }, // Step 4: explicitly disabled
   plugins: [
     emailOTP({
       sendVerificationOTP: async ({ email, otp, type }) => {
@@ -91,7 +91,8 @@ export const auth = betterAuth({
       // used by the web client. Other types are available for future use.
     }),
   ],
-  socialProviders: resolveGoogleSocialProvider({            // unchanged
+  socialProviders: resolveGoogleSocialProvider({
+    // unchanged
     enabled: env.FEATURE_GOOGLE_OAUTH,
     clientId: env.GOOGLE_CLIENT_ID,
     clientSecret: env.GOOGLE_CLIENT_SECRET,
@@ -100,7 +101,7 @@ export const auth = betterAuth({
 });
 ```
 
-**Reasoning:** The `emailOTP` plugin is a Better Auth *plugin* (not a core
+**Reasoning:** The `emailOTP` plugin is a Better Auth _plugin_ (not a core
 config block), so it goes in the `plugins: [...]` array. The
 `sendVerificationOTP` callback delegates to `queueEmailOTP` — the
 same function the dead `email-otp.ts` file was written for. We
@@ -118,7 +119,7 @@ File: `apps/api/src/adapters/auth/index.ts`
 export * from "./auth";
 export * from "./capabilities";
 export * from "./location";
-export * from "./email-otp";   // Step 2: surface the OTP delivery helpers
+export * from "./email-otp"; // Step 2: surface the OTP delivery helpers
 ```
 
 **Reasoning:** `email-otp.ts` currently exists but is unreferenced. The
@@ -155,7 +156,7 @@ export function resolveAuthCapabilities({
   const hasEmailDelivery = Boolean(resendApiKey && emailFrom);
   return {
     google: googleOAuthEnabled,
-    emailOtp: true,                                  // always available
+    emailOtp: true, // always available
     emailOtpUsesDevelopmentLog: nodeEnv !== "production" && !hasEmailDelivery,
   };
 }
@@ -235,7 +236,9 @@ import { isValidEmail } from "@kyomi/reader/schemas/auth";
 export type EmailOTPFormValues = { email: string };
 export type OtpFormValues = { otp: string };
 
-function normalizeEmail(value: string) { return value.trim(); }
+function normalizeEmail(value: string) {
+  return value.trim();
+}
 
 export function emailOtpFormValidator({ value }: { value: EmailOTPFormValues }) {
   const normalized = normalizeEmail(value.email);
@@ -379,7 +382,10 @@ export const DEFAULT_AUTH_CAPABILITIES: AuthCapabilities = {
 
 export function parseAuthCapabilities(value: string | null): AuthCapabilities {
   const enabled = new Set(
-    value?.split(",").map((c) => c.trim()).filter(Boolean) ?? [],
+    value
+      ?.split(",")
+      .map((c) => c.trim())
+      .filter(Boolean) ?? [],
   );
   return {
     google: enabled.has("google"),

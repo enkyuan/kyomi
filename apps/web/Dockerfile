@@ -40,15 +40,17 @@ COPY packages/ingest packages/ingest
 RUN bun run --cwd apps/web build
 
 FROM oven/bun:${BUN_VERSION}-alpine AS runtime
-WORKDIR /app
+WORKDIR /app/apps/web
 
 ENV NODE_ENV=production
 ENV PORT=3000
 ENV HOST=0.0.0.0
 
-COPY --from=build /app /app
+# The Nitro output is self-contained, so the image carries it alone: no source, workspace packages,
+# or dev dependencies. It stays root-owned and read-only to the `bun` user the server runs as.
+COPY --from=build /app/apps/web/.output .output
 
-WORKDIR /app/apps/web
+USER bun
 EXPOSE 3000
 
 CMD ["bun", ".output/server/index.mjs"]

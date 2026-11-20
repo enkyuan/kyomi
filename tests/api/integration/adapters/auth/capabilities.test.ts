@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import {
+  getAuthCapabilities,
   resolveAuthCapabilities,
   resolveGoogleSocialProvider,
   serializeAuthCapabilities,
@@ -77,5 +78,16 @@ describe("Google provider configuration", () => {
     expect(() => resolveGoogleSocialProvider({ enabled: true })).toThrow(
       "Google OAuth credentials are required",
     );
+  });
+
+  test("reads the capabilities from the app config instead of the process environment", () => {
+    expect(
+      getAuthCapabilities({
+        FEATURE_GOOGLE_OAUTH: true,
+        NODE_ENV: "development",
+        RESEND_API_KEY: undefined,
+        AUTH_EMAIL_FROM: undefined,
+      }),
+    ).toEqual({ google: true, emailOtp: true, emailOtpUsesDevelopmentLog: true });
   });
 });

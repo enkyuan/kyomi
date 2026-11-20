@@ -18,10 +18,17 @@ const inboxDefaultViewSchema = z
 const inboxDensitySchema = z.enum(["comfortable", "compact"]);
 const articleOpenBehaviorSchema = z.enum(["split", "reader"]);
 const inboxMarkReadBehaviorSchema = z.enum(["on-open", "after-delay", "manual"]);
-const inboxTimestampDisplaySchema = z.enum(["absolute", "relative"]);
+const inboxTimestampDisplaySchema = z.enum([
+  "absolute",
+  "relative",
+  "relative-long",
+  "date",
+  "iso",
+]);
 const inboxTimestampHourCycleSchema = z.enum(["12h", "24h"]);
 
 export const readerPreferencesSchema = z.object({
+  language: z.string().optional(),
   defaultMode: readerDefaultModeSchema,
   fontSizePx: z.number(),
   contentWidth: readerContentWidthSchema,

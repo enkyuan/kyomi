@@ -15,11 +15,12 @@ describe("recap summary layout", () => {
 
     expect(layout?.className).toBe(RECAP_SUMMARY_LAYOUT_CLASS);
     expect(RECAP_SUMMARY_LAYOUT_CLASS).toContain("w-full");
-    expect(RECAP_SUMMARY_LAYOUT_CLASS).toContain("grid-rows-3");
+    // Sections take their natural height and the rail scrolls, instead of three clipped equal rows.
+    expect(RECAP_SUMMARY_LAYOUT_CLASS).not.toContain("grid-rows");
     expect(RECAP_SUMMARY_LAYOUT_CLASS).not.toContain("max-content");
     expect(RECAP_SUMMARY_SECTION_CLASS).toContain("w-full");
-    expect(RECAP_SUMMARY_SECTION_CLASS).toContain("h-full");
-    expect(RECAP_SUMMARY_SECTION_CLASS).toContain("overflow-hidden");
+    expect(RECAP_SUMMARY_SECTION_CLASS).not.toContain("h-full");
+    expect(RECAP_SUMMARY_SECTION_CLASS).not.toContain("overflow-hidden");
 
     const sections = Array.from(layout?.children ?? []);
     expect(sections).toHaveLength(3);

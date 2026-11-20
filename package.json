@@ -34,12 +34,12 @@
     "test:web:e2e": "bun run --cwd tests test:web:e2e",
     "check:boundaries": "bun scripts/check-boundaries.ts",
     "eval:translation": "bun scripts/evals/translation/run-eval.mjs",
-    "check:env": "bunx --no-install dotenvx ext precommit",
+    "check:env": "bun scripts/ci/check-env.ts",
     "env:encrypt": "bunx --no-install dotenvx encrypt -f docker/.env apps/api/.env apps/web/.env --no-create",
     "ci:static": "bun run check:env && bun scripts/ci/prepare-env.ts && SKIP_ENV_VALIDATION=true bun run fmt:check && SKIP_ENV_VALIDATION=true bun run lint && SKIP_ENV_VALIDATION=true bun run check:boundaries && SKIP_ENV_VALIDATION=true bun run typecheck:app && bun scripts/ci/drizzle-drift.ts",
     "ci:test:web": "bun scripts/ci/prepare-env.ts && SKIP_ENV_VALIDATION=true bun run test:web:integration",
     "ci:test:api": "bun scripts/ci/prepare-env.ts && SKIP_ENV_VALIDATION=true bun run test:api:integration",
-    "ci:build": "bun scripts/ci/prepare-env.ts && SKIP_ENV_VALIDATION=true bun run build && bun scripts/ci/check-breakpoint-css.ts",
+    "ci:build": "bun scripts/ci/prepare-env.ts && EXPO_PUBLIC_AUTH_ORIGIN=https://ci.kyomi.invalid SKIP_ENV_VALIDATION=true bun run build && bun scripts/ci/check-breakpoint-css.ts && bun scripts/ci/check-bundle-budget.ts",
     "ci:docker:build": "docker build --build-arg BUN_VERSION=1.3.14 -f apps/api/Dockerfile -t kyomi-api:ci . && docker build --build-arg BUN_VERSION=1.3.14 -f apps/web/Dockerfile -t kyomi-web:ci .",
     "clean": "turbo run clean --force && rm -rf node_modules",
     "prepare": "husky || true",
@@ -68,14 +68,17 @@
     "categories:report": "bun run --cwd apps/api category:report",
     "categories:audit": "bun run --cwd apps/api category:audit",
     "content:document-backfill": "bun run --cwd apps/api content:document",
-    "content:sanitizer-backfill": "bun run --cwd apps/api content:sanitizer"
+    "content:sanitizer-backfill": "bun run --cwd apps/api content:sanitizer",
+    "content:urls-repair": "bun run --cwd apps/api content:urls"
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.66.0",
     "drizzle-orm": "^0.45.2",
+    "effect": "4.1.4",
     "nitro": "npm:nitro-nightly@3.0.1-20260410-164248-8ab58a4b"
   },
   "devDependencies": {
+    "@dotenvx/primitives": "^0.8.0",
     "@types/bun": "^1.3.14",
     "@typescript/native-preview": "^7.0.0-dev.20260418.1",
     "drizzle-kit": "^0.31.10",
@@ -84,6 +87,15 @@
     "oxfmt": "^0.57.0",
     "oxlint": "^1.72.0",
     "turbo": "^2.9.14"
+  },
+  "overrides": {
+    "dompurify": "^3.4.17",
+    "fast-uri": "^3.1.7",
+    "node-forge": "^1.4.1",
+    "seroval": "^1.6.8",
+    "seroval-plugins": "^1.6.8",
+    "shell-quote": "^1.11.0",
+    "undici": "^7.30.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,mjs,cjs}": [
@@ -96,6 +108,9 @@
   "packageManager": "bun@1.3.14",
   "reactDoctor": {
     "ignore": {
+      "files": [
+        "**/src/icons/blode-native.ts"
+      ],
       "overrides": [
         {
           "files": [

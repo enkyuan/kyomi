@@ -55,6 +55,30 @@ describe("planDocument", () => {
     expect(total).toBe(400);
   });
 
+  test("an anchor or footnote id that names an Object member is not found unless the document has it", () => {
+    const doc = readerDocumentSchema.parse(
+      makeDocument([p("a"), blocksByType.divider, p("b")], footnoteFixture),
+    );
+    const plan = planDocument(doc);
+    for (const id of ["constructor", "toString", "hasOwnProperty", "__proto__"]) {
+      expect(plan.anchorIndex[id]).toBeUndefined();
+      expect(plan.footnotes[id]).toBeUndefined();
+    }
+  });
+
+  test("an anchor and footnote that really are named constructor still resolve", () => {
+    const doc = readerDocumentSchema.parse(
+      makeDocument(
+        [{ ...blocksByType.heading, anchor: "constructor" }],
+        [{ ...footnoteFixture[0]!, id: "constructor" }],
+      ),
+    );
+    const plan = planDocument(doc);
+    const id: string = "constructor";
+    expect(plan.anchorIndex[id]).toBe(0);
+    expect(plan.footnotes[id]?.label).toBe("1");
+  });
+
   test("indexes anchors of nested blocks and keys footnotes by id", () => {
     const nested: ReaderBlock = {
       type: "quote",

@@ -6,6 +6,12 @@ type NormalizedSearchSyncConfig = {
   headers: Record<string, string>;
 };
 
+/**
+ * Search is best-effort: a failed or slow sync is logged and the feed is indexed the next time it
+ * changes, so a Meilisearch that stops answering must not hold a refresh job open.
+ */
+const SEARCH_REQUEST_TIMEOUT_MS = 5_000;
+
 const ensuredIndexTasks = new Map<string, Promise<void>>();
 
 function normalizeSearchSyncConfig(
@@ -32,6 +38,7 @@ async function createFeedSearchIndex(config: NormalizedSearchSyncConfig): Promis
     method: "POST",
     headers: config.headers,
     body: JSON.stringify({ uid: config.indexUid, primaryKey: "id" }),
+    signal: AbortSignal.timeout(SEARCH_REQUEST_TIMEOUT_MS),
   }).catch((error: unknown) => {
     console.warn("[syncFeedToSearch] index creation request failed:", error);
     return null;
@@ -82,6 +89,7 @@ export async function syncFeedToSearch(
     {
       method: "POST",
       headers: normalizedConfig.headers,
+      signal: AbortSignal.timeout(SEARCH_REQUEST_TIMEOUT_MS),
       body: JSON.stringify([
         {
           id: document.id,

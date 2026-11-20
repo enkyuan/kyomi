@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 import { Linking, Share } from "react-native";
+import { normalizeSafeHttpUrl } from "@kyomi/reader/core";
 import { fetchMobileApiJson } from "@/lib/api";
 import { toast } from "@ui/toast";
 import { triggerSavedToggleHaptic } from "../lib/haptics";
@@ -12,7 +13,7 @@ function showActionError(message: string) {
 
 type ArticleStateMutation = ReturnType<typeof useArticleStateMutation>;
 
-function createArticleActions(item: ArticleListItemDto, updateItem: ArticleStateMutation) {
+export function createArticleActions(item: ArticleListItemDto, updateItem: ArticleStateMutation) {
   const toggleSaved = () => {
     const nextIsSaved = !item.isSaved;
     void triggerSavedToggleHaptic(nextIsSaved);
@@ -24,18 +25,25 @@ function createArticleActions(item: ArticleListItemDto, updateItem: ArticleState
       );
   };
 
+  // A publisher controls `link`, so only a web page is ever shared or launched; any other scheme
+  // (tel:, itms-services:, another app's deep link) would run an app or a prompt the user did not
+  // expect from "Open source".
   const shareArticle = () => {
+    const link = normalizeSafeHttpUrl(item.link);
+    if (!link) return;
+
     void Share.share({
-      message: item.summary
-        ? `${item.title}\n${item.summary}\n${item.link}`
-        : `${item.title}\n${item.link}`,
+      message: item.summary ? `${item.title}\n${item.summary}\n${link}` : `${item.title}\n${link}`,
       title: item.title,
-      url: item.link,
+      url: link,
     }).catch(() => undefined);
   };
 
   const openSource = () => {
-    void Linking.openURL(item.link).catch(() => showActionError("Couldn't open the source"));
+    const link = normalizeSafeHttpUrl(item.link);
+    if (!link) return;
+
+    void Linking.openURL(link).catch(() => showActionError("Couldn't open the source"));
   };
 
   const hideArticle = () => {

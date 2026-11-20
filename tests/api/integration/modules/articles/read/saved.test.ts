@@ -1,27 +1,22 @@
-import { describe, expect, mock, test } from "bun:test";
-import { AppError } from "@shared/errors/app";
-import { checkSavedArticleForUser } from "@modules/articles/read/saved";
+import { describe, expect, test } from "bun:test";
+import { Effect } from "effect";
+import { checkSavedArticle } from "@modules/articles/read/saved";
+import { fakeDb } from "@api-tests/support/layers";
+import { renderWhere, selectResults } from "./fakes";
 
-describe("checkSavedArticleForUser", () => {
+const run = <A, E>(effect: Effect.Effect<A, E, never>) => Effect.runPromise(effect);
+
+describe("checkSavedArticle", () => {
   test("returns the matching saved clip before checking feed items", async () => {
-    const limit = mock(() =>
-      Promise.resolve([
-        {
-          id: "clip_1",
-          title: "Saved clip",
-          url: "https://example.com/article",
-        },
-      ]),
+    const db = selectResults([
+      { id: "clip_1", title: "Saved clip", url: "https://example.com/article" },
+    ]);
+
+    const result = await run(
+      checkSavedArticle("user_1", "https://example.com/article").pipe(Effect.provide(db.layer)),
     );
-    const orderBy = mock(() => ({ limit }));
-    const where = mock(() => ({ orderBy }));
-    const from = mock(() => ({ where }));
-    const select = mock(() => ({ from }));
-    const fakeDb = { select } as unknown as Parameters<typeof checkSavedArticleForUser>[0];
 
-    const result = await checkSavedArticleForUser(fakeDb, "user_1", "https://example.com/article");
-
-    expect(select).toHaveBeenCalledTimes(1);
+    expect(db.calls).toHaveLength(1);
     expect(result).toEqual({
       is_saved: true,
       article: {
@@ -34,46 +29,24 @@ describe("checkSavedArticleForUser", () => {
   });
 
   test("falls back to saved feed items when no clip exists", async () => {
-    let selectCall = 0;
-    const select = mock(() => {
-      selectCall += 1;
-      if (selectCall === 1) {
-        return {
-          from: () => ({
-            where: () => ({
-              orderBy: () => ({
-                limit: () => Promise.resolve([]),
-              }),
-            }),
-          }),
-        };
-      }
-      return {
-        from: () => ({
-          innerJoin: () => ({
-            innerJoin: () => ({
-              where: () => ({
-                orderBy: () => ({
-                  limit: () =>
-                    Promise.resolve([
-                      {
-                        id: "feed_item_1",
-                        title: "Feed hit",
-                        url: "https://example.com/article",
-                      },
-                    ]),
-                }),
-              }),
-            }),
-          }),
-        }),
-      };
-    });
-    const fakeDb = { select } as unknown as Parameters<typeof checkSavedArticleForUser>[0];
+    const db = selectResults(
+      [],
+      [{ id: "feed_item_1", title: "Feed hit", url: "https://example.com/article" }],
+    );
 
-    const result = await checkSavedArticleForUser(fakeDb, "user_1", "https://example.com/article");
+    const result = await run(
+      checkSavedArticle("user_1", "https://example.com/article").pipe(Effect.provide(db.layer)),
+    );
 
-    expect(selectCall).toBe(2);
+    expect(db.calls).toHaveLength(2);
+    expect(db.calls[1]?.chain).toEqual([
+      "from",
+      "innerJoin",
+      "innerJoin",
+      "where",
+      "orderBy",
+      "limit",
+    ]);
     expect(result).toEqual({
       is_saved: true,
       article: {
@@ -86,50 +59,55 @@ describe("checkSavedArticleForUser", () => {
   });
 
   test("returns false when the url is not saved anywhere", async () => {
-    let selectCall = 0;
-    const select = mock(() => {
-      selectCall += 1;
-      if (selectCall === 1) {
-        return {
-          from: () => ({
-            where: () => ({
-              orderBy: () => ({
-                limit: () => Promise.resolve([]),
-              }),
-            }),
-          }),
-        };
-      }
-      return {
-        from: () => ({
-          innerJoin: () => ({
-            innerJoin: () => ({
-              where: () => ({
-                orderBy: () => ({
-                  limit: () => Promise.resolve([]),
-                }),
-              }),
-            }),
-          }),
-        }),
-      };
-    });
-    const fakeDb = { select } as unknown as Parameters<typeof checkSavedArticleForUser>[0];
+    const db = selectResults([], []);
 
-    const result = await checkSavedArticleForUser(fakeDb, "user_1", "https://example.com/article");
+    const result = await run(
+      checkSavedArticle("user_1", "https://example.com/article").pipe(Effect.provide(db.layer)),
+    );
 
-    expect(selectCall).toBe(2);
-    expect(result).toEqual({
-      is_saved: false,
-      article: null,
+    expect(db.calls).toHaveLength(2);
+    expect(result).toEqual({ is_saved: false, article: null });
+  });
+
+  test("trims the url before matching", async () => {
+    const db = selectResults([]);
+
+    await run(
+      checkSavedArticle("user_1", "  https://example.com/a  ").pipe(
+        Effect.provide(db.layer),
+        Effect.ignore,
+      ),
+    );
+
+    expect(renderWhere(db.calls[0]).params).toContain("https://example.com/a");
+  });
+
+  test("fails a blank url with BadRequest ARTICLE_URL_REQUIRED before reading", async () => {
+    const failure = await run(
+      checkSavedArticle("user_1", "   ").pipe(Effect.flip, Effect.provide(fakeDb({}))),
+    );
+
+    expect(failure).toMatchObject({
+      _tag: "BadRequest",
+      message: "url is required",
+      code: "ARTICLE_URL_REQUIRED",
     });
   });
 
-  test("rejects a blank url", async () => {
-    const fakeDb = {} as Parameters<typeof checkSavedArticleForUser>[0];
-
-    await expect(checkSavedArticleForUser(fakeDb, "user_1", "   ")).rejects.toBeInstanceOf(
-      AppError,
+  test("a database failure is a typed DatabaseError", async () => {
+    const failure = await run(
+      checkSavedArticle("user_1", "https://example.com/a").pipe(
+        Effect.flip,
+        Effect.provide(
+          fakeDb({
+            select: () => {
+              throw new Error("down");
+            },
+          }),
+        ),
+      ),
     );
+
+    expect(failure).toMatchObject({ _tag: "DatabaseError", operation: "articles.checkSaved.clip" });
   });
 });

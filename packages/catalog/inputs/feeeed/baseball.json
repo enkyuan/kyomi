@@ -10,21 +10,11 @@
       "kind": "feed",
       "feed_url": "https://www.mlb.com/feeds/news/rss.xml",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Baseball"
-      ],
+      "tags": ["News", "Local", "Baseball"],
       "language": "en",
-      "keywords": [
-        "MLB news",
-        "baseball stats",
-        "scores"
-      ],
+      "keywords": ["MLB news", "baseball stats", "scores"],
       "top_level_category": "Sports"
     },
     {
@@ -35,23 +25,11 @@
       "kind": "feed",
       "feed_url": "https://theathletic.com/feeds/rss/news/",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Football",
-        "Basketball",
-        "Baseball"
-      ],
+      "tags": ["News", "Local", "Football", "Basketball", "Baseball"],
       "language": "en",
-      "keywords": [
-        "The Athletic",
-        "sports coverage",
-        "breaking news"
-      ],
+      "keywords": ["The Athletic", "sports coverage", "breaking news"],
       "top_level_category": "Sports"
     },
     {
@@ -62,15 +40,9 @@
       "kind": "feed",
       "feed_url": "http://www.fangraphs.com/blogs/?feed=rss2",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Sports",
-        "Baseball"
-      ],
+      "tags": ["Money", "Sports", "Baseball"],
       "language": "en",
       "keywords": [
         "baseball analysis",
@@ -90,15 +62,9 @@
       "channel_id": "UCoLrcjPV5PbUrUyXq5mjc_A",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqPyvPmL2bD-z5AiFPy8XoOkyXtO0HmiMLGZcD1dhQc=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Sports",
-        "Baseball"
-      ],
+      "tags": ["Living", "Sports", "Baseball"],
       "language": "en",
       "keywords": [
         "MLB",
@@ -117,23 +83,11 @@
       "kind": "reddit",
       "subreddit": "baseball",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Sports",
-        "Baseball"
-      ],
+      "tags": ["Local", "Sports", "Baseball"],
       "language": "en",
-      "keywords": [
-        "baseball",
-        "MLB",
-        "discussions",
-        "fan community",
-        "game threads"
-      ],
+      "keywords": ["baseball", "MLB", "discussions", "fan community", "game threads"],
       "top_level_category": "Sports"
     },
     {
@@ -145,23 +99,11 @@
       "channel_id": "UCl9E4Zxa8CVr2LBLD0_TaNg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMOVf4_HnLEqzm_hBGhs_tEEzopLNHBKl743W6p1Q=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Baseball",
-        "Sports",
-        "NYC"
-      ],
+      "tags": ["Living", "Baseball", "Sports", "NYC"],
       "language": "en",
-      "keywords": [
-        "baseball",
-        "analysis",
-        "umpire",
-        "player mic'd up"
-      ],
+      "keywords": ["baseball", "analysis", "umpire", "player mic'd up"],
       "top_level_category": "Sports"
     },
     {
@@ -172,21 +114,11 @@
       "kind": "feed",
       "feed_url": "https://www.baseballprospectus.com/feed/",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Baseball",
-        "Sports"
-      ],
+      "tags": ["Money", "Baseball", "Sports"],
       "language": "en",
-      "keywords": [
-        "analysis",
-        "statistics",
-        "player projections"
-      ],
+      "keywords": ["analysis", "statistics", "player projections"],
       "top_level_category": "Sports"
     },
     {
@@ -198,21 +130,11 @@
       "channel_id": "UCAgLUO68gPXGgg5cpqfV-tA",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqOaqGGieVpj-Jj1ZhuZHsVpUel2OfHDF7tO07Rb=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Baseball",
-        "Sports"
-      ],
+      "tags": ["Living", "Baseball", "Sports"],
       "language": "en",
-      "keywords": [
-        "pitching",
-        "analysis",
-        "mechanics"
-      ],
+      "keywords": ["pitching", "analysis", "mechanics"],
       "top_level_category": "Sports"
     },
     {
@@ -223,21 +145,11 @@
       "kind": "reddit",
       "subreddit": "Homeplate",
       "details": "Sports > Baseball",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Baseball",
-        "Sports"
-      ],
+      "tags": ["Local", "Baseball", "Sports"],
       "language": "en",
-      "keywords": [
-        "pitching mechanics",
-        "community",
-        "discussions"
-      ],
+      "keywords": ["pitching mechanics", "community", "discussions"],
       "top_level_category": "Sports"
     }
   ],

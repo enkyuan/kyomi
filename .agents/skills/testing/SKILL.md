@@ -82,6 +82,29 @@ tests/
 - Use accessible roles, labels, and user-visible state for UI behavior.
 - Never place real secrets, decrypted environment values, or mutable production data in fixtures.
 
+## Swap Layers in API tests
+
+`apps/api` code is Effect. Inject dependencies as Layers; do not use `mock.module` and do not patch
+`globalThis.fetch` for Effect code. Helpers live in `tests/api/integration/support/layers.ts`
+(`elysia.ts` and `http.ts` beside it):
+
+- `testConfig(overrides)` is `AppConfig` from fixed values, never `process.env`.
+- `recordingLogger()` records `{ level, event, context }`; `silentLogger` discards.
+- `fakeDb({ execute })`, `fakeRedis({ xlen })`, `fakeQueue({ xadd })` fake only the methods a test
+  lists; unlisted methods throw. `realDb()` runs the production `Db.layer` against `DATABASE_URL`.
+- `fakeHttpClient(respond)` and `scriptedHttpClient(respond)` answer `HttpClient` calls without the
+  network. Provide `HostResolver` with `Effect.provideService` for SSRF-policy tests.
+- Time is `TestClock.layer()` from `effect/testing` (`TestClock.adjust`, `TestClock.setTime`), never
+  real sleeps.
+
+Run an operation with `Effect.runPromise(op.pipe(Effect.provide(Layer.mergeAll(...))))`. For routes,
+build `ManagedRuntime.make(...)`, call the plugin factory, call `registerTestErrorHandlers(plugin)`,
+use `plugin.handle(new Request(...))`, and dispose the runtime in `afterEach`. Assert typed failures
+with `Effect.exit`/`Effect.flip` and the error `_tag`, not message text.
+
+Fetch patching remains only for tests of Promise packages that call the global `fetch` directly
+(`@kyomi/ingest` feed refresh, the embeddings client, Better Auth OAuth); restore it in `afterEach`.
+
 ## Use the owning runner
 
 | Owner                 | Location                    | Runner                                           |
@@ -104,6 +127,14 @@ appended. For a truly focused API test, run from the API environment:
 cd apps/api
 bun run dotenvx run -f ../../docker/.env -f .env -- \
   bun test ../../tests/api/integration/<path>.test.ts
+```
+
+Tests that need no services (typed errors, Layer fakes, outbound policy) run without Docker:
+
+```sh
+cd apps/api
+SKIP_ENV_VALIDATION=true bunx --no-install dotenvx run -f ../../docker/.env.example -f .env.example -- \
+  bun test ../../tests/api/integration/modules/health
 ```
 
 Then run the declared broad command with `bun run test:web`, `bun run test:api`, or

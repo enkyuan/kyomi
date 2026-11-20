@@ -1,5 +1,9 @@
 import { describe, expect, test } from "bun:test";
+import { Layer, ManagedRuntime } from "effect";
 import { registerArticleRoutes } from "@modules/articles/routes";
+
+/** Recording the routes builds no handler context, so no service is ever used. */
+const runtime = ManagedRuntime.make(Layer.empty) as never;
 
 type RecordedRoute = {
   method: "get" | "post" | "put";
@@ -30,7 +34,7 @@ function createRouteRecorder() {
 describe("articles.routes", () => {
   test("registers all route paths with expected methods", () => {
     const { app, routes } = createRouteRecorder();
-    const returned = registerArticleRoutes(app as never);
+    const returned = registerArticleRoutes(app as never, runtime);
 
     expect(returned as unknown).toBe(app);
     expect(routes.map((route) => `${route.method} ${route.path}`)).toEqual([
@@ -49,6 +53,7 @@ describe("articles.routes", () => {
       "post /articles/:articleId/extract-full-text",
       "post /articles/:articleId/summarize",
       "post /articles/:articleId/translate",
+      "get /articles/:articleId/translations/:translationId",
       "post /articles",
       "post /articles/:articleId/view",
       "post /articles/:articleId/reports/broken",
@@ -65,7 +70,7 @@ describe("articles.routes", () => {
 
   test("exposes validation/response schemas for read routes", () => {
     const { app, routes } = createRouteRecorder();
-    registerArticleRoutes(app as never);
+    registerArticleRoutes(app as never, runtime);
 
     const unreadCounts = routes.find((r) => r.path === "/articles/unread-counts");
     const checkSaved = routes.find((r) => r.path === "/articles/check-saved");
@@ -85,7 +90,7 @@ describe("articles.routes", () => {
 
   test("exposes validation/response schemas for enrichment routes", () => {
     const { app, routes } = createRouteRecorder();
-    registerArticleRoutes(app as never);
+    registerArticleRoutes(app as never, runtime);
 
     const extract = routes.find((r) => r.path.endsWith("/extract-full-text"));
     const summarize = routes.find((r) => r.path.endsWith("/summarize"));
@@ -107,7 +112,7 @@ describe("articles.routes", () => {
 
   test("exposes request/response schemas for write routes", () => {
     const { app, routes } = createRouteRecorder();
-    registerArticleRoutes(app as never);
+    registerArticleRoutes(app as never, runtime);
 
     const create = routes.find((r) => r.method === "post" && r.path === "/articles");
     const view = routes.find((r) => r.method === "post" && r.path === "/articles/:articleId/view");

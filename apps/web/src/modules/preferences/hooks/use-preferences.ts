@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toastManager } from "@kyomi/ui/components/toast";
-import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
+import { logClientError } from "@kyomi/reader/lib/errors";
 import { useAuth } from "@integrations/better-auth/provider";
 
 type PreferenceUpdate<TPreferences extends object> = {
@@ -49,6 +49,7 @@ export function usePreferences<TPreferences extends object>({
     enabled: Boolean(user?.id),
     staleTime: 5 * 60 * 1000,
     initialData,
+    initialDataUpdatedAt: 0,
     refetchOnWindowFocus: false,
   });
 
@@ -79,7 +80,6 @@ export function usePreferences<TPreferences extends object>({
         // One id so rapid failures (a slider drag) update a single toast instead of stacking.
         id: "preferences-update-failed",
         title: "Couldn't save your settings",
-        description: getUserSafeErrorMessage(error, "Your previous settings were restored."),
         type: "error",
       });
     },

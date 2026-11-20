@@ -1,20 +1,7 @@
-import { logger } from "@adapters/logger";
-import { runWorkerLoop } from "../jobs/consumer";
+import { Layer } from "effect";
+import { WorkerLive } from "../jobs/consumer";
+import { AppLive } from "../runtime";
+import { runMain } from "../setup/main";
 
-const controller = new AbortController();
-
-for (const signalName of ["SIGINT", "SIGTERM"] as const) {
-  process.on(signalName, () => {
-    logger.info("worker.shutdown.requested", { signal: signalName });
-    controller.abort();
-  });
-}
-
-try {
-  await runWorkerLoop(controller.signal);
-} catch (error) {
-  logger.error("worker.crashed", {
-    error: error instanceof Error ? error.message : String(error),
-  });
-  throw error;
-}
+// Stops on SIGINT/SIGTERM: consumers drain, then Redis and Postgres close, then the process exits.
+runMain(Layer.launch(WorkerLive.pipe(Layer.provide(AppLive))));

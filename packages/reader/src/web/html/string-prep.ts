@@ -1,5 +1,7 @@
 import { sanitizeReaderArticleHtml } from "./purify";
 import type { ReaderImageLoading } from "../../core/types";
+import { hasLikelyDelimitedTex } from "../../shared/math";
+import { replaceSpans } from "../../shared/scan";
 import { resolveRelativeAssetUrls, type ReaderImageUrlTransformer } from "./url-resolve";
 
 const MEDIUM_IMAGE_PLACEHOLDER_TEXT = "Press enter or click to view image in full size";
@@ -11,8 +13,6 @@ const IMPLICIT_TEX_TOKEN_RE = new RegExp(
   String.raw`(^|[^\p{L}\p{N}_\\])(${GREEK_IMPLICIT_TEX}|${LATIN_BRACED_TEX}|${TEX_COMMAND})(?=$|[^\p{L}\p{N}_])`,
   "gu",
 );
-const EXPLICIT_TEX_DELIMITER_RE =
-  /(^|[^\\])\$\$[\s\S]+?(^|[^\\])\$\$|\\\([\s\S]+?\\\)|\\\[[\s\S]+?\\\]|\\begin\{[a-zA-Z*]+\}/;
 const MATH_TEXT_IGNORED_ANCESTOR_SELECTOR =
   "a, code, pre, kbd, samp, script, style, textarea, math, .katex";
 
@@ -20,12 +20,12 @@ export function normalizeCaptionText(value: string): string {
   return value.replace(/\s+/g, " ").trim();
 }
 
+/**
+ * Whitespace is collapsed first so `;` and `:` only ever have a single space to absorb. Matching
+ * `\s*;\s*` on the raw text rescans a long whitespace run from every position in it.
+ */
 function normalizeFigureCaptionSpacing(value: string): string {
-  return value
-    .replace(/\s*;\s*/g, "; ")
-    .replace(/\s*:\s*/g, ": ")
-    .replace(/\s+/g, " ")
-    .trim();
+  return value.replace(/\s+/g, " ").replace(/ ?; ?/g, "; ").replace(/ ?: ?/g, ": ").trim();
 }
 
 function isMediumImagePlaceholderText(value: string): boolean {
@@ -46,7 +46,7 @@ function replaceTextNodeWithImplicitMath(node: Text): boolean {
   ) {
     return false;
   }
-  if (EXPLICIT_TEX_DELIMITER_RE.test(value)) {
+  if (hasLikelyDelimitedTex(value)) {
     return false;
   }
 
@@ -174,9 +174,16 @@ function normalizeFigureContent(html: string): string {
  * text is the entity-encoded tags. Collapse that to a single inline code with the inner text only.
  */
 function unwrapRedundantInlineCodeMarkup(html: string): string {
-  return html
-    .replace(/<code>&lt;code&gt;([\s\S]*?)&lt;\/code&gt;<\/code>/gi, "<code>$1</code>")
-    .replace(/<code><code>([\s\S]*?)<\/code><\/code>/gi, "<code>$1</code>");
+  const inlineCode = (inner: string) => `<code>${inner}</code>`;
+  return replaceSpans(
+    replaceSpans(
+      html,
+      { open: /<code>&lt;code&gt;/gi, close: /&lt;\/code&gt;<\/code>/gi },
+      inlineCode,
+    ),
+    { open: /<code><code>/gi, close: /<\/code><\/code>/gi },
+    inlineCode,
+  );
 }
 
 export function prepareArticleHtml(

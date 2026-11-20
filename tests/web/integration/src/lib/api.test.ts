@@ -1,16 +1,25 @@
 // @vitest-environment node
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import { apiJson } from "@lib/api";
+import { apiJson, forwardRequestToApi } from "@lib/api";
 import { HttpStatusError, getErrorStatus } from "@lib/status";
 
 beforeEach(() => {
+  vi.stubEnv("API_ORIGIN", "http://api.internal:8000");
   vi.spyOn(console, "error").mockImplementation(() => undefined);
 });
 
 afterEach(() => {
   vi.restoreAllMocks();
   vi.unstubAllGlobals();
+  vi.unstubAllEnvs();
 });
+
+function loggedText() {
+  return vi
+    .mocked(console.error)
+    .mock.calls.map((call) => call.map(String).join(" "))
+    .join("\n");
+}
 
 describe("apiJson", () => {
   test("returns the parsed body of a successful response", async () => {
@@ -49,5 +58,45 @@ describe("apiJson", () => {
 
     expect(error).not.toBeInstanceOf(HttpStatusError);
     expect((error as Error).message).toBe("Unable to reach the server. Try again.");
+  });
+});
+
+describe("API request logging", () => {
+  test("a failed auth proxy request logs its path but not the OAuth code in its query", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockRejectedValue(new TypeError("fetch failed")));
+
+    await expect(
+      forwardRequestToApi(
+        new Request(
+          "https://kyomi.test/api/auth/callback/google?code=SECRET-CODE&state=SECRET-STATE",
+        ),
+      ),
+    ).rejects.toThrow("Unable to reach the server.");
+
+    expect(loggedText()).toContain("GET /api/auth/callback/google -> network error");
+    expect(loggedText()).not.toContain("SECRET");
+  });
+
+  test("a failed server function request logs its path but not its query", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockRejectedValue(new TypeError("fetch failed")));
+
+    await expect(
+      apiJson("/api/v1/articles?search=private+topic&cursor=SECRET-CURSOR"),
+    ).rejects.toThrow("Unable to reach the server. Try again.");
+
+    expect(loggedText()).toContain("GET /api/v1/articles -> network error");
+    expect(loggedText()).not.toContain("SECRET");
+    expect(loggedText()).not.toContain("private");
+  });
+
+  test("an API error response logs its path but not its query", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue(new Response("", { status: 500 })));
+
+    await apiJson("/api/v1/discover/preview?url=https%3A%2F%2Fprivate.example").catch(
+      () => undefined,
+    );
+
+    expect(loggedText()).toContain("GET /api/v1/discover/preview -> 500");
+    expect(loggedText()).not.toContain("private");
   });
 });

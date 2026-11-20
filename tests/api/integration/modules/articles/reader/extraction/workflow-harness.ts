@@ -1,4 +1,12 @@
+import { Effect, Layer } from "effect";
 import { getTableName } from "drizzle-orm";
+import {
+  fakeDb,
+  fakeHttpClient,
+  fakeQueue,
+  recordingLogger,
+  testConfig,
+} from "@api-tests/support/layers";
 
 /** Fake database and row builders shared by the extraction workflow tests. */
 
@@ -122,10 +130,17 @@ export function clipRow(overrides: CapturedRow = {}) {
 }
 
 export function createExtractionDb(
-  options: { item?: CapturedRow; clip?: CapturedRow | null; cache?: FakeCacheRow | null } = {},
+  options: {
+    item?: CapturedRow;
+    clip?: CapturedRow | null;
+    cache?: FakeCacheRow | null;
+    /** Another request already claimed the article: the conditional pending UPDATE matches no row. */
+    claimLost?: boolean;
+  } = {},
 ) {
   const usesClip = Object.hasOwn(options, "clip");
-  const item = options.item ?? (usesClip ? null : feedRow());
+  // Clip-only databases have no feed row; tests that read `db.item` always build a feed one.
+  const item = (options.item ?? (usesClip ? null : feedRow())) as CapturedRow;
   const clip = options.clip ?? null;
   let cache = options.cache ?? null;
   const updates: Array<{ table: string; patch: CapturedRow }> = [];
@@ -192,17 +207,19 @@ export function createExtractionDb(
     update: (table: unknown) => ({
       set: (patch: CapturedRow) => {
         const name = tableName(table);
+        const claimsPending = patch.extractedContentStatus === "pending";
+        const matched = !(options.claimLost && claimsPending);
         updates.push({ table: name, patch });
-        if (name === "feed_items") {
+        if (matched && name === "feed_items") {
           Object.assign(item, patch);
         }
-        if (name === "article_clips" && clip && !("extractedContentHtml" in patch)) {
+        if (matched && name === "article_clips" && clip && !("extractedContentHtml" in patch)) {
           // The only guarded, title-only update path is the conditional title replacement;
           // the content update always applies unconditionally (asserted separately via `updates`).
           Object.assign(clip, patch);
         }
         return {
-          where: () => Promise.resolve(),
+          where: () => promiseQuery(matched ? [{ id: (item ?? clip)?.id }] : []),
         };
       },
     }),
@@ -228,4 +245,55 @@ export function createExtractionDb(
   };
 
   return db;
+}
+
+type ExtractionTestOptions = {
+  /** Answers every outbound request; any request without one fails the test. */
+  respond?: (request: { method: string; url: string }) => Response | Promise<Response>;
+  /** Called with each XADD the job queue issues. */
+  xadd?: (...args: unknown[]) => Promise<string>;
+};
+
+/**
+ * The services the extraction workflow runs on: the fake database, a fake HTTP client, a fake
+ * job-queue Redis and a recording logger. `requests` lists every outbound request.
+ */
+export function extractionServices(
+  db: ReturnType<typeof createExtractionDb>,
+  options: ExtractionTestOptions = {},
+) {
+  const requests: Array<{ method: string; url: string }> = [];
+  const logs = recordingLogger();
+  const layer = Layer.mergeAll(
+    fakeDb(db as never),
+    fakeQueue({ xadd: options.xadd ?? (async () => "1-0") }),
+    fakeHttpClient((request) => {
+      requests.push(request);
+      if (!options.respond) {
+        throw new Error(`unexpected outbound request: ${request.url}`);
+      }
+      return options.respond(request);
+    }),
+    testConfig(),
+    logs.layer,
+  );
+  return { layer, requests, logs };
+}
+
+/** Run an extraction Effect against `extractionServices`. */
+export function runExtraction<A, E, R>(
+  effect: Effect.Effect<A, E, R>,
+  services: ReturnType<typeof extractionServices>,
+) {
+  return Effect.runPromise(Effect.provide(effect, services.layer) as Effect.Effect<A, E>);
+}
+
+/** The job a recorded XADD published: fields follow the `MAXLEN ~ n *` arguments. */
+export function publishedJob(args: unknown[]): { type: string; payload: Record<string, unknown> } {
+  const fields = args.slice(5) as string[];
+  const byName = new Map<string, string>();
+  for (let index = 0; index < fields.length; index += 2) {
+    byName.set(fields[index]!, fields[index + 1]!);
+  }
+  return { type: byName.get("type")!, payload: JSON.parse(byName.get("payload")!) };
 }

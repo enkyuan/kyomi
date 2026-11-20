@@ -169,27 +169,27 @@ describe("RouteErrorPage status copy", () => {
     expect(screen.getByText("That change conflicts with the current state.")).toBeTruthy();
   });
 
-  test("keeps the not-found page in the shell too", () => {
+  test("takes over the whole page for not-found under the shell too", () => {
     mocks.matchIds = ["__root__", "/_app"];
     mocks.authState = { status: "authenticated" };
 
     render(<DefaultErrorPage error={new HttpStatusError(404)} reset={vi.fn()} />);
 
     expect(screen.getByText("Page not found")).toBeTruthy();
-    expect(screen.queryByRole("main")).toBeNull();
+    expect(screen.getByRole("main").className).toContain("fixed inset-0");
   });
 });
 
 describe("error page context", () => {
   const defaultErrorProps = { error: new Error("Feed failed"), reset: vi.fn() };
 
-  test("keeps the app shell for failures under it", () => {
+  test("takes over the whole page for failures under the shell", () => {
     mocks.matchIds = ["__root__", "/_app", "/_app/inbox"];
     mocks.authState = { status: "authenticated" };
 
     render(<DefaultErrorPage {...defaultErrorProps} />);
 
-    expect(screen.queryByRole("main")).toBeNull();
+    expect(screen.getByRole("main").className).toContain("fixed inset-0");
     expect(screen.getByRole("link", { name: "Back to inbox" }).getAttribute("href")).toBe("/inbox");
   });
 
@@ -226,13 +226,13 @@ describe("error page context", () => {
     expect(screen.getByText("The page lost its place for a moment.")).toBeTruthy();
   });
 
-  test("renders the not-found page in the shell too", () => {
+  test("renders the not-found page over the whole window under the shell too", () => {
     mocks.matchIds = ["__root__", "/_app"];
     mocks.authState = { status: "authenticated" };
 
     render(<DefaultNotFoundPage />);
 
-    expect(screen.queryByRole("main")).toBeNull();
+    expect(screen.getByRole("main").className).toContain("fixed inset-0");
     expect(screen.getByRole("link", { name: "Back to inbox" })).toBeTruthy();
   });
 });

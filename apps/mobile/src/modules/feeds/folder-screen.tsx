@@ -1,6 +1,7 @@
 import { Stack } from "expo-router";
-import { FlatList, Text, View } from "react-native";
-import { FONT_STYLES } from "@/theme/fonts";
+import { FlatList, useWindowDimensions, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { EmptyStateView } from "@modules/inbox/components/empty-states";
 import { Skeleton } from "@ui/skeleton";
 import { FeedRow, FeedRowSkeleton } from "./components/feed-row";
 import { useFolderFeeds } from "./hooks/use-folder-feeds";
@@ -15,6 +16,9 @@ type FolderScreenProps = {
 /** The feeds filed in one folder, under the native stack header that carries its name. */
 export function FolderScreen({ folderId }: FolderScreenProps) {
   const { feeds, folder, isLoading, move, otherFolders, unfollow } = useFolderFeeds(folderId);
+  const { height } = useWindowDimensions();
+  // The native stack header sits above the list; EmptyState subtracts this to centre in the rest.
+  const topContentInset = useSafeAreaInsets().top + 44;
 
   return (
     <View className="flex-1 bg-background">
@@ -30,11 +34,11 @@ export function FolderScreen({ folderId }: FolderScreenProps) {
               {(index) => <FeedRowSkeleton titleWidth={SKELETON_TITLE_WIDTHS[index]} />}
             </Skeleton.Repeat>
           ) : (
-            <View className="items-center px-8 pt-24">
-              <Text className="text-muted-foreground" style={FONT_STYLES.bodyMedium}>
-                No feeds in this folder yet.
-              </Text>
-            </View>
+            <EmptyStateView
+              height={height}
+              topContentInset={topContentInset}
+              variant="folder-empty"
+            />
           )
         }
         renderItem={({ item }) => (

@@ -1,14 +1,15 @@
 "use dom";
 
-import { useEffect, useRef, useState, type CSSProperties, type RefObject } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+  type RefObject,
+} from "react";
 import type { DOMProps } from "expo/dom";
 import type { ReaderContent as ReaderContentModel } from "@kyomi/reader";
-import {
-  READING_SAMPLE_INTERVAL_MS,
-  READING_SCROLL_END_MS,
-  progressFromScroll,
-  scrollTopForProgress,
-} from "@kyomi/reader/core";
 import { ReaderContent } from "@kyomi/reader/web";
 import { RssIcon } from "@kyomi/ui/icons/blode";
 import { createSquircleStyle } from "@kyomi/ui/lib/squircle";
@@ -17,7 +18,9 @@ import "@kyomi/ui/styles/reader.css";
 import { mobileColors } from "@/theme/colors";
 import { FONT_FAMILIES, FONT_WEIGHTS } from "@/theme/fonts";
 import { mobileReaderLayout } from "../lib/layout";
+import { useReadingProgressTracking } from "./dom-reading-progress";
 import { readerCanvas } from "../lib/theme";
+import { handleLinkClick } from "../lib/web-policy";
 import { resolveMobileApiUrl } from "@/lib/api";
 
 const MOBILE_READER_STYLES = String.raw`
@@ -135,11 +138,11 @@ const MOBILE_READER_STYLES = String.raw`
   }
 
   .mobile-reader .reader-content .article-body :is(p, ul, ol, blockquote, pre, figure, table) {
-    margin: 0 0 ${mobileReaderLayout.body.paragraphGapEm}em;
+    margin: 0 0 ${mobileReaderLayout.body.blockGapPx}px;
   }
 
   .mobile-reader .reader-content .article-body :is(ul, ol) {
-    padding-inline-start: 1.3em;
+    padding-inline-start: ${mobileReaderLayout.body.listIndentPx}px;
   }
 
   .mobile-reader .reader-content .article-body table {
@@ -173,6 +176,7 @@ const MOBILE_READER_STYLES = String.raw`
 
   .mobile-reader .reader-content .article-body :is(h1, h2, h3, h4, h5, h6) {
     color: var(--reader-foreground);
+    margin: ${mobileReaderLayout.body.headingGapPx.top}px 0 ${mobileReaderLayout.body.headingGapPx.bottom}px;
   }
 
 `;
@@ -196,6 +200,8 @@ type ArticleBodyProps = {
   readonly onReady?: () => void;
   /** Sent at most every 2 s while reading, and when scrolling ends. */
   readonly onReadingProgress?: (sample: { progress: number; completed: boolean }) => void;
+  /** Opens a web link in the system browser; the article never loads a link itself. */
+  readonly openUrl: (url: string) => void;
   readonly reader: ReaderContentModel;
   readonly title: string;
   readonly dom?: DOMProps;
@@ -236,136 +242,6 @@ function ReaderSource({
   );
 }
 
-/** Images and fonts keep resizing the body after first layout; a restore follows them this long. */
-const RESTORE_SETTLE_MS = 4_000;
-
-type ReadingTracking = {
-  /** Samples wait for a pending restore so the top of the article never overwrites a saved position. */
-  held: boolean;
-  userScrolled: boolean;
-  emit: () => void;
-};
-
-/**
- * Restores `initialProgress` and reports reading progress. The page scrolls inside its own WebView,
- * so scroll position, viewport and article geometry are read here and only samples cross the bridge.
- */
-function useReadingProgressTracking(
-  articleRef: RefObject<HTMLElement | null>,
-  initialProgress: number | undefined,
-  onReadingProgress: ArticleBodyProps["onReadingProgress"],
-) {
-  const reportRef = useRef(onReadingProgress);
-  useEffect(() => {
-    reportRef.current = onReadingProgress;
-  }, [onReadingProgress]);
-  const tracking = useRef<ReadingTracking>({
-    emit: () => undefined,
-    held: initialProgress !== undefined,
-    userScrolled: false,
-  });
-
-  useEffect(() => {
-    const article = articleRef.current;
-    if (!article) return;
-    const state = tracking.current;
-
-    let lastEmitAt = 0;
-    let trailing: number | undefined;
-    let scrollEnd: number | undefined;
-
-    const emit = () => {
-      if (state.held || !reportRef.current) return;
-      const scrollTop = window.scrollY;
-      const progress = progressFromScroll({
-        contentHeight: article.offsetHeight,
-        contentTop: article.getBoundingClientRect().top + scrollTop,
-        scrollTop,
-        viewportHeight: window.innerHeight,
-      });
-      // The reading line never reaches the end of the body, so the end is checked directly: the
-      // last of the article is on screen after the reader has scrolled.
-      const completed =
-        scrollTop > 0 && article.getBoundingClientRect().bottom <= window.innerHeight + 2;
-      lastEmitAt = Date.now();
-      reportRef.current({ completed, progress });
-    };
-    state.emit = emit;
-
-    const onScroll = () => {
-      const wait = READING_SAMPLE_INTERVAL_MS - (Date.now() - lastEmitAt);
-      if (wait <= 0) {
-        emit();
-      } else {
-        if (trailing === undefined) {
-          trailing = window.setTimeout(() => {
-            trailing = undefined;
-            emit();
-          }, wait);
-        }
-      }
-      window.clearTimeout(scrollEnd);
-      scrollEnd = window.setTimeout(emit, READING_SCROLL_END_MS);
-    };
-    const onUserInput = () => {
-      state.userScrolled = true;
-    };
-
-    // One signal owns every listener, so a single abort removes them all.
-    const listeners = new AbortController();
-    window.addEventListener("scroll", onScroll, { passive: true, signal: listeners.signal });
-    for (const type of ["touchstart", "wheel", "keydown"] as const) {
-      window.addEventListener(type, onUserInput, {
-        capture: true,
-        passive: true,
-        signal: listeners.signal,
-      });
-    }
-    return () => {
-      listeners.abort();
-      window.clearTimeout(trailing);
-      window.clearTimeout(scrollEnd);
-      state.emit = () => undefined;
-    };
-  }, [articleRef]);
-
-  useEffect(() => {
-    const article = articleRef.current;
-    const state = tracking.current;
-    if (!article) return;
-
-    if (initialProgress === undefined) {
-      // Nothing to restore: the first scroll is the first sample.
-      state.held = false;
-      return;
-    }
-    if (state.userScrolled) return;
-
-    const restore = () => {
-      if (state.userScrolled) return;
-      const top = scrollTopForProgress(initialProgress, {
-        contentHeight: article.offsetHeight,
-        contentTop: article.getBoundingClientRect().top + window.scrollY,
-        viewportHeight: window.innerHeight,
-      });
-      window.scrollTo({ behavior: "instant", top });
-      if (state.held) {
-        state.held = false;
-        state.emit();
-      }
-    };
-
-    restore();
-    const observer = new ResizeObserver(restore);
-    observer.observe(article);
-    const stop = window.setTimeout(() => observer.disconnect(), RESTORE_SETTLE_MS);
-    return () => {
-      observer.disconnect();
-      window.clearTimeout(stop);
-    };
-  }, [articleRef, initialProgress]);
-}
-
 function createReaderImageProxyUrl(sourceUrl: string): string {
   return resolveMobileApiUrl(`/api/reader-image?url=${encodeURIComponent(sourceUrl)}`);
 }
@@ -379,29 +255,41 @@ export default function ArticleBody({
   initialProgress,
   onReady,
   onReadingProgress,
+  openUrl,
   reader,
   title,
 }: ArticleBodyProps) {
   const didNotifyReady = useRef(false);
   const articleRef = useRef<HTMLElement>(null);
-  useReadingProgressTracking(articleRef, initialProgress, onReadingProgress);
+  const notifyReady = useCallback(() => {
+    if (didNotifyReady.current) return;
+    didNotifyReady.current = true;
+    onReady?.();
+  }, [onReady]);
+  // With a position to restore, the article is ready once the restore has settled, not on first paint:
+  // the jumps the restore makes as images load stay behind the skeleton.
+  useReadingProgressTracking(
+    articleRef,
+    initialProgress,
+    onReadingProgress,
+    initialProgress === undefined ? undefined : notifyReady,
+  );
 
   useEffect(() => {
     didNotifyReady.current = false;
-    const frameId = window.requestAnimationFrame(() => {
-      if (!didNotifyReady.current) {
-        didNotifyReady.current = true;
-        onReady?.();
-      }
-    });
+    // Nothing to restore: ready on the first frame, as before.
+    if (initialProgress !== undefined) return;
+    const frameId = window.requestAnimationFrame(notifyReady);
 
     return () => window.cancelAnimationFrame(frameId);
-  }, [onReady, reader]);
+  }, [initialProgress, notifyReady, reader]);
 
   return (
     <main
       className="mobile-reader"
       data-color-scheme={colorScheme}
+      // The WebView would load a tapped link in place, so every link is claimed here.
+      onClickCapture={(event) => handleLinkClick(event, openUrl, window.location.href)}
       style={
         {
           "--reader-font-size": `${fontSizePx}px`,

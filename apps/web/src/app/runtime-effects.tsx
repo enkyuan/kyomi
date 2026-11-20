@@ -44,8 +44,7 @@ export function AppRuntimeEffects() {
       if (!isOnline) {
         toastManager.add({
           id: OFFLINE_TOAST_ID,
-          title: "You're offline",
-          description: "Changes won't save until you reconnect.",
+          title: "You're offline. Changes won't save",
           timeout: 0,
           type: "warning",
         });

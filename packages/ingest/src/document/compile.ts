@@ -12,6 +12,11 @@ import { resolveUrls } from "./passes/resolve-urls";
 import { sanitize } from "./passes/sanitize";
 import { stripChrome } from "./passes/strip-chrome";
 import { stripReserved } from "./passes/strip-reserved";
+import {
+  isTreeWithinStructureBudget,
+  isWithinStructureBudget,
+  textOnlyHtml,
+} from "./structure-budget";
 import { unlazyMedia } from "./passes/unlazy-media";
 
 /**
@@ -40,14 +45,36 @@ export type CompiledArticleHtml = {
 type CompileOptions = { baseUrl?: string | null; generator?: string | null };
 
 /**
+ * Parses `raw`, or its text when its shape is past `structure-budget`. The shape is read twice:
+ * from the text before the parser sees it, and from the tree the parser built before any pass
+ * does. A parser stack overflow, which a shape the first read missed would cause, reads as text.
+ */
+function parseWithinBudget(raw: string, options?: CompileOptions) {
+  if (isWithinStructureBudget(raw)) {
+    try {
+      const parsed = parseArticleFragment(raw, options);
+      if (isTreeWithinStructureBudget(parsed.root)) {
+        return parsed;
+      }
+    } catch (error) {
+      if (!(error instanceof RangeError)) {
+        throw error;
+      }
+    }
+  }
+  return parseArticleFragment(textOnlyHtml(raw), options);
+}
+
+/**
  * Runs the ingest passes (strip-reserved through sanitize) and returns the sanitized tree, which
- * is also the input to the lowering pass.
+ * is also the input to the lowering pass. A body nested or populated beyond `structure-budget`
+ * is compiled as its text, so a hostile shape costs a bounded amount of work and never throws.
  */
 export function compileArticleRoot(
   raw: string,
   options?: CompileOptions,
 ): { root: HTMLElement; context: CompileContext } {
-  const { root, context } = parseArticleFragment(raw, options);
+  const { root, context } = parseWithinBudget(raw, options);
   for (const pass of ARTICLE_COMPILE_PASSES) {
     pass.run(root, context);
   }

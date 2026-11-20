@@ -14,8 +14,8 @@ import {
 } from "motion/react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import { cn } from "../../lib/utils";
+import { TextMorph } from "../text-morph";
 import {
-  PIP_SIZE,
   fontWeights,
   springs,
   type SliderComfortableProps,
@@ -142,6 +142,60 @@ function Slider({
 // ---------------------------------------------------------------------------
 
 // oxlint-disable-next-line eslint/complexity
+// Snap an x offset (within a track of width w) to the nearest step value; null when pips has <= 1 step.
+function snapValue(
+  clamped: number,
+  w: number,
+  variant: "pips" | "scrubber",
+  pipSteps: number[],
+  min: number,
+  max: number,
+  step: number,
+): number | null {
+  if (variant === "pips") {
+    const pipCount = pipSteps.length;
+    if (pipCount <= 1) return null;
+    const index = Math.max(0, Math.min(pipCount - 1, Math.round((clamped / w) * (pipCount - 1))));
+    return pipSteps[index];
+  }
+  const raw = min + (clamped / w) * (max - min);
+  return Math.max(min, Math.min(max, Math.round((raw - min) / step) * step + min));
+}
+
+// Active handle line spans 18px of the 32px track; idle is 16px.
+const HANDLE_LINE_IDLE_SCALE = 16 / 18;
+
+function HandleLine({
+  className,
+  left,
+  isActive,
+  isFocused,
+  isHovered,
+}: {
+  className: string;
+  left: MotionValue<string>;
+  isActive: boolean;
+  isFocused: boolean;
+  isHovered: boolean;
+}) {
+  return (
+    <m.div
+      className={cn("absolute rounded-full pointer-events-none", className)}
+      initial={false}
+      animate={{
+        scaleY: isActive ? 1 : HANDLE_LINE_IDLE_SCALE,
+        backgroundColor: isFocused
+          ? "var(--foreground)"
+          : isHovered
+            ? "color-mix(in srgb, var(--foreground) 50%, transparent)"
+            : "color-mix(in srgb, var(--foreground) 25%, transparent)",
+      }}
+      transition={springs.fast}
+      style={{ left, top: 7, bottom: 7, width: 2 }}
+    />
+  );
+}
+
 function SliderComfortable({
   ref,
   value,
@@ -195,7 +249,6 @@ function SliderComfortable({
     () => Array.from({ length: Math.round((max - min) / step) + 1 }, (_, i) => min + i * step),
     [min, max, step],
   );
-  const pipCount = pipSteps.length;
 
   // Fill motion value
   const fillPercent = useMotionValue(
@@ -224,13 +277,6 @@ function SliderComfortable({
     fillPercent,
     (p) => `calc(${p * 100}% + ${11 - 24 * p}px)`,
   );
-  const pipsMaskStyle = useTransform(
-    [fillPercent, zeroOffset] as MotionValue<number>[],
-    ([p, zo]) => {
-      const offset = 20 - 20 * (p as number) - (zo as number) * 2.5;
-      return `linear-gradient(to right, transparent calc(${(p as number) * 100}% + ${offset}px), black calc(${(p as number) * 100}% + ${offset + 2}px))`;
-    },
-  );
 
   // --- Hover preview computation ---
   const computeHoverPreview = useCallback(
@@ -244,19 +290,8 @@ function SliderComfortable({
       const x = clientX - rect.left - borderLeft;
       const clamped = Math.max(0, Math.min(w, x));
 
-      // Snap to nearest step value
-      let snappedVal: number;
-      if (variant === "pips") {
-        if (pipCount <= 1) return;
-        const index = Math.max(
-          0,
-          Math.min(pipCount - 1, Math.round((clamped / w) * (pipCount - 1))),
-        );
-        snappedVal = pipSteps[index];
-      } else {
-        const raw = min + (clamped / w) * (max - min);
-        snappedVal = Math.max(min, Math.min(max, Math.round((raw - min) / step) * step + min));
-      }
+      const snappedVal = snapValue(clamped, w, variant, pipSteps, min, max, step);
+      if (snappedVal === null) return;
       const snappedPercent = max === min ? 0 : (snappedVal - min) / (max - min);
       const snappedX = snappedPercent * w;
 
@@ -276,7 +311,7 @@ function SliderComfortable({
       const width = Math.abs(edgeX - handleX);
       setHoverPreview({ left, width, snappedValue: snappedVal, cursorX: snappedX });
     },
-    [variant, pipSteps, pipCount, min, max, step, fillPercent, zeroOffset],
+    [variant, pipSteps, min, max, step, fillPercent, zeroOffset],
   );
 
   // Sync fill on programmatic value change
@@ -299,20 +334,9 @@ function SliderComfortable({
       const borderLeft = rect.width - w > 0 ? (rect.width - w) / 2 : 0;
       const x = clientX - rect.left - borderLeft;
       const clamped = Math.max(0, Math.min(w, x));
-      if (variant === "pips") {
-        if (pipCount <= 1) return min;
-        const index = Math.max(
-          0,
-          Math.min(pipCount - 1, Math.round((clamped / w) * (pipCount - 1))),
-        );
-        return pipSteps[index];
-      } else {
-        const raw = min + (clamped / w) * (max - min);
-        const snapped = Math.round((raw - min) / step) * step + min;
-        return Math.max(min, Math.min(max, snapped));
-      }
+      return snapValue(clamped, w, variant, pipSteps, min, max, step) ?? min;
     },
-    [variant, pipSteps, pipCount, min, max, step],
+    [variant, pipSteps, min, max, step],
   );
 
   const handlePointerDown = useCallback(
@@ -490,7 +514,7 @@ function SliderComfortable({
         <m.div
           ref={mergedRef}
           className={cn(
-            "relative w-full h-8 select-none touch-none border border-border overflow-hidden outline-offset-2",
+            "relative w-full h-8 select-none touch-none overflow-hidden outline-none",
             variant === "scrubber"
               ? "flex items-center gap-3 px-4 cursor-ew-resize"
               : "cursor-ew-resize",
@@ -499,10 +523,6 @@ function SliderComfortable({
             className,
           )}
           initial={false}
-          animate={{
-            outline: isFocused ? "1px solid #6B97FF" : "1px solid transparent",
-          }}
-          transition={springs.fast}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerCancel={handlePointerUp}
@@ -546,58 +566,6 @@ function SliderComfortable({
             }}
           />
 
-          {/* Pips: dots layer — z-[1] */}
-          {variant === "pips" && (
-            <m.div
-              className="absolute inset-0 flex justify-between items-center px-3 pointer-events-none z-1"
-              style={{ WebkitMaskImage: pipsMaskStyle, maskImage: pipsMaskStyle }}
-            >
-              {pipSteps.map((pipValue) => {
-                const isActivePip = pipValue === value;
-                return (
-                  <div
-                    key={pipValue}
-                    className="relative flex items-center justify-center"
-                    style={{ width: PIP_SIZE, height: PIP_SIZE }}
-                  >
-                    <m.div
-                      className="rounded-full"
-                      initial={false}
-                      animate={{
-                        backgroundColor: isActivePip
-                          ? "var(--foreground)"
-                          : "var(--muted-foreground)",
-                        opacity: isActivePip ? 1 : 0.3,
-                      }}
-                      transition={springs.fast}
-                      style={{ width: PIP_SIZE, height: PIP_SIZE }}
-                    />
-                  </div>
-                );
-              })}
-            </m.div>
-          )}
-
-          {/* Pips: label + value BG layer — z-[2] (occludes dots behind text) */}
-          {variant === "pips" && (
-            <div
-              className="absolute inset-0 flex items-center px-2 z-2 pointer-events-none"
-              aria-hidden
-            >
-              {label && (
-                <span className="text-[13px] px-2 bg-background text-transparent select-none">
-                  {label}
-                </span>
-              )}
-              <span
-                className="text-[13px] tabular-nums ml-auto px-2 bg-background text-transparent select-none"
-                style={{ minWidth: `${String(formatValue(max)).length}ch` }}
-              >
-                {formatValue(value)}
-              </span>
-            </div>
-          )}
-
           {/* Pips: fill — z-[3] */}
           {variant === "pips" && (
             <m.div
@@ -609,25 +577,13 @@ function SliderComfortable({
             />
           )}
 
-          {/* Pips: handle line — z-[3] */}
           {variant === "pips" && (
-            <m.div
-              className="absolute rounded-full pointer-events-none z-3"
-              initial={false}
-              animate={{
-                top: isActive ? 7 : 8,
-                bottom: isActive ? 7 : 8,
-                backgroundColor: isFocused
-                  ? "var(--foreground)"
-                  : isHovered
-                    ? "color-mix(in srgb, var(--foreground) 50%, transparent)"
-                    : "color-mix(in srgb, var(--foreground) 25%, transparent)",
-              }}
-              transition={springs.fast}
-              style={{
-                left: pipsHandleLineLeftStyle,
-                width: 2,
-              }}
+            <HandleLine
+              className="z-3"
+              left={pipsHandleLineLeftStyle}
+              isActive={isActive}
+              isFocused={isFocused}
+              isHovered={isHovered}
             />
           )}
 
@@ -651,7 +607,7 @@ function SliderComfortable({
                 transition={springs.fast}
                 style={{ minWidth: `${String(formatValue(max)).length}ch`, textAlign: "right" }}
               >
-                {formatValue(value)}
+                <TextMorph>{formatValue(value)}</TextMorph>
               </m.span>
             </div>
           )}
@@ -667,25 +623,13 @@ function SliderComfortable({
             />
           )}
 
-          {/* Scrubber: handle line */}
           {variant === "scrubber" && (
-            <m.div
-              className="absolute rounded-full pointer-events-none z-10"
-              initial={false}
-              animate={{
-                top: isActive ? 7 : 8,
-                bottom: isActive ? 7 : 8,
-                backgroundColor: isFocused
-                  ? "var(--foreground)"
-                  : isHovered
-                    ? "color-mix(in srgb, var(--foreground) 50%, transparent)"
-                    : "color-mix(in srgb, var(--foreground) 25%, transparent)",
-              }}
-              transition={springs.fast}
-              style={{
-                left: handleLineLeftStyle,
-                width: 2,
-              }}
+            <HandleLine
+              className="z-10"
+              left={handleLineLeftStyle}
+              isActive={isActive}
+              isFocused={isFocused}
+              isHovered={isHovered}
             />
           )}
 

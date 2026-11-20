@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toastManager } from "@kyomi/ui/components/toast";
-import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
+import { logClientError } from "@kyomi/reader/lib/errors";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@kyomi/reader/schemas";
 import { extractInboxItemFullText } from "@modules/articles/lib/api";
 import { queryKeys } from "@lib/query/keys";
@@ -104,16 +104,17 @@ export function useReaderExtract({
         });
 
       if (reason === "auto") {
-        void extractionPromise.catch(() => {
-          requestedExtractionForItemRef.current = null;
-        });
+        // The item stays marked as requested when the attempt fails: the rolled-back query data
+        // still reads "pending", so re-arming here would refire at once and loop for as long as
+        // the request keeps failing (a 429 from the extraction limit included). Asking again is
+        // left to the user: the retry button, or opening the article again.
+        void extractionPromise.catch((error: unknown) => logClientError("reader.extract", error));
         return;
       }
 
       void toastManager.promise(extractionPromise, {
         loading: {
-          title: "Extracting full text...",
-          description: "Fetching full article text.",
+          title: "Extracting full text",
           type: "loading",
           timeout: 0,
         },
@@ -121,22 +122,16 @@ export function useReaderExtract({
           result.status === "ready"
             ? {
                 title: "Full text ready",
-                description: "Article content has been refreshed.",
                 type: "success",
               }
             : {
                 title: "Extraction queued",
-                description: "The article will update when full text is ready.",
                 type: "info",
               },
         error: (error) => {
           logClientError("reader.extract", error);
           return {
             title: "Extraction failed",
-            description: getUserSafeErrorMessage(
-              error,
-              "Could not fetch extracted article content.",
-            ),
             type: "error",
           };
         },

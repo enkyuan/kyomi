@@ -24,18 +24,19 @@ in `package.json`, so a file that is not exported is private.
 `styles/theme.css` holds every token. Primitives use them instead of arbitrary values; app code
 should reach for a primitive variant before restyling one.
 
-| Token                 | Utility                          | Use                                                     |
-| --------------------- | -------------------------------- | ------------------------------------------------------- |
-| `--highlight`         | `bg-highlight`, `text-highlight` | Current-position indicators (scrubber preview tick)     |
-| `--reader-ink`        | (reader CSS only)                | Warm sumi ink for article text; headings use `-strong`  |
-| `--bar-blur-dim`      | (`BarBlur` only)                 | Backdrop brightness behind blurred bars; dark mode only |
-| `--muted-solid`       | `bg-muted-solid`                 | Opaque muted chrome that floats over content            |
-| `--muted-subtle`      | `text-muted-subtle`              | Placeholders, shortcuts, inactive tabs (muted at 72%)   |
-| `--tracking-title`    | `tracking-title`                 | Tight list and article titles (−0.012em)                |
-| `--ease-out-quint`    | `ease-out-quint`                 | Default UI ease-out: presses, popovers, label swaps     |
-| `--ease-in-out-quart` | `ease-in-out-quart`              | On-screen movement between two positions                |
-| `--ease-standard`     | `ease-standard`                  | Crossfades and blur reveals                             |
-| `--ease-drawer`       | `ease-drawer`                    | Sheets and drawers (iOS curve)                          |
+| Token                 | Utility                          | Use                                                      |
+| --------------------- | -------------------------------- | -------------------------------------------------------- |
+| `--highlight`         | `bg-highlight`, `text-highlight` | Current-position indicators (scrubber preview tick)      |
+| `--reader-ink`        | (reader CSS only)                | Warm sumi ink for article text; headings use `-strong`   |
+| `--bar-blur-dim`      | (`BarBlur` only)                 | Backdrop brightness behind blurred bars; dark mode only  |
+| `--glass*`            | (toast surfaces only)            | Frosted glass: tint, sheen, edge, blur, saturation, lift |
+| `--muted-solid`       | `bg-muted-solid`                 | Opaque muted chrome that floats over content             |
+| `--muted-subtle`      | `text-muted-subtle`              | Placeholders, shortcuts, inactive tabs (muted at 72%)    |
+| `--tracking-title`    | `tracking-title`                 | Tight list and article titles (−0.012em)                 |
+| `--ease-out-quint`    | `ease-out-quint`                 | Default UI ease-out: presses, popovers, label swaps      |
+| `--ease-in-out-quart` | `ease-in-out-quart`              | On-screen movement between two positions                 |
+| `--ease-standard`     | `ease-standard`                  | Crossfades and blur reveals                              |
+| `--ease-drawer`       | `ease-drawer`                    | Sheets and drawers (iOS curve)                           |
 
 ### Palette (iro)
 
@@ -67,10 +68,42 @@ that become instant under reduced motion. `EASE_OUT_QUINT` mirrors the CSS curve
 `TextMorph` (`@kyomi/ui/components/text-morph`) wraps [Torph](https://torph.lochie.me): when its text
 changes, shared letters glide to their new place, the rest fade, and numbers roll by place value. It
 runs 240ms on the `--ease-out-quint` curve, skips the first render, and swaps instantly under reduced
-motion. `ButtonLabel`, toast titles and descriptions, the reader's font-size readout, and the feed
-selection count use it. Torph lays text out on one line and accepts text only, so keep it to short
-labels: toasts morph text up to 40 characters (28 in anchored cards) and leave longer text wrapping
-as plain text. Do not use it in long lists or for values that change while dragging.
+motion. `ButtonLabel`, toast titles, the reader's font-size readout, and the feed selection count
+use it. Torph lays text out on one line and accepts text only, so keep it to short labels: toasts
+morph titles up to 40 characters (28 in anchored cards) and leave longer ones as plain text, which
+truncates. Do not use it in long lists or for values that change while dragging.
+
+## Toast
+
+`@kyomi/ui/components/toast` renders every toast as one line of frosted glass: a status icon, a
+title, and an end slot. There is no description, and the managers are typed to refuse one
+(`ToastLine`), so say the one thing in the title and log the detail.
+
+- Status icons: filled `CheckCircle2FilledIcon` success, `CircleXFilledIcon` error,
+  `ExclamationCircleFilledIcon` info, line `TriangleAlertIcon` warning, and a spinner for loading. A
+  toast with `data.progress` draws a progress ring in place of the spinner.
+- The end slot holds a count (`data.progress` renders `4/10`) or the
+  toast's action (`actionProps`: undo, retry). Both sit on the end edge. A count insets 13px, the
+  icon's own optical inset at the start; an action sits 6px from the top, bottom and end with a
+  radius of the toast's 14px minus that 6px, so it stays concentric.
+- The count is tabular (`tabular-nums`, one digit width), so a step never moves the title or the end
+  edge; only a new digit place widens it. It morphs by place value on the progress ring's own 240ms
+  `ease-out-quint`, so a step up or down moves the digits and the ring together.
+- A state change (loading → success or error) updates the one toast in place, never a second one.
+  The title morphs with Torph over 600ms on `cubic-bezier(0.41, 1.03, 0.6, 1.03)`. The icon swaps
+  inside a single grid cell: the old glyph scales to 0.6 and fades out while the new one grows in
+  from 0.6 after 0.1s, on one spring (`mass 4, stiffness 800, damping 80`). Reduced motion swaps
+  instantly. The count keeps its own 240ms curve so it stays in step with the ring.
+- Loading titles carry no ellipsis (`Importing feeds`, not `Importing feeds...`); the spinner and
+  the count say it is in progress.
+- The body is a squircle (`useSquircle`, 14px; 10px for anchored tooltips). A clip path cuts a
+  border and a shadow, so the 1px edge is stroked along the same measured path and the shadow sits on
+  the toast root. The surface fades itself: an ancestor with `opacity` below 1 would make the blur
+  sample nothing.
+- The glass comes from `--glass`, `--glass-sheen`, `--glass-edge`, `--glass-highlight`,
+  `--glass-blur`, `--glass-saturate` and `--glass-shadow` in `styles/theme.css`, derived from
+  `--popover` and `--border` so both themes follow. `prefers-reduced-transparency` makes it solid,
+  as do engines without `backdrop-filter`.
 
 ## Button
 
@@ -85,7 +118,8 @@ as plain text. Do not use it in long lists or for values that change while dragg
 
 - `variant="attached"` (default) joins segments into one bordered control.
 - `variant="split"` keeps each segment a separate pill: capsule outer ends, `rounded-sm` inner
-  corners, and a 3px gap, like a theme and language switcher.
+  corners, and a gap and inner radius that scale with `--split-h` (`--split-gap` is 1/24 of it,
+  `--split-inner` 1/8), like a theme and language switcher.
 
 ```tsx
 <ButtonGroup aria-label="Theme and language" variant="split">
@@ -126,6 +160,7 @@ clickable above it.
 
 - `size="sm"` for compact rail rows (14px titles over 12px meta), `default` for full-width lists.
 - `shape="squircle"` draws continuous corners with a measured clip path; `rounded` uses CSS.
+  `useSquircle` also returns the measured `path`, for drawing an edge the clip would cut.
 - `selected` keeps the hover surface on, e.g. while bulk-selecting.
 - `ItemActions reveal` dims actions until the row is hovered or focused.
 

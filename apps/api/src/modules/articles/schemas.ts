@@ -250,12 +250,15 @@ export const summarizeResponseSchema = t.Object({
   summary: t.String(),
 });
 
+export const translationParams = t.Object({ articleId: uuidParam, translationId: uuidParam });
 export const translateBodySchema = t.Object({
-  target_language: t.String({ minLength: 1, maxLength: LANGUAGE_IDENTIFIER_MAX_CHARS }),
+  mode: t.Optional(t.Union([t.Literal("original"), t.Literal("extracted")])),
+  target_language: t.Optional(t.String({ minLength: 1, maxLength: LANGUAGE_IDENTIFIER_MAX_CHARS })),
   source_language: t.Optional(t.String({ minLength: 2, maxLength: LANGUAGE_IDENTIFIER_MAX_CHARS })),
 });
 
 export const translateResponseSchema = t.Object({
+  id: uuidParam,
   status: t.Union([
     t.Literal("queued"),
     t.Literal("processing"),

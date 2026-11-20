@@ -1,13 +1,210 @@
 // @vitest-environment jsdom
 
-import { act, render, screen, waitFor } from "@testing-library/react";
-import { afterEach, describe, expect, test, vi } from "vitest";
+import { act, fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { Dialog, DialogBackdrop, DialogPortal, DialogPrimitive } from "@kyomi/ui/components/dialog";
 import {
   AnchoredToastProvider,
   ToastProvider,
   anchoredToastManager,
+  toastManager,
 } from "@kyomi/ui/components/toast";
+
+function toastNode(selector: string): Element {
+  const node = document.querySelector(selector);
+  if (!node) {
+    throw new Error(`No element matches ${selector}`);
+  }
+  return node;
+}
+
+describe("ToastProvider", () => {
+  beforeEach(() => {
+    vi.stubGlobal(
+      "ResizeObserver",
+      class {
+        observe() {}
+        unobserve() {}
+        disconnect() {}
+      },
+    );
+    // A single-line toast is 360 x 40; the squircle path is measured from this.
+    vi.spyOn(HTMLElement.prototype, "offsetWidth", "get").mockReturnValue(360);
+    vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(40);
+  });
+
+  afterEach(() => {
+    act(() => {
+      toastManager.close();
+    });
+    vi.restoreAllMocks();
+    vi.unstubAllGlobals();
+  });
+
+  function showToast(options: Parameters<typeof toastManager.add>[0]) {
+    act(() => {
+      toastManager.add({ timeout: 0, ...options });
+    });
+  }
+
+  test("draws one line: a status icon and a title, never a description", async () => {
+    render(<ToastProvider>{null}</ToastProvider>);
+
+    // The managers refuse a description at compile time; a stale caller must still not draw one.
+    showToast({ title: "Report sent", description: "Thanks.", type: "success" } as never);
+
+    await waitFor(() => {
+      expect(screen.getByText("Report sent")).toBeTruthy();
+    });
+    expect(screen.queryByText("Thanks.")).toBeNull();
+    expect(document.querySelector('[data-slot="toast-description"]')).toBeNull();
+    expect(toastNode('[data-slot="toast-icon"] svg')).toBeTruthy();
+  });
+
+  test("gives every toast type its own status icon", async () => {
+    render(<ToastProvider>{null}</ToastProvider>);
+    const types = ["success", "error", "info", "warning", "loading"] as const;
+
+    for (const type of types) {
+      showToast({ title: `Toast ${type}`, type });
+    }
+
+    await waitFor(() => {
+      expect(document.querySelectorAll('[data-slot="toast-icon"] svg')).toHaveLength(types.length);
+    });
+    const markup = new Set(
+      [...document.querySelectorAll('[data-slot="toast-icon"] svg')].map((svg) => svg.innerHTML),
+    );
+    expect(markup.size).toBe(types.length);
+  });
+
+  test("swaps the icon inside one slot on a state change, never a second toast", async () => {
+    render(<ToastProvider>{null}</ToastProvider>);
+    let id = "";
+    act(() => {
+      id = toastManager.add({ timeout: 0, title: "Sending code", type: "loading" });
+    });
+    await waitFor(() => {
+      expect(toastNode('[data-slot="toast-icon"] svg')).toBeTruthy();
+    });
+    const loadingMarkup = toastNode('[data-slot="toast-icon"] svg').innerHTML;
+
+    act(() => {
+      toastManager.update(id, { title: "Code sent", type: "success" });
+    });
+
+    // jsdom has no Web Animations, so the outgoing icon never finishes exiting: during the swap the
+    // slot holds both glyphs, stacked in one grid cell, inside the one toast.
+    await waitFor(() => {
+      const slot = toastNode('[data-slot="toast-icon"]');
+      const markup = [...slot.querySelectorAll("svg")].map((svg) => svg.innerHTML);
+      expect(markup).toHaveLength(2);
+      expect(markup).toContain(loadingMarkup);
+      for (const layer of slot.children) {
+        expect(layer.className).toContain("col-start-1");
+        expect(layer.className).toContain("row-start-1");
+      }
+    });
+    expect(document.querySelectorAll('[data-slot="toast-icon"]')).toHaveLength(1);
+    expect(document.querySelectorAll('[data-slot="toast-title"]')).toHaveLength(1);
+  });
+
+  test("ends the line with a count, tabular so it does not jitter as it climbs", async () => {
+    render(<ToastProvider>{null}</ToastProvider>);
+
+    showToast({
+      title: "Importing feeds",
+      type: "loading",
+      data: { progress: { value: 4, max: 10, label: "OPML import progress" } },
+    });
+
+    await waitFor(() => {
+      // The morph keeps a visually hidden copy for assistive tech, so the text appears twice.
+      expect(toastNode('[data-slot="toast-count"]').textContent).toContain("4/10");
+    });
+    const title = toastNode('[data-slot="toast-title"]');
+    const count = toastNode('[data-slot="toast-count"]');
+    expect(title.compareDocumentPosition(count) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(count.className).toContain("tabular-nums");
+    // The title takes the free space, which is what pushes the count to the end edge.
+    expect(title.className).toContain("flex-1");
+  });
+
+  test("steps the count and the ring together, up and down, in tabular digits", async () => {
+    render(<ToastProvider>{null}</ToastProvider>);
+    const label = "OPML import progress";
+    let id = "";
+    act(() => {
+      id = toastManager.add({
+        title: "Importing feeds",
+        type: "loading",
+        timeout: 0,
+        data: { progress: { value: 4, max: 10, label } },
+      });
+    });
+    const ringOffset = () =>
+      Number(
+        toastNode('[data-slot="toast-icon"] svg circle:last-of-type').getAttribute(
+          "stroke-dashoffset",
+        ),
+      );
+    const setProgress = (value: number) =>
+      act(() => {
+        toastManager.update(id, { data: { progress: { value, max: 10, label } } });
+      });
+
+    await waitFor(() => {
+      expect(toastNode('[data-slot="toast-count"]').textContent).toContain("4/10");
+    });
+    const atFour = ringOffset();
+    // Digits keep one width, so a step never moves the title or the end edge.
+    expect(toastNode('[data-slot="toast-count"]').className).toContain("tabular-nums");
+
+    setProgress(5);
+    await waitFor(() => {
+      expect(toastNode('[data-slot="toast-count"]').textContent).toContain("5/10");
+    });
+    expect(ringOffset()).toBeLessThan(atFour);
+
+    setProgress(3);
+    await waitFor(() => {
+      expect(toastNode('[data-slot="toast-count"]').textContent).toContain("3/10");
+    });
+    expect(ringOffset()).toBeGreaterThan(atFour);
+  });
+
+  test("ends the line with the toast's action", async () => {
+    const onUndo = vi.fn();
+    render(<ToastProvider>{null}</ToastProvider>);
+
+    showToast({
+      title: "Article hidden",
+      type: "success",
+      actionProps: { children: "Undo", onClick: onUndo },
+    });
+
+    const action = await screen.findByRole("button", { name: "Undo" });
+    const title = toastNode('[data-slot="toast-title"]');
+    expect(title.compareDocumentPosition(action) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    fireEvent.click(action);
+    expect(onUndo).toHaveBeenCalledTimes(1);
+  });
+
+  test("shapes the glass as a squircle and strokes its edge along the same path", async () => {
+    render(<ToastProvider>{null}</ToastProvider>);
+
+    showToast({ title: "Folder created", type: "success" });
+
+    await waitFor(() => {
+      expect(document.querySelector('[data-slot="toast-surface"] svg path')).not.toBeNull();
+    });
+    const surface = toastNode('[data-slot="toast-surface"]') as HTMLElement;
+    const edge = toastNode('[data-slot="toast-surface"] svg path');
+    expect(surface.style.borderRadius).toBe("14px");
+    expect(edge.getAttribute("d")).toMatch(/^M/);
+    expect(edge.getAttribute("stroke")).toMatch(/^url\(#toast-edge-/);
+  });
+});
 
 describe("AnchoredToastProvider", () => {
   afterEach(() => {

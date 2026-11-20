@@ -29,6 +29,13 @@ export function useRecentArticles() {
   return useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
 }
 
+/** Forgets the reading history of the signed-in account, both stored and on screen. */
+export function clearRecentArticles() {
+  snapshot = [];
+  storage.clearAll();
+  notifyListeners();
+}
+
 export function saveRecentArticle(
   article: ArticleListItemDto,
   viewedAt = new Date().toISOString(),

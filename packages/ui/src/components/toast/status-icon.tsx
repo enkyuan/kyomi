@@ -2,43 +2,24 @@
 
 import type { ToastObject } from "@base-ui/react/toast";
 import {
-  CircleAlertIcon,
-  CircleCheckIcon,
-  InfoIcon,
+  CheckCircle2FilledIcon,
+  CircleXFilledIcon,
+  ExclamationCircleFilledIcon,
   LoaderCircleIcon,
   TriangleAlertIcon,
 } from "blode-icons-react";
 import type React from "react";
+import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "../../lib/motion";
 import { cn } from "../../lib/utils";
+import { getToastProgress, type ToastProgressData } from "./progress";
 
 const TOAST_ICONS = {
-  error: CircleAlertIcon,
-  info: InfoIcon,
+  error: CircleXFilledIcon,
+  info: ExclamationCircleFilledIcon,
   loading: LoaderCircleIcon,
-  success: CircleCheckIcon,
+  success: CheckCircle2FilledIcon,
   warning: TriangleAlertIcon,
 } as const;
-
-type ToastProgressData = {
-  progress?: {
-    value: number;
-    max: number;
-    label?: string;
-  };
-};
-
-function getToastProgress(
-  toast: ToastObject<Record<string, unknown>>,
-): ToastProgressData["progress"] | null {
-  const progress = (toast.data as ToastProgressData | undefined)?.progress;
-  if (!progress || !Number.isFinite(progress.value) || !Number.isFinite(progress.max)) {
-    return null;
-  }
-  if (progress.max <= 0) {
-    return null;
-  }
-  return progress;
-}
 
 function ToastProgressIcon({
   progress,
@@ -47,7 +28,9 @@ function ToastProgressIcon({
 }): React.ReactElement {
   const max = Math.max(1, progress.max);
   const value = Math.min(Math.max(progress.value, 0), max);
-  const radius = 7;
+  // Outer diameter 15 of the 18-unit box (13.3px of 16), the drawn size of the other status icons,
+  // so the ring starts as far from the toast's edge as they do.
+  const radius = 6.5;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (value / max) * circumference;
 
@@ -70,7 +53,7 @@ function ToastProgressIcon({
           strokeWidth="2"
         />
         <circle
-          className="transition-[stroke-dashoffset] duration-300 ease-out"
+          className="transition-[stroke-dashoffset] duration-240 ease-out-quint motion-reduce:transition-none"
           cx="9"
           cy="9"
           fill="none"
@@ -86,32 +69,62 @@ function ToastProgressIcon({
   );
 }
 
+// A state change swaps the glyph in place: the old icon shrinks and fades out while the new one
+// grows in from the same spot a beat later, so a toast never shows two icons side by side.
+const ICON_SPRING = {
+  type: "spring",
+  mass: 4,
+  stiffness: 800,
+  damping: 80,
+  restDelta: 0.0001,
+} as const;
+const ICON_HIDDEN = { opacity: 0, scale: 0.6 };
+const ICON_SHOWN = { opacity: 1, scale: 1 };
+const ICON_INSTANT = { duration: 0 };
+
 export function ToastStatusIcon({
   toast,
 }: {
   toast: ToastObject<Record<string, unknown>>;
 }): React.ReactElement | null {
+  const prefersReducedMotion = useReducedMotion();
   const progress = getToastProgress(toast);
-  if (progress) {
-    return (
-      <div data-slot="toast-icon">
-        <ToastProgressIcon progress={progress} />
-      </div>
-    );
-  }
-
   const Icon = toast.type ? TOAST_ICONS[toast.type as keyof typeof TOAST_ICONS] : null;
-  if (!Icon) {
+  if (!progress && !Icon) {
     return null;
   }
 
+  // The ring and each type are separate states; the ring keeps its key while the count moves, so
+  // its stroke still eases between steps instead of remounting.
+  const state = progress ? "progress" : (toast.type ?? "none");
+
   return (
-    <div
-      className="[&>svg]:h-lh [&>svg]:w-4 [&_svg]:pointer-events-none [&_svg]:shrink-0"
-      data-slot="toast-icon"
-    >
-      <Icon className={cn("h-4 w-4 shrink-0", toastIconClassName(toast.type))} />
-    </div>
+    <LazyMotion features={domAnimation}>
+      <div
+        className="grid h-lh w-4 shrink-0 place-items-center [&_svg]:pointer-events-none [&_svg]:shrink-0"
+        data-slot="toast-icon"
+      >
+        <AnimatePresence initial={false}>
+          <m.div
+            animate={ICON_SHOWN}
+            className="col-start-1 row-start-1 grid place-items-center"
+            exit={{
+              ...ICON_HIDDEN,
+              transition: prefersReducedMotion ? ICON_INSTANT : ICON_SPRING,
+            }}
+            initial={ICON_HIDDEN}
+            key={state}
+            transition={prefersReducedMotion ? ICON_INSTANT : { ...ICON_SPRING, delay: 0.1 }}
+          >
+            {progress ? (
+              <ToastProgressIcon progress={progress} />
+            ) : Icon ? (
+              <Icon className={cn("h-4 w-4 shrink-0", toastIconClassName(toast.type))} />
+            ) : null}
+          </m.div>
+        </AnimatePresence>
+      </div>
+    </LazyMotion>
   );
 }
 

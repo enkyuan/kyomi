@@ -1,4 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { router } from "expo-router";
 import { useMemo } from "react";
 import { mobileApiErrorMessage } from "@/lib/api";
 import type { TabBarSourcesProps } from "@ui/tab-bar/lib/types";
@@ -41,9 +42,9 @@ export function useSources() {
   // request and put back if it fails.
   const { mutate: reorder } = useMutation({
     mutationFn: reorderFolders,
-    onError: (error, _ids, previous) => {
+    // A failed drop puts the row back, which is the feedback; a toast over the sheet adds nothing.
+    onError: (_error, _ids, previous) => {
       if (previous) queryClient.setQueryData(foldersQueryKey, previous);
-      onError(error);
     },
     onMutate: async (folderIds) => {
       await queryClient.cancelQueries({ queryKey: foldersQueryKey });
@@ -51,7 +52,8 @@ export function useSources() {
       if (previous) {
         const byId = new Map(previous.map((folder) => [folder.id, folder]));
         const moved = folderIds.flatMap((id) => byId.get(id) ?? []);
-        const rest = previous.filter((folder) => !folderIds.includes(folder.id));
+        const movedIds = new Set(folderIds);
+        const rest = previous.filter((folder) => !movedIds.has(folder.id));
         queryClient.setQueryData(foldersQueryKey, [...moved, ...rest]);
       }
       return previous;
@@ -90,6 +92,7 @@ export function useSources() {
       })),
       onCreateFolder: (name) => create(name),
       onDeleteFolder: (folderId) => remove(folderId),
+      onImport: () => router.push("/(protected)/settings/import-opml"),
       onRenameFolder: (folderId, name) => rename({ folderId, name }),
       onReorderFolders: (folderIds) => reorder(folderIds),
     }),

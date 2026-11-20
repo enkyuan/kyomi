@@ -2,7 +2,7 @@
 
 import { useMutation, type QueryClient } from "@tanstack/react-query";
 import { anchoredToastManager, toastManager } from "@kyomi/ui/components/toast";
-import { getUserSafeErrorMessage, logClientError } from "@kyomi/reader/lib/errors";
+import { logClientError } from "@kyomi/reader/lib/errors";
 import { followFeed, unfollowFeed } from "@modules/feeds/lib/api";
 import { moveFeedsToFolder } from "@modules/folders/lib/api";
 import {
@@ -57,7 +57,6 @@ export function useUnsaveRecapItemMutation(queryClient: QueryClient) {
       logClientError("inbox.recap.saved.unsave", error);
       toastManager.add({
         title: "Unable to unsave item",
-        description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });
     },
@@ -89,7 +88,6 @@ export function useDismissContinueReadingMutation(queryClient: QueryClient) {
       logClientError("inbox.recap.continue_reading.dismiss", error);
       toastManager.add({
         title: "Unable to dismiss article",
-        description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });
     },
@@ -113,8 +111,7 @@ export function useFollowTopSourceMutation(queryClient: QueryClient) {
         invalidateRecapSurface(queryClient),
       ]);
       toastManager.add({
-        title: "Feed followed",
-        description: feed.title,
+        title: `Followed ${feed.title}`,
         type: "success",
       });
     },
@@ -122,7 +119,6 @@ export function useFollowTopSourceMutation(queryClient: QueryClient) {
       logClientError("inbox.recap.feed.follow", error);
       toastManager.add({
         title: "Unable to follow feed",
-        description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });
     },
@@ -143,7 +139,6 @@ export function useMoveRecapFeedMutation(queryClient: QueryClient) {
       logClientError("inbox.recap.feed.move", error);
       toastManager.add({
         title: "Unable to move feed",
-        description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });
     },
@@ -185,11 +180,7 @@ export function useRemoveRecapFeedsMutation(queryClient: QueryClient) {
       }
 
       toastManager.add({
-        title: feedIds.length === 1 ? "Feed removed" : "Feeds removed",
-        description:
-          feedIds.length === 1
-            ? "The selected feed has been removed from your following."
-            : `${feedIds.length} selected feeds were removed from your following.`,
+        title: feedIds.length === 1 ? "Feed removed" : `${feedIds.length} feeds removed`,
         type: "success",
       });
     },
@@ -197,7 +188,6 @@ export function useRemoveRecapFeedsMutation(queryClient: QueryClient) {
       logClientError("inbox.recap.feed.remove", error);
       toastManager.add({
         title: "Unable to remove feed",
-        description: getUserSafeErrorMessage(error, "Try again in a moment."),
         type: "error",
       });
     },

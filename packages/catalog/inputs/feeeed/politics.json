@@ -10,22 +10,11 @@
       "kind": "feed",
       "feed_url": "https://www.thefp.com/feed",
       "details": "US Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "Journalism",
-        "USA",
-        "_mainstream"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "Journalism", "USA", "_mainstream"],
       "cleaned_author": "Bari Weiss",
       "language": "en",
-      "keywords": [
-        "journalism",
-        "politics",
-        "investigative reporting"
-      ],
+      "keywords": ["journalism", "politics", "investigative reporting"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -36,22 +25,11 @@
       "kind": "feed",
       "feed_url": "https://heathercoxrichardson.substack.com/feed",
       "details": "US Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "History",
-        "USA",
-        "_academic"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "History", "USA", "_academic"],
       "cleaned_author": "Heather Cox Richardson",
       "language": "en",
-      "keywords": [
-        "history",
-        "politics",
-        "analysis"
-      ],
+      "keywords": ["history", "politics", "analysis"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -62,22 +40,11 @@
       "kind": "feed",
       "feed_url": "https://www.thebulwark.com/feed",
       "details": "US Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "Journalism",
-        "USA",
-        "_intellectual"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "Journalism", "USA", "_intellectual"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "politics",
-        "analysis",
-        "culture"
-      ],
+      "keywords": ["politics", "analysis", "culture"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -88,21 +55,11 @@
       "kind": "feed",
       "feed_url": "https://contrarian.substack.com/feed",
       "details": "US Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "USA"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "USA"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "democracy",
-        "journalism",
-        "politics",
-        "truth"
-      ],
+      "keywords": ["democracy", "journalism", "politics", "truth"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -113,22 +70,11 @@
       "kind": "feed",
       "feed_url": "https://zeteo.com/feed",
       "details": "US Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "USA",
-        "_intellectual"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "USA", "_intellectual"],
       "cleaned_author": "Mehdi Hasan",
       "language": "en",
-      "keywords": [
-        "truth",
-        "media accountability",
-        "news",
-        "politics"
-      ],
+      "keywords": ["truth", "media accountability", "news", "politics"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -139,26 +85,11 @@
       "kind": "feed",
       "feed_url": "https://www.johncanzano.com/feed",
       "details": "Sports",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Tech",
-        "News",
-        "Living",
-        "Politics",
-        "Sports",
-        "USA",
-        "Football"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Tech", "News", "Living", "Politics", "Sports", "USA", "Football"],
       "cleaned_author": "John Canzano",
       "language": "en",
-      "keywords": [
-        "college football",
-        "sports",
-        "gambling",
-        "Pac-12"
-      ],
+      "keywords": ["college football", "sports", "gambling", "Pac-12"],
       "top_level_category": "Sports"
     },
     {
@@ -169,23 +100,11 @@
       "kind": "feed",
       "feed_url": "https://snyder.substack.com/feed",
       "details": "World Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "Living",
-        "History",
-        "World News"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "Living", "History", "World News"],
       "cleaned_author": "Timothy Snyder",
       "language": "en",
-      "keywords": [
-        "politics",
-        "history",
-        "current events",
-        "Ukraine"
-      ],
+      "keywords": ["politics", "history", "current events", "Ukraine"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -196,21 +115,11 @@
       "kind": "feed",
       "feed_url": "https://www.dropsitenews.com/feed",
       "details": "World Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "World News"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "World News"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "politics",
-        "war",
-        "independent journalism",
-        "current events"
-      ],
+      "keywords": ["politics", "war", "independent journalism", "current events"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -221,21 +130,11 @@
       "kind": "feed",
       "feed_url": "https://chrishedges.substack.com/feed",
       "details": "World Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "World News"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "World News"],
       "cleaned_author": "Chris Hedges",
       "language": "en",
-      "keywords": [
-        "foreign policy",
-        "civil liberties",
-        "political commentary",
-        "USA"
-      ],
+      "keywords": ["foreign policy", "civil liberties", "political commentary", "USA"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -246,19 +145,11 @@
       "kind": "feed",
       "feed_url": "https://www.mattgoodwin.org/feed",
       "details": "World Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "politics",
-        "national identity",
-        "political commentary"
-      ],
+      "keywords": ["politics", "national identity", "political commentary"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -269,19 +160,11 @@
       "kind": "feed",
       "feed_url": "https://samf.substack.com/feed",
       "details": "World Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics"],
       "cleaned_author": "Sam Freedman",
       "language": "en",
-      "keywords": [
-        "politics",
-        "policy analysis",
-        "foreign affairs"
-      ],
+      "keywords": ["politics", "policy analysis", "foreign affairs"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -292,21 +175,11 @@
       "kind": "feed",
       "feed_url": "https://alexberenson.substack.com/feed",
       "details": "Health Politics",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "Health",
-        "Journalism"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "Health", "Journalism"],
       "cleaned_author": "Alex Berenson",
       "language": "en",
-      "keywords": [
-        "independent journalism",
-        "health politics",
-        "controversial topics"
-      ],
+      "keywords": ["independent journalism", "health politics", "controversial topics"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -317,19 +190,11 @@
       "kind": "feed",
       "feed_url": "https://www.public.news/feed",
       "details": "News",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics"],
       "cleaned_author": "Michael Shellenberger",
       "language": "en",
-      "keywords": [
-        "free speech",
-        "society",
-        "civilization"
-      ],
+      "keywords": ["free speech", "society", "civilization"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -340,19 +205,11 @@
       "kind": "feed",
       "feed_url": "https://www.whitepaper.mx/feed",
       "details": "News",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics"],
       "cleaned_author": "Rene Lankenau",
       "language": "es",
-      "keywords": [
-        "business news",
-        "industry insights",
-        "professional updates"
-      ],
+      "keywords": ["business news", "industry insights", "professional updates"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -363,19 +220,11 @@
       "kind": "feed",
       "feed_url": "https://sinocism.com/feed",
       "details": "News",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics"],
       "cleaned_author": "Bill Bishop",
       "language": "en",
-      "keywords": [
-        "China news",
-        "political analysis",
-        "international relations"
-      ],
+      "keywords": ["China news", "political analysis", "international relations"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -386,19 +235,11 @@
       "kind": "feed",
       "feed_url": "https://seymourhersh.substack.com/feed",
       "details": "News",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "investigative journalism",
-        "political commentary",
-        "scandals"
-      ],
+      "keywords": ["investigative journalism", "political commentary", "scandals"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -409,21 +250,11 @@
       "kind": "feed",
       "feed_url": "https://www.serioustrouble.show/feed",
       "details": "News",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "_hip",
-        "_artsy"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "_hip", "_artsy"],
       "cleaned_author": "Sara Fay",
       "language": "en",
-      "keywords": [
-        "law",
-        "legal commentary",
-        "podcast"
-      ],
+      "keywords": ["law", "legal commentary", "podcast"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -434,21 +265,11 @@
       "kind": "feed",
       "feed_url": "https://endtimes.substack.com/feed",
       "details": "Faith",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "War"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "War"],
       "cleaned_author": "Jimmy Evans",
       "language": "en",
-      "keywords": [
-        "prophecy",
-        "current events",
-        "analysis",
-        "faith"
-      ],
+      "keywords": ["prophecy", "current events", "analysis", "faith"],
       "top_level_category": "Identity & Community"
     },
     {
@@ -459,19 +280,11 @@
       "kind": "feed",
       "feed_url": "https://mcrawford.substack.com/feed",
       "details": "Philosophy",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics"],
       "cleaned_author": "Matthew B. Crawford",
       "language": "en",
-      "keywords": [
-        "politics",
-        "theory",
-        "contemporary issues"
-      ],
+      "keywords": ["politics", "theory", "contemporary issues"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -482,21 +295,11 @@
       "kind": "feed",
       "feed_url": "https://phillipspobrien.substack.com/feed",
       "details": "International",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "World News",
-        "Journalism"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "World News", "Journalism"],
       "cleaned_author": "Phillips P. OBrien",
       "language": "en",
-      "keywords": [
-        "Phillips P. OBrien",
-        "Ukraine",
-        "political narratives"
-      ],
+      "keywords": ["Phillips P. OBrien", "Ukraine", "political narratives"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -507,20 +310,11 @@
       "kind": "feed",
       "feed_url": "https://www.spytalk.co/feed",
       "details": "International",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "World News"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "World News"],
       "cleaned_author": "Jeff Stein",
       "language": "en",
-      "keywords": [
-        "Jeff Stein",
-        "intelligence",
-        "espionage"
-      ],
+      "keywords": ["Jeff Stein", "intelligence", "espionage"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -531,19 +325,11 @@
       "kind": "feed",
       "feed_url": "https://nickcohen.substack.com/feed",
       "details": "International",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics"],
       "cleaned_author": "Nick Cohen",
       "language": "en",
-      "keywords": [
-        "Nick Cohen",
-        "UK politics",
-        "culture"
-      ],
+      "keywords": ["Nick Cohen", "UK politics", "culture"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -554,20 +340,11 @@
       "kind": "feed",
       "feed_url": "https://graymirror.substack.com/feed",
       "details": "History",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "History"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "History"],
       "cleaned_author": "Curtis Yarvin",
       "language": "en",
-      "keywords": [
-        "Curtis Yarvin",
-        "governance",
-        "alternatives"
-      ],
+      "keywords": ["Curtis Yarvin", "governance", "alternatives"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -578,20 +355,11 @@
       "kind": "feed",
       "feed_url": "https://jemartisby.substack.com/feed",
       "details": "History",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "Activism"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "Activism"],
       "cleaned_author": "Jemar Tisby",
       "language": "en",
-      "keywords": [
-        "race",
-        "faith",
-        "justice"
-      ],
+      "keywords": ["race", "faith", "justice"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -602,20 +370,11 @@
       "kind": "feed",
       "feed_url": "https://www.imightbewrong.org/feed",
       "details": "Humor",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "Humor"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "Humor"],
       "cleaned_author": "Jeff Maurer",
       "language": "en",
-      "keywords": [
-        "comedy",
-        "politics",
-        "satire"
-      ],
+      "keywords": ["comedy", "politics", "satire"],
       "top_level_category": "Entertainment"
     },
     {
@@ -626,20 +385,11 @@
       "kind": "feed",
       "feed_url": "https://chemtrails.substack.com/feed",
       "details": "Education",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Politics",
-        "Activism"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Politics", "Activism"],
       "cleaned_author": "Agent131711",
       "language": "en",
-      "keywords": [
-        "truth",
-        "humor",
-        "controversy"
-      ],
+      "keywords": ["truth", "humor", "controversy"],
       "top_level_category": "Industry & Professions"
     },
     {
@@ -651,25 +401,11 @@
       "feed_url": "http://feeds.feedburner.com/TheAtlantic",
       "popularity_score": 15.519871128593945,
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Arts & Culture",
-        "USA",
-        "Words",
-        "Journalism"
-      ],
+      "tags": ["Politics", "Arts & Culture", "USA", "Words", "Journalism"],
       "language": "en",
-      "keywords": [
-        "culture",
-        "politics",
-        "society",
-        "investigative"
-      ],
+      "keywords": ["culture", "politics", "society", "investigative"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -681,24 +417,11 @@
       "feed_url": "http://www.newyorker.com/services/mrss/feeds/everything.xml",
       "popularity_score": 8.205989854994,
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Politics",
-        "USA",
-        "Journalism",
-        "Literature"
-      ],
+      "tags": ["Arts & Culture", "Politics", "USA", "Journalism", "Literature"],
       "language": "en",
-      "keywords": [
-        "commentary",
-        "reporting",
-        "fiction"
-      ],
+      "keywords": ["commentary", "reporting", "fiction"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -709,19 +432,11 @@
       "kind": "feed",
       "feed_url": "https://netzpolitik.org/feed/",
       "details": "Popular",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics"
-      ],
+      "tags": ["Politics"],
       "language": "de",
-      "keywords": [
-        "digital rights",
-        "internet policy",
-        "freedom of expression"
-      ],
+      "keywords": ["digital rights", "internet policy", "freedom of expression"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -733,23 +448,11 @@
       "feed_url": "http://www.vox.com/rss/index.xml",
       "popularity_score": 8.237969799788589,
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Politics",
-        "USA",
-        "Journalism"
-      ],
+      "tags": ["News", "Politics", "USA", "Journalism"],
       "language": "en",
-      "keywords": [
-        "news",
-        "current events",
-        "political analysis"
-      ],
+      "keywords": ["news", "current events", "political analysis"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -760,24 +463,11 @@
       "kind": "feed",
       "feed_url": "https://www.newyorker.com/feed/rss",
       "details": "Popular",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Politics",
-        "News",
-        "Journalism"
-      ],
+      "tags": ["Arts & Culture", "Politics", "News", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Trump",
-        "E.P.A.",
-        "Oscars",
-        "Berlin Film Festival",
-        "cartoon"
-      ],
+      "keywords": ["Trump", "E.P.A.", "Oscars", "Berlin Film Festival", "cartoon"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -788,24 +478,12 @@
       "kind": "feed",
       "feed_url": "http://nymag.com/feeds/intelligencer/flipboard.rss",
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 4.830178844220315,
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Politics",
-        "USA",
-        "Journalism"
-      ],
+      "tags": ["News", "Politics", "USA", "Journalism"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "pop culture",
-        "analysis"
-      ],
+      "keywords": ["politics", "pop culture", "analysis"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -816,24 +494,11 @@
       "kind": "feed",
       "feed_url": "https://www.economist.com/briefing/rss.xml",
       "details": "Popular",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "News",
-        "USA",
-        "_academic"
-      ],
+      "tags": ["Politics", "News", "USA", "_academic"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "economy",
-        "Trump",
-        "international relations",
-        "scams"
-      ],
+      "keywords": ["politics", "economy", "Trump", "international relations", "scams"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -844,23 +509,11 @@
       "kind": "feed",
       "feed_url": "https://www.economist.com/business/rss.xml",
       "details": "Popular",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Politics",
-        "_academic"
-      ],
+      "tags": ["Money", "Politics", "_academic"],
       "language": "en",
-      "keywords": [
-        "business",
-        "economy",
-        "trends",
-        "corporate strategy",
-        "market dynamics"
-      ],
+      "keywords": ["business", "economy", "trends", "corporate strategy", "market dynamics"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -871,45 +524,27 @@
       "kind": "feed",
       "feed_url": "http://www.foreignaffairs.com/rss.xml",
       "details": "Popular",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 3.133133017810437,
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "World News"
-      ],
+      "tags": ["Politics", "World News"],
       "language": "en",
-      "keywords": [
-        "international relations",
-        "geopolitics",
-        "analysis"
-      ],
+      "keywords": ["international relations", "geopolitics", "analysis"],
       "top_level_category": "News & Current Events"
     },
     {
       "title": "r/politics",
       "popularity_score": 2.6693667446204508,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "subreddit": "politics",
       "kind": "reddit",
       "id": "reddit:politics",
       "cleaned_title": "r/politics",
       "cleaned_author": null,
       "summary": "A subreddit focused on news and discussions pertinent to U.S. politics, providing a platform for engaging commentary and information exchange.",
-      "tags": [
-        "Politics"
-      ],
+      "tags": ["Politics"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "discussion",
-        "news"
-      ]
+      "keywords": ["politics", "discussion", "news"]
     },
     {
       "id": "feed:eduwonk.substack.com:Eduwonk",
@@ -919,21 +554,11 @@
       "kind": "feed",
       "feed_url": "https://eduwonk.substack.com/feed",
       "details": "Education > Academic Research",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Education",
-        "_intellectual"
-      ],
+      "tags": ["Politics", "Education", "_intellectual"],
       "language": "en",
-      "keywords": [
-        "education news",
-        "analysis",
-        "commentary"
-      ],
+      "keywords": ["education news", "analysis", "commentary"],
       "top_level_category": "Science & Nature"
     },
     {
@@ -944,22 +569,11 @@
       "kind": "feed",
       "feed_url": "https://scholarstage.substack.com/feed",
       "details": "Education > Academic Research",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Science",
-        "Academia",
-        "History"
-      ],
+      "tags": ["Politics", "Science", "Academia", "History"],
       "language": "en",
-      "keywords": [
-        "China",
-        "politics",
-        "history"
-      ],
+      "keywords": ["China", "politics", "history"],
       "top_level_category": "Science & Nature"
     },
     {
@@ -970,22 +584,11 @@
       "kind": "feed",
       "feed_url": "http://www.insidehighered.com/rss/feed/ihe",
       "details": "Education > Schools & Colleges",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Living",
-        "Education",
-        "Academia"
-      ],
+      "tags": ["Politics", "Living", "Education", "Academia"],
       "language": "en",
-      "keywords": [
-        "higher education",
-        "news",
-        "analysis"
-      ],
+      "keywords": ["higher education", "news", "analysis"],
       "top_level_category": "Industry & Professions"
     },
     {
@@ -996,21 +599,11 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/HechingerReport",
       "details": "Education > Educational Policy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Science",
-        "Education"
-      ],
+      "tags": ["Politics", "Science", "Education"],
       "language": "en",
-      "keywords": [
-        "education policy",
-        "innovation",
-        "inequality"
-      ],
+      "keywords": ["education policy", "innovation", "inequality"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -1022,21 +615,11 @@
       "channel_id": "UCiqYR2mQaHITNUtVn6kXI-g",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqNjRqGpizzgwLvwV1JDIM6Zlt9vu8M3P5vtGA8s=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Education > Educational Policy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Money",
-        "Education"
-      ],
+      "tags": ["Politics", "Money", "Education"],
       "language": "en",
-      "keywords": [
-        "educational equity",
-        "YouTube content",
-        "policy advocacy"
-      ],
+      "keywords": ["educational equity", "YouTube content", "policy advocacy"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -1048,21 +631,11 @@
       "channel_id": "UC9xCeMuB9TmzrPxWzoBOMfw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqOcNbZuKMCjLxKPFsra9x665RdsYzL3g74SFahLcw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Education > Educational Policy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Local",
-        "Education"
-      ],
+      "tags": ["Politics", "Local", "Education"],
       "language": "en",
-      "keywords": [
-        "California education",
-        "YouTube news",
-        "education policy"
-      ],
+      "keywords": ["California education", "YouTube news", "education policy"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -1073,23 +646,11 @@
       "kind": "feed",
       "feed_url": "http://www.ecs.org/feed/",
       "details": "Education > Educational Policy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Science",
-        "Education",
-        "USA"
-      ],
+      "tags": ["Politics", "Science", "Education", "USA"],
       "language": "en",
-      "keywords": [
-        "education policy",
-        "state policy",
-        "research",
-        "analysis"
-      ],
+      "keywords": ["education policy", "state policy", "research", "analysis"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -1100,22 +661,11 @@
       "kind": "feed",
       "feed_url": "http://thediplomat.com/feed/atom/",
       "details": "Local > Asia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Asia",
-        "Journalism"
-      ],
+      "tags": ["Politics", "Asia", "Journalism"],
       "language": "en",
-      "keywords": [
-        "Asia-Pacific",
-        "politics",
-        "security",
-        "culture"
-      ],
+      "keywords": ["Asia-Pacific", "politics", "security", "culture"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -1123,429 +673,246 @@
       "title": "Instapaper Daily",
       "kind": "feed",
       "feed_url": "http://www.instapaper.com/daily.rss",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "Instapaper Daily",
       "cleaned_author": null,
       "summary": "This daily feed curates an eclectic mix of topical analyses and thought-provoking viewpoints, covering a range of societal and technological issues.",
-      "tags": [
-        "News",
-        "Politics",
-        "Science",
-        "Thinking",
-        "Humor",
-        "_intellectual",
-        "_artsy"
-      ],
+      "tags": ["News", "Politics", "Science", "Thinking", "Humor", "_intellectual", "_artsy"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "technology",
-        "opinion"
-      ]
+      "keywords": ["politics", "technology", "opinion"]
     },
     {
       "id": "feed:http://www.scotusblog.com/feed/",
       "title": "SCOTUSblog",
       "kind": "feed",
       "feed_url": "http://www.scotusblog.com/feed/",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "SCOTUSblog",
       "cleaned_author": null,
       "summary": "A comprehensive source for news and analysis on the United States Supreme Court, providing in-depth coverage on pivotal cases and judicial decisions.",
-      "tags": [
-        "Politics",
-        "Congress",
-        "Justice"
-      ],
+      "tags": ["Politics", "Congress", "Justice"],
       "language": "en",
-      "keywords": [
-        "Supreme Court",
-        "legal analysis",
-        "justice"
-      ]
+      "keywords": ["Supreme Court", "legal analysis", "justice"]
     },
     {
       "id": "feed:https://talkingpointsmemo.com/feed",
       "title": "TPM \u2013 Talking Points Memo",
       "kind": "feed",
       "feed_url": "https://talkingpointsmemo.com/feed",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "TPM",
       "cleaned_author": null,
       "summary": "A well-established source for breaking news and analysis, TPM provides in-depth coverage of political issues and current events.",
-      "tags": [
-        "News",
-        "Politics",
-        "USA"
-      ],
+      "tags": ["News", "Politics", "USA"],
       "language": "en",
-      "keywords": [
-        "breaking news",
-        "analysis",
-        "politics",
-        "current events"
-      ]
+      "keywords": ["breaking news", "analysis", "politics", "current events"]
     },
     {
       "id": "feed:https://larrycuban.wordpress.com/feed/",
       "title": "Larry Cuban on School Reform and Classroom Practice",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://larrycuban.wordpress.com/feed/",
       "summary": "Scholar/ Practitioner's thoughts on education.",
       "details": "Education",
       "cleaned_title": "Larry Cuban on School Reform and Classroom Practice",
       "cleaned_author": "Larry Cuban",
-      "tags": [
-        "Politics",
-        "Education"
-      ],
+      "tags": ["Politics", "Education"],
       "language": "en",
-      "keywords": [
-        "education",
-        "reform",
-        "classroom"
-      ],
+      "keywords": ["education", "reform", "classroom"],
       "top_level_category": "Industry & Professions"
     },
     {
       "id": "feed:https://africasacountry.com/feed/",
       "title": "Africa Is a Country",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://africasacountry.com/feed/",
       "summary": "\u2026a site of opinion, analysis, and new writing on and from the African left.",
       "details": "Politics > Politics",
       "cleaned_title": "Africa Is a Country",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Africa",
-        "Journalism"
-      ],
+      "tags": ["Politics", "Africa", "Journalism"],
       "language": "en",
-      "keywords": [
-        "African politics",
-        "social issues",
-        "opinion writing"
-      ],
+      "keywords": ["African politics", "social issues", "opinion writing"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://constitutionallyspeaking.co.za/feed/",
       "title": "Constitutionally Speaking",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://constitutionallyspeaking.co.za/feed/",
       "summary": "A blog that navigates political and social issues in South Africa through the lens of constitutional law, providing insightful commentary from legal scholar Pierre de Vos.",
       "details": "Politics > Law",
       "cleaned_title": "Constitutionally Speaking",
       "cleaned_author": "Pierre de Vos",
-      "tags": [
-        "Politics",
-        "Law"
-      ],
+      "tags": ["Politics", "Law"],
       "language": "en",
-      "keywords": [
-        "South Africa",
-        "constitutional law",
-        "political commentary"
-      ],
+      "keywords": ["South Africa", "constitutional law", "political commentary"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://www.ejiltalk.org/feed/",
       "title": "EJIL: Talk!",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.ejiltalk.org/feed/",
       "summary": "Blog of the European Journal of International Law.",
       "details": "Politics > Law",
       "cleaned_title": "EJIL: Talk!",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Law",
-        "_academic"
-      ],
+      "tags": ["Politics", "Law", "_academic"],
       "language": "en",
-      "keywords": [
-        "international law",
-        "EU",
-        "human rights",
-        "sanctions"
-      ],
+      "keywords": ["international law", "EU", "human rights", "sanctions"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://johnquiggin.com/feed/",
       "title": "John Quiggin",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://johnquiggin.com/feed/",
       "summary": "Commentary on Australian and world events from a socialist and democratic viewpoint.",
       "details": "Politics > Politics",
       "cleaned_title": "John Quiggin",
       "cleaned_author": "John Quiggin",
-      "tags": [
-        "Politics",
-        "Australia",
-        "_left"
-      ],
+      "tags": ["Politics", "Australia", "_left"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "Australia",
-        "economic commentary",
-        "socialism"
-      ],
+      "keywords": ["politics", "Australia", "economic commentary", "socialism"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://pivic.blog/rss/",
       "title": "Niklas's blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://pivic.blog/rss/",
       "summary": "A personal blog featuring reflections on various literary and political topics, interweaving historical and contemporary perspectives.",
       "details": "Countries",
       "cleaned_title": "Niklas's blog",
       "cleaned_author": "Niklas",
-      "tags": [
-        "Politics",
-        "History"
-      ],
+      "tags": ["Politics", "History"],
       "language": "en",
-      "keywords": [
-        "literature",
-        "politics",
-        "historical analysis",
-        "commentary"
-      ],
+      "keywords": ["literature", "politics", "historical analysis", "commentary"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://www.palestinechronicle.com/feed/",
       "title": "Palestine Chronicle LIVE BLOG",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.palestinechronicle.com/feed/",
       "summary": "\u2026a 501(c)3 non-profit organization whose mission is to educate the general public by providing a forum that strives to highlight issues of relevance to human rights, national struggles, freedom and democracy\u2026.",
       "details": "Arts > News",
       "cleaned_title": "Palestine Chronicle LIVE BLOG",
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Politics",
-        "Middle East",
-        "Activism",
-        "Journalism",
-        "_mainstream"
-      ],
+      "tags": ["News", "Politics", "Middle East", "Activism", "Journalism", "_mainstream"],
       "language": "en",
-      "keywords": [
-        "Palestine",
-        "Middle East",
-        "human rights",
-        "Israel",
-        "conflict"
-      ],
+      "keywords": ["Palestine", "Middle East", "human rights", "Israel", "conflict"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:https://writing.kemitchell.com/feed.xml",
       "title": "/dev/lawyer",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://writing.kemitchell.com/feed.xml",
       "summary": "law, technology, and the space between.",
       "details": "Politics > Law",
       "cleaned_title": "/dev/lawyer",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Law",
-        "Science"
-      ],
+      "tags": ["Politics", "Law", "Science"],
       "language": "en",
-      "keywords": [
-        "law",
-        "technology",
-        "LLM",
-        "code generation"
-      ],
+      "keywords": ["law", "technology", "LLM", "code generation"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://crookedtimber.org/feed/",
       "title": "Crooked Timber",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://crookedtimber.org/feed/",
       "summary": "Out of the crooked timber of humanity, no straight thing was ever made.",
       "details": "Uncategorizable",
       "cleaned_title": "Crooked Timber",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Arts & Culture",
-        "Physics",
-        "Academia"
-      ],
+      "tags": ["Politics", "Arts & Culture", "Physics", "Academia"],
       "language": "en",
-      "keywords": [
-        "critique",
-        "philosophy",
-        "society"
-      ],
+      "keywords": ["critique", "philosophy", "society"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://sippey.com/rss.xml",
       "title": "Michael Sippey",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://sippey.com/rss.xml",
       "summary": "A long-running personal blog where Michael Sippey shares his insights on politics, culture, and personal reflections, inviting readers into his contemplative world.",
       "details": "Uncategorizable",
       "cleaned_title": "Michael Sippey",
       "cleaned_author": "Michael Sippey",
-      "tags": [
-        "Politics",
-        "Journalism",
-        "Activism"
-      ],
+      "tags": ["Politics", "Journalism", "Activism"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "personal",
-        "reflections"
-      ],
+      "keywords": ["politics", "personal", "reflections"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://faroutliers.com/feed/",
       "title": "Far Outliers",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://faroutliers.com/feed/",
       "summary": "Exploring migrants, exiles, expatriates, and out-of-the-way peoples, places, and times.",
       "details": "Society",
       "cleaned_title": "Far Outliers",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "History",
-        "Social",
-        "Europe"
-      ],
+      "tags": ["Politics", "History", "Social", "Europe"],
       "language": "en",
-      "keywords": [
-        "migrants",
-        "cultures",
-        "Pashto",
-        "Romania",
-        "Eastern European nationalism"
-      ],
+      "keywords": ["migrants", "cultures", "Pashto", "Romania", "Eastern European nationalism"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://humanizingthevacuum.wordpress.com/feed/",
       "title": "Humanizing The Vacuum",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://humanizingthevacuum.wordpress.com/feed/",
       "summary": "Alfred Soto's blog about arts and politics.",
       "details": "Politics > Politics",
       "cleaned_title": "Humanizing The Vacuum",
       "cleaned_author": "Alfred Soto",
-      "tags": [
-        "Politics",
-        "Music"
-      ],
+      "tags": ["Politics", "Music"],
       "language": "en",
-      "keywords": [
-        "music",
-        "politics",
-        "rankings",
-        "Oscars"
-      ],
+      "keywords": ["music", "politics", "rankings", "Oscars"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://www.spellingmistakescostlives.com/blog-feed.xml",
       "title": "Spelling Mistakes Cost Lives /// Darren Cullen",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.spellingmistakescostlives.com/blog-feed.xml",
       "details": "Politics > Politics",
       "cleaned_title": "Spelling Mistakes Cost Lives",
       "cleaned_author": "Darren Cullen",
       "summary": "Darren Cullen's blog tackles pressing political issues with sharp wit and commentary, using humor and creative expression to provoke thought around serious topics.",
-      "tags": [
-        "Politics",
-        "Journalism",
-        "_intellectual",
-        "_alternative"
-      ],
+      "tags": ["Politics", "Journalism", "_intellectual", "_alternative"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "social commentary",
-        "humor",
-        "writing"
-      ],
+      "keywords": ["politics", "social commentary", "humor", "writing"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://www.newshounds.us/home.rss",
       "title": "NewsHounds",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.newshounds.us/home.rss",
       "details": "Arts > TV",
       "cleaned_title": "NewsHounds",
       "cleaned_author": null,
       "summary": "A critical blog that analyzes media coverage, particularly focusing on the editorial choices of major news networks like Fox, amidst contemporary political narratives.",
-      "tags": [
-        "Politics",
-        "Arts & Culture",
-        "Journalism"
-      ],
+      "tags": ["Politics", "Arts & Culture", "Journalism"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Entertainment"
@@ -1554,125 +921,73 @@
       "id": "feed:http://thettablog.blogspot.com/feeds/posts/default",
       "title": "The TTABlog\u00ae",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://thettablog.blogspot.com/feeds/posts/default",
       "summary": "Keeping Tabs on the TTAB\u00ae.",
       "details": "Politics > Government",
       "cleaned_title": "The TTABlog\u00ae",
       "cleaned_author": "John L. Welch",
-      "tags": [
-        "Politics",
-        "Law",
-        "_technical"
-      ],
+      "tags": ["Politics", "Law", "_technical"],
       "language": "en",
-      "keywords": [
-        "trademark",
-        "TTAB",
-        "law",
-        "insights"
-      ],
+      "keywords": ["trademark", "TTAB", "law", "insights"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:http://www.antipope.org/charlie/blog-static/atom.xml",
       "title": "Charlie's Diary",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://www.antipope.org/charlie/blog-static/atom.xml",
       "summary": "Being the blog of Charles Stross, author, and occasional guests.",
       "details": "Politics > Politics",
       "cleaned_title": "Charlie's Diary",
       "cleaned_author": "Charles Stross",
-      "tags": [
-        "Politics",
-        "Writing",
-        "Science",
-        "History"
-      ],
+      "tags": ["Politics", "Writing", "Science", "History"],
       "language": "en",
-      "keywords": [
-        "Charles Stross",
-        "politics",
-        "writing tips"
-      ],
+      "keywords": ["Charles Stross", "politics", "writing tips"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:http://kenmacleod.blogspot.com/feeds/posts/default",
       "title": "The Early Days of a Better Nation",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://kenmacleod.blogspot.com/feeds/posts/default",
       "summary": "Ken MacLeod's comments.",
       "details": "Arts > Books > Fiction Books > Science Fiction",
       "cleaned_title": "The Early Days of a Better Nation",
       "cleaned_author": "Ken MacLeod",
-      "tags": [
-        "Politics",
-        "Activism",
-        "Science",
-        "Literature"
-      ],
+      "tags": ["Politics", "Activism", "Science", "Literature"],
       "language": "en",
-      "keywords": [
-        "Ken MacLeod",
-        "future visions",
-        "social commentary"
-      ],
+      "keywords": ["Ken MacLeod", "future visions", "social commentary"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:https://soif.org.uk/blog/feed/",
       "title": "School of International Futures - Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://soif.org.uk/blog/feed/",
       "summary": "This blog focuses on the future of international policy and governance, exploring vital themes like intergenerational solidarity and traditional governance through posts that highlight initiatives and dialogues around future generations.",
       "details": "Humanities > Futures",
       "cleaned_title": "School of International Futures",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Science",
-        "History",
-        "Activism"
-      ],
+      "tags": ["Politics", "Science", "History", "Activism"],
       "language": "en",
-      "keywords": [
-        "future",
-        "governance",
-        "intergenerational",
-        "dialogue"
-      ],
+      "keywords": ["future", "governance", "intergenerational", "dialogue"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://airminded.org/feed/",
       "title": "Airminded",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://airminded.org/feed/",
       "summary": "Airpower and British society, 1908-1941 (mostly).",
       "details": "Politics > Military",
       "cleaned_title": "Airminded",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "UK",
-        "War",
-        "History"
-      ],
+      "tags": ["Politics", "UK", "War", "History"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Society, Law & History"
@@ -1681,19 +996,13 @@
       "id": "feed:https://brian-sandberg.com/feed/",
       "title": "Brian Sandberg: Historical Perspectives",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://brian-sandberg.com/feed/",
       "summary": "Resources for Historical Thinking.",
       "details": "Humanities > History",
       "cleaned_title": "Brian Sandberg: Historical Perspectives",
       "cleaned_author": "Brian Sandberg",
-      "tags": [
-        "Politics",
-        "History",
-        "_intellectual"
-      ],
+      "tags": ["Politics", "History", "_intellectual"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Society, Law & History"
@@ -1702,1000 +1011,597 @@
       "id": "feed:http://flintlockandtomahawk.blogspot.com/feeds/posts/default",
       "title": "Flintlock and tomahawk",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://flintlockandtomahawk.blogspot.com/feeds/posts/default",
       "summary": "American warfare 1690-1835 in popular culture, art, in miniature and in wargames, through Living History and in movies.",
       "details": "Politics > Military",
       "cleaned_title": "Flintlock and Tomahawk",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "History",
-        "War"
-      ],
+      "tags": ["Politics", "History", "War"],
       "language": "en",
-      "keywords": [
-        "American warfare",
-        "reenactment",
-        "popular culture",
-        "art"
-      ],
+      "keywords": ["American warfare", "reenactment", "popular culture", "art"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://historyofparliament.com/feed/",
       "title": "The History of Parliament",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://historyofparliament.com/feed/",
       "summary": "Blogging on parliament, politics and people, from the History of Parliament.",
       "details": "Countries > UK > UK Government",
       "cleaned_title": "The History of Parliament",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Local",
-        "UK",
-        "History"
-      ],
+      "tags": ["Politics", "Local", "UK", "History"],
       "language": "en",
-      "keywords": [
-        "parliament",
-        "politics",
-        "UK history",
-        "government"
-      ],
+      "keywords": ["parliament", "politics", "UK history", "government"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:http://historyunfolding.blogspot.com/feeds/posts/default",
       "title": "History Unfolding",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://historyunfolding.blogspot.com/feeds/posts/default",
       "summary": "A historian's comments on current events, foreign and domestic.",
       "details": "Politics > Politics",
       "cleaned_title": "History Unfolding",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Science",
-        "History"
-      ],
+      "tags": ["Politics", "Science", "History"],
       "language": "en",
-      "keywords": [
-        "history",
-        "politics",
-        "current events",
-        "analysis"
-      ],
+      "keywords": ["history", "politics", "current events", "analysis"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://lincolnmullen.com/blog/index.xml",
       "title": "Lincoln Mullen | Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://lincolnmullen.com/blog/index.xml",
       "summary": "I am a historian of American religion and the nineteenth-century United States, often using computational methods for texts and maps.",
       "details": "Society > Religion",
       "cleaned_title": "Lincoln Mullen Blog",
       "cleaned_author": "Lincoln Mullen",
-      "tags": [
-        "Arts & Culture",
-        "Politics",
-        "History"
-      ],
+      "tags": ["Arts & Culture", "Politics", "History"],
       "language": "en",
-      "keywords": [
-        "American history",
-        "religion",
-        "data analysis",
-        "nineteenth-century"
-      ],
+      "keywords": ["American history", "religion", "data analysis", "nineteenth-century"],
       "top_level_category": "Identity & Community"
     },
     {
       "id": "feed:https://markstoneman.com/feed.xml",
       "title": "Mark R. Stoneman",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://markstoneman.com/feed.xml",
       "summary": "Independent editor, translator, and historian.",
       "details": "Politics > Military",
       "cleaned_title": "Mark R. Stoneman",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "History"
-      ],
+      "tags": ["Politics", "History"],
       "language": "en",
-      "keywords": [
-        "historian",
-        "political history",
-        "military history"
-      ],
+      "keywords": ["historian", "political history", "military history"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://s-usih.org/feed/atom/",
       "title": "Society for US Intellectual History",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://s-usih.org/feed/atom/",
       "summary": "A scholarly platform for discussions and reflections on the intellectual history of the United States, covering a myriad of influential thinkers and their contributions.",
       "details": "Countries > USA",
       "cleaned_title": "Society for US Intellectual History",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Politics",
-        "History",
-        "USA"
-      ],
+      "tags": ["Arts & Culture", "Politics", "History", "USA"],
       "language": "en",
-      "keywords": [
-        "intellectual history",
-        "US history",
-        "thinkers"
-      ],
+      "keywords": ["intellectual history", "US history", "thinkers"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://ggwash.org/rss",
       "title": "Greater Greater Washington",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://ggwash.org/rss",
       "summary": "Builds informed and civically engaged communities who believe in a growing and inclusive Washington region and speak up for livable communities for all.",
       "details": "Countries > USA",
       "cleaned_title": "Greater Greater Washington",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Local",
-        "USA"
-      ],
+      "tags": ["Politics", "Local", "USA"],
       "language": "en",
-      "keywords": [
-        "Washington",
-        "community",
-        "livability"
-      ],
+      "keywords": ["Washington", "community", "livability"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://brucefnesmith.blogspot.com/feeds/posts/default",
       "title": "Holy Mountain: A Blog about Our Common Life",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://brucefnesmith.blogspot.com/feeds/posts/default",
       "summary": "Commentary on public policy, place and social relations.",
       "details": "Humanities > Urbanism",
       "cleaned_title": "Holy Mountain: A Blog about Our Common Life",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Living",
-        "Urban"
-      ],
+      "tags": ["Politics", "Living", "Urban"],
       "language": "en",
-      "keywords": [
-        "public policy",
-        "urbanism",
-        "society"
-      ],
+      "keywords": ["public policy", "urbanism", "society"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://www.theurbanist.org/feed/",
       "title": "The Urbanist",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.theurbanist.org/feed/",
       "summary": "Examining urban policy to improve cities and quality of life.",
       "details": "Humanities > Urbanism",
       "cleaned_title": "The Urbanist",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Urban"
-      ],
+      "tags": ["Politics", "Urban"],
       "language": "en",
-      "keywords": [
-        "urban policy",
-        "quality of life"
-      ],
+      "keywords": ["urban policy", "quality of life"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://v5.chriskrycho.com/journal/feed.xml",
       "title": "Sympolymathesy, by Chris Krycho\u2014Journal",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://v5.chriskrycho.com/journal/feed.xml",
       "details": "Technology > Development",
       "cleaned_title": "Sympolymathesy",
       "cleaned_author": "Chris Krycho",
       "summary": "A journal exploring the intersection of theology, technology, and ethics, offering reflections on personal and societal themes.",
-      "tags": [
-        "Tech",
-        "Politics",
-        "Academia",
-        "Physics"
-      ],
+      "tags": ["Tech", "Politics", "Academia", "Physics"],
       "language": "en",
-      "keywords": [
-        "ethics",
-        "technology",
-        "politics"
-      ],
+      "keywords": ["ethics", "technology", "politics"],
       "top_level_category": "Software & Engineering"
     },
     {
       "id": "feed:https://www.newwaysministry.org/feed/",
       "title": "New Ways Ministry - Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.newwaysministry.org/feed/",
       "summary": "a daily blog of Catholic LGBTQ news, opinion, and spirituality.",
       "details": "Society > Religion",
       "cleaned_title": "New Ways Ministry - Blog",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Activism"
-      ],
+      "tags": ["Politics", "Activism"],
       "language": "en",
-      "keywords": [
-        "LGBTQ+",
-        "Catholic Church",
-        "faith"
-      ],
+      "keywords": ["LGBTQ+", "Catholic Church", "faith"],
       "top_level_category": "Identity & Community"
     },
     {
       "id": "feed:https://thesimplecatholic.blog/feed/",
       "title": "The Simple Catholic",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://thesimplecatholic.blog/feed/",
       "summary": "Helping You Develop a Joyous Life.",
       "details": "Society > Religion",
       "cleaned_title": "The Simple Catholic",
       "cleaned_author": null,
-      "tags": [
-        "Politics"
-      ],
+      "tags": ["Politics"],
       "language": "en",
-      "keywords": [
-        "Catholicism",
-        "spirituality",
-        "joyful living"
-      ],
+      "keywords": ["Catholicism", "spirituality", "joyful living"],
       "top_level_category": "Identity & Community"
     },
     {
       "id": "feed:https://peterwebster.me/feed/",
       "title": "Webstory",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://peterwebster.me/feed/",
       "summary": "Peter Webster's blog.",
       "details": "Society > Religion",
       "cleaned_title": "Webstory",
       "cleaned_author": "Peter Webster",
-      "tags": [
-        "Politics",
-        "UK",
-        "History"
-      ],
+      "tags": ["Politics", "UK", "History"],
       "language": "en",
-      "keywords": [
-        "theology",
-        "British culture",
-        "Anglicanism",
-        "art",
-        "history"
-      ],
+      "keywords": ["theology", "British culture", "Anglicanism", "art", "history"],
       "top_level_category": "Identity & Community"
     },
     {
       "id": "feed:https://www.foodpolitics.com/feed/",
       "title": "Food Politics by Marion Nestle",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.foodpolitics.com/feed/",
       "summary": "A critical examination of food industry practices and policies, by prominent nutrition expert Marion Nestle.",
       "details": "Recreation > Food And Drink",
       "cleaned_title": "Food Politics by Marion Nestle",
       "cleaned_author": "Marion Nestle",
-      "tags": [
-        "Politics",
-        "Health",
-        "Education"
-      ],
+      "tags": ["Politics", "Health", "Education"],
       "language": "en",
-      "keywords": [
-        "food policy",
-        "nutrition",
-        "Marion Nestle"
-      ],
+      "keywords": ["food policy", "nutrition", "Marion Nestle"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://balkin.blogspot.com/feeds/posts/default",
       "title": "Balkinization",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://balkin.blogspot.com/feeds/posts/default",
       "summary": "A group blog on constitutional law, theory, and politics.",
       "details": "Countries > USA",
       "cleaned_title": "Balkinization",
       "cleaned_author": "Jack M. Balkin",
-      "tags": [
-        "Politics",
-        "Law",
-        "Academia"
-      ],
+      "tags": ["Politics", "Law", "Academia"],
       "language": "en",
-      "keywords": [
-        "constitution",
-        "law",
-        "politics"
-      ],
+      "keywords": ["constitution", "law", "politics"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://davidallengreen.com/feed/",
       "title": "The Law and Policy Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://davidallengreen.com/feed/",
       "summary": "Independent commentary on law and policy from a liberal constitutionalist and critical perspective.",
       "details": "Countries > UK",
       "cleaned_title": "The Law and Policy Blog",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Local",
-        "USA"
-      ],
+      "tags": ["Politics", "Local", "USA"],
       "language": "en",
-      "keywords": [
-        "law",
-        "policy",
-        "constitutionalism",
-        "U.S. politics"
-      ],
+      "keywords": ["law", "policy", "constitutionalism", "U.S. politics"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://www.pogowasright.org/feed/",
       "title": "PogoWasRight.org: Privacy News & Issues",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.pogowasright.org/feed/",
       "summary": "My attempt to increase awareness of privacy news and issues.",
       "details": "Politics > Law",
       "cleaned_title": "PogoWasRight.org: Privacy News & Issues",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Law",
-        "Cybersecurity"
-      ],
+      "tags": ["Politics", "Law", "Cybersecurity"],
       "language": "en",
-      "keywords": [
-        "privacy news",
-        "data protection",
-        "digital rights"
-      ],
+      "keywords": ["privacy news", "data protection", "digital rights"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://theprivacyperspective.com/feed/",
       "title": "The Privacy Perspective",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://theprivacyperspective.com/feed/",
       "summary": "Legal blogging on the protection of privacy in the 21st century.",
       "details": "Politics > Law",
       "cleaned_title": "The Privacy Perspective",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Law"
-      ],
+      "tags": ["Politics", "Law"],
       "language": "en",
-      "keywords": [
-        "privacy law",
-        "data protection",
-        "defamation cases"
-      ],
+      "keywords": ["privacy law", "data protection", "defamation cases"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://www.scotusblog.com/feed/",
       "title": "SCOTUSblog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.scotusblog.com/feed/",
       "summary": "Devoted to covering the US Supreme Court comprehensively, without bias according to the highest journalistic standards as a public service.",
       "details": "Countries > USA",
       "cleaned_title": "SCOTUSblog",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Local",
-        "USA"
-      ],
+      "tags": ["Politics", "Local", "USA"],
       "language": "en",
-      "keywords": [
-        "Supreme Court",
-        "judicial analysis",
-        "court rulings"
-      ],
+      "keywords": ["Supreme Court", "judicial analysis", "court rulings"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://scrivenerserror.blogspot.com/feeds/posts/default",
       "title": "Scrivener's Error",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://scrivenerserror.blogspot.com/feeds/posts/default",
       "summary": "Law and reality in publishing and entertainment (seldom the same thing) from the creator's side of the slush pile.",
       "details": "Politics > Law",
       "cleaned_title": "Scrivener's Error",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Politics",
-        "Law"
-      ],
+      "tags": ["Arts & Culture", "Politics", "Law"],
       "language": "en",
-      "keywords": [
-        "publishing law",
-        "entertainment law",
-        "First Amendment"
-      ],
+      "keywords": ["publishing law", "entertainment law", "First Amendment"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://verfassungsblog.de/feed/",
       "title": "Verfassungsblog \u2013 On Matters Constitutional",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://verfassungsblog.de/feed/",
       "summary": "An academic and journalistic open access forum of debate on topical events and developments in constitutional law and politics in Germany, the emerging European constitutional space and beyond.",
       "details": "Politics > Law",
       "cleaned_title": "Verfassungsblog",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Law",
-        "Europe",
-        "Germany"
-      ],
+      "tags": ["Politics", "Law", "Europe", "Germany"],
       "language": "en",
-      "keywords": [
-        "Constitutional Law",
-        "European Politics",
-        "Legal Debates"
-      ],
+      "keywords": ["Constitutional Law", "European Politics", "Legal Debates"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:http://averypublicsociologist.blogspot.com/feeds/posts/default",
       "title": "All That Is Solid ...",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://averypublicsociologist.blogspot.com/feeds/posts/default",
       "summary": "Look what A Very Public Sociologist melted into.",
       "details": "Politics > Politics",
       "cleaned_title": "All That Is Solid",
       "cleaned_author": null,
-      "tags": [
-        "Politics"
-      ],
+      "tags": ["Politics"],
       "language": "en",
-      "keywords": [
-        "Sociology",
-        "Political Analysis",
-        "Current Events"
-      ],
+      "keywords": ["Sociology", "Political Analysis", "Current Events"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://benjaminstudebaker.com/feed/",
       "title": "Benjamin Studebaker",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://benjaminstudebaker.com/feed/",
       "summary": "Yet Another Attempt to Make the World a Better Place by Writing Things.",
       "details": "Politics > Politics",
       "cleaned_title": "Benjamin Studebaker",
       "cleaned_author": null,
-      "tags": [
-        "Politics"
-      ],
+      "tags": ["Politics"],
       "language": "en",
-      "keywords": [
-        "Federalism",
-        "Political Theory",
-        "US-Canada Relations"
-      ],
+      "keywords": ["Federalism", "Political Theory", "US-Canada Relations"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://conservativehome.com/feed/",
       "title": "Conservative Home",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://conservativehome.com/feed/",
       "summary": "Britain's leading Conservative blog for news, comment, analysis and campaigns, edited by Paul Goodman.",
       "details": "Countries > UK",
       "cleaned_title": "Conservative Home",
       "cleaned_author": "Paul Goodman",
-      "tags": [
-        "Politics",
-        "UK"
-      ],
+      "tags": ["Politics", "UK"],
       "language": "en",
-      "keywords": [
-        "Conservative Politics",
-        "UK News",
-        "Political Analysis"
-      ],
+      "keywords": ["Conservative Politics", "UK News", "Political Analysis"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://constitution-unit.com/feed/",
       "title": "The Constitution Unit Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://constitution-unit.com/feed/",
       "summary": "A blog that delves into constitutional matters, looking at innovations and challenges within parliamentary systems.",
       "details": "Politics > Politics",
       "cleaned_title": "The Constitution Unit Blog",
       "cleaned_author": null,
-      "tags": [
-        "Politics"
-      ],
+      "tags": ["Politics"],
       "language": "en",
-      "keywords": [
-        "Parliamentary Systems",
-        "Constitutional Issues",
-        "Political Scrutiny"
-      ],
+      "keywords": ["Parliamentary Systems", "Constitutional Issues", "Political Scrutiny"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://coreyrobin.com/feed/",
       "title": "Corey Robin",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://coreyrobin.com/feed/",
       "summary": "Corey Robin is Distinguished Professor of Political Science at Brooklyn College and the CUNY Graduate Center.",
       "details": "Politics > Politics",
       "cleaned_title": "Corey Robin",
       "cleaned_author": "Corey Robin",
-      "tags": [
-        "Politics"
-      ],
+      "tags": ["Politics"],
       "language": "en",
-      "keywords": [
-        "Political Theory",
-        "Marxism",
-        "Power Analysis"
-      ],
+      "keywords": ["Political Theory", "Marxism", "Power Analysis"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://www.electoral-vote.com/index.rss",
       "title": "ElectoralVote",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.electoral-vote.com/index.rss",
       "summary": "Track the election with a red/blue map of the US updated daily using the latest state polls.",
       "details": "Politics > Politics",
       "cleaned_title": "ElectoralVote",
       "cleaned_author": null,
-      "tags": [
-        "Politics"
-      ],
+      "tags": ["Politics"],
       "language": "en",
-      "keywords": [
-        "US Elections",
-        "Polling Data",
-        "Electoral Analysis"
-      ],
+      "keywords": ["US Elections", "Polling Data", "Electoral Analysis"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://johnmenadue.com/feed/",
       "title": "Pearls and Irritations \u2013 Public policy journal",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://johnmenadue.com/feed/",
       "summary": "Read progressive, liberal commentary on issues that impact Australians. Our daily articles focus on politics, public policy and world affairs.",
       "details": "Politics > Politics",
       "cleaned_title": "Pearls and Irritations",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Australia"
-      ],
+      "tags": ["Politics", "Australia"],
       "language": "en",
-      "keywords": [
-        "public policy",
-        "Australian politics",
-        "world affairs"
-      ],
+      "keywords": ["public policy", "Australian politics", "world affairs"],
       "top_level_category": "News & Current Events"
     },
     {
       "id": "feed:https://williamdavies.blog/feed/",
       "title": "William Davies",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://williamdavies.blog/feed/",
       "details": "Countries > UK",
       "cleaned_title": "William Davies",
       "cleaned_author": null,
       "summary": "A platform featuring varied discussions including economic policies in the UK, aiming to engage with current affairs and theoretical perspectives.",
-      "tags": [
-        "Politics",
-        "UK"
-      ],
+      "tags": ["Politics", "UK"],
       "language": "en",
-      "keywords": [
-        "UK politics",
-        "economic policy",
-        "interviews"
-      ],
+      "keywords": ["UK politics", "economic policy", "interviews"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://corporalfrisk.com/feed/",
       "title": "Corporal Frisk",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://corporalfrisk.com/feed/",
       "summary": "Finnish blogger in reserve, defence and national security.",
       "details": "Politics > Military",
       "cleaned_title": "Corporal Frisk",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Finance"
-      ],
+      "tags": ["Politics", "Finance"],
       "language": "en",
-      "keywords": [
-        "Finnish defense",
-        "national security",
-        "military analysis"
-      ],
+      "keywords": ["Finnish defense", "national security", "military analysis"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://laststandonzombieisland.com/feed/",
       "title": "laststandonzombieisland",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://laststandonzombieisland.com/feed/",
       "summary": "Weapons, Wars, Preparation and Security from a recovering gun nut turned bad writer.",
       "details": "Politics > Military",
       "cleaned_title": "laststandonzombieisland",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "War",
-        "USA"
-      ],
+      "tags": ["Politics", "War", "USA"],
       "language": "en",
-      "keywords": [
-        "weapons",
-        "military",
-        "security",
-        "preparation"
-      ],
+      "keywords": ["weapons", "military", "security", "preparation"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://www.econlib.org/feed/main",
       "title": "EconLog - Econlib",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.econlib.org/feed/main",
       "summary": "Bloggers \u2026 write on topical economics of interest to them, illuminating subjects from politics and finance, to recent films and cultural observations, to history and literature.",
       "details": "Economics > Economics",
       "cleaned_title": "EconLog",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Finance",
-        "History"
-      ],
+      "tags": ["Politics", "Finance", "History"],
       "language": "en",
-      "keywords": [
-        "economics",
-        "political economic discussions",
-        "cultural observations"
-      ],
+      "keywords": ["economics", "political economic discussions", "cultural observations"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://theblockchainsocialist.com/feed/",
       "title": "The Blockchain Socialist - Blog Archives",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://theblockchainsocialist.com/feed/",
       "summary": "Exploring the intersection between blockchain and left politics.",
       "details": "Economics > Economics > Cryptocurrencies",
       "cleaned_title": "The Blockchain Socialist",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Tech",
-        "Internet",
-        "Social",
-        "Activism"
-      ],
+      "tags": ["Politics", "Tech", "Internet", "Social", "Activism"],
       "language": "en",
-      "keywords": [
-        "blockchain",
-        "left politics",
-        "community",
-        "governance"
-      ],
+      "keywords": ["blockchain", "left politics", "community", "governance"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://sluggerotoole.com/feed/",
       "title": "Slugger O'Toole",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://sluggerotoole.com/feed/",
       "summary": "Conversation, politics and stray insights.",
       "details": "Countries > Ireland",
       "cleaned_title": "Slugger O'Toole",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "UK"
-      ],
+      "tags": ["Politics", "UK"],
       "language": "en",
-      "keywords": [
-        "Irish politics",
-        "social insights",
-        "discussion"
-      ],
+      "keywords": ["Irish politics", "social insights", "discussion"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://actuaries.blog.gov.uk/feed/",
       "title": "Actuaries in government",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://actuaries.blog.gov.uk/feed/",
       "summary": "News and updates from the Government Actuary's Department.",
       "details": "Countries > UK > UK Government",
       "cleaned_title": "Actuaries in government",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Money",
-        "Data",
-        "UK"
-      ],
+      "tags": ["Politics", "Money", "Data", "UK"],
       "language": "en",
-      "keywords": [
-        "actuaries",
-        "government",
-        "pensions"
-      ],
+      "keywords": ["actuaries", "government", "pensions"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://www.katebelgrave.com/feed/",
       "title": "Kate Belgrave",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.katebelgrave.com/feed/",
       "summary": "Talking with people dealing with public sector cuts.",
       "details": "Countries > UK > UK Government",
       "cleaned_title": "Kate Belgrave",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Local",
-        "Activism",
-        "UK"
-      ],
+      "tags": ["Politics", "Local", "Activism", "UK"],
       "language": "en",
-      "keywords": [
-        "public sector",
-        "cuts",
-        "advocacy"
-      ],
+      "keywords": ["public sector", "cuts", "advocacy"],
       "top_level_category": "Society, Law & History"
     },
     {
       "title": "Aktuell - FAZ.NET",
       "popularity_score": 3.2888888888888896,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "feed_url": "http://www.faz.net/rss/aktuell/",
       "kind": "feed",
       "id": "feed:http://www.faz.net/rss/aktuell/",
       "cleaned_title": "Aktuell",
       "cleaned_author": "FAZ.NET",
       "summary": "A comprehensive source for current events and news across various sectors, including politics, economy, sports, and financial updates.",
-      "tags": [
-        "News",
-        "Politics",
-        "USA",
-        "Germany",
-        "World News"
-      ],
+      "tags": ["News", "Politics", "USA", "Germany", "World News"],
       "language": "de",
-      "keywords": [
-        "politics",
-        "economy",
-        "sports",
-        "news"
-      ]
+      "keywords": ["politics", "economy", "sports", "news"]
     },
     {
       "title": "\u738b\u5fd7\u5b89",
       "popularity_score": 3.066666666666667,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "channel_id": "UCBKDRq35-L8xev4O7ZqBeLg",
       "kind": "youtube",
       "id": "youtube:channel:UCBKDRq35-L8xev4O7ZqBeLg",
       "cleaned_title": "\u738b\u5fd7\u5b89",
       "cleaned_author": null,
       "summary": "A blog discussing political events and social commentary focused on China and its international relations.",
-      "tags": [
-        "Politics",
-        "News",
-        "China",
-        "USA",
-        "Diplomacy"
-      ],
+      "tags": ["Politics", "News", "China", "USA", "Diplomacy"],
       "language": "zh",
-      "keywords": [
-        "politics",
-        "China",
-        "international relations"
-      ]
+      "keywords": ["politics", "China", "international relations"]
     },
     {
       "title": "Al Jazeera \u2013 Breaking News, World News and Video from Al Jazeera",
       "popularity_score": 2.967857142857143,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "feed_url": "https://www.aljazeera.com/xml/rss/all.xml",
       "kind": "feed",
       "id": "feed:https://www.aljazeera.com/xml/rss/all.xml",
       "cleaned_title": "Al Jazeera",
       "cleaned_author": null,
       "summary": "A trusted source for breaking news and global updates, Al Jazeera covers important stories from around the world.",
-      "tags": [
-        "News",
-        "Politics",
-        "Middle East",
-        "World News"
-      ],
+      "tags": ["News", "Politics", "Middle East", "World News"],
       "language": "en",
-      "keywords": [
-        "news",
-        "breaking news",
-        "global news"
-      ]
+      "keywords": ["news", "breaking news", "global news"]
     },
     {
       "title": "\u5c0f\u5c9b\u5927\u6d6a\u5439-\u975e\u6b63\u7ecf\u653f\u7ecf\u9891\u9053",
       "popularity_score": 2.0984126984126985,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "channel_id": "UCYPT3wl0MgbOz63ho166KOw",
       "kind": "youtube",
       "id": "youtube:channel:UCYPT3wl0MgbOz63ho166KOw",
       "cleaned_title": "\u5c0f\u5c9b\u5927\u6d6a\u5439",
       "cleaned_author": null,
       "summary": "A channel that explores controversial political and social issues in China, often with a humorous or satirical approach.",
-      "tags": [
-        "Politics",
-        "China",
-        "_intellectual",
-        "_alternative"
-      ],
+      "tags": ["Politics", "China", "_intellectual", "_alternative"],
       "language": "zh",
-      "keywords": [
-        "China Politics",
-        "Social Issues",
-        "Satire",
-        "Controversial Discussions"
-      ]
+      "keywords": ["China Politics", "Social Issues", "Satire", "Controversial Discussions"]
     }
   ],
   "child_categories": [

@@ -7,48 +7,49 @@ This schema is designed to merge data from `feeeed`, `opml_feeds.json`, and `fee
 ```typescript
 interface UnifiedFeed {
   // Core Identity
-  title: string;            // Display title
-  feed_url: string;         // The RSS/Atom feed URL (canonical)
-  website_url?: string;     // Homepage URL (from Feedspot or inferred)
-  domain: string;           // Domain name extracted from feed_url or website_url
-  
+  title: string; // Display title
+  feed_url: string; // The RSS/Atom feed URL (canonical)
+  website_url?: string; // Homepage URL (from Feedspot or inferred)
+  domain: string; // Domain name extracted from feed_url or website_url
+
   // Content Info
-  summary?: string;         // Description or summary of the feed
-  language: string;         // ISO 639-1 code (default: "en")
-  kind: 'feed' | 'youtube' | 'reddit' | 'bluesky' | 'podcast';
-  
+  summary?: string; // Description or summary of the feed
+  language: string; // ISO 639-1 code (default: "en")
+  kind: "feed" | "youtube" | "reddit" | "bluesky" | "podcast";
+
   // Categorization
-  category: Category;       // One of the 20 fixed categories
-  subcategory?: string;     // Original category from source (e.g., "Visual Arts", "London")
-  
+  category: Category; // One of the 20 fixed categories
+  subcategory?: string; // Original category from source (e.g., "Visual Arts", "London")
+
   // Discovery Tags
-  tags?: string[];          // High-level tags from feeeed (e.g., "Tech", "AI")
-  keywords?: string[];      // Granular keywords from feeeed (e.g., "machine learning", "startups")
-  
+  tags?: string[]; // High-level tags from feeeed (e.g., "Tech", "AI")
+  keywords?: string[]; // Granular keywords from feeeed (e.g., "machine learning", "startups")
+
   // Metadata & Metrics
   popularity_score?: number; // Internal popularity score (from feeeed)
-  tranco_rank?: number;      // Tranco rank for the domain (lower is better)
-  followers?: {             // Social follower counts (from Feedspot)
+  tranco_rank?: number; // Tranco rank for the domain (lower is better)
+  followers?: {
+    // Social follower counts (from Feedspot)
     facebook?: number;
     twitter?: number;
     instagram?: number;
     youtube?: number;
   };
-  
+
   // Media
-  image_url?: string;       // Merged field for Feed logo, YouTube thumbnail, etc.
-  
+  image_url?: string; // Merged field for Feed logo, YouTube thumbnail, etc.
+
   // Source Tracking
-  source_dataset: 'feeeed' | 'opml' | 'feedspot'; // Primary source dataset
+  source_dataset: "feeeed" | "opml" | "feedspot"; // Primary source dataset
   original_source_file?: string; // Specific filename (e.g., "RobinFeedlyExport.xml")
-  
+
   // Platform Specific
-  channel_id?: string;      // YouTube Channel ID
-  subreddit?: string;       // Reddit Subreddit
-  bluesky_did?: string;     // Bluesky DID
-  
+  channel_id?: string; // YouTube Channel ID
+  subreddit?: string; // Reddit Subreddit
+  bluesky_did?: string; // Bluesky DID
+
   // Author Info
-  author?: string;          // Author name
+  author?: string; // Author name
 }
 
 enum Category {
@@ -71,7 +72,7 @@ enum Category {
   HealthAndWellness = "Health & Wellness",
   IdentityAndCommunity = "Identity & Community",
   FamilyAndRelationships = "Family & Relationships",
-  Gaming = "Gaming"
+  Gaming = "Gaming",
 }
 ```
 
@@ -99,6 +100,7 @@ enum Category {
 | **author** | `cleaned_author` | - | - | |
 
 **Merge Rules:**
+
 1.  **Deduplication**: Key = Normalized `feed_url`.
 2.  **Priority**: `feedspot` > `feeeed` > `opml` for shared fields (like `title`, `summary`, `image_url`).
 3.  **Collections**: Merge unique items for lists like `topics` or `sources`.

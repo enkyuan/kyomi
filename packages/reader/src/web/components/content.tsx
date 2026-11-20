@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useMemo } from "react";
+import { memo, useMemo, type ReactNode } from "react";
 import type {
   ReaderContent as ReaderContentModel,
   ReaderImageLoading,
@@ -101,6 +101,36 @@ function DocumentBody({
   );
 }
 
+type ReaderBodyOptions = Required<
+  Pick<ReaderContentProps, "openLinksInNewTab" | "showLinkPreviews" | "layoutMode">
+> &
+  Pick<ReaderContentProps, "imageLoading" | "transformImageUrl">;
+
+/** The rendered html, markdown, or text body; null when the matching content field is empty. */
+function renderTextualBody(
+  reader: ReaderContentProps["reader"],
+  options: ReaderBodyOptions,
+): ReactNode {
+  switch (reader.bodyKind) {
+    case "html":
+      return reader.contentHtml ? (
+        <RenderHtml html={reader.contentHtml} baseUrl={reader.contentBaseUrl} {...options} />
+      ) : null;
+    case "markdown":
+      return reader.contentMarkdown ? (
+        <RenderMarkdown
+          markdown={reader.contentMarkdown}
+          baseUrl={reader.contentBaseUrl}
+          {...options}
+        />
+      ) : null;
+    case "text":
+      return reader.contentText ? <RenderText text={reader.contentText} /> : null;
+    default:
+      return null;
+  }
+}
+
 export const ReaderContent = memo(function ReaderContent({
   reader,
   openLinksInNewTab = true,
@@ -122,8 +152,15 @@ export const ReaderContent = memo(function ReaderContent({
     );
   }
 
-  if (reader.bodyKind === "html") {
-    if (!reader.contentHtml) {
+  if (reader.bodyKind === "html" || reader.bodyKind === "markdown" || reader.bodyKind === "text") {
+    const body = renderTextualBody(reader, {
+      imageLoading,
+      layoutMode,
+      openLinksInNewTab,
+      showLinkPreviews,
+      transformImageUrl,
+    });
+    if (!body) {
       return (
         <ContractViolationFallback
           notice={reader.notice}
@@ -131,69 +168,6 @@ export const ReaderContent = memo(function ReaderContent({
         />
       );
     }
-    const body = (
-      <RenderHtml
-        html={reader.contentHtml}
-        baseUrl={reader.contentBaseUrl}
-        openLinksInNewTab={openLinksInNewTab}
-        showLinkPreviews={showLinkPreviews}
-        layoutMode={layoutMode}
-        imageLoading={imageLoading}
-        transformImageUrl={transformImageUrl}
-      />
-    );
-    if (!reader.notice) {
-      return body;
-    }
-    return (
-      <div className="space-y-3">
-        <p className="text-sm text-muted-foreground">{reader.notice}</p>
-        {body}
-      </div>
-    );
-  }
-
-  if (reader.bodyKind === "markdown") {
-    if (!reader.contentMarkdown) {
-      return (
-        <ContractViolationFallback
-          notice={reader.notice}
-          fallbackSummary={reader.fallbackSummary}
-        />
-      );
-    }
-    const body = (
-      <RenderMarkdown
-        markdown={reader.contentMarkdown}
-        baseUrl={reader.contentBaseUrl}
-        openLinksInNewTab={openLinksInNewTab}
-        showLinkPreviews={showLinkPreviews}
-        layoutMode={layoutMode}
-        imageLoading={imageLoading}
-        transformImageUrl={transformImageUrl}
-      />
-    );
-    if (!reader.notice) {
-      return body;
-    }
-    return (
-      <div className="space-y-3">
-        <p className="text-sm text-muted-foreground">{reader.notice}</p>
-        {body}
-      </div>
-    );
-  }
-
-  if (reader.bodyKind === "text") {
-    if (!reader.contentText) {
-      return (
-        <ContractViolationFallback
-          notice={reader.notice}
-          fallbackSummary={reader.fallbackSummary}
-        />
-      );
-    }
-    const body = <RenderText text={reader.contentText} />;
     if (!reader.notice) {
       return body;
     }

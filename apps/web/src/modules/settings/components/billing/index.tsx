@@ -4,7 +4,7 @@ import { ReceiptBillIcon } from "@kyomi/ui/icons/blode";
 import { Button } from "@kyomi/ui/components/button";
 import { SidebarMenuButton, SidebarMenuItem } from "@kyomi/ui/components/sidebar";
 
-export const billingSection = {
+const billingSection = {
   description: "Review your workspace plan, payment method, and billing history.",
   name: "Billing",
 } as const;
@@ -37,7 +37,9 @@ export function BillingPagePanel() {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <span className="text-sm text-muted-foreground">Basic</span>
             <div className="flex flex-wrap items-center gap-3">
-              <Button variant="outline">Upgrade Plan</Button>
+              <Button shape="pill" variant="secondary">
+                Upgrade Plan
+              </Button>
             </div>
           </div>
         </div>

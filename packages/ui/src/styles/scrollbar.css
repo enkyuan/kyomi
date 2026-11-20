@@ -37,7 +37,8 @@
  * macOS overlay scrollbar for Base UI scroll areas, rendered the same in every browser.
  * Modelled on MinJieLiu/mac-scrollbar (no dependency): a translucent pill thumb that fades in while
  * scrolling or when the pointer reaches the edge, widens under the pointer, and reveals a faint
- * track with a hairline edge. Layout stays in `scroll-bar.tsx`; tokens live in `theme.css`.
+ * track with a hairline edge. Inset scrollbars (tables, menus, gutter lists) opt out of the track
+ * with `data-track="none"` (`ScrollBar track="none"`) and only widen the thumb. Layout stays in `scroll-bar.tsx`; tokens live in `theme.css`.
  */
 [data-slot="scroll-area-scrollbar"] {
   --scrollbar-track-size: 0.875rem;
@@ -55,6 +56,19 @@
 
 [data-slot="scroll-area-scrollbar"][data-orientation="horizontal"] {
   height: var(--scrollbar-track-size);
+}
+
+/*
+ * An inset scrollbar sits inside rounded corners, where a thumb running the full height would look
+ * like it touches them. Pull its ends in by the corner's inset (8px); a window-edge scrollbar has
+ * no corners and keeps the full run.
+ */
+[data-slot="scroll-area-scrollbar"][data-placement="container"][data-orientation="vertical"] {
+  margin-block: 0.5rem;
+}
+
+[data-slot="scroll-area-scrollbar"][data-placement="container"][data-orientation="horizontal"] {
+  margin-inline: 0.5rem;
 }
 
 [data-slot="scroll-area-scrollbar"][data-scrolling],
@@ -75,7 +89,7 @@
   padding-block: 2px;
 }
 
-[data-slot="scroll-area-scrollbar"]::before {
+[data-slot="scroll-area-scrollbar"]:not([data-track="none"])::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -85,11 +99,13 @@
   transition: opacity 150ms var(--ease-out-quint);
 }
 
-[data-slot="scroll-area-scrollbar"][data-orientation="vertical"]::before {
+[data-slot="scroll-area-scrollbar"][data-orientation="vertical"]:not([data-track="none"])::before {
   border-inline-start: 1px solid var(--scrollbar-track-edge);
 }
 
-[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"]::before {
+[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"]:not(
+  [data-track="none"]
+)::before {
   border-block-start: 1px solid var(--scrollbar-track-edge);
 }
 

@@ -183,6 +183,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
               <TanstackQueryProvider
                 queryClient={queryClient}
                 sessionStatus={loaderData?.authState.status}
+                userId={initialSession?.user.id}
               >
                 <AuthProvider initialSession={initialSession}>
                   <AppRuntimeEffects />

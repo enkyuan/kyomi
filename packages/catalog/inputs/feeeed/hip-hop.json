@@ -10,23 +10,11 @@
       "kind": "reddit",
       "subreddit": "sports",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "Local",
-        "Football",
-        "Basketball",
-        "Hip-Hop"
-      ],
+      "tags": ["News", "Local", "Football", "Basketball", "Hip-Hop"],
       "language": "en",
-      "keywords": [
-        "sports discussion",
-        "highlights",
-        "OP-ED"
-      ],
+      "keywords": ["sports discussion", "highlights", "OP-ED"],
       "top_level_category": "Sports"
     },
     {
@@ -37,9 +25,7 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/TheFaderMagazine",
       "details": "Entertainment > Music",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
       "tags": [
         "Arts & Culture",
@@ -52,39 +38,22 @@
         "_high_quality"
       ],
       "language": "en",
-      "keywords": [
-        "music news",
-        "emerging artists",
-        "cultural trends",
-        "Oscars",
-        "Drake"
-      ],
+      "keywords": ["music news", "emerging artists", "cultural trends", "Oscars", "Drake"],
       "top_level_category": "Arts & Culture"
     },
     {
       "id": "feed:https://soundstudiesblog.com/feed/",
       "title": "Sounding Out!",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://soundstudiesblog.com/feed/",
       "summary": "pushing sound studies into the red since 2009.",
       "details": "Arts > Music > Sound",
       "cleaned_title": "Sounding Out!",
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Music",
-        "Hip-Hop",
-        "Words"
-      ],
+      "tags": ["Arts & Culture", "Music", "Hip-Hop", "Words"],
       "language": "en",
-      "keywords": [
-        "sound studies",
-        "music culture",
-        "hip-hop analysis"
-      ],
+      "keywords": ["sound studies", "music culture", "hip-hop analysis"],
       "top_level_category": "Arts & Culture"
     }
   ],

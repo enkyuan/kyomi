@@ -10,21 +10,11 @@
       "kind": "feed",
       "feed_url": "https://theankler.com/feed",
       "details": "Business",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment",
-        "_intellectual"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Arts & Culture", "Celebs & Entertainment", "_intellectual"],
       "cleaned_author": "Richard Rushfield",
       "language": "en",
-      "keywords": [
-        "Hollywood",
-        "entertainment industry",
-        "critique"
-      ],
+      "keywords": ["Hollywood", "entertainment industry", "critique"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -35,24 +25,12 @@
       "kind": "feed",
       "feed_url": "https://www.vulture.com/feeds/flipboard.rss",
       "details": "Entertainment",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 2.502222203337979,
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment",
-        "Movies",
-        "Music"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment", "Movies", "Music"],
       "language": "en",
-      "keywords": [
-        "entertainment",
-        "recaps",
-        "pop culture"
-      ],
+      "keywords": ["entertainment", "recaps", "pop culture"],
       "top_level_category": "Entertainment"
     },
     {
@@ -64,21 +42,11 @@
       "channel_id": "UC8-Th83bH_thdKZDJCrn88g",
       "thumbnail_url": "https://yt3.ggpht.com/Lp9cu-xgKL0QYxdJ268CaZ63SrmODmZT2uRJjwPHvoeLOvd1LLNJWUd45tYR_VW9z5APPIPJpw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Entertainment",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "Jimmy Fallon",
-        "talk show",
-        "interviews",
-        "comedy"
-      ],
+      "keywords": ["Jimmy Fallon", "talk show", "interviews", "comedy"],
       "top_level_category": "Entertainment"
     },
     {
@@ -89,22 +57,11 @@
       "kind": "feed",
       "feed_url": "https://screenshot-magazine.com/feed/",
       "details": "Arts",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment",
-        "Social"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment", "Social"],
       "language": "en",
-      "keywords": [
-        "politics",
-        "culture",
-        "technology",
-        "youth issues"
-      ],
+      "keywords": ["politics", "culture", "technology", "youth issues"],
       "top_level_category": "Arts & Culture"
     },
     {
@@ -115,9 +72,7 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/TheFaderMagazine",
       "details": "Entertainment > Music",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
       "tags": [
         "Arts & Culture",
@@ -130,13 +85,7 @@
         "_high_quality"
       ],
       "language": "en",
-      "keywords": [
-        "music news",
-        "emerging artists",
-        "cultural trends",
-        "Oscars",
-        "Drake"
-      ],
+      "keywords": ["music news", "emerging artists", "cultural trends", "Oscars", "Drake"],
       "top_level_category": "Arts & Culture"
     },
     {
@@ -147,21 +96,11 @@
       "kind": "feed",
       "feed_url": "http://www.tvline.com/feed/",
       "details": "Entertainment > TV Shows",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "USA",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "USA", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "TV news",
-        "TV spoilers",
-        "entertainment"
-      ],
+      "keywords": ["TV news", "TV spoilers", "entertainment"],
       "top_level_category": "Entertainment"
     },
     {
@@ -172,21 +111,11 @@
       "kind": "feed",
       "feed_url": "http://feeds.tvfanatic.com/tvfanatic",
       "details": "Entertainment > TV Shows",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "USA",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "USA", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "TV news",
-        "show reviews",
-        "entertainment"
-      ],
+      "keywords": ["TV news", "show reviews", "entertainment"],
       "top_level_category": "Entertainment"
     },
     {
@@ -197,20 +126,11 @@
       "kind": "feed",
       "feed_url": "http://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml",
       "details": "Entertainment > Celebrity News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "celebrity news",
-        "gossip",
-        "fashion"
-      ],
+      "keywords": ["celebrity news", "gossip", "fashion"],
       "top_level_category": "Entertainment"
     },
     {
@@ -221,20 +141,11 @@
       "kind": "feed",
       "feed_url": "http://www.tmz.com/rss.xml",
       "details": "Entertainment > Celebrity News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "celebrity gossip",
-        "Hollywood news",
-        "exclusive stories"
-      ],
+      "keywords": ["celebrity gossip", "Hollywood news", "exclusive stories"],
       "top_level_category": "Entertainment"
     },
     {
@@ -246,20 +157,11 @@
       "channel_id": "UCdtXPiqI2cLorKaPrfpKc4g",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqM0ZRcq21k7a0pS30xXBlsqcYNkVX38StDzQXjqfQ=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Entertainment > Celebrity News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "celebrity interviews",
-        "red carpet",
-        "behind-the-scenes"
-      ],
+      "keywords": ["celebrity interviews", "red carpet", "behind-the-scenes"],
       "top_level_category": "Entertainment"
     },
     {
@@ -270,20 +172,11 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/CultureIndependentNewsAndBlog",
       "details": "Entertainment > Celebrity News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "celebrity news",
-        "human interest",
-        "exclusive interviews"
-      ],
+      "keywords": ["celebrity news", "human interest", "exclusive interviews"],
       "top_level_category": "Entertainment"
     },
     {
@@ -294,20 +187,11 @@
       "kind": "reddit",
       "subreddit": "Celebhub",
       "details": "Entertainment > Celebrity News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "celebrity discussions",
-        "entertainment news",
-        "photos"
-      ],
+      "keywords": ["celebrity discussions", "entertainment news", "photos"],
       "top_level_category": "Entertainment"
     },
     {
@@ -318,20 +202,11 @@
       "kind": "feed",
       "feed_url": "http://news.google.com/news?hl=en&gl=us&q=us%20weekly&um=1&ie=UTF-8&output=rss",
       "details": "Entertainment > Celebrity News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "celebrity gossip",
-        "fashion news",
-        "entertainment updates"
-      ],
+      "keywords": ["celebrity gossip", "fashion news", "entertainment updates"],
       "top_level_category": "Entertainment"
     },
     {
@@ -343,20 +218,11 @@
       "channel_id": "UCiKGMZZmZXK-RpbKJGXgH3Q",
       "thumbnail_url": "https://yt3.ggpht.com/3Ffp0n-8Kw4gT52GBSuItqgwX7Vul876e3JeMRr9Cf1JcUIRSOr8HdR6UZDhDzK-h_9X3Y6Ufeg=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Entertainment > Celebrity News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "celebrity news",
-        "interviews",
-        "entertainment coverage"
-      ],
+      "keywords": ["celebrity news", "interviews", "entertainment coverage"],
       "top_level_category": "Entertainment"
     },
     {
@@ -367,20 +233,11 @@
       "kind": "feed",
       "feed_url": "http://feeds2.feedburner.com/justjared/TOvO",
       "details": "Entertainment > Celebrity News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "celebrity gossip",
-        "entertainment exclusives",
-        "photos"
-      ],
+      "keywords": ["celebrity gossip", "entertainment exclusives", "photos"],
       "top_level_category": "Entertainment"
     },
     {
@@ -392,21 +249,11 @@
       "channel_id": "UC2rJLq19N0dGrxfib80M_fg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqPoyObpobWuk9bYD9RWoBlZaXC0SBX_f23edlBzNA=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Entertainment > Celebrity News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "celebrity news",
-        "fashion",
-        "entertainment",
-        "red carpet"
-      ],
+      "keywords": ["celebrity news", "fashion", "entertainment", "red carpet"],
       "top_level_category": "Entertainment"
     },
     {
@@ -417,21 +264,11 @@
       "kind": "reddit",
       "subreddit": "celebrities",
       "details": "Entertainment > Celebrity News",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "celebrity news",
-        "photos",
-        "videos",
-        "celebrity discussions"
-      ],
+      "keywords": ["celebrity news", "photos", "videos", "celebrity discussions"],
       "top_level_category": "Entertainment"
     },
     {
@@ -439,48 +276,27 @@
       "title": "The Cut",
       "kind": "feed",
       "feed_url": "https://www.thecut.com/feeds/flipboard.rss",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "The Cut",
       "cleaned_author": null,
       "summary": "An insightful publication featuring a variety of articles ranging from celebrity news to cultural commentary, shedding light on societal trends and human experiences.",
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment"],
       "language": "en",
-      "keywords": [
-        "Kardashians",
-        "celebrity news",
-        "trending topics",
-        "culture"
-      ]
+      "keywords": ["Kardashians", "celebrity news", "trending topics", "culture"]
     },
     {
       "title": "BuzzFeed",
       "popularity_score": 7.3559819371069874,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "feed_url": "http://www.buzzfeed.com/index.xml",
       "kind": "feed",
       "id": "feed:http://www.buzzfeed.com/index.xml",
       "cleaned_title": "BuzzFeed",
       "cleaned_author": null,
       "summary": "BuzzFeed delivers a mix of breaking news, celebrity gossip, and lighthearted quizzes, appealing to audiences looking for entertainment and viral content.",
-      "tags": [
-        "Arts & Culture",
-        "Celebs & Entertainment",
-        "DIY"
-      ],
+      "tags": ["Arts & Culture", "Celebs & Entertainment", "DIY"],
       "language": "en",
-      "keywords": [
-        "breaking news",
-        "quizzes",
-        "celebrity news",
-        "recipes"
-      ]
+      "keywords": ["breaking news", "quizzes", "celebrity news", "recipes"]
     }
   ],
   "child_categories": []

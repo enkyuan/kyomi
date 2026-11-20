@@ -10,22 +10,11 @@
       "kind": "feed",
       "feed_url": "https://thebearcave.substack.com/feed",
       "details": "Business",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Money",
-        "Crime",
-        "Justice",
-        "_intellectual"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Money", "Crime", "Justice", "_intellectual"],
       "cleaned_author": "Edwin Dorsey",
       "language": "en",
-      "keywords": [
-        "corporate misconduct",
-        "investigation",
-        "accountability"
-      ],
+      "keywords": ["corporate misconduct", "investigation", "accountability"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -33,23 +22,13 @@
       "title": "SCOTUSblog",
       "kind": "feed",
       "feed_url": "http://www.scotusblog.com/feed/",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "SCOTUSblog",
       "cleaned_author": null,
       "summary": "A comprehensive source for news and analysis on the United States Supreme Court, providing in-depth coverage on pivotal cases and judicial decisions.",
-      "tags": [
-        "Politics",
-        "Congress",
-        "Justice"
-      ],
+      "tags": ["Politics", "Congress", "Justice"],
       "language": "en",
-      "keywords": [
-        "Supreme Court",
-        "legal analysis",
-        "justice"
-      ]
+      "keywords": ["Supreme Court", "legal analysis", "justice"]
     }
   ],
   "child_categories": []

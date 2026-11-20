@@ -139,7 +139,7 @@ struct TabBarComposer: View {
             row(feed)
           }
         }
-        .frame(minHeight: listHeight)
+        .frame(minHeight: listHeight + TabBarMetrics.composerFirstRowLift)
         .padding(.horizontal, TabBarMetrics.edgeInset)
         .background {
           Color.clear
@@ -147,7 +147,7 @@ struct TabBarComposer: View {
             .onTapGesture { model.toggleComposer() }
         }
       }
-      .contentMargins(.top, listTop, for: .scrollContent)
+      .contentMargins(.top, listTop - TabBarMetrics.composerFirstRowLift, for: .scrollContent)
       .contentMargins(.bottom, listBottomInset, for: .scrollContent)
       .scrollIndicators(.hidden)
       .scrollBounceBehavior(.basedOnSize)

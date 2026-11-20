@@ -65,14 +65,14 @@ Verified via `ast-grep outline` + structural pattern search across
 **`fix/ui`** (6 unique commits ahead of HEAD, merge-base `8c83981a`,
 **194 source files** changed across `packages/ui`, `apps/web`, `apps/api`):
 
-| Commit | Scope | Change |
-|--------|-------|--------|
-| `ed605e0e`, `edf0d32b`, `1635d361` | **atoms import migration** | Moves every `packages/ui/src/*.tsx` → `src/atoms/*.tsx`, rewrites **all** imports `@kyomi/ui/{button,card,toast,…}` → `@kyomi/ui/atoms/{button,…}` across 159 files. Updates `packages/ui/package.json` exports map. |
-| `fc726ef0` | **toast rewrite** | Deletes `packages/ui/toast/index.tsx`, adds `packages/ui/src/atoms/toast/index.tsx` (Base UI toast + `use-toast-squircle.ts`). |
-| `05f9ca2d` | **auth enhancements** | Adds Google OAuth + password-recovery: new API adapters `capabilities.ts` (`AUTH_CAPABILITIES_HEADER`, `getAuthCapabilities`), `password-reset-email.ts` (Resend); wraps auth routes with capabilities header; env additions `AUTH_EMAIL_FROM`/`RESEND_API_KEY`/`GOOGLE_CLIENT_ID`/`GOOGLE_CLIENT_SECRET`; new web components `auth-card.tsx`, `password-field.tsx`, `forgot-password/`, `reset-password/`; schema.ts additions (`ForgotPasswordFormValues`/`ResetPasswordFormValidators`/`resetPasswordFormValidator`). |
-| `8c9fec1b` | auth UI polish | password tooltip offsets |
-| `8377b23f` | auth UX | keep signup state through redirect |
-| (side effects) | DB / worker | 2 drizzle migrations, feed-index removal, `imports.ts` deletion, OPML module rework, worker queue type removal (`OpmlImportPrepareJob`/`ItemJob`) |
+| Commit                             | Scope                      | Change                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ---------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ed605e0e`, `edf0d32b`, `1635d361` | **atoms import migration** | Moves every `packages/ui/src/*.tsx` → `src/atoms/*.tsx`, rewrites **all** imports `@kyomi/ui/{button,card,toast,…}` → `@kyomi/ui/atoms/{button,…}` across 159 files. Updates `packages/ui/package.json` exports map.                                                                                                                                                                                                                                                                                                     |
+| `fc726ef0`                         | **toast rewrite**          | Deletes `packages/ui/toast/index.tsx`, adds `packages/ui/src/atoms/toast/index.tsx` (Base UI toast + `use-toast-squircle.ts`).                                                                                                                                                                                                                                                                                                                                                                                           |
+| `05f9ca2d`                         | **auth enhancements**      | Adds Google OAuth + password-recovery: new API adapters `capabilities.ts` (`AUTH_CAPABILITIES_HEADER`, `getAuthCapabilities`), `password-reset-email.ts` (Resend); wraps auth routes with capabilities header; env additions `AUTH_EMAIL_FROM`/`RESEND_API_KEY`/`GOOGLE_CLIENT_ID`/`GOOGLE_CLIENT_SECRET`; new web components `auth-card.tsx`, `password-field.tsx`, `forgot-password/`, `reset-password/`; schema.ts additions (`ForgotPasswordFormValues`/`ResetPasswordFormValidators`/`resetPasswordFormValidator`). |
+| `8c9fec1b`                         | auth UI polish             | password tooltip offsets                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `8377b23f`                         | auth UX                    | keep signup state through redirect                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| (side effects)                     | DB / worker                | 2 drizzle migrations, feed-index removal, `imports.ts` deletion, OPML module rework, worker queue type removal (`OpmlImportPrepareJob`/`ItemJob`)                                                                                                                                                                                                                                                                                                                                                                        |
 
 - **Verdict: ❌ cannot merge as-is.** The atoms migration is a structural
   rewrite of `packages/ui`'s export surface that conflicts with every
@@ -111,6 +111,7 @@ packages/reader/
 ```
 
 **Scope decisions:**
+
 - `article.ts`, `reader.ts`, `feed.ts` → shared (consumed by both web inbox/reader and mobile).
 - `auth.ts` (email validation + form validators) → shared (mobile needs `isValidEmail`; only ~80 LoC).
 - `json.ts` (`fetchValidatedJson`) → shared (mobile can use Zod validation for API responses).
@@ -148,6 +149,7 @@ packages/reader/
 "./schemas/json": "./src/schemas/json.ts",
 "./lib/errors": "./src/lib/errors.ts"
 ```
+
 - `zod@^4.3.6` added to `packages/reader` dependencies.
 - `apps/mobile/package.json` gains `zod@^4.3.6` as a direct dependency (for future schema validation use).
 - Resolution path: both web and mobile resolve `@kyomi/reader/schemas` via
@@ -274,7 +276,7 @@ async function handleSendCode() {
   if (!isValidEmail(email.value)) {
     reportInvalid("email");
     // iOS/Android also refocus the email field:
-    emailFieldRef.current?.focus();  // only on .ios.tsx / .android.tsx
+    emailFieldRef.current?.focus(); // only on .ios.tsx / .android.tsx
     return;
   }
   // … existing API call …
@@ -301,11 +303,12 @@ Applied the enhancement directly to `apps/web/src/lib/query/cache.ts`. The
 
 Cherry-picked the auth capabilities work that is independent of the atoms
 migration. Both API-side and web-side client pieces were applied; the web auth
-*UI components* (auth-card, password-field, forgot-password, reset-password,
+_UI components_ (auth-card, password-field, forgot-password, reset-password,
 routes) were **not** cherry-picked because they depend on the `@kyomi/ui/atoms/*`
 import structure introduced by the atoms migration commits.
 
 **API-side:**
+
 - `apps/api/src/adapters/auth/capabilities.ts` (new) + re-export in `index.ts`
   — `AUTH_CAPABILITIES_HEADER`, `getAuthCapabilities()`, `resolveGoogleSocialProvider()`,
   `resolveAuthCapabilities()`, `serializeAuthCapabilities()`.
@@ -328,6 +331,7 @@ import structure introduced by the atoms migration commits.
   through to the API container.
 
 **Web-side (auth capabilities header consumer):**
+
 - `apps/web/src/lib/auth/capabilities.ts` (new) — `parseAuthCapabilities()`,
   `DEFAULT_AUTH_CAPABILITIES`, `AuthCapabilities` type.
 - `apps/web/src/lib/auth/functions.ts` — renames
@@ -341,6 +345,7 @@ import structure introduced by the atoms migration commits.
   `@kyomi/reader/schemas/auth` (included in Step 3).
 
 **Excluded (require atoms migration first):**
+
 - `packages/ui` toast rewrite (`atoms/toast/`)
 - All `@kyomi/ui/*` → `@kyomi/ui/atoms/*` import rewrites (194 files)
 - Web auth UI components (`auth-card.tsx`, `password-field.tsx`,
@@ -356,22 +361,22 @@ separate effort from dedup and affects 194 files.
 All tests pass, all typechecks clean (only pre-existing third-party errors
 remain).
 
-| Check | Command | Result |
-|-------|---------|--------|
-| Reader typecheck | `bun run --cwd packages/reader typecheck` | ✅ clean (pre-existing `marked-katex-extension` error only) |
-| Web typecheck | `bun run --cwd apps/web typecheck` | ✅ clean (pre-existing `marked-katex-extension` error only) |
-| Mobile typecheck | `bun run --cwd apps/mobile typecheck` | ✅ clean (pre-existing `katex` declaration error only) |
-| API typecheck | `bun run --cwd apps/api typecheck` | ✅ clean |
-| Cache tests | `vitest run --config web/vitest.config.ts src/lib/query/cache.test.ts` | ✅ 5/5 pass (incl. 3 new `dropCorruptInboxItemQueries` tests) |
-| API auth capabilities | `bun test ../../tests/api/integration/adapters/auth/capabilities.test.ts` | ✅ 6/6 pass |
-| API reset password email | `bun test ../../tests/api/integration/adapters/auth/reset-password.test.ts` | ✅ 4/4 pass |
-| API auth routes | `bun test ../../tests/api/integration/adapters/auth/routes.test.ts` | ✅ 2/2 pass (auth capabilities header assertion added) |
-| Web capabilities | `vitest run --config web/vitest.config.ts src/lib/auth/capabilities.test.ts` | ✅ 2/2 pass |
-| Web integration suite | `vitest run --config web/vitest.config.ts` | ✅ 258/259 pass (1 pre-existing failure: native-contracts brand accent) |
-| Mobile integration suite | `bun run test:mobile:integration` | ✅ 30/30 pass |
-| Boundaries | `bun run check:boundaries` | ✅ 632 files checked, 0 boundary errors |
-| Lint | `bun run lint` across all workspaces | ✅ 0 errors |
-| Format | `bun run fmt:check` across all workspaces | ✅ clean |
+| Check                    | Command                                                                      | Result                                                                  |
+| ------------------------ | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Reader typecheck         | `bun run --cwd packages/reader typecheck`                                    | ✅ clean (pre-existing `marked-katex-extension` error only)             |
+| Web typecheck            | `bun run --cwd apps/web typecheck`                                           | ✅ clean (pre-existing `marked-katex-extension` error only)             |
+| Mobile typecheck         | `bun run --cwd apps/mobile typecheck`                                        | ✅ clean (pre-existing `katex` declaration error only)                  |
+| API typecheck            | `bun run --cwd apps/api typecheck`                                           | ✅ clean                                                                |
+| Cache tests              | `vitest run --config web/vitest.config.ts src/lib/query/cache.test.ts`       | ✅ 5/5 pass (incl. 3 new `dropCorruptInboxItemQueries` tests)           |
+| API auth capabilities    | `bun test ../../tests/api/integration/adapters/auth/capabilities.test.ts`    | ✅ 6/6 pass                                                             |
+| API reset password email | `bun test ../../tests/api/integration/adapters/auth/reset-password.test.ts`  | ✅ 4/4 pass                                                             |
+| API auth routes          | `bun test ../../tests/api/integration/adapters/auth/routes.test.ts`          | ✅ 2/2 pass (auth capabilities header assertion added)                  |
+| Web capabilities         | `vitest run --config web/vitest.config.ts src/lib/auth/capabilities.test.ts` | ✅ 2/2 pass                                                             |
+| Web integration suite    | `vitest run --config web/vitest.config.ts`                                   | ✅ 258/259 pass (1 pre-existing failure: native-contracts brand accent) |
+| Mobile integration suite | `bun run test:mobile:integration`                                            | ✅ 30/30 pass                                                           |
+| Boundaries               | `bun run check:boundaries`                                                   | ✅ 632 files checked, 0 boundary errors                                 |
+| Lint                     | `bun run lint` across all workspaces                                         | ✅ 0 errors                                                             |
+| Format                   | `bun run fmt:check` across all workspaces                                    | ✅ clean                                                                |
 
 ### Test files written/modified
 

@@ -10,21 +10,11 @@
       "kind": "feed",
       "feed_url": "https://whattocook.substack.com/feed",
       "details": "Food",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Living", "Cooking"],
       "cleaned_author": "Caroline Chambers",
       "language": "en",
-      "keywords": [
-        "recipes",
-        "cooking",
-        "easy meals",
-        "minimal dishes"
-      ],
+      "keywords": ["recipes", "cooking", "easy meals", "minimal dishes"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -35,21 +25,11 @@
       "kind": "feed",
       "feed_url": "https://violetcooks.substack.com/feed",
       "details": "Food",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Living", "Cooking"],
       "cleaned_author": "Violet Witchel",
       "language": "en",
-      "keywords": [
-        "recipes",
-        "meal plans",
-        "shopping lists",
-        "food inspiration"
-      ],
+      "keywords": ["recipes", "meal plans", "shopping lists", "food inspiration"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -60,22 +40,11 @@
       "kind": "feed",
       "feed_url": "https://sundaystack.substack.com/feed",
       "details": "Food",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Living",
-        "Cooking",
-        "_personal"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Living", "Cooking", "_personal"],
       "cleaned_author": "Katie",
       "language": "en",
-      "keywords": [
-        "cooking",
-        "recipes",
-        "techniques",
-        "personal experiences"
-      ],
+      "keywords": ["cooking", "recipes", "techniques", "personal experiences"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -86,21 +55,11 @@
       "kind": "feed",
       "feed_url": "https://restaurantdropout.substack.com/feed",
       "details": "Food",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Living", "Cooking"],
       "cleaned_author": "Zoe Barrie Soderstrom",
       "language": "en",
-      "keywords": [
-        "meal planning",
-        "cooking",
-        "recipes",
-        "grocery lists"
-      ],
+      "keywords": ["meal planning", "cooking", "recipes", "grocery lists"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -111,21 +70,11 @@
       "kind": "feed",
       "feed_url": "https://emilyley.substack.com/feed",
       "details": "Parenting",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Living",
-        "Parenting",
-        "Cooking"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Living", "Parenting", "Cooking"],
       "cleaned_author": "Emily Ley",
       "language": "en",
-      "keywords": [
-        "parenting",
-        "motherhood",
-        "recipes"
-      ],
+      "keywords": ["parenting", "motherhood", "recipes"],
       "top_level_category": "Family & Relationships"
     },
     {
@@ -136,21 +85,11 @@
       "kind": "reddit",
       "subreddit": "HealthyFood",
       "details": "Health > Wellness",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Health",
-        "Cooking"
-      ],
+      "tags": ["Living", "Health", "Cooking"],
       "language": "en",
-      "keywords": [
-        "healthy recipes",
-        "nutrition discussion",
-        "food tips"
-      ],
+      "keywords": ["healthy recipes", "nutrition discussion", "food tips"],
       "top_level_category": "Health & Wellness"
     },
     {
@@ -161,21 +100,11 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/seriouseatsfeaturesvideos",
       "details": "Travel > Food & Drink",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking",
-        "DIY"
-      ],
+      "tags": ["Living", "Cooking", "DIY"],
       "language": "en",
-      "keywords": [
-        "recipes",
-        "cooking techniques",
-        "food science"
-      ],
+      "keywords": ["recipes", "cooking techniques", "food science"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -187,21 +116,11 @@
       "channel_id": "UCJFp8uSYCjXOMnkUyb3CQ3Q",
       "thumbnail_url": "https://yt3.ggpht.com/o7oCsweCTKk-hPxQnLERoEA9BChm_4KWrIYsmJFygp6td2oFRyhXPHq7F6QanU2tfqsLQ3eVrhM=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Food & Drink",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking",
-        "DIY"
-      ],
+      "tags": ["Living", "Cooking", "DIY"],
       "language": "en",
-      "keywords": [
-        "recipe videos",
-        "cooking hacks",
-        "food inspiration"
-      ],
+      "keywords": ["recipe videos", "cooking hacks", "food inspiration"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -212,20 +131,11 @@
       "kind": "reddit",
       "subreddit": "Food",
       "details": "Travel > Food & Drink",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "recipes",
-        "cooking tips",
-        "food photography"
-      ],
+      "keywords": ["recipes", "cooking tips", "food photography"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -236,21 +146,11 @@
       "kind": "feed",
       "feed_url": "https://thetakeout.com/rss",
       "details": "Food & Drink",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking",
-        "Restaurants"
-      ],
+      "tags": ["Living", "Cooking", "Restaurants"],
       "language": "en",
-      "keywords": [
-        "food articles",
-        "recipes",
-        "cooking tips"
-      ],
+      "keywords": ["food articles", "recipes", "cooking tips"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -261,20 +161,11 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/food52-TheAandMBlog",
       "details": "Food & Drink > Recipes",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "recipes",
-        "cooking contests",
-        "food articles"
-      ],
+      "keywords": ["recipes", "cooking contests", "food articles"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -286,20 +177,11 @@
       "channel_id": "UCJHA_jMfCvEnv-3kRjTCQXw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMZETWk42mfXsgSrIniA8upHnxl52GToDpdI_Zs=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Food & Drink > Recipes",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking",
-        "DIY"
-      ],
+      "tags": ["Living", "Cooking", "DIY"],
       "language": "en",
-      "keywords": [
-        "pop culture recipes",
-        "cooking"
-      ],
+      "keywords": ["pop culture recipes", "cooking"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -311,21 +193,11 @@
       "channel_id": "UCIEv3lZ_tNXHzL3ox-_uUGQ",
       "thumbnail_url": "https://yt3.ggpht.com/bFpwiiOB_NLCVsIcVQ9UcwBjb1RzipnMmtNfLSWpeIaHboyGkBCq4KBitmovRbStk9WvIWIZOyo=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Food & Drink > Restaurants",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking",
-        "Restaurants"
-      ],
+      "tags": ["Living", "Cooking", "Restaurants"],
       "language": "en",
-      "keywords": [
-        "cooking tutorials",
-        "recipe demonstrations",
-        "entertaining content"
-      ],
+      "keywords": ["cooking tutorials", "recipe demonstrations", "entertaining content"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -336,20 +208,11 @@
       "kind": "reddit",
       "subreddit": "recipes",
       "details": "Food & Drink",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "recipe sharing",
-        "cooking techniques",
-        "community cooking"
-      ],
+      "keywords": ["recipe sharing", "cooking techniques", "community cooking"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -360,20 +223,11 @@
       "kind": "reddit",
       "subreddit": "Cooking",
       "details": "Food & Drink",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "cooking tips",
-        "recipe exchange",
-        "culinary discussions"
-      ],
+      "keywords": ["cooking tips", "recipe exchange", "culinary discussions"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -385,22 +239,11 @@
       "channel_id": "UCq2E1mIwUKMWzCA4liA_XGQ",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMe-IKUMfA-CJ3wl55Oqy4EjuV6yXhJsINskIo4Sg=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Food & Drink > Healthy Eating",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Science",
-        "Cooking",
-        "Health"
-      ],
+      "tags": ["Living", "Science", "Cooking", "Health"],
       "language": "en",
-      "keywords": [
-        "plant-based",
-        "recipes",
-        "nutrition"
-      ],
+      "keywords": ["plant-based", "recipes", "nutrition"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -412,21 +255,11 @@
       "channel_id": "UCtaNepQqDZc0a-dfRlt7UZg",
       "thumbnail_url": "https://yt3.ggpht.com/z6X_3W9xdSpi9jlTPUpx8yIlKeiGr-NCrquRofHhZhpyA8am3jn3ZpG-gsF6_hYT8mMyaBFvbW8=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Food & Drink > Healthy Eating",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Kevin Curry",
-      "tags": [
-        "Living",
-        "Cooking",
-        "Fitness"
-      ],
+      "tags": ["Living", "Cooking", "Fitness"],
       "language": "en",
-      "keywords": [
-        "healthy recipes",
-        "fitness meal prep",
-        "nutrition tips"
-      ],
+      "keywords": ["healthy recipes", "fitness meal prep", "nutrition tips"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -438,20 +271,11 @@
       "channel_id": "UCNbngWUqL2eqRw12yAwcICg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqP0y716WDWJkvab3MdPKAqoeuuXdJPak3ze9V0YNk8=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Food & Drink > Recipes",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Laura Vitale",
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "recipes",
-        "cooking tips",
-        "kitchen hacks"
-      ],
+      "keywords": ["recipes", "cooking tips", "kitchen hacks"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -463,24 +287,11 @@
       "channel_id": "UC9VhfQi-D-7morDdwjVcJPA",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqOfyHjYPu2uWnAIBCOuSBBVyJJWe7WtTdR6Tyxi_g=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Food & Drink > Coffee & Tea",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "DIY",
-        "Cooking",
-        "Drinks"
-      ],
+      "tags": ["Living", "DIY", "Cooking", "Drinks"],
       "language": "en",
-      "keywords": [
-        "coffee",
-        "brewing",
-        "reviews",
-        "tutorials",
-        "home barista"
-      ],
+      "keywords": ["coffee", "brewing", "reviews", "tutorials", "home barista"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -491,23 +302,12 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/EaterNational",
       "details": "Travel > Food & Drink",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 22.514924106053122,
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking",
-        "Restaurants"
-      ],
+      "tags": ["Living", "Cooking", "Restaurants"],
       "language": "en",
-      "keywords": [
-        "restaurant news",
-        "food trends",
-        "chef interviews"
-      ],
+      "keywords": ["restaurant news", "food trends", "chef interviews"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -519,21 +319,11 @@
       "channel_id": "UCwiTOchWeKjrJZw7S1H__1g",
       "thumbnail_url": "https://yt3.ggpht.com/my5fZEjea_-N5p8mhqrdNIxghb-KjP9AcH4lQlYzNrRlwzjx3Gbay0JlOCZqJOcp_sTjF3rmBV8=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Food & Drink > Restaurants",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Restaurants",
-        "Cooking"
-      ],
+      "tags": ["Living", "Restaurants", "Cooking"],
       "language": "en",
-      "keywords": [
-        "food challenges",
-        "restaurant experiences",
-        "cooking"
-      ],
+      "keywords": ["food challenges", "restaurant experiences", "cooking"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -545,23 +335,11 @@
       "channel_id": "UCg-p3lQIqmhh7gHpyaOmOiQ",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMDhtXsSjCGxTr8ynWJhakBLOkMMHYtC6FJKELw3Q=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Asia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "K-Pop",
-        "Cinema",
-        "Cooking"
-      ],
+      "tags": ["Living", "Arts & Culture", "K-Pop", "Cinema", "Cooking"],
       "language": "en",
-      "keywords": [
-        "Korean culture",
-        "food",
-        "YouTube"
-      ],
+      "keywords": ["Korean culture", "food", "YouTube"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -573,23 +351,11 @@
       "channel_id": "UCXOKEdfOFxsHO_-Su3K8SHg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqNm55cB2h6hAvrdUV1UpZ6yrnXysB6rdhPlvXCD9g=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Asia",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Mike Chen",
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cooking",
-        "Restaurants"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cooking", "Restaurants"],
       "language": "en",
-      "keywords": [
-        "food",
-        "street food",
-        "Asian cuisine",
-        "YouTube"
-      ],
+      "keywords": ["food", "street food", "Asian cuisine", "YouTube"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -601,20 +367,11 @@
       "channel_id": "UC0lG3Ihe4LGV851lODRIS5g",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqObfznsUifTR38k_sXX68sGa8oGvrRxWK7q-0tetg=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > France",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "cooking",
-        "French cuisine",
-        "recipes"
-      ],
+      "keywords": ["cooking", "French cuisine", "recipes"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -626,23 +383,11 @@
       "channel_id": "UCRzPUBhXUZHclB7B5bURFXw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMjL5MMEDDpOHmmKdqabvkc7qcBApjQ_nbRImMvEvc=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Local > Los Angeles",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Restaurants",
-        "Cooking",
-        "Cities"
-      ],
+      "tags": ["Local", "Restaurants", "Cooking", "Cities"],
       "language": "en",
-      "keywords": [
-        "food",
-        "dining",
-        "restaurants",
-        "Los Angeles"
-      ],
+      "keywords": ["food", "dining", "restaurants", "Los Angeles"],
       "top_level_category": "Regional & Local"
     },
     {
@@ -654,20 +399,11 @@
       "channel_id": "UCyEd6QBSgat5kkC6svyjudA",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqO7ds3zPJME4RraNV6JkikvzXnWHKkWXjeAJmy9pug=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Travel > Food & Drink",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Mark Wiens",
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "street food",
-        "cuisine",
-        "travel food"
-      ],
+      "keywords": ["street food", "cuisine", "travel food"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -675,664 +411,385 @@
       "title": "NYT > Food \u2013 nytimes.com",
       "kind": "feed",
       "feed_url": "http://www.nytimes.com/services/xml/rss/nyt/DiningandWine.xml",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "NYT Food",
       "cleaned_author": null,
       "summary": "The New York Times Food section explores culinary delights and trends, celebrating diverse cooking through features and reviews.",
-      "tags": [
-        "Living",
-        "Cooking",
-        "Restaurants"
-      ],
+      "tags": ["Living", "Cooking", "Restaurants"],
       "language": "en",
-      "keywords": [
-        "food",
-        "cooking",
-        "restaurants",
-        "reviews"
-      ]
+      "keywords": ["food", "cooking", "restaurants", "reviews"]
     },
     {
       "id": "feed:http://nrn.com/rss.xml",
       "title": "Nation's Restaurant News \u2013 nrn.com",
       "kind": "feed",
       "feed_url": "http://nrn.com/rss.xml",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "Nation's Restaurant News",
       "cleaned_author": null,
       "summary": "A reliable source for the latest trends in the restaurant industry, featuring updates on major players and market dynamics. Coverage includes notable restaurant developments and consumer insights.",
-      "tags": [
-        "Local",
-        "USA",
-        "Restaurants",
-        "Cooking"
-      ],
+      "tags": ["Local", "USA", "Restaurants", "Cooking"],
       "language": "en",
-      "keywords": [
-        "restaurant news",
-        "Papa John's",
-        "Taco Bell",
-        "Chipotle",
-        "Sweetgreen"
-      ]
+      "keywords": ["restaurant news", "Papa John's", "Taco Bell", "Chipotle", "Sweetgreen"]
     },
     {
       "id": "feed:https://cupofjo.com/feed/",
       "title": "Cup of Jo",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://cupofjo.com/feed/",
       "summary": "A daily women\u2019s lifestyle site that covers style, culture, food, travel, relationships and parenting.",
       "details": "Recreation",
       "cleaned_title": "Cup of Jo",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "LGBTQ",
-        "Fashion",
-        "Cooking",
-        "Parenting",
-        "_mainstream"
-      ],
+      "tags": ["Living", "LGBTQ", "Fashion", "Cooking", "Parenting", "_mainstream"],
       "language": "en",
-      "keywords": [
-        "lifestyle",
-        "relationships",
-        "food"
-      ],
+      "keywords": ["lifestyle", "relationships", "food"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://bangkokglutton.com/feed/",
       "title": "Bangkok Glutton",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://bangkokglutton.com/feed/",
       "summary": "\"Tasting it to the streets...\".",
       "details": "Recreation > Food And Drink",
       "cleaned_title": "Bangkok Glutton",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Restaurants",
-        "Cooking"
-      ],
+      "tags": ["Living", "Restaurants", "Cooking"],
       "language": "en",
-      "keywords": [
-        "Bangkok",
-        "food",
-        "street food"
-      ],
+      "keywords": ["Bangkok", "food", "street food"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://benviveur.blogspot.com/feeds/posts/default",
       "title": "Ben Viveur",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://benviveur.blogspot.com/feeds/posts/default",
       "summary": "The Epicurean musings of Benjamin Nunn. Recipes. Reviews. Beer. Swearing.",
       "details": "Recreation > Food And Drink",
       "cleaned_title": "Ben Viveur",
       "cleaned_author": "Benjamin Nunn",
-      "tags": [
-        "Living",
-        "Cooking",
-        "Restaurants",
-        "Writing"
-      ],
+      "tags": ["Living", "Cooking", "Restaurants", "Writing"],
       "language": "en",
-      "keywords": [
-        "beer",
-        "recipes",
-        "food reviews"
-      ],
+      "keywords": ["beer", "recipes", "food reviews"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://www.cakewrecks.com/home?format=rss",
       "title": "Cake Wrecks",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.cakewrecks.com/home?format=rss",
       "summary": "Jen started this blog in May of 2008 one night when she was bored. She honestly never thought anyone would read it.",
       "details": "Recreation > Food And Drink",
       "cleaned_title": "Cake Wrecks",
       "cleaned_author": "Jen",
-      "tags": [
-        "Living",
-        "DIY",
-        "Cooking",
-        "Humor"
-      ],
+      "tags": ["Living", "DIY", "Cooking", "Humor"],
       "language": "en",
-      "keywords": [
-        "cakes",
-        "baking",
-        "humor"
-      ],
+      "keywords": ["cakes", "baking", "humor"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://thecommontable.eu/feed/",
       "title": "The Common Table",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://thecommontable.eu/feed/",
       "summary": "by studio_lovell.",
       "details": "Recreation > Food And Drink",
       "cleaned_title": "The Common Table",
       "cleaned_author": "studio_lovell",
-      "tags": [
-        "Living",
-        "Cooking",
-        "Education"
-      ],
+      "tags": ["Living", "Cooking", "Education"],
       "language": "en",
-      "keywords": [
-        "food culture",
-        "gastronomy",
-        "food politics"
-      ],
+      "keywords": ["food culture", "gastronomy", "food politics"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://goodstuffnw.com/feed.rss",
       "title": "Good Stuff NW",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://goodstuffnw.com/feed.rss",
       "summary": "A blog that explores the connections between food sourcing and culinary experiences, showcasing seasonal recipes and local legislative updates.",
       "details": "Countries > USA",
       "cleaned_title": "Good Stuff NW",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "USA",
-        "Cooking"
-      ],
+      "tags": ["Living", "USA", "Cooking"],
       "language": "en",
-      "keywords": [
-        "food",
-        "recipes",
-        "sustainability",
-        "legislation"
-      ],
+      "keywords": ["food", "recipes", "sustainability", "legislation"],
       "top_level_category": "Regional & Local"
     },
     {
       "id": "feed:https://grubbits.com/feed/",
       "title": "Grubbits",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://grubbits.com/feed/",
       "summary": "A story of a father who loves food and tries to motivate his picky-eating daughter to try new things.",
       "details": "Recreation > Food And Drink",
       "cleaned_title": "Grubbits",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "food trends",
-        "family",
-        "recipes",
-        "culinary adventures"
-      ],
+      "keywords": ["food trends", "family", "recipes", "culinary adventures"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://ramenramenramen.net/feed/",
       "title": "ramen! ramen! ramen!",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://ramenramenramen.net/feed/",
       "summary": "ramen reviews, news, and more!",
       "details": "Recreation > Food And Drink",
       "cleaned_title": "ramen! ramen! ramen!",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "ramen",
-        "noodle reviews",
-        "food culture"
-      ],
+      "keywords": ["ramen", "noodle reviews", "food culture"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://www.theramenrater.com/feed/",
       "title": "The Ramen Rater",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.theramenrater.com/feed/",
       "summary": "The Definitive Source For Instant Noodle Reviews Since 2002.",
       "details": "Recreation > Food And Drink",
       "cleaned_title": "The Ramen Rater",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "instant noodles",
-        "ramen reviews",
-        "food blog"
-      ],
+      "keywords": ["instant noodles", "ramen reviews", "food blog"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://feeds.feedburner.com/thewoksoflife",
       "title": "The Woks of Life",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://feeds.feedburner.com/thewoksoflife",
       "summary": "We're a family of 4 living between the US & China. When we're not packing or unpacking suitcases, we're sharing our culinary exploits and travels w/ each other here!",
       "details": "Recreation > Food And Drink",
       "cleaned_title": "The Woks of Life",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "family recipes",
-        "Chinese cuisine",
-        "culinary travels",
-        "cooking tips"
-      ],
+      "keywords": ["family recipes", "Chinese cuisine", "culinary travels", "cooking tips"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://thecanadianafrican.com/feed/",
       "title": "The Canadian African",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://thecanadianafrican.com/feed/",
       "summary": "Delicious food from the African Continent made plant-based.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "The Canadian African",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking",
-        "Health"
-      ],
+      "tags": ["Living", "Cooking", "Health"],
       "language": "en",
-      "keywords": [
-        "African recipes",
-        "plant-based cooking",
-        "health",
-        "food culture"
-      ],
+      "keywords": ["African recipes", "plant-based cooking", "health", "food culture"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://www.chopstickchronicles.com/feed/",
       "title": "Chopstick Chronicles",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.chopstickchronicles.com/feed/",
       "summary": "Authentic Japanese cooking made easy.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "Chopstick Chronicles",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "Japanese recipes",
-        "cooking",
-        "traditional food",
-        "dishes",
-        "cuisine"
-      ],
+      "keywords": ["Japanese recipes", "cooking", "traditional food", "dishes", "cuisine"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://feedpress.me/FIJ",
       "title": "Food in Jars \u2013 Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://feedpress.me/FIJ",
       "summary": "This site was launched in early 2009 to give Marisa a place share her interest in canning and general obsession with canning jars of all shapes and sizes.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "Food in Jars",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "DIY",
-        "Cooking"
-      ],
+      "tags": ["Living", "Arts & Culture", "DIY", "Cooking"],
       "language": "en",
-      "keywords": [
-        "canning",
-        "preserving",
-        "homemade",
-        "recipes"
-      ],
+      "keywords": ["canning", "preserving", "homemade", "recipes"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://foragerchef.com/feed/",
       "title": "Forage | Chef",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://foragerchef.com/feed/",
       "summary": "Wild Food Tutorials, Recipes and Techniques from Chef Alan Bergo.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "Forage",
       "cleaned_author": "Alan Bergo",
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cooking"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cooking"],
       "language": "en",
-      "keywords": [
-        "foraging",
-        "wild foods",
-        "recipes",
-        "cooking techniques"
-      ],
+      "keywords": ["foraging", "wild foods", "recipes", "cooking techniques"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://www.homesicktexan.com/feed/",
       "title": "Homesick Texan",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.homesicktexan.com/feed/",
       "summary": "Are you hungry for Texas home cooking? From enchiladas to queso, and from a pot of chili to a slice of sheet cake\u2026.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "Homesick Texan",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cooking"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cooking"],
       "language": "en",
-      "keywords": [
-        "Texas cuisine",
-        "comfort food",
-        "recipes",
-        "home cooking"
-      ],
+      "keywords": ["Texas cuisine", "comfort food", "recipes", "home cooking"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://honest-food.net/feed/",
       "title": "Hunter Angler Gardener Cook",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://honest-food.net/feed/",
       "summary": "Hank Shaw's website featuring more than 1200 wild game recipes, fish and seafood recipes, foraging tips, fermentation, preserving, and pasta.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "Hunter Angler Gardener Cook",
       "cleaned_author": "Hank Shaw",
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cooking"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cooking"],
       "language": "en",
-      "keywords": [
-        "wild foods",
-        "foraging",
-        "hunting",
-        "cooking recipes"
-      ],
+      "keywords": ["wild foods", "foraging", "hunting", "cooking recipes"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://www.justonecookbook.com/feed/",
       "title": "Just One Cookbook \u00b7 Blog",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.justonecookbook.com/feed/",
       "summary": "Aa Japanese food blog with 1000+ authentic home-style recipes. Learn the cuisine with easy step-by-step photo instructions and videos.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "Just One Cookbook",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cooking"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cooking"],
       "language": "en",
-      "keywords": [
-        "Japanese recipes",
-        "home cooking",
-        "authentic recipes",
-        "cuisine"
-      ],
+      "keywords": ["Japanese recipes", "home cooking", "authentic recipes", "cuisine"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://www.mexicanplease.com/feed/",
       "title": "Mexican Please",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.mexicanplease.com/feed/",
       "summary": "Mexican Food Recipes and Authentic Mexican Cooking Techniques.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "Mexican Please",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cooking"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cooking"],
       "language": "en",
-      "keywords": [
-        "Mexican cuisine",
-        "recipes",
-        "cooking techniques",
-        "authentic"
-      ],
+      "keywords": ["Mexican cuisine", "recipes", "cooking techniques", "authentic"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://minimalistbaker.com/feed/",
       "title": "Minimalist Baker - Simple Recipes That Make You Feel Good",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://minimalistbaker.com/feed/",
       "summary": "Celebrating simple cooking with recipes that require 10 ingredients or less, 1 bowl, or 30 minute or less to prepare.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "Minimalist Baker",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cooking"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cooking"],
       "language": "en",
-      "keywords": [
-        "simple recipes",
-        "easy cooking",
-        "vegan",
-        "gluten-free"
-      ],
+      "keywords": ["simple recipes", "easy cooking", "vegan", "gluten-free"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://www.the-pasta-project.com/feed/",
       "title": "The Pasta Project \u2013 Authentic Pasta Recipes",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.the-pasta-project.com/feed/",
       "summary": "Pasta recipes and articles on the wonderful world of Italian pasta and the 360+ different types to be found in Italy.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "The Pasta Project",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cooking"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cooking"],
       "language": "en",
-      "keywords": [
-        "pasta recipes",
-        "Italian cuisine",
-        "homemade pasta",
-        "cooking"
-      ],
+      "keywords": ["pasta recipes", "Italian cuisine", "homemade pasta", "cooking"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://www.sandwichtribunal.com/feed/",
       "title": "Sandwich Tribunal. A sort of sandwich death panel.",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.sandwichtribunal.com/feed/",
       "summary": "The idea behind this site is to explore the nature of sandwichness by eating every sandwich on the Official en.wikipedia.org List of Sandwiches.",
       "details": "Uncategorizable > Completionists",
       "cleaned_title": "Sandwich Tribunal",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "sandwiches",
-        "food reviews",
-        "culinary exploration"
-      ],
+      "keywords": ["sandwiches", "food reviews", "culinary exploration"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "id": "feed:https://smittenkitchen.com/feed/",
       "title": "smitten kitchen",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://smittenkitchen.com/feed/",
       "summary": "Fearless cooking from a tiny NYC kitchen.",
       "details": "Recreation > Food And Drink > Recipes",
       "cleaned_title": "smitten kitchen",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Arts & Culture",
-        "Cooking",
-        "Restaurants"
-      ],
+      "tags": ["Living", "Arts & Culture", "Cooking", "Restaurants"],
       "language": "en",
-      "keywords": [
-        "recipes",
-        "home cooking",
-        "NYC food"
-      ],
+      "keywords": ["recipes", "home cooking", "NYC food"],
       "top_level_category": "Food & Drink"
     },
     {
       "id": "feed:https://storeboughtisfineblog.wpcomstaging.com/feed/",
       "title": "Store Bought Is Fine",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://storeboughtisfineblog.wpcomstaging.com/feed/",
       "summary": "I\u2019m the store-bought version of Ina Garten. Cooking my way through all 1,200+ of the Barefoot Contessa\u2019s treasure trove of recipes.",
       "details": "Uncategorizable > Completionists",
       "cleaned_title": "Store Bought Is Fine",
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking"
-      ],
+      "tags": ["Living", "Cooking"],
       "language": "en",
-      "keywords": [
-        "Barefoot Contessa",
-        "recipe recreations",
-        "cooking"
-      ],
+      "keywords": ["Barefoot Contessa", "recipe recreations", "cooking"],
       "top_level_category": "Home & Hobbies"
     },
     {
       "title": "Bon App\u00e9tit",
       "popularity_score": 2.6883104792378987,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "feed_url": "https://www.bonappetit.com/feed/rss",
       "kind": "feed",
       "id": "feed:https://www.bonappetit.com/feed/rss",
       "cleaned_title": "Bon App\u00e9tit",
       "cleaned_author": null,
       "summary": "A food-oriented website delivering current culinary advice and insights, featuring expert recommendations for kitchenware and recipes, aimed at both amateur cooks and culinary enthusiasts.",
-      "tags": [
-        "Living",
-        "Cooking",
-        "Restaurants"
-      ],
+      "tags": ["Living", "Cooking", "Restaurants"],
       "language": "en",
-      "keywords": [
-        "cooking",
-        "kitchen",
-        "recipes",
-        "food"
-      ]
+      "keywords": ["cooking", "kitchen", "recipes", "food"]
     },
     {
       "id": "feed:feeds.feedburner.com:The Impulsive Buy",
@@ -1342,25 +799,11 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/theimpulsivebuy/aRIJ",
       "details": "Food & Drink",
-      "sources": [
-        "original_feed_db",
-        "ooh_directory"
-      ],
+      "sources": ["original_feed_db", "ooh_directory"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cooking",
-        "Restaurants",
-        "_hip",
-        "_artsy"
-      ],
+      "tags": ["Living", "Cooking", "Restaurants", "_hip", "_artsy"],
       "language": "en",
-      "keywords": [
-        "product reviews",
-        "snack foods",
-        "fast food",
-        "humor"
-      ],
+      "keywords": ["product reviews", "snack foods", "fast food", "humor"],
       "top_level_category": "Food & Drink"
     }
   ],

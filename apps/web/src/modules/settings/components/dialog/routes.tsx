@@ -10,14 +10,6 @@ import {
   createRouter,
   useRouterState,
 } from "@tanstack/react-router";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@kyomi/ui/components/breadcrumb";
 import { ScrollArea } from "@kyomi/ui/components/scroll-area";
 import {
   Sidebar,
@@ -27,17 +19,11 @@ import {
   SidebarMenu,
   SidebarProvider,
 } from "@kyomi/ui/components/sidebar";
-import { Separator } from "@kyomi/ui/components/separator";
-import { AccountPageNav, AccountPagePanel, accountSection } from "../account";
-import { AdvancedPageNav, AdvancedPagePanel, advancedSection } from "../advanced";
-import { AppearancePageNav, AppearancePagePanel, appearanceSection } from "../appearance";
-import { BillingPageNav, BillingPagePanel, billingSection } from "../billing";
-import { FeedbackPageNav, FeedbackPagePanel, feedbackSection } from "../feedback";
-import {
-  PersonalizationPageNav,
-  PersonalizationPagePanel,
-  personalizationSection,
-} from "../personalization";
+import { AccountPageNav, AccountPagePanel } from "../account";
+import { AdvancedPageNav, AdvancedPagePanel } from "../advanced";
+import { AppearancePageNav, AppearancePagePanel } from "../appearance";
+import { BillingPageNav, BillingPagePanel } from "../billing";
+import { PersonalizationPageNav, PersonalizationPagePanel } from "../personalization";
 
 type SettingsDialogRouteContextValue = {
   logout: () => Promise<void>;
@@ -78,10 +64,6 @@ function SettingsSectionMenu({ pathname, className }: { pathname: string; classN
         isActive={pathname === "/billing"}
         onSelect={() => navigateToSettingsRoute("/billing")}
       />
-      <FeedbackPageNav
-        isActive={pathname === "/feedback"}
-        onSelect={() => navigateToSettingsRoute("/feedback")}
-      />
       <AdvancedPageNav
         isActive={pathname === "/advanced"}
         onSelect={() => navigateToSettingsRoute("/advanced")}
@@ -95,23 +77,11 @@ function SettingsDialogRouteLayout() {
     router: settingsRouter,
     select: (state) => state.location.pathname,
   });
-  const accountMatch = pathname === "/account";
-  const appearanceMatch = pathname === "/appearance";
-  const personalizationMatch = pathname === "/personalization";
-  const billingMatch = pathname === "/billing";
-  const feedbackMatch = pathname === "/feedback";
-  const advancedMatch = pathname === "/advanced";
-  const activeSectionName =
-    (accountMatch && accountSection.name) ||
-    (appearanceMatch && appearanceSection.name) ||
-    (personalizationMatch && personalizationSection.name) ||
-    (billingMatch && billingSection.name) ||
-    (feedbackMatch && feedbackSection.name) ||
-    (advancedMatch && advancedSection.name) ||
-    accountSection.name;
 
+  // `min-h-0` overrides the provider's `min-h-svh`, which would stretch past the dialog and clip
+  // the scroll area.
   return (
-    <SidebarProvider className="h-full items-start bg-popover">
+    <SidebarProvider className="h-full min-h-0 items-start bg-popover">
       <Sidebar
         collapsible="none"
         className="hidden h-full w-48 border-r border-border bg-sidebar md:flex"
@@ -124,36 +94,14 @@ function SettingsDialogRouteLayout() {
           </SidebarGroup>
         </SidebarContent>
       </Sidebar>
-      <main className="flex h-135 min-w-0 flex-1 flex-col overflow-hidden">
+      <main className="flex h-full min-w-0 flex-1 flex-col overflow-hidden">
         <nav aria-label="Settings sections" className="border-b border-border p-2 md:hidden">
           <SettingsSectionMenu
             pathname={pathname}
             className="flex-row overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>[data-slot=sidebar-menu-item]]:shrink-0 [&_[data-slot=sidebar-menu-button]]:w-auto"
           />
         </nav>
-        <header className="flex h-16 shrink-0 items-center ps-5 pe-14">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem className="hidden md:block">
-                <BreadcrumbLink
-                  href="/account"
-                  onClick={(event) => {
-                    event.preventDefault();
-                    navigateToSettingsRoute("/account");
-                  }}
-                >
-                  Settings
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="hidden md:block" />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{activeSectionName}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </header>
-        <Separator />
-        <ScrollArea className="min-h-0 flex-1">
+        <ScrollArea className="min-h-0 flex-1" scrollFade>
           <div className="flex flex-col gap-4 p-5">
             <Outlet />
           </div>
@@ -197,12 +145,6 @@ const billingRoute = createRoute({
   component: BillingPagePanel,
 });
 
-const feedbackRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/feedback",
-  component: FeedbackPagePanel,
-});
-
 const advancedRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/advanced",
@@ -214,7 +156,6 @@ const routeTree = rootRoute.addChildren([
   appearanceRoute,
   personalizationRoute,
   billingRoute,
-  feedbackRoute,
   advancedRoute,
 ]);
 
@@ -223,13 +164,7 @@ const settingsRouter = createRouter({
   history: createMemoryHistory({ initialEntries: ["/account"] }),
 });
 
-type SettingsRoutePath =
-  | "/account"
-  | "/appearance"
-  | "/personalization"
-  | "/billing"
-  | "/feedback"
-  | "/advanced";
+type SettingsRoutePath = "/account" | "/appearance" | "/personalization" | "/billing" | "/advanced";
 
 type SettingsDialogRoutesProps = {
   logout: () => Promise<void>;

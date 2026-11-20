@@ -1,10 +1,22 @@
 import { Elysia } from "elysia";
-import { databaseAdapterPlugin, requestObservationPlugin } from "@shared/http/stacks";
+import type { ManagedRuntime } from "effect";
+import type { Db } from "@adapters/db/service";
+import type { AppConfig } from "@config/env/service";
+import { effectPlugin } from "@shared/http/effect/plugin";
+import { requestObservationPlugin } from "@shared/http/stacks";
 import { handleFaviconRequest } from "./handler";
+import type { FaviconResolver } from "./service";
 
-export const faviconPlugin = new Elysia({
-  name: "kyomi.favicon",
-})
-  .use(requestObservationPlugin)
-  .use(databaseAdapterPlugin)
-  .get("/api/favicon", ({ db, request }) => handleFaviconRequest(db, request));
+export type FaviconRuntime = ManagedRuntime.ManagedRuntime<
+  Db | FaviconResolver | AppConfig,
+  unknown
+>;
+
+export function faviconPlugin(runtime: FaviconRuntime) {
+  return new Elysia({
+    name: "kyomi.favicon",
+  })
+    .use(requestObservationPlugin(runtime))
+    .use(effectPlugin(runtime))
+    .get("/api/favicon", ({ request, runEffect }) => runEffect(handleFaviconRequest(request)));
+}

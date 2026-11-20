@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { getReaderTabBarOcclusionHeight } from "@/components/ui/tab-bar/lib/styles";
 import { Skeleton } from "@ui/skeleton";
 import { fetchMobileApiJson, resolveMobileApiUrl } from "@/lib/api";
+import { openExternalLink } from "@/lib/external-link";
 import { buildFaviconUrlCandidates } from "@kyomi/ingest/favicon/browser";
 import { articleListQueryKeys } from "@modules/articles/queries/keys";
 import type { CursorListResponseDto } from "@kyomi/reader/schemas/article";
@@ -21,6 +22,8 @@ import { READER_FIXTURE_ENABLED, createLongArticleBody } from "./lib/fixture";
 import { startReaderTrace, type ReaderTrace } from "./lib/metrics";
 import { useArticle } from "./hooks/use-article";
 import { useReadingProgress } from "./hooks/use-reading-progress";
+import { useReaderToolbar } from "./hooks/use-toolbar";
+import { READER_SCREEN_ID } from "./lib/toolbar";
 import { getReaderCanvasColor, getReaderColorScheme } from "./lib/theme";
 import { FONT_STYLES } from "@/theme/fonts";
 import { mobileReaderLayout, mobileReaderSkeletonLayout } from "./lib/layout";
@@ -43,16 +46,13 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
   const readerColorScheme = getReaderColorScheme(colorScheme);
   const readerCanvasColor = getReaderCanvasColor(colorScheme);
   const tabBarOcclusionHeight = getReaderTabBarOcclusionHeight(insets);
-  const [readyArticleId, setReadyArticleId] = useState<string | null>(null);
+  // Readiness is per article *and* reader view, since either remounts the body (and its restore).
+  const [readyKey, setReadyKey] = useState<string | null>(null);
   // Avoid sending duplicate view events while an article stays open.
   const viewedArticleIdRef = useRef<string | null>(null);
   const traceRef = useRef<{ articleId: string; trace: ReaderTrace } | null>(null);
-  const handleArticleReady = useCallback(() => {
-    setReadyArticleId(articleId);
-    if (traceRef.current?.articleId === articleId) traceRef.current.trace.ready();
-  }, [articleId]);
   const { data: fetchedArticle, error, isLoading, refetch } = useArticle(articleId);
-  const article = useMemo(
+  const baseArticle = useMemo(
     () =>
       fetchedArticle && READER_FIXTURE_ENABLED
         ? {
@@ -65,6 +65,13 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
         : fetchedArticle,
     [fetchedArticle],
   );
+  // The bar's tools act on the article, and its slider sets the size the body is drawn at.
+  const { article, fontSizePx } = useReaderToolbar(baseArticle);
+  const currentKey = article ? `${article.id}:${article.reader.activeMode}` : null;
+  const handleArticleReady = useCallback(() => {
+    setReadyKey(currentKey);
+    if (traceRef.current?.articleId === articleId) traceRef.current.trace.ready();
+  }, [articleId, currentKey]);
   const body = useMemo(
     () => (article ? selectReaderBody(article.reader.selected, NATIVE_READER_ENABLED) : null),
     [article],
@@ -133,9 +140,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
       .catch(() => undefined);
   }, [article, queryClient]);
 
-  // The body waits for the "Remember reading position" preference so a position is never restored
-  // against it.
-  if (isLoading || (article && !readingProgress.isReady)) {
+  if (isLoading) {
     return (
       <ReaderCanvas color={readerCanvasColor} colorScheme={readerColorScheme}>
         <ReaderSkeleton
@@ -147,7 +152,7 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
     );
   }
 
-  const isDomReady = readyArticleId === article?.id;
+  const isReady = readyKey !== null && readyKey === currentKey;
   const isNative = body?.kind === "document";
 
   if (!article) {
@@ -179,14 +184,14 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
       <View style={{ flex: 1 }}>
         {isNative ? (
           <NativeArticleBody
-            key={article.id}
+            key={`${article.id}:${article.reader.activeMode}`}
             articleId={article.id}
             bottomInset={tabBarOcclusionHeight}
             colorScheme={readerColorScheme}
             document={body.document}
             faviconUrls={faviconUrls}
             feedTitle={article.feedTitle}
-            initialProgress={readingProgress.initialProgress}
+            fontSizePx={fontSizePx}
             onReadingProgress={readingProgress.onReadingProgress}
             onReady={handleArticleReady}
             title={article.title}
@@ -194,24 +199,24 @@ export function ReaderScreen({ articleId }: ReaderScreenProps) {
           />
         ) : (
           <ArticleBody
-            key={article.id}
+            key={`${article.id}:${article.reader.activeMode}`}
             colorScheme={readerColorScheme}
             bottomInset={tabBarOcclusionHeight}
             dom={{
               scrollEnabled: true,
-              style: { backgroundColor: readerCanvasColor, flex: 1, opacity: isDomReady ? 1 : 0 },
+              style: { backgroundColor: readerCanvasColor, flex: 1, opacity: isReady ? 1 : 0 },
             }}
             faviconUrls={faviconUrls}
             feedTitle={article.feedTitle}
-            fontSizePx={mobileReaderLayout.body.fontSizePx}
-            initialProgress={readingProgress.initialProgress}
+            fontSizePx={fontSizePx}
             onReadingProgress={readingProgress.onReadingProgress}
             onReady={handleArticleReady}
+            openUrl={openExternalLink}
             reader={toHtmlReaderContent(article.reader.selected)}
             title={article.title}
           />
         )}
-        {!isDomReady && !isNative ? (
+        {!isReady ? (
           <View
             pointerEvents="none"
             style={{
@@ -303,7 +308,9 @@ function ReaderCanvas({
           statusBarStyle: colorScheme === "dark" ? "light" : "dark",
         }}
       />
-      <View style={{ backgroundColor: color, flex: 1 }}>{children}</View>
+      <View style={{ backgroundColor: color, flex: 1 }} testID={READER_SCREEN_ID}>
+        {children}
+      </View>
     </>
   );
 }

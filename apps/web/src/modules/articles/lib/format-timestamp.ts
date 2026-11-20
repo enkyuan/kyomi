@@ -34,6 +34,70 @@ function getAbsoluteUtcFormatter(hourCycle: InboxTimestampHourCycleDto) {
   return hourCycle === "12h" ? absoluteUtcFormatter12h : absoluteUtcFormatter24h;
 }
 
+const relativeLongFormatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const dateFormatter = new Intl.DateTimeFormat("en", { dateStyle: "medium" });
+const dateUtcFormatter = new Intl.DateTimeFormat("en", { dateStyle: "medium", timeZone: "UTC" });
+
+/** "5 minutes ago", "yesterday", "in 2 hours": the same steps as the compact form, spelled out. */
+function formatRelativeLong(date: Date) {
+  const diffSeconds = Math.round((date.getTime() - Date.now()) / 1000);
+  const abs = Math.abs(diffSeconds);
+  const steps: [Intl.RelativeTimeFormatUnit, number][] = [
+    ["second", 60],
+    ["minute", 3600],
+    ["hour", 86_400],
+    ["day", 604_800],
+    ["week", 2_592_000],
+    ["month", 31_536_000],
+  ];
+  let divisor = 1;
+  for (const [unit, limit] of steps) {
+    if (abs < limit) {
+      return relativeLongFormatter.format(Math.round(diffSeconds / divisor), unit);
+    }
+    divisor = limit;
+  }
+  return relativeLongFormatter.format(Math.round(diffSeconds / 31_536_000), "year");
+}
+
+/** 2026-11-18 21:41 (or 9:41 PM with a 12-hour clock), in the given time zone. */
+function formatIso(date: Date, hourCycle: InboxTimestampHourCycleDto, timeZone?: "UTC") {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    day: "2-digit",
+    hour: "2-digit",
+    hour12: hourCycle === "12h",
+    minute: "2-digit",
+    month: "2-digit",
+    timeZone,
+    year: "numeric",
+  }).formatToParts(date);
+  const get = (type: string) => parts.find((part) => part.type === type)?.value ?? "";
+  const dayPeriod = get("dayPeriod");
+  const hour = hourCycle === "24h" && get("hour") === "24" ? "00" : get("hour");
+  return `${get("year")}-${get("month")}-${get("day")} ${hour}:${get("minute")}${
+    dayPeriod ? ` ${dayPeriod.toUpperCase()}` : ""
+  }`;
+}
+
+/** Formats that are not the compact relative or the medium date and time. */
+function formatOtherDisplay(
+  date: Date,
+  display: InboxTimestampDisplayDto,
+  hourCycle: InboxTimestampHourCycleDto,
+  utc: boolean,
+) {
+  if (display === "relative-long") {
+    return formatRelativeLong(date);
+  }
+  if (display === "date") {
+    return (utc ? dateUtcFormatter : dateFormatter).format(date);
+  }
+  if (display === "iso") {
+    return formatIso(date, hourCycle, utc ? "UTC" : undefined);
+  }
+  return null;
+}
+
 function formatRelative(date: Date) {
   const diffMs = date.getTime() - Date.now();
   const diffSeconds = Math.round(diffMs / 1000);
@@ -91,7 +155,10 @@ export function formatInboxTimestamp(
     return formatRelative(date);
   }
 
-  return getAbsoluteFormatter(hourCycle).format(date);
+  return (
+    formatOtherDisplay(date, display, hourCycle, false) ??
+    getAbsoluteFormatter(hourCycle).format(date)
+  );
 }
 
 export function formatInboxTimestampSsrFallback(
@@ -109,5 +176,8 @@ export function formatInboxTimestampSsrFallback(
     return formatRelative(date);
   }
 
-  return getAbsoluteUtcFormatter(hourCycle).format(date);
+  return (
+    formatOtherDisplay(date, display, hourCycle, true) ??
+    getAbsoluteUtcFormatter(hourCycle).format(date)
+  );
 }

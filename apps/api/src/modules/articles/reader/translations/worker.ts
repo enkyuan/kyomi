@@ -1,15 +1,13 @@
-import type { db } from "@adapters/db/client";
+import type { Database as DB } from "@adapters/db/service";
 import { translateTextWithCloudflare } from "@adapters/translation/cloudflare";
-import { cloudflareTranslationConfig } from "@config/translations";
-import { AppError } from "@shared/errors/app";
+import type { CloudflareTranslationConfig } from "@config/translations";
+import { isApiError } from "@shared/effect/errors";
 import {
   claimFeedItemTranslation,
   markFeedItemTranslationFailed,
   markFeedItemTranslationReady,
   requeueFeedItemTranslation,
 } from "./store";
-
-type DB = typeof db;
 
 export const TRANSLATION_MAX_ATTEMPTS = 3;
 
@@ -20,12 +18,16 @@ export type TranslationJobResult =
   | { status: "skipped"; translationId: string };
 
 function errorCodeFor(error: unknown): string {
-  return error instanceof AppError ? error.code : "TRANSLATION_PROVIDER_FAILED";
+  return isApiError(error) && "code" in error && error.code
+    ? error.code
+    : "TRANSLATION_PROVIDER_FAILED";
 }
 
 function isNonRetryable(error: unknown): boolean {
   return (
-    error instanceof AppError &&
+    isApiError(error) &&
+    "code" in error &&
+    error.code !== undefined &&
     ["TRANSLATION_CONTENT_MISSING", "TRANSLATION_CONTENT_TOO_LARGE"].includes(error.code)
   );
 }
@@ -33,6 +35,7 @@ function isNonRetryable(error: unknown): boolean {
 export async function runFeedItemTranslationJob(
   database: DB,
   translationId: string,
+  config: CloudflareTranslationConfig | undefined,
 ): Promise<TranslationJobResult> {
   const claimed = await claimFeedItemTranslation(database, translationId);
 
@@ -40,8 +43,6 @@ export async function runFeedItemTranslationJob(
   if (!claimed) {
     return { status: "skipped", translationId };
   }
-
-  const config = cloudflareTranslationConfig();
 
   if (!config) {
     await markFeedItemTranslationFailed(database, {

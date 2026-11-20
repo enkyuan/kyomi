@@ -10,23 +10,11 @@
       "kind": "feed",
       "feed_url": "https://www.fabricatedknowledge.com/feed",
       "details": "Technology",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Tech",
-        "Data",
-        "Finance",
-        "Science",
-        "_high_quality"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Tech", "Data", "Finance", "Science", "_high_quality"],
       "cleaned_author": "Doug OLaughlin",
       "language": "en",
-      "keywords": [
-        "manufacturing",
-        "investment",
-        "markets"
-      ],
+      "keywords": ["manufacturing", "investment", "markets"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
@@ -37,23 +25,11 @@
       "kind": "feed",
       "feed_url": "https://www.lennysnewsletter.com/feed",
       "details": "Business",
-      "sources": [
-        "substack_top",
-        "original_feed_db"
-      ],
-      "tags": [
-        "Money",
-        "Education",
-        "Finance",
-        "_high_quality"
-      ],
+      "sources": ["substack_top", "original_feed_db"],
+      "tags": ["Money", "Education", "Finance", "_high_quality"],
       "cleaned_author": "Lenny Rachitsky",
       "language": "en",
-      "keywords": [
-        "product management",
-        "growth strategies",
-        "career advice"
-      ],
+      "keywords": ["product management", "growth strategies", "career advice"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -64,24 +40,11 @@
       "kind": "feed",
       "feed_url": "https://www.noahpinion.blog/feed",
       "details": "Business",
-      "sources": [
-        "substack_top",
-        "curated"
-      ],
-      "tags": [
-        "Money",
-        "Finance",
-        "Science",
-        "Social",
-        "_intellectual"
-      ],
+      "sources": ["substack_top", "curated"],
+      "tags": ["Money", "Finance", "Science", "Social", "_intellectual"],
       "cleaned_author": "Noah Smith",
       "language": "en",
-      "keywords": [
-        "economics",
-        "current events",
-        "analysis"
-      ],
+      "keywords": ["economics", "current events", "analysis"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -92,22 +55,11 @@
       "kind": "feed",
       "feed_url": "https://www.citriniresearch.com/feed",
       "details": "Finance",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Money",
-        "Finance",
-        "_academic"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Money", "Finance", "_academic"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "investing",
-        "trading",
-        "finance",
-        "equities"
-      ],
+      "keywords": ["investing", "trading", "finance", "equities"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -118,22 +70,11 @@
       "kind": "feed",
       "feed_url": "https://newsletter.doomberg.com/feed",
       "details": "Finance",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Money",
-        "Finance",
-        "_mainstream"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Money", "Finance", "_mainstream"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "energy",
-        "finance",
-        "geopolitics",
-        "analysis"
-      ],
+      "keywords": ["energy", "finance", "geopolitics", "analysis"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -144,21 +85,11 @@
       "kind": "feed",
       "feed_url": "https://tradecompanion.substack.com/feed",
       "details": "Finance",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Money", "Finance"],
       "cleaned_author": "Adam Mancini",
       "language": "en",
-      "keywords": [
-        "trading",
-        "SPX",
-        "market analysis",
-        "strategy"
-      ],
+      "keywords": ["trading", "SPX", "market analysis", "strategy"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -169,21 +100,11 @@
       "kind": "feed",
       "feed_url": "https://www.compoundingquality.net/feed",
       "details": "Finance",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Money", "Finance"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "investing",
-        "business",
-        "portfolio",
-        "strategies"
-      ],
+      "keywords": ["investing", "business", "portfolio", "strategies"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -194,21 +115,11 @@
       "kind": "feed",
       "feed_url": "https://tictoctrading.substack.com/feed",
       "details": "Finance",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Money", "Finance"],
       "cleaned_author": null,
       "language": "en",
-      "keywords": [
-        "trading",
-        "options",
-        "stocks",
-        "futures"
-      ],
+      "keywords": ["trading", "options", "stocks", "futures"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -219,21 +130,11 @@
       "kind": "feed",
       "feed_url": "https://adamtooze.substack.com/feed",
       "details": "History",
-      "sources": [
-        "substack_top"
-      ],
-      "tags": [
-        "Money",
-        "Finance",
-        "History"
-      ],
+      "sources": ["substack_top"],
+      "tags": ["Money", "Finance", "History"],
       "cleaned_author": "Adam Tooze",
       "language": "en",
-      "keywords": [
-        "Adam Tooze",
-        "economics",
-        "geopolitics"
-      ],
+      "keywords": ["Adam Tooze", "economics", "geopolitics"],
       "top_level_category": "Society, Law & History"
     },
     {
@@ -245,20 +146,11 @@
       "feed_url": "http://www.economist.com/rss/finance_and_economics_rss.xml",
       "popularity_score": 25.212979967372036,
       "details": "Business > Economy",
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "economics",
-        "business",
-        "analysis"
-      ],
+      "keywords": ["economics", "business", "analysis"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -269,14 +161,9 @@
       "kind": "feed",
       "feed_url": "https://onemileatatime.com/feed/",
       "details": "Travel",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Finance"
-      ],
+      "tags": ["Living", "Finance"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Travel & Geography"
@@ -289,22 +176,11 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/thepointsguy",
       "details": "Travel",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Money",
-        "Finance",
-        "Ventures"
-      ],
+      "tags": ["Living", "Money", "Finance", "Ventures"],
       "language": "en",
-      "keywords": [
-        "travel",
-        "loyalty programs",
-        "tips"
-      ],
+      "keywords": ["travel", "loyalty programs", "tips"],
       "top_level_category": "Travel & Geography"
     },
     {
@@ -316,22 +192,11 @@
       "feed_url": "http://feeds2.feedburner.com/businessinsider",
       "popularity_score": 2.375297795886031,
       "details": "Business",
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Tech",
-        "Finance",
-        "Data"
-      ],
+      "tags": ["Money", "Tech", "Finance", "Data"],
       "language": "en",
-      "keywords": [
-        "business news",
-        "finance",
-        "technology"
-      ],
+      "keywords": ["business news", "finance", "technology"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -342,24 +207,12 @@
       "kind": "feed",
       "feed_url": "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml",
       "details": "News > US News",
-      "sources": [
-        "original_feed_db",
-        "crowdsourced_popular"
-      ],
+      "sources": ["original_feed_db", "crowdsourced_popular"],
       "popularity_score": 6.589398861102873,
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "News",
-        "Finance",
-        "USA"
-      ],
+      "tags": ["Money", "News", "Finance", "USA"],
       "language": "en",
-      "keywords": [
-        "business news",
-        "financial analysis",
-        "markets"
-      ],
+      "keywords": ["business news", "financial analysis", "markets"],
       "top_level_category": "News & Current Events"
     },
     {
@@ -371,21 +224,11 @@
       "channel_id": "UCrp_UI8XtuYfpiqluWLD7Lw",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqPWiiqhx401RAMI8gnIlNIU_XIS7kjbrrtmiTb_rQ=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Business > Stock Market",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Stocks",
-        "Finance"
-      ],
+      "tags": ["Money", "Stocks", "Finance"],
       "language": "en",
-      "keywords": [
-        "market analysis",
-        "business news",
-        "investing"
-      ],
+      "keywords": ["market analysis", "business news", "investing"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -396,22 +239,11 @@
       "kind": "feed",
       "feed_url": "https://www.business-breakdowns.com/feed",
       "details": "Business > Economy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Tech",
-        "Finance",
-        "Data"
-      ],
+      "tags": ["Money", "Tech", "Finance", "Data"],
       "language": "en",
-      "keywords": [
-        "business insights",
-        "investing",
-        "breakdowns"
-      ],
+      "keywords": ["business insights", "investing", "breakdowns"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -422,20 +254,11 @@
       "kind": "feed",
       "feed_url": "https://21hats.com/feed/",
       "details": "Business",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "business tips",
-        "entrepreneurship",
-        "small business"
-      ],
+      "keywords": ["business tips", "entrepreneurship", "small business"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -446,22 +269,11 @@
       "kind": "feed",
       "feed_url": "http://techcrunch.com/tag/fintech/feed/",
       "details": "Tech",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Finance",
-        "Data"
-      ],
+      "tags": ["Tech", "Finance", "Data"],
       "language": "en",
-      "keywords": [
-        "fintech",
-        "startups",
-        "technology news",
-        "financial technology"
-      ],
+      "keywords": ["fintech", "startups", "technology news", "financial technology"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
@@ -472,22 +284,11 @@
       "kind": "feed",
       "feed_url": "https://www.petcashpost.com/feed",
       "details": "Sports",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Andrew Petcash",
-      "tags": [
-        "Money",
-        "Tech",
-        "Sports",
-        "Finance"
-      ],
+      "tags": ["Money", "Tech", "Sports", "Finance"],
       "language": "en",
-      "keywords": [
-        "sports trends",
-        "industry analysis",
-        "innovation"
-      ],
+      "keywords": ["sports trends", "industry analysis", "innovation"],
       "top_level_category": "Sports"
     },
     {
@@ -498,22 +299,11 @@
       "kind": "feed",
       "feed_url": "https://www.caranddriver.com/rss/all.xml/",
       "details": "Hobbies > Cars",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "Cars",
-        "USA",
-        "Finance"
-      ],
+      "tags": ["Living", "Cars", "USA", "Finance"],
       "language": "en",
-      "keywords": [
-        "automotive news",
-        "car reviews",
-        "buying guides"
-      ],
+      "keywords": ["automotive news", "car reviews", "buying guides"],
       "top_level_category": "Automotive & Transport"
     },
     {
@@ -525,20 +315,11 @@
       "channel_id": "UCFCEuCsyWP0YkP3CZ3Mr01Q",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqP_2idsJUwE3-f57uhViqopNpBBm1hsO0vAO6O5jw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Business > Stock Market",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "stock market education",
-        "investing basics",
-        "financial literacy"
-      ],
+      "keywords": ["stock market education", "investing basics", "financial literacy"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -550,21 +331,11 @@
       "channel_id": "UCnMn36GT_H0X-w5_ckLtlgQ",
       "thumbnail_url": "https://yt3.ggpht.com/Y16iJgJWLWwxstm9KjKbHTdV3mSZOzMF7TQTIDHROGxNsevuM32uBUppltjcQzyXdbaS14i5Nw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Business > Stock Market",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "Stocks"
-      ],
+      "tags": ["Money", "Finance", "Stocks"],
       "language": "en",
-      "keywords": [
-        "stock market analysis",
-        "investing strategy",
-        "personal finance"
-      ],
+      "keywords": ["stock market analysis", "investing strategy", "personal finance"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -575,21 +346,11 @@
       "kind": "feed",
       "feed_url": "https://www.investmenttalk.co/feed",
       "details": "Business > Stock Market",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "Stocks"
-      ],
+      "tags": ["Money", "Finance", "Stocks"],
       "language": "en",
-      "keywords": [
-        "stock market",
-        "finance",
-        "behavioral finance"
-      ],
+      "keywords": ["stock market", "finance", "behavioral finance"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -600,21 +361,11 @@
       "kind": "feed",
       "feed_url": "https://themacrocompass.substack.com/feed",
       "details": "Business > Stock Market",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "Stocks"
-      ],
+      "tags": ["Money", "Finance", "Stocks"],
       "language": "en",
-      "keywords": [
-        "macro insights",
-        "investment strategies",
-        "financial education"
-      ],
+      "keywords": ["macro insights", "investment strategies", "financial education"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -625,20 +376,11 @@
       "kind": "feed",
       "feed_url": "https://pomp.substack.com/feed",
       "details": "Business > Stock Market",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "business insights",
-        "finance analysis",
-        "technology"
-      ],
+      "keywords": ["business insights", "finance analysis", "technology"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -650,21 +392,11 @@
       "channel_id": "UCo7a6riBFJ3tkeHjvkXPn1g",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqPmGw2g3okHgqNR9eeXqrJPqfQIZWB_VijukZyeJ80=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Business > Economy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "News",
-        "World News",
-        "Finance"
-      ],
+      "tags": ["News", "World News", "Finance"],
       "language": "en",
-      "keywords": [
-        "economic news",
-        "market updates",
-        "expert interviews"
-      ],
+      "keywords": ["economic news", "market updates", "expert interviews"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -675,21 +407,11 @@
       "kind": "reddit",
       "subreddit": "Economics",
       "details": "Business > Economy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Local",
-        "Finance",
-        "Academia"
-      ],
+      "tags": ["Local", "Finance", "Academia"],
       "language": "en",
-      "keywords": [
-        "economic discussions",
-        "educational resources",
-        "forums"
-      ],
+      "keywords": ["economic discussions", "educational resources", "forums"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -701,21 +423,11 @@
       "channel_id": "UCBH5VZE_Y4F3CMcPIzPEB5A",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqN0QUgtr9zMfOab2FUHYb_9LzvWu_7SQ6nCft3CNw=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Business > Economy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "Internet"
-      ],
+      "tags": ["Money", "Finance", "Internet"],
       "language": "en",
-      "keywords": [
-        "economic trends",
-        "investment strategies",
-        "expert interviews"
-      ],
+      "keywords": ["economic trends", "investment strategies", "expert interviews"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -726,21 +438,11 @@
       "kind": "feed",
       "feed_url": "https://theovershoot.co/feed",
       "details": "Business > Economy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "World News"
-      ],
+      "tags": ["Money", "Finance", "World News"],
       "language": "en",
-      "keywords": [
-        "global economy",
-        "financial insights",
-        "market analysis"
-      ],
+      "keywords": ["global economy", "financial insights", "market analysis"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -751,22 +453,11 @@
       "kind": "feed",
       "feed_url": "https://profstevekeen.substack.com/feed",
       "details": "Business > Economy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "World News"
-      ],
+      "tags": ["Money", "Finance", "World News"],
       "language": "en",
-      "keywords": [
-        "economics",
-        "climate change",
-        "trade",
-        "macroeconomics"
-      ],
+      "keywords": ["economics", "climate change", "trade", "macroeconomics"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -777,21 +468,11 @@
       "kind": "feed",
       "feed_url": "https://petition.substack.com/feed",
       "details": "Business > Economy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "_clickbait"
-      ],
+      "tags": ["Money", "Finance", "_clickbait"],
       "language": "en",
-      "keywords": [
-        "bankruptcy",
-        "distressed investing",
-        "financial news"
-      ],
+      "keywords": ["bankruptcy", "distressed investing", "financial news"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -802,22 +483,11 @@
       "kind": "feed",
       "feed_url": "https://www.apricitas.io/feed",
       "details": "Business > Economy",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "World News"
-      ],
+      "tags": ["Money", "Finance", "World News"],
       "language": "en",
-      "keywords": [
-        "economics",
-        "business",
-        "public policy",
-        "trade"
-      ],
+      "keywords": ["economics", "business", "public policy", "trade"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -828,22 +498,11 @@
       "kind": "feed",
       "feed_url": "http://www.yardi.com/blog/feed",
       "details": "Business > Personal Finance",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Yardi Corporate Blog",
-      "tags": [
-        "Money",
-        "Finance",
-        "Real Estate"
-      ],
+      "tags": ["Money", "Finance", "Real Estate"],
       "language": "en",
-      "keywords": [
-        "personal finance",
-        "budgeting",
-        "saving",
-        "investing"
-      ],
+      "keywords": ["personal finance", "budgeting", "saving", "investing"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -854,21 +513,11 @@
       "kind": "feed",
       "feed_url": "http://feeds.feedburner.com/NerdwalletCreditCardWatch",
       "details": "Business > Personal Finance",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "credit cards",
-        "financial decisions",
-        "savings",
-        "loans"
-      ],
+      "keywords": ["credit cards", "financial decisions", "savings", "loans"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -880,22 +529,11 @@
       "channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqP6qMy7r9W8xiumT9FXrqTpbZz5DvyRvn-vzyNHtQ=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Business > Real Estate",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Graham Stephan",
-      "tags": [
-        "Money",
-        "Real Estate",
-        "Finance"
-      ],
+      "tags": ["Money", "Real Estate", "Finance"],
       "language": "en",
-      "keywords": [
-        "real estate",
-        "investment",
-        "financial advice",
-        "wealth building"
-      ],
+      "keywords": ["real estate", "investment", "financial advice", "wealth building"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -906,21 +544,11 @@
       "kind": "reddit",
       "subreddit": "personalfinance",
       "details": "Business > Personal Finance",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "community",
-        "budgeting",
-        "saving",
-        "investing"
-      ],
+      "keywords": ["community", "budgeting", "saving", "investing"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -932,20 +560,11 @@
       "channel_id": "UCGy7SkBjcIAgTiwkXEtPnYg",
       "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqOC0vLnl6rMoVPStORJXSZipX9-WW2WkWmu5TUO6g=s240-c-k-c0xffffffff-no-rj-mo",
       "details": "Business > Personal Finance",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Andrei Jikh",
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "investing",
-        "money management",
-        "financial independence"
-      ],
+      "keywords": ["investing", "money management", "financial independence"],
       "top_level_category": "Business & Finance"
     },
     {
@@ -956,24 +575,11 @@
       "kind": "feed",
       "feed_url": "http://news.google.com/news?hl=en&gl=us&q=wine%20spectator&um=1&ie=UTF-8&output=rss",
       "details": "Food & Drink > Wine & Spirits",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Living",
-        "USA",
-        "Restaurants",
-        "Finance",
-        "Education"
-      ],
+      "tags": ["Living", "USA", "Restaurants", "Finance", "Education"],
       "language": "en",
-      "keywords": [
-        "wine",
-        "reviews",
-        "restaurant recommendations",
-        "events"
-      ],
+      "keywords": ["wine", "reviews", "restaurant recommendations", "events"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -984,22 +590,11 @@
       "kind": "feed",
       "feed_url": "http://www.winemag.com/feed/",
       "details": "Food & Drink > Wine & Spirits",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": "Wine Enthusiast Magazine",
-      "tags": [
-        "Living",
-        "Education",
-        "Finance"
-      ],
+      "tags": ["Living", "Education", "Finance"],
       "language": "en",
-      "keywords": [
-        "wine ratings",
-        "reviews",
-        "wine education",
-        "food pairing"
-      ],
+      "keywords": ["wine ratings", "reviews", "wine education", "food pairing"],
       "top_level_category": "Food & Drink"
     },
     {
@@ -1010,21 +605,11 @@
       "kind": "feed",
       "feed_url": "https://investinginai.substack.com/feed",
       "details": "Tech > AI And Machine Learning",
-      "sources": [
-        "original_feed_db"
-      ],
+      "sources": ["original_feed_db"],
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "AI",
-        "Finance"
-      ],
+      "tags": ["Tech", "AI", "Finance"],
       "language": "en",
-      "keywords": [
-        "AI investment",
-        "market analysis",
-        "business"
-      ],
+      "keywords": ["AI investment", "market analysis", "business"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
@@ -1032,42 +617,25 @@
       "title": "Krugman wonks out \u2013 substack.com",
       "kind": "feed",
       "feed_url": "https://paulkrugman.substack.com/feed",
-      "sources": [
-        "curated"
-      ],
+      "sources": ["curated"],
       "cleaned_title": "Krugman Wonk Out",
       "cleaned_author": "Paul Krugman",
       "summary": "Economic insights and critiques from Nobel laureate Paul Krugman, focusing on current events and underlying economic theories.",
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "economics",
-        "Paul Krugman",
-        "politics",
-        "analysis"
-      ]
+      "keywords": ["economics", "Paul Krugman", "politics", "analysis"]
     },
     {
       "id": "feed:https://asadrahman.io/feed/",
       "title": "asadrahman.io",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://asadrahman.io/feed/",
       "summary": "Asad's online home.",
       "details": "Technology",
       "cleaned_title": "asadrahman.io",
       "cleaned_author": "Asad Rahman",
-      "tags": [
-        "Tech",
-        "AI",
-        "Activism",
-        "Finance"
-      ],
+      "tags": ["Tech", "AI", "Activism", "Finance"],
       "language": "en",
       "keywords": [],
       "top_level_category": "Consumer Tech & Digital"
@@ -1076,625 +644,374 @@
       "id": "feed:https://davidmytton.blog/feed/",
       "title": "David Mytton",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://davidmytton.blog/feed/",
       "details": "Technology",
       "cleaned_title": "David Mytton",
       "cleaned_author": "David Mytton",
       "summary": "Insights from a tech entrepreneur on data center energy efficiency and developer security in the evolving tech landscape.",
-      "tags": [
-        "Tech",
-        "Security",
-        "Data",
-        "Finance"
-      ],
+      "tags": ["Tech", "Security", "Data", "Finance"],
       "language": "en",
-      "keywords": [
-        "data centers",
-        "AI workload",
-        "security",
-        "developer tools"
-      ],
+      "keywords": ["data centers", "AI workload", "security", "developer tools"],
       "top_level_category": "Consumer Tech & Digital"
     },
     {
       "id": "feed:http://feeds2.feedburner.com/optional?format=xml",
       "title": "optional.is",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://feeds2.feedburner.com/optional?format=xml",
       "summary": "A platform discussing technology and economic concepts with a focus on innovation.",
       "details": "Economics > Companies",
       "cleaned_title": "optional.is",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "annual report",
-        "optimized charging",
-        "thermal printer"
-      ],
+      "keywords": ["annual report", "optimized charging", "thermal printer"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://corporalfrisk.com/feed/",
       "title": "Corporal Frisk",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://corporalfrisk.com/feed/",
       "summary": "Finnish blogger in reserve, defence and national security.",
       "details": "Politics > Military",
       "cleaned_title": "Corporal Frisk",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Finance"
-      ],
+      "tags": ["Politics", "Finance"],
       "language": "en",
-      "keywords": [
-        "Finnish defense",
-        "national security",
-        "military analysis"
-      ],
+      "keywords": ["Finnish defense", "national security", "military analysis"],
       "top_level_category": "Society, Law & History"
     },
     {
       "id": "feed:https://taxpolicy.org.uk/feed/",
       "title": "Tax Policy Associates - Reports",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://taxpolicy.org.uk/feed/",
       "summary": "A think tank dedicated to improving tax policy and the public understanding of tax.",
       "details": "Economics > Economics",
       "cleaned_title": "Tax Policy Associates - Reports",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "Data"
-      ],
+      "tags": ["Money", "Finance", "Data"],
       "language": "en",
-      "keywords": [
-        "tax policy",
-        "corporate fraud",
-        "legal issues"
-      ],
+      "keywords": ["tax policy", "corporate fraud", "legal issues"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://www.retailinsider.com/feed/",
       "title": "Retail Insider",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.retailinsider.com/feed/",
       "summary": "Taking a look behind the obvious on the high street, online and in the City.",
       "details": "Economics > Business",
       "cleaned_title": "Retail Insider",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "Data"
-      ],
+      "tags": ["Money", "Finance", "Data"],
       "language": "en",
-      "keywords": [
-        "retail",
-        "insights",
-        "industry trends"
-      ],
+      "keywords": ["retail", "insights", "industry trends"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://conversableeconomist.com/feed/",
       "title": "Conversable Economist",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://conversableeconomist.com/feed/",
       "summary": "In Hume\u2019s spirit, I will attempt to serve as an ambassador from my world of economics, and help in \u201cfinding topics of conversation fit for the entertainment of rational creatures.\u201d.",
       "details": "Economics > Economics",
       "cleaned_title": "Conversable Economist",
       "cleaned_author": null,
-      "tags": [
-        "Science",
-        "Finance",
-        "Law"
-      ],
+      "tags": ["Science", "Finance", "Law"],
       "language": "en",
-      "keywords": [
-        "economics",
-        "public discourse",
-        "conversational topics"
-      ],
+      "keywords": ["economics", "public discourse", "conversational topics"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://econbrowser.com/feed",
       "title": "Econbrowser",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://econbrowser.com/feed",
       "summary": "Analysis of current economic conditions and policy.",
       "details": "Economics > Economics",
       "cleaned_title": "Econbrowser",
       "cleaned_author": null,
-      "tags": [
-        "Science",
-        "Finance",
-        "Data"
-      ],
+      "tags": ["Science", "Finance", "Data"],
       "language": "en",
-      "keywords": [
-        "economic analysis",
-        "current conditions",
-        "policy insights"
-      ],
+      "keywords": ["economic analysis", "current conditions", "policy insights"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://www.econlib.org/feed/main",
       "title": "EconLog - Econlib",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.econlib.org/feed/main",
       "summary": "Bloggers \u2026 write on topical economics of interest to them, illuminating subjects from politics and finance, to recent films and cultural observations, to history and literature.",
       "details": "Economics > Economics",
       "cleaned_title": "EconLog",
       "cleaned_author": null,
-      "tags": [
-        "Politics",
-        "Finance",
-        "History"
-      ],
+      "tags": ["Politics", "Finance", "History"],
       "language": "en",
-      "keywords": [
-        "economics",
-        "political economic discussions",
-        "cultural observations"
-      ],
+      "keywords": ["economics", "political economic discussions", "cultural observations"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://mainlymacro.blogspot.com/feeds/posts/default",
       "title": "mainly macro",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://mainlymacro.blogspot.com/feeds/posts/default",
       "summary": "Comment on macroeconomic issues.",
       "details": "Economics > Economics",
       "cleaned_title": "mainly macro",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "Data"
-      ],
+      "tags": ["Money", "Finance", "Data"],
       "language": "en",
-      "keywords": [
-        "macroeconomic commentary",
-        "economic news",
-        "public spending"
-      ],
+      "keywords": ["macroeconomic commentary", "economic news", "public spending"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://feeds.feedblitz.com/marginalrevolution",
       "title": "Marginal REVOLUTION",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://feeds.feedblitz.com/marginalrevolution",
       "summary": "Small Steps Toward A Much Better World.",
       "details": "Economics > Economics",
       "cleaned_title": "Marginal REVOLUTION",
       "cleaned_author": null,
-      "tags": [
-        "Science",
-        "Finance"
-      ],
+      "tags": ["Science", "Finance"],
       "language": "en",
-      "keywords": [
-        "economic revolution",
-        "analytical insights",
-        "contemporary issues"
-      ],
+      "keywords": ["economic revolution", "analytical insights", "contemporary issues"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://timharford.com/feed/",
       "title": "Tim Harford | Articles",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://timharford.com/feed/",
       "summary": "The Undercover Economist.",
       "details": "Economics > Economics",
       "cleaned_title": "Tim Harford",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Science",
-        "Finance",
-        "_intellectual"
-      ],
+      "tags": ["Money", "Science", "Finance", "_intellectual"],
       "language": "en",
-      "keywords": [
-        "economics",
-        "growth",
-        "Cautionary Tales"
-      ],
+      "keywords": ["economics", "growth", "Cautionary Tales"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://uneasymoney.com/feed/",
       "title": "Uneasy Money",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://uneasymoney.com/feed/",
       "summary": "Commentary on monetary policy in the spirit of R. G. Hawtrey.",
       "details": "Economics > Economics",
       "cleaned_title": "Uneasy Money",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "_intellectual"
-      ],
+      "tags": ["Money", "Finance", "_intellectual"],
       "language": "en",
-      "keywords": [
-        "monetary policy",
-        "economic theory",
-        "Hawtrey"
-      ],
+      "keywords": ["monetary policy", "economic theory", "Hawtrey"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://financialmechanic.com/feed/",
       "title": "Financial Mechanic",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://financialmechanic.com/feed/",
       "summary": "the money tools you need to be set free.",
       "details": "Economics > Personal Finance",
       "cleaned_title": "Financial Mechanic",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "personal finance",
-        "retirement",
-        "financial readiness"
-      ],
+      "keywords": ["personal finance", "retirement", "financial readiness"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://firevlondon.com/feed/",
       "title": "FIRE v London",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://firevlondon.com/feed/",
       "summary": "Financial independence, but in pricey London.",
       "details": "Economics > Personal Finance",
       "cleaned_title": "FIRE v London",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Living",
-        "Finance"
-      ],
+      "tags": ["Money", "Living", "Finance"],
       "language": "en",
-      "keywords": [
-        "financial independence",
-        "London",
-        "housing market"
-      ],
+      "keywords": ["financial independence", "London", "housing market"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://www.bankeronwheels.com/feed/",
       "title": "Investing Guides For European And UK Investors",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.bankeronwheels.com/feed/",
       "summary": "This feed provides practical investing guides aimed at European and UK investors, focusing on strategies for smart and cost-effective investing.",
       "details": "Economics > Personal Finance",
       "cleaned_title": "Investing Guides For European And UK Investors",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "investing",
-        "UK investors",
-        "financial guides"
-      ],
+      "keywords": ["investing", "UK investors", "financial guides"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:http://feeds2.feedburner.com/Monevatorcom",
       "title": "Monevator",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "http://feeds2.feedburner.com/Monevatorcom",
       "summary": "From passive investing with index trackers funds to choosing the cheapest investment platform or broker, Monevator is essential reading for all British investors.",
       "details": "Economics > Personal Finance",
       "cleaned_title": "Monevator",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "_mainstream"
-      ],
+      "tags": ["Money", "Finance", "_mainstream"],
       "language": "en",
-      "keywords": [
-        "investment",
-        "retirement",
-        "financial planning"
-      ],
+      "keywords": ["investment", "retirement", "financial planning"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://www.mrmoneymustache.com/feed/",
       "title": "Mr. Money Mustache",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.mrmoneymustache.com/feed/",
       "summary": "Early Retirement through Badassity.",
       "details": "Economics > Personal Finance",
       "cleaned_title": "Mr. Money Mustache",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "_alternative"
-      ],
+      "tags": ["Money", "Finance", "_alternative"],
       "language": "en",
-      "keywords": [
-        "early retirement",
-        "frugality",
-        "money management"
-      ],
+      "keywords": ["early retirement", "frugality", "money management"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://awealthofcommonsense.com/feed/",
       "title": "A Wealth of Common Sense",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://awealthofcommonsense.com/feed/",
       "summary": "Personal Finance, Investments & Markets.",
       "details": "Economics > Personal Finance",
       "cleaned_title": "A Wealth of Common Sense",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "finance",
-        "investments",
-        "market analysis"
-      ],
+      "keywords": ["finance", "investments", "market analysis"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://www.bitsaboutmoney.com/archive/rss/",
       "title": "Bits about Money",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.bitsaboutmoney.com/archive/rss/",
       "summary": "About the modern financial infrastructure that the world sits atop of.",
       "details": "Economics > Finance",
       "cleaned_title": "Bits about Money",
       "cleaned_author": null,
-      "tags": [
-        "Money",
-        "Finance",
-        "USA"
-      ],
+      "tags": ["Money", "Finance", "USA"],
       "language": "en",
-      "keywords": [
-        "financial infrastructure",
-        "economics",
-        "finance",
-        "debanking"
-      ],
+      "keywords": ["financial infrastructure", "economics", "finance", "debanking"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://www.bloomberg.com/opinion/authors/ARbTQlRLRjE/matthew-s-levine.rss",
       "title": "Matt Levine - Bloomberg",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.bloomberg.com/opinion/authors/ARbTQlRLRjE/matthew-s-levine.rss",
       "summary": "Matt Levine is a Bloomberg Opinion columnist covering finance.",
       "details": "Economics > Finance",
       "cleaned_title": "Matt Levine - Bloomberg",
       "cleaned_author": "Matt Levine",
-      "tags": [
-        "Money",
-        "Finance"
-      ],
+      "tags": ["Money", "Finance"],
       "language": "en",
-      "keywords": [
-        "finance",
-        "economic commentary",
-        "investment banking",
-        "Bloomberg"
-      ],
+      "keywords": ["finance", "economic commentary", "investment banking", "Bloomberg"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://www.rubick.com/rss.xml",
       "title": "Jade Rubick - Rubick.com",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.rubick.com/rss.xml",
       "summary": "Jade Rubick.",
       "details": "Economics > Business > Management",
       "cleaned_title": "Jade Rubick - Rubick.com",
       "cleaned_author": "Jade Rubick",
-      "tags": [
-        "Money",
-        "Finance",
-        "Writing"
-      ],
+      "tags": ["Money", "Finance", "Writing"],
       "language": "en",
-      "keywords": [
-        "business management",
-        "team collaboration",
-        "cross-functional teams"
-      ],
+      "keywords": ["business management", "team collaboration", "cross-functional teams"],
       "top_level_category": "Industry & Professions"
     },
     {
       "id": "feed:https://davidgerard.co.uk/blockchain/feed/",
       "title": "Attack of the 50 Foot Blockchain",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://davidgerard.co.uk/blockchain/feed/",
       "summary": "Blockchain and cryptocurrency news and analysis by David Gerard.",
       "details": "Economics > Economics > Cryptocurrencies",
       "cleaned_title": "Attack of the 50 Foot Blockchain",
       "cleaned_author": "David Gerard",
-      "tags": [
-        "Money",
-        "Finance",
-        "Internet"
-      ],
+      "tags": ["Money", "Finance", "Internet"],
       "language": "en",
-      "keywords": [
-        "blockchain",
-        "cryptocurrency",
-        "economic analysis"
-      ],
+      "keywords": ["blockchain", "cryptocurrency", "economic analysis"],
       "top_level_category": "Business & Finance"
     },
     {
       "id": "feed:https://www.web3isgoinggreat.com/feed.xml",
       "title": "Web3 is going just great",
       "kind": "feed",
-      "sources": [
-        "ooh_directory"
-      ],
+      "sources": ["ooh_directory"],
       "feed_url": "https://www.web3isgoinggreat.com/feed.xml",
       "summary": "A timeline recording only some of the many disasters happening in crypto, decentralized finance, NFTs, and other blockchain-based projects.",
       "details": "Economics > Economics > Cryptocurrencies",
       "cleaned_title": "Web3 is going just great",
       "cleaned_author": null,
-      "tags": [
-        "Tech",
-        "Finance",
-        "Ventures"
-      ],
+      "tags": ["Tech", "Finance", "Ventures"],
       "language": "en",
-      "keywords": [
-        "crypto disasters",
-        "hacks",
-        "decentralized finance",
-        "NFTs"
-      ],
+      "keywords": ["crypto disasters", "hacks", "decentralized finance", "NFTs"],
       "top_level_category": "Business & Finance"
     },
     {
       "title": "DTF: \u041f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u043e\u0435 \u0437\u0430 \u0432\u0441\u0435 \u0432\u0440\u0435\u043c\u044f",
       "popularity_score": 2.8511904761904763,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "feed_url": "https://dtf.ru/rss/all",
       "kind": "feed",
       "id": "feed:https://dtf.ru/rss/all",
       "cleaned_title": "DTF",
       "cleaned_author": null,
       "summary": "A Russian-language source discussing business, technology trends, and ideas for growth and innovation.",
-      "tags": [
-        "Tech",
-        "Money",
-        "Finance",
-        "Ventures"
-      ],
+      "tags": ["Tech", "Money", "Finance", "Ventures"],
       "language": "ru",
-      "keywords": [
-        "business",
-        "technology",
-        "growth"
-      ]
+      "keywords": ["business", "technology", "growth"]
     },
     {
       "title": "vc.ru: \u041f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u043e\u0435 \u0437\u0430 \u0432\u0441\u0435 \u0432\u0440\u0435\u043c\u044f",
       "popularity_score": 2.6095238095238096,
-      "sources": [
-        "crowdsourced_popular"
-      ],
+      "sources": ["crowdsourced_popular"],
       "feed_url": "https://vc.ru/rss/all",
       "kind": "feed",
       "id": "feed:https://vc.ru/rss/all",
       "cleaned_title": "vc.ru: \u041f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u043e\u0435 \u0437\u0430 \u0432\u0441\u0435 \u0432\u0440\u0435\u043c\u044f",
       "cleaned_author": null,
       "summary": "A Russian platform covering business and technology trends, presenting insights into growth models and industry shifts within the entrepreneurial landscape.",
-      "tags": [
-        "Tech",
-        "USA",
-        "Russia",
-        "Finance"
-      ],
+      "tags": ["Tech", "USA", "Russia", "Finance"],
       "language": "ru",
-      "keywords": [
-        "business",
-        "technology",
-        "startups"
-      ]
+      "keywords": ["business", "technology", "startups"]
     }
   ],
   "child_categories": []

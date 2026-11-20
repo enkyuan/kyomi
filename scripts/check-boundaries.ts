@@ -1,5 +1,6 @@
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join, normalize, relative } from "node:path";
+import { checkImportCycles, resolveRelative } from "./boundaries/cycles";
 
 export const SOURCE_ROOTS = [
   "apps/api/src",
@@ -102,7 +103,6 @@ function checkFile(root: string, file: string): Violation[] {
   const violations: Violation[] = [];
   const isPackageFile = file.startsWith("packages/");
   const isWorkerFile = file.startsWith("packages/ingest/");
-  const isRouteFile = file.startsWith("apps/api/src/modules/") && file.endsWith(".routes.ts");
   const isMobileFile = file.startsWith(`${MOBILE_SRC}/`);
 
   for (const specifier of collectImports(root, file)) {
@@ -130,13 +130,6 @@ function checkFile(root: string, file: string): Violation[] {
         specifier.startsWith("@kyomi/api"))
     ) {
       violations.push({ file, specifier, reason: "ingest must not import API/http modules" });
-    }
-    if (isRouteFile && specifier.includes("/src/") && specifier.startsWith("@kyomi/")) {
-      violations.push({
-        file,
-        specifier,
-        reason: "route handlers must not import package internals",
-      });
     }
     const mobileLayeringViolation = isMobileFile ? checkMobileLayering(file, specifier) : null;
     if (mobileLayeringViolation) {
@@ -271,9 +264,112 @@ function webModuleEdgeViolation(
   return null;
 }
 
+const API_SRC = "apps/api/src";
+const API_ALIASES: Record<string, string> = {
+  "@/": "",
+  "@app/": "app/",
+  "@config/": "config/",
+  "@adapters/": "adapters/",
+  "@shared/": "shared/",
+  "@modules/": "modules/",
+};
+// The API layer stack, top to bottom. A layer imports its own tier or the tiers below it. `config`
+// and `shared` share the bottom tier: configuration fails with the shared error catalogue, and the
+// shared HTTP stacks read configuration.
+const API_LAYER_TIERS = [["app"], ["modules"], ["adapters"], ["shared", "config"]];
+const API_LAYER_TIER = new Map(
+  API_LAYER_TIERS.flatMap((layers, tier) => layers.map((name) => [name, tier] as const)),
+);
+
+function resolveApiImport(file: string, specifier: string): string | null {
+  if (specifier.startsWith(".")) {
+    return resolveRelative(file, specifier);
+  }
+  for (const [alias, target] of Object.entries(API_ALIASES)) {
+    if (specifier.startsWith(alias)) {
+      return `${API_SRC}/${target}${specifier.slice(alias.length)}`;
+    }
+  }
+  return null;
+}
+
+/** `src/<layer>/...`; null for a file directly in `src` (the entrypoint). */
+function apiLayerOf(path: string): string | null {
+  return path.match(/^apps\/api\/src\/([^/]+)\//)?.[1] ?? null;
+}
+
+function apiModuleOf(path: string): string | null {
+  return path.match(/^apps\/api\/src\/modules\/([^/]+)/)?.[1] ?? null;
+}
+
+function apiLayerViolation(fromLayer: string, toLayer: string): string | null {
+  const fromTier = API_LAYER_TIER.get(fromLayer);
+  const toTier = API_LAYER_TIER.get(toLayer);
+  if (fromTier === undefined || toTier === undefined) {
+    const unplaced = fromTier === undefined ? fromLayer : toLayer;
+    return `api layer ${unplaced} has no place in the layer stack; add it to API_LAYER_TIERS`;
+  }
+  if (toTier < fromTier) {
+    return `api ${fromLayer} must not import ${toLayer}, which sits above it in the layer stack`;
+  }
+  return null;
+}
+
+// API code depends downward only (app, then modules, then adapters, then shared and config), and
+// domain modules form a graph without cycles. Type imports count: they still tie files together.
+function checkApiStructure(root: string, files: string[]): Violation[] {
+  const violations: Violation[] = [];
+  const edges: WebModuleEdges = new Map();
+
+  for (const file of files.filter((path) => path.startsWith(`${API_SRC}/`))) {
+    const fromLayer = apiLayerOf(file);
+    const fromModule = apiModuleOf(file);
+    for (const specifier of collectImports(root, file)) {
+      const target = resolveApiImport(file, specifier);
+      const toLayer = target ? apiLayerOf(target) : null;
+      if (!target || !toLayer) continue;
+      if (fromLayer && fromLayer !== toLayer) {
+        const reason = apiLayerViolation(fromLayer, toLayer);
+        if (reason) violations.push({ file, specifier, reason });
+      }
+      const toModule = apiModuleOf(target);
+      if (fromModule && toModule && fromModule !== toModule) {
+        addWebModuleEdge(edges, fromModule, toModule, { file, specifier });
+      }
+    }
+  }
+
+  for (const [fromModule, targets] of edges) {
+    for (const [toModule, { file, specifier }] of targets) {
+      if (webModuleReaches(edges, toModule, fromModule)) {
+        violations.push({
+          file,
+          specifier,
+          reason: `api modules ${fromModule} and ${toModule} must not depend on each other in a cycle`,
+        });
+      }
+    }
+  }
+
+  return violations;
+}
+
+/** An import specifier as a path without an extension, for the source roots that have aliases. */
+function resolveSourceImport(file: string, specifier: string): string | null {
+  if (file.startsWith(`${API_SRC}/`)) return resolveApiImport(file, specifier);
+  if (file.startsWith(`${WEB_SRC}/`)) return resolveWebImport(file, specifier);
+  if (file.startsWith(`${MOBILE_SRC}/`)) return resolveMobileImport(file, specifier);
+  return resolveRelative(file, specifier);
+}
+
 export function checkBoundaries(root = process.cwd()): Violation[] {
   const files = sourceFiles(root);
-  return [...files.flatMap((file) => checkFile(root, file)), ...checkWebModules(root, files)];
+  return [
+    ...files.flatMap((file) => checkFile(root, file)),
+    ...checkWebModules(root, files),
+    ...checkApiStructure(root, files),
+    ...checkImportCycles(root, files, resolveSourceImport),
+  ];
 }
 
 if (import.meta.main) {

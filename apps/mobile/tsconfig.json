@@ -7,7 +7,8 @@
     "jest.config.js",
     "android",
     "ios",
-    "dist"
+    "dist",
+    "scripts"
   ],
   "compilerOptions": {
     "strict": true,

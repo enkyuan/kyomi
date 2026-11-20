@@ -87,11 +87,11 @@ Any terminal update for N after N+1 exists affects zero rows and is logged as su
 
 This is deliberately two independently shippable tracks. Do not combine their commits: the API/worker lifecycle is a correctness change; the inbox work is a browser-cache/freshness change.
 
-| Track | Files | Responsibility |
-| --- | --- | --- |
-| Refresh fencing | `packages/db/src/schema/feeds.ts`, generated `packages/db/drizzle/*`, `apps/api/src/modules/feeds/refresh/enqueue.ts`, `apps/api/src/app/jobs/refresh-scheduler.ts`, `packages/worker/src/services/queue/job.ts`, `apps/api/src/app/jobs/run-worker.ts`, `packages/worker/src/services/feed/refresh.ts` | One active worker and safe recovery for a generation. |
-| Inbox load/freshness | `apps/web/src/modules/inbox/queries/options.ts`, `apps/web/src/modules/inbox/page.tsx`, `apps/web/src/modules/inbox/hooks/use-polling.ts`, `apps/web/src/lib/query/cache.ts` | Bounded tab startup/persistence and status-driven invalidation. |
-| Tests | Existing API refresh/queue suites; `tests/web/integration/src/modules/inbox/queries/options.test.ts`; new cache persistence test | Lock the lifecycle, polling, and persistence contracts. |
+| Track                | Files                                                                                                                                                                                                                                                                                                   | Responsibility                                                  |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Refresh fencing      | `packages/db/src/schema/feeds.ts`, generated `packages/db/drizzle/*`, `apps/api/src/modules/feeds/refresh/enqueue.ts`, `apps/api/src/app/jobs/refresh-scheduler.ts`, `packages/worker/src/services/queue/job.ts`, `apps/api/src/app/jobs/run-worker.ts`, `packages/worker/src/services/feed/refresh.ts` | One active worker and safe recovery for a generation.           |
+| Inbox load/freshness | `apps/web/src/modules/inbox/queries/options.ts`, `apps/web/src/modules/inbox/page.tsx`, `apps/web/src/modules/inbox/hooks/use-polling.ts`, `apps/web/src/lib/query/cache.ts`                                                                                                                            | Bounded tab startup/persistence and status-driven invalidation. |
+| Tests                | Existing API refresh/queue suites; `tests/web/integration/src/modules/inbox/queries/options.test.ts`; new cache persistence test                                                                                                                                                                        | Lock the lifecycle, polling, and persistence contracts.         |
 
 ---
 
@@ -100,11 +100,13 @@ This is deliberately two independently shippable tracks. Do not combine their co
 ### Task 1: Add a durable generation to the feed lifecycle
 
 **Files:**
+
 - Modify: `packages/db/src/schema/feeds.ts`
 - Create: generated migration and snapshot under `packages/db/drizzle/` and `packages/db/drizzle/meta/`
 - Test: `tests/api/integration/app/jobs/refresh-scheduler.test.ts`
 
 **Interfaces:**
+
 - Produces `feeds.refreshGeneration: integer`, non-null with database default `0`.
 - Produces `ClaimedFeedRefresh = { feedId: string; reason: FeedRefreshScheduleReason; generation: number }`.
 
@@ -176,6 +178,7 @@ This is deliberately two independently shippable tracks. Do not combine their co
 ### Task 2: Atomically coalesce manual and scheduled enqueue claims
 
 **Files:**
+
 - Modify: `apps/api/src/modules/feeds/refresh/enqueue.ts`
 - Modify: `apps/api/src/app/jobs/refresh-scheduler.ts`
 - Modify: `packages/worker/src/services/queue/job.ts`
@@ -184,6 +187,7 @@ This is deliberately two independently shippable tracks. Do not combine their co
 - Test: `tests/api/integration/modules/queue/job-routing.test.ts`
 
 **Interfaces:**
+
 - `FeedRefreshJob["payload"]` becomes:
 
   ```ts
@@ -191,6 +195,7 @@ This is deliberately two independently shippable tracks. Do not combine their co
   ```
 
   `generation` remains optional only to consume already-pending pre-deploy messages; every new API/scheduler message must carry it.
+
 - `enqueueFeedRefresh(...)` returns `{ jobId: string; generation?: number; coalesced: boolean; deliveryPending: boolean }`. A coalesced request intentionally has no newly claimed generation.
 - `enqueueBatchFeedRefresh(...)` returns `{ accepted: true; count: number; coalescedCount: number; deliveryPendingCount: number }`.
 
@@ -199,9 +204,16 @@ This is deliberately two independently shippable tracks. Do not combine their co
   Add a queue test that parses `generation: 7`, and add a scheduler assertion that the published payload contains `generation: feed.generation`.
 
   ```ts
-  expect(parseJob({ type: "feed.refresh", payload: JSON.stringify({
-    feedId: "feed-1", userId: "user-1", generation: 7,
-  }) }).payload.generation).toBe(7);
+  expect(
+    parseJob({
+      type: "feed.refresh",
+      payload: JSON.stringify({
+        feedId: "feed-1",
+        userId: "user-1",
+        generation: 7,
+      }),
+    }).payload.generation,
+  ).toBe(7);
   ```
 
   Also assert a non-integer or negative generation throws `Invalid feed.refresh payload`.
@@ -274,6 +286,7 @@ This is deliberately two independently shippable tracks. Do not combine their co
 ### Task 3: Fence the worker's lifecycle writes and make stale work a successful no-op
 
 **Files:**
+
 - Modify: `packages/worker/src/services/feed/refresh.ts`
 - Modify: `packages/worker/src/services/feed/types.ts`
 - Modify: `apps/api/src/app/jobs/run-worker.ts`
@@ -281,6 +294,7 @@ This is deliberately two independently shippable tracks. Do not combine their co
 - Test: `tests/api/integration/modules/feeds/refresh/html-autodiscovery.test.ts`
 
 **Interfaces:**
+
 - `runFeedRefresh` options add `refreshGeneration?: number`.
 - `FeedRefreshResult` adds `skipped?: "superseded" | "not_queued"` for `ok: true` results.
 - Private `claimFeedRefresh(...)` returns `{ generation: number } | null`.
@@ -328,13 +342,14 @@ This is deliberately two independently shippable tracks. Do not combine their co
     feedId: string,
     expectedGeneration: number | undefined,
   ): Promise<{ generation: number } | null> {
-    const predicate = expectedGeneration === undefined
-      ? and(eq(feeds.id, feedId), eq(feeds.refreshStatus, "queued"))
-      : and(
-          eq(feeds.id, feedId),
-          eq(feeds.refreshStatus, "queued"),
-          eq(feeds.refreshGeneration, expectedGeneration),
-        );
+    const predicate =
+      expectedGeneration === undefined
+        ? and(eq(feeds.id, feedId), eq(feeds.refreshStatus, "queued"))
+        : and(
+            eq(feeds.id, feedId),
+            eq(feeds.refreshStatus, "queued"),
+            eq(feeds.refreshGeneration, expectedGeneration),
+          );
     const [claimed] = await database
       .update(feeds)
       .set({ refreshStatus: "running", lastRefreshStartedAt: new Date(), lastRefreshError: null })
@@ -390,11 +405,13 @@ This is deliberately two independently shippable tracks. Do not combine their co
 ### Task 4: Replace all-scope startup prefetch with explicit active-query prefetch
 
 **Files:**
+
 - Modify: `apps/web/src/modules/inbox/page.tsx`
 - Modify: `apps/web/src/modules/inbox/queries/options.ts`
 - Test: `tests/web/integration/src/modules/inbox/queries/options.test.ts`
 
 **Interfaces:**
+
 - Remove `getInboxSwitchTargetScopes`, `InboxSwitchTargetScope`, and `prefetchInboxSwitchTargets`.
 - Retain `prefetchInboxHotQueries(queryClient, activeScope)`: the route loader's active list plus sidebar summary remains the only blocking preload.
 
@@ -412,7 +429,9 @@ This is deliberately two independently shippable tracks. Do not combine their co
 
   test("hot prefetch requests only the active inbox list and sidebar summary", async () => {
     await inboxQueryOptions.prefetchInboxHotQueries(queryClient as never, {
-      filter: "all", feedId: "feed-1", timezoneOffsetMinutes: 300,
+      filter: "all",
+      feedId: "feed-1",
+      timezoneOffsetMinutes: 300,
     });
     expect(prefetchInfiniteQueryCalls).toHaveLength(1);
     expect(prefetchQueryCalls).toHaveLength(1);
@@ -448,12 +467,14 @@ This is deliberately two independently shippable tracks. Do not combine their co
 ### Task 5: Poll feed lifecycle state at a bounded foreground cadence
 
 **Files:**
+
 - Modify: `apps/web/src/modules/inbox/queries/options.ts`
 - Modify: `apps/web/src/modules/inbox/page.tsx`
 - Modify: `apps/web/src/modules/inbox/hooks/use-polling.ts`
 - Test: `tests/web/integration/src/modules/inbox/queries/options.test.ts`
 
 **Interfaces:**
+
 - Export `IDLE_FEED_REFRESH_POLL_INTERVAL_MS = 30_000`.
 - Export `getFeedRefreshPollInterval(feeds): 2_500 | 30_000`.
 - `usePolling` becomes transition invalidation only; it owns no `setInterval`.
@@ -511,8 +532,7 @@ This is deliberately two independently shippable tracks. Do not combine their co
   Remove `window.setInterval` and the `ACTIVE_FEED_REFRESH_POLL_INTERVAL_MS` import. On either transition into active or from active to idle/failed, invalidate exactly:
 
   ```ts
-  ["inbox", "items"]
-  ["sidebar", "inbox-summary"]
+  ["inbox", "items"][("sidebar", "inbox-summary")];
   ```
 
   Do not invalidate `followedFeedsQueryKey()` from this hook; TanStack Query owns that query's cadence now. This prevents an invalidate/refetch loop.
@@ -530,10 +550,12 @@ This is deliberately two independently shippable tracks. Do not combine their co
 ### Task 6: Persist a bounded, versioned hot cache without changing the live infinite list
 
 **Files:**
+
 - Modify: `apps/web/src/lib/query/cache.ts`
 - Create: `tests/web/integration/src/lib/query/cache.test.ts`
 
 **Interfaces:**
+
 - Export `prepareHotCacheState(state: DehydratedState): DehydratedState` for direct deterministic tests.
 - Set `HOT_CACHE_KEY` to `kyomi:hot-query-cache:v2`, retain `HOT_CACHE_LEGACY_KEY = "kyomi:hot-query-cache:v1"` only for one-time deletion.
 - Persist at most 8 inbox-list query scopes, one first page per list scope, and 20 item-detail queries; retain existing folder/feed/sidebar hot-query behavior.
@@ -546,7 +568,11 @@ This is deliberately two independently shippable tracks. Do not combine their co
   const compacted = prepareHotCacheState(state);
   const listQueries = compacted.queries.filter((query) => query.queryKey[1] === "items");
   expect(listQueries).toHaveLength(8);
-  expect(listQueries.every((query) => (query.state.data as InfiniteData<InboxListPage>).pages).toHaveLength(1));
+  expect(
+    listQueries
+      .every((query) => (query.state.data as InfiniteData<InboxListPage>).pages)
+      .toHaveLength(1),
+  );
   expect(compacted.queries.filter((query) => query.queryKey[1] === "item-detail")).toHaveLength(20);
   ```
 
@@ -606,6 +632,7 @@ This is deliberately two independently shippable tracks. Do not combine their co
 ### Task 7: Validate contracts and deploy safely
 
 **Files:**
+
 - Modify only if a test exposes a real defect in the files named above; do not broaden scope.
 
 - [ ] **Step 1: Run the combined targeted test set.**
@@ -664,12 +691,12 @@ These are intentionally not implementation tasks in this change.
 
 **Review target:** this implementation plan, selected by the user under plan review scope B.
 
-| Review area | Result | Refinement incorporated |
-| --- | --- | --- |
-| Architecture | Pass with a required fence | Chose a boring integer generation over a new outbox service or Redis lock. It protects duplicate delivery, stale recovery, and old worker terminal writes without a new operational dependency. |
-| Code quality | Pass | Lifecycle transitions are centralized around one conditional claim; the plan explicitly removes the duplicate all-target prefetch API rather than leaving a dead alternate path. |
-| Tests | Pass with regression requirements | Adds claim/no-fetch, stale-terminal-write, malformed-generation, delivery-pending, no-fan-out, polling, and persisted-page-cap coverage. Existing targeted API tests passed in the audit; the direct web test's `z.enum` initialization failure is called out as a harness check, not ignored. |
-| Performance | Pass | Retains cursor semantics and live in-memory list behavior, removes O(feeds + folders) startup requests, bounds persistent hydration, and avoids `maxPages`' unanchored-page eviction footgun. |
+| Review area  | Result                            | Refinement incorporated                                                                                                                                                                                                                                                                        |
+| ------------ | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Architecture | Pass with a required fence        | Chose a boring integer generation over a new outbox service or Redis lock. It protects duplicate delivery, stale recovery, and old worker terminal writes without a new operational dependency.                                                                                                |
+| Code quality | Pass                              | Lifecycle transitions are centralized around one conditional claim; the plan explicitly removes the duplicate all-target prefetch API rather than leaving a dead alternate path.                                                                                                               |
+| Tests        | Pass with regression requirements | Adds claim/no-fetch, stale-terminal-write, malformed-generation, delivery-pending, no-fan-out, polling, and persisted-page-cap coverage. Existing targeted API tests passed in the audit; the direct web test's `z.enum` initialization failure is called out as a harness check, not ignored. |
+| Performance  | Pass                              | Retains cursor semantics and live in-memory list behavior, removes O(feeds + folders) startup requests, bounds persistent hydration, and avoids `maxPages`' unanchored-page eviction footgun.                                                                                                  |
 
 **Failure modes accounted for:** Redis publish ambiguity leaves a durable queued claim; duplicate/reclaimed messages skip; a stale worker cannot overwrite a newer generation; scheduler recovery reissues a newer generation; background tabs do not poll; corrupt/old cached pages are not restored.
 

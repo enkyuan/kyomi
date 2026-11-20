@@ -1,9 +1,9 @@
 import { describe, expect, test } from "bun:test";
 import {
   collapseObviousDuplicates,
+  filterVisibleArticleRows,
   normalizedArticleIdentity,
 } from "@modules/articles/read/list/dedupe";
-import { filterVisibleArticleRowsForTest } from "@modules/articles/read/list/query";
 
 type Row = {
   id: string;
@@ -19,6 +19,7 @@ type Row = {
   feedFaviconUrl: string | null;
   isRead: boolean;
   isSaved: boolean;
+  lastViewedAt: Date | null;
   hiddenAt: Date | null;
   categories: string[];
 };
@@ -38,6 +39,7 @@ function row(overrides: Partial<Row>): Row {
     feedFaviconUrl: null,
     isRead: false,
     isSaved: false,
+    lastViewedAt: null,
     hiddenAt: null,
     categories: [],
     ...overrides,
@@ -108,8 +110,6 @@ describe("articles.list duplicate collapse", () => {
       row({ id: "hidden", title: "Hidden", hiddenAt: new Date("2026-07-01T00:00:00.000Z") }),
     ];
 
-    expect(filterVisibleArticleRowsForTest(rows).map((candidate) => candidate.id)).toEqual([
-      "visible",
-    ]);
+    expect(filterVisibleArticleRows(rows).map((candidate) => candidate.id)).toEqual(["visible"]);
   });
 });

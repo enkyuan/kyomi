@@ -1,10 +1,8 @@
-import type { db } from "@adapters/db/client";
+import type { Database as DB } from "@adapters/db/service";
 import { feedItemTranslations } from "@kyomi/db";
 import { and, eq, lt, or, sql } from "drizzle-orm";
-import { AppError } from "@shared/errors/app";
-import { sha256Hex } from "./hash";
 
-type DB = typeof db;
+import { sha256Hex } from "./hash";
 
 export type FeedItemTranslation = typeof feedItemTranslations.$inferSelect;
 
@@ -38,13 +36,6 @@ export async function findOrQueueFeedItemTranslation(
 ): Promise<{ translation: FeedItemTranslation; created: boolean }> {
   const sourceText = input.sourceText.trim();
 
-  if (!sourceText) {
-    throw new AppError("No content available to translate", {
-      status: 400,
-      code: "TRANSLATION_CONTENT_MISSING",
-    });
-  }
-
   const sourceContentHash = await sha256Hex(sourceText);
   const existing = await database
     .select()
@@ -60,7 +51,23 @@ export async function findOrQueueFeedItemTranslation(
     )
     .limit(1);
 
-  if (existing[0]) {
+  if (existing[0]?.status === "failed") {
+    const [retried] = await database
+      .update(feedItemTranslations)
+      .set({
+        status: "queued",
+        attempts: 0,
+        completedAt: null,
+        errorCode: null,
+        errorMessage: null,
+        updatedAt: new Date(),
+      })
+      .where(
+        and(eq(feedItemTranslations.id, existing[0].id), eq(feedItemTranslations.status, "failed")),
+      )
+      .returning();
+    if (retried) return { translation: retried, created: false };
+  } else if (existing[0]) {
     return { translation: existing[0], created: false };
   }
 
@@ -105,10 +112,7 @@ export async function findOrQueueFeedItemTranslation(
     .limit(1);
 
   if (!raced[0]) {
-    throw new AppError("Failed to create translation request", {
-      status: 500,
-      code: "TRANSLATION_CREATE_FAILED",
-    });
+    throw new Error("Failed to create translation request");
   }
 
   return { translation: raced[0], created: false };

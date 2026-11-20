@@ -1,5 +1,5 @@
 {
-  "id": "c1611d99-1b0e-4dd9-b1a9-0d591c68afa8",
+  "id": "46a917a7-3b8a-4573-aac1-4a72b7623c2a",
   "prevId": "92da822a-9d66-4ea8-98c3-cec5ff578381",
   "version": "7",
   "dialect": "postgresql",
@@ -2998,245 +2998,6 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.feed_item_translations": {
-      "name": "feed_item_translations",
-      "schema": "",
-      "columns": {
-        "id": {
-          "name": "id",
-          "type": "text",
-          "primaryKey": true,
-          "notNull": true
-        },
-        "feed_item_id": {
-          "name": "feed_item_id",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "source_content_hash": {
-          "name": "source_content_hash",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "source_language": {
-          "name": "source_language",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "target_language": {
-          "name": "target_language",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "source_text": {
-          "name": "source_text",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "translated_text": {
-          "name": "translated_text",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "status": {
-          "name": "status",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'queued'"
-        },
-        "provider": {
-          "name": "provider",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'cloudflare'"
-        },
-        "model_id": {
-          "name": "model_id",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "attempts": {
-          "name": "attempts",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": true,
-          "default": 0
-        },
-        "lease_expires_at": {
-          "name": "lease_expires_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "lease_token": {
-          "name": "lease_token",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "last_attempt_at": {
-          "name": "last_attempt_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "error_code": {
-          "name": "error_code",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "error_message": {
-          "name": "error_message",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "completed_at": {
-          "name": "completed_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        },
-        "updated_at": {
-          "name": "updated_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        }
-      },
-      "indexes": {
-        "feed_item_translations_identity_unique": {
-          "name": "feed_item_translations_identity_unique",
-          "columns": [
-            {
-              "expression": "feed_item_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "source_content_hash",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "source_language",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "target_language",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "model_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": true,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "feed_item_translations_feed_lookup_idx": {
-          "name": "feed_item_translations_feed_lookup_idx",
-          "columns": [
-            {
-              "expression": "feed_item_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "target_language",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "updated_at",
-              "isExpression": false,
-              "asc": false,
-              "nulls": "first"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "feed_item_translations_claim_idx": {
-          "name": "feed_item_translations_claim_idx",
-          "columns": [
-            {
-              "expression": "status",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "lease_expires_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        }
-      },
-      "foreignKeys": {
-        "feed_item_translations_feed_item_id_feed_items_id_fk": {
-          "name": "feed_item_translations_feed_item_id_feed_items_id_fk",
-          "tableFrom": "feed_item_translations",
-          "tableTo": "feed_items",
-          "columnsFrom": [
-            "feed_item_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "cascade",
-          "onUpdate": "no action"
-        }
-      },
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
-      "policies": {},
-      "checkConstraints": {
-        "feed_item_translations_status_check": {
-          "name": "feed_item_translations_status_check",
-          "value": "\"feed_item_translations\".\"status\" IN ('queued', 'processing', 'ready', 'failed')"
-        }
-      },
-      "isRLSEnabled": false
-    },
     "public.feed_item_user_state": {
       "name": "feed_item_user_state",
       "schema": "",
@@ -4996,6 +4757,66 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.user_onboarding": {
+      "name": "user_onboarding",
+      "schema": "",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "draft": {
+          "name": "draft",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{}'::jsonb"
+        },
+        "username": {
+          "name": "username",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "completed_at": {
+          "name": "completed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "user_onboarding_user_id_users_id_fk": {
+          "name": "user_onboarding_user_id_users_id_fk",
+          "tableFrom": "user_onboarding",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "user_onboarding_username_key": {
+          "name": "user_onboarding_username_key",
+          "nullsNotDistinct": false,
+          "columns": [
+            "username"
+          ]
+        }
+      },
       "policies": {},
       "checkConstraints": {},
       "isRLSEnabled": false

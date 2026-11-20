@@ -1,11 +1,6 @@
+import { isUuid } from "@lib/ids";
 import type { InboxFilter, InboxSort } from "@modules/articles/lib/api";
 import { normalizeInboxSort } from "@modules/articles/lib/urls";
-import {
-  isInboxRecapRailFolderBackTarget,
-  isInboxRecapRailSection,
-  type InboxRecapRailFolderBackTarget,
-  type InboxRecapRailSection,
-} from "./recap/index";
 
 export type InboxSearch = {
   filter?: InboxFilter;
@@ -13,9 +8,6 @@ export type InboxSearch = {
   feedId?: string;
   folderId?: string;
   itemId?: string;
-  rail?: InboxRecapRailSection;
-  railFolderBack?: InboxRecapRailFolderBackTarget;
-  railFolderId?: string;
   showHidden?: "1";
   showRead?: "1";
   sort?: InboxSort;
@@ -42,22 +34,13 @@ export function validateInboxSearch(search: Record<string, unknown>): InboxSearc
   })();
 
   const sort = normalizeInboxSort(search.sort);
-  const rail = isInboxRecapRailSection(search.rail) ? search.rail : undefined;
-  const railFolderId = rail === "folders" ? parseOptionalString(search.railFolderId) : undefined;
-  const railFolderBack =
-    rail === "folders" && railFolderId && isInboxRecapRailFolderBackTarget(search.railFolderBack)
-      ? search.railFolderBack
-      : undefined;
 
   return {
     filter,
     search: parseOptionalString(search.search),
     feedId: parseOptionalString(search.feedId),
     folderId: parseOptionalString(search.folderId),
-    itemId: parseOptionalString(search.itemId),
-    rail,
-    railFolderBack,
-    railFolderId,
+    itemId: isUuid(search.itemId) ? search.itemId : undefined,
     showHidden: search.showHidden === "1" ? "1" : undefined,
     showRead: search.showRead === "1" ? "1" : undefined,
     sort,

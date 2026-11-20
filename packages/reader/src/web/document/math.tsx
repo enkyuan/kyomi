@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { sanitizeReaderArticleHtml } from "../html/purify";
 import { useHydrated } from "../hooks/use-hydrated";
-import { isTrustedKatexHtml } from "./lib";
+import { isTrustedKatexHtml } from "./katex-html";
 
 type MathFields = {
   tex?: string | undefined;

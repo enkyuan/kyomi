@@ -65,7 +65,8 @@ function approximateLength(block: ParagraphBlock): number {
  */
 export function planDocument(document: ReaderDocument): ReaderPlan {
   const segments: ReaderSegment[] = [];
-  const anchorIndex: Record<string, number> = {};
+  // No prototype: an anchor or footnote id such as `constructor` must not find `Object`'s member.
+  const anchorIndex: Record<string, number> = Object.create(null);
   let run: ParagraphBlock[] = [];
   let runChars = 0;
 
@@ -98,9 +99,8 @@ export function planDocument(document: ReaderDocument): ReaderPlan {
   }
   flush();
 
-  return {
-    segments,
-    anchorIndex,
-    footnotes: Object.fromEntries(document.footnotes.map((footnote) => [footnote.id, footnote])),
-  };
+  const footnotes: ReaderPlan["footnotes"] = Object.create(null);
+  for (const footnote of document.footnotes) footnotes[footnote.id] = footnote;
+
+  return { segments, anchorIndex, footnotes };
 }

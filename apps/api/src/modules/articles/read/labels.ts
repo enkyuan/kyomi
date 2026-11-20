@@ -1,5 +1,5 @@
 import { activeEmbeddingModelId } from "@config/embeddings";
-import { env } from "@config/env";
+import type { Env } from "@config/env";
 import {
   categories,
   feedCategoryAssignments,
@@ -195,7 +195,15 @@ export function buildCategoryLabelsSql(
 )`;
 }
 
-export const categoryLabelsSql = buildCategoryLabelsSql(
-  env.CATEGORY_CLASSIFIER_READ_MODE,
-  activeEmbeddingModelId(),
-);
+type CategoryLabelsConfig = Pick<
+  Env,
+  "CATEGORY_CLASSIFIER_READ_MODE" | "CLOUDFLARE_EMBEDDINGS_URL" | "CLOUDFLARE_EMBEDDINGS_TOKEN"
+>;
+
+/** The category chip subquery for the configured classifier mode and active embedding model. */
+export function categoryLabelsFor(config: CategoryLabelsConfig): SQL<string[]> {
+  return buildCategoryLabelsSql(
+    config.CATEGORY_CLASSIFIER_READ_MODE,
+    activeEmbeddingModelId(config),
+  );
+}

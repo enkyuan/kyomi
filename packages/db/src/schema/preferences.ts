@@ -6,6 +6,7 @@ export const userPreferences = pgTable("user_preferences", {
   userId: text("user_id")
     .primaryKey()
     .references(() => users.id, { onDelete: "cascade" }),
+  language: text("language").default("en").notNull(),
   readerMode: text("reader_mode").notNull().default("smart"),
   theme: text("theme"),
   inboxDefaultView: text("inbox_default_view").notNull().default("my-feed"),

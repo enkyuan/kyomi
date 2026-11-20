@@ -1,43 +1,38 @@
-import { getRedis } from "@adapters/redis";
-import { logger } from "@adapters/logger";
-import { env } from "@config/env";
+import { Effect, Layer } from "effect";
+import { AppLogger } from "@adapters/logger/service";
+import { AppConfig } from "@config/env/service";
 import { createApp } from "../http/app";
 import { listenWithRetry } from "../http/listen";
-import { runFeedRefreshSchedulerLoop } from "../jobs/scheduler";
-import { runWorkerLoop } from "../jobs/consumer";
+import { WorkerLive } from "../jobs/consumer";
+import { feedRefreshSchedulerLoop } from "../jobs/scheduler";
+import { AppLive, runtimeFromScope } from "../runtime";
+import { runMain } from "../setup/main";
 
-const controller = new AbortController();
+// One process for local development: the HTTP server, the job worker and the feed scheduler share
+// one set of services. Stopping it releases them in reverse order of how they started.
+const dev = Effect.gen(function* () {
+  const config = yield* AppConfig;
+  const log = yield* AppLogger;
+  const runtime = yield* runtimeFromScope;
+  const app = createApp({ runtime });
 
-for (const signalName of ["SIGINT", "SIGTERM"] as const) {
-  process.on(signalName, () => {
-    logger.info("dev.shutdown.requested", { signal: signalName });
-    controller.abort();
+  yield* Effect.acquireRelease(
+    listenWithRetry(app, {
+      port: config.PORT,
+      maxRequestBodySize: config.API_MAX_REQUEST_BODY_BYTES,
+      retries: 20,
+      retryDelayMs: 250,
+    }),
+    () => Effect.promise(() => app.stop()),
+  );
+  yield* log.info("server.listening", {
+    host: app.server?.hostname ?? "unknown",
+    port: app.server?.port ?? config.PORT,
   });
-}
 
-const app = createApp();
+  yield* Effect.forkScoped(feedRefreshSchedulerLoop);
+  yield* Layer.build(WorkerLive);
+  return yield* Effect.never;
+}).pipe(Effect.scoped, Effect.provide(AppLive));
 
-await listenWithRetry(app, {
-  port: env.PORT,
-  maxRequestBodySize: env.API_MAX_REQUEST_BODY_BYTES,
-  retries: 20,
-  retryDelayMs: 250,
-  signal: controller.signal,
-});
-
-logger.info("server.listening", {
-  host: app.server?.hostname ?? "unknown",
-  port: app.server?.port ?? env.PORT,
-});
-
-void runWorkerLoop(controller.signal).catch((error) => {
-  logger.error("dev.worker.crashed", {
-    error: error instanceof Error ? error.message : String(error),
-  });
-});
-
-void runFeedRefreshSchedulerLoop(getRedis(), controller.signal).catch((error) => {
-  logger.error("dev.scheduler.crashed", {
-    error: error instanceof Error ? error.message : String(error),
-  });
-});
+runMain(dev);

@@ -115,7 +115,7 @@ function FloatingReaderToolbar({
                 scale: 1,
                 y: 0,
               }}
-              className="pointer-events-auto origin-top will-change-transform"
+              className="pointer-events-auto origin-top"
               exit={{
                 filter: "blur(4px)",
                 opacity: 0,
@@ -320,6 +320,8 @@ export function Article({
 
       <div
         className="relative"
+        lang={toolbar.displayReader.language ?? undefined}
+        dir="auto"
         data-reader-body={item.id}
         data-reader-inbox-body={hideInlineToolbar ? "" : undefined}
       >

@@ -4,21 +4,21 @@ Kyomi's PR and `main` CI runs on CircleCI (`.circleci/`). GitHub Actions keeps o
 
 ## Pipelines
 
-| Where | File | Trigger | Purpose |
-| --- | --- | --- | --- |
-| CircleCI | `.circleci/config.yml` | Every pipeline | Setup job: diffs the change against `main` (or the previous commit on `main`) and continues with only the areas it touches. |
-| CircleCI | `.circleci/continue.yml` | Continued from setup | The `ci` workflow: the monorepo quality gate. |
-| GitHub Actions | `rd.check.yml` | Pull requests and `main`, except docs/catalog-only changes | react-doctor report on the PR. |
+| Where          | File                     | Trigger                                                    | Purpose                                                                                                                     |
+| -------------- | ------------------------ | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| CircleCI       | `.circleci/config.yml`   | Every pipeline                                             | Setup job: diffs the change against `main` (or the previous commit on `main`) and continues with only the areas it touches. |
+| CircleCI       | `.circleci/continue.yml` | Continued from setup                                       | The `ci` workflow: the monorepo quality gate.                                                                               |
+| GitHub Actions | `rd.check.yml`           | Pull requests and `main`, except docs/catalog-only changes | react-doctor report on the PR.                                                                                              |
 
 ## What runs for a change
 
 The setup job maps changed paths to areas. Docs, Markdown, `.agents/`, `.pi/` and `.github/` changes reach no build or test.
 
-| Area | Paths | Jobs |
-| --- | --- | --- |
-| `app` | Anything outside `packages/catalog/` (and the excluded paths above) | `static-quality`, then `web-tests`, `api-tests`, `build` |
-| `docker` | Dockerfiles, `.dockerignore`, `.bun-version`, `bun.lock`, `package.json` manifests, `turbo.json`, `patches/` | `docker-build` (on `main`, any `app` change also builds images) |
-| `catalog` | `packages/catalog/**`, `.circleci/**` | `catalog-typecheck` |
+| Area      | Paths                                                                                                        | Jobs                                                            |
+| --------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| `app`     | Anything outside `packages/catalog/` (and the excluded paths above)                                          | `static-quality`, then `web-tests`, `api-tests`, `build`        |
+| `docker`  | Dockerfiles, `.dockerignore`, `.bun-version`, `bun.lock`, `package.json` manifests, `turbo.json`, `patches/` | `docker-build` (on `main`, any `app` change also builds images) |
+| `catalog` | `packages/catalog/**`, `.circleci/**`                                                                        | `catalog-typecheck`                                             |
 
 `web-tests`, `api-tests`, `build` and `docker-build` wait for `static-quality`: a formatting or type error fails the pipeline in one cheap job instead of five parallel ones. `static-quality` restores Turbo's local cache, so packages whose inputs did not change replay their lint/format/typecheck result.
 
@@ -47,14 +47,14 @@ A commit message containing `[ci skip]` or `[skip ci]` starts no pipeline.
 
 ## Job Ownership
 
-| Job | Owns | Local equivalent |
-| --- | --- | --- |
-| `static-quality` | Env encryption, formatting, linting, import boundaries, app typechecking, Drizzle migration drift. | `bun run ci:static` |
-| `web-tests` | Web integration tests under `tests/web`. | `bun run ci:test:web` |
-| `api-tests` | API integration tests with Postgres, Redis, and Meilisearch. | `bun run ci:test:api` |
-| `build` | Turbo workspace builds and the breakpoint CSS check. | `bun run ci:build` |
-| `docker-build` | Local API and Web image build smoke. | `bun run ci:docker:build` |
-| `catalog-typecheck` | Catalog dependency sync and `ty` typecheck. | `bun run --cwd packages/catalog setup && bun run --cwd packages/catalog typecheck` |
+| Job                 | Owns                                                                                               | Local equivalent                                                                   |
+| ------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `static-quality`    | Env encryption, formatting, linting, import boundaries, app typechecking, Drizzle migration drift. | `bun run ci:static`                                                                |
+| `web-tests`         | Web integration tests under `tests/web`.                                                           | `bun run ci:test:web`                                                              |
+| `api-tests`         | API integration tests with Postgres, Redis, and Meilisearch.                                       | `bun run ci:test:api`                                                              |
+| `build`             | Turbo workspace builds and the breakpoint CSS check.                                               | `bun run ci:build`                                                                 |
+| `docker-build`      | Local API and Web image build smoke.                                                               | `bun run ci:docker:build`                                                          |
+| `catalog-typecheck` | Catalog dependency sync and `ty` typecheck.                                                        | `bun run --cwd packages/catalog setup && bun run --cwd packages/catalog typecheck` |
 
 ## Runtime Versions
 

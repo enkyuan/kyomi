@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@tanstack/react-router";
-import { BookmarkFilledIcon, ExternalLinkIcon, Maximize2Icon } from "@kyomi/ui/icons/blode";
+import { BookmarkFilledIcon, ExternalLinkIcon } from "@kyomi/ui/icons/blode";
 import {
   Item,
   ItemActions,
@@ -11,40 +11,28 @@ import {
   ItemTitle,
 } from "@kyomi/ui/components/item";
 import { Button } from "@kyomi/ui/components/button";
+import { normalizeSafeHttpUrl } from "@kyomi/reader/core";
 import type { InboxSearch } from "@modules/inbox/lib/search";
 import { buildInboxItemSlug } from "@modules/articles/lib/slug";
 import type { RecapSavedItem } from "../../../lib/recap/types";
 import { formatRelativeTime } from "@modules/inbox/lib/recap/index";
 import { RailTooltip, RecapSection, SectionEmpty } from ".";
 
-const WORTH_REVISITING_DISPLAY_LIMIT = 3;
-
 export function WorthRevisiting({
   items,
-  onExpand,
+  limit,
   onUnsave,
   unsavingItemId,
 }: {
   items: RecapSavedItem[];
-  onExpand: () => void;
+  limit: number;
   onUnsave: (itemId: string) => void;
   unsavingItemId: string | null;
 }) {
-  const visibleItems = items.slice(0, WORTH_REVISITING_DISPLAY_LIMIT);
+  const visibleItems = items.slice(0, limit);
 
   return (
-    <RecapSection
-      action={
-        items.length > WORTH_REVISITING_DISPLAY_LIMIT ? (
-          <RailTooltip label="View saved items">
-            <Button aria-label="View saved items" size="icon-xs" variant="ghost" onClick={onExpand}>
-              <Maximize2Icon />
-            </Button>
-          </RailTooltip>
-        ) : null
-      }
-      title="Worth revisiting"
-    >
+    <RecapSection title="Worth revisiting">
       {items.length === 0 ? (
         <SectionEmpty
           title="Nothing to revisit yet"
@@ -86,7 +74,7 @@ export function WorthRevisiting({
                         render={
                           <a
                             aria-label={`Open original for ${item.title}`}
-                            href={item.link}
+                            href={normalizeSafeHttpUrl(item.link) ?? undefined}
                             rel="noreferrer"
                             target="_blank"
                           />

@@ -285,8 +285,8 @@ async function handleTranslate(body: unknown, env: Env): Promise<Response> {
       source_language: parsed.sourceLanguage,
       target_language: parsed.targetLanguage,
     });
-  } catch (error) {
-    console.error("Workers AI translation failed", error);
+  } catch {
+    console.error("Workers AI translation failed");
     return Response.json({ error: "Translation provider failed" }, { status: 502 });
   }
 }

@@ -25,6 +25,11 @@ export function resolveBetterAuthTrustedOrigins(options: {
   baseURL: string;
   trustedOrigins?: string | null | undefined;
   additionalOrigins?: readonly string[];
+  /**
+   * Also trust the development web origins on localhost. Off in production: any page served from
+   * a user's own machine on port 3000 would otherwise be a trusted origin for credentialed calls.
+   */
+  includeLocalhost?: boolean;
 }) {
   const configuredOrigins = options.trustedOrigins
     ?.split(",")
@@ -36,7 +41,11 @@ export function resolveBetterAuthTrustedOrigins(options: {
   }
 
   return Array.from(
-    new Set([options.baseURL, ...DEFAULT_LOCALHOST_ORIGINS, ...(options.additionalOrigins ?? [])]),
+    new Set([
+      options.baseURL,
+      ...(options.includeLocalhost === false ? [] : DEFAULT_LOCALHOST_ORIGINS),
+      ...(options.additionalOrigins ?? []),
+    ]),
   );
 }
 

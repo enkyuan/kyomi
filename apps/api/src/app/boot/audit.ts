@@ -1,3 +1,4 @@
+import { Console, Effect } from "effect";
 import { sql, type SQL } from "drizzle-orm";
 import {
   categories,
@@ -6,7 +7,15 @@ import {
   feeds,
   feedItems,
 } from "@kyomi/db";
+import { Db } from "@adapters/db/service";
 import { activeEmbeddingModelId } from "@config/embeddings";
+import { AppConfig } from "@config/env/service";
+import { CatalogFileError, InvalidArguments } from "@modules/catalog/errors";
+import { positiveIntFlag, valueAfter } from "@shared/cli/args";
+import { rowsFromExecute } from "@shared/db/rows";
+import { AppLive } from "../runtime";
+import { runMain } from "../setup/main";
+import { ensureDatabaseReady } from "../setup/ready";
 import { buildCategoryLabelsSql } from "@modules/articles/read/labels";
 
 export type CategoryAuditFormat = "jsonl" | "summary";
@@ -73,27 +82,6 @@ type CategoryAuditDatabase = {
   execute: (query: SQL) => Promise<unknown> | unknown;
 };
 
-function valueAfter(argv: string[], flag: string): string | null {
-  const index = argv.indexOf(flag);
-  if (index === -1) {
-    return null;
-  }
-  const value = argv[index + 1];
-  return value && !value.startsWith("--") ? value : null;
-}
-
-function positiveIntFlag(argv: string[], flag: string, fallback: number): number {
-  const value = valueAfter(argv, flag);
-  if (!value) {
-    return fallback;
-  }
-  const parsed = Number.parseInt(value, 10);
-  if (!Number.isFinite(parsed) || parsed <= 0) {
-    throw new Error(`Invalid ${flag} value: ${value}`);
-  }
-  return parsed;
-}
-
 function formatFlag(argv: string[]): CategoryAuditFormat {
   const value = valueAfter(argv, "--format") ?? "jsonl";
   if (value !== "jsonl" && value !== "summary") {
@@ -110,16 +98,6 @@ export function parseCategoryAuditArgs(argv: string[]): CategoryAuditArgs {
     labelsFile: valueAfter(argv, "--labels-file"),
     format: formatFlag(argv),
   };
-}
-
-function rowsFromExecute<T>(result: unknown): T[] {
-  if (Array.isArray(result)) {
-    return result as T[];
-  }
-  if (result && typeof result === "object" && "rows" in result) {
-    return (result as { rows: T[] }).rows;
-  }
-  return [];
 }
 
 function normalizeLabelList(values: unknown): string[] {
@@ -192,12 +170,12 @@ export async function runCategoryAudit(
   args: CategoryAuditArgs,
   database: CategoryAuditDatabase,
   feedItemIds: readonly string[] | null = null,
+  embeddingModelId: string | undefined = undefined,
 ): Promise<CategoryAuditItem[]> {
   if (feedItemIds && feedItemIds.length === 0) {
     return [];
   }
 
-  const embeddingModelId = activeEmbeddingModelId();
   const itemIdFilter = itemIdFilterSql(feedItemIds);
   const result = await database.execute(sql<CategoryAuditRow>`
     SELECT
@@ -391,29 +369,38 @@ export function formatCategoryAuditOutput(
 }
 
 if (import.meta.main) {
-  const args = parseCategoryAuditArgs(process.argv);
-  let labels: CategoryAuditLabel[] | null = null;
-  const [{ db, pool }, { assertApiDatabaseReady }] = await Promise.all([
-    import("@adapters/db/client"),
-    import("@adapters/db/preflight"),
-  ]);
-  try {
-    labels = args.labelsFile ? await readAuditLabelsFile(args.labelsFile) : null;
-    await assertApiDatabaseReady({
-      commandName: "categories:audit",
-      ensureSchema: true,
+  const audit = Effect.gen(function* () {
+    const args = yield* Effect.try({
+      try: () => parseCategoryAuditArgs(process.argv),
+      catch: (cause) =>
+        new InvalidArguments({ message: cause instanceof Error ? cause.message : String(cause) }),
     });
-    const items = await runCategoryAudit(
-      args,
-      db,
-      labels ? labels.map((label) => label.feedItemId) : null,
+    const labelsFile = args.labelsFile;
+    const labels = labelsFile
+      ? yield* Effect.tryPromise({
+          try: () => readAuditLabelsFile(labelsFile),
+          catch: (cause) => new CatalogFileError({ path: labelsFile, cause }),
+        })
+      : null;
+    yield* ensureDatabaseReady({ commandName: "categories:audit", ensureSchema: true });
+
+    const db = yield* Db;
+    const embeddingModelId = activeEmbeddingModelId(yield* AppConfig);
+    const items = yield* db.use("categories.audit", (client) =>
+      runCategoryAudit(
+        args,
+        client,
+        labels ? labels.map((label) => label.feedItemId) : null,
+        embeddingModelId,
+      ),
     );
     const scoreReport = labels ? scoreCategoryAuditItems(items, labels) : null;
     const output = formatCategoryAuditOutput(items, args, scoreReport);
     if (output.length > 0) {
-      console.log(output);
+      yield* Console.log(output);
     }
-  } finally {
-    await pool.end();
-  }
+  });
+
+  // The layer scope closes Postgres and Redis once the run ends, or on SIGINT/SIGTERM.
+  runMain(audit.pipe(Effect.provide(AppLive)));
 }

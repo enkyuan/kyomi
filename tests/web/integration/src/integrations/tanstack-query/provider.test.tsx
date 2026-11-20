@@ -42,7 +42,11 @@ describe("TanstackQueryProvider", () => {
     expect(mocks.hydrateHotQueryCache).not.toHaveBeenCalled();
 
     render(
-      <TanstackQueryProvider queryClient={new QueryClient()} sessionStatus="authenticated">
+      <TanstackQueryProvider
+        queryClient={new QueryClient()}
+        sessionStatus="authenticated"
+        userId="user-1"
+      >
         <div>Query provider ready</div>
       </TanstackQueryProvider>,
     );

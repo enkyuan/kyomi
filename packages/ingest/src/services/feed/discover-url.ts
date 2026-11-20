@@ -1,3 +1,6 @@
+import { absoluteHttpUrl } from "../../lib/feed-text";
+import { extractHeadHtml, openTags } from "../../lib/text-scan";
+
 type FeedLinkCandidate = {
   href: string;
   score: number;
@@ -32,19 +35,16 @@ function normalizeRel(value: string | null): string[] {
     .filter(Boolean);
 }
 
-function resolveCandidateHref(href: string | null, baseUrl: string): string | null {
-  if (!href) {
-    return null;
-  }
-  try {
-    return new URL(href, baseUrl).href;
-  } catch {
-    return null;
-  }
+function attributePattern(name: string): RegExp {
+  return new RegExp(`\\b${name}\\s*=\\s*(?:"([^"]+)"|'([^']+)'|([^\\s>]+))`, "i");
 }
 
-function extractLinkAttribute(tag: string, name: string): string | null {
-  const match = tag.match(new RegExp(`\\b${name}\\s*=\\s*(?:"([^"]+)"|'([^']+)'|([^\\s>]+))`, "i"));
+const REL_PATTERN = attributePattern("rel");
+const TYPE_PATTERN = attributePattern("type");
+const HREF_PATTERN = attributePattern("href");
+
+function extractLinkAttribute(tag: string, pattern: RegExp): string | null {
+  const match = tag.match(pattern);
   if (!match) {
     return null;
   }
@@ -52,22 +52,19 @@ function extractLinkAttribute(tag: string, name: string): string | null {
 }
 
 function parseFeedLinkCandidate(tag: string, baseUrl: string): FeedLinkCandidate | null {
-  const rel = extractLinkAttribute(tag, "rel");
-  const type = extractLinkAttribute(tag, "type");
-  const rawHref = extractLinkAttribute(tag, "href");
-
-  const relTokens = normalizeRel(rel);
+  const relTokens = normalizeRel(extractLinkAttribute(tag, REL_PATTERN));
   if (!relTokens.includes(ALTERNATE_REL)) {
     return null;
   }
 
-  const normalizedType = normalizeType(type);
+  const normalizedType = normalizeType(extractLinkAttribute(tag, TYPE_PATTERN));
   const score = FEED_CONTENT_TYPE_SCORES.get(normalizedType);
   if (score === undefined) {
     return null;
   }
 
-  const href = resolveCandidateHref(rawHref, baseUrl);
+  // Only an http(s) URL without a login can become the stored feed URL.
+  const href = absoluteHttpUrl(extractLinkAttribute(tag, HREF_PATTERN), baseUrl);
   if (!href) {
     return null;
   }
@@ -76,17 +73,13 @@ function parseFeedLinkCandidate(tag: string, baseUrl: string): FeedLinkCandidate
 }
 
 function collectFeedLinkCandidates(headHtml: string, baseUrl: string): FeedLinkCandidate[] {
-  const linkRegex = /<link[^>]*>/gi;
   const candidates: FeedLinkCandidate[] = [];
-  let match: RegExpExecArray | null;
-
-  while ((match = linkRegex.exec(headHtml)) !== null) {
-    const candidate = parseFeedLinkCandidate(match[0], baseUrl);
+  for (const tag of openTags(headHtml, "link")) {
+    const candidate = parseFeedLinkCandidate(tag, baseUrl);
     if (candidate) {
       candidates.push(candidate);
     }
   }
-
   return candidates;
 }
 
@@ -94,13 +87,11 @@ function collectFeedLinkCandidates(headHtml: string, baseUrl: string): FeedLinkC
  * Extract a feed URL from HTML autodiscovery tags such as:
  * `<link rel="alternate" type="application/rss+xml" href="/feed.xml">`.
  *
- * Uses fast regex scanning over the <head> tag to avoid treating generic HTML
- * as a feed format or blocking on large publisher pages.
+ * Scans only the <head> (the first 256 KiB of the page at most) in one linear pass, so generic
+ * HTML is never treated as a feed format and a hostile page cannot block the thread.
  */
 export function discoverFeedUrlFromHtml(body: string, baseUrl: string): string | null {
-  const headMatch = body.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
-  const headHtml = headMatch ? headMatch[1] : body.slice(0, 32768);
-  const candidates = collectFeedLinkCandidates(headHtml, baseUrl);
+  const candidates = collectFeedLinkCandidates(extractHeadHtml(body), baseUrl);
 
   if (candidates.length === 0) {
     return null;

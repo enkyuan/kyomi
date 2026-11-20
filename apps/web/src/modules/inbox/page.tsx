@@ -71,9 +71,6 @@ function InboxPageContent({
     feedId,
     folderId,
     itemId,
-    rail,
-    railFolderBack,
-    railFolderId,
     effectiveFilter,
     isReadScopedFilterActive,
     includeRead,
@@ -278,9 +275,6 @@ function InboxPageContent({
       }}
       recap={{
         navigate,
-        rail,
-        railFolderBack,
-        railFolderId,
         showRecap,
       }}
     />

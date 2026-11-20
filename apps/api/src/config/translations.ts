@@ -1,4 +1,4 @@
-import { env } from "@config/env";
+import type { Env } from "@config/env/runtime";
 
 export const CLOUDFLARE_TRANSLATION_MODEL = "@cf/meta/m2m100-1.2b";
 
@@ -10,7 +10,7 @@ export type CloudflareTranslationConfig = {
 };
 
 type TranslationProviderEnv = Pick<
-  typeof env,
+  Env,
   "FEATURE_ARTICLE_TRANSLATIONS" | "CLOUDFLARE_TRANSLATIONS_URL" | "CLOUDFLARE_TRANSLATIONS_TOKEN"
 >;
 
@@ -19,7 +19,7 @@ type TranslationProviderEnv = Pick<
  * Kyomi. The runtime environment schema enforces the URL/token pair whenever this flag is true.
  */
 export function cloudflareTranslationConfig(
-  values: TranslationProviderEnv = env,
+  values: TranslationProviderEnv,
 ): CloudflareTranslationConfig | undefined {
   if (!values.FEATURE_ARTICLE_TRANSLATIONS) {
     return undefined;

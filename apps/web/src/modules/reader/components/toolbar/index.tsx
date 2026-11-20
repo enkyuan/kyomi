@@ -1,18 +1,13 @@
 "use client";
 
-import type React from "react";
 import {
   ArrowShareRightIcon,
   BookmarkFilledIcon,
   BookmarkIcon,
   ExternalLinkIcon,
-  FormRectangleIcon,
   LanguagesIcon,
   MinusIcon,
   PlusIcon,
-  SquareIcon,
-  TextFilledIcon,
-  TextIcon,
 } from "@kyomi/ui/icons/blode";
 import {
   AnimatePresence,
@@ -23,24 +18,22 @@ import {
   useReducedMotion,
   springTransition,
 } from "@kyomi/ui/lib/motion";
-import { Button } from "@kyomi/ui/components/button";
 import {
   Toolbar as ToolbarRoot,
-  ToolbarButton,
   ToolbarGroup,
   ToolbarSeparator,
 } from "@kyomi/ui/components/toolbar";
 import { TextMorph } from "@kyomi/ui/components/text-morph";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@kyomi/ui/components/tooltip";
-import { useMediaQuery } from "@kyomi/ui/hooks/use-media-query";
 import type { ToolbarProps } from "@modules/reader/lib/toolbar";
-import type { ReaderContentWidth } from "@modules/reader/lib/preferences";
 import { cn } from "@kyomi/ui/lib/utils";
-
-const CONTENT_WIDTH_LABELS: Record<ReaderContentWidth, string> = {
-  narrow: "Narrow",
-  wide: "Wide",
-};
+import {
+  ContentWidthButton,
+  FocusAnimatedAction,
+  ReaderToolbarButton,
+  SourceModeButton,
+  type ToolbarTipProps,
+} from "./actions";
 
 // oxlint-disable-next-line eslint/complexity, react-doctor/no-many-boolean-props
 export function Toolbar({
@@ -58,6 +51,8 @@ export function Toolbar({
   onDecreaseFontSize,
   onIncreaseFontSize,
   onTranslateArticle,
+  translationLabel = "Translate article",
+  canTranslate = true,
   onOpenOriginal,
   onShareArticle,
   variant = "inline",
@@ -67,11 +62,16 @@ export function Toolbar({
   tooltipSide = "top",
   tooltipCollisionAvoidance,
 }: ToolbarProps) {
-  const isMobile = useMediaQuery({ max: "md" });
   const prefersReducedMotion = useReducedMotion();
   const tooltipSideOffset = variant === "floating" ? 10 : 8;
   const useLargeControls = controlSize === "large";
-  const compactReaderFocusMode = readerFocusMode && readerFocusVariant === "compact";
+  const showFocusExtras = readerFocusMode && readerFocusVariant !== "compact";
+  const tip: ToolbarTipProps = {
+    tooltipSide,
+    tooltipCollisionAvoidance,
+    tooltipSideOffset,
+    large: useLargeControls,
+  };
   const actionTransition = springTransition("emphasized", prefersReducedMotion);
   const actionMotionProps = {
     ...controlSwapMotion(prefersReducedMotion),
@@ -95,88 +95,53 @@ export function Toolbar({
             onClick={(anchor) =>
               onToggleSaved({ anchor, side: tooltipSide, sideOffset: tooltipSideOffset })
             }
-            tooltipSide={tooltipSide}
-            tooltipCollisionAvoidance={tooltipCollisionAvoidance}
-            tooltipSideOffset={tooltipSideOffset}
-            large={useLargeControls}
+            {...tip}
             activeClassName="text-mizu"
           >
             {isSaved ? <BookmarkFilledIcon /> : <BookmarkIcon />}
           </ReaderToolbarButton>
-          <AnimatePresence initial={false} mode="popLayout">
-            {readerFocusMode && !compactReaderFocusMode ? (
-              <m.div layout className="flex" {...actionMotionProps} key="translate-article">
-                <ReaderToolbarButton
-                  label="Translate article"
-                  onClick={onTranslateArticle}
-                  tooltipSide={tooltipSide}
-                  tooltipCollisionAvoidance={tooltipCollisionAvoidance}
-                  tooltipSideOffset={tooltipSideOffset}
-                  large={useLargeControls}
-                >
-                  <LanguagesIcon />
-                </ReaderToolbarButton>
-              </m.div>
-            ) : null}
-          </AnimatePresence>
+          <FocusAnimatedAction
+            visible={canTranslate && (!readerFocusMode || showFocusExtras)}
+            actionKey="translate-article"
+            label={translationLabel}
+            onClick={onTranslateArticle}
+            motionProps={actionMotionProps}
+            tip={tip}
+          >
+            <LanguagesIcon />
+          </FocusAnimatedAction>
           {readerFocusMode ? (
             <m.div layout className="flex" transition={actionTransition}>
-              <ReaderToolbarButton
-                label="Open source"
-                onClick={onOpenOriginal}
-                tooltipSide={tooltipSide}
-                tooltipCollisionAvoidance={tooltipCollisionAvoidance}
-                tooltipSideOffset={tooltipSideOffset}
-                large={useLargeControls}
-              >
+              <ReaderToolbarButton label="Open source" onClick={onOpenOriginal} {...tip}>
                 <ExternalLinkIcon />
               </ReaderToolbarButton>
             </m.div>
           ) : null}
-          <AnimatePresence initial={false} mode="popLayout">
-            {readerFocusMode && !compactReaderFocusMode ? (
-              <m.div layout className="flex" {...actionMotionProps} key="share-article">
-                <ReaderToolbarButton
-                  label="Share article"
-                  onClick={onShareArticle}
-                  tooltipSide={tooltipSide}
-                  tooltipCollisionAvoidance={tooltipCollisionAvoidance}
-                  tooltipSideOffset={tooltipSideOffset}
-                  large={useLargeControls}
-                >
-                  <ArrowShareRightIcon />
-                </ReaderToolbarButton>
-              </m.div>
-            ) : null}
-          </AnimatePresence>
-          {!readerFocusMode ? (
-            <ReaderToolbarButton
-              label={
-                activeMode === "original" ? "Showing original source" : "Showing extracted source"
-              }
-              active={activeMode === "extracted"}
-              disabled={!extractedAvailable}
-              onClick={onToggleMode}
-              tooltipSide={tooltipSide}
-              tooltipCollisionAvoidance={tooltipCollisionAvoidance}
-              tooltipSideOffset={tooltipSideOffset}
-              large={useLargeControls}
-            >
-              {activeMode === "extracted" ? <TextFilledIcon /> : <TextIcon />}
-            </ReaderToolbarButton>
-          ) : null}
-          {!readerFocusMode && !isMobile ? (
-            <ReaderToolbarButton
-              label={`Content width: ${CONTENT_WIDTH_LABELS[contentWidth]}`}
-              onClick={onCycleContentWidth}
-              tooltipSide={tooltipSide}
-              tooltipCollisionAvoidance={tooltipCollisionAvoidance}
-              tooltipSideOffset={tooltipSideOffset}
-              large={useLargeControls}
-            >
-              {contentWidth === "narrow" ? <SquareIcon /> : <FormRectangleIcon />}
-            </ReaderToolbarButton>
-          ) : null}
+          <FocusAnimatedAction
+            visible={showFocusExtras}
+            actionKey="share-article"
+            label="Share article"
+            onClick={onShareArticle}
+            motionProps={actionMotionProps}
+            tip={tip}
+          >
+            <ArrowShareRightIcon />
+          </FocusAnimatedAction>
+          {readerFocusMode ? null : (
+            <>
+              <SourceModeButton
+                activeMode={activeMode}
+                extractedAvailable={extractedAvailable}
+                onToggleMode={onToggleMode}
+                tip={tip}
+              />
+              <ContentWidthButton
+                contentWidth={contentWidth}
+                onCycleContentWidth={onCycleContentWidth}
+                tip={tip}
+              />
+            </>
+          )}
         </ToolbarGroup>
         {hideFontControls ? null : (
           <ReaderFontSizeControlGroup
@@ -200,14 +165,7 @@ export function Toolbar({
             >
               <ToolbarSeparator className="hidden h-9 sm:block" inset orientation="vertical" />
               <ToolbarGroup className="gap-1">
-                <ReaderToolbarButton
-                  label="Open source"
-                  onClick={onOpenOriginal}
-                  tooltipSide={tooltipSide}
-                  tooltipCollisionAvoidance={tooltipCollisionAvoidance}
-                  tooltipSideOffset={tooltipSideOffset}
-                  large={useLargeControls}
-                >
+                <ReaderToolbarButton label="Open source" onClick={onOpenOriginal} {...tip}>
                   <ExternalLinkIcon />
                 </ReaderToolbarButton>
               </ToolbarGroup>
@@ -316,71 +274,5 @@ function ReaderFontSizeControlGroup({
         <PlusIcon />
       </ReaderToolbarButton>
     </ToolbarGroup>
-  );
-}
-
-function ReaderToolbarButton({
-  label,
-  children,
-  onClick,
-  active = false,
-  disabled = false,
-  className,
-  activeClassName,
-  tooltipSide = "top",
-  tooltipCollisionAvoidance,
-  tooltipSideOffset = 8,
-  large = false,
-}: {
-  label: string;
-  children?: React.ReactNode;
-  onClick: (anchor: HTMLButtonElement) => void;
-  active?: boolean;
-  disabled?: boolean;
-  className?: string;
-  activeClassName?: string;
-  tooltipSide?: NonNullable<ToolbarProps["tooltipSide"]>;
-  tooltipCollisionAvoidance?: ToolbarProps["tooltipCollisionAvoidance"];
-  tooltipSideOffset?: number;
-  large?: boolean;
-}) {
-  return (
-    <Tooltip>
-      <TooltipTrigger
-        render={
-          <ToolbarButton
-            aria-label={label}
-            render={
-              <Button
-                className={cn(
-                  large && "size-9 [&_svg]:size-5!",
-                  active && "bg-accent/50 text-foreground",
-                  active && activeClassName,
-                  className,
-                )}
-                disabled={disabled}
-                shape="pill"
-                size={large ? "icon-lg" : "icon-sm"}
-                variant="ghost-muted"
-                onClick={(event) => {
-                  event.preventDefault();
-                  event.stopPropagation();
-                  onClick(event.currentTarget);
-                }}
-              />
-            }
-          >
-            {children}
-          </ToolbarButton>
-        }
-      />
-      <TooltipPopup
-        collisionAvoidance={tooltipCollisionAvoidance}
-        side={tooltipSide}
-        sideOffset={tooltipSideOffset}
-      >
-        {label}
-      </TooltipPopup>
-    </Tooltip>
   );
 }

@@ -54,7 +54,7 @@ describe("Cloudflare article translations", () => {
       ),
     ).rejects.toMatchObject({
       code: "TRANSLATION_CONTENT_TOO_LARGE",
-      status: 413,
+      _tag: "PayloadTooLarge",
     });
   });
 
@@ -67,7 +67,7 @@ describe("Cloudflare article translations", () => {
       ),
     ).rejects.toMatchObject({
       code: "TRANSLATION_PROVIDER_INVALID_RESPONSE",
-      status: 502,
+      _tag: "BadGateway",
     });
   });
 });

@@ -1,4 +1,4 @@
-import type { db } from "@adapters/db/client";
+import { Effect } from "effect";
 import {
   articleReadingState,
   feedItemUserState,
@@ -6,8 +6,9 @@ import {
   feedSubscriptions,
   feeds,
 } from "@kyomi/db";
-import { and, eq, sql } from "drizzle-orm";
-import { AppError } from "@shared/errors/app";
+import { and, eq, sql, type SQL } from "drizzle-orm";
+import { Db, type Database } from "@adapters/db/service";
+import { AppConfig } from "@config/env/service";
 import { decodeNullableText, decodeText } from "@shared/text/entities";
 import {
   feedReadingStateJoin,
@@ -23,12 +24,11 @@ import {
   buildStoredReaderContent,
   normalizeMarkdownFeedArtifacts,
 } from "../reader/content";
-import { articleIsReadSql } from "./sql";
-import { categoryLabelsSql } from "./labels";
+import { articleNotFound } from "../errors";
+import { articleIsReadSql, subscriptionJoin, userStateJoin } from "./sql";
+import { categoryLabelsFor } from "./labels";
 import type { ArticleDetailDto } from "../types";
 import type { ExtractedContentStatus } from "../reader/content";
-
-type DB = typeof db;
 
 type FeedArticleDetailRawRow = ReadingPositionColumnsRow & {
   id: string;
@@ -55,6 +55,7 @@ type FeedArticleDetailRawRow = ReadingPositionColumnsRow & {
   feedId: string;
   feedUrl: string | null;
   feedSiteUrl: string | null;
+  language?: string | null;
   feedTitle: string;
   feedFaviconUrl: string | null;
   isRead: boolean;
@@ -63,7 +64,7 @@ type FeedArticleDetailRawRow = ReadingPositionColumnsRow & {
   categories: string[];
 };
 
-function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto {
+export function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto {
   const contentStatus = (row.contentStatus as ArticleDetailDto["contentStatus"]) ?? "pending";
   const contentSource = (row.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only";
   const extractedStatus = (row.extractedContentStatus as ExtractedContentStatus) ?? "pending";
@@ -97,6 +98,8 @@ function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto 
     extractedContentStatus: extractedStatus,
     extractedContentSanitizerVersion: row.extractedContentSanitizerVersion,
   });
+  readerOriginal.language ??= row.language ?? null;
+  if (readerExtracted) readerExtracted.language ??= row.language ?? null;
   const reader = buildArticleReaderDto({
     readerOriginal,
     readerExtracted,
@@ -136,22 +139,12 @@ function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDetailDto 
   };
 }
 
-export const toFeedArticleDetailDtoForTest = toFeedArticleDetailDto;
-
 async function getFeedArticleDetailForUser(
-  database: DB,
+  database: Database,
   userId: string,
   articleId: string,
+  categories: SQL<string[]>,
 ): Promise<ArticleDetailDto | null> {
-  const feedSubscriptionsJoin = and(
-    eq(feedItems.feedId, feedSubscriptions.feedId),
-    eq(feedSubscriptions.userId, userId),
-  );
-  const userStateJoin = and(
-    eq(feedItemUserState.feedItemId, feedItems.id),
-    eq(feedItemUserState.userId, userId),
-  );
-
   const rows = await database
     .select({
       id: feedItems.id,
@@ -178,18 +171,19 @@ async function getFeedArticleDetailForUser(
       feedId: feedItems.feedId,
       feedUrl: feeds.url,
       feedSiteUrl: feeds.link,
+      language: sql<string | null>`coalesce(${feedItems.language}, ${feeds.language})`,
       feedTitle: feeds.title,
       feedFaviconUrl: feeds.faviconUrl,
       isRead: articleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
       lastViewedAt: feedItemUserState.lastViewedAt,
-      categories: categoryLabelsSql,
+      categories,
       ...readingPositionColumns,
     })
     .from(feedItems)
-    .leftJoin(feedSubscriptions, feedSubscriptionsJoin)
+    .leftJoin(feedSubscriptions, subscriptionJoin(userId))
     .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
-    .leftJoin(feedItemUserState, userStateJoin)
+    .leftJoin(feedItemUserState, userStateJoin(userId))
     .leftJoin(articleReadingState, feedReadingStateJoin(userId))
     .where(eq(feedItems.id, articleId))
     .limit(1);
@@ -202,20 +196,25 @@ async function getFeedArticleDetailForUser(
   return toFeedArticleDetailDto(r);
 }
 
-export async function getArticleDetailForUser(
-  database: DB,
+/** The user's feed item or clip with this id; fails with `ARTICLE_NOT_FOUND` when neither exists. */
+export const getArticleDetail = Effect.fn("articles.detail")(function* (
   userId: string,
   articleId: string,
-): Promise<ArticleDetailDto> {
-  const [feed, clip] = await Promise.all([
-    getFeedArticleDetailForUser(database, userId, articleId),
-    getClipDetailForUser(database, userId, articleId),
-  ]);
-  if (feed) {
-    return feed;
+) {
+  const db = yield* Db;
+  const categories = categoryLabelsFor(yield* AppConfig);
+  const [feed, clip] = yield* Effect.all(
+    [
+      db.use("articles.detail.feed", (client) =>
+        getFeedArticleDetailForUser(client, userId, articleId, categories),
+      ),
+      db.use("articles.detail.clip", (client) => getClipDetailForUser(client, userId, articleId)),
+    ],
+    { concurrency: 2 },
+  );
+  const detail = feed ?? clip;
+  if (!detail) {
+    return yield* articleNotFound();
   }
-  if (clip) {
-    return clip;
-  }
-  throw new AppError("Article not found", { status: 404, code: "ARTICLE_NOT_FOUND" });
-}
+  return detail;
+});

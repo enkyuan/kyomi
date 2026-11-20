@@ -138,11 +138,13 @@ Rendered HTML String
 ### Architectural Decisions
 
 #### Decision 1: Keep `RenderMarkdown` piping into `RenderHtml`
+
 - **Context**: TanStack Markdown offers `@tanstack/markdown/html` (`renderHtml`) and a React adapter.
 - **Rationale**: `RenderHtml` is the hub for photo preview, link preview cards, code copy buttons, image proxying, layout-mode normalization, and sanitization via `prepareArticleHtml`.
 - **Conclusion**: Generate sanitized HTML with `@tanstack/markdown/html` and keep piping into `RenderHtml`. No change to the enhancement layer.
 
 #### Decision 2: Custom KaTeX extension over the TanStack extension hooks
+
 - **Context**: `marked-katex-extension` is bound to `marked`. TanStack Markdown ships no math extension.
 - **Math ownership split** (prevents double-render and delimiter loss):
   - Parse-time (extension): `$...$`, `$$...$$`, `\(...\)`, `\[...\]`, `\begin{env}...\end{env}` become KaTeX HTML via `katex.renderToString({ throwOnError: false })`, emitted as the declared `inlineHtml` node.
@@ -151,14 +153,17 @@ Rendered HTML String
 - **Conclusion**: One shared math extension in `packages/reader/src/shared`, consumed by both web and WebView paths. `marked-katex-extension` and its `css.d.ts` shim are removed.
 
 #### Decision 3: Preserve the public API of `@kyomi/reader`
+
 - **Context**: `packages/reader/src/web/index.ts` exports `ReaderContent`, `RenderHtml`, `sanitizeReaderArticleHtml`, `RenderMarkdown`, `RenderText`, `ReaderFallback`, `useHighlight`.
 - **Conclusion**: Keep all export signatures identical; `apps/web` and `apps/mobile` need no changes.
 
 #### Decision 4 (DECIDED, D1-A): Adopt now behind the golden-corpus harness
+
 - **Context**: The engine works for Kyomi's required feature set (tables, fences, math hooks, typed extensions, allowHtml) but is an alpha whose stated scope is authored docs content, with indented code blocks, setext headings, and autolink literals unsupported, and full CommonMark/GFM conformance a non-goal. Feed markdown is third-party and messier than docs content.
 - **Resolution (user, 2026-09-13)**: Adopt now. The corpus harness from Step 0 must run green with no unclassified diffs before merge; the exact version pin holds until a stable release; every upgrade re-runs the corpus harness.
 
 #### Decision 5 (DECIDED, D2-B): Pre-transform indented code; accept remaining deltas
+
 - **Context**: marked (CommonMark/GFM) renders 4-space indented code blocks, setext headings, and bare-URL autolinks. TanStack Markdown renders none of the three and decodes entities only partially. Third-party feeds use all of them.
 - **Resolution (user, 2026-09-13)**: 4-space indented code blocks are pre-transformed to fenced fences before rendering (Step 6). During the fold, code inspection found a better seam than an ingestion-time rewrite: `normalizeMarkdownFeedArtifacts` in `apps/api/src/modules/articles/reader/content/markdown.ts` already normalizes feed markdown artifacts, is fence-aware, and runs in the reader-content build path for every article, including already-stored ones (`read/detail.ts` calls `buildStoredReaderContent` with `row.contentMarkdown`). The transform lands there: no DB migration, no worker change, stored articles covered at serve time. Setext headings, bare-URL autolink literals, and partial entity decoding are accepted as documented reader deltas.
 
@@ -168,57 +173,62 @@ Rendered HTML String
 
 ### Files Inside `packages/reader`
 
-| File | Status | Description |
-|------|--------|-------------|
-| `packages/reader/package.json` | **MODIFY** | Remove `marked`, `marked-katex-extension`. Add pinned `@tanstack/markdown@0.0.12` (exact pin while alpha). |
-| `packages/reader/src/css.d.ts` | **MODIFY** | Remove only the `declare module "marked-katex-extension"` block. `*.css` and `katex/dist/contrib/auto-render.mjs` declarations stay. |
-| `packages/reader/src/shared/markdown-core.ts` | **MODIFY** | Typed document extension with `normalizeSafeHttpUrl`, `allowHtml: true`, link-attribute hook, code output verification, `ReaderMarkdownRenderOptions` unchanged. |
-| `packages/reader/src/shared/markdown-html.ts` | **MODIFY** | `renderHtml` from `@tanstack/markdown/html`. Stateless render config preferred over the current unbounded Map cache; re-introduce caching only with a measured need and an LRU bound. |
-| `packages/reader/src/shared/markdown-katex.ts` | **MODIFY** | Custom math extension using the declared `inlineHtml` node and `katex.renderToString` for the full delimiter set. |
-| `packages/reader/src/web/components/markdown.tsx` | **VERIFY** | Structure unchanged: same props, same `hasLikelyMarkdownMath` gate, same dynamic import. Confirm no source edits needed. |
-| `packages/reader/src/web/katex-runtime.ts` | **VERIFY** | Imports from shared modules stay identical; DOM delimiter list unchanged. Confirm no source edits needed. |
-| `packages/reader/src/web/html/string-prep.ts` | **VERIFY + POSSIBLY MODIFY** | `unwrapRedundantInlineCodeMarkup` regexes are shaped to marked's entity-encoded output. Re-derive against TanStack output; the `:78` test guards this. Comment updates alone are not sufficient. |
+| File                                              | Status                       | Description                                                                                                                                                                                      |
+| ------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `packages/reader/package.json`                    | **MODIFY**                   | Remove `marked`, `marked-katex-extension`. Add pinned `@tanstack/markdown@0.0.12` (exact pin while alpha).                                                                                       |
+| `packages/reader/src/css.d.ts`                    | **MODIFY**                   | Remove only the `declare module "marked-katex-extension"` block. `*.css` and `katex/dist/contrib/auto-render.mjs` declarations stay.                                                             |
+| `packages/reader/src/shared/markdown-core.ts`     | **MODIFY**                   | Typed document extension with `normalizeSafeHttpUrl`, `allowHtml: true`, link-attribute hook, code output verification, `ReaderMarkdownRenderOptions` unchanged.                                 |
+| `packages/reader/src/shared/markdown-html.ts`     | **MODIFY**                   | `renderHtml` from `@tanstack/markdown/html`. Stateless render config preferred over the current unbounded Map cache; re-introduce caching only with a measured need and an LRU bound.            |
+| `packages/reader/src/shared/markdown-katex.ts`    | **MODIFY**                   | Custom math extension using the declared `inlineHtml` node and `katex.renderToString` for the full delimiter set.                                                                                |
+| `packages/reader/src/web/components/markdown.tsx` | **VERIFY**                   | Structure unchanged: same props, same `hasLikelyMarkdownMath` gate, same dynamic import. Confirm no source edits needed.                                                                         |
+| `packages/reader/src/web/katex-runtime.ts`        | **VERIFY**                   | Imports from shared modules stay identical; DOM delimiter list unchanged. Confirm no source edits needed.                                                                                        |
+| `packages/reader/src/web/html/string-prep.ts`     | **VERIFY + POSSIBLY MODIFY** | `unwrapRedundantInlineCodeMarkup` regexes are shaped to marked's entity-encoded output. Re-derive against TanStack output; the `:78` test guards this. Comment updates alone are not sufficient. |
 
 Root `bun.lock` changes with the dependency swap. That is expected and untracked in this table.
 
 ### Files Outside `packages/reader`
 
-| Location | Status | Description |
-|----------|--------|-------------|
-| `apps/web/src/modules/reader/components/article/index.tsx` | **NO CHANGE** | Consumes `ReaderContent` via `@kyomi/reader/web`. |
-| `apps/mobile/src/modules/reader/components/article-body.dom.tsx` | **NO CHANGE** | Consumes `ReaderContent` via `@kyomi/reader/web`. |
-| `packages/reader/src/webview/create-document.ts` | **NO CHANGE** | Calls `readerMarkdownToHtmlWithKatex`; interface unchanged. Sanitization contract (line 58) unchanged. |
-| `packages/reader/src/native/reader-body.tsx` | **NO CHANGE** | Unaffected wrapper. |
-| `apps/api` | **MODIFY (D2-B, O1-2)** | `reader/content/markdown.ts` converts indented code; feed and clip detail mappers normalize top-level `contentMarkdown` to match nested reader content. |
-| `packages/worker` | **NO CHANGE** | Verified: `services/feed/refresh.ts` persists `item.contentMarkdown` as parsed; markdown artifact normalization is the API reader-content seam, not the worker. |
+| Location                                                         | Status                  | Description                                                                                                                                                     |
+| ---------------------------------------------------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `apps/web/src/modules/reader/components/article/index.tsx`       | **NO CHANGE**           | Consumes `ReaderContent` via `@kyomi/reader/web`.                                                                                                               |
+| `apps/mobile/src/modules/reader/components/article-body.dom.tsx` | **NO CHANGE**           | Consumes `ReaderContent` via `@kyomi/reader/web`.                                                                                                               |
+| `packages/reader/src/webview/create-document.ts`                 | **NO CHANGE**           | Calls `readerMarkdownToHtmlWithKatex`; interface unchanged. Sanitization contract (line 58) unchanged.                                                          |
+| `packages/reader/src/native/reader-body.tsx`                     | **NO CHANGE**           | Unaffected wrapper.                                                                                                                                             |
+| `apps/api`                                                       | **MODIFY (D2-B, O1-2)** | `reader/content/markdown.ts` converts indented code; feed and clip detail mappers normalize top-level `contentMarkdown` to match nested reader content.         |
+| `packages/worker`                                                | **NO CHANGE**           | Verified: `services/feed/refresh.ts` persists `item.contentMarkdown` as parsed; markdown artifact normalization is the API reader-content seam, not the worker. |
 
 ### Test Files to Verify
 
-| Test File | Expected Result |
-|-----------|-----------------|
-| `tests/web/integration/src/modules/reader/components/article/reader-content.test.tsx` | All **6** test cases pass: tables + fenced code + `$$` math (`:34`), inline HTML (`:64`), backtick unwrap (`:78`), relative link/image resolution (`:91`), eager images on HTML bodies (`:107`, engine-independent), link-only fallback (`:123`, engine-independent). |
-| `tests/web/integration/src/modules/reader/services/create-document.test.ts` | All 4 test cases pass: HTML document (`:5`), markdown as HTML (`:21`), script stripping (`:35`), image hiding (`:48`). |
-| `tests/web/integration/src/modules/reader/components/article/render-html.test.tsx` | 42 existing DOM-enhancement tests keep passing. |
-| `tests/web/integration/src/modules/reader/components/article/sanitization-parity.test.tsx` | 3 sanitization-parity tests keep passing. |
+| Test File                                                                                  | Expected Result                                                                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `tests/web/integration/src/modules/reader/components/article/reader-content.test.tsx`      | All **6** test cases pass: tables + fenced code + `$$` math (`:34`), inline HTML (`:64`), backtick unwrap (`:78`), relative link/image resolution (`:91`), eager images on HTML bodies (`:107`, engine-independent), link-only fallback (`:123`, engine-independent). |
+| `tests/web/integration/src/modules/reader/services/create-document.test.ts`                | All 4 test cases pass: HTML document (`:5`), markdown as HTML (`:21`), script stripping (`:35`), image hiding (`:48`).                                                                                                                                                |
+| `tests/web/integration/src/modules/reader/components/article/render-html.test.tsx`         | 42 existing DOM-enhancement tests keep passing.                                                                                                                                                                                                                       |
+| `tests/web/integration/src/modules/reader/components/article/sanitization-parity.test.tsx` | 3 sanitization-parity tests keep passing.                                                                                                                                                                                                                             |
 
 ---
 
 ## Detailed Implementation Plan
 
 ### Step 0: Capture the golden corpus (before any dependency change)
+
 Render a fixture corpus with the current `marked` pipeline and store the output as test fixtures under `tests/web/integration`:
+
 - Corpus inputs: GFM tables, tilde and backtick fences, `$`/`$$`/`\(`/`\[`/`\begin{align}` math, inline raw HTML, backtick-wrapped `<code>` strings, relative links/images, 4-space indented code, setext headings, bare autolink literals, HTML entities, malformed table rows.
 - Store paired input/expected-HTML fixtures and a diff harness that reports every output change from the new engine, classified as acceptable (documented delta) or regression.
-This is the migration's safety net; it also documents the D2 deltas concretely.
+  This is the migration's safety net; it also documents the D2 deltas concretely.
 
 ### Step 1: Package dependencies (`packages/reader/package.json`)
+
 ```bash
 bun remove marked marked-katex-extension --cwd packages/reader
 bun add @tanstack/markdown@0.0.12 --exact --cwd packages/reader
 ```
+
 Exact pin while the package is alpha; upgrade intentionally, not by caret drift. Remove only the `marked-katex-extension` block from `src/css.d.ts`.
 
 ### Step 2: Shared Markdown Core (`packages/reader/src/shared/markdown-core.ts`)
+
 - Use the typed `transformDocument` extension to traverse declared link and image nodes, resolve with `normalizeSafeHttpUrl`, and replace unsafe links with their labels or unsafe images with alt text.
 - `allowHtml: true` on the parse config. Raw HTML parity requires it (`reader-content.test.tsx:64` fails otherwise). Sanitization remains downstream: `sanitizeReaderArticleHtml` on web, `stripDangerousMarkupForWebViewFragment` in the WebView.
 - Link attributes (`target`/`rel`) via the extension `renderHtml` hook when `openLinksInNewTab` is set.
@@ -226,31 +236,37 @@ Exact pin while the package is alpha; upgrade intentionally, not by caret drift.
 - Keep `ReaderMarkdownRenderOptions = { baseUrl?: string | null; openLinksInNewTab?: boolean }`.
 
 ### Step 3: Plain HTML Rendering (`packages/reader/src/shared/markdown-html.ts`)
+
 - Use `renderHtml` from `@tanstack/markdown/html`.
 - Keep the exported signature `readerMarkdownToHtml(markdown, options?): string`.
 - Prefer a stateless per-call config. The current unbounded `Map` keyed by arbitrary article base URLs grows for the lifetime of the session and buys unmeasured throughput. Re-introduce caching only with a benchmark and an LRU bound.
 
 ### Step 4: Golden-corpus reconciliation
+
 Run the corpus harness from Step 0 against the new engine. For every diff: accept and document (syntax-profile deltas from Decision 5), or fix the config/extension. Nothing else proceeds until this list is explicit. With Step 6 in place, indented-code fixtures are expected to render as fenced code; the harness classifies them as mitigated, not accepted.
 
 ### Step 5: KaTeX Math Integration (`packages/reader/src/shared/markdown-katex.ts`)
+
 - Extension hooks: `transformInline`/`transformDocument` to locate math spans and emit KaTeX output as the declared `inlineHtml` node. Use `katex.renderToString(tex, { throwOnError: false, displayMode })`.
-- Delimiter set: `$...$`, `$$...$$`, `\(...\)`, `\[...\]`, `\begin{env}...\end{env}` (equation, align, alignat, gather, gather*, CD variants, matching `katex-runtime.ts`).
+- Delimiter set: `$...$`, `$$...$$`, `\(...\)`, `\[...\]`, `\begin{env}...\end{env}` (equation, align, alignat, gather, gather\*, CD variants, matching `katex-runtime.ts`).
 - Keep `readerMarkdownToHtmlWithKatex(markdown, options?): string` and the shared cache discipline from Step 3.
 - Do not double-render: `.katex` output is excluded from the DOM pass by existing selectors; verify with a test containing both parse-time math and implicit prose TeX.
 
 ### Step 6: Indented-Code Pre-Transform (Decision 5, D2-B)
+
 - **Seam**: extend `normalizeMarkdownFeedArtifacts` in `apps/api/src/modules/articles/reader/content/markdown.ts`. It already runs fence-aware line normalization for every markdown body built by the reader-content pipeline (`buildStoredContentRecord` at write time, `buildStoredReaderContent` and the fallback builders at read time per `read/detail.ts`).
 - **Transform**: convert blank-line-preceded blocks of 4+ leading spaces (tabs expanded to 4 columns) into fenced blocks; preserve relative indentation inside the block; leave existing fenced blocks untouched (fence state is already tracked); leave paragraph lazy continuations and list-item continuation lines untouched to avoid corrupting lists.
 - **Scope**: markdown bodies only; engine-independent; covers stored and newly ingested articles at serve time. Stored rows are not rewritten.
 - **Tests**: unit tests under `tests/api` mirroring `articles/reader/content`: indented block converts, fenced blocks skipped, tab expansion, blank-line requirement, list continuation not converted.
 
 ### Step 7: Web Component & WebView Document Sync
+
 - `web/components/markdown.tsx` and `web/katex-runtime.ts`: expected no source changes; verify imports, the math gate, and the dynamic-import path.
 - `web/html/string-prep.ts`: re-verify `unwrapRedundantInlineCodeMarkup` against actual new-engine output; modify the regexes only if the output shape differs; the `:78` test is the guard.
 - `webview/create-document.ts`: confirm markdown, math, and sanitization flow unchanged via tests.
 
 ### Step 8: Verification & Quality Gate
+
 - `bun run --cwd packages/reader typecheck`, `lint`, `fmt:check` (zero ambient shims for removed packages).
 - `bun run --cwd apps/api typecheck`, `lint`, `fmt:check` (Step 6 transform).
 - Reader integration suites listed above, plus the new regression tests:
@@ -266,6 +282,7 @@ Run the corpus harness from Step 0 against the new engine. For every diff: accep
 ## What Already Exists vs What Changes
 
 ### Reused Without Modification
+
 - `packages/reader/src/core/url.ts`: `normalizeSafeHttpUrl` (all safe-URL verification and relative resolution).
 - `packages/reader/src/shared/math.ts`: `hasLikelyMarkdownMath`, `hasLikelyDelimitedTex` (KaTeX load gate; already covers `\(`, `\[`, `\begin{}`).
 - `packages/reader/src/web/html.tsx`: `RenderHtml` enhancement hub (copy buttons, photo slider, link previews, DOM math pass).
@@ -274,17 +291,20 @@ Run the corpus harness from Step 0 against the new engine. For every diff: accep
 - `sanitizeReaderArticleHtml` (neosanitize policy) and the `prepareArticleHtml` pipeline.
 
 ### Replaced
+
 - `marked` -> `@tanstack/markdown` parser + `@tanstack/markdown/html`.
 - `marked-katex-extension` -> custom TanStack math extension (Decision 2).
 - `packages/reader/src/css.d.ts` `marked-katex-extension` shim -> removed.
 - `markdown-html.ts` instance cache -> stateless config (unless a measured need returns it bounded).
 
 ### Added
+
 - `apps/api` `normalizeMarkdownFeedArtifacts`: fence-aware indented-code to fenced-fence pre-transform at the reader-content boundary (Decision 5, D2-B; Step 6, T8).
 
 ---
 
 ## NOT in Scope
+
 - **Direct AST rendering in React via `<Markdown>`**: Deferred. Rewriting photo preview, link previews, and copy buttons as React trees expands blast radius with no user-visible benefit.
 - **Syntax highlighter migration to the TanStack Highlight adapter**: Deferred. The calibrated highlight.js setup (explicit fence language only, no auto-detection) stays; the `highlighter` callback seam is documented for a later pass.
 - **Server-side markdown parsing in `apps/api`**: Deferred. The API persists markdown text; parsing stays on client/renderer boundaries.
@@ -295,19 +315,20 @@ Run the corpus harness from Step 0 against the new engine. For every diff: accep
 
 ## Syntax-Profile Parity Deltas (Decision 5 resolved by D2-B)
 
-| Input class | marked today | TanStack Markdown | Risk | Mitigation if accepted |
-|-------------|--------------|-------------------|------|------------------------|
-| 4-space indented code blocks | `<pre><code>` | Not supported; renders as text | Mitigated: `normalizeMarkdownFeedArtifacts` converts them to fenced fences at reader-content build time (D2-B, Step 6); covers stored and new articles |
-| Setext headings (`===`, `---`) | `<h1>`/`<h2>` | Not supported | Low-medium | Document as delta |
-| Bare autolink literals (`http://...` in prose) | Linked (GFM) | Plain text; angle autolinks still work | Medium: RSS prose often has bare URLs | Accepted documented delta (D2-B resolution) |
-| Entity decoding | CommonMark behavior | Partial; HTML is escaped | Low | Golden corpus documents the exact behavior |
-| Heading output | No IDs | Stable duplicate-safe IDs on all headings | Cosmetic; benefits anchors | Accept; note in diff report |
+| Input class                                    | marked today        | TanStack Markdown                         | Risk                                                                                                                                                   | Mitigation if accepted                      |
+| ---------------------------------------------- | ------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- |
+| 4-space indented code blocks                   | `<pre><code>`       | Not supported; renders as text            | Mitigated: `normalizeMarkdownFeedArtifacts` converts them to fenced fences at reader-content build time (D2-B, Step 6); covers stored and new articles |
+| Setext headings (`===`, `---`)                 | `<h1>`/`<h2>`       | Not supported                             | Low-medium                                                                                                                                             | Document as delta                           |
+| Bare autolink literals (`http://...` in prose) | Linked (GFM)        | Plain text; angle autolinks still work    | Medium: RSS prose often has bare URLs                                                                                                                  | Accepted documented delta (D2-B resolution) |
+| Entity decoding                                | CommonMark behavior | Partial; HTML is escaped                  | Low                                                                                                                                                    | Golden corpus documents the exact behavior  |
+| Heading output                                 | No IDs              | Stable duplicate-safe IDs on all headings | Cosmetic; benefits anchors                                                                                                                             | Accept; note in diff report                 |
 
 ---
 
 ## Engineering Review & Refinement (gstack plan-tune & plan-eng-review, run 2)
 
 ### Scope Challenge (Step 0)
+
 1. **Existing code reuse**: Verified. `normalizeSafeHttpUrl`, `hasLikelyMarkdownMath`, `RenderHtml`, `createReaderDocument`, and both sanitizers are reused unchanged.
 2. **Minimum set of changes**: 8 files inside `packages/reader`, 3 API files, test files, and the root lockfile. No changes in `apps/web`, `apps/mobile`, or `packages/worker`.
 3. **Complexity check**: Passes. 8 files is at, not over, the 8-file smell threshold; zero new services or classes; the math extension is one module in an existing directory.
@@ -345,19 +366,20 @@ QUALITY: ★★: 6  |  GAPS: 8 (assigned to Step 0, Step 4, Step 6, or Step 8)
 
 ### Potential Failure Modes & Mitigation
 
-| Failure Mode | Risk | Mitigation |
-|--------------|------|------------|
-| Unsafe scheme in raw HTML (`<a href="javascript:...">`) | High | The typed document extension does not screen raw HTML. Web: `sanitizeReaderArticleHtml` strips it through the existing policy. WebView: `stripDangerousMarkupForWebViewFragment` does not screen hrefs, a pre-existing gap documented in NOT in Scope, with native CSP as backstop; Step 7 asserts no regression. |
-| `\(`, `\[`, `\begin{}` math missed by the new extension | High | Decision 2 mandates the full delimiter set; `hasLikelyDelimitedTex` already gates loading on them; Step 7 adds tests. |
-| Double-render of math (parse-time + DOM auto-render) | Medium | Ownership split in Decision 2; `.katex` excluded from the DOM pass by `MATH_TEXT_IGNORED_ANCESTOR_SELECTOR`; test both math classes in one article. |
-| Dollar signs in prose parsed as math | Low | `hasLikelyMarkdownMath` heuristics (`/\d\s*[-+*/=]\s*\d/`, `/[\\^_=]/`) gate KaTeX loading; `throwOnError: false` degrades gracefully. |
-| Syntax-profile deltas (setext, autolinks, entities) silently change feed rendering | Low | Golden corpus surfaces every diff before merge; acceptance per Decision 5 (D2-B): indented code mitigated in Step 6, the rest documented. |
-| Indented-code transform corrupts lists or nested fences | Medium | Fence state is already tracked in `normalizeMarkdownFeedArtifacts`; Step 6 requires blank-line-preceded blocks and skips list continuations; unit tests cover tab expansion and list safety. |
-| Malformed table markdown | Low | Tables are a documented supported feature with escaped-pipe handling; malformed-input determinism is a stated engine property. Corpus includes malformed rows. |
-| Indented-code transform corrupts lists or nested fences | Medium | Fence state is already tracked in `normalizeMarkdownFeedArtifacts`; Step 6 requires blank-line-preceded blocks and skips list continuations; unit tests cover tab expansion and list safety. |
-| Alpha API churn breaks the build on upgrade | Medium | Exact version pin; upgrade is a deliberate change re-running the corpus harness. |
+| Failure Mode                                                                       | Risk   | Mitigation                                                                                                                                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unsafe scheme in raw HTML (`<a href="javascript:...">`)                            | High   | The typed document extension does not screen raw HTML. Web: `sanitizeReaderArticleHtml` strips it through the existing policy. WebView: `stripDangerousMarkupForWebViewFragment` does not screen hrefs, a pre-existing gap documented in NOT in Scope, with native CSP as backstop; Step 7 asserts no regression. |
+| `\(`, `\[`, `\begin{}` math missed by the new extension                            | High   | Decision 2 mandates the full delimiter set; `hasLikelyDelimitedTex` already gates loading on them; Step 7 adds tests.                                                                                                                                                                                             |
+| Double-render of math (parse-time + DOM auto-render)                               | Medium | Ownership split in Decision 2; `.katex` excluded from the DOM pass by `MATH_TEXT_IGNORED_ANCESTOR_SELECTOR`; test both math classes in one article.                                                                                                                                                               |
+| Dollar signs in prose parsed as math                                               | Low    | `hasLikelyMarkdownMath` heuristics (`/\d\s*[-+*/=]\s*\d/`, `/[\\^_=]/`) gate KaTeX loading; `throwOnError: false` degrades gracefully.                                                                                                                                                                            |
+| Syntax-profile deltas (setext, autolinks, entities) silently change feed rendering | Low    | Golden corpus surfaces every diff before merge; acceptance per Decision 5 (D2-B): indented code mitigated in Step 6, the rest documented.                                                                                                                                                                         |
+| Indented-code transform corrupts lists or nested fences                            | Medium | Fence state is already tracked in `normalizeMarkdownFeedArtifacts`; Step 6 requires blank-line-preceded blocks and skips list continuations; unit tests cover tab expansion and list safety.                                                                                                                      |
+| Malformed table markdown                                                           | Low    | Tables are a documented supported feature with escaped-pipe handling; malformed-input determinism is a stated engine property. Corpus includes malformed rows.                                                                                                                                                    |
+| Indented-code transform corrupts lists or nested fences                            | Medium | Fence state is already tracked in `normalizeMarkdownFeedArtifacts`; Step 6 requires blank-line-preceded blocks and skips list continuations; unit tests cover tab expansion and list safety.                                                                                                                      |
+| Alpha API churn breaks the build on upgrade                                        | Medium | Exact version pin; upgrade is a deliberate change re-running the corpus harness.                                                                                                                                                                                                                                  |
 
 ### Worktree Parallelization Strategy
+
 - **Sequential implementation**: changes live in `packages/reader/src/shared`, `apps/api` reader content (Step 6), and test files. Single lane: Step 0 corpus -> Steps 1-3 -> Step 4 reconcile -> Steps 5-7 -> Step 8 gate. T8 is engine-independent and may land before reconciliation.
 
 ---
@@ -378,21 +400,22 @@ QUALITY: ★★: 6  |  GAPS: 8 (assigned to Step 0, Step 4, Step 6, or Step 8)
 
 ## GSTACK REVIEW REPORT
 
-| Review | Runs | Status | Findings |
-|--------|------|--------|----------|
-| Scope Gate | 1 | CLEAR | User-named target: this plan file. Review target confirmed without prompt. |
-| Step 0: Scope Challenge | 2 | CLEAR | 8 reader files, 3 API files, tests, and lockfile; reuse verified; alpha dependency and v0.0.12 declaration limits are documented. |
-| Architecture Review | 2 | 4 FINDINGS | A1 alpha adoption (resolved: D1-A chosen 2026-09-13, adopt behind corpus harness); A2 math delimiter parity gap (fixed in plan); A3 allowHtml + sanitizer ownership (fixed in plan); A4 output-shape deltas incl. heading IDs (documented; D2-B mitigates indented code). |
-| Code Quality Review | 2 | 2 FINDINGS | C1 string-prep unwrap regexes are engine-output coupled, re-derive not comment-edit (folded into T5); C2 unbounded parser cache replaced by stateless-first (folded into T3). |
-| Test Review | 2 | 7 GAPS | Test-count claim corrected 5 -> 6; coverage map line cites verified; gaps assigned: golden corpus (T0), target/rel, backslash delimiters, webview math, double-render, webview unsafe-URL parity (T6). |
-| Performance Review | 2 | 1 FINDING | Bundle claims corrected: 42.6 KB min / 12.7 KB gzip (marked 18.0.12) vs 4.9 + 6.7 KB gzip; net ~1-2 KB gzip, not "~40 KB". Goal reframed on dependency hygiene + ecosystem, not size. |
-| Outside Voice (codex, gpt-5.6-terra) | 1 | 8 FINDINGS | Dependency unvalidated (now pinned + API-verified); security-parity overclaim (now scoped with evidence); math ownership (defined); test coverage fiction (regression tests added); no differential harness (T0 added); unbounded cache (stateless-first); 5-vs-8 file contradiction (corrected); ecosystem-alignment justification challenged (D1). |
+| Review                               | Runs | Status     | Findings                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------ | ---- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Scope Gate                           | 1    | CLEAR      | User-named target: this plan file. Review target confirmed without prompt.                                                                                                                                                                                                                                                                           |
+| Step 0: Scope Challenge              | 2    | CLEAR      | 8 reader files, 3 API files, tests, and lockfile; reuse verified; alpha dependency and v0.0.12 declaration limits are documented.                                                                                                                                                                                                                    |
+| Architecture Review                  | 2    | 4 FINDINGS | A1 alpha adoption (resolved: D1-A chosen 2026-09-13, adopt behind corpus harness); A2 math delimiter parity gap (fixed in plan); A3 allowHtml + sanitizer ownership (fixed in plan); A4 output-shape deltas incl. heading IDs (documented; D2-B mitigates indented code).                                                                            |
+| Code Quality Review                  | 2    | 2 FINDINGS | C1 string-prep unwrap regexes are engine-output coupled, re-derive not comment-edit (folded into T5); C2 unbounded parser cache replaced by stateless-first (folded into T3).                                                                                                                                                                        |
+| Test Review                          | 2    | 7 GAPS     | Test-count claim corrected 5 -> 6; coverage map line cites verified; gaps assigned: golden corpus (T0), target/rel, backslash delimiters, webview math, double-render, webview unsafe-URL parity (T6).                                                                                                                                               |
+| Performance Review                   | 2    | 1 FINDING  | Bundle claims corrected: 42.6 KB min / 12.7 KB gzip (marked 18.0.12) vs 4.9 + 6.7 KB gzip; net ~1-2 KB gzip, not "~40 KB". Goal reframed on dependency hygiene + ecosystem, not size.                                                                                                                                                                |
+| Outside Voice (codex, gpt-5.6-terra) | 1    | 8 FINDINGS | Dependency unvalidated (now pinned + API-verified); security-parity overclaim (now scoped with evidence); math ownership (defined); test coverage fiction (regression tests added); no differential harness (T0 added); unbounded cache (stateless-first); 5-vs-8 file contradiction (corrected); ecosystem-alignment justification challenged (D1). |
 
 | User Decisions | 2 | RESOLVED | D1-A chosen: adopt `@tanstack/markdown` 0.0.12 now behind the golden-corpus harness. D2-B chosen: pre-transform indented code; fold inspection relocated the transform to the existing `normalizeMarkdownFeedArtifacts` reader-content seam (serve-time; covers stored articles). Setext headings, autolink literals, and entity decoding accepted as documented deltas. |
 
 **VERDICT: APPROVED (conditional)** — both decisions resolved by the user on 2026-09-13. Conditions: exact version pin until stable; corpus harness green with no unclassified diffs before merge; Step 6 transform landed and unit-tested before reconciliation classifies indented-code fixtures.
 
 **RESOLVED DECISIONS (user, 2026-09-13):**
+
 - **D1-A**: Adopt `@tanstack/markdown` v0.0.12 now, behind the golden-corpus harness (Steps 0 and 4).
 - **D2-B**: Pre-transform indented code to fenced fences in `normalizeMarkdownFeedArtifacts` (Step 6, T8); accept setext headings, bare autolink literals, and partial entity decoding as documented deltas.
 

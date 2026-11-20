@@ -7,6 +7,7 @@ import {
 } from "@kyomi/ui/components/preview-card";
 import { Fragment, type ReactNode } from "react";
 import type { ReaderInline, ReaderInlineFormat } from "../../core/document";
+import { keyedByContent } from "../../core/keys";
 import { getReaderSourceLabel, normalizeSafeHttpUrl } from "../../core/url";
 import { useDocumentContext } from "./context";
 import { anchorId, footnoteRefId, resolveImage, scrollToAnchor } from "./lib";
@@ -165,9 +166,9 @@ function InlineNode({ node }: { node: ReaderInline }) {
 export function Inlines({ nodes }: { nodes: readonly ReaderInline[] }) {
   return (
     <>
-      {nodes.map((node, index) => (
-        <Fragment key={index}>
-          <InlineNode node={node} />
+      {keyedByContent(nodes).map(({ item, key }) => (
+        <Fragment key={key}>
+          <InlineNode node={item} />
         </Fragment>
       ))}
     </>

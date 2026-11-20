@@ -1,12 +1,12 @@
+import { Duration, Effect, Schedule } from "effect";
 import type { Elysia } from "elysia";
-import { logger } from "@adapters/logger";
+import { AppLogger } from "@adapters/logger/service";
 
 type ListenRetryOptions = {
   port: number;
   maxRequestBodySize?: number;
-  retries?: number;
-  retryDelayMs?: number;
-  signal?: AbortSignal;
+  retries: number;
+  retryDelayMs: number;
 };
 
 export function buildListenOptions(options: { port: number; maxRequestBodySize?: number }): {
@@ -18,20 +18,6 @@ export function buildListenOptions(options: { port: number; maxRequestBodySize?:
     : { port: options.port, maxRequestBodySize: options.maxRequestBodySize };
 }
 
-function sleep(ms: number, signal?: AbortSignal): Promise<void> {
-  return new Promise((resolve) => {
-    const timer = setTimeout(resolve, ms);
-    signal?.addEventListener(
-      "abort",
-      () => {
-        clearTimeout(timer);
-        resolve();
-      },
-      { once: true },
-    );
-  });
-}
-
 function isAddressInUseError(error: unknown): error is Error & { code?: string } {
   return (
     error instanceof Error &&
@@ -41,27 +27,41 @@ function isAddressInUseError(error: unknown): error is Error & { code?: string }
   );
 }
 
-export async function listenWithRetry(app: Elysia, options: ListenRetryOptions): Promise<void> {
-  const retries = options.retries ?? 0;
-  const retryDelayMs = options.retryDelayMs ?? 250;
+/**
+ * Start listening, waiting out a port that a restarting process has not released yet: while the
+ * port is in use, try again every `retryDelayMs` for up to `retries` more attempts. Any other
+ * failure, or running out of attempts, fails the effect with the listen error.
+ */
+export const listenWithRetry = Effect.fn("http.listen")(function* (
+  app: Elysia,
+  options: ListenRetryOptions,
+) {
+  const log = yield* AppLogger;
+  let attempt = 0;
 
-  for (let attempt = 0; attempt <= retries; attempt += 1) {
-    try {
-      app.listen(buildListenOptions(options));
-      return;
-    } catch (error) {
-      const lastAttempt = attempt === retries;
-      if (!isAddressInUseError(error) || lastAttempt || options.signal?.aborted) {
-        throw error;
-      }
-
-      logger.warn("server.port_in_use.retrying", {
-        port: options.port,
-        attempt: attempt + 1,
-        retries,
-        retryDelayMs,
-      });
-      await sleep(retryDelayMs, options.signal);
-    }
-  }
-}
+  yield* Effect.try({
+    try: () => app.listen(buildListenOptions(options)),
+    catch: (cause) => cause,
+  }).pipe(
+    Effect.retry({
+      schedule: Schedule.max([
+        Schedule.spaced(Duration.millis(options.retryDelayMs)),
+        Schedule.recurs(options.retries),
+      ]),
+      while: (error) => {
+        if (!isAddressInUseError(error)) {
+          return Effect.succeed(false);
+        }
+        attempt += 1;
+        return log
+          .warn("server.port_in_use.retrying", {
+            port: options.port,
+            attempt,
+            retries: options.retries,
+            retryDelayMs: options.retryDelayMs,
+          })
+          .pipe(Effect.as(true));
+      },
+    }),
+  );
+});

@@ -251,7 +251,6 @@ export function RenderHtml({
     return scheduleEnhancements(node);
   }, [layoutMode, openLinksInNewTab, prepared, showLinkPreviews, scheduleEnhancements]);
 
-  // oxlint-disable-next-line react-doctor/exhaustive-deps -- unmount cleanup only reads refs; runs once on unmount
   useEffect(() => {
     return () => {
       cancelScheduledEnhancementRef.current?.();
@@ -262,7 +261,7 @@ export function RenderHtml({
       linkPreviewCleanupsRef.current = [];
       disposePhotoPreviewTargets();
     };
-  }, []);
+  }, [disposePhotoPreviewTargets]);
 
   const scheduleEnhancementsAfterMutation = useEffectEvent((node: HTMLElement) => {
     installPhotoPreviewTargets(node);

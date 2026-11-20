@@ -2,22 +2,27 @@ import { kyomiNativeBrand } from "@kyomi/ui/native/theme";
 import type { NativeSyntheticEvent } from "react-native";
 import Animated, { useAnimatedProps } from "react-native-reanimated";
 import {
-  BLODE_STROKE_WIDTH,
   BarsThreeNativeIcon,
   ChevronGrabberVerticalNativeIcon,
   ChevronsUpDownNativeIcon,
   CircleCheckFilledNativeIcon,
   CompassPointerFilledNativeIcon,
   CompassPointerNativeIcon,
+  EditBigNativeIcon,
+  FileArrowLeftInNativeIcon,
   LayoutAlignBottomFilledNativeIcon,
   LayoutAlignBottomNativeIcon,
   MagnifyingGlassNativeIcon,
   PageTextSearchNativeIcon,
   PlusCircleFilledNativeIcon,
   PlusNativeIcon,
+  SortArrowUpDownNativeIcon,
+  TrashCanNativeIcon,
   type BlodeNativeIcon,
 } from "@kyomi/ui/icons/blode-native";
 import { useOptionalTabBarMinimize } from "./hooks/use-minimize";
+import { toTabBarIcon } from "./lib/icon";
+import { useReaderBar } from "./lib/reader-bar";
 import { mobileColors } from "@/theme/colors";
 import {
   TabBarView,
@@ -26,19 +31,6 @@ import {
   type TabBarSwitcher,
 } from "../../../../modules/tab-bar";
 import type { TabBarProps } from "./lib/types";
-
-/** Maps Blode geometry to the native bar: line glyphs carry their stroke width, filled ones none. */
-function toTabBarIcon(icon: BlodeNativeIcon, rotation?: number): TabBarIcon {
-  return {
-    viewBox: icon.viewBox,
-    rotation,
-    paths: icon.paths.map((path) => ({
-      d: path.d,
-      fillRule: path.fillRule,
-      strokeWidth: path.stroke ? BLODE_STROKE_WIDTH : undefined,
-    })),
-  };
-}
 
 /** The compass pointer is drawn pointing up; tilt it to the right like a compass needle. */
 const EXPLORE_ICON_TILT = 45;
@@ -70,7 +62,11 @@ const SWITCHER: TabBarSwitcher = {
   hint: "Opens folders and feeds",
   icon: toTabBarIcon(ChevronGrabberVerticalNativeIcon),
   editIcon: toTabBarIcon(BarsThreeNativeIcon),
-  sortIcon: toTabBarIcon(ChevronsUpDownNativeIcon),
+  sortIcon: toTabBarIcon(SortArrowUpDownNativeIcon),
+  reorderIcon: toTabBarIcon(BarsThreeNativeIcon),
+  renameIcon: toTabBarIcon(EditBigNativeIcon),
+  deleteIcon: toTabBarIcon(TrashCanNativeIcon),
+  importIcon: toTabBarIcon(FileArrowLeftInNativeIcon),
   addIcon: ADD_ICON,
 };
 
@@ -88,6 +84,8 @@ export function TabBar({
   state,
 }: TabBarProps) {
   const minimizedSV = useOptionalTabBarMinimize()?.minimizedSV;
+  // While a reader is open the capsule shows its tools; the native bar morphs between the two.
+  const readerBar = useReaderBar();
   // Committed on the UI thread the moment the scroll worklet decides, with no JS round trip and no
   // re-render; SwiftUI animates the change.
   const animatedProps = useAnimatedProps(() => ({ minimized: minimizedSV?.get() ?? false }));
@@ -123,15 +121,21 @@ export function TabBar({
       onComposerSubmit={({ nativeEvent: { feedId, folderId, url } }) =>
         composer?.onSubmit({ feedId: feedId || undefined, folderId: folderId || undefined, url })
       }
+      onReaderFontSizeChange={({ nativeEvent: { committed, size } }) =>
+        readerBar?.onFontSize(size, committed)
+      }
+      onReaderToolPress={({ nativeEvent: { key } }) => readerBar?.onTool(key)}
       onSwitcherFolderAction={({ nativeEvent: { action, folderId, name } }) => {
         if (action === "create") sources?.onCreateFolder(name);
+        else if (action === "import") sources?.onImport();
         else if (action === "rename") sources?.onRenameFolder(folderId, name);
-        else if (action === "reorder") sources?.onReorderFolders(name.split("\n").filter(Boolean));
+        else if (action === "reorder") sources?.onReorderFolders(name.split("\n"));
         else sources?.onDeleteFolder(folderId);
       }}
       onSearchQueryChange={({ nativeEvent }) => onSearchQueryChange?.(nativeEvent.query)}
       onSearchSubmit={({ nativeEvent }) => onSearchSubmit?.(nativeEvent.query)}
       onTabPress={handleTabPress}
+      reader={readerBar?.reader ?? null}
       searchIcon={SEARCH_ICON}
       searchPlaceholder="Search articles"
       selectedIndex={selectedIndex}
