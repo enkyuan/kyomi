@@ -1,10 +1,16 @@
-/* Emitted as real custom properties so plain CSS and arbitrary values can use var(--ease-*). */
-@theme {
-  --tracking-title: -0.012em;
-  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
-  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
-  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
-  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+@import "./tokens.css";
+
+/* Keep CSS custom properties available to existing component and app CSS. */
+@theme static {
+  --spacing: var(--space-unit);
+  --radius-xs: var(--corner-xs);
+  --radius-sm: var(--corner-sm);
+  --radius-md: var(--corner-md);
+  --radius-lg: var(--corner-lg);
+  --radius-xl: var(--corner-xl);
+  --radius-2xl: var(--corner-2xl);
+  --radius-3xl: var(--corner-3xl);
+  --radius-4xl: var(--corner-4xl);
 }
 
 /* Keep these in sync with BREAKPOINTS in packages/ui/src/hooks/use-media-query.ts. */
@@ -16,6 +22,94 @@
   --breakpoint-2xl: 1536px;
   --breakpoint-3xl: 1600px;
   --breakpoint-4xl: 2000px;
+  --color-sakura-50: var(--color-sakura-50);
+  --color-sakura-100: var(--color-sakura-100);
+  --color-sakura-200: var(--color-sakura-200);
+  --color-sakura-300: var(--color-sakura-300);
+  --color-sakura-400: var(--color-sakura-400);
+  --color-sakura-500: var(--color-sakura-500);
+  --color-sakura-600: var(--color-sakura-600);
+  --color-sakura-700: var(--color-sakura-700);
+  --color-sakura-800: var(--color-sakura-800);
+  --color-sakura-900: var(--color-sakura-900);
+  --color-sakura-950: var(--color-sakura-950);
+  --color-akane-50: var(--color-akane-50);
+  --color-akane-100: var(--color-akane-100);
+  --color-akane-200: var(--color-akane-200);
+  --color-akane-300: var(--color-akane-300);
+  --color-akane-400: var(--color-akane-400);
+  --color-akane-500: var(--color-akane-500);
+  --color-akane-600: var(--color-akane-600);
+  --color-akane-700: var(--color-akane-700);
+  --color-akane-800: var(--color-akane-800);
+  --color-akane-900: var(--color-akane-900);
+  --color-akane-950: var(--color-akane-950);
+  --color-kaki-50: var(--color-kaki-50);
+  --color-kaki-100: var(--color-kaki-100);
+  --color-kaki-200: var(--color-kaki-200);
+  --color-kaki-300: var(--color-kaki-300);
+  --color-kaki-400: var(--color-kaki-400);
+  --color-kaki-500: var(--color-kaki-500);
+  --color-kaki-600: var(--color-kaki-600);
+  --color-kaki-700: var(--color-kaki-700);
+  --color-kaki-800: var(--color-kaki-800);
+  --color-kaki-900: var(--color-kaki-900);
+  --color-kaki-950: var(--color-kaki-950);
+  --color-yamabuki-50: var(--color-yamabuki-50);
+  --color-yamabuki-100: var(--color-yamabuki-100);
+  --color-yamabuki-200: var(--color-yamabuki-200);
+  --color-yamabuki-300: var(--color-yamabuki-300);
+  --color-yamabuki-400: var(--color-yamabuki-400);
+  --color-yamabuki-500: var(--color-yamabuki-500);
+  --color-yamabuki-600: var(--color-yamabuki-600);
+  --color-yamabuki-700: var(--color-yamabuki-700);
+  --color-yamabuki-800: var(--color-yamabuki-800);
+  --color-yamabuki-900: var(--color-yamabuki-900);
+  --color-yamabuki-950: var(--color-yamabuki-950);
+  --color-matcha-50: var(--color-matcha-50);
+  --color-matcha-100: var(--color-matcha-100);
+  --color-matcha-200: var(--color-matcha-200);
+  --color-matcha-300: var(--color-matcha-300);
+  --color-matcha-400: var(--color-matcha-400);
+  --color-matcha-500: var(--color-matcha-500);
+  --color-matcha-600: var(--color-matcha-600);
+  --color-matcha-700: var(--color-matcha-700);
+  --color-matcha-800: var(--color-matcha-800);
+  --color-matcha-900: var(--color-matcha-900);
+  --color-matcha-950: var(--color-matcha-950);
+  --color-mizu-50: var(--color-mizu-50);
+  --color-mizu-100: var(--color-mizu-100);
+  --color-mizu-200: var(--color-mizu-200);
+  --color-mizu-300: var(--color-mizu-300);
+  --color-mizu-400: var(--color-mizu-400);
+  --color-mizu-500: var(--color-mizu-500);
+  --color-mizu-600: var(--color-mizu-600);
+  --color-mizu-700: var(--color-mizu-700);
+  --color-mizu-800: var(--color-mizu-800);
+  --color-mizu-900: var(--color-mizu-900);
+  --color-mizu-950: var(--color-mizu-950);
+  --color-ai-50: var(--color-ai-50);
+  --color-ai-100: var(--color-ai-100);
+  --color-ai-200: var(--color-ai-200);
+  --color-ai-300: var(--color-ai-300);
+  --color-ai-400: var(--color-ai-400);
+  --color-ai-500: var(--color-ai-500);
+  --color-ai-600: var(--color-ai-600);
+  --color-ai-700: var(--color-ai-700);
+  --color-ai-800: var(--color-ai-800);
+  --color-ai-900: var(--color-ai-900);
+  --color-ai-950: var(--color-ai-950);
+  --color-fuji-50: var(--color-fuji-50);
+  --color-fuji-100: var(--color-fuji-100);
+  --color-fuji-200: var(--color-fuji-200);
+  --color-fuji-300: var(--color-fuji-300);
+  --color-fuji-400: var(--color-fuji-400);
+  --color-fuji-500: var(--color-fuji-500);
+  --color-fuji-600: var(--color-fuji-600);
+  --color-fuji-700: var(--color-fuji-700);
+  --color-fuji-800: var(--color-fuji-800);
+  --color-fuji-900: var(--color-fuji-900);
+  --color-fuji-950: var(--color-fuji-950);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
   --font-mono: var(--font-mono);
@@ -60,6 +154,11 @@
   --color-highlight: var(--highlight);
   --color-muted-solid: var(--muted-solid);
   --color-muted-subtle: var(--muted-subtle);
+  --tracking-title: var(--tracking-title);
+  --ease-out-quint: var(--ease-out-quint);
+  --ease-in-out-quart: var(--ease-in-out-quart);
+  --ease-standard: var(--ease-standard);
+  --ease-drawer: var(--ease-drawer);
   --animate-skeleton: skeleton 2s -1s infinite linear;
   --animate-caret-blink: 1s ease-out infinite caret-blink;
 
@@ -84,162 +183,3 @@
 }
 
 @custom-variant dark (&:is(.dark *));
-
-:root {
-  /* One stroke weight for icons beside text (2.5 of 24 reads as 1.7px at 16px): matches medium and
-     semibold UI text, so a plus beside "Import" is as heavy as the word. */
-  --icon-stroke: 2.5;
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-reader:
-    "Newsreader Variable", "Iowan Old Style", Charter, "Bitstream Charter", Georgia, serif;
-  --font-mono:
-    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    monospace;
-  --font-code: var(--font-mono);
-  --radius: 0.625rem;
-  --background: oklch(0.971 0.005 78.298);
-  --foreground: color-mix(in oklab, var(--color-neutral-800) 92%, var(--background));
-  --card: color-mix(in oklab, var(--background) 78%, var(--color-white));
-  --card-foreground: var(--foreground);
-  --popover: color-mix(in oklab, var(--background) 72%, var(--color-white));
-  --popover-foreground: var(--foreground);
-  --primary: color-mix(in oklab, var(--color-neutral-800) 96%, var(--background));
-  --primary-foreground: var(--color-neutral-50);
-  --secondary: --alpha(var(--color-black) / 4%);
-  --secondary-foreground: var(--foreground);
-  --muted: --alpha(var(--color-black) / 4%);
-  --muted-foreground: color-mix(in oklab, var(--foreground) 58%, var(--background));
-  /* Placeholders, shortcuts, and inactive tabs: muted foreground at 72%. */
-  --muted-subtle: color-mix(in oklab, var(--muted-foreground) 72%, transparent);
-  /* Opaque equivalent of --muted composited over the page (sRGB, like alpha blending). */
-  --muted-solid: color-mix(in srgb, var(--background), var(--color-black) 4%);
-  /* Current-position indicators: scrubber preview tick, selection dots. */
-  --highlight: var(--color-yamabuki-400);
-  --accent: --alpha(var(--color-black) / 4%);
-  --accent-foreground: var(--foreground);
-  /* Roles follow the palette in palette.css: madder red stops, indigo informs, young leaf confirms,
-     kerria gold cautions. */
-  --destructive: var(--color-akane-500);
-  --destructive-foreground: var(--color-akane-700);
-  --info: var(--color-ai-500);
-  --info-foreground: var(--color-ai-700);
-  --success: var(--color-matcha-500);
-  --success-foreground: var(--color-matcha-700);
-  --matcha: oklch(0.819 0.121 131.147);
-  --matcha-foreground: oklch(0.24 0.045 132);
-  --mizu: oklch(0.788 0.073 210.53);
-  --mizu-foreground: oklch(0.47 0.073 210.53);
-  --warning: var(--color-yamabuki-400);
-  --warning-foreground: var(--color-yamabuki-700);
-  /* Reader ink: sumi with a trace of warmth, a step softer than --foreground so long reads sit
-     on the page instead of glaring. Headings take the stronger ink. */
-  --reader-ink: oklch(0.285 0.011 72);
-  --reader-ink-strong: oklch(0.22 0.012 72);
-  /* Backdrop brightness behind blurred bars (BarBlur): only dark mode dims, so light stays clear. */
-  --bar-blur-dim: 1;
-  /* Colour left in content behind a blurred bar, per overlapping strip; both themes. */
-  --bar-blur-saturate: 0.5;
-  /* Frosted glass for transient layers (toasts): the popover colour, translucent, with a vertical
-     sheen from the top, a 1px edge that catches light along its top, and a soft lift. The blur
-     frosts what scrolls behind it; saturation stays near 1 so colour never reads as tint. */
-  --glass: color-mix(in srgb, var(--popover) 62%, transparent);
-  --glass-sheen: color-mix(in srgb, var(--color-white) 40%, transparent);
-  --glass-edge: var(--border);
-  --glass-highlight: color-mix(in srgb, var(--color-white) 70%, transparent);
-  --glass-blur: 24px;
-  --glass-saturate: 1.25;
-  --glass-shadow:
-    0 1px 2px color-mix(in srgb, var(--color-black) 6%, transparent),
-    0 8px 24px -8px color-mix(in srgb, var(--color-black) 18%, transparent);
-  --input: --alpha(var(--color-black) / 10%);
-  --border: --alpha(var(--color-black) / 8%);
-  --ring: var(--color-neutral-400);
-  --sidebar: color-mix(in oklab, var(--background) 84%, var(--color-white));
-  --sidebar-foreground: color-mix(in oklab, var(--foreground) 68%, var(--sidebar));
-  --sidebar-primary: var(--primary);
-  --sidebar-primary-foreground: var(--color-neutral-50);
-  --sidebar-accent: --alpha(var(--color-black) / 4%);
-  --sidebar-accent-foreground: var(--foreground);
-  --sidebar-border: --alpha(var(--color-black) / 6%);
-  --sidebar-ring: var(--color-neutral-400);
-  --scrollbar-thumb: --alpha(var(--color-black) / 36%);
-  --scrollbar-thumb-hover: --alpha(var(--color-black) / 56%);
-  --scrollbar-track: --alpha(var(--color-black) / 3%);
-  --scrollbar-track-edge: --alpha(var(--color-black) / 8%);
-  color-scheme: dark;
-}
-
-.dark {
-  --background: color-mix(in srgb, var(--color-neutral-950) 95%, var(--color-white));
-  --foreground: var(--color-neutral-100);
-  --card: color-mix(in srgb, var(--background) 98%, var(--color-white));
-  --card-foreground: var(--color-neutral-100);
-  --popover: color-mix(in srgb, var(--background) 98%, var(--color-white));
-  --popover-foreground: var(--color-neutral-100);
-  --primary: var(--color-neutral-100);
-  --primary-foreground: var(--color-neutral-800);
-  --secondary: --alpha(var(--color-white) / 4%);
-  --secondary-foreground: var(--color-neutral-100);
-  --muted: --alpha(var(--color-white) / 4%);
-  --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-white));
-  --muted-subtle: color-mix(in oklab, var(--muted-foreground) 72%, transparent);
-  --muted-solid: color-mix(in srgb, var(--background), var(--color-white) 4%);
-  --highlight: var(--color-yamabuki-300);
-  --accent: --alpha(var(--color-white) / 4%);
-  --accent-foreground: var(--color-neutral-100);
-  --destructive: color-mix(in srgb, var(--color-akane-500) 90%, var(--color-white));
-  --destructive-foreground: var(--color-akane-400);
-  --info: var(--color-ai-500);
-  --info-foreground: var(--color-ai-400);
-  --success: var(--color-matcha-500);
-  --success-foreground: var(--color-matcha-400);
-  --mizu-foreground: var(--color-mizu);
-  --warning: var(--color-yamabuki-400);
-  --warning-foreground: var(--color-yamabuki-300);
-  --reader-ink: oklch(0.885 0.009 80);
-  --reader-ink-strong: oklch(0.935 0.007 80);
-  --bar-blur-dim: 0.84;
-  --glass: color-mix(in srgb, var(--popover) 56%, transparent);
-  --glass-sheen: color-mix(in srgb, var(--color-white) 8%, transparent);
-  --glass-edge: var(--border);
-  --glass-highlight: color-mix(in srgb, var(--color-white) 20%, transparent);
-  --glass-shadow:
-    0 1px 2px color-mix(in srgb, var(--color-black) 24%, transparent),
-    0 8px 24px -8px color-mix(in srgb, var(--color-black) 56%, transparent);
-  --input: --alpha(var(--color-white) / 8%);
-  --border: var(--input);
-  --ring: var(--color-neutral-500);
-  --sidebar: color-mix(in srgb, var(--color-neutral-950) 97%, var(--color-white));
-  --sidebar-foreground: color-mix(in srgb, var(--color-neutral-100) 64%, var(--sidebar));
-  --sidebar-primary: var(--color-neutral-100);
-  --sidebar-primary-foreground: var(--color-neutral-800);
-  --sidebar-accent: --alpha(var(--color-white) / 4%);
-  --sidebar-accent-foreground: var(--color-neutral-100);
-  --sidebar-border: var(--border);
-  --sidebar-ring: var(--color-neutral-400);
-  --scrollbar-thumb: --alpha(var(--color-white) / 36%);
-  --scrollbar-thumb-hover: --alpha(var(--color-white) / 56%);
-  --scrollbar-track: --alpha(var(--color-white) / 4%);
-  --scrollbar-track-edge: --alpha(var(--color-white) / 8%);
-}
-
-/* Glass stays legible without its blur: reduced transparency asks for solid surfaces, and engines
-   without backdrop-filter would otherwise show unblurred content through a 60% tint. */
-@media (prefers-reduced-transparency: reduce) {
-  :root,
-  .dark {
-    --glass: var(--popover);
-    --glass-sheen: transparent;
-    --glass-blur: 0px;
-    --glass-saturate: 1;
-  }
-}
-
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  :root,
-  .dark {
-    --glass: color-mix(in srgb, var(--popover) 94%, transparent);
-    --glass-sheen: transparent;
-  }
-}

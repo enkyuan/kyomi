@@ -27,9 +27,8 @@ Before editing framework-sensitive code:
 5. Record the page URLs, package/version evidence, applied API rule, Kyomi divergence, and focused
    checks in the completion report.
 
-## Coss UI evaluation boundary
+## Primitive styling
 
-[Coss UI](https://coss.com/ui/docs) is an evaluation-only reference. It is early-development,
-copy-and-own software built on Base UI and Tailwind CSS. It is not a Kyomi dependency. Using a Coss
-component requires an explicit adoption decision, package/dependency review, and alignment with
-`packages/ui`; a feature must not introduce Coss incidentally or bypass existing public UI exports.
+Use [Base UI](https://base-ui.com/react/handbook/styling) for React behavior and Tailwind
+utilities backed by the shared theme for primitive styling and app composition.
+[Coss UI](https://coss.com/ui/docs) is a historical source reference.

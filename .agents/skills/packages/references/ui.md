@@ -4,7 +4,7 @@ Use `packages/ui` for reusable presentation primitives and frontend presentation
 
 ## Structure
 
-The layout follows the shadcn monorepo template and cal.com's `@coss/ui`.
+The layout follows the shadcn monorepo template.
 
 ```text
 components.json            shadcn CLI config (registry installs land in src/components)
@@ -22,7 +22,7 @@ Read `packages/ui/README.md` for the token set and primitive conventions.
 
 ## Rules
 
-- Reuse existing shadcn/Base UI primitives and tokens before adding another abstraction.
+- Reuse existing Base UI primitives and tokens before adding another abstraction.
 - Keep app-specific compositions in their app. Move a component here only when several domains or
   clients need the same presentation responsibility.
 - Export public components and helpers through `@kyomi/ui/*`; do not deep-import source.
@@ -33,7 +33,7 @@ Read `packages/ui/README.md` for the token set and primitive conventions.
 - Keep frontend presentation dependencies here when apps should not depend on them directly,
   including Blode icons, motion, squircle, and command primitives.
 - Export motion through `@kyomi/ui/lib/motion` and keep app imports lazy.
-- Express shape, size, and motion through the semantic tokens in `styles/theme.css` (radius ramp,
+- Express shape, size, and motion through the semantic tokens in `styles/tokens.css` (radius ramp,
   control heights, `--ease-*`, `--duration-*`, `--highlight`); avoid arbitrary values in primitives.
 - Give interactive primitives keyboard, focus, disabled, loading, error, and reduced-motion states.
 - Read `src/icons/README.md` before adding product illustrations.

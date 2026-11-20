@@ -27,7 +27,7 @@ describe("Button", () => {
     render(<Button>Save</Button>);
     const button = screen.getByRole("button", { name: "Save" });
 
-    expect(button.className).toContain("motion-safe:active:scale-96");
+    expect(button.className).toContain("motion-safe:active:scale-(--press-scale)");
     expect(button.className).toContain("transition-[box-shadow,scale]");
   });
 
@@ -39,8 +39,12 @@ describe("Button", () => {
       </>,
     );
 
-    expect(screen.getByRole("button", { name: "Static" }).className).not.toContain("scale-96");
-    expect(screen.getByRole("button", { name: "Link" }).className).not.toContain("scale-96");
+    expect(screen.getByRole("button", { name: "Static" }).className).not.toContain(
+      "scale-(--press-scale)",
+    );
+    expect(screen.getByRole("button", { name: "Link" }).className).not.toContain(
+      "scale-(--press-scale)",
+    );
   });
 
   test("keeps the inner highlight concentric for pill buttons of every size", () => {
@@ -83,7 +87,7 @@ describe("ButtonGroup", () => {
     const classes = buttonGroupVariants({ variant: "split" });
 
     expect(classes).toContain("gap-(--split-gap)");
-    expect(classes).toContain("[--split-gap:calc(var(--split-h,2.25rem)/24)]");
+    expect(classes).toContain("[--split-gap:calc(var(--split-h,var(--control-md))/24)]");
     expect(classes).toContain("*:data-[slot=button]:rounded-sm");
     expect(classes).toContain("*:data-[slot=button]:first:rounded-s-full");
     expect(classes).toContain("*:data-[slot=button]:last:rounded-e-full");
