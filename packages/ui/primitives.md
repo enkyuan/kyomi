@@ -3,9 +3,8 @@
 The CSS interface is [tokens.css](src/styles/tokens.css) and [palette.css](src/styles/palette.css).
 The React implementation takes state and positioning from Base UI wherever it wraps a Base UI
 part. The Tailwind bridge in [theme.css](src/styles/theme.css) maps existing utility names to the
-same tokens, including the radius ramp and semantic palette. StyleX generates the separator's
-base styles in a layer beneath app utilities. See the [instance inventory](primitive-usage.md)
-for the actual JSX composition and overrides across this package.
+same tokens, including the radius ramp and semantic palette. See the
+[instance inventory](primitive-usage.md) for JSX composition and overrides across this package.
 
 Use roles such as `--foreground`, `--input`, and `--ring` when styling a part. The CSS spacing
 unit, corner ramp, and utility scales cover ordinary layout and typography. Use the control,
@@ -60,7 +59,7 @@ computed by Base UI, Motion, or a browser measurement are instance state.
 | [Scroll Bar](src/components/scroll-bar.tsx)                   | Horizontal/vertical, container/viewport placement                                                                                                         | Thumb and track roles, scrollbar dimensions and visibility                                         | Draw the active scroll affordance inside a region or at the window edge.                                                     |
 | [Scrubber](src/components/scrubber.tsx)                       | Preview tick, selected index, visible range and optional group breaks                                                                                     | Highlight and muted colors, tick geometry, pointer/motion model                                    | Navigate a discrete timeline or strip.                                                                                       |
 | [Select](src/components/select.tsx)                           | Small/default/large trigger, popup placement, group and selected item                                                                                     | Control heights, input border, role focus and accent highlight                                     | Select from a predefined list of options.                                                                                    |
-| [Separator](src/components/separator.tsx)                     | Horizontal or vertical                                                                                                                                    | StyleX border color and nonshrinking base, shared stroke width                                     | Divide controls, including attached groups and sidebar sections.                                                             |
+| [Separator](src/components/separator.tsx)                     | Horizontal or vertical                                                                                                                                    | Tailwind border color and nonshrinking base, shared stroke width                                   | Divide controls, including attached groups and sidebar sections.                                                             |
 | [Sheet](src/components/sheet.tsx)                             | Four sides, default/inset layout, default/bare footer                                                                                                     | Popover, backdrop, radius and overlay timing                                                       | Open a modal panel from a screen edge.                                                                                       |
 | [Sidebar](src/components/sidebar/index.tsx)                   | Sidebar/floating/inset, offcanvas/icon/none, reader focus, menu sizes and tones                                                                           | Sidebar semantic roles, app-set width, responsive spacing, focus                                   | Compose the navigation rail, menu actions, and collapsible subnav.                                                           |
 | [Skeleton](src/components/skeleton.tsx)                       | Shimmer surface, sizing supplied by caller                                                                                                                | Muted surface, highlight, corner and shimmer motion                                                | Reserve the geometry of loading content.                                                                                     |
@@ -82,5 +81,4 @@ computed by Base UI, Motion, or a browser measurement are instance state.
 
 - CSS variables and namespaced utilities use Tailwind's `@theme inline` and `@theme static` behavior. [Tailwind theme variables](https://tailwindcss.com/docs/theme)
 - Base UI supplies unstyled React parts, state selectors and positioned CSS variables. [Base UI styling](https://base-ui.com/react/handbook/styling)
-- StyleX compiles authored styles into layered CSS alongside the web app's existing CSS asset. [StyleX Vite installation](https://stylexjs.com/docs/learn/installation/vite/)
 - Coss is a source registry. Kyomi's component files are locally owned. [Coss UI introduction](https://coss.com/ui/docs)

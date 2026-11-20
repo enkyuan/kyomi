@@ -29,7 +29,6 @@ Before editing framework-sensitive code:
 
 ## Primitive styling
 
-Use [Base UI](https://base-ui.com/react/handbook/styling) for React behavior and
-[StyleX](https://stylexjs.com/docs/learn/installation/vite/) for new primitive styles in
-`packages/ui`. Tailwind utilities consume the shared theme for app composition and existing
-primitives. [Coss UI](https://coss.com/ui/docs) is a historical source reference.
+Use [Base UI](https://base-ui.com/react/handbook/styling) for React behavior and Tailwind
+utilities backed by the shared theme for primitive styling and app composition.
+[Coss UI](https://coss.com/ui/docs) is a historical source reference.

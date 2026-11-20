@@ -397,7 +397,7 @@ linked implementation. To regenerate this inventory, run `bun run --cwd packages
 
 ## [src/components/separator.tsx](src/components/separator.tsx)
 
-- [27](src/components/separator.tsx#L27) ` SeparatorPrimitive ` in ` Separator `. Variants ` orientation={orientation} ` · styling ` className={ typeof className === "function" ? (state) => classes(className(state)) : classes(className) } ` · CSS variables from component or utility scale · forwards spread props.
+- [17](src/components/separator.tsx#L17) ` SeparatorPrimitive ` in ` Separator `. Variants ` orientation={orientation} ` · styling ` className={ typeof className === "function" ? (state) => classes(className(state)) : classes(className) } ` · CSS variables from component or utility scale · forwards spread props.
 
 ## [src/components/sheet.tsx](src/components/sheet.tsx)
 

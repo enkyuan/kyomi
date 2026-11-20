@@ -1,5 +1,3 @@
-@layer theme, base, kyomi-stylex, components, utilities;
-
 @import "tailwindcss";
 @source "../../../packages/ui/src";
 @source "../../../packages/reader/src";

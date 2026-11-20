@@ -1,7 +1,7 @@
 # @kyomi/ui
 
 Kyomi's design system owns semantic tokens, Base UI primitives, icons, and motion. React uses
-StyleX and Tailwind v4 over the shared CSS tokens. The SvelteKit landing page loads the CSS
+Tailwind v4 over the shared CSS tokens. The SvelteKit landing page loads the CSS
 directly. Mobile loads the Uniwind theme from this package. Native code can use the platform-safe
 theme and motion entrypoints.
 
@@ -26,8 +26,7 @@ Import `@kyomi/ui/styles/tokens.css` for plain CSS custom properties and
 `@kyomi/ui/styles/base.css` for the page canvas and default text. The tokens include the light/dark
 palette, spacing, corners, control heights, stroke, focus, opacity, touch target, and motion roles.
 Tailwind apps import `@kyomi/ui/globals.css` for the Tailwind theme bridge and existing UI CSS.
-The web app declares the `kyomi-stylex` layer before Tailwind utilities so caller utilities can
-override primitive defaults. `@kyomi/ui/styles/native.css` supplies the native palette and
+`@kyomi/ui/styles/native.css` supplies the native palette and
 typography through Uniwind's light and dark variants. [Uniwind theming](https://docs.uniwind.dev/theming/basics)
 
 The [primitive catalog](primitives.md) records each family's variants, styling, tokens and context.
@@ -227,7 +226,7 @@ technology hears one change instead of every item passed.
 
 1. Add `src/components/<name>.tsx` using a Base UI part when one matches the behavior.
 2. Give it `data-slot`, keyboard, focus, disabled, loading, and reduced-motion states.
-3. Read shared values from `tokens.css` in StyleX. Keep geometry specific to the component with its implementation.
+3. Use Tailwind utilities backed by the shared values in `tokens.css`. Keep geometry specific to the component with its implementation.
 4. Export a folder primitive explicitly in `package.json`; flat files are covered by
    `./components/*`.
 5. Test the contract under `tests/web/integration/src/packages/ui/components/`.
