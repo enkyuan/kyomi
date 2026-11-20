@@ -48,7 +48,7 @@ async function sync() {
   try {
     await syncLibrary(account);
     status.textContent = "";
-    if (!selected) await render();
+    await render();
   } catch {
     status.textContent = "Changes are on this device. Reconnect and sign in to sync.";
   }

@@ -56,6 +56,13 @@ export const library: Library = {
   },
 };
 
+const listeners = new Set<() => void>();
+export function subscribeToDownloads(listener: () => void) {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
+}
 let tail = Promise.resolve();
 export function syncLibrary(owner: string) {
   const headers = { "x-kyomi-offline-owner": owner, "content-type": "application/json" };
@@ -71,6 +78,9 @@ export function syncLibrary(owner: string) {
         }),
     }),
   );
-  tail = next.catch(() => {});
-  return next;
+  const complete = next.then((changed) => {
+    if (changed && offlineOwner() === owner) for (const notify of listeners) notify();
+  });
+  tail = complete.catch(() => {});
+  return complete;
 }

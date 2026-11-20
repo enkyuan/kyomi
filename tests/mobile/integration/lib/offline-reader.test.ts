@@ -82,6 +82,23 @@ test("durably saves a list item, resumes a download and preserves a newer edit d
   expect(await library.list("first")).toEqual([]);
 });
 
+test("retries a link-only save after a publisher body becomes available", async () => {
+  adoptSessionUser("pending");
+  const empty = {
+    ...article,
+    reader: { selected: { contentText: null, bodyKind: "fallback", contentSource: "link_only" } },
+  } as ArticleDetailDto;
+  await editFlags(library, "pending", "a", { isSaved: true }, empty);
+  let downloads = 0;
+  const api = { put: async () => {}, detail: async () => (++downloads === 1 ? empty : article) };
+  await replay(library, "pending", api);
+  await replay(library, "pending", api);
+  expect(downloads).toBe(1);
+  await library.edit("pending", "a", (row) => row && { ...row, retryDownloadAfter: 0 });
+  await replay(library, "pending", api);
+  expect((await library.list("pending"))[0].document?.text).toContain("One & two");
+  expect(await library.list("pending", true)).toEqual([]);
+});
 test("blocks previous-account reads, late downloads and signed-out writes", async () => {
   adoptSessionUser("old");
   await editFlags(library, "old", "a", { isSaved: true });

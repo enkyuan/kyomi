@@ -11,7 +11,7 @@ import {
   type OfflineArticle,
 } from "@kyomi/reader/offline";
 import { queryClient } from "@lib/query/client";
-import { library, offlineOwner, syncLibrary } from "@lib/offline/library";
+import { library, offlineOwner, subscribeToDownloads, syncLibrary } from "@lib/offline/library";
 
 function PageControls({
   count,
@@ -54,11 +54,18 @@ export default function OfflineReader() {
     if (owner === offlineOwner()) setRows(saved.filter((row) => row.saved));
   }, [owner]);
   useEffect(() => {
-    void reload().catch(() => setMessage("Could not open the offline library."));
+    const refresh = () => {
+      void reload().catch(() => setMessage("Could not open the offline library."));
+    };
+    refresh();
+    const unsubscribe = subscribeToDownloads(refresh);
     const sub = AppState.addEventListener("change", (state) =>
       timer.current.setVisible(state === "active"),
     );
-    return () => sub.remove();
+    return () => {
+      sub.remove();
+      unsubscribe();
+    };
   }, [reload]);
   const row = rows.find((item) => item.id === selected);
   const parts = pages(row?.document?.text ?? "");

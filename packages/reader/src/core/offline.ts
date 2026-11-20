@@ -13,6 +13,7 @@ export type OfflineArticle = {
   flags: Flags;
   progress: ReadingProgressUpdateBody | null;
   revision: number;
+  retryDownloadAfter?: number;
 };
 export type Edit = (row: OfflineArticle | undefined) => OfflineArticle | undefined;
 export interface Library {
@@ -43,7 +44,9 @@ export function snapshot(article: ArticleDetailDto): Snapshot {
 }
 
 export function needsSync(row: OfflineArticle) {
-  return Object.keys(row.flags).length > 0 || row.progress !== null || (row.saved && !row.document);
+  return (
+    Object.keys(row.flags).length > 0 || row.progress !== null || (row.saved && !row.document?.text)
+  );
 }
 
 export function rememberSaved(
@@ -91,7 +94,7 @@ export function editFlags(
       ...row,
       saved: flags.isSaved ?? row.saved,
       read: flags.isRead ?? row.read,
-      document: row.document ?? (article ? snapshot(article) : null),
+      document: article && !row.document?.text ? snapshot(article) : row.document,
       flags: { ...row.flags, ...flags },
       revision: row.revision + 1,
     };
@@ -118,22 +121,29 @@ export type Transport = {
 
 export async function replay(store: Library, owner: string, api: Transport) {
   let firstFailure: unknown;
+  let changed = false;
   for (const row of await store.list(owner, true)) {
     try {
       if (Object.keys(row.flags).length) await api.put(row.id, "", row.flags);
       if (row.progress) await api.put(row.id, "/progress", row.progress);
-      const detail = row.saved && !row.document ? await api.detail(row.id) : null;
+      const download =
+        row.saved && !row.document?.text && (row.retryDownloadAfter ?? 0) <= Date.now();
+      const detail = download ? await api.detail(row.id) : null;
       if (!detail && !Object.keys(row.flags).length && !row.progress) continue;
       await store.edit(owner, row.id, (latest) => {
         if (latest?.revision !== row.revision) return latest;
+        changed = true;
         if (!latest.saved) return undefined;
+        const document = detail ? snapshot(detail) : latest.document;
         return {
           ...latest,
           read: detail?.isRead ?? latest.read,
           position: row.progress
             ? latest.position
             : (detail?.readingPosition?.progress ?? latest.position),
-          document: detail ? snapshot(detail) : latest.document,
+          document,
+          retryDownloadAfter:
+            detail && !document?.text ? Date.now() + 15 * 60_000 : latest.retryDownloadAfter,
           flags: {},
           progress: null,
         };
@@ -151,6 +161,7 @@ export async function replay(store: Library, owner: string, api: Transport) {
     }
   }
   if (firstFailure) throw firstFailure;
+  return changed;
 }
 
 export function pages(text: string): string[] {
