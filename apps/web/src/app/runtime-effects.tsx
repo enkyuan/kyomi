@@ -1,6 +1,6 @@
 "use client";
 
-import { adopt } from "@lib/offline/store";
+import { adopt } from "@kyomi/reader/offline/indexeddb";
 import { syncLibrary } from "@lib/offline/sync";
 import { useEffect, useRef } from "react";
 import { onlineManager, useQueryClient } from "@tanstack/react-query";

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo } from "react";
 import { rememberSaved } from "@kyomi/reader/offline";
-import { library } from "@lib/offline/store";
+import { library } from "@kyomi/reader/offline/indexeddb";
 import { syncLibrary } from "@lib/offline/sync";
 import { useAuth } from "@integrations/better-auth/provider";
 import type { useRouter } from "@tanstack/react-router";

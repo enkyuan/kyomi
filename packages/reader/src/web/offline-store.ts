@@ -1,5 +1,5 @@
-import { needsSync } from "@kyomi/reader/offline";
-import type { Edit, Library, OfflineArticle } from "@kyomi/reader/offline";
+import { needsSync } from "../core/offline";
+import type { Edit, Library, OfflineArticle } from "../core/offline";
 
 let opening: Promise<IDBDatabase> | undefined;
 function database() {

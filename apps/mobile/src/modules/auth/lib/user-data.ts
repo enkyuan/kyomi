@@ -14,9 +14,9 @@ const OWNER_KEY = "user-id";
  * in flight) that would otherwise be sent under the next session. The theme is a device setting and
  * stays.
  */
-export function clearUserData(): void {
+export function clearUserData(nextOwner?: string): void {
   owner.remove(OWNER_KEY);
-  clearOfflineLibrary();
+  clearOfflineLibrary(nextOwner);
   clearQueryCache();
   clearRecentArticles();
   clearReaderPositions();
@@ -35,6 +35,6 @@ export function isSessionOwner(userId: string): boolean {
 export function adoptSessionUser(userId: string): void {
   if (isSessionOwner(userId)) return;
 
-  clearUserData();
+  clearUserData(userId);
   owner.set(OWNER_KEY, userId);
 }

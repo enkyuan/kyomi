@@ -1,7 +1,7 @@
 "use client";
 
 import { editFlags } from "@kyomi/reader/offline";
-import { library, owner as offlineOwner } from "@lib/offline/store";
+import { library, owner as offlineOwner } from "@kyomi/reader/offline/indexeddb";
 import { syncLibrary } from "@lib/offline/sync";
 import { useAuth } from "@integrations/better-auth/provider";
 import { useEffect, useRef } from "react";

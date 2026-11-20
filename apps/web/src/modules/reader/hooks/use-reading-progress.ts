@@ -12,7 +12,7 @@ import {
 import type { ReadingPositionDto } from "@kyomi/reader/schemas/article";
 import { useAuth } from "@integrations/better-auth/provider";
 import { editProgress } from "@kyomi/reader/offline";
-import { library } from "@lib/offline/store";
+import { library } from "@kyomi/reader/offline/indexeddb";
 import { saveReadingProgress } from "@modules/articles/lib/api";
 import { updateReadingProgressCaches } from "@modules/articles/queries/cache";
 import { findReaderBody, measureReaderBody } from "@modules/reader/lib/progress";

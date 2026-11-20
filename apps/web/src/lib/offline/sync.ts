@@ -1,5 +1,5 @@
 import { replay, type Transport } from "@kyomi/reader/offline";
-import { library } from "./store";
+import { library } from "@kyomi/reader/offline/indexeddb";
 
 export async function syncLibrary(owner: string) {
   const request = async (id: string, path = "", body?: unknown) => {

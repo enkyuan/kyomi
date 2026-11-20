@@ -15,6 +15,7 @@
   "type": "module",
   "exports": {
     ".": "./src/core/index.ts",
+    "./offline/indexeddb": "./src/web/offline-store.ts",
     "./offline": "./src/core/offline.ts",
     "./core": "./src/core/index.ts",
     "./document": "./src/core/document/index.ts",

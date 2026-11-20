@@ -1,6 +1,6 @@
 "use client";
 
-import { adopt } from "@lib/offline/store";
+import { adopt } from "@kyomi/reader/offline/indexeddb";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";

@@ -7,7 +7,7 @@ import {
   type OfflineArticle,
 } from "@kyomi/reader/offline";
 import { READER_PREFERENCES_STORAGE_KEY } from "../shell/keys";
-import { library, owner } from "./store";
+import { library, owner } from "@kyomi/reader/offline/indexeddb";
 import { syncLibrary } from "./sync";
 
 const view = document.querySelector<HTMLElement>("#view")!;
