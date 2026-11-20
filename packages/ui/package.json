@@ -32,6 +32,7 @@
     "./styles/*": "./src/styles/*"
   },
   "scripts": {
+    "audit:primitives": "bun scripts/audit-primitives.ts",
     "fmt": "oxfmt src",
     "icons:native": "bun scripts/generate-blode-native.ts && oxfmt src/icons/blode-native.ts",
     "fmt:check": "oxfmt --check src",

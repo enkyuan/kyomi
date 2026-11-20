@@ -1,6 +1,6 @@
 {
-  "id": "fae68190-730d-4fce-ad26-524c971d19aa",
-  "prevId": "df203567-1267-4398-a36f-928ef2cbda7b",
+  "id": "65bb0c2a-47ec-479e-9efd-32607f7e54be",
+  "prevId": "5238be91-c0d1-4bde-ada6-5f30f7c82294",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -970,13 +970,6 @@
           "notNull": true,
           "default": "'idle'"
         },
-        "catalog_preview": {
-          "name": "catalog_preview",
-          "type": "boolean",
-          "primaryKey": false,
-          "notNull": true,
-          "default": false
-        },
         "subscriber_count": {
           "name": "subscriber_count",
           "type": "integer",
@@ -1074,14 +1067,14 @@
           "method": "btree",
           "with": {}
         },
-        "feeds_subscribed_poll_idx": {
-          "name": "feeds_subscribed_poll_idx",
+        "feeds_subscribed_due_idx": {
+          "name": "feeds_subscribed_due_idx",
           "columns": [
             {
-              "expression": "coalesce(\"next_refresh_at\", '-infinity'::timestamp)",
+              "expression": "next_refresh_at",
+              "isExpression": false,
               "asc": true,
-              "isExpression": true,
-              "nulls": "last"
+              "nulls": "first"
             },
             {
               "expression": "id",
@@ -1096,14 +1089,14 @@
           "method": "btree",
           "with": {}
         },
-        "feeds_catalog_poll_idx": {
-          "name": "feeds_catalog_poll_idx",
+        "feeds_catalog_due_idx": {
+          "name": "feeds_catalog_due_idx",
           "columns": [
             {
-              "expression": "coalesce(\"next_refresh_at\", '-infinity'::timestamp)",
+              "expression": "next_refresh_at",
+              "isExpression": false,
               "asc": true,
-              "isExpression": true,
-              "nulls": "last"
+              "nulls": "first"
             },
             {
               "expression": "id",
@@ -3576,12 +3569,6 @@
           "primaryKey": false,
           "notNull": false
         },
-        "catalog_expires_at": {
-          "name": "catalog_expires_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": false
-        },
         "published_at": {
           "name": "published_at",
           "type": "timestamp",
@@ -3621,28 +3608,6 @@
             }
           ],
           "isUnique": true,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "feed_items_catalog_expiry_idx": {
-          "name": "feed_items_catalog_expiry_idx",
-          "columns": [
-            {
-              "expression": "catalog_expires_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "where": "\"feed_items\".\"catalog_expires_at\" IS NOT NULL",
           "concurrently": false,
           "method": "btree",
           "with": {}
@@ -4071,27 +4036,6 @@
           "method": "btree",
           "with": {}
         },
-        "feed_category_assignments_feed_provenance_idx": {
-          "name": "feed_category_assignments_feed_provenance_idx",
-          "columns": [
-            {
-              "expression": "feed_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "provenance",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
         "feed_category_assignments_category_id_idx": {
           "name": "feed_category_assignments_category_id_idx",
           "columns": [
@@ -4268,27 +4212,6 @@
           ],
           "isUnique": true,
           "where": "model_id IS NOT NULL",
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "feed_item_category_assignments_item_provenance_idx": {
-          "name": "feed_item_category_assignments_item_provenance_idx",
-          "columns": [
-            {
-              "expression": "feed_item_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "provenance",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
           "concurrently": false,
           "method": "btree",
           "with": {}

@@ -105,7 +105,7 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
               toast={toast}
             >
               <ToastSurface
-                className="size-full transition-opacity duration-200 group-data-ending-style/toast:opacity-0 group-data-limited/toast:opacity-0"
+                className="size-full transition-opacity duration-(--duration-overlay) group-data-ending-style/toast:opacity-0 group-data-limited/toast:opacity-0"
                 radius={TOAST_RADIUS_PX}
               >
                 <Toast.Content className={TOAST_CONTENT_CLASS_NAME}>

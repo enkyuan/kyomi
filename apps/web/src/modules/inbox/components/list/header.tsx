@@ -156,7 +156,6 @@ export function FilterControl({
             <TabsTab
               value={segmentValue === "my-feed" ? "all" : segmentValue}
               className="rounded-s-[calc(var(--split-h)/2)] rounded-e-(--split-inner) px-0 text-inherit hover:text-inherit data-active:text-inherit"
-              nativeButton={false}
             >
               <SplitSegment className="ps-4 pe-1.5" edge="start" render={<span />}>
                 <ButtonLabel className="max-w-32 *:min-w-0 *:truncate sm:max-w-44">

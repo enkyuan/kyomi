@@ -5,14 +5,14 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { prefetchInboxFlow } from "@modules/inbox/lib/navigation";
 import { useAuth } from "@integrations/better-auth/provider";
-import { Card } from "@kyomi/ui/components/card";
 import { Spinner } from "@kyomi/ui/components/spinner";
 import { resolveAuthReturnTo } from "@modules/auth/redirect";
 import { EmailStep } from "./email-step";
-import { useEmailForm, useOtpForm } from "./hooks";
+import { useEmailForm } from "./hooks";
+import { AccountLayout } from "./layout";
 import { OtpStep } from "./otp-step";
 
-export function Login({ redirect }: { redirect?: string }) {
+export function Login({ redirect, register = false }: { redirect?: string; register?: boolean }) {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
@@ -25,7 +25,6 @@ export function Login({ redirect }: { redirect?: string }) {
     setEmail(sentTo);
     setStep("otp");
   });
-  const otpForm = useOtpForm(email, returnTo);
 
   useEffect(() => {
     if (!isPending && isAuthenticated) {
@@ -47,14 +46,16 @@ export function Login({ redirect }: { redirect?: string }) {
   }
 
   return (
-    <main className="flex min-h-dvh w-full items-center justify-center px-4 py-12">
-      <Card className="w-full max-w-xs">
-        {step === "email" ? (
-          <EmailStep emailForm={emailForm} />
-        ) : (
-          <OtpStep email={email} otpForm={otpForm} onEdit={() => setStep("email")} />
-        )}
-      </Card>
-    </main>
+    <AccountLayout
+      register={register}
+      redirect={redirect}
+      onBack={step === "otp" ? () => setStep("email") : undefined}
+    >
+      {step === "email" ? (
+        <EmailStep emailForm={emailForm} register={register} />
+      ) : (
+        <OtpStep email={email} returnTo={returnTo} />
+      )}
+    </AccountLayout>
   );
 }

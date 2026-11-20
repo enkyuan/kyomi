@@ -28,6 +28,7 @@ const inboxTimestampDisplaySchema = z.enum([
 const inboxTimestampHourCycleSchema = z.enum(["12h", "24h"]);
 
 export const readerPreferencesSchema = z.object({
+  language: z.string().optional(),
   defaultMode: readerDefaultModeSchema,
   fontSizePx: z.number(),
   contentWidth: readerContentWidthSchema,

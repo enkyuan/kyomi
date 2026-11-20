@@ -320,29 +320,43 @@
     {
       "idx": 45,
       "version": "7",
-      "when": 1795118290160,
-      "tag": "0045_feed_recovery",
+      "when": 1795114283151,
+      "tag": "0045_user_onboarding",
       "breakpoints": true
     },
     {
       "idx": 46,
       "version": "7",
-      "when": 1795118757431,
-      "tag": "0046_catalog_retention",
+      "when": 1795147706263,
+      "tag": "0046_article_translations",
       "breakpoints": true
     },
     {
       "idx": 47,
       "version": "7",
-      "when": 1795119649696,
-      "tag": "0047_feed_poll_and_category_indexes",
+      "when": 1795147707263,
+      "tag": "0047_feed_recovery",
       "breakpoints": true
     },
     {
       "idx": 48,
       "version": "7",
-      "when": 1795119741280,
-      "tag": "0048_asset_cache_expiry",
+      "when": 1795147708263,
+      "tag": "0048_catalog_retention",
+      "breakpoints": true
+    },
+    {
+      "idx": 49,
+      "version": "7",
+      "when": 1795147709263,
+      "tag": "0049_feed_poll_and_category_indexes",
+      "breakpoints": true
+    },
+    {
+      "idx": 50,
+      "version": "7",
+      "when": 1795147710263,
+      "tag": "0050_asset_cache_expiry",
       "breakpoints": true
     }
   ]

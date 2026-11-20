@@ -294,7 +294,7 @@ export function Scrubber({
   return (
     <SliderPrimitive.Root
       className={cn(
-        "relative w-full touch-none select-none data-disabled:pointer-events-none data-disabled:opacity-64",
+        "relative w-full touch-none select-none data-disabled:pointer-events-none data-disabled:opacity-(--opacity-disabled)",
         className,
       )}
       data-slot="scrubber"
@@ -312,7 +312,7 @@ export function Scrubber({
       {...props}
     >
       <SliderPrimitive.Control
-        className="relative mx-auto h-11 w-full cursor-pointer outline-none before:pointer-events-none before:absolute before:inset-y-0 before:-inset-x-3 before:rounded-lg has-focus-visible:before:ring-2 has-focus-visible:before:ring-ring"
+        className="relative mx-auto h-11 w-full cursor-pointer outline-none before:pointer-events-none before:absolute before:inset-y-0 before:-inset-x-3 before:rounded-lg has-focus-visible:before:ring-(length:--focus-ring-width) has-focus-visible:before:ring-ring"
         data-slot="scrubber-control"
         ref={controlRef}
         style={{ maxWidth: Math.max(last * SCRUBBER_MAX_PITCH, SCRUBBER_MIN_WIDTH) }}
@@ -346,7 +346,7 @@ export function Scrubber({
         {getLabel ? (
           <div
             aria-hidden
-            className="pointer-events-none absolute bottom-full left-0 mb-1 origin-bottom scale-96 whitespace-nowrap rounded-md bg-popover px-2 py-1 font-medium text-popover-foreground text-xs tabular-nums opacity-0 shadow-sm/5 transition-[opacity,scale] duration-150 ease-out-quint data-visible:scale-100 data-visible:opacity-100 motion-reduce:transition-none"
+            className="pointer-events-none absolute bottom-full left-0 mb-1 origin-bottom scale-96 whitespace-nowrap rounded-md bg-popover px-2 py-1 font-medium text-popover-foreground text-xs tabular-nums opacity-0 shadow-sm/5 transition-[opacity,scale] duration-(--duration-control) ease-out-quint data-visible:scale-100 data-visible:opacity-100 motion-reduce:transition-none"
             data-slot="scrubber-label"
             data-visible={label === undefined ? undefined : ""}
             ref={labelRef}

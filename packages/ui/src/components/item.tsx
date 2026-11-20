@@ -12,7 +12,7 @@ import { cn } from "../lib/utils";
 const ITEM_RADIUS_PX = 16;
 
 export const itemVariants = cva(
-  "group/item relative flex w-full min-w-0 items-center gap-(--item-gap) p-(--item-padding) text-left text-base outline-none transition-colors [--item-padding:--spacing(2)] [--item-radius:16px] hover:bg-accent/70 data-selected:bg-accent/70 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset",
+  "group/item relative flex w-full min-w-0 items-center gap-(--item-gap) p-(--item-padding) text-left text-base outline-none transition-colors [--item-padding:--spacing(2)] [--item-radius:16px] hover:bg-accent/70 data-selected:bg-accent/70 focus-visible:ring-(length:--focus-ring-width) focus-visible:ring-ring focus-visible:ring-inset",
   {
     defaultVariants: {
       shape: "rounded",
@@ -102,7 +102,7 @@ export function ItemTarget({
 }: useRender.ComponentProps<"div">): React.ReactElement {
   const defaultProps = {
     className: cn(
-      "flex min-w-0 flex-1 cursor-pointer items-center gap-(--item-gap) rounded-[calc(var(--item-radius)-var(--item-padding))] text-left outline-none after:absolute after:inset-0 after:content-[''] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background",
+      "flex min-w-0 flex-1 cursor-pointer items-center gap-(--item-gap) rounded-[calc(var(--item-radius)-var(--item-padding))] text-left outline-none after:absolute after:inset-0 after:content-[''] focus-visible:ring-(length:--focus-ring-width) focus-visible:ring-ring focus-visible:ring-offset-(length:--focus-ring-offset) focus-visible:ring-offset-background",
       className,
     ),
     "data-slot": "item-target",

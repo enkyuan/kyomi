@@ -1,6 +1,6 @@
 {
-  "id": "426feea0-7e62-4d64-b84c-2902dc635e84",
-  "prevId": "fae68190-730d-4fce-ad26-524c971d19aa",
+  "id": "df203567-1267-4398-a36f-928ef2cbda7b",
+  "prevId": "65bb0c2a-47ec-479e-9efd-32607f7e54be",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -1074,14 +1074,14 @@
           "method": "btree",
           "with": {}
         },
-        "feeds_subscribed_poll_idx": {
-          "name": "feeds_subscribed_poll_idx",
+        "feeds_subscribed_due_idx": {
+          "name": "feeds_subscribed_due_idx",
           "columns": [
             {
-              "expression": "coalesce(\"next_refresh_at\", '-infinity'::timestamp)",
+              "expression": "next_refresh_at",
+              "isExpression": false,
               "asc": true,
-              "isExpression": true,
-              "nulls": "last"
+              "nulls": "first"
             },
             {
               "expression": "id",
@@ -1096,14 +1096,14 @@
           "method": "btree",
           "with": {}
         },
-        "feeds_catalog_poll_idx": {
-          "name": "feeds_catalog_poll_idx",
+        "feeds_catalog_due_idx": {
+          "name": "feeds_catalog_due_idx",
           "columns": [
             {
-              "expression": "coalesce(\"next_refresh_at\", '-infinity'::timestamp)",
+              "expression": "next_refresh_at",
+              "isExpression": false,
               "asc": true,
-              "isExpression": true,
-              "nulls": "last"
+              "nulls": "first"
             },
             {
               "expression": "id",
@@ -1429,29 +1429,7 @@
           "notNull": true
         }
       },
-      "indexes": {
-        "image_assets_expiry_idx": {
-          "name": "image_assets_expiry_idx",
-          "columns": [
-            {
-              "expression": "expires_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "source_key",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        }
-      },
+      "indexes": {},
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {},
@@ -4093,27 +4071,6 @@
           "method": "btree",
           "with": {}
         },
-        "feed_category_assignments_feed_provenance_idx": {
-          "name": "feed_category_assignments_feed_provenance_idx",
-          "columns": [
-            {
-              "expression": "feed_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "provenance",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
         "feed_category_assignments_category_id_idx": {
           "name": "feed_category_assignments_category_id_idx",
           "columns": [
@@ -4290,27 +4247,6 @@
           ],
           "isUnique": true,
           "where": "model_id IS NOT NULL",
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "feed_item_category_assignments_item_provenance_idx": {
-          "name": "feed_item_category_assignments_item_provenance_idx",
-          "columns": [
-            {
-              "expression": "feed_item_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "provenance",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
           "concurrently": false,
           "method": "btree",
           "with": {}

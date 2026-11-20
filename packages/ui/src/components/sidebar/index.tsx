@@ -160,7 +160,7 @@ export function SidebarRail({
     <button
       aria-label="Toggle Sidebar"
       className={cn(
-        "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-[background-color,transform,opacity] duration-150 ease-out after:absolute after:inset-y-0 after:left-1/2 after:w-0.5 hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
+        "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-[background-color,transform,opacity] duration-(--duration-control) ease-out after:absolute after:inset-y-0 after:left-1/2 after:w-0.5 hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
         "in-data-[side=left]:cursor-w-resize in-data-[side=right]:cursor-e-resize",
         "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
         "group-data-[collapsible=offcanvas]:translate-x-0 hover:group-data-[collapsible=offcanvas]:bg-sidebar group-data-[collapsible=offcanvas]:after:left-full",
@@ -305,7 +305,7 @@ export function SidebarGroupLabel({
 }: useRender.ComponentProps<"div">): React.ReactElement {
   const defaultProps = {
     className: cn(
-      "flex h-8 shrink-0 items-center rounded-lg px-2 font-medium text-sidebar-foreground text-xs outline-hidden ring-sidebar-ring transition-opacity duration-150 ease-out motion-reduce:transition-none focus-visible:ring-2 focus-visible:ring-inset group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-8.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5 [&>svg]:size-4 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:[&>svg]:size-4.5 [&>svg]:shrink-0",
+      "flex h-8 shrink-0 items-center rounded-lg px-2 font-medium text-sidebar-foreground text-xs outline-hidden ring-sidebar-ring transition-opacity duration-(--duration-control) ease-out motion-reduce:transition-none focus-visible:ring-(length:--focus-ring-width) focus-visible:ring-inset group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-8.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5 [&>svg]:size-4 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:[&>svg]:size-4.5 [&>svg]:shrink-0",
       "group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0",
       className,
     ),
@@ -327,7 +327,7 @@ export function SidebarGroupAction({
 }: useRender.ComponentProps<"button">): React.ReactElement {
   const defaultProps = {
     className: cn(
-      "absolute top-3.5 right-3 flex aspect-square w-5 items-center justify-center rounded-lg p-0 text-sidebar-foreground outline-hidden ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 focus-visible:ring-inset [&>svg:not([class*='size-'])]:size-4 [&>svg]:shrink-0",
+      "absolute top-3.5 right-3 flex aspect-square w-5 items-center justify-center rounded-lg p-0 text-sidebar-foreground outline-hidden ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-(length:--focus-ring-width) focus-visible:ring-inset [&>svg:not([class*='size-'])]:size-4 [&>svg]:shrink-0",
       // Increases the hit area of the button on mobile.
       "after:absolute after:-inset-2 md:after:hidden",
       "group-data-[collapsible=icon]:hidden",
@@ -473,7 +473,7 @@ export function SidebarMenuAction({
 }): React.ReactElement {
   const defaultProps = {
     className: cn(
-      "absolute top-1.5 right-1 flex aspect-square w-5 items-center justify-center rounded-lg p-0 text-sidebar-foreground outline-hidden ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 peer-hover/menu-button:text-sidebar-accent-foreground [&>svg:not([class*='size-'])]:size-4 [&>svg]:shrink-0",
+      "absolute top-1.5 right-1 flex aspect-square w-5 items-center justify-center rounded-lg p-0 text-sidebar-foreground outline-hidden ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-(length:--focus-ring-width) peer-hover/menu-button:text-sidebar-accent-foreground [&>svg:not([class*='size-'])]:size-4 [&>svg]:shrink-0",
       // Increases the hit area of the button on mobile.
       "after:absolute after:-inset-2 md:after:hidden",
       "peer-data-[size=sm]/menu-button:top-1",
@@ -502,7 +502,7 @@ export function SidebarMenuBadge({
   return (
     <div
       className={cn(
-        "pointer-events-none absolute right-2 flex h-5 min-w-5 select-none items-center justify-center rounded-full bg-sidebar-foreground/10 px-1.5 font-semibold text-sidebar-foreground text-[0.6875rem] leading-4 tabular-nums transition-[background-color,color,opacity,transform] duration-150 ease-out motion-reduce:transition-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:right-2.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-6 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:min-w-6 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-[0.8125rem] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-4.5",
+        "pointer-events-none absolute right-2 flex h-5 min-w-5 select-none items-center justify-center rounded-full bg-sidebar-foreground/10 px-1.5 font-semibold text-sidebar-foreground text-[0.6875rem] leading-4 tabular-nums transition-[background-color,color,opacity,transform] duration-(--duration-control) ease-out motion-reduce:transition-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:right-2.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-6 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:min-w-6 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-[0.8125rem] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-4.5",
         "peer-hover/menu-button:text-sidebar-accent-foreground peer-data-[active=true]/menu-button:text-sidebar-accent-foreground",
         "peer-data-[size=sm]/menu-button:top-1",
         "peer-data-[size=default]/menu-button:top-1.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:peer-data-[size=default]/menu-button:top-2",
@@ -595,7 +595,7 @@ export function SidebarMenuSubButton({
 }): React.ReactElement {
   const defaultProps = {
     className: cn(
-      "flex h-8 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-lg px-2 text-sidebar-foreground outline-hidden ring-sidebar-ring transition-[background-color,color,box-shadow,opacity,transform] duration-150 ease-out motion-reduce:transition-none hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 focus-visible:ring-inset active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 sm:h-7 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-8.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-2.25 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2.5 [&>span:last-child]:truncate [&>svg:not([class*='size-'])]:size-4 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:[&>svg:not([class*='size-'])]:size-4.5 [&>svg]:shrink-0 [&>svg]:text-sidebar-accent-foreground",
+      "flex h-8 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-lg px-2 text-sidebar-foreground outline-hidden ring-sidebar-ring transition-[background-color,color,box-shadow,opacity,transform] duration-(--duration-control) ease-out motion-reduce:transition-none hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-(length:--focus-ring-width) focus-visible:ring-inset active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 sm:h-7 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-8.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-2.25 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2.5 [&>span:last-child]:truncate [&>svg:not([class*='size-'])]:size-4 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:[&>svg:not([class*='size-'])]:size-4.5 [&>svg]:shrink-0 [&>svg]:text-sidebar-accent-foreground",
       "data-[active=true]:bg-sidebar-accent data-[active=true]:text-sidebar-accent-foreground",
       size === "sm" &&
         "text-xs group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5",

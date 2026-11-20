@@ -113,7 +113,7 @@ function AnchoredToastItem({
         toast={toast}
       >
         <ToastSurface
-          className="transition-opacity duration-150 group-data-ending-style/toast:opacity-0 group-data-starting-style/toast:opacity-0"
+          className="transition-opacity duration-(--duration-control) group-data-ending-style/toast:opacity-0 group-data-starting-style/toast:opacity-0"
           radius={tooltipStyle ? TOOLTIP_RADIUS_PX : CARD_RADIUS_PX}
         >
           {tooltipStyle ? (

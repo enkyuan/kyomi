@@ -1,6 +1,7 @@
 export {
   ArrowLeftIcon,
   ArrowShareRightIcon,
+  ArrowUndoUpIcon,
   AsteriskIcon,
   BarsThreeFilledIcon,
   BookmarkFilledIcon,
@@ -10,6 +11,7 @@ export {
   CheckIcon,
   Checkmark1Icon,
   ChecklistIcon,
+  ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   ChevronTriangleDownMediumFilledIcon,

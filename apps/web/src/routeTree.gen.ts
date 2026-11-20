@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteRouteImport } from './routes/_app/route'
 import { Route as FaviconRouteImport } from './routes/favicon'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as RegisterRouteImport } from './routes/register'
 import { Route as AppInboxRouteRouteImport } from './routes/_app/inbox/route'
 import { Route as ApiFaviconRouteImport } from './routes/api/favicon'
@@ -32,6 +33,11 @@ const AppRouteRoute = AppRouteRouteImport.update({
 const FaviconRoute = FaviconRouteImport.update({
   id: '/favicon',
   path: '/favicon',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RegisterRoute = RegisterRouteImport.update({
@@ -73,6 +79,7 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/favicon': typeof FaviconRoute
+  '/onboarding': typeof OnboardingRoute
   '/register': typeof RegisterRoute
   '/inbox': typeof AppInboxRouteRouteWithChildren
   '/api/favicon': typeof ApiFaviconRoute
@@ -84,6 +91,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/favicon': typeof FaviconRoute
+  '/onboarding': typeof OnboardingRoute
   '/register': typeof RegisterRoute
   '/api/favicon': typeof ApiFaviconRoute
   '/api/reader-image': typeof ApiReaderImageRoute
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/_app': typeof AppRouteRouteWithChildren
   '/favicon': typeof FaviconRoute
+  '/onboarding': typeof OnboardingRoute
   '/register': typeof RegisterRoute
   '/_app/inbox': typeof AppInboxRouteRouteWithChildren
   '/api/favicon': typeof ApiFaviconRoute
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/favicon'
+    | '/onboarding'
     | '/register'
     | '/inbox'
     | '/api/favicon'
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/favicon'
+    | '/onboarding'
     | '/register'
     | '/api/favicon'
     | '/api/reader-image'
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/'
     | '/_app'
     | '/favicon'
+    | '/onboarding'
     | '/register'
     | '/_app/inbox'
     | '/api/favicon'
@@ -144,6 +156,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRouteRoute: typeof AppRouteRouteWithChildren
   FaviconRoute: typeof FaviconRoute
+  OnboardingRoute: typeof OnboardingRoute
   RegisterRoute: typeof RegisterRoute
   ApiFaviconRoute: typeof ApiFaviconRoute
   ApiReaderImageRoute: typeof ApiReaderImageRoute
@@ -171,6 +184,13 @@ declare module '@tanstack/react-router' {
       path: '/favicon'
       fullPath: '/favicon'
       preLoaderRoute: typeof FaviconRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/register': {
@@ -255,6 +275,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRouteRoute: AppRouteRouteWithChildren,
   FaviconRoute: FaviconRoute,
+  OnboardingRoute: OnboardingRoute,
   RegisterRoute: RegisterRoute,
   ApiFaviconRoute: ApiFaviconRoute,
   ApiReaderImageRoute: ApiReaderImageRoute,

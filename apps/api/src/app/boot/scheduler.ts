@@ -1,5 +1,6 @@
 import { Effect } from "effect";
 import { developmentSchemaReady } from "@adapters/db/guard";
+import { translationRecoveryLoop } from "@modules/articles/reader/translations/reconcile";
 import { importDispatcherLoop } from "../jobs/dispatcher";
 import { assetExpiryLoop } from "../jobs/asset-expiry";
 import { catalogRetentionLoop } from "../jobs/catalog-retention";
@@ -12,7 +13,13 @@ import { runMain } from "../setup/main";
 const scheduler = Effect.gen(function* () {
   yield* developmentSchemaReady;
   yield* Effect.all(
-    [feedRefreshSchedulerLoop, importDispatcherLoop, catalogRetentionLoop, assetExpiryLoop],
+    [
+      feedRefreshSchedulerLoop,
+      importDispatcherLoop,
+      catalogRetentionLoop,
+      assetExpiryLoop,
+      translationRecoveryLoop,
+    ],
     {
       concurrency: "unbounded",
       discard: true,

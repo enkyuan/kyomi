@@ -8,6 +8,8 @@ import {
   type FeedRefreshJob,
   type JobMessage,
 } from "@kyomi/ingest";
+import { cloudflareTranslationConfig } from "@config/translations";
+import { runFeedItemTranslationJob } from "@modules/articles/reader/translations/worker";
 import { Db } from "@adapters/db/service";
 import type { AppLogger as LogSink } from "@adapters/logger/pino";
 import { AppLogger, type AppLoggerShape } from "@adapters/logger/service";
@@ -301,6 +303,21 @@ export const makeJobHandler = Effect.gen(function* () {
           );
         case "opml.import.item":
           return yield* runOpmlImportItemJob(job.payload).pipe(Effect.provideContext(opmlServices));
+        case "article.translate": {
+          const result = yield* attemptJob(
+            () =>
+              runFeedItemTranslationJob(
+                database,
+                job.payload.translationId,
+                cloudflareTranslationConfig(config),
+              ),
+            log.warn("worker.translation.interrupted"),
+            Duration.millis(settleMs),
+          );
+          if (result.status === "retry")
+            return yield* Effect.fail(toJobFailure(new Error(result.errorCode)));
+          return yield* completed("worker.translation.finished", startedAt, message, result);
+        }
         case "article.extract":
           return yield* extractArticle({ ...message, job }, startedAt);
         case "document.image-measure":

@@ -51,6 +51,8 @@ export function Toolbar({
   onDecreaseFontSize,
   onIncreaseFontSize,
   onTranslateArticle,
+  translationLabel = "Translate article",
+  canTranslate = true,
   onOpenOriginal,
   onShareArticle,
   variant = "inline",
@@ -99,9 +101,9 @@ export function Toolbar({
             {isSaved ? <BookmarkFilledIcon /> : <BookmarkIcon />}
           </ReaderToolbarButton>
           <FocusAnimatedAction
-            visible={showFocusExtras}
+            visible={canTranslate && (!readerFocusMode || showFocusExtras)}
             actionKey="translate-article"
-            label="Translate article"
+            label={translationLabel}
             onClick={onTranslateArticle}
             motionProps={actionMotionProps}
             tip={tip}

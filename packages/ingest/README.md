@@ -17,18 +17,19 @@ src/
 
 ## exports
 
-| import                               | purpose                                                                                          |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `@kyomi/ingest`                      | queue, feed, favicon, and helpers.                                                               |
-| `@kyomi/ingest/queue`                | job stream types and consumers.                                                                  |
-| `@kyomi/ingest/ingestion`            | feed refresh and parsing.                                                                        |
-| `@kyomi/ingest/document`             | `compileArticleDocument` (HTML plus KDM), `compileArticleHtml`, and the ordered compiler passes. |
-| `@kyomi/ingest/enrichment`           | KDM image-measure and embed-snapshot helpers (Node).                                             |
-| `@kyomi/ingest/favicon`              | server-side favicon fetch and resolution.                                                        |
-| `@kyomi/ingest/favicon/browser`      | client favicon proxy URL builder.                                                                |
-| `@kyomi/ingest/lib/article-identity` | article URL identity helpers.                                                                    |
-| `@kyomi/ingest/lib/html-entities`    | HTML entity decoding.                                                                            |
-| `@kyomi/ingest/lib/feed-text`        | the parser's text and URL helpers (`absoluteHttpUrl`), for scripts that must match the parser.   |
+| import                                    | purpose                                                                                          |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `@kyomi/ingest`                           | queue, feed, favicon, and helpers.                                                               |
+| `@kyomi/ingest/queue`                     | job stream types and consumers.                                                                  |
+| `@kyomi/ingest/ingestion`                 | feed refresh and parsing.                                                                        |
+| `@kyomi/ingest/ingestion/starter-bundles` | Browser-safe catalog of onboarding feed bundles with publisher origins for favicons.             |
+| `@kyomi/ingest/document`                  | `compileArticleDocument` (HTML plus KDM), `compileArticleHtml`, and the ordered compiler passes. |
+| `@kyomi/ingest/enrichment`                | KDM image-measure and embed-snapshot helpers (Node).                                             |
+| `@kyomi/ingest/favicon`                   | server-side favicon fetch and resolution.                                                        |
+| `@kyomi/ingest/favicon/browser`           | client favicon proxy URL builder.                                                                |
+| `@kyomi/ingest/lib/article-identity`      | article URL identity helpers.                                                                    |
+| `@kyomi/ingest/lib/html-entities`         | HTML entity decoding.                                                                            |
+| `@kyomi/ingest/lib/feed-text`             | the parser's text and URL helpers (`absoluteHttpUrl`), for scripts that must match the parser.   |
 
 ## commands
 

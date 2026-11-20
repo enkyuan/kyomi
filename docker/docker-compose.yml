@@ -118,7 +118,10 @@ services:
       JOB_PROCESS_CONCURRENCY: ${JOB_PROCESS_CONCURRENCY:-4}
       JOB_READ_COUNT: ${JOB_READ_COUNT:-10}
       JOB_STREAM_MAX_LENGTH: ${JOB_STREAM_MAX_LENGTH:-100000}
-      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment}
+      FEATURE_ARTICLE_TRANSLATIONS: ${FEATURE_ARTICLE_TRANSLATIONS:-false}
+      CLOUDFLARE_TRANSLATIONS_URL: ${CLOUDFLARE_TRANSLATIONS_URL:-}
+      CLOUDFLARE_TRANSLATIONS_TOKEN: ${CLOUDFLARE_TRANSLATIONS_TOKEN:-}
+      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment,jobs:article-translation}
       FEED_FETCH_HOST_LEASE_MS: ${FEED_FETCH_HOST_LEASE_MS:-30000}
       FEED_FETCH_HOST_RETRY_DELAY_MS: ${FEED_FETCH_HOST_RETRY_DELAY_MS:-250}
       FEATURE_GOOGLE_OAUTH: ${FEATURE_GOOGLE_OAUTH:-false}
@@ -197,7 +200,10 @@ services:
       JOB_PROCESS_CONCURRENCY: ${JOB_PROCESS_CONCURRENCY:-4}
       JOB_READ_COUNT: ${JOB_READ_COUNT:-10}
       JOB_STREAM_MAX_LENGTH: ${JOB_STREAM_MAX_LENGTH:-100000}
-      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment}
+      FEATURE_ARTICLE_TRANSLATIONS: ${FEATURE_ARTICLE_TRANSLATIONS:-false}
+      CLOUDFLARE_TRANSLATIONS_URL: ${CLOUDFLARE_TRANSLATIONS_URL:-}
+      CLOUDFLARE_TRANSLATIONS_TOKEN: ${CLOUDFLARE_TRANSLATIONS_TOKEN:-}
+      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment,jobs:article-translation}
       # Must not exceed stop_grace_period above.
       SHUTDOWN_BUDGET_MS: ${SHUTDOWN_BUDGET_MS:-30000}
       FEED_FETCH_HOST_LEASE_MS: ${FEED_FETCH_HOST_LEASE_MS:-30000}
@@ -253,7 +259,10 @@ services:
       JOB_PROCESS_CONCURRENCY: ${JOB_PROCESS_CONCURRENCY:-4}
       JOB_READ_COUNT: ${JOB_READ_COUNT:-10}
       JOB_STREAM_MAX_LENGTH: ${JOB_STREAM_MAX_LENGTH:-100000}
-      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment}
+      FEATURE_ARTICLE_TRANSLATIONS: ${FEATURE_ARTICLE_TRANSLATIONS:-false}
+      CLOUDFLARE_TRANSLATIONS_URL: ${CLOUDFLARE_TRANSLATIONS_URL:-}
+      CLOUDFLARE_TRANSLATIONS_TOKEN: ${CLOUDFLARE_TRANSLATIONS_TOKEN:-}
+      JOB_STREAMS: ${JOB_STREAMS:-jobs:feed-refresh,jobs:opml,jobs:article-extraction,jobs:document-enrichment,jobs:article-translation}
       FEED_FETCH_HOST_LEASE_MS: ${FEED_FETCH_HOST_LEASE_MS:-30000}
       FEED_FETCH_HOST_RETRY_DELAY_MS: ${FEED_FETCH_HOST_RETRY_DELAY_MS:-250}
     volumes:

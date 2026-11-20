@@ -1,5 +1,5 @@
 {
-  "id": "65bb0c2a-47ec-479e-9efd-32607f7e54be",
+  "id": "46a917a7-3b8a-4573-aac1-4a72b7623c2a",
   "prevId": "92da822a-9d66-4ea8-98c3-cec5ff578381",
   "version": "7",
   "dialect": "postgresql",
@@ -970,13 +970,6 @@
           "notNull": true,
           "default": "'idle'"
         },
-        "subscriber_count": {
-          "name": "subscriber_count",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": true,
-          "default": 0
-        },
         "refresh_generation": {
           "name": "refresh_generation",
           "type": "integer",
@@ -1067,14 +1060,14 @@
           "method": "btree",
           "with": {}
         },
-        "feeds_subscribed_due_idx": {
-          "name": "feeds_subscribed_due_idx",
+        "feeds_refresh_due_idx": {
+          "name": "feeds_refresh_due_idx",
           "columns": [
             {
               "expression": "next_refresh_at",
               "isExpression": false,
               "asc": true,
-              "nulls": "first"
+              "nulls": "last"
             },
             {
               "expression": "id",
@@ -1084,85 +1077,9 @@
             }
           ],
           "isUnique": false,
-          "where": "\"feeds\".\"subscriber_count\" > 0 AND \"feeds\".\"refresh_status\" NOT IN ('running', 'queued')",
+          "where": "\"feeds\".\"refresh_status\" NOT IN ('running', 'queued')",
           "concurrently": false,
           "method": "btree",
-          "with": {}
-        },
-        "feeds_catalog_due_idx": {
-          "name": "feeds_catalog_due_idx",
-          "columns": [
-            {
-              "expression": "next_refresh_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "first"
-            },
-            {
-              "expression": "id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "where": "\"feeds\".\"subscriber_count\" = 0 AND \"feeds\".\"refresh_status\" NOT IN ('running', 'queued')",
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "feeds_lease_idx": {
-          "name": "feeds_lease_idx",
-          "columns": [
-            {
-              "expression": "refresh_status",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "updated_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "where": "\"feeds\".\"refresh_status\" IN ('queued','running')",
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
-        "feeds_title_search_idx": {
-          "name": "feeds_title_search_idx",
-          "columns": [
-            {
-              "expression": "title",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last",
-              "opclass": "gin_trgm_ops"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "gin",
-          "with": {}
-        },
-        "feeds_url_search_idx": {
-          "name": "feeds_url_search_idx",
-          "columns": [
-            {
-              "expression": "url",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last",
-              "opclass": "gin_trgm_ops"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "gin",
           "with": {}
         },
         "feeds_refresh_status_idx": {
@@ -1369,61 +1286,6 @@
           "onUpdate": "no action"
         }
       },
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
-      "policies": {},
-      "checkConstraints": {},
-      "isRLSEnabled": false
-    },
-    "public.image_assets": {
-      "name": "image_assets",
-      "schema": "",
-      "columns": {
-        "source_key": {
-          "name": "source_key",
-          "type": "text",
-          "primaryKey": true,
-          "notNull": true
-        },
-        "object_key": {
-          "name": "object_key",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "content_type": {
-          "name": "content_type",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "size": {
-          "name": "size",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "etag": {
-          "name": "etag",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "last_modified": {
-          "name": "last_modified",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "expires_at": {
-          "name": "expires_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": true
-        }
-      },
-      "indexes": {},
-      "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {},
       "policies": {},
@@ -3612,28 +3474,6 @@
           "method": "btree",
           "with": {}
         },
-        "feed_items_extraction_backfill_idx": {
-          "name": "feed_items_extraction_backfill_idx",
-          "columns": [
-            {
-              "expression": "created_at",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            },
-            {
-              "expression": "id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "where": "\"feed_items\".\"content_source\" = 'link_only' AND \"feed_items\".\"extracted_content_status\" = 'pending' AND \"feed_items\".\"extracted_content_updated_at\" IS NULL",
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        },
         "feed_items_published_id_idx": {
           "name": "feed_items_published_id_idx",
           "columns": [
@@ -4917,6 +4757,66 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.user_onboarding": {
+      "name": "user_onboarding",
+      "schema": "",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "draft": {
+          "name": "draft",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{}'::jsonb"
+        },
+        "username": {
+          "name": "username",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "completed_at": {
+          "name": "completed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "user_onboarding_user_id_users_id_fk": {
+          "name": "user_onboarding_user_id_users_id_fk",
+          "tableFrom": "user_onboarding",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "user_onboarding_username_key": {
+          "name": "user_onboarding_username_key",
+          "nullsNotDistinct": false,
+          "columns": [
+            "username"
+          ]
+        }
+      },
       "policies": {},
       "checkConstraints": {},
       "isRLSEnabled": false

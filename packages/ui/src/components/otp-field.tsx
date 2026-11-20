@@ -18,7 +18,7 @@ export function OTPField({
 }: OTPFieldProps): React.ReactElement {
   return (
     <OTPFieldPrimitive.Root
-      className={cn("flex items-center gap-2 has-disabled:opacity-64", className)}
+      className={cn("flex items-center gap-2 has-disabled:opacity-(--opacity-disabled)", className)}
       data-size={size}
       data-slot="otp-field"
       {...props}
@@ -32,7 +32,7 @@ export function OTPFieldInput({ className, ...props }: OTPFieldInputProps): Reac
   return (
     <OTPFieldPrimitive.Input
       className={cn(
-        "relative inline-flex in-[[data-slot=otp-field][data-size=lg]]:size-10 size-9 items-center justify-center text-center rounded-lg border border-input bg-background not-dark:bg-clip-padding in-[[data-slot=otp-field][data-size=lg]]:text-lg text-base text-foreground shadow-xs/5 outline-none ring-ring/24 transition-shadow before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] not-focus-visible:not-aria-invalid:before:shadow-[0_1px_--theme(--color-black/4%)] aria-invalid:border-destructive/36 focus-visible:z-10 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/24 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/16 sm:in-[[data-slot=otp-field][data-size=lg]]:size-9 sm:size-8 sm:in-[[data-slot=otp-field][data-size=lg]]:text-base sm:text-sm dark:bg-input/32 dark:focus-visible:aria-invalid:ring-destructive/24 dark:not-focus-visible:not-aria-invalid:before:shadow-[0_-1px_--theme(--color-white/6%)] [focus-visible,[aria-invalid]]:shadow-none focus-visible:placeholder:text-transparent",
+        "relative inline-flex in-[[data-slot=otp-field][data-size=lg]]:size-10 size-9 items-center justify-center text-center rounded-lg border border-input bg-background not-dark:bg-clip-padding in-[[data-slot=otp-field][data-size=lg]]:text-lg text-base text-foreground shadow-xs/5 outline-none ring-ring/24 transition-shadow before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-var(--stroke-width))] not-focus-visible:not-aria-invalid:before:shadow-(--shadow-edge-raised) aria-invalid:border-destructive/36 focus-visible:z-10 focus-visible:border-ring focus-visible:ring-(length:--field-ring-width) focus-visible:ring-ring/24 focus-visible:aria-invalid:border-destructive/64 focus-visible:aria-invalid:ring-destructive/16 sm:in-[[data-slot=otp-field][data-size=lg]]:size-9 sm:size-8 sm:in-[[data-slot=otp-field][data-size=lg]]:text-base sm:text-sm dark:bg-input/32 dark:focus-visible:aria-invalid:ring-destructive/24 dark:not-focus-visible:not-aria-invalid:before:shadow-(--shadow-edge-highlight) [focus-visible,[aria-invalid]]:shadow-none focus-visible:placeholder:text-transparent",
         className,
       )}
       data-slot="otp-field-input"

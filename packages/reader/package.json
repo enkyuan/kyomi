@@ -30,6 +30,7 @@
     "./schemas/message": "./src/schemas/message.ts",
     "./schemas/opml": "./src/schemas/opml.ts",
     "./schemas/preferences": "./src/schemas/preferences.ts",
+    "./schemas/translation": "./src/schemas/translation.ts",
     "./schemas/json": "./src/schemas/json.ts",
     "./lib/errors": "./src/lib/errors.ts",
     "./document/math-svg": "./src/core/document/math-svg.ts"

@@ -64,10 +64,18 @@ type FeatureCredentialRule = {
   credentials: readonly string[];
 };
 
+const translationWorkerUrl = httpsUrlFromEnv.refine(
+  (value) => new URL(value).pathname.endsWith("/translate"),
+  { error: "must point at the Worker's /translate route" },
+);
 const FEATURE_CREDENTIAL_RULES: readonly FeatureCredentialRule[] = [
   {
     flag: "GARAGE_S3_ENDPOINT",
     credentials: ["GARAGE_S3_BUCKET", "GARAGE_S3_ACCESS_KEY", "GARAGE_S3_SECRET_KEY"],
+  },
+  {
+    flag: "FEATURE_ARTICLE_TRANSLATIONS",
+    credentials: ["CLOUDFLARE_TRANSLATIONS_URL", "CLOUDFLARE_TRANSLATIONS_TOKEN"],
   },
   { flag: "FEATURE_GOOGLE_OAUTH", credentials: ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET"] },
   { flag: "FEATURE_SOURCE_YOUTUBE", credentials: ["YOUTUBE_API_KEY"] },
@@ -279,6 +287,7 @@ export function loadEnv(source: RawEnv = process.env) {
         "jobs:opml",
         "jobs:article-extraction",
         "jobs:document-enrichment",
+        "jobs:article-translation",
       ]),
       FEED_FETCH_HOST_LEASE_MS: z.coerce.number().int().min(1_000).max(60_000).default(30_000),
       FEED_FETCH_HOST_RETRY_DELAY_MS: z.coerce.number().int().min(10).max(5_000).default(250),
@@ -293,6 +302,9 @@ export function loadEnv(source: RawEnv = process.env) {
        * pattern of "absent means fall back," not "absent means error."
        */
       CLOUDFLARE_EMBEDDINGS_URL: embeddingsWorkerUrlFromEnv.optional(),
+      CLOUDFLARE_TRANSLATIONS_URL: translationWorkerUrl.optional(),
+      CLOUDFLARE_TRANSLATIONS_TOKEN: z.string().min(1).optional(),
+      FEATURE_ARTICLE_TRANSLATIONS: booleanFromEnv.default(false),
       CLOUDFLARE_EMBEDDINGS_TOKEN: z.string().min(1).optional(),
       /**
        * Category read path. Embedding (the default) shows the trained head's labels for the active

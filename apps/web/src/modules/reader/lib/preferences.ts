@@ -51,7 +51,16 @@ export function sanitizeReaderPreferences(value: unknown): ReaderPreferences {
     return DEFAULT_READER_PREFERENCES;
   }
   const record = value as Partial<ReaderPreferences>;
+  let language: string | undefined;
+  if (typeof record.language === "string") {
+    try {
+      language = Intl.getCanonicalLocales(record.language)[0];
+    } catch {
+      /* Ignore malformed cached preferences. */
+    }
+  }
   return {
+    ...(language ? { language } : {}),
     defaultMode: parseDefaultMode(record.defaultMode),
     fontSizePx: clampReaderFontSize(record.fontSizePx),
     contentWidth: parseContentWidth(record.contentWidth),

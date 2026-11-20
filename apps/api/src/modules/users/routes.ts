@@ -1,3 +1,4 @@
+import { registerOnboardingRoutes } from "./onboarding/routes";
 import type { Elysia } from "elysia";
 import type { ManagedRuntime } from "effect";
 import type { Db } from "@adapters/db/service";
@@ -14,7 +15,7 @@ import type { UpdateUserPreferencesDto } from "./preferences/types";
 type UserRuntime = ManagedRuntime.ManagedRuntime<Db, unknown>;
 
 export function registerUserRoutes(app: Elysia, runtime: UserRuntime) {
-  return app
+  return registerOnboardingRoutes(app, runtime)
     .get(
       "/me/preferences",
       (context) => {

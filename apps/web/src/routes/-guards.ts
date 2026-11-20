@@ -16,3 +16,13 @@ export function requireGuest(authState: AvailableAuthSessionState, returnTo?: st
     throw redirect({ href: resolveAuthReturnTo(returnTo), replace: true });
   }
 }
+
+export function requireCompletedOnboarding(status: "pending" | "complete", returnTo: string) {
+  if (status === "pending") {
+    throw redirect({
+      to: "/onboarding",
+      search: { redirect: resolveAuthReturnTo(returnTo), step: undefined },
+      replace: true,
+    });
+  }
+}

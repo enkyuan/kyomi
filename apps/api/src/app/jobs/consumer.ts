@@ -1,5 +1,6 @@
 import { Effect, Layer } from "effect";
-import { FEED_REFRESH_JOBS_STREAM_KEY } from "@kyomi/ingest";
+import { ARTICLE_TRANSLATION_JOBS_STREAM_KEY, FEED_REFRESH_JOBS_STREAM_KEY } from "@kyomi/ingest";
+import { TRANSLATION_LEASE_MS } from "@modules/articles/reader/translations/store";
 import { developmentSchemaReady } from "@adapters/db/guard";
 import { AppLogger } from "@adapters/logger/service";
 import { startConsumers, type StreamConsumer } from "@adapters/queue/consumer";
@@ -32,7 +33,9 @@ export const WorkerLive = Layer.effectDiscard(
         pendingMinIdleMs:
           streamKey === FEED_REFRESH_JOBS_STREAM_KEY
             ? config.FEED_REFRESH_RUNNING_LEASE_MS
-            : undefined,
+            : streamKey === ARTICLE_TRANSLATION_JOBS_STREAM_KEY
+              ? TRANSLATION_LEASE_MS + 1000
+              : undefined,
         refillWhileRunning: streamKey === FEED_REFRESH_JOBS_STREAM_KEY,
         count: config.JOB_READ_COUNT,
         concurrency: config.JOB_PROCESS_CONCURRENCY,

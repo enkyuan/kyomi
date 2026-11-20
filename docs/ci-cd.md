@@ -14,22 +14,24 @@ Kyomi's PR and `main` CI runs on CircleCI (`.circleci/`). GitHub Actions keeps o
 
 The setup job maps changed paths to areas. Docs, Markdown, `.agents/`, `.pi/` and `.github/` changes reach no build or test.
 
-| Area      | Paths                                                                                                        | Jobs                                                            |
-| --------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
-| `app`     | Anything outside `packages/catalog/` (and the excluded paths above)                                          | `static-quality`, then `web-tests`, `api-tests`, `build`        |
-| `docker`  | Dockerfiles, `.dockerignore`, `.bun-version`, `bun.lock`, `package.json` manifests, `turbo.json`, `patches/` | `docker-build` (on `main`, any `app` change also builds images) |
-| `catalog` | `packages/catalog/**`, `.circleci/**`                                                                        | `catalog-typecheck`                                             |
+| Area      | Paths                                                                                            | Jobs                                                            |
+| --------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| `app`     | Anything outside `packages/catalog/` (and the excluded paths above)                              | `static-quality`, `web-tests`, `api-tests`, `build-web`, `build-mobile` |
+| `mobile`  | `apps/mobile/`, any shared package outside `packages/catalog/`, lockfile, manifest, `turbo.json`, `.bun-version` | `build-mobile` on PRs (always runs on `main`)                   |
+| `docker`  | Dockerfiles, `.dockerignore`, `.bun-version`, `bun.lock`, `package.json` manifests, `turbo.json` | `docker-build` (on `main`, any `app` change also builds images) |
+| `catalog` | `packages/catalog/**`, `.circleci/**`                                                            | `catalog-typecheck`                                             |
 
-`web-tests`, `api-tests`, `build` and `docker-build` wait for `static-quality`: a formatting or type error fails the pipeline in one cheap job instead of five parallel ones. `static-quality` restores Turbo's local cache, so packages whose inputs did not change replay their lint/format/typecheck result.
+Only `docker-build` waits for `static-quality`; every other job starts immediately, so a run takes as long as its slowest job. `build-mobile` exports iOS on PRs and all platforms on `main`. `static-quality` restores Turbo's local cache, so packages whose inputs did not change replay their lint/format/typecheck result.
 
 ## Required Branch Check
 
-Use `ci-summary` as the single required branch-protection check. Every job is always part of the `ci` workflow; a job whose area did not change finishes in seconds without installing anything, so `ci-summary` always reports. It depends on:
+Use `ci-summary` as the single required branch-protection check. It is always reported: the `ci` workflow (full gate) runs when the `app` area changed, and `ci-light` (secret scan, catalog typecheck, `ci-summary`) runs otherwise, so docs-only changes never provision service containers or large executors. Inside `ci`, a job whose area did not change finishes in seconds. In `ci`, `ci-summary` depends on:
 
 - `static-quality`
 - `web-tests`
 - `api-tests`
-- `build`
+- `build-web`
+- `build-mobile`
 - `docker-build`
 - `catalog-typecheck`
 
@@ -45,6 +47,13 @@ These settings are part of the CI design; set them once in the CircleCI project:
 
 A commit message containing `[ci skip]` or `[skip ci]` starts no pipeline.
 
+## Cost controls
+
+- `api-tests` is sharded across 2 containers (`parallelism: 2`, `medium+`) with `circleci tests split --split-by=timings`; JUnit output goes to `store_test_results` so later runs balance by recorded timings. Raise `parallelism` if the job becomes the critical path.
+- Turbo caches for `static-quality` and `build` are saved from `main` only; branches restore `main`'s cache and upload nothing.
+- Every test and build step has `no_output_timeout: 10m` and a `timeout` wrapper, so a hung step fails instead of holding a container.
+- `web-tests` and `api-tests` skip the oxfmt/oxlint prefetch.
+
 ## Job Ownership
 
 | Job                 | Owns                                                                                               | Local equivalent                                                                   |
@@ -52,7 +61,8 @@ A commit message containing `[ci skip]` or `[skip ci]` starts no pipeline.
 | `static-quality`    | Env encryption, formatting, linting, import boundaries, app typechecking, Drizzle migration drift. | `bun run ci:static`                                                                |
 | `web-tests`         | Web integration tests under `tests/web`.                                                           | `bun run ci:test:web`                                                              |
 | `api-tests`         | API integration tests with Postgres, Redis, and Meilisearch.                                       | `bun run ci:test:api`                                                              |
-| `build`             | Turbo workspace builds and the breakpoint CSS check.                                               | `bun run ci:build`                                                                 |
+| `build-web`         | Web and www builds, breakpoint CSS check, bundle budget.                                           | `bun run ci:build:web`                                                             |
+| `build-mobile`      | Expo export (iOS on PRs, all platforms on `main`).                                                 | `bun run ci:build:mobile` (`MOBILE_PLATFORM=all` for every platform)               |
 | `docker-build`      | Local API and Web image build smoke.                                                               | `bun run ci:docker:build`                                                          |
 | `catalog-typecheck` | Catalog dependency sync and `ty` typecheck.                                                        | `bun run --cwd packages/catalog setup && bun run --cwd packages/catalog typecheck` |
 

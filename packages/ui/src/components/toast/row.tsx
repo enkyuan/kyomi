@@ -16,7 +16,7 @@ import { ToastTitle } from "./text";
  * corner, and its own padding brings its label to the same optical inset.
  */
 export const TOAST_CONTENT_CLASS_NAME =
-  "pointer-events-auto flex min-h-10 items-center gap-2 overflow-hidden ps-3 pe-[13px] text-sm leading-5 transition-opacity duration-150 has-data-[slot=toast-action]:pe-(--toast-inset) data-behind:not-data-expanded:pointer-events-none data-behind:opacity-0 data-expanded:opacity-100";
+  "pointer-events-auto flex min-h-10 items-center gap-2 overflow-hidden ps-3 pe-[13px] text-sm leading-5 transition-opacity duration-(--duration-control) has-data-[slot=toast-action]:pe-(--toast-inset) data-behind:not-data-expanded:pointer-events-none data-behind:opacity-0 data-expanded:opacity-100";
 
 /**
  * One line: status icon, title, then an end slot for a count (`4/10`) or the toast's action
@@ -52,7 +52,7 @@ export function ToastRow({
       ) : null}
       {toast.actionProps ? (
         <Toast.Action
-          className="relative h-7 shrink-0 cursor-pointer rounded-[calc(var(--toast-radius)-var(--toast-inset))] bg-foreground/8 px-2 font-medium text-foreground outline-none transition-[background-color,scale] duration-150 ease-out-quint after:absolute after:-inset-(--toast-inset) hover:bg-foreground/12 focus-visible:ring-2 focus-visible:ring-ring motion-safe:active:scale-96 active:bg-foreground/16"
+          className="relative h-7 shrink-0 cursor-pointer rounded-[calc(var(--toast-radius)-var(--toast-inset))] bg-foreground/8 px-2 font-medium text-foreground outline-none transition-[background-color,scale] duration-(--duration-control) ease-out-quint after:absolute after:-inset-(--toast-inset) hover:bg-foreground/12 focus-visible:ring-(length:--focus-ring-width) focus-visible:ring-ring motion-safe:active:scale-96 active:bg-foreground/16"
           data-slot="toast-action"
         >
           {toast.actionProps.children}

@@ -53,6 +53,7 @@ describe("articles.routes", () => {
       "post /articles/:articleId/extract-full-text",
       "post /articles/:articleId/summarize",
       "post /articles/:articleId/translate",
+      "get /articles/:articleId/translations/:translationId",
       "post /articles",
       "post /articles/:articleId/view",
       "post /articles/:articleId/reports/broken",
