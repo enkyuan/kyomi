@@ -1,3 +1,4 @@
+import { offlineOwner } from "@lib/offline/library";
 import { fetchMobileApiJson } from "@/lib/api";
 import { createAppStorage } from "@lib/storage";
 import { createProgressBuffer } from "./progress-buffer";
@@ -7,11 +8,15 @@ import { createProgressSync, type ReadingProgressResult } from "./progress-sync"
 export const readingProgressSync = createProgressSync({
   buffer: createProgressBuffer(createAppStorage("reading-progress")),
   send: async (articleId, body) => {
+    const owner = offlineOwner();
     const response = await fetchMobileApiJson<{ readingProgress: ReadingProgressResult }>(
       `/api/v1/articles/${encodeURIComponent(articleId)}/progress`,
       {
         body: JSON.stringify(body),
-        headers: { "content-type": "application/json" },
+        headers: {
+          "content-type": "application/json",
+          ...(owner ? { "x-kyomi-offline-owner": owner } : {}),
+        },
         method: "PUT",
       },
     );

@@ -58,6 +58,16 @@ serviceWorker.addEventListener("fetch", (event) => {
   }
 
   const url = new URL(request.url);
+  if (
+    url.origin === serviceWorker.location.origin &&
+    request.mode === "navigate" &&
+    (url.pathname === "/" || /^\/inbox(?:\/|$)/.test(url.pathname))
+  ) {
+    event.respondWith(
+      fetch(request).catch(async () => (await caches.match("/offline.html")) ?? Response.error()),
+    );
+    return;
+  }
   if (url.origin !== serviceWorker.location.origin || !PRECACHE_URLS.includes(url.pathname)) {
     return;
   }

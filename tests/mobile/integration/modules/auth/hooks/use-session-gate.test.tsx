@@ -3,6 +3,8 @@
 //   why_new=the gate only mirrored the session, so a user switch that skipped sign-out exposed the previous account's data;
 //   seam=the real hook and real stores, with the auth client's session stubbed and effects run in jsdom;
 //   no_claim=green does not prove the router swaps stacks as the gate flips or how long the blank frame lasts on a device.
+import { mockOfflineSqlite } from "../../../lib/offline-sqlite";
+mockOfflineSqlite();
 import {
   afterAll,
   afterEach,

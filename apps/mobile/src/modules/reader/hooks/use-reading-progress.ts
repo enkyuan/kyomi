@@ -1,3 +1,5 @@
+import { editProgress } from "@kyomi/reader/offline";
+import { library, offlineOwner } from "@lib/offline/library";
 import { useQueryClient } from "@tanstack/react-query";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import { AppState } from "react-native";
@@ -49,12 +51,24 @@ export function useReadingProgress(article: ReaderArticle | undefined) {
     timer.setVisible(AppState.currentState === "active");
     sessionRef.current = { session, timer };
 
+    const owner = offlineOwner();
     const flush = () => {
       const body = session.takeUpdate();
       if (!body) return;
 
+      if (owner && owner !== offlineOwner()) return;
+      if (owner) void editProgress(library, owner, articleId, body).catch(() => {});
       void readingProgressSync.push(articleId, body).then((readingProgress) => {
         if (readingProgress) {
+          if (owner)
+            void library
+              .edit(owner, articleId, (row) =>
+                row?.progress?.clientUpdatedAt === body.clientUpdatedAt &&
+                row.progress.sessionId === body.sessionId
+                  ? { ...row, progress: null }
+                  : row,
+              )
+              .catch(() => {});
           applyReadingProgressToCache(queryClient, articleId, readingProgress, body);
         }
       });

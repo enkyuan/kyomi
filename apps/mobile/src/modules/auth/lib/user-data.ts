@@ -1,3 +1,4 @@
+import { clearOfflineLibrary } from "@lib/offline/library";
 import { clearQueryCache } from "@lib/query/client";
 import { createAppStorage } from "@lib/storage";
 import { clearReaderPositions } from "@modules/reader/lib/position";
@@ -13,12 +14,13 @@ const OWNER_KEY = "user-id";
  * in flight) that would otherwise be sent under the next session. The theme is a device setting and
  * stays.
  */
-export function clearUserData(): void {
+export function clearUserData(nextOwner?: string): void {
+  owner.remove(OWNER_KEY);
+  clearOfflineLibrary(nextOwner);
   clearQueryCache();
   clearRecentArticles();
   clearReaderPositions();
   readingProgressSync.reset();
-  owner.remove(OWNER_KEY);
 }
 
 export function isSessionOwner(userId: string): boolean {
@@ -33,6 +35,6 @@ export function isSessionOwner(userId: string): boolean {
 export function adoptSessionUser(userId: string): void {
   if (isSessionOwner(userId)) return;
 
-  clearUserData();
+  clearUserData(userId);
   owner.set(OWNER_KEY, userId);
 }

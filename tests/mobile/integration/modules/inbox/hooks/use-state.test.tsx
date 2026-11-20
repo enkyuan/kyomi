@@ -3,6 +3,8 @@
 //   why_new=the optimistic update snapshotted the lists and restored them on any failure, with nothing guarding against clearUserData in between;
 //   seam=the real mutation hook and real query client in jsdom, with fetch held open so the sign-out lands between the optimistic update and the failure;
 //   no_claim=green does not prove the persister's write on a device or how two overlapping changes to one list settle after the refetch.
+import { mockOfflineSqlite } from "../../../lib/offline-sqlite";
+mockOfflineSqlite();
 import {
   afterAll,
   afterEach,

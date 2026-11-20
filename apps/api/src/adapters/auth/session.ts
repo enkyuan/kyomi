@@ -15,7 +15,8 @@ export type AuthContext = {
 export const requireAuth = Effect.fn("auth.requireAuth")(function* (headers: Headers) {
   const auth = yield* Auth;
   const userId = yield* auth.sessionUserId(headers);
-  if (userId === null) {
+  const offlineOwner = headers.get("x-kyomi-offline-owner");
+  if (userId === null || (offlineOwner !== null && offlineOwner !== userId)) {
     return yield* new Unauthorized({ message: "Unauthorized", code: "UNAUTHORIZED" });
   }
   return { userId } satisfies AuthContext;

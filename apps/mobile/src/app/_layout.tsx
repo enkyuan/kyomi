@@ -2,7 +2,9 @@ import "../uniwind.css";
 
 import { Stack } from "expo-router/stack";
 import { ThemeProvider, DarkTheme, DefaultTheme } from "expo-router/react-navigation";
-import { useColorScheme } from "react-native";
+import { useNetworkState } from "expo-network";
+import { offlineOwner, syncLibrary } from "@lib/offline/library";
+import { AppState, useColorScheme } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { useEffect } from "react";
 import * as SplashScreen from "expo-splash-screen";
@@ -25,6 +27,7 @@ import {
   JetBrainsMono_400Regular,
   JetBrainsMono_500Medium,
 } from "@expo-google-fonts/jetbrains-mono";
+import { defaultShouldDehydrateQuery } from "@tanstack/react-query";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { persister, queryClient } from "@lib/query/client";
 import { useSessionGate } from "@modules/auth/hooks/use-session-gate";
@@ -37,6 +40,27 @@ restoreThemeMode();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const { isAuthenticated, isPending } = useSessionGate();
+  const network = useNetworkState();
+  const offline = network.isConnected === false || network.isInternetReachable === false;
+  const owner = offlineOwner();
+  const offlineLaunch = Boolean(owner && offline);
+  useEffect(() => {
+    if (!isAuthenticated || !owner || offline) return;
+    const flush = () => {
+      void syncLibrary(owner).catch(() => {});
+    };
+    flush();
+    const sub = AppState.addEventListener("change", (state) => {
+      if (state === "active") flush();
+    });
+    const retry = setInterval(() => {
+      if (AppState.currentState === "active") flush();
+    }, 60_000);
+    return () => {
+      sub.remove();
+      clearInterval(retry);
+    };
+  }, [isAuthenticated, owner, offline]);
   const [fontsLoaded] = useFonts({
     [FONT_FAMILIES.inter.regular]: Inter_400Regular,
     [FONT_FAMILIES.inter.medium]: Inter_500Medium,
@@ -53,22 +77,35 @@ export default function RootLayout() {
   });
 
   useEffect(() => {
-    if (fontsLoaded && !isPending) void SplashScreen.hideAsync();
-  }, [fontsLoaded, isPending]);
+    if (fontsLoaded && (!isPending || offlineLaunch)) void SplashScreen.hideAsync();
+  }, [fontsLoaded, isPending, offlineLaunch]);
 
-  if (!fontsLoaded || isPending) return null;
+  if (!fontsLoaded || (isPending && !offlineLaunch)) return null;
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <PersistQueryClientProvider client={queryClient} persistOptions={{ persister }}>
+      <PersistQueryClientProvider
+        client={queryClient}
+        persistOptions={{
+          persister,
+          buster: "offline-library-v1",
+          dehydrateOptions: {
+            shouldDehydrateQuery: (query) =>
+              query.queryKey[0] !== "reader" && defaultShouldDehydrateQuery(query),
+          },
+        }}
+      >
         <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-          <Stack screenOptions={{ headerShown: false }}>
-            <Stack.Protected guard={isAuthenticated}>
+          <Stack key={owner ?? "anonymous"} screenOptions={{ headerShown: false }}>
+            <Stack.Protected guard={isAuthenticated && !offlineLaunch}>
               <Stack.Screen name="(protected)" />
             </Stack.Protected>
-            <Stack.Protected guard={!isAuthenticated}>
+            <Stack.Protected guard={!isAuthenticated && !offlineLaunch}>
               <Stack.Screen name="index" />
               <Stack.Screen name="(auth)" />
+            </Stack.Protected>
+            <Stack.Protected guard={!!owner && (offlineLaunch || isAuthenticated)}>
+              <Stack.Screen name="offline" />
             </Stack.Protected>
           </Stack>
         </ThemeProvider>

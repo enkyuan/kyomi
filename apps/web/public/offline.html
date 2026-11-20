@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Offline Read Later · Kyomi</title>
+    <style>
+      body {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 2rem 1.25rem;
+        font: 1rem/1.55 system-ui;
+      }
+      article {
+        white-space: pre-wrap;
+        font:
+          1.2rem/1.65 Georgia,
+          serif;
+      }
+      button,
+      a {
+        font: inherit;
+        margin: 0.35rem 0.65rem 0.35rem 0;
+      }
+      button {
+        padding: 0.4rem 0.7rem;
+      }
+      li {
+        margin: 0.6rem 0;
+      }
+      nav {
+        margin: 1rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/inbox">Inbox</a>
+    <main>
+      <h1>Offline Read Later</h1>
+      <p id="status" role="status"></p>
+      <section id="view"></section>
+    </main>
+    <script type="module" src="/offline-reader.js"></script>
+  </body>
+</html>

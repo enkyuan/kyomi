@@ -28,6 +28,19 @@ describe("requireAuth", () => {
     expect(context).toEqual({ userId: "user_123" });
   });
 
+  test("binds offline replay to the authenticated account", async () => {
+    const layer = authWith(() => Effect.succeed("second"));
+    const headers = new Headers({ "x-kyomi-offline-owner": "first" });
+    const error = await Effect.runPromise(
+      Effect.flip(requireAuth(headers)).pipe(Effect.provide(layer)),
+    );
+    expect(error._tag).toBe("Unauthorized");
+    headers.set("x-kyomi-offline-owner", "second");
+    expect(await Effect.runPromise(requireAuth(headers).pipe(Effect.provide(layer)))).toEqual({
+      userId: "second",
+    });
+  });
+
   test("fails with Unauthorized (401) when there is no session", async () => {
     const layer = authWith(() => Effect.succeed(null));
 

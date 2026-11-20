@@ -32,7 +32,12 @@ export function registerArticleProgressRoutes(app: Elysia, runtime: ProgressRunt
       await enforceRateLimitForContext(context, userId, readingProgressWriteRateLimit);
       const readingProgress = await runEffect(
         { runtime, request, requestId, userId },
-        writeArticleProgressForUser(userId, params.articleId, body),
+        writeArticleProgressForUser(
+          userId,
+          params.articleId,
+          body,
+          request.headers.has("x-kyomi-offline-owner"),
+        ),
       );
       return { readingProgress };
     },

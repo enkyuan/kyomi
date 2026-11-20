@@ -348,6 +348,7 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
   });
 
 export type SaveReadingProgressInput = {
+  owner?: string;
   itemId: string;
   body: ReadingProgressUpdateBody;
 };
@@ -366,6 +367,7 @@ export const saveReadingProgress = createServerFn({ method: "POST" })
     const forwarded = buildForwardHeaders(getRequestHeaders());
     forwarded.set("content-type", "application/json");
 
+    if (data.owner) forwarded.set("x-kyomi-offline-owner", data.owner);
     const readingProgress = await fetchValidatedJson(readingProgressDtoSchema, async () => {
       const response = await apiJson<{ readingProgress: unknown }>(
         articlePath(data.itemId, "progress"),

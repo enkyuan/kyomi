@@ -3,6 +3,8 @@
 //   why_new=nothing tied cached data to an account, so only an explicit sign-out could have cleaned up, and it did not;
 //   seam=real stores and query client over an in-memory localStorage, with the API stubbed to fail;
 //   no_claim=green does not prove MMKV clearAll on a device or that the session gate runs this before a screen renders (see use-session-gate).
+import { mockOfflineSqlite } from "../../../lib/offline-sqlite";
+mockOfflineSqlite();
 import {
   afterAll,
   afterEach,

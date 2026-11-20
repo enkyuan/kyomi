@@ -25,14 +25,34 @@ function write(
   articleId: string,
   update: ReadingProgressUpdateBody,
   now: Date,
+  replay = false,
 ) {
   return Effect.gen(function* () {
     yield* TestClock.setTime(now.getTime());
-    return yield* writeArticleProgressForUser(userId, articleId, update);
+    return yield* writeArticleProgressForUser(userId, articleId, update, replay);
   }).pipe(Effect.provide(Layer.mergeAll(fakeDb(db as never), testConfig(), TestClock.layer())));
 }
 
 describe("writeArticleProgressForUser", () => {
+  test("replaying an acknowledged or older offline position leaves session accounting unchanged", async () => {
+    const db = createProgressDb({ feedItems: [feedItemRow()] });
+    const update = body();
+    const first = await Effect.runPromise(write(db, "user-1", FEED_ITEM_ID, update, NOW, true));
+    const later = new Date(NOW.getTime() + 60_000);
+    for (const retry of [
+      update,
+      {
+        ...update,
+        sessionId: SESSION_B,
+        clientUpdatedAt: new Date(NOW.getTime() - 60_000).toISOString(),
+      },
+    ]) {
+      expect(
+        await Effect.runPromise(write(db, "user-1", FEED_ITEM_ID, retry, later, true)),
+      ).toEqual(first);
+    }
+    expect(db.updates).toHaveLength(0);
+  });
   test("first write for a feed item inserts one row with the counted words", async () => {
     const db = createProgressDb({ feedItems: [feedItemRow()] });
 

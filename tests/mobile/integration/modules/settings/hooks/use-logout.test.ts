@@ -3,6 +3,8 @@
 //   why_new=useLogout only called signOut, so every persisted store survived a sign-out and nothing tested it;
 //   seam=real stores and real query client over an in-memory localStorage, with the auth client and the network stubbed;
 //   no_claim=green does not prove MMKV clearAll on a device or that the Better Auth cookie is cleared (that is the auth client's job).
+import { mockOfflineSqlite } from "../../../lib/offline-sqlite";
+mockOfflineSqlite();
 import {
   afterAll,
   afterEach,

@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
-import { defineConfig, transformWithOxc } from "vite";
+import { build, defineConfig, transformWithOxc } from "vite";
 import type { Plugin } from "vite";
 import { devtools } from "@tanstack/devtools-vite";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -75,7 +75,28 @@ function staticAssetServiceWorkerPlugin(): Plugin {
         .filter((asset) => STATIC_ASSET_EXTENSIONS.test(asset.fileName))
         .map((asset) => `/${asset.fileName}`)
         .sort();
-      const version = createHash("sha256").update(urls.join("\n")).digest("hex").slice(0, 16);
+      const offline = await build({
+        configFile: false,
+        publicDir: false,
+        logLevel: "error",
+        build: {
+          write: false,
+          lib: { entry: "src/lib/offline/shell.ts", formats: ["es"], fileName: "offline-reader" },
+        },
+      });
+      const output = (Array.isArray(offline) ? offline : [offline]).flatMap((result) =>
+        "output" in result ? result.output : [],
+      );
+      const script = output.find((entry) => entry.type === "chunk");
+      if (!script || script.type !== "chunk") throw new Error("Missing offline reader bundle");
+      this.emitFile({ type: "asset", fileName: "offline-reader.js", source: script.code });
+      urls.push("/offline.html", "/offline-reader.js");
+      const version = createHash("sha256")
+        .update(urls.join("\n"))
+        .update(script.code)
+        .update(await readFile("public/offline.html"))
+        .digest("hex")
+        .slice(0, 16);
 
       const source = (
         await transformWithOxc(serviceWorkerSource, "service-worker.ts", {
@@ -165,6 +186,15 @@ const config = defineConfig(({ command }) => {
           viteReact(),
           tailwindcss(),
           staticAssetServiceWorkerPlugin(),
+          {
+            name: "offline-reader-dev",
+            configureServer(server) {
+              server.middlewares.use((req, _res, next) => {
+                if (req.url === "/offline-reader.js") req.url = "/src/lib/offline/shell.ts";
+                next();
+              });
+            },
+          },
           nitro({
             dotenv: false,
             rollupConfig: { external: [/^@sentry\//] },

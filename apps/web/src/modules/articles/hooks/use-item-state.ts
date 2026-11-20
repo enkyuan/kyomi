@@ -1,5 +1,9 @@
 "use client";
 
+import { editFlags } from "@kyomi/reader/offline";
+import { library, owner as offlineOwner } from "@kyomi/reader/offline/indexeddb";
+import { syncLibrary } from "@lib/offline/sync";
+import { useAuth } from "@integrations/better-auth/provider";
 import { useEffect, useRef } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toastManager } from "@kyomi/ui/components/toast";
@@ -31,21 +35,36 @@ export function useInboxItemStateMutation({
 }: { reportErrors?: boolean } = {}) {
   const queryClient = useQueryClient();
 
+  const { user } = useAuth();
   return useMutation({
-    mutationFn: ({ itemId, patch }: InboxItemStateMutationInput) =>
-      updateInboxItemState({
+    networkMode: "always",
+    mutationFn: async ({ itemId, patch }: InboxItemStateMutationInput) => {
+      if (user && patch.isHidden === undefined && typeof indexedDB !== "undefined") {
+        const detail = getInboxItemCacheSnapshot(queryClient, itemId).detail?.item;
+        await editFlags(library, user.id, itemId, patch, detail ?? undefined);
+        await syncLibrary(user.id).catch(() => {});
+        return { message: "Saved on device" };
+      }
+      return updateInboxItemState({
         data: {
           itemId,
           ...patch,
         },
-      }),
+      });
+    },
     onMutate: async ({ itemId, patch, removeFromList }) => {
       await queryClient.cancelQueries({ queryKey: queryKeys.inbox.all });
       const snapshot = getInboxItemCacheSnapshot(queryClient, itemId);
       updateInboxItemCaches(queryClient, itemId, patch, Boolean(removeFromList));
       return { snapshot };
     },
-    onError: (error, variables, context) => {
+    onError: async (error, variables, context) => {
+      if (
+        user &&
+        typeof indexedDB !== "undefined" &&
+        (await offlineOwner().catch(() => null)) !== user.id
+      )
+        return;
       restoreInboxItemCacheSnapshot(queryClient, variables.itemId, context?.snapshot);
       if (!reportErrors) {
         return;
