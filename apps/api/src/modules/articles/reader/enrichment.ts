@@ -55,30 +55,3 @@ export function summarizeContent(
     !languageKey || languageKey === "original" ? summary : `[${languageKey}] ${summary}`,
   );
 }
-
-export function translateContent(
-  content: string,
-  targetLanguage: string,
-): Effect.Effect<string, BadRequest> {
-  const text = content.trim();
-  if (!text) {
-    return Effect.fail(
-      new BadRequest({
-        message: "No content available to translate",
-        code: "TRANSLATION_CONTENT_MISSING",
-      }),
-    );
-  }
-  const target = targetLanguage.trim();
-  if (!target) {
-    return Effect.fail(
-      new BadRequest({
-        message: "target_language is required",
-        code: "TARGET_LANGUAGE_REQUIRED",
-      }),
-    );
-  }
-  return Effect.succeed(
-    target.toLowerCase() === "original" ? text : `[translated:${target}] ${text}`,
-  );
-}

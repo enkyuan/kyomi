@@ -37,6 +37,28 @@ describe("createSafeHydrate stream reading", () => {
     queryHydrate.mockClear();
   });
 
+  test("restores the current router's initial query array and streamed batches", async () => {
+    const { createSafeHydrate } = await import("@lib/query/hydration");
+    const qc = mockQueryClient();
+    const initial = [{ queryHash: "initial" }];
+    const later = [{ queryHash: "later" }];
+    const stream = new ReadableStream({
+      start(controller) {
+        controller.enqueue(later);
+        controller.close();
+      },
+    });
+    await createSafeHydrate(
+      undefined,
+      qc as unknown as QueryClient,
+    )({ query: { initial, stream } });
+    await vi.waitFor(() =>
+      expect(queryHydrate).toHaveBeenCalledWith(qc, { queries: later, mutations: [] }),
+    );
+    expect(queryHydrate).toHaveBeenCalledWith(qc, { queries: initial, mutations: [] });
+    expect(stream.locked).toBe(false);
+  });
+
   test("does not call queryHydrate with undefined when the stream ends", async () => {
     const { createSafeHydrate } = await import("@lib/query/hydration");
     const chunk1 = { queries: [{ queryHash: "a" }], mutations: [] };

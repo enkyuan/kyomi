@@ -40,6 +40,7 @@ describe("registerUserRoutes", () => {
   test("PATCH /me/preferences applies the patch and answers the stored preferences", async () => {
     const stored = {
       userId: "user-1",
+      language: "en",
       readerMode: "smart",
       readerFontSizePx: 17,
       readerContentWidth: "wide",

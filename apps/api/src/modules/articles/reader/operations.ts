@@ -5,7 +5,7 @@ import { withNegotiatedDocuments } from "@modules/articles/document/serve";
 import { CurrentUser } from "@shared/effect/request";
 import { checkContentFieldBudget } from "@shared/http/budget";
 import { getArticleDetail } from "../read/detail";
-import { resolveEnhancementContent, summarizeContent, translateContent } from "./enrichment";
+import { resolveEnhancementContent, summarizeContent } from "./enrichment";
 import { requestFullTextExtractionForUser } from "./extraction/workflow";
 
 const loadArticle = Effect.fn("articles.reader.load")(function* (articleId: string) {
@@ -34,19 +34,6 @@ export const summarizeArticle = Effect.fn("articles.summarize")(function* (
   const summary = yield* summarizeContent(content, body.language_key);
   yield* log.info("articles.summarize.succeeded", { userId, articleId });
   return { summary };
-});
-
-export const translateArticle = Effect.fn("articles.translate")(function* (
-  articleId: string,
-  body: { content?: string; target_language: string },
-) {
-  const log = yield* AppLogger;
-  const { userId } = yield* CurrentUser;
-  const targetLanguage = body.target_language;
-  const content = yield* enhancementContent(articleId, body.content);
-  const translated = yield* translateContent(content, targetLanguage);
-  yield* log.info("articles.translate.succeeded", { userId, articleId, targetLanguage });
-  return { translated_content: translated, target_language: targetLanguage };
 });
 
 /**

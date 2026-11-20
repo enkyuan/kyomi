@@ -55,6 +55,7 @@ type FeedArticleDetailRawRow = ReadingPositionColumnsRow & {
   feedId: string;
   feedUrl: string | null;
   feedSiteUrl: string | null;
+  language?: string | null;
   feedTitle: string;
   feedFaviconUrl: string | null;
   isRead: boolean;
@@ -97,6 +98,8 @@ export function toFeedArticleDetailDto(row: FeedArticleDetailRawRow): ArticleDet
     extractedContentStatus: extractedStatus,
     extractedContentSanitizerVersion: row.extractedContentSanitizerVersion,
   });
+  readerOriginal.language ??= row.language ?? null;
+  if (readerExtracted) readerExtracted.language ??= row.language ?? null;
   const reader = buildArticleReaderDto({
     readerOriginal,
     readerExtracted,
@@ -168,6 +171,7 @@ async function getFeedArticleDetailForUser(
       feedId: feedItems.feedId,
       feedUrl: feeds.url,
       feedSiteUrl: feeds.link,
+      language: sql<string | null>`coalesce(${feedItems.language}, ${feeds.language})`,
       feedTitle: feeds.title,
       feedFaviconUrl: feeds.faviconUrl,
       isRead: articleIsReadSql,

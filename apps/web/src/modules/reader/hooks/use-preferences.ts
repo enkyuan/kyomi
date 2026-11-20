@@ -28,9 +28,7 @@ function readCachedReaderPreferences(userId?: string): ReaderPreferences {
   }
 
   try {
-    const raw =
-      window.localStorage.getItem(readerPreferencesStorageKey(userId)) ??
-      window.localStorage.getItem(READER_PREFERENCES_STORAGE_KEY);
+    const raw = window.localStorage.getItem(readerPreferencesStorageKey(userId));
     return raw ? sanitizeReaderPreferences(JSON.parse(raw)) : DEFAULT_READER_PREFERENCES;
   } catch {
     return DEFAULT_READER_PREFERENCES;
@@ -44,7 +42,8 @@ function writeCachedReaderPreferences(next: ReaderPreferences, userId?: string) 
 
   try {
     const serialized = JSON.stringify(next);
-    window.localStorage.setItem(READER_PREFERENCES_STORAGE_KEY, serialized);
+    const { language: _language, ...shellPreferences } = next;
+    window.localStorage.setItem(READER_PREFERENCES_STORAGE_KEY, JSON.stringify(shellPreferences));
     window.localStorage.setItem(readerPreferencesStorageKey(userId), serialized);
   } catch {
     // Ignore storage errors (quota exceeded, storage disabled, etc.)

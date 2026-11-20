@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
-import { defineConfig, transformWithOxc } from "vite";
+import { defineConfig, esmExternalRequirePlugin, transformWithOxc } from "vite";
 import type { Plugin } from "vite";
 import { devtools } from "@tanstack/devtools-vite";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -114,6 +114,17 @@ const config = defineConfig(({ command }) => {
           // Rolldown replaces `manualChunks` with code-splitting groups: one chunk per package.
           codeSplitting: {
             groups: [{ name: getVendorChunkName, test: /node_modules/ }],
+          },
+        },
+      },
+    },
+    environments: {
+      ssr: {
+        build: {
+          rolldownOptions: {
+            // Let Nitro resolve React once for both ESM components and the CommonJS
+            // external-store shim. A runtime require would load a second dispatcher.
+            plugins: [esmExternalRequirePlugin({ external: ["react"] })],
           },
         },
       },

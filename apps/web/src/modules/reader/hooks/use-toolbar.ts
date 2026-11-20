@@ -1,6 +1,6 @@
 "use client";
 
-import { toastManager } from "@kyomi/ui/components/toast";
+import { useTranslation } from "./use-translation";
 import type { ArticleDetailDto } from "@kyomi/reader/schemas";
 import { useActions } from "@modules/articles/hooks/use-actions";
 import { useFloatingToolbar } from "@modules/reader/hooks/use-floating";
@@ -25,6 +25,12 @@ export function useReaderToolbar({
     isViewingExtracted: reader.isViewingExtracted,
     item,
   });
+  const translation = useTranslation(
+    item.id,
+    reader.effectiveReaderMode,
+    reader.preferences.language,
+    item.reader.extracted.updatedAt,
+  );
   const floating = useFloatingToolbar({ itemId: item.id, readerFocusMode });
   const articleActions = useActions({ item, saveErrorScope: "reader.saved_state" });
 
@@ -32,7 +38,19 @@ export function useReaderToolbar({
     articleClassName: reader.articleClassName,
     articleStyle: reader.articleStyle,
     canRequestExtraction,
-    displayReader: reader.displayReader,
+    displayReader: translation.result?.translated_content
+      ? {
+          ...reader.displayReader,
+          bodyKind: "text",
+          contentHtml: null,
+          contentMarkdown: null,
+          contentText: translation.result.translated_content,
+          fallbackReason: null,
+          fallbackSummary: null,
+          notice: null,
+          language: translation.result.target_language,
+        }
+      : reader.displayReader,
     extractPending: extraction.extractPending,
     extractionError: extraction.extractionError,
     floatingToolbarEdge: floating.floatingToolbarEdge,
@@ -80,12 +98,9 @@ export function useReaderToolbar({
         reader.setPreferences({ defaultMode: "original" });
       },
       onToggleSaved: articleActions.toggleSaved,
-      onTranslateArticle: () => {
-        toastManager.add({
-          title: "Translation coming soon",
-          type: "info",
-        });
-      },
+      onTranslateArticle: translation.toggle,
+      translationLabel: translation.label,
+      canTranslate: item.articleType === "feed",
     },
   };
 }

@@ -42,6 +42,14 @@ describe("env https URL validation", () => {
   });
 });
 
+test("enabling translation requires its own route and token", () => {
+  expect(findMissingFeatureCredentials({ FEATURE_ARTICLE_TRANSLATIONS: true })).toEqual([
+    { flag: "FEATURE_ARTICLE_TRANSLATIONS", key: "CLOUDFLARE_TRANSLATIONS_URL" },
+    { flag: "FEATURE_ARTICLE_TRANSLATIONS", key: "CLOUDFLARE_TRANSLATIONS_TOKEN" },
+  ]);
+  expect(findMissingFeatureCredentials({ FEATURE_ARTICLE_TRANSLATIONS: false })).toEqual([]);
+});
+
 describe("env embeddings Worker pair validation", () => {
   test("reports the token when only the URL is set, and the URL when only the token is set", () => {
     expect(

@@ -1,10 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { Effect } from "effect";
-import {
-  resolveEnhancementContent,
-  summarizeContent,
-  translateContent,
-} from "@modules/articles/reader/enrichment";
+import { resolveEnhancementContent, summarizeContent } from "@modules/articles/reader/enrichment";
 import { feedDetail } from "./fixtures";
 
 /** The typed failure of an Effect, as `{ _tag, code, message }`. */
@@ -34,31 +30,6 @@ describe("articles.enrichment", () => {
       tag: "BadRequest",
       code: "SUMMARY_CONTENT_MISSING",
       message: "No content available to summarize",
-    });
-  });
-
-  test("translateContent keeps original when requested", async () => {
-    expect(await Effect.runPromise(translateContent("Hello world", "original"))).toBe(
-      "Hello world",
-    );
-    expect(await Effect.runPromise(translateContent("Hello world", "ORIGINAL"))).toBe(
-      "Hello world",
-    );
-  });
-
-  test("translateContent marks the target language", async () => {
-    expect(await Effect.runPromise(translateContent("Hello", "de"))).toBe("[translated:de] Hello");
-  });
-
-  test("translateContent rejects blank content and a blank target with distinct codes", async () => {
-    expect(await failureOf(translateContent(" ", "de"))).toMatchObject({
-      tag: "BadRequest",
-      code: "TRANSLATION_CONTENT_MISSING",
-    });
-    expect(await failureOf(translateContent("Hello", "  "))).toMatchObject({
-      tag: "BadRequest",
-      code: "TARGET_LANGUAGE_REQUIRED",
-      message: "target_language is required",
     });
   });
 
