@@ -1,3 +1,4 @@
+import { clearOfflineLibrary } from "@lib/offline/library";
 import { clearQueryCache } from "@lib/query/client";
 import { createAppStorage } from "@lib/storage";
 import { clearReaderPositions } from "@modules/reader/lib/position";
@@ -14,11 +15,12 @@ const OWNER_KEY = "user-id";
  * stays.
  */
 export function clearUserData(): void {
+  owner.remove(OWNER_KEY);
+  clearOfflineLibrary();
   clearQueryCache();
   clearRecentArticles();
   clearReaderPositions();
   readingProgressSync.reset();
-  owner.remove(OWNER_KEY);
 }
 
 export function isSessionOwner(userId: string): boolean {

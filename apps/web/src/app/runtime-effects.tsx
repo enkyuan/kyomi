@@ -1,5 +1,7 @@
 "use client";
 
+import { adopt } from "@lib/offline/store";
+import { syncLibrary } from "@lib/offline/sync";
 import { useEffect, useRef } from "react";
 import { onlineManager, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
@@ -34,8 +36,26 @@ function scheduleIdleTask(callback: () => void) {
 export function AppRuntimeEffects() {
   const router = useRouter();
   const queryClient = useQueryClient();
-  const { isAuthenticated, isPending } = useAuth();
+  const { user, isAuthenticated, isPending } = useAuth();
   const previousIsAuthenticated = useRef(isAuthenticated);
+
+  useEffect(() => {
+    if (isPending || !user || typeof indexedDB === "undefined") return;
+    let active = true;
+    const flush = () => {
+      if (active && navigator.onLine) void syncLibrary(user.id).catch(() => {});
+    };
+    void adopt(user.id)
+      .then(flush)
+      .catch(() => {});
+    window.addEventListener("online", flush);
+    const retry = window.setInterval(flush, 60_000);
+    return () => {
+      active = false;
+      window.removeEventListener("online", flush);
+      clearInterval(retry);
+    };
+  }, [user?.id, isPending]);
 
   useEffect(() => {
     // Only transitions toast: starting online (or offline) stays silent. The offline toast is
@@ -44,7 +64,7 @@ export function AppRuntimeEffects() {
       if (!isOnline) {
         toastManager.add({
           id: OFFLINE_TOAST_ID,
-          title: "You're offline. Changes won't save",
+          title: "You're offline. Read Later is available on this device.",
           timeout: 0,
           type: "warning",
         });
@@ -60,9 +80,7 @@ export function AppRuntimeEffects() {
       return;
     }
 
-    return scheduleIdleTask(() => {
-      void navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: "/" });
-    });
+    void navigator.serviceWorker.register(SERVICE_WORKER_URL, { scope: "/" }).catch(() => {});
   }, []);
 
   useEffect(() => {

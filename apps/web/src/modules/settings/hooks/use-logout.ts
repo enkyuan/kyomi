@@ -1,5 +1,6 @@
 "use client";
 
+import { adopt } from "@lib/offline/store";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth/client";
@@ -26,7 +27,7 @@ export function useSettingsLogout({ onOpenChange }: UseSettingsLogoutArgs) {
 
         onOpenChange?.(false);
         queryClient.clear();
-        await clearHotQueryCache();
+        await Promise.all([clearHotQueryCache(), typeof indexedDB !== "undefined" && adopt(null)]);
         await router.invalidate();
         await router.navigate({ to: "/", search: { redirect: undefined }, replace: true });
       })(),

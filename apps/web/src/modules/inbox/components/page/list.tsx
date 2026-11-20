@@ -1,6 +1,10 @@
 "use client";
 
-import { useCallback, useMemo } from "react";
+import { useCallback, useEffect, useMemo } from "react";
+import { rememberSaved } from "@kyomi/reader/offline";
+import { library } from "@lib/offline/store";
+import { syncLibrary } from "@lib/offline/sync";
+import { useAuth } from "@integrations/better-auth/provider";
 import type { useRouter } from "@tanstack/react-router";
 import { List } from "@modules/inbox/components/list";
 import type { InboxPreferences } from "@modules/inbox/hooks/use-preferences";
@@ -64,6 +68,19 @@ export function ListSection({
   selectedItem: ArticleDetailDto | null;
   clearSelectedItem: () => void;
 }) {
+  const { user } = useAuth();
+  useEffect(() => {
+    if (
+      !user ||
+      effectiveFilter !== "saved" ||
+      !inboxItems.length ||
+      typeof indexedDB === "undefined"
+    )
+      return;
+    void Promise.all(inboxItems.map((item) => rememberSaved(library, user.id, item)))
+      .then(() => syncLibrary(user.id))
+      .catch(() => {});
+  }, [user?.id, effectiveFilter, inboxItems]);
   const handleFilterChange = useCallback(
     (filter: InboxFilter) => {
       void navigate({
@@ -198,5 +215,14 @@ export function ListSection({
     ],
   );
 
-  return <List {...listProps} display={{ ...listProps.display, readerFocusMode: false }} />;
+  return (
+    <>
+      {effectiveFilter === "saved" && (
+        <a className="block px-4 py-2 text-sm underline" href="/offline.html">
+          Read offline
+        </a>
+      )}
+      <List {...listProps} display={{ ...listProps.display, readerFocusMode: false }} />
+    </>
+  );
 }

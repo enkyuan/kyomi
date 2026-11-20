@@ -1,4 +1,6 @@
 import { useMutation, useQueryClient, type InfiniteData } from "@tanstack/react-query";
+import { editFlags } from "@kyomi/reader/offline";
+import { library, offlineOwner, syncLibrary } from "@lib/offline/library";
 import { fetchMobileApiJson } from "@/lib/api";
 import { articleListQueryKeys, articleQueryKey } from "@modules/articles/queries/keys";
 import type {
@@ -30,8 +32,17 @@ async function updateArticleState({ itemId, patch }: UpdateArticleStateInput) {
 export function useArticleStateMutation() {
   const queryClient = useQueryClient();
 
+  const owner = offlineOwner();
   return useMutation({
-    mutationFn: updateArticleState,
+    networkMode: "always",
+    mutationFn: async (args: UpdateArticleStateInput) => {
+      if (owner !== offlineOwner()) throw new Error("Session changed");
+      if (!owner || args.patch.isHidden !== undefined) return updateArticleState(args);
+      const article = queryClient.getQueryData<ArticleDetailDto>(articleQueryKey(args.itemId));
+      await editFlags(library, owner, args.itemId, args.patch, article);
+      await syncLibrary(owner).catch(() => {});
+      return { message: "Saved on device" };
+    },
     onMutate: async ({ itemId, patch, removeFromList }) => {
       await Promise.all(
         articleListQueryKeys.map((queryKey) => queryClient.cancelQueries({ queryKey })),
@@ -74,7 +85,12 @@ export function useArticleStateMutation() {
           : current,
       );
 
-      return { detail, detailKey, snapshots };
+      return {
+        detail,
+        detailKey,
+        snapshots,
+        optimisticDetail: queryClient.getQueryData(detailKey),
+      };
     },
     onError: (_error, _variables, context) => {
       for (const { queryKey, snapshot, optimistic } of context?.snapshots ?? []) {
@@ -85,7 +101,11 @@ export function useArticleStateMutation() {
           queryClient.setQueryData(queryKey, snapshot);
         }
       }
-      if (context?.detail) queryClient.setQueryData(context.detailKey, context.detail);
+      if (
+        context?.detail &&
+        queryClient.getQueryData(context.detailKey) === context.optimisticDetail
+      )
+        queryClient.setQueryData(context.detailKey, context.detail);
     },
     onSettled: () => {
       for (const queryKey of articleListQueryKeys) {

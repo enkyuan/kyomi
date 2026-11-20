@@ -97,6 +97,7 @@ type PersistInput = {
   articleId: string;
   body: ReadingProgressUpdateBody;
   now: Date;
+  replay: boolean;
   /** Resolved before the transaction on a first write; null when a row existed at the peek. */
   kind: ArticleKind | null;
   contentWords: number | null;
@@ -136,6 +137,15 @@ function persistProgress(database: Database, input: PersistInput): Promise<Persi
       }
     }
 
+    // An offline request can arrive again after a newer session has written. Acknowledging the
+    // stored version also keeps session counts, active time and resurfacing dates idempotent.
+    if (
+      input.replay &&
+      prev.clientUpdatedAt &&
+      Date.parse(body.clientUpdatedAt) <= prev.clientUpdatedAt.getTime()
+    ) {
+      return { status: "saved", dto: rowToDto(prev) };
+    }
     const values = reduceProgressWrite(prev, body, now, null);
     const updated = await tx
       .update(articleReadingState)
@@ -154,6 +164,7 @@ export const writeArticleProgressForUser = Effect.fn("articles.progress.write")(
   userId: string,
   articleId: string,
   body: ReadingProgressUpdateBody,
+  replay = false,
 ) {
   const db = yield* Db;
   const now = yield* currentDate;
@@ -190,7 +201,7 @@ export const writeArticleProgressForUser = Effect.fn("articles.progress.write")(
   }
 
   const outcome = yield* db.use("articles.progress.persist", (client) =>
-    persistProgress(client, { userId, articleId, body, now, kind, contentWords }),
+    persistProgress(client, { userId, articleId, body, now, kind, contentWords, replay }),
   );
   switch (outcome.status) {
     case "saved":

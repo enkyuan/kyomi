@@ -1,5 +1,7 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { useMemo } from "react";
+import { rememberSaved } from "@kyomi/reader/offline";
+import { library, offlineOwner, syncLibrary } from "@lib/offline/library";
+import { useEffect, useMemo } from "react";
 import { fetchMobileApiJson } from "@/lib/api";
 import {
   exploreArticlesPath,
@@ -49,6 +51,14 @@ export function useArticles(scope: ArticleScope = "subscribed") {
 
   const items = useMemo(() => dedupeById(query.data?.pages), [query.data]);
 
+  useEffect(() => {
+    const owner = offlineOwner();
+    const saved = items.filter((item) => item.isSaved);
+    if (owner && saved.length)
+      void Promise.all(saved.map((item) => rememberSaved(library, owner, item)))
+        .then(() => syncLibrary(owner))
+        .catch(() => {});
+  }, [items]);
   return {
     items,
     isLoading: query.isPending,

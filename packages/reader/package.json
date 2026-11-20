@@ -15,6 +15,7 @@
   "type": "module",
   "exports": {
     ".": "./src/core/index.ts",
+    "./offline": "./src/core/offline.ts",
     "./core": "./src/core/index.ts",
     "./document": "./src/core/document/index.ts",
     "./sanitization": "./src/sanitization/index.ts",
@@ -45,6 +46,7 @@
     "@kyomi/ui": "workspace:*",
     "@tanstack/markdown": "0.0.12",
     "highlight.js": "^11.11.1",
+    "htmlparser2": "10.1.0",
     "katex": "^0.16.45",
     "neosanitize": "0.5.0",
     "react-photo-view": "^1.2.7",

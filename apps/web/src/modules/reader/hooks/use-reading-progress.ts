@@ -10,6 +10,9 @@ import {
   scrollTopForProgress,
 } from "@kyomi/reader/core";
 import type { ReadingPositionDto } from "@kyomi/reader/schemas/article";
+import { useAuth } from "@integrations/better-auth/provider";
+import { editProgress } from "@kyomi/reader/offline";
+import { library } from "@lib/offline/store";
 import { saveReadingProgress } from "@modules/articles/lib/api";
 import { updateReadingProgressCaches } from "@modules/articles/queries/cache";
 import { findReaderBody, measureReaderBody } from "@modules/reader/lib/progress";
@@ -48,14 +51,28 @@ function sendProgress({
   itemId,
   body,
   keepalive,
+  owner,
 }: {
+  owner?: string;
   queryClient: QueryClient;
   itemId: string;
   body: NonNullable<ReturnType<ReturnType<typeof createReadingSession>["takeUpdate"]>>;
   keepalive: boolean;
 }) {
-  saveReadingProgress({ data: { itemId, body }, fetch: keepalive ? keepaliveFetch : undefined })
+  saveReadingProgress({
+    data: { itemId, body, owner },
+    fetch: keepalive ? keepaliveFetch : undefined,
+  })
     .then(({ readingProgress }) => {
+      if (owner && typeof indexedDB !== "undefined")
+        void library
+          .edit(owner, itemId, (row) =>
+            row?.progress?.clientUpdatedAt === body.clientUpdatedAt &&
+            row.progress.sessionId === body.sessionId
+              ? { ...row, progress: null }
+              : row,
+          )
+          .catch(() => {});
       updateReadingProgressCaches(queryClient, itemId, {
         readingProgress,
         readingPosition: {
@@ -192,7 +209,9 @@ function trackReadingSession({
   contentKey,
   queryClient,
   ignoreActivityUntil,
+  owner,
 }: {
+  owner?: string;
   viewport: HTMLElement;
   itemId: string;
   contentKey: string;
@@ -206,7 +225,10 @@ function trackReadingSession({
   const flush = (keepalive = false) => {
     const body = session.takeUpdate();
     if (body) {
-      sendProgress({ queryClient, itemId, body, keepalive });
+      if (owner && typeof indexedDB !== "undefined") {
+        void editProgress(library, owner, itemId, body).catch(() => {});
+      }
+      sendProgress({ queryClient, itemId, body, keepalive, owner });
     }
   };
 
@@ -279,6 +301,7 @@ export function useReadingProgress({
   enabled,
 }: ReadingProgressInput) {
   const queryClient = useQueryClient();
+  const { user } = useAuth();
   const latest = useRef({ contentKey, enabled, readingPosition });
   const ignoreActivityUntil = useRef(0);
 
@@ -319,6 +342,13 @@ export function useReadingProgress({
       return;
     }
 
-    return trackReadingSession({ viewport, itemId, contentKey, queryClient, ignoreActivityUntil });
-  }, [contentKey, enabled, itemId, queryClient, viewportRef]);
+    return trackReadingSession({
+      viewport,
+      itemId,
+      contentKey,
+      queryClient,
+      ignoreActivityUntil,
+      owner: user?.id,
+    });
+  }, [contentKey, enabled, itemId, queryClient, viewportRef, user?.id]);
 }

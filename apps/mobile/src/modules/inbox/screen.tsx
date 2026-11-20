@@ -1,6 +1,6 @@
 import { router } from "expo-router";
 import { useState } from "react";
-import { Platform, useColorScheme, useWindowDimensions, View } from "react-native";
+import { Button, Platform, useColorScheme, useWindowDimensions, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useSharedValue } from "react-native-reanimated";
 import { Badge } from "@/components/ui/badge";
@@ -173,6 +173,11 @@ export function InboxScreen({ scope = "subscribed", title }: InboxScreenProps) {
     <View className="flex-1 bg-background">
       <List
         filter={filter}
+        ListHeaderComponent={
+          filter === "saved" ? (
+            <Button title="Read offline" onPress={() => router.push("/offline")} />
+          ) : null
+        }
         ListEmptyComponent={
           <EmptyStateView
             description={hasNoSubscribedFeeds ? <ExploreHint /> : undefined}

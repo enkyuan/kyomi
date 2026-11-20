@@ -18,6 +18,7 @@ import { Route as ApiFaviconRouteImport } from './routes/api/favicon'
 import { Route as AppInboxIndexRouteImport } from './routes/_app/inbox/index'
 import { Route as AppInboxArticleRouteImport } from './routes/_app/inbox/$article'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as ApiV1ArticlesSplatRouteImport } from './routes/api/v1/articles/$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -63,6 +64,11 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiV1ArticlesSplatRoute = ApiV1ArticlesSplatRouteImport.update({
+  id: '/api/v1/articles/$',
+  path: '/api/v1/articles/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/inbox/$article': typeof AppInboxArticleRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/inbox/': typeof AppInboxIndexRoute
+  '/api/v1/articles/$': typeof ApiV1ArticlesSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/inbox/$article': typeof AppInboxArticleRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/inbox': typeof AppInboxIndexRoute
+  '/api/v1/articles/$': typeof ApiV1ArticlesSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/_app/inbox/$article': typeof AppInboxArticleRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/_app/inbox/': typeof AppInboxIndexRoute
+  '/api/v1/articles/$': typeof ApiV1ArticlesSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -106,6 +115,7 @@ export interface FileRouteTypes {
     | '/inbox/$article'
     | '/api/auth/$'
     | '/inbox/'
+    | '/api/v1/articles/$'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -115,6 +125,7 @@ export interface FileRouteTypes {
     | '/inbox/$article'
     | '/api/auth/$'
     | '/inbox'
+    | '/api/v1/articles/$'
   id:
     | '__root__'
     | '/'
@@ -126,6 +137,7 @@ export interface FileRouteTypes {
     | '/_app/inbox/$article'
     | '/api/auth/$'
     | '/_app/inbox/'
+    | '/api/v1/articles/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -135,6 +147,7 @@ export interface RootRouteChildren {
   RegisterRoute: typeof RegisterRoute
   ApiFaviconRoute: typeof ApiFaviconRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ApiV1ArticlesSplatRoute: typeof ApiV1ArticlesSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -202,6 +215,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/v1/articles/$': {
+      id: '/api/v1/articles/$'
+      path: '/api/v1/articles/$'
+      fullPath: '/api/v1/articles/$'
+      preLoaderRoute: typeof ApiV1ArticlesSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -238,6 +258,7 @@ const rootRouteChildren: RootRouteChildren = {
   RegisterRoute: RegisterRoute,
   ApiFaviconRoute: ApiFaviconRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ApiV1ArticlesSplatRoute: ApiV1ArticlesSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
