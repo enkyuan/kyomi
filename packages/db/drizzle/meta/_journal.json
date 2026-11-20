@@ -323,6 +323,13 @@
       "when": 1795114283151,
       "tag": "0045_user_onboarding",
       "breakpoints": true
+    },
+    {
+      "idx": 46,
+      "version": "7",
+      "when": 1795147706263,
+      "tag": "0046_article_translations",
+      "breakpoints": true
     }
   ]
 }

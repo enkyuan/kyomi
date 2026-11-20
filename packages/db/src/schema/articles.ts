@@ -218,6 +218,65 @@ export const articleExtractionCache = pgTable(
   ],
 );
 
+export const feedItemTranslations = pgTable(
+  "feed_item_translations",
+  {
+    id: text("id").primaryKey(),
+    feedItemId: text("feed_item_id")
+      .notNull()
+      .references(() => feedItems.id, { onDelete: "cascade" }),
+
+    // Identifies the exact source version. A changed article creates a new row.
+    sourceContentHash: text("source_content_hash").notNull(),
+    sourceLanguage: text("source_language").notNull(),
+    targetLanguage: text("target_language").notNull(),
+
+    // Stored so the async worker can translate using only this row's ID.
+    sourceText: text("source_text").notNull(),
+    translatedText: text("translated_text"),
+
+    status: text("status").notNull().default("queued"),
+    provider: text("provider").notNull().default("cloudflare"),
+    modelId: text("model_id").notNull(),
+
+    attempts: integer("attempts").notNull().default(0),
+    leaseExpiresAt: timestamp("lease_expires_at"),
+    leaseToken: text("lease_token"),
+    lastAttemptAt: timestamp("last_attempt_at"),
+
+    errorCode: text("error_code"),
+    errorMessage: text("error_message"),
+    completedAt: timestamp("completed_at"),
+
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => [
+    check(
+      "feed_item_translations_status_check",
+      sql`${table.status} IN ('queued', 'processing', 'ready', 'failed')`,
+    ),
+
+    // Same article version + languages + model should be translated once.
+    uniqueIndex("feed_item_translations_identity_unique").on(
+      table.feedItemId,
+      table.sourceContentHash,
+      table.sourceLanguage,
+      table.targetLanguage,
+      table.modelId,
+    ),
+
+    index("feed_item_translations_feed_lookup_idx").on(
+      table.feedItemId,
+      table.targetLanguage,
+      table.updatedAt.desc().nullsFirst(),
+    ),
+
+    // Used later by the job worker to claim queued or expired work.
+    index("feed_item_translations_claim_idx").on(table.status, table.leaseExpiresAt),
+  ],
+);
+
 export const articleViewEvents = pgTable(
   "article_view_events",
   {

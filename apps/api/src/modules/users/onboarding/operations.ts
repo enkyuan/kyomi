@@ -1,5 +1,5 @@
 import { eq, inArray } from "drizzle-orm";
-import { feeds, userOnboarding, users } from "@kyomi/db";
+import { feeds, userOnboarding, userPreferences, users } from "@kyomi/db";
 import { Effect } from "effect";
 import { Db, type Database } from "@adapters/db/service";
 import { CurrentUser } from "@shared/effect/request";
@@ -86,6 +86,13 @@ export const save = Effect.fn("onboarding.save")(function* (
       .update(users)
       .set({ name: validated.name, updatedAt: completedAt })
       .where(eq(users.id, userId));
+    await tx
+      .insert(userPreferences)
+      .values({ userId, language: validated.language })
+      .onConflictDoUpdate({
+        target: userPreferences.userId,
+        set: { language: validated.language, updatedAt: now },
+      });
     const selected = bundles
       .filter((bundle) => validated.bundleIds.includes(bundle.id))
       .flatMap((bundle) => [...bundle.feeds]);

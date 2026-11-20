@@ -5,6 +5,7 @@ export const DOCUMENT_ENRICHMENT_JOBS_STREAM_KEY = "jobs:document-enrichment";
 export const JOBS_STREAM_KEY = FEED_REFRESH_JOBS_STREAM_KEY;
 export const JOBS_CONSUMER_GROUP = "kyomi-workers";
 export const JOBS_DEAD_LETTER_STREAM_KEY = "jobs:dead-letter";
+export const ARTICLE_TRANSLATION_JOBS_STREAM_KEY = "jobs:article-translation"; // translation contract
 
 export type FeedRefreshJob = {
   type: "feed.refresh";
@@ -94,6 +95,14 @@ export type DocumentEmbedSnapshotJob = {
   payload: { target: DocumentTarget };
 };
 
+/** Wakeup carrying only a durable translation id; the worker loads text from Postgres. */
+export type ArticleTranslationJob = {
+  type: "article.translate";
+  payload: {
+    translationId: string;
+  };
+};
+
 export type Job =
   | FeedRefreshJob
   | OpmlImportJob
@@ -102,7 +111,8 @@ export type Job =
   | OpmlImportItemJob
   | ArticleExtractionJob
   | DocumentImageMeasureJob
-  | DocumentEmbedSnapshotJob;
+  | DocumentEmbedSnapshotJob
+  | ArticleTranslationJob;
 export type JobType = Job["type"];
 
 export type JobMessage = {
@@ -132,6 +142,8 @@ export function getStreamKeyForJobType(jobType: JobType): string {
     case "document.image-measure":
     case "document.embed-snapshot":
       return DOCUMENT_ENRICHMENT_JOBS_STREAM_KEY;
+    case "article.translate":
+      return ARTICLE_TRANSLATION_JOBS_STREAM_KEY;
   }
 }
 
@@ -348,6 +360,19 @@ function parseDocumentEnrichmentJob(
   return { type, payload: { target } };
 }
 
+function parseArticleTranslationJob(parsedPayload: Record<string, unknown>): ArticleTranslationJob {
+  if (typeof parsedPayload.translationId !== "string" || parsedPayload.translationId.length === 0) {
+    throw new Error("Invalid article.translate payload");
+  }
+
+  return {
+    type: "article.translate",
+    payload: {
+      translationId: parsedPayload.translationId,
+    },
+  };
+}
+
 export function parseJob(fields: Record<string, string>): Job {
   const parsedPayload = JSON.parse(fields.payload ?? "null") as Record<string, unknown> | null;
   if (!parsedPayload) {
@@ -370,6 +395,8 @@ export function parseJob(fields: Record<string, string>): Job {
     case "document.image-measure":
     case "document.embed-snapshot":
       return parseDocumentEnrichmentJob(fields.type, parsedPayload);
+    case "article.translate":
+      return parseArticleTranslationJob(parsedPayload);
     default:
       throw new Error(`Unsupported job type: ${fields.type ?? "unknown"}`);
   }

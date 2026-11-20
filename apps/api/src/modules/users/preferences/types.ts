@@ -8,6 +8,7 @@ export type InboxTimestampDisplayDto = "absolute" | "relative" | "relative-long"
 export type InboxTimestampHourCycleDto = "12h" | "24h";
 
 export type UserPreferencesDto = {
+  language: string;
   defaultMode: ReaderDefaultModeDto;
   fontSizePx: number;
   contentWidth: ReaderContentWidthDto;

@@ -18,6 +18,8 @@ export type ToolbarProps = {
   onCycleContentWidth: () => void;
   onDecreaseFontSize: () => void;
   onIncreaseFontSize: () => void;
+  translationLabel?: string;
+  canTranslate?: boolean;
   onTranslateArticle: () => void;
   onOpenOriginal: () => void;
   onShareArticle: () => void;
