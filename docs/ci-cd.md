@@ -24,7 +24,7 @@ The setup job maps changed paths to areas. Docs, Markdown, `.agents/`, `.pi/` an
 
 ## Required Branch Check
 
-Use `ci-summary` as the single required branch-protection check. Every job is always part of the `ci` workflow; a job whose area did not change finishes in seconds without installing anything, so `ci-summary` always reports. It depends on:
+Use `ci-summary` as the single required branch-protection check. It is always reported: the `ci` workflow (full gate) runs when the `app` area changed, and `ci-light` (secret scan, catalog typecheck, `ci-summary`) runs otherwise, so docs-only changes never provision service containers or large executors. Inside `ci`, a job whose area did not change finishes in seconds. In `ci`, `ci-summary` depends on:
 
 - `static-quality`
 - `web-tests`
@@ -44,6 +44,13 @@ These settings are part of the CI design; set them once in the CircleCI project:
 - **Triggers** (GitHub App) or **Advanced → Only build pull requests** (OAuth): build pull requests and `main` only, not every pushed branch. Skip draft PRs if the trigger offers it.
 
 A commit message containing `[ci skip]` or `[skip ci]` starts no pipeline.
+
+## Cost controls
+
+- `api-tests` is sharded across 2 containers (`parallelism: 2`, `medium+`) with `circleci tests split --split-by=timings`; JUnit output goes to `store_test_results` so later runs balance by recorded timings. Raise `parallelism` if the job becomes the critical path.
+- Turbo caches for `static-quality` and `build` are saved from `main` only; branches restore `main`'s cache and upload nothing.
+- Every test and build step has `no_output_timeout: 10m` and a `timeout` wrapper, so a hung step fails instead of holding a container.
+- `web-tests` and `api-tests` skip the oxfmt/oxlint prefetch.
 
 ## Job Ownership
 
