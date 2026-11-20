@@ -1,5 +1,5 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { describe, expect, test, vi } from "vitest";
+import { afterEach, describe, expect, test, vi } from "vitest";
 import { FilterControl, SortButton } from "@modules/inbox/components/list/header";
 
 describe("SortButton", () => {
@@ -22,6 +22,8 @@ describe("SortButton", () => {
 });
 
 describe("FilterControl", () => {
+  afterEach(() => vi.restoreAllMocks());
+
   test("renders pinned folders in the All dropdown and selects a folder", () => {
     const onFilterChange = vi.fn();
     const onFolderFilterChange = vi.fn();
@@ -87,17 +89,20 @@ describe("FilterControl", () => {
     );
 
     const trigger = screen.getByRole("button", { name: "Choose filter" });
-    expect(trigger.className).toContain("focus-visible:ring-2");
-    expect(trigger.className).toContain("pointer-coarse:after:min-h-11");
+    expect(trigger.className).toContain("focus-visible:ring-(length:--focus-ring-width)");
+    expect(trigger.className).toContain("pointer-coarse:after:min-h-(--touch-target-min)");
   });
 
   test("keeps My Feed and the All button group as tabs", () => {
     const onFilterChange = vi.fn();
+    const consoleError = vi.spyOn(console, "error");
 
     render(<FilterControl filter="my-feed" pinnedFolders={[]} onFilterChange={onFilterChange} />);
 
     const myFeed = screen.getByRole("tab", { name: "My Feed" });
     const all = screen.getByRole("tab", { name: /^All/ });
+    expect(all.tagName).toBe("BUTTON");
+    expect(consoleError).not.toHaveBeenCalledWith(expect.stringContaining("nativeButton"));
     expect(myFeed.getAttribute("aria-selected")).toBe("true");
     expect(all.getAttribute("aria-selected")).toBe("false");
     expect(all.querySelector('[data-slot="button"]')).toBeTruthy();

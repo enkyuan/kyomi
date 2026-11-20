@@ -25,7 +25,7 @@ export function InputOTP({
     <OTPInput
       className={className}
       containerClassName={cn(
-        "flex items-center gap-2 has-disabled:opacity-64 has-disabled:**:data-[slot=input-otp-slot]:shadow-none has-disabled:**:data-[slot=input-otp-slot]:before:shadow-none!",
+        "flex items-center gap-2 has-disabled:opacity-(--opacity-disabled) has-disabled:**:data-[slot=input-otp-slot]:shadow-none has-disabled:**:data-[slot=input-otp-slot]:before:shadow-none!",
         containerClassName,
       )}
       data-slot="input-otp"
@@ -66,7 +66,7 @@ export function InputOTPSlot({
   return (
     <div
       className={cn(
-        "relative inline-flex in-[[data-slot=input-otp-group][data-size=lg]]:size-10 size-9 items-center justify-center rounded-lg border border-input bg-background not-dark:bg-clip-padding in-[[data-slot=input-otp-group][data-size=lg]]:text-lg text-base text-foreground shadow-xs/5 outline-none ring-ring/24 transition-shadow before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] not-data-[active=true]:not-aria-invalid:before:shadow-[0_1px_--theme(--color-black/4%)] aria-invalid:border-destructive/36 data-[active=true]:z-10 data-[active=true]:border-ring data-[active=true]:ring-[3px] data-[active=true]:ring-ring/24 data-[active=true]:aria-invalid:border-destructive/64 data-[active=true]:aria-invalid:ring-destructive/16 sm:in-[[data-slot=input-otp-group][data-size=lg]]:size-9 sm:size-8 sm:in-[[data-slot=input-otp-group][data-size=lg]]:text-base sm:text-sm dark:bg-input/32 dark:data-[active=true]:aria-invalid:ring-destructive/24 dark:not-data-[active=true]:not-aria-invalid:before:shadow-[0_-1px_--theme(--color-white/6%)] [[data-active=true],[aria-invalid]]:shadow-none",
+        "relative inline-flex in-[[data-slot=input-otp-group][data-size=lg]]:size-10 size-9 items-center justify-center rounded-lg border border-input bg-background not-dark:bg-clip-padding in-[[data-slot=input-otp-group][data-size=lg]]:text-lg text-base text-foreground shadow-xs/5 outline-none ring-ring/24 transition-shadow before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-var(--stroke-width))] not-data-[active=true]:not-aria-invalid:before:shadow-(--shadow-edge-raised) aria-invalid:border-destructive/36 data-[active=true]:z-10 data-[active=true]:border-ring data-[active=true]:ring-(length:--field-ring-width) data-[active=true]:ring-ring/24 data-[active=true]:aria-invalid:border-destructive/64 data-[active=true]:aria-invalid:ring-destructive/16 sm:in-[[data-slot=input-otp-group][data-size=lg]]:size-9 sm:size-8 sm:in-[[data-slot=input-otp-group][data-size=lg]]:text-base sm:text-sm dark:bg-input/32 dark:data-[active=true]:aria-invalid:ring-destructive/24 dark:not-data-[active=true]:not-aria-invalid:before:shadow-(--shadow-edge-highlight) [[data-active=true],[aria-invalid]]:shadow-none",
         className,
       )}
       data-active={isActive ? true : undefined}

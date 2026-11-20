@@ -176,10 +176,10 @@ export async function prefetchInboxItemDetail(
   await queryClient.prefetchQuery(inboxDetailQueryOptions(itemId));
 }
 
-export function inboxRecapQueryOptions(limit = 5) {
+export function inboxRecapQueryOptions() {
   return {
     queryKey: queryKeys.inbox.recap,
-    queryFn: () => getInboxRecap({ data: { limit } }),
+    queryFn: () => getInboxRecap({ data: { limit: 10 } }),
     staleTime: QUERY_TIMES.countsStale,
     gcTime: QUERY_TIMES.listGc,
   };

@@ -1,6 +1,7 @@
 export {
   FEED_REFRESH_JOBS_STREAM_KEY,
   ARTICLE_EXTRACTION_JOBS_STREAM_KEY,
+  ARTICLE_TRANSLATION_JOBS_STREAM_KEY,
   DOCUMENT_ENRICHMENT_JOBS_STREAM_KEY,
   JOBS_CONSUMER_GROUP,
   JOBS_DEAD_LETTER_STREAM_KEY,
@@ -25,6 +26,7 @@ export {
   streamFieldsToRecord,
   toRedisStreamFieldList,
   type ArticleExtractionJob,
+  type ArticleTranslationJob,
   type DocumentEmbedSnapshotJob,
   type DocumentTarget,
   type DocumentImageMeasureJob,

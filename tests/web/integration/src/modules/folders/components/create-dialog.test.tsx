@@ -40,6 +40,6 @@ describe("CreateFolderDialog", () => {
     expect(trigger.classList.contains("rounded-full")).toBe(true);
     expect(trigger.classList.contains("before:rounded-full")).toBe(true);
     expect(trigger.classList.contains("rounded-md")).toBe(false);
-    expect(trigger.classList.contains("size-7")).toBe(true);
+    expect(trigger.classList.contains("size-(--control-xs)")).toBe(true);
   });
 });

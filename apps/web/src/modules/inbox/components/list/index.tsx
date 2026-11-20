@@ -14,7 +14,7 @@ import type {
   InboxTimestampDisplayDto,
 } from "@kyomi/reader/schemas";
 import { type PinnedFolderFilter } from "./header";
-import { ListBody, getEmptyStateCopy } from "./body";
+import { ListBody } from "./body";
 import { ListHeader } from "./scope-bar";
 
 type ListDisplayOptions = {
@@ -96,7 +96,6 @@ export function List({
   });
 
   const showEmptyState = isVirtualizerHostMounted && !isLoading && inboxItems.length === 0;
-  const emptyState = getEmptyStateCopy(filter);
   const showScopedHeader = isArticleScoped || isFeedScoped;
   const backAction = isArticleScoped ? onBackToList : onBackToInbox;
 
@@ -133,7 +132,6 @@ export function List({
             ) : null}
             <ListBody
               density={density}
-              emptyState={emptyState}
               filter={filter}
               fontSizePx={fontSizePx}
               inboxItems={inboxItems}

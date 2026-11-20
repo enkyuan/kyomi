@@ -64,7 +64,7 @@ export function TabsList({
         {children}
         <TabsPrimitive.Indicator
           className={cn(
-            "absolute bottom-0 left-0 h-(--active-tab-height) w-(--active-tab-width) translate-x-(--active-tab-left) -translate-y-(--active-tab-bottom) transition-[width,translate] duration-200 ease-in-out",
+            "absolute bottom-0 left-0 h-(--active-tab-height) w-(--active-tab-width) translate-x-(--active-tab-left) -translate-y-(--active-tab-bottom) transition-[width,translate] duration-(--duration-overlay) ease-in-out",
             variant === "underline"
               ? "z-10 bg-primary data-[orientation=horizontal]:h-0.5 data-[orientation=vertical]:w-0.5 data-[orientation=vertical]:-translate-x-px data-[orientation=horizontal]:translate-y-px"
               : variant === "pill"
@@ -93,11 +93,11 @@ export function TabsTab({
   return (
     <TabsPrimitive.Tab
       className={cn(
-        "relative flex cursor-pointer items-center justify-center whitespace-nowrap font-medium outline-none transition-[color,background-color,box-shadow] data-disabled:pointer-events-none data-disabled:opacity-64",
+        "relative flex cursor-pointer items-center justify-center whitespace-nowrap font-medium outline-none transition-[color,background-color,box-shadow] data-disabled:pointer-events-none data-disabled:opacity-(--opacity-disabled)",
         variant === "pill"
-          ? "z-[1] h-9 select-none rounded-full px-4 text-base text-muted-foreground hover:text-foreground/70 data-active:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50"
+          ? "z-[1] h-9 select-none rounded-full px-4 text-base text-muted-foreground hover:text-foreground/70 data-active:text-foreground focus-visible:ring-(length:--focus-ring-width) focus-visible:ring-ring focus-visible:ring-offset-(length:--focus-ring-offset) focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50"
           : cn(
-              "shrink-0 grow rounded-md border border-transparent text-base hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start data-active:text-foreground sm:text-sm",
+              "shrink-0 grow rounded-md border border-transparent text-base hover:text-muted-foreground focus-visible:ring-(length:--focus-ring-width) focus-visible:ring-ring data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start data-active:text-foreground sm:text-sm",
               segmentedControlItemLayoutClassName,
               segmentedControlItemSizeClassNames[resolvedSize],
             ),

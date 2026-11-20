@@ -15,10 +15,6 @@ src/
   modules/             Product domains with universal screens and selective platform seams.
 ```
 
-Inbox and Recents share query, filtering, and row-formatting logic. iOS renders articles through
-the local `article-list` Expo module, using a UIKit collection view with SwiftUI rows. Android and
-the web fallback use Legend List with React Native rows. The list contracts are described below.
-
 Authentication reuses the web app's runtime-neutral contracts through `@kyomi/auth`: field
 defaults and validators, safe return targets, session classification, and capability parsing.
 Better Auth remains server-authoritative. The native client stores Better Auth's cookie/session
@@ -147,28 +143,12 @@ and low-alpha selected surface.
 
 ## Article lists
 
-Inbox and Recents render with Legend List on every platform. Article queries, filters, actions, and
-row formatting live in TypeScript under `src/modules/articles` and `src/modules/inbox`.
+Inbox and Recents use `AnimatedLegendList` from `@legendapp/list/reanimated` on every platform.
+The [inbox list](src/modules/inbox/components/list/index.tsx) filters articles by read and saved
+state. The [Recents list](src/modules/recents/components/list.tsx) displays reading history.
 
-`modules/article-list` is a parked iOS Expo module: a UIKit collection view with reusable SwiftUI
-article rows. No screen mounts it (the wiring was reverted in #133), and its unused TypeScript-side
-helpers (`useNativeListSync`, row and style mapping) have been removed; recover them from git
-history (for example commit `748072be`) if the list returns. Profile representative inbox sizes on
-a device before re-landing it.
-
-Use `bun run --cwd tests test:mobile` for the mobile contracts. On macOS this also compiles and
-executes the parked module's Foundation-only Swift row models, reducer, and asynchronous pipeline; other platforms skip that test.
-The SwiftUI/Expo bridge still requires an iOS development build. Instruments points of interest in
-`ArticleListSignpost` distinguish decoding/reduction, snapshot application, and cell configuration.
-These counters are measurement hooks, not evidence of a frame-rate improvement by themselves.
-
-Implementation references (accessed 2026-10-24):
-[Expo view functions and lifecycle](https://docs.expo.dev/modules/module-api/),
-[Apple collection-view performance](https://developer.apple.com/videos/play/wwdc2021/10252/), and
-[SwiftUI fonts relative to text styles](<https://developer.apple.com/documentation/swiftui/font/custom(_:size:relativeto:)>).
-The bridge was checked against ExpoModulesCore 57.0.24, and native compilation uses Xcode 27.1.
-The explicit `.runOnQueue(.main)` follows the installed API rather than relying on documentation's
-default-queue statement. A native development build is required after these changes.
+Run `bun run --cwd tests test:mobile` for the mobile integration tests, including inbox pagination,
+article actions, and Recents history.
 
 ## Reader renderers and baseline measurement
 

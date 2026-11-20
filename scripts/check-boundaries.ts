@@ -156,7 +156,7 @@ const WEB_ALIASES: Record<string, string> = {
 const WEB_SHARED_LAYERS = new Set(["hooks", "integrations", "lib"]);
 // The web module stack, top to bottom. A module imports its own tier or the tiers below it.
 const WEB_MODULE_TIERS = [
-  ["sidebar", "settings", "auth"],
+  ["sidebar", "settings", "auth", "onboarding"],
   ["inbox"],
   ["reader"],
   ["articles"],

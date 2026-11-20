@@ -9,6 +9,7 @@
     "./document/structure-budget": "./src/document/structure-budget.ts",
     "./enrichment": "./src/enrichment/index.ts",
     "./ingestion": "./src/services/feed/index.ts",
+    "./ingestion/starter-bundles": "./src/services/feed/starter-bundles.ts",
     "./favicon": "./src/services/favicon/index.ts",
     "./favicon/browser": "./src/services/favicon/proxy-url.ts",
     "./lib/article-identity": "./src/lib/article-identity.ts",

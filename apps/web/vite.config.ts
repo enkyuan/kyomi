@@ -1,9 +1,8 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
-import { defineConfig, transformWithOxc } from "vite";
+import { defineConfig, esmExternalRequirePlugin, transformWithOxc } from "vite";
 import type { Plugin } from "vite";
 import { devtools } from "@tanstack/devtools-vite";
-import tsconfigPaths from "vite-tsconfig-paths";
 
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 
@@ -118,6 +117,17 @@ const config = defineConfig(({ command }) => {
         },
       },
     },
+    environments: {
+      ssr: {
+        build: {
+          rolldownOptions: {
+            // Let Nitro resolve React once for both ESM components and the CommonJS
+            // external-store shim. A runtime require would load a second dispatcher.
+            plugins: [esmExternalRequirePlugin({ external: ["react"] })],
+          },
+        },
+      },
+    },
     ssr: {
       // blode-icons-react ships extensionless ESM re-exports that Node cannot load externally.
       noExternal: ["blode-icons-react"],
@@ -129,18 +139,17 @@ const config = defineConfig(({ command }) => {
       include: [
         "react",
         "react-dom",
-        "blode-icons-react",
-        "motion/react",
+        "@kyomi/ui > blode-icons-react",
+        "@kyomi/ui > motion/react",
         "@tanstack/react-query",
         "@tanstack/react-router",
         "@tanstack/react-virtual",
       ],
     },
     plugins: isTest
-      ? [tsconfigPaths({ projects: ["./tsconfig.json"] }), viteReact()]
+      ? [viteReact()]
       : [
           devtools(),
-          tsconfigPaths({ projects: ["./tsconfig.json"] }),
           // TanStack Start must register the server-fn resolver and environments before Nitro’s
           // dev worker wires `fetch`; otherwise `#tanstack-start-server-fn-resolver` stays on the
           // package stub and `getInboxViewCount` etc. 500 with "Cannot read properties of undefined (reading 'method')".
@@ -171,6 +180,7 @@ const config = defineConfig(({ command }) => {
           }),
         ],
     resolve: {
+      tsconfigPaths: true,
       dedupe: ["react", "react-dom"],
     },
   };

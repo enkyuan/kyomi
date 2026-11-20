@@ -1,8 +1,9 @@
 # @kyomi/ui
 
-Kyomi's design system: Base UI primitives styled with Tailwind v4, semantic tokens, icons, and
-motion. The layout follows the shadcn monorepo template and cal.com's `@coss/ui`, so registry
-components (`bunx shadcn add @coss/<name>`, see `components.json`) land where the rest live.
+Kyomi's design system owns semantic tokens, Base UI primitives, icons, and motion. React uses
+Tailwind v4 over the shared CSS tokens. The SvelteKit landing page loads the CSS
+directly. Mobile loads the Uniwind theme from this package. Native code can use the platform-safe
+theme and motion entrypoints.
 
 ```text
 components.json            shadcn CLI config: installs land in src/components
@@ -21,8 +22,16 @@ in `package.json`, so a file that is not exported is private.
 
 ## Tokens
 
-`styles/theme.css` holds every token. Primitives use them instead of arbitrary values; app code
-should reach for a primitive variant before restyling one.
+Import `@kyomi/ui/styles/tokens.css` for plain CSS custom properties and
+`@kyomi/ui/styles/base.css` for the page canvas and default text. The tokens include the light/dark
+palette, spacing, corners, control heights, stroke, focus, opacity, touch target, and motion roles.
+Tailwind apps import `@kyomi/ui/globals.css` for the Tailwind theme bridge and existing UI CSS.
+`@kyomi/ui/styles/native.css` supplies the native palette and
+typography through Uniwind's light and dark variants. [Uniwind theming](https://docs.uniwind.dev/theming/basics)
+
+The [primitive catalog](primitives.md) records each family's variants, styling, tokens and context.
+The [instance inventory](primitive-usage.md) records JSX composition and styling at its call sites.
+Run `bun run --cwd packages/ui audit:primitives` after changing primitive JSX.
 
 | Token                 | Utility                          | Use                                                      |
 | --------------------- | -------------------------------- | -------------------------------------------------------- |
@@ -107,7 +116,7 @@ title, and an end slot. There is no description, and the managers are typed to r
 
 ## Button
 
-`Button` keeps the coss sizes and variants and adds:
+`Button` offers text and icon sizes with these additional behaviors:
 
 - `shape="pill"`: capsule ends with a concentric inner highlight, at any size.
 - Press feedback on every button: `scale(0.96)` on `:active`, skipped under reduced motion. Pass
@@ -215,9 +224,9 @@ technology hears one change instead of every item passed.
 
 ## Adding a primitive
 
-1. Prefer a coss registry component; otherwise add `src/components/<name>.tsx` on a Base UI part.
+1. Add `src/components/<name>.tsx` using a Base UI part when one matches the behavior.
 2. Give it `data-slot`, keyboard, focus, disabled, loading, and reduced-motion states.
-3. Style it with the tokens above; add a token to `theme.css` only when a value repeats.
+3. Use Tailwind utilities backed by the shared values in `tokens.css`. Keep geometry specific to the component with its implementation.
 4. Export a folder primitive explicitly in `package.json`; flat files are covered by
    `./components/*`.
 5. Test the contract under `tests/web/integration/src/packages/ui/components/`.

@@ -2,38 +2,21 @@ import type { DehydratedState, QueryClient } from "@tanstack/react-query";
 import { hydrate as queryHydrate } from "@tanstack/react-query";
 import { mark } from "@lib/perf/marks";
 
+type QueryBatch = DehydratedState["queries"];
 type QueryStreamReader = {
-  read: () => Promise<{ done: boolean; value?: DehydratedState }>;
+  releaseLock?: () => void;
+  read: () => Promise<{ done: boolean; value?: DehydratedState | QueryBatch }>;
 };
 
-/**
- * The dehydrated state shape produced by @tanstack/react-router-ssr-query's
- * server-side dehydrate(): a standard TanStack Query dehydrated client
- * (optional) plus a ReadableStream of incrementally-dehydrated query snapshots.
- */
+// The installed SSR integration sends initial and streamed arrays of queries. Accept
+// snapshots from the preceding wire format during a rolling web deployment as well.
 type SsrDehydratedState = {
+  query?: { initial?: QueryBatch; stream?: { getReader: () => QueryStreamReader } };
   dehydratedQueryClient?: DehydratedState;
   queryStream?: { getReader: () => QueryStreamReader };
 };
 
-/**
- * Creates a corrected `router.options.hydrate` function that replaces the one
- * installed by @tanstack/react-router-ssr-query, which has a bug where
- * `queryHydrate()` is called *before* checking the stream's `done` flag.
- *
- * When the ReadableStream ends, `reader.read()` returns `{ done: true,
- * value: undefined }`. The upstream code passes that `undefined` to
- * `queryHydrate()`, which then tries to read `undefined.mutations`, throwing
- * `TypeError: Cannot read properties of undefined (reading 'mutations')`.
- *
- * This implementation checks `done` first and only hydrates valid chunks. It also does not wait
- * for the stream to close: the dehydrated query client is hydrated before the router mounts and
- * the rest of the stream is drained in the background, as the upstream integration does.
- *
- * @param ogHydrate  The original router.options.hydrate captured before the SSR
- *                   query integration replaced it (usually undefined).
- * @param queryClient The shared TanStack QueryClient instance.
- */
+/** Restore initial data before mounting, and drain incremental batches without blocking paint. */
 export function createSafeHydrate(
   ogHydrate: ((dehydrated: unknown) => Promise<void> | void) | undefined,
   queryClient: QueryClient,
@@ -43,14 +26,18 @@ export function createSafeHydrate(
     await ogHydrate?.(dehydrated as never);
 
     const state = dehydrated as SsrDehydratedState | undefined;
-    if (state?.dehydratedQueryClient) {
-      queryHydrate(queryClient, state.dehydratedQueryClient);
+    const initial = state?.query?.initial
+      ? { queries: state.query.initial, mutations: [] }
+      : state?.dehydratedQueryClient;
+    if (initial) {
+      queryHydrate(queryClient, initial);
     }
 
-    if (state?.queryStream) {
+    const stream = state?.query?.stream ?? state?.queryStream;
+    if (stream) {
       // Not awaited: the stream closes only when the server has finished the whole response, and
       // router hydration (so `hydrateRoot`) must not wait for that.
-      void drainQueryStream(state.queryStream.getReader(), queryClient);
+      void drainQueryStream(stream.getReader(), queryClient);
     }
     mark("router-hydrate-end");
   };
@@ -67,12 +54,16 @@ async function drainQueryStream(reader: QueryStreamReader, queryClient: QueryCli
     do {
       result = await reader.read();
       if (!result.done && result.value) {
-        hydrateStreamedChunk(queryClient, result.value);
+        hydrateStreamedChunk(
+          queryClient,
+          Array.isArray(result.value) ? { queries: result.value, mutations: [] } : result.value,
+        );
       }
     } while (!result.done);
   } catch (error) {
     console.error("Error reading the query stream:", error);
   } finally {
+    reader.releaseLock?.();
     mark("query-stream-drained");
   }
 }

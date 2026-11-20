@@ -10,6 +10,8 @@ This repository follows a monorepo shape modeled after larger production repos:
 
 ## Boundary Rules
 
+The public landing page lives in `apps/www`. It uses SvelteKit and the CSS exports of `@kyomi/ui`.
+
 1. `apps/web` should contain route/view composition and UI wiring, not core domain rules.
 2. `apps/api` should contain transport/orchestration boundaries, not reusable business logic.
 3. `apps/ai-gateway` is the Cloudflare Worker in front of Workers AI: `/embed` for the article
@@ -19,7 +21,7 @@ This repository follows a monorepo shape modeled after larger production repos:
 
 ## Shared UI (`packages/ui`)
 
-- `src/components/*.tsx`: shadcn/coss-style Base UI primitives (import `@kyomi/ui/components/button`, etc.); multi-file primitives live in `src/components/<name>/index.tsx`.
+- `src/components/*.tsx`: Kyomi-owned Base UI primitives (import `@kyomi/ui/components/button`, etc.); multi-file primitives live in `src/components/<name>/index.tsx`.
 - `src/hooks/`, `src/lib/`, `src/native/`: shared hooks, utilities (`@kyomi/ui/lib/motion`, `lib/utils`), and native-safe contracts.
 - `src/styles/`: `globals.css` entrypoint (`@kyomi/ui/globals.css`) plus token and CSS modules (`@kyomi/ui/styles/*`). See `packages/ui/README.md`.
 - `src/icons/`: product illustrations and empty-state artwork (`@kyomi/ui/icons/…`). See `src/icons/README.md` before adding new icons.

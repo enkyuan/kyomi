@@ -103,9 +103,9 @@ describe("article enrichment routes", () => {
   test("content over the field budget is a 413 that names the field", async () => {
     const { app } = appWith([ARTICLE]);
 
-    const response = await post(app, `/articles/${ID}/translate`, {
+    const response = await post(app, `/articles/${ID}/summarize`, {
       content: "é".repeat(600_000),
-      target_language: "de",
+      language_key: "de",
     });
 
     expect(response.status).toBe(413);
@@ -118,34 +118,25 @@ describe("article enrichment routes", () => {
     });
   });
 
-  test("translate answers with the marked content and echoes the target", async () => {
-    const { app, logs } = appWith([ARTICLE]);
-
-    const response = await post(app, `/articles/${ID}/translate`, {
-      content: "Hello",
-      target_language: "de",
-    });
-
-    expect(response.status).toBe(200);
-    expect(await response.json()).toEqual({
-      translated_content: "[translated:de] Hello",
-      target_language: "de",
-    });
-    expect(logs.entries[0]).toMatchObject({
-      event: "articles.translate.succeeded",
-      context: { targetLanguage: "de" },
-    });
+  test("translation fails closed when disabled and missing articles retain their 404", async () => {
+    const { app } = appWith([ARTICLE]);
+    const disabled = await post(app, `/articles/${ID}/translate`, {});
+    expect(disabled.status).toBe(503);
+    expect(await disabled.json()).toMatchObject({ error: { code: "TRANSLATION_NOT_CONFIGURED" } });
+    expect((await post(appWith([]).app, `/articles/${MISSING_ID}/translate`, {})).status).toBe(404);
   });
 
-  test("a blank target language is a 400, an empty one fails validation", async () => {
-    const { app } = appWith([ARTICLE]);
-
-    const blank = await post(app, `/articles/${ID}/translate`, { target_language: "   " });
-    const empty = await post(app, `/articles/${ID}/translate`, { target_language: "" });
-
-    expect(blank.status).toBe(400);
-    expect(await blank.json()).toMatchObject({ error: { code: "TARGET_LANGUAGE_REQUIRED" } });
-    expect(empty.status).toBe(422);
+  test("unsupported target is rejected before work is queued", async () => {
+    const { app } = appWith([ARTICLE], {
+      FEATURE_ARTICLE_TRANSLATIONS: "true",
+      CLOUDFLARE_TRANSLATIONS_URL: "https://example.org/translate",
+      CLOUDFLARE_TRANSLATIONS_TOKEN: "fixture",
+    });
+    const response = await post(app, `/articles/${ID}/translate`, { target_language: "xx" });
+    expect(response.status).toBe(400);
+    expect(await response.json()).toMatchObject({
+      error: { code: "TRANSLATION_LANGUAGE_INVALID" },
+    });
   });
 
   test("extract-full-text serves an already extracted article without queueing", async () => {

@@ -11,6 +11,7 @@ type PreferenceColumns = typeof userPreferences.$inferInsert;
 type PreferenceKey = keyof UserPreferencesDto;
 
 export const DEFAULT_USER_PREFERENCES: UserPreferencesDto = {
+  language: "en",
   defaultMode: "smart",
   fontSizePx: 17,
   contentWidth: "wide",
@@ -30,6 +31,7 @@ export const DEFAULT_USER_PREFERENCES: UserPreferencesDto = {
 
 /** The `user_preferences` column that stores each preference. */
 const COLUMN_BY_KEY = {
+  language: "language",
   defaultMode: "readerMode",
   fontSizePx: "readerFontSizePx",
   contentWidth: "readerContentWidth",
@@ -179,6 +181,16 @@ const sanitizePatch = Effect.fn("users.preferences.sanitize")(function* (
   input: UpdateUserPreferencesDto,
 ) {
   const next: Record<string, unknown> = {};
+  if (input.language !== undefined) {
+    try {
+      next.language = Intl.getCanonicalLocales(input.language)[0];
+    } catch {
+      return yield* new BadRequest({
+        message: "Enter a valid language tag.",
+        code: "LANGUAGE_INVALID",
+      });
+    }
+  }
 
   for (const key of CHOICE_KEYS) {
     const value = input[key];

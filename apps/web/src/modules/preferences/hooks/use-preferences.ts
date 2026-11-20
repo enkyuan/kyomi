@@ -49,6 +49,7 @@ export function usePreferences<TPreferences extends object>({
     enabled: Boolean(user?.id),
     staleTime: 5 * 60 * 1000,
     initialData,
+    initialDataUpdatedAt: 0,
     refetchOnWindowFocus: false,
   });
 

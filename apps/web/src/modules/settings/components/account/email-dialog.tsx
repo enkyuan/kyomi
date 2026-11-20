@@ -109,8 +109,7 @@ function CodeStep({ change, currentEmail }: { change: EmailChange; currentEmail:
     <form
       className="contents"
       noValidate
-      onSubmit={async (event) => {
-        event.preventDefault();
+      action={async () => {
         const failure = await (isCurrentStep
           ? change.submitCurrentCode(code)
           : change.submitNewCode(code));

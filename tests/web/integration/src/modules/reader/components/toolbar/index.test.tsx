@@ -29,6 +29,16 @@ function toolbarProps(overrides: Partial<ToolbarProps> = {}): ToolbarProps {
 }
 
 describe("reader toolbar", () => {
+  test("the split reader exposes translation and the active label restores the original", () => {
+    const onTranslateArticle = vi.fn();
+    const props = toolbarProps({ onTranslateArticle });
+    const { rerender } = render(<Toolbar {...props} />);
+    fireEvent.click(screen.getByRole("button", { name: "Translate article" }));
+    rerender(<Toolbar {...props} translationLabel="Show original article" />);
+    fireEvent.click(screen.getByRole("button", { name: "Show original article" }));
+    expect(onTranslateArticle).toHaveBeenCalledTimes(2);
+  });
+
   test("passes the tooltip side through to read later toasts", () => {
     const onToggleSaved = vi.fn();
     render(

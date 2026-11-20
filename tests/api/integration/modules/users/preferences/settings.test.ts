@@ -15,6 +15,7 @@ const NOW = new Date("2026-02-01T00:00:00.000Z");
 function storedRow(overrides: Record<string, unknown> = {}) {
   return {
     userId: "user_1",
+    language: "en",
     readerMode: "smart",
     readerFontSizePx: 17,
     readerContentWidth: "wide",
@@ -108,6 +109,7 @@ describe("updateUserPreferences", () => {
 
     expect(db.seedValues.mock.calls[0]?.[0]).toMatchObject({
       userId: "user_1",
+      language: "en",
       readerMode: "smart",
       readerFontSizePx: 17,
       inboxFontSizePx: 16,

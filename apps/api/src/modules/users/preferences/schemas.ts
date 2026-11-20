@@ -1,6 +1,7 @@
 import { t } from "elysia";
 
 export const userPreferencesResponse = t.Object({
+  language: t.String(),
   defaultMode: t.Union([t.Literal("smart"), t.Literal("original"), t.Literal("extracted")]),
   fontSizePx: t.Number(),
   contentWidth: t.Union([t.Literal("narrow"), t.Literal("wide")]),
@@ -34,6 +35,7 @@ export const userPreferencesResponse = t.Object({
 });
 
 export const updateUserPreferencesBody = t.Object({
+  language: t.Optional(t.String({ minLength: 1, maxLength: 64 })),
   defaultMode: t.Optional(
     t.Union([t.Literal("smart"), t.Literal("original"), t.Literal("extracted")]),
   ),

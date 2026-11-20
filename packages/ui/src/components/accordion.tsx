@@ -31,7 +31,7 @@ export function AccordionTrigger({
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         className={cn(
-          "flex flex-1 cursor-pointer items-start justify-between gap-4 rounded-md py-4 text-left font-medium text-sm outline-none transition-all focus-visible:ring-[3px] focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-64 data-panel-open:*:data-[slot=accordion-indicator]:rotate-180",
+          "flex flex-1 cursor-pointer items-start justify-between gap-4 rounded-md py-4 text-left font-medium text-sm outline-none transition-all focus-visible:ring-(length:--field-ring-width) focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-(--opacity-disabled) data-panel-open:*:data-[slot=accordion-indicator]:rotate-180",
           className,
         )}
         data-slot="accordion-trigger"
@@ -39,7 +39,7 @@ export function AccordionTrigger({
       >
         {children}
         <ChevronDownIcon
-          className="pointer-events-none size-4 shrink-0 translate-y-0.5 opacity-80 transition-transform duration-200 ease-in-out"
+          className="pointer-events-none size-4 shrink-0 translate-y-0.5 opacity-80 transition-transform duration-(--duration-overlay) ease-in-out"
           data-slot="accordion-indicator"
         />
       </AccordionPrimitive.Trigger>
@@ -54,7 +54,7 @@ export function AccordionPanel({
 }: AccordionPrimitive.Panel.Props): React.ReactElement {
   return (
     <AccordionPrimitive.Panel
-      className="h-(--accordion-panel-height) overflow-hidden text-muted-foreground text-sm transition-[height] duration-200 ease-in-out data-ending-style:h-0 data-starting-style:h-0"
+      className="h-(--accordion-panel-height) overflow-hidden text-muted-foreground text-sm transition-[height] duration-(--duration-overlay) ease-in-out data-ending-style:h-0 data-starting-style:h-0"
       data-slot="accordion-panel"
       {...props}
     >

@@ -3,6 +3,7 @@
 /* eslint-disable react-doctor/no-danger */
 import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanstack/react-router";
 import { Agentation } from "agentation";
+import { GlimmProvider } from "glimm/react";
 import { useEffect } from "react";
 import type { QueryClient } from "@tanstack/react-query";
 import interLatinWoff2Url from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
@@ -10,6 +11,7 @@ import AuthProvider from "@integrations/better-auth/provider";
 import TanstackQueryProvider from "@integrations/tanstack-query/provider";
 import { DefaultErrorPage } from "@/app/error";
 import { AppRuntimeEffects } from "@/app/runtime-effects";
+import { ArrivalScope } from "@modules/onboarding/components/arrival-scope";
 import { DefaultNotFoundPage } from "@/app/not-found";
 import { AnchoredToastProvider, ToastProvider } from "@kyomi/ui/components/toast";
 import PostHogProvider from "@integrations/posthog/provider";
@@ -177,24 +179,26 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased wrap-anywhere selection:bg-matcha/24">
-        <PostHogProvider>
-          <ToastProvider>
-            <AnchoredToastProvider>
-              <TanstackQueryProvider
-                queryClient={queryClient}
-                sessionStatus={loaderData?.authState.status}
-                userId={initialSession?.user.id}
-              >
-                <AuthProvider initialSession={initialSession}>
-                  <AppRuntimeEffects />
-                  {children}
-                </AuthProvider>
-              </TanstackQueryProvider>
-            </AnchoredToastProvider>
-          </ToastProvider>
-        </PostHogProvider>
-        {import.meta.env.DEV ? <Agentation /> : null}
-        <Scripts />
+        <GlimmProvider palette="prism">
+          <PostHogProvider>
+            <ToastProvider>
+              <AnchoredToastProvider>
+                <TanstackQueryProvider
+                  queryClient={queryClient}
+                  sessionStatus={loaderData?.authState.status}
+                  userId={initialSession?.user.id}
+                >
+                  <AuthProvider initialSession={initialSession}>
+                    <AppRuntimeEffects />
+                    <ArrivalScope>{children}</ArrivalScope>
+                  </AuthProvider>
+                </TanstackQueryProvider>
+              </AnchoredToastProvider>
+            </ToastProvider>
+          </PostHogProvider>
+          {import.meta.env.DEV ? <Agentation /> : null}
+          <Scripts />
+        </GlimmProvider>
       </body>
     </html>
   );

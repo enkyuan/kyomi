@@ -208,7 +208,7 @@ export function Favicon({
         <img
           alt={alt}
           className={cn(
-            "absolute inset-0 size-full rounded-[inherit] object-contain transition-opacity duration-150",
+            "absolute inset-0 size-full rounded-[inherit] object-contain transition-opacity duration-(--duration-control)",
             loading ? "opacity-0" : "opacity-100",
             imageClassName,
           )}

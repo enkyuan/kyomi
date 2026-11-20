@@ -8,12 +8,14 @@ import type { AppConfig } from "@config/env/service";
 import { parseSupportedDocumentVersion } from "@modules/articles/document/negotiate";
 import { runEffect } from "@shared/http/effect/bridge";
 import { v1EffectContext } from "@shared/http/v1/context";
-import { extractArticleFullText, summarizeArticle, translateArticle } from "./operations";
+import { translateArticle, readTranslation } from "./translations/operations";
+import { extractArticleFullText, summarizeArticle } from "./operations";
 import {
   articleIdParamsSchema,
   extractFullTextResponseSchema,
   summarizeBodySchema,
   summarizeResponseSchema,
+  translationParams,
   translateBodySchema,
   translateResponseSchema,
 } from "../schemas";
@@ -77,7 +79,7 @@ export function registerArticleEnrichmentRoutes(app: Elysia, runtime: ArticleEnr
       "/articles/:articleId/translate",
       async (context) => {
         const { body, params, request, requestId, userId } = v1EffectContext<
-          { content?: string; target_language: string },
+          typeof translateBodySchema.static,
           Record<string, unknown>,
           { articleId: string }
         >(context);
@@ -92,5 +94,21 @@ export function registerArticleEnrichmentRoutes(app: Elysia, runtime: ArticleEnr
         body: translateBodySchema,
         response: { 200: translateResponseSchema },
       },
+    )
+    .get(
+      "/articles/:articleId/translations/:translationId",
+      (context) => {
+        const ctx = v1EffectContext<
+          unknown,
+          Record<string, unknown>,
+          typeof translationParams.static
+        >(context);
+        context.set.headers["cache-control"] = "private, no-store";
+        return runEffect(
+          { runtime, ...ctx },
+          readTranslation(ctx.params.articleId, ctx.params.translationId),
+        );
+      },
+      { params: translationParams, response: { 200: translateResponseSchema } },
     );
 }

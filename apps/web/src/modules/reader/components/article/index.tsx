@@ -320,6 +320,8 @@ export function Article({
 
       <div
         className="relative"
+        lang={toolbar.displayReader.language ?? undefined}
+        dir="auto"
         data-reader-body={item.id}
         data-reader-inbox-body={hideInlineToolbar ? "" : undefined}
       >
