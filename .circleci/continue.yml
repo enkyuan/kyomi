@@ -223,7 +223,13 @@ jobs:
       - run:
           name: Build workspaces
           no_output_timeout: 10m
-          command: timeout 20m bun run ci:build
+          command: |
+            nproc; free -m | head -2
+            bun scripts/ci/prepare-env.ts
+            export EXPO_PUBLIC_AUTH_ORIGIN=https://ci.kyomi.invalid SKIP_ENV_VALIDATION=true
+            for w in web www mobile; do
+              s=$(date +%s); timeout 15m bun run --cwd apps/$w build; echo "PROFILE $w exit=$? $(( $(date +%s)-s ))s"
+            done
       - save-turbo:
           scope: build
 
