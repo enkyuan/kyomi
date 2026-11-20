@@ -27,3 +27,4 @@ workflows:
             (?!packages/catalog/).* app true
             (apps/(api|web)/Dockerfile|\.dockerignore|\.bun-version|bun\.lock|package\.json|(apps|packages)/[^/]+/package\.json|turbo\.json) docker true
             (packages/catalog/.*|\.circleci/.*) catalog true
+            (apps/mobile/.*|packages/(?!catalog/).*|bun\.lock|package\.json|turbo\.json|\.bun-version) mobile true
