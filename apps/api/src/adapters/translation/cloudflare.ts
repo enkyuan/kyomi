@@ -16,7 +16,7 @@ export type TranslateTextInput = {
 };
 
 type TranslateTextOptions = {
-  fetchImpl?: typeof fetch;
+  fetchImpl?: (url: string, init: RequestInit) => Promise<Response>;
 };
 
 function translatedText(payload: unknown): string | undefined {

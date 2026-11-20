@@ -105,6 +105,30 @@ test.skipIf(!process.env.ONBOARDING_TEST_DATABASE_URL)(
       expect(calls.filter((call) => call.text === prose)).toEqual([
         { text: prose, source_lang: "en", target_lang: "fr" },
       ]);
+      // Simulate a worker that claimed the row and died after its Redis entry was lost.
+      const oldToken = crypto.randomUUID();
+      await pool.query(
+        "update feed_item_translations set status='processing', translated_text=null, lease_token=$2, lease_expires_at=now()-interval '1 minute' where id=$1",
+        [first.id, oldToken],
+      );
+      const { recoverTranslations } =
+        await import("@modules/articles/reader/translations/reconcile");
+      const { markFeedItemTranslationReady } =
+        await import("@modules/articles/reader/translations/store");
+      await runtime.runPromise(recoverTranslations);
+      expect(
+        await markFeedItemTranslationReady(client, {
+          translationId: first.id,
+          leaseToken: oldToken,
+          translatedText: "stale",
+        }),
+      ).toBe(false);
+      for (let i = 0; i < 100; i++) {
+        result = await (await request(status)).json();
+        if (result.status === "ready") break;
+        await Bun.sleep(100);
+      }
+      expect(result).toMatchObject({ status: "ready", translated_content: "Voici la traduction." });
       expect(
         await (await request("/me/preferences", "PATCH", { language: "de-de" })).json(),
       ).toMatchObject({ language: "de-DE" });
